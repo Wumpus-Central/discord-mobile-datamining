@@ -1,3 +1,4 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/activity_status/native/ActivityStatusText.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -20,5 +21,5 @@ export default function ActivityStatusText(variant) {
   items = [callback().text, style];
   const merged1 = Object.assign(merged);
   obj.children = children;
-  return jsx(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: str, color: "text-muted", style: items, lineClamp: 1 });
+  return jsx(Text /* Text */.Text, { variant: str, color: "text-muted", style: items, lineClamp: 1 });
 };

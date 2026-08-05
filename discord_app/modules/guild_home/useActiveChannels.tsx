@@ -1,3 +1,4 @@
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 // discord_app/modules/guild_home/useActiveChannels.tsx
 import { isTextChannel } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -28,7 +29,7 @@ export const getActiveTextChannels = function getActiveTextChannels(guildId) {
   }
   mutedChannels = obj2.getMutedChannels(guildId);
   const mapped = items.map((arg0) => store.getChannel(arg0));
-  const found = mapped.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
+  const found = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
   return found.filter((hasFlag) => {
     let hasFlagResult;
     if (hasFlag != null) {

@@ -1,3 +1,7 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { CircleErrorIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import { CircleInformationIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/user_settings/authorized_apps/native/InfoBox.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -32,17 +36,17 @@ export default function InfoBox(look) {
   ({ infoBox: arr2[0], infoBoxWarning: arr2[1] } = tmp2);
   let obj = {};
   obj = { color: null };
-  obj[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_LINK;
-  obj[obj2.INFO] = callback(require("../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx") /* CircleInformationIcon */.CircleInformationIcon, obj);
+  obj[0] = Themes.colors.TEXT_LINK;
+  obj[obj2.INFO] = callback(CircleInformationIcon /* CircleInformationIcon */.CircleInformationIcon, obj);
   obj = { color: null };
-  obj[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_FEEDBACK_WARNING;
-  obj[obj2.WARNING] = callback(require("../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx") /* CircleErrorIcon */.CircleErrorIcon, obj);
+  obj[0] = Themes.colors.ICON_FEEDBACK_WARNING;
+  obj[obj2.WARNING] = callback(CircleErrorIcon /* CircleErrorIcon */.CircleErrorIcon, obj);
   const obj1 = { style: null, children: null };
   const items2 = [style, ...{ [closure_7.INFO]: items, [closure_7.WARNING]: items1 }[INFO]];
   obj1[0] = items2;
   const items3 = [obj[INFO], ];
   obj2 = { style: tmp2.infoText, variant: "text-sm/semibold", children };
-  items3[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+  items3[1] = callback(Text /* Text */.Text, obj2);
   obj1[1] = items3;
   return callback2(View, obj1);
 };

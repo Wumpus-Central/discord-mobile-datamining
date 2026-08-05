@@ -1,3 +1,6 @@
+import { apexExperiment } from "../../experiments/CollectiblesProfileFramesExperiment.tsx";
+import { useFramePreviewOverrideFrame } from "useFramePreviewOverrideFrame.native.tsx";
+import { useProfileFrame } from "useProfileFrame.tsx";
 // discord_app/modules/collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx
 import noop from "noop";
 
@@ -6,9 +9,9 @@ let result = require("apexExperiment").fileFinishedImporting("modules/collectibl
 
 export default function useMaybeFetchProfileFrame(arg0, location) {
   const _require = arg0;
-  let tmp = require("useFramePreviewOverrideFrame.native.tsx")();
-  const isProfileFramesEnabled = _require("../../experiments/CollectiblesProfileFramesExperiment.tsx").useIsProfileFramesEnabled(location);
-  const tmp3 = require("useProfileFrame.tsx")(arg0);
+  let tmp = useFramePreviewOverrideFrame();
+  const isProfileFramesEnabled = _apexExperiment.useIsProfileFramesEnabled(location);
+  const tmp3 = useProfileFrame(arg0);
   importDefault = tmp4;
   const items = [null == tmp && isProfileFramesEnabled && null != arg0 && null == tmp3, arg0];
   const effect = React.useEffect(() => {

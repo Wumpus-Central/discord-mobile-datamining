@@ -1,3 +1,4 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/slayer_storefront/native/hooks/useSocialLayerStorefrontMobileAccountLinkingDisabled.tsx
 import handleUserSettingsStoreUpdate from "handleUserSettingsStoreUpdate";
 
@@ -8,7 +9,7 @@ export const useSocialLayerStorefrontMobileAccountLinkingDisabled = function use
   const _require = applicationId;
   const items = [handleUserSettingsStoreUpdate];
   const items1 = [applicationId];
-  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       const configForApplicationId = outer1_2.getConfigForApplicationId(tmp);

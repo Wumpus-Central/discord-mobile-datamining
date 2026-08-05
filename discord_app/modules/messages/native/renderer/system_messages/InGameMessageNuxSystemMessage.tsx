@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { result } from "../resolveMessageContentColors.tsx";
+import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx
 import addApplication from "addApplication";
 import { HelpdeskArticles } from "ME";
@@ -18,7 +21,7 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
   if (null == application) {
     return null;
   } else {
-    let obj = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */;
+    let obj = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
     const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
     obj = { username: null, usernameOnClick: null, gameName: null, urlOnClick: null };
     obj[0] = messageAuthorWithProcessedColor.nick;
@@ -33,10 +36,10 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
     obj1[2] = tmp3.linkColor;
     obj[3] = obj1;
     const obj2 = { content: null };
-    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj2[0] = intl.formatToParts(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["92erOB"], obj);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj2[0] = intl.formatToParts(getSystemLocale /* getSystemLocale */.t["92erOB"], obj);
     const merged = Object.assign(tmp(7882)(message));
     return obj2;
   }
-  tmp3 = require("../resolveMessageContentColors.tsx")(theme);
+  tmp3 = result(theme);
 };

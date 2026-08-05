@@ -1,3 +1,7 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { messagesProxy } from "FamilyCenter.messages.js";
+import { apexExperiment } from "FamilyCenterV3Experiment.tsx";
+import { closeRestrictedHoursModal } from "RestrictedHoursActionCreators.native.tsx";
 // discord_app/modules/parent_tools/RestrictedHoursManager.tsx
 import DesktopNotificationTypes from "DesktopNotificationTypes";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -14,7 +18,7 @@ function scheduleUpcomingWarning() {
     timeout = null;
   }
   const date = new Date();
-  let obj = require("FamilyCenterV3Experiment.tsx") /* apexExperiment */;
+  let obj = apexExperiment /* apexExperiment */;
   let tmp7 = null;
   if (obj.getIsFamilyCenterV3Enabled({ location: "RestrictedHoursManager" })) {
     tmp7 = null;
@@ -53,7 +57,7 @@ function scheduleUpcomingWarning() {
         const date2 = new Date(startAtMs);
         let tmp5Result = tmp5(9670);
         const items = [tmp5(1895).JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
-        const stringResult = intl.string(require("FamilyCenter.messages.js")["0JlDg0"]);
+        const stringResult = intl.string(messagesProxy["0JlDg0"]);
         tmp5Result = tmp5(9670);
         const _HermesInternal2 = HermesInternal;
         const formatDaysResult = tmp5Result.formatDays(items);
@@ -62,8 +66,8 @@ function scheduleUpcomingWarning() {
         obj = { type: "RESTRICTED_HOURS_WARNING", title: null, subtitle: null };
         obj[1] = stringResult;
         obj[2] = trimmed;
-        require("../../Dispatcher.tsx").dispatch(obj);
-        const obj7 = require("../../Dispatcher.tsx");
+        dispatcher.dispatch(obj);
+        const obj7 = dispatcher;
       }
       const _setTimeout2 = setTimeout;
       timeout = setTimeout(() => {
@@ -84,11 +88,11 @@ function checkAndUpdateModal() {
   const result = freshTeenActivityWithMap.isCurrentUserInRestrictedHours();
   if (result !== c6) {
     c6 = result;
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: null };
     obj[1] = c6;
     obj.dispatch(obj);
-    const obj3 = require("RestrictedHoursActionCreators.native.tsx") /* closeRestrictedHoursModal */;
+    const obj3 = closeRestrictedHoursModal /* closeRestrictedHoursModal */;
     if (c6) {
       const result1 = obj3.openRestrictedHoursModal();
     } else {
@@ -100,7 +104,7 @@ function checkAndUpdateModal() {
 function handleLogout() {
   let c6 = false;
   let c9 = null;
-  require("../../Dispatcher.tsx").dispatch({ type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: false });
+  dispatcher.dispatch({ type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: false });
   if (null != c8) {
     const _clearTimeout = clearTimeout;
     clearTimeout(c8);
@@ -113,11 +117,11 @@ function handleScheduleUpdate() {
     scheduleUpcomingWarning();
   } else {
     c6 = result;
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: null };
     obj[1] = c6;
     obj.dispatch(obj);
-    const obj3 = require("RestrictedHoursActionCreators.native.tsx") /* closeRestrictedHoursModal */;
+    const obj3 = closeRestrictedHoursModal /* closeRestrictedHoursModal */;
     if (c6) {
       const result1 = obj3.openRestrictedHoursModal();
     } else {
@@ -147,12 +151,12 @@ class RestrictedHoursManager extends tmp2 {
 const prototype = RestrictedHoursManager.prototype;
 prototype["_initialize"] = function _initialize() {
   let closure_6 = freshTeenActivityWithMap.isCurrentUserInRestrictedHours();
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: closure_6 };
   obj.dispatch(obj);
   if (closure_6) {
-    const result = require("RestrictedHoursActionCreators.native.tsx") /* closeRestrictedHoursModal */.openRestrictedHoursModal();
-    const obj3 = require("RestrictedHoursActionCreators.native.tsx") /* closeRestrictedHoursModal */;
+    const result = closeRestrictedHoursModal /* closeRestrictedHoursModal */.openRestrictedHoursModal();
+    const obj3 = closeRestrictedHoursModal /* closeRestrictedHoursModal */;
   }
   const interval = setInterval(checkAndUpdateModal, 60000);
   scheduleUpcomingWarning();
@@ -169,7 +173,7 @@ prototype["_terminate"] = function _terminate() {
     c8 = null;
   }
   let c9 = null;
-  const result = require("RestrictedHoursActionCreators.native.tsx") /* closeRestrictedHoursModal */.closeRestrictedHoursModal();
+  const result = closeRestrictedHoursModal /* closeRestrictedHoursModal */.closeRestrictedHoursModal();
   let c6 = false;
 };
 const restrictedHoursManager = new RestrictedHoursManager();

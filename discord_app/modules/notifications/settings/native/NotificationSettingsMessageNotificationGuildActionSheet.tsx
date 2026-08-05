@@ -1,3 +1,4 @@
+import { updateGuildPreset } from "../utils/notificationSettingsGuildFlagUtils.tsx";
 // discord_app/modules/notifications/settings/native/NotificationSettingsMessageNotificationGuildActionSheet.tsx
 import "noop";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
@@ -11,7 +12,7 @@ let result = require("ME").fileFinishedImporting("modules/notifications/settings
 
 export default function NotificationSettingsMessageNotificationGuildActionSheet(guildId) {
   const _require = guildId;
-  let obj = _require("../utils/notificationSettingsGuildFlagUtils.tsx");
+  let obj = _updateGuildPreset;
   const guildPresetSettings = obj.useGuildPresetSettings(guildId.guildId);
   const unread = guildPresetSettings.unread;
   const notification = guildPresetSettings.notification;

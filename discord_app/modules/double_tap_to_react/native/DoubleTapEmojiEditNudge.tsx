@@ -1,3 +1,4 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/double_tap_to_react/native/DoubleTapEmojiEditNudge.tsx
 import ME from "ME";
 import getSystemLocale from "getSystemLocale";
@@ -157,15 +158,15 @@ function DoubleTapEmojiEditNudgeInner(location) {
 let closure_13 = { left: 8, right: 8 };
 let closure_14 = createCacheKey.createStyles((arg0) => {
   let obj = { doubleTapEmojiContainer: null, doubleTapTextEmoji: null, doubleTapCustomEmoji: null, doubleTapEmojiEditNudgeContainer: null, editButton: null };
-  obj = { marginHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
+  obj = { marginHorizontal: Themes.space.PX_4 };
   obj[0] = obj;
-  obj = { fontSize: 12 * arg0, color: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_DEFAULT };
+  obj = { fontSize: 12 * arg0, color: Themes.colors.INTERACTIVE_TEXT_DEFAULT };
   obj[1] = obj;
   obj[2] = { height: 16 * arg0, width: 16 * arg0 };
-  obj[3] = { marginTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "center", flexWrap: "wrap" };
+  obj[3] = { marginTop: Themes.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "center", flexWrap: "wrap" };
   const obj1 = { height: 16 * arg0, width: 16 * arg0 };
-  const obj2 = { marginTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "center", flexWrap: "wrap" };
-  obj[4] = { marginHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
+  const obj2 = { marginTop: Themes.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "center", flexWrap: "wrap" };
+  obj[4] = { marginHorizontal: Themes.space.PX_4 };
   return obj;
 });
 let result = set.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapEmojiEditNudge.tsx");

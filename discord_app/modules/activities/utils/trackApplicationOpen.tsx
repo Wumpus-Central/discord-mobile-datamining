@@ -1,3 +1,4 @@
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/activities/utils/trackApplicationOpen.tsx
 import { AnalyticEvents } from "ME";
 
@@ -19,7 +20,7 @@ export default function trackApplicationOpen(partyId) {
   let userId;
   partyId = partyId.partyId;
   ({ type, source, userId, guildId, channelId, channelType, applicationId, messageId, locationObject, analyticsLocations, referrerId, inviterUserId, remoteJoinPlatform } = partyId);
-  let obj = require("../../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { type, source, guild_id: guildId, channel_id: channelId, channel_type: channelType, application_id: applicationId, party_id: null, other_user_id: null, message_id: null, location: null, location_stack: null, referrer_id: null, invite_inviter_id: null, remote_join_platform: null };
   obj[6] = partyId;
   obj[7] = userId;

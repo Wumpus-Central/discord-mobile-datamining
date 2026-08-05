@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { QUEST_PROGRESS_DIAMETER_BY_SIZE } from "../QuestProgressIndicator.tsx";
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestModalReward.tsx
 import importAllResult from "noop";
 import jsxProd from "jsxProd";
@@ -36,12 +38,12 @@ const memoResult = importAllResult.memo(function VideoQuestModalReward(withQuest
     const result = obj.openRewardDetailsBottomSheet(obj);
   }, items);
   obj = { justify: "center", align: "center", spacing: null, style: null, children: null };
-  obj[2] = require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24;
+  obj[2] = Themes.space.PX_24;
   obj[3] = withQuestName.style;
   obj = { hasConfetti: true, quest, size: str, progress: questTaskDetails.percentComplete, onPress: callback, withAnimation: withRewardTileAnimation };
-  const items1 = [callback(require("../QuestProgressIndicator.tsx"), obj), ];
+  const items1 = [callback(QUEST_PROGRESS_DIAMETER_BY_SIZE, obj), ];
   obj1 = { align: "center", spacing: null, onLayout: null, children: null };
-  obj1[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4;
+  obj1[1] = Themes.space.PX_4;
   obj1[2] = onTextBlockLayout;
   if (tmp) {
     const obj2 = { variant: "heading-lg/semibold", color: "text-strong", style: null, children: null };

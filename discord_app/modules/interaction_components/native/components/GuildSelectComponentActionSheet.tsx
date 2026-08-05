@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ActionComponentState } from "../../InteractionComponentTypes.tsx";
+import { SelectionHeader } from "SelectComponentActionSheet.tsx";
 // discord_app/modules/interaction_components/native/components/GuildSelectComponentActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -29,7 +32,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
   let obj = first1;
   const tmp2 = first(first1.useState(""), 2);
   first = tmp2[0];
-  obj = { type: require("../../InteractionComponentTypes.tsx") /* ActionComponentState */.SelectOptionType.GUILD, value: selectedGuild.id, label: selectedGuild.name, guild: selectedGuild };
+  obj = { type: ActionComponentState /* ActionComponentState */.SelectOptionType.GUILD, value: selectedGuild.id, label: selectedGuild.name, guild: selectedGuild };
   const tmp6 = first(first1.useState(obj), 2);
   first1 = tmp6[0];
   closure_5 = tmp6[1];
@@ -44,7 +47,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
     return lib(_undefined[9]).hideActionSheet();
   }
   const intl = tmp4(1236).intl;
-  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["ZImm/x"]);
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["ZImm/x"]);
   callback = obj.useCallback((arg0) => {
     if (0 === arg0.length) {
       flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
@@ -75,7 +78,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
   }, []);
   const items2 = [first, callback];
   const memo = obj.useMemo(() => callback(first), items2);
-  return callback(require("SelectComponentActionSheet.tsx"), {
+  return callback(SelectionHeader, {
     onPressOptionItem(arg0, guild) {
       callback(guild.guild);
       callback2(guild);

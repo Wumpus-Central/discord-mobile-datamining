@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { parsedItemUsesEveryoneRole } from "MentionGuardUtils.tsx";
 // discord_app/utils/ChatRestrictions.tsx
 import { TOKEN_REGEX } from "ME";
 
@@ -8,7 +10,7 @@ const items = [
         if (null == getGuildId.getGuildId()) {
           return false;
         } else {
-          const extractEveryoneRoleResult = require("MentionGuardUtils.tsx").extractEveryoneRole(arg0, getGuildId);
+          const extractEveryoneRoleResult = parsedItemUsesEveryoneRole.extractEveryoneRole(arg0, getGuildId);
           if (null == extractEveryoneRoleResult) {
             return false;
           } else {
@@ -32,13 +34,13 @@ const items = [
               obj[1] = result.toLocaleString();
               obj[0] = intl.formatToPlainString(_2YaiQ1, obj);
               const intl2 = tmp6(1236).intl;
-              obj[1] = intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.mVyrtu);
+              obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.mVyrtu);
               return obj;
             } else {
               return false;
             }
           }
-          const obj5 = require("MentionGuardUtils.tsx");
+          const obj5 = parsedItemUsesEveryoneRole;
         }
       } else {
         return false;
@@ -52,8 +54,8 @@ const items = [
       let isMatch = TOKEN_REGEX.test(arg0);
       if (isMatch) {
         const obj = { body: null };
-        const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-        obj[0] = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.sTwS1a);
+        const intl = getSystemLocale /* getSystemLocale */.intl;
+        obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.sTwS1a);
         isMatch = obj;
       }
       return isMatch;

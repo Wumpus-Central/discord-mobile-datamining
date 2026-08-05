@@ -1,3 +1,5 @@
+import { Button } from "../../design/void/native.tsx";
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
 // discord_app/components_native/common/UserSummaryItem.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -91,21 +93,21 @@ export default function UserSummaryItem(users) {
               if (flag === undefined) {
                 flag = false;
               }
-              const avatarURL = users.getAvatarURL(guildId, require("../../design/void/native.tsx") /* Button */.AVATAR_SIZE_MAP[avatarSize], flag);
+              const avatarURL = users.getAvatarURL(guildId, Button /* Button */.AVATAR_SIZE_MAP[avatarSize], flag);
               let avatar;
               if (guildId != null) {
                 avatar = tmp3.avatar;
               }
               let tmp5 = avatarURL;
               if (null != avatar) {
-                let guildMemberAvatarURL = require("../../utils/AvatarUtils.tsx").getGuildMemberAvatarURL(tmp3, flag);
+                let guildMemberAvatarURL = getAvatarURL.getGuildMemberAvatarURL(tmp3, flag);
                 if (guildMemberAvatarURL == null) {
                   guildMemberAvatarURL = avatarURL;
                 }
                 tmp5 = guildMemberAvatarURL;
-                const obj = require("../../utils/AvatarUtils.tsx");
+                const obj = getAvatarURL;
               }
-              return require("../../utils/AvatarUtils.tsx").makeSource(tmp5);
+              return getAvatarURL.makeSource(tmp5);
             };
           }
           if (num < tmp8) {

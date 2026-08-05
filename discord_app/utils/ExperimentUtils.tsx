@@ -1,3 +1,5 @@
+import { apply } from "../../_runtime/00012_apply.js";
+import { trackExposureToExperiment } from "../modules/experiments/ExperimentManager.tsx";
 // discord_app/utils/ExperimentUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import getHash from "getHash";
@@ -61,7 +63,7 @@ export default {
             return false;
           } else if (type.type === constants.USER) {
             if (type2.type === tmp.USER) {
-              return require("../../_runtime/00012_apply.js").isEqual(type.context, type2.context);
+              return apply.isEqual(type.context, type2.context);
             }
           }
         }
@@ -73,7 +75,7 @@ export default {
     const tmp = getFirstEligibleUserExperiment(arg0);
     if (null != tmp) {
       const tmp3 = callback(tmp, 2);
-      const result = require("../modules/experiments/ExperimentManager.tsx") /* trackExposureToExperiment */.trackExposureToExperiment(tmp3[0], tmp4);
+      const result = trackExposureToExperiment /* trackExposureToExperiment */.trackExposureToExperiment(tmp3[0], tmp4);
       return tmp3[1];
     }
   },

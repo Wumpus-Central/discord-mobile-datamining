@@ -1,3 +1,4 @@
+import { UserPlaceholderRow } from "../../../main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx";
 // discord_app/modules/activities/panel/native/ActivityInviteSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import loadInviteSuggestions from "loadInviteSuggestions";
@@ -29,7 +30,7 @@ function Loading() {
     let tmp4 = dependencyMap;
     let obj = { row: null };
     obj[0] = num;
-    let arr = items.push(callback3(require("../../../main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx"), obj, num));
+    let arr = items.push(callback3(UserPlaceholderRow, obj, num));
     num = num + 1;
   } while (num < 10);
   obj = { children: null };

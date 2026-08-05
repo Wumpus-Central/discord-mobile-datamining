@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 // discord_app/modules/rewards/hooks/useHasXboxMonthlyOrbsPerk.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PremiumTypes } from "GuildFeatures";
@@ -19,14 +21,14 @@ export const hasCrepeMonthlyOrbsPerk = function hasCrepeMonthlyOrbsPerk(currentU
       }
       return hasItem;
     }
-    obj2 = require("../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */;
+    obj2 = getPremiumPlanItem /* getPremiumPlanItem */;
   }
   return false;
 };
 export const useHasXboxMonthlyOrbsPerk = function useHasXboxMonthlyOrbsPerk() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = initialize /* initialize */;
   let flag = false;
   if (obj2.canUseMonthlyOrbs(stateFromStores)) {
     let tmpResult = tmp(3931);

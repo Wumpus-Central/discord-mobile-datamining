@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/slayer_storefront/hooks/SocialLayerStorefrontEligibilityHooks.tsx
 import map from "map";
 import initialize from "initialize";
@@ -55,7 +56,7 @@ export const useAreUsersInSocialLayerStorefrontMutualGuildsApplicationIds = func
   const _require = memo;
   let items = [createUserWidgetFromServer, handleUserSettingsStoreUpdate];
   const items1 = [memo];
-  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
+  return _initialize.useStateFromStoresArray(items, () => {
     const items = [];
     while (tmp2 !== undefined) {
       let tmp4 = outer1_4;
@@ -159,7 +160,7 @@ export const useAreUsersPlayingStorefrontEnabledGames = function useAreUsersPlay
 };
 export const useCurrentUserPlayedSocialLayerStorefrontGamesApplicationIds = function useCurrentUserPlayedSocialLayerStorefrontGamesApplicationIds() {
   let items = [initialize, handleUserSettingsStoreUpdate];
-  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresArray(items, () => {
+  return initialize /* initialize */.useStateFromStoresArray(items, () => {
     const items = [];
     gamesSeen = gamesSeen.getGamesSeen(false, false);
     const iter = gamesSeen[Symbol.iterator]();
@@ -181,7 +182,7 @@ export const useCurrentUserPlayedSocialLayerStorefrontGamesApplicationIds = func
 };
 export const useCurrentUserPlayingSocialLayerStorefrontGamesApplicationIds = function useCurrentUserPlayingSocialLayerStorefrontGamesApplicationIds() {
   const items = [initialize, handleUserSettingsStoreUpdate];
-  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresArray(items, () => {
+  return initialize /* initialize */.useStateFromStoresArray(items, () => {
     const items = [];
     const runningGames = initialize.getRunningGames();
     const iter = runningGames[Symbol.iterator]();
@@ -208,7 +209,7 @@ export const useCurrentUserPlayingSocialLayerStorefrontGamesApplicationIds = fun
 };
 export const useIsCurrentUserPlayingSocialLayerStorefrontGames = function useIsCurrentUserPlayingSocialLayerStorefrontGames() {
   let items = [initialize, handleUserSettingsStoreUpdate];
-  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresArray(items, () => {
+  return initialize /* initialize */.useStateFromStoresArray(items, () => {
     const items = [];
     const runningGames = initialize.getRunningGames();
     const iter = runningGames[Symbol.iterator]();

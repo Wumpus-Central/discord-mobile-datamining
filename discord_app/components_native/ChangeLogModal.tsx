@@ -1,3 +1,9 @@
+import { 14623__ } from "../../_runtime/metro/14623__.js";
+import { ModalActionCreators } from "../actions/ModalActionCreators.tsx";
+import { NavigationStack } from "../design/components/Navigator/native/Navigator.native.tsx";
+import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
+import { LHeading } from "ChangeLogStandardTemplate.tsx";
+import { VideoComponent } from "common/Video.tsx";
 // discord_app/components_native/ChangeLogModal.tsx
 import importAllResult from "useWindowDimensions";
 import { View } from "Button";
@@ -123,7 +129,7 @@ class ChangeLogScreen {
   }
 }
 function hideChangeLog() {
-  require("../actions/ModalActionCreators.tsx").popWithKey(CHANGELOG_MODAL_KEY);
+  ModalActionCreators.popWithKey(CHANGELOG_MODAL_KEY);
 }
 let c3 = importAllResult;
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
@@ -249,8 +255,8 @@ prototype["track"] = function track(arg0) {
       const merged1 = Object.assign(obj);
       tmp10 = obj;
     }
-    require("../utils/AnalyticsUtils.tsx").track(arg0, tmp10);
-    const obj2 = require("../utils/AnalyticsUtils.tsx");
+    expandEventProperties.track(arg0, tmp10);
+    const obj2 = expandEventProperties;
   }
 };
 prototype["renderVideo"] = function renderVideo() {
@@ -281,7 +287,7 @@ prototype["renderVideo"] = function renderVideo() {
       obj1[3] = function onReady() {
         return self.setState({ ytVideoReady: true });
       };
-      const items = [callback(require("../../_runtime/metro/14623__.js"), obj1), ];
+      const items = [callback(14623__, obj1), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj2 = { style: null, source: null };
@@ -314,7 +320,7 @@ prototype["renderVideo"] = function renderVideo() {
   obj6[8] = function onPress() {
     self.track(outer1_5.CHANGE_LOG_VIDEO_INTERACTED);
   };
-  const items1 = [callback(require("common/Video.tsx"), obj6), ];
+  const items1 = [callback(VideoComponent, obj6), ];
   let tmp12Result = null;
   if (null != video) {
     const obj7 = { accessibilityLabel: "Play Video", accessibilityRole: "button", style: null, onPress: null, children: null };
@@ -340,7 +346,7 @@ prototype["render"] = function render() {
   const merged = Object.assign(this.props);
   obj.video = this.renderVideo();
   obj.onScroll = this.handleScroll;
-  return callback(require("ChangeLogStandardTemplate.tsx"), obj);
+  return callback(LHeading, obj);
 };
 ChangeLog.contextType = require("ManaContext").ThemeContext;
 let obj3 = { width: 7, height: 7, borderRadius: 3.5, marginRight: 13, marginTop: 7, backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG };
@@ -357,7 +363,7 @@ export default function ChangelogModal() {
     obj[0] = obj;
     return obj;
   }, []);
-  return callback(require("../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */.Navigator, { screens, initialRouteName: "CHANGELOG" });
+  return callback(NavigationStack /* NavigationStack */.Navigator, { screens, initialRouteName: "CHANGELOG" });
 };
 export { ListItem };
 export { ChangeLogScreen };

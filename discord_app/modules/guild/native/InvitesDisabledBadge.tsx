@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../_runtime/11992_registerAsset.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/guild/native/InvitesDisabledBadge.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -17,9 +20,9 @@ const memoResult = require("noop").memo(function InvitesDisabledBadge(style) {
   items = [tmp.pauseRing, style.style];
   obj = { style: tmp.pauseBackground, children: null };
   obj = { style: tmp.pause, themedColor: null, source: null };
-  obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_ACTIVE;
-  obj[2] = require("../../../../_runtime/11992_registerAsset.js");
-  obj[1] = jsx(require("../../../design/void/native.tsx") /* Button */.ThemedIcon, { style: tmp.pause, themedColor: null, source: null });
+  obj[1] = Themes.colors.INTERACTIVE_TEXT_ACTIVE;
+  obj[2] = registerAsset;
+  obj[1] = jsx(Button /* Button */.ThemedIcon, { style: tmp.pause, themedColor: null, source: null });
   obj[1] = <View style={tmp.pause} themedColor={null} source={null} />;
   return <View style={tmp.pause} themedColor={null} source={null} />;
 });

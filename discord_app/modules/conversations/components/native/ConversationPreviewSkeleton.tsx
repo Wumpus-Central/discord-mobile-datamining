@@ -1,3 +1,4 @@
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/conversations/components/native/ConversationPreviewSkeleton.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -28,7 +29,7 @@ let result = require("CONVERSATION_COLORS").fileFinishedImporting("modules/conve
 
 export default function ConversationPreviewSkeleton() {
   const _require = createCacheKey();
-  let obj = _require("../../../reanimated/ReanimatedRexport.tsx");
+  let obj = _ReanimatedRexport;
   const sharedValue = obj.useSharedValue(0.4);
   let items = [sharedValue];
   const effect = React.useEffect(() => {
@@ -41,7 +42,7 @@ export default function ConversationPreviewSkeleton() {
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 11432452203963;
   fn.__initData = closure_9;
-  const animatedStyle = _require("../../../reanimated/ReanimatedRexport.tsx").useAnimatedStyle(fn);
+  const animatedStyle = _ReanimatedRexport.useAnimatedStyle(fn);
   obj = { style: animatedStyle, "aria-hidden": true, children: null };
   obj = { length: closure_5 };
   obj[2] = Array.from(obj, (arg0, arg1) => {

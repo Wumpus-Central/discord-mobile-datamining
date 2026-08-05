@@ -1,3 +1,6 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 // discord_app/modules/threads/ThreadMessageStore.tsx
 import createChannelRecord from "createChannelRecord";
 import hasFlag from "hasFlag";
@@ -322,8 +325,8 @@ prototype["getMostRecentMessage"] = function getMostRecentMessage(id) {
     if (tmp3) {
       let message = store2.getMessage(id, tmp.mostRecentRawMessage.id);
       if (message == null) {
-        message = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.createMessageRecord(tmp.mostRecentRawMessage);
-        const obj = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
+        message = createMinimalMessageRecord /* createMinimalMessageRecord */.createMessageRecord(tmp.mostRecentRawMessage);
+        const obj = createMinimalMessageRecord /* createMinimalMessageRecord */;
       }
       tmp.mostRecentMessage = message;
       tmp.mostRecentRawMessage = null;
@@ -396,7 +399,7 @@ const threadMessageStore = new ThreadMessageStore(require("dispatcher"), {
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     const id = guild.guild.id;
-    closure_12 = require("../../../_runtime/00012_apply.js").omitBy(closure_12, (guildId) => {
+    closure_12 = apply.omitBy(closure_12, (guildId) => {
       if (guildId.guildId === id) {
         const parentId = guildId.parentId;
         delete tmp2[tmp];
@@ -458,7 +461,7 @@ const threadMessageStore = new ThreadMessageStore(require("dispatcher"), {
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     const id = channel.channel.id;
-    closure_12 = require("../../../_runtime/00012_apply.js").omitBy(closure_12, (parentId) => parentId.parentId === id);
+    closure_12 = apply.omitBy(closure_12, (parentId) => parentId.parentId === id);
     delete tmp[tmp2];
   },
   MESSAGE_CREATE: function handleMessageCreate(message) {
@@ -479,7 +482,7 @@ const threadMessageStore = new ThreadMessageStore(require("dispatcher"), {
               const isForumPostResult = channel.isForumPost();
               let tmp9 = !isForumPostResult;
               if (isForumPostResult) {
-                let obj = require("../../utils/SnowflakeUtils.tsx");
+                let obj = DISCORD_EPOCH;
                 tmp9 = message.id !== obj.castChannelIdAsMessageId(channel.id);
               }
               tmp7 = tmp9;
@@ -538,12 +541,12 @@ const threadMessageStore = new ThreadMessageStore(require("dispatcher"), {
           }
           dependencyMap2[tmp.parentId] = num + 1;
           if (null != tmp.mostRecentMessage) {
-            tmp.mostRecentMessage = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.updateMessageRecord(tmp.mostRecentMessage, message);
-            const obj = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
+            tmp.mostRecentMessage = createMinimalMessageRecord /* createMinimalMessageRecord */.updateMessageRecord(tmp.mostRecentMessage, message);
+            const obj = createMinimalMessageRecord /* createMinimalMessageRecord */;
           }
           if (null != tmp.mostRecentRawMessage) {
-            tmp.mostRecentRawMessage = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.updateServerMessage(tmp.mostRecentRawMessage, message);
-            const obj2 = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
+            tmp.mostRecentRawMessage = createMinimalMessageRecord /* createMinimalMessageRecord */.updateServerMessage(tmp.mostRecentRawMessage, message);
+            const obj2 = createMinimalMessageRecord /* createMinimalMessageRecord */;
           }
         }
       }
@@ -557,7 +560,7 @@ const threadMessageStore = new ThreadMessageStore(require("dispatcher"), {
     if (null == dependencyMap[channelId]) {
       return false;
     } else {
-      const result = require("../../utils/SnowflakeUtils.tsx").castChannelIdAsMessageId(channelId);
+      const result = DISCORD_EPOCH.castChannelIdAsMessageId(channelId);
       const hasItem = set.has(id);
       let num = dependencyMap2[tmp.parentId];
       if (num == null) {
@@ -581,7 +584,7 @@ const threadMessageStore = new ThreadMessageStore(require("dispatcher"), {
         obj2.add(id);
       }
       count = tmp.count;
-      const obj = require("../../utils/SnowflakeUtils.tsx");
+      const obj = DISCORD_EPOCH;
       obj2 = set;
       tmp3 = null != mostRecentMessage && mostRecentMessage.id === id;
     }

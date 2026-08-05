@@ -1,3 +1,5 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/guild/markGuildsAsRead.tsx
 import handleUpdate from "handleUpdate";
 import rebuild from "rebuild";
@@ -11,7 +13,7 @@ const require = arg1;
 const result = require("ensureGuildLoaded").fileFinishedImporting("modules/guild/markGuildsAsRead.tsx");
 
 export default function markGuildsAsRead(arr, source, onFinished) {
-  let obj = require("../../../_runtime/00012_apply.js");
+  let obj = apply;
   const mapped = obj.flatMap(arr, (closure_0) => {
     const selectableChannelIds = store.getSelectableChannelIds(closure_0);
     const vocalChannelIds = store.getVocalChannelIds(closure_0);
@@ -84,7 +86,7 @@ export default function markGuildsAsRead(arr, source, onFinished) {
     return items;
   });
   obj = { source, type: "guild" };
-  require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.MARK_AS_READ, obj);
-  let obj2 = require("../../utils/AnalyticsUtils.tsx");
+  expandEventProperties.track(AnalyticEvents.MARK_AS_READ, obj);
+  let obj2 = expandEventProperties;
   return mapped(5221).bulkAck(mapped, onFinished);
 };

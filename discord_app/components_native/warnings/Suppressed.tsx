@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../_runtime/15863_registerAsset.js";
+import { registerAsset } from "../../../_runtime/15864_registerAsset.js";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/components_native/warnings/Suppressed.tsx
 import initialize from "initialize";
 import { jsx } from "jsxProd";
@@ -15,21 +18,21 @@ class Suppressed extends Component {
   }
 }
 Suppressed.prototype["render"] = function render() {
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
+  const t = getSystemLocale /* getSystemLocale */.t;
   if (isAFKChannelResult) {
     let stringResult = string(t.KuYcnU);
     const intl3 = tmp2(1236).intl;
     let stringResult1 = intl3.string(tmp2(1236).t["RaFZ3+"]);
-    let tmp7 = require("../../../_runtime/15863_registerAsset.js");
+    let tmp7 = registerAsset;
     let tmp6 = importDefault;
   } else {
     stringResult = string(t.FJSZVM);
     const intl2 = tmp2(1236).intl;
     stringResult1 = intl2.string(tmp2(1236).t.etJjgW);
     tmp6 = importDefault;
-    tmp7 = require("../../../_runtime/15864_registerAsset.js");
+    tmp7 = registerAsset;
   }
   return jsx(tmp6(4713), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
 };

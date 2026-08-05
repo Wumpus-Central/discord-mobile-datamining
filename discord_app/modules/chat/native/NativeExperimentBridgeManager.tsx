@@ -1,3 +1,8 @@
+import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { apexExperiment } from "../../cache/NotificationLoadMessagesExperiment.tsx";
+import { shouldEnableYYTextReplacement } from "../../messages/YYTextReplacementExperiment.tsx";
 // discord_app/modules/chat/native/NativeExperimentBridgeManager.tsx
 import { NativeModules } from "get ActivityIndicator";
 import _getSystemLocale from "_getSystemLocale";
@@ -10,8 +15,8 @@ function syncYYTextReplacementExperiment() {
     if (NSUserDefaultsBridge != null) {
       const setShouldEnableYYTextReplacement = NSUserDefaultsBridge.setShouldEnableYYTextReplacement;
       if (setShouldEnableYYTextReplacement != null) {
-        const result = setShouldEnableYYTextReplacement(require("../../messages/YYTextReplacementExperiment.tsx") /* shouldEnableYYTextReplacement */.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
-        const tmpResult = require("../../messages/YYTextReplacementExperiment.tsx") /* shouldEnableYYTextReplacement */;
+        const result = setShouldEnableYYTextReplacement(shouldEnableYYTextReplacement /* shouldEnableYYTextReplacement */.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
+        const tmpResult = shouldEnableYYTextReplacement /* shouldEnableYYTextReplacement */;
       }
     }
   }
@@ -35,7 +40,7 @@ function updateIOSExperiments() {
       const result1 = setShouldFixPushNotificationRawPayload(tmpResult.isIOSPushNotificationRawPayloadFixExperimentEnabled());
     }
   }
-  obj = require("../../../utils/PlatformUtils.tsx") /* set */;
+  obj = set /* set */;
   if (obj4.getConfig({ location: "NativeExperimentBridgeManager" }).enabled) {
     const RNVVideo = tmp6.RNVVideo;
     if (RNVVideo != null) {
@@ -49,13 +54,13 @@ function updateIOSExperiments() {
 }
 function updateAndroidExperiments() {
   let obj = { "X-Super-Properties": null, "X-Fingerprint": null, "X-Installation-ID": null, "X-Discord-Locale": null };
-  obj[0] = require("../../../utils/AnalyticsUtils.tsx").getSuperPropertiesBase64();
+  obj[0] = expandEventProperties.getSuperPropertiesBase64();
   obj[1] = store.getFingerprint();
   obj[2] = store.getInstallationForTracking();
   obj[3] = locale.locale;
-  const obj2 = require("../../../utils/AnalyticsUtils.tsx");
+  const obj2 = expandEventProperties;
   const obj3 = store;
-  const config = require("../../cache/NotificationLoadMessagesExperiment.tsx").getConfig({ location: "NativeExperimentBridgeManager" });
+  const config = apexExperiment.getConfig({ location: "NativeExperimentBridgeManager" });
   const NativeCacheModule = NativeModules.NativeCacheModule;
   if (NativeCacheModule != null) {
     const _JSON = JSON;
@@ -63,25 +68,25 @@ function updateAndroidExperiments() {
     obj[0] = obj;
     obj[1] = obj3.getId();
     obj[2] = tmp3;
-    obj[3] = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.getAPIBaseURL();
+    obj[3] = sendRequest /* sendRequest */.getAPIBaseURL();
     const _HermesInternal = HermesInternal;
     obj[4] = "?limit=" + tmp4;
     obj[5] = tmp5;
     obj[6] = tmp6;
     const result = NativeCacheModule.setItem("notificationNetworkRequest", JSON.stringify(obj));
-    const obj6 = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
+    const obj6 = sendRequest /* sendRequest */;
   }
 }
 let prototype = function NativeExperimentBridgeManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
+  let obj = set /* set */;
   if (obj.isIOS()) {
     let tmp5 = updateIOSExperiments;
   } else {
-    tmp5 = require("../../../utils/PlatformUtils.tsx") /* set */.isAndroid() ? updateAndroidExperiments : (() => {
+    tmp5 = set /* set */.isAndroid() ? updateAndroidExperiments : (() => {
 
     });
-    const tmp3Result = require("../../../utils/PlatformUtils.tsx") /* set */;
+    const tmp3Result = set /* set */;
   }
   applyArgumentsResult.handleUpdate = tmp5;
   obj = { APP_STATE_UPDATE: syncYYTextReplacementExperiment, POST_CONNECTION_OPEN: applyArgumentsResult.handleUpdate };

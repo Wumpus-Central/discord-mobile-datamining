@@ -1,3 +1,5 @@
+import { dispatcher } from "../Dispatcher.tsx";
+import { fetchUserAffinitiesV2 } from "../modules/user_affinities/UserAffinitiesActionCreators.tsx";
 // discord_app/actions/InviteSuggestionsActionCreators.tsx
 import _computeRows from "_computeRows";
 
@@ -10,7 +12,7 @@ export const loadInviteSuggestions = function loadInviteSuggestions(arg0) {
   let importDefault;
   let require;
   ({ omitUserIds: require, guild: importDefault, channel: dependencyMap, applicationId: closure_3, inviteTargetType: closure_4 } = arg0);
-  const userAffinitiesV2 = require("../modules/user_affinities/UserAffinitiesActionCreators.tsx") /* fetchUserAffinitiesV2 */.fetchUserAffinitiesV2();
+  const userAffinitiesV2 = fetchUserAffinitiesV2 /* fetchUserAffinitiesV2 */.fetchUserAffinitiesV2();
   return userAffinitiesV2.then(() => {
     let obj = outer1_1(outer1_2[2]);
     let set = closure_0;
@@ -23,7 +25,7 @@ export const loadInviteSuggestions = function loadInviteSuggestions(arg0) {
   });
 };
 export const searchInviteSuggestions = function searchInviteSuggestions(query) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "INVITE_SUGGESTIONS_SEARCH", query };
   obj.dispatch(obj);
 };

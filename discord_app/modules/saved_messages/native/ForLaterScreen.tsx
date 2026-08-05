@@ -1,3 +1,6 @@
+import { trackImpression } from "../../app_analytics/useTrackImpression.tsx";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
+import { getSavedMessagesForType } from "../useSavedMessagesForPage.tsx";
 // discord_app/modules/saved_messages/native/ForLaterScreen.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "ForLaterNitroUpsellBar";
@@ -18,7 +21,7 @@ function ForLaterPage(type) {
   let first;
   let importDefault;
   const tmp = callback4();
-  const arr = require("../useSavedMessagesForPage.tsx")(type);
+  const arr = getSavedMessagesForType(type);
   const tmp5 = type === first(8192).SavedMessageSortTypes.REMINDER;
   let obj = first(8186);
   const forLaterLimit = obj.useForLaterLimit(ForLaterScreen, tmp5);
@@ -38,8 +41,8 @@ function ForLaterPage(type) {
   obj[1] = first(503).ImpressionNames.FOR_LATER_LIST_VIEWED;
   obj[2] = { total_count: arr.length, overdue_count: stateFromStores };
   const items1 = [arr.length, stateFromStores];
-  require("../../app_analytics/useTrackImpression.tsx")(obj, {}, items1);
-  const tmp2Result = require("../../app_analytics/useTrackImpression.tsx");
+  trackImpression(obj, {}, items1);
+  const tmp2Result = trackImpression;
   const tmp12 = callback(importAllResult.useState(new Date()), 2);
   first = tmp12[0];
   importDefault = tmp12[1];
@@ -115,7 +118,7 @@ const memoResult = importAllResult.memo((type) => {
   obj = { style: tmp.container, children: null };
   const animatedStyle = sharedValue(4146).useAnimatedStyle(fn);
   const items1 = [tmp.headerBorder, animatedStyle];
-  const items2 = [callback2(require("../../reanimated/ReanimatedRexport.tsx").View, { style: items1 }), callback2(ForLaterPage, { type: type.type, handleScroll: callback })];
+  const items2 = [callback2(ReanimatedRexport.View, { style: items1 }), callback2(ForLaterPage, { type: type.type, handleScroll: callback })];
   obj[1] = items2;
   return callback3(View, obj);
 });

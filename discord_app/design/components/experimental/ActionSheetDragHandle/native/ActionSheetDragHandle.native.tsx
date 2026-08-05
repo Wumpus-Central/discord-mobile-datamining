@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { ReanimatedRexport } from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
 // discord_app/design/components/experimental/ActionSheetDragHandle/native/ActionSheetDragHandle.native.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import PX_4 from "PX_4";
@@ -23,8 +25,8 @@ const memoResult = require("noop").memo((accessibilityLabel) => {
   accessibilityLabel = accessibilityLabel.accessibilityLabel;
   ({ onPress, overlay } = accessibilityLabel);
   if (accessibilityLabel === undefined) {
-    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    accessibilityLabel = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.WAI6xu);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    accessibilityLabel = intl.string(getSystemLocale /* getSystemLocale */.t.WAI6xu);
   }
   const animatedBarStyles = accessibilityLabel.animatedBarStyles;
   const tmp3 = callback();
@@ -40,7 +42,7 @@ const memoResult = require("noop").memo((accessibilityLabel) => {
     obj = { style: null };
     const items1 = [tmp3.bar, animatedBarStyles];
     obj[0] = items1;
-    let tmp4Result = tmp4(require("../../../../../modules/reanimated/ReanimatedRexport.tsx").View, obj);
+    let tmp4Result = tmp4(ReanimatedRexport.View, obj);
   } else {
     const obj1 = { style: null };
     obj1[0] = tmp3.bar;

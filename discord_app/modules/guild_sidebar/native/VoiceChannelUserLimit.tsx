@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../_runtime/12963_registerAsset.js";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/guild_sidebar/native/VoiceChannelUserLimit.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -30,15 +33,15 @@ const memoResult = importAllResult.memo(function VoiceChannelUserLimit(videoLimi
   let tmp3 = null;
   if (videoLimit.videoLimit) {
     obj = { source: null, size: null, style: null };
-    obj[0] = require("../../../../_runtime/12963_registerAsset.js");
-    obj[1] = require("../../../design/void/native.tsx") /* Button */.Icon.Sizes.REFRESH_SMALL_16;
+    obj[0] = registerAsset;
+    obj[1] = Button /* Button */.Icon.Sizes.REFRESH_SMALL_16;
     obj[2] = rect.videoIcon;
-    tmp3 = callback(require("../../../design/void/native.tsx") /* Button */.Icon, obj);
+    tmp3 = callback(Button /* Button */.Icon, obj);
   }
   const items = [tmp3, ];
   const obj1 = { variant: "text-xs/medium", lineClamp: 1, color: "voice-channel-user-limit-text", children: null };
   obj1[3] = users.toString().padStart(2, "0");
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  items[1] = callback(Text /* Text */.Text, obj1);
   obj[1] = items;
   const items1 = [closure_5(View, obj), callback(View, { style: rect.mid }), ];
   const obj3 = { style: rect.right, children: null };
@@ -46,7 +49,7 @@ const memoResult = importAllResult.memo(function VoiceChannelUserLimit(videoLimi
   const obj2 = { style: rect.mid };
   const str = users.toString();
   obj4[3] = total.toString().padStart(2, "0");
-  obj3[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj4);
+  obj3[1] = callback(Text /* Text */.Text, obj4);
   items1[2] = callback(View, obj3);
   obj[1] = items1;
   return closure_5(View, obj);

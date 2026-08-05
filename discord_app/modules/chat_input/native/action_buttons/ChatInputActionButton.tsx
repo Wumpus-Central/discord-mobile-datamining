@@ -1,3 +1,6 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../../design/tokens/native/useToken.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/chat_input/native/action_buttons/ChatInputActionButton.tsx
 import importAllResult from "noop";
 import { StyleSheet } from "get ActivityIndicator";
@@ -6,7 +9,7 @@ import createCacheKey from "createCacheKey";
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyles((arg0, height, marginHorizontal) => {
-  const radii = require("../../../../../discord_common/js/packages/tokens/native.tsx").radii;
+  const radii = Themes.radii;
   if (arg0) {
     let round = radii.sm;
     let tmp4 = tmp;
@@ -48,15 +51,15 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((active, ref)
     flag = false;
   }
   ({ style, disabled, accessibilityState, activeStyle, activeIconStyle, onPress, accessible, accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, IconComponent } = active);
-  let obj = require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */;
+  let obj = useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */;
   const mobileVisualRefreshConfig = obj.useMobileVisualRefreshConfig({ location: "ChatInputActionButton" });
   ({ enabled, chatInputFloating } = mobileVisualRefreshConfig);
-  const token = require("../../../../design/tokens/native/useToken.tsx") /* map */.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-  const obj2 = require("../../../../design/tokens/native/useToken.tsx") /* map */;
+  const token = map /* map */.useToken(Themes.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  const obj2 = map /* map */;
   const tmp = require;
-  const token1 = require("../../../../design/tokens/native/useToken.tsx") /* map */.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
-  const obj3 = require("../../../../design/tokens/native/useToken.tsx") /* map */;
-  const token2 = require("../../../../design/tokens/native/useToken.tsx") /* map */.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
+  const token1 = map /* map */.useToken(Themes.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+  const obj3 = map /* map */;
+  const token2 = map /* map */.useToken(Themes.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
   const tmp7 = callback(enabled, token, token1);
   let tmp8;
   if (chatInputFloating) {

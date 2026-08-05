@@ -1,3 +1,6 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { SolidCutout } from "../../../design/components/Icon/native/ClipView.tsx";
+import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 // discord_app/modules/icymi/native/NewContentPill.tsx
 import _slicedToArray from "_slicedToArray";
 import Text from "Text";
@@ -17,15 +20,15 @@ function CutoutGuildIcon(guild) {
   obj = { cutouts: null, children: null };
   obj = { shape: null, x: 18, y: -4, width: 32, height: 32, cornerRadius: null };
   const tmp = createCacheKey();
-  obj[0] = require("../../../design/components/Icon/native/ClipView.tsx") /* SolidCutout */.CutoutShape.RoundedRect;
-  obj[5] = require("../../../../discord_common/js/packages/tokens/native.tsx").radii.md;
+  obj[0] = SolidCutout /* SolidCutout */.CutoutShape.RoundedRect;
+  obj[5] = Themes.radii.md;
   const items = [obj];
   obj[0] = items;
   const obj1 = { guild: guild.guild, size: null, style: null };
-  const tmp2 = require("../../../design/components/Icon/native/ClipView.tsx");
-  obj1[1] = require("../../guild/native/GuildIcon.tsx") /* GuildIconSizes */.GuildIconSizes.XSMALL;
+  const tmp2 = SolidCutout;
+  obj1[1] = GuildIconSizes /* GuildIconSizes */.GuildIconSizes.XSMALL;
   obj1[2] = tmp.guildIconBG;
-  obj[1] = callback(require("../../guild/native/GuildIcon.tsx"), obj1);
+  obj[1] = callback(GuildIconSizes, obj1);
   obj[1] = callback(tmp2, obj);
   return callback(closure_6, obj);
 }

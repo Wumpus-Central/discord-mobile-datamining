@@ -1,3 +1,4 @@
+import { apexExperiment } from "../../experiments/GiftPromotionReminderExperiment.tsx";
 // discord_app/modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -168,7 +169,7 @@ export const combinePromotionStyles = function combinePromotionStyles(background
   return tmp;
 };
 export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftPromotionReminderNotice() {
-  const GiftPromotionReminderExperiment = require("../../experiments/GiftPromotionReminderExperiment.tsx") /* apexExperiment */.GiftPromotionReminderExperiment;
+  const GiftPromotionReminderExperiment = apexExperiment /* apexExperiment */.GiftPromotionReminderExperiment;
   if (GiftPromotionReminderExperiment.getConfig({ location: "shouldShowGiftPromotionReminderNotice" }).enabled) {
     if (null == marketingComponentByType.getMarketingComponentByType(tmp(7568).MarketingComponentType.GIFT_REMINDER_NAGBAR)) {
       return false;

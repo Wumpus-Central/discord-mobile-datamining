@@ -1,3 +1,8 @@
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { OpenableUserProfileAvatar } from "UserProfileAvatar.tsx";
+import { useSharedStyles } from "UserProfileSharedStyles.tsx";
+import { WidgetRenderer } from "UserProfileWidgetsBoard.tsx";
+import { UserProfileWidgetsBoardEditNotice } from "UserProfileWidgetsBoardEditNotice.tsx";
 // discord_app/modules/user_profile/native/YouScreenUserProfileContent.tsx
 import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled";
 import DismissibleContent from "DismissibleContent";
@@ -22,7 +27,7 @@ function YouAvatar(arg0) {
     const obj = callback(15741);
     const result1 = callback(15362).showYouAccountActionSheet();
   }, []);
-  let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
+  let obj = set /* set */;
   const isAndroidResult = obj.isAndroid();
   obj = {};
   const merged = Object.assign(arg0);
@@ -30,7 +35,7 @@ function YouAvatar(arg0) {
   obj.importantForAccessibility = "no-hide-descendants";
   obj.accessibilityElementsHidden = isAndroidResult;
   obj.accessible = !isAndroidResult;
-  return closure_13(require("UserProfileAvatar.tsx"), obj);
+  return closure_13(OpenableUserProfileAvatar, obj);
 }
 function YouScreenWidgetsBoardContainer(containerBackground) {
   let activeSection;
@@ -39,7 +44,7 @@ function YouScreenWidgetsBoardContainer(containerBackground) {
   let userId;
   containerBackground = containerBackground.containerBackground;
   ({ userId, activeSection, isRefreshEnabled, containerBorderColor } = containerBackground);
-  const tmp3 = require("UserProfileSharedStyles.tsx")();
+  const tmp3 = useSharedStyles();
   const items = [tmp3.card, ];
   if (isRefreshEnabled) {
     let obj = { backgroundColor: null, borderColor: null, borderWidth: 1 };
@@ -54,7 +59,7 @@ function YouScreenWidgetsBoardContainer(containerBackground) {
     tmp4 = items;
   }
   obj = { style: tmp3.profileContent, children: null };
-  const items1 = [callback2(require("UserProfileWidgetsBoardEditNotice.tsx"), {}), callback2(require("UserProfileWidgetsBoard.tsx"), { userId, isVisible: activeSection === UserProfileSections.WIDGETS, cardStyle: tmp4 })];
+  const items1 = [callback2(UserProfileWidgetsBoardEditNotice, {}), callback2(WidgetRenderer, { userId, isVisible: activeSection === UserProfileSections.WIDGETS, cardStyle: tmp4 })];
   obj[1] = items1;
   return callback3(closure_6, obj);
 }

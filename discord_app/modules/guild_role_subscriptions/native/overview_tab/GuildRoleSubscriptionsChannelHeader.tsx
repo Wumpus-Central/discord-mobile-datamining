@@ -1,3 +1,7 @@
+import { registerAsset } from "../../../../../_runtime/12042_registerAsset.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsChannelHeader.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -15,13 +19,13 @@ let closure_6 = createCacheKey.createStyles(obj);
 const memoResult = require("noop").memo(function GuildRoleSubscriptionsChannelHeader() {
   let obj = { style: callback3().header, children: null };
   obj = { source: null, size: null, disableColor: true };
-  obj[0] = require("../../../../../_runtime/12042_registerAsset.js");
-  obj[1] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.MEDIUM;
-  const items = [callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj), ];
+  obj[0] = registerAsset;
+  obj[1] = Button /* Button */.Icon.Sizes.MEDIUM;
+  const items = [callback(Button /* Button */.Icon, obj), ];
   obj = { variant: "heading-lg/extrabold", color: "interactive-text-active", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["KzCF/6"]);
-  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["KzCF/6"]);
+  items[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 });

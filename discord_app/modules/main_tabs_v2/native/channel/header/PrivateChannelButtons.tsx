@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/main_tabs_v2/native/channel/header/PrivateChannelButtons.tsx
 import importAllResult from "useIsCallActive";
 import { View } from "initialize";
@@ -31,12 +32,12 @@ let closure_22 = createCacheKey.createStyles((arg0) => {
   let obj = { privateChannelButtonsWrapper: { flexDirection: "row", gap: 12, paddingEnd: 1 }, button: null, disabledButton: null, overflowBadge: null };
   let prop;
   if (!arg0) {
-    prop = require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND;
+    prop = Themes.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND;
   }
-  obj = { backgroundColor: prop, borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").modules.button.BORDER_RADIUS, minHeight: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32, minWidth: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32, padding: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, justifyContent: "center", flexDirection: "row", alignItems: "center" };
+  obj = { backgroundColor: prop, borderRadius: Themes.modules.button.BORDER_RADIUS, minHeight: Themes.space.PX_32, minWidth: Themes.space.PX_32, padding: Themes.space.PX_4, justifyContent: "center", flexDirection: "row", alignItems: "center" };
   obj[1] = obj;
   obj[2] = { opacity: 0.6 };
-  obj = { backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, width: closure_20, height: closure_20, justifyContent: "center", alignItems: "center", marginLeft: -6 };
+  obj = { backgroundColor: Themes.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: Themes.radii.round, width: closure_20, height: closure_20, justifyContent: "center", alignItems: "center", marginLeft: -6 };
   obj[3] = obj;
   return obj;
 });

@@ -1,3 +1,6 @@
+import { SettingsIcon } from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
+import { useMountLayoutEffect } from "../../../../hooks/useMountEffect.tsx";
+import { InAppReportsUpsellsTableRow } from "InAppReportsUpsellsTableRow.tsx";
 // discord_app/modules/in_app_reports/native/components/InAppReportsSettingsUpsellsElement.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
@@ -23,7 +26,7 @@ function SettingsUpsellsTableRow(arg0) {
   ({ title, disabledTitle, description } = arg0);
   const tmp = callback(React.useState(false), 2);
   dependencyMap = tmp[1];
-  require("../../../../hooks/useMountEffect.tsx")(() => {
+  useMountLayoutEffect(() => {
     callback2(outer1_0(7834).TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_VIEWED);
   });
   const obj = {
@@ -38,8 +41,8 @@ function SettingsUpsellsTableRow(arg0) {
     },
     icon: null
   };
-  obj[5] = callback2(require("../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx") /* SettingsIcon */.SettingsIcon, {});
-  return callback2(require("InAppReportsUpsellsTableRow.tsx"), obj);
+  obj[5] = callback2(SettingsIcon /* SettingsIcon */.SettingsIcon, {});
+  return callback2(InAppReportsUpsellsTableRow, obj);
 }
 ({ AnalyticEvents: error, UserSettingsSections: metroImportAll } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);

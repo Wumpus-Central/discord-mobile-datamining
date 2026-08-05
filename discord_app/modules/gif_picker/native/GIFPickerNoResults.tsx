@@ -1,3 +1,4 @@
+import { useExpressionPickerInsets } from "../../expression_picker/native/useExpressionPickerInsets.tsx";
 // discord_app/modules/gif_picker/native/GIFPickerNoResults.tsx
 import importAllResult from "noop";
 import { ScrollView } from "get ActivityIndicator";
@@ -17,7 +18,7 @@ const memoResult = importAllResult.memo(function GIFPickerNoResults(inActionShee
   inActionSheet = inActionSheet.inActionSheet;
   let safeAreaBottomKeyboardAware;
   const tmp = callback();
-  safeAreaBottomKeyboardAware = require("../../expression_picker/native/useExpressionPickerInsets.tsx")({ hasCategories: false }).safeAreaBottomKeyboardAware;
+  safeAreaBottomKeyboardAware = useExpressionPickerInsets({ hasCategories: false }).safeAreaBottomKeyboardAware;
   const items = [safeAreaBottomKeyboardAware];
   const memo = importAllResult.useMemo(() => ({ paddingBottom: safeAreaBottomKeyboardAware, flex: 1 }), items);
   let obj = safeAreaBottomKeyboardAware(8638);

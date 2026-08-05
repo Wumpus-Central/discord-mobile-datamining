@@ -1,3 +1,4 @@
+import { emojiTermsImporter } from "EmojiTermsImporter.js";
 // discord_app/modules/emoji_terms/EmojiTerms.tsx
 const require = arg1;
 const obj = {
@@ -16,7 +17,7 @@ const obj = {
   }
 };
 let tmp2 = new require("setParams")(function loadEmoji(arg0) {
-  const tmp = require("EmojiTermsImporter.js") /* emojiTermsImporter */.emojiTermsImporter[arg0];
+  const tmp = emojiTermsImporter /* emojiTermsImporter */.emojiTermsImporter[arg0];
   if (undefined !== tmp) {
     let nextPromise = tmp().then((arg0) => arg0.default);
     const tmpResult = tmp();

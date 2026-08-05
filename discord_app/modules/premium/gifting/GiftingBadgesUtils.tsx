@@ -1,3 +1,5 @@
+import { apexExperiment } from "experiments/GiftingBadgeDesktopExperiment.tsx";
+import { apexExperiment } from "experiments/GiftingBadgeExperiment.tsx";
 // discord_app/modules/premium/gifting/GiftingBadgesUtils.tsx
 import { getSingleRequirementThreshold as closure_2 } from "map";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -23,10 +25,10 @@ export const getGiftingBadgeProgressPercent = function getGiftingBadgeProgressPe
   return Math.min(Math.max(num3, 0), 100);
 };
 export const useIsGiftingBadgesDesktopEnabled = function useIsGiftingBadgesDesktopEnabled(location) {
-  const GiftingBadgeExperiment = require("experiments/GiftingBadgeExperiment.tsx") /* apexExperiment */.GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = apexExperiment /* apexExperiment */.GiftingBadgeExperiment;
   let obj = { location };
   const enabled = GiftingBadgeExperiment.useConfig(obj).enabled;
-  const GiftingBadgeDesktopExperiment = require("experiments/GiftingBadgeDesktopExperiment.tsx") /* apexExperiment */.GiftingBadgeDesktopExperiment;
+  const GiftingBadgeDesktopExperiment = apexExperiment /* apexExperiment */.GiftingBadgeDesktopExperiment;
   let str = "-DISABLED";
   if (enabled) {
     str = "";
@@ -35,11 +37,11 @@ export const useIsGiftingBadgesDesktopEnabled = function useIsGiftingBadgesDeskt
   return GiftingBadgeDesktopExperiment.useConfig(obj).enabled && enabled;
 };
 export const getIsGiftingBadgesDesktopEnabled = function getIsGiftingBadgesDesktopEnabled(location) {
-  const GiftingBadgeExperiment = require("experiments/GiftingBadgeExperiment.tsx") /* apexExperiment */.GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = apexExperiment /* apexExperiment */.GiftingBadgeExperiment;
   let obj = { location };
   let enabled = GiftingBadgeExperiment.getConfig(obj).enabled;
   if (enabled) {
-    const GiftingBadgeDesktopExperiment = require("experiments/GiftingBadgeDesktopExperiment.tsx") /* apexExperiment */.GiftingBadgeDesktopExperiment;
+    const GiftingBadgeDesktopExperiment = apexExperiment /* apexExperiment */.GiftingBadgeDesktopExperiment;
     obj = { location: null };
     obj[0] = location;
     enabled = GiftingBadgeDesktopExperiment.getConfig(obj).enabled;
@@ -48,9 +50,9 @@ export const getIsGiftingBadgesDesktopEnabled = function getIsGiftingBadgesDeskt
 };
 export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleToShowGiftingBadgeCoachmark(location) {
   const _location = location.location;
-  const GiftingBadgeExperiment = require("experiments/GiftingBadgeExperiment.tsx") /* apexExperiment */.GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = apexExperiment /* apexExperiment */.GiftingBadgeExperiment;
   const enabled = GiftingBadgeExperiment.useConfig({ location: _location }).enabled;
-  const GiftingBadgeDesktopExperiment = require("experiments/GiftingBadgeDesktopExperiment.tsx") /* apexExperiment */.GiftingBadgeDesktopExperiment;
+  const GiftingBadgeDesktopExperiment = apexExperiment /* apexExperiment */.GiftingBadgeDesktopExperiment;
   let str = "-DISABLED";
   if ("web" === location.platform) {
     str = "";

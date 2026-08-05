@@ -1,3 +1,4 @@
+import { openAgeGateModal } from "../../AgeGateModalActionCreators.tsx";
 // discord_app/modules/age_gate/native/components/ExistingUserAgeGateModal.tsx
 import AgeGateUnderage from "AgeGateUnderage";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -10,7 +11,7 @@ let c5;
 let closure_6;
 const require = arg1;
 function onClose() {
-  require("../../AgeGateModalActionCreators.tsx") /* openAgeGateModal */.closeAgeGateModal();
+  openAgeGateModal /* openAgeGateModal */.closeAgeGateModal();
 }
 function renderHeaderTitle() {
   return null;

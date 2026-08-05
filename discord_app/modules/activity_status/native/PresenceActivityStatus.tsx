@@ -1,3 +1,9 @@
+import { AppsIcon } from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
+import { GameControllerIcon } from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
+import { MusicIcon } from "../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
+import { TvIcon } from "../../../design/components/Icon/native/redesign/generated/TvIcon.tsx";
+import { isEmbeddedActivity } from "../../activities/utils/isEmbeddedActivity.tsx";
+import { getActivityStatusText } from "../getActivityStatusText.tsx";
 // discord_app/modules/activity_status/native/PresenceActivityStatus.tsx
 import "noop";
 import { ActivityTypes } from "ME";
@@ -30,22 +36,22 @@ export default function PresenceActivityStatus(hideText) {
       return null;
     }
   }
-  if (require("../../activities/utils/isEmbeddedActivity.tsx")(activity)) {
-    let AppsIcon = require("../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx") /* AppsIcon */.AppsIcon;
+  if (isEmbeddedActivity(activity)) {
+    let AppsIcon = AppsIcon /* AppsIcon */.AppsIcon;
   } else if (activity.type === ActivityTypes.PLAYING) {
-    AppsIcon = require("../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx") /* GameControllerIcon */.GameControllerIcon;
+    AppsIcon = GameControllerIcon /* GameControllerIcon */.GameControllerIcon;
   } else if (activity.type === tmp3.LISTENING) {
-    AppsIcon = require("../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx") /* MusicIcon */.MusicIcon;
+    AppsIcon = MusicIcon /* MusicIcon */.MusicIcon;
   } else {
     if (activity.type !== tmp3.WATCHING) {
       if (activity.type !== tmp3.STREAMING) {
         AppsIcon = null;
         if (activity.type === tmp3.COMPETING) {
-          AppsIcon = require("../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx") /* GameControllerIcon */.GameControllerIcon;
+          AppsIcon = GameControllerIcon /* GameControllerIcon */.GameControllerIcon;
         }
       }
     }
-    AppsIcon = require("../../../design/components/Icon/native/redesign/generated/TvIcon.tsx") /* TvIcon */.TvIcon;
+    AppsIcon = TvIcon /* TvIcon */.TvIcon;
   }
   let tmp12 = !hideIcon;
   if (!hideIcon) {
@@ -63,7 +69,7 @@ export default function PresenceActivityStatus(hideText) {
     obj = { style: null, maxFontSizeMultiplier: null, children: null };
     obj[0] = textStyle;
     obj[1] = maxFontSizeMultiplier;
-    obj[2] = require("../getActivityStatusText.tsx")(activity, true).text;
+    obj[2] = getActivityStatusText(activity, true).text;
     tmp15 = callback(tmp(9565), obj);
   }
   children[1] = tmp15;

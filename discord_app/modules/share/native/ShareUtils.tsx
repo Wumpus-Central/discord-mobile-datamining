@@ -1,3 +1,5 @@
+import { registerAsset } from "../../../../_runtime/08422_registerAsset.js";
+import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 // discord_app/modules/share/native/ShareUtils.tsx
 import dispatcher from "dispatcher";
 import { DraftType } from "handleChanged";
@@ -57,8 +59,8 @@ function _sendShareMessage() {
 const result = require("MESSAGE_GROUP_SPACING").fileFinishedImporting("modules/share/native/ShareUtils.tsx");
 
 export const showInformationToast = function showInformationToast(intl3) {
-  let obj = require("../../toast/native/ToastActionCreators.tsx");
-  obj = { key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: require("../../../../_runtime/08422_registerAsset.js") };
+  let obj = dispatcher;
+  obj = { key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: registerAsset };
   obj.open(obj);
 };
 export const sendShareMessage = function sendShareMessage(arg0) {

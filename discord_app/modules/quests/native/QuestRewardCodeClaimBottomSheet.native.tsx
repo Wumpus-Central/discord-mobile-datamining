@@ -1,3 +1,4 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/quests/native/QuestRewardCodeClaimBottomSheet.native.tsx
 import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase";
 import get_ActivityIndicator from "_getQuestsInstructionsToWinReward";
@@ -215,7 +216,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
 ({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles((paddingBottom) => {
   let obj = { wrapper: null, footer: null, claimingIndicator: null, codeCopyWrapperLoading: null, redemptionInstructions: null };
-  obj = { display: "flex", paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
+  obj = { display: "flex", paddingHorizontal: Themes.space.PX_16, gap: Themes.space.PX_24 };
   obj[0] = obj;
   obj = { paddingBottom };
   obj[1] = obj;

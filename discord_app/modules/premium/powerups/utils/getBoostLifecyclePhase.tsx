@@ -1,3 +1,4 @@
+import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/premium/powerups/utils/getBoostLifecyclePhase.tsx
 let c2 = 259200000;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/getBoostLifecyclePhase.tsx");
@@ -23,7 +24,7 @@ export const getBoostLifecycleInfo = function getBoostLifecycleInfo(ended, closu
 export const getBoostLifecycleTimestamp = function getBoostLifecycleTimestamp(id, boostLifecycleInfo) {
   const phase = boostLifecycleInfo.phase;
   if ("gave" === phase) {
-    return require("../../../../utils/SnowflakeUtils.tsx").extractTimestamp(id.id);
+    return DISCORD_EPOCH.extractTimestamp(id.id);
   } else if ("expiring" === phase) {
     const endsAt2 = boostLifecycleInfo.endsAt;
     return endsAt2.getTime() - c2;
@@ -34,8 +35,8 @@ export const getBoostLifecycleTimestamp = function getBoostLifecycleTimestamp(id
       time = endsAt.getTime();
     }
     if (time == null) {
-      time = require("../../../../utils/SnowflakeUtils.tsx").extractTimestamp(id.id);
-      const obj = require("../../../../utils/SnowflakeUtils.tsx");
+      time = DISCORD_EPOCH.extractTimestamp(id.id);
+      const obj = DISCORD_EPOCH;
     }
     return time;
   }

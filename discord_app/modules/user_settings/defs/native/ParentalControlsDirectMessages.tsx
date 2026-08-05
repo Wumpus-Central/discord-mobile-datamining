@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useParentalControlledExplicitContentSettings } from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
+import { result } from "../../family_center/ParentalControlledUserSettings.tsx";
 // discord_app/modules/user_settings/defs/native/ParentalControlsDirectMessages.tsx
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import createToggle from "createToggle";
@@ -5,21 +8,21 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.RAQUSN);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.RAQUSN);
   },
   useDescription() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.wbYDfT);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.wbYDfT);
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue() {
-    return !require("../../../parent_tools/hooks/useParentalControlSettings.tsx") /* useParentalControlledExplicitContentSettings */.useDefaultGuildsRestricted();
+    return !useParentalControlledExplicitContentSettings /* useParentalControlledExplicitContentSettings */.useDefaultGuildsRestricted();
   },
   onValueChange: function onAllowDirectMessagesFromServerMembersValueChange(arg0) {
     selectedTeenId = selectedTeenId.getSelectedTeenId();
     if (null != selectedTeenId) {
-      const ParentalControlledDefaultGuildsRestrictedV2 = require("../../family_center/ParentalControlledUserSettings.tsx") /* result */.ParentalControlledDefaultGuildsRestrictedV2;
+      const ParentalControlledDefaultGuildsRestrictedV2 = result /* result */.ParentalControlledDefaultGuildsRestrictedV2;
       const result = ParentalControlledDefaultGuildsRestrictedV2.updateControlledSetting(selectedTeenId, !arg0);
     }
   },

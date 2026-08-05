@@ -1,3 +1,4 @@
+import { BAGGAGE_HEADER_NAME } from "../../_runtime/07369_BAGGAGE_HEADER_NAME.js";
 // discord_app/utils/ErrorUtils.tsx
 function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
   if (null != NSUnderlyingError.userInfo.NSUnderlyingError) {
@@ -33,5 +34,5 @@ export const serializeError = function serializeError(arg0) {
     const _String = String;
     error1 = new Error(String(error));
   }
-  return JSON.stringify(require("../../_runtime/07369_BAGGAGE_HEADER_NAME.js") /* BAGGAGE_HEADER_NAME */.normalizeToSize(error1));
+  return JSON.stringify(BAGGAGE_HEADER_NAME /* BAGGAGE_HEADER_NAME */.normalizeToSize(error1));
 };

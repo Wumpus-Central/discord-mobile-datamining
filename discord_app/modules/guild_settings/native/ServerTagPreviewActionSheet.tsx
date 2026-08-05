@@ -1,3 +1,4 @@
+import { GuildSettingsServerTagPreview } from "GuildSettingsServerTagPreview.tsx";
 // discord_app/modules/guild_settings/native/ServerTagPreviewActionSheet.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -31,7 +32,7 @@ export default function ServerTagPreviewActionSheet(guildId) {
     obj[7] = function onAdopted(arg0) {
       return callback(table[9]).hideActionSheet();
     };
-    let tmp7 = callback(require("GuildSettingsServerTagPreview.tsx"), obj);
+    let tmp7 = callback(GuildSettingsServerTagPreview, obj);
     let tmp8 = callback;
   } else if (guildProfile.fetchStatus === GuildProfileFetchStatus.FETCHED) {
     obj = { style: null, children: null };

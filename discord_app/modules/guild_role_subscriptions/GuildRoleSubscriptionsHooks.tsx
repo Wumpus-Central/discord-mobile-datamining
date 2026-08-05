@@ -1,3 +1,6 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { useRequest } from "../../hooks/useRequest.tsx";
+import { useGroupListingsFetchContext } from "GroupListingsFetchContext.tsx";
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionsHooks.tsx
 import initialize from "initialize";
 import _slicedToArray from "_slicedToArray";
@@ -312,7 +315,7 @@ export const useSubscriptionListingsForGroup = function useSubscriptionListingsF
   }
   const items = [makeGroupListingIndexSubscriptionListingTag];
   const items1 = [id, flag, flag2];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
+  return _initialize.useStateFromStoresArray(items, () => {
     if (null == stateFromStoresArray) {
       return [];
     } else {
@@ -355,7 +358,7 @@ export const useSubscriptionListingsForGroup = function useSubscriptionListingsF
 export const useSubscriptionListing = function useSubscriptionListing(editStateId) {
   const _require = editStateId;
   const items = [makeGroupListingIndexSubscriptionListingTag];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let subscriptionListing = null;
     if (null != closure_0) {
       subscriptionListing = outer1_8.getSubscriptionListing(tmp);
@@ -366,7 +369,7 @@ export const useSubscriptionListing = function useSubscriptionListing(editStateI
 export const useSubscriptionGroupListing = function useSubscriptionGroupListing(arg0) {
   const _require = arg0;
   const items = [makeGroupListingIndexSubscriptionListingTag];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let subscriptionGroupListing = null;
     if (null != closure_0) {
       subscriptionGroupListing = outer1_8.getSubscriptionGroupListing(tmp);
@@ -376,10 +379,10 @@ export const useSubscriptionGroupListing = function useSubscriptionGroupListing(
 };
 export const useGroupListingsForGuild = function useGroupListingsForGuild(guildId) {
   const _require = guildId;
-  let closure_1 = _require("GroupListingsFetchContext.tsx").useGroupListingsFetchContext("useGroupListingsForGuild");
-  const obj = _require("GroupListingsFetchContext.tsx");
+  let closure_1 = _useGroupListingsFetchContext.useGroupListingsFetchContext("useGroupListingsForGuild");
+  const obj = _useGroupListingsFetchContext;
   const items = [makeGroupListingIndexSubscriptionListingTag];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     if (null != closure_0) {
       if (closure_1) {
         let subscriptionGroupListingsForGuild = outer1_8.getSubscriptionGroupListingsForGuild(tmp);
@@ -397,7 +400,7 @@ export const useSubscriptionListingsForGuild = function useSubscriptionListingsF
   }
   useFetchListingsForGuild(guildId);
   const items = [makeGroupListingIndexSubscriptionListingTag];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
+  return _initialize.useStateFromStoresArray(items, () => {
     let tmp = stateFromStoresArray;
     if (null != stateFromStoresArray) {
       let subscriptionGroupListingsForGuild = outer1_8.getSubscriptionGroupListingsForGuild(tmp);
@@ -557,7 +560,7 @@ export const useDeleteSubscriptionListing = function useDeleteSubscriptionListin
   };
 };
 export const useArchiveSubscriptionListing = function useArchiveSubscriptionListing() {
-  const tmp2 = callback2(require("../../hooks/useRequest.tsx")(importAll(5784).archiveSubscriptionListing), 2);
+  const tmp2 = callback2(useRequest(importAll(5784).archiveSubscriptionListing), 2);
   return { error: tmp2[1].error, submitting: tmp2[1].loading, archiveSubscriptionListing: tmp2[0] };
 };
 export const usePublishSubscriptionListing = function usePublishSubscriptionListing() {
@@ -709,7 +712,7 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
 export const useSubscriptionsSettings = function useSubscriptionsSettings(guildId) {
   const _require = guildId;
   const items = [makeGroupListingIndexSubscriptionListingTag];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let subscriptionSettings;
     if (null != closure_0) {
       subscriptionSettings = outer1_8.getSubscriptionSettings(tmp);
@@ -1147,7 +1150,7 @@ export const useUpdateSubscriptionsTrial = function useUpdateSubscriptionsTrial(
 export const useSubscriptionTrial = function useSubscriptionTrial(editStateId) {
   const _require = editStateId;
   const items = [makeGroupListingIndexSubscriptionListingTag];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let subscriptionTrial = null;
     if (null != closure_0) {
       subscriptionTrial = outer1_8.getSubscriptionTrial(tmp);

@@ -1,3 +1,5 @@
+import { NavigationStack } from "../../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { items } from "DevToolsGuildTagBadgesScreen.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsGuildTagBadgesModal.tsx
 import { jsx } from "jsxProd";
 import createNativeStackNavigator from "createNativeStackNavigator";
@@ -8,7 +10,7 @@ createNativeStackNavigator = createNativeStackNavigator.createNativeStackNavigat
 const memoResult = require("noop").memo(function DevToolsGuildTagBadgesModal() {
   let Navigator;
   let Screen;
-  let obj = _require("../../../../../design/components/Navigator/native/Navigator.native.tsx");
+  let obj = _NavigationStack;
   _require = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions(navigation) {
@@ -33,15 +35,15 @@ const memoResult = require("noop").memo(function DevToolsGuildTagBadgesModal() {
     options() {
       return { title: "Guild Tag Badges" };
     },
-    component: require("DevToolsGuildTagBadgesScreen.tsx")
+    component: items
   };
   ({ Navigator, Screen } = createNativeStackNavigator);
   obj[1] = <Screen name="DevToolsGuildTagBadges" options={function options() {
     return { title: "Guild Tag Badges" };
-  }} component={require("DevToolsGuildTagBadgesScreen.tsx")} />;
+  }} component={items} />;
   return <Navigator name="DevToolsGuildTagBadges" options={function options() {
     return { title: "Guild Tag Badges" };
-  }} component={require("DevToolsGuildTagBadgesScreen.tsx")} />;
+  }} component={items} />;
 });
 const result = require("createNativeStackNavigator").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildTagBadgesModal.tsx");
 

@@ -1,3 +1,6 @@
+import { useShouldHideMediaOptions } from "../../../../media_channel/useShouldHideMediaOptions.tsx";
+import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
+import { MediaViewerOverlayButton } from "MediaViewerOverlayButton.tsx";
 // discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlayHeader.tsx
 import "ContextMenu";
 import get_ActivityIndicator from "Text";
@@ -34,7 +37,7 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
   const headerLayoutAnimation = obj.useHeaderLayoutAnimation(animationDriver);
   let obj1 = isModalOpen(8819);
   const mediaShareActions = obj1.useMediaShareActions({ source, disableDownload, shareable });
-  const tmp7 = require("../../../../media_channel/useShouldHideMediaOptions.tsx")(channelId);
+  const tmp7 = useShouldHideMediaOptions(channelId);
   let obj2 = isModalOpen(4136);
   isModalOpen = obj2.useIsModalOpen(SHARE_PREPARING_MODAL_KEY);
   let obj3 = isModalOpen(4146);
@@ -71,7 +74,7 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
   obj5[0] = intl.string(isModalOpen(1236).t.cpT0Cq);
   obj5[1] = closure_6(isModalOpen(5270).XSmallIcon, { size: "md", color: "interactive-text-active" });
   obj5[2] = onClose;
-  const items1 = [closure_6(require("MediaViewerOverlayButton.tsx"), obj5), ];
+  const items1 = [closure_6(MediaViewerOverlayButton, obj5), ];
   let tmp10Result = null != contextName;
   if (tmp10Result) {
     const obj6 = { style: null, children: null };
@@ -137,6 +140,6 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
   items3[1] = tmp12Result;
   obj3[1] = items3;
   obj2[2] = closure_7(isModalOpen(8852).MediaModalOverlayHeaderWrapper, obj3);
-  obj[1] = closure_6(require("../../../../reanimated/ReanimatedRexport.tsx").View, obj2);
-  return closure_6(require("../../../../reanimated/ReanimatedRexport.tsx").View, obj);
+  obj[1] = closure_6(ReanimatedRexport.View, obj2);
+  return closure_6(ReanimatedRexport.View, obj);
 };

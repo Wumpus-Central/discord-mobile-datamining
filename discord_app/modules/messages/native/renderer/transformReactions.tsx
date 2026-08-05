@@ -1,3 +1,4 @@
+import { apexExperiment } from "../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx";
 // discord_app/modules/messages/native/renderer/transformReactions.tsx
 const result = require("getAvatarURL").fileFinishedImporting("modules/messages/native/renderer/transformReactions.tsx");
 
@@ -6,8 +7,8 @@ export default function transformReactions(arg0) {
   let require;
   ({ reactions, animateEmoji: require } = arg0);
   let closure_1;
-  closure_1 = require("../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx") /* apexExperiment */.shouldSkipAccessibilityLabels();
-  let obj = require("../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx") /* apexExperiment */;
+  closure_1 = apexExperiment /* apexExperiment */.shouldSkipAccessibilityLabels();
+  let obj = apexExperiment /* apexExperiment */;
   return reactions.flatMap((emoji) => {
     emoji = emoji.emoji;
     const merged = Object.assign(emoji, Object.create(null));

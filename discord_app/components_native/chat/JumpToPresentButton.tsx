@@ -1,3 +1,5 @@
+import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../design/tokens/native/useToken.tsx";
 // discord_app/components_native/chat/JumpToPresentButton.tsx
 import "noop";
 import { View } from "memoResult1";
@@ -17,9 +19,9 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { bottom: "100%", marginBottom: require("Themes").modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING, pointerEvents: "box-none" };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let closure_10 = set.isIOS() ? (() => null) : ((arg0) => {
-  let obj = require("../../design/tokens/native/useToken.tsx") /* map */;
+  let obj = map /* map */;
   obj = { bottom: null };
-  const token = obj.useToken(require("../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING);
+  const token = obj.useToken(Themes.modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING);
   obj[0] = callback2(arg0) + token;
   return obj;
 });

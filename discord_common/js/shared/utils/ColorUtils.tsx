@@ -1,3 +1,4 @@
+import { n } from "../../../../_runtime/00689_n.js";
 // discord_common/js/shared/utils/ColorUtils.tsx
 function int2hslRaw(initialColor) {
   const result = (initialColor >> 16 & 255) / 255;
@@ -38,7 +39,7 @@ const re2 = /rgba?\((\d{1,3}), ?(\d{1,3}), ?(\d{1,3})\)?(?:, ?(\d(?:\.\d*)?)\))?
 let result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/ColorUtils.tsx");
 
 export const hex2int = function hex2int(callback) {
-  return require("../../../../_runtime/00689_n.js")(callback).num();
+  return n(callback).num();
 };
 export const int2hex = function int2hex(color) {
   if (color <= 16777215) {
@@ -167,7 +168,7 @@ export const hex2rgb = function hex2rgb(PRIMARY_200, alphaResult) {
   } else {
     return null;
   }
-  obj = require("../../../../_runtime/00689_n.js");
+  obj = n;
   tmp2 = importDefault;
 };
 export const int2rgba = function int2rgba(int2hslRaw, arg1) {
@@ -232,7 +233,7 @@ export const getDarkness = function getDarkness(hex2intResult) {
   return 1 - (0.299 * (hex2intResult >> 16 & 255) + 0.587 * (hex2intResult >> 8 & 255) + 0.114 * (255 & hex2intResult)) / 255;
 };
 export const isValidHex = function isValidHex(variantValue) {
-  return require("../../../../_runtime/00689_n.js").valid(variantValue);
+  return n.valid(variantValue);
 };
 export const int2rgbArray = function int2rgbArray(modalV2BackgroundColor) {
   const items = [modalV2BackgroundColor >> 16 & 255, modalV2BackgroundColor >> 8 & 255, 255 & modalV2BackgroundColor];

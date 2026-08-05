@@ -1,3 +1,5 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { updateDevToolsSettings } from "../../../devtools/DevToolsActionCreators.tsx";
 // discord_app/modules/user_settings/defs/native/ShowDevWidgetSetting.tsx
 import initialize from "initialize";
 import createToggle from "createToggle";
@@ -10,13 +12,13 @@ createToggle = {
   parent: null,
   IconComponent: require("StaffBadgeIcon").StaffBadgeIcon,
   onValueChange: function handleShowDevWidgetSettingToggle(showDevWidget) {
-    let obj = require("../../../devtools/DevToolsActionCreators.tsx") /* updateDevToolsSettings */;
+    let obj = updateDevToolsSettings /* updateDevToolsSettings */;
     obj = { showDevWidget };
     const result = obj.updateDevToolsSettings(obj);
   },
   useValue: function useShowDevWidgetSettingToggleValue() {
     const items = [initialize];
-    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => showDevWidget.showDevWidget);
+    return initialize /* initialize */.useStateFromStores(items, () => showDevWidget.showDevWidget);
   },
   usePredicate: require("useStaffOrDeveloperSettingPredicate").useStaffOrDeveloperSettingPredicate
 };

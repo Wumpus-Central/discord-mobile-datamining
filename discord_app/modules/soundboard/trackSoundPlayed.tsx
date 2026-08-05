@@ -1,3 +1,4 @@
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/soundboard/trackSoundPlayed.tsx
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -52,5 +53,5 @@ export default function trackSoundPlayed(location_stack, in_overlay, guildId) {
     sum = arg4 + 1;
   }
   obj[13] = sum;
-  require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.PREMIUM_FEATURE_USAGE, obj);
+  expandEventProperties.track(AnalyticEvents.PREMIUM_FEATURE_USAGE, obj);
 };

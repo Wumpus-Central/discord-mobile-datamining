@@ -1,3 +1,5 @@
+import { set } from "../../../../utils/PlatformUtils.tsx";
+import { VisualEffectViewThemed } from "../../../visual_effect_view/native/VisualEffectViewThemed.tsx";
 // discord_app/modules/expression_picker/native/categories/ExpressionPickerCategoriesBackdrop.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -19,7 +21,7 @@ obj[1] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(obj);
 const memoResult = require("noop").memo(function EmojiPickerCategoriesBackdrop() {
   const tmp = callback();
-  let obj = require("../../../../utils/PlatformUtils.tsx") /* set */;
+  let obj = set /* set */;
   if (obj.isAndroid()) {
     obj = { style: null };
     const items = [, ];
@@ -31,7 +33,7 @@ const memoResult = require("noop").memo(function EmojiPickerCategoriesBackdrop()
     obj[0] = tmp.backdrop;
     const obj1 = { style: null };
     obj1[0] = tmp.backdrop;
-    obj[1] = tmp3(require("../../../visual_effect_view/native/VisualEffectViewThemed.tsx"), obj1);
+    obj[1] = tmp3(VisualEffectViewThemed, obj1);
     tmp3Result = tmp3(tmp4, obj);
   }
   return tmp3Result;

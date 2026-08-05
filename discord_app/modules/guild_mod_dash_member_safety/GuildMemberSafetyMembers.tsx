@@ -1,3 +1,10 @@
+import { isEqual } from "../../../_runtime/04444_isEqual.js";
+import { version } from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
+import { isSpamSupported } from "../messages/isSpam.tsx";
+import { getJoinedAtDateFormatter } from "DateUtils.tsx";
+import { result } from "MemberSafetyElasticSearchQueryTypes.tsx";
+import { hasMemberSupplemental } from "MemberSafetyStoreSupplemental.tsx";
+import { getSortValueForMember } from "SortUtils.tsx";
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetyMembers.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 
@@ -36,7 +43,7 @@ const prototype = GuildMemberSafetyMembers.prototype;
 prototype["reset"] = function reset() {
   const _membersMap = this._membersMap;
   _membersMap.clear();
-  const secondaryIndexMap = new require("../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx") /* version */.SecondaryIndexMap(getGuildMemberSecondaryIndexes, getGuildMemberSecondarySortBy);
+  const secondaryIndexMap = new version /* version */.SecondaryIndexMap(getGuildMemberSecondaryIndexes, getGuildMemberSecondarySortBy);
   this._membersMap = secondaryIndexMap;
   const result = this.resetNewMemberTimestamp();
 };
@@ -56,7 +63,7 @@ prototype["enhanceNewMember"] = function enhanceNewMember(trueMember, searchStat
   if (isIncludedInSearchResults === undefined) {
     obj = {};
   }
-  const joinedAtTimestamp = require("DateUtils.tsx") /* getJoinedAtDateFormatter */.getJoinedAtTimestamp(trueMember.joinedAt);
+  const joinedAtTimestamp = getJoinedAtDateFormatter /* getJoinedAtDateFormatter */.getJoinedAtTimestamp(trueMember.joinedAt);
   const result = this._computeMemberSupplementals(trueMember.userId, trueMember.unusualDMActivityUntil);
   ({ hasUnusualDmActivity, hasUnusualAccountActivity, sourceInviteCode, joinSourceType, inviterId, integrationType, joinSourceApplicationId, joinSourceChannelId } = result);
   obj = { hasUnusualDmActivity, hasUnusualAccountActivity, sourceInviteCode, joinSourceType, inviterId, integrationType, joinSourceApplicationId, joinSourceChannelId };
@@ -65,19 +72,19 @@ prototype["enhanceNewMember"] = function enhanceNewMember(trueMember, searchStat
   obj.isCurrentGuildMemberByTimestamp = joinedAtTimestamp <= this.newMemberTimestamp;
   obj.isIncludedInSearchResults = false;
   obj.user = user;
-  const obj2 = require("DateUtils.tsx") /* getJoinedAtDateFormatter */;
+  const obj2 = getJoinedAtDateFormatter /* getJoinedAtDateFormatter */;
   const tmp = require;
   let ORDER_BY_UNSPECIFIED = searchState.selectedSort;
   if (ORDER_BY_UNSPECIFIED == null) {
     ORDER_BY_UNSPECIFIED = tmp(6865).OrderBy.ORDER_BY_UNSPECIFIED;
   }
-  obj.sort = require("SortUtils.tsx") /* getSortValueForMember */.getSortValueForMember(trueMember, ORDER_BY_UNSPECIFIED);
+  obj.sort = getSortValueForMember /* getSortValueForMember */.getSortValueForMember(trueMember, ORDER_BY_UNSPECIFIED);
   obj.joinedAtTimestamp = joinedAtTimestamp;
   const merged1 = Object.assign(obj);
   return obj;
 };
 prototype["_computeMemberSupplementals"] = function _computeMemberSupplementals(userId, unusualDMActivityUntil) {
-  let obj = require("MemberSafetyStoreSupplemental.tsx") /* hasMemberSupplemental */;
+  let obj = hasMemberSupplemental /* hasMemberSupplemental */;
   obj = obj.getMemberSupplementalByGuildId(this.guildId)[userId];
   if (obj == null) {
     obj = {};
@@ -120,7 +127,7 @@ prototype["_computeMemberSupplementals"] = function _computeMemberSupplementals(
     tmp9 = time >= closure_4 - tmp(6865).UNUSUAL_DM_COMPARISON_DELTA;
   }
   obj[6] = tmp9;
-  obj[7] = require("../messages/isSpam.tsx") /* isSpamSupported */.isSpammer(userId);
+  obj[7] = isSpamSupported /* isSpamSupported */.isSpammer(userId);
   return obj;
 };
 prototype["createMember"] = function createMember(userId) {
@@ -185,7 +192,7 @@ prototype["updateMember"] = function updateMember(userId) {
         let tmp15 = obj[tmp6];
         let tmp16 = importDefault;
         let tmp17 = dependencyMap;
-        if (require("../../../_runtime/04444_isEqual.js")(tmp15, obj[tmp6])) {
+        if (isEqual(tmp15, obj[tmp6])) {
           continue;
         } else {
           obj[tmp6] = tmp15;
@@ -229,7 +236,7 @@ export const hasUnusualDmActivity = function hasUnusualDmActivity(arg0) {
     const _Date = Date;
     const date = new Date(arg0);
     const time = date.getTime();
-    tmp = time >= closure_4 - require("MemberSafetyElasticSearchQueryTypes.tsx") /* result */.UNUSUAL_DM_COMPARISON_DELTA;
+    tmp = time >= closure_4 - result /* result */.UNUSUAL_DM_COMPARISON_DELTA;
   }
   return tmp;
 };

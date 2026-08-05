@@ -1,3 +1,5 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/user_affinities/UserAffinitiesActionCreators.tsx
 import hasConsented from "hasConsented";
 import recomputeAffinities from "recomputeAffinities";
@@ -16,9 +18,9 @@ export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
   }
   if (recomputeAffinities.shouldFetch()) {
     if (hasConsented.hasConsented(constants.PERSONALIZATION)) {
-      let obj = require("../../Dispatcher.tsx");
+      let obj = dispatcher;
       obj.dispatch({ type: "LOAD_USER_AFFINITIES_V2" });
-      const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+      const HTTP = sendRequest /* sendRequest */.HTTP;
       obj = { url: null, retries: null, oldFormErrors: true, rejectWithError: false };
       obj[0] = USER_AFFINITIES_V2.USER_AFFINITIES_V2;
       let num = 0;

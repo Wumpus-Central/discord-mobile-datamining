@@ -1,3 +1,5 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 // discord_app/modules/verification/native/components/ConfirmEmailChangeStart.tsx
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
@@ -21,9 +23,9 @@ const result = require("noop").fileFinishedImporting("modules/verification/nativ
 export default function ConfirmEmailChangeStart() {
   const tmp = callback4();
   const require = tmp;
-  let obj = require("../../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
+  let obj = useNavigation /* useNavigation */;
   const navigation = obj.useNavigation();
-  let obj1 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj1 = initialize /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
   const tmp6 = callback(React.useState(false), 2);

@@ -1,3 +1,6 @@
+import { t } from "../../../../_runtime/03867_t.js";
+import { _createGatewayCheckoutContext } from "../../../utils/BillingUtils.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 // discord_app/modules/billing/hooks/useFractionalPremiumInfo.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -24,7 +27,7 @@ function calculateFractionalPremiumInfo(isFetching) {
     flag = false;
   }
   ({ entitlements, unactivatedFractionalPremiumUnits, premiumSubscription, fetchedAllEntitlements, excludeReverseTrialFromCountdown } = isFetching);
-  let obj = { isFractionalPremiumActive: false, fractionalState: constants3.NONE, startsAt: require("../../../../_runtime/03867_t.js")(0), endsAt: require("../../../../_runtime/03867_t.js")(0), currentEntitlementId: "", currentEntitlementEndsAt: require("../../../../_runtime/03867_t.js")(0), unactivatedUnits: [], fetched: fetchedAllEntitlements };
+  let obj = { isFractionalPremiumActive: false, fractionalState: constants3.NONE, startsAt: t(0), endsAt: t(0), currentEntitlementId: "", currentEntitlementEndsAt: t(0), unactivatedUnits: [], fetched: fetchedAllEntitlements };
   if (flag) {
     obj = {};
     const merged = Object.assign(obj);
@@ -58,7 +61,7 @@ function calculateFractionalPremiumInfo(isFetching) {
         const obj1 = { entitlementIds: null };
         obj1[0] = mapped;
         obj[0] = obj1;
-        const result = require("../../../utils/BillingUtils.tsx") /* _createGatewayCheckoutContext */.captureBillingMessage("fractional redemption entitlements should have startsAt/endsAt", obj);
+        const result = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */.captureBillingMessage("fractional redemption entitlements should have startsAt/endsAt", obj);
         const _Error = Error;
         const error = new Error("fractional redemption entitlements should have startsAt/endsAt");
         throw error;
@@ -85,7 +88,7 @@ function calculateFractionalPremiumInfo(isFetching) {
         }
         obj2[2] = tmp11;
         if (null != first) {
-          const obj4 = require("../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */;
+          const obj4 = getPremiumPlanItem /* getPremiumPlanItem */;
           let tmp2ResultResult = tmp2(3867)(obj4.extendDateWithUnconsumedFractionalPremium(first.endsAt, unactivatedFractionalPremiumUnits, undefined, excludeReverseTrialFromCountdown));
           const tmp2Result = tmp2(3867);
         } else {

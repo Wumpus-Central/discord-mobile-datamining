@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_action_sheet/native/GuildActionSheetUtils.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
@@ -9,7 +10,7 @@ export const useGuildActionSheetPermissions = function useGuildActionSheetPermis
   const _require = guild;
   const items = [getUncachedChannelPermissions];
   const items1 = [guild];
-  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
+  return _initialize.useStateFromStoresObject(items, () => {
     if (null == closure_0) {
       let obj = { canAccessSettings: false, canEditNickname: false, canManageChannels: false };
     } else {

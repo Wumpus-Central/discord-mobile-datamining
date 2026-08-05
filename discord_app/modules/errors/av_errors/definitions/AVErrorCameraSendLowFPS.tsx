@@ -1,3 +1,4 @@
+import { getReportInboundErrors } from "../AVErrorUtils.tsx";
 // discord_app/modules/errors/av_errors/definitions/AVErrorCameraSendLowFPS.tsx
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -26,7 +27,7 @@ export const AVErrorCameraSendLowFPSDefinition = {
           }
         }
         if (rTCConnection.hasActiveRemoteWants()) {
-          const accumulatedStatsWithMinDatapoints = require("../AVErrorUtils.tsx") /* getReportInboundErrors */.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, id.getId());
+          const accumulatedStatsWithMinDatapoints = getReportInboundErrors /* getReportInboundErrors */.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, id.getId());
           let tmp7 = null;
           if (null != accumulatedStatsWithMinDatapoints) {
             if (accumulatedStatsWithMinDatapoints.short.frameRate < 10) {

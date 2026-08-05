@@ -1,3 +1,4 @@
+import { CollectiblesShopCardInternalV2 } from "../../../collectibles/native/CollectiblesShopCardV2.tsx";
 // discord_app/modules/game_profile/native/components/GameProfileShopCarousel.tsx
 import noop from "noop";
 import { View } from "noop";
@@ -10,7 +11,7 @@ let error;
 const require = arg1;
 function HorizontalSpacing() {
   let obj = { style: null };
-  obj = { width: require("../../../collectibles/native/CollectiblesShopCardV2.tsx") /* CollectiblesShopCardInternalV2 */.COLLECTIBLES_SHOP_CARD_GAP };
+  obj = { width: CollectiblesShopCardInternalV2 /* CollectiblesShopCardInternalV2 */.COLLECTIBLES_SHOP_CARD_GAP };
   obj[0] = obj;
   return callback(View, obj);
 }

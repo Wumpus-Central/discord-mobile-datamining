@@ -1,3 +1,4 @@
+import { getAvatarURL } from "../../../../../../utils/AvatarUtils.tsx";
 // discord_app/modules/app_launcher/native/screens/home/recommendations/RecommendationsBannerCard.tsx
 import noop from "noop";
 import { View } from "TableRowArrow";
@@ -64,7 +65,7 @@ export default function RecommendationsBannerCard(application) {
     }
     outer1_1(outer1_2[7])(id);
   }, items);
-  let obj2 = require("../../../../../../utils/AvatarUtils.tsx");
+  let obj2 = getAvatarURL;
   obj = { id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true };
   const applicationIconSource = obj2.getApplicationIconSource(obj);
   if (isLandscape) {

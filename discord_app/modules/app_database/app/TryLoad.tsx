@@ -1,3 +1,4 @@
+import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/app_database/app/TryLoad.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
@@ -220,7 +221,7 @@ export const tryLoadOrResetCacheGateway = function tryLoadOrResetCacheGateway(ar
     let tmp4 = ensureGuildLoaded;
     const _HermesInternal = HermesInternal;
     tmp2.log("" + arg0 + ": exception thrown, resetting socket.", tmp2, tmp2.stack);
-    let obj = require("../../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { error: null, action: null, metricAction: null };
     obj[0] = tmp2;
     const _HermesInternal2 = HermesInternal;

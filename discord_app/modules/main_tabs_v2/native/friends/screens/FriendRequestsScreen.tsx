@@ -1,3 +1,4 @@
+import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/main_tabs_v2/native/friends/screens/FriendRequestsScreen.tsx
 import TableRowInner from "TableRowInner";
 import getRelativeTimestamp from "getRelativeTimestamp";
@@ -19,11 +20,11 @@ let unpackModuleId;
 const require = arg1;
 function compareUserItems(user, user2) {
   if (user.user.id === user2.user.id) {
-    let compareResult = require("../../../../../utils/SnowflakeUtils.tsx").compare(user.applicationId, user2.applicationId);
-    const obj2 = require("../../../../../utils/SnowflakeUtils.tsx");
+    let compareResult = DISCORD_EPOCH.compare(user.applicationId, user2.applicationId);
+    const obj2 = DISCORD_EPOCH;
   } else {
-    compareResult = require("../../../../../utils/SnowflakeUtils.tsx").compare(user.user.id, user2.user.id);
-    const obj = require("../../../../../utils/SnowflakeUtils.tsx");
+    compareResult = DISCORD_EPOCH.compare(user.user.id, user2.user.id);
+    const obj = DISCORD_EPOCH;
   }
   return compareResult;
 }

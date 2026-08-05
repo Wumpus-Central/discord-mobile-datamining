@@ -1,10 +1,12 @@
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { parseSkuIdFromServerData } from "../utils/mappers.tsx";
 // discord_app/modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx
 let result = require("set").fileFinishedImporting("modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx");
 
 export const parseAvatarDecorationData = function parseAvatarDecorationData(avatar_decoration_data) {
   if (typeof avatar_decoration_data === "object") {
     if (null != avatar_decoration_data) {
-      let obj = require("../utils/mappers.tsx") /* parseSkuIdFromServerData */;
+      let obj = parseSkuIdFromServerData /* parseSkuIdFromServerData */;
       const result = obj.parseSkuIdFromServerData(avatar_decoration_data);
       if (null == result) {
         return null;
@@ -96,8 +98,8 @@ export const isEqualAvatarDecoration = function isEqualAvatarDecoration(avatarDe
           }
         }
       }
-      let isEqualResult = require("../../../../_runtime/00012_apply.js") /* apply */.isEqual(tmp2, tmp6);
-      const obj5 = require("../../../../_runtime/00012_apply.js") /* apply */;
+      let isEqualResult = apply /* apply */.isEqual(tmp2, tmp6);
+      const obj5 = apply /* apply */;
     }
     return isEqualResult;
   }

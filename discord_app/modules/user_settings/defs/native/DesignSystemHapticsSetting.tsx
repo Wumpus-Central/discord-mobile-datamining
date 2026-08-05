@@ -1,3 +1,4 @@
+import { HapticButton } from "../../design_system/native/UserSettingsDesignSystemHaptics.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemHapticsSetting.tsx
 import createToggle from "createToggle";
 
@@ -11,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_HAPTICS,
   getComponent() {
-    return require("../../design_system/native/UserSettingsDesignSystemHaptics.tsx") /* HapticButton */.default;
+    return HapticButton /* HapticButton */.default;
   }
 };
 const route = createToggle.createRoute(obj);

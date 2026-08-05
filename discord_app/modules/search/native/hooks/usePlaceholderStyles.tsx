@@ -1,3 +1,8 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
 // discord_app/modules/search/native/hooks/usePlaceholderStyles.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { FADE_LAYOUT_ANIMATION_DURATION as closure_4 } from "MessageEmbedTypes";
@@ -10,11 +15,11 @@ export const useFullscreenPlaceholderCount = function useFullscreenPlaceholderCo
   let numColumns;
   let placeholderHeight;
   ({ placeholderHeight, numColumns } = arg0);
-  return Math.ceil(require("../../../screen/useWindowDimensions.native.tsx")({ ignoreKeyboard: true }).height / placeholderHeight) * numColumns;
+  return Math.ceil(useWindowDimensions({ ignoreKeyboard: true }).height / placeholderHeight) * numColumns;
 };
 export const usePlaceholderAnimatedStyle = function usePlaceholderAnimatedStyle(visible) {
   const _require = visible;
-  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   class A {
@@ -73,9 +78,9 @@ export const usePlaceholderAnimatedStyle = function usePlaceholderAnimatedStyle(
       return tmp5;
     }
   }
-  obj = { useReducedMotion: stateFromStores, visible, withRepeat: _require("../../../reanimated/ReanimatedRexport.tsx").withRepeat, withSequence: _require("../../../reanimated/ReanimatedRexport.tsx").withSequence, withTiming: _require("../../../../design/animation/reanimated/timing/timing.tsx").withTiming, STANDARD_EASING: _require("../../../../design/void/native.tsx").STANDARD_EASING, FADE_LAYOUT_ANIMATION_DURATION: closure_4 };
+  obj = { useReducedMotion: stateFromStores, visible, withRepeat: _ReanimatedRexport.withRepeat, withSequence: _ReanimatedRexport.withSequence, withTiming: _CONFIG_NEVER_ANIMATE_TIMING.withTiming, STANDARD_EASING: _Button.STANDARD_EASING, FADE_LAYOUT_ANIMATION_DURATION: closure_4 };
   A.__closure = obj;
   A.__workletHash = 9750536800906;
   A.__initData = closure_5;
-  return _require("../../../reanimated/ReanimatedRexport.tsx").useAnimatedStyle(A);
+  return _ReanimatedRexport.useAnimatedStyle(A);
 };

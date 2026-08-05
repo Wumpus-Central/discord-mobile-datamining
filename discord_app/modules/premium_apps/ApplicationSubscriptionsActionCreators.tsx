@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/premium_apps/ApplicationSubscriptionsActionCreators.tsx
 import set from "set";
 import ME from "ME";
@@ -19,17 +20,17 @@ function transformSubscriptionListingToStoreListing(id) {
   return obj;
 }
 function dispatchCompat(arr) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "SKUS_FETCH_SUCCESS", skus: arr.map(transformSubscriptionListingToSku) };
   obj.dispatch(obj);
   obj = { type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: arr.map(transformSubscriptionListingToStoreListing) };
-  require("../../Dispatcher.tsx").dispatch(obj);
+  dispatcher.dispatch(obj);
   const iter = arr[Symbol.iterator]();
-  const obj3 = require("../../Dispatcher.tsx");
+  const obj3 = dispatcher;
   while (iter !== undefined) {
     let tmp4 = importDefault;
     let tmp5 = dependencyMap;
-    let obj5 = require("../../Dispatcher.tsx");
+    let obj5 = dispatcher;
     let obj1 = { type: "SUBSCRIPTION_PLANS_FETCH_SUCCESS", skuId: null, subscriptionPlans: null };
     ({ id: obj6[1], subscription_plans: obj6[2] } = nextResult);
     let dispatchResult2 = obj5.dispatch(obj1);
@@ -330,7 +331,7 @@ export const fetchEntitlementsForGuild = function fetchEntitlementsForGuild() {
   return applyArgumentsResult;
 };
 export const dismissApplicationSubscriptionExpirationNotice = function dismissApplicationSubscriptionExpirationNotice(guildId) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED", guildId };
   obj.dispatch(obj);
 };

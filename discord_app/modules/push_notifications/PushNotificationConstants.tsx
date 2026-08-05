@@ -1,3 +1,4 @@
+import { set } from "../../utils/PlatformUtils.tsx";
 // discord_app/modules/push_notifications/PushNotificationConstants.tsx
 import getConstants from "getConstants";
 import isMetaQuest from "isMetaQuest";
@@ -46,7 +47,7 @@ export const getDevicePushProvider = function getDevicePushProvider() {
     if (!obj.isAndroid()) {
       str = str2;
     }
-    obj = require("../../utils/PlatformUtils.tsx") /* set */;
+    obj = set /* set */;
   }
   return str;
 };

@@ -1,3 +1,6 @@
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { createMessage } from "createMessage.tsx";
+import { createMinimalMessageRecord } from "MessageRecordUtils.tsx";
 // discord_app/modules/messages/tryInjectMessage.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ME from "ME";
@@ -19,15 +22,15 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, cl
     obj[3] = id.author;
     obj[4] = constants.EPHEMERAL;
     obj[5] = constants2.SENT;
-    const tmp19 = require("createMessage.tsx")(obj);
-    const messageRecord = require("MessageRecordUtils.tsx") /* createMinimalMessageRecord */.createMessageRecord(tmp19);
+    const tmp19 = createMessage(obj);
+    const messageRecord = createMinimalMessageRecord /* createMinimalMessageRecord */.createMessageRecord(tmp19);
     ({ applicationId: tmp21.applicationId, timestamp: tmp21.timestamp } = id);
     let tmp4 = messageRecord;
-    const obj9 = require("MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
+    const obj9 = createMinimalMessageRecord /* createMinimalMessageRecord */;
   } else {
     tmp4 = null;
     if (null != id.applicationId) {
-      let obj1 = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+      let obj1 = hasFlag /* hasFlag */;
       tmp4 = null;
       if (obj1.hasFlag(id.flags, constants.SENT_BY_SOCIAL_LAYER_INTEGRATION)) {
         tmp4 = null;
@@ -52,11 +55,11 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, cl
                   obj[4] = tmp3.EPHEMERAL;
                   obj[5] = constants2.SENT;
                   tmpResult = tmp(4504);
-                  const messageRecord1 = tmpResult.createMessageRecord(require("createMessage.tsx")(obj));
+                  const messageRecord1 = tmpResult.createMessageRecord(createMessage(obj));
                   ({ applicationId: tmp10.applicationId, timestamp: tmp10.timestamp } = id);
                   const result = obj.set(closure_0.id, id.id);
                   const tmp6 = importDefault;
-                  const tmp9 = require("createMessage.tsx")(obj);
+                  const tmp9 = createMessage(obj);
                   let num2 = closure_0.recipientFlags;
                   if (num2 == null) {
                     num2 = 0;

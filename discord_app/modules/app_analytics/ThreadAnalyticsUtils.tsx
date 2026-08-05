@@ -1,3 +1,5 @@
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { transitionTo } from "../routing/router_utils.tsx";
 // discord_app/modules/app_analytics/ThreadAnalyticsUtils.tsx
 import updateFromGuild from "updateFromGuild";
 import updateState from "updateState";
@@ -19,7 +21,7 @@ export const collectThreadMetadata = function collectThreadMetadata(channel, arg
     if (THREAD_CHANNEL_TYPES.has(channel.type)) {
       let lastRouteChangeSource;
       if (flag) {
-        let obj = require("../routing/router_utils.tsx") /* transitionTo */;
+        let obj = transitionTo /* transitionTo */;
         lastRouteChangeSource = obj.getLastRouteChangeSource();
       }
       obj = { location: null, thread_approximate_member_count: null, thread_approximate_message_count: null, thread_archived: null, thread_locked: null, thread_auto_archive_duration_minutes: null, thread_approximate_creation_date: null, can_send_message: null, parent_channel_type: null };
@@ -50,11 +52,11 @@ export const collectThreadMetadata = function collectThreadMetadata(channel, arg
         num = 0;
       }
       obj[5] = num;
-      obj[6] = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(channel.id);
+      obj[6] = DISCORD_EPOCH.extractTimestamp(channel.id);
       obj[7] = getUncachedChannelPermissions.can(Permissions.SEND_MESSAGES, channel);
       obj[8] = channel.parentChannelThreadType;
       tmp = obj;
-      const obj3 = require("../../utils/SnowflakeUtils.tsx");
+      const obj3 = DISCORD_EPOCH;
     }
   }
   return tmp;

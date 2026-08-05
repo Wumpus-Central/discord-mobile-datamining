@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getNickname } from "../../../utils/NicknameUtils.tsx";
+import { UserProfileStackedActionSheet } from "UserProfileStackedActionSheet.tsx";
 // discord_app/modules/user_profile/native/UserProfileActivityVoiceChannelUsers.tsx
 import "noop";
 import sortActivity from "sortActivity";
@@ -21,7 +24,7 @@ function UserRow(user) {
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
   obj = { onPress, label: null, icon: null, start: null, end: null };
   const obj2 = user(589);
-  obj[1] = require("../../../utils/NicknameUtils.tsx").getName(channel.guild_id, channel.id, user);
+  obj[1] = getNickname.getName(channel.guild_id, channel.id, user);
   obj = { user, avatarDecoration, size: null, guildId: null, status: null, isMobileOnline: null, isVROnline: null, autoStatusCutout: true };
   obj[2] = user(1297).AvatarSizes.REFRESH_MEDIUM_32;
   obj[3] = channel.guild_id;
@@ -43,8 +46,8 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
   ({ channel: require, onPressUser: importDefault } = arg0);
   ({ users, onBack } = arg0);
   let obj = { title: null, onBack: null, scrollable: true, children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["3xHUJ+"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["3xHUJ+"]);
   obj[1] = onBack;
   obj = {
     data: users,
@@ -64,7 +67,7 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
       }, item.id);
     }
   };
-  obj[3] = jsx(require("UserProfileStackedActionSheet.tsx") /* UserProfileStackedActionSheet */.UserProfileStackedActionSheetList, {
+  obj[3] = jsx(UserProfileStackedActionSheet /* UserProfileStackedActionSheet */.UserProfileStackedActionSheetList, {
     data: users,
     keyExtractor(id) {
       return id.id;
@@ -82,7 +85,7 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
       }, item.id);
     }
   });
-  return jsx(require("UserProfileStackedActionSheet.tsx"), {
+  return jsx(UserProfileStackedActionSheet, {
     data: users,
     keyExtractor(id) {
       return id.id;

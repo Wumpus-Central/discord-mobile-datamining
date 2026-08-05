@@ -1,3 +1,4 @@
+import { fetchGuildAffinities } from "../actions/GuildAffinitiesActionCreators.tsx";
 // discord_app/stores/GuildAffinitiesStore.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { PersistedStore } from "initialize";
@@ -36,8 +37,8 @@ GuildAffinitiesStore.persistKey = "GuildAffinitiesStore";
 const guildAffinitiesStore = new GuildAffinitiesStore(require("dispatcher"), {
   CONNECTION_OPEN: function handleConnectionOpen() {
     if (Date.now() - closure_3.lastFetched > 86400000) {
-      const guildAffinities = require("../actions/GuildAffinitiesActionCreators.tsx") /* fetchGuildAffinities */.fetchGuildAffinities();
-      const obj = require("../actions/GuildAffinitiesActionCreators.tsx") /* fetchGuildAffinities */;
+      const guildAffinities = fetchGuildAffinities /* fetchGuildAffinities */.fetchGuildAffinities();
+      const obj = fetchGuildAffinities /* fetchGuildAffinities */;
     }
     return false;
   },

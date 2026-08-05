@@ -1,3 +1,4 @@
+import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 // discord_app/modules/activities/useActivityShelfItemsSorting.tsx
 import noop from "noop";
 
@@ -6,7 +7,7 @@ const result = require("getPlatform").fileFinishedImporting("modules/activities/
 
 export default function useActivityShelfItemsSorting(arg0) {
   const _require = arg0;
-  const FrecencyUserSettingsActionCreators = _require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = _updateUserGuildSettings.FrecencyUserSettingsActionCreators;
   const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   let items = [arg0];
   return React.useMemo(() => {

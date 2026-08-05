@@ -1,3 +1,5 @@
+import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
+import { map } from "SettingHookHarness.tsx";
 // discord_app/modules/settings/native/renderer/SettingRendererUtils.tsx
 import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
 import { AnalyticsPages } from "ME";
@@ -47,9 +49,9 @@ export const onRouteSettingOnPress = function onRouteSettingOnPress(arg0) {
   }
 };
 export const getSettingTitle = function getSettingTitle(closure_0) {
-  const cachedSettingTitle = require("SettingHookHarness.tsx") /* map */.getCachedSettingTitle(closure_0);
-  const obj = require("SettingHookHarness.tsx") /* map */;
-  require("../../../../../_runtime/metro/00038__.js")(null != cachedSettingTitle, "Setting " + closure_0 + " is missing a title.");
+  const cachedSettingTitle = map /* map */.getCachedSettingTitle(closure_0);
+  const obj = map /* map */;
+  00038__(null != cachedSettingTitle, "Setting " + closure_0 + " is missing a title.");
   return cachedSettingTitle;
 };
 export const getSettingSearchableTitles = function getSettingSearchableTitles() {

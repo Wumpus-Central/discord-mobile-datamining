@@ -1,3 +1,11 @@
+import { ChatButton } from "buttons/VoicePanelChatButton.tsx";
+import { ConnectButton } from "buttons/VoicePanelConnectButton.tsx";
+import { DisconnectCancelButton } from "buttons/VoicePanelDisconnectCancelButton.tsx";
+import { VoicePanelDrawerToggleButton } from "buttons/VoicePanelDrawerToggleButton.tsx";
+import { PTTButton } from "buttons/VoicePanelMicButton.tsx";
+import { MobilePhoneShareIcon } from "buttons/VoicePanelScreenshareButton.tsx";
+import { SoundboardButton } from "buttons/VoicePanelSoundboardButton.tsx";
+import { VideoButtonRive } from "buttons/VoicePanelVideoButton.tsx";
 // discord_app/modules/voice_panel/native/controls/useControlsButtons.tsx
 import VOICE_PANEL_DRAWER_MAX_WIDTH from "VOICE_PANEL_DRAWER_MAX_WIDTH";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -12,43 +20,43 @@ const require = arg1;
 let closure_9 = {
   mic(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(require("buttons/VoicePanelMicButton.tsx") /* PTTButton */.MicButton, {}, arg0);
+    return jsx(PTTButton /* PTTButton */.MicButton, {}, arg0);
   },
   ptt(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(require("buttons/VoicePanelMicButton.tsx") /* PTTButton */.PTTButton, {}, arg0);
+    return jsx(PTTButton /* PTTButton */.PTTButton, {}, arg0);
   },
   micConnected(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(require("buttons/VoicePanelMicButton.tsx") /* PTTButton */.MicButton, {}, arg0);
+    return jsx(PTTButton /* PTTButton */.MicButton, {}, arg0);
   },
   connect(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(require("buttons/VoicePanelConnectButton.tsx"), {}, arg0);
+    return jsx(ConnectButton, {}, arg0);
   },
   chat(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(require("buttons/VoicePanelChatButton.tsx"), {}, arg0);
+    return jsx(ChatButton, {}, arg0);
   },
   disconnectCancel(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(require("buttons/VoicePanelDisconnectCancelButton.tsx"), {}, arg0);
+    return jsx(DisconnectCancelButton, {}, arg0);
   },
   video(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(require("buttons/VoicePanelVideoButton.tsx"), {}, arg0);
+    return jsx(VideoButtonRive, {}, arg0);
   },
   soundboard(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(require("buttons/VoicePanelSoundboardButton.tsx"), {}, arg0);
+    return jsx(SoundboardButton, {}, arg0);
   },
   screenshare(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(require("buttons/VoicePanelScreenshareButton.tsx"), {}, arg0);
+    return jsx(MobilePhoneShareIcon, {}, arg0);
   },
   drawerToggle(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(require("buttons/VoicePanelDrawerToggleButton.tsx"), {}, arg0);
+    return jsx(VoicePanelDrawerToggleButton, {}, arg0);
   }
 };
 let closure_10 = { code: "function useControlsButtonsTsx1(){const{getControlsDefaultWidth,windowDimensions,safeArea}=this.__closure;return getControlsDefaultWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right);}" };

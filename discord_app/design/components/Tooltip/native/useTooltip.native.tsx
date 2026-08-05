@@ -1,3 +1,5 @@
+import { useWindowDimensions } from "../../../../modules/screen/useWindowDimensions.native.tsx";
+import { add } from "../../Layers/native/LayerContext.native.tsx";
 // discord_app/design/components/Tooltip/native/useTooltip.native.tsx
 import _slicedToArray from "_slicedToArray";
 import v1 from "v1";
@@ -125,10 +127,10 @@ export const useTooltipHelper = function useTooltipHelper(ref, targetRef, callba
   const _require = ref;
   const importDefault = targetRef;
   const dependencyMap = callback;
-  const tmp = require("../../../../modules/screen/useWindowDimensions.native.tsx")();
+  const tmp = useWindowDimensions();
   let _slicedToArray = tmp;
   let v1 = context.useRef(tmp);
-  context = context.useContext(_require("../../Layers/native/LayerContext.native.tsx").LayerContext);
+  context = context.useContext(_add.LayerContext);
   let closure_6 = context.useRef(null);
   const items = [context, ref];
   const effect = context.useEffect(() => {

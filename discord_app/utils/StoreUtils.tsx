@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { handleImageLoad } from "../modules/image_upload/ImageLoaderUtils.tsx";
+import { set } from "PlatformUtils.tsx";
 // discord_app/utils/StoreUtils.tsx
 import closure_2 from "ME";
 import fetchFingerprint from "fetchFingerprint";
@@ -198,10 +201,10 @@ export const getAssetURL = function getAssetURL(closure_7, mimeType, arg2, mp4) 
   }
   let sum = combined;
   if (null != arg2) {
-    const obj = require("../modules/image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */;
+    const obj = handleImageLoad /* handleImageLoad */;
     const _HermesInternal3 = HermesInternal;
-    sum = combined + "?size=" + obj.getBestMediaProxySize(arg2 * require("../modules/image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */.getDevicePixelRatio());
-    const obj2 = require("../modules/image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */;
+    sum = combined + "?size=" + obj.getBestMediaProxySize(arg2 * handleImageLoad /* handleImageLoad */.getDevicePixelRatio());
+    const obj2 = handleImageLoad /* handleImageLoad */;
   }
   return sum;
 };
@@ -216,7 +219,7 @@ export const httpGetWithCountryCodeQuery = function httpGetWithCountryCodeQuery(
   return applyArgumentsResult;
 };
 export const nativePlatformTypeToSKUOperatingSystem = function nativePlatformTypeToSKUOperatingSystem(platform) {
-  if (require("PlatformUtils.tsx") /* set */.PlatformTypes.WINDOWS === platform) {
+  if (set /* set */.PlatformTypes.WINDOWS === platform) {
     return constants.WINDOWS;
   } else if (tmp(500).PlatformTypes.OSX === platform) {
     return constants.MACOS;
@@ -228,14 +231,14 @@ export const nativePlatformTypeToSKUOperatingSystem = function nativePlatformTyp
 };
 export const skuOperatingSystemToText = function skuOperatingSystemToText(arg0) {
   if (constants.WINDOWS === arg0) {
-    const intl3 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl3.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["0/xHFO"]);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    return intl3.string(getSystemLocale /* getSystemLocale */.t["0/xHFO"]);
   } else if (tmp.MACOS === arg0) {
-    const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.E4u4n5);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    return intl2.string(getSystemLocale /* getSystemLocale */.t.E4u4n5);
   } else if (tmp.LINUX === arg0) {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.tcawo3);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.tcawo3);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;

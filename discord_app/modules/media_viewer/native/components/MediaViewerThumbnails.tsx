@@ -1,3 +1,6 @@
+import { map } from "../../../../design/tokens/native/useToken.tsx";
+import { set } from "../../../../utils/PlatformUtils.tsx";
+import { useMediaItemSpoilerState } from "../useMediaItemSpoilerState.tsx";
 // discord_app/modules/media_viewer/native/components/MediaViewerThumbnails.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -18,9 +21,9 @@ function ObscuredView(source) {
   let tmp4;
   let tmp5;
   source = source.source;
-  let obj = require("../useMediaItemSpoilerState.tsx") /* useMediaItemSpoilerState */;
+  let obj = useMediaItemSpoilerState /* useMediaItemSpoilerState */;
   [tmp4, tmp5] = callback(obj.useMediaItemSpoilerState(source.index), 2);
-  require("../../../../design/tokens/native/useToken.tsx") /* map */;
+  map /* map */;
   let tmp10Result = null;
   if (tmp4) {
     if (source.spoiler) {
@@ -39,7 +42,7 @@ function ObscuredView(source) {
       obj[2] = tmp8;
       obj[1] = closure_8(tmp7Result, obj);
       tmp10Result = tmp10(tmp7(4146).View, obj);
-      tmpResult = require("../../../../utils/PlatformUtils.tsx") /* set */;
+      tmpResult = set /* set */;
     } else {
       tmp10Result = null;
     }

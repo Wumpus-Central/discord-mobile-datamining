@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/guild_products/GuildProductSystemMessageUtils.tsx
 import { NOOP } from "ME";
 
@@ -8,6 +9,6 @@ export const getGuildProductPurchaseSystemMessageContentMobile = function getGui
   if (usernameHook === undefined) {
     usernameHook = NOOP;
   }
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  return intl.formatToParts(require("../../intl/index.native.tsx") /* getSystemLocale */.t["w4iXs+"], { username: username.username, usernameHook, productName: username.productName });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  return intl.formatToParts(getSystemLocale /* getSystemLocale */.t["w4iXs+"], { username: username.username, usernameHook, productName: username.productName });
 };

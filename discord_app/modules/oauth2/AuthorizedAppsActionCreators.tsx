@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/oauth2/AuthorizedAppsActionCreators.tsx
 import sendRequest from "sendRequest";
 import recomputeFromAppTokens from "recomputeFromAppTokens";
@@ -127,12 +128,12 @@ let obj = {
     return store.getFetchStateForApplication(arg0) !== FetchState.FETCHING;
   },
   onQueued(applicationIds) {
-    let request = require("../../Dispatcher.tsx");
+    let request = dispatcher;
     request = { type: "partial", applicationIds };
     return request.dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST", request });
   },
   onCancelled(applicationIds) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "USER_AUTHORIZED_APPS_REQUEST_CANCELLED", applicationIds };
     return obj.dispatch(obj);
   }
@@ -150,7 +151,7 @@ obj = {
         const queueResult = batchInvocationManager.queue(arg0);
       } else {
         batchInvocationManager.reset();
-        let obj = require("../../Dispatcher.tsx");
+        let obj = dispatcher;
         obj = { type: "USER_AUTHORIZED_APPS_REQUEST", request: null };
         obj[1] = { type: "full" };
         obj.dispatch(obj);

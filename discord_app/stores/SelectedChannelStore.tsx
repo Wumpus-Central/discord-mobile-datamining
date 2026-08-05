@@ -1,3 +1,6 @@
+import { apply } from "../../_runtime/00012_apply.js";
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
+import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
 // discord_app/stores/SelectedChannelStore.tsx
 import createChannelRecord from "createChannelRecord";
 import fetchFingerprint from "fetchFingerprint";
@@ -37,7 +40,7 @@ function handleConnectionOpen(sessionId) {
   }
   let _require = false;
   const guildsArray = store3.getGuildsArray();
-  require("../../_runtime/00012_apply.js").each(closure_25, (arg0, arg1) => {
+  apply.each(closure_25, (arg0, arg1) => {
     let tmp4 = null != arg0;
     if (tmp4) {
       let hasChannelResult = outer1_14.hasChannel(arg0);
@@ -58,8 +61,8 @@ function handleConnectionOpen(sessionId) {
       let c0 = true;
     }
   });
-  const obj3 = require("../../_runtime/00012_apply.js");
-  require("../../_runtime/00012_apply.js").each(closure_27, (arg0, arg1) => {
+  const obj3 = apply;
+  apply.each(closure_27, (arg0, arg1) => {
     let tmp3 = null != arg0;
     if (tmp3) {
       let hasChannelResult = outer1_14.hasChannel(arg0);
@@ -109,7 +112,7 @@ function handleConnectionOpen(sessionId) {
     _require = true;
   }
   if (_require) {
-    const Storage = _require("../../discord_common/js/packages/storage/Storage.tsx").Storage;
+    const Storage = _Storage.Storage;
     const obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
     obj[0] = closure_6;
     obj[1] = c8;
@@ -120,7 +123,7 @@ function handleConnectionOpen(sessionId) {
     const values = tmp9(12)(closure_25).values();
     const obj6 = tmp9(12)(closure_25);
     const combined = values.concat(tmp9(12).values(closure_27));
-    const found = combined.filter(_require("../utils/GlobalUtils.tsx").isNotNullish);
+    const found = combined.filter(_isDiscordFrontendDevelopment.isNotNullish);
     const tmp9Result = tmp9(12);
     const uniqResult = found.uniq();
     obj[6] = found.uniq().filter((arg0) => {
@@ -168,7 +171,7 @@ function navigateAwayFromChannel(id, guild_id, parent_id) {
     flag = true;
   }
   if (flag) {
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
     obj[0] = closure_6;
     obj[1] = c8;
@@ -176,11 +179,11 @@ function navigateAwayFromChannel(id, guild_id, parent_id) {
     obj[3] = closure_9;
     obj[4] = dependencyMap;
     obj[5] = closure_27;
-    const values = require("../../_runtime/00012_apply.js")(dependencyMap).values();
-    const obj2 = require("../../_runtime/00012_apply.js")(dependencyMap);
-    const combined = values.concat(require("../../_runtime/00012_apply.js").values(closure_27));
-    const found = combined.filter(require("../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
-    const obj4 = require("../../_runtime/00012_apply.js");
+    const values = apply(dependencyMap).values();
+    const obj2 = apply(dependencyMap);
+    const combined = values.concat(apply.values(closure_27));
+    const found = combined.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+    const obj4 = apply;
     const uniqResult = found.uniq();
     obj[6] = found.uniq().filter((arg0) => {
       basicChannel = basicChannel.getBasicChannel(arg0);
@@ -230,7 +233,7 @@ prototype["initialize"] = function initialize() {
   let closure_8;
   let closure_9;
   let mostRecentSelectedTextChannelIds;
-  const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   let value = Storage.get(SelectedChannelStore);
   if (value == null) {
     const obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null };
@@ -372,7 +375,7 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
     }
     let c0 = false;
     const guildsArray = store3.getGuildsArray();
-    require("../../_runtime/00012_apply.js").each(closure_25, (arg0, arg1) => {
+    apply.each(closure_25, (arg0, arg1) => {
       let tmp4 = null != arg0;
       if (tmp4) {
         let hasChannelResult = outer1_14.hasChannel(arg0);
@@ -393,8 +396,8 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
         let c0 = true;
       }
     });
-    const obj2 = require("../../_runtime/00012_apply.js");
-    require("../../_runtime/00012_apply.js").each(dependencyMap3, (arg0, arg1) => {
+    const obj2 = apply;
+    apply.each(dependencyMap3, (arg0, arg1) => {
       let tmp3 = null != arg0;
       if (tmp3) {
         let hasChannelResult = outer1_14.hasChannel(arg0);
@@ -501,7 +504,7 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
         dependencyMap[String(guildId)] = channelId;
         const StringResult = String(guildId);
       }
-      const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage = Storage /* Storage */.Storage;
       const obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
       obj[0] = channelId;
       obj[1] = closure_8;
@@ -509,11 +512,11 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
       obj[3] = closure_9;
       obj[4] = dependencyMap;
       obj[5] = dependencyMap3;
-      const values = require("../../_runtime/00012_apply.js")(dependencyMap).values();
-      const obj3 = require("../../_runtime/00012_apply.js")(dependencyMap);
-      const combined = values.concat(require("../../_runtime/00012_apply.js").values(dependencyMap3));
-      const found = combined.filter(require("../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
-      const obj5 = require("../../_runtime/00012_apply.js");
+      const values = apply(dependencyMap).values();
+      const obj3 = apply(dependencyMap);
+      const combined = values.concat(apply.values(dependencyMap3));
+      const found = combined.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+      const obj5 = apply;
       const uniqResult = found.uniq();
       obj[6] = found.uniq().filter((arg0) => {
         basicChannel = basicChannel.getBasicChannel(arg0);
@@ -609,7 +612,7 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
           }
         }
       }
-      const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage = Storage /* Storage */.Storage;
       const obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
       obj[0] = closure_6;
       obj[1] = closure_8;
@@ -617,11 +620,11 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
       obj[3] = closure_9;
       obj[4] = dependencyMap;
       obj[5] = dependencyMap3;
-      const values = require("../../_runtime/00012_apply.js")(dependencyMap).values();
-      const obj3 = require("../../_runtime/00012_apply.js")(dependencyMap);
-      const combined = values.concat(require("../../_runtime/00012_apply.js").values(dependencyMap3));
-      const found = combined.filter(require("../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
-      const obj5 = require("../../_runtime/00012_apply.js");
+      const values = apply(dependencyMap).values();
+      const obj3 = apply(dependencyMap);
+      const combined = values.concat(apply.values(dependencyMap3));
+      const found = combined.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+      const obj5 = apply;
       const uniqResult = found.uniq();
       obj[6] = found.uniq().filter((arg0) => {
         basicChannel = basicChannel.getBasicChannel(arg0);
@@ -660,7 +663,7 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
     } else {
       delete tmp[tmp2];
       delete tmp[tmp2];
-      const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage = Storage /* Storage */.Storage;
       const obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
       obj[0] = closure_6;
       obj[1] = c8;
@@ -668,11 +671,11 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
       obj[3] = closure_9;
       obj[4] = dependencyMap;
       obj[5] = closure_27;
-      const values = require("../../_runtime/00012_apply.js")(dependencyMap).values();
-      const obj2 = require("../../_runtime/00012_apply.js")(dependencyMap);
-      const combined = values.concat(require("../../_runtime/00012_apply.js").values(closure_27));
-      const found = combined.filter(require("../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
-      const obj4 = require("../../_runtime/00012_apply.js");
+      const values = apply(dependencyMap).values();
+      const obj2 = apply(dependencyMap);
+      const combined = values.concat(apply.values(closure_27));
+      const found = combined.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+      const obj4 = apply;
       const uniqResult = found.uniq();
       obj[6] = found.uniq().filter((arg0) => {
         basicChannel = basicChannel.getBasicChannel(arg0);
@@ -716,13 +719,13 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
         const tmp6 = dependencyMap;
       }
     }
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const obj = { selectedChannelId: closure_6, selectedVoiceChannelId: channelId, lastChannelFollowingDestination: closure_7, lastConnectedTime: closure_9, selectedChannelIds: dependencyMap, mostRecentSelectedTextChannelIds: closure_27, knownThreadIds: null };
-    const values = require("../../_runtime/00012_apply.js")(dependencyMap).values();
-    const obj2 = require("../../_runtime/00012_apply.js")(dependencyMap);
-    const combined = values.concat(require("../../_runtime/00012_apply.js").values(closure_27));
-    const found = combined.filter(require("../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
-    const obj4 = require("../../_runtime/00012_apply.js");
+    const values = apply(dependencyMap).values();
+    const obj2 = apply(dependencyMap);
+    const combined = values.concat(apply.values(closure_27));
+    const found = combined.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+    const obj4 = apply;
     const uniqResult = found.uniq();
     obj[6] = found.uniq().filter((arg0) => {
       basicChannel = basicChannel.getBasicChannel(arg0);
@@ -899,7 +902,7 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
       obj = { channelId: null, guildId: null };
       obj[0] = channelId;
       obj[1] = channelId.guildId;
-      const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage = Storage /* Storage */.Storage;
       obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
       obj[0] = closure_6;
       obj[1] = closure_8;
@@ -907,11 +910,11 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
       obj[3] = closure_9;
       obj[4] = closure_25;
       obj[5] = closure_27;
-      const values = require("../../_runtime/00012_apply.js")(closure_25).values();
-      const obj3 = require("../../_runtime/00012_apply.js")(closure_25);
-      const combined = values.concat(require("../../_runtime/00012_apply.js").values(closure_27));
-      const found = combined.filter(require("../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
-      const obj5 = require("../../_runtime/00012_apply.js");
+      const values = apply(closure_25).values();
+      const obj3 = apply(closure_25);
+      const combined = values.concat(apply.values(closure_27));
+      const found = combined.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+      const obj5 = apply;
       const uniqResult = found.uniq();
       obj[6] = found.uniq().filter((arg0) => {
         basicChannel = basicChannel.getBasicChannel(arg0);
@@ -947,7 +950,7 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
     let closure_27 = {};
     let closure_7 = {};
     let c8 = null;
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     Storage.remove(SelectedChannelStore);
   }
 });
@@ -956,7 +959,7 @@ let result = set.fileFinishedImporting("stores/SelectedChannelStore.tsx");
 export default selectedChannelStore;
 export const findFirstVoiceChannelId = function findFirstVoiceChannelId(id) {
   const mutableBasicGuildChannelsForGuild = store.getMutableBasicGuildChannelsForGuild(id);
-  const found = require("../../_runtime/00012_apply.js").find(mutableBasicGuildChannelsForGuild, (type) => type.type === constants.GUILD_VOICE);
+  const found = apply.find(mutableBasicGuildChannelsForGuild, (type) => type.type === constants.GUILD_VOICE);
   id = undefined;
   if (found != null) {
     id = found.id;

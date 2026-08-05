@@ -1,3 +1,5 @@
+import { dispatcher } from "../Dispatcher.tsx";
+import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
 // discord_app/actions/NotificationActionCreators.tsx
 import ME from "ME";
 
@@ -9,70 +11,70 @@ const result = require("dispatcher").fileFinishedImporting("actions/Notification
 
 export default {
   setDesktopType(desktopType) {
-    let obj = require("../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { notifications_enabled: desktopType === constants.ALL };
     obj.track(constants3.LOCAL_SETTINGS_UPDATED, obj);
     obj = { type: "NOTIFICATIONS_SET_DESKTOP_TYPE", desktopType };
-    require("../Dispatcher.tsx").dispatch(obj);
+    dispatcher.dispatch(obj);
   },
   setTTSType(ttsType) {
-    let obj = require("../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { tts_type: ttsType.toString() };
     obj.track(constants3.LOCAL_SETTINGS_UPDATED, obj);
     obj = { type: "NOTIFICATIONS_SET_TTS_TYPE", ttsType };
-    require("../Dispatcher.tsx").dispatch(obj);
+    dispatcher.dispatch(obj);
   },
   setDisabledSounds(disabled_sounds) {
-    let obj = require("../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { disabled_sounds };
     obj.track(constants3.LOCAL_SETTINGS_UPDATED, obj);
     obj = { type: "NOTIFICATIONS_SET_DISABLED_SOUNDS", sounds: disabled_sounds };
-    require("../Dispatcher.tsx").dispatch(obj);
+    dispatcher.dispatch(obj);
   },
   toggleDisableAllSounds(all_sounds_enabled) {
-    let obj = require("../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { all_sounds_enabled: !all_sounds_enabled };
     obj.track(constants3.LOCAL_SETTINGS_UPDATED, obj);
-    require("../Dispatcher.tsx").dispatch({ type: "NOTIFICATIONS_TOGGLE_ALL_DISABLED" });
+    dispatcher.dispatch({ type: "NOTIFICATIONS_TOGGLE_ALL_DISABLED" });
   },
   setDisableUnreadBadge(disableUnreadBadge) {
-    let obj = require("../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { unread_badge_enabled: !disableUnreadBadge };
     obj.track(constants3.LOCAL_SETTINGS_UPDATED, obj);
     obj = { type: "NOTIFICATIONS_SET_DISABLE_UNREAD_BADGE", disableUnreadBadge };
-    require("../Dispatcher.tsx").dispatch(obj);
+    dispatcher.dispatch(obj);
   },
   setTaskbarFlash(show_taskbar_flash) {
-    let obj = require("../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { show_taskbar_flash };
     obj.track(constants3.LOCAL_SETTINGS_UPDATED, obj);
     obj = { type: "NOTIFICATIONS_SET_TASKBAR_FLASH", taskbarFlash: show_taskbar_flash };
-    require("../Dispatcher.tsx").dispatch(obj);
+    dispatcher.dispatch(obj);
   },
   setNotifyMessagesInSelectedChannel(notify) {
-    let obj = require("../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { notify_messages_in_selected_channel: notify };
     obj.track(constants3.LOCAL_SETTINGS_UPDATED, obj);
     obj = { type: "NOTIFICATIONS_SET_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL", notify };
-    require("../Dispatcher.tsx").dispatch(obj);
+    dispatcher.dispatch(obj);
   },
   setScreenDowntimeReminder(screenDowntimeReminder) {
-    let obj = require("../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { screen_downtime_reminder: screenDowntimeReminder };
     obj.track(constants3.LOCAL_SETTINGS_UPDATED, obj);
     obj = { type: "NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER", screenDowntimeReminder };
-    require("../Dispatcher.tsx").dispatch(obj);
+    dispatcher.dispatch(obj);
   },
   setPermissionsState(enabled, source) {
-    let obj = require("../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { enabled: enabled === constants2.ENABLED, source };
     obj.track(constants3.ENABLE_NOTIFICATIONS, obj);
     obj = { type: "NOTIFICATIONS_SET_PERMISSION_STATE", enabled, source };
-    require("../Dispatcher.tsx").dispatch(obj);
+    dispatcher.dispatch(obj);
   },
   showNotification(icon, title, body, trackingProps) {
     const importDefault = arg4;
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "NOTIFICATION_CREATE", icon, title, body, trackingProps, options: null };
     obj = {};
     const merged = Object.assign(arg4);
@@ -87,6 +89,6 @@ export default {
     obj.dispatch(obj);
   },
   clickedNotification() {
-    require("../Dispatcher.tsx").dispatch({ type: "NOTIFICATION_CLICK" });
+    dispatcher.dispatch({ type: "NOTIFICATION_CLICK" });
   }
 };

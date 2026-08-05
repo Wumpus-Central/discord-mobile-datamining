@@ -1,3 +1,5 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/guild_member_verification/MemberVerificationActionCreators.tsx
 import closure_3 from "ME";
 import initialize from "initialize";
@@ -549,7 +551,7 @@ export default {
     return applyArgumentsResult;
   },
   updateVerificationFormFieldsLocal(guildId, formFields) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId, form: obj, isLocalUpdate: true };
     obj = { formFields };
     obj.dispatch(obj);
@@ -565,7 +567,7 @@ export default {
     return applyArgumentsResult;
   },
   updateVerificationFormDescriptionLocal(guildId, description) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId, form: obj, isLocalUpdate: true };
     obj = { description };
     obj.dispatch(obj);
@@ -591,7 +593,7 @@ export default {
     return applyArgumentsResult;
   },
   clearCoachmark() {
-    require("../../Dispatcher.tsx").dispatch({ type: "USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR" });
+    dispatcher.dispatch({ type: "USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR" });
   },
   reportApplication(arg0) {
     let guild;
@@ -601,14 +603,14 @@ export default {
     let reasonOther;
     let responses;
     ({ guild, guildJoinRequest, guildJoinRequestUser, reason, reasonOther, responses } = arg0);
-    let obj = require("../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { application_id: guildJoinRequest.joinRequestId, applicant_id: guildJoinRequestUser.id, guild_id: guild.id, reason, reason_other: reasonOther, responses };
     obj.track(constants.GUILD_MEMBER_APPLICATION_REPORTED, obj);
   }
 };
 export const DISABLE_JOIN_REQUEST_COACHMARK = -1;
 export const showCoachmark = function showCoachmark(guildId) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW", guildId };
   obj.dispatch(obj);
 };

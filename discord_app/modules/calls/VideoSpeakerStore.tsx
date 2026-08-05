@@ -1,3 +1,4 @@
+import { isStreamKey } from "../go_live/utils/StreamKeyUtils.tsx";
 // discord_app/modules/calls/VideoSpeakerStore.tsx
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";
@@ -60,7 +61,7 @@ function updateSpeaker(arg0) {
     if (null != lastActiveStream) {
       tmp21 = tmp20;
       if (null == tmp20) {
-        const participant1 = obj.getParticipant(closure_2, require("../go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */.encodeStreamKey(lastActiveStream));
+        const participant1 = obj.getParticipant(closure_2, isStreamKey /* isStreamKey */.encodeStreamKey(lastActiveStream));
         let id;
         if (participant1 != null) {
           id = participant1.id;
@@ -73,7 +74,7 @@ function updateSpeaker(arg0) {
         if (!result1) {
           tmp21 = id;
         }
-        const obj2 = require("../go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */;
+        const obj2 = isStreamKey /* isStreamKey */;
       }
     }
     tmp2 = tmp21;

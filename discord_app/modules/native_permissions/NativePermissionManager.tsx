@@ -1,3 +1,6 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
+import { NativePermissionsRequestOptions } from "NativePermissionUtils.tsx";
 // discord_app/modules/native_permissions/NativePermissionManager.tsx
 import { NativePermissionTypes } from "NativePermissionStatus";
 import { InputModes } from "ME";
@@ -7,7 +10,7 @@ class NativePermissionManager extends tmp2 {
 }
 const prototype = NativePermissionManager.prototype;
 prototype["isEnabled"] = function isEnabled() {
-  let isDesktopResult = require("../../utils/PlatformUtils.tsx") /* set */.isDesktop();
+  let isDesktopResult = set /* set */.isDesktop();
   if (isDesktopResult) {
     isDesktopResult = tmp(500).isMac();
     const tmpResult = tmp(500);
@@ -20,20 +23,20 @@ prototype["isEnabled"] = function isEnabled() {
 };
 prototype["_initialize"] = function _initialize() {
   if (this.isEnabled()) {
-    const subscription = require("../../Dispatcher.tsx").subscribe("AUDIO_SET_MODE", this.handleAudioSetMode);
-    const obj = require("../../Dispatcher.tsx");
+    const subscription = dispatcher.subscribe("AUDIO_SET_MODE", this.handleAudioSetMode);
+    const obj = dispatcher;
   }
 };
 prototype["_terminate"] = function _terminate() {
   if (this.isEnabled()) {
-    require("../../Dispatcher.tsx").unsubscribe("AUDIO_SET_MODE", this.handleAudioSetMode);
-    const obj = require("../../Dispatcher.tsx");
+    dispatcher.unsubscribe("AUDIO_SET_MODE", this.handleAudioSetMode);
+    const obj = dispatcher;
   }
 };
 prototype["handleAudioSetMode"] = function handleAudioSetMode(mode) {
   if (mode.mode === InputModes.PUSH_TO_TALK) {
-    const permission = require("NativePermissionUtils.tsx") /* NativePermissionsRequestOptions */.default.requestPermission(NativePermissionTypes.INPUT_MONITORING);
-    const _default = require("NativePermissionUtils.tsx") /* NativePermissionsRequestOptions */.default;
+    const permission = NativePermissionsRequestOptions /* NativePermissionsRequestOptions */.default.requestPermission(NativePermissionTypes.INPUT_MONITORING);
+    const _default = NativePermissionsRequestOptions /* NativePermissionsRequestOptions */.default;
   }
 };
 const nativePermissionManager = new NativePermissionManager();

@@ -1,3 +1,5 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { navigationToRootTabHelper } from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 // discord_app/modules/favorites/native/onboarding/useCanShowFavoritesGuildCoachmark.tsx
 import setContent from "setContent";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -7,13 +9,13 @@ const result = require("initialize").fileFinishedImporting("modules/favorites/na
 
 export default function useCanShowFavoritesGuildCoachmark() {
   const items = [handleConnectionOpen];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => null != voiceChannelId.getVoiceChannelId());
-  const obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => null != voiceChannelId.getVoiceChannelId());
+  const obj = initialize /* initialize */;
   const items1 = [setContent];
-  const stateFromStores1 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => open.isOpen());
-  const obj2 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => open.isOpen());
+  const obj2 = initialize /* initialize */;
   let tmp4 = !stateFromStores;
-  const isModalOpen = require("../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */.useIsModalOpen();
+  const isModalOpen = navigationToRootTabHelper /* navigationToRootTabHelper */.useIsModalOpen();
   if (!stateFromStores) {
     tmp4 = !stateFromStores1;
   }

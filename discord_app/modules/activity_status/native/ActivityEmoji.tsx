@@ -1,3 +1,4 @@
+import { Emoji } from "../../emojis/native/Emoji.tsx";
 // discord_app/modules/activity_status/native/ActivityEmoji.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -83,6 +84,6 @@ export default function ActivityEmoji(emoji) {
     items2[2] = obj1;
     obj[3] = items2;
     obj[4] = tmp.emoji;
-    jsx(require("../../emojis/native/Emoji.tsx"), { width: null, height: null });
+    jsx(Emoji, { width: null, height: null });
   }
 };

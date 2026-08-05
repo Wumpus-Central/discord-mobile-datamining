@@ -1,3 +1,28 @@
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { trackInvite } from "../../../actions/MessageActionCreators.tsx";
+import { GuildThemeSourcePreference } from "../../../flow/Client.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
+import { computeScrollData } from "../../chat/native/computeScrollData.tsx";
+import { ChatScrollPosition } from "../../chat/native/NativeChatUtils.tsx";
+import { ContentHarmTypeChannel } from "../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
+import { trackForumChannelSeenBatch } from "../../forums/tracking/Tracking.tsx";
+import { isCommunicationDisabled } from "../../guild_communication_disabled/CommunicationDisabledUtils.tsx";
+import { shouldShowMembershipVerificationGate } from "../../guild_member_verification/hooks/useShowMemberVerificationGate.tsx";
+import { IMPACT_LIGHT } from "../../haptics/HapticFeedbackTypes.tsx";
+import { HapticFeedbackTypes } from "../../haptics/HapticUtils.native.tsx";
+import { flattenComponents } from "../../interaction_components/InteractionComponentUtils.tsx";
+import { KeyboardTypes } from "../../keyboard/native/KeyboardTypes.tsx";
+import { _manuallyStartConsoleQuest } from "../../quests/QuestActionCreators.tsx";
+import { QuestsVisibleMessagesChangedSource } from "../../quests/QuestTypes.tsx";
+import { checkReactionResponse } from "../../reactions/ReactionActionCreators.tsx";
+import { patchThread } from "../../threads/ThreadActionCreators.tsx";
+import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
+import { presentAddedFriendToast } from "../../toast/native/ToastUtils.tsx";
+import { serialize } from "../../tti_analytics/TTITracker.tsx";
+import { urlMatchesFileExtension } from "../MediaFormatTesters.tsx";
+import { getVoiceInviteEmbedRenderInfo } from "MessageImpressionAnalyticsHelpers.tsx";
 // discord_app/modules/messages/native/MessagesUtils.tsx
 import trackForumChannelSeenBatch from "trackForumChannelSeenBatch";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -85,7 +110,7 @@ function getVisibleMessages(arg0) {
 }
 function getMessage(toArray) {
   let closure_0 = arg1;
-  return require("../../../../_runtime/00012_apply.js").find(toArray.toArray(), (id) => id.id === closure_0 || id.nonce === closure_0);
+  return apply.find(toArray.toArray(), (id) => id.id === closure_0 || id.nonce === closure_0);
 }
 function _handleTapNavBar() {
   const self = this;
@@ -270,7 +295,7 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
       ({ url: obj8[3], content_type } = tmp13);
       obj[4] = content_type;
       tmp17 = obj;
-      obj9 = require("../MediaFormatTesters.tsx") /* urlMatchesFileExtension */;
+      obj9 = urlMatchesFileExtension /* urlMatchesFileExtension */;
     }
     return tmp17;
   } else if ("embed" === mediaType) {
@@ -338,8 +363,8 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
     if (null == tmpResult) {
       return null;
     } else {
-      const obj12 = require("../../interaction_components/InteractionComponentUtils.tsx") /* flattenComponents */;
-      const value = require("../../interaction_components/InteractionComponentUtils.tsx") /* flattenComponents */.flattenComponents(obj.components).get(tmpResult);
+      const obj12 = flattenComponents /* flattenComponents */;
+      const value = flattenComponents /* flattenComponents */.flattenComponents(obj.components).get(tmpResult);
       if (null == value) {
         return null;
       } else if (value.type === tmp20(1906).ComponentType.MEDIA_GALLERY) {
@@ -362,7 +387,7 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
       } else {
         return null;
       }
-      const flattenComponentsResult = require("../../interaction_components/InteractionComponentUtils.tsx") /* flattenComponents */.flattenComponents(obj.components);
+      const flattenComponentsResult = flattenComponents /* flattenComponents */.flattenComponents(obj.components);
     }
   } else {
     return null;
@@ -371,14 +396,14 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
 export const toObscuredMedia = function toObscuredMedia(sourceType) {
   if ("attachment" === sourceType.sourceType) {
     let obj = { type: null, media: null };
-    obj[0] = require("../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx") /* ContentHarmTypeChannel */.ObscuredMediaTypes.Attachment;
+    obj[0] = ContentHarmTypeChannel /* ContentHarmTypeChannel */.ObscuredMediaTypes.Attachment;
     obj[1] = sourceType.source;
     let tmp = obj;
   } else {
     tmp = null;
     if ("embed" === sourceType.sourceType) {
       obj = { type: null, media: null };
-      obj[0] = require("../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx") /* ContentHarmTypeChannel */.ObscuredMediaTypes.Embed;
+      obj[0] = ContentHarmTypeChannel /* ContentHarmTypeChannel */.ObscuredMediaTypes.Embed;
       obj[1] = sourceType.source;
       tmp = obj;
     }
@@ -391,7 +416,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     flag = false;
   }
   if (MESSAGE === undefined) {
-    MESSAGE = require("../../reactions/ReactionActionCreators.tsx") /* checkReactionResponse */.ReactionLocations.MESSAGE;
+    MESSAGE = checkReactionResponse /* checkReactionResponse */.ReactionLocations.MESSAGE;
   }
   const guildId = channel.getGuildId();
   currentUser = currentUser.getCurrentUser();
@@ -404,7 +429,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
   }
   let result = null != guildId;
   if (result) {
-    let obj = require("../../guild_member_verification/hooks/useShowMemberVerificationGate.tsx") /* shouldShowMembershipVerificationGate */;
+    let obj = shouldShowMembershipVerificationGate /* shouldShowMembershipVerificationGate */;
     result = obj.shouldShowMembershipVerificationGate(guildId);
   }
   let member = null;
@@ -415,10 +440,10 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     }
   }
   let tmp36Result = dependencyMap;
-  let obj1 = require("../../guild_communication_disabled/CommunicationDisabledUtils.tsx") /* isCommunicationDisabled */;
+  let obj1 = isCommunicationDisabled /* isCommunicationDisabled */;
   const result1 = obj1.isMemberCommunicationDisabled(member);
   if (channel.isArchivedLockedThread()) {
-    const obj15 = require("../../toast/native/ToastActionCreators.tsx");
+    const obj15 = dispatcher;
     const tmp36 = importDefault;
     const intl = tmp12(1236).intl;
     const string = intl.string;
@@ -446,7 +471,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     }
     const ReactionTypes = tmp12(7142).ReactionTypes;
     if (tmp12Result1.isMeReaction(reaction.me, reaction.me_burst, tmp23)) {
-      const result2 = tmp12(4254).triggerHapticFeedback(require("../../haptics/HapticFeedbackTypes.tsx").IMPACT_LIGHT);
+      const result2 = tmp12(4254).triggerHapticFeedback(IMPACT_LIGHT.IMPACT_LIGHT);
       const tmp12Result2 = tmp12(4254);
       obj = { channelId: null, messageId: null, emoji: null, location: null, options: null };
       obj[0] = channel.id;
@@ -466,7 +491,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
             obj2[0] = flag;
             tmp12Result4.addReaction(channel.id, messageId, reaction.emoji, MESSAGE, obj2);
             if (!flag) {
-              const result3 = tmp12(4254).triggerHapticFeedback(require("../../haptics/HapticFeedbackTypes.tsx").IMPACT_LIGHT);
+              const result3 = tmp12(4254).triggerHapticFeedback(IMPACT_LIGHT.IMPACT_LIGHT);
               const tmp12Result5 = tmp12(4254);
             }
           }
@@ -489,8 +514,8 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
   }
 };
 export const handleToggleFollowForumPost = function handleToggleFollowForumPost(channel, outer1_19) {
-  const result = require("../../haptics/HapticUtils.native.tsx") /* HapticFeedbackTypes */.triggerHapticFeedback(require("../../haptics/HapticFeedbackTypes.tsx").IMPACT_LIGHT);
-  const obj2 = require("../../threads/ThreadActionCreators.tsx");
+  const result = HapticFeedbackTypes /* HapticFeedbackTypes */.triggerHapticFeedback(IMPACT_LIGHT.IMPACT_LIGHT);
+  const obj2 = patchThread;
   if (outer1_19) {
     obj2.leaveThread(channel, "iOS Forum Toolbar");
   } else {
@@ -512,7 +537,7 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
     flag = false;
   }
   let obj = { postId: id, location };
-  const result = require("../../forums/tracking/Tracking.tsx") /* trackForumChannelSeenBatch */.trackForumPostLinkCopied(obj);
+  const result = trackForumChannelSeenBatch /* trackForumChannelSeenBatch */.trackForumPostLinkCopied(obj);
   if (flag) {
     let tmp4Result = tmp4(4479);
     obj = { media_post_id: null };
@@ -520,7 +545,7 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
     tmp4Result.trackWithMetadata(constants3.MEDIA_POST_SHARE_PROMPT_CLICKED, obj);
   }
   tmp4Result = tmp4(4254);
-  const result1 = tmp4Result.triggerHapticFeedback(require("../../haptics/HapticFeedbackTypes.tsx").IMPACT_LIGHT);
+  const result1 = tmp4Result.triggerHapticFeedback(IMPACT_LIGHT.IMPACT_LIGHT);
   if (null == channel) {
     const tmp4Result1 = tmp4(5638);
     let result2;
@@ -535,21 +560,21 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
     tmp4Result3.copy(tmp4(4467).getChannelLinkToCopy(channel, channel1));
     const tmp4Result4 = tmp4(4467);
   }
-  const obj2 = require("../../forums/tracking/Tracking.tsx") /* trackForumChannelSeenBatch */;
+  const obj2 = trackForumChannelSeenBatch /* trackForumChannelSeenBatch */;
   tmp9 = importDefault;
-  require("../../toast/native/ToastUtils.tsx") /* presentAddedFriendToast */.presentLinkCopied();
+  presentAddedFriendToast /* presentAddedFriendToast */.presentLinkCopied();
 };
 export const findMessageIndex = function findMessageIndex(previousRows, ChatTTITracker) {
   if (null != ChatTTITracker) {
-    return require("../../chat/native/computeScrollData.tsx") /* computeScrollData */.findMessageRowIndex(previousRows, ChatTTITracker);
+    return computeScrollData /* computeScrollData */.findMessageRowIndex(previousRows, ChatTTITracker);
   }
 };
 export { getVisibleMessages };
 export const shouldJumpToOriginalPost = function shouldJumpToOriginalPost(isForumPost, id, jumpTargetId) {
   let isForumPostResult = isForumPost.isForumPost();
   if (isForumPostResult) {
-    isForumPostResult = require("../../../utils/SnowflakeUtils.tsx").castChannelIdAsMessageId(id) === jumpTargetId.jumpTargetId;
-    const obj = require("../../../utils/SnowflakeUtils.tsx");
+    isForumPostResult = DISCORD_EPOCH.castChannelIdAsMessageId(id) === jumpTargetId.jumpTargetId;
+    const obj = DISCORD_EPOCH;
   }
   if (isForumPostResult) {
     isForumPostResult = !arg3;
@@ -577,11 +602,11 @@ export const recordTimings = function recordTimings(channelId, closure_0) {
     hasFetched = closure_0.ready && !closure_0.cached;
     const tmp2 = closure_0.ready && !closure_0.cached;
   }
-  require("../../tti_analytics/TTITracker.tsx").recordMessageRender(channelId, mapped, hasFetched, closure_0.hasMoreAfter);
+  serialize.recordMessageRender(channelId, mapped, hasFetched, closure_0.hasMoreAfter);
 };
 export const findMessageIndexInRows = function findMessageIndexInRows(ChatTTITracker, previousRows) {
   if (null != ChatTTITracker) {
-    return require("../../chat/native/computeScrollData.tsx") /* computeScrollData */.findMessageRowIndex(previousRows, ChatTTITracker);
+    return computeScrollData /* computeScrollData */.findMessageRowIndex(previousRows, ChatTTITracker);
   }
 };
 export { getMessage };
@@ -606,9 +631,9 @@ export const isLoadingAtTop = function isLoadingAtTop(arg0, arg1) {
   }
 };
 export const handleTapTableView = function handleTapTableView(current) {
-  let isIOSResult = require("../../../utils/PlatformUtils.tsx") /* set */.isIOS();
+  let isIOSResult = set /* set */.isIOS();
   if (isIOSResult) {
-    isIOSResult = arg1 !== require("../../keyboard/native/KeyboardTypes.tsx") /* KeyboardTypes */.KeyboardTypes.SYSTEM;
+    isIOSResult = arg1 !== KeyboardTypes /* KeyboardTypes */.KeyboardTypes.SYSTEM;
   }
   if (isIOSResult) {
     current = current.current;
@@ -618,7 +643,7 @@ export const handleTapTableView = function handleTapTableView(current) {
   }
 };
 export const handleMediaPlayFinishedAnalytics = function handleMediaPlayFinishedAnalytics(playWallTimeMs) {
-  let obj = require("../../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { play_time_sec: playWallTimeMs.playWallTimeMs / 1000, play_wall_time_ms: playWallTimeMs.playWallTimeMs, first_play_waiting_ms: Math.min(playWallTimeMs.firstPlayWaitingMs, 600000), stall_count: playWallTimeMs.stallCount, stall_ms: playWallTimeMs.stallMs, seek_count: playWallTimeMs.seekCount, seek_waiting_ms: null, media_source: playWallTimeMs.mediaSource, mime_type: null, file_size: null, file_duration_sec: null, connection_type: null, effective_connection_speed: null, service_provider: null };
   let mimeType = null;
   if (null != playWallTimeMs.mimeType) {
@@ -644,7 +669,7 @@ export const scrollToBottom = function scrollToBottom(current) {
   if (flag) {
     flag = !arg1;
   }
-  require("../../chat/native/NativeChatUtils.tsx").scrollToBottom(current.current, flag);
+  ChatScrollPosition.scrollToBottom(current.current, flag);
 };
 export const scrollToTop = function scrollToTop(current) {
   let flag = arg2;
@@ -654,7 +679,7 @@ export const scrollToTop = function scrollToTop(current) {
   if (flag) {
     flag = !arg1;
   }
-  require("../../chat/native/NativeChatUtils.tsx").scrollToTop(current.current, flag);
+  ChatScrollPosition.scrollToTop(current.current, flag);
 };
 export const scrollToRelativeOffset = function scrollToRelativeOffset(current) {
   let flag = arg3;
@@ -664,13 +689,13 @@ export const scrollToRelativeOffset = function scrollToRelativeOffset(current) {
   if (flag) {
     flag = !arg1;
   }
-  const result = require("../../chat/native/NativeChatUtils.tsx").scrollToRelativeOffset(current.current, arg2, flag);
+  const result = ChatScrollPosition.scrollToRelativeOffset(current.current, arg2, flag);
 };
 export const scrollToTopMessage = function scrollToTopMessage(current, getPreviousRows) {
   const previousRows = getPreviousRows.getPreviousRows();
   if (previousRows.length > 0) {
-    require("../../chat/native/NativeChatUtils.tsx").scrollTo(current.current, previousRows.length - 1);
-    const obj = require("../../chat/native/NativeChatUtils.tsx");
+    ChatScrollPosition.scrollTo(current.current, previousRows.length - 1);
+    const obj = ChatScrollPosition;
   }
 };
 export const canAddNewReactions = function canAddNewReactions(isPrivate) {
@@ -686,7 +711,7 @@ export const canAddNewReactions = function canAddNewReactions(isPrivate) {
 export const loadMoreBefore = function loadMoreBefore(arg0, hasMoreBefore) {
   arg2(true);
   if (tmp2) {
-    let obj = require("../../../actions/MessageActionCreators.tsx");
+    let obj = trackInvite;
     obj = { channelId: null, before: null, limit: null };
     obj[0] = arg0;
     const firstResult = hasMoreBefore.first();
@@ -702,7 +727,7 @@ export const loadMoreBefore = function loadMoreBefore(arg0, hasMoreBefore) {
 export const loadMoreAfter = function loadMoreAfter(arg0, hasMoreAfter) {
   arg2(true);
   if (tmp2) {
-    let obj = require("../../../actions/MessageActionCreators.tsx");
+    let obj = trackInvite;
     obj = { channelId: null, after: null, limit: null };
     obj[0] = arg0;
     const lastResult = hasMoreAfter.last();
@@ -719,13 +744,13 @@ export const clearRows = function clearRows(current, clear) {
   arg4({ animated: false, hasHandledScroll: false, isNearBottom: false, isAtBottom: false, isNearTop: false, decelerating: false, dragging: false, hasMoreMessagesAfterForLastUpdate: false, pendingUpdatesQueue: [], _loaded: false, animatingStickerMessageId: null });
   clear.clear();
   callback3(arg2, arg3, false);
-  require("../../chat/native/NativeChatUtils.tsx").clearRows(current.current);
+  ChatScrollPosition.clearRows(current.current);
 };
 export const handleFirstLayout = function handleFirstLayout(arg0, firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible) {
-  arg0({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source: require("../../quests/QuestTypes.tsx") /* QuestsVisibleMessagesChangedSource */.QuestsVisibleMessagesChangedSource.FIRST_LAYOUT });
+  arg0({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source: QuestsVisibleMessagesChangedSource /* QuestsVisibleMessagesChangedSource */.QuestsVisibleMessagesChangedSource.FIRST_LAYOUT });
 };
 export const handleMessageVisibilityChanged = function handleMessageVisibilityChanged(arg0, firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible) {
-  arg0({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source: require("../../quests/QuestTypes.tsx") /* QuestsVisibleMessagesChangedSource */.QuestsVisibleMessagesChangedSource.VISIBILITY_CHANGED });
+  arg0({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source: QuestsVisibleMessagesChangedSource /* QuestsVisibleMessagesChangedSource */.QuestsVisibleMessagesChangedSource.VISIBILITY_CHANGED });
 };
 export const handleLongPressSticker = function handleLongPressSticker(arg0, arg1, arg2) {
   const items = [arg0];
@@ -758,14 +783,14 @@ export const jumpToPresent = function jumpToPresent(jumpReturnTargetId, id) {
         obj[0] = id.id;
         obj[1] = closure_21;
         obj[2] = { present: true };
-        const messages = require("../../../actions/MessageActionCreators.tsx").fetchMessages(obj);
-        const obj3 = require("../../../actions/MessageActionCreators.tsx");
+        const messages = trackInvite.fetchMessages(obj);
+        const obj3 = trackInvite;
       } else {
         arg2();
       }
     }
   } else {
-    obj = require("../../../actions/MessageActionCreators.tsx");
+    obj = trackInvite;
     obj = { channelId: null, messageId: null, flash: true };
     obj[0] = id.id;
     obj[1] = jumpReturnTargetId;
@@ -775,7 +800,7 @@ export const jumpToPresent = function jumpToPresent(jumpReturnTargetId, id) {
 export const scrollToNewMessages = function scrollToNewMessages(channel) {
   channel = channel.channel;
   let id = generateOldThreadCutoff.ackMessageId(channel.id);
-  let obj = require("../../../actions/MessageActionCreators.tsx");
+  let obj = trackInvite;
   obj = { channelId: channel.id, messageId: null, offset: 1, context: "Mark As Read" };
   if (id == null) {
     id = channel.id;
@@ -831,7 +856,7 @@ export const maybeRescrollToMessageId = function maybeRescrollToMessageId(arg0, 
   let trackCommunicationDisabled = undefined !== updateRowsEnabled && updateRowsEnabled;
   let INSTANT = jumpType.jumpType;
   if (undefined === INSTANT) {
-    INSTANT = _require("../../../flow/Client.tsx").JumpType.INSTANT;
+    INSTANT = _GuildThemeSourcePreference.JumpType.INSTANT;
   }
   if (null != arg0) {
     const _setTimeout = setTimeout;
@@ -976,16 +1001,16 @@ export const handleVisibleMessagesChange = function handleVisibleMessagesChange(
             obj = { visibleMessages: null, source: null };
             obj[0] = arr;
             obj[1] = tmp;
-            const result = require("../../quests/QuestActionCreators.tsx") /* _manuallyStartConsoleQuest */.questsVisibleMobileMessagesChanged(obj);
-            const obj4 = require("MessageImpressionAnalyticsHelpers.tsx") /* getVoiceInviteEmbedRenderInfo */;
+            const result = _manuallyStartConsoleQuest /* _manuallyStartConsoleQuest */.questsVisibleMobileMessagesChanged(obj);
+            const obj4 = getVoiceInviteEmbedRenderInfo /* getVoiceInviteEmbedRenderInfo */;
             const result1 = obj4.handleAnnouncementMessageViewTracking(arr, shouldTrackAnnouncementMessageViews, guildId, channel);
-            const obj5 = require("MessageImpressionAnalyticsHelpers.tsx") /* getVoiceInviteEmbedRenderInfo */;
+            const obj5 = getVoiceInviteEmbedRenderInfo /* getVoiceInviteEmbedRenderInfo */;
             const result2 = obj5.handleOfficialMessageViewTracking(arr, shouldTrackOfficialMessageViews, guildId, channel);
-            const obj6 = require("MessageImpressionAnalyticsHelpers.tsx") /* getVoiceInviteEmbedRenderInfo */;
+            const obj6 = getVoiceInviteEmbedRenderInfo /* getVoiceInviteEmbedRenderInfo */;
             const result3 = obj6.handleRichPresenceInviteEmbedViewTracking(arr, shouldTrackRichPresenceInviteEmbedViews, guildId, channel);
-            const obj7 = require("MessageImpressionAnalyticsHelpers.tsx") /* getVoiceInviteEmbedRenderInfo */;
+            const obj7 = getVoiceInviteEmbedRenderInfo /* getVoiceInviteEmbedRenderInfo */;
             const result4 = obj7.handleVoiceInviteEmbedViewTracking(arr, shouldTrackVoiceInviteEmbedViews, guildId, channel);
-            const obj2 = require("../../quests/QuestActionCreators.tsx") /* _manuallyStartConsoleQuest */;
+            const obj2 = _manuallyStartConsoleQuest /* _manuallyStartConsoleQuest */;
           }
         }
       }

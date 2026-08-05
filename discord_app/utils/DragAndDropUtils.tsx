@@ -1,3 +1,4 @@
+import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/utils/DragAndDropUtils.tsx
 function calculatePositionDeltas(arg0) {
   let ascending;
@@ -71,7 +72,7 @@ function getPositionUpdates(arg0) {
   }
   let values = objectArray;
   if (!Array.isArray(objectArray)) {
-    let obj = require("../../_runtime/00012_apply.js");
+    let obj = apply;
     values = obj.values(objectArray);
   }
   obj = { oldOrdering: values, newOrdering: null, idGetter: null, existingPositionGetter: null, ascending: null };

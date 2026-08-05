@@ -1,3 +1,5 @@
+import { Button } from "../../../../design/void/native.tsx";
+import { getParticipantTitle } from "../../getParticipantTitle.tsx";
 // discord_app/modules/video_calls/native/components/ParticipantTitle.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -17,6 +19,6 @@ export default function ParticipantTitle(arg0) {
   ({ channel, participant, style } = arg0);
   const obj = { style: items, numberOfLines: 1, children: null };
   items = [createCacheKey().usernameText, style];
-  obj[2] = require("../../getParticipantTitle.tsx")(channel, participant);
-  return jsx(require("../../../../design/void/native.tsx") /* Button */.LegacyText, { style: items, numberOfLines: 1, children: null });
+  obj[2] = getParticipantTitle(channel, participant);
+  return jsx(Button /* Button */.LegacyText, { style: items, numberOfLines: 1, children: null });
 };

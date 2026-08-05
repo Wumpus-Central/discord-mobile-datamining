@@ -1,3 +1,4 @@
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 // discord_app/modules/accept_invite/native/components/AcceptInviteModal.tsx
 import noop from "noop";
 import { CreateGuildModalStates } from "NUXGuildTemplatesAnalytics";
@@ -29,5 +30,5 @@ export default function AcceptInviteModal(arg0) {
     return obj;
   }, items);
   obj[1] = CreateGuildModalStates.ACCEPT_INVITE;
-  return jsx(_require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, { screens: null, initialRouteName: null });
+  return jsx(_NavigationStack.Navigator, { screens: null, initialRouteName: null });
 };

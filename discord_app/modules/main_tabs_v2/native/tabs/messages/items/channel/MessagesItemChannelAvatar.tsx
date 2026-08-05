@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { FacepileGroupDMAvatar } from "../../../../../../group_dm/native/GroupDMAvatar.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelAvatar.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import fetchFingerprint from "fetchFingerprint";
@@ -11,7 +13,7 @@ import importAllResult from "noop";
 
 const require = arg1;
 let closure_10 = createCacheKey.createStyles((arg0) => {
-  const avatar = { borderRadius: require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, marginRight: require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_MARGIN_END, width: require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, height: require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, opacity: null };
+  const avatar = { borderRadius: Themes.radii.round, marginRight: Themes.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_MARGIN_END, width: Themes.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, height: Themes.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, opacity: null };
   let num = 1;
   if (arg0) {
     num = MUTED_OPACITY_CONTENT;
@@ -108,7 +110,7 @@ const memoResult = require("noop").memo(function MessagesItemChannelAvatar(chann
     obj[2] = channel;
     obj[3] = stateFromStores1;
     obj[4] = tmpResult.avatar;
-    let tmp11Result = jsx(require("../../../../../../group_dm/native/GroupDMAvatar.tsx"), { status: null, size: null, channel: null, animate: null, style: null });
+    let tmp11Result = jsx(FacepileGroupDMAvatar, { status: null, size: null, channel: null, animate: null, style: null });
   } else {
     tmp11Result = null;
     if (null != stateFromStores2) {

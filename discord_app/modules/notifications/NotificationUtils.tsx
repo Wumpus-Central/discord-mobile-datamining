@@ -1,3 +1,6 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/notifications/NotificationUtils.tsx
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { UserNotificationSettings } from "ME";
@@ -12,33 +15,33 @@ const result = require("MAX_FAVORITES").fileFinishedImporting("modules/notificat
 
 export const getMuteTimeOptions = function getMuteTimeOptions() {
   let obj = { id: "15-minutes", label: null, value: null };
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["8ot6gv"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["8ot6gv"]);
   obj[2] = closure_6.MINUTES_15;
   const items = [obj, , , , , ];
   obj = { id: "1-hour", label: null, value: null };
-  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.UMWBZr);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.UMWBZr);
   obj[2] = closure_6.HOURS_1;
   items[1] = obj;
   obj = { id: "3-hours", label: null, value: null };
-  const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.QmYWtu);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.QmYWtu);
   obj[2] = closure_6.HOURS_3;
   items[2] = obj;
   const obj1 = { id: "8-hours", label: null, value: null };
-  const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[1] = intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.EpAXPC);
+  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[1] = intl4.string(getSystemLocale /* getSystemLocale */.t.EpAXPC);
   obj1[2] = closure_6.HOURS_8;
   items[3] = obj1;
   const obj2 = { id: "24-hours", label: null, value: null };
-  const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj2[1] = intl5.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["755t4q"]);
+  const intl5 = getSystemLocale /* getSystemLocale */.intl;
+  obj2[1] = intl5.string(getSystemLocale /* getSystemLocale */.t["755t4q"]);
   obj2[2] = closure_6.HOURS_24;
   items[4] = obj2;
   const obj3 = { id: "forever", label: null, value: null };
-  const intl6 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj3[1] = intl6.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.r3LawO);
+  const intl6 = getSystemLocale /* getSystemLocale */.intl;
+  obj3[1] = intl6.string(getSystemLocale /* getSystemLocale */.t.r3LawO);
   obj3[2] = closure_6.ALWAYS;
   items[5] = obj3;
   return items;
@@ -50,7 +53,7 @@ export const filterOverrides = function filterOverrides(channelOverrides, arg1) 
     tmp = closure_8;
   }
   const importDefault = tmp;
-  const keys = require("../../utils/SnowflakeUtils.tsx").keys(channelOverrides);
+  const keys = DISCORD_EPOCH.keys(channelOverrides);
   return keys.filter((arg0) => {
     let num = dependencyMap[arg0].flags;
     if (num == null) {
@@ -92,7 +95,7 @@ export const filterOverrides = function filterOverrides(channelOverrides, arg1) 
 };
 export const useShouldUseNewNotificationSystem = function useShouldUseNewNotificationSystem(GuildUnreadAction) {
   const items = [updateUserGuildSettingsInternal];
-  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => useNewNotifications.useNewNotifications);
+  return initialize /* initialize */.useStateFromStores(items, () => useNewNotifications.useNewNotifications);
 };
 export const shouldShowUseNewNotificationSystem = function shouldShowUseNewNotificationSystem(GuildPopoutMenu) {
   return useNewNotifications.useNewNotifications;

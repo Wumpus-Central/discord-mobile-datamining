@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/stage_channels/useRequestToSpeakPermission.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -13,8 +14,8 @@ export const useRequestToSpeakPermission = function useRequestToSpeakPermission(
   const _require = id;
   const items = [ensureGuildLoaded];
   const items1 = [id];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_5.getChannel(closure_0), items1);
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_5.getChannel(closure_0), items1);
+  let obj = _initialize;
   const canEveryoneRoleResult = stateFromStores(3918).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
   const obj2 = stateFromStores(3918);
   [tmp4, tmp5] = callback(React.useState(canEveryoneRoleResult), 2);

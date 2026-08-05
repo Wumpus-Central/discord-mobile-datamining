@@ -1,3 +1,7 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { FreeFormInputGroup } from "../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import { useSafeAreaInsetsKeyboardAware } from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 // discord_app/modules/accept_invite/native/JoinServer.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -72,11 +76,11 @@ export default function JoinServer(arg0) {
   const callback = React.useCallback(() => {
     navigation.push(outer1_7.JOIN_STUDENT_HUB);
   }, items);
-  obj[0] = require("../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx")().insets.bottom + require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
+  obj[0] = useSafeAreaInsetsKeyboardAware().insets.bottom + Themes.space.PX_16;
   items1[1] = obj;
   obj[1] = items1;
   let tmp7Result = null;
-  if (require("../../screen/useWindowDimensions.native.tsx")().height > closure_6) {
+  if (useWindowDimensions().height > closure_6) {
     const obj1 = { children: null };
     const obj2 = { style: null, accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
     obj2[0] = tmp.header;
@@ -104,7 +108,7 @@ export default function JoinServer(arg0) {
   obj5[5] = intl4.string(navigation(1236).t.qreV25);
   obj5[10] = tmp.textInput;
   obj5[11] = onDone;
-  items3[1] = callback(require("../../../design/void/Form/native/FreeFormInputGroup.tsx"), obj5);
+  items3[1] = callback(FreeFormInputGroup, obj5);
   const obj6 = { style: tmp.exampleText, variant: "text-sm/medium", color: "text-muted", children: null };
   const intl5 = tmp4(1236).intl;
   obj6[3] = intl5.format(navigation(1236).t.vwWaTe, {

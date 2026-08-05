@@ -1,9 +1,10 @@
+import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/stores/SelfPresenceStoreManager.tsx
 import filterPlayingActivities from "filterPlayingActivities";
 import "initialize";
 
 function handleChange() {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "SELF_PRESENCE_STORE_UPDATE", status: store.getStatus(), activities: store.getActivities(true), hiddenActivities: store.getHiddenActivities() };
   obj.dispatch(obj);
 }

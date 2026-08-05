@@ -1,3 +1,6 @@
+import { n } from "../../../../../_runtime/00689_n.js";
+import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
+import { map } from "../../../tokens/native/useToken.tsx";
 // discord_app/design/components/ExpressiveGradient/native/ExpressiveGradient.native.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -52,13 +55,13 @@ export const ExpressiveGradient = function ExpressiveGradient(color) {
   } else {
     tmp3 = str;
   }
-  obj = require("../../../tokens/native/useToken.tsx") /* map */;
+  obj = map /* map */;
   const token = obj.useToken(tmp3.start);
-  let obj1 = require("../../../tokens/native/useToken.tsx") /* map */;
+  let obj1 = map /* map */;
   const token1 = obj1.useToken(tmp3.end);
-  let obj2 = require("../../../tokens/native/useToken.tsx") /* map */;
+  let obj2 = map /* map */;
   const token2 = obj2.useToken(backgroundColor);
-  let obj3 = require("../../../../../_runtime/00689_n.js")(token2);
+  let obj3 = n(token2);
   obj = { style: items, children: null };
   items = [closure_4.absoluteFill, style];
   const items1 = [closure_4.absoluteFill, ];
@@ -73,10 +76,10 @@ export const ExpressiveGradient = function ExpressiveGradient(color) {
   items1[1] = tmp13;
   obj2 = { style: tmp12.absoluteFillObject, colors: items2, start: closure_8, end: closure_9, pointerEvents: "none" };
   items2 = [token, token1];
-  const items3 = [callback(require("../../../../../_runtime/04706_LinearGradient.js"), obj2), ];
+  const items3 = [callback(LinearGradient, obj2), ];
   obj3 = { style: tmp12.absoluteFillObject, colors: items4, start: closure_10, end: closure_11, pointerEvents: "none" };
   items4 = [obj3.alpha(0).css(), token2];
-  items3[1] = callback(require("../../../../../_runtime/04706_LinearGradient.js"), obj3);
+  items3[1] = callback(LinearGradient, obj3);
   obj1[1] = items3;
   const items5 = [closure_6(closure_3, obj1), children];
   obj[1] = items5;

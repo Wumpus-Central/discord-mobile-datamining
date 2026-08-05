@@ -1,3 +1,6 @@
+import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { usePremiumPrimaryGradientColors } from "../usePremiumPrimaryGradientColors.tsx";
 // discord_app/modules/premium/native/components/PillText.tsx
 import { HorizontalGradient } from "ME";
 import { jsx } from "jsxProd";
@@ -15,10 +18,10 @@ export default function PillText(arg0) {
   let style;
   ({ pillText, style } = arg0);
   const tmp = callback();
-  let obj = { style: items, start: HorizontalGradient.START, end: HorizontalGradient.END, colors: require("../usePremiumPrimaryGradientColors.tsx")(), children: null };
+  let obj = { style: items, start: HorizontalGradient.START, end: HorizontalGradient.END, colors: usePremiumPrimaryGradientColors(), children: null };
   items = [tmp.pillTextContainer, style];
-  const tmp2 = require("../usePremiumPrimaryGradientColors.tsx")();
+  const tmp2 = usePremiumPrimaryGradientColors();
   obj = { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText };
-  obj[4] = jsx(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText });
-  return jsx(require("../../../../../_runtime/04706_LinearGradient.js"), { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText });
+  obj[4] = jsx(Text /* Text */.Text, { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText });
+  return jsx(LinearGradient, { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText });
 };

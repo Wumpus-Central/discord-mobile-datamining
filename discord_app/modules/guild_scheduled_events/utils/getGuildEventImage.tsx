@@ -1,3 +1,4 @@
+import { handleImageLoad } from "../../image_upload/ImageLoaderUtils.tsx";
 // discord_app/modules/guild_scheduled_events/utils/getGuildEventImage.tsx
 import { Endpoints } from "ME";
 
@@ -10,11 +11,11 @@ export default function getGuildEventImageURL(image, size) {
     let result = size;
     if (null == size) {
       const _window = window;
-      result = window.screen.width * require("../../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */.getDevicePixelRatio();
-      const obj = require("../../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */;
+      result = window.screen.width * handleImageLoad /* handleImageLoad */.getDevicePixelRatio();
+      const obj = handleImageLoad /* handleImageLoad */;
     }
     const _window2 = window;
-    const bestMediaProxySize = require("../../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */.getBestMediaProxySize(result);
+    const bestMediaProxySize = handleImageLoad /* handleImageLoad */.getBestMediaProxySize(result);
     if (null != CDN_HOST) {
       const _HermesInternal = HermesInternal;
       let combined = "https://" + CDN_HOST + "/guild-events/" + image.id + "/" + image.image;

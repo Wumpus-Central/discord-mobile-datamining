@@ -1,3 +1,4 @@
+import { getPlatformUserUrl } from "../lib/Platforms.tsx";
 // discord_app/records/XboxApplicationRecord.tsx
 import "createExecutable";
 
@@ -13,7 +14,7 @@ class XboxApplicationRecord extends tmp2 {
   }
 }
 XboxApplicationRecord.prototype["getIconURL"] = function getIconURL() {
-  return require("../lib/Platforms.tsx").get("xbox").icon.lightPNG;
+  return getPlatformUserUrl.get("xbox").icon.lightPNG;
 };
 
 export default XboxApplicationRecord;

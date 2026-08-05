@@ -1,8 +1,11 @@
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { GuildScheduledEventsActionCreators } from "GuildScheduledEventsActionCreators.tsx";
+import { getRRule } from "utils/ScheduleUtils.tsx";
 // discord_app/modules/guild_scheduled_events/saveGuildEventRecurrence.tsx
 let result = require("DISCORD_EPOCH").fileFinishedImporting("modules/guild_scheduled_events/saveGuildEventRecurrence.tsx");
 
 export default function saveGuildEventRecurrence(guild_id, c2, startDate, event_exception_id) {
-  let obj = require("utils/ScheduleUtils.tsx") /* getRRule */;
+  let obj = getRRule /* getRRule */;
   const baseScheduleForRecurrence = obj.getBaseScheduleForRecurrence(c2, guild_id);
   startDate = null;
   if (!obj2.areDatesIdentical(baseScheduleForRecurrence.startDate, startDate.startDate)) {
@@ -16,7 +19,7 @@ export default function saveGuildEventRecurrence(guild_id, c2, startDate, event_
   if (null != event_exception_id) {
     tmpResult = tmp(8864);
     const result = tmpResult.areSchedulesIdentical(startDate, baseScheduleForRecurrence);
-    const obj5 = require("GuildScheduledEventsActionCreators.tsx");
+    const obj5 = GuildScheduledEventsActionCreators;
     if (result) {
       let result1 = obj5.deleteGuildEventException(guild_id.guild_id, guild_id.id, event_exception_id.event_exception_id);
     } else {
@@ -36,8 +39,8 @@ export default function saveGuildEventRecurrence(guild_id, c2, startDate, event_
     }
     return result1;
   } else {
-    const extractTimestampResult = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(c2);
-    const obj7 = require("../../utils/SnowflakeUtils.tsx");
+    const extractTimestampResult = DISCORD_EPOCH.extractTimestamp(c2);
+    const obj7 = DISCORD_EPOCH;
     obj = { original_scheduled_start_time: null, scheduled_start_time: null, scheduled_end_time: null, is_canceled: false };
     const _Date = Date;
     const date = new Date(extractTimestampResult);
@@ -52,7 +55,7 @@ export default function saveGuildEventRecurrence(guild_id, c2, startDate, event_
       toISOStringResult3 = endDate.toISOString();
     }
     obj[2] = toISOStringResult3;
-    return require("GuildScheduledEventsActionCreators.tsx").createGuildEventException(obj, guild_id.guild_id, guild_id.id);
+    return GuildScheduledEventsActionCreators.createGuildEventException(obj, guild_id.guild_id, guild_id.id);
   }
-  obj2 = require("utils/ScheduleUtils.tsx") /* getRRule */;
+  obj2 = getRRule /* getRRule */;
 };

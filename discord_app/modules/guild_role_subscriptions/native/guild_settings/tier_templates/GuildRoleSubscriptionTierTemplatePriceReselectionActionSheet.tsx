@@ -1,3 +1,8 @@
+import { useCheckboxA11yNative } from "../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import { preload } from "../../../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { render } from "../../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import BottomSheetModal from "BottomSheetModal";
@@ -20,7 +25,7 @@ function PriceOptionRow(selected) {
   selected = selected.selected;
   ({ price, onPress } = selected);
   const tmp = createCacheKey();
-  let obj = require("../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx") /* useCheckboxA11yNative */;
+  let obj = useCheckboxA11yNative /* useCheckboxA11yNative */;
   const radioA11yNative = obj.useRadioA11yNative({ selected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const items = [tmp.rowContainer, ];
@@ -32,9 +37,9 @@ function PriceOptionRow(selected) {
   items[1] = containerSelected;
   obj = { style: tmp.rowStatusIcon, source: null };
   const tmp5 = closure_10;
-  const tmp7 = require("../../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx");
+  const tmp7 = render;
   obj[1] = importDefault(selected ? 16652 : 15552);
-  const items1 = [closure_9(require("../../../../../components_native/common/FastImage.tsx"), obj), ];
+  const items1 = [closure_9(preload, obj), ];
   const obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl = tmp2(1236).intl;
   const obj2 = { price: null, interval: null };
@@ -42,8 +47,8 @@ function PriceOptionRow(selected) {
   obj2[0] = tmp2Result.formatPrice(price, CurrencyCodes.USD);
   tmp2Result = tmp2(14367);
   obj2[1] = tmp2Result.formatPlanInterval({ interval: SubscriptionIntervalTypes.MONTH, interval_count: 1 });
-  obj1[2] = intl.format(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.CgmBaG, obj2);
-  items1[1] = closure_9(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  obj1[2] = intl.format(getSystemLocale /* getSystemLocale */.t.CgmBaG, obj2);
+  items1[1] = closure_9(Text /* Text */.Text, obj1);
   obj[4] = items1;
   return tmp5(tmp7, obj);
 }

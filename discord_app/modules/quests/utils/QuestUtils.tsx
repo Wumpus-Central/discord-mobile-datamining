@@ -1,3 +1,8 @@
+import { QuestSharePolicy } from "../../../../discord_common/js/shared/shared-constants/QuestSharePolicy.tsx";
+import { QuestType } from "../../../../discord_common/js/shared/shared-constants/QuestType.tsx";
+import { canStreamInChannel } from "../../go_live/utils/StreamPermissionUtils.tsx";
+import { getQuestContentName } from "../lib/analytics/AnalyticsTypes.tsx";
+import { getApplicationIdsByTaskTypes } from "QuestTaskUtils.tsx";
 // discord_app/modules/quests/utils/QuestUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
@@ -15,7 +20,7 @@ function isSponsoredPlayQuest(quest) {
   if (null == quest) {
     return false;
   } else {
-    const desktopApplicationIds = require("QuestTaskUtils.tsx") /* getApplicationIdsByTaskTypes */.getDesktopApplicationIds(quest);
+    const desktopApplicationIds = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */.getDesktopApplicationIds(quest);
     let tmp3 = null != desktopApplicationIds;
     if (tmp3) {
       tmp3 = desktopApplicationIds.length > 1;
@@ -31,14 +36,14 @@ let result = require("createGuildRecordFromRust").fileFinishedImporting("modules
 
 export { isSponsoredPlayQuest };
 export const isPlayAnyActivityQuest = function isPlayAnyActivityQuest(quest) {
-  return require("QuestTaskUtils.tsx") /* getApplicationIdsByTaskTypes */.getPlayActivityApplicationId(quest) === closure_8;
+  return getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */.getPlayActivityApplicationId(quest) === closure_8;
 };
 export { hasVariant };
 export const canLaunchActivity = function canLaunchActivity(quest) {
-  let hasPlayActivityTaskResult = require("QuestTaskUtils.tsx") /* getApplicationIdsByTaskTypes */.hasPlayActivityTask(quest);
+  let hasPlayActivityTaskResult = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */.hasPlayActivityTask(quest);
   if (!hasPlayActivityTaskResult) {
-    hasPlayActivityTaskResult = require("QuestTaskUtils.tsx") /* getApplicationIdsByTaskTypes */.hasAchievementActivityTask(quest);
-    const tmpResult = require("QuestTaskUtils.tsx") /* getApplicationIdsByTaskTypes */;
+    hasPlayActivityTaskResult = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */.hasAchievementActivityTask(quest);
+    const tmpResult = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */;
   }
   return hasPlayActivityTaskResult;
 };
@@ -59,7 +64,7 @@ export const filterQuestsForSocialEntrypoints = function filterQuestsForSocialEn
       if (!hasVariant(tmp7, constants.NON_GAMING_PLAY_QUEST)) {
         let tmp12 = require;
         let tmp13 = dependencyMap;
-        let obj2 = require("QuestTaskUtils.tsx") /* getApplicationIdsByTaskTypes */;
+        let obj2 = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */;
         let tmp14 = tmp6;
         let questTaskTypes = obj2.getQuestTaskTypes(tmp7);
         let tmp16 = questTaskTypes;
@@ -82,20 +87,20 @@ export const filterQuestsForSocialEntrypoints = function filterQuestsForSocialEn
   return map;
 };
 export const isShareableQuest = function isShareableQuest(config) {
-  return config.sharePolicy !== require("../../../../discord_common/js/shared/shared-constants/QuestSharePolicy.tsx") /* QuestSharePolicy */.QuestSharePolicy.NOT_SHAREABLE;
+  return config.sharePolicy !== QuestSharePolicy /* QuestSharePolicy */.QuestSharePolicy.NOT_SHAREABLE;
 };
 export const isStreamingAndCanWatch = function isStreamingAndCanWatch(arg0, stateFromStores) {
   let first = null != arg0 && null != stateFromStores;
   if (first) {
-    const obj = require("../../go_live/utils/StreamPermissionUtils.tsx") /* canStreamInChannel */;
+    const obj = canStreamInChannel /* canStreamInChannel */;
     first = obj.canWatchStream(stateFromStores, updateVoiceState, createGuildRecordFromRust, getUncachedChannelPermissions, set)[0];
   }
   return first;
 };
 export const getQuestType = function getQuestType(config) {
-  let obj = require("QuestTaskUtils.tsx") /* getApplicationIdsByTaskTypes */;
+  let obj = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */;
   obj = { config };
-  const QuestType = require("../../../../discord_common/js/shared/shared-constants/QuestType.tsx") /* QuestType */.QuestType;
+  const QuestType = QuestType /* QuestType */.QuestType;
   return obj.hasWatchVideoTasks(obj) ? QuestType.VIDEO : QuestType.GAMEPLAY;
 };
 export const isQuestFeaturedByHero = function isQuestFeaturedByHero(questHomeHero, id) {
@@ -138,6 +143,6 @@ export const setQuestHomeUtmContext = function setQuestHomeUtmContext(arg0) {
   ({ questId, fromContent, utmSource, utmMedium } = arg0);
   state = state.getState();
   const obj = { utmSourceCurrent: utmSource, utmMediumCurrent: utmMedium, utmCampaignCurrent: questId, utmContentCurrent: null };
-  obj[3] = require("../lib/analytics/AnalyticsTypes.tsx") /* getQuestContentName */.getQuestContentName(fromContent);
+  obj[3] = getQuestContentName /* getQuestContentName */.getQuestContentName(fromContent);
   state.setUtmCurrentContext(obj);
 };

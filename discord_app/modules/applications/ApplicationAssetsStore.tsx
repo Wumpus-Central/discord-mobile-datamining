@@ -1,3 +1,4 @@
+import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/applications/ApplicationAssetsStore.tsx
 import { Store } from "initialize";
 
@@ -12,7 +13,7 @@ function handleFetchEmbeddedActivityShelfSuccess(assets) {
     let tmp5 = importDefault;
     let tmp6 = dependencyMap;
     let tmp4 = closure_4;
-    let obj4 = require("../../../_runtime/00012_apply.js");
+    let obj4 = apply;
     let keyByResult = obj4.keyBy(assets[key10012], "name");
     if (keyByResult == null) {
       keyByResult = {};
@@ -72,7 +73,7 @@ obj = {
   APPLICATION_ASSETS_UPDATE: function handleUpdateApplicationAssets(assets) {
     assets = assets.assets;
     if (null != assets) {
-      let obj = require("../../../_runtime/00012_apply.js");
+      let obj = apply;
       let keyByResult = obj.keyBy(assets, "name");
       if (keyByResult == null) {
         keyByResult = {};

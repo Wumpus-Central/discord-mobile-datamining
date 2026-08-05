@@ -1,3 +1,4 @@
+import { ExternalPipViewVideoUnavailable } from "ExternalPipViewVideo.android.tsx";
 // discord_app/modules/external_pip/ExternalPipView.android.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -19,7 +20,7 @@ function FreezeAfterLayoutPipView() {
       const freezeLock = state.requestFreezeLock({ lockEnabled: false, key: "external-pip" });
     }
   }, []);
-  return jsx(require("ExternalPipViewVideo.android.tsx"), { onLayout });
+  return jsx(ExternalPipViewVideoUnavailable, { onLayout });
 }
 const result = require("module_8784").fileFinishedImporting("modules/external_pip/ExternalPipView.android.tsx");
 

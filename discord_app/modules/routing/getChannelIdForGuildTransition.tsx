@@ -1,3 +1,5 @@
+import { useCanSeeOnboardingHome } from "../guild_onboarding_home/OnboardingHomeUtils.tsx";
+import { getPrice } from "../slayer_storefront/SlayerStorefrontUtils.tsx";
 // discord_app/modules/routing/getChannelIdForGuildTransition.tsx
 import shouldShowOnboarding from "shouldShowOnboarding";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -39,7 +41,7 @@ export const getChannelIdForGuildTransition = function getChannelIdForGuildTrans
     if (!obj.canSeeOnboardingHome(id)) {
       return id;
     }
-    obj = require("../guild_onboarding_home/OnboardingHomeUtils.tsx") /* useCanSeeOnboardingHome */;
+    obj = useCanSeeOnboardingHome /* useCanSeeOnboardingHome */;
   }
   if (channelId === StaticChannelRoute.GUILD_SPACE) {
     if (obj4.canUseGuildSpace(guild.getGuild(id), "getChannelIdForGuildTransition")) {
@@ -51,7 +53,7 @@ export const getChannelIdForGuildTransition = function getChannelIdForGuildTrans
       if (obj2.canSeeGameShop(id)) {
         return channelId;
       }
-      obj2 = require("../slayer_storefront/SlayerStorefrontUtils.tsx") /* getPrice */;
+      obj2 = getPrice /* getPrice */;
     }
     channel = channel.getChannel(channelId);
     if (null == channel) {

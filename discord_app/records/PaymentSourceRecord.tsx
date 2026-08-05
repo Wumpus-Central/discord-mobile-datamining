@@ -1,3 +1,5 @@
+import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
 // discord_app/records/PaymentSourceRecord.tsx
 import "toJS";
 import ME from "ME";
@@ -512,7 +514,7 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
           }
           const tmp11 = prototype2;
         } else {
-          obj4 = require("../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */;
+          obj4 = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
           obj4.assertNever(billing_address);
         }
       }
@@ -916,7 +918,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
             return tmp16;
           }
         } else {
-          require("../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.assertNever(type);
+          isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.assertNever(type);
         }
       }
     }
@@ -948,7 +950,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
   }
 };
 prototype["hasFlag"] = function hasFlag(arg0) {
-  return require("../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(this.flags, arg0);
+  return hasFlag /* hasFlag */.hasFlag(this.flags, arg0);
 };
 Object.defineProperty(prototype, "paymentMethodCountry", {
   get: function paymentMethodCountry() {

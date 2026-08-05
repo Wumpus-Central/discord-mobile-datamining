@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersConstants.tsx
 import set from "set";
 
@@ -30,7 +31,7 @@ export const FEATURED_GUILDS_SEARCH_OPTIONS = { categoryId: -1 };
 export const CategoryId = obj;
 export const DISCOVERY_SIDEBAR_CATEGORIES = items1;
 export const getLanguageOptions = function getLanguageOptions() {
-  const languages = require("../../intl/index.native.tsx") /* getSystemLocale */.getLanguages();
+  const languages = getSystemLocale /* getSystemLocale */.getLanguages();
   const found = languages.filter((code) => !closure_2.includes(code.code));
   return found.map((code) => {
     let tmp = code;

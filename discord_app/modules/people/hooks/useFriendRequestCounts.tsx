@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/people/hooks/useFriendRequestCounts.tsx
 import _slicedToArray from "_slicedToArray";
 import recountRelationshipTypes from "recountRelationshipTypes";
@@ -15,7 +16,7 @@ export const getIncomingFriendRequestCount = function getIncomingFriendRequestCo
 };
 export const useIncomingFriendRequestCount = function useIncomingFriendRequestCount() {
   let items = [upsertRelationship, recountRelationshipTypes];
-  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+  return initialize /* initialize */.useStateFromStores(items, () => {
     let obj;
     let obj2;
     const items = [upsertRelationship, recountRelationshipTypes];

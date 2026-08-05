@@ -1,3 +1,4 @@
+import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/stores/RTCRegionStore.tsx
 import { DeviceSettingsStore } from "initialize";
 
@@ -37,7 +38,7 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
 prototype["shouldPerformLatencyTest"] = function shouldPerformLatencyTest(mapped) {
   let tmp = null === obj.preferredRegions;
   if (!tmp) {
-    obj = require("../../_runtime/00012_apply.js");
+    obj = apply;
     let lastGeoRankedOrder = obj.lastGeoRankedOrder;
     if (lastGeoRankedOrder == null) {
       lastGeoRankedOrder = [];

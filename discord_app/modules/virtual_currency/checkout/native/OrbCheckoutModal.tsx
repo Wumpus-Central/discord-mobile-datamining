@@ -1,3 +1,7 @@
+import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
+import { useFetchCollectiblesProduct } from "../../../collectibles/hooks/useFetchCollectiblesProduct.tsx";
+import { useOrbCheckoutModalContextProvider } from "../OrbCheckoutModalContext.tsx";
+import { OrbCheckoutErrorCard } from "OrbCheckoutModalComponents.tsx";
 // discord_app/modules/virtual_currency/checkout/native/OrbCheckoutModal.tsx
 import HeaderBackImage from "HeaderBackImage";
 import noop from "HeaderBackImage";
@@ -17,10 +21,10 @@ const require = arg1;
 function OrbCheckoutModalContent(orbBalance) {
   let orbRedemptionError;
   let skuId;
-  let obj = require("../OrbCheckoutModalContext.tsx") /* useOrbCheckoutModalContextProvider */;
+  let obj = useOrbCheckoutModalContextProvider /* useOrbCheckoutModalContextProvider */;
   const orbCheckoutModalContext = obj.useOrbCheckoutModalContext();
   ({ orbRedemptionError, skuId } = orbCheckoutModalContext);
-  let product = require("../../../collectibles/hooks/useFetchCollectiblesProduct.tsx") /* useFetchCollectiblesProduct */.useFetchCollectiblesProduct(skuId).product;
+  let product = useFetchCollectiblesProduct /* useFetchCollectiblesProduct */.useFetchCollectiblesProduct(skuId).product;
   let tmp6 = null != orbRedemptionError;
   if (tmp6) {
     obj = { error: null };
@@ -32,16 +36,16 @@ function OrbCheckoutModalContent(orbBalance) {
     product = null;
   }
   obj = { children: null };
-  items[1] = callback4(require("OrbCheckoutModalComponents.tsx") /* OrbCheckoutErrorCard */.OrbCheckoutOrderSummary, { product });
-  items[2] = callback4(require("OrbCheckoutModalComponents.tsx") /* OrbCheckoutErrorCard */.OrbCheckoutPaymentSourceDetails, { orbBalance: orbBalance.orbBalance });
+  items[1] = callback4(OrbCheckoutErrorCard /* OrbCheckoutErrorCard */.OrbCheckoutOrderSummary, { product });
+  items[2] = callback4(OrbCheckoutErrorCard /* OrbCheckoutErrorCard */.OrbCheckoutPaymentSourceDetails, { orbBalance: orbBalance.orbBalance });
   obj[0] = items;
-  return closure_12(require("../../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
+  return closure_12(Stack /* Stack */.Stack, obj);
 }
 function OrbCheckoutModalFooter(onPress) {
   const obj = { children: null };
-  const items = [callback4(require("OrbCheckoutModalComponents.tsx") /* OrbCheckoutErrorCard */.OrbCheckoutLegalFinePrint, {}), callback4(require("OrbCheckoutModalComponents.tsx") /* OrbCheckoutErrorCard */.OrbCheckoutPurchaseButton, { onPress: onPress.onPress })];
+  const items = [callback4(OrbCheckoutErrorCard /* OrbCheckoutErrorCard */.OrbCheckoutLegalFinePrint, {}), callback4(OrbCheckoutErrorCard /* OrbCheckoutErrorCard */.OrbCheckoutPurchaseButton, { onPress: onPress.onPress })];
   obj[0] = items;
-  return callback5(require("../../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
+  return callback5(Stack /* Stack */.Stack, obj);
 }
 ({ useRef: c4, useEffect: c5, useCallback: closure_6, useMemo: error } = noop);
 ({ AnalyticEvents: metroImportAll, CurrencyCodes: c9 } = ME);

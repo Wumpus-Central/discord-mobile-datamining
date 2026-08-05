@@ -1,3 +1,4 @@
+import { useIsAppDM } from "../../app_dms/useIsAppDM.tsx";
 // discord_app/modules/user_profile/native/AddOrOpenAppButton.tsx
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
 import _slicedToArray from "_slicedToArray";
@@ -210,7 +211,7 @@ export default function AddOrOpenAppButton(arg0) {
   let guildId;
   ({ application, channel } = arg0);
   ({ botUserId, guildId } = arg0);
-  if (require("../../app_dms/useIsAppDM.tsx")(channel)) {
+  if (useIsAppDM(channel)) {
     if (null != channel) {
       const obj = { profileApplication: null, botUserId: null, channel: null };
       obj[0] = application;

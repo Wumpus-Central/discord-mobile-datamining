@@ -1,11 +1,14 @@
+import { registerAsset } from "../../../../../_runtime/07837_registerAsset.js";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { dispatcher } from "../../../toast/native/ToastActionCreators.tsx";
 // discord_app/modules/user_settings/account/native/showInvalidUsernameToastNative.tsx
 const result = require("registerAsset").fileFinishedImporting("modules/user_settings/account/native/showInvalidUsernameToastNative.tsx");
 
 export const showInvalidUsernameToast = function showInvalidUsernameToast() {
-  let obj = require("../../../toast/native/ToastActionCreators.tsx");
+  let obj = dispatcher;
   obj = { key: "USER_SETTINGS_UPDATE_FAILURE", content: null, icon: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["TGg/2k"]);
-  obj[2] = require("../../../../../_runtime/07837_registerAsset.js");
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["TGg/2k"]);
+  obj[2] = registerAsset;
   obj.open(obj);
 };

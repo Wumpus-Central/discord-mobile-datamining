@@ -1,3 +1,7 @@
+import { registerAsset } from "../../../../_runtime/08415_registerAsset.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { IconButton } from "../../../design/components/Button/native/IconButton.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/quests/native/QuestProgressBottomSheet.tsx
 import ActivityPanelModes from "ActivityPanelModes";
 import useQuests from "useQuests";
@@ -17,12 +21,12 @@ const require = arg1;
 function contextMenuButton(arg0) {
   const obj = {};
   const merged = Object.assign(arg0);
-  obj.icon = require("../../../../_runtime/08415_registerAsset.js");
+  obj.icon = registerAsset;
   obj.variant = "secondary-overlay";
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj.accessibilityLabel = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["UKOtz+"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj.accessibilityLabel = intl.string(getSystemLocale /* getSystemLocale */.t["UKOtz+"]);
   obj.size = "sm";
-  return callback2(require("../../../design/components/Button/native/IconButton.native.tsx") /* IconButton */.IconButton, obj);
+  return callback2(IconButton /* IconButton */.IconButton, obj);
 }
 function QuestProgressBottomSheet(quest) {
   let claim;
@@ -245,7 +249,7 @@ function QuestProgressBottomSheet(quest) {
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles((arg0) => {
   let obj = { contentContainer: null, heroContainer: null, heroImg: null, heroGradient: null, gameTileContainer: null, contextMenuContainer: null, textContainer: null, questDescription: null, buttonsContainer: null };
-  obj = { display: "flex", paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
+  obj = { display: "flex", paddingHorizontal: Themes.space.PX_16, paddingBottom: Themes.space.PX_16 };
   obj[0] = obj;
   let num = 140;
   if (arg0) {
@@ -260,26 +264,26 @@ let closure_12 = createCacheKey.createStyles((arg0) => {
   obj[1] = obj;
   const obj1 = { resizeMode: "cover" };
   const merged = Object.assign(closure_6.absoluteFillObject);
-  obj1.borderTopLeftRadius = require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg;
-  obj1.borderTopRightRadius = require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg;
+  obj1.borderTopLeftRadius = Themes.radii.lg;
+  obj1.borderTopRightRadius = Themes.radii.lg;
   obj[2] = obj1;
   const obj2 = {};
   const merged1 = Object.assign(closure_6.absoluteFillObject);
-  obj2.borderTopLeftRadius = require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg;
-  obj2.borderTopRightRadius = require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg;
+  obj2.borderTopLeftRadius = Themes.radii.lg;
+  obj2.borderTopRightRadius = Themes.radii.lg;
   obj[3] = obj2;
   let num4 = -52;
   if (arg0) {
     num4 = tmp(712).space.PX_12;
   }
   obj[4] = { position: "absolute", bottom: num4, left: 0, right: 0, alignItems: "center" };
-  obj[5] = { position: "absolute", top: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, right: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, display: "flex", flexDirection: "row", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, alignItems: "center" };
+  obj[5] = { position: "absolute", top: Themes.space.PX_16, right: Themes.space.PX_16, display: "flex", flexDirection: "row", gap: Themes.space.PX_16, alignItems: "center" };
   let PX_16;
   if (!arg0) {
     PX_16 = tmp(712).space.PX_16;
   }
-  const obj3 = { position: "absolute", top: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, right: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, display: "flex", flexDirection: "row", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, alignItems: "center" };
-  obj[6] = { alignItems: "center", paddingTop: PX_16, gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, textAlign: "center" };
+  const obj3 = { position: "absolute", top: Themes.space.PX_16, right: Themes.space.PX_16, display: "flex", flexDirection: "row", gap: Themes.space.PX_16, alignItems: "center" };
+  obj[6] = { alignItems: "center", paddingTop: PX_16, gap: Themes.space.PX_8, marginBottom: Themes.space.PX_16, textAlign: "center" };
   obj[7] = { textAlign: "center" };
   let PX_161;
   if (!arg0) {
@@ -288,7 +292,7 @@ let closure_12 = createCacheKey.createStyles((arg0) => {
   obj[8] = { paddingTop: PX_161 };
   return obj;
 });
-let closure_13 = createCacheKey.createStyleProperties(() => ({ gradientEnd: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT }));
+let closure_13 = createCacheKey.createStyleProperties(() => ({ gradientEnd: Themes.colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT }));
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/quests/native/QuestProgressBottomSheet.tsx");
 
 export default function QuestProgressBottomSheetConnected(questId) {

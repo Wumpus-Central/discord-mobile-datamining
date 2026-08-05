@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/design/components/TableRow/native/RowButton.native.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -142,7 +143,7 @@ let closure_5 = createCacheKey.createStyles(() => {
     flag = false;
   }
   let obj = { card: null, cardWithBlur: null };
-  obj = { padding: num, borderTopStartRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopEndRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomStartRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomEndRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_BORDER_RADIUS };
+  obj = { padding: num, borderTopStartRadius: Themes.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopEndRadius: Themes.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomStartRadius: Themes.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomEndRadius: Themes.modules.mobile.TABLE_ROW_BORDER_RADIUS };
   obj[0] = obj;
   obj[1] = { overflow: "hidden" };
   return obj;

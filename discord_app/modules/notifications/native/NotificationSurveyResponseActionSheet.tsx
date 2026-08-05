@@ -1,3 +1,9 @@
+import { registerAsset } from "../../../../_runtime/11025_registerAsset.js";
+import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { combined } from "../../../utils/HelpdeskUtils.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/notifications/native/NotificationSurveyResponseActionSheet.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -14,7 +20,7 @@ let closure_6;
 let error;
 const require = arg1;
 function onClose() {
-  require("../../action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet();
+  ACTION_SHEET_HEIGHT_HALF.hideActionSheet();
 }
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ HelpdeskArticles: c5, Fonts } = ME);
@@ -47,20 +53,20 @@ export default function NotificationSurveyResponseActionSheet(header) {
   obj = { children: null };
   const items = [tmp5, ];
   const obj1 = { style: tmp.view, children: null };
-  const items1 = [callback(closure_4, { style: tmp.rating, source: require("../../../../_runtime/11025_registerAsset.js") }), , ];
+  const items1 = [callback(closure_4, { style: tmp.rating, source: registerAsset }), , ];
   const obj3 = { style: tmp.title, variant: "heading-md/bold", children: null };
   const intl = tmp3(1236).intl;
-  obj3[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["d9+vQ8"]);
-  items1[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
+  obj3[2] = intl.string(getSystemLocale /* getSystemLocale */.t["d9+vQ8"]);
+  items1[1] = callback(Text /* Text */.Text, obj3);
   const obj4 = { style: tmp.subtitle, variant: "text-md/normal", children: null };
   const intl2 = tmp3(1236).intl;
   const obj5 = { helpUrl: null };
-  const obj2 = { style: tmp.rating, source: require("../../../../_runtime/11025_registerAsset.js") };
-  obj5[0] = require("../../../utils/HelpdeskUtils.tsx").getArticleURL(constants.HIGHLIGHTS_NOTIFICATIONS);
-  obj4[2] = intl2.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.WxD5QY, obj5);
-  items1[2] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj4);
+  const obj2 = { style: tmp.rating, source: registerAsset };
+  obj5[0] = combined.getArticleURL(constants.HIGHLIGHTS_NOTIFICATIONS);
+  obj4[2] = intl2.format(getSystemLocale /* getSystemLocale */.t.WxD5QY, obj5);
+  items1[2] = callback(Text /* Text */.Text, obj4);
   obj1[1] = items1;
   items[1] = closure_7(closure_3, obj1);
   obj[0] = items;
-  return closure_7(require("../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, obj);
+  return closure_7(Background /* Background */.BottomSheet, obj);
 };

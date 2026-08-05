@@ -1,3 +1,4 @@
+import { isBlockedDomain } from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
 // discord_app/modules/blocked_domains/BlockedDomainManager.tsx
 import "initialize";
 
@@ -9,8 +10,8 @@ BlockedDomainManager.prototype["_initialize"] = function _initialize() {
     const _window = window;
     const _HermesInternal = HermesInternal;
     const combined = "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT + "/bad-hash-delta";
-    const result = require("../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx") /* isBlockedDomain */.startFetchingBlockedDomains(combined);
-    const tmpResult = require("../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx") /* isBlockedDomain */;
+    const result = isBlockedDomain /* isBlockedDomain */.startFetchingBlockedDomains(combined);
+    const tmpResult = isBlockedDomain /* isBlockedDomain */;
   }
 };
 const blockedDomainManager = new BlockedDomainManager();

@@ -1,3 +1,4 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_settings/native/GuildSettingsModalEmoji/HeaderRow.tsx
 import closure_3 from "ME";
 import _slicedToArray from "_slicedToArray";
@@ -312,7 +313,7 @@ export const ConnectedHeaderRow = function ConnectedHeaderRow(arg0) {
     HermesBuiltin.throwTypeError();
   } else {
     const merged = Object.assign(arg0, undefined);
-    let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+    let obj = initialize /* initialize */;
     const items = [initialize];
     obj = { isUploading: null };
     obj[0] = obj.useStateFromStores(items, () => uploadingEmoji.isUploadingEmoji());

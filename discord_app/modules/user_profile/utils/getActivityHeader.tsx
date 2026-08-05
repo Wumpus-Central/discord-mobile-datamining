@@ -1,3 +1,7 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { unpackStageChannelParty } from "../../stage_channels/StageChannelRichPresenceUtils.tsx";
+import { PlatformTypes } from "getActivityPlatform.tsx";
+import { parseProviderRouteHeadlessSessionId } from "parseProviderRouteHeadlessSessionId.tsx";
 // discord_app/modules/user_profile/utils/getActivityHeader.tsx
 import ME from "ME";
 
@@ -7,8 +11,8 @@ let c4;
 const result = require("PlatformTypes").fileFinishedImporting("modules/user_profile/utils/getActivityHeader.tsx");
 
 export default function getActivityHeader(session_id) {
-  const tmp3 = require("parseProviderRouteHeadlessSessionId.tsx")(session_id.session_id);
-  const tmp4 = require("getActivityPlatform.tsx")(session_id);
+  const tmp3 = parseProviderRouteHeadlessSessionId(session_id.session_id);
+  const tmp4 = PlatformTypes(session_id);
   if (tmp4 != null) {
     const icon = tmp4.icon;
   }
@@ -26,11 +30,11 @@ export default function getActivityHeader(session_id) {
     }
     if (type === constants2.XBOX) {
       let obj = { text: null, platformIcon: null, platformLabel: null };
-      const intl21 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl21 = getSystemLocale /* getSystemLocale */.intl;
       obj = { platform: null };
-      const intl22 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[0] = intl22.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Nfvo72);
-      obj[0] = intl21.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.A17aM8, obj);
+      const intl22 = getSystemLocale /* getSystemLocale */.intl;
+      obj[0] = intl22.string(getSystemLocale /* getSystemLocale */.t.Nfvo72);
+      obj[0] = intl21.formatToPlainString(getSystemLocale /* getSystemLocale */.t.A17aM8, obj);
       obj[1] = icon;
       obj[2] = str;
       return obj;
@@ -43,11 +47,11 @@ export default function getActivityHeader(session_id) {
     }
     if (type1 === constants2.PLAYSTATION) {
       const obj1 = { text: null, platformIcon: null, platformLabel: null };
-      const intl19 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl19 = getSystemLocale /* getSystemLocale */.intl;
       const obj2 = { platform: null };
-      const intl20 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj2[0] = intl20.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.fFl4jo);
-      obj1[0] = intl19.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.A17aM8, obj2);
+      const intl20 = getSystemLocale /* getSystemLocale */.intl;
+      obj2[0] = intl20.string(getSystemLocale /* getSystemLocale */.t.fFl4jo);
+      obj1[0] = intl19.formatToPlainString(getSystemLocale /* getSystemLocale */.t.A17aM8, obj2);
       obj1[1] = icon;
       obj1[2] = str;
       return obj1;
@@ -59,10 +63,10 @@ export default function getActivityHeader(session_id) {
       type2 = tmp4.type;
     }
     if (type2 === constants2.META_QUEST_OR_HORIZON) {
-      const intl17 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      const intl18 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl17 = getSystemLocale /* getSystemLocale */.intl;
+      const intl18 = getSystemLocale /* getSystemLocale */.intl;
       const string2 = intl18.string;
-      const t2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.t;
+      const t2 = getSystemLocale /* getSystemLocale */.t;
       if (tmp31) {
         let string2Result = string2(t2.BrHQaq);
       } else {
@@ -71,7 +75,7 @@ export default function getActivityHeader(session_id) {
       const obj3 = { text: null, platformIcon: null, platformLabel: null };
       const obj4 = { platform: null };
       obj4[0] = string2Result;
-      obj3[0] = intl17.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.A17aM8, obj4);
+      obj3[0] = intl17.formatToPlainString(getSystemLocale /* getSystemLocale */.t.A17aM8, obj4);
       obj3[1] = icon;
       obj3[2] = str;
       return obj3;
@@ -83,10 +87,10 @@ export default function getActivityHeader(session_id) {
       type3 = tmp4.type;
     }
     if (type3 === constants2.META_QUEST_OR_HORIZON) {
-      const intl15 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      const intl16 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl15 = getSystemLocale /* getSystemLocale */.intl;
+      const intl16 = getSystemLocale /* getSystemLocale */.intl;
       const string = intl16.string;
-      const t = require("../../../intl/index.native.tsx") /* getSystemLocale */.t;
+      const t = getSystemLocale /* getSystemLocale */.t;
       if (tmp28) {
         let stringResult = string(t.BrHQaq);
       } else {
@@ -95,7 +99,7 @@ export default function getActivityHeader(session_id) {
       const obj5 = { text: null, platformIcon: null, platformLabel: null };
       const obj6 = { platform: null };
       obj6[0] = stringResult;
-      obj5[0] = intl15.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ENbTKQ, obj6);
+      obj5[0] = intl15.formatToPlainString(getSystemLocale /* getSystemLocale */.t.ENbTKQ, obj6);
       obj5[1] = icon;
       obj5[2] = str;
       return obj5;
@@ -108,11 +112,11 @@ export default function getActivityHeader(session_id) {
     }
     if (type4 === constants2.TWITCH) {
       const obj7 = { text: null, platformIcon: null, platformLabel: null };
-      const intl13 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl13 = getSystemLocale /* getSystemLocale */.intl;
       const obj8 = { name: null };
-      const intl14 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj8[0] = intl14.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.q4pBG3);
-      obj7[0] = intl13.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["4CQq9Q"], obj8);
+      const intl14 = getSystemLocale /* getSystemLocale */.intl;
+      obj8[0] = intl14.string(getSystemLocale /* getSystemLocale */.t.q4pBG3);
+      obj7[0] = intl13.formatToPlainString(getSystemLocale /* getSystemLocale */.t["4CQq9Q"], obj8);
       obj7[1] = icon;
       obj7[2] = str;
       return obj7;
@@ -125,11 +129,11 @@ export default function getActivityHeader(session_id) {
     }
     if (type5 === constants2.YOUTUBE) {
       const obj9 = { text: null, platformIcon: null, platformLabel: null };
-      const intl11 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl11 = getSystemLocale /* getSystemLocale */.intl;
       const obj10 = { name: null };
-      const intl12 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj10[0] = intl12.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.aS6cK4);
-      obj9[0] = intl11.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["4CQq9Q"], obj10);
+      const intl12 = getSystemLocale /* getSystemLocale */.intl;
+      obj10[0] = intl12.string(getSystemLocale /* getSystemLocale */.t.aS6cK4);
+      obj9[0] = intl11.formatToPlainString(getSystemLocale /* getSystemLocale */.t["4CQq9Q"], obj10);
       obj9[1] = icon;
       obj9[2] = str;
       return obj9;
@@ -138,19 +142,19 @@ export default function getActivityHeader(session_id) {
   if (null != tmp3) {
     type = session_id.type;
     if (tmp5.PLAYING === type) {
-      let Dzgz4u = require("../../../intl/index.native.tsx") /* getSystemLocale */.t.A17aM8;
+      let Dzgz4u = getSystemLocale /* getSystemLocale */.t.A17aM8;
     } else if (tmp5.WATCHING === type) {
-      Dzgz4u = require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ENbTKQ;
+      Dzgz4u = getSystemLocale /* getSystemLocale */.t.ENbTKQ;
     } else if (tmp5.LISTENING === type) {
-      Dzgz4u = require("../../../intl/index.native.tsx") /* getSystemLocale */.t.EcHzWI;
+      Dzgz4u = getSystemLocale /* getSystemLocale */.t.EcHzWI;
     } else if (tmp5.COMPETING === type) {
-      Dzgz4u = require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ikpHeS;
+      Dzgz4u = getSystemLocale /* getSystemLocale */.t.ikpHeS;
     } else if (tmp5.STREAMING === type) {
-      Dzgz4u = require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Dzgz4u;
+      Dzgz4u = getSystemLocale /* getSystemLocale */.t.Dzgz4u;
     }
     if (undefined !== Dzgz4u) {
       const obj11 = { text: null, platformIcon: null, platformLabel: null };
-      const intl10 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl10 = getSystemLocale /* getSystemLocale */.intl;
       const obj12 = { platform: null };
       obj12[0] = tmp35;
       obj11[0] = intl10.formatToPlainString(Dzgz4u, obj12);
@@ -162,15 +166,15 @@ export default function getActivityHeader(session_id) {
   }
   if (session_id.type === constants.PLAYING) {
     const obj13 = { text: null, platformIcon: null, platformLabel: null };
-    const intl9 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj13[0] = intl9.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.BMTj28);
+    const intl9 = getSystemLocale /* getSystemLocale */.intl;
+    obj13[0] = intl9.string(getSystemLocale /* getSystemLocale */.t.BMTj28);
     obj13[1] = icon;
     obj13[2] = str;
     obj = obj13;
   } else if (session_id.type === tmp5.STREAMING) {
     const obj14 = { text: null, platformIcon: null, platformLabel: null };
-    const intl8 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj14[0] = intl8.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["Jpkr/q"]);
+    const intl8 = getSystemLocale /* getSystemLocale */.intl;
+    obj14[0] = intl8.string(getSystemLocale /* getSystemLocale */.t["Jpkr/q"]);
     obj14[1] = icon;
     obj14[2] = str;
     obj = obj14;
@@ -250,7 +254,7 @@ export default function getActivityHeader(session_id) {
         }
       }
     }
-    obj29 = require("../../stage_channels/StageChannelRichPresenceUtils.tsx") /* unpackStageChannelParty */;
+    obj29 = unpackStageChannelParty /* unpackStageChannelParty */;
   }
   return obj;
 };

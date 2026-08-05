@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { _signOrder } from "../../payments/OrderActionCreators.tsx";
 // discord_app/modules/virtual_currency/checkout/OrbCheckoutUtils.tsx
 import ME from "ME";
 import { EXTERNAL_PRODUCT_SKU_IDS } from "items";
@@ -36,13 +38,13 @@ export const getOrbPriceFromPrices = function getOrbPriceFromPrices(prices, memo
   tmp2 = prices[closure_4.DEFAULT];
 };
 export const getOrbCheckoutDisclaimerMessage = function getOrbCheckoutDisclaimerMessage(skuId) {
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   const obj = { buyButtonLabel: null, paidServiceTermURL: null, virtualGoodsURL: null };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["zLch/S"]);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t["zLch/S"]);
   ({ PAID_TERMS: obj[1], PAID_TERMS_VIRTUAL_GOODS: obj[2] } = closure_3);
-  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  let stringResult = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["Sxed/G"]);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  let stringResult = intl3.string(getSystemLocale /* getSystemLocale */.t["Sxed/G"]);
   if (skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
     const intl5 = tmp(1236).intl;
     stringResult = intl5.string(tmp(1236).t.APcKRo);
@@ -50,7 +52,7 @@ export const getOrbCheckoutDisclaimerMessage = function getOrbCheckoutDisclaimer
     const intl4 = tmp(1236).intl;
     stringResult = intl4.string(tmp(1236).t.FhJ74j);
   }
-  const items = [intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["5qdUrO"], obj), " ", stringResult];
+  const items = [intl.format(getSystemLocale /* getSystemLocale */.t["5qdUrO"], obj), " ", stringResult];
   return items;
 };
 export const resolveOrbCheckoutErrorMessage = function resolveOrbCheckoutErrorMessage(code) {
@@ -58,7 +60,7 @@ export const resolveOrbCheckoutErrorMessage = function resolveOrbCheckoutErrorMe
     return null;
   } else {
     let keFvXM = dependencyMap;
-    let OrderSigningFailedWithConstraintsError = require("../../payments/OrderActionCreators.tsx") /* _signOrder */.OrderSigningFailedWithConstraintsError;
+    let OrderSigningFailedWithConstraintsError = _signOrder /* _signOrder */.OrderSigningFailedWithConstraintsError;
     if (!(code instanceof OrderSigningFailedWithConstraintsError)) {
       if (code instanceof tmp(5773).OrderProcessingPendingError) {
         const intl5 = tmp(1236).intl;

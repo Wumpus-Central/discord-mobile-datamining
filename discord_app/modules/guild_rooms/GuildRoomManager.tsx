@@ -1,3 +1,5 @@
+import { _guildRoomConnect } from "GuildRoomActionCreators.native.tsx";
+import { experiment } from "GuildRoomsExperiment.tsx";
 // discord_app/modules/guild_rooms/GuildRoomManager.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -24,7 +26,7 @@ class GuildRoomManager extends tmp2 {
 }
 const prototype = GuildRoomManager.prototype;
 prototype["isExperimentEnabled"] = function isExperimentEnabled(guildId, VOICE_STATE_UPDATE) {
-  let obj = require("GuildRoomsExperiment.tsx");
+  let obj = experiment;
   obj = { guildId, location: VOICE_STATE_UPDATE };
   return obj.getCurrentConfig(obj).enabled;
 };
@@ -57,7 +59,7 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(arg0) {
           if (isExperimentEnabledResult) {
             let tmp16 = require;
             let tmp17 = dependencyMap;
-            let obj3 = require("GuildRoomActionCreators.native.tsx") /* _guildRoomConnect */;
+            let obj3 = _guildRoomConnect /* _guildRoomConnect */;
             let tmp18 = guildId;
             let tmp19 = channelId;
             let guildRoomDisconnectResult = obj3.guildRoomDisconnect(guildId, channelId);
@@ -72,7 +74,7 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(arg0) {
               if (self.isExperimentEnabled(guildId, "VOICE_STATE_UPDATE")) {
                 let tmp26 = require;
                 let tmp27 = dependencyMap;
-                let obj4 = require("GuildRoomActionCreators.native.tsx") /* _guildRoomConnect */;
+                let obj4 = _guildRoomConnect /* _guildRoomConnect */;
                 let tmp28 = guildId;
                 let tmp29 = channelId;
                 let tmp30 = pendingPosition;
@@ -95,7 +97,7 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(arg0) {
       if (tmp4) {
         let tmp7 = require;
         let tmp8 = dependencyMap;
-        let obj2 = require("GuildRoomActionCreators.native.tsx") /* _guildRoomConnect */;
+        let obj2 = _guildRoomConnect /* _guildRoomConnect */;
         let tmp9 = userId;
         let tmp10 = oldChannelId;
         let result = obj2.guildRoomLocalDisconnect(tmp2, oldChannelId);
@@ -116,8 +118,8 @@ prototype["handleEmbeddedActivityLaunchSuccess"] = function handleEmbeddedActivi
       isExperimentEnabledResult = handleSelectedChannelStoreChange.isVisible(channelId.channelId);
     }
     if (isExperimentEnabledResult) {
-      const result = require("GuildRoomActionCreators.native.tsx") /* _guildRoomConnect */.guildRoomToggleLayout(channelId.channelId, true);
-      const obj = require("GuildRoomActionCreators.native.tsx") /* _guildRoomConnect */;
+      const result = _guildRoomConnect /* _guildRoomConnect */.guildRoomToggleLayout(channelId.channelId, true);
+      const obj = _guildRoomConnect /* _guildRoomConnect */;
     }
   }
 };

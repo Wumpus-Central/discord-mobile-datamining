@@ -1,3 +1,5 @@
+import { SearchListSectionLabel } from "SettingListRenderer.tsx";
+import { SettingSegmentedControl } from "SettingSegmentedControlRenderer.tsx";
 // discord_app/modules/settings/native/renderer/SettingLayout.tsx
 import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
 import { jsx } from "jsxProd";
@@ -10,11 +12,11 @@ const memoResult = require("noop").memo(function SettingLayout(node) {
   if (NodeType.LIST === type) {
     let obj = { node: null };
     obj[0] = node;
-    return jsx(require("SettingListRenderer.tsx") /* SearchListSectionLabel */.SettingsList, { node: null });
+    return jsx(SearchListSectionLabel /* SearchListSectionLabel */.SettingsList, { node: null });
   } else if (tmp.SEGMENTED_CONTROL === type) {
     obj = { node: null };
     obj[0] = node;
-    return jsx(require("SettingSegmentedControlRenderer.tsx"), { node: null });
+    return jsx(SettingSegmentedControl, { node: null });
   }
 });
 const result = require("jsxProd").fileFinishedImporting("modules/settings/native/renderer/SettingLayout.tsx");

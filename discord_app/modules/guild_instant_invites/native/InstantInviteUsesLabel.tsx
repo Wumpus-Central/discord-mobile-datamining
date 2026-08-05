@@ -1,3 +1,4 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/guild_instant_invites/native/InstantInviteUsesLabel.tsx
 import "noop";
 import { jsxs } from "jsxProd";
@@ -15,5 +16,5 @@ export default function InstantInviteUsesLabel(style) {
     combined = "" + uses + "/" + maxUses;
   }
   const children = ["Uses: ", combined];
-  return jsxs(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/semibold", color: "text-default", style: style.style, children });
+  return jsxs(Text /* Text */.Text, { variant: "text-md/semibold", color: "text-default", style: style.style, children });
 };

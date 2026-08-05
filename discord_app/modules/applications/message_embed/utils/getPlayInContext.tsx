@@ -1,3 +1,4 @@
+import { getEmbeddedActivityLaunchability } from "../../../activities/utils/getEmbeddedActivityLaunchability.tsx";
 // discord_app/modules/applications/message_embed/utils/getPlayInContext.tsx
 import participantFromServer from "participantFromServer";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -60,12 +61,12 @@ export const getPlayInContext = function getPlayInContext(id, channel_id) {
     return { currentChannelId: null, instanceId: null, instanceLocation: null, isCurrentlyInInstance: false, canLaunchInChannel: false };
   } else {
     if (null != channelId) {
-      let obj = _require("../../../activities/utils/getEmbeddedActivityLaunchability.tsx");
+      let obj = _getEmbeddedActivityLaunchability;
       let NO_CHANNEL = obj.getEmbeddedActivityLaunchabilityForChannel(channelId);
       let tmp3 = _require;
     } else {
       tmp3 = _require;
-      NO_CHANNEL = _require("../../../activities/utils/getEmbeddedActivityLaunchability.tsx").EmbeddedActivityLaunchability.NO_CHANNEL;
+      NO_CHANNEL = _getEmbeddedActivityLaunchability.EmbeddedActivityLaunchability.NO_CHANNEL;
     }
     embeddedActivitiesForChannel = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(channelId);
     const found = embeddedActivitiesForChannel.filter((applicationId) => applicationId.applicationId === closure_0);

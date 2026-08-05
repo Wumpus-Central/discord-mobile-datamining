@@ -1,3 +1,4 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/user_profile/native/UserProfileActivity.tsx
 import UserProfileActivityCardBadges from "UserProfileActivityCardBadges";
 import isLinkTrusted from "isLinkTrusted";
@@ -42,7 +43,7 @@ function ActivityCardText(children) {
       const obj = {};
       const merged1 = Object.assign(merged);
       obj.children = trimmed;
-      tmp3 = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+      tmp3 = callback(Text /* Text */.Text, obj);
     }
   }
   return tmp3;

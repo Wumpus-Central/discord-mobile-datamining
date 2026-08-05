@@ -1,3 +1,5 @@
+import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
+import { getIsEligibleForQuests } from "../lib/QuestsEligibility.tsx";
 // discord_app/modules/quests/managers/QuestFetchManager.tsx
 import initializeState from "initializeState";
 import "initialize";
@@ -101,7 +103,7 @@ class QuestFetchManager extends tmp2 {
   }
 }
 QuestFetchManager.prototype["_fetch"] = function _fetch(arg0) {
-  let obj = require("../lib/QuestsEligibility.tsx") /* getIsEligibleForQuests */;
+  let obj = getIsEligibleForQuests /* getIsEligibleForQuests */;
   let isEligibleForQuests = obj.getIsEligibleForQuests();
   if (isEligibleForQuests) {
     isEligibleForQuests = !initializeState.isFetchingCurrentQuests;
@@ -116,7 +118,7 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(arg0) {
     obj[3] = Date.now() - initializeState.lastFetchedCurrentQuests;
     obj[4] = initializeState.isFetchingCurrentQuests;
     obj[2] = obj;
-    require("../../../utils/SentryUtils.native.tsx").addBreadcrumb(obj);
+    SentryUtils.native.addBreadcrumb(obj);
     let tmpResult = tmp(10376);
     const currentQuests = tmpResult.fetchCurrentQuests();
     tmpResult = tmp(500);
@@ -133,7 +135,7 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(arg0) {
       const questToDeliver = tmp(10376).fetchQuestToDeliver(tmp(5131).AdPlacement.MOBILE_HOME_DOCK_AREA, arg0);
       const tmpResult1 = tmp(10376);
     }
-    const obj2 = require("../../../utils/SentryUtils.native.tsx");
+    const obj2 = SentryUtils.native;
   }
 };
 const questFetchManager = new QuestFetchManager();

@@ -1,3 +1,9 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { allowChannelAccess } from "../../utils/ChannelUtils.tsx";
+import { isNullOrEmpty } from "../../utils/StringUtils.tsx";
+import { getChannelRoleSubscriptionStatus } from "../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx";
+import { ME } from "../links/LinkUtils.tsx";
 // discord_app/modules/markup/MarkupChannelMentionRule.tsx
 import isSubscriptionGated from "isSubscriptionGated";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -13,9 +19,9 @@ const require = arg1;
 function getChannel(id, arr) {
   const _require = id;
   const channel = store.getChannel(id);
-  const isSubscriptionGated = _require("../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx").getChannelRoleSubscriptionStatus(id, store, isSubscriptionGated, getUncachedChannelPermissions).isSubscriptionGated;
-  const obj2 = _require("../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx");
-  let str = _require("../../utils/ChannelUtils.tsx").getMentionIconType(channel);
+  const isSubscriptionGated = _getChannelRoleSubscriptionStatus.getChannelRoleSubscriptionStatus(id, store, isSubscriptionGated, getUncachedChannelPermissions).isSubscriptionGated;
+  const obj2 = _getChannelRoleSubscriptionStatus;
+  let str = _allowChannelAccess.getMentionIconType(channel);
   if (str == null) {
     str = "text";
   }
@@ -69,20 +75,20 @@ function handleUnknownChannel(guildId, channelId, messageId, arg3, originalLink)
     if (id !== arg3) {
       obj = { type: "guild", guildId: null, content: null, icon: null };
       obj[1] = guild.id;
-      obj[2] = require("../../utils/StringUtils.tsx") /* isNullOrEmpty */.truncateText(guild.name, 32);
-      const obj5 = require("../../utils/StringUtils.tsx") /* isNullOrEmpty */;
+      obj[2] = isNullOrEmpty /* isNullOrEmpty */.truncateText(guild.name, 32);
+      const obj5 = isNullOrEmpty /* isNullOrEmpty */;
       obj = { id: null, icon: null, size: 40 };
       ({ id: obj7[0], icon: obj7[1] } = guild);
-      obj[3] = require("../../utils/AvatarUtils.tsx").getGuildIconURL(obj);
+      obj[3] = getAvatarURL.getGuildIconURL(obj);
       const items = [obj];
       tmp2 = items;
-      const obj6 = require("../../utils/AvatarUtils.tsx");
+      const obj6 = getAvatarURL;
     }
   }
   obj[5] = tmp2;
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  const formatted = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.zLZPmk).toLowerCase();
-  let obj1 = require("../../utils/StringUtils.tsx") /* isNullOrEmpty */;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const formatted = intl.string(getSystemLocale /* getSystemLocale */.t.zLZPmk).toLowerCase();
+  let obj1 = isNullOrEmpty /* isNullOrEmpty */;
   obj1 = { type: "text", content: obj1.truncateText(formatted, 32) };
   const items1 = [obj1];
   const items2 = [{ type: "em", content: items1 }];
@@ -103,7 +109,7 @@ function parseChannel(canViewChannel) {
           obj = {};
           const merged = Object.assign(obj);
           obj.guildId = closure_10;
-          let obj19 = require("../../utils/StringUtils.tsx") /* isNullOrEmpty */;
+          let obj19 = isNullOrEmpty /* isNullOrEmpty */;
           const obj1 = { type: "text", content: null };
           obj1[1] = obj19.truncateText(canViewChannel.name, 32);
           const obj2 = { type: "channel", content: null, channelType: null, iconType: null };
@@ -128,10 +134,10 @@ function parseChannel(canViewChannel) {
           obj4[2] = arg3;
           obj6 = obj4;
         } else {
-          const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+          const intl2 = getSystemLocale /* getSystemLocale */.intl;
           const _HermesInternal2 = HermesInternal;
           obj6 = { type: "text", content: null };
-          obj6[1] = "#" + intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.J90oLW);
+          obj6[1] = "#" + intl2.string(getSystemLocale /* getSystemLocale */.t.J90oLW);
         }
         return obj6;
       } else {
@@ -139,14 +145,14 @@ function parseChannel(canViewChannel) {
         const merged1 = Object.assign(obj);
         const obj8 = { type: "guild", guildId: null, content: null, icon: null };
         obj8[1] = guild.id;
-        obj8[2] = require("../../utils/StringUtils.tsx") /* isNullOrEmpty */.truncateText(guild.name, 32);
-        const obj26 = require("../../utils/StringUtils.tsx") /* isNullOrEmpty */;
+        obj8[2] = isNullOrEmpty /* isNullOrEmpty */.truncateText(guild.name, 32);
+        const obj26 = isNullOrEmpty /* isNullOrEmpty */;
         ({ id: obj28[0], icon: obj28[1] } = guild);
-        obj8[3] = require("../../utils/AvatarUtils.tsx").getGuildIconURL({ id: null, icon: null, size: 40 });
-        const obj27 = require("../../utils/AvatarUtils.tsx");
+        obj8[3] = getAvatarURL.getGuildIconURL({ id: null, icon: null, size: 40 });
+        const obj27 = getAvatarURL;
         const obj9 = { id: null, icon: null, size: 40 };
         const obj10 = { type: "text", content: null };
-        obj10[1] = require("../../utils/StringUtils.tsx") /* isNullOrEmpty */.truncateText(canViewChannel.name, 32);
+        obj10[1] = isNullOrEmpty /* isNullOrEmpty */.truncateText(canViewChannel.name, 32);
         const obj11 = { type: "channel", content: null, channelType: null, iconType: null };
         const items5 = [obj10];
         obj11[1] = items5;
@@ -229,7 +235,7 @@ function parseChannel(canViewChannel) {
           }
         }
         obj18 = tmp12;
-        const obj29 = require("../../utils/StringUtils.tsx") /* isNullOrEmpty */;
+        const obj29 = isNullOrEmpty /* isNullOrEmpty */;
       }
     } else {
       const _HermesInternal = HermesInternal;
@@ -241,8 +247,8 @@ function parseChannel(canViewChannel) {
     if (canViewChannel.roleSubscriptionGated) {
       let name = canViewChannel.name;
     } else {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      name = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["/YzI63"]);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      name = intl.string(getSystemLocale /* getSystemLocale */.t["/YzI63"]);
     }
     obj = { type: "channel", content: null, channelType: null, iconType: "locked" };
     const obj21 = { type: "text", content: null };
@@ -304,7 +310,7 @@ obj = {
   order: require("t").defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
-    const CHANNEL_OR_MESSAGES_URL_RE = require("../links/LinkUtils.tsx") /* ME */.CHANNEL_OR_MESSAGES_URL_RE;
+    const CHANNEL_OR_MESSAGES_URL_RE = ME /* ME */.CHANNEL_OR_MESSAGES_URL_RE;
     const match = CHANNEL_OR_MESSAGES_URL_RE.exec(arg0);
     if (null != match) {
       if (null != match[2]) {
@@ -364,7 +370,7 @@ obj[2] = {
   order: require("t").defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
-    const MEDIA_POST_URL_RE = require("../links/LinkUtils.tsx") /* ME */.MEDIA_POST_URL_RE;
+    const MEDIA_POST_URL_RE = ME /* ME */.MEDIA_POST_URL_RE;
     return MEDIA_POST_URL_RE.exec(arg0);
   },
   parse(arg0, arg1, channelId) {
@@ -416,7 +422,7 @@ let obj1 = {
   order: require("t").defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
-    const MEDIA_POST_URL_RE = require("../links/LinkUtils.tsx") /* ME */.MEDIA_POST_URL_RE;
+    const MEDIA_POST_URL_RE = ME /* ME */.MEDIA_POST_URL_RE;
     return MEDIA_POST_URL_RE.exec(arg0);
   },
   parse(arg0, arg1, channelId) {

@@ -1,10 +1,11 @@
+import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
 // discord_app/modules/app_launcher/native/AppLauncherNativeConstants.tsx
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeConstants.tsx");
 
 export const APP_LAUNCHER_BUILT_IN_SECTION_ICON = require("registerAsset");
 export const AppLauncherRouteName = { HOME: "home", APPLICATION_VIEW: "application_view", COMMAND_VIEW: "command_view", APP_LIST_VIEW: "app_list_view" };
 export const useAppLauncherNavigation = function useAppLauncherNavigation() {
-  return require("../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */.useNativeStackNavigation();
+  return useNavigation /* useNavigation */.useNativeStackNavigation();
 };
 export const AppLauncherOptionAutoFocusType = { NONE: 0, [0]: "NONE", FIRST_REQUIRED_OPTION: 1, [1]: "FIRST_REQUIRED_OPTION", OPTIONAL_OPTION_ADDED: 2, [2]: "OPTIONAL_OPTION_ADDED" };
 export const DEFAULT_CONTENT_PADDING = require("Themes").space.PX_16;

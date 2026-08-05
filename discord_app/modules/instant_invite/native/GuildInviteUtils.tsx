@@ -1,3 +1,6 @@
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/instant_invite/native/GuildInviteUtils.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getSystemLocale from "getSystemLocale";
@@ -135,12 +138,12 @@ function _sendGuildInvite() {
 const result = require("comparator").fileFinishedImporting("modules/instant_invite/native/GuildInviteUtils.tsx");
 
 export const showGuildInviteActionSheet = function showGuildInviteActionSheet(id, newestAnalyticsLocation) {
-  let obj = require("../../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { type: "Invite to Guilds", source: newestAnalyticsLocation };
   obj.track(constants.OPEN_POPOUT, obj);
-  const obj3 = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
+  const obj3 = ACTION_SHEET_HEIGHT_HALF;
   obj = { recipientId: id, source: newestAnalyticsLocation };
-  obj3.openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(12404, dependencyMap.paths), "invite-to-guilds-" + id, obj);
+  obj3.openLazy(asyncRequireImpl /* asyncRequireImpl */(12404, dependencyMap.paths), "invite-to-guilds-" + id, obj);
 };
 export const useServerInviteRows = function useServerInviteRows(id, query) {
   const _require = id;

@@ -1,3 +1,5 @@
+import { __INTERNAL_VIEW_CONFIG } from "../../../../../discord_common/js/packages/rtn-codegen/js/ClipViewNativeComponent.tsx";
+import { useCutoutBackgroundColor } from "CutoutBackgroundContext.tsx";
 // discord_app/design/components/Icon/native/ClipView.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -62,7 +64,7 @@ export default function ClipView(cutouts) {
   cutouts = cutouts.cutouts;
   ({ children, style } = cutouts);
   const merged = Object.assign(cutouts, Object.create(null));
-  let obj = require("CutoutBackgroundContext.tsx") /* useCutoutBackgroundColor */;
+  let obj = useCutoutBackgroundColor /* useCutoutBackgroundColor */;
   const cutoutBackgroundColor = obj.useCutoutBackgroundColor();
   let tmp4 = null;
   let tmp5 = cutouts;
@@ -88,7 +90,7 @@ export default function ClipView(cutouts) {
   obj.style = style;
   const items = [children, tmp4];
   obj.children = items;
-  return callback2(require("../../../../../discord_common/js/packages/rtn-codegen/js/ClipViewNativeComponent.tsx"), obj);
+  return callback2(__INTERNAL_VIEW_CONFIG, obj);
 };
 export const ClipViewAnimated = animatedComponent;
 export const CutoutShape = obj;

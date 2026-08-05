@@ -1,3 +1,5 @@
+import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
+import { getBestActiveInput } from "../../utils/native/ChatInputUtils.tsx";
 // discord_app/modules/quarantine/openQuarantineModeInfoModal.native.tsx
 import "noop";
 import { Keyboard } from "get ActivityIndicator";
@@ -8,7 +10,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/quarantine/open
 
 export default function openQuarantineModeInfoModal() {
   Keyboard.dismiss();
-  let obj = require("../../utils/native/ChatInputUtils.tsx") /* getBestActiveInput */;
+  let obj = getBestActiveInput /* getBestActiveInput */;
   const bestActiveInput = obj.getBestActiveInput();
   if (bestActiveInput != null) {
     bestActiveInput.blur();
@@ -24,5 +26,5 @@ export default function openQuarantineModeInfoModal() {
       });
     }
   };
-  require("../../actions/native/AlertActionCreators.tsx").openLazy(obj);
+  AlertActionCreators.openLazy(obj);
 };

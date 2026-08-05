@@ -1,3 +1,7 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { result } from "../../user_settings/family_center/ParentalControlledUserSettings.tsx";
+import { useSelectedTeen } from "useSelectedTeen.tsx";
+import { useUserIdsForLinkStatus } from "useUserLinks.tsx";
 // discord_app/modules/parent_tools/hooks/useParentalControlSettings.tsx
 import result from "result";
 import noop from "noop";
@@ -8,9 +12,9 @@ const require = arg1;
 const result = require("getSettings").fileFinishedImporting("modules/parent_tools/hooks/useParentalControlSettings.tsx");
 
 export const useParentalControlledExplicitContentSettings = function useParentalControlledExplicitContentSettings() {
-  let obj = require("useSelectedTeen.tsx") /* useSelectedTeen */;
+  let obj = useSelectedTeen /* useSelectedTeen */;
   const selectedTeen = obj.useSelectedTeen();
-  const ParentalControlledExplicitContent = require("../../user_settings/family_center/ParentalControlledUserSettings.tsx") /* result */.ParentalControlledExplicitContent;
+  const ParentalControlledExplicitContent = result /* result */.ParentalControlledExplicitContent;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;
@@ -53,9 +57,9 @@ export const useParentalControlledExplicitContentSettings = function useParental
 export const useParentalControlledGoreContentSettings = function useParentalControlledGoreContentSettings() {
   let goreContentFriendDm;
   let goreContentNonFriendDm;
-  let obj = require("useSelectedTeen.tsx") /* useSelectedTeen */;
+  let obj = useSelectedTeen /* useSelectedTeen */;
   const selectedTeen = obj.useSelectedTeen();
-  const ParentalControlledGoreContent = require("../../user_settings/family_center/ParentalControlledUserSettings.tsx") /* result */.ParentalControlledGoreContent;
+  const ParentalControlledGoreContent = result /* result */.ParentalControlledGoreContent;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;
@@ -85,14 +89,14 @@ export const useParentalControlledGoreContentSettings = function useParentalCont
   }
 };
 export const useDefaultGuildsRestricted = function useDefaultGuildsRestricted() {
-  const selectedTeen = require("useSelectedTeen.tsx") /* useSelectedTeen */.useSelectedTeen();
-  const ParentalControlledDefaultGuildsRestricted = require("../../user_settings/family_center/ParentalControlledUserSettings.tsx") /* result */.ParentalControlledDefaultGuildsRestricted;
+  const selectedTeen = useSelectedTeen /* useSelectedTeen */.useSelectedTeen();
+  const ParentalControlledDefaultGuildsRestricted = result /* result */.ParentalControlledDefaultGuildsRestricted;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;
   }
   const controlledSetting = ParentalControlledDefaultGuildsRestricted.useControlledSetting(id);
-  const ParentalControlledDefaultGuildsRestrictedV2 = require("../../user_settings/family_center/ParentalControlledUserSettings.tsx") /* result */.ParentalControlledDefaultGuildsRestrictedV2;
+  const ParentalControlledDefaultGuildsRestrictedV2 = result /* result */.ParentalControlledDefaultGuildsRestrictedV2;
   let id1;
   if (selectedTeen != null) {
     id1 = selectedTeen.id;
@@ -117,18 +121,18 @@ export const useAllowFriendsFromMutualGuildsOnlyForTeen = function useAllowFrien
   return memo.mutualGuilds && !memo.all;
 };
 export const useIsParentallyControlled = function useIsParentallyControlled() {
-  return require("useUserLinks.tsx") /* useUserIdsForLinkStatus */.useHasActiveParentLinks();
+  return useUserIdsForLinkStatus /* useUserIdsForLinkStatus */.useHasActiveParentLinks();
 };
 export const useParentalControlledConsent = function useParentalControlledConsent(PERSONALIZATION) {
   let _require = PERSONALIZATION;
-  let obj = _require("useSelectedTeen.tsx");
+  let obj = _useSelectedTeen;
   let selectedTeenId = obj.useSelectedTeenId();
   let items = [getSettings];
   _require = PERSONALIZATION;
   selectedTeenId = undefined;
-  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_5.hasConsented(selectedTeenId, closure_0));
-  let obj2 = _require("../../../../discord_common/js/packages/flux/index.tsx");
-  selectedTeenId = _require("useSelectedTeen.tsx").useSelectedTeenId();
+  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_5.hasConsented(selectedTeenId, closure_0));
+  let obj2 = _initialize;
+  selectedTeenId = _useSelectedTeen.useSelectedTeenId();
   _require = undefined;
   _require = callback((arg0) => {
     let closure_0 = arg0;

@@ -1,3 +1,4 @@
+import { GuildRoomObjectTypes } from "GuildRoomTypes.tsx";
 // discord_app/modules/guild_rooms/GuildRoomStore.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import fetchFingerprint from "fetchFingerprint";
@@ -87,7 +88,7 @@ prototype["getPendingNote"] = function getPendingNote(arg0) {
 };
 prototype["getNotes"] = function getNotes(closure_1) {
   const roomObjects = this.getRoomObjects(closure_1);
-  let value = roomObjects.get(require("GuildRoomTypes.tsx") /* GuildRoomObjectTypes */.GuildRoomObjectTypes.NOTE);
+  let value = roomObjects.get(GuildRoomObjectTypes /* GuildRoomObjectTypes */.GuildRoomObjectTypes.NOTE);
   if (value == null) {
     value = closure_11;
   }

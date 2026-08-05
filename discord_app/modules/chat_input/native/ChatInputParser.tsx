@@ -1,3 +1,4 @@
+import { apply } from "../../../../_runtime/00012_apply.js";
 // discord_app/modules/chat_input/native/ChatInputParser.tsx
 import { processColor } from "get ActivityIndicator";
 
@@ -19,8 +20,8 @@ prototype["removeRule"] = function removeRule(arg0) {
 prototype["parse"] = function parse(arg0, arg1) {
   const importDefault = arg0;
   const dependencyMap = arg1;
-  let obj = require("../../../../_runtime/00012_apply.js");
-  return require("../../../../_runtime/00012_apply.js").valuesIn(this.rules).reduce((arr, matchFunction) => {
+  let obj = apply;
+  return apply.valuesIn(this.rules).reduce((arr, matchFunction) => {
     let closure_0 = matchFunction;
     return arr.concat(matchFunction.matchFunction(closure_0, closure_1).map((arg0) => {
       let obj = matchFunction;

@@ -1,3 +1,7 @@
+import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { PromotionalEmailCheckBox } from "PromotionalEmailCheckBox.tsx";
 // discord_app/modules/auth/native/components/PrivacyHint.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -14,10 +18,10 @@ let metroImportAll;
 const require = arg1;
 function PrivacyPolicyDescription(style) {
   let obj = { style: style.style, variant: "text-xs/medium", color: "text-muted", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   obj = { termsURL: MarketingURLs.TERMS, privacyURL: MarketingURLs.PRIVACY };
-  obj[3] = intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["KI+BSb"], obj);
-  return callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  obj[3] = intl.format(getSystemLocale /* getSystemLocale */.t["KI+BSb"], obj);
+  return callback(Text /* Text */.Text, obj);
 }
 function PrivacyPolicyCheckbox(onToggleConsent) {
   let asCheckbox;
@@ -27,11 +31,11 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
     asCheckbox = false;
   }
   const tmp = callback3();
-  let obj = require("../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx") /* useCheckboxA11yNative */;
+  let obj = useCheckboxA11yNative /* useCheckboxA11yNative */;
   const checkboxA11yNative = obj.useCheckboxA11yNative({ checked: consent });
   obj = { style: asCheckbox ? tmp.checkbox : tmp.radio, accessibilityState: checkboxA11yNative.accessibilityState, accessibilityRole: checkboxA11yNative.accessibilityRole, accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
   const intl = tmp2(1236).intl;
-  obj[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Y7Kgvf);
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.Y7Kgvf);
   obj[4] = onToggleConsent.onToggleConsent;
   obj[5] = { top: 11, bottom: 11, left: 11 };
   if (asCheckbox) {
@@ -48,8 +52,8 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
   const items = [tmp7Result, ];
   const obj2 = { variant: "text-xs/medium", color: "text-muted", style: tmp.checkboxLabel, children: null };
   const intl2 = tmp2(1236).intl;
-  obj2[3] = intl2.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.qMDAP0, { termsURL: MarketingURLs.TERMS, privacyURL: MarketingURLs.PRIVACY });
-  items[1] = tmp9(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+  obj2[3] = intl2.format(getSystemLocale /* getSystemLocale */.t.qMDAP0, { termsURL: MarketingURLs.TERMS, privacyURL: MarketingURLs.PRIVACY });
+  items[1] = tmp9(Text /* Text */.Text, obj2);
   obj[6] = items;
   return closure_9(closure_4, obj);
 }
@@ -69,7 +73,7 @@ export default function PrivacyHint(arg0) {
     if (tmp2) {
       let obj = { style: null, children: null };
       obj[0] = items1.multiItem;
-      const items = [callback(require("PromotionalEmailCheckBox.tsx"), {}), callback(PrivacyPolicyDescription, {})];
+      const items = [callback(PromotionalEmailCheckBox, {}), callback(PrivacyPolicyDescription, {})];
       obj[1] = items;
       return callback2(closure_3, obj);
     }
@@ -85,7 +89,7 @@ export default function PrivacyHint(arg0) {
     }
   }
   obj = { style: items1.multiItem, children: null };
-  items1 = [callback(require("PromotionalEmailCheckBox.tsx"), {}), callback(PrivacyPolicyCheckbox, { consent, onToggleConsent, asCheckbox: true })];
+  items1 = [callback(PromotionalEmailCheckBox, {}), callback(PrivacyPolicyCheckbox, { consent, onToggleConsent, asCheckbox: true })];
   obj[1] = items1;
   tmp9Result = callback2(closure_3, obj);
 };

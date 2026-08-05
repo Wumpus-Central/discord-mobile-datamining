@@ -1,3 +1,5 @@
+import { configure } from "../../../_runtime/01456_configure.js";
+import { set } from "../../utils/Durations.tsx";
 // discord_app/modules/network/NetStats.android.tsx
 import ME from "ME";
 import get_ActivityIndicator from "set";
@@ -134,7 +136,7 @@ prototype["handleAppStateChange"] = function handleAppStateChange(arg0) {
       if (!tmp2) {
         let c14 = true;
         const _setTimeout = setTimeout;
-        self.trackTimeout = setTimeout(() => closure_20.track(), require("../../utils/Durations.tsx").Millis.MINUTE);
+        self.trackTimeout = setTimeout(() => closure_20.track(), set.Millis.MINUTE);
         const _setInterval = setInterval;
         self.flushStorageInterval = setInterval(() => self.writeExistingEventStorage(), 5000);
       }
@@ -413,7 +415,7 @@ const subscription2 = require("dispatcher").subscribe("MESSAGE_SEND_FAILED", (ar
 let result = require("_handleConnectionOpen").fileFinishedImporting("modules/network/NetStats.android.tsx");
 
 export const isSlowNetwork = function isSlowNetwork() {
-  let tmp = obj.type === require("../../../_runtime/01456_configure.js") /* configure */.NetInfoStateType.cellular;
+  let tmp = obj.type === configure /* configure */.NetInfoStateType.cellular;
   if (tmp) {
     let isNetworkRoaming = null != closure_10.signalStrengthLevel;
     if (isNetworkRoaming) {

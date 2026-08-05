@@ -1,3 +1,4 @@
+import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/stores/GuildMemberRequesterStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import importDefaultResult from "trackCommunicationDisabled";
@@ -67,7 +68,7 @@ function handleLoadSearchResults(arg0) {
 }
 let c3 = importDefaultResult;
 let c4 = new require("acknowledge")(importDefaultResult.isMember, (arg0, userIds) => {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_MEMBERS_REQUEST", guildIds: items, userIds };
   items = [arg0];
   obj.dispatch(obj);
@@ -316,7 +317,7 @@ let obj = {
   }
 };
 const tmp3 = new require("acknowledge")(importDefaultResult.isMember, (arg0, userIds) => {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_MEMBERS_REQUEST", guildIds: items, userIds };
   items = [arg0];
   obj.dispatch(obj);

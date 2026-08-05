@@ -1,3 +1,6 @@
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { toggleGuildExpandedState } from "../../emojis/EmojiActionCreators.tsx";
 // discord_app/modules/emoji_picker/native/openEmojiPickerActionSheet.tsx
 import { EmojiInteractionPoint } from "set";
 
@@ -6,7 +9,7 @@ let result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/
 
 export const EMOJI_PICKER_ACTION_SHEET_KEY = "EmojiPickerActionSheet";
 export const openEmojiPickerActionSheet = function openEmojiPickerActionSheet(arg0, stack) {
-  const result = require("../../emojis/EmojiActionCreators.tsx") /* toggleGuildExpandedState */.initiateEmojiInteraction(EmojiInteractionPoint.EmojiPickerActionSheetOpened);
-  const obj = require("../../emojis/EmojiActionCreators.tsx") /* toggleGuildExpandedState */;
-  require("../../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8561, dependencyMap.paths), EmojiPickerActionSheet, arg0, stack);
+  const result = toggleGuildExpandedState /* toggleGuildExpandedState */.initiateEmojiInteraction(EmojiInteractionPoint.EmojiPickerActionSheetOpened);
+  const obj = toggleGuildExpandedState /* toggleGuildExpandedState */;
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(8561, dependencyMap.paths), EmojiPickerActionSheet, arg0, stack);
 };

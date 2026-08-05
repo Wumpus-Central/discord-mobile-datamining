@@ -1,3 +1,4 @@
+import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/coded_links/web/CodedLinkActionCreators.tsx
 import { CONFERENCE_MODE_ENABLED } from "CONFERENCE_MODE_ENABLED";
 
@@ -8,12 +9,12 @@ export default {
 
   },
   nativeModalOpened(code) {
-    let obj = require("../../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "NATIVE_APP_MODAL_OPENED", code };
     obj.dispatch(obj);
   },
   nativeModalOpenFailed(code) {
-    let obj = require("../../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "NATIVE_APP_MODAL_OPEN_FAILED", code };
     obj.dispatch(obj);
   }

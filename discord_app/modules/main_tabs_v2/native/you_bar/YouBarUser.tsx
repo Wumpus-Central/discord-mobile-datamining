@@ -1,3 +1,5 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarUser.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -28,11 +30,11 @@ const memoResult = importAllResult.memo(function YouBarUser(isQuestRendered) {
   let _require;
   let sharedValue;
   const tmp = callback2();
-  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   _require = tmp5;
-  let obj1 = _require("../../../reanimated/ReanimatedRexport.tsx");
+  let obj1 = _ReanimatedRexport;
   sharedValue = obj1.useSharedValue(isQuestRendered ? closure_8 : closure_7);
   const items1 = [!isQuestRendered, sharedValue];
   const effect = importAllResult.useEffect(() => {
@@ -47,7 +49,7 @@ const memoResult = importAllResult.memo(function YouBarUser(isQuestRendered) {
   S.__closure = { nameMargin: sharedValue };
   S.__workletHash = 12063452832866;
   S.__initData = closure_12;
-  const animatedStyle = _require("../../../reanimated/ReanimatedRexport.tsx").useAnimatedStyle(S);
+  const animatedStyle = _ReanimatedRexport.useAnimatedStyle(S);
   let obj3 = sharedValue(4124);
   const name = obj3.useName(stateFromStores);
   if (null != stateFromStores) {

@@ -1,3 +1,4 @@
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterAvatarPair.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -22,7 +23,7 @@ export default function FamilyCenterAvatarPair(otherUser) {
   otherUser = otherUser.otherUser;
   ({ iconSrc, iconStyles } = otherUser);
   const tmp = createCacheKey();
-  let obj = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   let tmp5 = null;

@@ -1,3 +1,6 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { timestamp } from "../../modules/debug/Logger.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/lib/guild/GuildMemberSubscriptions.tsx
 const require = arg1;
 const MINUTE = require("set").Millis.MINUTE;
@@ -26,7 +29,7 @@ prototype["get"] = function get(arg0) {
   if (obj == null) {
     obj = {};
   }
-  return require("../../utils/SnowflakeUtils.tsx").keys(obj);
+  return DISCORD_EPOCH.keys(obj);
 };
 prototype["clear"] = function clear(arg0) {
   delete tmp3[tmp2];
@@ -95,7 +98,7 @@ prototype["checkForLeaks"] = function checkForLeaks(arg0, arg1) {
   }
   const diff = num - num2;
   if (diff > 5) {
-    const obj = new require("../../modules/debug/Logger.tsx")("GuildMemberSubscriptions");
+    const obj = new timestamp("GuildMemberSubscriptions");
     const _HermesInternal = HermesInternal;
     obj.warn("GuildMemberSubscriptions.subscribe(...): Potential reference leak! (" + diff + " subscriptions)");
   }
@@ -104,7 +107,7 @@ prototype["flushUnsubscriptions"] = function flushUnsubscriptions() {
   let self = this;
   self = this;
   if (!obj.isEmpty(this._unsubscriptions)) {
-    let item = require("../../../_runtime/00012_apply.js").forEach(self._unsubscriptions, (arg0, arg1) => {
+    let item = apply.forEach(self._unsubscriptions, (arg0, arg1) => {
       const self = tmp3;
       const item = outer1_1(outer1_2[4]).forEach(arg0, (arg0, arg1) => {
         let num = tmp3[arg1];
@@ -124,7 +127,7 @@ prototype["flushUnsubscriptions"] = function flushUnsubscriptions() {
       self._onChange(arg1, self.get(arg1));
     });
     self._unsubscriptions = {};
-    const tmpResult = require("../../../_runtime/00012_apply.js");
+    const tmpResult = apply;
   }
 };
 

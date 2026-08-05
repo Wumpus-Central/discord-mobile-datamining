@@ -1,3 +1,4 @@
+import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/stores/PermissionVADStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -34,9 +35,9 @@ function handleUpdateVADPermission() {
   if (flag2) {
     const obj = { type: "SET_VAD_PERMISSION", hasPermission: null };
     obj[1] = flag;
-    require("../Dispatcher.tsx").dispatch(obj);
+    dispatcher.dispatch(obj);
     flag2 = true;
-    const obj2 = require("../Dispatcher.tsx");
+    const obj2 = dispatcher;
   }
   return flag2;
 }

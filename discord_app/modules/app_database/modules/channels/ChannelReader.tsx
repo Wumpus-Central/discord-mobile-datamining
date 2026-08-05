@@ -1,3 +1,4 @@
+import { items } from "../../DatabaseDaos.tsx";
 // discord_app/modules/app_database/modules/channels/ChannelReader.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
@@ -9,8 +10,8 @@ const prototype = function ChannelReader() {
 }.prototype;
 prototype["getSync"] = function getSync(closure_1, closure_0) {
   const nowResult = performance.now();
-  const obj = require("../../DatabaseDaos.tsx");
-  const manySyncUnsafe = require("../../DatabaseDaos.tsx").channels(closure_1).getManySyncUnsafe(closure_0);
+  const obj = items;
+  const manySyncUnsafe = items.channels(closure_1).getManySyncUnsafe(closure_0);
   const diff = performance.now() - nowResult;
   tmp2.log("synchronously loaded in " + diff + "ms (guild: " + closure_0 + ", channels: " + manySyncUnsafe.length + ")");
   const items = [manySyncUnsafe, diff];

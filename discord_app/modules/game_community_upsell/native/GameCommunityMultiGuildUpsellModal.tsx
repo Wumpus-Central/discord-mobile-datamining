@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../_runtime/08201_registerAsset.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/game_community_upsell/native/GameCommunityMultiGuildUpsellModal.tsx
 import Text from "Text";
 import { View } from "useGradientBottom";
@@ -322,16 +325,16 @@ class TwoColumnGuildUpsellList {
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles((paddingBottom, paddingTop) => {
   let obj = { container: null, headerWrapper: null, headerTitle: null, subtitle: null, listContent: null, twoColumnRow: null };
-  obj = { flex: 1, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW };
+  obj = { flex: 1, backgroundColor: Themes.colors.BACKGROUND_BASE_LOW };
   obj[0] = obj;
-  obj = { flexDirection: "row", alignItems: "center", flexShrink: 0, paddingTop, minHeight: paddingTop + MIN_HEADER_HEIGHT, paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  obj = { flexDirection: "row", alignItems: "center", flexShrink: 0, paddingTop, minHeight: paddingTop + MIN_HEADER_HEIGHT, paddingHorizontal: Themes.space.PX_8 };
   obj[1] = obj;
   obj[2] = { flex: 1, alignItems: "center", justifyContent: "center" };
-  obj[3] = { alignSelf: "center", marginHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, marginTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, textAlign: "center" };
-  const obj1 = { alignSelf: "center", marginHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, marginTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, textAlign: "center" };
-  obj[4] = { paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingBottom };
-  const obj2 = { paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingBottom };
-  obj[5] = { flexDirection: "row", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, flex: 1 };
+  obj[3] = { alignSelf: "center", marginHorizontal: Themes.space.PX_24, marginBottom: Themes.space.PX_24, marginTop: Themes.space.PX_8, backgroundColor: Themes.colors.BACKGROUND_BASE_LOW, textAlign: "center" };
+  const obj1 = { alignSelf: "center", marginHorizontal: Themes.space.PX_24, marginBottom: Themes.space.PX_24, marginTop: Themes.space.PX_8, backgroundColor: Themes.colors.BACKGROUND_BASE_LOW, textAlign: "center" };
+  obj[4] = { paddingHorizontal: Themes.space.PX_16, paddingBottom };
+  const obj2 = { paddingHorizontal: Themes.space.PX_16, paddingBottom };
+  obj[5] = { flexDirection: "row", gap: Themes.space.PX_16, flex: 1 };
   return obj;
 });
 let closure_12 = { itemVisiblePercentThreshold: 50, minimumViewTime: 500 };
@@ -343,7 +346,7 @@ export default function GameCommunityMultiGuildUpsellModal(onClose) {
   let gradientTop;
   let importDefault;
   let visualVariant;
-  ({ top, bottom } = require("../../safe_area/useSafeAreaInsets.native.tsx")());
+  ({ top, bottom } = useSafeAreaInsets());
   let obj = gradientTop(8202);
   gradientTop = obj.useGradientTop();
   const tmp3 = callback3(bottom, top);
@@ -375,7 +378,7 @@ export default function GameCommunityMultiGuildUpsellModal(onClose) {
   obj = { style: tmp3.container, children: null };
   obj = { style: memo, children: null };
   obj1 = { source: null, onPress: null, accessibilityLabel: null };
-  obj1[0] = require("../../../../_runtime/08201_registerAsset.js");
+  obj1[0] = registerAsset;
   obj1[1] = onClose.onClose;
   let intl = gradientTop(1236).intl;
   obj1[2] = intl.string(gradientTop(1236).t.cpT0Cq);

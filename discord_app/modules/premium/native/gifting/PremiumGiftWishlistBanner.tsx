@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/premium/native/gifting/PremiumGiftWishlistBanner.tsx
 import closure_3 from "ME";
 import useSelectPremiumGift from "useSelectPremiumGift";
@@ -27,16 +28,16 @@ let PX_16 = require("Themes").space.PX_16;
 PX_16 = require("Themes").space.PX_16;
 let closure_18 = createCacheKey.createStyles((width, height) => {
   let obj = { title: null, subtitle: null, placeholderRow: null, placeholder: null, wishlistItemShadow: null };
-  obj = { marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, paddingHorizontal: PX_16 };
+  obj = { marginBottom: Themes.space.PX_4, paddingHorizontal: PX_16 };
   obj[0] = obj;
-  obj = { marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, paddingHorizontal: PX_16 };
+  obj = { marginBottom: Themes.space.PX_12, paddingHorizontal: PX_16 };
   obj[1] = obj;
   obj[2] = { flexDirection: "row", gap: PX_16, paddingHorizontal: PX_16 };
-  obj[3] = { width, height, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SECONDARY_ALT };
+  obj[3] = { width, height, borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.BACKGROUND_SECONDARY_ALT };
   const obj1 = { flexDirection: "row", gap: PX_16, paddingHorizontal: PX_16 };
-  const obj2 = { width, height, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SECONDARY_ALT };
-  const merged = Object.assign(require("../../../../../discord_common/js/packages/tokens/native.tsx").shadows.SHADOW_LOW);
-  obj[4] = { width, height, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BG_SURFACE_RAISED };
+  const obj2 = { width, height, borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.BACKGROUND_SECONDARY_ALT };
+  const merged = Object.assign(Themes.shadows.SHADOW_LOW);
+  obj[4] = { width, height, borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.BG_SURFACE_RAISED };
   return obj;
 });
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftWishlistBanner.tsx");

@@ -1,3 +1,4 @@
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
 // discord_app/modules/guild_sidebar/native/GuildTooltipActionSheets.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
@@ -6,19 +7,19 @@ import { jsx } from "jsxProd";
 
 const require = arg1;
 function NUFChannelsActionSheetImporter() {
-  return require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(12940, dependencyMap.paths);
+  return asyncRequireImpl /* asyncRequireImpl */(12940, dependencyMap.paths);
 }
 function GuildRoleSubscriptionsUpsellActionSheetImporter() {
-  return require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(15246, dependencyMap.paths);
+  return asyncRequireImpl /* asyncRequireImpl */(15246, dependencyMap.paths);
 }
 function GuildRoleSubscriptionsIAPUpsellActionSheetImporter() {
-  return require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(15248, dependencyMap.paths);
+  return asyncRequireImpl /* asyncRequireImpl */(15248, dependencyMap.paths);
 }
 function CreatorMonetizationOnboardingV2UpsellActionSheetImporter() {
-  return require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(15251, dependencyMap.paths);
+  return asyncRequireImpl /* asyncRequireImpl */(15251, dependencyMap.paths);
 }
 function TierTemplatesUpsellActionSheetImporter() {
-  return require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(15253, dependencyMap.paths);
+  return asyncRequireImpl /* asyncRequireImpl */(15253, dependencyMap.paths);
 }
 class GuildTooltipActionSheets {
   constructor(arg0) {

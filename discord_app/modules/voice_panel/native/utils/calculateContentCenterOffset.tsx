@@ -1,3 +1,4 @@
+import { t } from "roundToNearestPixel.tsx";
 // discord_app/modules/voice_panel/native/utils/calculateContentCenterOffset.tsx
 import { EDGE_GUTTER } from "CARD_SIZE";
 
@@ -10,7 +11,7 @@ const fn = function t(arg0) {
   let bound1 = bound;
   if (windowHeight > contentHeight) {
     const _Math = Math;
-    bound1 = Math.max(bound, bound + require("roundToNearestPixel.tsx")((windowHeight - bound - tmp2 - contentHeight) / 2));
+    bound1 = Math.max(bound, bound + t((windowHeight - bound - tmp2 - contentHeight) / 2));
   }
   return bound1;
 };

@@ -1,3 +1,4 @@
+import { enforcing } from "../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
 // discord_app/utils/FileManagerUtils.android.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
@@ -138,7 +139,7 @@ const tmp2 = new require("set")("FileManagerUtils");
 const result = require("enforcing").fileFinishedImporting("utils/FileManagerUtils.android.tsx");
 
 export const writeFile = function writeFile(cache, c5, c6, utf8) {
-  const obj = require("../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx");
+  const obj = enforcing;
   let nextPromise;
   if (obj != null) {
     nextPromise = obj.writeFile(cache, c5, c6, utf8).then((arg0) => "file:" + arg0);
@@ -150,7 +151,7 @@ export const writeFile = function writeFile(cache, c5, c6, utf8) {
   return nextPromise;
 };
 export const moveFile = function moveFile(closure_0, closure_02, closure_1) {
-  const obj = require("../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx");
+  const obj = enforcing;
   let moveFileResult;
   if (obj != null) {
     moveFileResult = obj.moveFile(closure_0, closure_02, closure_1);
@@ -161,7 +162,7 @@ export const moveFile = function moveFile(closure_0, closure_02, closure_1) {
   return moveFileResult;
 };
 export const removeFile = function removeFile(cache, closure_1) {
-  const obj = require("../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx");
+  const obj = enforcing;
   let removeFileResult;
   if (obj != null) {
     removeFileResult = obj.removeFile(cache, closure_1);
@@ -172,7 +173,7 @@ export const removeFile = function removeFile(cache, closure_1) {
   return removeFileResult;
 };
 export const clearFolder = function clearFolder(cache, outer1_5) {
-  const obj = require("../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx");
+  const obj = enforcing;
   let clearFolderResult;
   if (obj != null) {
     clearFolderResult = obj.clearFolder(cache, outer1_5);

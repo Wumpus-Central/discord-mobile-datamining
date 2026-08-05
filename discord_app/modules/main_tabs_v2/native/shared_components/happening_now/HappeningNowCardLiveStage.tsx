@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { getNickname } from "../../../../../utils/NicknameUtils.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardLiveStage.tsx
 import importAllResult from "getNickname";
 import { View } from "computeChannelName";
@@ -108,103 +110,103 @@ function getUsersSubtitle(arg0) {
   } else if (1 === length) {
     const first = users[0];
     if (constants.LISTENING === action) {
-      const intl9 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl9 = getSystemLocale /* getSystemLocale */.intl;
       let obj = { name: null };
-      obj[0] = require("../../../../../utils/NicknameUtils.tsx").getName(guildId, null, first);
-      let str3 = intl9.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.lJXKtO, obj);
-      const obj14 = require("../../../../../utils/NicknameUtils.tsx");
+      obj[0] = getNickname.getName(guildId, null, first);
+      let str3 = intl9.formatToPlainString(getSystemLocale /* getSystemLocale */.t.lJXKtO, obj);
+      const obj14 = getNickname;
     } else if (tmp16.WATCHING === action) {
-      const intl8 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl8 = getSystemLocale /* getSystemLocale */.intl;
       obj = { name: null };
-      obj[0] = require("../../../../../utils/NicknameUtils.tsx").getName(guildId, null, first);
-      str3 = intl8.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.iWY9wg, obj);
-      const obj12 = require("../../../../../utils/NicknameUtils.tsx");
+      obj[0] = getNickname.getName(guildId, null, first);
+      str3 = intl8.formatToPlainString(getSystemLocale /* getSystemLocale */.t.iWY9wg, obj);
+      const obj12 = getNickname;
     } else if (tmp16.ON_STAGE === action) {
-      const intl7 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl7 = getSystemLocale /* getSystemLocale */.intl;
       const obj1 = { name: null };
-      let obj9 = require("../../../../../utils/NicknameUtils.tsx");
+      let obj9 = getNickname;
       obj1[0] = obj9.getName(guildId, null, first);
-      str3 = intl7.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["5uJ3+u"], obj1);
+      str3 = intl7.formatToPlainString(getSystemLocale /* getSystemLocale */.t["5uJ3+u"], obj1);
     } else {
       str3 = "";
       if (tmp16.SHARING === action) {
-        const intl12 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        const intl12 = getSystemLocale /* getSystemLocale */.intl;
         const obj2 = { name: null };
-        obj2[0] = require("../../../../../utils/NicknameUtils.tsx").getName(guildId, null, first);
-        str3 = intl12.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["5oa7dX"], obj2);
-        const obj19 = require("../../../../../utils/NicknameUtils.tsx");
+        obj2[0] = getNickname.getName(guildId, null, first);
+        str3 = intl12.formatToPlainString(getSystemLocale /* getSystemLocale */.t["5oa7dX"], obj2);
+        const obj19 = getNickname;
       }
     }
     return str3;
   } else if (2 === length) {
     [tmp4, tmp5] = users;
-    let obj3 = require("../../../../../utils/NicknameUtils.tsx");
+    let obj3 = getNickname;
     const name = obj3.getName(guildId, null, tmp4);
-    let obj4 = require("../../../../../utils/NicknameUtils.tsx");
+    let obj4 = getNickname;
     const name1 = obj4.getName(guildId, null, tmp5);
     if (constants.LISTENING === action) {
-      const intl6 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl6 = getSystemLocale /* getSystemLocale */.intl;
       obj3 = { name1: null, name2: null };
       obj3[0] = name;
       obj3[1] = name1;
-      let str2 = intl6.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.GFMcxs, obj3);
+      let str2 = intl6.formatToPlainString(getSystemLocale /* getSystemLocale */.t.GFMcxs, obj3);
     } else if (tmp11.WATCHING === action) {
-      const intl5 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl5 = getSystemLocale /* getSystemLocale */.intl;
       obj4 = { name1: null, name2: null };
       obj4[0] = name;
       obj4[1] = name1;
-      str2 = intl5.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.afUnti, obj4);
+      str2 = intl5.formatToPlainString(getSystemLocale /* getSystemLocale */.t.afUnti, obj4);
     } else if (tmp11.ON_STAGE === action) {
-      const intl4 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl4 = getSystemLocale /* getSystemLocale */.intl;
       const obj5 = { name1: null, name2: null };
       obj5[0] = name;
       obj5[1] = name1;
-      str2 = intl4.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.SrTuJ6, obj5);
+      str2 = intl4.formatToPlainString(getSystemLocale /* getSystemLocale */.t.SrTuJ6, obj5);
     } else {
       str2 = "";
       if (tmp11.SHARING === action) {
-        const intl11 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        const intl11 = getSystemLocale /* getSystemLocale */.intl;
         const obj6 = { name1: null, name2: null };
         obj6[0] = name;
         obj6[1] = name1;
-        str2 = intl11.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.uRjRHT, obj6);
+        str2 = intl11.formatToPlainString(getSystemLocale /* getSystemLocale */.t.uRjRHT, obj6);
       }
     }
     return str2;
   } else {
     let str = "";
     if (0 !== users.length) {
-      const name2 = require("../../../../../utils/NicknameUtils.tsx").getName(guildId, null, users[0]);
+      const name2 = getNickname.getName(guildId, null, users[0]);
       const diff = users.length - 1;
       if (constants.LISTENING === action) {
-        const intl3 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        const intl3 = getSystemLocale /* getSystemLocale */.intl;
         const obj7 = { name: null, count: null };
         obj7[0] = name2;
         obj7[1] = diff;
-        str = intl3.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.CsvyMc, obj7);
+        str = intl3.formatToPlainString(getSystemLocale /* getSystemLocale */.t.CsvyMc, obj7);
       } else if (tmp34.WATCHING === action) {
-        const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        const intl2 = getSystemLocale /* getSystemLocale */.intl;
         const obj8 = { name: null, count: null };
         obj8[0] = name2;
         obj8[1] = diff;
-        str = intl2.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.Iwxee0, obj8);
+        str = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.Iwxee0, obj8);
       } else if (tmp34.ON_STAGE === action) {
-        const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        const intl = getSystemLocale /* getSystemLocale */.intl;
         obj = { name: null, count: null };
         obj[0] = name2;
         obj[1] = diff;
-        str = intl.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.zRm3ZX, obj);
+        str = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.zRm3ZX, obj);
       } else {
         str = "";
         if (tmp34.SHARING === action) {
-          const intl10 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+          const intl10 = getSystemLocale /* getSystemLocale */.intl;
           obj9 = { name: null, count: null };
           obj9[0] = name2;
           obj9[1] = diff;
-          str = intl10.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["m+NEcC"], obj9);
+          str = intl10.formatToPlainString(getSystemLocale /* getSystemLocale */.t["m+NEcC"], obj9);
         }
       }
-      const obj15 = require("../../../../../utils/NicknameUtils.tsx");
+      const obj15 = getNickname;
     }
     return str;
   }

@@ -1,3 +1,4 @@
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 // discord_app/actions/RegionActionCreators.tsx
 import { Endpoints } from "ME";
 
@@ -6,7 +7,7 @@ const result = require("dispatcher").fileFinishedImporting("actions/RegionAction
 export default {
   fetchRegions(id) {
     const _require = id;
-    const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     const value = HTTP.get({ url: Endpoints.REGIONS(id), retries: 1, oldFormErrors: true, rejectWithError: true });
     value.then((body) => {
       let obj = outer1_1(outer1_2[2]);
@@ -19,7 +20,7 @@ export default {
     });
   },
   changeCallRegion(id, region) {
-    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     obj = { url: Endpoints.CALL(id), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { region };
     HTTP.patch(obj);

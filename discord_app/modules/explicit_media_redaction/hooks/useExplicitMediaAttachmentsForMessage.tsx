@@ -1,3 +1,5 @@
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { useEnabledHarmTypesBitmaskForChannelAndAuthorId } from "useContentHarmTypes.tsx";
 // discord_app/modules/explicit_media_redaction/hooks/useExplicitMediaAttachmentsForMessage.tsx
 import reinjectEphemerals from "reinjectEphemerals";
 
@@ -9,9 +11,9 @@ export const useRedactableMediaAttachmentsForMessage = function useRedactableMed
   const dependencyMap = messageId;
   let reinjectEphemerals = attachmentId;
   const items = [reinjectEphemerals];
-  const stateFromStores = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => attachmentId.getMessage(closure_0, closure_1));
-  let obj = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
-  let closure_3 = _require("useContentHarmTypes.tsx").useEnabledHarmTypesBitmaskForMessage(stateFromStores);
+  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => attachmentId.getMessage(closure_0, closure_1));
+  let obj = _defaultAreStatesEqual;
+  let closure_3 = _useEnabledHarmTypesBitmaskForChannelAndAuthorId.useEnabledHarmTypesBitmaskForMessage(stateFromStores);
   if (null == stateFromStores) {
     return [];
   } else {
@@ -27,16 +29,16 @@ export const useRedactableMediaAttachmentsForMessage = function useRedactableMed
     }
     return found;
   }
-  const obj2 = _require("useContentHarmTypes.tsx");
+  const obj2 = _useEnabledHarmTypesBitmaskForChannelAndAuthorId;
 };
 export const useRedactableMediaEmbedsForMessage = function useRedactableMediaEmbedsForMessage(channelId, messageId, embedId) {
   const _require = channelId;
   const dependencyMap = messageId;
   let reinjectEphemerals = embedId;
   const items = [reinjectEphemerals];
-  const stateFromStores = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => embedId.getMessage(closure_0, closure_1));
-  let obj = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
-  let closure_3 = _require("useContentHarmTypes.tsx").useEnabledHarmTypesBitmaskForMessage(stateFromStores);
+  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => embedId.getMessage(closure_0, closure_1));
+  let obj = _defaultAreStatesEqual;
+  let closure_3 = _useEnabledHarmTypesBitmaskForChannelAndAuthorId.useEnabledHarmTypesBitmaskForMessage(stateFromStores);
   if (null == stateFromStores) {
     return [];
   } else {
@@ -52,5 +54,5 @@ export const useRedactableMediaEmbedsForMessage = function useRedactableMediaEmb
     }
     return found;
   }
-  const obj2 = _require("useContentHarmTypes.tsx");
+  const obj2 = _useEnabledHarmTypesBitmaskForChannelAndAuthorId;
 };

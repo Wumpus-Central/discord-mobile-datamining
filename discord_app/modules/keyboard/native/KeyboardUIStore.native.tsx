@@ -1,3 +1,12 @@
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx";
+import { shallowEqual } from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import { dismissGlobalKeyboard } from "../../../utils/native/KeyboardManagerUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { context } from "../../window/native/AppEntryKeyContext.tsx";
+import { KeyboardStateDebugging } from "../KeyboardStateDebugging.tsx";
+import { KeyboardTypes } from "KeyboardTypes.tsx";
 // discord_app/modules/keyboard/native/KeyboardUIStore.native.tsx
 import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
 import { ExpressionPickerViewType } from "ExpressionPickerViewType";
@@ -19,9 +28,9 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
   if (keyboardHeight == null) {
     keyboardHeight = tmp.keyboardHeight;
   }
-  let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
+  let obj = set /* set */;
   if (obj.isAndroid()) {
-    let obj1 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx");
+    let obj1 = enforcing;
     let num2 = obj1.getImeInsets(false, DEFAULT_APP_ENTRY_KEY);
   } else {
     num2 = 0;
@@ -35,8 +44,8 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
   }
   let tmp2Result = tmp2(500);
   if (tmp2Result.isAndroid()) {
-    let num3 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx").getImeInsets(true, DEFAULT_APP_ENTRY_KEY);
-    const obj5 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx");
+    let num3 = enforcing.getImeInsets(true, DEFAULT_APP_ENTRY_KEY);
+    const obj5 = enforcing;
   } else {
     num3 = 0;
     if (0 !== keyboardHeight2) {
@@ -57,7 +66,7 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
   if (num4 == null) {
     num4 = 253;
   }
-  if (type === require("KeyboardTypes.tsx") /* KeyboardTypes */.KeyboardTypes.SYSTEM) {
+  if (type === KeyboardTypes /* KeyboardTypes */.KeyboardTypes.SYSTEM) {
     if (0 !== num2) {
       if (tmp2Result1.getIsAnyChatInputFocused()) {
         const _Math = Math;
@@ -95,7 +104,7 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
           }
           if (typeof tmp.keyboardContexts[type] === "object") {
             if (typeof context === "object") {
-              let tmp19 = !require("../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(tmp17, context);
+              let tmp19 = !shallowEqual(tmp17, context);
             }
             if (tmp2Result4.isAndroid()) {
               let systemKeyboardOpen = num2 > 0;
@@ -115,7 +124,7 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
                 obj[tmp2(1579).KeyboardTypes.SYSTEM] = obj;
                 let tmp21 = obj;
               }
-              const tmp30 = require("../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(tmp.keyboardContexts, tmp21);
+              const tmp30 = shallowEqual(tmp.keyboardContexts, tmp21);
               if (tmp.keyboardDuration === keyboardDuration) {
                 if (tmp30) {
                   if (tmp.keyboardHeight === num2) {
@@ -164,8 +173,8 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
   tmp12 = num4;
 }
 function createInitialEntryState(main) {
-  const SYSTEM = require("KeyboardTypes.tsx") /* KeyboardTypes */.KeyboardTypes.SYSTEM;
-  const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const SYSTEM = KeyboardTypes /* KeyboardTypes */.KeyboardTypes.SYSTEM;
+  const Storage = Storage /* Storage */.Storage;
   let num = Storage.get(customKeyboardHeight, 253);
   if (num == null) {
     num = 253;
@@ -188,19 +197,19 @@ function createInitialEntryState(main) {
   tmpResult = tmp(500);
   let num3 = 0;
   if (tmpResult.isAndroid()) {
-    num3 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx").getImeInsets(false, main);
-    const obj7 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx");
+    num3 = enforcing.getImeInsets(false, main);
+    const obj7 = enforcing;
   }
   obj[4] = num3;
   if (tmpResult1.isAndroid()) {
-    let num4 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx").getImeInsets(true, main);
-    const obj9 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx");
+    let num4 = enforcing.getImeInsets(true, main);
+    const obj9 = enforcing;
   } else {
     num4 = 0;
   }
   obj[5] = num4;
-  obj[7] = require("KeyboardTypes.tsx") /* KeyboardTypes */.KeyboardTypes.SYSTEM;
-  obj[8] = require("KeyboardTypes.tsx") /* KeyboardTypes */.KeyboardTypes.SYSTEM;
+  obj[7] = KeyboardTypes /* KeyboardTypes */.KeyboardTypes.SYSTEM;
+  obj[8] = KeyboardTypes /* KeyboardTypes */.KeyboardTypes.SYSTEM;
   return obj;
 }
 const customKeyboardHeight = "customKeyboardHeight";
@@ -222,11 +231,11 @@ let obj = keys.create(() => {
 });
 KeyboardEvents.addListener(str, (height) => {
   height = height.height;
-  const result = require("../KeyboardStateDebugging.tsx").reactNativeKeyboardDidShow(height, "KeyboardUIStore");
+  const result = KeyboardStateDebugging.reactNativeKeyboardDidShow(height, "KeyboardUIStore");
   const _require = { keyboardHeight: height, keyboardDuration: height.duration, systemKeyboardOpen: true };
   importDefault = undefined;
-  const obj = require("../KeyboardStateDebugging.tsx");
-  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_11.setState((arg0) => {
+  const obj = KeyboardStateDebugging;
+  _batchUpdates.batchUpdates(() => outer1_11.setState((arg0) => {
     let tmp = closure_1;
     if (null != closure_1) {
       const items = [tmp];
@@ -236,16 +245,16 @@ KeyboardEvents.addListener(str, (height) => {
     }
     tmp = APP_ENTRY_KEYS[Symbol.iterator]();
   }));
-  const obj2 = _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx");
-  _require("../../../utils/native/KeyboardManagerUtils.tsx").onKeyboardChanged(true);
+  const obj2 = _batchUpdates;
+  _dismissGlobalKeyboard.onKeyboardChanged(true);
   const item = set1.forEach((arg0) => arg0(false));
 });
 KeyboardEvents2.addListener(str2, () => {
-  const result = require("../KeyboardStateDebugging.tsx").reactNativeKeyboardDidHide("KeyboardUIStore");
+  const result = KeyboardStateDebugging.reactNativeKeyboardDidHide("KeyboardUIStore");
   const _require = { keyboardHeight: 0, systemKeyboardOpen: false };
   importDefault = undefined;
-  const obj = require("../KeyboardStateDebugging.tsx");
-  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_11.setState((arg0) => {
+  const obj = KeyboardStateDebugging;
+  _batchUpdates.batchUpdates(() => outer1_11.setState((arg0) => {
     let tmp = closure_1;
     if (null != closure_1) {
       const items = [tmp];
@@ -255,13 +264,13 @@ KeyboardEvents2.addListener(str2, () => {
     }
     tmp = APP_ENTRY_KEYS[Symbol.iterator]();
   }));
-  const obj2 = _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx");
-  _require("../../../utils/native/KeyboardManagerUtils.tsx").onKeyboardChanged(false);
+  const obj2 = _batchUpdates;
+  _dismissGlobalKeyboard.onKeyboardChanged(false);
   const item = set1.forEach((arg0) => arg0(false));
 });
 const subscription = require("module_1582").subscribe(() => {
   const _require = {};
-  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_11.setState((arg0) => {
+  _batchUpdates.batchUpdates(() => outer1_11.setState((arg0) => {
     let tmp = closure_1;
     if (null != closure_1) {
       const items = [tmp];
@@ -279,7 +288,7 @@ export const setKeyboardType = function setKeyboardType(keyboardParams) {
   let _require = keyboardParams;
   let DEFAULT_APP_ENTRY_KEY = arg1;
   if (arg1 === undefined) {
-    DEFAULT_APP_ENTRY_KEY = _require("../../window/native/AppEntryKeyContext.tsx").DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = _context.DEFAULT_APP_ENTRY_KEY;
   }
   const item = set.forEach((arg0) => arg0(closure_0, DEFAULT_APP_ENTRY_KEY));
   const item1 = set1.forEach((arg0) => {
@@ -295,7 +304,7 @@ export const setKeyboardType = function setKeyboardType(keyboardParams) {
     return arg0(tmp2, DEFAULT_APP_ENTRY_KEY);
   });
   _require = { keyboardType: keyboardParams };
-  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_11.setState((arg0) => {
+  _batchUpdates.batchUpdates(() => outer1_11.setState((arg0) => {
     let tmp = closure_1;
     if (null != closure_1) {
       const items = [tmp];

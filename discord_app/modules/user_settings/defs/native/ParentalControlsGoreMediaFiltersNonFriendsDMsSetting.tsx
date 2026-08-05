@@ -1,18 +1,21 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { redactionSettingToRenderedString } from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
+import { useParentalControlledExplicitContentSettings } from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
 // discord_app/modules/user_settings/defs/native/ParentalControlsGoreMediaFiltersNonFriendsDMsSetting.tsx
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import createToggle from "createToggle";
 
 const require = arg1;
 function useGoreContentNonFriendsDmSettingValue() {
-  const parentalControlledGoreContentSettings = require("../../../parent_tools/hooks/useParentalControlSettings.tsx") /* useParentalControlledExplicitContentSettings */.useParentalControlledGoreContentSettings();
+  const parentalControlledGoreContentSettings = useParentalControlledExplicitContentSettings /* useParentalControlledExplicitContentSettings */.useParentalControlledGoreContentSettings();
   let prop;
   if (parentalControlledGoreContentSettings != null) {
     prop = parentalControlledGoreContentSettings.goreContentNonFriendDm;
   }
   let tmp5 = null;
   if (null != prop) {
-    tmp5 = require("../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx") /* redactionSettingToRenderedString */.redactionSettingToRenderedString(prop)();
-    const tmpResult = require("../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx") /* redactionSettingToRenderedString */;
+    tmp5 = redactionSettingToRenderedString /* redactionSettingToRenderedString */.redactionSettingToRenderedString(prop)();
+    const tmpResult = redactionSettingToRenderedString /* redactionSettingToRenderedString */;
   }
   return tmp5;
 }
@@ -39,8 +42,8 @@ function onGoreContentNonFriendsDmOnPress() {
 }
 createToggle = {
   useTitle: function getTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["Yh+HX1"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["Yh+HX1"]);
   },
   parent: require("MobileSetting").MobileSetting.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: useGoreContentNonFriendsDmSettingValue,

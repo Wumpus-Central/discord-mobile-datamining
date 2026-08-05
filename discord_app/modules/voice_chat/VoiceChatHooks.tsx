@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/voice_chat/VoiceChatHooks.tsx
 import fetchFingerprint from "fetchFingerprint";
 import updateVoiceState from "updateVoiceState";
@@ -16,5 +17,5 @@ export const useIsConnectedToVoiceChannel = function useIsConnectedToVoiceChanne
 export const useIsConnectedToVoiceChannelForId = function useIsConnectedToVoiceChannelForId(arg0) {
   const _require = arg0;
   const items = [updateVoiceState, fetchFingerprint];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_3.isInChannel(id, outer1_2.getId()));
+  return _initialize.useStateFromStores(items, () => outer1_3.isInChannel(id, outer1_2.getId()));
 };

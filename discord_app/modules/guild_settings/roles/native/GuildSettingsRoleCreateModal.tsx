@@ -1,3 +1,7 @@
+import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { useMountLayoutEffect } from "../../../../hooks/useMountEffect.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/guild_settings/roles/native/GuildSettingsRoleCreateModal.tsx
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import TextInput from "TextInput";
@@ -469,9 +473,9 @@ let closure_27 = importAllResult.memo((step) => {
   let obj = { style: closure_23.titleContainer, children: null };
   const sum = keys.indexOf(step.step) + 1;
   obj = { style: closure_23.title, accessibilityRole: "header", variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[4] = intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["8v/u0i"], { number: sum, total: keys.length });
-  obj[1] = callback3(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[4] = intl.format(getSystemLocale /* getSystemLocale */.t["8v/u0i"], { number: sum, total: keys.length });
+  obj[1] = callback3(Text /* Text */.Text, obj);
   return callback3(closure_7, obj);
 });
 let closure_32 = {
@@ -519,8 +523,8 @@ export default function GuildSettingsRoleCreateModal() {
   let obj = stateFromStores(589);
   const items = [handleFormInit];
   stateFromStores = obj.useStateFromStores(items, () => props.getProps().guild);
-  require("../../../../../_runtime/metro/00038__.js")(null != stateFromStores, "useGuildSettingsStoreGuild: Guild cannot be null");
-  require("../../../../hooks/useMountEffect.tsx")(() => {
+  00038__(null != stateFromStores, "useGuildSettingsStoreGuild: Guild cannot be null");
+  useMountLayoutEffect(() => {
     let obj = outer1_1(outer1_3[14]);
     obj = { flow_type: outer1_19.GUILD_ROLE_CREATION_MODAL, from_step: outer1_26.FLOW_INITIALIZED, to_step: outer1_26[outer1_25.STEP_DISPLAY], skip: false };
     const merged = Object.assign(stateFromStores(outer1_3[15]).collectGuildAnalyticsMetadata(stateFromStores.id));

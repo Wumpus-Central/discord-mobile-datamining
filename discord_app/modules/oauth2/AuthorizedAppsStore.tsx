@@ -1,3 +1,4 @@
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 // discord_app/modules/oauth2/AuthorizedAppsStore.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -115,7 +116,7 @@ obj = {
       const _Map = Map;
       const _Object3 = Object;
       const entries = Object.entries(isFullFetch.tokens);
-      const map = new Map(entries.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isObjectEntryNotNullish));
+      const map = new Map(entries.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isObjectEntryNotNullish));
       recomputeFromAppTokens();
     } else {
       const _Object = Object;

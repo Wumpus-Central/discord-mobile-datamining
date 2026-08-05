@@ -1,3 +1,6 @@
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { UserCircleIcon } from "../../../../../design/components/Icon/native/redesign/generated/UserCircleIcon.tsx";
+import { styles } from "../../base_components/AppLauncherOptionIcon.tsx";
 // discord_app/modules/app_launcher/native/options/mentionable/AppLauncherMentionableOption.tsx
 import _slicedToArray from "_slicedToArray";
 import asyncRequireImpl from "asyncRequireImpl";
@@ -11,14 +14,14 @@ import createCacheKey from "createCacheKey";
 const require = arg1;
 function MentionableIcon(mentionable) {
   mentionable = mentionable.mentionable;
-  let obj = require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   obj = { icon: null, wrapperStyle: null };
   const tmp = createCacheKey();
-  obj[0] = jsx(require("../../../../../design/components/Icon/native/redesign/generated/UserCircleIcon.tsx") /* UserCircleIcon */.UserCircleIcon, { size: "sm", color: "interactive-text-default" });
+  obj[0] = jsx(UserCircleIcon /* UserCircleIcon */.UserCircleIcon, { size: "sm", color: "interactive-text-default" });
   obj[1] = tmp.iconWrapper;
-  const tmp7 = jsx(require("../../base_components/AppLauncherOptionIcon.tsx"), { icon: null, wrapperStyle: null });
+  const tmp7 = jsx(styles, { icon: null, wrapperStyle: null });
   if (null == mentionable) {
     return tmp7;
   } else {
@@ -39,7 +42,7 @@ function MentionableIcon(mentionable) {
       return tmp7;
     }
   }
-  const tmp6 = require("../../base_components/AppLauncherOptionIcon.tsx");
+  const tmp6 = styles;
 }
 createCacheKey = { iconWrapper: null };
 createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE };

@@ -1,3 +1,4 @@
+import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/applications/ApplicationFrecencyStore.tsx
 import participantFromServer from "participantFromServer";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -13,7 +14,7 @@ function handleUserSettingsProtoStoreChange() {
   if (applications == null) {
     applications = {};
   }
-  tmp2.overwriteHistory(require("../../../_runtime/00012_apply.js").mapValues(applications, (recentUses) => {
+  tmp2.overwriteHistory(apply.mapValues(applications, (recentUses) => {
     const obj = {};
     const merged = Object.assign(recentUses);
     recentUses = recentUses.recentUses;

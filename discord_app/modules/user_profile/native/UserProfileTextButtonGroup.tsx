@@ -1,3 +1,4 @@
+import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 // discord_app/modules/user_profile/native/UserProfileTextButtonGroup.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -18,7 +19,7 @@ export default function UserProfileTextButtonGroup(arg0) {
   let style;
   ({ primaryButton, secondaryButton, maxWidth, style } = arg0);
   let items = callback3();
-  const width = require("../../screen/useWindowDimensions.native.tsx")().width;
+  const width = useWindowDimensions().width;
   let bound = width;
   if (null != maxWidth) {
     const _Math = Math;

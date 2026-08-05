@@ -1,3 +1,4 @@
+import { UserSettingsDesignSystemSegmentedControl } from "../../design_system/native/UserSettingsDesignSystemSegmentedControl.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemSegmentedControlSetting.tsx
 import createToggle from "createToggle";
 
@@ -11,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_SEGMENTED_CONTROL,
   getComponent() {
-    return require("../../design_system/native/UserSettingsDesignSystemSegmentedControl.tsx") /* UserSettingsDesignSystemSegmentedControl */.default;
+    return UserSettingsDesignSystemSegmentedControl /* UserSettingsDesignSystemSegmentedControl */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -1,3 +1,4 @@
+import { OverrideProfileFrameLayer } from "tooling/FramePreviewOverrideFrame.tsx";
 // discord_app/modules/collectibles/profile_frames/native/ProfileFrame.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -193,8 +194,8 @@ export default function ProfileFrame(arg0) {
     let obj = { override: null };
     obj[0] = tmp;
     const merged = Object.assign(arg0);
-    let tmp7 = jsx(require("tooling/FramePreviewOverrideFrame.tsx"), { override: null });
-    const tmp11 = require("tooling/FramePreviewOverrideFrame.tsx");
+    let tmp7 = jsx(OverrideProfileFrameLayer, { override: null });
+    const tmp11 = OverrideProfileFrameLayer;
   } else {
     obj = {};
     const merged1 = Object.assign(arg0);

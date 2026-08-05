@@ -1,3 +1,7 @@
+import { useThermalState } from "../../../device/useThermalState.tsx";
+import { getApplicationIdsByTaskTypes } from "../../../quests/utils/QuestTaskUtils.tsx";
+import { getIsScreenLandscape } from "../../../screen/useIsScreenLandscape.native.tsx";
+import { activityInstanceConnectedParticipants } from "../../helpers/activityInstanceConnectedParticipants.tsx";
 // discord_app/modules/rpc/server/events/subscriptionHelpers.tsx
 import participantFromServer from "participantFromServer";
 import map from "map";
@@ -69,27 +73,27 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
     }
     return tmp30;
   } else if (tmp.THERMAL_STATE_UPDATE === participantFromServer) {
-    const thermalState = require("../../../device/useThermalState.tsx") /* useThermalState */.getThermalState();
+    const thermalState = useThermalState /* useThermalState */.getThermalState();
     let tmp23 = null;
-    if (thermalState !== require("../../../device/useThermalState.tsx") /* useThermalState */.ThermalStates.UNHANDLED) {
+    if (thermalState !== useThermalState /* useThermalState */.ThermalStates.UNHANDLED) {
       let obj2 = { thermal_state: null };
       obj2[0] = thermalState;
       tmp23 = obj2;
     }
     return tmp23;
   } else if (tmp.ORIENTATION_UPDATE === participantFromServer) {
-    let obj3 = require("../../../screen/useIsScreenLandscape.native.tsx") /* getIsScreenLandscape */;
+    let obj3 = getIsScreenLandscape /* getIsScreenLandscape */;
     obj3 = { screen_orientation: null };
     obj3[0] = obj3.getIsScreenLandscape() ? closure_7.LANDSCAPE : closure_7.PORTRAIT;
     return obj3;
   } else if (tmp.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE === participantFromServer) {
-    obj2 = require("../../helpers/activityInstanceConnectedParticipants.tsx") /* activityInstanceConnectedParticipants */;
+    obj2 = activityInstanceConnectedParticipants /* activityInstanceConnectedParticipants */;
     return obj2.activityInstanceConnectedParticipants();
   } else if (tmp.QUEST_ENROLLMENT_STATUS_UPDATE === participantFromServer) {
     const quest_id = c3.quest_id;
     if (quest_id) {
       quest = quest.getQuest(quest_id);
-      obj = require("../../../quests/utils/QuestTaskUtils.tsx") /* getApplicationIdsByTaskTypes */;
+      obj = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */;
       const activityApplicationId = obj.getActivityApplicationId(quest);
       let tmp11 = null;
       if (null != quest) {

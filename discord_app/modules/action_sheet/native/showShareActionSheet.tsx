@@ -1,3 +1,4 @@
+import { trackAppClickInNativeShareSheet } from "ShowShareActionSheetUtils.tsx";
 // discord_app/modules/action_sheet/native/showShareActionSheet.tsx
 import PlatformTypes from "PlatformTypes";
 
@@ -7,7 +8,7 @@ if (PlatformTypes.isAndroid()) {
     let _location;
     let app;
     ({ app, location: _location } = arg0);
-    const result = require("ShowShareActionSheetUtils.tsx") /* trackAppClickInNativeShareSheet */.trackAppClickInNativeShareSheet(app, _location);
+    const result = trackAppClickInNativeShareSheet /* trackAppClickInNativeShareSheet */.trackAppClickInNativeShareSheet(app, _location);
   });
 }
 let result = require("enforcing").fileFinishedImporting("modules/action_sheet/native/showShareActionSheet.tsx");

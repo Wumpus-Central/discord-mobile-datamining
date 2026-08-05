@@ -1,3 +1,7 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
+import { ImpersonateType } from "ImpersonateTypes.tsx";
 // discord_app/modules/impersonate/ImpersonateActionCreators.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";
@@ -17,14 +21,14 @@ const require = arg1;
 function updateImpersonating(closure_0, type) {
   data = data.getData(closure_0);
   if (tmp2) {
-    let obj = require("../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { num_roles: null };
     const _Object = Object;
     obj[0] = Object.keys(data.roles).length;
-    const merged = Object.assign(require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(closure_0));
-    obj.is_viewing_as_member = data.type === require("ImpersonateTypes.tsx") /* ImpersonateType */.ImpersonateType.NEW_MEMBER;
+    const merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(closure_0));
+    obj.is_viewing_as_member = data.type === ImpersonateType /* ImpersonateType */.ImpersonateType.NEW_MEMBER;
     obj.track(constants2.VIEW_AS_ROLES_SELECTED, obj);
-    const obj3 = require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */;
+    const obj3 = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
     const tmp7 = require;
     obj = { type: "IMPERSONATE_UPDATE", guildId: null, data: null };
     obj[1] = closure_0;
@@ -32,7 +36,7 @@ function updateImpersonating(closure_0, type) {
     const merged1 = Object.assign(data);
     const merged2 = Object.assign(type);
     obj[2] = obj1;
-    require("../../Dispatcher.tsx").dispatch(obj);
+    dispatcher.dispatch(obj);
     const channelId = store2.getChannelId(closure_0);
     if (null == channelId) {
       if (!getUncachedChannelPermissions.can(constants.VIEW_CHANNEL, tmp21)) {
@@ -43,22 +47,22 @@ function updateImpersonating(closure_0, type) {
         }
       }
     }
-    const obj4 = require("../../Dispatcher.tsx");
+    const obj4 = dispatcher;
   }
 }
 ({ Permissions: unpackModuleId, Routes: closure_12, AnalyticEvents: map1 } = ME);
 let result = require("trackCommunicationDisabled").fileFinishedImporting("modules/impersonate/ImpersonateActionCreators.tsx");
 
 export const startImpersonating = function startImpersonating(guildId, data) {
-  let obj = require("../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { num_roles: Object.keys(data.roles).length };
-  const merged = Object.assign(require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guildId));
-  obj.is_viewing_as_member = data.type === require("ImpersonateTypes.tsx") /* ImpersonateType */.ImpersonateType.NEW_MEMBER;
+  const merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guildId));
+  obj.is_viewing_as_member = data.type === ImpersonateType /* ImpersonateType */.ImpersonateType.NEW_MEMBER;
   obj.track(constants2.VIEW_AS_ROLES_SELECTED, obj);
-  const obj3 = require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */;
+  const obj3 = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
   const tmp2 = require;
   obj = { type: "IMPERSONATE_UPDATE", guildId, data };
-  require("../../Dispatcher.tsx").dispatch(obj);
+  dispatcher.dispatch(obj);
   const channelId = store2.getChannelId(guildId);
   if (null == channelId) {
     if (!getUncachedChannelPermissions.can(constants.VIEW_CHANNEL, tmp7)) {
@@ -72,7 +76,7 @@ export const startImpersonating = function startImpersonating(guildId, data) {
 };
 export { updateImpersonating };
 export const stopImpersonating = function stopImpersonating(guildId) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "IMPERSONATE_STOP", guildId };
   obj.dispatch(obj);
 };
@@ -123,10 +127,10 @@ export const updateImpersonatedRoles = function updateImpersonatedRoles(guildId,
     obj[item10013.id] = item10013;
     continue;
   }
-  obj = { type: require("ImpersonateTypes.tsx") /* ImpersonateType */.ImpersonateType.NEW_MEMBER, roles: obj };
+  obj = { type: ImpersonateType /* ImpersonateType */.ImpersonateType.NEW_MEMBER, roles: obj };
   updateImpersonating(guildId, obj);
 };
 export const updateImpersonatedData = function updateImpersonatedData(closure_0, arg1) {
   const merged = Object.assign(arg1);
-  updateImpersonating(closure_0, { type: require("ImpersonateTypes.tsx") /* ImpersonateType */.ImpersonateType.NEW_MEMBER });
+  updateImpersonating(closure_0, { type: ImpersonateType /* ImpersonateType */.ImpersonateType.NEW_MEMBER });
 };

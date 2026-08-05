@@ -1,3 +1,6 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/forums/ForumPostDataLoader.tsx
 import ME from "ME";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -250,10 +253,10 @@ prototype["delete"] = function delete(arg0) {
   delete tmp2[tmp];
 };
 prototype["hasNext"] = function hasNext() {
-  return !require("../../../_runtime/00012_apply.js").isEmpty(this._set);
+  return !apply.isEmpty(this._set);
 };
 prototype["next"] = function next() {
-  return require("../../utils/SnowflakeUtils.tsx").keys(this._set)[0];
+  return DISCORD_EPOCH.keys(this._set)[0];
 };
 class RequestQueue {
   constructor() {
@@ -417,7 +420,7 @@ export const useFirstForumPostMessage = function useFirstForumPostMessage(stateF
 };
 export const useMostRecentForumMessage = function useMostRecentForumMessage(arg0, arg1) {
   const _require = arg1;
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [closure_7];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => outer1_7.getMessageState(id.id));
   obj = { loaded: stateFromStoresObject.loaded, mostRecentMessage: stateFromStoresObject.message };

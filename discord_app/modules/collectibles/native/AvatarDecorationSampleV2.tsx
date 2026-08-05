@@ -1,3 +1,6 @@
+import { 00038__ } from "../../../../_runtime/metro/00038__.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 // discord_app/modules/collectibles/native/AvatarDecorationSampleV2.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -15,7 +18,7 @@ const require = arg1;
 let c8 = 0.8333333333333334;
 let closure_9 = createCacheKey.createStyles((arg0) => {
   let obj = { avatar: null, solidAvatar: null, avatarDecoration: null };
-  obj = { position: "absolute", height: arg0 * c8, width: arg0 * c8, borderRadius: arg0 * c8 / 2, opacity: 0.8, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWER };
+  obj = { position: "absolute", height: arg0 * c8, width: arg0 * c8, borderRadius: arg0 * c8 / 2, opacity: 0.8, backgroundColor: Themes.colors.BACKGROUND_BASE_LOWER };
   obj[0] = obj;
   obj[1] = { opacity: 1 };
   obj[2] = { position: "absolute" };
@@ -32,7 +35,7 @@ export default function AvatarDecorationSampleV2(arg0) {
   ({ item, size, avatarSource } = arg0);
   ({ animate, threeTierBundle } = arg0);
   const tmp = callback(size);
-  require("../../../../_runtime/metro/00038__.js")(item.type === require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION, "Item must be Avatar Decoration");
+  00038__(item.type === CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION, "Item must be Avatar Decoration");
   const items = [tmp.avatar, ];
   let solidAvatar = null != avatarSource;
   if (!solidAvatar) {

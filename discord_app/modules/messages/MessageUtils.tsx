@@ -1,3 +1,4 @@
+import { shouldShowAgeGateForVoiceChannel } from "../age_gate/AgeGateUtils.tsx";
 // discord_app/modules/messages/MessageUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -10,8 +11,8 @@ export const canViewPotentiallyNSFWChannel = function canViewPotentiallyNSFWChan
   const channel = store.getChannel(channel_id);
   let tmp3 = null != currentUser && null != channel;
   if (tmp3) {
-    tmp3 = !require("../age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */.isChannelContentGated(channel);
-    const obj = require("../age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
+    tmp3 = !shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */.isChannelContentGated(channel);
+    const obj = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
   }
   return tmp3;
 };

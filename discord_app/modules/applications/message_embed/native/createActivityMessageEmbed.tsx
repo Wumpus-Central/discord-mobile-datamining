@@ -1,3 +1,4 @@
+import { createAppMessageEmbed } from "createAppMessageEmbed.tsx";
 // discord_app/modules/applications/message_embed/native/createActivityMessageEmbed.tsx
 const result = require("set").fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");
 
@@ -8,7 +9,7 @@ export const createActivityMessageEmbed = function createActivityMessageEmbed(ap
   let theme;
   app = app.app;
   ({ theme, embedUrl, message, params } = app);
-  let obj = require("createAppMessageEmbed.tsx") /* createAppMessageEmbed */;
+  let obj = createAppMessageEmbed /* createAppMessageEmbed */;
   const appMessageEmbed = obj.createAppMessageEmbed({ theme, embedUrl, message, app });
   if (null == appMessageEmbed) {
     return null;

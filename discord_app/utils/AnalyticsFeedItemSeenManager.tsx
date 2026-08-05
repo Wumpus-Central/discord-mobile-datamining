@@ -1,3 +1,4 @@
+import { 00038__ } from "../../_runtime/metro/00038__.js";
 // discord_app/utils/AnalyticsFeedItemSeenManager.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
@@ -75,7 +76,7 @@ prototype["computeSeenTimeDestructive"] = function computeSeenTimeDestructive(is
     }
     continue;
   }
-  require("../../_runtime/metro/00038__.js")(items.length < 2, "there should only be a single left over data");
+  00038__(items.length < 2, "there should only be a single left over data");
   this.seenIntervals = items;
   return Math.round(num);
 };

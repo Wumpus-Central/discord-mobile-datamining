@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/guild_settings/server_monetization/stickers/native/GuildSettingsModalStickers.tsx
 import get_ActivityIndicator from "useLoadGuildStickersWithCreator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -41,15 +42,15 @@ obj2[2] = require("BoostTier3Icon").BoostTier3Icon;
 items[3] = obj2;
 let closure_15 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null, label: null, divider: null, stickerSlot: null, userRow: null };
-  obj = { padding: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingBottom: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 + arg0 };
+  obj = { padding: Themes.space.PX_16, paddingBottom: Themes.space.PX_16 + arg0 };
   obj[0] = obj;
-  obj = { marginBottom: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  obj = { marginBottom: Themes.space.PX_8 };
   obj[1] = obj;
-  obj[2] = { marginTop: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, marginBottom: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
-  const obj1 = { marginTop: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, marginBottom: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
-  obj[3] = { backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWEST, borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, width: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_64, height: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_64, overflow: "hidden", alignItems: "center", justifyContent: "center" };
-  const obj2 = { backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWEST, borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, width: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_64, height: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_64, overflow: "hidden", alignItems: "center", justifyContent: "center" };
-  obj[4] = { gap: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, flexDirection: "row", alignItems: "center" };
+  obj[2] = { marginTop: Themes.space.PX_16, marginBottom: Themes.space.PX_16 };
+  const obj1 = { marginTop: Themes.space.PX_16, marginBottom: Themes.space.PX_16 };
+  obj[3] = { backgroundColor: Themes.colors.BACKGROUND_BASE_LOWEST, borderRadius: Themes.radii.lg, width: Themes.space.PX_64, height: Themes.space.PX_64, overflow: "hidden", alignItems: "center", justifyContent: "center" };
+  const obj2 = { backgroundColor: Themes.colors.BACKGROUND_BASE_LOWEST, borderRadius: Themes.radii.lg, width: Themes.space.PX_64, height: Themes.space.PX_64, overflow: "hidden", alignItems: "center", justifyContent: "center" };
+  obj[4] = { gap: Themes.space.PX_8, flexDirection: "row", alignItems: "center" };
   return obj;
 });
 const memoResult = require("getGuildTierFromGuild").memo(function GuildSettingsModalStickers(guildId) {

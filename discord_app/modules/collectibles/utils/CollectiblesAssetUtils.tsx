@@ -1,3 +1,4 @@
+import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
 // discord_app/modules/collectibles/utils/CollectiblesAssetUtils.tsx
 let c2 = "media/v1/collectibles-shop";
 let result = require("parseSkuIdFromServerData").fileFinishedImporting("modules/collectibles/utils/CollectiblesAssetUtils.tsx");
@@ -14,7 +15,7 @@ export const getCollectiblesItemAssetUrl = function getCollectiblesItemAssetUrl(
   } else {
     let _HermesInternal = globalThis;
     const _Boolean = Boolean;
-    const result = require("../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isDiscordBackendDevelopment();
+    const result = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isDiscordBackendDevelopment();
     let str = Boolean(assetId);
     if (result) {
       let str9 = "";
@@ -33,6 +34,6 @@ export const getCollectiblesItemAssetUrl = function getCollectiblesItemAssetUrl(
       const _HermesInternal3 = HermesInternal;
       combined = "https://cdn.discordapp.com/" + tmp4 + "/" + skuId + "/" + str3 + assetFormat;
     }
-    const obj = require("../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */;
+    const obj = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
   }
 };

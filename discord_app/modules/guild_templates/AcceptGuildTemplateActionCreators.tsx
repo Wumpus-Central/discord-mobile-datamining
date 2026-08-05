@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/guild_templates/AcceptGuildTemplateActionCreators.tsx
 import _handleConnectionOpen from "_handleConnectionOpen";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -11,7 +12,7 @@ export default {
     let closure_0 = code;
     const importDefault = first;
     const dependencyMap = first1;
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "GUILD_TEMPLATE_ACCEPT", code };
     obj.dispatch(obj);
     return new Promise((closure_0) => {

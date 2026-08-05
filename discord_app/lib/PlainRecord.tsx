@@ -1,3 +1,6 @@
+import { 00038__ } from "../../_runtime/metro/00038__.js";
+import { shallowEqual } from "../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import { areSetsEqual } from "../../discord_common/js/shared/utils/SetUtils.tsx";
 // discord_app/lib/PlainRecord.tsx
 import { TypeTag } from "TypeTag";
 import importDefaultResult from "TypeTag";
@@ -14,16 +17,16 @@ function isValueEqual(items, current) {
           if (items instanceof Set) {
             const _Set2 = Set;
             if (current instanceof Set) {
-              let areSetsEqualResult = require("../../discord_common/js/shared/utils/SetUtils.tsx") /* areSetsEqual */.areSetsEqual(items, current);
-              const obj2 = require("../../discord_common/js/shared/utils/SetUtils.tsx") /* areSetsEqual */;
+              let areSetsEqualResult = areSetsEqual /* areSetsEqual */.areSetsEqual(items, current);
+              const obj2 = areSetsEqual /* areSetsEqual */;
             }
           }
           const _Array = Array;
           if (Array.isArray(items)) {
             const _Array2 = Array;
             if (Array.isArray(current)) {
-              areSetsEqualResult = require("../../discord_common/js/packages/shallow-equal/shallowEqual.tsx") /* shallowEqual */.areArraysShallowEqual(items, current);
-              const obj = require("../../discord_common/js/packages/shallow-equal/shallowEqual.tsx") /* shallowEqual */;
+              areSetsEqualResult = shallowEqual /* shallowEqual */.areArraysShallowEqual(items, current);
+              const obj = shallowEqual /* shallowEqual */;
             }
           }
           areSetsEqualResult = typeof items === "object";
@@ -31,7 +34,7 @@ function isValueEqual(items, current) {
             areSetsEqualResult = typeof current === "object";
           }
           if (areSetsEqualResult) {
-            areSetsEqualResult = require("../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(items, current);
+            areSetsEqualResult = shallowEqual(items, current);
           }
         } else {
           const _Date2 = Date;
@@ -125,7 +128,7 @@ export const tryReuseExistingInPlacePlainRecord = function tryReuseExistingInPla
   if (!tmp3) {
     tmp3 = tmp[TypeTag] === arg0;
   }
-  require("../../_runtime/metro/00038__.js")(tmp3, "Existing record type does not match the expected type");
+  00038__(tmp3, "Existing record type does not match the expected type");
   if (null == tmp) {
     arg2[TypeTag] = arg0;
     tmp = arg2;

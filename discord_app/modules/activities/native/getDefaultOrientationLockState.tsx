@@ -1,3 +1,4 @@
+import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/activities/native/getDefaultOrientationLockState.tsx
 import DCDDeviceManager from "DCDDeviceManager";
 import isMetaQuest from "isMetaQuest";
@@ -33,7 +34,7 @@ export const setOrientationLockState = function setOrientationLockState(embedded
     }
   }
   if (null != arg1) {
-    let obj = require("../../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId: null, lockState: null };
     obj[1] = embeddedActivityConfig.id;
     obj[2] = tmp;

@@ -1,3 +1,4 @@
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/native_permissions/NativePermissionStore.tsx
 import { NativePermissionStates } from "NativePermissionStatus";
 import { AnalyticEvents } from "ME";
@@ -44,7 +45,7 @@ prototype["handleSetNativePermission"] = function handleSetNativePermission(arg0
   let NONE = permissionStates[permissionType];
   permissionStates[permissionType] = state;
   if (NONE !== state) {
-    let obj = require("../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { type: null, action: null, previous_action: null };
     obj[0] = permissionType;
     obj[1] = state;

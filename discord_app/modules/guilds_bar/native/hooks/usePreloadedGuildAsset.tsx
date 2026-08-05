@@ -1,3 +1,4 @@
+import { useRefValue } from "../../../../hooks/useRefValue.tsx";
 // discord_app/modules/guilds_bar/native/hooks/usePreloadedGuildAsset.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -15,7 +16,7 @@ export default function usePreloadedGuildAsset(guildId, icon, asset) {
   const effect = React.useEffect(() => () => {
     ref.current.guildId = undefined;
   }, []);
-  const tmp3 = require("../../../../hooks/useRefValue.tsx")(ref);
+  const tmp3 = useRefValue(ref);
   if (guildId === tmp3.guildId) {
     asset = tmp3.asset;
   }

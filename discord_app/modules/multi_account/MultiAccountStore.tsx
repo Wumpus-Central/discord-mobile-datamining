@@ -1,3 +1,5 @@
+import { calculatePositionDeltas } from "../../utils/DragAndDropUtils.tsx";
+import { isStaff } from "../user/isStaffFromRawUser.tsx";
 // discord_app/modules/multi_account/MultiAccountStore.tsx
 import { MAX_ACCOUNTS } from "MAX_ACCOUNTS";
 import { PersistedStore } from "initialize";
@@ -65,7 +67,7 @@ obj = {
     let id = user.id;
     let tmp = !c5;
     if (!c5) {
-      tmp = require("../user/isStaffFromRawUser.tsx")(user);
+      tmp = isStaff(user);
     }
     if (tmp) {
       c5 = true;
@@ -131,7 +133,7 @@ obj = {
     let from;
     let to;
     ({ from, to } = arg0);
-    closure_8 = require("../../utils/DragAndDropUtils.tsx") /* calculatePositionDeltas */.moveItemFromTo(closure_8, from, to);
+    closure_8 = calculatePositionDeltas /* calculatePositionDeltas */.moveItemFromTo(closure_8, from, to);
   },
   CURRENT_USER_UPDATE: function handleCurrentUserUpdate(user) {
     user = user.user;

@@ -1,3 +1,4 @@
+import { Button } from "../../../../../design/void/native.tsx";
 // discord_app/modules/guild_member_verification/native/components/form_fields/FormHeader.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -20,5 +21,5 @@ export default function FormHeader(children) {
   const items = [createCacheKey().fieldHeader, merged.style];
   obj.style = items;
   obj.children = children.children;
-  return jsx(require("../../../../../design/void/native.tsx") /* Button */.LegacyText, {});
+  return jsx(Button /* Button */.LegacyText, {});
 };

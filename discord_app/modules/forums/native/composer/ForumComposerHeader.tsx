@@ -1,3 +1,10 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { ForumIcon } from "../../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx";
+import { XSmallIcon } from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { computeChannelName } from "../../../channel/useChannelName.tsx";
 // discord_app/modules/forums/native/composer/ForumComposerHeader.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -14,15 +21,15 @@ const require = arg1;
 let closure_7 = createCacheKey.createStyles((height) => {
   obj = { headerBar: obj, headerBarContent: { flexDirection: "row", alignItems: "center", flex: 1 }, headerBarText: null, headerBarSeparator: null, button: null };
   obj = { height, flexDirection: "row", alignItems: "center" };
-  obj = { marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
+  obj = { marginHorizontal: Themes.space.PX_16 };
   obj[2] = obj;
   const obj1 = {};
   const merged = Object.assign(closure_3.absoluteFillObject);
   obj1.height = closure_3.hairlineWidth;
-  obj1.backgroundColor = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE;
+  obj1.backgroundColor = Themes.colors.BORDER_SUBTLE;
   obj1.top = undefined;
   obj[3] = obj1;
-  obj[4] = { paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
+  obj[4] = { paddingHorizontal: Themes.space.PX_16 };
   return obj;
 });
 const result = require("jsxProd").fileFinishedImporting("modules/forums/native/composer/ForumComposerHeader.tsx");
@@ -38,22 +45,22 @@ export default function ForumComposerHeader(height) {
   const tmp = callback2(height.height);
   let obj = { style: tmp.headerBar, children: null };
   obj = { style: tmp.button, accessibilityRole: "button", accessibilityLabel: null, disabled: null, onPress: null, children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.cpT0Cq);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
   obj[3] = submitting;
   obj[4] = function onPress() {
     return callback(false);
   };
-  obj[5] = callback(require("../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx") /* XSmallIcon */.XSmallIcon, {});
-  const items = [callback(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj), , , ];
+  obj[5] = callback(XSmallIcon /* XSmallIcon */.XSmallIcon, {});
+  const items = [callback(PressableBase /* PressableBase */.PressableOpacity, obj), , , ];
   obj = { style: tmp.headerBarContent, children: null };
-  const items1 = [callback(require("../../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx") /* ForumIcon */.ForumIcon, { size: "sm" }), ];
+  const items1 = [callback(ForumIcon /* ForumIcon */.ForumIcon, { size: "sm" }), ];
   const obj1 = { style: tmp.headerBarText, children: null };
   if ("" === title) {
     const intl2 = tmp7(1236).intl;
     title = intl2.string(tmp7(1236).t["7EjFCk"]);
   }
-  const items2 = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { lineClamp: 1, ellipsizeMode: "tail", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title }), callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-xs/medium", color: "text-default", children: require("../../../channel/useChannelName.tsx")(channel) })];
+  const items2 = [callback(Text /* Text */.Text, { lineClamp: 1, ellipsizeMode: "tail", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title }), callback(Text /* Text */.Text, { variant: "text-xs/medium", color: "text-default", children: computeChannelName(channel) })];
   obj1[1] = items2;
   items1[1] = closure_6(closure_4, obj1);
   obj[1] = items1;

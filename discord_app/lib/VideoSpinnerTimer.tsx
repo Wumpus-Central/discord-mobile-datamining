@@ -1,3 +1,5 @@
+import { sleep } from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
 // discord_app/lib/VideoSpinnerTimer.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -20,8 +22,8 @@ class VideoSpinnerTimer {
 const prototype = VideoSpinnerTimer.prototype;
 prototype["onSpinnerStarted"] = function onSpinnerStarted() {
   if (null == this.spinnerVisibleStart) {
-    tmp.spinnerVisibleStart = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */.now();
-    const obj = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */;
+    tmp.spinnerVisibleStart = sleep /* sleep */.now();
+    const obj = sleep /* sleep */;
   }
 };
 prototype["trackSpinnerDuration"] = function trackSpinnerDuration(videoSpinnerContext, userId, arg2) {
@@ -33,7 +35,7 @@ prototype["trackSpinnerDuration"] = function trackSpinnerDuration(videoSpinnerCo
     }
     const sum = num + 1;
     const result = map.set(arg2, sum);
-    let obj = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */;
+    let obj = sleep /* sleep */;
     const diff = obj.now() - self.spinnerVisibleStart;
     self.spinnerVisibleStart = null;
     if (diff < 0) {
@@ -76,8 +78,8 @@ prototype["trackSpinnerDuration"] = function trackSpinnerDuration(videoSpinnerCo
       obj[9] = store.getType();
       obj[10] = store.getEffectiveConnectionSpeed();
       obj[11] = store.getServiceProvider();
-      require("../utils/AnalyticsUtils.tsx").track(AnalyticEvents.VIDEO_SPINNER_SHOWN_V2, obj);
-      const obj2 = require("../utils/AnalyticsUtils.tsx");
+      expandEventProperties.track(AnalyticEvents.VIDEO_SPINNER_SHOWN_V2, obj);
+      const obj2 = expandEventProperties;
     }
     const obj4 = map;
   }

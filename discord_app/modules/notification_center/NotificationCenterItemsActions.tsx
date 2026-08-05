@@ -1,3 +1,5 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { getRelativeTimestamp } from "NotificationCenterUtils.tsx";
 // discord_app/modules/notification_center/NotificationCenterItemsActions.tsx
 import encodeProperties from "encodeProperties";
 import _validate from "_validate";
@@ -399,17 +401,17 @@ function _deleteNotificationCenterItem() {
 const result = require("ME").fileFinishedImporting("modules/notification_center/NotificationCenterItemsActions.tsx");
 
 export const setNotificationCenterActive = function setNotificationCenterActive(active) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "NOTIFICATION_CENTER_SET_ACTIVE", active };
   obj.dispatch(obj);
 };
 export const setNotificationCenterTabFocused = function setNotificationCenterTabFocused(focused) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "NOTIFICATION_CENTER_TAB_FOCUSED", focused };
   obj.dispatch(obj);
 };
 export const resetNotificationCenter = function resetNotificationCenter() {
-  require("../../Dispatcher.tsx").dispatch({ type: "RESET_NOTIFICATION_CENTER" });
+  dispatcher.dispatch({ type: "RESET_NOTIFICATION_CENTER" });
 };
 export const fetchNotificationCenterItems = function fetchNotificationCenterItems(arg0, arg1) {
   const self = this;
@@ -426,30 +428,30 @@ export const markNotificationCenterItemAcked = function markNotificationCenterIt
     const items = [local_id.local_id];
     let obj = { type: "NOTIFICATION_CENTER_ITEMS_LOCAL_ACK", localIds: null };
     obj[1] = items;
-    require("../../Dispatcher.tsx").dispatch(obj);
-    const obj4 = require("../../Dispatcher.tsx");
+    dispatcher.dispatch(obj);
+    const obj4 = dispatcher;
   } else {
-    obj = require("NotificationCenterUtils.tsx") /* getRelativeTimestamp */;
+    obj = getRelativeTimestamp /* getRelativeTimestamp */;
     if (obj.isMentionItem(local_id)) {
       obj = { type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: true, ids: null };
       const items1 = [local_id.id];
       obj[2] = items1;
-      require("../../Dispatcher.tsx").dispatch(obj);
-      const obj2 = require("../../Dispatcher.tsx");
+      dispatcher.dispatch(obj);
+      const obj2 = dispatcher;
     } else {
       markNotificationCenterRemoteItemAcked(local_id.id);
     }
   }
 };
 export const markNotificationCenterLocalItemsAcked = function markNotificationCenterLocalItemsAcked(found) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "NOTIFICATION_CENTER_ITEMS_LOCAL_ACK", localIds: found };
   obj.dispatch(obj);
 };
 export { markNotificationCenterRemoteItemAcked };
 export const markNotificationCenterMentionAcked = function markNotificationCenterMentionAcked(arg0) {
   const items = [arg0];
-  require("../../Dispatcher.tsx").dispatch({ type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: true, ids: items });
+  dispatcher.dispatch({ type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: true, ids: items });
 };
 export const bulkMarkNotificationCenterItemsAcked = function bulkMarkNotificationCenterItemsAcked(arr) {
   const self = this;

@@ -1,3 +1,7 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { setDeveloperOptionSettings } from "../../../../actions/DeveloperOptionsActionCreators.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { showNotification } from "../../../bug_reporter/native/BugReportManager.tsx";
 // discord_app/modules/user_settings/defs/native/CreateBugReportSetting.tsx
 import refreshSourceMapCookie from "refreshSourceMapCookie";
 import createToggle from "createToggle";
@@ -5,26 +9,26 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.aIkGJD);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.aIkGJD);
   },
   parent: null,
   IconComponent: require("WrenchIcon").WrenchIcon,
   onValueChange: function handleCreateBugReportSettingToggle(arg0) {
-    const setDeveloperOptionSettings = require("../../../../actions/DeveloperOptionsActionCreators.tsx") /* setDeveloperOptionSettings */.setDeveloperOptionSettings;
+    const setDeveloperOptionSettings = setDeveloperOptionSettings /* setDeveloperOptionSettings */.setDeveloperOptionSettings;
     if (arg0) {
       const result = setDeveloperOptionSettings({ bugReporterEnabled: true });
-      require("../../../bug_reporter/native/BugReportManager.tsx").initialize();
-      const obj2 = require("../../../bug_reporter/native/BugReportManager.tsx");
+      showNotification.initialize();
+      const obj2 = showNotification;
     } else {
       const result1 = setDeveloperOptionSettings({ bugReporterEnabled: false });
-      require("../../../bug_reporter/native/BugReportManager.tsx").terminate(true);
-      const obj = require("../../../bug_reporter/native/BugReportManager.tsx");
+      showNotification.terminate(true);
+      const obj = showNotification;
     }
   },
   useValue: function useCreateBugReportSettingToggleValue() {
     const items = [refreshSourceMapCookie];
-    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => isBugReporterEnabled.isBugReporterEnabled);
+    return initialize /* initialize */.useStateFromStores(items, () => isBugReporterEnabled.isBugReporterEnabled);
   },
   useDescription: function useCreateBugReportSettingDescription() {
     return "Photo permission is required";

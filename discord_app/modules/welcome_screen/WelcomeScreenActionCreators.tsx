@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/welcome_screen/WelcomeScreenActionCreators.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
@@ -95,7 +96,7 @@ export const welcomeScreenViewed = function welcomeScreenViewed(closure_0) {
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "WELCOME_SCREEN_VIEW", guildId: closure_0, isLurking: flag };
   obj.dispatch(obj);
 };
@@ -110,13 +111,13 @@ export const fetchWelcomeScreen = function fetchWelcomeScreen(closure_0) {
   return applyArgumentsResult;
 };
 export const resetWelcomeScreen = function resetWelcomeScreen() {
-  require("../../Dispatcher.tsx").dispatch({ type: "WELCOME_SCREEN_SETTINGS_RESET" });
+  dispatcher.dispatch({ type: "WELCOME_SCREEN_SETTINGS_RESET" });
 };
 export const clearWelcomeScreenSettings = function clearWelcomeScreenSettings() {
-  require("../../Dispatcher.tsx").dispatch({ type: "WELCOME_SCREEN_SETTINGS_CLEAR" });
+  dispatcher.dispatch({ type: "WELCOME_SCREEN_SETTINGS_CLEAR" });
 };
 export const updateSettings = function updateSettings(settings) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "WELCOME_SCREEN_SETTINGS_UPDATE", settings };
   obj.dispatch(obj);
 };

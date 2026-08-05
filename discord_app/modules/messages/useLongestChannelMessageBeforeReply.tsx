@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/messages/useLongestChannelMessageBeforeReply.tsx
 import reinjectEphemerals from "reinjectEphemerals";
 
@@ -9,7 +10,7 @@ export const useLongestChannelMessageBeforeReply = function useLongestChannelMes
   const dependencyMap = recipientId;
   const items = [reinjectEphemerals];
   const items1 = [id, recipientId];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     if (null != closure_1) {
       const messages = outer1_2.getMessages(closure_0);
       const findOldestResult = messages.findOldest((author) => author.author.id === closure_1);

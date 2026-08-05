@@ -1,3 +1,7 @@
+import { Text } from "../../design/components/Text/native/Text.tsx";
+import { AccessibilityAnnouncer } from "../../design/shared.tsx";
+import { Button } from "../../design/void/native.tsx";
+import { IconUploader } from "IconUploader.tsx";
 // discord_app/components_native/common/IconLabelBlock.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -32,7 +36,7 @@ prototype["renderLabel"] = function renderLabel() {
     const items = [tmp.label, tmp2];
     obj[0] = items;
     obj[1] = label;
-    tmp3 = callback2(require("../../design/void/native.tsx") /* Button */.LegacyText, obj);
+    tmp3 = callback2(Button /* Button */.LegacyText, obj);
   }
   return tmp3;
 };
@@ -45,7 +49,7 @@ prototype["renderText"] = function renderText() {
     obj[2] = items;
     obj[3] = tmp3;
     obj[4] = text;
-    tmp4 = callback2(require("../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+    tmp4 = callback2(Text /* Text */.Text, obj);
   }
   return tmp4;
 };
@@ -66,7 +70,7 @@ prototype["renderIcon"] = function renderIcon() {
     const tmp13 = closure_5;
     const tmp14 = callback2;
     const merged = Object.assign(tmp11);
-    const items = [callback2(require("IconUploader.tsx"), obj), ];
+    const items = [callback2(IconUploader, obj), ];
     let tmp14Result = null;
     if (null != error) {
       const obj1 = { style: null };
@@ -74,14 +78,14 @@ prototype["renderIcon"] = function renderIcon() {
       obj1[0] = items1;
       const merged1 = Object.assign(errorProps);
       obj1.children = error;
-      tmp14Result = tmp14(require("../../design/void/native.tsx") /* Button */.LegacyText, obj1);
+      tmp14Result = tmp14(Button /* Button */.LegacyText, obj1);
     }
     items[1] = tmp14Result;
     obj[1] = items;
     return tmp12(tmp13, obj);
   } else {
     if (null == source) {
-      obj = require("../../design/shared.tsx") /* AccessibilityAnnouncer */;
+      obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
       if (obj.isThemeLight(this.context.theme)) {
         darkSource = tmp2;
       }

@@ -1,3 +1,4 @@
+import { useOpenProfileSettings } from "../../profile_customization/useOpenProfileSettings.tsx";
 // discord_app/modules/collectibles/native/useHandleUseNow.tsx
 import noop from "noop";
 import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS";
@@ -41,7 +42,7 @@ export const useHandleUseNow = function useHandleUseNow(onSuccess) {
   let obj = onSuccess(10047);
   handleUseNow = obj.useHandleUseNow({ product, onSuccess: callback, onError: callback1 });
   ({ handleUseNow, isApplying, canUseNow } = handleUseNow);
-  const tmp4 = require("../../profile_customization/useOpenProfileSettings.tsx")({ analyticsLocations });
+  const tmp4 = useOpenProfileSettings({ analyticsLocations });
   importDefault = tmp4;
   obj = {
     handleUseNow,

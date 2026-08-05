@@ -1,13 +1,16 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { SettingsWebBrowserScreen } from "../../web_browser/native/SettingsWebBrowserScreen.tsx";
+import { useWebBrowserSettingOptions } from "SelectWebBrowserSetting.tsx";
 // discord_app/modules/user_settings/defs/native/WebBrowserSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["C+DkPu"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["C+DkPu"]);
   },
   usePredicate() {
-    return require("SelectWebBrowserSetting.tsx") /* useWebBrowserSettingOptions */.useWebBrowserSettingOptions().length > 1;
+    return useWebBrowserSettingOptions /* useWebBrowserSettingOptions */.useWebBrowserSettingOptions().length > 1;
   },
   parent: null,
   IconComponent: require("GlobeEarthIcon").GlobeEarthIcon,
@@ -16,7 +19,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.BROWSER,
   getComponent() {
-    return require("../../web_browser/native/SettingsWebBrowserScreen.tsx").default;
+    return SettingsWebBrowserScreen.default;
   }
 };
 const route = createToggle.createRoute(obj);

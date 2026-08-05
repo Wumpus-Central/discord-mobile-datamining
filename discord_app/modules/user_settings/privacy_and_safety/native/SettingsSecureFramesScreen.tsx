@@ -1,3 +1,6 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getCurrentUserSigningKey } from "../../../rtc/SecureFramesUtils.tsx";
 // discord_app/modules/user_settings/privacy_and_safety/native/SettingsSecureFramesScreen.tsx
 import useSecureFramesVerifiedUserIds from "useSecureFramesVerifiedUserIds";
 import { View } from "map";
@@ -128,15 +131,15 @@ export default function SettingsSecureFramesScreen() {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.header, children: null };
   obj = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["9Q/PQv"]);
-  const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["9Q/PQv"]);
+  const items = [callback(Text /* Text */.Text, obj), ];
   const obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
   const obj2 = { helpArticle: null };
-  obj2[0] = require("../../../rtc/SecureFramesUtils.tsx") /* getCurrentUserSigningKey */.getSecureFramesHelpdeskArticle();
-  obj1[2] = intl2.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["8IwQfG"], obj2);
-  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  obj2[0] = getCurrentUserSigningKey /* getCurrentUserSigningKey */.getSecureFramesHelpdeskArticle();
+  obj1[2] = intl2.format(getSystemLocale /* getSystemLocale */.t["8IwQfG"], obj2);
+  items[1] = callback(Text /* Text */.Text, obj1);
   obj[1] = items;
   const items1 = [callback2(View, obj), callback(SettingsSecureFramesFooter, {})];
   obj[1] = items1;

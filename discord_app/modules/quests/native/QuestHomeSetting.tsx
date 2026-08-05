@@ -1,3 +1,5 @@
+import { EmptyStateNoQuestsAvailable } from "QuestHome.tsx";
+import { QuestHomeHeaderTitle } from "useQuestHomeHeader.tsx";
 // discord_app/modules/quests/native/QuestHomeSetting.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -102,7 +104,7 @@ export default function QuestHomeSetting() {
     zustandStore.resetState();
   }, []);
   const field = zustandStore.useField("scrollToQuestId");
-  require("useQuestHomeHeader.tsx")({ setSelectedSortMethod: tmp4, setSelectedFilters: tmp7, selectedFilters: tmp6, selectedSortMethod: tmp3 });
+  QuestHomeHeaderTitle({ setSelectedSortMethod: tmp4, setSelectedFilters: tmp7, selectedFilters: tmp6, selectedSortMethod: tmp3 });
   obj = { containerStyle: tmp.container, isNavigationComplete: tmp10[0], scrollToQuestId: field, sortMethod: tmp3, filters: tmp6, onClearFilters: callback };
-  return jsx(require("QuestHome.tsx"), { containerStyle: tmp.container, isNavigationComplete: tmp10[0], scrollToQuestId: field, sortMethod: tmp3, filters: tmp6, onClearFilters: callback });
+  return jsx(EmptyStateNoQuestsAvailable, { containerStyle: tmp.container, isNavigationComplete: tmp10[0], scrollToQuestId: field, sortMethod: tmp3, filters: tmp6, onClearFilters: callback });
 };

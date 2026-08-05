@@ -1,3 +1,4 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/visual_effect_view/native/overrides/VEVOO.tsx
 import { ScrollView } from "toggle";
 import getUserAgnosticState from "getUserAgnosticState";
@@ -64,7 +65,7 @@ let closure_8 = createCacheKey.createStyles(obj);
 let closure_9 = { code: "function VEVOOTsx1(){const{withSpring,y,px8,DEV_WIDGET_SIZE,springUnclamped,x}=this.__closure;return{top:withSpring(y.get()-px8+DEV_WIDGET_SIZE,springUnclamped),left:withSpring(x.get()-px8,springUnclamped)};}" };
 let obj3 = { position: "absolute", right: require("Themes").space.PX_8, top: require("Themes").space.PX_8 };
 const memoResult = importAllResult.memo(function VisualEffectViewOverrideOverlay(arg0) {
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [getUserAgnosticState];
   let tmp = null;
   if (obj.useStateFromStores(items, () => getUserAgnosticState.get("visual_effect_view_overrides"))) {

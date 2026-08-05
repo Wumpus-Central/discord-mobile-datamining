@@ -1,3 +1,8 @@
+import { registerAsset } from "../../../../../_runtime/14355_registerAsset.js";
+import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/guild_role_subscriptions/native/manage_subscriptions/ResubscribedAlert.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -23,23 +28,23 @@ const result = require("jsxProd").fileFinishedImporting("modules/guild_role_subs
 export default function ResubscribedAlert(onClose) {
   const tmp = createCacheKey();
   let obj = { confirmText: null, onConfirm: null, style: null, children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["NX+WJN"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["NX+WJN"]);
   obj[1] = onClose.onClose;
   obj[2] = tmp.container;
   obj = { style: tmp.body, children: null };
-  obj = { source: require("../../../../../_runtime/14355_registerAsset.js"), style: tmp.headerImage };
-  const items = [callback(closure_4, obj), callback(require("../../../../design/void/native.tsx") /* Button */.Spacer, { size: 27 }), , , ];
+  obj = { source: registerAsset, style: tmp.headerImage };
+  const items = [callback(closure_4, obj), callback(Button /* Button */.Spacer, { size: 27 }), , , ];
   const obj1 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[3] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.oPV2cy);
-  items[2] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
-  items[3] = callback(require("../../../../design/void/native.tsx") /* Button */.Spacer, { size: 12 });
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.oPV2cy);
+  items[2] = callback(Text /* Text */.Text, obj1);
+  items[3] = callback(Button /* Button */.Spacer, { size: 12 });
   const obj2 = { variant: "text-md/normal", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };
-  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj2[3] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.DdRizV);
-  items[4] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj2[3] = intl3.string(getSystemLocale /* getSystemLocale */.t.DdRizV);
+  items[4] = callback(Text /* Text */.Text, obj2);
   obj[1] = items;
   obj[3] = callback2(closure_3, obj);
-  return callback(require("../../../../components_native/common/Alert.tsx"), obj);
+  return callback(componentDidMount, obj);
 };

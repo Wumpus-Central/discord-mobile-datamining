@@ -1,3 +1,9 @@
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { u } from "../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
+import { updateSaturation } from "../../themes/native/updateSaturation.tsx";
+import { setSystemTheme } from "../../user_settings/ThemeActionCreators.tsx";
+import { A11Y_FEATURE_MAP } from "AccessibilityPreferencesSharedValue.tsx";
+import { AccessibilityFeatureFlags } from "AccessibilitySystemFeatures.tsx";
 // discord_app/modules/a11y/native/AccessibilityManager.tsx
 import AccessibilityFeatureFlags from "AccessibilityFeatureFlags";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -14,19 +20,19 @@ let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImp
 export default {
   init() {
     const self = this;
-    require("AccessibilitySystemFeatures.tsx").init();
+    AccessibilityFeatureFlags.init();
     this.updateNativeColors();
     this.updateMotionSettings();
     maybeApplyNoTextColorForLightCustomTheme.addChangeListener(this.updateNativeColors);
     maybeApplyNoTextColorForLightCustomTheme.addChangeListener(this.updateMotionSettings);
-    let obj = require("AccessibilitySystemFeatures.tsx");
-    const subscription = require("../../../Dispatcher.tsx").subscribe("CONNECTION_OPEN", this.updateMotionSettings);
+    let obj = AccessibilityFeatureFlags;
+    const subscription = dispatcher.subscribe("CONNECTION_OPEN", this.updateMotionSettings);
     closure_5.addChangeListener(this.updateSystemAppearance);
     const listener = closure_4.addEventListener("screenReaderChanged", (arg0) => {
       const result = self.updateScreenReaderEnabled(arg0);
     });
-    const obj2 = require("../../../Dispatcher.tsx");
-    const subscription1 = require("../../../Dispatcher.tsx").subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
+    const obj2 = dispatcher;
+    const subscription1 = dispatcher.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
       let obj = callback(table[7]);
       obj = { colorblind_enabled: colorblindMode.colorblindMode };
       obj.track(constants.LOCAL_SETTINGS_UPDATED, obj);
@@ -34,10 +40,10 @@ export default {
     let result = this.startAnnouncementQueue();
   },
   updateNativeColors() {
-    require("../../themes/native/updateSaturation.tsx") /* updateSaturation */.updateSaturation(maybeApplyNoTextColorForLightCustomTheme.saturation);
+    updateSaturation /* updateSaturation */.updateSaturation(maybeApplyNoTextColorForLightCustomTheme.saturation);
   },
   updateMotionSettings() {
-    require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx")(require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.accessibilityPreferencesSharedValue, { reduceMotion: maybeApplyNoTextColorForLightCustomTheme.useReducedMotion, prefersCrossfades: maybeApplyNoTextColorForLightCustomTheme.systemPrefersCrossfades });
+    u(A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.accessibilityPreferencesSharedValue, { reduceMotion: maybeApplyNoTextColorForLightCustomTheme.useReducedMotion, prefersCrossfades: maybeApplyNoTextColorForLightCustomTheme.systemPrefersCrossfades });
   },
   checkScreenreaderEnabled() {
     const self = this;
@@ -99,7 +105,7 @@ export default {
     })();
   },
   updateScreenReaderEnabled(screenReaderEnabled) {
-    require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx")(require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.accessibilityPreferencesSharedValue, { screenReaderEnabled });
+    u(A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.accessibilityPreferencesSharedValue, { screenReaderEnabled });
   },
   updateSystemAppearance(colorScheme) {
     let DARK = SystemTheme.NO_PREFERENCE;
@@ -109,7 +115,7 @@ export default {
     } else if ("dark" === colorScheme) {
       DARK = tmp.DARK;
     }
-    require("../../user_settings/ThemeActionCreators.tsx") /* setSystemTheme */.setSystemTheme(DARK);
+    setSystemTheme /* setSystemTheme */.setSystemTheme(DARK);
   },
   startAnnouncementQueue() {
     const set = new Set();

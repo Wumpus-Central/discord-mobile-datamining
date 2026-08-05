@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/spoiler_channels/SpoilerChannelUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import initialize from "initialize";
@@ -51,7 +52,7 @@ export const useGetSpoilerGatingChannelId = function useGetSpoilerGatingChannelI
   const _require = stateFromStores;
   const items = [initialize, ensureGuildLoaded];
   const items1 = [stateFromStores];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     if (outer1_3 !== undefined) {
       if (obj3 !== undefined) {
         let id1 = null;
@@ -89,13 +90,13 @@ export const useIsChannelSpoilerGated = function useIsChannelSpoilerGated(stateF
   const _require = stateFromStores;
   const items = [initialize, ensureGuildLoaded];
   const items1 = [stateFromStores];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_4(closure_0, outer1_3, outer1_2), items1);
+  return _initialize.useStateFromStores(items, () => outer1_4(closure_0, outer1_3, outer1_2), items1);
 };
 export const useShouldShowSpoilerGateForChannelId = function useShouldShowSpoilerGateForChannelId(arg0) {
   const _require = arg0;
   const items = [ensureGuildLoaded, initialize];
   const items1 = [arg0];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_4(outer1_2.getChannel(closure_0), outer1_3, outer1_2), items1);
+  return _initialize.useStateFromStores(items, () => outer1_4(outer1_2.getChannel(closure_0), outer1_3, outer1_2), items1);
 };
 export const shouldShowSpoilerGateForChannelId = function shouldShowSpoilerGateForChannelId(channelId) {
   let tmp = null != channelId;

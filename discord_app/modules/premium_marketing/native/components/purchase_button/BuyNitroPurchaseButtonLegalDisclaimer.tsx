@@ -1,3 +1,7 @@
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { combined } from "../../../../../utils/HelpdeskUtils.tsx";
+import { set } from "../../../../../utils/PlatformUtils.tsx";
+import { getPremiumPlanItem } from "../../../../../utils/PremiumUtils.tsx";
 // discord_app/modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButtonLegalDisclaimer.tsx
 import "noop";
 import ME from "ME";
@@ -28,20 +32,20 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
   if (null == interval) {
     return null;
   } else {
-    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     const format = intl.format;
     if (!isTrial) {
       if (isDiscounted) {
         let obj = { buttonText: null, interval: null, cancelSubscriptionArticle: null, paidServiceTermsArticle: null };
         obj[0] = ctaText;
-        obj[1] = require("../../../../../utils/PremiumUtils.tsx").formatInterval(item.interval);
-        const obj5 = require("../../../../../utils/PremiumUtils.tsx");
-        obj[2] = require("../../../../../utils/HelpdeskUtils.tsx").getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
-        const obj6 = require("../../../../../utils/HelpdeskUtils.tsx");
-        obj[3] = require("../../../../../utils/HelpdeskUtils.tsx").getArticleURL(constants.PAID_TERMS);
+        obj[1] = getPremiumPlanItem.formatInterval(item.interval);
+        const obj5 = getPremiumPlanItem;
+        obj[2] = combined.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
+        const obj6 = combined;
+        obj[3] = combined.getArticleURL(constants.PAID_TERMS);
         let formatResult = format(tmp3(1236).t["3uC7vj"], obj);
         let tmp10 = tmp3;
-        const obj7 = require("../../../../../utils/HelpdeskUtils.tsx");
+        const obj7 = combined;
       } else {
         let tmp3Result = tmp3(500);
         let t = tmp3(1236).t;
@@ -60,17 +64,17 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
       obj1[2] = formatResult;
       jsx(tmp10(4281).Text, { style: null, variant: "text-xxs/medium", children: null });
     }
-    const tmp3Result1 = require("../../../../../utils/PlatformUtils.tsx") /* set */;
+    const tmp3Result1 = set /* set */;
     t = tmp3(1236).t;
-    const isAndroidResult1 = require("../../../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
+    const isAndroidResult1 = set /* set */.isAndroid();
     t = { paidURL: null, interval: null, cancelURL: null };
     t[0] = constants2.PAID_TERMS;
-    const tmp14 = require("../../../../../utils/PlatformUtils.tsx") /* set */.isAndroid() ? t.tINI9V : t.ZWXtAj;
-    t[1] = require("../../../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.getIntervalStringAsNoun(item.interval);
-    const tmp3Result2 = require("../../../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */;
-    item = require("../../../../../utils/HelpdeskUtils.tsx").getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
+    const tmp14 = set /* set */.isAndroid() ? t.tINI9V : t.ZWXtAj;
+    t[1] = getPremiumPlanItem /* getPremiumPlanItem */.getIntervalStringAsNoun(item.interval);
+    const tmp3Result2 = getPremiumPlanItem /* getPremiumPlanItem */;
+    item = combined.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
     t[2] = item;
     format(tmp14, t);
-    const obj11 = require("../../../../../utils/HelpdeskUtils.tsx");
+    const obj11 = combined;
   }
 };

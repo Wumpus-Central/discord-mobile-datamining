@@ -1,3 +1,4 @@
+import { shouldShowAgeGateForVoiceChannel } from "AgeGateUtils.tsx";
 // discord_app/modules/age_gate/getPreviousSafeRouteForNsfwReturn.native.tsx
 import getIdFromHistoryItem from "getIdFromHistoryItem";
 import closure_5 from "getIdFromHistoryItem";
@@ -29,7 +30,7 @@ export default function getPreviousSafeRouteForNsfwReturn() {
         if (null != channel) {
           let tmp11 = require;
           let tmp12 = dependencyMap;
-          let obj4 = require("AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
+          let obj4 = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
           if (!obj4.isChannelContentGated(channel)) {
             let tmp11Result = tmp11(5853);
             if (!tmp11Result.isChannelSpoilerGated(channel)) {
@@ -52,7 +53,7 @@ export default function getPreviousSafeRouteForNsfwReturn() {
           if (null != defaultChannel) {
             let tmp13 = require;
             let tmp14 = dependencyMap;
-            let obj7 = require("AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
+            let obj7 = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
             if (!obj7.isChannelContentGated(defaultChannel)) {
               let tmp13Result = tmp13(5853);
               if (!tmp13Result.isChannelSpoilerGated(defaultChannel)) {

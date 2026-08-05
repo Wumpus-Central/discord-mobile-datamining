@@ -1,3 +1,5 @@
+import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { styles } from "../../../../fastest_list/placeholders/useFastestListTableRowPlaceholderConfig.native.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UsersFastList.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "UserRowSubLabel";
@@ -14,14 +16,14 @@ function Placeholder(arg0) {
   let end;
   let start;
   ({ start, end } = arg0);
-  let obj = require("../../../../fastest_list/placeholders/useFastestListTableRowPlaceholderConfig.native.tsx") /* styles */;
+  let obj = styles /* styles */;
   const fastestListTableRowPlaceholderStyles = obj.useFastestListTableRowPlaceholderStyles();
   obj = { end, start, label: null, icon: null, height: "100%" };
   const items = [fastestListTableRowPlaceholderStyles.placeholderUsername, callback(importAllResult.useState(() => ({ width: `${10 + 80 * Math.random() | 0}%` })), 1)[0]];
   obj[2] = callback2(View, { style: items });
   obj = { style: fastestListTableRowPlaceholderStyles.placeholderAvatar };
   obj[3] = callback2(View, obj);
-  return callback2(require("../../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
+  return callback2(TableRowInner /* TableRowInner */.TableRow, obj);
 }
 function PlaceholderSection() {
   return callback2(View, {});

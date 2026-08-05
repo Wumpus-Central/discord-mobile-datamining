@@ -1,3 +1,6 @@
+import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { AccessibilityAnnouncer } from "../../../../../../design/shared.tsx";
+import { hexToRgba } from "../../../../../../utils/ColorUtils.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx
 import noop from "noop";
 import createCacheKey from "createCacheKey";
@@ -13,39 +16,39 @@ import createCacheKey from "createCacheKey";
 
 const require = arg1;
 const result = createCacheKey.experimental_createToken((theme) => {
-  const obj = require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
-  const unsafe_rawColors = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
-  return require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
+  const obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const unsafe_rawColors = Themes.unsafe_rawColors;
+  return AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
 });
 const result1 = createCacheKey.experimental_createToken((theme) => {
   if (obj.isThemeDark(theme.theme)) {
-    let PRIMARY_600 = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_600;
+    let PRIMARY_600 = Themes.unsafe_rawColors.PRIMARY_600;
   } else {
-    PRIMARY_600 = require("../../../../../../utils/ColorUtils.tsx") /* hexToRgba */.hexWithOpacity(require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_500, 0.3);
-    const tmpResult = require("../../../../../../utils/ColorUtils.tsx") /* hexToRgba */;
+    PRIMARY_600 = hexToRgba /* hexToRgba */.hexWithOpacity(Themes.unsafe_rawColors.PRIMARY_500, 0.3);
+    const tmpResult = hexToRgba /* hexToRgba */;
   }
   return PRIMARY_600;
 });
 const result2 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
-  const unsafe_rawColors = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
-  return require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
+  const obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const unsafe_rawColors = Themes.unsafe_rawColors;
+  return AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
 });
 const result3 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
-  const unsafe_rawColors = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
-  return require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
+  const obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const unsafe_rawColors = Themes.unsafe_rawColors;
+  return AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
 });
 const result4 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
-  const unsafe_rawColors = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
-  return require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_100;
+  const obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const unsafe_rawColors = Themes.unsafe_rawColors;
+  return AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_100;
 });
 const result5 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
-  const isThemeDarkResult = require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeDark(theme.theme);
-  const hexWithOpacity = require("../../../../../../utils/ColorUtils.tsx") /* hexToRgba */.hexWithOpacity;
-  const unsafe_rawColors = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
+  const obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const isThemeDarkResult = AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(theme.theme);
+  const hexWithOpacity = hexToRgba /* hexToRgba */.hexWithOpacity;
+  const unsafe_rawColors = Themes.unsafe_rawColors;
   if (isThemeDarkResult) {
     let hexWithOpacityResult = hexWithOpacity(unsafe_rawColors.WHITE, 0.06);
   } else {
@@ -54,23 +57,23 @@ const result5 = createCacheKey.experimental_createToken((theme) => {
   return hexWithOpacityResult;
 });
 const result6 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
-  const unsafe_rawColors = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
-  return require("../../../../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_600 : unsafe_rawColors.PRIMARY_100;
+  const obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const unsafe_rawColors = Themes.unsafe_rawColors;
+  return AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_600 : unsafe_rawColors.PRIMARY_100;
 });
 const result7 = createCacheKey.experimental_createToken((theme) => {
   let str = "#666b73";
   if (!obj.isThemeDark(theme.theme)) {
-    str = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_300;
+    str = Themes.unsafe_rawColors.PRIMARY_300;
   }
   return str;
 });
 const result8 = createCacheKey.experimental_createToken((theme) => {
   if (obj.isThemeDark(theme.theme)) {
-    let PRIMARY_600 = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_600;
+    let PRIMARY_600 = Themes.unsafe_rawColors.PRIMARY_600;
   } else {
-    PRIMARY_600 = require("../../../../../../utils/ColorUtils.tsx") /* hexToRgba */.hexWithOpacity(require("../../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_200, 0.3);
-    const tmpResult = require("../../../../../../utils/ColorUtils.tsx") /* hexToRgba */;
+    PRIMARY_600 = hexToRgba /* hexToRgba */.hexWithOpacity(Themes.unsafe_rawColors.PRIMARY_200, 0.3);
+    const tmpResult = hexToRgba /* hexToRgba */;
   }
   return PRIMARY_600;
 });

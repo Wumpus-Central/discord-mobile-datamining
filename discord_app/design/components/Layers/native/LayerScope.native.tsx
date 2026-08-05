@@ -1,3 +1,5 @@
+import { useInitialValue } from "../../../../hooks/useInitialValue.tsx";
+import { add } from "LayerContext.native.tsx";
 // discord_app/design/components/Layers/native/LayerScope.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -52,7 +54,7 @@ export const LayerScope = function LayerScope(arg0) {
   let zIndex;
   ({ children, zIndex } = arg0);
   const obj = {
-    value: require("../../../../hooks/useInitialValue.tsx")(() => {
+    value: useInitialValue(() => {
       const layerContextManager = new callback(table[6]).LayerContextManager();
       return layerContextManager;
     }),
@@ -60,5 +62,5 @@ export const LayerScope = function LayerScope(arg0) {
   };
   const items = [children, callback2(Layer, { zIndex })];
   obj[1] = items;
-  return callback3(require("LayerContext.native.tsx") /* add */.LayerContext.Provider, obj);
+  return callback3(add /* add */.LayerContext.Provider, obj);
 };

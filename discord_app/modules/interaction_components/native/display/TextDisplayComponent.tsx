@@ -1,3 +1,4 @@
+import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
 // discord_app/modules/interaction_components/native/display/TextDisplayComponent.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
@@ -21,8 +22,8 @@ if (!set.isAndroid()) {
     let obj = channelId(8026);
     const componentContainerId = obj.useComponentContainerId();
     channelId = channelId.getChannelId();
-    require("../../../../../_runtime/metro/00038__.js")(null != channelId, "channelId not available in TextDisplayComponent");
-    let obj1 = require("../../../markup/MarkupUtils.tsx");
+    00038__(null != channelId, "channelId not available in TextDisplayComponent");
+    let obj1 = require("../../../markup/MarkupUtils.tsx") /* get defaultRules */;
     let obj2 = channelId(8011);
     obj = { channelId, renderOptions: closure_6 };
     const parseToASTResult = obj1.parseToAST(content.content, true, obj2.getInitialParserState(obj));

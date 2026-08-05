@@ -1,3 +1,4 @@
+import { combined } from "../../../../../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkLanding.tsx
 import noop from "noop";
 import { PlayStationLinkModalScenes as closure_4 } from "PlayStationLinkModalScenes";
@@ -14,9 +15,9 @@ export const PlayStationLinkLanding = function PlayStationLinkLanding(platformTy
   let obj = navigation(1480);
   navigation = obj.useNavigation();
   const tmp = callback();
-  const articleURL = require("../../../../../../utils/HelpdeskUtils.tsx").getArticleURL(HelpdeskArticles.PS_CONNECTION);
+  const articleURL = combined.getArticleURL(HelpdeskArticles.PS_CONNECTION);
   let intl = navigation(1236).intl;
-  const obj2 = require("../../../../../../utils/HelpdeskUtils.tsx");
+  const obj2 = combined;
   let items = [navigation];
   const memo = React.useMemo(() => {
     let obj = { label: null, subLabel: null, icon: null };

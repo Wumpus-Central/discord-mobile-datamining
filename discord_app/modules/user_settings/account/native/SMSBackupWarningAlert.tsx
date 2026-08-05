@@ -1,3 +1,4 @@
+import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
 // discord_app/modules/user_settings/account/native/SMSBackupWarningAlert.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -34,5 +35,5 @@ export default function SMSBackupWarningAlert(onConfirm) {
   obj[3] = intl4.string(onConfirm(1236).t.EDU2Eg);
   items[1] = callback(onConfirm(4281).Text, obj);
   obj[4] = items;
-  return callback2(require("../../../../components_native/common/Alert.tsx"), obj);
+  return callback2(componentDidMount, obj);
 };

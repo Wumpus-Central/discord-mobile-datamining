@@ -1,3 +1,4 @@
+import { MAX_RESULTS_PER_PAGE } from "MemberVerificationTypes.tsx";
 // discord_app/modules/guild_member_verification/MemberVerificationUtils.tsx
 import items from "items";
 import { GuildFeatures } from "ME";
@@ -15,7 +16,7 @@ export const isValidFormResponse = function isValidFormResponse(required) {
     if (null == response) {
       return false;
     } else {
-      if (require("MemberVerificationTypes.tsx") /* MAX_RESULTS_PER_PAGE */.VerificationFormFieldTypes.TERMS !== field_type) {
+      if (MAX_RESULTS_PER_PAGE /* MAX_RESULTS_PER_PAGE */.VerificationFormFieldTypes.TERMS !== field_type) {
         if (tmp4(4105).VerificationFormFieldTypes.VERIFICATION !== field_type) {
           if (tmp4(4105).VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
             if (tmp4(4105).VerificationFormFieldTypes.PARAGRAPH !== field_type) {

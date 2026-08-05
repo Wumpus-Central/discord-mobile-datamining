@@ -1,3 +1,4 @@
+import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/channel/getFlattedChannelList.tsx
 const result = require("set").fileFinishedImporting("modules/channel/getFlattedChannelList.tsx");
 
@@ -9,7 +10,7 @@ export default function getFlattenedChannelList(arg0, arg1) {
       return true;
     };
   }
-  const mapped = require("../../../_runtime/00012_apply.js")(arg0).map((channel) => {
+  const mapped = apply(arg0).map((channel) => {
     if ("null" === channel.channel.id) {
       let items = dependencyMap[channel.channel.id];
     } else {
@@ -17,7 +18,7 @@ export default function getFlattenedChannelList(arg0, arg1) {
     }
     return items;
   });
-  const arr = require("../../../_runtime/00012_apply.js")(arg0);
+  const arr = apply(arg0);
   const flattenDeepResult = mapped.flattenDeep();
   return mapped.flattenDeep().filter(fn).value();
 };

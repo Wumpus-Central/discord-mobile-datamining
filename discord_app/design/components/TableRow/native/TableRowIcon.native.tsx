@@ -1,3 +1,4 @@
+import { IconSizes } from "../../../void/Icon/native/Icon.tsx";
 // discord_app/design/components/TableRow/native/TableRowIcon.native.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import "noop";
@@ -225,9 +226,9 @@ export const TableRowIcon = function TableRowIcon(arg0) {
       let translucent = tmp.default;
       const color = translucent.color;
       if ("default" === variant) {
-        let REFRESH_SMALL_16 = require("../../../void/Icon/native/Icon.tsx") /* IconSizes */.IconSizes.MEDIUM;
+        let REFRESH_SMALL_16 = IconSizes /* IconSizes */.IconSizes.MEDIUM;
       } else {
-        REFRESH_SMALL_16 = require("../../../void/Icon/native/Icon.tsx") /* IconSizes */.IconSizes.REFRESH_SMALL_16;
+        REFRESH_SMALL_16 = IconSizes /* IconSizes */.IconSizes.REFRESH_SMALL_16;
       }
       let str3 = "md";
       if ("default" !== variant) {
@@ -260,7 +261,7 @@ export const TableRowIcon = function TableRowIcon(arg0) {
         obj[0] = color;
         obj[1] = source;
         obj[2] = REFRESH_SMALL_16;
-        tmp11Result = tmp11(require("../../../void/Icon/native/Icon.tsx"), obj);
+        tmp11Result = tmp11(IconSizes, obj);
       }
       obj[1] = tmp11Result;
       tmp11Result = tmp11(View, obj);

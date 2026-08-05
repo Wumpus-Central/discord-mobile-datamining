@@ -1,3 +1,6 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { useActivityTimer } from "../hooks/useActivityTimer.tsx";
 // discord_app/modules/user_profile/native/UserProfileActivityTimebar.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -26,10 +29,10 @@ export default function UserProfileActivityTimebar(arg0) {
   let start;
   let style;
   ({ start, end, style } = arg0);
-  const tmp2 = require("../../themes/experiments/MobileVisualRefreshExperiment.tsx")("UserProfileActivityTimebar");
+  const tmp2 = useIsMobileVisualRefreshExperimentEnabled("UserProfileActivityTimebar");
   const tmp3 = createCacheKey();
   let tmp5;
-  ({ elapsed, duration, percentage } = require("../hooks/useActivityTimer.tsx")({ start, end }));
+  ({ elapsed, duration, percentage } = useActivityTimer({ start, end }));
   if (!tmp2) {
     let obj = { fontFamily: null };
     obj[0] = Fonts.CODE_NORMAL;
@@ -49,7 +52,7 @@ export default function UserProfileActivityTimebar(arg0) {
   obj3[3] = str;
   let tmp10Result = tmp10(12210);
   obj3[4] = tmp10Result.formatTime(elapsed);
-  const items2 = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3), ];
+  const items2 = [callback(Text /* Text */.Text, obj3), ];
   const obj4 = { variant: "text-xs/normal", style: tmp5, tabularNumbers: null, color: null, children: null };
   obj4[2] = tmp2;
   let str2;
@@ -59,7 +62,7 @@ export default function UserProfileActivityTimebar(arg0) {
   obj4[3] = str2;
   tmp10Result = tmp10(12210);
   obj4[4] = tmp10Result.formatTime(duration);
-  items2[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj4);
+  items2[1] = callback(Text /* Text */.Text, obj4);
   obj2[1] = items2;
   items1[1] = closure_6(View, obj2);
   obj[1] = items1;

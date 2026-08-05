@@ -1,3 +1,18 @@
+import { metadata } from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { CheckmarkLargeBoldIcon } from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeBoldIcon.tsx";
+import { LockIcon } from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { hexToRgba } from "../../../utils/ColorUtils.tsx";
+import { useDefaultVariantIndex } from "../hooks/useDefaultVariantIndex.tsx";
+import { NameplateCardPreview } from "../nameplates/native/NameplateCardPreview.tsx";
+import { filterLayer } from "../profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
+import { getProductOrbPrice } from "../utils/CollectiblesProductUtils.tsx";
+import { AvatarDecorationSampleV2 } from "AvatarDecorationSampleV2.tsx";
+import { BundleStaticPreviewContent } from "BundleSampleV2.tsx";
+import { ProfileEffectSample } from "ProfileEffectSampleV2.tsx";
 // discord_app/modules/collectibles/native/CollectiblesShopCardAssetTileV2.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "ProfileEffectSample";
@@ -13,13 +28,13 @@ let metroImportAll;
 const require = arg1;
 function PurchasedAssetOverlay() {
   const tmp = callback3();
-  obj = { style: tmp.overlayContainer, children: callback2(require("../../../design/components/Icon/native/redesign/generated/CheckmarkLargeBoldIcon.tsx") /* CheckmarkLargeBoldIcon */.CheckmarkLargeBoldIcon, obj) };
+  obj = { style: tmp.overlayContainer, children: callback2(CheckmarkLargeBoldIcon /* CheckmarkLargeBoldIcon */.CheckmarkLargeBoldIcon, obj) };
   obj = { size: "lg", style: tmp.overlayIcon };
   return callback2(closure_5, obj);
 }
 function DisabledAssetOverlay() {
   const tmp = callback3();
-  obj = { style: tmp.overlayContainer, children: callback2(require("../../../design/components/Icon/native/redesign/generated/LockIcon.tsx") /* LockIcon */.LockIcon, obj) };
+  obj = { style: tmp.overlayContainer, children: callback2(LockIcon /* LockIcon */.LockIcon, obj) };
   obj = { size: "lg", style: tmp.overlayIcon };
   return callback2(closure_5, obj);
 }
@@ -33,9 +48,9 @@ function ProductPreview(arg0) {
   ({ product, isPurchased } = arg0);
   ({ isDisabled, disableBundleStaticBackground, muteBundleStaticBackground, cardWidth } = arg0);
   const tmp = callback3();
-  let obj = require("../utils/CollectiblesProductUtils.tsx") /* getProductOrbPrice */;
+  let obj = getProductOrbPrice /* getProductOrbPrice */;
   const productType = obj.getProductType(product);
-  if (productType !== require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT) {
+  if (productType !== CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT) {
     if (productType !== tmp2(1901).CollectiblesItemType.PROFILE_FRAME) {
       let str = "75%";
     }
@@ -93,14 +108,14 @@ function ProductPreviewInner(arg0) {
     obj[5] = disableBundleStaticBackground;
     obj[6] = muteBundleStaticBackground;
     obj[7] = memo;
-    return callback2(require("BundleSampleV2.tsx"), obj);
+    return callback2(BundleStaticPreviewContent, obj);
   } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
     obj = { source: null, style: null };
     const obj1 = { uri: null };
-    obj1[0] = require("../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js");
+    obj1[0] = metadata;
     obj[0] = obj1;
     obj[1] = tmp.externalProductImage;
-    return callback2(require("../../../components_native/common/FastImage.tsx"), obj);
+    return callback2(preload, obj);
   } else {
     const ALL = tmp2(679).FractionalPremiumSKUsSets.ALL;
     if (ALL.has(product.skuId)) {
@@ -118,28 +133,28 @@ function ProductPreviewInner(arg0) {
       if (tmp2(1901).CollectiblesItemType.AVATAR_DECORATION === type) {
         const obj3 = { item: null, size: 100 };
         obj3[0] = first;
-        return callback2(require("AvatarDecorationSampleV2.tsx"), obj3);
+        return callback2(AvatarDecorationSampleV2, obj3);
       } else if (tmp2(1901).CollectiblesItemType.PROFILE_EFFECT === type) {
         const obj4 = { style: null, children: null };
         obj4[0] = tmp.profileEffectContainer;
         const obj5 = { item: null, hideBackground: true };
         obj5[0] = first;
-        obj4[1] = callback2(require("ProfileEffectSampleV2.tsx"), obj5);
+        obj4[1] = callback2(ProfileEffectSample, obj5);
         return callback2(closure_5, obj4);
       } else if (tmp2(1901).CollectiblesItemType.PROFILE_FRAME === type) {
         const obj6 = { style: null, children: null };
         obj6[0] = tmp.profileFrameContainer;
         const obj7 = { profileFrame: null, previewWidth: null, previewHeight: null, profileBackgroundColor: null };
         obj7[0] = first;
-        obj7[1] = tmp2(9262).COLLECTIBLES_SHOP_CARD_WIDTH - require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32;
+        obj7[1] = tmp2(9262).COLLECTIBLES_SHOP_CARD_WIDTH - Themes.space.PX_32;
         obj7[2] = closure_9;
-        obj7[3] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW;
-        obj6[1] = callback2(require("../profile_frames/native/previews/ProfileFrameSamplePreview.tsx"), obj7);
+        obj7[3] = Themes.colors.BACKGROUND_BASE_LOW;
+        obj6[1] = callback2(filterLayer, obj7);
         return callback2(closure_5, obj6);
       } else if (tmp2(1901).CollectiblesItemType.NAMEPLATE === type) {
         const obj8 = { item: null };
         obj8[0] = first;
-        return callback2(require("../nameplates/native/NameplateCardPreview.tsx"), obj8);
+        return callback2(NameplateCardPreview, obj8);
       } else {
         return null;
       }
@@ -151,11 +166,11 @@ function AssetTileInternal(solidBackground) {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = require("../../../utils/ColorUtils.tsx") /* hexToRgba */;
+  let obj = hexToRgba /* hexToRgba */;
   const tmp = callback3();
-  const obj2 = require("../../../utils/ColorUtils.tsx") /* hexToRgba */;
+  const obj2 = hexToRgba /* hexToRgba */;
   let num = 0.8;
-  const token = require("../../../design/tokens/native/useToken.tsx") /* map */.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW);
+  const token = map /* map */.useToken(Themes.colors.BACKGROUND_BASE_LOW);
   if (flag) {
     num = 1;
   }
@@ -200,10 +215,10 @@ const memoResult = importAllResult.memo(function AssetTileV2(arg0) {
   let solidBackground;
   ({ product, isPurchased, isDisabled } = arg0);
   ({ solidBackground, disableBundleStaticBackground, muteBundleStaticBackground, cardWidth } = arg0);
-  let obj = require("../hooks/useDefaultVariantIndex.tsx") /* useDefaultVariantIndex */;
+  let obj = useDefaultVariantIndex /* useDefaultVariantIndex */;
   const defaultVariantIndex = obj.useDefaultVariantIndex(product);
   obj = { solidBackground, children: null };
-  obj = { product: require("../utils/CollectiblesProductUtils.tsx") /* getProductOrbPrice */.getSelectedProduct(product, defaultVariantIndex), isPurchased, isDisabled, disableBundleStaticBackground, muteBundleStaticBackground, cardWidth };
+  obj = { product: getProductOrbPrice /* getProductOrbPrice */.getSelectedProduct(product, defaultVariantIndex), isPurchased, isDisabled, disableBundleStaticBackground, muteBundleStaticBackground, cardWidth };
   const items = [callback2(ProductPreview, obj), , ];
   let tmp4Result = isPurchased;
   if (isPurchased) {

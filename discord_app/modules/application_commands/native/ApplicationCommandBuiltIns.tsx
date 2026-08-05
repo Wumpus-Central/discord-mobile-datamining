@@ -1,3 +1,5 @@
+import { set } from "../../../actions/AlertActionCreators.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/application_commands/native/ApplicationCommandBuiltIns.tsx
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -9,15 +11,15 @@ obj[4] = require("ApplicationCommandSectionType").ApplicationCommandInputType.BU
 obj[5] = require("TRUE_OPTION_NAME").BuiltInSectionId.BUILT_IN;
 Object.defineProperty(obj, "untranslatedDescription", {
   get: () => {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["26C4oi"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["26C4oi"]);
   },
   set: undefined
 });
 Object.defineProperty(obj, "displayDescription", {
   get: () => {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["26C4oi"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["26C4oi"]);
   },
   set: undefined
 });
@@ -48,7 +50,7 @@ obj.execute = function execute(arg0, channel) {
       obj1[0] = channelName;
       formatResult = intl2.format(tmp5(1236).t.IK1Qvs, obj1);
     }
-    let obj2 = require("../../../actions/AlertActionCreators.tsx");
+    let obj2 = set;
     obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
     obj2[0] = formatToPlainStringResult1;
     obj2[1] = formatResult;

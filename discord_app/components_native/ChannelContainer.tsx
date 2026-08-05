@@ -1,3 +1,6 @@
+import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
+import { useChatLayout } from "../modules/chat/native/useChatLayout.tsx";
+import { Notifications } from "common/Notifications.tsx";
 // discord_app/components_native/ChannelContainer.tsx
 import set from "set";
 import { View } from "AnnouncementChannelLurkerBar";
@@ -14,10 +17,10 @@ let unpackModuleId;
 const require = arg1;
 function NotificationsContainer() {
   let tmp4 = null;
-  if (require("../modules/chat/native/useChatLayout.tsx")().isChatBesideChannelList) {
+  if (useChatLayout().isChatBesideChannelList) {
     const obj = { style: null, children: null };
     obj[0] = tmp.container;
-    obj[1] = callback(require("common/Notifications.tsx"), {});
+    obj[1] = callback(Notifications, {});
     tmp4 = callback(View, obj);
   }
   return tmp4;
@@ -35,7 +38,7 @@ export const ChannelContainer = function ChannelContainer(children) {
   let dependencyMap;
   let React;
   let c4;
-  let obj = require("../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [handleConnectionOpen, ensureGuildLoaded];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const voiceChannelId = outer1_7.getVoiceChannelId();

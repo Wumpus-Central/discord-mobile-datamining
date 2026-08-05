@@ -1,3 +1,5 @@
+import { useRequest } from "../../hooks/useRequest.tsx";
+import { getPollVoteEventProperties } from "PollsActionCreators.tsx";
 // discord_app/modules/polls/useCreatePollFormData.tsx
 import useRequest from "useRequest";
 import _slicedToArray from "_slicedToArray";
@@ -81,7 +83,7 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
     tmp15 = 0 === found1.length;
   }
   const tmpResult2 = first(obj.useState({}), 2);
-  const tmpResult4 = first(require("../../hooks/useRequest.tsx")(require("PollsActionCreators.tsx").createPoll), 2);
+  const tmpResult4 = first(useRequest(getPollVoteEventProperties.createPoll), 2);
   const first4 = tmpResult4[0];
   const loading = tmp20.loading;
   let closure_16 = tmp21;

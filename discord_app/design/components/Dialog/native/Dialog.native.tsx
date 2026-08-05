@@ -1,3 +1,4 @@
+import { AccessibilityView } from "../../AccessibilityView/AccessibilityView.native.tsx";
 // discord_app/design/components/Dialog/native/Dialog.native.tsx
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";
@@ -20,5 +21,5 @@ export const Dialog = function Dialog(dialogKey) {
   }
   obj[3] = dialogKey;
   const merged1 = Object.assign(merged);
-  return jsx(require("../../AccessibilityView/AccessibilityView.native.tsx") /* AccessibilityView */.AccessibilityView, { style: items, accessibilityViewIsModal: true, onAccessibilityEscape: onDismiss, nativeID: null });
+  return jsx(AccessibilityView /* AccessibilityView */.AccessibilityView, { style: items, accessibilityViewIsModal: true, onAccessibilityEscape: onDismiss, nativeID: null });
 };

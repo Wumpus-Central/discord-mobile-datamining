@@ -1,3 +1,4 @@
+import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/media/native/Caption.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -22,5 +23,5 @@ export const Caption = function Caption(arg0) {
   const tmp = callback();
   const items = [tmp.labelContainer, style];
   const items1 = [tmp.captionText, textStyle];
-  return <View style={items}>{jsx(require("../../../design/void/native.tsx") /* Button */.LegacyText, { style: items1, children: label })}</View>;
+  return <View style={items}>{jsx(Button /* Button */.LegacyText, { style: items1, children: label })}</View>;
 };

@@ -1,3 +1,5 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/in_app_reports/native/components/InAppReportsExternalLinkElement.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -40,10 +42,10 @@ export default function ExternalLinksElement(elements) {
         if (!someResult) {
           obj = { style: null, variant: "heading-deprecated-12/extrabold", color: "text-default", accessibilityRole: "header", children: null };
           obj[0] = tmp.headerText;
-          const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-          obj[4] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.hvVgAZ).toUpperCase();
-          tmp5 = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
-          const str = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.hvVgAZ);
+          const intl = getSystemLocale /* getSystemLocale */.intl;
+          obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t.hvVgAZ).toUpperCase();
+          tmp5 = callback(Text /* Text */.Text, obj);
+          const str = intl.string(getSystemLocale /* getSystemLocale */.t.hvVgAZ);
         }
         const items = [tmp5, elements.map((data) => callback(closure_7, { data: data.data }, "external-link-" + arg1))];
         obj[1] = items;

@@ -1,3 +1,4 @@
+import { thumbHashToRGBA } from "../../../_runtime/14334_thumbHashToRGBA.js";
 // discord_app/modules/thumbhash/ThumbhashUtils.tsx
 function thumbHashToRGBA(arg0) {
   let obj = arg1;
@@ -155,7 +156,7 @@ function thumbHashToRGBA(arg0) {
   } else {
     tmp39 = items3;
   }
-  const result9 = require("../../../_runtime/14334_thumbHashToRGBA.js") /* thumbHashToRGBA */.thumbHashToApproximateAspectRatio(arg0);
+  const result9 = thumbHashToRGBA /* thumbHashToRGBA */.thumbHashToApproximateAspectRatio(arg0);
   let num17 = 32;
   if (result9 <= 1) {
     num17 = 32 * result9;
@@ -330,6 +331,6 @@ let result = require("set").fileFinishedImporting("modules/thumbhash/ThumbhashUt
 
 export const createThumbhashImageFromPlaceholder = function createThumbhashImageFromPlaceholder(placeholder) {
   const tmp = thumbHashToRGBA(Uint8Array.from(atob(placeholder), (str) => str.charCodeAt(0)), { detail: 1, pop: 1.1 });
-  return require("../../../_runtime/14334_thumbHashToRGBA.js") /* thumbHashToRGBA */.rgbaToDataURL(tmp.w, tmp.h, tmp.rgba);
+  return thumbHashToRGBA /* thumbHashToRGBA */.rgbaToDataURL(tmp.w, tmp.h, tmp.rgba);
 };
 export { thumbHashToRGBA };

@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/age_assurance/AgeVerificationConstants.tsx
 import { HelpdeskArticles } from "ME";
 import set from "getSystemLocale";
@@ -17,22 +18,22 @@ export const FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS = set;
 export const getAgeVerificationGetStartedSteps = function getAgeVerificationGetStartedSteps(arg0) {
   const _require = arg0;
   let obj = { title: null, description: null };
-  const intl = _require("../../intl/index.native.tsx").intl;
-  obj[0] = intl.string(_require("../../intl/index.native.tsx").t.HphYKp);
-  const intl2 = _require("../../intl/index.native.tsx").intl;
-  obj[1] = intl2.string(_require("../../intl/index.native.tsx").t["GCZC+9"]);
+  const intl = _getSystemLocale.intl;
+  obj[0] = intl.string(_getSystemLocale.t.HphYKp);
+  const intl2 = _getSystemLocale.intl;
+  obj[1] = intl2.string(_getSystemLocale.t["GCZC+9"]);
   const items = [obj, , ];
   obj = { title: null, description: null };
-  const intl3 = _require("../../intl/index.native.tsx").intl;
-  obj[0] = intl3.string(_require("../../intl/index.native.tsx").t.nkO4L3);
-  const intl4 = _require("../../intl/index.native.tsx").intl;
-  obj[1] = intl4.string(_require("../../intl/index.native.tsx").t.rHZFsH);
+  const intl3 = _getSystemLocale.intl;
+  obj[0] = intl3.string(_getSystemLocale.t.nkO4L3);
+  const intl4 = _getSystemLocale.intl;
+  obj[1] = intl4.string(_getSystemLocale.t.rHZFsH);
   items[1] = obj;
   obj = { title: null, description: null };
-  const intl5 = _require("../../intl/index.native.tsx").intl;
-  obj[0] = intl5.string(_require("../../intl/index.native.tsx").t.aVwLfn);
-  const intl6 = _require("../../intl/index.native.tsx").intl;
-  obj[1] = intl6.format(_require("../../intl/index.native.tsx").t.n5vd1E, {
+  const intl5 = _getSystemLocale.intl;
+  obj[0] = intl5.string(_getSystemLocale.t.aVwLfn);
+  const intl6 = _getSystemLocale.intl;
+  obj[1] = intl6.format(_getSystemLocale.t.n5vd1E, {
     handleOnHelpUrlHook() {
       const obj = outer1_1(outer1_2[3]);
       obj.openUrl(outer1_1(outer1_2[4]).getArticleURL(outer1_3.TIGGER_PAWTECT_SYSTEM_DMS));

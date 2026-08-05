@@ -1,3 +1,4 @@
+import { registerAsset } from "../../../../_runtime/15335_registerAsset.js";
 // discord_app/modules/guilds_bar/native/GuildsBarItemUnavailableGuilds.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -40,7 +41,7 @@ const memoResult = require("noop").memo(function GuildsBarItemUnavailableGuilds(
     obj[3] = tmp.unavailableGuilds;
     const obj1 = { style: null, source: null };
     obj1[0] = tmp.unavailableGuildsIcon;
-    obj1[1] = require("../../../../_runtime/15335_registerAsset.js");
+    obj1[1] = registerAsset;
     obj[4] = <closure_3 style={null} source={null} />;
     tmp5 = <closure_4 count={null} />;
   }

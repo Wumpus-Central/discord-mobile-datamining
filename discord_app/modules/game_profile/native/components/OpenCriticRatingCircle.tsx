@@ -1,3 +1,4 @@
+import { inlineStyles } from "../../../../../_runtime/08437_inlineStyles.js";
 // discord_app/modules/game_profile/native/components/OpenCriticRatingCircle.tsx
 import { jsx } from "jsxProd";
 
@@ -19,6 +20,6 @@ export default function OpenCriticRatingCircle(size) {
   obj[4] = size.strokeColor;
   obj[7] = result2;
   obj[8] = result2 * diff;
-  obj[2] = jsx(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Circle, { transform: null, cx: null, cy: null, r: null, stroke: null, strokeWidth: 2, fill: "none", strokeDasharray: null, strokeDashoffset: null });
-  return jsx(require("../../../../../_runtime/08437_inlineStyles.js"), { transform: null, cx: null, cy: null, r: null, stroke: null, strokeWidth: 2, fill: "none", strokeDasharray: null, strokeDashoffset: null });
+  obj[2] = jsx(inlineStyles /* inlineStyles */.Circle, { transform: null, cx: null, cy: null, r: null, stroke: null, strokeWidth: 2, fill: "none", strokeDasharray: null, strokeDashoffset: null });
+  return jsx(inlineStyles, { transform: null, cx: null, cy: null, r: null, stroke: null, strokeWidth: 2, fill: "none", strokeDasharray: null, strokeDashoffset: null });
 };

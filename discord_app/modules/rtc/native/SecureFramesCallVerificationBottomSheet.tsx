@@ -1,3 +1,4 @@
+import { SecureFramesVerificationBottomSheet } from "SecureFramesVerificationBottomSheet.tsx";
 // discord_app/modules/rtc/native/SecureFramesCallVerificationBottomSheet.tsx
 import noop from "noop";
 import createRTCConnection from "createRTCConnection";
@@ -34,7 +35,7 @@ export default function SecureFramesCallVerificationBottomSheet(channelId) {
   obj[1] = intl2.string(channelId(1236).t["MPp7+C"]);
   const intl3 = channelId(1236).intl;
   obj = { helpArticle: null };
-  const tmp3 = require("SecureFramesVerificationBottomSheet.tsx");
+  const tmp3 = SecureFramesVerificationBottomSheet;
   obj[0] = channelId(9131).getSecureFramesHelpdeskArticle();
   obj[2] = intl3.format(channelId(1236).t.wKxADe, obj);
   obj[3] = stateFromStores;

@@ -1,3 +1,4 @@
+import { items } from "../../utils/UploadUtils.tsx";
 // discord_app/modules/icymi/ICYMIAttachmentUploadTarget.tsx
 import ME from "ME";
 
@@ -22,7 +23,7 @@ prototype["getMaxAttachmentsCount"] = function getMaxAttachmentsCount() {
   return closure_4;
 };
 prototype["getMaxTotalAttachmentSize"] = function getMaxTotalAttachmentSize() {
-  return require("../../utils/UploadUtils.tsx") /* items */.MAX_TOTAL_ATTACHMENT_SIZE;
+  return items /* items */.MAX_TOTAL_ATTACHMENT_SIZE;
 };
 Object.defineProperty(prototype, "shouldReactNativeCompressUploads", {
   get: function shouldReactNativeCompressUploads() {

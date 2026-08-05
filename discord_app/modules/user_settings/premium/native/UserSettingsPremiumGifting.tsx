@@ -1,3 +1,4 @@
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/user_settings/premium/native/UserSettingsPremiumGifting.tsx
 import getSystemLocale from "getSystemLocale";
 import importAllResult from "useBlockedPaymentsConfig";
@@ -24,7 +25,7 @@ let unpackModuleId;
 const require = arg1;
 function GiftingSectionTitle(title) {
   title = title.title;
-  if (require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("UserSettingsPremiumGifting")) {
+  if (useIsMobileVisualRefreshExperimentEnabled("UserSettingsPremiumGifting")) {
     let obj = { title: null };
     obj[0] = title;
     let tmp3Result = tmp3(tmp4(5649).TableRowGroupTitle, obj);

@@ -1,3 +1,7 @@
+import { PermissionOverwriteType } from "../flow/Server.tsx";
+import { isUserPrimaryGuildEqual } from "../modules/guild_tag/PrimaryGuildUtils.tsx";
+import { validatePremiumType } from "../modules/user/UserStoreUtils.tsx";
+import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
 // discord_app/stores/UserStore.tsx
 import setPremiumTypeActual from "setPremiumTypeActual";
 import createdAt from "createdAt";
@@ -29,7 +33,7 @@ function mergeGuildAvatar(id, guildId, avatar) {
 function mergeUserPrimaryGuild(id, primary_guild) {
   let tmp3 = null != tmp2;
   if (tmp3) {
-    const obj = require("../modules/guild_tag/PrimaryGuildUtils.tsx") /* isUserPrimaryGuildEqual */;
+    const obj = isUserPrimaryGuildEqual /* isUserPrimaryGuildEqual */;
     const result = obj.isUserPrimaryGuildEqual(tmp2.primaryGuild, primary_guild.primary_guild);
     let tmp8 = !result;
     if (!result) {
@@ -54,7 +58,7 @@ function transformUser(mfa_enabled) {
     mfa_enabled.mfaEnabled = mfa_enabled;
     delete tmp[tmp2];
   }
-  const premiumTypeFromRawValue = require("../modules/user/UserStoreUtils.tsx") /* validatePremiumType */.getPremiumTypeFromRawValue(mfa_enabled.premium_type);
+  const premiumTypeFromRawValue = validatePremiumType /* validatePremiumType */.getPremiumTypeFromRawValue(mfa_enabled.premium_type);
   if (undefined !== premiumTypeFromRawValue) {
     mfa_enabled.premiumType = premiumTypeFromRawValue;
     delete tmp[tmp3];
@@ -165,7 +169,7 @@ function mergeUser(user, arg1) {
       tmp26.premiumType = premiumType4;
       mergeResult = tmp26;
       tmp19 = premiumType3;
-      obj6 = require("../modules/user/UserStoreUtils.tsx") /* validatePremiumType */;
+      obj6 = validatePremiumType /* validatePremiumType */;
     }
     tmp28 = undefined !== premiumType3 && tmp2;
   } else {
@@ -178,8 +182,8 @@ function mergeUser(user, arg1) {
       }
       let isStaffEnvRawDataResult = undefined !== premiumType && tmp2;
       if (isStaffEnvRawDataResult) {
-        isStaffEnvRawDataResult = require("../modules/user/UserStoreUtils.tsx") /* validatePremiumType */.isStaffEnvRawData(user);
-        const obj2 = require("../modules/user/UserStoreUtils.tsx") /* validatePremiumType */;
+        isStaffEnvRawDataResult = validatePremiumType /* validatePremiumType */.isStaffEnvRawData(user);
+        const obj2 = validatePremiumType /* validatePremiumType */;
       }
       if (isStaffEnvRawDataResult) {
         let premiumType2 = user.premium_type;
@@ -198,7 +202,7 @@ function mergeUser(user, arg1) {
         } else if (undefined !== user.premium_type) {
           user.premium_type = premiumType2;
         }
-        obj3 = require("../modules/user/UserStoreUtils.tsx") /* validatePremiumType */;
+        obj3 = validatePremiumType /* validatePremiumType */;
       }
       if (tmp14 !== true) {
         if (tmp15 !== true) {
@@ -206,7 +210,7 @@ function mergeUser(user, arg1) {
             user.primary_guild = tmp16(1884).ensureUserPrimaryGuild(user.primary_guild);
             const tmp16Result = tmp16(1884);
           }
-          obj4 = require("../modules/guild_tag/PrimaryGuildUtils.tsx") /* isUserPrimaryGuildEqual */;
+          obj4 = isUserPrimaryGuildEqual /* isUserPrimaryGuildEqual */;
           tmp16 = require;
         }
         user.primary_guild = obj.primaryGuild;
@@ -217,8 +221,8 @@ function mergeUser(user, arg1) {
       tmp14 = null == obj.primaryGuild && null == user.primary_guild;
     }
   }
-  const obj7 = require("../modules/user/UserStoreUtils.tsx") /* validatePremiumType */;
-  obj7.validatePremiumType(require("../modules/user/UserStoreUtils.tsx") /* validatePremiumType */.isStaffEnv(mergeResult), tmp19, mergeResult.premiumType);
+  const obj7 = validatePremiumType /* validatePremiumType */;
+  obj7.validatePremiumType(validatePremiumType /* validatePremiumType */.isStaffEnv(mergeResult), tmp19, mergeResult.premiumType);
   obj[user.id] = mergeResult;
   if (obj[user.id] !== mergeResult) {
     closure_12 = closure_12 + 1;
@@ -1090,7 +1094,7 @@ function handleInitiateAgeVerification(arg0) {
     let flag = null != obj2;
     if (flag) {
       const id = obj.getId();
-      store2[id] = obj2.set("ageVerificationStatus", require("../flow/Server.tsx") /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING);
+      store2[id] = obj2.set("ageVerificationStatus", PermissionOverwriteType /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING);
       flag = true;
     }
     return flag;
@@ -1100,7 +1104,7 @@ function handleCloseAgeVerificationModal(status) {
   const obj2 = store2[store2.getId(store2)];
   let tmp2 = null != obj2;
   if (tmp2) {
-    let flag = obj2.ageVerificationStatus === require("../flow/Server.tsx") /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
+    let flag = obj2.ageVerificationStatus === PermissionOverwriteType /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
     if (flag) {
       const id = obj.getId();
       store2[id] = obj2.set("ageVerificationStatus", status.status);
@@ -1244,7 +1248,7 @@ prototype["takeSnapshot"] = function takeSnapshot() {
   let obj = { version: UserStore.LATEST_SNAPSHOT_VERSION, data: null };
   obj = { users: null };
   const items = [this.getCurrentUser()];
-  obj[0] = items.filter(require("../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
+  obj[0] = items.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
   obj[1] = obj;
   return obj;
 };

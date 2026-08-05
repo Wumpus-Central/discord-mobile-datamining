@@ -1,3 +1,5 @@
+import { Input } from "../../Input/native/Input.native.tsx";
+import { TextField } from "../../TextField/native/TextField.native.tsx";
 // discord_app/design/components/TextInput/native/TextInput.native.tsx
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
@@ -42,8 +44,8 @@ const forwardRefResult = importAllResult.forwardRef((errorMessage, ref) => {
     tmp10 = id;
   }
   obj.accessibilityLabelledBy = tmp10;
-  obj.children = jsx(require("../../TextField/native/TextField.native.tsx") /* TextField */.TextField, { ref });
-  return jsx(require("../../Input/native/Input.native.tsx") /* Input */.Input, { ref });
+  obj.children = jsx(TextField /* TextField */.TextField, { ref });
+  return jsx(Input /* Input */.Input, { ref });
 });
 const result = require("Input").fileFinishedImporting("design/components/TextInput/native/TextInput.native.tsx");
 

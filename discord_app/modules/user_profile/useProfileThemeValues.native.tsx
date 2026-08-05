@@ -1,3 +1,4 @@
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/user_profile/useProfileThemeValues.native.tsx
 import { useMemo } from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -7,7 +8,7 @@ const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/u
 export const useProfileThemeValues = function useProfileThemeValues(theme) {
   const _require = theme;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => saturation.saturation);
+  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => saturation.saturation);
   const tmp2 = stateFromStores(1348)("useProfileThemeValues");
   const dependencyMap = tmp2;
   const items1 = [theme, stateFromStores, tmp2];

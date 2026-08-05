@@ -1,3 +1,5 @@
+import { SavedMessageSortTypes } from "SavedMessagesTypes.tsx";
+import { useRefreshSavedMessages } from "useRefreshSavedMessages.tsx";
 // discord_app/modules/saved_messages/useSavedMessagesForPage.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -5,7 +7,7 @@ import getTimeSafe from "getTimeSafe";
 
 const require = arg1;
 function getSavedMessagesForType(arg0) {
-  if (require("SavedMessagesTypes.tsx") /* SavedMessageSortTypes */.SavedMessageSortTypes.BOOKMARK === arg0) {
+  if (SavedMessageSortTypes /* SavedMessageSortTypes */.SavedMessageSortTypes.BOOKMARK === arg0) {
     return store.getMessageBookmarks();
   } else if (tmp(8192).SavedMessageSortTypes.REMINDER === arg0) {
     return store.getMessageReminders();
@@ -89,7 +91,7 @@ export default function useSavedMessagesForPage() {
       outer2_5.removeChangeListener(handleChange);
     };
   }, items);
-  require("useRefreshSavedMessages.tsx")();
+  useRefreshSavedMessages();
   let tmp3 = callback(React.useState(() => {
     if (ALL(_undefined2[3]).SavedMessageSortTypes.BOOKMARK === ALL) {
       let messageBookmarks = outer1_5.getMessageBookmarks();

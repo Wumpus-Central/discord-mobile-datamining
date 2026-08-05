@@ -1,3 +1,6 @@
+import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
+import { useStoreConnectionErrorAlert } from "../../../premium/native/useStoreConnectionErrorAlert.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/user_settings/premium/native/UserSettingsPremium.tsx
 import _fetchUserOffer from "_fetchUserOffer";
 import expandEventProperties from "expandEventProperties";
@@ -55,7 +58,7 @@ export default function UserSettingsPremium(applicationId) {
   let container = callback2();
   let tmp = importDefault;
   let tmp31Result = dependencyMap;
-  require("../../../premium/native/useStoreConnectionErrorAlert.tsx")();
+  useStoreConnectionErrorAlert();
   if (applicationId.isFromTextSection) {
     let items = [tmp(5630).TEXT_AND_IMAGES];
     let items1 = items;
@@ -63,7 +66,7 @@ export default function UserSettingsPremium(applicationId) {
     items1 = [];
   }
   const items2 = [...items1, tmp(5630).PREMIUM_MARKETING];
-  analyticsLocations = require("../../../app_analytics/useAnalyticsLocations.tsx")(items2).analyticsLocations;
+  analyticsLocations = context(items2).analyticsLocations;
   let obj = applicationId(6787);
   closure_5 = obj.useSettingNavigationRoute();
   tmp(4711)(() => {
@@ -88,7 +91,7 @@ export default function UserSettingsPremium(applicationId) {
   });
   let obj1 = applicationId(589);
   const items3 = [premiumDiscountOffer];
-  const tmp4 = require("../../../app_analytics/useAnalyticsLocations.tsx");
+  const tmp4 = context;
   [tmp8, tmp9] = callback(obj1.useStateFromStoresArray(items3, () => {
     const items = [premiumDiscountOffer.getPremiumTypeSubscription(), premiumDiscountOffer.hasFetchedSubscriptions()];
     return items;
@@ -205,7 +208,7 @@ export default function UserSettingsPremium(applicationId) {
     const items12 = [container.root, ];
     let num = 0;
     if (tmp5Result1.isAndroid()) {
-      num = require("../../../safe_area/useSafeAreaInsets.native.tsx")().bottom;
+      num = useSafeAreaInsets().bottom;
     }
     obj2 = { style: null, children: null };
     obj3 = { marginBottom: null };

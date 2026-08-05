@@ -1,3 +1,4 @@
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/collectibles/avatar_decorations/useAvatarDecoration.tsx
 import _slicedToArray from "_slicedToArray";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -9,7 +10,7 @@ export const useAvatarDecoration = function useAvatarDecoration(user, guildId) {
   const _require = user;
   const dependencyMap = guildId;
   let items = [trackCommunicationDisabled];
-  return _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
+  return _defaultAreStatesEqual.useStateFromStores(items, () => {
     const items = [outer1_3];
     const first = outer1_2(items, 1)[0];
     let member = null;

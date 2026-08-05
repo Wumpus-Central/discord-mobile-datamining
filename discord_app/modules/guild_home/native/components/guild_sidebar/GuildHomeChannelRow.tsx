@@ -1,3 +1,4 @@
+import { BaseChannelSubtitle } from "../../../../guild_sidebar/native/BaseChannelItem.tsx";
 // discord_app/modules/guild_home/native/components/guild_sidebar/GuildHomeChannelRow.tsx
 import noop from "noop";
 import { Routes } from "ME";
@@ -42,5 +43,5 @@ export default function GuildHomeChannelRow(selected) {
   obj = { mode: DEFAULT, IconComponent: null };
   obj[1] = tmp5(13097).SignPostIcon;
   obj[7] = jsx(tmp5(11665).BaseChannelIcon, { mode: DEFAULT, IconComponent: null });
-  return jsx(require("../../../../guild_sidebar/native/BaseChannelItem.tsx"), { mode: DEFAULT, IconComponent: null });
+  return jsx(BaseChannelSubtitle, { mode: DEFAULT, IconComponent: null });
 };

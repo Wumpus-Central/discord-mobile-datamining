@@ -1,3 +1,5 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 // discord_app/modules/notifications/native/GuildHighlightsNotificationsActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import combined from "combined";
@@ -20,15 +22,15 @@ function GuildPill(guild) {
   const tmp = callback3();
   let obj = { style: tmp.guildPill, children: null };
   obj = { guild, size: null, animate: true };
-  obj[1] = require("../../guild/native/GuildIcon.tsx") /* GuildIconSizes */.GuildIconSizes.SMALL_32;
-  const items = [callback(require("../../guild/native/GuildIcon.tsx"), obj), ];
+  obj[1] = GuildIconSizes /* GuildIconSizes */.GuildIconSizes.SMALL_32;
+  const items = [callback(GuildIconSizes, obj), ];
   obj = { style: tmp.guildName, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   let name;
   if (guild != null) {
     name = guild.name;
   }
   obj[3] = name;
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items;
   return closure_12(View, obj);
 }

@@ -1,3 +1,5 @@
+import { fromBlob } from "../../modules/discord_md5/DiscordMd5.tsx";
+import { ORIGINAL_MD5_HEADER } from "originalMd5Header.tsx";
 // discord_app/lib/uploader_inline/InlineUploader.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
@@ -14,7 +16,7 @@ class InlineUploader {
 }
 const prototype = InlineUploader.prototype;
 InlineUploader["fromBlob"] = function fromBlob(surface) {
-  let obj = require("../../modules/discord_md5/DiscordMd5.tsx");
+  let obj = fromBlob;
   const fromBlobResult = obj.fromBlob(arg1);
   const tmp = InlineUploader;
   if (typeof InlineUploader !== "function") {
@@ -93,7 +95,7 @@ InlineUploader["buildHeadersForMd5"] = function buildHeadersForMd5(originalMd5, 
   if (null != tmp) {
     const obj = {};
     const merged = Object.assign(buildHeadersForMd5);
-    obj[require("originalMd5Header.tsx") /* ORIGINAL_MD5_HEADER */.ORIGINAL_MD5_HEADER] = tmp;
+    obj[ORIGINAL_MD5_HEADER /* ORIGINAL_MD5_HEADER */.ORIGINAL_MD5_HEADER] = tmp;
     tmp2 = obj;
   }
   return tmp2;

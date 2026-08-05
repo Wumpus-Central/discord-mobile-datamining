@@ -1,3 +1,6 @@
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { redactionSettingToRenderedString } from "ExplicitMediaRedactionUtils.tsx";
+import { getEligibleHarmTypesConfigsForContext } from "ObscuredMediaUtils.tsx";
 // discord_app/modules/explicit_media_redaction/ExplicitMediaManager.tsx
 import processMessage from "processMessage";
 import { ReferencedMessageState } from "processMessage";
@@ -29,7 +32,7 @@ function maybeCancelTimeout(message, UPDATE) {
       const combined = "" + message.channel_id + ":" + message.id;
       if (null != dependencyMap[combined]) {
         ({ timeout, setAt } = dependencyMap[combined]);
-        if (UPDATE === require("ExplicitMediaRedactionUtils.tsx") /* redactionSettingToRenderedString */.TimeoutCancelSource.UPDATE) {
+        if (UPDATE === redactionSettingToRenderedString /* redactionSettingToRenderedString */.TimeoutCancelSource.UPDATE) {
           let attachments = message.attachments;
           if (attachments == null) {
             attachments = [];
@@ -427,7 +430,7 @@ function handleMessageUpdate(message) {
         }
         return tmp18;
       }
-      obj6 = require("ObscuredMediaUtils.tsx") /* getEligibleHarmTypesConfigsForContext */;
+      obj6 = getEligibleHarmTypesConfigsForContext /* getEligibleHarmTypesConfigsForContext */;
     }
   }
   return false;
@@ -475,7 +478,7 @@ function handleMessageCreate(optimistic) {
           }
           return tmp3Result;
         }
-        obj2 = require("ObscuredMediaUtils.tsx") /* getEligibleHarmTypesConfigsForContext */;
+        obj2 = getEligibleHarmTypesConfigsForContext /* getEligibleHarmTypesConfigsForContext */;
       }
     }
   }
@@ -516,9 +519,9 @@ function handleForumPostsLoad(threads) {
   if (tmp2) {
     let tmp4 = store5.getGuildId() === tmp;
     if (tmp4) {
-      const keys = require("../../utils/SnowflakeUtils.tsx").keys(threads);
+      const keys = DISCORD_EPOCH.keys(threads);
       tmp4 = processMessagesFromAction(keys.map((arg0) => threads[arg0].first_message));
-      const obj = require("../../utils/SnowflakeUtils.tsx");
+      const obj = DISCORD_EPOCH;
     }
     tmp2 = tmp4;
   }

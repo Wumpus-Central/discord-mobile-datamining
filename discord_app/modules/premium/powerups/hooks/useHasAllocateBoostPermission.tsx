@@ -1,3 +1,4 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/premium/powerups/hooks/useHasAllocateBoostPermission.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -9,7 +10,7 @@ const result = require("sum").fileFinishedImporting("modules/premium/powerups/ho
 export default function useHasAllocateBoostPermission(arg0) {
   const _require = arg0;
   const items = [getUncachedChannelPermissions, createGuildRecordFromRust];
-  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const guild = outer1_2.getGuild(closure_0);
     let canResult = null;
     if (null != guild) {

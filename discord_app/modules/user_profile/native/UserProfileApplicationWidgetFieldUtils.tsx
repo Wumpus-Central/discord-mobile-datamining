@@ -1,3 +1,6 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { ImageSkeleton } from "UserProfileApplicationWidgetSkeletons.tsx";
 // discord_app/modules/user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -30,26 +33,26 @@ export const formatDurationNarrow = function formatDurationNarrow(arg0) {
   const result1 = Math.floor(num / 1000) % 60;
   const items = [];
   if (rounded > 0) {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     let obj = { hours: null };
     obj[0] = rounded;
-    items.push(intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.rhY1Rs, obj));
+    items.push(intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.rhY1Rs, obj));
   }
   if (0 < result) {
-    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
     obj = { minutes: null };
     obj[0] = result;
-    items.push(intl2.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["XIGt+W"], obj));
+    items.push(intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t["XIGt+W"], obj));
   }
   let tmp10 = result1 > 0;
   if (0 >= result1) {
     tmp10 = 0 === items.length;
   }
   if (tmp10) {
-    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
     obj = { seconds: null };
     obj[0] = result1;
-    items.push(intl3.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.pyvjRp, obj));
+    items.push(intl3.formatToPlainString(getSystemLocale /* getSystemLocale */.t.pyvjRp, obj));
   }
   return items.join(" ");
 };
@@ -67,7 +70,7 @@ export const FieldText = function FieldText(arg0) {
     let obj = { variant: null, widthChars: null };
     obj[0] = variant;
     obj[1] = skeletonWidthChars;
-    let tmp9Result = callback(require("UserProfileApplicationWidgetSkeletons.tsx") /* ImageSkeleton */.TextSkeleton, obj);
+    let tmp9Result = callback(ImageSkeleton /* ImageSkeleton */.TextSkeleton, obj);
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.fieldTextRow;
@@ -75,7 +78,7 @@ export const FieldText = function FieldText(arg0) {
     obj1[0] = variant;
     obj1[1] = color;
     obj1[3] = field.text;
-    const items = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1), ];
+    const items = [callback(Text /* Text */.Text, obj1), ];
     let tmp11Result = null != field.icon;
     if (tmp11Result) {
       obj = { source: null, style: null, resizeMode: "contain" };

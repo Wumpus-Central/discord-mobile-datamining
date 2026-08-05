@@ -1,3 +1,4 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 
@@ -7,7 +8,7 @@ const result = require("getTieredTenureBadgeData").fileFinishedImporting("module
 export const useTieredTenureBadgeForUser = function useTieredTenureBadgeForUser(id) {
   const _require = id;
   const items = [createUserWidgetFromServer];
-  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let userProfile = null;
     if (null != closure_0) {
       userProfile = outer1_2.getUserProfile(tmp);

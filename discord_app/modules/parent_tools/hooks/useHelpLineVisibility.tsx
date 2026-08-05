@@ -1,3 +1,4 @@
+import { useIsInAdultAgeGroup } from "useIsInAdultAgeGroup.tsx";
 // discord_app/modules/parent_tools/hooks/useHelpLineVisibility.tsx
 import noop from "noop";
 import _getSystemLocale from "_getSystemLocale";
@@ -10,7 +11,7 @@ const set1 = new Set(["en-US", "es-ES"]);
 const result = set.fileFinishedImporting("modules/parent_tools/hooks/useHelpLineVisibility.tsx");
 
 export const useShouldShowHelplineLink = function useShouldShowHelplineLink() {
-  const tmp = require("useIsInAdultAgeGroup.tsx")();
+  const tmp = useIsInAdultAgeGroup();
   const items = [freshTeenActivityWithMap];
   stateFromStores = stateFromStores(647).useStateFromStores(items, () => userCountry.getUserCountry());
   const obj = stateFromStores(647);
@@ -36,9 +37,9 @@ export const useShouldShowHelplineLink = function useShouldShowHelplineLink() {
   return hasItem;
 };
 export const useShouldShowThroughlineLink = function useShouldShowThroughlineLink() {
-  const tmp = require("useIsInAdultAgeGroup.tsx")();
+  const tmp = useIsInAdultAgeGroup();
   let stateFromStores;
-  const tmp2 = require("useIsInAdultAgeGroup.tsx")();
+  const tmp2 = useIsInAdultAgeGroup();
   const items = [freshTeenActivityWithMap];
   stateFromStores = stateFromStores(647).useStateFromStores(items, () => userCountry.getUserCountry());
   let obj = stateFromStores(647);

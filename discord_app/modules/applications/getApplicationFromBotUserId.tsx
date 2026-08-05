@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/applications/getApplicationFromBotUserId.tsx
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
@@ -8,7 +9,7 @@ const result = require("initialize").fileFinishedImporting("modules/applications
 export default function useGetApplicationFromBotUserId(arg0) {
   const _require = arg0;
   const items = [createUserWidgetFromServer];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     let tmp = closure_0;
     let tmp2;
     if (null !== closure_0) {

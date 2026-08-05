@@ -1,3 +1,4 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 // discord_app/modules/stage_channels/StageInstanceActionCreators.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
@@ -91,8 +92,8 @@ export const updateStageInstance = function updateStageInstance(id, arg1, arg2) 
   return applyArgumentsResult;
 };
 export const endStageInstance = function endStageInstance(id) {
-  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   const obj = { url: Endpoints.STAGE_INSTANCE(id), rejectWithError: null };
-  obj[1] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+  obj[1] = sendRequest /* sendRequest */.rejectWithMigratedError();
   return HTTP.del(obj);
 };

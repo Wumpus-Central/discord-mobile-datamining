@@ -1,3 +1,6 @@
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
+import { AppLauncherEntrypoint } from "../AppLauncherTypes.tsx";
+import { useDefaultAppLauncherWidth } from "hooks/useDefaultAppLauncherWidth.tsx";
 // discord_app/modules/app_launcher/native/AppLauncherContext.tsx
 import importAllResult from "noop";
 
@@ -48,12 +51,12 @@ export const useRequiredAppLauncherContext = function useRequiredAppLauncherCont
 export const useAppLauncherContext = function useAppLauncherContext() {
   let _require = sharedValue.useRef(sharedValue1.DISMISSED);
   const dependencyMap = sharedValue.useRef(undefined);
-  let obj = _require("../../reanimated/ReanimatedRexport.tsx");
+  let obj = _ReanimatedRexport;
   sharedValue = obj.useSharedValue(-1);
-  sharedValue1 = _require("../../reanimated/ReanimatedRexport.tsx").useSharedValue(0);
-  const TEXT = _require("../AppLauncherTypes.tsx").AppLauncherEntrypoint.TEXT;
-  const obj2 = _require("../../reanimated/ReanimatedRexport.tsx");
-  const defaultAppLauncherWidth = _require("hooks/useDefaultAppLauncherWidth.tsx").useDefaultAppLauncherWidth(TEXT);
+  sharedValue1 = _ReanimatedRexport.useSharedValue(0);
+  const TEXT = _AppLauncherEntrypoint.AppLauncherEntrypoint.TEXT;
+  const obj2 = _ReanimatedRexport;
+  const defaultAppLauncherWidth = _useDefaultAppLauncherWidth.useDefaultAppLauncherWidth(TEXT);
   _require = false;
   obj = {
     getApplicationCommandManager() {

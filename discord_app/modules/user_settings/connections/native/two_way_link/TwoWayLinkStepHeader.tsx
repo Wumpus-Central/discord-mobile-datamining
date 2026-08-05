@@ -1,3 +1,6 @@
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { styles } from "TwoWayLinkStyles.tsx";
 // discord_app/modules/user_settings/connections/native/two_way_link/TwoWayLinkStepHeader.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -9,10 +12,10 @@ export const TwoWayLinkStepHeader = function TwoWayLinkStepHeader(arg0) {
   let idx;
   let total;
   ({ idx, total } = arg0);
-  let obj = require("TwoWayLinkStyles.tsx") /* styles */;
+  let obj = styles /* styles */;
   const twoWayLinkStyles = obj.useTwoWayLinkStyles();
   obj = { variant: "text-xs/bold", color: "text-default", style: twoWayLinkStyles.stepHeader, children: null };
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.format(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.fHz6eR, { number: idx, total });
-  return jsx(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-xs/bold", color: "text-default", style: twoWayLinkStyles.stepHeader, children: null });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.format(getSystemLocale /* getSystemLocale */.t.fHz6eR, { number: idx, total });
+  return jsx(Text /* Text */.Text, { variant: "text-xs/bold", color: "text-default", style: twoWayLinkStyles.stepHeader, children: null });
 };

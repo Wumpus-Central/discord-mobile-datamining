@@ -1,3 +1,5 @@
+import { TableId } from "../types/index.tsx";
+import { fromDatabaseTransaction } from "Table.tsx";
 // discord_common/js/packages/kv-storage/js/api/GuildDao.tsx
 let GuildDao;
 class GuildDao {
@@ -30,7 +32,7 @@ prototype["withoutLogging"] = function withoutLogging() {
   const obj = Object.create(GuildDao.prototype);
   obj.originalPrefix = originalPrefix;
   const items = [originalPrefix];
-  const table = new require("Table.tsx") /* fromDatabaseTransaction */.Table(items, this.table.tableId, this.table.database, false);
+  const table = new fromDatabaseTransaction /* fromDatabaseTransaction */.Table(items, this.table.tableId, this.table.database, false);
   obj.table = table;
   return obj;
 };
@@ -75,14 +77,14 @@ prototype["getGuildId"] = function getGuildId(arg0) {
 prototype["put"] = function put(arg0, arg1, arg2) {
   let Replace = arg3;
   if (arg3 === undefined) {
-    Replace = require("../types/index.tsx") /* TableId */.ConflictOptions.Replace;
+    Replace = TableId /* TableId */.ConflictOptions.Replace;
   }
   return this.putWithGeneration(arg0, arg1, arg2, null, Replace);
 };
 prototype["putWithGeneration"] = function putWithGeneration(arg0, arg1, data, generation) {
   let Replace = arg4;
   if (arg4 === undefined) {
-    Replace = require("../types/index.tsx") /* TableId */.ConflictOptions.Replace;
+    Replace = TableId /* TableId */.ConflictOptions.Replace;
   }
   const table = this.table;
   const items = [arg0, arg1];
@@ -148,7 +150,7 @@ class GuildDaoTransaction {
 }
 const prototype2 = GuildDaoTransaction.prototype;
 GuildDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
-  const tableTransaction = new require("Table.tsx") /* fromDatabaseTransaction */.TableTransaction(prefix, tableId, transaction);
+  const tableTransaction = new fromDatabaseTransaction /* fromDatabaseTransaction */.TableTransaction(prefix, tableId, transaction);
   if (typeof GuildDaoTransaction !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -159,14 +161,14 @@ GuildDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransactio
 prototype2["put"] = function put(arg0, arg1, arg2) {
   let Replace = arg3;
   if (arg3 === undefined) {
-    Replace = require("../types/index.tsx") /* TableId */.ConflictOptions.Replace;
+    Replace = TableId /* TableId */.ConflictOptions.Replace;
   }
   this.putWithGeneration(arg0, arg1, arg2, null, Replace);
 };
 prototype2["putWithGeneration"] = function putWithGeneration(arg0, arg1, data, generation) {
   let Replace = arg4;
   if (arg4 === undefined) {
-    Replace = require("../types/index.tsx") /* TableId */.ConflictOptions.Replace;
+    Replace = TableId /* TableId */.ConflictOptions.Replace;
   }
   const state = this.state;
   const items = [arg0, arg1];

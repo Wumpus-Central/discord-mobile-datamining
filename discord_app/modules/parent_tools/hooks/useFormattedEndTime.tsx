@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/parent_tools/hooks/useFormattedEndTime.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 
@@ -6,7 +7,7 @@ const result = require("initialize").fileFinishedImporting("modules/parent_tools
 
 export default function useFormattedEndTime() {
   const items = [mergeGuildAvatar];
-  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+  return initialize /* initialize */.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nextEndTime;
     if (currentUser != null) {

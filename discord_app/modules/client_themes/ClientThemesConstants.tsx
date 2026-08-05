@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/client_themes/ClientThemesConstants.tsx
 import { ThemeTypes } from "sum";
 import apply from "apply";
@@ -9,8 +10,8 @@ let obj = {
   colors: items,
   angle: 180,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.kCdS4d);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.kCdS4d);
   },
   midpointPercentage: 27
 };
@@ -23,8 +24,8 @@ obj = {
   colors: items2,
   angle: 180,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.S4UnEz);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.S4UnEz);
   },
   midpointPercentage: 27
 };
@@ -37,8 +38,8 @@ obj = {
   colors: items3,
   angle: 148.71,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["48xnKc"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["48xnKc"]);
   },
   midpointPercentage: 50
 };
@@ -52,8 +53,8 @@ items1[3] = {
   colors: items4,
   angle: 38.08,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.G4HsBJ);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.G4HsBJ);
   },
   midpointPercentage: 50
 };
@@ -64,8 +65,8 @@ const obj1 = {
   colors: items4,
   angle: 38.08,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.G4HsBJ);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.G4HsBJ);
   },
   midpointPercentage: 50
 };
@@ -77,8 +78,8 @@ items1[4] = {
   colors: items5,
   angle: 154.19,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.NAt885);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.NAt885);
   },
   midpointPercentage: 50
 };
@@ -89,8 +90,8 @@ const obj2 = {
   colors: items5,
   angle: 154.19,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.NAt885);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.NAt885);
   },
   midpointPercentage: 50
 };
@@ -102,8 +103,8 @@ items1[5] = {
   colors: items6,
   angle: 180.14,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.godtzA);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.godtzA);
   },
   midpointPercentage: 50
 };
@@ -114,8 +115,8 @@ const obj3 = {
   colors: items6,
   angle: 180.14,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.godtzA);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.godtzA);
   },
   midpointPercentage: 50
 };
@@ -127,8 +128,8 @@ items1[6] = {
   colors: items7,
   angle: 179.52,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.hlS2xq);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.hlS2xq);
   },
   midpointPercentage: 27
 };
@@ -139,8 +140,8 @@ const obj4 = {
   colors: items7,
   angle: 179.52,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.hlS2xq);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.hlS2xq);
   },
   midpointPercentage: 27
 };
@@ -152,8 +153,8 @@ items1[7] = {
   colors: items8,
   angle: 38.99,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.abMn9y);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.abMn9y);
   },
   midpointPercentage: 50
 };
@@ -165,8 +166,8 @@ const obj5 = {
   colors: items8,
   angle: 38.99,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.abMn9y);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.abMn9y);
   },
   midpointPercentage: 50
 };
@@ -179,8 +180,8 @@ const items10 = [
     colors: items9,
     angle: 141.68,
     getName() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.JKDra4);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.JKDra4);
     },
     midpointPercentage: 35
   },
@@ -204,8 +205,8 @@ const obj6 = {
   colors: items9,
   angle: 141.68,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.JKDra4);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.JKDra4);
   },
   midpointPercentage: 35
 };
@@ -217,8 +218,8 @@ items10[1] = {
   colors: items11,
   angle: 128.92,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.kwc8Us);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.kwc8Us);
   },
   midpointPercentage: 15
 };
@@ -229,8 +230,8 @@ const obj7 = {
   colors: items11,
   angle: 128.92,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.kwc8Us);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.kwc8Us);
   },
   midpointPercentage: 15
 };
@@ -242,8 +243,8 @@ items10[2] = {
   colors: items12,
   angle: 162.27,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["TeA/j8"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["TeA/j8"]);
   },
   midpointPercentage: 50
 };
@@ -254,8 +255,8 @@ const obj8 = {
   colors: items12,
   angle: 162.27,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["TeA/j8"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["TeA/j8"]);
   },
   midpointPercentage: 50
 };
@@ -267,8 +268,8 @@ items10[3] = {
   colors: items13,
   angle: 64.92,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.blIucj);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.blIucj);
   },
   midpointPercentage: 30
 };
@@ -279,8 +280,8 @@ const obj9 = {
   colors: items13,
   angle: 64.92,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.blIucj);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.blIucj);
   },
   midpointPercentage: 30
 };
@@ -292,8 +293,8 @@ items10[4] = {
   colors: items14,
   angle: 48.17,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.O1yOXG);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.O1yOXG);
   },
   midpointPercentage: 24
 };
@@ -304,8 +305,8 @@ const obj10 = {
   colors: items14,
   angle: 48.17,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.O1yOXG);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.O1yOXG);
   },
   midpointPercentage: 24
 };
@@ -317,8 +318,8 @@ items10[5] = {
   colors: items15,
   angle: 170.82,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["1swi9s"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["1swi9s"]);
   },
   midpointPercentage: 50
 };
@@ -329,8 +330,8 @@ const obj11 = {
   colors: items15,
   angle: 170.82,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["1swi9s"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["1swi9s"]);
   },
   midpointPercentage: 50
 };
@@ -342,8 +343,8 @@ items10[6] = {
   colors: items16,
   angle: 180,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.So2Wuh);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.So2Wuh);
   },
   midpointPercentage: 50
 };
@@ -354,8 +355,8 @@ const obj12 = {
   colors: items16,
   angle: 180,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.So2Wuh);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.So2Wuh);
   },
   midpointPercentage: 50
 };
@@ -367,8 +368,8 @@ items10[7] = {
   colors: items17,
   angle: 179.14,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.a22o48);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.a22o48);
   },
   midpointPercentage: 50
 };
@@ -379,8 +380,8 @@ const obj13 = {
   colors: items17,
   angle: 179.14,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.a22o48);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.a22o48);
   },
   midpointPercentage: 50
 };
@@ -392,8 +393,8 @@ items10[8] = {
   colors: items18,
   angle: 148.71,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Bf294R);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.Bf294R);
   },
   midpointPercentage: 61
 };
@@ -404,8 +405,8 @@ const obj14 = {
   colors: items18,
   angle: 148.71,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Bf294R);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.Bf294R);
   },
   midpointPercentage: 61
 };
@@ -417,8 +418,8 @@ items10[9] = {
   colors: items19,
   angle: 180,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["p+XCta"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["p+XCta"]);
   },
   midpointPercentage: 50
 };
@@ -429,8 +430,8 @@ const obj15 = {
   colors: items19,
   angle: 180,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["p+XCta"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["p+XCta"]);
   },
   midpointPercentage: 50
 };
@@ -442,8 +443,8 @@ items10[10] = {
   colors: items20,
   angle: 161.03,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["d5Ar+j"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["d5Ar+j"]);
   },
   midpointPercentage: 32
 };
@@ -454,8 +455,8 @@ const obj16 = {
   colors: items20,
   angle: 161.03,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["d5Ar+j"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["d5Ar+j"]);
   },
   midpointPercentage: 32
 };
@@ -467,8 +468,8 @@ items10[11] = {
   colors: items21,
   angle: 239.16,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Je1FWC);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.Je1FWC);
   },
   midpointPercentage: 34
 };
@@ -479,8 +480,8 @@ const obj17 = {
   colors: items21,
   angle: 239.16,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Je1FWC);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.Je1FWC);
   },
   midpointPercentage: 34
 };
@@ -492,8 +493,8 @@ items10[12] = {
   colors: items22,
   angle: 69.98,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["Z+Un40"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["Z+Un40"]);
   },
   midpointPercentage: 50
 };
@@ -504,8 +505,8 @@ const obj19 = {
   colors: items23,
   angle: 47.61,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Mfoe3p);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.Mfoe3p);
   },
   midpointPercentage: 50
 };
@@ -517,8 +518,8 @@ const obj20 = {
   colors: items24,
   angle: 180,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.mFinbb);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.mFinbb);
   },
   midpointPercentage: 50
 };
@@ -533,8 +534,8 @@ const obj18 = {
   colors: items22,
   angle: 69.98,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["Z+Un40"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["Z+Un40"]);
   },
   midpointPercentage: 50
 };
@@ -543,8 +544,8 @@ const items27 = [
     type: require("ClientThemeType").ClientThemeType.STANDARD_BACKGROUND_THEME,
     theme: DARKER,
     getName() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.b8Cei3);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.b8Cei3);
     }
   },
 ,
@@ -555,56 +556,56 @@ const obj21 = {
   type: require("ClientThemeType").ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: DARKER,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.b8Cei3);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.b8Cei3);
   }
 };
 items27[1] = {
   type: require("ClientThemeType").ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: ThemeTypes.LIGHT,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.K2sFfo);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.K2sFfo);
   }
 };
 const obj22 = {
   type: require("ClientThemeType").ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: ThemeTypes.LIGHT,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.K2sFfo);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.K2sFfo);
   }
 };
 items27[2] = {
   type: require("ClientThemeType").ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: ThemeTypes.MIDNIGHT,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.pQwSpQ);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.pQwSpQ);
   }
 };
 const obj23 = {
   type: require("ClientThemeType").ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: ThemeTypes.MIDNIGHT,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.pQwSpQ);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.pQwSpQ);
   }
 };
 items27[3] = {
   type: require("ClientThemeType").ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: "system",
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.zlvNOj);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.zlvNOj);
   }
 };
 const obj24 = {
   type: require("ClientThemeType").ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: "system",
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.zlvNOj);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.zlvNOj);
   }
 };
 const items28 = [
@@ -612,8 +613,8 @@ const items28 = [
     type: require("ClientThemeType").ClientThemeType.STANDARD_BACKGROUND_THEME,
     theme: ThemeTypes.LIGHT,
     getName() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.K2sFfo);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.K2sFfo);
     }
   },
 ,
@@ -625,72 +626,72 @@ const obj25 = {
   type: require("ClientThemeType").ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: ThemeTypes.LIGHT,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.K2sFfo);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.K2sFfo);
   }
 };
 items28[1] = {
   type: require("ClientThemeType").ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: ThemeTypes.DARK,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.SMPT1k);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.SMPT1k);
   }
 };
 const obj26 = {
   type: require("ClientThemeType").ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: ThemeTypes.DARK,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.SMPT1k);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.SMPT1k);
   }
 };
 items28[2] = {
   type: require("ClientThemeType").ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: ThemeTypes.DARKER,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.b8Cei3);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.b8Cei3);
   }
 };
 const obj27 = {
   type: require("ClientThemeType").ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: ThemeTypes.DARKER,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.b8Cei3);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.b8Cei3);
   }
 };
 items28[3] = {
   type: require("ClientThemeType").ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: ThemeTypes.MIDNIGHT,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Do4ZJx);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.Do4ZJx);
   }
 };
 const obj28 = {
   type: require("ClientThemeType").ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: ThemeTypes.MIDNIGHT,
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Do4ZJx);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.Do4ZJx);
   }
 };
 items28[4] = {
   type: require("ClientThemeType").ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: "system",
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.zlvNOj);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.zlvNOj);
   }
 };
 const obj29 = {
   type: require("ClientThemeType").ClientThemeType.STANDARD_BACKGROUND_THEME,
   theme: "system",
   getName() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.zlvNOj);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.zlvNOj);
   }
 };
 const keyByResult = apply.keyBy(items25, "id");

@@ -1,3 +1,4 @@
+import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 // discord_app/modules/bug_reporter/native/components/BugReporterModal.tsx
 import zustandStore from "zustandStore";
 import PressableBase from "PressableBase";
@@ -17,7 +18,7 @@ let unpackModuleId;
 const require = arg1;
 function handleClose() {
   state.setState({ isReportOpen: false });
-  let arr = require("../../../../actions/ModalActionCreators.tsx");
+  let arr = ModalActionCreators;
   arr = arr.pop();
 }
 class BugCreateScreen {

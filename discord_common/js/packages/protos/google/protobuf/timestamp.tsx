@@ -1,3 +1,4 @@
+import { 01307__ } from "../../../../../../_runtime/metro/01307__.js";
 // discord_common/js/packages/protos/google/protobuf/timestamp.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
@@ -17,13 +18,13 @@ let prototype = Timestamp$Type.prototype;
 prototype["now"] = function now() {
   const obj = this.create();
   const timestamp = Date.now();
-  const PbLong = require("../../../../../../_runtime/metro/01307__.js").PbLong;
+  const PbLong = 01307__.PbLong;
   obj.seconds = PbLong.from(Math.floor(timestamp / 1000)).toString();
   obj.nanos = timestamp % 1000 * 1000000;
   return obj;
 };
 prototype["toDate"] = function toDate(seconds) {
-  const PbLong = require("../../../../../../_runtime/metro/01307__.js").PbLong;
+  const PbLong = 01307__.PbLong;
   const result = 1000 * PbLong.from(seconds.seconds).toNumber();
   const fromResult = PbLong.from(seconds.seconds);
   return new Date(result + Math.ceil(seconds.nanos / 1000000));
@@ -31,13 +32,13 @@ prototype["toDate"] = function toDate(seconds) {
 prototype["fromDate"] = function fromDate(date) {
   const obj = this.create();
   const time = date.getTime();
-  const PbLong = require("../../../../../../_runtime/metro/01307__.js").PbLong;
+  const PbLong = 01307__.PbLong;
   obj.seconds = PbLong.from(Math.floor(time / 1000)).toString();
   obj.nanos = time % 1000 * 1000000;
   return obj;
 };
 prototype["internalJsonWrite"] = function internalJsonWrite(seconds) {
-  const PbLong = require("../../../../../../_runtime/metro/01307__.js").PbLong;
+  const PbLong = 01307__.PbLong;
   const result = 1000 * PbLong.from(seconds.seconds).toNumber();
   if (result >= Date.parse("0001-01-01T00:00:00Z")) {
     const _Date2 = Date;
@@ -71,7 +72,7 @@ prototype["internalJsonWrite"] = function internalJsonWrite(seconds) {
 prototype["internalJsonRead"] = function internalJsonRead(str) {
   if (typeof str !== "string") {
     const _Error3 = Error;
-    let obj = require("../../../../../../_runtime/metro/01307__.js");
+    let obj = 01307__;
     const error = new Error("Unable to parse Timestamp from JSON " + obj.typeofJsonValue(str) + ".");
     throw error;
   } else {
@@ -98,7 +99,7 @@ prototype["internalJsonRead"] = function internalJsonRead(str) {
               const self = this;
               obj = this.create();
             }
-            const PbLong = require("../../../../../../_runtime/metro/01307__.js").PbLong;
+            const PbLong = 01307__.PbLong;
             obj.seconds = PbLong.from(parsed / 1000).toString();
             obj.nanos = 0;
             if (match[7]) {
@@ -125,10 +126,10 @@ prototype["create"] = function create(arr) {
   let obj = { seconds: "0", nanos: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, require("../../../../../../_runtime/metro/01307__.js").MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = require("../../../../../../_runtime/metro/01307__.js").reflectionMergePartial(this, obj, arr);
-    const tmpResult = require("../../../../../../_runtime/metro/01307__.js");
+    const result = 01307__.reflectionMergePartial(this, obj, arr);
+    const tmpResult = 01307__;
   }
   return obj;
 };
@@ -173,7 +174,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = require("../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onRead;
+              onRead = 01307__.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -189,17 +190,17 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(seconds, tag, writeUnknownFields) {
   if ("0" !== seconds.seconds) {
-    tag.tag(1, require("../../../../../../_runtime/metro/01307__.js").WireType.Varint).int64(seconds.seconds);
-    const tagResult = tag.tag(1, require("../../../../../../_runtime/metro/01307__.js").WireType.Varint);
+    tag.tag(1, 01307__.WireType.Varint).int64(seconds.seconds);
+    const tagResult = tag.tag(1, 01307__.WireType.Varint);
   }
   if (0 !== seconds.nanos) {
-    tag.tag(2, require("../../../../../../_runtime/metro/01307__.js").WireType.Varint).int32(seconds.nanos);
-    const tagResult1 = tag.tag(2, require("../../../../../../_runtime/metro/01307__.js").WireType.Varint);
+    tag.tag(2, 01307__.WireType.Varint).int32(seconds.nanos);
+    const tagResult1 = tag.tag(2, 01307__.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = require("../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onWrite;
+      onWrite = 01307__.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, seconds, tag);

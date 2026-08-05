@@ -1,3 +1,4 @@
+import { isFabric } from "../../../utils/native/FabricUtils.tsx";
 // discord_app/modules/a11y/native/PortalAccessibilityWorkaroundView.tsx
 import "noop";
 import { View as _default } from "get ActivityIndicator";
@@ -11,7 +12,7 @@ if (isFabric.isIosFabric()) {
 const result = require("jsxProd").fileFinishedImporting("modules/a11y/native/PortalAccessibilityWorkaroundView.tsx");
 
 export default function PortalAccessibilityWorkaroundView(arg0) {
-  let obj = require("../../../utils/native/FabricUtils.tsx") /* isFabric */;
+  let obj = isFabric /* isFabric */;
   obj = null;
   if (obj.isIosFabric()) {
     obj = { accessibilityLabel: " ", accessible: false };

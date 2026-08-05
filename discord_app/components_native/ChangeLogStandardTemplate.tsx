@@ -1,3 +1,5 @@
+import { Button } from "../design/void/native.tsx";
+import { defaultRules } from "../utils/ChangeLogUtils.tsx";
 // discord_app/components_native/ChangeLogStandardTemplate.tsx
 import importAllResult from "getLocalizedLink";
 import get_ActivityIndicator from "XNeutralIcon";
@@ -36,7 +38,7 @@ function LHeading(children) {
     });
     combined = mapped.concat(tmp5);
   }
-  const items = [closure_10(_require("../design/void/native.tsx").LegacyText, { accessibilityRole: "header", style: combined, children: children.children }), ];
+  const items = [closure_10(_Button.LegacyText, { accessibilityRole: "header", style: combined, children: children.children }), ];
   _require = false;
   let combined1;
   if (null != children.className) {
@@ -157,9 +159,9 @@ const memoResult1 = importAllResult.memo((video) => {
     children: null
   };
   const items1 = [video.video, ];
-  let obj2 = require("../modules/markup/MarkupUtils.tsx");
+  let obj2 = require("../modules/markup/MarkupUtils.tsx") /* get defaultRules */;
   id = changeLog.id;
-  let obj3 = require("../utils/ChangeLogUtils.tsx");
+  let obj3 = defaultRules;
   {
     obj = { components: null };
     const obj1 = { Link: null, ListItem: null, LHeading: null, Heading: null };
@@ -217,7 +219,7 @@ export const changelogRules = function changelogRules(changelogId, arg1) {
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = require("../utils/ChangeLogUtils.tsx");
+  let obj = defaultRules;
   if (flag) {
     obj = { components: null };
     obj = { Link: null, ListItem: null, LHeading: null, Heading: null };
@@ -252,7 +254,7 @@ export const changelogRules = function changelogRules(changelogId, arg1) {
   return messageRules;
 };
 export const getRenderChangelog = function getRenderChangelog(id) {
-  let obj = require("../modules/markup/MarkupUtils.tsx");
+  let obj = require("../modules/markup/MarkupUtils.tsx") /* get defaultRules */;
   id = id.id;
   {
     obj = { components: null };

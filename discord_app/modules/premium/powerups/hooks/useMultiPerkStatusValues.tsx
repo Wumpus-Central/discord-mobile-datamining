@@ -1,3 +1,5 @@
+import { messagesProxy } from "../GuildPowerups.messages.js";
+import { usePowerupActiveStatus } from "usePowerupActiveStatus.tsx";
 // discord_app/modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx
 import { PowerupActiveStatusType } from "BoostedGuildTiers";
 
@@ -5,7 +7,7 @@ const result = require("getSystemLocale").fileFinishedImporting("modules/premium
 
 export default function useMultiPerkStatusValues(powerups) {
   powerups = powerups.powerups;
-  let obj = require("usePowerupActiveStatus.tsx") /* usePowerupActiveStatus */;
+  let obj = usePowerupActiveStatus /* usePowerupActiveStatus */;
   const powerupsActiveStatuses = obj.usePowerupsActiveStatuses(powerups.guildId, powerups);
   const someResult = powerupsActiveStatuses.some((type) => type.type !== constants.INACTIVE);
   if (powerups.length <= 0) {
@@ -35,7 +37,7 @@ export default function useMultiPerkStatusValues(powerups) {
     } else if (someResult) {
       obj = { type: "active", statusText: null };
       const intl = tmp(1236).intl;
-      obj[1] = intl.string(require("../GuildPowerups.messages.js").FFLkmx);
+      obj[1] = intl.string(messagesProxy.FFLkmx);
       tmp4 = obj;
     }
     const reduced1 = powerupsActiveStatuses.reduce((arg0, type) => {

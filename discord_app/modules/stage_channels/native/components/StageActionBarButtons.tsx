@@ -1,3 +1,10 @@
+import { registerAsset } from "../../../../../_runtime/07711_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/07812_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10677_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10711_registerAsset.js";
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/stage_channels/native/components/StageActionBarButtons.tsx
 import asyncRequireImpl from "asyncRequireImpl";
 import MusicSlashIcon from "MusicSlashIcon";
@@ -172,7 +179,7 @@ export const MoveToAudienceButton = function MoveToAudienceButton(channel) {
   const obj = { accessibilityLabel: null, source: null, onPress: null, isSmallSize: null };
   const intl = channel(1236).intl;
   obj[0] = intl.string(channel(1236).t.ezLpY6);
-  obj[1] = require("../../../../../_runtime/10677_registerAsset.js");
+  obj[1] = registerAsset;
   obj[2] = function onPress() {
     const result = channel(outer1_3[14]).audienceAckRequestToSpeak(channel, true);
   };
@@ -225,7 +232,7 @@ export const DisconnectStageButton = function DisconnectStageButton(channel) {
   const obj = { accessibilityLabel: null, source: null, IconComponent: null, onPress: null, isSmallSize: null };
   const intl = channel(1236).intl;
   obj[0] = intl.string(channel(1236).t.SMKyih);
-  obj[1] = require("../../../../../_runtime/07812_registerAsset.js");
+  obj[1] = registerAsset;
   obj[2] = channel(10684).DoorExitIcon;
   obj[3] = function onPress() {
     if (outer1_1(outer1_3[24])(channel)) {
@@ -501,7 +508,7 @@ export const JoinStagePrompt = function JoinStagePrompt(channel) {
     title: null,
     subtitle: null
   };
-  obj[1] = require("../../../../../_runtime/07711_registerAsset.js");
+  obj[1] = registerAsset;
   ({ iconStyle: obj[2], iconContainerStyle: obj[3] } = createCacheKey());
   obj[4] = channel.style;
   const intl = channel(1236).intl;
@@ -516,17 +523,17 @@ export const ContinueToStagePrompt = function ContinueToStagePrompt(onContinue) 
   obj = { style: tmp.continueContainer, children: null };
   obj = { children: null };
   const obj1 = { style: tmp.continueText, children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["jMLfp/"]);
-  obj[0] = callback2(require("../../../../design/void/native.tsx") /* Button */.LegacyText, obj1);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj1[1] = intl.string(getSystemLocale /* getSystemLocale */.t["jMLfp/"]);
+  obj[0] = callback2(Button /* Button */.LegacyText, obj1);
   const items = [callback2(View, obj), ];
   const obj2 = { children: null };
   const obj3 = { style: tmp.continueIcon, source: null, size: null, disableColor: true };
-  obj3[1] = require("../../../../../_runtime/10711_registerAsset.js");
-  obj3[2] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.SMALL;
-  obj2[0] = callback2(require("../../../../design/void/native.tsx") /* Button */.Icon, obj3);
+  obj3[1] = registerAsset;
+  obj3[2] = Button /* Button */.Icon.Sizes.SMALL;
+  obj2[0] = callback2(Button /* Button */.Icon, obj3);
   items[1] = callback2(View, obj2);
   obj[1] = items;
   obj[2] = callback3(View, obj);
-  return callback2(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  return callback2(PressableBase /* PressableBase */.PressableOpacity, obj);
 };

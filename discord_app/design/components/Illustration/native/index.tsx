@@ -1,3 +1,4 @@
+import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 // discord_app/design/components/Illustration/native/index.tsx
 const result = require("set").fileFinishedImporting("design/components/Illustration/native/index.tsx");
 
@@ -25,5 +26,5 @@ export const getIllustrationSource = function getIllustrationSource(theme, light
   return lightResult;
 };
 export const useIllustrationSource = function useIllustrationSource(arg0) {
-  return arg0(require("../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */.useThemeContext().theme);
+  return arg0(ManaContext /* ManaContext */.useThemeContext().theme);
 };

@@ -1,3 +1,4 @@
+import { sanitizeURLPart } from "../../modules/links/native/handleURL.tsx";
 // discord_app/lib/native/Linking.tsx
 import { Linking } from "get ActivityIndicator";
 
@@ -9,10 +10,10 @@ export default {
     if (arg2 === undefined) {
       flag = true;
     }
-    require("../../modules/links/native/handleURL.tsx") /* sanitizeURLPart */.default(arg0, arg1, { allowExternal: flag });
+    sanitizeURLPart /* sanitizeURLPart */.default(arg0, arg1, { allowExternal: flag });
   },
   openURLExternally(href, SAFARI) {
-    require("../../modules/links/native/handleURL.tsx") /* sanitizeURLPart */.default(href, SAFARI, { forceExternalBrowser: true });
+    sanitizeURLPart /* sanitizeURLPart */.default(href, SAFARI, { forceExternalBrowser: true });
   },
   performURLNavigation(href) {
     Linking.openURL(href).catch(() => {

@@ -1,3 +1,4 @@
+import { t } from "../../../../voice_panel/native/utils/roundToNearestPixel.tsx";
 // discord_app/modules/activities/panel/native/pip/getActivityContainerPIPStylesSpec.tsx
 import { OrientationLockState } from "items3";
 import { LANDSCAPE_ACTIVITY_ASPECT_RATIO } from "ActivityPanelModes";
@@ -12,7 +13,7 @@ const fn = function t(isLandscape) {
   }
   if (pipOrientationLockState === OrientationLockState.PORTRAIT) {
     const result = pipWidth * LANDSCAPE_ACTIVITY_ASPECT_RATIO;
-    let marginTop = -1 * require("../../../../voice_panel/native/utils/roundToNearestPixel.tsx")(result / 2);
+    let marginTop = -1 * t(result / 2);
     let marginLeft = 0;
     let shouldVerticallyCenter = true;
     let shouldHorizontallyCenter = false;
@@ -20,7 +21,7 @@ const fn = function t(isLandscape) {
     let width = pipWidth;
   } else {
     width = height * LANDSCAPE_ACTIVITY_ASPECT_RATIO;
-    marginLeft = -1 * require("../../../../voice_panel/native/utils/roundToNearestPixel.tsx")(width / 2);
+    marginLeft = -1 * t(width / 2);
     marginTop = 0;
     shouldVerticallyCenter = false;
     shouldHorizontallyCenter = true;

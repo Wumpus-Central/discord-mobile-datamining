@@ -1,3 +1,4 @@
+import { useResourceChannels } from "../useResourceChannels.tsx";
 // discord_app/modules/guild_onboarding_home/native/ResourcesRow.tsx
 import "noop";
 import { ScrollView } from "get ActivityIndicator";
@@ -20,7 +21,7 @@ export default function ResourcesRow(guildId) {
   let importDefault;
   const tmp = createCacheKey();
   importDefault = tmp;
-  const arr = require("../useResourceChannels.tsx")(guildId);
+  const arr = useResourceChannels(guildId);
   let obj = { horizontal: true, style: tmp.container, children: null };
   const substr = arr.slice(0, 2);
   const items = [

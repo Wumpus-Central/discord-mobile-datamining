@@ -1,3 +1,5 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID } from "../channel/FakePlaceholderPrivateChannel.tsx";
 // discord_app/modules/threads/LazyLoadedThreadManager.tsx
 import _handleConnectionOpen from "_handleConnectionOpen";
 import createChannelRecord from "createChannelRecord";
@@ -14,25 +16,25 @@ const require = arg1;
 function initialize() {
   if (!c12) {
     c12 = true;
-    const subscription = require("../../Dispatcher.tsx").subscribe("CONNECTION_OPEN", () => {
+    const subscription = dispatcher.subscribe("CONNECTION_OPEN", () => {
       let closure_11 = {};
       channelId = channelId.getChannelId();
       if (tmp2) {
         callback(channelId);
       }
     });
-    const obj = require("../../Dispatcher.tsx");
+    const obj = dispatcher;
   }
 }
 function dispatchLoadedThread(arg0, arg1) {
   const tmp = callback(arg0);
-  require("../../Dispatcher.tsx").dispatch({ type: "THREAD_CREATE", channel: tmp, messageId: undefined });
+  dispatcher.dispatch({ type: "THREAD_CREATE", channel: tmp, messageId: undefined });
 }
 function loadThread(channelId) {
   const _require = channelId;
   if (null == channelId) {
     return Promise.resolve();
-  } else if (channelId === _require("../channel/FakePlaceholderPrivateChannel.tsx").FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+  } else if (channelId === _FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
     return Promise.resolve();
   } else if (isStaticChannelRoute(channelId)) {
     return Promise.resolve();
@@ -41,7 +43,7 @@ function loadThread(channelId) {
   } else {
     if (!c12) {
       c12 = true;
-      let obj = require("../../Dispatcher.tsx");
+      let obj = dispatcher;
       const subscription = obj.subscribe("CONNECTION_OPEN", () => {
         let closure_11 = {};
         channelId = channelId.getChannelId();

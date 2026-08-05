@@ -1,3 +1,4 @@
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/guild_member_verification/native/components/form_fields/TermsFieldList.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -17,10 +18,10 @@ function TermsFieldListItem(arg0) {
   let obj = { style: tmp.termsRow, children: null };
   obj = { style: tmp.termsRowNumber, variant: "text-sm/medium", color: "text-muted", children: null };
   obj[3] = "" + rowNumber + ".";
-  const items = [callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+  const items = [callback(Text /* Text */.Text, obj), ];
   obj = { style: tmp.termsRowContent, variant: "text-md/medium", children: null };
-  obj[2] = require("../../../../markup/MarkupUtils.tsx").parseGuildVerificationFormRule(rule, true, { channelId: rulesChannelId });
-  items[1] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  obj[2] = require("../../../../markup/MarkupUtils.tsx") /* get defaultRules */.parseGuildVerificationFormRule(rule, true, { channelId: rulesChannelId });
+  items[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }

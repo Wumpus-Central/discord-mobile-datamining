@@ -1,3 +1,4 @@
+import { PlatformTypes } from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 // discord_app/modules/media_engine/BrowserInvertedWantsExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
@@ -7,7 +8,7 @@ let closure_2 = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-
 const result = require("set").fileFinishedImporting("modules/media_engine/BrowserInvertedWantsExperiment.tsx");
 
 export const getBrowserInvertedWantsConfig = function getBrowserInvertedWantsConfig(arg0) {
-  let config = require("../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
+  let config = PlatformTypes /* PlatformTypes */;
   if (config.isDesktop()) {
     config = { invertWants: false };
   } else {

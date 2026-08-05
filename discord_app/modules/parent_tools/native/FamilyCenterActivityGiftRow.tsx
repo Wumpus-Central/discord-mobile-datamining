@@ -1,3 +1,6 @@
+import { useCollectiblesData } from "../../collectibles/hooks/useCollectiblesData.tsx";
+import { getCollectibleTypeName } from "../FamilyCenterActivityPurchaseRowUtils.tsx";
+import { useSelectedTeenUser } from "../hooks/useSelectedTeenUser.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterActivityGiftRow.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -28,10 +31,10 @@ export default function FamilyCenterActivityGiftRow(arg0) {
   ({ skuId, subscriptionPlanId } = arg0);
   ({ price, gifterUserId, claimed, offeredAt, claimedAt } = arg0);
   const tmp = createCacheKey();
-  let product = require("../../collectibles/hooks/useCollectiblesData.tsx")(skuId).product;
-  let obj = require("../hooks/useSelectedTeenUser.tsx") /* useSelectedTeenUser */;
+  let product = useCollectiblesData(skuId).product;
+  let obj = useSelectedTeenUser /* useSelectedTeenUser */;
   const teenUserForId = obj.useTeenUserForId(gifterUserId);
-  let obj1 = require("../FamilyCenterActivityPurchaseRowUtils.tsx") /* getCollectibleTypeName */;
+  let obj1 = getCollectibleTypeName /* getCollectibleTypeName */;
   let tmp7 = product;
   if (product == null) {
     tmp7 = null;

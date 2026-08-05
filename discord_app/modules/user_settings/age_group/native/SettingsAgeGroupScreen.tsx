@@ -1,3 +1,7 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { messagesProxy } from "../../../age_assurance/AgeAssurance.messages.js";
+import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
 // discord_app/modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -16,13 +20,13 @@ function SettingsAgeGroupHeader() {
     obj.openUrl(callback(1945).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
   }, []);
   obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../age_assurance/AgeAssurance.messages.js").PY4MA0);
-  const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(messagesProxy.PY4MA0);
+  const items = [callback(Text /* Text */.Text, obj), ];
   obj = { variant: "text-sm/normal", color: "text-default", children: null };
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl2.format(require("../../../age_assurance/AgeAssurance.messages.js")["1DN29p"], { handleOnHelpUrlHook: callback });
-  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl2.format(messagesProxy["1DN29p"], { handleOnHelpUrlHook: callback });
+  items[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }
@@ -48,5 +52,5 @@ export default function SettingsAgeGroupScreen() {
     obj[1] = closure_10;
     return obj.createList(obj);
   }, []);
-  return callback(require("../../../settings/native/renderer/SettingLayout.tsx"), { node });
+  return callback(SettingLayout, { node });
 };

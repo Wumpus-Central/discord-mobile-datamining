@@ -1,3 +1,8 @@
+import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ChangePhoneReason } from "../../../phone/PhoneActionCreators.tsx";
 // discord_app/modules/user_settings/defs/native/AccountPhoneSetting.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PHONE_VERIFICATION_MODAL_KEY as closure_4 } from "PHONE_VERIFICATION_MODAL_KEY";
@@ -6,13 +11,13 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.dEYpSt);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.dEYpSt);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   useTrailing: function useAccountPhoneSettingTrailing() {
     const items = [mergeGuildAvatar];
-    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+    return initialize /* initialize */.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();
       let phone;
       if (currentUser != null) {
@@ -22,10 +27,10 @@ createToggle = {
     });
   },
   onPress: function onAccountPhoneSettingPress() {
-    let obj = require("../../../../actions/ModalActionCreators.tsx");
+    let obj = ModalActionCreators;
     obj = { allowDeletePhone: true, reason: null };
-    obj[1] = require("../../../phone/PhoneActionCreators.tsx") /* ChangePhoneReason */.ChangePhoneReason.USER_SETTINGS_UPDATE;
-    obj.pushLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8327, dependencyMap.paths), obj, closure_4);
+    obj[1] = ChangePhoneReason /* ChangePhoneReason */.ChangePhoneReason.USER_SETTINGS_UPDATE;
+    obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(8327, dependencyMap.paths), obj, closure_4);
   },
   withArrow: true
 };

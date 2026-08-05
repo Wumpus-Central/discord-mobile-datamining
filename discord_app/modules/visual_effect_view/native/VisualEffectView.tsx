@@ -1,3 +1,6 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { MODERN_ANDROID_BLURRING_AVAILABLE } from "VisualEffectViewAndroid.tsx";
 // discord_app/modules/visual_effect_view/native/VisualEffectView.tsx
 import { View } from "get ActivityIndicator";
 import { useVisualEffectViewOverrides as closure_4 } from "useVisualEffectViewOverrides";
@@ -34,10 +37,10 @@ export default require("noop").forwardRef(function VisualEffectView(blurAmount) 
   }
   const merged = Object.assign(blurAmount, Object.create(null));
   ({ blurAmountOverride, blurTintRgbaOverride, blurEffectNameOverride } = callback());
-  let obj = require("../../../design/tokens/native/useToken.tsx") /* map */;
-  const token = obj.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").colors.LEGACY_BLUR_FALLBACK_DEFAULT, blurTheme);
-  let obj1 = require("../../../design/tokens/native/useToken.tsx") /* map */;
-  let token1 = obj1.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").colors.LEGACY_BLUR_FALLBACK_ULTRA_THIN, blurTheme);
+  let obj = map /* map */;
+  const token = obj.useToken(Themes.colors.LEGACY_BLUR_FALLBACK_DEFAULT, blurTheme);
+  let obj1 = map /* map */;
+  let token1 = obj1.useToken(Themes.colors.LEGACY_BLUR_FALLBACK_ULTRA_THIN, blurTheme);
   if ("default" === blurStyle) {
     token1 = token;
   }
@@ -138,7 +141,7 @@ export const isBlurDisabled = function isBlurDisabled(merged) {
     let tmp4 = null == tmp;
     if (!tmp4) {
       if (android_softwareBlurDisabled) {
-        android_softwareBlurDisabled = !require("VisualEffectViewAndroid.tsx") /* MODERN_ANDROID_BLURRING_AVAILABLE */.MODERN_ANDROID_BLURRING_AVAILABLE;
+        android_softwareBlurDisabled = !MODERN_ANDROID_BLURRING_AVAILABLE /* MODERN_ANDROID_BLURRING_AVAILABLE */.MODERN_ANDROID_BLURRING_AVAILABLE;
       }
       tmp4 = true === android_softwareBlurDisabled;
     }

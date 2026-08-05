@@ -1,3 +1,9 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { ChatIcon } from "../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { set } from "../../../core/native/NativeView.tsx";
+import { useChatBadge } from "../hooks/useChatBadge.tsx";
+import { VoicePanelIconButton } from "../shared/VoicePanelIconButton.tsx";
 // discord_app/modules/voice_panel/native/header/VoicePanelHeaderChatButton.tsx
 import noop from "noop";
 import { ComponentActions } from "ME";
@@ -22,17 +28,17 @@ export default function VoicePanelHeaderChatButton(channelId) {
     const ComponentDispatch = callback(table[5]).ComponentDispatch;
     ComponentDispatch.dispatch(constants.VOICE_PANEL_OPEN_CHAT_TAB);
   }, []);
-  const tmp5 = require("../hooks/useChatBadge.tsx")(channelId.channelId);
+  const tmp5 = useChatBadge(channelId.channelId);
   const tmp6 = closure_6;
   let obj = { icon: null, accessibilityLabel: null, onPress: null };
-  const tmp7 = require("../../../core/native/NativeView.tsx");
+  const tmp7 = set;
   obj = { color: null, size: "sm" };
-  obj[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
-  obj[0] = callback(require("../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx") /* ChatIcon */.ChatIcon, obj);
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["5KxXrK"]);
+  obj[0] = Themes.colors.WHITE;
+  obj[0] = callback(ChatIcon /* ChatIcon */.ChatIcon, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["5KxXrK"]);
   obj[2] = callback;
-  const children = [callback(require("../shared/VoicePanelIconButton.tsx"), obj), ];
+  const children = [callback(VoicePanelIconButton, obj), ];
   let tmp8Result = null != tmp5;
   if (tmp8Result) {
     obj = { style: null, children: null };

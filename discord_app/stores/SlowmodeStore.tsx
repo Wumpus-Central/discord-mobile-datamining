@@ -1,3 +1,6 @@
+import { start } from "../../discord_common/js/packages/timers/Timers.tsx";
+import { canBypassSlowmodeHelper } from "../modules/chat/SlowmodeUtils.tsx";
+import { set } from "../utils/Durations.tsx";
 // discord_app/stores/SlowmodeStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -13,7 +16,7 @@ function setCooldown(channel, SendMessage, arg2) {
     const id = channel.id;
     delete tmp2[tmp];
   }
-  let obj = _require("../modules/chat/SlowmodeUtils.tsx");
+  let obj = _canBypassSlowmodeHelper;
   if (!obj.canBypassSlowmode(channel)) {
     if (arg2 > 0) {
       const _Date = Date;
@@ -23,7 +26,7 @@ function setCooldown(channel, SendMessage, arg2) {
       obj[0] = channel.rateLimitPerUser;
       obj[1] = arg2;
       obj[2] = sum;
-      const timeout = new _require("../../discord_common/js/packages/timers/Timers.tsx").Timeout();
+      const timeout = new _start.Timeout();
       obj[3] = timeout;
       tmp3[SendMessage][channel.id] = obj;
       const timer2 = tmp3[SendMessage][channel.id].timer;
@@ -71,7 +74,7 @@ obj = {
     if (null != channel) {
       let num2 = 0;
       if (0 !== channel.rateLimitPerUser) {
-        num2 = channel.rateLimitPerUser * require("../utils/Durations.tsx").Millis.SECOND + 100;
+        num2 = channel.rateLimitPerUser * set.Millis.SECOND + 100;
       }
       setCooldown(channel, channelId.slowmodeType, num2);
       const tmp2 = setCooldown;
@@ -96,7 +99,7 @@ obj = {
     if (null != channel) {
       let num2 = 0;
       if (0 !== channel.rateLimitPerUser) {
-        num2 = channel.rateLimitPerUser * require("../utils/Durations.tsx").Millis.SECOND + 100;
+        num2 = channel.rateLimitPerUser * set.Millis.SECOND + 100;
       }
       setCooldown(channel, obj.SendMessage, num2);
       const tmp2 = setCooldown;

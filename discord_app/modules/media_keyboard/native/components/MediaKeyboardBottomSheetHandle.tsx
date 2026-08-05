@@ -1,3 +1,7 @@
+import { TwinButtons } from "../../../../design/components/experimental/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useGradientBottom } from "../../../client_themes/native/ClientThemesOverrides.tsx";
+import { map } from "../../../reanimated/native/useStateFromSharedValue.tsx";
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardBottomSheetHandle.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { DRAG_HANDLE } from "DRAG_HANDLE";
@@ -24,13 +28,13 @@ let closure_6 = createCacheKey.createStyles(obj);
 const memoResult = require("noop").memo(function MediaKeyboardBottomSheetHandle(onPress) {
   onPress = onPress.onPress;
   const tmp = callback();
-  let obj = require("../../../client_themes/native/ClientThemesOverrides.tsx") /* useGradientBottom */;
+  let obj = useGradientBottom /* useGradientBottom */;
   const gradientBottom = obj.useGradientBottom();
-  let obj1 = require("../../../reanimated/native/useStateFromSharedValue.tsx") /* map */;
+  let obj1 = map /* map */;
   const derivedStateFromSharedValue = obj1.useDerivedStateFromSharedValue(onPress.animatedIndex, (arg0) => arg0 > 0);
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require("../../../../intl/index.native.tsx") /* getSystemLocale */.t;
+  const t = getSystemLocale /* getSystemLocale */.t;
   if (derivedStateFromSharedValue) {
     let stringResult = string(t.iTcuma);
   } else {
@@ -41,7 +45,7 @@ const memoResult = require("noop").memo(function MediaKeyboardBottomSheetHandle(
     obj[0] = onPress;
     obj[1] = stringResult;
     obj[2] = null == onPress;
-    let tmp8Result = tmp8(require("../../../../design/components/experimental/native.tsx") /* TwinButtons */.ActionSheetDragHandle, obj);
+    let tmp8Result = tmp8(TwinButtons /* TwinButtons */.ActionSheetDragHandle, obj);
   } else {
     obj = { accessibilityLabel: null, accessibilityRole: "button", "aria-hidden": null, style: null, onPress: null, children: null };
     obj[0] = stringResult;

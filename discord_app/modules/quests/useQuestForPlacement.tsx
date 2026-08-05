@@ -1,3 +1,5 @@
+import { DiscordAppState.native } from "../app_state/DiscordAppState.native.tsx";
+import { getIsEligibleForQuests } from "lib/QuestsEligibility.tsx";
 // discord_app/modules/quests/useQuestForPlacement.tsx
 import noop from "noop";
 import initializeState from "initializeState";
@@ -5,7 +7,7 @@ import initializeState from "initializeState";
 let c3;
 let c4;
 function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP) {
-  let isEligibleForQuests = require("lib/QuestsEligibility.tsx") /* getIsEligibleForQuests */.getIsEligibleForQuests();
+  let isEligibleForQuests = getIsEligibleForQuests /* getIsEligibleForQuests */.getIsEligibleForQuests();
   if (isEligibleForQuests) {
     let tmp5 = null != fetchedAt;
     if (tmp5) {
@@ -35,7 +37,7 @@ function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP) {
       tmp(10376).clearQuestAdDecision(QUEST_HOME_BANNER_DESKTOP, fetchedAt.ttlMillis);
       const tmpResult1 = tmp(10376);
     }
-    obj2 = require("../app_state/DiscordAppState.native.tsx");
+    obj2 = DiscordAppState.native;
     tmp9 = importDefault;
   }
 }

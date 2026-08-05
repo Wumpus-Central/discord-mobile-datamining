@@ -1,3 +1,6 @@
+import { CONFIG_NEVER_ANIMATE } from "../../../../design/animation/reanimated/spring/spring.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import { QuestDockMode } from "QuestDockGestureContext.tsx";
 // discord_app/modules/quests/native/QuestDock/QuestDockContentCollapsed.tsx
 import importAllResult from "noop";
 import { QuestDockMode } from "QuestsExperimentLocations";
@@ -23,8 +26,8 @@ const memoResult = importAllResult.memo(function QuestDockContentCollapsed(child
     tmp = hideOnExpand;
   }
   const require = tmp;
-  const activeQuestDockMode = importAllResult.useContext(require("QuestDockGestureContext.tsx") /* QuestDockMode */.QuestDockGestureContext).activeQuestDockMode;
-  let obj = require("../../../reanimated/ReanimatedRexport.tsx");
+  const activeQuestDockMode = importAllResult.useContext(QuestDockMode /* QuestDockMode */.QuestDockGestureContext).activeQuestDockMode;
+  let obj = ReanimatedRexport;
   const fn = function l() {
     let obj = tmp(outer1_2[8]);
     let num = 1;
@@ -37,7 +40,7 @@ const memoResult = importAllResult.memo(function QuestDockContentCollapsed(child
     obj = { opacity: obj.withSpring(num, outer1_5) };
     return obj;
   };
-  obj = { withSpring: require("../../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
+  obj = { withSpring: CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
   fn.__closure = obj;
   fn.__workletHash = 13361221764426;
   fn.__initData = closure_8;
@@ -59,7 +62,7 @@ const memoResult = importAllResult.memo(function QuestDockContentCollapsed(child
   C.__closure = { activeQuestDockMode, QuestDockMode, hideOnExpand: tmp };
   C.__workletHash = 14339269503421;
   C.__initData = closure_9;
-  const animatedProps = require("../../../reanimated/ReanimatedRexport.tsx").useAnimatedProps(C);
+  const animatedProps = ReanimatedRexport.useAnimatedProps(C);
   const style = [tmp2.questDockContentCollapsed, animatedStyle];
   return jsx(activeQuestDockMode(7819), { style, animatedProps, children: children.children });
 });

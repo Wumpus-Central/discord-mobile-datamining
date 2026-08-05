@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/labs/useLabFeature.tsx
 import getUserAgnosticState from "getUserAgnosticState";
 
@@ -8,5 +9,5 @@ export default function useLabFeature(arg0) {
   const _require = arg0;
   const items = [getUserAgnosticState];
   const items1 = [arg0];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_2.get(closure_0), items1);
+  return _initialize.useStateFromStores(items, () => outer1_2.get(closure_0), items1);
 };

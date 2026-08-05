@@ -1,3 +1,6 @@
+import { metadata } from "../../../../discord_assets/assets/collectibles/previews/sample_profile.png.js";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { StaticEffect } from "../profile_effects/native/ProfileEffect.tsx";
 // discord_app/modules/collectibles/native/ProfileEffectSampleV2.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -31,9 +34,9 @@ export default function ProfileEffectSample(hideBackground) {
   obj = { style: items1, source: null, accessible: false, resizeMode: "cover" };
   items1 = [tmp.sampleProfileImage];
   obj = { uri: null };
-  obj[0] = require("../../../../discord_assets/assets/collectibles/previews/sample_profile.png.js");
+  obj[0] = metadata;
   obj[1] = obj;
-  const items2 = [callback(require("../../../components_native/common/FastImage.tsx"), obj), , ];
+  const items2 = [callback(preload, obj), , ];
   let tmp4Result = !flag;
   if (!flag) {
     const obj1 = { style: null };
@@ -41,7 +44,7 @@ export default function ProfileEffectSample(hideBackground) {
     tmp4Result = tmp4(tmp3, obj1);
   }
   items2[1] = tmp4Result;
-  items2[2] = callback(require("../profile_effects/native/ProfileEffect.tsx"), { skuId: hideBackground.item.skuId, bannerAdjustment: 0, useThumbnail: true });
+  items2[2] = callback(StaticEffect, { skuId: hideBackground.item.skuId, bannerAdjustment: 0, useThumbnail: true });
   obj[1] = items2;
   return closure_4(View, obj);
 };

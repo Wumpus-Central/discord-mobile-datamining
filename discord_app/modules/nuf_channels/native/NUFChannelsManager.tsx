@@ -1,3 +1,5 @@
+import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 // discord_app/modules/nuf_channels/native/NUFChannelsManager.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -110,7 +112,7 @@ class NUFChannelsManager extends tmp2 {
 }
 const prototype = NUFChannelsManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   const value = Storage.get(c9);
   let isNewUserResult = !value;
   if (!value) {
@@ -127,7 +129,7 @@ prototype["_initialize"] = function _initialize() {
   }
 };
 prototype["_terminate"] = function _terminate() {
-  const rootNavigationRef = require("../../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
   if (rootNavigationRef != null) {
     const self = this;
     rootNavigationRef.removeListener("state", this.handleNavigationStateChanged);

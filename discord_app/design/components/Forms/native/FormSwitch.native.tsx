@@ -1,3 +1,5 @@
+import { CONFIG_NEVER_ANIMATE } from "../../../animation/reanimated/spring/spring.tsx";
+import { SUBTLE_SPRING } from "../../../animation/reanimated/spring/springPresets.tsx";
 // discord_app/design/components/Forms/native/FormSwitch.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -110,11 +112,11 @@ export const FormSwitch = function FormSwitch(onValueChange) {
   const animatedStyle1 = obj5.useAnimatedStyle(fn);
   const fn2 = function n() {
     if (enabled) {
-      let obj = require("../../../animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */;
+      let obj = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */;
       obj = { opacity: null, transform: null };
-      obj[0] = obj.withSpring(first ? c0 : c1, require("../../../animation/reanimated/spring/springPresets.tsx") /* SUBTLE_SPRING */.SUBTLE_SPRING, "animate-always");
+      obj[0] = obj.withSpring(first ? c0 : c1, SUBTLE_SPRING /* SUBTLE_SPRING */.SUBTLE_SPRING, "animate-always");
       obj = { scale: null };
-      obj[0] = require("../../../animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring(1, require("../../../animation/reanimated/spring/springPresets.tsx") /* SUBTLE_SPRING */.SUBTLE_SPRING);
+      obj[0] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(1, SUBTLE_SPRING /* SUBTLE_SPRING */.SUBTLE_SPRING);
       const items = [obj];
       obj[1] = items;
       return obj;
@@ -130,11 +132,11 @@ export const FormSwitch = function FormSwitch(onValueChange) {
   const obj1 = { useReducedMotion: enabled, checked: first, on: 1, off: 0, withSpring: _require(enabled[10]).withSpring, SUBTLE_SPRING: _require(enabled[11]).SUBTLE_SPRING };
   const fn3 = function n() {
     if (enabled) {
-      let obj = require("../../../animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */;
+      let obj = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */;
       obj = { opacity: null, transform: null };
-      obj[0] = obj.withSpring(first ? c0 : c1, require("../../../animation/reanimated/spring/springPresets.tsx") /* SUBTLE_SPRING */.SUBTLE_SPRING, "animate-always");
+      obj[0] = obj.withSpring(first ? c0 : c1, SUBTLE_SPRING /* SUBTLE_SPRING */.SUBTLE_SPRING, "animate-always");
       obj = { scale: null };
-      obj[0] = require("../../../animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring(1, require("../../../animation/reanimated/spring/springPresets.tsx") /* SUBTLE_SPRING */.SUBTLE_SPRING);
+      obj[0] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(1, SUBTLE_SPRING /* SUBTLE_SPRING */.SUBTLE_SPRING);
       const items = [obj];
       obj[1] = items;
       return obj;

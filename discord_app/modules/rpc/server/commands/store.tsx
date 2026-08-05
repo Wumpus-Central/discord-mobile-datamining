@@ -1,3 +1,5 @@
+import { validateTransportType } from "../../helpers/validateTransportType.tsx";
+import { prototype } from "../../RPCError.tsx";
 // discord_app/modules/rpc/server/commands/store.tsx
 import prototype from "prototype";
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
@@ -273,13 +275,13 @@ function _getSkusHandler() {
 }
 function getEntitlementsHandler(socket) {
   socket = socket.socket;
-  let obj = require("../../helpers/validateTransportType.tsx") /* validateTransportType */;
+  let obj = validateTransportType /* validateTransportType */;
   const result = obj.validateTransportType(socket.transport);
   const id = socket.application.id;
   if (null == id) {
     obj = { errorCode: null };
     obj[0] = constants.INVALID_COMMAND;
-    const tmp9 = new require("../../RPCError.tsx")(obj, "No application.");
+    const tmp9 = new prototype(obj, "No application.");
     throw tmp9;
   } else {
     return importAll(6771).fetchUserEntitlementsForApplication(id);

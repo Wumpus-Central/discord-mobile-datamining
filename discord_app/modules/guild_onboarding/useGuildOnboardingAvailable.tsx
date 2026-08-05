@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_onboarding/useGuildOnboardingAvailable.tsx
 import initialize from "initialize";
 import { GuildFeatures } from "ME";
@@ -8,7 +9,7 @@ const result = require("initialize").fileFinishedImporting("modules/guild_onboar
 export default function useGuildOnboardingAvailable(features) {
   const _require = features;
   const items = [initialize];
-  let stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  let stateFromStores = _initialize.useStateFromStores(items, () => {
     let id;
     if (closure_0 != null) {
       id = tmp.id;

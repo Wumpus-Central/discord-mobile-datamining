@@ -1,3 +1,7 @@
+import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
+import { QUICK_SWITCHER } from "../app_analytics/AnalyticsLocation.tsx";
 // discord_app/modules/messages/MessageViewTrackingManager.tsx
 import { AnalyticEvents } from "ME";
 import "initialize";
@@ -26,13 +30,13 @@ function getAnalyticsConfig(type) {
     return obj3;
   } else if (tmp.VOICE_INVITE_EMBED === type) {
     const obj5 = { event: null, properties: null };
-    obj5[0] = require("../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionNames.VOICE_INVITE_EMBED;
+    obj5[0] = encodeProperties /* encodeProperties */.ImpressionNames.VOICE_INVITE_EMBED;
     const obj6 = { impression_type: null, invite_code: null, invite_guild_id: null, invite_channel_id: null, invite_instance_id: null, has_active_stream: null, location_stack: null };
-    obj6[0] = require("../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionTypes.VIEW;
+    obj6[0] = encodeProperties /* encodeProperties */.ImpressionTypes.VIEW;
     ({ inviteCode: obj3[1], inviteGuildId: obj3[2], inviteChannelId: obj3[3], inviteInstanceId: obj3[4], hasActiveStream: obj3[5], treatmentRendered } = type);
-    const INVITE_EMBED = require("../app_analytics/AnalyticsLocation.tsx").INVITE_EMBED;
+    const INVITE_EMBED = QUICK_SWITCHER.INVITE_EMBED;
     if (treatmentRendered) {
-      const items = [INVITE_EMBED, require("../app_analytics/AnalyticsLocation.tsx").VOICE_CHANNEL_LIST_INVITE_EMBED];
+      const items = [INVITE_EMBED, QUICK_SWITCHER.VOICE_CHANNEL_LIST_INVITE_EMBED];
       let items1 = items;
     } else {
       items1 = [INVITE_EMBED];
@@ -41,7 +45,7 @@ function getAnalyticsConfig(type) {
     obj5[1] = obj6;
     return obj5;
   } else {
-    obj = require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */;
+    obj = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
     return obj.assertNever(type);
   }
 }
@@ -179,7 +183,7 @@ prototype["drainBuffer"] = function drainBuffer() {
     let tmp4 = getAnalyticsConfig(tmp2);
     let tmp5 = importDefault;
     let tmp6 = dependencyMap;
-    let obj = require("../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     let trackResult = obj.track(tmp4.event, tmp4.properties);
     continue;
   }

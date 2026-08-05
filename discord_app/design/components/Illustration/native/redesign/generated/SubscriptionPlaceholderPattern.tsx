@@ -1,3 +1,5 @@
+import { AccessibilityAnnouncer } from "../../../../../shared.tsx";
+import { getIllustrationSource } from "../../index.tsx";
 // discord_app/design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx
 import "noop";
 import { Image } from "get ActivityIndicator";
@@ -7,7 +9,7 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx");
 
 export const getSubscriptionPlaceholderPatternSource = function getSubscriptionPlaceholderPatternSource(theme) {
-  let obj = require("../../index.tsx") /* getIllustrationSource */;
+  let obj = getIllustrationSource /* getIllustrationSource */;
   obj = {
     dark() {
       return callback(12680);
@@ -22,7 +24,7 @@ export const getSubscriptionPlaceholderPatternSource = function getSubscriptionP
   return obj.getIllustrationSource(theme, obj);
 };
 export const useSubscriptionPlaceholderPatternSource = function useSubscriptionPlaceholderPatternSource() {
-  let obj = require("../../../../../shared.tsx") /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   obj = {
     dark() {
       return callback(12680);
@@ -34,10 +36,10 @@ export const useSubscriptionPlaceholderPatternSource = function useSubscriptionP
       return callback(12682);
     }
   };
-  return require("../../index.tsx") /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return getIllustrationSource /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const SubscriptionPlaceholderPattern = function SubscriptionPlaceholderPattern(arg0) {
-  let obj = require("../../../../../shared.tsx") /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   obj = {
     dark() {
       return callback(12680);
@@ -50,7 +52,7 @@ export const SubscriptionPlaceholderPattern = function SubscriptionPlaceholderPa
     }
   };
   obj = {};
-  const illustrationSource = require("../../index.tsx") /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = getIllustrationSource /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

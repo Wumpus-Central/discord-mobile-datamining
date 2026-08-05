@@ -1,10 +1,12 @@
+import { ApplicationWidgetFieldPresentationType } from "../../../shared/shared-constants/ApplicationWidgetFieldPresentationType.tsx";
+import { ApplicationWidgetFieldValueType } from "../../../shared/shared-constants/ApplicationWidgetFieldValueType.tsx";
 // discord_common/js/packages/application-widget-renderer/src/resolvedValues.tsx
 function resolveFieldValue(image, items, applicationAssets) {
   const _require = image;
   applicationAssets = applicationAssets.applicationAssets;
   if (null == image) {
     return null;
-  } else if (image.value_type === _require("../../../shared/shared-constants/ApplicationWidgetFieldValueType.tsx").ApplicationWidgetFieldValueType.DATA) {
+  } else if (image.value_type === _ApplicationWidgetFieldValueType.ApplicationWidgetFieldValueType.DATA) {
     let iter = tmp[image.value];
     const presentation_type = image.presentation_type;
     if (null != iter) {
@@ -79,7 +81,7 @@ const items = [obj.STRING];
 const items1 = [obj.NUMBER];
 const items2 = [obj.MEDIA];
 const items3 = [obj.NUMBER];
-let closure_3 = { [require("../../../shared/shared-constants/ApplicationWidgetFieldPresentationType.tsx").ApplicationWidgetFieldPresentationType.TEXT]: items, [require("../../../shared/shared-constants/ApplicationWidgetFieldPresentationType.tsx").ApplicationWidgetFieldPresentationType.NUMBER]: items1, [require("../../../shared/shared-constants/ApplicationWidgetFieldPresentationType.tsx").ApplicationWidgetFieldPresentationType.IMAGE]: items2, [require("../../../shared/shared-constants/ApplicationWidgetFieldPresentationType.tsx").ApplicationWidgetFieldPresentationType.DURATION]: items3 };
+let closure_3 = { [ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.TEXT]: items, [ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.NUMBER]: items1, [ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.IMAGE]: items2, [ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.DURATION]: items3 };
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedValues.tsx");
 
 export const ResolvedValueType = obj;

@@ -1,3 +1,9 @@
+import { format } from "../../../../../_runtime/00669_format.js";
+import { BaseConnectionEvent } from "../index.tsx";
+import { create } from "Connection.tsx";
+import { sanitizeDevices } from "Devices.tsx";
+import { inject } from "inject.tsx";
+import { Video } from "ui/Video.tsx";
 // discord_common/js/packages/media-engine/native/index.tsx
 import _slicedToArray from "_slicedToArray";
 import Video from "Video";
@@ -346,14 +352,14 @@ class MediaEngineNative extends tmp4 {
 const prototype = MediaEngineNative.prototype;
 prototype["destroy"] = function destroy() {
   this.eachConnection((destroy) => destroy.destroy());
-  this.emit(require("../index.tsx") /* BaseConnectionEvent */.MediaEngineEvent.Destroy);
+  this.emit(BaseConnectionEvent /* BaseConnectionEvent */.MediaEngineEvent.Destroy);
   this.removeAllListeners();
 };
 prototype["interact"] = function interact() {
 
 };
 MediaEngineNative["supported"] = function supported() {
-  return require("inject.tsx") /* inject */.supported();
+  return inject /* inject */.supported();
 };
 prototype["supported"] = function supported() {
   return true;
@@ -364,119 +370,119 @@ prototype["supports"] = function supports(arg0) {
     tmp = require;
     tmp = dependencyMap;
     tmp = constants6;
-    return require("inject.tsx") /* inject */.supportsFeature(constants6.VOICE_LEGACY_SUBSYSTEM);
+    return inject /* inject */.supportsFeature(constants6.VOICE_LEGACY_SUBSYSTEM);
   } else if (tmp.EXPERIMENTAL_AUDIO_SUBSYSTEM === arg0) {
     tmp = require;
     tmp = dependencyMap;
     tmp = constants6;
-    return require("inject.tsx") /* inject */.supportsFeature(constants6.VOICE_EXPERIMENTAL_SUBSYSTEM);
+    return inject /* inject */.supportsFeature(constants6.VOICE_EXPERIMENTAL_SUBSYSTEM);
   } else if (tmp.AUTOMATIC_AUDIO_SUBSYSTEM === arg0) {
     tmp = require;
     tmp = dependencyMap;
     tmp = constants6;
-    return require("inject.tsx") /* inject */.supportsFeature(constants6.VOICE_AUTOMATIC_SUBSYSTEM);
+    return inject /* inject */.supportsFeature(constants6.VOICE_AUTOMATIC_SUBSYSTEM);
   } else if (tmp.AUDIO_SUBSYSTEM_DEFERRED_SWITCH === arg0) {
     tmp = require;
     tmp = dependencyMap;
     tmp = constants6;
-    return require("inject.tsx") /* inject */.supportsFeature(constants6.VOICE_SUBSYSTEM_DEFERRED_SWITCH);
+    return inject /* inject */.supportsFeature(constants6.VOICE_SUBSYSTEM_DEFERRED_SWITCH);
   } else if (tmp.AUDIO_BYPASS_SYSTEM_INPUT_PROCESSING === arg0) {
     tmp = require;
     tmp = dependencyMap;
     tmp = constants6;
-    return require("inject.tsx") /* inject */.supportsFeature(constants6.VOICE_BYPASS_SYSTEM_AUDIO_INPUT_PROCESSING);
+    return inject /* inject */.supportsFeature(constants6.VOICE_BYPASS_SYSTEM_AUDIO_INPUT_PROCESSING);
   } else if (tmp.DEBUG_LOGGING === arg0) {
     tmp = require;
     tmp = dependencyMap;
     tmp = constants6;
-    return require("inject.tsx") /* inject */.supportsFeature(constants6.DEBUG_LOGGING);
+    return inject /* inject */.supportsFeature(constants6.DEBUG_LOGGING);
   } else if (tmp.SOUNDSHARE === arg0) {
     tmp = require;
     tmp = dependencyMap;
     tmp = constants6;
-    return require("inject.tsx") /* inject */.supportsFeature(constants6.SOUNDSHARE);
+    return inject /* inject */.supportsFeature(constants6.SOUNDSHARE);
   } else if (tmp.SCREEN_SOUNDSHARE === arg0) {
     tmp = require;
     tmp = dependencyMap;
     tmp = constants6;
-    return require("inject.tsx") /* inject */.supportsFeature(constants6.SCREEN_SOUNDSHARE);
+    return inject /* inject */.supportsFeature(constants6.SCREEN_SOUNDSHARE);
   } else if (tmp.ELEVATED_HOOK === arg0) {
     tmp = require;
     tmp = dependencyMap;
     tmp = constants6;
-    return require("inject.tsx") /* inject */.supportsFeature(constants6.ELEVATED_HOOK);
+    return inject /* inject */.supportsFeature(constants6.ELEVATED_HOOK);
   } else if (tmp.LOOPBACK === arg0) {
     tmp = dependencyMap;
     tmp = constants6;
-    return require("inject.tsx") /* inject */.supportsFeature(constants6.LOOPBACK);
+    return inject /* inject */.supportsFeature(constants6.LOOPBACK);
   } else if (tmp.WUMPUS_VIDEO === arg0) {
-    return require("inject.tsx") /* inject */.supportsFeature(constants6.WUMPUS_VIDEO);
+    return inject /* inject */.supportsFeature(constants6.WUMPUS_VIDEO);
   } else if (tmp.HYBRID_VIDEO === arg0) {
-    return require("inject.tsx") /* inject */.supportsFeature(constants6.HYBRID_VIDEO);
+    return inject /* inject */.supportsFeature(constants6.HYBRID_VIDEO);
   } else {
     if (tmp.ATTENUATION !== arg0) {
       if (tmp.VIDEO_HOOK !== arg0) {
         if (tmp.EXPERIMENTAL_SOUNDSHARE === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.SOUNDSHARE_LOOPBACK);
+          return inject /* inject */.supportsFeature(constants6.SOUNDSHARE_LOOPBACK);
         } else if (tmp.REMOTE_LOCUS_NETWORK_CONTROL === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.REMOTE_LOCUS_NETWORK_CONTROL);
+          return inject /* inject */.supportsFeature(constants6.REMOTE_LOCUS_NETWORK_CONTROL);
         } else if (tmp.SCREEN_PREVIEWS === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.SCREEN_PREVIEWS);
+          return inject /* inject */.supportsFeature(constants6.SCREEN_PREVIEWS);
         } else if (tmp.CLIPS === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.CLIPS);
+          return inject /* inject */.supportsFeature(constants6.CLIPS);
         } else if (tmp.CLIPS_RECORDING_READY_EVENTS === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.CLIPS_RECORDING_READY_EVENTS);
+          return inject /* inject */.supportsFeature(constants6.CLIPS_RECORDING_READY_EVENTS);
         } else if (tmp.WINDOW_PREVIEWS === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.WINDOW_PREVIEWS);
+          return inject /* inject */.supportsFeature(constants6.WINDOW_PREVIEWS);
         } else if (tmp.AUDIO_DEBUG_STATE === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.AUDIO_DEBUG_STATE);
+          return inject /* inject */.supportsFeature(constants6.AUDIO_DEBUG_STATE);
         } else if (tmp.CONNECTION_REPLAY === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.CONNECTION_REPLAY);
+          return inject /* inject */.supportsFeature(constants6.CONNECTION_REPLAY);
         } else if (tmp.SIMULCAST === arg0) {
-          let supportsFeatureResult = require("inject.tsx") /* inject */.supportsFeature(constants6.SIMULCAST);
+          let supportsFeatureResult = inject /* inject */.supportsFeature(constants6.SIMULCAST);
           if (supportsFeatureResult) {
-            supportsFeatureResult = require("inject.tsx") /* inject */.supportsFeature(constants6.SIMULCAST_BUGFIX);
-            const tmp59Result = require("inject.tsx") /* inject */;
+            supportsFeatureResult = inject /* inject */.supportsFeature(constants6.SIMULCAST_BUGFIX);
+            const tmp59Result = inject /* inject */;
           }
           return supportsFeatureResult;
         } else if (tmp.RTC_REGION_RANKING === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.RTC_REGION_RANKING);
+          return inject /* inject */.supportsFeature(constants6.RTC_REGION_RANKING);
         } else if (tmp.ELECTRON_VIDEO === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.ELECTRON_VIDEO);
+          return inject /* inject */.supportsFeature(constants6.ELECTRON_VIDEO);
         } else if (tmp.MEDIAPIPE === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.MEDIAPIPE);
+          return inject /* inject */.supportsFeature(constants6.MEDIAPIPE);
         } else if (tmp.FIXED_KEYFRAME_INTERVAL === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.FIXED_KEYFRAME_INTERVAL);
+          return inject /* inject */.supportsFeature(constants6.FIXED_KEYFRAME_INTERVAL);
         } else if (tmp.FIRST_FRAME_CALLBACK === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.FIRST_FRAME_CALLBACK);
+          return inject /* inject */.supportsFeature(constants6.FIRST_FRAME_CALLBACK);
         } else if (tmp.REMOTE_USER_MULTI_STREAM === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.REMOTE_USER_MULTI_STREAM);
+          return inject /* inject */.supportsFeature(constants6.REMOTE_USER_MULTI_STREAM);
         } else if (tmp.IMAGE_QUALITY_MEASUREMENT === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.IMAGE_QUALITY_MEASUREMENT);
+          return inject /* inject */.supportsFeature(constants6.IMAGE_QUALITY_MEASUREMENT);
         } else if (tmp.GO_LIVE_HARDWARE === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.GO_LIVE_HARDWARE);
+          return inject /* inject */.supportsFeature(constants6.GO_LIVE_HARDWARE);
         } else if (tmp.SCREEN_CAPTURE_KIT === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.SCREEN_CAPTURE_KIT);
+          return inject /* inject */.supportsFeature(constants6.SCREEN_CAPTURE_KIT);
         } else if (tmp.NATIVE_SCREENSHARE_PICKER === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.NATIVE_SCREENSHARE_PICKER);
+          return inject /* inject */.supportsFeature(constants6.NATIVE_SCREENSHARE_PICKER);
         } else if (tmp.MLS_PAIRWISE_FINGERPRINTS === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.MLS_PAIRWISE_FINGERPRINTS);
+          return inject /* inject */.supportsFeature(constants6.MLS_PAIRWISE_FINGERPRINTS);
         } else if (tmp.OFFLOAD_ADM_CONTROLS === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.OFFLOAD_ADM_CONTROLS);
+          return inject /* inject */.supportsFeature(constants6.OFFLOAD_ADM_CONTROLS);
         } else if (tmp.VAAPI === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.VAAPI);
+          return inject /* inject */.supportsFeature(constants6.VAAPI);
         } else if (tmp.GAMESCOPE_CAPTURE === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.GAMESCOPE_CAPTURE);
+          return inject /* inject */.supportsFeature(constants6.GAMESCOPE_CAPTURE);
         } else if (tmp.ASYNC_VIDEO_INPUT_DEVICE_INIT === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.ASYNC_VIDEO_INPUT_DEVICE_INIT);
+          return inject /* inject */.supportsFeature(constants6.ASYNC_VIDEO_INPUT_DEVICE_INIT);
         } else if (tmp.PORT_AWARE_LATENCY_TESTING === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.PORT_AWARE_LATENCY_TESTING);
+          return inject /* inject */.supportsFeature(constants6.PORT_AWARE_LATENCY_TESTING);
         } else if (tmp.SPATIAL_AUDIO === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.SPATIAL_AUDIO);
+          return inject /* inject */.supportsFeature(constants6.SPATIAL_AUDIO);
         } else if (tmp.KRISP_NATIVE_ERROR === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.KRISP_NATIVE_ERROR);
+          return inject /* inject */.supportsFeature(constants6.KRISP_NATIVE_ERROR);
         } else if (tmp.UDP_ENDPOINT_UPDATE === arg0) {
-          return require("inject.tsx") /* inject */.supportsFeature(constants6.UDP_ENDPOINT_UPDATE);
+          return inject /* inject */.supportsFeature(constants6.UDP_ENDPOINT_UPDATE);
         } else {
           if (tmp.DIAGNOSTICS !== arg0) {
             if (tmp.NATIVE_PING !== arg0) {
@@ -521,7 +527,7 @@ prototype["supports"] = function supports(arg0) {
         }
       }
     }
-    const tmp89 = require("../../../../../_runtime/00669_format.js");
+    const tmp89 = format;
     let family;
     if (tmp89 != null) {
       const os = tmp89.os;
@@ -531,7 +537,7 @@ prototype["supports"] = function supports(arg0) {
     }
     let isMatch = null != family;
     if (isMatch) {
-      isMatch = /^win/i.test(require("../../../../../_runtime/00669_format.js").os.family);
+      isMatch = /^win/i.test(format.os.family);
       const obj30 = /^win/i;
     }
     return isMatch;
@@ -609,24 +615,24 @@ prototype["enable"] = function enable() {
   return Promise.resolve();
 };
 prototype["setAudioMixerOptions"] = function setAudioMixerOptions(arg0) {
-  let obj = require("inject.tsx") /* inject */;
+  let obj = inject /* inject */;
   if (obj.supportsFeature(constants6.SPATIAL_AUDIO)) {
-    const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+    const voiceEngine = inject /* inject */.getVoiceEngine();
     obj = { audioMixerOptions: null };
     obj[0] = arg0;
     voiceEngine.setTransportOptions(obj);
-    const tmpResult = require("inject.tsx") /* inject */;
+    const tmpResult = inject /* inject */;
   }
 };
 prototype["setAudioInputBypassSystemProcessing"] = function setAudioInputBypassSystemProcessing(bypassSystemProcessing) {
-  let obj = require("inject.tsx") /* inject */;
+  let obj = inject /* inject */;
   const voiceEngine = obj.getVoiceEngine();
   obj = { bypassSystemProcessing };
   voiceEngine.setTransportOptions(obj);
 };
 prototype["setInputVolume"] = function setInputVolume(arg0) {
   let tmp = arg0;
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   if (arg0 == null) {
     tmp = closure_13;
   }
@@ -634,14 +640,14 @@ prototype["setInputVolume"] = function setInputVolume(arg0) {
 };
 prototype["setOutputVolume"] = function setOutputVolume(arg0) {
   let tmp = arg0;
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   if (arg0 == null) {
     tmp = closure_13;
   }
   voiceEngine.setOutputVolume(tmp / closure_13);
 };
 prototype["getAudioInputDevices"] = function getAudioInputDevices() {
-  return require("Devices.tsx") /* sanitizeDevices */.getAudioInputDevices();
+  return sanitizeDevices /* sanitizeDevices */.getAudioInputDevices();
 };
 prototype["getNoiseCancellationStats"] = function getNoiseCancellationStats() {
   return new Promise((arg0) => {
@@ -655,7 +661,7 @@ prototype["getNoiseCancellationStats"] = function getNoiseCancellationStats() {
   });
 };
 prototype["setNoiseCancellationEnableStats"] = function setNoiseCancellationEnableStats(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const setNoiseCancellationEnableStats = voiceEngine.setNoiseCancellationEnableStats;
   if (setNoiseCancellationEnableStats != null) {
     const result = setNoiseCancellationEnableStats(arg0);
@@ -684,10 +690,10 @@ prototype["setAudioInputDevice"] = function setAudioInputDevice(audioInputDevice
       }
     });
   }
-  self.emit(_require("../index.tsx").MediaEngineEvent.SelectedDeviceChange, constants3.AUDIO_INPUT, this.audioInputDeviceId, audioInputDeviceId);
+  self.emit(_BaseConnectionEvent.MediaEngineEvent.SelectedDeviceChange, constants3.AUDIO_INPUT, this.audioInputDeviceId, audioInputDeviceId);
 };
 prototype["getAudioOutputDevices"] = function getAudioOutputDevices() {
-  return require("Devices.tsx") /* sanitizeDevices */.getAudioOutputDevices();
+  return sanitizeDevices /* sanitizeDevices */.getAudioOutputDevices();
 };
 prototype["setAudioOutputDevice"] = function setAudioOutputDevice(audioOutputDeviceId) {
   const self = this;
@@ -712,10 +718,10 @@ prototype["setAudioOutputDevice"] = function setAudioOutputDevice(audioOutputDev
       }
     });
   }
-  self.emit(_require("../index.tsx").MediaEngineEvent.SelectedDeviceChange, constants3.AUDIO_OUTPUT, this.audioOutputDeviceId, audioOutputDeviceId);
+  self.emit(_BaseConnectionEvent.MediaEngineEvent.SelectedDeviceChange, constants3.AUDIO_OUTPUT, this.audioOutputDeviceId, audioOutputDeviceId);
 };
 prototype["getVideoInputDevices"] = function getVideoInputDevices() {
-  return require("Devices.tsx") /* sanitizeDevices */.getVideoInputDevices();
+  return sanitizeDevices /* sanitizeDevices */.getVideoInputDevices();
 };
 prototype["setVideoInputDevice"] = function setVideoInputDevice(arg0) {
   let closure_0 = arg0;
@@ -815,21 +821,21 @@ prototype["getVideoInputDeviceId"] = function getVideoInputDeviceId() {
   return this.videoInputDeviceId;
 };
 prototype["setAsyncVideoInputDeviceInit"] = function setAsyncVideoInputDeviceInit(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const setAsyncVideoInputDeviceInitSetting = voiceEngine.setAsyncVideoInputDeviceInitSetting;
   if (setAsyncVideoInputDeviceInitSetting != null) {
     const result = setAsyncVideoInputDeviceInitSetting(arg0);
   }
-  const obj = require("inject.tsx") /* inject */;
+  const obj = inject /* inject */;
   const tmp = require;
-  const voiceEngine1 = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine1 = inject /* inject */.getVoiceEngine();
   const setAsyncVideoInputDeviceInit = voiceEngine1.setAsyncVideoInputDeviceInit;
   if (setAsyncVideoInputDeviceInit != null) {
     const result1 = setAsyncVideoInputDeviceInit(arg0);
   }
 };
 prototype["getCodecCapabilities"] = function getCodecCapabilities(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const codecCapabilities = voiceEngine.getCodecCapabilities(arg0);
 };
 prototype["setGoLiveSource"] = function setGoLiveSource(arg0, arg1) {
@@ -866,7 +872,7 @@ prototype["setClipsSource"] = function setClipsSource(quality) {
   let useQuartzCapturer;
   let useVideoHook;
   let videoHookAllowDx12;
-  let obj = require("inject.tsx") /* inject */;
+  let obj = inject /* inject */;
   const voiceEngine = obj.getVoiceEngine();
   if (null != voiceEngine.setClipsSource) {
     if (null != voiceEngine.setOnClipsRecordingEvent) {
@@ -940,7 +946,7 @@ prototype["setClipsSource"] = function setClipsSource(quality) {
   }
 };
 prototype["setClipsQualitySettings"] = function setClipsQualitySettings(arg0, arg1, arg2, arg3) {
-  let obj = require("inject.tsx") /* inject */;
+  let obj = inject /* inject */;
   const voiceEngine = obj.getVoiceEngine();
   if (null == voiceEngine.applyClipsQualitySettings) {
     return false;
@@ -978,11 +984,11 @@ prototype["getDesktopSource"] = function getDesktopSource() {
 prototype["getScreenPreviews"] = function getScreenPreviews(arg0, arg1, arg2) {
   const _require = arg0;
   let closure_1 = arg1;
-  let voiceEngine = _require("inject.tsx").getVoiceEngine();
+  let voiceEngine = _inject.getVoiceEngine();
   if (null != voiceEngine.setPreviewsUseWgc) {
     voiceEngine.setPreviewsUseWgc(arg2);
   }
-  let obj = _require("inject.tsx");
+  let obj = _inject;
   return new Promise((arg0) => {
     const callback = arg0;
     if (null != obj.getVoiceEngine().getScreenPreviews) {
@@ -1002,21 +1008,21 @@ prototype["getScreenPreviews"] = function getScreenPreviews(arg0, arg1, arg2) {
   });
 };
 prototype["setClipsModulePath"] = function setClipsModulePath(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const setClipsModulePath = voiceEngine.setClipsModulePath;
   if (setClipsModulePath != null) {
     setClipsModulePath(arg0);
   }
 };
 prototype["setClipsDataPath"] = function setClipsDataPath(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const setClipsDataPath = voiceEngine.setClipsDataPath;
   if (setClipsDataPath != null) {
     setClipsDataPath(arg0);
   }
 };
 prototype["setClipsSentryConfig"] = function setClipsSentryConfig(arg0, arg1, arg2) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const setClipsSentryConfig = voiceEngine.setClipsSentryConfig;
   if (setClipsSentryConfig != null) {
     setClipsSentryConfig(arg0, arg1, arg2);
@@ -1027,7 +1033,7 @@ prototype["setClipsV3Enabled"] = function setClipsV3Enabled(arg0) {
     const self = this;
     const result = this.registerClipsRecordingEventHandler();
   }
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const setClipsV3Enabled = voiceEngine.setClipsV3Enabled;
   if (setClipsV3Enabled != null) {
     setClipsV3Enabled(arg0);
@@ -1075,38 +1081,38 @@ prototype["registerClipsRecordingEventHandler"] = function registerClipsRecordin
   }
 };
 prototype["setClipsUIActive"] = function setClipsUIActive(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const setClipsUIActive = voiceEngine.setClipsUIActive;
   if (setClipsUIActive != null) {
     setClipsUIActive(arg0);
   }
 };
 prototype["setClipsV3MLEnabled"] = function setClipsV3MLEnabled(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const setClipsV3MLEnabled = voiceEngine.setClipsV3MLEnabled;
   if (setClipsV3MLEnabled != null) {
     setClipsV3MLEnabled(arg0);
   }
 };
 prototype["setClipsRecordingEnabled"] = function setClipsRecordingEnabled(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const setClipsRecordingEnabled = voiceEngine.setClipsRecordingEnabled;
   if (setClipsRecordingEnabled != null) {
     const result = setClipsRecordingEnabled(arg0);
   }
 };
 prototype["hasSetClipsRecordingEnabled"] = function hasSetClipsRecordingEnabled() {
-  return null != require("inject.tsx") /* inject */.getVoiceEngine().setClipsRecordingEnabled;
+  return null != inject /* inject */.getVoiceEngine().setClipsRecordingEnabled;
 };
 prototype["setClipBufferLength"] = function setClipBufferLength(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const setClipBufferLength = voiceEngine.setClipBufferLength;
   if (setClipBufferLength != null) {
     setClipBufferLength(arg0);
   }
 };
 prototype["getSystemSteadyClockNowMs"] = function getSystemSteadyClockNowMs() {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const getSystemSteadyClockNowMs = voiceEngine.getSystemSteadyClockNowMs;
   let systemSteadyClockNowMs;
   if (getSystemSteadyClockNowMs != null) {
@@ -1119,8 +1125,8 @@ prototype["getSystemSteadyClockNowMs"] = function getSystemSteadyClockNowMs() {
 };
 prototype["saveClipEx"] = function saveClipEx(arg0) {
   const _require = arg0;
-  const voiceEngine = _require("inject.tsx").getVoiceEngine();
-  let obj = _require("inject.tsx");
+  const voiceEngine = _inject.getVoiceEngine();
+  let obj = _inject;
   return new Promise((arg0, arg1) => {
     let endMs;
     let filepath;
@@ -1273,7 +1279,7 @@ prototype["saveScreenshot"] = function saveScreenshot(arg0, arg1, arg2, arg3, ar
   const dependencyMap = arg2;
   let _slicedToArray = arg3;
   let Video = arg4;
-  const voiceEngine = _require("inject.tsx").getVoiceEngine();
+  const voiceEngine = _inject.getVoiceEngine();
   if (null == voiceEngine.saveScreenshot) {
     let rejectResult = Promise.reject("unsupported");
   } else {
@@ -1313,10 +1319,10 @@ prototype["exportClip"] = function exportClip(arg0, arg1) {
   return rejectResult;
 };
 prototype["hasExportClipToFile"] = function hasExportClipToFile() {
-  return null != require("inject.tsx") /* inject */.getVoiceEngine().exportClipToFile;
+  return null != inject /* inject */.getVoiceEngine().exportClipToFile;
 };
 prototype["setClipsPerfMonitoring"] = function setClipsPerfMonitoring(arg0, arg1, arg2) {
-  const setClipsPerfMonitoring = require("inject.tsx") /* inject */.getVoiceEngine().setClipsPerfMonitoring;
+  const setClipsPerfMonitoring = inject /* inject */.getVoiceEngine().setClipsPerfMonitoring;
   if (null == setClipsPerfMonitoring) {
     let rejectResult = Promise.reject("unsupported");
   } else {
@@ -1328,7 +1334,7 @@ prototype["exportClipToFile"] = function exportClipToFile(arg0, arg1, arg2) {
   const _require = arg0;
   let closure_1 = arg1;
   const dependencyMap = arg2;
-  const exportClipToFile = _require("inject.tsx").getVoiceEngine().exportClipToFile;
+  const exportClipToFile = _inject.getVoiceEngine().exportClipToFile;
   if (null == exportClipToFile) {
     let rejectResult = Promise.reject("unsupported");
   } else {
@@ -1352,11 +1358,11 @@ prototype["exportClipToFile"] = function exportClipToFile(arg0, arg1, arg2) {
 prototype["getWindowPreviews"] = function getWindowPreviews(arg0, arg1, arg2) {
   const _require = arg0;
   let closure_1 = arg1;
-  let voiceEngine = _require("inject.tsx").getVoiceEngine();
+  let voiceEngine = _inject.getVoiceEngine();
   if (null != voiceEngine.setPreviewsUseWgc) {
     voiceEngine.setPreviewsUseWgc(arg2);
   }
-  const obj = _require("inject.tsx");
+  const obj = _inject;
   return new Promise((arg0) => {
     const callback = arg0;
     if (null != obj.getVoiceEngine().getWindowPreviews) {
@@ -1461,20 +1467,20 @@ prototype["setAudioSubsystem"] = function setAudioSubsystem(arg0) {
   }
 };
 prototype["setOffloadAdmControls"] = function setOffloadAdmControls(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   if (null != voiceEngine.setOffloadAdmControls) {
     const result = voiceEngine.setOffloadAdmControls(arg0);
   }
 };
 prototype["updateFieldTrial"] = function updateFieldTrial(arg0, arg1) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const updateFieldTrial = voiceEngine.updateFieldTrial;
   if (updateFieldTrial != null) {
     updateFieldTrial(arg0, arg1);
   }
 };
 prototype["queueAudioSubsystem"] = function queueAudioSubsystem(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   if (null != voiceEngine.queueAudioSubsystem) {
     voiceEngine.queueAudioSubsystem(arg0);
   } else {
@@ -1491,24 +1497,24 @@ prototype["getAudioLayer"] = function getAudioLayer() {
 prototype["getDebugLogging"] = function getDebugLogging() {
   let debugLogging = this.supports(constants4.DEBUG_LOGGING);
   if (debugLogging) {
-    const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+    const voiceEngine = inject /* inject */.getVoiceEngine();
     debugLogging = voiceEngine.getDebugLogging();
-    const obj = require("inject.tsx") /* inject */;
+    const obj = inject /* inject */;
   }
   return debugLogging;
 };
 prototype["setDebugLogging"] = function setDebugLogging(arg0) {
   if (this.supports(constants4.DEBUG_LOGGING)) {
-    const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+    const voiceEngine = inject /* inject */.getVoiceEngine();
     voiceEngine.setDebugLogging(arg0);
-    const obj = require("inject.tsx") /* inject */;
+    const obj = inject /* inject */;
   }
 };
 prototype["setLoopback"] = function setLoopback(arg0, arg1) {
   let automaticGainControlConfig;
   let automaticGainControlConfig2;
   let tmp = arg0;
-  let obj = require("inject.tsx") /* inject */;
+  let obj = inject /* inject */;
   if (null != obj.getVoiceEngine().setLoopback) {
     let tmp2Result = tmp2(4334);
     const voiceEngine = tmp2Result.getVoiceEngine();
@@ -1594,35 +1600,35 @@ prototype["stopAecDump"] = function stopAecDump() {
 
 };
 prototype["setAecDump"] = function setAecDump(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const setAecDump = voiceEngine.setAecDump;
   if (setAecDump != null) {
     setAecDump(arg0);
   }
 };
 prototype["startRecordingRawSamples"] = function startRecordingRawSamples(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const startRecordingRawSamples = voiceEngine.startRecordingRawSamples;
   if (startRecordingRawSamples != null) {
     const result = startRecordingRawSamples(arg0);
   }
 };
 prototype["stopRecordingRawSamples"] = function stopRecordingRawSamples() {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const stopRecordingRawSamples = voiceEngine.stopRecordingRawSamples;
   if (stopRecordingRawSamples != null) {
     const result = stopRecordingRawSamples();
   }
 };
 prototype["processBatchAudioFiles"] = function processBatchAudioFiles(arg0, arg1, arg2, arg3) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const processBatchAudioFiles = voiceEngine.processBatchAudioFiles;
   if (processBatchAudioFiles != null) {
     const result = processBatchAudioFiles(arg0, arg1, arg2, arg3);
   }
 };
 prototype["cancelBatchAudioProcessing"] = function cancelBatchAudioProcessing() {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const cancelBatchAudioProcessing = voiceEngine.cancelBatchAudioProcessing;
   if (cancelBatchAudioProcessing != null) {
     const result = cancelBatchAudioProcessing();
@@ -1645,7 +1651,7 @@ prototype["rankRtcRegions"] = function rankRtcRegions(arg0) {
 prototype["createReplayConnection"] = function createReplayConnection(arg0, arg1) {
   let self = this;
   self = this;
-  const replay = require("Connection.tsx").createReplay(arg0, arg1);
+  const replay = create.createReplay(arg0, arg1);
   let tmp2 = null;
   if (null != replay) {
     replay.on(self(4381).BaseConnectionEvent.Destroy, (arg0) => {
@@ -1666,10 +1672,10 @@ prototype["createReplayConnection"] = function createReplayConnection(arg0, arg1
   return tmp2;
 };
 prototype["setOnVideoContainerResized"] = function setOnVideoContainerResized(onContainerResized) {
-  require("ui/Video.tsx").onContainerResized = onContainerResized;
+  Video.onContainerResized = onContainerResized;
 };
 prototype["setMaxSyncDelayOverride"] = function setMaxSyncDelayOverride(arg0) {
-  const setMaxSyncDelayOverride = require("inject.tsx") /* inject */.getVoiceEngine().setMaxSyncDelayOverride;
+  const setMaxSyncDelayOverride = inject /* inject */.getVoiceEngine().setMaxSyncDelayOverride;
   if (null != setMaxSyncDelayOverride) {
     const result = setMaxSyncDelayOverride(arg0);
   }
@@ -1678,7 +1684,7 @@ prototype["applyMediaFilterSettings"] = function applyMediaFilterSettings(arg0) 
   let applyMediaFilterSettings;
   let applyMediaFilterSettingsWithCallback;
   const _require = arg0;
-  const voiceEngine = _require("inject.tsx").getVoiceEngine();
+  const voiceEngine = _inject.getVoiceEngine();
   ({ applyMediaFilterSettings, applyMediaFilterSettingsWithCallback } = voiceEngine);
   if (null != applyMediaFilterSettingsWithCallback) {
     let resolved = new Promise((arg0) => {
@@ -1717,7 +1723,7 @@ prototype["startLocalAudioRecording"] = function startLocalAudioRecording(arg0) 
 };
 prototype["stopLocalAudioRecording"] = function stopLocalAudioRecording(arg0) {
   const _require = arg0;
-  const voiceEngine = _require("inject.tsx").getVoiceEngine();
+  const voiceEngine = _inject.getVoiceEngine();
   const stopLocalAudioRecording = voiceEngine.stopLocalAudioRecording;
   if (stopLocalAudioRecording != null) {
     const result = stopLocalAudioRecording((arg0, arg1) => {
@@ -1736,28 +1742,28 @@ prototype["stopLocalAudioRecording"] = function stopLocalAudioRecording(arg0) {
   }
 };
 prototype["setHasFullbandPerformance"] = function setHasFullbandPerformance(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const setHasFullbandPerformance = voiceEngine.setHasFullbandPerformance;
   if (setHasFullbandPerformance != null) {
     const result = setHasFullbandPerformance(arg0);
   }
 };
 prototype["setNcModels"] = function setNcModels(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const setNcModels = voiceEngine.setNcModels;
   if (setNcModels != null) {
     setNcModels(arg0);
   }
 };
 prototype["getSupportedSecureFramesProtocolVersion"] = function getSupportedSecureFramesProtocolVersion() {
-  let num = require("inject.tsx") /* inject */.getVoiceEngine().SupportedSecureFramesProtocolVersion;
+  let num = inject /* inject */.getVoiceEngine().SupportedSecureFramesProtocolVersion;
   if (num == null) {
     num = 0;
   }
   return num;
 };
 prototype["getSupportedBandwidthEstimationExperiments"] = function getSupportedBandwidthEstimationExperiments(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const getSupportedBandwidthEstimationExperiments = voiceEngine.getSupportedBandwidthEstimationExperiments;
   if (getSupportedBandwidthEstimationExperiments != null) {
     const supportedBandwidthEstimationExperiments = getSupportedBandwidthEstimationExperiments(arg0);
@@ -1779,7 +1785,7 @@ prototype["getMLSSigningKey"] = function getMLSSigningKey(arg0, arg1) {
   });
 };
 prototype["setSidechainCompression"] = function setSidechainCompression(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const setSidechainCompression = voiceEngine.setSidechainCompression;
   if (setSidechainCompression != null) {
     const result = setSidechainCompression(arg0);
@@ -1789,7 +1795,7 @@ prototype["setSidechainCompressionStrength"] = function setSidechainCompressionS
   const diff = 100 - arg0;
   const sum = closure_9 + (closure_7 - closure_9) * diff / 100;
   const sum1 = closure_8 + (closure_6 - closure_8) * diff / 100;
-  let obj = require("inject.tsx") /* inject */;
+  let obj = inject /* inject */;
   const voiceEngine = obj.getVoiceEngine();
   const applySidechainCompressionSettings = voiceEngine.applySidechainCompressionSettings;
   if (applySidechainCompressionSettings != null) {
@@ -1800,28 +1806,28 @@ prototype["setSidechainCompressionStrength"] = function setSidechainCompressionS
   }
 };
 prototype["setVoiceSampleRateCap"] = function setVoiceSampleRateCap(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const setVoiceSampleRateCap = voiceEngine.setVoiceSampleRateCap;
   if (setVoiceSampleRateCap != null) {
     const result = setVoiceSampleRateCap(arg0);
   }
 };
 prototype["setVoiceChannelCountCap"] = function setVoiceChannelCountCap(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const setVoiceChannelCountCap = voiceEngine.setVoiceChannelCountCap;
   if (setVoiceChannelCountCap != null) {
     const result = setVoiceChannelCountCap(arg0);
   }
 };
 prototype["setNativeDesktopVideoSourcePickerActive"] = function setNativeDesktopVideoSourcePickerActive(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const setNativeDesktopVideoSourcePickerActive = voiceEngine.setNativeDesktopVideoSourcePickerActive;
   if (setNativeDesktopVideoSourcePickerActive != null) {
     const result = setNativeDesktopVideoSourcePickerActive(arg0);
   }
 };
 prototype["presentNativeScreenSharePicker"] = function presentNativeScreenSharePicker(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const presentNativeScreenSharePicker = voiceEngine.presentNativeScreenSharePicker;
   if (presentNativeScreenSharePicker != null) {
     let str = arg0;
@@ -1832,7 +1838,7 @@ prototype["presentNativeScreenSharePicker"] = function presentNativeScreenShareP
   }
 };
 prototype["releaseNativeDesktopVideoSourcePickerStream"] = function releaseNativeDesktopVideoSourcePickerStream() {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const releaseNativeDesktopVideoSourcePickerStream = voiceEngine.releaseNativeDesktopVideoSourcePickerStream;
   if (releaseNativeDesktopVideoSourcePickerStream != null) {
     const result = releaseNativeDesktopVideoSourcePickerStream();
@@ -1854,7 +1860,7 @@ prototype["getSystemMicrophoneMode"] = function getSystemMicrophoneMode() {
   })();
 };
 prototype["showSystemCaptureConfigurationUI"] = function showSystemCaptureConfigurationUI(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   const showSystemCaptureConfigurationUI = voiceEngine.showSystemCaptureConfigurationUI;
   if (showSystemCaptureConfigurationUI != null) {
     const result = showSystemCaptureConfigurationUI(arg0);
@@ -1890,7 +1896,7 @@ prototype["getDeviceOSMuted"] = function getDeviceOSMuted(arg0) {
   })();
 };
 prototype["getDeviceAudioEffects"] = function getDeviceAudioEffects(arg0) {
-  const voiceEngine = require("inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   if (null != voiceEngine.getDeviceAudioEffects) {
     let deviceAudioEffects = voiceEngine.getDeviceAudioEffects(arg0);
   } else {
@@ -1903,7 +1909,7 @@ prototype["getDeviceAudioEffects"] = function getDeviceAudioEffects(arg0) {
 prototype["watchdogTick"] = function watchdogTick() {
   const self = this;
   const _require = false;
-  const voiceEngine = _require("inject.tsx").getVoiceEngine();
+  const voiceEngine = _inject.getVoiceEngine();
   voiceEngine.pingVoiceThread(() => {
     let c0 = true;
     self.consecutiveWatchdogFailures = 0;

@@ -1,3 +1,5 @@
+import { resolvedValuesFromUserApplicationIdentityProfile } from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
+import { formatDurationNarrow } from "../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx";
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetTopContainedLayout.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -30,25 +32,25 @@ export default function UserProfileApplicationWidgetTopContainedLayout(header) {
   let topConfig;
   ({ topConfig, resolveFieldValue, numberFormat } = header);
   const tmp = createCacheKey();
-  let obj = require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */;
+  let obj = resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */;
   const textComponentValues = obj.resolveTextComponentValues(topConfig.components.title, resolveFieldValue, numberFormat, true);
-  let obj1 = require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */;
+  let obj1 = resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */;
   const textComponentValues1 = obj1.resolveTextComponentValues(topConfig.components.subtitle_1, resolveFieldValue, numberFormat);
-  let obj2 = require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */;
+  let obj2 = resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */;
   const textComponentValues2 = obj2.resolveTextComponentValues(topConfig.components.subtitle_2, resolveFieldValue, numberFormat);
-  let obj3 = require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */;
+  let obj3 = resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */;
   const contained_image = topConfig.components.contained_image;
   let image;
   const textComponentValues3 = obj3.resolveTextComponentValues(topConfig.components.subtitle_3, resolveFieldValue, numberFormat);
   if (contained_image != null) {
     image = contained_image.fields.image;
   }
-  const items = [require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.MEDIA];
+  const items = [resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
   const items1 = [header.header, ];
   obj = { style: tmp.contentRow, children: null };
   obj = { style: tmp.text, children: null };
-  const items2 = [callback(require("../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx") /* formatDurationNarrow */.FieldText, { field: textComponentValues, variant: "text-lg/medium", color: "text-default" }), callback(require("../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx") /* formatDurationNarrow */.FieldText, { field: textComponentValues1, variant: "text-sm/normal", color: "text-muted" }), callback(require("../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx") /* formatDurationNarrow */.FieldText, { field: textComponentValues2, variant: "text-sm/normal", color: "text-muted" }), callback(require("../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx") /* formatDurationNarrow */.FieldText, { field: textComponentValues3, variant: "text-sm/normal", color: "text-muted" })];
+  const items2 = [callback(formatDurationNarrow /* formatDurationNarrow */.FieldText, { field: textComponentValues, variant: "text-lg/medium", color: "text-default" }), callback(formatDurationNarrow /* formatDurationNarrow */.FieldText, { field: textComponentValues1, variant: "text-sm/normal", color: "text-muted" }), callback(formatDurationNarrow /* formatDurationNarrow */.FieldText, { field: textComponentValues2, variant: "text-sm/normal", color: "text-muted" }), callback(formatDurationNarrow /* formatDurationNarrow */.FieldText, { field: textComponentValues3, variant: "text-sm/normal", color: "text-muted" })];
   obj[1] = items2;
   const items3 = [callback2(closure_3, obj), ];
   if (null != fieldValue) {

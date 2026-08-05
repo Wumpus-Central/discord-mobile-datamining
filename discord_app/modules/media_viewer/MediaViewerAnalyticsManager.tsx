@@ -1,3 +1,4 @@
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/media_viewer/MediaViewerAnalyticsManager.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
@@ -17,7 +18,7 @@ let closure_6 = keys.create(() => obj);
 obj = {
   markSessionStarted(channelId) {
     channel = channel.getChannel(channelId.channelId);
-    let obj = require("../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { type: constants2.MEDIA_VIEWER, source: channelId.source, channel_id: channelId.channelId, channel_type: null, guild_id: null };
     let type;
     if (channel != null) {
@@ -48,7 +49,7 @@ obj = {
   },
   markSessionCompleted() {
     const state = store.getState();
-    let obj = require("../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { source: state.source, guild_id: state.guildId, channel_id: state.channelId, channel_type: state.channelType, number_media_items: state.numMediaItems, has_media_options: state.hasMediaOptions };
     const merged = Object.assign(state.incrementableActions);
     obj.track(constants.MEDIA_VIEWER_SESSION_COMPLETED, obj);
@@ -72,7 +73,7 @@ obj = {
     let url;
     ({ url, success } = arg0);
     const state = store.getState();
-    let obj = require("../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { url, success, channel_id: state.channelId };
     obj.track(constants.MEDIA_VIEWER_IMAGE_SAVED, obj);
   },
@@ -81,7 +82,7 @@ obj = {
     let url;
     ({ url, success } = arg0);
     const state = store.getState();
-    let obj = require("../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { url, success, channel_id: state.channelId };
     obj.track(constants.MEDIA_VIEWER_IMAGE_COPIED, obj);
   },
@@ -90,25 +91,25 @@ obj = {
     let success;
     ({ href, success } = arg0);
     const state = store.getState();
-    let obj = require("../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { href, success, channel_id: state.channelId };
     obj.track(constants.MEDIA_VIEWER_LINK_COPIED, obj);
   },
   trackMediaViewerLinkOpened(href) {
     const state = store.getState();
-    let obj = require("../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { href: href.href, channel_id: state.channelId };
     obj.track(constants.MEDIA_VIEWER_LINK_OPENED, obj);
   },
   trackMediaViewerDownloadButtonTapped() {
     const state = store.getState();
-    let obj = require("../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { guild_id: state.guildId, channel_id: state.channelId, channel_type: state.channelType };
     obj.track(constants.MEDIA_VIEWER_DOWNLOAD_BUTTON_TAPPED, obj);
   },
   trackMediaViewerShareButtonTapped() {
     const state = store.getState();
-    let obj = require("../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { guild_id: state.guildId, channel_id: state.channelId, channel_type: state.channelType };
     obj.track(constants.MEDIA_VIEWER_SHARE_BUTTON_TAPPED, obj);
   },
@@ -117,7 +118,7 @@ obj = {
     let error;
     let platform;
     ({ platform, action, error } = arg0);
-    require("../../utils/AnalyticsUtils.tsx").track(constants.MESSAGE_EMBEDS_ACTION_COMPLETED, { platform, error, action });
+    expandEventProperties.track(constants.MESSAGE_EMBEDS_ACTION_COMPLETED, { platform, error, action });
   }
 };
 const result = require("keys").fileFinishedImporting("modules/media_viewer/MediaViewerAnalyticsManager.tsx");

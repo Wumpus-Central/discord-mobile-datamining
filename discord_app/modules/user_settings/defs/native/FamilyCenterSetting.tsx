@@ -1,3 +1,9 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { messagesProxy } from "../../../parent_tools/FamilyCenter.messages.js";
+import { useIsParentalConsentBannerActive } from "../../../parent_tools/useIsParentalConsentBannerActive.tsx";
+import { useParentalConsentWarning } from "../../../parent_tools/useParentalConsentWarning.tsx";
+import { FamilyCenterLoading } from "../../family_center/native/UserSettingsFamilyCenter.tsx";
 // discord_app/modules/user_settings/defs/native/FamilyCenterSetting.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -6,15 +12,15 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../parent_tools/FamilyCenter.messages.js").RZqaJn);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(messagesProxy.RZqaJn);
   },
   parent: null,
   IconComponent: require("GroupIcon").GroupIcon,
   useTrailing: function useFamilyCenterTrailing() {
-    let obj = require("../../../parent_tools/useIsParentalConsentBannerActive.tsx") /* useIsParentalConsentBannerActive */;
+    let obj = useIsParentalConsentBannerActive /* useIsParentalConsentBannerActive */;
     const isParentalConsentBannerActive = obj.useIsParentalConsentBannerActive();
-    const parentalConsentWarning = require("../../../parent_tools/useParentalConsentWarning.tsx") /* useParentalConsentWarning */.useParentalConsentWarning();
+    const parentalConsentWarning = useParentalConsentWarning /* useParentalConsentWarning */.useParentalConsentWarning();
     let daysRemaining;
     if (parentalConsentWarning != null) {
       daysRemaining = parentalConsentWarning.daysRemaining;
@@ -29,9 +35,9 @@ createToggle = {
         tmp6 = null;
         if (daysRemaining >= 0) {
           obj = { size: "sm", color: null, accessible: true, accessibilityLabel: null };
-          obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_FEEDBACK_WARNING;
+          obj[1] = Themes.colors.ICON_FEEDBACK_WARNING;
           const intl = tmp(1236).intl;
-          obj[3] = intl.string(require("../../../parent_tools/FamilyCenter.messages.js").wucWfE);
+          obj[3] = intl.string(messagesProxy.wucWfE);
           tmp6 = jsx(tmp(7772).WarningIcon, { size: "sm", color: null, accessible: true, accessibilityLabel: null });
         }
       }
@@ -43,7 +49,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.FAMILY_CENTER,
   getComponent() {
-    return require("../../family_center/native/UserSettingsFamilyCenter.tsx") /* FamilyCenterLoading */.default;
+    return FamilyCenterLoading /* FamilyCenterLoading */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

@@ -1,3 +1,7 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { AccessibilityAnnouncer } from "../../design/shared.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { VoiceChannelEffectAnimationType } from "VoiceChannelEffectsUtils.tsx";
 // discord_app/modules/voice_channel_effects/VoiceChannelEffectsStore.tsx
 import { EMOJI_PICKER_EMOJI_TO_SHOW_COUNT as closure_4 } from "ParticipantTypes";
 import apply from "apply";
@@ -9,8 +13,8 @@ let closure_7 = [];
 let closure_8 = [];
 let closure_9 = 10 * require("set").Millis.SECOND;
 let closure_10 = apply.debounce(() => {
-  const effectAnnouncement = require("VoiceChannelEffectsUtils.tsx") /* VoiceChannelEffectAnimationType */.getEffectAnnouncement(closure_7);
-  const AccessibilityAnnouncer = require("../../design/shared.tsx") /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+  const effectAnnouncement = VoiceChannelEffectAnimationType /* VoiceChannelEffectAnimationType */.getEffectAnnouncement(closure_7);
+  const AccessibilityAnnouncer = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(effectAnnouncement, "polite");
   closure_7 = [];
 }, 500);
@@ -55,12 +59,12 @@ const voiceChannelEffectsStore = new VoiceChannelEffectsStore(require("dispatche
     emoji = emoji.emoji;
     if (null != emoji) {
       arr = arr.unshift(emoji);
-      const uniqByResult = require("../../../_runtime/00012_apply.js") /* apply */.uniqBy(arr, "name");
+      const uniqByResult = apply /* apply */.uniqBy(arr, "name");
       arr = uniqByResult;
       if (uniqByResult.length > closure_4 + 1) {
         arr = arr.pop();
       }
-      const obj = require("../../../_runtime/00012_apply.js") /* apply */;
+      const obj = apply /* apply */;
     }
   },
   VOICE_CHANNEL_EFFECT_SEND: function handleReceivedVoiceChannelEffect(arg0) {
@@ -106,7 +110,7 @@ const result = require("set").fileFinishedImporting("modules/voice_channel_effec
 export default voiceChannelEffectsStore;
 export const clearVoiceChannelEffectForUser = function clearVoiceChannelEffectForUser(arg0) {
   if (null != arg0) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "VOICE_CHANNEL_EFFECT_CLEAR", userId: null };
     obj[1] = arg0;
     obj.dispatch(obj);

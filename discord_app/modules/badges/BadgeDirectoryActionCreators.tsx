@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/badges/BadgeDirectoryActionCreators.tsx
 import set from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -332,7 +333,7 @@ export const fetchBadge = function fetchBadge(GIFTING) {
   return applyArgumentsResult;
 };
 export const markBadgeDirectoryBadgeIndicatorSeen = function markBadgeDirectoryBadgeIndicatorSeen(badgeId) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "BADGE_DIRECTORY_MARK_BADGE_INDICATOR_SEEN", badgeId };
   obj.dispatch(obj);
 };

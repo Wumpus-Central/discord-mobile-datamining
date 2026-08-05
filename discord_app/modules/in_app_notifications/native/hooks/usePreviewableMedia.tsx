@@ -1,3 +1,9 @@
+import { inlineStyles } from "../../../../../_runtime/08437_inlineStyles.js";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { CirclePlayIcon } from "../../../../design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx";
+import { WaveformIcon } from "../../../../design/components/Icon/native/redesign/generated/WaveformIcon.tsx";
+import { map } from "../../../../design/tokens/native/useToken.tsx";
+import { urlMatchesFileExtension } from "../../../messages/MediaFormatTesters.tsx";
 // discord_app/modules/in_app_notifications/native/hooks/usePreviewableMedia.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -14,17 +20,17 @@ let error;
 let metroImportAll;
 const require = arg1;
 function VoiceMessageIcon() {
-  let obj = require("../../../../design/tokens/native/useToken.tsx") /* map */;
-  const token = obj.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_STRONG);
-  let obj1 = require("../../../../design/tokens/native/useToken.tsx") /* map */;
+  let obj = map /* map */;
+  const token = obj.useToken(Themes.colors.BACKGROUND_MOD_STRONG);
+  let obj1 = map /* map */;
   obj = { children: null };
-  const token1 = obj1.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_SUBTLE);
+  const token1 = obj1.useToken(Themes.colors.BACKGROUND_MOD_SUBTLE);
   obj = { width: "100%", height: "100%", viewBox: "0 0 64 61", fill: "none", children: null };
   const tmp = callback3();
-  obj[4] = callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { d: "M22.2188 59.8545C19.5607 61.6263 16.0003 59.7208 16 56.5264V48C7.16344 48 2.5772e-07 40.8366 0 32V16C0 7.16344 7.16344 0 16 0H48C56.8366 0 64 7.16344 64 16V32C64 40.8366 56.8366 48 48 48H40L22.2188 59.8545Z", fill: token, stroke: token1 });
-  const items = [callback(require("../../../../../_runtime/08437_inlineStyles.js"), obj), ];
+  obj[4] = callback(inlineStyles /* inlineStyles */.Path, { d: "M22.2188 59.8545C19.5607 61.6263 16.0003 59.7208 16 56.5264V48C7.16344 48 2.5772e-07 40.8366 0 32V16C0 7.16344 7.16344 0 16 0H48C56.8366 0 64 7.16344 64 16V32C64 40.8366 56.8366 48 48 48H40L22.2188 59.8545Z", fill: token, stroke: token1 });
+  const items = [callback(inlineStyles, obj), ];
   obj1 = { style: tmp.voiceMessageIconOverlay, children: null };
-  const items1 = [callback(require("../../../../design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx") /* CirclePlayIcon */.CirclePlayIcon, { size: "md", color: "background-brand", secondaryColor: "white" }), callback(require("../../../../design/components/Icon/native/redesign/generated/WaveformIcon.tsx") /* WaveformIcon */.WaveformIcon, { size: "md", color: "background-brand" })];
+  const items1 = [callback(CirclePlayIcon /* CirclePlayIcon */.CirclePlayIcon, { size: "md", color: "background-brand", secondaryColor: "white" }), callback(WaveformIcon /* WaveformIcon */.WaveformIcon, { size: "md", color: "background-brand" })];
   obj1[1] = items1;
   items[1] = callback2(closure_4, obj1);
   obj[0] = items;
@@ -60,7 +66,7 @@ function getBasePreviewableMedia(arg0) {
         let tmp7 = filename;
         let tmp8 = require;
         let tmp9 = dependencyMap;
-        obj = require("../../../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */;
+        obj = urlMatchesFileExtension /* urlMatchesFileExtension */;
         if (obj.isImageFile(filename)) {
           obj = { id: null, type: null, media: null, parentType: null };
           let tmp22 = nextResult;
@@ -121,7 +127,7 @@ function getBasePreviewableMedia(arg0) {
               let tmp14 = callback;
               let obj3 = { size: "lg", color: null };
               let tmp15 = importDefault;
-              obj3[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_SUBTLE;
+              obj3[1] = Themes.colors.ICON_SUBTLE;
               obj2[3] = callback(tmp8(9727).FileIcon, obj3);
               let str4 = null;
               if (isForward) {

@@ -1,3 +1,4 @@
+import { useAlertStore } from "../../design/components/AlertModal/native/useAlertStore.native.tsx";
 // discord_app/modules/masked_link/MaskedLinkModalActionCreators.native.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -14,6 +15,6 @@ export default {
     onCancel = onCancel.onCancel;
     ({ url, trustUrl, onConfirm, isProtocol } = onCancel);
     const lazyResult = React.lazy(() => callback(paths[3])(paths[2], paths.paths));
-    require("../../design/components/AlertModal/native/useAlertStore.native.tsx") /* useAlertStore */.openAlert("masked-link", <lazyResult url={url} trustUrl={trustUrl} onConfirm={onConfirm} onCancel={onCancel} isProtocol={isProtocol} />, onCancel);
+    useAlertStore /* useAlertStore */.openAlert("masked-link", <lazyResult url={url} trustUrl={trustUrl} onConfirm={onConfirm} onCancel={onCancel} isProtocol={isProtocol} />, onCancel);
   }
 };

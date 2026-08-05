@@ -1,3 +1,9 @@
+import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { nameFromUser } from "../../../utils/UserUtils.tsx";
+import { computeChannelName } from "../../channel/useChannelName.tsx";
+import { FacepileGroupDMAvatar } from "../../group_dm/native/GroupDMAvatar.tsx";
 // discord_app/modules/share/native/DestinationFailedAlertModal.tsx
 import "getAlertModalItemKey";
 import { View } from "GuildIconWithChannelTypeSizes";
@@ -19,12 +25,12 @@ function FailedGroupDMRow(channel) {
   const tmp = createCacheKey();
   let obj = { style: tmp.row, children: null };
   obj = { size: null, channel: null };
-  const tmp2 = require("../../channel/useChannelName.tsx")(channel);
-  obj[0] = require("../../../design/void/native.tsx") /* Button */.AvatarSizes.REFRESH_MEDIUM_32;
+  const tmp2 = computeChannelName(channel);
+  obj[0] = Button /* Button */.AvatarSizes.REFRESH_MEDIUM_32;
   obj[1] = channel;
-  const items = [callback(require("../../group_dm/native/GroupDMAvatar.tsx"), obj), ];
+  const items = [callback(FacepileGroupDMAvatar, obj), ];
   obj = { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp2 };
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }
@@ -57,8 +63,8 @@ function FailedUserRow(user) {
     obj1 = { style: null, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: null };
     obj1[0] = tmp.label;
     if (stateFromStores == null) {
-      stateFromStores = require("../../../utils/UserUtils.tsx").getName(user);
-      const obj6 = require("../../../utils/UserUtils.tsx");
+      stateFromStores = nameFromUser.getName(user);
+      const obj6 = nameFromUser;
     }
     obj1[4] = stateFromStores;
     items2[1] = closure_10(tmp2(4281).Text, obj1);
@@ -85,8 +91,8 @@ function FailedChannelRow(channel) {
   obj = { "aria-label": "", guild: stateFromStores, channel, size: null };
   obj[3] = channel(10184).GuildIconWithChannelTypeSizes.SMALL_32;
   const items1 = [callback(channel(10184).GuildIconWithChannelType, obj), ];
-  const tmp3 = require("../../channel/useChannelName.tsx")(channel);
-  items1[1] = callback(channel(4281).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: require("../../channel/useChannelName.tsx")(channel) });
+  const tmp3 = computeChannelName(channel);
+  items1[1] = callback(channel(4281).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: computeChannelName(channel) });
   obj[1] = items1;
   return callback2(View, obj);
 }
@@ -172,6 +178,6 @@ export default function DestinationFailedAlertModal(arg0) {
     obj3[1] = intl.string(tmp3(1236).t.BddRzS);
     tmp2Result = tmp2(tmp3(4628).AlertActionButton, obj3, "confirm");
   }
-  obj[3] = callback(require("../../../design/components/AlertModal/native/AlertModal.native.tsx") /* getAlertModalItemKey */.AlertActions, { children: tmp2Result });
-  return callback(require("../../../design/components/AlertModal/native/AlertModal.native.tsx") /* getAlertModalItemKey */.AlertModal, obj);
+  obj[3] = callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertActions, { children: tmp2Result });
+  return callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertModal, obj);
 };

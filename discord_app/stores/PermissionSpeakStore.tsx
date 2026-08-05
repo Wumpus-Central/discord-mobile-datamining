@@ -1,3 +1,4 @@
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/stores/PermissionSpeakStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -13,7 +14,7 @@ class PermissionSpeakStore extends Store {
 const prototype = PermissionSpeakStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(ensureGuildLoaded, createGuildRecordFromRust);
-  const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   c9 = Storage.get(hideSuppressWarning) || c9;
 };
 prototype["isAFKChannel"] = function isAFKChannel() {
@@ -78,7 +79,7 @@ const permissionSpeakStore = new PermissionSpeakStore(require("dispatcher"), {
     let c8 = true;
     if (forever.forever) {
       let c9 = true;
-      const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage = Storage /* Storage */.Storage;
       const result = Storage.set(hideSuppressWarning, c9);
     }
   }

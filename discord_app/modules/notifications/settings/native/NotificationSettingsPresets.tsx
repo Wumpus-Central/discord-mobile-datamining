@@ -1,3 +1,5 @@
+import { useChannelPresetSettings } from "../utils/notficationSettingsChannelFlagUtils.tsx";
+import { updateGuildPreset } from "../utils/notificationSettingsGuildFlagUtils.tsx";
 // discord_app/modules/notifications/settings/native/NotificationSettingsPresets.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -122,7 +124,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/notifications/s
 export const NotificationSettingsGuildPresets = function NotificationSettingsGuildPresets(guildId) {
   const _require = guildId;
   const obj = { preset: null, updatePreset: null };
-  obj[0] = _require("../utils/notificationSettingsGuildFlagUtils.tsx").useGuildPresetSettings(guildId.guildId).preset;
+  obj[0] = _updateGuildPreset.useGuildPresetSettings(guildId.guildId).preset;
   obj[1] = function updatePreset(arg0) {
     return guildId(outer1_1[14]).updateGuildPreset(guildId.guildId, arg0);
   };
@@ -131,7 +133,7 @@ export const NotificationSettingsGuildPresets = function NotificationSettingsGui
 export const NotificationSettingsChannelPresets = function NotificationSettingsChannelPresets(channel) {
   const _require = channel;
   const obj = { preset: null, updatePreset: null };
-  obj[0] = _require("../utils/notficationSettingsChannelFlagUtils.tsx").useChannelPresetSettings(channel.channel).preset;
+  obj[0] = _useChannelPresetSettings.useChannelPresetSettings(channel.channel).preset;
   obj[1] = function updatePreset(arg0) {
     return channel(outer1_1[15]).updateChannelPreset(channel.channel.guild_id, channel.channel.id, arg0);
   };

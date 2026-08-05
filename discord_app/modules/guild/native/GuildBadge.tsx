@@ -1,3 +1,4 @@
+import { fromGuildPropertiesWithAdditionalFields } from "../../../utils/GuildRecordUtils.tsx";
 // discord_app/modules/guild/native/GuildBadge.tsx
 import "noop";
 import { GuildFeatures } from "ME";
@@ -39,11 +40,11 @@ function getGuildBadgeSource(guild, flag) {
             hasItem = Boolean(hasItem1);
           }
         }
-        obj2 = require("../../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
+        obj2 = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
       }
     }
   } else {
-    obj = require("../../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
+    obj = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
     if (obj.isGuildRecord(has)) {
       const features3 = has.features;
       let hasItem2 = features3.has(VERIFIED);

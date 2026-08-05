@@ -1,3 +1,5 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/global_discovery_servers/GuildDiscoveryCategoryActionCreators.tsx
 import dispatcher from "dispatcher";
 import _getSystemLocale from "_getSystemLocale";
@@ -389,37 +391,37 @@ export const fetchSlugForGuild = function fetchSlugForGuild() {
   return applyArgumentsResult;
 };
 export const updateGuildPrimaryCategory = function updateGuildPrimaryCategory(guildId, primaryCategoryId) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId, primaryCategoryId };
   obj.dispatch(obj);
 };
 export const updateGuildKeywords = function updateGuildKeywords(guildId, keywords) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId, keywords };
   obj.dispatch(obj);
 };
 export const updateGuildEmojiDiscoverabilityEnabled = function updateGuildEmojiDiscoverabilityEnabled(guildId, emojiDiscoverabilityEnabled) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId, emojiDiscoverabilityEnabled };
   obj.dispatch(obj);
 };
 export const updateGuildDiscoveryMetadataIsPublished = function updateGuildDiscoveryMetadataIsPublished(guildId, isPublished) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId, isPublished };
   obj.dispatch(obj);
 };
 export const updateGuildDiscoveryMetadataAbout = function updateGuildDiscoveryMetadataAbout(guildId, about) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId, about };
   obj.dispatch(obj);
 };
 export const updateGuildDiscoveryMetadataReasonsToJoin = function updateGuildDiscoveryMetadataReasonsToJoin(guildId, reasonsToJoin) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId, reasonsToJoin };
   obj.dispatch(obj);
 };
 export const updateGuildDiscoveryMetadataSocialLinks = function updateGuildDiscoveryMetadataSocialLinks(guildId, socialLinks) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_UPDATE_DISCOVERY_METADATA", guildId, socialLinks };
   obj.dispatch(obj);
 };
@@ -436,10 +438,10 @@ export const saveGuildMetadata = function saveGuildMetadata() {
 export const addGuildCategory = function addGuildCategory(arg0, arg1) {
   const _require = arg0;
   let closure_1 = arg1;
-  const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+  const HTTP = _sendRequest.HTTP;
   let obj = { url: Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(arg0, arg1), oldFormErrors: true, rejectWithError: null };
-  obj[2] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
-  const obj2 = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+  obj[2] = _sendRequest.rejectWithMigratedError();
+  const obj2 = _sendRequest;
   const putResult = HTTP.put(obj);
   HTTP.put(obj).then(() => {
     let obj = callback(outer1_2[5]);
@@ -454,10 +456,10 @@ export const addGuildCategory = function addGuildCategory(arg0, arg1) {
 export const deleteGuildCategory = function deleteGuildCategory(arg0, arg1) {
   const _require = arg0;
   let closure_1 = arg1;
-  const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+  const HTTP = _sendRequest.HTTP;
   let obj = { url: Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(arg0, arg1), oldFormErrors: true, rejectWithError: null };
-  obj[2] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
-  const obj2 = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+  obj[2] = _sendRequest.rejectWithMigratedError();
+  const obj2 = _sendRequest;
   const delResult = HTTP.del(obj);
   HTTP.del(obj).then(() => {
     let obj = callback(outer1_2[5]);

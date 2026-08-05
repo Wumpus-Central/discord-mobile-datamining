@@ -1,3 +1,5 @@
+import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import { SearchTokenTypes } from "../../SearchUtils.tsx";
 // discord_app/modules/search/native/stores/SearchTabsLayoutStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleReaction from "handleReaction";
@@ -14,7 +16,7 @@ let unpackModuleId;
 const require = arg1;
 function handleSearchQuery(searchContext) {
   searchContext = searchContext.searchContext;
-  let obj = require("../../SearchUtils.tsx") /* SearchTokenTypes */;
+  let obj = SearchTokenTypes /* SearchTokenTypes */;
   const searchContextId = obj.getSearchContextId(searchContext);
   let value = map.get(searchContextId);
   if (value == null) {
@@ -47,7 +49,7 @@ function computeLayoutForState(value) {
     } else {
       arr = table2[searchContext.type];
     }
-    channel = channel.getChannel(_require("../../SearchUtils.tsx").getChannelIdFromSearchContext(searchContext));
+    channel = channel.getChannel(_SearchTokenTypes.getChannelIdFromSearchContext(searchContext));
     let flag;
     if (channel != null) {
       flag = channel.isArchivedThread();
@@ -123,8 +125,8 @@ function computeLayoutForState(value) {
     tmp6Result = tmp6(643);
     const result = tmp6Result.areArraysShallowEqual(value.candidateTabs, found);
     let tmp13 = !result;
-    const obj2 = _require("../../SearchUtils.tsx");
-    const result1 = _require("../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx").areArraysShallowEqual(value.visibleTabs, visibleTabs);
+    const obj2 = _SearchTokenTypes;
+    const result1 = _shallowEqual.areArraysShallowEqual(value.visibleTabs, visibleTabs);
     const visibleTabCounts2 = value.visibleTabCounts;
     let tmp16 = visibleTabCounts2 === visibleTabCounts;
     if (!tmp16) {
@@ -177,7 +179,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, computeLayoutForAll);
 };
 prototype["getCandidateTabs"] = function getCandidateTabs(searchContext) {
-  let obj = require("../../SearchUtils.tsx") /* SearchTokenTypes */;
+  let obj = SearchTokenTypes /* SearchTokenTypes */;
   let value = map.get(obj.getSearchContextId(searchContext));
   if (value == null) {
     obj = { searchContext: null, wasInitialSearchQuery: true, candidateTabs: null, visibleTabs: null, visibleTabCounts: null };
@@ -189,7 +191,7 @@ prototype["getCandidateTabs"] = function getCandidateTabs(searchContext) {
   return value.candidateTabs;
 };
 prototype["getVisibleTabs"] = function getVisibleTabs(searchContext) {
-  let obj = require("../../SearchUtils.tsx") /* SearchTokenTypes */;
+  let obj = SearchTokenTypes /* SearchTokenTypes */;
   let value = map.get(obj.getSearchContextId(searchContext));
   if (value == null) {
     obj = { searchContext: null, wasInitialSearchQuery: true, candidateTabs: null, visibleTabs: null, visibleTabCounts: null };
@@ -201,7 +203,7 @@ prototype["getVisibleTabs"] = function getVisibleTabs(searchContext) {
   return value.visibleTabs;
 };
 prototype["getVisibleTabCounts"] = function getVisibleTabCounts(searchContext) {
-  let obj = require("../../SearchUtils.tsx") /* SearchTokenTypes */;
+  let obj = SearchTokenTypes /* SearchTokenTypes */;
   let value = map.get(obj.getSearchContextId(searchContext));
   if (value == null) {
     obj = { searchContext: null, wasInitialSearchQuery: true, candidateTabs: null, visibleTabs: null, visibleTabCounts: null };

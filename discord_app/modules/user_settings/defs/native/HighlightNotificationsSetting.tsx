@@ -1,3 +1,6 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { Row } from "../../notifications/native/UserSettingsHighlightNotifications.tsx";
 // discord_app/modules/user_settings/defs/native/HighlightNotificationsSetting.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import createToggle from "createToggle";
@@ -5,17 +8,17 @@ import createToggle from "createToggle";
 const require = arg1;
 function useHighlightNotifications() {
   const items = [createGuildRecordFromRust];
-  return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
+  return initialize /* initialize */.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
 }
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.o8Bypv);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.o8Bypv);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useDescription() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["Vw/Xn8"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["Vw/Xn8"]);
   },
   usePredicate: useHighlightNotifications,
   screen: createToggle
@@ -23,7 +26,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.HIGHLIGHT_NOTIFICATIONS,
   getComponent() {
-    return require("../../notifications/native/UserSettingsHighlightNotifications.tsx") /* Row */.default;
+    return Row /* Row */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

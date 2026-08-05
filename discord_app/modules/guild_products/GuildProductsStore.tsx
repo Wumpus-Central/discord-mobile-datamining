@@ -1,3 +1,4 @@
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/guild_products/GuildProductsStore.tsx
 import { Store } from "initialize";
 
@@ -14,7 +15,7 @@ const secondaryIndexMap = new require("version").SecondaryIndexMap((guild_id) =>
   }
   return items;
 }, (id) => {
-  const extractTimestampResult = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(id.id);
+  const extractTimestampResult = DISCORD_EPOCH.extractTimestamp(id.id);
   if (id.published) {
     let diff = -extractTimestampResult;
   } else {

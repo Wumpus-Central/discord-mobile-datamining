@@ -1,3 +1,5 @@
+import { mapped } from "../AVError.tsx";
+import { getVoiceChannelErrorContext } from "../AVErrorContext.tsx";
 // discord_app/modules/errors/av_errors/definitions/AVErrorNoAudioInputDetected.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -35,8 +37,8 @@ export const AVErrorNoAudioInputDetectedDefinition = {
                   if (!isGuildStageVoiceResult) {
                     if (!obj5.isSelfMute()) {
                       const obj = { type: null };
-                      obj[0] = require("../AVError.tsx") /* mapped */.AVError.NO_AUDIO_INPUT_DETECTED;
-                      const merged = Object.assign(require("../AVErrorContext.tsx") /* getVoiceChannelErrorContext */.getVoiceChannelErrorContext());
+                      obj[0] = mapped /* mapped */.AVError.NO_AUDIO_INPUT_DETECTED;
+                      const merged = Object.assign(getVoiceChannelErrorContext /* getVoiceChannelErrorContext */.getVoiceChannelErrorContext());
                       const items = [obj];
                       return items;
                     }

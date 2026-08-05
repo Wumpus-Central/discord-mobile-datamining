@@ -1,3 +1,8 @@
+import { v1 } from "../../../../../_runtime/00514_v1.js";
+import { collectGuildAnalyticsMetadata } from "../../../app_analytics/AppAnalyticsUtils.tsx";
+import { explicitContentFromProto } from "../../../user_settings/UserSettings.tsx";
+import { _initialize } from "../../managers/native/SearchSessionAnalyticsManager.tsx";
+import { SearchTokenTypes } from "../../SearchUtils.tsx";
 // discord_app/modules/search/native/tracking/Tracking.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import prototype from "prototype";
@@ -15,17 +20,17 @@ export default {
     let searchContext;
     let searchLocation;
     ({ searchContext, searchLocation } = arg0);
-    let obj = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
+    let obj = _initialize;
     obj.initialize(searchContext, searchLocation);
-    const channelIdFromSearchContext = require("../../SearchUtils.tsx") /* SearchTokenTypes */.getChannelIdFromSearchContext(searchContext);
+    const channelIdFromSearchContext = SearchTokenTypes /* SearchTokenTypes */.getChannelIdFromSearchContext(searchContext);
     const channel = store.getChannel(channelIdFromSearchContext);
-    const obj2 = require("../../SearchUtils.tsx") /* SearchTokenTypes */;
+    const obj2 = SearchTokenTypes /* SearchTokenTypes */;
     obj = { search_session_id: null, search_location: null, guild_id: null, channel_id: null, channel_type: null };
-    const obj3 = require("../../../app_analytics/AppAnalyticsUtils.tsx");
-    obj[0] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSessionId(searchContext);
+    const obj3 = collectGuildAnalyticsMetadata;
+    obj[0] = _initialize.getSessionId(searchContext);
     obj[1] = searchLocation;
-    const obj5 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-    obj[2] = require("../../SearchUtils.tsx") /* SearchTokenTypes */.getGuildIdFromSearchContext(searchContext);
+    const obj5 = _initialize;
+    obj[2] = SearchTokenTypes /* SearchTokenTypes */.getGuildIdFromSearchContext(searchContext);
     obj[3] = channelIdFromSearchContext;
     let type;
     if (channel != null) {
@@ -38,22 +43,22 @@ export default {
     searchContext = searchContext.searchContext;
     let obj = prototype;
     if (!prototype.isInitialSearchQuery(searchContext)) {
-      require("../../managers/native/SearchSessionAnalyticsManager.tsx").refreshQueryId(searchContext);
-      const obj2 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-      const channelIdFromSearchContext = require("../../SearchUtils.tsx") /* SearchTokenTypes */.getChannelIdFromSearchContext(searchContext);
+      _initialize.refreshQueryId(searchContext);
+      const obj2 = _initialize;
+      const channelIdFromSearchContext = SearchTokenTypes /* SearchTokenTypes */.getChannelIdFromSearchContext(searchContext);
       const channel = store.getChannel(channelIdFromSearchContext);
-      const obj3 = require("../../SearchUtils.tsx") /* SearchTokenTypes */;
+      const obj3 = SearchTokenTypes /* SearchTokenTypes */;
       const str = obj.getQueryString(searchContext);
       const str2 = obj.getTextInputValue(searchContext);
       obj = { search_session_id: null, search_query_id: null, search_location: null, guild_id: null, channel_id: null, channel_type: null, search_query_length: null, search_query_content_length: null };
-      const obj4 = require("../../../app_analytics/AppAnalyticsUtils.tsx");
-      obj[0] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSessionId(searchContext);
-      const obj6 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-      obj[1] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getQueryId(searchContext);
-      const obj7 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-      obj[2] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getLocation(searchContext);
-      const obj8 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-      obj[3] = require("../../SearchUtils.tsx") /* SearchTokenTypes */.getGuildIdFromSearchContext(searchContext);
+      const obj4 = collectGuildAnalyticsMetadata;
+      obj[0] = _initialize.getSessionId(searchContext);
+      const obj6 = _initialize;
+      obj[1] = _initialize.getQueryId(searchContext);
+      const obj7 = _initialize;
+      obj[2] = _initialize.getLocation(searchContext);
+      const obj8 = _initialize;
+      obj[3] = SearchTokenTypes /* SearchTokenTypes */.getGuildIdFromSearchContext(searchContext);
       obj[4] = channelIdFromSearchContext;
       let type;
       if (channel != null) {
@@ -63,7 +68,7 @@ export default {
       obj[6] = str.trim().length;
       obj[7] = str2.trim().length;
       obj4.trackWithMetadata(closure_7.SEARCH_STARTED_MOBILE, obj);
-      const obj9 = require("../../SearchUtils.tsx") /* SearchTokenTypes */;
+      const obj9 = SearchTokenTypes /* SearchTokenTypes */;
     }
   },
   trackSearchResultClicked(arg0) {
@@ -77,28 +82,28 @@ export default {
     let obj = prototype;
     ({ index, messageId, userId, entityType } = arg0);
     if (!prototype.isInitialSearchQuery(searchContext)) {
-      const guildIdFromSearchContext = require("../../SearchUtils.tsx") /* SearchTokenTypes */.getGuildIdFromSearchContext(searchContext);
-      const obj2 = require("../../SearchUtils.tsx") /* SearchTokenTypes */;
-      const channelIdFromSearchContext = require("../../SearchUtils.tsx") /* SearchTokenTypes */.getChannelIdFromSearchContext(searchContext);
+      const guildIdFromSearchContext = SearchTokenTypes /* SearchTokenTypes */.getGuildIdFromSearchContext(searchContext);
+      const obj2 = SearchTokenTypes /* SearchTokenTypes */;
+      const channelIdFromSearchContext = SearchTokenTypes /* SearchTokenTypes */.getChannelIdFromSearchContext(searchContext);
       const channel = store.getChannel(channelIdFromSearchContext);
       const channel1 = store.getChannel(channelId);
-      const obj3 = require("../../SearchUtils.tsx") /* SearchTokenTypes */;
+      const obj3 = SearchTokenTypes /* SearchTokenTypes */;
       const str = obj.getQueryString(searchContext);
       const str2 = obj.getTextInputValue(searchContext);
       obj = { search_session_id: null, search_location: null, search_query_id: null, search_query_length: null, search_query_content_length: null, search_tab_selected: null, search_result_index: null, search_result_click_id: null, search_result_content_entity_type: null, search_result_user_id: null, search_result_message_id: null, search_result_channel_id: null, search_result_guild_id: null, search_result_channel_type: null, guild_id: null, channel_id: null, channel_type: null };
-      const obj4 = require("../../../app_analytics/AppAnalyticsUtils.tsx");
-      obj[0] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSessionId(searchContext);
-      const obj6 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-      obj[1] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getLocation(searchContext);
-      const obj7 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-      obj[2] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getQueryId(searchContext);
+      const obj4 = collectGuildAnalyticsMetadata;
+      obj[0] = _initialize.getSessionId(searchContext);
+      const obj6 = _initialize;
+      obj[1] = _initialize.getLocation(searchContext);
+      const obj7 = _initialize;
+      obj[2] = _initialize.getQueryId(searchContext);
       obj[3] = str.trim().length;
       obj[4] = str2.trim().length;
-      const obj8 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-      obj[5] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSelectedTab(searchContext);
+      const obj8 = _initialize;
+      obj[5] = _initialize.getSelectedTab(searchContext);
       obj[6] = index;
-      const obj9 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-      obj[7] = require("../../../../../_runtime/00514_v1.js") /* v1 */.v4();
+      const obj9 = _initialize;
+      obj[7] = v1 /* v1 */.v4();
       obj[8] = entityType;
       obj[9] = userId;
       obj[10] = messageId;
@@ -117,7 +122,7 @@ export default {
       }
       obj[16] = type1;
       obj4.trackWithMetadata(closure_7.SEARCH_RESULT_CLICKED_MOBILE, obj);
-      const obj10 = require("../../../../../_runtime/00514_v1.js") /* v1 */;
+      const obj10 = v1 /* v1 */;
     }
   },
   trackSearchResultReturned(searchContext) {
@@ -133,20 +138,20 @@ export default {
     let obj = prototype;
     ({ searchResultTotalCount, numMemberTabReturnedResults, numChannelTabReturnedResults, numPeopleTabReturnedResults, numMessageTabReturnedResults, numMediaTabReturnedResults, numFileTabReturnedResults, numLinkTabReturnedResults } = searchContext);
     if (!prototype.isInitialSearchQuery(searchContext)) {
-      const guildIdFromSearchContext = require("../../SearchUtils.tsx") /* SearchTokenTypes */.getGuildIdFromSearchContext(searchContext);
-      const obj2 = require("../../SearchUtils.tsx") /* SearchTokenTypes */;
-      const channelIdFromSearchContext = require("../../SearchUtils.tsx") /* SearchTokenTypes */.getChannelIdFromSearchContext(searchContext);
+      const guildIdFromSearchContext = SearchTokenTypes /* SearchTokenTypes */.getGuildIdFromSearchContext(searchContext);
+      const obj2 = SearchTokenTypes /* SearchTokenTypes */;
+      const channelIdFromSearchContext = SearchTokenTypes /* SearchTokenTypes */.getChannelIdFromSearchContext(searchContext);
       const channel = store.getChannel(channelIdFromSearchContext);
-      const obj3 = require("../../SearchUtils.tsx") /* SearchTokenTypes */;
+      const obj3 = SearchTokenTypes /* SearchTokenTypes */;
       const str = obj.getQueryString(searchContext);
       const str2 = obj.getTextInputValue(searchContext);
       obj = { search_session_id: null, search_location: null, search_query_id: null, search_query_length: null, search_query_content_length: null, search_result_total_count: null, num_member_tab_returned_results: null, num_channel_tab_returned_results: null, num_people_tab_returned_results: null, num_message_tab_returned_results: null, num_media_tab_returned_results: null, num_file_tab_returned_results: null, num_link_tab_returned_results: null, exact_search_result_count_setting_enabled: null, guild_id: null, channel_id: null, channel_type: null };
-      const obj4 = require("../../../app_analytics/AppAnalyticsUtils.tsx");
-      obj[0] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSessionId(searchContext);
-      const obj6 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-      obj[1] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getLocation(searchContext);
-      const obj7 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-      obj[2] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getQueryId(searchContext);
+      const obj4 = collectGuildAnalyticsMetadata;
+      obj[0] = _initialize.getSessionId(searchContext);
+      const obj6 = _initialize;
+      obj[1] = _initialize.getLocation(searchContext);
+      const obj7 = _initialize;
+      obj[2] = _initialize.getQueryId(searchContext);
       obj[3] = str.trim().length;
       obj[4] = str2.trim().length;
       obj[5] = searchResultTotalCount;
@@ -157,8 +162,8 @@ export default {
       obj[10] = numMediaTabReturnedResults;
       obj[11] = numFileTabReturnedResults;
       obj[12] = numLinkTabReturnedResults;
-      const obj8 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-      obj[13] = require("../../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.SearchResultExactCountEnabled.getSetting();
+      const obj8 = _initialize;
+      obj[13] = explicitContentFromProto /* explicitContentFromProto */.SearchResultExactCountEnabled.getSetting();
       obj[14] = guildIdFromSearchContext;
       obj[15] = channelIdFromSearchContext;
       let type;
@@ -167,27 +172,27 @@ export default {
       }
       obj[16] = type;
       obj4.trackWithMetadata(closure_7.SEARCH_RESULT_RETURNED_MOBILE, obj);
-      const SearchResultExactCountEnabled = require("../../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.SearchResultExactCountEnabled;
+      const SearchResultExactCountEnabled = explicitContentFromProto /* explicitContentFromProto */.SearchResultExactCountEnabled;
     }
   },
   trackSearchEmptyResult(searchContext) {
     searchContext = searchContext.searchContext;
     let obj = prototype;
     if (!prototype.isInitialSearchQuery(searchContext)) {
-      const guildIdFromSearchContext = require("../../SearchUtils.tsx") /* SearchTokenTypes */.getGuildIdFromSearchContext(searchContext);
-      const obj2 = require("../../SearchUtils.tsx") /* SearchTokenTypes */;
-      const channelIdFromSearchContext = require("../../SearchUtils.tsx") /* SearchTokenTypes */.getChannelIdFromSearchContext(searchContext);
+      const guildIdFromSearchContext = SearchTokenTypes /* SearchTokenTypes */.getGuildIdFromSearchContext(searchContext);
+      const obj2 = SearchTokenTypes /* SearchTokenTypes */;
+      const channelIdFromSearchContext = SearchTokenTypes /* SearchTokenTypes */.getChannelIdFromSearchContext(searchContext);
       const channel = store.getChannel(channelIdFromSearchContext);
-      const obj3 = require("../../SearchUtils.tsx") /* SearchTokenTypes */;
+      const obj3 = SearchTokenTypes /* SearchTokenTypes */;
       const str = obj.getQueryString(searchContext);
       const str2 = obj.getTextInputValue(searchContext);
       obj = { search_session_id: null, search_location: null, search_query_id: null, search_query_length: null, search_query_content_length: null, guild_id: null, channel_id: null, channel_type: null };
-      const obj4 = require("../../../app_analytics/AppAnalyticsUtils.tsx");
-      obj[0] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSessionId(searchContext);
-      const obj6 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-      obj[1] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getLocation(searchContext);
-      const obj7 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-      obj[2] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getQueryId(searchContext);
+      const obj4 = collectGuildAnalyticsMetadata;
+      obj[0] = _initialize.getSessionId(searchContext);
+      const obj6 = _initialize;
+      obj[1] = _initialize.getLocation(searchContext);
+      const obj7 = _initialize;
+      obj[2] = _initialize.getQueryId(searchContext);
       obj[3] = str.trim().length;
       obj[4] = str2.trim().length;
       obj[5] = guildIdFromSearchContext;
@@ -198,27 +203,27 @@ export default {
       }
       obj[7] = type;
       obj4.trackWithMetadata(closure_7.SEARCH_EMPTY_RESULT_MOBILE, obj);
-      const obj8 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
+      const obj8 = _initialize;
     }
   },
   trackSearchEmptyMessageResult(searchContext) {
     searchContext = searchContext.searchContext;
     let obj = prototype;
     if (!prototype.isInitialSearchQuery(searchContext)) {
-      const guildIdFromSearchContext = require("../../SearchUtils.tsx") /* SearchTokenTypes */.getGuildIdFromSearchContext(searchContext);
-      const obj2 = require("../../SearchUtils.tsx") /* SearchTokenTypes */;
-      const channelIdFromSearchContext = require("../../SearchUtils.tsx") /* SearchTokenTypes */.getChannelIdFromSearchContext(searchContext);
+      const guildIdFromSearchContext = SearchTokenTypes /* SearchTokenTypes */.getGuildIdFromSearchContext(searchContext);
+      const obj2 = SearchTokenTypes /* SearchTokenTypes */;
+      const channelIdFromSearchContext = SearchTokenTypes /* SearchTokenTypes */.getChannelIdFromSearchContext(searchContext);
       const channel = store.getChannel(channelIdFromSearchContext);
-      const obj3 = require("../../SearchUtils.tsx") /* SearchTokenTypes */;
+      const obj3 = SearchTokenTypes /* SearchTokenTypes */;
       const str = obj.getQueryString(searchContext);
       const str2 = obj.getTextInputValue(searchContext);
       obj = { search_session_id: null, search_location: null, search_query_id: null, search_query_length: null, search_query_content_length: null, guild_id: null, channel_id: null, channel_type: null };
-      const obj4 = require("../../../app_analytics/AppAnalyticsUtils.tsx");
-      obj[0] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSessionId(searchContext);
-      const obj6 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-      obj[1] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getLocation(searchContext);
-      const obj7 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-      obj[2] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getQueryId(searchContext);
+      const obj4 = collectGuildAnalyticsMetadata;
+      obj[0] = _initialize.getSessionId(searchContext);
+      const obj6 = _initialize;
+      obj[1] = _initialize.getLocation(searchContext);
+      const obj7 = _initialize;
+      obj[2] = _initialize.getQueryId(searchContext);
       obj[3] = str.trim().length;
       obj[4] = str2.trim().length;
       obj[5] = guildIdFromSearchContext;
@@ -229,38 +234,38 @@ export default {
       }
       obj[7] = type;
       obj4.trackWithMetadata(closure_7.SEARCH_EMPTY_MESSAGE_RESULT_MOBILE, obj);
-      const obj8 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
+      const obj8 = _initialize;
     }
   },
   trackSearchClosed(searchContext) {
-    require("../../managers/native/SearchSessionAnalyticsManager.tsx").terminate(searchContext.searchContext);
+    _initialize.terminate(searchContext.searchContext);
   },
   trackSearchIndexing(searchContext) {
     let documentsIndexed;
     let isHistoricalIndexing;
     searchContext = searchContext.searchContext;
     ({ isHistoricalIndexing, documentsIndexed } = searchContext);
-    let obj = require("../../../app_analytics/AppAnalyticsUtils.tsx");
+    let obj = collectGuildAnalyticsMetadata;
     obj = { is_historical_indexing: isHistoricalIndexing, documents_indexed: documentsIndexed, search_tab_selected: null, search_location: null, search_session_id: null, search_query_id: null };
-    obj[2] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSelectedTab(searchContext);
-    const obj3 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-    obj[3] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getLocation(searchContext);
-    const obj4 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-    obj[4] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSessionId(searchContext);
-    const obj5 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-    obj[5] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getQueryId(searchContext);
+    obj[2] = _initialize.getSelectedTab(searchContext);
+    const obj3 = _initialize;
+    obj[3] = _initialize.getLocation(searchContext);
+    const obj4 = _initialize;
+    obj[4] = _initialize.getSessionId(searchContext);
+    const obj5 = _initialize;
+    obj[5] = _initialize.getQueryId(searchContext);
     obj.trackWithMetadata(closure_7.SEARCH_V2_INDEXING_VIEWED, obj);
   },
   trackSearchHistoryClicked(searchContext) {
     searchContext = searchContext.searchContext;
     const channel = store.getChannel(searchContext.channelId);
-    let obj = require("../../../app_analytics/AppAnalyticsUtils.tsx");
+    let obj = collectGuildAnalyticsMetadata;
     obj = { search_tab_selected: null, search_location: null, search_session_id: null, search_result_channel_type: null, search_history_type: null };
-    obj[0] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSelectedTab(searchContext);
-    const obj3 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-    obj[1] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getLocation(searchContext);
-    const obj4 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-    obj[2] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSessionId(searchContext);
+    obj[0] = _initialize.getSelectedTab(searchContext);
+    const obj3 = _initialize;
+    obj[1] = _initialize.getLocation(searchContext);
+    const obj4 = _initialize;
+    obj[2] = _initialize.getSessionId(searchContext);
     let type;
     if (channel != null) {
       type = channel.type;
@@ -272,13 +277,13 @@ export default {
   trackSuggestedSearchClicked(searchContext) {
     searchContext = searchContext.searchContext;
     const channel = store.getChannel(searchContext.channelId);
-    let obj = require("../../../app_analytics/AppAnalyticsUtils.tsx");
+    let obj = collectGuildAnalyticsMetadata;
     obj = { search_tab_selected: null, search_location: null, search_session_id: null, search_result_channel_type: null };
-    obj[0] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSelectedTab(searchContext);
-    const obj3 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-    obj[1] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getLocation(searchContext);
-    const obj4 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-    obj[2] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSessionId(searchContext);
+    obj[0] = _initialize.getSelectedTab(searchContext);
+    const obj3 = _initialize;
+    obj[1] = _initialize.getLocation(searchContext);
+    const obj4 = _initialize;
+    obj[2] = _initialize.getSessionId(searchContext);
     let type;
     if (channel != null) {
       type = channel.type;
@@ -290,15 +295,15 @@ export default {
     let searchContext;
     let searchTokenType;
     ({ searchContext, searchTokenType } = location);
-    let obj = require("../../../app_analytics/AppAnalyticsUtils.tsx");
+    let obj = collectGuildAnalyticsMetadata;
     obj = { search_tab_selected: null, search_location: null, search_session_id: null, search_query_id: null, search_filter_type: null, location: null };
-    obj[0] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSelectedTab(searchContext);
-    const obj3 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-    obj[1] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getLocation(searchContext);
-    const obj4 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-    obj[2] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSessionId(searchContext);
-    const obj5 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-    obj[3] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getQueryId(searchContext);
+    obj[0] = _initialize.getSelectedTab(searchContext);
+    const obj3 = _initialize;
+    obj[1] = _initialize.getLocation(searchContext);
+    const obj4 = _initialize;
+    obj[2] = _initialize.getSessionId(searchContext);
+    const obj5 = _initialize;
+    obj[3] = _initialize.getQueryId(searchContext);
     let str = "filter_from";
     if (constants.FILTER_FROM !== searchTokenType) {
       str = "filter_mentions";
@@ -329,15 +334,15 @@ export default {
     let searchContext;
     let searchTokenType;
     ({ searchContext, searchTokenType } = isDefault);
-    let obj = require("../../../app_analytics/AppAnalyticsUtils.tsx");
+    let obj = collectGuildAnalyticsMetadata;
     obj = { search_tab_selected: null, search_location: null, search_session_id: null, search_query_id: null, search_filter_type: null, is_default_search_filter: null };
-    obj[0] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSelectedTab(searchContext);
-    const obj3 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-    obj[1] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getLocation(searchContext);
-    const obj4 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-    obj[2] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSessionId(searchContext);
-    const obj5 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-    obj[3] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getQueryId(searchContext);
+    obj[0] = _initialize.getSelectedTab(searchContext);
+    const obj3 = _initialize;
+    obj[1] = _initialize.getLocation(searchContext);
+    const obj4 = _initialize;
+    obj[2] = _initialize.getSessionId(searchContext);
+    const obj5 = _initialize;
+    obj[3] = _initialize.getQueryId(searchContext);
     let str = "filter_from";
     if (constants.FILTER_FROM !== searchTokenType) {
       str = "filter_mentions";
@@ -366,15 +371,15 @@ export default {
   },
   trackSearchTabSelected(searchContext) {
     searchContext = searchContext.searchContext;
-    let obj = require("../../../app_analytics/AppAnalyticsUtils.tsx");
+    let obj = collectGuildAnalyticsMetadata;
     obj = { search_session_id: null, search_query_id: null, search_tab_selected: null, search_location: null };
-    obj[0] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSessionId(searchContext);
-    const obj3 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-    obj[1] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getQueryId(searchContext);
-    const obj4 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-    obj[2] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSelectedTab(searchContext);
-    const obj5 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-    obj[3] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getLocation(searchContext);
+    obj[0] = _initialize.getSessionId(searchContext);
+    const obj3 = _initialize;
+    obj[1] = _initialize.getQueryId(searchContext);
+    const obj4 = _initialize;
+    obj[2] = _initialize.getSelectedTab(searchContext);
+    const obj5 = _initialize;
+    obj[3] = _initialize.getLocation(searchContext);
     obj.trackWithMetadata(closure_7.SEARCH_V2_TAB_SELECTED, obj);
   },
   trackSearchJumpToMessage(arg0) {
@@ -382,15 +387,15 @@ export default {
     let searchContext;
     ({ searchContext, channelId } = arg0);
     const channel = store.getChannel(channelId);
-    let obj = require("../../../app_analytics/AppAnalyticsUtils.tsx");
+    let obj = collectGuildAnalyticsMetadata;
     obj = { search_tab_selected: null, search_location: null, search_session_id: null, search_query_id: null, search_result_channel_type: null, search_result_channel_id: null };
-    obj[0] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSelectedTab(searchContext);
-    const obj3 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-    obj[1] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getLocation(searchContext);
-    const obj4 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-    obj[2] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getSessionId(searchContext);
-    const obj5 = require("../../managers/native/SearchSessionAnalyticsManager.tsx");
-    obj[3] = require("../../managers/native/SearchSessionAnalyticsManager.tsx").getQueryId(searchContext);
+    obj[0] = _initialize.getSelectedTab(searchContext);
+    const obj3 = _initialize;
+    obj[1] = _initialize.getLocation(searchContext);
+    const obj4 = _initialize;
+    obj[2] = _initialize.getSessionId(searchContext);
+    const obj5 = _initialize;
+    obj[3] = _initialize.getQueryId(searchContext);
     let type;
     if (channel != null) {
       type = channel.type;

@@ -1,3 +1,6 @@
+import { NativeNotifSettingsModule } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
 // discord_app/modules/notifications/native/NotifSettingsUtils.android.tsx
 import items2 from "items2";
 
@@ -19,13 +22,13 @@ function inferImportanceFromBehavior(visibility) {
 }
 function formatCategory(id) {
   const obj = { id: id.string_id, name: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   obj[1] = intl.string(id.title);
   return obj;
 }
 function formatSetting(item10022, arg1) {
   const obj = { id: item10022.string_id, groupId: item10022.category, name: null, importance: null, ringtone: null, badge: null, vibrate: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   obj[2] = intl.string(item10022.title);
   if (arg1 != null) {
     obj[3] = arg1;
@@ -155,7 +158,7 @@ export default {
   clear() {
     let registerAndroidNotifGroupsAndChannels;
     let registerAndroidNotifTypeMappings;
-    let obj = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx");
+    let obj = NativeNotifSettingsModule;
     if (obj == null) {
       obj = {};
     }
@@ -173,7 +176,7 @@ export default {
     let mapping;
     let registerAndroidNotifGroupsAndChannels;
     let registerAndroidNotifTypeMappings;
-    let obj = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx");
+    let obj = NativeNotifSettingsModule;
     if (obj == null) {
       obj = {};
     }
@@ -186,7 +189,7 @@ export default {
         obj = { channels: null, inheritedImportances: null };
         obj[0] = channels.map((id) => id.id);
         const _Array = Array;
-        const tmpResult = require("../../../utils/SentryUtils.native.tsx");
+        const tmpResult = SentryUtils.native;
         obj[1] = Array.from(inheritedImportances.entries()).map((arg0) => {
           let tmp;
           let tmp2;

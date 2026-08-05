@@ -1,3 +1,4 @@
+import { BundleUpdaterManager } from "../../../lib/native/BundleUpdater.tsx";
 // discord_app/modules/build_overrides/native/BuildOverrideUtils.tsx
 import AlertActionCreators from "../../../actions/native/AlertActionCreators.tsx";
 import getCurrentBuildOverride from "getCurrentBuildOverride";
@@ -409,7 +410,7 @@ export const setBuildOverrideForId = function setBuildOverrideForId(id) {
 };
 export { setBuildOverride };
 export const refreshBuildOverride = function refreshBuildOverride() {
-  const result = require("../../../lib/native/BundleUpdater.tsx").checkForUpdateAndReload();
+  const result = BundleUpdaterManager.checkForUpdateAndReload();
 };
 export { clearBuildOverride };
 export const toggleOverride = function toggleOverride(code) {

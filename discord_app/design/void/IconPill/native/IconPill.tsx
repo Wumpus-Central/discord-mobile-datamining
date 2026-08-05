@@ -1,3 +1,5 @@
+import { IconSizes } from "../../Icon/native/Icon.tsx";
+import { LegacyText } from "../../LegacyText/native/LegacyText.tsx";
 // discord_app/design/void/IconPill/native/IconPill.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -36,15 +38,15 @@ export default function IconPill(IconComponent) {
   } else {
     obj = { source: null, size: null, style: null };
     obj[0] = source;
-    obj[1] = require("../../Icon/native/Icon.tsx").Sizes.EXTRA_SMALL;
+    obj[1] = IconSizes.Sizes.EXTRA_SMALL;
     obj[2] = tmp.pillIcon;
     tmp8 = callback;
-    tmp9 = callback(require("../../Icon/native/Icon.tsx"), obj);
-    const tmp7 = require("../../Icon/native/Icon.tsx");
+    tmp9 = callback(IconSizes, obj);
+    const tmp7 = IconSizes;
   }
   const items1 = [tmp9, ];
   const items2 = [tmp.pillText, textStyle];
-  items1[1] = tmp8(require("../../LegacyText/native/LegacyText.tsx"), { style: items2, numberOfLines: 1, accessibilityLabel, children: text });
+  items1[1] = tmp8(LegacyText, { style: items2, numberOfLines: 1, accessibilityLabel, children: text });
   obj[1] = items1;
   return closure_4(View, obj);
 };

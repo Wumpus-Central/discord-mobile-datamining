@@ -1,3 +1,6 @@
+import { n } from "../../../../_runtime/00689_n.js";
+import { mapValues } from "../../../../_runtime/00719_mapValues.js";
+import { interpolate } from "transforms.tsx";
 // discord_common/js/packages/tokens/native.tsx
 const Themes = require("items")._private.Themes;
 const SemanticColors = require("_private")._private.SemanticColors;
@@ -53,7 +56,7 @@ obj = {
     };
   }),
   radii: require("Radius").Radius,
-  modules: require("mapValues")(require("_private")._private.Modules, (arg0) => require("../../../../_runtime/00719_mapValues.js")(arg0, (arg0) => {
+  modules: require("mapValues")(require("_private")._private.Modules, (arg0) => mapValues(arg0, (arg0) => {
     let closure_0 = arg0;
     return {
       resolve(arg0) {
@@ -177,19 +180,19 @@ obj = {
         num3 = 1;
       }
       if (num3 < 1) {
-        result = require("transforms.tsx") /* interpolate */.transformColorForReducedSaturation(result, category, num3);
-        const obj6 = require("transforms.tsx") /* interpolate */;
+        result = interpolate /* interpolate */.transformColorForReducedSaturation(result, category, num3);
+        const obj6 = interpolate /* interpolate */;
       }
       if (1 !== num2) {
-        const obj7 = require("transforms.tsx") /* interpolate */;
+        const obj7 = interpolate /* interpolate */;
         result = obj7.transformColorContrast(result, category, tmp, num2);
       }
       if (1 === opacity) {
         let hexResult = result;
       } else {
-        const obj8 = require("../../../../_runtime/00689_n.js")(result);
-        hexResult = require("../../../../_runtime/00689_n.js")(result).alpha(opacity).hex();
-        const alphaResult = require("../../../../_runtime/00689_n.js")(result).alpha(opacity);
+        const obj8 = n(result);
+        hexResult = n(result).alpha(opacity).hex();
+        const alphaResult = n(result).alpha(opacity);
       }
       return hexResult;
     }
@@ -246,7 +249,7 @@ obj = {
         } else if (semanticColorContextFromThemeContext != null) {
           tmp38 = semanticColorContextFromThemeContext.gradient.colors[tmp36.color];
         }
-        const tmp61Result = require("../../../../_runtime/00689_n.js")(tmp38);
+        const tmp61Result = n(tmp38);
         let result1 = tmp61Result;
         if ("saturation" in tmp36) {
           result1 = tmp61Result.set("hsl.s", tmp36.saturation);
@@ -261,15 +264,15 @@ obj = {
           num = tmp36.opacity;
         }
         opacity = num;
-        const tmp61 = require("../../../../_runtime/00689_n.js");
+        const tmp61 = n;
       }
     }
   },
   adjustColorSaturation(result, saturation, generic) {
-    return require("transforms.tsx") /* interpolate */.transformColorForReducedSaturation(result, generic, saturation);
+    return interpolate /* interpolate */.transformColorForReducedSaturation(result, generic, saturation);
   },
   adjustColorContrast(result, contrast, category, theme) {
-    return require("transforms.tsx") /* interpolate */.transformColorContrast(result, category, theme, contrast);
+    return interpolate /* interpolate */.transformColorContrast(result, category, theme, contrast);
   }
 };
 let result = require("_private").fileFinishedImporting("../discord_common/js/packages/tokens/native.tsx");

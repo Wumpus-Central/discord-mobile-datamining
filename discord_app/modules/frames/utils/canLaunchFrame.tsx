@@ -1,3 +1,4 @@
+import { getShelfBadgeTypeIfActive } from "../../app_launcher/utils/AppLauncherUtils.tsx";
 // discord_app/modules/frames/utils/canLaunchFrame.tsx
 import { ApplicationFlags } from "ME";
 
@@ -14,7 +15,7 @@ export const canLaunchFrame = function canLaunchFrame(application) {
       }
       return hasApplicationFlagResult;
     }
-    obj = require("../../app_launcher/utils/AppLauncherUtils.tsx") /* getShelfBadgeTypeIfActive */;
+    obj = getShelfBadgeTypeIfActive /* getShelfBadgeTypeIfActive */;
   }
   return false;
 };

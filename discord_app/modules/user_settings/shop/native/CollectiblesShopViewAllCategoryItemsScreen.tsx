@@ -1,3 +1,4 @@
+import { CollectiblesShopViewAllCategoryItems } from "../../../collectibles/native/CollectiblesShopViewAllCategoryItems.tsx";
 // discord_app/modules/user_settings/shop/native/CollectiblesShopViewAllCategoryItemsScreen.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -16,5 +17,5 @@ export default function CollectiblesShopViewAllCategoryItemsScreen() {
   obj = {};
   const obj2 = stackNavigation(1480);
   const merged = Object.assign(settingNavigationRoute.params);
-  return jsx(require("../../../collectibles/native/CollectiblesShopViewAllCategoryItems.tsx"), {});
+  return jsx(CollectiblesShopViewAllCategoryItems, {});
 };

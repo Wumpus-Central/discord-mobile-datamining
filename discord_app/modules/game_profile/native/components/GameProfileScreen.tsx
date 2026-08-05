@@ -1,3 +1,5 @@
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/game_profile/native/components/GameProfileScreen.tsx
 import _slicedToArray from "_slicedToArray";
 import getGameProfileStoreWebsiteData from "getGameProfileStoreWebsiteData";
@@ -13,12 +15,12 @@ let metroImportAll;
 const require = arg1;
 function GetButton(onPress) {
   const obj = { variant: "primary", size: "sm", text: null, onPress: null, accessibilityLabel: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.l8JeHg);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.l8JeHg);
   obj[3] = onPress.onPress;
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[4] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Vsxqmz);
-  return callback(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[4] = intl2.string(getSystemLocale /* getSystemLocale */.t.Vsxqmz);
+  return callback(Button /* Button */.Button, obj);
 }
 ({ View: c5, ActivityIndicator: closure_6 } = get_ActivityIndicator);
 ({ jsx: metroImportAll, jsxs: c9 } = jsxProd);

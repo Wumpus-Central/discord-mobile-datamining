@@ -1,3 +1,8 @@
+import { getTransformedUser } from "../modules/autocompleter/UserSearchManager.tsx";
+import { getFrictionlessGDMsEnabled } from "../modules/header_bar/FrictionlessGDMsExperiment.tsx";
+import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
+import { isNullOrEmpty } from "../utils/StringUtils.tsx";
+import { nameFromUser } from "../utils/UserUtils.tsx";
 // discord_app/stores/PrivateChannelRecipientsInviteStore.tsx
 import getHash from "getHash";
 import recomputeAffinities from "recomputeAffinities";
@@ -196,16 +201,16 @@ function updateHasFriends() {
   }
 }
 function sortUserList(user, user2) {
-  const obj = require("../utils/StringUtils.tsx") /* isNullOrEmpty */;
-  const name = require("../utils/UserUtils.tsx").getName(user.user);
-  const obj2 = require("../utils/UserUtils.tsx");
+  const obj = isNullOrEmpty /* isNullOrEmpty */;
+  const name = nameFromUser.getName(user.user);
+  const obj2 = nameFromUser;
   const stripDiacriticsResult = obj.stripDiacritics(name.toLocaleLowerCase());
-  const obj5 = require("../utils/StringUtils.tsx") /* isNullOrEmpty */;
-  const name1 = require("../utils/UserUtils.tsx").getName(user2.user);
+  const obj5 = isNullOrEmpty /* isNullOrEmpty */;
+  const name1 = nameFromUser.getName(user2.user);
   return stripDiacriticsResult.localeCompare(obj5.stripDiacritics(name1.toLocaleLowerCase()));
 }
 function getMutualGuildsWithCurrentUser(id, set) {
-  const RestrictedGuildIds = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.RestrictedGuildIds;
+  const RestrictedGuildIds = explicitContentFromProto /* explicitContentFromProto */.RestrictedGuildIds;
   const setting = RestrictedGuildIds.getSetting();
   const items = [];
   const iter = set[Symbol.iterator]();
@@ -236,7 +241,7 @@ function parseUserResults(results) {
   if (c15) {
     if ("" !== c16) {
       const currentUser = authStore.getCurrentUser();
-      const frictionlessGDMsEnabled = require("../modules/header_bar/FrictionlessGDMsExperiment.tsx") /* getFrictionlessGDMsEnabled */.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
+      const frictionlessGDMsEnabled = getFrictionlessGDMsEnabled /* getFrictionlessGDMsEnabled */.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
       let set = null;
       if (frictionlessGDMsEnabled) {
         const _Set = Set;
@@ -244,7 +249,7 @@ function parseUserResults(results) {
       }
       const items = [];
       const iter = results[Symbol.iterator]();
-      const obj4 = require("../modules/header_bar/FrictionlessGDMsExperiment.tsx") /* getFrictionlessGDMsEnabled */;
+      const obj4 = getFrictionlessGDMsEnabled /* getFrictionlessGDMsEnabled */;
       while (iter !== undefined) {
         ({ id, comparator } = nextResult);
         if (null == currentUser) {
@@ -327,7 +332,7 @@ function handleModalActionSheetOpen(key) {
       userSearchContext.destroy();
       userSearchContext = null;
     }
-    userSearchContext = require("../modules/autocompleter/UserSearchManager.tsx").getUserSearchContext(parseUserResults, 1000);
+    userSearchContext = getTransformedUser.getUserSearchContext(parseUserResults, 1000);
     let c22 = null;
     let c16 = "";
     let c17 = 0;
@@ -355,8 +360,8 @@ function handleActionSheetDismiss(key) {
 function performQueryOnAffinityChange() {
   let tmp = !c15;
   if (c15) {
-    tmp = !require("../modules/header_bar/FrictionlessGDMsExperiment.tsx") /* getFrictionlessGDMsEnabled */.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
-    const obj = require("../modules/header_bar/FrictionlessGDMsExperiment.tsx") /* getFrictionlessGDMsEnabled */;
+    tmp = !getFrictionlessGDMsEnabled /* getFrictionlessGDMsEnabled */.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
+    const obj = getFrictionlessGDMsEnabled /* getFrictionlessGDMsEnabled */;
   }
   let tmp4 = !tmp;
   if (!tmp) {
@@ -414,8 +419,8 @@ const privateChannelRecipientsInviteStoreClass = new PrivateChannelRecipientsInv
   GUILD_MEMBERS_CHUNK_BATCH: function handleGuildMembersChunkBatch() {
     let tmp = !c15;
     if (c15) {
-      tmp = !require("../modules/header_bar/FrictionlessGDMsExperiment.tsx") /* getFrictionlessGDMsEnabled */.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
-      const obj = require("../modules/header_bar/FrictionlessGDMsExperiment.tsx") /* getFrictionlessGDMsEnabled */;
+      tmp = !getFrictionlessGDMsEnabled /* getFrictionlessGDMsEnabled */.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
+      const obj = getFrictionlessGDMsEnabled /* getFrictionlessGDMsEnabled */;
     }
     let tmp4 = !tmp;
     if (!tmp) {
@@ -431,8 +436,8 @@ const privateChannelRecipientsInviteStoreClass = new PrivateChannelRecipientsInv
   GUILD_MEMBERS_REQUEST: function handleGuildMembersRequest(query) {
     let tmp = !c15;
     if (c15) {
-      tmp = !require("../modules/header_bar/FrictionlessGDMsExperiment.tsx") /* getFrictionlessGDMsEnabled */.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
-      const obj = require("../modules/header_bar/FrictionlessGDMsExperiment.tsx") /* getFrictionlessGDMsEnabled */;
+      tmp = !getFrictionlessGDMsEnabled /* getFrictionlessGDMsEnabled */.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
+      const obj = getFrictionlessGDMsEnabled /* getFrictionlessGDMsEnabled */;
     }
     let tmp4 = !tmp;
     if (!tmp) {
@@ -472,7 +477,7 @@ const privateChannelRecipientsInviteStoreClass = new PrivateChannelRecipientsInv
       userSearchContext.destroy();
       userSearchContext = null;
     }
-    userSearchContext = require("../modules/autocompleter/UserSearchManager.tsx").getUserSearchContext(parseUserResults, 1000);
+    userSearchContext = getTransformedUser.getUserSearchContext(parseUserResults, 1000);
     channelId = channelId.channelId;
     let c16 = "";
     let c17 = 0;

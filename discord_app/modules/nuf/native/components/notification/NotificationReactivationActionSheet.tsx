@@ -1,3 +1,4 @@
+import { registerAsset } from "../../../../../../_runtime/16402_registerAsset.js";
 // discord_app/modules/nuf/native/components/notification/NotificationReactivationActionSheet.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -45,7 +46,7 @@ export default function NotificationReactivationActionSheet(location) {
   let obj = { children: null };
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.image, source: null, resizeMode: "contain" };
-  obj[1] = require("../../../../../../_runtime/16402_registerAsset.js");
+  obj[1] = registerAsset;
   const items2 = [callback(closure_5, obj), , , ];
   const obj1 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: null };
   const intl = _location(1236).intl;

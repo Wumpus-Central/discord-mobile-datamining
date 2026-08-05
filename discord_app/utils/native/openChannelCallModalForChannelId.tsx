@@ -1,3 +1,5 @@
+import { connectToStage } from "../../modules/stage_channels/StageChannelModalActionCreators.tsx";
+import { openChannelCallModal } from "PrivateChannelCallUtils.tsx";
 // discord_app/utils/native/openChannelCallModalForChannelId.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 
@@ -12,12 +14,12 @@ export default function openChannelCallModalForChannelId(arg0, arg1) {
       isGuildStageVoiceResult = channel.isGuildStageVoice();
     }
     if (isGuildStageVoiceResult) {
-      isGuildStageVoiceResult = false === require("../../modules/stage_channels/StageChannelModalActionCreators.tsx") /* connectToStage */.connectToStage(channel);
-      const obj2 = require("../../modules/stage_channels/StageChannelModalActionCreators.tsx") /* connectToStage */;
+      isGuildStageVoiceResult = false === connectToStage /* connectToStage */.connectToStage(channel);
+      const obj2 = connectToStage /* connectToStage */;
     }
     if (!isGuildStageVoiceResult) {
-      require("PrivateChannelCallUtils.tsx") /* openChannelCallModal */.openChannelCallModal(channel);
-      const obj3 = require("PrivateChannelCallUtils.tsx") /* openChannelCallModal */;
+      openChannelCallModal /* openChannelCallModal */.openChannelCallModal(channel);
+      const obj3 = openChannelCallModal /* openChannelCallModal */;
     }
   }
 };

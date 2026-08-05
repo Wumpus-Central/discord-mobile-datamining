@@ -1,3 +1,5 @@
+import { handleRelationshipAddError } from "../../actions/RelationshipActionCreators.tsx";
+import { showRequestFailedAlert } from "../game_relationships/GameRelationshipActionCreators.tsx";
 // discord_app/modules/people/PeopleUtils.tsx
 import upsertRelationship from "upsertRelationship";
 import { AbortCodes } from "ME";
@@ -14,10 +16,10 @@ export default {
       let obj = { userId: null, applicationId: null };
       obj[0] = userId;
       obj[1] = applicationId;
-      require("../game_relationships/GameRelationshipActionCreators.tsx").removeGameFriend(obj);
-      const obj3 = require("../game_relationships/GameRelationshipActionCreators.tsx");
+      showRequestFailedAlert.removeGameFriend(obj);
+      const obj3 = showRequestFailedAlert;
     } else {
-      obj = require("../../actions/RelationshipActionCreators.tsx");
+      obj = handleRelationshipAddError;
       obj = { location: null };
       obj[0] = tmp;
       obj.removeFriend(userId, obj);
@@ -31,10 +33,10 @@ export default {
       let obj = { userId: null, applicationId: null };
       obj[0] = userId;
       obj[1] = applicationId;
-      let result = require("../game_relationships/GameRelationshipActionCreators.tsx").cancelGameFriendRequest(obj);
-      const obj3 = require("../game_relationships/GameRelationshipActionCreators.tsx");
+      let result = showRequestFailedAlert.cancelGameFriendRequest(obj);
+      const obj3 = showRequestFailedAlert;
     } else {
-      obj = require("../../actions/RelationshipActionCreators.tsx");
+      obj = handleRelationshipAddError;
       obj = { location: null };
       obj[0] = tmp;
       result = obj.cancelFriendRequest(userId, obj);
@@ -53,10 +55,10 @@ export default {
       let obj = { userId: null, applicationId: null };
       obj[0] = userId;
       obj[1] = applicationId;
-      let result = require("../game_relationships/GameRelationshipActionCreators.tsx").acceptGameFriendRequest(obj);
-      const obj4 = require("../game_relationships/GameRelationshipActionCreators.tsx");
+      let result = showRequestFailedAlert.acceptGameFriendRequest(obj);
+      const obj4 = showRequestFailedAlert;
     } else {
-      obj = require("../../actions/RelationshipActionCreators.tsx");
+      obj = handleRelationshipAddError;
       obj = { userId: null, confirmStrangerRequest: null, context: null };
       obj[0] = userId;
       obj[1] = confirmStrangerRequest;

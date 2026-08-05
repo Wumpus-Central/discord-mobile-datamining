@@ -1,3 +1,13 @@
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { DismissibleContent } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { FormSwitch } from "../../../../../design/components/Forms/native/FormSwitch.native.tsx";
+import { Stack } from "../../../../../design/components/Stack/native/Stack.native.tsx";
+import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { TableSwitchRow } from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
+import { useToggleDismissibleContentDismissState } from "../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx";
+import { useSafeAreaInsetsKeyboardAware } from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsShopScreen.tsx
 import "noop";
 import { ScrollView } from "get ActivityIndicator";
@@ -18,61 +28,61 @@ const result = require("getUserAgnosticState").fileFinishedImporting("modules/de
 export default function DevToolsShopScreen() {
   let handleToggleDismissState;
   let isDismissed;
-  let obj = require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [getUserAgnosticState];
   const stateFromStores = obj.useStateFromStores(items, () => store.get("shop_disable_cache"));
-  let obj1 = require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj1 = initialize /* initialize */;
   const items1 = [getUserAgnosticState];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => store.get("shop_include_unpublished"));
-  let obj2 = require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj2 = initialize /* initialize */;
   const items2 = [getUserAgnosticState];
   const stateFromStores2 = obj2.useStateFromStores(items2, () => store.get("shop_show_debug_overlay"));
-  let obj3 = require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj3 = initialize /* initialize */;
   const items3 = [getUserAgnosticState];
   const stateFromStores3 = obj3.useStateFromStores(items3, () => store.get("bypass_google_sku_sync"));
   const tmp = createCacheKey();
-  const tmp6 = require("../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx");
+  const tmp6 = useToggleDismissibleContentDismissState;
   obj = { style: tmp.wrap, contentContainerStyle: null, children: null };
-  obj = { paddingVertical: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingBottom: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 + require("../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx")({ includeKeyboardHeight: true }).insets.bottom };
-  ({ isDismissed, handleToggleDismissState } = require("../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx")(require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING));
+  obj = { paddingVertical: Themes.space.PX_16, paddingBottom: Themes.space.PX_16 + useSafeAreaInsetsKeyboardAware({ includeKeyboardHeight: true }).insets.bottom };
+  ({ isDismissed, handleToggleDismissState } = useToggleDismissibleContentDismissState(DismissibleContent /* DismissibleContent */.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING));
   obj[1] = obj;
   obj1 = { spacing: 16, children: null };
   obj2 = { title: "Shop Toggles", hasIcons: false, children: null };
   obj3 = { label: "Disable collectibles shop cache", subLabel: "shop_disable_cache", subLabelLineClamp: 1, trailing: null };
-  obj3[3] = callback(require("../../../../../design/components/Forms/native/FormSwitch.native.tsx") /* FormSwitch */.FormSwitch, {
+  obj3[3] = callback(FormSwitch /* FormSwitch */.FormSwitch, {
     value: stateFromStores,
     onValueChange(arg0) {
       return callback(14907).toggle("shop_disable_cache", arg0);
     }
   });
-  const items4 = [callback(require("../../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj3), , , , ];
+  const items4 = [callback(TableRowInner /* TableRowInner */.TableRow, obj3), , , , ];
   const obj5 = { label: "Show unpublished items in collectibles shop", subLabel: "shop_include_unpublished", subLabelLineClamp: 1, trailing: null };
-  obj5[3] = callback(require("../../../../../design/components/Forms/native/FormSwitch.native.tsx") /* FormSwitch */.FormSwitch, {
+  obj5[3] = callback(FormSwitch /* FormSwitch */.FormSwitch, {
     value: stateFromStores1,
     onValueChange(arg0) {
       return callback(14907).toggle("shop_include_unpublished", arg0);
     }
   });
-  items4[1] = callback(require("../../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj5);
-  items4[2] = callback(require("../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx") /* TableSwitchRow */.TableSwitchRow, { label: "Collectibles Marketing", subLabel: "COLLECTIBLES_SHOP_ENTRY_MARKETING", subLabelLineClamp: 1, value: isDismissed, onValueChange: handleToggleDismissState });
+  items4[1] = callback(TableRowInner /* TableRowInner */.TableRow, obj5);
+  items4[2] = callback(TableSwitchRow /* TableSwitchRow */.TableSwitchRow, { label: "Collectibles Marketing", subLabel: "COLLECTIBLES_SHOP_ENTRY_MARKETING", subLabelLineClamp: 1, value: isDismissed, onValueChange: handleToggleDismissState });
   const obj7 = { label: "Show debug log overlay in collectibles shop", subLabel: "shop_show_debug_overlay", subLabelLineClamp: 1, trailing: null };
-  obj7[3] = callback(require("../../../../../design/components/Forms/native/FormSwitch.native.tsx") /* FormSwitch */.FormSwitch, {
+  obj7[3] = callback(FormSwitch /* FormSwitch */.FormSwitch, {
     value: stateFromStores2,
     onValueChange(arg0) {
       return callback(14907).toggle("shop_show_debug_overlay", arg0);
     }
   });
-  items4[3] = callback(require("../../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj7);
+  items4[3] = callback(TableRowInner /* TableRowInner */.TableRow, obj7);
   const obj9 = { label: "[Android] Bypass Google SKU sync in collectibles shop", subLabel: "bypass_google_sku_sync", subLabelLineClamp: 1, trailing: null };
-  obj9[3] = callback(require("../../../../../design/components/Forms/native/FormSwitch.native.tsx") /* FormSwitch */.FormSwitch, {
+  obj9[3] = callback(FormSwitch /* FormSwitch */.FormSwitch, {
     value: stateFromStores3,
     onValueChange(arg0) {
       return callback(14907).toggle("bypass_google_sku_sync", arg0);
     }
   });
-  items4[4] = callback(require("../../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj9);
+  items4[4] = callback(TableRowInner /* TableRowInner */.TableRow, obj9);
   obj2[2] = items4;
-  obj1[1] = callback2(require("../../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj2);
-  obj[2] = callback(require("../../../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj1);
+  obj1[1] = callback2(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj2);
+  obj[2] = callback(Stack /* Stack */.Stack, obj1);
   return callback(ScrollView, obj);
 };

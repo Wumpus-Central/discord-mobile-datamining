@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/opt_in_channels/isOptInEnabled.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -14,7 +15,7 @@ const result = require("updateUserGuildSettingsInternal").fileFinishedImporting(
 export const useOptInEnabledForGuild = function useOptInEnabledForGuild(id) {
   const _require = id;
   const items = [updateUserGuildSettingsInternal, createGuildRecordFromRust, mergeGuildAvatar];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let isOptInEnabledResult = outer1_4.isOptInEnabled(closure_0);
     const guild = outer1_2.getGuild(closure_0);
     let flag;
@@ -59,7 +60,7 @@ export const isOptInEnabledForGuild = function isOptInEnabledForGuild(_guildId) 
 export const useShouldShowOnboardingAdminUpsellForGuild = function useShouldShowOnboardingAdminUpsellForGuild(arg0) {
   const _require = arg0;
   const items = [createGuildRecordFromRust, getUncachedChannelPermissions];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const guild = outer1_2.getGuild(closure_0);
     let flag;
     const canResult = outer1_3.can(outer1_7.MANAGE_GUILD, guild);

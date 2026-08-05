@@ -1,3 +1,4 @@
+import { configure } from "../../../_runtime/01456_configure.js";
 // discord_app/utils/native/NetworkUtils.tsx
 import { NetworkConnectionTypes } from "ME";
 import importDefaultResult from "configure";
@@ -49,8 +50,8 @@ response.then((isConnected) => {
 obj = {
   addOnlineCallback(_handleNetworkOnline) {
     if (null == closure_7) {
-      closure_7 = require("../../../_runtime/01456_configure.js").addEventListener(notifyListeners);
-      const obj = require("../../../_runtime/01456_configure.js");
+      closure_7 = configure.addEventListener(notifyListeners);
+      const obj = configure;
     }
   },
   removeOnlineCallback(_handleNetworkOnline) {
@@ -76,8 +77,8 @@ obj = {
   addOfflineCallback(_handleNetworkOffline) {
     arr2.push(_handleNetworkOffline);
     if (null == closure_7) {
-      closure_7 = require("../../../_runtime/01456_configure.js").addEventListener(notifyListeners);
-      const obj = require("../../../_runtime/01456_configure.js");
+      closure_7 = configure.addEventListener(notifyListeners);
+      const obj = configure;
     }
   },
   removeOfflineCallback(_handleNetworkOffline) {
@@ -103,8 +104,8 @@ obj = {
   addChangeCallback(handleConnectionInfoChange) {
     arr3.push(handleConnectionInfoChange);
     if (null == closure_7) {
-      closure_7 = require("../../../_runtime/01456_configure.js").addEventListener(notifyListeners);
-      const obj = require("../../../_runtime/01456_configure.js");
+      closure_7 = configure.addEventListener(notifyListeners);
+      const obj = configure;
     }
   },
   removeChangeCallback(arg0) {
@@ -128,7 +129,7 @@ obj = {
     }
   },
   getNetworkInformation() {
-    const response = require("../../../_runtime/01456_configure.js").fetch();
+    const response = configure.fetch();
     return response.then((arg0) => {
       let details;
       let type;

@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/channel_list_v2/native/components/VocalChannelJoinButton.tsx
 import importAllResult from "getSystemLocale";
 import get_ActivityIndicator from "useShowConnectedUserLimit";
@@ -16,14 +17,14 @@ let c3 = importAllResult;
 ({ View: c4, Pressable: c5 } = get_ActivityIndicator);
 ({ NOOP: metroImportAll, Permissions: c9 } = ME);
 let closure_11 = createCacheKey.createStyles((arg0, arg1) => {
-  let obj = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.xxl, paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, paddingVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, marginVertical: -require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, minHeight: 28, justifyContent: "center", elevation: null, shadowRadius: 4, shadowOffset: null, shadowColor: null, shadowOpacity: null, borderColor: null, borderWidth: 1 };
+  let obj = { borderRadius: Themes.radii.xxl, paddingHorizontal: Themes.space.PX_8, paddingVertical: Themes.space.PX_4, marginVertical: -Themes.space.PX_4, backgroundColor: Themes.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, minHeight: 28, justifyContent: "center", elevation: null, shadowRadius: 4, shadowOffset: null, shadowColor: null, shadowOpacity: null, borderColor: null, borderWidth: 1 };
   let num = 1;
   if (arg0) {
     num = 0;
   }
   obj[7] = num;
   obj[9] = { width: 0, height: 1 };
-  obj[10] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BLACK;
+  obj[10] = Themes.colors.BLACK;
   let num2 = 0.14;
   if (arg1) {
     num2 = 0.08;
@@ -37,8 +38,8 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1) => {
   obj[12] = str;
   obj = { tintColor: tmp(712).colors.WHITE };
   obj[2] = obj;
-  obj[3] = { tintColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_DEFAULT };
-  const obj1 = { tintColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_DEFAULT };
+  obj[3] = { tintColor: Themes.colors.INTERACTIVE_TEXT_DEFAULT };
+  const obj1 = { tintColor: Themes.colors.INTERACTIVE_TEXT_DEFAULT };
   let num3 = 0;
   if (obj5.isAndroid()) {
     num3 = -2;

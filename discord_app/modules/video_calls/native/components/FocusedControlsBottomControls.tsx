@@ -1,3 +1,6 @@
+import { CallPTTButtonLooks } from "../../../../components_native/calls/CallPTTButton.tsx";
+import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/video_calls/native/components/FocusedControlsBottomControls.tsx
 import _slicedToArray from "_slicedToArray";
 import DismissibleContent from "DismissibleContent";
@@ -86,7 +89,7 @@ function FocusedControlsBottomDrawerTooltip(positionY) {
     const intl = tmp2(1236).intl;
     obj1[7] = intl.string(tmp2(1236).t.zYzy2i);
     obj[1] = callback2(tmp2(1297).Tooltip, obj1);
-    tmp7 = callback2(require("../../../reanimated/ReanimatedRexport.tsx").View, obj);
+    tmp7 = callback2(ReanimatedRexport.View, obj);
   }
   return tmp7;
 }
@@ -291,7 +294,7 @@ class FocusedControlsBottomDrawer {
       if (!tmp) {
         num = -derivedValue.get();
       }
-      const result = first1.set(require("../../../../design/animation/reanimated/timing/timing.tsx") /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(num, obj3));
+      const result = first1.set(CONFIG_NEVER_ANIMATE_TIMING /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(num, obj3));
       if (tmp) {
         outer2_9();
         callback();
@@ -630,12 +633,12 @@ export default function FocusedControlsBottomControls(omitPTT) {
   let tmp4Result = null;
   if (!flag) {
     obj = { look: null, style: null, sendCallback: null, stopCallback: null };
-    obj[0] = _require("../../../../components_native/calls/CallPTTButton.tsx").CallPTTButtonLooks.BLUR;
+    obj[0] = _CallPTTButtonLooks.CallPTTButtonLooks.BLUR;
     obj[1] = tmp.ptbButton;
     obj[2] = closure_8;
     obj[3] = closure_9;
-    tmp4Result = tmp4(require("../../../../components_native/calls/CallPTTButton.tsx"), obj);
-    const tmp11 = require("../../../../components_native/calls/CallPTTButton.tsx");
+    tmp4Result = tmp4(CallPTTButtonLooks, obj);
+    const tmp11 = CallPTTButtonLooks;
   }
   items[2] = tmp4Result;
   obj[1] = items;

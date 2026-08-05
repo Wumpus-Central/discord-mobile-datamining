@@ -1,3 +1,6 @@
+import { useIsParentalConsentBannerActive } from "../useIsParentalConsentBannerActive.tsx";
+import { useParentalConsentWarning } from "../useParentalConsentWarning.tsx";
+import { FamilyCenterInlineWarningNotice } from "FamilyCenterInlineWarningNotice.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterParentalConsentNotice.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -14,9 +17,9 @@ const result = require("createCacheKey").fileFinishedImporting("modules/parent_t
 export default function FamilyCenterParentalConsentNotice() {
   const tmp = createCacheKey();
   const require = tmp;
-  let obj = require("../useIsParentalConsentBannerActive.tsx") /* useIsParentalConsentBannerActive */;
+  let obj = useIsParentalConsentBannerActive /* useIsParentalConsentBannerActive */;
   const isParentalConsentBannerActive = obj.useIsParentalConsentBannerActive();
-  let obj1 = require("../useParentalConsentWarning.tsx") /* useParentalConsentWarning */;
+  let obj1 = useParentalConsentWarning /* useParentalConsentWarning */;
   const parentalConsentWarning = obj1.useParentalConsentWarning();
   let daysRemaining;
   if (parentalConsentWarning != null) {
@@ -49,7 +52,7 @@ export default function FamilyCenterParentalConsentNotice() {
           formatResult = intl.format(tmp9(2285)["5jm+T3"], obj1);
         }
         obj[1] = formatResult;
-        return jsx(require("FamilyCenterInlineWarningNotice.tsx"), { style: null, text: null });
+        return jsx(FamilyCenterInlineWarningNotice, { style: null, text: null });
       }
     }
   }

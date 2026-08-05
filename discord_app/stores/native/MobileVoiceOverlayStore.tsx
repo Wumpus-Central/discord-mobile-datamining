@@ -1,3 +1,6 @@
+import { isMetaQuest } from "../../modules/device/MetaQuestUtils.android.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
 // discord_app/stores/native/MobileVoiceOverlayStore.tsx
 import { AnalyticEvents } from "ME";
 import { DeviceSettingsStore } from "initialize";
@@ -19,10 +22,10 @@ prototype["initialize"] = function initialize(enabled) {
   }
 };
 prototype["getEnabled"] = function getEnabled() {
-  let isAndroidResult = require("../../utils/PlatformUtils.tsx") /* set */.isAndroid();
+  let isAndroidResult = set /* set */.isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = !require("../../modules/device/MetaQuestUtils.android.tsx") /* isMetaQuest */.isMetaQuest();
-    const tmpResult = require("../../modules/device/MetaQuestUtils.android.tsx") /* isMetaQuest */;
+    isAndroidResult = !isMetaQuest /* isMetaQuest */.isMetaQuest();
+    const tmpResult = isMetaQuest /* isMetaQuest */;
   }
   if (isAndroidResult) {
     isAndroidResult = c4;
@@ -33,7 +36,7 @@ MobileVoiceOverlayStore.displayName = "MobileVoiceOverlayStore";
 MobileVoiceOverlayStore.persistKey = "MobileVoiceOverlayStore";
 const mobileVoiceOverlayStore = new MobileVoiceOverlayStore(require("dispatcher"), {
   MOBILE_VOICE_OVERLAY_STATE_CHANGED: function handleMobileVoiceOverlayStateChanged(enabled) {
-    let obj = require("../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { enabled: enabled.enabled };
     obj.track(AnalyticEvents.MOBILE_OVERLAY_TOGGLED, obj);
     enabled = enabled.enabled;
@@ -43,10 +46,10 @@ const result = require("set").fileFinishedImporting("stores/native/MobileVoiceOv
 
 export default mobileVoiceOverlayStore;
 export const isMobileOverlaySupported = function isMobileOverlaySupported() {
-  let isAndroidResult = require("../../utils/PlatformUtils.tsx") /* set */.isAndroid();
+  let isAndroidResult = set /* set */.isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = !require("../../modules/device/MetaQuestUtils.android.tsx") /* isMetaQuest */.isMetaQuest();
-    const tmpResult = require("../../modules/device/MetaQuestUtils.android.tsx") /* isMetaQuest */;
+    isAndroidResult = !isMetaQuest /* isMetaQuest */.isMetaQuest();
+    const tmpResult = isMetaQuest /* isMetaQuest */;
   }
   return isAndroidResult;
 };

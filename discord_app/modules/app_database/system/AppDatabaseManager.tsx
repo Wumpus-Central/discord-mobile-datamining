@@ -1,3 +1,6 @@
+import { index } from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { databaseName } from "DatabaseManager.tsx";
 // discord_app/modules/app_database/system/AppDatabaseManager.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
@@ -33,7 +36,7 @@ const prototype = AppDatabaseManager.prototype;
 prototype["handleAction"] = function handleAction(type) {
   this.validateInDev(type.type);
   id = id.getId();
-  const databaseResult = require("DatabaseManager.tsx").database(id);
+  const databaseResult = databaseName.database(id);
   this.resetModules(type, databaseResult);
   this.executeModules(type, databaseResult);
   return false;
@@ -64,7 +67,7 @@ prototype["executeModules"] = function executeModules(type, databaseResult) {
   if (null != value) {
     if (0 !== value.length) {
       if (null != databaseResult) {
-        if (stateResult === _require("../../../../discord_common/js/packages/kv-storage/js/index.tsx").DatabaseState.Open) {
+        if (stateResult === _index.DatabaseState.Open) {
           let combined = null;
           if (!set.has(type.type)) {
             const _HermesInternal2 = HermesInternal;
@@ -87,7 +90,7 @@ prototype["executeModules"] = function executeModules(type, databaseResult) {
 };
 AppDatabaseManager["handleException"] = function handleException(arg0, type, error) {
   tmp2.info("disabling database \u00B7 error encountered during dispatch", error, error.stack);
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "RESET_SOCKET", args: null };
   obj = { error, action: "AppDatabaseManager(" + type.type + ")" };
   obj[1] = obj;
@@ -125,18 +128,18 @@ AppDatabaseManager["computeEntries"] = function computeEntries(MobileAppDatabase
 };
 AppDatabaseManager["register"] = function register(arg0, arr) {
   const _require = arg3;
-  const obj = require("../../../Dispatcher.tsx");
+  const obj = dispatcher;
   const registerResult = obj.register(arg0, Object.fromEntries(arr.map((arg0) => {
     const items = [arg0, closure_0];
     return items;
   })), () => {
 
-  }, _require("../../../Dispatcher.tsx").DispatchBand.Database);
+  }, _dispatcher.DispatchBand.Database);
   const fromEntriesResult = Object.fromEntries(arr.map((arg0) => {
     const items = [arg0, closure_0];
     return items;
   }));
-  require("../../../Dispatcher.tsx").addDependencies(registerResult, arg2);
+  dispatcher.addDependencies(registerResult, arg2);
   return registerResult;
 };
 prototype["validateInDev"] = function validateInDev() {

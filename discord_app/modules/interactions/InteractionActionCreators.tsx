@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/interactions/InteractionActionCreators.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
@@ -43,7 +44,7 @@ function _fetchMessageInteractionData() {
 const result = require("dispatcher").fileFinishedImporting("modules/interactions/InteractionActionCreators.tsx");
 
 export const queueInteractionComponentState = function queueInteractionComponentState(c1, closure_9, c8, c4) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "QUEUE_INTERACTION_COMPONENT_STATE", messageId: c1, nonce: closure_9, state: c8, componentId: c4 };
   obj.dispatch(obj);
 };
@@ -55,12 +56,12 @@ export const addQueued = function addQueued(closure_9, arg1) {
   let onSuccess;
   let preflight;
   ({ data, messageId, preflight, onCreate, onSuccess, onFailure } = arg1);
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "INTERACTION_QUEUE", data, nonce: closure_9, messageId, preflight, onCreate, onSuccess, onFailure };
   obj.dispatch(obj);
 };
 export const setFailed = function setFailed(closure_1, code, message, status) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "INTERACTION_FAILURE", nonce: closure_1, errorMessage: message, errorCode: code, status };
   obj.dispatch(obj);
 };

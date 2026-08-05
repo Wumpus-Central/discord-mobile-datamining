@@ -1,3 +1,6 @@
+import { v1 } from "../../../../_runtime/00514_v1.js";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 // discord_app/modules/premium/native/PremiumAnalyticsUtils.tsx
 import ME from "ME";
 
@@ -35,12 +38,12 @@ export const getPaymentFlowStepAnalyticsFields = function getPaymentFlowStepAnal
   return {};
 };
 export const getNewAnalyticsLoadId = function getNewAnalyticsLoadId() {
-  return require("../../../../_runtime/00514_v1.js") /* v1 */.v4();
+  return v1 /* v1 */.v4();
 };
 export const CancellationFlowSteps = obj;
 export const STEP_ANALYTICS_NAMES = { [obj.WHAT_YOU_LOSE]: "What You're Losing", [obj.DOWNGRADE_TO_TIER_0]: "Downgrade To Tier 0", [obj.CONFIRM]: "Confirm Cancellation", [obj.PREVIEW]: "Preview Updated Subscription", [obj.MOBILE_SUBSCRIPTION_MANAGE]: "Mobile Subscription Manage" };
 export const trackPremiumSubscriptionCancellationStarted = function trackPremiumSubscriptionCancellationStarted(closure_0, analyticsLocations) {
-  let obj = require("../../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { location_stack: analyticsLocations };
   let id;
   if (closure_0 != null) {
@@ -54,13 +57,13 @@ export const trackPremiumSubscriptionCancellationStarted = function trackPremium
   obj[1] = type;
   let tmp4;
   if (null != closure_0) {
-    const premiumPlanItem = require("../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.getPremiumPlanItem(closure_0);
+    const premiumPlanItem = getPremiumPlanItem /* getPremiumPlanItem */.getPremiumPlanItem(closure_0);
     let id1;
     if (premiumPlanItem != null) {
       id1 = premiumPlanItem.id;
     }
     tmp4 = id1;
-    const obj4 = require("../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */;
+    const obj4 = getPremiumPlanItem /* getPremiumPlanItem */;
   }
   obj[2] = tmp4;
   let paymentGatewayPlanId;
@@ -82,7 +85,7 @@ export const trackPremiumSubscriptionCancellationFlowStep = function trackPremiu
   let toStep;
   subscription = subscription.subscription;
   ({ fromStep, toStep, analyticsLocations } = subscription);
-  let obj = require("../../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { from_step: fromStep, to_step: toStep, location_stack: analyticsLocations };
   let id;
   if (subscription != null) {
@@ -96,13 +99,13 @@ export const trackPremiumSubscriptionCancellationFlowStep = function trackPremiu
   obj[1] = type;
   let tmp4;
   if (null != subscription) {
-    const premiumPlanItem = require("../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.getPremiumPlanItem(subscription);
+    const premiumPlanItem = getPremiumPlanItem /* getPremiumPlanItem */.getPremiumPlanItem(subscription);
     let id1;
     if (premiumPlanItem != null) {
       id1 = premiumPlanItem.id;
     }
     tmp4 = id1;
-    const obj4 = require("../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */;
+    const obj4 = getPremiumPlanItem /* getPremiumPlanItem */;
   }
   obj[2] = tmp4;
   let paymentGatewayPlanId;

@@ -1,3 +1,5 @@
+import { handleRelationshipAddError } from "../../../../../actions/RelationshipActionCreators.tsx";
+import { PeopleUtils } from "../../../../people/PeopleUtils.tsx";
 // discord_app/modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx
 import ChannelActionCreators from "../../../../../actions/ChannelActionCreators.tsx";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -123,7 +125,7 @@ export const dismissIncomingRequest = function dismissIncomingRequest(arg0) {
   let applicationId;
   let userId;
   ({ userId, applicationId } = arg0);
-  let obj = require("../../../../people/PeopleUtils.tsx");
+  let obj = PeopleUtils;
   obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   obj.cancelFriendRequest(obj);
 };
@@ -131,7 +133,7 @@ export const acceptIncomingRequest = function acceptIncomingRequest(arg0) {
   let applicationId;
   let userId;
   ({ userId, applicationId } = arg0);
-  let obj = require("../../../../people/PeopleUtils.tsx");
+  let obj = PeopleUtils;
   obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   const result = obj.maybeConfirmFriendRequestAccept(obj);
 };
@@ -146,7 +148,7 @@ export const sendWave = function sendWave(id, arg1, arg2) {
   return applyArgumentsResult;
 };
 export const addContactSuggestion = function addContactSuggestion(user) {
-  let obj = require("../../../../../actions/RelationshipActionCreators.tsx");
+  let obj = handleRelationshipAddError;
   obj = { userId: user.id, context: obj, type: "HermesInternal", fromFriendSuggestion: null };
   obj = { location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   obj.addRelationship(obj);

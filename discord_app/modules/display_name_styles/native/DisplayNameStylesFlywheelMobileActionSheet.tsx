@@ -1,3 +1,4 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/display_name_styles/native/DisplayNameStylesFlywheelMobileActionSheet.tsx
 import ActionSheetHeaderBar from "ActionSheetHeaderBar";
 import { View } from "Background";
@@ -16,17 +17,17 @@ const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles(() => {
   let obj = { content: null, imageContainer: null, image: null, betaTag: null, title: null, subtitle: null, actions: null };
-  obj = { alignItems: "center", paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
+  obj = { alignItems: "center", paddingHorizontal: Themes.space.PX_16 };
   obj[0] = obj;
-  obj = { width: "100%", height: 162, alignItems: "center", justifyContent: "center", marginVertical: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
+  obj = { width: "100%", height: 162, alignItems: "center", justifyContent: "center", marginVertical: Themes.space.PX_24 };
   obj[1] = obj;
   obj[2] = { width: "100%", height: "100%" };
   obj[3] = { marginLeft: 0 };
-  obj[4] = { textAlign: "center", fontFamily: constants.GINTO_NORD_EXTRA_BOLD, textTransform: "uppercase", marginTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
-  const obj1 = { textAlign: "center", fontFamily: constants.GINTO_NORD_EXTRA_BOLD, textTransform: "uppercase", marginTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
-  obj[5] = { textAlign: "center", marginTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32 };
-  const obj2 = { textAlign: "center", marginTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32 };
-  obj[6] = { gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, width: "100%" };
+  obj[4] = { textAlign: "center", fontFamily: constants.GINTO_NORD_EXTRA_BOLD, textTransform: "uppercase", marginTop: Themes.space.PX_12, marginBottom: Themes.space.PX_16, paddingTop: Themes.space.PX_12 };
+  const obj1 = { textAlign: "center", fontFamily: constants.GINTO_NORD_EXTRA_BOLD, textTransform: "uppercase", marginTop: Themes.space.PX_12, marginBottom: Themes.space.PX_16, paddingTop: Themes.space.PX_12 };
+  obj[5] = { textAlign: "center", marginTop: Themes.space.PX_12, marginBottom: Themes.space.PX_32 };
+  const obj2 = { textAlign: "center", marginTop: Themes.space.PX_12, marginBottom: Themes.space.PX_32 };
+  obj[6] = { gap: Themes.space.PX_12, width: "100%" };
   return obj;
 });
 let result = require("mergeGuildAvatar").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesFlywheelMobileActionSheet.tsx");

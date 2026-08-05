@@ -1,3 +1,5 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/modules/user_settings/SelectivelySyncedUserSettingsStore.tsx
 import { UserSettingsSections } from "ME";
 import { PersistedStore } from "initialize";
@@ -42,7 +44,7 @@ SelectivelySyncedUserSettingsStore.displayName = "SelectivelySyncedUserSettingsS
 SelectivelySyncedUserSettingsStore.persistKey = "SelectivelySyncedUserSettingsStore";
 const items = [
   () => {
-    const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     let obj = Storage.get("UserSettingsSync");
     if (obj == null) {
       obj = {};
@@ -57,15 +59,15 @@ const items = [
     obj = {};
     if (false === obj[UserSettingsSections.TEXT]) {
       const obj1 = { shouldSync: false, settings: null };
-      obj1[1] = require("../../../_runtime/00012_apply.js").pick(value, ["inlineAttachmentMedia", "inlineEmbedMedia", "renderEmbeds", "renderReactions", "animateEmoji", "animateStickers", "gifAutoPlay", "defaultReactionEmoji"]);
+      obj1[1] = apply.pick(value, ["inlineAttachmentMedia", "inlineEmbedMedia", "renderEmbeds", "renderReactions", "animateEmoji", "animateStickers", "gifAutoPlay", "defaultReactionEmoji"]);
       obj.text = obj1;
-      const obj5 = require("../../../_runtime/00012_apply.js");
+      const obj5 = apply;
     }
     if (false === obj[tmp4.APPEARANCE]) {
       const obj2 = { shouldSync: false, settings: null };
-      obj2[1] = require("../../../_runtime/00012_apply.js").pick(value, ["theme", "clientThemeSettings", "developerMode"]);
+      obj2[1] = apply.pick(value, ["theme", "clientThemeSettings", "developerMode"]);
       obj.appearance = obj2;
-      const obj7 = require("../../../_runtime/00012_apply.js");
+      const obj7 = apply;
     }
     return obj;
   },

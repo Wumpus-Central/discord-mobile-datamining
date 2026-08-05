@@ -1,3 +1,4 @@
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/explicit_media_redaction/hooks/useShouldRenderReportFalsePositiveButton.tsx
 import getFpMessageInfo from "getFpMessageInfo";
 
@@ -10,5 +11,5 @@ export const shouldRenderReportFalsePositiveButton = function shouldRenderReport
 export const useShouldRenderReportFalsePositiveButton = function useShouldRenderReportFalsePositiveButton(id) {
   const _require = id;
   const items = [getFpMessageInfo];
-  return null != _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => outer1_2.getFpMessageInfo(closure_0));
+  return null != _defaultAreStatesEqual.useStateFromStores(items, () => outer1_2.getFpMessageInfo(closure_0));
 };

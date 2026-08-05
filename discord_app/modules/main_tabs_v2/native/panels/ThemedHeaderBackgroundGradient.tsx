@@ -1,3 +1,7 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { int2hslRaw } from "../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import { map } from "../../../../design/tokens/native/useToken.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/main_tabs_v2/native/panels/ThemedHeaderBackgroundGradient.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -12,7 +16,7 @@ let closure_6 = createCacheKey.createStyles({ container: { position: "absolute",
 const memoResult = require("noop").memo(function ThemedHeaderBackgroundGradient(baseColor) {
   let BACKGROUND_BASE_LOWEST = baseColor.baseColor;
   if (BACKGROUND_BASE_LOWEST === undefined) {
-    BACKGROUND_BASE_LOWEST = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWEST;
+    BACKGROUND_BASE_LOWEST = Themes.colors.BACKGROUND_BASE_LOWEST;
   }
   let num = baseColor.minHeight;
   if (num === undefined) {
@@ -20,22 +24,22 @@ const memoResult = require("noop").memo(function ThemedHeaderBackgroundGradient(
   }
   const tmp3 = callback();
   const tmp4 = importDefault;
-  let obj = require("../../../../design/tokens/native/useToken.tsx") /* map */;
+  let obj = map /* map */;
   const token = obj.useToken(BACKGROUND_BASE_LOWEST);
-  let obj1 = require("../../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
+  let obj1 = int2hslRaw /* int2hslRaw */;
   let str = obj1.hex2rgb(token, 0);
   if (str == null) {
     str = "transparent";
   }
   obj = { style: null, pointerEvents: "none", children: null };
   const items = [tmp3.container, ];
-  obj = { height: Math.max(require("../../../safe_area/useSafeAreaInsets.native.tsx")().top, num) };
+  obj = { height: Math.max(useSafeAreaInsets().top, num) };
   items[1] = obj;
   obj[0] = items;
   obj1 = { style: absoluteFill.absoluteFill, colors: items1, start: { x: 0, y: 0 }, end: { x: 0, y: 1 } };
   items1 = [token, str];
   obj[2] = jsx(tmp4(4706), { style: absoluteFill.absoluteFill, colors: items1, start: { x: 0, y: 0 }, end: { x: 0, y: 1 } });
-  return <closure_4 height={Math.max(require("../../../safe_area/useSafeAreaInsets.native.tsx")().top, num)} />;
+  return <closure_4 height={Math.max(useSafeAreaInsets().top, num)} />;
 });
 const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/panels/ThemedHeaderBackgroundGradient.tsx");
 

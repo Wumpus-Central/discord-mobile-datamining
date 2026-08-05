@@ -1,3 +1,5 @@
+import { getUnitId } from "../../application_commands/AgeRestrictedApplicationCommandsExperiment.tsx";
+import { isAgeRestrictedContentClassification } from "../../content_classification/utils.tsx";
 // discord_app/modules/applications/utils/isApplicationAgeRestricted.tsx
 import addApplication from "addApplication";
 
@@ -11,9 +13,9 @@ export default function isApplicationAgeRestricted(arg0) {
     if (application != null) {
       prop = application.contentClassification;
     }
-    return require("../../content_classification/utils.tsx") /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(prop);
+    return isAgeRestrictedContentClassification /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(prop);
   } else {
     return false;
   }
-  obj = require("../../application_commands/AgeRestrictedApplicationCommandsExperiment.tsx");
+  obj = getUnitId;
 };

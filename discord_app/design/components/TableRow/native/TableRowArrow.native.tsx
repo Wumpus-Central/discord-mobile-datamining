@@ -1,3 +1,5 @@
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { IconSizes } from "../../../void/Icon/native/Icon.tsx";
 // discord_app/design/components/TableRow/native/TableRowArrow.native.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -16,9 +18,9 @@ export const TableRowArrow = function TableRowArrow() {
   const tmp4 = createCacheKey();
   const obj = { style: tmp4.icon, color: tmp4.iconColor.color, source: null, size: null };
   const tmp = importDefault;
-  const tmp3 = require("../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx")("TableRowArrow");
+  const tmp3 = useIsMobileVisualRefreshExperimentEnabled("TableRowArrow");
   const tmp5 = jsx;
   obj[2] = tmp(tmp3 ? 5323 : 5324);
-  obj[3] = require("../../../void/Icon/native/Icon.tsx") /* IconSizes */.IconSizes.CUSTOM;
-  return tmp5(require("../../../void/Icon/native/Icon.tsx"), obj);
+  obj[3] = IconSizes /* IconSizes */.IconSizes.CUSTOM;
+  return tmp5(IconSizes, obj);
 };

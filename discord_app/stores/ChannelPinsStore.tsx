@@ -1,3 +1,4 @@
+import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/stores/ChannelPinsStore.tsx
 import _getSystemLocale from "_getSystemLocale";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -13,7 +14,7 @@ function handleChannelDelete(arg0) {
   delete tmp2[tmp];
 }
 function handleRelationshipUpdate() {
-  let item = require("../../_runtime/00012_apply.js").forEach(closure_11, (items) => {
+  let item = apply.forEach(closure_11, (items) => {
     items = items.items;
     const item = items.forEach((message) => {
       message = message.message;
@@ -84,8 +85,8 @@ obj = {
   THREAD_DELETE: handleChannelDelete,
   GUILD_DELETE: function handleGuildDelete(guild) {
     guild = guild.guild;
-    const found = require("../../_runtime/00012_apply.js")(closure_11).filter((guildId) => guildId.guildId !== guild.id);
-    const arr = require("../../_runtime/00012_apply.js")(closure_11);
+    const found = apply(closure_11).filter((guildId) => guildId.guildId !== guild.id);
+    const arr = apply(closure_11);
     closure_11 = found.keyBy("id").value();
   },
   MESSAGE_DELETE: function handleMessageDelete(arg0) {
@@ -94,14 +95,14 @@ obj = {
     ({ id: require, channelId } = arg0);
     let tmp2 = null != tmp;
     if (tmp2) {
-      const tmp5 = 0 !== require("../../_runtime/00012_apply.js").remove(tmp.items, (message) => message.message.id === closure_0).length;
+      const tmp5 = 0 !== apply.remove(tmp.items, (message) => message.message.id === closure_0).length;
       if (tmp5) {
         const items = tmp.items;
         tmp.items = items.slice();
         dependencyMap[channelId] = tmp;
       }
       tmp2 = tmp5;
-      const obj = require("../../_runtime/00012_apply.js");
+      const obj = apply;
     }
     return tmp2;
   },
@@ -125,7 +126,7 @@ obj = {
       if (message.message.pinned) {
         const items = tmp20.items;
         tmp20.items = items.slice();
-        const findIndexResult = require("../../_runtime/00012_apply.js").findIndex(tmp20.items, (message) => message.message.id === id);
+        const findIndexResult = apply.findIndex(tmp20.items, (message) => message.message.id === id);
         if (-1 === findIndexResult) {
           const items1 = tmp20.items;
           let obj = { message: null, pinnedAt: null };
@@ -139,9 +140,9 @@ obj = {
           tmp20.items[findIndexResult].message = id(4504).updateMessageRecord(tmp20.items[findIndexResult].message, message.message);
           const obj4 = id(4504);
         }
-        const obj3 = require("../../_runtime/00012_apply.js");
+        const obj3 = apply;
       } else {
-        const findIndexResult1 = require("../../_runtime/00012_apply.js").findIndex(tmp20.items, (message) => message.message.id === id);
+        const findIndexResult1 = apply.findIndex(tmp20.items, (message) => message.message.id === id);
         if (-1 === findIndexResult1) {
           return false;
         } else {
@@ -150,10 +151,10 @@ obj = {
           const items3 = tmp20.items;
           items3.splice(findIndexResult1, 1);
         }
-        const obj2 = require("../../_runtime/00012_apply.js");
+        const obj2 = apply;
       }
     } else {
-      const findIndexResult2 = require("../../_runtime/00012_apply.js").findIndex(tmp20.items, (message) => message.message.id === id);
+      const findIndexResult2 = apply.findIndex(tmp20.items, (message) => message.message.id === id);
       if (-1 !== findIndexResult2) {
         message = tmp.message;
         obj = id(4504);
@@ -168,7 +169,7 @@ obj = {
           dependencyMap[channel_id].items = substr;
         }
       }
-      const obj7 = require("../../_runtime/00012_apply.js");
+      const obj7 = apply;
     }
   },
   RELATIONSHIP_ADD: handleRelationshipUpdate,
@@ -179,7 +180,7 @@ obj = {
     if (null == dependencyMap[messageId.channelId]) {
       return false;
     } else {
-      const findIndexResult = require("../../_runtime/00012_apply.js").findIndex(tmp.items, (message) => message.message.id === messageId);
+      const findIndexResult = apply.findIndex(tmp.items, (message) => message.message.id === messageId);
       if (-1 === findIndexResult) {
         return false;
       } else {
@@ -187,7 +188,7 @@ obj = {
         tmp.items = items.slice();
         tmp.items[findIndexResult].message = messageId(6968).handleExplicitMediaScanTimeoutForMessage(tmp.items[findIndexResult].message);
       }
-      const obj2 = require("../../_runtime/00012_apply.js");
+      const obj2 = apply;
     }
   }
 };

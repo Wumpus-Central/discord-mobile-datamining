@@ -1,3 +1,4 @@
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 // discord_app/modules/self_mod/inappropriate_conversation/native/VibingWumpusModal.tsx
 import _slicedToArray from "_slicedToArray";
 import ModalActionCreators from "../../../../actions/ModalActionCreators.tsx";
@@ -189,6 +190,6 @@ export default function VibingWumpusModal() {
       return callback(closure_16, {});
     }
   };
-  return callback(require("../../../../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */.Navigator, { screens: { VIBING_WUMPUS }, initialRouteName: "VIBING_WUMPUS" });
+  return callback(NavigationStack /* NavigationStack */.Navigator, { screens: { VIBING_WUMPUS }, initialRouteName: "VIBING_WUMPUS" });
 };
 export { VibingWumpusScreen };

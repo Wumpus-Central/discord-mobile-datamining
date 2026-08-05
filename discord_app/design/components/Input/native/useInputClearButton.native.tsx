@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { CircleXIcon } from "../../Icon/native/redesign/generated/CircleXIcon.tsx";
 // discord_app/design/components/Input/native/useInputClearButton.native.tsx
 import "noop";
 import { Pressable } from "get ActivityIndicator";
@@ -11,11 +13,11 @@ export const useInputClearButton = function useInputClearButton(clearProps, clea
   if (clearProps.isClearable) {
     if (clearState.hasValue) {
       let obj = { content: null, pressableProps: null };
-      obj[0] = jsx(require("../../Icon/native/redesign/generated/CircleXIcon.tsx") /* CircleXIcon */.CircleXIcon, { size: "xs" });
+      obj[0] = jsx(CircleXIcon /* CircleXIcon */.CircleXIcon, { size: "xs" });
       obj = { onPress: null, accessibilityLabel: null, accessibilityRole: "button", hitSlop: 4 };
       obj[0] = clearState.clear;
-      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.VkKicb);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.VkKicb);
       obj[1] = obj;
       tmp = obj;
     }
@@ -33,11 +35,11 @@ export const useInputClearButtonConfig = function useInputClearButtonConfig(isCl
   if (isClearable.isClearable) {
     if (state.hasValue) {
       let obj = { content: null, pressableProps: null };
-      obj[0] = jsx(require("../../Icon/native/redesign/generated/CircleXIcon.tsx") /* CircleXIcon */.CircleXIcon, { size: "xs" });
+      obj[0] = jsx(CircleXIcon /* CircleXIcon */.CircleXIcon, { size: "xs" });
       obj = { onPress: null, accessibilityLabel: null, accessibilityRole: "button", hitSlop: 4 };
       obj[0] = state.clear;
-      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.VkKicb);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.VkKicb);
       obj[1] = obj;
       return obj;
     }

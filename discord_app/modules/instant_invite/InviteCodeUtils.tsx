@@ -1,3 +1,6 @@
+import { parse } from "../../../_runtime/01464_parse.js";
+import { getFirstQueryStringValue } from "../../utils/QueryStringUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/instant_invite/InviteCodeUtils.tsx
 import _slicedToArray from "_slicedToArray";
 
@@ -8,7 +11,7 @@ function readSnowflake(firstQueryStringValue) {
     if (obj.isProbablyAValidSnowflake(firstQueryStringValue)) {
       tmp = firstQueryStringValue;
     }
-    obj = require("../../utils/SnowflakeUtils.tsx");
+    obj = DISCORD_EPOCH;
   }
   return tmp;
 }
@@ -28,7 +31,7 @@ function generateInviteKeyFromExtraData(closure_1) {
       obj[message] = targetMessageId;
     }
   }
-  const json = require("../../../_runtime/01464_parse.js").stringify(obj);
+  const json = parse.stringify(obj);
   let combined = baseCode;
   if ("" !== json) {
     const _HermesInternal = HermesInternal;
@@ -51,13 +54,13 @@ export const generateInviteKeyFromUrlParams = function generateInviteKeyFromUrlP
       substr = search.substring(1);
     }
     try {
-      let obj = require("../../../_runtime/01464_parse.js");
+      let obj = parse;
       const parsed = obj.parse(substr);
-      const firstQueryStringValue = require("../../utils/QueryStringUtils.tsx") /* getFirstQueryStringValue */.getFirstQueryStringValue(parsed[event]);
-      const obj2 = require("../../utils/QueryStringUtils.tsx") /* getFirstQueryStringValue */;
+      const firstQueryStringValue = getFirstQueryStringValue /* getFirstQueryStringValue */.getFirstQueryStringValue(parsed[event]);
+      const obj2 = getFirstQueryStringValue /* getFirstQueryStringValue */;
       const tmp10 = readSnowflake;
       const tmp6 = require;
-      const tmp12 = readSnowflake(require("../../utils/QueryStringUtils.tsx") /* getFirstQueryStringValue */.getFirstQueryStringValue(parsed[channel]));
+      const tmp12 = readSnowflake(getFirstQueryStringValue /* getFirstQueryStringValue */.getFirstQueryStringValue(parsed[channel]));
       obj = { baseCode: null, guildScheduledEventId: null, targetChannelId: null, targetMessageId: null };
       obj[0] = inviteHostRemainingPath;
       obj[1] = firstQueryStringValue;
@@ -84,12 +87,12 @@ export const parseExtraDataFromInviteKey = function parseExtraDataFromInviteKey(
     obj[0] = tmp2;
     return obj;
   } else {
-    const parsed = require("../../../_runtime/01464_parse.js").parse(tmp3);
-    const obj4 = require("../../../_runtime/01464_parse.js");
+    const parsed = parse.parse(tmp3);
+    const obj4 = parse;
     const tmp12 = require;
-    const firstQueryStringValue = require("../../utils/QueryStringUtils.tsx") /* getFirstQueryStringValue */.getFirstQueryStringValue(parsed[event]);
-    const obj5 = require("../../utils/QueryStringUtils.tsx") /* getFirstQueryStringValue */;
-    const firstQueryStringValue1 = require("../../utils/QueryStringUtils.tsx") /* getFirstQueryStringValue */.getFirstQueryStringValue(parsed[channel]);
+    const firstQueryStringValue = getFirstQueryStringValue /* getFirstQueryStringValue */.getFirstQueryStringValue(parsed[event]);
+    const obj5 = getFirstQueryStringValue /* getFirstQueryStringValue */;
+    const firstQueryStringValue1 = getFirstQueryStringValue /* getFirstQueryStringValue */.getFirstQueryStringValue(parsed[channel]);
     let tmp4;
     if (typeof firstQueryStringValue1 === "string") {
       let tmp9Result = tmp9(11);

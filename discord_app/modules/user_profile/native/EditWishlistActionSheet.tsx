@@ -1,3 +1,4 @@
+import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../design/animation/reanimated/timing/timing.tsx";
 // discord_app/modules/user_profile/native/EditWishlistActionSheet.tsx
 import IconButton from "IconButton";
 import useCardGridLayout from "useCardGridLayout";
@@ -39,10 +40,10 @@ const massResult = LinearTransition.springify().mass(0.8);
 function exitingAnimation() {
   let obj = { animations: null, initialValues: null };
   obj = { opacity: null, transform: null };
-  obj[0] = require("../../../design/animation/reanimated/timing/timing.tsx") /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(0, { duration: 150 });
+  obj[0] = CONFIG_NEVER_ANIMATE_TIMING /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(0, { duration: 150 });
   obj = { scale: null };
-  const obj3 = require("../../../design/animation/reanimated/timing/timing.tsx") /* CONFIG_NEVER_ANIMATE_TIMING */;
-  obj[0] = require("../../../design/animation/reanimated/timing/timing.tsx") /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(0.8, { duration: 150 });
+  const obj3 = CONFIG_NEVER_ANIMATE_TIMING /* CONFIG_NEVER_ANIMATE_TIMING */;
+  obj[0] = CONFIG_NEVER_ANIMATE_TIMING /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(0.8, { duration: 150 });
   const items = [obj];
   obj[1] = items;
   obj[0] = obj;

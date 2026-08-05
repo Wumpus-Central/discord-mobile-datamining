@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../../../_runtime/07626_registerAsset.js";
+import { createPremiumGroupInviteEmbed } from "../row_data/embeds/PremiumGroupInviteEmbed.tsx";
+import { createCommonMessage } from "createCommonMessage.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/PremiumGroupInviteSystemMessage.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -13,16 +16,16 @@ export const createPremiumGroupInviteSystemMessage = function createPremiumGroup
   ({ message, theme } = message);
   channel = channel.getChannel(message.getChannelId());
   id = id.getId();
-  let obj = require("../row_data/embeds/PremiumGroupInviteEmbed.tsx") /* createPremiumGroupInviteEmbed */;
+  let obj = createPremiumGroupInviteEmbed /* createPremiumGroupInviteEmbed */;
   const premiumGroupInviteEmbed = obj.createPremiumGroupInviteEmbed(message, theme, id, channel);
   if (null == premiumGroupInviteEmbed) {
     return null;
   } else {
     obj = {};
-    const merged = Object.assign(require("createCommonMessage.tsx")(message));
+    const merged = Object.assign(createCommonMessage(message));
     obj.premiumGroupInviteInfo = premiumGroupInviteEmbed;
     const tmp7 = createCacheKey(theme);
-    obj.iconUrl = tmp3(7865).getAssetUriForEmbed(require("../../../../../../_runtime/07626_registerAsset.js"));
+    obj.iconUrl = tmp3(7865).getAssetUriForEmbed(registerAsset);
     ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = tmp7);
     return obj;
   }

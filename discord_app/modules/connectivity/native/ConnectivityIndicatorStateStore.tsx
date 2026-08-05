@@ -1,3 +1,4 @@
+import { awaitOnline } from "../../../utils/NetworkUtils.tsx";
 // discord_app/modules/connectivity/native/ConnectivityIndicatorStateStore.tsx
 import handleClearCaches from "handleClearCaches";
 import fetchFingerprint from "fetchFingerprint";
@@ -272,17 +273,17 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items1, handleAuthStoreChanged);
   const items2 = [getState];
   this.syncWith(items2, handleAppStateUpdate);
-  require("../../../utils/NetworkUtils.tsx").addOfflineCallback(() => {
+  awaitOnline.addOfflineCallback(() => {
     let c16 = true;
     callback();
   });
-  const obj = require("../../../utils/NetworkUtils.tsx");
-  require("../../../utils/NetworkUtils.tsx").addOnlineCallback(() => {
+  const obj = awaitOnline;
+  awaitOnline.addOnlineCallback(() => {
     let c16 = false;
     callback();
   });
-  const obj2 = require("../../../utils/NetworkUtils.tsx");
-  let closure_16 = !require("../../../utils/NetworkUtils.tsx").isOnline();
+  const obj2 = awaitOnline;
+  let closure_16 = !awaitOnline.isOnline();
   let closure_15 = fetchFingerprint.isAuthenticated();
   updateState();
 };

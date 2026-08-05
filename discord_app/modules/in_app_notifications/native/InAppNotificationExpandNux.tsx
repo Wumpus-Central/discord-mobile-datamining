@@ -1,3 +1,4 @@
+import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/modules/in_app_notifications/native/InAppNotificationExpandNux.tsx
 const inAppNotificationExpandNux = "inAppNotificationExpandNux";
 let closure_3 = { lastShownAtMs: 0, numTimesShown: 0 };
@@ -10,7 +11,7 @@ export const NUX_REVEAL_DURATION_MS = 300;
 export const DRAG_HANDLE_BOUNCE_DISTANCE = 4;
 export const DRAG_HANDLE_BOUNCE_DURATION_MS = 650;
 export const getExpandNUXState = function getExpandNUXState() {
-  const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   let value = Storage.get(inAppNotificationExpandNux);
   if (value == null) {
     value = closure_3;
@@ -18,12 +19,12 @@ export const getExpandNUXState = function getExpandNUXState() {
   return value;
 };
 export const markExpandNUXStateAsShown = function markExpandNUXStateAsShown() {
-  const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   let value = Storage.get(inAppNotificationExpandNux);
   if (value == null) {
     value = closure_3;
   }
-  const Storage2 = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage2 = Storage /* Storage */.Storage;
   const obj = {};
   const merged = Object.assign(value);
   obj.numTimesShown = value.numTimesShown + 1;
@@ -31,6 +32,6 @@ export const markExpandNUXStateAsShown = function markExpandNUXStateAsShown() {
   const result = Storage2.set(inAppNotificationExpandNux, obj);
 };
 export const resetExpandNUXState = function resetExpandNUXState() {
-  const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   const result = Storage.set(inAppNotificationExpandNux, closure_3);
 };

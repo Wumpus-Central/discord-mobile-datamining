@@ -1,3 +1,4 @@
+import { getMuteStates } from "../../useMuteStates.tsx";
 // discord_app/modules/video_calls/native/components/ChannelCallMicButton.tsx
 import noop from "noop";
 import set from "set";
@@ -18,7 +19,7 @@ export const ChannelCallMicButton = function ChannelCallMicButton(disableTint) {
   let obj = mute(589);
   const items = [set];
   const stateFromStores = obj.useStateFromStores(items, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
-  const tmp3 = require("../../useMuteStates.tsx")(channel);
+  const tmp3 = getMuteStates(channel);
   const muteHandler = mute(10764).createMuteHandler(tmp3, stateFromStores);
   mute = muteHandler.mute;
   const items1 = [mute];

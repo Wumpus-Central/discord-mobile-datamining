@@ -1,3 +1,6 @@
+import { openMemberVerificationModal } from "../guild_member_verification/MemberVerificationModalActionCreators.tsx";
+import { MAX_RESULTS_PER_PAGE } from "../guild_member_verification/MemberVerificationTypes.tsx";
+import { transitionTo } from "../routing/router_utils.tsx";
 // discord_app/modules/guild_verification/GuildVerificationUtils.tsx
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import ME from "ME";
@@ -27,10 +30,10 @@ export const inviteGuildHasPendingMemberDisabledVerification = function inviteGu
 export const openVerificationModalOrTransitionToApplication = function openVerificationModalOrTransitionToApplication(id) {
   request = request.getRequest(id);
   if (null != request) {
-    if (request.applicationStatus !== require("../guild_member_verification/MemberVerificationTypes.tsx") /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestApplicationStatuses.STARTED) {
-      require("../routing/router_utils.tsx") /* transitionTo */.transitionTo(closure_4.GUILD_MEMBER_VERIFICATION(id));
-      const tmp2Result = require("../routing/router_utils.tsx") /* transitionTo */;
+    if (request.applicationStatus !== MAX_RESULTS_PER_PAGE /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestApplicationStatuses.STARTED) {
+      transitionTo /* transitionTo */.transitionTo(closure_4.GUILD_MEMBER_VERIFICATION(id));
+      const tmp2Result = transitionTo /* transitionTo */;
     }
   }
-  const result = require("../guild_member_verification/MemberVerificationModalActionCreators.tsx") /* openMemberVerificationModal */.openMemberVerificationModal(id);
+  const result = openMemberVerificationModal /* openMemberVerificationModal */.openMemberVerificationModal(id);
 };

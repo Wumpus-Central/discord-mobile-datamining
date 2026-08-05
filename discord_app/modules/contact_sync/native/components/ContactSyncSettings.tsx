@@ -1,3 +1,5 @@
+import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
+import { handleNameInputScreenOrSuggestions } from "../ContactSyncModalActionCreators.tsx";
 // discord_app/modules/contact_sync/native/components/ContactSyncSettings.tsx
 import closure_3 from "jsxProd";
 import "asyncRequireImpl";
@@ -396,13 +398,13 @@ export { syncContacts };
 export { updateFriendSync };
 export const handleSyncContacts = function handleSyncContacts(localAccount, phone, arg2) {
   if (null == localAccount) {
-    let obj = require("../../../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { type: null, location: null };
     obj[0] = constants3.CONTACT_SYNC_MODAL;
     obj[1] = { page: "User Settings" };
     obj.track(constants.OPEN_MODAL, obj);
-    require("../ContactSyncModalActionCreators.tsx") /* handleNameInputScreenOrSuggestions */.openContactSyncModal({}, { page: "User Settings" });
-    const obj3 = require("../ContactSyncModalActionCreators.tsx") /* handleNameInputScreenOrSuggestions */;
+    handleNameInputScreenOrSuggestions /* handleNameInputScreenOrSuggestions */.openContactSyncModal({}, { page: "User Settings" });
+    const obj3 = handleNameInputScreenOrSuggestions /* handleNameInputScreenOrSuggestions */;
   } else {
     updateFriendSync(localAccount, phone, arg2);
   }

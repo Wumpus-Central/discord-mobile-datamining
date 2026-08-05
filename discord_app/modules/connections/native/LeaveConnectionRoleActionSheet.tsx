@@ -1,3 +1,7 @@
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/connections/native/LeaveConnectionRoleActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -16,20 +20,20 @@ export default function LeaveConnectionRoleActionSheet(onLeaveRolePressed) {
   let obj = { children: null };
   obj = { style: tmp.container, children: null };
   obj = { variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.vytvJF);
-  const items = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.vytvJF);
+  const items = [callback(Text /* Text */.Text, obj), , ];
   const obj1 = { style: tmp.marginTop, variant: "text-md/normal", color: "text-default", children: null };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[3] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.caJwb5);
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.caJwb5);
+  items[1] = callback(Text /* Text */.Text, obj1);
   const obj2 = { style: tmp.button, children: null };
   const obj3 = { variant: "destructive", onPress: onLeaveRolePressed.onLeaveRolePressed, text: null, grow: true };
-  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj3[2] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["+Oi4XF"]);
-  obj2[1] = callback(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj3);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj3[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["+Oi4XF"]);
+  obj2[1] = callback(Button /* Button */.Button, obj3);
   items[2] = callback(View, obj2);
   obj[1] = items;
   obj[0] = callback2(View, obj);
-  return callback(require("../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, obj);
+  return callback(Background /* Background */.BottomSheet, obj);
 };

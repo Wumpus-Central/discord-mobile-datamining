@@ -1,3 +1,4 @@
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 // discord_app/modules/media_engine/AudioFidelityExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
@@ -34,8 +35,8 @@ export const getVoiceFidelityCaps = function getVoiceFidelityCaps(location, kris
     } else {
       flag = false;
       if ("none" !== condition) {
-        require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.assertNever(condition);
-        const obj2 = require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */;
+        isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.assertNever(condition);
+        const obj2 = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
       }
     }
     if (flag) {

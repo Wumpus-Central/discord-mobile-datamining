@@ -1,3 +1,5 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { set } from "../../utils/Durations.tsx";
 // discord_app/modules/guild_onboarding/GuildOnboardingPromptsStore.tsx
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -153,8 +155,8 @@ prototype["getOnboardingResponsesForPrompt"] = function getOnboardingResponsesFo
       const self = this;
       const options = found.options;
       const mapped = options.map((id) => id.id);
-      intersectionResult = require("../../../_runtime/00012_apply.js").intersection(mapped, this.getOnboardingResponses(guildId));
-      const obj = require("../../../_runtime/00012_apply.js");
+      intersectionResult = apply.intersection(mapped, this.getOnboardingResponses(guildId));
+      const obj = apply;
     }
     return intersectionResult;
   }
@@ -219,7 +221,7 @@ prototype["isLoading"] = function isLoading() {
 prototype["shouldFetchPrompts"] = function shouldFetchPrompts(arg0) {
   let HOUR = arg1;
   if (arg1 === undefined) {
-    HOUR = require("../../utils/Durations.tsx").Millis.HOUR;
+    HOUR = set.Millis.HOUR;
   }
   if (c11) {
     return false;
@@ -461,15 +463,15 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(require("dis
           tmp4 = removedOptionIds.length > 0;
         }
         if (tmp4) {
-          let obj = require("../../../_runtime/00012_apply.js");
+          let obj = apply;
           obj.pullAll(dependencyMap[guildId].responses, removedOptionIds);
         }
         if (selected) {
           const responses = dependencyMap[guildId].responses;
           responses.push(optionId);
         } else {
-          require("../../../_runtime/00012_apply.js").pull(dependencyMap[guildId].responses, optionId);
-          const obj2 = require("../../../_runtime/00012_apply.js");
+          apply.pull(dependencyMap[guildId].responses, optionId);
+          const obj2 = apply;
         }
         if (null == dependencyMap2[guildId]) {
           tmp15[guildId] = {};

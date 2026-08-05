@@ -1,3 +1,4 @@
+import { UserSettingsDesignSystemButtonGroup } from "../../design_system/native/UserSettingsDesignSystemButtonGroup.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemsButtonGroupSetting.tsx
 import createToggle from "createToggle";
 
@@ -11,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_BUTTON_GROUP,
   getComponent() {
-    return require("../../design_system/native/UserSettingsDesignSystemButtonGroup.tsx") /* UserSettingsDesignSystemButtonGroup */.default;
+    return UserSettingsDesignSystemButtonGroup /* UserSettingsDesignSystemButtonGroup */.default;
   }
 };
 const route = createToggle.createRoute(obj);

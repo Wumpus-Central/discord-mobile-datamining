@@ -1,3 +1,5 @@
+import { useCoachmark } from "../../../design/components/Coachmark/native/useCoachmark.native.tsx";
+import { useSelectedDismissibleContent } from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 // discord_app/modules/chat_input/native/RefreshChatInputCoachmark.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -8,13 +10,13 @@ const result = require("ContentDismissActionType").fileFinishedImporting("module
 
 export default function RefreshChatInputCoachmark(buttonRef) {
   const merged = Object.assign(buttonRef, Object.create(null));
-  const coachmark = require("../../../design/components/Coachmark/native/useCoachmark.native.tsx") /* useCoachmark */.useCoachmark(buttonRef.buttonRef, merged);
+  const coachmark = useCoachmark /* useCoachmark */.useCoachmark(buttonRef.buttonRef, merged);
   return null;
 };
 export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmark(disabled) {
   let _require;
   let importDefault;
-  _require("../../dismissible_content/hooks/useSelectedDismissibleContent.tsx");
+  _useSelectedDismissibleContent;
   if (tmp2) {
     if (!disabled.disabled) {
       let items = [tmp3(1358).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];

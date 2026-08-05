@@ -1,3 +1,7 @@
+import { getNickname } from "../../../utils/NicknameUtils.tsx";
+import { ActivityStatus } from "../../activity_status/native/ActivityStatus.tsx";
+import { useUserProfileMutuals } from "../hooks/useUserProfileMutuals.tsx";
+import { UserProfileStackedActionSheet } from "UserProfileStackedActionSheet.tsx";
 // discord_app/modules/user_profile/native/UserProfileMutualsActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import getNoMutualFriendsSource from "getNoMutualFriendsSource";
@@ -38,9 +42,9 @@ function MutualFriendRow(mutualFriend) {
   obj[6] = isVROnline;
   obj[1] = callback2(user(1297).Avatar, obj);
   const tmp = createCacheKey();
-  obj[2] = require("../../../utils/NicknameUtils.tsx").getName(guildId, undefined, user);
+  obj[2] = getNickname.getName(guildId, undefined, user);
   obj1 = { userId: user.id, guildId, textStyle: tmp.activityStatusText };
-  obj[3] = callback2(require("../../activity_status/native/ActivityStatus.tsx"), obj1);
+  obj[3] = callback2(ActivityStatus, obj1);
   obj[4] = start;
   obj[5] = end;
   return callback2(user(5315).TableRow, obj, user.id);
@@ -123,7 +127,7 @@ export default function UserProfileMutualsActionSheet(user) {
   let obj = React;
   const tmp2 = callback(React.useState(0), 2);
   React = tmp2[1];
-  ({ mutualFriends, mutualGuilds } = require("../hooks/useUserProfileMutuals.tsx")(user));
+  ({ mutualFriends, mutualGuilds } = useUserProfileMutuals(user));
   let obj1 = user(8878);
   obj = { pageWidth: tmp2[0], defaultIndex: null, items: null };
   let num = 0;
@@ -216,11 +220,11 @@ export default function UserProfileMutualsActionSheet(user) {
     callback(nativeEvent.nativeEvent.layout.width);
   }, []);
   const obj8 = { scrollable: true, title: null, children: null };
-  const tmp5 = require("../hooks/useUserProfileMutuals.tsx")(user);
+  const tmp5 = useUserProfileMutuals(user);
   const intl = tmp6(1236).intl;
   obj8[1] = intl.string(user(1236).t["l2/aLi"]);
   const obj9 = { style: tmp.container, onLayout: callback, children: null };
-  const tmp3Result1 = require("UserProfileStackedActionSheet.tsx");
+  const tmp3Result1 = UserProfileStackedActionSheet;
   const items1 = [tmp9(closure_5, { children: tmp9(user(11885).Tabs, { state: segmentedControlState }) }), tmp9(user(9480).SegmentedControlPages, { state: segmentedControlState })];
   obj9[2] = items1;
   obj8[2] = callback3(closure_5, obj9);

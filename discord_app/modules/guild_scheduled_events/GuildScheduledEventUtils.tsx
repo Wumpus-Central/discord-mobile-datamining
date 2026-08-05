@@ -1,3 +1,4 @@
+import { t } from "../../../_runtime/03867_t.js";
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventUtils.tsx
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
 
@@ -9,7 +10,7 @@ let obj1;
 const result = require("DISCORD_EPOCH").fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventUtils.tsx");
 
 export const getNextShownUpcomingEventNoticeType = function getNextShownUpcomingEventNoticeType(guildScheduledEvent, arg1, arg2, flag) {
-  const obj = require("../../../_runtime/03867_t.js")();
+  const obj = t();
   const time = new Date(guildScheduledEvent.scheduled_start_time).getTime();
   const diff = time - closure_4;
   if (obj.isBetween(diff, time)) {

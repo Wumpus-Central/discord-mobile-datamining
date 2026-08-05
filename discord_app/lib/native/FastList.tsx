@@ -1,3 +1,10 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { BottomSheetModal } from "../../../_runtime/05340_BottomSheetModal.js";
+import { shallowEqual } from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import { set } from "../../modules/core/native/NativeView.tsx";
+import { ReanimatedRexport } from "../../modules/reanimated/ReanimatedRexport.tsx";
+import { refObjectUnionAsProp } from "../../modules/typescript/refObjectUnionAsProp.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
 // discord_app/lib/native/FastList.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
@@ -157,7 +164,7 @@ prototype["_fill"] = function _fill(arg0, arg1, closure_0) {
   closure_0 = arg1;
   let importDefault = 0;
   if (!closure_0) {
-    const item = require("../../../_runtime/00012_apply.js").forEach(arg0, (arg0) => {
+    const item = apply.forEach(arg0, (arg0) => {
       if (null == table[closure_1]) {
         return false;
       } else {
@@ -165,7 +172,7 @@ prototype["_fill"] = function _fill(arg0, arg1, closure_0) {
         closure_1 = closure_1 + 1;
       }
     });
-    const arr = require("../../../_runtime/00012_apply.js");
+    const arr = apply;
   }
   if (importDefault < arg1.length) {
     do {
@@ -199,7 +206,7 @@ prototype2["updateProps"] = function updateProps(props) {
   const self = this;
   let dirty = this.dirty;
   if (!dirty) {
-    dirty = !require("../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(props, self.props);
+    dirty = !shallowEqual(props, self.props);
   }
   self.dirty = dirty;
   self.props = props;
@@ -1430,7 +1437,7 @@ let closure_21 = importAllResult.memo(function _FastListSectionRenderer(disableW
   fastListInstance = children(section, fastListInstance);
   section = [fastListInstance, false];
   obj1[3] = section;
-  closure_10(require("../../modules/core/native/NativeView.tsx"), obj1);
+  closure_10(set, obj1);
 });
 let closure_22 = importAllResult.memo(function _FastListSectionFooterRenderer(disableWrapper) {
   let children;
@@ -1458,7 +1465,7 @@ let closure_22 = importAllResult.memo(function _FastListSectionFooterRenderer(di
   children = children(section, fastListInstance);
   section = [children, false];
   obj1[2] = section;
-  closure_10(require("../../modules/core/native/NativeView.tsx"), obj1);
+  closure_10(set, obj1);
 });
 let closure_23 = importAllResult.memo(function _FastListItemRenderer(disableWrapper) {
   let children;
@@ -1491,7 +1498,7 @@ let closure_23 = importAllResult.memo(function _FastListItemRenderer(disableWrap
   }
   const items = [childrenResult1, false];
   obj[2] = items;
-  childrenResult = closure_10(require("../../modules/core/native/NativeView.tsx"), obj);
+  childrenResult = closure_10(set, obj);
 });
 let closure_24 = importAllResult.memo(function _FastListHeaderFooterRenderer(disableWrapper) {
   let children;
@@ -1518,7 +1525,7 @@ let closure_24 = importAllResult.memo(function _FastListHeaderFooterRenderer(dis
   children = children(fastListInstance);
   fastListInstance = [children, false];
   obj1[3] = fastListInstance;
-  closure_10(require("../../modules/core/native/NativeView.tsx"), obj1);
+  closure_10(set, obj1);
 });
 let closure_25 = importAllResult.memo(function _FastListSpacer(layoutSize) {
   layoutSize = layoutSize.layoutSize;
@@ -1530,7 +1537,7 @@ let closure_25 = importAllResult.memo(function _FastListSpacer(layoutSize) {
     style = { height: null };
     style[0] = layoutSize;
   }
-  return closure_11(require("../../modules/core/native/NativeView.tsx"), { collapsable: false, style });
+  return closure_11(set, { collapsable: false, style });
 });
 let c26 = 1000;
 let c27 = 0.5;
@@ -2237,8 +2244,8 @@ prototype4["getInitialState"] = function getInitialState(result, setInfo, isFirs
     const result2 = scrollPosValue.set(tmp10);
     self.scrollPosValue = scrollPosValue;
   } else {
-    self.scrollPosValue = require("../../modules/reanimated/ReanimatedRexport.tsx").makeMutable(tmp10);
-    const obj3 = require("../../modules/reanimated/ReanimatedRexport.tsx");
+    self.scrollPosValue = ReanimatedRexport.makeMutable(tmp10);
+    const obj3 = ReanimatedRexport;
   }
   if (result > 0) {
     let computeResult = setInfo.compute(tmp3, sum, items, true);
@@ -2748,18 +2755,18 @@ prototype4["render"] = function render() {
   const props = this.props;
   ({ manualRef, onScroll, onScrollEnd, onLayout, renderHeader, renderFooter, renderSection, renderItem, renderSectionFooter, getRecyclerKey, onEndReached, endReachedThreshold, headerSize, footerSize, sectionSize, sectionFooterSize, itemSize, sections, scrollPosValue, batchesToRender, optimizeListItemRender, initialScrollSection, initialScrollItem, initialScrollOrientation, initialScrollStart, getAnchorIdFromIndex, getAnchorIndexFromId, EXPERIMENTAL_enableAnchorWhileScrolling, chunkBase, disableContentWrappers, childrenWrapper, stickyHeaderFooter, stickySectionsVariant, persistantKeys, disableRecyclingOnFullCompute, disableLegacyGestureHandling, viewabilityConfig, onViewableItemsChanged, debugLayout, renderAccessory, removeClippedSubviews } = props);
   if (undefined === removeClippedSubviews) {
-    let obj = require("../../utils/PlatformUtils.tsx") /* set */;
+    let obj = set /* set */;
     removeClippedSubviews = obj.isAndroid();
   }
   if (props.inActionSheet) {
-    let BottomSheetScrollView = require("../../../_runtime/05340_BottomSheetModal.js") /* BottomSheetModal */.BottomSheetScrollView;
+    let BottomSheetScrollView = BottomSheetModal /* BottomSheetModal */.BottomSheetScrollView;
   } else {
     BottomSheetScrollView = closure_8;
   }
   obj = {};
   const merged = Object.assign(callback(props, closure_3));
   obj.accessibilityRole = "list";
-  obj.ref = require("../../modules/typescript/refObjectUnionAsProp.tsx")(self.scrollView);
+  obj.ref = refObjectUnionAsProp(self.scrollView);
   obj.scrollEventThrottle = 16;
   obj.contentOffset = self.state.initialContentOffset;
   ({ handleScroll: obj2.onScroll, handleLayout: obj2.onLayout, handleMomentumScrollEnd: obj2.onMomentumScrollEnd, handleScrollBeginDrag: obj2.onScrollBeginDrag } = self);

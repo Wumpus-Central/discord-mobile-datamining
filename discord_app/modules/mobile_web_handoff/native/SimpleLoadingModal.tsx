@@ -1,10 +1,12 @@
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 // discord_app/modules/mobile_web_handoff/native/SimpleLoadingModal.tsx
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/mobile_web_handoff/native/SimpleLoadingModal.tsx");
 
 export const showSimpleLoadingModal = function showSimpleLoadingModal(closure_4, arg1) {
   const _require = closure_4;
   const importDefault = arg1;
-  let obj = require("../../../actions/ModalActionCreators.tsx");
+  let obj = ModalActionCreators;
   obj = {};
   const merged = Object.assign(arg1);
   obj.onDismissed = function onDismissed() {
@@ -14,5 +16,5 @@ export const showSimpleLoadingModal = function showSimpleLoadingModal(closure_4,
       onDismissed();
     }
   };
-  obj.pushLazy(_require("../../../../_runtime/01959_asyncRequireImpl.js")(5842, dependencyMap.paths), obj, closure_4, { animation: "none" });
+  obj.pushLazy(_asyncRequireImpl(5842, dependencyMap.paths), obj, closure_4, { animation: "none" });
 };

@@ -1,3 +1,4 @@
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/self_mod/shared/SafetyWarningUtils.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { AnalyticEvents } from "ME";
@@ -10,7 +11,7 @@ export const trackViewedEvent = function trackViewedEvent(SAFETY_WARNING_VIEWED,
   let warningType;
   warningId = warningId.warningId;
   ({ channelId, senderId, warningType } = warningId);
-  let obj = require("../../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { channel_id: channelId, warning_id: null, warning_type: null, other_user_id: null };
   let parsed;
   if (null != warningId) {
@@ -31,7 +32,7 @@ export const trackNamedViewEvent = function trackNamedViewEvent(warningId) {
   let warningType;
   warningId = warningId.warningId;
   ({ channelId, senderId, warningType, viewName, isNudgeWarning } = warningId);
-  let obj = require("../../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { channel_id: channelId, warning_id: null, warning_type: null, other_user_id: null, view_name: null, is_nudge_warning: null };
   let parsed;
   if (null != warningId) {
@@ -54,7 +55,7 @@ export const trackCtaEvent = function trackCtaEvent(warningId) {
   let warningType;
   warningId = warningId.warningId;
   ({ channelId, senderId, warningType, cta, isNudgeWarning } = warningId);
-  let obj = require("../../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { channel_id: channelId, warning_id: null, warning_type: null, other_user_id: null, cta: null, is_nudge_warning: null };
   let parsed;
   if (null != warningId) {

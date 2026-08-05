@@ -1,3 +1,6 @@
+import { apply } from "../../_runtime/00012_apply.js";
+import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/stores/DraftStore.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
@@ -68,7 +71,7 @@ function handleChanged(type) {
       if (obj6.isEmpty(tmp11)) {
         delete tmp[tmp3];
       }
-      obj6 = require("../../_runtime/00012_apply.js");
+      obj6 = apply;
     }
   }
 }
@@ -202,39 +205,39 @@ prototype["getRecentlyEditedDrafts"] = function getRecentlyEditedDrafts(ChannelM
       dependencyMap[id] = obj;
       tmp3 = obj;
     }
-    const obj2 = require("../../_runtime/00012_apply.js")(tmp3);
-    const mapValuesResult = require("../../_runtime/00012_apply.js")(tmp3).mapValues((arg0) => {
+    const obj2 = apply(tmp3);
+    const mapValuesResult = apply(tmp3).mapValues((arg0) => {
       let tmp;
       if (arg0 != null) {
         tmp = arg0[closure_0];
       }
       return tmp;
     });
-    const pickByResult = require("../../_runtime/00012_apply.js")(tmp3).mapValues((arg0) => {
+    const pickByResult = apply(tmp3).mapValues((arg0) => {
       let tmp;
       if (arg0 != null) {
         tmp = arg0[closure_0];
       }
       return tmp;
-    }).pickBy(_require("../utils/GlobalUtils.tsx").isNotNullish);
-    const mapped = require("../../_runtime/00012_apply.js")(tmp3).mapValues((arg0) => {
+    }).pickBy(_isDiscordFrontendDevelopment.isNotNullish);
+    const mapped = apply(tmp3).mapValues((arg0) => {
       let tmp;
       if (arg0 != null) {
         tmp = arg0[closure_0];
       }
       return tmp;
-    }).pickBy(_require("../utils/GlobalUtils.tsx").isNotNullish).toPairs().map((arg0) => {
+    }).pickBy(_isDiscordFrontendDevelopment.isNotNullish).toPairs().map((arg0) => {
       let tmp;
       [tmp, ] = arg0;
       return { channelId, timestamp, draft };
     });
-    const toPairsResult = require("../../_runtime/00012_apply.js")(tmp3).mapValues((arg0) => {
+    const toPairsResult = apply(tmp3).mapValues((arg0) => {
       let tmp;
       if (arg0 != null) {
         tmp = arg0[closure_0];
       }
       return tmp;
-    }).pickBy(_require("../utils/GlobalUtils.tsx").isNotNullish).toPairs();
+    }).pickBy(_isDiscordFrontendDevelopment.isNotNullish).toPairs();
     return mapped.sortBy((timestamp) => -timestamp.timestamp).value();
   }
 };
@@ -459,7 +462,7 @@ obj = {
               }
             }
           }
-          obj9 = require("../utils/SnowflakeUtils.tsx");
+          obj9 = DISCORD_EPOCH;
         }
       }
     }
@@ -483,7 +486,7 @@ obj = {
         if (obj2.isEmpty(tmp9)) {
           delete tmp[tmp2];
         }
-        obj2 = require("../../_runtime/00012_apply.js");
+        obj2 = apply;
       }
     }
     return flag;

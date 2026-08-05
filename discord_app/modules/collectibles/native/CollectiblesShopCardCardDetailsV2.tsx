@@ -1,3 +1,12 @@
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { hexToRgba } from "../../../utils/ColorUtils.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
+import { useCanPurchaseFrames } from "../hooks/useCanPurchaseFrames.tsx";
+import { useCurrentUser } from "../hooks/useCurrentUser.tsx";
+import { getProductName } from "../utils/getProductName.tsx";
 // discord_app/modules/collectibles/native/CollectiblesShopCardCardDetailsV2.tsx
 import importAllResult from "useCurrentUser";
 import { View } from "TagIcon";
@@ -229,37 +238,37 @@ const memoResult1 = importAllResult.memo(function CardDetailsV2(arg0) {
   ({ product, hidePrice } = arg0);
   ({ collectibleProductState, preferVCPrice, isDisabled } = arg0);
   const tmp = callback2();
-  let obj = require("../hooks/useCurrentUser.tsx") /* useCurrentUser */;
+  let obj = useCurrentUser /* useCurrentUser */;
   const currentUser = obj.useCurrentUser();
-  let obj1 = require("../hooks/useCanPurchaseFrames.tsx") /* useCanPurchaseFrames */;
+  let obj1 = useCanPurchaseFrames /* useCanPurchaseFrames */;
   let isProfileFramesEarlyAccessPhase = obj1.useIsProfileFramesEarlyAccessPhase("CollectiblesShopCardCardDetailsV2");
   if (isProfileFramesEarlyAccessPhase) {
     let tmp2Result = tmp2(6921);
     const productType = tmp2Result.getProductType(product);
     isProfileFramesEarlyAccessPhase = productType === tmp2(1901).CollectiblesItemType.PROFILE_FRAME;
   }
-  let obj3 = require("../../../utils/PremiumUtils.tsx");
+  let obj3 = getPremiumPlanItem;
   tmp2Result = tmp2(6922);
   const shopDiscountSource = tmp2Result.getShopDiscountSource(currentUser);
   const tmp8 = obj3.canUseShopDiscounts(currentUser) || isProfileFramesEarlyAccessPhase;
-  const token = require("../../../design/tokens/native/useToken.tsx") /* map */.useToken(tmp7(712).colors.BACKGROUND_BASE_LOW);
-  const tmp2Result1 = require("../../../design/tokens/native/useToken.tsx") /* map */;
-  const tmp2Result2 = require("../../../utils/ColorUtils.tsx") /* hexToRgba */;
-  const tmp2Result3 = require("../../../utils/ColorUtils.tsx") /* hexToRgba */;
-  const hexToRgbaStringResult = tmp2Result2.hexToRgbaString(require("../../../utils/ColorUtils.tsx") /* hexToRgba */.hexWithOpacity(token, 0.9));
-  const tmp2Result4 = require("../../../utils/ColorUtils.tsx") /* hexToRgba */;
-  const tmp2Result5 = require("../../../utils/ColorUtils.tsx") /* hexToRgba */;
-  const hexToRgbaStringResult1 = tmp2Result4.hexToRgbaString(require("../../../utils/ColorUtils.tsx") /* hexToRgba */.hexWithOpacity(token, 0));
-  const productName = require("../utils/getProductName.tsx") /* getProductName */.getProductName(product);
-  const tmp2Result6 = require("../utils/getProductName.tsx") /* getProductName */;
+  const token = map /* map */.useToken(tmp7(712).colors.BACKGROUND_BASE_LOW);
+  const tmp2Result1 = map /* map */;
+  const tmp2Result2 = hexToRgba /* hexToRgba */;
+  const tmp2Result3 = hexToRgba /* hexToRgba */;
+  const hexToRgbaStringResult = tmp2Result2.hexToRgbaString(hexToRgba /* hexToRgba */.hexWithOpacity(token, 0.9));
+  const tmp2Result4 = hexToRgba /* hexToRgba */;
+  const tmp2Result5 = hexToRgba /* hexToRgba */;
+  const hexToRgbaStringResult1 = tmp2Result4.hexToRgbaString(hexToRgba /* hexToRgba */.hexWithOpacity(token, 0));
+  const productName = getProductName /* getProductName */.getProductName(product);
+  const tmp2Result6 = getProductName /* getProductName */;
   const items = [updateProduct];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => fetchingGoogleSkus.isFetchingGoogleSkus());
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => fetchingGoogleSkus.isFetchingGoogleSkus());
   obj = { style: items1, colors: items2, locations: [0, 0.4, 1], start: constants.START, end: constants.END, children: null };
   items1 = [tmp.regularMetadataContainer];
   items2 = [hexToRgbaStringResult1, hexToRgbaStringResult, token];
-  const tmp2Result7 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const tmp2Result7 = initialize /* initialize */;
   obj = { style: tmp.assetName, variant: "heading-sm/bold", color: "mobile-text-heading-primary", lineClamp: 1, accessibilityRole: "header", children: productName };
-  const items3 = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+  const items3 = [callback(Text /* Text */.Text, obj), ];
   let tmp15Result = !hidePrice;
   if (!hidePrice) {
     obj1 = { style: null, children: null };
@@ -282,7 +291,7 @@ const memoResult1 = importAllResult.memo(function CardDetailsV2(arg0) {
   }
   items3[1] = tmp15Result;
   obj[5] = items3;
-  return closure_9(require("../../../../_runtime/04706_LinearGradient.js"), obj);
+  return closure_9(LinearGradient, obj);
 });
 const result = require("updateProduct").fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardCardDetailsV2.tsx");
 

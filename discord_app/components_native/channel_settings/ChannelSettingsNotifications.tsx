@@ -1,3 +1,17 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
+import { Stack } from "../../design/components/Stack/native/Stack.native.tsx";
+import { TableRowInner } from "../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowGroupTitle } from "../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { TableSwitchRow } from "../../design/components/TableRow/native/TableSwitchRow.native.tsx";
+import { Text } from "../../design/components/Text/native/Text.tsx";
+import { Form } from "../../design/void/Form/native/index.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { collectGuildAnalyticsMetadata } from "../../modules/app_analytics/AppAnalyticsUtils.tsx";
+import { computeChannelName } from "../../modules/channel/useChannelName.tsx";
+import { MutedUntilText } from "../../modules/main_tabs_v2/native/sidebar/details/screens/MutedUntilText.tsx";
+import { getMuteTimeOptions } from "../../modules/notifications/NotificationUtils.tsx";
+import { NotificationSettingsChannel } from "../../modules/notifications/settings/native/NotificationSettingsChannel.tsx";
 // discord_app/components_native/channel_settings/ChannelSettingsNotifications.tsx
 import importAllResult from "computeChannelName";
 import createChannelRecord from "createChannelRecord";
@@ -161,7 +175,7 @@ class ChannelSettingsNotifications extends PureComponent {
 }
 const prototype = ChannelSettingsNotifications.prototype;
 prototype["componentDidMount"] = function componentDidMount() {
-  let obj = require("../../modules/app_analytics/AppAnalyticsUtils.tsx");
+  let obj = collectGuildAnalyticsMetadata;
   obj = { settings_type: "channel", destination_pane: constants4.CHANNEL_NOTIFICATION_SETTINGS };
   obj.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj);
 };
@@ -183,14 +197,14 @@ prototype["renderMuteSection"] = function renderMuteSection() {
   const channel = props.channel;
   const muted = this.state.muted;
   let MuteSettingType = dependencyMap;
-  let obj = require("../../modules/channel/useChannelName.tsx") /* computeChannelName */;
+  let obj = computeChannelName /* computeChannelName */;
   const channelName = obj.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true);
   obj = { description: null, hasIcons: false, children: null };
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["6yI+JS"]);
-  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["6yI+JS"]);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
   const format = intl2.format;
-  const t = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
+  const t = getSystemLocale /* getSystemLocale */.t;
   if (muted) {
     obj = { name: null };
     obj[0] = channelName;
@@ -200,8 +214,8 @@ prototype["renderMuteSection"] = function renderMuteSection() {
     obj1[0] = channelName;
     formatResult = format(t.byjuJm, obj1);
   }
-  obj[2] = closure_16(require("../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, { label: formatResult, onPress: this.handleToggleMuteChannel, arrow: !muted });
-  const items = [closure_16(require("../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj), ];
+  obj[2] = closure_16(TableRowInner /* TableRowInner */.TableRow, { label: formatResult, onPress: this.handleToggleMuteChannel, arrow: !muted });
+  const items = [closure_16(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj), ];
   if (!muted) {
     const obj3 = { children: null };
     items[1] = null;
@@ -217,8 +231,8 @@ prototype["renderMuteSection"] = function renderMuteSection() {
       CHANNEL = tmp(9738).MuteSettingType.CHANNEL;
     }
     obj4[1] = CHANNEL;
-    tmp5(require("../../modules/main_tabs_v2/native/sidebar/details/screens/MutedUntilText.tsx"), obj4);
-    const tmp8 = require("../../modules/main_tabs_v2/native/sidebar/details/screens/MutedUntilText.tsx");
+    tmp5(MutedUntilText, obj4);
+    const tmp8 = MutedUntilText;
   }
 };
 prototype["renderForumSettings"] = function renderForumSettings() {
@@ -228,8 +242,8 @@ prototype["renderForumSettings"] = function renderForumSettings() {
   ({ channel: require, newForumThreadsCreated } = props);
   let guildMuted = this.state.muted;
   const obj = { label: null, value: null, disabled: null, onValueChange: null };
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Rkgjph);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.Rkgjph);
   obj[1] = newForumThreadsCreated;
   if (!guildMuted) {
     guildMuted = props.guildMuted;
@@ -238,7 +252,7 @@ prototype["renderForumSettings"] = function renderForumSettings() {
   obj[3] = function onValueChange() {
     const result = newForumThreadsCreated(outer1_2[14]).setForumThreadsCreated(closure_0, !newForumThreadsCreated);
   };
-  return closure_16(require("../../design/components/TableRow/native/TableSwitchRow.native.tsx") /* TableSwitchRow */.TableSwitchRow, obj);
+  return closure_16(TableSwitchRow /* TableSwitchRow */.TableSwitchRow, obj);
 };
 prototype["renderNotificationSettings"] = function renderNotificationSettings() {
   let channel;
@@ -250,13 +264,13 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
   const state = this.state;
   let muted = state.muted;
   if (null != channel.parent_id) {
-    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    let stringResult = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.wlrV1c);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t.wlrV1c);
     let tmp5 = require;
     let tmp7 = require;
   } else {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["1Wn2M4"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["1Wn2M4"]);
     tmp5 = require;
     tmp7 = require;
   }
@@ -384,27 +398,27 @@ prototype["render"] = function render() {
   if (null != channel) {
     if (guildMuted) {
       let obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
       obj = { mutedHook: null };
       obj[0] = function mutedHook(children) {
         return callback2(callback(4281).Text, { variant: "text-sm/medium", color: "text-feedback-critical", children }, arg1);
       };
-      obj[2] = intl.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.O34r15, obj);
-      let tmp5 = callback2(require("../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+      obj[2] = intl.format(getSystemLocale /* getSystemLocale */.t.O34r15, obj);
+      let tmp5 = callback2(Text /* Text */.Text, obj);
     } else if (guildMessageNotifications === constants2.NO_MESSAGES) {
       obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-      const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl3 = getSystemLocale /* getSystemLocale */.intl;
       const obj1 = { notificationHook: null };
       obj1[0] = function notificationHook(children) {
         return callback2(callback(4281).Text, { variant: "text-sm/medium", color: "text-feedback-warning", children }, arg1);
       };
-      obj[2] = intl3.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.nRwUIL, obj1);
-      tmp5 = callback2(require("../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+      obj[2] = intl3.format(getSystemLocale /* getSystemLocale */.t.nRwUIL, obj1);
+      tmp5 = callback2(Text /* Text */.Text, obj);
     }
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.screenContainer;
     const obj3 = { spacing: null, style: null, children: null };
-    obj3[0] = require("../../../discord_common/js/packages/tokens/native.tsx").space.PX_24;
+    obj3[0] = Themes.space.PX_24;
     obj3[1] = tmp.stackPadding;
     let renderMuteSectionResult = null;
     if (tmp2) {
@@ -422,8 +436,8 @@ prototype["render"] = function render() {
     items[2] = tmp9Result;
     items[3] = tmp5;
     obj3[2] = items;
-    obj2[1] = closure_18(require("../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj3);
-    tmp9Result = tmp9(require("../../design/void/Form/native/index.tsx") /* Form */.Form, obj2);
+    obj2[1] = closure_18(Stack /* Stack */.Stack, obj3);
+    tmp9Result = tmp9(Form /* Form */.Form, obj2);
     const tmp12 = closure_18;
   }
   return tmp9Result;
@@ -437,8 +451,8 @@ export default function ChannelSettingsNotificationsSplit(arg0) {
   const _require = arg0;
   let obj = dependencyMap;
   const items = [ensureGuildLoaded];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_6.getChannel(channelId.channelId));
-  _require("../../modules/notifications/NotificationUtils.tsx");
+  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_6.getChannel(channelId.channelId));
+  _getMuteTimeOptions;
   if (null == stateFromStores) {
     return null;
   } else {
@@ -450,7 +464,7 @@ export default function ChannelSettingsNotificationsSplit(arg0) {
     obj = { channel: null };
     obj[0] = stateFromStores;
     merged1 = Object.assign(merged1);
-    tmp11 = callback2(require("../../modules/notifications/settings/native/NotificationSettingsChannel.tsx"), obj);
-    const tmp14 = require("../../modules/notifications/settings/native/NotificationSettingsChannel.tsx");
+    tmp11 = callback2(NotificationSettingsChannel, obj);
+    const tmp14 = NotificationSettingsChannel;
   }
 };

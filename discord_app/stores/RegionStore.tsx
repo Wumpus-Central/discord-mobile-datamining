@@ -1,3 +1,4 @@
+import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/stores/RegionStore.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { Store } from "initialize";
@@ -20,8 +21,8 @@ prototype["getOptimalRegion"] = function getOptimalRegion(guildId) {
   if (null != regions) {
     let found = regions.find((optimal) => optimal.optimal);
     if (found == null) {
-      found = require("../../_runtime/00012_apply.js").sample(regions);
-      const obj = require("../../_runtime/00012_apply.js");
+      found = apply.sample(regions);
+      const obj = apply;
     }
     tmp2 = found;
   }
@@ -47,8 +48,8 @@ prototype["getRandomRegion"] = function getRandomRegion(guildId) {
   const regions = this.getRegions(tmp);
   let sampleResult = null;
   if (null != regions) {
-    sampleResult = require("../../_runtime/00012_apply.js").sample(regions);
-    const obj = require("../../_runtime/00012_apply.js");
+    sampleResult = apply.sample(regions);
+    const obj = apply;
   }
   return sampleResult;
 };
@@ -75,7 +76,7 @@ prototype["getRegions"] = function getRegions(guildId) {
 RegionStore.displayName = "RegionStore";
 const regionStore = new RegionStore(require("dispatcher"), {
   LOAD_REGIONS: function handleLoadRegions(regions) {
-    const sortByResult = require("../../_runtime/00012_apply.js").sortBy(regions.regions, (name) => name.name);
+    const sortByResult = apply.sortBy(regions.regions, (name) => name.name);
     if (null != regions.guildId) {
       closure_4[regions.guildId] = sortByResult;
     } else {

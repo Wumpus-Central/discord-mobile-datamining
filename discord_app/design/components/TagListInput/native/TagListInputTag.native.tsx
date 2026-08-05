@@ -1,3 +1,9 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useAccessibilityPress } from "../../../../modules/a11y/native/useAccessibilityPress.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { PressableBase } from "../../../void/Pressables/native/Pressables.tsx";
+import { Text } from "../../Text/native/Text.tsx";
 // discord_app/design/components/TagListInput/native/TagListInputTag.native.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -13,7 +19,7 @@ let closure_6 = createCacheKey.createStyles(() => {
   if (arg0 === undefined) {
     flag = false;
   }
-  const colors = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors;
+  const colors = Themes.colors;
   if (flag) {
     let BACKGROUND_SURFACE_HIGH = colors.BACKGROUND_MOD_SUBTLE;
     let tmp4 = tmp;
@@ -64,11 +70,11 @@ export const TagListInputTagComponent = function TagListInputTagComponent(end) {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp2 = callback2(require("../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx")("TagListInputTag"));
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const tmp2 = callback2(useIsMobileVisualRefreshExperimentEnabled("TagListInputTag"));
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   let obj = { text: tag.text };
-  const formatToPlainStringResult = intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["0Vb9FQ"], obj);
-  ({ onAccessibilityAction, accessibilityActions } = require("../../../../modules/a11y/native/useAccessibilityPress.tsx")(() => callback("remove"), formatToPlainStringResult));
+  const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["0Vb9FQ"], obj);
+  ({ onAccessibilityAction, accessibilityActions } = useAccessibilityPress(() => callback("remove"), formatToPlainStringResult));
   const items = [tmp2.tagWrapper, , , ];
   let prop;
   if (selected) {
@@ -111,7 +117,7 @@ export const TagListInputTagComponent = function TagListInputTagComponent(end) {
   }
   obj1[3] = str;
   obj1[4] = tag.text;
-  items1[1] = callback(require("../../Text/native/Text.tsx") /* Text */.Text, obj1);
+  items1[1] = callback(Text /* Text */.Text, obj1);
   obj[6] = items1;
-  return closure_5(require("../../../void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  return closure_5(PressableBase /* PressableBase */.PressableOpacity, obj);
 };

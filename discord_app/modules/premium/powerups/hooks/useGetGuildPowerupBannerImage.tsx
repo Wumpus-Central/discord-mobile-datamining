@@ -1,3 +1,4 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 
@@ -5,7 +6,7 @@ const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx");
 
 export default function useGetGuildPowerupBannerImage(animatedImageUrl) {
-  require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  initialize /* initialize */;
   [][0] = maybeApplyNoTextColorForLightCustomTheme;
   if (null != animatedImageUrl) {
     if (!tmp2) {

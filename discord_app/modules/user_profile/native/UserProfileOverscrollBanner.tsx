@@ -1,3 +1,6 @@
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
+import { UserProfileBanner } from "UserProfileBanner.tsx";
 // discord_app/modules/user_profile/native/UserProfileOverscrollBanner.tsx
 import "noop";
 import { StyleSheet } from "get ActivityIndicator";
@@ -24,10 +27,10 @@ export default function UserProfileOverscrollBanner(arg0) {
   obj = { style: bannerImageAnimatedStyle, children: null };
   obj = {};
   const merged1 = Object.assign(merged);
-  const items1 = [callback(require("UserProfileBanner.tsx"), obj), ];
+  const items1 = [callback(UserProfileBanner, obj), ];
   const tmp3 = callback;
-  const tmp4 = require("UserProfileBanner.tsx");
-  let tmp3Result = require("../../../utils/PlatformUtils.tsx") /* set */.isIOS() && showBlur;
+  const tmp4 = UserProfileBanner;
+  let tmp3Result = set /* set */.isIOS() && showBlur;
   if (tmp3Result) {
     const obj1 = { animatedProps: null, style: null };
     obj1[0] = blurAnimatedProps;
@@ -36,7 +39,7 @@ export default function UserProfileOverscrollBanner(arg0) {
   }
   items1[1] = tmp3Result;
   obj[1] = items1;
-  items[1] = closure_5(require("../../reanimated/ReanimatedRexport.tsx").View, obj);
+  items[1] = closure_5(ReanimatedRexport.View, obj);
   obj[1] = items;
-  return closure_5(require("../../reanimated/ReanimatedRexport.tsx").View, obj);
+  return closure_5(ReanimatedRexport.View, obj);
 };

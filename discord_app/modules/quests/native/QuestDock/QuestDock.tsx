@@ -1,3 +1,5 @@
+import { useQuests } from "../../hooks/QuestHooks.tsx";
+import { QuestsVisibleMessagesChangedSource } from "../../QuestTypes.tsx";
 // discord_app/modules/quests/native/QuestDock/QuestDock.tsx
 import closure_3 from "QuestsExperimentLocations";
 import Backdrop from "Backdrop";
@@ -356,8 +358,8 @@ function QuestDockModeChangeTracker(arg0) {
   let mode;
   let questId;
   ({ mode, questId } = arg0);
-  let obj = require("../../hooks/QuestHooks.tsx") /* useQuests */;
-  obj = { mode, questContent: require("../../QuestTypes.tsx") /* QuestsVisibleMessagesChangedSource */.QuestContent.QUEST_BAR_MOBILE, questId, sourceQuestContent: require("../../QuestTypes.tsx") /* QuestsVisibleMessagesChangedSource */.QuestContent.QUEST_BAR_MOBILE };
+  let obj = useQuests /* useQuests */;
+  obj = { mode, questContent: QuestsVisibleMessagesChangedSource /* QuestsVisibleMessagesChangedSource */.QuestContent.QUEST_BAR_MOBILE, questId, sourceQuestContent: QuestsVisibleMessagesChangedSource /* QuestsVisibleMessagesChangedSource */.QuestContent.QUEST_BAR_MOBILE };
   const questBarOrDockModeChangeTracking = obj.useQuestBarOrDockModeChangeTracking(obj);
   return null;
 }

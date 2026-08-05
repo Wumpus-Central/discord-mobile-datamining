@@ -1,3 +1,5 @@
+import { set } from "../../actions/AlertActionCreators.tsx";
+import { getEmbeddedActivityJoinability } from "utils/getEmbeddedActivityJoinability.tsx";
 // discord_app/modules/activities/handlePressJoinActivity.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createExecutable from "createExecutable";
@@ -13,7 +15,7 @@ function handlePressJoinActivity(arg0) {
   let embeddedActivityJoinability;
   let handleCanJoin;
   ({ embeddedActivityJoinability, handleCanJoin } = arg0);
-  if (require("utils/getEmbeddedActivityJoinability.tsx") /* getEmbeddedActivityJoinability */.EmbeddedActivityJoinability.CAN_JOIN === embeddedActivityJoinability) {
+  if (getEmbeddedActivityJoinability /* getEmbeddedActivityJoinability */.EmbeddedActivityJoinability.CAN_JOIN === embeddedActivityJoinability) {
     if (handleCanJoin != null) {
       handleCanJoin();
     }
@@ -26,18 +28,18 @@ function handlePressJoinActivity(arg0) {
     obj[0] = intl7.string(tmp(1236).t.PtobXW);
     const intl8 = tmp(1236).intl;
     obj[1] = intl8.string(tmp(1236).t.UXoQTp);
-    require("../../actions/AlertActionCreators.tsx").show(obj);
-    const obj7 = require("../../actions/AlertActionCreators.tsx");
+    set.show(obj);
+    const obj7 = set;
   } else if (tmp(10533).EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS === embeddedActivityJoinability) {
     obj = { title: null, body: null, hideActionSheet: false };
     const intl5 = tmp(1236).intl;
     obj[0] = intl5.string(tmp(1236).t.PtobXW);
     const intl6 = tmp(1236).intl;
     obj[1] = intl6.string(tmp(1236).t.uGDCcw);
-    require("../../actions/AlertActionCreators.tsx").show(obj);
-    const obj5 = require("../../actions/AlertActionCreators.tsx");
+    set.show(obj);
+    const obj5 = set;
   } else if (tmp(10533).EmbeddedActivityJoinability.ACTIVITY_AGE_GATED === embeddedActivityJoinability) {
-    let obj2 = require("../../actions/AlertActionCreators.tsx");
+    let obj2 = set;
     const obj1 = { title: null, body: null, hideActionSheet: false };
     const intl3 = tmp(1236).intl;
     obj1[0] = intl3.string(tmp(1236).t.PtobXW);
@@ -45,7 +47,7 @@ function handlePressJoinActivity(arg0) {
     obj1[1] = intl4.string(tmp(1236).t["4WuFRE"]);
     obj2.show(obj1);
   } else {
-    obj = require("../../actions/AlertActionCreators.tsx");
+    obj = set;
     obj2 = { title: null, body: null, hideActionSheet: false };
     const intl = tmp(1236).intl;
     obj2[0] = intl.string(tmp(1236).t.PtobXW);

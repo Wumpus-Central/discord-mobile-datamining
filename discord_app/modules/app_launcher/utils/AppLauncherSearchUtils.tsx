@@ -1,3 +1,6 @@
+import { PermissionOverwriteType } from "../../../flow/Server.tsx";
+import { computePermissions } from "../../application_commands/CommandPermissionContext.tsx";
+import { getShelfBadgeTypeIfActive } from "AppLauncherUtils.tsx";
 // discord_app/modules/app_launcher/utils/AppLauncherSearchUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import _getEmbedApplication from "_getEmbedApplication";
@@ -135,9 +138,9 @@ function sortApplicationFreceny(id, id2) {
   return store.getScoreWithoutLoadingLatest(id2.id) - scoreWithoutLoadingLatest;
 }
 function sortApplicationAlpha(FAKE_BUILT_IN_APP, FAKE_BUILT_IN_APP) {
-  const sectionName = require("AppLauncherUtils.tsx") /* getShelfBadgeTypeIfActive */.getSectionName(FAKE_BUILT_IN_APP);
-  const obj = require("AppLauncherUtils.tsx") /* getShelfBadgeTypeIfActive */;
-  return callback(sectionName, require("AppLauncherUtils.tsx") /* getShelfBadgeTypeIfActive */.getSectionName(FAKE_BUILT_IN_APP));
+  const sectionName = getShelfBadgeTypeIfActive /* getShelfBadgeTypeIfActive */.getSectionName(FAKE_BUILT_IN_APP);
+  const obj = getShelfBadgeTypeIfActive /* getShelfBadgeTypeIfActive */;
+  return callback(sectionName, getShelfBadgeTypeIfActive /* getShelfBadgeTypeIfActive */.getSectionName(FAKE_BUILT_IN_APP));
 }
 function sortCommandsAlpha(displayName, displayName2) {
   return callback(displayName.displayName, displayName2.displayName);
@@ -222,8 +225,8 @@ export const filterApplicationAllowed = function filterApplicationAllowed(type) 
   if ("channel" === type.type) {
     channel = type.channel;
   }
-  const items = [_require("../../../flow/Server.tsx").ApplicationCommandType.CHAT, _require("../../../flow/Server.tsx").ApplicationCommandType.PRIMARY_ENTRY_POINT];
-  let closure_1 = _require("../../application_commands/CommandPermissionContext.tsx").buildPermissionContext(channel, items);
+  const items = [_PermissionOverwriteType.ApplicationCommandType.CHAT, _PermissionOverwriteType.ApplicationCommandType.PRIMARY_ENTRY_POINT];
+  let closure_1 = _computePermissions.buildPermissionContext(channel, items);
   return (id) => {
     let closure_1;
     let closure_2;
@@ -396,8 +399,8 @@ export const filterCommandAllowed = function filterCommandAllowed(type) {
   if ("channel" === type.type) {
     channel = type.channel;
   }
-  const items = [_require("../../../flow/Server.tsx").ApplicationCommandType.CHAT];
-  let closure_1 = _require("../../application_commands/CommandPermissionContext.tsx").buildPermissionContext(channel, items);
+  const items = [_PermissionOverwriteType.ApplicationCommandType.CHAT];
+  let closure_1 = _computePermissions.buildPermissionContext(channel, items);
   let closure_2 = {};
   return (applicationId) => {
     let applicationAllowedForChannel;

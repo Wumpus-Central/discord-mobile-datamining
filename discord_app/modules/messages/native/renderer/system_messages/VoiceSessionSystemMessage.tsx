@@ -1,3 +1,6 @@
+import { getHumanizedCallDuration } from "../../../getHumanizedCallDuration.tsx";
+import { getSortedVoiceSessionParticipants } from "../../../VoiceSessionUtils.tsx";
+import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/VoiceSessionSystemMessage.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 
@@ -9,10 +12,10 @@ export const createVoiceSessionSystemMessage = function createVoiceSessionSystem
   ({ message, roleStyle } = message);
   let _require;
   _require = channel.getChannel(message.channel_id);
-  const tmp3 = require("../../../getHumanizedCallDuration.tsx")(message);
-  let obj = _require("useAuthorWithProcessedColor.tsx");
+  const tmp3 = getHumanizedCallDuration(message);
+  let obj = _getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  let obj1 = _require("../../../VoiceSessionUtils.tsx");
+  let obj1 = _getSortedVoiceSessionParticipants;
   const sortedVoiceSessionParticipants = obj1.getSortedVoiceSessionParticipants(message);
   const mapped = sortedVoiceSessionParticipants.map((user) => {
     const obj = { user, messageAuthor: null };

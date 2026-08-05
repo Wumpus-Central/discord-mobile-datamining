@@ -1,3 +1,4 @@
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsAnalyticsScreen.tsx
 import _slicedToArray from "_slicedToArray";
 import Stack from "Stack";
@@ -16,7 +17,7 @@ function CommonProperty(arg0) {
   let name;
   ({ name, children } = arg0);
   const obj = { style: createCacheKey().commonProperty, children: null };
-  const items = [callback2(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/semibold", color: "text-default", children: name }), children];
+  const items = [callback2(Text /* Text */.Text, { variant: "text-sm/semibold", color: "text-default", children: name }), children];
   obj[1] = items;
   return callback3(View, obj);
 }

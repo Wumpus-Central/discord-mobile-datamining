@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/applications/native/BotTag.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -15,18 +16,18 @@ function getBotLabel(BOT) {
   if (BotTagTypes.SYSTEM_DM !== BOT) {
     if (tmp2.OFFICIAL !== BOT) {
       if (tmp2.SERVER === BOT) {
-        const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        let stringResult = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.PuJGuM);
+        const intl2 = getSystemLocale /* getSystemLocale */.intl;
+        let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t.PuJGuM);
       } else {
         const BOT2 = tmp2.BOT;
-        const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        stringResult = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["9RNkeF"]);
+        const intl = getSystemLocale /* getSystemLocale */.intl;
+        stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["9RNkeF"]);
       }
     }
     return stringResult;
   }
-  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  stringResult = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.lKQ7Wt);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  stringResult = intl3.string(getSystemLocale /* getSystemLocale */.t.lKQ7Wt);
 }
 class BotTag {
   constructor(arg0) {

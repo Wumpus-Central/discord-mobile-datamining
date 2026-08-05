@@ -1,3 +1,4 @@
+import { registerAsset } from "../../../../_runtime/07626_registerAsset.js";
 // discord_app/modules/saved_messages/native/ForLaterNitroUpsellBar.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -31,7 +32,7 @@ export default function ForLaterNitroUpsellBar(isReminder) {
   let obj = { style: tmp.container, children: null };
   obj = { source: null, style: null };
   const callback = React.useCallback(() => outer1_1(outer1_2[7])(isReminder), items);
-  obj[0] = require("../../../../_runtime/07626_registerAsset.js");
+  obj[0] = registerAsset;
   obj[1] = tmp.icon;
   const items1 = [callback(closure_4, obj), , ];
   obj = { variant: "text-xs/medium", color: "text-default", style: tmp.text, children: null };

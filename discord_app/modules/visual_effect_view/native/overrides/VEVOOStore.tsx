@@ -1,3 +1,4 @@
+import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/visual_effect_view/native/overrides/VEVOOStore.tsx
 import keys from "keys";
 
@@ -13,8 +14,8 @@ export const getVisualEffectViewOverrides = function getVisualEffectViewOverride
 };
 export const setVisualEffectViewOverides = function setVisualEffectViewOverides(arg0) {
   const _require = arg0;
-  _require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_3.setState(closure_0));
+  _batchUpdates.batchUpdates(() => outer1_3.setState(closure_0));
 };
 export const clearVisualEffectViewOverrides = function clearVisualEffectViewOverrides() {
-  require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => state.setState(closure_2));
+  batchUpdates /* batchUpdates */.batchUpdates(() => state.setState(closure_2));
 };

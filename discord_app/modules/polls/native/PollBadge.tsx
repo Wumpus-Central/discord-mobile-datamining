@@ -1,3 +1,7 @@
+import { registerAsset } from "../../../../_runtime/15629_registerAsset.js";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/polls/native/PollBadge.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -20,13 +24,13 @@ export default function PollBadge(style) {
   let obj = { style: items, children: null };
   items = [tmp.container, style.style];
   obj = { size: null, source: null };
-  obj[0] = require("../../../design/void/native.tsx") /* Button */.IconSizes.EXTRA_SMALL_10;
-  obj[1] = require("../../../../_runtime/15629_registerAsset.js");
-  const items1 = [callback(require("../../../design/void/native.tsx") /* Button */.Icon, obj), ];
+  obj[0] = Button /* Button */.IconSizes.EXTRA_SMALL_10;
+  obj[1] = registerAsset;
+  const items1 = [callback(Button /* Button */.Icon, obj), ];
   obj = { style: tmp.text, variant: "text-xs/semibold", children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.RgIi2B);
-  items1[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.RgIi2B);
+  items1[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items1;
   return callback2(View, obj);
 };

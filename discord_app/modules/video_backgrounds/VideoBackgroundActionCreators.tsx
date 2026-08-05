@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/video_backgrounds/VideoBackgroundActionCreators.tsx
 import dispatcher from "dispatcher";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -394,7 +395,7 @@ export const deleteVideoFilterAsset = function deleteVideoFilterAsset() {
 export { saveLastUsedBackgroundOption };
 export const applyMediaFilterSettings = function applyMediaFilterSettings(arg0) {
   if (_detectH265HardwareDecode.isSupported()) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS", settings: null };
     obj[1] = arg0;
     obj.dispatch(obj);
@@ -402,10 +403,10 @@ export const applyMediaFilterSettings = function applyMediaFilterSettings(arg0) 
 };
 export const startApplyMediaFilterSettings = function startApplyMediaFilterSettings() {
   if (_detectH265HardwareDecode.isSupported()) {
-    require("../../Dispatcher.tsx").dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START" });
-    const obj = require("../../Dispatcher.tsx");
+    dispatcher.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START" });
+    const obj = dispatcher;
   }
 };
 export const errorApplyingMediaFilterSettings = function errorApplyingMediaFilterSettings() {
-  require("../../Dispatcher.tsx").dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR" });
+  dispatcher.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR" });
 };

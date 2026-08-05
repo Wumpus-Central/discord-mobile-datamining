@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { set } from "../../regional_feature_config/RegionalTeenUtils.tsx";
 // discord_app/modules/nuf/native/NotificationPermissionUtil.tsx
 import _slicedToArray from "_slicedToArray";
 import EventActionType from "EventActionType";
@@ -296,11 +298,11 @@ export const enableProvisionalPushNotification = function enableProvisionalPushN
 export const useCanSeePushNotificationNudge = function useCanSeePushNotificationNudge() {
   let require;
   let tmp4;
-  const isTeenInStrictCountry = require("../../regional_feature_config/RegionalTeenUtils.tsx") /* set */.useIsTeenInStrictCountry();
-  const obj = require("../../regional_feature_config/RegionalTeenUtils.tsx") /* set */;
+  const isTeenInStrictCountry = set /* set */.useIsTeenInStrictCountry();
+  const obj = set /* set */;
   const items = [set];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => state.authorizationStatus);
-  const obj2 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => state.authorizationStatus);
+  const obj2 = initialize /* initialize */;
   [tmp4, require] = callback(React.useState(false), 2);
   const effect = React.useEffect(() => {
     const NativePermissionManager = outer1_6.NativePermissionManager;
@@ -329,12 +331,12 @@ export const useCanSeePushNotificationNudge = function useCanSeePushNotification
 export const useShouldShowPushNotificationNudgeByPromptType = function useShouldShowPushNotificationNudgeByPromptType(CHANNEL_BANNER) {
   let require;
   let tmp7;
-  const isTeenInStrictCountry = require("../../regional_feature_config/RegionalTeenUtils.tsx") /* set */.useIsTeenInStrictCountry();
-  let obj = require("../../regional_feature_config/RegionalTeenUtils.tsx") /* set */;
+  const isTeenInStrictCountry = set /* set */.useIsTeenInStrictCountry();
+  let obj = set /* set */;
   const tmp = require;
   const items = [set];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => state.authorizationStatus);
-  const obj2 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => state.authorizationStatus);
+  const obj2 = initialize /* initialize */;
   const tmp4 = set;
   [tmp7, require] = callback(React.useState(false), 2);
   const effect = React.useEffect(() => {

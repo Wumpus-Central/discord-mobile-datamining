@@ -1,3 +1,8 @@
+import { EmojiTypes } from "../modules/emojis/EmojiTypes.tsx";
+import { getAvatarURL } from "AvatarUtils.tsx";
+import { getURL } from "EmojiUtilsPlatformed.native.tsx";
+import { fit } from "ImageUtils.tsx";
+import { getPremiumPlanItem } from "PremiumUtils.tsx";
 // discord_app/utils/EmojiUtils.tsx
 import closure_3 from "set";
 import createChannelRecord from "createChannelRecord";
@@ -28,7 +33,7 @@ function getEmojiUnavailableReason(intention) {
     }
   }
   intention = intention.intention;
-  let tmp5 = emoji.type === require("../modules/emojis/EmojiTypes.tsx") /* EmojiTypes */.EmojiTypes.GUILD;
+  let tmp5 = emoji.type === EmojiTypes /* EmojiTypes */.EmojiTypes.GUILD;
   if (!tmp5) {
     tmp5 = null != emoji.guildId;
   }
@@ -118,7 +123,7 @@ function getEmojiUnavailableReason(intention) {
             }
             return PREMIUM_LOCKED;
           }
-          obj = require("PremiumUtils.tsx");
+          obj = getPremiumPlanItem;
           tmp27 = importDefault;
         }
       }
@@ -184,7 +189,7 @@ export default {
   isInternalEmojiForGuildId(type) {
     let tmp = null != type && null != arg1;
     if (tmp) {
-      const tmp4 = type.type === require("../modules/emojis/EmojiTypes.tsx") /* EmojiTypes */.EmojiTypes.GUILD || null != type.guildId;
+      const tmp4 = type.type === EmojiTypes /* EmojiTypes */.EmojiTypes.GUILD || null != type.guildId;
       let tmp5 = !tmp4;
       if (tmp4) {
         tmp5 = arg1 === type.guildId;
@@ -195,7 +200,7 @@ export default {
   },
   getEmojiUnavailableReason,
   isCustomEmoji(emoji) {
-    let tmp = emoji.type === require("../modules/emojis/EmojiTypes.tsx") /* EmojiTypes */.EmojiTypes.GUILD;
+    let tmp = emoji.type === EmojiTypes /* EmojiTypes */.EmojiTypes.GUILD;
     if (!tmp) {
       tmp = null != emoji.guildId;
     }
@@ -312,7 +317,7 @@ export default {
     return size.size > 2097152;
   },
   isDataTooBig(arg0) {
-    return require("ImageUtils.tsx") /* fit */.dataUriFileSize(arg0) > closure_9;
+    return fit /* fit */.dataUriFileSize(arg0) > closure_9;
   }
 };
 export const countEmoji = function countEmoji(arr) {
@@ -373,10 +378,10 @@ export const getEmojiUrl = function getEmojiUrl(arg0, arg1) {
       animated = false;
     }
     obj[2] = animated;
-    let emojiURL = require("AvatarUtils.tsx").getEmojiURL(obj);
-    const obj2 = require("AvatarUtils.tsx");
+    let emojiURL = getAvatarURL.getEmojiURL(obj);
+    const obj2 = getAvatarURL;
   } else {
-    obj = require("EmojiUtilsPlatformed.native.tsx");
+    obj = getURL;
     emojiURL = obj.getURL(tmp);
   }
   return emojiURL;

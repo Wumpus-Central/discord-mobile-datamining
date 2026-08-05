@@ -1,3 +1,5 @@
+import { getGuildNameSuggestion } from "../../../../utils/GuildUtils.tsx";
+import { sortByMatchScore } from "../../../autocompleter/index.tsx";
 // discord_app/modules/search/native/stores/SearchMemberTabStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { Permissions } from "ME";
@@ -66,7 +68,7 @@ prototype["search"] = function search(arg0, targetChannelId, str) {
   const trimmed = str.toLowerCase().trim();
   this.searchQueryString = trimmed;
   str = str.toLowerCase();
-  const members = require("../../../../utils/GuildUtils.tsx").requestMembers(arg0, trimmed, 50);
+  const members = getGuildNameSuggestion.requestMembers(arg0, trimmed, 50);
   const autocompleter = this.autocompleter;
   autocompleter.search(trimmed);
 };
@@ -168,7 +170,7 @@ const searchGuildMemberTabStoreImpl = new SearchGuildMemberTabStoreImpl(require(
           outer1_9.emitChange();
         }
       };
-      let tmp4 = require("../../../autocompleter/index.tsx");
+      let tmp4 = sortByMatchScore;
       let items = [obj(7230).AutocompleterResultTypes.USER];
       tmp4 = new tmp4(onAutocompleterResultsChange, items, 50);
       obj.autocompleter = tmp4;

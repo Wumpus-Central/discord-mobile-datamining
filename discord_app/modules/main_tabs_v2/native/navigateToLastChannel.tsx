@@ -1,8 +1,11 @@
+import { transitionToChannel } from "../../routing/transitionToChannel.tsx";
+import { navigationToRootTabHelper } from "../helpers/NavigationRouteUtils.native.tsx";
+import { getNavigatorCurrentRoute } from "../navigator/getNavigatorCurrentRoute.tsx";
 // discord_app/modules/main_tabs_v2/native/navigateToLastChannel.tsx
 const result = require("transitionToChannel").fileFinishedImporting("modules/main_tabs_v2/native/navigateToLastChannel.tsx");
 
 export default function navigateToLastChannel() {
-  const coerceGuildsRouteResult = require("../helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */.coerceGuildsRoute(require("../navigator/getNavigatorCurrentRoute.tsx")());
+  const coerceGuildsRouteResult = navigationToRootTabHelper /* navigationToRootTabHelper */.coerceGuildsRoute(getNavigatorCurrentRoute());
   let tmp4 = null != coerceGuildsRouteResult;
   if (tmp4) {
     const params = coerceGuildsRouteResult.params;
@@ -18,7 +21,7 @@ export default function navigateToLastChannel() {
     if (params2 != null) {
       channelId1 = params2.channelId;
     }
-    require("../../routing/transitionToChannel.tsx") /* transitionToChannel */.transitionToChannel(channelId1);
-    const tmpResult = require("../../routing/transitionToChannel.tsx") /* transitionToChannel */;
+    transitionToChannel /* transitionToChannel */.transitionToChannel(channelId1);
+    const tmpResult = transitionToChannel /* transitionToChannel */;
   }
 };

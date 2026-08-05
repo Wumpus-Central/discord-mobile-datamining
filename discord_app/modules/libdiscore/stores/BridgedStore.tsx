@@ -1,3 +1,4 @@
+import { fluxApi } from "../FluxApi.tsx";
 // discord_app/modules/libdiscore/stores/BridgedStore.tsx
 const result = require("set").fileFinishedImporting("modules/libdiscore/stores/BridgedStore.tsx");
 
@@ -6,7 +7,7 @@ export const ensureValidMode = function ensureValidMode(arg0) {
   if ("typescript" === arg0) {
     str = arg0;
   } else {
-    const obj = require("../FluxApi.tsx") /* fluxApi */;
+    const obj = fluxApi /* fluxApi */;
   }
   return str;
 };

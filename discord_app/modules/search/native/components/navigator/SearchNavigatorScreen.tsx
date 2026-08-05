@@ -1,3 +1,8 @@
+import { getMixedGradientColor } from "../../../../client_themes/native/ThemedGradient.tsx";
+import { useBaseAppContainerDimensions } from "../../../../screen/native/useBaseAppContainerDimensions.tsx";
+import { useSearchLayoutInsetTop } from "../../hooks/useSearchLayoutInsetTop.tsx";
+import { SearchFreezeContainer } from "../layout/SearchScreenLayout.tsx";
+import { SearchScreenSearchBar } from "../layout/SearchScreenSearchBar.tsx";
 // discord_app/modules/search/native/components/navigator/SearchNavigatorScreen.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -46,13 +51,13 @@ export default function SearchNavigatorScreen(navigation) {
     obj[0] = outer1_5(navigation(outer1_2[8]).PressableOpacity, obj);
     return outer1_5(outer1_4, obj);
   }, items);
-  const items1 = [callback(require("../../../../client_themes/native/ThemedGradient.tsx"), { absolute: true, wide: true, tall: true }), ];
+  const items1 = [callback(getMixedGradientColor, { absolute: true, wide: true, tall: true }), ];
   obj = { gesture, children: null };
   const obj1 = { style: items2, children: null };
-  items2 = [tmp.wrapper, { paddingTop: require("../../hooks/useSearchLayoutInsetTop.tsx")() }];
-  const items3 = [callback(require("../layout/SearchScreenSearchBar.tsx"), { searchContext, suggestionsDismissed: dismissed, setSuggestionsDismissed: setDismissed, onSuggestionsLayoutMesure: onLayoutMeasure, backButton: memo }), ];
-  const tmp3 = require("../../hooks/useSearchLayoutInsetTop.tsx")();
-  items3[1] = callback(View, { style: tmp.tabs, children: callback(require("../layout/SearchScreenLayout.tsx"), { searchContext, width: require("../../../../screen/native/useBaseAppContainerDimensions.tsx")().width }) });
+  items2 = [tmp.wrapper, { paddingTop: useSearchLayoutInsetTop() }];
+  const items3 = [callback(SearchScreenSearchBar, { searchContext, suggestionsDismissed: dismissed, setSuggestionsDismissed: setDismissed, onSuggestionsLayoutMesure: onLayoutMeasure, backButton: memo }), ];
+  const tmp3 = useSearchLayoutInsetTop();
+  items3[1] = callback(View, { style: tmp.tabs, children: callback(SearchFreezeContainer, { searchContext, width: useBaseAppContainerDimensions().width }) });
   obj1[1] = items3;
   obj[1] = callback2(View, obj1);
   items1[1] = callback(navigation(15357).NonCollapsableGestureDetector, obj);

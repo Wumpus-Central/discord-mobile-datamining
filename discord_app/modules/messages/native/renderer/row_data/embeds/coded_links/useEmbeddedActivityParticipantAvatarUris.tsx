@@ -1,3 +1,4 @@
+import { isDiscordFrontendDevelopment } from "../../../../../../../utils/GlobalUtils.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/useEmbeddedActivityParticipantAvatarUris.tsx
 import noop from "noop";
 import participantFromServer from "participantFromServer";
@@ -55,5 +56,5 @@ export const getEmbeddedActivityParticipantAvatarUris = function getEmbeddedActi
     }
     return "" + avatarURL;
   });
-  return mapped.filter(require("../../../../../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
+  return mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
 };

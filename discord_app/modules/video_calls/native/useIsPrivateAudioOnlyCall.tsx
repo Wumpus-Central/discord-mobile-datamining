@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/video_calls/native/useIsPrivateAudioOnlyCall.tsx
 import _slicedToArray from "_slicedToArray";
 import participantFromServer from "participantFromServer";
@@ -29,11 +30,11 @@ export default function useIsPrivateAudioOnlyCall(id) {
     }, items1, areParticipantStatesEqual), 1)[0]);
   }
   const dependencyMap = tmp3;
-  obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  obj = _initialize;
   const tmp = _require;
   const items2 = [updateVoiceState, _detectH265HardwareDecode, reset];
   const items3 = [id, tmp3];
-  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
+  return _initialize.useStateFromStores(items2, () => {
     let isPrivateResult = _private.isPrivate();
     if (isPrivateResult) {
       isPrivateResult = !outer1_7.hasVideo(tmp.id);

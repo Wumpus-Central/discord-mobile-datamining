@@ -1,3 +1,5 @@
+import { set } from "../../../core/native/NativeView.tsx";
+import { dismissPanel } from "../VoicePanelStateContext.tsx";
 // discord_app/modules/voice_panel/native/card/VoicePanelNoVideoParticipantsCard.tsx
 import importAllResult from "noop";
 import { Pressable } from "get ActivityIndicator";
@@ -19,7 +21,7 @@ obj[3] = { color: require("Themes").unsafe_rawColors.PRIMARY_860 };
 let closure_7 = createCacheKey.createStyles(obj);
 const obj2 = { color: require("Themes").unsafe_rawColors.PRIMARY_860 };
 const memoResult = importAllResult.memo(function VoicePanelNoVideoParticipantsCard() {
-  const channelId = importAllResult.useContext(require("../VoicePanelStateContext.tsx")).channelId;
+  const channelId = importAllResult.useContext(dismissPanel).channelId;
   const tmp = callback3();
   const items = [channelId];
   const callback = importAllResult.useCallback(() => {
@@ -39,7 +41,7 @@ const memoResult = importAllResult.memo(function VoicePanelNoVideoParticipantsCa
   obj[4] = callback(channelId(4281).Text, obj1);
   items1[1] = callback(Pressable, obj);
   obj[1] = items1;
-  return callback2(require("../../../core/native/NativeView.tsx"), obj);
+  return callback2(set, obj);
 });
 let result = require("jsxProd").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelNoVideoParticipantsCard.tsx");
 

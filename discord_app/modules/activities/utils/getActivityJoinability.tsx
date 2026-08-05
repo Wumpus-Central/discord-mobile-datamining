@@ -1,3 +1,11 @@
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { useIsActivitiesEnabledForCurrentPlatform } from "../useIsActivitiesEnabledForCurrentPlatform.tsx";
+import { getCurrentUserPresenceActivity } from "getCurrentUserPresenceActivity.tsx";
+import { getEmbeddedActivityJoinability } from "getEmbeddedActivityJoinability.tsx";
+import { getIsInParty } from "getIsInParty.tsx";
+import { getPartySize } from "getPartySize.tsx";
+import { hasFlag } from "hasFlag.tsx";
+import { isActivityJoinableOnCurrentPlatform } from "isActivityJoinableOnCurrentPlatform.tsx";
 // discord_app/modules/activities/utils/getActivityJoinability.tsx
 import ME from "ME";
 
@@ -44,14 +52,14 @@ export default function getActivityJoinability(arg0) {
           obj[2] = channelId;
           obj[3] = tmp2;
           obj[4] = tmp;
-          const tmp45 = require("getEmbeddedActivityJoinability.tsx");
-          obj[5] = require("../useIsActivitiesEnabledForCurrentPlatform.tsx") /* useIsActivitiesEnabledForCurrentPlatform */.getIsActivitiesEnabledForCurrentPlatform();
+          const tmp45 = getEmbeddedActivityJoinability;
+          obj[5] = useIsActivitiesEnabledForCurrentPlatform /* useIsActivitiesEnabledForCurrentPlatform */.getIsActivitiesEnabledForCurrentPlatform();
           obj[6] = ChannelStore;
           obj[7] = VoiceStateStore;
           obj[8] = tmp3;
           obj[9] = GuildStore;
-          const obj8 = require("../useIsActivitiesEnabledForCurrentPlatform.tsx") /* useIsActivitiesEnabledForCurrentPlatform */;
-          if (tmp45Result === require("getEmbeddedActivityJoinability.tsx") /* getEmbeddedActivityJoinability */.EmbeddedActivityJoinability.CAN_JOIN) {
+          const obj8 = useIsActivitiesEnabledForCurrentPlatform /* useIsActivitiesEnabledForCurrentPlatform */;
+          if (tmp45Result === getEmbeddedActivityJoinability /* getEmbeddedActivityJoinability */.EmbeddedActivityJoinability.CAN_JOIN) {
             let CANNOT_JOIN2 = obj.CAN_JOIN;
           } else {
             CANNOT_JOIN2 = obj.CANNOT_JOIN;
@@ -61,23 +69,23 @@ export default function getActivityJoinability(arg0) {
       }
       if (isEmbedded) {
         if (null == channelId) {
-          if (!require("hasFlag.tsx")(activity, constants.CONTEXTLESS)) {
+          if (!hasFlag(activity, constants.CONTEXTLESS)) {
             return obj.CANNOT_JOIN;
           }
         }
       }
       if (!isEmbedded) {
-        if (require("isActivityJoinableOnCurrentPlatform.tsx")(activity)) {
-          const obj2 = require("../../../utils/PlatformUtils.tsx") /* set */;
+        if (isActivityJoinableOnCurrentPlatform(activity)) {
+          const obj2 = set /* set */;
         }
         return obj.CANNOT_JOIN;
       }
-      const partySize = require("getPartySize.tsx") /* getPartySize */.getPartySize(activity);
-      const obj3 = require("getPartySize.tsx") /* getPartySize */;
+      const partySize = getPartySize /* getPartySize */.getPartySize(activity);
+      const obj3 = getPartySize /* getPartySize */;
       const tmp27 = require;
       if (obj4.hasPartySize(partySize)) {
         if (!tmp27Result.isPartyFull(partySize)) {
-          if (require("hasFlag.tsx")(activity, constants.PARTY_PRIVACY_FRIENDS)) {
+          if (hasFlag(activity, constants.PARTY_PRIVACY_FRIENDS)) {
             if (RelationshipStore.isFriend(user.id)) {
               return obj.CAN_JOIN;
             }
@@ -125,13 +133,13 @@ export default function getActivityJoinability(arg0) {
     if (activity != null) {
       application_id1 = activity.application_id;
     }
-    const tmp8Result = require("getCurrentUserPresenceActivity.tsx")(tmp4, tmp5, application_id1);
+    const tmp8Result = getCurrentUserPresenceActivity(tmp4, tmp5, application_id1);
     let isInParty = null != tmp8Result;
     if (isInParty) {
-      obj = require("getIsInParty.tsx") /* getIsInParty */;
+      obj = getIsInParty /* getIsInParty */;
       isInParty = obj.getIsInParty(tmp8Result, activity);
     }
-    const tmp8 = require("getCurrentUserPresenceActivity.tsx");
+    const tmp8 = getCurrentUserPresenceActivity;
   }
   return obj.JOINED;
 };

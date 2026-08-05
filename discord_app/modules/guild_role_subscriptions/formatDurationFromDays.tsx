@@ -1,17 +1,18 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/guild_role_subscriptions/formatDurationFromDays.tsx
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/formatDurationFromDays.tsx");
 
 export default function formatDurationFromDays(days) {
   if (days > 0) {
     if (days % 7 === 0) {
-      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl2 = getSystemLocale /* getSystemLocale */.intl;
       let obj = { weeks: null };
       obj[0] = days / 7;
-      let formatToPlainStringResult = intl2.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.EmoBD2, obj);
+      let formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.EmoBD2, obj);
     }
     return formatToPlainStringResult;
   }
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   obj = { days };
-  formatToPlainStringResult = intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t["k2UNz+"], obj);
+  formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["k2UNz+"], obj);
 };

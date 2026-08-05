@@ -1,3 +1,11 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { useTheme } from "../../../../hooks/useTheme.tsx";
+import { computeChannelName } from "../../../channel/useChannelName.tsx";
+import { useIsUsingClientTheme } from "../../../client_themes/native/useIsUsingClientTheme.tsx";
+import { smartOutput } from "../../../markup/MarkupRulesUtils.tsx";
+import { map } from "../../../screen/native/useScaledTextLineHeight.android.tsx";
+import { getChannelFromEvent } from "../../utils/EntityUtils.tsx";
 // discord_app/modules/guild_scheduled_events/native/guild_sidebar/GuildLiveChannelNotice.tsx
 import importAllResult from "Text";
 import { View } from "MINIMUM_HIT_AREA";
@@ -133,7 +141,7 @@ function JoinChannelButton(label) {
   }
   const tmp = callback4();
   const items = [channel];
-  const tmp2 = require("../../../../hooks/useTheme.tsx")();
+  const tmp2 = useTheme();
   let obj = { style: tmp.button, children: null };
   const callback = importAllResult.useCallback(() => {
     if (null != activeEventOrStageInstanceChannel) {
@@ -149,7 +157,7 @@ function JoinChannelButton(label) {
     }
   }, items);
   obj = { onPress: callback, variant: null, size: "sm", disabled: null, text: null };
-  const tmp3 = require("../../../client_themes/native/useIsUsingClientTheme.tsx")();
+  const tmp3 = useIsUsingClientTheme();
   const tmp6 = View;
   let str = "tertiary";
   if (obj3.isThemeLight(tmp2)) {
@@ -175,7 +183,7 @@ function GuildVoiceEventNotice(channel) {
   let obj1 = channel(589);
   const items1 = [getUncachedChannelPermissions];
   const stateFromStores = obj1.useStateFromStores(items1, () => outer1_9.can(outer1_12.CONNECT, channel));
-  const tmp2 = require("../../../channel/useChannelName.tsx")(channel);
+  const tmp2 = computeChannelName(channel);
   const items2 = [reset];
   obj = { heading: null, topic: null, location: null, LocationIcon: null, LiveIcon: null, voiceUsers: null, joinButton: null };
   const stateFromStores1 = channel(589).useStateFromStores(items2, () => outer1_8.getAllApplicationStreamsForChannel(channel.id).length > 0);
@@ -202,7 +210,7 @@ function GuildVoiceEventNotice(channel) {
 }
 function GuildExternalEventNotice(guildEvent) {
   guildEvent = guildEvent.guildEvent;
-  let obj = require("../../utils/EntityUtils.tsx") /* getChannelFromEvent */;
+  let obj = getChannelFromEvent /* getChannelFromEvent */;
   const locationFromEvent = obj.getLocationFromEvent(guildEvent);
   let tmp4 = null;
   if (null != locationFromEvent) {
@@ -245,7 +253,7 @@ function GuildLiveStageNotice(channel) {
   const items = [getActiveStageChannelIds];
   const items1 = [channel.id];
   const stateFromStores = obj1.useStateFromStores(items, () => outer1_6.getParticipantCount(channel.id, channel(outer1_3[38]).StageChannelParticipantNamedIndex.AUDIENCE), items1);
-  const tmp2 = require("../../../channel/useChannelName.tsx")(channel);
+  const tmp2 = computeChannelName(channel);
   const items2 = [getUncachedChannelPermissions];
   const stateFromStores1 = channel(589).useStateFromStores(items2, () => outer1_9.can(outer1_12.CONNECT, channel));
   const obj3 = channel(589);
@@ -305,8 +313,8 @@ obj.guild = {
     if (typeof content.content === "string") {
       content = content.content;
     } else {
-      content = require("../../../markup/MarkupRulesUtils.tsx") /* smartOutput */.smartOutput(content, output, state);
-      const obj = require("../../../markup/MarkupRulesUtils.tsx") /* smartOutput */;
+      content = smartOutput /* smartOutput */.smartOutput(content, output, state);
+      const obj = smartOutput /* smartOutput */;
     }
     return content;
   }
@@ -316,13 +324,13 @@ let closure_26 = importDefaultResult.reactParserFor(obj);
 let closure_27 = createCacheKey.createStyles((height) => {
   obj = { container: obj, overflowCircle: null, wrapper: null, badge: null, audienceBadge: null };
   obj = { flexDirection: "row", alignItems: "center", marginTop: PX_82 };
-  obj = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_STRONG, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", height, paddingHorizontal: 6 };
+  obj = { backgroundColor: Themes.colors.BACKGROUND_MOD_STRONG, borderRadius: Themes.radii.round, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", height, paddingHorizontal: 6 };
   obj[1] = obj;
-  obj[2] = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, height: closure_19 };
-  const obj1 = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, height: closure_19 };
-  obj[3] = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, paddingHorizontal: 8, display: "flex", flexDirection: "row", alignItems: "center", height };
-  const obj2 = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, paddingHorizontal: 8, display: "flex", flexDirection: "row", alignItems: "center", height };
-  obj[4] = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWER };
+  obj[2] = { borderRadius: Themes.radii.round, backgroundColor: Themes.colors.BACKGROUND_BASE_LOW, height: closure_19 };
+  const obj1 = { borderRadius: Themes.radii.round, backgroundColor: Themes.colors.BACKGROUND_BASE_LOW, height: closure_19 };
+  obj[3] = { borderRadius: Themes.radii.round, paddingHorizontal: 8, display: "flex", flexDirection: "row", alignItems: "center", height };
+  const obj2 = { borderRadius: Themes.radii.round, paddingHorizontal: 8, display: "flex", flexDirection: "row", alignItems: "center", height };
+  obj[4] = { backgroundColor: Themes.colors.BACKGROUND_BASE_LOWER };
   return obj;
 });
 let obj2 = { card: { padding: PX_122 }, row: { flexDirection: "row", alignItems: "center" }, infoRow: { marginTop: PX_4 }, liveNowIcon: { marginEnd: 4 }, uppercase: { textTransform: "uppercase" }, headingText: null, liveDot: null, calendarIcon: null, topic: null, button: null };
@@ -374,9 +382,9 @@ let closure_31 = importAllResult.memo((arg0) => {
   items1[1] = isLiveStreaming;
   obj1[2] = items1;
   obj1[3] = heading;
-  items[1] = tmp4(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  items[1] = tmp4(Text /* Text */.Text, obj1);
   obj[1] = items;
-  const items2 = [closure_14(View, obj), voiceUsers, tmp4(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.topic, lineClamp: 1, variant: c22, color: "redesign-channel-name-text", children: topic }), , ];
+  const items2 = [closure_14(View, obj), voiceUsers, tmp4(Text /* Text */.Text, { style: tmp.topic, lineClamp: 1, variant: c22, color: "redesign-channel-name-text", children: topic }), , ];
   const obj3 = { style: items3, children: null };
   items3 = [, ];
   ({ row: arr4[0], infoRow: arr4[1] } = tmp);
@@ -517,7 +525,7 @@ export const getScaledLiveChannelNoticeHeight = function getScaledLiveChannelNot
   let hasSpeakers;
   let hasStream;
   ({ hasSpeakers, hasButton, hasAudience, hasStream } = guildLiveChannelNoticeInfo);
-  require("../../../screen/native/useScaledTextLineHeight.android.tsx") /* map */;
+  map /* map */;
   if (!hasSpeakers) {
     if (!hasAudience) {
       let num = 0;

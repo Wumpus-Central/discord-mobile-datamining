@@ -1,3 +1,6 @@
+import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
+import { useUserIdsForLinkStatus } from "../hooks/useUserLinks.tsx";
+import { FamilyCenterParentalConsentNotice } from "FamilyCenterParentalConsentNotice.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterActivityPage.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -22,11 +25,11 @@ const result = require("jsxProd").fileFinishedImporting("modules/parent_tools/na
 
 export default function FamilyCenterActivityPage() {
   const tmp = createCacheKey();
-  let obj = require("../hooks/useUserLinks.tsx") /* useUserIdsForLinkStatus */;
+  let obj = useUserIdsForLinkStatus /* useUserIdsForLinkStatus */;
   obj = { style: tmp.scrollView, children: null };
   const activeLinkUserIds = obj.useActiveLinkUserIds();
   obj = { style: tmp.container, children: null };
-  const items = [callback(require("FamilyCenterParentalConsentNotice.tsx"), {}), ];
+  const items = [callback(FamilyCenterParentalConsentNotice, {}), ];
   if (0 === activeLinkUserIds.length) {
     const obj1 = { children: null };
     const items1 = [tmp3(tmp7(14025), {}), tmp3(tmp7(14035), {}), ];
@@ -41,6 +44,6 @@ export default function FamilyCenterActivityPage() {
   }
   items[1] = tmp3Result;
   obj[1] = items;
-  obj[1] = callback(require("../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, { bottom: true, children: closure_7(closure_3, obj) });
+  obj[1] = callback(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, { bottom: true, children: closure_7(closure_3, obj) });
   return callback(closure_4, obj);
 };

@@ -1,3 +1,4 @@
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/collectibles/hooks/useFetchCollectiblesProduct.tsx
 import _slicedToArray from "_slicedToArray";
 import { useEffect } from "noop";
@@ -11,7 +12,7 @@ const result = require("addSku").fileFinishedImporting("modules/collectibles/hoo
 export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(skuId, arg1) {
   const _require = skuId;
   const dependencyMap = arg1;
-  let obj = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
+  let obj = _defaultAreStatesEqual;
   let items = [addSku];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let value = null;

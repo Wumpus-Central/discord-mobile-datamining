@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/search/native/components/layout/SearchBar.tsx
 import importAllResult from "module_11647";
 import { View } from "getFontScale";
@@ -23,7 +24,7 @@ let closure_15 = createCacheKey.createStyles((arg0, minHeight) => {
     obj[0] = minHeight + 2;
   } else {
     obj = { borderRadius: null, minHeight: null };
-    obj[0] = require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.round;
+    obj[0] = Themes.radii.round;
     obj[1] = minHeight;
   }
   obj = { searchBar: null, icon: null };

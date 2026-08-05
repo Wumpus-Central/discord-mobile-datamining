@@ -1,3 +1,6 @@
+import { shared } from "../../../../discord_common/js/packages/design/shared.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { hexToRgba } from "../../../utils/ColorUtils.tsx";
 // discord_app/modules/quests/native/QuestCard.tsx
 import initializeState from "initializeState";
 import useAdContentImpressionTrackerProps from "useAdContentImpressionTrackerProps";
@@ -26,32 +29,32 @@ let c5 = importAllResult;
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let result = createCacheKey.experimental_createToken((theme) => {
   theme = theme.theme;
-  const obj = require("../../../../discord_common/js/packages/design/shared.tsx");
+  const obj = shared;
   const tmp = require;
-  const internal = require("../../../../discord_common/js/packages/tokens/native.tsx").internal;
-  const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
-  const semanticColor = internal.resolveSemanticColor(theme, require("../../../../discord_common/js/packages/design/shared.tsx").isThemeDark(theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK);
-  const isThemeDarkResult = require("../../../../discord_common/js/packages/design/shared.tsx").isThemeDark(theme);
+  const internal = Themes.internal;
+  const colors = Themes.colors;
+  const semanticColor = internal.resolveSemanticColor(theme, shared.isThemeDark(theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK);
+  const isThemeDarkResult = shared.isThemeDark(theme);
   return tmp(4129).hexOpacityToRgba(semanticColor, 0);
 });
 let result1 = createCacheKey.experimental_createToken((theme) => {
   theme = theme.theme;
-  const isThemeDarkResult = require("../../../../discord_common/js/packages/design/shared.tsx").isThemeDark(theme);
-  const internal = require("../../../../discord_common/js/packages/tokens/native.tsx").internal;
-  const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
+  const isThemeDarkResult = shared.isThemeDark(theme);
+  const internal = Themes.internal;
+  const colors = Themes.colors;
   const semanticColor = internal.resolveSemanticColor(theme, isThemeDarkResult ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK);
-  const obj = require("../../../../discord_common/js/packages/design/shared.tsx");
+  const obj = shared;
   const tmp = require;
   let num = 0.5;
   if (isThemeDarkResult) {
     num = 0.8;
   }
-  return require("../../../utils/ColorUtils.tsx") /* hexToRgba */.hexOpacityToRgba(semanticColor, num);
+  return hexToRgba /* hexToRgba */.hexOpacityToRgba(semanticColor, num);
 });
 let result2 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require("../../../../discord_common/js/packages/design/shared.tsx");
-  const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
-  return require("../../../../discord_common/js/packages/design/shared.tsx").isThemeDark(theme.theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK;
+  const obj = shared;
+  const colors = Themes.colors;
+  return shared.isThemeDark(theme.theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK;
 });
 const PX_16 = require("Themes").space.PX_16;
 let obj = { container: null, heroContainer: null, heroImg: null, heroLinearGradientOverlay: null, previewBadge: null, rewardImgContainer: null, heroFooterContainer: null, heroFooterLeftContainer: null, detailsWrapper: null, detailsContainer: null, questName: null, bodyContainer: null, subtitleRow: null, orbWithAmountRow: null, detailsTextContainer: null, buttonContainers: null, equalWidthContainer: null };

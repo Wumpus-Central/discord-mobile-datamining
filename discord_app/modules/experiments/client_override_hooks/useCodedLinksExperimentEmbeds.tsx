@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/experiments/client_override_hooks/useCodedLinksExperimentEmbeds.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -38,7 +39,7 @@ export const canSeeExperimentEmbeds = function canSeeExperimentEmbeds() {
 };
 export const useCanSeeExperimentEmbeds = function useCanSeeExperimentEmbeds() {
   const items = [mergeGuildAvatar];
-  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+  return initialize /* initialize */.useStateFromStores(items, () => {
     const items = [stateFromStores2];
     const first = stateFromStoresObject1(items, 1)[0];
     const currentUser = first.getCurrentUser();

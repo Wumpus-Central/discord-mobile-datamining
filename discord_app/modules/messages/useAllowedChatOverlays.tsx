@@ -1,3 +1,6 @@
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { getEmbeddedActivityLocationChannelId } from "../activities/utils/embeddedActivityLocationUtils.tsx";
+import { isVoiceEmbeddedActivity } from "../activities/utils/isVoiceEmbeddedActivity.tsx";
 // discord_app/modules/messages/useAllowedChatOverlays.tsx
 import participantFromServer from "participantFromServer";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -25,17 +28,17 @@ obj[ActivityPanelModes.ACTIVITY_POPOUT_WINDOW] = items4;
 const result = require("ChatOverlays").fileFinishedImporting("modules/messages/useAllowedChatOverlays.tsx");
 
 export default function useAllowedChatOverlays() {
-  const obj = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
+  const obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
   const items = [participantFromServer];
   const stateFromStores = obj.useStateFromStores(items, () => store.getCurrentEmbeddedActivity());
   const items1 = [participantFromServer];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */.useStateFromStores(items1, () => store.getActivityPanelMode());
-  require("../activities/utils/embeddedActivityLocationUtils.tsx") /* getEmbeddedActivityLocationChannelId */;
+  const stateFromStores1 = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items1, () => store.getActivityPanelMode());
+  getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */;
   if (stateFromStores != null) {
     const _location = stateFromStores.location;
   }
   if (undefined !== stateFromStores) {
-    if (!require("../activities/utils/isVoiceEmbeddedActivity.tsx")(tmp5, ensureGuildLoaded)) {
+    if (!isVoiceEmbeddedActivity(tmp5, ensureGuildLoaded)) {
       let tmp9 = obj[stateFromStores1];
     }
     return tmp9;

@@ -1,3 +1,6 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { setFontSize } from "../../../a11y/AccessibilityActionCreators.tsx";
 // discord_app/modules/user_settings/defs/native/EnableReducedMotionSetting.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import createToggle from "createToggle";
@@ -5,20 +8,20 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.e3TR1b);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.e3TR1b);
   },
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue: function useReducedMotionSettingValue() {
     const items = [maybeApplyNoTextColorForLightCustomTheme];
-    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+    return initialize /* initialize */.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   },
   onValueChange: function onReducedMotionSettingValueChange(arg0) {
     let str = "no-preference";
     if (arg0) {
       str = "reduce";
     }
-    const result = require("../../../a11y/AccessibilityActionCreators.tsx") /* setFontSize */.setPrefersReducedMotion(str);
+    const result = setFontSize /* setFontSize */.setPrefersReducedMotion(str);
   }
 };
 createToggle = createToggle.createToggle(createToggle);

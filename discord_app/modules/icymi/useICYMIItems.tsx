@@ -1,3 +1,4 @@
+import { MessageEmbedTypes } from "ICYMITypes.tsx";
 // discord_app/modules/icymi/useICYMIItems.tsx
 import noop from "noop";
 import filterStaffGuild from "filterStaffGuild";
@@ -5,7 +6,7 @@ import filterStaffGuild from "filterStaffGuild";
 const require = arg1;
 function createItem(id, type, arg2) {
   type = type.type;
-  if (require("ICYMITypes.tsx") /* MessageEmbedTypes */.ICYMIItemTypes.MESSAGE === type) {
+  if (MessageEmbedTypes /* MessageEmbedTypes */.ICYMIItemTypes.MESSAGE === type) {
     if (type.message.id === type.message.channel_id) {
       if (null != type.threadChannel) {
         let obj = { id: null, timestamp: null, channelType: null, data: null, score: null, debugScore: null, unread: null };

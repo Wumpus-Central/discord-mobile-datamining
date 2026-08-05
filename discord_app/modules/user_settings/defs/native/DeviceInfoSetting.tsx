@@ -1,35 +1,38 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { DCDDeviceManager } from "../../../../utils/native/DeviceUtils.tsx";
+import { getClientInfo } from "CopyClientInfoSetting.tsx";
 // discord_app/modules/user_settings/defs/native/DeviceInfoSetting.tsx
 import createToggle from "createToggle";
 
 let obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["+ynK0W"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["+ynK0W"]);
   },
   parent: null,
   IconComponent: require("MobilePhoneSettingsIcon").MobilePhoneSettingsIcon,
   useTrailing: function useDeviceInfo() {
-    const obj = require("CopyClientInfoSetting.tsx") /* getClientInfo */;
-    const clientInfoString = obj.getClientInfoString(require("../../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getDeviceInfo());
-    const obj2 = require("../../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */;
-    const obj3 = require("CopyClientInfoSetting.tsx") /* getClientInfo */;
-    return "" + clientInfoString + " (" + obj3.getClientInfoString(require("../../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getSystemVersion()) + ")";
+    const obj = getClientInfo /* getClientInfo */;
+    const clientInfoString = obj.getClientInfoString(DCDDeviceManager /* DCDDeviceManager */.getDeviceInfo());
+    const obj2 = DCDDeviceManager /* DCDDeviceManager */;
+    const obj3 = getClientInfo /* getClientInfo */;
+    return "" + clientInfoString + " (" + obj3.getClientInfoString(DCDDeviceManager /* DCDDeviceManager */.getSystemVersion()) + ")";
   },
   usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting
 };
 const createStaticResult = createToggle.createStatic({
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["+ynK0W"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["+ynK0W"]);
   },
   parent: null,
   IconComponent: require("MobilePhoneSettingsIcon").MobilePhoneSettingsIcon,
   useTrailing: function useDeviceInfo() {
-    const obj = require("CopyClientInfoSetting.tsx") /* getClientInfo */;
-    const clientInfoString = obj.getClientInfoString(require("../../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getDeviceInfo());
-    const obj2 = require("../../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */;
-    const obj3 = require("CopyClientInfoSetting.tsx") /* getClientInfo */;
-    return "" + clientInfoString + " (" + obj3.getClientInfoString(require("../../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getSystemVersion()) + ")";
+    const obj = getClientInfo /* getClientInfo */;
+    const clientInfoString = obj.getClientInfoString(DCDDeviceManager /* DCDDeviceManager */.getDeviceInfo());
+    const obj2 = DCDDeviceManager /* DCDDeviceManager */;
+    const obj3 = getClientInfo /* getClientInfo */;
+    return "" + clientInfoString + " (" + obj3.getClientInfoString(DCDDeviceManager /* DCDDeviceManager */.getSystemVersion()) + ")";
   },
   usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting
 });

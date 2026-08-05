@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_role_subscriptions/useEmojiByIdOrName.tsx
 import getEmojiToGroupId from "getEmojiToGroupId";
 
@@ -7,7 +8,7 @@ function useEmojiByIdOrName(guildId, emojiId) {
   const dependencyMap = emojiId;
   const items = [getEmojiToGroupId];
   const items1 = [guildId, emojiId];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     if (null == closure_1) {
       return null;
     } else {

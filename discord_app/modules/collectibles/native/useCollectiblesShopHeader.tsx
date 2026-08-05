@@ -1,3 +1,5 @@
+import { ShopIcon } from "../../../design/components/Icon/native/redesign/generated/ShopIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/collectibles/native/useCollectiblesShopHeader.tsx
 import ref from "ref";
 import { View } from "CheckmarkSmallIcon";
@@ -15,7 +17,7 @@ const require = arg1;
 function CollectiblesShopHeaderTitle(currentScreen) {
   const tmp = createCacheKey();
   let obj = { style: tmp.headerTitleContainer, children: null };
-  const items = [callback(require("../../../design/components/Icon/native/redesign/generated/ShopIcon.tsx") /* ShopIcon */.ShopIcon, { size: "md", color: "icon-strong" }), ];
+  const items = [callback(ShopIcon /* ShopIcon */.ShopIcon, { size: "md", color: "icon-strong" }), ];
   obj = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, lineClamp: 1, style: tmp.headerTitle, children: null };
   if (currentScreen.currentScreen === constants.ORBS) {
     const intl2 = tmp5(1236).intl;
@@ -25,7 +27,7 @@ function CollectiblesShopHeaderTitle(currentScreen) {
     stringResult = intl.string(tmp5(1236).t.pWG4ze);
   }
   obj[5] = stringResult;
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Heading, obj);
+  items[1] = callback(Text /* Text */.Heading, obj);
   obj[1] = items;
   return closure_11(View, obj);
 }

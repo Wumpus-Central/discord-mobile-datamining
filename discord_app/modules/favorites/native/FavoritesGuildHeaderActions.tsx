@@ -1,3 +1,6 @@
+import { IconButton } from "../../../design/components/Button/native/IconButton.native.tsx";
+import { useFavoritesGuildHeaderAction } from "../hooks/useFavoritesGuildHeaderAction.tsx";
+import { handleAddToFavorites } from "FavoritesGuildAddActionSheet.tsx";
 // discord_app/modules/favorites/native/FavoritesGuildHeaderActions.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -9,13 +12,13 @@ export const FavoritesGuildHeaderActionButton = function FavoritesGuildHeaderAct
   let exitPreview;
   let isPreview;
   let label;
-  ({ isPreview, exitPreview, label } = require("../hooks/useFavoritesGuildHeaderAction.tsx")());
+  ({ isPreview, exitPreview, label } = useFavoritesGuildHeaderAction());
   const obj = { variant: "secondary", size: "sm", icon: null, onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1 };
   obj[2] = importDefault(isPreview ? 5271 : 11496);
   if (!isPreview) {
-    exitPreview = require("FavoritesGuildAddActionSheet.tsx") /* handleAddToFavorites */.openFavoritesGuildAddActionSheet;
+    exitPreview = handleAddToFavorites /* handleAddToFavorites */.openFavoritesGuildAddActionSheet;
   }
   obj[3] = exitPreview;
   obj[4] = label;
-  return jsx(require("../../../design/components/Button/native/IconButton.native.tsx") /* IconButton */.IconButton, { variant: "secondary", size: "sm", icon: null, onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1 });
+  return jsx(IconButton /* IconButton */.IconButton, { variant: "secondary", size: "sm", icon: null, onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1 });
 };

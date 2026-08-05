@@ -1,3 +1,8 @@
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { showInstantInviteActionSheet } from "../../instant_invite/native/InstantInviteUtils.tsx";
+import { Steps } from "ContactSyncAnalyticsUtils.tsx";
+import { _uploadContacts } from "ContactSyncUtils.tsx";
 // discord_app/modules/contact_sync/native/ContactSyncModalActionCreators.tsx
 import closure_3 from "ContactSyncLandingPage";
 import set from "set";
@@ -804,12 +809,12 @@ export const bulkAddFriendSuggestions = function bulkAddFriendSuggestions(arg0, 
   return applyArgumentsResult;
 };
 export const goBackToLanding = function goBackToLanding(closure_1) {
-  require("ContactSyncAnalyticsUtils.tsx") /* Steps */.trackFlowStep(require("ContactSyncAnalyticsUtils.tsx") /* Steps */.Steps.LANDING, false, true);
+  Steps /* Steps */.trackFlowStep(Steps /* Steps */.Steps.LANDING, false, true);
   closure_1.pop(closure_1.getState().routes.length - 1);
 };
 export const submitPhone = function submitPhone(arg0, closure_0) {
   callback2(arg0);
-  require("ContactSyncAnalyticsUtils.tsx") /* Steps */.trackFlowStep(require("ContactSyncAnalyticsUtils.tsx") /* Steps */.Steps.VERIFY_PHONE_NUMBER, false, false);
+  Steps /* Steps */.trackFlowStep(Steps /* Steps */.Steps.VERIFY_PHONE_NUMBER, false, false);
   closure_0.navigate(constants2.VERIFY_PHONE);
 };
 export const verifyPhone = function verifyPhone() {
@@ -823,15 +828,15 @@ export const verifyPhone = function verifyPhone() {
   return applyArgumentsResult;
 };
 export const verifyPhoneWithPassword = function verifyPhoneWithPassword(arg0, navigation) {
-  require("ContactSyncAnalyticsUtils.tsx") /* Steps */.trackFlowStep(require("ContactSyncAnalyticsUtils.tsx") /* Steps */.Steps.PASSWORD_CONFIRM, false, false);
+  Steps /* Steps */.trackFlowStep(Steps /* Steps */.Steps.PASSWORD_CONFIRM, false, false);
   callback3(arg0);
   navigation.navigate(constants2.VERIFY_PASSWORD);
 };
 export const upsellDismissed = function upsellDismissed() {
-  require("ContactSyncAnalyticsUtils.tsx") /* Steps */.trackFlowEnd(true);
+  Steps /* Steps */.trackFlowEnd(true);
 };
 export const openContactSyncModal = function openContactSyncModal(initialRoutes, FRIENDS_ADD_FRIENDS_MODAL) {
-  let obj = require("ContactSyncUtils.tsx") /* _uploadContacts */;
+  let obj = _uploadContacts /* _uploadContacts */;
   const result = obj.checkContactPermissions();
   result.then((arg0) => {
     callback(arg0);
@@ -846,9 +851,9 @@ export const openContactSyncModal = function openContactSyncModal(initialRoutes,
     const tmpResult = tmp(11949);
   }
   obj = { initialRoutes: initialRoutes.initialRoutes, openSettingsSheet: initialRoutes.openSettings, customLandingPage: initialRoutes.customLandingPage };
-  const obj4 = require("../../../actions/ModalActionCreators.tsx");
+  const obj4 = ModalActionCreators;
   const tmp2 = dependencyMap;
-  require("../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(11952, dependencyMap.paths), obj, closure_20).then(arg2);
+  ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(11952, dependencyMap.paths), obj, closure_20).then(arg2);
 };
 export const openContactSyncModalOnboarding = function openContactSyncModalOnboarding() {
   let flag = arg0;
@@ -858,11 +863,11 @@ export const openContactSyncModalOnboarding = function openContactSyncModalOnboa
   if (!flag) {
     let obj = { location: null };
     obj = { page: null };
-    obj[0] = require("ContactSyncAnalyticsUtils.tsx") /* Steps */.CONTACT_SYNC_ONBOARDING_LOCATION;
+    obj[0] = Steps /* Steps */.CONTACT_SYNC_ONBOARDING_LOCATION;
     obj[0] = obj;
-    require("ContactSyncAnalyticsUtils.tsx") /* Steps */.trackFlowStart(obj);
-    const obj2 = require("ContactSyncAnalyticsUtils.tsx") /* Steps */;
-    require("../../../actions/ModalActionCreators.tsx").pushLazy(callback(function*() {
+    Steps /* Steps */.trackFlowStart(obj);
+    const obj2 = Steps /* Steps */;
+    ModalActionCreators.pushLazy(callback(function*() {
       let closure_1 = tmp5;
       let callback = tmp2;
       yield outer1_0(paths[20])(paths[19], paths.paths);
@@ -873,30 +878,30 @@ export const openContactSyncModalOnboarding = function openContactSyncModalOnboa
       return callback;
     }), {}, closure_20);
   } else {
-    obj = require("../../instant_invite/native/InstantInviteUtils.tsx") /* showInstantInviteActionSheet */;
+    obj = showInstantInviteActionSheet /* showInstantInviteActionSheet */;
     closure_14(obj.hasDeferredInvite() ? closure_13.ONBOARDING_INVITE : closure_13.ONBOARDING);
     const tmp = closure_14;
   }
 };
 export const openContactSyncModalDeeplink = function openContactSyncModalDeeplink() {
   let obj = {};
-  const result = require("ContactSyncUtils.tsx") /* _uploadContacts */.checkContactPermissions();
+  const result = _uploadContacts /* _uploadContacts */.checkContactPermissions();
   result.then((arg0) => {
     callback(arg0);
   });
   if (null == obj.initialRoutes) {
     callback4(constants.NORMAL);
   }
-  const obj2 = require("ContactSyncUtils.tsx") /* _uploadContacts */;
+  const obj2 = _uploadContacts /* _uploadContacts */;
   const tmp2 = dependencyMap;
-  require("ContactSyncAnalyticsUtils.tsx") /* Steps */.trackFlowStart({ location: { page: "Deep Link" } });
-  const tmpResult = require("ContactSyncAnalyticsUtils.tsx") /* Steps */;
+  Steps /* Steps */.trackFlowStart({ location: { page: "Deep Link" } });
+  const tmpResult = Steps /* Steps */;
   obj = { initialRoutes: obj.initialRoutes, openSettingsSheet: obj.openSettings, customLandingPage: obj.customLandingPage };
-  const obj4 = require("../../../actions/ModalActionCreators.tsx");
-  require("../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(11952, tmp2.paths), obj, closure_20).then(undefined);
+  const obj4 = ModalActionCreators;
+  ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(11952, tmp2.paths), obj, closure_20).then(undefined);
 };
 export const refreshContactSyncPermissionStatus = function refreshContactSyncPermissionStatus() {
-  const result = require("ContactSyncUtils.tsx") /* _uploadContacts */.checkContactPermissions();
+  const result = _uploadContacts /* _uploadContacts */.checkContactPermissions();
   result.then((arg0) => {
     callback(arg0);
   });

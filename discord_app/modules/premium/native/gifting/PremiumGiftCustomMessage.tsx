@@ -1,3 +1,4 @@
+import { NativeGiftContextProvider } from "../../../payments/native/NativeGiftContext.tsx";
 // discord_app/modules/premium/native/gifting/PremiumGiftCustomMessage.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -45,7 +46,7 @@ const memoResult = importAllResult.memo((arg0) => {
   let onFocusMessage;
   let setMessagePosition;
   ({ onFocusMessage, setMessagePosition } = arg0);
-  let obj = require("../../../payments/native/NativeGiftContext.tsx") /* NativeGiftContextProvider */;
+  let obj = NativeGiftContextProvider /* NativeGiftContextProvider */;
   const nativeGiftContext = obj.useNativeGiftContext();
   obj = { onFocusMessage, setMessagePosition, customGiftMessage: nativeGiftContext.customGiftMessage, setCustomGiftMessage: nativeGiftContext.setCustomGiftMessage };
   return <GiftCustomMessage onFocusMessage={onFocusMessage} setMessagePosition={setMessagePosition} customGiftMessage={nativeGiftContext.customGiftMessage} setCustomGiftMessage={nativeGiftContext.setCustomGiftMessage} />;

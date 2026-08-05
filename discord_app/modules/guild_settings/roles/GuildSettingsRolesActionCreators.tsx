@@ -1,3 +1,4 @@
+import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/guild_settings/roles/GuildSettingsRolesActionCreators.tsx
 import ComponentDispatcher from "ComponentDispatcher";
 import { ComponentActions } from "ME";
@@ -192,80 +193,80 @@ function _saveRoleSettings() {
 const result = require("dispatcher").fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesActionCreators.tsx");
 
 export const updateRoleSort = function updateRoleSort(roles) {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_SETTINGS_ROLES_SORT_UPDATE", roles };
   obj.dispatch(obj);
 };
 export const init = function init() {
-  require("../../../Dispatcher.tsx").dispatch({ type: "GUILD_SETTINGS_ROLES_INIT" });
+  dispatcher.dispatch({ type: "GUILD_SETTINGS_ROLES_INIT" });
 };
 export const discardSectionChanges = function discardSectionChanges(id, effectiveSection) {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_SETTINGS_ROLES_DISCARD_SECTION_CHANGES", id, section: effectiveSection };
   obj.dispatch(obj);
 };
 export const discardConnectionsChanges = function discardConnectionsChanges(id) {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_SETTINGS_ROLES_DISCARD_CONNECTIONS_CHANGES", id };
   obj.dispatch(obj);
 };
 export const commitSectionChanges = function commitSectionChanges(id, effectiveSection) {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_SETTINGS_ROLES_COMMIT_SECTION_CHANGES", id, section: effectiveSection };
   obj.dispatch(obj);
 };
 export const updateRolePermissions = function updateRolePermissions(id, flag, allow) {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS", id, flag, allow };
   obj.dispatch(obj);
 };
 export const updateRolePermissionSet = function updateRolePermissionSet(id, permissions) {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_PERMISSION_SET", id, permissions };
   obj.dispatch(obj);
 };
 export const clearRolePermissions = function clearRolePermissions(id) {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_SETTINGS_ROLES_CLEAR_PERMISSIONS", id };
   obj.dispatch(obj);
 };
 export const updateRoleName = function updateRoleName(id, name) {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_NAME", id, name };
   obj.dispatch(obj);
 };
 export const updateRoleDescription = function updateRoleDescription(id, description) {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_DESCRIPTION", id, description };
   obj.dispatch(obj);
 };
 export const updateRoleColor = function updateRoleColor(closure_2, color) {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_COLOR", id: closure_2, color };
   obj.dispatch(obj);
 };
 export const updateRoleColors = function updateRoleColors(closure_2, colors, GRADIENT) {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_COLORS", id: closure_2, colors, currentStyle: GRADIENT };
   obj.dispatch(obj);
 };
 export const updateRoleStyles = function updateRoleStyles(closure_2, currentStyle) {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_SETTINGS_ROLES_ROLE_STYLE_UPDATE", id: closure_2, currentStyle };
   obj.dispatch(obj);
 };
 export const toggleRoleSettings = function toggleRoleSettings(id, hoist, mentionable) {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_SETTINGS", id, hoist, mentionable };
   obj.dispatch(obj);
 };
 export const updateRoleIcon = function updateRoleIcon(id, icon, unicodeEmoji) {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON", id, icon, unicodeEmoji };
   obj.dispatch(obj);
 };
 export const updateRoleConnectionConfigurations = function updateRoleConnectionConfigurations(id, roleConnectionConfigurations) {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS", roleId: id, roleConnectionConfigurations };
   obj.dispatch(obj);
 };

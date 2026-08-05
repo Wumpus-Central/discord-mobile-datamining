@@ -1,3 +1,7 @@
+import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { DevToolsContentSortButtons } from "DevToolsContent.tsx";
 // discord_app/modules/devtools/native/components/DevToolsNavigator.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -12,7 +16,7 @@ createNativeStackNavigator = createNativeStackNavigator.createNativeStackNavigat
 let closure_7 = require("noop").memo((screenKey) => {
   let str = screenKey.screenKey;
   let _require;
-  let obj = _require("../../../../design/components/Navigator/native/Navigator.native.tsx");
+  let obj = _NavigationStack;
   _require = obj.useAccessibilityNativeStackOptions();
   if (str == null) {
     str = "home";
@@ -37,7 +41,7 @@ let closure_7 = require("noop").memo((screenKey) => {
   };
   obj = {
     name: "home",
-    component: require("DevToolsContent.tsx"),
+    component: DevToolsContentSortButtons,
     options() {
       return {
         headerTitle() {
@@ -80,7 +84,7 @@ export const navigateToDevTools = function navigateToDevTools(arg0) {
   if (arg0 === undefined) {
     obj = {};
   }
-  require("../../../action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet();
-  const obj2 = require("../../../action_sheet/native/ActionSheetActionCreators.tsx");
-  require("../../../../actions/ModalActionCreators.tsx").pushLazy(() => Promise.resolve(closure_7), { screenKey: obj.screenKey }, "DevToolsNavigator");
+  ACTION_SHEET_HEIGHT_HALF.hideActionSheet();
+  const obj2 = ACTION_SHEET_HEIGHT_HALF;
+  ModalActionCreators.pushLazy(() => Promise.resolve(closure_7), { screenKey: obj.screenKey }, "DevToolsNavigator");
 };

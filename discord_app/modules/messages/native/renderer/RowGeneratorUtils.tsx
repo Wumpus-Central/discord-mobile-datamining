@@ -1,3 +1,8 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { hexToRgba } from "../../../../utils/ColorUtils.tsx";
+import { getSrcWithWidthAndHeight } from "../../../../utils/native/ImageUtils.tsx";
+import { useCanManageGuildOfficialMessages } from "../../GuildOfficialMessageUtils.tsx";
+import { createMinimalMessageRecord } from "../../MessageRecordUtils.tsx";
 // discord_app/modules/messages/native/renderer/RowGeneratorUtils.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -16,7 +21,7 @@ let error;
 const require = arg1;
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_6, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: error } = MESSAGE_GROUP_SPACING);
 ({ MessageFlags: c9, MessageTypes: c10 } = ME);
-const result = createCacheKey.experimental_createToken(() => require("../../../../utils/ColorUtils.tsx") /* hexToRgba */.hexWithOpacity(require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.BRAND_500, 0.1));
+const result = createCacheKey.experimental_createToken(() => hexToRgba /* hexToRgba */.hexWithOpacity(Themes.unsafe_rawColors.BRAND_500, 0.1));
 createCacheKey = { ephemeralBackgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_ACTIVE, ephemeralGutterColor: require("Themes").colors.BACKGROUND_BRAND, giftIntentEphemeralBackgroundColor: result, mentionedBackgroundColor: require("Themes").colors.MESSAGE_MENTIONED_BACKGROUND_DEFAULT, mentionedGutterColor: require("Themes").unsafe_rawColors.YELLOW_300, automodBlockedBackgroundColor: require("Themes").colors.MESSAGE_AUTOMOD_BACKGROUND_DEFAULT, automodBlockedGutterColor: require("Themes").unsafe_rawColors.RED_345, editingColor: require("Themes").colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT };
 createCacheKey = createCacheKey.createNativeStyleProperties(createCacheKey);
 const MediaManager = require("get ActivityIndicator").NativeModules.MediaManager;
@@ -39,7 +44,7 @@ createCacheKey = {
     if (flag) {
       str3 = "png";
     }
-    return require("../../../../utils/native/ImageUtils.tsx").getMobileOptimizedSrc(proxy_url, width, height, str3);
+    return getSrcWithWidthAndHeight.getMobileOptimizedSrc(proxy_url, width, height, str3);
   },
   createBackgroundHighlight(message) {
     let isAutomodBlockedMessage;
@@ -57,7 +62,7 @@ createCacheKey = {
       return obj;
     } else {
       if (message.hasFlag(constants.IS_GUILD_OFFICIAL)) {
-        obj = require("../../GuildOfficialMessageUtils.tsx") /* useCanManageGuildOfficialMessages */;
+        obj = useCanManageGuildOfficialMessages /* useCanManageGuildOfficialMessages */;
         if (obj.showGuildOfficialMessageGradient(officialMessageStyle.officialMessageStyle)) {
           channel = channel.getChannel(message.getChannelId());
           let guild_id;
@@ -94,7 +99,7 @@ createCacheKey = {
         ({ mentionedBackgroundColor: obj5[0], mentionedGutterColor: obj5[1] } = tmp);
         const tmp14 = obj2;
       } else {
-        obj2 = require("../../MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
+        obj2 = createMinimalMessageRecord /* createMinimalMessageRecord */;
         if (obj2.hasEphemeralAppearance(message)) {
           const obj3 = { backgroundColor: null, gutterColor: null };
           obj3[0] = message.type === constants2.GIFTING_PROMPT ? tmp.giftIntentEphemeralBackgroundColor : tmp.ephemeralBackgroundColor;

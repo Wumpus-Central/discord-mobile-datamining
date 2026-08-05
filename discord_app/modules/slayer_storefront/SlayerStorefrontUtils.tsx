@@ -1,3 +1,10 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { keysSorter } from "../../../_runtime/05140_keysSorter.js";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { _httpGetWithCountryCodeQuery } from "../../utils/StoreUtils.tsx";
+import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
+import { useGetOrFetchApplications } from "../applications/useGetOrFetchApplications.tsx";
+import { useSKUPrice } from "../storefront/StorefrontUtils.tsx";
 // discord_app/modules/slayer_storefront/SlayerStorefrontUtils.tsx
 import addApplication from "addApplication";
 import { WishlistRecommendationReason as closure_4 } from "fromServer";
@@ -129,7 +136,7 @@ function getSKUShareURL(arg0, applicationId) {
   if (null != arg0) {
     const _location2 = location;
     const _location3 = location;
-    const parsed = require("../../../_runtime/05140_keysSorter.js") /* keysSorter */.parse(location.search);
+    const parsed = keysSorter /* keysSorter */.parse(location.search);
     const skuId = parsed.skuId;
     ({ tab, applicationId } = parsed);
     let tmp3 = pathname.indexOf(closure_13.COLLECTIBLES_SHOP) >= 0;
@@ -172,7 +179,7 @@ function isOnCollectiblesShopGameShopPage(arr) {
   let applicationId;
   let skuId;
   let tab;
-  const parsed = require("../../../_runtime/05140_keysSorter.js") /* keysSorter */.parse(arg1);
+  const parsed = keysSorter /* keysSorter */.parse(arg1);
   ({ tab, applicationId, skuId } = parsed);
   let tmp2 = arr.indexOf(closure_13.COLLECTIBLES_SHOP) >= 0;
   if (tmp2) {
@@ -357,7 +364,7 @@ export const transformSlayerApplicationStorefrontServer = function transformSlay
     obj[3] = mapped;
     return obj;
   });
-  obj[7] = require("../../../_runtime/00012_apply.js").keyBy(body.assets, "id");
+  obj[7] = apply.keyBy(body.assets, "id");
   let fromServer;
   if (null != body.application) {
     fromServer = createExecutable.createFromServer(body.application);
@@ -365,17 +372,17 @@ export const transformSlayerApplicationStorefrontServer = function transformSlay
   obj[8] = fromServer;
   let result;
   if (null != body.storefront_pricing) {
-    result = require("../storefront/StorefrontUtils.tsx") /* useSKUPrice */.transformStorefrontPricesServer(body.storefront_pricing);
-    const obj4 = require("../storefront/StorefrontUtils.tsx") /* useSKUPrice */;
+    result = useSKUPrice /* useSKUPrice */.transformStorefrontPricesServer(body.storefront_pricing);
+    const obj4 = useSKUPrice /* useSKUPrice */;
   }
   obj[9] = result;
-  const obj3 = require("../../../_runtime/00012_apply.js");
+  const obj3 = apply;
   const tmp8 = importDefault;
   let promotions = body.promotions;
   if (promotions == null) {
     promotions = {};
   }
-  obj[10] = require("../../../_runtime/00012_apply.js").mapValues(promotions, transformSlayerStorefrontPromotionServer);
+  obj[10] = apply.mapValues(promotions, transformSlayerStorefrontPromotionServer);
   return obj;
 };
 export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(tenantMetadata) {
@@ -405,12 +412,12 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
         if (null == first.labelIconAssetId) {
           obj = { primaryIconAsset: "body", primaryIconLabel: "useStateFromStores" };
         } else {
-          const obj3 = require("../../utils/StoreUtils.tsx") /* _httpGetWithCountryCodeQuery */;
-          const toURLSafeResult = require("../../utils/URLUtils.tsx").toURLSafe(obj3.getAssetURL(arg1, first.labelIconAssetId, num, "webp"));
+          const obj3 = _httpGetWithCountryCodeQuery /* _httpGetWithCountryCodeQuery */;
+          const toURLSafeResult = isDiscordProxiedAssetUrl.toURLSafe(obj3.getAssetURL(arg1, first.labelIconAssetId, num, "webp"));
           obj = { primaryIconAsset: null, primaryIconLabel: null };
           obj[0] = toURLSafeResult;
           obj[1] = first.label;
-          const obj2 = require("../../utils/URLUtils.tsx");
+          const obj2 = isDiscordProxiedAssetUrl;
         }
         return obj;
       }
@@ -430,8 +437,8 @@ export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(error) {
   }
   if (null != error) {
     if (null != error.thumbnailAssetId) {
-      const obj3 = require("../../utils/StoreUtils.tsx") /* _httpGetWithCountryCodeQuery */;
-      return require("../../utils/URLUtils.tsx").toURLSafe(obj3.getAssetURL(error.applicationId, error.thumbnailAssetId, num, "webp"));
+      const obj3 = _httpGetWithCountryCodeQuery /* _httpGetWithCountryCodeQuery */;
+      return isDiscordProxiedAssetUrl.toURLSafe(obj3.getAssetURL(error.applicationId, error.thumbnailAssetId, num, "webp"));
     }
   }
 };
@@ -467,8 +474,8 @@ export const getCardImageURL = function getCardImageURL(sku, arg1) {
   }
   if (null != cardImageAssetId) {
     if (null != applicationId) {
-      const obj3 = require("../../utils/StoreUtils.tsx") /* _httpGetWithCountryCodeQuery */;
-      return require("../../utils/URLUtils.tsx").toURLSafe(obj3.getAssetURL(applicationId, cardImageAssetId, num, "webp"));
+      const obj3 = _httpGetWithCountryCodeQuery /* _httpGetWithCountryCodeQuery */;
+      return isDiscordProxiedAssetUrl.toURLSafe(obj3.getAssetURL(applicationId, cardImageAssetId, num, "webp"));
     }
   }
 };
@@ -498,8 +505,8 @@ export const getCardBackgroundImageURL = function getCardBackgroundImageURL(sku,
       applicationId = sku.applicationId;
     }
     if (null != applicationId) {
-      const obj3 = require("../../utils/StoreUtils.tsx") /* _httpGetWithCountryCodeQuery */;
-      return require("../../utils/URLUtils.tsx").toURLSafe(obj3.getAssetURL(sku.applicationId, sku.tenantMetadata.socialLayer.cardBackgroundImageAssetId, num, str));
+      const obj3 = _httpGetWithCountryCodeQuery /* _httpGetWithCountryCodeQuery */;
+      return isDiscordProxiedAssetUrl.toURLSafe(obj3.getAssetURL(sku.applicationId, sku.tenantMetadata.socialLayer.cardBackgroundImageAssetId, num, str));
     }
   }
 };
@@ -567,7 +574,7 @@ export const getHasWishlistOrPopularRecommendations = function getHasWishlistOrP
 export const isOnSocialLayerStorefrontPage = function isOnSocialLayerStorefrontPage(arr) {
   let applicationId;
   let tab;
-  const parsed = require("../../../_runtime/05140_keysSorter.js") /* keysSorter */.parse(arg1);
+  const parsed = keysSorter /* keysSorter */.parse(arg1);
   ({ tab, applicationId } = parsed);
   let tmp2 = arr.indexOf(closure_13.COLLECTIBLES_SHOP) >= 0;
   if (tmp2) {
@@ -601,7 +608,7 @@ export const isOnSocialLayerStorefrontSkuPage = function isOnSocialLayerStorefro
     pageIndex = 0;
   }
   ({ guildId, skuId } = applicationId);
-  const parsed = require("../../../_runtime/05140_keysSorter.js") /* keysSorter */.parse(applicationId.search);
+  const parsed = keysSorter /* keysSorter */.parse(applicationId.search);
   ({ tab, applicationId, skuId: skuId2 } = parsed);
   let tmp2 = pathname.indexOf(closure_13.COLLECTIBLES_SHOP) >= 0;
   if (tmp2) {
@@ -624,9 +631,9 @@ export const isOnSocialLayerStorefrontSkuPage = function isOnSocialLayerStorefro
 export const useGetSocialLayerStorefrontGuildIdAndApplication = function useGetSocialLayerStorefrontGuildIdAndApplication(applicationId) {
   const _require = applicationId;
   const items = [handleUserSettingsStoreUpdate];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_7.getGuildIdFromApplicationId(closure_0));
-  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
-  const application = _require("../applications/useGetOrFetchApplications.tsx").useGetOrFetchApplication(applicationId);
+  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_7.getGuildIdFromApplicationId(closure_0));
+  const obj = _initialize;
+  const application = _useGetOrFetchApplications.useGetOrFetchApplication(applicationId);
   let guildId = stateFromStores;
   if (stateFromStores == null) {
     guildId = undefined;
@@ -658,11 +665,11 @@ export const getSocialLayerStorefrontApplicationId = function getSocialLayerStor
 export const useGetSocialLayerStorefrontApplicationId = function useGetSocialLayerStorefrontApplicationId(arg0) {
   const _require = arg0;
   const items = [handleUserSettingsStoreUpdate];
-  let stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_7.getApplicationIdFromGuildId(closure_0));
-  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  let stateFromStores = _initialize.useStateFromStores(items, () => outer1_7.getApplicationIdFromGuildId(closure_0));
+  const obj = _initialize;
   const items1 = [createGuildRecordFromRust];
   const items2 = [arg0];
-  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => outer1_6.getGuild(closure_0), items2);
+  const stateFromStores1 = _initialize.useStateFromStores(items1, () => outer1_6.getGuild(closure_0), items2);
   if (stateFromStores == null) {
     let length;
     if (stateFromStores1 != null) {

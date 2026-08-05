@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/games/hooks/useGame.tsx
 import noop from "noop";
 import importDefaultResult1 from "handleLoadMessages";
@@ -13,7 +14,7 @@ initialize = {
       return null;
     } else {
       if (importDefaultResult1.hasNoData(gameId)) {
-        let NO_DATA = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.NO_DATA;
+        let NO_DATA = initialize /* initialize */.NO_DATA;
       } else {
         NO_DATA = obj.getGame(gameId);
         if (NO_DATA == null) {

@@ -1,3 +1,4 @@
+import { combined } from "../../../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/premium/native/google_play_price_changes/GooglePlayPriceChangeActionSheet.tsx
 import "noop";
 import { View } from "set";
@@ -63,7 +64,7 @@ export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
   obj4[3] = formatPriceResult1;
   obj4[4] = formatPriceResult;
   const date = new Date(stateFromStores.expectedChargeTime);
-  obj4[5] = require("../../../../utils/HelpdeskUtils.tsx").getArticleURL(HelpdeskArticles.SUBSCRIPTION_CANCEL);
+  obj4[5] = combined.getArticleURL(HelpdeskArticles.SUBSCRIPTION_CANCEL);
   obj3[2] = intl2.format(markAsDismissed(1236).t["n+Hrjb"], obj4);
   items2[1] = callback(markAsDismissed(4281).Text, obj3);
   obj1[1] = items2;

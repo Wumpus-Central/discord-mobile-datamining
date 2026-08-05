@@ -1,3 +1,4 @@
+import { useAccessibilityViewIsModalToggle } from "useAccessibilityViewIsModalToggle.native.tsx";
 // discord_app/design/components/AccessibilityView/AccessibilityView.native.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -20,7 +21,7 @@ const forwardRefResult = require("noop").forwardRef((accessibilityViewIsModal, r
       throw error;
     }
   }
-  require("useAccessibilityViewIsModalToggle.native.tsx")({ accessibilityViewIsModal: flag, nativeID });
+  useAccessibilityViewIsModalToggle({ accessibilityViewIsModal: flag, nativeID });
   const obj = { ref, nativeID, collapsable: null, onAccessibilityEscape: null, accessibilityViewIsModal: null };
   let collapsable = null == nativeID;
   if (collapsable) {

@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { premiumSince } from "../DisplayProfile.tsx";
 // discord_app/modules/user_profile/hooks/useDisplayProfile.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -5,14 +7,14 @@ import createUserWidgetFromServer from "createUserWidgetFromServer";
 import areArraysShallowlyEqual from "areArraysShallowlyEqual";
 
 const require = arg1;
-let closure_6 = areArraysShallowlyEqual.cachedFunction((arg0, arg1) => new require("../DisplayProfile.tsx")(arg0, arg1));
+let closure_6 = areArraysShallowlyEqual.cachedFunction((arg0, arg1) => new premiumSince(arg0, arg1));
 const result = require("createUserWidgetFromServer").fileFinishedImporting("modules/user_profile/hooks/useDisplayProfile.tsx");
 
 export default function useDisplayProfile(arg0, arg1) {
   const _require = arg0;
   let closure_1 = arg1;
   const items = [mergeGuildAvatar, createUserWidgetFromServer];
-  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let obj;
     let obj2;
     let tmp2 = null;
@@ -47,7 +49,7 @@ export const useDisplayProfileWithFetchEffect = function useDisplayProfileWithFe
   _require = arg0;
   closure_1 = arg1;
   const items1 = [mergeGuildAvatar, createUserWidgetFromServer];
-  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  return _initialize.useStateFromStores(items1, () => {
     let obj;
     let obj2;
     let tmp2 = null;

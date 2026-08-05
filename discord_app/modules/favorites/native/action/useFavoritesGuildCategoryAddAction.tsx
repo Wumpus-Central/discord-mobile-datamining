@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getFavoritesAwareGuildName } from "../../FavoritesUtils.tsx";
+import { messagesProxy } from "../../intl/FavoritesGuild.messages.js";
 // discord_app/modules/favorites/native/action/useFavoritesGuildCategoryAddAction.tsx
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName";
 import noop from "noop";
@@ -64,14 +67,14 @@ export default function useFavoritesGuildCategoryAddAction(id) {
       }
     }
   }), items);
-  let obj = _require("../../FavoritesUtils.tsx");
+  let obj = _getFavoritesAwareGuildName;
   let tmp4 = null;
   if (obj.isFavoritesGuildId(id.getGuildId())) {
     tmp4 = null;
     if (id.type === ChannelTypes.GUILD_CATEGORY) {
       obj = { label: null, perform: null };
-      const intl = _require("../../../../intl/index.native.tsx").intl;
-      obj[0] = intl.string(require("../../intl/FavoritesGuild.messages.js")["1QJmIL"]);
+      const intl = _getSystemLocale.intl;
+      obj[0] = intl.string(messagesProxy["1QJmIL"]);
       obj[1] = callback;
       tmp4 = obj;
     }

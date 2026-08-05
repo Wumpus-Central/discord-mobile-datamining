@@ -1,3 +1,6 @@
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getGuildTierFromGuild } from "../../../utils/GuildBoostingUtils.tsx";
 // discord_app/modules/guild_settings/native/GuildSettingsModalEmoji.tsx
 import _slicedToArray from "_slicedToArray";
 import getEmptyServerSettingsEmojiSource from "getEmptyServerSettingsEmojiSource";
@@ -197,22 +200,22 @@ let closure_15 = require("getGuildTierFromGuild").memoize((arr, stateFromStores)
   const found = arr.filter((roles) => !stateFromStores(outer1_2[11]).isRoleSubscriptionEmoji(roles, stateFromStores.id));
   const mapped = found.map(computeEmojiItem);
   const reversed = mapped.reverse();
-  const maxEmojiSlots = _require("../../../utils/GuildBoostingUtils.tsx").getMaxEmojiSlots(stateFromStores);
-  const obj2 = _require("../../../utils/GuildBoostingUtils.tsx");
-  const obj3 = require("../../../../_runtime/00012_apply.js");
-  [arr2, arr3] = callback(require("../../../../_runtime/00012_apply.js").partition(reversed, (emoji) => !emoji.emoji.animated), 2);
-  const intl = _require("../../../intl/index.native.tsx").intl;
-  const tmp3 = callback(require("../../../../_runtime/00012_apply.js").partition(reversed, (emoji) => !emoji.emoji.animated), 2);
+  const maxEmojiSlots = _getGuildTierFromGuild.getMaxEmojiSlots(stateFromStores);
+  const obj2 = _getGuildTierFromGuild;
+  const obj3 = apply;
+  [arr2, arr3] = callback(apply.partition(reversed, (emoji) => !emoji.emoji.animated), 2);
+  const intl = _getSystemLocale.intl;
+  const tmp3 = callback(apply.partition(reversed, (emoji) => !emoji.emoji.animated), 2);
   const bound = Math.max(maxEmojiSlots - arr2.length, 0);
-  const intl2 = _require("../../../intl/index.native.tsx").intl;
-  const stringResult = intl.string(_require("../../../intl/index.native.tsx").t.sMOuuS);
-  const formatted = "" + intl.string(_require("../../../intl/index.native.tsx").t.sMOuuS) + " - " + intl2.formatToPlainString(_require("../../../intl/index.native.tsx").t.sgL8sI, { count: bound }).toUpperCase();
-  const intl3 = _require("../../../intl/index.native.tsx").intl;
-  const str = "" + intl.string(_require("../../../intl/index.native.tsx").t.sMOuuS) + " - " + intl2.formatToPlainString(_require("../../../intl/index.native.tsx").t.sgL8sI, { count: bound });
+  const intl2 = _getSystemLocale.intl;
+  const stringResult = intl.string(_getSystemLocale.t.sMOuuS);
+  const formatted = "" + intl.string(_getSystemLocale.t.sMOuuS) + " - " + intl2.formatToPlainString(_getSystemLocale.t.sgL8sI, { count: bound }).toUpperCase();
+  const intl3 = _getSystemLocale.intl;
+  const str = "" + intl.string(_getSystemLocale.t.sMOuuS) + " - " + intl2.formatToPlainString(_getSystemLocale.t.sgL8sI, { count: bound });
   const bound1 = Math.max(maxEmojiSlots - arr3.length, 0);
-  const intl4 = _require("../../../intl/index.native.tsx").intl;
-  const stringResult1 = intl3.string(_require("../../../intl/index.native.tsx").t.wWjQye);
-  const formatted1 = "" + intl3.string(_require("../../../intl/index.native.tsx").t.wWjQye) + " - " + intl4.formatToPlainString(_require("../../../intl/index.native.tsx").t.sgL8sI, { count: bound1 }).toUpperCase();
+  const intl4 = _getSystemLocale.intl;
+  const stringResult1 = intl3.string(_getSystemLocale.t.wWjQye);
+  const formatted1 = "" + intl3.string(_getSystemLocale.t.wWjQye) + " - " + intl4.formatToPlainString(_getSystemLocale.t.sgL8sI, { count: bound1 }).toUpperCase();
   if (arr2.length > 0) {
     const items = [{ type: "SECTION", key: formatted, section: formatted }];
     HermesBuiltin.arraySpread(arr2, 1);
@@ -283,8 +286,8 @@ export default function GuildSettingsModalEmoji(contentContainerStyle) {
 };
 export const computeSectionItem = function computeSectionItem(intl, length, arg2) {
   const bound = Math.max(arg2 - length, 0);
-  intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  const key = "" + intl + " - " + intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.sgL8sI, { count: bound }).toUpperCase();
+  intl = getSystemLocale /* getSystemLocale */.intl;
+  const key = "" + intl + " - " + intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.sgL8sI, { count: bound }).toUpperCase();
   return { type: "SECTION", key, section: key };
 };
 export { computeEmojiItem };

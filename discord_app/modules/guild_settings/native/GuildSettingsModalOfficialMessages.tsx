@@ -1,3 +1,10 @@
+import { registerAsset } from "../../../../_runtime/14418_registerAsset.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useCanManageGuildOfficialMessages } from "../../messages/GuildOfficialMessageUtils.tsx";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/guild_settings/native/GuildSettingsModalOfficialMessages.tsx
 import resetCache from "resetCache";
 import GuildSettingsActionCreators from "../GuildSettingsActionCreators.tsx";
@@ -30,13 +37,13 @@ function MessagePreview(theme) {
     const obj = callback(table[32]);
     return obj.calendarFormat(new Date(), true);
   }, []);
-  const internal = require("../../../../discord_common/js/packages/tokens/native.tsx").internal;
+  const internal = Themes.internal;
   let num = 1;
-  const semanticColor = internal.resolveSemanticColor(theme.theme, require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWER);
+  const semanticColor = internal.resolveSemanticColor(theme.theme, Themes.colors.BACKGROUND_BASE_LOWER);
   if (maybeApplyNoTextColorForLightCustomTheme.desaturateUserColors) {
     num = maybeApplyNoTextColorForLightCustomTheme.saturation;
   }
-  let obj = require("../../messages/GuildOfficialMessageUtils.tsx") /* useCanManageGuildOfficialMessages */;
+  let obj = useCanManageGuildOfficialMessages /* useCanManageGuildOfficialMessages */;
   const accessibleGuildOfficialTextColor = obj.getAccessibleGuildOfficialTextColor(selectedColor, semanticColor, num);
   let obj2 = tmp3(689)(selectedColor);
   const hexResult = accessibleGuildOfficialTextColor.hex();
@@ -47,27 +54,27 @@ function MessagePreview(theme) {
   obj = { style: items1, children: null };
   items1 = [tmp.chatContainerInner, { backgroundColor: obj2.alpha(closure_10).hex() }];
   const obj1 = { source: null };
-  obj1[0] = require("../../../../_runtime/14418_registerAsset.js");
-  const items2 = [callback(require("../../../design/void/native.tsx") /* Button */.Avatar, obj1), ];
+  obj1[0] = registerAsset;
+  const items2 = [callback(Button /* Button */.Avatar, obj1), ];
   obj2 = { style: tmp.chatContent, children: null };
   const obj3 = { style: tmp.chatHeader, children: null };
   const obj4 = { animated: true, style: animatedStyles.textStrong, variant: "text-md/semibold", lineClamp: 1, children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj4[4] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.cqpybK);
-  const items3 = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj4), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj4[4] = intl.string(getSystemLocale /* getSystemLocale */.t.cqpybK);
+  const items3 = [callback(Text /* Text */.Text, obj4), ];
   const items4 = [tmp.chatTimestamp, animatedStyles.textMuted];
-  items3[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { animated: true, variant: "text-xs/medium", style: items4, children: memo });
+  items3[1] = callback(Text /* Text */.Text, { animated: true, variant: "text-xs/medium", style: items4, children: memo });
   obj3[1] = items3;
   const items5 = [callback2(closure_5, obj3), ];
   const obj5 = { animated: true, variant: "text-md/normal", style: { color: hexResult }, children: null };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj5[3] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Mi9Kbe);
-  items5[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj5);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj5[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.Mi9Kbe);
+  items5[1] = callback(Text /* Text */.Text, obj5);
   obj2[1] = items5;
   items2[1] = callback2(closure_5, obj2);
   obj[1] = items2;
   obj[2] = callback2(closure_5, obj);
-  return callback(require("../../reanimated/ReanimatedRexport.tsx").View, obj);
+  return callback(ReanimatedRexport.View, obj);
 }
 ({ View: c5, StyleSheet } = get_ActivityIndicator);
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: c9, GUILD_OFFICIAL_HIGHLIGHT_ALPHA: c10 } = MESSAGE_GROUP_SPACING);

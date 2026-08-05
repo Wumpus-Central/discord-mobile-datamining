@@ -1,3 +1,6 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { InappropriateConversationExperiment } from "../SelfModInappropriateConversationExperiment.tsx";
+import { useInappropriateConversationBannerForChannel } from "useInappropriateConversationBannerForChannel.tsx";
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { SafetyWarningTypes } from "handleConnectionOpen";
@@ -6,12 +9,12 @@ const require = arg1;
 const result = require("InappropriateConversationExperiment").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx");
 
 export const useInappropriateConversationsTiers = function useInappropriateConversationsTiers(channel) {
-  let obj = require("../SelfModInappropriateConversationExperiment.tsx") /* InappropriateConversationExperiment */;
+  let obj = InappropriateConversationExperiment /* InappropriateConversationExperiment */;
   const isEligibleForInappropriateConversationWarning = obj.useIsEligibleForInappropriateConversationWarning({ location: "context-menu-item" });
   const items = [mergeGuildAvatar];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj2 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
-  const inappropriateConversationBannerForChannel = require("useInappropriateConversationBannerForChannel.tsx") /* useInappropriateConversationBannerForChannel */.useInappropriateConversationBannerForChannel(channel.id, "context-menu-item");
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj2 = initialize /* initialize */;
+  const inappropriateConversationBannerForChannel = useInappropriateConversationBannerForChannel /* useInappropriateConversationBannerForChannel */.useInappropriateConversationBannerForChannel(channel.id, "context-menu-item");
   let isStaffResult;
   if (stateFromStores != null) {
     isStaffResult = stateFromStores.isStaff();

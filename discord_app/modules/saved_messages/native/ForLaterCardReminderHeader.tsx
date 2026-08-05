@@ -1,3 +1,5 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { _savedMessageJumpToMessage } from "../SavedMessageUtils.tsx";
 // discord_app/modules/saved_messages/native/ForLaterCardReminderHeader.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -21,7 +23,7 @@ export const ForLaterCardReminderHeader = function ForLaterCardReminderHeader(sa
   savedMessage = savedMessage.savedMessage;
   ({ throttledNow, actions } = savedMessage);
   const tmp = callback3();
-  let obj = require("../SavedMessageUtils.tsx") /* _savedMessageJumpToMessage */;
+  let obj = _savedMessageJumpToMessage /* _savedMessageJumpToMessage */;
   let dueAt;
   if (savedMessage != null) {
     dueAt = savedMessage.saveData.dueAt;
@@ -36,7 +38,7 @@ export const ForLaterCardReminderHeader = function ForLaterCardReminderHeader(sa
     if (isOverdue) {
       str = "text-feedback-critical";
     }
-    const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
+    const colors = Themes.colors;
     obj = { style: null, children: null };
     obj[0] = tmp.container;
     const obj1 = { style: null, children: null };

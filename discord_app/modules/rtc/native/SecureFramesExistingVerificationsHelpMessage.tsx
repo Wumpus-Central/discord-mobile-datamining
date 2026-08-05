@@ -1,3 +1,4 @@
+import { useSecureFramesUserVerifiedKeysCount } from "../hooks/useSecureFramesUserVerifiedKeysCount.tsx";
 // discord_app/modules/rtc/native/SecureFramesExistingVerificationsHelpMessage.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -11,7 +12,7 @@ export default function SecureFramesExistingVerificationsHelpMessage(arg0) {
   let userId;
   let userKey;
   ({ style, userId, userKey } = arg0);
-  let obj = require("../hooks/useSecureFramesUserVerifiedKeysCount.tsx") /* useSecureFramesUserVerifiedKeysCount */;
+  let obj = useSecureFramesUserVerifiedKeysCount /* useSecureFramesUserVerifiedKeysCount */;
   const secureFramesUserVerifiedKeysCount = obj.useSecureFramesUserVerifiedKeysCount({ userId, keyToOmit: userKey });
   let tmp5 = null;
   if (0 !== secureFramesUserVerifiedKeysCount) {

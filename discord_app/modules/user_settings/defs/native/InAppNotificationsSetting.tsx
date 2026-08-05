@@ -1,17 +1,20 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
+import { explicitContentFromProto } from "../../UserSettings.tsx";
 // discord_app/modules/user_settings/defs/native/InAppNotificationsSetting.tsx
 import { AnalyticEvents } from "ME";
 import createToggle from "createToggle";
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.rqEZdu);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.rqEZdu);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: function useInAppNotificationsSettingValue() {
-    const FocusMode = require("../../UserSettings.tsx") /* explicitContentFromProto */.FocusMode;
+    const FocusMode = explicitContentFromProto /* explicitContentFromProto */.FocusMode;
     const setting = FocusMode.useSetting();
-    const ShowInAppNotifications = require("../../UserSettings.tsx") /* explicitContentFromProto */.ShowInAppNotifications;
+    const ShowInAppNotifications = explicitContentFromProto /* explicitContentFromProto */.ShowInAppNotifications;
     let setting1 = !setting;
     if (!setting) {
       setting1 = ShowInAppNotifications.useSetting();
@@ -19,9 +22,9 @@ const toggle = createToggle.createToggle({
     return setting1;
   },
   onValueChange: function updateInAppNotificationSettings(notifications_in_app_enabled) {
-    const ShowInAppNotifications = require("../../UserSettings.tsx") /* explicitContentFromProto */.ShowInAppNotifications;
+    const ShowInAppNotifications = explicitContentFromProto /* explicitContentFromProto */.ShowInAppNotifications;
     ShowInAppNotifications.updateSetting(notifications_in_app_enabled);
-    let obj = require("../../../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { notifications_in_app_enabled };
     obj.track(AnalyticEvents.LOCAL_SETTINGS_UPDATED, obj);
   },
@@ -37,14 +40,14 @@ const toggle = createToggle.createToggle({
 });
 let obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.rqEZdu);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.rqEZdu);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: function useInAppNotificationsSettingValue() {
-    const FocusMode = require("../../UserSettings.tsx") /* explicitContentFromProto */.FocusMode;
+    const FocusMode = explicitContentFromProto /* explicitContentFromProto */.FocusMode;
     const setting = FocusMode.useSetting();
-    const ShowInAppNotifications = require("../../UserSettings.tsx") /* explicitContentFromProto */.ShowInAppNotifications;
+    const ShowInAppNotifications = explicitContentFromProto /* explicitContentFromProto */.ShowInAppNotifications;
     let setting1 = !setting;
     if (!setting) {
       setting1 = ShowInAppNotifications.useSetting();
@@ -52,9 +55,9 @@ let obj = {
     return setting1;
   },
   onValueChange: function updateInAppNotificationSettings(notifications_in_app_enabled) {
-    const ShowInAppNotifications = require("../../UserSettings.tsx") /* explicitContentFromProto */.ShowInAppNotifications;
+    const ShowInAppNotifications = explicitContentFromProto /* explicitContentFromProto */.ShowInAppNotifications;
     ShowInAppNotifications.updateSetting(notifications_in_app_enabled);
-    let obj = require("../../../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { notifications_in_app_enabled };
     obj.track(AnalyticEvents.LOCAL_SETTINGS_UPDATED, obj);
   },

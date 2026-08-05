@@ -1,3 +1,6 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
+import { getEmojiUnavailableReason } from "../../../../utils/EmojiUtils.tsx";
 // discord_app/modules/guild_profile/native/components/GuildProfileTraits.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -14,16 +17,16 @@ function TraitEmoji(emoji) {
   } else {
     let emojiURL;
     if (null != emoji.id) {
-      let obj = require("../../../../utils/AvatarUtils.tsx");
+      let obj = getAvatarURL;
       obj = { id: null, animated: null, size: 16 };
       ({ id: obj2[0], animated: obj2[1] } = emoji);
       emojiURL = obj.getEmojiURL(obj);
     }
-    const obj3 = require("../../../../utils/EmojiUtils.tsx");
+    const obj3 = getEmojiUnavailableReason;
     const tmp5 = importDefault;
     obj = { src: null, name: null, fastImageStyle: null };
     obj[0] = emojiURL;
-    obj[1] = require("../../../../utils/EmojiUtils.tsx").isCustomEmoji(emoji) ? emoji.name : emoji.surrogates;
+    obj[1] = getEmojiUnavailableReason.isCustomEmoji(emoji) ? emoji.name : emoji.surrogates;
     obj[2] = tmp.emojiImage;
     return callback(tmp5(5301), obj);
   }
@@ -34,7 +37,7 @@ function GuildProfileTraitView(trait) {
   obj = { emoji: trait.emoji };
   const items = [callback(TraitEmoji, obj), ];
   obj = { variant: "text-sm/medium", color: "text-default", children: trait.label };
-  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }

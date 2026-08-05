@@ -1,3 +1,5 @@
+import { VoiceSensitivity } from "../../../../components_native/common/VoiceSensitivity.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/defs/native/VoiceSensitivitySetting.tsx
 import { View } from "get ActivityIndicator";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -8,8 +10,8 @@ import createToggle from "createToggle";
 let closure_6 = createCacheKey.createStyles({ slider: { marginTop: 8 } });
 let obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["sqUm+k"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["sqUm+k"]);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useDescription: function useVoiceSensitivitySettingDescription() {
@@ -19,7 +21,7 @@ let obj = {
     const items = [_detectH265HardwareDecode];
     const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ inputMode: store.getMode(), vadThreshold: store.getModeOptions().threshold, vadAutoThreshold: store.getModeOptions().autoThreshold }));
     inputMode = stateFromStoresObject.inputMode;
-    obj = { style: callback().slider, children: jsx(require("../../../../components_native/common/VoiceSensitivity.tsx"), obj) };
+    obj = { style: callback().slider, children: jsx(VoiceSensitivity, obj) };
     ({ vadThreshold, vadAutoThreshold } = stateFromStoresObject);
     obj = {
       auto: vadAutoThreshold,
@@ -37,15 +39,15 @@ let obj = {
     }} />;
   },
   useSearchTerms() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    const items = [intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.nuFtHH)];
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const items = [intl.string(getSystemLocale /* getSystemLocale */.t.nuFtHH)];
     return items;
   }
 };
 const createStaticResult = createToggle.createStatic({
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["sqUm+k"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["sqUm+k"]);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useDescription: function useVoiceSensitivitySettingDescription() {
@@ -55,7 +57,7 @@ const createStaticResult = createToggle.createStatic({
     const items = [_detectH265HardwareDecode];
     const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ inputMode: store.getMode(), vadThreshold: store.getModeOptions().threshold, vadAutoThreshold: store.getModeOptions().autoThreshold }));
     inputMode = stateFromStoresObject.inputMode;
-    obj = { style: callback().slider, children: jsx(require("../../../../components_native/common/VoiceSensitivity.tsx"), obj) };
+    obj = { style: callback().slider, children: jsx(VoiceSensitivity, obj) };
     ({ vadThreshold, vadAutoThreshold } = stateFromStoresObject);
     obj = {
       auto: vadAutoThreshold,
@@ -73,8 +75,8 @@ const createStaticResult = createToggle.createStatic({
     }} />;
   },
   useSearchTerms() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    const items = [intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.nuFtHH)];
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const items = [intl.string(getSystemLocale /* getSystemLocale */.t.nuFtHH)];
     return items;
   }
 });

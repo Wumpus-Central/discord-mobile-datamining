@@ -1,3 +1,4 @@
+import { handleLogout } from "../../../actions/AuthenticationActionCreators.tsx";
 // discord_app/modules/auth/native/LoginRequiredActionManager.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import handleUpdateUser from "handleUpdateUser";
@@ -39,7 +40,7 @@ LoginRequiredActionManager.prototype["handleConnectionOpen"] = function handleCo
       }
     }
     if (result1) {
-      obj = require("../../../actions/AuthenticationActionCreators.tsx");
+      obj = handleLogout;
       obj.logout("login_required_account_manager", constants2.LOGIN);
     }
   }

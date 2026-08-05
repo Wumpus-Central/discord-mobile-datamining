@@ -1,3 +1,6 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { BaseActivityPanelController } from "ActivityPanelController.tsx";
+import { renderActivityOrPIP } from "ActivityPanelUI.tsx";
 // discord_app/modules/activities/panel/native/ActivityPanelContainer.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -7,7 +10,7 @@ import importAllResult from "noop";
 
 const require = arg1;
 const memoResult = require("noop").memo(function ActivityPanelContainer() {
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [participantFromServer, ensureGuildLoaded, handleConnectionOpen];
   let tmp2 = null;
   if (obj.useStateFromStores(items, () => {
@@ -44,9 +47,9 @@ const memoResult = require("noop").memo(function ActivityPanelContainer() {
     }
   }, [])) {
     obj = { children: null };
-    obj[0] = jsx(require("ActivityPanelUI.tsx"), {});
-    tmp2 = jsx(require("ActivityPanelController.tsx"), { children: null });
-    const tmp5 = require("ActivityPanelController.tsx");
+    obj[0] = jsx(renderActivityOrPIP, {});
+    tmp2 = jsx(BaseActivityPanelController, { children: null });
+    const tmp5 = BaseActivityPanelController;
   }
   return tmp2;
 });

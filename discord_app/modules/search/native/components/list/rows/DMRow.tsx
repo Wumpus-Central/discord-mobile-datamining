@@ -1,3 +1,6 @@
+import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
+import { nameFromUser } from "../../../../../../utils/UserUtils.tsx";
+import { ActivityStatus } from "../../../../../activity_status/native/ActivityStatus.tsx";
 // discord_app/modules/search/native/components/list/rows/DMRow.tsx
 import sortActivity from "sortActivity";
 import _slicedToArray from "_slicedToArray";
@@ -25,16 +28,16 @@ function FriendPresence(user) {
   ({ type, animate, guildId } = user);
   if (type === constants.PENDING_INCOMING) {
     let obj = { lineClamp: 1, variant: "text-sm/medium", color: "text-default", children: null };
-    obj[3] = require("../../../../../../utils/UserUtils.tsx") /* nameFromUser */.getUserTag(user);
-    let tmp5 = callback(require("../../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
-    const obj3 = require("../../../../../../utils/UserUtils.tsx") /* nameFromUser */;
+    obj[3] = nameFromUser /* nameFromUser */.getUserTag(user);
+    let tmp5 = callback(Text /* Text */.Text, obj);
+    const obj3 = nameFromUser /* nameFromUser */;
   } else {
     obj = { userId: null, guildId: null, iconStyle: null, textStyle: null, emojiSize: 16, animate: null };
     obj[0] = user.id;
     obj[1] = guildId;
     ({ activityStatusIcon: obj[2], activityStatusText: obj[3] } = tmp);
     obj[5] = animate;
-    tmp5 = callback(require("../../../../../activity_status/native/ActivityStatus.tsx"), obj);
+    tmp5 = callback(ActivityStatus, obj);
   }
   return tmp5;
 }

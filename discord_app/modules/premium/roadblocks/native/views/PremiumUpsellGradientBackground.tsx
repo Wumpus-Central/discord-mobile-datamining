@@ -1,3 +1,5 @@
+import { LinearGradient } from "../../../../../../_runtime/04706_LinearGradient.js";
+import { keys } from "../../../../../ConstantsIOS.tsx";
 // discord_app/modules/premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx
 import "noop";
 import { Gradients } from "items";
@@ -16,13 +18,13 @@ export const PremiumUpsellGradientBackground = function PremiumUpsellGradientBac
   const obj = { style: createCacheKey().gradient, start: null, end: null, colors: null };
   const tmp = createCacheKey();
   const tmp2 = jsx;
-  obj[1] = require("../../../../../ConstantsIOS.tsx") /* keys */.HorizontalGradient.START;
-  obj[2] = require("../../../../../ConstantsIOS.tsx") /* keys */.HorizontalGradient.END;
+  obj[1] = keys /* keys */.HorizontalGradient.START;
+  obj[2] = keys /* keys */.HorizontalGradient.END;
   if (true === useTier0UpsellContent.useTier0UpsellContent) {
     let PREMIUM_TIER_2_TRI_COLOR = Gradients.PREMIUM_TIER_0;
   } else {
     PREMIUM_TIER_2_TRI_COLOR = Gradients.PREMIUM_TIER_2_TRI_COLOR;
   }
   obj[3] = PREMIUM_TIER_2_TRI_COLOR;
-  return tmp2(require("../../../../../../_runtime/04706_LinearGradient.js"), obj);
+  return tmp2(LinearGradient, obj);
 };

@@ -1,3 +1,4 @@
+import { useIsUsingClientTheme } from "../../client_themes/native/useIsUsingClientTheme.tsx";
 // discord_app/modules/guild_sidebar/native/VoiceUserSummary.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -21,7 +22,7 @@ const memoResult = importAllResult.memo((guildId) => {
   ({ users, max, renderIcon, noPadding, stageIcon } = guildId);
   const tmp = callback();
   let transparentBorder = null;
-  if (require("../../client_themes/native/useIsUsingClientTheme.tsx")()) {
+  if (useIsUsingClientTheme()) {
     transparentBorder = tmp.transparentBorder;
   }
   let obj = guildId(8202);

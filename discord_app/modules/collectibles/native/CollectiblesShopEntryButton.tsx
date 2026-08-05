@@ -1,3 +1,5 @@
+import { items } from "../../main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx";
+import { MobileShopButtonCoachmark } from "MobileShopButtonCoachmark.tsx";
 // discord_app/modules/collectibles/native/CollectiblesShopEntryButton.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
@@ -33,7 +35,7 @@ function CoachmarkVariant(shopButtonRef) {
     navigateToShop();
   };
   obj[4] = tmp3;
-  const items = [callback2(require("../../main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx"), obj), callback2(require("MobileShopButtonCoachmark.tsx"), { marketing, shopButtonRef, navigateToShop, visible: tmp3, onDismiss: tmp[1] })];
+  const items = [callback2(items, obj), callback2(MobileShopButtonCoachmark, { marketing, shopButtonRef, navigateToShop, visible: tmp3, onDismiss: tmp[1] })];
   obj[0] = items;
   return callback3(closure_7, obj);
 }

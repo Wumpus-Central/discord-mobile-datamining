@@ -1,3 +1,4 @@
+import { resolveGiftCode } from "../../actions/GiftCodeActionCreators.tsx";
 // discord_app/components_native/premium/GiftCodeRow.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { AnalyticsSections } from "ME";
@@ -54,7 +55,7 @@ class GiftCodeRow extends PureComponent {
 }
 const prototype = GiftCodeRow.prototype;
 prototype["handleRevoke"] = function handleRevoke(code) {
-  require("../../actions/GiftCodeActionCreators.tsx").revokeGiftCode(code);
+  resolveGiftCode.revokeGiftCode(code);
 };
 prototype["render"] = function render() {
   let self = this;

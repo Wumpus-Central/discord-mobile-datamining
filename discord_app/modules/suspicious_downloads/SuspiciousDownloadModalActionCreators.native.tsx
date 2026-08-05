@@ -1,10 +1,12 @@
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/suspicious_downloads/SuspiciousDownloadModalActionCreators.native.tsx
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/suspicious_downloads/SuspiciousDownloadModalActionCreators.native.tsx");
 
 export default {
   show(href) {
-    let obj = require("../action_sheet/native/ActionSheetActionCreators.tsx");
+    let obj = ACTION_SHEET_HEIGHT_HALF;
     obj = { href };
-    obj.openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(12133, dependencyMap.paths), "suspicious-download", obj);
+    obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(12133, dependencyMap.paths), "suspicious-download", obj);
   }
 };

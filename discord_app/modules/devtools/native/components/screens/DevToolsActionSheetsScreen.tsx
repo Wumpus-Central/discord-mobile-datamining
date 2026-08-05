@@ -1,3 +1,10 @@
+import { asyncRequireImpl } from "../../../../../../_runtime/01959_asyncRequireImpl.js";
+import { ModalActionCreators } from "../../../../../actions/ModalActionCreators.tsx";
+import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { BlockedDomainModalActionCreators.native } from "../../../../blocked_domains/BlockedDomainModalActionCreators.native.tsx";
+import { SuspiciousDownloadModalActionCreators.native } from "../../../../suspicious_downloads/SuspiciousDownloadModalActionCreators.native.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsActionSheetsScreen.tsx
 import _slicedToArray from "_slicedToArray";
 import PressableCard from "PressableCard";
@@ -24,7 +31,7 @@ function ActionSheetSelector(arg0) {
   let obj = { header: null, children: null };
   obj = { title: "Select Action Sheet", subtitle: null };
   obj[1] = "" + items.length + " options";
-  obj[0] = callback2(require("../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
+  obj[0] = callback2(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
   obj = { style: null, children: null };
   obj[0] = { paddingHorizontal: onSelect(712).space.PX_12 };
   const obj2 = { hasIcons: true, children: null };
@@ -45,9 +52,9 @@ function ActionSheetSelector(arg0) {
     obj[6] = arg1 === outer1_10.length - 1;
     return outer1_7(outer1_0(5315).TableRow, obj, type.type);
   });
-  obj[1] = callback2(require("../../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj2);
+  obj[1] = callback2(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj2);
   obj[1] = callback2(closure_5, obj);
-  return callback2(require("../../../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, obj);
+  return callback2(Background /* Background */.BottomSheet, obj);
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
@@ -62,7 +69,7 @@ let items = [
     label: "Blocked Domain",
     description: "Shows a warning for potentially malicious domains",
     show() {
-      return require("../../../../blocked_domains/BlockedDomainModalActionCreators.native.tsx").show("https://example-phishing-site.com/malicious-page");
+      return BlockedDomainModalActionCreators.native.show("https://example-phishing-site.com/malicious-page");
     }
   },
   {
@@ -70,7 +77,7 @@ let items = [
     label: "Suspicious Download",
     description: "Warns users about potentially dangerous file downloads",
     show() {
-      return require("../../../../suspicious_downloads/SuspiciousDownloadModalActionCreators.native.tsx").show("https://suspicious-file.com/dangerous-file.exe");
+      return SuspiciousDownloadModalActionCreators.native.show("https://suspicious-file.com/dangerous-file.exe");
     }
   },
   {
@@ -78,7 +85,7 @@ let items = [
     label: "Inappropriate Conversation",
     description: "Shows safety warning for inappropriate conversations",
     show() {
-      return require("../../../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(14938, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
+      return ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(14938, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
     }
   }
 ];
@@ -88,7 +95,7 @@ let obj2 = {
   label: "Blocked Domain",
   description: "Shows a warning for potentially malicious domains",
   show() {
-    return require("../../../../blocked_domains/BlockedDomainModalActionCreators.native.tsx").show("https://example-phishing-site.com/malicious-page");
+    return BlockedDomainModalActionCreators.native.show("https://example-phishing-site.com/malicious-page");
   }
 };
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsActionSheetsScreen.tsx");

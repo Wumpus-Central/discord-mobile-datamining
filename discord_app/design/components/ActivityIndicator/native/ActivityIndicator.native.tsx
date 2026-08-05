@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../tokens/native/useToken.tsx";
 // discord_app/design/components/ActivityIndicator/native/ActivityIndicator.native.tsx
 import { ActivityIndicator } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -14,10 +16,10 @@ export const ActivityIndicator = function ActivityIndicator(size) {
     flag = true;
   }
   const merged = Object.assign(size, Object.create(null));
-  let obj = require("../../../tokens/native/useToken.tsx") /* map */;
+  let obj = map /* map */;
   let color = merged.color;
   if (color == null) {
-    color = obj.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BRAND);
+    color = obj.useToken(Themes.colors.BACKGROUND_BRAND);
   }
   obj = {};
   const merged1 = Object.assign(merged);

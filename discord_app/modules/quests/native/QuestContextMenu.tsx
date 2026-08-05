@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../_runtime/08415_registerAsset.js";
+import { IconButton } from "../../../design/components/Button/native/IconButton.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/quests/native/QuestContextMenu.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "getQuestContentName";
@@ -9,13 +12,13 @@ const require = arg1;
 function renderDefaultButton(ref) {
   const obj = { ref: ref.ref };
   const merged = Object.assign(callback(ref, closure_3));
-  obj.icon = require("../../../../_runtime/08415_registerAsset.js");
+  obj.icon = registerAsset;
   obj.variant = "secondary";
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj.accessibilityLabel = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.CAgr1w);
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj.accessibilityHint = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.hd0b7t);
-  return jsx(require("../../../design/components/Button/native/IconButton.native.tsx") /* IconButton */.IconButton, { ref: ref.ref });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj.accessibilityLabel = intl.string(getSystemLocale /* getSystemLocale */.t.CAgr1w);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj.accessibilityHint = intl2.string(getSystemLocale /* getSystemLocale */.t.hd0b7t);
+  return jsx(IconButton /* IconButton */.IconButton, { ref: ref.ref });
 }
 let closure_3 = ["ref"];
 let c5 = importAllResult;

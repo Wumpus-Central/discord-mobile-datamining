@@ -1,3 +1,5 @@
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
 // discord_app/modules/interaction_components/validateComponent.tsx
 const result = require("getSystemLocale").fileFinishedImporting("modules/interaction_components/validateComponent.tsx");
 
@@ -15,10 +17,10 @@ export default function validateComponent(type, arg1, modal) {
   let values;
   values = arg1;
   if (null != arg1) {
-    require("../../../_runtime/metro/00038__.js")(values.type === type.type, "component type matches state");
+    00038__(values.type === type.type, "component type matches state");
   }
   type = type.type;
-  if (require("../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.BUTTON === type) {
+  if (PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.BUTTON === type) {
     return null;
   } else {
     if (tmp4(1906).ComponentType.STRING_SELECT !== type) {
@@ -124,7 +126,7 @@ export default function validateComponent(type, arg1, modal) {
               } else if (tmp4(1906).ComponentType.CHECKBOX === type) {
                 return null;
               } else {
-                require("../../../_runtime/metro/00038__.js")(false, "missing validator for this component");
+                00038__(false, "missing validator for this component");
               }
             }
           }

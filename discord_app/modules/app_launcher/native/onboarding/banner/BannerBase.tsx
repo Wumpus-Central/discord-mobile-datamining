@@ -1,3 +1,8 @@
+import { 11361__ } from "../../../../../../_runtime/metro/11361__.js";
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { CONFIG_NEVER_ANIMATE } from "../../../../../design/animation/reanimated/spring/spring.tsx";
+import { hexToRgba } from "../../../../../utils/ColorUtils.tsx";
+import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/app_launcher/native/onboarding/banner/BannerBase.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -38,18 +43,18 @@ export default function BannerBase(arg0) {
   const tmp = createCacheKey();
   let num = 0;
   [tmp3, c0] = callback(React.useState(0), 2);
-  let obj = _require("../../../../reanimated/ReanimatedRexport.tsx");
+  let obj = _ReanimatedRexport;
   sharedValue = obj.useSharedValue(false);
   const diff = sharedValue(1474)().width - 2 * sharedValue(712).space.PX_16;
   const backgroundColor = tmp.bannerGradientColor.backgroundColor;
-  let obj1 = _require("../../../../../utils/ColorUtils.tsx");
+  let obj1 = _hexToRgba;
   let items = [obj1.hexOpacityToRgba(backgroundColor, 0.2), ];
-  let obj2 = _require("../../../../../utils/ColorUtils.tsx");
+  let obj2 = _hexToRgba;
   items[1] = obj2.hexOpacityToRgba(backgroundColor, 0);
-  let obj3 = _require("../../../../../../discord_common/js/packages/flux/index.tsx");
+  let obj3 = _initialize;
   const items1 = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj3.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
-  let obj4 = _require("../../../../reanimated/ReanimatedRexport.tsx");
+  let obj4 = _ReanimatedRexport;
   const fn = function _() {
     let obj = sharedValue;
     let num = 0;
@@ -69,7 +74,7 @@ export default function BannerBase(arg0) {
     obj[1] = items;
     return obj;
   };
-  obj = { bannerMeasured: sharedValue, withDelay: _require("../../../../reanimated/ReanimatedRexport.tsx").withDelay, withSpring: _require("../../../../../design/animation/reanimated/spring/spring.tsx").withSpring, SPRING_CONFIG: closure_9 };
+  obj = { bannerMeasured: sharedValue, withDelay: _ReanimatedRexport.withDelay, withSpring: _CONFIG_NEVER_ANIMATE.withSpring, SPRING_CONFIG: closure_9 };
   fn.__closure = obj;
   fn.__workletHash = 5314641176204;
   fn.__initData = closure_11;
@@ -100,7 +105,7 @@ export default function BannerBase(arg0) {
   obj1 = { style: tmp.imageContainer, children: null };
   obj2 = { style: tmp.trinketsLottie, source: null, autoPlay: null };
   const tmp2 = callback(React.useState(0), 2);
-  obj2[1] = _require("../../../../../../_runtime/metro/11361__.js");
+  obj2[1] = _11361__;
   obj2[2] = !stateFromStores;
   const items5 = [callback2(sharedValue(5601), obj2), image];
   obj1[1] = items5;

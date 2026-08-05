@@ -1,3 +1,7 @@
+import { FlashIcon } from "../../../../design/components/Icon/native/redesign/generated/FlashIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useICYMITabBadge } from "../../../icymi/useICYMITabBadge.tsx";
+import { YouBarButtonIcon } from "YouBarButton.tsx";
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarICYMIButton.tsx
 import { YOU_BAR_BUTTON_ICON_SIZE } from "CONNECTION_BANNER_HEIGHT";
 import { jsx } from "jsxProd";
@@ -19,8 +23,8 @@ const memoResult = require("noop").memo(function YouBarICYMIButton(hasNameplate)
     str = "white";
   }
   obj[2] = str;
-  obj[1] = jsx(require("../../../../design/components/Icon/native/redesign/generated/FlashIcon.tsx") /* FlashIcon */.FlashIcon, { size: "custom", style: tmp.icon, color: null });
-  obj[2] = require("../../../icymi/useICYMITabBadge.tsx")().showDot;
+  obj[1] = jsx(FlashIcon /* FlashIcon */.FlashIcon, { size: "custom", style: tmp.icon, color: null });
+  obj[2] = useICYMITabBadge().showDot;
   obj[3] = tmp.badge;
   obj[4] = function onPress() {
     let obj = callback(table[8]);
@@ -32,8 +36,8 @@ const memoResult = require("noop").memo(function YouBarICYMIButton(hasNameplate)
     }
   };
   const intl = tmp5(1236).intl;
-  obj[5] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["jnXV/V"]);
-  return jsx(require("YouBarButton.tsx"), { size: "custom", style: tmp.icon, color: null });
+  obj[5] = intl.string(getSystemLocale /* getSystemLocale */.t["jnXV/V"]);
+  return jsx(YouBarButtonIcon, { size: "custom", style: tmp.icon, color: null });
 });
 const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarICYMIButton.tsx");
 

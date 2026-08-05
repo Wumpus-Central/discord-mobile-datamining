@@ -1,3 +1,4 @@
+import { isLinkTrusted } from "../../utils/MaskedLinkUtils.tsx";
 // discord_app/modules/markup/MarkupReactLinkUtils.tsx
 const result = require("set").fileFinishedImporting("modules/markup/MarkupReactLinkUtils.tsx");
 
@@ -5,7 +6,7 @@ export const isLinkTrusted = function isLinkTrusted(target) {
   if (null == target.target) {
     return tmp;
   } else {
-    require("../../utils/MaskedLinkUtils.tsx") /* isLinkTrusted */;
+    isLinkTrusted /* isLinkTrusted */;
     if (null == target.title) {
       let title = tmp2(7904).astToString(target.content);
       tmp5(tmp6, title);

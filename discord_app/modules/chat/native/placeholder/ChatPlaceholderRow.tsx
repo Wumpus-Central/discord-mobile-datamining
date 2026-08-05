@@ -1,3 +1,4 @@
+import { getChatPlaceholderRowWidth } from "getChatPlaceholderRowWidth.tsx";
 // discord_app/modules/chat/native/placeholder/ChatPlaceholderRow.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -37,7 +38,7 @@ const memoResult = importAllResult.memo(function ChatPlaceholderRow(lines) {
       let items1 = [tmp.placeholderText, tmp.placeholderBody, ];
       obj = { width: null };
       let _HermesInternal = HermesInternal;
-      obj[0] = "" + require("getChatPlaceholderRowWidth.tsx")(rounded + num) + "%";
+      obj[0] = "" + getChatPlaceholderRowWidth(rounded + num) + "%";
       items1[2] = obj;
       obj[0] = items1;
       let arr = items.push(callback(View, obj, num));

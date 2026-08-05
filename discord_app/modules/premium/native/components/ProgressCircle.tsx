@@ -1,3 +1,4 @@
+import { inlineStyles } from "../../../../../_runtime/08437_inlineStyles.js";
 // discord_app/modules/premium/native/components/ProgressCircle.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -30,8 +31,8 @@ prototype["renderCircle"] = function renderCircle() {
   obj[7] = props.color;
   obj = { strokeDasharray: result1, strokeDashoffset: (1 - bound / 100) * result1 };
   obj[8] = obj;
-  obj[2] = callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Circle, obj);
-  return callback(require("../../../../../_runtime/08437_inlineStyles.js"), obj);
+  obj[2] = callback(inlineStyles /* inlineStyles */.Circle, obj);
+  return callback(inlineStyles, obj);
 };
 prototype["render"] = function render() {
   const tmp = callback2(this.context);

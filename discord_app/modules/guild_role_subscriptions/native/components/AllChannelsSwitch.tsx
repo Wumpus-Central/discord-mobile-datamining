@@ -1,3 +1,9 @@
+import { registerAsset } from "../../../../../_runtime/16722_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/16723_registerAsset.js";
+import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { render } from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/AllChannelsSwitch.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -25,7 +31,7 @@ function Row(arg0) {
     disabled = false;
   }
   const tmp = createCacheKey();
-  let obj = require("../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx") /* useCheckboxA11yNative */;
+  let obj = useCheckboxA11yNative /* useCheckboxA11yNative */;
   const radioA11yNative = obj.useRadioA11yNative({ selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   obj = { style: tmp.row, accessibilityRole, accessibilityState, disabled: null, onPress: null, children: null };
@@ -36,19 +42,19 @@ function Row(arg0) {
   obj[3] = tmp7;
   obj[4] = onPress;
   obj = { size: null, source: null };
-  obj[0] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.MEDIUM;
+  obj[0] = Button /* Button */.Icon.Sizes.MEDIUM;
   obj[1] = icon;
-  const items = [callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj), , ];
+  const items = [callback(Button /* Button */.Icon, obj), , ];
   const items1 = [tmp.rowLabel, ];
   let rowLabelSelected = selected;
   if (selected) {
     rowLabelSelected = tmp.rowLabelSelected;
   }
   items1[1] = rowLabelSelected;
-  items[1] = callback(require("../../../../design/void/native.tsx") /* Button */.LegacyText, { style: items1, numberOfLines: 1, ellipsizeMode: "tail", children: label });
-  items[2] = callback(require("../../../../design/void/native.tsx") /* Button */.RadioIndicator, { style: tmp.rowIndicator, active: selected });
+  items[1] = callback(Button /* Button */.LegacyText, { style: items1, numberOfLines: 1, ellipsizeMode: "tail", children: label });
+  items[2] = callback(Button /* Button */.RadioIndicator, { style: tmp.rowIndicator, active: selected });
   obj[5] = items;
-  return closure_6(require("../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx"), obj);
+  return closure_6(render, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: null, row: null, rowLabel: null, rowLabelSelected: null, rowIndicator: null, separator: null };
@@ -80,9 +86,9 @@ export default function AllChannelsSwitch(style) {
   const tmp = createCacheKey();
   let obj = { style: items, accessibilityRole: "radiogroup", accessibilityState: { disabled }, children: null };
   items = [tmp.container, style.style];
-  obj = { icon: require("../../../../../_runtime/16722_registerAsset.js"), label: null, selected: null, onPress: null, disabled: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["vs2T+B"]);
+  obj = { icon: registerAsset, label: null, selected: null, onPress: null, disabled: null };
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["vs2T+B"]);
   obj[2] = channelAccessFormat === AllChannelAccessOptions.SOME_CHANNELS_ACCESS;
   obj[3] = function onPress() {
     return callback(outer1_4.SOME_CHANNELS_ACCESS);
@@ -91,9 +97,9 @@ export default function AllChannelsSwitch(style) {
   const items1 = [callback(Row, obj), , ];
   obj = { style: tmp.separator };
   items1[1] = callback(View, obj);
-  const obj1 = { icon: require("../../../../../_runtime/16723_registerAsset.js"), label: null, selected: null, onPress: null, disabled: null };
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.l4Tr7X);
+  const obj1 = { icon: registerAsset, label: null, selected: null, onPress: null, disabled: null };
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.l4Tr7X);
   obj1[2] = channelAccessFormat === AllChannelAccessOptions.ALL_CHANNELS_ACCESS;
   obj1[3] = function onPress() {
     return callback(outer1_4.ALL_CHANNELS_ACCESS);

@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/design/void/Form/native/FormRow.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -23,7 +24,7 @@ let closure_7 = createCacheKey.createStyles(() => {
   obj[3] = { marginLeft: "auto", paddingLeft: 16, textAlign: "right", flexShrink: 0 };
   obj[4] = { opacity: 0.5 };
   const merged1 = Object.assign({ paddingHorizontal: 14, paddingVertical: 14 });
-  obj[5] = { borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_FEEDBACK_CRITICAL, borderWidth: 2 };
+  obj[5] = { borderColor: Themes.colors.BORDER_FEEDBACK_CRITICAL, borderWidth: 2 };
   return obj;
 });
 let obj = { Arrow: null, Label: null, SubLabel: null, Radio: null, Checkbox: null, Checkmark: null, Icon: null };

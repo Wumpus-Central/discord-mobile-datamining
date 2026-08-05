@@ -1,3 +1,8 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { PencilIcon } from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { useUserProfileBannerHeight } from "../hooks/native/useUserProfileBannerHeight.tsx";
+import { UserProfileBanner } from "UserProfileBanner.tsx";
 // discord_app/modules/user_profile/native/UserProfileEditBannerButton.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -40,9 +45,9 @@ function EditButton(disabled) {
   }
   let obj = { accessibilityRole: "button", accessibilityLabel, onPress, disabled: flag, style: createCacheKey().editButton, children: null };
   obj = { size: "xs", color: null };
-  obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
-  obj[5] = callback(require("../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx") /* PencilIcon */.PencilIcon, obj);
-  return callback(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  obj[1] = Themes.colors.WHITE;
+  obj[5] = callback(PencilIcon /* PencilIcon */.PencilIcon, obj);
+  return callback(PressableBase /* PressableBase */.PressableOpacity, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: { position: "relative" }, editButton: null, previewButton: null };
@@ -77,7 +82,7 @@ export default function UserProfileEditBannerButton(arg0) {
   }
   let obj = { style: createCacheKey().container, children: null };
   const tmp = createCacheKey();
-  const items = [callback(require("UserProfileBanner.tsx"), { user, displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, pendingAccentColor, bannerHeight: require("../hooks/native/useUserProfileBannerHeight.tsx")(), bannerSafeArea }), , ];
+  const items = [callback(UserProfileBanner, { user, displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, pendingAccentColor, bannerHeight: useUserProfileBannerHeight(), bannerSafeArea }), , ];
   if (showProfilePreviewButton) {
     obj = { userId: null };
     obj[0] = user.id;

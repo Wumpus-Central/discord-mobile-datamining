@@ -1,10 +1,11 @@
+import { apexExperiment } from "ClipsExperiment.tsx";
 // discord_app/modules/clips/isClientClipsCapable.tsx
 import { Features } from "DesktopSources";
 
 const result = require("set").fileFinishedImporting("modules/clips/isClientClipsCapable.tsx");
 
 export default function isClientClipsCapable(getMediaEngine) {
-  const ClipsExperiment = require("ClipsExperiment.tsx") /* apexExperiment */.ClipsExperiment;
+  const ClipsExperiment = apexExperiment /* apexExperiment */.ClipsExperiment;
   let ignorePlatformRestriction = ClipsExperiment.getConfig({ location: "isClipsClientCapable" }).ignorePlatformRestriction;
   if (!ignorePlatformRestriction) {
     let isDesktopResult = importAll(500).isDesktop();

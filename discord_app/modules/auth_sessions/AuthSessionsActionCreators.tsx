@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/auth_sessions/AuthSessionsActionCreators.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
@@ -153,7 +154,7 @@ export const fetchAuthSessions = function fetchAuthSessions() {
   return applyArgumentsResult;
 };
 export const clearAuthSessions = function clearAuthSessions() {
-  require("../../Dispatcher.tsx").dispatch({ type: "FETCH_AUTH_SESSIONS_SUCCESS", sessions: [] });
+  dispatcher.dispatch({ type: "FETCH_AUTH_SESSIONS_SUCCESS", sessions: [] });
 };
 export const logOutSessions = function logOutSessions(id_hash) {
   const self = this;

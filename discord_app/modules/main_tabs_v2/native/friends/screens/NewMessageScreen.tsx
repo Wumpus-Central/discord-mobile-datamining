@@ -1,3 +1,5 @@
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { context } from "../../../../app_analytics/useAnalyticsLocations.tsx";
 // discord_app/modules/main_tabs_v2/native/friends/screens/NewMessageScreen.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import JoinCallButton from "JoinCallButton";
@@ -350,7 +352,7 @@ export default function NewMessageScreen(navigation) {
       FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(709).unsubscribe("CHANNEL_DELETE", handleChannelDelete);
     };
   }, items2);
-  let obj1 = _require("../../../../../../discord_common/js/packages/flux/index.tsx");
+  let obj1 = _initialize;
   const items3 = [FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID];
   stateFromStores = obj1.useStateFromStores(items3, () => FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID.getChannel(FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID));
   const items4 = [first, stateFromStores];
@@ -669,7 +671,7 @@ export default function NewMessageScreen(navigation) {
   c10 = tmp28;
   let tmp9 = first(obj.useState(false), 2);
   const items10 = [callback];
-  stateFromStores1 = _require("../../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items10, () => callback.getRelationshipCount() > 0);
+  stateFromStores1 = _initialize.useStateFromStores(items10, () => callback.getRelationshipCount() > 0);
   const items11 = [navigation, stateFromStores1, 0 === first.length];
   const items12 = [navigation];
   const memo = obj.useMemo(() => {
@@ -735,5 +737,5 @@ export default function NewMessageScreen(navigation) {
   obj = { value: tmp4(FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(5630).NEW_MESSAGE_COMPOSER).analyticsLocations, children: null };
   obj1 = { actions: memo, noResultActions: memo1, rowMode: stateFromStores1.NONE, tagListInputRef: ref, onSelectUser: callback1, onQueryChanged: callback3, selectedUserIds: first, withAffinitySuggestions: true, overrideResults: tmp26Result, withGuildMembers: tmp28, withGDMNames: true, forceSearchResults: tmp10, onForceSearchResults: callback2, defaultNoResultsFound: memo2, autoFocusSearch: true };
   obj[1] = callback3(tmp2(11652), obj1);
-  return callback3(_require("../../../../app_analytics/useAnalyticsLocations.tsx").AnalyticsLocationProvider, obj);
+  return callback3(_context.AnalyticsLocationProvider, obj);
 };

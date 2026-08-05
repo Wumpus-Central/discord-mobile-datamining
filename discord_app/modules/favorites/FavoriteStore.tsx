@@ -1,3 +1,5 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 // discord_app/modules/favorites/FavoriteStore.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { createChannelRecord } from "createChannelRecord";
@@ -59,8 +61,8 @@ function initializeFromUserSettings() {
   }
   let tmp7 = value;
   if (value == null) {
-    tmp7 = !require("../../../_runtime/00012_apply.js") /* apply */.isEmpty(obj);
-    const obj2 = require("../../../_runtime/00012_apply.js") /* apply */;
+    tmp7 = !apply /* apply */.isEmpty(obj);
+    const obj2 = apply /* apply */;
   }
   let flag2 = flag !== flag;
   if (!flag2) {
@@ -70,8 +72,8 @@ function initializeFromUserSettings() {
     flag2 = c10 !== tmp11;
   }
   if (!flag2) {
-    flag2 = !require("../../../_runtime/00012_apply.js") /* apply */.isEqual(obj, obj);
-    const obj3 = require("../../../_runtime/00012_apply.js") /* apply */;
+    flag2 = !apply /* apply */.isEqual(obj, obj);
+    const obj3 = apply /* apply */;
   }
   if (flag2) {
     c9 = tmp7;
@@ -132,7 +134,7 @@ prototype["getCategoryRecord"] = function getCategoryRecord(id) {
   let tmp = null;
   if (id in dependencyMap) {
     tmp = null;
-    if (dependencyMap[id].type === require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.FavoriteChannelType.CATEGORY) {
+    if (dependencyMap[id].type === create /* create */.FavoriteChannelType.CATEGORY) {
       const obj = { id: null, name: null, type: null, position: null, guild_id: null };
       ({ id: obj[0], nickname } = dependencyMap[id]);
       if (nickname == null) {
@@ -160,7 +162,7 @@ prototype["getFavoritesCount"] = function getFavoritesCount() {
   return Object.keys(this.getFavoriteChannels()).length;
 };
 prototype["hasStoredFavorites"] = function hasStoredFavorites() {
-  return !require("../../../_runtime/00012_apply.js") /* apply */.isEmpty(this.getFavoriteChannels());
+  return !apply /* apply */.isEmpty(this.getFavoriteChannels());
 };
 FavoriteStore.displayName = "FavoriteStore";
 const favoriteStore = new FavoriteStore(require("dispatcher"), {});

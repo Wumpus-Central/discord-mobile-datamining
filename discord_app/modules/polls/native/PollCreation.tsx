@@ -1,3 +1,9 @@
+import { registerAsset } from "../../../../_runtime/11496_registerAsset.js";
+import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { TextInput } from "../../../design/components/TextInput/native/TextInput.native.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/polls/native/PollCreation.tsx
 import importAllResult from "trackImpression";
 import get_ActivityIndicator from "TableRowInner";
@@ -18,38 +24,38 @@ let unpackModuleId;
 const require = arg1;
 function UnsavedChangesAlertModal(onConfirm) {
   let obj = { title: null, content: null, actions: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.HMrgcp);
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["Wxa/j8"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.HMrgcp);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["Wxa/j8"]);
   obj = { children: null };
   obj = { text: null, onPress: null };
-  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.TzJA4g);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.TzJA4g);
   obj[1] = onConfirm.onConfirm;
-  const items = [callback(require("../../../design/components/AlertModal/native/AlertModal.native.tsx") /* getAlertModalItemKey */.AlertActionButton, obj, "confirm"), ];
+  const items = [callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, obj, "confirm"), ];
   const obj1 = { variant: "secondary", text: null };
-  const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[1] = intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["2BR5R2"]);
-  items[1] = callback(require("../../../design/components/AlertModal/native/AlertModal.native.tsx") /* getAlertModalItemKey */.AlertActionButton, obj1, "back");
+  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[1] = intl4.string(getSystemLocale /* getSystemLocale */.t["2BR5R2"]);
+  items[1] = callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, obj1, "back");
   obj[0] = items;
   obj[2] = callback2(closure_10, obj);
-  return callback(require("../../../design/components/AlertModal/native/AlertModal.native.tsx") /* getAlertModalItemKey */.AlertModal, obj);
+  return callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertModal, obj);
 }
 function AddAnswerButton(onPress) {
   const tmp = callback3();
   let obj = { source: null, size: null, color: null };
-  obj[0] = require("../../../../_runtime/11496_registerAsset.js");
-  obj[1] = require("../../../design/void/native.tsx") /* Button */.Icon.Sizes.LARGE;
+  obj[0] = registerAsset;
+  obj[1] = Button /* Button */.Icon.Sizes.LARGE;
   obj[2] = tmp.addAnswerIcon.color;
   obj = { onPress: onPress.onPress, style: tmp.addAnswerButtonDefault, accessibilityRole: "button", accessibilityLabel: null, children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.B2Uvme);
-  const items = [callback(require("../../../design/void/native.tsx") /* Button */.Icon, obj), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.B2Uvme);
+  const items = [callback(Button /* Button */.Icon, obj), ];
   obj = { variant: "text-md/medium", color: "text-muted", children: null };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.B2Uvme);
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.B2Uvme);
+  items[1] = callback(Text /* Text */.Text, obj);
   obj[4] = items;
   return callback2(closure_4, obj);
 }
@@ -106,10 +112,10 @@ let closure_14 = importAllResult.forwardRef((error, ref) => {
     tmp = error.length > 0;
   }
   let obj = { ref, textAlignVertical: "center", label: null, accessibilityLabel: null, accessibilityHint: null, placeholder: null, onChange: null, isClearable: true, status: null, errorMessage: null, maxLength: null, returnKeyType: "next", blurOnSubmit: false, onSubmitEditing: null, textContentType: "none", autoFocus: true, autoCorrect: true };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.WBiKnI);
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.WBiKnI);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.WBiKnI);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.WBiKnI);
   let formatToPlainStringResult;
   if (tmp) {
     const intl3 = tmp3(1236).intl;
@@ -119,7 +125,7 @@ let closure_14 = importAllResult.forwardRef((error, ref) => {
   }
   obj[4] = formatToPlainStringResult;
   const intl4 = tmp3(1236).intl;
-  obj[5] = intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["/uQqJW"]);
+  obj[5] = intl4.string(getSystemLocale /* getSystemLocale */.t["/uQqJW"]);
   obj[6] = onChange;
   let str = "default";
   if (tmp) {
@@ -129,7 +135,7 @@ let closure_14 = importAllResult.forwardRef((error, ref) => {
   obj[9] = error;
   obj[10] = closure_7;
   obj[13] = onSubmitEditing;
-  return closure_9(require("../../../design/components/TextInput/native/TextInput.native.tsx") /* TextInput */.TextInput, obj);
+  return closure_9(TextInput /* TextInput */.TextInput, obj);
 });
 const result = set.fileFinishedImporting("modules/polls/native/PollCreation.tsx");
 

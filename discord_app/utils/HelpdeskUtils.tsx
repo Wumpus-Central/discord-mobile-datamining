@@ -1,3 +1,5 @@
+import { getLocalizedLink } from "../modules/links/getLocalizedLink.tsx";
+import { set } from "PlatformUtils.tsx";
 // discord_app/utils/HelpdeskUtils.tsx
 import _getSystemLocale from "_getSystemLocale";
 import ME from "ME";
@@ -24,14 +26,14 @@ export default {
     return "https://creator-support.discord.com" + "/hc/" + _getSystemLocale.locale.toLowerCase() + "/articles/" + MEDIA_CHANNEL;
   },
   getTwitterURL() {
-    return require("../modules/links/getLocalizedLink.tsx")(LocalizedLinks.TWITTER);
+    return getLocalizedLink(LocalizedLinks.TWITTER);
   },
   getCommunityURL() {
     return combined + "/hc/" + _getSystemLocale.locale.toLowerCase();
   },
   getSubmitRequestURL(arg0) {
     const formatted = _getSystemLocale.locale.toLowerCase();
-    const sum = combined + "/hc/" + formatted + "/requests/new?platform=" + encodeURIComponent(require("PlatformUtils.tsx") /* set */.getPlatformName());
+    const sum = combined + "/hc/" + formatted + "/requests/new?platform=" + encodeURIComponent(set /* set */.getPlatformName());
     let sum1 = sum;
     if (null != arg0) {
       const _encodeURIComponent = encodeURIComponent;

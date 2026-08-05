@@ -1,3 +1,7 @@
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx";
+import { keys } from "../../../ConstantsIOS.tsx";
+import { Linking } from "../../../lib/native/Linking.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/links/native/BrowserManager.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import keys from "keys";
@@ -8,26 +12,26 @@ let c4;
 ({ AppState: c3, NativeEventEmitter: c4, NativeModules } = get_ActivityIndicator);
 let BrowserManager = NativeModules.BrowserManager;
 let closure_7 = keys.create(() => {
-  let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
+  let obj = set /* set */;
   if (obj.isAndroid()) {
-    let isChromeInstalled = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx").getConstants().isChromeInstalled;
-    const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx");
+    let isChromeInstalled = enforcing.getConstants().isChromeInstalled;
+    const obj2 = enforcing;
   } else {
     isChromeInstalled = BrowserManager.isChromeInstalled;
   }
   obj = { isChromeInstalled, selectedBrowser: null, supportsInAppBrowser: null, isInAppBrowserOpen: false };
   let tmpResult = tmp(500);
   if (tmpResult.isAndroid()) {
-    let selectedBrowser = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx").getConstants().selectedBrowser;
-    const obj5 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx");
+    let selectedBrowser = enforcing.getConstants().selectedBrowser;
+    const obj5 = enforcing;
   } else {
     selectedBrowser = BrowserManager.selectedBrowser;
   }
   obj[1] = selectedBrowser;
   tmpResult = tmp(500);
   if (tmpResult.isAndroid()) {
-    let supportsInAppBrowser = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx").getConstants().supportsInAppBrowser;
-    const obj7 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx");
+    let supportsInAppBrowser = enforcing.getConstants().supportsInAppBrowser;
+    const obj7 = enforcing;
   } else {
     supportsInAppBrowser = BrowserManager.supportsInAppBrowser;
   }
@@ -71,7 +75,7 @@ export const browserManagerOpenUrl = function browserManagerOpenUrl(closure_0, C
   if (CHROME === undefined) {
     selectedBrowser = store.getState().selectedBrowser;
   }
-  if (selectedBrowser !== require("../../../ConstantsIOS.tsx") /* keys */.WebBrowserType.SAFARI) {
+  if (selectedBrowser !== keys /* keys */.WebBrowserType.SAFARI) {
     if (selectedBrowser !== tmp2(691).WebBrowserType.CHROME) {
       if (selectedBrowser === tmp2(691).WebBrowserType.IN_APP) {
         let tmp2Result = tmp2(500);
@@ -79,8 +83,8 @@ export const browserManagerOpenUrl = function browserManagerOpenUrl(closure_0, C
       if (tmp2(691).WebBrowserType.IN_APP === selectedBrowser) {
         tmp2Result = tmp2(500);
         if (tmp2Result.isAndroid()) {
-          let openInAppURLResult = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx").openInAppURL(closure_0);
-          const obj6 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx");
+          let openInAppURLResult = enforcing.openInAppURL(closure_0);
+          const obj6 = enforcing;
         } else {
           openInAppURLResult = BrowserManager.openInAppURL(closure_0);
         }
@@ -127,8 +131,8 @@ export const browserManagerOpenUrl = function browserManagerOpenUrl(closure_0, C
         });
       } else if (tmp2(691).WebBrowserType.CHROME === selectedBrowser) {
         if (tmp2Result1.isAndroid()) {
-          let openInChromeURLResult = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx").openInChromeURL(closure_0);
-          let obj4 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx");
+          let openInChromeURLResult = enforcing.openInChromeURL(closure_0);
+          let obj4 = enforcing;
         } else {
           openInChromeURLResult = BrowserManager.openInChromeURL(closure_0, true);
         }
@@ -138,21 +142,21 @@ export const browserManagerOpenUrl = function browserManagerOpenUrl(closure_0, C
       }
     }
   }
-  require("../../../lib/native/Linking.tsx").performURLNavigation(closure_0);
+  Linking.performURLNavigation(closure_0);
   return Promise.resolve();
 };
 export const browserManagerSelectBrowser = function browserManagerSelectBrowser(selectedBrowser) {
-  let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
+  let obj = set /* set */;
   if (obj.isAndroid()) {
     if (tmp(691).WebBrowserType.SAFARI === selectedBrowser) {
-      const browser = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx").selectBrowser(tmp(4252).BrowserType.SAFARI);
-      const obj3 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx");
+      const browser = enforcing.selectBrowser(tmp(4252).BrowserType.SAFARI);
+      const obj3 = enforcing;
     } else if (tmp(691).WebBrowserType.IN_APP === selectedBrowser) {
-      const browser1 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx").selectBrowser(tmp(4252).BrowserType.IN_APP);
-      const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx");
+      const browser1 = enforcing.selectBrowser(tmp(4252).BrowserType.IN_APP);
+      const obj2 = enforcing;
     } else if (tmp(691).WebBrowserType.CHROME === selectedBrowser) {
-      const browser2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx").selectBrowser(tmp(4252).BrowserType.CHROME);
-      const obj5 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx");
+      const browser2 = enforcing.selectBrowser(tmp(4252).BrowserType.CHROME);
+      const obj5 = enforcing;
     }
   } else {
     const BrowserManager = NativeModules.BrowserManager;
@@ -172,12 +176,12 @@ export const openPlayStoreInlineInstall = function openPlayStoreInlineInstall(ur
   const _require = arg2;
   const importDefault = Date.now();
   if (obj.isAndroid()) {
-    let openPlayStoreInlineResult = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx").openPlayStoreInline(url, arg1, function callback() {
+    let openPlayStoreInlineResult = enforcing.openPlayStoreInline(url, arg1, function callback() {
       if (closure_0 != null) {
         tmp2(tmp);
       }
     });
-    const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx");
+    const obj2 = enforcing;
   } else if (null == arg1) {
     openPlayStoreInlineResult = Promise.resolve(false);
   } else {

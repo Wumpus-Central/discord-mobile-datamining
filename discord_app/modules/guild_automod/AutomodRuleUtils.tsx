@@ -1,3 +1,7 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { buildCommand } from "../application_commands/ApplicationCommandUtils.tsx";
+import { getRuleDefaultActionsFromConfig } from "AutomodActionUtils.tsx";
+import { AutomodTriggerType } from "AutomodTriggerConfigs.tsx";
 // discord_app/modules/guild_automod/AutomodRuleUtils.tsx
 import fetchFingerprint from "fetchFingerprint";
 import { getRuleCountByTriggerType } from "withEqualityFn";
@@ -62,9 +66,9 @@ export const isRuleUserProfileFilter = function isRuleUserProfileFilter(triggerT
   return triggerType === constants.USER_PROFILE;
 };
 export const createDefaultRule = function createDefaultRule(arg0, arg1) {
-  let obj = require("AutomodTriggerConfigs.tsx") /* AutomodTriggerType */.triggerConfigs[arg1];
+  let obj = AutomodTriggerType /* AutomodTriggerType */.triggerConfigs[arg1];
   obj = { id: null, name: null, guildId: null, eventType: null, triggerType: null, triggerMetadata: null, enabled: true, creatorId: null, actions: null, position: 0, exemptChannels: null, exemptRoles: null };
-  const defaultTriggerMetadataForTriggerType = require("AutomodTriggerConfigs.tsx") /* AutomodTriggerType */.getDefaultTriggerMetadataForTriggerType(arg1, arg0);
+  const defaultTriggerMetadataForTriggerType = AutomodTriggerType /* AutomodTriggerType */.getDefaultTriggerMetadataForTriggerType(arg1, arg0);
   obj[0] = "" + arg0 + "-" + arg1 + "-new-rule";
   obj[1] = obj.getDefaultRuleName();
   obj[2] = arg0;
@@ -72,9 +76,9 @@ export const createDefaultRule = function createDefaultRule(arg0, arg1) {
   obj[4] = arg1;
   obj[5] = defaultTriggerMetadataForTriggerType;
   obj[7] = id.getId();
-  const obj2 = require("AutomodTriggerConfigs.tsx") /* AutomodTriggerType */;
-  obj[8] = require("AutomodActionUtils.tsx") /* getRuleDefaultActionsFromConfig */.getRuleDefaultActionsFromConfig(obj);
-  const obj4 = require("AutomodActionUtils.tsx") /* getRuleDefaultActionsFromConfig */;
+  const obj2 = AutomodTriggerType /* AutomodTriggerType */;
+  obj[8] = getRuleDefaultActionsFromConfig /* getRuleDefaultActionsFromConfig */.getRuleDefaultActionsFromConfig(obj);
+  const obj4 = getRuleDefaultActionsFromConfig /* getRuleDefaultActionsFromConfig */;
   obj[10] = new Set();
   const set = new Set();
   obj[11] = new Set();
@@ -96,15 +100,15 @@ export const createDefaultRule = function createDefaultRule(arg0, arg1) {
     }
     return obj;
   }
-  obj5 = require("../application_commands/ApplicationCommandUtils.tsx") /* buildCommand */;
+  obj5 = buildCommand /* buildCommand */;
 };
 export const validateKeywordsOrThrow = function validateKeywordsOrThrow(arr) {
   if (arr.length > arg1) {
     const _Error = Error;
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     const obj = { limit: null };
     obj[0] = arg1;
-    const error = new Error(intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.mee4qd, obj));
+    const error = new Error(intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.mee4qd, obj));
     throw error;
   } else {
     const item = arr.forEach((keyword) => {
@@ -117,10 +121,10 @@ export const validateKeywordsOrThrow = function validateKeywordsOrThrow(arr) {
 export const validateRegexPatternsOrThrow = function validateRegexPatternsOrThrow(arr) {
   if (arr.length > closure_6) {
     const _Error = Error;
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     const obj = { limit: null };
     obj[0] = tmp;
-    const error = new Error(intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.tDjhF1, obj));
+    const error = new Error(intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.tDjhF1, obj));
     throw error;
   } else {
     const item = arr.forEach((regex) => {
@@ -147,17 +151,17 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
     if (0 === keywordFilter.length) {
       if (0 === regexPatterns.length) {
         const _Error4 = Error;
-        const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        const error = new Error(intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.kz2Av3));
+        const intl4 = getSystemLocale /* getSystemLocale */.intl;
+        const error = new Error(intl4.string(getSystemLocale /* getSystemLocale */.t.kz2Av3));
         throw error;
       }
     }
     if (keywordFilter.length > closure_5) {
       const _Error3 = Error;
-      const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl3 = getSystemLocale /* getSystemLocale */.intl;
       let obj = { limit: null };
       obj[0] = tmp2;
-      const error1 = new Error(intl3.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.mee4qd, obj));
+      const error1 = new Error(intl3.formatToPlainString(getSystemLocale /* getSystemLocale */.t.mee4qd, obj));
       throw error1;
     } else {
       const item = keywordFilter.forEach((keyword) => {
@@ -167,10 +171,10 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
       });
       if (regexPatterns.length > closure_6) {
         const _Error2 = Error;
-        const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        const intl2 = getSystemLocale /* getSystemLocale */.intl;
         obj = { limit: null };
         obj[0] = tmp33;
-        const error2 = new Error(intl2.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.tDjhF1, obj));
+        const error2 = new Error(intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.tDjhF1, obj));
         throw error2;
       } else {
         const item1 = regexPatterns.forEach((regex) => {
@@ -183,8 +187,8 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
   }
   if (0 === triggerType.actions.length) {
     const _Error = Error;
-    let intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    const error3 = new Error(intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["t+gj5V"]));
+    let intl = getSystemLocale /* getSystemLocale */.intl;
+    const error3 = new Error(intl.string(getSystemLocale /* getSystemLocale */.t["t+gj5V"]));
     throw error3;
   }
 };
@@ -196,56 +200,56 @@ export const isBackendPersistedRule = function isBackendPersistedRule(id) {
   if (str == null) {
     str = "INVALID_SNOWFLAKE";
   }
-  return require("../application_commands/ApplicationCommandUtils.tsx") /* buildCommand */.isSnowflake(str);
+  return buildCommand /* buildCommand */.isSnowflake(str);
 };
 export const eventTypeToName = function eventTypeToName(newValue) {
   if (constants3.MESSAGE_SEND === newValue) {
-    const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.NlQW4P);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    return intl3.string(getSystemLocale /* getSystemLocale */.t.NlQW4P);
   } else if (tmp.GUILD_MEMBER_JOIN_OR_UPDATE === newValue) {
-    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["Q+68IX"]);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    return intl2.string(getSystemLocale /* getSystemLocale */.t["Q+68IX"]);
   } else {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.SP9BBx);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.SP9BBx);
   }
 };
 export const actionTypeToName = function actionTypeToName(arg0) {
   if (constants2.BLOCK_MESSAGE === arg0) {
-    const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl5.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.d1ab8n);
+    const intl5 = getSystemLocale /* getSystemLocale */.intl;
+    return intl5.string(getSystemLocale /* getSystemLocale */.t.d1ab8n);
   } else if (tmp.FLAG_TO_CHANNEL === arg0) {
-    const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["Y+VmvU"]);
+    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    return intl4.string(getSystemLocale /* getSystemLocale */.t["Y+VmvU"]);
   } else if (tmp.USER_COMMUNICATION_DISABLED === arg0) {
-    const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["6WPxY2"]);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    return intl3.string(getSystemLocale /* getSystemLocale */.t["6WPxY2"]);
   } else if (tmp.QUARANTINE_USER === arg0) {
-    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.NPO8ee);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    return intl2.string(getSystemLocale /* getSystemLocale */.t.NPO8ee);
   } else {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.SP9BBx);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.SP9BBx);
   }
 };
 export const triggerTypeToName = function triggerTypeToName(newValue) {
   if (constants.KEYWORD === newValue) {
-    const intl6 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl6.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.ffR2cM);
+    const intl6 = getSystemLocale /* getSystemLocale */.intl;
+    return intl6.string(getSystemLocale /* getSystemLocale */.t.ffR2cM);
   } else if (tmp.ML_SPAM === newValue) {
-    const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl5.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["puF/Os"]);
+    const intl5 = getSystemLocale /* getSystemLocale */.intl;
+    return intl5.string(getSystemLocale /* getSystemLocale */.t["puF/Os"]);
   } else if (tmp.DEFAULT_KEYWORD_LIST === newValue) {
-    const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.LnGhZv);
+    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    return intl4.string(getSystemLocale /* getSystemLocale */.t.LnGhZv);
   } else if (tmp.MENTION_SPAM === newValue) {
-    const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.pX7i6n);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    return intl3.string(getSystemLocale /* getSystemLocale */.t.pX7i6n);
   } else if (tmp.USER_PROFILE === newValue) {
-    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.q1L2v8);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    return intl2.string(getSystemLocale /* getSystemLocale */.t.q1L2v8);
   } else {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.SP9BBx);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.SP9BBx);
   }
 };

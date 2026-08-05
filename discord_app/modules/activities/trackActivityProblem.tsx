@@ -1,3 +1,4 @@
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/activities/trackActivityProblem.tsx
 import { AnalyticEvents } from "ME";
 
@@ -21,7 +22,7 @@ export default function trackActivityProblem(arg0) {
   if (rating === undefined) {
     rating = null;
   }
-  let obj = require("../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { reason: problem, guild_id: null, channel_id: null, application_id: null, application_name: null, location: null, rating: null, feedback: null, embedded_activity_location_kind: null, rtc_connection_id: null, media_session_id: null };
   let guildId;
   if (channel != null) {

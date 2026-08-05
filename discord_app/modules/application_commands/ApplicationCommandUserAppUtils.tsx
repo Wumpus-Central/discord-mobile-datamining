@@ -1,9 +1,10 @@
+import { EphemeralMessageReason } from "../../../discord_common/js/shared/shared-constants/EphemeralMessageReason.tsx";
 // discord_app/modules/application_commands/ApplicationCommandUserAppUtils.tsx
 const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandUserAppUtils.tsx");
 
 export const getEphemeralReasonMessage = function getEphemeralReasonMessage(ephemerality_reason1) {
   const tmp = require;
-  if (require("../../../discord_common/js/shared/shared-constants/EphemeralMessageReason.tsx") /* EphemeralMessageReason */.EphemeralMessageReason.FEATURE_LIMITED === ephemerality_reason1) {
+  if (EphemeralMessageReason /* EphemeralMessageReason */.EphemeralMessageReason.FEATURE_LIMITED === ephemerality_reason1) {
     const intl19 = tmp(1236).intl;
     return intl19.string(tmp(1236).t.WCvmrR);
   } else if (tmp(7997).EphemeralMessageReason.GUILD_FEATURE_LIMITED === ephemerality_reason1) {

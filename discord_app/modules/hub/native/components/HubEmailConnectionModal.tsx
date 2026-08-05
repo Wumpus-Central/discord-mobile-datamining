@@ -1,3 +1,8 @@
+import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { useInitialValue } from "../../../../hooks/useInitialValue.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/hub/native/components/HubEmailConnectionModal.tsx
 import "getSystemLocale";
 import { HubEmailConnectionSteps } from "HubEmailConnectionSteps";
@@ -20,9 +25,9 @@ export default function HubEmailConnectionModal(arg0) {
   let screens;
   ({ isNestedNavigator: require, onCloseExtra: importDefault, invite: dependencyMap, displayStudentPrompt: HubEmailConnectionSteps } = arg0);
   let jsx;
-  let obj = require("../../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
+  let obj = useNavigation /* useNavigation */;
   jsx = obj.useNavigation();
-  ({ screens, initialRouteStack } = require("../../../../hooks/useInitialValue.tsx")(() => {
+  ({ screens, initialRouteStack } = useInitialValue(() => {
     function handleClose() {
       let flag = arg0;
       if (arg0 === undefined) {
@@ -146,11 +151,11 @@ export default function HubEmailConnectionModal(arg0) {
     return obj1;
   }));
   obj = { screens, initialRouteStack, headerBackTitle: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["13/7kX"]);
-  return jsx(require("../../../../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */.Navigator, { screens, initialRouteStack, headerBackTitle: null });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["13/7kX"]);
+  return jsx(NavigationStack /* NavigationStack */.Navigator, { screens, initialRouteStack, headerBackTitle: null });
 };
 export const HubEmailConnectionScreen = function HubEmailConnectionScreen(children) {
   const tmp = createCacheKey();
-  return jsx(require("../../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, { top: true, style: createCacheKey().safeArea, children: children.children });
+  return jsx(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, { top: true, style: createCacheKey().safeArea, children: children.children });
 };

@@ -1,3 +1,4 @@
+import { isSubscriptionRole } from "PremiumRoleUtils.tsx";
 // discord_app/modules/guild_role_subscriptions/SubscriptionRoleStore.tsx
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import { hasPermission } from "GuildRoleRecordTypeTag";
@@ -41,7 +42,7 @@ function computeRolesForGuild(guildId) {
           let tmp15 = nextResult;
           let tmp16 = require;
           let tmp17 = dependencyMap;
-          let obj2 = require("PremiumRoleUtils.tsx") /* isSubscriptionRole */;
+          let obj2 = isSubscriptionRole /* isSubscriptionRole */;
           if (obj2.isSubscriptionRole(nextResult)) {
             let tmp18 = nextResult;
             let addResult = set.add(tmp15.id);

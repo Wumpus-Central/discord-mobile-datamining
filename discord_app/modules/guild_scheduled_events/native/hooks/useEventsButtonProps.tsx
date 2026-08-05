@@ -1,3 +1,5 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useGuildEvents } from "../../useGuildScheduledEvents.tsx";
 // discord_app/modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx
 import noop from "noop";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
@@ -11,14 +13,14 @@ export default function useEventsButtonProps(id) {
   let hasUnread;
   let mentionCount;
   const _require = id;
-  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [generateOldThreadCutoff];
   const items1 = [id.id];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ hasUnread: outer1_4.hasUnread(id.id, outer1_6.GUILD_EVENT), mentionCount: outer1_4.getMentionCount(id.id, outer1_6.GUILD_EVENT) }), items1);
   ({ hasUnread, mentionCount } = stateFromStoresObject);
   const items2 = [updateUserGuildSettingsInternal];
-  const eventsMuted = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => outer1_5.isMuteScheduledEventsEnabled(id.id));
-  const arr4 = require("../../useGuildScheduledEvents.tsx")(id.id);
+  const eventsMuted = _initialize.useStateFromStores(items2, () => outer1_5.isMuteScheduledEventsEnabled(id.id));
+  const arr4 = useGuildEvents(id.id);
   const items3 = [id];
   const items4 = [id.id];
   const handlePress = React.useCallback(() => {

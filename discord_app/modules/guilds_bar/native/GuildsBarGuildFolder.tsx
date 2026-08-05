@@ -1,3 +1,8 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 // discord_app/modules/guilds_bar/native/GuildsBarGuildFolder.tsx
 import importAllResult from "module_4146";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
@@ -23,10 +28,10 @@ function MiniGuildIcon(arg0) {
   let require;
   let selected;
   ({ guildId: require, position, selected } = arg0);
-  let obj = require("../../../design/tokens/native/useToken.tsx") /* map */;
-  const tmp4 = callback3(false, obj.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GUILD_BAR_ITEM_SIZE));
+  let obj = map /* map */;
+  const tmp4 = callback3(false, obj.useToken(Themes.modules.mobile.GUILD_BAR_ITEM_SIZE));
   const items = [createGuildRecordFromRust];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => outer1_5.getGuild(closure_0));
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => outer1_5.getGuild(closure_0));
   if (0 === position) {
     let guildPreview3 = tmp4.guildPreview0;
   } else if (1 === position) {
@@ -38,7 +43,7 @@ function MiniGuildIcon(arg0) {
   }
   const items1 = [tmp4.guildPreviewIcon, , ];
   let prop;
-  const obj2 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const obj2 = initialize /* initialize */;
   const tmp = require;
   const tmp3 = importDefault;
   const tmp6 = closure_14;
@@ -48,7 +53,7 @@ function MiniGuildIcon(arg0) {
   obj = { style: items1, guild: stateFromStores, size: tmp(5661).GuildIconSizes.XXSMALL, selected };
   items1[1] = prop;
   items1[2] = guildPreview3;
-  return tmp6(require("../../guild/native/GuildIcon.tsx"), obj, "" + selected);
+  return tmp6(GuildIconSizes, obj, "" + selected);
 }
 function TransitionWrapper(children) {
   let flag = children.fromTop;
@@ -134,7 +139,7 @@ function GuildFolderIcon(item) {
     const obj = { source: null, style: null };
     obj[0] = tmp3;
     obj[1] = item.tintStyle;
-    tmp4 = callback2(require("../../../components_native/common/FastImage.tsx"), obj);
+    tmp4 = callback2(preload, obj);
   }
   return tmp4;
 }
@@ -195,18 +200,18 @@ let closure_16 = createCacheKey.createStyles(() => {
     num2 = 0;
   }
   let obj = { folderBackground: null, folderScaleContainer: null, guildPreviewIcon: null, guildPreviewIconUnselected: null, guildPreview0: null, guildPreview1: null, guildPreview2: null, guildPreview3: null, guildPreviewWrapper: null };
-  obj = { position: "absolute", top: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GUILD_BAR_ITEM_MARGIN, left: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GUILD_FOLDER_BACKGROUND_LEFT, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.GUILD_FOLDER_BACKGROUND, borderTopLeftRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GUILD_FOLDER_BACKGROUND_RADIUS, borderTopRightRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GUILD_FOLDER_BACKGROUND_RADIUS, borderBottomLeftRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GUILD_FOLDER_BACKGROUND_RADIUS, borderBottomRightRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GUILD_FOLDER_BACKGROUND_RADIUS, width: num + num2 };
+  obj = { position: "absolute", top: Themes.modules.mobile.GUILD_BAR_ITEM_MARGIN, left: Themes.modules.mobile.GUILD_FOLDER_BACKGROUND_LEFT, backgroundColor: Themes.colors.GUILD_FOLDER_BACKGROUND, borderTopLeftRadius: Themes.modules.mobile.GUILD_FOLDER_BACKGROUND_RADIUS, borderTopRightRadius: Themes.modules.mobile.GUILD_FOLDER_BACKGROUND_RADIUS, borderBottomLeftRadius: Themes.modules.mobile.GUILD_FOLDER_BACKGROUND_RADIUS, borderBottomRightRadius: Themes.modules.mobile.GUILD_FOLDER_BACKGROUND_RADIUS, width: num + num2 };
   obj[0] = obj;
   obj[1] = { position: "absolute", top: 0, left: 0, width: num, height: num, justifyContent: "center", alignItems: "center" };
-  obj = { position: "absolute", margin: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GUILD_FOLDER_PREVIEW_ICON_MARGIN };
+  obj = { position: "absolute", margin: Themes.modules.mobile.GUILD_FOLDER_PREVIEW_ICON_MARGIN };
   obj[2] = obj;
-  obj[3] = { borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.sm };
+  obj[3] = { borderRadius: Themes.radii.sm };
   obj[4] = { top: 0, left: 0 };
   obj[5] = { top: 0, right: 0 };
   obj[6] = { bottom: 0, left: 0 };
   obj[7] = { bottom: 0, right: 0 };
-  const obj1 = { borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.sm };
-  obj[8] = { position: "absolute", width: num, height: num, opacity: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GUILD_FOLDER_PREVIEW_OPACITY };
+  const obj1 = { borderRadius: Themes.radii.sm };
+  obj[8] = { position: "absolute", width: num, height: num, opacity: Themes.modules.mobile.GUILD_FOLDER_PREVIEW_OPACITY };
   return obj;
 });
 let closure_18 = { code: "function GuildsBarGuildFolderTsx1(values){const{withSpring,TRANSITION_PHYSICS}=this.__closure;return{animations:{height:withSpring(values.targetHeight,TRANSITION_PHYSICS,'animate-always')},initialValues:{height:values.currentHeight}};}" };

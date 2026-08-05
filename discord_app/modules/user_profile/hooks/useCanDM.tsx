@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 // discord_app/modules/user_profile/hooks/useCanDM.tsx
 import recountRelationshipTypes from "recountRelationshipTypes";
 import initialize from "initialize";
@@ -12,21 +14,21 @@ export default function useCanDM(arg0, arg1) {
   const _require = arg0;
   const dependencyMap = arg1;
   const items = [fetchFingerprint];
-  let recountRelationshipTypes = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => id.getId() === closure_0);
-  const obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  let recountRelationshipTypes = _initialize.useStateFromStores(items, () => id.getId() === closure_0);
+  const obj = _initialize;
   const items1 = [initialize];
-  initialize = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  initialize = _initialize.useStateFromStores(items1, () => {
     let isLurkingResult = null != closure_1;
     if (isLurkingResult) {
       isLurkingResult = lurking.isLurking(tmp);
     }
     return isLurkingResult;
   });
-  const RestrictedGuildIds = _require("../../user_settings/UserSettings.tsx").RestrictedGuildIds;
+  const RestrictedGuildIds = _explicitContentFromProto.RestrictedGuildIds;
   fetchFingerprint = RestrictedGuildIds.useSetting();
-  const obj2 = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  const obj2 = _initialize;
   const items2 = [upsertRelationship, trackCommunicationDisabled, recountRelationshipTypes];
-  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
+  return _initialize.useStateFromStores(items2, () => {
     let tmp = !gameFriendsForUser;
     if (!gameFriendsForUser) {
       tmp = !initialize;
@@ -57,7 +59,7 @@ export const canDm = function canDm(userId, guildId) {
   if (isLurkingResult) {
     isLurkingResult = lurking.isLurking(guildId);
   }
-  const RestrictedGuildIds = _require("../../user_settings/UserSettings.tsx").RestrictedGuildIds;
+  const RestrictedGuildIds = _explicitContentFromProto.RestrictedGuildIds;
   _require = RestrictedGuildIds.getSetting();
   let isFriendResult = friend.isFriend(userId);
   let tmp8 = !tmp4;
@@ -74,7 +76,7 @@ export const canDm = function canDm(userId, guildId) {
   if (!tmp8) {
     let setting = gameFriendsForUser.getGameFriendsForUser(userId).length > 0;
     if (setting) {
-      const AllowGameFriendDmsInDiscord = _require("../../user_settings/UserSettings.tsx").AllowGameFriendDmsInDiscord;
+      const AllowGameFriendDmsInDiscord = _explicitContentFromProto.AllowGameFriendDmsInDiscord;
       setting = AllowGameFriendDmsInDiscord.getSetting();
     }
     tmp8 = setting;

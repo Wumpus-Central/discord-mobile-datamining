@@ -1,3 +1,5 @@
+import { useMountLayoutEffect } from "../../../../hooks/useMountEffect.tsx";
+import { KeyboardAwareView } from "../../../../modules/keyboard/native/KeyboardAwareView.tsx";
 // discord_app/design/components/Navigator/native/PostponeRender.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -30,7 +32,7 @@ export const PostponeRender = function PostponeRender(children) {
   first = tmp2[0];
   importDefault = tmp2[1];
   dependencyMap = React.useRef(undefined);
-  require("../../../../hooks/useMountEffect.tsx")(() => {
+  useMountLayoutEffect(() => {
     if (first) {
       table.current = first(table[7]).runAfterInteractions(() => {
         callback(false);
@@ -49,7 +51,7 @@ export const PostponeRender = function PostponeRender(children) {
   if (ignoreKeyboard) {
     let tmp4Result = closure_5;
   } else {
-    tmp4Result = require("../../../../modules/keyboard/native/KeyboardAwareView.tsx");
+    tmp4Result = KeyboardAwareView;
   }
   const style = [createCacheKey().view, viewStyle];
   return <tmp4Result style={style}>{children}</tmp4Result>;

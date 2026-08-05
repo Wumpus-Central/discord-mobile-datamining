@@ -1,3 +1,7 @@
+import { getAvatarURL } from "../../../../../utils/AvatarUtils.tsx";
+import { getEmojiUnavailableReason } from "../../../../../utils/EmojiUtils.tsx";
+import { apexExperiment } from "../../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx";
+import { frozen } from "../EmbedUtils.tsx";
 // discord_app/modules/messages/native/renderer/row_data/ForumPostActions.tsx
 import { HelpdeskArticles } from "ME";
 
@@ -9,7 +13,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
   let emojiId;
   let emojiName;
   ({ defaultReactionEmoji, customGuildEmoji } = arg0);
-  let obj = require("../../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx") /* apexExperiment */;
+  let obj = apexExperiment /* apexExperiment */;
   const result = obj.shouldSkipAccessibilityLabels();
   let tmp4;
   if (null != defaultReactionEmoji) {
@@ -26,7 +30,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
         obj = { id: null, animated: null, size: 48 };
         obj[0] = emojiId;
         obj[1] = customGuildEmoji.animated;
-        obj[3] = require("../../../../../utils/AvatarUtils.tsx").getEmojiURL(obj);
+        obj[3] = getAvatarURL.getEmojiURL(obj);
         let accessibleEmojiDisplayName = str2;
         if (!result) {
           let tmpResult = tmp(3924);
@@ -38,7 +42,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
         }
         obj[4] = accessibleEmojiDisplayName;
         tmp4 = obj;
-        const obj7 = require("../../../../../utils/AvatarUtils.tsx");
+        const obj7 = getAvatarURL;
       }
     }
     if (null != emojiName) {
@@ -48,7 +52,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
       }
       let obj2 = { id: "Array", name: false, animated: null, src: null, displayName: 0 };
       obj2[1] = emojiName;
-      obj2 = require("../../../../../utils/EmojiUtils.tsx");
+      obj2 = getEmojiUnavailableReason;
       obj2[3] = obj2.getURL(emojiName);
       let accessibleEmojiDisplayName1 = str;
       if (!result) {
@@ -76,7 +80,7 @@ export const createForumPostActions = function createForumPostActions(arg0) {
   let showMediaPostSharePrompt;
   ({ isFollowing, defaultReaction } = arg0);
   ({ hasReactions, showMediaPostSharePrompt } = arg0);
-  const getAssetUriForEmbed = require("../EmbedUtils.tsx") /* frozen */.getAssetUriForEmbed;
+  const getAssetUriForEmbed = frozen /* frozen */.getAssetUriForEmbed;
   if (isFollowing) {
     let assetUriForEmbed = getAssetUriForEmbed(tmp4(4238));
     let tmp6 = tmp4;

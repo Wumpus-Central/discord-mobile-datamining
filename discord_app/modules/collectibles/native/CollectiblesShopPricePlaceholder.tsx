@@ -1,3 +1,4 @@
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/collectibles/native/CollectiblesShopPricePlaceholder.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -29,5 +30,5 @@ export const CollectiblesShopPricePlaceholder = function CollectiblesShopPricePl
   fn.__initData = closure_6;
   const animatedStyle = sharedValue(4146).useAnimatedStyle(fn);
   style = [tmp.skeletonContainer, style.style, animatedStyle];
-  return jsx(require("../../reanimated/ReanimatedRexport.tsx").View, { style });
+  return jsx(ReanimatedRexport.View, { style });
 };

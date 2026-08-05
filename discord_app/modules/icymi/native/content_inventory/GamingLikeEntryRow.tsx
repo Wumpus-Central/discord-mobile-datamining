@@ -1,3 +1,6 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { TrendingType } from "../../../../../discord_common/js/shared/shared-constants/TrendingType.tsx";
+import { calculateTimestampDurations } from "../../../content_inventory/utils.tsx";
 // discord_app/modules/icymi/native/content_inventory/GamingLikeEntryRow.tsx
 import ICYMIActionCreators from "../../ICYMIActionCreators.tsx";
 import { View } from "Screenshot";
@@ -15,7 +18,7 @@ let items = [obj, , , , ];
 obj = {
   Badge: require("ActiveTimestamp").StreakBadge,
   predicate(entry) {
-    let num = require("../../../content_inventory/utils.tsx") /* calculateTimestampDurations */.getStreakCount(entry);
+    let num = calculateTimestampDurations /* calculateTimestampDurations */.getStreakCount(entry);
     if (num == null) {
       num = 0;
     }
@@ -26,10 +29,10 @@ items[1] = obj;
 obj = {
   Badge: require("ActiveTimestamp").TrendingBadge,
   predicate(entry) {
-    const trendingType = require("../../../content_inventory/utils.tsx") /* calculateTimestampDurations */.getTrendingType(entry);
-    const obj = require("../../../content_inventory/utils.tsx") /* calculateTimestampDurations */;
+    const trendingType = calculateTimestampDurations /* calculateTimestampDurations */.getTrendingType(entry);
+    const obj = calculateTimestampDurations /* calculateTimestampDurations */;
     const tmp = require;
-    return null != trendingType && trendingType !== require("../../../../../discord_common/js/shared/shared-constants/TrendingType.tsx") /* TrendingType */.TrendingType.TRENDING_TYPE_UNSPECIFIED;
+    return null != trendingType && trendingType !== TrendingType /* TrendingType */.TrendingType.TRENDING_TYPE_UNSPECIFIED;
   }
 };
 items[2] = obj;
@@ -48,26 +51,26 @@ let obj1 = {
 items[4] = {
   Badge: require("ActiveTimestamp").MarathonBadge,
   predicate(entry) {
-    return true === require("../../../content_inventory/utils.tsx") /* calculateTimestampDurations */.isEntryMarathon(entry);
+    return true === calculateTimestampDurations /* calculateTimestampDurations */.isEntryMarathon(entry);
   }
 };
 let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
   let obj = { card: null, cardInnerContainer: null, image: null, gameName: null, badges: null };
-  obj = { flexDirection: "row", gap: gap.margin, alignItems: "center", padding: gap.margin, marginLeft: gap.inset, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH };
-  const merged = Object.assign(require("../../../../../discord_common/js/packages/tokens/native.tsx").shadows.SHADOW_HIGH);
+  obj = { flexDirection: "row", gap: gap.margin, alignItems: "center", padding: gap.margin, marginLeft: gap.inset, borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH };
+  const merged = Object.assign(Themes.shadows.SHADOW_HIGH);
   obj[0] = obj;
   obj[1] = { overflow: "hidden", flex: 1 };
-  obj = { width: 72, height: 72, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm };
+  obj = { width: 72, height: 72, borderRadius: Themes.radii.sm };
   obj[2] = obj;
-  obj[3] = { maxWidth: 275, color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY };
-  const obj1 = { maxWidth: 275, color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY };
-  obj[4] = { display: "flex", flexDirection: "row", gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, flexWrap: "wrap", alignItems: "center", marginTop: 6 };
+  obj[3] = { maxWidth: 275, color: Themes.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY };
+  const obj1 = { maxWidth: 275, color: Themes.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY };
+  obj[4] = { display: "flex", flexDirection: "row", gap: Themes.space.PX_8, flexWrap: "wrap", alignItems: "center", marginTop: 6 };
   return obj;
 });
 let obj2 = {
   Badge: require("ActiveTimestamp").MarathonBadge,
   predicate(entry) {
-    return true === require("../../../content_inventory/utils.tsx") /* calculateTimestampDurations */.isEntryMarathon(entry);
+    return true === calculateTimestampDurations /* calculateTimestampDurations */.isEntryMarathon(entry);
   }
 };
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/icymi/native/content_inventory/GamingLikeEntryRow.tsx");

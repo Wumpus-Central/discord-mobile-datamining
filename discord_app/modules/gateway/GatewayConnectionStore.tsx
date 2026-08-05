@@ -1,3 +1,7 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { set } from "../../utils/PlatformUtils.tsx";
+import { CLOSED } from "ConnectionState.tsx";
+import { handleIdentify } from "GatewaySocketSingleton.tsx";
 // discord_app/modules/gateway/GatewayConnectionStore.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -165,16 +169,16 @@ function _handleConnectionOpen() {
   return applyArgumentsResult;
 }
 function handleClipsFlags() {
-  const localVoiceState = require("GatewaySocketSingleton.tsx") /* handleIdentify */.localVoiceState;
+  const localVoiceState = handleIdentify /* handleIdentify */.localVoiceState;
   localVoiceState.update();
 }
 function handleMediaEngineChange() {
-  const localVoiceState = require("GatewaySocketSingleton.tsx") /* handleIdentify */.localVoiceState;
+  const localVoiceState = handleIdentify /* handleIdentify */.localVoiceState;
   localVoiceState.update();
   return false;
 }
 function handleLocalPresenceChange() {
-  const localPresenceState = require("GatewaySocketSingleton.tsx") /* handleIdentify */.localPresenceState;
+  const localPresenceState = handleIdentify /* handleIdentify */.localPresenceState;
   localPresenceState.update();
   return false;
 }
@@ -197,18 +201,18 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items1, handleLocalPresenceChange);
 };
 prototype["getSocket"] = function getSocket() {
-  return require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+  return handleIdentify /* handleIdentify */.socket;
 };
 prototype["isTryingToConnect"] = function isTryingToConnect() {
-  const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+  const socket = handleIdentify /* handleIdentify */.socket;
   return !socket.isClosed();
 };
 prototype["isConnected"] = function isConnected() {
-  const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+  const socket = handleIdentify /* handleIdentify */.socket;
   return socket.isSessionEstablished();
 };
 prototype["isConnectedOrOverlay"] = function isConnectedOrOverlay() {
-  const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+  const socket = handleIdentify /* handleIdentify */.socket;
   return socket.isSessionEstablished() || false;
 };
 prototype["lastTimeConnectedChanged"] = function lastTimeConnectedChanged() {
@@ -217,11 +221,11 @@ prototype["lastTimeConnectedChanged"] = function lastTimeConnectedChanged() {
 GatewayConnectionStore.displayName = "GatewayConnectionStore";
 const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"), {
   START_SESSION: function handleSessionStart() {
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     const verbose = tmp3.verbose;
     if (socket.isClosed()) {
       verbose("Socket is reconnecting because of starting new session");
-      const socket2 = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+      const socket2 = handleIdentify /* handleIdentify */.socket;
       let flag = socket2.connect();
     } else {
       verbose("Socket is not reconnecting during a new session because it is not closed");
@@ -231,10 +235,10 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
   },
   LOGIN_SUCCESS: function handleSessionRefresh() {
     const obj = { isEstablished: null };
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     obj[0] = socket.isSessionEstablished();
     tmp3.verbose("session refresh dispatched", obj);
-    const socket2 = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket2 = handleIdentify /* handleIdentify */.socket;
     let connectResult = socket2.isSessionEstablished();
     if (connectResult) {
       const socket3 = tmp(12806).socket;
@@ -246,20 +250,20 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
   },
   LOGOUT: function handleLogout(isSwitchingAccount) {
     if (isSwitchingAccount.isSwitchingAccount) {
-      const localPresenceState = require("GatewaySocketSingleton.tsx") /* handleIdentify */.localPresenceState;
+      const localPresenceState = handleIdentify /* handleIdentify */.localPresenceState;
       localPresenceState.handleAccountSwitch();
     }
     tmp3.verbose("Closing socket because of logout");
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     socket.close();
   },
   CLEAR_CACHES: function handleClearCaches(resetSocket) {
     if (resetSocket.resetSocket) {
-      const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+      const socket = handleIdentify /* handleIdentify */.socket;
       socket.close();
-      const dispatcher = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket.dispatcher;
+      const dispatcher = handleIdentify /* handleIdentify */.socket.dispatcher;
       dispatcher.clear();
-      const socket2 = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+      const socket2 = handleIdentify /* handleIdentify */.socket;
       socket2.connect();
     }
     return false;
@@ -288,16 +292,16 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
       return false;
     } else if (state.willReconnect) {
       if (null != state.streamKey) {
-        const socket2 = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+        const socket2 = handleIdentify /* handleIdentify */.socket;
         socket2.streamPing(state.streamKey);
       } else {
-        const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+        const socket = handleIdentify /* handleIdentify */.socket;
         socket.voiceServerPing();
       }
     }
   },
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(guildId) {
-    const localVoiceState = require("GatewaySocketSingleton.tsx") /* handleIdentify */.localVoiceState;
+    const localVoiceState = handleIdentify /* handleIdentify */.localVoiceState;
     localVoiceState.update({ guildId: guildId.guildId, channelId: guildId.channelId });
     let channelId = null;
     if (guildId.lockVoiceStateForResume) {
@@ -306,7 +310,7 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
         channelId = guildId.channelId;
       }
     }
-    let isIOSResult = require("../../utils/PlatformUtils.tsx") /* set */.isIOS();
+    let isIOSResult = set /* set */.isIOS();
     if (isIOSResult) {
       isIOSResult = c23 === constants2.BACKGROUND;
     }
@@ -356,24 +360,24 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
     }, false);
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
-    if (guild.guild.id === require("GatewaySocketSingleton.tsx") /* handleIdentify */.localVoiceState.guildId) {
-      const localVoiceState = require("GatewaySocketSingleton.tsx") /* handleIdentify */.localVoiceState;
+    if (guild.guild.id === handleIdentify /* handleIdentify */.localVoiceState.guildId) {
+      const localVoiceState = handleIdentify /* handleIdentify */.localVoiceState;
       localVoiceState.setState({ guildId: null, channelId: null });
     }
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
-    if (channel.channel.id === require("GatewaySocketSingleton.tsx") /* handleIdentify */.localVoiceState.channelId) {
-      const localVoiceState = require("GatewaySocketSingleton.tsx") /* handleIdentify */.localVoiceState;
+    if (channel.channel.id === handleIdentify /* handleIdentify */.localVoiceState.channelId) {
+      const localVoiceState = handleIdentify /* handleIdentify */.localVoiceState;
       localVoiceState.setState({ guildId: null, channelId: null });
     }
   },
   CALL_DELETE: function handleCallDelete(channelId) {
     channelId = channelId.channelId;
-    if (channelId === require("GatewaySocketSingleton.tsx") /* handleIdentify */.localVoiceState.channelId) {
+    if (channelId === handleIdentify /* handleIdentify */.localVoiceState.channelId) {
       if (c24 === channelId) {
         return false;
       } else {
-        const localVoiceState = require("GatewaySocketSingleton.tsx") /* handleIdentify */.localVoiceState;
+        const localVoiceState = handleIdentify /* handleIdentify */.localVoiceState;
         localVoiceState.setState({ guildId: null, channelId: null });
       }
     }
@@ -413,17 +417,17 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
   },
   GUILD_MEMBERS_REQUEST: function handleGuildMembersRequest(userIds) {
     const _require = userIds;
-    let socket = _require("GatewaySocketSingleton.tsx").socket;
+    let socket = _handleIdentify.socket;
     if (socket.isSessionEstablished()) {
       if ("userIds" in userIds) {
-        const obj2 = require("../../../_runtime/00012_apply.js")(userIds.userIds);
-        const item = require("../../../_runtime/00012_apply.js")(userIds.userIds).chunk(100).forEach((userIds) => {
+        const obj2 = apply(userIds.userIds);
+        const item = apply(userIds.userIds).chunk(100).forEach((userIds) => {
           const socket = userIds(outer1_3[13]).socket;
           const guildMembers = socket.requestGuildMembers(userIds.guildIds, { userIds, presences: userIds.presences });
         });
-        const chunkResult = require("../../../_runtime/00012_apply.js")(userIds.userIds).chunk(100);
+        const chunkResult = apply(userIds.userIds).chunk(100);
       } else {
-        const socket2 = _require("GatewaySocketSingleton.tsx").socket;
+        const socket2 = _handleIdentify.socket;
         const obj = { query: null, limit: null, presences: null };
         ({ query: obj[0], limit: obj[1] } = userIds);
         obj[2] = userIds.presences;
@@ -437,9 +441,9 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
     let guildId;
     let query;
     ({ guildId, query, continuationToken } = arg0);
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     if (socket.isSessionEstablished()) {
-      const socket2 = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+      const socket2 = handleIdentify /* handleIdentify */.socket;
       const obj = { query: null, continuationToken: null };
       obj[0] = query;
       obj[1] = continuationToken;
@@ -447,24 +451,24 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
     }
   },
   GUILD_SUBSCRIPTIONS_FLUSH: function handleGuildSubscriptionsFlush(subscriptions) {
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     if (socket.isSessionEstablished()) {
-      const socket2 = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+      const socket2 = handleIdentify /* handleIdentify */.socket;
       const result = socket2.updateGuildSubscriptions(subscriptions.subscriptions);
     }
     return false;
   },
   CALL_CONNECT: function handleCallConnect(channelId) {
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     if (socket.isSessionEstablished()) {
-      const socket2 = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+      const socket2 = handleIdentify /* handleIdentify */.socket;
       socket2.callConnect(channelId.channelId);
     }
     return false;
   },
   CALL_CONNECT_MULTIPLE: function handleCallConnectMultiple(channelIds) {
     channelIds = channelIds.channelIds;
-    let socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    let socket = handleIdentify /* handleIdentify */.socket;
     if (socket.isSessionEstablished()) {
       const item = channelIds.forEach((arg0) => {
         const socket = callback(table[13]).socket;
@@ -479,7 +483,7 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
     let guildId;
     let streamType;
     ({ streamType, guildId, channelId } = arg0);
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     if (socket.isSessionEstablished()) {
       if (null != guildId) {
         channel = channel.getChannel(channelId);
@@ -494,7 +498,7 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
           region = call.region;
         }
       }
-      const socket2 = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+      const socket2 = handleIdentify /* handleIdentify */.socket;
       if (region == null) {
         region = preferredRegion.getPreferredRegion();
       }
@@ -506,7 +510,7 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
     let allowMultiple;
     let streamKey;
     ({ streamKey, allowMultiple } = arg0);
-    let socket = _require("GatewaySocketSingleton.tsx").socket;
+    let socket = _handleIdentify.socket;
     if (socket.isSessionEstablished()) {
       if (!allowMultiple) {
         const allActiveStreamKeys = store.getAllActiveStreamKeys();
@@ -521,13 +525,13 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
           }
         });
       }
-      let socket2 = _require("GatewaySocketSingleton.tsx").socket;
+      let socket2 = _handleIdentify.socket;
       socket2.streamWatch(streamKey);
     }
     return false;
   },
   STREAM_STOP: function handleStreamStop(streamKey) {
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     if (socket.isSessionEstablished()) {
       const socket2 = tmp(12806).socket;
       socket2.streamDelete(streamKey.streamKey);
@@ -540,14 +544,14 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
     let paused;
     let streamKey;
     ({ streamKey, paused } = arg0);
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     if (socket.isSessionEstablished()) {
-      const socket2 = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+      const socket2 = handleIdentify /* handleIdentify */.socket;
       socket2.streamSetPaused(streamKey, paused);
     }
   },
   PUSH_NOTIFICATION_CLICK: function handlePushNotificationClick() {
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     socket.expeditedHeartbeat(5000, "user clicked on notification", true);
     return false;
   },
@@ -556,27 +560,27 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
     let guildId;
     let threads;
     ({ guildId, channelId, threads } = arg0);
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     const forumUnreads = socket.requestForumUnreads(guildId, channelId, threads);
   },
   REQUEST_SOUNDBOARD_SOUNDS: function handleRequestSoundboardSounds(guildIds) {
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     const soundboardSounds = socket.requestSoundboardSounds(guildIds.guildIds);
   },
   REMOTE_COMMAND: function handleRemoteCommand(arg0) {
     let payload;
     let sessionId;
     ({ sessionId, payload } = arg0);
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     if (socket.isSessionEstablished()) {
-      const socket2 = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+      const socket2 = handleIdentify /* handleIdentify */.socket;
       socket2.remoteCommand(sessionId, payload);
     }
     return false;
   },
   RESET_SOCKET: function handleResetSocket(args) {
-    if (require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket.connectionState !== require("ConnectionState.tsx").WILL_RECONNECT) {
-      const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    if (handleIdentify /* handleIdentify */.socket.connectionState !== CLOSED.WILL_RECONNECT) {
+      const socket = handleIdentify /* handleIdentify */.socket;
       const result = socket.resetSocketAndClearCacheOnError(args.args);
     }
   },
@@ -593,18 +597,18 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
       tmp = null != allowVoiceRecording;
     }
     if (tmp) {
-      const localVoiceState = require("GatewaySocketSingleton.tsx") /* handleIdentify */.localVoiceState;
+      const localVoiceState = handleIdentify /* handleIdentify */.localVoiceState;
       localVoiceState.update();
     }
   }
 });
 let obj = {
   START_SESSION: function handleSessionStart() {
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     const verbose = tmp3.verbose;
     if (socket.isClosed()) {
       verbose("Socket is reconnecting because of starting new session");
-      const socket2 = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+      const socket2 = handleIdentify /* handleIdentify */.socket;
       let flag = socket2.connect();
     } else {
       verbose("Socket is not reconnecting during a new session because it is not closed");
@@ -614,10 +618,10 @@ let obj = {
   },
   LOGIN_SUCCESS: function handleSessionRefresh() {
     const obj = { isEstablished: null };
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     obj[0] = socket.isSessionEstablished();
     tmp3.verbose("session refresh dispatched", obj);
-    const socket2 = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket2 = handleIdentify /* handleIdentify */.socket;
     let connectResult = socket2.isSessionEstablished();
     if (connectResult) {
       const socket3 = tmp(12806).socket;
@@ -629,20 +633,20 @@ let obj = {
   },
   LOGOUT: function handleLogout(isSwitchingAccount) {
     if (isSwitchingAccount.isSwitchingAccount) {
-      const localPresenceState = require("GatewaySocketSingleton.tsx") /* handleIdentify */.localPresenceState;
+      const localPresenceState = handleIdentify /* handleIdentify */.localPresenceState;
       localPresenceState.handleAccountSwitch();
     }
     tmp3.verbose("Closing socket because of logout");
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     socket.close();
   },
   CLEAR_CACHES: function handleClearCaches(resetSocket) {
     if (resetSocket.resetSocket) {
-      const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+      const socket = handleIdentify /* handleIdentify */.socket;
       socket.close();
-      const dispatcher = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket.dispatcher;
+      const dispatcher = handleIdentify /* handleIdentify */.socket.dispatcher;
       dispatcher.clear();
-      const socket2 = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+      const socket2 = handleIdentify /* handleIdentify */.socket;
       socket2.connect();
     }
     return false;
@@ -671,16 +675,16 @@ let obj = {
       return false;
     } else if (state.willReconnect) {
       if (null != state.streamKey) {
-        const socket2 = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+        const socket2 = handleIdentify /* handleIdentify */.socket;
         socket2.streamPing(state.streamKey);
       } else {
-        const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+        const socket = handleIdentify /* handleIdentify */.socket;
         socket.voiceServerPing();
       }
     }
   },
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(guildId) {
-    const localVoiceState = require("GatewaySocketSingleton.tsx") /* handleIdentify */.localVoiceState;
+    const localVoiceState = handleIdentify /* handleIdentify */.localVoiceState;
     localVoiceState.update({ guildId: guildId.guildId, channelId: guildId.channelId });
     let channelId = null;
     if (guildId.lockVoiceStateForResume) {
@@ -689,7 +693,7 @@ let obj = {
         channelId = guildId.channelId;
       }
     }
-    let isIOSResult = require("../../utils/PlatformUtils.tsx") /* set */.isIOS();
+    let isIOSResult = set /* set */.isIOS();
     if (isIOSResult) {
       isIOSResult = c23 === constants2.BACKGROUND;
     }
@@ -739,24 +743,24 @@ let obj = {
     }, false);
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
-    if (guild.guild.id === require("GatewaySocketSingleton.tsx") /* handleIdentify */.localVoiceState.guildId) {
-      const localVoiceState = require("GatewaySocketSingleton.tsx") /* handleIdentify */.localVoiceState;
+    if (guild.guild.id === handleIdentify /* handleIdentify */.localVoiceState.guildId) {
+      const localVoiceState = handleIdentify /* handleIdentify */.localVoiceState;
       localVoiceState.setState({ guildId: null, channelId: null });
     }
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
-    if (channel.channel.id === require("GatewaySocketSingleton.tsx") /* handleIdentify */.localVoiceState.channelId) {
-      const localVoiceState = require("GatewaySocketSingleton.tsx") /* handleIdentify */.localVoiceState;
+    if (channel.channel.id === handleIdentify /* handleIdentify */.localVoiceState.channelId) {
+      const localVoiceState = handleIdentify /* handleIdentify */.localVoiceState;
       localVoiceState.setState({ guildId: null, channelId: null });
     }
   },
   CALL_DELETE: function handleCallDelete(channelId) {
     channelId = channelId.channelId;
-    if (channelId === require("GatewaySocketSingleton.tsx") /* handleIdentify */.localVoiceState.channelId) {
+    if (channelId === handleIdentify /* handleIdentify */.localVoiceState.channelId) {
       if (c24 === channelId) {
         return false;
       } else {
-        const localVoiceState = require("GatewaySocketSingleton.tsx") /* handleIdentify */.localVoiceState;
+        const localVoiceState = handleIdentify /* handleIdentify */.localVoiceState;
         localVoiceState.setState({ guildId: null, channelId: null });
       }
     }
@@ -796,17 +800,17 @@ let obj = {
   },
   GUILD_MEMBERS_REQUEST: function handleGuildMembersRequest(userIds) {
     const _require = userIds;
-    let socket = _require("GatewaySocketSingleton.tsx").socket;
+    let socket = _handleIdentify.socket;
     if (socket.isSessionEstablished()) {
       if ("userIds" in userIds) {
-        const obj2 = require("../../../_runtime/00012_apply.js")(userIds.userIds);
-        const item = require("../../../_runtime/00012_apply.js")(userIds.userIds).chunk(100).forEach((userIds) => {
+        const obj2 = apply(userIds.userIds);
+        const item = apply(userIds.userIds).chunk(100).forEach((userIds) => {
           const socket = userIds(outer1_3[13]).socket;
           const guildMembers = socket.requestGuildMembers(userIds.guildIds, { userIds, presences: userIds.presences });
         });
-        const chunkResult = require("../../../_runtime/00012_apply.js")(userIds.userIds).chunk(100);
+        const chunkResult = apply(userIds.userIds).chunk(100);
       } else {
-        const socket2 = _require("GatewaySocketSingleton.tsx").socket;
+        const socket2 = _handleIdentify.socket;
         const obj = { query: null, limit: null, presences: null };
         ({ query: obj[0], limit: obj[1] } = userIds);
         obj[2] = userIds.presences;
@@ -820,9 +824,9 @@ let obj = {
     let guildId;
     let query;
     ({ guildId, query, continuationToken } = arg0);
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     if (socket.isSessionEstablished()) {
-      const socket2 = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+      const socket2 = handleIdentify /* handleIdentify */.socket;
       const obj = { query: null, continuationToken: null };
       obj[0] = query;
       obj[1] = continuationToken;
@@ -830,24 +834,24 @@ let obj = {
     }
   },
   GUILD_SUBSCRIPTIONS_FLUSH: function handleGuildSubscriptionsFlush(subscriptions) {
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     if (socket.isSessionEstablished()) {
-      const socket2 = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+      const socket2 = handleIdentify /* handleIdentify */.socket;
       const result = socket2.updateGuildSubscriptions(subscriptions.subscriptions);
     }
     return false;
   },
   CALL_CONNECT: function handleCallConnect(channelId) {
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     if (socket.isSessionEstablished()) {
-      const socket2 = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+      const socket2 = handleIdentify /* handleIdentify */.socket;
       socket2.callConnect(channelId.channelId);
     }
     return false;
   },
   CALL_CONNECT_MULTIPLE: function handleCallConnectMultiple(channelIds) {
     channelIds = channelIds.channelIds;
-    let socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    let socket = handleIdentify /* handleIdentify */.socket;
     if (socket.isSessionEstablished()) {
       const item = channelIds.forEach((arg0) => {
         const socket = callback(table[13]).socket;
@@ -862,7 +866,7 @@ let obj = {
     let guildId;
     let streamType;
     ({ streamType, guildId, channelId } = arg0);
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     if (socket.isSessionEstablished()) {
       if (null != guildId) {
         channel = channel.getChannel(channelId);
@@ -877,7 +881,7 @@ let obj = {
           region = call.region;
         }
       }
-      const socket2 = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+      const socket2 = handleIdentify /* handleIdentify */.socket;
       if (region == null) {
         region = preferredRegion.getPreferredRegion();
       }
@@ -889,7 +893,7 @@ let obj = {
     let allowMultiple;
     let streamKey;
     ({ streamKey, allowMultiple } = arg0);
-    let socket = _require("GatewaySocketSingleton.tsx").socket;
+    let socket = _handleIdentify.socket;
     if (socket.isSessionEstablished()) {
       if (!allowMultiple) {
         const allActiveStreamKeys = store.getAllActiveStreamKeys();
@@ -904,13 +908,13 @@ let obj = {
           }
         });
       }
-      let socket2 = _require("GatewaySocketSingleton.tsx").socket;
+      let socket2 = _handleIdentify.socket;
       socket2.streamWatch(streamKey);
     }
     return false;
   },
   STREAM_STOP: function handleStreamStop(streamKey) {
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     if (socket.isSessionEstablished()) {
       const socket2 = tmp(12806).socket;
       socket2.streamDelete(streamKey.streamKey);
@@ -923,14 +927,14 @@ let obj = {
     let paused;
     let streamKey;
     ({ streamKey, paused } = arg0);
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     if (socket.isSessionEstablished()) {
-      const socket2 = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+      const socket2 = handleIdentify /* handleIdentify */.socket;
       socket2.streamSetPaused(streamKey, paused);
     }
   },
   PUSH_NOTIFICATION_CLICK: function handlePushNotificationClick() {
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     socket.expeditedHeartbeat(5000, "user clicked on notification", true);
     return false;
   },
@@ -939,27 +943,27 @@ let obj = {
     let guildId;
     let threads;
     ({ guildId, channelId, threads } = arg0);
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     const forumUnreads = socket.requestForumUnreads(guildId, channelId, threads);
   },
   REQUEST_SOUNDBOARD_SOUNDS: function handleRequestSoundboardSounds(guildIds) {
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     const soundboardSounds = socket.requestSoundboardSounds(guildIds.guildIds);
   },
   REMOTE_COMMAND: function handleRemoteCommand(arg0) {
     let payload;
     let sessionId;
     ({ sessionId, payload } = arg0);
-    const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    const socket = handleIdentify /* handleIdentify */.socket;
     if (socket.isSessionEstablished()) {
-      const socket2 = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+      const socket2 = handleIdentify /* handleIdentify */.socket;
       socket2.remoteCommand(sessionId, payload);
     }
     return false;
   },
   RESET_SOCKET: function handleResetSocket(args) {
-    if (require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket.connectionState !== require("ConnectionState.tsx").WILL_RECONNECT) {
-      const socket = require("GatewaySocketSingleton.tsx") /* handleIdentify */.socket;
+    if (handleIdentify /* handleIdentify */.socket.connectionState !== CLOSED.WILL_RECONNECT) {
+      const socket = handleIdentify /* handleIdentify */.socket;
       const result = socket.resetSocketAndClearCacheOnError(args.args);
     }
   },
@@ -976,7 +980,7 @@ let obj = {
       tmp = null != allowVoiceRecording;
     }
     if (tmp) {
-      const localVoiceState = require("GatewaySocketSingleton.tsx") /* handleIdentify */.localVoiceState;
+      const localVoiceState = handleIdentify /* handleIdentify */.localVoiceState;
       localVoiceState.update();
     }
   }

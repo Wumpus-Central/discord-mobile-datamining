@@ -1,3 +1,8 @@
+import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
+import { DismissibleContent } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/messages/native/burst_reactions/BurstReactionAnimationContainer.tsx
 import _slicedToArray from "_slicedToArray";
 import ManaContext from "ManaContext";
@@ -39,7 +44,7 @@ function BurstReactionAnimationContainerInner() {
       first(709).unsubscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
     };
   }, []);
-  let obj = _require("../../../reanimated/ReanimatedRexport.tsx");
+  let obj = _ReanimatedRexport;
   let fn = function y() {
     if (null == first) {
       let obj = { opacity: 0 };
@@ -68,7 +73,7 @@ function BurstReactionAnimationContainerInner() {
     }
     return obj;
   };
-  obj = { animationData: first, showAnimation: first1, withTiming: _require("../../../../design/animation/reanimated/timing/timing.tsx").withTiming, runOnJS: _require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, handleComponentFinish };
+  obj = { animationData: first, showAnimation: first1, withTiming: _CONFIG_NEVER_ANIMATE_TIMING.withTiming, runOnJS: _ReanimatedRexport.runOnJS, handleComponentFinish };
   fn.__closure = obj;
   fn.__workletHash = 12044515783370;
   fn.__initData = closure_12;
@@ -76,7 +81,7 @@ function BurstReactionAnimationContainerInner() {
   let tmp8 = null;
   if (null != first) {
     obj = { contentTypes: null, children: null };
-    let items = [_require("../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
+    let items = [_DismissibleContent.DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
     obj[0] = items;
     obj[1] = function children(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
@@ -154,7 +159,7 @@ let result = require("get ActivityIndicator").fileFinishedImporting("modules/mes
 
 export default function BurstReactionAnimationContainer() {
   const obj = { theme: null, children: null };
-  obj[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").themes.DARKER;
+  obj[0] = Themes.themes.DARKER;
   obj[1] = callback(BurstReactionAnimationContainerInner, {});
-  return callback(require("../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */.ThemeContextProvider, obj);
+  return callback(ManaContext /* ManaContext */.ThemeContextProvider, obj);
 };

@@ -1,3 +1,5 @@
+import { useUserCommunicationDisabled } from "../guild_communication_disabled/useUserCommunicationDisabled.tsx";
+import { useCanUnarchiveThread } from "../threads/ThreadHooks.tsx";
 // discord_app/modules/replies/canReplyToMessage.tsx
 import _slicedToArray from "_slicedToArray";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -14,14 +16,14 @@ const result = require("mergeGuildAvatar").fileFinishedImporting("modules/replie
 export const useCanReplyToMessage = function useCanReplyToMessage(channel, message) {
   const _require = channel;
   const dependencyMap = message;
-  const canUnarchiveThread = _require("../threads/ThreadHooks.tsx").useCanUnarchiveThread(channel);
-  const obj = _require("../threads/ThreadHooks.tsx");
+  const canUnarchiveThread = _useCanUnarchiveThread.useCanUnarchiveThread(channel);
+  const obj = _useCanUnarchiveThread;
   let tmp = _require;
   let guildId;
   if (channel != null) {
     guildId = channel.getGuildId();
   }
-  const obj2 = _require("../guild_communication_disabled/useUserCommunicationDisabled.tsx");
+  const obj2 = _useUserCommunicationDisabled;
   const items = [getUncachedChannelPermissions];
   let stateFromStores = tmp(589).useStateFromStores(items, () => {
     let tmp = null != channel;
@@ -69,7 +71,7 @@ export const useCanReplyToMessage = function useCanReplyToMessage(channel, messa
   return tmp6;
 };
 export const canReplyToMessage = function canReplyToMessage(channel, message) {
-  const obj = require("../threads/ThreadHooks.tsx") /* useCanUnarchiveThread */;
+  const obj = useCanUnarchiveThread /* useCanUnarchiveThread */;
   if (channel.isPrivate()) {
     let hasItem = !channel.isSystemDM();
   } else {
@@ -81,13 +83,13 @@ export const canReplyToMessage = function canReplyToMessage(channel, message) {
     hasItem = REPLYABLE.has(message.type);
   }
   currentUser = currentUser.getCurrentUser();
-  const canUnarchiveThreadResult = require("../threads/ThreadHooks.tsx") /* useCanUnarchiveThread */.canUnarchiveThread(channel);
+  const canUnarchiveThreadResult = useCanUnarchiveThread /* useCanUnarchiveThread */.canUnarchiveThread(channel);
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
   const guildId = channel.getGuildId();
-  const tmpResult = require("../guild_communication_disabled/useUserCommunicationDisabled.tsx") /* useUserCommunicationDisabled */;
+  const tmpResult = useUserCommunicationDisabled /* useUserCommunicationDisabled */;
   const isArchivedThreadResult = channel.isArchivedThread();
   let tmp11 = !isArchivedThreadResult;
   if (isArchivedThreadResult) {

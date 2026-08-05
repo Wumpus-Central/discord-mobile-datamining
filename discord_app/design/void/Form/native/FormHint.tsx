@@ -1,3 +1,4 @@
+import { context } from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
 // discord_app/design/void/Form/native/FormHint.tsx
 import noop from "noop";
 import { Platform } from "get ActivityIndicator";
@@ -22,7 +23,7 @@ export default function FormHint(inset) {
   }
   ({ style, children } = inset);
   const tmp = createCacheKey();
-  if (React.useContext(require("../../../components/RedesignCompat/native/RedesignCompat.native.tsx") /* context */.RedesignCompatContext)) {
+  if (React.useContext(context /* context */.RedesignCompatContext)) {
     let redesignHorizontalPadding = !flag;
     if (!flag) {
       redesignHorizontalPadding = tmp.redesignHorizontalPadding;

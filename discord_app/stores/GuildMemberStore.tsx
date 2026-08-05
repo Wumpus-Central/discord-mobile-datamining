@@ -1,3 +1,13 @@
+import { apply } from "../../_runtime/00012_apply.js";
+import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { isActivityParticipantValidGuildMember } from "../modules/activities/isActivityParticipantValidGuildMember.tsx";
+import { getEmbeddedActivityLocationChannelId } from "../modules/activities/utils/embeddedActivityLocationUtils.tsx";
+import { parseAvatarDecorationData } from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
+import { parseSkuIdFromServerData } from "../modules/collectibles/utils/mappers.tsx";
+import { items } from "../modules/display_name_styles/DisplayNameStylesUtils.tsx";
+import { isCommunicationDisabled } from "../modules/guild_communication_disabled/CommunicationDisabledUtils.tsx";
+import { compareGuildRoles } from "../utils/GuildRoleUtils.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/stores/GuildMemberStore.tsx
 import { clearCommunicationDisabledNotice as closure_3 } from "DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY";
 import initialize from "initialize";
@@ -27,7 +37,7 @@ function trackCommunicationDisabled(guildId, tmp10Result) {
         closure_19[joined] = sum;
       }
     }
-    obj2 = require("../modules/guild_communication_disabled/CommunicationDisabledUtils.tsx") /* isCommunicationDisabled */;
+    obj2 = isCommunicationDisabled /* isCommunicationDisabled */;
     tmp10 = require;
   }
   removeCommunicationDisabled(guildId, tmp10Result.userId);
@@ -94,7 +104,7 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
         if (!doesRoleSortHigherResult) {
           let tmp9 = require;
           let tmp10 = dependencyMap;
-          let obj = require("../utils/GuildRoleUtils.tsx") /* compareGuildRoles */;
+          let obj = compareGuildRoles /* compareGuildRoles */;
           let tmp11 = tmp7;
           let tmp12 = tmp4;
           doesRoleSortHigherResult = obj.doesRoleSortHigher(tmp8, tmp4);
@@ -110,7 +120,7 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
           if (!doesRoleSortHigherResult1) {
             let tmp18 = require;
             let tmp19 = dependencyMap;
-            let obj2 = require("../utils/GuildRoleUtils.tsx") /* compareGuildRoles */;
+            let obj2 = compareGuildRoles /* compareGuildRoles */;
             let tmp20 = tmp7;
             let tmp21 = tmp;
             doesRoleSortHigherResult1 = obj2.doesRoleSortHigher(tmp8, tmp);
@@ -128,7 +138,7 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
           if (!doesRoleSortHigherResult2) {
             let tmp25 = require;
             let tmp26 = dependencyMap;
-            let obj3 = require("../utils/GuildRoleUtils.tsx") /* compareGuildRoles */;
+            let obj3 = compareGuildRoles /* compareGuildRoles */;
             let tmp27 = tmp7;
             let tmp28 = tmp2;
             doesRoleSortHigherResult2 = obj3.doesRoleSortHigher(tmp8, tmp2);
@@ -150,7 +160,7 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
           if (!doesRoleSortHigherResult3) {
             let tmp34 = require;
             let tmp35 = dependencyMap;
-            let obj4 = require("../utils/GuildRoleUtils.tsx") /* compareGuildRoles */;
+            let obj4 = compareGuildRoles /* compareGuildRoles */;
             let tmp36 = tmp7;
             let tmp37 = tmp3;
             doesRoleSortHigherResult3 = obj4.doesRoleSortHigher(tmp8, tmp3);
@@ -252,9 +262,9 @@ function createMember(guildRoles) {
       const merged = Object.assign(obj);
       const merged1 = Object.assign(obj5.getMemberOptions(guildId));
       if (null != viewingRoles) {
-        keys = require("../utils/SnowflakeUtils.tsx").keys;
+        keys = DISCORD_EPOCH.keys;
         keys = keys(viewingRoles);
-        const tmp15 = require("../utils/SnowflakeUtils.tsx");
+        const tmp15 = DISCORD_EPOCH;
       } else {
         keys = [];
       }
@@ -264,7 +274,7 @@ function createMember(guildRoles) {
     }
     return obj;
   }
-  obj2 = require("../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+  obj2 = hasFlag /* hasFlag */;
   tmp4 = require;
   tmp5 = GuildMemberFlags;
 }
@@ -327,7 +337,7 @@ function handleGuildMemberUpdate(arg0) {
       obj[1] = tmp;
       obj[2] = guildId;
       obj[3] = tmp2;
-      obj[4] = require("../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx") /* parseAvatarDecorationData */.parseAvatarDecorationData(tmp3);
+      obj[4] = parseAvatarDecorationData /* parseAvatarDecorationData */.parseAvatarDecorationData(tmp3);
       obj[5] = store3.getUnsafeMutableRoles(guild.id);
       obj[6] = tmp4;
       obj[7] = tmp5;
@@ -365,7 +375,7 @@ function handleGuildMemberUpdate(arg0) {
         }
       }
       removeCommunicationDisabled(guildId, tmp13[user.id].userId);
-      const obj3 = require("../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx") /* parseAvatarDecorationData */;
+      const obj3 = parseAvatarDecorationData /* parseAvatarDecorationData */;
       const tmp31 = createMember;
     }
   }
@@ -434,7 +444,7 @@ function batchUpdateGuildMembers(guildId, members) {
   }
 }
 function getAvatarDecorationFromServerMember(nextResult) {
-  return require("../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx") /* parseAvatarDecorationData */.parseAvatarDecorationData(nextResult.avatar_decoration_data);
+  return parseAvatarDecorationData /* parseAvatarDecorationData */.parseAvatarDecorationData(nextResult.avatar_decoration_data);
 }
 function buildMembers(guild) {
   let unusual_dm_activity_until;
@@ -484,10 +494,10 @@ function buildMembers(guild) {
       obj[13] = unusual_dm_activity_until;
       let tmp17 = require;
       let tmp18 = dependencyMap;
-      let obj2 = require("../modules/collectibles/utils/mappers.tsx") /* parseSkuIdFromServerData */;
+      let obj2 = parseSkuIdFromServerData /* parseSkuIdFromServerData */;
       let tmp19 = nextResult;
       obj[14] = obj2.parseServerUserCollectibles(tmp6.collectibles);
-      let obj3 = require("../modules/display_name_styles/DisplayNameStylesUtils.tsx") /* items */;
+      let obj3 = items /* items */;
       obj[15] = obj3.parseServerDisplayNameStyles(tmp6.display_name_styles);
       let tmp10Result = tmp10(obj);
       let tmp21 = id2;
@@ -511,7 +521,7 @@ function handleGuildRoleUpdateOrDelete(guildId) {
       return false;
     } else {
       const id = store.getId();
-      const keys = require("../utils/SnowflakeUtils.tsx").keys(tmp);
+      const keys = DISCORD_EPOCH.keys(tmp);
       const iter = keys[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
@@ -813,13 +823,13 @@ prototype["getMutableAllGuildsAndMembers"] = function getMutableAllGuildsAndMemb
 };
 prototype["memberOf"] = function memberOf(userId) {
   let closure_0 = userId;
-  const obj = require("../../_runtime/00012_apply.js")(closure_11);
-  const found = require("../../_runtime/00012_apply.js")(closure_11).toPairs().filter((arg0) => {
+  const obj = apply(closure_11);
+  const found = apply(closure_11).toPairs().filter((arg0) => {
     let tmp;
     [, tmp] = arg0;
     return null != tmp[closure_0];
   });
-  const toPairsResult = require("../../_runtime/00012_apply.js")(closure_11).toPairs();
+  const toPairsResult = apply(closure_11).toPairs();
   return found.map((arg0) => {
     let tmp;
     [tmp] = arg0;
@@ -894,8 +904,8 @@ prototype["isCurrentUserGuest"] = function isCurrentUserGuest(guild_id) {
         const flags = tmp4[id].flags;
         let hasFlagResult = null != flags;
         if (hasFlagResult) {
-          hasFlagResult = require("../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(flags, GuildMemberFlags.IS_GUEST);
-          const obj = require("../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+          hasFlagResult = hasFlag /* hasFlag */.hasFlag(flags, GuildMemberFlags.IS_GUEST);
+          const obj = hasFlag /* hasFlag */;
         }
         return hasFlagResult;
       }
@@ -910,8 +920,8 @@ prototype["getMemberIds"] = function getMemberIds(id) {
     if (null == dependencyMap[id]) {
       let items = [];
     } else {
-      items = require("../utils/SnowflakeUtils.tsx").keys(tmp2);
-      const obj = require("../utils/SnowflakeUtils.tsx");
+      items = DISCORD_EPOCH.keys(tmp2);
+      const obj = DISCORD_EPOCH;
     }
     return items;
   }
@@ -1021,9 +1031,9 @@ prototype["getMemberRoleWithPendingUpdates"] = function getMemberRoleWithPending
   }
   let differenceResult = roles;
   if (null != dependencyMap5[arg0]) {
-    const obj = require("../../_runtime/00012_apply.js");
-    differenceResult = obj.difference(require("../../_runtime/00012_apply.js").union(roles, tmp2.added), tmp2.removed);
-    const obj2 = require("../../_runtime/00012_apply.js");
+    const obj = apply;
+    differenceResult = obj.difference(apply.union(roles, tmp2.added), tmp2.removed);
+    const obj2 = apply;
   }
   return differenceResult;
 };
@@ -1111,26 +1121,26 @@ const guildMemberStore = new GuildMemberStore(require("dispatcher"), {
         if (obj == null) {
           obj = {};
         }
-        const obj2 = require("../../_runtime/00012_apply.js");
+        const obj2 = apply;
         const tmp12 = dependencyMap5;
         let added = obj.added;
         if (added == null) {
           added = [];
         }
         let items = removedRoleIds;
-        const obj3 = require("../../_runtime/00012_apply.js");
+        const obj3 = apply;
         if (removedRoleIds == null) {
           items = [];
         }
         obj = { added: null, removed: null };
-        obj[0] = obj2.difference(require("../../_runtime/00012_apply.js").union(added, addedRoleIds), items);
+        obj[0] = obj2.difference(apply.union(added, addedRoleIds), items);
         let tmp4Result = tmp4(12);
         tmp4Result = tmp4(12);
         let removed = obj.removed;
         if (removed == null) {
           removed = [];
         }
-        const unionResult = require("../../_runtime/00012_apply.js").union(added, addedRoleIds);
+        const unionResult = apply.union(added, addedRoleIds);
         if (addedRoleIds == null) {
           addedRoleIds = [];
         }
@@ -1578,15 +1588,15 @@ const guildMemberStore = new GuildMemberStore(require("dispatcher"), {
         obj[1] = guildMember.nick;
         obj[2] = guildId;
         obj[3] = guildMember.avatar;
-        obj[4] = require("../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx") /* parseAvatarDecorationData */.parseAvatarDecorationData(guildMember.avatar_decoration_data);
+        obj[4] = parseAvatarDecorationData /* parseAvatarDecorationData */.parseAvatarDecorationData(guildMember.avatar_decoration_data);
         obj[5] = store3.getUnsafeMutableRoles(guild.id);
         ({ roles: obj2[6], premium_since: obj2[7], pending: obj2[8], joined_at: obj2[9], communication_disabled_until: obj2[10], unusual_dm_activity_until: obj2[11], flags: obj2[12] } = guildMember);
         const _Date = Date;
         obj[13] = Date.now();
-        const obj3 = require("../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx") /* parseAvatarDecorationData */;
-        obj[14] = require("../modules/collectibles/utils/mappers.tsx") /* parseSkuIdFromServerData */.parseServerUserCollectibles(guildMember.collectibles);
-        const obj4 = require("../modules/collectibles/utils/mappers.tsx") /* parseSkuIdFromServerData */;
-        obj[15] = require("../modules/display_name_styles/DisplayNameStylesUtils.tsx") /* items */.parseServerDisplayNameStyles(guildMember.display_name_styles);
+        const obj3 = parseAvatarDecorationData /* parseAvatarDecorationData */;
+        obj[14] = parseSkuIdFromServerData /* parseSkuIdFromServerData */.parseServerUserCollectibles(guildMember.collectibles);
+        const obj4 = parseSkuIdFromServerData /* parseSkuIdFromServerData */;
+        obj[15] = items /* items */.parseServerDisplayNameStyles(guildMember.display_name_styles);
         tmp[guildMember.user.id] = createMember(obj);
         if (null != tmp[guildMember.user.id].communicationDisabledUntil) {
           let tmp18Result = tmp18(3902);
@@ -1609,7 +1619,7 @@ const guildMemberStore = new GuildMemberStore(require("dispatcher"), {
           }
         }
         removeCommunicationDisabled(guildId, tmp[guildMember.user.id].userId);
-        const obj5 = require("../modules/display_name_styles/DisplayNameStylesUtils.tsx") /* items */;
+        const obj5 = items /* items */;
       }
     }
   },
@@ -1806,14 +1816,14 @@ const guildMemberStore = new GuildMemberStore(require("dispatcher"), {
   },
   EMBEDDED_ACTIVITY_UPDATE_V2: function handleEmbeddedActivityUpdateV2(instance) {
     instance = instance.instance;
-    let obj = require("../modules/activities/utils/embeddedActivityLocationUtils.tsx") /* getEmbeddedActivityLocationChannelId */;
+    let obj = getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */;
     const embeddedActivityLocationGuildId = obj.getEmbeddedActivityLocationGuildId(instance.location);
     let tmp3 = null != embeddedActivityLocationGuildId;
     if (tmp3) {
       const participants = instance.participants;
       obj = { id: null, members: null };
       obj[0] = embeddedActivityLocationGuildId;
-      const found = participants.filter(require("../modules/activities/isActivityParticipantValidGuildMember.tsx"));
+      const found = participants.filter(isActivityParticipantValidGuildMember);
       obj[1] = found.map((member) => member.member);
       tmp3 = buildMembers(obj);
     }
@@ -1940,26 +1950,26 @@ let obj = {
         if (obj == null) {
           obj = {};
         }
-        const obj2 = require("../../_runtime/00012_apply.js");
+        const obj2 = apply;
         const tmp12 = dependencyMap5;
         let added = obj.added;
         if (added == null) {
           added = [];
         }
         let items = removedRoleIds;
-        const obj3 = require("../../_runtime/00012_apply.js");
+        const obj3 = apply;
         if (removedRoleIds == null) {
           items = [];
         }
         obj = { added: null, removed: null };
-        obj[0] = obj2.difference(require("../../_runtime/00012_apply.js").union(added, addedRoleIds), items);
+        obj[0] = obj2.difference(apply.union(added, addedRoleIds), items);
         let tmp4Result = tmp4(12);
         tmp4Result = tmp4(12);
         let removed = obj.removed;
         if (removed == null) {
           removed = [];
         }
-        const unionResult = require("../../_runtime/00012_apply.js").union(added, addedRoleIds);
+        const unionResult = apply.union(added, addedRoleIds);
         if (addedRoleIds == null) {
           addedRoleIds = [];
         }
@@ -2407,15 +2417,15 @@ let obj = {
         obj[1] = guildMember.nick;
         obj[2] = guildId;
         obj[3] = guildMember.avatar;
-        obj[4] = require("../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx") /* parseAvatarDecorationData */.parseAvatarDecorationData(guildMember.avatar_decoration_data);
+        obj[4] = parseAvatarDecorationData /* parseAvatarDecorationData */.parseAvatarDecorationData(guildMember.avatar_decoration_data);
         obj[5] = store3.getUnsafeMutableRoles(guild.id);
         ({ roles: obj2[6], premium_since: obj2[7], pending: obj2[8], joined_at: obj2[9], communication_disabled_until: obj2[10], unusual_dm_activity_until: obj2[11], flags: obj2[12] } = guildMember);
         const _Date = Date;
         obj[13] = Date.now();
-        const obj3 = require("../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx") /* parseAvatarDecorationData */;
-        obj[14] = require("../modules/collectibles/utils/mappers.tsx") /* parseSkuIdFromServerData */.parseServerUserCollectibles(guildMember.collectibles);
-        const obj4 = require("../modules/collectibles/utils/mappers.tsx") /* parseSkuIdFromServerData */;
-        obj[15] = require("../modules/display_name_styles/DisplayNameStylesUtils.tsx") /* items */.parseServerDisplayNameStyles(guildMember.display_name_styles);
+        const obj3 = parseAvatarDecorationData /* parseAvatarDecorationData */;
+        obj[14] = parseSkuIdFromServerData /* parseSkuIdFromServerData */.parseServerUserCollectibles(guildMember.collectibles);
+        const obj4 = parseSkuIdFromServerData /* parseSkuIdFromServerData */;
+        obj[15] = items /* items */.parseServerDisplayNameStyles(guildMember.display_name_styles);
         tmp[guildMember.user.id] = createMember(obj);
         if (null != tmp[guildMember.user.id].communicationDisabledUntil) {
           let tmp18Result = tmp18(3902);
@@ -2438,7 +2448,7 @@ let obj = {
           }
         }
         removeCommunicationDisabled(guildId, tmp[guildMember.user.id].userId);
-        const obj5 = require("../modules/display_name_styles/DisplayNameStylesUtils.tsx") /* items */;
+        const obj5 = items /* items */;
       }
     }
   },
@@ -2635,14 +2645,14 @@ let obj = {
   },
   EMBEDDED_ACTIVITY_UPDATE_V2: function handleEmbeddedActivityUpdateV2(instance) {
     instance = instance.instance;
-    let obj = require("../modules/activities/utils/embeddedActivityLocationUtils.tsx") /* getEmbeddedActivityLocationChannelId */;
+    let obj = getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */;
     const embeddedActivityLocationGuildId = obj.getEmbeddedActivityLocationGuildId(instance.location);
     let tmp3 = null != embeddedActivityLocationGuildId;
     if (tmp3) {
       const participants = instance.participants;
       obj = { id: null, members: null };
       obj[0] = embeddedActivityLocationGuildId;
-      const found = participants.filter(require("../modules/activities/isActivityParticipantValidGuildMember.tsx"));
+      const found = participants.filter(isActivityParticipantValidGuildMember);
       obj[1] = found.map((member) => member.member);
       tmp3 = buildMembers(obj);
     }

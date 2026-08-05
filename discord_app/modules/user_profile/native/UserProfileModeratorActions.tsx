@@ -1,3 +1,7 @@
+import { TableRowInner } from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { Divider } from "UserProfileCard.tsx";
 // discord_app/modules/user_profile/native/UserProfileModeratorActions.tsx
 import "initialize";
 import buildStageChannelUserRoles from "buildStageChannelUserRoles";
@@ -25,7 +29,7 @@ function ModeratorActionRow(arg0) {
   let onPress;
   let sublabel;
   ({ label, sublabel, icon, hint, disabled, isDestructive, onPress } = arg0);
-  if (require("../../themes/experiments/MobileVisualRefreshExperiment.tsx")("UserProfileModeratorActions")) {
+  if (useIsMobileVisualRefreshExperimentEnabled("UserProfileModeratorActions")) {
     let str = "default";
     if (isDestructive) {
       str = "danger";
@@ -36,7 +40,7 @@ function ModeratorActionRow(arg0) {
     obj = { IconComponent: null, variant: null };
     obj[0] = icon;
     obj[1] = str;
-    obj[2] = jsx(require("../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow.Icon, { IconComponent: null, variant: null });
+    obj[2] = jsx(TableRowInner /* TableRowInner */.TableRow.Icon, { IconComponent: null, variant: null });
     obj[3] = null != hint;
     obj[4] = str;
     obj[5] = disabled;
@@ -47,7 +51,7 @@ function ModeratorActionRow(arg0) {
       combined = "" + label + ", " + sublabel;
     }
     obj[7] = combined;
-    return jsx(require("../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, { IconComponent: null, variant: null });
+    return jsx(TableRowInner /* TableRowInner */.TableRow, { IconComponent: null, variant: null });
   } else {
     obj = { label: null, sublabel: null, icon: null, hint: null, disabled: null, isDestructive: null, onPress: null };
     obj[0] = label;
@@ -55,7 +59,7 @@ function ModeratorActionRow(arg0) {
     if (null != sublabel) {
       const obj1 = { variant: "text-xs/normal", color: "text-subtle", children: null };
       obj1[2] = sublabel;
-      tmp2Result = tmp2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+      tmp2Result = tmp2(Text /* Text */.Text, obj1);
     }
     obj[1] = tmp2Result;
     obj[2] = icon;
@@ -63,7 +67,7 @@ function ModeratorActionRow(arg0) {
     obj[4] = disabled;
     obj[5] = isDestructive;
     obj[6] = onPress;
-    return jsx(require("UserProfileCard.tsx") /* Divider */.UserProfileFormRow, { label: null, sublabel: null, icon: null, hint: null, disabled: null, isDestructive: null, onPress: null });
+    return jsx(Divider /* Divider */.UserProfileFormRow, { label: null, sublabel: null, icon: null, hint: null, disabled: null, isDestructive: null, onPress: null });
   }
 }
 ({ GuildFeatures: closure_12, Permissions: map1 } = ME);

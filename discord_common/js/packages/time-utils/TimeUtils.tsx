@@ -1,3 +1,5 @@
+import { findLastIndex } from "../../../../_runtime/04362_findLastIndex.js";
+import { u } from "../performance-utils/index.js";
 // discord_common/js/packages/time-utils/TimeUtils.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import tryCatch from "tryCatch";
@@ -16,16 +18,16 @@ function sleep(num) {
 }
 let c4 = 3600000;
 function now() {
-  const _performance = require("../performance-utils/index.js") /* u */.performance;
-  return Math.floor(require("../performance-utils/index.js") /* u */.timeOrigin + _performance.now());
+  const _performance = u /* u */.performance;
+  return Math.floor(u /* u */.timeOrigin + _performance.now());
 }
 const fn = () => Object.create(new.target.prototype);
 fn.prototype["now"] = function now() {
   if (typeof now !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const _performance = require("../performance-utils/index.js") /* u */.performance;
-  return Math.floor(require("../performance-utils/index.js") /* u */.timeOrigin + _performance.now());
+  const _performance = u /* u */.performance;
+  return Math.floor(u /* u */.timeOrigin + _performance.now());
 };
 let obj = Object.create(fn.prototype);
 let TimeSpan;
@@ -555,7 +557,7 @@ export const TimeUnitMax = items;
 export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   let closure_0 = arg0;
   const importDefault = arg1;
-  const tmp2 = require("../../../../_runtime/04362_findLastIndex.js")(items, (unit) => f74561(unit.unit), items.findIndex((max) => {
+  const tmp2 = findLastIndex(items, (unit) => f74561(unit.unit), items.findIndex((max) => {
     max = max.max;
     let tmp = max.unit === outer1_10.NONE;
     if (tmp) {

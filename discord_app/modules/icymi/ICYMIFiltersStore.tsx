@@ -1,3 +1,4 @@
+import { MessageEmbedTypes } from "ICYMITypes.tsx";
 // discord_app/modules/icymi/ICYMIFiltersStore.tsx
 import { DeviceSettingsStore } from "initialize";
 
@@ -18,7 +19,7 @@ prototype["filterStaffContent"] = function filterStaffContent() {
 prototype["getDoubleTapBehavior"] = function getDoubleTapBehavior() {
   let DEFAULT = closure_2.doubleTapBehavior;
   if (DEFAULT == null) {
-    DEFAULT = require("ICYMITypes.tsx") /* MessageEmbedTypes */.GravityICYMIDoubleTapBehavior.DEFAULT;
+    DEFAULT = MessageEmbedTypes /* MessageEmbedTypes */.GravityICYMIDoubleTapBehavior.DEFAULT;
   }
   return DEFAULT;
 };

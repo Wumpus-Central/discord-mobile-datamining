@@ -1,3 +1,6 @@
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { NewBadge } from "../../channel_list_v2/native/components/NewBadge.tsx";
+import { MentionsBadge } from "MentionsBadge.tsx";
 // discord_app/modules/guild_sidebar/native/ChannelBadge.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -18,7 +21,7 @@ export default function ChannelBadge(arg0) {
   ({ mentionCount, postsWithUnreadsCount, muted } = arg0);
   ({ isMentionLowImportance, isNewChannel } = arg0);
   const tmp = callback();
-  let obj = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
   const items = [_getSystemLocale];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   if (null != mentionCount) {
@@ -28,7 +31,7 @@ export default function ChannelBadge(arg0) {
       obj = { mentionsCount: null, isMentionLowImportance: null };
       obj[0] = mentionCount;
       obj[1] = isMentionLowImportance;
-      obj[1] = jsx(require("MentionsBadge.tsx"), { mentionsCount: null, isMentionLowImportance: null });
+      obj[1] = jsx(MentionsBadge, { mentionsCount: null, isMentionLowImportance: null });
       let tmp5 = <View mentionsCount={null} isMentionLowImportance={null} />;
     }
     return tmp5;
@@ -36,7 +39,7 @@ export default function ChannelBadge(arg0) {
   if (isNewChannel) {
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.channelInfoContainer;
-    obj1[1] = jsx(require("../../channel_list_v2/native/components/NewBadge.tsx"), {});
+    obj1[1] = jsx(NewBadge, {});
     tmp5 = <View style={null}>{null}</View>;
   } else {
     tmp5 = null;

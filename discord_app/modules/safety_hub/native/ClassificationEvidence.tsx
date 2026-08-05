@@ -1,3 +1,6 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { ClassificationEvidence } from "ClassificationMessageEvidence.tsx";
 // discord_app/modules/safety_hub/native/ClassificationEvidence.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -26,16 +29,16 @@ export default function ClassificationEvidence(flaggedContent) {
     let obj = { style: null, children: null };
     obj[0] = tmp.sectionContainer;
     obj = { variant: "eyebrow", color: "text-default", children: null };
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.s64CMg);
-    const items = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.s64CMg);
+    const items = [callback(Text /* Text */.Text, obj), ];
     obj = { style: null, children: null };
     const items1 = [, ];
     ({ flaggedContent: arr3[0], cardShadow: arr3[1] } = tmp);
     obj[0] = items1;
     const obj1 = { flaggedContent: null };
     obj1[0] = flaggedContent;
-    obj[1] = callback(require("ClassificationMessageEvidence.tsx"), obj1);
+    obj[1] = callback(ClassificationEvidence, obj1);
     items[1] = callback(View, obj);
     obj[1] = items;
     tmp2 = callback2(View, obj);

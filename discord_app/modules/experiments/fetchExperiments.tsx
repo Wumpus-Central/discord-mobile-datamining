@@ -1,3 +1,4 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 // discord_app/modules/experiments/fetchExperiments.tsx
 import { Endpoints } from "ME";
 
@@ -8,6 +9,6 @@ export const fetchExperiments = function fetchExperiments(arg0) {
   let headers;
   let withGuildExperiments;
   ({ withGuildExperiments, headers, context } = arg0);
-  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   return HTTP.get({ url: Endpoints.EXPERIMENTS, query: { with_guild_experiments: withGuildExperiments }, headers, context, retries: 3, oldFormErrors: true, rejectWithError: false });
 };

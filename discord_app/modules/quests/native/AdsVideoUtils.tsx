@@ -1,3 +1,4 @@
+import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/quests/native/AdsVideoUtils.tsx
 let closure_2 = [-1000, -1003, -1004, -1008];
 const result = require("set").fileFinishedImporting("modules/quests/native/AdsVideoUtils.tsx");
@@ -16,7 +17,7 @@ export const isSourceError = function isSourceError(error) {
     }
     let isIOSResult = hasItem;
   } else {
-    isIOSResult = require("../../../utils/PlatformUtils.tsx") /* set */.isIOS();
+    isIOSResult = set /* set */.isIOS();
     if (isIOSResult) {
       let hasItem1 = null != code;
       if (hasItem1) {
@@ -24,7 +25,7 @@ export const isSourceError = function isSourceError(error) {
       }
       isIOSResult = hasItem1;
     }
-    const tmpResult = require("../../../utils/PlatformUtils.tsx") /* set */;
+    const tmpResult = set /* set */;
   }
   return isIOSResult;
 };

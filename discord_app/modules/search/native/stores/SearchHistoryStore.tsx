@@ -1,3 +1,4 @@
+import { apply } from "../../../../../_runtime/00012_apply.js";
 // discord_app/modules/search/native/stores/SearchHistoryStore.tsx
 import MessageEmbedTypes from "MessageEmbedTypes";
 import { PersistedStore } from "initialize";
@@ -82,7 +83,7 @@ prototype2["initialize"] = function initialize(searchHistories) {
     searchHistories = searchHistories.searchHistories;
   }
   if (null != searchHistories) {
-    let closure_4 = require("../../../../../_runtime/00012_apply.js") /* apply */.mapValues(searchHistories, (arg0) => {
+    let closure_4 = apply /* apply */.mapValues(searchHistories, (arg0) => {
       if (typeof closure_3 !== "function") {
         HermesBuiltin.throwTypeError();
       }
@@ -91,7 +92,7 @@ prototype2["initialize"] = function initialize(searchHistories) {
       obj.deserialize(arg0);
       return obj;
     });
-    let obj = require("../../../../../_runtime/00012_apply.js") /* apply */;
+    let obj = apply /* apply */;
   }
 };
 prototype2["getSearchHistory"] = function getSearchHistory(handleChange) {

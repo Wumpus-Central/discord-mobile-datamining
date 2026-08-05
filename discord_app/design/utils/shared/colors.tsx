@@ -1,11 +1,12 @@
+import { n } from "../../../../_runtime/00689_n.js";
 // discord_app/design/utils/shared/colors.tsx
 const result = require("set").fileFinishedImporting("design/utils/shared/colors.tsx");
 
 export const flattenColorOverOpaqueBackground = function flattenColorOverOpaqueBackground(token, context) {
-  const obj = require("../../../../_runtime/00689_n.js")(token);
+  const obj = n(token);
   const tmp = importDefault;
   const rgbaResult = obj.rgba();
-  const rgbaResult1 = require("../../../../_runtime/00689_n.js")(context).rgba();
+  const rgbaResult1 = n(context).rgba();
   if (1 !== rgbaResult1[3]) {
     const _Error = Error;
     const error = new Error("Expected solid cutout background color to be opaque");
@@ -21,5 +22,5 @@ export const flattenColorOverOpaqueBackground = function flattenColorOverOpaqueB
     const tmpResult = tmp(689);
     return tmp(689).rgb(rounded, rounded1, rounded2).hex();
   }
-  const obj2 = require("../../../../_runtime/00689_n.js")(context);
+  const obj2 = n(context);
 };

@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/markup/StaticRouteRendering.tsx
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 
@@ -8,21 +9,21 @@ export const staticRouteToTranslation = function staticRouteToTranslation(arg0) 
   if ("home" !== arg0) {
     if ("guide" !== arg0) {
       if ("browse" === arg0) {
-        const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        return intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.et6wav);
+        const intl3 = getSystemLocale /* getSystemLocale */.intl;
+        return intl3.string(getSystemLocale /* getSystemLocale */.t.et6wav);
       } else if ("customize" === arg0) {
-        const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        return intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.h9mGOP);
+        const intl2 = getSystemLocale /* getSystemLocale */.intl;
+        return intl2.string(getSystemLocale /* getSystemLocale */.t.h9mGOP);
       } else if ("linked-roles" === arg0) {
-        const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.ghtnss);
+        const intl = getSystemLocale /* getSystemLocale */.intl;
+        return intl.string(getSystemLocale /* getSystemLocale */.t.ghtnss);
       } else {
         return null;
       }
     }
   }
-  const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  return intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.VbpLyU);
+  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  return intl4.string(getSystemLocale /* getSystemLocale */.t.VbpLyU);
 };
 export const staticRouteToItemString = function staticRouteToItemString(arg0, arg1, id) {
   if ("linked-roles" === arg0) {

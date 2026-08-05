@@ -1,3 +1,4 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/user_profile/hooks/native/useScrollToUserProfileEditFormSection.tsx
 import noop from "noop";
 import { findNodeHandle } from "get ActivityIndicator";
@@ -12,7 +13,7 @@ export default function useScrollToUserProfileEditFormSection(arg0, arg1) {
   const dependencyMap = arg1;
   ref = ref.useRef({});
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  let closure_3 = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  let closure_3 = _initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const effect = ref.useEffect(() => {
     let tmp2 = null != closure_1;
     if (tmp2) {

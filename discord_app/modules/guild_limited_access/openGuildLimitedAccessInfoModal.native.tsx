@@ -1,3 +1,5 @@
+import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
+import { getBestActiveInput } from "../../utils/native/ChatInputUtils.tsx";
 // discord_app/modules/guild_limited_access/openGuildLimitedAccessInfoModal.native.tsx
 import "noop";
 import { Keyboard } from "get ActivityIndicator";
@@ -9,7 +11,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/guild_limited_a
 export default function openGuildLimitedAccessInfoModal(arg0) {
   const _require = arg0;
   Keyboard.dismiss();
-  let obj = _require("../../utils/native/ChatInputUtils.tsx");
+  let obj = _getBestActiveInput;
   const bestActiveInput = obj.getBestActiveInput();
   if (bestActiveInput != null) {
     bestActiveInput.blur();
@@ -27,5 +29,5 @@ export default function openGuildLimitedAccessInfoModal(arg0) {
       });
     }
   };
-  require("../../actions/native/AlertActionCreators.tsx").openLazy(obj);
+  AlertActionCreators.openLazy(obj);
 };

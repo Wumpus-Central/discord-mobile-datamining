@@ -1,3 +1,5 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
 // discord_app/modules/guilds_bar/native/GuildsBarAnimatedItemWrapper.tsx
 import noop from "noop";
 import { IOS_POINTER_STYLE } from "IOS_POINTER_STYLE";
@@ -146,7 +148,7 @@ let closure_11 = createCacheKey.createStyles(() => {
     num = 56;
   }
   let obj = { draggedElement: { opacity: 0 }, selectedBackgroundOverlay: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }, container: { position: "relative", overflow: "visible" }, unreadIndicator: null, expandedChildrenWrapper: null };
-  obj = { position: "absolute", top: num / 2, left: -4, height: 8, width: 8, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xs, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_STRONG };
+  obj = { position: "absolute", top: num / 2, left: -4, height: 8, width: 8, borderRadius: Themes.radii.xs, backgroundColor: Themes.colors.TEXT_STRONG };
   obj[3] = obj;
   obj = { position: "absolute", left: num + 16, top: 0, right: 8, height: num, transformOrigin: "0% 50%", display: "flex", flexDirection: "row", alignItems: "center" };
   obj[4] = obj;
@@ -154,7 +156,7 @@ let closure_11 = createCacheKey.createStyles(() => {
 });
 let closure_12 = createCacheKey.createStyles((arg0, arg1, width, height) => {
   let obj = { pressableWrapper: null, itemShape: null, itemShapeSelected: null };
-  obj = { position: "relative", paddingTop: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingLeft: 12, height, width: width + closure_5.left + closure_5.right };
+  obj = { position: "relative", paddingTop: Themes.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingBottom: Themes.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingLeft: 12, height, width: width + closure_5.left + closure_5.right };
   obj[0] = obj;
   obj = { position: "relative", width, height: width, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: null };
   let str = "transparent";
@@ -502,7 +504,7 @@ export const useGuildsBarAnimatedWrapperStyles = function useGuildsBarAnimatedWr
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const token = require("../../../design/tokens/native/useToken.tsx") /* map */.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const token = map /* map */.useToken(Themes.modules.mobile.GUILD_BAR_ITEM_SIZE);
   return callback4(flag, flag2, token, callback());
 };
 export { UnreadIndicator };

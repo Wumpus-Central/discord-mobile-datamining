@@ -1,3 +1,4 @@
+import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/application_commands/ApplicationCommandDiscoveryManager.tsx
 import keys from "keys";
 
@@ -7,5 +8,5 @@ const result = require("set").fileFinishedImporting("modules/application_command
 export const useCommandDiscoveryManager = obj;
 export const updateInitialSectionId = function updateInitialSectionId(arg0) {
   const _require = arg0;
-  _require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_2.setState(() => ({ initialSectionId: closure_0 })));
+  _batchUpdates.batchUpdates(() => outer1_2.setState(() => ({ initialSectionId: closure_0 })));
 };

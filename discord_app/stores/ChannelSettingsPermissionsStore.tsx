@@ -1,3 +1,5 @@
+import { apply } from "../../_runtime/00012_apply.js";
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/stores/ChannelSettingsPermissionsStore.tsx
 import normalizeChannelPropertyForCompare from "normalizeChannelPropertyForCompare";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -203,8 +205,8 @@ const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(requ
         obj[id] = obj;
         set.add(id);
         const OPEN = FormStates.OPEN;
-        let closure_13 = !require("../../_runtime/00012_apply.js").isEqual(obj, c15);
-        const obj3 = require("../../_runtime/00012_apply.js");
+        let closure_13 = !apply.isEqual(obj, c15);
+        const obj3 = apply;
         let closure_4 = importAll(3918).areChannelsLocked(c16, c17);
       }
     }
@@ -262,7 +264,7 @@ const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(requ
   },
   CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function handleSetAdvancedMode(advancedMode) {
     advancedMode = advancedMode.advancedMode;
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(ADVANCED_MODE_ON_KEY, advancedMode);
   }
 });

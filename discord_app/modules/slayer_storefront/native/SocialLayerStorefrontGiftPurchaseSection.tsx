@@ -1,3 +1,4 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/slayer_storefront/native/SocialLayerStorefrontGiftPurchaseSection.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
@@ -15,10 +16,10 @@ const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null, legalCopy: null };
-  obj = { paddingBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 + arg0, paddingTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW };
-  const merged = Object.assign(require("../../../../discord_common/js/packages/tokens/native.tsx").shadows.SHADOW_TOP_HIGH);
+  obj = { paddingBottom: Themes.space.PX_12 + arg0, paddingTop: Themes.space.PX_12, paddingHorizontal: Themes.space.PX_16, gap: Themes.space.PX_8, backgroundColor: Themes.colors.BACKGROUND_BASE_LOW };
+  const merged = Object.assign(Themes.shadows.SHADOW_TOP_HIGH);
   obj[0] = obj;
-  obj = { display: "flex", flexDirection: "column", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
+  obj = { display: "flex", flexDirection: "column", gap: Themes.space.PX_4 };
   obj[1] = obj;
   return obj;
 });

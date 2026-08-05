@@ -1,3 +1,5 @@
+import { VoiceOrStageSummaryRow } from "../../../../../main_tabs_v2/native/shared_components/guild_channels/VoiceOrStageSummaryRow.tsx";
+import { useStageParticipants } from "../../../../../stage_channels/StageChannelParticipantStoreHooks.tsx";
 // discord_app/modules/search/native/components/list/rows/GuildVoiceOrStageChannelRow.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -276,7 +278,7 @@ function GuildVoiceChannelExtras(arg0) {
   let users;
   ({ channel, users } = arg0);
   const tmp = callback();
-  require("../../../../../stage_channels/StageChannelParticipantStoreHooks.tsx") /* useStageParticipants */;
+  useStageParticipants /* useStageParticipants */;
   let obj = { style: tmp.subtitle, children: null };
   let tmp5Result = 0 !== users.length;
   if (tmp5Result) {
@@ -287,7 +289,7 @@ function GuildVoiceChannelExtras(arg0) {
     obj[2] = channel.guild_id;
     obj[3] = closure_6;
     obj[4] = tmp4;
-    obj[1] = tmp5(require("../../../../../main_tabs_v2/native/shared_components/guild_channels/VoiceOrStageSummaryRow.tsx"), obj);
+    obj[1] = tmp5(VoiceOrStageSummaryRow, obj);
     tmp5Result = tmp5(tmp6, obj);
   }
   obj[1] = tmp5Result;

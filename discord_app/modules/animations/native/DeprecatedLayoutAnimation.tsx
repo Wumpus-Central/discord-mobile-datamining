@@ -1,3 +1,4 @@
+import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/animations/native/DeprecatedLayoutAnimation.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -14,8 +15,8 @@ export const CONFIG_GUILD_FOLDER_SCALEXY = obj;
 export const DeprecatedLayoutAnimation = function DeprecatedLayoutAnimation(duration) {
   let useReducedMotion = maybeApplyNoTextColorForLightCustomTheme.useReducedMotion;
   if (!useReducedMotion) {
-    useReducedMotion = require("../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
-    const obj = require("../../../utils/PlatformUtils.tsx") /* set */;
+    useReducedMotion = set /* set */.isAndroid();
+    const obj = set /* set */;
   }
   if (!useReducedMotion) {
     if (null != duration) {
@@ -31,7 +32,7 @@ export const DeprecatedLayoutAnimationKeyboard = function DeprecatedLayoutAnimat
     flag = false;
   }
   if (flag) {
-    let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
+    let obj = set /* set */;
     if (!obj.isAndroid()) {
       obj = { duration: null };
       obj[0] = keyboardDuration;
@@ -41,8 +42,8 @@ export const DeprecatedLayoutAnimationKeyboard = function DeprecatedLayoutAnimat
   obj = { duration: keyboardDuration, update: obj1 };
   let useReducedMotion = maybeApplyNoTextColorForLightCustomTheme.useReducedMotion;
   if (!useReducedMotion) {
-    useReducedMotion = require("../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
-    const obj6 = require("../../../utils/PlatformUtils.tsx") /* set */;
+    useReducedMotion = set /* set */.isAndroid();
+    const obj6 = set /* set */;
   }
   if (!useReducedMotion) {
     LayoutAnimation.configureNext(obj);

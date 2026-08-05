@@ -1,3 +1,10 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { useUserProfileApplicationRoleConnections } from "../hooks/useUserProfileApplicationRoleConnections.tsx";
+import { Divider } from "UserProfileCard.tsx";
 // discord_app/modules/user_profile/native/UserProfileConnections.tsx
 import importAllResult from "getPlatformUserUrl";
 import get_ActivityIndicator from "useIsMobileVisualRefreshExperimentEnabled";
@@ -32,8 +39,8 @@ function VerifiedIcon(arg0) {
   }
   const tmp = callback3();
   let obj = { size: REFRESH_SMALL_16, style: tmp.verifiedIcon };
-  let obj1 = require("../../../design/tokens/native/useToken.tsx") /* map */;
-  let PLATFORM_TWITTER = obj1.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_TEXT_HEADING_PRIMARY, theme);
+  let obj1 = map /* map */;
+  let PLATFORM_TWITTER = obj1.useToken(Themes.colors.MOBILE_TEXT_HEADING_PRIMARY, theme);
   if (isTwitterVerifiedAccount) {
     PLATFORM_TWITTER = tmp4(712).unsafe_rawColors.PLATFORM_TWITTER;
   }
@@ -460,7 +467,7 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
   const tmp = callback3();
   let obj = applicationRoleConnection(10962);
   const roleConnectionMetadataItems = obj.generateRoleConnectionMetadataItems(applicationRoleConnection);
-  let obj1 = require("../../../utils/AvatarUtils.tsx");
+  let obj1 = getAvatarURL;
   obj = { id: applicationRoleConnection.application.id, icon: applicationRoleConnection.application.icon };
   const applicationIconSource = obj1.getApplicationIconSource(obj);
   if (tmp3) {
@@ -563,7 +570,7 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
     obj8[1] = items1;
     return tmp6(closure_5, obj8);
   }
-  tmp3 = require("../../themes/experiments/MobileVisualRefreshExperiment.tsx")("UserProfileConnections");
+  tmp3 = useIsMobileVisualRefreshExperimentEnabled("UserProfileConnections");
 });
 let result = require("_getSystemLocale").fileFinishedImporting("modules/user_profile/native/UserProfileConnections.tsx");
 
@@ -624,9 +631,9 @@ export const UserProfileApplicationRoleConnectionsCard = function UserProfileApp
   let userId;
   ({ userId, style } = arg0);
   const tmp = callback3();
-  const tmp4 = require("../../themes/experiments/MobileVisualRefreshExperiment.tsx")("UserProfileConnections");
-  const arr = require("../hooks/useUserProfileApplicationRoleConnections.tsx")(userId);
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const tmp4 = useIsMobileVisualRefreshExperimentEnabled("UserProfileConnections");
+  const arr = useUserProfileApplicationRoleConnections(userId);
+  let obj = initialize /* initialize */;
   const items = [initialize];
   if (!obj.useStateFromStores(items, () => obj.hidePersonalInformation)) {
     if (0 !== arr.length) {
@@ -653,7 +660,7 @@ export const UserProfileApplicationRoleConnectionsCard = function UserProfileApp
         tmp9Result = tmp9(tmp5(5657).UserProfileCardRows, obj1);
       }
       obj[3] = tmp9Result;
-      return closure_13(require("UserProfileCard.tsx"), obj);
+      return closure_13(Divider, obj);
     }
   }
   return null;

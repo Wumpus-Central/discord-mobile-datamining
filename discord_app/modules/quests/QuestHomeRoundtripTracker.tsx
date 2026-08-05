@@ -1,3 +1,7 @@
+import { set } from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { DiscordAppState.native } from "../app_state/DiscordAppState.native.tsx";
+import { set } from "../monitoring/MonitoringAgent.tsx";
 // discord_app/modules/quests/QuestHomeRoundtripTracker.tsx
 import { AnalyticEvents } from "ME";
 
@@ -14,19 +18,19 @@ prototype["clearTimeoutTimer"] = function clearTimeoutTimer() {
   }
 };
 prototype["sendMetric"] = function sendMetric(timeout, duration) {
-  let obj = require("../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { timeout, duration };
   obj.track(AnalyticEvents.QUEST_HOME_ROUNDTRIP, obj);
   if (Math.random() <= 0.1) {
     obj = { name: null, tags: null };
-    obj[0] = require("../../../discord_common/js/shared/shared-constants/MetricEvents.tsx") /* set */.MetricEvents.QUEST_HOME_ROUNDTRIP;
+    obj[0] = set /* set */.MetricEvents.QUEST_HOME_ROUNDTRIP;
     const _HermesInternal = HermesInternal;
     const items = ["includes_bounties:" + arg2, ];
     const _HermesInternal2 = HermesInternal;
     items[1] = "timeout:" + timeout;
     obj[1] = items;
-    require("../monitoring/MonitoringAgent.tsx").distribution(obj, duration);
-    const tmpResult = require("../monitoring/MonitoringAgent.tsx");
+    set.distribution(obj, duration);
+    const tmpResult = set;
   }
 };
 prototype["startTracking"] = function startTracking() {
@@ -74,7 +78,7 @@ prototype["stopTracking"] = function stopTracking() {
       const _Math2 = Math;
       self.sendMetric(flag2, Math.min(rounded, c4), flag);
     }
-    obj2 = require("../app_state/DiscordAppState.native.tsx");
+    obj2 = DiscordAppState.native;
   }
 };
 prototype["clearTracking"] = function clearTracking() {

@@ -1,3 +1,4 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/icymi/native/ICYMIForumThreadRow.tsx
 import getDefaultRules from "get defaultRules";
 import { View } from "PressableBase";
@@ -169,7 +170,7 @@ let closure_9 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   obj = { pressable: obj, container: obj, subtitle: null, footer: null, threadAsComments: null, ICYMICardInteractionRow: null };
   obj = { flex: 1, paddingLeft: marginHorizontal.inset };
   obj = { marginHorizontal: marginHorizontal.margin };
-  obj[2] = { marginTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginBottom: marginHorizontal.margin };
+  obj[2] = { marginTop: Themes.space.PX_8, marginBottom: marginHorizontal.margin };
   obj[3] = { justifyContent: "flex-end", paddingLeft: marginHorizontal.inset, marginTop: marginHorizontal.margin, gap: marginHorizontal.margin };
   obj[4] = { marginHorizontal: marginHorizontal.margin };
   obj[5] = { marginHorizontal: marginHorizontal.margin, marginBottom: marginHorizontal.margin };

@@ -1,3 +1,5 @@
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { apexExperiment } from "SensitiveContentSelfHarmExperiment.tsx";
 // discord_app/modules/explicit_media_redaction/ExplicitMediaStore.tsx
 import { Store } from "initialize";
 
@@ -26,8 +28,8 @@ prototype["canSubmitFpReport"] = function canSubmitFpReport(closure_1) {
     const reportSubmit = tmp.reportSubmit;
     let tmp3 = !reportSubmit;
     if (!reportSubmit) {
-      tmp3 = require("../../utils/SnowflakeUtils.tsx").age(tmp.messageId) < closure_3;
-      const obj = require("../../utils/SnowflakeUtils.tsx");
+      tmp3 = DISCORD_EPOCH.age(tmp.messageId) < closure_3;
+      const obj = DISCORD_EPOCH;
     }
     tmp2 = tmp3;
   }
@@ -49,7 +51,7 @@ Object.defineProperty(prototype, "validContentScanVersion", {
       const _Math = Math;
       return Math.min(num2, 4);
     }
-    obj = require("SensitiveContentSelfHarmExperiment.tsx") /* apexExperiment */;
+    obj = apexExperiment /* apexExperiment */;
   },
   set: undefined
 });

@@ -1,3 +1,7 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/notifications/settings/native/NotificationSettingsMockMessage.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -23,7 +27,7 @@ let result = require("mergeGuildAvatar").fileFinishedImporting("modules/notifica
 
 export default function NotificationSettingsMockMessage(notificationSetting) {
   const tmp = createCacheKey();
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj1 = sharedValue(4124);
@@ -83,14 +87,14 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   const obj6 = { children: null };
   const obj7 = { source: null, size: null };
   obj7[0] = sharedValue(9751);
-  obj7[1] = require("../../../../design/void/native.tsx") /* Button */.AvatarSizes.LARGE_48;
-  obj6[0] = tmp12(require("../../../../design/void/native.tsx") /* Button */.Avatar, obj7);
+  obj7[1] = Button /* Button */.AvatarSizes.LARGE_48;
+  obj6[0] = tmp12(Button /* Button */.Avatar, obj7);
   const items4 = [tmp12(View, obj6), ];
   const obj8 = { style: tmp.cardMessage, children: null };
   const obj9 = { variant: "text-sm/semibold", children: null };
   const intl2 = tmp2(1236).intl;
-  obj9[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.qSq0tD);
-  const items5 = [tmp12(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj9), tmp11];
+  obj9[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.qSq0tD);
+  const items5 = [tmp12(Text /* Text */.Text, obj9), tmp11];
   obj8[1] = items5;
   items4[1] = callback2(View, obj8);
   obj5[1] = items4;

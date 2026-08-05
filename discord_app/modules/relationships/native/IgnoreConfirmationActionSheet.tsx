@@ -1,3 +1,5 @@
+import { TableRowGroupTitle } from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/relationships/native/IgnoreConfirmationActionSheet.tsx
 import encodeProperties from "encodeProperties";
 import importAllResult from "QUICK_SWITCHER";
@@ -30,7 +32,7 @@ function IgnoredInformationTable() {
     obj[6] = icon.a11yLabel();
     return callback2(callback(5315).TableRow, obj, arg1);
   });
-  return callback2(require("../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj);
+  return callback2(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
 }
 let c4 = importAllResult;
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: c9, RESTRICTION_CONFIRMATION_ACTION_SHEET_HEIGHT: c10 } = IGNORE_CONFIRMATION_ACTION_SHEET_KEY);
@@ -60,16 +62,16 @@ let items = [
   {
     icon: require("registerAsset"),
     text() {
-      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ruhGkg);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.ruhGkg);
     },
     subtext() {
-      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["/FWKKC"]);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t["/FWKKC"]);
     },
     a11yLabel() {
-      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.QAzPrp);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.QAzPrp);
     }
   },
 ,
@@ -78,76 +80,76 @@ let items = [
 let obj8 = {
   icon: require("registerAsset"),
   text() {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ruhGkg);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.ruhGkg);
   },
   subtext() {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["/FWKKC"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["/FWKKC"]);
   },
   a11yLabel() {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.QAzPrp);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.QAzPrp);
   }
 };
 items[1] = {
   icon: require("registerAsset"),
   text() {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.N9v3eq);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.N9v3eq);
   },
   subtext() {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ddpuJg);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.ddpuJg);
   },
   a11yLabel() {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.PYR8jT);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.PYR8jT);
   }
 };
 let obj9 = {
   icon: require("registerAsset"),
   text() {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.N9v3eq);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.N9v3eq);
   },
   subtext() {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ddpuJg);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.ddpuJg);
   },
   a11yLabel() {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.PYR8jT);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.PYR8jT);
   }
 };
 items[2] = {
   icon: require("registerAsset"),
   text() {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["4ycGE0"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["4ycGE0"]);
   },
   subtext() {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["5yfN+o"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["5yfN+o"]);
   },
   a11yLabel() {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["/XoqE6"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["/XoqE6"]);
   }
 };
 let obj10 = {
   icon: require("registerAsset"),
   text() {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["4ycGE0"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["4ycGE0"]);
   },
   subtext() {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["5yfN+o"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["5yfN+o"]);
   },
   a11yLabel() {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["/XoqE6"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["/XoqE6"]);
   }
 };
 const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(userId) {

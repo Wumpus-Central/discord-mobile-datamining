@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { ThemeTypes } from "../../appearance/native/SettingsAppearanceThemePickerScreen.tsx";
 // discord_app/modules/user_settings/defs/native/AppearanceThemePickerSetting.tsx
 import handleThemeChange from "handleThemeChange";
 import createToggle from "createToggle";
@@ -5,12 +8,12 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Ksh3ik);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.Ksh3ik);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   usePredicate: function useIsSingleThemePickerVisible() {
-    const tmp = require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("AppearanceThemePickerSetting");
+    const tmp = useIsMobileVisualRefreshExperimentEnabled("AppearanceThemePickerSetting");
     const items = [handleThemeChange];
     let tmp2 = !tmp;
     if (tmp) {
@@ -24,7 +27,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE_THEME_PICKER,
   getComponent() {
-    return require("../../appearance/native/SettingsAppearanceThemePickerScreen.tsx") /* ThemeTypes */.default;
+    return ThemeTypes /* ThemeTypes */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

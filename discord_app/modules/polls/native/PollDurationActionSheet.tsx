@@ -1,3 +1,5 @@
+import { ActionSheet } from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import { usePollDurationOptions } from "../usePollDurationOptions.tsx";
 // discord_app/modules/polls/native/PollDurationActionSheet.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -6,7 +8,7 @@ const require = arg1;
 function PollDurationRadioGroup(onChange) {
   onChange = onChange.onChange;
   let importDefault;
-  const tmp = require("../usePollDurationOptions.tsx")();
+  const tmp = usePollDurationOptions();
   importDefault = tmp;
   const items = [tmp, onChange];
   const callback = React.useCallback((arg0) => {
@@ -40,5 +42,5 @@ export default function PollDurationActionSheet(arg0) {
   ({ selectedDuration, onChange } = arg0);
   const obj = { children: null };
   obj[0] = <PollDurationRadioGroup selectedDuration={selectedDuration} onChange={onChange} />;
-  return jsx(require("../../../design/components/Sheet/native/ActionSheet.native.tsx") /* ActionSheet */.ActionSheet, { children: null });
+  return jsx(ActionSheet /* ActionSheet */.ActionSheet, { children: null });
 };

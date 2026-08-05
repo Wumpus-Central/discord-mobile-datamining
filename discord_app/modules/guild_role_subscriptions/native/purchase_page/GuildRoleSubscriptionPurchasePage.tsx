@@ -1,3 +1,7 @@
+import { registerAsset } from "../../../../../_runtime/10711_registerAsset.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchasePage.tsx
 import "registerAsset";
 import get_ActivityIndicator from "useTrackRoleSubscriptionUpsellAnalytics";
@@ -24,10 +28,10 @@ function Separator() {
 }
 function LegalDisclaimer() {
   let obj = { variant: "text-xs/normal", color: "text-muted", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   obj = { termsURL: constants3.TERMS, paidURL: constants3.PAID_TERMS };
-  obj[2] = intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.FSPTDI, obj);
-  return callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  obj[2] = intl.format(getSystemLocale /* getSystemLocale */.t.FSPTDI, obj);
+  return callback(Text /* Text */.Text, obj);
 }
 function SocialBadge(onPress) {
   let iconSource;
@@ -44,12 +48,12 @@ function SocialBadge(onPress) {
   obj[1] = num;
   obj[2] = onPress;
   obj = { source: iconSource, style: tmp.socialBadgeIcon, resizeMode: "contain", disableColor: true };
-  const items = [callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj), callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/medium", color: "text-default", children: text }), ];
+  const items = [callback(Button /* Button */.Icon, obj), callback(Text /* Text */.Text, { variant: "text-sm/medium", color: "text-default", children: text }), ];
   if (tmp5Result) {
     obj = { source: null, style: null };
-    obj[0] = require("../../../../../_runtime/10711_registerAsset.js");
+    obj[0] = registerAsset;
     obj[1] = tmp.socialBadgeArrow;
-    tmp5Result = callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
+    tmp5Result = callback(Button /* Button */.Icon, obj);
   }
   items[2] = tmp5Result;
   obj[3] = items;

@@ -1,3 +1,6 @@
+import { SearchFilterButton } from "autocomplete/SearchFilterButton.tsx";
+import { SearchFilterPrefixRow } from "autocomplete/SearchFilterSuggestions.tsx";
+import { SearchBar } from "SearchBar.tsx";
 // discord_app/modules/search/native/components/layout/SearchScreenSearchBar.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -23,7 +26,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((arg0, ref) =
   const items1 = [backButton, , ];
   obj = { style: tmp.headerSearch, children: null };
   obj = { ref, searchContext, setSuggestionsDismissed };
-  const items2 = [callback(require("SearchBar.tsx"), obj), ];
+  const items2 = [callback(SearchBar, obj), ];
   const obj1 = { style: tmp.suggestionsAnchor, children: null };
   const obj2 = { searchContext, onLayoutMeasure: onSuggestionsLayoutMesure, dismissed: suggestionsDismissed, containerStyle: null };
   const items3 = [tmp.suggestions, ];
@@ -33,14 +36,14 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((arg0, ref) =
   }
   items3[1] = suggestionsWithBackButton;
   obj2[3] = items3;
-  obj1[1] = callback(require("autocomplete/SearchFilterSuggestions.tsx"), obj2);
+  obj1[1] = callback(SearchFilterPrefixRow, obj2);
   items2[1] = callback(View, obj1);
   obj[1] = items2;
   items1[1] = closure_4(View, obj);
   const tmp4 = null != backButton && tmp.headerWithBackButton;
   const tmp6 = importDefault;
-  const tmp8 = require("autocomplete/SearchFilterSuggestions.tsx");
-  items1[2] = callback(View, { style: tmp.headerControlsRight, children: callback(require("autocomplete/SearchFilterButton.tsx"), { searchContext }) });
+  const tmp8 = SearchFilterPrefixRow;
+  items1[2] = callback(View, { style: tmp.headerControlsRight, children: callback(SearchFilterButton, { searchContext }) });
   obj[1] = items1;
   return closure_4(View, obj);
 }));

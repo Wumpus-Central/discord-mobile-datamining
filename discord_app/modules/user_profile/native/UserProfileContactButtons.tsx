@@ -1,3 +1,5 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 // discord_app/modules/user_profile/native/UserProfileContactButtons.tsx
 import "ACTION_SHEET_HEIGHT_HALF";
 import { View } from "handleRelationshipAddError";
@@ -22,16 +24,16 @@ function FlatFriendButton(label) {
     str = "secondary";
   }
   if ("primary" === str) {
-    let CONTROL_SECONDARY_TEXT_DEFAULT = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
+    let CONTROL_SECONDARY_TEXT_DEFAULT = Themes.colors.WHITE;
   } else {
-    CONTROL_SECONDARY_TEXT_DEFAULT = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_SECONDARY_TEXT_DEFAULT;
+    CONTROL_SECONDARY_TEXT_DEFAULT = Themes.colors.CONTROL_SECONDARY_TEXT_DEFAULT;
   }
   const obj = { text: label, icon: null, accessibilityLabel: null, variant: null, size: "md", grow: true };
   obj[1] = callback(icon, { color: CONTROL_SECONDARY_TEXT_DEFAULT, size: "xs" });
   obj[2] = label;
   obj[3] = str;
   const merged1 = Object.assign(merged);
-  return callback(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj);
+  return callback(Button /* Button */.Button, obj);
 }
 function FriendRequestButton(user) {
   let ButtonComponent;

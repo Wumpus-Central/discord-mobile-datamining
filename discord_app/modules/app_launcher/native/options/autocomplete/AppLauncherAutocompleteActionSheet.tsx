@@ -1,3 +1,8 @@
+import { t } from "../../../../../../_runtime/04484_t.js";
+import { registerAsset } from "../../../../../../_runtime/11468_registerAsset.js";
+import { 00038__ } from "../../../../../../_runtime/metro/00038__.js";
+import { Button } from "../../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "t";
@@ -33,13 +38,13 @@ function Item(arg0) {
   if (!tmp4) {
     tmp4 = item.type === tmp3.LABEL;
   }
-  require("../../../../../../_runtime/metro/00038__.js")(tmp4, "Invalid autocomplete result type");
+  00038__(tmp4, "Invalid autocomplete result type");
   _slicedToArray = callback2();
   React = React.useMemo(() => 100 * Math.random() + 50, []);
-  const tmp2 = require("../../../../../../_runtime/metro/00038__.js");
-  const match = require("../../../../../../_runtime/04484_t.js") /* t */.match(item);
+  const tmp2 = 00038__;
+  const match = t /* t */.match(item);
   let obj = { type: tmp3.CHOICE };
-  const str = require("../../../../../../_runtime/04484_t.js") /* t */;
+  const str = t /* t */;
   obj = { type: tmp3.LABEL };
   const withResult = match.with(obj, (children) => {
     let closure_0 = children;
@@ -123,11 +128,11 @@ function Item(arg0) {
 }
 function AutocompleteFailedEmptyState() {
   const obj = { style: callback2().emptyState, lightSource: null, darkSource: null, title: null };
-  obj[1] = require("../../../../../../_runtime/11468_registerAsset.js");
-  obj[2] = require("../../../../../../_runtime/11468_registerAsset.js");
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.rTAbPn);
-  return callback(require("../../../../../design/void/native.tsx") /* Button */.EmptyState, obj);
+  obj[1] = registerAsset;
+  obj[2] = registerAsset;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.rTAbPn);
+  return callback(Button /* Button */.EmptyState, obj);
 }
 require("ME").AutoCompleteResultTypes;
 ({ jsx: c9, jsxs: c10 } = jsxProd);

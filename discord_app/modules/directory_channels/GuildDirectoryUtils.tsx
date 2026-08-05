@@ -1,3 +1,5 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
 // discord_app/modules/directory_channels/GuildDirectoryUtils.tsx
 import { DirectoryEntryTypes } from "DirectoryEntryTypes";
 
@@ -53,25 +55,25 @@ export const guildDirectoryEntryFromServer = function guildDirectoryEntryFromSer
     return obj;
   } else {
     const type = entry.type;
-    require("../../../_runtime/metro/00038__.js")(false, "Directory entries must be connected to a guild!");
+    00038__(false, "Directory entries must be connected to a guild!");
   }
 };
 export const MAX_CATEGORY_SERVERS = 5;
 export const orderByTotalMemberCount = function orderByTotalMemberCount(found) {
   const items = [(approximateMemberCount) => approximateMemberCount.approximateMemberCount];
-  return require("../../../_runtime/00012_apply.js").orderBy(found, items, ["desc"]);
+  return apply.orderBy(found, items, ["desc"]);
 };
 export const orderByDateAdded = function orderByDateAdded(reactions) {
   const items = [(createdAt) => createdAt.createdAt];
-  return require("../../../_runtime/00012_apply.js").orderBy(reactions, items, ["desc"]);
+  return apply.orderBy(reactions, items, ["desc"]);
 };
 export const rankByDateAdded = function rankByDateAdded(arr) {
   const found = arr.filter((featurableInDirectory) => featurableInDirectory.featurableInDirectory);
   const items = [(createdAt) => createdAt.createdAt];
-  const obj = require("../../../_runtime/00012_apply.js");
-  return require("../../../_runtime/00012_apply.js").orderBy(found, items, ["desc"]).slice(0, 5);
+  const obj = apply;
+  return apply.orderBy(found, items, ["desc"]).slice(0, 5);
 };
 export const rankGuildEntries = function rankGuildEntries(arr) {
   const items = [(approximateMemberCount) => approximateMemberCount.approximateMemberCount];
-  return require("../../../_runtime/00012_apply.js").orderBy(arr, items, ["desc"]);
+  return apply.orderBy(arr, items, ["desc"]);
 };

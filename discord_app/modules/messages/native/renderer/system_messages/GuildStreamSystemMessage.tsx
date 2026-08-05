@@ -1,3 +1,8 @@
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { getHumanizedCallDuration } from "../../../getHumanizedCallDuration.tsx";
+import { createCommonMessage } from "createCommonMessage.tsx";
+import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
+import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx
 import { StreamTypes } from "StreamIssueReportReasons";
 
@@ -12,15 +17,15 @@ export const createGuildStreamSystemMessage = function createGuildStreamSystemMe
     messageReference = {};
   }
   ({ channel_id, guild_id } = messageReference);
-  const tmp3 = require("../../../getHumanizedCallDuration.tsx")(message);
-  let obj1 = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */;
+  const tmp3 = getHumanizedCallDuration(message);
+  let obj1 = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
   const messageAuthorWithProcessedColor = obj1.getMessageAuthorWithProcessedColor(message);
-  let obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: require("formatUsernameOnClick.tsx")({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
+  let obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClick({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
   obj = { streamType: StreamTypes.GUILD, channelId: channel_id, ownerId: message.author.id, guildId: guild_id };
   obj1 = { ended: tmp4, content: null };
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   const formatToParts = intl.formatToParts;
-  const t = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t;
+  const t = getSystemLocale /* getSystemLocale */.t;
   if (null != tmp3) {
     const obj2 = {};
     const merged = Object.assign(obj);
@@ -33,6 +38,6 @@ export const createGuildStreamSystemMessage = function createGuildStreamSystemMe
     formatToPartsResult = formatToParts(t.dMmbGk, obj3);
   }
   obj1[1] = formatToPartsResult;
-  const merged2 = Object.assign(require("createCommonMessage.tsx")(roleStyle));
+  const merged2 = Object.assign(createCommonMessage(roleStyle));
   return obj1;
 };

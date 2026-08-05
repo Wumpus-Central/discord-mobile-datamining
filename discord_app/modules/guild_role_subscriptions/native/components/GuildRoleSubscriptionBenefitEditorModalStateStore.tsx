@@ -1,3 +1,4 @@
+import { isIterable } from "../../../../../_runtime/03898_isIterable.js";
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx
 import identity from "identity";
 
@@ -61,33 +62,33 @@ export const useDescriptionState = function useDescriptionState() {
     const items = [, ];
     ({ description: arr[0], setDescription: arr[1] } = arg0);
     return items;
-  }, require("../../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
+  }, isIterable /* isIterable */.shallow);
 };
 export const useEmojiIdState = function useEmojiIdState() {
   return store((arg0) => {
     const items = [, ];
     ({ emojiId: arr[0], setEmojiId: arr[1] } = arg0);
     return items;
-  }, require("../../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
+  }, isIterable /* isIterable */.shallow);
 };
 export const useEmojiNameState = function useEmojiNameState() {
   return store((arg0) => {
     const items = [, ];
     ({ emojiName: arr[0], setEmojiName: arr[1] } = arg0);
     return items;
-  }, require("../../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
+  }, isIterable /* isIterable */.shallow);
 };
 export const useNameState = function useNameState() {
   return store((arg0) => {
     const items = [, ];
     ({ name: arr[0], setName: arr[1] } = arg0);
     return items;
-  }, require("../../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
+  }, isIterable /* isIterable */.shallow);
 };
 export const useRefIdState = function useRefIdState() {
   return store((arg0) => {
     const items = [, ];
     ({ refId: arr[0], setRefId: arr[1] } = arg0);
     return items;
-  }, require("../../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
+  }, isIterable /* isIterable */.shallow);
 };

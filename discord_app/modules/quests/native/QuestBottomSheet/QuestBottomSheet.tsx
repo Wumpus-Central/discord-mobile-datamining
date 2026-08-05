@@ -1,3 +1,10 @@
+import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { useQuests } from "../../hooks/QuestHooks.tsx";
+import { getApplicationIdsByTaskTypes } from "../../utils/QuestTaskUtils.tsx";
+import { isSponsoredPlayQuest } from "../../utils/QuestUtils.tsx";
+import { useIsMobileQuestDockRenderedBase } from "../QuestHooks.native.tsx";
+import { useQuestRewardClaimHandler } from "QuestBottomSheetFooter.tsx";
+import { QuestBottomSheetHeader } from "QuestBottomSheetHeader.tsx";
 // discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheet.tsx
 import NonInlineConsoleConnection from "NonInlineConsoleConnection";
 import importDefaultResult from "getApplicationIdsByTaskTypes";
@@ -28,19 +35,19 @@ function QuestBottomSheet(initialStep) {
   const tmp3 = useEnrolledQuestContentProps(obj);
   ({ step, defibrillator, stepActions } = tmp3);
   ({ handleTaskSelect, showMicrophone } = tmp3);
-  let obj1 = _require("../QuestHooks.native.tsx");
+  let obj1 = _useIsMobileQuestDockRenderedBase;
   const hasWatchVideoOnMobileTasks = obj1.useHasWatchVideoOnMobileTasks(quest.config);
-  let obj2 = _require("../../utils/QuestTaskUtils.tsx");
+  let obj2 = _getApplicationIdsByTaskTypes;
   const tmp = callback3();
   const tmp2 = constants;
-  let obj3 = _require("../../utils/QuestTaskUtils.tsx");
+  let obj3 = _getApplicationIdsByTaskTypes;
   const hasWatchVideoTasksResult = obj2.hasWatchVideoTasks(quest);
   const tmp8 = callback(useState(0), 2);
   _require = tmp8[1];
   obj = { value: importDefaultResult.useMemo(() => ({ isInQuestBottomSheet: true }), []), children: null };
   obj = { header: null, footer: null, startExpanded: true, children: null };
   obj1 = { quest, step, location: constants.QUEST_HOME_MOBILE };
-  obj[0] = callback2(require("QuestBottomSheetHeader.tsx"), obj1);
+  obj[0] = callback2(QuestBottomSheetHeader, obj1);
   let tmp9Result = null;
   if (!isInGameQuestResult) {
     if (!hasWatchVideoTasksResult) {
@@ -55,7 +62,7 @@ function QuestBottomSheet(initialStep) {
       obj2[5] = stepActions.onBack;
       obj2[6] = defibrillator.start;
       obj2[7] = stepActions.onNext;
-      tmp9Result = tmp9(require("QuestBottomSheetFooter.tsx"), obj2);
+      tmp9Result = tmp9(useQuestRewardClaimHandler, obj2);
     } else {
       tmp9Result = null;
     }
@@ -69,7 +76,7 @@ function QuestBottomSheet(initialStep) {
   obj3 = { style: items, children: tmp9(QuestBottomSheetContent, obj4) };
   items[1] = { paddingBottom: num };
   obj[3] = callback2(View, obj3);
-  obj[1] = callback2(_require("../../../../design/components/Sheet/native/BottomSheet.native.tsx").BottomSheet, obj);
+  obj[1] = callback2(_Background.BottomSheet, obj);
   return callback2(context.Provider, obj);
 }
 function useEnrolledQuestContentProps(quest) {
@@ -431,7 +438,7 @@ function MicrophoneUnit(arg0) {
   let quest;
   ({ quest, errorHints } = arg0);
   const tmp = callback3();
-  let obj = require("../../hooks/QuestHooks.tsx") /* useQuests */;
+  let obj = useQuests /* useQuests */;
   let num;
   if (errorHints != null) {
     num = errorHints.length;
@@ -472,7 +479,7 @@ function MicrophoneUnit(arg0) {
     obj[1] = items2;
     return closure_11(View, obj);
   }
-  const tmp2Result = require("../../utils/QuestUtils.tsx") /* isSponsoredPlayQuest */;
+  const tmp2Result = isSponsoredPlayQuest /* isSponsoredPlayQuest */;
   const intl = tmp2(1236).intl;
   if (isSponsoredPlayQuestResult) {
     let stringResult = intl.string(tmp2(1236).t.bUyEZZ);

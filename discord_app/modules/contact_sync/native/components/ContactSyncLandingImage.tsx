@@ -1,3 +1,5 @@
+import { registerAsset } from "../../../../../_runtime/11957_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/11958_registerAsset.js";
 // discord_app/modules/contact_sync/native/components/ContactSyncLandingImage.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -18,11 +20,11 @@ export default function ContactSyncLandingImage() {
   const tmp = callback3();
   let obj = { children: null };
   obj = { style: tmp.leftContainer, children: null };
-  obj = { resizeMode: "contain", style: tmp.landingImageLeft, source: require("../../../../../_runtime/11957_registerAsset.js") };
+  obj = { resizeMode: "contain", style: tmp.landingImageLeft, source: registerAsset };
   obj[1] = callback(closure_2, obj);
   const items = [callback(closure_3, obj), ];
   const obj1 = { style: tmp.rightContainer, children: null };
-  obj1[1] = callback(closure_2, { resizeMode: "contain", style: tmp.landingImageRight, source: require("../../../../../_runtime/11958_registerAsset.js") });
+  obj1[1] = callback(closure_2, { resizeMode: "contain", style: tmp.landingImageRight, source: registerAsset });
   items[1] = callback(closure_3, obj1);
   obj[0] = items;
   return callback2(closure_5, obj);

@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { createCardShadowToken } from "CardTokens.native.tsx";
 // discord_app/design/components/Card/native/Card.native.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
@@ -180,29 +182,29 @@ let closure_9 = createCacheKey.createStyleProperties((arg0) => {
     flag = false;
   }
   if ("primary" === arg0) {
-    let backgroundColor = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TABLEROW_BACKGROUND_DEFAULT;
+    let backgroundColor = Themes.colors.TABLEROW_BACKGROUND_DEFAULT;
   } else if ("secondary" === arg0) {
-    backgroundColor = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CARD_SECONDARY_BACKGROUND_DEFAULT;
+    backgroundColor = Themes.colors.CARD_SECONDARY_BACKGROUND_DEFAULT;
   } else if ("muted" === arg0) {
-    backgroundColor = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CARD_MUTED_BG;
+    backgroundColor = Themes.colors.CARD_MUTED_BG;
   } else if ("transparent" === arg0) {
-    backgroundColor = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.TRANSPARENT;
+    backgroundColor = Themes.unsafe_rawColors.TRANSPARENT;
   } else if ("control-secondary" === arg0) {
-    backgroundColor = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT;
+    backgroundColor = Themes.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT;
   } else if ("surface-high" === arg0) {
-    backgroundColor = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH;
+    backgroundColor = Themes.colors.BACKGROUND_SURFACE_HIGH;
   }
   if (flag === undefined) {
     flag = false;
   }
   if ("primary" === arg0) {
-    let backgroundColorPressed = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TABLEROW_BACKGROUND_PRESSED;
+    let backgroundColorPressed = Themes.colors.TABLEROW_BACKGROUND_PRESSED;
   } else if ("secondary" === arg0) {
-    backgroundColorPressed = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CARD_SECONDARY_BACKGROUND_ACTIVE;
+    backgroundColorPressed = Themes.colors.CARD_SECONDARY_BACKGROUND_ACTIVE;
   } else if ("muted" === arg0) {
-    backgroundColorPressed = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CARD_MUTED_PRESSED_BG;
+    backgroundColorPressed = Themes.colors.CARD_MUTED_PRESSED_BG;
   } else if ("transparent" === arg0) {
-    const tmp15 = require("../../../../../discord_common/js/packages/tokens/native.tsx");
+    const tmp15 = Themes;
     if (flag) {
       let TRANSPARENT = tmp15.colors.BACKGROUND_MOD_SUBTLE;
     } else {
@@ -210,43 +212,43 @@ let closure_9 = createCacheKey.createStyleProperties((arg0) => {
     }
     backgroundColorPressed = TRANSPARENT;
   } else if ("control-secondary" === arg0) {
-    backgroundColorPressed = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE;
+    backgroundColorPressed = Themes.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE;
   } else if ("surface-high" === arg0) {
-    backgroundColorPressed = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW;
+    backgroundColorPressed = Themes.colors.BACKGROUND_BASE_LOW;
   }
   return { backgroundColor, backgroundColorPressed };
 });
 let closure_10 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4, arg5) => {
   if ("primary" === arg2) {
-    let BACKGROUND_SURFACE_HIGH = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TABLEROW_BACKGROUND_DEFAULT;
+    let BACKGROUND_SURFACE_HIGH = Themes.colors.TABLEROW_BACKGROUND_DEFAULT;
   } else if ("secondary" === arg2) {
-    BACKGROUND_SURFACE_HIGH = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CARD_SECONDARY_BACKGROUND_DEFAULT;
+    BACKGROUND_SURFACE_HIGH = Themes.colors.CARD_SECONDARY_BACKGROUND_DEFAULT;
   } else if ("muted" === arg2) {
-    BACKGROUND_SURFACE_HIGH = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CARD_MUTED_BG;
+    BACKGROUND_SURFACE_HIGH = Themes.colors.CARD_MUTED_BG;
   } else if ("transparent" === arg2) {
-    BACKGROUND_SURFACE_HIGH = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.TRANSPARENT;
+    BACKGROUND_SURFACE_HIGH = Themes.unsafe_rawColors.TRANSPARENT;
   } else if ("control-secondary" === arg2) {
-    BACKGROUND_SURFACE_HIGH = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT;
+    BACKGROUND_SURFACE_HIGH = Themes.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT;
   } else if ("surface-high" === arg2) {
-    BACKGROUND_SURFACE_HIGH = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH;
+    BACKGROUND_SURFACE_HIGH = Themes.colors.BACKGROUND_SURFACE_HIGH;
   }
   let BORDER_SUBTLE = null;
   if ("none" !== arg4) {
     if ("subtle" === arg4) {
-      BORDER_SUBTLE = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE;
+      BORDER_SUBTLE = Themes.colors.BORDER_SUBTLE;
     } else if ("strong" === arg4) {
-      BORDER_SUBTLE = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_STRONG;
+      BORDER_SUBTLE = Themes.colors.BORDER_STRONG;
     } else if ("faint" === arg4) {
-      BORDER_SUBTLE = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_MUTED;
+      BORDER_SUBTLE = Themes.colors.BORDER_MUTED;
     } else if ("control-secondary" === arg4) {
-      BORDER_SUBTLE = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_SECONDARY_BORDER_DEFAULT;
+      BORDER_SUBTLE = Themes.colors.CONTROL_SECONDARY_BORDER_DEFAULT;
     }
   }
   if (BORDER_SUBTLE == null) {
     BORDER_SUBTLE = BACKGROUND_SURFACE_HIGH;
   }
   const card = {};
-  const merged = Object.assign(require("CardTokens.native.tsx") /* createCardShadowToken */.createCardShadowToken(arg3));
+  const merged = Object.assign(createCardShadowToken /* createCardShadowToken */.createCardShadowToken(arg3));
   let tmp21;
   if (arg0) {
     tmp21 = arg5;

@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 // discord_app/modules/messages/native/MessageAccessibilityActions.tsx
 import recomputeGuild from "recomputeGuild";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -10,21 +12,21 @@ let result = require("ME").fileFinishedImporting("modules/messages/native/Messag
 export const MessageAccessibilityAction = obj;
 export const getMessageAccessibilityActionFromLabel = function getMessageAccessibilityActionFromLabel(action) {
   let obj = {};
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.iXAna6)] = obj.VIEW_PROFILE;
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.lfIHs4)] = obj.ADD_REACTION;
-  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["5IEsGx"])] = obj.REPLY;
-  const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ChPNkN)] = obj.MESSAGE_ACTIONS_MENU;
-  const intl5 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl5.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["5Q9+/L"])] = obj.EDIT_GDM;
-  const intl6 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl6.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["mp1N/2"])] = obj.OPEN_PINS;
-  const intl7 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl7.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["+TSRGD"])] = obj.JUMP_TO_MESSAGE;
-  const DoubleTapReactionEmoji = require("../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.DoubleTapReactionEmoji;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl.string(getSystemLocale /* getSystemLocale */.t.iXAna6)] = obj.VIEW_PROFILE;
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl2.string(getSystemLocale /* getSystemLocale */.t.lfIHs4)] = obj.ADD_REACTION;
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl3.string(getSystemLocale /* getSystemLocale */.t["5IEsGx"])] = obj.REPLY;
+  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl4.string(getSystemLocale /* getSystemLocale */.t.ChPNkN)] = obj.MESSAGE_ACTIONS_MENU;
+  const intl5 = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl5.string(getSystemLocale /* getSystemLocale */.t["5Q9+/L"])] = obj.EDIT_GDM;
+  const intl6 = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl6.string(getSystemLocale /* getSystemLocale */.t["mp1N/2"])] = obj.OPEN_PINS;
+  const intl7 = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl7.string(getSystemLocale /* getSystemLocale */.t["+TSRGD"])] = obj.JUMP_TO_MESSAGE;
+  const DoubleTapReactionEmoji = explicitContentFromProto /* explicitContentFromProto */.DoubleTapReactionEmoji;
   const setting = DoubleTapReactionEmoji.getSetting();
   let disableDoubleTap;
   if (setting != null) {
@@ -66,8 +68,8 @@ export const createMessageAccessibilityActions = function createMessageAccessibi
       canChatInGuildResult = channel.isPrivate();
     }
     let obj = { label: null, name: null };
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.iXAna6);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.iXAna6);
     obj[1] = obj.VIEW_PROFILE;
     const items = [obj];
     if (canChatInGuildResult) {
@@ -114,7 +116,7 @@ export const createMessageAccessibilityActions = function createMessageAccessibi
     }
     const obj3 = { label: null, name: null };
     const intl6 = tmp5(1236).intl;
-    obj3[0] = intl6.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ChPNkN);
+    obj3[0] = intl6.string(getSystemLocale /* getSystemLocale */.t.ChPNkN);
     obj3[1] = obj.MESSAGE_ACTIONS_MENU;
     items.push(obj3);
     return items;

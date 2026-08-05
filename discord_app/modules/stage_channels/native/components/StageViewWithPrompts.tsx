@@ -1,3 +1,7 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import { FocusedControlsHeader } from "../../../video_calls/native/components/FocusedControls.tsx";
+import { StageSparkleInner } from "StageSparkle.tsx";
 // discord_app/modules/stage_channels/native/components/StageViewWithPrompts.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -26,12 +30,12 @@ export default function StageViewWithPrompts(arg0) {
   const tmp = styles();
   let obj = { style: tmp.scrollView, contentContainerStyle: null, alwaysBounceVertical: false, children: null };
   const items = [tmp.container, ];
-  obj = { paddingTop: top + require("../../../video_calls/native/components/FocusedControls.tsx") /* FocusedControlsHeader */.FOCUSED_CONTROLS_HEADER_HEIGHT, paddingBottom: bottom + closure_8 };
-  ({ top, bottom } = require("../../../safe_area/useSafeAreaInsets.native.tsx")());
+  obj = { paddingTop: top + FocusedControlsHeader /* FocusedControlsHeader */.FOCUSED_CONTROLS_HEADER_HEIGHT, paddingBottom: bottom + closure_8 };
+  ({ top, bottom } = useSafeAreaInsets());
   items[1] = obj;
   obj[1] = items;
   obj = { style: tmp.sparkle, theme: ThemeTypes.DARK };
-  const items1 = [callback(require("StageSparkle.tsx"), obj), callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "text-overlay-light", children: title }), callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.body, variant: "text-sm/medium", color: "text-overlay-light", children: body }), callback(closure_4, { style: tmp.prompts, children })];
+  const items1 = [callback(StageSparkleInner, obj), callback(Text /* Text */.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "text-overlay-light", children: title }), callback(Text /* Text */.Text, { style: tmp.body, variant: "text-sm/medium", color: "text-overlay-light", children: body }), callback(closure_4, { style: tmp.prompts, children })];
   obj[3] = items1;
   return callback2(closure_3, obj);
 };

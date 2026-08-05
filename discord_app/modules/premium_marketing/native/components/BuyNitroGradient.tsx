@@ -1,3 +1,4 @@
+import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
 // discord_app/modules/premium_marketing/native/components/BuyNitroGradient.tsx
 import "noop";
 import { PremiumTypes } from "GuildFeatures";
@@ -38,7 +39,7 @@ export default function BuyNitroGradient(selectedTier) {
   fn.__initData = closure_8;
   obj = { children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const items = [callback(require("../../../../../_runtime/04706_LinearGradient.js"), { style, colors: nitroColors, start, end }), ];
+  const items = [callback(LinearGradient, { style, colors: nitroColors, start, end }), ];
   const items1 = [style, animatedStyle];
   items[1] = callback(LinearGradient, { style: items1, colors: basicColors, start, end });
   obj[0] = items;

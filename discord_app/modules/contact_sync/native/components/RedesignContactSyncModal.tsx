@@ -1,3 +1,8 @@
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { _uploadContacts } from "../ContactSyncUtils.tsx";
+import { RedesignContactSyncDiscoverabilityFooter } from "RedesignContactSyncDiscoverabilityFooter.tsx";
 // discord_app/modules/contact_sync/native/components/RedesignContactSyncModal.tsx
 import getState from "getState";
 import ContactSyncLandingImage from "ContactSyncLandingImage";
@@ -29,12 +34,12 @@ function headerLeft() {
 }
 function OnboardingTrailingLanding() {
   let obj = { style: createCacheKey().landingTrailing, variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   obj = { learnMoreUrl: null };
   const tmp = createCacheKey();
-  obj[0] = require("../ContactSyncUtils.tsx") /* _uploadContacts */.getOpenLearnMoreUrl();
-  obj[3] = intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["84S6+Z"], obj);
-  return callback4(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  obj[0] = _uploadContacts /* _uploadContacts */.getOpenLearnMoreUrl();
+  obj[3] = intl.format(getSystemLocale /* getSystemLocale */.t["84S6+Z"], obj);
+  return callback4(Text /* Text */.Text, obj);
 }
 function OnboardingTrailing(isOnboarding) {
   if (isOnboarding.isOnboarding) {
@@ -43,7 +48,7 @@ function OnboardingTrailing(isOnboarding) {
     const obj = { discoverabilityEnabled: null, onValueChanged: null };
     obj[0] = tmp;
     obj[1] = tmp2;
-    tmp3Result = tmp3(require("RedesignContactSyncDiscoverabilityFooter.tsx"), obj);
+    tmp3Result = tmp3(RedesignContactSyncDiscoverabilityFooter, obj);
   }
   return tmp3Result;
 }
@@ -313,7 +318,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
   let first;
   let dependencyMap;
   let callback;
-  let obj = _require("../../../../design/components/Navigator/native/useNavigation.native.tsx");
+  let obj = _useNavigation;
   const navigation = obj.useNavigation();
   _require = navigation;
   const tmp3 = callback(React.useState(false), 2);

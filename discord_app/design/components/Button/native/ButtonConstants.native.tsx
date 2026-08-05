@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { IconSizes } from "../../../void/Icon/native/Icon.tsx";
 // discord_app/design/components/Button/native/ButtonConstants.native.tsx
 import IconSizes from "IconSizes";
 import IconSizes from "IconSizes";
@@ -37,13 +39,13 @@ export function getButtonDefaultTextVariant(size) {
   return str;
 }
 export const getButtonPadding = function getButtonPadding(FAB_BUTTON_SIZE, FAB_BUTTON_ICON_SIZE) {
-  return (FAB_BUTTON_SIZE - require("../../../void/Icon/native/Icon.tsx") /* IconSizes */.getIconSize(FAB_BUTTON_ICON_SIZE) - 2) / 2;
+  return (FAB_BUTTON_SIZE - IconSizes /* IconSizes */.getIconSize(FAB_BUTTON_ICON_SIZE) - 2) / 2;
 };
 export const getButtonBorderRadius = function getButtonBorderRadius(arg0) {
   if ("lg" === arg0) {
-    let BORDER_RADIUS = require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.button.BORDER_RADIUS_LG;
+    let BORDER_RADIUS = Themes.modules.button.BORDER_RADIUS_LG;
   } else {
-    BORDER_RADIUS = require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.button.BORDER_RADIUS;
+    BORDER_RADIUS = Themes.modules.button.BORDER_RADIUS;
   }
   return BORDER_RADIUS;
 };

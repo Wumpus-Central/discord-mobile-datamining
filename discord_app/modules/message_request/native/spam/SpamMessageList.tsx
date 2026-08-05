@@ -1,3 +1,6 @@
+import { useMountLayoutEffect } from "../../../../hooks/useMountEffect.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import { useSortedSpamMessageRequests } from "../../hooks/useSortedSpamMessageRequests.tsx";
 // discord_app/modules/message_request/native/spam/SpamMessageList.tsx
 import Form from "Form";
 import get_ActivityIndicator from "registerAsset";
@@ -198,13 +201,13 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   let closure_4;
   const tmp = createCacheKey();
   importDefault = tmp;
-  const bottom = require("../../../safe_area/useSafeAreaInsets.native.tsx")().bottom;
+  const bottom = useSafeAreaInsets().bottom;
   let obj = goToMessageRequestPreview(15829);
   dependencyMap = obj.useSpamMessageRequestCount();
-  arr = require("../../hooks/useSortedSpamMessageRequests.tsx")();
+  arr = useSortedSpamMessageRequests();
   let obj1 = goToMessageRequestPreview(15827);
   closure_4 = obj1.useListHasSingleSpamMessageRequest();
-  require("../../../../hooks/useMountEffect.tsx")(() => {
+  useMountLayoutEffect(() => {
     let obj = _undefined(698);
     obj = { num_spam_message_requests: dependencyMap };
     obj.track(outer1_7.SPAM_MESSAGE_REQUESTS_VIEWED, obj);

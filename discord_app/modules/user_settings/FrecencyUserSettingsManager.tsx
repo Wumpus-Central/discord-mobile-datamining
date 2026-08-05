@@ -1,3 +1,4 @@
+import { updateUserGuildSettings } from "UserSettingsProtoActionCreators.tsx";
 // discord_app/modules/user_settings/FrecencyUserSettingsManager.tsx
 import handleStickersStoreUpdate from "handleStickersStoreUpdate";
 import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
@@ -189,8 +190,8 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       timeout = setTimeout(() => outer1_21(c0), closure_15);
     }
   };
-  require("UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push(obj);
-  const beforeSendCallbacks = require("UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
+  updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push(obj);
+  const beforeSendCallbacks = updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
   obj = {
     hasChanges() {
       let hasPendingUsageResult = closure_8.hasPendingUsage();
@@ -212,8 +213,8 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       }
     }
   };
-  require("UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push(obj);
-  const beforeSendCallbacks1 = require("UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
+  updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push(obj);
+  const beforeSendCallbacks1 = updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
   obj = {
     hasChanges() {
       let hasPendingUsageResult = getEmojiToGroupId.hasPendingUsage();
@@ -239,9 +240,9 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       }
     }
   };
-  require("UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push(obj);
-  const beforeSendCallbacks2 = require("UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
-  require("UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
+  updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push(obj);
+  const beforeSendCallbacks2 = updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
+  updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
     hasChanges() {
       let hasPendingUsageResult = handleSoundCreateOrUpdate.hasPendingUsage();
       if (hasPendingUsageResult) {
@@ -262,7 +263,7 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       }
     }
   });
-  const beforeSendCallbacks3 = require("UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
+  const beforeSendCallbacks3 = updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
   const obj1 = {
     hasChanges() {
       let hasPendingUsageResult = handleSoundCreateOrUpdate.hasPendingUsage();
@@ -284,7 +285,7 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       }
     }
   };
-  require("UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
+  updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
     hasChanges() {
       let hasPendingUsageResult = handleUserSettingsProtoStoreChange.hasPendingUsage();
       if (hasPendingUsageResult) {
@@ -305,7 +306,7 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       }
     }
   });
-  const beforeSendCallbacks4 = require("UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
+  const beforeSendCallbacks4 = updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
   let obj2 = {
     hasChanges() {
       let hasPendingUsageResult = handleUserSettingsProtoStoreChange.hasPendingUsage();
@@ -327,7 +328,7 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       }
     }
   };
-  require("UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
+  updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
     hasChanges() {
       let hasPendingUsageResult = closure_5.hasPendingUsage();
       if (hasPendingUsageResult) {
@@ -348,7 +349,7 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       }
     }
   });
-  const beforeSendCallbacks5 = require("UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
+  const beforeSendCallbacks5 = updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
   const obj3 = {
     hasChanges() {
       let hasPendingUsageResult = closure_5.hasPendingUsage();
@@ -370,7 +371,7 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       }
     }
   };
-  require("UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
+  updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
     hasChanges() {
       let hasPendingUsageResult = handleChannelSelect.hasPendingUsage();
       if (hasPendingUsageResult) {

@@ -1,3 +1,4 @@
+import { showTooManyUserGuildsAlert } from "../../actions/GuildActionCreators.tsx";
 // discord_app/modules/relationships/GuildFriendshipStore.tsx
 import { Store } from "initialize";
 
@@ -32,8 +33,8 @@ prototype["fetchFriendMembersIfNotFetched"] = function fetchFriendMembersIfNotFe
     const obj = { fetchState: null, foundMembers: 0, notFoundMembers: 0 };
     obj[0] = tmp4.FETCHING;
     dependencyMap[id1] = obj;
-    const membersById = require("../../actions/GuildActionCreators.tsx").requestMembersById(id1, items, false);
-    const obj2 = require("../../actions/GuildActionCreators.tsx");
+    const membersById = showTooManyUserGuildsAlert.requestMembersById(id1, items, false);
+    const obj2 = showTooManyUserGuildsAlert;
   }
 };
 const guildFriendshipStore = new GuildFriendshipStore(require("dispatcher"), {

@@ -1,3 +1,10 @@
+import { toNativeHorizontalOffset } from "../../../../../../../_runtime/15071_toNativeHorizontalOffset.js";
+import { noop } from "../../../../../../../discord_common/js/packages/flash-list/index.js";
+import { initialize } from "../../../../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
+import { MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING } from "channel/MessagesItemChannelBase.tsx";
+import { MessagesItemPlaceholder } from "MessagesItemPlaceholder.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemChannel.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -14,7 +21,7 @@ let closure_7 = importAllResult.memo(function MessagesItemChannel(arg0) {
   let setIsPressed;
   ({ channelId: require, placeholderHeight } = arg0);
   ({ row, isPressed, setIsPressed } = arg0);
-  let obj = require("../../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [ensureGuildLoaded];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getChannel(closure_0));
   let isPrivateResult;
@@ -27,12 +34,12 @@ let closure_7 = importAllResult.memo(function MessagesItemChannel(arg0) {
     obj[1] = placeholderHeight;
     obj[2] = isPressed;
     obj[3] = setIsPressed;
-    let tmp5 = jsx(require("channel/MessagesItemChannelBase.tsx"), { channel: null, height: null, isPressed: null, setIsPressed: null });
+    let tmp5 = jsx(MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING, { channel: null, height: null, isPressed: null, setIsPressed: null });
   } else {
     obj = { height: null, row: null };
     obj[0] = placeholderHeight;
     obj[1] = row;
-    tmp5 = jsx(require("MessagesItemPlaceholder.tsx"), { height: null, row: null });
+    tmp5 = jsx(MessagesItemPlaceholder, { height: null, row: null });
   }
   return tmp5;
 });
@@ -47,7 +54,7 @@ const memoResult = importAllResult.memo((arg0) => {
   return <closure_7 />;
 });
 const memoResult1 = importAllResult.memo((channelId) => {
-  let obj = require("../../../../../../../discord_common/js/packages/flash-list/index.js") /* noop */;
+  let obj = noop /* noop */;
   const items = [channelId.channelId];
   const tmp = callback(obj.useRecyclingState(false, items), 2);
   require = tmp2;
@@ -62,7 +69,7 @@ const memoResult1 = importAllResult.memo((channelId) => {
 const memoResult2 = importAllResult.memo((arg0) => {
   let tmp2;
   let tmp3;
-  let obj = require("../../../../../../../_runtime/15071_toNativeHorizontalOffset.js") /* toNativeHorizontalOffset */;
+  let obj = toNativeHorizontalOffset /* toNativeHorizontalOffset */;
   obj = {};
   [tmp2, tmp3] = callback(obj.useRecyclingState(false), 2);
   const merged = Object.assign(arg0);
@@ -73,14 +80,14 @@ const memoResult2 = importAllResult.memo((arg0) => {
 const result = require("ensureGuildLoaded").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemChannel.tsx");
 
 export const getMessagesItemChannelSizes = function getMessagesItemChannelSizes(fontScale) {
-  let obj = require("../../../../../screen/native/useScaledTextLineHeight.android.tsx") /* map */;
+  let obj = map /* map */;
   const scaleTextLineHeightResult = obj.scaleTextLineHeight("redesign/channel-title/semibold", fontScale);
-  const scaleTextLineHeightResult1 = require("../../../../../screen/native/useScaledTextLineHeight.android.tsx") /* map */.scaleTextLineHeight("text-xs/medium", fontScale);
-  const PX_16 = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
-  const PX_32 = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32;
+  const scaleTextLineHeightResult1 = map /* map */.scaleTextLineHeight("text-xs/medium", fontScale);
+  const PX_16 = Themes.space.PX_16;
+  const PX_32 = Themes.space.PX_32;
   obj = { avatar: PX_32, height: null, label: null, labelSecondary: null, padding: null };
   const sum = Math.max(PX_32, scaleTextLineHeightResult + scaleTextLineHeightResult1) + PX_16;
-  obj[1] = sum + require("channel/MessagesItemChannelBase.tsx") /* MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING */.MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING;
+  obj[1] = sum + MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING /* MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING */.MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING;
   obj[2] = scaleTextLineHeightResult;
   obj[3] = scaleTextLineHeightResult1;
   obj[4] = PX_16;

@@ -1,3 +1,6 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 // discord_app/modules/double_tap_to_react/native/DoubleTapEmojiUpdatedToast.tsx
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -53,10 +56,10 @@ class ToastEmoji {
 }
 function ToastText(emoji) {
   let obj = { variant: "text-sm/normal", style: createCacheKey().toastText, children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   obj = { emojiName: emoji.emoji.name };
-  obj[2] = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.nKY0Fl, obj);
-  return jsx(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { emojiName: emoji.emoji.name });
+  obj[2] = intl.format(getSystemLocale /* getSystemLocale */.t.nKY0Fl, obj);
+  return jsx(Text /* Text */.Text, { emojiName: emoji.emoji.name });
 }
 createCacheKey = { toastEmoji: null, toastEmojiCustom: null, toastEmojiText: null, toastText: null };
 createCacheKey = { marginLeft: require("Themes").space.PX_8, marginVertical: require("Themes").space.PX_8 };
@@ -96,7 +99,7 @@ export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdated
     obj[2] = function content() {
       return outer1_6(outer1_9, { emoji });
     };
-    require("../../toast/native/ToastActionCreators.tsx").open(obj);
-    const obj2 = require("../../toast/native/ToastActionCreators.tsx");
+    dispatcher.open(obj);
+    const obj2 = dispatcher;
   }
 };

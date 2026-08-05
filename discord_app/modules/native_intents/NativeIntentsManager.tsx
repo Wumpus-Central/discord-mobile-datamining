@@ -1,3 +1,8 @@
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { getChannelIconURL } from "../channel/getChannelIcon.tsx";
+import { computeChannelName } from "../channel/useChannelName.tsx";
+import { set } from "IntentsBindings.android.tsx";
+import { experiment } from "NativeIntentsExperiment.tsx";
 // discord_app/modules/native_intents/NativeIntentsManager.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -16,18 +21,18 @@ let map1;
 let unpackModuleId;
 const require = arg1;
 function indexingEnabled() {
-  let obj = require("NativeIntentsExperiment.tsx");
+  let obj = experiment;
   obj = { autoTrackExposure: true, disable: null };
-  obj[1] = !require("IntentsBindings.android.tsx").hasSearch();
+  obj[1] = !set.hasSearch();
   return obj.getCurrentConfig({ location: "NativeIntentsManager" }, obj).searchEnabled;
 }
 function makeSearchItem(channel, guild, flag) {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = require("../channel/useChannelName.tsx") /* computeChannelName */;
+  let obj = computeChannelName /* computeChannelName */;
   const channelName = obj.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true);
-  const channelName1 = require("../channel/useChannelName.tsx") /* computeChannelName */.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, false);
+  const channelName1 = computeChannelName /* computeChannelName */.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, false);
   const items = [channelName, channelName1];
   if (channel.isGuildVocal()) {
     const _HermesInternal = HermesInternal;
@@ -64,8 +69,8 @@ function makeSearchItem(channel, guild, flag) {
   }
   const CHANNELResult = closure_14.CHANNEL(id, channel.id);
   obj = { id: CHANNELResult, relatedUniqueIdentifier: CHANNELResult, type: "url", title: sum, displayName: sum, thumbnailURL: null, rankingHint: null, keywords: null, alternateNames: null, isUpdate: null };
-  const obj2 = require("../channel/useChannelName.tsx") /* computeChannelName */;
-  const channelIconURL = require("../channel/getChannelIcon.tsx") /* getChannelIconURL */.getChannelIconURL(channel, 128, false);
+  const obj2 = computeChannelName /* computeChannelName */;
+  const channelIconURL = getChannelIconURL /* getChannelIconURL */.getChannelIconURL(channel, 128, false);
   let startsWithResult;
   if (channelIconURL != null) {
     const startsWith = channelIconURL.startsWith;
@@ -93,7 +98,7 @@ function makeSearchItem(channel, guild, flag) {
 }
 function getGuildThumbnail(guild) {
   if (null != guild) {
-    let obj = require("../../utils/AvatarUtils.tsx");
+    let obj = getAvatarURL;
     obj = { id: null, icon: null, size: 128 };
     ({ id: obj2[0], icon: obj2[1] } = guild);
     const guildIconURL = obj.getGuildIconURL(obj);
@@ -153,9 +158,9 @@ function makeGuildDomain(guild, flag) {
   return obj;
 }
 function setChannelActivity(channelId) {
-  let obj = require("NativeIntentsExperiment.tsx");
+  let obj = experiment;
   obj = { autoTrackExposure: true, disable: null };
-  obj[1] = !require("IntentsBindings.android.tsx").hasUserActivity();
+  obj[1] = !set.hasUserActivity();
   if (obj.getCurrentConfig({ location: "NativeIntentsManager" }, obj).activityEnabled) {
     let channel;
     if (null != channelId) {
@@ -163,7 +168,7 @@ function setChannelActivity(channelId) {
     }
     if (null != channel) {
       const guild = store.getGuild(channel.guild_id);
-      const obj5 = require("../channel/useChannelName.tsx") /* computeChannelName */;
+      const obj5 = computeChannelName /* computeChannelName */;
       const channelName = obj5.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true);
       let str2 = "";
       if (null != guild) {
@@ -283,12 +288,12 @@ function indexChannelUpdates(items) {
       continue;
     }
     if (items.length > 0) {
-      require("IntentsBindings.android.tsx").indexDomains(items);
-      const obj3 = require("IntentsBindings.android.tsx");
+      set.indexDomains(items);
+      const obj3 = set;
     }
     if (items1.length > 0) {
-      require("IntentsBindings.android.tsx").deleteSearchItems(items1);
-      const obj4 = require("IntentsBindings.android.tsx");
+      set.deleteSearchItems(items1);
+      const obj4 = set;
     }
   }
 }
@@ -304,9 +309,9 @@ class NativeIntentsManager extends tmp3 {
 const prototype = NativeIntentsManager.prototype;
 prototype["handleInit"] = function handleInit() {
   setChannelActivity(currentlySelectedChannelId.getCurrentlySelectedChannelId());
-  let obj = require("NativeIntentsExperiment.tsx");
+  let obj = experiment;
   obj = { autoTrackExposure: true, disable: null };
-  let obj2 = require("IntentsBindings.android.tsx");
+  let obj2 = set;
   obj[1] = !obj2.hasSearch();
   if (obj.getCurrentConfig({ location: "NativeIntentsManager" }, obj).clearEnabled) {
     let tmp2Result = tmp2(16820);
@@ -314,7 +319,7 @@ prototype["handleInit"] = function handleInit() {
   }
   tmp2Result = tmp2(16819);
   obj = { autoTrackExposure: true, disable: null };
-  obj[1] = !require("IntentsBindings.android.tsx").hasSearch();
+  obj[1] = !set.hasSearch();
   if (tmp2Result.getCurrentConfig({ location: "NativeIntentsManager" }, obj).searchEnabled) {
     const obj1 = { autoTrackExposure: true, disable: null };
     const tmp2Result2 = tmp2(16819);
@@ -334,19 +339,19 @@ prototype["handleInit"] = function handleInit() {
       obj2[0] = closure_10;
       obj2[1] = items;
       mapped.push(obj2);
-      require("IntentsBindings.android.tsx").indexDomains(mapped);
-      const obj12 = require("IntentsBindings.android.tsx");
+      set.indexDomains(mapped);
+      const obj12 = set;
     }
     const tmp2Result3 = tmp2(16820);
   }
 };
 prototype["handleLogout"] = function handleLogout() {
-  let obj = require("NativeIntentsExperiment.tsx");
+  let obj = experiment;
   obj = { autoTrackExposure: true, disable: null };
-  obj[1] = !require("IntentsBindings.android.tsx").hasSearch();
+  obj[1] = !set.hasSearch();
   if (obj.getCurrentConfig({ location: "NativeIntentsManager" }, obj).clearEnabled) {
-    require("IntentsBindings.android.tsx").clearSearchIndex();
-    const tmpResult = require("IntentsBindings.android.tsx");
+    set.clearSearchIndex();
+    const tmpResult = set;
   }
 };
 prototype["handleChannelSelect"] = function handleChannelSelect(channelId) {
@@ -354,9 +359,9 @@ prototype["handleChannelSelect"] = function handleChannelSelect(channelId) {
 };
 prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
   channel = channel.channel;
-  let obj = require("NativeIntentsExperiment.tsx");
+  let obj = experiment;
   obj = { autoTrackExposure: true, disable: null };
-  obj[1] = !require("IntentsBindings.android.tsx").hasSearch();
+  obj[1] = !set.hasSearch();
   if (obj.getCurrentConfig({ location: "NativeIntentsManager" }, obj).searchEnabled) {
     if (getUncachedChannelPermissions.can(constants3.VIEW_CHANNEL, channel)) {
       const guild = store.getGuild(channel.guild_id);
@@ -401,13 +406,13 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
   }
 };
 prototype["handleChannelDelete"] = function handleChannelDelete(channel) {
-  let obj = require("NativeIntentsExperiment.tsx");
+  let obj = experiment;
   obj = { autoTrackExposure: true, disable: null };
-  obj[1] = !require("IntentsBindings.android.tsx").hasSearch();
+  obj[1] = !set.hasSearch();
   if (obj.getCurrentConfig({ location: "NativeIntentsManager" }, obj).searchEnabled) {
     const items = [channel.channel.id];
-    require("IntentsBindings.android.tsx").deleteSearchItems(items);
-    const tmpResult = require("IntentsBindings.android.tsx");
+    set.deleteSearchItems(items);
+    const tmpResult = set;
   }
 };
 prototype["handleChannelUpdates"] = function handleChannelUpdates(channels) {
@@ -415,9 +420,9 @@ prototype["handleChannelUpdates"] = function handleChannelUpdates(channels) {
 };
 prototype["handleGuildCreateOrUpdate"] = function handleGuildCreateOrUpdate(guild) {
   guild = guild.guild;
-  let obj = require("NativeIntentsExperiment.tsx");
+  let obj = experiment;
   obj = { autoTrackExposure: true, disable: null };
-  obj[1] = !require("IntentsBindings.android.tsx").hasSearch();
+  obj[1] = !set.hasSearch();
   if (obj.getCurrentConfig({ location: "NativeIntentsManager" }, obj).searchEnabled) {
     guild = store.getGuild(guild.id);
     if (null != guild) {
@@ -432,13 +437,13 @@ prototype["handleGuildCreateOrUpdate"] = function handleGuildCreateOrUpdate(guil
   }
 };
 prototype["handleGuildDelete"] = function handleGuildDelete(guild) {
-  let obj = require("NativeIntentsExperiment.tsx");
+  let obj = experiment;
   obj = { autoTrackExposure: true, disable: null };
-  obj[1] = !require("IntentsBindings.android.tsx").hasSearch();
+  obj[1] = !set.hasSearch();
   if (obj.getCurrentConfig({ location: "NativeIntentsManager" }, obj).searchEnabled) {
     const items = [guild.guild.id];
-    require("IntentsBindings.android.tsx").deleteSearchDomains(items);
-    const tmpResult = require("IntentsBindings.android.tsx");
+    set.deleteSearchDomains(items);
+    const tmpResult = set;
   }
 };
 prototype["handleThreadUpdate"] = function handleThreadUpdate(channel) {

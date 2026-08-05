@@ -1,3 +1,4 @@
+import { get } from "../../utils/ProcessArgs.tsx";
 // discord_app/modules/hotspot/HotspotStore.tsx
 import { CONFERENCE_MODE_ENABLED } from "CONFERENCE_MODE_ENABLED";
 import { PersistedStore } from "initialize";
@@ -31,7 +32,7 @@ prototype["hasHotspot"] = function hasHotspot(LIVE_STAGE_NOTIFICATION_BADGE) {
   }
   let tmp3 = !CONFERENCE_MODE_ENABLED;
   if (!CONFERENCE_MODE_ENABLED) {
-    const ProcessArgs = require("../../utils/ProcessArgs.tsx") /* get */.ProcessArgs;
+    const ProcessArgs = get /* get */.ProcessArgs;
     const isDisallowPopupsSetResult = ProcessArgs.isDisallowPopupsSet();
     let tmp7 = !isDisallowPopupsSetResult;
     if (!isDisallowPopupsSetResult) {

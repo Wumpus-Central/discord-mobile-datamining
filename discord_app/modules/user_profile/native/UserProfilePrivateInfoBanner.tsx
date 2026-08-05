@@ -1,3 +1,5 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/user_profile/native/UserProfilePrivateInfoBanner.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -21,8 +23,8 @@ export default function UserProfilePrivateInfoBanner(username) {
   obj = { style: items, children: null };
   items[1] = tmp3;
   obj = { variant: "text-sm/normal", children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.P8ij6Z, { username: username.username });
-  obj[1] = jsx(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/normal", children: null });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.format(getSystemLocale /* getSystemLocale */.t.P8ij6Z, { username: username.username });
+  obj[1] = jsx(Text /* Text */.Text, { variant: "text-sm/normal", children: null });
   return <View variant="text-sm/normal">{null}</View>;
 };

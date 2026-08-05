@@ -1,3 +1,6 @@
+import { DEFAULT_BADGE_SIZE } from "../../../main_tabs_v2/native/shared_components/Badge.tsx";
+import { getFontScale } from "../../../screen/native/useFontScale.tsx";
+import { getLayoutStyle } from "getLayoutStyles.tsx";
 // discord_app/modules/launchpad/native/shared/UnreadBadge.tsx
 import { View } from "get ActivityIndicator";
 import { MUTED_OPACITY_CONTENT } from "hairlineWidth";
@@ -13,8 +16,8 @@ const memoResult = require("noop").memo(function UnreadBadge(arg0) {
   let resolvedUnreadSetting;
   let unread;
   ({ unread, resolvedUnreadSetting, muted } = arg0);
-  const tmp4 = require("getLayoutStyles.tsx")();
-  require("../../../screen/native/useFontScale.tsx") /* getFontScale */;
+  const tmp4 = getLayoutStyle();
+  getFontScale /* getFontScale */;
   let tmp9Result = null;
   if (unread) {
     let obj = { style: null, children: null };
@@ -26,7 +29,7 @@ const memoResult = require("noop").memo(function UnreadBadge(arg0) {
     obj[0] = items;
     obj = { classic: true, size: null, badgeStyle: null };
     const _Math = Math;
-    obj[1] = require("../../../main_tabs_v2/native/shared_components/Badge.tsx") /* DEFAULT_BADGE_SIZE */.CHANNEL_BADGE_SIZE * Math.max(tmp7, 1);
+    obj[1] = DEFAULT_BADGE_SIZE /* DEFAULT_BADGE_SIZE */.CHANNEL_BADGE_SIZE * Math.max(tmp7, 1);
     if (resolvedUnreadSetting !== UnreadSetting.ALL_MESSAGES) {
       let num2 = MUTED_OPACITY_CONTENT;
     } else {
@@ -36,10 +39,10 @@ const memoResult = require("noop").memo(function UnreadBadge(arg0) {
     obj1[0] = num2;
     const items1 = [obj1];
     obj[2] = items1;
-    obj[1] = jsx(require("../../../main_tabs_v2/native/shared_components/Badge.tsx"), { classic: true, size: null, badgeStyle: null });
+    obj[1] = jsx(DEFAULT_BADGE_SIZE, { classic: true, size: null, badgeStyle: null });
     tmp9Result = tmp9(View, obj);
     const tmp10 = View;
-    const tmp2Result = require("../../../main_tabs_v2/native/shared_components/Badge.tsx");
+    const tmp2Result = DEFAULT_BADGE_SIZE;
   }
   return tmp9Result;
 });

@@ -1,3 +1,8 @@
+import { ensureAvatarSource } from "../../../../../utils/native/AvatarUtils.tsx";
+import { useNullableMessageAuthor } from "../../../useMessageAuthor.tsx";
+import { createCommonMessage } from "createCommonMessage.tsx";
+import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
+import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/RoleSubscriptionPurchaseSystemMessage.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -19,9 +24,9 @@ export const createRoleSubscriptionPurchaseSystemMessage = function createRoleSu
       guildId = channel.getGuildId();
     }
     guild = guild.getGuild(guildId);
-    let obj = require("../../../useMessageAuthor.tsx") /* useNullableMessageAuthor */;
+    let obj = useNullableMessageAuthor /* useNullableMessageAuthor */;
     const guildMemberAvatar = obj.getMessageAuthor(message).guildMemberAvatar;
-    let obj1 = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */;
+    let obj1 = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
     const messageAuthorWithProcessedColor = obj1.getMessageAuthorWithProcessedColor(message);
     if (null != guildId) {
       if (null != channel) {
@@ -37,7 +42,7 @@ export const createRoleSubscriptionPurchaseSystemMessage = function createRoleSu
         }
       }
     }
-    require("../../../../../utils/native/AvatarUtils.tsx") /* ensureAvatarSource */;
+    ensureAvatarSource /* ensureAvatarSource */;
     if (null != guildMemberAvatar) {
       if (null != guildId) {
         obj = { userId: null, avatar: null, guildId: null };
@@ -70,7 +75,7 @@ export const createRoleSubscriptionPurchaseSystemMessage = function createRoleSu
       obj3[0] = message;
       obj3[1] = messageAuthorWithProcessedColor;
       obj3[2] = tmp;
-      obj1[2] = require("formatUsernameOnClick.tsx")(obj3);
+      obj1[2] = formatUsernameOnClick(obj3);
       obj1[3] = obj;
       obj1[4] = roleSubscriptionData;
       obj2[0] = tmp5(7909).getRoleSubscriptionPurchaseSystemMessageContentMobile(obj1);
@@ -83,7 +88,7 @@ export const createRoleSubscriptionPurchaseSystemMessage = function createRoleSu
       obj2[5] = tmp5(7909).getRoleSubscriptionPurchaseStickerCTA(message.id, false);
       const intl = tmp5(1236).intl;
       obj2[6] = intl.string(tmp5(1236).t.piPHvY);
-      const merged = Object.assign(require("createCommonMessage.tsx")(message));
+      const merged = Object.assign(createCommonMessage(message));
       return obj2;
     }
     guildMemberAvatarSource = author.getAvatarSource(undefined);

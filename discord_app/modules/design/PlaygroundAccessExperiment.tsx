@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/design/PlaygroundAccessExperiment.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ApexExperiment from "ApexExperiment";
@@ -16,7 +17,7 @@ export const getPlaygroundAccessExperiment = function getPlaygroundAccessExperim
   return apexExperiment.getConfig({ location }).enabled;
 };
 export const useHasPlaygroundAccess = function useHasPlaygroundAccess(location) {
-  let obj = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   let isStaffResult;

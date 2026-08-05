@@ -1,3 +1,6 @@
+import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
+import { messagesProxy } from "../../../feedback/intl/Feedback.messages.js";
+import { closeActionSheet } from "../../../feedback/native/FeedbackActionSheetV2.tsx";
 // discord_app/modules/voice_calls/native/action_sheet/VoiceFeedbackActionSheet.tsx
 import "noop";
 import { AnalyticEvents } from "ME";
@@ -12,7 +15,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function trackOpen() {
-  require("../../../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.OPEN_POPOUT, { type: "Call Session Feedback" });
+  expandEventProperties.track(AnalyticEvents.OPEN_POPOUT, { type: "Call Session Feedback" });
 }
 ({ AudioFeedbackOption: c4, ConnectionFeedbackOption: c5, FeedbackCategory: closure_6, FeedbackType: error, PeopleFeedbackOption: metroImportAll, VideoFeedbackOption: c9 } = FeedbackRating);
 const result = require("FeedbackRating").fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceFeedbackActionSheet.tsx");
@@ -24,7 +27,7 @@ export default function VoiceFeedbackActionSheet(analyticsData) {
   let obj = { value: constants3.CONNECTION, label: null, problemsHeader: null, problemOptions: null, freeformConfig: null };
   const stringResult = intl.string(analyticsData(1236).t.Ss6tlb);
   const intl3 = analyticsData(1236).intl;
-  obj[1] = intl3.string(require("../../../feedback/intl/Feedback.messages.js").FVhMw6);
+  obj[1] = intl3.string(messagesProxy.FVhMw6);
   const intl4 = analyticsData(1236).intl;
   obj[2] = intl4.string(analyticsData(1236).t.FJmoxF);
   let obj1 = analyticsData(11004);
@@ -35,7 +38,7 @@ export default function VoiceFeedbackActionSheet(analyticsData) {
   obj[4] = obj;
   obj = { value: constants3.AUDIO, label: null, problemsHeader: null, problemOptions: null, freeformConfig: null };
   const intl6 = analyticsData(1236).intl;
-  obj[1] = intl6.string(require("../../../feedback/intl/Feedback.messages.js").PL2l6A);
+  obj[1] = intl6.string(messagesProxy.PL2l6A);
   const intl7 = analyticsData(1236).intl;
   obj[2] = intl7.string(analyticsData(1236).t.FJmoxF);
   let obj4 = analyticsData(11004);
@@ -46,7 +49,7 @@ export default function VoiceFeedbackActionSheet(analyticsData) {
   obj[4] = obj1;
   const obj2 = { value: constants3.VIDEO, label: null, problemsHeader: null, problemOptions: null, freeformConfig: null };
   const intl9 = analyticsData(1236).intl;
-  obj2[1] = intl9.string(require("../../../feedback/intl/Feedback.messages.js")["0WFzPh"]);
+  obj2[1] = intl9.string(messagesProxy["0WFzPh"]);
   const intl10 = analyticsData(1236).intl;
   obj2[2] = intl10.string(analyticsData(1236).t.FJmoxF);
   const stringResult1 = intl2.string(analyticsData(1236).t.tLi4cR);
@@ -57,7 +60,7 @@ export default function VoiceFeedbackActionSheet(analyticsData) {
   obj2[4] = obj3;
   obj4 = { value: constants3.PEOPLE, label: null, problemsHeader: null, problemOptions: null, freeformConfig: null };
   const intl12 = analyticsData(1236).intl;
-  obj4[1] = intl12.string(require("../../../feedback/intl/Feedback.messages.js").Moa3W9);
+  obj4[1] = intl12.string(messagesProxy.Moa3W9);
   const intl13 = analyticsData(1236).intl;
   obj4[2] = intl13.string(analyticsData(1236).t.FJmoxF);
   const obj8 = analyticsData(11004);
@@ -69,7 +72,7 @@ export default function VoiceFeedbackActionSheet(analyticsData) {
   const obj6 = { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: stringResult1, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null };
   const obj11 = analyticsData(11004);
   const intl15 = analyticsData(1236).intl;
-  obj6[3] = intl15.string(require("../../../feedback/intl/Feedback.messages.js").tq8598);
+  obj6[3] = intl15.string(messagesProxy.tq8598);
   const items = [obj, obj, obj2, obj4];
   obj6[4] = items;
   obj6[5] = trackOpen;
@@ -127,5 +130,5 @@ export default function VoiceFeedbackActionSheet(analyticsData) {
       const obj4 = analyticsData(outer1_2[14]);
     }
   };
-  return jsx(require("../../../feedback/native/FeedbackActionSheetV2.tsx"), { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: stringResult1, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null });
+  return jsx(closeActionSheet, { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: stringResult1, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null });
 };

@@ -1,3 +1,7 @@
+import { ModalDisclaimer } from "../../../design/components/Modal/native/ModalDisclaimer.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { messagesProxy } from "../SafetyFlows.messages.js";
 // discord_app/modules/safety_flows/native/LogOutDisclaimer.tsx
 import { jsx } from "jsxProd";
 
@@ -6,19 +10,19 @@ const result = require("Text").fileFinishedImporting("modules/safety_flows/nativ
 export default function LogOutDisclaimer() {
   let obj = { children: null };
   obj = { variant: "text-xs/medium", children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   obj = {
     handleLogOut() {
       callback(table[5]).logout("safety_flows_enter_email_screen");
     }
   };
-  obj[1] = intl.format(require("../SafetyFlows.messages.js")["0DHxym"], obj);
-  obj[0] = jsx(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, {
+  obj[1] = intl.format(messagesProxy["0DHxym"], obj);
+  obj[0] = jsx(Text /* Text */.Text, {
     handleLogOut() {
       callback(table[5]).logout("safety_flows_enter_email_screen");
     }
   });
-  return jsx(require("../../../design/components/Modal/native/ModalDisclaimer.native.tsx") /* ModalDisclaimer */.ModalDisclaimer, {
+  return jsx(ModalDisclaimer /* ModalDisclaimer */.ModalDisclaimer, {
     handleLogOut() {
       callback(table[5]).logout("safety_flows_enter_email_screen");
     }

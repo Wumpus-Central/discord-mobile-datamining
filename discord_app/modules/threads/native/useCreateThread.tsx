@@ -1,3 +1,5 @@
+import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
+import { getIsPrivate } from "../ThreadCreationHooks.tsx";
 // discord_app/modules/threads/native/useCreateThread.tsx
 import getIsPrivate from "getIsPrivate";
 import noop from "noop";
@@ -17,7 +19,7 @@ export default function useCreateThread(arg0) {
   let useDefaultThreadName;
   let analyticsLocations;
   ({ parentChannel, parentMessageId, threadSettings, privateThreadMode, location: _location, onThreadCreated, useDefaultThreadName } = arg0);
-  analyticsLocations = require("../../app_analytics/useAnalyticsLocations.tsx")().analyticsLocations;
+  analyticsLocations = context().analyticsLocations;
   let obj = analyticsLocations(8165);
   obj = {
     parentChannel,
@@ -110,7 +112,7 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
     }
     return applyArgumentsResult;
   }, items);
-  let obj = _require("../ThreadCreationHooks.tsx");
+  let obj = _getIsPrivate;
   obj = { parentChannel, name: null, appliedTags: null, analyticsLocations: null, onThreadCreated: null, upload: null };
   let str;
   if (threadSettings != null) {

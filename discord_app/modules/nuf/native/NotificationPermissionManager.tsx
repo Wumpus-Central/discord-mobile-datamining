@@ -1,3 +1,5 @@
+import { t } from "../../../../_runtime/03867_t.js";
+import { getOrRefreshPushSyncToken } from "../../../actions/native/PushNotificationActionCreators.tsx";
 // discord_app/modules/nuf/native/NotificationPermissionManager.tsx
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { NativeModules } from "expandEventProperties";
@@ -24,8 +26,8 @@ function haveNotSeenPromptSince(arg0, arg1) {
   if (!tmp2) {
     let tmp4;
     if (items.includes(arg0)) {
-      tmp4 = require("../../../../_runtime/03867_t.js")().diff(tmp, "days") >= 1;
-      const obj = require("../../../../_runtime/03867_t.js")();
+      tmp4 = t().diff(tmp, "days") >= 1;
+      const obj = t();
     }
     tmp2 = tmp4;
   }
@@ -876,8 +878,8 @@ prototype["handleMessageCreateForNudge"] = function handleMessageCreateForNudge(
               isMutedResult = closure_8.isChannelMuted(guildId, channel.id);
             }
             if (!isMutedResult) {
-              const result = require("../../../actions/native/PushNotificationActionCreators.tsx") /* getOrRefreshPushSyncToken */.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.CHANNEL_BANNER);
-              const obj = require("../../../actions/native/PushNotificationActionCreators.tsx") /* getOrRefreshPushSyncToken */;
+              const result = getOrRefreshPushSyncToken /* getOrRefreshPushSyncToken */.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.CHANNEL_BANNER);
+              const obj = getOrRefreshPushSyncToken /* getOrRefreshPushSyncToken */;
             }
           }
         }
@@ -897,8 +899,8 @@ prototype["handleReactionAddForNudge"] = function handleReactionAddForNudge(opti
           isMutedResult = closure_8.isChannelMuted(guildId, channel.id);
         }
         if (!isMutedResult) {
-          const result = require("../../../actions/native/PushNotificationActionCreators.tsx") /* getOrRefreshPushSyncToken */.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.POST_REACTION_BANNER);
-          const obj = require("../../../actions/native/PushNotificationActionCreators.tsx") /* getOrRefreshPushSyncToken */;
+          const result = getOrRefreshPushSyncToken /* getOrRefreshPushSyncToken */.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.POST_REACTION_BANNER);
+          const obj = getOrRefreshPushSyncToken /* getOrRefreshPushSyncToken */;
         }
       }
     }

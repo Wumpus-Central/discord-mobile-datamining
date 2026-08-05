@@ -1,3 +1,4 @@
+import { InviteTypes } from "../../instant_invite/InviteTypeUtils.tsx";
 // discord_app/modules/messages/native/MessageImpressionAnalyticsHelpers.tsx
 import noop from "noop";
 import updateInvite from "updateInvite";
@@ -46,7 +47,7 @@ function getVoiceInviteEmbedRenderInfo(state) {
               return tmp4;
             }
           }
-          obj5 = require("../../instant_invite/InviteTypeUtils.tsx") /* InviteTypes */;
+          obj5 = InviteTypes /* InviteTypes */;
         }
       }
     }

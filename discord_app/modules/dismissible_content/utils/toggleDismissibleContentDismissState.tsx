@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { UNSAFE_isDismissibleContentDismissed } from "../DismissibleContentUnsafeUtils.tsx";
 // discord_app/modules/dismissible_content/utils/toggleDismissibleContentDismissState.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 
@@ -6,11 +8,11 @@ let result = require("handleDCShownToUser").fileFinishedImporting("modules/dismi
 
 export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER) {
   const _require = APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER;
-  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [handleConnectionOpen];
   const stateFromStores = obj.useStateFromStores(items, () => guildId.getGuildId());
   obj = { cooldownDurationMs: stateFromStores(687).Millis.WEEK, guildId: stateFromStores };
-  let result = _require("../DismissibleContentUnsafeUtils.tsx").useIsDismissibleContentDismissed_UNSAFE(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, obj);
+  let result = _UNSAFE_isDismissibleContentDismissed.useIsDismissibleContentDismissed_UNSAFE(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, obj);
   const dependencyMap = result;
   const items1 = [APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, stateFromStores, result];
   obj = {

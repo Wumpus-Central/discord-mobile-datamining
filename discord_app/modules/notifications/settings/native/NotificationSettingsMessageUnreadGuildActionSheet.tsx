@@ -1,3 +1,5 @@
+import { updateGuildPreset } from "../utils/notificationSettingsGuildFlagUtils.tsx";
+import { NotificationSettingsMessageUnreadActionSheet } from "NotificationSettingsMessageUnreadActionSheet.tsx";
 // discord_app/modules/notifications/settings/native/NotificationSettingsMessageUnreadGuildActionSheet.tsx
 import "noop";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
@@ -13,7 +15,7 @@ export default function NotificationSettingsMessageUnreadGuildActionSheet(guildI
   let notification;
   let unread;
   const _require = guildId;
-  let obj = _require("../utils/notificationSettingsGuildFlagUtils.tsx");
+  let obj = _updateGuildPreset;
   const guildPresetSettings = obj.useGuildPresetSettings(guildId.guildId);
   ({ unread, notification } = guildPresetSettings);
   let stringResult;
@@ -37,7 +39,7 @@ export default function NotificationSettingsMessageUnreadGuildActionSheet(guildI
       const result = obj.updateGuildNotificationSettings(guildId.guildId, obj, NotificationLabel.unreads(ONLY_MENTIONS));
     }
   };
-  return jsx(require("NotificationSettingsMessageUnreadActionSheet.tsx"), {
+  return jsx(NotificationSettingsMessageUnreadActionSheet, {
     disabledMentionOnlyWithReason: stringResult,
     value: unread,
     onChange(ONLY_MENTIONS) {

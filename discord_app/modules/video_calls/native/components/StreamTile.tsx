@@ -1,3 +1,8 @@
+import { registerAsset } from "../../../../../_runtime/10617_registerAsset.js";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { useVideoStreamError } from "../../../errors/hooks/useVideoStreamError.tsx";
 // discord_app/modules/video_calls/native/components/StreamTile.tsx
 import importAllResult from "map";
 import get_ActivityIndicator from "ResizeMode";
@@ -78,7 +83,7 @@ let closure_15 = importAllResult.memo((participant) => {
   let obj = participant(589);
   const items = [reset];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getActiveStreamForStreamKey(participant.id));
-  const tmp5 = require("../../../errors/hooks/useVideoStreamError.tsx")(MediaEngineContextTypes.STREAM, participant.user.id);
+  const tmp5 = useVideoStreamError(MediaEngineContextTypes.STREAM, participant.user.id);
   if (null != stateFromStores) {
     const state = stateFromStores.state;
     if (ApplicationStreamStates.FAILED === state) {
@@ -162,11 +167,11 @@ let closure_16 = importAllResult.memo((arg0) => {
   let obj = { accessibilityRole: "button", onPress: onFullScreen, style: items, hitSlop: { top: 4, left: 4, right: 4, bottom: 4 }, children: null };
   items = [callback2().statusWrapper, style];
   obj = { source: null, size: null, color: null };
-  obj[0] = require("../../../../../_runtime/10617_registerAsset.js");
-  obj[1] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.SMALL;
-  obj[2] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.WHITE;
-  obj[4] = callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
-  return callback(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  obj[0] = registerAsset;
+  obj[1] = Button /* Button */.Icon.Sizes.SMALL;
+  obj[2] = Themes.unsafe_rawColors.WHITE;
+  obj[4] = callback(Button /* Button */.Icon, obj);
+  return callback(PressableBase /* PressableBase */.PressableOpacity, obj);
 });
 let obj2 = { color: require("Themes").unsafe_rawColors.PRIMARY_300, fontSize: 14, lineHeight: 18, textAlign: "center" };
 const result = require("reset").fileFinishedImporting("modules/video_calls/native/components/StreamTile.tsx");

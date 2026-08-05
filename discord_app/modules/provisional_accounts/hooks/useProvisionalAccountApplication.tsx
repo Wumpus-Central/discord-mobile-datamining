@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { useGetOrFetchApplications } from "../../applications/useGetOrFetchApplications.tsx";
 // discord_app/modules/provisional_accounts/hooks/useProvisionalAccountApplication.tsx
 import recountRelationshipTypes from "recountRelationshipTypes";
 
@@ -7,10 +9,10 @@ const result = require("useGetOrFetchApplications").fileFinishedImporting("modul
 export default function useProvisionalAccountApplication(arg0) {
   const _require = arg0;
   const items = [recountRelationshipTypes];
-  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     const gameRelationshipsForUser = outer1_2.getGameRelationshipsForUser(closure_0);
     return 0 !== gameRelationshipsForUser.length ? gameRelationshipsForUser[0].applicationId : undefined;
   });
-  const obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
-  return _require("../../applications/useGetOrFetchApplications.tsx").useGetOrFetchApplication(stateFromStores);
+  const obj = _initialize;
+  return _useGetOrFetchApplications.useGetOrFetchApplication(stateFromStores);
 };

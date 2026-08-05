@@ -1,3 +1,8 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { SCREEN_READER_ENABLED_GETTER } from "../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx";
+import { useWindowDimensions } from "../../../../modules/screen/useWindowDimensions.native.tsx";
+import { map } from "../../../tokens/native/useToken.tsx";
 // discord_app/design/components/Sheet/native/ActionSheetHeaderBar.native.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -37,7 +42,7 @@ let closure_10 = createCacheKey.createStyles((arg0, height, marginBottom) => {
     tmp4 = obj4;
   }
   const merged2 = Object.assign(tmp4);
-  obj[1] = { alignSelf: "center", width: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.SHEET_HANDLE_WIDTH, height: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.SHEET_HANDLE_HEIGHT, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, top: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.SHEET_HANDLE_MARGIN_TOP };
+  obj[1] = { alignSelf: "center", width: Themes.modules.mobile.SHEET_HANDLE_WIDTH, height: Themes.modules.mobile.SHEET_HANDLE_HEIGHT, borderRadius: Themes.radii.sm, top: Themes.modules.mobile.SHEET_HANDLE_MARGIN_TOP };
   const obj5 = {};
   const merged3 = Object.assign(absoluteFillObject.absoluteFillObject);
   obj5.height = height;
@@ -54,16 +59,16 @@ export const ActionSheetHeaderBar = function ActionSheetHeaderBar(accessibilityL
   let variant;
   accessibilityLabel = accessibilityLabel.accessibilityLabel;
   if (accessibilityLabel === undefined) {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    accessibilityLabel = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.WAI6xu);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    accessibilityLabel = intl.string(getSystemLocale /* getSystemLocale */.t.WAI6xu);
   }
   ({ onPress, variant, style, tabStyle } = accessibilityLabel);
   if (variant === undefined) {
     variant = "default";
   }
-  let obj = require("../../../tokens/native/useToken.tsx") /* map */;
-  const tmp3 = callback3(variant, require("../../../../modules/screen/useWindowDimensions.native.tsx")().height, obj.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.SHEET_HANDLE_MARGIN_BOTTOM));
-  let obj1 = require("../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx") /* SCREEN_READER_ENABLED_GETTER */;
+  let obj = map /* map */;
+  const tmp3 = callback3(variant, useWindowDimensions().height, obj.useToken(Themes.modules.mobile.SHEET_HANDLE_MARGIN_BOTTOM));
+  let obj1 = SCREEN_READER_ENABLED_GETTER /* SCREEN_READER_ENABLED_GETTER */;
   obj = { onPress, onAccessibilityEscape: onPress, "aria-hidden": true, children: null };
   obj = { style: items, children: null };
   items = [tmp3.header, style];

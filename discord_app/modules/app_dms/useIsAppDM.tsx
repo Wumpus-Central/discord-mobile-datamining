@@ -1,3 +1,4 @@
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/app_dms/useIsAppDM.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 
@@ -7,7 +8,7 @@ const result = require("set").fileFinishedImporting("modules/app_dms/useIsAppDM.
 export default function useIsAppDM(arg0) {
   const _require = arg0;
   const items = [mergeGuildAvatar];
-  return _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
+  return _defaultAreStatesEqual.useStateFromStores(items, () => {
     let tmp = null != closure_0 && obj.isDM();
     if (tmp) {
       tmp = 1 === obj.recipients.length;

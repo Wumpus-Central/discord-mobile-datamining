@@ -1,3 +1,7 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getStickerExtensionFromFormatType } from "../StickersUtils.tsx";
 // discord_app/modules/stickers/native/StickerPackInformationPopout.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -31,7 +35,7 @@ export default function StickerPackInformationPopout(stickerPack) {
   const tmp = createCacheKey();
   _require = tmp;
   let items = [];
-  let obj = _require("../StickersUtils.tsx");
+  let obj = _getStickerExtensionFromFormatType;
   if (obj.isStickerPackAnimated(stickerPack)) {
     obj = { key: "animated", description: null };
     const intl = tmp2(1236).intl;
@@ -43,16 +47,16 @@ export default function StickerPackInformationPopout(stickerPack) {
   const obj1 = { style: tmp.headerContainer, children: null };
   const obj2 = { style: tmp.informationHeader, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp2(1236).intl;
-  obj2[3] = intl2.format(_require("../../../intl/index.native.tsx").t.XDm6yN, { stickerPackName: stickerPack.name });
-  const items2 = [callback(_require("../../../design/components/Text/native/Text.tsx").Text, obj2), ];
+  obj2[3] = intl2.format(_getSystemLocale.t.XDm6yN, { stickerPackName: stickerPack.name });
+  const items2 = [callback(_Text.Text, obj2), ];
   const obj4 = { onPress: onClose, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl3 = tmp2(1236).intl;
-  obj4[2] = intl3.string(_require("../../../intl/index.native.tsx").t.cpT0Cq);
+  obj4[2] = intl3.string(_getSystemLocale.t.cpT0Cq);
   const obj5 = { variant: "text-md/bold", color: "text-brand", children: null };
   const intl4 = tmp2(1236).intl;
-  obj5[2] = intl4.string(_require("../../../intl/index.native.tsx").t.cpT0Cq);
-  obj4[3] = callback(_require("../../../design/components/Text/native/Text.tsx").Text, obj5);
-  items2[1] = callback(_require("../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, obj4);
+  obj5[2] = intl4.string(_getSystemLocale.t.cpT0Cq);
+  obj4[3] = callback(_Text.Text, obj5);
+  items2[1] = callback(_PressableBase.PressableOpacity, obj4);
   obj1[1] = items2;
   const items3 = [
     callback2(closure_2, obj1),
@@ -76,7 +80,7 @@ export default function StickerPackInformationPopout(stickerPack) {
 };
 export const doesStickerPackHavePopoutInformation = function doesStickerPackHavePopoutInformation(stickerPack) {
   const items = [];
-  let obj = require("../StickersUtils.tsx") /* getStickerExtensionFromFormatType */;
+  let obj = getStickerExtensionFromFormatType /* getStickerExtensionFromFormatType */;
   if (obj.isStickerPackAnimated(stickerPack)) {
     obj = { key: "animated", description: null };
     const intl = tmp(1236).intl;

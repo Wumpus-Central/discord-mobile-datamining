@@ -1,3 +1,4 @@
+import { isIterable } from "../../../../_runtime/03898_isIterable.js";
 // discord_app/modules/guilds_bar/native/GuildsBarDragPreview.tsx
 import importAllResult from "noop";
 import { GuildsNodeType } from "insertUnsortedGuilds";
@@ -354,7 +355,7 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
       }
       return null;
     }
-  }, require("../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
+  }, isIterable /* isIterable */.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

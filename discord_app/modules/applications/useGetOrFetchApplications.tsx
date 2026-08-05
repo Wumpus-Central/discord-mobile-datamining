@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/applications/useGetOrFetchApplications.tsx
 import noop from "noop";
 import addApplication from "addApplication";
@@ -30,7 +31,7 @@ export default function useGetOrFetchApplications(arg0) {
     }
   }, items);
   const items1 = [addApplication];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => items1.map((arg0) => {
+  return _initialize.useStateFromStoresArray(items1, () => items1.map((arg0) => {
     let application;
     if (null != arg0) {
       application = application.getApplication(arg0);

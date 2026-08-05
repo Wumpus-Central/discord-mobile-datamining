@@ -1,3 +1,5 @@
+import { combined } from "../../../../../utils/HelpdeskUtils.tsx";
+import { useGetOrFetchApplications } from "../../../../applications/useGetOrFetchApplications.tsx";
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsLinkedLobby.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -21,7 +23,7 @@ export default function ChannelDetailsLinkedLobby(channel) {
   let divider = createCacheKey();
   let BPDKoA = require;
   let getArticleURL = dependencyMap;
-  let obj = require("../../../../applications/useGetOrFetchApplications.tsx") /* useGetOrFetchApplications */;
+  let obj = useGetOrFetchApplications /* useGetOrFetchApplications */;
   const linkedLobby = channel.linkedLobby;
   let application_id;
   if (linkedLobby != null) {
@@ -50,7 +52,7 @@ export default function ChannelDetailsLinkedLobby(channel) {
     intl = BPDKoA(1236).intl;
     BPDKoA = BPDKoA(1236).t.BPDKoA;
     const obj3 = { helpdeskArticle: null };
-    getArticleURL = require("../../../../../utils/HelpdeskUtils.tsx").getArticleURL;
+    getArticleURL = combined.getArticleURL;
     obj3[0] = getArticleURL(HelpdeskArticles.LINKED_LOBBIES);
     items1[2] = intl.format(BPDKoA, obj3);
     obj2[0] = items1;
@@ -64,6 +66,6 @@ export default function ChannelDetailsLinkedLobby(channel) {
     obj[1] = items2;
     closure_6(View, obj);
     const tmp5 = closure_5;
-    const tmp8 = require("../../../../../utils/HelpdeskUtils.tsx");
+    const tmp8 = combined;
   }
 };

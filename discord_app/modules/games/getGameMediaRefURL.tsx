@@ -1,3 +1,5 @@
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { isImageProxyURL } from "../image_proxy/ImageProxyUtils.tsx";
 // discord_app/modules/games/getGameMediaRefURL.tsx
 const result = require("isImageProxyURL").fileFinishedImporting("modules/games/getGameMediaRefURL.tsx");
 
@@ -13,16 +15,16 @@ export default function getGameMediaRefURL(arg0, type, size) {
         obj[0] = arg0;
         obj[1] = type.value;
         const merged = Object.assign(size);
-        let gameAssetURL = require("../../utils/AvatarUtils.tsx").getGameAssetURL(obj);
+        let gameAssetURL = getAvatarURL.getGameAssetURL(obj);
         if (gameAssetURL == null) {
           gameAssetURL = null;
         }
         tmp7 = gameAssetURL;
-        const obj4 = require("../../utils/AvatarUtils.tsx");
+        const obj4 = getAvatarURL;
       }
       return tmp7;
     } else if ("url" === type) {
-      obj = require("../image_proxy/ImageProxyUtils.tsx") /* isImageProxyURL */;
+      obj = isImageProxyURL /* isImageProxyURL */;
       size = undefined;
       if (size != null) {
         size = size.size;

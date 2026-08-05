@@ -1,3 +1,5 @@
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { getDeviceMetadata } from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 // discord_app/modules/js_watchdog/native/JSWatchdogManager.android.tsx
 import enforcing from "enforcing";
 import ME from "ME";
@@ -284,9 +286,9 @@ prototype["stopWatchdog"] = function stopWatchdog() {
   this._timeoutId = null;
 };
 prototype["reportStall"] = function reportStall(c1, c0, is_previous, _analyticsReportsRemaining) {
-  let obj = require("../../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = {};
-  const merged = Object.assign(require("../../tti_analytics/native/TTIAnalyticsUtils.tsx") /* getDeviceMetadata */.getDeviceMetadata());
+  const merged = Object.assign(getDeviceMetadata /* getDeviceMetadata */.getDeviceMetadata());
   obj.version = 1;
   obj.stall_time = c1.stallTime;
   obj.is_previous = is_previous;

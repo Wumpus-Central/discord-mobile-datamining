@@ -1,36 +1,41 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { openIncodeAgeVerificationModal } from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
+import { shouldShowAgeGateForVoiceChannel } from "../../../age_gate/AgeGateUtils.tsx";
+import { resolveNsfwTogglesWithDefaults } from "../../content_and_social/AgeRestrictedContentSettingsUtils.tsx";
+import { useNSFWAllowed } from "../../content_and_social/useNSFWAllowed.tsx";
 // discord_app/modules/user_settings/defs/native/AndroidViewNsfwDmCommandsSetting.tsx
 import createToggle from "createToggle";
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.VGWIAo);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.VGWIAo);
   },
   useDescription() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["J4zza/"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["J4zza/"]);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useViewNsfwDmCommandsSettingValue() {
-    return require("../../content_and_social/AgeRestrictedContentSettingsUtils.tsx") /* resolveNsfwTogglesWithDefaults */.useViewNsfwCommandsOrDefault();
+    return resolveNsfwTogglesWithDefaults /* resolveNsfwTogglesWithDefaults */.useViewNsfwCommandsOrDefault();
   },
   onValueChange: function handleValueChange(arg0) {
-    let obj = require("../../../age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
+    let obj = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
         obj = { entryPoint: null };
         obj[0] = tmp(7722).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
-        const result = require("../../../age_assurance/AgeVerificationActionCreators.native.tsx").showAgeVerificationGetStartedModal(obj);
-        const obj2 = require("../../../age_assurance/AgeVerificationActionCreators.native.tsx");
+        const result = openIncodeAgeVerificationModal.showAgeVerificationGetStartedModal(obj);
+        const obj2 = openIncodeAgeVerificationModal;
       }
     }
     const ViewNsfwCommands = tmp(3958).ViewNsfwCommands;
     ViewNsfwCommands.updateSetting(arg0);
   },
   usePredicate() {
-    let shouldAgeVerifyForSettingsToggles = require("../../../age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */.useShouldAgeVerifyForSettingsToggles();
-    const obj = require("../../../age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
-    let flag = require("../../content_and_social/useNSFWAllowed.tsx") /* useNSFWAllowed */.useNSFWAllowed();
+    let shouldAgeVerifyForSettingsToggles = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */.useShouldAgeVerifyForSettingsToggles();
+    const obj = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
+    let flag = useNSFWAllowed /* useNSFWAllowed */.useNSFWAllowed();
     if (flag == null) {
       flag = true;
     }
@@ -50,34 +55,34 @@ const toggle = createToggle.createToggle({
 });
 let obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.VGWIAo);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.VGWIAo);
   },
   useDescription() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["J4zza/"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["J4zza/"]);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useViewNsfwDmCommandsSettingValue() {
-    return require("../../content_and_social/AgeRestrictedContentSettingsUtils.tsx") /* resolveNsfwTogglesWithDefaults */.useViewNsfwCommandsOrDefault();
+    return resolveNsfwTogglesWithDefaults /* resolveNsfwTogglesWithDefaults */.useViewNsfwCommandsOrDefault();
   },
   onValueChange: function handleValueChange(arg0) {
-    let obj = require("../../../age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
+    let obj = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
         obj = { entryPoint: null };
         obj[0] = tmp(7722).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
-        const result = require("../../../age_assurance/AgeVerificationActionCreators.native.tsx").showAgeVerificationGetStartedModal(obj);
-        const obj2 = require("../../../age_assurance/AgeVerificationActionCreators.native.tsx");
+        const result = openIncodeAgeVerificationModal.showAgeVerificationGetStartedModal(obj);
+        const obj2 = openIncodeAgeVerificationModal;
       }
     }
     const ViewNsfwCommands = tmp(3958).ViewNsfwCommands;
     ViewNsfwCommands.updateSetting(arg0);
   },
   usePredicate() {
-    let shouldAgeVerifyForSettingsToggles = require("../../../age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */.useShouldAgeVerifyForSettingsToggles();
-    const obj = require("../../../age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
-    let flag = require("../../content_and_social/useNSFWAllowed.tsx") /* useNSFWAllowed */.useNSFWAllowed();
+    let shouldAgeVerifyForSettingsToggles = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */.useShouldAgeVerifyForSettingsToggles();
+    const obj = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
+    let flag = useNSFWAllowed /* useNSFWAllowed */.useNSFWAllowed();
     if (flag == null) {
       flag = true;
     }

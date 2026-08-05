@@ -1,3 +1,4 @@
+import { ManaContext } from "../../../../../../discord_common/js/packages/design/native.tsx";
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelRiveMicButton.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -24,6 +25,6 @@ export const VoicePanelRiveMicButton = function VoicePanelRiveMicButton(arg0) {
     MicrophoneIcon = tmp3(10766).MicrophoneIcon;
   }
   obj[2] = <MicrophoneIcon color={color} />;
-  obj[1] = jsx(require("../../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */.MicrophoneRive, { fill: color, on: !muted });
+  obj[1] = jsx(ManaContext /* ManaContext */.MicrophoneRive, { fill: color, on: !muted });
   return <View fill={color} on={!muted} />;
 };

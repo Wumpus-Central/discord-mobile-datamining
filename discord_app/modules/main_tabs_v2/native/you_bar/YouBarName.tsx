@@ -1,3 +1,12 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { ChevronSmallDownIcon } from "../../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { ActivityEmoji } from "../../../activity_status/native/ActivityEmoji.tsx";
+import { _activityFromSetting } from "../../../custom_status/utils/userSettingToActivity.tsx";
+import { AVERAGE_FONT_WIDTH_RATIO } from "../../../display_name_styles/native/UsernameWithEffects.tsx";
+import { useGameMentionsAsPlainText } from "../../../game_mentions/hooks/useGameMentionsAsPlainText.tsx";
+import { memoResult1 } from "../../../guild_tag/native/GuildTag.tsx";
+import { apexExperiment } from "YouBarGuildTagExperiment.tsx";
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarName.tsx
 import { View } from "get ActivityIndicator";
 import filterPlayingActivities from "filterPlayingActivities";
@@ -11,21 +20,21 @@ const require = arg1;
 function Username(userName) {
   const userId = userName.userId;
   const tmp = callback2();
-  let obj = require("YouBarGuildTagExperiment.tsx") /* apexExperiment */;
+  let obj = apexExperiment /* apexExperiment */;
   obj = { style: items, children: null };
   items = [tmp.usernameRow];
   const isYouBarGuildTagEnabled = obj.useIsYouBarGuildTagEnabled("YouBarName");
   const items1 = [{ flexShrink: 1 }];
-  const items2 = [callback(require("../../../display_name_styles/native/UsernameWithEffects.tsx"), { userId, userName: userName.username, defaultColor: "mobile-text-heading-primary", variant: "heading-md/semibold", lineClamp: 1, ellipsizeMode: "tail", maxFontSizeMultiplier: 1.75, style: items1 }), , ];
+  const items2 = [callback(AVERAGE_FONT_WIDTH_RATIO, { userId, userName: userName.username, defaultColor: "mobile-text-heading-primary", variant: "heading-md/semibold", lineClamp: 1, ellipsizeMode: "tail", maxFontSizeMultiplier: 1.75, style: items1 }), , ];
   let tmp7Result = null;
   if (isYouBarGuildTagEnabled) {
     obj = { userId: null, disabledTooltip: true, containerStyles: null };
     obj[0] = userId;
     obj[2] = tmp.guildTag;
-    tmp7Result = tmp7(require("../../../guild_tag/native/GuildTag.tsx"), obj);
+    tmp7Result = tmp7(memoResult1, obj);
   }
   items2[1] = tmp7Result;
-  items2[2] = callback(require("../../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx") /* ChevronSmallDownIcon */.ChevronSmallDownIcon, { size: "xs", color: "mobile-text-heading-primary" });
+  items2[2] = callback(ChevronSmallDownIcon /* ChevronSmallDownIcon */.ChevronSmallDownIcon, { size: "xs", color: "mobile-text-heading-primary" });
   obj[1] = items2;
   return closure_6(View, obj);
 }
@@ -43,12 +52,12 @@ const memoResult = require("noop").memo(function YouName(arg0) {
   let username;
   ({ userId, username } = arg0);
   const tmp = callback2();
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [filterPlayingActivities];
   const stateFromStores = obj.useStateFromStores(items, () => status.getStatus());
-  let obj1 = require("../../../custom_status/utils/userSettingToActivity.tsx") /* _activityFromSetting */;
+  let obj1 = _activityFromSetting /* _activityFromSetting */;
   const customStatusActivity = obj1.useCustomStatusActivity();
-  let obj2 = require("../../../game_mentions/hooks/useGameMentionsAsPlainText.tsx") /* useGameMentionsAsPlainText */;
+  let obj2 = useGameMentionsAsPlainText /* useGameMentionsAsPlainText */;
   let state;
   if (customStatusActivity != null) {
     state = customStatusActivity.state;
@@ -66,7 +75,7 @@ const memoResult = require("noop").memo(function YouName(arg0) {
     obj1 = { size: 16, style: null, emoji: null };
     obj1[1] = tmp.statusEmoji;
     obj1[2] = customStatusActivity.emoji;
-    tmp10Result = tmp10(require("../../../activity_status/native/ActivityEmoji.tsx"), obj1);
+    tmp10Result = tmp10(ActivityEmoji, obj1);
   }
   const items2 = [tmp10Result, ];
   obj2 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, ellipsizeMode: "tail", maxFontSizeMultiplier: 1.75, style: tmp.statusText, children: null };
@@ -75,7 +84,7 @@ const memoResult = require("noop").memo(function YouName(arg0) {
     const tmp2Result = tmp2(4124);
   }
   obj2[6] = gameMentionsAsPlainText;
-  items2[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+  items2[1] = callback(Text /* Text */.Text, obj2);
   obj[1] = items2;
   items1[1] = closure_6(View, obj);
   obj[1] = items1;

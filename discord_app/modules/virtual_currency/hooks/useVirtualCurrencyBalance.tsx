@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/virtual_currency/hooks/useVirtualCurrencyBalance.tsx
 import redeemError from "redeemError";
 
@@ -6,12 +7,12 @@ const result = require("set").fileFinishedImporting("modules/virtual_currency/ho
 
 export const useVirtualCurrencyBalance = function useVirtualCurrencyBalance() {
   const items = [redeemError];
-  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => balance.balance);
+  return initialize /* initialize */.useStateFromStores(items, () => balance.balance);
 };
 export const useHasEnoughVirtualCurrency = function useHasEnoughVirtualCurrency(arg0) {
   const _require = arg0;
   const items = [redeemError];
-  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       let num = outer1_2.balance;

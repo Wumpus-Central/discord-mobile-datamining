@@ -1,3 +1,8 @@
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { fromBlob } from "../lib/uploader_inline/InlineUploader.tsx";
+import { parseRawEmojiObject } from "../modules/emojis/UnicodeEmojis.tsx";
+import { updateUserGuildSettings } from "../modules/user_settings/UserSettingsProtoActionCreators.tsx";
 // discord_app/actions/EmojiActionCreators.tsx
 import closure_3 from "MAX_FAVORITES";
 import getEmojiToGroupId from "getEmojiToGroupId";
@@ -131,7 +136,7 @@ let result = require("_handleConnectionOpen").fileFinishedImporting("actions/Emo
 
 export const setDiversityColor = function setDiversityColor(arg0) {
   const _require = arg0;
-  const PreloadedUserSettingsActionCreators = _require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
+  const PreloadedUserSettingsActionCreators = _updateUserGuildSettings.PreloadedUserSettingsActionCreators;
   PreloadedUserSettingsActionCreators.updateAsync("textAndImages", (diversitySurrogate) => {
     const StringValue = callback(outer1_2[7]).StringValue;
     diversitySurrogate.diversitySurrogate = StringValue.create();
@@ -140,10 +145,10 @@ export const setDiversityColor = function setDiversityColor(arg0) {
 };
 export const fetchEmoji = function fetchEmoji(guildId) {
   const _require = guildId;
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "EMOJI_FETCH", guildId };
   obj.dispatch(obj);
-  const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+  const HTTP = _sendRequest.HTTP;
   obj = { url: Endpoints.GUILD_EMOJIS(guildId), oldFormErrors: true, rejectWithError: true };
   const value = HTTP.get(obj);
   value.then((body) => {
@@ -164,17 +169,17 @@ export const uploadEmoji = function uploadEmoji(guildId) {
   guildId = guildId.guildId;
   const analyticsLocation = guildId.analyticsLocation;
   ({ image, name, roles, originalMd5 } = guildId);
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj.dispatch({ type: "EMOJI_UPLOAD_START", guildId });
   const HTTP = guildId(530).HTTP;
   obj = { url: Endpoints.GUILD_EMOJIS(guildId), body: { image, name, roles }, headers: null, context: null, oldFormErrors: true, rejectWithError: null };
-  obj[2] = require("../lib/uploader_inline/InlineUploader.tsx").buildHeadersForMd5(originalMd5);
+  obj[2] = fromBlob.buildHeadersForMd5(originalMd5);
   let page;
   if (analyticsLocation != null) {
     page = analyticsLocation.page;
   }
   obj[3] = { client_event_source: page };
-  const obj3 = require("../lib/uploader_inline/InlineUploader.tsx");
+  const obj3 = fromBlob;
   const tmp3 = guildId;
   obj[5] = guildId(530).rejectWithMigratedError();
   const tmp3Result = guildId(530);
@@ -191,10 +196,10 @@ export const uploadEmoji = function uploadEmoji(guildId) {
   });
 };
 export const deleteEmoji = function deleteEmoji(c0, id) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "EMOJI_DELETE", guildId: c0, emojiId: id };
   obj.dispatch(obj);
-  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   obj = { url: Endpoints.GUILD_EMOJI(c0, id), body: null, oldFormErrors: true, rejectWithError: null };
   let tmp4;
   if (null != arg2) {
@@ -203,9 +208,9 @@ export const deleteEmoji = function deleteEmoji(c0, id) {
     tmp4 = obj1;
   }
   obj[1] = tmp4;
-  obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+  obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
   const tmp3 = require;
-  const tmp3Result = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
+  const tmp3Result = sendRequest /* sendRequest */;
   return HTTP.del(obj).then(() => {
     const AccessibilityAnnouncer = callback(4131).AccessibilityAnnouncer;
     const intl = callback(1236).intl;
@@ -227,12 +232,12 @@ export const favoriteEmoji = function favoriteEmoji(customEmojiFromJoinedGuild) 
   if (null != customEmojiFromJoinedGuild) {
     let name = customEmojiFromJoinedGuild.id;
     if (name == null) {
-      const result = require("../modules/emojis/UnicodeEmojis.tsx").convertSurrogateToBase(customEmojiFromJoinedGuild.surrogates);
+      const result = parseRawEmojiObject.convertSurrogateToBase(customEmojiFromJoinedGuild.surrogates);
       name = undefined;
       if (result != null) {
         name = result.name;
       }
-      let obj = require("../modules/emojis/UnicodeEmojis.tsx");
+      let obj = parseRawEmojiObject;
     }
     if (name == null) {
       name = customEmojiFromJoinedGuild.name;
@@ -241,7 +246,7 @@ export const favoriteEmoji = function favoriteEmoji(customEmojiFromJoinedGuild) 
   }
   const require = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = require("../modules/user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", (emojis) => {
       emojis = emojis.emojis;
       let tmp = emojis;
@@ -294,12 +299,12 @@ export const unfavoriteEmoji = function unfavoriteEmoji(customEmojiFromJoinedGui
   if (null != customEmojiFromJoinedGuild) {
     let name = customEmojiFromJoinedGuild.id;
     if (name == null) {
-      const result = require("../modules/emojis/UnicodeEmojis.tsx").convertSurrogateToBase(customEmojiFromJoinedGuild.surrogates);
+      const result = parseRawEmojiObject.convertSurrogateToBase(customEmojiFromJoinedGuild.surrogates);
       name = undefined;
       if (result != null) {
         name = result.name;
       }
-      let obj = require("../modules/emojis/UnicodeEmojis.tsx");
+      let obj = parseRawEmojiObject;
     }
     if (name == null) {
       name = customEmojiFromJoinedGuild.name;
@@ -308,7 +313,7 @@ export const unfavoriteEmoji = function unfavoriteEmoji(customEmojiFromJoinedGui
   }
   const require = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = require("../modules/user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", (emojis) => {
       emojis = emojis.emojis;
       let tmp = emojis;

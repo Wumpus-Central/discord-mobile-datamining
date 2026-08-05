@@ -1,9 +1,12 @@
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/design/tokens/native/useToken.tsx
 const require = arg1;
 const map = new Map();
 const keys = Object.keys(require("Themes").colors);
 let closure_4 = Object.fromEntries(keys.map((arg0) => {
-  const items = [require("../../../../_runtime/00012_apply.js").kebabCase(arg0), arg0];
+  const items = [apply.kebabCase(arg0), arg0];
   return items;
 }));
 let result = require("apply").fileFinishedImporting("design/tokens/native/useToken.tsx");
@@ -11,7 +14,7 @@ let result = require("apply").fileFinishedImporting("design/tokens/native/useTok
 export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
   let obj = require;
   let result = dependencyMap;
-  const themeContext = require("../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */.useThemeContext();
+  const themeContext = ManaContext /* ManaContext */.useThemeContext();
   let tmp3 = null;
   if (theme == null) {
     theme = themeContext.theme;
@@ -22,7 +25,7 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
     if (typeof BACKGROUND_BASE_LOW === "object") {
       if (tmp3 !== BACKGROUND_BASE_LOW) {
         if ("resolve" in BACKGROUND_BASE_LOW) {
-          const internal = require("../../../../discord_common/js/packages/tokens/native.tsx").internal;
+          const internal = Themes.internal;
           if (!internal.isSemanticColor(BACKGROUND_BASE_LOW)) {
             let enabledExperiments = themeContext.enabledExperiments;
             if (enabledExperiments == tmp3) {
@@ -40,7 +43,7 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
         }
       }
     }
-    const internal2 = require("../../../../discord_common/js/packages/tokens/native.tsx").internal;
+    const internal2 = Themes.internal;
     let semanticColorName = BACKGROUND_BASE_LOW;
     if (internal2.isSemanticColor(BACKGROUND_BASE_LOW)) {
       const internal3 = tmp6(712).internal;

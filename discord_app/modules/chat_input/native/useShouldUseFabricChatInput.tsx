@@ -1,20 +1,22 @@
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { apexExperiment } from "ChatInputFabricExperiment.tsx";
 // discord_app/modules/chat_input/native/useShouldUseFabricChatInput.tsx
 const chat_input = "chat_input";
 const result = require("apexExperiment").fileFinishedImporting("modules/chat_input/native/useShouldUseFabricChatInput.tsx");
 
 export const useShouldUseFabricChatInput = function useShouldUseFabricChatInput() {
-  require("ChatInputFabricExperiment.tsx");
+  apexExperiment;
   if (null != closure_3) {
     let isAndroidResult = closure_3;
   } else {
-    isAndroidResult = require("../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
+    isAndroidResult = set /* set */.isAndroid();
     if (!isAndroidResult) {
       const tmp4Result = tmp4(4149);
       isAndroidResult = tmp4(4149).isIosFabric() && tmp3;
       const tmp6 = tmp4(4149).isIosFabric() && tmp3;
     }
     closure_3 = isAndroidResult;
-    const obj = require("../../../utils/PlatformUtils.tsx") /* set */;
+    const obj = set /* set */;
     tmp4 = require;
   }
   return isAndroidResult;
@@ -23,10 +25,10 @@ export const shouldUseFabricChatInput = function shouldUseFabricChatInput() {
   if (null != closure_3) {
     let isAndroidResult = closure_3;
   } else {
-    isAndroidResult = require("../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
+    isAndroidResult = set /* set */.isAndroid();
     let enabled = !isAndroidResult;
     if (!isAndroidResult) {
-      let obj = require("ChatInputFabricExperiment.tsx");
+      let obj = apexExperiment;
       obj = { location: null };
       obj[0] = chat_input;
       enabled = obj.getConfig(obj).enabled;
@@ -43,7 +45,7 @@ export const shouldUseFabricChatInput = function shouldUseFabricChatInput() {
       }
       closure_3 = isAndroidResult;
     }
-    const obj5 = require("../../../utils/PlatformUtils.tsx") /* set */;
+    const obj5 = set /* set */;
   }
   return isAndroidResult;
 };

@@ -1,3 +1,5 @@
+import { closeActionSheet } from "../../feedback/native/FeedbackActionSheet.tsx";
+import { getActivityReportOptions } from "../getActivityReportOptions.tsx";
 // discord_app/modules/activities/native/ActivityFeedbackActionSheet.tsx
 import "noop";
 import { ActivityFeedbackReasons } from "items3";
@@ -22,7 +24,7 @@ export default function ActivityFeedbackActionSheet(activityApplication) {
     prop = embeddedActivityConfig.displays_advertisements;
   }
   let obj = { headerLabel: null, showHeaderCloseButton: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null };
-  const tmp2 = require("../getActivityReportOptions.tsx")(true, true === prop);
+  const tmp2 = getActivityReportOptions(true, true === prop);
   const intl = activityApplication(1236).intl;
   obj = { applicationName: activityApplication.name };
   obj[0] = intl.formatToPlainString(activityApplication(1236).t.QXYwoD, obj);
@@ -76,5 +78,5 @@ export default function ActivityFeedbackActionSheet(activityApplication) {
       const tmp16 = outer1_1(outer1_2[11]);
     }
   };
-  return jsx(require("../../feedback/native/FeedbackActionSheet.tsx"), { applicationName: activityApplication.name });
+  return jsx(closeActionSheet, { applicationName: activityApplication.name });
 };

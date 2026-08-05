@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/VoiceOrStageSummaryRow.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -10,13 +11,13 @@ const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles((height) => {
   let obj = { container: { flexDirection: "row", alignItems: "center", marginLeft: -2 }, overflowCircle: null, wrapper: null, badge: null, audienceBadge: null };
-  obj = { backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_STRONG, borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", height, width: height };
+  obj = { backgroundColor: Themes.colors.BACKGROUND_MOD_STRONG, borderRadius: Themes.radii.round, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", height, width: height };
   obj[1] = obj;
-  obj = { borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, borderColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, borderWidth: 2 };
+  obj = { borderRadius: Themes.radii.round, borderColor: Themes.colors.BACKGROUND_BASE_LOW, backgroundColor: Themes.colors.BACKGROUND_BASE_LOW, borderWidth: 2 };
   obj[2] = obj;
-  obj[3] = { borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, paddingHorizontal: 8, display: "flex", flexDirection: "row", alignItems: "center", height };
-  const obj1 = { borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, paddingHorizontal: 8, display: "flex", flexDirection: "row", alignItems: "center", height };
-  obj[4] = { backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWER };
+  obj[3] = { borderRadius: Themes.radii.round, paddingHorizontal: 8, display: "flex", flexDirection: "row", alignItems: "center", height };
+  const obj1 = { borderRadius: Themes.radii.round, paddingHorizontal: 8, display: "flex", flexDirection: "row", alignItems: "center", height };
+  obj[4] = { backgroundColor: Themes.colors.BACKGROUND_BASE_LOWER };
   return obj;
 });
 const memoResult = require("noop").memo(function VoiceOrStageSummaryRow(layout) {

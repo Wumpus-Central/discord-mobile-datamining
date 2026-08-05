@@ -1,3 +1,5 @@
+import { apply } from "../../../../../_runtime/00012_apply.js";
+import { _toPropertyKey } from "../../../main_tabs_v2/native/shared_components/user_list/useUserListData.tsx";
 // discord_app/modules/search/native/stores/SearchPeopleTabStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleChannelSelect from "handleChannelSelect";
@@ -42,8 +44,8 @@ prototype["search"] = function search(str) {
     if (0 === trimmed1.length) {
       let items = [];
     } else {
-      const obj2 = require("../../../../../_runtime/00012_apply.js");
-      const values = require("../../../../../_runtime/00012_apply.js").chain(mutablePrivateChannels.getMutablePrivateChannels()).values();
+      const obj2 = apply;
+      const values = apply.chain(mutablePrivateChannels.getMutablePrivateChannels()).values();
       const found = values.filter(trimmed1(11652).filterGroupDMs);
       const mapped = found.map((id) => {
         const items = [id, trimmed1(outer1_2[3]).matchGroupDM(id, trimmed1), outer1_4.getScoreWithoutFetchingLatest(id.id)];
@@ -61,7 +63,7 @@ prototype["search"] = function search(str) {
         }
         return diff;
       });
-      const chainResult = require("../../../../../_runtime/00012_apply.js").chain(mutablePrivateChannels.getMutablePrivateChannels());
+      const chainResult = apply.chain(mutablePrivateChannels.getMutablePrivateChannels());
       items = sorted.map((arg0) => {
         let tmp;
         [tmp] = arg0;
@@ -81,7 +83,7 @@ prototype["processResults"] = function processResults() {
   const self = this;
   const userSearch = this.userSearch;
   this.userIndexes = userSearch.filter(this.searchQueryString);
-  let obj = require("../../../main_tabs_v2/native/shared_components/user_list/useUserListData.tsx") /* _toPropertyKey */;
+  let obj = _toPropertyKey /* _toPropertyKey */;
   obj = { data: this.userIndexes, withGuildMembers: true, withAffinitySuggestions: true, withFriends: true, withFriendSuggestions: false, withFriendRequests: false, withFriendRequestsIncoming: false, withFriendRequestsOutgoing: false, excludeCurrentUser: true };
   const result = obj.parseUserSearchResults(obj);
   let arr3 = result;

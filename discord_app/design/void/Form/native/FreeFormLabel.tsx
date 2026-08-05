@@ -1,3 +1,4 @@
+import { Text } from "../../../components/Text/native/Text.tsx";
 // discord_app/design/void/Form/native/FreeFormLabel.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -10,5 +11,5 @@ export default function FreeFormLabel(arg0) {
   let nativeID;
   let style;
   ({ children, style, nativeID } = arg0);
-  return jsx(require("../../../components/Text/native/Text.tsx") /* Text */.Text, { style, variant: "text-sm/semibold", color: "text-muted", nativeID, children });
+  return jsx(Text /* Text */.Text, { style, variant: "text-sm/semibold", color: "text-muted", nativeID, children });
 };

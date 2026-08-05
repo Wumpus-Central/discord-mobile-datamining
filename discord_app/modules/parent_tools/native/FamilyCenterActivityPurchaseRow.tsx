@@ -1,3 +1,5 @@
+import { useCollectiblesData } from "../../collectibles/hooks/useCollectiblesData.tsx";
+import { getCollectibleTypeName } from "../FamilyCenterActivityPurchaseRowUtils.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterActivityPurchaseRow.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -26,8 +28,8 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
   ({ skuId, subscriptionPlanId } = arg0);
   ({ total, currency } = arg0);
   const tmp = createCacheKey();
-  let product = require("../../collectibles/hooks/useCollectiblesData.tsx")(skuId).product;
-  let obj = require("../FamilyCenterActivityPurchaseRowUtils.tsx") /* getCollectibleTypeName */;
+  let product = useCollectiblesData(skuId).product;
+  let obj = getCollectibleTypeName /* getCollectibleTypeName */;
   let tmp6 = product;
   if (product == null) {
     tmp6 = null;

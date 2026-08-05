@@ -1,3 +1,8 @@
+import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { firstAvatarDecoration } from "../../hooks/useShopProductItems.tsx";
+import { getNameplateData } from "../utils.tsx";
 // discord_app/modules/collectibles/nameplates/native/NameplateProductPreview.tsx
 import Button from "Button";
 import { View } from "AVERAGE_FONT_WIDTH_RATIO";
@@ -65,12 +70,12 @@ function PlaceholderUser(end) {
   let obj = { icon: null, label: null, start: null, end: null };
   obj = { source: obj, size: null, "aria-hidden": true };
   obj = { uri: user.avatarSrc };
-  obj[1] = require("../../../../design/void/native.tsx") /* Button */.AvatarSizes.NORMAL;
-  obj[0] = callback(require("../../../../design/void/native.tsx") /* Button */.Avatar, obj);
+  obj[1] = Button /* Button */.AvatarSizes.NORMAL;
+  obj[0] = callback(Button /* Button */.Avatar, obj);
   obj[1] = user.name;
   obj[2] = start;
   obj[3] = flag;
-  return callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
+  return callback(TableRowInner /* TableRowInner */.TableRow, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: { position: "relative", flex: 1, justifyContent: "center", overflow: "hidden" }, memberListContainer: null, memberListTitle: null, memberListGradient: null };
@@ -87,12 +92,12 @@ export default function NameplateProductPreview(product) {
   let firstAvatarDecoration;
   let firstNameplate;
   const tmp = createCacheKey();
-  let obj = require("../../hooks/useShopProductItems.tsx") /* firstAvatarDecoration */;
+  let obj = firstAvatarDecoration /* firstAvatarDecoration */;
   const shopProductItems = obj.useShopProductItems(product.product);
   ({ firstNameplate, firstAvatarDecoration } = shopProductItems);
-  let obj1 = require("../utils.tsx") /* getNameplateData */;
+  let obj1 = getNameplateData /* getNameplateData */;
   const nameplateData = obj1.getNameplateData(firstNameplate);
-  let obj2 = require("../utils.tsx") /* getNameplateData */;
+  let obj2 = getNameplateData /* getNameplateData */;
   const nameplateSampleUsers = obj2.getNameplateSampleUsers();
   let tmp7 = null;
   if (null != nameplateData) {
@@ -142,19 +147,19 @@ export default function NameplateProductPreview(product) {
     const _HermesInternal = HermesInternal;
     items4[1] = "" + tmp.memberListGradient.color + "00";
     obj9[3] = items4;
-    items3[1] = callback(require("../../../../../_runtime/04706_LinearGradient.js"), obj9);
+    items3[1] = callback(LinearGradient, obj9);
     const obj10 = { style: null, start: null, end: null, colors: null };
     obj10[0] = tmp.memberListGradient;
     obj10[1] = { x: 0, y: 0.6 };
     obj10[2] = { x: 0, y: 1 };
     const _HermesInternal2 = HermesInternal;
-    const tmp14 = require("../../../../../_runtime/04706_LinearGradient.js");
+    const tmp14 = LinearGradient;
     const items5 = ["" + tmp.memberListGradient.color + "00", tmp.memberListGradient.color];
     obj10[3] = items5;
-    items3[2] = callback(require("../../../../../_runtime/04706_LinearGradient.js"), obj10);
+    items3[2] = callback(LinearGradient, obj10);
     obj[5] = items3;
     tmp7 = callback2(View, obj);
-    const tmp16 = require("../../../../../_runtime/04706_LinearGradient.js");
+    const tmp16 = LinearGradient;
   }
   return tmp7;
 };

@@ -1,3 +1,6 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { serialize } from "../tti_analytics/TTITracker.tsx";
 // discord_app/modules/cache/CacheStore.tsx
 import getToken from "getToken";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -16,11 +19,11 @@ const require = arg1;
 function handleClearCaches(type) {
   tmp3.log("Clearing cache store");
   let closure_16 = Date.now();
-  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   Storage.remove(closure_10);
-  const Storage2 = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage2 = Storage /* Storage */.Storage;
   Storage2.remove(closure_11);
-  const Storage3 = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage3 = Storage /* Storage */.Storage;
   Storage3.remove(closure_12);
   let c15 = "no-cache";
   if (tmp5) {
@@ -1042,7 +1045,7 @@ function resumeFluxAndSocket(arg0) {
   let closure_0 = arg0;
   const importDefault = socket.getSocket();
   const dependencyMap = false;
-  const Emitter = require("../../../discord_common/js/packages/flux/index.tsx").Emitter;
+  const Emitter = initialize.Emitter;
   Emitter.batched(() => {
     try {
       f118452();
@@ -1078,7 +1081,7 @@ function resumeFluxAndSocket(arg0) {
     }
   });
   if (!dependencyMap) {
-    const loadLazyCache = require("../tti_analytics/TTITracker.tsx").loadLazyCache;
+    const loadLazyCache = serialize.loadLazyCache;
     loadLazyCache.recordEnd();
   }
 }
@@ -1385,11 +1388,11 @@ const cacheStoreClass = new CacheStoreClass(require("dispatcher"), {
     tmp3.verbose("Writing cache now");
     let closure_16 = Date.now();
     let c17 = true;
-    const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     Storage.remove(closure_10);
-    const Storage2 = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage2 = Storage /* Storage */.Storage;
     Storage2.remove(closure_12);
-    const Storage3 = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage3 = Storage /* Storage */.Storage;
     Storage3.remove(closure_11);
   }
 });
@@ -1420,11 +1423,11 @@ let obj = {
     tmp3.verbose("Writing cache now");
     let closure_16 = Date.now();
     let c17 = true;
-    const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     Storage.remove(closure_10);
-    const Storage2 = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage2 = Storage /* Storage */.Storage;
     Storage2.remove(closure_12);
-    const Storage3 = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage3 = Storage /* Storage */.Storage;
     Storage3.remove(closure_11);
   }
 };

@@ -1,3 +1,8 @@
+import { registerAsset } from "../../../_runtime/10879_registerAsset.js";
+import { set } from "../../actions/AlertActionCreators.tsx";
+import { Button } from "../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/activities/confirmExternalAppLaunchAlert.native.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -13,20 +18,20 @@ const require = arg1;
 function ConfirmActivityGateContent(activityName) {
   const tmp = callback3();
   let obj = { style: tmp.alertContainer, children: null };
-  obj = { source: require("../../../_runtime/10879_registerAsset.js"), style: tmp.announcementBirb };
+  obj = { source: registerAsset, style: tmp.announcementBirb };
   const items = [callback(closure_3, obj), , , ];
   obj = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["06YebE"]);
-  items[1] = callback(require("../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["06YebE"]);
+  items[1] = callback(Text /* Text */.Text, obj);
   const obj1 = { style: tmp.alertTitleText, variant: "heading-lg/bold", children: null };
-  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[2] = intl2.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t["Z/eMDT"], { activityName: activityName.application.name });
-  items[2] = callback(require("../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[2] = intl2.format(getSystemLocale /* getSystemLocale */.t["Z/eMDT"], { activityName: activityName.application.name });
+  items[2] = callback(Text /* Text */.Text, obj1);
   const obj3 = { style: tmp.alertSubtitleText, variant: "text-sm/normal", children: null };
-  const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj3[2] = intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.z81WwD);
-  items[3] = callback(require("../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj3[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.z81WwD);
+  items[3] = callback(Text /* Text */.Text, obj3);
   obj[1] = items;
   return callback2(closure_4, obj);
 }
@@ -40,9 +45,9 @@ function LinkButton() {
     },
     text: null
   };
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.E0gf5l);
-  obj[1] = callback(require("../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.E0gf5l);
+  obj[1] = callback(Button /* Button */.Button, obj);
   return callback(closure_4, obj);
 }
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
@@ -55,13 +60,13 @@ export const confirmExternalAppLaunchAlert = function confirmExternalAppLaunchAl
   let onCancel;
   let onConfirm;
   ({ application, onConfirm, onCancel } = arg0);
-  let obj = require("../../actions/AlertActionCreators.tsx");
+  let obj = set;
   obj = { title: "", children: callback(ConfirmActivityGateContent, { application }), onConfirm, confirmText: null, onCancel: null, cancelText: null, footer: null };
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["3PatSz"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["3PatSz"]);
   obj[4] = onCancel;
-  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[5] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["ETE/oC"]);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[5] = intl2.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
   obj[6] = callback(LinkButton, {});
   return Promise.resolve(obj.show(obj));
 };

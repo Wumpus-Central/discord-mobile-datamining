@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/application_commands/ApplicationCommandIndexActionCreators.tsx
 import expandEventProperties from "expandEventProperties";
 import ME from "ME";
@@ -200,7 +201,7 @@ export const fetchApplicationCommandIndex = function fetchApplicationCommandInde
   return applyArgumentsResult;
 };
 export const requestApplicationCommandIndex = function requestApplicationCommandIndex(target) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "APPLICATION_COMMAND_INDEX_FETCH_REQUEST", target };
   obj.dispatch(obj);
 };

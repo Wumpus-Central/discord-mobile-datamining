@@ -1,3 +1,6 @@
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { set } from "DismissibleContentFatigueConfig.tsx";
+import { isSingleUseDismissibleContent } from "DismissibleContentTypes.tsx";
 // discord_app/modules/dismissible_content/DismissibleContentFrameworkStore.tsx
 import { AnalyticEvents } from "ME";
 import { PersistedStore } from "initialize";
@@ -66,13 +69,13 @@ prototype["getRenderedAtTimestamp"] = function getRenderedAtTimestamp(closure_0)
 };
 prototype["hasUserHitDCCap"] = function hasUserHitDCCap(PASSWORDLESS_UPSELL, closure_1) {
   if (null != PASSWORDLESS_UPSELL) {
-    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = require("DismissibleContentFatigueConfig.tsx") /* set */.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = set /* set */.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
     return false;
   }
   if (null != PASSWORDLESS_UPSELL) {
     let result = null != closure_1;
     if (result) {
-      const obj = require("DismissibleContentTypes.tsx") /* isSingleUseDismissibleContent */;
+      const obj = isSingleUseDismissibleContent /* isSingleUseDismissibleContent */;
       result = obj.isGuildDismissibleContent(PASSWORDLESS_UPSELL);
     }
     if (result) {
@@ -135,10 +138,10 @@ obj = {
     ({ dismissibleContent, guildId } = arg0);
     const renderedAtTimestamps = obj.renderedAtTimestamps;
     const result = renderedAtTimestamps.set(dismissibleContent, new Date().getTime());
-    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = require("DismissibleContentFatigueConfig.tsx") /* set */.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = set /* set */.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
     if (!CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(dismissibleContent)) {
       if (!obj.dailyCapOverridden) {
-        let result1 = require("DismissibleContentTypes.tsx") /* isSingleUseDismissibleContent */.isGuildDismissibleContent(dismissibleContent);
+        let result1 = isSingleUseDismissibleContent /* isSingleUseDismissibleContent */.isGuildDismissibleContent(dismissibleContent);
         if (result1) {
           result1 = null != guildId;
         }
@@ -169,8 +172,8 @@ obj = {
               obj = { cap_type: "daily_cap", dismissible_content: null, shown_dcs: null };
               obj[1] = dismissibleContent;
               obj[2] = obj.numberOfDCsShownToday;
-              require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.DCF_CAP_EXCEEDED, obj);
-              const obj6 = require("../../utils/AnalyticsUtils.tsx");
+              expandEventProperties.track(AnalyticEvents.DCF_CAP_EXCEEDED, obj);
+              const obj6 = expandEventProperties;
             }
           } else {
             const seenForGuildId = obj.seenForGuildId;
@@ -180,7 +183,7 @@ obj = {
         } else {
           const dismissibleContentSeenDuringSession = obj.dismissibleContentSeenDuringSession;
         }
-        const tmp2Result = require("DismissibleContentTypes.tsx") /* isSingleUseDismissibleContent */;
+        const tmp2Result = isSingleUseDismissibleContent /* isSingleUseDismissibleContent */;
       }
     }
   },

@@ -1,3 +1,4 @@
+import { useClipboard } from "../../_runtime/05639_useClipboard.js";
 // discord_app/utils/ClipboardUtils.native.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
@@ -88,5 +89,5 @@ export const copy = function copy() {
   return applyArgumentsResult;
 };
 export const getString = function getString() {
-  return require("../../_runtime/05639_useClipboard.js").getString();
+  return useClipboard.getString();
 };

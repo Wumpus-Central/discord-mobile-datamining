@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/applications/ApplicationActionCreators.tsx
 import dispatcher from "dispatcher";
 import set from "set";
@@ -412,7 +413,7 @@ export const useApplicationWithLoggedOutContext = function useApplicationWithLog
   const obj = { app: null, isLoading: null, error: null };
   const items = [set];
   const items1 = [arg0, data];
-  obj[0] = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  obj[0] = _initialize.useStateFromStores(items, () => {
     if (null == data) {
       const application = outer1_4.getApplication(closure_0);
       if (null != application) {

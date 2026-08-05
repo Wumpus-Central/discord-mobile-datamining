@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/share/native/ShareScreen.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import HeaderBackImage from "HeaderBackImage";
@@ -30,8 +31,8 @@ function getAttachmentsRestriction(type) {
       let tmp4;
       if (!getUncachedChannelPermissions.can(constants.ATTACH_FILES, type)) {
         const obj = { label: null };
-        const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.P7yvbm);
+        const intl = getSystemLocale /* getSystemLocale */.intl;
+        obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.P7yvbm);
         tmp4 = obj;
       }
       return tmp4;

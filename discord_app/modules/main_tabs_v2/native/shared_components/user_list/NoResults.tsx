@@ -1,3 +1,4 @@
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/NoResults.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -50,13 +51,13 @@ export default function NoResults(illustration) {
   }
   const items2 = [tmp5, ];
   const obj1 = { style: tmp.textContainer, children: null };
-  const items3 = [callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: title }), ];
+  const items3 = [callback(Text /* Text */.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: title }), ];
   let tmp7Result = null;
   if (null != subtitle) {
     const obj3 = { variant: "text-xs/medium", color: "interactive-text-default", style: null, children: null };
     obj3[2] = tmp.text;
     obj3[3] = subtitle;
-    tmp7Result = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
+    tmp7Result = callback(Text /* Text */.Text, obj3);
   }
   items3[1] = tmp7Result;
   obj1[1] = items3;

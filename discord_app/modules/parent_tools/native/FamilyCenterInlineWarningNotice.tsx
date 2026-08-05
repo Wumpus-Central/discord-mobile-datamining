@@ -1,3 +1,6 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { WarningIcon } from "../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterInlineWarningNotice.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -24,10 +27,10 @@ export default function FamilyCenterInlineWarningNotice(arg0) {
   let obj = { style: items, children: null };
   items = [tmp.container, style];
   obj = { size: "sm", color: null };
-  obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_FEEDBACK_WARNING;
-  const items1 = [callback(require("../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx") /* WarningIcon */.WarningIcon, obj), ];
+  obj[1] = Themes.colors.ICON_FEEDBACK_WARNING;
+  const items1 = [callback(WarningIcon /* WarningIcon */.WarningIcon, obj), ];
   obj = { variant: "text-sm/medium", color: "text-strong", style: tmp.text, children: text };
-  items1[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items1[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items1;
   return callback2(View, obj);
 };

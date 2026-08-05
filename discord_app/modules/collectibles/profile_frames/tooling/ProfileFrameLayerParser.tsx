@@ -1,3 +1,4 @@
+import { ProfileFrameLayerType } from "../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerType.tsx";
 // discord_app/modules/collectibles/profile_frames/tooling/ProfileFrameLayerParser.tsx
 import _toArray from "_toArray";
 import set from "ProfileFrameLayerType";
@@ -37,7 +38,7 @@ export const parseLayerFilename = function parseLayerFilename(c7) {
       const substr = arr2.slice(2);
       if (obj14.test(tmp19)) {
         if (set.has(tmp20)) {
-          if (tmp20 === require("../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerType.tsx") /* ProfileFrameLayerType */.ProfileFrameLayerType.BORDER) {
+          if (tmp20 === ProfileFrameLayerType /* ProfileFrameLayerType */.ProfileFrameLayerType.BORDER) {
             if (substr.length > 0) {
               if (set1.has(substr[0])) {
                 let obj = { parsed: null, errorType: null };

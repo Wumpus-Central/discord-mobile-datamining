@@ -1,3 +1,7 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { FreeFormInputGroup } from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import { useSettingNavigationRoute } from "../../core/native/useSettingNavigationRoute.tsx";
+import { handleOpenEmailVerification } from "UserSettingsAccountUnverifiedHeader.tsx";
 // discord_app/modules/user_settings/account/native/UserSettingsConfirmPassword.tsx
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
@@ -175,7 +179,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   }
   let tmp = callback2();
   const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({}));
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   [tmp7, c3] = first(undefined.useState(false), 2);
@@ -195,7 +199,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     obj[0] = items1;
     let tmp15 = null;
     if (!hideUnverifiedBanner) {
-      tmp15 = callback(require("UserSettingsAccountUnverifiedHeader.tsx"), {});
+      tmp15 = callback(handleOpenEmailVerification, {});
     }
     function handleSubmit() {
       const self = this;
@@ -232,7 +236,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
       fieldMessage = obj1.getFieldMessage("password");
     }
     obj3[9] = fieldMessage;
-    items3[2] = callback(require("../../../../design/void/Form/native/FreeFormInputGroup.tsx"), obj3);
+    items3[2] = callback(FreeFormInputGroup, obj3);
     let tmp19Result = null;
     if (null != obj1) {
       tmp19Result = null;
@@ -259,7 +263,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     tmp13Result = tmp13(closure_7, obj);
     const tmp14 = closure_7;
     tmp20 = importDefault;
-    const tmp21 = require("../../../../design/void/Form/native/FreeFormInputGroup.tsx");
+    const tmp21 = FreeFormInputGroup;
   }
   return tmp13Result;
 });
@@ -268,7 +272,7 @@ let result = require("noop").fileFinishedImporting("modules/user_settings/accoun
 
 export default forwardRefResult;
 export const UserSettingsConfirmPasswordWrapped = function UserSettingsConfirmPasswordWrapped() {
-  let obj = require("../../core/native/useSettingNavigationRoute.tsx") /* useSettingNavigationRoute */;
+  let obj = useSettingNavigationRoute /* useSettingNavigationRoute */;
   obj = {};
   const merged = Object.assign(obj.useSettingNavigationRoute().params);
   return callback(closure_13, obj);

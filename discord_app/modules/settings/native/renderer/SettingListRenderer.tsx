@@ -1,3 +1,6 @@
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { GuildSelectDefaultIcon } from "SettingRenderer.tsx";
 // discord_app/modules/settings/native/renderer/SettingListRenderer.tsx
 import importAllResult from "set";
 import { View } from "SettingSearchBar";
@@ -15,7 +18,7 @@ function SearchListSectionLabel(label) {
   if (typeof label === "string") {
     obj = { title: null };
     obj[0] = label;
-    tmpResult = tmp(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroupTitle, obj);
+    tmpResult = tmp(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroupTitle, obj);
   }
   obj[1] = tmpResult;
   return <View style={callback().spacer}>{null}</View>;
@@ -26,7 +29,7 @@ function SearchListSectionSubLabel(subLabel) {
   if (typeof subLabel === "string") {
     obj = { variant: "text-xs/normal", color: "text-muted", children: null };
     obj[2] = subLabel;
-    let tmpResult = tmp(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+    let tmpResult = tmp(Text /* Text */.Text, obj);
   } else {
     const _Array = Array;
     tmpResult = subLabel;
@@ -61,11 +64,11 @@ function renderItem(item) {
     obj[0] = item.label;
     return <SearchListSectionSubLabel subLabel={null} />;
   } else if (tmp.SETTING_SEARCH_RESULT === type) {
-    return require("SettingRenderer.tsx") /* GuildSelectDefaultIcon */.renderSettingSearchResultItem(item);
+    return GuildSelectDefaultIcon /* GuildSelectDefaultIcon */.renderSettingSearchResultItem(item);
   } else if (tmp.SECTION_ROW === type) {
-    return require("SettingRenderer.tsx") /* GuildSelectDefaultIcon */.renderSettingItem(item);
+    return GuildSelectDefaultIcon /* GuildSelectDefaultIcon */.renderSettingItem(item);
   } else if (tmp.SECTION_ROW_PLACEHOLDER === type) {
-    obj = require("SettingRenderer.tsx") /* GuildSelectDefaultIcon */;
+    obj = GuildSelectDefaultIcon /* GuildSelectDefaultIcon */;
     return obj.renderSettingSearchResultPlaceholderItem(item);
   }
 }

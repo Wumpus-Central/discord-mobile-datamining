@@ -1,3 +1,17 @@
+import { componentDidMount } from "../../../components_native/AutoAnalytics.tsx";
+import { ContextMenuCommandNavigator } from "../../application_commands/native/ContextMenuCommandNavigator.tsx";
+import { NavigatorWithCaptchaHook } from "../../auth/native/components/Auth.tsx";
+import { HeaderWithBorder } from "../../conversations/components/native/ConversationNavigator.tsx";
+import { Loading } from "../../guild_member_verification/native/components/MemberVerificationScreen.tsx";
+import { SuspendedUserSafetyHubPage } from "../../safety_hub/native/SuspendedUserPage.tsx";
+import { SearchNavigator } from "../../search/native/components/navigator/SearchNavigator.tsx";
+import { RequestsSettingsModalButton } from "friends/FriendsNavigator.tsx";
+import { MainTabs } from "MainTabs.tsx";
+import { MessageRequestsNavigator } from "message_requests/MessageRequestsNavigator.tsx";
+import { Modal } from "modal/ModalScreen.tsx";
+import { ConnectedCreateThreadHeaderButton } from "sidebar/details/ChannelDetailsNavigator.tsx";
+import { Settings } from "tabs/settings/Settings.tsx";
+import { YouScreenContainer } from "tabs/you/YouScreenContainer.tsx";
 // discord_app/modules/main_tabs_v2/native/MainNavigator.tsx
 import useNativeThemeUpdater from "useNativeThemeUpdater";
 import importAllResult from "HeaderWithBorder";
@@ -17,49 +31,49 @@ let metroImportAll;
 let unpackModuleId;
 let require = arg1;
 function getAuthComponent() {
-  return require("../../auth/native/components/Auth.tsx") /* NavigatorWithCaptchaHook */.default;
+  return NavigatorWithCaptchaHook /* NavigatorWithCaptchaHook */.default;
 }
 function getTabsComponent() {
-  return require("MainTabs.tsx").default;
+  return MainTabs.default;
 }
 function getChannelComponent() {
   return View;
 }
 function WrappedAutoAnalytics() {
-  return callback2(require("../../../components_native/AutoAnalytics.tsx") /* componentDidMount */.default, {});
+  return callback2(componentDidMount /* componentDidMount */.default, {});
 }
 function getMemberVerificationComponent() {
-  return require("../../guild_member_verification/native/components/MemberVerificationScreen.tsx") /* Loading */.default;
+  return Loading /* Loading */.default;
 }
 function getFriendsNavigatorComponent() {
-  return require("friends/FriendsNavigator.tsx") /* RequestsSettingsModalButton */.default;
+  return RequestsSettingsModalButton /* RequestsSettingsModalButton */.default;
 }
 function getYouComponent() {
-  return require("tabs/you/YouScreenContainer.tsx").default;
+  return YouScreenContainer.default;
 }
 function getChannelDetailsComponent() {
-  return require("sidebar/details/ChannelDetailsNavigator.tsx") /* ConnectedCreateThreadHeaderButton */.default;
+  return ConnectedCreateThreadHeaderButton /* ConnectedCreateThreadHeaderButton */.default;
 }
 function getConversationsComponent() {
-  return require("../../conversations/components/native/ConversationNavigator.tsx") /* HeaderWithBorder */.default;
+  return HeaderWithBorder /* HeaderWithBorder */.default;
 }
 function getSearchComponent() {
-  return require("../../search/native/components/navigator/SearchNavigator.tsx").default;
+  return SearchNavigator.default;
 }
 function getContextMenuCommandNavigatorComponent() {
-  return require("../../application_commands/native/ContextMenuCommandNavigator.tsx") /* ContextMenuCommandNavigator */.default;
+  return ContextMenuCommandNavigator /* ContextMenuCommandNavigator */.default;
 }
 function getModalComponent() {
-  return require("modal/ModalScreen.tsx") /* Modal */.default;
+  return Modal /* Modal */.default;
 }
 function getMessageRequestsComponent() {
-  return require("message_requests/MessageRequestsNavigator.tsx") /* MessageRequestsNavigator */.default;
+  return MessageRequestsNavigator /* MessageRequestsNavigator */.default;
 }
 function getSettingsComponent() {
-  return require("tabs/settings/Settings.tsx") /* Settings */.default;
+  return Settings /* Settings */.default;
 }
 function getAccountStanding() {
-  return require("../../safety_hub/native/SuspendedUserPage.tsx") /* SuspendedUserSafetyHubPage */.default;
+  return SuspendedUserSafetyHubPage /* SuspendedUserSafetyHubPage */.default;
 }
 let c4 = importAllResult;
 ({ AnalyticEvents: metroImportAll, DrawerSourceTypes: c9 } = ME);

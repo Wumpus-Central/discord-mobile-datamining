@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { nameFromUser } from "../../../utils/UserUtils.tsx";
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesPendingName.tsx
 import handleFormOpen from "handleFormOpen";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -8,11 +10,11 @@ const result = require("nameFromUser").fileFinishedImporting("modules/display_na
 export const useDisplayNameStylesPendingName = function useDisplayNameStylesPendingName(stateFromStores, guildId) {
   const _require = stateFromStores;
   const importDefault = guildId;
-  const name = require("../../../utils/UserUtils.tsx").useName(stateFromStores);
-  const obj = require("../../../utils/UserUtils.tsx");
+  const name = nameFromUser.useName(stateFromStores);
+  const obj = nameFromUser;
   const items = [handleFormOpen, trackCommunicationDisabled];
   const items1 = [guildId, stateFromStores];
-  let str = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  let str = _initialize.useStateFromStores(items, () => {
     const pendingChanges = outer1_3.getPendingChanges(closure_1);
     if (null != closure_1) {
       let pendingNickname = pendingChanges.pendingNickname;

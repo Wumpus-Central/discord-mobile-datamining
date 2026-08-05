@@ -1,9 +1,13 @@
+import { n } from "../../_runtime/00689_n.js";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { timestamp } from "../modules/debug/Logger.tsx";
+import { hslToRgb } from "Color.tsx";
 // discord_app/utils/ColorUtils.tsx
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;
 function hexToRgba(PRIMARY_760) {
-  let obj = require("../../_runtime/00689_n.js")(PRIMARY_760);
+  let obj = n(PRIMARY_760);
   const tmp = callback(obj.rgba(), 4);
   obj = { r: tmp[0], g: tmp[1], b: tmp[2], a: tmp[3] };
   return obj;
@@ -158,7 +162,7 @@ function rawHslToRgb(hue, saturation, lightness) {
   const result = hue / 360;
   if (0 === saturation) {
     const _Math = Math;
-    let tmp23 = require("Color.tsx");
+    let tmp23 = hslToRgb;
     const rounded = Math.round(255 * lightness);
     const _Math2 = Math;
     const _Math3 = Math;
@@ -300,7 +304,7 @@ function hexToRgbaString(colorHex, opacity) {
   let tmp4;
   let tmp5;
   let tmp = opacity;
-  const tmp2 = callback(require("../../_runtime/00689_n.js")(colorHex).rgba(), 4);
+  const tmp2 = callback(n(colorHex).rgba(), 4);
   [tmp3, tmp4, tmp5] = tmp2;
   if (opacity == null) {
     tmp = tmp2[3];
@@ -313,114 +317,114 @@ hexToRgbaString.__initData = { code: "function hexToRgbaString_ColorUtilsTsx2(he
 let obj = {};
 obj = {
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.fBawRj);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.fBawRj);
   },
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.hvv3QR);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.hvv3QR);
   },
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.JwX6Jd);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.JwX6Jd);
   },
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.H3xljj);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.H3xljj);
   },
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.X9izyR);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.X9izyR);
   },
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.Kw7K2z);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.Kw7K2z);
   },
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.z5AZKW);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.z5AZKW);
   },
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.JqBqKz);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.JqBqKz);
   },
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.edPgnK);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.edPgnK);
   },
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.ti7gsS);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.ti7gsS);
   },
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["H9jz+S"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["H9jz+S"]);
   },
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.UmsfHL);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.UmsfHL);
   },
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.GoDlAC);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.GoDlAC);
   },
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["9GpDYK"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["9GpDYK"]);
   },
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.lwrNQG);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.lwrNQG);
   },
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.Lf10GG);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.Lf10GG);
   },
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["H+AjY7"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["H+AjY7"]);
   },
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.XTkdex);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.XTkdex);
   },
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.Ve0Lip);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.Ve0Lip);
   },
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.BwbOAO);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.BwbOAO);
   },
   () => {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["/po5rJ"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["/po5rJ"]);
   }
 };
 const merged = Object.assign(obj);
 obj["#5865f2"] = () => {
-  const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-  return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["Cn/LJ4"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  return intl.string(getSystemLocale /* getSystemLocale */.t["Cn/LJ4"]);
 };
 let result = require("getSystemLocale").fileFinishedImporting("utils/ColorUtils.tsx");
 
 export { hexWithOpacity };
 export const hexToRgb = function hexToRgb(PRIMARY_800) {
-  let obj = require("../../_runtime/00689_n.js")(PRIMARY_800);
+  let obj = n(PRIMARY_800);
   const tmp = callback(obj.rgb(), 3);
   obj = { r: tmp[0], g: tmp[1], b: tmp[2] };
   return obj;
 };
 export const hexToRgbArray = function hexToRgbArray(arg0) {
-  const obj = require("../../_runtime/00689_n.js")(arg0);
+  const obj = n(arg0);
   const items = [, , ];
-  [arr[0], arr[1], arr[2]] = callback(require("../../_runtime/00689_n.js")(arg0).rgb(), 3);
+  [arr[0], arr[1], arr[2]] = callback(n(arg0).rgb(), 3);
   return items;
 };
 export { hexToRgba };
 export { hexToRgbaString };
 export const hexOpacityToRgba = function hexOpacityToRgba(backgroundColor, dividerOpacity) {
-  const tmp = callback(require("../../_runtime/00689_n.js")(backgroundColor).rgb(), 3);
+  const tmp = callback(n(backgroundColor).rgb(), 3);
   return "rgba(" + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ", " + dividerOpacity + ")";
 };
 export { rgbToHslObject };
@@ -453,12 +457,12 @@ export { hslToHex };
 export const hexToColorName = function hexToColorName(tmp2Result, arg1) {
   if (null == obj[tmp2Result]) {
     if (arg1) {
-      const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
       obj = { color: null };
       obj[0] = tmp2Result;
-      let str4 = intl.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t["7BFCRR"], obj);
+      let str4 = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["7BFCRR"], obj);
     } else {
-      obj = new require("../modules/debug/Logger.tsx")("ColorUtils");
+      obj = new timestamp("ColorUtils");
       const _HermesInternal = HermesInternal;
       obj.warn("Role color " + tmp2Result + " has not been localized!");
       str4 = "undefined";
@@ -473,7 +477,7 @@ export const mixColors = function mixColors(mixColorOverride, red) {
   const sum1 = (1 - alpha) * red.green + alpha * mixColorOverride.green;
   const sum2 = (1 - alpha) * red.blue + alpha * mixColorOverride.blue;
   const sum3 = mixColorOverride.alpha + red.alpha * (1 - mixColorOverride.alpha);
-  return new require("Color.tsx")(sum, sum1, sum2, sum3);
+  return new hslToRgb(sum, sum1, sum2, sum3);
 };
 export { hex2rgb2hsv };
 export const getComplimentaryPaletteForColor = function getComplimentaryPaletteForColor(items, arg1) {
@@ -509,7 +513,7 @@ export const getComplimentaryPaletteForColor = function getComplimentaryPaletteF
       let tmp9 = importDefault;
       let tmp10 = dependencyMap;
       let tmp8 = hslToHex(sum2, sum, sum1);
-      let obj = require("../../_runtime/00689_n.js")(tmp8);
+      let obj = n(tmp8);
       let tmp11 = callback;
       let tmp12 = callback(obj.rgb(), 3);
       let items1 = [, , ];
@@ -578,7 +582,7 @@ export const getAccessibleForegroundColor = function getAccessibleForegroundColo
           let result2 = obj3.set("hsl.l", value + 0.05);
           let tmp7 = importDefault;
           let tmp8 = dependencyMap;
-          let tmp9 = require("../../_runtime/00689_n.js");
+          let tmp9 = n;
           let sum = num2 + 1;
           obj4 = result2;
           if (sum >= 10) {

@@ -1,3 +1,4 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/client_themes/native/chat/SharedCustomThemeActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import initialize from "initialize";
@@ -18,7 +19,7 @@ let require = arg1;
 function PrimaryActionButton(onPressApply) {
   const tmp = createCacheKey();
   const require = tmp;
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   let items = [reset];
   const stateFromStores = obj.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
   if (obj2.getPremiumTypeFromSubscription(stateFromStores) !== PremiumTypes.TIER_2) {

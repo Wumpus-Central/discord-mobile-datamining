@@ -1,3 +1,4 @@
+import { DCDDeviceManager } from "../../utils/native/DeviceUtils.tsx";
 // discord_app/modules/debug/getLogMetadata.native.tsx
 const result = require("set").fileFinishedImporting("modules/debug/getLogMetadata.native.tsx");
 
@@ -22,8 +23,8 @@ export default function getLogMetadata() {
   obj[6] = importAll(1578).getBuildNumberLabel();
   obj[7] = DeviceVendorID;
   const obj4 = importAll(1578);
-  obj[8] = require("../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getDeviceInfo();
-  const obj5 = require("../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */;
-  obj[9] = require("../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getSystemVersion();
+  obj[8] = DCDDeviceManager /* DCDDeviceManager */.getDeviceInfo();
+  const obj5 = DCDDeviceManager /* DCDDeviceManager */;
+  obj[9] = DCDDeviceManager /* DCDDeviceManager */.getSystemVersion();
   return obj;
 };

@@ -1,3 +1,4 @@
+import { useSafeAreaInsetsKeyboardAware } from "../../../../modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 // discord_app/design/components/Modal/native/ModalScreen.native.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -13,7 +14,7 @@ const result = require("jsxProd").fileFinishedImporting("design/components/Modal
 export const ModalScreen = function ModalScreen(children) {
   let backgroundColor = children.backgroundColor;
   const tmp = createCacheKey();
-  const insets = require("../../../../modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx")().insets;
+  const insets = useSafeAreaInsetsKeyboardAware().insets;
   const style = [tmp.container, ];
   if (backgroundColor == null) {
     backgroundColor = tmp.container.backgroundColor;

@@ -1,3 +1,11 @@
+import { NativeNotifSettingsModule } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { NativeModules } from "../../../lib/pushnotification/PushNotification.tsx";
+import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
+import { messagesProxy } from "../NotificationSettings.messages.js";
+import { apexExperiment } from "NotifSettingsExperiments.tsx";
+import { inferImportanceFromBehavior } from "NotifSettingsUtils.android.tsx";
 // discord_app/modules/notifications/native/NotificationTokenManager.tsx
 import { NativeModules } from "expandEventProperties";
 import initialize from "initialize";
@@ -93,27 +101,27 @@ prototype["_initialize"] = function _initialize() {
   self._experimentUnsubscribe = () => {
     outer1_4.removeChangeListener(self._handleExperimentsUpdated);
   };
-  const subscription = require("../../../Dispatcher.tsx").subscribe("LOGIN_SUCCESS", self.handleSyncNoMultiAccountOnLoginSuccess);
-  const obj = require("../../../Dispatcher.tsx");
-  const subscription1 = require("../../../Dispatcher.tsx").subscribe("REGISTER_SUCCESS", self.handleSyncNoMultiAccountOnRegisterSuccess);
-  const obj2 = require("../../../Dispatcher.tsx");
-  const subscription2 = require("../../../Dispatcher.tsx").subscribe("POST_CONNECTION_OPEN", self.handleSyncNoMultiAccountOnPostConnectionOpen);
-  const obj3 = require("../../../Dispatcher.tsx");
-  const subscription3 = require("../../../Dispatcher.tsx").subscribe("POST_CONNECTION_OPEN", self.handleSyncWithMultiAccount);
-  const obj4 = require("../../../Dispatcher.tsx");
-  const subscription4 = require("../../../Dispatcher.tsx").subscribe("MULTI_ACCOUNT_REMOVE_ACCOUNT", self.handleSyncWithMultiAccount);
+  const subscription = dispatcher.subscribe("LOGIN_SUCCESS", self.handleSyncNoMultiAccountOnLoginSuccess);
+  const obj = dispatcher;
+  const subscription1 = dispatcher.subscribe("REGISTER_SUCCESS", self.handleSyncNoMultiAccountOnRegisterSuccess);
+  const obj2 = dispatcher;
+  const subscription2 = dispatcher.subscribe("POST_CONNECTION_OPEN", self.handleSyncNoMultiAccountOnPostConnectionOpen);
+  const obj3 = dispatcher;
+  const subscription3 = dispatcher.subscribe("POST_CONNECTION_OPEN", self.handleSyncWithMultiAccount);
+  const obj4 = dispatcher;
+  const subscription4 = dispatcher.subscribe("MULTI_ACCOUNT_REMOVE_ACCOUNT", self.handleSyncWithMultiAccount);
 };
 prototype["_terminate"] = function _terminate() {
   const self = this;
-  require("../../../Dispatcher.tsx").unsubscribe("LOGIN_SUCCESS", this.handleSyncNoMultiAccountOnLoginSuccess);
-  const obj = require("../../../Dispatcher.tsx");
-  require("../../../Dispatcher.tsx").unsubscribe("REGISTER_SUCCESS", this.handleSyncNoMultiAccountOnRegisterSuccess);
-  const obj2 = require("../../../Dispatcher.tsx");
-  require("../../../Dispatcher.tsx").unsubscribe("POST_CONNECTION_OPEN", this.handleSyncNoMultiAccountOnPostConnectionOpen);
-  const obj3 = require("../../../Dispatcher.tsx");
-  require("../../../Dispatcher.tsx").unsubscribe("POST_CONNECTION_OPEN", this.handleSyncWithMultiAccount);
-  const obj4 = require("../../../Dispatcher.tsx");
-  require("../../../Dispatcher.tsx").unsubscribe("MULTI_ACCOUNT_REMOVE_ACCOUNT", this.handleSyncWithMultiAccount);
+  dispatcher.unsubscribe("LOGIN_SUCCESS", this.handleSyncNoMultiAccountOnLoginSuccess);
+  const obj = dispatcher;
+  dispatcher.unsubscribe("REGISTER_SUCCESS", this.handleSyncNoMultiAccountOnRegisterSuccess);
+  const obj2 = dispatcher;
+  dispatcher.unsubscribe("POST_CONNECTION_OPEN", this.handleSyncNoMultiAccountOnPostConnectionOpen);
+  const obj3 = dispatcher;
+  dispatcher.unsubscribe("POST_CONNECTION_OPEN", this.handleSyncWithMultiAccount);
+  const obj4 = dispatcher;
+  dispatcher.unsubscribe("MULTI_ACCOUNT_REMOVE_ACCOUNT", this.handleSyncWithMultiAccount);
   if (null != this._experimentUnsubscribe) {
     const result = self._experimentUnsubscribe();
     self._experimentUnsubscribe = null;
@@ -127,17 +135,17 @@ prototype["registerListener"] = function registerListener() {
     throw error;
   } else {
     self.hasRegisterEventListener = true;
-    const result = require("../../../lib/pushnotification/PushNotification.tsx").addRegisterEventListener(self.handleToken);
+    const result = NativeModules.addRegisterEventListener(self.handleToken);
   }
 };
 prototype["registerNotificationCategories"] = function registerNotificationCategories(arg0) {
-  const declarativeNotifSettingsExperiment = require("NotifSettingsExperiments.tsx") /* apexExperiment */.declarativeNotifSettingsExperiment;
+  const declarativeNotifSettingsExperiment = apexExperiment /* apexExperiment */.declarativeNotifSettingsExperiment;
   const config = declarativeNotifSettingsExperiment.getConfig({ location: "registerNotificationCategories" });
   let flag = false;
   try {
     if (config.enabled) {
-      flag = require("NotifSettingsUtils.android.tsx").registerDeclarativeNotificationCategories();
-      const obj = require("NotifSettingsUtils.android.tsx");
+      flag = inferImportanceFromBehavior.registerDeclarativeNotificationCategories();
+      const obj = inferImportanceFromBehavior;
     }
     const self = this;
     if (flag) {
@@ -145,10 +153,10 @@ prototype["registerNotificationCategories"] = function registerNotificationCateg
     } else {
       try {
         if (config.clearDeclarative) {
-          require("../../../utils/SentryUtils.native.tsx").addBreadcrumb({ message: "Clearing declarative notification categories" });
-          const obj3 = require("../../../utils/SentryUtils.native.tsx");
-          require("NotifSettingsUtils.android.tsx").clear();
-          const obj4 = require("NotifSettingsUtils.android.tsx");
+          SentryUtils.native.addBreadcrumb({ message: "Clearing declarative notification categories" });
+          const obj3 = SentryUtils.native;
+          inferImportanceFromBehavior.clear();
+          const obj4 = inferImportanceFromBehavior;
         }
         const result1 = self.registerLegacyNotificationCategories();
       } catch (tmp12) {
@@ -166,72 +174,72 @@ prototype["registerLegacyNotificationCategories"] = function registerLegacyNotif
   const registerNotificationCategoriesAndGroups = NativeModules.DCDNotificationCategoryUtils.registerNotificationCategoriesAndGroups;
   if (null != registerNotificationCategoriesAndGroups) {
     let obj = { calls: null, mediaConnections: null, messages: null, directMessages: null, friendRequests: null, polls: null, social: null, stageLive: null, guildEventLive: null, guildHighlights: null, forumThreadCreated: null, systemMessages: null, other: null, default: null, reactions: null };
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[0] = intl.string(require("../NotificationSettings.messages.js")["IUH/Oe"]);
-    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[1] = intl2.string(require("../NotificationSettings.messages.js").VeBD1N);
-    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[2] = intl3.string(require("../NotificationSettings.messages.js")["4qWUAO"]);
-    const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[3] = intl4.string(require("../NotificationSettings.messages.js").NGdNZb);
-    const intl5 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[4] = intl5.string(require("../NotificationSettings.messages.js").NxgGZA);
-    const intl6 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[5] = intl6.string(require("../NotificationSettings.messages.js").MOjygY);
-    const intl7 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[6] = intl7.string(require("../NotificationSettings.messages.js")["UzRF+8"]);
-    const intl8 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[7] = intl8.string(require("../NotificationSettings.messages.js")["4n388K"]);
-    const intl9 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[8] = intl9.string(require("../NotificationSettings.messages.js")["40TIqW"]);
-    const intl10 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[9] = intl10.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.p5jg9S);
-    const intl11 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[10] = intl11.string(require("../NotificationSettings.messages.js").HibKoy);
-    const intl12 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[11] = intl12.string(require("../NotificationSettings.messages.js").zJlwvV);
-    const intl13 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[12] = intl13.string(require("../NotificationSettings.messages.js").kIrLfg);
-    const intl14 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[13] = intl14.string(require("../NotificationSettings.messages.js")["T+79Eo"]);
-    const intl15 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[14] = intl15.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.gHp0C4);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[0] = intl.string(messagesProxy["IUH/Oe"]);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    obj[1] = intl2.string(messagesProxy.VeBD1N);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    obj[2] = intl3.string(messagesProxy["4qWUAO"]);
+    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    obj[3] = intl4.string(messagesProxy.NGdNZb);
+    const intl5 = getSystemLocale /* getSystemLocale */.intl;
+    obj[4] = intl5.string(messagesProxy.NxgGZA);
+    const intl6 = getSystemLocale /* getSystemLocale */.intl;
+    obj[5] = intl6.string(messagesProxy.MOjygY);
+    const intl7 = getSystemLocale /* getSystemLocale */.intl;
+    obj[6] = intl7.string(messagesProxy["UzRF+8"]);
+    const intl8 = getSystemLocale /* getSystemLocale */.intl;
+    obj[7] = intl8.string(messagesProxy["4n388K"]);
+    const intl9 = getSystemLocale /* getSystemLocale */.intl;
+    obj[8] = intl9.string(messagesProxy["40TIqW"]);
+    const intl10 = getSystemLocale /* getSystemLocale */.intl;
+    obj[9] = intl10.string(getSystemLocale /* getSystemLocale */.t.p5jg9S);
+    const intl11 = getSystemLocale /* getSystemLocale */.intl;
+    obj[10] = intl11.string(messagesProxy.HibKoy);
+    const intl12 = getSystemLocale /* getSystemLocale */.intl;
+    obj[11] = intl12.string(messagesProxy.zJlwvV);
+    const intl13 = getSystemLocale /* getSystemLocale */.intl;
+    obj[12] = intl13.string(messagesProxy.kIrLfg);
+    const intl14 = getSystemLocale /* getSystemLocale */.intl;
+    obj[13] = intl14.string(messagesProxy["T+79Eo"]);
+    const intl15 = getSystemLocale /* getSystemLocale */.intl;
+    obj[14] = intl15.string(getSystemLocale /* getSystemLocale */.t.gHp0C4);
     obj = { realtime: null, social: null, server: null, other: null };
-    const intl16 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[0] = intl16.string(require("../NotificationSettings.messages.js").S5cB9e);
-    const intl17 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[1] = intl17.string(require("../NotificationSettings.messages.js")["UzRF+8"]);
-    const intl18 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[2] = intl18.string(require("../NotificationSettings.messages.js").zRKbpz);
-    const intl19 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[3] = intl19.string(require("../NotificationSettings.messages.js").q5M7HV);
+    const intl16 = getSystemLocale /* getSystemLocale */.intl;
+    obj[0] = intl16.string(messagesProxy.S5cB9e);
+    const intl17 = getSystemLocale /* getSystemLocale */.intl;
+    obj[1] = intl17.string(messagesProxy["UzRF+8"]);
+    const intl18 = getSystemLocale /* getSystemLocale */.intl;
+    obj[2] = intl18.string(messagesProxy.zRKbpz);
+    const intl19 = getSystemLocale /* getSystemLocale */.intl;
+    obj[3] = intl19.string(messagesProxy.q5M7HV);
     const result = registerNotificationCategoriesAndGroups(obj, obj);
   } else if (null != registerNotificationCategories) {
     obj = { calls: null, mediaConnections: null, messages: null, directMessages: null, social: null, gameDetection: null, stageLive: null, guildEventLive: null, guildHighlights: null, forumThreadCreated: null, other: null, otherHighPriority: null };
-    const intl20 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[0] = intl20.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.JJogjm);
-    const intl21 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[1] = intl21.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.K3lovD);
-    const intl22 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[2] = intl22.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.OIgYlQ);
-    const intl23 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[3] = intl23.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.YUU0RF);
-    const intl24 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[4] = intl24.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.TdEu5X);
-    const intl25 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[5] = intl25.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["A/4saf"]);
-    const intl26 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[6] = intl26.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.qGRagm);
-    const intl27 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[7] = intl27.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.MfGr0a);
-    const intl28 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[8] = intl28.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.p5jg9S);
-    const intl29 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[9] = intl29.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.dl57ho);
-    const intl30 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[10] = intl30.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.BcZTKu);
-    const intl31 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[11] = intl31.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.bcv3rp);
+    const intl20 = getSystemLocale /* getSystemLocale */.intl;
+    obj[0] = intl20.string(getSystemLocale /* getSystemLocale */.t.JJogjm);
+    const intl21 = getSystemLocale /* getSystemLocale */.intl;
+    obj[1] = intl21.string(getSystemLocale /* getSystemLocale */.t.K3lovD);
+    const intl22 = getSystemLocale /* getSystemLocale */.intl;
+    obj[2] = intl22.string(getSystemLocale /* getSystemLocale */.t.OIgYlQ);
+    const intl23 = getSystemLocale /* getSystemLocale */.intl;
+    obj[3] = intl23.string(getSystemLocale /* getSystemLocale */.t.YUU0RF);
+    const intl24 = getSystemLocale /* getSystemLocale */.intl;
+    obj[4] = intl24.string(getSystemLocale /* getSystemLocale */.t.TdEu5X);
+    const intl25 = getSystemLocale /* getSystemLocale */.intl;
+    obj[5] = intl25.string(getSystemLocale /* getSystemLocale */.t["A/4saf"]);
+    const intl26 = getSystemLocale /* getSystemLocale */.intl;
+    obj[6] = intl26.string(getSystemLocale /* getSystemLocale */.t.qGRagm);
+    const intl27 = getSystemLocale /* getSystemLocale */.intl;
+    obj[7] = intl27.string(getSystemLocale /* getSystemLocale */.t.MfGr0a);
+    const intl28 = getSystemLocale /* getSystemLocale */.intl;
+    obj[8] = intl28.string(getSystemLocale /* getSystemLocale */.t.p5jg9S);
+    const intl29 = getSystemLocale /* getSystemLocale */.intl;
+    obj[9] = intl29.string(getSystemLocale /* getSystemLocale */.t.dl57ho);
+    const intl30 = getSystemLocale /* getSystemLocale */.intl;
+    obj[10] = intl30.string(getSystemLocale /* getSystemLocale */.t.BcZTKu);
+    const intl31 = getSystemLocale /* getSystemLocale */.intl;
+    obj[11] = intl31.string(getSystemLocale /* getSystemLocale */.t.bcv3rp);
     const result1 = registerNotificationCategories(obj);
   }
 };
@@ -240,7 +248,7 @@ prototype["trackDisabledAndroidNotifChannels"] = function trackDisabledAndroidNo
     tmp.hasTrackedDisabledAndroidNotifChannels = true;
     let obj = set(500);
     if (obj.isAndroid()) {
-      const tmp5 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx");
+      const tmp5 = NativeNotifSettingsModule;
       let prop;
       if (tmp5 != null) {
         prop = tmp5.getAndroidNotifChannelStates;

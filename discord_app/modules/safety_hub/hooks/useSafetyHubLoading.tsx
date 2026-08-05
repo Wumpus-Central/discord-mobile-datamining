@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/safety_hub/hooks/useSafetyHubLoading.tsx
 import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";
 
@@ -6,5 +7,5 @@ const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/us
 
 export default function useIsSafetyHubLoading() {
   const items = [handleSafetyHubRequestAgeVerificationResetModalAction];
-  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => fetching.isFetching());
+  return initialize /* initialize */.useStateFromStores(items, () => fetching.isFetching());
 };

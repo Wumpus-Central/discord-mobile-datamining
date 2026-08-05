@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { isVersionEqual } from "../../../utils/SecondaryIndexMapUtils.tsx";
 // discord_app/modules/game_relationships/hooks/useIsGameFriends.tsx
 import _slicedToArray from "_slicedToArray";
 import recountRelationshipTypes from "recountRelationshipTypes";
@@ -10,9 +12,9 @@ export const useIsGameFriends = function useIsGameFriends(id) {
   const _require = id;
   let items = [recountRelationshipTypes];
   const items1 = [id];
-  return callback(_require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return callback(_initialize.useStateFromStores(items, () => {
     const gameRelationshipsForUserByType = outer1_3.getGameRelationshipsForUserByType(closure_0, outer1_4.FRIEND);
     const items = [gameRelationshipsForUserByType.length > 0, outer1_3.getGameRelationshipsVersion()];
     return items;
-  }, items1, _require("../../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual), 1)[0];
+  }, items1, _isVersionEqual.isVersionEqual), 1)[0];
 };

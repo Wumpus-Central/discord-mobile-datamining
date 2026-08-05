@@ -1,3 +1,4 @@
+import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
 // discord_app/modules/user_settings/family_center/native/ParentalControlsSensitiveContentFiltersScreen.tsx
 import noop from "noop";
 import { MobileSetting } from "MobileSetting";
@@ -31,5 +32,5 @@ export default function UserSettingsSensitiveContentFilters() {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  return jsx(require("../../../settings/native/renderer/SettingLayout.tsx"), { node });
+  return jsx(SettingLayout, { node });
 };

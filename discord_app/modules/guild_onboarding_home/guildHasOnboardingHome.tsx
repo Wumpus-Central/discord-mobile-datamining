@@ -1,3 +1,4 @@
+import { getFavoritesAwareGuildName } from "../favorites/FavoritesUtils.tsx";
 // discord_app/modules/guild_onboarding_home/guildHasOnboardingHome.tsx
 import ME from "ME";
 
@@ -12,8 +13,8 @@ export default function guildHasOnboardingHome(id) {
     isFavoritesGuildIdResult = id.id === closure_3;
   }
   if (!isFavoritesGuildIdResult) {
-    isFavoritesGuildIdResult = require("../favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */.isFavoritesGuildId(id.id);
-    const obj = require("../favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
+    isFavoritesGuildIdResult = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(id.id);
+    const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
   }
   if (!isFavoritesGuildIdResult) {
     const features = id.features;

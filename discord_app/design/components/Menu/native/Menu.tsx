@@ -1,3 +1,4 @@
+import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 // discord_app/design/components/Menu/native/Menu.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "CONFIG_NEVER_ANIMATE";
@@ -23,10 +24,10 @@ obj[1] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(obj);
 const context = importAllResult.createContext({ menuClose: NOOP, menuDismiss: NOOP });
 function measureButtonRef(arg0, arg1) {
-  const measureResult = require("../../../../modules/reanimated/ReanimatedRexport.tsx").measure(arg0);
+  const measureResult = ReanimatedRexport.measure(arg0);
   if (null != measureResult) {
-    require("../../../../modules/reanimated/ReanimatedRexport.tsx").runOnJS(arg1)(measureResult);
-    const tmpResult = require("../../../../modules/reanimated/ReanimatedRexport.tsx");
+    ReanimatedRexport.runOnJS(arg1)(measureResult);
+    const tmpResult = ReanimatedRexport;
   }
 }
 measureButtonRef.__closure = { measure: require("module_4146").measure, runOnJS: require("module_4146").runOnJS };

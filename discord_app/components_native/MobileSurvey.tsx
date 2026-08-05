@@ -1,3 +1,4 @@
+import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 // discord_app/components_native/MobileSurvey.tsx
 import closure_3 from "createCacheKey";
 import noop from "noop";
@@ -12,7 +13,7 @@ const result = require("fetchSurveyIfNeeded").fileFinishedImporting("components_
 
 export default function MobileSurvey() {
   const _require = callback();
-  let obj = _require("../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [fetchSurveyIfNeeded];
   const stateFromStores = obj.useStateFromStores(items, () => currentSurvey.getCurrentSurvey());
   const items1 = [stateFromStores];

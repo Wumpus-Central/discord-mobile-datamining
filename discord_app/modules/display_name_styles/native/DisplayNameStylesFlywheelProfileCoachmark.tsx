@@ -1,3 +1,5 @@
+import { AccountAgeTier10LargeBadge } from "../../../design/assets/native.tsx";
+import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/display_name_styles/native/DisplayNameStylesFlywheelProfileCoachmark.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -12,9 +14,9 @@ const require = arg1;
 function CoachmarkImage() {
   const tmp = createCacheKey();
   let obj = { style: tmp.coachmarkImageContainer, children: null };
-  const items = [callback(require("../../../design/assets/native.tsx") /* AccountAgeTier10LargeBadge */.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" }), ];
+  const items = [callback(AccountAgeTier10LargeBadge /* AccountAgeTier10LargeBadge */.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" }), ];
   obj = { style: tmp.betaTag };
-  items[1] = callback(require("../../../design/void/native.tsx") /* Button */.BetaTag, obj);
+  items[1] = callback(Button /* Button */.BetaTag, obj);
   obj[1] = items;
   return callback2(View, obj);
 }

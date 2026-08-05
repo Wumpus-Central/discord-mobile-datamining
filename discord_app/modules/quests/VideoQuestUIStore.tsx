@@ -1,3 +1,5 @@
+import { DEFAULT_VIDEO_VOLUME } from "../../../discord_common/js/packages/video-player/DiscordVideoPlayerTypes.tsx";
+import { frozen } from "../zustand/LocalStorageWrapper.tsx";
 // discord_app/modules/quests/VideoQuestUIStore.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import identity from "identity";
@@ -39,7 +41,7 @@ function _toPropertyKey(obj) {
 let obj = { UNKNOWN: "UNKNOWN", NOT_STARTED: "NOT_STARTED", IN_PROGRESS: "IN_PROGRESS", COMPLETED: "COMPLETED" };
 identity = identity.createWithEqualityFn();
 obj = { name: "videoQuestUIState", storage: null, partialize: null, version: 0 };
-obj[1] = createJSONStorage.createJSONStorage(() => require("../zustand/LocalStorageWrapper.tsx"));
+obj[1] = createJSONStorage.createJSONStorage(() => frozen);
 obj[2] = function partialize(volume) {
   return { volume: volume.volume, muted: volume.muted, videoProgress: volume.videoProgress };
 };
@@ -47,7 +49,7 @@ const withEqualityFnResult = identity(createJSONStorage.persist((arg0, arg1) => 
   const _require = arg0;
   let closure_1 = arg1;
   return {
-    volume: _require("../../../discord_common/js/packages/video-player/DiscordVideoPlayerTypes.tsx").DEFAULT_VIDEO_VOLUME,
+    volume: _DEFAULT_VIDEO_VOLUME.DEFAULT_VIDEO_VOLUME,
     muted: false,
     transcriptEnabled: false,
     captionEnabled: false,

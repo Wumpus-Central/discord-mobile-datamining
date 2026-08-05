@@ -1,3 +1,4 @@
+import { BlurTheme } from "BackgroundBlurFill.native.tsx";
 // discord_app/design/components/experimental/BackgroundBlurView/native/BackgroundBlurView.native.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -28,12 +29,12 @@ const forwardRefResult = require("noop").forwardRef(function BackgroundBlurViewC
     obj[0] = blurTheme;
     obj[1] = pressed;
     obj[2] = android_blurTargetViewNativeId;
-    let tmp9 = callback(require("BackgroundBlurFill.native.tsx") /* BlurTheme */.BackgroundBlurFillWithPress, obj);
+    let tmp9 = callback(BlurTheme /* BlurTheme */.BackgroundBlurFillWithPress, obj);
   } else {
     obj = { blurTheme: null, android_blurTargetViewNativeId: null };
     obj[0] = blurTheme;
     obj[1] = android_blurTargetViewNativeId;
-    tmp9 = callback(require("BackgroundBlurFill.native.tsx") /* BlurTheme */.BackgroundBlurFill, obj);
+    tmp9 = callback(BlurTheme /* BlurTheme */.BackgroundBlurFill, obj);
   }
   const items1 = [tmp9, children];
   obj.children = items1;

@@ -1,3 +1,4 @@
+import { CallWithVoiceChat } from "ChannelCallNavigator.tsx";
 // discord_app/modules/video_calls/native/components/ChannelCallModal.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "initialize";
@@ -80,7 +81,7 @@ let closure_18 = importAllResult.memo((arg0) => {
   if (null != first) {
     let obj = { channel: null };
     obj[0] = first;
-    tmp4 = callback5(require("ChannelCallNavigator.tsx"), obj);
+    tmp4 = callback5(CallWithVoiceChat, obj);
   }
   return tmp4;
 });

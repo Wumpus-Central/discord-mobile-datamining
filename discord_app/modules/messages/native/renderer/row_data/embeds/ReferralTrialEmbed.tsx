@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { createCacheKey } from "../../../../../../design/components/Styles/native/createStyles.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/ReferralTrialEmbed.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -20,14 +22,14 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
   let titleColor;
   if (null != message.author) {
     let obj = { headerTextColor: null, titleColor: null, bodyTextColor: null, footerTextColor: null, subTextColor: null, backgroundColor: null, acceptLabelColor: null };
-    obj[0] = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
-    obj[1] = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_TEXT_HEADING_PRIMARY;
-    obj[2] = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_DEFAULT;
-    obj[3] = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_MUTED;
-    obj[4] = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_DEFAULT;
-    obj[5] = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_NORMAL;
-    obj[6] = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
-    const tmp47 = _require("../../../../../../design/components/Styles/native/createStyles.tsx").createNativeStyleProperties(obj)(theme);
+    obj[0] = Themes.colors.WHITE;
+    obj[1] = Themes.colors.MOBILE_TEXT_HEADING_PRIMARY;
+    obj[2] = Themes.colors.TEXT_DEFAULT;
+    obj[3] = Themes.colors.TEXT_MUTED;
+    obj[4] = Themes.colors.INTERACTIVE_TEXT_DEFAULT;
+    obj[5] = Themes.colors.BACKGROUND_MOD_NORMAL;
+    obj[6] = Themes.colors.WHITE;
+    const tmp47 = _createCacheKey.createNativeStyleProperties(obj)(theme);
     ({ titleColor, bodyTextColor, backgroundColor } = tmp47);
     ({ headerTextColor, footerTextColor, subTextColor, acceptLabelColor } = tmp47);
     channel = channel.getChannel(message.getChannelId());
@@ -223,6 +225,6 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
         return obj13;
       }
     }
-    const obj28 = _require("../../../../../../design/components/Styles/native/createStyles.tsx");
+    const obj28 = _createCacheKey;
   }
 };

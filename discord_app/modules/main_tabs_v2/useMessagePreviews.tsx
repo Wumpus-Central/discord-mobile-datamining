@@ -1,3 +1,6 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { useIsNsfwGated } from "../age_gate/useIsNsfwGated.tsx";
+import { useLatestChannelMessage } from "../message_previews/useLatestChannelMessage.tsx";
 // discord_app/modules/main_tabs_v2/useMessagePreviews.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
@@ -46,7 +49,7 @@ export default function useMessagePreview(guild_id) {
     return hasUnreadResult;
   });
   if (!disabled) {
-    disabled = require("../age_gate/useIsNsfwGated.tsx")(guild_id);
+    disabled = useIsNsfwGated(guild_id);
   }
   if (!disabled) {
     disabled = stateFromStores === tmp(3963).MessagePreviewTypes.NONE;
@@ -61,12 +64,12 @@ export default function useMessagePreview(guild_id) {
     }
     disabled = tmp6;
   }
-  return require("../message_previews/useLatestChannelMessage.tsx")(guild_id, disabled);
+  return useLatestChannelMessage(guild_id, disabled);
 };
 export const useMessagePreviewSetting = function useMessagePreviewSetting(arg0) {
   const _require = arg0;
   const items = [handleConnectionClosedOrResumed];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const guilds = outer1_3.settings.guilds;
     let tmp2 = null;
     if (null != guild_id) {

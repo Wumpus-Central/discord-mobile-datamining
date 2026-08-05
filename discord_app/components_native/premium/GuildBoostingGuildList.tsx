@@ -1,3 +1,5 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { useGuildAppliedBoostCount } from "../../modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx";
 // discord_app/components_native/premium/GuildBoostingGuildList.tsx
 import "set";
 import get_ActivityIndicator from "getSystemLocale";
@@ -18,7 +20,7 @@ function GuildBoostingGuildListItem(guildId) {
   let obj = guildId(589);
   const items = [createGuildRecordFromRust];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getGuild(guildId));
-  require("../../modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx");
+  useGuildAppliedBoostCount;
   if (stateFromStores != null) {
     const id = stateFromStores.id;
   }
@@ -85,7 +87,7 @@ export default function GuildBoostingGuildList(guildCount) {
   if (guildCount === undefined) {
     guildCount = closure_7;
   }
-  let obj = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [insertUnsortedGuilds];
   const stateFromStores = obj.useStateFromStores(items, () => flattenedGuildIds.getFlattenedGuildIds());
   obj = { style: guildCount.style, children: null };

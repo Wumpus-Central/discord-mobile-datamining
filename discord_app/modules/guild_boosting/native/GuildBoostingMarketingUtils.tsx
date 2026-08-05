@@ -1,8 +1,9 @@
+import { getGuildTierFromGuild } from "../../../utils/GuildBoostingUtils.tsx";
 // discord_app/modules/guild_boosting/native/GuildBoostingMarketingUtils.tsx
 const result = require("SoundboardIcon").fileFinishedImporting("modules/guild_boosting/native/GuildBoostingMarketingUtils.tsx");
 
 export const getIconForPerk = function getIconForPerk(perkIcon) {
-  if (require("../../../utils/GuildBoostingUtils.tsx") /* getGuildTierFromGuild */.PerkIcons.EMOJI === perkIcon) {
+  if (getGuildTierFromGuild /* getGuildTierFromGuild */.PerkIcons.EMOJI === perkIcon) {
     return tmp(7576).ReactionIcon;
   } else if (tmp(4177).PerkIcons.SOUNDBOARD === perkIcon) {
     return tmp(7630).SoundboardIcon;

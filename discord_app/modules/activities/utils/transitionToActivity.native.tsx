@@ -1,3 +1,5 @@
+import { ChannelCallCameraPreview } from "../../video_calls/native/components/ChannelCallModal.tsx";
+import { getEmbeddedActivityLocationChannelId } from "embeddedActivityLocationUtils.tsx";
 // discord_app/modules/activities/utils/transitionToActivity.native.tsx
 import { setVoiceChatDrawerState } from "VoiceChatDrawerState";
 import participantFromServer from "participantFromServer";
@@ -7,11 +9,11 @@ import { VoiceChatDrawerState } from "BOX_MODE_ACTIONSHEET_WIDTH";
 let result = require("ActivityPanelModes").fileFinishedImporting("modules/activities/utils/transitionToActivity.native.tsx");
 
 export default function transitionToActivity(arg0, _location) {
-  let obj = require("embeddedActivityLocationUtils.tsx") /* getEmbeddedActivityLocationChannelId */;
+  let obj = getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */;
   const embeddedActivityLocationChannelId = obj.getEmbeddedActivityLocationChannelId(_location);
   if (null != embeddedActivityLocationChannelId) {
     let tmpResult = tmp(4136);
-    const isModalOpenResult = tmpResult.isModalOpen(require("../../video_calls/native/components/ChannelCallModal.tsx"));
+    const isModalOpenResult = tmpResult.isModalOpen(ChannelCallCameraPreview);
     let tmp4 = !isModalOpenResult;
     if (!isModalOpenResult) {
       tmp4 = tmp15(10320)(embeddedActivityLocationChannelId);

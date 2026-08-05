@@ -1,3 +1,4 @@
+import { StageTileSize } from "../../StageTileTypes.tsx";
 // discord_app/modules/stage_channels/native/components/SpeakerTile.tsx
 import importAllResult from "registerAsset";
 import { View } from "Button";
@@ -164,7 +165,7 @@ export const LANDSCAPE_MAX_TILE_WIDTH_FULL = result;
 export const LANDSCAPE_MAX_TILE_WIDTH = result1;
 export const useSpeakerTileStyles = styles;
 export const getSizeStyle = function getSizeStyle(size, speakerTileStyles) {
-  if (require("../../StageTileTypes.tsx") /* StageTileSize */.StageTileSize.FULL === size) {
+  if (StageTileSize /* StageTileSize */.StageTileSize.FULL === size) {
     return speakerTileStyles.full;
   } else if (tmp(10822).StageTileSize.HALF === size) {
     return speakerTileStyles.half;
@@ -174,7 +175,7 @@ export const getSizeStyle = function getSizeStyle(size, speakerTileStyles) {
   tmp = require;
 };
 export const getTileWidthStyle = function getTileWidthStyle(arg0, arg1, arg2) {
-  const StageTileSize = require("../../StageTileTypes.tsx") /* StageTileSize */.StageTileSize;
+  const StageTileSize = StageTileSize /* StageTileSize */.StageTileSize;
   if (arg2) {
     let obj = { maxWidth: null };
     obj[0] = arg0 === StageTileSize.FULL ? closure_9 : result1;

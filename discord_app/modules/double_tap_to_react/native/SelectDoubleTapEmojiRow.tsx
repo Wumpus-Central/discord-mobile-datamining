@@ -1,3 +1,5 @@
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { Emoji } from "../../emojis/native/Emoji.tsx";
 // discord_app/modules/double_tap_to_react/native/SelectDoubleTapEmojiRow.tsx
 import importAllResult from "ReactionIcon";
 import { View } from "EMOJI_PICKER_ACTION_SHEET_KEY";
@@ -95,13 +97,13 @@ let closure_13 = importAllResult.memo((emoji) => {
     }
     obj2[1] = animated;
     obj2[2] = closure_7;
-    let url = require("../../../utils/AvatarUtils.tsx").getEmojiURL(obj2);
-    const tmp8Result = require("../../../utils/AvatarUtils.tsx");
+    let url = getAvatarURL.getEmojiURL(obj2);
+    const tmp8Result = getAvatarURL;
   } else {
     url = emoji.url;
   }
   obj1[4] = url;
-  obj[1] = closure_9(require("../../emojis/native/Emoji.tsx"), obj1);
+  obj[1] = closure_9(Emoji, obj1);
   obj[4] = closure_9(View, obj);
   return closure_9(emoji(4812).PressableOpacity, obj);
 });

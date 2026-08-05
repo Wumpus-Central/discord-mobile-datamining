@@ -1,3 +1,7 @@
+import { CheckmarkLargeIcon } from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { officialApplicationIds } from "../ConnectionsUtils.tsx";
 // discord_app/modules/connections/native/ConnectionsRoleMessageBadgeActionSheet.tsx
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
 import apply from "apply";
@@ -32,27 +36,27 @@ function PopoutCheck(arg0) {
   const tmp = createCacheKey();
   if (null != description) {
     if (OperatorTypes.LESS_THAN === operator) {
-      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
       let obj = { description: null, count: null };
       obj[0] = description;
       const _Math = Math;
       const _Number = Number;
       obj[1] = Math.max(0, Number(value) - 1);
-      let formatResult = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["2p7dA3"], obj);
+      let formatResult = intl.format(getSystemLocale /* getSystemLocale */.t["2p7dA3"], obj);
     } else {
       formatResult = description;
       if (tmp5.GREATER_THAN === operator) {
-        const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        const intl2 = getSystemLocale /* getSystemLocale */.intl;
         obj = { description: null, count: null };
         obj[0] = description;
         const _Math2 = Math;
         const _Number2 = Number;
         obj[1] = Math.max(0, Number(value) + 1);
-        formatResult = intl2.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["2p7dA3"], obj);
+        formatResult = intl2.format(getSystemLocale /* getSystemLocale */.t["2p7dA3"], obj);
       }
     }
   } else {
-    obj = require("../ConnectionsUtils.tsx") /* officialApplicationIds */;
+    obj = officialApplicationIds /* officialApplicationIds */;
     const obj1 = { connectionType: null, connectionMetadataField: null, operator: null, value: null };
     obj1[0] = connectionType;
     obj1[1] = connectionMetadataField;
@@ -66,10 +70,10 @@ function PopoutCheck(arg0) {
     obj2[0] = tmp.popoutCheck;
     const obj3 = { size: "sm", style: null };
     obj3[1] = tmp.popoutCheckIcon;
-    const items = [callback(require("../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx") /* CheckmarkLargeIcon */.CheckmarkLargeIcon, obj3), ];
+    const items = [callback(CheckmarkLargeIcon /* CheckmarkLargeIcon */.CheckmarkLargeIcon, obj3), ];
     const obj4 = { variant: "text-xs/medium", color: "mobile-text-heading-primary", children: null };
     obj4[2] = formatResult;
-    items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj4);
+    items[1] = callback(Text /* Text */.Text, obj4);
     obj2[1] = items;
     tmp9 = callback2(closure_6, obj2);
   }

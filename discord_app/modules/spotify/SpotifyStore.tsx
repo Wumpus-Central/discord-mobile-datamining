@@ -1,3 +1,10 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import { start } from "../../../discord_common/js/packages/timers/Timers.tsx";
+import { useIsSpeaking } from "../../hooks/useIsSpeaking.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { updateAssets } from "../../utils/ApplicationAssetUtils.tsx";
+import { apiRequest } from "SpotifyActionCreators.tsx";
 // discord_app/modules/spotify/SpotifyStore.tsx
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";
@@ -32,7 +39,7 @@ function upsertAccount(accountId, accessToken) {
     const obj = Object.create(SpotifySocket.prototype);
     obj._requestedDisconnect = false;
     obj._requestedConnect = false;
-    obj.handleDeviceStateChange = require("../../../_runtime/00012_apply.js").throttle(() => {
+    obj.handleDeviceStateChange = apply.throttle(() => {
       let accessToken;
       let accountId;
       obj = obj(outer1_2[15]);
@@ -65,13 +72,13 @@ function upsertAccount(accountId, accessToken) {
     obj.accessToken = accessToken;
     const interval = new obj(4170).Interval();
     obj.pingInterval = interval;
-    const tmp15 = new require("../../../discord_common/js/packages/backoff/Backoff.tsx")(undefined, MINUTE);
+    const tmp15 = new fails(undefined, MINUTE);
     obj.backoff = tmp15;
     obj.connect();
     tmp[accountId] = obj;
     const _HermesInternal = HermesInternal;
     importDefault.info("Added account: " + accountId);
-    const obj2 = require("../../../_runtime/00012_apply.js");
+    const obj2 = apply;
     const tmp2 = SpotifySocket;
   }
 }
@@ -172,7 +179,7 @@ function activitySync(userId, activity, arg2) {
               }
               const tmp14Result = closure_13(type);
               if (null != tmp14Result) {
-                const obj4 = require("SpotifyActionCreators.tsx") /* apiRequest */;
+                const obj4 = apiRequest /* apiRequest */;
                 obj = { position: null, deviceId: null, repeat: null };
                 obj[0] = +bound;
                 obj[1] = device.id;
@@ -185,7 +192,7 @@ function activitySync(userId, activity, arg2) {
                 obj[3] = start;
                 let str = "presence change";
                 if (arg2) {
-                  let obj1 = require("../../utils/AnalyticsUtils.tsx");
+                  let obj1 = expandEventProperties;
                   obj1 = { party_id: null, other_user_id: null };
                   obj1[0] = party.id;
                   obj1[1] = userId;
@@ -206,7 +213,7 @@ function activitySync(userId, activity, arg2) {
   }
 }
 function handleUserActivitySyncStop() {
-  let obj = require("../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   let partyId = null;
   if (null != c4) {
     partyId = c4.partyId;
@@ -259,8 +266,8 @@ function handleUserActivitySyncStop() {
   if (null != tmp11) {
     const socket = tmp11.socket;
     if (tmp18) {
-      require("SpotifyActionCreators.tsx") /* apiRequest */.pause(socket.accountId, socket.accessToken);
-      const obj4 = require("SpotifyActionCreators.tsx") /* apiRequest */;
+      apiRequest /* apiRequest */.pause(socket.accountId, socket.accessToken);
+      const obj4 = apiRequest /* apiRequest */;
     }
     tmp18 = null != dependencyMap3[socket.accountId] && dependencyMap3[socket.accountId].track.id === trackId;
   }
@@ -306,7 +313,7 @@ function handleUserConnectionsUpdate() {
         if (null == tmp10.accessToken) {
           let tmp22 = require;
           let tmp23 = dependencyMap;
-          let obj2 = require("SpotifyActionCreators.tsx") /* apiRequest */;
+          let obj2 = apiRequest /* apiRequest */;
           let tmp24 = item10030;
           let accessToken = obj2.getAccessToken(tmp10.id);
         } else {
@@ -356,11 +363,11 @@ function autoPause() {
     if (null != tmp2) {
       const socket = tmp2.socket;
       let c43 = true;
-      require("SpotifyActionCreators.tsx") /* apiRequest */.pause(socket.accountId, socket.accessToken);
-      const obj2 = require("SpotifyActionCreators.tsx") /* apiRequest */;
-      require("../../utils/AnalyticsUtils.tsx").track(constants4.SPOTIFY_AUTO_PAUSED);
+      apiRequest /* apiRequest */.pause(socket.accountId, socket.accessToken);
+      const obj2 = apiRequest /* apiRequest */;
+      expandEventProperties.track(constants4.SPOTIFY_AUTO_PAUSED);
       tmp4.info("Playback auto paused");
-      const obj3 = require("../../utils/AnalyticsUtils.tsx");
+      const obj3 = expandEventProperties;
     }
   }
 }
@@ -460,7 +467,7 @@ function updatePlayerState(arg0, arg1, device) {
         if (context.type === tmp12.ALBUM) {
           resolved = Promise.resolve(context);
         } else {
-          const SpotifyAPI = _require("SpotifyActionCreators.tsx").SpotifyAPI;
+          const SpotifyAPI = _apiRequest.SpotifyAPI;
           const obj2 = { url: null };
           obj2[0] = context.href;
           const value = SpotifyAPI.get(arg0, arg1, obj2);
@@ -809,8 +816,8 @@ prototype["handleMessage"] = function handleMessage(data) {
         if (uri.startsWith(c22)) {
           const _decodeURIComponent = decodeURIComponent;
           self.connectionId = decodeURIComponent(uri.split(tmp15)[1]);
-          const result = require("SpotifyActionCreators.tsx") /* apiRequest */.subscribePlayerStateNotifications(self.accountId, self.accessToken, self.connectionId);
-          const obj = require("SpotifyActionCreators.tsx") /* apiRequest */;
+          const result = apiRequest /* apiRequest */.subscribePlayerStateNotifications(self.accountId, self.accessToken, self.connectionId);
+          const obj = apiRequest /* apiRequest */;
         }
         tmp15 = c22;
       }
@@ -959,7 +966,7 @@ prototype2["initialize"] = function initialize() {
     }
     return flag;
   });
-  const isSpotifyProtocolRegistered = require("SpotifyActionCreators.tsx") /* apiRequest */.fetchIsSpotifyProtocolRegistered();
+  const isSpotifyProtocolRegistered = apiRequest /* apiRequest */.fetchIsSpotifyProtocolRegistered();
 };
 prototype2["hasConnectedAccount"] = function hasConnectedAccount() {
   return Object.keys(closure_40).length > 0;
@@ -1138,7 +1145,7 @@ prototype2["getActivity"] = function getActivity() {
     }
     let assetFromImageURL = null;
     if (null != album.image) {
-      let obj1 = require("../../utils/ApplicationAssetUtils.tsx") /* updateAssets */;
+      let obj1 = updateAssets /* updateAssets */;
       assetFromImageURL = obj1.getAssetFromImageURL(PlatformTypes.SPOTIFY, album.image.url);
     }
     let obj = {};
@@ -1460,7 +1467,7 @@ const spotifyStore = new SpotifyStore(require("dispatcher"), {
           handleUserActivitySyncStop();
         }
         if (null != metadata) {
-          const obj2 = require("SpotifyActionCreators.tsx") /* apiRequest */;
+          const obj2 = apiRequest /* apiRequest */;
           ({ accountId, accessToken } = socket);
           let TRACK = metadata.type;
           if (TRACK == null) {
@@ -1496,7 +1503,7 @@ const spotifyStore = new SpotifyStore(require("dispatcher"), {
     userId = userId.userId;
     if (userId === store.getId()) {
       const result = updateVoiceState.isCurrentClientInVoiceChannel();
-      let obj = require("../../hooks/useIsSpeaking.tsx") /* useIsSpeaking */;
+      let obj = useIsSpeaking /* useIsSpeaking */;
       obj = { userId: null, checkSoundSharing: true, checkSoundboardSounds: false };
       obj[0] = userId;
       if (result) {
@@ -1551,7 +1558,7 @@ const spotifyStore = new SpotifyStore(require("dispatcher"), {
       if (null != sourceId) {
         if (observedAppNameForWindow.getObservedAppNameForWindow(sourceId) === user.name) {
           if (tmp5) {
-            const interval = new require("../../../discord_common/js/packages/timers/Timers.tsx") /* start */.Interval();
+            const interval = new start /* start */.Interval();
             c44 = interval;
             interval.start(closure_24, autoPause);
           }

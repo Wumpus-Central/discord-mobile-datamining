@@ -1,3 +1,4 @@
+import { getApplicationFlags } from "utils/ApplicationFlagUtils.tsx";
 // discord_app/modules/applications/useIsSocialLayerParentApplication.tsx
 import noop from "noop";
 import { ApplicationFlags } from "ME";
@@ -11,5 +12,5 @@ export default function useIsSocialLayerParentApplication(arg0) {
   return React.useMemo(() => callback(outer1_1[2]).hasApplicationFlag(callback, outer1_3.PARENT), items);
 };
 export const getIsSocialLayerParentApplication = function getIsSocialLayerParentApplication(application) {
-  return require("utils/ApplicationFlagUtils.tsx") /* getApplicationFlags */.hasApplicationFlag(application, ApplicationFlags.PARENT);
+  return getApplicationFlags /* getApplicationFlags */.hasApplicationFlag(application, ApplicationFlags.PARENT);
 };

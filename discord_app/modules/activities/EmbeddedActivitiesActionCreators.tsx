@@ -1,3 +1,6 @@
+import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { addVersionedDismissedContent } from "../dismissible_content/DismissibleContentUtils.tsx";
 // discord_app/modules/activities/EmbeddedActivitiesActionCreators.tsx
 import createExecutable from "createExecutable";
 import { getOrFetchApplicationCommandIndexForTarget as closure_4 } from "getIndexKey";
@@ -1335,8 +1338,8 @@ function stopEmbeddedActivity(showFeedback) {
   }
   obj[3] = launchId;
   obj[4] = flag;
-  require("../../Dispatcher.tsx").dispatch(obj);
-  const obj2 = require("../../Dispatcher.tsx");
+  dispatcher.dispatch(obj);
+  const obj2 = dispatcher;
   const tmp2 = importDefault;
   const tmp6 = applicationId;
   const embeddedActivityLocationChannelId = applicationId(3903).getEmbeddedActivityLocationChannelId(_location);
@@ -2301,13 +2304,13 @@ export const runPrimaryAppCommandOrJoinEmbeddedActivity = function runPrimaryApp
 };
 export { stopEmbeddedActivity };
 export const requestRespondToSeriousThermalState = function requestRespondToSeriousThermalState() {
-  require("../../Dispatcher.tsx").dispatch({ type: "EMBEDDED_ACTIVITY_REQUEST_RESPOND_TO_SERIOUS_THERMAL_STATE" });
+  dispatcher.dispatch({ type: "EMBEDDED_ACTIVITY_REQUEST_RESPOND_TO_SERIOUS_THERMAL_STATE" });
 };
 export const consumeRequestToReactToSeriousThermalState = function consumeRequestToReactToSeriousThermalState() {
-  require("../../Dispatcher.tsx").dispatch({ type: "EMBEDDED_ACTIVITY_CONSUME_RESPOND_TO_SERIOUS_THERMAL_STATE_REQUEST" });
+  dispatcher.dispatch({ type: "EMBEDDED_ACTIVITY_CONSUME_RESPOND_TO_SERIOUS_THERMAL_STATE_REQUEST" });
 };
 export const disregardSeriousThermalState = function disregardSeriousThermalState() {
-  require("../../Dispatcher.tsx").dispatch({ type: "EMBEDDED_ACTIVITY_DISREGARD_SERIOUS_THERMAL_STATE" });
+  dispatcher.dispatch({ type: "EMBEDDED_ACTIVITY_DISREGARD_SERIOUS_THERMAL_STATE" });
 };
 export const fetchDeveloperApplications = function fetchDeveloperApplications() {
   const self = this;
@@ -2364,8 +2367,8 @@ export const dismissNewActivityIndicator = function dismissNewActivityIndicator(
   if (arg0 === undefined) {
     INDIRECT_ACTION = ContentDismissActionType.INDIRECT_ACTION;
   }
-  const obj = require("../dismissible_content/DismissibleContentUtils.tsx") /* addVersionedDismissedContent */;
-  const result = obj.markVersionedDismissibleContentAsDismissed(require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.ACTIVITIES_VOICE_LAUNCHER_BADGE, Math.floor(new Date().getTime() / 1000), { dismissAction: INDIRECT_ACTION });
+  const obj = addVersionedDismissedContent /* addVersionedDismissedContent */;
+  const result = obj.markVersionedDismissibleContentAsDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.ACTIVITIES_VOICE_LAUNCHER_BADGE, Math.floor(new Date().getTime() / 1000), { dismissAction: INDIRECT_ACTION });
 };
 export const validateTestMode = function validateTestMode() {
   const self = this;
@@ -2378,22 +2381,22 @@ export const validateTestMode = function validateTestMode() {
   return applyArgumentsResult;
 };
 export const updateActivityPanelMode = function updateActivityPanelMode(PANEL) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "EMBEDDED_ACTIVITY_SET_PANEL_MODE", activityPanelMode: PANEL };
   obj.dispatch(obj);
 };
 export const updateFocusedActivityLayout = function updateFocusedActivityLayout(focusedActivityLayout) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT", focusedActivityLayout };
   obj.dispatch(obj);
 };
 export const openActivityPopoutWindow = function openActivityPopoutWindow() {
-  require("../../Dispatcher.tsx").dispatch({ type: "EMBEDDED_ACTIVITY_SET_PANEL_MODE", activityPanelMode: ActivityPanelModes.ACTIVITY_POPOUT_WINDOW });
-  const obj = require("../../Dispatcher.tsx");
-  require("../../Dispatcher.tsx").dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
+  dispatcher.dispatch({ type: "EMBEDDED_ACTIVITY_SET_PANEL_MODE", activityPanelMode: ActivityPanelModes.ACTIVITY_POPOUT_WINDOW });
+  const obj = dispatcher;
+  dispatcher.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
 };
 export const updateActivityPopoutWindowLayout = function updateActivityPopoutWindowLayout(layout) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "EMBEDDED_ACTIVITY_UPDATE_POPOUT_WINDOW_LAYOUT", layout };
   obj.dispatch(obj);
 };

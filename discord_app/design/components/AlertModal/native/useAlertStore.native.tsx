@@ -1,3 +1,5 @@
+import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import { markAccessibilityFocus } from "../../../../modules/a11y/native/markAccessibilityFocus.tsx";
 // discord_app/design/components/AlertModal/native/useAlertStore.native.tsx
 import _slicedToArray from "_slicedToArray";
 import keys from "keys";
@@ -50,7 +52,7 @@ export const dismissAlert = function dismissAlert(c6) {
       }
       tmp2 = key === c6;
     }
-    _require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+    _batchUpdates.batchUpdates(() => {
       outer1_4.setState((alerts) => {
         alerts = alerts.alerts;
         return { alerts: alerts.filter((key) => key.key !== closure_0) };
@@ -63,7 +65,7 @@ export const dismissAlert = function dismissAlert(c6) {
     if (tmp2) {
       found(4626)();
     }
-    const obj = _require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx");
+    const obj = _batchUpdates;
   }
 };
 export const openAlert = function openAlert(DeleteEventAlert, arg1, onCloseCallback, arg3) {
@@ -72,9 +74,9 @@ export const openAlert = function openAlert(DeleteEventAlert, arg1, onCloseCallb
   const dependencyMap = onCloseCallback;
   let _slicedToArray = arg3;
   if (0 === keys.getState().alerts.length) {
-    require("../../../../modules/a11y/native/markAccessibilityFocus.tsx")();
+    markAccessibilityFocus();
   }
-  _require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     outer1_4.setState((alerts) => {
       alerts = [...alerts.alerts];
       const obj = { key: closure_0, node: closure_1, onDismiss: closure_2, dismissable: null };

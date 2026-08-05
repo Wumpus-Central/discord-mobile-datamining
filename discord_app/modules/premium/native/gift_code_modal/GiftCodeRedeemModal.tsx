@@ -1,3 +1,4 @@
+import { useGiftCodeErrorMessage } from "useGiftCodeErrorMessage.tsx";
 // discord_app/modules/premium/native/gift_code_modal/GiftCodeRedeemModal.tsx
 import "noop";
 import updateGiftCode from "updateGiftCode";
@@ -20,7 +21,7 @@ export default function GiftCodeRedeemModal(code) {
   let obj1 = stateFromStores1(589);
   const items1 = [mergeGuildAvatar];
   stateFromStores1 = obj1.useStateFromStores(items1, () => currentUser.getCurrentUser());
-  const tmp6 = require("useGiftCodeErrorMessage.tsx")(code, stateFromStores1);
+  const tmp6 = useGiftCodeErrorMessage(code, stateFromStores1);
   if (null == stateFromStores1) {
     return null;
   } else {

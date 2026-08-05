@@ -1,3 +1,7 @@
+import { useTypingUserIds } from "../../../../chat/useTypingUsersIds.tsx";
+import { num2 } from "../ForumPostMessageCount.tsx";
+import { ForumPostTypingUsers } from "../ForumPostTypingUsers.tsx";
+import { MaxForumPostReactions } from "../reactions/ForumPostReactions.tsx";
 // discord_app/modules/forums/native/posts/list/ForumPostListFooter.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -22,11 +26,11 @@ export default function ForumPostListFooter(parentChannel) {
   let thread;
   ({ thread, firstMessage, hasUnreads } = parentChannel);
   const tmp = createCacheKey();
-  let obj = require("../../../../chat/useTypingUsersIds.tsx") /* useTypingUserIds */;
+  let obj = useTypingUserIds /* useTypingUserIds */;
   const typingUserIds = obj.useTypingUserIds(thread.id);
   let tmp5Result = typingUserIds.length > 0;
   obj = { style: tmp.footer, children: null };
-  const items = [callback(require("../ForumPostMessageCount.tsx"), { thread, hasUnreads }), , ];
+  const items = [callback(num2, { thread, hasUnreads }), , ];
   if (tmp5Result) {
     obj = { children: null };
     const obj1 = { style: null };
@@ -36,7 +40,7 @@ export default function ForumPostListFooter(parentChannel) {
     obj2[0] = thread;
     obj2[1] = typingUserIds;
     obj2[2] = hasUnreads;
-    items1[1] = tmp7(require("../ForumPostTypingUsers.tsx"), obj2);
+    items1[1] = tmp7(ForumPostTypingUsers, obj2);
     obj[0] = items1;
     tmp5Result = tmp5(closure_6, obj);
   }
@@ -48,7 +52,7 @@ export default function ForumPostListFooter(parentChannel) {
     obj3[1] = firstMessage;
     obj3[2] = parentChannel.parentChannel;
     obj3[3] = AnalyticsObjects.FORUM_LIST_ITEM_FOOTER;
-    tmp7Result = tmp7(require("../reactions/ForumPostReactions.tsx") /* MaxForumPostReactions */.MostCommonForumPostReaction, obj3);
+    tmp7Result = tmp7(MaxForumPostReactions /* MaxForumPostReactions */.MostCommonForumPostReaction, obj3);
   }
   items[2] = tmp7Result;
   obj[1] = items;

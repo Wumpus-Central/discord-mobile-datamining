@@ -1,3 +1,4 @@
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/go_live/utils/trackStreamProblem.tsx
 import { AnalyticEvents } from "ME";
 
@@ -19,7 +20,7 @@ export default function trackStreamProblem(arg0) {
     rating = null;
   }
   ({ category, variant } = arg0);
-  let obj = require("../../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { reason: problem, category, reason_variant: variant, streamer_user_id: stream.ownerId, stream_channel_id: stream.channelId, guild_id: stream.guildId, application_id: null, application_name: null, location: null, rating: null, feedback: null };
   let id = null;
   if (null != streamApplication) {

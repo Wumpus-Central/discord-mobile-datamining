@@ -1,3 +1,9 @@
+import { ChangeNicknameActionCreators } from "../../actions/ChangeNicknameActionCreators.tsx";
+import { trackInvite } from "../../actions/MessageActionCreators.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
+import { checkReactionResponse } from "../reactions/ReactionActionCreators.tsx";
+import { MAX_REACTIONS } from "../reactions/ReactionUtils.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/messages/LegacyCommands.tsx
 import _slicedToArray from "_slicedToArray";
 import getEmojiToGroupId from "getEmojiToGroupId";
@@ -16,7 +22,7 @@ obj = { tts: obj, me: obj, tableflip: obj1, unflip: obj2, shrug: obj3, nick: obj
 obj = {
   action() {
     const obj = { tts: null };
-    const EnableTTSCommand = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.EnableTTSCommand;
+    const EnableTTSCommand = explicitContentFromProto /* explicitContentFromProto */.EnableTTSCommand;
     obj[0] = EnableTTSCommand.getSetting();
     return obj;
   }
@@ -40,8 +46,8 @@ obj5[1] = function action(str, channel) {
           const trimmed = str.trim();
           const byName = disambiguatedEmojiContext.getByName(trimmed.slice(2, -1));
           if (null != byName) {
-            const obj3 = require("../reactions/ReactionActionCreators.tsx") /* checkReactionResponse */;
-            obj3.addReaction(channel.id, lastResult.id, require("../reactions/ReactionUtils.tsx") /* MAX_REACTIONS */.toReactionEmoji(byName));
+            const obj3 = checkReactionResponse /* checkReactionResponse */;
+            obj3.addReaction(channel.id, lastResult.id, MAX_REACTIONS /* MAX_REACTIONS */.toReactionEmoji(byName));
             return { content: "" };
           }
         }
@@ -77,7 +83,7 @@ obj4 = {
   action(arg0, channel) {
     channel = channel.channel;
     if (null != channel.guild_id) {
-      const obj = require("../../actions/ChangeNicknameActionCreators.tsx");
+      const obj = ChangeNicknameActionCreators;
       obj.changeNickname(channel.guild_id, channel.id, closure_8, arg0);
       return { content: "" };
     }
@@ -114,7 +120,7 @@ obj6[1] = function action(str, channel) {
         }
         if (null == str7) {
           if (0 === lastEditableMessage.attachments.length) {
-            let obj = require("../../actions/MessageActionCreators.tsx");
+            let obj = trackInvite;
             obj.deleteMessage(channel.id, lastEditableMessage.id);
           }
           return { content: "" };
@@ -122,8 +128,8 @@ obj6[1] = function action(str, channel) {
         if (str7 !== lastEditableMessage.content) {
           obj = { content: null };
           obj[0] = str7;
-          require("../../actions/MessageActionCreators.tsx").editMessage(channel.id, lastEditableMessage.id, obj);
-          const obj2 = require("../../actions/MessageActionCreators.tsx");
+          trackInvite.editMessage(channel.id, lastEditableMessage.id, obj);
+          const obj2 = trackInvite;
         }
         const tmp5 = callback(Array.from(match), 4);
       }
@@ -162,7 +168,7 @@ export const handleLegacyCommands = function handleLegacyCommands(text, arg1) {
         let tmp2 = arg1;
         let tmp3 = importDefault;
         let tmp4 = dependencyMap;
-        let obj = require("../app_analytics/AppAnalyticsUtils.tsx");
+        let obj = collectGuildAnalyticsMetadata;
         let tmp5 = constants;
         obj = { command: null };
         obj[0] = key10005;

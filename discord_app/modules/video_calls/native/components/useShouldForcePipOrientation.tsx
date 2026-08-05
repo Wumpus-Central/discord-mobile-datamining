@@ -1,3 +1,4 @@
+import { usePipVideoOrStream } from "../usePipVideoOrStream.tsx";
 // discord_app/modules/video_calls/native/components/useShouldForcePipOrientation.tsx
 import participantFromServer from "participantFromServer";
 import getParticipants from "getParticipants";
@@ -16,7 +17,7 @@ export const useShouldForcePipOrientation = function useShouldForcePipOrientatio
   let focusedEmbeddedActivityParticipant;
   channel = channel.channel;
   let OrientationType = dependencyMap;
-  const tmp = require("../usePipVideoOrStream.tsx")(channel.id);
+  const tmp = usePipVideoOrStream(channel.id);
   const items = [getParticipants, fetchFingerprint];
   const stateFromStores = channel(589).useStateFromStores(items, () => {
     const participant = outer1_4.getParticipant(channel.id, outer1_5.getId());

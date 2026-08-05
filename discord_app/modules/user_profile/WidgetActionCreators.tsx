@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/user_profile/WidgetActionCreators.tsx
 import convertClip from "convertClip";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -8,7 +9,7 @@ const result = require("ME").fileFinishedImporting("modules/user_profile/WidgetA
 
 export default {
   setPendingWidgets(items) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "WIDGET_PENDING_SET", widgets: items };
     obj.dispatch(obj);
   },
@@ -111,7 +112,7 @@ export default {
     })();
   },
   clearPendingWidgets() {
-    require("../../Dispatcher.tsx").dispatch({ type: "WIDGET_PENDING_CLEAR" });
+    dispatcher.dispatch({ type: "WIDGET_PENDING_CLEAR" });
   },
   uploadWidgetAsset(arg0) {
     let closure_0 = arg0;
@@ -379,7 +380,7 @@ export default {
     })();
   },
   removeGameFromSuggestedGames(applicationId) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "WIDGET_SUGGESTED_REMOVE_GAME", applicationId };
     obj.dispatch(obj);
   }

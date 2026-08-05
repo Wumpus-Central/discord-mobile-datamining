@@ -1,3 +1,7 @@
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
+import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
+import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/StageRaiseHandSystemMessage.tsx
 import getActiveStageChannelIds from "getActiveStageChannelIds";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -14,11 +18,11 @@ const result = require("getUncachedChannelPermissions").fileFinishedImporting("m
 
 export const createStageRaiseHandSystemMessage = function createStageRaiseHandSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */;
+  let obj = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   let canResult = getUncachedChannelPermissions.can(constants4.MUTE_MEMBERS, channel.getChannel(message.channel_id));
   participant = participant.getParticipant(message.channel_id, message.author.id);
-  let obj1 = require("../../../../../utils/SnowflakeUtils.tsx");
+  let obj1 = DISCORD_EPOCH;
   let num;
   const date = new Date(obj1.extractTimestamp(message.id));
   if (participant != null) {
@@ -45,11 +49,11 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
   obj = { content: null, showInviteToSpeakButton: null, buttonLabel: null, ephemeralIndication: null };
   const intl = tmp(1236).intl;
   obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null };
-  obj[1] = require("formatUsernameOnClick.tsx")({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
-  obj[0] = intl.formatToParts(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.M87x7Y, obj);
+  obj[1] = formatUsernameOnClick({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
+  obj[0] = intl.formatToParts(getSystemLocale /* getSystemLocale */.t.M87x7Y, obj);
   obj[1] = canResult;
   const intl2 = tmp(1236).intl;
-  obj[2] = intl2.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.f0T7hI);
+  obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.f0T7hI);
   let tmp10;
   if (message.hasFlag(constants2.EPHEMERAL)) {
     if (message.type === constants3.STAGE_RAISE_HAND) {

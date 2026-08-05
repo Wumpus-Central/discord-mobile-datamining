@@ -1,3 +1,10 @@
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { formatSingleCurrencyPrice } from "../../../../utils/PriceUtils.tsx";
+import { getBenefitKey } from "../../GuildRoleSubscriptionTypeUtils.tsx";
+import { GuildPremiumRoleSubscribeButton } from "GuildPremiumRoleSubscribeButton.tsx";
+import { GuildRoleSubscriptionMemberPreview } from "listing_elements/GuildRoleSubscriptionMemberPreview.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionListingPreview.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
@@ -17,15 +24,15 @@ function PriceTier(arg0) {
   const tmp2 = createCacheKey();
   let obj = { style: tmp2.priceGroup, children: null };
   obj = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  obj[2] = require("../../../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */.formatPrice(price, currency);
-  const items = [callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+  obj[2] = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */.formatPrice(price, currency);
+  const items = [callback2(Text /* Text */.Text, obj), ];
   obj = { style: tmp2.priceInterval, variant: "eyebrow", color: "text-default", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   const obj1 = { period: null };
-  const obj3 = require("../../../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */;
-  obj1[0] = require("../../GuildRoleSubscriptionTypeUtils.tsx") /* getBenefitKey */.formatPlanInterval(merged);
-  obj[3] = intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.isLGyX, obj1);
-  items[1] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const obj3 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
+  obj1[0] = getBenefitKey /* getBenefitKey */.formatPlanInterval(merged);
+  obj[3] = intl.format(getSystemLocale /* getSystemLocale */.t.isLGyX, obj1);
+  items[1] = callback2(Text /* Text */.Text, obj);
   obj[1] = items;
   return callback3(View, obj);
 }
@@ -37,7 +44,7 @@ function Header(onPress) {
   let str = callback(importAll(14363).useImage(listingId), 1)[0];
   const obj3 = importAll(14363);
   obj = { style: tmp.header, children: null };
-  const items = [callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "heading-md/semibold", color: "interactive-text-active", children: callback(obj1.useName(listingId), 1)[0] }), , , , ];
+  const items = [callback2(Text /* Text */.Text, { variant: "heading-md/semibold", color: "interactive-text-active", children: callback(obj1.useName(listingId), 1)[0] }), , , , ];
   obj = { style: tmp.image, source: null };
   const obj4 = importAll(14363);
   const tmp3 = closure_7;
@@ -46,12 +53,12 @@ function Header(onPress) {
     str = "";
   }
   obj[1] = { uri: str };
-  items[1] = callback2(require("../../../../components_native/common/FastImage.tsx"), obj);
+  items[1] = callback2(preload, obj);
   obj1 = {};
   const merged = Object.assign(callback(obj.useSubscriptionPlan(listingId), 1)[0]);
   items[2] = callback2(PriceTier, obj1);
-  items[3] = callback2(require("GuildPremiumRoleSubscribeButton.tsx") /* GuildPremiumRoleSubscribeButton */.GuildPremiumRoleSubscribeButton, { onPress: onPress.onSubscribePress });
-  items[4] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/medium", children: callback(obj4.useDescription(listingId), 1)[0] });
+  items[3] = callback2(GuildPremiumRoleSubscribeButton /* GuildPremiumRoleSubscribeButton */.GuildPremiumRoleSubscribeButton, { onPress: onPress.onSubscribePress });
+  items[4] = callback2(Text /* Text */.Text, { variant: "text-sm/medium", children: callback(obj4.useDescription(listingId), 1)[0] });
   obj[1] = items;
   return tmp3(tmp4, obj);
 }
@@ -75,7 +82,7 @@ function SectionLabel(children) {
   let obj = {};
   const merged1 = Object.assign(merged);
   obj = { style: createCacheKey().sectionLabel, variant: "eyebrow", color: "text-default", children: children.label };
-  obj.children = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  obj.children = callback2(Text /* Text */.Text, obj);
   return callback2(Content, obj);
 }
 function LabeledSection(arg0) {
@@ -194,9 +201,9 @@ export const GuildRoleSubscriptionListingPreview = function GuildRoleSubscriptio
   const merged = Object.assign(arg0);
   const items = [callback2(Header, obj), , , , ];
   obj1 = { label: null, children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.FJZmYx);
-  obj1[1] = callback2(require("listing_elements/GuildRoleSubscriptionMemberPreview.tsx") /* GuildRoleSubscriptionMemberPreview */.GuildRoleSubscriptionMemberPreview, { role });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj1[0] = intl.string(getSystemLocale /* getSystemLocale */.t.FJZmYx);
+  obj1[1] = callback2(GuildRoleSubscriptionMemberPreview /* GuildRoleSubscriptionMemberPreview */.GuildRoleSubscriptionMemberPreview, { role });
   items[1] = callback2(LabeledSection, obj1);
   let tmp4Result = first.length > 0;
   if (tmp4Result) {

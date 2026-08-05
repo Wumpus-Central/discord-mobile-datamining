@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../_runtime/08038_registerAsset.js";
+import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
+import { getChannelIcon } from "../../../utils/native/ChannelUtils.tsx";
 // discord_app/modules/interaction_components/native/NativeSearchableSelectActionComponentUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
@@ -101,14 +104,14 @@ export const transformSearchableSelectOptions = function transformSearchableSele
       return null;
     }
   });
-  return mapped.filter(_require("../../../utils/GlobalUtils.tsx").isNotNullish);
+  return mapped.filter(_isDiscordFrontendDevelopment.isNotNullish);
 };
 export const getChannelIconData = function getChannelIconData(channel, guild) {
   if (channel.type === constants.GUILD_CATEGORY) {
-    let channelIconWithGuild = require("../../../../_runtime/08038_registerAsset.js");
+    let channelIconWithGuild = registerAsset;
   } else {
-    channelIconWithGuild = require("../../../utils/native/ChannelUtils.tsx") /* getChannelIcon */.getChannelIconWithGuild(channel, guild);
-    const obj = require("../../../utils/native/ChannelUtils.tsx") /* getChannelIcon */;
+    channelIconWithGuild = getChannelIcon /* getChannelIcon */.getChannelIconWithGuild(channel, guild);
+    const obj = getChannelIcon /* getChannelIcon */;
   }
   return channelIconWithGuild;
 };

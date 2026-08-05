@@ -1,3 +1,4 @@
+import { SCREEN_READER_ENABLED_GETTER } from "useIsScreenReaderEnabled.native.tsx";
 // discord_app/modules/a11y/native/AccessibilityLabelOptimizationExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
@@ -11,8 +12,8 @@ export default apexExperiment;
 export const shouldSkipAccessibilityLabels = function shouldSkipAccessibilityLabels() {
   enabled = enabled.enabled;
   if (enabled) {
-    enabled = !require("useIsScreenReaderEnabled.native.tsx") /* SCREEN_READER_ENABLED_GETTER */.getIsScreenReaderEnabled();
-    const obj = require("useIsScreenReaderEnabled.native.tsx") /* SCREEN_READER_ENABLED_GETTER */;
+    enabled = !SCREEN_READER_ENABLED_GETTER /* SCREEN_READER_ENABLED_GETTER */.getIsScreenReaderEnabled();
+    const obj = SCREEN_READER_ENABLED_GETTER /* SCREEN_READER_ENABLED_GETTER */;
   }
   return enabled;
 };

@@ -1,3 +1,6 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/user_settings/defs/native/EnableSwitchIconsSetting.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import createToggle from "createToggle";
@@ -5,18 +8,18 @@ import createToggle from "createToggle";
 const require = arg1;
 function useEnableSwitchIconsSettingValue() {
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => isSwitchIconsEnabled.isSwitchIconsEnabled);
+  return initialize /* initialize */.useStateFromStores(items, () => isSwitchIconsEnabled.isSwitchIconsEnabled);
 }
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["S3z+pV"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["S3z+pV"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue: useEnableSwitchIconsSettingValue,
   onValueChange: require("setFontSize").setSwitchIconsEnabled,
   usePredicate: function useShowSwitchIconsSetting() {
-    return require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("SettingsAccessibilityScreen");
+    return useIsMobileVisualRefreshExperimentEnabled("SettingsAccessibilityScreen");
   },
   hasIcon: true
 };

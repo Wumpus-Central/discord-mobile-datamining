@@ -1,3 +1,5 @@
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { hasFetchedColors } from "../../avatar/useAvatarColor.tsx";
 // discord_app/modules/guild_profile/native/GuildProfileUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -10,13 +12,13 @@ export const useProfilePrimaryColor = function useProfilePrimaryColor(guildProfi
   if (null != guildProfile) {
     guildIconURL = null;
     if (null == guildProfile.brandColorPrimary) {
-      let obj = require("../../../utils/AvatarUtils.tsx");
+      let obj = getAvatarURL;
       obj = { id: null, icon: null, size: 64 };
       ({ id: obj2[0], icon: obj2[1] } = guildProfile);
       guildIconURL = obj.getGuildIconURL(obj);
     }
   }
-  let brandColorPrimary = require("../../avatar/useAvatarColor.tsx")(guildIconURL, token);
+  let brandColorPrimary = hasFetchedColors(guildIconURL, token);
   brandColorPrimary = undefined;
   if (guildProfile != null) {
     brandColorPrimary = guildProfile.brandColorPrimary;
@@ -40,12 +42,12 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
   } else {
     let obj = { id: null, icon: null, size: 64 };
     ({ id: obj6[0], icon: obj6[1] } = guildProfileFromInvite);
-    const guildIconURL = require("../../../utils/AvatarUtils.tsx").getGuildIconURL(obj);
+    const guildIconURL = getAvatarURL.getGuildIconURL(obj);
     if (null == guildIconURL) {
       return null;
     } else {
-      require("../../avatar/useAvatarColor.tsx") /* hasFetchedColors */.maybeFetchColors(guildIconURL);
-      const useColorStore = require("../../avatar/useAvatarColor.tsx") /* hasFetchedColors */.useColorStore;
+      hasFetchedColors /* hasFetchedColors */.maybeFetchColors(guildIconURL);
+      const useColorStore = hasFetchedColors /* hasFetchedColors */.useColorStore;
       const tmp13 = useColorStore.getState().palette[guildIconURL];
       let first;
       if (tmp13 != null) {
@@ -73,8 +75,8 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
       } else {
         return null;
       }
-      const obj7 = require("../../avatar/useAvatarColor.tsx") /* hasFetchedColors */;
+      const obj7 = hasFetchedColors /* hasFetchedColors */;
     }
-    const obj5 = require("../../../utils/AvatarUtils.tsx");
+    const obj5 = getAvatarURL;
   }
 };

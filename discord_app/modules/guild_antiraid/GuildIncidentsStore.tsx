@@ -1,3 +1,4 @@
+import { DATE_CONFIG } from "GuildAntiRaidUtils.tsx";
 // discord_app/modules/guild_antiraid/GuildIncidentsStore.tsx
 import getHash from "getHash";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -75,7 +76,7 @@ const guildIncidentsStore = new GuildIncidentsStore(require("dispatcher"), {
       if (tmp7) {
         let tmp8 = require;
         let tmp9 = dependencyMap;
-        let obj = require("GuildAntiRaidUtils.tsx") /* DATE_CONFIG */;
+        let obj = DATE_CONFIG /* DATE_CONFIG */;
         let tmp10 = tmp3Result;
         let hasDetectedActivityResult = obj.hasDetectedActivity(tmp6);
         if (!hasDetectedActivityResult) {
@@ -113,13 +114,13 @@ const guildIncidentsStore = new GuildIncidentsStore(require("dispatcher"), {
     }
     let tmp4 = null != tmp2;
     if (tmp4) {
-      let hasDetectedActivityResult = require("GuildAntiRaidUtils.tsx") /* DATE_CONFIG */.hasDetectedActivity(tmp2);
+      let hasDetectedActivityResult = DATE_CONFIG /* DATE_CONFIG */.hasDetectedActivity(tmp2);
       if (!hasDetectedActivityResult) {
         hasDetectedActivityResult = tmp5(7932).isUnderLockdown(tmp2);
         const tmp5Result = tmp5(7932);
       }
       tmp4 = hasDetectedActivityResult;
-      const obj2 = require("GuildAntiRaidUtils.tsx") /* DATE_CONFIG */;
+      const obj2 = DATE_CONFIG /* DATE_CONFIG */;
       tmp5 = require;
     }
     if (tmp4) {
@@ -147,7 +148,7 @@ const guildIncidentsStore = new GuildIncidentsStore(require("dispatcher"), {
         const tmp5Result = tmp5(7932);
       }
       closure_6[guild.id] = tmp3;
-      obj2 = require("GuildAntiRaidUtils.tsx") /* DATE_CONFIG */;
+      obj2 = DATE_CONFIG /* DATE_CONFIG */;
       tmp5 = require;
     }
   },

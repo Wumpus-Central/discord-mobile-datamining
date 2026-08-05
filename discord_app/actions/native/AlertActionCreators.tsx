@@ -1,3 +1,5 @@
+import { useAlertStore } from "../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/actions/native/AlertActionCreators.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -33,10 +35,10 @@ export default {
   close() {
     if (null != c6) {
       c6 = null;
-      require("../../design/components/AlertModal/native/useAlertStore.native.tsx") /* useAlertStore */.dismissAlert(tmp);
-      const obj = require("../../design/components/AlertModal/native/useAlertStore.native.tsx") /* useAlertStore */;
+      useAlertStore /* useAlertStore */.dismissAlert(tmp);
+      const obj = useAlertStore /* useAlertStore */;
     }
-    require("../../Dispatcher.tsx").dispatch({ type: "ALERT_CLOSE" });
+    dispatcher.dispatch({ type: "ALERT_CLOSE" });
   },
   show(hideActionSheet) {
     let body;

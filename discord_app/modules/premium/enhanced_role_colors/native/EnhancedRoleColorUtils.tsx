@@ -1,3 +1,6 @@
+import { n } from "../../../../../_runtime/00689_n.js";
+import { isDiscordFrontendDevelopment } from "../../../../utils/GlobalUtils.tsx";
+import { useHasEnhancedRoleColors } from "../../powerups/hooks/useHasEnhancedRoleColors.tsx";
 // discord_app/modules/premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -20,36 +23,36 @@ function processColorStrings(colorStrings) {
     const primaryColor = colorStrings.primaryColor;
     if (theme.theme === ThemeTypes.LIGHT) {
       if (null != primaryColor) {
-        let obj = require("../../../../../_runtime/00689_n.js")(primaryColor);
+        let obj = n(primaryColor);
         let tmp10 = processColor;
         [tmp7, tmp8, tmp9] = callback(obj.hsl(), 3);
         const tmp6 = callback(obj.hsl(), 3);
-        const obj2 = require("../../../../../_runtime/00689_n.js");
-        let tmp12Result = processColor(require("../../../../../_runtime/00689_n.js").hsl(tmp7, tmp8, 0.85 * tmp9).hex());
-        const hslResult = require("../../../../../_runtime/00689_n.js").hsl(tmp7, tmp8, 0.85 * tmp9);
+        const obj2 = n;
+        let tmp12Result = processColor(n.hsl(tmp7, tmp8, 0.85 * tmp9).hex());
+        const hslResult = n.hsl(tmp7, tmp8, 0.85 * tmp9);
       }
       obj = { primaryColor: null, secondaryColor: null, tertiaryColor: null };
       obj[0] = tmp12Result;
       const secondaryColor = colorStrings.secondaryColor;
       if (tmp.theme === tmp2.LIGHT) {
         if (null != secondaryColor) {
-          const obj5 = require("../../../../../_runtime/00689_n.js")(secondaryColor);
-          [tmp17, tmp18, tmp19] = callback(require("../../../../../_runtime/00689_n.js")(secondaryColor).hsl(), 3);
-          const tmp16 = callback(require("../../../../../_runtime/00689_n.js")(secondaryColor).hsl(), 3);
-          const obj6 = require("../../../../../_runtime/00689_n.js");
-          let tmp10Result = tmp10(require("../../../../../_runtime/00689_n.js").hsl(tmp17, tmp18, 0.85 * tmp19).hex());
-          const hslResult1 = require("../../../../../_runtime/00689_n.js").hsl(tmp17, tmp18, 0.85 * tmp19);
+          const obj5 = n(secondaryColor);
+          [tmp17, tmp18, tmp19] = callback(n(secondaryColor).hsl(), 3);
+          const tmp16 = callback(n(secondaryColor).hsl(), 3);
+          const obj6 = n;
+          let tmp10Result = tmp10(n.hsl(tmp17, tmp18, 0.85 * tmp19).hex());
+          const hslResult1 = n.hsl(tmp17, tmp18, 0.85 * tmp19);
         }
         obj[1] = tmp10Result;
         const tertiaryColor = colorStrings.tertiaryColor;
         if (tmp.theme === tmp2.LIGHT) {
           if (null != tertiaryColor) {
-            const obj8 = require("../../../../../_runtime/00689_n.js")(tertiaryColor);
-            [tmp25, tmp26, tmp27] = callback(require("../../../../../_runtime/00689_n.js")(tertiaryColor).hsl(), 3);
-            const tmp24 = callback(require("../../../../../_runtime/00689_n.js")(tertiaryColor).hsl(), 3);
-            const obj9 = require("../../../../../_runtime/00689_n.js");
-            tmp10Result = tmp10(require("../../../../../_runtime/00689_n.js").hsl(tmp25, tmp26, 0.85 * tmp27).hex());
-            const hslResult2 = require("../../../../../_runtime/00689_n.js").hsl(tmp25, tmp26, 0.85 * tmp27);
+            const obj8 = n(tertiaryColor);
+            [tmp25, tmp26, tmp27] = callback(n(tertiaryColor).hsl(), 3);
+            const tmp24 = callback(n(tertiaryColor).hsl(), 3);
+            const obj9 = n;
+            tmp10Result = tmp10(n.hsl(tmp25, tmp26, 0.85 * tmp27).hex());
+            const hslResult2 = n.hsl(tmp25, tmp26, 0.85 * tmp27);
           }
           obj[2] = tmp10Result;
           return obj;
@@ -71,7 +74,7 @@ export const processColorStringsArray = function processColorStringsArray(colorS
   } else {
     const items = [, , ];
     ({ primaryColor: arr[0], secondaryColor: arr[1], tertiaryColor: arr[2] } = processColorStrings(colorStrings));
-    return items.filter(require("../../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
+    return items.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
   }
 };
 export const useProcessColorStringsArray = function useProcessColorStringsArray(colorStrings) {
@@ -104,10 +107,10 @@ export const useProcessColorStringsArray = function useProcessColorStringsArray(
   }, items);
 };
 export const isNativeMessageEligibleForEnhancedRoleColors = function isNativeMessageEligibleForEnhancedRoleColors(guildId, id) {
-  return require("../../powerups/hooks/useHasEnhancedRoleColors.tsx") /* useHasEnhancedRoleColors */.getHasEnhancedRoleColors(guildId, id);
+  return useHasEnhancedRoleColors /* useHasEnhancedRoleColors */.getHasEnhancedRoleColors(guildId, id);
 };
 export const useIsRoleStyleAndRoleColorsEligibleForERC = function useIsRoleStyleAndRoleColorsEligibleForERC(guildId, id, stateFromStores, processColorStringsArray) {
-  let tmp = require("../../powerups/hooks/useHasEnhancedRoleColors.tsx")(guildId, id);
+  let tmp = useHasEnhancedRoleColors(guildId, id);
   if (tmp) {
     tmp = "username" === stateFromStores;
   }

@@ -1,3 +1,4 @@
+import { items } from "../DatabaseDaos.tsx";
 // discord_app/modules/app_database/modules/NonGuildVersions.tsx
 import items from "items";
 import importDefaultResult from "handleConnectionOpen";
@@ -144,7 +145,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen(apiCodeVersion, database) {
   if (null != apiCodeVersion.apiCodeVersion) {
-    let obj = require("../DatabaseDaos.tsx");
+    let obj = items;
     const result = obj.nonGuildVersionsTransaction(database);
     obj = { id: "api_code_version", version: null };
     obj[1] = apiCodeVersion.apiCodeVersion;

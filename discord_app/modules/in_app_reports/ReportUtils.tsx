@@ -1,3 +1,9 @@
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { set } from "../../../discord_common/js/shared/shared-constants/ReportMenuType.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
+import { ReportNames } from "MenuTypes.tsx";
 // discord_app/modules/in_app_reports/ReportUtils.tsx
 import sendRequest from "sendRequest";
 import noop from "noop";
@@ -331,23 +337,23 @@ function _submitReportSecondLook() {
 }
 function getUnauthenticatedReportNameSafely(name) {
   name = name.name;
-  const values = Object.values(require("MenuTypes.tsx") /* ReportNames */.UnauthenticatedReportNames);
+  const values = Object.values(ReportNames /* ReportNames */.UnauthenticatedReportNames);
   const hasItem = values.includes(name);
-  require("../../../_runtime/metro/00038__.js")(hasItem, "Invalid report type " + name.name);
+  00038__(hasItem, "Invalid report type " + name.name);
   return name;
 }
 function getReportNameSafely(name) {
   name = name.name;
-  const values = Object.values(require("MenuTypes.tsx") /* ReportNames */.ReportNames);
+  const values = Object.values(ReportNames /* ReportNames */.ReportNames);
   const hasItem = values.includes(name);
-  require("../../../_runtime/metro/00038__.js")(hasItem, "Invalid report type " + name.name);
+  00038__(hasItem, "Invalid report type " + name.name);
   return name;
 }
 function getModeratorReportNameSafely(name) {
   name = name.name;
-  const values = Object.values(require("MenuTypes.tsx") /* ReportNames */.ModeratorReportNames);
+  const values = Object.values(ReportNames /* ReportNames */.ModeratorReportNames);
   const hasItem = values.includes(name);
-  require("../../../_runtime/metro/00038__.js")(hasItem, "Invalid report type " + name.name);
+  00038__(hasItem, "Invalid report type " + name.name);
   return name;
 }
 function genSubmitData(version, name, arr, email_token) {
@@ -394,7 +400,7 @@ function genSubmitData(version, name, arr, email_token) {
     })));
     return obj;
   }, {});
-  if (name.name !== require("MenuTypes.tsx") /* ReportNames */.ReportNames.MESSAGE) {
+  if (name.name !== ReportNames /* ReportNames */.ReportNames.MESSAGE) {
     if (name.name !== tmp(7831).ReportNames.FIRST_DM) {
       if (name.name !== tmp(7831).ReportNames.GUILD) {
         if (name.name !== tmp(7831).ReportNames.GUILD_DISCOVERY) {
@@ -546,7 +552,7 @@ export const submitReport = function submitReport(language, name, arr) {
   if (store.get("iar_skip_api_report_submit")) {
     let resolved = Promise.resolve();
   } else {
-    const REPORT_TO_MOD = require("../../../discord_common/js/shared/shared-constants/ReportMenuType.tsx") /* set */.ReportMenuTypeSets.REPORT_TO_MOD;
+    const REPORT_TO_MOD = set /* set */.ReportMenuTypeSets.REPORT_TO_MOD;
     if (REPORT_TO_MOD.has(name.name)) {
       let str2 = language.language;
       let obj = { version: null, variant: null, language: null, breadcrumbs: null, elements: null };
@@ -599,7 +605,7 @@ export const submitReport = function submitReport(language, name, arr) {
       const REPORT_TO_MOD2 = tmp4(7833).ReportMenuTypeSets.REPORT_TO_MOD;
       const _HermesInternal2 = HermesInternal;
       const hasItem = REPORT_TO_MOD2.has(name.name);
-      require("../../../_runtime/metro/00038__.js")(hasItem, "Invalid report type " + name.name);
+      00038__(hasItem, "Invalid report type " + name.name);
       if (name.name === tmp4(7831).ModeratorReportNames.MESSAGE) {
         const obj2 = { url: null, body: null, rejectWithError: false };
         obj2[0] = closure_7.SUBMIT_MODERATOR_MESSAGE_REPORT(name.record.channel_id, name.record.id);
@@ -634,7 +640,7 @@ export const submitReport = function submitReport(language, name, arr) {
         const error = new Error("Invalid report type " + name.name);
         throw error;
       }
-      const tmp23 = require("../../../_runtime/metro/00038__.js");
+      const tmp23 = 00038__;
     } else {
       const HTTP = tmp4(530).HTTP;
       obj = { url: null, body: null, rejectWithError: false };
@@ -643,11 +649,11 @@ export const submitReport = function submitReport(language, name, arr) {
       const values = Object.values(tmp4(7831).ReportNames);
       const _HermesInternal = HermesInternal;
       const hasItem1 = values.includes(name);
-      require("../../../_runtime/metro/00038__.js")(hasItem1, "Invalid report type " + name.name);
+      00038__(hasItem1, "Invalid report type " + name.name);
       obj[0] = closure_7.SUBMIT_REPORT_MENU(name);
       obj[1] = genSubmitData(language, name, arr);
       resolved = HTTP.post(obj);
-      const tmp8 = require("../../../_runtime/metro/00038__.js");
+      const tmp8 = 00038__;
     }
   }
   return resolved;
@@ -658,11 +664,11 @@ export const submitUnauthenticatedReport = function submitUnauthenticatedReport(
   } else {
     name = name.name;
     const _Object = Object;
-    const values = Object.values(require("MenuTypes.tsx") /* ReportNames */.UnauthenticatedReportNames);
+    const values = Object.values(ReportNames /* ReportNames */.UnauthenticatedReportNames);
     const _HermesInternal = HermesInternal;
     const hasItem = values.includes(name);
-    require("../../../_runtime/metro/00038__.js")(hasItem, "Invalid report type " + name.name);
-    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    00038__(hasItem, "Invalid report type " + name.name);
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     const obj = { url: null, body: null, rejectWithError: true };
     obj[0] = closure_7.SUBMIT_UNAUTHENTICATED_REPORT_MENU(name);
     obj[1] = genSubmitData(version, name, arr, email_token);
@@ -671,7 +677,7 @@ export const submitUnauthenticatedReport = function submitUnauthenticatedReport(
 };
 export const sendUnauthenticatedReportPincode = function sendUnauthenticatedReportPincode(name, email) {
   let length;
-  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   let num = 5381;
   let num2 = 0;
   let num3 = 5381;
@@ -732,10 +738,10 @@ export { getUnauthenticatedReportNameSafely };
 export { getReportNameSafely };
 export { getModeratorReportNameSafely };
 export const getModeratorReportEndpointSafely = function getModeratorReportEndpointSafely(name) {
-  const REPORT_TO_MOD = require("../../../discord_common/js/shared/shared-constants/ReportMenuType.tsx") /* set */.ReportMenuTypeSets.REPORT_TO_MOD;
+  const REPORT_TO_MOD = set /* set */.ReportMenuTypeSets.REPORT_TO_MOD;
   const hasItem = REPORT_TO_MOD.has(name.name);
-  require("../../../_runtime/metro/00038__.js")(hasItem, "Invalid report type " + name.name);
-  if (name.name === require("MenuTypes.tsx") /* ReportNames */.ModeratorReportNames.MESSAGE) {
+  00038__(hasItem, "Invalid report type " + name.name);
+  if (name.name === ReportNames /* ReportNames */.ModeratorReportNames.MESSAGE) {
     return closure_7.SUBMIT_MODERATOR_MESSAGE_REPORT(name.record.channel_id, name.record.id);
   } else {
     const _Error = Error;
@@ -743,26 +749,26 @@ export const getModeratorReportEndpointSafely = function getModeratorReportEndpo
     const error = new Error("Invalid report type " + name.name);
     throw error;
   }
-  const tmp = require("../../../_runtime/metro/00038__.js");
+  const tmp = 00038__;
 };
 export const trackCloseReportModalAnalytics = function trackCloseReportModalAnalytics(_onSubmit, c12, first) {
-  let obj = require("../app_analytics/AppAnalyticsUtils.tsx");
+  let obj = collectGuildAnalyticsMetadata;
   obj = { report_type: _onSubmit.name, report_id: first, navigation_history: c12, message_id: null, stage_instance_id: null, guild_scheduled_event_id: null, guild_id: null, channel_id: null, application_id: null };
-  if (_onSubmit.name === require("MenuTypes.tsx") /* ReportNames */.ReportNames.MESSAGE) {
+  if (_onSubmit.name === ReportNames /* ReportNames */.ReportNames.MESSAGE) {
     let id = _onSubmit.record.id;
   }
   obj[3] = id;
   id = undefined;
-  if (_onSubmit.name === require("MenuTypes.tsx") /* ReportNames */.ReportNames.STAGE_CHANNEL) {
+  if (_onSubmit.name === ReportNames /* ReportNames */.ReportNames.STAGE_CHANNEL) {
     id = _onSubmit.record.id;
   }
   obj[4] = id;
   let id1;
-  if (_onSubmit.name === require("MenuTypes.tsx") /* ReportNames */.ReportNames.GUILD_SCHEDULED_EVENT) {
+  if (_onSubmit.name === ReportNames /* ReportNames */.ReportNames.GUILD_SCHEDULED_EVENT) {
     id1 = _onSubmit.record.id;
   }
   obj[5] = id1;
-  if (_onSubmit.name !== require("MenuTypes.tsx") /* ReportNames */.ReportNames.GUILD) {
+  if (_onSubmit.name !== ReportNames /* ReportNames */.ReportNames.GUILD) {
     if (_onSubmit.name !== tmp2(7831).ReportNames.GUILD_DISCOVERY) {
       if (_onSubmit.name === tmp2(7831).ReportNames.GUILD_DIRECTORY_ENTRY) {
         let id2 = _onSubmit.record.guildId;
@@ -787,7 +793,7 @@ export const trackCloseReportModalAnalytics = function trackCloseReportModalAnal
   id2 = _onSubmit.record.id;
 };
 export const showInAppReportsFeedbackModal = function showInAppReportsFeedbackModal(name, reportId) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "IN_APP_REPORTS_SHOW_FEEDBACK", reportId, reportType: name.name };
   obj.dispatch(obj);
 };

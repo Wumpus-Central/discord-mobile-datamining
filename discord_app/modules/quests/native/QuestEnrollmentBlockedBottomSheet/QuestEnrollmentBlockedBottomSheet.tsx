@@ -1,3 +1,7 @@
+import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { useCountdown } from "../../../../hooks/useCountdown.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/quests/native/QuestEnrollmentBlockedBottomSheet/QuestEnrollmentBlockedBottomSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -16,9 +20,9 @@ function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
     const _Date = Date;
     date = new Date();
   }
-  const tmp3Result = require("../../../../hooks/useCountdown.tsx")(date);
+  const tmp3Result = useCountdown(date);
   ({ minutes, seconds } = tmp3Result);
-  const tmp3 = require("../../../../hooks/useCountdown.tsx");
+  const tmp3 = useCountdown;
   const padStartResult = String(tmp3Result.hours).padStart(2, "0");
   const StringResult = String(tmp3Result.hours);
   const padStartResult1 = String(minutes).padStart(2, "0");
@@ -30,21 +34,21 @@ function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
     obj = { style: null, children: null };
     obj[0] = tmp.heading;
     const obj1 = { variant: "heading-xl/bold", children: null };
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj1[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["XEHDT/"]);
-    obj[1] = jsx(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "heading-xl/bold", children: null });
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj1[1] = intl.string(getSystemLocale /* getSystemLocale */.t["XEHDT/"]);
+    obj[1] = jsx(Text /* Text */.Text, { variant: "heading-xl/bold", children: null });
     obj[0] = <View style={null}>{null}</View>;
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.container;
     const obj3 = { variant: "text-md/normal", children: null };
-    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
     const obj4 = { countdownString: null };
     const _HermesInternal = HermesInternal;
     obj4[0] = "" + padStartResult + ":" + padStartResult1 + ":" + padStartResult2;
-    obj3[1] = intl2.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["+5XVH+"], obj4);
-    obj2[1] = jsx(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/normal", children: null });
+    obj3[1] = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t["+5XVH+"], obj4);
+    obj2[1] = jsx(Text /* Text */.Text, { variant: "text-md/normal", children: null });
     obj[3] = <View style={null}>{null}</View>;
-    tmp12 = jsx(require("../../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, { style: null, children: null });
+    tmp12 = jsx(Background /* Background */.BottomSheet, { style: null, children: null });
   }
   return tmp12;
 }

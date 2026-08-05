@@ -1,3 +1,6 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { nameFromUser } from "../../../../utils/UserUtils.tsx";
 // discord_app/modules/checkout/native/gifting/LockedRecipientField.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -21,11 +24,11 @@ export default function LockedRecipientField(user) {
   const tmp = createCacheKey();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.avatar, user, guildId: "Array", size: true };
-  obj[3] = require("../../../../design/void/native.tsx") /* Button */.AvatarSizes.NORMAL;
-  const items = [callback(require("../../../../design/void/native.tsx") /* Button */.Avatar, obj), ];
+  obj[3] = Button /* Button */.AvatarSizes.NORMAL;
+  const items = [callback(Button /* Button */.Avatar, obj), ];
   obj = { variant: "text-md/semibold", children: null };
-  obj[1] = require("../../../../utils/UserUtils.tsx").getName(user);
-  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  obj[1] = nameFromUser.getName(user);
+  items[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 };

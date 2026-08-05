@@ -1,3 +1,6 @@
+import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { TrackedHTTPUtils } from "../../utils/TrackedHTTPUtils.tsx";
 // discord_app/modules/auth/register.tsx
 import closure_4 from "t";
 import initialize from "initialize";
@@ -248,7 +251,7 @@ function registerFull(giftCodeSKUId) {
   if (prop === undefined) {
     prop = null;
   }
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj.dispatch({ type: "REGISTER" });
   if (null != birthday) {
     tmp4(14990)(birthday, constants2.REGISTER);
@@ -294,7 +297,7 @@ function registerFull(giftCodeSKUId) {
   }
   obj2[11] = checked;
   obj1[1] = obj2;
-  let obj3 = { event: require("../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.USER_REGISTER, properties: null };
+  let obj3 = { event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_REGISTER, properties: null };
   const obj4 = { invite_code: invite, used_username_suggestion: prop, promotional_email_opt_in: null, promotional_email_pre_checked: null, was_unique_username: true };
   let checked1;
   if (promoEmailConsent != null) {
@@ -308,8 +311,8 @@ function registerFull(giftCodeSKUId) {
   obj4[3] = preChecked;
   obj3[1] = obj4;
   obj1[2] = obj3;
-  const tmp4Result1 = require("../../utils/TrackedHTTPUtils.tsx");
-  return require("../../utils/TrackedHTTPUtils.tsx").post(obj1).then((body) => {
+  const tmp4Result1 = TrackedHTTPUtils;
+  return TrackedHTTPUtils.post(obj1).then((body) => {
     let obj = callback2(709);
     obj = { type: "REGISTER_SUCCESS", token: body.body.token };
     obj.dispatch(obj);

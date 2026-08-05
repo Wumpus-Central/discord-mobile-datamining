@@ -1,3 +1,4 @@
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/quests/UnenrolledActivityQuestStore.tsx
 import { PersistedStore } from "initialize";
 import set from "dispatcher";
@@ -50,7 +51,7 @@ const unenrolledActivityQuestStore = new UnenrolledActivityQuestStore(require("d
   UNENROLLED_ACTIVITY_QUEST_DISMISS: function handleDismissUnenrolledActivityQuest(questId) {
     if (set.size >= 20) {
       const _Array = Array;
-      const sorted = Array.from(set).sort(require("../../utils/SnowflakeUtils.tsx").compare);
+      const sorted = Array.from(set).sort(DISCORD_EPOCH.compare);
       const _Math = Math;
       const substr = sorted.slice(Math.floor(10));
       const _Set = Set;

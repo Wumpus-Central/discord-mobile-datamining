@@ -1,3 +1,7 @@
+import { set } from "../../../../actions/AlertActionCreators.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { TwoFASetupModalActionCreators } from "../../account/native/mfa_modal_flow/TwoFASetupModalActionCreators.tsx";
+import { useIs2FAEnabled } from "../../account/native/SettingsAccountUtils.tsx";
 // discord_app/modules/user_settings/defs/native/AccountEnable2faSetting.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createToggle from "createToggle";
@@ -5,8 +9,8 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.cDgKte);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.cDgKte);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   onPress: function onAccountEnable2FASettingPress() {
@@ -17,20 +21,20 @@ createToggle = {
     }
     if (verified != null) {
       if (verified) {
-        let obj = require("../../account/native/mfa_modal_flow/TwoFASetupModalActionCreators.tsx");
+        let obj = TwoFASetupModalActionCreators;
         obj.open();
       }
     }
     obj = { title: null, body: null };
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.v740sh);
-    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.uggF7o);
-    require("../../../../actions/AlertActionCreators.tsx").show(obj);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.v740sh);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.uggF7o);
+    set.show(obj);
   },
   withArrow: true,
   usePredicate: function useHasAccountEnable2FASetting() {
-    return !require("../../account/native/SettingsAccountUtils.tsx") /* useIs2FAEnabled */.useIsTOTPEnabled();
+    return !useIs2FAEnabled /* useIs2FAEnabled */.useIsTOTPEnabled();
   }
 };
 createToggle = createToggle.createPressable(createToggle);

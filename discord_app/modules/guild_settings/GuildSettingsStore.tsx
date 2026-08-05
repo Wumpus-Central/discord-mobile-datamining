@@ -1,3 +1,14 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { t } from "../../../_runtime/03867_t.js";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { _fetchGuildIntegrationsApplications } from "GuildSettingsFetchActionCreators.tsx";
+import { canUseMobileServerTagSettings } from "GuildSettingsServerTagUtils.tsx";
+import { fetchVanityUrl } from "server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx";
+import { getDefaultGuildSettingsSection } from "utils/getDefaultGuildSettingsSection.tsx";
 // discord_app/modules/guild_settings/GuildSettingsStore.tsx
 import { set } from "isValueEqual";
 import handleUpdateStart from "handleUpdateStart";
@@ -51,14 +62,14 @@ function handleFormInit(location) {
     OPEN = FormStates.OPEN;
     let closure_37 = {};
     let c38 = null;
-    let closure_10 = require("../../utils/SnowflakeUtils.tsx").castGuildIdAsEveryoneGuildRoleId(guildId);
+    let closure_10 = DISCORD_EPOCH.castGuildIdAsEveryoneGuildRoleId(guildId);
     mfaLevel = guild.mfaLevel;
     let closure_52 = obj;
     let c12 = null;
     closure_44 = {};
     location = location.location;
     if (section === constants.TAG) {
-      obj = require("GuildSettingsServerTagUtils.tsx") /* canUseMobileServerTagSettings */;
+      obj = canUseMobileServerTagSettings /* canUseMobileServerTagSettings */;
       if (!obj.canUseMobileServerTagSettings(guildId)) {
         obj2 = undefined;
       }
@@ -79,7 +90,7 @@ function handleFormInit(location) {
       obj2 = { type: "stack", routes: null };
       obj2[1] = items;
     }
-    const obj5 = require("../../utils/SnowflakeUtils.tsx");
+    const obj5 = DISCORD_EPOCH;
   }
 }
 function _createInvite(code) {
@@ -93,13 +104,13 @@ function _createInvite(code) {
   obj[4] = callback(code.channel);
   let fromInviteGuildResult = null;
   if (null != code.guild) {
-    fromInviteGuildResult = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */.fromInviteGuild(code.guild);
-    const obj2 = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
+    fromInviteGuildResult = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */.fromInviteGuild(code.guild);
+    const obj2 = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
   }
   obj[5] = fromInviteGuildResult;
   ({ uses: obj[6], max_uses: obj[7], max_age: obj[8] } = code);
   const created_at = code.created_at;
-  obj[9] = require("../../../_runtime/03867_t.js")(created_at);
+  obj[9] = t(created_at);
   ({ flags: obj[10], roles: obj[11] } = code);
   tmp = new tmp(obj);
   return tmp;
@@ -115,8 +126,8 @@ function handleIntegrationsUpdate(type) {
       tmp5 = type.guildId === user.id;
     }
     if (tmp5) {
-      const guildIntegrationsApplications = require("GuildSettingsFetchActionCreators.tsx") /* _fetchGuildIntegrationsApplications */.fetchGuildIntegrationsApplications(user.id);
-      const obj = require("GuildSettingsFetchActionCreators.tsx") /* _fetchGuildIntegrationsApplications */;
+      const guildIntegrationsApplications = _fetchGuildIntegrationsApplications /* _fetchGuildIntegrationsApplications */.fetchGuildIntegrationsApplications(user.id);
+      const obj = _fetchGuildIntegrationsApplications /* _fetchGuildIntegrationsApplications */;
     }
     tmp = tmp5;
   }
@@ -189,7 +200,7 @@ prototype["widgetHasChanges"] = function widgetHasChanges() {
   return tmp;
 };
 prototype["hasChanges"] = function hasChanges() {
-  const obj = require("../../../_runtime/00012_apply.js");
+  const obj = apply;
   const isEqualResult = obj.isEqual(closure_7, closure_6);
   let widgetHasChangesResult = !isEqualResult;
   if (isEqualResult) {
@@ -226,7 +237,7 @@ prototype["getGuildId"] = function getGuildId() {
   return id;
 };
 prototype["showPublicSuccessModal"] = function showPublicSuccessModal() {
-  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   return !Storage.get(closure_28);
 };
 prototype["getGuild"] = function getGuild() {
@@ -399,16 +410,16 @@ obj = {
       tmp = user.id === guild.guild.id;
     }
     if (tmp) {
-      fromGuildResult = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */.fromGuild(guild.guild, fromGuildResult);
+      fromGuildResult = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */.fromGuild(guild.guild, fromGuildResult);
       user = fromGuildResult;
-      const obj = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
+      const obj = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
     }
   },
   GUILD_SETTINGS_SUBMIT_FAILURE: function handleFormSubmitFailure(errors) {
     const OPEN = FormStates.OPEN;
     if (defaultGuildSettingsSection == null) {
-      defaultGuildSettingsSection = require("utils/getDefaultGuildSettingsSection.tsx") /* getDefaultGuildSettingsSection */.getDefaultGuildSettingsSection();
-      const obj = require("utils/getDefaultGuildSettingsSection.tsx") /* getDefaultGuildSettingsSection */;
+      defaultGuildSettingsSection = getDefaultGuildSettingsSection /* getDefaultGuildSettingsSection */.getDefaultGuildSettingsSection();
+      const obj = getDefaultGuildSettingsSection /* getDefaultGuildSettingsSection */;
     }
     let c4 = null;
     errors = errors.errors;
@@ -430,8 +441,8 @@ obj = {
               if (closure_3 === tmp27.MEMBERS) {
                 let c10 = getGuildEveryoneRoleId(user);
               } else if (closure_3 === tmp27.VANITY_URL) {
-                const vanityUrl = require("server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx") /* fetchVanityUrl */.fetchVanityUrl(user.id);
-                const obj2 = require("server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx") /* fetchVanityUrl */;
+                const vanityUrl = fetchVanityUrl /* fetchVanityUrl */.fetchVanityUrl(user.id);
+                const obj2 = fetchVanityUrl /* fetchVanityUrl */;
               } else if (closure_3 === tmp27.SAFETY) {
                 if (null == closure_4) {
                   let SAFETY_OVERVIEW = constants2.SAFETY_OVERVIEW;
@@ -440,8 +451,8 @@ obj = {
                 }
                 let obj = { type: "GUILD_SETTINGS_SAFETY_SET_SUBSECTION", subsection: null };
                 obj[1] = SAFETY_OVERVIEW;
-                require("../../Dispatcher.tsx").dispatch(obj);
-                const obj5 = require("../../Dispatcher.tsx");
+                dispatcher.dispatch(obj);
+                const obj5 = dispatcher;
               }
             }
           }
@@ -457,8 +468,8 @@ obj = {
                 tmp13 = section.guildId === user.id;
               }
               if (tmp13) {
-                const guildIntegrationsApplications = require("GuildSettingsFetchActionCreators.tsx") /* _fetchGuildIntegrationsApplications */.fetchGuildIntegrationsApplications(user.id);
-                const obj3 = require("GuildSettingsFetchActionCreators.tsx") /* _fetchGuildIntegrationsApplications */;
+                const guildIntegrationsApplications = _fetchGuildIntegrationsApplications /* _fetchGuildIntegrationsApplications */.fetchGuildIntegrationsApplications(user.id);
+                const obj3 = _fetchGuildIntegrationsApplications /* _fetchGuildIntegrationsApplications */;
               }
               tmp12 = tmp13;
             }
@@ -466,7 +477,7 @@ obj = {
           }
         }
       }
-      const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+      const HTTP = sendRequest /* sendRequest */.HTTP;
       obj = { url: null, oldFormErrors: true, rejectWithError: true };
       obj[0] = closure_25.GUILD_INSTANT_INVITES(user.id);
       const value = HTTP.get(obj);
@@ -756,9 +767,9 @@ obj = {
     }
     let tmp2 = profile.id === id;
     if (tmp2) {
-      const result = require("GuildSettingsServerTagUtils.tsx") /* canUseMobileServerTagSettings */.isServerTagDraftDirty(profile, profile);
+      const result = canUseMobileServerTagSettings /* canUseMobileServerTagSettings */.isServerTagDraftDirty(profile, profile);
       tmp2 = !result;
-      const obj = require("GuildSettingsServerTagUtils.tsx") /* canUseMobileServerTagSettings */;
+      const obj = canUseMobileServerTagSettings /* canUseMobileServerTagSettings */;
       const tmp8 = !result;
     }
     return tmp2;

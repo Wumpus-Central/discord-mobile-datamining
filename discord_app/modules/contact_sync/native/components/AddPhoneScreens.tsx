@@ -1,3 +1,8 @@
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ChangePhoneReason } from "../../../phone/PhoneActionCreators.tsx";
+import { AddPhone } from "../../../verification/native/components/AddPhone.tsx";
 // discord_app/modules/contact_sync/native/components/AddPhoneScreens.tsx
 import ContactSyncModes from "ContactSyncModes";
 import _slicedToArray from "_slicedToArray";
@@ -24,27 +29,27 @@ let obj1 = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_
 let result = require("noop").fileFinishedImporting("modules/contact_sync/native/components/AddPhoneScreens.tsx");
 
 export const AddPhoneScreen = function AddPhoneScreen() {
-  let obj = _require("../../../../design/components/Navigator/native/useNavigation.native.tsx");
+  let obj = _useNavigation;
   _require = obj.useNavigation();
   const tmp = createCacheKey();
   obj = { style: tmp.header, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = _require("../../../../intl/index.native.tsx").intl;
-  obj[4] = intl.string(_require("../../../../intl/index.native.tsx").t.Xgb497);
-  const items = [callback2(_require("../../../../design/components/Text/native/Text.tsx").Text, obj), ];
+  const intl = _getSystemLocale.intl;
+  obj[4] = intl.string(_getSystemLocale.t.Xgb497);
+  const items = [callback2(_Text.Text, obj), ];
   const obj1 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = _require("../../../../intl/index.native.tsx").intl;
-  obj1[3] = intl2.string(_require("../../../../intl/index.native.tsx").t.qFmzyo);
-  items[1] = callback2(_require("../../../../design/components/Text/native/Text.tsx").Text, obj1);
+  const intl2 = _getSystemLocale.intl;
+  obj1[3] = intl2.string(_getSystemLocale.t.qFmzyo);
+  items[1] = callback2(_Text.Text, obj1);
   obj[1] = items;
   const obj2 = { style: tmp.container, reason: null, header: null, onComplete: null };
   const tmp2 = callback3(View, obj);
-  obj2[1] = _require("../../../phone/PhoneActionCreators.tsx").ChangePhoneReason.CONTACT_SYNC;
+  obj2[1] = _ChangePhoneReason.ChangePhoneReason.CONTACT_SYNC;
   obj2[2] = tmp2;
   obj2[3] = function onComplete(arg0) {
     return callback(outer1_2[15]).submitPhone(arg0, callback);
   };
-  return callback2(require("../../../verification/native/components/AddPhone.tsx"), obj2);
+  return callback2(AddPhone, obj2);
 };
 export const VerifyPhoneScreen = function VerifyPhoneScreen() {
   let require;

@@ -1,3 +1,4 @@
+import { explicitContentFromProto } from "../../modules/user_settings/UserSettings.tsx";
 // discord_app/stores/game_store/TestModeStore.tsx
 import initialize from "initialize";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -50,7 +51,7 @@ prototype["inTestModeForEmbeddedApplication"] = function inTestModeForEmbeddedAp
   return tmp;
 };
 prototype["shouldDisplayTestMode"] = function shouldDisplayTestMode(applicationId) {
-  const DeveloperMode = require("../../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.DeveloperMode;
+  const DeveloperMode = explicitContentFromProto /* explicitContentFromProto */.DeveloperMode;
   let setting = DeveloperMode.getSetting();
   if (setting) {
     const self = this;

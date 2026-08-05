@@ -1,3 +1,5 @@
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { createMinimalMessageRecord } from "MessageRecordUtils.tsx";
 // discord_app/modules/messages/EphemeralMessageStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { MessageFlags } from "ME";
@@ -68,7 +70,7 @@ const ephemeralMessageStore = new EphemeralMessageStore(require("dispatcher"), {
     } else {
       return false;
     }
-    obj = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+    obj = hasFlag /* hasFlag */;
     tmp = require;
   },
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
@@ -86,7 +88,7 @@ const ephemeralMessageStore = new EphemeralMessageStore(require("dispatcher"), {
           if (null == value) {
             return false;
           } else {
-            const result = value.set(id, require("MessageRecordUtils.tsx") /* createMinimalMessageRecord */.updateMessageRecord(value, message));
+            const result = value.set(id, createMinimalMessageRecord /* createMinimalMessageRecord */.updateMessageRecord(value, message));
           }
         }
       }

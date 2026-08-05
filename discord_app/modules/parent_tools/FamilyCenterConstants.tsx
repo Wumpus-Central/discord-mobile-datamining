@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { messagesProxy } from "FamilyCenter.messages.js";
 // discord_app/modules/parent_tools/FamilyCenterConstants.tsx
 import getAuthenticationPath from "getAuthenticationPath";
 
@@ -11,13 +13,13 @@ const items = [
   {
     priority: 100,
     tooltipHeader() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("FamilyCenter.messages.js").kvTgWP);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(messagesProxy.kvTgWP);
     },
     tooltipDescription(arg0) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
       const string = intl.string;
-      const tmp = require("FamilyCenter.messages.js");
+      const tmp = messagesProxy;
       if (arg0) {
         let stringResult = string(tmp.w4wmnb);
       } else {
@@ -26,13 +28,13 @@ const items = [
       return stringResult;
     },
     sectionHeader(count) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require("FamilyCenter.messages.js")["4T3zWT"], { count });
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.formatToPlainString(messagesProxy["4T3zWT"], { count });
     },
     sectionDescription(arg0) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
       const string = intl.string;
-      const tmp = require("FamilyCenter.messages.js");
+      const tmp = messagesProxy;
       if (arg0) {
         let stringResult = string(tmp.w4wmnb);
       } else {
@@ -42,11 +44,11 @@ const items = [
     },
     timestampFormatter() {
       const obj = { today: null, yesterday: null, days: null };
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[0] = intl.string(require("FamilyCenter.messages.js").fLBUx7);
-      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[1] = intl2.string(require("FamilyCenter.messages.js").cHHgxI);
-      obj[2] = require("FamilyCenter.messages.js").qvKjp8;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      obj[0] = intl.string(messagesProxy.fLBUx7);
+      const intl2 = getSystemLocale /* getSystemLocale */.intl;
+      obj[1] = intl2.string(messagesProxy.cHHgxI);
+      obj[2] = messagesProxy.qvKjp8;
       return obj;
     }
   }
@@ -57,13 +59,13 @@ const items2 = [
   {
     priority: 200,
     tooltipHeader() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("FamilyCenter.messages.js").D7Sngz);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(messagesProxy.D7Sngz);
     },
     tooltipDescription(arg0) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
       const string = intl.string;
-      const tmp = require("FamilyCenter.messages.js");
+      const tmp = messagesProxy;
       if (arg0) {
         let stringResult = string(tmp.aiAhnQ);
       } else {
@@ -72,13 +74,13 @@ const items2 = [
       return stringResult;
     },
     sectionHeader(count) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require("FamilyCenter.messages.js")["0GE4Ni"], { count });
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.formatToPlainString(messagesProxy["0GE4Ni"], { count });
     },
     sectionDescription(arg0) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
       const string = intl.string;
-      const tmp = require("FamilyCenter.messages.js");
+      const tmp = messagesProxy;
       if (arg0) {
         let stringResult = string(tmp.aiAhnQ);
       } else {
@@ -88,11 +90,11 @@ const items2 = [
     },
     timestampFormatter() {
       const obj = { today: null, yesterday: null, days: null };
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[0] = intl.string(require("FamilyCenter.messages.js").IHd5cZ);
-      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[1] = intl2.string(require("FamilyCenter.messages.js").wOsfxv);
-      obj[2] = require("FamilyCenter.messages.js").oCk8c4;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      obj[0] = intl.string(messagesProxy.IHd5cZ);
+      const intl2 = getSystemLocale /* getSystemLocale */.intl;
+      obj[1] = intl2.string(messagesProxy.wOsfxv);
+      obj[2] = messagesProxy.oCk8c4;
       return obj;
     }
   }
@@ -103,13 +105,13 @@ const items3 = [
   {
     priority: 300,
     tooltipHeader() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("FamilyCenter.messages.js").kIcKAj);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(messagesProxy.kIcKAj);
     },
     tooltipDescription(arg0) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
       const string = intl.string;
-      const tmp = require("FamilyCenter.messages.js");
+      const tmp = messagesProxy;
       if (arg0) {
         let stringResult = string(tmp.BkVb1X);
       } else {
@@ -118,13 +120,13 @@ const items3 = [
       return stringResult;
     },
     sectionHeader(count) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require("FamilyCenter.messages.js")["TEvo+H"], { count });
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.formatToPlainString(messagesProxy["TEvo+H"], { count });
     },
     sectionDescription(arg0) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
       const string = intl.string;
-      const tmp = require("FamilyCenter.messages.js");
+      const tmp = messagesProxy;
       if (arg0) {
         let stringResult = string(tmp.BkVb1X);
       } else {
@@ -134,11 +136,11 @@ const items3 = [
     },
     timestampFormatter() {
       const obj = { today: null, yesterday: null, days: null };
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[0] = intl.string(require("FamilyCenter.messages.js").JUHIYZ);
-      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[1] = intl2.string(require("FamilyCenter.messages.js").GiswUW);
-      obj[2] = require("FamilyCenter.messages.js")["fwQgE/"];
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      obj[0] = intl.string(messagesProxy.JUHIYZ);
+      const intl2 = getSystemLocale /* getSystemLocale */.intl;
+      obj[1] = intl2.string(messagesProxy.GiswUW);
+      obj[2] = messagesProxy["fwQgE/"];
       return obj;
     }
   }
@@ -149,13 +151,13 @@ const items4 = [
   {
     priority: 400,
     tooltipHeader() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("FamilyCenter.messages.js").uav9Bh);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(messagesProxy.uav9Bh);
     },
     tooltipDescription(arg0) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
       const string = intl.string;
-      const tmp = require("FamilyCenter.messages.js");
+      const tmp = messagesProxy;
       if (arg0) {
         let stringResult = string(tmp.LVNgTD);
       } else {
@@ -164,13 +166,13 @@ const items4 = [
       return stringResult;
     },
     sectionHeader(count) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require("FamilyCenter.messages.js")["7feG7T"], { count });
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.formatToPlainString(messagesProxy["7feG7T"], { count });
     },
     sectionDescription(arg0) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
       const string = intl.string;
-      const tmp = require("FamilyCenter.messages.js");
+      const tmp = messagesProxy;
       if (arg0) {
         let stringResult = string(tmp.LVNgTD);
       } else {
@@ -186,13 +188,13 @@ const items5 = [
   {
     priority: 500,
     tooltipHeader() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("FamilyCenter.messages.js").CcrbCw);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(messagesProxy.CcrbCw);
     },
     tooltipDescription(arg0) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
       const string = intl.string;
-      const tmp = require("FamilyCenter.messages.js");
+      const tmp = messagesProxy;
       if (arg0) {
         let stringResult = string(tmp.BLgIrk);
       } else {
@@ -201,13 +203,13 @@ const items5 = [
       return stringResult;
     },
     sectionHeader(count) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require("FamilyCenter.messages.js").rcPInc, { count });
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.formatToPlainString(messagesProxy.rcPInc, { count });
     },
     sectionDescription(arg0) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
       const string = intl.string;
-      const tmp = require("FamilyCenter.messages.js");
+      const tmp = messagesProxy;
       if (arg0) {
         let stringResult = string(tmp.BLgIrk);
       } else {
@@ -223,20 +225,20 @@ const items6 = [
   {
     priority: 175,
     tooltipHeader() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("FamilyCenter.messages.js").eo4Fxh);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(messagesProxy.eo4Fxh);
     },
     tooltipDescription() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("FamilyCenter.messages.js")["O/AElu"]);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(messagesProxy["O/AElu"]);
     },
     sectionHeader(count) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require("FamilyCenter.messages.js").eGFWUd, { count });
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.formatToPlainString(messagesProxy.eGFWUd, { count });
     },
     sectionDescription() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("FamilyCenter.messages.js")["O/AElu"]);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(messagesProxy["O/AElu"]);
     }
   }
 ];
@@ -246,13 +248,13 @@ const items7 = [
   {
     priority: 150,
     tooltipHeader() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("FamilyCenter.messages.js").NMYKsh);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(messagesProxy.NMYKsh);
     },
     tooltipDescription(arg0) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
       const string = intl.string;
-      const tmp = require("FamilyCenter.messages.js");
+      const tmp = messagesProxy;
       if (arg0) {
         let stringResult = string(tmp.cqIdqZ);
       } else {
@@ -261,13 +263,13 @@ const items7 = [
       return stringResult;
     },
     sectionHeader(amount) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require("FamilyCenter.messages.js").FPViWL, { amount });
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.formatToPlainString(messagesProxy.FPViWL, { amount });
     },
     sectionDescription(arg0) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
       const string = intl.string;
-      const tmp = require("FamilyCenter.messages.js");
+      const tmp = messagesProxy;
       if (arg0) {
         let stringResult = string(tmp.cqIdqZ);
       } else {
@@ -283,20 +285,20 @@ const items8 = [
   {
     priority: 600,
     tooltipHeader() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("FamilyCenter.messages.js").ULUspo);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(messagesProxy.ULUspo);
     },
     tooltipDescription() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("FamilyCenter.messages.js").nH8vlc);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(messagesProxy.nH8vlc);
     },
     sectionHeader(amount) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require("FamilyCenter.messages.js")["0R6I/b"], { amount });
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.formatToPlainString(messagesProxy["0R6I/b"], { amount });
     },
     sectionDescription() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("FamilyCenter.messages.js").nH8vlc);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(messagesProxy.nH8vlc);
     }
   }
 ];
@@ -307,9 +309,9 @@ const obj1 = { GENERIC_ERROR: 0, [0]: "GENERIC_ERROR", INELIGIBLE_FOR_FAMILY_CEN
 ({ INELIGIBLE_FOR_FAMILY_CENTER: obj5[290000], MAX_CONNECTIONS_REACHED: obj5[290002], PENDING_REQUEST_EXISTS: obj5[290005] } = obj1);
 const obj5 = {
   header(isAdult) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     const string = intl.string;
-    const tmp = require("FamilyCenter.messages.js");
+    const tmp = messagesProxy;
     if (isAdult.isAdult) {
       let stringResult = string(tmp.bS5x94);
     } else {
@@ -318,9 +320,9 @@ const obj5 = {
     return stringResult;
   },
   description(isAdult) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     const format = intl.format;
-    const tmp = require("FamilyCenter.messages.js");
+    const tmp = messagesProxy;
     if (isAdult.isAdult) {
       let formatResult = format(tmp.GKzqWi, { link: "https://support.discord.com/hc/articles/14155043715735" });
     } else {
@@ -334,30 +336,30 @@ const map = new Map(items1);
 const obj2 = { 290000: null, 290002: null, 290005: null };
 const obj3 = {
   header() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("FamilyCenter.messages.js").nGX8Co);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(messagesProxy.nGX8Co);
   },
   description() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("FamilyCenter.messages.js").Uss2dn);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(messagesProxy.Uss2dn);
   },
   icon: getAuthenticationPath.X
 };
 const obj4 = {
   header() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("FamilyCenter.messages.js").tu0MRv);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(messagesProxy.tu0MRv);
   },
   description(email) {
     email = email.email;
     if (null != email) {
-      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl2 = getSystemLocale /* getSystemLocale */.intl;
       const obj = { email: null };
       obj[0] = email;
-      let formatToPlainStringResult = intl2.formatToPlainString(require("FamilyCenter.messages.js").xNEkdx, obj);
+      let formatToPlainStringResult = intl2.formatToPlainString(messagesProxy.xNEkdx, obj);
     } else {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      formatToPlainStringResult = intl.string(require("FamilyCenter.messages.js").Xyjnwn);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      formatToPlainStringResult = intl.string(messagesProxy.Xyjnwn);
     }
     return formatToPlainStringResult;
   },
@@ -365,12 +367,12 @@ const obj4 = {
 };
 const obj6 = {
   header() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("FamilyCenter.messages.js").W9JLJh);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(messagesProxy.W9JLJh);
   },
   description() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.format(require("FamilyCenter.messages.js").On5iRI, { link: "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731" });
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.format(messagesProxy.On5iRI, { link: "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731" });
   },
   icon: getAuthenticationPath.X
 };
@@ -406,25 +408,25 @@ export const FAMILY_CENTER_LINK_REQUEST_ERROR_EXPERIENCES = { [obj1.GENERIC_ERRO
 export const CONNECT_GUARDIAN_BOTTOM_SHEET_KEY = "ConnectGuardianBottomSheet";
 export const PENDING_LINK_REQUEST_TIMESTAMP_FORMATTER = () => {
   const obj = { seconds: null, minutes: null, hours: null, yesterday: null, days: null, date: null };
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("FamilyCenter.messages.js").CJdoee);
-  obj[1] = require("FamilyCenter.messages.js").InzMn3;
-  obj[2] = require("FamilyCenter.messages.js").ErkYCI;
-  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl2.string(require("FamilyCenter.messages.js").GvfssA);
-  obj[4] = require("FamilyCenter.messages.js").pWig18;
-  obj[5] = require("FamilyCenter.messages.js").MP3khg;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(messagesProxy.CJdoee);
+  obj[1] = messagesProxy.InzMn3;
+  obj[2] = messagesProxy.ErkYCI;
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl2.string(messagesProxy.GvfssA);
+  obj[4] = messagesProxy.pWig18;
+  obj[5] = messagesProxy.MP3khg;
   return obj;
 };
 export const ACCEPTED_LINK_REQUEST_TIMESTAMP_FORMATTER = () => {
   const obj = { seconds: null, minutes: null, hours: null, yesterday: null, days: null, date: null };
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("FamilyCenter.messages.js").Bqsamd);
-  obj[1] = require("FamilyCenter.messages.js").kX3wJg;
-  obj[2] = require("FamilyCenter.messages.js").J18GbG;
-  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl2.string(require("FamilyCenter.messages.js").Ln9zMn);
-  obj[4] = require("FamilyCenter.messages.js").WRtySz;
-  obj[5] = require("FamilyCenter.messages.js").Y3ZYtM;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(messagesProxy.Bqsamd);
+  obj[1] = messagesProxy.kX3wJg;
+  obj[2] = messagesProxy.J18GbG;
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl2.string(messagesProxy.Ln9zMn);
+  obj[4] = messagesProxy.WRtySz;
+  obj[5] = messagesProxy.Y3ZYtM;
   return obj;
 };

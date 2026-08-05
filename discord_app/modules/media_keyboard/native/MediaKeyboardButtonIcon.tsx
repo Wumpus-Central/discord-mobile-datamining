@@ -1,3 +1,9 @@
+import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../design/animation/reanimated/timing/timing.tsx";
+import { timingNone } from "../../../design/animation/reanimated/timing/timingPresets.tsx";
+import { PlusLargeIcon } from "../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx";
+import { KeyboardTypes } from "../../keyboard/native/KeyboardTypes.tsx";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/media_keyboard/native/MediaKeyboardButtonIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -15,9 +21,9 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
     const merged = Object.assign(arg0, undefined);
     const tmp6 = chatInputFloating(4151)();
     _require = tmp6;
-    let obj = _require("../../themes/experiments/MobileVisualRefreshExperiment.tsx");
+    let obj = _useIsMobileVisualRefreshExperimentEnabled;
     chatInputFloating = obj.useMobileVisualRefreshConfig({ location: "MediaKeyboardButtonIcon" }).chatInputFloating;
-    let obj1 = _require("../../reanimated/ReanimatedRexport.tsx");
+    let obj1 = _ReanimatedRexport;
     const fn = function s() {
       let tmp4 = _undefined === _undefined(outer1_2[5]).KeyboardTypes.MEDIA;
       if (!tmp4) {
@@ -39,10 +45,10 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
     };
     obj = { keyboard: null, KeyboardTypes: null, chatInputFloating: null, withTiming: null, timingStandard: null };
     obj[0] = tmp6;
-    obj[1] = _require("../../keyboard/native/KeyboardTypes.tsx").KeyboardTypes;
+    obj[1] = _KeyboardTypes.KeyboardTypes;
     obj[2] = chatInputFloating;
-    obj[3] = _require("../../../design/animation/reanimated/timing/timing.tsx").withTiming;
-    obj[4] = _require("../../../design/animation/reanimated/timing/timingPresets.tsx").timingStandard;
+    obj[3] = _CONFIG_NEVER_ANIMATE_TIMING.withTiming;
+    obj[4] = _timingNone.timingStandard;
     fn.__closure = obj;
     fn.__workletHash = 12686941860647;
     fn.__initData = closure_4;
@@ -51,7 +57,7 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
     obj[0] = animatedStyle;
     obj1 = {};
     const merged1 = Object.assign(merged);
-    obj[1] = jsx(_require("../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx").PlusLargeIcon, {});
+    obj[1] = jsx(_PlusLargeIcon.PlusLargeIcon, {});
     return jsx(chatInputFloating(4146).View, { style: null, children: null });
   }
 };

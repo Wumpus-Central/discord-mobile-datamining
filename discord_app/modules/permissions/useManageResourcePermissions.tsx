@@ -1,3 +1,4 @@
+import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
 // discord_app/modules/permissions/useManageResourcePermissions.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -97,7 +98,7 @@ export const useManageResourcePermissions = function useManageResourcePermission
   let dependencyMap;
   let importAll;
   const _require = channel;
-  let obj = _require("../../utils/GuildRecordUtils.tsx");
+  let obj = _fromGuildPropertiesWithAdditionalFields;
   if (obj.isGuildRecord(channel)) {
     let items = [, ];
     ({ CREATE_EVENTS: arr3[0], MANAGE_EVENTS: arr3[1] } = Permissions);

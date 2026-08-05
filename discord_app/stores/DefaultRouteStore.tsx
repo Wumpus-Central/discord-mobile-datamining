@@ -1,3 +1,4 @@
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/stores/DefaultRouteStore.tsx
 import { Routes } from "ME";
 import { PersistedStore } from "initialize";
@@ -49,9 +50,9 @@ DefaultRouteStore.displayName = "DefaultRouteStore";
 DefaultRouteStore.persistKey = "DefaultRouteStore";
 const items = [
   () => {
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const lastViewedPath = Storage.get(LAST_VIEWED_PATH, null);
-    const Storage2 = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage2 = Storage /* Storage */.Storage;
     Storage2.remove(LAST_VIEWED_PATH);
     return { lastViewedPath };
   }

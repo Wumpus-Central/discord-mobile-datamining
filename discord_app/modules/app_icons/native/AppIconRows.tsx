@@ -1,3 +1,6 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { isPremiumAtLeast } from "../../../utils/PremiumTypeUtils.tsx";
+import { fetchCurrentAppIcon } from "AppIconUtils.tsx";
 // discord_app/modules/app_icons/native/AppIconRows.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -58,13 +61,13 @@ export default function AppIconRows(onSelect) {
   let limitedTimeAppIcons;
   let officialAppIcons;
   onSelect = onSelect.onSelect;
-  let obj = require("AppIconUtils.tsx") /* fetchCurrentAppIcon */;
+  let obj = fetchCurrentAppIcon /* fetchCurrentAppIcon */;
   const appIcons = obj.useAppIcons();
   ({ limitedTimeAppIcons, currentAppIcon, officialAppIcons } = appIcons);
-  let obj1 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj1 = initialize /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj2 = require("../../../utils/PremiumTypeUtils.tsx") /* isPremiumAtLeast */;
+  let obj2 = isPremiumAtLeast /* isPremiumAtLeast */;
   const isPremiumResult = obj2.isPremium(stateFromStores);
   const tmp7 = limitedTimeAppIcons.length > 0 && limitedTimeAppIcons.filter((isHidden) => !isHidden.isHidden).length > 0;
   let tmp10 = null;

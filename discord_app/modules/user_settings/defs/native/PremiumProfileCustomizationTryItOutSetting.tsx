@@ -1,10 +1,12 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ProfileCustomizationTryItOutSettingScreen } from "../../premium/native/ProfileCustomizationTryItOutSettingScreen.tsx";
 // discord_app/modules/user_settings/defs/native/PremiumProfileCustomizationTryItOutSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.gMlDNd);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.gMlDNd);
   },
   parent: require("MobileSetting").MobileSetting.PREMIUM,
   unsearchable: true,
@@ -13,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.PROFILE_CUSTOMIZATION_TRY_IT_OUT,
   getComponent() {
-    return require("../../premium/native/ProfileCustomizationTryItOutSettingScreen.tsx") /* ProfileCustomizationTryItOutSettingScreen */.default;
+    return ProfileCustomizationTryItOutSettingScreen /* ProfileCustomizationTryItOutSettingScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

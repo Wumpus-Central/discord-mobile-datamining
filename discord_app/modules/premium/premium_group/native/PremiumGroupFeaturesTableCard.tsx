@@ -1,3 +1,7 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { hexToRgba } from "../../../../utils/ColorUtils.tsx";
+import { usePremiumGroupFeaturesTableCardText } from "../hooks/usePremiumGroupFeaturesTableCardText.tsx";
 // discord_app/modules/premium/premium_group/native/PremiumGroupFeaturesTableCard.tsx
 import { View } from "get ActivityIndicator";
 import { Gradients } from "items";
@@ -40,25 +44,25 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
   let subheaderString;
   ({ style, premiumGroupRole } = arg0);
   const tmp = callback3();
-  const tmp4 = require("../hooks/usePremiumGroupFeaturesTableCardText.tsx")(premiumGroupRole, false);
+  const tmp4 = usePremiumGroupFeaturesTableCardText(premiumGroupRole, false);
   if (null == tmp4) {
     return null;
   } else {
     ({ subheaderString, bodyString } = tmp4);
     let obj = { borderWidth: 2, direction: null, colors: null, borderRadius: null, style: null, children: null };
-    obj[1] = require("../../../../design/void/native.tsx") /* Button */.GradientBorder.Direction.HORIZONTAL;
+    obj[1] = Button /* Button */.GradientBorder.Direction.HORIZONTAL;
     obj[2] = Gradients.PREMIUM_TIER_2;
     obj[3] = tmp2(712).radii.sm;
     obj[4] = style;
     obj = { start: null, end: null, colors: null, locations: null, style: null, children: null };
     obj[0] = { x: 0, y: 0 };
     obj[1] = { x: 1, y: 0 };
-    let obj2 = require("../../../../utils/ColorUtils.tsx") /* hexToRgba */;
+    let obj2 = hexToRgba /* hexToRgba */;
     const items = [obj2.hexWithOpacity("#8547C6", 0.15), , ];
     const tmp2Result = tmp2(4706);
-    items[1] = require("../../../../utils/ColorUtils.tsx") /* hexToRgba */.hexWithOpacity("#B845C1", 0.15);
-    const obj4 = require("../../../../utils/ColorUtils.tsx") /* hexToRgba */;
-    items[2] = require("../../../../utils/ColorUtils.tsx") /* hexToRgba */.hexWithOpacity("#AB5D8A", 0.15);
+    items[1] = hexToRgba /* hexToRgba */.hexWithOpacity("#B845C1", 0.15);
+    const obj4 = hexToRgba /* hexToRgba */;
+    items[2] = hexToRgba /* hexToRgba */.hexWithOpacity("#AB5D8A", 0.15);
     obj[2] = items;
     obj[3] = [0, 0.4996, 0.9593];
     obj[4] = tmp.premiumGroupCard;
@@ -70,14 +74,14 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
     const obj1 = { variant: "text-sm/normal", style: null, children: null };
     obj1[1] = tmp.title;
     obj1[2] = subheaderString;
-    items2[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+    items2[1] = callback(Text /* Text */.Text, obj1);
     obj2 = { variant: "text-sm/normal", style: null, children: null };
     obj2[1] = tmp.description;
     obj2[2] = bodyString;
-    items2[2] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+    items2[2] = callback(Text /* Text */.Text, obj2);
     obj[5] = items2;
     obj[5] = callback2(tmp2Result, obj);
-    return callback(require("../../../../design/void/native.tsx") /* Button */.GradientBorder, obj);
+    return callback(Button /* Button */.GradientBorder, obj);
   }
 };
 export { BetaPill };

@@ -1,3 +1,4 @@
+import { getOverlayMessageAnalyticsLocation } from "../modules/overlay/getOverlayMessageAnaylticsLocation.native.tsx";
 // discord_app/lib/MessageQueue.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import getUserAgnosticState from "getUserAgnosticState";
@@ -192,7 +193,7 @@ prototype["handleSend"] = function handleSend(nonce) {
   let analyticsLocation;
   let channelId;
   ({ channelId, analyticsLocation } = nonce);
-  let tmp3 = require("../modules/overlay/getOverlayMessageAnaylticsLocation.native.tsx")();
+  let tmp3 = getOverlayMessageAnalyticsLocation();
   if (tmp3 == null) {
     tmp3 = analyticsLocation;
   }
@@ -244,7 +245,7 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, a
   let analyticsLocation;
   let channelId;
   ({ channelId, analyticsLocation } = message);
-  let tmp3 = require("../modules/overlay/getOverlayMessageAnaylticsLocation.native.tsx")();
+  let tmp3 = getOverlayMessageAnalyticsLocation();
   if (tmp3 == null) {
     tmp3 = analyticsLocation;
   }

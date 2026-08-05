@@ -1,3 +1,5 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/guild_settings_picker/GuildSettingsPickerFeatures.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -7,29 +9,29 @@ const require = arg1;
 let obj = { "server-subscriptions-onboarding": require("module_13145"), "server-subscriptions-create-tier-from-template": require("module_13146") };
 let closure_6 = {
   title() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.V42OaH);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.V42OaH);
   },
   description() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["7dJ16X"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["7dJ16X"]);
   },
   selectGuildCta() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.LhlgY9);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.LhlgY9);
   },
   createGuildDescription() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.anOisx);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.anOisx);
   },
   createGuildCta() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.B44MTm);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.B44MTm);
   },
   canCreateGuild: true,
   useIsGuildSupported() {
     const items = [getUncachedChannelPermissions];
-    return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => (guild) => getUncachedChannelPermissions.canAccessGuildSettings(guild), [], require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.statesWillNeverBeEqual);
+    return initialize /* initialize */.useStateFromStores(items, () => (guild) => getUncachedChannelPermissions.canAccessGuildSettings(guild), [], initialize /* initialize */.statesWillNeverBeEqual);
   }
 };
 const result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/guild_settings_picker/GuildSettingsPickerFeatures.tsx");

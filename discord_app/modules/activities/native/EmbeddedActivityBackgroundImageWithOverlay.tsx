@@ -1,3 +1,4 @@
+import { useEmbeddedActivityBackground } from "../utils/useEmbeddedActivityBackground.tsx";
 // discord_app/modules/activities/native/EmbeddedActivityBackgroundImageWithOverlay.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -37,7 +38,7 @@ export default function EmbeddedActivityBackgroundImageWithOverlay(arg0) {
     str = "";
   }
   let obj = { applicationId: str, names: closure_9, size: 1024 };
-  const url = require("../utils/useEmbeddedActivityBackground.tsx")(obj).url;
+  const url = useEmbeddedActivityBackground(obj).url;
   let tmp7Result = null;
   if (!tmp2[0]) {
     tmp7Result = null;

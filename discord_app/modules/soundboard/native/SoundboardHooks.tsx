@@ -1,3 +1,4 @@
+import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 // discord_app/modules/soundboard/native/SoundboardHooks.tsx
 import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO";
 import noop from "noop";
@@ -13,7 +14,7 @@ const require = arg1;
 const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/soundboard/native/SoundboardHooks.tsx");
 
 export const useSoundButtonStyleConfig = function useSoundButtonStyleConfig() {
-  return { buttonWidth: (Math.min(ACTION_SHEET_MAX_WIDTH, require("../../screen/useWindowDimensions.native.tsx")().width) - closure_8) / closure_7 };
+  return { buttonWidth: (Math.min(ACTION_SHEET_MAX_WIDTH, useWindowDimensions().width) - closure_8) / closure_7 };
 };
 export const useMaybeFetchSoundboardSounds = function useMaybeFetchSoundboardSounds(shouldFetch) {
   shouldFetch = shouldFetch.shouldFetch;

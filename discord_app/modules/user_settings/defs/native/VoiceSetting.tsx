@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { KrispLogo } from "../../voice/native/SettingsVoiceScreen.tsx";
 // discord_app/modules/user_settings/defs/native/VoiceSetting.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import ME from "ME";
@@ -9,8 +11,8 @@ const require = arg1;
 ({ InputModes: c3, UserSettingsSections } = ME);
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.K3lovD);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.K3lovD);
   },
   parent: null,
   IconComponent: require("MicrophoneIcon").MicrophoneIcon,
@@ -27,15 +29,15 @@ createToggle = {
   },
   screen: createToggle,
   useSearchTerms() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    const items = [intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.nuFtHH)];
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const items = [intl.string(getSystemLocale /* getSystemLocale */.t.nuFtHH)];
     return items;
   }
 };
 createToggle = {
   route: UserSettingsSections.VOICE,
   getComponent() {
-    return require("../../voice/native/SettingsVoiceScreen.tsx") /* KrispLogo */.default;
+    return KrispLogo /* KrispLogo */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

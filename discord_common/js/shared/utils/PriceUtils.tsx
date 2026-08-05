@@ -1,3 +1,4 @@
+import { add } from "../../../../_runtime/05766_add.js";
 // discord_common/js/shared/utils/PriceUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
@@ -12,7 +13,7 @@ function convertToMajorCurrencyUnits(diff1, USD) {
     const error = new Error("Unexpected currency " + USD);
     throw error;
   } else {
-    obj = new require("../../../../_runtime/05766_add.js")(diff1);
+    obj = new add(diff1);
     return obj.dividedBy(10 ** tmp).toNumber();
   }
 }
@@ -43,7 +44,7 @@ export const formatPrice = (arg0, arg1, arg2) => {
         const error = new Error("Unexpected currency " + arg1);
         throw error;
       } else {
-        const obj4 = new require("../../../../_runtime/05766_add.js")(arg0);
+        const obj4 = new add(arg0);
         toNumberResult = obj4.dividedBy(10 ** tmp11).toNumber();
         const dividedByResult = obj4.dividedBy(10 ** tmp11);
       }
@@ -60,7 +61,7 @@ export const convertToMinorCurrencyUnits = (arg0, arg1) => {
     const error = new Error("Unexpected currency " + arg1);
     throw error;
   } else {
-    obj = new require("../../../../_runtime/05766_add.js")(arg0);
+    obj = new add(arg0);
     return obj.times(10 ** tmp).toNumber();
   }
 };

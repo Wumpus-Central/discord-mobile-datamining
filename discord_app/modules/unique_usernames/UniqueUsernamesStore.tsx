@@ -1,3 +1,4 @@
+import { set } from "../../utils/Durations.tsx";
 // discord_app/modules/unique_usernames/UniqueUsernamesStore.tsx
 import { Store } from "initialize";
 
@@ -65,7 +66,7 @@ obj = {
       if (retryAfter == null) {
         num = 7;
       }
-      const result = validations.set(username, obj, num * require("../../utils/Durations.tsx").Millis.SECOND);
+      const result = validations.set(username, obj, num * set.Millis.SECOND);
       let tmp = obj;
       const tmp3 = obj;
     } else {
@@ -78,7 +79,7 @@ obj = {
     if (null != retryAfter) {
       const _Date = Date;
       const timestamp = Date.now();
-      tmp.retryAfterTime = timestamp + retryAfter * require("../../utils/Durations.tsx").Millis.SECOND;
+      tmp.retryAfterTime = timestamp + retryAfter * set.Millis.SECOND;
     }
   },
   UNIQUE_USERNAME_SUGGESTIONS_RESET: function handleUniqueUsernameSuggestionsReset() {

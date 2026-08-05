@@ -1,3 +1,6 @@
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useChannelFollowerStats } from "../../../channel_following/useChannelFollowerStats.tsx";
 // discord_app/modules/action_sheet/native/components/PublishModal.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
@@ -17,7 +20,7 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/a
 
 export default function PublishModal(channelId) {
   const tmp = createCacheKey();
-  const tmp3 = callback(require("../../../channel_following/useChannelFollowerStats.tsx")(channelId.channelId), 2);
+  const tmp3 = callback(useChannelFollowerStats(channelId.channelId), 2);
   const first = tmp3[0];
   if (tmp3[1]) {
     let obj = { style: null, children: null };
@@ -41,7 +44,7 @@ export default function PublishModal(channelId) {
     obj[0] = tmp.alertContainer;
     obj = { style: null, children: null };
     obj[0] = tmp.alertBodyText;
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     if (tmp7) {
       let num2;
       if (first != null) {
@@ -58,7 +61,7 @@ export default function PublishModal(channelId) {
       obj[1] = intl.string(tmp11(1236).t["8FpqOs"]);
       tmp12 = obj;
     }
-    obj[1] = jsx(require("../../../../design/void/native.tsx") /* Button */.LegacyText, tmp12);
+    obj[1] = jsx(Button /* Button */.LegacyText, tmp12);
     return <closure_4 style={null}>{null}</closure_4>;
   }
 };

@@ -1,3 +1,4 @@
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/dismissible_content/NewUserDismissibleContentRegistry.tsx
 import fetchFingerprint from "fetchFingerprint";
 import set from "set";
@@ -39,7 +40,7 @@ export const disableNewUserDismissibleContent = function disableNewUserDismissib
     id = id.getId();
     let tmp5 = null != id;
     if (tmp5) {
-      obj = require("../../utils/SnowflakeUtils.tsx");
+      obj = DISCORD_EPOCH;
       let tmp11 = dependencyMap[prop];
       if (tmp11 == null) {
         tmp11 = DAY;
@@ -55,12 +56,12 @@ export const isUserAccountOldEnough = function isUserAccountOldEnough(arg0, arg1
   let tmp = null != arg0;
   if (tmp) {
     let tmp7 = dependencyMap[arg1];
-    const obj = require("../../utils/SnowflakeUtils.tsx");
+    const obj = DISCORD_EPOCH;
     if (tmp7 == null) {
       tmp7 = DAY;
     }
-    tmp = require("../../utils/SnowflakeUtils.tsx").age(arg0) >= tmp7;
-    const ageResult = require("../../utils/SnowflakeUtils.tsx").age(arg0);
+    tmp = DISCORD_EPOCH.age(arg0) >= tmp7;
+    const ageResult = DISCORD_EPOCH.age(arg0);
   }
   return tmp;
 };

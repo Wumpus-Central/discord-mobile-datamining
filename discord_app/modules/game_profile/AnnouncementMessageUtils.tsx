@@ -1,3 +1,5 @@
+import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
+import { formatExpirationLabel } from "../polls/chat/useFormattedExpirationLabel.tsx";
 // discord_app/modules/game_profile/AnnouncementMessageUtils.tsx
 import { isMessageComponentsV2 } from "hasFlag";
 
@@ -241,7 +243,7 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
   });
 };
 export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
-  let result = require("../polls/chat/useFormattedExpirationLabel.tsx") /* formatExpirationLabel */.formatExpirationLabel(poll.expiry);
+  let result = formatExpirationLabel /* formatExpirationLabel */.formatExpirationLabel(poll.expiry);
   if (result == null) {
     const intl = tmp(1236).intl;
     result = intl.string(tmp(1236).t["e+J3JZ"]);
@@ -249,7 +251,7 @@ export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
   return result;
 };
 export const getPosterUrl = function getPosterUrl(proxyUrl, arg1, c12) {
-  let str = require("../../utils/URLUtils.tsx").toURLSafe(proxyUrl);
+  let str = isDiscordProxiedAssetUrl.toURLSafe(proxyUrl);
   str = null;
   if (null != str) {
     const searchParams = str.searchParams;

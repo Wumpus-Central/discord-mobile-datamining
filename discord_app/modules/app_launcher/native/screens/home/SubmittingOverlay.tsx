@@ -1,3 +1,4 @@
+import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/app_launcher/native/screens/home/SubmittingOverlay.tsx
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -36,5 +37,5 @@ export const SubmittingOverlay = function SubmittingOverlay(submitting) {
     submitting = tmp5(submitting(4710).Ellipsis, { variant: "active", size: "md" });
   }
   obj[1] = submitting;
-  return jsx(require("../../../../reanimated/ReanimatedRexport.tsx").View, { style: items, children: null });
+  return jsx(ReanimatedRexport.View, { style: items, children: null });
 };

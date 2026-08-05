@@ -1,3 +1,4 @@
+import { DataBindByName } from "../../../../../../../_runtime/04015_DataBindByName.js";
 // discord_common/js/packages/design/components/Rive/native/BaseRive.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -179,7 +180,7 @@ export const BaseRive = forwardRefResult;
 export const useNumberBinding = function useNumberBinding(AnimationState, instance, AnimationState2, AnimationState1, playIfNeeded) {
   let _require = AnimationState2;
   let dependencyMap = playIfNeeded;
-  const iter = _require("../../../../../../../_runtime/04015_DataBindByName.js").useRiveNumber(AnimationState, instance);
+  const iter = _DataBindByName.useRiveNumber(AnimationState, instance);
   const setValue = iter.setValue;
   let importAllResult = setValue;
   const value = iter.value;
@@ -226,7 +227,7 @@ export const useNumberBinding = function useNumberBinding(AnimationState, instan
 export const useStringBinding = function useStringBinding(LVL, instance, LVL2, LVL1, playIfNeeded) {
   let _require = LVL2;
   let dependencyMap = playIfNeeded;
-  const iter = _require("../../../../../../../_runtime/04015_DataBindByName.js").useRiveString(LVL, instance);
+  const iter = _DataBindByName.useRiveString(LVL, instance);
   const setValue = iter.setValue;
   let importAllResult = setValue;
   const value = iter.value;
@@ -259,7 +260,7 @@ export const useStringBinding = function useStringBinding(LVL, instance, LVL2, L
 export const useBooleanBinding = function useBooleanBinding(reducedMotion, instance, reducedMotionEnabled, pressed1, playIfNeeded) {
   let _require = reducedMotionEnabled;
   let dependencyMap = playIfNeeded;
-  const iter = _require("../../../../../../../_runtime/04015_DataBindByName.js").useRiveBoolean(reducedMotion, instance);
+  const iter = _DataBindByName.useRiveBoolean(reducedMotion, instance);
   const setValue = iter.setValue;
   let importAllResult = setValue;
   const value = iter.value;
@@ -293,7 +294,7 @@ export const useBooleanBinding = function useBooleanBinding(reducedMotion, insta
 export const useColorBinding = function useColorBinding(FillColor, instance, FillColor2, FillColor1, playIfNeeded) {
   const _require = FillColor2;
   const dependencyMap = FillColor1;
-  const iter = _require("../../../../../../../_runtime/04015_DataBindByName.js").useRiveColor(FillColor, instance);
+  const iter = _DataBindByName.useRiveColor(FillColor, instance);
   const setValue = iter.setValue;
   const value = iter.value;
   let closure_4 = value;
@@ -324,7 +325,7 @@ export const useColorBinding = function useColorBinding(FillColor, instance, Fil
 export const useEnumBinding = function useEnumBinding(FillColor, instance, arg2, stateFromStores) {
   let _require = arg2;
   let dependencyMap = arg4;
-  const iter = _require("../../../../../../../_runtime/04015_DataBindByName.js").useRiveEnum(FillColor, instance);
+  const iter = _DataBindByName.useRiveEnum(FillColor, instance);
   const setValue = iter.setValue;
   let importAllResult = setValue;
   const value = iter.value;
@@ -357,7 +358,7 @@ export const useEnumBinding = function useEnumBinding(FillColor, instance, arg2,
 export const useTriggerBinding = function useTriggerBinding(startAnimation, instance, startAnimation2, startAnimation1, playIfNeeded) {
   const _require = startAnimation2;
   const dependencyMap = playIfNeeded;
-  let obj = _require("../../../../../../../_runtime/04015_DataBindByName.js");
+  let obj = _DataBindByName;
   let tmp;
   if (null != startAnimation1) {
     obj = { onTrigger: null };

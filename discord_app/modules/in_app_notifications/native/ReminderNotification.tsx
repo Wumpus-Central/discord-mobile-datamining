@@ -1,3 +1,11 @@
+import { 00038__ } from "../../../../_runtime/metro/00038__.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { ClockIcon } from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { extractMetadataFromNotification } from "InAppNotificationUtils.tsx";
+import { VideoBadge } from "MediaPreviewRightAccessory.tsx";
+import { LocationText } from "MessageNotificationHeader.tsx";
+import { NativeMessagePreviewContent } from "MessagePreviewText.tsx";
 // discord_app/modules/in_app_notifications/native/ReminderNotification.tsx
 import importAllResult from "module_38";
 import { View } from "PreviewIcon";
@@ -23,13 +31,13 @@ function NotificationAvatar(arg0) {
   const tmp = callback3();
   let obj = { style: tmp.avatarContainer, children: null };
   obj = { user, guildId, size: null, cutout: null };
-  obj[2] = require("../../../design/void/native.tsx") /* Button */.AvatarSizes.NORMAL;
+  obj[2] = Button /* Button */.AvatarSizes.NORMAL;
   obj[3] = obj;
-  const items = [callback(require("../../../design/void/native.tsx") /* Button */.Avatar, obj), ];
+  const items = [callback(Button /* Button */.Avatar, obj), ];
   obj = { style: tmp.cutoutIconContainer, children: null };
   const obj1 = { size: "xs", color: null };
-  obj1[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_SUBTLE;
-  obj[1] = callback(require("../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx") /* ClockIcon */.ClockIcon, obj1);
+  obj1[1] = Themes.colors.ICON_SUBTLE;
+  obj[1] = callback(ClockIcon /* ClockIcon */.ClockIcon, obj1);
   items[1] = callback(View, obj);
   obj[1] = items;
   return callback2(View, obj);
@@ -57,7 +65,7 @@ function NotificationBody(channel) {
     obj[0] = channel;
     obj[1] = stateFromStores1;
     obj[2] = stateFromStores;
-    tmp10 = callback(require("MessageNotificationHeader.tsx"), obj);
+    tmp10 = callback(LocationText, obj);
   }
   const items2 = [tmp10, ];
   if (!hasPreviewableMedia) {
@@ -76,7 +84,7 @@ function NotificationBody(channel) {
     return closure_11(closure_12, obj1);
   }
   obj2 = { message, lineClamp: num, showMessageAuthor: true, maxHeight: closure_7 };
-  tmp14 = callback(require("MessagePreviewText.tsx"), obj2);
+  tmp14 = callback(NativeMessagePreviewContent, obj2);
 }
 let c3 = importAllResult;
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: error, NOTIFICATION_PREVIEW_LINE_CLAMP: metroImportAll, RIGHT_ACCESSORY_LEFT_MARGIN } = set);
@@ -85,14 +93,14 @@ let closure_13 = createCacheKey.createStyles({ cutoutIconContainer: { position: 
 let obj = { direction: require("Button").CutoutDirection.BOTTOM_RIGHT, radius: 10, inset: -2 };
 let closure_16 = importAllResult.memo((message) => {
   message = message.message;
-  let obj = require("InAppNotificationUtils.tsx") /* extractMetadataFromNotification */;
+  let obj = extractMetadataFromNotification /* extractMetadataFromNotification */;
   let tmp4 = null;
   if (obj.useHasPreviewableMedia(message)) {
     obj = { style: null, children: null };
     obj[0] = tmp.rightAccessoryContainer;
     obj = { message: null };
     obj[0] = message;
-    obj[1] = callback(require("MediaPreviewRightAccessory.tsx") /* VideoBadge */.MediaPreviewRightAccessory, obj);
+    obj[1] = callback(VideoBadge /* VideoBadge */.MediaPreviewRightAccessory, obj);
     tmp4 = callback(View, obj);
   }
   return tmp4;
@@ -103,7 +111,7 @@ export default importAllResult.memo(function ReminderNotification(notification) 
   notification = notification.notification;
   const channel = notification.channel;
   const message = notification.savedMessage.message;
-  require("../../../../_runtime/metro/00038__.js")(null != message, "Message in a notification should not be null.");
+  00038__(null != message, "Message in a notification should not be null.");
   let obj = { user: notification.author, guildId: channel.guild_id };
   const items = [notification];
   const memo = importAllResult.useMemo(() => {

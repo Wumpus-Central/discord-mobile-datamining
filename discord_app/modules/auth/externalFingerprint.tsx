@@ -1,3 +1,5 @@
+import { keysSorter } from "../../../_runtime/05140_keysSorter.js";
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/auth/externalFingerprint.tsx
 import fetchFingerprint from "fetchFingerprint";
 
@@ -6,14 +8,14 @@ const result = require("dispatcher").fileFinishedImporting("modules/auth/externa
 
 export default function externalFingerprint(arg0) {
   if (!authenticated.isAuthenticated()) {
-    let obj = require("../../../_runtime/05140_keysSorter.js") /* keysSorter */;
-    const fingerprint = obj.parse(require("../../../_runtime/05140_keysSorter.js") /* keysSorter */.extract(arg0)).fingerprint;
+    let obj = keysSorter /* keysSorter */;
+    const fingerprint = obj.parse(keysSorter /* keysSorter */.extract(arg0)).fingerprint;
     if (null != fingerprint) {
       obj = { type: "FINGERPRINT", fingerprint: null };
       obj[1] = fingerprint;
-      require("../../Dispatcher.tsx").dispatch(obj);
-      const obj3 = require("../../Dispatcher.tsx");
+      dispatcher.dispatch(obj);
+      const obj3 = dispatcher;
     }
-    const obj2 = require("../../../_runtime/05140_keysSorter.js") /* keysSorter */;
+    const obj2 = keysSorter /* keysSorter */;
   }
 };

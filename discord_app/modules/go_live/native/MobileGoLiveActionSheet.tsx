@@ -1,3 +1,6 @@
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { encodeProperties } from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/go_live/native/MobileGoLiveActionSheet.tsx
 import set from "set";
 import importAllResult from "initialize";
@@ -320,10 +323,10 @@ let result = require("ApplicationStreamPresets").fileFinishedImporting("modules/
 
 export default memoResult;
 export const showMobileGoLiveActionSheet = function showMobileGoLiveActionSheet(closure_1) {
-  let obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { impressionName: null, impressionProperties: null };
-  obj[0] = require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
+  obj[0] = encodeProperties /* encodeProperties */.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
   obj = { location_stack: closure_1 };
   obj[1] = obj;
-  obj.openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(10720, dependencyMap.paths), MobileGoLiveActionSheet, obj);
+  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(10720, dependencyMap.paths), MobileGoLiveActionSheet, obj);
 };

@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/safety_hub/native/SafetyHubAccountStandingSubwayMarker.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -61,7 +62,7 @@ export default function SafetyHubAccountStandingSubwayMarker(arg0) {
     selectedIcon = tmp10(tmp9, obj1);
   }
   const items = [selectedIcon, ];
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   items[1] = intl.format(status, {
     hook(arg0, arg1) {
       if (isSelected) {

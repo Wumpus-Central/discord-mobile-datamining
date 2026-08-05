@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/labs/LabFeatureActions.tsx
 import getUserAgnosticState from "getUserAgnosticState";
 
@@ -13,7 +14,7 @@ export const toggleLabFeature = function toggleLabFeature(ICYMI_LAB_FEATURE, arg
   if (enabled === undefined) {
     enabled = !getUserAgnosticState.get(ICYMI_LAB_FEATURE);
   }
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "LAB_FEATURE_TOGGLE", labFeature: ICYMI_LAB_FEATURE, enabled };
   obj.dispatch(obj);
 };

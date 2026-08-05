@@ -1,3 +1,6 @@
+import { TagIcon } from "../../../../design/components/Icon/native/redesign/generated/TagIcon.tsx";
+import { useKeyboardType } from "../../../keyboard/native/useKeyboardType.tsx";
+import { useSafeAreaInsetsKeyboardAware } from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 // discord_app/modules/forums/native/composer/ForumComposer.tsx
 import handleThemeChange from "handleThemeChange";
 import useSafeAreaInsetsKeyboardAware from "useSafeAreaInsetsKeyboardAware";
@@ -47,7 +50,7 @@ function Tags(tags) {
     obj = { size: "sm", style: null };
     obj[1] = tmp.tagIcon;
     let items = [
-      callback(require("../../../../design/components/Icon/native/redesign/generated/TagIcon.tsx") /* TagIcon */.TagIcon, obj),
+      callback(TagIcon /* TagIcon */.TagIcon, obj),
       tags.map((id) => {
           let tmp2 = 0 !== arg1;
           if (tmp2) {
@@ -98,7 +101,7 @@ function ActionBar(channel) {
     }
     return canResult;
   });
-  const tmp6 = require("../../../keyboard/native/useKeyboardType.tsx")();
+  const tmp6 = useKeyboardType();
   c7 = tmp6;
   let isMediaChannelResult = channel.isMediaChannel();
   const tmp8 = tmp6 === channel(1579).KeyboardTypes.MEDIA;
@@ -120,7 +123,7 @@ function ActionBar(channel) {
     tmp10 = length > 0;
   }
   obj = { onLayout, style: items2, children: null };
-  items2 = [tmp.actionsContainer, { marginBottom: require("../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx")({ includeKeyboardHeight: true }).insets.bottom }];
+  items2 = [tmp.actionsContainer, { marginBottom: useSafeAreaInsetsKeyboardAware({ includeKeyboardHeight: true }).insets.bottom }];
   if (isMediaChannelResult) {
     obj = { attachments: null, channelId: null, highlightThumbnails: true };
     obj[0] = stateFromStores;

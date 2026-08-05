@@ -1,9 +1,11 @@
+import { isIterable } from "../../../../_runtime/03898_isIterable.js";
+import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/modules/notifications/native/InAppMessageSoundsStore.tsx
 import identity from "identity";
 
 const InAppMessageSoundsEnabled = "InAppMessageSoundsEnabled";
 let closure_3 = identity.createWithEqualityFn(() => {
-  const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   let isEnabled = Storage.get(InAppMessageSoundsEnabled);
   if (isEnabled == null) {
     isEnabled = true;
@@ -16,10 +18,10 @@ export const isInAppMessageSoundsEnabled = function isInAppMessageSoundsEnabled(
   return store.getState().isEnabled;
 };
 export const setInAppMessageSoundsEnabled = function setInAppMessageSoundsEnabled(isEnabled) {
-  const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   const result = Storage.set(InAppMessageSoundsEnabled, isEnabled);
   store.setState({ isEnabled });
 };
 export const useInAppMessageSoundsEnabled = function useInAppMessageSoundsEnabled() {
-  return store((isEnabled) => isEnabled.isEnabled, require("../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
+  return store((isEnabled) => isEnabled.isEnabled, isIterable /* isIterable */.shallow);
 };

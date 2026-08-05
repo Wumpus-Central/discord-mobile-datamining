@@ -1,3 +1,6 @@
+import { isMetaQuest } from "../../../device/MetaQuestUtils.android.tsx";
+import { goToStandalonePremiumCheckout } from "../../utils/BillingStandaloneUtils.tsx";
+import { MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG } from "../../utils/MobileWebRedirectCheckoutUtils.tsx";
 // discord_app/modules/payments/native/utils/BillingStandaloneNativeUtils.tsx
 import { CustomCheckoutFlow } from "CustomCheckoutFlow";
 import { Routes } from "ME";
@@ -10,7 +13,7 @@ function emitMWRCSentryErrorOnFailure(arg0, source, load_id) {
   try {
     const _HermesInternal = HermesInternal;
     tmp2.error("Failed to open mobile web popout to " + tmp5 + ", error response: ", tmp4);
-    let obj1 = require("../../utils/MobileWebRedirectCheckoutUtils.tsx") /* MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG */;
+    let obj1 = MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG /* MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG */;
     const _Error = Error;
     const error = new Error("Mobile web redirect checkout mobile app to web popout failed");
     obj = { extra: null };
@@ -24,8 +27,8 @@ function emitMWRCSentryErrorOnFailure(arg0, source, load_id) {
     const error1 = new Error("Mobile web redirect checkout mobile app to web popout failed");
     obj1 = { extra: null };
     obj1[0] = tmp3;
-    const result1 = require("../../utils/MobileWebRedirectCheckoutUtils.tsx") /* MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG */.captureMobileWebRedirectCheckoutSentryError(error1, tmp2, obj1);
-    const obj5 = require("../../utils/MobileWebRedirectCheckoutUtils.tsx") /* MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG */;
+    const result1 = MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG /* MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG */.captureMobileWebRedirectCheckoutSentryError(error1, tmp2, obj1);
+    const obj5 = MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG /* MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG */;
   }
 }
 let c5 = new require("MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG")("BillingStandaloneNativeUtils");
@@ -37,9 +40,9 @@ export const goToStandalonePremiumCheckoutFromMobileApp = function goToStandalon
   let closure_1 = arg1;
   const dependencyMap = arg2;
   const CustomCheckoutFlow = arg3;
-  let obj = _require("../../utils/BillingStandaloneUtils.tsx");
+  let obj = _goToStandalonePremiumCheckout;
   obj = {};
-  const obj2 = _require("../../../device/MetaQuestUtils.android.tsx");
+  const obj2 = _isMetaQuest;
   const tmp = _require;
   const merged = Object.assign(arg1);
   if (isMetaQuestResult) {
@@ -65,7 +68,7 @@ export const goToStandaloneNitroManagementFromMobileApp = function goToStandalon
   loadId = loadId.loadId;
   const dependencyMap = arg2;
   const CustomCheckoutFlow = arg3;
-  const obj = _require("../../utils/BillingStandaloneUtils.tsx");
+  const obj = _goToStandalonePremiumCheckout;
   const tmp = _require;
   if (obj2.isMetaQuest()) {
     let result = obj3.BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE(CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT, loadId);

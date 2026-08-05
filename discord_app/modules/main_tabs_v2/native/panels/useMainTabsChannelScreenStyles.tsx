@@ -1,3 +1,4 @@
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/main_tabs_v2/native/panels/useMainTabsChannelScreenStyles.tsx
 import noop from "noop";
 import createCacheKey from "createCacheKey";
@@ -63,7 +64,7 @@ export const useMainTabsChannelScreenStyles = function useMainTabsChannelScreenS
   fn.__closure = { freezeValue: parentFreezeValue, isDragging, translateX, maxWidth, elevationStyle: elevation, isCompletelyCovered: derivedValue };
   fn.__workletHash = 16765484569296;
   fn.__initData = closure_4;
-  const animatedStyle = _require("../../../reanimated/ReanimatedRexport.tsx").useAnimatedStyle(fn);
+  const animatedStyle = _ReanimatedRexport.useAnimatedStyle(fn);
   let items = [tmp, animatedStyle];
   return React.useMemo(() => {
     const items = [tmp.elevation, animatedStyle];

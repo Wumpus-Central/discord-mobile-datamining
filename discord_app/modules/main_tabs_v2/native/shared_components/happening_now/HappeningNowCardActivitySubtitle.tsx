@@ -1,3 +1,7 @@
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { _isStreaming } from "../../../../activities/utils/isStreaming.tsx";
+import { computeChannelName } from "../../../../channel/useChannelName.tsx";
+import { HAPPENING_NOW_CARD_MARGIN_RIGHT } from "HappeningNowCard.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivitySubtitle.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -24,7 +28,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
     obj[0] = stateFromStores;
     tmp8 = tmp4(8955)(obj);
   }
-  obj[1] = jsx(voiceState(14431).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: require("../../../../channel/useChannelName.tsx")(stateFromStores) });
+  obj[1] = jsx(voiceState(14431).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: computeChannelName(stateFromStores) });
   return <View style={callback().cardDetails}>{null}</View>;
 };
 export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCardSubtitle(activity) {
@@ -40,7 +44,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
     }
     const obj = { lineClamp: 1, children: null };
     obj[1] = tmp3;
-    return jsx(require("HappeningNowCard.tsx") /* HAPPENING_NOW_CARD_MARGIN_RIGHT */.HappeningNowCardSubtitle, { lineClamp: 1, children: null });
+    return jsx(HAPPENING_NOW_CARD_MARGIN_RIGHT /* HAPPENING_NOW_CARD_MARGIN_RIGHT */.HappeningNowCardSubtitle, { lineClamp: 1, children: null });
   }
   if (null != activity.stream) {
     if (null != activity) {
@@ -48,8 +52,8 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
         let name3 = activity.name;
       }
     }
-    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    name3 = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.eXan7B);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    name3 = intl.string(getSystemLocale /* getSystemLocale */.t.eXan7B);
   } else {
     let name;
     if (activity != null) {
@@ -57,7 +61,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
     }
     tmp3 = null;
     if (null != name) {
-      if (!require("../../../../activities/utils/isStreaming.tsx")(activity)) {
+      if (!_isStreaming(activity)) {
         if (tmp4(9573)(activity)) {
           if (null != activity.details) {
             if (null != activity.state) {

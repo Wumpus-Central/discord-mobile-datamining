@@ -1,3 +1,4 @@
+import { BackdropCard } from "../../design_system/native/UserSettingsDesignSystemBackdrop.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemBackdropSetting.tsx
 import createToggle from "createToggle";
 
@@ -11,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_BACKDROP,
   getComponent() {
-    return require("../../design_system/native/UserSettingsDesignSystemBackdrop.tsx") /* BackdropCard */.default;
+    return BackdropCard /* BackdropCard */.default;
   }
 };
 const route = createToggle.createRoute(obj);

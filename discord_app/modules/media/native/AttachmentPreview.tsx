@@ -1,3 +1,8 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/media/native/AttachmentPreview.tsx
 import importAllResult from "getUploadFileSizeSum";
 import get_ActivityIndicator from "registerAsset";
@@ -50,7 +55,7 @@ function FilenameText(fileName) {
     obj = { style: null, ellipsizeMode: "middle", lineClamp: 1, variant: "text-xs/medium", color: "mobile-text-heading-primary", children: null };
     obj[0] = tmp.attachmentFileName;
     obj[5] = fileName;
-    tmp5 = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+    tmp5 = callback(Text /* Text */.Text, obj);
   }
   const items = [tmp5, ];
   obj = { style: tmp.attachmentFileName, lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: null };
@@ -64,7 +69,7 @@ function FilenameText(fileName) {
   }
   const obj1 = { children: null };
   obj[4] = str3;
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items[1] = callback(Text /* Text */.Text, obj);
   obj1[0] = items;
   return closure_7(closure_5, obj1);
 }
@@ -109,7 +114,7 @@ let closure_13 = importAllResult.memo((borderRadius) => {
     isMatch = obj2.test(fileName);
   }
   if (isMatch) {
-    let isIOSResult = require("../../../utils/PlatformUtils.tsx") /* set */.isIOS();
+    let isIOSResult = set /* set */.isIOS();
     if (isIOSResult) {
       isIOSResult = uri.startsWith("ph://");
     }
@@ -122,7 +127,7 @@ let closure_13 = importAllResult.memo((borderRadius) => {
       const tmp2Result = tmp2(500);
     }
     isMatch = isIOSResult;
-    const obj4 = require("../../../utils/PlatformUtils.tsx") /* set */;
+    const obj4 = set /* set */;
     tmp2 = require;
   }
   obj = { style: items, children: null };
@@ -132,7 +137,7 @@ let closure_13 = importAllResult.memo((borderRadius) => {
     const items1 = [obj, style];
     obj1[0] = items1;
     obj1[1] = obj;
-    obj[1] = tmp6(require("../../../components_native/common/FastImage.tsx"), obj1);
+    obj[1] = tmp6(preload, obj1);
     let tmp10 = obj;
   } else {
     obj2 = { style: null, source: null, localImageSource: null };
@@ -140,7 +145,7 @@ let closure_13 = importAllResult.memo((borderRadius) => {
     obj2[0] = items2;
     obj2[1] = obj;
     obj2[2] = obj;
-    obj[1] = tmp6(require("../../../design/void/native.tsx") /* Button */.ThumbnailImage, obj2);
+    obj[1] = tmp6(Button /* Button */.ThumbnailImage, obj2);
     tmp10 = obj;
   }
   return closure_6(closure_5, tmp10);
@@ -164,7 +169,7 @@ export default function AttachmentPreview(height) {
   }
   ({ fileName, borderRadius, maxFileWidth } = height);
   if (borderRadius === undefined) {
-    borderRadius = require("../../../../discord_common/js/packages/tokens/native.tsx").radii.sm;
+    borderRadius = Themes.radii.sm;
   }
   let flag = height.showPlayOnVideoPreview;
   if (flag === undefined) {
@@ -191,7 +196,7 @@ export default function AttachmentPreview(height) {
     let tmp9 = callback(closure_13, obj);
   } else {
     if (!isVideo) {
-      let obj2 = require("../../../utils/PlatformUtils.tsx") /* set */;
+      let obj2 = set /* set */;
       if (obj2.isIOS()) {
         let tmp6 = tmp8;
         let CirclePlayIcon = tmp7;
@@ -218,7 +223,7 @@ export default function AttachmentPreview(height) {
       tmp8 = dependencyMap;
     } else {
       tmp6 = dependencyMap;
-      obj1 = require("../../../utils/PlatformUtils.tsx") /* set */;
+      obj1 = set /* set */;
       CirclePlayIcon = require;
     }
     if (flag) {

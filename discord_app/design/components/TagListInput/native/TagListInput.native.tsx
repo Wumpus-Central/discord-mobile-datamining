@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../Text/native/Text.tsx";
 // discord_app/design/components/TagListInput/native/TagListInput.native.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "BottomSheetModal";
@@ -17,23 +19,23 @@ let c4 = importAllResult;
 ({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles(() => {
   let obj = { placeholder: null, iconContainer: null, iconLeft: null, scrollViewContent: null, horizontalScrollViewContent: null, inputInner: null, horizontalInputInner: null, searchInput: null, horizontalSearchInput: null };
-  obj = { color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
+  obj = { color: Themes.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
   obj[0] = obj;
-  obj = { paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
+  obj = { paddingHorizontal: Themes.space.PX_12 };
   obj[1] = obj;
-  obj[2] = { marginLeft: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
+  obj[2] = { marginLeft: Themes.space.PX_12 };
   obj[3] = { paddingVertical: 5 };
   obj[4] = { flexGrow: 1 };
-  const obj1 = { marginLeft: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
-  obj[5] = { marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, alignItems: "center", flexDirection: "row", flexWrap: "wrap", flex: 1 };
+  const obj1 = { marginLeft: Themes.space.PX_12 };
+  obj[5] = { marginHorizontal: Themes.space.PX_4, alignItems: "center", flexDirection: "row", flexWrap: "wrap", flex: 1 };
   obj[6] = { flexWrap: "nowrap" };
-  const obj3 = { flex: 1, minHeight: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, minWidth: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_48, color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_DEFAULT };
-  const merged = Object.assign(require("../../Text/native/Text.tsx") /* Text */.TextStyleSheet["text-sm/medium"]);
+  const obj3 = { flex: 1, minHeight: Themes.space.PX_24, minWidth: Themes.space.PX_48, color: Themes.colors.TEXT_DEFAULT };
+  const merged = Object.assign(Text /* Text */.TextStyleSheet["text-sm/medium"]);
   obj3.paddingVertical = 0;
   obj3.marginVertical = 2;
   obj[7] = obj3;
-  const obj2 = { marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, alignItems: "center", flexDirection: "row", flexWrap: "wrap", flex: 1 };
-  obj[8] = { minWidth: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_64 };
+  const obj2 = { marginHorizontal: Themes.space.PX_4, alignItems: "center", flexDirection: "row", flexWrap: "wrap", flex: 1 };
+  obj[8] = { minWidth: Themes.space.PX_64 };
   return obj;
 });
 let closure_11 = { x: 0, y: 0.5 };

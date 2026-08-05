@@ -1,3 +1,5 @@
+import { initialize } from "../../../../../../../discord_common/js/packages/flux/index.tsx";
+import { useFullscreenPlaceholderCount } from "../../../hooks/usePlaceholderStyles.tsx";
 // discord_app/modules/search/native/components/tabs/hooks/useSearchMessagesLoadingState.tsx
 import handleReaction from "handleReaction";
 import prototype from "prototype";
@@ -14,10 +16,10 @@ export const useSearchMessagesLoadingState = function useSearchMessagesLoadingSt
   ({ searchContext: require, tab: dependencyMap } = arg0);
   let handleReaction;
   ({ placeholderHeight, numColumns } = arg0);
-  handleReaction = require("../../../hooks/usePlaceholderStyles.tsx") /* useFullscreenPlaceholderCount */.useFullscreenPlaceholderCount({ placeholderHeight, numColumns });
-  let obj = require("../../../hooks/usePlaceholderStyles.tsx") /* useFullscreenPlaceholderCount */;
+  handleReaction = useFullscreenPlaceholderCount /* useFullscreenPlaceholderCount */.useFullscreenPlaceholderCount({ placeholderHeight, numColumns });
+  let obj = useFullscreenPlaceholderCount /* useFullscreenPlaceholderCount */;
   const items = [prototype, handleReaction];
-  return require("../../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresObject(items, () => {
+  return initialize /* initialize */.useStateFromStoresObject(items, () => {
     let obj = outer1_0(outer1_1[5]);
     const searchTabFetchId = obj.getSearchTabFetchId(closure_0, closure_1, outer1_3.getSearchResultsQuery(closure_0));
     const isInitialFetchComplete = store.getIsInitialFetchComplete(searchTabFetchId);

@@ -1,3 +1,4 @@
+import { nameFromUser } from "../../utils/UserUtils.tsx";
 // discord_app/modules/stage_channels/StageChannelParticipantUtils.tsx
 const require = arg1;
 const DAY = require("set").Millis.DAY;
@@ -45,5 +46,5 @@ export const participantMemberInfo = function participantMemberInfo(participant)
     }
     return stringResult;
   }
-  obj = require("../../utils/UserUtils.tsx") /* nameFromUser */;
+  obj = nameFromUser /* nameFromUser */;
 };

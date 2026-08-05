@@ -1,3 +1,5 @@
+import { CONFIG_NEVER_ANIMATE } from "../../../design/animation/reanimated/spring/spring.tsx";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/voice_panel/native/VoicePanelUI.tsx
 import isStable from "isStable";
 import importAllResult from "Directions";
@@ -353,13 +355,13 @@ let closure_24 = new require("getParticipants")("VoicePanelUI");
 function layoutTransition(originX) {
   let obj = { animations: null, initialValues: null };
   obj = { originX: null, originY: null, width: null, height: null };
-  obj[0] = require("../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetOriginX, LAYOUT_PHYSICS, "animate-always");
-  const obj3 = require("../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */;
-  obj[1] = require("../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetOriginY, LAYOUT_PHYSICS, "animate-always");
-  const obj4 = require("../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */;
-  obj[2] = require("../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetWidth, LAYOUT_PHYSICS, "animate-always");
-  const obj5 = require("../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */;
-  obj[3] = require("../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetHeight, LAYOUT_PHYSICS, "animate-always");
+  obj[0] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetOriginX, LAYOUT_PHYSICS, "animate-always");
+  const obj3 = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */;
+  obj[1] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetOriginY, LAYOUT_PHYSICS, "animate-always");
+  const obj4 = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */;
+  obj[2] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetWidth, LAYOUT_PHYSICS, "animate-always");
+  const obj5 = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */;
+  obj[3] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetHeight, LAYOUT_PHYSICS, "animate-always");
   obj[0] = obj;
   obj[1] = { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight };
   return obj;
@@ -374,13 +376,13 @@ obj.damping = 0;
 function scrollViewLayoutTransition(originX) {
   let obj = { animations: null, initialValues: null };
   obj = { originX: null, originY: null, width: null, height: null };
-  obj[0] = require("../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetOriginX, LAYOUT_PHYSICS, "animate-always");
-  const obj3 = require("../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */;
-  obj[1] = require("../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetOriginY, LAYOUT_PHYSICS, "animate-always");
-  const obj4 = require("../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */;
-  obj[2] = require("../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetWidth, obj, "animate-always");
-  const obj5 = require("../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */;
-  obj[3] = require("../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetHeight, obj, "animate-always");
+  obj[0] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetOriginX, LAYOUT_PHYSICS, "animate-always");
+  const obj3 = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */;
+  obj[1] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetOriginY, LAYOUT_PHYSICS, "animate-always");
+  const obj4 = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */;
+  obj[2] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetWidth, obj, "animate-always");
+  const obj5 = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */;
+  obj[3] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetHeight, obj, "animate-always");
   obj[0] = obj;
   obj[1] = { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight };
   return obj;
@@ -503,7 +505,7 @@ let closure_68 = importAllResult.memo((onPress) => {
   obj = { style: items, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: null };
   items = [StyleSheet.absoluteFill, tmp.shade, animatedStyle];
   obj[3] = callback(closure_6, { style: tmp.shadePressable, onPress: onPress.onPress });
-  return callback(require("../../reanimated/ReanimatedRexport.tsx").View, obj);
+  return callback(ReanimatedRexport.View, obj);
 });
 const memoResult = importAllResult.memo(function VoicePanelUI() {
   let channelId;

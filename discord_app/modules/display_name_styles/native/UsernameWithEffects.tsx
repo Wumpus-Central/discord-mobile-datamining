@@ -1,3 +1,6 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { PlatformTypes } from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import { isFabric } from "../../../utils/native/FabricUtils.tsx";
 // discord_app/modules/display_name_styles/native/UsernameWithEffects.tsx
 import importAllResult from "getNodeText";
 import get_ActivityIndicator from "Text";
@@ -24,8 +27,8 @@ let closure_12 = createCacheKey.createStyles((color) => {
   const sum2 = dependencyMap[require(undefined, 1887) /* DisplayNameEffect */.DisplayNameEffect.TOON] + 0.04 * arg1;
   const sum3 = dependencyMap[require(undefined, 1887) /* DisplayNameEffect */.DisplayNameEffect.POP] + 0.04 * arg1;
   const result1 = Math.floor(sum2 / 2) / value;
-  let obj = { color: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE, textShadowColor: color, textShadowRadius: sum, textShadowOffset: { width: 0, height: 0 } };
-  let obj1 = require("../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
+  let obj = { color: Themes.colors.WHITE, textShadowColor: color, textShadowRadius: sum, textShadowOffset: { width: 0, height: 0 } };
+  let obj1 = PlatformTypes /* PlatformTypes */;
   if (obj1.isIOS()) {
     obj = { top: null, left: null, padding: null, marginVertical: null, marginLeft: null, marginRight: null };
     const result2 = -sum1 / 2;
@@ -63,7 +66,7 @@ let closure_12 = createCacheKey.createStyles((color) => {
   obj2[3] = num3;
   obj1[1] = obj2;
   const obj3 = { color, position: "absolute" };
-  tmp4Result1 = require("../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
+  tmp4Result1 = PlatformTypes /* PlatformTypes */;
   if (tmp4Result2.isIosFabric()) {
     const obj4 = { top: null };
     obj4[0] = 1.2 + result;
@@ -77,24 +80,24 @@ let closure_12 = createCacheKey.createStyles((color) => {
   }
   const merged1 = Object.assign(obj5);
   obj1[2] = obj3;
-  tmp4Result2 = require("../../../utils/native/FabricUtils.tsx") /* isFabric */;
-  obj1[3] = { color: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE };
-  const obj8 = { color: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE, top: null, left: null, marginRight: null };
-  const obj7 = { color: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE };
+  tmp4Result2 = isFabric /* isFabric */;
+  obj1[3] = { color: Themes.colors.WHITE };
+  const obj8 = { color: Themes.colors.WHITE, top: null, left: null, marginRight: null };
+  const obj7 = { color: Themes.colors.WHITE };
   let num6 = 0;
   if (tmp4Result3.isIOS()) {
     num6 = -sum2 / 2;
   }
   obj8[1] = num6;
-  tmp4Result3 = require("../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
+  tmp4Result3 = PlatformTypes /* PlatformTypes */;
   if (tmp4Result4.isIOS()) {
     let result3 = -sum2 / 2;
   } else {
     result3 = -result1;
   }
   obj8[2] = result3;
-  tmp4Result4 = require("../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
-  obj8[3] = require("../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */.isIOS() ? -sum2 : -result1;
+  tmp4Result4 = PlatformTypes /* PlatformTypes */;
+  obj8[3] = PlatformTypes /* PlatformTypes */.isIOS() ? -sum2 : -result1;
   obj1[4] = obj8;
   return obj1;
 });

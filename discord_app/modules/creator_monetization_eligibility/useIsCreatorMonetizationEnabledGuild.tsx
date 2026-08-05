@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
@@ -8,7 +9,7 @@ const result = require("initialize").fileFinishedImporting("modules/creator_mone
 export default function useIsCreatorMonetizationEnabledGuild(arg0) {
   const _require = arg0;
   const items = [createGuildRecordFromRust];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const guild = outer1_2.getGuild(closure_0);
     let tmp2 = null != guild;
     if (tmp2) {

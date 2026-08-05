@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/premium/PremiumSubscriptionTrialUtil.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import reset from "reset";
@@ -15,7 +16,7 @@ const result = require("emitChanges").fileFinishedImporting("modules/premium/Pre
 
 export const useHasActiveTrial = function useHasActiveTrial() {
   const items = [reset];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
   let hasActiveTrial;
   if (stateFromStores != null) {
     hasActiveTrial = stateFromStores.hasActiveTrial;
@@ -53,10 +54,10 @@ export const isEligibleTrialSub = function isEligibleTrialSub(trialId) {
 };
 export const useCurrentPremiumTrialTier = function useCurrentPremiumTrialTier() {
   const items = [reset];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
-  const obj = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
+  const obj = initialize /* initialize */;
   const items1 = [mergeGuildAvatar];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => currentUser.getCurrentUser());
+  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => currentUser.getCurrentUser());
   let hasActiveTrial;
   if (stateFromStores != null) {
     hasActiveTrial = stateFromStores.hasActiveTrial;

@@ -1,3 +1,5 @@
+import { apply } from "../../_runtime/00012_apply.js";
+import { MurmurHashV3 } from "../../_runtime/01217_MurmurHashV3.js";
 // discord_app/stores/ChannelMemberStore.tsx
 import getHash from "getHash";
 import reset from "reset";
@@ -24,8 +26,8 @@ function getMemberListId(arg0) {
     if (obj.canEveryone(constants2.VIEW_CHANNEL, channel)) {
       let str = everyone;
     } else {
-      const obj2 = require("../../_runtime/01217_MurmurHashV3.js");
-      const reduced = require("../../_runtime/00012_apply.js")(channel.permissionOverwrites).reduce((arr, id) => {
+      const obj2 = MurmurHashV3;
+      const reduced = apply(channel.permissionOverwrites).reduce((arr, id) => {
         let allow;
         let deny;
         id = id.id;
@@ -44,7 +46,7 @@ function getMemberListId(arg0) {
       }, []);
       const sorted = reduced.sort();
       str = ",";
-      const arr = require("../../_runtime/00012_apply.js")(channel.permissionOverwrites);
+      const arr = apply(channel.permissionOverwrites);
       str = obj2.v3(sorted.join(",")).toString();
       const str2 = obj2.v3(sorted.join(","));
     }
@@ -545,13 +547,13 @@ prototype2["forEach"] = function forEach(arg0, arg1) {
   const self = this;
   let closure_0 = arg1;
   if (null == arg0) {
-    let item = require("../../_runtime/00012_apply.js").forEach(self._guildLists, (arg0) => {
+    let item = apply.forEach(self._guildLists, (arg0) => {
       const item = outer1_1(outer1_3[15]).forEach(arg0, closure_0);
     });
-    const arr2 = require("../../_runtime/00012_apply.js");
+    const arr2 = apply;
   } else if (null != self._guildLists[arg0]) {
-    const item1 = require("../../_runtime/00012_apply.js").forEach(tmp, arg1);
-    const arr = require("../../_runtime/00012_apply.js");
+    const item1 = apply.forEach(tmp, arg1);
+    const arr = apply;
   }
 };
 prototype2["delete"] = function delete(arg0) {

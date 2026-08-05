@@ -1,3 +1,4 @@
+import { apexExperiment } from "../ZoomedInAnalyticsExperiment.tsx";
 // discord_app/modules/telemetry_ring/native/channels/ZoomedInTelemetry.tsx
 import expandEventProperties from "expandEventProperties";
 import "getIntervalMs";
@@ -18,7 +19,7 @@ class ZoomedInTelemetryImpl extends tmp3 {
 }
 const prototype = ZoomedInTelemetryImpl.prototype;
 prototype["shouldRun"] = function shouldRun() {
-  return require("../ZoomedInAnalyticsExperiment.tsx") /* apexExperiment */.isZoomedExperimentEnabled();
+  return apexExperiment /* apexExperiment */.isZoomedExperimentEnabled();
 };
 prototype["getBudget"] = function getBudget(mode) {
   return "backlog" === mode ? closure_5 : closure_4;

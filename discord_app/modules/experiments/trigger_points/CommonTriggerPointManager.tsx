@@ -1,3 +1,5 @@
+import { commonTriggerPointConfiguration } from "OpenUserSettingsTriggerPoint.tsx";
+import { commonTriggerPointConfiguration } from "VoiceCallTriggerPoint.tsx";
 // discord_app/modules/experiments/trigger_points/CommonTriggerPointManager.tsx
 import "initialize";
 
@@ -13,18 +15,18 @@ const prototype = CommonTriggerPointManager.prototype;
 prototype["handleVoiceChannelSelect"] = function handleVoiceChannelSelect(guildId) {
   guildId = guildId.guildId;
   if (null != guildId.channelId) {
-    const VoiceCallTriggerPoint = require("VoiceCallTriggerPoint.tsx") /* commonTriggerPointConfiguration */.VoiceCallTriggerPoint;
+    const VoiceCallTriggerPoint = commonTriggerPointConfiguration /* commonTriggerPointConfiguration */.VoiceCallTriggerPoint;
     const obj = { guildId: null };
     obj[0] = guildId;
     VoiceCallTriggerPoint.trigger(obj);
   }
 };
 prototype["handleCallCreate"] = function handleCallCreate() {
-  const VoiceCallTriggerPoint = require("VoiceCallTriggerPoint.tsx") /* commonTriggerPointConfiguration */.VoiceCallTriggerPoint;
+  const VoiceCallTriggerPoint = commonTriggerPointConfiguration /* commonTriggerPointConfiguration */.VoiceCallTriggerPoint;
   VoiceCallTriggerPoint.trigger();
 };
 prototype["handleUserSettingsModalOpen"] = function handleUserSettingsModalOpen() {
-  const OpenUserSettingsTriggerPoint = require("OpenUserSettingsTriggerPoint.tsx") /* commonTriggerPointConfiguration */.OpenUserSettingsTriggerPoint;
+  const OpenUserSettingsTriggerPoint = commonTriggerPointConfiguration /* commonTriggerPointConfiguration */.OpenUserSettingsTriggerPoint;
   OpenUserSettingsTriggerPoint.trigger();
 };
 const commonTriggerPointManager = new CommonTriggerPointManager();

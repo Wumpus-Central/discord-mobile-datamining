@@ -1,3 +1,9 @@
+import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { BaseConnectionEvent } from "../../../../../discord_common/js/packages/media-engine/index.tsx";
+import { trackDeviceChanged } from "../../../../actions/AudioActionCreators.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { apexExperiment } from "../../../media_engine/MobileAudioOutputExperiment.tsx";
 // discord_app/modules/user_settings/defs/native/StreamOutputVolumeSetting.tsx
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";
@@ -7,14 +13,14 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.pEAl4b);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.pEAl4b);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   maximum: 200,
   useValue: function useStreamVolumeSettingValue() {
     let items = [reset, fetchFingerprint, _detectH265HardwareDecode];
-    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+    return initialize /* initialize */.useStateFromStores(items, () => {
       let obj;
       let obj2;
       const items = [reset, fetchFingerprint];
@@ -47,14 +53,14 @@ createToggle = {
         tmp2 = lastActiveStream;
       }
     }
-    require("../../../../../_runtime/metro/00038__.js")(null != tmp2, "Can not set stream volume without active stream");
-    require("../../../../actions/AudioActionCreators.tsx").setLocalVolume(tmp2.ownerId, arg0, require("../../../../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.MediaEngineContextTypes.STREAM);
+    00038__(null != tmp2, "Can not set stream volume without active stream");
+    trackDeviceChanged.setLocalVolume(tmp2.ownerId, arg0, BaseConnectionEvent /* BaseConnectionEvent */.MediaEngineContextTypes.STREAM);
   },
   usePredicate: function useHasStreamVolumeSetting() {
-    const obj = require("../../../media_engine/MobileAudioOutputExperiment.tsx");
+    const obj = apexExperiment;
     let items = [reset, fetchFingerprint];
-    const obj2 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
-    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+    const obj2 = initialize /* initialize */;
+    return initialize /* initialize */.useStateFromStores(items, () => {
       let obj;
       let obj2;
       const items = [reset, fetchFingerprint];
@@ -71,10 +77,10 @@ createToggle = {
     }) && obj.getConfig({ location: "StreamOutputVolumeSetting" }).audioOutputPresent;
   },
   useSearchTerms() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    const items = [intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["3182VD"]), ];
-    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    items[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["DGq/PR"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const items = [intl.string(getSystemLocale /* getSystemLocale */.t["3182VD"]), ];
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    items[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["DGq/PR"]);
     return items;
   }
 };

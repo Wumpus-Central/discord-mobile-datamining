@@ -1,3 +1,4 @@
+import { NotificationNudgeBottomSheet } from "NotificationNudgeBottomSheet.tsx";
 // discord_app/modules/nuf/native/components/notification/GuildOpenNotificationNudge.tsx
 import _slicedToArray from "_slicedToArray";
 import getOrRefreshPushSyncToken from "getOrRefreshPushSyncToken";
@@ -49,7 +50,7 @@ export default function GuildOpenNotificationNudge(guildId) {
   obj[3] = constants2.GUILD_OPEN_BOTTOM_SHEET;
   obj[4] = markAsDismissed;
   obj[5] = onHide;
-  return jsx(require("NotificationNudgeBottomSheet.tsx"), { title: null, body: null, actionLocation: null, surface: null, markAsDismissed: null, onHide: null });
+  return jsx(NotificationNudgeBottomSheet, { title: null, body: null, actionLocation: null, surface: null, markAsDismissed: null, onHide: null });
 };
 export const GUILD_OPEN_NOTIFICATION_NUDGE_KEY = "guild-open-notification-nudge-key";
 export const useGuildOpenNudge = function useGuildOpenNudge() {

@@ -1,3 +1,13 @@
+import { BottomSheetModal } from "../../../../_runtime/05340_BottomSheetModal.js";
+import { getNoResultsSource } from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
+import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { useEmojiColorPalette } from "../../emojis/hooks/useEmojiColorPalette.tsx";
+import { Emoji } from "../../emojis/native/Emoji.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/reactions/native/MessageReactionsContent.tsx
 import Divider from "Divider";
 import useInitialValue from "useInitialValue";
@@ -115,7 +125,7 @@ function ReactionTab(arg0) {
   let selected;
   ({ reaction, selected } = arg0);
   const tmp = callback4();
-  let obj = require("../../emojis/hooks/useEmojiColorPalette.tsx") /* useEmojiColorPalette */;
+  let obj = useEmojiColorPalette /* useEmojiColorPalette */;
   let burst_colors = reaction.burst_colors;
   if (burst_colors == null) {
     burst_colors = [];
@@ -154,8 +164,8 @@ function ReactionTab(arg0) {
       animated = tmp10;
     }
     obj1[1] = animated;
-    emojiURL = require("../../../utils/AvatarUtils.tsx").getEmojiURL(obj1);
-    const obj6 = require("../../../utils/AvatarUtils.tsx");
+    emojiURL = getAvatarURL.getEmojiURL(obj1);
+    const obj6 = getAvatarURL;
   }
   const items1 = [tmp.tabContainer, , ];
   let tabContainerSelected = null;
@@ -176,7 +186,7 @@ function ReactionTab(arg0) {
   ({ emoji: arr4[0], emojiText: arr4[1] } = tmp);
   const items3 = [, ];
   ({ emoji: arr5[0], emojiImage: arr5[1] } = tmp);
-  const items4 = [callback2(require("../../emojis/native/Emoji.tsx"), { src: emojiURL, name: emoji.name, textEmojiStyle: items2, fastImageStyle: items3 }), ];
+  const items4 = [callback2(Emoji, { src: emojiURL, name: emoji.name, textEmojiStyle: items2, fastImageStyle: items3 }), ];
   const items5 = [tmp.reactionCountText, , ];
   let prop = null;
   if (selected) {
@@ -188,7 +198,7 @@ function ReactionTab(arg0) {
     tmp19 = tmp7;
   }
   items5[2] = tmp19;
-  items4[1] = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/bold", style: items5, children: reaction.burst_count > 0 ? reaction.burst_count : reaction.count });
+  items4[1] = callback2(Text /* Text */.Text, { variant: "text-md/bold", style: items5, children: reaction.burst_count > 0 ? reaction.burst_count : reaction.count });
   obj2[4] = items4;
   let name = emoji.id;
   if (name == null) {
@@ -426,18 +436,18 @@ export { useReactors };
 export { useReactorsOnScrollNative };
 export const MessageReactionsEmpty = function MessageReactionsEmpty() {
   const tmp = callback4();
-  let obj = require("../../../design/components/Illustration/native/redesign/generated/NoResults.tsx") /* getNoResultsSource */;
-  const tmp2 = require("../../safe_area/useSafeAreaInsets.native.tsx")();
+  let obj = getNoResultsSource /* getNoResultsSource */;
+  const tmp2 = useSafeAreaInsets();
   obj = { scrollable: true, startHeight: 338 + tmp2.bottom, children: null };
   obj = { style: tmp.containerEmpty, children: null };
   const obj1 = { source: obj.useNoResultsSource(), title: null, body: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.HmPOrp);
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[2] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["pTJ5J/"]);
-  obj[1] = callback2(require("../../../design/void/native.tsx") /* Button */.RefreshEmptyState, obj1);
-  obj[2] = callback2(require("../../../../_runtime/05340_BottomSheetModal.js") /* BottomSheetModal */.BottomSheetView, obj);
-  return callback2(require("../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj1[1] = intl.string(getSystemLocale /* getSystemLocale */.t.HmPOrp);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[2] = intl2.string(getSystemLocale /* getSystemLocale */.t["pTJ5J/"]);
+  obj[1] = callback2(Button /* Button */.RefreshEmptyState, obj1);
+  obj[2] = callback2(BottomSheetModal /* BottomSheetModal */.BottomSheetView, obj);
+  return callback2(Background /* Background */.BottomSheet, obj);
 };
 export const MessageReactionsContent = function MessageReactionsContent(channelId) {
   let disableManage;

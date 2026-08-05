@@ -1,3 +1,5 @@
+import { ReanimatedRexport } from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
+import { styleProperties } from "../../../Button/native/ButtonHooks.native.tsx";
 // discord_app/design/components/experimental/Button/native/PressableScale.native.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { jsx } from "jsxProd";
@@ -16,9 +18,9 @@ const forwardRefResult = importAllResult.forwardRef((scaleAmountInPx, ref) => {
   }
   ({ onPressIn, onPressOut } = scaleAmountInPx);
   const merged = Object.assign(scaleAmountInPx, Object.create(null));
-  let obj = require("../../../../../modules/reanimated/ReanimatedRexport.tsx");
+  let obj = ReanimatedRexport;
   const sharedValue = obj.useSharedValue(0);
-  const buttonPressAnimationProps = require("../../../Button/native/ButtonHooks.native.tsx") /* styleProperties */.useButtonPressAnimationProps(sharedValue, num, scaleAmountInPx.onLayout, onPressIn, onPressOut);
+  const buttonPressAnimationProps = styleProperties /* styleProperties */.useButtonPressAnimationProps(sharedValue, num, scaleAmountInPx.onLayout, onPressIn, onPressOut);
   obj = {};
   const merged1 = Object.assign(callback(buttonPressAnimationProps, closure_2));
   const merged2 = Object.assign(merged);

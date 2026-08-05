@@ -1,3 +1,5 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
 // discord_app/modules/multi_account/native/ManageAccountsModal.tsx
 import DragIcon from "DragIcon";
 import initialize from "initialize";
@@ -139,7 +141,7 @@ function RemoveMultiAccountUserButton(user) {
       return applyArgumentsResult;
     };
     obj = { color: null };
-    obj[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_FEEDBACK_CRITICAL;
+    obj[0] = Themes.colors.ICON_FEEDBACK_CRITICAL;
     obj[3] = callback2(tmp(14448).CircleMinusIcon, obj);
     return callback2(tmp(4812).PressableOpacity, obj);
   }
@@ -327,7 +329,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
   let _require;
   c1 = undefined;
   c2 = undefined;
-  let obj = _require("../../../design/components/Navigator/native/Navigator.native.tsx");
+  let obj = _NavigationStack;
   _require = obj.useAccessibilityNativeStackOptions();
   [c1, c2] = callback(importAllResult.useState(false), 2);
   obj = {

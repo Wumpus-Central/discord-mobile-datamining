@@ -1,3 +1,5 @@
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { ModalActionCreators } from "../ModalActionCreators.tsx";
 // discord_app/actions/native/GiftCodeActionCreators.tsx
 import sendRequest from "sendRequest";
 import ME from "ME";
@@ -192,9 +194,9 @@ function _redeemGiftCode() {
   return applyArgumentsResult;
 }
 function openGiftCodeRedeemModal(code) {
-  let obj = require("../ModalActionCreators.tsx");
+  let obj = ModalActionCreators;
   obj = { code };
-  obj.pushLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(10330, dependencyMap.paths), obj, "GIFT_CODE_REDEEM_MODAL_KEY");
+  obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(10330, dependencyMap.paths), obj, "GIFT_CODE_REDEEM_MODAL_KEY");
 }
 ({ Endpoints: c4, AnalyticEvents: c5 } = ME);
 let closure_6 = Object.freeze({});

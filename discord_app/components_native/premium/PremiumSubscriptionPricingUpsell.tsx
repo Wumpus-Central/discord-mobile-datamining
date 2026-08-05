@@ -1,3 +1,6 @@
+import { Text } from "../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { getSubscriptionPlansLoaded } from "../../modules/billing/hooks/useSubscriptionPlansLoaded.tsx";
 // discord_app/components_native/premium/PremiumSubscriptionPricingUpsell.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
@@ -227,13 +230,13 @@ let result = require("get ActivityIndicator").fileFinishedImporting("components_
 
 export default function PremiumSubscriptionPricingUpsell() {
   const tmp = callback3();
-  let obj = require("../../modules/billing/hooks/useSubscriptionPlansLoaded.tsx") /* getSubscriptionPlansLoaded */;
+  let obj = getSubscriptionPlansLoaded /* getSubscriptionPlansLoaded */;
   obj = { style: tmp.pricingSection, children: null };
   const subscriptionPlansLoaded = obj.useSubscriptionPlansLoaded();
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[4] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["3x1PFE"]);
-  const items = [callback(require("../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t["3x1PFE"]);
+  const items = [callback(Text /* Text */.Text, obj), ];
   let tmp5Result = null;
   if (subscriptionPlansLoaded) {
     tmp5Result = callback(PricingSubheadingCopy, {});

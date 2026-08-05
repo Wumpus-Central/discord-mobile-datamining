@@ -1,3 +1,5 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/safety_hub/native/AppealIngestionBreadcrumbs.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -28,10 +30,10 @@ export default function AppealIngestionBreadcrumbs(reasons) {
     obj[0] = tmp.container;
     obj = { style: null, accessibilityRole: "header", variant: "text-xs/bold", children: null };
     obj[0] = tmp.title;
-    const intl = _require("../../../intl/index.native.tsx").intl;
-    obj[3] = intl.string(_require("../../../intl/index.native.tsx").t.eQg0Ck);
+    const intl = _getSystemLocale.intl;
+    obj[3] = intl.string(_getSystemLocale.t.eQg0Ck);
     let items = [
-      callback(_require("../../../design/components/Text/native/Text.tsx").Text, obj),
+      callback(_Text.Text, obj),
       reasons.map((children) => {
           let obj = { style: _undefined.breadCrumbItemContainer, children: null };
           obj = { style: _undefined.breadCrumbBar };

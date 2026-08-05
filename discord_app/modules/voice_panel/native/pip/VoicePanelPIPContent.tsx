@@ -1,3 +1,6 @@
+import { ComponentDispatcher } from "../../../../utils/ComponentDispatchUtils.tsx";
+import { ReanimatedNativeView } from "../../../core/native/ReanimatedNativeView.tsx";
+import { dismissPanel } from "../VoicePanelStateContext.tsx";
 // discord_app/modules/voice_panel/native/pip/VoicePanelPIPContent.tsx
 import canRenderParticipantVideo from "canRenderParticipantVideo";
 import importAllResult from "cleanUp";
@@ -46,7 +49,7 @@ function VideoStream(streamId) {
   return callback(setHasActiveVideoOutputSink(10614), obj);
 }
 function markContentReady() {
-  const ComponentDispatch = require("../../../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
   ComponentDispatch.dispatch(constants2.VOICE_PANEL_PIP_CONTENT_READY);
 }
 function InnerStroke(style) {
@@ -519,7 +522,7 @@ function AnimatedVideoWrapper(arg0) {
   let style;
   let targetDimensionsSubscription;
   ({ participantId, style, children } = arg0);
-  targetDimensionsSubscription = targetDimensionsSubscription(11560).useTargetDimensionsSubscription(participantId, importAllResult.useContext(require("../VoicePanelStateContext.tsx")).layoutManager);
+  targetDimensionsSubscription = targetDimensionsSubscription(11560).useTargetDimensionsSubscription(participantId, importAllResult.useContext(dismissPanel).layoutManager);
   const obj = targetDimensionsSubscription(11560);
   const fn = function u() {
     let height;
@@ -541,7 +544,7 @@ function AnimatedVideoWrapper(arg0) {
   style = [, ];
   style[0] = style;
   style[1] = animatedStyle;
-  return callback(require("../../../core/native/ReanimatedNativeView.tsx"), { style, children });
+  return callback(ReanimatedNativeView, { style, children });
 }
 function Stream(participantId) {
   let c2;

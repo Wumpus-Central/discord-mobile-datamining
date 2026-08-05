@@ -1,3 +1,11 @@
+import { t } from "../../../_runtime/03867_t.js";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
+import { collectThreadMetadata } from "../app_analytics/ThreadAnalyticsUtils.tsx";
+import { getTimestampString } from "getTimestampString.tsx";
 // discord_app/modules/threads/ThreadUtils.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
@@ -10,9 +18,9 @@ let c10;
 let c9;
 const require = arg1;
 function getAccessibilityLabelFormatter() {
-  const obj = { minutes: require("../../intl/index.native.tsx") /* getSystemLocale */.t["1Rcf/h"], hours: require("../../intl/index.native.tsx") /* getSystemLocale */.t.vgnx51, days: require("../../intl/index.native.tsx") /* getSystemLocale */.t.fNvE50, month: null };
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.P7Gygz);
+  const obj = { minutes: getSystemLocale /* getSystemLocale */.t["1Rcf/h"], hours: getSystemLocale /* getSystemLocale */.t.vgnx51, days: getSystemLocale /* getSystemLocale */.t.fNvE50, month: null };
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.P7Gygz);
   return obj;
 }
 let closure_3 = ["can_send_message", "parent_channel_type"];
@@ -21,25 +29,25 @@ let result = require("updateUserGuildSettingsInternal").fileFinishedImporting("m
 
 export const getTimestampString = require("getTimestampString");
 export const getTimestampAccessibilityLabel = function getTimestampAccessibilityLabel(extractTimestampResult) {
-  return require("getTimestampString.tsx")(extractTimestampResult, getAccessibilityLabelFormatter);
+  return getTimestampString(extractTimestampResult, getAccessibilityLabelFormatter);
 };
 export const trackThreadBrowserTab = function trackThreadBrowserTab() {
-  require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */.trackWithMetadata(constants.THREAD_BROWSER_TAB_CHANGED);
+  collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.trackWithMetadata(constants.THREAD_BROWSER_TAB_CHANGED);
 };
 export const trackThreadBrowserOpened = function trackThreadBrowserOpened() {
   let str = arg0;
   if (arg0 === undefined) {
     str = "Modal";
   }
-  require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */.trackWithMetadata(constants.OPEN_MODAL, { type: "Thread Browser", location_section: str });
+  collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.trackWithMetadata(constants.OPEN_MODAL, { type: "Thread Browser", location_section: str });
 };
 export const trackActiveThreadsPopoutOpened = function trackActiveThreadsPopoutOpened() {
-  require("../../utils/AnalyticsUtils.tsx").track(constants.OPEN_POPOUT, { type: "Active Threads Popout" });
+  expandEventProperties.track(constants.OPEN_POPOUT, { type: "Active Threads Popout" });
 };
 export const trackThreadNotificationSettingsUpdated = function trackThreadNotificationSettingsUpdated(outer1_0, c1) {
   let can_send_message;
   let parent_channel_type;
-  let obj = require("../app_analytics/ThreadAnalyticsUtils.tsx") /* collectThreadMetadata */;
+  let obj = collectThreadMetadata /* collectThreadMetadata */;
   const result = obj.collectThreadMetadata(outer1_0);
   if (null != result) {
     const guildId = outer1_0.getGuildId();
@@ -101,18 +109,18 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
       const tmpResult1 = tmp(5225);
     }
     obj.new_thread_muted_until = result1;
-    require("../../utils/AnalyticsUtils.tsx").track(constants.THREAD_NOTIFICATION_SETTINGS_UPDATED, obj);
-    const obj5 = require("../../utils/AnalyticsUtils.tsx");
+    expandEventProperties.track(constants.THREAD_NOTIFICATION_SETTINGS_UPDATED, obj);
+    const obj5 = expandEventProperties;
   }
 };
 export const useLastMessageTimestamp = function useLastMessageTimestamp(thread) {
   const _require = thread;
   const items = [generateOldThreadCutoff];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_5.lastMessageId(thread.id));
+  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_5.lastMessageId(thread.id));
   let extractTimestampResult = null;
   if (null != stateFromStores) {
-    extractTimestampResult = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(stateFromStores);
-    const obj2 = require("../../utils/SnowflakeUtils.tsx");
+    extractTimestampResult = DISCORD_EPOCH.extractTimestamp(stateFromStores);
+    const obj2 = DISCORD_EPOCH;
   }
   const threadMetadata = thread.threadMetadata;
   let createTimestamp;
@@ -121,15 +129,15 @@ export const useLastMessageTimestamp = function useLastMessageTimestamp(thread) 
   }
   let valueOfResult = null;
   if (null != createTimestamp) {
-    valueOfResult = require("../../../_runtime/03867_t.js")(createTimestamp).valueOf();
-    const obj3 = require("../../../_runtime/03867_t.js")(createTimestamp);
+    valueOfResult = t(createTimestamp).valueOf();
+    const obj3 = t(createTimestamp);
   }
   if (extractTimestampResult == null) {
     extractTimestampResult = valueOfResult;
   }
   if (extractTimestampResult == null) {
-    extractTimestampResult = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(thread.id);
-    const obj4 = require("../../utils/SnowflakeUtils.tsx");
+    extractTimestampResult = DISCORD_EPOCH.extractTimestamp(thread.id);
+    const obj4 = DISCORD_EPOCH;
   }
   return extractTimestampResult;
 };

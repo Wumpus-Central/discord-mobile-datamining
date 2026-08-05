@@ -1,3 +1,6 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { QUICK_SWITCHER } from "../app_analytics/AnalyticsLocation.tsx";
 // discord_app/modules/content_inventory/ContentInventoryActionCreators.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -9,13 +12,13 @@ import { AnalyticEvents } from "ME";
 const result = require("handleConnectionOpen").fileFinishedImporting("modules/content_inventory/ContentInventoryActionCreators.tsx");
 
 export const toggleMemberListContentFeedHidden = function toggleMemberListContentFeedHidden() {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj.dispatch({ type: "CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN" });
   obj = { channel_id: channelId.getChannelId(), guild_id: guildId.getGuildId(), hidden: hidden.hidden };
-  require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.MEMBERLIST_CONTENT_FEED_HIDDEN, obj);
+  expandEventProperties.track(AnalyticEvents.MEMBERLIST_CONTENT_FEED_HIDDEN, obj);
 };
 export const onGameProfileOpen = function onGameProfileOpen() {
-  require("../../Dispatcher.tsx").dispatch({ type: "GAME_PROFILE_OPEN" });
+  dispatcher.dispatch({ type: "GAME_PROFILE_OPEN" });
 };
 export const onTapContentInventoryEntryEmbed = function onTapContentInventoryEntryEmbed(authorId) {
   let message;
@@ -33,7 +36,7 @@ export const onTapContentInventoryEntryEmbed = function onTapContentInventoryEnt
       }
       showUserProfileResult[1] = id;
       showUserProfileResult[2] = message.id;
-      let items = require("../app_analytics/AnalyticsLocation.tsx");
+      let items = QUICK_SWITCHER;
       if (tmp2) {
         items = [];
         items[0] = items.AVATAR;
@@ -48,5 +51,5 @@ export const onTapContentInventoryEntryEmbed = function onTapContentInventoryEnt
   }
 };
 export const clearDeleteHistoryError = function clearDeleteHistoryError() {
-  require("../../Dispatcher.tsx").dispatch({ type: "CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR" });
+  dispatcher.dispatch({ type: "CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR" });
 };

@@ -1,3 +1,7 @@
+import { registerAsset } from "../../../../../_runtime/14358_registerAsset.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/NavigateForwardButton.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -21,10 +25,10 @@ export default function NavigateForwardButton(arg0) {
   const tmp = createCacheKey();
   let obj = { style: tmp.container, onPress, children: null };
   obj = { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", children: text };
-  const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+  const items = [callback(Text /* Text */.Text, obj), ];
   obj = { source: null };
-  obj[0] = require("../../../../../_runtime/14358_registerAsset.js");
-  items[1] = callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
+  obj[0] = registerAsset;
+  items[1] = callback(Button /* Button */.Icon, obj);
   obj[2] = items;
-  return callback2(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableHighlight, obj);
+  return callback2(PressableBase /* PressableBase */.PressableHighlight, obj);
 };

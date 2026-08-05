@@ -1,3 +1,8 @@
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { ComponentDispatcher } from "../../../utils/ComponentDispatchUtils.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 // discord_app/modules/soundboard/native/SoundboardActionCreators.tsx
 import { ComponentActions } from "ME";
 
@@ -7,9 +12,9 @@ export const showSoundboardSoundPickerActionSheet = function showSoundboardSound
   let analyticsSource;
   let channel;
   ({ channel, analyticsSource } = arg0);
-  const ComponentDispatch = require("../../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
   ComponentDispatch.dispatch(ComponentActions.TOGGLE_CALL_CONTROL_DRAWER);
-  const result = require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
-  const obj = require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */;
-  require("../../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(16007, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel, analyticsSource });
+  const result = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
+  const obj = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */;
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(16007, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel, analyticsSource });
 };

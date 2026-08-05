@@ -1,3 +1,4 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/voice_panel/native/utils/useSelfHasVideo.tsx
 import getParticipants from "getParticipants";
 import fetchFingerprint from "fetchFingerprint";
@@ -9,7 +10,7 @@ const result = require("_detectH265HardwareDecode").fileFinishedImporting("modul
 export default function useSelfHasVideo(arg0) {
   const _require = arg0;
   const items = [getParticipants, fetchFingerprint, _detectH265HardwareDecode];
-  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const participant = outer1_2.getParticipant(callback, outer1_3.getId());
     return callback(outer1_1[4]).canRenderParticipantVideo(participant, outer1_4);
   });

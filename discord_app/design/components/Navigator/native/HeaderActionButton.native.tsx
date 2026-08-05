@@ -1,3 +1,7 @@
+import { IconSizes } from "../../../void/Icon/native/Icon.tsx";
+import { PressableBase } from "../../../void/Pressables/native/Pressables.tsx";
+import { MINIMUM_HIT_AREA } from "../../Button/native/ButtonConstants.native.tsx";
+import { Text } from "../../Text/native/Text.tsx";
 // discord_app/design/components/Navigator/native/HeaderActionButton.native.tsx
 import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor";
 import jsxProd from "jsxProd";
@@ -40,9 +44,9 @@ const forwardRefResult = require("noop").forwardRef((arg0, ref) => {
     ({ text: arr[0], buttonFont: arr[1] } = tmp);
     items[2] = textStyle;
     obj[0] = items;
-    obj[3] = require("../../Button/native/ButtonConstants.native.tsx") /* MINIMUM_HIT_AREA */.BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER;
+    obj[3] = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER;
     obj[4] = text;
-    let tmp2 = callback(require("../../Text/native/Text.tsx") /* Text */.Text, obj);
+    let tmp2 = callback(Text /* Text */.Text, obj);
   } else if (null != IconComponent) {
     obj = { size: null };
     obj[0] = IconComponentSize;
@@ -52,7 +56,7 @@ const forwardRefResult = require("noop").forwardRef((arg0, ref) => {
     obj[0] = source;
     obj[1] = imageStyle;
     obj[2] = iconSize;
-    tmp2 = callback(require("../../../void/Icon/native/Icon.tsx"), obj);
+    tmp2 = callback(IconSizes, obj);
   }
   const obj1 = { ref, accessibilityLabel: null, accessibilityHint: null, accessibilityActions: null, onAccessibilityAction: null, accessibilityRole: "button", onPress: null, activeOpacity: 0.6, androidRippleConfig: null, style: null, disabled: null, children: null };
   if (accessibilityLabel == null) {
@@ -78,7 +82,7 @@ const forwardRefResult = require("noop").forwardRef((arg0, ref) => {
   obj1[10] = disabled;
   const items2 = [tmp2, icon];
   obj1[11] = items2;
-  return closure_5(require("../../../void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj1);
+  return closure_5(PressableBase /* PressableBase */.PressableOpacity, obj1);
 });
 const result = require("jsxProd").fileFinishedImporting("design/components/Navigator/native/HeaderActionButton.native.tsx");
 

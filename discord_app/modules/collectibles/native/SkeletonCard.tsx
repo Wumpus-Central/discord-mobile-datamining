@@ -1,3 +1,5 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/collectibles/native/SkeletonCard.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -6,7 +8,7 @@ import createCacheKey from "createCacheKey";
 const require = arg1;
 let closure_5 = createCacheKey.createStyles((width, height) => {
   let obj = { skeletonCard: null };
-  obj = { width, height, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.sm };
+  obj = { width, height, backgroundColor: Themes.colors.BORDER_SUBTLE, borderRadius: Themes.radii.sm };
   obj[0] = obj;
   return obj;
 });
@@ -43,5 +45,5 @@ export default function _default(width) {
   C.__initData = closure_6;
   const animatedStyle = sharedValue(4146).useAnimatedStyle(C);
   const style = [tmp3Result.skeletonCard, width.style, animatedStyle];
-  return jsx(require("../../reanimated/ReanimatedRexport.tsx").View, { style });
+  return jsx(ReanimatedRexport.View, { style });
 };

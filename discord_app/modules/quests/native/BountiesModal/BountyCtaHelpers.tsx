@@ -1,10 +1,11 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/quests/native/BountiesModal/BountyCtaHelpers.tsx
 const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountyCtaHelpers.tsx");
 
 export const getBountyCtaInfo = function getBountyCtaInfo(bounty) {
   const obj = { label: bounty.productName, subtext: bounty.cta.buttonLabel, buttonLabel: null, iconImageUri: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.LLLLPD);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.LLLLPD);
   obj[3] = bounty.productIcon;
   return obj;
 };

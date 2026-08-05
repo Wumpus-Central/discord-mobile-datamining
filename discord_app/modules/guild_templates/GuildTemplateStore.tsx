@@ -1,3 +1,4 @@
+import { createResolvedGuildTemplate } from "createResolvedGuildTemplate.tsx";
 // discord_app/modules/guild_templates/GuildTemplateStore.tsx
 import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD";
 import { Store } from "initialize";
@@ -15,7 +16,7 @@ function handleGuildTemplateResolveSuccess(guildTemplate) {
       obj[0] = code;
       obj[1] = GuildTemplateStates.RESOLVING;
     }
-    const tmp7 = require("createResolvedGuildTemplate.tsx")(guildTemplate);
+    const tmp7 = createResolvedGuildTemplate(guildTemplate);
     for (const key10019 in tmp7) {
       let tmp17 = key10019;
       obj[key10019] = tmp7[key10019];

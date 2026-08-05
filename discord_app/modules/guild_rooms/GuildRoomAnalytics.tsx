@@ -1,3 +1,4 @@
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 // discord_app/modules/guild_rooms/GuildRoomAnalytics.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -507,7 +508,7 @@ export const trackGuildRoomUserConnected = function trackGuildRoomUserConnected(
 export const trackGuildRoomUserDisconnected = function trackGuildRoomUserDisconnected(channelId) {
   let guildId;
   let userId;
-  let obj = require("../app_analytics/AppAnalyticsUtils.tsx");
+  let obj = collectGuildAnalyticsMetadata;
   ({ userId, guildId, channelId } = channelId);
   if (userId == null) {
     userId = id.getId();

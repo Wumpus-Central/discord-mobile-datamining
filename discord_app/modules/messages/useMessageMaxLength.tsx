@@ -1,3 +1,5 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 // discord_app/modules/messages/useMessageMaxLength.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
@@ -10,8 +12,8 @@ const result = require("getPremiumPlanItem").fileFinishedImporting("modules/mess
 
 export default function useMessageMaxLength() {
   const items = [mergeGuildAvatar];
-  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => callback(table[2]).canUseIncreasedMessageLength(currentUser.getCurrentUser()) ? closure_4 : closure_5);
+  return initialize /* initialize */.useStateFromStores(items, () => callback(table[2]).canUseIncreasedMessageLength(currentUser.getCurrentUser()) ? closure_4 : closure_5);
 };
 export const getMaxMessageLength = function getMaxMessageLength() {
-  return require("../../utils/PremiumUtils.tsx").canUseIncreasedMessageLength(currentUser.getCurrentUser()) ? closure_4 : closure_5;
+  return getPremiumPlanItem.canUseIncreasedMessageLength(currentUser.getCurrentUser()) ? closure_4 : closure_5;
 };

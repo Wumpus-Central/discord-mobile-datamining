@@ -1,3 +1,4 @@
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
 // discord_app/modules/interaction_components/StringSelectActionComponentUtils.tsx
 import getInteractionComponentStates from "getInteractionComponentStates";
 
@@ -10,7 +11,7 @@ export const getInitialStringSelectOptions = function getInitialStringSelectOpti
   if (interactionComponentState != null) {
     type = interactionComponentState.type;
   }
-  if (type === require("../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.STRING_SELECT) {
+  if (type === PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.STRING_SELECT) {
     let mapped = interactionComponentState.values;
   } else {
     const options = selectionActionComponent.options;

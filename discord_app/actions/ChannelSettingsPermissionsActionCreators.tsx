@@ -1,3 +1,4 @@
+import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/ChannelSettingsPermissionsActionCreators.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
@@ -107,25 +108,25 @@ export const updatePermission = function updatePermission(outer1_0, id, addResul
   return applyArgumentsResult;
 };
 export const selectPermission = function selectPermission(id) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION", id };
   obj.dispatch(obj);
 };
 export const setAdvancedMode = function setAdvancedMode(advancedMode) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE", advancedMode };
   obj.dispatch(obj);
 };
 export const init = function init() {
-  require("../Dispatcher.tsx").dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_INIT" });
+  dispatcher.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_INIT" });
 };
 export const savePermissionUpdates = function savePermissionUpdates(id, items, arg2) {
   let closure_0 = id;
   const importDefault = items;
   const dependencyMap = [];
   let asyncGeneratorStep = arg2;
-  require("../Dispatcher.tsx").dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING" });
-  let obj = require("../Dispatcher.tsx");
+  dispatcher.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING" });
+  let obj = dispatcher;
   return new Promise((arg0) => {
     let closure_0 = arg0;
     function chain() {
@@ -167,8 +168,8 @@ export const saveAndClearPermissionUpdates = function saveAndClearPermissionUpda
   const importDefault = arg1;
   const dependencyMap = arg2;
   let asyncGeneratorStep = arg3;
-  require("../Dispatcher.tsx").dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING" });
-  const obj = require("../Dispatcher.tsx");
+  dispatcher.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING" });
+  const obj = dispatcher;
   return new Promise((arg0) => {
     let closure_0 = arg0;
     function chain() {

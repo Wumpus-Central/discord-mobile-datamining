@@ -1,3 +1,4 @@
+import { getPremiumBundledItemsFromProductId } from "../PremiumBundledPlansUtils.tsx";
 // discord_app/modules/premium/native/hooks/usePremiumTier2DeltaPriceString.tsx
 import noop from "noop";
 import { useNativeCheckoutStore } from "context";
@@ -10,7 +11,7 @@ function getViewerProductId(subscription) {
     return null;
   } else {
     try {
-      return require("../PremiumBundledPlansUtils.tsx") /* getPremiumBundledItemsFromProductId */.getProductIdFromSubscription(subscription, false);
+      return getPremiumBundledItemsFromProductId /* getPremiumBundledItemsFromProductId */.getProductIdFromSubscription(subscription, false);
     } catch (err) {
       return tmp;
     }

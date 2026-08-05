@@ -1,3 +1,4 @@
+import { SelectedDismissibleContent } from "../../../../dismissible_content/native/SelectedDismissibleContent.tsx";
 // discord_app/modules/user_settings/connections/native/two_way_link/OneWayToTwoWayLinkUpsell.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -48,7 +49,7 @@ export const OneWayToTwoWayLinkUpsell = function OneWayToTwoWayLinkUpsell(newInd
   obj = { style: tmp.titleContainer, children: null };
   const items = [newIndicatorDismissibleContent];
   const items1 = [
-    callback(require("../../../../dismissible_content/native/SelectedDismissibleContent.tsx"), {
+    callback(SelectedDismissibleContent, {
       contentTypes: items,
       children(visibleContent) {
         let tmp2 = null;

@@ -1,3 +1,5 @@
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import { NOOP } from "../../utils/AutocompleteUtils.tsx";
 // discord_app/modules/interaction_components/SearchableSelectActionComponentUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -19,14 +21,14 @@ export const queryMentionables = function queryMentionables(type, arg1, channelI
   if (null == channel) {
     return [];
   } else {
-    const tmp2 = type === _require("../../flow/Server.tsx").ComponentType.USER_SELECT || type === _require("../../flow/Server.tsx").ComponentType.MENTIONABLE_SELECT;
+    const tmp2 = type === _PermissionOverwriteType.ComponentType.USER_SELECT || type === _PermissionOverwriteType.ComponentType.MENTIONABLE_SELECT;
     let obj = channel(5126);
     obj = { query: null, channel: null, canMentionEveryone: false, canMentionHere: false, canMentionUsers: null, canMentionRoles: null, includeAllGuildUsers: true, includeNonMentionableRoles: true, checkRecentlyTalkedOnEmptyQuery: false, limit: 15 };
     obj[0] = arg1;
     obj[1] = channel;
     obj[4] = tmp2;
-    obj[5] = type === _require("../../flow/Server.tsx").ComponentType.ROLE_SELECT || type === _require("../../flow/Server.tsx").ComponentType.MENTIONABLE_SELECT;
-    const tmp3 = type === _require("../../flow/Server.tsx").ComponentType.ROLE_SELECT || type === _require("../../flow/Server.tsx").ComponentType.MENTIONABLE_SELECT;
+    obj[5] = type === _PermissionOverwriteType.ComponentType.ROLE_SELECT || type === _PermissionOverwriteType.ComponentType.MENTIONABLE_SELECT;
+    const tmp3 = type === _PermissionOverwriteType.ComponentType.ROLE_SELECT || type === _PermissionOverwriteType.ComponentType.MENTIONABLE_SELECT;
     ({ users, roles } = obj.queryMentionResults(obj));
     const items = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(users.map((user) => {
@@ -51,7 +53,7 @@ export const queryChannels = function queryChannels(arg0, arg1, arg2) {
   if (null == channel) {
     let items = [];
   } else {
-    let obj = require("../../utils/AutocompleteUtils.tsx");
+    let obj = NOOP;
     obj = { query: null, channel: null, channelTypes: null, limit: 15 };
     obj[0] = arg0;
     obj[1] = channel;

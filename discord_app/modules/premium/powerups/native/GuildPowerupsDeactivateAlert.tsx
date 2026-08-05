@@ -1,3 +1,11 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { getAlertModalItemKey } from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import { CircleErrorIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ModalType } from "../analytics/GuildPowerupAnalytics.tsx";
+import { messagesProxy } from "../GuildPowerups.messages.js";
+import { useDeactivateWarningText } from "../hooks/useDeactivateWarningText.tsx";
+import { useGuildPowerupOnDeactivate } from "../hooks/useGuildPowerupOnDeactivate.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsDeactivateAlert.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -25,22 +33,22 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
   let importDefault;
   const tmp = callback2();
   _require = tmp;
-  ({ onDeactivate: c1, error } = require("../hooks/useGuildPowerupOnDeactivate.tsx")(guildId, powerup));
+  ({ onDeactivate: c1, error } = useGuildPowerupOnDeactivate(guildId, powerup));
   const tmp2 = importDefault;
-  const tmp4 = require("../hooks/useGuildPowerupOnDeactivate.tsx")(guildId, powerup);
-  let obj = _require("../analytics/GuildPowerupAnalytics.tsx");
-  const logPowerupModalOpened = obj.useLogPowerupModalOpened(guildId, powerup, _require("../analytics/GuildPowerupAnalytics.tsx").ModalType.DEACTIVATE);
+  const tmp4 = useGuildPowerupOnDeactivate(guildId, powerup);
+  let obj = _ModalType;
+  const logPowerupModalOpened = obj.useLogPowerupModalOpened(guildId, powerup, _ModalType.ModalType.DEACTIVATE);
   obj = { header: null, title: null, content: null, actions: null, extraContent: null };
   obj = { style: tmp.headerContainer, children: null };
   const obj1 = { color: null, size: "custom", style: null };
-  obj1[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_ICON_DEFAULT;
+  obj1[0] = Themes.colors.INTERACTIVE_ICON_DEFAULT;
   obj1[2] = { width: 40, height: 40 };
-  obj[1] = callback(_require("../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx").CircleErrorIcon, obj1);
+  obj[1] = callback(_CircleErrorIcon.CircleErrorIcon, obj1);
   obj[0] = callback(View, obj);
-  const intl = _require("../../../../intl/index.native.tsx").intl;
-  obj[1] = intl.formatToPlainString(require("../GuildPowerups.messages.js").iEBw1M, { perk: powerup.title });
-  const intl2 = _require("../../../../intl/index.native.tsx").intl;
-  obj[2] = intl2.formatToPlainString(require("../GuildPowerups.messages.js")["7o0K+2"], { perk: powerup.title });
+  const intl = _getSystemLocale.intl;
+  obj[1] = intl.formatToPlainString(messagesProxy.iEBw1M, { perk: powerup.title });
+  const intl2 = _getSystemLocale.intl;
+  obj[2] = intl2.formatToPlainString(messagesProxy["7o0K+2"], { perk: powerup.title });
   let tmp7Result = null != error;
   if (tmp7Result) {
     const obj4 = { style: null, variant: "text-xs/semibold", color: "text-feedback-critical", children: null };
@@ -60,7 +68,7 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
   };
   const intl3 = tmp5(1236).intl;
   obj6[2] = intl3.string(tmp2(2317).PYPdl4);
-  items[1] = callback(_require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActionButton, obj6, "deactivate");
+  items[1] = callback(_getAlertModalItemKey.AlertActionButton, obj6, "deactivate");
   const obj7 = {
     onPress() {
 
@@ -69,18 +77,18 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
     text: null
   };
   const intl4 = tmp5(1236).intl;
-  obj7[2] = intl4.string(_require("../../../../intl/index.native.tsx").t["ETE/oC"]);
-  items[2] = callback(_require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActionButton, obj7, "cancel");
+  obj7[2] = intl4.string(_getSystemLocale.t["ETE/oC"]);
+  items[2] = callback(_getAlertModalItemKey.AlertActionButton, obj7, "cancel");
   obj5[0] = items;
-  obj[3] = closure_5(_require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertActions, obj5);
-  const arr = require("../hooks/useDeactivateWarningText.tsx")(guildId, powerup);
+  obj[3] = closure_5(_getAlertModalItemKey.AlertActions, obj5);
+  const arr = useDeactivateWarningText(guildId, powerup);
   const obj2 = { perk: powerup.title };
   const obj3 = { perk: powerup.title };
   const tmp8 = View;
   const tmp9 = closure_5;
   obj[4] = callback(tmp8, {
     style: tmp.extraContentContainer,
-    children: require("../hooks/useDeactivateWarningText.tsx")(guildId, powerup).map((critical) => {
+    children: useDeactivateWarningText(guildId, powerup).map((critical) => {
       const obj = { style: _undefined.warningText, variant: null, color: null, children: null };
       let str = "text-sm/medium";
       if (critical.critical) {
@@ -96,5 +104,5 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
       return outer1_4(_undefined(outer1_2[12]).Text, obj, arg1);
     })
   });
-  return callback(_require("../../../../design/components/AlertModal/native/AlertModal.native.tsx").AlertModal, obj);
+  return callback(_getAlertModalItemKey.AlertModal, obj);
 };

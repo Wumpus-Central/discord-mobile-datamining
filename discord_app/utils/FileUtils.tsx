@@ -1,3 +1,5 @@
+import { apply } from "../../_runtime/00012_apply.js";
+import { noConflict } from "../../_runtime/04823_noConflict.js";
 // discord_app/utils/FileUtils.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -89,7 +91,7 @@ export const classifyFileName = function classifyFileName(str) {
   if (str == null) {
     str = "";
   }
-  const found = require("../../_runtime/00012_apply.js").find(items, (reType) => {
+  const found = apply.find(items, (reType) => {
     if (null != reType.reType) {
       if (null != type) {
         reType = reType.reType;
@@ -113,7 +115,7 @@ export const classifyFileName = function classifyFileName(str) {
   return str2;
 };
 export const sizeString = function sizeString(createGuildRecordFromRust) {
-  return require("../../_runtime/04823_noConflict.js").filesize(createGuildRecordFromRust);
+  return noConflict.filesize(createGuildRecordFromRust);
 };
 export const maxFileSize = function maxFileSize(guildId) {
   const currentUser = authStore.getCurrentUser();

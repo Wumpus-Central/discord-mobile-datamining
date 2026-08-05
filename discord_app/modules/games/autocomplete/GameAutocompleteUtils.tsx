@@ -1,3 +1,4 @@
+import { GAME_WIDGET_LIMITS_BY_TYPE } from "../../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
 // discord_app/modules/games/autocomplete/GameAutocompleteUtils.tsx
 const result = require("set").fileFinishedImporting("modules/games/autocomplete/GameAutocompleteUtils.tsx");
 
@@ -33,6 +34,6 @@ export const normalizeGameAutocompleteQuery = function normalizeGameAutocomplete
   }
 };
 export const isGameAutocompleteResultAllowedInGameWidgets = function isGameAutocompleteResultAllowedInGameWidgets(id) {
-  const GAME_WIDGET_BANNED_APPLICATION_IDS = require("../../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx") /* GAME_WIDGET_LIMITS_BY_TYPE */.GAME_WIDGET_BANNED_APPLICATION_IDS;
+  const GAME_WIDGET_BANNED_APPLICATION_IDS = GAME_WIDGET_LIMITS_BY_TYPE /* GAME_WIDGET_LIMITS_BY_TYPE */.GAME_WIDGET_BANNED_APPLICATION_IDS;
   return !GAME_WIDGET_BANNED_APPLICATION_IDS.has(id.id);
 };

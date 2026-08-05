@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/stage_channels/useAudienceRequestToSpeakState.tsx
 import updateVoiceState from "updateVoiceState";
 
@@ -10,7 +11,7 @@ export default function useAudienceRequestToSpeakState(arg0, arg1) {
   const dependencyMap = arg1;
   const items = [updateVoiceState];
   const items1 = [arg0, arg1];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     if (null != closure_0) {
       if (null != closure_1) {
         const voiceStateForChannel = outer1_2.getVoiceStateForChannel(tmp8, tmp);

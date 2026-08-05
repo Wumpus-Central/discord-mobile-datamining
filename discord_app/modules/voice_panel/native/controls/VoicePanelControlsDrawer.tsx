@@ -1,3 +1,4 @@
+import { memoResult1 } from "VoicePanelChatView.tsx";
 // discord_app/modules/voice_panel/native/controls/VoicePanelControlsDrawer.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -14,7 +15,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function renderChat(shown) {
-  obj = { collapsable: false, style: absoluteFill.absoluteFill, children: callback(require("VoicePanelChatView.tsx"), obj) };
+  obj = { collapsable: false, style: absoluteFill.absoluteFill, children: callback(memoResult1, obj) };
   obj = { shown };
   return callback(closure_6, obj);
 }

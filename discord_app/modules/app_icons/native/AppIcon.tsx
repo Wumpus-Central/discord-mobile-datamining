@@ -1,3 +1,5 @@
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
 // discord_app/modules/app_icons/native/AppIcon.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -22,8 +24,8 @@ export default function AppIcon(size) {
     num = 56;
   }
   const tmp = createCacheKey();
-  const tmp2 = require("../../../hooks/useTheme.tsx")();
-  let obj = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+  const tmp2 = useTheme();
+  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   let num2 = 1;
   if (obj.isThemeDark(tmp2)) {
     num2 = 0;

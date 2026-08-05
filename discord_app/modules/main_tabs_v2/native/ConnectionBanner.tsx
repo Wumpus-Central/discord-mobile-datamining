@@ -1,3 +1,9 @@
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { _isNativeReflectConstruct } from "../../../../_runtime/05260__isNativeReflectConstruct.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/main_tabs_v2/native/ConnectionBanner.tsx
 import _slicedToArray from "_slicedToArray";
 import expandEventProperties from "expandEventProperties";
@@ -17,7 +23,7 @@ let require = arg1;
 function ConnectionBannerIcon(state) {
   state = state.state;
   const tmp = createCacheKey();
-  require("../../../design/tokens/native/useToken.tsx") /* map */;
+  map /* map */;
   if (constants.WAITING_FOR_NETWORK === state) {
     let obj = { style: null, children: null };
     obj[0] = tmp.leadingSlot;
@@ -62,7 +68,7 @@ function ConnectionBannerContent(state) {
     stringResult = intl3.string(tmp4(1236).t.j8lYE2);
   }
   obj[3] = stringResult;
-  items[1] = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items[1] = callback2(Text /* Text */.Text, obj);
   obj[1] = items;
   return closure_13(closure_6, obj);
 }
@@ -70,7 +76,7 @@ function BackOnlineGlow(opacity) {
   let token;
   const tmp = createCacheKey();
   let obj = token(3989);
-  token = obj.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_FEEDBACK_POSITIVE);
+  token = obj.useToken(Themes.colors.ICON_FEEDBACK_POSITIVE);
   let items = [token];
   const memo = React.useMemo(() => {
     const obj = outer1_1(outer1_2[14])(token);
@@ -86,10 +92,10 @@ function BackOnlineGlow(opacity) {
   obj = { style: items1, pointerEvents: "none", children: null };
   items1 = [tmp.glow, { opacity: opacity.progress }];
   obj = { style: tmp.glow, maskElement: null, children: null };
-  obj[1] = callback2(require("../../../../_runtime/04706_LinearGradient.js"), { style: tmp.glowMaskGradient, colors: closure_14, locations: closure_15, start: closure_16, end: closure_17 });
-  obj[2] = callback2(require("../../../../_runtime/04706_LinearGradient.js"), { style: tmp.glowMaskGradient, colors: memo, locations: closure_18, start: closure_19, end: closure_20 });
-  obj[2] = callback2(require("../../../../_runtime/05260__isNativeReflectConstruct.js"), obj);
-  return callback2(require("../../reanimated/ReanimatedRexport.tsx").View, obj);
+  obj[1] = callback2(LinearGradient, { style: tmp.glowMaskGradient, colors: closure_14, locations: closure_15, start: closure_16, end: closure_17 });
+  obj[2] = callback2(LinearGradient, { style: tmp.glowMaskGradient, colors: memo, locations: closure_18, start: closure_19, end: closure_20 });
+  obj[2] = callback2(_isNativeReflectConstruct, obj);
+  return callback2(ReanimatedRexport.View, obj);
 }
 function ConnectionBannerInner() {
   let tmp12;

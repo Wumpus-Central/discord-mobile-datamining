@@ -1,3 +1,6 @@
+import { 00038__ } from "../../../../_runtime/metro/00038__.js";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { _validatePaymentSourceBillingAddress } from "BillingSharedActionCreators.tsx";
 // discord_app/modules/billing/actions/BillingPaymentGatewayActionCreators.tsx
 import getSystemLocale from "getSystemLocale";
 import ME from "ME";
@@ -39,10 +42,10 @@ function dispatchPaymentElementsConfirmationError(error, flag, stringResult) {
     flag = true;
   }
   if (stringResult === undefined) {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    stringResult = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.khEaRI);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.khEaRI);
   }
-  let obj = require("BillingSharedActionCreators.tsx") /* _validatePaymentSourceBillingAddress */;
+  let obj = _validatePaymentSourceBillingAddress /* _validatePaymentSourceBillingAddress */;
   obj = { tags: { source: "payment_elements" } };
   return obj.dispatchConfirmationError(error, flag, stringResult, obj);
 }
@@ -379,7 +382,7 @@ function validateSetupIntentResponse(payment_method, arg1, created) {
   } else if (null == payment_method.payment_method) {
     throw created("setupIntent.payment_method not available with successful stripe call");
   } else {
-    require("../../../../_runtime/metro/00038__.js")(typeof payment_method.payment_method === "string", "setupIntent.payment_method expanded not supported");
+    00038__(typeof payment_method.payment_method === "string", "setupIntent.payment_method expanded not supported");
     const obj = { setupIntent: null, error: null };
     obj[0] = payment_method;
     obj[1] = arg1;
@@ -1467,10 +1470,10 @@ export const createPaymentRequestPaymentSource = function createPaymentRequestPa
     billingAddressInfo = result.billingAddressInfo;
   }
   obj = { analyticsLocation };
-  return require("BillingSharedActionCreators.tsx") /* _validatePaymentSourceBillingAddress */.createPaymentSource(constants.STRIPE, result.token, billingAddressInfo, obj);
+  return _validatePaymentSourceBillingAddress /* _validatePaymentSourceBillingAddress */.createPaymentSource(constants.STRIPE, result.token, billingAddressInfo, obj);
 };
 export const createBraintreePaymentSource = function createBraintreePaymentSource(id, closure_2, analyticsLocation) {
-  let obj = require("BillingSharedActionCreators.tsx") /* _validatePaymentSourceBillingAddress */;
+  let obj = _validatePaymentSourceBillingAddress /* _validatePaymentSourceBillingAddress */;
   obj = { analyticsLocation };
   return obj.createPaymentSource(constants.BRAINTREE, id, closure_2, obj);
 };

@@ -1,3 +1,7 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { useFrecencySettings } from "../user_settings/FrecencyUserSettingsHooks.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import { getStickerExtensionFromFormatType } from "StickersUtils.tsx";
 // discord_app/modules/stickers/StickersHooks.tsx
 import insertUnsortedGuilds from "insertUnsortedGuilds";
 import _slicedToArray from "_slicedToArray";
@@ -201,7 +205,7 @@ export const useFetchStickerPack = function useFetchStickerPack(pack_id) {
     const stickerPacks = pack_id(table[11]).fetchStickerPacks();
   }, []);
   const items = [loadSavedGuildStickers];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => obj.hasLoadedStickerPacks);
+  const stateFromStores = _initialize.useStateFromStores(items, () => obj.hasLoadedStickerPacks);
   const items1 = [pack_id, stateFromStores];
   const effect1 = React.useEffect(() => {
     let tmp = stateFromStores;
@@ -215,9 +219,9 @@ export const useFetchStickerPack = function useFetchStickerPack(pack_id) {
   }, items1);
 };
 export const useShouldAnimateSticker = function useShouldAnimateSticker(isFocused) {
-  const AnimateStickers = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.AnimateStickers;
+  const AnimateStickers = explicitContentFromProto /* explicitContentFromProto */.AnimateStickers;
   const setting = AnimateStickers.useSetting();
-  return require("StickersUtils.tsx") /* getStickerExtensionFromFormatType */.shouldAnimateSticker(setting, isFocused);
+  return getStickerExtensionFromFormatType /* getStickerExtensionFromFormatType */.shouldAnimateSticker(setting, isFocused);
 };
 export const useStickersGrid = function useStickersGrid(collapsedStickersCategories) {
   collapsedStickersCategories = collapsedStickersCategories.collapsedStickersCategories;
@@ -398,7 +402,7 @@ export const useFetchStickerPacks = function useFetchStickerPacks() {
   }, []);
 };
 export const useFavoriteStickerIds = function useFavoriteStickerIds() {
-  const favoriteStickers = require("../user_settings/FrecencyUserSettingsHooks.tsx") /* useFrecencySettings */.useFrecencySettings().favoriteStickers;
+  const favoriteStickers = useFrecencySettings /* useFrecencySettings */.useFrecencySettings().favoriteStickers;
   let stickerIds;
   if (favoriteStickers != null) {
     stickerIds = favoriteStickers.stickerIds;
@@ -442,7 +446,7 @@ export const useFavoriteStickers = function useFavoriteStickers() {
   }, items1);
 };
 export const useLatestFrecentStickerIds = function useLatestFrecentStickerIds() {
-  const frecencySettings = require("../user_settings/FrecencyUserSettingsHooks.tsx") /* useFrecencySettings */.useFrecencySettings();
+  const frecencySettings = useFrecencySettings /* useFrecencySettings */.useFrecencySettings();
   let keys = closure_13;
   let stickers;
   if (frecencySettings != null) {
@@ -505,7 +509,7 @@ export const useStickerForRenderableSticker = function useStickerForRenderableSt
   c3 = undefined;
   let obj;
   let React;
-  obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  obj = _initialize;
   const items = [loadSavedGuildStickers];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_11.getStickerById(id.id));
   const tmp4 = obj(React.useState(true), 2);
@@ -513,7 +517,7 @@ export const useStickerForRenderableSticker = function useStickerForRenderableSt
   [tmp6, c3] = obj(React.useState(false), 2);
   const tmp = _require;
   const tmp5 = obj(React.useState(false), 2);
-  let isGuildStickerResult = _require("StickersUtils.tsx").isGuildSticker(renderableSticker);
+  let isGuildStickerResult = _getStickerExtensionFromFormatType.isGuildSticker(renderableSticker);
   if (!isGuildStickerResult) {
     isGuildStickerResult = tmp(4619).isStandardSticker(renderableSticker);
     const tmpResult = tmp(4619);

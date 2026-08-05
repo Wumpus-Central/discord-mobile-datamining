@@ -1,3 +1,4 @@
+import { getDeviceMediaPhotos } from "getDeviceMediaPhotos.tsx";
 // discord_app/modules/device/native/DeviceMedia.tsx
 import { AnalyticEvents } from "ME";
 import keys from "keys";
@@ -97,7 +98,7 @@ export default {
   },
   refreshAssets(batchSize) {
     batchSize = batchSize.batchSize;
-    require("getDeviceMediaPhotos.tsx")({
+    getDeviceMediaPhotos({
       batchSize,
       extensions: batchSize.extensions,
       onFetched(edges) {

@@ -1,3 +1,5 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { getOrRefreshAdSession } from "../analytics_sessions/SessionAdGenerator.tsx";
 // discord_app/modules/quests/BountyActionCreators.tsx
 import AdCreativeType from "AdCreativeType";
 import handleConnectionInfoChange from "handleConnectionInfoChange";
@@ -433,15 +435,15 @@ export const fetchBountyPreview = function fetchBountyPreview(arr, c3) {
   return applyArgumentsResult;
 };
 export const setBountyVideoProgress = function setBountyVideoProgress(bountyId, arg1) {
-  let obj = require("../analytics_sessions/SessionAdGenerator.tsx") /* getOrRefreshAdSession */;
+  let obj = getOrRefreshAdSession /* getOrRefreshAdSession */;
   if (null != obj.getCurrentAdSession()) {
-    const orRefreshAdSession = require("../analytics_sessions/SessionAdGenerator.tsx") /* getOrRefreshAdSession */.getOrRefreshAdSession(true);
-    const tmpResult = require("../analytics_sessions/SessionAdGenerator.tsx") /* getOrRefreshAdSession */;
+    const orRefreshAdSession = getOrRefreshAdSession /* getOrRefreshAdSession */.getOrRefreshAdSession(true);
+    const tmpResult = getOrRefreshAdSession /* getOrRefreshAdSession */;
     obj = { type: "BOUNTIES_VIDEO_PROGRESS_UPDATE", bountyId: null, timestampSec: null, maxTimestampSec: null, duration: null };
     obj[1] = bountyId;
     ({ timestampSec: obj4[2], maxTimestampSec: obj4[3], duration: obj4[4] } = arg1);
-    require("../../Dispatcher.tsx").dispatch(obj);
-    const obj3 = require("../../Dispatcher.tsx");
+    dispatcher.dispatch(obj);
+    const obj3 = dispatcher;
   }
 };
 export const claimBountyReward = function claimBountyReward(id, outer1_1) {

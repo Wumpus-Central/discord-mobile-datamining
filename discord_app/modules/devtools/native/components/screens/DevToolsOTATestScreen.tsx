@@ -1,3 +1,7 @@
+import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { BundleUpdaterManager } from "../../../../../lib/native/BundleUpdater.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsOTATestScreen.tsx
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
@@ -17,19 +21,19 @@ function OtaVerificationActionSheet(result) {
   const tmp = createCacheKey();
   _require = tmp;
   let obj = { header: null, children: null };
-  obj[0] = callback2(_require("../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx").BottomSheetTitleHeader, { title: "OTA Verification Result" });
+  obj[0] = callback2(_RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: "OTA Verification Result" });
   obj = { style: tmp.verificationLine, children: null };
-  const items = [callback2(_require("../../../../../design/components/Text/native/Text.tsx").Text, { variant: "heading-md/bold", children: "Has OTA Applied" }), ];
+  const items = [callback2(_Text.Text, { variant: "heading-md/bold", children: "Has OTA Applied" }), ];
   let str = "No";
   let str2 = "No";
   if (result.hasOtaApplied) {
     str2 = "Yes";
   }
-  items[1] = callback2(_require("../../../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/normal", children: str2 });
+  items[1] = callback2(_Text.Text, { variant: "text-md/normal", children: str2 });
   obj[1] = items;
   const items1 = [closure_9(closure_7, obj), , , , ];
   obj = { style: tmp.verificationLine, children: null };
-  const items2 = [callback2(_require("../../../../../design/components/Text/native/Text.tsx").Text, { variant: "heading-md/bold", children: "Has Local Copy" }), ];
+  const items2 = [callback2(_Text.Text, { variant: "heading-md/bold", children: "Has Local Copy" }), ];
   let str3 = "--";
   if (null != result.hasLocalCopy) {
     let str4 = str;
@@ -38,15 +42,15 @@ function OtaVerificationActionSheet(result) {
     }
     str3 = str4;
   }
-  items2[1] = callback2(_require("../../../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/normal", children: str3 });
+  items2[1] = callback2(_Text.Text, { variant: "text-md/normal", children: str3 });
   obj[1] = items2;
   items1[1] = closure_9(closure_7, obj);
   const obj1 = { style: tmp.verificationLine, children: null };
-  const items3 = [callback2(_require("../../../../../design/components/Text/native/Text.tsx").Text, { variant: "heading-md/bold", children: "OTA is Valid" }), ];
+  const items3 = [callback2(_Text.Text, { variant: "heading-md/bold", children: "OTA is Valid" }), ];
   if (result.isValid) {
     str = "Yes";
   }
-  items3[1] = callback2(_require("../../../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/normal", children: str });
+  items3[1] = callback2(_Text.Text, { variant: "text-md/normal", children: str });
   obj1[1] = items3;
   items1[2] = closure_9(closure_7, obj1);
   let tmp2Result = null;
@@ -88,7 +92,7 @@ function OtaVerificationActionSheet(result) {
   }
   items1[4] = tmp2Result;
   obj[1] = items1;
-  return closure_9(_require("../../../../../design/components/Sheet/native/BottomSheet.native.tsx").BottomSheet, obj);
+  return closure_9(_Background.BottomSheet, obj);
 }
 ({ ScrollView: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
@@ -276,7 +280,7 @@ export default function DevToolsOTATestScreen() {
   items1[2] = callback3(first(5649).TableRowGroup, { title: "Build Override Cookie", hasIcons: true, children: items3 });
   const obj7 = { label: "Check for Update & Reload", icon: null, onPress: null };
   obj7[1] = callback2(first(4235).DownloadIcon, {});
-  obj7[2] = require("../../../../../lib/native/BundleUpdater.tsx").checkForUpdateAndReload;
+  obj7[2] = BundleUpdaterManager.checkForUpdateAndReload;
   const items4 = [callback2(first(5315).TableRow, obj7), ];
   let str4 = "Verify content hashes for all app files";
   if (tmp10) {

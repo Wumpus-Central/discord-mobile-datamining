@@ -1,3 +1,9 @@
+import { AccessibilityAnnouncer } from "../design/shared.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { handleConnectionOpen } from "../modules/user_settings/UserGuildSettingsManager.tsx";
+import { UserNotificationSettings } from "../utils/NotificationSettingsUtils.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/actions/NotificationSettingsModalActionCreators.tsx
 import dispatcher from "dispatcher";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
@@ -10,42 +16,42 @@ let result = require("ME").fileFinishedImporting("actions/NotificationSettingsMo
 
 export default {
   open(guildId) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "NOTIFICATION_SETTINGS_MODAL_OPEN", guildId };
     obj.dispatch(obj);
   },
   close() {
-    require("../Dispatcher.tsx").dispatch({ type: "NOTIFICATION_SETTINGS_MODAL_CLOSE" });
+    dispatcher.dispatch({ type: "NOTIFICATION_SETTINGS_MODAL_CLOSE" });
   },
   updateGuildNotificationSettings(guildId, muteSettings, NotificationLabel, location) {
-    let obj = require("../utils/NotificationSettingsUtils.tsx") /* UserNotificationSettings */;
+    let obj = UserNotificationSettings /* UserNotificationSettings */;
     const currentGuildSettings = obj.getCurrentGuildSettings(guildId);
-    const result = require("../modules/user_settings/UserGuildSettingsManager.tsx").saveUserGuildSettings(guildId, muteSettings);
-    const obj2 = require("../modules/user_settings/UserGuildSettingsManager.tsx");
+    const result = handleConnectionOpen.saveUserGuildSettings(guildId, muteSettings);
+    const obj2 = handleConnectionOpen;
     obj = { type: "USER_GUILD_SETTINGS_GUILD_UPDATE", guildId, settings: muteSettings };
-    require("../Dispatcher.tsx").dispatch(obj);
-    const obj3 = require("../Dispatcher.tsx");
-    const result1 = require("../utils/NotificationSettingsUtils.tsx") /* UserNotificationSettings */.trackGuildNotificationSettingsUpdate(guildId, muteSettings, currentGuildSettings, NotificationLabel, location);
+    dispatcher.dispatch(obj);
+    const obj3 = dispatcher;
+    const result1 = UserNotificationSettings /* UserNotificationSettings */.trackGuildNotificationSettingsUpdate(guildId, muteSettings, currentGuildSettings, NotificationLabel, location);
   },
   updateGuildAndChannelNotificationSettings(guildId, channel_overrides, OptedIn, location) {
     const _require = guildId;
     const importDefault = channel_overrides;
     const dependencyMap = OptedIn;
     let dispatcher = location;
-    let obj = require("../utils/SnowflakeUtils.tsx");
+    let obj = DISCORD_EPOCH;
     const keys = obj.keys(channel_overrides.channel_overrides);
-    const currentGuildSettings = _require("../utils/NotificationSettingsUtils.tsx").getCurrentGuildSettings(guildId);
-    const obj2 = _require("../utils/NotificationSettingsUtils.tsx");
-    const manyCurrentChannelSettings = _require("../utils/NotificationSettingsUtils.tsx").getManyCurrentChannelSettings(guildId, keys);
-    const obj3 = _require("../utils/NotificationSettingsUtils.tsx");
-    let result = require("../modules/user_settings/UserGuildSettingsManager.tsx").saveUserGuildSettings(guildId, channel_overrides);
-    const obj4 = require("../modules/user_settings/UserGuildSettingsManager.tsx");
+    const currentGuildSettings = _UserNotificationSettings.getCurrentGuildSettings(guildId);
+    const obj2 = _UserNotificationSettings;
+    const manyCurrentChannelSettings = _UserNotificationSettings.getManyCurrentChannelSettings(guildId, keys);
+    const obj3 = _UserNotificationSettings;
+    let result = handleConnectionOpen.saveUserGuildSettings(guildId, channel_overrides);
+    const obj4 = handleConnectionOpen;
     obj = { type: "USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE", guildId, settings: channel_overrides };
-    require("../Dispatcher.tsx").dispatch(obj);
-    const obj5 = require("../Dispatcher.tsx");
-    const result1 = _require("../utils/NotificationSettingsUtils.tsx").trackGuildNotificationSettingsUpdate(guildId, channel_overrides, currentGuildSettings, OptedIn, location);
-    const obj7 = _require("../utils/NotificationSettingsUtils.tsx");
-    const keys1 = require("../utils/SnowflakeUtils.tsx").keys(channel_overrides.channel_overrides);
+    dispatcher.dispatch(obj);
+    const obj5 = dispatcher;
+    const result1 = _UserNotificationSettings.trackGuildNotificationSettingsUpdate(guildId, channel_overrides, currentGuildSettings, OptedIn, location);
+    const obj7 = _UserNotificationSettings;
+    const keys1 = DISCORD_EPOCH.keys(channel_overrides.channel_overrides);
     const item = keys1.forEach((channelId) => {
       const value = updateUserGuildSettingsInternal.get(channelId);
       let obj = guildId(OptedIn[6]);
@@ -54,36 +60,36 @@ export default {
     });
   },
   updateChannelOverrideSettings(guildId, id, muteSettings, NotificationLabel, location) {
-    let obj = require("../utils/NotificationSettingsUtils.tsx") /* UserNotificationSettings */;
+    let obj = UserNotificationSettings /* UserNotificationSettings */;
     const currentChannelSettings = obj.getCurrentChannelSettings(guildId, id);
-    let obj1 = require("../modules/user_settings/UserGuildSettingsManager.tsx");
+    let obj1 = handleConnectionOpen;
     obj = { [id]: muteSettings };
     const result = obj1.saveUserGuildSettings(guildId, { channel_overrides: obj });
     obj = { type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE", guildId, channelId: id, settings: muteSettings };
-    require("../Dispatcher.tsx").dispatch(obj);
-    const AccessibilityAnnouncer = require("../design/shared.tsx") /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    AccessibilityAnnouncer.announce(intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.MlIsJ8));
-    const obj4 = require("../Dispatcher.tsx");
+    dispatcher.dispatch(obj);
+    const AccessibilityAnnouncer = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    AccessibilityAnnouncer.announce(intl.string(getSystemLocale /* getSystemLocale */.t.MlIsJ8));
+    const obj4 = dispatcher;
     obj1 = { guildId, channelId: id, change: muteSettings, previous: currentChannelSettings, label: NotificationLabel, location };
-    const result1 = require("../utils/NotificationSettingsUtils.tsx") /* UserNotificationSettings */.trackChannelNotificationSettingsUpdate(obj1);
+    const result1 = UserNotificationSettings /* UserNotificationSettings */.trackChannelNotificationSettingsUpdate(obj1);
   },
   updateChannelOverrideSettingsBulk(guildId, channel_overrides, OptedOut) {
     const _require = guildId;
     const importDefault = channel_overrides;
     const dependencyMap = OptedOut;
     let dispatcher = arg3;
-    let obj = require("../utils/SnowflakeUtils.tsx");
+    let obj = DISCORD_EPOCH;
     const keys = obj.keys(channel_overrides);
-    const manyCurrentChannelSettings = _require("../utils/NotificationSettingsUtils.tsx").getManyCurrentChannelSettings(guildId, keys);
-    const obj2 = _require("../utils/NotificationSettingsUtils.tsx");
+    const manyCurrentChannelSettings = _UserNotificationSettings.getManyCurrentChannelSettings(guildId, keys);
+    const obj2 = _UserNotificationSettings;
     obj = { channel_overrides };
-    const result = require("../modules/user_settings/UserGuildSettingsManager.tsx").saveUserGuildSettings(guildId, obj);
-    const obj3 = require("../modules/user_settings/UserGuildSettingsManager.tsx");
+    const result = handleConnectionOpen.saveUserGuildSettings(guildId, obj);
+    const obj3 = handleConnectionOpen;
     obj = { type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK", guildId, overrides: channel_overrides };
-    require("../Dispatcher.tsx").dispatch(obj);
-    const obj5 = require("../Dispatcher.tsx");
-    const keys1 = require("../utils/SnowflakeUtils.tsx").keys(channel_overrides);
+    dispatcher.dispatch(obj);
+    const obj5 = dispatcher;
+    const keys1 = DISCORD_EPOCH.keys(channel_overrides);
     const item = keys1.forEach((channelId) => {
       let obj = guildId(OptedOut[6]);
       obj = { guildId, channelId, change: table[channelId], previous: updateUserGuildSettingsInternal.get(channelId), label: OptedOut, location: dispatcher };
@@ -91,19 +97,19 @@ export default {
     });
   },
   updateAppDMOverrideSettings(guildId, id, id2, change, NotificationLabel2) {
-    let obj = require("../utils/NotificationSettingsUtils.tsx") /* UserNotificationSettings */;
+    let obj = UserNotificationSettings /* UserNotificationSettings */;
     const currentChannelSettings = obj.getCurrentChannelSettings(guildId, id);
-    let obj1 = require("../modules/user_settings/UserGuildSettingsManager.tsx");
+    let obj1 = handleConnectionOpen;
     obj = { [id]: change };
     const result = obj1.saveUserGuildSettings(guildId, { channel_overrides: obj });
     obj = { type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE", guildId, channelId: id, settings: change };
-    require("../Dispatcher.tsx").dispatch(obj);
-    const AccessibilityAnnouncer = require("../design/shared.tsx") /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    AccessibilityAnnouncer.announce(intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.MlIsJ8));
-    const obj4 = require("../Dispatcher.tsx");
+    dispatcher.dispatch(obj);
+    const AccessibilityAnnouncer = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    AccessibilityAnnouncer.announce(intl.string(getSystemLocale /* getSystemLocale */.t.MlIsJ8));
+    const obj4 = dispatcher;
     obj1 = { updateType: constants.AUTHORIZED_APP_DM, guildId, channelId: id, applicationId: id2, change, previous: currentChannelSettings, label: NotificationLabel2 };
-    const result1 = require("../utils/NotificationSettingsUtils.tsx") /* UserNotificationSettings */.trackChannelNotificationSettingsUpdate(obj1);
+    const result1 = UserNotificationSettings /* UserNotificationSettings */.trackChannelNotificationSettingsUpdate(obj1);
   },
   setForumThreadsCreated(channel, arg1) {
     if (arg1) {
@@ -113,7 +119,7 @@ export default {
       NEW_FORUM_THREADS_OFF = tmp.NEW_FORUM_THREADS_OFF;
       tmp2 = tmp;
     }
-    const NotificationLabel = require("../utils/NotificationSettingsUtils.tsx") /* UserNotificationSettings */.NotificationLabel;
+    const NotificationLabel = UserNotificationSettings /* UserNotificationSettings */.NotificationLabel;
     const result = this.updateChannelOverrideSettings(channel.guild_id, channel.id, { flags: channelFlags.getChannelFlags(channel) & ~(arg1 ? tmp2.NEW_FORUM_THREADS_OFF : tmp2.NEW_FORUM_THREADS_ON) | NEW_FORUM_THREADS_OFF }, NotificationLabel.forumThreadsCreated(arg1));
   },
   setAccountFlag(arg0, arg1) {

@@ -1,3 +1,5 @@
+import { U } from "../../../_runtime/14283_U.js";
+import { mapDiscordToMuxMetadata } from "integrations/MuxIntegration.tsx";
 // discord_app/modules/video-qoe/SimpleMuxWrapper.tsx
 const logger = new require("set").Logger("SimpleMuxWrapper");
 const result = require("mapDiscordToMuxMetadata").fileFinishedImporting("modules/video-qoe/SimpleMuxWrapper.tsx");
@@ -20,14 +22,14 @@ prototype["initialize"] = function initialize() {
     flag = false;
   }
   const obj = { debug: flag, disableCookies: true, respectDoNotTrack: true, data: null };
-  const MuxIntegration = require("integrations/MuxIntegration.tsx") /* mapDiscordToMuxMetadata */.MuxIntegration;
+  const MuxIntegration = mapDiscordToMuxMetadata /* mapDiscordToMuxMetadata */.MuxIntegration;
   obj[3] = MuxIntegration.mapDiscordToMuxMetadata(self.config, self.sessionId);
   if (null != self.hlsInstance) {
     obj.hlsjs = self.hlsInstance;
     obj.Hls = self.hlsInstance.constructor;
   }
   try {
-    require("../../../_runtime/14283_U.js").monitor(self.videoElement, obj);
+    U.monitor(self.videoElement, obj);
     self.isMonitoring = true;
   } catch (tmp5) {
     logger.error("Error creating Mux monitor", tmp5);
@@ -38,7 +40,7 @@ prototype["endSession"] = function endSession() {
   const self = this;
   if (this.isMonitoring) {
     try {
-      if (typeof require("../../../_runtime/14283_U.js").destroyMonitor === "function") {
+      if (typeof U.destroyMonitor === "function") {
         tmp(14283).destroyMonitor(self.videoElement);
         const tmpResult = tmp(14283);
       }
@@ -53,7 +55,7 @@ prototype["destroy"] = function destroy() {
   const self = this;
   if (this.isMonitoring) {
     try {
-      if (typeof require("../../../_runtime/14283_U.js").destroyMonitor === "function") {
+      if (typeof U.destroyMonitor === "function") {
         tmp(14283).destroyMonitor(self.videoElement);
         const tmpResult = tmp(14283);
       }

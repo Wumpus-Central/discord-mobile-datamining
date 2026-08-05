@@ -1,3 +1,6 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { TwinButtons } from "../../../../design/components/experimental/native.tsx";
+import { map } from "../../../../design/tokens/native/useToken.tsx";
 // discord_app/modules/voice_panel/native/shared/VoicePanelVisualEffectView.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -27,8 +30,8 @@ const memoResult = require("noop").memo(function VoicePanelVisualEffectViewInner
   if (flag === undefined) {
     flag = false;
   }
-  let obj = require("../../../../design/tokens/native/useToken.tsx") /* map */;
-  const token = obj.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.THEME_LOCKED_BLUR_FALLBACK);
+  let obj = map /* map */;
+  const token = obj.useToken(Themes.colors.THEME_LOCKED_BLUR_FALLBACK);
   const tmp2 = callback2();
   obj = { blurTheme: str, android_fallbackColor: null };
   let tmp5;
@@ -36,7 +39,7 @@ const memoResult = require("noop").memo(function VoicePanelVisualEffectViewInner
     tmp5 = token;
   }
   obj[1] = tmp5;
-  const tmp4Result = closure_4(require("../../../../design/components/experimental/native.tsx") /* TwinButtons */.BackgroundBlurFill, obj);
+  const tmp4Result = closure_4(TwinButtons /* TwinButtons */.BackgroundBlurFill, obj);
   let tmp7 = tmp4Result;
   if (tmp3) {
     obj = { style: null, children: null };

@@ -1,9 +1,10 @@
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/channel/native/openChannelLongPressActionSheet.tsx
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/channel/native/openChannelLongPressActionSheet.tsx");
 
 export const openChannelLongPressActionSheet = function openChannelLongPressActionSheet(id) {
   const combined = "ChannelLongPress-" + id;
-  let obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = {
     channelId: id,
     onClose() {

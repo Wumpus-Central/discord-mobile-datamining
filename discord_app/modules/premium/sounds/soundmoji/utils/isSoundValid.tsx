@@ -1,3 +1,4 @@
+import { getPremiumPlanItem } from "../../../../../utils/PremiumUtils.tsx";
 // discord_app/modules/premium/sounds/soundmoji/utils/isSoundValid.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -31,7 +32,7 @@ export default function isSoundValid(guildId) {
       }
       if (guildId2 !== arg1) {
         let canResult = null == channel;
-        const result = require("../../../../../utils/PremiumUtils.tsx").canUseSoundboardEverywhere(currentUser.getCurrentUser());
+        const result = getPremiumPlanItem.canUseSoundboardEverywhere(currentUser.getCurrentUser());
         if (!canResult) {
           canResult = null == channel.guild_id;
         }

@@ -1,3 +1,5 @@
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 // discord_app/lib/uploader/native/CloudUploaderUtils.tsx
 import _getSystemLocale from "_getSystemLocale";
 import fetchFingerprint from "fetchFingerprint";
@@ -6,7 +8,7 @@ import refreshSourceMapCookie from "refreshSourceMapCookie";
 const require = arg1;
 function getUploadPayload(outer1_0) {
   const obj = { filename: outer1_0.filename, file_size: outer1_0.currentSize, id: null, original_content_type: "Array" };
-  obj[2] = require("../../../../_runtime/00012_apply.js").uniqueId();
+  obj[2] = apply.uniqueId();
   return obj;
 }
 let result = require("refreshSourceMapCookie").fileFinishedImporting("lib/uploader/native/CloudUploaderUtils.tsx");
@@ -25,16 +27,16 @@ export const prepareMessagePayload = function prepareMessagePayload(arg0, arr) {
       let obj = {};
       let merged = Object.assign(arg2);
       const items1 = [];
-      HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(require("../../../../_runtime/00012_apply.js").get(obj, arg3, []), 0));
-      const obj3 = require("../../../../_runtime/00012_apply.js");
-      let result = require("../../../../_runtime/00012_apply.js").set(obj, arg3, items1);
-      const obj4 = require("../../../../_runtime/00012_apply.js");
+      HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(apply.get(obj, arg3, []), 0));
+      const obj3 = apply;
+      let result = apply.set(obj, arg3, items1);
+      const obj4 = apply;
     }
     obj = { Authorization: null, "X-Debug-Options": null, "Accept-Language": null };
     obj[0] = arg0;
     obj[1] = debugOptionsHeaderValue.getDebugOptionsHeaderValue();
     obj[2] = locale.locale;
-    const superPropertiesBase64 = require("../../../utils/AnalyticsUtils.tsx").getSuperPropertiesBase64();
+    const superPropertiesBase64 = expandEventProperties.getSuperPropertiesBase64();
     if (null != superPropertiesBase64) {
       obj["X-Super-Properties"] = superPropertiesBase64;
     }

@@ -1,3 +1,8 @@
+import { registerAsset } from "../../../../../_runtime/09947_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/09948_registerAsset.js";
+import { CameraIcon } from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
+import { SettingsIcon } from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardEmptyState.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -47,34 +52,34 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
       if (photosEmpty.photosEmpty) {
         if (photoPermissionStatus === tmp3.LIMITED) {
           let obj = { actionIcon: null, actionLabel: null, actionPress: null, imageSource: null, label: null };
-          obj[0] = callback(require("../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx") /* SettingsIcon */.SettingsIcon, { color: "white", size: "sm" });
-          const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-          obj[1] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.JuXTi6);
+          obj[0] = callback(SettingsIcon /* SettingsIcon */.SettingsIcon, { color: "white", size: "sm" });
+          const intl3 = getSystemLocale /* getSystemLocale */.intl;
+          obj[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.JuXTi6);
           obj[2] = tmp2;
-          obj[3] = require("../../../../../_runtime/09947_registerAsset.js");
-          const intl4 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-          obj[4] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["5g7NcN"]);
+          obj[3] = registerAsset;
+          const intl4 = getSystemLocale /* getSystemLocale */.intl;
+          obj[4] = intl4.string(getSystemLocale /* getSystemLocale */.t["5g7NcN"]);
           return callback(MediaKeyboardEmptyState, obj);
         } else if (showCameraButton) {
           obj = { actionIcon: null, actionLabel: null, actionPress: null, imageSource: null, label: null };
-          obj[0] = callback(require("../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx") /* CameraIcon */.CameraIcon, { color: "white", size: "sm" });
-          const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-          obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.tpoWUd);
+          obj[0] = callback(CameraIcon /* CameraIcon */.CameraIcon, { color: "white", size: "sm" });
+          const intl = getSystemLocale /* getSystemLocale */.intl;
+          obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.tpoWUd);
           obj[2] = tmp;
-          obj[3] = require("../../../../../_runtime/09948_registerAsset.js");
-          const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-          obj[4] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.YOvRBZ);
+          obj[3] = registerAsset;
+          const intl2 = getSystemLocale /* getSystemLocale */.intl;
+          obj[4] = intl2.string(getSystemLocale /* getSystemLocale */.t.YOvRBZ);
           return callback(MediaKeyboardEmptyState, obj);
         }
       }
     }
   }
-  obj = { actionIcon: callback(require("../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx") /* SettingsIcon */.SettingsIcon, { color: "white", size: "sm" }), actionLabel: null, actionPress: null, imageSource: null, label: null };
-  const intl5 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl5.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["457oeG"]);
+  obj = { actionIcon: callback(SettingsIcon /* SettingsIcon */.SettingsIcon, { color: "white", size: "sm" }), actionLabel: null, actionPress: null, imageSource: null, label: null };
+  const intl5 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl5.string(getSystemLocale /* getSystemLocale */.t["457oeG"]);
   obj[2] = photosEmpty.onPressPrivacySettings;
-  obj[3] = require("../../../../../_runtime/09947_registerAsset.js");
-  const intl6 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[4] = intl6.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["8p9jGu"]);
+  obj[3] = registerAsset;
+  const intl6 = getSystemLocale /* getSystemLocale */.intl;
+  obj[4] = intl6.string(getSystemLocale /* getSystemLocale */.t["8p9jGu"]);
   return callback(MediaKeyboardEmptyState, obj);
 };

@@ -1,3 +1,12 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { init } from "../../../actions/ChannelSettingsActionCreators.tsx";
+import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getFontScale } from "../../screen/native/useFontScale.tsx";
+import { dispatcher } from "../GuildSettingsModalChannelsActionCreators.tsx";
 // discord_app/modules/guild_settings/native/GuildSettingsModalChannels.tsx
 import importAllResult from "registerAsset";
 import get_ActivityIndicator from "Form";
@@ -61,7 +70,7 @@ function ChannelItem(arg0) {
   const tmpResult1 = channel(4131);
   const isThemeDarkResult = channel(4131).isThemeDark(obj1.useThemeContext().theme);
   const hex2rgb = channel(688).hex2rgb;
-  const unsafe_rawColors = require("../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
+  const unsafe_rawColors = Themes.unsafe_rawColors;
   if (isThemeDarkResult) {
     let hex2rgbResult = hex2rgb(unsafe_rawColors.PRIMARY_700, 0.6);
     let tmp13 = tmp11;
@@ -277,10 +286,10 @@ SectionEditAction.prototype["render"] = function render() {
   ({ style, onPress } = this.props);
   let obj = { accessibilityRole: "button", onPress, children: null };
   obj = { style, children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.bt75uw);
-  obj[2] = callback(require("../../../design/void/native.tsx") /* Button */.LegacyText, obj);
-  return callback(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.bt75uw);
+  obj[2] = callback(Button /* Button */.LegacyText, obj);
+  return callback(PressableBase /* PressableBase */.PressableOpacity, obj);
 };
 SectionEditAction.contextType = require("ManaContext").ThemeContext;
 const PureComponent3 = importAllResult.PureComponent;
@@ -614,8 +623,8 @@ prototype["updateNavigation"] = function updateNavigation(sortingType) {
     obj[1] = fn2;
     let stringResult;
     if (null != sortingType) {
-      let intl = _require("../../../intl/index.native.tsx").intl;
-      stringResult = intl.string(_require("../../../intl/index.native.tsx").t.OGiMXJ);
+      let intl = _getSystemLocale.intl;
+      stringResult = intl.string(_getSystemLocale.t.OGiMXJ);
     }
     obj[2] = stringResult;
     navigation.setOptions(obj);
@@ -689,10 +698,10 @@ prototype["render"] = function render() {
   return tmp3(tmp4, obj);
 };
 prototype["handleChannelPress"] = function handleChannelPress(arg0) {
-  require("../../../actions/ChannelSettingsActionCreators.tsx") /* init */.open(arg0);
+  init /* init */.open(arg0);
 };
 prototype["handleSortStop"] = function handleSortStop() {
-  require("../GuildSettingsModalChannelsActionCreators.tsx").stopReordering();
+  dispatcher.stopReordering();
 };
 GuildSettingsModalChannels.contextType = require("ManaContext").ThemeContext;
 let obj4 = { backgroundColor: require("Themes").unsafe_rawColors.GREEN_360, opacity: 0.3 };
@@ -704,29 +713,29 @@ export default function GuildSettingsModalChannelsConnected(arg0) {
   ({ guildId: require, contentContainerStyle } = arg0);
   let stateFromStores5;
   let dependencyMap;
-  let obj = require("../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
+  let obj = useNavigation /* useNavigation */;
   const navigation = obj.useNavigation();
   let items = [createGuildRecordFromRust];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => outer1_8.getGuild(closure_0));
-  const obj2 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => outer1_8.getGuild(closure_0));
+  const obj2 = initialize /* initialize */;
   const items1 = [sortCategoryList];
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => sortCategoryList.channels);
-  const obj3 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => sortCategoryList.channels);
+  const obj3 = initialize /* initialize */;
   const items2 = [mergeGuildAvatar];
-  const stateFromStores2 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items2, () => {
+  const stateFromStores2 = initialize /* initialize */.useStateFromStores(items2, () => {
     currentUser = currentUser.getCurrentUser();
     contentContainerStyle(_undefined[42])(null != currentUser, "GuildSettingsModalChannelsConnected: currentUser cannot be undefined");
     return currentUser;
   });
-  const obj4 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const obj4 = initialize /* initialize */;
   const items3 = [sortCategoryList];
-  const stateFromStores3 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items3, () => sortCategoryList.channelList);
-  const obj5 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const stateFromStores3 = initialize /* initialize */.useStateFromStores(items3, () => sortCategoryList.channelList);
+  const obj5 = initialize /* initialize */;
   const items4 = [sortCategoryList];
-  const stateFromStores4 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items4, () => sortCategoryList.order);
-  const obj6 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const stateFromStores4 = initialize /* initialize */.useStateFromStores(items4, () => sortCategoryList.order);
+  const obj6 = initialize /* initialize */;
   const items5 = [sortCategoryList];
-  stateFromStores5 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items5, () => sortCategoryList.sortingType);
+  stateFromStores5 = initialize /* initialize */.useStateFromStores(items5, () => sortCategoryList.sortingType);
   const tmp8 = contentContainerStyle(1581)();
   dependencyMap = tmp8;
   const items6 = [contentContainerStyle, tmp8.bottom, stateFromStores5];
@@ -742,7 +751,7 @@ export default function GuildSettingsModalChannelsConnected(arg0) {
     }
     return tmp;
   }, items6);
-  require("../../screen/native/useFontScale.tsx") /* getFontScale */;
+  getFontScale /* getFontScale */;
   let tmp12 = null;
   if (null != stateFromStores4) {
     tmp12 = null;

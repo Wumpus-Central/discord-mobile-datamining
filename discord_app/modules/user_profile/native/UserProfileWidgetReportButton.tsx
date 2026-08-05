@@ -1,3 +1,6 @@
+import { ContextMenu } from "../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
+import { FlagIcon } from "../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/user_profile/native/UserProfileWidgetReportButton.tsx
 import "noop";
 import { Pressable } from "get ActivityIndicator";
@@ -12,9 +15,9 @@ export default function UserProfileWidgetReportButton(arg0) {
   let require;
   ({ userId: require, widget: importDefault } = arg0);
   let obj = { label: null, variant: "destructive", IconComponent: null, action: null };
-  let intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.D4GvHE);
-  obj[2] = require("../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx") /* FlagIcon */.FlagIcon;
+  let intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.D4GvHE);
+  obj[2] = FlagIcon /* FlagIcon */.FlagIcon;
   obj[3] = function action() {
     return outer1_0(outer1_2[5]).showReportModalForWidget(closure_0, closure_1);
   };
@@ -34,7 +37,7 @@ export default function UserProfileWidgetReportButton(arg0) {
       return callback3(closure_3, obj);
     }
   };
-  return jsx(require("../../../design/components/ContextMenu/native/ContextMenu.native.tsx") /* ContextMenu */.ContextMenu, {
+  return jsx(ContextMenu /* ContextMenu */.ContextMenu, {
     items,
     children(ref) {
       let obj = { ref: ref.ref };

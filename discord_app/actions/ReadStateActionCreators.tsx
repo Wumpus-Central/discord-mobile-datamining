@@ -1,3 +1,4 @@
+import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/ReadStateActionCreators.tsx
 import rebuild from "rebuild";
 import { isReadableType } from "createChannelRecord";
@@ -15,7 +16,7 @@ function ack(channelId, location, arg2, arg3, messageId) {
   if (arg3 === undefined) {
     flag2 = false;
   }
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "CHANNEL_ACK", channelId, messageId, immediate: flag, force: flag2, context: CURRENT_APP_CONTEXT, location };
   obj.dispatch(obj);
 }
@@ -100,27 +101,27 @@ export const ackChannel = function ackChannel(channel, arg1) {
   }
 };
 export const bulkAck = function bulkAck(mapped, onFinished) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "BULK_ACK", channels: mapped, context: CURRENT_APP_CONTEXT, onFinished };
   obj.dispatch(obj);
 };
 export const localAck = function localAck(channelId) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "CHANNEL_LOCAL_ACK", channelId };
   obj.dispatch(obj);
 };
 export const enableAutomaticAck = function enableAutomaticAck(channelId, windowId) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "ENABLE_AUTOMATIC_ACK", channelId, windowId };
   obj.dispatch(obj);
 };
 export const disableAutomaticAck = function disableAutomaticAck(channelId, windowId) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "DISABLE_AUTOMATIC_ACK", channelId, windowId };
   obj.dispatch(obj);
 };
 export const ackGuildFeature = function ackGuildFeature(closure_0, GUILD_EVENT, outer1_11) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_FEATURE_ACK", id: closure_0, ackType: GUILD_EVENT, ackedId: outer1_11, local: false };
   obj.dispatch(obj);
 };
@@ -131,7 +132,7 @@ export const ackUserFeature = function ackUserFeature(NOTIFICATION_CENTER) {
     id = currentUser.id;
   }
   if (null != id) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "USER_NON_CHANNEL_ACK", ackType: null, ackedId: null, local: false };
     obj[1] = NOTIFICATION_CENTER;
     obj[2] = arg1;
@@ -139,7 +140,7 @@ export const ackUserFeature = function ackUserFeature(NOTIFICATION_CENTER) {
   }
 };
 export const clearOldestUnreadMessageId = function clearOldestUnreadMessageId(current) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "CLEAR_OLDEST_UNREAD_MESSAGE", channelId: current };
   obj.dispatch(obj);
 };

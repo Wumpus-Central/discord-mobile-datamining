@@ -1,3 +1,5 @@
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { ThreadListTableRow } from "ThreadListTableRow.tsx";
 // discord_app/modules/threads/native/components/redesign/ThreadList.tsx
 import noop from "noop";
 import get_ActivityIndicator from "module_15661";
@@ -11,7 +13,7 @@ const require = arg1;
 function ThreadListSection(title) {
   const obj = { style: callback().section, accessibilityRole: "header", variant: "text-xs/bold", color: "text-default", children: null };
   obj[4] = title.title.toUpperCase();
-  return jsx(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: callback().section, accessibilityRole: "header", variant: "text-xs/bold", color: "text-default", children: null });
+  return jsx(Text /* Text */.Text, { style: callback().section, accessibilityRole: "header", variant: "text-xs/bold", color: "text-default", children: null });
 }
 function renderItem(item) {
   item = item.item;
@@ -23,7 +25,7 @@ function renderItem(item) {
   } else if ("thread" === type) {
     obj = { threadId: null, onPress: null, start: null, end: null };
     ({ threadId: obj[0], onPress: obj[1], start: obj[2], end: obj[3] } = item);
-    return jsx(require("ThreadListTableRow.tsx"), { threadId: null, onPress: null, start: null, end: null });
+    return jsx(ThreadListTableRow, { threadId: null, onPress: null, start: null, end: null });
   }
 }
 function keyExtractor(type) {

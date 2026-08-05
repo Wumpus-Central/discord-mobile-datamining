@@ -1,3 +1,5 @@
+import { registerAsset } from "../../../../_runtime/11547_registerAsset.js";
+import { preload } from "../../../components_native/common/FastImage.tsx";
 // discord_app/modules/guilds_bar/native/GuildsBarGeoRestrictedBadge.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -15,9 +17,9 @@ const memoResult = require("noop").memo(function GuildsBarGeoRestrictedBadge(sty
   let obj = { style: items, pointerEvents: "none", children: null };
   items = [tmp.badgeImageContainer, style.style];
   obj = { source: null, style: null };
-  obj[0] = require("../../../../_runtime/11547_registerAsset.js");
+  obj[0] = registerAsset;
   obj[1] = tmp.badgeImage;
-  obj[2] = jsx(require("../../../components_native/common/FastImage.tsx"), { source: null, style: null });
+  obj[2] = jsx(preload, { source: null, style: null });
   return <View source={null} style={null} />;
 });
 const result = require("jsxProd").fileFinishedImporting("modules/guilds_bar/native/GuildsBarGeoRestrictedBadge.tsx");

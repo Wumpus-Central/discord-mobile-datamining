@@ -1,3 +1,9 @@
+import { registerAsset } from "../../../../_runtime/15205_registerAsset.js";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { map } from "../../screen/native/useScaledTextLineHeight.android.tsx";
 // discord_app/modules/guild_sidebar/native/GuildMFAWarning.tsx
 import closure_3 from "createCacheKey";
 import "noop";
@@ -104,21 +110,21 @@ export default function GuildMFAWarning() {
   const tmp = createCacheKey();
   let obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
   obj = { style: tmp.MFAWarningIcon, source: null };
-  obj[1] = require("../../../../_runtime/15205_registerAsset.js");
+  obj[1] = registerAsset;
   const items = [callback2(Image, obj), ];
   obj = { variant: "text-xs/medium", color: "text-default", children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  const items1 = [intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ZIf8Ag), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const items1 = [intl.string(getSystemLocale /* getSystemLocale */.t.ZIf8Ag), ];
   const obj1 = { style: tmp.MFAWarningLink, children: null };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  const items2 = [" ", intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.hvVgAZ)];
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  const items2 = [" ", intl2.string(getSystemLocale /* getSystemLocale */.t.hvVgAZ)];
   obj1[1] = items2;
-  items1[1] = callback3(require("../../../design/void/native.tsx") /* Button */.LegacyText, obj1);
+  items1[1] = callback3(Button /* Button */.LegacyText, obj1);
   obj[2] = items1;
-  items[1] = callback3(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items[1] = callback3(Text /* Text */.Text, obj);
   obj[3] = items;
-  return callback3(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  return callback3(PressableBase /* PressableBase */.PressableOpacity, obj);
 };
 export const getScaledGuildMFAWarningHeight = function getScaledGuildMFAWarningHeight(fontScale) {
-  return 83 + 5 * require("../../screen/native/useScaledTextLineHeight.android.tsx") /* map */.scaleTextLineHeight("text-xs/medium", fontScale) + 10 + 10;
+  return 83 + 5 * map /* map */.scaleTextLineHeight("text-xs/medium", fontScale) + 10 + 10;
 };

@@ -1,3 +1,5 @@
+import { set } from "../../../../core/native/NativeView.tsx";
+import { BrokenImage } from "../../../../image/native/BrokenImage.tsx";
 // discord_app/modules/voice_panel/native/controls/activities/ActivityShelfItemBackground.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -37,20 +39,20 @@ const memoResult = importAllResult.memo(function ActivityShelfItemBackground(asp
           }
           obj[4] = accessibilityLabel;
           obj[1] = <Image onError={null} source={null} style={null} accessibilityRole="image" accessibilityLabel={null} />;
-          let tmp9Result = tmp9(require("../../../../core/native/NativeView.tsx"), obj);
-          const tmp12 = require("../../../../core/native/NativeView.tsx");
+          let tmp9Result = tmp9(set, obj);
+          const tmp12 = set;
           const tmp13 = Image;
         }
       }
       obj = { style: null };
       obj[0] = tmp.previewImage;
-      tmp9Result = jsx(require("../../../../core/native/NativeView.tsx"), { style: null });
+      tmp9Result = jsx(set, { style: null });
     }
     return tmp9Result;
   }
   const obj2 = { style: tmp.previewImage, children: null };
-  obj2[1] = jsx(require("../../../../image/native/BrokenImage.tsx"), {});
-  tmp9Result = jsx(require("../../../../core/native/NativeView.tsx"), { style: tmp.previewImage, children: null });
+  obj2[1] = jsx(BrokenImage, {});
+  tmp9Result = jsx(set, { style: tmp.previewImage, children: null });
 });
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityShelfItemBackground.tsx");
 

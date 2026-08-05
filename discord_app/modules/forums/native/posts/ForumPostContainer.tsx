@@ -1,3 +1,5 @@
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { useNativeForumPostHandlers } from "hooks/useNativeForumPostHandlers.tsx";
 // discord_app/modules/forums/native/posts/ForumPostContainer.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -40,9 +42,9 @@ export const ForumPostPressableContainer = function ForumPostPressableContainer(
     }
   }), items);
   ({ onPressIn, onPressOut } = memo);
-  ({ onTapPost, onLongTapPost } = require("hooks/useNativeForumPostHandlers.tsx")({ threadId }));
+  ({ onTapPost, onLongTapPost } = useNativeForumPostHandlers({ threadId }));
   let str = "secondary";
-  if (require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("ForumPostContainer")) {
+  if (useIsMobileVisualRefreshExperimentEnabled("ForumPostContainer")) {
     str = "surface-high";
   }
   obj = { style: tmp.card, children: jsx(sharedValue(5317).Card, { style: items1, variant: str, accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children }) };

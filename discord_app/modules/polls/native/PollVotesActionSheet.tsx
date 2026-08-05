@@ -1,3 +1,7 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { Emoji } from "../../emojis/native/Emoji.tsx";
 // discord_app/modules/polls/native/PollVotesActionSheet.tsx
 import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING";
 import getEmojiToGroupId from "getEmojiToGroupId";
@@ -44,7 +48,7 @@ function PollEmoji(emoji) {
     }
   });
   obj = { style: emoji.style, src: stateFromStores, name: emoji.name, textEmojiStyle: tmp.emojiText, fastImageStyle: tmp.emojiImage };
-  return callback(require("../../emojis/native/Emoji.tsx"), obj);
+  return callback(Emoji, obj);
 }
 function PollVotesHeader(message) {
   message = message.message;
@@ -329,7 +333,7 @@ function NoResults() {
   const tmp = callback3();
   let obj = { style: tmp.noResultsContainer, children: null };
   obj = { style: tmp.noResultsImage, source: null };
-  const tmp4 = require("../../../hooks/useTheme.tsx")();
+  const tmp4 = useTheme();
   const tmp5 = closure_15;
   const tmp6 = closure_7;
   const tmp8 = closure_6;
@@ -342,12 +346,12 @@ function NoResults() {
   const items = [closure_14(tmp8, obj), , ];
   obj = { style: tmp.noResultsTitle, variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp9(1236).intl;
-  obj[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.vhQK3o);
-  items[1] = closure_14(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.vhQK3o);
+  items[1] = closure_14(Text /* Text */.Text, obj);
   const obj1 = { style: tmp.noResultsSubtitle, variant: "text-sm/semibold", color: "text-default", children: null };
   const intl2 = tmp9(1236).intl;
-  obj1[3] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.bwytdh);
-  items[2] = closure_14(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  obj1[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.bwytdh);
+  items[2] = closure_14(Text /* Text */.Text, obj1);
   obj[1] = items;
   return tmp5(tmp6, obj);
 }

@@ -1,3 +1,8 @@
+import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { TrackedHTTPUtils } from "../../utils/TrackedHTTPUtils.tsx";
+import { toServerGuildProfile } from "../guild_tag/GuildTagTypes.tsx";
 // discord_app/modules/guild_settings/GuildSettingsActionCreators.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import initialize from "initialize";
@@ -19,7 +24,7 @@ const require = arg1;
 let closure_15 = new require("fetchFingerprint")("GuildSettingsActionCreators");
 let obj = {
   init(guildId, section, location, subsection) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "GUILD_SETTINGS_INIT", guildId, section, subsection, location };
     obj.dispatch(obj);
   },
@@ -92,10 +97,10 @@ let obj = {
     })();
   },
   close() {
-    require("../../Dispatcher.tsx").dispatch({ type: "GUILD_SETTINGS_CLOSE" });
+    dispatcher.dispatch({ type: "GUILD_SETTINGS_CLOSE" });
   },
   saveRouteStack(state) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "GUILD_SETTINGS_SAVE_ROUTE_STACK", state };
     obj.dispatch(obj);
   },
@@ -124,7 +129,7 @@ let obj = {
         tmp5 = SAFETY_DM_AND_SPAM_PROTECTION;
         tmp6 = SAFETY;
       }
-      let obj = require("../../Dispatcher.tsx");
+      let obj = dispatcher;
       obj = { type: "GUILD_SETTINGS_SET_SECTION", section: null, subsection: null };
       obj[1] = tmp6;
       obj[2] = tmp5;
@@ -132,18 +137,18 @@ let obj = {
     }
   },
   setSearchQuery(searchQuery) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "GUILD_SETTINGS_SET_SEARCH_QUERY", searchQuery };
     obj.dispatch(obj);
   },
   selectRole(hideActionSheet) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "GUILD_SETTINGS_ROLE_SELECT", roleId: hideActionSheet, searchQuery: arg1 };
     return obj.dispatch(obj);
   },
   updateEmbed(arg0, enabled, channel_id) {
     const _require = arg0;
-    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     obj = { url: closure_10.GUILD_WIDGET(arg0), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { enabled, channel_id };
     return HTTP.patch(obj).then((body) => {
@@ -156,10 +161,10 @@ let obj = {
     let guildId;
     let level;
     ({ guildId, level } = updateMFALevelResult);
-    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     let obj = { url: closure_10.GUILD_MFA(guildId), body: { level }, oldFormErrors: true, rejectWithError: null };
-    obj[3] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
-    const obj2 = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
+    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    const obj2 = sendRequest /* sendRequest */;
     return HTTP.post(obj).then((body) => {
       let obj = callback(table[9]);
       obj = { type: "GUILD_SETTINGS_SET_MFA_SUCCESS", level: body.body.level };
@@ -169,11 +174,11 @@ let obj = {
   updateIcon(c2, base64) {
     const _require = c2;
     let closure_1 = base64;
-    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     obj = { url: closure_10.GUILD(c2), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { icon: base64 };
-    obj[3] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
-    const obj3 = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+    obj[3] = _sendRequest.rejectWithMigratedError();
+    const obj3 = _sendRequest;
     HTTP.patch(obj).then(() => {
       let obj = base64(outer1_2[9]);
       obj = { type: "GUILD_SETTINGS_UPDATE", icon: base64 };
@@ -186,7 +191,7 @@ let obj = {
     });
   },
   cancelChanges(id) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "GUILD_SETTINGS_CANCEL_CHANGES", guildId: id };
     obj.dispatch(obj);
   },
@@ -212,10 +217,10 @@ let obj = {
     tmp8 = null != store.getGuildId() && null != safetyAlertsChannelId;
     obj = { type: "GUILD_SETTINGS_UPDATE" };
     const merged3 = Object.assign(obj);
-    require("../../Dispatcher.tsx").dispatch(obj);
+    dispatcher.dispatch(obj);
   },
   updateGuildProfile(guildId, arg1) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "GUILD_SETTINGS_PROFILE_UPDATE", guildId };
     const merged = Object.assign(arg1);
     obj.dispatch(obj);
@@ -263,7 +268,7 @@ let obj = {
     const merged = Object.assign(tmp);
     let toServerGuildProfileResult = profile;
     if (null != profile) {
-      let obj3 = _require("../guild_tag/GuildTagTypes.tsx");
+      let obj3 = _toServerGuildProfile;
       toServerGuildProfileResult = obj3.toServerGuildProfile(profile);
     }
     obj.profile = toServerGuildProfileResult;
@@ -275,12 +280,12 @@ let obj = {
     const obj5 = obj(709);
     const obj6 = obj(8083);
     const headersForMd5 = obj6.buildHeadersForMd5({ [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_INVITE_SPLASH]: pendingOriginalMd5s.splash, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_DISCOVERY_SPLASH]: pendingOriginalMd5s.discoverySplash });
-    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     const obj2 = { url: closure_10.GUILD(id), query: obj3, body: obj, headers: headersForMd5, oldFormErrors: true, rejectWithError: null };
     obj3 = { for_discovery: obj.isForDiscovery };
     const obj1 = { [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_INVITE_SPLASH]: pendingOriginalMd5s.splash, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_DISCOVERY_SPLASH]: pendingOriginalMd5s.discoverySplash };
-    obj2[5] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
-    const obj10 = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+    obj2[5] = _sendRequest.rejectWithMigratedError();
+    const obj10 = _sendRequest;
     return HTTP.patch(obj2).then((body) => {
       obj = obj(outer1_2[9]);
       obj = { type: "GUILD_SETTINGS_SUBMIT_SUCCESS", guild: body.body };
@@ -299,11 +304,11 @@ let obj = {
   },
   updateGuildModeration(id, verificationLevel) {
     const _require = id;
-    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     obj = { url: closure_10.GUILD(id), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { verification_level: verificationLevel.verificationLevel, explicit_content_filter: verificationLevel.explicitContentFilter };
-    obj[3] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
-    const obj3 = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+    obj[3] = _sendRequest.rejectWithMigratedError();
+    const obj3 = _sendRequest;
     return HTTP.patch(obj).then((arg0) => {
       const result = outer1_1(outer1_2[11]).checkGuildTemplateDirty(closure_0);
       return arg0;
@@ -311,11 +316,11 @@ let obj = {
   },
   updateGuildPremiumProgressBar(id, premium_progress_bar_enabled) {
     const _require = id;
-    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     obj = { url: closure_10.GUILD(id), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { premium_progress_bar_enabled };
-    obj[3] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
-    const obj3 = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+    obj[3] = _sendRequest.rejectWithMigratedError();
+    const obj3 = _sendRequest;
     return HTTP.patch(obj).then((arg0) => {
       const result = outer1_1(outer1_2[11]).checkGuildTemplateDirty(closure_0);
       return arg0;
@@ -330,12 +335,12 @@ let obj = {
     if (closure_0 === undefined) {
       tmp2 = null;
     }
-    let obj = require("../../utils/TrackedHTTPUtils.tsx");
+    let obj = TrackedHTTPUtils;
     obj = { url: closure_10.GUILD(id), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { owner_id: id2, code: tmp2 };
-    obj[3] = { event: require("../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP, properties: obj2 };
-    const obj1 = { event: require("../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP, properties: obj2 };
-    obj[4] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+    obj[3] = { event: encodeProperties /* encodeProperties */.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP, properties: obj2 };
+    const obj1 = { event: encodeProperties /* encodeProperties */.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP, properties: obj2 };
+    obj[4] = sendRequest /* sendRequest */.rejectWithMigratedError();
     return obj.patch(obj);
   },
   sendTransferOwnershipPincode(id, arg1) {
@@ -343,18 +348,18 @@ let obj = {
     if (arg1 === undefined) {
       flag = false;
     }
-    let obj = require("../../utils/TrackedHTTPUtils.tsx");
+    let obj = TrackedHTTPUtils;
     obj = { url: closure_10.GUILD_PINCODE(id), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-    obj = { event: require("../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE, properties: obj1 };
+    obj = { event: encodeProperties /* encodeProperties */.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE, properties: obj1 };
     obj[2] = obj;
-    obj[3] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
     return obj.put(obj);
   },
   deleteGuild(arg0) {
-    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     const obj = { url: closure_10.GUILD_DELETE(arg0), oldFormErrors: true, rejectWithError: null };
-    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
-    const obj2 = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
+    obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    const obj2 = sendRequest /* sendRequest */;
     return HTTP.post(obj).then(() => {
       closure_16.close();
     });
@@ -532,11 +537,11 @@ let obj = {
   bulkAddMemberRoles(id, id2, keys) {
     const _require = id;
     let closure_1 = id2;
-    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     obj = { url: closure_10.GUILD_ROLE_MEMBERS(id, id2), body: obj, rejectWithError: null };
     obj = { member_ids: keys };
-    obj[2] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
-    const obj3 = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+    obj[2] = _sendRequest.rejectWithMigratedError();
+    const obj3 = _sendRequest;
     return HTTP.patch(obj).then((added) => {
       let obj = id2(outer1_2[9]);
       obj = { type: "GUILD_ROLE_MEMBER_BULK_ADD", guildId: closure_0, roleId: id2, added: added.body };
@@ -544,29 +549,29 @@ let obj = {
     });
   },
   enableIntegration(id, type, id2) {
-    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     obj = { url: closure_10.GUILD_INTEGRATIONS(id), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { type, id: id2 };
-    obj[3] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   disableIntegration(id, id2) {
-    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     const obj = { url: closure_10.GUILD_INTEGRATION(id, id2), oldFormErrors: true, rejectWithError: null };
-    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+    obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
     return HTTP.del(obj);
   },
   updateIntegration(guildId, id, expire_behavior, expire_grace_period, enable_emoticons) {
-    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     obj = { url: closure_10.GUILD_INTEGRATION(guildId, id), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { expire_behavior, expire_grace_period, enable_emoticons };
-    obj[3] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
     return HTTP.patch(obj);
   },
   syncIntegration(guildId, id) {
-    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     const obj = { url: closure_10.GUILD_INTEGRATION_SYNC(guildId, id), oldFormErrors: true, rejectWithError: null };
-    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+    obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
     HTTP.post(obj);
   },
   migratePinPermission(outer1_0) {

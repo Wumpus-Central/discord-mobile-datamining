@@ -1,3 +1,4 @@
+import { watchStream } from "../../actions/StreamActionCreators.tsx";
 // discord_app/modules/go_live/ApplicationStreamingManager.tsx
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";
@@ -27,8 +28,8 @@ function updateRegion(encodeStreamKeyResult, preferredRegion) {
     tmp3 = preferredRegion !== store.getRegion(hostname.getHostname(encodeStreamKeyResult));
   }
   if (tmp3) {
-    require("../../actions/StreamActionCreators.tsx") /* watchStream */.changeStreamRegion(encodeStreamKeyResult, preferredRegion);
-    const obj = require("../../actions/StreamActionCreators.tsx") /* watchStream */;
+    watchStream /* watchStream */.changeStreamRegion(encodeStreamKeyResult, preferredRegion);
+    const obj = watchStream /* watchStream */;
   }
 }
 ({ GO_LIVE_NOTIFY_FRIENDS_MIN_MEMBER_COUNT, STREAM_NOTIFY_GUILD_MAX_SIZE } = StreamIssueReportReasons);

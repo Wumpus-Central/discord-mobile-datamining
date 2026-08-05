@@ -1,3 +1,5 @@
+import { isUndefinedOrNull } from "../../../_runtime/00659_isUndefinedOrNull.js";
+import { unpackStageChannelParty } from "StageChannelRichPresenceUtils.tsx";
 // discord_app/modules/stage_channels/StageChannelSelfRichPresenceStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -35,7 +37,7 @@ function handleUpdateActivity() {
             const features = guild.features;
             tmp2 = null;
             if (features.has(constants.DISCOVERABLE)) {
-              let obj2 = require("StageChannelRichPresenceUtils.tsx") /* unpackStageChannelParty */;
+              let obj2 = unpackStageChannelParty /* unpackStageChannelParty */;
               const result = obj2.packStageChannelPartyId(channel, stageInstanceByChannel);
               let id;
               if (_null != null) {
@@ -110,7 +112,7 @@ function handleUpdateActivity() {
       }
     }
   }
-  const tmp30 = require("../../../_runtime/00659_isUndefinedOrNull.js")(tmp2, _null);
+  const tmp30 = isUndefinedOrNull(tmp2, _null);
   let flag = !tmp30;
   if (!tmp30) {
     _null = tmp2;
@@ -164,9 +166,9 @@ const stageChannelSelfRichPresenceStore = new StageChannelSelfRichPresenceStore(
     voiceStates = voiceStates.voiceStates;
     let _require;
     if (null != c17) {
-      const result = _require("StageChannelRichPresenceUtils.tsx").unpackStageChannelParty(c17);
+      const result = _unpackStageChannelParty.unpackStageChannelParty(c17);
       _require = result;
-      const obj = _require("StageChannelRichPresenceUtils.tsx");
+      const obj = _unpackStageChannelParty;
       if (tmp5) {
         handleUpdateActivity();
       }

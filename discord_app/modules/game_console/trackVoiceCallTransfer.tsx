@@ -1,3 +1,4 @@
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/game_console/trackVoiceCallTransfer.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
@@ -7,7 +8,7 @@ import { AnalyticEvents } from "ME";
 const result = require("handleUpdate").fileFinishedImporting("modules/game_console/trackVoiceCallTransfer.tsx");
 
 export default function trackVoiceCallTransfer(arg0, arg1, sessionId) {
-  let obj = require("../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   let str = "discord_client";
   if (null != sessionId) {
     sessionById = sessionById.getSessionById(sessionId);

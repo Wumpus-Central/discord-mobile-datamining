@@ -1,3 +1,8 @@
+import { encodeProperties } from "../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { Button } from "../../../../../design/components/Button/native/Button.native.tsx";
+import { useNavigation } from "../../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/messages/MessagesEmptyState.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -25,7 +30,7 @@ export default function MessagesEmptyState() {
   callback = React.useCallback((nativeEvent) => {
     callback(nativeEvent.nativeEvent.layout.width);
   }, []);
-  let obj = require("../../../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
+  let obj = useNavigation /* useNavigation */;
   navigation = obj.useNavigation();
   const items = [navigation];
   const callback1 = React.useCallback(() => {
@@ -34,8 +39,8 @@ export default function MessagesEmptyState() {
   obj = { type: null, name: null };
   const tmp2 = navigation;
   const tmp4 = callback(React.useState(0), 2);
-  obj[0] = require("../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionTypes.VIEW;
-  obj[1] = require("../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionNames.MESSAGES_EMPTY_NUX;
+  obj[0] = encodeProperties /* encodeProperties */.ImpressionTypes.VIEW;
+  obj[1] = encodeProperties /* encodeProperties */.ImpressionNames.MESSAGES_EMPTY_NUX;
   navigation(9267)(obj);
   if (tmp5 > 0) {
     width = tmp5;
@@ -70,12 +75,12 @@ export default function MessagesEmptyState() {
   const obj7 = { style: tmp.textWrapper, children: null };
   const obj8 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: tmp.title, children: null };
   const intl = tmp7(1236).intl;
-  obj8[3] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["8JZof8"]);
-  const items3 = [closure_8(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Heading, obj8), ];
+  obj8[3] = intl.string(getSystemLocale /* getSystemLocale */.t["8JZof8"]);
+  const items3 = [closure_8(Text /* Text */.Heading, obj8), ];
   const obj9 = { color: "text-default", variant: "text-md/medium", style: tmp.body, children: null };
   const intl2 = tmp7(1236).intl;
-  obj9[3] = intl2.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["qm+H7x"]);
-  items3[1] = closure_8(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj9);
+  obj9[3] = intl2.string(getSystemLocale /* getSystemLocale */.t["qm+H7x"]);
+  items3[1] = closure_8(Text /* Text */.Text, obj9);
   obj7[1] = items3;
   items2[1] = closure_9(closure_5, obj7);
   obj3[1] = items2;
@@ -83,9 +88,9 @@ export default function MessagesEmptyState() {
   const obj10 = { style: tmp.buttonWrapper, children: null };
   const obj11 = { text: null, onPress: null, size: "lg" };
   const intl3 = tmp7(1236).intl;
-  obj11[0] = intl3.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.zIJnA6);
+  obj11[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.zIJnA6);
   obj11[1] = callback1;
-  obj10[1] = closure_8(require("../../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj11);
+  obj10[1] = closure_8(Button /* Button */.Button, obj11);
   items4[1] = closure_8(closure_5, obj10);
   obj2[2] = items4;
   obj1[3] = closure_9(closure_5, obj2);

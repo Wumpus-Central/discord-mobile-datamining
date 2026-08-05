@@ -1,3 +1,6 @@
+import { Button } from "../../../design/void/native.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/application_commands/native/ApplicationCommandBar.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -27,9 +30,9 @@ function ApplicationCommandOptionItem(arg0) {
     flag = false;
   }
   let obj = { accessibilityLabel: null, accessibilityRole: "button", disabled: null, style: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   obj = { optionName: option.displayName };
-  obj[0] = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.evoEHc, obj);
+  obj[0] = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.evoEHc, obj);
   obj[2] = flag;
   const items = [tmp2.applicationCommandOption, , ];
   let activeCommandOption = flag;
@@ -88,8 +91,8 @@ function ApplicationCommandOptionItem(arg0) {
   }
   obj = { style: items1, numberOfLines: 1, children: option.displayName };
   items1[3] = errorCommandOptionText;
-  obj.children = closure_8(require("../../../design/void/native.tsx") /* Button */.LegacyText, obj);
-  return closure_8(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  obj.children = closure_8(Button /* Button */.LegacyText, obj);
+  return closure_8(PressableBase /* PressableBase */.PressableOpacity, obj);
 }
 ({ View: c5, ScrollView: closure_6, StyleSheet } = get_ActivityIndicator);
 ({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);

@@ -1,3 +1,7 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { getEmbeddedActivityLocationChannelId } from "../activities/utils/embeddedActivityLocationUtils.tsx";
 // discord_app/modules/guild_sidebar/ChannelListStore.tsx
 import participantFromServer from "participantFromServer";
 import isSubscriptionGated from "isSubscriptionGated";
@@ -50,14 +54,14 @@ function handleChannelSelect() {
   let flag = tmp3;
   if (flag) {
     const items = [channelId, voiceChannelId, channelId, voiceChannelId];
-    const obj = require("../../../_runtime/00012_apply.js")(items);
-    const item = require("../../../_runtime/00012_apply.js")(items).uniq().forEach((channelId) => {
+    const obj = apply(items);
+    const item = apply(items).uniq().forEach((channelId) => {
       if (null != channelId) {
         const result = closure_20.nonPositionalChannelIdUpdate(channelId);
       }
     });
     flag = true;
-    const uniqResult = require("../../../_runtime/00012_apply.js")(items).uniq();
+    const uniqResult = apply(items).uniq();
   }
   return flag;
 }
@@ -131,7 +135,7 @@ const channelListStore = new ChannelListStore(require("dispatcher"), {
   BACKGROUND_SYNC: handleReset,
   BULK_ACK: function handleBulkAck(channels) {
     const _require = false;
-    const mapped = require("../../../_runtime/00012_apply.js")(channels.channels).map((channelId) => {
+    const mapped = apply(channels.channels).map((channelId) => {
       channel = channel.getChannel(channelId.channelId);
       let guild_id;
       if (channel != null) {
@@ -139,8 +143,8 @@ const channelListStore = new ChannelListStore(require("dispatcher"), {
       }
       return guild_id;
     });
-    const found = mapped.filter(_require("../../utils/GlobalUtils.tsx").isNotNullish);
-    const arr = require("../../../_runtime/00012_apply.js")(channels.channels);
+    const found = mapped.filter(_isDiscordFrontendDevelopment.isNotNullish);
+    const arr = apply(channels.channels);
     const item = found.uniq().forEach((guildId) => {
       if (outer1_20.clearGuildId(guildId)) {
         let c0 = true;
@@ -174,8 +178,8 @@ const channelListStore = new ChannelListStore(require("dispatcher"), {
   },
   CHANNEL_UPDATES: function handleChannelUpdates(channels) {
     let c0 = false;
-    const mapped = require("../../../_runtime/00012_apply.js")(channels.channels).map((guild_id) => guild_id.guild_id);
-    const arr = require("../../../_runtime/00012_apply.js")(channels.channels);
+    const mapped = apply(channels.channels).map((guild_id) => guild_id.guild_id);
+    const arr = apply(channels.channels);
     const item = mapped.uniq().forEach((guildId) => {
       if (outer1_20.clearGuildId(guildId)) {
         let c0 = true;
@@ -194,9 +198,9 @@ const channelListStore = new ChannelListStore(require("dispatcher"), {
   },
   EMBEDDED_ACTIVITY_UPDATE_V2: function handleEmbeddedActivityUpdateV2(instance) {
     instance = instance.instance;
-    const embeddedActivityLocationGuildId = require("../activities/utils/embeddedActivityLocationUtils.tsx") /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationGuildId(instance.location);
-    const obj = require("../activities/utils/embeddedActivityLocationUtils.tsx") /* getEmbeddedActivityLocationChannelId */;
-    return tmp2.updateSubtitles(embeddedActivityLocationGuildId, require("../activities/utils/embeddedActivityLocationUtils.tsx") /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationChannelId(instance.location));
+    const embeddedActivityLocationGuildId = getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationGuildId(instance.location);
+    const obj = getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */;
+    return tmp2.updateSubtitles(embeddedActivityLocationGuildId, getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationChannelId(instance.location));
   },
   EMBEDDED_ACTIVITY_LAUNCH_START: function handleEmbeddedActivityLaunchStart() {
     tmp2.updateSubtitles();
@@ -289,14 +293,14 @@ const channelListStore = new ChannelListStore(require("dispatcher"), {
       }
       importDefault = false;
       if (null != guilds) {
-        const keys = require("../../utils/SnowflakeUtils.tsx").keys(guilds);
+        const keys = DISCORD_EPOCH.keys(guilds);
         const item = keys.forEach((arg0) => {
           if (null != guilds[arg0].guildRecentsDismissedAt) {
             c1 = outer1_20.updateRecentsCategory(arg0) || c1;
             const tmp2 = outer1_20.updateRecentsCategory(arg0) || c1;
           }
         });
-        const obj = require("../../utils/SnowflakeUtils.tsx");
+        const obj = DISCORD_EPOCH;
       }
       return importDefault;
     }
@@ -367,7 +371,7 @@ let obj = {
   BACKGROUND_SYNC: handleReset,
   BULK_ACK: function handleBulkAck(channels) {
     const _require = false;
-    const mapped = require("../../../_runtime/00012_apply.js")(channels.channels).map((channelId) => {
+    const mapped = apply(channels.channels).map((channelId) => {
       channel = channel.getChannel(channelId.channelId);
       let guild_id;
       if (channel != null) {
@@ -375,8 +379,8 @@ let obj = {
       }
       return guild_id;
     });
-    const found = mapped.filter(_require("../../utils/GlobalUtils.tsx").isNotNullish);
-    const arr = require("../../../_runtime/00012_apply.js")(channels.channels);
+    const found = mapped.filter(_isDiscordFrontendDevelopment.isNotNullish);
+    const arr = apply(channels.channels);
     const item = found.uniq().forEach((guildId) => {
       if (outer1_20.clearGuildId(guildId)) {
         let c0 = true;
@@ -410,8 +414,8 @@ let obj = {
   },
   CHANNEL_UPDATES: function handleChannelUpdates(channels) {
     let c0 = false;
-    const mapped = require("../../../_runtime/00012_apply.js")(channels.channels).map((guild_id) => guild_id.guild_id);
-    const arr = require("../../../_runtime/00012_apply.js")(channels.channels);
+    const mapped = apply(channels.channels).map((guild_id) => guild_id.guild_id);
+    const arr = apply(channels.channels);
     const item = mapped.uniq().forEach((guildId) => {
       if (outer1_20.clearGuildId(guildId)) {
         let c0 = true;
@@ -430,9 +434,9 @@ let obj = {
   },
   EMBEDDED_ACTIVITY_UPDATE_V2: function handleEmbeddedActivityUpdateV2(instance) {
     instance = instance.instance;
-    const embeddedActivityLocationGuildId = require("../activities/utils/embeddedActivityLocationUtils.tsx") /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationGuildId(instance.location);
-    const obj = require("../activities/utils/embeddedActivityLocationUtils.tsx") /* getEmbeddedActivityLocationChannelId */;
-    return tmp2.updateSubtitles(embeddedActivityLocationGuildId, require("../activities/utils/embeddedActivityLocationUtils.tsx") /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationChannelId(instance.location));
+    const embeddedActivityLocationGuildId = getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationGuildId(instance.location);
+    const obj = getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */;
+    return tmp2.updateSubtitles(embeddedActivityLocationGuildId, getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationChannelId(instance.location));
   },
   EMBEDDED_ACTIVITY_LAUNCH_START: function handleEmbeddedActivityLaunchStart() {
     tmp2.updateSubtitles();
@@ -525,14 +529,14 @@ let obj = {
       }
       importDefault = false;
       if (null != guilds) {
-        const keys = require("../../utils/SnowflakeUtils.tsx").keys(guilds);
+        const keys = DISCORD_EPOCH.keys(guilds);
         const item = keys.forEach((arg0) => {
           if (null != guilds[arg0].guildRecentsDismissedAt) {
             c1 = outer1_20.updateRecentsCategory(arg0) || c1;
             const tmp2 = outer1_20.updateRecentsCategory(arg0) || c1;
           }
         });
-        const obj = require("../../utils/SnowflakeUtils.tsx");
+        const obj = DISCORD_EPOCH;
       }
       return importDefault;
     }

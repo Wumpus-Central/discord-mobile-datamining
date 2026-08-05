@@ -1,3 +1,5 @@
+import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 // discord_app/modules/contact_sync/native/components/ContactSyncNameUpdateModal.tsx
 import jsxProd from "jsxProd";
 import _slicedToArray from "_slicedToArray";
@@ -10,7 +12,7 @@ import HeaderBackImage from "HeaderBackImage";
 
 const require = arg1;
 function onClose() {
-  let arr = require("../../../../actions/ModalActionCreators.tsx");
+  let arr = ModalActionCreators;
   arr = arr.pop();
 }
 function ContactSyncNameInputScreen() {
@@ -121,5 +123,5 @@ obj1[ContactSyncScenes.NAME_INPUT] = obj2;
 const result = require("noop").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncNameUpdateModal.tsx");
 
 export default function ContactSyncNameUpdateModal() {
-  return jsx(require("../../../../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */.Navigator, { initialRouteName: ContactSyncScenes.NAME_INPUT, screens: obj1 });
+  return jsx(NavigationStack /* NavigationStack */.Navigator, { initialRouteName: ContactSyncScenes.NAME_INPUT, screens: obj1 });
 };

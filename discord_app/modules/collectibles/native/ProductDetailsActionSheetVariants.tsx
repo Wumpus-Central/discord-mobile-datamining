@@ -1,3 +1,8 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { CheckmarkSmallIcon } from "../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { useIsVariantColorLight } from "../hooks/useIsVariantColorLight.tsx";
+import { getProductPurchaseState } from "../hooks/useProductPurchaseState.tsx";
 // discord_app/modules/collectibles/native/ProductDetailsActionSheetVariants.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -13,7 +18,7 @@ function VariantOption(onPress) {
   let variant;
   ({ variant, isSelected } = onPress);
   const tmp = callback2(isSelected);
-  let obj = require("../hooks/useProductPurchaseState.tsx") /* getProductPurchaseState */;
+  let obj = getProductPurchaseState /* getProductPurchaseState */;
   let isPurchased = obj.useProductPurchaseState(variant).isPurchased;
   if (isPurchased) {
     const intl = tmp2(1236).intl;
@@ -33,13 +38,13 @@ function VariantOption(onPress) {
   }
   obj1[1] = isPurchased;
   obj[5] = closure_4(View, obj1);
-  return closure_4(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  return closure_4(PressableBase /* PressableBase */.PressableOpacity, obj);
 }
 function VariantCheckmark(variant) {
-  const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
-  const tmp = require("../hooks/useIsVariantColorLight.tsx")(variant.variant);
+  const colors = Themes.colors;
+  const tmp = useIsVariantColorLight(variant.variant);
   const tmp2 = closure_4;
-  return tmp2(require("../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx") /* CheckmarkSmallIcon */.CheckmarkSmallIcon, { color: require("../hooks/useIsVariantColorLight.tsx")(variant.variant) ? colors.BLACK : colors.WHITE, size: "md" });
+  return tmp2(CheckmarkSmallIcon /* CheckmarkSmallIcon */.CheckmarkSmallIcon, { color: useIsVariantColorLight(variant.variant) ? colors.BLACK : colors.WHITE, size: "md" });
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, headerRow: null, variantsContainer: null, text: null };
@@ -51,8 +56,8 @@ createCacheKey[2] = { display: "flex", flexWrap: "wrap", flexDirection: "row", a
 createCacheKey[3] = { flexGrow: 1, flexShrink: 1, minWidth: 28 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let closure_7 = createCacheKey.createStyles((arg0) => {
-  let obj = { width: 28, height: 28, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.round, justifyContent: "center", alignItems: "center", borderWidth: 1, borderColor: null };
-  const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
+  let obj = { width: 28, height: 28, borderRadius: Themes.radii.round, justifyContent: "center", alignItems: "center", borderWidth: 1, borderColor: null };
+  const colors = Themes.colors;
   obj = { variantOption: obj, variantOptionInner: null };
   obj[6] = arg0 ? colors.BUTTON_OUTLINE_PRIMARY_TEXT : colors.BORDER_STRONG;
   obj = { width: "100%", height: "100%", justifyContent: "center", alignItems: "center", borderRadius: tmp(712).radii.round, borderWidth: 1, borderColor: tmp(712).colors.BACKGROUND_BASE_LOW };

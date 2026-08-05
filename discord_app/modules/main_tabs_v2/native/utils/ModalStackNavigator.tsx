@@ -1,3 +1,4 @@
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 // discord_app/modules/main_tabs_v2/native/utils/ModalStackNavigator.tsx
 import { jsx } from "jsxProd";
 import createNativeStackNavigator from "createNativeStackNavigator";
@@ -11,7 +12,7 @@ const memoResult = require("noop").memo(function ModalStackNavigator(children) {
   let screenKey;
   ({ screenKey, title: require, titleIcon: importDefault } = children);
   let dependencyMap;
-  let obj = require("../../../../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */;
+  let obj = NavigationStack /* NavigationStack */;
   dependencyMap = obj.useAccessibilityNativeStackOptions();
   obj = {
     initialRouteName: screenKey,

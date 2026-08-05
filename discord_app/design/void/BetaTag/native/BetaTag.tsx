@@ -1,3 +1,7 @@
+import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
+import { keys } from "../../../../ConstantsIOS.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { Text } from "../../../components/Text/native/Text.tsx";
 // discord_app/design/void/BetaTag/native/BetaTag.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -37,18 +41,18 @@ export default function BetaTag(gradient) {
     let obj = { style: null, start: null, end: null, colors: null, children: null };
     const items = [tmp2.container, style];
     obj[0] = items;
-    obj[1] = require("../../../../ConstantsIOS.tsx") /* keys */.HorizontalGradient.START;
-    obj[2] = require("../../../../ConstantsIOS.tsx") /* keys */.HorizontalGradient.END;
+    obj[1] = keys /* keys */.HorizontalGradient.START;
+    obj[2] = keys /* keys */.HorizontalGradient.END;
     obj[3] = Gradients.PREMIUM_TIER_2_TRI_COLOR;
     obj = { variant: null, color: "text-overlay-light", style: null, children: null };
     obj[0] = str;
     const items1 = [tmp2.text, textStyle];
     obj[2] = items1;
-    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[3] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.oW0eUd);
-    obj[4] = tmp3(require("../../../components/Text/native/Text.tsx") /* Text */.Text, obj);
-    let tmp3Result = tmp3(require("../../../../../_runtime/04706_LinearGradient.js"), obj);
-    const tmp10 = require("../../../../../_runtime/04706_LinearGradient.js");
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    obj[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.oW0eUd);
+    obj[4] = tmp3(Text /* Text */.Text, obj);
+    let tmp3Result = tmp3(LinearGradient, obj);
+    const tmp10 = LinearGradient;
   } else {
     obj = { style: null, children: null };
     const items2 = [tmp2.container, style];
@@ -57,9 +61,9 @@ export default function BetaTag(gradient) {
     obj1[0] = str;
     const items3 = [tmp2.text, textStyle];
     obj1[2] = items3;
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj1[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.oW0eUd);
-    obj[1] = tmp3(require("../../../components/Text/native/Text.tsx") /* Text */.Text, obj1);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj1[3] = intl.string(getSystemLocale /* getSystemLocale */.t.oW0eUd);
+    obj[1] = tmp3(Text /* Text */.Text, obj1);
     tmp3Result = tmp3(View, obj);
   }
   return tmp3Result;

@@ -1,3 +1,4 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/premium_marketing/native/components/BuyNitroSectionHeader.tsx
 import jsxProd from "jsxProd";
 
@@ -29,7 +30,7 @@ export default function BuyNitroSectionHeader(arg0) {
       obj = { variant: "text-sm/semibold", color: "text-link", accessibilityRole: "link", onPress: null, children: null };
       obj[3] = onPress;
       obj[4] = tmp5;
-      items[1] = tmp(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+      items[1] = tmp(Text /* Text */.Text, obj);
       items[2] = title.slice(index + 5);
       obj[0] = items;
       tmp7 = callback(closure_3, obj);
@@ -38,5 +39,5 @@ export default function BuyNitroSectionHeader(arg0) {
     tmp5 = Nitro;
   }
   obj[4] = tmp4;
-  return closure_2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  return closure_2(Text /* Text */.Text, obj);
 };

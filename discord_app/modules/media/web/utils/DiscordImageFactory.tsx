@@ -1,3 +1,5 @@
+import { detectFile } from "../../../../../_runtime/04867_detectFile.js";
+import { create } from "DiscordImagePng.tsx";
 // discord_app/modules/media/web/utils/DiscordImageFactory.tsx
 const result = require("set").fileFinishedImporting("modules/media/web/utils/DiscordImageFactory.tsx");
 const prototype = function DiscordImageFactory() {
@@ -5,7 +7,7 @@ const prototype = function DiscordImageFactory() {
 }.prototype;
 prototype["create"] = function create(byteLength) {
   const uint8Array = new Uint8Array(byteLength, 0, Math.min(64, byteLength.byteLength));
-  let obj = require("../../../../../_runtime/04867_detectFile.js") /* detectFile */;
+  let obj = detectFile /* detectFile */;
   const detectFileResult = obj.detectFile(uint8Array);
   let mimeType;
   if (detectFileResult != null) {
@@ -13,7 +15,7 @@ prototype["create"] = function create(byteLength) {
   }
   obj = null;
   if ("image/png" === mimeType) {
-    const DiscordImagePng = require("DiscordImagePng.tsx") /* create */.DiscordImagePng;
+    const DiscordImagePng = create /* create */.DiscordImagePng;
     obj = DiscordImagePng.create(byteLength);
   }
   return obj;

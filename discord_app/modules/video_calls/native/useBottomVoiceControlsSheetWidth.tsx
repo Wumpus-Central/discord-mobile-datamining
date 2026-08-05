@@ -1,3 +1,4 @@
+import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 // discord_app/modules/video_calls/native/useBottomVoiceControlsSheetWidth.tsx
 import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH";
 
@@ -7,7 +8,7 @@ let obj1;
 const result = require("set").fileFinishedImporting("modules/video_calls/native/useBottomVoiceControlsSheetWidth.tsx");
 
 export default function useBottomVoiceControlsSheetWidth() {
-  let width = require("../../screen/useWindowDimensions.native.tsx")().width;
+  let width = useWindowDimensions().width;
   if (width > closure_3) {
     width = closure_2;
   }

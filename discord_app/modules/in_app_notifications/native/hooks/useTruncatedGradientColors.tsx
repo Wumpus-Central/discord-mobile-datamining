@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/in_app_notifications/native/hooks/useTruncatedGradientColors.tsx
 import { useMemo } from "noop";
 import createCacheKey from "createCacheKey";
@@ -7,7 +8,7 @@ const result = require("map").fileFinishedImporting("modules/in_app_notification
 
 export default function useTruncatedGradientColors() {
   let obj = token(3989);
-  token = obj.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
+  token = obj.useToken(Themes.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
   obj = {
     gradientColors: useMemo(() => {
       const obj = outer1_1(outer1_2[4])(token);

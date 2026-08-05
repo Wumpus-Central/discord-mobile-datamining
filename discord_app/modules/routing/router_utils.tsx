@@ -1,3 +1,5 @@
+import { ComponentDispatcher } from "../../utils/ComponentDispatchUtils.tsx";
+import { set } from "RoutingSources.tsx";
 // discord_app/modules/routing/router_utils.tsx
 import ME from "ME";
 import _extends from "_extends";
@@ -62,7 +64,7 @@ const tmp3 = new require("ComponentDispatcher")("Routing/Utils");
 const result = require("_extends").fileFinishedImporting("modules/routing/router_utils.tsx");
 
 export const shouldNavigate = function shouldNavigate() {
-  const ComponentDispatch = require("../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
   return !ComponentDispatch.hasSubscribers(constants2.MODAL_CLOSE);
 };
 export { transitionTo };
@@ -73,7 +75,7 @@ export const transitionToGuild = function transitionToGuild(guildId, channelId, 
 export const currentRouteHasBackNavigation = function currentRouteHasBackNavigation() {
   let hasItem = null != closure_3;
   if (hasItem) {
-    const ChannelBackNavigationSources = require("RoutingSources.tsx") /* set */.ChannelBackNavigationSources;
+    const ChannelBackNavigationSources = set /* set */.ChannelBackNavigationSources;
     hasItem = ChannelBackNavigationSources.has(closure_3);
   }
   return hasItem;
@@ -164,14 +166,14 @@ export function hasNavigated() {
   return false;
 }
 export const back = function back() {
-  const ComponentDispatch = require("../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
   if (!hasSubscribersResult) {
     let c3 = null;
     _extends.goBack();
   }
 };
 export const forward = function forward() {
-  const ComponentDispatch = require("../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
   if (!hasSubscribersResult) {
     let c3 = null;
     _extends.goForward();

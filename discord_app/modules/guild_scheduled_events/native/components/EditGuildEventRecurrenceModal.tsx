@@ -1,3 +1,5 @@
+import { useLazyAPIPromise } from "../../../../utils/LazyAPIPromise.tsx";
+import { useEventException } from "../../useEventException.tsx";
 // discord_app/modules/guild_scheduled_events/native/components/EditGuildEventRecurrenceModal.tsx
 import Themes from "Themes";
 import _slicedToArray from "_slicedToArray";
@@ -113,7 +115,7 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
     _undefined2({ startDate, endDate: addResult });
     callback(null);
   }
-  const tmp2 = require("../../useEventException.tsx")(recurrenceId, guildEvent.id);
+  const tmp2 = useEventException(recurrenceId, guildEvent.id);
   dependencyMap = tmp2;
   let obj = guildEvent(8864);
   const baseScheduleForRecurrence = obj.getBaseScheduleForRecurrence(recurrenceId, guildEvent);
@@ -124,7 +126,7 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
   const tmp6 = callback(React.useState(null), 2);
   first = tmp6[0];
   closure_8 = tmp6[1];
-  const tmp8 = callback(require("../../../../utils/LazyAPIPromise.tsx")(() => {
+  const tmp8 = callback(useLazyAPIPromise(() => {
     const result = recurrenceId(_undefined[9]).dismissGlobalKeyboard();
     return outer1_1(_undefined[10])(guildEvent, recurrenceId, c5, _undefined);
   }), 2);

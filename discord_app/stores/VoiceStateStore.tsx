@@ -1,3 +1,5 @@
+import { apply } from "../../_runtime/00012_apply.js";
+import { isMetaQuest } from "../modules/device/MetaQuestUtils.android.tsx";
 // discord_app/stores/VoiceStateStore.tsx
 import _slicedToArray from "_slicedToArray";
 import isVoiceMuted from "isVoiceMuted";
@@ -141,7 +143,7 @@ function mergeVoiceState(guildId, userId) {
 }
 function handleGuildCreateOrDelete(guild) {
   guild = guild.guild;
-  const item = require("../../_runtime/00012_apply.js").forEach(dependencyMap[guild.id], (userId) => {
+  const item = apply.forEach(dependencyMap[guild.id], (userId) => {
     outer1_18(guild.id, userId.userId, () => null);
   });
   delete tmp2[tmp];
@@ -349,8 +351,8 @@ prototype["getVoicePlatformForChannel"] = function getVoicePlatformForChannel(ch
   }
   if (id === closure_3) {
     if (channelId === tmp) {
-      require("../modules/device/MetaQuestUtils.android.tsx") /* isMetaQuest */.isMetaQuest() ? VoicePlatforms.QUEST : VoicePlatforms.MOBILE;
-      const obj = require("../modules/device/MetaQuestUtils.android.tsx") /* isMetaQuest */;
+      isMetaQuest /* isMetaQuest */.isMetaQuest() ? VoicePlatforms.QUEST : VoicePlatforms.MOBILE;
+      const obj = isMetaQuest /* isMetaQuest */;
     }
   }
   return table["" + id + ":" + channelId];
@@ -480,7 +482,7 @@ const voiceStateStore = new VoiceStateStore(require("dispatcher"), {
     if (obj == null) {
       obj = {};
     }
-    require("../../_runtime/00012_apply.js").each(obj, (channelId) => {
+    apply.each(obj, (channelId) => {
       if (channelId.channelId === channelId) {
         outer1_18(outer1_7, arg1, () => null);
       }
@@ -492,7 +494,7 @@ const voiceStateStore = new VoiceStateStore(require("dispatcher"), {
     if (obj == null) {
       obj = {};
     }
-    require("../../_runtime/00012_apply.js").each(obj, (channelId) => {
+    apply.each(obj, (channelId) => {
       if (channelId.channelId === channelId) {
         outer1_18(outer1_7, arg1, () => null);
       }

@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/nuf_channels/native/useCanSeeNUFChannelsForGuild.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -12,7 +13,7 @@ export const useCanSeeNUFChannelsForGuild = function useCanSeeNUFChannelsForGuil
   const _require = id;
   const items = [mergeGuildAvatar, createGuildRecordFromRust, trackCommunicationDisabled];
   const items1 = [id];
-  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const currentUser = outer1_4.getCurrentUser();
     if (null != currentUser) {
       if (obj3.isNewUser(currentUser)) {

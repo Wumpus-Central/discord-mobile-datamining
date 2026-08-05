@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/safety_flows/usePendingParentRequests.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -12,10 +13,10 @@ export const useDerivedPendingRequests = function useDerivedPendingRequests(arr,
   const _require = arr;
   const dependencyMap = stateFromStores1;
   let items = [freshTeenActivityWithMap];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => linkedUsers.getLinkedUsers());
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const stateFromStores = _initialize.useStateFromStores(items, () => linkedUsers.getLinkedUsers());
+  let obj = _initialize;
   const items1 = [mergeGuildAvatar];
-  stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  stateFromStores1 = _initialize.useStateFromStores(items1, () => {
     currentUser = currentUser.getCurrentUser();
     let id;
     if (currentUser != null) {

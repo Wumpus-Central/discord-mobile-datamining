@@ -1,3 +1,9 @@
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
+import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
+import { _safeTransitionTo } from "../links/safeTransitionTo.native.tsx";
 // discord_app/modules/rtc/SecureFramesPlatformUtils.native.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
@@ -16,17 +22,17 @@ const result = require("SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY").fileFinishedImp
 
 export default {
   openSecureFramesStreamVerification(streamKey, channelId) {
-    let obj = require("../action_sheet/native/ActionSheetActionCreators.tsx");
+    let obj = ACTION_SHEET_HEIGHT_HALF;
     obj = { streamKey, channelId };
-    obj.openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(9146, dependencyMap.paths), closure_6, obj);
+    obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(9146, dependencyMap.paths), closure_6, obj);
   },
   openSecureFramesUserVerificationModal(id, id2, arg2) {
     if (arg2()) {
-      let obj = require("../../actions/ModalActionCreators.tsx");
+      let obj = ModalActionCreators;
       obj = { userId: null, channelId: null };
       obj[0] = id;
       obj[1] = id2;
-      obj.pushLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(9136, dependencyMap.paths), obj, closure_7);
+      obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(9136, dependencyMap.paths), obj, closure_7);
     }
   },
   openSecureFramesUpdateConfirmation(confirmText) {
@@ -39,7 +45,7 @@ export default {
       confirmText = intl.string(onConfirm(1236).t["cY+Oob"]);
     }
     onConfirm = confirmText.onConfirm;
-    let obj = require("../../actions/native/AlertActionCreators.tsx");
+    let obj = AlertActionCreators;
     obj = { title, body: subtitle, confirmText, cancelText: null, confirmColor: null };
     const intl2 = onConfirm(1236).intl;
     obj[3] = intl2.string(onConfirm(1236).t["ETE/oC"]);
@@ -65,22 +71,22 @@ export default {
     }
     if (null != channelId) {
       if (null != channel) {
-        require("../links/safeTransitionTo.native.tsx")(closure_9.CHANNEL(guildId, channelId));
-        const tmp6 = require("../links/safeTransitionTo.native.tsx");
+        _safeTransitionTo(closure_9.CHANNEL(guildId, channelId));
+        const tmp6 = _safeTransitionTo;
         let obj = { userId: null, channelId: null, guildId: null, fingerprint: null };
         obj[0] = userId;
         obj[1] = channelId;
         obj[2] = guildId;
         obj[3] = fingerprint;
-        require("../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(9149, dependencyMap.paths), closure_5, obj);
-        const obj4 = require("../action_sheet/native/ActionSheetActionCreators.tsx");
+        ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(9149, dependencyMap.paths), closure_5, obj);
+        const obj4 = ACTION_SHEET_HEIGHT_HALF;
       }
     }
     obj = { title: null, body: null };
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["5ICxE6"]);
-    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[1] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["v1eXp/"]);
-    require("../../actions/native/AlertActionCreators.tsx").show(obj);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["5ICxE6"]);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["v1eXp/"]);
+    AlertActionCreators.show(obj);
   }
 };

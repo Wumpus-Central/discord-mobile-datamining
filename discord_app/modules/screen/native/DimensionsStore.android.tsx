@@ -1,3 +1,7 @@
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
+import { APP_ENTRY_KEYS } from "../../window/native/AppEntryKey.tsx";
+import { readWindowSizeForAppEntry } from "readAppEntryWindowMetrics.android.tsx";
 // discord_app/modules/screen/native/DimensionsStore.android.tsx
 import { Dimensions } from "get ActivityIndicator";
 import keys from "keys";
@@ -12,9 +16,9 @@ function getDimensionsStoreStateForEntry(appEntryKey) {
   const size = {};
   let obj = Dimensions;
   const merged = Object.assign(Dimensions.get("window"));
-  let obj1 = require("readAppEntryWindowMetrics.android.tsx") /* readWindowSizeForAppEntry */;
+  let obj1 = readWindowSizeForAppEntry /* readWindowSizeForAppEntry */;
   const merged1 = Object.assign(obj1.readWindowSizeForAppEntry(appEntryKey));
-  let obj2 = require("readAppEntryWindowMetrics.android.tsx") /* readWindowSizeForAppEntry */;
+  let obj2 = readWindowSizeForAppEntry /* readWindowSizeForAppEntry */;
   let size2 = obj2.readScreenSizeForAppEntry(appEntryKey);
   if (size2 == null) {
     size2 = obj.get("screen");
@@ -56,7 +60,7 @@ function getDimensionsStoreStateForEntry(appEntryKey) {
   }
   const width3 = size.width;
   ({ width: width4, height: height2 } = size2);
-  const rect2 = require("../../safe_area/useSafeAreaInsets.native.tsx") /* useSafeAreaInsets */.getSafeAreaInsets(appEntryKey);
+  const rect2 = useSafeAreaInsets /* useSafeAreaInsets */.getSafeAreaInsets(appEntryKey);
   let tmp14 = height2;
   let tmp15 = width4;
   if (height2 === width3) {
@@ -90,7 +94,7 @@ function getDimensionsStoreState(arg0) {
   let tmp = arg0;
   let obj = {};
   let flag = null != arg0;
-  const iter = require("../../window/native/AppEntryKey.tsx") /* APP_ENTRY_KEYS */.APP_ENTRY_KEYS[Symbol.iterator]();
+  const iter = APP_ENTRY_KEYS /* APP_ENTRY_KEYS */.APP_ENTRY_KEYS[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;
@@ -124,13 +128,13 @@ function getDimensionsStoreState(arg0) {
 }
 let obj = keys.create(() => getDimensionsStoreState(undefined));
 const subscription = require("module_1582").subscribe(() => {
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => state.setState((arg0) => callback(arg0)));
+  batchUpdates /* batchUpdates */.batchUpdates(() => state.setState((arg0) => callback(arg0)));
 });
 importDefaultResult(() => {
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => state.setState((arg0) => callback(arg0)));
+  batchUpdates /* batchUpdates */.batchUpdates(() => state.setState((arg0) => callback(arg0)));
 });
 const listener = Dimensions.addEventListener("change", () => {
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => state.setState((arg0) => callback(arg0)));
+  batchUpdates /* batchUpdates */.batchUpdates(() => state.setState((arg0) => callback(arg0)));
 });
 const result = require("readWindowSizeForAppEntry").fileFinishedImporting("modules/screen/native/DimensionsStore.android.tsx");
 

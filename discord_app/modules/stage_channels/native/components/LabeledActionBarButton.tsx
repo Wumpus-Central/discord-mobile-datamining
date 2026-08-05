@@ -1,3 +1,5 @@
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
 // discord_app/modules/stage_channels/native/components/LabeledActionBarButton.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -88,7 +90,7 @@ export const LabeledActionButton = function LabeledActionButton(children) {
     items4[1] = rightTextMargin;
     obj5[1] = items4;
     obj5[2] = label;
-    tmp4Result = tmp4(require("../../../../design/void/native.tsx") /* Button */.LegacyText, obj5);
+    tmp4Result = tmp4(Button /* Button */.LegacyText, obj5);
   }
   items3[1] = tmp4Result;
   let tmp4Result1 = iconPosition === tmp12.RIGHT;
@@ -103,6 +105,6 @@ export const LabeledActionButton = function LabeledActionButton(children) {
   const items5 = [closure_5(closure_3, obj3), children.children];
   obj1[1] = items5;
   obj.children = closure_5(closure_3, obj1);
-  obj[1] = closure_4(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  obj[1] = closure_4(PressableBase /* PressableBase */.PressableOpacity, obj);
   return closure_4(closure_3, obj);
 };

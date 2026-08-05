@@ -1,3 +1,4 @@
+import { fetchTopEmojis } from "TopEmojisActionCreators.tsx";
 // discord_app/modules/emojis/top_emojis/TopEmojisUtils.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getEmojiToGroupId from "getEmojiToGroupId";
@@ -17,8 +18,8 @@ export const maybeFetchTopEmojisByGuild = function maybeFetchTopEmojisByGuild(gu
         }
       }
       if (!isFetching.getIsFetching(guildId)) {
-        const topEmojis = require("TopEmojisActionCreators.tsx") /* fetchTopEmojis */.fetchTopEmojis(guildId);
-        const obj = require("TopEmojisActionCreators.tsx") /* fetchTopEmojis */;
+        const topEmojis = fetchTopEmojis /* fetchTopEmojis */.fetchTopEmojis(guildId);
+        const obj = fetchTopEmojis /* fetchTopEmojis */;
       }
     }
   }

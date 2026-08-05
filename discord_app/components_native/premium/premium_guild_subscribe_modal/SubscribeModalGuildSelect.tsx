@@ -1,3 +1,4 @@
+import { SearchBarNav } from "../../../modules/main_tabs_v2/native/shared_components/SearchBarNav.tsx";
 // discord_app/components_native/premium/premium_guild_subscribe_modal/SubscribeModalGuildSelect.tsx
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
@@ -105,7 +106,7 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
   obj[0] = intl.string(guildBoostSlots(1236).t.vf3ZTa);
   obj[1] = tmp2[1];
   obj[2] = importAll(5118).closeApplyBoostModal;
-  const items3 = [callback2(require("../../../modules/main_tabs_v2/native/shared_components/SearchBarNav.tsx"), obj), ];
+  const items3 = [callback2(SearchBarNav, obj), ];
   obj1 = { style: tmp.guildList, keyboardShouldPersistTaps: "always", children: null };
   const obj2 = { bottom: true, children: null };
   obj2[1] = stateFromStoresArray.map((children) => {

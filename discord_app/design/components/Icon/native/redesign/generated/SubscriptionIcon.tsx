@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../../../../_runtime/14138_registerAsset.js";
+import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { BaseIconImage } from "../../BaseIconImage.tsx";
 // discord_app/design/components/Icon/native/redesign/generated/SubscriptionIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -8,13 +11,13 @@ const result = require("Themes").fileFinishedImporting("design/components/Icon/n
 export const SubscriptionIcon = function SubscriptionIcon(color) {
   let ICON_STRONG = color.color;
   if (ICON_STRONG === undefined) {
-    ICON_STRONG = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_STRONG;
+    ICON_STRONG = Themes.colors.ICON_STRONG;
   }
   const merged = Object.assign(color, Object.create(null));
   const obj = { source: null, color: null, style: null };
-  obj[0] = require("../../../../../../../_runtime/14138_registerAsset.js") /* registerAsset */;
+  obj[0] = registerAsset /* registerAsset */;
   obj[1] = ICON_STRONG;
   obj[2] = color.style;
   const merged1 = Object.assign(merged);
-  return jsx(require("../../BaseIconImage.tsx") /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
+  return jsx(BaseIconImage /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
 };

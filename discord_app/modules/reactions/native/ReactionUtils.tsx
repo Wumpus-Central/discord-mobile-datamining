@@ -1,3 +1,10 @@
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { set } from "../../../actions/AlertActionCreators.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
 // discord_app/modules/reactions/native/ReactionUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import reinjectEphemerals from "reinjectEphemerals";
@@ -23,13 +30,13 @@ let result = require("handleConnectionOpen").fileFinishedImporting("modules/reac
 export const handleOutOfSuperReactions = function handleOutOfSuperReactions(arg0) {
   const currentUser = authStore.getCurrentUser();
   if (null != currentUser) {
-    let obj = require("../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */;
+    let obj = getPremiumPlanItem /* getPremiumPlanItem */;
     let openLazyResult;
     if (!obj.isPremium(currentUser)) {
       obj = { onDismiss: null };
       obj[0] = arg0;
-      openLazyResult = require("../../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8424, dependencyMap.paths), "SuperReactionUpsellActionSheet", obj);
-      const obj2 = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
+      openLazyResult = ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(8424, dependencyMap.paths), "SuperReactionUpsellActionSheet", obj);
+      const obj2 = ACTION_SHEET_HEIGHT_HALF;
     }
     return openLazyResult;
   }
@@ -141,40 +148,40 @@ export const handleViewReactions = function handleViewReactions(isPoll) {
     obj[1] = FORUM_CHANNEL_POST;
     const merged1 = Object.assign(_location);
     obj[4] = obj;
-    require("../../app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(constants.REACTION_ACTION_SHEET_OPENED, obj);
-    const obj3 = require("../../app_analytics/AppAnalyticsUtils.tsx");
+    collectGuildAnalyticsMetadata.trackWithMetadata(constants.REACTION_ACTION_SHEET_OPENED, obj);
+    const obj3 = collectGuildAnalyticsMetadata;
     const obj1 = { messageId: null, channelId: null, emoji: null };
     obj1[0] = messageId;
     obj1[1] = channelId;
     obj1[2] = isPoll.emoji;
-    const obj6 = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
+    const obj6 = ACTION_SHEET_HEIGHT_HALF;
     const merged2 = Object.assign(merged);
-    obj6.openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8702, dependencyMap.paths), "MessageReactions", obj1);
+    obj6.openLazy(asyncRequireImpl /* asyncRequireImpl */(8702, dependencyMap.paths), "MessageReactions", obj1);
   }
   FORUM_CHANNEL_POST = constants2.FORUM_CHANNEL_POST;
 };
 export const handleViewPreviewReactions = function handleViewPreviewReactions(id2, id, emoji) {
-  let obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { messageId: id2, channelId: id, emoji };
-  obj.openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(12439, dependencyMap.paths), "MessagePreviewReactions", obj);
+  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(12439, dependencyMap.paths), "MessagePreviewReactions", obj);
 };
 export const ADD_REACTION_ICONS = obj;
 export const ADD_REACTION_ICON_COMPONENTS = obj;
 export const handleRemoveAllReactions = function handleRemoveAllReactions(arg0, arg1) {
   const _require = arg0;
   const importDefault = arg1;
-  let obj = require("../../../actions/AlertActionCreators.tsx");
+  let obj = set;
   obj = { title: null, children: null, cancelText: null, confirmText: null, onConfirm: null };
-  const intl = _require("../../../intl/index.native.tsx").intl;
-  obj[0] = intl.string(_require("../../../intl/index.native.tsx").t.ZbtGBm);
+  const intl = _getSystemLocale.intl;
+  obj[0] = intl.string(_getSystemLocale.t.ZbtGBm);
   obj = { variant: "text-md/normal", children: null };
-  const intl2 = _require("../../../intl/index.native.tsx").intl;
-  obj[1] = intl2.string(_require("../../../intl/index.native.tsx").t.VpjOCo);
-  obj[1] = jsx(_require("../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/normal", children: null });
-  const intl3 = _require("../../../intl/index.native.tsx").intl;
-  obj[2] = intl3.string(_require("../../../intl/index.native.tsx").t["ETE/oC"]);
-  const intl4 = _require("../../../intl/index.native.tsx").intl;
-  obj[3] = intl4.string(_require("../../../intl/index.native.tsx").t.oyYWHE);
+  const intl2 = _getSystemLocale.intl;
+  obj[1] = intl2.string(_getSystemLocale.t.VpjOCo);
+  obj[1] = jsx(_Text.Text, { variant: "text-md/normal", children: null });
+  const intl3 = _getSystemLocale.intl;
+  obj[2] = intl3.string(_getSystemLocale.t["ETE/oC"]);
+  const intl4 = _getSystemLocale.intl;
+  obj[3] = intl4.string(_getSystemLocale.t.oyYWHE);
   obj[4] = function onConfirm() {
     return callback(outer1_2[10]).removeAllReactions(callback, closure_1);
   };

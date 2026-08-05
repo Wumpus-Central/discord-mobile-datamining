@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
 // discord_app/modules/app_launcher/native/base_components/EntityBorderAppIcon.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -7,7 +9,7 @@ const sm = require("Themes").radii.sm;
 let closure_5 = createCacheKey.createStyles((width, borderRadius) => {
   obj = { appIcon: obj, entityWrapper: null };
   obj = { width, height: width, borderRadius };
-  obj = { padding: 1, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE, overflow: "hidden", borderRadius: borderRadius + 1 };
+  obj = { padding: 1, backgroundColor: Themes.colors.BORDER_SUBTLE, overflow: "hidden", borderRadius: borderRadius + 1 };
   obj[1] = obj;
   return obj;
 });
@@ -29,5 +31,5 @@ export default function EntityBorderAppIcon(iconSize) {
   const tmp = callback(num, iconBorderRadius);
   const items = [tmp.entityWrapper, wrapperStyle];
   const items1 = [tmp.appIcon, iconStyle];
-  return <View style={items}>{jsx(require("../../../../components_native/common/FastImage.tsx"), { style: items1, source: iconSource })}</View>;
+  return <View style={items}>{jsx(preload, { style: items1, source: iconSource })}</View>;
 };

@@ -1,3 +1,6 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { AccessibilityAnnouncer } from "../../design/shared.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/profile_customization/ProfileCustomizationUtils.tsx
 import noop from "noop";
 import handleFormOpen from "handleFormOpen";
@@ -42,7 +45,7 @@ export const useGuildMemberAndUserPendingNameplate = function useGuildMemberAndU
   let pendingNameplate;
   const _require = user;
   const dependencyMap = guildId;
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [trackCommunicationDisabled];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let member = null;
@@ -52,7 +55,7 @@ export const useGuildMemberAndUserPendingNameplate = function useGuildMemberAndU
     return member;
   });
   const items1 = [handleFormOpen];
-  const stateFromStoresObject = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items1, () => ({ pendingNameplate: outer1_3.getPendingChanges(closure_1).pendingNameplate, pendingErrors: outer1_3.getErrors(closure_1).nameplate }));
+  const stateFromStoresObject = _initialize.useStateFromStoresObject(items1, () => ({ pendingNameplate: outer1_3.getPendingChanges(closure_1).pendingNameplate, pendingErrors: outer1_3.getErrors(closure_1).nameplate }));
   obj = { userNameplate: user.nameplate, guildNameplate: null, pendingNameplate: null, pendingErrors: null };
   let nameplate;
   ({ pendingNameplate, pendingErrors } = stateFromStoresObject);
@@ -73,7 +76,7 @@ export const useGuildMemberOrUserPendingDisplayNameStyles = function useGuildMem
   let tryItOutDisplayNameStyles;
   const _require = stateFromStores;
   const dependencyMap = guildId;
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [trackCommunicationDisabled];
   stateFromStores = obj.useStateFromStores(items, () => {
     let member = null;
@@ -86,7 +89,7 @@ export const useGuildMemberOrUserPendingDisplayNameStyles = function useGuildMem
     return member;
   });
   const items1 = [handleFormOpen];
-  const stateFromStoresObject = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items1, () => ({ pendingDisplayNameStyles: outer1_3.getPendingChanges(closure_1).pendingDisplayNameStyles, tryItOutDisplayNameStyles: outer1_3.getTryItOutChanges().tryItOutDisplayNameStyles, pendingErrors: outer1_3.getErrors(closure_1).displayNameStyles }));
+  const stateFromStoresObject = _initialize.useStateFromStoresObject(items1, () => ({ pendingDisplayNameStyles: outer1_3.getPendingChanges(closure_1).pendingDisplayNameStyles, tryItOutDisplayNameStyles: outer1_3.getTryItOutChanges().tryItOutDisplayNameStyles, pendingErrors: outer1_3.getErrors(closure_1).displayNameStyles }));
   let displayNameStyles;
   ({ pendingDisplayNameStyles, tryItOutDisplayNameStyles, pendingErrors } = stateFromStoresObject);
   if (stateFromStores != null) {
@@ -129,7 +132,7 @@ export const useUserProfileEffect = function useUserProfileEffect(arg0) {
   let require;
   ({ user: require, guildId: dependencyMap } = arg0);
   const items = [createUserWidgetFromServer];
-  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+  return initialize /* initialize */.useStateFromStores(items, () => {
     if (null == closure_1) {
       const userProfile = outer1_4.getUserProfile(user.id);
       let profileEffect;
@@ -150,7 +153,7 @@ export const useUserProfileFrame = function useUserProfileFrame(arg0) {
   let require;
   ({ user: require, guildId: dependencyMap } = arg0);
   const items = [createUserWidgetFromServer];
-  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+  return initialize /* initialize */.useStateFromStores(items, () => {
     if (null == closure_1) {
       const userProfile = outer1_4.getUserProfile(user.id);
       let profileFrame;
@@ -169,17 +172,17 @@ export const useUserProfileFrame = function useUserProfileFrame(arg0) {
 export const useAvatarDecorationSettings = function useAvatarDecorationSettings(arg0) {
   const _require = arg0;
   const items = [handleFormOpen];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => ({ pendingAvatarDecoration: outer1_3.getPendingChanges(closure_0).pendingAvatarDecoration, errors: outer1_3.getErrors(closure_0).avatarDecoration }));
+  return _initialize.useStateFromStoresObject(items, () => ({ pendingAvatarDecoration: outer1_3.getPendingChanges(closure_0).pendingAvatarDecoration, errors: outer1_3.getErrors(closure_0).avatarDecoration }));
 };
 export const useProfileEffectSettings = function useProfileEffectSettings(arg0) {
   const _require = arg0;
   const items = [handleFormOpen];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => ({ pendingProfileEffect: outer1_3.getPendingChanges(closure_0).pendingProfileEffect, errors: outer1_3.getErrors(closure_0).profileEffect }));
+  return _initialize.useStateFromStoresObject(items, () => ({ pendingProfileEffect: outer1_3.getPendingChanges(closure_0).pendingProfileEffect, errors: outer1_3.getErrors(closure_0).profileEffect }));
 };
 export const useProfileFrameSettings = function useProfileFrameSettings(arg0) {
   const _require = arg0;
   const items = [handleFormOpen];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => ({ pendingProfileFrame: outer1_3.getPendingChanges(closure_0).pendingProfileFrame, errors: outer1_3.getErrors(closure_0).profileFrame }));
+  return _initialize.useStateFromStoresObject(items, () => ({ pendingProfileFrame: outer1_3.getPendingChanges(closure_0).pendingProfileFrame, errors: outer1_3.getErrors(closure_0).profileFrame }));
 };
 export const getProfilePreviewValue = function getProfilePreviewValue(arg0) {
   let guildId;
@@ -264,16 +267,16 @@ export const showRemoveBanner = function showRemoveBanner(arg0, banner) {
 };
 export const announcePendingAvatarChange = function announcePendingAvatarChange(set) {
   if ("set" === set) {
-    const AccessibilityAnnouncer3 = require("../../design/shared.tsx") /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-    const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    AccessibilityAnnouncer3.announce(intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.dyU5c5));
+    const AccessibilityAnnouncer3 = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    AccessibilityAnnouncer3.announce(intl3.string(getSystemLocale /* getSystemLocale */.t.dyU5c5));
   } else if ("remove" === set) {
-    const AccessibilityAnnouncer2 = require("../../design/shared.tsx") /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    AccessibilityAnnouncer2.announce(intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["f1+oNk"]));
+    const AccessibilityAnnouncer2 = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    AccessibilityAnnouncer2.announce(intl2.string(getSystemLocale /* getSystemLocale */.t["f1+oNk"]));
   } else {
-    const AccessibilityAnnouncer = require("../../design/shared.tsx") /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    AccessibilityAnnouncer.announce(intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["/b5nqj"]));
+    const AccessibilityAnnouncer = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    AccessibilityAnnouncer.announce(intl.string(getSystemLocale /* getSystemLocale */.t["/b5nqj"]));
   }
 };

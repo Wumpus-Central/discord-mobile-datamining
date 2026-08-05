@@ -1,3 +1,7 @@
+import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
+import { useGiftCardMobileConsumptionHalfsheet } from "../../../checkout/native/useGiftCardMobileConsumptionHalfsheet.tsx";
+import { useShopOrientationLock } from "../../../collectibles/native/useShopOrientationLock.tsx";
+import { useSettingNavigationRoute } from "../../core/native/useSettingNavigationRoute.tsx";
 // discord_app/modules/user_settings/shop/native/CollectiblesShopScreen.tsx
 import "noop";
 import { CollectiblesMobileShopScreen as closure_3 } from "items";
@@ -7,12 +11,12 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopScreen.tsx");
 
 export default function CollectiblesShopScreen() {
-  let obj = require("../../core/native/useSettingNavigationRoute.tsx") /* useSettingNavigationRoute */;
+  let obj = useSettingNavigationRoute /* useSettingNavigationRoute */;
   const settingNavigationRoute = obj.useSettingNavigationRoute();
-  const shopOrientationLock = require("../../../collectibles/native/useShopOrientationLock.tsx") /* useShopOrientationLock */.useShopOrientationLock();
-  const obj2 = require("../../../collectibles/native/useShopOrientationLock.tsx") /* useShopOrientationLock */;
+  const shopOrientationLock = useShopOrientationLock /* useShopOrientationLock */.useShopOrientationLock();
+  const obj2 = useShopOrientationLock /* useShopOrientationLock */;
   const tmp = require;
-  const giftCardMobileConsumptionHalfsheet = require("../../../checkout/native/useGiftCardMobileConsumptionHalfsheet.tsx") /* useGiftCardMobileConsumptionHalfsheet */.useGiftCardMobileConsumptionHalfsheet();
+  const giftCardMobileConsumptionHalfsheet = useGiftCardMobileConsumptionHalfsheet /* useGiftCardMobileConsumptionHalfsheet */.useGiftCardMobileConsumptionHalfsheet();
   const params = settingNavigationRoute.params;
   let screen;
   if (params != null) {
@@ -27,7 +31,7 @@ export default function CollectiblesShopScreen() {
     analyticsSource = params2.analyticsSource;
   }
   if (analyticsSource == null) {
-    analyticsSource = require("../../../app_analytics/AnalyticsLocation.tsx").COLLECTIBLES_SHOP;
+    analyticsSource = QUICK_SWITCHER.COLLECTIBLES_SHOP;
   }
   obj = { analyticsSource, screen, onNavigateAway: null };
   const params3 = settingNavigationRoute.params;

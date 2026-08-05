@@ -1,15 +1,18 @@
+import { 00038__ } from "../../../../../../_runtime/metro/00038__.js";
+import { EntitlementFeatureNames } from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
+import { SoundButtonOverlay } from "../../../../soundboard/SoundboardTypes.tsx";
 // discord_app/modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx
 const result = require("keys").fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx");
 
 export const isSoundboardSectionNitroLocked = function isSoundboardSectionNitroLocked(guild_id, categoryInfo) {
-  let tmp = categoryInfo.type === require("../../../../soundboard/SoundboardTypes.tsx") /* SoundButtonOverlay */.SoundboardSoundGridSectionType.GUILD;
+  let tmp = categoryInfo.type === SoundButtonOverlay /* SoundButtonOverlay */.SoundboardSoundGridSectionType.GUILD;
   if (tmp) {
     tmp = categoryInfo.guild.id !== guild_id;
   }
   return tmp;
 };
 export const getUpsellType = function getUpsellType(featureName) {
-  if (require("../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx") /* EntitlementFeatureNames */.EntitlementFeatureNames.ANIMATED_EMOJIS === featureName) {
+  if (EntitlementFeatureNames /* EntitlementFeatureNames */.EntitlementFeatureNames.ANIMATED_EMOJIS === featureName) {
     return tmp(691).UpsellTypes.ANIMATED_EMOJI;
   } else if (tmp(8184).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
     return tmp(691).UpsellTypes.GLOBAL_EMOJI;
@@ -27,6 +30,6 @@ export const getUpsellType = function getUpsellType(featureName) {
     return tmp(691).UpsellTypes.STREAM_HIGH_QUALITY;
   } else {
     const _HermesInternal = HermesInternal;
-    require("../../../../../../_runtime/metro/00038__.js")(false, "Missing featureName: " + featureName);
+    00038__(false, "Missing featureName: " + featureName);
   }
 };

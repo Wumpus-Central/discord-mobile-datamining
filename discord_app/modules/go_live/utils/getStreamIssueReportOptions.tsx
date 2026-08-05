@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/go_live/utils/getStreamIssueReportOptions.tsx
 import { StreamIssueReportReasons } from "StreamIssueReportReasons";
 
@@ -6,9 +7,9 @@ const result = require("set").fileFinishedImporting("modules/go_live/utils/getSt
 export default function getStreamIssueReportOptions(isEndStream) {
   isEndStream = isEndStream.isEndStream;
   let obj = { id: "black-screen", value: StreamIssueReportReasons.BLACK_SCREEN, label: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require("../../../intl/index.native.tsx") /* getSystemLocale */.t;
+  const t = getSystemLocale /* getSystemLocale */.t;
   if (isEndStream) {
     let stringResult = string(t["0X5Zbq"]);
     let tmp6 = tmp2;

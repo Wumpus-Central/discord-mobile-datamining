@@ -1,3 +1,4 @@
+import { _isNativeReflectConstruct } from "../../../_runtime/05602__isNativeReflectConstruct.js";
 // discord_app/components_native/common/SequencedLottieAnimationView.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { View } from "get ActivityIndicator";
@@ -75,7 +76,7 @@ prototype["render"] = function render() {
   const tmp = callback(props, closure_2);
   const merged = Object.assign(tmp);
   ({ handleSetRef: obj3.ref, handleComplete: obj3.onAnimationFinish } = this);
-  obj[1] = jsx(require("../../../_runtime/05602__isNativeReflectConstruct.js"), { source, style: items1 });
+  obj[1] = jsx(_isNativeReflectConstruct, { source, style: items1 });
   return <View source={source} style={items1} />;
 };
 SequencedLottieAnimationView.defaultProps = { autoPlay: true };

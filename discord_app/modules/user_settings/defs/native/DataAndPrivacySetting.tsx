@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { DataAndPrivacySettings } from "../../privacy_and_safety/native/DataAndPrivacyScreen.tsx";
 // discord_app/modules/user_settings/defs/native/DataAndPrivacySetting.tsx
 import noop from "noop";
 import createToggle from "createToggle";
@@ -5,8 +7,8 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.OAuOHD);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.OAuOHD);
   },
   parent: null,
   IconComponent: require("ShieldLockIcon").ShieldLockIcon,
@@ -23,7 +25,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.DATA_AND_PRIVACY,
   getComponent() {
-    return require("../../privacy_and_safety/native/DataAndPrivacyScreen.tsx") /* DataAndPrivacySettings */.default;
+    return DataAndPrivacySettings /* DataAndPrivacySettings */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

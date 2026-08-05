@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/routing/useGuildIdForChannelRoute.tsx
 import initializeFromUserSettings from "initializeFromUserSettings";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -8,7 +9,7 @@ const result = require("ME").fileFinishedImporting("modules/routing/useGuildIdFo
 
 export default function useGuildIdForChannelRoute(getGuildId) {
   const items = [handleConnectionOpen];
-  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => guildId.getGuildId());
+  let stateFromStores = initialize /* initialize */.useStateFromStores(items, () => guildId.getGuildId());
   if (null == stateFromStores) {
     stateFromStores = getGuildId.getGuildId();
   }

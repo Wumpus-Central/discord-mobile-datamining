@@ -1,3 +1,8 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { WishlistItemCard } from "../../../wishlists/native/WishlistItemCard.tsx";
+import { SourceIcon } from "../../../wishlists/native/WishlistItemCardBase.tsx";
+import { useEquippedCollectibleSkuIds } from "../../hooks/useMaybeFetchEquippedCollectibleProducts.tsx";
 // discord_app/modules/collectibles/shop_this_look/native/ShopThisLookActionSheet.tsx
 import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "openCollectiblesShop";
@@ -33,7 +38,7 @@ function ShopThisLookCard(skuId) {
     obj[1] = function renderPreview() {
       return callback(closure_4, {});
     };
-    let tmp13 = callback(require("../../../wishlists/native/WishlistItemCardBase.tsx"), obj);
+    let tmp13 = callback(SourceIcon, obj);
   } else {
     tmp13 = null;
     if (null != stateFromStores) {
@@ -42,14 +47,14 @@ function ShopThisLookCard(skuId) {
         obj[0] = stateFromStores;
         obj[1] = size;
         obj[2] = skuId.onPress;
-        let tmp5Result = tmp5(require("../../../wishlists/native/WishlistItemCard.tsx"), obj);
+        let tmp5Result = tmp5(WishlistItemCard, obj);
       } else {
         obj1 = { style: null, children: null };
         obj1[0] = tmp.disabledCard;
         const obj2 = { sku: null, size: null };
         obj2[0] = stateFromStores;
         obj2[1] = size;
-        obj1[1] = tmp5(require("../../../wishlists/native/WishlistItemCard.tsx"), obj2);
+        obj1[1] = tmp5(WishlistItemCard, obj2);
         tmp5Result = tmp5(closure_5, obj1);
       }
       tmp2Result = skuId(12416);
@@ -81,7 +86,7 @@ export default function ShopThisLookActionSheet(arg0) {
   let dependencyMap;
   ({ userId, guildId } = arg0);
   const tmp = createCacheKey();
-  let obj = _require("../../hooks/useMaybeFetchEquippedCollectibleProducts.tsx");
+  let obj = _useEquippedCollectibleSkuIds;
   const equippedCollectibleSkuIds = obj.useEquippedCollectibleSkuIds(userId, guildId);
   obj = { maxWidth: ACTION_SHEET_MAX_WIDTH };
   ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(12388)(obj));
@@ -96,13 +101,13 @@ export default function ShopThisLookActionSheet(arg0) {
   }, items);
   obj = { startExpanded: true, title: null, children: null };
   const tmp3 = analyticsLocations(5610);
-  const intl = _require("../../../../intl/index.native.tsx").intl;
-  obj[1] = intl.string(_require("../../../../intl/index.native.tsx").t.xNdRDO);
+  const intl = _getSystemLocale.intl;
+  obj[1] = intl.string(_getSystemLocale.t.xNdRDO);
   const obj1 = { style: tmp.container, children: null };
   const obj2 = { variant: "text-sm/medium", color: "text-subtle", style: tmp.description, children: null };
-  const intl2 = _require("../../../../intl/index.native.tsx").intl;
-  obj2[3] = intl2.string(_require("../../../../intl/index.native.tsx").t["ws+0Lr"]);
-  const items1 = [callback(_require("../../../../design/components/Text/native/Text.tsx").Text, obj2), ];
+  const intl2 = _getSystemLocale.intl;
+  obj2[3] = intl2.string(_getSystemLocale.t["ws+0Lr"]);
+  const items1 = [callback(_Text.Text, obj2), ];
   const tmp4 = analyticsLocations(9386);
   const items2 = [tmp.itemsContainer, { gap, width: rowWidth }];
   items1[1] = callback(closure_5, {

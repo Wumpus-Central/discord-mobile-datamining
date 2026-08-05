@@ -1,3 +1,9 @@
+import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { explicitContentFromProto } from "../../../user_settings/UserSettings.tsx";
+import { getContextualEntrypointHeading } from "../../utils/QuestCopyUtils.tsx";
 // discord_app/modules/quests/native/QuestDisclosureModal/QuestDisclosureModalInner.tsx
 import { View } from "set";
 import { HelpdeskArticles } from "ME";
@@ -35,7 +41,7 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
   ({ gamePublisher, gameTitle, isVideoQuest, onClose, cosponsorName } = isTargetedDisclosure);
   const tmp = callback();
   _require = tmp;
-  const DropsOptedOut = _require("../../../user_settings/UserSettings.tsx").DropsOptedOut;
+  const DropsOptedOut = _explicitContentFromProto.DropsOptedOut;
   const setting = DropsOptedOut.useSetting();
   let obj = { icon: null, text: null };
   if (setting) {
@@ -63,12 +69,12 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
     tmp6 = tmp5;
   }
   const obj1 = { style: tmp.container, children: null };
-  const items2 = [tmp6(View, { style: tmp.illustration, children: tmp6(_require("../../../../design/assets/native.tsx").WumpusCouchSpotIllustration, {}) }), , , , ];
+  const items2 = [tmp6(View, { style: tmp.illustration, children: tmp6(_AccountAgeTier10LargeBadge.WumpusCouchSpotIllustration, {}) }), , , , ];
   const obj3 = { variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
-  const obj2 = { style: tmp.illustration, children: tmp6(_require("../../../../design/assets/native.tsx").WumpusCouchSpotIllustration, {}) };
+  const obj2 = { style: tmp.illustration, children: tmp6(_AccountAgeTier10LargeBadge.WumpusCouchSpotIllustration, {}) };
   const tmp7 = closure_6;
-  obj3[2] = _require("../../utils/QuestCopyUtils.tsx").getDisclosureText({ gamePublisher, gameTitle, isTargetedDisclosure, isContextualDisclosure: setting, cosponsorName, isVideoQuest });
-  items2[1] = tmp6(_require("../../../../design/components/Text/native/Text.tsx").Text, obj3);
+  obj3[2] = _getContextualEntrypointHeading.getDisclosureText({ gamePublisher, gameTitle, isTargetedDisclosure, isContextualDisclosure: setting, cosponsorName, isVideoQuest });
+  items2[1] = tmp6(_Text.Text, obj3);
   if (isTargetedDisclosure) {
     const obj4 = { radius: 16, style: null, children: null };
     obj4[1] = tmp.targetList;
@@ -92,16 +98,16 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
   const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl5 = tmp2(1236).intl;
   const obj6 = { privacySettingsUrl: null };
-  const tmp2Result = _require("../../utils/QuestCopyUtils.tsx");
+  const tmp2Result = _getContextualEntrypointHeading;
   obj6[0] = items1(1945).getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS);
-  obj5[2] = intl5.format(_require("../../../../intl/index.native.tsx").t.tzq9Wa, obj6);
-  items2[3] = tmp6(_require("../../../../design/components/Text/native/Text.tsx").Text, obj5);
+  obj5[2] = intl5.format(_getSystemLocale.t.tzq9Wa, obj6);
+  items2[3] = tmp6(_Text.Text, obj5);
   const obj7 = { style: tmp.closeButton, children: null };
   const obj8 = { variant: "primary", grow: true, size: "lg", text: null, onPress: null };
   const intl6 = tmp2(1236).intl;
-  obj8[3] = intl6.string(_require("../../../../intl/index.native.tsx").t.cpT0Cq);
+  obj8[3] = intl6.string(_getSystemLocale.t.cpT0Cq);
   obj8[4] = onClose;
-  obj7[1] = tmp6(_require("../../../../design/components/Button/native/Button.native.tsx").Button, obj8);
+  obj7[1] = tmp6(_Button.Button, obj8);
   items2[4] = tmp6(View, obj7);
   obj1[1] = items2;
   return tmp7(View, obj1);

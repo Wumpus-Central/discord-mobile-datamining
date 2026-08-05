@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild/usePostableChannelCount.tsx
 import comparator from "comparator";
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_4 } from "comparator";
@@ -11,7 +12,7 @@ export default function useSendMessageChannelCount(arg0) {
   const _require = arg0;
   let items = [comparator];
   const items1 = [arg0];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     let items = outer1_3.getChannels(closure_0)[outer1_4];
     if (items == null) {
       items = [];

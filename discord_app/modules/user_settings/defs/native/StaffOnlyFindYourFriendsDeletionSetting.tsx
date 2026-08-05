@@ -1,3 +1,5 @@
+import { isIterable } from "../../../../../_runtime/03898_isIterable.js";
+import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx
 import batchUpdates from "batchUpdates";
 import { ActivityIndicator } from "get ActivityIndicator";
@@ -8,7 +10,7 @@ import createToggle from "createToggle";
 const require = arg1;
 function setFindYourFriendsDeletionIsLoading(arg0) {
   const _require = arg0;
-  _require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_6.setState({ isLoading: closure_0 }));
+  _batchUpdates.batchUpdates(() => outer1_6.setState({ isLoading: closure_0 }));
 }
 function _onFindYourFriendsDeletionPress() {
   const self = this;
@@ -116,7 +118,7 @@ identity = {
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useIsDisabled: function useIsFindYourFriendsDeletionDisabled() {
-    return callback2((isLoading) => isLoading.isLoading, require("../../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
+    return callback2((isLoading) => isLoading.isLoading, isIterable /* isIterable */.shallow);
   },
   onPress: function onFindYourFriendsDeletionPress() {
     const self = this;
@@ -131,7 +133,7 @@ identity = {
   usePredicate: require("useStaffOrDeveloperSettingPredicate").useStaffOrDeveloperSettingPredicate,
   useTrailing: function useIsFindYourFriendsDeletionTrailing() {
     let tmp = null;
-    if (callback2((isLoading) => isLoading.isLoading, require("../../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow)) {
+    if (callback2((isLoading) => isLoading.isLoading, isIterable /* isIterable */.shallow)) {
       tmp = <ActivityIndicator />;
     }
     return tmp;

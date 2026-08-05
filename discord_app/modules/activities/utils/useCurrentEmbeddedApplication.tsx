@@ -1,3 +1,5 @@
+import { useGetOrFetchApplications } from "../../applications/useGetOrFetchApplications.tsx";
+import { useCurrentEmbeddedActivity } from "useCurrentEmbeddedActivity.tsx";
 // discord_app/modules/activities/utils/useCurrentEmbeddedApplication.tsx
 import _slicedToArray from "_slicedToArray";
 
@@ -12,12 +14,12 @@ export default function useCurrentEmbeddedApplication() {
   if (flag === undefined) {
     flag = true;
   }
-  const tmp = require("useCurrentEmbeddedActivity.tsx")();
+  const tmp = useCurrentEmbeddedActivity();
   if (null == tmp) {
     let items = [];
   } else {
     items = [tmp.applicationId];
   }
-  const first = callback(require("../../applications/useGetOrFetchApplications.tsx")(items, flag), 1)[0];
+  const first = callback(useGetOrFetchApplications(items, flag), 1)[0];
   return first;
 };

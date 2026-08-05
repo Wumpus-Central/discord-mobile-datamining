@@ -1,3 +1,4 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/user_profile/native/UserProfilePreview.tsx
 import _slicedToArray from "_slicedToArray";
 import ManaContext from "ManaContext";
@@ -25,7 +26,7 @@ let closure_12 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   let obj = { profileContainer: { position: "relative", width: "100%", maxWidth: num }, profileContentContainer: null, profileInnerContent: null, aboutMeCard: null, profileEffect: null };
   obj = { overflow: "hidden", minHeight: num2, borderWidth: null, borderColor: null, borderRadius: null };
   obj[2] = 1;
-  const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
+  const colors = Themes.colors;
   if (arg1) {
     let BACKGROUND_SURFACE_HIGH = colors.BORDER_MUTED;
     let tmp4 = tmp;

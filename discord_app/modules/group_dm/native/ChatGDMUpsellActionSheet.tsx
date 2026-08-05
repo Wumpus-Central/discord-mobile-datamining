@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../_runtime/10982_registerAsset.js";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/group_dm/native/ChatGDMUpsellActionSheet.tsx
 import noop from "noop";
 import { View } from "LinkIcon";
@@ -40,13 +43,13 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   let obj = { showGradient: true, scrollable: true, startExpanded: true, header: null, footer: null, children: null };
   obj = { style: tmp.titleImage, children: null };
   obj = { source: null, resizeMode: "contain" };
-  obj[0] = require("../../../../_runtime/10982_registerAsset.js");
-  obj[1] = callback(require("../../../components_native/common/FastImage.tsx"), obj);
+  obj[0] = registerAsset;
+  obj[1] = callback(preload, obj);
   obj[3] = callback(View, obj);
   const obj1 = { style: items1, children: null };
   items1 = [tmp.footer, ];
-  const tmp3 = require("../../../components_native/common/FastImage.tsx");
-  items1[1] = { padding: 16, paddingBottom: require("../../safe_area/useSafeAreaInsets.native.tsx")().bottom + 16 };
+  const tmp3 = preload;
+  items1[1] = { padding: 16, paddingBottom: useSafeAreaInsets().bottom + 16 };
   const obj3 = { text: null, onPress: null };
   const intl = onClick(1236).intl;
   obj3[0] = intl.string(onClick(1236).t["3PatSz"]);
@@ -74,7 +77,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   items3[1] = callback(onClick(4281).Text, obj8);
   const obj9 = { style: tmp.noticeContainer, children: null };
   const obj10 = { style: tmp.innerContainer, children: null };
-  const obj2 = { padding: 16, paddingBottom: require("../../safe_area/useSafeAreaInsets.native.tsx")().bottom + 16 };
+  const obj2 = { padding: 16, paddingBottom: useSafeAreaInsets().bottom + 16 };
   const items4 = [callback(View, { style: tmp.item, children: callback(onClick(10983).TimerIcon, { size: "sm" }) }), ];
   const obj12 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl5 = onClick(1236).intl;

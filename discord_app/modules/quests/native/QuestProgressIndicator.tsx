@@ -1,3 +1,4 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/quests/native/QuestProgressIndicator.tsx
 import noop from "noop";
 import importDefaultResult from "noop";
@@ -20,12 +21,12 @@ let obj = { "x-sm": 40, sm: 64, md: 70, "md-lg": 100, lg: 128 };
 let closure_14 = createCacheKey.createStyles((arg0) => {
   let obj = { wrapper: { position: "relative" }, container: { position: "relative", display: "flex", justifyContent: "center", alignItems: "center", zIndex: 1 }, completionGlow: { shadowOffset: { width: 0, height: 0 }, shadowRadius: 20, shadowOpacity: 0, elevation: 4, shadowColor: "#30C77399" }, canvas: { transform: items }, imageContainer: null, progressPath: null, confetti: null, opacityMask: null };
   items = [{ rotate: "-90deg" }];
-  obj = { position: "absolute", height: 0.78 * arg0, width: 0.78 * arg0, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.round, overflow: "hidden" };
+  obj = { position: "absolute", height: 0.78 * arg0, width: 0.78 * arg0, borderRadius: Themes.radii.round, overflow: "hidden" };
   obj[4] = obj;
-  obj = { color: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.STATUS_POSITIVE };
+  obj = { color: Themes.colors.STATUS_POSITIVE };
   obj[5] = obj;
   obj[6] = { position: "absolute", pointerEvents: "none" };
-  obj[7] = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CARD_BACKGROUND_DEFAULT, position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 2 };
+  obj[7] = { backgroundColor: Themes.colors.CARD_BACKGROUND_DEFAULT, position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 2 };
   return obj;
 });
 let closure_15 = { code: "function QuestProgressIndicatorTsx1(){const{glowOpacity}=this.__closure;return{shadowOpacity:glowOpacity.get()};}" };

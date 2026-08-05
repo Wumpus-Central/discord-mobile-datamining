@@ -1,3 +1,10 @@
+import { Stack } from "../../../../../design/components/Stack/native/Stack.native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { DISPLAY_NAME_STYLES_EFFECT_NAMES } from "../../../../display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx";
+import { messagesProxy } from "../../../../display_name_styles/intl/DisplayNameStyles.messages.js";
+import { AVERAGE_FONT_WIDTH_RATIO } from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
+import { DisplayNameStyleColorPreset } from "../../../../display_name_styles/types.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsDisplayNameEffectsBenchmarkScreen.tsx
 import _slicedToArray from "_slicedToArray";
 import FRAME_BUDGET_MS from "FRAME_BUDGET_MS";
@@ -12,10 +19,10 @@ let closure_6;
 let metroImportAll;
 let require = arg1;
 function effectName(arg0) {
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  let OpWJ3f = require("../../../../display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx") /* DISPLAY_NAME_STYLES_EFFECT_NAMES */.DISPLAY_NAME_STYLES_EFFECT_NAMES[arg0];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  let OpWJ3f = DISPLAY_NAME_STYLES_EFFECT_NAMES /* DISPLAY_NAME_STYLES_EFFECT_NAMES */.DISPLAY_NAME_STYLES_EFFECT_NAMES[arg0];
   if (OpWJ3f == null) {
-    OpWJ3f = require("../../../../display_name_styles/intl/DisplayNameStyles.messages.js").OpWJ3f;
+    OpWJ3f = messagesProxy.OpWJ3f;
   }
   return intl.string(OpWJ3f);
 }
@@ -25,7 +32,7 @@ function OptionButtons(children) {
   let require;
   ({ options, value: require, onChange: importDefault } = children);
   let obj = { spacing: 8, children: null };
-  const items = [callback2(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/semibold", color: "text-subtle", children: children.caption }), ];
+  const items = [callback2(Text /* Text */.Text, { variant: "text-sm/semibold", color: "text-subtle", children: children.caption }), ];
   obj = { direction: "horizontal", spacing: 8, style: createCacheKey().optionButtons, children: null };
   obj[3] = options.map((label) => {
     let closure_0 = label;
@@ -40,9 +47,9 @@ function OptionButtons(children) {
     };
     return outer1_8(outer1_0(outer1_2[15]).Button, obj, String(label.value));
   });
-  items[1] = callback2(require("../../../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
+  items[1] = callback2(Stack /* Stack */.Stack, obj);
   obj[1] = items;
-  return callback3(require("../../../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
+  return callback3(Stack /* Stack */.Stack, obj);
 }
 function BenchmarkRow(arg0) {
   let effect;
@@ -50,13 +57,13 @@ function BenchmarkRow(arg0) {
   let userId;
   let userName;
   ({ userId, effect, userName, style } = arg0);
-  let obj = require("../../../../display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx") /* DISPLAY_NAME_STYLES_EFFECT_NAMES */;
+  let obj = DISPLAY_NAME_STYLES_EFFECT_NAMES /* DISPLAY_NAME_STYLES_EFFECT_NAMES */;
   obj = { style, children: null };
   const displayNameStylesEffectConfig = obj.useDisplayNameStylesEffectConfig(effect);
   obj = { userId, userName, effectDisplayType: null, pendingDisplayNameStyles: null, variant: "text-md/semibold" };
-  obj[2] = require("../../../../display_name_styles/types.tsx") /* DisplayNameStyleColorPreset */.EffectDisplayType.STATIC;
+  obj[2] = DisplayNameStyleColorPreset /* DisplayNameStyleColorPreset */.EffectDisplayType.STATIC;
   obj[3] = displayNameStylesEffectConfig.previewStyles;
-  obj[1] = callback2(require("../../../../display_name_styles/native/UsernameWithEffects.tsx"), obj);
+  obj[1] = callback2(AVERAGE_FONT_WIDTH_RATIO, obj);
   return callback2(closure_6, obj);
 }
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);

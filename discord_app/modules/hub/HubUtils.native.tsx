@@ -1,10 +1,11 @@
+import { HubEmailConnectionModalActionCreators } from "native/components/HubEmailConnectionModalActionCreators.tsx";
 // discord_app/modules/hub/HubUtils.native.tsx
 import updateInvite from "updateInvite";
 import importDefaultResult from "apply";
 
 let closure_3 = require("apply").throttle((code) => {
   invite = invite.getInvite(code.code);
-  require("native/components/HubEmailConnectionModalActionCreators.tsx").open({ invite });
+  HubEmailConnectionModalActionCreators.open({ invite });
 }, 1000, { trailing: false });
 const obj = {
   onOpenHubInvite(invite) {

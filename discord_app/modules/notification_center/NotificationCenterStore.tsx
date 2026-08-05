@@ -1,3 +1,5 @@
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { NotificationCenterScenes } from "NotificationCenterItemsTypes.tsx";
 // discord_app/modules/notification_center/NotificationCenterStore.tsx
 import _slicedToArray from "_slicedToArray";
 import findOrCreateMessageRecord from "findOrCreateMessageRecord";
@@ -52,7 +54,7 @@ prototype["getState"] = function getState() {
 prototype["getTab"] = function getTab() {
   let ForYou = closure_6.tab;
   if (ForYou == null) {
-    ForYou = require("NotificationCenterItemsTypes.tsx") /* NotificationCenterScenes */.NotificationCenterTabs.ForYou;
+    ForYou = NotificationCenterScenes /* NotificationCenterScenes */.NotificationCenterTabs.ForYou;
   }
   return ForYou;
 };
@@ -61,8 +63,8 @@ prototype["isLocalItemAcked"] = function isLocalItemAcked(addResult) {
   if (tmp) {
     let tmp3 = null != closure_6.localItemAcks[addResult.local_id];
     if (!tmp3) {
-      tmp3 = require("../../utils/SnowflakeUtils.tsx").age(addResult.id) > closure_5;
-      const obj = require("../../utils/SnowflakeUtils.tsx");
+      tmp3 = DISCORD_EPOCH.age(addResult.id) > closure_5;
+      const obj = DISCORD_EPOCH;
     }
     tmp = tmp3;
   }

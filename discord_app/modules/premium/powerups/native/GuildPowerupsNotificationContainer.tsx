@@ -1,3 +1,7 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useGuildPowerupExpiringNotificationsConfig } from "../hooks/useGuildPowerupExpiringNotificationsConfig.tsx";
+import { useGuildPowerupTier3OverrideConfig } from "../hooks/useGuildPowerupTier3OverrideConfig.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsNotificationContainer.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -6,7 +10,7 @@ import createCacheKey from "createCacheKey";
 let c4;
 let c5;
 function Tier3OverrideNotice(children) {
-  return callback(View, { style: callback2().staffContainer, children: callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/medium", children: children.text }) });
+  return callback(View, { style: callback2().staffContainer, children: callback(Text /* Text */.Text, { variant: "text-sm/medium", children: children.text }) });
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { container: null, staffContainer: null };
@@ -19,15 +23,15 @@ const result = require("createCacheKey").fileFinishedImporting("modules/premium/
 
 export default function GuildPowerupsNotificationContainer(guildId) {
   guildId = guildId.guildId;
-  const tmp4 = require("../hooks/useGuildPowerupTier3OverrideConfig.tsx")(guildId);
-  const tmp5 = require("../hooks/useGuildPowerupExpiringNotificationsConfig.tsx")(guildId);
+  const tmp4 = useGuildPowerupTier3OverrideConfig(guildId);
+  const tmp5 = useGuildPowerupExpiringNotificationsConfig(guildId);
   if (tmp4.shouldShow) {
     let obj = { style: null, children: null };
     obj[0] = tmp.container;
     obj = { variant: "eyebrow", color: "text-subtle", children: null };
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     obj[2] = intl.string(tmp2(2317)["3FRirU"]);
-    const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , ];
+    const items = [callback(Text /* Text */.Text, obj), , ];
     let shouldShow = tmp4.shouldShow;
     if (shouldShow) {
       obj = { text: null };

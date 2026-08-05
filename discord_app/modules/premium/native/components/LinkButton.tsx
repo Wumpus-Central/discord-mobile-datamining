@@ -1,3 +1,5 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
 // discord_app/modules/premium/native/components/LinkButton.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -35,7 +37,7 @@ export const LinkButton = function LinkButton(textColor) {
   const obj = { style: items, hitSlop: { top: 8, right: 8, bottom: 8 }, accessibilityRole: "button", activeOpacity: 0.2, disabled, onPress, children: null };
   items[1] = disabledContainerStyle;
   items[2] = containerStyle;
-  const items1 = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: textStyle, variant, color: str, children: text }), textColor.iconRight];
+  const items1 = [callback(Text /* Text */.Text, { style: textStyle, variant, color: str, children: text }), textColor.iconRight];
   obj[6] = items1;
-  return closure_3(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  return closure_3(PressableBase /* PressableBase */.PressableOpacity, obj);
 };

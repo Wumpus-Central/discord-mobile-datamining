@@ -1,3 +1,6 @@
+import { context } from "../../window/native/AppEntryKeyContext.tsx";
+import { KeyboardTypes } from "KeyboardTypes.tsx";
+import { computeEntryState } from "KeyboardUIStore.native.tsx";
 // discord_app/modules/keyboard/native/useKeyboardIsOpen.tsx
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore";
 
@@ -16,7 +19,7 @@ export default function useKeyboardIsOpen() {
   }
   let importDefault;
   importDefault = flag(1477).useAppEntryKey();
-  return require("KeyboardUIStore.native.tsx")((arg0) => {
+  return computeEntryState((arg0) => {
     const systemKeyboardOpen = tmp.systemKeyboardOpen;
     if (flag) {
       let tmp3 = systemKeyboardOpen;
@@ -79,14 +82,14 @@ export const getKeyboardIsOpen = function getKeyboardIsOpen(arg0) {
   }
   let DEFAULT_APP_ENTRY_KEY = tmp.appEntryKey;
   if (DEFAULT_APP_ENTRY_KEY === undefined) {
-    DEFAULT_APP_ENTRY_KEY = require("../../window/native/AppEntryKeyContext.tsx") /* context */.DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = context /* context */.DEFAULT_APP_ENTRY_KEY;
   }
-  const tmp5 = require("KeyboardUIStore.native.tsx").getState().byAppEntry[DEFAULT_APP_ENTRY_KEY];
+  const tmp5 = computeEntryState.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY];
   const systemKeyboardOpen = tmp5.systemKeyboardOpen;
   if (flag) {
     let tmp7 = systemKeyboardOpen;
     if (!systemKeyboardOpen) {
-      tmp7 = tmp5.keyboardType !== require("KeyboardTypes.tsx") /* KeyboardTypes */.KeyboardTypes.SYSTEM;
+      tmp7 = tmp5.keyboardType !== KeyboardTypes /* KeyboardTypes */.KeyboardTypes.SYSTEM;
     }
     let tmp6 = tmp7;
   } else {

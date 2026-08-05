@@ -1,3 +1,9 @@
+import { registerAsset } from "../../../../_runtime/01855_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11515_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11516_registerAsset.js";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { showUploadPreviewActionSheet } from "../../media_uploads/native/showUploadPreviewActionSheet.tsx";
+import { ApplicationCommandSectionType } from "../ApplicationCommandTypes.tsx";
 // discord_app/modules/application_commands/native/ApplicationCommandUtils.tsx
 import { DraftType } from "handleChanged";
 import map from "map";
@@ -12,12 +18,12 @@ export const getApplicationCommandsIconSource = function getApplicationCommandsI
   } else {
     const id = section.id;
     if (BuiltInSectionId.BUILT_IN === id) {
-      return require("../../../utils/AvatarUtils.tsx").makeSource(require("../../../../_runtime/11515_registerAsset.js"));
+      return getAvatarURL.makeSource(registerAsset);
     } else if (tmp10.FRECENCY === id) {
-      return require("../../../utils/AvatarUtils.tsx").makeSource(require("../../../../_runtime/11516_registerAsset.js"));
+      return getAvatarURL.makeSource(registerAsset);
     } else {
-      if (section.type === require("../ApplicationCommandTypes.tsx") /* ApplicationCommandSectionType */.ApplicationCommandSectionType.APPLICATION) {
-        let obj = require("../../../utils/AvatarUtils.tsx");
+      if (section.type === ApplicationCommandSectionType /* ApplicationCommandSectionType */.ApplicationCommandSectionType.APPLICATION) {
+        let obj = getAvatarURL;
         obj = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };
         ({ id: obj2[0], icon: obj2[1], application } = section);
         let bot;
@@ -28,7 +34,7 @@ export const getApplicationCommandsIconSource = function getApplicationCommandsI
         obj[4] = stateFromStores;
         let applicationIconSource = obj.getApplicationIconSource(obj);
       } else {
-        applicationIconSource = require("../../../../_runtime/01855_registerAsset.js");
+        applicationIconSource = registerAsset;
       }
       return applicationIconSource;
     }
@@ -62,6 +68,6 @@ export const openCommandAttachmentPreview = function openCommandAttachmentPrevie
       }
     };
     obj[4] = upload;
-    require("../../media_uploads/native/showUploadPreviewActionSheet.tsx")(obj);
+    showUploadPreviewActionSheet(obj);
   }
 };

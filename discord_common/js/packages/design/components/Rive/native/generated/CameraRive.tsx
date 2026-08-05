@@ -1,3 +1,5 @@
+import { BaseRive } from "../BaseRive.tsx";
+import { getDerivedStateFromError } from "../RiveErrorBoundary.tsx";
 // discord_common/js/packages/design/components/Rive/native/generated/CameraRive.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
@@ -15,8 +17,8 @@ let closure_9 = {
     let onDataBindingChange;
     let playIfNeeded;
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = require("../BaseRive.tsx") /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = require("../BaseRive.tsx") /* BaseRive */;
+    const booleanBinding = BaseRive /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const obj = BaseRive /* BaseRive */;
     const tmp = require;
     let fill;
     if (dataBinding != null) {
@@ -26,8 +28,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       fill1 = onDataBindingChange.fill;
     }
-    const colorBinding = require("../BaseRive.tsx") /* BaseRive */.useColorBinding("fill", instance, fill, fill1, playIfNeeded);
-    const obj2 = require("../BaseRive.tsx") /* BaseRive */;
+    const colorBinding = BaseRive /* BaseRive */.useColorBinding("fill", instance, fill, fill1, playIfNeeded);
+    const obj2 = BaseRive /* BaseRive */;
     let on;
     if (dataBinding != null) {
       on = dataBinding.on;
@@ -83,7 +85,7 @@ const forwardRefResult = importAllResult.forwardRef(function CameraRiveWithBound
   obj = { ref };
   const merged = Object.assign(fallback);
   obj[1] = <closure_10 ref={arg1} />;
-  return jsx(require("../RiveErrorBoundary.tsx") /* getDerivedStateFromError */.RiveErrorBoundary, { ref });
+  return jsx(getDerivedStateFromError /* getDerivedStateFromError */.RiveErrorBoundary, { ref });
 });
 const result = require("jsxProd").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/CameraRive.tsx");
 

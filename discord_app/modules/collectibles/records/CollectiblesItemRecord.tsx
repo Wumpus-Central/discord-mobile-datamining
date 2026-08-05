@@ -1,3 +1,4 @@
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 // discord_app/modules/collectibles/records/CollectiblesItemRecord.tsx
 import fromServer from "fromServer";
 import closure_3 from "fromServer";
@@ -54,7 +55,7 @@ function transformSKUToCollectiblesItem(productLine) {
       }
       if (null != item) {
         type = item.type;
-        if (require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION === type) {
+        if (CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION === type) {
           obj = { type: "single", item: null };
           const obj1 = { skuId: null, type: null, asset: null, label: null };
           obj1[0] = productLine.id;

@@ -1,3 +1,4 @@
+import { items } from "../../lib/MessageQueue.tsx";
 // discord_app/modules/messages/MessageQueueManager.tsx
 import "initialize";
 
@@ -9,7 +10,7 @@ class MessageQueueManager extends tmp2 {
   }
 }
 MessageQueueManager.prototype["handleLogout"] = function handleLogout() {
-  require("../../lib/MessageQueue.tsx").clear();
+  items.clear();
 };
 const messageQueueManager = new MessageQueueManager();
 const result = require("set").fileFinishedImporting("modules/messages/MessageQueueManager.tsx");

@@ -1,3 +1,5 @@
+import { set } from "../../../../actions/AlertActionCreators.tsx";
+import { showUserSettingsInputAlert } from "showUserSettingsInputAlert.tsx";
 // discord_app/modules/user_settings/account/native/handleDisableAccount.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -26,8 +28,8 @@ export default function handleDisableAccount() {
     let obj = { title: null, body: null };
     obj[0] = stringResult;
     obj[1] = stringResult1;
-    require("../../../../actions/AlertActionCreators.tsx").show(obj);
-    const obj3 = require("../../../../actions/AlertActionCreators.tsx");
+    set.show(obj);
+    const obj3 = set;
   } else {
     const formatted = string(t["CIGa+7"]).toUpperCase();
     obj = { onSubmit: null, title: null, placeholder: null, closeOnSuccess: true };
@@ -50,7 +52,7 @@ export default function handleDisableAccount() {
       tmp8 = obj;
       const str2 = intl2.string(tmp4(1236).t.jf5GGb);
     }
-    require("showUserSettingsInputAlert.tsx")(tmp8);
+    showUserSettingsInputAlert(tmp8);
     const str = string(t["CIGa+7"]);
   }
 };

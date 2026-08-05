@@ -1,12 +1,14 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { NativeModules } from "../../../links/native/BrowserManager.tsx";
 // discord_app/modules/user_settings/defs/native/SelectWebBrowserSetting.tsx
 import createToggle from "createToggle";
 
 function useWebBrowserSettingOptions() {
   let CHROME = dependencyMap;
-  let obj = require("../../../links/native/BrowserManager.tsx") /* NativeModules */;
+  let obj = NativeModules /* NativeModules */;
   const items = [];
   const browserManagerIsChromeInstalled = obj.useBrowserManagerIsChromeInstalled();
-  let obj1 = require("../../../links/native/BrowserManager.tsx") /* NativeModules */;
+  let obj1 = NativeModules /* NativeModules */;
   if (obj1.useBrowserManagerSupportsInAppBrowser()) {
     obj = { label: null, value: null };
     const intl = tmp(1236).intl;
@@ -44,29 +46,29 @@ function useWebBrowserSettingOptions() {
 }
 const radio = createToggle.createRadio({
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["C+DkPu"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["C+DkPu"]);
   },
   parent: require("MobileSetting").MobileSetting.WEB_BROWSER,
   useValue: function useWebBrowserSettingValue() {
-    return require("../../../links/native/BrowserManager.tsx") /* NativeModules */.useBrowserManagerSelectedBrowser();
+    return NativeModules /* NativeModules */.useBrowserManagerSelectedBrowser();
   },
   onValueChange: function onWebBrowserSettingValueChange(arg0) {
-    const result = require("../../../links/native/BrowserManager.tsx") /* NativeModules */.browserManagerSelectBrowser(Number(arg0));
+    const result = NativeModules /* NativeModules */.browserManagerSelectBrowser(Number(arg0));
   },
   useOptions: useWebBrowserSettingOptions
 });
 let obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["C+DkPu"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["C+DkPu"]);
   },
   parent: require("MobileSetting").MobileSetting.WEB_BROWSER,
   useValue: function useWebBrowserSettingValue() {
-    return require("../../../links/native/BrowserManager.tsx") /* NativeModules */.useBrowserManagerSelectedBrowser();
+    return NativeModules /* NativeModules */.useBrowserManagerSelectedBrowser();
   },
   onValueChange: function onWebBrowserSettingValueChange(arg0) {
-    const result = require("../../../links/native/BrowserManager.tsx") /* NativeModules */.browserManagerSelectBrowser(Number(arg0));
+    const result = NativeModules /* NativeModules */.browserManagerSelectBrowser(Number(arg0));
   },
   useOptions: useWebBrowserSettingOptions
 };

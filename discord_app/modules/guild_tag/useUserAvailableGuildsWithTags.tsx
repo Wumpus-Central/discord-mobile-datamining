@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_tag/useUserAvailableGuildsWithTags.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -7,7 +8,7 @@ const result = require("initialize").fileFinishedImporting("modules/guild_tag/us
 
 export const useUserAvailableGuildsWithTags = function useUserAvailableGuildsWithTags() {
   const items = [createGuildRecordFromRust, trackCommunicationDisabled];
-  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresArray(items, () => {
+  return initialize /* initialize */.useStateFromStoresArray(items, () => {
     guildsArray = guildsArray.getGuildsArray();
     return guildsArray.filter((id) => {
       selfMember = selfMember.getSelfMember(id.id);

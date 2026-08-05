@@ -1,3 +1,6 @@
+import { noop } from "../../../../lib/RTCControlSocket.tsx";
+import { getHermesInstrumentedStatsSummary } from "../../../../utils/ProcessUtils.native.tsx";
+import { Opcode } from "../../../gateway/GatewaySocketOpcode.tsx";
 // discord_app/modules/telemetry_ring/native/channels/ZoomedInAnalyticBuilder.tsx
 import { AnalyticEvents } from "ME";
 
@@ -306,7 +309,7 @@ let closure_5 = {
       if (typeof touch_action_type === "string") {
         tmp2 = touch_action_type;
       }
-      let obj = require("../../../../utils/ProcessUtils.native.tsx");
+      let obj = getHermesInstrumentedStatsSummary;
       let currentHermesInstrumentedStatsSummary = obj.getCurrentHermesInstrumentedStatsSummary();
       if (currentHermesInstrumentedStatsSummary == null) {
         currentHermesInstrumentedStatsSummary = null;
@@ -649,7 +652,7 @@ let closure_5 = {
             }
             let tmp41 = null;
             if (null != tmp37) {
-              const tmp44 = require("../../../gateway/GatewaySocketOpcode.tsx") /* Opcode */.Opcode[tmp37];
+              const tmp44 = Opcode /* Opcode */.Opcode[tmp37];
               let tmp45 = null;
               if (typeof tmp44 === "string") {
                 tmp45 = tmp44;
@@ -738,7 +741,7 @@ let closure_5 = {
           }
           let tmp26 = null;
           if (null != tmp22) {
-            const tmp29 = require("../../../../lib/RTCControlSocket.tsx") /* noop */.RTCSocketOpcode[tmp22];
+            const tmp29 = noop /* noop */.RTCSocketOpcode[tmp22];
             let tmp30 = null;
             if (typeof tmp29 === "string") {
               tmp30 = tmp29;

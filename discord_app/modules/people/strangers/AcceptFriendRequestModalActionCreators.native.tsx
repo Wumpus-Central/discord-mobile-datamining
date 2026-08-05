@@ -1,3 +1,5 @@
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/people/strangers/AcceptFriendRequestModalActionCreators.native.tsx
 import { ACCEPT_FRIEND_REQUEST_CONFIRMATION_MODAL_ID as closure_3 } from "RELATIONSHIP_COUNT_ANIMATION_THRESHOLD";
 import { AnalyticEvents } from "ME";
@@ -9,7 +11,7 @@ export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequ
   let importDefault;
   let require;
   ({ onConfirm: require, onCancel: importDefault } = arg0);
-  let obj = require("../../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { type: closure_3 };
   obj.track(AnalyticEvents.OPEN_MODAL, obj);
   obj = {
@@ -32,5 +34,5 @@ export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequ
       });
     }
   };
-  require("../../../actions/native/AlertActionCreators.tsx").openLazy(obj);
+  AlertActionCreators.openLazy(obj);
 };

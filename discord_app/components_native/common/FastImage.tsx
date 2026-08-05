@@ -1,3 +1,4 @@
+import { __INTERNAL_VIEW_CONFIG } from "../../../discord_common/js/packages/rtn-codegen/js/FastImageNativeComponent.tsx";
 // discord_app/components_native/common/FastImage.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -61,7 +62,7 @@ let merged = Object.assign(require("noop").memo((fade) => {
     obj.manualPlayback = manualPlayback;
     obj.fade = tmp3;
     obj.usesSmallCache = tmp4;
-    return jsx(require("../../../discord_common/js/packages/rtn-codegen/js/FastImageNativeComponent.tsx"), {});
+    return jsx(__INTERNAL_VIEW_CONFIG, {});
   }
   tmp = callback();
   tmp4 = undefined !== usesSmallCache && usesSmallCache;

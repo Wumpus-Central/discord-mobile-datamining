@@ -1,3 +1,7 @@
+import { isRoleRequired } from "../../../../channel/isRoleRequired.tsx";
+import { SubscriptionGatedChannelIcon } from "../../../../guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx";
+import { ChannelTitle } from "ChannelTitle.tsx";
+import { getLayoutStyles } from "layouts/ChannelListLayout.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelContent.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -29,12 +33,12 @@ function ChannelContentComponent(arg0) {
   ({ subtitle, resolvedUnreadSetting, locked, lastMessageTimestampString, channel, layout, mentionCount, mentionBadge, isSubscriptionGated } = arg0);
   ({ name, unread, muted, connected, needSubscriptionToAccess } = arg0);
   const tmp = createCacheKey();
-  let obj = require("layouts/ChannelListLayout.tsx") /* getLayoutStyles */;
+  let obj = getLayoutStyles /* getLayoutStyles */;
   let tmp10Result = null != channel;
   const layoutStyles = obj.getLayoutStyles(layout);
   if (tmp10Result) {
     if (!locked) {
-      locked = require("../../../../channel/isRoleRequired.tsx")(channel);
+      locked = isRoleRequired(channel);
     }
     tmp10Result = locked;
   }
@@ -68,7 +72,7 @@ function ChannelContentComponent(arg0) {
   obj3[3] = resolvedUnreadSetting;
   obj3[4] = connected;
   obj3[5] = layout;
-  const items1 = [closure_6(require("ChannelTitle.tsx"), obj3), ];
+  const items1 = [closure_6(ChannelTitle, obj3), ];
   let tmp12Result = tmp10Result;
   if (!tmp10Result) {
     tmp12Result = isNSFWResult;
@@ -102,7 +106,7 @@ function ChannelContentComponent(arg0) {
     if (isSubscriptionGated) {
       const obj8 = { locked: null, isInMainTabsExperiment: true };
       obj8[0] = needSubscriptionToAccess;
-      isSubscriptionGated = tmp10(require("../../../../guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx"), obj8);
+      isSubscriptionGated = tmp10(SubscriptionGatedChannelIcon, obj8);
     }
     items3[2] = isSubscriptionGated;
     obj4[1] = items3;

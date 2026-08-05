@@ -1,3 +1,7 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { SafetySettingsNotice } from "../../../safety_common/native/SafetySettingsNotice.tsx";
+import { handleOpenEmailVerification } from "UserSettingsAccountUnverifiedHeader.tsx";
 // discord_app/modules/user_settings/account/native/SettingsAccountHeader.tsx
 import importAllResult from "noop";
 import { View } from "set";
@@ -13,14 +17,14 @@ let c9;
 const require = arg1;
 function RestrictedAccountRedirect() {
   let obj = { label: null, labelHook: null, noticeType: null };
-  obj[0] = require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.zqv4nV;
+  obj[0] = getSystemLocale /* getSystemLocale */.t.zqv4nV;
   obj[1] = function labelHook() {
     let obj = callback(table[11]);
     obj = { screen: constants.SETTINGS_CONTENT_AND_SOCIAL };
     obj.openUserSettings(obj);
   };
   obj[2] = SafetySettingsNoticeType.RESTRICTED_ACCOUNTS_SETTING_NOTICE;
-  return callback(require("../../../safety_common/native/SafetySettingsNotice.tsx"), obj);
+  return callback(SafetySettingsNotice, obj);
 }
 let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
@@ -29,14 +33,14 @@ obj = { paddingTop: require("Themes").space.PX_24, gap: require("Themes").space.
 obj[0] = obj;
 let closure_11 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(() => {
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = require("UserSettingsAccountUnverifiedHeader.tsx") /* handleOpenEmailVerification */;
+  let obj1 = handleOpenEmailVerification /* handleOpenEmailVerification */;
   const bannerText = obj1.getBannerText(stateFromStores);
   const tmp = callback2();
   const items1 = [upsertRelationship];
-  const stateFromStores1 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => blockedOrIgnoredIDs.getBlockedOrIgnoredIDs().length > 0);
+  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => blockedOrIgnoredIDs.getBlockedOrIgnoredIDs().length > 0);
   const callback = importAllResult.useCallback(() => {
     callback(table[14]).open();
   }, []);

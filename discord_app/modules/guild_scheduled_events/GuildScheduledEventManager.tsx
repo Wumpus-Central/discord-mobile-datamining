@@ -1,3 +1,4 @@
+import { GuildScheduledEventsActionCreators } from "GuildScheduledEventsActionCreators.tsx";
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventManager.tsx
 import closure_2 from "set";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -178,7 +179,7 @@ prototype["getGuildEventUserCounts"] = function getGuildEventUserCounts(guild_id
   })();
 };
 prototype["getGuildEventUsers"] = function getGuildEventUsers(id, arg1, guild_id) {
-  return require("GuildScheduledEventsActionCreators.tsx").fetchUsersForGuildEvent(id, arg1, guild_id);
+  return GuildScheduledEventsActionCreators.fetchUsersForGuildEvent(id, arg1, guild_id);
 };
 prototype["getGuildEventsForCurrentUser"] = function getGuildEventsForCurrentUser(arg0) {
   return getGuildEventsForCurrentUser(arg0);

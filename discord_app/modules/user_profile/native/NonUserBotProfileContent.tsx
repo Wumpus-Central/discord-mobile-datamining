@@ -1,3 +1,9 @@
+import { getNickname } from "../../../utils/NicknameUtils.tsx";
+import { useUserProfileBannerHeight } from "../hooks/native/useUserProfileBannerHeight.tsx";
+import { useBadges } from "../hooks/useBadges.tsx";
+import { useProfileTheme } from "../hooks/useProfileTheme.tsx";
+import { useSharedStyles } from "UserProfileSharedStyles.tsx";
+import { useUserProfileOverscrollStyles } from "useUserProfileOverscrollStyles.tsx";
 // discord_app/modules/user_profile/native/NonUserBotProfileContent.tsx
 import { View } from "UserProfileOverscrollBanner";
 import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET";
@@ -28,10 +34,10 @@ const memoResult = require("OpenableUserProfileAvatar").memo(function NonUserBot
   ({ user, channel, displayProfile } = scrollPosition);
   let trackUserProfileAction;
   let importDefault;
-  const tmp3 = require("UserProfileSharedStyles.tsx")();
+  const tmp3 = useSharedStyles();
   let obj = trackUserProfileAction(8710);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
-  let obj1 = require("../../../utils/NicknameUtils.tsx");
+  let obj1 = getNickname;
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
@@ -43,12 +49,12 @@ const memoResult = require("OpenableUserProfileAvatar").memo(function NonUserBot
   const name = obj1.useName(guild_id, id, user);
   let tmpResult = tmp(4124);
   importDefault = tmpResult.useUserTag(user);
-  const tmp9 = require("../hooks/native/useUserProfileBannerHeight.tsx")(ACTION_SHEET_MAX_WIDTH);
-  const tmp8 = require("../hooks/useBadges.tsx")(displayProfile);
-  ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = require("useUserProfileOverscrollStyles.tsx")({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 }));
-  const tmp10 = require("useUserProfileOverscrollStyles.tsx")({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 });
-  ({ theme, primaryColor, secondaryColor } = require("../hooks/useProfileTheme.tsx")({ user, displayProfile }));
-  const tmp11 = require("../hooks/useProfileTheme.tsx")({ user, displayProfile });
+  const tmp9 = useUserProfileBannerHeight(ACTION_SHEET_MAX_WIDTH);
+  const tmp8 = useBadges(displayProfile);
+  ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = useUserProfileOverscrollStyles({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 }));
+  const tmp10 = useUserProfileOverscrollStyles({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 });
+  ({ theme, primaryColor, secondaryColor } = useProfileTheme({ user, displayProfile }));
+  const tmp11 = useProfileTheme({ user, displayProfile });
   const userProfileColors = trackUserProfileAction(8754).useUserProfileColors({ theme, primaryColor, secondaryColor });
   const containerBackground = userProfileColors.containerBackground;
   if (null == user) {

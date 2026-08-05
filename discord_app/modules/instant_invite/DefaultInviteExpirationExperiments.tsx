@@ -1,3 +1,4 @@
+import { isGuildMember } from "../../utils/InstantInviteUtils.tsx";
 // discord_app/modules/instant_invite/DefaultInviteExpirationExperiments.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ME from "ME";
@@ -17,7 +18,7 @@ function getDefaultInviteExpiration(arg0) {
     hasItem = features.has(constants.HUB);
   }
   if (hasItem) {
-    return require("../../utils/InstantInviteUtils.tsx").INVITE_OPTIONS_FOREVER.value;
+    return isGuildMember.INVITE_OPTIONS_FOREVER.value;
   } else if (null != experimentConfig) {
     let defaultMaxAge2 = experimentConfig.defaultMaxAge;
     if (defaultMaxAge2 == null) {
@@ -108,5 +109,5 @@ export const useMaxAgeOptions = function useMaxAgeOptions(arg0) {
     defaultMaxAge1 = experiment1.defaultMaxAge;
   }
   const includeExperimentalValues = [defaultMaxAge1];
-  return require("../../utils/InstantInviteUtils.tsx").getMaxAgeOptions({ includeExperimentalValues });
+  return isGuildMember.getMaxAgeOptions({ includeExperimentalValues });
 };

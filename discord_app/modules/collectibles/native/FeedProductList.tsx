@@ -1,3 +1,6 @@
+import { ShopCardGridItem } from "CollectiblesShopCardsGrid.tsx";
+import { CollectiblesShopCardInternalV2 } from "CollectiblesShopCardV2.tsx";
+import { sharedValue } from "SkeletonCard.tsx";
 // discord_app/modules/collectibles/native/FeedProductList.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -32,9 +35,9 @@ function SkeletonGrid(accessibilityLabel) {
     obj[1] = arr.map((arg0, arg1) => {
       let obj = { width: num, style: null };
       obj = { marginBottom: null };
-      obj[0] = require("CollectiblesShopCardV2.tsx") /* CollectiblesShopCardInternalV2 */.COLLECTIBLES_SHOP_CARD_GAP;
+      obj[0] = CollectiblesShopCardInternalV2 /* CollectiblesShopCardInternalV2 */.COLLECTIBLES_SHOP_CARD_GAP;
       obj[1] = obj;
-      return jsx(require("SkeletonCard.tsx"), { marginBottom: null }, "" + num + "-" + arg1);
+      return jsx(sharedValue, { marginBottom: null }, "" + num + "-" + arg1);
     });
     let _HermesInternal = HermesInternal;
     arr = items.push(<View key={"row-" + num} style={null}>{null}</View>);
@@ -62,7 +65,7 @@ export default function FeedProductList(arg0) {
     obj[1] = tmp2;
     obj[2] = accessibilityLabel;
     obj[3] = tmp3;
-    tmp7 = jsx(require("CollectiblesShopCardsGrid.tsx"), { products: null, preferVCPrice: null, accessibilityLabel: null, disableBundleStaticBackground: null });
+    tmp7 = jsx(ShopCardGridItem, { products: null, preferVCPrice: null, accessibilityLabel: null, disableBundleStaticBackground: null });
   }
   return tmp7;
 };

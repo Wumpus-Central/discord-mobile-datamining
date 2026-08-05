@@ -1,3 +1,5 @@
+import { experiment } from "GuildRoomsExperiment.tsx";
+import { computeLivingRoomWorldPoints } from "GuildRoomSpatialAudio.tsx";
 // discord_app/modules/guild_rooms/GuildRoomSpatialAudioManager.tsx
 import _slicedToArray from "_slicedToArray";
 import getHash from "getHash";
@@ -60,7 +62,7 @@ prototype["isLivingRoomAvailable"] = function isLivingRoomAvailable() {
   const guildId = store.getGuildId();
   let interactionsEnabled = null != guildId;
   if (interactionsEnabled) {
-    let obj = require("GuildRoomsExperiment.tsx");
+    let obj = experiment;
     obj = { guildId: null, location: "GuildRoomSpatialAudioManager" };
     obj[0] = guildId;
     interactionsEnabled = obj.getCurrentConfig(obj, { autoTrackExposure: false }).interactionsEnabled;
@@ -84,7 +86,7 @@ prototype["apply"] = function apply() {
           obj[0] = roomUsers.getRoomUsers(channelId);
           obj[1] = id.getId();
           obj[2] = channelId;
-          _require = _require("GuildRoomSpatialAudio.tsx").computeLivingRoomWorldPoints(obj);
+          _require = _computeLivingRoomWorldPoints.computeLivingRoomWorldPoints(obj);
           const mediaEngine = obj.getMediaEngine();
           mediaEngine.eachConnection((setUserPosition) => {
             let tmp6;
@@ -101,7 +103,7 @@ prototype["apply"] = function apply() {
               continue;
             }
           });
-          const obj3 = _require("GuildRoomSpatialAudio.tsx");
+          const obj3 = _computeLivingRoomWorldPoints;
         }
       }
     }

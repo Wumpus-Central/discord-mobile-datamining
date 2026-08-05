@@ -1,3 +1,7 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { combined } from "../../utils/HelpdeskUtils.tsx";
+import { getSystemLocale } from "../forums/ForumPlatformUtils.native.tsx";
+import { getSystemLocale } from "../text_in_voice/GuildTiVPlatformUtils.native.tsx";
 // discord_app/modules/channel_permissions/ChannelPermissionsConstants.tsx
 import ME from "ME";
 
@@ -22,13 +26,13 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
   const tmp3 = constants;
   str = str.toString();
   if (type === constants.GUILD_CATEGORY) {
-    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    let stringResult = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.uV83yi);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t.uV83yi);
     let tmp8 = require;
     let tmp10 = require;
   } else {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["W/A4Qp"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["W/A4Qp"]);
     tmp8 = require;
     tmp10 = require;
   }
@@ -142,7 +146,7 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     }
     if (createPostsDisabled) {
       if (!type.isMediaChannel()) {
-        let obj10 = require("../forums/ForumPlatformUtils.native.tsx");
+        let obj10 = getSystemLocale;
         let LG9VAi = obj10.getForumChannelPermissionText();
       }
       WQ6zpT = LG9VAi;
@@ -153,11 +157,11 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
   } else if (tmp3.GUILD_ANNOUNCEMENT === type) {
     const intl11 = tmp8(1236).intl;
     const obj5 = { articleURL: null };
-    let obj9 = require("../../utils/HelpdeskUtils.tsx");
+    let obj9 = combined;
     obj5[0] = obj9.getArticleURL(constants3.ANNOUNCEMENT_CHANNELS);
     WQ6zpT = intl11.format(tmp8(1236).t.WFwfSD, obj5);
   } else if (tmp3.GUILD_VOICE === type) {
-    let obj7 = require("../text_in_voice/GuildTiVPlatformUtils.native.tsx");
+    let obj7 = getSystemLocale;
     let sendMessagesDisabled;
     if (createPostsDisabled != null) {
       sendMessagesDisabled = createPostsDisabled.sendMessagesDisabled;
@@ -263,7 +267,7 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
   } else if (tmp3.GUILD_ANNOUNCEMENT === type) {
     const intl20 = tmp8(1236).intl;
     const obj13 = { articleURL: null };
-    let obj19 = require("../../utils/HelpdeskUtils.tsx");
+    let obj19 = combined;
     obj13[0] = obj19.getArticleURL(constants3.ANNOUNCEMENT_CHANNELS);
     SeA_G9 = intl20.format(tmp8(1236).t.XRxOo0, obj13);
   } else {
@@ -325,7 +329,7 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
   if (tmp3.GUILD_CATEGORY === type) {
     let RqCc7i = tmp8(1236).t["cJRv/g"];
   } else if (tmp3.GUILD_VOICE === type) {
-    let obj24 = require("../text_in_voice/GuildTiVPlatformUtils.native.tsx");
+    let obj24 = getSystemLocale;
     let prop;
     if (createPostsDisabled != null) {
       prop = createPostsDisabled.readMessageHistoryDisabled;
@@ -522,7 +526,7 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
   if (tmp3.GUILD_CATEGORY === type) {
     const intl37 = tmp8(1236).intl;
     const obj28 = { helpCenterArticle: null };
-    let obj40 = require("../../utils/HelpdeskUtils.tsx");
+    let obj40 = combined;
     obj28[0] = obj40.getArticleURL(constants3.SOUNDBOARD);
     let formatResult = intl37.format(tmp8(1236).t["0kBp/0"], obj28);
   } else {
@@ -531,7 +535,7 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
         if (tmp3.GUILD_MEDIA !== type) {
           const intl35 = tmp8(1236).intl;
           const obj29 = { helpCenterArticle: null };
-          let obj36 = require("../../utils/HelpdeskUtils.tsx");
+          let obj36 = combined;
           obj29[0] = obj36.getArticleURL(constants3.SOUNDBOARD);
           formatResult = intl35.format(tmp8(1236).t.GEi6Ym, obj29);
         }
@@ -539,7 +543,7 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     }
     const intl36 = tmp8(1236).intl;
     const obj30 = { helpCenterArticle: null };
-    let obj38 = require("../../utils/HelpdeskUtils.tsx");
+    let obj38 = combined;
     obj30[0] = obj38.getArticleURL(constants3.SOUNDBOARD);
     formatResult = intl36.format(tmp8(1236).t["6eYqU1"], obj30);
   }

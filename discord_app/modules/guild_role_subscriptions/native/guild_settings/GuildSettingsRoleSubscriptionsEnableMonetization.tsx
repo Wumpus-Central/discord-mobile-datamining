@@ -1,3 +1,5 @@
+import { Placeholder } from "../components/Placeholder.tsx";
+import { UnavailableNotice } from "../components/UnavailableNotice.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEnableMonetization.tsx
 import "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -11,15 +13,15 @@ export default function GuildSubscriptionEnableMonetization(guildId) {
   let obj = guildId(589);
   const items = [createGuildRecordFromRust];
   if (null == obj.useStateFromStores(items, () => outer1_3.getGuild(guildId))) {
-    let tmp5 = jsx(require("../components/Placeholder.tsx"), {});
+    let tmp5 = jsx(Placeholder, {});
   } else {
     obj = { brightTitle: true, title: null, description: null };
     const intl = tmp(1236).intl;
     obj[1] = intl.string(tmp(1236).t.KeeWp0);
     const intl2 = tmp(1236).intl;
     obj[2] = intl2.string(tmp(1236).t["tJLG+L"]);
-    tmp5 = jsx(require("../components/UnavailableNotice.tsx"), { brightTitle: true, title: null, description: null });
-    const tmp8 = require("../components/UnavailableNotice.tsx");
+    tmp5 = jsx(UnavailableNotice, { brightTitle: true, title: null, description: null });
+    const tmp8 = UnavailableNotice;
   }
   return tmp5;
 };

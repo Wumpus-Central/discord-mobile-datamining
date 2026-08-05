@@ -1,3 +1,6 @@
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { getNickname } from "../../../../../utils/NicknameUtils.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionMemberPreview.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -26,16 +29,16 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
   let textStyle;
   content = content.content;
   if (content === undefined) {
-    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    content = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["6OSasb"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    content = intl.string(getSystemLocale /* getSystemLocale */.t["6OSasb"]);
   }
   ({ guildId, role } = content);
   ({ style, textStyle } = content);
   const tmp3 = createCacheKey();
-  let obj = require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  require("../../../../../utils/NicknameUtils.tsx");
+  getNickname;
   if (null == role) {
     return null;
   } else {

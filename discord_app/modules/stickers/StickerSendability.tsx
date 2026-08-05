@@ -1,3 +1,5 @@
+import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
+import { getStickerExtensionFromFormatType } from "StickersUtils.tsx";
 // discord_app/modules/stickers/StickerSendability.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import parseServerPackSticker from "parseServerPackSticker";
@@ -8,8 +10,8 @@ function getStickerSendability(stickerById, trackCommunicationDisabled, channel)
   if (null == trackCommunicationDisabled) {
     return obj.NONSENDABLE;
   } else {
-    const result = require("../../utils/PremiumUtils.tsx").canUseCustomStickersEverywhere(trackCommunicationDisabled);
-    const obj4 = require("../../utils/PremiumUtils.tsx");
+    const result = getPremiumPlanItem.canUseCustomStickersEverywhere(trackCommunicationDisabled);
+    const obj4 = getPremiumPlanItem;
     const tmp22 = require;
     if (obj5.isStandardSticker(stickerById)) {
       if (null == stickerPack.getStickerPack(stickerById.pack_id)) {
@@ -45,7 +47,7 @@ function getStickerSendability(stickerById, trackCommunicationDisabled, channel)
       }
       return obj.NONSENDABLE;
     }
-    obj5 = require("StickersUtils.tsx") /* getStickerExtensionFromFormatType */;
+    obj5 = getStickerExtensionFromFormatType /* getStickerExtensionFromFormatType */;
   }
 }
 let obj = { SENDABLE: 0, [0]: "SENDABLE", SENDABLE_WITH_PREMIUM: 1, [1]: "SENDABLE_WITH_PREMIUM", NONSENDABLE: 2, [2]: "NONSENDABLE", SENDABLE_WITH_BOOSTED_GUILD: 3, [3]: "SENDABLE_WITH_BOOSTED_GUILD" };

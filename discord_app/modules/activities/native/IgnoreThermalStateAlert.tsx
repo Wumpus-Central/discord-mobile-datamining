@@ -1,3 +1,4 @@
+import { componentDidMount } from "../../../components_native/common/Alert.tsx";
 // discord_app/modules/activities/native/IgnoreThermalStateAlert.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -35,5 +36,5 @@ export const IgnoreThermalStateAlert = function IgnoreThermalStateAlert(onConfir
   obj[2] = intl4.string(onConfirm(1236).t.VOgTjy);
   items[1] = callback(onConfirm(4281).Text, obj);
   obj.children = items;
-  return callback2(require("../../../components_native/common/Alert.tsx"), obj);
+  return callback2(componentDidMount, obj);
 };

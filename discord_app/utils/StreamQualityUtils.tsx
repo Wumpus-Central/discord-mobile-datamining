@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { expandEventProperties } from "AnalyticsUtils.tsx";
 // discord_app/utils/StreamQualityUtils.tsx
 import noop from "noop";
 import ApplicationStreamPresets from "ApplicationStreamPresets";
@@ -80,19 +82,19 @@ export const getPremiumRequirement = function getPremiumRequirement(arg0, arg1, 
 };
 export const getResolutionText = function getResolutionText(maxResolution) {
   if (maxResolution.type === ResolutionTypes.SOURCE) {
-    const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    let stringResult = intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.XjXqzh);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t.XjXqzh);
   } else {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     const obj = { resolution: null };
     obj[0] = maxResolution.height;
-    stringResult = intl.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.TEOC0I, obj);
+    stringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.TEOC0I, obj);
   }
   return stringResult;
 };
 export const getFPSText = function getFPSText(maxFrameRate) {
-  const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-  return intl.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.Qb44XH, { fps: maxFrameRate });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.Qb44XH, { fps: maxFrameRate });
 };
 export const getMaxQuality = function getMaxQuality(participant) {
   let tmp = null;
@@ -164,7 +166,7 @@ export const trackStreamSettingsUpdate = function trackStreamSettingsUpdate(pres
   if (null != guildId) {
     guild = guild.getGuild(guildId);
   }
-  let obj = require("AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   let premiumType;
   if (currentUser != null) {
     premiumType = currentUser.premiumType;

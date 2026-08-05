@@ -1,3 +1,5 @@
+import { perceptualToAmplitude } from "../../utils/PerceptualVolumeUtils.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/soundboard/getVolumeForSound.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 
@@ -7,7 +9,7 @@ let result = require("explicitContentFromProto").fileFinishedImporting("modules/
 export default function getVolumeForSound(arg0, USER) {
   let tmp = USER;
   if (USER === undefined) {
-    const SoundboardSettings = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.SoundboardSettings;
+    const SoundboardSettings = explicitContentFromProto /* explicitContentFromProto */.SoundboardSettings;
     const setting = SoundboardSettings.getSetting();
     let num;
     if (setting != null) {
@@ -18,7 +20,7 @@ export default function getVolumeForSound(arg0, USER) {
     }
     tmp = num;
   }
-  const result = require("../../utils/PerceptualVolumeUtils.tsx") /* perceptualToAmplitude */.amplitudeToPerceptual(tmp) / 100;
+  const result = perceptualToAmplitude /* perceptualToAmplitude */.amplitudeToPerceptual(tmp) / 100;
   return Math.min(arg0 * result * Math.min(outputVolume.getOutputVolume() / 100, 1), 1);
 };
 export const getPerceptualSoundboardVolume = function getPerceptualSoundboardVolume(USER) {
@@ -26,5 +28,5 @@ export const getPerceptualSoundboardVolume = function getPerceptualSoundboardVol
   if (USER == null) {
     num = 100;
   }
-  return require("../../utils/PerceptualVolumeUtils.tsx") /* perceptualToAmplitude */.amplitudeToPerceptual(num) / 100;
+  return perceptualToAmplitude /* perceptualToAmplitude */.amplitudeToPerceptual(num) / 100;
 };

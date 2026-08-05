@@ -1,3 +1,33 @@
+import { registerAsset } from "../../../../_runtime/01240_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01242_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01243_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01244_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01245_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01246_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01247_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01248_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01249_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01250_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01251_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01252_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01253_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01254_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01255_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01256_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01257_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01258_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01259_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01260_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01261_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01262_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01263_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01264_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01265_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01266_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01267_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01268_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01269_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01270_registerAsset.js";
 // discord_app/modules/asset_json/native/AssetJsonUtils.tsx
 import registerAsset from "registerAsset";
 import get_ActivityIndicator from "registerAsset";
@@ -89,94 +119,94 @@ const result = require("registerAsset").fileFinishedImporting("modules/asset_jso
 
 export const jsonAssets = {
   i18n_bg() {
-    return loadJsonAsset(require("../../../../_runtime/01240_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_cs() {
-    return loadJsonAsset(require("../../../../_runtime/01242_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_da() {
-    return loadJsonAsset(require("../../../../_runtime/01243_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_de() {
-    return loadJsonAsset(require("../../../../_runtime/01244_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_el() {
-    return loadJsonAsset(require("../../../../_runtime/01245_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_enGB() {
-    return loadJsonAsset(require("../../../../_runtime/01246_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_esES() {
-    return loadJsonAsset(require("../../../../_runtime/01247_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_es419() {
-    return loadJsonAsset(require("../../../../_runtime/01248_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_fi() {
-    return loadJsonAsset(require("../../../../_runtime/01249_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_fr() {
-    return loadJsonAsset(require("../../../../_runtime/01250_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_hr() {
-    return loadJsonAsset(require("../../../../_runtime/01251_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_hu() {
-    return loadJsonAsset(require("../../../../_runtime/01252_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_it() {
-    return loadJsonAsset(require("../../../../_runtime/01253_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_ja() {
-    return loadJsonAsset(require("../../../../_runtime/01254_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_ko() {
-    return loadJsonAsset(require("../../../../_runtime/01255_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_lt() {
-    return loadJsonAsset(require("../../../../_runtime/01256_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_nl() {
-    return loadJsonAsset(require("../../../../_runtime/01257_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_no() {
-    return loadJsonAsset(require("../../../../_runtime/01258_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_pl() {
-    return loadJsonAsset(require("../../../../_runtime/01259_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_ptBR() {
-    return loadJsonAsset(require("../../../../_runtime/01260_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_ro() {
-    return loadJsonAsset(require("../../../../_runtime/01261_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_ru() {
-    return loadJsonAsset(require("../../../../_runtime/01262_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_svSE() {
-    return loadJsonAsset(require("../../../../_runtime/01263_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_th() {
-    return loadJsonAsset(require("../../../../_runtime/01264_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_tr() {
-    return loadJsonAsset(require("../../../../_runtime/01265_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_uk() {
-    return loadJsonAsset(require("../../../../_runtime/01266_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_vi() {
-    return loadJsonAsset(require("../../../../_runtime/01267_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_zhCN() {
-    return loadJsonAsset(require("../../../../_runtime/01268_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_zhTW() {
-    return loadJsonAsset(require("../../../../_runtime/01269_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   },
   i18n_hi() {
-    return loadJsonAsset(require("../../../../_runtime/01270_registerAsset.js") /* registerAsset */);
+    return loadJsonAsset(registerAsset /* registerAsset */);
   }
 };
 export { loadJsonAsset };

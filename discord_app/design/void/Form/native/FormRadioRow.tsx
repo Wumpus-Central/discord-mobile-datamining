@@ -1,3 +1,7 @@
+import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import { context } from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import { TableRadioRow } from "../../../components/TableRow/native/TableRadioRow.native.tsx";
+import { FormRow } from "FormRow.tsx";
 // discord_app/design/void/Form/native/FormRadioRow.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -19,8 +23,8 @@ export default function FormRadioRow(arg0) {
   ({ leading, onPress } = arg0);
   ({ value, style } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  const context = React.useContext(require("../../../components/RedesignCompat/native/RedesignCompat.native.tsx") /* context */.RedesignCompatContext);
-  let obj = require("../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx") /* useCheckboxA11yNative */;
+  const context = React.useContext(context /* context */.RedesignCompatContext);
+  let obj = useCheckboxA11yNative /* useCheckboxA11yNative */;
   const radioA11yNative = obj.useRadioA11yNative({ selected });
   if (context) {
     obj = { icon: null, value: null, legacyCompat_selected: null, legacyCompat_onPress: null };
@@ -29,7 +33,7 @@ export default function FormRadioRow(arg0) {
     obj[2] = selected;
     obj[3] = onPress;
     const merged1 = Object.assign(merged);
-    let tmp8Result = tmp8(require("../../../components/TableRow/native/TableRadioRow.native.tsx") /* TableRadioRow */.TableRadioRow, obj);
+    let tmp8Result = tmp8(TableRadioRow /* TableRadioRow */.TableRadioRow, obj);
   } else {
     obj = {};
     const merged2 = Object.assign(merged);
@@ -51,8 +55,8 @@ export default function FormRadioRow(arg0) {
       tmp8Result1 = tmp8(tmp9(5331), obj2);
     }
     obj.leading = tmp8Result1;
-    tmp8Result = tmp8(require("FormRow.tsx"), obj);
-    const tmp10 = require("FormRow.tsx");
+    tmp8Result = tmp8(FormRow, obj);
+    const tmp10 = FormRow;
   }
   return tmp8Result;
 };

@@ -1,3 +1,5 @@
+import { defaultAreStatesEqual } from "../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { getFavoritesAwareGuildName } from "../modules/favorites/FavoritesUtils.tsx";
 // discord_app/experiments/ChannelSummariesExperiment.tsx
 import { isGuildNSFW } from "GuildNSFWContentLevel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -52,8 +54,8 @@ function canSeeChannelSummaries(channel, flag, arg2) {
           if (tmp15) {
             let isFavoritesGuildIdResult = id === closure_4;
             if (!isFavoritesGuildIdResult) {
-              isFavoritesGuildIdResult = require("../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */.isFavoritesGuildId(id);
-              const obj = require("../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
+              isFavoritesGuildIdResult = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(id);
+              const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
             }
             tmp15 = isFavoritesGuildIdResult;
           }
@@ -100,8 +102,8 @@ export const canGuildUseConversationSummaries = function canGuildUseConversation
     if (tmp2) {
       let isFavoritesGuildIdResult = id === closure_4;
       if (!isFavoritesGuildIdResult) {
-        isFavoritesGuildIdResult = require("../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */.isFavoritesGuildId(id);
-        const obj = require("../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
+        isFavoritesGuildIdResult = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(id);
+        const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
       }
       tmp2 = isFavoritesGuildIdResult;
     }
@@ -133,7 +135,7 @@ export const useGuildEligibleForSummaries = function useGuildEligibleForSummarie
   const _require = arg0;
   const items = [createGuildRecordFromRust];
   const items1 = [arg0];
-  return _require("../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
+  return _defaultAreStatesEqual.useStateFromStores(items, () => {
     let id;
     if (lib != null) {
       id = lib.id;

@@ -1,3 +1,7 @@
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { ShareChatInput } from "ShareChatInput.tsx";
+import { ShareFooterLayout } from "ShareFooterLayout.tsx";
+import { useShareChatInputActions } from "useShareChatInputActions.tsx";
 // discord_app/modules/share/native/ShareScreenFooter.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -26,7 +30,7 @@ export default function ShareScreenFooter(arg0) {
   if (disabled === undefined) {
     disabled = false;
   }
-  let obj = require("useShareChatInputActions.tsx") /* useShareChatInputActions */;
+  let obj = useShareChatInputActions /* useShareChatInputActions */;
   const shareChatInputActions = obj.useShareChatInputActions(setText, undefined, appEntryKey);
   ({ textInputRef, isInputFocused, handleSelectionChange, handleMessageFocus, handleMessageBlur, handlePressEmoji } = shareChatInputActions);
   obj = { preview, sendButton: null, chatInput: null, avoidKeyboard: null };
@@ -42,8 +46,8 @@ export default function ShareScreenFooter(arg0) {
   }
   obj[4] = tmp7;
   obj[5] = isSending;
-  obj[1] = jsx(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, { variant: "primary", size: "md", text: sendLabel, disabled: null, onPress: null, loading: null });
-  obj[2] = jsx(require("ShareChatInput.tsx"), { inputRef: textInputRef, text, onChange: setText, onSelectionChange: handleSelectionChange, onFocus: handleMessageFocus, onBlur: handleMessageBlur, onPressEmoji: handlePressEmoji, onSend, disabled });
+  obj[1] = jsx(Button /* Button */.Button, { variant: "primary", size: "md", text: sendLabel, disabled: null, onPress: null, loading: null });
+  obj[2] = jsx(ShareChatInput, { inputRef: textInputRef, text, onChange: setText, onSelectionChange: handleSelectionChange, onFocus: handleMessageFocus, onBlur: handleMessageBlur, onPressEmoji: handlePressEmoji, onSend, disabled });
   obj[3] = isInputFocused;
-  return jsx(require("ShareFooterLayout.tsx"), { variant: "primary", size: "md", text: sendLabel, disabled: null, onPress: null, loading: null });
+  return jsx(ShareFooterLayout, { variant: "primary", size: "md", text: sendLabel, disabled: null, onPress: null, loading: null });
 };

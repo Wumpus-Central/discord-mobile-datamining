@@ -1,3 +1,5 @@
+import { Button } from "../../design/void/native.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/components_native/premium/PremiumUnverifiedWarning.tsx
 import importDefaultResult from "mergeGuildAvatar";
 import { jsx } from "jsxProd";
@@ -19,9 +21,9 @@ PremiumUnverifiedWarning.prototype["render"] = function render() {
     const obj = { style: null, children: null };
     const items = [tmp.warning, tmp2];
     obj[0] = items;
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[1] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["0LgOKH"]);
-    tmp3 = jsx(require("../../design/void/native.tsx") /* Button */.LegacyText, { style: null, children: null });
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["0LgOKH"]);
+    tmp3 = jsx(Button /* Button */.LegacyText, { style: null, children: null });
   }
   return tmp3;
 };

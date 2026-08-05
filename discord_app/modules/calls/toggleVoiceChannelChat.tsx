@@ -1,3 +1,4 @@
+import { ChannelRTCActionCreators } from "../../actions/ChannelRTCActionCreators.tsx";
 // discord_app/modules/calls/toggleVoiceChannelChat.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
@@ -19,7 +20,7 @@ export const toggleVoiceChannelChat = function toggleVoiceChannelChat(open) {
           if (open == null) {
             tmp3 = !chatOpen.getChatOpen(channelId);
           }
-          require("../../actions/ChannelRTCActionCreators.tsx").updateChatOpen(channelId, tmp3);
+          ChannelRTCActionCreators.updateChatOpen(channelId, tmp3);
           obj = { channelId: null, chatOpen: null };
           obj[0] = channelId;
           obj[1] = tmp3;

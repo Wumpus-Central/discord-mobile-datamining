@@ -1,3 +1,6 @@
+import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
+import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/stage_channels/native/channel_permissions/ViewModerators.tsx
 import ME from "ME";
 import "getSystemLocale";
@@ -214,9 +217,9 @@ export const openAddModeratorsActionSheet = function openAddModeratorsActionShee
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = require("../../../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
-  const obj2 = require("../../../action_sheet/native/ActionSheetActionCreators.tsx");
+  const obj2 = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel, canSkip: flag };
-  obj2.openLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(15770, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
+  obj2.openLazy(asyncRequireImpl /* asyncRequireImpl */(15770, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
 };

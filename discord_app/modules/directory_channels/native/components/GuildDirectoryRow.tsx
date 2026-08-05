@@ -1,3 +1,6 @@
+import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
+import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
+import { GuildDirectoryMoreMenu } from "GuildDirectoryMoreMenu.tsx";
 // discord_app/modules/directory_channels/native/components/GuildDirectoryRow.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import _slicedToArray from "_slicedToArray";
@@ -150,7 +153,7 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
   importDefault = tmp4;
   const tmp5 = callback(importAllResult.useState(false), 2);
   dependencyMap = tmp5[1];
-  let obj1 = require("../../../../utils/AvatarUtils.tsx");
+  let obj1 = getAvatarURL;
   obj = { id: entry.guildId, icon: entry.icon, size: 40 };
   const guildIconURL = obj1.getGuildIconURL(obj);
   const intl = tmp2(1236).intl;
@@ -170,7 +173,7 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
     const tmp2Result = tmp2(1411);
   }
   obj4[2] = result;
-  const items1 = [closure_10(require("../../../guild/native/GuildIcon.tsx"), obj4), ];
+  const items1 = [closure_10(GuildIconSizes, obj4), ];
   const obj5 = { style: tmp.guildInfoContainer, children: null };
   const items2 = [closure_10(entry(4281).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: entry.name }), ];
   const obj6 = { style: tmp.memberInfo, children: null };
@@ -212,8 +215,8 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
   items1[1] = closure_12(View, obj5);
   obj3[1] = items1;
   const items6 = [closure_12(View, obj3), ];
-  const tmp6Result = require("../../../guild/native/GuildIcon.tsx");
-  items6[1] = closure_10(View, { children: closure_10(require("GuildDirectoryMoreMenu.tsx"), { entry }) });
+  const tmp6Result = GuildIconSizes;
+  items6[1] = closure_10(View, { children: closure_10(GuildDirectoryMoreMenu, { entry }) });
   obj2[1] = items6;
   const items7 = [closure_12(View, obj2), , , ];
   let tmp9Result = null != description;

@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -12,14 +13,14 @@ let c3 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles((height) => {
   let obj = { row: null, rowInner: null, rowHeaderWrapper: null, placeholderAvatar: null, placeholderText: null };
-  obj = { paddingHorizontal: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, flexDirection: "row", alignItems: "center", height };
+  obj = { paddingHorizontal: Themes.space.PX_16, flexDirection: "row", alignItems: "center", height };
   obj[0] = obj;
-  obj = { marginHorizontal: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, flex: 1 };
+  obj = { marginHorizontal: Themes.space.PX_16, flex: 1 };
   obj[1] = obj;
   obj[2] = { alignItems: "center", flexDirection: "row" };
-  obj[3] = { width: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32, height: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32, borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, overflow: "hidden", backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE };
-  const obj1 = { width: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32, height: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32, borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, overflow: "hidden", backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE };
-  obj[4] = { height: 20, borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE };
+  obj[3] = { width: Themes.space.PX_32, height: Themes.space.PX_32, borderRadius: Themes.radii.lg, overflow: "hidden", backgroundColor: Themes.colors.BORDER_SUBTLE };
+  const obj1 = { width: Themes.space.PX_32, height: Themes.space.PX_32, borderRadius: Themes.radii.lg, overflow: "hidden", backgroundColor: Themes.colors.BORDER_SUBTLE };
+  obj[4] = { height: 20, borderRadius: Themes.radii.sm, backgroundColor: Themes.colors.BORDER_SUBTLE };
   return obj;
 });
 let closure_9 = { code: "function UserPlaceholderRowTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };

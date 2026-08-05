@@ -1,3 +1,5 @@
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/modules/user/UserStoreUtils.tsx
 import { Environments } from "Environments";
 import ME from "ME";
@@ -13,7 +15,7 @@ export const validatePremiumType = function validatePremiumType(arg0, arg1, prem
     tmp = undefined === arg1;
   }
   if (!tmp) {
-    require("../../../_runtime/metro/00038__.js")(premiumType === arg1, "Premium type should not change for non-staff users");
+    00038__(premiumType === arg1, "Premium type should not change for non-staff users");
   }
 };
 export const getEnv = function getEnv(arg0) {
@@ -68,8 +70,8 @@ export const isStaffEnvRawData = function isStaffEnvRawData(flags) {
     if (tmp9) {
       let tmp10 = null == flags.flags;
       if (!tmp10) {
-        tmp10 = !require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(flags.flags, constants.STAFF);
-        const obj = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+        tmp10 = !hasFlag /* hasFlag */.hasFlag(flags.flags, constants.STAFF);
+        const obj = hasFlag /* hasFlag */;
       }
       let tmp14 = !tmp10;
       if (tmp10) {

@@ -1,3 +1,4 @@
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/modules/messages/isCrosspost.tsx
 import ME from "ME";
 
@@ -10,8 +11,8 @@ const result = require("set").fileFinishedImporting("modules/messages/isCrosspos
 export default function isCrosspost(type) {
   let hasFlagResult = type.type === constants3.DEFAULT;
   if (hasFlagResult) {
-    hasFlagResult = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(type.flags, constants.IS_CROSSPOST);
-    const obj = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+    hasFlagResult = hasFlag /* hasFlag */.hasFlag(type.flags, constants.IS_CROSSPOST);
+    const obj = hasFlag /* hasFlag */;
   }
   if (hasFlagResult) {
     hasFlagResult = null != type.messageReference;

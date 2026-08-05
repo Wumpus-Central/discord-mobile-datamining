@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/quests/QuestActionCreators.tsx
 import initializeState from "initializeState";
 import { getVisibleGuildIdsMethod } from "SidebarVisibilityMethodStore";
@@ -2922,7 +2923,7 @@ export const dismissQuestContent = function dismissQuestContent(id, QUEST_BAR_MO
   return applyArgumentsResult;
 };
 export const dismissProgressTrackingFailureNotice = function dismissProgressTrackingFailureNotice(streamKey) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE", streamKey };
   obj.dispatch(obj);
 };
@@ -2957,17 +2958,17 @@ export const resetQuestDismissibilityStatus = function resetQuestDismissibilityS
   return applyArgumentsResult;
 };
 export const overrideQuestForPlacement = function overrideQuestForPlacement(placement, closure_0) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "QUESTS_PREVIEW_OVERRIDE", placement, questId: closure_0 };
   obj.dispatch(obj);
 };
 export const selectTaskPlatform = function selectTaskPlatform(closure_0, platform) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "QUESTS_SELECT_TASK_PLATFORM", questId: closure_0, platform };
   obj.dispatch(obj);
 };
 export const questsVisibleMobileMessagesChanged = function questsVisibleMobileMessagesChanged(payload) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "QUESTS_VISIBLE_MOBILE_MESSAGES_CHANGED", payload };
   obj.dispatch(obj);
 };
@@ -2982,12 +2983,12 @@ export const fetchClaimedQuests = function fetchClaimedQuests() {
   return applyArgumentsResult;
 };
 export const updateOptimisticProgress = function updateOptimisticProgress(id, taskType, currentTime) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "QUESTS_UPDATE_OPTIMISTIC_PROGRESS", questId: id, taskEventName: taskType, progress: currentTime };
   obj.dispatch(obj);
 };
 export const resetOptimisticProgress = function resetOptimisticProgress(questId) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "QUESTS_RESET_OPTIMISTIC_PROGRESS", questId };
   obj.dispatch(obj);
 };
@@ -3002,7 +3003,7 @@ export const fetchQuestToDeliver = function fetchQuestToDeliver(MOBILE_HOME_DOCK
   return applyArgumentsResult;
 };
 export const clearQuestAdDecision = function clearQuestAdDecision(placement, ttlMillis) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "QUESTS_CLEAR_EXPIRED_QUEST_TO_DELIVER", placement, fetchedAt: Date.now(), responseTtlSeconds: ttlMillis / 1000 };
   obj.dispatch(obj);
 };
@@ -3017,7 +3018,7 @@ export const fetchEarnedQuestToDeliver = function fetchEarnedQuestToDeliver() {
   return applyArgumentsResult;
 };
 export const updatePrevRestingQuestDockMode = function updatePrevRestingQuestDockMode(mode) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "QUESTS_PREV_RESTING_QUEST_DOCK_MODE_UPDATE", mode };
   obj.dispatch(obj);
 };
@@ -3042,7 +3043,7 @@ export const fetchVideoTranscript = function fetchVideoTranscript(arg0, arg1) {
   return applyArgumentsResult;
 };
 export const updateQuestDockVisibilityEligibility = function updateQuestDockVisibilityEligibility(isEligibleToBeVisible) {
-  require("../../Dispatcher.tsx").dispatch({ type: "QUESTS_DOCK_VISIBILITY_ELIGIBILITY_UPDATE", isEligibleToBeVisible: isEligibleToBeVisible.isEligibleToBeVisible });
+  dispatcher.dispatch({ type: "QUESTS_DOCK_VISIBILITY_ELIGIBILITY_UPDATE", isEligibleToBeVisible: isEligibleToBeVisible.isEligibleToBeVisible });
 };
 export const fetchQuest = function fetchQuest() {
   const self = this;
@@ -3085,27 +3086,27 @@ export const fetchQuestHomeHeroPreview = function fetchQuestHomeHeroPreview() {
   return applyArgumentsResult;
 };
 export const dismissQuestActivityModal = function dismissQuestActivityModal(id) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "UNENROLLED_ACTIVITY_QUEST_DISMISS", questId: id };
   obj.dispatch(obj);
 };
 export const setAutoEnroll = function setAutoEnroll(autoEnroll) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "UNENROLLED_ACTIVITY_QUEST_AUTO_ENROLL", autoEnroll };
   obj.dispatch(obj);
 };
 export const markAdContentSeen = function markAdContentSeen(QUEST, items) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "AD_CONTENT_MARK_SEEN", adCreativeType: QUEST, contentIds: items };
   obj.dispatch(obj);
 };
 export const markAdContentUnseen = function markAdContentUnseen(QUEST, items) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "AD_CONTENT_MARK_UNSEEN", adCreativeType: QUEST, contentIds: items };
   obj.dispatch(obj);
 };
 export const markQuestDiscovered = function markQuestDiscovered(questId) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "QUESTS_MARK_DISCOVERED", questId };
   obj.dispatch(obj);
 };

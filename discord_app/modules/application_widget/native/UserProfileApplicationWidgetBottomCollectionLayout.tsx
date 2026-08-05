@@ -1,3 +1,4 @@
+import { resolvedValuesFromUserApplicationIdentityProfile } from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetBottomCollectionLayout.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -18,11 +19,11 @@ function CollectionItem(arg0) {
   if (componentConfig != null) {
     image = componentConfig.fields.image;
   }
-  const items = [require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.MEDIA];
+  const items = [resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
-  let obj = require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */;
+  let obj = resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */;
   const singleStringOrSkeleton = obj.resolveSingleStringOrSkeleton(componentConfig, "name", resolveFieldValue);
-  let obj1 = require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */;
+  let obj1 = resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */;
   const singleStringOrSkeleton1 = obj1.resolveSingleStringOrSkeleton(componentConfig, "description", resolveFieldValue);
   obj = { style: tmp.item, children: null };
   if (null != fieldValue) {

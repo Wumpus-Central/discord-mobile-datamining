@@ -1,3 +1,5 @@
+import { _typeof } from "../../_runtime/metro/04611__typeof.js";
+import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 // discord_app/utils/StripeUtils.tsx
 import _typeof from "_typeof";
 import _slicedToArray from "_slicedToArray";
@@ -11,12 +13,12 @@ function getStripe() {
   if (null != closure_2) {
     let resolved = Promise.resolve(closure_2);
   } else {
-    const stripe = require("../../_runtime/metro/04611__typeof.js") /* _typeof */.loadStripe(constants.STRIPE.KEY);
+    const stripe = _typeof /* _typeof */.loadStripe(constants.STRIPE.KEY);
     resolved = stripe.then((arg0) => {
       let closure_2 = arg0;
       return arg0;
     });
-    const obj = require("../../_runtime/metro/04611__typeof.js") /* _typeof */;
+    const obj = _typeof /* _typeof */;
   }
   return resolved;
 }
@@ -407,7 +409,7 @@ export const getStripeElementLocale = function getStripeElementLocale(arg0) {
 };
 export const useStripeLocale = function useStripeLocale() {
   const items = [_getSystemLocale];
-  return require("../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+  return initialize /* initialize */.useStateFromStores(items, () => {
     locale = locale.locale;
     let tmp = table[locale];
     if (tmp == null) {

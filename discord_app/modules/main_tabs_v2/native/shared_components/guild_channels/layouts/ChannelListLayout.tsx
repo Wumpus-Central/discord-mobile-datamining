@@ -1,10 +1,12 @@
+import { explicitContentFromProto } from "../../../../../user_settings/UserSettings.tsx";
+import { ChannelListLayoutTypes } from "../../../../ChannelListLayoutTypes.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx
 function getLayoutStyles(layout, launchpad) {
   let flag = launchpad;
   if (launchpad === undefined) {
     flag = false;
   }
-  if (require("../../../../ChannelListLayoutTypes.tsx") /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COZY_DRAWER === layout) {
+  if (ChannelListLayoutTypes /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COZY_DRAWER === layout) {
     return tmp(9712).CHANNEL_LIST_STYLES_COZY_DRAWER;
   } else if (tmp(3963).ChannelListLayoutTypes.COZY_DRAWER_SMOL === layout) {
     return tmp(9712).CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL;
@@ -26,15 +28,15 @@ export function makeSizeStyle(size) {
   return { width: size, height: size };
 }
 export const isLayoutCompact = function isLayoutCompact(closure_2) {
-  return closure_2 === require("../../../../ChannelListLayoutTypes.tsx") /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COMPACT;
+  return closure_2 === ChannelListLayoutTypes /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COMPACT;
 };
 export const isLayoutCozy = function isLayoutCozy(layout) {
-  return layout === require("../../../../ChannelListLayoutTypes.tsx") /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COZY || layout === require("../../../../ChannelListLayoutTypes.tsx") /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COZY_DRAWER || layout === require("../../../../ChannelListLayoutTypes.tsx") /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COZY_DRAWER_SMOL;
+  return layout === ChannelListLayoutTypes /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COZY || layout === ChannelListLayoutTypes /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COZY_DRAWER || layout === ChannelListLayoutTypes /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COZY_DRAWER_SMOL;
 };
 export const useMessagesTabLayout = function useMessagesTabLayout(panelVariant) {
-  const ChannelListLayoutSetting = require("../../../../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.ChannelListLayoutSetting;
+  const ChannelListLayoutSetting = explicitContentFromProto /* explicitContentFromProto */.ChannelListLayoutSetting;
   const setting = ChannelListLayoutSetting.useSetting();
-  const ChannelListLayoutTypes = require("../../../../ChannelListLayoutTypes.tsx") /* ChannelListLayoutTypes */.ChannelListLayoutTypes;
+  const ChannelListLayoutTypes = ChannelListLayoutTypes /* ChannelListLayoutTypes */.ChannelListLayoutTypes;
   if (panelVariant) {
     let COZY = ChannelListLayoutTypes.COZY_DRAWER_SMOL;
   } else if (setting === ChannelListLayoutTypes.COMPACT) {
@@ -66,7 +68,7 @@ export const getScaledChannelRowHeight = function getScaledChannelRowHeight(arg0
   }
   const result = 2 * marginVertical;
   let num = 0;
-  if (layout === require("../../../../ChannelListLayoutTypes.tsx") /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COMPACT) {
+  if (layout === ChannelListLayoutTypes /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COMPACT) {
     num = 4;
   }
   return sum + result + num;

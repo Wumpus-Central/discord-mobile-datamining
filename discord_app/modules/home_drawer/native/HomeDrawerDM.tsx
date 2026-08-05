@@ -1,3 +1,5 @@
+import { useMessagePreview } from "../../main_tabs_v2/useMessagePreviews.tsx";
+import { MobileHomeDrawerExperiment } from "HomeDrawerExperiment.tsx";
 // discord_app/modules/home_drawer/native/HomeDrawerDM.tsx
 import MobileHomeDrawerExperiment from "MobileHomeDrawerExperiment";
 import { View } from "ChannelListLayoutTypes";
@@ -40,7 +42,7 @@ function HomeDrawerDMExpandedChildren(channel) {
     return tmp2;
   });
   const obj2 = channel(589);
-  const tmp3 = require("../../main_tabs_v2/useMessagePreviews.tsx")(channel, { unread: channel(15338).useBaseChannelUnreadBadgeState(channel, false).unread });
+  const tmp3 = useMessagePreview(channel, { unread: channel(15338).useBaseChannelUnreadBadgeState(channel, false).unread });
   c4 = tmp3;
   const obj3 = channel(15338);
   const items2 = [updateUserGuildSettingsInternal];
@@ -114,7 +116,7 @@ let closure_12 = createCacheKey.createStyles({ title: { flexDirection: "row", al
 const result = require("createChannelRecord").fileFinishedImporting("modules/home_drawer/native/HomeDrawerDM.tsx");
 
 export default function HomeDrawerDMExpandedChildrenWrapper(channel) {
-  const MobileHomeDrawerExperiment = require("HomeDrawerExperiment.tsx") /* MobileHomeDrawerExperiment */.MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = MobileHomeDrawerExperiment /* MobileHomeDrawerExperiment */.MobileHomeDrawerExperiment;
   let tmp2 = null;
   if (MobileHomeDrawerExperiment.useConfig({ location: "dm-expanded-children" }).enableHome) {
     tmp2 = null;

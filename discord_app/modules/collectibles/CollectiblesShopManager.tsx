@@ -1,3 +1,5 @@
+import { _maybeFetchCollectionsWithProducts } from "../storefront/StorefrontCollectionActionCreators.tsx";
+import { _maybeFetchProductsWithSkus } from "../storefront/StorefrontProductActionCreators.tsx";
 // discord_app/modules/collectibles/CollectiblesShopManager.tsx
 import getFetchState from "getFetchState";
 import closure_3 from "getFetchState";
@@ -26,7 +28,7 @@ function flushProducts() {
   for (const item10016 of tmp2) {
     let tmp3 = require;
     let tmp4 = dependencyMap;
-    let obj = require("../storefront/StorefrontProductActionCreators.tsx") /* _maybeFetchProductsWithSkus */;
+    let obj = _maybeFetchProductsWithSkus /* _maybeFetchProductsWithSkus */;
     obj = { skuIds: null };
     obj[0] = item10016;
     let result = obj.maybeFetchProductsBySkuIds(obj);
@@ -40,7 +42,7 @@ function flushCollections() {
   for (const item10016 of tmp2) {
     let tmp3 = require;
     let tmp4 = dependencyMap;
-    let obj = require("../storefront/StorefrontCollectionActionCreators.tsx") /* _maybeFetchCollectionsWithProducts */;
+    let obj = _maybeFetchCollectionsWithProducts /* _maybeFetchCollectionsWithProducts */;
     obj = { collectionIds: null };
     obj[0] = item10016;
     let result = obj.maybeFetchCollectionsWithProducts(obj);

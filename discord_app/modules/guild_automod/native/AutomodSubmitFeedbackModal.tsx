@@ -1,3 +1,11 @@
+import { registerAsset } from "../../../../_runtime/07837_registerAsset.js";
+import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { HeaderActionButton } from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
+import { Feedback } from "../AutomodFeedback.tsx";
 // discord_app/modules/guild_automod/native/AutomodSubmitFeedbackModal.tsx
 import _slicedToArray from "_slicedToArray";
 import AutomodAlertActionType from "AutomodAlertActionType";
@@ -14,13 +22,13 @@ function Navbar(onClose) {
   let obj = { top: true, style: tmp.header, children: null };
   obj = { style: tmp.closeButtonContainer, children: null };
   obj = { accessibilityLabel: null, onPress: null, source: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.cpT0Cq);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
   obj[1] = onClose.onClose;
-  obj[2] = require("../../../../_runtime/07837_registerAsset.js");
-  obj[1] = callback2(require("../../../design/components/Navigator/native/HeaderActionButton.native.tsx") /* HeaderActionButton */.HeaderActionButton, obj);
+  obj[2] = registerAsset;
+  obj[1] = callback2(HeaderActionButton /* HeaderActionButton */.HeaderActionButton, obj);
   obj[2] = callback2(View, obj);
-  return callback2(require("../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return callback2(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 }
 function SubmitFeedbackScreen(onSubmit) {
   let importDefault;
@@ -30,17 +38,17 @@ function SubmitFeedbackScreen(onSubmit) {
   let feedbackOptions;
   const tmp = createCacheKey();
   dependencyMap = tmp;
-  let obj = require("../AutomodFeedback.tsx") /* Feedback */;
+  let obj = Feedback /* Feedback */;
   feedbackOptions = obj.generateFeedbackOptions();
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.headerTitle, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["7bdzNo"]);
-  const items = [callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , , ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["7bdzNo"]);
+  const items = [callback2(Text /* Text */.Text, obj), , , ];
   const obj1 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[3] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Lbpk6m);
-  items[1] = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.Lbpk6m);
+  items[1] = callback2(Text /* Text */.Text, obj1);
   items[2] = callback2(View, {
     style: tmp.formBody,
     children: feedbackOptions.map((children) => {
@@ -83,12 +91,12 @@ function SubmitFeedbackScreen(onSubmit) {
       return outer1_8(outer1_4.Fragment, { children }, value);
     })
   };
-  items1[1] = { paddingBottom: require("../../safe_area/useSafeAreaInsets.native.tsx")().bottom + 16 };
+  items1[1] = { paddingBottom: useSafeAreaInsets().bottom + 16 };
   const obj5 = { size: "md", text: null, onPress: null };
-  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj5[1] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Z6DZZ6);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj5[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.Z6DZZ6);
   obj5[2] = onSubmit.onSubmit;
-  obj3[1] = callback2(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj5);
+  obj3[1] = callback2(Button /* Button */.Button, obj5);
   items[3] = callback2(View, obj3);
   obj[1] = items;
   return callback3(View, obj);

@@ -1,36 +1,38 @@
+import { set } from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/oauth2/scopes.tsx
 let items = [
   () => {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["6xfSCq"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["6xfSCq"]);
   },
   () => {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.ymSk0r);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.ymSk0r);
   },
   () => {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.EnN7c5);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.EnN7c5);
   },
   () => {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["4wMpBs"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["4wMpBs"]);
   },
   () => {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.CncpnK);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.CncpnK);
   },
   () => {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.X9pGvJ);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.X9pGvJ);
   },
   () => {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.sGOSG4);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.sGOSG4);
   },
   () => {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.JfibUq);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.JfibUq);
   }
 ];
 let items1 = [require("set").OAuth2Scopes.BOT, require("set").OAuth2Scopes.OPENID, require("set").OAuth2Scopes.IDENTIFY, require("set").OAuth2Scopes.IDENTIFY_PREMIUM, require("set").OAuth2Scopes.EMAIL, require("set").OAuth2Scopes.CONNECTIONS, require("set").OAuth2Scopes.MESSAGES_READ, require("set").OAuth2Scopes.GUILDS, require("set").OAuth2Scopes.GUILDS_JOIN, require("set").OAuth2Scopes.GUILDS_MEMBERS_READ, require("set").OAuth2Scopes.GUILDS_CHANNELS_READ, require("set").OAuth2Scopes.GDM_JOIN, require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_NOTIFICATIONS_READ, require("set").OAuth2Scopes.RPC_VOICE_READ, require("set").OAuth2Scopes.RPC_VOICE_WRITE, require("set").OAuth2Scopes.RPC_VIDEO_READ, require("set").OAuth2Scopes.RPC_VIDEO_WRITE, require("set").OAuth2Scopes.RPC_SCREENSHARE_READ, require("set").OAuth2Scopes.RPC_SCREENSHARE_WRITE, require("set").OAuth2Scopes.RPC_ACTIVITIES_WRITE, require("set").OAuth2Scopes.APPLICATION_IDENTITIES_WRITE, require("set").OAuth2Scopes.MANAGED_PLATFORM_APPLICATION_IDENTITIES_WRITE, require("set").OAuth2Scopes.APPLICATIONS_BUILDS_UPLOAD, require("set").OAuth2Scopes.APPLICATIONS_BUILDS_READ, require("set").OAuth2Scopes.APPLICATIONS_COMMANDS, require("set").OAuth2Scopes.APPLICATIONS_COMMANDS_UPDATE, require("set").OAuth2Scopes.APPLICATIONS_COMMANDS_PERMISSIONS_UPDATE, require("set").OAuth2Scopes.APPLICATIONS_STORE_UPDATE, require("set").OAuth2Scopes.APPLICATIONS_ENTITLEMENTS, require("set").OAuth2Scopes.ACTIVITIES_INVITES_WRITE, require("set").OAuth2Scopes.ACTIVITIES_READ, require("set").OAuth2Scopes.ACTIVITIES_WRITE, require("set").OAuth2Scopes.RELATIONSHIPS_READ, require("set").OAuth2Scopes.RELATIONSHIPS_WRITE, require("set").OAuth2Scopes.VOICE, require("set").OAuth2Scopes.DM_CHANNELS_READ, require("set").OAuth2Scopes.DM_CHANNELS_MESSAGES_READ, require("set").OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE, require("set").OAuth2Scopes.ROLE_CONNECTIONS_WRITE, require("set").OAuth2Scopes.PRESENCES_READ, require("set").OAuth2Scopes.PRESENCES_WRITE, require("set").OAuth2Scopes.GATEWAY_CONNECT, require("set").OAuth2Scopes.PAYMENT_SOURCES_COUNTRY_CODE, require("set").OAuth2Scopes.SDK_SOCIAL_LAYER_PRESENCE, require("set").OAuth2Scopes.SDK_SOCIAL_LAYER];
@@ -44,7 +46,7 @@ export const ValidScopes = combined;
 export const RemovedScopes = ["rpc.api"];
 export const getScopeNames = function getScopeNames(nextResult, c2) {
   const tmp = require;
-  if (require("../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx") /* set */.OAuth2Scopes.IDENTIFY === nextResult) {
+  if (set /* set */.OAuth2Scopes.IDENTIFY === nextResult) {
     const intl55 = tmp(1236).intl;
     const items = [intl55.string(tmp(1236).t.DD9KQh)];
     return items;
@@ -264,10 +266,10 @@ export const getScopeNames = function getScopeNames(nextResult, c2) {
   }
 };
 export const isSocialLayerUmbrellaScope = function isSocialLayerUmbrellaScope(arg0) {
-  return arg0 === require("../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx") /* set */.OAuth2Scopes.SDK_SOCIAL_LAYER_PRESENCE || arg0 === require("../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx") /* set */.OAuth2Scopes.SDK_SOCIAL_LAYER;
+  return arg0 === set /* set */.OAuth2Scopes.SDK_SOCIAL_LAYER_PRESENCE || arg0 === set /* set */.OAuth2Scopes.SDK_SOCIAL_LAYER;
 };
 export const getSecurityMessage = function getSecurityMessage(scopes) {
-  if (!scopes.includes(require("../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx") /* set */.OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE)) {
+  if (!scopes.includes(set /* set */.OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE)) {
     if (!scopes.includes(tmp(8824).OAuth2Scopes.SDK_SOCIAL_LAYER)) {
       if (!scopes.includes(tmp(8824).OAuth2Scopes.MESSAGES_READ)) {
         if (!scopes.includes(tmp(8824).OAuth2Scopes.DM_CHANNELS_MESSAGES_READ)) {

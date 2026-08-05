@@ -1,3 +1,5 @@
+import { GoLiveVideoPresetResolutionExperiment } from "../GoLiveVideoPresetResolutionExperiment.tsx";
+import { canStreamWithSettings } from "canStreamWithSettings.tsx";
 // discord_app/modules/go_live/utils/getStreamSettingsForPreset.tsx
 import RESOLUTION_720 from "RESOLUTION_720";
 
@@ -5,7 +7,7 @@ let c3;
 let c4;
 let obj1;
 function getApplicationStreamPresetValues() {
-  let obj = require("../GoLiveVideoPresetResolutionExperiment.tsx");
+  let obj = GoLiveVideoPresetResolutionExperiment;
   obj = { [closure_3.PRESET_DOCUMENTS]: items };
   obj = { resolution: closure_4.RESOLUTION_SOURCE, fps: closure_2.FPS_15 };
   items = [obj, { resolution: closure_4.RESOLUTION_SOURCE, fps: closure_2.FPS_5 }];
@@ -33,7 +35,7 @@ function getStreamSettingsForPreset(arg0, user, guildPremiumTier) {
       let tmp7 = arg0;
       let tmp8 = arg1;
       let tmp9 = arg2;
-      if (require("canStreamWithSettings.tsx")(arg0, item10012.resolution, item10012.fps, arg1, arg2)) {
+      if (canStreamWithSettings(arg0, item10012.resolution, item10012.fps, arg1, arg2)) {
         let tmp10 = item10012;
         let items = [, ];
         ({ resolution: arr[0], fps: arr[1] } = tmp4);

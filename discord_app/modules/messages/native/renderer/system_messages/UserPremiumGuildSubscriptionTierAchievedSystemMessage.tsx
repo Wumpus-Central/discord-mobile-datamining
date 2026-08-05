@@ -1,3 +1,8 @@
+import { getNumSubscriptionsPurchasedFromSystemMessage } from "../../../../premium/getNumSubscriptionsPurchasedFromSystemMessage.tsx";
+import { createCommonMessage } from "createCommonMessage.tsx";
+import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
+import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
+import { createUserPremiumGuildSubscriptionSystemMessage } from "UserPremiumGuildSubscriptionSystemMessage.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionTierAchievedSystemMessage.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -9,19 +14,19 @@ export const createUserPremiumGuildSubscriptionTierAchievedSystemMessage = funct
   message = message.message;
   channel = channel.getChannel(message.getChannelId());
   if (null == channel) {
-    return require("UserPremiumGuildSubscriptionSystemMessage.tsx") /* createUserPremiumGuildSubscriptionSystemMessage */.createUserPremiumGuildSubscriptionSystemMessage(message);
+    return createUserPremiumGuildSubscriptionSystemMessage /* createUserPremiumGuildSubscriptionSystemMessage */.createUserPremiumGuildSubscriptionSystemMessage(message);
   } else {
     guild = guild.getGuild(channel.getGuildId());
     if (null == guild) {
-      return require("UserPremiumGuildSubscriptionSystemMessage.tsx") /* createUserPremiumGuildSubscriptionSystemMessage */.createUserPremiumGuildSubscriptionSystemMessage(message);
+      return createUserPremiumGuildSubscriptionSystemMessage /* createUserPremiumGuildSubscriptionSystemMessage */.createUserPremiumGuildSubscriptionSystemMessage(message);
     } else {
-      const tmp13 = require("../../../../premium/getNumSubscriptionsPurchasedFromSystemMessage.tsx")(message);
-      const messageAuthorWithProcessedColor = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */.getMessageAuthorWithProcessedColor(message);
+      const tmp13 = getNumSubscriptionsPurchasedFromSystemMessage(message);
+      const messageAuthorWithProcessedColor = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */.getMessageAuthorWithProcessedColor(message);
       let obj = { message: null, author: null, roleStyle: null };
       obj[0] = message;
       obj[1] = messageAuthorWithProcessedColor;
       obj[2] = message.roleStyle;
-      const tmp16 = require("formatUsernameOnClick.tsx")(obj);
+      const tmp16 = formatUsernameOnClick(obj);
       if (tmp13 > 1) {
         const intl2 = tmp14(1236).intl;
         obj = { username: null, usernameOnClick: null, guildName: null, newTierName: null, numSubscriptions: null };
@@ -44,7 +49,7 @@ export const createUserPremiumGuildSubscriptionTierAchievedSystemMessage = funct
       }
       const obj2 = { content: null };
       obj2[0] = formatToPartsResult;
-      const merged = Object.assign(require("createCommonMessage.tsx")(message));
+      const merged = Object.assign(createCommonMessage(message));
       return obj2;
     }
   }

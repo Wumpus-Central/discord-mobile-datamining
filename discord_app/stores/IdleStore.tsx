@@ -1,3 +1,9 @@
+import { SelectedChannelActionCreators } from "../actions/SelectedChannelActionCreators.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { set } from "../lib/DiscordNative.tsx";
+import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
+import { set } from "../utils/Durations.tsx";
+import { set } from "../utils/PlatformUtils.tsx";
 // discord_app/stores/IdleStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ME from "ME";
@@ -13,24 +19,24 @@ function checkIdleAFK() {
       tmp2 = c12;
     }
     if (!tmp2) {
-      let obj = require("../utils/PlatformUtils.tsx") /* set */;
+      let obj = set /* set */;
       tmp2 = obj.isAndroid() && c13;
       const tmp5 = obj.isAndroid() && c13;
     }
     if (!tmp2) {
       if (c9) {
-        require("../Dispatcher.tsx").dispatch({ type: "IDLE", idle: false });
-        const obj2 = require("../Dispatcher.tsx");
+        dispatcher.dispatch({ type: "IDLE", idle: false });
+        const obj2 = dispatcher;
       }
     }
-    const AfkTimeout = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.AfkTimeout;
+    const AfkTimeout = explicitContentFromProto /* explicitContentFromProto */.AfkTimeout;
     const setting = AfkTimeout.getSetting();
     if (0 !== setting) {
       if (null == closure_3) {
         const _Date = Date;
         const _Math = Math;
         const diff = Date.now() - closure_8;
-        if (diff <= Math.min(setting * require("../utils/Durations.tsx").Millis.SECOND, tmp)) {
+        if (diff <= Math.min(setting * set.Millis.SECOND, tmp)) {
           let tmp17 = c11;
           if (!c11) {
             tmp17 = c12;
@@ -51,16 +57,16 @@ function checkIdleAFK() {
       }
     }
     if (!c10) {
-      require("../Dispatcher.tsx").dispatch({ type: "AFK", afk: true });
-      const obj7 = require("../Dispatcher.tsx");
+      dispatcher.dispatch({ type: "AFK", afk: true });
+      const obj7 = dispatcher;
     }
     tmp14 = require;
   }
   if (!c9) {
     obj = { type: "IDLE", idle: true, idleSince: null };
     obj[2] = closure_8;
-    require("../Dispatcher.tsx").dispatch(obj);
-    const obj3 = require("../Dispatcher.tsx");
+    dispatcher.dispatch(obj);
+    const obj3 = dispatcher;
   }
 }
 ({ IDLE_DURATION: c5, AppStates: closure_6 } = ME);
@@ -78,7 +84,7 @@ if (require("set").isPlatformEmbedded) {
   }
   if (null != powerMonitor) {
     function checkNativeIdle() {
-      const tmp3 = require("../lib/DiscordNative.tsx");
+      const tmp3 = set;
       let getSystemIdleTimeMs;
       if (tmp3 != null) {
         const powerMonitor = tmp3.powerMonitor;
@@ -133,7 +139,7 @@ if (require("set").isPlatformEmbedded) {
       let c11 = true;
       let closure_3 = Date.now();
       checkIdleAFK();
-      require("../actions/SelectedChannelActionCreators.tsx").disconnect();
+      SelectedChannelActionCreators.disconnect();
     });
     const powerMonitor3 = require("set").powerMonitor;
     class IdleStore extends r10079 {

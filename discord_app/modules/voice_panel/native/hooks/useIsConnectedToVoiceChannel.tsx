@@ -1,3 +1,4 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/voice_panel/native/hooks/useIsConnectedToVoiceChannel.tsx
 import fetchFingerprint from "fetchFingerprint";
 import createRTCConnection from "createRTCConnection";
@@ -10,7 +11,7 @@ const result = require("updateVoiceState").fileFinishedImporting("modules/voice_
 export default function useIsConnectedToVoiceChannel(arg0) {
   const _require = arg0;
   const items = [createRTCConnection, updateVoiceState, fetchFingerprint];
-  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const channelId = outer1_3.getChannelId();
     let tmp2 = closure_0;
     if (closure_0 == null) {

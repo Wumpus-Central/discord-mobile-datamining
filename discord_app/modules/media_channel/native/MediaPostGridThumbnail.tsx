@@ -1,3 +1,5 @@
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { ForumPostMediaAndroid } from "../../forums/native/posts/ForumPostMedia.tsx";
 // discord_app/modules/media_channel/native/MediaPostGridThumbnail.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -28,7 +30,7 @@ function MediaPostGridThumbnailAndroid(arg0) {
     obj = { shouldSpoiler: null, blurTheme: null };
     obj[0] = shouldSpoiler;
     obj[1] = blurTheme;
-    obj[4] = callback(require("../../forums/native/posts/ForumPostMedia.tsx") /* ForumPostMediaAndroid */.ForumPostMediaSpoiler, obj);
+    obj[4] = callback(ForumPostMediaAndroid /* ForumPostMediaAndroid */.ForumPostMediaSpoiler, obj);
     let tmp2Result = tmp2(closure_3, obj);
     const tmp3 = closure_3;
   } else {
@@ -40,11 +42,11 @@ function MediaPostGridThumbnailAndroid(arg0) {
     obj1[0] = closure_4.absoluteFill;
     obj1[1] = source;
     obj1[2] = tmp;
-    const items = [callback(require("../../../components_native/common/FastImage.tsx"), obj1), ];
+    const items = [callback(preload, obj1), ];
     const obj2 = { shouldSpoiler: null, blurTheme: null };
     obj2[0] = shouldSpoiler;
     obj2[1] = blurTheme;
-    items[1] = callback(require("../../forums/native/posts/ForumPostMedia.tsx") /* ForumPostMediaAndroid */.ForumPostMediaSpoiler, obj2);
+    items[1] = callback(ForumPostMediaAndroid /* ForumPostMediaAndroid */.ForumPostMediaSpoiler, obj2);
     obj[4] = items;
     tmp2Result = callback2(closure_3, obj);
   }
@@ -64,11 +66,11 @@ function MediaPostGridThumbnailIOS(arg0) {
     obj[0] = iosStyle;
     obj[1] = source;
     obj[2] = resizeMode;
-    const items = [callback(require("../../../components_native/common/FastImage.tsx"), obj), ];
+    const items = [callback(preload, obj), ];
     obj = { shouldSpoiler: null, blurTheme: null };
     obj[0] = shouldSpoiler;
     obj[1] = blurTheme;
-    items[1] = callback(require("../../forums/native/posts/ForumPostMedia.tsx") /* ForumPostMediaAndroid */.ForumPostMediaSpoiler, obj);
+    items[1] = callback(ForumPostMediaAndroid /* ForumPostMediaAndroid */.ForumPostMediaSpoiler, obj);
     obj[0] = items;
     let obj1 = obj;
   } else {
@@ -77,16 +79,16 @@ function MediaPostGridThumbnailIOS(arg0) {
     const items1 = [closure_4.absoluteFill, { opacity: 0.2 }];
     obj2[0] = items1;
     obj2[1] = backgroundImagesource;
-    const items2 = [callback(require("../../../components_native/common/FastImage.tsx"), obj2), , ];
+    const items2 = [callback(preload, obj2), , ];
     const obj3 = { style: null, source: null, resizeMode: null };
     obj3[0] = iosStyle;
     obj3[1] = source;
     obj3[2] = resizeMode;
-    items2[1] = callback(require("../../../components_native/common/FastImage.tsx"), obj3);
+    items2[1] = callback(preload, obj3);
     const obj4 = { shouldSpoiler: null, blurTheme: null };
     obj4[0] = shouldSpoiler;
     obj4[1] = blurTheme;
-    items2[2] = callback(require("../../forums/native/posts/ForumPostMedia.tsx") /* ForumPostMediaAndroid */.ForumPostMediaSpoiler, obj4);
+    items2[2] = callback(ForumPostMediaAndroid /* ForumPostMediaAndroid */.ForumPostMediaSpoiler, obj4);
     obj1[0] = items2;
   }
   return closure_6(closure_7, obj1);

@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/user_settings/premium/native/PremiumPill.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -6,7 +7,7 @@ import createCacheKey from "createCacheKey";
 
 const require = arg1;
 let closure_6 = createCacheKey.createStyles((arg0) => {
-  const tmp3 = require("../../../../../discord_common/js/packages/tokens/native.tsx");
+  const tmp3 = Themes;
   if (arg0) {
     let WHITE = tmp3.unsafe_rawColors.BLACK;
     let tmp5 = tmp;

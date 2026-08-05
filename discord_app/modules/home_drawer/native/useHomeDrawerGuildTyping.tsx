@@ -1,3 +1,4 @@
+import { shallowEqual } from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 // discord_app/modules/home_drawer/native/useHomeDrawerGuildTyping.tsx
 import storeThread from "storeThread";
 import { isThread } from "createChannelRecord";
@@ -8,8 +9,8 @@ const require = arg1;
 function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) {
   let result = typingChannelId.typingChannelId === typingChannelId2.typingChannelId && typingChannelId.typingChannelName === typingChannelId2.typingChannelName;
   if (result) {
-    result = require("../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx") /* shallowEqual */.areArraysShallowEqual(typingChannelId.typingUserIds, typingChannelId2.typingUserIds);
-    const obj = require("../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx") /* shallowEqual */;
+    result = shallowEqual /* shallowEqual */.areArraysShallowEqual(typingChannelId.typingUserIds, typingChannelId2.typingUserIds);
+    const obj = shallowEqual /* shallowEqual */;
   }
   return result;
 }

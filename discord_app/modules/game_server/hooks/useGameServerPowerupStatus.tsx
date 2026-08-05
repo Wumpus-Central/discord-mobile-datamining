@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/game_server/hooks/useGameServerPowerupStatus.tsx
 import noop from "noop";
 import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
@@ -9,7 +10,7 @@ export default function useGameServerPowerupStatus(arg0) {
   const _require = arg0;
   const items = [handleGameServerInstanceCreated];
   const items1 = [arg0];
-  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     const stateForGuild = outer1_4.getStateForGuild(closure_0);
     let entitlements;
     if (stateForGuild != null) {

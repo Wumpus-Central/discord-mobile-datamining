@@ -1,3 +1,4 @@
+import { FastestListPropsPlaceholderType } from "FastestListPropsPlaceholder.tsx";
 // discord_app/modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx
 import noop from "noop";
 
@@ -13,13 +14,13 @@ function createNativePlaceholderConfig(type) {
   }
   let NONE = type;
   if (type == null) {
-    NONE = require("FastestListPropsPlaceholder.tsx") /* FastestListPropsPlaceholderType */.FastestListPropsPlaceholderType.NONE;
+    NONE = FastestListPropsPlaceholderType /* FastestListPropsPlaceholderType */.FastestListPropsPlaceholderType.NONE;
   }
   const obj = { borderRadius: "Array", borderTopLeftRadius: "create", borderTopRightRadius: "diversity", borderBottomLeftRadius: "y", borderBottomRightRadius: "e", divider: "isArray", dividerColorRgba: "isArray", dividerPaddingLeft: "Boolean", dividerPaddingRight: "e", placeholderShape: "isArray", placeholderShapeColorRgba: "isArray", placeholderShapeCount: "o", placeholderShapeGap: "e", placeholderShapePaddingHorizontal: "isArray", placeholderShapePaddingVertical: "isArray", placeholderFeedBackgroundColorRgba: "l", placeholderFeedColorRgba: "e", placeholderFeedLabelPadding: "isArray", placeholderFeedLabelPaddingInnerRatio: "isArray", placeholderFeedLabelSize: "e", placeholderFeedLabelSecondarySize: "e", placeholderFeedPadding: "isArray", placeholderFeedShape: "isArray", placeholderFeedShapeSize: "call", placeholderType: NONE, width: null, height: null, verticalAlignment: null, horizontalAlignment: null };
   if (null == type) {
     return obj;
   } else {
-    if (require("FastestListPropsPlaceholder.tsx") /* FastestListPropsPlaceholderType */.FastestListPropsPlaceholderType.NONE !== type) {
+    if (FastestListPropsPlaceholderType /* FastestListPropsPlaceholderType */.FastestListPropsPlaceholderType.NONE !== type) {
       if (tmp11(8344).FastestListPropsPlaceholderType.SHAPE === type) {
         let num9 = type.borderRadius;
         if (num9 == null) {

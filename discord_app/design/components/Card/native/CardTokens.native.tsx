@@ -1,9 +1,10 @@
+import { createCacheKey } from "../../Styles/native/createStyles.tsx";
 // discord_app/design/components/Card/native/CardTokens.native.tsx
 const result = require("set").fileFinishedImporting("design/components/Card/native/CardTokens.native.tsx");
 
 export const createCardShadowToken = function createCardShadowToken(arg0) {
   const _require = arg0;
-  return _require("../../Styles/native/createStyles.tsx").experimental_createToken((gradient) => {
+  return _createCacheKey.experimental_createToken((gradient) => {
     if (null == gradient.gradient) {
       if ("none" !== closure_0) {
         if ("border" === tmp11) {

@@ -1,3 +1,7 @@
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
+import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemBackdrop.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -22,7 +26,7 @@ function BackdropCard(arg0) {
   ({ buttonLabel, title, description } = arg0);
   let obj = { children: null };
   obj = { spacing: 12, children: null };
-  const items = [callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "heading-lg/bold", children: title }), callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/normal", color: "text-subtle", children: description }), ];
+  const items = [callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: title }), callback2(Text /* Text */.Text, { variant: "text-md/normal", color: "text-subtle", children: description }), ];
   obj = {
     text: buttonLabel,
     onPress() {
@@ -30,10 +34,10 @@ function BackdropCard(arg0) {
       callback(true);
     }
   };
-  items[2] = callback2(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj);
+  items[2] = callback2(Button /* Button */.Button, obj);
   obj[1] = items;
-  obj[0] = callback3(require("../../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
-  return callback2(require("../../../../design/components/Card/native/Card.native.tsx") /* PressableCard */.Card, obj);
+  obj[0] = callback3(Stack /* Stack */.Stack, obj);
+  return callback2(PressableCard /* PressableCard */.Card, obj);
 }
 ({ ScrollView: c4, View: c5, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);

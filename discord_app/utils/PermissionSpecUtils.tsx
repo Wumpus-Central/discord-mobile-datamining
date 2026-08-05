@@ -1,3 +1,8 @@
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { experiment } from "../modules/hangout_window/HangoutWindowExperiment.tsx";
+import { experiment } from "../modules/messages/GuildOfficialMessagesExperiment.tsx";
+import { isGuildEligibleForStageChannels } from "../modules/stage_channels/useGuildEligibleForStageChannels.tsx";
+import { combined } from "HelpdeskUtils.tsx";
 // discord_app/utils/PermissionSpecUtils.tsx
 import { VOICE_THREAD_PARENT_CHANNEL_TYPES as closure_4 } from "createChannelRecord";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -10,7 +15,7 @@ let closure_6;
 let error;
 let metroImportAll;
 function getPermissionOptions(id) {
-  let obj = require("../modules/stage_channels/useGuildEligibleForStageChannels.tsx") /* isGuildEligibleForStageChannels */;
+  let obj = isGuildEligibleForStageChannels /* isGuildEligibleForStageChannels */;
   const result = obj.isGuildEligibleForStageChannels(id);
   const guild = store.getGuild(id);
   let result1 = null != guild;
@@ -25,13 +30,13 @@ function getPermissionOptions(id) {
   const intl = tmp(1236).intl;
   const obj1 = { keybind: null };
   const intl2 = tmp(1236).intl;
-  obj1[0] = intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.DkSwJ2);
-  obj[0] = intl.format(require("../intl/index.native.tsx") /* getSystemLocale */.t.ZuzwPz, obj1);
+  obj1[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.DkSwJ2);
+  obj[0] = intl.format(getSystemLocale /* getSystemLocale */.t.ZuzwPz, obj1);
   const intl3 = tmp(1236).intl;
   const obj2 = { helpCenterArticle: null };
-  const tmpResult1 = require("../modules/hangout_window/HangoutWindowExperiment.tsx") /* experiment */;
-  obj2[0] = require("HelpdeskUtils.tsx").getArticleURL(constants.SOUNDBOARD);
-  obj[1] = intl3.format(require("../intl/index.native.tsx") /* getSystemLocale */.t.fVE8y8, obj2);
+  const tmpResult1 = experiment /* experiment */;
+  obj2[0] = combined.getArticleURL(constants.SOUNDBOARD);
+  obj[1] = intl3.format(getSystemLocale /* getSystemLocale */.t.fVE8y8, obj2);
   obj[2] = result;
   obj[5] = result1;
   obj[6] = soundmojiRenderingExperiment;
@@ -70,7 +75,7 @@ export default {
       hasItem = features.has(constants3.VERIFIED);
     }
     if (hasItem) {
-      let obj5 = require("../modules/messages/GuildOfficialMessagesExperiment.tsx");
+      let obj5 = experiment;
       obj = { guildId: null, location: "generateChannelPermissionSpec" };
       obj[0] = guild_id;
       hasItem = obj5.getCurrentConfig(obj).enabled;
@@ -287,8 +292,8 @@ export default {
     if (enabled) {
       let obj = { guildId: null, location: "generateGuildPermissionSpec" };
       obj[0] = features.id;
-      enabled = require("../modules/messages/GuildOfficialMessagesExperiment.tsx").getCurrentConfig(obj).enabled;
-      const obj2 = require("../modules/messages/GuildOfficialMessagesExperiment.tsx");
+      enabled = experiment.getCurrentConfig(obj).enabled;
+      const obj2 = experiment;
     }
     if (!enabled) {
       set.add(constants4.MANAGE_OFFICIAL_MESSAGES.toString());

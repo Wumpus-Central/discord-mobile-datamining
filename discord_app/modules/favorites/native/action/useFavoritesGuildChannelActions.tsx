@@ -1,3 +1,6 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useFavoritesAccess } from "../../FavoritesHooks.tsx";
+import { getFavoritesAwareGuildName } from "../../FavoritesUtils.tsx";
 // discord_app/modules/favorites/native/action/useFavoritesGuildChannelActions.tsx
 import fetchFingerprint from "fetchFingerprint";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -10,17 +13,17 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
   let hasAccess;
   let hasHigherPrivileges;
   const _require = channelId;
-  let obj = _require("../../FavoritesHooks.tsx");
+  let obj = _useFavoritesAccess;
   const favoritesAccess = obj.useFavoritesAccess(FavoritesGuildChannelList);
   ({ hasAccess, hasHigherPrivileges } = favoritesAccess);
-  let result = _require("../../FavoritesUtils.tsx").canFavoriteChannelType(channelId, hasHigherPrivileges);
-  const obj2 = _require("../../FavoritesUtils.tsx");
+  let result = _getFavoritesAwareGuildName.canFavoriteChannelType(channelId, hasHigherPrivileges);
+  const obj2 = _getFavoritesAwareGuildName;
   const tmp = _require;
   const items = [initializeFromUserSettings];
-  const stateFromStores = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_4.isFavorite(channelId.id));
-  const obj3 = _require("../../../../../discord_common/js/packages/flux/index.tsx");
-  const isFavoritesGuildSelected = _require("../../FavoritesHooks.tsx").useIsFavoritesGuildSelected();
-  const obj4 = _require("../../FavoritesHooks.tsx");
+  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_4.isFavorite(channelId.id));
+  const obj3 = _initialize;
+  const isFavoritesGuildSelected = _useFavoritesAccess.useIsFavoritesGuildSelected();
+  const obj4 = _useFavoritesAccess;
   const items1 = [trackCommunicationDisabled, fetchFingerprint];
   if (result) {
     result = obj5.useStateFromStores(items1, () => {
@@ -31,7 +34,7 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
       return isMemberResult;
     });
   }
-  obj5 = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  obj5 = _initialize;
   let tmp7 = hasAccess;
   if (hasAccess) {
     tmp7 = result;

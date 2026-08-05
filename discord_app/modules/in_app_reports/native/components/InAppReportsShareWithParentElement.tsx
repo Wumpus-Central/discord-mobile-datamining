@@ -1,3 +1,4 @@
+import { InAppReportsUpsellsTableRow } from "InAppReportsUpsellsTableRow.tsx";
 // discord_app/modules/in_app_reports/native/components/InAppReportsShareWithParentElement.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -52,6 +53,6 @@ export default function _default(parents) {
     obj[3] = intl2.string(parents(1236).t["5l/hlt"]);
     obj[4] = tmp[0];
     obj[5] = tmp2;
-    return jsx(require("InAppReportsUpsellsTableRow.tsx"), { count: null, parent1: null, parent2: null, parent3: null });
+    return jsx(InAppReportsUpsellsTableRow, { count: null, parent1: null, parent2: null, parent3: null });
   }
 };

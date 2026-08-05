@@ -1,3 +1,4 @@
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/libdiscore/libDiscoreSmokeTest.tsx
 import items from "items";
 import { AnalyticEvents } from "ME";
@@ -110,7 +111,7 @@ function trackLibdiscoreSuccess() {
       items.push(enabledFeatureName);
     }
   });
-  require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.LIBDISCORE_LOADED, { success: true, experimental_features: items });
+  expandEventProperties.track(AnalyticEvents.LIBDISCORE_LOADED, { success: true, experimental_features: items });
 }
 function trackLibdiscoreFailure(arg0) {
   let message;
@@ -135,7 +136,7 @@ function trackLibdiscoreFailure(arg0) {
     const _HermesInternal = HermesInternal;
     combined = "" + name + ": " + text;
   }
-  require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.LIBDISCORE_LOADED, { success: false, error: combined });
+  expandEventProperties.track(AnalyticEvents.LIBDISCORE_LOADED, { success: false, error: combined });
 }
 let c5 = new require("_initLibdiscore")("libdiscore");
 let c6 = false;

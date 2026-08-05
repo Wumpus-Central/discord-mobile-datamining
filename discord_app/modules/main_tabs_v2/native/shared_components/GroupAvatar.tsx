@@ -1,3 +1,7 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { result } from "../../../../design/migrations/native/LegacyTokens.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/GroupAvatar.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -115,9 +119,9 @@ function AnimatedContainer(scale) {
   return sharedValue2(tmp(translateY[11]).View, { style, children });
 }
 function GroupMemberCount(count) {
-  const tmp = callback3(require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("GroupAvatar"));
+  const tmp = callback3(useIsMobileVisualRefreshExperimentEnabled("GroupAvatar"));
   let obj = { style: tmp.avatarWrapper, children: null };
-  obj = { style: tmp.overflowCount, children: callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/semibold", children: items }) };
+  obj = { style: tmp.overflowCount, children: callback2(Text /* Text */.Text, { variant: "text-sm/semibold", children: items }) };
   items = ["+", count.count];
   obj[1] = callback(View, obj);
   return callback(View, obj);
@@ -152,7 +156,7 @@ let closure_10 = { damping: 30, stiffness: 400 };
 let closure_11 = { damping: 30, stiffness: 400 };
 let closure_12 = createCacheKey.createStyles((arg0) => {
   let obj = { groupContainer: { position: "relative" }, shadowContainer: null, shadowContainerBackground: null, shadowContainerBackgroundLight: null, shadowContainerBackgroundDark: null, gradientContainer: null, gradientDimOverlay: null, gradientImageBorder: null, avatarContainer: null, shadow: null, avatar: null, avatarWrapper: null, overflowCount: null };
-  obj = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, shadowColor: null, shadowOffset: null, shadowRadius: null, shadowOpacity: null, elevation: null };
+  obj = { borderRadius: Themes.radii.sm, shadowColor: null, shadowOffset: null, shadowRadius: null, shadowOpacity: null, elevation: null };
   let BLACK;
   if (!arg0) {
     BLACK = tmp(712).colors.BLACK;
@@ -182,7 +186,7 @@ let closure_12 = createCacheKey.createStyles((arg0) => {
     WHITE1 = tmp(712).colors.WHITE;
   }
   obj[4] = { backgroundColor: WHITE1, opacity: 0.15 };
-  const obj1 = { width: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GROUP_AVATAR_SIZE, height: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GROUP_AVATAR_SIZE, overflow: "hidden", borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, backgroundColor: null };
+  const obj1 = { width: Themes.modules.mobile.GROUP_AVATAR_SIZE, height: Themes.modules.mobile.GROUP_AVATAR_SIZE, overflow: "hidden", borderRadius: Themes.radii.sm, backgroundColor: null };
   let prop1;
   if (!arg0) {
     prop1 = tmp(712).colors.CARD_BACKGROUND_DEFAULT;
@@ -194,7 +198,7 @@ let closure_12 = createCacheKey.createStyles((arg0) => {
     prop2 = tmp(712).colors.BACKGROUND_MOD_SUBTLE;
   }
   obj[6] = { position: "absolute", left: 0, top: 0, right: 0, bottom: 0, backgroundColor: prop2 };
-  const obj2 = { width: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GROUP_AVATAR_SIZE, height: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GROUP_AVATAR_SIZE, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, borderWidth: null, borderColor: null, position: "absolute" };
+  const obj2 = { width: Themes.modules.mobile.GROUP_AVATAR_SIZE, height: Themes.modules.mobile.GROUP_AVATAR_SIZE, borderRadius: Themes.radii.sm, borderWidth: null, borderColor: null, position: "absolute" };
   obj2[3] = 1;
   let BORDER_SUBTLE;
   if (!arg0) {
@@ -210,7 +214,7 @@ let closure_12 = createCacheKey.createStyles((arg0) => {
   const obj4 = { shadowColor: BLACK1, shadowOpacity: null, shadowOffset: null, shadowRadius: null };
   let DARK_03_LIGHT_02;
   if (!arg0) {
-    DARK_03_LIGHT_02 = require("../../../../design/migrations/native/LegacyTokens.tsx") /* result */.DARK_03_LIGHT_02;
+    DARK_03_LIGHT_02 = result /* result */.DARK_03_LIGHT_02;
   }
   obj4[1] = DARK_03_LIGHT_02;
   let obj5;

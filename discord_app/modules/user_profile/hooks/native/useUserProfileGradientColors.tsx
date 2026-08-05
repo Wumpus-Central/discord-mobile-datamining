@@ -1,3 +1,6 @@
+import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useProfileThemeValues } from "../../useProfileThemeValues.native.tsx";
 // discord_app/modules/user_profile/hooks/native/useUserProfileGradientColors.tsx
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -10,10 +13,10 @@ export const useUserProfileGradientColors = function useUserProfileGradientColor
   const dependencyMap = secondaryColor;
   const React = fallbackBackground;
   const items = [overlay];
-  const stateFromStores = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => overlay.syncProfileThemeWithUserTheme);
-  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
-  let obj2 = _require("../../../../../discord_common/js/packages/design/native.tsx");
-  const profileThemeValues = _require("../../useProfileThemeValues.native.tsx").useProfileThemeValues(obj2.useThemeContext().theme);
+  const stateFromStores = _initialize.useStateFromStores(items, () => overlay.syncProfileThemeWithUserTheme);
+  let obj = _initialize;
+  let obj2 = _ManaContext;
+  const profileThemeValues = _useProfileThemeValues.useProfileThemeValues(obj2.useThemeContext().theme);
   if (stateFromStores) {
     let prop;
     if (!tmp3) {

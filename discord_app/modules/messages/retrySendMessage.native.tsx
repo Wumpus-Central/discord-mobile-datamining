@@ -1,3 +1,5 @@
+import { trackInvite } from "../../actions/MessageActionCreators.tsx";
+import { _executeCommand } from "../application_commands/executeCommand.tsx";
 // discord_app/modules/messages/retrySendMessage.native.tsx
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
 
@@ -13,11 +15,11 @@ export default function retrySendMessage(id, id2, arr) {
   if (arg3 === undefined) {
     obj = {};
   }
-  require("../../actions/MessageActionCreators.tsx").deleteMessage(id.id, id2.id, true);
+  trackInvite.deleteMessage(id.id, id2.id, true);
   if (id2.isCommandType()) {
     if (tmp17) {
-      _require("../application_commands/executeCommand.tsx").retryCommandMessage(id2, id, obj);
-      const obj6 = _require("../application_commands/executeCommand.tsx");
+      __executeCommand.retryCommandMessage(id2, id, obj);
+      const obj6 = __executeCommand;
     }
     tmp17 = null != id2.interactionData && null != obj.applicationId;
   } else {
@@ -34,7 +36,7 @@ export default function retrySendMessage(id, id2, arr) {
         return fromJsonResult;
       });
     }
-    const tmpResult = require("../../actions/MessageActionCreators.tsx");
+    const tmpResult = trackInvite;
     id = id.id;
     obj = { content: null, tts: null, invalidEmojis: null, validNonShortcutEmojis: null };
     obj[0] = content;

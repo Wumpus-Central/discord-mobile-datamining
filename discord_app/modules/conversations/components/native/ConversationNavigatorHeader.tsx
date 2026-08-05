@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { computeChannelName } from "../../../channel/useChannelName.tsx";
 // discord_app/modules/conversations/components/native/ConversationNavigatorHeader.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -7,10 +9,10 @@ import createCacheKey from "createCacheKey";
 
 const require = arg1;
 let closure_6 = createCacheKey.createStyles((arg0) => {
-  const container = { flex: 1, paddingVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, paddingRight: null, alignItems: "center", justifyContent: "center" };
+  const container = { flex: 1, paddingVertical: Themes.space.PX_16, paddingRight: null, alignItems: "center", justifyContent: "center" };
   let num = 0;
   if (!arg0) {
-    num = require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_64;
+    num = Themes.space.PX_64;
   }
   container[2] = num;
   return { container };
@@ -27,7 +29,7 @@ export default function ConversationNavigatorHeader(channelId) {
   const items = [ensureGuildLoaded];
   const items1 = [channelId];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getChannel(channelId), items1);
-  const tmp3 = require("../../../channel/useChannelName.tsx")(stateFromStores, true);
+  const tmp3 = computeChannelName(stateFromStores, true);
   obj = { style: callback(flag).container, children: null };
   obj = { title: channelId.title, subtitle: null, variant: "heading-lg/semibold", subtitleColor: "text-muted" };
   obj[1] = tmp3;

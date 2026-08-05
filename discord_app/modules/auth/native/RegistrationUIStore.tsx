@@ -1,3 +1,4 @@
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/auth/native/RegistrationUIStore.tsx
 import keys from "keys";
 
@@ -7,7 +8,7 @@ const result = require("set").fileFinishedImporting("modules/auth/native/Registr
 export const useRegistrationUIStore = obj;
 export const setRegistrationErrors = function setRegistrationErrors(arg0) {
   const _require = arg0;
-  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     outer1_2.setState({ errors: closure_0 });
   });
 };
@@ -34,13 +35,13 @@ export const updateRegistrationOptions = function updateRegistrationOptions(arg0
   });
 };
 export const resetRegistration = function resetRegistration() {
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
+  batchUpdates /* batchUpdates */.batchUpdates(() => {
     state.setState({ errors: {}, registrationOptions: {}, submitting: false });
   });
 };
 export const setSubmitting = function setSubmitting(arg0) {
   const _require = arg0;
-  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     outer1_2.setState({ errors: {}, submitting: closure_0 });
   });
 };

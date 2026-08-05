@@ -1,3 +1,10 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ActivityStatus } from "../../../activity_status/native/ActivityStatus.tsx";
+import { computeChannelName } from "../../../channel/useChannelName.tsx";
 // discord_app/modules/navbars/native/components/ChannelNavbar.tsx
 import importAllResult from "computeChannelName";
 import { View } from "getSystemLocale";
@@ -36,11 +43,11 @@ function ChannelTitleContent(arg0) {
     let tmp4 = icon;
     if (!importAllResult.isValidElement(icon)) {
       let obj = { size: null, source: null, style: null, color: null };
-      obj[0] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.CUSTOM;
+      obj[0] = Button /* Button */.Icon.Sizes.CUSTOM;
       obj[1] = icon;
       obj[2] = tmp.channelIcon;
       obj[3] = tmp.channelIconColor.color;
-      tmp4 = callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
+      tmp4 = callback(Button /* Button */.Icon, obj);
     }
     tmp2 = tmp4;
   }
@@ -52,7 +59,7 @@ function ChannelTitleContent(arg0) {
     obj[0] = tmp.channelName;
     obj[4] = accessibleTitle;
     obj[7] = title;
-    obj[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+    obj[1] = callback(Text /* Text */.Text, obj);
     tmp8 = callback(View, obj);
   }
   const obj1 = { style: tmp.flexRow, children: null };
@@ -68,14 +75,14 @@ function ChannelTitleContent(arg0) {
 function ParentChannelSubTitle(parentChannel) {
   parentChannel = parentChannel.parentChannel;
   let obj = { lineClamp: 1, style: callback3().navbarTitleSecondaryText, accessibilityLabel: null, maxFontSizeMultiplier: 1, variant: "text-xs/medium", color: "text-muted", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   obj = { channelName: null };
   const tmp = callback3();
-  obj[0] = require("../../../channel/useChannelName.tsx") /* computeChannelName */.computeChannelName(parentChannel, mergeGuildAvatar, upsertRelationship);
-  obj[2] = intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.BjYvHO, obj);
-  const obj3 = require("../../../channel/useChannelName.tsx") /* computeChannelName */;
-  obj[6] = require("../../../channel/useChannelName.tsx") /* computeChannelName */.computeChannelName(parentChannel, mergeGuildAvatar, upsertRelationship, true);
-  return callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  obj[0] = computeChannelName /* computeChannelName */.computeChannelName(parentChannel, mergeGuildAvatar, upsertRelationship);
+  obj[2] = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.BjYvHO, obj);
+  const obj3 = computeChannelName /* computeChannelName */;
+  obj[6] = computeChannelName /* computeChannelName */.computeChannelName(parentChannel, mergeGuildAvatar, upsertRelationship, true);
+  return callback(Text /* Text */.Text, obj);
 }
 function DMChannelName(style) {
   const userId = style.userId;
@@ -161,7 +168,7 @@ function ChannelTitleWrapper(arg0) {
       return null;
     };
     obj[4] = children;
-    tmp5 = callback(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+    tmp5 = callback(PressableBase /* PressableBase */.PressableOpacity, obj);
   }
   return tmp5;
 }
@@ -415,15 +422,15 @@ export const ChannelTitleWithoutRoute = function ChannelTitleWithoutRoute(arg0) 
   let require;
   ({ onPressTitle, channelId: require } = arg0);
   const tmp = callback3();
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [ensureGuildLoaded];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_7.getChannel(closure_0));
-  let obj2 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj2 = initialize /* initialize */;
   const items1 = [_handleConnectionOpen];
   const stateFromStores1 = obj2.useStateFromStores(items1, () => connected.isConnected());
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require("../../../../intl/index.native.tsx") /* getSystemLocale */.t;
+  const t = getSystemLocale /* getSystemLocale */.t;
   if (stateFromStores1) {
     let stringResult = string(t.ai6Lbr);
   } else {
@@ -465,7 +472,7 @@ export const ChannelTitleWithoutRoute = function ChannelTitleWithoutRoute(arg0) 
     obj3[0] = callback(DMChannelName, obj);
     obj3[1] = channelIcon;
     obj3[2] = tmp16Result;
-    obj3[3] = callback(require("../../../activity_status/native/ActivityStatus.tsx"), obj1);
+    obj3[3] = callback(ActivityStatus, obj1);
     obj2[1] = callback(ChannelTitleContent, obj3);
     return callback(ChannelTitleWrapper, obj2);
   } else {

@@ -1,3 +1,4 @@
+import { t } from "../../../../_runtime/03984_t.js";
 // discord_common/js/packages/i18n/updateRules.web.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -6,9 +7,9 @@ const require = arg1;
 const result = require("t").fileFinishedImporting("../discord_common/js/packages/i18n/updateRules.web.tsx");
 
 export default function updateRules(paragraph) {
-  paragraph.heading = require("../../../../_runtime/03984_t.js") /* t */.defaultRules.heading;
-  paragraph.lheading = require("../../../../_runtime/03984_t.js") /* t */.defaultRules.lheading;
-  paragraph.list = require("../../../../_runtime/03984_t.js") /* t */.defaultRules.list;
+  paragraph.heading = t /* t */.defaultRules.heading;
+  paragraph.lheading = t /* t */.defaultRules.lheading;
+  paragraph.list = t /* t */.defaultRules.list;
   let obj = {};
   let merged = Object.assign(paragraph.paragraph);
   obj.react = function react(content, arg1, key) {

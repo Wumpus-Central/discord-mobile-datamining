@@ -1,3 +1,4 @@
+import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
 // discord_app/modules/user_settings/family_center/native/UserSettingsFamilyCenter.tsx
 import openAgeGateModal from "openAgeGateModal";
 import defaultAreStatesEqual from "defaultAreStatesEqual";
@@ -22,7 +23,7 @@ const require = arg1;
 function FamilyCenterLoading() {
   const obj = { justify: "center", align: "center", style: createCacheKey().loadingContainer, children: null };
   obj[3] = callback2(closure_6, {});
-  return callback2(require("../../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
+  return callback2(Stack /* Stack */.Stack, obj);
 }
 function FamilyCenter() {
   let openAgeGateModal;

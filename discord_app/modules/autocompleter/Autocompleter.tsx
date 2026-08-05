@@ -1,3 +1,11 @@
+import { t } from "../../../_runtime/03984_t.js";
+import { NOOP } from "../../utils/AutocompleteUtils.tsx";
+import { getGuildNameSuggestion } from "../../utils/GuildUtils.tsx";
+import { isNullOrEmpty } from "../../utils/StringUtils.tsx";
+import { CodedLinkType } from "../coded_links/CodedLink.tsx";
+import { getPathsFromURL } from "../coded_links/findCodedLinks.tsx";
+import { queryGamesAutocomplete } from "../games/autocomplete/queryGamesAutocomplete.tsx";
+import { getTransformedUser } from "UserSearchManager.tsx";
 // discord_app/modules/autocompleter/Autocompleter.tsx
 import handleUserUpdate from "handleUserUpdate";
 import fromPath from "fromPath";
@@ -8,8 +16,8 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 const require = arg1;
 function getAutocompleterBoosterMap(USER, options) {
   if (options.frecencyBoosters) {
-    let boosterMap = require("../../utils/AutocompleteUtils.tsx") /* NOOP */.getBoosterMap(USER);
-    const obj2 = require("../../utils/AutocompleteUtils.tsx") /* NOOP */;
+    let boosterMap = NOOP /* NOOP */.getBoosterMap(USER);
+    const obj2 = NOOP /* NOOP */;
   } else {
     boosterMap = {};
   }
@@ -118,8 +126,8 @@ const prototype = Autocompleter.prototype;
 prototype["createSearchContext"] = function createSearchContext() {
   const self = this;
   if (null == this.userSearchContext) {
-    self.userSearchContext = require("UserSearchManager.tsx").getUserSearchContext(self.parseUserResults, self._limit);
-    const obj = require("UserSearchManager.tsx");
+    self.userSearchContext = getTransformedUser.getUserSearchContext(self.parseUserResults, self._limit);
+    const obj = getTransformedUser;
   }
 };
 prototype["setLimit"] = function setLimit(_limit) {
@@ -380,7 +388,7 @@ prototype["queryTextChannels"] = function queryTextChannels(closure_1, _limit) {
     obj[4] = options.allowSnowflake;
     obj[5] = fn;
     obj[6] = boosterMap;
-    return require("../../utils/AutocompleteUtils.tsx").queryChannels(obj);
+    return NOOP.queryChannels(obj);
   } else {
     return [];
   }
@@ -392,8 +400,8 @@ prototype["queryVoiceChannels"] = function queryVoiceChannels(closure_1, _limit)
   if (this._include(AutocompleterResultTypes.VOICE_CHANNEL)) {
     ({ allowSnowflake, voiceChannelGuildFilter } = self.options);
     if (self.options.frecencyBoosters) {
-      let boosterMap = require("../../utils/AutocompleteUtils.tsx") /* NOOP */.getBoosterMap(tmp);
-      const obj2 = require("../../utils/AutocompleteUtils.tsx") /* NOOP */;
+      let boosterMap = NOOP /* NOOP */.getBoosterMap(tmp);
+      const obj2 = NOOP /* NOOP */;
     } else {
       boosterMap = {};
     }
@@ -404,7 +412,7 @@ prototype["queryVoiceChannels"] = function queryVoiceChannels(closure_1, _limit)
     obj[4] = GUILD_VOCAL_CHANNELS_KEY;
     obj[5] = allowSnowflake;
     obj[6] = boosterMap;
-    return require("../../utils/AutocompleteUtils.tsx").queryChannels(obj);
+    return NOOP.queryChannels(obj);
   } else {
     return [];
   }
@@ -430,7 +438,7 @@ prototype["queryGuilds"] = function queryGuilds(arg0, arg1) {
     obj[3] = fn;
     obj[4] = boosterMap;
     obj[5] = options.allowSnowflake;
-    return require("../../utils/AutocompleteUtils.tsx").queryGuilds(obj);
+    return NOOP.queryGuilds(obj);
   } else {
     return [];
   }
@@ -449,8 +457,8 @@ prototype["queryUsers"] = function queryUsers(arg0, arg1, arg2) {
       }
       if (null == thread) {
         if (undefined !== arg1) {
-          const members = require("../../utils/GuildUtils.tsx").requestMembers(arg1, arg0, 100);
-          const obj4 = require("../../utils/GuildUtils.tsx");
+          const members = getGuildNameSuggestion.requestMembers(arg1, arg0, 100);
+          const obj4 = getGuildNameSuggestion;
         }
         userSearchContext.setLimit(arg2);
         let obj = { query: null, filters: null, blacklist: null, boosters: null };
@@ -509,8 +517,8 @@ prototype["queryUsers"] = function queryUsers(arg0, arg1, arg2) {
         obj[2] = arg2;
         obj[3] = tmp2;
         obj[4] = options.allowSnowflake;
-        self._userResults = require("../../utils/AutocompleteUtils.tsx").queryUsers(obj);
-        const obj2 = require("../../utils/AutocompleteUtils.tsx");
+        self._userResults = NOOP.queryUsers(obj);
+        const obj2 = NOOP;
       }
     }
     tmp25 = AutocompleterResultTypes;
@@ -535,14 +543,14 @@ prototype["queryGroupDMs"] = function queryGroupDMs(arg0, arg1) {
     obj[1] = arg1;
     obj[3] = fn;
     obj[4] = boosterMap;
-    return require("../../utils/AutocompleteUtils.tsx").queryGroupDMs(obj);
+    return NOOP.queryGroupDMs(obj);
   } else {
     return [];
   }
 };
 prototype["queryApplications"] = function queryApplications(arg0, arg1) {
   if (this._include(AutocompleterResultTypes.APPLICATION)) {
-    let obj = require("../../utils/AutocompleteUtils.tsx");
+    let obj = NOOP;
     obj = { query: null, limit: null, fuzzy: true };
     obj[0] = arg0;
     obj[1] = arg1;
@@ -554,7 +562,7 @@ prototype["queryApplications"] = function queryApplications(arg0, arg1) {
 };
 prototype["queryGameProfiles"] = function queryGameProfiles(query, _limit) {
   if (this._include(AutocompleterResultTypes.GAME_PROFILE)) {
-    let result = _require("../games/autocomplete/queryGamesAutocomplete.tsx").queryGamesAutocomplete(query);
+    let result = _queryGamesAutocomplete.queryGamesAutocomplete(query);
     if (result == null) {
       result = [];
     }
@@ -574,7 +582,7 @@ prototype["queryGameProfiles"] = function queryGameProfiles(query, _limit) {
 };
 prototype["refreshGameProfiles"] = function refreshGameProfiles() {
   const self = this;
-  const isNullOrEmptyResult = require("../../utils/StringUtils.tsx") /* isNullOrEmpty */.isNullOrEmpty(this.query.trim());
+  const isNullOrEmptyResult = isNullOrEmpty /* isNullOrEmpty */.isNullOrEmpty(this.query.trim());
   let _includeResult = !isNullOrEmptyResult;
   if (!isNullOrEmptyResult) {
     _includeResult = self._include(AutocompleterResultTypes.GAME_PROFILE);
@@ -588,13 +596,13 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
   let hostname;
   let pathname;
   if (this._include(AutocompleterResultTypes.LINK)) {
-    let obj = require("../coded_links/findCodedLinks.tsx") /* getPathsFromURL */;
+    let obj = getPathsFromURL /* getPathsFromURL */;
     const findCodedLinkResult = obj.findCodedLink(query);
     let type;
     if (findCodedLinkResult != null) {
       type = findCodedLinkResult.type;
     }
-    if (type === require("../coded_links/CodedLink.tsx") /* CodedLinkType */.CodedLinkType.INVITE) {
+    if (type === CodedLinkType /* CodedLinkType */.CodedLinkType.INVITE) {
       obj = { type: null, record: null, score: null };
       obj[0] = tmp.LINK;
       obj[1] = fromPath.fromInviteCode(findCodedLinkResult.code);
@@ -603,7 +611,7 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
       const items = [obj];
       return items;
     } else {
-      const sanitizeUrlResult = require("../../../_runtime/03984_t.js").sanitizeUrl(query);
+      const sanitizeUrlResult = t.sanitizeUrl(query);
       try {
         const _URL = URL;
         const uRL = new URL(sanitizeUrlResult);
@@ -637,7 +645,7 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
       } catch (err) {
         return [];
       }
-      const obj8 = require("../../../_runtime/03984_t.js");
+      const obj8 = t;
     }
   } else {
     return [];
@@ -645,7 +653,7 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
 };
 prototype["queryInAppNavigations"] = function queryInAppNavigations(arg0, arg1) {
   if (this._include(AutocompleterResultTypes.IN_APP_NAVIGATION)) {
-    let obj = require("../../utils/AutocompleteUtils.tsx");
+    let obj = NOOP;
     obj = { query: null, limit: null, fuzzy: true };
     obj[0] = arg0;
     obj[1] = arg1;

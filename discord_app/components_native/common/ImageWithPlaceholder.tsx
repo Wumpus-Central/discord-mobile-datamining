@@ -1,3 +1,4 @@
+import { preload } from "FastImage.tsx";
 // discord_app/components_native/common/ImageWithPlaceholder.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -41,6 +42,6 @@ export const ImageWithPlaceholder = function ImageWithPlaceholder(arg0) {
   obj = { style };
   const merged2 = Object.assign(merged);
   obj = { style: closure_4, resizeMode: "cover", source: { uri }, alt };
-  obj.children = jsx(require("FastImage.tsx"), { style: closure_4, resizeMode: "cover", source: { uri }, alt });
+  obj.children = jsx(preload, { style: closure_4, resizeMode: "cover", source: { uri }, alt });
   tmp4 = <closure_2 style={closure_4} resizeMode="cover" source={{ uri }} alt={alt} />;
 };

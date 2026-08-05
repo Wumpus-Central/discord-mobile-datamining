@@ -1,15 +1,16 @@
+import { AccessibilityAnnouncer } from "../design/shared.tsx";
 // discord_app/hooks/useTheme.tsx
 import { ThemeTypes } from "ME";
 
 function useTheme() {
-  return require("../design/shared.tsx") /* AccessibilityAnnouncer */.useThemeContext().theme;
+  return AccessibilityAnnouncer /* AccessibilityAnnouncer */.useThemeContext().theme;
 }
 const result = require("set").fileFinishedImporting("hooks/useTheme.tsx");
 
 export default useTheme;
 export { useTheme };
 export const useThemeIndex = function useThemeIndex() {
-  const theme = require("../design/shared.tsx") /* AccessibilityAnnouncer */.useThemeContext().theme;
+  const theme = AccessibilityAnnouncer /* AccessibilityAnnouncer */.useThemeContext().theme;
   let num = 0;
   if (ThemeTypes.DARK !== theme) {
     if (ThemeTypes.LIGHT === theme) {

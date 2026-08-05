@@ -1,3 +1,5 @@
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { useGetThreadDraftSettings } from "../useGetThreadDraftSettings.tsx";
 // discord_app/modules/threads/native/useCreateThreadViewProps.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 
@@ -5,9 +7,9 @@ let require = arg1;
 const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/threads/native/useCreateThreadViewProps.tsx");
 
 export default function useCreateThreadViewProps(arg0) {
-  const tmp = require("../useGetThreadDraftSettings.tsx")(arg0);
+  const tmp = useGetThreadDraftSettings(arg0);
   const require = tmp;
-  let obj = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
   const items = [ensureGuildLoaded];
   const items1 = [tmp];
   const stateFromStores = obj.useStateFromStores(items, () => {

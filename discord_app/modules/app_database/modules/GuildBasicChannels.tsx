@@ -1,3 +1,4 @@
+import { items } from "../DatabaseDaos.tsx";
 // discord_app/modules/app_database/modules/GuildBasicChannels.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -561,10 +562,10 @@ prototype["onGuildSync"] = function onGuildSync(id, closure_0) {
 };
 prototype["delete"] = function delete(guild_id, database) {
   this.unsync(guild_id, database);
-  const result = require("../DatabaseDaos.tsx").basicChannelsTransaction(database);
+  const result = items.basicChannelsTransaction(database);
   result.delete(guild_id);
-  const obj = require("../DatabaseDaos.tsx");
-  const result1 = require("../DatabaseDaos.tsx").syncedBasicChannelsTransaction(database);
+  const obj = items;
+  const result1 = items.syncedBasicChannelsTransaction(database);
   result1.delete(guild_id);
 };
 prototype["unsync"] = function unsync(guild_id, closure_0) {
@@ -572,10 +573,10 @@ prototype["unsync"] = function unsync(guild_id, closure_0) {
   if (synced != null) {
     synced.delete(guild_id);
   }
-  const result = require("../DatabaseDaos.tsx").basicChannelsTransaction(closure_0);
+  const result = items.basicChannelsTransaction(closure_0);
   result.delete(guild_id);
-  const obj = require("../DatabaseDaos.tsx");
-  const result1 = require("../DatabaseDaos.tsx").syncedBasicChannelsTransaction(closure_0);
+  const obj = items;
+  const result1 = items.syncedBasicChannelsTransaction(closure_0);
   result1.put(guild_id, false);
   hasChannel.invalidate(guild_id);
 };
@@ -614,7 +615,7 @@ prototype["syncOne"] = function syncOne(closure_0, database) {
     if (synced2 != null) {
       synced2.add(closure_0);
     }
-    const result = require("../DatabaseDaos.tsx").basicChannelsTransaction(database);
+    const result = items.basicChannelsTransaction(database);
     const _Object = Object;
     const values = Object.values(store.getMutableGuildChannelsForGuild(closure_0));
     result.put(closure_0, values.map((id) => {
@@ -622,11 +623,11 @@ prototype["syncOne"] = function syncOne(closure_0, database) {
       obj[4] = callback(table[14]).asBasicFlag(getUncachedChannelPermissions.computePermissions(id));
       return obj;
     }));
-    let obj = require("../DatabaseDaos.tsx");
-    const result1 = require("../DatabaseDaos.tsx").syncedBasicChannelsTransaction(database);
+    let obj = items;
+    const result1 = items.syncedBasicChannelsTransaction(database);
     result1.put(closure_0, true);
     flag = true;
-    const obj3 = require("../DatabaseDaos.tsx");
+    const obj3 = items;
   }
   return flag;
 };

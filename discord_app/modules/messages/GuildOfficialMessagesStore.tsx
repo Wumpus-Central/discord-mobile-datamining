@@ -1,3 +1,4 @@
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/modules/messages/GuildOfficialMessagesStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -328,7 +329,7 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(require("dispa
             }
             return tmp5;
           }
-          obj6 = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+          obj6 = hasFlag /* hasFlag */;
           tmp23 = require;
         }
         return false;

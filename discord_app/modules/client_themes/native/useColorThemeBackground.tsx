@@ -1,3 +1,6 @@
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getCustomThemesName } from "MobileThemesUtils.tsx";
 // discord_app/modules/client_themes/native/useColorThemeBackground.tsx
 import noop from "noop";
 import handleThemeChange from "handleThemeChange";
@@ -5,8 +8,8 @@ import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
 
 let require = arg1;
 function getGuildThemeName() {
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.CFzDOG);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  return intl.string(getSystemLocale /* getSystemLocale */.t.CFzDOG);
 }
 const result = require("isSyncedModeThemesEnabled").fileFinishedImporting("modules/client_themes/native/useColorThemeBackground.tsx");
 
@@ -14,13 +17,13 @@ export default function useColorThemeBackground() {
   const tmp = stateFromStores(4135)();
   const require = tmp;
   let items = [handleThemeChange];
-  stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */.useStateFromStores(items, () => theme.theme);
-  let obj = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
+  stateFromStores = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => theme.theme);
+  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
   const items1 = [isSyncedModeThemesEnabled];
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */.useStateFromStores(items1, () => gradientPreset.gradientPreset);
-  const obj2 = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
+  const stateFromStores1 = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items1, () => gradientPreset.gradientPreset);
+  const obj2 = defaultAreStatesEqual /* defaultAreStatesEqual */;
   const items2 = [tmp, stateFromStores];
-  const customBackgroundGradient = require("MobileThemesUtils.tsx") /* getCustomThemesName */.useCustomBackgroundGradient();
+  const customBackgroundGradient = getCustomThemesName /* getCustomThemesName */.useCustomBackgroundGradient();
   let memo = React.useMemo(() => {
     let colors;
     let tmp3 = null;

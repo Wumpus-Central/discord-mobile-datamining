@@ -1,3 +1,9 @@
+import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { CheckmarkLargeBoldIcon } from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeBoldIcon.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useUserProfileColors } from "../../user_profile/hooks/native/useUserProfileColors.tsx";
 // discord_app/modules/wishlists/native/WishlistItemCardBase.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -26,7 +32,7 @@ function SourceIcon(toastText) {
     children: null
   };
   obj = { color: null, size: "md" };
-  obj[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_ICON_DEFAULT;
+  obj[0] = Themes.colors.INTERACTIVE_ICON_DEFAULT;
   obj[5] = callback(toastText(8689).HeartIcon, obj);
   return callback(closure_3, obj);
 }
@@ -71,12 +77,12 @@ export default function WishlistItemCardBase(username) {
   }
   const accessibilityHidden = username.accessibilityHidden;
   const tmp = createCacheKey();
-  let obj = require("../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */;
+  let obj = ManaContext /* ManaContext */;
   const themeContext = obj.useThemeContext();
   ({ primaryColor, theme, secondaryColor } = themeContext);
-  let obj1 = require("../../user_profile/hooks/native/useUserProfileColors.tsx") /* useUserProfileColors */;
-  let obj2 = require("../../../design/tokens/native/useToken.tsx") /* map */;
-  let containerBackground = obj2.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BG_SURFACE_RAISED);
+  let obj1 = useUserProfileColors /* useUserProfileColors */;
+  let obj2 = map /* map */;
+  let containerBackground = obj2.useToken(Themes.colors.BG_SURFACE_RAISED);
   if (null != primaryColor) {
     containerBackground = obj1.useUserProfileColors({ theme, primaryColor, secondaryColor }).containerBackground;
   }
@@ -90,7 +96,7 @@ export default function WishlistItemCardBase(username) {
   }
   items[2] = obj;
   const intl = tmp2(1236).intl;
-  const formatToPlainStringResult = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.p3RmJF, { username: username.recipientName });
+  const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.p3RmJF, { username: username.recipientName });
   const items1 = [accessibilityLabel, , ];
   let stringResult = null;
   if (flag) {
@@ -108,9 +114,9 @@ export default function WishlistItemCardBase(username) {
   obj1 = { style: tmp.ownedOverlay, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   const joined = found.join(", ");
   obj2 = { color: null, size: "custom", style: null };
-  obj2[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
+  obj2[0] = Themes.colors.WHITE;
   obj2[2] = { width: 40, height: 40 };
-  obj1[4] = callback(require("../../../design/components/Icon/native/redesign/generated/CheckmarkLargeBoldIcon.tsx") /* CheckmarkLargeBoldIcon */.CheckmarkLargeBoldIcon, obj2);
+  obj1[4] = callback(CheckmarkLargeBoldIcon /* CheckmarkLargeBoldIcon */.CheckmarkLargeBoldIcon, obj2);
   const items2 = [tmp.previewWrap, ];
   let ownedCard = flag;
   if (flag) {

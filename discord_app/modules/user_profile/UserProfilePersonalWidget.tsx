@@ -1,3 +1,7 @@
+import { isUndefinedOrNull } from "../../../_runtime/00659_isUndefinedOrNull.js";
+import { PersonalWidgetSectionType } from "../../../discord_common/js/shared/shared-constants/PersonalWidgetSectionType.tsx";
+import { WidgetType } from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 // discord_app/modules/user_profile/UserProfilePersonalWidget.tsx
 function isFieldEmpty(title) {
   let tmp = "" === title.title.trim();
@@ -12,7 +16,7 @@ function isFieldEmpty(title) {
 }
 function isSectionEmpty(type) {
   type = type.type;
-  if (require("../../../discord_common/js/shared/shared-constants/PersonalWidgetSectionType.tsx") /* PersonalWidgetSectionType */.PersonalWidgetSectionType.COVER === type) {
+  if (PersonalWidgetSectionType /* PersonalWidgetSectionType */.PersonalWidgetSectionType.COVER === type) {
     let tmp4 = "" === type.title.trim();
     if (tmp4) {
       tmp4 = "" === type.subtitle.trim();
@@ -57,7 +61,7 @@ function parseField(image) {
 function serializeSection(type) {
   let image;
   type = type.type;
-  if (require("../../../discord_common/js/shared/shared-constants/PersonalWidgetSectionType.tsx") /* PersonalWidgetSectionType */.PersonalWidgetSectionType.COVER === type) {
+  if (PersonalWidgetSectionType /* PersonalWidgetSectionType */.PersonalWidgetSectionType.COVER === type) {
     let obj = { type: null, title: null, subtitle: null, image: null };
     ({ type: obj2[0], title: obj2[1], subtitle: obj2[2], image } = type);
     if (null == image) {
@@ -72,7 +76,7 @@ function serializeSection(type) {
       obj1 = { file_id: null, width: null, height: null };
       ({ fileId: obj3[0], width: obj3[1], height: obj3[2] } = image);
     }
-  } else if (require("../../../discord_common/js/shared/shared-constants/PersonalWidgetSectionType.tsx") /* PersonalWidgetSectionType */.PersonalWidgetSectionType.FIELDS === type) {
+  } else if (PersonalWidgetSectionType /* PersonalWidgetSectionType */.PersonalWidgetSectionType.FIELDS === type) {
     const fields = type.fields;
     const found = fields.filter((title) => {
       let tmp = "" === title.title.trim();
@@ -151,7 +155,7 @@ prototype["toSubmission"] = function toSubmission() {
     return !everyResult;
   });
   const mapped = found.map(serializeSection);
-  obj[2] = mapped.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
+  obj[2] = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
   obj[1] = obj;
   return obj;
 };
@@ -204,12 +208,12 @@ prototype["isEqual"] = function isEqual(header) {
         flag = false;
         if (image2.type === image.type) {
           const type = image2.type;
-          if (require("../../../discord_common/js/shared/shared-constants/PersonalWidgetSectionType.tsx") /* PersonalWidgetSectionType */.PersonalWidgetSectionType.COVER === type) {
+          if (PersonalWidgetSectionType /* PersonalWidgetSectionType */.PersonalWidgetSectionType.COVER === type) {
             let tmp13 = image2.title === image.title && image2.subtitle === image.subtitle;
             if (tmp13) {
               image2 = image2.image;
               image = image.image;
-              tmp13 = require("../../../_runtime/00659_isUndefinedOrNull.js")(image2, image);
+              tmp13 = isUndefinedOrNull(image2, image);
             }
             flag = false;
             sum = sum + 1;
@@ -236,7 +240,7 @@ prototype["isEqual"] = function isEqual(header) {
               if (tmp8) {
                 let tmp10 = importDefault;
                 let tmp11 = dependencyMap;
-                tmp8 = require("../../../_runtime/00659_isUndefinedOrNull.js")(tmp6.image, tmp7.image);
+                tmp8 = isUndefinedOrNull(tmp6.image, tmp7.image);
               }
               flag2 = false;
               if (!tmp8) {
@@ -270,14 +274,14 @@ prototype["getProfileEditAnalyticsOptions"] = function getProfileEditAnalyticsOp
 const result = require("isUndefinedOrNull").fileFinishedImporting("modules/user_profile/UserProfilePersonalWidget.tsx");
 
 export const createDefaultCoverSection = function createDefaultCoverSection() {
-  return { type: require("../../../discord_common/js/shared/shared-constants/PersonalWidgetSectionType.tsx") /* PersonalWidgetSectionType */.PersonalWidgetSectionType.COVER, title: "", subtitle: "" };
+  return { type: PersonalWidgetSectionType /* PersonalWidgetSectionType */.PersonalWidgetSectionType.COVER, title: "", subtitle: "" };
 };
 export const createDefaultField = function createDefaultField() {
   let closure_3 = tmp + 1;
   return { key: `field-${+closure_3}`, title: "", description: "" };
 };
 export const createDefaultFieldsSection = function createDefaultFieldsSection() {
-  let obj = { type: require("../../../discord_common/js/shared/shared-constants/PersonalWidgetSectionType.tsx") /* PersonalWidgetSectionType */.PersonalWidgetSectionType.FIELDS, fields: items };
+  let obj = { type: PersonalWidgetSectionType /* PersonalWidgetSectionType */.PersonalWidgetSectionType.FIELDS, fields: items };
   obj = { key: `field-${tmp}`, title: "", description: "" };
   let closure_3 = tmp + 1;
   items = [obj];
@@ -288,9 +292,9 @@ export const createDefaultPersonalWidget = function createDefaultPersonalWidget(
   let id;
   let sections;
   let obj = { sections: null };
-  obj = { type: require("../../../discord_common/js/shared/shared-constants/PersonalWidgetSectionType.tsx") /* PersonalWidgetSectionType */.PersonalWidgetSectionType.COVER, title: "", subtitle: "" };
+  obj = { type: PersonalWidgetSectionType /* PersonalWidgetSectionType */.PersonalWidgetSectionType.COVER, title: "", subtitle: "" };
   const items = [obj, ];
-  obj = { type: require("../../../discord_common/js/shared/shared-constants/PersonalWidgetSectionType.tsx") /* PersonalWidgetSectionType */.PersonalWidgetSectionType.FIELDS, fields: items1 };
+  obj = { type: PersonalWidgetSectionType /* PersonalWidgetSectionType */.PersonalWidgetSectionType.FIELDS, fields: items1 };
   let closure_3 = tmp4 + 1;
   items1 = [{ key: `field-${+closure_3}`, title: "", description: "" }];
   items[1] = obj;
@@ -301,7 +305,7 @@ export const createDefaultPersonalWidget = function createDefaultPersonalWidget(
   ({ header, sections, id } = obj);
   const obj2 = Object.create(UserProfilePersonalWidget.prototype);
   obj2.id = id;
-  obj2.type = require("../../../discord_common/js/shared/shared-constants/WidgetType.tsx") /* WidgetType */.WidgetType.PERSONAL;
+  obj2.type = WidgetType /* WidgetType */.WidgetType.PERSONAL;
   if (header == null) {
     header = "";
   }
@@ -351,11 +355,11 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
       }
       tmp = callback;
     });
-    items = mapped.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
+    items = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
   }
   if (!items.some((type) => type.type === callback(7000).PersonalWidgetSectionType.FIELDS)) {
     let obj = { type: null, fields: null };
-    obj[0] = require("../../../discord_common/js/shared/shared-constants/PersonalWidgetSectionType.tsx") /* PersonalWidgetSectionType */.PersonalWidgetSectionType.FIELDS;
+    obj[0] = PersonalWidgetSectionType /* PersonalWidgetSectionType */.PersonalWidgetSectionType.FIELDS;
     obj[1] = [];
     items.push(obj);
   }

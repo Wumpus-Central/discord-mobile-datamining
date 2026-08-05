@@ -1,3 +1,6 @@
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { numberParts } from "../../intl/number-parts.tsx";
+import { set } from "../../utils/RegexUtils.tsx";
 // discord_app/modules/application_commands/ApplicationCommandOptionUtils.tsx
 import { TRUE_OPTION_NAME } from "TRUE_OPTION_NAME";
 
@@ -97,13 +100,13 @@ export const getBoolean = function getBoolean(arg0, arg1) {
       }
     });
   }
-  require("../../../_runtime/metro/00038__.js")(1 === items.length, "Contains multiple values");
+  00038__(1 === items.length, "Contains multiple values");
   const first = items[0];
   let type;
   if (first != null) {
     type = first.type;
   }
-  require("../../../_runtime/metro/00038__.js")("text" === type, "First value is not text");
+  00038__("text" === type, "First value is not text");
   return items[0].text === TRUE_OPTION_NAME;
 };
 export const getOptionalBoolean = function getOptionalBoolean(arg0, arg1) {
@@ -127,15 +130,15 @@ export const getOptionalBoolean = function getOptionalBoolean(arg0, arg1) {
         }
       });
     }
-    require("../../../_runtime/metro/00038__.js")(1 === items.length, "Contains multiple values");
+    00038__(1 === items.length, "Contains multiple values");
     const first = items[0];
     let type;
     if (first != null) {
       type = first.type;
     }
-    require("../../../_runtime/metro/00038__.js")("text" === type, "First value is not text");
+    00038__("text" === type, "First value is not text");
     tmp = items[0].text === TRUE_OPTION_NAME;
-    const tmp5 = require("../../../_runtime/metro/00038__.js");
+    const tmp5 = 00038__;
   }
   return tmp;
 };
@@ -158,13 +161,13 @@ export const getChannelId = function getChannelId(arg0, arg1) {
       }
     });
   }
-  require("../../../_runtime/metro/00038__.js")(1 === items.length, "Contains multiple values");
+  00038__(1 === items.length, "Contains multiple values");
   const first = items[0];
   let type;
   if (first != null) {
     type = first.type;
   }
-  require("../../../_runtime/metro/00038__.js")("channelMention" === type, "First value is not a channel mention");
+  00038__("channelMention" === type, "First value is not a channel mention");
   return items[0].channelId;
 };
 export const getOptionalChannelId = function getOptionalChannelId(arg0, arg1) {
@@ -188,15 +191,15 @@ export const getOptionalChannelId = function getOptionalChannelId(arg0, arg1) {
         }
       });
     }
-    require("../../../_runtime/metro/00038__.js")(1 === items.length, "Contains multiple values");
+    00038__(1 === items.length, "Contains multiple values");
     const first = items[0];
     let type;
     if (first != null) {
       type = first.type;
     }
-    require("../../../_runtime/metro/00038__.js")("channelMention" === type, "First value is not a channel mention");
+    00038__("channelMention" === type, "First value is not a channel mention");
     channelId = items[0].channelId;
-    const tmp5 = require("../../../_runtime/metro/00038__.js");
+    const tmp5 = 00038__;
   }
   return channelId;
 };
@@ -219,13 +222,13 @@ export const getUserId = function getUserId(arg0, arg1) {
       }
     });
   }
-  require("../../../_runtime/metro/00038__.js")(1 === items.length, "Contains multiple values");
+  00038__(1 === items.length, "Contains multiple values");
   const first = items[0];
   let type;
   if (first != null) {
     type = first.type;
   }
-  require("../../../_runtime/metro/00038__.js")("userMention" === type, "First value is not a user mention");
+  00038__("userMention" === type, "First value is not a user mention");
   return items[0].userId;
 };
 export const getOptionalUserId = function getOptionalUserId(arg0, arg1) {
@@ -249,15 +252,15 @@ export const getOptionalUserId = function getOptionalUserId(arg0, arg1) {
         }
       });
     }
-    require("../../../_runtime/metro/00038__.js")(1 === items.length, "Contains multiple values");
+    00038__(1 === items.length, "Contains multiple values");
     const first = items[0];
     let type;
     if (first != null) {
       type = first.type;
     }
-    require("../../../_runtime/metro/00038__.js")("userMention" === type, "First value is not a user mention");
+    00038__("userMention" === type, "First value is not a user mention");
     userId = items[0].userId;
-    const tmp5 = require("../../../_runtime/metro/00038__.js");
+    const tmp5 = 00038__;
   }
   return userId;
 };
@@ -280,13 +283,13 @@ export const getRoleId = function getRoleId(arg0, arg1) {
       }
     });
   }
-  require("../../../_runtime/metro/00038__.js")(1 === items.length, "Contains multiple values");
+  00038__(1 === items.length, "Contains multiple values");
   const first = items[0];
   let type;
   if (first != null) {
     type = first.type;
   }
-  require("../../../_runtime/metro/00038__.js")("roleMention" === type, "First value is not a role mention");
+  00038__("roleMention" === type, "First value is not a role mention");
   return items[0].roleId;
 };
 export const getOptionalRoleId = function getOptionalRoleId(arg0, arg1) {
@@ -310,15 +313,15 @@ export const getOptionalRoleId = function getOptionalRoleId(arg0, arg1) {
         }
       });
     }
-    require("../../../_runtime/metro/00038__.js")(1 === items.length, "Contains multiple values");
+    00038__(1 === items.length, "Contains multiple values");
     const first = items[0];
     let type;
     if (first != null) {
       type = first.type;
     }
-    require("../../../_runtime/metro/00038__.js")("roleMention" === type, "First value is not a role mention");
+    00038__("roleMention" === type, "First value is not a role mention");
     roleId = items[0].roleId;
-    const tmp5 = require("../../../_runtime/metro/00038__.js");
+    const tmp5 = 00038__;
   }
   return roleId;
 };
@@ -335,18 +338,18 @@ export const normalizeNumericString = function normalizeNumericString(locale, tr
   let group;
   if (locale !== closure_5) {
     closure_5 = locale;
-    en_US = require("../../intl/number-parts.tsx") /* numberParts */.numberParts[locale];
+    en_US = numberParts /* numberParts */.numberParts[locale];
     if (en_US == null) {
       en_US = tmp11(9912).numberParts["en-US"];
     }
     const _RegExp = RegExp;
     ({ group, decimal } = en_US);
-    const regExp = new RegExp(require("../../utils/RegexUtils.tsx").escape(group), "g");
+    const regExp = new RegExp(set.escape(group), "g");
     const _RegExp2 = RegExp;
-    const obj = require("../../utils/RegexUtils.tsx");
+    const obj = set;
     tmp11 = require;
-    const regExp1 = new RegExp(require("../../utils/RegexUtils.tsx").escape(decimal), "g");
-    const obj2 = require("../../utils/RegexUtils.tsx");
+    const regExp1 = new RegExp(set.escape(decimal), "g");
+    const obj2 = set;
   }
   return trimmed.replace(regExp, "").replace(regExp1, ".");
 };

@@ -1,3 +1,5 @@
+import { componentDidMount } from "../../../../../components_native/common/Alert.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/guild_member_verification/native/components/alerts/MemberVerificationAlert.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -38,16 +40,16 @@ export default function MemberVerificationAlert(arg0) {
   }
   const items = [tmp7, , , ];
   obj = { style: tmp2.header, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: header };
-  items[1] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Heading, obj);
+  items[1] = callback(Text /* Text */.Heading, obj);
   let tmp10Result = null;
   if (null != subtitle) {
     const obj1 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj1[0] = tmp2.subtitle;
     obj1[3] = subtitle;
-    tmp10Result = tmp10(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+    tmp10Result = tmp10(Text /* Text */.Text, obj1);
   }
   items[2] = tmp10Result;
   items[3] = callback(View, { style: tmp2.buttons, children: buttons });
   obj.children = items;
-  return closure_5(require("../../../../../components_native/common/Alert.tsx"), obj);
+  return closure_5(componentDidMount, obj);
 };

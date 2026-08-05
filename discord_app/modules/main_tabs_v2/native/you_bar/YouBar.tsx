@@ -1,3 +1,7 @@
+import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { ConnectionBannerIcon } from "../ConnectionBanner.tsx";
+import { YouBarFloatingShade } from "YouBarFloatingShade.tsx";
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBar.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import getSystemLocale from "getSystemLocale";
@@ -411,13 +415,13 @@ let closure_27 = importAllResult.memo(() => {
   return closure_21(youBarHorizontalMargin(4146).View, obj);
 });
 const memoResult = importAllResult.memo(function YouBarThemed() {
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [isSyncedModeThemesEnabled];
   const stateFromStores = obj.useStateFromStores(items, () => gradientPreset.gradientPreset);
   obj = { gradient: stateFromStores, children: null };
-  const items1 = [callback(require("YouBarFloatingShade.tsx"), {}), callback(closure_27, {}), callback(require("../ConnectionBanner.tsx"), {})];
+  const items1 = [callback(YouBarFloatingShade, {}), callback(closure_27, {}), callback(ConnectionBannerIcon, {})];
   obj[1] = items1;
-  return callback2(require("../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */.ThemeContextProvider, obj);
+  return callback2(ManaContext /* ManaContext */.ThemeContextProvider, obj);
 });
 let result = require("noop").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBar.tsx");
 

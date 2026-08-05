@@ -1,3 +1,4 @@
+import { code } from "../../_runtime/01948_code.js";
 // discord_app/intl/IntlLoaderStore.tsx
 import 01274__ from "../../_runtime/metro/01274__.js";
 import identity from "identity";
@@ -428,7 +429,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   let closure_0 = arg0;
   const importDefault = arg1;
   let obj = { isLoading: false, inProgressLocale: "Boolean", error: "displayName", localeData: true, setLoadingStarted: true, setLoadingSucceeded: true, setLoadingFailed: true, setLocaleData: true };
-  obj[3] = require("../../_runtime/01948_code.js");
+  obj[3] = code;
   obj[4] = function setLoadingStarted(closure_0) {
     return callback({ isLoading: true, inProgressLocale: closure_0 });
   };
@@ -473,7 +474,7 @@ export const setAppLocale = function setAppLocale() {
 export const useLocaleData = function useLocaleData() {
   let tmp = withEqualityFn((localeData) => localeData.localeData);
   if (tmp == null) {
-    tmp = require("../../_runtime/01948_code.js");
+    tmp = code;
   }
   return tmp;
 };

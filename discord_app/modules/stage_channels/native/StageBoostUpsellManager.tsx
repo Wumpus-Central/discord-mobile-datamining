@@ -1,3 +1,5 @@
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { useStageHasMedia } from "../StageMediaHooks.tsx";
 // discord_app/modules/stage_channels/native/StageBoostUpsellManager.tsx
 import setContent from "setContent";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -22,8 +24,8 @@ prototype["handleVoiceChannelSelect"] = function handleVoiceChannelSelect(channe
     tmp = key.getKey() === STAGE_BOOSTING_SHEET_KEY;
   }
   if (tmp) {
-    require("../../action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet(STAGE_BOOSTING_SHEET_KEY);
-    const obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
+    ACTION_SHEET_HEIGHT_HALF.hideActionSheet(STAGE_BOOSTING_SHEET_KEY);
+    const obj = ACTION_SHEET_HEIGHT_HALF;
   }
 };
 prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
@@ -37,15 +39,15 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
           isGuildStageVoiceResult = channel.isGuildStageVoice();
         }
         if (isGuildStageVoiceResult) {
-          let obj = require("../StageMediaHooks.tsx") /* useStageHasMedia */;
+          let obj = useStageHasMedia /* useStageHasMedia */;
           if (obj.getStageHasMedia(channel.id)) {
             if (tmp5Result.getChannelVideoLimit(channel).reachedLimit) {
               if (getUncachedChannelPermissions.can(tmp5(1380).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
                 obj = { channel: null };
                 obj[0] = channel;
-                require("../../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(tmp5(1959)(5114, tmp6.paths), STAGE_BOOSTING_SHEET_KEY, obj);
+                ACTION_SHEET_HEIGHT_HALF.openLazy(tmp5(1959)(5114, tmp6.paths), STAGE_BOOSTING_SHEET_KEY, obj);
                 c8 = true;
-                const obj3 = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
+                const obj3 = ACTION_SHEET_HEIGHT_HALF;
               }
             }
             tmp5Result = tmp5(9076);

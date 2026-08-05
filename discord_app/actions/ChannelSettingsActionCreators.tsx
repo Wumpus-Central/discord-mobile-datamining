@@ -1,3 +1,6 @@
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { getRootNavigationRef } from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 // discord_app/actions/ChannelSettingsActionCreators.tsx
 import getRootNavigationRef from "getRootNavigationRef";
 import normalizeChannelPropertyForCompare from "normalizeChannelPropertyForCompare";
@@ -9,12 +12,12 @@ let closure_6;
 let error;
 const require = arg1;
 function init(channelId, location, subsection) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "CHANNEL_SETTINGS_INIT", channelId, location, subsection };
   obj.dispatch(obj);
 }
 function open(arg0, arg1, arg2) {
-  let obj = require("../modules/main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */;
+  let obj = getRootNavigationRef /* getRootNavigationRef */;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -22,7 +25,7 @@ function open(arg0, arg1, arg2) {
       obj[1] = arg0;
       obj[2] = arg1;
       obj[3] = arg2;
-      require("../Dispatcher.tsx").dispatch(obj);
+      dispatcher.dispatch(obj);
       let OVERVIEW = section.getSection();
       if (OVERVIEW == null) {
         OVERVIEW = constants.OVERVIEW;
@@ -31,20 +34,20 @@ function open(arg0, arg1, arg2) {
       obj[0] = arg0;
       obj[1] = OVERVIEW;
       rootNavigationRef.navigate("sidebar", obj);
-      const obj3 = require("../Dispatcher.tsx");
+      const obj3 = dispatcher;
     }
   }
 }
 function close() {
-  require("../Dispatcher.tsx").dispatch({ type: "CHANNEL_SETTINGS_CLOSE" });
+  dispatcher.dispatch({ type: "CHANNEL_SETTINGS_CLOSE" });
 }
 function setSection(section) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "CHANNEL_SETTINGS_SET_SECTION", section };
   obj.dispatch(obj);
 }
 function selectPermissionOverwrite(overwriteId) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "CHANNEL_SETTINGS_OVERWRITE_SELECT", overwriteId };
   obj.dispatch(obj);
 }
@@ -73,7 +76,7 @@ function updateChannel(arg0) {
   let userLimit;
   let videoQualityMode;
   ({ name, type, topic, bitrate, userLimit, nsfw, flags, rateLimitPerUser, defaultThreadRateLimitPerUser, defaultAutoArchiveDuration, template, defaultReactionEmoji, rtcRegion, videoQualityMode, autoArchiveDuration, locked, invitable, availableTags, defaultSortOrder, defaultForumLayout, defaultTagSetting, iconEmoji, themeColor } = arg0);
-  require("../Dispatcher.tsx").dispatch({ type: "CHANNEL_SETTINGS_UPDATE", name, channelType: type, topic, bitrate, userLimit, nsfw, flags, rateLimitPerUser, defaultThreadRateLimitPerUser, defaultAutoArchiveDuration, template, defaultReactionEmoji, rtcRegion, videoQualityMode, autoArchiveDuration, locked, invitable, availableTags, defaultSortOrder, defaultForumLayout, defaultTagSetting, iconEmoji, themeColor });
+  dispatcher.dispatch({ type: "CHANNEL_SETTINGS_UPDATE", name, channelType: type, topic, bitrate, userLimit, nsfw, flags, rateLimitPerUser, defaultThreadRateLimitPerUser, defaultAutoArchiveDuration, template, defaultReactionEmoji, rtcRegion, videoQualityMode, autoArchiveDuration, locked, invitable, availableTags, defaultSortOrder, defaultForumLayout, defaultTagSetting, iconEmoji, themeColor });
 }
 function saveChannel(id, arg1) {
   const self = this;
@@ -421,14 +424,14 @@ function _deleteChannel() {
   return applyArgumentsResult;
 }
 function updateVoiceChannelStatus(arg0, status) {
-  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   obj = { url: closure_6.UPDATE_VOICE_CHANNEL_STATUS(arg0), body: obj, rejectWithError: null };
   obj = { status };
-  obj[2] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+  obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
   return HTTP.put(obj);
 }
 function removeLinkedLobby(outer1_0) {
-  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   return HTTP.del({ url: closure_6.CHANNEL_LINKED_LOBBY(outer1_0), rejectWithError: true });
 }
 ({ Endpoints: closure_6, Layers, ChannelSettingsSections: error } = ME);

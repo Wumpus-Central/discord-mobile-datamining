@@ -1,3 +1,4 @@
+import { set } from "../../utils/RegexUtils.tsx";
 // discord_app/modules/links/LinkUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -6,7 +7,7 @@ import ME from "ME";
 
 ME = ME.ME;
 const Permissions = ME.Permissions;
-const mapped = Array.from(require("set").StaticChannelRoutes).map((arg0) => require("../../utils/RegexUtils.tsx").escape(arg0));
+const mapped = Array.from(require("set").StaticChannelRoutes).map((arg0) => set.escape(arg0));
 const joined = mapped.join("|");
 const regExp = new RegExp("^/channels/(\\d+|" + ME + ")(?:/)?(\\d+|" + joined + ")?");
 const regExp1 = new RegExp("^/channels/(\\d+|" + ME + ")(?:/)(\\d+|" + joined + ")(?:/)(\\d+)");

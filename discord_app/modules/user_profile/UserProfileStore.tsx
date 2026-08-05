@@ -1,3 +1,7 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { WidgetType } from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
+import { parseUserProfileCollectibles } from "utils/parseUserProfileCollectibles.tsx";
 // discord_app/modules/user_profile/UserProfileStore.tsx
 import _getSystemLocale from "_getSystemLocale";
 import createdAt from "createdAt";
@@ -12,7 +16,7 @@ import set from "fetchFingerprint";
 const require = arg1;
 function createUserWidgetFromServer(data) {
   const type = data.data.type;
-  if (require("../../../discord_common/js/shared/shared-constants/WidgetType.tsx") /* WidgetType */.WidgetType.CURRENT_GAMES !== type) {
+  if (WidgetType /* WidgetType */.WidgetType.CURRENT_GAMES !== type) {
     if (tmp(6990).WidgetType.FAVORITE_GAMES !== type) {
       if (tmp(6990).WidgetType.PLAYED_GAMES !== type) {
         if (tmp(6990).WidgetType.WANT_TO_PLAY_GAMES !== type) {
@@ -59,9 +63,9 @@ function createUserWidgetFromServer(data) {
   }
   const games = data.data.games;
   const mapped1 = games.map((applicationId) => ({ applicationId: applicationId.game_id, comment: applicationId.comment, tags: applicationId.tags }));
-  const obj5 = require("../../../_runtime/00012_apply.js");
-  const uniqByResult = require("../../../_runtime/00012_apply.js").uniqBy(mapped1, "applicationId");
-  const baseGameWidget = new tmp(6991).BaseGameWidget({ id: data.id, type, games: require("../../../_runtime/00012_apply.js").uniqBy(mapped1, "applicationId") });
+  const obj5 = apply;
+  const uniqByResult = apply.uniqBy(mapped1, "applicationId");
+  const baseGameWidget = new tmp(6991).BaseGameWidget({ id: data.id, type, games: apply.uniqBy(mapped1, "applicationId") });
   return baseGameWidget;
 }
 function checkUserProfileCollectiblesExpiration(id, guild_id) {
@@ -186,7 +190,7 @@ function handleMutualFriendsFetchSuccess(userId) {
   let mutualFriends;
   set.delete(userId.userId);
   ({ userId, mutualFriends } = userId);
-  const mapped = require("../../../_runtime/00012_apply.js")(mutualFriends).map((id) => {
+  const mapped = apply(mutualFriends).map((id) => {
     let obj = { key: id.id, user: null, status: null };
     obj = {};
     const merged = Object.assign(id);
@@ -196,7 +200,7 @@ function handleMutualFriendsFetchSuccess(userId) {
     obj[2] = status.getStatus(id.id);
     return obj;
   });
-  const arr = require("../../../_runtime/00012_apply.js")(mutualFriends);
+  const arr = apply(mutualFriends);
   const result = map3.set(userId, mapped.sortBy((user) => user.user.username.toLowerCase()).value());
   const result1 = map4.set(userId.userId, userId.mutualFriends.length);
 }
@@ -562,7 +566,7 @@ function handleProfileUpdateSuccess(guild_id) {
           const merged = Object.assign(value);
           obj = { collectibles: null };
           obj[0] = collectibles;
-          const merged1 = Object.assign(require("utils/parseUserProfileCollectibles.tsx")(obj));
+          const merged1 = Object.assign(parseUserProfileCollectibles(obj));
           obj.accentColor = accent_color;
           obj.banner = banner;
           obj.bio = bio;
@@ -583,7 +587,7 @@ function handleProfileUpdateSuccess(guild_id) {
       const merged2 = Object.assign(value1);
       const obj2 = { collectibles: null };
       obj2[0] = collectibles2;
-      const merged3 = Object.assign(require("utils/parseUserProfileCollectibles.tsx")(obj2));
+      const merged3 = Object.assign(parseUserProfileCollectibles(obj2));
       obj1.accentColor = accent_color2;
       obj1.banner = banner2;
       obj1.bio = bio2;
@@ -611,7 +615,7 @@ function handleWidgetsUpdateSuccess(arg0) {
     obj = {};
     const merged = Object.assign(value);
     const mapped = widgets.map(createUserWidgetFromServer);
-    obj.widgets = mapped.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
+    obj.widgets = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
     const result = obj.set(userId, obj);
   }
 }

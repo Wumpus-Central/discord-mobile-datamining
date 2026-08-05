@@ -1,3 +1,4 @@
+import { registerAsset } from "../../../../_runtime/07556_registerAsset.js";
 // discord_app/modules/premium/native/SubscriptionAccountHoldNotice.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -33,7 +34,7 @@ export default function SubscriptionAccountHoldNotice(subscription) {
     obj = { size: null, style: null, source: null };
     obj[0] = subscription(1297).IconSizes.MEDIUM;
     obj[1] = tmp.icon;
-    obj[2] = require("../../../../_runtime/07556_registerAsset.js");
+    obj[2] = registerAsset;
     const items = [callback(subscription(1297).Icon, obj), ];
     const obj1 = { style: null, variant: "text-sm/medium", children: null };
     obj1[0] = tmp.text;

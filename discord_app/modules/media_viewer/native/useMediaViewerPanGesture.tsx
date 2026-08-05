@@ -1,3 +1,4 @@
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/media_viewer/native/useMediaViewerPanGesture.tsx
 import noop from "noop";
 
@@ -14,17 +15,17 @@ export const useMediaViewerPanGestureConfig = function useMediaViewerPanGestureC
   const _require = arg0;
   let closure_1 = swipeVelocityThreshold;
   const dependencyMap = onClose;
-  const sharedValue = _require("../../reanimated/ReanimatedRexport.tsx").useSharedValue(false);
-  let obj = _require("../../reanimated/ReanimatedRexport.tsx");
-  const sharedValue1 = _require("../../reanimated/ReanimatedRexport.tsx").useSharedValue(false);
-  const obj2 = _require("../../reanimated/ReanimatedRexport.tsx");
-  const sharedValue2 = _require("../../reanimated/ReanimatedRexport.tsx").useSharedValue(0);
-  const obj3 = _require("../../reanimated/ReanimatedRexport.tsx");
-  const sharedValue3 = _require("../../reanimated/ReanimatedRexport.tsx").useSharedValue(0);
-  const obj4 = _require("../../reanimated/ReanimatedRexport.tsx");
-  const sharedValue4 = _require("../../reanimated/ReanimatedRexport.tsx").useSharedValue({ y: 0, x: 0 });
-  const obj5 = _require("../../reanimated/ReanimatedRexport.tsx");
-  const sharedValue5 = _require("../../reanimated/ReanimatedRexport.tsx").useSharedValue(true);
+  const sharedValue = _ReanimatedRexport.useSharedValue(false);
+  let obj = _ReanimatedRexport;
+  const sharedValue1 = _ReanimatedRexport.useSharedValue(false);
+  const obj2 = _ReanimatedRexport;
+  const sharedValue2 = _ReanimatedRexport.useSharedValue(0);
+  const obj3 = _ReanimatedRexport;
+  const sharedValue3 = _ReanimatedRexport.useSharedValue(0);
+  const obj4 = _ReanimatedRexport;
+  const sharedValue4 = _ReanimatedRexport.useSharedValue({ y: 0, x: 0 });
+  const obj5 = _ReanimatedRexport;
+  const sharedValue5 = _ReanimatedRexport.useSharedValue(true);
   const items = [onClose];
   const callback = sharedValue.useCallback(() => {
     callback(onClose[2]).tryPauseCurrentVideo();

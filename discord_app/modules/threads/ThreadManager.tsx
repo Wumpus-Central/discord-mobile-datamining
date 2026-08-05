@@ -1,3 +1,4 @@
+import { withErrorHandling } from "../forums/ForumActionCreators.tsx";
 // discord_app/modules/threads/ThreadManager.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -57,8 +58,8 @@ prototype["handleMessageCreate"] = function handleMessageCreate(channelId) {
       const _Date = Date;
       const time = date.getTime();
       if (Date.now() - time < 5000) {
-        require("../forums/ForumActionCreators.tsx").resort(channel.parent_id);
-        const obj3 = require("../forums/ForumActionCreators.tsx");
+        withErrorHandling.resort(channel.parent_id);
+        const obj3 = withErrorHandling;
       }
     }
   }

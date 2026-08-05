@@ -1,3 +1,5 @@
+import { createCacheKey } from "../../../design/components/Styles/native/createStyles.tsx";
+import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 // discord_app/modules/icymi/native/ICYMIMessageRowPreview.tsx
 import importAllResult from "noop";
 import { MessageEmbedTypes } from "ME";
@@ -20,14 +22,14 @@ function ICYMIMessageRowPreview(pointerEvents) {
   let setting;
   let setting1;
   let setting2;
-  let obj = require("../../../design/components/Styles/native/createStyles.tsx") /* createCacheKey */;
+  let obj = createCacheKey /* createCacheKey */;
   obj = { seeMoreLabelColor: messageOptions(712).colors.TEXT_DEFAULT };
   dependencyMap = obj.createNativeStyleProperties(obj)(messageOptions(4221)());
-  const RenderEmbeds = require("../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.RenderEmbeds;
+  const RenderEmbeds = explicitContentFromProto /* explicitContentFromProto */.RenderEmbeds;
   setting = RenderEmbeds.getSetting();
-  const InlineEmbedMedia = require("../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.InlineEmbedMedia;
+  const InlineEmbedMedia = explicitContentFromProto /* explicitContentFromProto */.InlineEmbedMedia;
   setting1 = InlineEmbedMedia.getSetting();
-  const InlineAttachmentMedia = require("../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.InlineAttachmentMedia;
+  const InlineAttachmentMedia = explicitContentFromProto /* explicitContentFromProto */.InlineAttachmentMedia;
   setting2 = InlineAttachmentMedia.getSetting();
   const items = [setting, setting1, setting2, messageOptions];
   const memo = setting.useMemo(() => {

@@ -1,3 +1,6 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useProfileEffect } from "../useProfileEffect.tsx";
+import { sortEffectLayers } from "../utils.tsx";
 // discord_app/modules/collectibles/profile_effects/native/ProfileEffect.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -254,11 +257,11 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/c
 export default function WrappedProfileEffect(skuId) {
   let useThumbnail;
   let thumbnailUrlOverride = skuId;
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const tmp = require("../useProfileEffect.tsx")(skuId.skuId);
-  useThumbnail = require("../utils.tsx") /* sortEffectLayers */.usePotentiallyRandomizedProfileEffect(tmp);
+  const tmp = useProfileEffect(skuId.skuId);
+  useThumbnail = sortEffectLayers /* sortEffectLayers */.usePotentiallyRandomizedProfileEffect(tmp);
   if (null == useThumbnail) {
     return null;
   } else {

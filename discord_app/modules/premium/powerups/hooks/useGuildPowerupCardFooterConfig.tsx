@@ -1,3 +1,7 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { VANITY_URL_POWERUP_SKU_ID } from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
+import { useGuildPowerupRollbackEnabled } from "useGuildPowerupRollbackEnabled.tsx";
+import { usePowerupActiveStatus } from "usePowerupActiveStatus.tsx";
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupCardFooterConfig.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import BoostedGuildTiers from "BoostedGuildTiers";
@@ -12,8 +16,8 @@ const result = require("ME").fileFinishedImporting("modules/premium/powerups/hoo
 
 export default function useGuildPowerupCardFooterConfig(arg0, skuId) {
   const _require = arg0;
-  const tmp3 = require("usePowerupActiveStatus.tsx")(arg0, skuId);
-  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  const tmp3 = usePowerupActiveStatus(arg0, skuId);
+  let obj = _initialize;
   const items = [createGuildRecordFromRust];
   const items1 = [arg0];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -27,12 +31,12 @@ export default function useGuildPowerupCardFooterConfig(arg0, skuId) {
   }, items1);
   let tmp6 = tmp3.type !== constants.INACTIVE;
   if (!tmp6) {
-    tmp6 = skuId.skuId === _require("../../../../../discord_common/js/shared/shared-constants/Powerups.tsx").GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
-    const tmp7 = skuId.skuId === _require("../../../../../discord_common/js/shared/shared-constants/Powerups.tsx").GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
+    tmp6 = skuId.skuId === _VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
+    const tmp7 = skuId.skuId === _VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
   }
   let tmp8 = tmp6;
   if (!tmp6) {
-    tmp8 = !require("useGuildPowerupRollbackEnabled.tsx")(arg0, skuId, "GuildPowerupCardFooterAdmin");
+    tmp8 = !useGuildPowerupRollbackEnabled(arg0, skuId, "GuildPowerupCardFooterAdmin");
   }
   if (tmp8) {
     tmp8 = tmp3.type !== constants.TIER_OVERRIDE_ACTIVATED;

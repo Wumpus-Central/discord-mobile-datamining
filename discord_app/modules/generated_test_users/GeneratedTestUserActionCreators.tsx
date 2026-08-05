@@ -1,3 +1,5 @@
+import { handleLogout } from "../../actions/AuthenticationActionCreators.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/generated_test_users/GeneratedTestUserActionCreators.tsx
 import handleLogout from "handleLogout";
 import createdAt from "createdAt";
@@ -80,8 +82,8 @@ export const loginAsGeneratedUser = function loginAsGeneratedUser(id, arg1) {
       obj = { login: null, password: null, isMultiAccount: true, source: "generated_test_user" };
       obj[0] = user.email;
       obj[1] = password;
-      const obj2 = require("../../actions/AuthenticationActionCreators.tsx");
-      return require("../../actions/AuthenticationActionCreators.tsx").login(obj).catch(() => {
+      const obj2 = handleLogout;
+      return handleLogout.login(obj).catch(() => {
         callback(table[6]).showFailedToast(constants.GENERIC_ERROR);
         return null;
       });
@@ -99,7 +101,7 @@ export const getGeneratedPoolById = function getGeneratedPoolById(closure_0, clo
   return applyArgumentsResult;
 };
 export const removeGeneratedPoolFromList = function removeGeneratedPoolFromList(poolId) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GENERATED_POOL_REMOVE_FROM_LIST", poolId };
   obj.dispatch(obj);
 };

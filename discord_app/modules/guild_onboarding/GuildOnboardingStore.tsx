@@ -1,3 +1,4 @@
+import { getFavoritesAwareGuildName } from "../favorites/FavoritesUtils.tsx";
 // discord_app/modules/guild_onboarding/GuildOnboardingStore.tsx
 import { ME } from "ME";
 import { Store } from "initialize";
@@ -11,7 +12,7 @@ const prototype = GuildOnboardingStore.prototype;
 prototype["shouldShowOnboarding"] = function shouldShowOnboarding(c0) {
   let tmp = c0 !== ME;
   if (tmp) {
-    const obj = require("../favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
+    const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
     tmp = !obj.isFavoritesGuildId(c0);
   }
   if (tmp) {

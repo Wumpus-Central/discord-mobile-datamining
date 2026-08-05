@@ -1,10 +1,12 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { PremiumPlanSelectSettingScreen } from "../../premium/native/PremiumPlanSelectSettingScreen.tsx";
 // discord_app/modules/user_settings/defs/native/PremiumPlanSelectSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.u95Dt4);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.u95Dt4);
   },
   parent: require("MobileSetting").MobileSetting.PREMIUM,
   unsearchable: true,
@@ -13,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.PREMIUM_PLAN_SELECT,
   getComponent() {
-    return require("../../premium/native/PremiumPlanSelectSettingScreen.tsx") /* PremiumPlanSelectSettingScreen */.default;
+    return PremiumPlanSelectSettingScreen /* PremiumPlanSelectSettingScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

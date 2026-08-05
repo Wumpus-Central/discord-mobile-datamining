@@ -1,3 +1,4 @@
+import { getTimeZone } from "getTimeZone.native.tsx";
 // discord_app/lib/superagentPatch.tsx
 import getHash from "getHash";
 import { AbortCodes } from "ME";
@@ -114,7 +115,7 @@ ApexExperiment = {
         tmpResult2 = tmp(500);
       }
       const result6 = promise.set("X-Discord-Locale", callback(1946).default.locale);
-      const tmp19 = require("getTimeZone.native.tsx")();
+      const tmp19 = getTimeZone();
       if (null != tmp19) {
         const result7 = promise.set("X-Discord-Timezone", tmp19);
       }

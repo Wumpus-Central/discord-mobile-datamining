@@ -1,3 +1,5 @@
+import { create } from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { getFavoritesAwareGuildName } from "../modules/favorites/FavoritesUtils.tsx";
 // discord_app/stores/CategoryCollapseStore.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -31,7 +33,7 @@ function syncFavoriteCategoryCollapse() {
         let tmp14 = require;
         let tmp15 = dependencyMap;
         flag4 = flag;
-        if (tmp13.type !== require("../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.FavoriteChannelType.CATEGORY) {
+        if (tmp13.type !== create /* create */.FavoriteChannelType.CATEGORY) {
           continue;
         } else {
           let tmp6 = dependencyMap;
@@ -186,7 +188,7 @@ const categoryCollapseStore = new CategoryCollapseStore(require("dispatcher"), {
         type = tmp3.type;
       }
     }
-    const tmp4 = type === require("../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.FavoriteChannelType.CATEGORY;
+    const tmp4 = type === create /* create */.FavoriteChannelType.CATEGORY;
     let tmp5 = !tmp4;
     if (!tmp4) {
       if (!dependencyMap[id]) {
@@ -210,7 +212,7 @@ const categoryCollapseStore = new CategoryCollapseStore(require("dispatcher"), {
         type = tmp5.type;
       }
     }
-    const tmp6 = type === require("../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.FavoriteChannelType.CATEGORY;
+    const tmp6 = type === create /* create */.FavoriteChannelType.CATEGORY;
     let tmp7 = !tmp6;
     if (!tmp6) {
       if (null != dependencyMap[id]) {
@@ -232,7 +234,7 @@ const categoryCollapseStore = new CategoryCollapseStore(require("dispatcher"), {
         }
       });
     }
-    obj = require("../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
+    obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
   },
   CATEGORY_EXPAND_ALL: function handleCategoryExpandAll(guildId) {
     guildId = guildId.guildId;
@@ -243,7 +245,7 @@ const categoryCollapseStore = new CategoryCollapseStore(require("dispatcher"), {
         delete tmp2[tmp];
       });
     }
-    obj = require("../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
+    obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
   },
   CHANNEL_DELETE: function handleChannelDelete(arg0) {
     if (null != dependencyMap[arg0.channel.id]) {

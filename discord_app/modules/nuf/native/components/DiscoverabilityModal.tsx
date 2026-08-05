@@ -1,3 +1,4 @@
+import { ContactSyncNameInput } from "../../../contact_sync/native/components/ContactSyncNameInput.tsx";
 // discord_app/modules/nuf/native/components/DiscoverabilityModal.tsx
 import set from "set";
 import { View } from "NavigationStack";
@@ -69,7 +70,7 @@ function DiscoverabilityNameScene() {
     name = "";
   }
   obj[2] = name;
-  obj[1] = jsx(require("../../../contact_sync/native/components/ContactSyncNameInput.tsx"), { onNext: callback, loading: false, initialName: null });
+  obj[1] = jsx(ContactSyncNameInput, { onNext: callback, loading: false, initialName: null });
   return <tmp6 onNext={callback} loading={false} initialName={null} />;
 }
 class DiscoverabilityModal {

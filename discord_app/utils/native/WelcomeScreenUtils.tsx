@@ -1,3 +1,5 @@
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/utils/native/WelcomeScreenUtils.tsx
 import noop from "noop";
 import handleInviteData from "handleInviteData";
@@ -71,6 +73,6 @@ export const useShowWelcomeModal = function useShowWelcomeModal(guildId, channel
 };
 export const openWelcomeActionSheet = function openWelcomeActionSheet(onHide) {
   const guildId = onHide.guildId;
-  const obj = require("../../modules/action_sheet/native/ActionSheetActionCreators.tsx");
-  obj.openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(11926, dependencyMap.paths), "GuildWelcomeActionSheet" + guildId, { guildId, onHide: onHide.onHide });
+  const obj = ACTION_SHEET_HEIGHT_HALF;
+  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(11926, dependencyMap.paths), "GuildWelcomeActionSheet" + guildId, { guildId, onHide: onHide.onHide });
 };

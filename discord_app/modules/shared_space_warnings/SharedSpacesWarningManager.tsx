@@ -1,3 +1,6 @@
+import { keys } from "../../ConstantsIOS.tsx";
+import { showGdmBlockedUserModal } from "show_gdm_modal/showGdmBlockedUserModal.native.tsx";
+import { showVoiceChannelBlockedUserWarning } from "show_voice_channel_warning/showVoiceChannelBlockedUserWarning.native.tsx";
 // discord_app/modules/shared_space_warnings/SharedSpacesWarningManager.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
@@ -33,7 +36,7 @@ function handleChannelSelect(channelId) {
             blockedUserWarningDismissed = num2 > Date.now() - closure_11;
           }
           if (!blockedUserWarningDismissed) {
-            let obj = require("show_gdm_modal/showGdmBlockedUserModal.native.tsx") /* showGdmBlockedUserModal */;
+            let obj = showGdmBlockedUserModal /* showGdmBlockedUserModal */;
             obj = { channelId: null, blockedUserIds: null, ignoredUserIds: null };
             obj[0] = channelId;
             obj[1] = found;
@@ -47,7 +50,7 @@ function handleChannelSelect(channelId) {
   }
 }
 function handleAppStateChanged(state) {
-  if (state.state === require("../../ConstantsIOS.tsx") /* keys */.AppStates.ACTIVE) {
+  if (state.state === keys /* keys */.AppStates.ACTIVE) {
     const channelId = store2.getChannelId();
     if (null != channelId) {
       const blockedUsersForVoiceChannel = authStore.getBlockedUsersForVoiceChannel(channelId);
@@ -83,8 +86,8 @@ function handleAppStateChanged(state) {
           if (!everyResult) {
             const items1 = [];
             HermesBuiltin.arraySpread(ignoredUsersForVoiceChannel, HermesBuiltin.arraySpread(blockedUsersForVoiceChannel, 0));
-            const result = require("show_voice_channel_warning/showVoiceChannelBlockedUserWarning.native.tsx") /* showVoiceChannelBlockedUserWarning */.showVoiceChannelBlockedUserWarning(channelId, items1[0]);
-            const tmpResult = require("show_voice_channel_warning/showVoiceChannelBlockedUserWarning.native.tsx") /* showVoiceChannelBlockedUserWarning */;
+            const result = showVoiceChannelBlockedUserWarning /* showVoiceChannelBlockedUserWarning */.showVoiceChannelBlockedUserWarning(channelId, items1[0]);
+            const tmpResult = showVoiceChannelBlockedUserWarning /* showVoiceChannelBlockedUserWarning */;
           }
         }
       }
@@ -126,8 +129,8 @@ SharedSpacesWarningManager.prototype["handleBlockedOrIgnoredUserVoiceChannelJoin
         tmp6 = num2 > Date.now() - closure_12;
       }
       if (!tmp6) {
-        const result = require("show_voice_channel_warning/showVoiceChannelBlockedUserWarning.native.tsx") /* showVoiceChannelBlockedUserWarning */.showVoiceChannelBlockedUserWarning(channelId, id);
-        const obj = require("show_voice_channel_warning/showVoiceChannelBlockedUserWarning.native.tsx") /* showVoiceChannelBlockedUserWarning */;
+        const result = showVoiceChannelBlockedUserWarning /* showVoiceChannelBlockedUserWarning */.showVoiceChannelBlockedUserWarning(channelId, id);
+        const obj = showVoiceChannelBlockedUserWarning /* showVoiceChannelBlockedUserWarning */;
       }
     }
   }

@@ -1,3 +1,4 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/user_profile/native/UserProfileApplicationWidgetSkeletons.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -23,7 +24,7 @@ export const TextSkeleton = function TextSkeleton(widthChars) {
   if (num === undefined) {
     num = 15;
   }
-  const tmp2 = require("../../../design/components/Text/native/Text.tsx") /* Text */.TextStyleSheet[widthChars.variant];
+  const tmp2 = Text /* Text */.TextStyleSheet[widthChars.variant];
   const style = [createCacheKey().skeleton, { width: 0.46 * tmp2.fontSize * num, height: 0.8 * tmp2.lineHeight }];
   return <View style={style} />;
 };

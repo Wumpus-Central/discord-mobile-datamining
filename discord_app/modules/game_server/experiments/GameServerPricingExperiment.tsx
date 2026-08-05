@@ -1,3 +1,4 @@
+import { experiment } from "../GameServerExperiment.tsx";
 // discord_app/modules/game_server/experiments/GameServerPricingExperiment.tsx
 import createExperiment from "createExperiment";
 
@@ -7,7 +8,7 @@ const result = require("set").fileFinishedImporting("modules/game_server/experim
 
 export const GameServerPricingExperiment = experiment;
 export const useIsGameServerPricingEnabled = function useIsGameServerPricingEnabled(guildId, useGuildPowerupsChannelListPopout) {
-  let obj = require("../GameServerExperiment.tsx") /* experiment */;
+  let obj = experiment /* experiment */;
   let enabled = obj.useGameServerEnabled(guildId, useGuildPowerupsChannelListPopout);
   obj = { guildId, location: useGuildPowerupsChannelListPopout };
   if (enabled) {

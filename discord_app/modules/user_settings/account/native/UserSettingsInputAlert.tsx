@@ -1,3 +1,5 @@
+import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
+import { KeyboardAwareView } from "../../../keyboard/native/KeyboardAwareView.tsx";
 // discord_app/modules/user_settings/account/native/UserSettingsInputAlert.tsx
 import jsxProd from "jsxProd";
 import { PureComponent } from "noop";
@@ -113,12 +115,12 @@ prototype["render"] = function render() {
   ({ title, actionText, cancelText, confirmColor, useKeyboardAwareWrapper } = this.props);
   let obj = { title, confirmText: actionText, confirmColor, onConfirm: this.handleSubmit, cancelText, onCancel: this.close, children: null };
   obj[6] = this.renderContent();
-  const tmp5 = callback(require("../../../../components_native/common/Alert.tsx"), obj);
+  const tmp5 = callback(componentDidMount, obj);
   let tmpResult = tmp5;
   if (useKeyboardAwareWrapper) {
     obj = { children: null };
     obj[0] = tmp5;
-    tmpResult = callback(require("../../../keyboard/native/KeyboardAwareView.tsx"), obj);
+    tmpResult = callback(KeyboardAwareView, obj);
   }
   return tmpResult;
 };

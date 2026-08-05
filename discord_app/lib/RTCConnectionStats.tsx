@@ -1,3 +1,6 @@
+import { apply } from "../../_runtime/00012_apply.js";
+import { sleep } from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import { zipWithNext } from "zipWithNext.tsx";
 // discord_app/lib/RTCConnectionStats.tsx
 import { RTCConnectionStates } from "ME";
 
@@ -28,9 +31,9 @@ prototype["update"] = function update(current) {
     const history = self.history;
     const obj = { state: null, startTime: null };
     obj[0] = current;
-    obj[1] = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */.now();
+    obj[1] = sleep /* sleep */.now();
     history.push(obj);
-    const obj2 = require("../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */;
+    const obj2 = sleep /* sleep */;
   }
 };
 prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccessStats(nowResult) {
@@ -41,7 +44,7 @@ prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccess
   const stateDurations = this.getStateDurations(nowResult);
   obj = { state_awaiting_endpoint_ms: null, state_authenticating_ms: null, state_connecting_ms: null, state_disconnected_ms: null, state_ice_checking_ms: null, state_no_route_ms: null, state_rtc_connecting_ms: null, state_rtc_disconnected_ms: null };
   RTC_DISCONNECTED = RTCConnectionStates.AWAITING_ENDPOINT;
-  obj[0] = require("../../_runtime/00012_apply.js").sumBy(stateDurations, (state) => {
+  obj[0] = apply.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
@@ -49,8 +52,8 @@ prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccess
     return num;
   });
   RTC_DISCONNECTED = RTCConnectionStates.AUTHENTICATING;
-  const obj3 = require("../../_runtime/00012_apply.js");
-  obj[1] = require("../../_runtime/00012_apply.js").sumBy(stateDurations, (state) => {
+  const obj3 = apply;
+  obj[1] = apply.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
@@ -58,8 +61,8 @@ prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccess
     return num;
   });
   RTC_DISCONNECTED = RTCConnectionStates.CONNECTING;
-  const obj4 = require("../../_runtime/00012_apply.js");
-  obj[2] = require("../../_runtime/00012_apply.js").sumBy(stateDurations, (state) => {
+  const obj4 = apply;
+  obj[2] = apply.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
@@ -67,8 +70,8 @@ prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccess
     return num;
   });
   RTC_DISCONNECTED = RTCConnectionStates.DISCONNECTED;
-  const obj5 = require("../../_runtime/00012_apply.js");
-  obj[3] = require("../../_runtime/00012_apply.js").sumBy(stateDurations, (state) => {
+  const obj5 = apply;
+  obj[3] = apply.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
@@ -76,8 +79,8 @@ prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccess
     return num;
   });
   RTC_DISCONNECTED = RTCConnectionStates.ICE_CHECKING;
-  const obj6 = require("../../_runtime/00012_apply.js");
-  obj[4] = require("../../_runtime/00012_apply.js").sumBy(stateDurations, (state) => {
+  const obj6 = apply;
+  obj[4] = apply.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
@@ -85,8 +88,8 @@ prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccess
     return num;
   });
   RTC_DISCONNECTED = RTCConnectionStates.NO_ROUTE;
-  const obj7 = require("../../_runtime/00012_apply.js");
-  obj[5] = require("../../_runtime/00012_apply.js").sumBy(stateDurations, (state) => {
+  const obj7 = apply;
+  obj[5] = apply.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
@@ -94,8 +97,8 @@ prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccess
     return num;
   });
   RTC_DISCONNECTED = RTCConnectionStates.RTC_CONNECTING;
-  const obj8 = require("../../_runtime/00012_apply.js");
-  obj[6] = require("../../_runtime/00012_apply.js").sumBy(stateDurations, (state) => {
+  const obj8 = apply;
+  obj[6] = apply.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
@@ -103,8 +106,8 @@ prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccess
     return num;
   });
   RTC_DISCONNECTED = RTCConnectionStates.RTC_DISCONNECTED;
-  const obj9 = require("../../_runtime/00012_apply.js");
-  obj[7] = require("../../_runtime/00012_apply.js").sumBy(stateDurations, (state) => {
+  const obj9 = apply;
+  obj[7] = apply.sumBy(stateDurations, (state) => {
     let num = 0;
     if (state.state === RTC_DISCONNECTED) {
       num = state.durationMs;
@@ -118,8 +121,8 @@ prototype["getStateDurations"] = function getStateDurations(nowResult) {
   if (0 === this.history.length) {
     return [];
   } else {
-    let arr = require("zipWithNext.tsx")(self.history, (state, startTime) => ({ state: state.state, durationMs: startTime.startTime - state.startTime }));
-    let obj = require("../../_runtime/00012_apply.js");
+    let arr = zipWithNext(self.history, (state, startTime) => ({ state: state.state, durationMs: startTime.startTime - state.startTime }));
+    let obj = apply;
     const lastResult = obj.last(self.history);
     obj = { state: null, durationMs: null };
     obj[0] = lastResult.state;

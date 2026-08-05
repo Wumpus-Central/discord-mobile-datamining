@@ -1,3 +1,5 @@
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
+import { apexExperiment } from "MobileGoLiveUpsellExperiment.tsx";
 // discord_app/modules/go_live/native/ApplicationStreamingManager.tsx
 import "noop";
 import ApplicationStreamPresets from "ApplicationStreamPresets";
@@ -13,7 +15,7 @@ class ApplicationStreamingManager extends tmp4 {
 }
 const prototype = ApplicationStreamingManager.prototype;
 prototype["platformShowStreamFull"] = function platformShowStreamFull() {
-  let obj = require("../../../actions/native/AlertActionCreators.tsx");
+  let obj = AlertActionCreators;
   obj = {
     importer() {
       return callback(paths[9])(paths[8], paths.paths).then((arg0) => {
@@ -35,7 +37,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
   sourceId = sourceId.sourceId;
   if (null != sourceId) {
     let setGoLiveSource = importDefault;
-    let obj = require("MobileGoLiveUpsellExperiment.tsx");
+    let obj = apexExperiment;
     if (obj.getConfig({ location: "platformHandleStreamStart" }).showMobileGoLiveUpsell) {
       state = state.getState();
     } else {

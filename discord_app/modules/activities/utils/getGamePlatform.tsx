@@ -1,3 +1,4 @@
+import { isOnXbox } from "isOnXbox.tsx";
 // discord_app/modules/activities/utils/getGamePlatform.tsx
 import ME from "ME";
 
@@ -13,7 +14,7 @@ export default function getGamePlatform(type) {
     if (null != type.type) {
       tmp = null;
       if (type.type === constants.PLAYING) {
-        if (require("isOnXbox.tsx")(type)) {
+        if (isOnXbox(type)) {
           let DESKTOP = constants2.XBOX;
         } else if (null != type.platform) {
           DESKTOP = type.platform;

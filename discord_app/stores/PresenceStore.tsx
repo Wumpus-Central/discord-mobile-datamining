@@ -1,3 +1,7 @@
+import { apply } from "../../_runtime/00012_apply.js";
+import { isUndefinedOrNull } from "../../_runtime/00659_isUndefinedOrNull.js";
+import { hasRichActivity } from "../modules/activities/utils/hasRichActivity.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/stores/PresenceStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -41,7 +45,7 @@ function sortActivity(type, type2) {
   let diff = num2 - num;
   if (!diff) {
     let num3 = 0;
-    if (require("../modules/activities/utils/hasRichActivity.tsx")(type2)) {
+    if (hasRichActivity(type2)) {
       num3 = 1;
     }
     let num4 = 0;
@@ -177,7 +181,7 @@ function flattenPresence(id) {
         closure_14[id] = tmp8;
         const tmp7 = closure_14;
       }
-      obj = require("../../_runtime/00012_apply.js");
+      obj = apply;
     }
     ({ status: closure_11[id], activities } = reduced);
     closure_12[id] = activities;
@@ -221,7 +225,7 @@ function flattenPresenceInConnectionOpen(arg0) {
   let activities;
   if (null != dependencyMap[arg0]) {
     const _Object = Object;
-    const maxByResult = require("../../_runtime/00012_apply.js").maxBy(Object.values(tmp), (processedAtTimestamp) => processedAtTimestamp.processedAtTimestamp);
+    const maxByResult = apply.maxBy(Object.values(tmp), (processedAtTimestamp) => processedAtTimestamp.processedAtTimestamp);
     let tmp3 = maxByResult.status !== constants.OFFLINE;
     if (!tmp3) {
       let tmp2 = null != maxByResult.hiddenActivities;
@@ -244,7 +248,7 @@ function flattenPresenceInConnectionOpen(arg0) {
       }
       const tmp8 = closure_14;
     }
-    const obj = require("../../_runtime/00012_apply.js");
+    const obj = apply;
   }
 }
 function updatePresence(arg0) {
@@ -317,7 +321,7 @@ function updatePresence(arg0) {
       let activities2 = sorted;
       if (null != tmp7[guildId]) {
         activities2 = sorted;
-        if (require("../../_runtime/00659_isUndefinedOrNull.js")(tmp25.activities, sorted)) {
+        if (isUndefinedOrNull(tmp25.activities, sorted)) {
           activities2 = tmp25.activities;
         }
       }
@@ -425,8 +429,8 @@ function clearPresence(closure_7, id) {
   }
 }
 function clearPresences(closure_7) {
-  const keys = require("../utils/SnowflakeUtils.tsx").keys(closure_10);
-  const obj = require("../utils/SnowflakeUtils.tsx");
+  const keys = DISCORD_EPOCH.keys(closure_10);
+  const obj = DISCORD_EPOCH;
   while (tmp2 !== undefined) {
     let tmp4 = clearPresence;
     let tmp5 = clearPresence(closure_7, tmp3);
@@ -580,7 +584,7 @@ prototype["getPrimaryActivity"] = function getPrimaryActivity(arg0) {
 };
 prototype["getAllApplicationActivities"] = function getAllApplicationActivities(arg0) {
   const items = [];
-  let obj = require("../utils/SnowflakeUtils.tsx");
+  let obj = DISCORD_EPOCH;
   const keys = obj.keys(dependencyMap4);
   for (const item10015 of keys) {
     let tmp3 = dependencyMap4;
@@ -634,7 +638,7 @@ prototype["getActivityMetadata"] = function getActivityMetadata(arg0) {
   return table[arg0];
 };
 prototype["getUserIds"] = function getUserIds() {
-  return require("../utils/SnowflakeUtils.tsx").keys(closure_12);
+  return DISCORD_EPOCH.keys(closure_12);
 };
 prototype["isMobileOnline"] = function isMobileOnline(id) {
   let tmp2 = null != tmp;

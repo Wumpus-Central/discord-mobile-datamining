@@ -1,3 +1,4 @@
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/connectivity/native/components/GlobalStatusIndicator.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -160,7 +161,7 @@ export default function GlobalStatusIndicator(children) {
 };
 export const useGlobalStatusIndicatorHeightSharedValue = function useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState) {
   const _require = globalStatusIndicatorState;
-  const sharedValue = _require("../../../reanimated/ReanimatedRexport.tsx").useSharedValue(globalStatusIndicatorState.height);
+  const sharedValue = _ReanimatedRexport.useSharedValue(globalStatusIndicatorState.height);
   const items = [globalStatusIndicatorState.height, sharedValue];
   const effect = React.useEffect(() => {
     const result = sharedValue.set(globalStatusIndicatorState.height);

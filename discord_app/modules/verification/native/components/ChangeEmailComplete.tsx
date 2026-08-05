@@ -1,3 +1,8 @@
+import { registerAsset } from "../../../../../_runtime/08273_registerAsset.js";
+import { EmailVerificationModalActionCreators } from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/verification/native/components/ChangeEmailComplete.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -13,7 +18,7 @@ let metroImportAll;
 const require = arg1;
 function handlePress() {
   resetChangeEmailStore();
-  require("../../../../actions/native/EmailVerificationModalActionCreators.tsx").close();
+  EmailVerificationModalActionCreators.close();
 }
 ({ View: c3, Image: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
@@ -33,28 +38,28 @@ const result = require("ChangeEmailFields").fileFinishedImporting("modules/verif
 export default function ChangeEmailComplete(email) {
   const tmp = createCacheKey();
   let obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, contentContainerStyle: tmp.contentContainer, children: null };
-  obj = { style: tmp.image, source: require("../../../../../_runtime/08273_registerAsset.js") };
+  obj = { style: tmp.image, source: registerAsset };
   const items = [callback(closure_4, obj), , , ];
   obj = { style: tmp.bodyInner, children: null };
   const obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[4] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["8O+nF7"]);
-  const items1 = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj1[4] = intl.string(getSystemLocale /* getSystemLocale */.t["8O+nF7"]);
+  const items1 = [callback(Text /* Text */.Text, obj1), ];
   const obj2 = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj2[3] = intl2.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Zvx0O3, { email: email.email });
-  items1[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj2[3] = intl2.format(getSystemLocale /* getSystemLocale */.t.Zvx0O3, { email: email.email });
+  items1[1] = callback(Text /* Text */.Text, obj2);
   obj[1] = items1;
   items[1] = callback2(closure_3, obj);
   const obj3 = { style: tmp.tooltip, variant: "text-sm/normal", children: null };
-  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj3[2] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.yb7itQ);
-  items[2] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj3[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.yb7itQ);
+  items[2] = callback(Text /* Text */.Text, obj3);
   const obj4 = { text: null, onPress: null, grow: true };
-  const intl4 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj4[0] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.BddRzS);
+  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  obj4[0] = intl4.string(getSystemLocale /* getSystemLocale */.t.BddRzS);
   obj4[1] = handlePress;
-  items[3] = callback(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj4);
+  items[3] = callback(Button /* Button */.Button, obj4);
   obj[3] = items;
   return callback2(closure_5, obj);
 };

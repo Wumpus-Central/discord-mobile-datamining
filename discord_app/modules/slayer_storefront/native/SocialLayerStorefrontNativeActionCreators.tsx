@@ -1,3 +1,9 @@
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { apexExperiment } from "../experiments/SocialLayerStorefrontMobilePurchasingExperiment.tsx";
+import { messagesProxy } from "../intl/SlayerStorefront.messages.js";
 // discord_app/modules/slayer_storefront/native/SocialLayerStorefrontNativeActionCreators.tsx
 import { jsx } from "jsxProd";
 
@@ -10,46 +16,46 @@ export const SOCIAL_LAYER_STOREFRONT_GIFT_MODAL_KEY = "social-layer-storefront-n
 export const SOCIAL_LAYER_STOREFRONT_SELF_PURCHASE_SUCCESS_MODAL_KEY = "social-layer-storefront-self-purchase-success-native-modal";
 export const SOCIAL_LAYER_STOREFRONT_GIFT_PURCHASE_SUCCESS_MODAL_KEY = "social-layer-storefront-gift-purchase-success-native-modal";
 export const openSocialLayerStorefrontUnsupportedOnMobileAlert = function openSocialLayerStorefrontUnsupportedOnMobileAlert() {
-  let obj = require("../../../actions/native/AlertActionCreators.tsx");
+  let obj = AlertActionCreators;
   obj = { title: null, body: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../intl/SlayerStorefront.messages.js").XjhkM5);
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require("../intl/SlayerStorefront.messages.js").NBFa62);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(messagesProxy.XjhkM5);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl2.string(messagesProxy.NBFa62);
   obj.show(obj);
 };
 export const openSocialLayerStorefrontProductDetailsModal = function openSocialLayerStorefrontProductDetailsModal(closure_0) {
-  let obj = require("../experiments/SocialLayerStorefrontMobilePurchasingExperiment.tsx") /* apexExperiment */;
+  let obj = apexExperiment /* apexExperiment */;
   if (obj.getIsEligibleForSocialLayerStorefrontMobilePurchasing({ location: "social_layer_storefront_product_details_modal" })) {
     const socialLayerStorefrontConfig = tmp(7678).fetchSocialLayerStorefrontConfig();
-    const obj5 = require("../../../actions/ModalActionCreators.tsx");
+    const obj5 = ModalActionCreators;
     obj5.pushLazy(tmp(1959)(10005, dependencyMap.paths), closure_0, c4, { presentation: "modal" });
     const tmpResult = tmp(7678);
   } else {
     obj = { title: null, body: null };
     const intl = tmp(1236).intl;
-    obj[0] = intl.string(require("../intl/SlayerStorefront.messages.js").XjhkM5);
+    obj[0] = intl.string(messagesProxy.XjhkM5);
     const intl2 = tmp(1236).intl;
-    obj[1] = intl2.string(require("../intl/SlayerStorefront.messages.js").NBFa62);
-    require("../../../actions/native/AlertActionCreators.tsx").show(obj);
-    const obj2 = require("../../../actions/native/AlertActionCreators.tsx");
+    obj[1] = intl2.string(messagesProxy.NBFa62);
+    AlertActionCreators.show(obj);
+    const obj2 = AlertActionCreators;
   }
 };
 export const closeSocialLayerStorefrontProductDetailsModal = function closeSocialLayerStorefrontProductDetailsModal() {
-  require("../../../actions/ModalActionCreators.tsx").popWithKey(c4);
+  ModalActionCreators.popWithKey(c4);
 };
 export const openSocialLayerStorefrontGiftModal = function openSocialLayerStorefrontGiftModal(closure_0) {
   if (obj.getIsEligibleForSocialLayerStorefrontMobilePurchasing({ location: "social_layer_storefront_gift_modal" })) {
-    require("../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(10014, dependencyMap.paths), closure_0, c5);
-    const obj2 = require("../../../actions/ModalActionCreators.tsx");
+    ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(10014, dependencyMap.paths), closure_0, c5);
+    const obj2 = ModalActionCreators;
   }
 };
 export const closeSocialLayerStorefrontGiftModal = function closeSocialLayerStorefrontGiftModal() {
-  require("../../../actions/ModalActionCreators.tsx").popWithKey(c5);
+  ModalActionCreators.popWithKey(c5);
 };
 export const openSocialLayerStorefrontProductSelfPurchaseSuccessModal = function openSocialLayerStorefrontProductSelfPurchaseSuccessModal(arg0) {
   let closure_0 = arg0;
-  let obj = require("../../../actions/native/AlertActionCreators.tsx");
+  let obj = AlertActionCreators;
   obj = {
     importer() {
       return callback(outer1_2[8])(outer1_2[10], outer1_2.paths).then((SocialLayerStorefrontProductSelfPurchaseSuccessModal) => {
@@ -66,7 +72,7 @@ export const openSocialLayerStorefrontProductSelfPurchaseSuccessModal = function
 };
 export const openSocialLayerStorefrontProductGiftPurchaseSuccessModal = function openSocialLayerStorefrontProductGiftPurchaseSuccessModal(arg0) {
   let closure_0 = arg0;
-  let obj = require("../../../actions/native/AlertActionCreators.tsx");
+  let obj = AlertActionCreators;
   obj = {
     importer() {
       return callback(outer1_2[8])(outer1_2[10], outer1_2.paths).then((SocialLayerStorefrontProductGiftPurchaseSuccessModal) => {

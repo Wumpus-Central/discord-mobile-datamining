@@ -1,3 +1,9 @@
+import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { ActionSheetHeaderBar } from "../../../design/components/Sheet/native/ActionSheetHeaderBar.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { usePremiumFeatureUpsellGetNitro } from "../../premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/quests/native/QuestOrbMultiplierPerkInfoActionSheet.tsx
 import Background from "Background";
 import { View } from "items";
@@ -22,7 +28,7 @@ function Footer(eligibleToReceivePremiumRewards) {
     callback(5925).openUserSettings(obj);
   }, []);
   const tmp = createCacheKey();
-  ({ loading, onPress } = require("../../premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx")(false, callback, constants.QUEST_ORB_MULTIPLIER_PERK_INFO));
+  ({ loading, onPress } = usePremiumFeatureUpsellGetNitro(false, callback, constants.QUEST_ORB_MULTIPLIER_PERK_INFO));
   const callback1 = React.useCallback(() => {
     callback2(4253).hideActionSheet();
     const obj = callback2(4253);
@@ -33,7 +39,7 @@ function Footer(eligibleToReceivePremiumRewards) {
   const callback2 = React.useCallback(() => {
     callback2(4253).hideActionSheet();
   }, []);
-  const Button = require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button;
+  const Button = Button /* Button */.Button;
   if (eligibleToReceivePremiumRewards.eligibleToReceivePremiumRewards) {
     obj = { size: "lg", text: null, variant: "primary", onPress: null };
     const intl3 = tmp10(1236).intl;
@@ -71,15 +77,15 @@ function SheetContent(arg0) {
   ({ title, body, eligibleToReceivePremiumRewards } = arg0);
   const tmp = createCacheKey();
   let obj = { children: null };
-  const items = [callback(require("../../../design/components/Sheet/native/ActionSheetHeaderBar.native.tsx") /* ActionSheetHeaderBar */.ActionSheetHeaderBar, { variant: "floating" }), ];
+  const items = [callback(ActionSheetHeaderBar /* ActionSheetHeaderBar */.ActionSheetHeaderBar, { variant: "floating" }), ];
   obj = { style: items1, children: null };
-  items1 = [tmp.container, { marginBottom: require("../../safe_area/useSafeAreaInsets.native.tsx")().bottom }];
+  items1 = [tmp.container, { marginBottom: useSafeAreaInsets().bottom }];
   obj = { style: tmp.contentContainer, children: null };
-  const items2 = [callback(View, { style: tmp.riveContainer, children: callback(require("../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */.NitroQuestOrbsMultiplierRive, {}) }), , , ];
+  const items2 = [callback(View, { style: tmp.riveContainer, children: callback(ManaContext /* ManaContext */.NitroQuestOrbsMultiplierRive, {}) }), , , ];
   const items3 = [, ];
   ({ text: arr4[0], title: arr4[1] } = tmp);
-  items2[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: items3, variant: "display-md", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title });
-  items2[2] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.text, variant: "text-sm/normal", children: body });
+  items2[1] = callback(Text /* Text */.Text, { style: items3, variant: "display-md", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title });
+  items2[2] = callback(Text /* Text */.Text, { style: tmp.text, variant: "text-sm/normal", children: body });
   items2[3] = callback(Footer, { eligibleToReceivePremiumRewards });
   obj[1] = items2;
   obj[1] = callback2(View, obj);

@@ -1,16 +1,17 @@
+import { prototype } from "../RPCError.tsx";
 // discord_app/modules/rpc/helpers/unavailableCommand.tsx
 import { RPCErrors } from "ME";
 
 let obj = {
   handler(cmd) {
-    let tmp = require("../RPCError.tsx");
+    let tmp = prototype;
     tmp = new tmp({ errorCode: RPCErrors.INVALID_COMMAND }, "Unsupported command: " + cmd.cmd);
     throw tmp;
   }
 };
 obj = {
   handler(cmd) {
-    let tmp = require("../RPCError.tsx");
+    let tmp = prototype;
     tmp = new tmp({ errorCode: RPCErrors.INVALID_COMMAND }, "Deprecated command: " + cmd.cmd);
     throw tmp;
   }

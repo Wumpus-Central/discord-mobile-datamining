@@ -1,3 +1,8 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { track } from "../../../../actions/AnalyticsTrackingActionCreators.tsx";
+import { saveGuildFolders } from "../../../../actions/UserSettingsActionCreators.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/user_settings/defs/native/SyncThemeSetting.tsx
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
 import initialize from "initialize";
@@ -9,12 +14,12 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["3340dY"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["3340dY"]);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   useIsDisabled: function useSyncThemeDisabled() {
-    let stateFromStores = require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("SyncThemeSetting");
+    let stateFromStores = useIsMobileVisualRefreshExperimentEnabled("SyncThemeSetting");
     const items = [handleThemeChange];
     if (stateFromStores) {
       stateFromStores = obj.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
@@ -23,7 +28,7 @@ createToggle = {
   },
   useValue: function useSyncThemeAcrossClientsValue() {
     const items = [initialize];
-    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => false !== initialize.shouldSync("appearance"));
+    return initialize /* initialize */.useStateFromStores(items, () => false !== initialize.shouldSync("appearance"));
   },
   onValueChange: function onSyncThemeAcrossClientsValueChange(is_sync_enabled) {
     gradientPreset = gradientPreset.gradientPreset;
@@ -42,14 +47,14 @@ createToggle = {
         prop = clientThemeSettings.customUserThemeSettings;
       }
     }
-    let obj = require("../../../../actions/AnalyticsTrackingActionCreators.tsx") /* track */;
+    let obj = track /* track */;
     obj = { is_sync_enabled, base_theme: theme.theme, client_theme: id, has_custom_theme: null != prop };
     obj.track(AnalyticEvents.SYNC_ACROSS_CLIENTS_TOGGLED, obj);
-    const result = require("../../../../actions/UserSettingsActionCreators.tsx").setShouldSyncAppearanceSettings(is_sync_enabled);
+    const result = saveGuildFolders.setShouldSyncAppearanceSettings(is_sync_enabled);
   },
   useDescription: function useSyncThemeAcrossClientsDescription() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.CRtkeH).trim();
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.CRtkeH).trim();
   }
 };
 createToggle = createToggle.createToggle(createToggle);

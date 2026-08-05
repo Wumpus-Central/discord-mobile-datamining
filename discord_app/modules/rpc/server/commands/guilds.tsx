@@ -1,3 +1,4 @@
+import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
 // discord_app/modules/rpc/server/commands/guilds.tsx
 import { getGuildIconURL } from "GuildNSFWContentLevel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -10,7 +11,7 @@ let obj = {};
 obj = {
   scope: require("set").OAuth2Scopes.RPC,
   validation(string) {
-    let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(string);
+    let obj = createRpcJoiSchemaObject(string);
     obj = { guild_id: string.string(), timeout: null };
     const requiredResult = obj.required();
     const numberResult = string.number();

@@ -1,3 +1,9 @@
+import { registerAsset } from "../../../../../../_runtime/10102_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/11310_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/11311_registerAsset.js";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../../design/void/native.tsx";
+import { isDiscordFrontendDevelopment } from "../../../../../utils/GlobalUtils.tsx";
 // discord_app/modules/forums/native/posts/grid/ForumPostGridBody.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -10,28 +16,28 @@ let error;
 const require = arg1;
 function GIFIcon() {
   const obj = { size: null, source: null, disableColor: true, style: null };
-  obj[0] = require("../../../../../design/void/native.tsx") /* Button */.Icon.Sizes.CUSTOM;
-  obj[1] = require("../../../../../../_runtime/11310_registerAsset.js");
+  obj[0] = Button /* Button */.Icon.Sizes.CUSTOM;
+  obj[1] = registerAsset;
   obj[3] = createCacheKey().gifIcon;
-  return callback(require("../../../../../design/void/native.tsx") /* Button */.Icon, obj);
+  return callback(Button /* Button */.Icon, obj);
 }
 function PlayIcon() {
   const obj = { size: null, source: null, disableColor: true };
-  obj[0] = require("../../../../../design/void/native.tsx") /* Button */.Icon.Sizes.SMALL_20;
-  obj[1] = require("../../../../../../_runtime/11311_registerAsset.js");
-  return callback(require("../../../../../design/void/native.tsx") /* Button */.Icon, obj);
+  obj[0] = Button /* Button */.Icon.Sizes.SMALL_20;
+  obj[1] = registerAsset;
+  return callback(Button /* Button */.Icon, obj);
 }
 function ExtraMediaIcon(extraMediaCount) {
   const tmp = createCacheKey();
   let obj = { style: tmp.extraMediaCountContainer, children: null };
   obj = { source: null, color: null, size: null };
-  obj[0] = require("../../../../../../_runtime/10102_registerAsset.js");
+  obj[0] = registerAsset;
   obj[1] = tmp.icon.color;
-  obj[2] = require("../../../../../design/void/native.tsx") /* Button */.Icon.Sizes.REFRESH_SMALL_16;
-  const items = [callback(require("../../../../../design/void/native.tsx") /* Button */.Icon, obj), ];
+  obj[2] = Button /* Button */.Icon.Sizes.REFRESH_SMALL_16;
+  const items = [callback(Button /* Button */.Icon, obj), ];
   obj = { style: tmp.extraMediaCount, lineClamp: 1, variant: "text-xs/normal", color: "text-default", children: null };
   obj[4] = "+" + extraMediaCount.extraMediaCount;
-  items[1] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }
@@ -42,7 +48,7 @@ function MediaGridColumn(arg0) {
   let c1;
   const tmp = createCacheKey();
   c1 = tmp;
-  const found = column.filter(require("../../../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
+  const found = column.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
   return callback(View, {
     style: tmp.column,
     children: found.map((media) => {

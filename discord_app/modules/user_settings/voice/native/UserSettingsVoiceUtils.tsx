@@ -1,3 +1,5 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { trackDeviceChanged } from "../../../../actions/AudioActionCreators.tsx";
 // discord_app/modules/user_settings/voice/native/UserSettingsVoiceUtils.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import ME from "ME";
@@ -10,12 +12,12 @@ let obj = { NONE: "NONE", STANDARD: "STANDARD", KRISP: "KRISP" };
 let result = require("trackDeviceChanged").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceUtils.tsx");
 
 export const handleAutomaticGainControlChange = function handleAutomaticGainControlChange(arg0) {
-  let obj = require("../../../../actions/AudioActionCreators.tsx");
+  let obj = trackDeviceChanged;
   obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
   const result = obj.setAutomaticGainControl(arg0, obj);
 };
 export const handleEchoCancellationChange = function handleEchoCancellationChange(arg0) {
-  let obj = require("../../../../actions/AudioActionCreators.tsx");
+  let obj = trackDeviceChanged;
   obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
   obj.setEchoCancellation(arg0, obj);
 };
@@ -23,11 +25,11 @@ export const handleNoiseSuppressionChange = function handleNoiseSuppressionChang
   let KRISP;
   let STANDARD;
   ({ KRISP, STANDARD } = obj);
-  obj = require("../../../../actions/AudioActionCreators.tsx");
+  obj = trackDeviceChanged;
   obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
   obj.setNoiseCancellation(arg0 === KRISP, obj);
   obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
-  require("../../../../actions/AudioActionCreators.tsx").setNoiseSuppression(arg0 === STANDARD, obj);
+  trackDeviceChanged.setNoiseSuppression(arg0 === STANDARD, obj);
 };
 export const NoiseSuppressionOpt = obj;
 export const getSelectedNoiseSuppressionOption = function getSelectedNoiseSuppressionOption(_detectH265HardwareDecode) {
@@ -45,7 +47,7 @@ export const getSelectedNoiseSuppressionOption = function getSelectedNoiseSuppre
 };
 export const useSelectedNoiseSuppressionOption = function useSelectedNoiseSuppressionOption() {
   const items = [_detectH265HardwareDecode];
-  return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+  return initialize /* initialize */.useStateFromStores(items, () => {
     const noiseSuppression = store.getNoiseSuppression();
     const noiseCancellation = store.getNoiseCancellation();
     if (noiseCancellation) {

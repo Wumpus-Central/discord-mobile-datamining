@@ -1,3 +1,16 @@
+import { apply } from "../../../../../_runtime/00012_apply.js";
+import { registerAsset } from "../../../../../_runtime/13116_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13118_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13120_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13121_registerAsset.js";
+import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
+import { ActivityIndicator } from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { ButtonGroup } from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/remote_auth/components/native/RemoteAuthModal.tsx
 import _slicedToArray from "_slicedToArray";
 import ModalActionCreators from "../../../../actions/ModalActionCreators.tsx";
@@ -80,7 +93,7 @@ function RemoteAuthLogin(arg0) {
     }, 1000);
     return () => clearTimeout(closure_0);
   }, []);
-  let obj = require("../../../../../_runtime/00012_apply.js");
+  let obj = apply;
   let tmp10 = !tmp3;
   const tmp4 = callback(React.useState(false), 2);
   const tmp7 = importDefault;
@@ -91,17 +104,17 @@ function RemoteAuthLogin(arg0) {
   obj = { source: tmp7(13119), style: tmp.mainImage };
   const items = [callback2(closure_6, obj), , , ];
   const obj1 = { variant: "heading-md/extrabold", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.jD2pqF);
-  items[1] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Heading, obj1);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj1[1] = intl.string(getSystemLocale /* getSystemLocale */.t.jD2pqF);
+  items[1] = callback2(Text /* Text */.Heading, obj1);
   const obj2 = { style: tmp.warningCaption, children: null };
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj2[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["hcd/kh"]);
-  items[2] = callback2(require("../../../../design/void/native.tsx") /* Button */.LegacyText, obj2);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj2[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["hcd/kh"]);
+  items[2] = callback2(Button /* Button */.LegacyText, obj2);
   const obj3 = { style: tmp.buttonGroup, children: null };
   const obj4 = { text: null, onPress: null, disabled: null };
-  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj4[0] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.N3qV8e);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj4[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.N3qV8e);
   obj4[1] = obj.throttle(() => {
     _undefined2(true);
     const HTTP = outer1_0(_undefined[11]).HTTP;
@@ -115,10 +128,10 @@ function RemoteAuthLogin(arg0) {
     });
   }, 1000, { leading: true, trailing: false });
   obj4[2] = tmp10;
-  const items1 = [callback2(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj4, "" + tmp10), ];
+  const items1 = [callback2(Button /* Button */.Button, obj4, "" + tmp10), ];
   const obj5 = { variant: "secondary", text: null, onPress: null };
-  const intl4 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj5[1] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["ETE/oC"]);
+  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  obj5[1] = intl4.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
   obj5[2] = function onPress() {
     const HTTP = outer1_0(_undefined[11]).HTTP;
     obj = { url: outer1_8.REMOTE_AUTH_CANCEL, body: obj, oldFormErrors: true, rejectWithError: true };
@@ -127,60 +140,60 @@ function RemoteAuthLogin(arg0) {
     let arr = outer1_1(_undefined[19]);
     arr = arr.pop();
   };
-  items1[1] = callback2(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj5);
+  items1[1] = callback2(Button /* Button */.Button, obj5);
   obj3[1] = items1;
-  items[3] = callback3(require("../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx") /* ButtonGroup */.ButtonGroup, obj3);
+  items[3] = callback3(ButtonGroup /* ButtonGroup */.ButtonGroup, obj3);
   obj[0] = items;
   return callback3(closure_11, obj);
 }
 function RemoteAuthLoginSucceeded() {
   const tmp = createCacheKey();
   let obj = { children: null };
-  obj = { source: require("../../../../../_runtime/13120_registerAsset.js"), style: tmp.mainImage };
+  obj = { source: registerAsset, style: tmp.mainImage };
   const items = [callback2(closure_6, obj), , , ];
   obj = { variant: "heading-xl/extrabold", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.HbwTOZ);
-  items[1] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Heading, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.HbwTOZ);
+  items[1] = callback2(Text /* Text */.Heading, obj);
   const obj1 = { style: tmp.caption, variant: "text-md/medium", color: "text-muted", children: null };
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[3] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.wKknJ0);
-  items[2] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.wKknJ0);
+  items[2] = callback2(Text /* Text */.Text, obj1);
   const obj2 = { style: tmp.buttonGroup, children: null };
   const obj3 = { text: null, onPress: null };
-  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj3[0] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.pYWLA0);
-  obj3[1] = require("../../../../actions/ModalActionCreators.tsx").pop;
-  obj2[1] = callback2(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj3);
-  items[3] = callback2(require("../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx") /* ButtonGroup */.ButtonGroup, obj2);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj3[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.pYWLA0);
+  obj3[1] = ModalActionCreators.pop;
+  obj2[1] = callback2(Button /* Button */.Button, obj3);
+  items[3] = callback2(ButtonGroup /* ButtonGroup */.ButtonGroup, obj2);
   obj[0] = items;
   return callback3(closure_11, obj);
 }
 function RemoteAuthNotFound() {
   const tmp = createCacheKey();
   let obj = { children: null };
-  obj = { source: require("../../../../../_runtime/13121_registerAsset.js"), style: tmp.mainImage };
+  obj = { source: registerAsset, style: tmp.mainImage };
   const items = [callback2(closure_6, obj), , , ];
   obj = { variant: "heading-xl/extrabold", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.NShI3Q);
-  items[1] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Heading, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.NShI3Q);
+  items[1] = callback2(Text /* Text */.Heading, obj);
   const obj1 = { style: tmp.caption, variant: "text-md/medium", color: "text-muted", children: null };
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[3] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Ygezov);
-  items[2] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.Ygezov);
+  items[2] = callback2(Text /* Text */.Text, obj1);
   const obj2 = { style: tmp.buttonGroup, children: null };
   const obj3 = { text: null, onPress: null };
-  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj3[0] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["ETE/oC"]);
-  obj3[1] = require("../../../../actions/ModalActionCreators.tsx").pop;
-  obj2[1] = callback2(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj3);
-  items[3] = callback2(require("../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx") /* ButtonGroup */.ButtonGroup, obj2);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj3[0] = intl3.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
+  obj3[1] = ModalActionCreators.pop;
+  obj2[1] = callback2(Button /* Button */.Button, obj3);
+  items[3] = callback2(ButtonGroup /* ButtonGroup */.ButtonGroup, obj2);
   obj[0] = items;
   return callback3(closure_11, obj);
 }
 function RemoteAuthLoading() {
-  return callback2(closure_7, { style: createCacheKey().loadingContainer, children: callback2(require("../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx") /* ActivityIndicator */.ActivityIndicator, {}) });
+  return callback2(closure_7, { style: createCacheKey().loadingContainer, children: callback2(ActivityIndicator /* ActivityIndicator */.ActivityIndicator, {}) });
 }
 ({ ImageBackground: c5, Image: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
@@ -199,10 +212,10 @@ let result = require("get ActivityIndicator").fileFinishedImporting("modules/rem
 export default function RemoteAuth(arg0) {
   const tmp = createCacheKey();
   let obj = { source: null, imageStyle: null, style: null, children: null };
-  obj[0] = require("../../../../../_runtime/13118_registerAsset.js");
+  obj[0] = registerAsset;
   ({ imageStyle: obj[1], background: obj[2] } = tmp);
-  obj = { style: items, source: require("../../../../../_runtime/13116_registerAsset.js") };
-  items = [tmp.logo, { marginTop: require("../../../safe_area/useSafeAreaInsets.native.tsx")().top }];
+  obj = { style: items, source: registerAsset };
+  items = [tmp.logo, { marginTop: useSafeAreaInsets().top }];
   const items1 = [callback2(closure_6, obj), ];
   obj = { style: tmp.container, children: null };
   const obj1 = { style: tmp.mainCard, children: null };

@@ -1,3 +1,7 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import { shouldShowAgeGateForVoiceChannel } from "../age_gate/AgeGateUtils.tsx";
+import { canBypassSlowmodeHelper } from "../chat/SlowmodeUtils.tsx";
 // discord_app/modules/forwarding/ForwardDestinationUtils.tsx
 import computeChannelName from "computeChannelName";
 import loadSavedGuildStickers from "loadSavedGuildStickers";
@@ -46,19 +50,19 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
   if (null != components) {
     let tmp5 = components.components.length > 0;
     if (tmp5) {
-      tmp5 = components.components[0].type === _require("../../flow/Server.tsx").ComponentType.CHECKPOINT_CARD;
+      tmp5 = components.components[0].type === _PermissionOverwriteType.ComponentType.CHECKPOINT_CARD;
     }
     let tmp6 = components.messageSnapshots.length > 0;
     if (tmp6) {
       let message = components.messageSnapshots[0].message;
       let tmp7 = message.components.length > 0;
       if (tmp7) {
-        tmp7 = message.components[0].type === _require("../../flow/Server.tsx").ComponentType.CHECKPOINT_CARD;
+        tmp7 = message.components[0].type === _PermissionOverwriteType.ComponentType.CHECKPOINT_CARD;
       }
       tmp6 = tmp7;
     }
     if (null != channel) {
-      let obj = _require("../age_gate/AgeGateUtils.tsx");
+      let obj = _shouldShowAgeGateForVoiceChannel;
       if (obj.isChannelOrGuildNSFW(channel)) {
         if (tmp) {
           let tmp11Result = tmp11(4498);
@@ -151,8 +155,8 @@ export const isRatelimitedInChannel = function isRatelimitedInChannel(channel, o
     tmp = channel.rateLimitPerUser > 0;
   }
   if (tmp) {
-    tmp = !require("../chat/SlowmodeUtils.tsx") /* canBypassSlowmodeHelper */.canBypassSlowmodeHelper(channel, outer1_6);
-    const obj = require("../chat/SlowmodeUtils.tsx") /* canBypassSlowmodeHelper */;
+    tmp = !canBypassSlowmodeHelper /* canBypassSlowmodeHelper */.canBypassSlowmodeHelper(channel, outer1_6);
+    const obj = canBypassSlowmodeHelper /* canBypassSlowmodeHelper */;
   }
   return tmp;
 };
@@ -160,7 +164,7 @@ export const useSelectedDestinationNames = function useSelectedDestinationNames(
   const _require = arg0;
   const items = [mergeGuildAvatar, ensureGuildLoaded, upsertRelationship];
   const items1 = [arg0];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
+  return _initialize.useStateFromStoresArray(items, () => {
     const mapped = lib.map((id) => {
       id = id.id;
       if ("user" === id.type) {
@@ -192,7 +196,7 @@ export const useDestinationNamesWithSlowmode = function useDestinationNamesWithS
   const _require = selectedDestinations;
   const items = [ensureGuildLoaded, getUncachedChannelPermissions];
   const items1 = [selectedDestinations];
-  const stateFromStoresArray = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = _initialize.useStateFromStoresArray(items, () => {
     const mapped = selectedDestinations.map((type) => {
       let channel = null;
       if ("channel" === type.type) {
@@ -213,8 +217,8 @@ export const useDestinationNamesWithSlowmode = function useDestinationNamesWithS
       return tmp2;
     });
   }, items1);
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items2 = [mergeGuildAvatar, upsertRelationship];
   const items3 = [stateFromStoresArray];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items2, () => stateFromStoresArray.map((channel) => callback(table[19]).computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true)), items3);
+  return _initialize.useStateFromStoresArray(items2, () => stateFromStoresArray.map((channel) => callback(table[19]).computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true)), items3);
 };

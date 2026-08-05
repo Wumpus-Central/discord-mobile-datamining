@@ -1,3 +1,4 @@
+import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 // discord_app/modules/parent_tools/hooks/useIsOnMainSurface.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -9,7 +10,7 @@ function getIsOnMainSurface() {
   let index2;
   let routes;
   let routes2;
-  const rootNavigationRef = require("../../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       const rootState = rootNavigationRef.getRootState();

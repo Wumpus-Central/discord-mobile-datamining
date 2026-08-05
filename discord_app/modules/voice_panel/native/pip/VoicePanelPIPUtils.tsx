@@ -1,3 +1,4 @@
+import { canRenderParticipantVideo } from "../../../video_calls/participantHasVideo.tsx";
 // discord_app/modules/voice_panel/native/pip/VoicePanelPIPUtils.tsx
 import getParticipants from "getParticipants";
 import reset from "reset";
@@ -328,7 +329,7 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
           if (!blockList.has(participant.user.id)) {
             const participant1 = store.getParticipant(channelId, participant.user.id);
             if (null != participant1) {
-              let obj = require("../../../video_calls/participantHasVideo.tsx") /* canRenderParticipantVideo */;
+              let obj = canRenderParticipantVideo /* canRenderParticipantVideo */;
               if (obj.canRenderParticipantVideo(participant1)) {
                 obj = { id: null, type: null };
                 obj[0] = participant1.id;
@@ -412,7 +413,7 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
       type = participant2.type;
       if (ParticipantTypes.STREAM === type) {
         if (null != authStore.getActiveStreamForUser(participant2.user.id, participant2.stream.guildId)) {
-          let obj9 = require("../../../video_calls/participantHasVideo.tsx") /* canRenderParticipantVideo */;
+          let obj9 = canRenderParticipantVideo /* canRenderParticipantVideo */;
           if (obj9.canRenderParticipantVideo(participant2)) {
             ({ id: obj11[0], type: obj11[1] } = participant2);
             return { id: null, type: null };
@@ -440,7 +441,7 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
         obj7[1] = ParticipantTypes.USER;
         return obj7;
       }
-      obj13 = require("../../../video_calls/participantHasVideo.tsx") /* canRenderParticipantVideo */;
+      obj13 = canRenderParticipantVideo /* canRenderParticipantVideo */;
     }
   }
   const videoParticipants = store.getVideoParticipants(channelId);
@@ -449,7 +450,7 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
     if (!blockList.has(item10162.id)) {
       let tmp41 = require;
       let tmp42 = dependencyMap;
-      let obj16 = require("../../../video_calls/participantHasVideo.tsx") /* canRenderParticipantVideo */;
+      let obj16 = canRenderParticipantVideo /* canRenderParticipantVideo */;
       let tmp43 = item10162;
       if (obj16.canRenderParticipantVideo(tmp40)) {
         let obj8 = { id: null, type: null };
@@ -500,7 +501,7 @@ export const getPIPMode = function getPIPMode(connected) {
               if (obj.canRenderParticipantVideo(participant1)) {
                 return constants2.IN_PANEL;
               }
-              obj = require("../../../video_calls/participantHasVideo.tsx") /* canRenderParticipantVideo */;
+              obj = canRenderParticipantVideo /* canRenderParticipantVideo */;
             }
           }
           if (tmp) {
@@ -514,7 +515,7 @@ export const getPIPMode = function getPIPMode(connected) {
                 if (item10032.id !== store2.getId()) {
                   let tmp14 = require;
                   let tmp15 = dependencyMap;
-                  let obj2 = require("../../../video_calls/participantHasVideo.tsx") /* canRenderParticipantVideo */;
+                  let obj2 = canRenderParticipantVideo /* canRenderParticipantVideo */;
                   let tmp16 = item10032;
                   if (obj2.canRenderParticipantVideo(tmp12)) {
                     let tmp17 = constants2;

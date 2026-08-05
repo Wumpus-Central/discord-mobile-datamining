@@ -1,3 +1,4 @@
+import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -447,7 +448,7 @@ obj = {
     const values = secondaryIndexMap.values(obj.GUILD_EVENT(guildScheduledEvents.guildId), true);
     const mapped = values.map((id) => id.id);
     const mapped1 = guildScheduledEvents.map((id) => id.id);
-    obj = require("../../../_runtime/00012_apply.js");
+    obj = apply;
     const item = obj.difference(mapped, mapped1).forEach((arg0) => {
       set.delete(arg0);
       delete tmp[tmp2];

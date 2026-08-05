@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_role_subscriptions/useGuildRoleMemberCounts.tsx
 import noop from "noop";
 import getRoleMemberCount from "getRoleMemberCount";
@@ -14,7 +15,7 @@ export default function useGuildRoleMemberCounts(arg0) {
   }
   const items = [getRoleMemberCount];
   const items1 = [arg0, num];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_4.getRoleMemberCount(closure_0));
+  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_4.getRoleMemberCount(closure_0));
   const effect = React.useEffect(() => {
     if (null != closure_0) {
       let tmp4 = null != tmp3;

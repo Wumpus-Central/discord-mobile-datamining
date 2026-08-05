@@ -1,3 +1,7 @@
+import { useTheme } from "../../../../hooks/useTheme.tsx";
+import { set } from "../../../core/native/NativeView.tsx";
+import { ReanimatedNativeView } from "../../../core/native/ReanimatedNativeView.tsx";
+import { animatedComponent } from "../../../visual_effect_view/native/VisualEffectViewAnimated.tsx";
 // discord_app/modules/voice_panel/native/shared/VoicePanelHeaderGlassBlur.tsx
 import { StyleSheet } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -58,12 +62,12 @@ export default require("noop").memo(function HeaderGlassBlur(shown) {
   fn2.__workletHash = 5642055202507;
   fn2.__initData = closure_9;
   const animatedProps = obj2.useAnimatedProps(fn2);
-  const tmp7 = require("../../../../hooks/useTheme.tsx")();
+  const tmp7 = useTheme();
   const obj1 = { style: items, children: null };
   items = [tmp.blur, style, animatedStyle];
   const tmp2 = shown;
-  const tmp9 = require("../../../core/native/ReanimatedNativeView.tsx");
-  const tmp11 = require("../../../visual_effect_view/native/VisualEffectViewAnimated.tsx");
+  const tmp9 = ReanimatedNativeView;
+  const tmp11 = animatedComponent;
   let str = "light";
   if (obj6.isThemeDark(tmp7)) {
     str = "dark";
@@ -72,7 +76,7 @@ export default require("noop").memo(function HeaderGlassBlur(shown) {
   const items2 = [closure_4(tmp11, { blurStyle: "ultra-thin", blurTheme: str, style: items1, animatedProps }), ];
   obj2 = { style: tmp.strokeContainer, children: null };
   let tmp6Result = tmp6(5663);
-  const items3 = [closure_4(require("../../../core/native/NativeView.tsx"), { style: tmp.stroke }), ];
+  const items3 = [closure_4(set, { style: tmp.stroke }), ];
   tmp6Result = tmp6(5663);
   const obj3 = { style: tmp.stroke };
   obj6 = shown(4131);

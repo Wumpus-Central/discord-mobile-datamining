@@ -1,3 +1,5 @@
+import { areArraysShallowlyEqual } from "../../utils/FunctionUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/stores/billing/SubscriptionPlanStore.tsx
 import createFromServer from "createFromServer";
 import ME from "ME";
@@ -47,15 +49,15 @@ function addSubscriptionPlanFromServer(subscription_plan) {
   addSubscriptionPlan(createFromServer.createFromServer(subscription_plan));
 }
 function reset() {
-  require("../../utils/FunctionUtils.tsx") /* areArraysShallowlyEqual */.clearObject(closure_10);
-  const obj = require("../../utils/FunctionUtils.tsx") /* areArraysShallowlyEqual */;
-  require("../../utils/FunctionUtils.tsx") /* areArraysShallowlyEqual */.clearObject(closure_11);
+  areArraysShallowlyEqual /* areArraysShallowlyEqual */.clearObject(closure_10);
+  const obj = areArraysShallowlyEqual /* areArraysShallowlyEqual */;
+  areArraysShallowlyEqual /* areArraysShallowlyEqual */.clearObject(closure_11);
   set.clear();
   set1.clear();
-  const obj2 = require("../../utils/FunctionUtils.tsx") /* areArraysShallowlyEqual */;
-  require("../../utils/FunctionUtils.tsx") /* areArraysShallowlyEqual */.clearObject(closure_14);
-  const obj3 = require("../../utils/FunctionUtils.tsx") /* areArraysShallowlyEqual */;
-  require("../../utils/FunctionUtils.tsx") /* areArraysShallowlyEqual */.clearObject(closure_15);
+  const obj2 = areArraysShallowlyEqual /* areArraysShallowlyEqual */;
+  areArraysShallowlyEqual /* areArraysShallowlyEqual */.clearObject(closure_14);
+  const obj3 = areArraysShallowlyEqual /* areArraysShallowlyEqual */;
+  areArraysShallowlyEqual /* areArraysShallowlyEqual */.clearObject(closure_15);
   const items = [SubscriptionPlanInfo[SubscriptionPlans.NONE_MONTH], SubscriptionPlanInfo[SubscriptionPlans.NONE_YEAR], SubscriptionPlanInfo[SubscriptionPlans.NONE_3_MONTH], SubscriptionPlanInfo[SubscriptionPlans.NONE_6_MONTH]];
   const item = items.forEach((id) => {
     callback(createFromServer.createFromServer({ id: id.id, name: id.name, interval: id.interval, interval_count: id.intervalCount, tax_inclusive: true, sku_id: id.skuId, currency: constants.USD, price: 0, price_tier: 0 }));
@@ -111,7 +113,7 @@ prototype["getPlanIdsForSkus"] = function getPlanIdsForSkus(items) {
   return items;
 };
 prototype["getFetchedSKUIDs"] = function getFetchedSKUIDs() {
-  return require("../../utils/SnowflakeUtils.tsx").keys(closure_11);
+  return DISCORD_EPOCH.keys(closure_11);
 };
 prototype["getForSKU"] = function getForSKU(arg0) {
   let items = dependencyMap[arg0];

@@ -1,3 +1,4 @@
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/collectibles/utils/CollectiblesPerfLogging.tsx
 import { AnalyticEvents } from "ME";
 
@@ -11,5 +12,5 @@ export const trackShopPerf = function trackShopPerf(arg0) {
   let tab;
   let unpublishedCategoriesShown;
   ({ sessionId, checkpoint, tab, unpublishedCategoriesShown, cacheDisabled } = arg0);
-  require("../../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.COLLECTIBLES_SHOP_PERF_TRACKED, { page_session_id: sessionId, checkpoint, tab, unpublished_categories_shown: unpublishedCategoriesShown, cache_disabled: cacheDisabled });
+  expandEventProperties.track(AnalyticEvents.COLLECTIBLES_SHOP_PERF_TRACKED, { page_session_id: sessionId, checkpoint, tab, unpublished_categories_shown: unpublishedCategoriesShown, cache_disabled: cacheDisabled });
 };

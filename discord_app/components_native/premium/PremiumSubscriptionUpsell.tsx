@@ -1,3 +1,5 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 // discord_app/components_native/premium/PremiumSubscriptionUpsell.tsx
 import "registerAsset";
 import get_ActivityIndicator from "Text";
@@ -44,10 +46,10 @@ export default function PremiumSubscriptionUpsell(arg0) {
   ({ onLearnMorePremium, style } = arg0);
   let tmp = createCacheKey();
   let stringResult = dependencyMap;
-  let obj = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = require("../../utils/PremiumUtils.tsx");
+  let obj1 = getPremiumPlanItem;
   if (obj1.canUsePremiumGuildMemberProfile(stateFromStores)) {
     return null;
   } else {

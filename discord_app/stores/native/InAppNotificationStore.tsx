@@ -1,3 +1,16 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { t } from "../../../_runtime/03867_t.js";
+import { collectGuildAnalyticsMetadata } from "../../modules/app_analytics/AppAnalyticsUtils.tsx";
+import { NativeEventEmitter } from "../../modules/external_pip/ExternalPip.android.tsx";
+import { DATE_CONFIG } from "../../modules/guild_antiraid/GuildAntiRaidUtils.tsx";
+import { extractMetadataFromNotification } from "../../modules/in_app_notifications/native/InAppNotificationUtils.tsx";
+import { apexExperiment } from "../../modules/message_request/MessageRequestPushNotificationExperiment.tsx";
+import { isSystemMessage } from "../../modules/messages/isSystemMessage.tsx";
+import { canViewPotentiallyNSFWChannel } from "../../modules/messages/MessageUtils.tsx";
+import { shouldNotifyBase } from "../../modules/notifications/NotificationTextUtils.tsx";
+import { apexExperiment } from "../../modules/parent_tools/FamilyCenterV3Experiment.tsx";
+import { isOnlyDayLoss } from "../../modules/parent_tools/RestrictedScheduleNotificationUtils.tsx";
+import { ForLaterFreemiumConfig } from "../../modules/saved_messages/ForLaterExperiment.tsx";
 // discord_app/stores/native/InAppNotificationStore.tsx
 import participantFromServer from "participantFromServer";
 import getParticipants from "getParticipants";
@@ -78,10 +91,10 @@ function handleEnqueueNotification(notification) {
   let guildId;
   let messageId;
   notification = notification.notification;
-  let obj = require("../../modules/in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */;
+  let obj = extractMetadataFromNotification /* extractMetadataFromNotification */;
   const result = obj.extractMetadataFromNotification(notification);
   ({ guildId, channelId, messageId } = result);
-  const trackWithMetadata = require("../../modules/app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata;
+  const trackWithMetadata = collectGuildAnalyticsMetadata.trackWithMetadata;
   if (closure_23) {
     obj = { type: null, guild_id: null, channel_id: null, message_id: null, dismiss_reason: "restricted_hours", in_app_notification_id: null };
     obj[0] = notification.type;
@@ -106,17 +119,17 @@ function handleEnqueueNotification(notification) {
     }
   }
   tmp = require;
-  const tmp4 = require("../../modules/app_analytics/AppAnalyticsUtils.tsx");
+  const tmp4 = collectGuildAnalyticsMetadata;
 }
 function trackDismissed(type) {
   let channelId;
   let guildId;
   let messageId;
-  let obj = require("../../modules/in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */;
+  let obj = extractMetadataFromNotification /* extractMetadataFromNotification */;
   const result = obj.extractMetadataFromNotification(type);
   ({ guildId, channelId, messageId } = result);
   obj = { type: type.type, guild_id: guildId, channel_id: channelId, message_id: messageId, dismiss_reason: "rejected_from_queue", in_app_notification_id: type.inAppNotificationId };
-  require("../../modules/app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, obj);
+  collectGuildAnalyticsMetadata.trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, obj);
 }
 const error = importDefaultResult;
 ({ AnalyticEvents: closure_16, ChannelTypes: closure_17, InAppNotificationTypes: closure_18, MessageTypesSets: closure_19 } = ME);
@@ -139,21 +152,21 @@ prototype["key"] = function key(guild) {
 };
 prototype["dismissNotification"] = function dismissNotification(guild) {
   guild = guild.guild;
-  let obj = require("../../modules/guild_antiraid/GuildAntiRaidUtils.tsx") /* DATE_CONFIG */;
+  let obj = DATE_CONFIG /* DATE_CONFIG */;
   const incidentAlertType = obj.getIncidentAlertType(store.getGuildIncident(guild.id));
   if (null != incidentAlertType) {
     const self = this;
     obj = { guild: null, channel: null };
     obj[0] = guild;
     obj[1] = guild.channel;
-    const result = this.dissmissedAlertsMap[incidentAlertType].set(this.key(obj), require("../../../_runtime/03867_t.js")());
+    const result = this.dissmissedAlertsMap[incidentAlertType].set(this.key(obj), t());
     const keyResult = this.key(obj);
     const obj3 = this.dissmissedAlertsMap[incidentAlertType];
   }
 };
 prototype["wasRecentlyDismissed"] = function wasRecentlyDismissed(guild) {
   guild = guild.guild;
-  let obj = require("../../modules/guild_antiraid/GuildAntiRaidUtils.tsx") /* DATE_CONFIG */;
+  let obj = DATE_CONFIG /* DATE_CONFIG */;
   const incidentAlertType = obj.getIncidentAlertType(store.getGuildIncident(guild.id));
   if (null == incidentAlertType) {
     return false;
@@ -165,8 +178,8 @@ prototype["wasRecentlyDismissed"] = function wasRecentlyDismissed(guild) {
     const value = this.dissmissedAlertsMap[incidentAlertType].get(this.key(obj));
     let tmp4 = undefined !== value;
     if (tmp4) {
-      tmp4 = require("../../../_runtime/03867_t.js")().diff(require("../../../_runtime/03867_t.js")(value), self.threshold.unitOfTime) < self.threshold.amount;
-      const obj2 = require("../../../_runtime/03867_t.js")();
+      tmp4 = t().diff(t(value), self.threshold.unitOfTime) < self.threshold.amount;
+      const obj2 = t();
     }
     return tmp4;
   }
@@ -196,7 +209,7 @@ prototype2["enqueue"] = function enqueue(arg0) {
     const queue = self.queue;
     let arr = queue.shift();
     if (null != arr) {
-      let obj = require("../../modules/in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */;
+      let obj = extractMetadataFromNotification /* extractMetadataFromNotification */;
       const result = obj.extractMetadataFromNotification(arr);
       ({ guildId, channelId, messageId } = result);
       obj = { type: null, guild_id: null, channel_id: null, message_id: null, dismiss_reason: "evicted_from_queue", in_app_notification_id: null };
@@ -205,8 +218,8 @@ prototype2["enqueue"] = function enqueue(arg0) {
       obj[2] = channelId;
       obj[3] = messageId;
       obj[5] = arr.inAppNotificationId;
-      require("../../modules/app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, obj);
-      const obj2 = require("../../modules/app_analytics/AppAnalyticsUtils.tsx");
+      collectGuildAnalyticsMetadata.trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, obj);
+      const obj2 = collectGuildAnalyticsMetadata;
     }
   }
   const queue1 = self.queue;
@@ -220,8 +233,8 @@ prototype2["isFull"] = function isFull() {
   return this.queue.length >= 2;
 };
 prototype2["removeAll"] = function removeAll(arg0) {
-  const obj = require("../../../_runtime/00012_apply.js");
-  const removeResult = require("../../../_runtime/00012_apply.js").remove(this.queue, arg0);
+  const obj = apply;
+  const removeResult = apply.remove(this.queue, arg0);
   while (tmp2 !== undefined) {
     let tmp4 = trackDismissed;
     let tmp5 = trackDismissed(tmp3, "rejected_from_queue");
@@ -259,12 +272,12 @@ const inAppNotificationStore = new InAppNotificationStore(require("dispatcher"),
         tmp3 = restrictedSchedule;
       }
     }
-    let closure_25 = require("../../modules/parent_tools/RestrictedScheduleNotificationUtils.tsx") /* isOnlyDayLoss */.toScheduleSnapshot(tmp3);
+    let closure_25 = isOnlyDayLoss /* isOnlyDayLoss */.toScheduleSnapshot(tmp3);
     handleAlertMessage();
   },
   LOGOUT: function handleLogout() {
     let c24 = false;
-    const EMPTY_SCHEDULE_SNAPSHOT = require("../../modules/parent_tools/RestrictedScheduleNotificationUtils.tsx") /* isOnlyDayLoss */.EMPTY_SCHEDULE_SNAPSHOT;
+    const EMPTY_SCHEDULE_SNAPSHOT = isOnlyDayLoss /* isOnlyDayLoss */.EMPTY_SCHEDULE_SNAPSHOT;
     let c21 = null;
     obj1.removeAll(() => true);
   },
@@ -272,13 +285,13 @@ const inAppNotificationStore = new InAppNotificationStore(require("dispatcher"),
   MESSAGE_CREATE: function handleIncomingMessage(message) {
     message = message.message;
     const channel_id = message.channel_id;
-    let obj = require("../../modules/messages/MessageUtils.tsx") /* canViewPotentiallyNSFWChannel */;
+    let obj = canViewPotentiallyNSFWChannel /* canViewPotentiallyNSFWChannel */;
     if (obj.canViewPotentiallyNSFWChannel(channel_id)) {
       let tmpResult = tmp(5853);
       if (tmpResult.shouldShowSpoilerGateForChannelId(channel_id)) {
         return false;
       } else {
-        if (require("../../modules/messages/isSystemMessage.tsx")(message)) {
+        if (isSystemMessage(message)) {
           const SELF_MENTIONABLE_SYSTEM = constants4.SELF_MENTIONABLE_SYSTEM;
           if (!SELF_MENTIONABLE_SYSTEM.has(message.type)) {
             return false;
@@ -331,7 +344,7 @@ const inAppNotificationStore = new InAppNotificationStore(require("dispatcher"),
                 tmpResult2 = tmp(9672);
               }
             }
-            tmp3Result = require("../../modules/external_pip/ExternalPip.android.tsx");
+            tmp3Result = NativeEventEmitter;
           }
         }
         return false;
@@ -342,7 +355,7 @@ const inAppNotificationStore = new InAppNotificationStore(require("dispatcher"),
   },
   MESSAGE_REQUEST_NOTIFICATION_SENT: function handleMessageRequest(triggeringUserId) {
     triggeringUserId = triggeringUserId.triggeringUserId;
-    let obj = require("../../modules/message_request/MessageRequestPushNotificationExperiment.tsx");
+    let obj = apexExperiment;
     if (obj.getConfig({ location: "inAppNotificationStore" }).enabled) {
       const user = authStore.getUser(triggeringUserId);
       if (null == user) {
@@ -356,12 +369,12 @@ const inAppNotificationStore = new InAppNotificationStore(require("dispatcher"),
         obj[2] = triggeringUserId.numMutualGuilds;
         const _HermesInternal = HermesInternal;
         obj[3] = "message-request-" + triggeringUserId;
-        obj[4] = require("../../modules/in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */.getNotificationDuration(MESSAGE_REQUEST);
+        obj[4] = extractMetadataFromNotification /* extractMetadataFromNotification */.getNotificationDuration(MESSAGE_REQUEST);
         obj[5] = function onDismiss() {
           callback(table[27]).clearNotification();
         };
-        const obj4 = require("../../modules/in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */;
-        obj[6] = require("../../modules/in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */.generateInAppNotificationId();
+        const obj4 = extractMetadataFromNotification /* extractMetadataFromNotification */;
+        obj[6] = extractMetadataFromNotification /* extractMetadataFromNotification */.generateInAppNotificationId();
         obj[0] = obj;
         handleEnqueueNotification(obj);
       }
@@ -543,7 +556,7 @@ const inAppNotificationStore = new InAppNotificationStore(require("dispatcher"),
   },
   MESSAGE_REMINDER_DUE: function handleMessageReminderDue(savedMessage) {
     savedMessage = savedMessage.savedMessage;
-    let obj = require("../../modules/saved_messages/ForLaterExperiment.tsx") /* ForLaterFreemiumConfig */;
+    let obj = ForLaterFreemiumConfig /* ForLaterFreemiumConfig */;
     if (obj.isForLaterExperimentOn("inAppNotificationStore")) {
       if (null != savedMessage.message) {
         const channel = store2.getChannel(savedMessage.saveData.channelId);
@@ -574,7 +587,7 @@ const inAppNotificationStore = new InAppNotificationStore(require("dispatcher"),
     let subtitle;
     let title;
     ({ title, subtitle } = arg0);
-    let obj = require("../../modules/parent_tools/FamilyCenterV3Experiment.tsx") /* apexExperiment */;
+    let obj = apexExperiment /* apexExperiment */;
     if (obj.getIsFamilyCenterV3Enabled({ location: "InAppNotificationStore" })) {
       if (obj.screenDowntimeReminder) {
         const RESTRICTED_HOURS_WARNING = constants3.RESTRICTED_HOURS_WARNING;
@@ -606,17 +619,17 @@ const inAppNotificationStore = new InAppNotificationStore(require("dispatcher"),
     isInRestrictedHours = isInRestrictedHours.isInRestrictedHours;
     if (isInRestrictedHours) {
       if (null != _null) {
-        const result = require("../../modules/in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */.extractMetadataFromNotification(_null);
+        const result = extractMetadataFromNotification /* extractMetadataFromNotification */.extractMetadataFromNotification(_null);
         ({ guildId, channelId, messageId } = result);
-        const obj2 = require("../../modules/in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */;
+        const obj2 = extractMetadataFromNotification /* extractMetadataFromNotification */;
         let obj = { type: null, guild_id: null, channel_id: null, message_id: null, dismiss_reason: "restricted_hours", in_app_notification_id: null };
         obj[0] = _null.type;
         obj[1] = guildId;
         obj[2] = channelId;
         obj[3] = messageId;
         obj[5] = _null.inAppNotificationId;
-        require("../../modules/app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, obj);
-        const obj3 = require("../../modules/app_analytics/AppAnalyticsUtils.tsx");
+        collectGuildAnalyticsMetadata.trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, obj);
+        const obj3 = collectGuildAnalyticsMetadata;
       }
       obj = obj1;
       obj1.removeAll(() => true);
@@ -710,8 +723,8 @@ const inAppNotificationStore = new InAppNotificationStore(require("dispatcher"),
       obj[2] = channelId2;
       obj[3] = messageId;
       obj[5] = _null.inAppNotificationId;
-      require("../../modules/app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, obj);
-      const obj2 = require("../../modules/app_analytics/AppAnalyticsUtils.tsx");
+      collectGuildAnalyticsMetadata.trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, obj);
+      const obj2 = collectGuildAnalyticsMetadata;
     }
     obj1.removeAll(function predicate(type) {
       let tmp2 = type.type === outer1_18.MESSAGE;
@@ -809,23 +822,23 @@ const inAppNotificationStore = new InAppNotificationStore(require("dispatcher"),
     let channelId;
     let guildId;
     let messageId;
-    let obj = require("../../modules/notifications/NotificationTextUtils.tsx") /* shouldNotifyBase */;
+    let obj = shouldNotifyBase /* shouldNotifyBase */;
     const result = obj.allowInAppNotifications();
     let flag = !result;
     if (!result) {
       if (null != _null) {
-        const result1 = require("../../modules/in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */.extractMetadataFromNotification(_null);
+        const result1 = extractMetadataFromNotification /* extractMetadataFromNotification */.extractMetadataFromNotification(_null);
         ({ guildId, channelId, messageId } = result1);
-        const tmpResult = require("../../modules/in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */;
+        const tmpResult = extractMetadataFromNotification /* extractMetadataFromNotification */;
         obj = { type: null, guild_id: null, channel_id: null, message_id: null, dismiss_reason: "settings_updated", in_app_notification_id: null };
         obj[0] = _null.type;
         obj[1] = guildId;
         obj[2] = channelId;
         obj[3] = messageId;
         obj[5] = _null.inAppNotificationId;
-        require("../../modules/app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, obj);
+        collectGuildAnalyticsMetadata.trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, obj);
         _null = null;
-        const obj3 = require("../../modules/app_analytics/AppAnalyticsUtils.tsx");
+        const obj3 = collectGuildAnalyticsMetadata;
       }
       obj1.removeAll(() => true);
       flag = true;
@@ -834,7 +847,7 @@ const inAppNotificationStore = new InAppNotificationStore(require("dispatcher"),
   },
   CURRENT_USER_UPDATE: function handleCurrentUserUpdate() {
     if (c24) {
-      let obj = require("../../modules/parent_tools/FamilyCenterV3Experiment.tsx") /* apexExperiment */;
+      let obj = apexExperiment /* apexExperiment */;
       if (obj.getIsFamilyCenterV3Enabled({ location: "InAppNotificationStore" })) {
         let tmpResult = tmp(9669);
         const currentUser = authStore.getCurrentUser();
@@ -905,12 +918,12 @@ let obj2 = {
         tmp3 = restrictedSchedule;
       }
     }
-    let closure_25 = require("../../modules/parent_tools/RestrictedScheduleNotificationUtils.tsx") /* isOnlyDayLoss */.toScheduleSnapshot(tmp3);
+    let closure_25 = isOnlyDayLoss /* isOnlyDayLoss */.toScheduleSnapshot(tmp3);
     handleAlertMessage();
   },
   LOGOUT: function handleLogout() {
     let c24 = false;
-    const EMPTY_SCHEDULE_SNAPSHOT = require("../../modules/parent_tools/RestrictedScheduleNotificationUtils.tsx") /* isOnlyDayLoss */.EMPTY_SCHEDULE_SNAPSHOT;
+    const EMPTY_SCHEDULE_SNAPSHOT = isOnlyDayLoss /* isOnlyDayLoss */.EMPTY_SCHEDULE_SNAPSHOT;
     let c21 = null;
     obj1.removeAll(() => true);
   },
@@ -918,13 +931,13 @@ let obj2 = {
   MESSAGE_CREATE: function handleIncomingMessage(message) {
     message = message.message;
     const channel_id = message.channel_id;
-    let obj = require("../../modules/messages/MessageUtils.tsx") /* canViewPotentiallyNSFWChannel */;
+    let obj = canViewPotentiallyNSFWChannel /* canViewPotentiallyNSFWChannel */;
     if (obj.canViewPotentiallyNSFWChannel(channel_id)) {
       let tmpResult = tmp(5853);
       if (tmpResult.shouldShowSpoilerGateForChannelId(channel_id)) {
         return false;
       } else {
-        if (require("../../modules/messages/isSystemMessage.tsx")(message)) {
+        if (isSystemMessage(message)) {
           const SELF_MENTIONABLE_SYSTEM = constants4.SELF_MENTIONABLE_SYSTEM;
           if (!SELF_MENTIONABLE_SYSTEM.has(message.type)) {
             return false;
@@ -977,7 +990,7 @@ let obj2 = {
                 tmpResult2 = tmp(9672);
               }
             }
-            tmp3Result = require("../../modules/external_pip/ExternalPip.android.tsx");
+            tmp3Result = NativeEventEmitter;
           }
         }
         return false;
@@ -988,7 +1001,7 @@ let obj2 = {
   },
   MESSAGE_REQUEST_NOTIFICATION_SENT: function handleMessageRequest(triggeringUserId) {
     triggeringUserId = triggeringUserId.triggeringUserId;
-    let obj = require("../../modules/message_request/MessageRequestPushNotificationExperiment.tsx");
+    let obj = apexExperiment;
     if (obj.getConfig({ location: "inAppNotificationStore" }).enabled) {
       const user = authStore.getUser(triggeringUserId);
       if (null == user) {
@@ -1002,12 +1015,12 @@ let obj2 = {
         obj[2] = triggeringUserId.numMutualGuilds;
         const _HermesInternal = HermesInternal;
         obj[3] = "message-request-" + triggeringUserId;
-        obj[4] = require("../../modules/in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */.getNotificationDuration(MESSAGE_REQUEST);
+        obj[4] = extractMetadataFromNotification /* extractMetadataFromNotification */.getNotificationDuration(MESSAGE_REQUEST);
         obj[5] = function onDismiss() {
           callback(table[27]).clearNotification();
         };
-        const obj4 = require("../../modules/in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */;
-        obj[6] = require("../../modules/in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */.generateInAppNotificationId();
+        const obj4 = extractMetadataFromNotification /* extractMetadataFromNotification */;
+        obj[6] = extractMetadataFromNotification /* extractMetadataFromNotification */.generateInAppNotificationId();
         obj[0] = obj;
         handleEnqueueNotification(obj);
       }
@@ -1189,7 +1202,7 @@ let obj2 = {
   },
   MESSAGE_REMINDER_DUE: function handleMessageReminderDue(savedMessage) {
     savedMessage = savedMessage.savedMessage;
-    let obj = require("../../modules/saved_messages/ForLaterExperiment.tsx") /* ForLaterFreemiumConfig */;
+    let obj = ForLaterFreemiumConfig /* ForLaterFreemiumConfig */;
     if (obj.isForLaterExperimentOn("inAppNotificationStore")) {
       if (null != savedMessage.message) {
         const channel = store2.getChannel(savedMessage.saveData.channelId);
@@ -1220,7 +1233,7 @@ let obj2 = {
     let subtitle;
     let title;
     ({ title, subtitle } = arg0);
-    let obj = require("../../modules/parent_tools/FamilyCenterV3Experiment.tsx") /* apexExperiment */;
+    let obj = apexExperiment /* apexExperiment */;
     if (obj.getIsFamilyCenterV3Enabled({ location: "InAppNotificationStore" })) {
       if (obj.screenDowntimeReminder) {
         const RESTRICTED_HOURS_WARNING = constants3.RESTRICTED_HOURS_WARNING;
@@ -1252,17 +1265,17 @@ let obj2 = {
     isInRestrictedHours = isInRestrictedHours.isInRestrictedHours;
     if (isInRestrictedHours) {
       if (null != _null) {
-        const result = require("../../modules/in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */.extractMetadataFromNotification(_null);
+        const result = extractMetadataFromNotification /* extractMetadataFromNotification */.extractMetadataFromNotification(_null);
         ({ guildId, channelId, messageId } = result);
-        const obj2 = require("../../modules/in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */;
+        const obj2 = extractMetadataFromNotification /* extractMetadataFromNotification */;
         let obj = { type: null, guild_id: null, channel_id: null, message_id: null, dismiss_reason: "restricted_hours", in_app_notification_id: null };
         obj[0] = _null.type;
         obj[1] = guildId;
         obj[2] = channelId;
         obj[3] = messageId;
         obj[5] = _null.inAppNotificationId;
-        require("../../modules/app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, obj);
-        const obj3 = require("../../modules/app_analytics/AppAnalyticsUtils.tsx");
+        collectGuildAnalyticsMetadata.trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, obj);
+        const obj3 = collectGuildAnalyticsMetadata;
       }
       obj = obj1;
       obj1.removeAll(() => true);
@@ -1356,8 +1369,8 @@ let obj2 = {
       obj[2] = channelId2;
       obj[3] = messageId;
       obj[5] = _null.inAppNotificationId;
-      require("../../modules/app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, obj);
-      const obj2 = require("../../modules/app_analytics/AppAnalyticsUtils.tsx");
+      collectGuildAnalyticsMetadata.trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, obj);
+      const obj2 = collectGuildAnalyticsMetadata;
     }
     obj1.removeAll(function predicate(type) {
       let tmp2 = type.type === outer1_18.MESSAGE;
@@ -1455,23 +1468,23 @@ let obj2 = {
     let channelId;
     let guildId;
     let messageId;
-    let obj = require("../../modules/notifications/NotificationTextUtils.tsx") /* shouldNotifyBase */;
+    let obj = shouldNotifyBase /* shouldNotifyBase */;
     const result = obj.allowInAppNotifications();
     let flag = !result;
     if (!result) {
       if (null != _null) {
-        const result1 = require("../../modules/in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */.extractMetadataFromNotification(_null);
+        const result1 = extractMetadataFromNotification /* extractMetadataFromNotification */.extractMetadataFromNotification(_null);
         ({ guildId, channelId, messageId } = result1);
-        const tmpResult = require("../../modules/in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */;
+        const tmpResult = extractMetadataFromNotification /* extractMetadataFromNotification */;
         obj = { type: null, guild_id: null, channel_id: null, message_id: null, dismiss_reason: "settings_updated", in_app_notification_id: null };
         obj[0] = _null.type;
         obj[1] = guildId;
         obj[2] = channelId;
         obj[3] = messageId;
         obj[5] = _null.inAppNotificationId;
-        require("../../modules/app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, obj);
+        collectGuildAnalyticsMetadata.trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, obj);
         _null = null;
-        const obj3 = require("../../modules/app_analytics/AppAnalyticsUtils.tsx");
+        const obj3 = collectGuildAnalyticsMetadata;
       }
       obj1.removeAll(() => true);
       flag = true;
@@ -1480,7 +1493,7 @@ let obj2 = {
   },
   CURRENT_USER_UPDATE: function handleCurrentUserUpdate() {
     if (c24) {
-      let obj = require("../../modules/parent_tools/FamilyCenterV3Experiment.tsx") /* apexExperiment */;
+      let obj = apexExperiment /* apexExperiment */;
       if (obj.getIsFamilyCenterV3Enabled({ location: "InAppNotificationStore" })) {
         let tmpResult = tmp(9669);
         const currentUser = authStore.getCurrentUser();

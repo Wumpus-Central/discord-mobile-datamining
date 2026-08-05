@@ -1,3 +1,23 @@
+import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
+import { create } from "admin_editor_test_component.tsx";
+import { create } from "announcement_modal_variant_1_properties.tsx";
+import { create } from "billing_settings_banner.tsx";
+import { create } from "billing_settings_nitro_gift_banner.tsx";
+import { create } from "gift_customization_banner.tsx";
+import { create } from "gift_icon_coachmark.tsx";
+import { create } from "gift_icon.tsx";
+import { create } from "gift_plan_selection_card_banner.tsx";
+import { create } from "gift_reminder_coachmark.tsx";
+import { create } from "gift_reminder_nagbar.tsx";
+import { create } from "marketing_page_banner.tsx";
+import { create } from "mobile_bottom_sheet.tsx";
+import { create } from "nagbar.tsx";
+import { create } from "payment_modal_banner.tsx";
+import { create } from "plan_select_card_banner.tsx";
+import { create } from "premium_tab_popover.tsx";
+import { create } from "premium_tab_tooltip.tsx";
+import { create } from "premium_tab.tsx";
+import { create } from "shop_nagbar.tsx";
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/premium_marketing_component_properties.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
@@ -189,10 +209,10 @@ prototype["create"] = function create(arr) {
   let obj = { properties: { oneofKind: "r" }, contentIdentifier: "", isDefaultBase: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, require("../../../../../../../_runtime/metro/01307__.js").MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = require("../../../../../../../_runtime/metro/01307__.js").reflectionMergePartial(this, obj, arr);
-    const tmpResult = require("../../../../../../../_runtime/metro/01307__.js");
+    const result = 01307__.reflectionMergePartial(this, obj, arr);
+    const tmpResult = 01307__;
   }
   return obj;
 };
@@ -210,135 +230,135 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(properties, tag, writeUnknownFields) {
   if ("placeholder" === properties.properties.oneofKind) {
-    tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(properties.properties.placeholder);
-    const tagResult = tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(1, 01307__.WireType.LengthDelimited).string(properties.properties.placeholder);
+    const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
   }
   if ("announcementModalVariant1" === properties.properties.oneofKind) {
-    const AnnouncementModalVariant1Properties = require("announcement_modal_variant_1_properties.tsx") /* create */.AnnouncementModalVariant1Properties;
-    const tagResult1 = tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined = AnnouncementModalVariant1Properties.internalBinaryWrite(properties.properties.announcementModalVariant1, tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = AnnouncementModalVariant1Properties.internalBinaryWrite(properties.properties.announcementModalVariant1, tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const AnnouncementModalVariant1Properties = create /* create */.AnnouncementModalVariant1Properties;
+    const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
+    const joined = AnnouncementModalVariant1Properties.internalBinaryWrite(properties.properties.announcementModalVariant1, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = AnnouncementModalVariant1Properties.internalBinaryWrite(properties.properties.announcementModalVariant1, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("premiumTab" === properties.properties.oneofKind) {
-    const PremiumTab = require("premium_tab.tsx") /* create */.PremiumTab;
-    const tagResult2 = tag.tag(4, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined1 = PremiumTab.internalBinaryWrite(properties.properties.premiumTab, tag.tag(4, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = PremiumTab.internalBinaryWrite(properties.properties.premiumTab, tag.tag(4, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const PremiumTab = create /* create */.PremiumTab;
+    const tagResult2 = tag.tag(4, 01307__.WireType.LengthDelimited);
+    const joined1 = PremiumTab.internalBinaryWrite(properties.properties.premiumTab, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = PremiumTab.internalBinaryWrite(properties.properties.premiumTab, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("marketingPageBanner" === properties.properties.oneofKind) {
-    const MarketingPageBanner = require("marketing_page_banner.tsx") /* create */.MarketingPageBanner;
-    const tagResult3 = tag.tag(5, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined2 = MarketingPageBanner.internalBinaryWrite(properties.properties.marketingPageBanner, tag.tag(5, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = MarketingPageBanner.internalBinaryWrite(properties.properties.marketingPageBanner, tag.tag(5, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const MarketingPageBanner = create /* create */.MarketingPageBanner;
+    const tagResult3 = tag.tag(5, 01307__.WireType.LengthDelimited);
+    const joined2 = MarketingPageBanner.internalBinaryWrite(properties.properties.marketingPageBanner, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult2 = MarketingPageBanner.internalBinaryWrite(properties.properties.marketingPageBanner, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("paymentModalBanner" === properties.properties.oneofKind) {
-    const PaymentModalBanner = require("payment_modal_banner.tsx") /* create */.PaymentModalBanner;
-    const tagResult4 = tag.tag(6, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined3 = PaymentModalBanner.internalBinaryWrite(properties.properties.paymentModalBanner, tag.tag(6, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult3 = PaymentModalBanner.internalBinaryWrite(properties.properties.paymentModalBanner, tag.tag(6, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const PaymentModalBanner = create /* create */.PaymentModalBanner;
+    const tagResult4 = tag.tag(6, 01307__.WireType.LengthDelimited);
+    const joined3 = PaymentModalBanner.internalBinaryWrite(properties.properties.paymentModalBanner, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult3 = PaymentModalBanner.internalBinaryWrite(properties.properties.paymentModalBanner, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("mobileBottomSheet" === properties.properties.oneofKind) {
-    const MobileBottomSheet = require("mobile_bottom_sheet.tsx") /* create */.MobileBottomSheet;
-    const tagResult5 = tag.tag(7, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined4 = MobileBottomSheet.internalBinaryWrite(properties.properties.mobileBottomSheet, tag.tag(7, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult4 = MobileBottomSheet.internalBinaryWrite(properties.properties.mobileBottomSheet, tag.tag(7, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const MobileBottomSheet = create /* create */.MobileBottomSheet;
+    const tagResult5 = tag.tag(7, 01307__.WireType.LengthDelimited);
+    const joined4 = MobileBottomSheet.internalBinaryWrite(properties.properties.mobileBottomSheet, tag.tag(7, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult4 = MobileBottomSheet.internalBinaryWrite(properties.properties.mobileBottomSheet, tag.tag(7, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("giftIcon" === properties.properties.oneofKind) {
-    const GiftIcon = require("gift_icon.tsx") /* create */.GiftIcon;
-    const tagResult6 = tag.tag(8, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined5 = GiftIcon.internalBinaryWrite(properties.properties.giftIcon, tag.tag(8, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult5 = GiftIcon.internalBinaryWrite(properties.properties.giftIcon, tag.tag(8, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const GiftIcon = create /* create */.GiftIcon;
+    const tagResult6 = tag.tag(8, 01307__.WireType.LengthDelimited);
+    const joined5 = GiftIcon.internalBinaryWrite(properties.properties.giftIcon, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult5 = GiftIcon.internalBinaryWrite(properties.properties.giftIcon, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("giftIconCoachmark" === properties.properties.oneofKind) {
-    const GiftIconCoachmark = require("gift_icon_coachmark.tsx") /* create */.GiftIconCoachmark;
-    const tagResult7 = tag.tag(9, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined6 = GiftIconCoachmark.internalBinaryWrite(properties.properties.giftIconCoachmark, tag.tag(9, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult6 = GiftIconCoachmark.internalBinaryWrite(properties.properties.giftIconCoachmark, tag.tag(9, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const GiftIconCoachmark = create /* create */.GiftIconCoachmark;
+    const tagResult7 = tag.tag(9, 01307__.WireType.LengthDelimited);
+    const joined6 = GiftIconCoachmark.internalBinaryWrite(properties.properties.giftIconCoachmark, tag.tag(9, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult6 = GiftIconCoachmark.internalBinaryWrite(properties.properties.giftIconCoachmark, tag.tag(9, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("giftPlanSelectionCardBanner" === properties.properties.oneofKind) {
-    const GiftPlanSelectionCardBanner = require("gift_plan_selection_card_banner.tsx") /* create */.GiftPlanSelectionCardBanner;
-    const tagResult8 = tag.tag(10, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined7 = GiftPlanSelectionCardBanner.internalBinaryWrite(properties.properties.giftPlanSelectionCardBanner, tag.tag(10, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult7 = GiftPlanSelectionCardBanner.internalBinaryWrite(properties.properties.giftPlanSelectionCardBanner, tag.tag(10, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const GiftPlanSelectionCardBanner = create /* create */.GiftPlanSelectionCardBanner;
+    const tagResult8 = tag.tag(10, 01307__.WireType.LengthDelimited);
+    const joined7 = GiftPlanSelectionCardBanner.internalBinaryWrite(properties.properties.giftPlanSelectionCardBanner, tag.tag(10, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult7 = GiftPlanSelectionCardBanner.internalBinaryWrite(properties.properties.giftPlanSelectionCardBanner, tag.tag(10, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("giftCustomizationBanner" === properties.properties.oneofKind) {
-    const GiftCustomizationBanner = require("gift_customization_banner.tsx") /* create */.GiftCustomizationBanner;
-    const tagResult9 = tag.tag(11, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined8 = GiftCustomizationBanner.internalBinaryWrite(properties.properties.giftCustomizationBanner, tag.tag(11, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult8 = GiftCustomizationBanner.internalBinaryWrite(properties.properties.giftCustomizationBanner, tag.tag(11, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const GiftCustomizationBanner = create /* create */.GiftCustomizationBanner;
+    const tagResult9 = tag.tag(11, 01307__.WireType.LengthDelimited);
+    const joined8 = GiftCustomizationBanner.internalBinaryWrite(properties.properties.giftCustomizationBanner, tag.tag(11, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult8 = GiftCustomizationBanner.internalBinaryWrite(properties.properties.giftCustomizationBanner, tag.tag(11, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("billingSettingsNitroGiftBanner" === properties.properties.oneofKind) {
-    const BillingSettingsNitroGiftBanner = require("billing_settings_nitro_gift_banner.tsx") /* create */.BillingSettingsNitroGiftBanner;
-    const tagResult10 = tag.tag(12, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined9 = BillingSettingsNitroGiftBanner.internalBinaryWrite(properties.properties.billingSettingsNitroGiftBanner, tag.tag(12, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult9 = BillingSettingsNitroGiftBanner.internalBinaryWrite(properties.properties.billingSettingsNitroGiftBanner, tag.tag(12, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const BillingSettingsNitroGiftBanner = create /* create */.BillingSettingsNitroGiftBanner;
+    const tagResult10 = tag.tag(12, 01307__.WireType.LengthDelimited);
+    const joined9 = BillingSettingsNitroGiftBanner.internalBinaryWrite(properties.properties.billingSettingsNitroGiftBanner, tag.tag(12, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult9 = BillingSettingsNitroGiftBanner.internalBinaryWrite(properties.properties.billingSettingsNitroGiftBanner, tag.tag(12, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("giftReminderNagbar" === properties.properties.oneofKind) {
-    const GiftReminderNagbar = require("gift_reminder_nagbar.tsx") /* create */.GiftReminderNagbar;
-    const tagResult11 = tag.tag(13, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined10 = GiftReminderNagbar.internalBinaryWrite(properties.properties.giftReminderNagbar, tag.tag(13, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult10 = GiftReminderNagbar.internalBinaryWrite(properties.properties.giftReminderNagbar, tag.tag(13, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const GiftReminderNagbar = create /* create */.GiftReminderNagbar;
+    const tagResult11 = tag.tag(13, 01307__.WireType.LengthDelimited);
+    const joined10 = GiftReminderNagbar.internalBinaryWrite(properties.properties.giftReminderNagbar, tag.tag(13, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult10 = GiftReminderNagbar.internalBinaryWrite(properties.properties.giftReminderNagbar, tag.tag(13, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("giftReminderCoachmark" === properties.properties.oneofKind) {
-    const GiftReminderCoachmark = require("gift_reminder_coachmark.tsx") /* create */.GiftReminderCoachmark;
-    const tagResult12 = tag.tag(14, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined11 = GiftReminderCoachmark.internalBinaryWrite(properties.properties.giftReminderCoachmark, tag.tag(14, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult11 = GiftReminderCoachmark.internalBinaryWrite(properties.properties.giftReminderCoachmark, tag.tag(14, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const GiftReminderCoachmark = create /* create */.GiftReminderCoachmark;
+    const tagResult12 = tag.tag(14, 01307__.WireType.LengthDelimited);
+    const joined11 = GiftReminderCoachmark.internalBinaryWrite(properties.properties.giftReminderCoachmark, tag.tag(14, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult11 = GiftReminderCoachmark.internalBinaryWrite(properties.properties.giftReminderCoachmark, tag.tag(14, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("premiumTabTooltip" === properties.properties.oneofKind) {
-    const PremiumTabTooltip = require("premium_tab_tooltip.tsx") /* create */.PremiumTabTooltip;
-    const tagResult13 = tag.tag(15, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined12 = PremiumTabTooltip.internalBinaryWrite(properties.properties.premiumTabTooltip, tag.tag(15, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult12 = PremiumTabTooltip.internalBinaryWrite(properties.properties.premiumTabTooltip, tag.tag(15, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const PremiumTabTooltip = create /* create */.PremiumTabTooltip;
+    const tagResult13 = tag.tag(15, 01307__.WireType.LengthDelimited);
+    const joined12 = PremiumTabTooltip.internalBinaryWrite(properties.properties.premiumTabTooltip, tag.tag(15, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult12 = PremiumTabTooltip.internalBinaryWrite(properties.properties.premiumTabTooltip, tag.tag(15, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("premiumTabPopover" === properties.properties.oneofKind) {
-    const PremiumTabPopover = require("premium_tab_popover.tsx") /* create */.PremiumTabPopover;
-    const tagResult14 = tag.tag(16, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined13 = PremiumTabPopover.internalBinaryWrite(properties.properties.premiumTabPopover, tag.tag(16, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult13 = PremiumTabPopover.internalBinaryWrite(properties.properties.premiumTabPopover, tag.tag(16, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const PremiumTabPopover = create /* create */.PremiumTabPopover;
+    const tagResult14 = tag.tag(16, 01307__.WireType.LengthDelimited);
+    const joined13 = PremiumTabPopover.internalBinaryWrite(properties.properties.premiumTabPopover, tag.tag(16, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult13 = PremiumTabPopover.internalBinaryWrite(properties.properties.premiumTabPopover, tag.tag(16, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("nagbar" === properties.properties.oneofKind) {
-    const Nagbar = require("nagbar.tsx") /* create */.Nagbar;
-    const tagResult15 = tag.tag(17, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined14 = Nagbar.internalBinaryWrite(properties.properties.nagbar, tag.tag(17, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult14 = Nagbar.internalBinaryWrite(properties.properties.nagbar, tag.tag(17, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const Nagbar = create /* create */.Nagbar;
+    const tagResult15 = tag.tag(17, 01307__.WireType.LengthDelimited);
+    const joined14 = Nagbar.internalBinaryWrite(properties.properties.nagbar, tag.tag(17, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult14 = Nagbar.internalBinaryWrite(properties.properties.nagbar, tag.tag(17, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("planSelectCardBanner" === properties.properties.oneofKind) {
-    const PlanSelectCardBanner = require("plan_select_card_banner.tsx") /* create */.PlanSelectCardBanner;
-    const tagResult16 = tag.tag(19, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined15 = PlanSelectCardBanner.internalBinaryWrite(properties.properties.planSelectCardBanner, tag.tag(19, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult15 = PlanSelectCardBanner.internalBinaryWrite(properties.properties.planSelectCardBanner, tag.tag(19, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const PlanSelectCardBanner = create /* create */.PlanSelectCardBanner;
+    const tagResult16 = tag.tag(19, 01307__.WireType.LengthDelimited);
+    const joined15 = PlanSelectCardBanner.internalBinaryWrite(properties.properties.planSelectCardBanner, tag.tag(19, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult15 = PlanSelectCardBanner.internalBinaryWrite(properties.properties.planSelectCardBanner, tag.tag(19, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("billingSettingsBanner" === properties.properties.oneofKind) {
-    const BillingSettingsBanner = require("billing_settings_banner.tsx") /* create */.BillingSettingsBanner;
-    const tagResult17 = tag.tag(20, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined16 = BillingSettingsBanner.internalBinaryWrite(properties.properties.billingSettingsBanner, tag.tag(20, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult16 = BillingSettingsBanner.internalBinaryWrite(properties.properties.billingSettingsBanner, tag.tag(20, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const BillingSettingsBanner = create /* create */.BillingSettingsBanner;
+    const tagResult17 = tag.tag(20, 01307__.WireType.LengthDelimited);
+    const joined16 = BillingSettingsBanner.internalBinaryWrite(properties.properties.billingSettingsBanner, tag.tag(20, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult16 = BillingSettingsBanner.internalBinaryWrite(properties.properties.billingSettingsBanner, tag.tag(20, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("shopNagbar" === properties.properties.oneofKind) {
-    const ShopNagbar = require("shop_nagbar.tsx") /* create */.ShopNagbar;
-    const tagResult18 = tag.tag(21, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined17 = ShopNagbar.internalBinaryWrite(properties.properties.shopNagbar, tag.tag(21, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult17 = ShopNagbar.internalBinaryWrite(properties.properties.shopNagbar, tag.tag(21, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const ShopNagbar = create /* create */.ShopNagbar;
+    const tagResult18 = tag.tag(21, 01307__.WireType.LengthDelimited);
+    const joined17 = ShopNagbar.internalBinaryWrite(properties.properties.shopNagbar, tag.tag(21, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult17 = ShopNagbar.internalBinaryWrite(properties.properties.shopNagbar, tag.tag(21, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("adminEditorTestComponent" === properties.properties.oneofKind) {
-    const AdminEditorTestComponent = require("admin_editor_test_component.tsx") /* create */.AdminEditorTestComponent;
-    const tagResult19 = tag.tag(22, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined18 = AdminEditorTestComponent.internalBinaryWrite(properties.properties.adminEditorTestComponent, tag.tag(22, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult18 = AdminEditorTestComponent.internalBinaryWrite(properties.properties.adminEditorTestComponent, tag.tag(22, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const AdminEditorTestComponent = create /* create */.AdminEditorTestComponent;
+    const tagResult19 = tag.tag(22, 01307__.WireType.LengthDelimited);
+    const joined18 = AdminEditorTestComponent.internalBinaryWrite(properties.properties.adminEditorTestComponent, tag.tag(22, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult18 = AdminEditorTestComponent.internalBinaryWrite(properties.properties.adminEditorTestComponent, tag.tag(22, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("" !== properties.contentIdentifier) {
-    tag.tag(3, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(properties.contentIdentifier);
-    const tagResult20 = tag.tag(3, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(3, 01307__.WireType.LengthDelimited).string(properties.contentIdentifier);
+    const tagResult20 = tag.tag(3, 01307__.WireType.LengthDelimited);
   }
   if (false !== properties.isDefaultBase) {
-    tag.tag(18, require("../../../../../../../_runtime/metro/01307__.js").WireType.Varint).bool(properties.isDefaultBase);
-    const tagResult21 = tag.tag(18, require("../../../../../../../_runtime/metro/01307__.js").WireType.Varint);
+    tag.tag(18, 01307__.WireType.Varint).bool(properties.isDefaultBase);
+    const tagResult21 = tag.tag(18, 01307__.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onWrite;
+      onWrite = 01307__.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, properties, tag);

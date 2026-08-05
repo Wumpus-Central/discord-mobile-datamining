@@ -1,3 +1,7 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { WishlistItemCard } from "WishlistItemCard.tsx";
 // discord_app/modules/wishlists/native/WishlistViewMoreCard.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -16,8 +20,8 @@ let closure_8 = createCacheKey.createStyles(() => {
   let obj = { moreOverlay: null };
   obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj.borderRadius = require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg;
-  obj.backgroundColor = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
+  obj.borderRadius = Themes.radii.lg;
+  obj.backgroundColor = Themes.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
   obj.justifyContent = "center";
   obj.alignItems = "center";
   obj[0] = obj;
@@ -33,14 +37,14 @@ export default function WishlistViewMoreCard(recipientName) {
   recipientName = recipientName.recipientName;
   ({ sku, size, overflowCount, onPress } = recipientName);
   let obj = { onPress, accessibilityLabel: null, children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["8uYD+I"], { username: recipientName });
-  const items = [callback(require("WishlistItemCard.tsx"), { accessibilityHidden: true, sku, size, recipientName }), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["8uYD+I"], { username: recipientName });
+  const items = [callback(WishlistItemCard, { accessibilityHidden: true, sku, size, recipientName }), ];
   obj = { style: callback3().moreOverlay, children: null };
   obj = { variant: "text-md/semibold", color: "text-overlay-light", children: null };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl2.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.F6iMs4, { count: overflowCount });
-  obj[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl2.format(getSystemLocale /* getSystemLocale */.t.F6iMs4, { count: overflowCount });
+  obj[1] = callback(Text /* Text */.Text, obj);
   items[1] = callback(closure_5, obj);
   obj[2] = items;
   return callback2(closure_3, obj);

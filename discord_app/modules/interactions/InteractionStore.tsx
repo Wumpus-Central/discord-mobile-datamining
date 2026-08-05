@@ -1,3 +1,6 @@
+import { trackInvite } from "../../actions/MessageActionCreators.tsx";
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import { InteractionState } from "InteractionTypes.tsx";
 // discord_app/modules/interactions/InteractionStore.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
@@ -68,12 +71,12 @@ prototype["canQueueInteraction"] = function canQueueInteraction(c1, closure_9) {
     tmp2 = null != dependencyMap[tmp];
   }
   if (tmp2) {
-    tmp2 = dependencyMap[tmp].state !== require("InteractionTypes.tsx") /* InteractionState */.InteractionState.FAILED;
+    tmp2 = dependencyMap[tmp].state !== InteractionState /* InteractionState */.InteractionState.FAILED;
   }
   if (!tmp2) {
     let tmp9 = null != dependencyMap[closure_9];
     if (tmp9) {
-      tmp9 = dependencyMap[closure_9].state !== require("InteractionTypes.tsx") /* InteractionState */.InteractionState.FAILED;
+      tmp9 = dependencyMap[closure_9].state !== InteractionState /* InteractionState */.InteractionState.FAILED;
     }
     tmp2 = tmp9;
   }
@@ -140,7 +143,7 @@ const interactionStore = new InteractionStore(require("dispatcher"), {
       closure_9[messageId] = nonce;
       closure_10[nonce] = messageId;
     }
-    closure_8[nonce] = { state: require("InteractionTypes.tsx") /* InteractionState */.InteractionState.QUEUED, data, onCreate, onCancel, onSuccess, onFailure };
+    closure_8[nonce] = { state: InteractionState /* InteractionState */.InteractionState.QUEUED, data, onCreate, onCancel, onSuccess, onFailure };
   },
   INTERACTION_CREATE: function handleInteractionCreate(nonce) {
     nonce = nonce.nonce;
@@ -148,7 +151,7 @@ const interactionStore = new InteractionStore(require("dispatcher"), {
       return false;
     } else {
       if (null != dependencyMap[nonce]) {
-        if (tmp3.state === require("InteractionTypes.tsx") /* InteractionState */.InteractionState.QUEUED) {
+        if (tmp3.state === InteractionState /* InteractionState */.InteractionState.QUEUED) {
           tmp3.state = tmp4(4510).InteractionState.CREATED;
           const onCreate = tmp3.onCreate;
           if (onCreate != null) {
@@ -203,7 +206,7 @@ const interactionStore = new InteractionStore(require("dispatcher"), {
       if (onFailure != null) {
         onFailure(errorCode, errorMessage, status, reasonCode);
       }
-      if (tmp27.data.interactionType === require("../../flow/Server.tsx") /* PermissionOverwriteType */.InteractionTypes.APPLICATION_COMMAND) {
+      if (tmp27.data.interactionType === PermissionOverwriteType /* PermissionOverwriteType */.InteractionTypes.APPLICATION_COMMAND) {
         if (null == dependencyMap4[nonce]) {
           delete tmp[tmp2];
           if (null != dependencyMap3[nonce]) {
@@ -223,7 +226,7 @@ const interactionStore = new InteractionStore(require("dispatcher"), {
       } else {
         obj = {};
         const merged = Object.assign(tmp27);
-        obj.state = require("InteractionTypes.tsx") /* InteractionState */.InteractionState.FAILED;
+        obj.state = InteractionState /* InteractionState */.InteractionState.FAILED;
         obj.errorCode = errorCode;
         obj.errorMessage = errorMessage;
         obj.reasonCode = reasonCode;
@@ -274,7 +277,7 @@ const interactionStore = new InteractionStore(require("dispatcher"), {
         let first = tmp5[0];
         let tmp7 = require;
         let tmp8 = dependencyMap;
-        if (tmp5[1].state === require("InteractionTypes.tsx") /* InteractionState */.InteractionState.FAILED) {
+        if (tmp5[1].state === InteractionState /* InteractionState */.InteractionState.FAILED) {
           let tmp9 = deleteNonce;
           let tmp10 = first;
           let tmp11 = deleteNonce(first);
@@ -391,8 +394,8 @@ const interactionStore = new InteractionStore(require("dispatcher"), {
             tmp18 = "channelId" in interaction.data;
           }
           if (tmp18) {
-            require("../../actions/MessageActionCreators.tsx").deleteMessage(interaction.data.channelId, messageId, true);
-            const obj2 = require("../../actions/MessageActionCreators.tsx");
+            trackInvite.deleteMessage(interaction.data.channelId, messageId, true);
+            const obj2 = trackInvite;
           }
         }
         tmp7 = null != interaction && null != messageId;

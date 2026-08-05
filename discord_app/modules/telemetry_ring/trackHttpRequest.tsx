@@ -1,3 +1,5 @@
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { trackZoomedInHttpRequest } from "trackZoomedInHttpRequest.android.tsx";
 // discord_app/modules/telemetry_ring/trackHttpRequest.tsx
 import { AnalyticEvents } from "ME";
 
@@ -12,13 +14,13 @@ export default function trackHttpRequest(url) {
     const str2 = str.split(/[?#]/)[0];
   }
   obj.url = replaced;
-  require("trackZoomedInHttpRequest.android.tsx")(obj);
+  trackZoomedInHttpRequest(obj);
   const random = Math.random();
   if (random < obj2.getHttpRequestSampleRate()) {
     obj = {};
     const merged1 = Object.assign(obj);
     obj.source = "sample";
-    require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.HTTP_REQUEST, obj);
-    const tmp3Result = require("../../utils/AnalyticsUtils.tsx");
+    expandEventProperties.track(AnalyticEvents.HTTP_REQUEST, obj);
+    const tmp3Result = expandEventProperties;
   }
 };

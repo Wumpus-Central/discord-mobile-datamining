@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/soundboard/canChannelUseSoundboard.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -43,7 +44,7 @@ export const useCanChannelUseSoundboard = function useCanChannelUseSoundboard(ar
   const _require = arg0;
   const items = [getUncachedChannelPermissions];
   const items1 = [arg0];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let flag = false;
     if (null != closure_0) {
       const CALLABLE = outer1_5.CALLABLE;

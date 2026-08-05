@@ -1,3 +1,4 @@
+import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 // discord_app/modules/video_calls/native/components/ActivityTile.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ManaContext from "ManaContext";
@@ -306,5 +307,5 @@ export default function ActivityTile(arg0) {
   obj = {};
   const merged = Object.assign(arg0);
   obj[1] = callback(ActivityTileInner, obj);
-  return callback(require("../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */.ThemeContextProvider, obj);
+  return callback(ManaContext /* ManaContext */.ThemeContextProvider, obj);
 };

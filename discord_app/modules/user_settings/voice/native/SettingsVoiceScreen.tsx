@@ -1,3 +1,10 @@
+import { Directions } from "../../../../../_runtime/05368_Directions.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getNoiseCancellationDeferredToSystem } from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
+import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
+import { handleKrispLinkPressed } from "KrispLogo.tsx";
 // discord_app/modules/user_settings/voice/native/SettingsVoiceScreen.tsx
 import set from "set";
 import get_ActivityIndicator from "createToggle";
@@ -16,7 +23,7 @@ let unpackModuleId;
 const require = arg1;
 function KrispLogo() {
   const tmp = callback3();
-  let obj = require("../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   if (obj.isThemeLight(tmp4)) {
     let tmp2Result = tmp2(10759);
   } else {
@@ -25,22 +32,22 @@ function KrispLogo() {
   obj = { style: tmp.krisp, children: null };
   obj = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
   const intl = tmp5(1236).intl;
-  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.vFiCSx);
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.vFiCSx);
   const items = [callback(closure_5, obj), ];
   const obj1 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = tmp5(1236).intl;
-  obj1[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.hvVgAZ);
-  obj1[2] = require("KrispLogo.tsx") /* handleKrispLinkPressed */.handleKrispLinkPressed;
+  obj1[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.hvVgAZ);
+  obj1[2] = handleKrispLinkPressed /* handleKrispLinkPressed */.handleKrispLinkPressed;
   const obj2 = { variant: "text-sm/medium", color: "text-link", children: null };
   const intl3 = tmp5(1236).intl;
-  obj2[2] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.hvVgAZ);
-  obj1[3] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
-  items[1] = callback(require("../../../../../_runtime/05368_Directions.js") /* Directions */.Pressable, obj1);
+  obj2[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.hvVgAZ);
+  obj1[3] = callback(Text /* Text */.Text, obj2);
+  items[1] = callback(Directions /* Directions */.Pressable, obj1);
   obj[1] = items;
   return callback2(closure_4, obj);
 }
 function SystemProcessingSubLabel() {
-  let obj = require("../../../noise_cancellation/NoiseCancellationUtils.tsx") /* getNoiseCancellationDeferredToSystem */;
+  let obj = getNoiseCancellationDeferredToSystem /* getNoiseCancellationDeferredToSystem */;
   let tmp3 = null;
   if (obj.useNoiseCancellationDeferredToSystem()) {
     obj = { variant: "text-sm/medium", children: null };
@@ -127,5 +134,5 @@ export default function SettingsVoiceScreen() {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  return callback(require("../../../settings/native/renderer/SettingLayout.tsx"), { node });
+  return callback(SettingLayout, { node });
 };

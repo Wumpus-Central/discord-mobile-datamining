@@ -1,3 +1,7 @@
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { set } from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
+import { expandEventProperties } from "../AnalyticsUtils.tsx";
 // discord_app/utils/native/ApplicationUtils.tsx
 import { AnalyticEvents } from "ME";
 import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_5 } from "OAUTH2_AUTHORIZE_MODAL_KEY";
@@ -21,8 +25,8 @@ export const installApplication = function installApplication(arg0) {
     let obj = { application_id: null, auth_type: "custom_url", source: null, device_platform: "mobile_native" };
     obj[0] = applicationId;
     obj[2] = source;
-    require("../AnalyticsUtils.tsx").track(AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, obj);
-    const obj12 = require("../AnalyticsUtils.tsx");
+    expandEventProperties.track(AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, obj);
+    const obj12 = expandEventProperties;
     obj = { href: null, onConfirm: null };
     obj[0] = customInstallUrl;
     obj[1] = function onConfirm() {
@@ -48,7 +52,7 @@ export const installApplication = function installApplication(arg0) {
         }
         return tmp2;
       })) {
-        obj5 = require("../AnalyticsUtils.tsx");
+        obj5 = expandEventProperties;
         let obj1 = { application_id: null, auth_type: "in_app", source: null, device_platform: "mobile_native" };
         obj1[0] = applicationId;
         obj1[2] = source;
@@ -65,10 +69,10 @@ export const installApplication = function installApplication(arg0) {
           }
         };
         obj5 = obj2;
-        require("../../actions/ModalActionCreators.tsx").popWithKey(closure_5);
-        const obj9 = require("../../actions/ModalActionCreators.tsx");
+        ModalActionCreators.popWithKey(closure_5);
+        const obj9 = ModalActionCreators;
         const obj3 = {};
-        const obj10 = require("../../actions/ModalActionCreators.tsx");
+        const obj10 = ModalActionCreators;
         const merged = Object.assign(obj2);
         obj3.dismissOAuthModal = function dismissOAuthModal() {
           const dismissOAuthModal = obj5.dismissOAuthModal;
@@ -84,7 +88,7 @@ export const installApplication = function installApplication(arg0) {
       const obj4 = { application_id: null, auth_type: "in_app", source: null, device_platform: "mobile_native" };
       obj4[0] = applicationId;
       obj4[2] = source;
-      require("../AnalyticsUtils.tsx").track(AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, obj4);
+      expandEventProperties.track(AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, obj4);
       obj5 = { clientId: null, guildId: null, channelId: null, disableGuildSelect: null, scopes: null, permissions: null, callback: null };
       obj5[0] = applicationId;
       obj5[1] = guildId;
@@ -119,7 +123,7 @@ export const installApplication = function installApplication(arg0) {
       tmp32Result.popWithKey(closure_5);
       tmp32Result = tmp32(4490);
       const obj6 = {};
-      const obj16 = require("../AnalyticsUtils.tsx");
+      const obj16 = expandEventProperties;
       const tmp33 = dependencyMap;
       const merged1 = Object.assign(obj5);
       obj6.dismissOAuthModal = function dismissOAuthModal() {
@@ -136,10 +140,10 @@ export const installApplication = function installApplication(arg0) {
 };
 export const openOAuth2Modal = function openOAuth2Modal(arg0) {
   const _require = arg0;
-  let obj = require("../../actions/ModalActionCreators.tsx");
+  let obj = ModalActionCreators;
   obj.popWithKey(closure_5);
   obj = {};
-  const obj2 = require("../../actions/ModalActionCreators.tsx");
+  const obj2 = ModalActionCreators;
   const merged = Object.assign(arg0);
   obj.dismissOAuthModal = function dismissOAuthModal() {
     const dismissOAuthModal = obj5.dismissOAuthModal;
@@ -148,21 +152,21 @@ export const openOAuth2Modal = function openOAuth2Modal(arg0) {
     }
     outer1_1(outer1_3[7]).popWithKey(outer1_5);
   };
-  obj2.pushLazy(_require("../../../_runtime/01959_asyncRequireImpl.js")(10852, dependencyMap.paths), obj, closure_5);
+  obj2.pushLazy(_asyncRequireImpl(10852, dependencyMap.paths), obj, closure_5);
 };
 export const installPrivateChannelIntegration = function installPrivateChannelIntegration(arg0) {
   let applicationId;
   let callback;
   let channelId;
   ({ applicationId, channelId, callback } = arg0);
-  let obj = require("../../actions/ModalActionCreators.tsx");
+  let obj = ModalActionCreators;
   obj = { clientId: applicationId, scopes: null, channelId: null, dismissOAuthModal: null, disableGuildSelect: true, callback: null };
-  const items = [require("../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx") /* set */.OAuth2Scopes.APPLICATIONS_COMMANDS];
+  const items = [set /* set */.OAuth2Scopes.APPLICATIONS_COMMANDS];
   obj[1] = items;
   obj[2] = channelId;
   obj[3] = function dismissOAuthModal() {
     return callback(table[7]).popWithKey(closure_5);
   };
   obj[5] = callback;
-  obj.pushLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(10852, dependencyMap.paths), obj, closure_5);
+  obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(10852, dependencyMap.paths), obj, closure_5);
 };

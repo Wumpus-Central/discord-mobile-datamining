@@ -1,3 +1,4 @@
+import { updateDevToolsSettings } from "../DevToolsActionCreators.tsx";
 // discord_app/modules/devtools/native/useSortedDevToolsScreens.tsx
 import _slicedToArray from "_slicedToArray";
 import initialize from "initialize";
@@ -97,5 +98,5 @@ export const updateSortOrder = function updateSortOrder(closure_0, down) {
     items[index + 1] = items[index];
   }
   tmp2 = getSortedDevToolsScreens()[Symbol.iterator]();
-  const result = require("../DevToolsActionCreators.tsx") /* updateDevToolsSettings */.updateDevToolsSettings({ sortedScreenKeys: items });
+  const result = updateDevToolsSettings /* updateDevToolsSettings */.updateDevToolsSettings({ sortedScreenKeys: items });
 };

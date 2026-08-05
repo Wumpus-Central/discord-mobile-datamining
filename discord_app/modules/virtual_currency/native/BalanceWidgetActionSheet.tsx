@@ -1,3 +1,5 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/virtual_currency/native/BalanceWidgetActionSheet.tsx
 import preload from "preload";
 import get_ActivityIndicator from "ManaContext";
@@ -19,31 +21,31 @@ const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles((color) => {
   let obj = { actions: null, balanceHeader: null, balanceText: null, content: null, header: null, infoIconBackground: null, infoIconContainer: null, promotionalBackground: null, promotionalBackgroundContainer: null, promotionalBannerAsset: null, promotionalBannerContainer: null, promotionalBannerText: null };
-  obj = { flex: 1, flexDirection: "column", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, minWidth: "100%", paddingTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
+  obj = { flex: 1, flexDirection: "column", gap: Themes.space.PX_12, minWidth: "100%", paddingTop: Themes.space.PX_12, paddingHorizontal: Themes.space.PX_16 };
   obj[0] = obj;
-  obj = { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, flexWrap: "wrap" };
+  obj = { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: Themes.space.PX_8, flexWrap: "wrap" };
   obj[1] = obj;
   const obj1 = { color, fontSize: 36, lineHeight: null, textAlignVertical: "center" };
-  let obj4 = require("../../../utils/PlatformUtils.tsx") /* set */;
+  let obj4 = set /* set */;
   let num = 44;
   if (obj4.isAndroid()) {
     num = 36;
   }
   obj1[2] = num;
   obj[2] = obj1;
-  obj[3] = { width: "100%", height: "100%", alignItems: "center", flex: 1, marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
-  const obj2 = { width: "100%", height: "100%", alignItems: "center", flex: 1, marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
-  obj[4] = { width: "100%", paddingTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, paddingBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, alignItems: "center", position: "relative", flexDirection: "column" };
+  obj[3] = { width: "100%", height: "100%", alignItems: "center", flex: 1, marginBottom: Themes.space.PX_16 };
+  const obj2 = { width: "100%", height: "100%", alignItems: "center", flex: 1, marginBottom: Themes.space.PX_16 };
+  obj[4] = { width: "100%", paddingTop: Themes.space.PX_12, paddingBottom: Themes.space.PX_16, alignItems: "center", position: "relative", flexDirection: "column" };
   obj4 = { width: 32, height: 32, backgroundColor: tmp(712).colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: tmp(712).radii.round, justifyContent: "center", alignItems: "center" };
   obj[5] = obj4;
-  const obj3 = { width: "100%", paddingTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, paddingBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, alignItems: "center", position: "relative", flexDirection: "column" };
-  obj[6] = { position: "absolute", left: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, top: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, zIndex: 10 };
-  const obj5 = { position: "absolute", left: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, top: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, zIndex: 10 };
-  obj[7] = { position: "absolute", top: 0, left: 0, right: 0, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xl, bottom: -100 };
+  const obj3 = { width: "100%", paddingTop: Themes.space.PX_12, paddingBottom: Themes.space.PX_16, alignItems: "center", position: "relative", flexDirection: "column" };
+  obj[6] = { position: "absolute", left: Themes.space.PX_16, top: Themes.space.PX_16, zIndex: 10 };
+  const obj5 = { position: "absolute", left: Themes.space.PX_16, top: Themes.space.PX_16, zIndex: 10 };
+  obj[7] = { position: "absolute", top: 0, left: 0, right: 0, borderRadius: Themes.radii.xl, bottom: -100 };
   obj[8] = { flex: 1, height: 428 };
   obj[9] = { width: "100%", height: "100%" };
-  const obj6 = { position: "absolute", top: 0, left: 0, right: 0, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xl, bottom: -100 };
-  obj[10] = { width: "100%", height: 144, gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_64 };
+  const obj6 = { position: "absolute", top: 0, left: 0, right: 0, borderRadius: Themes.radii.xl, bottom: -100 };
+  obj[10] = { width: "100%", height: 144, gap: Themes.space.PX_12, marginBottom: Themes.space.PX_64 };
   obj[11] = { color, fontFamily: constants.PRIMARY_BOLD, fontWeight: "600", fontSize: 16, lineHeight: 20, textAlign: "center" };
   return obj;
 });

@@ -1,3 +1,6 @@
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { BillingFlows.android } from "../../../billing/native/smoke/BillingFlows.android.tsx";
+import { NativePaymentContextProvider } from "../../../payments/native/NativePaymentContext.tsx";
 // discord_app/modules/user_settings/billing/native/RevenueSmokeTestModal.tsx
 import { jsx } from "jsxProd";
 import createNativeStackNavigator from "createNativeStackNavigator";
@@ -8,7 +11,7 @@ createNativeStackNavigator = createNativeStackNavigator.createNativeStackNavigat
 const memoResult = require("noop").memo(function RevenueSmokeTestModal() {
   let Navigator;
   let Screen;
-  let obj = _require("../../../../design/components/Navigator/native/Navigator.native.tsx");
+  let obj = _NavigationStack;
   _require = obj.useAccessibilityNativeStackOptions();
   obj = { skuIDs: [], activeSubscription: null, children: null };
   obj = {
@@ -37,7 +40,7 @@ const memoResult = require("noop").memo(function RevenueSmokeTestModal() {
     component: null
   };
   ({ Navigator, Screen } = createNativeStackNavigator);
-  obj1[2] = require("../../../billing/native/smoke/BillingFlows.android.tsx").RunAllFlows;
+  obj1[2] = BillingFlows.android.RunAllFlows;
   obj[1] = <Screen name="RunAllFlows" options={function options() {
     return { title: "Run All Payment Flows" };
   }} component={null} />;
@@ -56,7 +59,7 @@ const memoResult = require("noop").memo(function RevenueSmokeTestModal() {
     let merged1 = Object.assign(outer1_1(outer1_2[6])());
     return obj;
   }}>{null}</Navigator>;
-  return jsx(_require("../../../payments/native/NativePaymentContext.tsx").NativePaymentContextProvider, {
+  return jsx(_NativePaymentContextProvider.NativePaymentContextProvider, {
     screenOptions(navigation) {
       const obj = {
         headerTitle(children) {

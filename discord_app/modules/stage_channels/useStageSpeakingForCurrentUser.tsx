@@ -1,3 +1,6 @@
+import { AgeGatedFeature } from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
+import { useAgeVerificationRunner } from "../age_assurance/AgeVerificationUtils.tsx";
+import { isFeatureAgeGated } from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 // discord_app/modules/stage_channels/useStageSpeakingForCurrentUser.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -8,20 +11,20 @@ const require = arg1;
 const result = require("handleConnectionOpen").fileFinishedImporting("modules/stage_channels/useStageSpeakingForCurrentUser.tsx");
 
 export const useIsStageSpeakingDisabledForCurrentUser = function useIsStageSpeakingDisabledForCurrentUser() {
-  const isVerifiedTeen = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.useIsVerifiedTeen();
-  const obj = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
-  const obj2 = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
-  return require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.useIsFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.STAGE_SPEAKING) && isVerifiedTeen;
+  const isVerifiedTeen = useAgeVerificationRunner /* useAgeVerificationRunner */.useIsVerifiedTeen();
+  const obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
+  const obj2 = isFeatureAgeGated /* isFeatureAgeGated */;
+  return isFeatureAgeGated /* isFeatureAgeGated */.useIsFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.STAGE_SPEAKING) && isVerifiedTeen;
 };
 export const isStageSpeakingDisabledForCurrentUser = function isStageSpeakingDisabledForCurrentUser() {
-  const obj = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
-  const isVerifiedTeenResult = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.isVerifiedTeen();
-  const obj2 = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
-  return require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.STAGE_SPEAKING) && isVerifiedTeenResult;
+  const obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
+  const isVerifiedTeenResult = useAgeVerificationRunner /* useAgeVerificationRunner */.isVerifiedTeen();
+  const obj2 = isFeatureAgeGated /* isFeatureAgeGated */;
+  return isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.STAGE_SPEAKING) && isVerifiedTeenResult;
 };
 export const shouldAgeVerifyToSpeakForCurrentUser = function shouldAgeVerifyToSpeakForCurrentUser(id) {
   let channelId = id;
-  const obj = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
+  const obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
   if (null == id) {
     channelId = store.getChannelId();
   }
@@ -33,9 +36,9 @@ export const shouldAgeVerifyToSpeakForCurrentUser = function shouldAgeVerifyToSp
   if (canResult) {
     canResult = getUncachedChannelPermissions.can(Permissions.REQUEST_TO_SPEAK, channel);
   }
-  const isVerifiedAdultResult = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.isVerifiedAdult();
-  const tmp2Result = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
-  return require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.STAGE_SPEAKING) && !isVerifiedAdultResult && canResult;
+  const isVerifiedAdultResult = useAgeVerificationRunner /* useAgeVerificationRunner */.isVerifiedAdult();
+  const tmp2Result = isFeatureAgeGated /* isFeatureAgeGated */;
+  return isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.STAGE_SPEAKING) && !isVerifiedAdultResult && canResult;
 };
 export const useShouldAgeVerifyToSpeakForCurrentUser = function useShouldAgeVerifyToSpeakForCurrentUser(id) {
   let channelId = id;
@@ -86,8 +89,8 @@ export const useShouldShowAgeVerificationPopover = function useShouldShowAgeVeri
   return channelId(3964).useIsFeatureAgeGated(channelId(5108).AgeGatedFeature.STAGE_SPEAKING) && !isAgeVerified && stateFromStores;
 };
 export const useShouldShowAgeVerificationForEvent = function useShouldShowAgeVerificationForEvent() {
-  const isVerifiedAdult = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.useIsVerifiedAdult();
-  const obj = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
-  const obj2 = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
-  return require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.useIsFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.STAGE_SPEAKING) && !isVerifiedAdult;
+  const isVerifiedAdult = useAgeVerificationRunner /* useAgeVerificationRunner */.useIsVerifiedAdult();
+  const obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
+  const obj2 = isFeatureAgeGated /* isFeatureAgeGated */;
+  return isFeatureAgeGated /* isFeatureAgeGated */.useIsFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.STAGE_SPEAKING) && !isVerifiedAdult;
 };

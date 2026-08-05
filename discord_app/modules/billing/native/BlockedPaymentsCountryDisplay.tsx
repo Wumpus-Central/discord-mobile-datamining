@@ -1,3 +1,7 @@
+import { Button } from "../../../design/void/native.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { combined } from "../../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/billing/native/BlockedPaymentsCountryDisplay.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -23,21 +27,21 @@ export default function BlockedPaymentsCountryDisplay() {
   const tmp = createCacheKey();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.header, children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.vwMEHS);
-  const items = [callback(require("../../../design/void/native.tsx") /* Button */.LegacyText, obj), , ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.vwMEHS);
+  const items = [callback(Button /* Button */.LegacyText, obj), , ];
   obj = { children: null };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
   const obj1 = { helpdeskArticle: null };
-  const tmp4 = require("../../../hooks/useTheme.tsx")();
+  const tmp4 = useTheme();
   const tmp5 = closure_7;
   const tmp6 = closure_3;
   const tmp7 = callback;
-  obj1[0] = require("../../../utils/HelpdeskUtils.tsx").getArticleURL(HelpdeskArticles.BLOCKED_PAYMENTS);
-  obj[0] = intl2.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.IHxEJU, obj1);
-  items[1] = callback(require("../../../design/void/native.tsx") /* Button */.LegacyText, obj);
+  obj1[0] = combined.getArticleURL(HelpdeskArticles.BLOCKED_PAYMENTS);
+  obj[0] = intl2.format(getSystemLocale /* getSystemLocale */.t.IHxEJU, obj1);
+  items[1] = callback(Button /* Button */.LegacyText, obj);
   const obj2 = { style: tmp.image, source: null };
-  const obj5 = require("../../../utils/HelpdeskUtils.tsx");
+  const obj5 = combined;
   const tmp8 = closure_4;
   if (obj7.isThemeDark(tmp4)) {
     let tmp2Result = tmp2(7327);

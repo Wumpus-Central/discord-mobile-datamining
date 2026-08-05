@@ -1,3 +1,4 @@
+import { SearchableUserList } from "../../../main_tabs_v2/native/shared_components/user_list/SearchableUserList.tsx";
 // discord_app/modules/checkout/native/gifting/UnifiedGiftModalRecipientSelectScreen.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -17,7 +18,7 @@ export default function UnifiedGiftModalRecipientSelectScreen(setRecipientUser) 
   let importDefault;
   let obj = setRecipientUser(1480);
   importDefault = obj.useNavigation();
-  obj = { style: createCacheKey().container, children: jsx(require("../../../main_tabs_v2/native/shared_components/user_list/SearchableUserList.tsx"), obj) };
+  obj = { style: createCacheKey().container, children: jsx(SearchableUserList, obj) };
   obj = {
     onSelectUser(user) {
       setRecipientUser(user);

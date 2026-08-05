@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/home_drawer/native/isHomeDrawerChannelMuted.tsx
 import storeThread from "storeThread";
 import { isThread } from "createChannelRecord";
@@ -8,7 +9,7 @@ let result = require("updateUserGuildSettingsInternal").fileFinishedImporting("m
 
 export const useIsHomeDrawerChannelMuted = function useIsHomeDrawerChannelMuted() {
   const items = [storeThread, updateUserGuildSettingsInternal];
-  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => (type) => {
+  return initialize /* initialize */.useStateFromStores(items, () => (type) => {
     const tmp = callback(type.type);
     if (tmp) {
       if (muted.isMuted(type.id)) {
@@ -21,5 +22,5 @@ export const useIsHomeDrawerChannelMuted = function useIsHomeDrawerChannelMuted(
       result = guildOrCategoryOrChannelMuted.isGuildOrCategoryOrChannelMuted(type.guild_id, tmp3);
     }
     return result;
-  }, [], require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.statesWillNeverBeEqual);
+  }, [], initialize /* initialize */.statesWillNeverBeEqual);
 };

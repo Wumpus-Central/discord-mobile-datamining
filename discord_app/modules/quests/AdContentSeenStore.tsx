@@ -1,3 +1,5 @@
+import { AdCreativeType } from "../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
+import { getQuestDeliveryDataForPlacement } from "utils/QuestDataUtils.tsx";
 // discord_app/modules/quests/AdContentSeenStore.tsx
 import _slicedToArray from "_slicedToArray";
 import initializeState from "initializeState";
@@ -18,7 +20,7 @@ function syncWithQuestStore() {
   let tmp5;
   let tmp7;
   const quests = lastFetchedQuestHomeHero.quests;
-  const obj = getOrCreateSet(require("../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx") /* AdCreativeType */.AdCreativeType.QUEST);
+  const obj = getOrCreateSet(AdCreativeType /* AdCreativeType */.AdCreativeType.QUEST);
   let flag = false;
   while (tmp !== undefined) {
     let tmp3 = callback;
@@ -29,7 +31,7 @@ function syncWithQuestStore() {
     if (!hasItem) {
       let tmp9 = require;
       let tmp10 = dependencyMap;
-      let obj2 = require("utils/QuestDataUtils.tsx") /* getQuestDeliveryDataForPlacement */;
+      let obj2 = getQuestDeliveryDataForPlacement /* getQuestDeliveryDataForPlacement */;
       let tmp11 = tmp7;
       hasItem = obj2.isQuestExpired(tmp7);
     }
@@ -73,7 +75,7 @@ function syncWithQuestStore() {
         if (!isQuestExpiredResult) {
           let tmp28 = require;
           let tmp29 = dependencyMap;
-          let obj3 = require("utils/QuestDataUtils.tsx") /* getQuestDeliveryDataForPlacement */;
+          let obj3 = getQuestDeliveryDataForPlacement /* getQuestDeliveryDataForPlacement */;
           let tmp30 = value;
           isQuestExpiredResult = obj3.isQuestExpired(tmp26);
         }
@@ -86,7 +88,7 @@ function syncWithQuestStore() {
       }
     }
   }
-  const obj4 = getOrCreateSet(require("../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx") /* AdCreativeType */.AdCreativeType.QUEST_HOME_HERO);
+  const obj4 = getOrCreateSet(AdCreativeType /* AdCreativeType */.AdCreativeType.QUEST_HOME_HERO);
   if (null != lastFetchedQuestHomeHero.getLastFetchedQuestHomeHero()) {
     if (obj4.size > 0) {
       const questHomeHero = lastFetchedQuestHomeHero.getQuestHomeHero();

@@ -1,26 +1,27 @@
+import { getNextPositionFromChannels } from "FavoritesActionCreators.tsx";
 // discord_app/modules/favorites/FavoriteManager.tsx
 import "initialize";
 
 const require = arg1;
 function handleChannelDelete(channel) {
-  const result = require("FavoritesActionCreators.tsx") /* getNextPositionFromChannels */.removeFavoriteChannel(channel.channel.id, { trackAnalytics: false });
+  const result = getNextPositionFromChannels /* getNextPositionFromChannels */.removeFavoriteChannel(channel.channel.id, { trackAnalytics: false });
 }
 function handleCategoryCollapse(id) {
-  const result = require("FavoritesActionCreators.tsx") /* getNextPositionFromChannels */.setFavoriteCategoryCollapsed(id.id, true);
+  const result = getNextPositionFromChannels /* getNextPositionFromChannels */.setFavoriteCategoryCollapsed(id.id, true);
 }
 function handleCategoryExpand(id) {
-  const result = require("FavoritesActionCreators.tsx") /* getNextPositionFromChannels */.setFavoriteCategoryCollapsed(id.id, false);
+  const result = getNextPositionFromChannels /* getNextPositionFromChannels */.setFavoriteCategoryCollapsed(id.id, false);
 }
 function handleCategoryCollapseAll(guildId) {
   if (obj.isFavoritesGuildId(guildId.guildId)) {
-    const result = require("FavoritesActionCreators.tsx") /* getNextPositionFromChannels */.setAllFavoriteCategoriesCollapsed(true);
-    const tmpResult = require("FavoritesActionCreators.tsx") /* getNextPositionFromChannels */;
+    const result = getNextPositionFromChannels /* getNextPositionFromChannels */.setAllFavoriteCategoriesCollapsed(true);
+    const tmpResult = getNextPositionFromChannels /* getNextPositionFromChannels */;
   }
 }
 function handleCategoryExpandAll(guildId) {
   if (obj.isFavoritesGuildId(guildId.guildId)) {
-    const result = require("FavoritesActionCreators.tsx") /* getNextPositionFromChannels */.setAllFavoriteCategoriesCollapsed(false);
-    const tmpResult = require("FavoritesActionCreators.tsx") /* getNextPositionFromChannels */;
+    const result = getNextPositionFromChannels /* getNextPositionFromChannels */.setAllFavoriteCategoriesCollapsed(false);
+    const tmpResult = getNextPositionFromChannels /* getNextPositionFromChannels */;
   }
 }
 let prototype = function FavoriteManager() {

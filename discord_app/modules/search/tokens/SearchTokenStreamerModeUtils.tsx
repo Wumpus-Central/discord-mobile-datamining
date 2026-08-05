@@ -1,3 +1,4 @@
+import { SearchTokenTypes } from "../SearchUtils.tsx";
 // discord_app/modules/search/tokens/SearchTokenStreamerModeUtils.tsx
 import initialize from "initialize";
 import ME from "ME";
@@ -19,7 +20,7 @@ function getValidOrderedFilterTokens(closure_0, items) {
   }
   const items2 = [tmp];
   [tmp5] = items2;
-  let result = require("../SearchUtils.tsx") /* SearchTokenTypes */.isGuildLikeSearchContext(closure_0);
+  let result = SearchTokenTypes /* SearchTokenTypes */.isGuildLikeSearchContext(closure_0);
   if (!result) {
     result = closure_0.type === constants2.DMS && !tmp5.hidePersonalInformation;
     const tmp8 = closure_0.type === constants2.DMS && !tmp5.hidePersonalInformation;
@@ -70,7 +71,7 @@ export const isInChannelFilterSupported = function isInChannelFilterSupported(se
     tmp = items;
   }
   [tmp3] = tmp;
-  let result = require("../SearchUtils.tsx") /* SearchTokenTypes */.isGuildLikeSearchContext(selectedSearchContext);
+  let result = SearchTokenTypes /* SearchTokenTypes */.isGuildLikeSearchContext(selectedSearchContext);
   if (!result) {
     result = selectedSearchContext.type === constants2.DMS && !tmp3.hidePersonalInformation;
     const tmp6 = selectedSearchContext.type === constants2.DMS && !tmp3.hidePersonalInformation;

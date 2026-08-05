@@ -1,3 +1,5 @@
+import { frozen } from "../../../../components_native/QRCode.tsx";
+import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
 // discord_app/modules/instant_invite/native/components/InstantInviteQRCodeActionSheet.tsx
 import noop from "noop";
 import { View } from "set";
@@ -65,8 +67,8 @@ export default function InstantInviteQRCodeActionSheet(location) {
         const obj2 = { guild: null, size: null };
         obj2[0] = obj7.getGuild(channel2.guild_id);
         obj2[1] = tmp6(5661).GuildIconSizes.LARGE;
-        tmp13 = callback(require("../../../guild/native/GuildIcon.tsx"), obj2);
-        const tmp16 = require("../../../guild/native/GuildIcon.tsx");
+        tmp13 = callback(GuildIconSizes, obj2);
+        const tmp16 = GuildIconSizes;
       }
     }
     presentFriendRequestAcceptedToast = tmp6(3985).presentFriendRequestAcceptedToast;
@@ -97,7 +99,7 @@ export default function InstantInviteQRCodeActionSheet(location) {
       plainText = tmp12.plainText;
     }
     obj6[3] = plainText;
-    const items2 = [callback(require("../../../../components_native/QRCode.tsx"), obj6), ];
+    const items2 = [callback(frozen, obj6), ];
     let tmp19Result = null != tmp13;
     if (tmp19Result) {
       obj7 = { style: null, children: null };

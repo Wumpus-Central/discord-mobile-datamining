@@ -1,3 +1,8 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { RootThemeContextProvider } from "../../../../design/components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import { JoinStageView } from "JoinStageView.tsx";
+import { AgeVerificationSpeakerActionSheet } from "StageActionBarButtons.tsx";
 // discord_app/modules/stage_channels/native/components/StageChannelCallNavigator.tsx
 import set from "set";
 import ManaContext from "ManaContext";
@@ -101,21 +106,21 @@ function JoinStageOverlay(channel) {
   obj = { style: null, children: null };
   const items = [closure_5.absoluteFill, , ];
   const obj1 = { backgroundColor: null };
-  obj1[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_800;
+  obj1[0] = Themes.unsafe_rawColors.PRIMARY_800;
   items[1] = obj1;
   items[2] = animatedStyle;
   obj[0] = items;
-  obj[1] = callback2(require("JoinStageView.tsx"), { channel: channel.channel });
-  return callback2(require("../../../reanimated/ReanimatedRexport.tsx").View, obj);
+  obj[1] = callback2(JoinStageView, { channel: channel.channel });
+  return callback2(ReanimatedRexport.View, obj);
 }
 function StagePromptWrapper(channel) {
   const obj = { children: null };
   obj[0] = callback2(StagePromptInner, { channel: channel.channel });
-  return callback2(require("../../../../design/components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx") /* RootThemeContextProvider */.DisableCustomTheme, obj);
+  return callback2(RootThemeContextProvider /* RootThemeContextProvider */.DisableCustomTheme, obj);
 }
 function StagePromptInner(channel) {
   const tmp = createCacheKey();
-  return callback2(require("StageActionBarButtons.tsx") /* AgeVerificationSpeakerActionSheet */.AnimatedStartStagePrompt, { channel: channel.channel, style: createCacheKey().startStagePrompt });
+  return callback2(AgeVerificationSpeakerActionSheet /* AgeVerificationSpeakerActionSheet */.AnimatedStartStagePrompt, { channel: channel.channel, style: createCacheKey().startStagePrompt });
 }
 ({ StyleSheet: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: metroImportAll, jsxs: c9, Fragment: c10 } = jsxProd);

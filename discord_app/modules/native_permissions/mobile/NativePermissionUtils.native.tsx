@@ -1,3 +1,7 @@
+import { useAlertStore } from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { timestamp } from "../../debug/Logger.tsx";
+import { openPrivacySettings } from "openPrivacySettings.native.tsx";
 // discord_app/modules/native_permissions/mobile/NativePermissionUtils.native.tsx
 import closure_3 from "set";
 import noop from "noop";
@@ -196,7 +200,7 @@ prototype["hasPermissionCore"] = function hasPermissionCore(arg0, arg1) {
 };
 prototype["performRequest"] = function performRequest(hasPermissionLookup, arg1, arg2) {
   if (null == hasPermissionLookup[arg1]) {
-    const obj = new require("../../debug/Logger.tsx")("NativePermissionUtils");
+    const obj = new timestamp("NativePermissionUtils");
     const _HermesInternal = HermesInternal;
     obj.error("Unable to locate permission type " + arg1);
     let resolved = Promise.resolve(false);
@@ -211,16 +215,16 @@ prototype["didHavePermission"] = function didHavePermission(arg0) {
   return storage.hasPermission(arg0);
 };
 prototype["openSettings"] = function openSettings() {
-  require("openPrivacySettings.native.tsx")();
+  openPrivacySettings();
 };
 prototype["openAlertModal"] = function openAlertModal(arg0) {
   let body;
   let onConfirm;
   ({ body, onConfirm } = arg0);
-  let obj = require("../../../design/components/AlertModal/native/useAlertStore.native.tsx") /* useAlertStore */;
+  let obj = useAlertStore /* useAlertStore */;
   obj = { title: null, body: null, onConfirm: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.sMFVrS);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.sMFVrS);
   obj[1] = body;
   obj[2] = onConfirm;
   obj.openAlert("permission-denied", jsx(React.lazy(() => callback(paths[11])(paths[10], paths.paths)), { title: null, body: null, onConfirm: null }));

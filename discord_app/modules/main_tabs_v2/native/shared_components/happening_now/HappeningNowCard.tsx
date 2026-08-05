@@ -1,3 +1,8 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { PressableCard } from "../../../../../design/components/Card/native/Card.native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { useIsWindowLarge } from "../../../../screen/native/useIsWindowLarge.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCard.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -73,17 +78,17 @@ let closure_21 = createCacheKey.createStyles((arg0, arg1, arg2, arg3) => {
   const obj5 = { display: "flex", alignItems: "center", justifyContent: "center", width: HAPPENING_NOW_BADGE_SIZE, height: HAPPENING_NOW_BADGE_SIZE, backgroundColor: null, borderTopRightRadius: null, borderBottomLeftRadius: null };
   let prop;
   if (!arg3) {
-    prop = require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_SUBTLE;
+    prop = Themes.colors.BACKGROUND_MOD_SUBTLE;
   }
   obj5[5] = prop;
   let diff2;
   if (!arg3) {
-    diff2 = require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg - 1;
+    diff2 = Themes.radii.lg - 1;
   }
   obj5[6] = diff2;
   let md;
   if (!arg3) {
-    md = require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.md;
+    md = Themes.radii.md;
   }
   obj5[7] = md;
   obj3[2] = obj5;
@@ -98,15 +103,15 @@ export default function HappeningNowCard(IconComponent) {
   let accessibilityLabel;
   let panelVariant;
   let width;
-  const tmp4 = require("../../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("HappeningNowCard");
+  const tmp4 = useIsMobileVisualRefreshExperimentEnabled("HappeningNowCard");
   ({ width, panelVariant } = IconComponent);
   if (panelVariant == null) {
     panelVariant = false;
   }
-  const tmp5Result = closure_21(width, panelVariant, require("../../../../screen/native/useIsWindowLarge.tsx")(), tmp4);
+  const tmp5Result = closure_21(width, panelVariant, useIsWindowLarge(), tmp4);
   IconComponent = IconComponent.IconComponent;
   const tmp = importDefault;
-  const tmp3 = require("../../../../screen/native/useIsWindowLarge.tsx")();
+  const tmp3 = useIsWindowLarge();
   const tmp5 = closure_21;
   ({ accessibilityLabel, accessibilityHint } = IconComponent);
   let obj = { variant: "secondary", style: items, onPress: IconComponent.onPress, border: "faint", shadow: null, onLongPress: null, disabled: null, accessibilityLabel: null, accessibilityHint: null, children: null };
@@ -144,7 +149,7 @@ export default function HappeningNowCard(IconComponent) {
   }
   items1[1] = tmp10Result;
   obj[9] = items1;
-  return closure_19(require("../../../../../design/components/Card/native/Card.native.tsx") /* PressableCard */.Card, obj);
+  return closure_19(PressableCard /* PressableCard */.Card, obj);
 };
 export const HappeningNowCardHeader = function HappeningNowCardHeader(displayNameFont) {
   let children;
@@ -173,12 +178,12 @@ export const HappeningNowCardHeader = function HappeningNowCardHeader(displayNam
   obj[4] = items;
   const merged1 = Object.assign(merged);
   obj.children = children;
-  return closure_18(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  return closure_18(Text /* Text */.Text, obj);
 };
 export const HappeningNowCardSubtitle = function HappeningNowCardSubtitle(variant) {
   variant = variant.variant;
   const merged = Object.assign(variant, Object.create(null));
-  const tmp2 = require("../../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("HappeningNowCardSubtitle");
+  const tmp2 = useIsMobileVisualRefreshExperimentEnabled("HappeningNowCardSubtitle");
   if (variant == null) {
     let str = "text-xs/medium";
     if (tmp2) {
@@ -194,5 +199,5 @@ export const HappeningNowCardSubtitle = function HappeningNowCardSubtitle(varian
   obj[1] = str2;
   const merged1 = Object.assign(merged);
   obj.children = variant.children;
-  return closure_18(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  return closure_18(Text /* Text */.Text, obj);
 };

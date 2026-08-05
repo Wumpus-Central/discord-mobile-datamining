@@ -1,3 +1,4 @@
+import { set } from "DismissibleContentFatigueConfig.tsx";
 // discord_app/modules/dismissible_content/useSelectedDismissibleContentShared.tsx
 import noop from "noop";
 import set from "set";
@@ -16,7 +17,7 @@ export const useSelectedDismissibleContentShared = function useSelectedDismissib
   let c3;
   let tmp = null != arg0 && !flag;
   if (tmp) {
-    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = _require("DismissibleContentFatigueConfig.tsx").CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = _set.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
     tmp = !CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(arg0);
   }
   c3 = tmp;

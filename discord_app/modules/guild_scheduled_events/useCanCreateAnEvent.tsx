@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_scheduled_events/useCanCreateAnEvent.tsx
 import _slicedToArray from "_slicedToArray";
 import comparator from "comparator";
@@ -14,7 +15,7 @@ export default function useCanCreateAnEvent(arg0, arg1) {
   const dependencyMap = arg1;
   const items = [createGuildRecordFromRust, comparator, getUncachedChannelPermissions];
   const items1 = [arg0, arg1];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const guild = outer1_5.getGuild(callback);
     if (!outer1_6.can(outer1_7.ADMINISTRATOR, guild)) {
       if (!outer1_6.can(outer1_7.CREATE_EVENTS, guild)) {

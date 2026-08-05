@@ -1,3 +1,4 @@
+import { t } from "../../../_runtime/03984_t.js";
 // discord_app/modules/markup/MarkupSubtextRule.tsx
 const re2 = /\n$/;
 const re3 = /^ *-# +((?!(-#)+)[^\n]+?) *(?:\n|$)/;
@@ -11,11 +12,11 @@ let obj = {
       }
       return tmp2;
     }
-    tmp2 = require("../../../_runtime/03984_t.js") /* t */.anyScopeRegex(closure_3)(arg0, arg1, str);
+    tmp2 = t /* t */.anyScopeRegex(closure_3)(arg0, arg1, str);
   },
   parse(arg0, arg1, inline) {
     const obj = { content: null };
-    obj[0] = require("../../../_runtime/03984_t.js") /* t */.parseInline(arg1, arg0[1].trim(), inline);
+    obj[0] = t /* t */.parseInline(arg1, arg0[1].trim(), inline);
     return obj;
   }
 };

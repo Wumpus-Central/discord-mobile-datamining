@@ -1,3 +1,5 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
 // discord_app/modules/guilds_bar/native/GuildsBarSeparator.tsx
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -26,14 +28,14 @@ function GuildsBarHomeDrawerSeparator(guildItemSize) {
 }
 let closure_4 = createCacheKey.createStyles((maxWidth) => {
   let obj = { separator: null };
-  obj = { height: 1, maxWidth, marginTop: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GUILD_BAR_ITEM_MARGIN, marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GUILD_BAR_ITEM_MARGIN, marginLeft: 12, marginRight: 12, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE };
+  obj = { height: 1, maxWidth, marginTop: Themes.modules.mobile.GUILD_BAR_ITEM_MARGIN, marginBottom: Themes.modules.mobile.GUILD_BAR_ITEM_MARGIN, marginLeft: 12, marginRight: 12, backgroundColor: Themes.colors.BORDER_SUBTLE };
   obj[0] = obj;
   return obj;
 });
 let closure_5 = { code: "function GuildsBarSeparatorTsx1(){const{withSpring,guildItemSize,panelX,HOME_DRAWER_FLING_PHYSICS}=this.__closure;return{maxWidth:withSpring(Math.max(guildItemSize,panelX.get()+guildItemSize),HOME_DRAWER_FLING_PHYSICS)};}" };
 const memoResult = require("noop").memo(function GuildsBarSeparator() {
-  let obj = require("../../../design/tokens/native/useToken.tsx") /* map */;
-  const token = obj.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GUILD_BAR_ITEM_SIZE);
+  let obj = map /* map */;
+  const token = obj.useToken(Themes.modules.mobile.GUILD_BAR_ITEM_SIZE);
   const tmp2 = importDefault;
   const tmp4 = callback(token);
   if (obj2.useIsHomeDrawerEnabled()) {

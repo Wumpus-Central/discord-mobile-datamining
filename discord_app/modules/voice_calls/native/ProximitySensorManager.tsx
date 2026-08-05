@@ -1,3 +1,5 @@
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { RouteTypes } from "../VoiceCallTypes.tsx";
 // discord_app/modules/voice_calls/native/ProximitySensorManager.tsx
 import participantFromServer from "participantFromServer";
 import reset from "reset";
@@ -12,9 +14,9 @@ function handleChange() {
   currentRouteType = currentRouteType.getCurrentRouteType();
   const tmp3 = null != currentEmbeddedActivity.getCurrentEmbeddedActivity();
   const isConnectedResult = connected.isConnected();
-  let tmp8 = currentRouteType === require("../VoiceCallTypes.tsx") /* RouteTypes */.RouteTypes.RECEIVER && isConnectedResult;
+  let tmp8 = currentRouteType === RouteTypes /* RouteTypes */.RouteTypes.RECEIVER && isConnectedResult;
   if (tmp8) {
-    let isIOSResult = require("../../../utils/PlatformUtils.tsx") /* set */.isIOS();
+    let isIOSResult = set /* set */.isIOS();
     if (!isIOSResult) {
       let tmp10 = !tmp3;
       if (!tmp3) {
@@ -23,7 +25,7 @@ function handleChange() {
       isIOSResult = tmp10;
     }
     tmp8 = isIOSResult;
-    const tmp6Result = require("../../../utils/PlatformUtils.tsx") /* set */;
+    const tmp6Result = set /* set */;
   }
   const result = ProximitySensorManager.setProximityMonitoringEnabled(tmp8);
 }

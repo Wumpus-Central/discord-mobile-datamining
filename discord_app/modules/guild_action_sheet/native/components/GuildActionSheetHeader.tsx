@@ -1,3 +1,5 @@
+import { registerAsset } from "../../../../../_runtime/09182_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/09185_registerAsset.js";
 // discord_app/modules/guild_action_sheet/native/components/GuildActionSheetHeader.tsx
 import useIsWindowLarge from "useIsWindowLarge";
 import get_ActivityIndicator from "Button";
@@ -20,12 +22,12 @@ function CommunityPill(guildVisibility) {
   const tmp = createCacheKey();
   const intl = GlobeEarthIcon(1236).intl;
   importDefault = intl.string(GlobeEarthIcon(1236).t.TME4LJ);
-  let tmp4Result = require("../../../../../_runtime/09182_registerAsset.js");
+  let tmp4Result = registerAsset;
   if (guildVisibility.guildVisibility === GlobeEarthIcon(9178).GuildVisibility.PUBLIC) {
     const intl2 = tmp2(1236).intl;
     importDefault = intl2.string(tmp2(1236).t.op2cJ6);
     GlobeEarthIcon = tmp2(10450).GlobeEarthIcon;
-    tmp4Result = require("../../../../../_runtime/09185_registerAsset.js");
+    tmp4Result = registerAsset;
   }
   let obj = {
     style: tmp.communityPill,

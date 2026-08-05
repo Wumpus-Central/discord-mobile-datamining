@@ -1,3 +1,9 @@
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { ApplicationIntegrationType } from "../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
+import { commandPermissions } from "../guild_settings/integrations/permission/IntegrationPermissionUtils.tsx";
+import { ApplicationCommandSectionType } from "ApplicationCommandTypes.tsx";
+import { buildCommand } from "ApplicationCommandUtils.tsx";
+import { computePermissions } from "CommandPermissionContext.tsx";
 // discord_app/modules/application_commands/CommandPermissionUtils.tsx
 import { ChannelRecordBase } from "createChannelRecord";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -9,7 +15,7 @@ function computeAllowedForUser(permissions, guild_id, userId, roleIds, isImperso
     return null;
   } else {
     if (!isImpersonating) {
-      const obj = require("../guild_settings/integrations/permission/IntegrationPermissionUtils.tsx") /* commandPermissions */;
+      const obj = commandPermissions /* commandPermissions */;
       const tmp4 = permissions[obj.toPermissionKey(obj, userId, require(undefined, 6891) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.USER)];
       if (null != tmp4) {
         return tmp4.permission;
@@ -20,7 +26,7 @@ function computeAllowedForUser(permissions, guild_id, userId, roleIds, isImperso
     while (obj2 !== undefined) {
       let tmp10 = require;
       let tmp11 = dependencyMap;
-      let obj3 = require("../guild_settings/integrations/permission/IntegrationPermissionUtils.tsx") /* commandPermissions */;
+      let obj3 = commandPermissions /* commandPermissions */;
       let tmp12 = permissions[obj3.toPermissionKey(obj3, tmp8, require(undefined, 6891) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.ROLE)];
       if (null != tmp12) {
         let tmp14 = tmp12;
@@ -39,7 +45,7 @@ function computeAllowedForUser(permissions, guild_id, userId, roleIds, isImperso
     } else {
       let tmp17 = null;
       if (null != guild_id) {
-        const obj4 = require("../guild_settings/integrations/permission/IntegrationPermissionUtils.tsx") /* commandPermissions */;
+        const obj4 = commandPermissions /* commandPermissions */;
         tmp17 = permissions[obj4.toPermissionKey(obj4, guild_id, require(undefined, 6891) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.ROLE)];
       }
       let permission = null;
@@ -79,7 +85,7 @@ export const hasAccess = function hasAccess(type, arg1, applicationAllowedForCha
       }
     }
     if (null != context) {
-      obj = require("CommandPermissionContext.tsx") /* computePermissions */;
+      obj = computePermissions /* computePermissions */;
       const commandContextType = obj.computeCommandContextType(context, commandBotId);
     }
     if (null != type.contexts) {
@@ -89,7 +95,7 @@ export const hasAccess = function hasAccess(type, arg1, applicationAllowedForCha
           return obj.CONTEXT_NOT_ALLOWED;
         }
       }
-    } else if (type.inputType === require("ApplicationCommandTypes.tsx") /* ApplicationCommandSectionType */.ApplicationCommandInputType.BOT) {
+    } else if (type.inputType === ApplicationCommandSectionType /* ApplicationCommandSectionType */.ApplicationCommandInputType.BOT) {
       if (false === type.dmPermission) {
         if (commandContextType === tmp51(1906).InteractionContextType.BOT_DM) {
           return obj.CONTEXT_NOT_ALLOWED;
@@ -114,8 +120,8 @@ export const hasAccess = function hasAccess(type, arg1, applicationAllowedForCha
     } else {
       let contextGuildId;
       if (null != context) {
-        contextGuildId = require("CommandPermissionContext.tsx") /* computePermissions */.getContextGuildId(context);
-        const obj3 = require("CommandPermissionContext.tsx") /* computePermissions */;
+        contextGuildId = computePermissions /* computePermissions */.getContextGuildId(context);
+        const obj3 = computePermissions /* computePermissions */;
       }
       if (null == contextGuildId) {
         return obj.ALLOWED;
@@ -127,7 +133,7 @@ export const hasAccess = function hasAccess(type, arg1, applicationAllowedForCha
             const integration_types = type.integration_types;
             let hasItem;
             if (integration_types != null) {
-              hasItem = integration_types.includes(require("../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx") /* ApplicationIntegrationType */.ApplicationIntegrationType.USER_INSTALL);
+              hasItem = integration_types.includes(ApplicationIntegrationType /* ApplicationIntegrationType */.ApplicationIntegrationType.USER_INSTALL);
             }
             if (hasItem) {
               return obj.ALLOWED;
@@ -142,7 +148,7 @@ export const hasAccess = function hasAccess(type, arg1, applicationAllowedForCha
             }
           }
           if (context instanceof ChannelRecordBase) {
-            require("../../../_runtime/metro/00038__.js")(undefined !== applicationAllowedForChannel, "missing applicationAllowedForChannel");
+            00038__(undefined !== applicationAllowedForChannel, "missing applicationAllowedForChannel");
             const permissions = type.permissions;
             let permission = null;
             if (null != permissions) {
@@ -154,7 +160,7 @@ export const hasAccess = function hasAccess(type, arg1, applicationAllowedForCha
                 }
                 id = id2;
               }
-              const obj4 = require("../guild_settings/integrations/permission/IntegrationPermissionUtils.tsx") /* commandPermissions */;
+              const obj4 = commandPermissions /* commandPermissions */;
               const tmp28 = permissions[obj4.toPermissionKey(obj4, id, require(undefined, 6891) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.CHANNEL)];
               if (null != tmp28) {
                 permission = tmp28.permission;
@@ -186,7 +192,7 @@ export const hasAccess = function hasAccess(type, arg1, applicationAllowedForCha
               if (false !== applicationAllowedForUser) {
                 if (null != type.defaultMemberPermissions) {
                   let tmp53Result = tmp53(506);
-                  if (!tmp53Result.equals(type.defaultMemberPermissions, require("ApplicationCommandUtils.tsx") /* buildCommand */.DISABLED_BY_DEFAULT_PERMISSION_FLAG)) {
+                  if (!tmp53Result.equals(type.defaultMemberPermissions, buildCommand /* buildCommand */.DISABLED_BY_DEFAULT_PERMISSION_FLAG)) {
                     tmp53Result = tmp53(506);
                     if (tmp53Result.has(computedPermissions, type.defaultMemberPermissions)) {
                       let USER_DENIED2 = obj.ALLOWED;
@@ -221,7 +227,7 @@ export const computeAllowedForChannel = function computeAllowedForChannel(permis
       }
       id2 = id;
     }
-    const obj = require("../guild_settings/integrations/permission/IntegrationPermissionUtils.tsx") /* commandPermissions */;
+    const obj = commandPermissions /* commandPermissions */;
     const tmp3 = permissions[obj.toPermissionKey(obj, id2, require(undefined, 6891) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.CHANNEL)];
     if (null != tmp3) {
       return tmp3.permission;

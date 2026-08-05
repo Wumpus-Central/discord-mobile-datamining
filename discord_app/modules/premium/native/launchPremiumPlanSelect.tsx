@@ -1,3 +1,6 @@
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { PremiumModal } from "../../../components_native/premium/PremiumModal.tsx";
+import { getSanitizedRestrictedGuilds } from "../../../utils/UserSettingsUtils.tsx";
 // discord_app/modules/premium/native/launchPremiumPlanSelect.tsx
 import { UserSettingsSections } from "ME";
 
@@ -71,8 +74,8 @@ export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostP
     obj[10] = onPaymentSuccess;
     obj[11] = onPaymentDismiss;
     const obj3 = flag2(4490);
-    obj3.pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(6783, dependencyMap.paths), obj, require("../../../components_native/premium/PremiumModal.tsx") /* PremiumModal */.PREMIUM_KEY);
-    const tmp7 = require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(6783, dependencyMap.paths);
+    obj3.pushLazy(asyncRequireImpl /* asyncRequireImpl */(6783, dependencyMap.paths), obj, PremiumModal /* PremiumModal */.PREMIUM_KEY);
+    const tmp7 = asyncRequireImpl /* asyncRequireImpl */(6783, dependencyMap.paths);
   }
-  let result = require("../../../utils/UserSettingsUtils.tsx") /* getSanitizedRestrictedGuilds */.trackUserSettingsPaneViewed({ destinationPane: PREMIUM_PLAN_SELECT });
+  let result = getSanitizedRestrictedGuilds /* getSanitizedRestrictedGuilds */.trackUserSettingsPaneViewed({ destinationPane: PREMIUM_PLAN_SELECT });
 };

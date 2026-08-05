@@ -1,3 +1,5 @@
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/stores/views/GIFPickerViewStore.tsx
 import { GIFType } from "create";
 import { Store } from "initialize";
@@ -9,10 +11,10 @@ function getFormatFromUrl(src) {
     const formatted = uRL.pathname.toLowerCase();
     if (!formatted.endsWith(".mp4")) {
       if (!formatted.endsWith(".webm")) {
-        return require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx") /* create */.GIFType.IMAGE;
+        return create /* create */.GIFType.IMAGE;
       }
     }
-    return require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx") /* create */.GIFType.VIDEO;
+    return create /* create */.GIFType.VIDEO;
   } catch (err) {
   }
 }
@@ -91,8 +93,8 @@ const gIFPickerViewStore = new GIFPickerViewStore(require("dispatcher"), {
     if (null != trendingCategories.trendingGIFPreview) {
       let obj = { type: null, name: null, src: null, format: null };
       obj[0] = GIFPickerResultTypes.TRENDING_GIFS;
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[1] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.H6zNFz);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.H6zNFz);
       obj[2] = trendingCategories.trendingGIFPreview.src;
       obj[3] = getFormatFromUrl(trendingCategories.trendingGIFPreview.src);
       const items = [obj];

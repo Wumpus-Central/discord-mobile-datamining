@@ -1,8 +1,9 @@
+import { getMediaPerformanceClass } from "getMediaPerformanceClass.android.tsx";
 // discord_app/modules/device/hasPerformanceForKrispFullband.tsx
 const result = require("set").fileFinishedImporting("modules/device/hasPerformanceForKrispFullband.tsx");
 
 export default function hasPerformanceForKrispFullband() {
-  const tmp = require("getMediaPerformanceClass.android.tsx")();
+  const tmp = getMediaPerformanceClass();
   let tmp2 = null === tmp;
   if (!tmp2) {
     tmp2 = tmp >= 31;

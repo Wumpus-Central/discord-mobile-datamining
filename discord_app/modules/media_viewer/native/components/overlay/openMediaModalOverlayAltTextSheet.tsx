@@ -1,6 +1,8 @@
+import { asyncRequireImpl } from "../../../../../../_runtime/01959_asyncRequireImpl.js";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/media_viewer/native/components/overlay/openMediaModalOverlayAltTextSheet.tsx
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/media_viewer/native/components/overlay/openMediaModalOverlayAltTextSheet.tsx");
 
 export default function openMediaModalOverlayAltTextSheet(description) {
-  require("../../../../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(require("../../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(10920, dependencyMap.paths), "MediaModalOverlayAltTextSheet", { description: description.description });
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(10920, dependencyMap.paths), "MediaModalOverlayAltTextSheet", { description: description.description });
 };

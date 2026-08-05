@@ -1,3 +1,9 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { SolidCutout } from "../../../design/components/Icon/native/ClipView.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { FastestList.android } from "../../fastest_list/FastestList.android.tsx";
+import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 // discord_app/modules/icymi/native/ICYMIServerRecommendationRow.tsx
 import _slicedToArray from "_slicedToArray";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -30,7 +36,7 @@ function CutoutGuildBanner(guild) {
     hasItem = features.has(constants.ANIMATED_BANNER);
   }
   if (null != guild.banner) {
-    let obj1 = require("../../../utils/AvatarUtils.tsx");
+    let obj1 = getAvatarURL;
     const animatableSourceWithFallback = obj1.getAnimatableSourceWithFallback(hasItem, (hasItem) => {
       let obj = outer1_1(outer1_2[12]);
       obj = { id: guild.id, banner: guild.banner };
@@ -58,13 +64,13 @@ function CutoutGuildBanner(guild) {
     tmp12Result = tmp12(tmp11, obj3);
   }
   obj[1] = tmp12Result;
-  const items4 = [closure_14(require("../../../design/components/Icon/native/ClipView.tsx"), obj), ];
+  const items4 = [closure_14(SolidCutout, obj), ];
   const obj4 = { style: tmp.guildIcon, guild: memo, size: null, animate: null };
   const tmp10 = closure_15;
-  const tmp14 = require("../../../design/components/Icon/native/ClipView.tsx");
+  const tmp14 = SolidCutout;
   obj4[2] = guild(5661).GuildIconSizes.LARGE;
   obj4[3] = !stateFromStores;
-  items4[1] = closure_14(require("../../guild/native/GuildIcon.tsx"), obj4);
+  items4[1] = closure_14(GuildIconSizes, obj4);
   obj[1] = items4;
   return tmp10(View, obj);
 }
@@ -286,11 +292,11 @@ function RecommendedGuildsRow(discoverableGuilds) {
     let obj = { sections: null, insetStart: null, renderItem: null, estimatedListSize: "windowSize", itemSize: null, horizontal: true, listId: "recommended-servers-list", showsHorizontalScrollIndicator: false };
     const items = [discoverableGuilds.length];
     obj[0] = items;
-    obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
+    obj[1] = Themes.space.PX_16;
     obj[2] = tmp;
-    obj[4] = 200 + require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
-    tmp2 = callback3(require("../../fastest_list/FastestList.android.tsx"), obj);
-    const tmp6 = require("../../fastest_list/FastestList.android.tsx");
+    obj[4] = 200 + Themes.space.PX_16;
+    tmp2 = callback3(FastestList.android, obj);
+    const tmp6 = FastestList.android;
   }
   return tmp2;
 }
@@ -298,29 +304,29 @@ function RecommendedGuildsRow(discoverableGuilds) {
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 let closure_17 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   let obj = { container: null, title: null, subtitle: null, featuredServerInnerContainer: null, buttonContainer: null, featuredServerTitle: null, guildIcon: null, bannerImage: null, emptyBanner: null, featuredServerContainer: null };
-  obj = { marginVertical: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
+  obj = { marginVertical: Themes.space.PX_24 };
   obj[0] = obj;
-  obj = { marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginHorizontal: marginHorizontal.margin };
+  obj = { marginBottom: Themes.space.PX_8, marginHorizontal: marginHorizontal.margin };
   obj[1] = obj;
-  obj[2] = { marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, marginHorizontal: marginHorizontal.margin };
-  const obj1 = { marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, marginHorizontal: marginHorizontal.margin };
-  obj[3] = { marginHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, marginTop: 36 };
-  const obj2 = { marginHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, marginTop: 36 };
-  obj[4] = { position: "absolute", bottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, left: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, right: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
-  const obj3 = { position: "absolute", bottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, left: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, right: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
-  obj[5] = { marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  obj[2] = { marginBottom: Themes.space.PX_16, marginHorizontal: marginHorizontal.margin };
+  const obj1 = { marginBottom: Themes.space.PX_16, marginHorizontal: marginHorizontal.margin };
+  obj[3] = { marginHorizontal: Themes.space.PX_12, marginTop: 36 };
+  const obj2 = { marginHorizontal: Themes.space.PX_12, marginTop: 36 };
+  obj[4] = { position: "absolute", bottom: Themes.space.PX_12, left: Themes.space.PX_12, right: Themes.space.PX_12 };
+  const obj3 = { position: "absolute", bottom: Themes.space.PX_12, left: Themes.space.PX_12, right: Themes.space.PX_12 };
+  obj[5] = { marginBottom: Themes.space.PX_8 };
   obj[6] = { position: "absolute", top: 50, left: 12 };
   obj[7] = { height: 72, width: 200 };
-  const obj4 = { marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
-  obj[8] = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_SUBTLE };
-  const obj5 = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_SUBTLE };
-  obj[9] = { borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CARD_BACKGROUND_DEFAULT, height: 244, width: 200, overflow: "hidden" };
+  const obj4 = { marginBottom: Themes.space.PX_8 };
+  obj[8] = { backgroundColor: Themes.colors.BACKGROUND_MOD_SUBTLE };
+  const obj5 = { backgroundColor: Themes.colors.BACKGROUND_MOD_SUBTLE };
+  obj[9] = { borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.CARD_BACKGROUND_DEFAULT, height: 244, width: 200, overflow: "hidden" };
   return obj;
 });
 let result = require("noop").fileFinishedImporting("modules/icymi/native/ICYMIServerRecommendationRow.tsx");
 
 export const ICYMIServerRecommendationRow = function ICYMIServerRecommendationRow() {
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [filterStaffGuild];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => discoverableGuilds.getDiscoverableGuilds());
   const tmp3 = callback5();

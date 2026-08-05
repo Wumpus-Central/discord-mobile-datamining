@@ -1,3 +1,6 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
+import { getLayoutStyles } from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
 // discord_app/modules/notification_center/native/ForYouSuggestedFriendRow.tsx
 import renderChannelPressableWrapper from "renderChannelPressableWrapper";
 import { View } from "getSystemLocale";
@@ -16,22 +19,22 @@ const require = arg1;
 ({ AnalyticEvents: error, RelationshipTypes: metroImportAll } = ME);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles((layout) => {
-  let obj = require("../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx") /* getLayoutStyles */;
+  let obj = getLayoutStyles /* getLayoutStyles */;
   const layoutStyles = obj.getLayoutStyles(layout);
-  let obj1 = require("../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx") /* getLayoutStyles */;
+  let obj1 = getLayoutStyles /* getLayoutStyles */;
   const sizeStyle = obj1.makeSizeStyle(layoutStyles.icon.wrapper.size);
   obj = { rowActive: null, pressable: null, textContainer: null, nameText: null, avatar: null };
-  obj = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_MUTED };
+  obj = { backgroundColor: Themes.colors.BACKGROUND_MOD_MUTED };
   obj[0] = obj;
   obj[1] = { flex: 1 };
-  obj1 = { flexDirection: "column", flexGrow: 2, flexShrink: 2, alignSelf: "center", overflow: "hidden", marginTop: -2, marginRight: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  obj1 = { flexDirection: "column", flexGrow: 2, flexShrink: 2, alignSelf: "center", overflow: "hidden", marginTop: -2, marginRight: Themes.space.PX_8 };
   obj[2] = obj1;
   let num = 0;
   if (obj6.isAndroid()) {
     num = 2;
   }
   obj[3] = { flexShrink: 1, marginBottom: num };
-  const obj2 = { position: "relative", borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.round, justifyContent: "center", alignItems: "center", flexShrink: 0, flexGrow: 0 };
+  const obj2 = { position: "relative", borderRadius: Themes.radii.round, justifyContent: "center", alignItems: "center", flexShrink: 0, flexGrow: 0 };
   const merged = Object.assign(sizeStyle);
   obj2.marginRight = layoutStyles.icon.margin.marginRight + 4;
   obj[4] = obj2;
@@ -54,7 +57,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
   let obj = suggestedFriend(9711);
   const messagesTabLayout = obj.useMessagesTabLayout(panelVariant);
   const tmp4 = callback2(messagesTabLayout);
-  analyticsLocations = require("../../app_analytics/useAnalyticsLocations.tsx")().analyticsLocations;
+  analyticsLocations = context().analyticsLocations;
   let obj1 = suggestedFriend(9711);
   const layoutStyles = obj1.getLayoutStyles(messagesTabLayout);
   let obj2 = suggestedFriend(4701);

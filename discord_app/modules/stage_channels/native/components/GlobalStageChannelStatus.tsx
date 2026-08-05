@@ -1,3 +1,5 @@
+import { computeChannelName } from "../../../channel/useChannelName.tsx";
+import { useIsInvitedToSpeak } from "../../useIsInvitedToSpeak.tsx";
 // discord_app/modules/stage_channels/native/components/GlobalStageChannelStatus.tsx
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
 import set from "set";
@@ -290,12 +292,12 @@ export default function GlobalStageChannelStatus(arg0) {
   if (channel != null) {
     id = channel.id;
   }
-  let stringResult = require("../../../channel/useChannelName.tsx")(channel);
+  let stringResult = computeChannelName(channel);
   if (stringResult == null) {
     const intl = id(1236).intl;
     stringResult = intl.string(id(1236).t["/YzI63"]);
   }
-  const tmp7 = require("../../useIsInvitedToSpeak.tsx")();
+  const tmp7 = useIsInvitedToSpeak();
   let invitedHeaderText = tmp3(10211)(id);
   let obj = id(589);
   const items = [closure_9];

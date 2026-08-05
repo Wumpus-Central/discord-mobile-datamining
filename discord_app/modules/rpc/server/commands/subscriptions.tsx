@@ -1,3 +1,4 @@
+import { prototype } from "../../RPCError.tsx";
 // discord_app/modules/rpc/server/commands/subscriptions.tsx
 import getInitialSubscriptionPayload from "getInitialSubscriptionPayload";
 import ME from "ME";
@@ -138,7 +139,7 @@ obj = {
       let obj = { errorCode: null };
       obj[0] = constants.INVALID_EVENT;
       const _HermesInternal = HermesInternal;
-      let tmp6 = require("../../RPCError.tsx");
+      let tmp6 = prototype;
       tmp6 = new tmp6(obj, "Invalid event: " + evt);
       throw tmp6;
     } else {

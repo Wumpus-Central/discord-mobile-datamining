@@ -1,3 +1,10 @@
+import { isTracing } from "../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { DCDDeviceManager } from "../../../utils/native/DeviceUtils.tsx";
+import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
+import { getMediaPerformanceClass } from "../../device/getMediaPerformanceClass.android.tsx";
+import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
+import { AppStartInfo } from "AppStartInfo.android.tsx";
 // discord_app/modules/tti_analytics/native/TTIAnalyticsUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleClearCaches from "handleClearCaches";
@@ -17,30 +24,30 @@ const require = arg1;
 function getDeviceMetadata() {
   if (null == obj) {
     obj = { device_model: null, device_brand: null, device_product: null, device_manufacturer: null, smallest_screen_width_dp: null, device_performance_class: null, soc_name: null, ram_size: null, max_cpu_freq: null };
-    obj[0] = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getDeviceModel();
-    const obj2 = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */;
-    obj[1] = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getDeviceBrand();
-    const obj3 = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */;
-    obj[2] = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getDeviceProduct();
-    const obj4 = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */;
-    obj[3] = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getDeviceManufacturer();
-    const obj5 = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */;
-    obj[4] = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getSmallestScreenWidthDp();
-    obj[5] = require("../../device/getMediaPerformanceClass.android.tsx")();
-    const obj6 = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */;
-    obj[6] = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getSocName();
-    const obj7 = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */;
-    obj[7] = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getRamSize();
-    const obj8 = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */;
-    obj[8] = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getMaxCpuFreq();
-    const obj9 = require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */;
+    obj[0] = DCDDeviceManager /* DCDDeviceManager */.getDeviceModel();
+    const obj2 = DCDDeviceManager /* DCDDeviceManager */;
+    obj[1] = DCDDeviceManager /* DCDDeviceManager */.getDeviceBrand();
+    const obj3 = DCDDeviceManager /* DCDDeviceManager */;
+    obj[2] = DCDDeviceManager /* DCDDeviceManager */.getDeviceProduct();
+    const obj4 = DCDDeviceManager /* DCDDeviceManager */;
+    obj[3] = DCDDeviceManager /* DCDDeviceManager */.getDeviceManufacturer();
+    const obj5 = DCDDeviceManager /* DCDDeviceManager */;
+    obj[4] = DCDDeviceManager /* DCDDeviceManager */.getSmallestScreenWidthDp();
+    obj[5] = getMediaPerformanceClass();
+    const obj6 = DCDDeviceManager /* DCDDeviceManager */;
+    obj[6] = DCDDeviceManager /* DCDDeviceManager */.getSocName();
+    const obj7 = DCDDeviceManager /* DCDDeviceManager */;
+    obj[7] = DCDDeviceManager /* DCDDeviceManager */.getRamSize();
+    const obj8 = DCDDeviceManager /* DCDDeviceManager */;
+    obj[8] = DCDDeviceManager /* DCDDeviceManager */.getMaxCpuFreq();
+    const obj9 = DCDDeviceManager /* DCDDeviceManager */;
   }
   return obj;
 }
 function getRedesignScreenName() {
   let name;
   let params;
-  const rootNavigationRef = require("../../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
   let currentRoute;
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -96,7 +103,7 @@ function getRedesignScreenName() {
     }
     tmpResult = tmp(4136);
   }
-  const obj = require("../../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */;
+  const obj = getRootNavigationRef /* getRootNavigationRef */;
   tmp = require;
 }
 function sharedProperties(screen_name, has_cached_data) {
@@ -670,17 +677,17 @@ export function currentLoadId() {
   return v1;
 }
 export const trackAppOpened = function trackAppOpened(launcher) {
-  let obj = require("../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx");
+  let obj = isTracing;
   obj.mark("\u{1F3C3}", "Track app_opened");
   obj = { openFrom: launcher };
-  require("../../../utils/SentryUtils.native.tsx").addBreadcrumb({ category: "lifecycle", message: "App opened", data: obj });
-  const obj2 = require("../../../utils/SentryUtils.native.tsx");
+  SentryUtils.native.addBreadcrumb({ category: "lifecycle", message: "App opened", data: obj });
+  const obj2 = SentryUtils.native;
   obj = {};
   const merged = Object.assign(getDeviceMetadata());
   obj.opened_from = launcher;
   obj.load_id = v1;
   obj.theme = theme.theme;
-  require("../../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.APP_OPENED, obj, { logEventProperties: true });
+  expandEventProperties.track(AnalyticEvents.APP_OPENED, obj, { logEventProperties: true });
 };
 export const trackAppUIViewed = function trackAppUIViewed(ModalScreen, arg1, hasCacheResult) {
   let tmp = ModalScreen;
@@ -694,7 +701,7 @@ export const trackAppUIViewed = function trackAppUIViewed(ModalScreen, arg1, has
   if (hasCacheResult === undefined) {
     hasCacheResult = handleClearCaches.hasCache();
   }
-  const AppStartInfo = require("AppStartInfo.android.tsx") /* AppStartInfo */.AppStartInfo;
+  const AppStartInfo = AppStartInfo /* AppStartInfo */.AppStartInfo;
   if (!AppStartInfo.getAppUIViewed()) {
     (function trackAppUIViewedAsync(ModalScreen, arg1, hasCacheResult) {
       const self = this;
@@ -720,7 +727,7 @@ export const trackAppLaunchCompleted = function trackAppLaunchCompleted(arg0, ha
     hasCacheResult = handleClearCaches.hasCache();
   }
   if (!c18) {
-    require("../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx").mark("\u{1F3C3}", "Track app_launch");
+    isTracing.mark("\u{1F3C3}", "Track app_launch");
     c18 = true;
     if (str == null) {
       str = "unknown";
@@ -735,6 +742,6 @@ export const trackAppLaunchCompleted = function trackAppLaunchCompleted(arg0, ha
       }
       return applyArgumentsResult;
     })(str, hasCacheResult);
-    const obj = require("../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx");
+    const obj = isTracing;
   }
 };

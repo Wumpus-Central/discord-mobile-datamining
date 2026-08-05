@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLUtils.tsx
 import ME from "ME";
 
@@ -8,26 +9,26 @@ const result = require("set").fileFinishedImporting("modules/guild_settings/serv
 
 export const getErrorMessageFromErrorCode = function getErrorMessageFromErrorCode(code) {
   if (constants.UNKNOWN_CHANNEL === code) {
-    const intl7 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl7.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.ETCmRa);
+    const intl7 = getSystemLocale /* getSystemLocale */.intl;
+    return intl7.string(getSystemLocale /* getSystemLocale */.t.ETCmRa);
   } else if (tmp.INVALID_PERMISSIONS === code) {
-    const intl6 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl6.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.lXtut1);
+    const intl6 = getSystemLocale /* getSystemLocale */.intl;
+    return intl6.string(getSystemLocale /* getSystemLocale */.t.lXtut1);
   } else if (tmp.INVALID_ACCESS === code) {
-    const intl5 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl5.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.TAXOKw);
+    const intl5 = getSystemLocale /* getSystemLocale */.intl;
+    return intl5.string(getSystemLocale /* getSystemLocale */.t.TAXOKw);
   } else if (tmp.VANITY_URL_REQUIRED_FOR_PUBLISHED_GUILDS === code) {
-    const intl4 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.ZpuxVs);
+    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    return intl4.string(getSystemLocale /* getSystemLocale */.t.ZpuxVs);
   } else if (tmp.VANITY_URL_EMPLOYEE_ONLY_GUILD_DISABLED === code) {
-    const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.tSBmIv);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    return intl3.string(getSystemLocale /* getSystemLocale */.t.tSBmIv);
   } else if (tmp.VANITY_URL_REQUIREMENTS_NOT_MET === code) {
-    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["w+yGQT"]);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    return intl2.string(getSystemLocale /* getSystemLocale */.t["w+yGQT"]);
   } else {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.ckQidX);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.ckQidX);
   }
 };
 export const canSeeVanityUrlSettings = function canSeeVanityUrlSettings(guild) {

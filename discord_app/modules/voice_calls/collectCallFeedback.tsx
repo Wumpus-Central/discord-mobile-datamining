@@ -1,3 +1,5 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 // discord_app/modules/voice_calls/collectCallFeedback.tsx
 import handleSyncedStoresUpdate from "handleSyncedStoresUpdate";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -29,7 +31,7 @@ export default function collectCallFeedback(arg0, arg1, arg2, videoEnabled) {
         obj[4] = obj1.getDuration();
         obj[5] = obj1.getMediaSessionId();
         const guildId = obj1.getGuildId();
-        const merged = Object.assign(require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */.getVoiceStateMetadata(guildId, obj1.getChannelId(), videoEnabled));
+        const merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.getVoiceStateMetadata(guildId, obj1.getChannelId(), videoEnabled));
         let duration_muted_ms;
         if (voiceDurationStats != null) {
           duration_muted_ms = voiceDurationStats.duration_muted_ms;
@@ -62,15 +64,15 @@ export default function collectCallFeedback(arg0, arg1, arg2, videoEnabled) {
           const tmp5Result1 = tmp5(9084);
           const obj2 = { type: "VIDEO_BACKGROUND_SHOW_FEEDBACK", analyticsData: null };
           obj2[1] = obj;
-          require("../../Dispatcher.tsx").dispatch(obj2);
-          const obj14 = require("../../Dispatcher.tsx");
+          dispatcher.dispatch(obj2);
+          const obj14 = dispatcher;
         } else {
           const obj3 = { type: "VOICE_CHANNEL_SHOW_FEEDBACK", analyticsData: null };
           obj3[1] = obj;
-          require("../../Dispatcher.tsx").dispatch(obj3);
-          const obj6 = require("../../Dispatcher.tsx");
+          dispatcher.dispatch(obj3);
+          const obj6 = dispatcher;
         }
-        const obj5 = require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */;
+        const obj5 = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
       }
     }
   }

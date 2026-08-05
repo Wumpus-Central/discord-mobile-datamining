@@ -1,3 +1,7 @@
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { messagesProxy } from "../SafetyFlows.messages.js";
 // discord_app/modules/safety_flows/native/UpdateAppScreen.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -21,13 +25,13 @@ export default function UpdateAppScreen() {
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
   obj = { variant: "heading-lg/semibold", children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../SafetyFlows.messages.js").yxqMCD);
-  const items = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(messagesProxy.yxqMCD);
+  const items = [callback(Text /* Text */.Text, obj), , ];
   obj = { variant: "text-md/normal", color: "text-muted", children: null };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl2.string(require("../SafetyFlows.messages.js").VBZJJg);
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl2.string(messagesProxy.VBZJJg);
+  items[1] = callback(Text /* Text */.Text, obj);
   const obj1 = { style: tmp.buttonContainer, children: null };
   const obj2 = {
     onPress() {
@@ -38,9 +42,9 @@ export default function UpdateAppScreen() {
     variant: "primary",
     size: "md"
   };
-  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj2[1] = intl3.string(require("../SafetyFlows.messages.js").o4D6fm);
-  obj1[1] = callback(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj2);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj2[1] = intl3.string(messagesProxy.o4D6fm);
+  obj1[1] = callback(Button /* Button */.Button, obj2);
   items[2] = callback(closure_4, obj1);
   obj[1] = items;
   return callback2(closure_4, obj);

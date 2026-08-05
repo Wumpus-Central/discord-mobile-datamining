@@ -1,3 +1,10 @@
+import { registerAsset } from "../../../../../_runtime/07870_registerAsset.js";
+import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
+import { StageSparkleInner } from "../components/StageSparkle.tsx";
 // discord_app/modules/stage_channels/native/modals/StartStageChannelModal.tsx
 import closure_4 from "MAX_STAGE_TOPIC_LENGTH";
 import GuildStageChannelSelection from "GuildStageChannelSelection";
@@ -18,7 +25,7 @@ let metroImportAll;
 let unpackModuleId;
 const require = arg1;
 function closeModal() {
-  require("../../../../actions/ModalActionCreators.tsx").popWithKey(closure_11);
+  ModalActionCreators.popWithKey(closure_11);
 }
 function NavigationBar(guild) {
   let tmp2 = null;
@@ -28,13 +35,13 @@ function NavigationBar(guild) {
     ({ contentContainer: arr[0], contentTopSpacing: arr[1] } = tmp);
     obj[0] = items;
     obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.cpT0Cq);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
     obj[2] = closeModal;
     obj = { source: null };
-    obj[0] = require("../../../../../_runtime/07870_registerAsset.js");
-    obj[3] = callback2(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
-    obj[1] = callback2(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+    obj[0] = registerAsset;
+    obj[3] = callback2(Button /* Button */.Icon, obj);
+    obj[1] = callback2(PressableBase /* PressableBase */.PressableOpacity, obj);
     tmp2 = callback2(closure_7, obj);
   }
   return tmp2;
@@ -42,14 +49,14 @@ function NavigationBar(guild) {
 function HeaderIcon(guild) {
   guild = guild.guild;
   if (null == guild) {
-    let tmp7 = callback2(require("../components/StageSparkle.tsx"), {});
+    let tmp7 = callback2(StageSparkleInner, {});
   } else {
     const obj = { style: null, size: null, guild: null };
     obj[0] = tmp.guildIcon;
-    obj[1] = require("../../../guild/native/GuildIcon.tsx") /* GuildIconSizes */.GuildIconSizes.LARGE;
+    obj[1] = GuildIconSizes /* GuildIconSizes */.GuildIconSizes.LARGE;
     obj[2] = guild;
-    tmp7 = callback2(require("../../../guild/native/GuildIcon.tsx"), obj);
-    const tmp5 = require("../../../guild/native/GuildIcon.tsx");
+    tmp7 = callback2(GuildIconSizes, obj);
+    const tmp5 = GuildIconSizes;
   }
   return tmp7;
 }

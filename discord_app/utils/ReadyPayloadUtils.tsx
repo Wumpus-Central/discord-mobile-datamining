@@ -1,3 +1,5 @@
+import { items } from "../modules/app_database/DatabaseDaos.tsx";
+import { isCacheEnabled } from "../modules/cache/isCacheEnabled.native.tsx";
 // discord_app/utils/ReadyPayloadUtils.tsx
 import { createChannelRecordFromServer as closure_3 } from "createChannelRecord";
 
@@ -357,8 +359,8 @@ export const hydrateReadySupplementalPayload = function hydrateReadySupplemental
   return obj;
 };
 export const preloadReadyPayloadData = function preloadReadyPayloadData() {
-  const databaseResult = require("../modules/app_database/DatabaseDaos.tsx").database();
-  const obj = require("../modules/app_database/DatabaseDaos.tsx");
+  const databaseResult = items.database();
+  const obj = items;
   const tmp4 = require;
   if (obj2.isCacheEnabled()) {
     let tmpResult = tmp(7034);
@@ -366,7 +368,7 @@ export const preloadReadyPayloadData = function preloadReadyPayloadData() {
   } else {
     committedVersions = Promise.resolve({});
   }
-  obj2 = require("../modules/cache/isCacheEnabled.native.tsx") /* isCacheEnabled */;
+  obj2 = isCacheEnabled /* isCacheEnabled */;
   if (tmp4Result.isCacheEnabled()) {
     tmpResult = tmp(1927);
     let guildIds = tmpResult.getGuildIds();
@@ -398,7 +400,7 @@ export const hydrateReadyPayloadPrioritized = function hydrateReadyPayloadPriori
   let users;
   ({ users, private_channels, merged_members: require, guilds } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = require("../modules/app_database/DatabaseDaos.tsx");
+  let obj = items;
   let tmp4 = null != obj.database();
   if (tmp4) {
     tmp4 = false === closure_1.databaseOk;

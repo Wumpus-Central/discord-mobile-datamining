@@ -1,3 +1,5 @@
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { useCanSeeOnboardingHome } from "OnboardingHomeUtils.tsx";
 // discord_app/modules/guild_onboarding_home/useIsSelectedResourceChannel.tsx
 import handlePermissionsChange from "handlePermissionsChange";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -11,7 +13,7 @@ const result = require("handleConnectionOpen").fileFinishedImporting("modules/gu
 export default function useIsSelectedResourceChannel(arg0) {
   const _require = arg0;
   const items = [ensureGuildLoaded, handleConnectionOpen, handlePermissionsChange];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => {
     const channel = outer1_4.getChannel(callback);
     if (null != channel) {
       if (obj.hasFlag(channel.flags, outer1_7.IS_GUILD_RESOURCE_CHANNEL)) {
@@ -23,11 +25,11 @@ export default function useIsSelectedResourceChannel(arg0) {
       tmp3 = outer1_2;
     }
   });
-  let obj = _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx");
+  let obj = _defaultAreStatesEqual;
   let tmp2 = stateFromStores;
   if (stateFromStores == null) {
     tmp2 = EMPTY_STRING_SNOWFLAKE_ID;
   }
-  const obj2 = _require("OnboardingHomeUtils.tsx");
-  return null != stateFromStores && _require("OnboardingHomeUtils.tsx").useCanSeeOnboardingHome(tmp2);
+  const obj2 = _useCanSeeOnboardingHome;
+  return null != stateFromStores && _useCanSeeOnboardingHome.useCanSeeOnboardingHome(tmp2);
 };

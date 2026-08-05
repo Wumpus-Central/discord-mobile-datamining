@@ -1,3 +1,5 @@
+import { NavigationStack } from "../../design/components/Navigator/native/Navigator.native.tsx";
+import { useSafeAreaInsets } from "../../modules/safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/components_native/add_friend/AddFriendModal.tsx
 import _slicedToArray from "_slicedToArray";
 import HeaderActionButton from "HeaderActionButton";
@@ -149,5 +151,5 @@ export default function AddFriendModal(arg0) {
     obj[0] = obj;
     return obj;
   }, items);
-  return callback2(_require("../../design/components/Navigator/native/Navigator.native.tsx").Navigator, { screens, initialRouteName: "ADD_FRIEND", headerStatusBarHeight: require("../../modules/safe_area/useSafeAreaInsets.native.tsx")().top });
+  return callback2(_NavigationStack.Navigator, { screens, initialRouteName: "ADD_FRIEND", headerStatusBarHeight: useSafeAreaInsets().top });
 };

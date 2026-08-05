@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/billing/hooks/useSubscriptionPlansLoaded.tsx
 import handlePaymentSourceUpdate from "handlePaymentSourceUpdate";
 import addSubscriptionPlan from "addSubscriptionPlan";
@@ -64,7 +65,7 @@ export const useSubscriptionPlansLoaded = function useSubscriptionPlansLoaded() 
   const require = tmp;
   const items1 = [handlePaymentSourceUpdate, addSubscriptionPlan, reset];
   const items2 = [tmp];
-  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => {
+  return initialize /* initialize */.useStateFromStores(items1, () => {
     const items = [outer1_2, outer1_3, outer1_4];
     return outer1_6(closure_0, items);
   }, items2);

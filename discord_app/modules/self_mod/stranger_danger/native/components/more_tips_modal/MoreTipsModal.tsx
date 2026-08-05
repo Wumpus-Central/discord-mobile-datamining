@@ -1,3 +1,10 @@
+import { defaultAreStatesEqual } from "../../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { NavigationStack } from "../../../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
+import { useSafeAreaInsets } from "../../../../../safe_area/useSafeAreaInsets.native.tsx";
+import { SafetyTipsContainer } from "../../../../shared/native/SafetyTipsSection.tsx";
+import { WasThisHelpfulSection } from "WasThisHelpfulSection.tsx";
 // discord_app/modules/self_mod/stranger_danger/native/components/more_tips_modal/MoreTipsModal.tsx
 import set from "set";
 import get_ActivityIndicator from "trackViewedEvent";
@@ -24,7 +31,7 @@ function MoreTipsModalScreen(learnMore) {
   let obj = { keyboardShouldPersistTaps: "handled", style: tmp.scroll, children: null };
   obj = { style: tmp.contentContainer, children: null };
   obj = { style: tmp.tipsContainer, children: null };
-  const items = [callback(require("../../../../shared/native/SafetyTipsSection.tsx"), { description, safetyTips, showHeader: true }), ];
+  const items = [callback(SafetyTipsContainer, { description, safetyTips, showHeader: true }), ];
   let tmp2Result = null;
   if (null != learnMore) {
     const obj1 = { style: null, children: null };
@@ -37,12 +44,12 @@ function MoreTipsModalScreen(learnMore) {
   const items1 = [closure_9(closure_4, obj), , ];
   const obj2 = { children: null };
   const obj3 = { variant: "eyebrow", color: "text-default", style: tmp.header, children: null };
-  const intl = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj3[3] = intl.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.K5FKtc);
-  const items2 = [callback(require("../../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3), actionItems];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj3[3] = intl.string(getSystemLocale /* getSystemLocale */.t.K5FKtc);
+  const items2 = [callback(Text /* Text */.Text, obj3), actionItems];
   obj2[0] = items2;
   items1[1] = closure_9(closure_4, obj2);
-  items1[2] = callback(require("WasThisHelpfulSection.tsx"), { channelId, warningId, senderId });
+  items1[2] = callback(WasThisHelpfulSection, { channelId, warningId, senderId });
   obj[1] = items1;
   obj[2] = closure_9(closure_4, obj);
   return callback(closure_5, obj);
@@ -77,7 +84,7 @@ export default function MoreTipsModal(channelId) {
   let importDefault = warningId;
   const senderId = channelId.senderId;
   let dependencyMap = senderId;
-  let MORE_TIPS = _require("../../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
+  let MORE_TIPS = _defaultAreStatesEqual;
   const items = [c6];
   const stateFromStores = MORE_TIPS.useStateFromStores(items, () => _undefined5.getChannelSafetyWarning(c0, c1));
   let React = stateFromStores;
@@ -130,5 +137,5 @@ export default function MoreTipsModal(channelId) {
       return outer1_8(outer1_11, { channelId: c1, warningId: c2, senderId: c3, description: c4, safetyTips: c5, actionItems: c6, learnMore: c7 });
     }
   };
-  return callback(_require("../../../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, { screens: { MORE_TIPS }, initialRouteName: "MORE_TIPS", headerStatusBarHeight: require("../../../../../safe_area/useSafeAreaInsets.native.tsx")().top });
+  return callback(_NavigationStack.Navigator, { screens: { MORE_TIPS }, initialRouteName: "MORE_TIPS", headerStatusBarHeight: useSafeAreaInsets().top });
 };

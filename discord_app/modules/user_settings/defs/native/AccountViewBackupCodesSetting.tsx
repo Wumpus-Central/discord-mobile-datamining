@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { CodeRow } from "../../account/native/UserSettingsAccountBackupCodes.tsx";
 // discord_app/modules/user_settings/defs/native/AccountViewBackupCodesSetting.tsx
 import noop from "noop";
 import ME from "ME";
@@ -9,8 +11,8 @@ const require = arg1;
 ({ NOOP_NULL: c4, UserSettingsSections } = ME);
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.xZEzbu);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.xZEzbu);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   usePredicate: require("useIs2FAEnabled").useIs2FAEnabled,
@@ -72,7 +74,7 @@ createToggle = {
 createToggle = {
   route: UserSettingsSections.ACCOUNT_CONFIRM_VIEW_BACKUP_CODES,
   getComponent() {
-    return require("../../account/native/UserSettingsAccountBackupCodes.tsx") /* CodeRow */.default;
+    return CodeRow /* CodeRow */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

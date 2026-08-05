@@ -1,3 +1,4 @@
+import { useProvisionalAccountApplication } from "useProvisionalAccountApplication.tsx";
 // discord_app/modules/provisional_accounts/hooks/useProvisionalAccountExplanationText.tsx
 import noop from "noop";
 import { HelpdeskArticles } from "ME";
@@ -8,7 +9,7 @@ const result = require("useProvisionalAccountApplication").fileFinishedImporting
 export const useProvisionalAccountExplanationText = function useProvisionalAccountExplanationText(renderApplicationName) {
   renderApplicationName = renderApplicationName.renderApplicationName;
   let importDefault;
-  const tmp = require("useProvisionalAccountApplication.tsx")(renderApplicationName.userId);
+  const tmp = useProvisionalAccountApplication(renderApplicationName.userId);
   importDefault = tmp;
   const items = [tmp, renderApplicationName];
   return React.useMemo(() => {

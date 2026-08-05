@@ -1,3 +1,4 @@
+import { set } from "../../../../../utils/PlatformUtils.tsx";
 // discord_app/modules/auth/native/components/utils/getDeviceCountry.tsx
 import { NativeModules } from "get ActivityIndicator";
 
@@ -24,6 +25,6 @@ export const getDeviceCountry = function getDeviceCountry() {
     }
     return formatted;
   }
-  obj = require("../../../../../utils/PlatformUtils.tsx") /* set */;
+  obj = set /* set */;
   tmp = require;
 };

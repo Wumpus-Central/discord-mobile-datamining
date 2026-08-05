@@ -1,3 +1,8 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { StaffBadgeIcon } from "../../../../design/components/Icon/native/redesign/generated/StaffBadgeIcon.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import { VisualEffectViewOverrideOverlay_ } from "../../../visual_effect_view/native/overrides/VEVOO.tsx";
 // discord_app/modules/devtools/native/components/DevWidget.tsx
 import importAllResult from "noop";
 import initialize from "initialize";
@@ -144,23 +149,23 @@ let closure_16 = importAllResult.memo(() => {
     activeOpacity: 0.5,
     children: null
   };
-  obj[4] = callback(require("../../../../design/components/Icon/native/redesign/generated/StaffBadgeIcon.tsx") /* StaffBadgeIcon */.StaffBadgeIcon, { size: "md", color: "white" });
-  return callback(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  obj[4] = callback(StaffBadgeIcon /* StaffBadgeIcon */.StaffBadgeIcon, { size: "md", color: "white" });
+  return callback(PressableBase /* PressableBase */.PressableOpacity, obj);
 });
 let result = require("STORAGE_KEY_LOG_DISPATCHES").fileFinishedImporting("modules/devtools/native/components/DevWidget.tsx");
 
 export default function DevWidget() {
-  let obj = require("../../../reanimated/ReanimatedRexport.tsx");
+  let obj = ReanimatedRexport;
   const sharedValue = obj.useSharedValue(initialize.devWidgetPosition.x);
-  const sharedValue1 = require("../../../reanimated/ReanimatedRexport.tsx").useSharedValue(initialize.devWidgetPosition.y);
+  const sharedValue1 = ReanimatedRexport.useSharedValue(initialize.devWidgetPosition.y);
   obj = { children: null };
-  const items = [callback(require("../../../visual_effect_view/native/overrides/VEVOO.tsx"), { x: sharedValue, y: sharedValue1 }), ];
+  const items = [callback(VisualEffectViewOverrideOverlay_, { x: sharedValue, y: sharedValue1 }), ];
   obj = {
     x: sharedValue,
     y: sharedValue1,
     contentWidth: DEV_WIDGET_SIZE,
     contentHeight: DEV_WIDGET_SIZE,
-    dragBoundsPadding: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4,
+    dragBoundsPadding: Themes.space.PX_4,
     onChangePosition(devWidgetPosition) {
       let obj = callback(table[16]);
       obj = { devWidgetPosition };

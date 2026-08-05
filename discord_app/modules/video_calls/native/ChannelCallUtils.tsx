@@ -1,3 +1,9 @@
+import { registerAsset } from "../../../../_runtime/07828_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10762_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16152_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16153_registerAsset.js";
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/video_calls/native/ChannelCallUtils.tsx
 import "report";
 import initialize from "initialize";
@@ -14,9 +20,9 @@ let result = require("ME").fileFinishedImporting("modules/video_calls/native/Cha
 
 export const voiceSettings = function voiceSettings() {
   let obj = { label: null, icon: null, onPress: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.NiTd0e);
-  obj[1] = require("../../../../_runtime/16152_registerAsset.js");
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.NiTd0e);
+  obj[1] = registerAsset;
   obj[2] = function onPress() {
     let obj = callback(5925);
     obj = { screen: constants.VOICE };
@@ -29,8 +35,8 @@ export const videoParticipantsHidden = function videoParticipantsHidden(arg0, ar
   const _require = arg0;
   let closure_1 = arg1;
   const obj = { label: null, switchValue: null, onPress: null };
-  const intl = _require("../../../intl/index.native.tsx").intl;
-  obj[0] = intl.string(_require("../../../intl/index.native.tsx").t.hoZYAA);
+  const intl = _getSystemLocale.intl;
+  obj[0] = intl.string(_getSystemLocale.t.hoZYAA);
   obj[1] = !arg1;
   obj[2] = function onPress() {
     const result = callback(outer1_2[8]).toggleVoiceParticipantsHidden(id.id, !callback);
@@ -40,7 +46,7 @@ export const videoParticipantsHidden = function videoParticipantsHidden(arg0, ar
 export const openHideSelfStreamAndVideoConfirmDialog = function openHideSelfStreamAndVideoConfirmDialog(arg0, arg1) {
   let closure_0 = arg0;
   const importDefault = arg1;
-  let obj = require("../../../actions/native/AlertActionCreators.tsx");
+  let obj = AlertActionCreators;
   obj = {
     importer() {
       return callback(outer1_2[11])(outer1_2[10], outer1_2.paths).then((arg0) => {
@@ -60,8 +66,8 @@ export const openHideSelfStreamAndVideoConfirmDialog = function openHideSelfStre
 export const selfVideoHidden = function selfVideoHidden(arg0, arg1) {
   const _require = arg1;
   const obj = { label: null, switchValue: null, onPress: null };
-  const intl = _require("../../../intl/index.native.tsx").intl;
-  obj[0] = intl.string(_require("../../../intl/index.native.tsx").t.MH8ESU);
+  const intl = _getSystemLocale.intl;
+  obj[0] = intl.string(_getSystemLocale.t.MH8ESU);
   obj[1] = !arg0;
   obj[2] = function onPress() {
     callback();
@@ -71,9 +77,9 @@ export const selfVideoHidden = function selfVideoHidden(arg0, arg1) {
 export const reportStreamIssue = function reportStreamIssue(stream) {
   const _require = stream;
   let obj = { label: null, icon: null, onPress: null };
-  const intl = _require("../../../intl/index.native.tsx").intl;
-  obj[0] = intl.string(_require("../../../intl/index.native.tsx").t.KHGhHf);
-  obj[1] = require("../../../../_runtime/16153_registerAsset.js");
+  const intl = _getSystemLocale.intl;
+  obj[0] = intl.string(_getSystemLocale.t.KHGhHf);
+  obj[1] = registerAsset;
   obj[2] = function onPress() {
     let obj = stream(outer1_2[13]);
     const encodeStreamKeyResult = obj.encodeStreamKey(stream);
@@ -119,18 +125,18 @@ export const invite = function invite(isPrivate) {
     };
   }
   let obj = { label: null, icon: null, onPress: null };
-  const intl = _require("../../../intl/index.native.tsx").intl;
-  obj[0] = intl.string(_require("../../../intl/index.native.tsx").t.VINpSK);
-  obj[1] = require("../../../../_runtime/10762_registerAsset.js");
+  const intl = _getSystemLocale.intl;
+  obj[0] = intl.string(_getSystemLocale.t.VINpSK);
+  obj[1] = registerAsset;
   obj[2] = onPress;
   return obj;
 };
 export const rtcDebugPanel = function rtcDebugPanel(arg0) {
   const _require = arg0;
   const obj = { label: null, icon: null, onPress: null };
-  const intl = _require("../../../intl/index.native.tsx").intl;
-  obj[0] = intl.string(_require("../../../intl/index.native.tsx").t.X8bCMe);
-  obj[1] = require("../../../../_runtime/07828_registerAsset.js");
+  const intl = _getSystemLocale.intl;
+  obj[0] = intl.string(_getSystemLocale.t.X8bCMe);
+  obj[1] = registerAsset;
   obj[2] = function onPress() {
     callback();
     outer1_1(outer1_2[7]).hideActionSheet();
@@ -139,9 +145,9 @@ export const rtcDebugPanel = function rtcDebugPanel(arg0) {
 };
 export const shareActivityLogs = function shareActivityLogs() {
   let obj = { label: null, icon: null, onPress: null };
-  let intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.iQzQs3);
-  obj[1] = require("../../../../_runtime/07828_registerAsset.js");
+  let intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.iQzQs3);
+  obj[1] = registerAsset;
   obj[2] = function onPress() {
     let obj = callback(table[19]);
     const items = [closure_7];

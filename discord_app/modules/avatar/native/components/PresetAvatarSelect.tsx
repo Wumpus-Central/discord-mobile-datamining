@@ -1,3 +1,7 @@
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/avatar/native/components/PresetAvatarSelect.tsx
 import "noop";
 import { View } from "set";
@@ -22,107 +26,107 @@ function DefaultAvatarButton(selected) {
   let obj = { style: items, accessibilityRole: "button", accessibilityLabel, accessibilityState: { selected }, accessibilityHint: null, onPress: null, children: null };
   items[1] = prop;
   const intl = tmp3(1236).intl;
-  obj[4] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.vw2RsD);
+  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t.vw2RsD);
   obj[5] = onSelect;
   obj = { style: tmp.defaultAvatarButton, source: { uri: source } };
-  obj[6] = closure_4(require("../../../../components_native/common/FastImage.tsx"), obj);
-  return closure_4(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  obj[6] = closure_4(preload, obj);
+  return closure_4(PressableBase /* PressableBase */.PressableOpacity, obj);
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let items = [require("set"), require("set"), require("set"), require("set"), require("set"), require("set"), require("set"), require("set")];
 let obj = {
   avatar: require("set"),
   label() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["u/VENK"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["u/VENK"]);
   }
 };
 let items1 = [obj, , , , , , , ];
 obj = {
   avatar: require("set"),
   label() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["pBx+d8"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["pBx+d8"]);
   }
 };
 items1[1] = obj;
 obj = {
   avatar: require("set"),
   label() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.vbERmz);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.vbERmz);
   }
 };
 items1[2] = obj;
 items1[3] = {
   avatar: require("set"),
   label() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Ecxz3Z);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.Ecxz3Z);
   }
 };
 const obj1 = {
   avatar: require("set"),
   label() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Ecxz3Z);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.Ecxz3Z);
   }
 };
 items1[4] = {
   avatar: require("set"),
   label() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Jb8PYM);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.Jb8PYM);
   }
 };
 const obj2 = {
   avatar: require("set"),
   label() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Jb8PYM);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.Jb8PYM);
   }
 };
 items1[5] = {
   avatar: require("set"),
   label() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["3h0yoI"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["3h0yoI"]);
   }
 };
 const obj3 = {
   avatar: require("set"),
   label() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["3h0yoI"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["3h0yoI"]);
   }
 };
 items1[6] = {
   avatar: require("set"),
   label() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.frIpZ5);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.frIpZ5);
   }
 };
 const obj4 = {
   avatar: require("set"),
   label() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.frIpZ5);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.frIpZ5);
   }
 };
 items1[7] = {
   avatar: require("set"),
   label() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.zpfUeg);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.zpfUeg);
   }
 };
 const obj6 = { container: { display: "flex", alignItems: "center", flex: 1 }, buttonsContainer: { display: "flex", flexDirection: "row", marginTop: 20, justifyContent: "space-between" }, defaultAvatarButton: null, defaultAvatarContainer: null, defaultAvatarSelected: null };
 const obj5 = {
   avatar: require("set"),
   label() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.zpfUeg);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.zpfUeg);
   }
 };
 obj6[2] = { height: 48, width: 48, borderRadius: require("Themes").radii.xl };
@@ -140,9 +144,9 @@ export default function PresetAvatarSelect(arg0) {
   const tmp = callback3();
   let obj = { style: tmp.container, accessibilityRole: "list", children: null };
   obj = { variant: "text-sm/medium", color: "text-default", children: null };
-  let intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.yP28YL);
-  const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , ];
+  let intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.yP28YL);
+  const items = [callback(Text /* Text */.Text, obj), , ];
   obj = {
     style: tmp.buttonsContainer,
     children: items1.map((arg0) => {

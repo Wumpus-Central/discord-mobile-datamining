@@ -1,3 +1,4 @@
+import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
 // discord_app/modules/stickers/GuildStickersStore.tsx
 import _slicedToArray from "_slicedToArray";
 import { TypeTag } from "TypeTag";
@@ -50,7 +51,7 @@ function deriveStickerMetadata(arg0, tags) {
       }
       const str3 = guild.name;
     }
-    const byName = require("../emojis/UnicodeEmojis.tsx").getByName(str);
+    const byName = parseRawEmojiObject.getByName(str);
     if (null != byName) {
       const obj1 = { type: null, value: null };
       obj1[0] = tmp(4951).StickerMetadataTypes.CORRELATED_EMOJI;
@@ -58,7 +59,7 @@ function deriveStickerMetadata(arg0, tags) {
       items.push(obj1);
       byName.forEachDiversity((surrogates) => items.push({ type: items(outer1_2[4]).StickerMetadataTypes.CORRELATED_EMOJI, value: surrogates.surrogates }));
     }
-    const obj5 = require("../emojis/UnicodeEmojis.tsx");
+    const obj5 = parseRawEmojiObject;
   }
   return items;
 }

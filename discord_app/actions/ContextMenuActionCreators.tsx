@@ -1,3 +1,4 @@
+import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/ContextMenuActionCreators.tsx
 import { AppContext } from "ME";
 
@@ -135,8 +136,8 @@ function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
     const obj3 = obj(5284);
     const obj1 = { type: "CONTEXT_MENU_OPEN", contextMenu: null };
     obj1[1] = obj;
-    require("../Dispatcher.tsx").dispatch(obj1);
-    const obj6 = require("../Dispatcher.tsx");
+    dispatcher.dispatch(obj1);
+    const obj6 = dispatcher;
   } else {
     const currentTarget = stopPropagation.currentTarget;
   }

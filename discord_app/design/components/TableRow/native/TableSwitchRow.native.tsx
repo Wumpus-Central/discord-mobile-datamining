@@ -1,3 +1,7 @@
+import { set } from "../../../../utils/PlatformUtils.tsx";
+import { getNodeText } from "../../../utils/native.tsx";
+import { FormSwitch } from "../../Forms/native/FormSwitch.native.tsx";
+import { TableRowInner } from "TableRow.native.tsx";
 // discord_app/design/components/TableRow/native/TableSwitchRow.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -27,12 +31,12 @@ export const TableSwitchRow = function TableSwitchRow(value) {
   const variant = value.variant;
   const merged = Object.assign(value, Object.create(null));
   let callback;
-  let obj = require("../../../../utils/PlatformUtils.tsx") /* set */;
+  let obj = set /* set */;
   const tmp2 = callback2();
-  let obj1 = require("../../../utils/native.tsx") /* getNodeText */;
+  let obj1 = getNodeText /* getNodeText */;
   const nodeText = obj1.getNodeText(label);
   const isAndroidResult = obj.isAndroid();
-  const nodeText1 = require("../../../utils/native.tsx") /* getNodeText */.getNodeText(subLabel);
+  const nodeText1 = getNodeText /* getNodeText */.getNodeText(subLabel);
   const tmp8 = callback(React.useState(value), 2);
   callback = tmp8[1];
   const items = [value];
@@ -96,6 +100,6 @@ export const TableSwitchRow = function TableSwitchRow(value) {
       }
     });
   };
-  obj.trailing = closure_5(require("../../Forms/native/FormSwitch.native.tsx") /* FormSwitch */.FormSwitch, { "aria-hidden": true, value, onValueChange: handleOnPress, disabled });
-  return closure_5(require("TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
+  obj.trailing = closure_5(FormSwitch /* FormSwitch */.FormSwitch, { "aria-hidden": true, value, onValueChange: handleOnPress, disabled });
+  return closure_5(TableRowInner /* TableRowInner */.TableRow, obj);
 };

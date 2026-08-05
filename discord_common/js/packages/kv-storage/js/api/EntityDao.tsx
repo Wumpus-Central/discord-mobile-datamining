@@ -1,3 +1,5 @@
+import { TableId } from "../types/index.tsx";
+import { fromDatabaseTransaction } from "Table.tsx";
 // discord_common/js/packages/kv-storage/js/api/EntityDao.tsx
 let EntityDao;
 class EntityDao {
@@ -30,7 +32,7 @@ prototype["withoutLogging"] = function withoutLogging() {
   const obj = Object.create(EntityDao.prototype);
   obj.originalPrefix = originalPrefix;
   const items = [originalPrefix];
-  const table = new require("Table.tsx") /* fromDatabaseTransaction */.Table(items, this.table.tableId, this.table.database, false);
+  const table = new fromDatabaseTransaction /* fromDatabaseTransaction */.Table(items, this.table.tableId, this.table.database, false);
   obj.table = table;
   return obj;
 };
@@ -133,7 +135,7 @@ class EntityDaoTransaction {
 }
 const prototype2 = EntityDaoTransaction.prototype;
 EntityDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
-  const tableTransaction = new require("Table.tsx") /* fromDatabaseTransaction */.TableTransaction(prefix, tableId, transaction);
+  const tableTransaction = new fromDatabaseTransaction /* fromDatabaseTransaction */.TableTransaction(prefix, tableId, transaction);
   if (typeof EntityDaoTransaction !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -144,7 +146,7 @@ EntityDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransacti
 prototype2["put"] = function put(arg0) {
   let Replace = arg1;
   if (arg1 === undefined) {
-    Replace = require("../types/index.tsx") /* TableId */.ConflictOptions.Replace;
+    Replace = TableId /* TableId */.ConflictOptions.Replace;
   }
   const transaction = this.transaction;
   return transaction.put(EntityDao.cell(arg0, null), Replace);
@@ -152,7 +154,7 @@ prototype2["put"] = function put(arg0) {
 prototype2["putAll"] = function putAll(arr) {
   let Replace = arg1;
   if (arg1 === undefined) {
-    Replace = require("../types/index.tsx") /* TableId */.ConflictOptions.Replace;
+    Replace = TableId /* TableId */.ConflictOptions.Replace;
   }
   const transaction = this.transaction;
   return transaction.putAll(arr.map((arg0) => closure_2.cell(arg0, null)), Replace);

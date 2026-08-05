@@ -1,3 +1,4 @@
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/modules/forums/ForumGuidelinesManager.tsx
 import "initialize";
 
@@ -13,7 +14,7 @@ class ForumGuidelinesManager extends tmp2 {
 }
 const prototype = ForumGuidelinesManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   const value = Storage.get(formGuidelinesStorageKey);
   if (null != value) {
     const self = this;
@@ -23,13 +24,13 @@ prototype["_initialize"] = function _initialize() {
   }
 };
 prototype["_terminate"] = function _terminate() {
-  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   const result = Storage.set(formGuidelinesStorageKey, this.seenForumGuidelines);
 };
 prototype["markAsSeen"] = function markAsSeen(arg0) {
   const seenForumGuidelines = this.seenForumGuidelines;
   seenForumGuidelines.add(arg0);
-  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   const result = Storage.set(formGuidelinesStorageKey, this.seenForumGuidelines);
 };
 prototype["hasSeen"] = function hasSeen(arg0) {

@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/games/GameActionCreators.tsx
 import importDefaultResult from "start";
 import handleLoadMessages from "handleLoadMessages";
@@ -202,12 +203,12 @@ const batchInvocationManager = new require("start").BatchInvocationManager(funct
     return !handleLoadMessages.hasNoData(gameId);
   },
   onQueued(gameIds) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "GAME_FETCH", gameIds };
     return obj.dispatch(obj);
   },
   onCancelled(gameIds) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "GAME_FETCH_CANCELLED", gameIds };
     return obj.dispatch(obj);
   }

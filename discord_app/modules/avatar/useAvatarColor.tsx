@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/avatar/useAvatarColor.tsx
 import _slicedToArray from "_slicedToArray";
 import batchUpdates from "batchUpdates";
@@ -233,7 +234,7 @@ export default function useAvatarColor(arg0, arg1) {
   });
   dependencyMap = tmp;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  stateFromStores = _initialize.useStateFromStores(items, () => {
     let num = 1;
     if (flag) {
       num = 1;
@@ -319,7 +320,7 @@ export const useAvatarColors = function useAvatarColors(pendingAvatarSrc, PRIMAR
   });
   dependencyMap = tmp;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  stateFromStores = _initialize.useStateFromStores(items, () => {
     let num = 1;
     if (flag) {
       num = 1;

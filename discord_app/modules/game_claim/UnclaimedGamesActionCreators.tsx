@@ -1,3 +1,5 @@
+import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import { set } from "../../utils/Durations.tsx";
 // discord_app/modules/game_claim/UnclaimedGamesActionCreators.tsx
 import closure_3 from "initialize";
 import importDefaultResult from "getMap";
@@ -109,8 +111,8 @@ initialize = {
 };
 initialize = {
   backoff() {
-    let tmp = require("../../../discord_common/js/packages/backoff/Backoff.tsx");
-    tmp = new tmp(5 * require("../../utils/Durations.tsx").Millis.MINUTE);
+    let tmp = fails;
+    tmp = new tmp(5 * set.Millis.MINUTE);
     return tmp;
   },
   maxRetries: 10

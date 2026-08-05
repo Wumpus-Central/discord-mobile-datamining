@@ -1,3 +1,19 @@
+import { hasFlag } from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
+import { MediaPlayerManager } from "../../../components_native/common/NativePortalView.tsx";
+import { keys } from "../../../ConstantsIOS.tsx";
+import { PermissionOverwriteType } from "../../../flow/Server.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getSrcWithWidthAndHeight } from "../../../utils/native/ImageUtils.tsx";
+import { ContentHarmTypeChannel } from "../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
+import { getEligibleHarmTypesConfigsForContext } from "../../explicit_media_redaction/ObscuredMediaUtils.tsx";
+import { flattenComponents } from "../../interaction_components/InteractionComponentUtils.tsx";
+import { urlMatchesFileExtension } from "../../messages/MediaFormatTesters.tsx";
+import { frozen } from "../../messages/native/renderer/EmbedUtils.tsx";
+import { MediaGalleryItemType } from "../../messages/native/renderer/RowGeneratorTypes.tsx";
+import { transformToRowGeneratedComponent } from "../../messages/native/renderer/transformMessageComponents.tsx";
+import { getInitialParserState } from "../../messages/renderMessageMarkup.tsx";
+import { map } from "../../reanimated/native/useStateFromSharedValue.tsx";
 // discord_app/modules/media_viewer/native/MediaSourceUtil.tsx
 import presentAddedFriendToast from "presentAddedFriendToast";
 import { NativeModules } from "map";
@@ -13,7 +29,7 @@ function isValidImageAttachment(filename) {
     return false;
   } else {
     ({ height, width } = filename);
-    let tmp = require("../../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */.isImageFile(filename.filename) && null != height;
+    let tmp = urlMatchesFileExtension /* urlMatchesFileExtension */.isImageFile(filename.filename) && null != height;
     if (tmp) {
       tmp = height > 0;
     }
@@ -28,8 +44,8 @@ function isValidImageAttachment(filename) {
       if (tmp2) {
         let hasFlagResult = null != filename.flags;
         if (hasFlagResult) {
-          hasFlagResult = require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(filename.flags, constants.IS_THUMBNAIL);
-          const tmp5Result = require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+          hasFlagResult = hasFlag /* hasFlag */.hasFlag(filename.flags, constants.IS_THUMBNAIL);
+          const tmp5Result = hasFlag /* hasFlag */;
         }
         tmp2 = hasFlagResult;
       }
@@ -44,19 +60,19 @@ function extractMediaFromAttachment(width, closure_0, index, closure_02, arg4) {
     if (width.width > 0) {
       if (null != width.height) {
         if (width.height > 0) {
-          const enabledHarmTypesForMessage = require("../../explicit_media_redaction/ObscuredMediaUtils.tsx") /* getEligibleHarmTypesConfigsForContext */.getEnabledHarmTypesForMessage(closure_0);
-          const obj12 = require("../../explicit_media_redaction/ObscuredMediaUtils.tsx") /* getEligibleHarmTypesConfigsForContext */;
+          const enabledHarmTypesForMessage = getEligibleHarmTypesConfigsForContext /* getEligibleHarmTypesConfigsForContext */.getEnabledHarmTypesForMessage(closure_0);
+          const obj12 = getEligibleHarmTypesConfigsForContext /* getEligibleHarmTypesConfigsForContext */;
           let obj = { type: null, media: null };
-          obj[0] = require("../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx") /* ContentHarmTypeChannel */.ObscuredMediaTypes.Attachment;
+          obj[0] = ContentHarmTypeChannel /* ContentHarmTypeChannel */.ObscuredMediaTypes.Attachment;
           obj[1] = width;
-          const result = require("../../explicit_media_redaction/ObscuredMediaUtils.tsx") /* getEligibleHarmTypesConfigsForContext */.isMediaObscuredForHarmTypes(obj, enabledHarmTypesForMessage);
-          const obj13 = require("../../explicit_media_redaction/ObscuredMediaUtils.tsx") /* getEligibleHarmTypesConfigsForContext */;
-          const isVideoFileResult = require("../../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */.isVideoFile(width.filename);
+          const result = getEligibleHarmTypesConfigsForContext /* getEligibleHarmTypesConfigsForContext */.isMediaObscuredForHarmTypes(obj, enabledHarmTypesForMessage);
+          const obj13 = getEligibleHarmTypesConfigsForContext /* getEligibleHarmTypesConfigsForContext */;
+          const isVideoFileResult = urlMatchesFileExtension /* urlMatchesFileExtension */.isVideoFile(width.filename);
           if (null != width.proxy_url) {
             if ("" !== width.proxy_url) {
               let url = width.proxy_url;
             }
-            obj = require("../../../utils/native/ImageUtils.tsx");
+            obj = getSrcWithWidthAndHeight;
             ({ width, height } = width);
             let str2;
             if (isVideoFileResult) {
@@ -161,7 +177,7 @@ function extractMediaFromAttachment(width, closure_0, index, closure_02, arg4) {
             }
           }
           url = width.url;
-          const obj15 = require("../../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */;
+          const obj15 = urlMatchesFileExtension /* urlMatchesFileExtension */;
         }
       }
     }
@@ -224,16 +240,16 @@ function extractMediaFromEmbed(image, closure_0, contentMessage, arg3, closure_0
       } else if (null != image.content_scan_version) {
         content_scan_version = image.content_scan_version;
       }
-      let obj = require("../../../utils/native/ImageUtils.tsx");
+      let obj = getSrcWithWidthAndHeight;
       const mobileOptimizedSrc = obj.getMobileOptimizedSrc(str, thumbnail.width, thumbnail.height);
       obj = { contentMessage: null };
       obj[0] = contentMessage;
-      const hasSpoilerEmbeds = require("../../messages/renderMessageMarkup.tsx")(closure_0, obj).hasSpoilerEmbeds;
-      let obj2 = require("../../explicit_media_redaction/ObscuredMediaUtils.tsx") /* getEligibleHarmTypesConfigsForContext */;
+      const hasSpoilerEmbeds = getInitialParserState(closure_0, obj).hasSpoilerEmbeds;
+      let obj2 = getEligibleHarmTypesConfigsForContext /* getEligibleHarmTypesConfigsForContext */;
       const enabledHarmTypesForMessage = obj2.getEnabledHarmTypesForMessage(closure_0);
-      let obj3 = require("../../explicit_media_redaction/ObscuredMediaUtils.tsx") /* getEligibleHarmTypesConfigsForContext */;
+      let obj3 = getEligibleHarmTypesConfigsForContext /* getEligibleHarmTypesConfigsForContext */;
       obj = { type: null, media: null };
-      obj[0] = require("../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx") /* ContentHarmTypeChannel */.ObscuredMediaTypes.Embed;
+      obj[0] = ContentHarmTypeChannel /* ContentHarmTypeChannel */.ObscuredMediaTypes.Embed;
       obj[1] = image;
       const result = obj3.isMediaObscuredForHarmTypes(obj, enabledHarmTypesForMessage);
       if ("title" in image) {
@@ -258,7 +274,7 @@ function extractMediaFromEmbed(image, closure_0, contentMessage, arg3, closure_0
         url = video.url;
       }
       let url3 = tmp16Result.getEffectiveVideoProvider(name, url);
-      const result1 = require("../../messages/native/renderer/EmbedUtils.tsx") /* frozen */.shouldPlayVideoInline(url3);
+      const result1 = frozen /* frozen */.shouldPlayVideoInline(url3);
       let tmp26 = result1;
       if (result1) {
         tmp26 = null != image.video;
@@ -484,7 +500,7 @@ function extractMediaFromEmbed(image, closure_0, contentMessage, arg3, closure_0
         const tmp13Result = tmp13(1473);
       }
       tmp13 = importDefault;
-      const tmp16Result1 = require("../../messages/native/renderer/EmbedUtils.tsx") /* frozen */;
+      const tmp16Result1 = frozen /* frozen */;
     } else {
       ({ proxyURL, url } = image.video);
       let str3 = url;
@@ -534,12 +550,12 @@ function toMediaSourceFromUnfurledMedia(id, guild_id, media, description, spoile
   let proxyUrl2;
   let width;
   let width2;
-  let obj = require("../../messages/native/renderer/transformMessageComponents.tsx") /* transformToRowGeneratedComponent */;
+  let obj = transformToRowGeneratedComponent /* transformToRowGeneratedComponent */;
   const unfurledMediaItemType = obj.getUnfurledMediaItemType(media);
-  if (unfurledMediaItemType === require("../../messages/native/renderer/RowGeneratorTypes.tsx") /* MediaGalleryItemType */.MediaGalleryItemType.VISUAL_PLACEHOLDER) {
+  if (unfurledMediaItemType === MediaGalleryItemType /* MediaGalleryItemType */.MediaGalleryItemType.VISUAL_PLACEHOLDER) {
     return null;
   } else {
-    const obj8 = require("../../../utils/native/ImageUtils.tsx");
+    const obj8 = getSrcWithWidthAndHeight;
     ({ proxyUrl: proxyUrl2, width } = media);
     if (width == null) {
       width = 0;
@@ -607,12 +623,12 @@ function toMediaSourceFromUnfurledMedia(id, guild_id, media, description, spoile
   }
 }
 function handleDownloadError() {
-  let obj = require("../../../actions/native/AlertActionCreators.tsx");
+  let obj = AlertActionCreators;
   obj = { title: null, body: null, isDismissable: true };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.cV3alD);
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.r4Zjzv);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.cV3alD);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.r4Zjzv);
   obj.show(obj);
 }
 ({ MessageAttachmentFlags: c5, WEBP_RE_IOS: closure_6 } = ME);
@@ -635,8 +651,8 @@ export const isValidVideoAttachment = function isValidVideoAttachment(filename) 
   if (tmp) {
     let isVideoFileResult = null != filename;
     if (isVideoFileResult) {
-      isVideoFileResult = require("../../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */.isVideoFile(filename.filename);
-      const obj = require("../../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */;
+      isVideoFileResult = urlMatchesFileExtension /* urlMatchesFileExtension */.isVideoFile(filename.filename);
+      const obj = urlMatchesFileExtension /* urlMatchesFileExtension */;
     }
     if (isVideoFileResult) {
       isVideoFileResult = null != filename.proxy_url;
@@ -656,8 +672,8 @@ export const isThumbnailAttachment = function isThumbnailAttachment(flags) {
   if (tmp) {
     let hasFlagResult = null != flags.flags;
     if (hasFlagResult) {
-      hasFlagResult = require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(flags.flags, constants.IS_THUMBNAIL);
-      const obj = require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+      hasFlagResult = hasFlag /* hasFlag */.hasFlag(flags.flags, constants.IS_THUMBNAIL);
+      const obj = hasFlag /* hasFlag */;
     }
     tmp = hasFlagResult;
   }
@@ -716,9 +732,9 @@ export const extractMediaFromMessageComponents = function extractMediaFromMessag
     return [];
   } else {
     let items = [];
-    const obj2 = require("../../interaction_components/InteractionComponentUtils.tsx") /* flattenComponents */;
+    const obj2 = flattenComponents /* flattenComponents */;
     const items1 = [];
-    HermesBuiltin.arraySpread(require("../../interaction_components/InteractionComponentUtils.tsx") /* flattenComponents */.flattenComponents(contentMessage.components).values(), 0);
+    HermesBuiltin.arraySpread(flattenComponents /* flattenComponents */.flattenComponents(contentMessage.components).values(), 0);
     const iter = items1[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
@@ -728,7 +744,7 @@ export const extractMediaFromMessageComponents = function extractMediaFromMessag
       let tmp6 = require;
       let tmp7 = dependencyMap;
       let tmp8 = dependencyMap;
-      if (require("../../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.MEDIA_GALLERY === type) {
+      if (PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.MEDIA_GALLERY === type) {
         let tmp9 = nextResult;
         items = tmp4.items;
         let tmp10 = items;
@@ -780,7 +796,7 @@ export const extractMediaSourcesFromEmbed = function extractMediaSourcesFromEmbe
   const importDefault = images;
   const dependencyMap = index;
   let presentAddedFriendToast = guild_id;
-  const hasSpoilerEmbeds = require("../../messages/renderMessageMarkup.tsx")(arg0, { contentMessage }).hasSpoilerEmbeds;
+  const hasSpoilerEmbeds = getInitialParserState(arg0, { contentMessage }).hasSpoilerEmbeds;
   images = images.images;
   if (images == null) {
     let items = [images.image];
@@ -843,7 +859,7 @@ export const extractMediaSourcesFromEmbed = function extractMediaSourcesFromEmbe
 export const extractMediaSourcesFromComponent = function extractMediaSourcesFromComponent(id, components, guild_id, tmp10Result3, componentMediaIndex) {
   const _require = id;
   let closure_1 = guild_id;
-  let obj = _require("../../interaction_components/InteractionComponentUtils.tsx");
+  let obj = _flattenComponents;
   const value = obj.flattenComponents(components).get(tmp10Result3);
   if (null == value) {
     return null;
@@ -915,7 +931,7 @@ export const extractMediaSourcesFromMessage = function extractMediaSourcesFromMe
           if (isVideoFileResult) {
             let tmp7 = require;
             let tmp8 = dependencyMap;
-            let obj = require("../../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */;
+            let obj = urlMatchesFileExtension /* urlMatchesFileExtension */;
             isVideoFileResult = obj.isVideoFile(tmp.filename);
           }
           if (isVideoFileResult) {
@@ -930,7 +946,7 @@ export const extractMediaSourcesFromMessage = function extractMediaSourcesFromMe
         if (hasFlagResult) {
           let tmp19 = require;
           let tmp20 = dependencyMap;
-          let obj2 = require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+          let obj2 = hasFlag /* hasFlag */;
           let tmp21 = constants;
           hasFlagResult = obj2.hasFlag(tmp.flags, constants.IS_THUMBNAIL);
         }
@@ -999,7 +1015,7 @@ export const getSelectedMediaSource = function getSelectedMediaSource(mediaViewe
 };
 export const useSelectedMediaSource = function useSelectedMediaSource(syncer) {
   let closure_0 = syncer;
-  const tmp = require("../../reanimated/native/useStateFromSharedValue.tsx")(syncer.index);
+  const tmp = map(syncer.index);
   importDefault = tmp;
   const items = [syncer.sources, tmp];
   const items1 = [
@@ -1114,7 +1130,7 @@ export const getYoutubeVideoIdFromURI = function getYoutubeVideoIdFromURI(uri) {
 export const VideoSourceType = obj;
 export const getVideoSourceType = function getVideoSourceType(source) {
   if (null != source.videoURI) {
-    const obj = require("../../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */;
+    const obj = urlMatchesFileExtension /* urlMatchesFileExtension */;
     if (obj.isWebPlayerVideoUrl(source.videoURI)) {
       let PORTAL = obj.WEB_FILE_IFRAME;
     }
@@ -1124,7 +1140,7 @@ export const getVideoSourceType = function getVideoSourceType(source) {
     if (!obj2.isPortalExpired(source.portal)) {
       PORTAL = obj.PORTAL;
     }
-    obj2 = require("../../../components_native/common/NativePortalView.tsx") /* MediaPlayerManager */;
+    obj2 = MediaPlayerManager /* MediaPlayerManager */;
   }
   if (null == source.embedURI) {
     const DEFAULT = obj.DEFAULT;
@@ -1148,8 +1164,8 @@ export const supportOverlayVideoControls = function supportOverlayVideoControls(
 export const isAnimatedWebpSource = function isAnimatedWebpSource(sourceURI) {
   let result = null != sourceURI.sourceURI && null != sourceURI.uri;
   if (result) {
-    result = require("../../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */.urlMatchesFileExtension(sourceURI.sourceURI, closure_6);
-    const obj = require("../../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */;
+    result = urlMatchesFileExtension /* urlMatchesFileExtension */.urlMatchesFileExtension(sourceURI.sourceURI, closure_6);
+    const obj = urlMatchesFileExtension /* urlMatchesFileExtension */;
   }
   if (result) {
     const _URL = URL;
@@ -1162,8 +1178,8 @@ export const isAnimatedWebpSource = function isAnimatedWebpSource(sourceURI) {
 export const isAnimatedAvifSource = function isAnimatedAvifSource(sourceURI) {
   let result = null != sourceURI.sourceURI && null != sourceURI.uri;
   if (result) {
-    result = require("../../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */.urlMatchesFileExtension(sourceURI.sourceURI, closure_7);
-    const obj = require("../../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */;
+    result = urlMatchesFileExtension /* urlMatchesFileExtension */.urlMatchesFileExtension(sourceURI.sourceURI, closure_7);
+    const obj = urlMatchesFileExtension /* urlMatchesFileExtension */;
   }
   if (result) {
     const _URL = URL;
@@ -1174,10 +1190,10 @@ export const isAnimatedAvifSource = function isAnimatedAvifSource(sourceURI) {
   return result;
 };
 export const isGIFSource = function isGIFSource(sourceURI) {
-  return require("../../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */.urlMatchesFileExtension(sourceURI.sourceURI, require("../../../ConstantsIOS.tsx") /* keys */.GIF_RE_IOS);
+  return urlMatchesFileExtension /* urlMatchesFileExtension */.urlMatchesFileExtension(sourceURI.sourceURI, keys /* keys */.GIF_RE_IOS);
 };
 export const isAnimatedImageSource = function isAnimatedImageSource(source) {
-  let result = require("../../messages/MediaFormatTesters.tsx") /* urlMatchesFileExtension */.urlMatchesFileExtension(source.sourceURI, require("../../../ConstantsIOS.tsx") /* keys */.GIF_RE_IOS);
+  let result = urlMatchesFileExtension /* urlMatchesFileExtension */.urlMatchesFileExtension(source.sourceURI, keys /* keys */.GIF_RE_IOS);
   if (!result) {
     let result1 = null != source.sourceURI && null != source.uri;
     if (result1) {

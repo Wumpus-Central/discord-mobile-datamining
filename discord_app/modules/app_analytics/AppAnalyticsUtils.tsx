@@ -1,3 +1,7 @@
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { set } from "../../utils/Durations.tsx";
+import { hasPendingMemberAction } from "../guild_onboarding_home/hasPendingMemberAction.tsx";
+import { Presets } from "../notifications/settings/utils/notificationSettingsPresetUtils.tsx";
 // discord_app/modules/app_analytics/AppAnalyticsUtils.tsx
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
 import fetchFingerprint from "fetchFingerprint";
@@ -142,7 +146,7 @@ function trackWithMetadata(IAR_MODAL_OPEN, fileSizeLimitEventProperties, hasItem
     flag = false;
   }
   let track = importDefault;
-  let obj1 = require("../../utils/AnalyticsUtils.tsx");
+  let obj1 = expandEventProperties;
   if (!obj1.isThrottled(IAR_MODAL_OPEN)) {
     let tmp2 = !("location" in obj);
     if (!tmp2) {
@@ -325,7 +329,7 @@ export const getChannelOpenedMetadata = function getChannelOpenedMetadata(select
         const merged = Object.assign(tmp7);
         return obj1;
       } else {
-        snapshot = snapshot.getSnapshot(selectedChannelId, 10 * require("../../utils/Durations.tsx").Millis.SECOND);
+        snapshot = snapshot.getSnapshot(selectedChannelId, 10 * set.Millis.SECOND);
         const obj3 = { channel_id: null, channel_was_unread: null, channel_mention_count: null, channel_is_muted: null, channel_is_nsfw: null, channel_is_spoiler: null, channel_resolved_unread_setting: null, channel_preset: null, guild_id: null, guild_was_unread: null, guild_mention_count: null, guild_is_muted: null, guild_resolved_unread_setting: null, guild_preset: null, parent_id: null, parent_channel_type: null, has_pending_member_action: null, can_send_message: null, is_app_dm: false };
         obj3[0] = selectedChannelId;
         ({ unread: obj6[1], mentionCount: obj6[2] } = snapshot);
@@ -334,17 +338,17 @@ export const getChannelOpenedMetadata = function getChannelOpenedMetadata(select
         obj3[5] = channel.isSpoilerChannel();
         obj3[6] = updateUserGuildSettingsInternal.resolveUnreadSetting(channel);
         const unreadSetting = updateUserGuildSettingsInternal.resolveUnreadSetting(channel);
-        obj3[7] = require("../notifications/settings/utils/notificationSettingsPresetUtils.tsx") /* Presets */.presetFromSettings(unreadSetting, updateUserGuildSettingsInternal.resolvedMessageNotifications(channel));
+        obj3[7] = Presets /* Presets */.presetFromSettings(unreadSetting, updateUserGuildSettingsInternal.resolvedMessageNotifications(channel));
         obj3[8] = channel.guild_id;
         ({ guildUnread: obj6[9], guildMentionCount: obj6[10] } = snapshot);
         obj3[11] = updateUserGuildSettingsInternal.isMuted(channel.guild_id);
         obj3[12] = updateUserGuildSettingsInternal.resolveGuildUnreadSetting(guild);
-        const obj7 = require("../notifications/settings/utils/notificationSettingsPresetUtils.tsx") /* Presets */;
+        const obj7 = Presets /* Presets */;
         const guildUnreadSetting = updateUserGuildSettingsInternal.resolveGuildUnreadSetting(guild);
-        obj3[13] = require("../notifications/settings/utils/notificationSettingsPresetUtils.tsx") /* Presets */.presetFromSettings(guildUnreadSetting, updateUserGuildSettingsInternal.getMessageNotifications(channel.guild_id));
+        obj3[13] = Presets /* Presets */.presetFromSettings(guildUnreadSetting, updateUserGuildSettingsInternal.getMessageNotifications(channel.guild_id));
         ({ parent_id: obj6[14], parentChannelThreadType: obj6[15] } = channel);
-        const obj8 = require("../notifications/settings/utils/notificationSettingsPresetUtils.tsx") /* Presets */;
-        obj3[16] = require("../guild_onboarding_home/hasPendingMemberAction.tsx") /* hasPendingMemberAction */.hasPendingMemberAction(channel.guild_id, selectedChannelId);
+        const obj8 = Presets /* Presets */;
+        obj3[16] = hasPendingMemberAction /* hasPendingMemberAction */.hasPendingMemberAction(channel.guild_id, selectedChannelId);
         obj3[17] = store3.can(constants3.SEND_MESSAGES, channel);
         return obj3;
       }

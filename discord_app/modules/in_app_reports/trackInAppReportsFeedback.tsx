@@ -1,3 +1,4 @@
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/in_app_reports/trackInAppReportsFeedback.tsx
 import { AnalyticEvents } from "ME";
 
@@ -16,5 +17,5 @@ export default function trackInAppReportsFeedback(dont_show_again) {
   if (rating === undefined) {
     rating = null;
   }
-  require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.IAR_FEEDBACK_SUBMITTED, { reason: problem, report_type: reportType, report_id: reportId, rating, feedback, dont_show_again: dont_show_again.dontShowAgain });
+  expandEventProperties.track(AnalyticEvents.IAR_FEEDBACK_SUBMITTED, { reason: problem, report_type: reportType, report_id: reportId, rating, feedback, dont_show_again: dont_show_again.dontShowAgain });
 };

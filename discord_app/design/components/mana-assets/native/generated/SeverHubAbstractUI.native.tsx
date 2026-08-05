@@ -1,3 +1,5 @@
+import { metadata } from "../../../../../../discord_assets/assets/mana/asset-library/generated/SeverHubAbstractUI-2x.png.js";
+import { preload } from "../../../../../components_native/common/FastImage.tsx";
 // discord_app/design/components/mana-assets/native/generated/SeverHubAbstractUI.native.tsx
 import { jsx } from "jsxProd";
 
@@ -22,7 +24,7 @@ export const SeverHubAbstractUI = function SeverHubAbstractUI(width) {
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = require("../../../../../../discord_assets/assets/mana/asset-library/generated/SeverHubAbstractUI-2x.png.js");
+  obj[0] = metadata;
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];
@@ -30,5 +32,5 @@ export const SeverHubAbstractUI = function SeverHubAbstractUI(width) {
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(require("../../../../../components_native/common/FastImage.tsx"), { width: num * num3, height: num2 * num3 });
+  return jsx(preload, { width: num * num3, height: num2 * num3 });
 };

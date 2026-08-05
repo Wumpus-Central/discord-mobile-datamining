@@ -1,3 +1,5 @@
+import { registerAsset } from "../../../../../_runtime/08610_registerAsset.js";
+import { CollapsingText } from "../../../../design/components/Button/native/BaseTextButton.native.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/ShinyButton.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -31,7 +33,7 @@ export default function ShinyButton(style) {
   if (!loading) {
     obj = { size: null, source: null, style: null };
     obj[0] = tmp4(1297).Icon.Sizes.REFRESH_SMALL_16;
-    obj[1] = require("../../../../../_runtime/08610_registerAsset.js");
+    obj[1] = registerAsset;
     const items1 = [tmp2.sparkleIcon, ];
     if (disabled) {
       disabled = tmp2.disabled;
@@ -42,5 +44,5 @@ export default function ShinyButton(style) {
   }
   obj[4] = tmp3Result;
   const merged1 = Object.assign(merged);
-  return jsx(require("../../../../design/components/Button/native/BaseTextButton.native.tsx") /* CollapsingText */.BaseTextButton, { onPress, pillStyle: items, loading, disabled, icon: null });
+  return jsx(CollapsingText /* CollapsingText */.BaseTextButton, { onPress, pillStyle: items, loading, disabled, icon: null });
 };

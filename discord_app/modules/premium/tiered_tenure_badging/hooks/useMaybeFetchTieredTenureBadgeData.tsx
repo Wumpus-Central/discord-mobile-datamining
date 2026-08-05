@@ -1,3 +1,6 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useMountLayoutEffect } from "../../../../hooks/useMountEffect.tsx";
+import { useIsPremiumSubscriber } from "../../useIsPremiumSubscriber.tsx";
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useMaybeFetchTieredTenureBadgeData.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PremiumTypes } from "GuildFeatures";
@@ -7,10 +10,10 @@ const result = require("initialize").fileFinishedImporting("modules/premium/tier
 
 export const useMaybeFetchTieredTenureBadgeData = function useMaybeFetchTieredTenureBadgeData() {
   const items = [mergeGuildAvatar];
-  _require = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
-  const importDefault = _require("../../useIsPremiumSubscriber.tsx").useIsPremiumSubscriber(PremiumTypes.TIER_2);
-  require("../../../../hooks/useMountEffect.tsx")(() => {
+  _require = _initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = _initialize;
+  const importDefault = _useIsPremiumSubscriber.useIsPremiumSubscriber(PremiumTypes.TIER_2);
+  useMountLayoutEffect(() => {
     let id;
     if (closure_0 != null) {
       id = tmp.id;

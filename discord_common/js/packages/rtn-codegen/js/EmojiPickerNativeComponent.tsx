@@ -1,3 +1,4 @@
+import { renderElement } from "../../../../../_runtime/00114_renderElement.js";
 // discord_common/js/packages/rtn-codegen/js/EmojiPickerNativeComponent.tsx
 import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
@@ -8,15 +9,15 @@ const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onStick
 obj[2] = obj;
 obj = {
   refreshEmojis(current) {
-    require("../../../../../_runtime/00114_renderElement.js") /* renderElement */.dispatchCommand(current, "refreshEmojis", []);
+    renderElement /* renderElement */.dispatchCommand(current, "refreshEmojis", []);
   },
   scrollingEnabled(current, arg1) {
     const items = [arg1];
-    require("../../../../../_runtime/00114_renderElement.js") /* renderElement */.dispatchCommand(current, "scrollingEnabled", items);
+    renderElement /* renderElement */.dispatchCommand(current, "scrollingEnabled", items);
   },
   scrollToHeaderIndex(arg0, arg1, arg2) {
     const items = [arg1, arg2];
-    require("../../../../../_runtime/00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "scrollToHeaderIndex", items);
+    renderElement /* renderElement */.dispatchCommand(arg0, "scrollToHeaderIndex", items);
   }
 };
 const value = setRuntimeConfigProvider.get("EmojiPickerView", () => obj);

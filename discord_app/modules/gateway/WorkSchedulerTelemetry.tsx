@@ -1,3 +1,4 @@
+import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/gateway/WorkSchedulerTelemetry.tsx
 import _slicedToArray from "_slicedToArray";
 
@@ -26,13 +27,13 @@ class WorkSchedulerTelemetry {
 }
 const prototype = WorkSchedulerTelemetry.prototype;
 prototype["reset"] = function reset() {
-  this._timeTracking = require("../../../_runtime/00012_apply.js") /* apply */.cloneDeep(closure_3);
-  const obj = require("../../../_runtime/00012_apply.js") /* apply */;
-  this._timingStats = require("../../../_runtime/00012_apply.js") /* apply */.cloneDeep(closure_4);
-  const obj2 = require("../../../_runtime/00012_apply.js") /* apply */;
-  this._measurements = require("../../../_runtime/00012_apply.js") /* apply */.cloneDeep(closure_5);
-  const obj3 = require("../../../_runtime/00012_apply.js") /* apply */;
-  this._eventCounts = require("../../../_runtime/00012_apply.js") /* apply */.cloneDeep(closure_6);
+  this._timeTracking = apply /* apply */.cloneDeep(closure_3);
+  const obj = apply /* apply */;
+  this._timingStats = apply /* apply */.cloneDeep(closure_4);
+  const obj2 = apply /* apply */;
+  this._measurements = apply /* apply */.cloneDeep(closure_5);
+  const obj3 = apply /* apply */;
+  this._eventCounts = apply /* apply */.cloneDeep(closure_6);
 };
 prototype["clearTime"] = function clearTime(arg0) {
   this._timeTracking[arg0] = null;

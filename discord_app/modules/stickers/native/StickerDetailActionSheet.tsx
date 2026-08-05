@@ -1,3 +1,6 @@
+import { useStickerPackCategories } from "../StickersHooks.tsx";
+import { openStickerPackDetailActionSheet } from "openStickerPackDetailActionSheet.tsx";
+import { hideStickerDetailActionSheet } from "showStickerDetailActionSheet.tsx";
 // discord_app/modules/stickers/native/StickerDetailActionSheet.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import explicitContentFromProto from "explicitContentFromProto";
@@ -112,7 +115,7 @@ function StandardStickerDetail(chatInputRef) {
       const intl = tmp2(tmp3[19]).intl;
       obj6[1] = intl.string(tmp2(tmp3[19]).t.GPy3Ar);
       obj6[2] = function onPress() {
-        let obj = require("showStickerDetailActionSheet.tsx") /* hideStickerDetailActionSheet */;
+        let obj = hideStickerDetailActionSheet /* hideStickerDetailActionSheet */;
         const result = obj.hideStickerDetailActionSheet();
         if (null != stateFromStores) {
           if (stateFromStores1) {
@@ -123,9 +126,9 @@ function StandardStickerDetail(chatInputRef) {
           }
         }
         obj = { analyticsLocation: memo, analyticsPopoutType: null, stickerPack: null };
-        obj[1] = require("openStickerPackDetailActionSheet.tsx") /* openStickerPackDetailActionSheet */.AnalyticsPopoutType.STICKER_PACK_UPSELL;
+        obj[1] = openStickerPackDetailActionSheet /* openStickerPackDetailActionSheet */.AnalyticsPopoutType.STICKER_PACK_UPSELL;
         obj[2] = stateFromStores;
-        require("openStickerPackDetailActionSheet.tsx")(obj);
+        openStickerPackDetailActionSheet(obj);
       };
       tmp15Result = tmp15(tmp2(tmp3[26]).Button, obj6);
     }
@@ -691,7 +694,7 @@ export default importAllResult.memo(function StickerDetailActionSheet(chatInputR
   let channel;
   let renderableSticker;
   ({ renderableSticker, channel } = chatInputRef);
-  let obj = require("../StickersHooks.tsx") /* useStickerPackCategories */;
+  let obj = useStickerPackCategories /* useStickerPackCategories */;
   const tmp4 = callback(obj.useStickerForRenderableSticker(renderableSticker, true), 2);
   const first = tmp4[0];
   let tmp6Result = callback2(closure_7, { size: "large" });

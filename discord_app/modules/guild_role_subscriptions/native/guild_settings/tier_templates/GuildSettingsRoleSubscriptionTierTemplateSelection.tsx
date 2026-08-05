@@ -1,3 +1,4 @@
+import { useGroupListingsFetchContext } from "../../../GroupListingsFetchContext.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildSettingsRoleSubscriptionTierTemplateSelection.tsx
 import _slicedToArray from "_slicedToArray";
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
@@ -212,5 +213,5 @@ export default function GuildSettingsRoleSubscriptionTierTemplateSelection(guild
   obj = {};
   const merged = Object.assign(guildId);
   obj[1] = callback(GuildSettingsRoleSubscriptionTierTemplateSelectionComponent, obj);
-  return callback(require("../../../GroupListingsFetchContext.tsx") /* useGroupListingsFetchContext */.GroupListingsFetchContextProvider, obj);
+  return callback(useGroupListingsFetchContext /* useGroupListingsFetchContext */.GroupListingsFetchContextProvider, obj);
 };

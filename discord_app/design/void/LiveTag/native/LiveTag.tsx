@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { Text } from "../../../components/Text/native/Text.tsx";
 // discord_app/design/void/LiveTag/native/LiveTag.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -30,8 +32,8 @@ export default function LiveTag(arg0) {
   items = [tmp.tag, style];
   obj = { variant: "text-xs/bold", style: items1, lineClamp: 1, allowFontScaling, children: null };
   items1 = [tmp.tagText, textStyle];
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[4] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.dI3q4h).toUpperCase();
-  obj[1] = jsx(require("../../../components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-xs/bold", style: items1, lineClamp: 1, allowFontScaling, children: null });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t.dI3q4h).toUpperCase();
+  obj[1] = jsx(Text /* Text */.Text, { variant: "text-xs/bold", style: items1, lineClamp: 1, allowFontScaling, children: null });
   return <View variant="text-xs/bold" style={items1} lineClamp={1} allowFontScaling={allowFontScaling}>{null}</View>;
 };

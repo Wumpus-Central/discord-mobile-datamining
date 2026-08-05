@@ -1,3 +1,4 @@
+import { getRoleIconData } from "../RoleIconUtils.tsx";
 // discord_app/modules/guild_boosting/native/RoleIconUtils.tsx
 import noop from "noop";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
@@ -80,7 +81,7 @@ export const getRoleIcon = function getRoleIcon(roleId) {
     if (null != roleId) {
       role = role.getRole(guild.id, roleId);
       if (null != role) {
-        let obj = require("../RoleIconUtils.tsx") /* getRoleIconData */;
+        let obj = getRoleIconData /* getRoleIconData */;
         if (obj.canGuildUseRoleIcons(guild, role)) {
           let roleIconData = tmp4(5635).getRoleIconData(role);
           if (roleIconData == null) {

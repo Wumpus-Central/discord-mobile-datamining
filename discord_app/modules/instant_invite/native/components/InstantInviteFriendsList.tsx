@@ -1,3 +1,7 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/instant_invite/native/components/InstantInviteFriendsList.tsx
 import noop from "noop";
 import { Fonts } from "ME";
@@ -17,12 +21,12 @@ function FriendsEmptyComponent() {
   const tmp = createCacheKey();
   let obj = { children: null };
   obj = { title: null, body: null, titleStyle: null, bodyStyle: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.dz4UlO);
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.MBQBI7);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.dz4UlO);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.MBQBI7);
   ({ emptyTitle: obj2[2], emptyBody: obj2[3] } = tmp);
-  const items = [callback(require("../../../../design/void/native.tsx") /* Button */.RefreshEmptyState, obj), ];
+  const items = [callback(Button /* Button */.RefreshEmptyState, obj), ];
   obj = {
     onPress() {
       let obj = callback2(4253);
@@ -39,15 +43,15 @@ function FriendsEmptyComponent() {
     hitSlop: null,
     children: null
   };
-  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.a7FVbE);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.a7FVbE);
   obj[3] = { top: 8, left: 8, bottom: 8, right: 8 };
   const obj1 = { style: items1, variant: "text-sm/semibold", color: "text-link", children: null };
   items1 = [tmp.goToFriendsLink];
-  const intl4 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[3] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.a7FVbE);
-  obj[4] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
-  items[1] = callback(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[3] = intl4.string(getSystemLocale /* getSystemLocale */.t.a7FVbE);
+  obj[4] = callback(Text /* Text */.Text, obj1);
+  items[1] = callback(PressableBase /* PressableBase */.PressableOpacity, obj);
   obj[0] = items;
   return callback2(closure_5, obj);
 }

@@ -1,3 +1,7 @@
+import { useEmbeddedApps } from "../../activities/useEmbeddedAppsForChannel.tsx";
+import { useStartTime } from "../../channel/useVoiceChannelStartTime.tsx";
+import { ActiveTimestamp } from "../../icymi/native/content_inventory/Badges.tsx";
+import { showChannelBadge } from "../showChannelBadge.tsx";
 // discord_app/modules/guild_sidebar/native/ChannelInfo.tsx
 import "useStageHasMedia";
 import guildHasCommunity from "guildHasCommunity";
@@ -56,7 +60,7 @@ function LimitAndDurationInfo(channel) {
   return tmp6Result;
 }
 function DurationInfo(channel) {
-  let obj = require("../../channel/useVoiceChannelStartTime.tsx") /* useStartTime */;
+  let obj = useStartTime /* useStartTime */;
   const startTime = obj.useStartTime(channel.channel);
   let tmp5 = null;
   if (null != startTime) {
@@ -65,7 +69,7 @@ function DurationInfo(channel) {
     obj[0] = startTime;
     obj[0] = obj;
     obj[1] = tmp.activeTimestamp;
-    tmp5 = jsx(require("../../icymi/native/content_inventory/Badges.tsx") /* ActiveTimestamp */.ActiveTimestamp, { start: null });
+    tmp5 = jsx(ActiveTimestamp /* ActiveTimestamp */.ActiveTimestamp, { start: null });
   }
   return tmp5;
 }
@@ -91,10 +95,10 @@ export default function ChannelInfo(channel) {
   const items = [createGuildRecordFromRust, generateOldThreadCutoff, guildHasCommunity];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ guild: outer1_4.getGuild(channel.guild_id), mentionsCount: outer1_6.getMentionCount(channel.id), isMentionLowImportance: outer1_6.getIsMentionLowImportance(channel.id), isNewChannel: outer1_3.shouldIndicateNewChannel(channel.guild_id, channel.id) }));
   ({ guild, mentionsCount, isNewChannel } = stateFromStoresObject);
-  const tmp5 = require("../../activities/useEmbeddedAppsForChannel.tsx")(channel);
+  const tmp5 = useEmbeddedApps(channel);
   let obj1 = channel(8214);
   const postsWithUnreadsCount = obj1.useUnreadThreadsCountForParent(channel.guild_id, channel.id);
-  if (require("../showChannelBadge.tsx")({ mentionsCount, isNewChannel, postsWithUnreadsCount, muted })) {
+  if (showChannelBadge({ mentionsCount, isNewChannel, postsWithUnreadsCount, muted })) {
     obj = { mentionCount: null, isMentionLowImportance: null, isNewChannel: null, postsWithUnreadsCount: null, muted: null };
     obj[0] = mentionsCount;
     obj[1] = stateFromStoresObject.isMentionLowImportance;

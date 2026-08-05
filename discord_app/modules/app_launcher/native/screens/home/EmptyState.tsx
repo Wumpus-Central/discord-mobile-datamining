@@ -1,3 +1,8 @@
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { AppLauncherEntrypoint } from "../../../AppLauncherTypes.tsx";
+import { handleApplicationSelected } from "../../AppLauncherNativeUtils.tsx";
+import { SvgComponent } from "../../images/HomeEmptyState.tsx";
 // discord_app/modules/app_launcher/native/screens/home/EmptyState.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -17,14 +22,14 @@ const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/na
 
 export default function EmptyState() {
   const tmp = createCacheKey();
-  let obj = require("../../AppLauncherNativeUtils.tsx") /* handleApplicationSelected */;
-  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(require("../../../AppLauncherTypes.tsx") /* AppLauncherEntrypoint */.AppLauncherEmptyStateType.HOME_EMPTY);
+  let obj = handleApplicationSelected /* handleApplicationSelected */;
+  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(AppLauncherEntrypoint /* AppLauncherEntrypoint */.AppLauncherEmptyStateType.HOME_EMPTY);
   obj = { style: tmp.container, children: null };
-  const items = [callback(require("../../images/HomeEmptyState.tsx"), {}), ];
+  const items = [callback(SvgComponent, {}), ];
   obj = { style: tmp.textContainer, variant: "text-md/semibold", color: "text-default", children: null };
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["V7+xhH"]);
-  items[1] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["V7+xhH"]);
+  items[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 };

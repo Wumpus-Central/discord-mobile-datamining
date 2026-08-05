@@ -1,3 +1,4 @@
+import { map } from "../../../tokens/typography/generated/TypographyVariantRemap.tsx";
 // discord_common/js/packages/design/components/Text/typographyVariantRemap.tsx
 import _slicedToArray from "_slicedToArray";
 
@@ -5,7 +6,7 @@ const require = arg1;
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Text/typographyVariantRemap.tsx");
 
 export const remapTypographyVariant = function remapTypographyVariant(enabledExperiments, variant, arg2) {
-  const obj = require("../../../tokens/typography/generated/TypographyVariantRemap.tsx") /* map */.TYPOGRAPHY_EXPERIMENT_REMAPS[Symbol.iterator]();
+  const obj = map /* map */.TYPOGRAPHY_EXPERIMENT_REMAPS[Symbol.iterator]();
   while (obj !== undefined) {
     let tmp2 = callback;
     let tmp3 = callback(tmp, 2);

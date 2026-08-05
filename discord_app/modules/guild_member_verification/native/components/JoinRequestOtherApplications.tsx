@@ -1,3 +1,6 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { useOtherGuildJoinRequestsForUser } from "../../hooks/useOtherGuildJoinRequestsForUser.tsx";
+import { MAX_RESULTS_PER_PAGE } from "../../MemberVerificationTypes.tsx";
 // discord_app/modules/guild_member_verification/native/components/JoinRequestOtherApplications.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -12,15 +15,15 @@ let metroImportAll;
 const require = arg1;
 function ApplicationStatusIcon(status) {
   status = status.status;
-  if (require("../../MemberVerificationTypes.tsx") /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestApplicationStatuses.APPROVED === status) {
+  if (MAX_RESULTS_PER_PAGE /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestApplicationStatuses.APPROVED === status) {
     let obj = { size: "sm", color: null, secondaryColor: null };
-    obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.STATUS_POSITIVE_BACKGROUND;
-    obj[2] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.STATUS_POSITIVE_TEXT;
+    obj[1] = Themes.colors.STATUS_POSITIVE_BACKGROUND;
+    obj[2] = Themes.colors.STATUS_POSITIVE_TEXT;
     return callback(tmp(4246).CircleCheckIcon, obj);
   } else if (tmp(4105).GuildJoinRequestApplicationStatuses.REJECTED === status) {
     obj = { size: "sm", color: null, secondaryColor: null };
-    obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_FEEDBACK_CRITICAL;
-    obj[2] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
+    obj[1] = Themes.colors.ICON_FEEDBACK_CRITICAL;
+    obj[2] = Themes.colors.WHITE;
     return callback(tmp(5905).CircleXIcon, obj);
   } else {
     return null;
@@ -44,7 +47,7 @@ const memoResult = importAllResult.memo((arg0) => {
   ({ guildId, userId, selectedJoinRequestId } = arg0);
   const tmp = callback3();
   _require = tmp;
-  let obj = _require("../../hooks/useOtherGuildJoinRequestsForUser.tsx");
+  let obj = _useOtherGuildJoinRequestsForUser;
   const otherGuildJoinRequestsForUser = obj.useOtherGuildJoinRequestsForUser({ guildId, userId, selectedJoinRequestId });
   let tmp4 = null;
   if (0 !== otherGuildJoinRequestsForUser.length) {

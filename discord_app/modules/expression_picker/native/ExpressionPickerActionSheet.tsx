@@ -1,3 +1,10 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { NAV_BAR_HEIGHT } from "../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
+import { KeyboardTypes } from "../../keyboard/native/KeyboardTypes.tsx";
+import { useKeyboardType } from "../../keyboard/native/useKeyboardType.tsx";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
+import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 // discord_app/modules/expression_picker/native/ExpressionPickerActionSheet.tsx
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -23,15 +30,15 @@ export default function ExpressionPickerActionSheet(arg0) {
   let visibleTabs;
   ({ channelId: require, onPressEmoji: importDefault, onPressSticker: dependencyMap, onPressGIF: noop } = arg0);
   ({ hideGifFavorites, onDismiss, visibleTabs, initialGifQuery } = arg0);
-  let obj = require("../../reanimated/ReanimatedRexport.tsx");
+  let obj = ReanimatedRexport;
   const sharedValue = obj.useSharedValue(-1);
-  let obj1 = require("../../keyboard/native/useKeyboardType.tsx") /* useKeyboardType */;
-  const keyboardContextForType = obj1.useKeyboardContextForType(require("../../keyboard/native/KeyboardTypes.tsx") /* KeyboardTypes */.KeyboardTypes.EXPRESSION);
-  let obj2 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj1 = useKeyboardType /* useKeyboardType */;
+  const keyboardContextForType = obj1.useKeyboardContextForType(KeyboardTypes /* KeyboardTypes */.KeyboardTypes.EXPRESSION);
+  let obj2 = initialize /* initialize */;
   const items = [ensureGuildLoaded];
   const stateFromStores = obj2.useStateFromStores(items, () => outer1_4.getChannel(closure_0));
-  const height = require("../../screen/useWindowDimensions.native.tsx")({ ignoreKeyboard: true }).height;
-  const diff = height - require("../../../design/components/Navigator/native/NavigatorConstants.native.tsx") /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT_MULTILINE - require("../../safe_area/useSafeAreaInsets.native.tsx")().top;
+  const height = useWindowDimensions({ ignoreKeyboard: true }).height;
+  const diff = height - NAV_BAR_HEIGHT /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsets().top;
   let tmp15Result = null;
   if (undefined !== stateFromStores) {
     let isIOSResult = tmp2(500).isIOS();

@@ -1,3 +1,4 @@
+import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
 // discord_app/modules/in_app_reports/native/components/InAppReportsShieldElement.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -16,7 +17,7 @@ export default function ShieldElement(element) {
     if ("success" === element.type) {
       const obj = { style: null, children: null };
       obj[0] = tmp.container;
-      obj[1] = jsx(require("../../../../design/assets/native.tsx") /* AccountAgeTier10LargeBadge */.ShieldSpotIllustration, { width: 100, height: 100 });
+      obj[1] = jsx(AccountAgeTier10LargeBadge /* AccountAgeTier10LargeBadge */.ShieldSpotIllustration, { width: 100, height: 100 });
       tmp2 = <View style={null}>{null}</View>;
     }
   }

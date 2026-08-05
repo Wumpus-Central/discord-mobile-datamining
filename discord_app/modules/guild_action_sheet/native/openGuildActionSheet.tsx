@@ -1,3 +1,5 @@
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { getFavoritesAwareGuildName } from "../../favorites/FavoritesUtils.tsx";
 // discord_app/modules/guild_action_sheet/native/openGuildActionSheet.tsx
 import ME from "ME";
 
@@ -11,9 +13,9 @@ export default function openGuildActionSheet(id) {
   if (arg1 === undefined) {
     flag = true;
   }
-  let obj = require("../../favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
+  let obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
   if (!obj.isFavoritesGuildId(id.id)) {
-    let obj1 = require("../../../utils/AnalyticsUtils.tsx");
+    let obj1 = expandEventProperties;
     obj = { type: "Guild Profile", guild_id: null };
     obj[1] = id.id;
     obj1.track(constants.OPEN_POPOUT, obj);

@@ -1,3 +1,5 @@
+import { PermissionOverwriteType } from "../../../../flow/Server.tsx";
+import { ApplicationCommandSectionType } from "../../../application_commands/ApplicationCommandTypes.tsx";
 // discord_app/modules/guild_settings/integrations/permission/IntegrationPermissionUtils.tsx
 import _slicedToArray from "_slicedToArray";
 
@@ -25,17 +27,17 @@ const result = require("ApplicationCommandSectionType").fileFinishedImporting("m
 
 export const commandName = function commandName(arg0) {
   let text = arg1;
-  if (arg0 === require("../../../../flow/Server.tsx") /* PermissionOverwriteType */.ApplicationCommandType.CHAT) {
+  if (arg0 === PermissionOverwriteType /* PermissionOverwriteType */.ApplicationCommandType.CHAT) {
     text = `/${arg1}`;
   }
   return text;
 };
 export const commandPermissionChannels = function commandPermissionChannels(arg0) {
-  const items = [require("../../../application_commands/ApplicationCommandTypes.tsx") /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.CHANNEL];
+  const items = [ApplicationCommandSectionType /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.CHANNEL];
   return commandPermissions(arg0, items);
 };
 export const commandPermissionMembersRoles = function commandPermissionMembersRoles(arg0) {
-  const items = [require("../../../application_commands/ApplicationCommandTypes.tsx") /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.ROLE, require("../../../application_commands/ApplicationCommandTypes.tsx") /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.USER];
+  const items = [ApplicationCommandSectionType /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.ROLE, ApplicationCommandSectionType /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.USER];
   return commandPermissions(arg0, items);
 };
 export const toPermissionKey = function toPermissionKey(allChannelsSentinelResult, CHANNEL) {

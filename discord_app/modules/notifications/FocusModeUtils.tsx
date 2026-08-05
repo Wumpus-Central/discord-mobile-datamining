@@ -1,3 +1,7 @@
+import { set } from "../../actions/AlertActionCreators.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 // discord_app/modules/notifications/FocusModeUtils.tsx
 import filterPlayingActivities from "filterPlayingActivities";
 import { NotificationSettingsUpdateType as closure_4 } from "AccountNotificationFlags";
@@ -10,9 +14,9 @@ const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/notifications/FocusModeUtils.tsx");
 
 export const useFocusModeEnabled = function useFocusModeEnabled() {
-  const FocusMode = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.FocusMode;
+  const FocusMode = explicitContentFromProto /* explicitContentFromProto */.FocusMode;
   let setting = FocusMode.useSetting();
-  const FocusModeExpiresAtSetting = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.FocusModeExpiresAtSetting;
+  const FocusModeExpiresAtSetting = explicitContentFromProto /* explicitContentFromProto */.FocusModeExpiresAtSetting;
   const setting1 = FocusModeExpiresAtSetting.useSetting();
   if (setting) {
     let tmp3 = "0" === setting1;
@@ -30,9 +34,9 @@ export const useFocusModeEnabled = function useFocusModeEnabled() {
   return setting;
 };
 export const getFocusModeEnabled = function getFocusModeEnabled() {
-  const FocusMode = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.FocusMode;
+  const FocusMode = explicitContentFromProto /* explicitContentFromProto */.FocusMode;
   let setting = FocusMode.getSetting();
-  const FocusModeExpiresAtSetting = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.FocusModeExpiresAtSetting;
+  const FocusModeExpiresAtSetting = explicitContentFromProto /* explicitContentFromProto */.FocusModeExpiresAtSetting;
   const setting1 = FocusModeExpiresAtSetting.getSetting();
   if (setting) {
     setting = null != setting1;
@@ -51,9 +55,9 @@ export const getFocusModeEnabled = function getFocusModeEnabled() {
 export const setFocusMode = function setFocusMode(quiet_mode_enabled, arg1) {
   const _require = quiet_mode_enabled;
   const importDefault = arg1;
-  const FocusMode = _require("../user_settings/UserSettings.tsx").FocusMode;
+  const FocusMode = _explicitContentFromProto.FocusMode;
   const setting = FocusMode.getSetting();
-  const PreloadedUserSettingsActionCreators = _require("../user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
+  const PreloadedUserSettingsActionCreators = _updateUserGuildSettings.PreloadedUserSettingsActionCreators;
   PreloadedUserSettingsActionCreators.updateAsync("notifications", (arg0) => {
     const BoolValue = quiet_mode_enabled(outer1_2[5]).BoolValue;
     arg0.quietMode = BoolValue.create({ value: quiet_mode_enabled });
@@ -67,8 +71,8 @@ export const setFocusMode = function setFocusMode(quiet_mode_enabled, arg1) {
       }
     }
     arg0.focusModeExpiresAtMs = str;
-  }, _require("../user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay.INFREQUENT_USER_ACTION);
-  let obj = require("../../utils/AnalyticsUtils.tsx");
+  }, _updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
+  let obj = expandEventProperties;
   obj = { update_type: constants.ACCOUNT, quiet_mode_enabled, quiet_mode_enabled_old: setting };
   obj.track(constants2.NOTIFICATION_SETTINGS_UPDATED, obj);
   let tmp7 = status.getStatus() === constants3.DND && quiet_mode_enabled;
@@ -88,7 +92,7 @@ export const setFocusMode = function setFocusMode(quiet_mode_enabled, arg1) {
     obj[4] = function onConfirm() {
       callback(table[9])({ nextStatus: constants.ONLINE });
     };
-    require("../../actions/AlertActionCreators.tsx").show(obj);
-    const tmp5Result = require("../../actions/AlertActionCreators.tsx");
+    set.show(obj);
+    const tmp5Result = set;
   }
 };

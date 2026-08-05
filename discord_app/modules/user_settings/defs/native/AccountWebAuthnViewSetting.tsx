@@ -1,3 +1,7 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { UserSettingsWebAuthn } from "../../../webauthn/native/UserSettingsWebAuthn.tsx";
+import { _fetchWebAuthnConditionalChallenge } from "../../../webauthn/WebAuthnActionCreators.tsx";
 // discord_app/modules/user_settings/defs/native/AccountWebAuthnViewSetting.tsx
 import noop from "noop";
 import hasFetchedCredentials from "hasFetchedCredentials";
@@ -7,8 +11,8 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.y7SXYX);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.y7SXYX);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   usePreNavigationAction: function useAccountCanUseWebAuthnView() {
@@ -35,11 +39,11 @@ createToggle = {
   },
   useTrailing: function useAccountSecurityKeysSettingTrailing() {
     if (!hasFetchedCredentials.hasFetchedCredentials()) {
-      const webAuthnCredentials = require("../../../webauthn/WebAuthnActionCreators.tsx") /* _fetchWebAuthnConditionalChallenge */.fetchWebAuthnCredentials();
-      let obj = require("../../../webauthn/WebAuthnActionCreators.tsx") /* _fetchWebAuthnConditionalChallenge */;
+      const webAuthnCredentials = _fetchWebAuthnConditionalChallenge /* _fetchWebAuthnConditionalChallenge */.fetchWebAuthnCredentials();
+      let obj = _fetchWebAuthnConditionalChallenge /* _fetchWebAuthnConditionalChallenge */;
     }
     const items = [hasFetchedCredentials];
-    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+    return initialize /* initialize */.useStateFromStores(items, () => {
       const intl = callback(1236).intl;
       const obj = { count: null };
       obj[0] = credentials.getCredentials().length;
@@ -52,7 +56,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.WEBAUTHN_VIEW,
   getComponent() {
-    return require("../../../webauthn/native/UserSettingsWebAuthn.tsx") /* UserSettingsWebAuthn */.default;
+    return UserSettingsWebAuthn /* UserSettingsWebAuthn */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

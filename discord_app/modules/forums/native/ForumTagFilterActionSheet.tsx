@@ -1,3 +1,6 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { Emoji } from "../../emojis/native/Emoji.tsx";
 // discord_app/modules/forums/native/ForumTagFilterActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "set";
@@ -19,7 +22,7 @@ function EmojiIcon(arg0) {
   let require;
   ({ emojiId: require, emojiName } = arg0);
   const tmp = callback4();
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [getEmojiToGroupId];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let usableCustomEmojiById = null;
@@ -33,15 +36,15 @@ function EmojiIcon(arg0) {
   if (null != stateFromStores) {
     obj = { id: null, animated: null, size: 18 };
     ({ id: obj4[0], animated: obj4[1] } = stateFromStores);
-    emojiURL = require("../../../utils/AvatarUtils.tsx").getEmojiURL(obj);
-    const tmp5Result = require("../../../utils/AvatarUtils.tsx");
+    emojiURL = getAvatarURL.getEmojiURL(obj);
+    const tmp5Result = getAvatarURL;
   }
   obj[3] = emojiURL;
   if (emojiName == null) {
     emojiName = "";
   }
   obj[4] = emojiName;
-  return jsx(require("../../emojis/native/Emoji.tsx"), { style: tmp.emoji, textEmojiStyle: tmp.textEmoji, fastImageStyle: tmp.imageEmoji, src: null, name: null });
+  return jsx(Emoji, { style: tmp.emoji, textEmojiStyle: tmp.textEmoji, fastImageStyle: tmp.imageEmoji, src: null, name: null });
 }
 ({ useForumChannelStore: closure_6, useForumChannelStoreApi: error } = set);
 ({ AnalyticsObjects: metroImportAll, AnalyticsPages: c9, AnalyticsSections: c10 } = ME);

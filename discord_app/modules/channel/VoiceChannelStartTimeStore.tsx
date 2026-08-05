@@ -1,3 +1,5 @@
+import { set } from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
+import { set } from "../../utils/Durations.tsx";
 // discord_app/modules/channel/VoiceChannelStartTimeStore.tsx
 import _handleConnectionOpen from "_handleConnectionOpen";
 import { Store } from "initialize";
@@ -5,7 +7,7 @@ import set from "initialize";
 
 const require = arg1;
 function _toTimestampMs(arg0) {
-  return new Date(arg0 * require("../../utils/Durations.tsx").Millis.SECOND).getTime();
+  return new Date(arg0 * set.Millis.SECOND).getTime();
 }
 function handleConnectionReset() {
   set.clear();
@@ -24,7 +26,7 @@ prototype["initialize"] = function initialize() {
 prototype["getStartTime"] = function getStartTime(guild_id) {
   if (null != guild_id) {
     if (null != guild_id.guild_id) {
-      if (guild_id.type === require("../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx") /* set */.ChannelTypes.GUILD_VOICE) {
+      if (guild_id.type === set /* set */.ChannelTypes.GUILD_VOICE) {
         let tmp5;
         if (dependencyMap[guild_id.guild_id] != null) {
           tmp5 = tmp4[guild_id.id];
@@ -53,7 +55,7 @@ const voiceChannelStartTimeStore = new VoiceChannelStartTimeStore(require("dispa
     let time;
     if (null != voiceStartTime) {
       const _Date = Date;
-      const date = new Date(voiceStartTime * require("../../utils/Durations.tsx").Millis.SECOND);
+      const date = new Date(voiceStartTime * set.Millis.SECOND);
       time = date.getTime();
     }
     dependencyMap[guildId][id.id] = time;

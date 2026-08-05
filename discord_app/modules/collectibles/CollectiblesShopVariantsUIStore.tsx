@@ -1,3 +1,4 @@
+import { useDefaultVariantIndex } from "hooks/useDefaultVariantIndex.tsx";
 // discord_app/modules/collectibles/CollectiblesShopVariantsUIStore.tsx
 import identity from "identity";
 
@@ -10,7 +11,7 @@ const result = require("useDefaultVariantIndex").fileFinishedImporting("modules/
 
 export const useSelectedVariantIndex = function useSelectedVariantIndex(product) {
   const _require = product;
-  let defaultVariantIndex = _require("hooks/useDefaultVariantIndex.tsx").useDefaultVariantIndex(product);
+  let defaultVariantIndex = _useDefaultVariantIndex.useDefaultVariantIndex(product);
   let tmp2 = state((selectionStates) => {
     let tmp2 = null;
     if (null != product) {

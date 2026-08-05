@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/activities/getActivityReportOptions.tsx
 import { ActivityFeedbackReasons } from "items3";
 
@@ -9,9 +10,9 @@ export default function getActivityReportOptions(arg0) {
     flag = false;
   }
   let obj = { value: ActivityFeedbackReasons.FAILED_LOAD, label: null };
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
+  const t = getSystemLocale /* getSystemLocale */.t;
   if (arg0) {
     let stringResult = string(t.uaiF6B);
     let tmp6 = tmp2;

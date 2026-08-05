@@ -1,3 +1,4 @@
+import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/stores/GamePartyStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import upsertRelationship from "upsertRelationship";
@@ -49,7 +50,7 @@ function updateParty(closure_6, id, activities, status) {
                 map.delete(tmp9);
               }
             }
-            obj3 = require("../../_runtime/00012_apply.js");
+            obj3 = apply;
           }
         }
       }
@@ -96,7 +97,7 @@ function updateParty(closure_6, id, activities, status) {
           flag3 = true;
         }
       }
-      obj9 = require("../../_runtime/00012_apply.js");
+      obj9 = apply;
     }
   }
   return flag3;
@@ -128,7 +129,7 @@ function handleRelationshipAddOrUpdate(relationship) {
   if (null == dependencyMap[relationship.id]) {
     return false;
   } else {
-    const values = require("../../_runtime/00012_apply.js").values(tmp);
+    const values = apply.values(tmp);
     for (const item10025 of values) {
       let tmp7 = map;
       let value = map.get(item10025);
@@ -296,7 +297,7 @@ const gamePartyStore = new GamePartyStore(require("dispatcher"), {
     if (null == dependencyMap[relationship.id]) {
       return false;
     } else {
-      const values = require("../../_runtime/00012_apply.js").values(tmp);
+      const values = apply.values(tmp);
       for (const item10017 of values) {
         let tmp7 = map;
         let value = map.get(item10017);

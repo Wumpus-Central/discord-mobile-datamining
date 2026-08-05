@@ -1,3 +1,4 @@
+import { items } from "../../../user_profile/UserProfileGameWidgetTypes.tsx";
 // discord_app/modules/in_app_reports/native/components/InAppReportsWidgetPreviewElement.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -17,7 +18,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/in_app_reports/
 export default function WidgetPreview(widget) {
   widget = widget.widget;
   const tmp = createCacheKey();
-  let obj = require("../../../user_profile/UserProfileGameWidgetTypes.tsx") /* items */;
+  let obj = items /* items */;
   let tmp5 = null;
   if (obj.isGameWidget(widget)) {
     tmp5 = null;

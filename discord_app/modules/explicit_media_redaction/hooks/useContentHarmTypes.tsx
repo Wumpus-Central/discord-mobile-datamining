@@ -1,3 +1,6 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getEligibleHarmTypesConfigsForContext } from "../ObscuredMediaUtils.tsx";
+import { getShouldObscureForSetting } from "../SensitiveMediaRedactionSettingUtils.tsx";
 // discord_app/modules/explicit_media_redaction/hooks/useContentHarmTypes.tsx
 import noop from "noop";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -9,25 +12,25 @@ const require = arg1;
 function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
   const _require = channelId;
   const dependencyMap = authorId;
-  const eligibleHarmTypesConfigsForContext = _require("../ObscuredMediaUtils.tsx").getEligibleHarmTypesConfigsForContext();
-  let obj = _require("../ObscuredMediaUtils.tsx");
+  const eligibleHarmTypesConfigsForContext = _getEligibleHarmTypesConfigsForContext.getEligibleHarmTypesConfigsForContext();
+  let obj = _getEligibleHarmTypesConfigsForContext;
   let items = [mergeGuildAvatar];
-  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj2 = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  const stateFromStores = _initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj2 = _initialize;
   const items1 = [stateFromStores1, stateFromStores2];
-  stateFromStores1 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  stateFromStores1 = _initialize.useStateFromStores(items1, () => {
     const items = [stateFromStores1, stateFromStores2];
     return channelId(authorId[5]).getChannelTypeById(channelId, authorId, items);
   });
-  const obj3 = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  const obj3 = _initialize;
   const items2 = [stateFromStores];
   const items3 = [eligibleHarmTypesConfigsForContext];
-  stateFromStores2 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => eligibleHarmTypesConfigsForContext.reduce((arg0, harmType) => {
+  stateFromStores2 = _initialize.useStateFromStores(items2, () => eligibleHarmTypesConfigsForContext.reduce((arg0, harmType) => {
     const obj = {};
     const merged = Object.assign(arg0);
     obj[harmType.harmType] = harmType.getProtoUserSettings(settings.settings);
     return obj;
-  }, {}), items3, _require("../SensitiveMediaRedactionSettingUtils.tsx").areSettingsEqual);
+  }, {}), items3, _getShouldObscureForSetting.areSettingsEqual);
   const items4 = [stateFromStores1, eligibleHarmTypesConfigsForContext, stateFromStores2, authorId, stateFromStores];
   const memo = eligibleHarmTypesConfigsForContext.useMemo(() => {
     if (null != stateFromStores1) {
@@ -70,7 +73,7 @@ export const useEnabledHarmTypesBitmaskForMessage = function useEnabledHarmTypes
   if (null == stateFromStores) {
     let channelIdAndAuthorIdFromMessage = {};
   } else {
-    channelIdAndAuthorIdFromMessage = require("../ObscuredMediaUtils.tsx") /* getEligibleHarmTypesConfigsForContext */;
+    channelIdAndAuthorIdFromMessage = getEligibleHarmTypesConfigsForContext /* getEligibleHarmTypesConfigsForContext */;
     channelIdAndAuthorIdFromMessage = channelIdAndAuthorIdFromMessage.getChannelIdAndAuthorIdFromMessage(stateFromStores);
   }
   return useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelIdAndAuthorIdFromMessage.channelId, channelIdAndAuthorIdFromMessage.authorId);

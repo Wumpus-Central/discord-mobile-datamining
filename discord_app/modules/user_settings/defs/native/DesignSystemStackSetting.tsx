@@ -1,3 +1,4 @@
+import { StackBlock } from "../../design_system/native/UserSettingsDesignSystemStack.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemStackSetting.tsx
 import createToggle from "createToggle";
 
@@ -11,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_STACK,
   getComponent() {
-    return require("../../design_system/native/UserSettingsDesignSystemStack.tsx") /* StackBlock */.default;
+    return StackBlock /* StackBlock */.default;
   }
 };
 const route = createToggle.createRoute(obj);

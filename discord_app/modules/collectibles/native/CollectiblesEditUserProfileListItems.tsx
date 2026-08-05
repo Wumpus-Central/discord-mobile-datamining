@@ -1,3 +1,11 @@
+import { registerAsset } from "../../../../_runtime/08098_registerAsset.js";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
+import { getItemRecordsFromPurchases } from "../CollectiblesUtils.tsx";
+import { useCollectiblesData } from "../hooks/useCollectiblesData.tsx";
 // discord_app/modules/collectibles/native/CollectiblesEditUserProfileListItems.tsx
 import initialize from "initialize";
 import { View } from "registerAsset";
@@ -66,20 +74,20 @@ export const EditCollectiblesListItemNone = function EditCollectiblesListItemNon
   let obj = { style: tmp.optionCell };
   const merged = Object.assign(asDefault);
   obj = { source: null, size: null };
-  obj[0] = require("../../../../_runtime/08098_registerAsset.js");
-  obj[1] = require("../../../design/void/native.tsx") /* Button */.IconSizes.LARGE;
-  const items = [callback(require("../../../design/void/native.tsx") /* Button */.Icon, obj), ];
+  obj[0] = registerAsset;
+  obj[1] = Button /* Button */.IconSizes.LARGE;
+  const items = [callback(Button /* Button */.Icon, obj), ];
   obj = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp.optionCellText, children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require("../../../intl/index.native.tsx") /* getSystemLocale */.t;
+  const t = getSystemLocale /* getSystemLocale */.t;
   if (asDefault.asDefault) {
     let stringResult = string(t.CHf9iJ);
   } else {
     stringResult = string(t.PoWNfe);
   }
   obj[3] = stringResult;
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items[1] = callback(Text /* Text */.Text, obj);
   obj.children = items;
   return closure_8(EditCollectibleListItem, obj);
 };
@@ -123,16 +131,16 @@ export const EditCollectiblesListItemProduct = function EditCollectiblesListItem
   ({ isSelected, isTryItOut, children } = skuId);
   const merged = Object.assign(skuId, Object.create(null));
   const tmp2 = createCacheKey();
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = require("../../../utils/PremiumUtils.tsx");
+  let obj1 = getPremiumPlanItem;
   const canUseCollectiblesResult = obj1.canUseCollectibles(stateFromStores);
-  ({ purchase, product } = require("../hooks/useCollectiblesData.tsx")(skuId));
-  const tmp7 = require("../hooks/useCollectiblesData.tsx")(skuId);
-  const isProductNewResult = require("../CollectiblesUtils.tsx") /* getItemRecordsFromPurchases */.isProductNew(skuId);
-  const obj3 = require("../CollectiblesUtils.tsx") /* getItemRecordsFromPurchases */;
-  let result = require("../CollectiblesUtils.tsx") /* getItemRecordsFromPurchases */.isPremiumCollectiblesProduct(product);
+  ({ purchase, product } = useCollectiblesData(skuId));
+  const tmp7 = useCollectiblesData(skuId);
+  const isProductNewResult = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */.isProductNew(skuId);
+  const obj3 = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */;
+  let result = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */.isPremiumCollectiblesProduct(product);
   if (!result) {
     result = tmp3(6922).isPremiumCollectiblesPurchase(purchase);
     const tmp3Result = tmp3(6922);

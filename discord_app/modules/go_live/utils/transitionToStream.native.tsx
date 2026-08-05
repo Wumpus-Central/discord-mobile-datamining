@@ -1,3 +1,6 @@
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { openChannelCallModal } from "../../../utils/native/PrivateChannelCallUtils.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/go_live/utils/transitionToStream.native.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 
@@ -7,11 +10,11 @@ const result = require("module_4490").fileFinishedImporting("modules/go_live/uti
 export default function transitionToStream(channelId) {
   channel = channel.getChannel(channelId.channelId);
   if (null != channel) {
-    require("../../action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet();
-    const obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
-    require("../../../actions/ModalActionCreators.tsx").popAll();
-    const obj2 = require("../../../actions/ModalActionCreators.tsx");
-    require("../../../utils/native/PrivateChannelCallUtils.tsx") /* openChannelCallModal */.openGuildVoiceModal(channel, "Go Live");
-    const obj3 = require("../../../utils/native/PrivateChannelCallUtils.tsx") /* openChannelCallModal */;
+    ACTION_SHEET_HEIGHT_HALF.hideActionSheet();
+    const obj = ACTION_SHEET_HEIGHT_HALF;
+    ModalActionCreators.popAll();
+    const obj2 = ModalActionCreators;
+    openChannelCallModal /* openChannelCallModal */.openGuildVoiceModal(channel, "Go Live");
+    const obj3 = openChannelCallModal /* openChannelCallModal */;
   }
 };

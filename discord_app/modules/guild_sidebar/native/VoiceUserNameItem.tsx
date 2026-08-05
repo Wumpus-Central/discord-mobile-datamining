@@ -1,3 +1,6 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useDisplayNameStyles } from "../../display_name_styles/hooks/useDisplayNameStyles.tsx";
+import { DISPLAY_NAME_STYLES_FONT_FAMILY_MAP } from "../../display_name_styles/native/useDisplayNameStylesFont.tsx";
 // discord_app/modules/guild_sidebar/native/VoiceUserNameItem.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -35,9 +38,9 @@ export default function VoiceUserNameItem(arg0) {
   ({ guildId, color, variant } = arg0);
   const tmp = callback3();
   let obj = { userId: user.id, guildId };
-  let obj1 = _require("../../display_name_styles/native/useDisplayNameStylesFont.tsx");
-  const displayNameStylesFont = obj1.useDisplayNameStylesFont({ displayNameStyles: require("../../display_name_styles/hooks/useDisplayNameStyles.tsx")(obj) });
-  const tmp4 = require("../../display_name_styles/hooks/useDisplayNameStyles.tsx")(obj);
+  let obj1 = _DISPLAY_NAME_STYLES_FONT_FAMILY_MAP;
+  const displayNameStylesFont = obj1.useDisplayNameStylesFont({ displayNameStyles: useDisplayNameStyles(obj) });
+  const tmp4 = useDisplayNameStyles(obj);
   [tmp8, c0] = callback(React.useState(0), 2);
   const tmp7 = callback(React.useState(0), 2);
   [tmp10, c1] = callback(React.useState(0), 2);
@@ -89,7 +92,7 @@ export default function VoiceUserNameItem(arg0) {
   }
   items1[1] = isGuest;
   obj[5] = items1;
-  const items3 = [closure_6(_require("../../../design/components/Text/native/Text.tsx").Text, obj), ];
+  const items3 = [closure_6(_Text.Text, obj), ];
   if (!tmp12) {
     tmp12 = 0 !== tmp8 && 0 !== tmp10 && 0 !== tmp14 && tmp8 >= tmp10 + tmp14;
     const tmp22 = 0 !== tmp8 && 0 !== tmp10 && 0 !== tmp14 && tmp8 >= tmp10 + tmp14;

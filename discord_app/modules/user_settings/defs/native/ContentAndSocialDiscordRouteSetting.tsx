@@ -1,10 +1,12 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ContentAndSocialSettings } from "../../content_and_social/native/ContentAndSocialScreen.tsx";
 // discord_app/modules/user_settings/defs/native/ContentAndSocialDiscordRouteSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/7xJCF"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["/7xJCF"]);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL,
   IconComponent: require("FriendsIcon").FriendsIcon,
@@ -13,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.CONTENT_AND_SOCIAL,
   getComponent() {
-    return require("../../content_and_social/native/ContentAndSocialScreen.tsx") /* ContentAndSocialSettings */.DiscordPermissionsPage;
+    return ContentAndSocialSettings /* ContentAndSocialSettings */.DiscordPermissionsPage;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -1,3 +1,8 @@
+import { apply } from "../../_runtime/00012_apply.js";
+import { PermissionOverwriteType } from "../flow/Server.tsx";
+import { GuildMemberFlags } from "../modules/guild_automod/AutomodPermissionUtils.tsx";
+import { compareGuildRoles } from "GuildRoleUtils.tsx";
+import { DISCORD_EPOCH } from "SnowflakeUtils.tsx";
 // discord_app/utils/PermissionUtils.tsx
 import initialize from "initialize";
 import closure_5 from "initialize";
@@ -84,7 +89,7 @@ function applyOverwrites(id, member, closure_23, overwrites) {
     const hasItem = importAll(506).has(addResult4, Permissions.ADMINISTRATOR);
     const tmp19Result1 = importAll(506);
     const tmp28 = require;
-    const result = require("../modules/guild_automod/AutomodPermissionUtils.tsx") /* GuildMemberFlags */.hasAutomodQuarantinedProfile(member);
+    const result = GuildMemberFlags /* GuildMemberFlags */.hasAutomodQuarantinedProfile(member);
     let tmp31 = result;
     if (result) {
       tmp31 = !hasItem;
@@ -94,7 +99,7 @@ function applyOverwrites(id, member, closure_23, overwrites) {
       found = tmp19(506).filter(addResult4, closure_29);
       const tmp19Result2 = tmp19(506);
     }
-    const obj10 = require("../modules/guild_automod/AutomodPermissionUtils.tsx") /* GuildMemberFlags */;
+    const obj10 = GuildMemberFlags /* GuildMemberFlags */;
     const tmp28Result = tmp28(3902);
     found1 = found;
     if (tmp34) {
@@ -452,7 +457,7 @@ function computePermissionsForRoles(excludeGuildPermissions) {
     const obj1 = { userId: null, nick: "", guildId: null, guildMemberAvatar: null, roles: null, colorString: null, colorStrings: null, hoistRoleId: null, premiumSince: null, isPending: false, joinedAt: null, communicationDisabledUntil: null };
     obj1[0] = closure_22;
     obj1[2] = tmp4.id;
-    obj1[4] = require("SnowflakeUtils.tsx").keys(forceRoles);
+    obj1[4] = DISCORD_EPOCH.keys(forceRoles);
     const _Date = Date;
     const date = new Date();
     obj1[10] = date.toISOString();
@@ -555,8 +560,8 @@ export const isRoleHigher = function isRoleHigher(arg0, arg1, guildId, id) {
     if (tmp6) {
       let doesRoleSortHigherResult = null == id;
       if (!doesRoleSortHigherResult) {
-        doesRoleSortHigherResult = require("GuildRoleUtils.tsx") /* compareGuildRoles */.doesRoleSortHigher(guildId, id);
-        const obj = require("GuildRoleUtils.tsx") /* compareGuildRoles */;
+        doesRoleSortHigherResult = compareGuildRoles /* compareGuildRoles */.doesRoleSortHigher(guildId, id);
+        const obj = compareGuildRoles /* compareGuildRoles */;
       }
       tmp6 = doesRoleSortHigherResult;
     }
@@ -582,7 +587,7 @@ export const getHighestHoistedRole = function getHighestHoistedRole(id, hoistRol
   return role;
 };
 export const makeEveryoneOverwrite = function makeEveryoneOverwrite(guild_id) {
-  return { id: guild_id, type: require("../flow/Server.tsx") /* PermissionOverwriteType */.PermissionOverwriteType.ROLE, allow: closure_23, deny: closure_23 };
+  return { id: guild_id, type: PermissionOverwriteType /* PermissionOverwriteType */.PermissionOverwriteType.ROLE, allow: closure_23, deny: closure_23 };
 };
 export const canManageACategory = function canManageACategory(currentUser, guild, _categories) {
   let context;
@@ -700,8 +705,8 @@ export const canEveryone = function canEveryone(VIEW_CHANNEL, channel) {
   } else {
     let tmp10 = hasPermission(store3.getEveryoneRole(tmp), VIEW_CHANNEL);
     if (tmp10) {
-      tmp10 = !require("../../_runtime/00012_apply.js").some({}, (deny) => outer1_2(outer1_3[13]).has(deny.deny, closure_0));
-      const obj2 = require("../../_runtime/00012_apply.js");
+      tmp10 = !apply.some({}, (deny) => outer1_2(outer1_3[13]).has(deny.deny, closure_0));
+      const obj2 = apply;
     }
     return tmp10;
   }

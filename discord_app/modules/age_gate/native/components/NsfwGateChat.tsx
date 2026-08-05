@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../../_runtime/11933_registerAsset.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/age_gate/native/components/NsfwGateChat.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -28,11 +31,11 @@ export default function NsfwGateChat() {
   obj = { style: tmp.border };
   const items = [callback(closure_3, obj), ];
   obj = { style: tmp.container, children: null };
-  const items1 = [callback(closure_4, { source: require("../../../../../_runtime/11933_registerAsset.js") }), ];
+  const items1 = [callback(closure_4, { source: registerAsset }), ];
   const obj2 = { style: tmp.description, variant: "text-md/medium", color: "text-muted", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj2[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.W4Qyxr);
-  items1[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj2[3] = intl.string(getSystemLocale /* getSystemLocale */.t.W4Qyxr);
+  items1[1] = callback(Text /* Text */.Text, obj2);
   obj[1] = items1;
   items[1] = callback2(closure_3, obj);
   obj[0] = items;

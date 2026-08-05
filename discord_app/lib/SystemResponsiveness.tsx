@@ -1,3 +1,4 @@
+import { BaseConnectionEvent } from "../../discord_common/js/packages/media-engine/index.tsx";
 // discord_app/lib/SystemResponsiveness.tsx
 const result = require("apply").fileFinishedImporting("lib/SystemResponsiveness.tsx");
 class SystemResponsiveness {
@@ -33,11 +34,11 @@ class SystemResponsiveness {
 const prototype = SystemResponsiveness.prototype;
 prototype["start"] = function start() {
   const connection = this.connection;
-  connection.on(require("../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.Stats, this.sampleStats);
+  connection.on(BaseConnectionEvent /* BaseConnectionEvent */.BaseConnectionEvent.Stats, this.sampleStats);
 };
 prototype["stop"] = function stop() {
   const connection = this.connection;
-  connection.off(require("../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.Stats, this.sampleStats);
+  connection.off(BaseConnectionEvent /* BaseConnectionEvent */.BaseConnectionEvent.Stats, this.sampleStats);
 };
 prototype["getPttQueueLatencyStats"] = function getPttQueueLatencyStats() {
   const pttQueueLatencyHistogram = this.pttQueueLatencyHistogram;

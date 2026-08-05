@@ -1,3 +1,4 @@
+import { STATUS_PADDING } from "getStatusContainerStyle.tsx";
 // discord_app/design/void/Status/native/StatusUtils.tsx
 import STATUS_PADDING from "STATUS_PADDING";
 
@@ -14,7 +15,7 @@ export const getMobileStatusContainerRect = function getMobileStatusContainerRec
   return { width: sum, height: 1.4 * sum, cornerRadius: sum / 4 };
 };
 export const getVRStatusContainerRect = function getVRStatusContainerRect(items) {
-  const size = require("getStatusContainerStyle.tsx")(items, false, true);
+  const size = STATUS_PADDING(items, false, true);
   return { width: size.width, height: size.height, cornerRadius: size.borderRadius };
 };
 export const getStatusTypingDimensions = function getStatusTypingDimensions(items) {

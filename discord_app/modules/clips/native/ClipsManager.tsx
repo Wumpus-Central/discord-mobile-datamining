@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 // discord_app/modules/clips/native/ClipsManager.tsx
 import { CLIPS_TOAST_DURATION } from "result";
 import "handleRTCConnectionState";
@@ -6,10 +8,10 @@ class ClipsManager extends tmp2 {
 }
 const prototype = ClipsManager.prototype;
 prototype["showClipsToast"] = function showClipsToast() {
-  let obj = require("../../toast/native/ToastActionCreators.tsx");
+  let obj = dispatcher;
   obj = { key: "CLIPS_IN_CALL_WARNING", content: null, toastDurationMs: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["d+41qJ"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["d+41qJ"]);
   obj[2] = CLIPS_TOAST_DURATION;
   obj.open(obj);
 };

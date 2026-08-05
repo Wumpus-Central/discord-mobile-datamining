@@ -1,3 +1,4 @@
+import { useCurrentUserStageRoles } from "../../useCurrentUserStageRoles.tsx";
 // discord_app/modules/stage_channels/native/components/ModeratorStartStageView.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
@@ -50,7 +51,7 @@ export default function ModeratorStartStageView(channel) {
     }
     const items2 = [tmp10Result, , , ];
     tmp10Result = null;
-    if (require("../../useCurrentUserStageRoles.tsx")(channel.id, true).moderator) {
+    if (useCurrentUserStageRoles(channel.id, true).moderator) {
       obj1 = { channel: null, isLive: null };
       obj1[0] = channel;
       obj1[1] = isLive;

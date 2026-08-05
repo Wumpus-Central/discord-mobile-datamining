@@ -1,3 +1,4 @@
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/libdiscore/timerUtils.tsx
 import { AnalyticEvents } from "ME";
 
@@ -11,9 +12,9 @@ function onTimersDelayCallback(timerId, expectedDelay, actualDelay, executionTim
       obj = { delay_reports: null };
       const _JSON = JSON;
       obj[0] = JSON.stringify(arr);
-      require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.LIBDISCORE_SLOW_TIMERS, obj);
+      expandEventProperties.track(AnalyticEvents.LIBDISCORE_SLOW_TIMERS, obj);
       arr = [];
-      const obj2 = require("../../utils/AnalyticsUtils.tsx");
+      const obj2 = expandEventProperties;
     }
   } else {
     callback();
@@ -25,7 +26,7 @@ let closure_6 = require("debounce")(function flushDelayLogs() {
   if (0 !== arr.length) {
     const _HermesInternal = HermesInternal;
     arr.warn("[libdiscore.timers] Flushing " + arr.length + " delay logs", arr);
-    let obj = require("../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { delay_reports: null };
     const _JSON = JSON;
     obj[0] = JSON.stringify(arr);

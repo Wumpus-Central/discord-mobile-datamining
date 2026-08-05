@@ -1,3 +1,4 @@
+import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/modules/contact_sync/native/ContactSyncManager.tsx
 import ME from "ME";
 import set from "set";
@@ -183,6 +184,6 @@ let result = require("mergeGuildAvatar").fileFinishedImporting("modules/contact_
 export default prototype;
 export const LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY = "LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY";
 export const removeLastUserContactsUpload = function removeLastUserContactsUpload() {
-  const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   Storage.remove(LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY);
 };

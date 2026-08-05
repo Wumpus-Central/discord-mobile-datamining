@@ -1,3 +1,14 @@
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { set } from "../../actions/AlertActionCreators.tsx";
+import { trackInvite } from "../../actions/MessageActionCreators.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { mergeMessage } from "../../lib/ChannelMessages.tsx";
+import { matchPath } from "../routing/matchPathCompat.tsx";
+import { transitionTo } from "../routing/router_utils.tsx";
+import { SidebarType } from "../sidebar/SidebarActionTypes.tsx";
+import { getMessageLimit } from "getAdaptiveMessageLimit.native.tsx";
+import { shouldRefreshAttachmentUrl } from "SignedAttachmentLinkUtils.tsx";
 // discord_app/modules/messages/MessageManager.tsx
 import _slicedToArray from "_slicedToArray";
 import getParticipants from "getParticipants";
@@ -43,10 +54,10 @@ function fetchMessages(arg0) {
           type1 = channel.type;
         }
         if (null == type1) {
-          let obj2 = require("../../lib/ChannelMessages.tsx");
+          let obj2 = mergeMessage;
           const orCreate = obj2.getOrCreate(channelId);
           let orCreate1 = orCreate;
-          if (orCreate.some(require("SignedAttachmentLinkUtils.tsx") /* shouldRefreshAttachmentUrl */.messageHasExpiredAttachmentUrl)) {
+          if (orCreate.some(shouldRefreshAttachmentUrl /* shouldRefreshAttachmentUrl */.messageHasExpiredAttachmentUrl)) {
             tmp3.log("Found expired attachment link, clearing messages");
             let tmp9Result = tmp9(4955);
             tmp9Result.clear(channelId);
@@ -114,7 +125,7 @@ function fetchMessages(arg0) {
                         }
                         continue;
                       }
-                      const Storage2 = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+                      const Storage2 = Storage /* Storage */.Storage;
                       const result = Storage2.set(viewedThreadIds, obj);
                       flag2 = true;
                     }
@@ -229,10 +240,10 @@ function handleConnectionOpen() {
     const channel1 = store2.getChannel(channelId);
     if (null != channel1) {
       const id2 = channel1.id;
-      const obj7 = require("../routing/matchPathCompat.tsx") /* matchPath */;
+      const obj7 = matchPath /* matchPath */;
       obj = { path: null, exact: true };
       obj[0] = closure_17.CHANNEL(":guild", ":channel", ":message");
-      const matchPathResult = obj7.matchPath(require("../routing/router_utils.tsx") /* transitionTo */.getHistory().location.pathname, obj);
+      const matchPathResult = obj7.matchPath(transitionTo /* transitionTo */.getHistory().location.pathname, obj);
       let message;
       if (matchPathResult != null) {
         const params = matchPathResult.params;
@@ -257,7 +268,7 @@ function handleConnectionOpen() {
         tmp7(obj2);
       }
       obj5 = store;
-      const obj8 = require("../routing/router_utils.tsx") /* transitionTo */;
+      const obj8 = transitionTo /* transitionTo */;
       tmp7 = fetchMessages;
     }
   }
@@ -268,7 +279,7 @@ function loadSelectedChannelIfNecessary() {
     const channel = store2.getChannel(channelId);
     if (null != channel) {
       if (isTextChannel(channel.type)) {
-        let obj1 = require("../../lib/ChannelMessages.tsx");
+        let obj1 = mergeMessage;
         const orCreate = obj1.getOrCreate(channelId);
         if (!tmp7) {
           let obj = { guildId: null, channelId: null };
@@ -343,7 +354,7 @@ function handleChannelSectionStoreChange() {
       if (sidebarState != null) {
         type = sidebarState.type;
       }
-      if (type !== require("../sidebar/SidebarActionTypes.tsx") /* SidebarType */.SidebarType.VIEW_CHANNEL) {
+      if (type !== SidebarType /* SidebarType */.SidebarType.VIEW_CHANNEL) {
         const currentSidebarChannelId = obj2.getCurrentSidebarChannelId(channelId);
         if (null != currentSidebarChannelId) {
           const obj = { guildId: null, channelId: null, messageId: null };
@@ -399,15 +410,15 @@ function handleMessageEditEnd(response) {
       if (response.body.code === constants2.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) {
         const retry_after = response.body.retry_after;
         if (null != retry_after) {
-          let obj = require("../../actions/AlertActionCreators.tsx");
+          let obj = set;
           obj = { title: null, body: null };
-          const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-          obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Whhv4w);
-          const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+          const intl = getSystemLocale /* getSystemLocale */.intl;
+          obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.Whhv4w);
+          const intl2 = getSystemLocale /* getSystemLocale */.intl;
           obj = { retryAfterMinutes: null };
           const _Math = Math;
           obj[0] = Math.ceil(retry_after / 60);
-          obj[1] = intl2.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.qoxdQB, obj);
+          obj[1] = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.qoxdQB, obj);
           obj.show(obj);
         }
       }
@@ -442,13 +453,13 @@ function handleLoadMessagesSuccess(jump) {
         const tmp6 = channelId === channelId || channelId === currentSidebarChannelId;
       }
       if (isStale) {
-        let obj = require("../../actions/MessageActionCreators.tsx");
+        let obj = trackInvite;
         obj = { channelId: null, limit: null, jump: null };
         obj[0] = channelId;
-        obj[1] = require("getAdaptiveMessageLimit.native.tsx") /* getMessageLimit */.getMessageLimit("MessageManager.staleFetch");
+        obj[1] = getMessageLimit /* getMessageLimit */.getMessageLimit("MessageManager.staleFetch");
         obj[2] = jump.jump;
         const messages = obj.fetchMessages(obj);
-        const obj3 = require("getAdaptiveMessageLimit.native.tsx") /* getMessageLimit */;
+        const obj3 = getMessageLimit /* getMessageLimit */;
       }
     }
     tmp = table;
@@ -466,7 +477,7 @@ function handleUploadFail(arg0) {
     tmp2 = true !== tmp;
   }
   if (tmp2) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "MESSAGE_SEND_FAILED", channelId: null, messageId: null, reason: null, shouldNotify: null };
     obj[1] = channelId;
     obj[2] = messageId;
@@ -483,7 +494,7 @@ function handleAppWillBecomeActive() {
   if (null == channelId) {
     return false;
   } else {
-    const newLocalMessages = require("../../actions/MessageActionCreators.tsx").fetchNewLocalMessages(channelId, closure_13);
+    const newLocalMessages = trackInvite.fetchNewLocalMessages(channelId, closure_13);
   }
 }
 ({ MAX_MESSAGES_PER_CHANNEL: map1, CURRENT_APP_CONTEXT: closure_14, ChannelTypes: closure_15, AbortCodes: closure_16, Routes: closure_17, ChannelTypesSets: closure_18 } = ME);
@@ -530,10 +541,10 @@ class MessageManager extends tmp4 {
 }
 const prototype = MessageManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = require("../../Dispatcher.tsx").subscribe("CONNECTION_OPEN", handleConnectionOpen);
+  const subscription = dispatcher.subscribe("CONNECTION_OPEN", handleConnectionOpen);
 };
 prototype["_terminate"] = function _terminate() {
-  require("../../Dispatcher.tsx").unsubscribe("CONNECTION_OPEN", handleConnectionOpen);
+  dispatcher.unsubscribe("CONNECTION_OPEN", handleConnectionOpen);
 };
 const messageManager = new MessageManager();
 const tmp3 = new require("createChannelRecord")("MessageManager");

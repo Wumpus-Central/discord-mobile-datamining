@@ -1,3 +1,4 @@
+import { isStreamKey } from "../../../go_live/utils/StreamKeyUtils.tsx";
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamSendLowFPS.tsx
 import getParticipants from "getParticipants";
 import reset from "reset";
@@ -17,7 +18,7 @@ export const AVErrorStreamSendLowFPSDefinition = {
         if (0 === obj.getViewerIds(currentUserActiveStream).length) {
           return null;
         } else {
-          const encodeStreamKeyResult = require("../../../go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */.encodeStreamKey(currentUserActiveStream);
+          const encodeStreamKeyResult = isStreamKey /* isStreamKey */.encodeStreamKey(currentUserActiveStream);
           rTCConnection = rTCConnection.getRTCConnection(encodeStreamKeyResult);
           if (null == rTCConnection) {
             return null;
@@ -70,7 +71,7 @@ export const AVErrorStreamSendLowFPSDefinition = {
               }
             }
           }
-          const obj8 = require("../../../go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */;
+          const obj8 = isStreamKey /* isStreamKey */;
           obj9 = rTCConnection;
         }
       }

@@ -1,3 +1,6 @@
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { useTheme } from "../../../hooks/useTheme.tsx";
+import { GuildThemePreviewOverlay } from "GuildThemePreviewOverlay.tsx";
 // discord_app/modules/guild_themes/native/GuildThemePreviewArt.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -6,7 +9,7 @@ import createCacheKey from "createCacheKey";
 
 const require = arg1;
 function PreviewOverlay() {
-  return <View pointerEvents="none" style={createCacheKey().previewOverlay}>{jsx(require("GuildThemePreviewOverlay.tsx"), {})}</View>;
+  return <View pointerEvents="none" style={createCacheKey().previewOverlay}>{jsx(GuildThemePreviewOverlay, {})}</View>;
 }
 createCacheKey = { previewArt: null, previewOverlay: null };
 createCacheKey = { position: "relative", width: 256, aspectRatio: 1.5705521472392638, overflow: "hidden", borderRadius: require("Themes").radii.md, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
@@ -18,7 +21,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/guild_themes/na
 export default function GuildThemePreviewArt(themeSettings) {
   themeSettings = themeSettings.themeSettings;
   let importDefault;
-  const tmp4 = require("../../../hooks/useTheme.tsx")();
+  const tmp4 = useTheme();
   importDefault = tmp4;
   let items = [themeSettings, tmp4];
   const memo = React.useMemo(() => {
@@ -69,8 +72,8 @@ export default function GuildThemePreviewArt(themeSettings) {
     ({ colors: obj[0], locations: obj[1], angle: obj[3] } = memo);
     obj[4] = items1;
     obj[5] = <PreviewOverlay />;
-    tmp9 = jsx(require("../../../../_runtime/04706_LinearGradient.js"), { colors: null, locations: null, useAngle: true, angle: null, style: null, children: null });
-    const tmp2Result = require("../../../../_runtime/04706_LinearGradient.js");
+    tmp9 = jsx(LinearGradient, { colors: null, locations: null, useAngle: true, angle: null, style: null, children: null });
+    const tmp2Result = LinearGradient;
   }
   return tmp9;
 };

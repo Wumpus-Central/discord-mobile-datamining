@@ -1,3 +1,8 @@
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { collectGuildAnalyticsMetadata } from "../modules/app_analytics/AppAnalyticsUtils.tsx";
+import { getSearchSessionId } from "../modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx";
+import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
+import { ComponentDispatcher } from "ComponentDispatchUtils.tsx";
 // discord_app/utils/UserSettingsUtils.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -13,7 +18,7 @@ let obj = { UNDECIDED: 0, [0]: "UNDECIDED", OPTIN: 1, [1]: "OPTIN", OPTOUT: 2, [
 const result = require("ME").fileFinishedImporting("utils/UserSettingsUtils.tsx");
 
 export const getSanitizedRestrictedGuilds = function getSanitizedRestrictedGuilds() {
-  const RestrictedGuildIds = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.RestrictedGuildIds;
+  const RestrictedGuildIds = explicitContentFromProto /* explicitContentFromProto */.RestrictedGuildIds;
   const setting = RestrictedGuildIds.getSetting();
   let found = setting;
   if (0 === handleConnectionOpen.totalUnavailableGuilds) {
@@ -22,7 +27,7 @@ export const getSanitizedRestrictedGuilds = function getSanitizedRestrictedGuild
   return new Set(found);
 };
 export const getSanitizedMessageRequestRestrictedGuilds = function getSanitizedMessageRequestRestrictedGuilds() {
-  const MessageRequestRestrictedGuildIds = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.MessageRequestRestrictedGuildIds;
+  const MessageRequestRestrictedGuildIds = explicitContentFromProto /* explicitContentFromProto */.MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.getSetting();
   let found = setting;
   if (0 === handleConnectionOpen.totalUnavailableGuilds) {
@@ -31,7 +36,7 @@ export const getSanitizedMessageRequestRestrictedGuilds = function getSanitizedM
   return new Set(found);
 };
 export const getSanitizedActivityRestrictedGuilds = function getSanitizedActivityRestrictedGuilds() {
-  const ActivityRestrictedGuilds = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.ActivityRestrictedGuilds;
+  const ActivityRestrictedGuilds = explicitContentFromProto /* explicitContentFromProto */.ActivityRestrictedGuilds;
   const setting = ActivityRestrictedGuilds.getSetting();
   let found = setting;
   if (0 === handleConnectionOpen.totalUnavailableGuilds) {
@@ -40,7 +45,7 @@ export const getSanitizedActivityRestrictedGuilds = function getSanitizedActivit
   return new Set(found);
 };
 export const getSanitizedActivityJoiningRestrictedGuilds = function getSanitizedActivityJoiningRestrictedGuilds() {
-  const ActivityJoiningRestrictedGuilds = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.ActivityJoiningRestrictedGuilds;
+  const ActivityJoiningRestrictedGuilds = explicitContentFromProto /* explicitContentFromProto */.ActivityJoiningRestrictedGuilds;
   const setting = ActivityJoiningRestrictedGuilds.getSetting();
   let found = setting;
   if (0 === handleConnectionOpen.totalUnavailableGuilds) {
@@ -66,38 +71,38 @@ export const trackUserSettingsPaneViewed = function trackUserSettingsPaneViewed(
   let source;
   let subsection;
   ({ destinationPane, originPane, source, subsection, locationStack, applicationId } = arg0);
-  let obj = require("../modules/app_analytics/AppAnalyticsUtils.tsx");
+  let obj = collectGuildAnalyticsMetadata;
   obj = { settings_type: "user", origin_pane: originPane, destination_pane: destinationPane, location_stack: locationStack, source, subsection, application_id: applicationId, search_session_id: null };
-  obj[7] = require("../modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx").getSearchSessionId();
+  obj[7] = getSearchSessionId.getSearchSessionId();
   obj.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj);
 };
 export const NonSpamRetrainingOptInOptions = obj;
 export const NonSpamRetrainingOptInOptionsToValue = { [obj.UNDECIDED]: undefined, [obj.OPTIN]: true, [obj.OPTOUT]: false };
 export const generateNonSpamRetrainingOptInSettingOptions = function generateNonSpamRetrainingOptInSettingOptions() {
   let obj = { name: null, desc: null, value: null };
-  const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["/yLMRQ"]);
-  const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["3fzkPq"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["/yLMRQ"]);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["3fzkPq"]);
   obj[2] = obj.OPTIN;
   const items = [obj, , ];
   obj = { name: null, desc: null, value: null };
-  const intl3 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl3.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["21fP2b"]);
-  const intl4 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl4.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.ggJ9jR);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl3.string(getSystemLocale /* getSystemLocale */.t["21fP2b"]);
+  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl4.string(getSystemLocale /* getSystemLocale */.t.ggJ9jR);
   obj[2] = obj.OPTOUT;
   items[1] = obj;
   obj = { name: null, desc: null, value: null };
-  const intl5 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl5.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.OWIo8w);
-  const intl6 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl6.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.HqYXpw);
+  const intl5 = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl5.string(getSystemLocale /* getSystemLocale */.t.OWIo8w);
+  const intl6 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl6.string(getSystemLocale /* getSystemLocale */.t.HqYXpw);
   obj[2] = obj.UNDECIDED;
   items[2] = obj;
   return items;
 };
 export const shakeUserSettings = function shakeUserSettings(arg0) {
-  const ComponentDispatch = require("ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
   ComponentDispatch.dispatch(constants3.SHAKE_SETTINGS_MODAL, arg0);
 };

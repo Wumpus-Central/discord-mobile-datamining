@@ -1,3 +1,5 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 // discord_app/modules/voice_panel/native/utils/VoiceStateIconUtils.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import updateVoiceState from "updateVoiceState";
@@ -8,7 +10,7 @@ function isStableVoiceStateEqual(arg0, arg1) {
   if (!tmp) {
     let tmp3 = null != arg0 && null != arg1;
     if (tmp3) {
-      tmp3 = require("../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(arg0, arg1);
+      tmp3 = shallowEqual(arg0, arg1);
     }
     tmp = tmp3;
   }
@@ -25,7 +27,7 @@ export const useStableVoiceParticipant = function useStableVoiceParticipant(arg0
   let closure_1 = arg1;
   const items = [_detectH265HardwareDecode, updateVoiceState];
   const items1 = [arg0, arg1];
-  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     if (null != closure_0) {
       const voiceState = outer1_4.getVoiceState(closure_1, tmp);
       if (null != voiceState) {
@@ -41,7 +43,7 @@ export const useStableVoiceParticipant = function useStableVoiceParticipant(arg0
 export const useMuteDeafenIconState = function useMuteDeafenIconState(id, guildId) {
   const _require = id;
   let closure_1 = guildId;
-  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [_detectH265HardwareDecode, updateVoiceState];
   const items1 = [id, guildId];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -78,7 +80,7 @@ export const useStableVideoState = function useStableVideoState(arg0, arg1) {
   let closure_1 = arg1;
   const items = [_detectH265HardwareDecode, updateVoiceState];
   const items1 = [arg1, arg0];
-  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
+  return _initialize.useStateFromStoresObject(items, () => {
     if (null != closure_0) {
       const voiceState = outer1_4.getVoiceState(closure_1, tmp);
     }
@@ -105,7 +107,7 @@ export const useStableVideoState = function useStableVideoState(arg0, arg1) {
 export const useVideoIconState = function useVideoIconState(id, guildId) {
   const _require = id;
   let closure_1 = guildId;
-  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [_detectH265HardwareDecode, updateVoiceState];
   const items1 = [guildId, id];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {

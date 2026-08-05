@@ -1,3 +1,8 @@
+import { registerAsset } from "../../../../_runtime/11182_registerAsset.js";
+import { componentDidMount } from "../../../components_native/common/Alert.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/guild_automod/native/AutomodUserProfileQuarantineAlert.tsx
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
@@ -28,8 +33,8 @@ function ChatBlockedAlert(arg0) {
   let obj = {};
   const merged = Object.assign(tmp);
   obj.style = tmp2.wrapper;
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj.cancelText = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["ETE/oC"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj.cancelText = intl.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
   let onClose;
   if (tmp != null) {
     onClose = tmp.onClose;
@@ -39,13 +44,13 @@ function ChatBlockedAlert(arg0) {
   obj.onConfirm = onConfirm;
   obj = { style: tmp2.body, children: null };
   obj = { source: null, size: null, style: null };
-  obj[0] = require("../../../../_runtime/11182_registerAsset.js");
-  obj[1] = require("../../../design/void/native.tsx") /* Button */.Icon.Sizes.CUSTOM;
+  obj[0] = registerAsset;
+  obj[1] = Button /* Button */.Icon.Sizes.CUSTOM;
   obj[2] = tmp2.mainIcon;
-  const items = [closure_16(require("../../../design/void/native.tsx") /* Button */.Icon, obj), closure_16(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp2.title, accessibilityRole: "header", variant: "heading-md/medium", color: "mobile-text-heading-primary", children: title }), closure_16(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp2.description, variant: "text-sm/medium", color: "text-default", children: description })];
+  const items = [closure_16(Button /* Button */.Icon, obj), closure_16(Text /* Text */.Text, { style: tmp2.title, accessibilityRole: "header", variant: "heading-md/medium", color: "mobile-text-heading-primary", children: title }), closure_16(Text /* Text */.Text, { style: tmp2.description, variant: "text-sm/medium", color: "text-default", children: description })];
   obj[1] = items;
   obj.children = callback4(View, obj);
-  return closure_16(require("../../../components_native/common/Alert.tsx"), obj);
+  return closure_16(componentDidMount, obj);
 }
 function PerServerProfileAlert(arg0) {
   let automodReason;
@@ -55,13 +60,13 @@ function PerServerProfileAlert(arg0) {
   let tmp8;
   ({ guildId, guildName, automodReason } = arg0);
   if (automodReason === GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) {
-    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    let stringResult = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.SpDXI7);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t.SpDXI7);
     let tmp2 = require;
   } else {
     tmp2 = require;
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    stringResult = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.TBeZmG);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.TBeZmG);
   }
   const tmp = callback2(arg0, closure_4);
   const tmp2Result = tmp2(11183);
@@ -92,12 +97,12 @@ function PerServerProfileAlert(arg0) {
 function ServerTagAlert(guildName) {
   let obj = {};
   const merged = Object.assign(callback2(guildName, closure_5));
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj.title = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.c8TwbL, { guildName: guildName.guildName });
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj.description = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.EJJLHp);
-  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj.buttonCta = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Viksoo);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj.title = intl.format(getSystemLocale /* getSystemLocale */.t.c8TwbL, { guildName: guildName.guildName });
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj.description = intl2.string(getSystemLocale /* getSystemLocale */.t.EJJLHp);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj.buttonCta = intl3.string(getSystemLocale /* getSystemLocale */.t.Viksoo);
   obj.onConfirm = function onConfirm() {
     let obj = callback(table[19]);
     obj = { screen: constants.PROFILE_CUSTOMIZATION };

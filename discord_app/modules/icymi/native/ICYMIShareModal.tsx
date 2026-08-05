@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { SHARE_EVENT_DETAILS_LINK } from "../../guild_scheduled_events/utils/ShareEventUtils.tsx";
 // discord_app/modules/icymi/native/ICYMIShareModal.tsx
 import dispatcher from "dispatcher";
 import handleChanged from "handleChanged";
@@ -347,12 +349,12 @@ let result = require("noop").fileFinishedImporting("modules/icymi/native/ICYMISh
 export default ICYMIShareModal;
 export const GuildEventShareModal = function GuildEventShareModal(event) {
   event = event.event;
-  let obj = require("../../guild_scheduled_events/utils/ShareEventUtils.tsx") /* SHARE_EVENT_DETAILS_LINK */;
+  let obj = SHARE_EVENT_DETAILS_LINK /* SHARE_EVENT_DETAILS_LINK */;
   obj = { guildId: event.guild_id, guildEventId: event.id };
   obj = { title: null, originDestinationId: null, linkText: null };
   const result = obj.SHARE_EVENT_DETAILS_LINK(obj);
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["7TVSLK"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["7TVSLK"]);
   let tmp4;
   if (null != event.channel_id) {
     const obj1 = { type: "channel", id: null };
@@ -366,8 +368,8 @@ export const GuildEventShareModal = function GuildEventShareModal(event) {
 export const GameShareModal = function GameShareModal(content) {
   let _require = content.content;
   let obj = { title: null, linkText: "", forwardToChannel: null };
-  let intl = _require("../../../intl/index.native.tsx").intl;
-  obj[0] = intl.string(_require("../../../intl/index.native.tsx").t["59CWHK"]);
+  let intl = _getSystemLocale.intl;
+  obj[0] = intl.string(_getSystemLocale.t["59CWHK"]);
   _require = undefined;
   _require = callback2((arg0) => {
     let closure_0 = arg0;

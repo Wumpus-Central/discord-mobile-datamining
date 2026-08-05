@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { ModalStackNavigator } from "../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
 // discord_app/modules/image_upload/native/AddImageDescriptionModal.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
@@ -126,10 +128,10 @@ export default function AddImageDescriptionModal(arg0) {
   let require;
   ({ source: require, channelId: importDefault, id: dependencyMap } = arg0);
   const obj = { screenKey: "addImageDescriptionModal", title: null, render: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["5S2AK+"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["5S2AK+"]);
   obj[2] = function render() {
     return outer1_10(outer1_13, { source: closure_0, channelId: closure_1, id: closure_2 });
   };
-  return callback(require("../../main_tabs_v2/native/utils/ModalStackNavigator.tsx"), obj);
+  return callback(ModalStackNavigator, obj);
 };

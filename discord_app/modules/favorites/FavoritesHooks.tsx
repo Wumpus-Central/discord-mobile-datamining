@@ -1,3 +1,9 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { FREE_FAVORITE_LIMIT } from "../../../discord_common/js/shared/shared-constants/FavoritesLimits.tsx";
+import { isPremiumAtLeast } from "../../utils/PremiumTypeUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { useFavoritesGuildConfig } from "FavoritesGuildExperiment.tsx";
+import { getFavoritesAwareGuildName } from "FavoritesUtils.tsx";
 // discord_app/modules/favorites/FavoritesHooks.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -14,7 +20,7 @@ function useFavoritesAccess(FavoritesGuildChannelList) {
   if (FavoritesGuildChannelList === undefined) {
     str = "useFavoritesAccess";
   }
-  let obj = require("FavoritesGuildExperiment.tsx") /* useFavoritesGuildConfig */;
+  let obj = useFavoritesGuildConfig /* useFavoritesGuildConfig */;
   const favoritesGuildConfig = obj.useFavoritesGuildConfig({ location: str });
   ({ enabled, isFreemium } = favoritesGuildConfig);
   let tmp4 = undefined !== isFreemium;
@@ -22,9 +28,9 @@ function useFavoritesAccess(FavoritesGuildChannelList) {
     tmp4 = isFreemium;
   }
   const items = [mergeGuildAvatar];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const tmpResult = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
-  const isPremiumExactlyResult = require("../../utils/PremiumTypeUtils.tsx").isPremiumExactly(stateFromStores, PremiumTypes.TIER_2);
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const tmpResult = initialize /* initialize */;
+  const isPremiumExactlyResult = isPremiumAtLeast.isPremiumExactly(stateFromStores, PremiumTypes.TIER_2);
   let tmp7 = enabled;
   if (enabled) {
     let tmp8 = isPremiumExactlyResult;
@@ -56,14 +62,14 @@ export { useFavoritesAccess };
 export const getFavoritesAccess = function getFavoritesAccess() {
   let enabled;
   let isFreemium;
-  let obj = require("FavoritesGuildExperiment.tsx") /* useFavoritesGuildConfig */;
+  let obj = useFavoritesGuildConfig /* useFavoritesGuildConfig */;
   const favoritesGuildConfig = obj.getFavoritesGuildConfig({ location: "getFavoritesAccess" });
   ({ enabled, isFreemium } = favoritesGuildConfig);
   let tmp4 = undefined !== isFreemium;
   if (tmp4) {
     tmp4 = isFreemium;
   }
-  const isPremiumExactlyResult = require("../../utils/PremiumTypeUtils.tsx").isPremiumExactly(currentUser.getCurrentUser(), PremiumTypes.TIER_2);
+  const isPremiumExactlyResult = isPremiumAtLeast.isPremiumExactly(currentUser.getCurrentUser(), PremiumTypes.TIER_2);
   let tmp6 = enabled;
   if (enabled) {
     let tmp7 = isPremiumExactlyResult;
@@ -85,24 +91,24 @@ export const getFavoritesAccess = function getFavoritesAccess() {
   } else {
     num = 0;
     if (tmp4) {
-      num = require("../../../discord_common/js/shared/shared-constants/FavoritesLimits.tsx") /* FREE_FAVORITE_LIMIT */.FREE_FAVORITE_LIMIT;
+      num = FREE_FAVORITE_LIMIT /* FREE_FAVORITE_LIMIT */.FREE_FAVORITE_LIMIT;
     }
   }
 };
 export const useFavorites = function useFavorites() {
   const items = [initializeFromUserSettings];
-  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresObject(items, () => favoriteChannels.getFavoriteChannels());
+  return initialize /* initialize */.useStateFromStoresObject(items, () => favoriteChannels.getFavoriteChannels());
 };
 export const useFavorite = function useFavorite(arg0) {
   const _require = arg0;
   const items = [initializeFromUserSettings];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_5.getFavorite(closure_0));
+  return _initialize.useStateFromStores(items, () => outer1_5.getFavorite(closure_0));
 };
 export const useFavoritedChannelIds = function useFavoritedChannelIds() {
   const items = [initializeFromUserSettings];
-  const stateFromStoresObject = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresObject(items, () => favoriteChannels.getFavoriteChannels());
-  const obj = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
-  return require("../../utils/SnowflakeUtils.tsx").keys(stateFromStoresObject);
+  const stateFromStoresObject = initialize /* initialize */.useStateFromStoresObject(items, () => favoriteChannels.getFavoriteChannels());
+  const obj = initialize /* initialize */;
+  return DISCORD_EPOCH.keys(stateFromStoresObject);
 };
 export const getFavoritesCategories = function getFavoritesCategories(favoriteChannels) {
   let nickname;
@@ -150,7 +156,7 @@ export const getFavoritesCategories = function getFavoritesCategories(favoriteCh
 };
 export const useFavoritesCategories = function useFavoritesCategories() {
   let items = [initializeFromUserSettings];
-  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+  return initialize /* initialize */.useStateFromStores(items, () => {
     let nickname;
     let obj = favoriteChannels;
     favoriteChannels = favoriteChannels.getFavoriteChannels();
@@ -200,18 +206,18 @@ export const useFavoritesCategories = function useFavoritesCategories() {
 };
 export const useIsFavoritesGuildSelected = function useIsFavoritesGuildSelected() {
   const items = [handleConnectionOpen];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => guildId.getGuildId());
-  const obj = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
-  return require("FavoritesUtils.tsx") /* getFavoritesAwareGuildName */.isFavoritesGuildId(stateFromStores);
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => guildId.getGuildId());
+  const obj = initialize /* initialize */;
+  return getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(stateFromStores);
 };
 export const useFavoritesAwareChannel = function useFavoritesAwareChannel(arg0, FavoritesGuildChannelList) {
   let tmp = arg0;
   const _require = arg0;
   const items = [handleConnectionOpen];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => guildId.getGuildId());
-  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
-  let obj2 = _require("FavoritesUtils.tsx");
-  _require("../../../discord_common/js/packages/flux/index.tsx");
+  const stateFromStores = _initialize.useStateFromStores(items, () => guildId.getGuildId());
+  const obj = _initialize;
+  let obj2 = _getFavoritesAwareGuildName;
+  _initialize;
   [][0] = arg0;
   if (!isFavoritesGuildIdResult) {
     if (tmp == null) {

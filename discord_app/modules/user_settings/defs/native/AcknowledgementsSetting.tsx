@@ -1,28 +1,30 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { Linking } from "../../../../lib/native/Linking.tsx";
 // discord_app/modules/user_settings/defs/native/AcknowledgementsSetting.tsx
 import { MarketingURLs } from "ME";
 import createToggle from "createToggle";
 
 const pressable = createToggle.createPressable({
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["0nUKy3"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["0nUKy3"]);
   },
   parent: null,
   IconComponent: require("CircleInformationIcon").CircleInformationIcon,
   onPress: function handleAcknowledgementsSettingPress() {
-    require("../../../../lib/native/Linking.tsx").openURL(MarketingURLs.ACKNOWLEDGEMENTS);
+    Linking.openURL(MarketingURLs.ACKNOWLEDGEMENTS);
   },
   withArrow: true
 });
 const obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["0nUKy3"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["0nUKy3"]);
   },
   parent: null,
   IconComponent: require("CircleInformationIcon").CircleInformationIcon,
   onPress: function handleAcknowledgementsSettingPress() {
-    require("../../../../lib/native/Linking.tsx").openURL(MarketingURLs.ACKNOWLEDGEMENTS);
+    Linking.openURL(MarketingURLs.ACKNOWLEDGEMENTS);
   },
   withArrow: true
 };

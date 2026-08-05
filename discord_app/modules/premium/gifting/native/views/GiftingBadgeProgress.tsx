@@ -1,3 +1,7 @@
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { messagesProxy } from "../../GiftingBadge.messages.js";
+import { GiftingBadgeIcon } from "GiftingBadgeIcon.tsx";
 // discord_app/modules/premium/gifting/native/views/GiftingBadgeProgress.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -66,7 +70,7 @@ export default function GiftingBadgeProgress(title) {
     obj = { icon: null, size: null };
     obj[0] = currentTier.simple_icon_url;
     obj[1] = iconSize;
-    tmp8 = callback2(require("GiftingBadgeIcon.tsx"), obj);
+    tmp8 = callback2(GiftingBadgeIcon, obj);
   }
   const items = [tmp8, , ];
   obj = { style: tmp.content, children: null };
@@ -74,19 +78,19 @@ export default function GiftingBadgeProgress(title) {
   if (tmp12) {
     const obj1 = { variant: "text-md/semibold", children: null };
     obj1[1] = title;
-    tmp12 = callback2(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+    tmp12 = callback2(Text /* Text */.Text, obj1);
   }
   const items1 = [tmp12, callback2(GiftingBadgeProgressBar, { percent: num2 }), ];
   const obj2 = { style: tmp.labels, children: null };
   let tmp16Result = null != nextTier;
   if (tmp16Result) {
     const obj3 = { variant: "text-xs/normal", color: "text-muted", children: null };
-    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     const obj4 = { count: null, threshold: null };
     obj4[0] = progress;
     obj4[1] = tmp2;
-    obj3[2] = intl.format(require("../../GiftingBadge.messages.js").iIpfQe, obj4);
-    tmp16Result = tmp16(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
+    obj3[2] = intl.format(messagesProxy.iIpfQe, obj4);
+    tmp16Result = tmp16(Text /* Text */.Text, obj3);
   }
   obj2[1] = tmp16Result;
   items1[2] = callback2(View, obj2);
@@ -101,7 +105,7 @@ export default function GiftingBadgeProgress(title) {
     const obj5 = { icon: null, size: null };
     obj5[0] = nextTier.simple_icon_url;
     obj5[1] = iconSize;
-    tmp16Result = tmp16(require("GiftingBadgeIcon.tsx"), obj5);
+    tmp16Result = tmp16(GiftingBadgeIcon, obj5);
   }
   items[2] = tmp16Result;
   obj[1] = items;

@@ -1,3 +1,7 @@
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { TextField } from "../../../../../design/components/TextField/native/TextField.native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { apexExperiment } from "../../../../people/FriendRequestMessageExperiment.tsx";
 // discord_app/modules/main_tabs_v2/native/friends/screens/AddFriendById.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -17,7 +21,7 @@ const require = arg1;
 function ErrorMessage(children) {
   const style = [, ];
   ({ inputAccessoryText: arr[0], errorStateText: arr[1] } = callback2());
-  return callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-xs/medium", color: "text-feedback-critical", style, children: children.errorMessage });
+  return callback(Text /* Text */.Text, { variant: "text-xs/medium", color: "text-feedback-critical", style, children: children.errorMessage });
 }
 let c4 = importAllResult;
 ({ View: c5, Keyboard: closure_6 } = get_ActivityIndicator);
@@ -59,9 +63,9 @@ let closure_16 = importAllResult.forwardRef((headerTextStyle, ref) => {
   ({ validationState, headerText } = headerTextStyle);
   ({ textState, onChangeText, onSelectionChange, onKeyPress, onSubmitEditing, onFocus, autoFocus } = headerTextStyle);
   if (headerText === undefined) {
-    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    headerText = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.YegTF2).toUpperCase();
-    const str = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.YegTF2);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    headerText = intl.string(getSystemLocale /* getSystemLocale */.t.YegTF2).toUpperCase();
+    const str = intl.string(getSystemLocale /* getSystemLocale */.t.YegTF2);
   }
   const tmp3 = callback2();
   let message;
@@ -74,17 +78,17 @@ let closure_16 = importAllResult.forwardRef((headerTextStyle, ref) => {
   const items = [, , ];
   ({ redesignInputAccessoryText: arr[0], inputHeaderText: arr[1] } = tmp3);
   items[2] = headerTextStyle.headerTextStyle;
-  const items1 = [callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: items, variant: "text-sm/semibold", color: "text-muted", children: headerText }), , ];
+  const items1 = [callback(Text /* Text */.Text, { style: items, variant: "text-sm/semibold", color: "text-muted", children: headerText }), , ];
   obj = { ref, value: textState.validatedText, accessibilityLabel: null, accessibilityHint: null, placeholder: null, placeholderTextColor: null, onChange: null, onSelectionChange: null, onKeyPress: null, onSubmitEditing: null, autoCapitalize: "none", returnKeyType: "send", keyboardType: "twitter", autoCorrect: false, blurOnSubmit: true, maxLength: 37, autoFocus: null, onFocus: null, status: null };
-  const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl2.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.qRaqel);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.qRaqel);
   let a11yMessage;
   if (validationState.status === constants.ERROR) {
     a11yMessage = validationState.a11yMessage;
   }
   obj[3] = a11yMessage;
   const intl3 = tmp10(1236).intl;
-  obj[4] = intl3.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.qRaqel);
+  obj[4] = intl3.string(getSystemLocale /* getSystemLocale */.t.qRaqel);
   obj[5] = tmp3.placeholderText.color;
   obj[6] = onChangeText;
   obj[7] = onSelectionChange;
@@ -97,7 +101,7 @@ let closure_16 = importAllResult.forwardRef((headerTextStyle, ref) => {
     str2 = "error";
   }
   obj[18] = str2;
-  items1[1] = callback(require("../../../../../design/components/TextField/native/TextField.native.tsx") /* TextField */.TextField, obj);
+  items1[1] = callback(TextField /* TextField */.TextField, obj);
   let tmp9Result = null;
   if (null != message) {
     obj = { errorMessage: null };
@@ -253,7 +257,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   const tmp7 = first(importAllResult.useState(""), 2);
   first2 = tmp7[0];
   closure_8 = tmp7[1];
-  let obj1 = require("../../../../people/FriendRequestMessageExperiment.tsx");
+  let obj1 = apexExperiment;
   const enabled = obj1.useConfig({ location: "AddFriendbyId" }).enabled;
   const items = [first1];
   const items1 = [first1];

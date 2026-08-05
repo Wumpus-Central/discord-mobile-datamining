@@ -1,3 +1,4 @@
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/guild_onboarding_home/useResourceChannels.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
@@ -8,7 +9,7 @@ const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/g
 export default function useResourceChannels(arg0) {
   const _require = arg0;
   const items = [handleSettingsLoadSuccess, ensureGuildLoaded];
-  return _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items, () => {
+  return _defaultAreStatesEqual.useStateFromStoresArray(items, () => {
     const resourceChannels = outer1_3.getResourceChannels(closure_0);
     return resourceChannels.filter((channelId) => null != channel.getChannel(channelId.channelId));
   });

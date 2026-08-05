@@ -1,3 +1,4 @@
+import { Integer } from "../../../../_runtime/00014_Integer.js";
 // discord_common/js/shared/utils/SnowflakeUtils.tsx
 function extractTimestamp(arg0) {
   return Math.floor(Number(arg0) / 4194304) + c2;
@@ -39,9 +40,9 @@ export const fromTimestamp = function fromTimestamp(arg0) {
   const diff = arg0 - c2;
   let str = "0";
   if (diff > 0) {
-    const obj = require("../../../../_runtime/00014_Integer.js")(diff);
-    str = require("../../../../_runtime/00014_Integer.js")(diff).shiftLeft(22).toString();
-    const str2 = require("../../../../_runtime/00014_Integer.js")(diff).shiftLeft(22);
+    const obj = Integer(diff);
+    str = Integer(diff).shiftLeft(22).toString();
+    const str2 = Integer(diff).shiftLeft(22);
   }
   return str;
 };
@@ -51,18 +52,18 @@ export const fromTimestampWithSequence = function fromTimestampWithSequence(arg0
   if (diff > 0) {
     num = diff;
   }
-  const tmp2 = require("../../../../_runtime/00014_Integer.js");
-  const tmp2Result = require("../../../../_runtime/00014_Integer.js")(num);
-  const shiftLeftResult = require("../../../../_runtime/00014_Integer.js")(num).shiftLeft(22);
-  return require("../../../../_runtime/00014_Integer.js")(num).shiftLeft(22).add(next.next()).toString();
+  const tmp2 = Integer;
+  const tmp2Result = Integer(num);
+  const shiftLeftResult = Integer(num).shiftLeft(22);
+  return Integer(num).shiftLeft(22).add(next.next()).toString();
 };
 export const atPreviousMillisecond = function atPreviousMillisecond(arg0) {
   const diff = Math.floor(Number(arg0) / 4194304) + c2 - 1 - c2;
   let str = "0";
   if (diff > 0) {
-    const obj = require("../../../../_runtime/00014_Integer.js")(diff);
-    str = require("../../../../_runtime/00014_Integer.js")(diff).shiftLeft(22).toString();
-    const str2 = require("../../../../_runtime/00014_Integer.js")(diff).shiftLeft(22);
+    const obj = Integer(diff);
+    str = Integer(diff).shiftLeft(22).toString();
+    const str2 = Integer(diff).shiftLeft(22);
   }
   return str;
 };
@@ -70,9 +71,9 @@ export const atNextMillisecond = function atNextMillisecond(arg0) {
   const diff = Math.floor(Number(arg0) / 4194304) + c2 + 1 - c2;
   let str = "0";
   if (diff > 0) {
-    const obj = require("../../../../_runtime/00014_Integer.js")(diff);
-    str = require("../../../../_runtime/00014_Integer.js")(diff).shiftLeft(22).toString();
-    const str2 = require("../../../../_runtime/00014_Integer.js")(diff).shiftLeft(22);
+    const obj = Integer(diff);
+    str = Integer(diff).shiftLeft(22).toString();
+    const str2 = Integer(diff).shiftLeft(22);
   }
   return str;
 };

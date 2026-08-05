@@ -1,3 +1,4 @@
+import { useMountLayoutEffect } from "../../../hooks/useMountEffect.tsx";
 // discord_app/components_native/calls/stream/VideoEmptyState.tsx
 import "noop";
 import { View } from "CollapsingText";
@@ -86,7 +87,7 @@ export default function VideoEmptyState(style) {
   const items2 = [ensureGuildLoaded];
   const items3 = [stream.channelId];
   importDefault = obj8.useStateFromStores(items2, () => outer1_4.getChannel(stream.channelId), items3);
-  require("../../../hooks/useMountEffect.tsx")(() => {
+  useMountLayoutEffect(() => {
     let isGuildStageVoiceResult;
     if (closure_1 != null) {
       isGuildStageVoiceResult = closure_1.isGuildStageVoice();

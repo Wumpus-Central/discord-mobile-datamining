@@ -1,3 +1,4 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/custom_status/native/CustomStatusPreview.tsx
 import EmojiImage from "EmojiImage";
 import { View } from "OpenableUserProfileAvatar";
@@ -14,7 +15,7 @@ const require = arg1;
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
   let obj = { flex: 1, position: "relative", overflow: "hidden", width: 323, maxHeight: 301, borderWidth: num, borderColor: null, borderRadius: null };
-  const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
+  const colors = Themes.colors;
   if (arg0) {
     let BACKGROUND_SURFACE_HIGH = colors.BORDER_MUTED;
     let tmp4 = tmp;

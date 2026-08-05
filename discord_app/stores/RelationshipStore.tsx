@@ -1,3 +1,4 @@
+import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/stores/RelationshipStore.tsx
 import _slicedToArray from "_slicedToArray";
 import hasFlag from "hasFlag";
@@ -464,8 +465,8 @@ const relationshipStore = new RelationshipStore(require("dispatcher"), {
       if (tmp48) {
         const obj3 = { type: "FRIEND_REQUEST_ACCEPTED", user: null };
         obj3[1] = relationship.relationship.user;
-        require("../Dispatcher.tsx").dispatch(obj3);
-        const obj11 = require("../Dispatcher.tsx");
+        dispatcher.dispatch(obj3);
+        const obj11 = dispatcher;
       }
     } else {
       if (null != value) {

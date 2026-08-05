@@ -1,3 +1,11 @@
+import { _isNativeReflectConstruct } from "../../../../../_runtime/08793__isNativeReflectConstruct.js";
+import { registerAsset } from "../../../../../_runtime/10147_registerAsset.js";
+import { ShieldIcon } from "../../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { openImagePickerUnhandled } from "../../../../utils/native/UploadUtils.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { dispatcher } from "../../../toast/native/ToastActionCreators.tsx";
+import { presentAddedFriendToast } from "../../../toast/native/ToastUtils.tsx";
 // discord_app/modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaFalsePositiveActionSheet.tsx
 import noop from "noop";
 import get_ActivityIndicator from "Button";
@@ -43,7 +51,7 @@ function ExplicitMediaFalsePositivePreviewAttachment(attachment) {
 function ExplicitMediaFalsePositivePreview(url) {
   url = url.url;
   const tmp = createCacheKey();
-  let obj = require("../../../../utils/native/UploadUtils.tsx") /* openImagePickerUnhandled */;
+  let obj = openImagePickerUnhandled /* openImagePickerUnhandled */;
   obj = { style: items, children: null };
   items = [, ];
   ({ mediaContainer: arr[0], elevationShadow: arr[1] } = tmp);
@@ -53,7 +61,7 @@ function ExplicitMediaFalsePositivePreview(url) {
     const obj1 = { uri: null };
     obj1[0] = url;
     obj[4] = obj1;
-    let tmp3Result = tmp3(require("../../../../../_runtime/08793__isNativeReflectConstruct.js"), obj);
+    let tmp3Result = tmp3(_isNativeReflectConstruct, obj);
   } else {
     const obj2 = { style: null, source: null };
     const items1 = [, ];
@@ -87,16 +95,16 @@ let obj4 = { backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_GRADIE
 let result = require("jsxProd").fileFinishedImporting("modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaFalsePositiveActionSheet.tsx");
 
 export const handleSuccess = function handleSuccess(arg0) {
-  let obj = require("../../../action_sheet/native/ActionSheetActionCreators.tsx");
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj.hideActionSheet(arg0);
-  obj = { key: "explicit_media_report_false_positive_success", icon: require("../../../../../_runtime/10147_registerAsset.js"), IconComponent: require("../../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx") /* ShieldIcon */.ShieldIcon, iconColor: "text-brand", content: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[4] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.gFsTKu);
-  require("../../../toast/native/ToastActionCreators.tsx").open(obj);
+  obj = { key: "explicit_media_report_false_positive_success", icon: registerAsset, IconComponent: ShieldIcon /* ShieldIcon */.ShieldIcon, iconColor: "text-brand", content: null };
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t.gFsTKu);
+  dispatcher.open(obj);
 };
 export const handleError = function handleError() {
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  require("../../../toast/native/ToastUtils.tsx") /* presentAddedFriendToast */.presentError(intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.R0RpRX));
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  presentAddedFriendToast /* presentAddedFriendToast */.presentError(intl.string(getSystemLocale /* getSystemLocale */.t.R0RpRX));
 };
 export const ExplicitMediaFalsePositiveActionSheet = function ExplicitMediaFalsePositiveActionSheet(channelId) {
   let attachmentPreview;

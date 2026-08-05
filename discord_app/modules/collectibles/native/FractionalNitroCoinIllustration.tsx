@@ -1,3 +1,4 @@
+import { AccountAgeTier10LargeBadge } from "../../../design/assets/native.tsx";
 // discord_app/modules/collectibles/native/FractionalNitroCoinIllustration.tsx
 import "noop";
 import { EXTERNAL_PRODUCT_SKU_IDS } from "items";
@@ -17,9 +18,9 @@ export const FractionalNitroCoinIllustration = function FractionalNitroCoinIllus
     resizeMode = "contain";
   }
   if (skuId === EXTERNAL_PRODUCT_SKU_IDS.FRACTIONAL_PREMIUM_1_DAY) {
-    let NitroCoinStackSpotIllustration = require("../../../design/assets/native.tsx") /* AccountAgeTier10LargeBadge */.NitroCoinSpotIllustration;
+    let NitroCoinStackSpotIllustration = AccountAgeTier10LargeBadge /* AccountAgeTier10LargeBadge */.NitroCoinSpotIllustration;
   } else {
-    NitroCoinStackSpotIllustration = require("../../../design/assets/native.tsx") /* AccountAgeTier10LargeBadge */.NitroCoinStackSpotIllustration;
+    NitroCoinStackSpotIllustration = AccountAgeTier10LargeBadge /* AccountAgeTier10LargeBadge */.NitroCoinStackSpotIllustration;
   }
   return <NitroCoinStackSpotIllustration width={width} height={height} resizeMode={resizeMode} />;
 };

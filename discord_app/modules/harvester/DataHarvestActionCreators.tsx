@@ -1,12 +1,15 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { saveProfileAndAccountRequest } from "../../actions/UserSettingsAccountActionCreators.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/harvester/DataHarvestActionCreators.tsx
 import { Endpoints } from "ME";
 
 const result = require("sendRequest").fileFinishedImporting("modules/harvester/DataHarvestActionCreators.tsx");
 
 export const getDataHarvestStatus = function getDataHarvestStatus() {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj.dispatch({ type: "LOAD_DATA_HARVEST_TYPE_START" });
-  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   obj = { url: Endpoints.USER_HARVEST, oldFormErrors: true, rejectWithError: false };
   const value = HTTP.get(obj);
   return value.then((body) => {
@@ -20,7 +23,7 @@ export const getDataHarvestStatus = function getDataHarvestStatus() {
   });
 };
 export const requestDataHarvest = function requestDataHarvest(mapped) {
-  const harvest = require("../../actions/UserSettingsAccountActionCreators.tsx") /* saveProfileAndAccountRequest */.requestHarvest(mapped);
+  const harvest = saveProfileAndAccountRequest /* saveProfileAndAccountRequest */.requestHarvest(mapped);
   return harvest.then((body) => {
     if (tmp) {
       let obj = callback(table[1]);

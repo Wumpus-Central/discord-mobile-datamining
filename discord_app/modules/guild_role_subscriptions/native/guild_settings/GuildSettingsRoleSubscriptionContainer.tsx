@@ -1,3 +1,6 @@
+import { useOnboardingMonetizationEnableFlow } from "../../../creator_monetization_eligibility/guild_settings/useOnboardingMonetizationEnableFlow.tsx";
+import { useGroupListingsFetchContext } from "../../GroupListingsFetchContext.tsx";
+import { useRoleSubscriptionSettingsDisabled } from "../../RoleSubscriptionSettingsDisabledContext.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionContainer.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -28,7 +31,7 @@ function ApplicationRejectedNotice(guildId) {
     const hasItem1 = features2.has(GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING);
   }
   const tmp = callback3();
-  ({ resubmissionError, requestRejectedNoticeText, reapplyNoticeText } = require("../../../creator_monetization_eligibility/guild_settings/useOnboardingMonetizationEnableFlow.tsx")(stateFromStores));
+  ({ resubmissionError, requestRejectedNoticeText, reapplyNoticeText } = useOnboardingMonetizationEnableFlow(stateFromStores));
   if (null != resubmissionError) {
     obj = { children: null };
     let tmp9Result = tmp9(11506);
@@ -83,7 +86,7 @@ function GuildSettingsRoleSubscription(arg0) {
   let guildId;
   ({ guildId, children } = arg0);
   const tmp = callback3();
-  let obj = require("../../GroupListingsFetchContext.tsx") /* useGroupListingsFetchContext */;
+  let obj = useGroupListingsFetchContext /* useGroupListingsFetchContext */;
   if (obj.useGroupListingsFetchContext()) {
     obj = { style: null, children: null };
     obj[0] = tmp.container;
@@ -111,6 +114,6 @@ export default function GuildSettingsRoleSubscriptionContainer(guildId) {
   obj = {};
   const merged = Object.assign(guildId);
   obj[1] = callback(GuildSettingsRoleSubscription, obj);
-  obj[2] = callback(require("../../RoleSubscriptionSettingsDisabledContext.tsx") /* useRoleSubscriptionSettingsDisabled */.RoleSubscriptionSettingsDisabledContextProvider, obj);
-  return callback(require("../../GroupListingsFetchContext.tsx") /* useGroupListingsFetchContext */.GroupListingsFetchContextProvider, obj);
+  obj[2] = callback(useRoleSubscriptionSettingsDisabled /* useRoleSubscriptionSettingsDisabled */.RoleSubscriptionSettingsDisabledContextProvider, obj);
+  return callback(useGroupListingsFetchContext /* useGroupListingsFetchContext */.GroupListingsFetchContextProvider, obj);
 };

@@ -1,3 +1,5 @@
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { SubscriptionPlans } from "../../premium/native/ProductIds.android.tsx";
 // discord_app/modules/billing/native/GenericIAPStore.tsx
 import { Store } from "initialize";
 
@@ -14,11 +16,11 @@ prototype["isGenericIapConnected"] = function isGenericIapConnected() {
 prototype["genericProductsLoaded"] = function genericProductsLoaded() {
   let tmp = null != c3;
   if (tmp) {
-    tmp = require("../../../../_runtime/00012_apply.js").filter(c3, (identifier) => {
+    tmp = apply.filter(c3, (identifier) => {
       const GenericProductIds = callback(table[2]).GenericProductIds;
       return GenericProductIds.includes(identifier.identifier);
-    }).length === require("../../premium/native/ProductIds.android.tsx") /* SubscriptionPlans */.GenericProductIds.length;
-    const arr = require("../../../../_runtime/00012_apply.js");
+    }).length === SubscriptionPlans /* SubscriptionPlans */.GenericProductIds.length;
+    const arr = apply;
   }
   return tmp;
 };

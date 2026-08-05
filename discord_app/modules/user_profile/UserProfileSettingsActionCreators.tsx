@@ -1,3 +1,6 @@
+import { isEqual } from "../../../_runtime/04444_isEqual.js";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { guildHasTag } from "../guild_tag/GuildTagUtils.tsx";
 // discord_app/modules/user_profile/UserProfileSettingsActionCreators.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -63,8 +66,8 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       if (displayNameStyles1 == null) {
         displayNameStyles1 = null;
       }
-      obj.pendingDisplayNameStyles = require("../../../_runtime/04444_isEqual.js")(tmp13, displayNameStyles1) ? undefined : displayNameStyles;
-      const tmp12 = require("../../../_runtime/04444_isEqual.js");
+      obj.pendingDisplayNameStyles = isEqual(tmp13, displayNameStyles1) ? undefined : displayNameStyles;
+      const tmp12 = isEqual;
     }
     if ("pronouns" in merged) {
       let pronouns;
@@ -268,7 +271,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
           if (themeColors == null) {
             themeColors = null;
           }
-          if (require("../../../_runtime/04444_isEqual.js")(tmp36, themeColors)) {
+          if (isEqual(tmp36, themeColors)) {
             obj.pendingThemeColors = undefined;
           } else {
             obj.pendingThemeColors = merged.themeColors;
@@ -293,7 +296,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       }
     }
     if ("primaryGuildId" in merged) {
-      guildId = require("../guild_tag/GuildTagUtils.tsx") /* guildHasTag */.getUserPrimaryGuild(currentUser.primaryGuild).guildId;
+      guildId = guildHasTag /* guildHasTag */.getUserPrimaryGuild(currentUser.primaryGuild).guildId;
       if (guildId == null) {
         guildId = null;
       }
@@ -302,7 +305,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       } else {
         obj.pendingPrimaryGuildId = merged.primaryGuildId;
       }
-      const obj2 = require("../guild_tag/GuildTagUtils.tsx") /* guildHasTag */;
+      const obj2 = guildHasTag /* guildHasTag */;
     }
     if ("legacyUsernameDisabled" in merged) {
       obj.pendingLegacyUsernameDisabled = merged.legacyUsernameDisabled;
@@ -310,8 +313,8 @@ export const setPendingChanges = function setPendingChanges(guildId) {
     obj = { type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", guildId: null };
     obj[1] = guildId;
     const merged1 = Object.assign(obj);
-    require("../../Dispatcher.tsx").dispatch(obj);
-    const obj3 = require("../../Dispatcher.tsx");
+    dispatcher.dispatch(obj);
+    const obj3 = dispatcher;
     obj5 = userProfile;
   }
 };

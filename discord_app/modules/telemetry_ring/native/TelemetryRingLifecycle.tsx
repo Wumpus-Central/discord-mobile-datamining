@@ -1,3 +1,6 @@
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { getHermesInstrumentedStatsSummary } from "../../../utils/ProcessUtils.native.tsx";
+import { shouldRun } from "channels/ZoomedInTelemetry.tsx";
 // discord_app/modules/telemetry_ring/native/TelemetryRingLifecycle.tsx
 import initialize from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -27,10 +30,10 @@ prototype["_updateZoomedInExport"] = function _updateZoomedInExport() {
   const state = getState.getState();
   let shouldRunResult = state === AppStates.ACTIVE;
   if (shouldRunResult) {
-    shouldRunResult = require("channels/ZoomedInTelemetry.tsx").shouldRun();
-    const obj = require("channels/ZoomedInTelemetry.tsx");
+    shouldRunResult = shouldRun.shouldRun();
+    const obj = shouldRun;
   }
-  const result = require("../../../utils/ProcessUtils.native.tsx").setShouldCollectHermesInstrumentedStats(shouldRunResult);
+  const result = getHermesInstrumentedStatsSummary.setShouldCollectHermesInstrumentedStats(shouldRunResult);
   if (state === AppStates.ACTIVE) {
     let tmp6Result = tmp6(13362);
     tmp6Result.start();
@@ -59,7 +62,7 @@ prototype["_initialize"] = function _initialize() {
 };
 prototype["_terminate"] = function _terminate() {
   const self = this;
-  require("../../../Dispatcher.tsx").unsubscribe("LOGOUT", this._handleLogout);
+  dispatcher.unsubscribe("LOGOUT", this._handleLogout);
   getState.removeChangeListener(this._handleEligibilityChange);
   mergeGuildAvatar.removeChangeListener(this._handleEligibilityChange);
   if (null != this._experimentUnsubscribe) {

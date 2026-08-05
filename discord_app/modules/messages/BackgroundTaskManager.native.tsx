@@ -1,3 +1,5 @@
+import { set } from "../../utils/PlatformUtils.tsx";
+import { initialize } from "../foreground_service/mobile/ForegroundServiceManager.android.tsx";
 // discord_app/modules/messages/BackgroundTaskManager.native.tsx
 import closure_3 from "set";
 import { NativeModules } from "get ActivityIndicator";
@@ -8,7 +10,7 @@ const require = arg1;
 function startBackgroundTask(arg0) {
   let content;
   let title;
-  let obj = require("../../utils/PlatformUtils.tsx") /* set */;
+  let obj = set /* set */;
   if (obj.isAndroid()) {
     if (null == arg0) {
       const promise = new Promise((arg0) => arg0(closure_5));
@@ -20,7 +22,7 @@ function startBackgroundTask(arg0) {
       obj[1] = content;
       obj[2] = tmp(7137).ServiceNotificationPriority.MEDIUM;
       obj[3] = tmp(7137).ServiceNotificationType.FILE_UPLOAD;
-      return require("../foreground_service/mobile/ForegroundServiceManager.android.tsx").addServiceHandler(obj);
+      return initialize.addServiceHandler(obj);
     }
   } else {
     const DCDBackgroundTaskManager = NativeModules.DCDBackgroundTaskManager;
@@ -34,13 +36,13 @@ if (!set.isAndroid()) {
 function endBackgroundTask(c7) {
   if (c7 !== num) {
     if (obj.isAndroid()) {
-      require("../foreground_service/mobile/ForegroundServiceManager.android.tsx").removeServiceHandler(c7);
-      const obj2 = require("../foreground_service/mobile/ForegroundServiceManager.android.tsx");
+      initialize.removeServiceHandler(c7);
+      const obj2 = initialize;
     } else {
       const DCDBackgroundTaskManager = NativeModules.DCDBackgroundTaskManager;
       DCDBackgroundTaskManager.endBackgroundTask(c7);
     }
-    obj = require("../../utils/PlatformUtils.tsx") /* set */;
+    obj = set /* set */;
   }
 }
 function backgroundify(arg0, arg1) {

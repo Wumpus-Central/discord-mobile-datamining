@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/game_store/TestModeUtils.tsx
 import initialize from "initialize";
 import reset from "reset";
@@ -23,7 +24,7 @@ export const useIsTestModeForApplication = function useIsTestModeForApplication(
   const _require = id;
   const items = [reset, initialize];
   const items1 = [id];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       let result = outer1_3.inTestModeForApplication(tmp);

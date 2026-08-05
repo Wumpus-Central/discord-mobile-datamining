@@ -1,3 +1,5 @@
+import { BaseConnectionEvent } from "../../../discord_common/js/packages/media-engine/index.tsx";
+import { isAnimatedBackgroundOption } from "VideoBackgroundUtils.tsx";
 // discord_app/modules/video_backgrounds/VideoBackgroundStore.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -20,7 +22,7 @@ function handleSyncedStoresUpdate() {
     if (voiceAndVideo != null) {
       prop = voiceAndVideo.videoBackgroundFilterDesktop;
     }
-    const videoBackgroundOptionFromProto = require("VideoBackgroundUtils.tsx") /* isAnimatedBackgroundOption */.getVideoBackgroundOptionFromProto(prop, currentUser.id);
+    const videoBackgroundOptionFromProto = isAnimatedBackgroundOption /* isAnimatedBackgroundOption */.getVideoBackgroundOptionFromProto(prop, currentUser.id);
     let isVideoEnabledResult = null != obj.getVoiceChannelId();
     if (isVideoEnabledResult) {
       isVideoEnabledResult = _detectH265HardwareDecode.isVideoEnabled();
@@ -29,7 +31,7 @@ function handleSyncedStoresUpdate() {
       isVideoEnabledResult = null != videoBackgroundOptionFromProto;
     }
     flag2 = isVideoEnabledResult;
-    const obj2 = require("VideoBackgroundUtils.tsx") /* isAnimatedBackgroundOption */;
+    const obj2 = isAnimatedBackgroundOption /* isAnimatedBackgroundOption */;
   }
   if (flag2) {
     c8 = true;
@@ -113,8 +115,8 @@ const videoBackgroundStore = new VideoBackgroundStore(require("dispatcher"), {
         if (voiceAndVideo != null) {
           prop = voiceAndVideo.videoBackgroundFilterDesktop;
         }
-        backgroundOption = require("VideoBackgroundUtils.tsx") /* isAnimatedBackgroundOption */.getVideoBackgroundOptionFromProto(prop, currentUser.id);
-        const obj = require("VideoBackgroundUtils.tsx") /* isAnimatedBackgroundOption */;
+        backgroundOption = isAnimatedBackgroundOption /* isAnimatedBackgroundOption */.getVideoBackgroundOptionFromProto(prop, currentUser.id);
+        const obj = isAnimatedBackgroundOption /* isAnimatedBackgroundOption */;
       }
       let isVideoEnabledResult = null != store.getVoiceChannelId();
       if (isVideoEnabledResult) {
@@ -131,11 +133,11 @@ const videoBackgroundStore = new VideoBackgroundStore(require("dispatcher"), {
   },
   MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function handleApplyMediaFilterSettings(settings) {
     settings = settings.settings;
-    if (require("../../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.FilterSettingsKey.CAMERA_BACKGROUND_LIVE in settings) {
+    if (BaseConnectionEvent /* BaseConnectionEvent */.FilterSettingsKey.CAMERA_BACKGROUND_LIVE in settings) {
       let c6 = true;
       let c10 = false;
     }
-    if (require("../../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW in settings) {
+    if (BaseConnectionEvent /* BaseConnectionEvent */.FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW in settings) {
       let c11 = false;
     }
   },

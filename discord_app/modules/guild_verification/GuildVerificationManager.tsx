@@ -1,3 +1,7 @@
+import { set } from "../../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { HubUtils.native } from "../hub/HubUtils.native.tsx";
+import { inviteGuildHasPendingMemberDisabledVerification } from "GuildVerificationUtils.tsx";
 // discord_app/modules/guild_verification/GuildVerificationManager.tsx
 import { GuildFeatures } from "ME";
 import "initialize";
@@ -17,30 +21,30 @@ function handleInviteData(invite) {
       }
     }
     if (hasItem) {
-      require("../hub/HubUtils.native.tsx").onOpenHubInvite(invite.invite);
-      const obj5 = require("../hub/HubUtils.native.tsx");
+      HubUtils.native.onOpenHubInvite(invite.invite);
+      const obj5 = HubUtils.native;
     }
   }
   let new_member = invite.invite.new_member;
   if (new_member) {
-    let hasFlagResult = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(num, require("../../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx") /* set */.GuildInviteFlags.IS_GUEST_INVITE);
+    let hasFlagResult = hasFlag /* hasFlag */.hasFlag(num, set /* set */.GuildInviteFlags.IS_GUEST_INVITE);
     if (!hasFlagResult) {
       hasFlagResult = tmp3(1384).hasFlag(num, tmp3(7695).GuildInviteFlags.IS_APPLICATION_BYPASS);
       const tmp3Result = tmp3(1384);
     }
     new_member = !hasFlagResult;
-    const obj = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+    const obj = hasFlag /* hasFlag */;
   }
   if (new_member) {
     new_member = null != guild;
   }
   if (new_member) {
-    new_member = require("GuildVerificationUtils.tsx") /* inviteGuildHasPendingMemberDisabledVerification */.inviteGuildHasPendingMemberDisabledVerification(guild);
-    const obj3 = require("GuildVerificationUtils.tsx") /* inviteGuildHasPendingMemberDisabledVerification */;
+    new_member = inviteGuildHasPendingMemberDisabledVerification /* inviteGuildHasPendingMemberDisabledVerification */.inviteGuildHasPendingMemberDisabledVerification(guild);
+    const obj3 = inviteGuildHasPendingMemberDisabledVerification /* inviteGuildHasPendingMemberDisabledVerification */;
   }
   if (new_member) {
-    const result = require("GuildVerificationUtils.tsx") /* inviteGuildHasPendingMemberDisabledVerification */.openVerificationModalOrTransitionToApplication(guild.id);
-    const obj4 = require("GuildVerificationUtils.tsx") /* inviteGuildHasPendingMemberDisabledVerification */;
+    const result = inviteGuildHasPendingMemberDisabledVerification /* inviteGuildHasPendingMemberDisabledVerification */.openVerificationModalOrTransitionToApplication(guild.id);
+    const obj4 = inviteGuildHasPendingMemberDisabledVerification /* inviteGuildHasPendingMemberDisabledVerification */;
   }
 }
 let prototype = function GuildVerificationManager() {

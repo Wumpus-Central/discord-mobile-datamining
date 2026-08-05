@@ -1,3 +1,5 @@
+import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
+import { items } from "libdiscoreExperiments.tsx";
 // discord_app/modules/libdiscore/DispatcherBridge.tsx
 import getUserAgnosticState from "getUserAgnosticState";
 import importDefaultResult from "fromServer";
@@ -281,9 +283,9 @@ prototype["handleFatalError"] = function handleFatalError(error, type) {
   let obj = tmp7;
   tmp7.error("Fatal dispatch error for action", type, "hasAuthoritativeStore:", result, error);
   obj = { actionType: type, hasAuthoritativeStore: result };
-  require("../../utils/SentryUtils.native.tsx").captureException(error, { extra: obj, tags: { source: "libdiscore", errorKind: "fatal_dispatch" } });
+  SentryUtils.native.captureException(error, { extra: obj, tags: { source: "libdiscore", errorKind: "fatal_dispatch" } });
   if (result) {
-    const result1 = require("libdiscoreExperiments.tsx") /* items */.clearLibdiscoreExperimentCache();
+    const result1 = items /* items */.clearLibdiscoreExperimentCache();
     throw error;
   } else {
     obj.warn("Disabling DispatcherBridge until restart");
@@ -295,7 +297,7 @@ prototype["handleFatalError"] = function handleFatalError(error, type) {
       continue;
     }
   }
-  const obj2 = require("../../utils/SentryUtils.native.tsx");
+  const obj2 = SentryUtils.native;
 };
 prototype["handleStoreError"] = function handleStoreError(storeToken, type) {
   const tokenToStore = this.tokenToStore;
@@ -318,12 +320,12 @@ prototype["handleStoreError"] = function handleStoreError(storeToken, type) {
   }
   const error = new Error(str3);
   tmp7.error("Store", name, "failed to handle action", type, "mode:", mode, error);
-  require("../../utils/SentryUtils.native.tsx").captureException(error, { extra: { actionType: type, storeName: name, storeMode: mode }, tags: { source: "libdiscore", errorKind: "store_dispatch" } });
+  SentryUtils.native.captureException(error, { extra: { actionType: type, storeName: name, storeMode: mode }, tags: { source: "libdiscore", errorKind: "store_dispatch" } });
   if ("typescript-libdiscore-dual-read" !== mode) {
     if ("libdiscore" === mode) {
-      const result = require("libdiscoreExperiments.tsx") /* items */.clearLibdiscoreExperimentCache();
+      const result = items /* items */.clearLibdiscoreExperimentCache();
       let error1 = error;
-      const obj5 = require("libdiscoreExperiments.tsx") /* items */;
+      const obj5 = items /* items */;
     } else {
       const _Error = Error;
       const _HermesInternal3 = HermesInternal;
@@ -339,7 +341,7 @@ prototype["handleStoreError"] = function handleStoreError(storeToken, type) {
   }
   const obj = { actionType: type, storeName: name, storeMode: mode };
   obj2 = tmp7;
-  const obj3 = require("../../utils/SentryUtils.native.tsx");
+  const obj3 = SentryUtils.native;
 };
 prototype["withStoreToken"] = function withStoreToken(storeToken, type, arg2) {
   const tokenToStore = this.tokenToStore;

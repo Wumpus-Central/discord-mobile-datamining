@@ -1,3 +1,18 @@
+import { registerAsset } from "../../../../../_runtime/16735_registerAsset.js";
+import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { useShouldHideGuildPurchaseEntryPoints } from "../../../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";
+import { FormHeader } from "../../../guild_member_verification/native/components/form_fields/FormHeader.tsx";
+import { useEditStateContext } from "../../edit_state/EditStateContextProvider.tsx";
+import { useFetchListingsForGuild } from "../../GuildRoleSubscriptionsHooks.tsx";
+import { useRoleSubscriptionSettingsDisabled } from "../../RoleSubscriptionSettingsDisabledContext.tsx";
+import { AddBenefitButton } from "../components/GuildRoleSubscriptionTierBenefitsModal.tsx";
+import { MemberPreviews } from "../components/GuildRoleSubscriptionTierDesignModal.tsx";
+import { Content } from "../components/GuildRoleSubscriptionTierDetailsModal.tsx";
+import { useArchiveOrDelete } from "useArchiveOrDelete.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionTierEdit.tsx
 import HeaderActionButton from "HeaderActionButton";
 import registerAsset from "registerAsset";
@@ -26,25 +41,25 @@ function ArchiveOrDeleteTierSection() {
   let groupListingId;
   let handleArchiveOrDelete;
   const tmp = createCacheKey();
-  let obj = require("../../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
+  let obj = useNavigation /* useNavigation */;
   const navigation = obj.useNavigation();
-  let obj1 = require("../../edit_state/EditStateContextProvider.tsx") /* useEditStateContext */;
+  let obj1 = useEditStateContext /* useEditStateContext */;
   const editStateContext = obj1.useEditStateContext();
   const guildId = editStateContext.guildId;
   ({ groupListingId, editStateId } = editStateContext);
-  ({ buttonText, descriptionText, handleArchiveOrDelete, deleting, archiving } = require("useArchiveOrDelete.tsx")(guildId, groupListingId, editStateId, navigation));
-  let obj2 = require("../../../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx") /* useShouldHideGuildPurchaseEntryPoints */;
+  ({ buttonText, descriptionText, handleArchiveOrDelete, deleting, archiving } = useArchiveOrDelete(guildId, groupListingId, editStateId, navigation));
+  let obj2 = useShouldHideGuildPurchaseEntryPoints /* useShouldHideGuildPurchaseEntryPoints */;
   const allowSelfRemoveMonetization = obj2.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).allowSelfRemoveMonetization;
   obj = { style: tmp.actionHeader, children: buttonText };
-  const items = [callback2(require("../../../guild_member_verification/native/components/form_fields/FormHeader.tsx"), obj), , ];
+  const items = [callback2(FormHeader, obj), , ];
   obj = { style: tmp.actionDescription, variant: "text-sm/medium", color: "text-default", children: descriptionText };
-  items[1] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items[1] = callback2(Text /* Text */.Text, obj);
   obj1 = { style: tmp.actionButton, children: null };
   obj2 = { variant: "destructive", grow: true, icon: null, onPress: null, disabled: null, text: null };
   const obj3 = { size: null, disableColor: true, source: null };
-  obj3[0] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.SMALL;
-  obj3[2] = require("../../../../../_runtime/16735_registerAsset.js");
-  obj2[2] = callback2(require("../../../../design/void/native.tsx") /* Button */.Icon, obj3);
+  obj3[0] = Button /* Button */.Icon.Sizes.SMALL;
+  obj3[2] = registerAsset;
+  obj2[2] = callback2(Button /* Button */.Icon, obj3);
   obj2[3] = handleArchiveOrDelete;
   let tmp9 = !allowSelfRemoveMonetization;
   if (allowSelfRemoveMonetization) {
@@ -56,7 +71,7 @@ function ArchiveOrDeleteTierSection() {
   const obj4 = { children: null };
   obj2[4] = tmp9;
   obj2[5] = buttonText;
-  obj1[1] = callback2(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj2);
+  obj1[1] = callback2(Button /* Button */.Button, obj2);
   items[2] = callback2(closure_6, obj1);
   obj4[0] = items;
   return closure_16(closure_15, obj4);
@@ -68,19 +83,19 @@ function TabContent(selectedTab) {
     let obj = { style: null, children: null };
     obj[0] = tmp.tabContent;
     obj = { bottom: true, children: null };
-    const items = [callback2(require("../components/GuildRoleSubscriptionTierDetailsModal.tsx") /* Content */.GuildRoleSubscriptionTierDetailsTab, {}), callback2(ArchiveOrDeleteTierSection, {})];
+    const items = [callback2(Content /* Content */.GuildRoleSubscriptionTierDetailsTab, {}), callback2(ArchiveOrDeleteTierSection, {})];
     obj[1] = items;
-    obj[1] = callback3(require("../../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+    obj[1] = callback3(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
     return callback2(closure_7, obj);
   } else if (tmp2.DESIGN === selectedTab) {
     obj = { style: null, children: null };
     obj[0] = tmp.tabContent;
     const obj1 = { bottom: true, children: null };
-    obj1[1] = callback2(require("../components/GuildRoleSubscriptionTierDesignModal.tsx") /* MemberPreviews */.GuildRoleSubscriptionTierDesignTab, {});
-    obj[1] = callback2(require("../../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj1);
+    obj1[1] = callback2(MemberPreviews /* MemberPreviews */.GuildRoleSubscriptionTierDesignTab, {});
+    obj[1] = callback2(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj1);
     return callback2(closure_7, obj);
   } else if (tmp2.BENEFITS === selectedTab) {
-    return callback2(require("../components/GuildRoleSubscriptionTierBenefitsModal.tsx") /* AddBenefitButton */.GuildRoleSubscriptionTierBenefitsTab, {});
+    return callback2(AddBenefitButton /* AddBenefitButton */.GuildRoleSubscriptionTierBenefitsTab, {});
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -114,15 +129,15 @@ let closure_22 = require("registerAsset").forwardRef((arg0, ref) => {
   let submitting;
   let Spacer = require;
   let tmp = dependencyMap;
-  let obj = require("../../edit_state/EditStateContextProvider.tsx") /* useEditStateContext */;
+  let obj = useEditStateContext /* useEditStateContext */;
   const editStateContext = obj.useEditStateContext();
   ({ guildId: require, groupListingId } = editStateContext);
-  let obj1 = require("../../GuildRoleSubscriptionsHooks.tsx") /* useFetchListingsForGuild */;
+  let obj1 = useFetchListingsForGuild /* useFetchListingsForGuild */;
   const publishSubscriptionListing = obj1.usePublishSubscriptionListing();
   ({ error, publishSubscriptionListing: importAll, clearError: dependencyMap, submitting } = publishSubscriptionListing);
-  const subscriptionListing = require("../../GuildRoleSubscriptionsHooks.tsx") /* useFetchListingsForGuild */.useSubscriptionListing(editStateContext.editStateId);
-  const obj3 = require("../../GuildRoleSubscriptionsHooks.tsx") /* useFetchListingsForGuild */;
-  const roleSubscriptionSettingsDisabled = require("../../RoleSubscriptionSettingsDisabledContext.tsx") /* useRoleSubscriptionSettingsDisabled */.useRoleSubscriptionSettingsDisabled();
+  const subscriptionListing = useFetchListingsForGuild /* useFetchListingsForGuild */.useSubscriptionListing(editStateContext.editStateId);
+  const obj3 = useFetchListingsForGuild /* useFetchListingsForGuild */;
+  const roleSubscriptionSettingsDisabled = useRoleSubscriptionSettingsDisabled /* useRoleSubscriptionSettingsDisabled */.useRoleSubscriptionSettingsDisabled();
   const imperativeHandle = React.useImperativeHandle(ref, () => ({ dismissError: closure_3 }));
   let tmp7 = null;
   if (null != groupListingId) {

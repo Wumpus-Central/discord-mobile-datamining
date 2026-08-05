@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/defs/native/ScanQrCodeSetting.tsx
 import { NativePermissionTypes } from "NativePermissionStatus";
 import apply from "apply";
@@ -7,8 +8,8 @@ import createToggle from "createToggle";
 const require = arg1;
 apply = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.RC0kJz);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.RC0kJz);
   },
   parent: null,
   IconComponent: require("QrCodeIcon").QrCodeIcon,

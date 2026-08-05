@@ -1,3 +1,4 @@
+import { useInitialValue } from "../../../../hooks/useInitialValue.tsx";
 // discord_app/modules/main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -47,7 +48,7 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/m
 export const SidebarCoachmarkOverlayContext = context;
 export const SidebarCoachmarkOverlay = function SidebarCoachmarkOverlay(enabled) {
   enabled = enabled.enabled;
-  const tmp = require("../../../../hooks/useInitialValue.tsx")(() => {
+  const tmp = useInitialValue(() => {
     const layerContextManager = new callback(table[6]).LayerContextManager();
     return layerContextManager;
   });

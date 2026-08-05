@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/defs/native/UploadDebugLogsSetting.tsx
 import batchUpdates from "batchUpdates";
 import { ActivityIndicator } from "get ActivityIndicator";
@@ -124,8 +125,8 @@ function _handleUploadDebugLogSettingPress() {
 let closure_7 = keys.create(() => ({ isDisabled: false, isUploading: false }));
 keys = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.aY1OH2);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.aY1OH2);
   },
   parent: null,
   IconComponent: require("CircleInformationIcon").CircleInformationIcon,

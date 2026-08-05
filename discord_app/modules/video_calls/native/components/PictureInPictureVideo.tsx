@@ -1,3 +1,8 @@
+import { set } from "../../../../utils/PlatformUtils.tsx";
+import { useIsViewingActivity } from "../../../activities/native/useIsViewingActivity.tsx";
+import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
+import { usePipDimensions } from "usePipDimensions.tsx";
+import { useShouldForcePipOrientation } from "useShouldForcePipOrientation.tsx";
 // discord_app/modules/video_calls/native/components/PictureInPictureVideo.tsx
 import registerAsset from "registerAsset";
 import importAllResult from "isWatchTogetherApplication";
@@ -343,18 +348,18 @@ const memoResult = importAllResult.memo((arg0) => {
   let width;
   ({ channel, pipParticipant, selfParticipant } = arg0);
   const tmp = callback4();
-  let obj = require("../../../activities/native/useIsViewingActivity.tsx") /* useIsViewingActivity */;
+  let obj = useIsViewingActivity /* useIsViewingActivity */;
   obj = { channelId: channel.id };
   const isViewingActivity = obj.useIsViewingActivity(obj);
-  let obj2 = require("useShouldForcePipOrientation.tsx") /* useShouldForcePipOrientation */;
+  let obj2 = useShouldForcePipOrientation /* useShouldForcePipOrientation */;
   const shouldForcePipOrientation = obj2.useShouldForcePipOrientation({ channel });
   obj = { channelId: channel.id, forcedOrientation: shouldForcePipOrientation };
-  const tmp6 = require("usePipDimensions.tsx")(obj);
+  const tmp6 = usePipDimensions(obj);
   const obj1 = { style: isViewingActivity ? tmp.backgroundPipFab : tmp.background, children: null };
   const items = [isViewingActivity ? tmp.pipFab : tmp.pip, , , ];
-  ({ width, height } = require("../../../screen/useWindowDimensions.native.tsx")());
+  ({ width, height } = useWindowDimensions());
   const tmp10 = closure_4;
-  const tmp7 = require("../../../screen/useWindowDimensions.native.tsx")();
+  const tmp7 = useWindowDimensions();
   let elevationShadow;
   if (tmp2Result.isAndroid()) {
     elevationShadow = tmp.elevationShadow;
@@ -384,7 +389,7 @@ const memoResult = importAllResult.memo((arg0) => {
     obj5[2] = selfParticipant;
     tmp8Result = tmp8(closure_20, obj5);
   }
-  tmp2Result = require("../../../../utils/PlatformUtils.tsx") /* set */;
+  tmp2Result = set /* set */;
   obj2[1] = tmp8Result;
   obj1[1] = closure_16(tmp10, { activeOpacity: 0.7, children: closure_16(closure_5, obj2) });
   return closure_16(closure_5, obj1);

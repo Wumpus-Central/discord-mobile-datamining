@@ -1,3 +1,6 @@
+import { maybeSortByProbability } from "../user_affinities/maybeSortByProbability.tsx";
+import { getHumanizedCallDuration } from "getHumanizedCallDuration.tsx";
+import { useNullableMessageAuthor } from "useMessageAuthor.tsx";
 // discord_app/modules/messages/VoiceSessionUtils.tsx
 import noop from "noop";
 import recomputeAffinities from "recomputeAffinities";
@@ -31,7 +34,7 @@ export const getSortedVoiceSessionParticipants = function getSortedVoiceSessionP
     reduced = [];
   }
   const userAffinitiesMap = authStore.getUserAffinitiesMap();
-  return _require("../user_affinities/maybeSortByProbability.tsx").maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
+  return _maybeSortByProbability.maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
 };
 export const useSortedVoiceSessionParticipants = function useSortedVoiceSessionParticipants(author) {
   let stateFromStoresArray = author;
@@ -61,8 +64,8 @@ export const useSortedVoiceSessionParticipants = function useSortedVoiceSessionP
 };
 export const getVoiceSessionMessageContent = function getVoiceSessionMessageContent(channel_id) {
   let _require = channel.getChannel(channel_id.channel_id);
-  let tmp2 = require("getHumanizedCallDuration.tsx")(channel_id);
-  let obj = _require("useMessageAuthor.tsx");
+  let tmp2 = getHumanizedCallDuration(channel_id);
+  let obj = _useNullableMessageAuthor;
   const messageAuthor = obj.getMessageAuthor(channel_id);
   _require = channel_id;
   const call = channel_id.call;
@@ -87,7 +90,7 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
     reduced = [];
   }
   const userAffinitiesMap = authStore.getUserAffinitiesMap();
-  const result = _require("../user_affinities/maybeSortByProbability.tsx").maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
+  const result = _maybeSortByProbability.maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
   const mapped = result.map((user) => {
     const obj = { user, messageAuthor: null };
     obj[1] = channel_id(outer1_2[7]).getUserAuthor(user, channel_id);

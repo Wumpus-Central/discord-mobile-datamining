@@ -1,3 +1,4 @@
+import { _httpGetWithCountryCodeQuery } from "../../../utils/StoreUtils.tsx";
 // discord_app/modules/slayer_storefront/utils/carouselMediaItems.tsx
 const result = require("set").fileFinishedImporting("modules/slayer_storefront/utils/carouselMediaItems.tsx");
 
@@ -40,7 +41,7 @@ export const convertCarouselItemsToMediaItems = function convertCarouselItemsToM
             let obj = { type: "video", src: null, videoThumbnailSrc: null, thumbnailSrc: null, backgroundSrc: null };
             let tmp26 = require;
             let tmp27 = dependencyMap;
-            let obj6 = require("../../../utils/StoreUtils.tsx") /* _httpGetWithCountryCodeQuery */;
+            let obj6 = _httpGetWithCountryCodeQuery /* _httpGetWithCountryCodeQuery */;
             let tmp28 = tmp5;
             let tmp29 = obj6;
             let tmp30 = applicationId;
@@ -48,7 +49,7 @@ export const convertCarouselItemsToMediaItems = function convertCarouselItemsToM
             let tmp32 = heroWidth;
             let str3 = "mp4";
             obj[1] = obj6.getAssetURL(applicationId, tmp5, heroWidth, "mp4");
-            let obj7 = require("../../../utils/StoreUtils.tsx") /* _httpGetWithCountryCodeQuery */;
+            let obj7 = _httpGetWithCountryCodeQuery /* _httpGetWithCountryCodeQuery */;
             let tmp33 = obj7;
             let tmp34 = applicationId;
             let tmp35 = tmp7;
@@ -83,7 +84,7 @@ export const convertCarouselItemsToMediaItems = function convertCarouselItemsToM
             obj = { type: "image", src: null, thumbnailSrc: null, backgroundSrc: null };
             let tmp8 = require;
             let tmp9 = dependencyMap;
-            let obj2 = require("../../../utils/StoreUtils.tsx") /* _httpGetWithCountryCodeQuery */;
+            let obj2 = _httpGetWithCountryCodeQuery /* _httpGetWithCountryCodeQuery */;
             let tmp10 = tmp5;
             let tmp11 = obj2;
             let tmp12 = applicationId;

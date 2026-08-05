@@ -1,3 +1,5 @@
+import { PermissionOverwriteType } from "../../../flow/Server.tsx";
+import { nameFromUser } from "../../../utils/UserUtils.tsx";
 // discord_app/modules/application_commands/native/ExecutedApplicationCommandPopout.tsx
 import showUserProfileActionSheet from "showUserProfileActionSheet";
 import get_ActivityIndicator from "Button";
@@ -235,7 +237,7 @@ function getCommandCopyText(item10118, arg1, id, name_localized) {
     let str = "";
     combined = "" + name_localized;
   }
-  if (item10118.type !== _require("../../../flow/Server.tsx").ApplicationCommandOptionType.SUB_COMMAND) {
+  if (item10118.type !== _PermissionOverwriteType.ApplicationCommandOptionType.SUB_COMMAND) {
     if (item10118.type !== tmp5(1906).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
       let sum = null;
       if (null != item10118.value) {
@@ -244,8 +246,8 @@ function getCommandCopyText(item10118, arg1, id, name_localized) {
           const user = authStore.getUser(item10118.value.toString());
           sum = null;
           if (null != user) {
-            sum = closure_20 + require("../../../utils/UserUtils.tsx").getUserTag(user, { decoration: "never" });
-            const obj3 = require("../../../utils/UserUtils.tsx");
+            sum = closure_20 + nameFromUser.getUserTag(user, { decoration: "never" });
+            const obj3 = nameFromUser;
           }
           const str5 = item10118.value;
         } else if (tmp5(1906).ApplicationCommandOptionType.CHANNEL === type) {
@@ -280,8 +282,8 @@ function getCommandCopyText(item10118, arg1, id, name_localized) {
               const user1 = authStore.getUser(str);
               sum = null;
               if (null != user1) {
-                sum = closure_20 + require("../../../utils/UserUtils.tsx").getUserTag(user1, { decoration: "never" });
-                const obj = require("../../../utils/UserUtils.tsx");
+                sum = closure_20 + nameFromUser.getUserTag(user1, { decoration: "never" });
+                const obj = nameFromUser;
               }
             }
             const str6 = item10118.value;

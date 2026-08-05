@@ -1,3 +1,4 @@
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
 // discord_app/modules/guild_role_subscriptions/native/RoleSubscriptionUpsellUtils.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -8,7 +9,7 @@ const result = require("module_4624").fileFinishedImporting("modules/guild_role_
 export default {
   handleShowEmojiUpsellAlert(guildId) {
     guildId = guildId.guildId;
-    let obj = require("../../../actions/native/AlertActionCreators.tsx");
+    let obj = AlertActionCreators;
     obj = {
       importer() {
         return guildId(outer1_2[4])(outer1_2[3], outer1_2.paths).then((arg0) => {

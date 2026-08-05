@@ -1,3 +1,4 @@
+import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/chat_input/native/guard/ChatInputGuardReadonly.tsx
 import { isTextChannel } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -16,7 +17,7 @@ let closure_12;
 let map1;
 const require = arg1;
 function sortChannelsByLastMessageId(id, id2) {
-  const obj = require("../../../../utils/SnowflakeUtils.tsx");
+  const obj = DISCORD_EPOCH;
   return obj.compare(generateOldThreadCutoff.lastMessageId(id2.id), generateOldThreadCutoff.lastMessageId(id.id));
 }
 ({ AnalyticEvents: closure_12, Permissions: map1 } = ME);

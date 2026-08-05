@@ -1,3 +1,4 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/guild_role_subscriptions/native/purchase_page/SubscribeButton.tsx
 import makeGroupListingIndexSubscriptionListingTag from "makeGroupListingIndexSubscriptionListingTag";
 import _slicedToArray from "_slicedToArray";
@@ -13,7 +14,7 @@ let closure_12;
 let map1;
 const require = arg1;
 function emphasisHook(children) {
-  return callback3(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-xs/semibold", color: "text-default", children });
+  return callback3(Text /* Text */.Text, { variant: "text-xs/semibold", color: "text-default", children });
 }
 function SwitchTiersButton(activeSubscription) {
   activeSubscription = activeSubscription.activeSubscription;

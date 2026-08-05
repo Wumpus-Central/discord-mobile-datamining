@@ -1,3 +1,4 @@
+import { ReanimatedRexport } from "../../../../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -19,5 +20,5 @@ export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   obj = { style: items1, pointerEvents: "none", children: null };
   items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
   obj[2] = jsx(width(15624).SearchListCardContainer, { containerStyle: memo });
-  return jsx(require("../../../../../../reanimated/ReanimatedRexport.tsx").View, { style: items1, pointerEvents: "none", children: null });
+  return jsx(ReanimatedRexport.View, { style: items1, pointerEvents: "none", children: null });
 };

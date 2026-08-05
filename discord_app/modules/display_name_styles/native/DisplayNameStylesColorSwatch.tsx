@@ -1,3 +1,6 @@
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { DisplayNameEffect } from "../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
+import { GummyStripes } from "effects/GummyStripes.tsx";
 // discord_app/modules/display_name_styles/native/DisplayNameStylesColorSwatch.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -13,7 +16,7 @@ const result = require("createCacheKey").fileFinishedImporting("modules/display_
 export default function DisplayNameStylesColorSwatch(colors) {
   colors = colors.colors;
   const tmp = callback();
-  if (colors.effectId === require("../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx") /* DisplayNameEffect */.DisplayNameEffect.GUMMY) {
+  if (colors.effectId === DisplayNameEffect /* DisplayNameEffect */.DisplayNameEffect.GUMMY) {
     if (colors.length > 0) {
       let obj = { style: null, children: null };
       const items = [, ];
@@ -21,7 +24,7 @@ export default function DisplayNameStylesColorSwatch(colors) {
       obj[0] = items;
       obj = { colors: null };
       obj[0] = colors;
-      obj[1] = jsx(require("effects/GummyStripes.tsx"), { colors: null });
+      obj[1] = jsx(GummyStripes, { colors: null });
       return <View colors={null} />;
     }
   }
@@ -31,7 +34,7 @@ export default function DisplayNameStylesColorSwatch(colors) {
     obj1[1] = { x: 0, y: 0 };
     obj1[2] = { x: 1, y: 0 };
     obj1[3] = tmp.colorSwatch;
-    return jsx(require("../../../../_runtime/04706_LinearGradient.js"), { colors: null, start: null, end: null, style: null });
+    return jsx(LinearGradient, { colors: null, start: null, end: null, style: null });
   } else {
     let str = "#000000";
     if (colors.length > 0) {

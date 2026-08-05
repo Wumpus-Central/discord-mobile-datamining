@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../../_runtime/05324_registerAsset.js";
+import { Text } from "../../../components/Text/native/Text.tsx";
+import { Button } from "../../native.tsx";
 // discord_app/design/void/Form/native/FormArrow.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -24,22 +27,22 @@ export default function FormArrow(arg0) {
     obj[0] = tmp.wrapper;
     obj = { maxFontSizeMultiplier: 1.5, variant: "text-md/medium", color: "text-muted", children: null };
     obj[3] = label;
-    const items = [callback(require("../../../components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+    const items = [callback(Text /* Text */.Text, obj), ];
     const obj1 = { style: null, source: null, size: null };
     const items1 = [tmp.icon, style];
     obj1[0] = items1;
-    obj1[1] = require("../../../../../_runtime/05324_registerAsset.js");
-    obj1[2] = require("../../native.tsx") /* Button */.Icon.Sizes.MEDIUM;
-    items[1] = callback(require("../../native.tsx") /* Button */.Icon, obj1);
+    obj1[1] = registerAsset;
+    obj1[2] = Button /* Button */.Icon.Sizes.MEDIUM;
+    items[1] = callback(Button /* Button */.Icon, obj1);
     obj[1] = items;
     let tmp6 = callback2(View, obj);
   } else {
     obj = { style: null, source: null, size: null };
     const items2 = [tmp.icon, style];
     obj[0] = items2;
-    obj[1] = require("../../../../../_runtime/05324_registerAsset.js");
-    obj[2] = require("../../native.tsx") /* Button */.Icon.Sizes.MEDIUM;
-    tmp6 = callback(require("../../native.tsx") /* Button */.Icon, obj);
+    obj[1] = registerAsset;
+    obj[2] = Button /* Button */.Icon.Sizes.MEDIUM;
+    tmp6 = callback(Button /* Button */.Icon, obj);
   }
   return tmp6;
 };

@@ -1,3 +1,8 @@
+import { NitroWheelIcon } from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { GIFPicker } from "../../gif_picker/native/GIFPicker.tsx";
 // discord_app/modules/user_profile/native/ProfileGIFSelectActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "createCacheKey";
@@ -191,15 +196,15 @@ export default function ProfileGIFSelectActionSheet(arg0) {
   const ref = React.useRef(null);
   let obj = { ref, scrollable: true, startExpanded: true, children: null };
   obj = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["xsC+/y"]);
-  obj[1] = callback(require("../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx") /* NitroWheelIcon */.NitroWheelIcon, {});
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["xsC+/y"]);
+  obj[1] = callback(NitroWheelIcon /* NitroWheelIcon */.NitroWheelIcon, {});
   ({ titleWrapper: obj2[2], titleContainer: obj2[3] } = tmp);
-  let items = [callback(require("../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj), ];
-  obj = { style: tmp.gifPicker, children: callback(require("../../gif_picker/native/GIFPicker.tsx"), obj1) };
+  let items = [callback(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj), ];
+  obj = { style: tmp.gifPicker, children: callback(GIFPicker, obj1) };
   items[1] = callback(View, obj);
   obj[3] = items;
-  return callback2(require("../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, obj);
+  return callback2(Background /* Background */.BottomSheet, obj);
 };
 export const ProfileAssetType = obj1;
 export const GIFSelectionContext = obj2;

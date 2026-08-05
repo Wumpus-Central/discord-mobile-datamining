@@ -1,14 +1,16 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { messagesProxy } from "../../../activity_privacy/ActivityPrivacy.messages.js";
 // discord_app/modules/user_settings/defs/native/NotifyFriendsOnComeOnlineSetting.tsx
 import createToggle from "createToggle";
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../activity_privacy/ActivityPrivacy.messages.js").A0FVCV);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(messagesProxy.A0FVCV);
   },
   useDescription() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../activity_privacy/ActivityPrivacy.messages.js").vHX6RG);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(messagesProxy.vHX6RG);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue: require("explicitContentFromProto").NotifyFriendsOnComeOnline.useSetting,
@@ -16,12 +18,12 @@ const toggle = createToggle.createToggle({
 });
 const obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../activity_privacy/ActivityPrivacy.messages.js").A0FVCV);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(messagesProxy.A0FVCV);
   },
   useDescription() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../activity_privacy/ActivityPrivacy.messages.js").vHX6RG);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(messagesProxy.vHX6RG);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue: require("explicitContentFromProto").NotifyFriendsOnComeOnline.useSetting,

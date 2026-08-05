@@ -1,3 +1,12 @@
+import { Form } from "../../../../design/void/Form/native/index.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { FormHeader } from "../../../guild_member_verification/native/components/form_fields/FormHeader.tsx";
+import { useEditStateContext } from "../../edit_state/EditStateContextProvider.tsx";
+import { pickImage } from "FormImagePicker.tsx";
+import { FormPriceTier } from "FormPriceTier.tsx";
+import { styles } from "FormStyles.tsx";
+import { Header } from "GuildRoleSubscriptionTierEditStep.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDetailsModal.tsx
 import _slicedToArray from "_slicedToArray";
 import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS";
@@ -21,8 +30,8 @@ function Content() {
   let tmp16;
   let tmp7;
   let tmp8;
-  const tmp3 = require("FormStyles.tsx")();
-  let obj = require("../../edit_state/EditStateContextProvider.tsx") /* useEditStateContext */;
+  const tmp3 = styles();
+  let obj = useEditStateContext /* useEditStateContext */;
   const editStateContext = obj.useEditStateContext();
   const editStateId = editStateContext.editStateId;
   let obj1 = importAll(14363);
@@ -54,15 +63,15 @@ function Content() {
   obj = { style: tmp3.header, children: null };
   let tmpResult = tmp(8982);
   const intl = tmp4(1236).intl;
-  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6XpbbR"]);
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["6XpbbR"]);
   const items = [callback2(tmpResult, obj), , , , , , , ];
   obj1 = { description: null, image: null, imageUploadSize: null, previewShape: null, setImage: null, disabled: null };
   tmpResult = tmp(16690);
   const intl2 = tmp4(1236).intl;
-  obj1[0] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.pNZfgG);
+  obj1[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.pNZfgG);
   obj1[1] = tmp17;
   obj1[2] = UPLOAD_MEDIUM_SIZE;
-  obj1[3] = require("FormImagePicker.tsx") /* pickImage */.PreviewShape.CIRCLE;
+  obj1[3] = pickImage /* pickImage */.PreviewShape.CIRCLE;
   obj1[4] = function setImage(uri) {
     return callback(uri.uri);
   };
@@ -74,32 +83,32 @@ function Content() {
   const tmp23 = closure_10;
   const tmp24 = callback2;
   const intl3 = tmp4(1236).intl;
-  obj2[1] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.rJ6Oad);
-  items[2] = callback2(require("../../../guild_member_verification/native/components/form_fields/FormHeader.tsx"), obj2);
+  obj2[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.rJ6Oad);
+  items[2] = callback2(FormHeader, obj2);
   obj3 = { style: tmp3.textInput, showTopContainer: false, multiline: false, maxLength: closure_7, value: tmp7, placeholder: null, onChange: null, autoFocus: true, clearButtonVisibility: null, disabled: null };
   const intl4 = tmp4(1236).intl;
-  obj3[5] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["i4/g+E"]);
+  obj3[5] = intl4.string(getSystemLocale /* getSystemLocale */.t["i4/g+E"]);
   obj3[6] = tmp8;
-  obj3[8] = require("../../../../design/void/native.tsx") /* Button */.ClearButtonVisibility.WITH_CONTENT;
+  obj3[8] = Button /* Button */.ClearButtonVisibility.WITH_CONTENT;
   obj3[9] = roleSubscriptionSettingsDisabled;
-  items[3] = callback2(require("../../../../design/void/Form/native/index.tsx") /* Form */.FormInput, obj3);
+  items[3] = callback2(Form /* Form */.FormInput, obj3);
   obj4 = { style: tmp3.header, children: null };
-  const tmpResult1 = require("../../../guild_member_verification/native/components/form_fields/FormHeader.tsx");
+  const tmpResult1 = FormHeader;
   const intl5 = tmp4(1236).intl;
-  obj4[1] = intl5.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["74JctW"]);
-  items[4] = callback2(require("../../../guild_member_verification/native/components/form_fields/FormHeader.tsx"), obj4);
+  obj4[1] = intl5.string(getSystemLocale /* getSystemLocale */.t["74JctW"]);
+  items[4] = callback2(FormHeader, obj4);
   const obj5 = { style: tmp3.textInput, showTopContainer: false, multiline: true, maxLength: closure_6, numberOfLines: 3, value: tmp15, placeholder: null, onChange: null, disabled: null };
   const intl6 = tmp4(1236).intl;
-  obj5[6] = intl6.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["3YHwoG"]);
+  obj5[6] = intl6.string(getSystemLocale /* getSystemLocale */.t["3YHwoG"]);
   obj5[7] = tmp16;
   obj5[8] = roleSubscriptionSettingsDisabled;
-  items[5] = callback2(require("../../../../design/void/Form/native/index.tsx") /* Form */.FormInput, obj5);
+  items[5] = callback2(Form /* Form */.FormInput, obj5);
   const obj6 = { style: tmp3.header, children: null };
-  const tmpResult2 = require("../../../guild_member_verification/native/components/form_fields/FormHeader.tsx");
+  const tmpResult2 = FormHeader;
   const intl7 = tmp4(1236).intl;
-  obj6[1] = intl7.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.CrRVAx);
-  items[6] = callback2(require("../../../guild_member_verification/native/components/form_fields/FormHeader.tsx"), obj6);
-  const tmpResult3 = require("../../../guild_member_verification/native/components/form_fields/FormHeader.tsx");
+  obj6[1] = intl7.string(getSystemLocale /* getSystemLocale */.t.CrRVAx);
+  items[6] = callback2(FormHeader, obj6);
+  const tmpResult3 = FormHeader;
   if (!tmp20) {
     tmp20 = roleSubscriptionSettingsDisabled;
   }
@@ -107,7 +116,7 @@ function Content() {
   const obj8 = { children: null };
   obj7[2] = tmp12;
   obj7[3] = tmp13;
-  items[7] = tmp24(require("FormPriceTier.tsx"), obj7);
+  items[7] = tmp24(FormPriceTier, obj7);
   obj8[0] = items;
   return tmp22(tmp23, obj8);
 }
@@ -117,7 +126,7 @@ const memoResult = require("noop").memo(() => callback2(Content, {}));
 const result = require("MAX_SUBSCRIPTION_TIERS").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDetailsModal.tsx");
 
 export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
-  let obj = require("../../edit_state/EditStateContextProvider.tsx") /* useEditStateContext */;
+  let obj = useEditStateContext /* useEditStateContext */;
   const editStateId = obj.useEditStateContext().editStateId;
   const obj2 = importAll(14363);
   const obj3 = importAll(14363);
@@ -135,13 +144,13 @@ export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   obj = { title: null, description: null, canProceedToNextStep: null, nextStep: null, scrollable: false };
   obj5 = importAll(14363);
   const intl = tmp(1236).intl;
-  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.o3pHas);
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.o3pHas);
   const intl2 = tmp(1236).intl;
-  obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.oOOME5);
+  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.oOOME5);
   obj[2] = tmp3;
   obj[3] = constants.CHANNEL_BENEFITS;
   const merged = Object.assign(arg0);
   obj.children = callback2(closure_13, {});
-  return callback2(require("GuildRoleSubscriptionTierEditStep.tsx"), obj);
+  return callback2(Header, obj);
 };
 export const GuildRoleSubscriptionTierDetailsTab = memoResult;

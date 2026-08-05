@@ -1,3 +1,5 @@
+import { dispatcher } from "../../../../../../../Dispatcher.tsx";
+import { getEmbedThemeColors } from "../getEmbedThemeColors.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/EmbeddedActivityInviteEmbed.tsx
 import _slicedToArray from "_slicedToArray";
 import { Image } from "computeChannelName";
@@ -27,7 +29,7 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
     if (invite.target_type === InviteTargetTypes.EMBEDDED_APPLICATION) {
       if (null != target_application) {
         if (null == application.getApplication(target_application.id)) {
-          let obj = require("../../../../../../../Dispatcher.tsx");
+          let obj = dispatcher;
           obj = { type: "APPLICATION_UPDATE", application: null };
           obj[1] = target_application;
           obj.dispatch(obj);
@@ -37,7 +39,7 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
           let obj2 = id(8051);
           const assetIds = obj2.fetchAssetIds(id, closure_16);
         }
-        const tmp13 = require("../getEmbedThemeColors.tsx")(inviteCode.theme);
+        const tmp13 = getEmbedThemeColors(inviteCode.theme);
         const baseColors = tmp13.baseColors;
         const guild = invite.guild;
         let name;

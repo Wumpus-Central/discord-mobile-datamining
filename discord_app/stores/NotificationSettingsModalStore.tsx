@@ -1,3 +1,4 @@
+import { getFlattenedChannelList } from "../modules/channel/getFlattedChannelList.tsx";
 // discord_app/stores/NotificationSettingsModalStore.tsx
 import { isGuildSelectableChannelType as closure_3 } from "createChannelRecord";
 import setIndex from "setIndex";
@@ -37,7 +38,7 @@ prototype["getProps"] = function getProps() {
     muteConfig: store.getMuteConfig(closure_2),
     messageNotifications: store.getMessageNotifications(closure_2),
     channelOverrides: store.getChannelOverrides(closure_2),
-    channels: require("../modules/channel/getFlattedChannelList.tsx")(categories._categories, categories, (channel) => {
+    channels: getFlattenedChannelList(categories._categories, categories, (channel) => {
       const type = channel.channel.type;
       let tmp = callback(type);
       if (!tmp) {

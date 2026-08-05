@@ -1,3 +1,5 @@
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { _initialize } from "../../media/native/IosImageTypesManager.tsx";
 // discord_app/modules/media_uploads/native/ImageConversionDecision.tsx
 const result = require("set").fileFinishedImporting("modules/media_uploads/native/ImageConversionDecision.tsx");
 
@@ -21,7 +23,7 @@ export const isHeicUTI = function isHeicUTI(str) {
   }
 };
 export const shouldForceConvertToJPG = function shouldForceConvertToJPG(closure_0, outer1_1, outer1_10) {
-  let isIOSResult = require("../../../utils/PlatformUtils.tsx") /* set */.isIOS();
+  let isIOSResult = set /* set */.isIOS();
   if (isIOSResult) {
     let flag = false;
     if (null != outer1_10) {
@@ -90,7 +92,7 @@ export const shouldConvertToJPG = function shouldConvertToJPG(closure_0, outer1_
               }
               const tmp14Result = tmp14(4848);
             }
-            obj2 = require("../../media/native/IosImageTypesManager.tsx");
+            obj2 = _initialize;
             tmp14 = importDefault;
           }
           return false;
@@ -124,5 +126,5 @@ export const shouldConvertToJPG = function shouldConvertToJPG(closure_0, outer1_
   } else {
     return false;
   }
-  obj = require("../../../utils/PlatformUtils.tsx") /* set */;
+  obj = set /* set */;
 };

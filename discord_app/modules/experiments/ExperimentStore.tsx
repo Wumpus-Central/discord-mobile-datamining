@@ -1,3 +1,9 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { MurmurHashV3 } from "../../../_runtime/01217_MurmurHashV3.js";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { Version } from "../build_overrides/BuildOverrideUtils.tsx";
+import { isInRange } from "GuildFilters.tsx";
 // discord_app/modules/experiments/ExperimentStore.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
@@ -14,7 +20,7 @@ let metroImportAll;
 const require = arg1;
 function getHash(arg0) {
   if (undefined === dependencyMap8[arg0]) {
-    const v3Result = require("../../../_runtime/01217_MurmurHashV3.js").v3(arg0);
+    const v3Result = MurmurHashV3.v3(arg0);
     tmp[arg0] = v3Result;
     return v3Result;
   } else {
@@ -71,10 +77,10 @@ function getTrackExposureExperimentHash(descriptor) {
     const combined = "" + descriptor.bucket + "|" + descriptor.revision;
     let tmp17 = dependencyMap8[combined];
     if (undefined === tmp17) {
-      const v3Result = require("../../../_runtime/01217_MurmurHashV3.js").v3(combined);
+      const v3Result = MurmurHashV3.v3(combined);
       tmp16[combined] = v3Result;
       tmp17 = v3Result;
-      const obj2 = require("../../../_runtime/01217_MurmurHashV3.js");
+      const obj2 = MurmurHashV3;
     }
     return tmp17;
   } else if (tmp.GUILD === type) {
@@ -82,10 +88,10 @@ function getTrackExposureExperimentHash(descriptor) {
     const combined1 = "" + descriptor.bucket + "|" + descriptor.revision + "|" + descriptor.guildId;
     let tmp10 = dependencyMap8[combined1];
     if (undefined === tmp10) {
-      const v3Result1 = require("../../../_runtime/01217_MurmurHashV3.js").v3(combined1);
+      const v3Result1 = MurmurHashV3.v3(combined1);
       tmp9[combined1] = v3Result1;
       tmp10 = v3Result1;
-      const obj = require("../../../_runtime/01217_MurmurHashV3.js");
+      const obj = MurmurHashV3;
     }
     return tmp10;
   } else {
@@ -174,13 +180,13 @@ function trackExposure(arg0) {
               obj.current_source = closure_20.source;
               let obj1 = { flush: false, fingerprint: null };
               obj1[1] = fingerprint;
-              require("../../utils/AnalyticsUtils.tsx").track(tmp36.EXPERIMENT_USER_TRIGGERED_IGNORED, obj, obj1);
-              const obj11 = require("../../utils/AnalyticsUtils.tsx");
+              expandEventProperties.track(tmp36.EXPERIMENT_USER_TRIGGERED_IGNORED, obj, obj1);
+              const obj11 = expandEventProperties;
             } else {
               const obj2 = { flush: true, fingerprint: null };
               obj2[1] = fingerprint;
-              require("../../utils/AnalyticsUtils.tsx").track(EXPERIMENT_USER_TRIGGERED, obj, obj2);
-              const obj8 = require("../../utils/AnalyticsUtils.tsx");
+              expandEventProperties.track(EXPERIMENT_USER_TRIGGERED, obj, obj2);
+              const obj8 = expandEventProperties;
             }
           } else if (tmp22.GUILD === type) {
             if (tmp4) {
@@ -206,12 +212,12 @@ function trackExposure(arg0) {
               obj3.current_session_id = store.getSessionId();
               obj3.current_fingerprint = store.getFingerprint();
               obj3.current_source = closure_20.source;
-              let obj4 = require("../../utils/AnalyticsUtils.tsx");
+              let obj4 = expandEventProperties;
               obj4 = { flush: false, fingerprint: null };
               obj4[1] = fingerprint;
               obj4.track(tmp23.EXPERIMENT_GUILD_TRIGGERED_IGNORED, obj3, obj4);
             } else {
-              obj1 = require("../../utils/AnalyticsUtils.tsx");
+              obj1 = expandEventProperties;
               const obj5 = { flush: true, fingerprint: null };
               obj5[1] = fingerprint;
               obj1.track(EXPERIMENT_GUILD_TRIGGERED, obj, obj5);
@@ -240,8 +246,8 @@ function _loadGuildFilter(arg0) {
   let tmp2;
   [tmp, tmp2] = arg0;
   let tmp5 = null;
-  if (null != require("GuildFilters.tsx") /* isInRange */.GUILD_FILTERS[tmp]) {
-    const GUILD_FILTERS = require("GuildFilters.tsx") /* isInRange */.GUILD_FILTERS;
+  if (null != isInRange /* isInRange */.GUILD_FILTERS[tmp]) {
+    const GUILD_FILTERS = isInRange /* isInRange */.GUILD_FILTERS;
     tmp5 = GUILD_FILTERS[tmp](tmp2);
   }
   return tmp5;
@@ -645,7 +651,7 @@ function handleFetchFailure() {
   let c16 = true;
 }
 function handleLogout(isSwitchingAccount) {
-  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   Storage.remove(c11);
   if (!isSwitchingAccount.isSwitchingAccount) {
     const Storage2 = tmp(595).Storage;
@@ -668,11 +674,11 @@ function handleLogin() {
   let c16 = false;
   let closure_17 = {};
   let closure_22 = {};
-  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   Storage.remove(c11);
 }
 function loadLocalOverrides() {
-  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   let obj = Storage.get(exerimentOverrides);
   if (obj == null) {
     obj = {};
@@ -692,7 +698,7 @@ function loadLocalOverrides() {
   items[2] = value1;
   let closure_24 = {};
   let closure_25 = {};
-  let flag = !require("../../../_runtime/00012_apply.js").isEmpty(items[0]);
+  let flag = !apply.isEmpty(items[0]);
   const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -748,7 +754,7 @@ function loadLocalOverrides() {
     }
     continue;
   }
-  const obj4 = require("../../../_runtime/00012_apply.js");
+  const obj4 = apply;
   if (tmp22) {
     saveExperimentOverrides();
   }
@@ -756,10 +762,10 @@ function loadLocalOverrides() {
 function saveExperimentOverrides() {
   try {
     let tmp4 = dependencyMap;
-    const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(userExperimentOverrides, closure_24);
     try {
-      const Storage2 = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage2 = Storage /* Storage */.Storage;
       const result1 = Storage2.set(guildExperimentOverrides, closure_25);
     } catch (tmp20) {
       tmp6.error("Error saving guild experiment overrides, unsaved data will be lost", tmp20);
@@ -769,20 +775,20 @@ function saveExperimentOverrides() {
   } catch (tmp8) {
     tmp6.error("Error saving user experiment overrides, unsaved data will be lost", tmp8);
     tmp4 = dependencyMap;
-    require("../../utils/AnalyticsUtils.tsx").track(constants4.EXPERIMENT_SAVE_EXPOSURE_FAILED, { module: "discord_app", call: "ExperimentStore.saveExperimentOverrides" });
-    const obj = require("../../utils/AnalyticsUtils.tsx");
+    expandEventProperties.track(constants4.EXPERIMENT_SAVE_EXPOSURE_FAILED, { module: "discord_app", call: "ExperimentStore.saveExperimentOverrides" });
+    const obj = expandEventProperties;
   }
 }
 function saveTrackedExposureExperiments(closure_17) {
   try {
-    const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const obj = { v: 1, e: null };
     obj[1] = closure_17;
     const result = Storage.set(c11, obj);
   } catch (tmp6) {
     tmp6.error("Error saving tracked exposure experiments, unsaved data will be lost", tmp6);
-    require("../../utils/AnalyticsUtils.tsx").track(constants4.EXPERIMENT_SAVE_EXPOSURE_FAILED, { module: "discord_app", call: "ExperimentStore.saveTrackedExposureExperiments" });
-    const obj2 = require("../../utils/AnalyticsUtils.tsx");
+    expandEventProperties.track(constants4.EXPERIMENT_SAVE_EXPOSURE_FAILED, { module: "discord_app", call: "ExperimentStore.saveTrackedExposureExperiments" });
+    const obj2 = expandEventProperties;
   }
 }
 function handleExperimentOverrideBucket(skipCleanup) {
@@ -893,7 +899,7 @@ class ExperimentStore extends tmp3 {
 }
 const prototype = ExperimentStore.prototype;
 prototype["initialize"] = function initialize() {
-  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   const value = Storage.get(c11);
   if (null != value) {
     if (1 === value.v) {
@@ -1047,10 +1053,10 @@ prototype["getUserExperimentDescriptor"] = function getUserExperimentDescriptor(
   }
   let tmp5 = dependencyMap8[id];
   if (undefined === tmp5) {
-    const v3Result = require("../../../_runtime/01217_MurmurHashV3.js").v3(id);
+    const v3Result = MurmurHashV3.v3(id);
     tmp4[id] = v3Result;
     tmp5 = v3Result;
-    const obj = require("../../../_runtime/01217_MurmurHashV3.js");
+    const obj = MurmurHashV3;
   }
   return dependencyMap3["" + tmp5];
 };
@@ -1100,20 +1106,20 @@ prototype["getGuildExperiments"] = function getGuildExperiments() {
 prototype["getLoadedUserExperiment"] = function getLoadedUserExperiment(name) {
   let tmp3 = dependencyMap8[name];
   if (undefined === tmp3) {
-    const v3Result = require("../../../_runtime/01217_MurmurHashV3.js").v3(name);
+    const v3Result = MurmurHashV3.v3(name);
     tmp2[name] = v3Result;
     tmp3 = v3Result;
-    const obj = require("../../../_runtime/01217_MurmurHashV3.js");
+    const obj = MurmurHashV3;
   }
   return closure_21[tmp3];
 };
 prototype["getLoadedGuildExperiment"] = function getLoadedGuildExperiment(id) {
   let tmp3 = dependencyMap8[id];
   if (undefined === tmp3) {
-    const v3Result = require("../../../_runtime/01217_MurmurHashV3.js").v3(id);
+    const v3Result = MurmurHashV3.v3(id);
     tmp2[id] = v3Result;
     tmp3 = v3Result;
-    const obj = require("../../../_runtime/01217_MurmurHashV3.js");
+    const obj = MurmurHashV3;
   }
   return closure_22[tmp3];
 };
@@ -1215,7 +1221,7 @@ prototype["getSerializedState"] = function getSerializedState() {
     }
   }
   obj = { hasLoadedExperiments: c16, trackedExposureExperiments: closure_17, loadedUserExperiments: closure_21, loadedGuildExperiments: obj, userExperimentOverrides: closure_24, guildExperimentOverrides: closure_25, cookieOverrides: null, assignmentSource: null, assignmentSessionId: null, assignmentFingerprint: null };
-  obj[6] = require("../build_overrides/BuildOverrideUtils.tsx") /* Version */.getBuildOverrideExperiments();
+  obj[6] = Version /* Version */.getBuildOverrideExperiments();
   obj[7] = closure_20.source;
   obj[8] = closure_20.sessionId;
   obj[9] = closure_20.fingerprint;

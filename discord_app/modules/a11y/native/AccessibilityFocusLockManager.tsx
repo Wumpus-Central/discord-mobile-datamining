@@ -1,3 +1,4 @@
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceAccessibilityModule.tsx";
 // discord_app/modules/a11y/native/AccessibilityFocusLockManager.tsx
 import { NativeModules } from "get ActivityIndicator";
 import "initialize";
@@ -51,8 +52,8 @@ prototype["_updateAccessibilityFocusLock"] = function _updateAccessibilityFocusL
   }
   if (self._focusLockEnabled) {
     if (obj.isAndroid()) {
-      require("../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceAccessibilityModule.tsx").disableFocusLock();
-      let obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceAccessibilityModule.tsx");
+      enforcing.disableFocusLock();
+      let obj2 = enforcing;
     } else {
       let DCDAccessibilityManager = NativeModules.DCDAccessibilityManager;
       DCDAccessibilityManager.disableFocusLock();

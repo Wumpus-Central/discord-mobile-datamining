@@ -1,3 +1,28 @@
+import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useFetchPurchases } from "../../collectibles/hooks/useFetchCollectiblesCategoriesAndPurchases.tsx";
+import { useCurrentUserHasAutomodQuarantinedProfile } from "../../guild_automod/AutomodQuarantineUtils.tsx";
+import { useKeyboardIsOpen } from "../../keyboard/native/useKeyboardIsOpen.tsx";
+import { _calculateScrollOffset } from "../../safe_area/useSafeAreaAvoidingInputs.native.tsx";
+import { useSafeAreaInsetsKeyboardAware } from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import { useUserProfileEditForm } from "../../user_settings/profiles/native/useUserProfileEditForm.tsx";
+import { useUserProfileColors } from "../hooks/native/useUserProfileColors.tsx";
+import { useBadges } from "../hooks/useBadges.tsx";
+import { useDisplayProfile } from "../hooks/useDisplayProfile.tsx";
+import { EditUserProfileAvatar } from "EditUserProfileAvatar.tsx";
+import { COLLECTIBLES_PREVIEW_SIZE } from "UserProfileAvatarDecorationEditButton.tsx";
+import { EmojiImage } from "UserProfileCustomStatusBubble.tsx";
+import { styles } from "UserProfileEditFormSharedStyles.tsx";
+import { UserProfileEditFormTextField } from "UserProfileEditFormTextField.tsx";
+import { ColorSwatch } from "UserProfileEditTheme.tsx";
+import { UserProfileEffectEditButton } from "UserProfileEffectEditButton.tsx";
+import { COLLECTIBLES_PREVIEW_SIZE } from "UserProfileFrameEditButton.tsx";
+import { UserProfileGradientContainer } from "UserProfileGradientContainer.tsx";
+import { UserProfileNameplateEditButton } from "UserProfileNameplateEditButton.tsx";
+import { UserProfilePrimaryGuildEditButton } from "UserProfilePrimaryGuildEditButton.tsx";
+import { DisplayName } from "UserProfilePrimaryInfo.tsx";
+import { useSharedStyles } from "UserProfileSharedStyles.tsx";
 // discord_app/modules/user_profile/native/UserProfileEditForm.tsx
 import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "setPendingChanges";
@@ -118,41 +143,41 @@ export default function UserProfileEditForm(arg0) {
     isTryItOut = false;
   }
   let _require;
-  const tmp3 = require("UserProfileSharedStyles.tsx")();
-  const tmp4 = require("UserProfileEditFormSharedStyles.tsx")();
-  const tmp5 = require("../../keyboard/native/useKeyboardIsOpen.tsx")();
+  const tmp3 = useSharedStyles();
+  const tmp4 = styles();
+  const tmp5 = useKeyboardIsOpen();
   const ref = React.useRef(null);
   const ref1 = React.useRef(null);
   const ref2 = React.useRef(null);
   const ref3 = React.useRef(null);
-  const insets = require("../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx")({ includeKeyboardHeight: true }).insets;
-  const PX_16 = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
+  const insets = useSafeAreaInsetsKeyboardAware({ includeKeyboardHeight: true }).insets;
+  const PX_16 = Themes.space.PX_16;
   let obj = { insets, inputs: null, scrollViewRef: null };
   const items = [{ ref: ref1, offset: { type: "toRef", ref: ref2, extraOffset: PX_16 } }, { ref: ref2, offset: { type: "toRef", ref: ref3, extraOffset: PX_16 } }, ];
   obj = { ref: ref3, offset: null };
   obj = { type: "toValue", value: null };
-  obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_64;
+  obj[1] = Themes.space.PX_64;
   obj[1] = obj;
   items[2] = obj;
   obj[1] = items;
   obj[2] = ref;
-  const onFocus = require("../../safe_area/useSafeAreaAvoidingInputs.native.tsx")(obj).onFocus;
-  const tmp10 = require("../../safe_area/useSafeAreaAvoidingInputs.native.tsx");
-  ({ errors, isSubmitting, pendingAvatarDecoration, pendingProfileEffect, pendingThemeColors, tryItOutThemeColors, pendingGlobalName, pendingPronouns, pendingBio, pendingLegacyUsernameDisabled, pendingDisplayNameStyles, pendingAvatar, pendingBanner, pendingProfileFrame, pendingNameplate, pendingAccentColor, tryItOutBanner, tryItOutAvatarDecoration, tryItOutProfileEffect, tryItOutDisplayNameStyles, pendingPrimaryGuildId } = require("../../user_settings/profiles/native/useUserProfileEditForm.tsx")());
-  require("../../collectibles/hooks/useFetchCollectiblesCategoriesAndPurchases.tsx")();
-  let obj3 = _require("../../guild_automod/AutomodQuarantineUtils.tsx");
+  const onFocus = _calculateScrollOffset(obj).onFocus;
+  const tmp10 = _calculateScrollOffset;
+  ({ errors, isSubmitting, pendingAvatarDecoration, pendingProfileEffect, pendingThemeColors, tryItOutThemeColors, pendingGlobalName, pendingPronouns, pendingBio, pendingLegacyUsernameDisabled, pendingDisplayNameStyles, pendingAvatar, pendingBanner, pendingProfileFrame, pendingNameplate, pendingAccentColor, tryItOutBanner, tryItOutAvatarDecoration, tryItOutProfileEffect, tryItOutDisplayNameStyles, pendingPrimaryGuildId } = useUserProfileEditForm());
+  useFetchPurchases();
+  let obj3 = _useCurrentUserHasAutomodQuarantinedProfile;
   const guildAutomodProfileQuarantineErrors = obj3.useGuildAutomodProfileQuarantineErrors();
   let str = currentUser.id;
-  const tmp11 = require("../../user_settings/profiles/native/useUserProfileEditForm.tsx")();
+  const tmp11 = useUserProfileEditForm();
   if (str == null) {
     str = "";
   }
-  const tmp15Result = require("../hooks/useDisplayProfile.tsx")(str);
+  const tmp15Result = useDisplayProfile(str);
   let tmp13Result = tmp13(9366);
   const customStatusActivity = tmp13Result.useCustomStatusActivity();
   tmp13Result = tmp13(8085);
   const pendingAvatarSrc = tmp13Result.getPendingAvatarSrc({ userId: currentUser.id, image: pendingAvatar });
-  const tmp18 = require("../hooks/useBadges.tsx")(tmp15Result, pendingLegacyUsernameDisabled);
+  const tmp18 = useBadges(tmp15Result, pendingLegacyUsernameDisabled);
   let tmpResult = tmp(3931);
   const result = tmpResult.canUsePremiumProfileCustomization(currentUser);
   let legacyUsername;
@@ -186,10 +211,10 @@ export default function UserProfileEditForm(arg0) {
   obj2[2] = tmp22;
   obj2[3] = isTryItOut;
   const obj1 = { userId: currentUser.id, image: pendingAvatar };
-  const tmp15 = require("../hooks/useDisplayProfile.tsx");
+  const tmp15 = useDisplayProfile;
   ({ theme, primaryColor, secondaryColor } = tmpResult(obj2));
   const tmpResult1Result = tmpResult(obj2);
-  const userProfileColors = _require("../hooks/native/useUserProfileColors.tsx").useUserProfileColors({ theme, primaryColor, secondaryColor });
+  const userProfileColors = _useUserProfileColors.useUserProfileColors({ theme, primaryColor, secondaryColor });
   ({ gradientFallbackBackground, gradientSecondaryBackground, containerBackground } = userProfileColors);
   let num = 0;
   if (!result) {
@@ -253,26 +278,26 @@ export default function UserProfileEditForm(arg0) {
   const items2 = [callback(closure_5, { style: tmp4.bounceOffset }), ];
   const obj8 = { fallbackBackground: gradientFallbackBackground, primaryColor, secondaryColor, containerStyle: { backgroundColor: gradientSecondaryBackground }, children: null };
   const obj7 = { style: tmp4.bounceOffset };
-  const tmp13Result1 = _require("../hooks/native/useUserProfileColors.tsx");
+  const tmp13Result1 = _useUserProfileColors;
   const tmp37 = closure_4;
   const items3 = [callback(EditUserProfileBanner, { user: currentUser, displayProfile: tmp15Result, pendingAvatarSrc, pendingBanner, pendingAccentColor, pendingThemeColors, tryItOutBanner, isTryItOut, disabled: isSubmitting }), ];
-  const tmpResult1 = require("UserProfileGradientContainer.tsx");
+  const tmpResult1 = UserProfileGradientContainer;
   const items4 = [, , , ];
   ({ avatarBackground: arr5[0], avatarPosition: arr5[1] } = tmp3);
   items4[2] = tmp4.avatarContainer;
   items4[3] = obj3;
-  const items5 = [callback(closure_5, { style: items4, children: callback(require("EditUserProfileAvatar.tsx"), obj10) }), ];
+  const items5 = [callback(closure_5, { style: items4, children: callback(EditUserProfileAvatar, obj10) }), ];
   const obj11 = { fallbackBackground: gradientFallbackBackground, primaryColor, secondaryColor, containerStyle: items6, children: null };
   items6 = [, , ];
   ({ profileContentWrapper: arr7[0], profileContent: arr7[1] } = tmp3);
   items6[2] = { paddingTop: 0, paddingBottom: sum1 };
-  const obj9 = { style: items4, children: callback(require("EditUserProfileAvatar.tsx"), obj10) };
+  const obj9 = { style: items4, children: callback(EditUserProfileAvatar, obj10) };
   const tmp39 = constants;
-  const items7 = [callback(require("UserProfileCustomStatusBubble.tsx"), { customStatusActivity, hasCustomProfileTheme: null != primaryColor, style: tmp3.customStatusBubble, emojiOnlyStyle: tmp3.emojiOnlyCustomStatusBubble, editEnabled: true }), , ];
+  const items7 = [callback(EmojiImage, { customStatusActivity, hasCustomProfileTheme: null != primaryColor, style: tmp3.customStatusBubble, emojiOnlyStyle: tmp3.emojiOnlyCustomStatusBubble, editEnabled: true }), , ];
   const obj13 = { user: currentUser, displayName: pendingGlobalName, badges: tmp18, pronouns: null, badgeContainerBackground: null, displayNameAccessibilityRole: "header", pendingDisplayNameStyles: null };
   let tmp42 = pendingPronouns;
   const obj12 = { customStatusActivity, hasCustomProfileTheme: null != primaryColor, style: tmp3.customStatusBubble, emojiOnlyStyle: tmp3.emojiOnlyCustomStatusBubble, editEnabled: true };
-  const tmpResult2 = require("UserProfileGradientContainer.tsx");
+  const tmpResult2 = UserProfileGradientContainer;
   if (pendingPronouns == null) {
     tmp42 = str3;
   }
@@ -282,7 +307,7 @@ export default function UserProfileEditForm(arg0) {
     pendingDisplayNameStyles = tryItOutDisplayNameStyles;
   }
   obj13[6] = pendingDisplayNameStyles;
-  items7[1] = callback(require("UserProfilePrimaryInfo.tsx"), obj13);
+  items7[1] = callback(DisplayName, obj13);
   const obj14 = { style: items8, children: null };
   items8 = [tmp4.formContainer, { backgroundColor: containerBackground }];
   let tmp34Result = null;
@@ -299,9 +324,9 @@ export default function UserProfileEditForm(arg0) {
   }
   const items9 = [tmp34Result, , , , , , , , , , , , ];
   const obj17 = { inputRef: ref1, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, placeholder: null, maxLength: null, isDisabled: null };
-  const tmpResult3 = require("UserProfilePrimaryInfo.tsx");
+  const tmpResult3 = DisplayName;
   const intl2 = tmp13(1236).intl;
-  obj17[1] = intl2.string(_require("../../../intl/index.native.tsx").t["9AjdkD"]);
+  obj17[1] = intl2.string(_getSystemLocale.t["9AjdkD"]);
   obj17[2] = first;
   if (pendingGlobalName == null) {
     pendingGlobalName = str2;
@@ -316,7 +341,7 @@ export default function UserProfileEditForm(arg0) {
   obj17[6] = currentUser.toString();
   obj17[7] = closure_9;
   obj17[8] = isSubmitting;
-  items9[1] = callback(require("UserProfileEditFormTextField.tsx"), obj17);
+  items9[1] = callback(UserProfileEditFormTextField, obj17);
   tmp34Result = result;
   if (!result) {
     tmp34Result = isTryItOut;
@@ -329,9 +354,9 @@ export default function UserProfileEditForm(arg0) {
   }
   items9[2] = tmp34Result;
   const obj19 = { inputRef: ref2, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, maxLength: null, isDisabled: null };
-  const tmpResult4 = require("UserProfileEditFormTextField.tsx");
+  const tmpResult4 = UserProfileEditFormTextField;
   const intl3 = tmp13(1236).intl;
-  obj19[1] = intl3.string(_require("../../../intl/index.native.tsx").t["+T3RI/"]);
+  obj19[1] = intl3.string(_getSystemLocale.t["+T3RI/"]);
   obj19[2] = first3;
   if (pendingPronouns == null) {
     pendingPronouns = str3;
@@ -345,11 +370,11 @@ export default function UserProfileEditForm(arg0) {
   };
   obj19[6] = closure_10;
   obj19[7] = isSubmitting;
-  items9[3] = callback(require("UserProfileEditFormTextField.tsx"), obj19);
+  items9[3] = callback(UserProfileEditFormTextField, obj19);
   const obj20 = { inputRef: ref3, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, autoFocus: null, maxLength: null, numberOfLines: 5, isDisabled: null };
-  const tmpResult5 = require("UserProfileEditFormTextField.tsx");
+  const tmpResult5 = UserProfileEditFormTextField;
   const intl4 = tmp13(1236).intl;
-  obj20[1] = intl4.string(_require("../../../intl/index.native.tsx").t.ZzAR2Y);
+  obj20[1] = intl4.string(_getSystemLocale.t.ZzAR2Y);
   obj20[2] = first4;
   if (pendingBio == null) {
     pendingBio = str4;
@@ -364,9 +389,9 @@ export default function UserProfileEditForm(arg0) {
   obj20[6] = autoFocusElement === tmp39.BIO;
   obj20[7] = closure_8;
   obj20[9] = isSubmitting;
-  items9[4] = callback(require("UserProfileEditFormTextField.tsx"), obj20);
+  items9[4] = callback(UserProfileEditFormTextField, obj20);
   const obj21 = { user: currentUser, onProfileThemeColorsChanged: null, pendingAvatarSrc: null, pendingThemeColors: null, isTryItOut: null };
-  const tmpResult6 = require("UserProfileEditFormTextField.tsx");
+  const tmpResult6 = UserProfileEditFormTextField;
   if (isTryItOut) {
     let fn = tmp13(8078).setTryItOutThemeColors;
   } else {
@@ -383,7 +408,7 @@ export default function UserProfileEditForm(arg0) {
   }
   obj21[3] = pendingThemeColors;
   obj21[4] = isTryItOut;
-  items9[5] = callback(require("UserProfileEditTheme.tsx"), obj21);
+  items9[5] = callback(ColorSwatch, obj21);
   let tmp34Result1 = !isTryItOut;
   if (!isTryItOut) {
     const obj22 = { badges: null };
@@ -392,32 +417,32 @@ export default function UserProfileEditForm(arg0) {
   }
   items9[6] = tmp34Result1;
   const obj23 = { user: currentUser, pendingAvatarDecoration: null, isTryItOut: null };
-  const tmpResult7 = require("UserProfileEditTheme.tsx");
+  const tmpResult7 = ColorSwatch;
   if (isTryItOut) {
     pendingAvatarDecoration = tryItOutAvatarDecoration;
   }
   obj23[1] = pendingAvatarDecoration;
   obj23[2] = isTryItOut;
-  items9[7] = callback(require("UserProfileAvatarDecorationEditButton.tsx"), obj23);
+  items9[7] = callback(COLLECTIBLES_PREVIEW_SIZE, obj23);
   const obj24 = { user: currentUser, pendingProfileEffect: null, displayProfile: null, isTryItOut: null };
-  const tmpResult8 = require("UserProfileAvatarDecorationEditButton.tsx");
+  const tmpResult8 = COLLECTIBLES_PREVIEW_SIZE;
   if (isTryItOut) {
     pendingProfileEffect = tryItOutProfileEffect;
   }
   obj24[1] = pendingProfileEffect;
   obj24[2] = tmp15Result;
   obj24[3] = isTryItOut;
-  items9[8] = callback(require("UserProfileEffectEditButton.tsx"), obj24);
-  items9[9] = callback(require("UserProfileFrameEditButton.tsx"), { user: currentUser, pendingProfileFrame, displayProfile: tmp15Result });
-  items9[10] = callback(require("UserProfileNameplateEditButton.tsx"), { user: currentUser, pendingNameplate });
-  const tmpResult9 = require("UserProfileEffectEditButton.tsx");
+  items9[8] = callback(UserProfileEffectEditButton, obj24);
+  items9[9] = callback(COLLECTIBLES_PREVIEW_SIZE, { user: currentUser, pendingProfileFrame, displayProfile: tmp15Result });
+  items9[10] = callback(UserProfileNameplateEditButton, { user: currentUser, pendingNameplate });
+  const tmpResult9 = UserProfileEffectEditButton;
   items9[11] = callback(closure_5, {
     ref(arg0) {
       if (null != arg0) {
         ref.current[outer1_11.GUILD_TAG] = arg0;
       }
     },
-    children: callback(require("UserProfilePrimaryGuildEditButton.tsx"), { user: currentUser, disabled: isSubmitting, tagStyle: { backgroundColor: containerBackground }, pendingPrimaryGuildId })
+    children: callback(UserProfilePrimaryGuildEditButton, { user: currentUser, disabled: isSubmitting, tagStyle: { backgroundColor: containerBackground }, pendingPrimaryGuildId })
   });
   let tmp34Result2 = null != legacyUsername;
   if (tmp34Result2) {
@@ -450,5 +475,5 @@ export default function UserProfileEditForm(arg0) {
   items10[1] = tmp34Result3;
   obj5[1] = items10;
   obj4[3] = closure_14(closure_5, obj5);
-  return callback(_require("../../../../discord_common/js/packages/design/native.tsx").ThemeContextProvider, obj4);
+  return callback(_ManaContext.ThemeContextProvider, obj4);
 };

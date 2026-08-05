@@ -1,3 +1,5 @@
+import { StatusDisplayTypes } from "../../../../../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx";
+import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
 // discord_app/modules/rpc/server/commands/setActivity.tsx
 import addApplication from "addApplication";
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
@@ -22,11 +24,11 @@ let items = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_AC
 obj[RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj;
 obj[1] = function validation(number) {
-  let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(number);
+  let obj = createRpcJoiSchemaObject(number);
   obj = { pid: null, activity: null };
   const requiredResult = obj.required();
   obj[0] = number.number().min(0);
-  let obj4 = require("../../helpers/createRpcJoiSchemaObject.tsx")(number);
+  let obj4 = createRpcJoiSchemaObject(number);
   obj = { name: null, state: null, state_url: null, details: null, details_url: null, timestamps: null, assets: null, party: null, secrets: null, buttons: null, instance: null, supported_platforms: null, type: null, status_display_type: null };
   const numberResult = number.number();
   const stringResult = number.string();
@@ -47,14 +49,14 @@ obj[1] = function validation(number) {
   obj[4] = number.string().uri().min(1).max(256);
   const minResult4 = number.string().uri().min(1);
   const obj1 = { start: null, end: null };
-  const obj19 = require("../../helpers/createRpcJoiSchemaObject.tsx")(number);
+  const obj19 = createRpcJoiSchemaObject(number);
   obj1[0] = number.number().min(1);
   const numberResult1 = number.number();
   obj1[1] = number.number().min(1);
   obj[5] = obj19.keys(obj1);
   const numberResult2 = number.number();
   const obj2 = { large_image: null, large_text: null, large_url: null, small_image: null, small_text: null, small_url: null, invite_cover_image: null };
-  const obj23 = require("../../helpers/createRpcJoiSchemaObject.tsx")(number);
+  const obj23 = createRpcJoiSchemaObject(number);
   const stringResult5 = number.string();
   obj2[0] = number.string().min(1).max(300);
   const minResult5 = number.string().min(1);
@@ -80,7 +82,7 @@ obj[1] = function validation(number) {
   obj[6] = obj23.keys(obj2);
   const minResult11 = number.string().min(1);
   const obj3 = { id: null, size: null, privacy: null };
-  const obj41 = require("../../helpers/createRpcJoiSchemaObject.tsx")(number);
+  const obj41 = createRpcJoiSchemaObject(number);
   const stringResult12 = number.string();
   obj3[0] = number.string().min(2).max(128);
   let arrayResult = number.array();
@@ -95,7 +97,7 @@ obj[1] = function validation(number) {
   obj[7] = obj41.keys(obj3);
   const defaultResult = number.number().default(constants.PRIVATE);
   obj4 = { match: null, join: null, spectate: null };
-  const obj49 = require("../../helpers/createRpcJoiSchemaObject.tsx")(number);
+  const obj49 = createRpcJoiSchemaObject(number);
   const stringResult13 = number.string();
   obj4[0] = number.string().min(2).max(128);
   const minResult13 = number.string().min(2);
@@ -108,7 +110,7 @@ obj[1] = function validation(number) {
   arrayResult = number.array();
   const minResult15 = number.string().min(2);
   const obj5 = { label: null, url: null };
-  const obj58 = require("../../helpers/createRpcJoiSchemaObject.tsx")(number);
+  const obj58 = createRpcJoiSchemaObject(number);
   const stringResult16 = number.string();
   const minResult16 = number.string().min(1);
   obj5[0] = number.string().min(1).max(32).required();
@@ -132,7 +134,7 @@ obj[1] = function validation(number) {
   obj[12] = number.number().default(constants2.PLAYING).valid(constants2.PLAYING, constants2.LISTENING, constants2.WATCHING, constants2.COMPETING);
   const defaultResult1 = number.number().default(constants2.PLAYING);
   const numberResult6 = number.number();
-  obj[13] = number.number().optional().valid(require("../../../../../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx") /* StatusDisplayTypes */.StatusDisplayTypes.NAME, require("../../../../../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx") /* StatusDisplayTypes */.StatusDisplayTypes.STATE, require("../../../../../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx") /* StatusDisplayTypes */.StatusDisplayTypes.DETAILS);
+  obj[13] = number.number().optional().valid(StatusDisplayTypes /* StatusDisplayTypes */.StatusDisplayTypes.NAME, StatusDisplayTypes /* StatusDisplayTypes */.StatusDisplayTypes.STATE, StatusDisplayTypes /* StatusDisplayTypes */.StatusDisplayTypes.DETAILS);
   const keys = obj4.keys(obj);
   obj[1] = keys.allow(null);
   return requiredResult.keys(obj);

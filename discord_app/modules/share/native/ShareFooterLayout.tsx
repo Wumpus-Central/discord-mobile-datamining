@@ -1,3 +1,8 @@
+import { CONFIG_NEVER_ANIMATE } from "../../../design/animation/reanimated/spring/spring.tsx";
+import { SUBTLE_SPRING } from "../../../design/animation/reanimated/spring/springPresets.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
+import { useSafeAreaInsetsKeyboardAware } from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 // discord_app/modules/share/native/ShareFooterLayout.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -31,15 +36,15 @@ export default function ShareFooterLayout(arg0) {
   let _require;
   ({ chatInput, sendButton, avoidKeyboard } = arg0);
   const tmp = createCacheKey();
-  const sum = tmp.footer.paddingVertical + require("../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx")({ includeKeyboardHeight: avoidKeyboard, includeCustomKeyboardHeight: false }).insets.bottom;
+  const sum = tmp.footer.paddingVertical + useSafeAreaInsetsKeyboardAware({ includeKeyboardHeight: avoidKeyboard, includeCustomKeyboardHeight: false }).insets.bottom;
   _require = sum;
-  let obj = _require("../../reanimated/ReanimatedRexport.tsx");
+  let obj = _ReanimatedRexport;
   const fn = function f() {
     const obj = { paddingBottom: null };
     obj[0] = _undefined(outer1_2[7]).withSpring(_undefined, _undefined(outer1_2[8]).ON_PRESS_SPRING, "respect-motion-settings");
     return obj;
   };
-  obj = { withSpring: _require("../../../design/animation/reanimated/spring/spring.tsx").withSpring, footerPaddingBottom: sum, ON_PRESS_SPRING: _require("../../../design/animation/reanimated/spring/springPresets.tsx").ON_PRESS_SPRING };
+  obj = { withSpring: _CONFIG_NEVER_ANIMATE.withSpring, footerPaddingBottom: sum, ON_PRESS_SPRING: _SUBTLE_SPRING.ON_PRESS_SPRING };
   fn.__closure = obj;
   fn.__workletHash = 2871405301293;
   fn.__initData = closure_8;
@@ -64,11 +69,11 @@ export default function ShareFooterLayout(arg0) {
   if (tmp12) {
     const obj5 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
     obj5[2] = warningText;
-    tmp12 = callback(_require("../../../design/components/Text/native/Text.tsx").Text, obj5);
+    tmp12 = callback(_Text.Text, obj5);
   }
   items4[1] = tmp12;
   obj3[1] = items4;
   items2[1] = closure_6(View, obj3);
   obj[1] = items2;
-  return closure_6(require("../../reanimated/ReanimatedRexport.tsx").View, obj);
+  return closure_6(ReanimatedRexport.View, obj);
 };

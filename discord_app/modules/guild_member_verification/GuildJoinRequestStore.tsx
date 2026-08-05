@@ -1,3 +1,6 @@
+import { t } from "../../../_runtime/03867_t.js";
+import { isActionedApplicationStatus } from "GuildJoinRequestUtils.tsx";
+import { MAX_RESULTS_PER_PAGE } from "MemberVerificationTypes.tsx";
 // discord_app/modules/guild_member_verification/GuildJoinRequestStore.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { joinRequestFromServer } from "handleGatewayJoinRequestUpdate";
@@ -7,14 +10,14 @@ const require = arg1;
 function updateSubmittedGuildJoinRequestTotal(guildId, DELETED, applicationStatus) {
   if (DELETED !== applicationStatus) {
     if (null != DELETED) {
-      if (DELETED === require("MemberVerificationTypes.tsx") /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestApplicationStatuses.SUBMITTED) {
+      if (DELETED === MAX_RESULTS_PER_PAGE /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestApplicationStatuses.SUBMITTED) {
         dependencyMap[guildId] = dependencyMap[guildId] + 1;
-        const result = map.set(guildId, require("../../../_runtime/03867_t.js")());
+        const result = map.set(guildId, t());
       }
       if (applicationStatus === tmp12(4105).GuildJoinRequestApplicationStatuses.SUBMITTED) {
         const _Math = Math;
         dependencyMap[guildId] = Math.max(0, dependencyMap[guildId] - 1);
-        const result1 = map.set(guildId, require("../../../_runtime/03867_t.js")());
+        const result1 = map.set(guildId, t());
       }
       tmp12 = require;
     }
@@ -42,7 +45,7 @@ function upsert(joinRequestId) {
     secondaryIndexMap2.delete(joinRequestId.joinRequestId);
     const result1 = secondaryIndexMap1.set(joinRequestId.joinRequestId, joinRequestId);
   }
-  obj = require("GuildJoinRequestUtils.tsx") /* isActionedApplicationStatus */;
+  obj = isActionedApplicationStatus /* isActionedApplicationStatus */;
   const tmp2 = require;
   if (tmp2Result.isActionedApplicationStatus(joinRequestId.applicationStatus)) {
     secondaryIndexMap1.delete(joinRequestId.joinRequestId);
@@ -66,7 +69,7 @@ function handleGuildJoinRequestCreateOrUpdate(request) {
         secondaryIndexMap2.delete(tmp.joinRequestId);
         const result1 = secondaryIndexMap1.set(tmp.joinRequestId, tmp);
       }
-      obj = require("GuildJoinRequestUtils.tsx") /* isActionedApplicationStatus */;
+      obj = isActionedApplicationStatus /* isActionedApplicationStatus */;
       const obj3 = secondaryIndexMap;
       const tmp8 = require;
       if (tmp8Result.isActionedApplicationStatus(tmp.applicationStatus)) {
@@ -118,7 +121,7 @@ prototype["getRequests"] = function getRequests(guildId, applicationStatus) {
     } else {
       values = secondaryIndexMap.values(combined);
     }
-    tmp2Result = require("GuildJoinRequestUtils.tsx") /* isActionedApplicationStatus */;
+    tmp2Result = isActionedApplicationStatus /* isActionedApplicationStatus */;
   }
   return values;
 };
@@ -133,8 +136,8 @@ prototype["hasFetched"] = function hasFetched(arg0) {
     const value = obj.get(arg0);
     let tmp3 = null != value;
     if (tmp3) {
-      tmp3 = require("../../../_runtime/03867_t.js")().diff(value, "seconds") < closure_20;
-      const obj2 = require("../../../_runtime/03867_t.js")();
+      tmp3 = t().diff(value, "seconds") < closure_20;
+      const obj2 = t();
     }
     return tmp3;
   } else {
@@ -145,14 +148,14 @@ prototype["hasFetched"] = function hasFetched(arg0) {
 prototype["getSelectedApplicationTab"] = function getSelectedApplicationTab(arg0) {
   let SUBMITTED = dependencyMap2[arg0];
   if (SUBMITTED == null) {
-    SUBMITTED = require("MemberVerificationTypes.tsx") /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestApplicationStatuses.SUBMITTED;
+    SUBMITTED = MAX_RESULTS_PER_PAGE /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestApplicationStatuses.SUBMITTED;
   }
   return SUBMITTED;
 };
 prototype["getSelectedSortOrder"] = function getSelectedSortOrder(arg0) {
   let TIMESTAMP_DESC = dependencyMap3[arg0];
   if (TIMESTAMP_DESC == null) {
-    TIMESTAMP_DESC = require("MemberVerificationTypes.tsx") /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestSortOrders.TIMESTAMP_DESC;
+    TIMESTAMP_DESC = MAX_RESULTS_PER_PAGE /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestSortOrders.TIMESTAMP_DESC;
   }
   return TIMESTAMP_DESC;
 };
@@ -182,7 +185,7 @@ const guildJoinRequestStoreV2 = new GuildJoinRequestStoreV2(require("dispatcher"
       secondaryIndexMap2.delete(joinRequest.joinRequestId);
       const result1 = secondaryIndexMap1.set(joinRequest.joinRequestId, joinRequest);
     }
-    obj = require("GuildJoinRequestUtils.tsx") /* isActionedApplicationStatus */;
+    obj = isActionedApplicationStatus /* isActionedApplicationStatus */;
     const tmp2 = require;
     if (tmp2Result.isActionedApplicationStatus(joinRequest.applicationStatus)) {
       secondaryIndexMap1.delete(joinRequest.joinRequestId);
@@ -206,9 +209,9 @@ const guildJoinRequestStoreV2 = new GuildJoinRequestStoreV2(require("dispatcher"
     ({ requests, guildId } = arg0);
     let c9 = false;
     ({ status, total } = arg0);
-    if (status === require("MemberVerificationTypes.tsx") /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestApplicationStatuses.SUBMITTED) {
+    if (status === MAX_RESULTS_PER_PAGE /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestApplicationStatuses.SUBMITTED) {
       closure_6[guildId] = total;
-      let result = map.set(guildId, require("../../../_runtime/03867_t.js")());
+      let result = map.set(guildId, t());
     }
     const item = requests.forEach((joinRequestId) => {
       closure_19[joinRequestId.joinRequestId] = joinRequestId;
@@ -263,12 +266,12 @@ const guildJoinRequestStoreV2 = new GuildJoinRequestStoreV2(require("dispatcher"
       if (obj.isActionedApplicationStatus(applicationStatus)) {
         secondaryIndexMap2.clear();
       }
-      obj = require("GuildJoinRequestUtils.tsx") /* isActionedApplicationStatus */;
+      obj = isActionedApplicationStatus /* isActionedApplicationStatus */;
       const tmp = require;
       if (tmpResult.isSubmittedApplicationStatus(applicationStatus)) {
         secondaryIndexMap1.clear();
       }
-      tmpResult = require("GuildJoinRequestUtils.tsx") /* isActionedApplicationStatus */;
+      tmpResult = isActionedApplicationStatus /* isActionedApplicationStatus */;
     }
   },
   GUILD_JOIN_REQUESTS_SET_SELECTED: function handleGuildJoinRequestSelect(guildId) {

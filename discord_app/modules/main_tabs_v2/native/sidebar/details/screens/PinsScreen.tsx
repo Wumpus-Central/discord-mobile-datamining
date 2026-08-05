@@ -1,3 +1,4 @@
+import { InitialPinsScreen } from "../../../../../search/native/components/tabs/pages/messages/PinsScreen.tsx";
 // discord_app/modules/main_tabs_v2/native/sidebar/details/screens/PinsScreen.tsx
 import { View } from "get ActivityIndicator";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -25,7 +26,7 @@ const memoResult = require("noop").memo(() => {
   });
   const obj2 = channelId(589);
   const channelDetailsSearchContext = channelId(11583).useChannelDetailsSearchContext(channelId, stateFromStores);
-  obj = { style: callback().container, children: jsx(require("../../../../../search/native/components/tabs/pages/messages/PinsScreen.tsx"), obj) };
+  obj = { style: callback().container, children: jsx(InitialPinsScreen, obj) };
   obj = { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS };
   return <View searchContext={channelDetailsSearchContext} isFocused tab={SearchTabs.PINS} />;
 });

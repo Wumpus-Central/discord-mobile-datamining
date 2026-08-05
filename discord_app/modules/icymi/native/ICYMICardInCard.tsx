@@ -1,3 +1,7 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { SolidCutout } from "../../../design/components/Icon/native/ClipView.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
 // discord_app/modules/icymi/native/ICYMICardInCard.tsx
 import getIconForChannel from "getIconForChannel";
 import { View } from "Text";
@@ -18,17 +22,17 @@ function CutoutGuildIconWithUserCustom(guild) {
   obj = { cutouts: null, children: null };
   obj = { shape: null, x: 18, y: 18, size: 24 };
   const tmp = callback3();
-  obj[0] = require("../../../design/components/Icon/native/ClipView.tsx") /* SolidCutout */.CutoutShape.Circle;
+  obj[0] = SolidCutout /* SolidCutout */.CutoutShape.Circle;
   const items = [obj];
   obj[0] = items;
   const obj1 = { guild, size: null };
-  const tmp2 = require("../../../design/components/Icon/native/ClipView.tsx");
-  obj1[1] = require("../../guild/native/GuildIcon.tsx") /* GuildIconSizes */.GuildIconSizes.SMALL_32;
-  obj[1] = callback(require("../../guild/native/GuildIcon.tsx"), obj1);
+  const tmp2 = SolidCutout;
+  obj1[1] = GuildIconSizes /* GuildIconSizes */.GuildIconSizes.SMALL_32;
+  obj[1] = callback(GuildIconSizes, obj1);
   const items1 = [callback(tmp2, obj), ];
   const obj2 = { animate: true, style: tmp.authorAvatar, guildId: guild.id, user: guild.author, size: null };
-  obj2[4] = require("../../../design/void/native.tsx") /* Button */.AvatarSizes.XSMALL_20;
-  items1[1] = callback(require("../../../design/void/native.tsx") /* Button */.Avatar, obj2);
+  obj2[4] = Button /* Button */.AvatarSizes.XSMALL_20;
+  items1[1] = callback(Button /* Button */.Avatar, obj2);
   obj[1] = items1;
   return callback2(View, obj);
 }
@@ -36,24 +40,24 @@ function CutoutGuildIconWithUserCustom(guild) {
 let closure_12 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   obj = { container: obj, content: { flex: 1, overflow: "hidden" }, channelNameAndAccessory: null, channelNameAndAccessoryLarge: null, header: null, headerInfo: null, title: null, titleLeft: null, subTitleContainer: null, subtitle: null, genContentSubtitle: null, genContentSubtitleChannel: null, subtitleTrailing: null, separator: null, normalContent: null, authorAvatar: null };
   obj = { marginTop: marginHorizontal.margin };
-  obj = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, marginHorizontal: marginHorizontal.margin };
+  obj = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: Themes.space.PX_4, marginHorizontal: marginHorizontal.margin };
   obj[2] = obj;
-  obj[3] = { flexDirection: "column", paddingBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, marginHorizontal: marginHorizontal.margin };
+  obj[3] = { flexDirection: "column", paddingBottom: Themes.space.PX_4, marginHorizontal: marginHorizontal.margin };
   obj[4] = { flexDirection: "row", flexGrow: 1 };
-  const obj1 = { flexDirection: "column", paddingBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, marginHorizontal: marginHorizontal.margin };
-  obj[5] = { flexGrow: 1, flexShrink: 1, marginLeft: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
+  const obj1 = { flexDirection: "column", paddingBottom: Themes.space.PX_4, marginHorizontal: marginHorizontal.margin };
+  obj[5] = { flexGrow: 1, flexShrink: 1, marginLeft: Themes.space.PX_12 };
   obj[6] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: 2 };
   obj[7] = { flexShrink: 1, flexGrow: 0, flexDirection: "row", alignItems: "center", gap: 6 };
-  const obj2 = { flexGrow: 1, flexShrink: 1, marginLeft: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
-  obj[8] = { flexDirection: "row", justifyContent: "space-between", borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.sm };
+  const obj2 = { flexGrow: 1, flexShrink: 1, marginLeft: Themes.space.PX_12 };
+  obj[8] = { flexDirection: "row", justifyContent: "space-between", borderRadius: Themes.radii.sm };
   obj[9] = { flexShrink: 1, flexGrow: 0, width: "100%" };
   obj[10] = { flexDirection: "row", alignItems: "center", gap: 2 };
   obj[11] = { flexDirection: "row", alignItems: "center", gap: 2, flex: 1 };
   obj[12] = { paddingVertical: 1 };
-  const obj3 = { flexDirection: "row", justifyContent: "space-between", borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.sm };
-  obj[13] = { height: 1, width: "100%", backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE };
-  const obj4 = { height: 1, width: "100%", backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE };
-  obj[14] = { borderBottomWidth: 1, borderBottomColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_STRONG, flexShrink: 0 };
+  const obj3 = { flexDirection: "row", justifyContent: "space-between", borderRadius: Themes.radii.sm };
+  obj[13] = { height: 1, width: "100%", backgroundColor: Themes.colors.BORDER_SUBTLE };
+  const obj4 = { height: 1, width: "100%", backgroundColor: Themes.colors.BORDER_SUBTLE };
+  obj[14] = { borderBottomWidth: 1, borderBottomColor: Themes.colors.BORDER_STRONG, flexShrink: 0 };
   obj[15] = { position: "absolute", right: 0, bottom: 0 };
   return obj;
 });

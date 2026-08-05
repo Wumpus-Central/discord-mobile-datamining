@@ -1,3 +1,4 @@
+import { _httpGetWithCountryCodeQuery } from "../../../../../utils/StoreUtils.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionSettingsUtils.tsx
 import makeGroupListingIndexSubscriptionListingTag from "makeGroupListingIndexSubscriptionListingTag";
 
@@ -8,8 +9,8 @@ export const getCoverImageURI = function getCoverImageURI(subscriptionsSettings)
   applicationIdForGuild = applicationIdForGuild.getApplicationIdForGuild(subscriptionsSettings.guild_id);
   let uri = "";
   if (tmp2) {
-    uri = require("../../../../../utils/StoreUtils.tsx") /* _httpGetWithCountryCodeQuery */.getAssetURL(applicationIdForGuild, subscriptionsSettings.cover_image_asset, 1024);
-    const obj = require("../../../../../utils/StoreUtils.tsx") /* _httpGetWithCountryCodeQuery */;
+    uri = _httpGetWithCountryCodeQuery /* _httpGetWithCountryCodeQuery */.getAssetURL(applicationIdForGuild, subscriptionsSettings.cover_image_asset, 1024);
+    const obj = _httpGetWithCountryCodeQuery /* _httpGetWithCountryCodeQuery */;
   }
   return { uri };
 };

@@ -1,3 +1,4 @@
+import { isRoleRequired } from "../../channel/isRoleRequired.tsx";
 // discord_app/modules/user_profile/native/UserProfileVoiceActivityIcon.tsx
 import "noop";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -24,7 +25,7 @@ export default function UserProfileVoiceActivityIcon(channel) {
       const isGuildStageVoiceResult = channel.isGuildStageVoice();
       let tmp6 = !stateFromStores;
       if (stateFromStores) {
-        tmp6 = require("../../channel/isRoleRequired.tsx")(channel);
+        tmp6 = isRoleRequired(channel);
       }
       if (isGuildStageVoiceResult) {
         if (tmp6) {

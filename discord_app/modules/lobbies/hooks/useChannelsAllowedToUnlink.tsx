@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/lobbies/hooks/useChannelsAllowedToUnlink.tsx
 import comparator from "comparator";
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_3 } from "comparator";
@@ -28,7 +29,7 @@ export const getChannelsAllowedToUnlink = function getChannelsAllowedToUnlink(ar
 export const useChannelsAllowedToUnlink = function useChannelsAllowedToUnlink(id) {
   const _require = id;
   let items = [getUncachedChannelPermissions, comparator];
-  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
+  return _initialize.useStateFromStoresArray(items, () => {
     if (outer1_2 !== undefined) {
       if (tmp2 !== undefined) {
         let closure_0 = tmp2;

@@ -1,3 +1,8 @@
+import { parse } from "../../../_runtime/01464_parse.js";
+import { items } from "../../modules/image_upload/AttachmentImageLadder.tsx";
+import { useWindowDimensions } from "../../modules/screen/useWindowDimensions.native.tsx";
+import { getAvatarURL } from "../AvatarUtils.tsx";
+import { ensureAvatarSource } from "AvatarUtils.tsx";
 // discord_app/utils/native/ImageUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -25,7 +30,7 @@ function getSrcWithWidthAndHeight(animated) {
   }
   const tmp = callback(src.split("?"), 2);
   const items = [tmp[0], ];
-  let obj = require("../../../_runtime/01464_parse.js");
+  let obj = parse;
   items[1] = obj.parse(tmp[1]);
   const tmp4 = callback(items, 2);
   [tmp5, tmp6] = tmp4;
@@ -55,9 +60,9 @@ function getSrcWithWidthAndHeight(animated) {
       obj[1] = targetHeight;
       obj[2] = sourceWidth;
       obj[3] = sourceHeight;
-      obj[4] = require("../../modules/image_upload/AttachmentImageLadder.tsx") /* items */.ATTACHMENT_LADDER_MAX_UPSCALE;
-      let size = require("../../modules/image_upload/AttachmentImageLadder.tsx") /* items */.snapAttachmentDimensions(obj);
-      const obj2 = require("../../modules/image_upload/AttachmentImageLadder.tsx") /* items */;
+      obj[4] = items /* items */.ATTACHMENT_LADDER_MAX_UPSCALE;
+      let size = items /* items */.snapAttachmentDimensions(obj);
+      const obj2 = items /* items */;
     } else {
       size = { width: null, height: null };
       size[0] = targetWidth;
@@ -89,7 +94,7 @@ function getMobileOptimizedSrc(proxy_url, width, height, png) {
   if (tmp3.test(proxy_url)) {
     num = 0.3;
   }
-  let obj = require("../../modules/screen/useWindowDimensions.native.tsx") /* useWindowDimensions */;
+  let obj = useWindowDimensions /* useWindowDimensions */;
   const size = obj.getWindowDimensions();
   const result = store.getPixelSizeForLayoutSize(size.width) * num;
   const bound = Math.min(width > height ? result / width : store.getPixelSizeForLayoutSize(size.height / 2) * num / height, 1);
@@ -105,9 +110,9 @@ function getMobileOptimizedSrc(proxy_url, width, height, png) {
   return getSrcWithWidthAndHeight(obj);
 }
 function getPaletteForAvatarMobile(closure_0) {
-  const obj = require("AvatarUtils.tsx") /* ensureAvatarSource */;
+  const obj = ensureAvatarSource /* ensureAvatarSource */;
   ImageManager = ImageManager.ImageManager;
-  return ImageManager.getDominantColors(obj.ensureAvatarSource(require("../AvatarUtils.tsx") /* getAvatarURL */.makeSource(closure_0)));
+  return ImageManager.getDominantColors(obj.ensureAvatarSource(getAvatarURL /* getAvatarURL */.makeSource(closure_0)));
 }
 ({ NativeModules: c4, PixelRatio: c5 } = get_ActivityIndicator);
 const tmp3 = /\.(gif)$/i;

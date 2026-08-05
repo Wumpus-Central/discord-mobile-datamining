@@ -1,3 +1,5 @@
+import { registerAsset } from "../../../../../../../_runtime/08006_registerAsset.js";
+import { BaseIconImage } from "../../BaseIconImage.tsx";
 // discord_app/design/components/Icon/native/redesign/generated/XNeutralIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -12,9 +14,9 @@ export const XNeutralIcon = function XNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.create(null));
   const obj = { source: null, color: null, style: null };
-  obj[0] = require("../../../../../../../_runtime/08006_registerAsset.js") /* registerAsset */;
+  obj[0] = registerAsset /* registerAsset */;
   obj[1] = str;
   obj[2] = color.style;
   const merged1 = Object.assign(merged);
-  return jsx(require("../../BaseIconImage.tsx") /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
+  return jsx(BaseIconImage /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
 };

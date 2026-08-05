@@ -1,3 +1,6 @@
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/app_launcher/native/base_components/ViewAllRow.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -21,9 +24,9 @@ export default function ViewAllRow(title) {
   obj = { style: callback().expandCTALabelContainer, children: null };
   const obj1 = { color: "text-brand", variant: "text-md/semibold", children: null };
   const intl2 = tmp3(1236).intl;
-  obj1[2] = intl2.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.gVw57p, {});
-  obj[1] = jsx(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { color: "text-brand", variant: "text-md/semibold", children: null });
+  obj1[2] = intl2.format(getSystemLocale /* getSystemLocale */.t.gVw57p, {});
+  obj[1] = jsx(Text /* Text */.Text, { color: "text-brand", variant: "text-md/semibold", children: null });
   obj[1] = <View style={callback().expandCTALabelContainer}>{null}</View>;
   obj[2] = title.onPress;
-  return jsx(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, { style: callback().expandCTALabelContainer, children: null });
+  return jsx(TableRowInner /* TableRowInner */.TableRow, { style: callback().expandCTALabelContainer, children: null });
 };

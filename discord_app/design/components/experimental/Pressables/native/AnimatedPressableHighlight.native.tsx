@@ -1,3 +1,4 @@
+import { SPRING_CONFIG } from "../../../../../modules/main_tabs_v2/native/shared_components/util/useIOSPressEffects.tsx";
 // discord_app/design/components/experimental/Pressables/native/AnimatedPressableHighlight.native.tsx
 import noop from "noop";
 import { Pressable } from "get ActivityIndicator";
@@ -54,7 +55,7 @@ export const AnimatedPressableHighlight = set.isAndroid() ? (function AnimatedPr
   }, items)} />;
 }) : (function AnimatedPressableHighlightiOS(children) {
   const merged = Object.assign(children, Object.create(null));
-  let obj = require("../../../../../modules/main_tabs_v2/native/shared_components/util/useIOSPressEffects.tsx") /* SPRING_CONFIG */;
+  let obj = SPRING_CONFIG /* SPRING_CONFIG */;
   const iOSPressEffects = obj.useIOSPressEffects(4);
   obj = { accessibilityRole: "button", onPressIn: iOSPressEffects.onPressIn, onPressOut: iOSPressEffects.onPressOut };
   const merged1 = Object.assign(merged);

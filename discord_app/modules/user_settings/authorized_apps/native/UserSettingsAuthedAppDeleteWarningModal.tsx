@@ -1,3 +1,7 @@
+import { getAlertModalItemKey } from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { isSocialLayerApplication } from "../../../applications/isSocialLayerApplication.tsx";
+import { isAuthorizedAppTwoWay } from "../shouldWarnAuthorizedAppTwoWay.tsx";
 // discord_app/modules/user_settings/authorized_apps/native/UserSettingsAuthedAppDeleteWarningModal.tsx
 import jsxProd from "jsxProd";
 
@@ -12,9 +16,9 @@ export default function UserSettingsAuthedAppDeleteWarningModal(application) {
   let scopes;
   application = application.application;
   ({ scopes, onDelete } = application);
-  let obj = require("../../../applications/isSocialLayerApplication.tsx") /* isSocialLayerApplication */;
+  let obj = isSocialLayerApplication /* isSocialLayerApplication */;
   const result = obj.isSocialLayerSDKAuthorization(application, scopes);
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   if (result) {
     obj = { applicationName: null };
     obj[0] = application.name;
@@ -34,7 +38,7 @@ export default function UserSettingsAuthedAppDeleteWarningModal(application) {
     obj1[0] = application.name;
     formatToPlainStringResult1 = formatToPlainString(t.QWGvxA, obj1);
   }
-  let tmp9 = require("../shouldWarnAuthorizedAppTwoWay.tsx")(application.id);
+  let tmp9 = isAuthorizedAppTwoWay(application.id);
   if (tmp9) {
     const obj2 = { children: null };
     let tmp8Result = tmp8(10340);
@@ -59,14 +63,14 @@ export default function UserSettingsAuthedAppDeleteWarningModal(application) {
   const obj6 = { children: null };
   const obj7 = { variant: "destructive", text: null, onPress: null };
   const intl5 = tmp(1236).intl;
-  obj7[1] = intl5.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.xUqheM);
+  obj7[1] = intl5.string(getSystemLocale /* getSystemLocale */.t.xUqheM);
   obj7[2] = onDelete;
-  const items1 = [callback(require("../../../../design/components/AlertModal/native/AlertModal.native.tsx") /* getAlertModalItemKey */.AlertActionButton, obj7, "confirm"), ];
+  const items1 = [callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, obj7, "confirm"), ];
   const obj8 = { variant: "secondary", text: null };
   const intl6 = tmp(1236).intl;
-  obj8[1] = intl6.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["ETE/oC"]);
-  items1[1] = callback(require("../../../../design/components/AlertModal/native/AlertModal.native.tsx") /* getAlertModalItemKey */.AlertActionButton, obj8, "cancel");
+  obj8[1] = intl6.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
+  items1[1] = callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, obj8, "cancel");
   obj6[0] = items1;
   obj5[3] = closure_5(closure_4, obj6);
-  return callback(require("../../../../design/components/AlertModal/native/AlertModal.native.tsx") /* getAlertModalItemKey */.AlertModal, obj5);
+  return callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertModal, obj5);
 };

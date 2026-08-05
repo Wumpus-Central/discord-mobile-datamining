@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/wishlists/hooks/useWishlistHooks.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -243,7 +244,7 @@ export const useIsSkuInWishlist = function useIsSkuInWishlist(stateFromStores, s
   const _require = stateFromStores;
   let closure_1 = skuId;
   const items = [get];
-  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let hasSkuIdResult = null != closure_0;
     if (hasSkuIdResult) {
       hasSkuIdResult = outer1_9.hasSkuId(tmp, closure_1);

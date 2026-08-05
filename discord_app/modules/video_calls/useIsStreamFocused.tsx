@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/video_calls/useIsStreamFocused.tsx
 import getParticipants from "getParticipants";
 import { isStreamParticipant } from "ParticipantTypes";
@@ -8,7 +9,7 @@ const result = require("initialize").fileFinishedImporting("modules/video_calls/
 export const useIsStreamFocused = function useIsStreamFocused(id) {
   const _require = id;
   const items = [getParticipants];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     let selectedParticipant = null;
     if (null != closure_0) {
       selectedParticipant = outer1_2.getSelectedParticipant(tmp);

@@ -1,3 +1,6 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { TableSwitchRow } from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
+import { useToggleDismissibleContentDismissState } from "../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsGuildPowerupsScreen.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import updateUserGuildSettings from "updateUserGuildSettings";
@@ -193,12 +196,12 @@ function UserDCSwitchRow(dc) {
   let handleToggleDismissState;
   let isDismissed;
   dc = dc.dc;
-  ({ isDismissed, handleToggleDismissState } = require("../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx")(dc));
+  ({ isDismissed, handleToggleDismissState } = useToggleDismissibleContentDismissState(dc));
   const obj = { label: null, value: null, onValueChange: null };
   obj[0] = callback3(dc);
   obj[1] = isDismissed;
   obj[2] = handleToggleDismissState;
-  return callback4(require("../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx") /* TableSwitchRow */.TableSwitchRow, obj);
+  return callback4(TableSwitchRow /* TableSwitchRow */.TableSwitchRow, obj);
 }
 function GuildDCSwitchRow(dc) {
   dc = dc.dc;
@@ -292,7 +295,7 @@ export default function DevToolsGuildPowerupsScreen() {
     obj[0] = tmp.container;
     const items5 = [tmp.scrollContainer, ];
     obj1 = { paddingBottom: null };
-    obj1[0] = tmp4.bottom + require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
+    obj1[0] = tmp4.bottom + Themes.space.PX_16;
     items5[1] = obj1;
     obj[1] = items5;
     let str = stateFromStores1;

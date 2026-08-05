@@ -1,3 +1,5 @@
+import { useInitialValue } from "../../../../hooks/useInitialValue.tsx";
+import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
 // discord_app/modules/premium/native/gifting/PremiumGiftModal.tsx
 import _slicedToArray from "_slicedToArray";
 import context from "context";
@@ -41,7 +43,7 @@ export default function PremiumGiftModal(analyticsLocations) {
   let callback;
   c4 = undefined;
   ({ planInterval, order } = analyticsLocations);
-  const tmp3 = require("../../../../hooks/useInitialValue.tsx")(() => recipientUserId(_undefined2[21]).v4());
+  const tmp3 = useInitialValue(() => recipientUserId(_undefined2[21]).v4());
   callback = tmp3;
   let obj = c4;
   let items = [tmp3, analyticsLocation, analyticsLocations];
@@ -177,7 +179,7 @@ export default function PremiumGiftModal(analyticsLocations) {
     const tmp11Result5 = recipientUserId(5238);
     if (tmp11Result6.isPremiumGiftingSupported()) {
       const obj7 = { value: null, children: null };
-      obj7[0] = require("../../../app_analytics/useAnalyticsLocations.tsx")(analyticsLocations).analyticsLocations;
+      obj7[0] = context(analyticsLocations).analyticsLocations;
       const obj8 = { basePurchaseAnalytics: null, recipientUserId: null, onClose: null, setCurrentAnalyticsStep: null, premiumType: null, planInterval: null, initialOrder: null, children: null };
       obj8[0] = tmp4;
       obj8[1] = recipientUserId;

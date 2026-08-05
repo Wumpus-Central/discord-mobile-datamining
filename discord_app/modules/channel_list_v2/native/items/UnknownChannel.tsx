@@ -1,3 +1,8 @@
+import { registerAsset } from "../../../../../_runtime/08422_registerAsset.js";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { computeChannelName } from "../../../channel/useChannelName.tsx";
+import { getChannelMode } from "../../../guild_sidebar/native/ChannelItem.tsx";
+import { dispatcher } from "../../../toast/native/ToastActionCreators.tsx";
 // discord_app/modules/channel_list_v2/native/items/UnknownChannel.tsx
 import importAllResult from "noop";
 import { UnreadSetting } from "ReadStateTypes";
@@ -6,11 +11,11 @@ import createCacheKey from "createCacheKey";
 
 const require = arg1;
 function handlePress() {
-  let obj = require("../../../toast/native/ToastActionCreators.tsx");
+  let obj = dispatcher;
   obj = { key: "UNKNOWN_CHANNEL_UPDATE_DISCORD", content: null, icon: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/ZjyYE"]);
-  obj[2] = require("../../../../../_runtime/08422_registerAsset.js");
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["/ZjyYE"]);
+  obj[2] = registerAsset;
   obj.open(obj);
 }
 let c3 = importAllResult;
@@ -27,14 +32,14 @@ const memoResult = importAllResult.memo((channel) => {
     const result = channel(outer1_2[10]).openChannelLongPressActionSheet(channel.id);
   }, items);
   const obj = { onPress: handlePress, onLongPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null };
-  const tmp2 = require("../../../channel/useChannelName.tsx")(channel);
+  const tmp2 = computeChannelName(channel);
   const intl = channel(1236).intl;
   obj[4] = intl.formatToPlainString(channel(1236).t.yjQ9P8, { channelName: tmp2 });
   obj[5] = { selected };
   obj[6] = channel;
   obj[7] = selected;
   obj[8] = UnreadSetting.ONLY_MENTIONS;
-  return jsx(require("../../../guild_sidebar/native/ChannelItem.tsx"), { onPress: handlePress, onLongPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null });
+  return jsx(getChannelMode, { onPress: handlePress, onLongPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null });
 });
 let result = require("ReadStateTypes").fileFinishedImporting("modules/channel_list_v2/native/items/UnknownChannel.tsx");
 

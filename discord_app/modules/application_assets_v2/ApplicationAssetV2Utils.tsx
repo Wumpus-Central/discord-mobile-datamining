@@ -1,3 +1,5 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { handleImageLoad } from "../image_upload/ImageLoaderUtils.tsx";
 // discord_app/modules/application_assets_v2/ApplicationAssetV2Utils.tsx
 let result = require("set").fileFinishedImporting("modules/application_assets_v2/ApplicationAssetV2Utils.tsx");
 
@@ -11,14 +13,14 @@ export const getApplicationAssetUrl = function getApplicationAssetUrl(closure_1,
   } else {
     const _URL = URL;
     const _HermesInternal = HermesInternal;
-    str5 = new URL("" + require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.getAPIBaseURL() + "/applications/" + closure_1 + "/app-assets/" + asset_id.asset_id + ".webp");
-    const obj = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
+    str5 = new URL("" + sendRequest /* sendRequest */.getAPIBaseURL() + "/applications/" + closure_1 + "/app-assets/" + asset_id.asset_id + ".webp");
+    const obj = sendRequest /* sendRequest */;
   }
   if (null != width) {
     const searchParams = str5.searchParams;
-    const obj2 = require("../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */;
-    const result = searchParams.set("size", require("../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */.getBestMediaProxySize(width).toString());
-    const str11 = require("../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */.getBestMediaProxySize(width);
+    const obj2 = handleImageLoad /* handleImageLoad */;
+    const result = searchParams.set("size", handleImageLoad /* handleImageLoad */.getBestMediaProxySize(width).toString());
+    const str11 = handleImageLoad /* handleImageLoad */.getBestMediaProxySize(width);
   }
   if (asset_id.metadata.is_animated) {
     const searchParams2 = str5.searchParams;

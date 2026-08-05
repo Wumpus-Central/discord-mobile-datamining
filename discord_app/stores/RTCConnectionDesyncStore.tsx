@@ -1,3 +1,4 @@
+import { BaseConnectionEvent } from "../../discord_common/js/packages/media-engine/index.tsx";
 // discord_app/stores/RTCConnectionDesyncStore.tsx
 import isVoiceMuted from "isVoiceMuted";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -101,7 +102,7 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(require("dispatche
     let context;
     let state;
     ({ state, context } = arg0);
-    let tmp = context === require("../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.MediaEngineContextTypes.DEFAULT;
+    let tmp = context === BaseConnectionEvent /* BaseConnectionEvent */.MediaEngineContextTypes.DEFAULT;
     if (tmp) {
       if (state === constants.DISCONNECTED) {
         tmp3.clear();
@@ -146,7 +147,7 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(require("dispatche
     let require;
     let userIds;
     ({ userIds, guildId: require, channelId: importDefault } = context);
-    let reduced = context.context === require("../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.MediaEngineContextTypes.DEFAULT;
+    let reduced = context.context === BaseConnectionEvent /* BaseConnectionEvent */.MediaEngineContextTypes.DEFAULT;
     if (reduced) {
       reduced = userIds.reduce((arg0, userId) => {
         if (null != outer1_7.getVoiceStateForChannel(closure_1, userId)) {
@@ -187,7 +188,7 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(require("dispatche
   },
   RTC_CONNECTION_CLIENT_DISCONNECT: function handleRTCConnectionClientDisconnect(userId) {
     userId = userId.userId;
-    let tmp = userId.context === require("../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.MediaEngineContextTypes.DEFAULT;
+    let tmp = userId.context === BaseConnectionEvent /* BaseConnectionEvent */.MediaEngineContextTypes.DEFAULT;
     if (tmp) {
       let deleteResult = tmp3.delete(userId);
       const deleteResult1 = tmp4.delete(userId);

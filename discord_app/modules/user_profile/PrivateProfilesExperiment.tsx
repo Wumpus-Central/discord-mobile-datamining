@@ -1,3 +1,5 @@
+import { apexExperiment } from "PrivateProfilesStrictExperiment.tsx";
+import { apexExperiment } from "PrivateProfilesStrictGbExperiment.tsx";
 // discord_app/modules/user_profile/PrivateProfilesExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
@@ -7,10 +9,10 @@ const result = require("apexExperiment").fileFinishedImporting("modules/user_pro
 export const PrivateProfilesExperiment = apexExperiment;
 export const useIsInPrivateProfilesExperiment = function useIsInPrivateProfilesExperiment(UserProfilePrivacyNotice) {
   let enabled = apexExperiment.useConfig({ location: UserProfilePrivacyNotice }).enabled;
-  const isInPrivateProfilesStrictExperiment = require("PrivateProfilesStrictExperiment.tsx") /* apexExperiment */.useIsInPrivateProfilesStrictExperiment(UserProfilePrivacyNotice);
+  const isInPrivateProfilesStrictExperiment = apexExperiment /* apexExperiment */.useIsInPrivateProfilesStrictExperiment(UserProfilePrivacyNotice);
   const obj = { location: UserProfilePrivacyNotice };
-  const obj2 = require("PrivateProfilesStrictExperiment.tsx") /* apexExperiment */;
-  const isInPrivateProfilesStrictGbExperiment = require("PrivateProfilesStrictGbExperiment.tsx") /* apexExperiment */.useIsInPrivateProfilesStrictGbExperiment(UserProfilePrivacyNotice);
+  const obj2 = apexExperiment /* apexExperiment */;
+  const isInPrivateProfilesStrictGbExperiment = apexExperiment /* apexExperiment */.useIsInPrivateProfilesStrictGbExperiment(UserProfilePrivacyNotice);
   if (!enabled) {
     enabled = isInPrivateProfilesStrictExperiment;
   }
@@ -22,12 +24,12 @@ export const useIsInPrivateProfilesExperiment = function useIsInPrivateProfilesE
 export const getIsInPrivateProfilesExperiment = function getIsInPrivateProfilesExperiment(ProfilePrivacySetting) {
   let enabled = apexExperiment.getConfig({ location: ProfilePrivacySetting }).enabled;
   if (!enabled) {
-    enabled = require("PrivateProfilesStrictExperiment.tsx") /* apexExperiment */.getIsInPrivateProfilesStrictExperiment(ProfilePrivacySetting);
-    const obj2 = require("PrivateProfilesStrictExperiment.tsx") /* apexExperiment */;
+    enabled = apexExperiment /* apexExperiment */.getIsInPrivateProfilesStrictExperiment(ProfilePrivacySetting);
+    const obj2 = apexExperiment /* apexExperiment */;
   }
   if (!enabled) {
-    enabled = require("PrivateProfilesStrictGbExperiment.tsx") /* apexExperiment */.getIsInPrivateProfilesStrictGbExperiment(ProfilePrivacySetting);
-    const obj3 = require("PrivateProfilesStrictGbExperiment.tsx") /* apexExperiment */;
+    enabled = apexExperiment /* apexExperiment */.getIsInPrivateProfilesStrictGbExperiment(ProfilePrivacySetting);
+    const obj3 = apexExperiment /* apexExperiment */;
   }
   return enabled;
 };

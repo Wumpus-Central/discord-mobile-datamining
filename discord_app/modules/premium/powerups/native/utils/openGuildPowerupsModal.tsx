@@ -1,3 +1,5 @@
+import { asyncRequireImpl } from "../../../../../../_runtime/01959_asyncRequireImpl.js";
+import { ModalActionCreators } from "../../../../../actions/ModalActionCreators.tsx";
 // discord_app/modules/premium/powerups/native/utils/openGuildPowerupsModal.tsx
 let c3 = 0;
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsModal.tsx");
@@ -13,5 +15,5 @@ export default function openGuildPowerupsModal(navigationParams) {
     obj.autoOpenRequestId = sum;
     tmp2 = obj;
   }
-  require("../../../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(11753, dependencyMap.paths), tmp2, "guild_powerups_modal_key", navigationParams.navigationParams);
+  ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(11753, dependencyMap.paths), tmp2, "guild_powerups_modal_key", navigationParams.navigationParams);
 };

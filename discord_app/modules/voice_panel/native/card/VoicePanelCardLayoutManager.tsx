@@ -1,3 +1,4 @@
+import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 // discord_app/modules/voice_panel/native/card/VoicePanelCardLayoutManager.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -93,7 +94,7 @@ prototype["updateState"] = function updateState(arr, windowHeight) {
   windowHeight = windowHeight.windowHeight;
   const obj = { windowHeight, windowWidth: windowHeight.windowWidth, chunkSize: windowHeight / closure_11, safeAreaLeft: Math.max(windowHeight.safeAreaLeft, closure_12), safeAreaRight: Math.max(safeAreaRight, closure_12), safeAreaBottom: Math.max(safeAreaBottom, closure_12), safeAreaTop, gutter: closure_13, controlBarSize };
   ({ safeAreaRight, safeAreaTop, safeAreaBottom, controlBarSize } = windowHeight);
-  if (!require("../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(obj, this.props)) {
+  if (!shallowEqual(obj, this.props)) {
     self.props = obj;
     self.setDirty(true);
   }

@@ -1,3 +1,9 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { CircleInformationIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { postMessageToWebView } from "../../../activities/native/EmbeddedActivitiesNativeManager.tsx";
+import { tokensToAppTokensMap } from "../../../oauth2/AuthorizedAppsActionCreators.tsx";
 // discord_app/modules/user_settings/authorized_apps/native/UserSettingsAuthedApp.tsx
 import tokensToAppTokensMap from "tokensToAppTokensMap";
 import get_ActivityIndicator from "Link";
@@ -25,9 +31,9 @@ function WarningLabel(children) {
   const tmp = createCacheKey();
   let obj = { style: tmp.warningContainer, children: null };
   obj = { size: "xs", color: null, style: null };
-  obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_MUTED;
+  obj[1] = Themes.colors.TEXT_MUTED;
   obj[2] = tmp.warningIcon;
-  const items = [callback(require("../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx") /* CircleInformationIcon */.CircleInformationIcon, obj), callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { color: "text-default", variant: "text-sm/medium", children: children.text })];
+  const items = [callback(CircleInformationIcon /* CircleInformationIcon */.CircleInformationIcon, obj), callback(Text /* Text */.Text, { color: "text-default", variant: "text-sm/medium", children: children.text })];
   obj[1] = items;
   return callback2(closure_5, obj);
 }
@@ -48,9 +54,9 @@ function AuthorizedAppTwoWay(application) {
 }
 function ParentApp(application) {
   let obj = { text: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   obj = { applicationName: application.application.name };
-  obj[0] = intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.j4B7EW, obj);
+  obj[0] = intl.format(getSystemLocale /* getSystemLocale */.t.j4B7EW, obj);
   return callback(WarningLabel, obj);
 }
 ({ ScrollView: c4, View: c5 } = get_ActivityIndicator);
@@ -358,7 +364,7 @@ export default function UserSettingsAuthedApp(oauth2Token) {
 };
 export const handleDeleteApp = function handleDeleteApp(application) {
   application = application.application;
-  let obj = require("../../../oauth2/AuthorizedAppsActionCreators.tsx");
+  let obj = tokensToAppTokensMap;
   obj.delete(application.id);
   selfEmbeddedActivities = selfEmbeddedActivities.getSelfEmbeddedActivities();
   const value = selfEmbeddedActivities.get(application.id);
@@ -367,5 +373,5 @@ export const handleDeleteApp = function handleDeleteApp(application) {
     _location = value.location;
   }
   obj = { location: _location, applicationId: application.id };
-  require("../../../activities/native/EmbeddedActivitiesNativeManager.tsx").leaveActivity(obj);
+  postMessageToWebView.leaveActivity(obj);
 };

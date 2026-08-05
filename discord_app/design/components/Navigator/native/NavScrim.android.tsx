@@ -1,3 +1,4 @@
+import { useSafeAreaInsetsKeyboardAware } from "../../../../modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 // discord_app/design/components/Navigator/native/NavScrim.android.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -15,7 +16,7 @@ obj.top = undefined;
 obj[0] = obj;
 let closure_4 = createCacheKey.createStyles(obj);
 const memoResult = require("noop").memo(() => {
-  const insets = require("../../../../modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx")({ includeCustomKeyboardHeight: false }).insets;
+  const insets = useSafeAreaInsetsKeyboardAware({ includeCustomKeyboardHeight: false }).insets;
   let tmp2 = null;
   if (0 !== insets.bottom) {
     let obj = { style: null, pointerEvents: "none" };

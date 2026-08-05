@@ -1,3 +1,7 @@
+import { componentDidMount } from "../../../components_native/common/Alert.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/quarantine/native/QuarantineModeInfoAlert.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -22,13 +26,13 @@ export default function QuarantineModeInfoAlert(onClose) {
   const tmp = createCacheKey();
   let obj = { onClose: onClose.onClose, children: null };
   obj = { style: tmp.header, children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.EouHwv);
-  const items = [callback(require("../../../design/void/native.tsx") /* Button */.LegacyText, obj), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.EouHwv);
+  const items = [callback(Button /* Button */.LegacyText, obj), ];
   obj = { style: tmp.text, variant: "text-md/medium", children: null };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.zNPBMA);
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.zNPBMA);
+  items[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items;
-  return callback2(require("../../../components_native/common/Alert.tsx"), obj);
+  return callback2(componentDidMount, obj);
 };

@@ -1,3 +1,4 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/icymi/native/CaughtUpRow.tsx
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import _slicedToArray from "_slicedToArray";
@@ -14,19 +15,19 @@ const require = arg1;
 let closure_9 = require("module_4146").createAnimatedComponent(require("Text").Text);
 let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
   let obj = { container: null, textContainer: null, recommendedGuildsContainer: null, iconWrapper: null, icon: null, headerText: null, subtitleText: null, buttonContainer: null, gradient: null };
-  obj = { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32 };
+  obj = { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: Themes.space.PX_32 };
   obj[0] = obj;
-  obj = { marginHorizontal: margin.margin, marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
+  obj = { marginHorizontal: margin.margin, marginBottom: Themes.space.PX_24 };
   obj[1] = obj;
-  obj[2] = { flex: 1, marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  const obj1 = { flex: 1, marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  obj[3] = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
+  obj[2] = { flex: 1, marginBottom: Themes.space.PX_24 };
+  const obj1 = { flex: 1, marginBottom: Themes.space.PX_24 };
+  obj[3] = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: Themes.space.PX_24 };
   obj[4] = { height: 40, width: 40 };
-  const obj2 = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  obj[5] = { alignSelf: "center", marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, textAlign: "center" };
+  const obj2 = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: Themes.space.PX_24 };
+  obj[5] = { alignSelf: "center", marginBottom: Themes.space.PX_8, textAlign: "center" };
   obj[6] = { alignSelf: "center", textAlign: "center" };
-  const obj3 = { alignSelf: "center", marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, textAlign: "center" };
-  obj[7] = { flex: 1, width: "100%", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, paddingHorizontal: margin.margin };
+  const obj3 = { alignSelf: "center", marginBottom: Themes.space.PX_8, textAlign: "center" };
+  obj[7] = { flex: 1, width: "100%", gap: Themes.space.PX_12, paddingHorizontal: margin.margin };
   obj[8] = { position: "absolute", top: 0, left: 0, right: 0, height: 150 };
   return obj;
 });

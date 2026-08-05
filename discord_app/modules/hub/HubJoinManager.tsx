@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/hub/HubJoinManager.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
@@ -34,10 +35,10 @@ class HubJoinManager extends tmp2 {
 const prototype = HubJoinManager.prototype;
 prototype["_initialize"] = function _initialize(onClose) {
   this.onClose = onClose;
-  const subscription = require("../../Dispatcher.tsx").subscribe("GUILD_CREATE", this.handleGuildCreate);
+  const subscription = dispatcher.subscribe("GUILD_CREATE", this.handleGuildCreate);
 };
 prototype["_terminate"] = function _terminate() {
-  require("../../Dispatcher.tsx").unsubscribe("GUILD_CREATE", this.handleGuildCreate);
+  dispatcher.unsubscribe("GUILD_CREATE", this.handleGuildCreate);
 };
 const hubJoinManager = new HubJoinManager();
 const result = require("initialize").fileFinishedImporting("modules/hub/HubJoinManager.tsx");

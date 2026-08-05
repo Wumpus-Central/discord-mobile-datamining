@@ -1,3 +1,5 @@
+import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
+import { trackTabPressed } from "../TabsPerformanceTracker.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouScreenContainer.tsx
 import { View } from "get ActivityIndicator";
 import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS";
@@ -19,7 +21,7 @@ const memoResult = importAllResult.memo(function YouScreenContainer(route) {
   let items1 = callback();
   let tmp = importDefault;
   let tmp5Result = dependencyMap;
-  let obj = require("../TabsPerformanceTracker.tsx") /* trackTabPressed */;
+  let obj = trackTabPressed /* trackTabPressed */;
   const trackTabPerformance = obj.useTrackTabPerformance(RootNavigatorScreen.YOU);
   if (route != null) {
     const params = route.params;
@@ -34,7 +36,7 @@ const memoResult = importAllResult.memo(function YouScreenContainer(route) {
     if (tmp3Result.isAndroid()) {
       obj = {};
       const merged = Object.assign(items1.androidContainer);
-      obj.paddingTop = require("../../../../safe_area/useSafeAreaInsets.native.tsx")().top;
+      obj.paddingTop = useSafeAreaInsets().top;
       tmp7 = obj;
     }
     obj = { style: null, children: null };

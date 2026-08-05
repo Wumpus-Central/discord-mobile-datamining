@@ -1,3 +1,6 @@
+import { ApplicationIntegrationType } from "../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import { ScoreMethod } from "ApplicationCommandQueryTypes.tsx";
 // discord_app/modules/application_commands/getPrimaryAppCommand.tsx
 import ScoreMethod from "ScoreMethod";
 import noop from "noop";
@@ -108,9 +111,9 @@ function _getPrimaryAppCommand() {
 }
 function queryForPrimaryAppCommand(closure_0, id) {
   let obj = { commandTypes: null };
-  const items = [require("../../flow/Server.tsx") /* PermissionOverwriteType */.ApplicationCommandType.PRIMARY_ENTRY_POINT];
+  const items = [PermissionOverwriteType /* PermissionOverwriteType */.ApplicationCommandType.PRIMARY_ENTRY_POINT];
   obj[0] = items;
-  obj = { placeholderCount: 1, scoreMethod: require("ApplicationCommandQueryTypes.tsx") /* ScoreMethod */.ScoreMethod.COMMAND_ONLY, applicationId: id, allowFetch: false, allowApplicationState: true };
+  obj = { placeholderCount: 1, scoreMethod: ScoreMethod /* ScoreMethod */.ScoreMethod.COMMAND_ONLY, applicationId: id, allowFetch: false, allowApplicationState: true };
   return closure_7.query(closure_0, obj, obj).commands[0];
 }
 ({ getOrFetchApplicationCommandIndexForTarget: c5, useQueryState: closure_6 } = getIndexKey);
@@ -155,7 +158,7 @@ export const useGetPrimaryAppCommand = function useGetPrimaryAppCommand(context,
 };
 export const useQueryForPrimaryAppCommand = function useQueryForPrimaryAppCommand(arg0, applicationId) {
   let obj = { commandTypes: items };
-  obj = { placeholderCount: 1, scoreMethod: require("ApplicationCommandQueryTypes.tsx") /* ScoreMethod */.ScoreMethod.COMMAND_ONLY, applicationId, allowFetch: false, allowApplicationState: true };
+  obj = { placeholderCount: 1, scoreMethod: ScoreMethod /* ScoreMethod */.ScoreMethod.COMMAND_ONLY, applicationId, allowFetch: false, allowApplicationState: true };
   return callback2(arg0, obj, obj);
 };
 export const useIsPrimaryAppCommandUsableInAppDM = function useIsPrimaryAppCommandUsableInAppDM(applicationId) {
@@ -218,12 +221,12 @@ export const isPrimaryAppCommandUsableInAppDM = function isPrimaryAppCommandUsab
     let hasItem = null != integration_types.integration_types;
     if (hasItem) {
       integration_types = integration_types.integration_types;
-      hasItem = integration_types.includes(require("../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx") /* ApplicationIntegrationType */.ApplicationIntegrationType.USER_INSTALL);
+      hasItem = integration_types.includes(ApplicationIntegrationType /* ApplicationIntegrationType */.ApplicationIntegrationType.USER_INSTALL);
     }
     let hasItem1 = null != integration_types.contexts;
     if (hasItem1) {
       const contexts = integration_types.contexts;
-      hasItem1 = contexts.includes(require("../../flow/Server.tsx") /* PermissionOverwriteType */.InteractionContextType.BOT_DM);
+      hasItem1 = contexts.includes(PermissionOverwriteType /* PermissionOverwriteType */.InteractionContextType.BOT_DM);
     }
     if (hasItem) {
       hasItem = hasItem1;

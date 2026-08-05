@@ -1,3 +1,5 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { isValidFormResponse } from "MemberVerificationUtils.tsx";
 // discord_app/modules/guild_member_verification/canReviewGuildMemberApplications.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -25,7 +27,7 @@ export const canReviewGuildMemberApplications = function canReviewGuildMemberApp
 export const useCanReviewGuildMemberApplications = function useCanReviewGuildMemberApplications(guildId) {
   const _require = guildId;
   const items = [createGuildRecordFromRust];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_2.getGuild(closure_0));
+  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_2.getGuild(closure_0));
   let hasItem = null != stateFromStores;
   if (hasItem) {
     const features = stateFromStores.features;
@@ -35,8 +37,8 @@ export const useCanReviewGuildMemberApplications = function useCanReviewGuildMem
     hasItem = getUncachedChannelPermissions.can(constants2.KICK_MEMBERS, stateFromStores);
   }
   if (hasItem) {
-    hasItem = _require("MemberVerificationUtils.tsx").guildHasVerificationGate(stateFromStores);
-    const tmpResult = _require("MemberVerificationUtils.tsx");
+    hasItem = _isValidFormResponse.guildHasVerificationGate(stateFromStores);
+    const tmpResult = _isValidFormResponse;
   }
   return hasItem;
 };

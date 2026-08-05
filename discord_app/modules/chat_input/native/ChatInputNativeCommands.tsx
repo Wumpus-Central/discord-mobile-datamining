@@ -1,3 +1,4 @@
+import { useShouldUseFabricChatInput } from "useShouldUseFabricChatInput.tsx";
 // discord_app/modules/chat_input/native/ChatInputNativeCommands.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 
@@ -16,7 +17,7 @@ export default {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
         DCDChatInputLegacyManager.backspace(callback(arg0));
       }
-      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
+      obj = useShouldUseFabricChatInput /* useShouldUseFabricChatInput */;
       tmp = require;
     }
   },
@@ -29,7 +30,7 @@ export default {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
         DCDChatInputLegacyManager.blur(callback(arg0));
       }
-      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
+      obj = useShouldUseFabricChatInput /* useShouldUseFabricChatInput */;
       tmp = require;
     }
   },
@@ -42,7 +43,7 @@ export default {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
         DCDChatInputLegacyManager.closeCustomKeyboard(callback(arg0));
       }
-      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
+      obj = useShouldUseFabricChatInput /* useShouldUseFabricChatInput */;
       tmp = require;
     }
   },
@@ -56,7 +57,7 @@ export default {
         const error = new Error("flushText is not supported/needed on iOS");
         throw error;
       }
-      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
+      obj = useShouldUseFabricChatInput /* useShouldUseFabricChatInput */;
       tmp = require;
     }
   },
@@ -101,7 +102,7 @@ export default {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
         DCDChatInputLegacyManager.focus(callback(arg0));
       }
-      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
+      obj = useShouldUseFabricChatInput /* useShouldUseFabricChatInput */;
       tmp = require;
     }
   },
@@ -115,7 +116,7 @@ export default {
         const error = new Error("openCustomKeyboard is not supported/needed on iOS");
         throw error;
       }
-      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
+      obj = useShouldUseFabricChatInput /* useShouldUseFabricChatInput */;
       tmp = require;
     }
   },
@@ -128,7 +129,7 @@ export default {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
         DCDChatInputLegacyManager.openSystemKeyboard(callback(arg0));
       }
-      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
+      obj = useShouldUseFabricChatInput /* useShouldUseFabricChatInput */;
       tmp = require;
     }
   },
@@ -141,7 +142,7 @@ export default {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
         DCDChatInputLegacyManager.setText(callback(arg0), arg1);
       }
-      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
+      obj = useShouldUseFabricChatInput /* useShouldUseFabricChatInput */;
       tmp2 = require;
     }
   },
@@ -154,7 +155,7 @@ export default {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
         DCDChatInputLegacyManager.setSelectedRange(callback(arg0), arg1, arg2);
       }
-      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
+      obj = useShouldUseFabricChatInput /* useShouldUseFabricChatInput */;
       tmp3 = require;
     }
   },
@@ -169,7 +170,7 @@ export default {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
         DCDChatInputLegacyManager.updateTextBlocks(callback(arg0), arg1, tmp6);
       }
-      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
+      obj = useShouldUseFabricChatInput /* useShouldUseFabricChatInput */;
       tmp9 = require;
     }
   },
@@ -196,7 +197,7 @@ export default {
         const DCDChatInputLegacyManager = closure_4.DCDChatInputLegacyManager;
         DCDChatInputLegacyManager.replaceRange(callback(arg0), _location, length, text, nodes, flag, editId);
       }
-      obj = require("useShouldUseFabricChatInput.tsx") /* useShouldUseFabricChatInput */;
+      obj = useShouldUseFabricChatInput /* useShouldUseFabricChatInput */;
       tmp20 = require;
     }
   }

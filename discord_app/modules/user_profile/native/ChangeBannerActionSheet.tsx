@@ -1,3 +1,16 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { int2hslRaw } from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import { ActionSheet } from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { TableRowInner } from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowGroupTitle } from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Form } from "../../../design/void/Form/native/index.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
+import { useDominantRGBFromImage } from "../../calls/native/VideoBackground.tsx";
+import { getArchivedAvatarURL } from "../../recent_avatars/RecentAvatarUtils.tsx";
 // discord_app/modules/user_profile/native/ChangeBannerActionSheet.tsx
 import closure_3 from "jsxProd";
 import UserProfileUpsellButton from "UserProfileUpsellButton";
@@ -21,11 +34,11 @@ function ChangeBannerColorRow(user) {
   pendingAccentColor = undefined;
   let dependencyMap;
   let tmp = createCacheKey();
-  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [handleFormOpen];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => pendingChanges.getPendingChanges());
   ({ pendingAccentColor, pendingAvatar } = stateFromStoresObject);
-  let obj1 = _require("../../recent_avatars/RecentAvatarUtils.tsx");
+  let obj1 = _getArchivedAvatarURL;
   obj = { userId: user.id, image: pendingAvatar };
   let pendingAvatarSrc = obj1.getPendingAvatarSrc(obj);
   const tmp7 = pendingAccentColor(8117)(user.id);
@@ -35,7 +48,7 @@ function ChangeBannerColorRow(user) {
   let tmp2Result = tmp2(8114);
   tmp2Result = tmp2(688);
   const memoizedImageSourceResult = tmp2Result.memoizedImageSource(pendingAvatarSrc);
-  const rgb2intResult = tmp2Result.rgb2int(_require("../../calls/native/VideoBackground.tsx").useDominantColorFromImage(pendingAvatarSrc, memoizedImageSourceResult));
+  const rgb2intResult = tmp2Result.rgb2int(_useDominantRGBFromImage.useDominantColorFromImage(pendingAvatarSrc, memoizedImageSourceResult));
   _require = rgb2intResult;
   if (undefined === pendingAccentColor) {
     let primaryColor;
@@ -61,25 +74,25 @@ function ChangeBannerColorRow(user) {
   obj = { label: null, trailing: null, onPress: null };
   obj1 = { style: tmp.label, text: null };
   const intl = tmp2(1236).intl;
-  obj1[1] = intl.string(_require("../../../intl/index.native.tsx").t.xzNfPz);
-  obj[0] = callback(_require("../../../design/void/Form/native/index.tsx").FormLabel, obj1);
+  obj1[1] = intl.string(_getSystemLocale.t.xzNfPz);
+  obj[0] = callback(_Form.FormLabel, obj1);
   const obj2 = { style: tmp.selectedColor, children: null };
   const items2 = [callback(pendingAccentColor(13812), { style: tmp.bannerColor, color: pendingAccentColor }), , ];
   const obj4 = { style: tmp.selectedColorHex, variant: "text-md/medium", color: "interactive-text-default", children: null };
   const obj3 = { style: tmp.bannerColor, color: pendingAccentColor };
-  const tmp2Result1 = _require("../../calls/native/VideoBackground.tsx");
-  obj4[3] = _require("../../../../discord_common/js/shared/utils/ColorUtils.tsx").int2hex(pendingAccentColor);
-  items2[1] = callback(_require("../../../design/components/Text/native/Text.tsx").Text, obj4);
+  const tmp2Result1 = _useDominantRGBFromImage;
+  obj4[3] = _int2hslRaw.int2hex(pendingAccentColor);
+  items2[1] = callback(_Text.Text, obj4);
   const obj5 = { style: tmp.rowArrow, size: null, source: null };
-  obj5[1] = _require("../../../design/void/native.tsx").Icon.Sizes.CUSTOM;
+  obj5[1] = _Button.Icon.Sizes.CUSTOM;
   obj5[2] = pendingAccentColor(13817);
-  items2[2] = callback(_require("../../../design/void/native.tsx").Icon, obj5);
+  items2[2] = callback(_Button.Icon, obj5);
   obj2[1] = items2;
   obj[1] = callback2(View, obj2);
   obj[2] = function handleChangeColor() {
     pendingAccentColor(13810)({ color: pendingAccentColor, onSelect: dependencyMap });
   };
-  return callback(_require("../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, obj);
+  return callback(_TableRowInner.TableRow, obj);
 }
 ({ AnalyticsObjects: error, UPLOAD_BANNER_SIZE: metroImportAll } = ME);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
@@ -199,15 +212,15 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   }
   let obj = { value: _handleBannerUploadSelect(5610)(isTryItOut.analyticsLocations).analyticsLocations, children: null };
   obj = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Vgdusv);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.Vgdusv);
   let tmp4Result = flag;
   if (flag) {
     tmp4Result = tmp4(tmp5(7625).NitroWheelIcon, {});
   }
   obj[1] = tmp4Result;
   ({ titleWrapper: obj3[2], titleContainer: obj3[3] } = tmp);
-  const items = [closure_9(require("../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj), ];
+  const items = [closure_9(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj), ];
   tmp4Result = null;
   if (!flag) {
     let obj1 = { user: null };
@@ -224,7 +237,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   } else {
     stringResult = string(t["70CYsY"]);
   }
-  const items2 = [closure_9(require("../../../design/void/Form/native/index.tsx") /* Form */.FormLabel, { text: stringResult }), ];
+  const items2 = [closure_9(Form /* Form */.FormLabel, { text: stringResult }), ];
   let tmp4Result1 = !flag;
   if (!flag) {
     const obj3 = { style: null, size: "sm" };
@@ -244,7 +257,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
     string2Result = string2(t2.NSTmdO);
   }
   obj5[2] = string2Result;
-  const items3 = [closure_9(require("../../../design/void/Form/native/index.tsx") /* Form */.FormSubLabel, obj5), ];
+  const items3 = [closure_9(Form /* Form */.FormSubLabel, obj5), ];
   let tmp4Result2 = !flag;
   if (!flag) {
     const obj6 = { style: null, children: null };
@@ -270,7 +283,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
     };
   }
   obj4[2] = handleBannerUploadSelect;
-  items1[1] = closure_9(require("../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj4);
+  items1[1] = closure_9(TableRowInner /* TableRowInner */.TableRow, obj4);
   if (showRemoveBanner) {
     const obj8 = { style: null, text: null };
     const items4 = [, ];
@@ -291,8 +304,8 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   }
   const obj10 = { children: null };
   items1[2] = showRemoveBanner;
-  items[1] = closure_10(require("../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, { hasIcons: false, children: items1 });
+  items[1] = closure_10(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, { hasIcons: false, children: items1 });
   obj10[0] = items;
-  obj[1] = closure_10(require("../../../design/components/Sheet/native/ActionSheet.native.tsx") /* ActionSheet */.ActionSheet, obj10);
-  return closure_9(require("../../app_analytics/useAnalyticsLocations.tsx") /* context */.AnalyticsLocationProvider, obj);
+  obj[1] = closure_10(ActionSheet /* ActionSheet */.ActionSheet, obj10);
+  return closure_9(context /* context */.AnalyticsLocationProvider, obj);
 };

@@ -1,3 +1,5 @@
+import { PendingMessageRequestRow } from "../../../../message_request/native/MessageRequestList.tsx";
+import { PendingSpamMessageRequestRow } from "../../../../message_request/native/spam/SpamMessageList.tsx";
 // discord_app/modules/main_tabs_v2/native/message_requests/screens/MessageRequestsScreenWithTabs.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -35,13 +37,13 @@ const memoResult = importAllResult.memo((navigation) => {
   const intl = navigation(1236).intl;
   obj[0] = intl.string(navigation(1236).t["7RFcXZ"]);
   obj[1] = constants.REQUEST;
-  obj[2] = callback2(require("../../../../message_request/native/MessageRequestList.tsx"), { goToMessageRequestPreview: callback });
+  obj[2] = callback2(PendingMessageRequestRow, { goToMessageRequestPreview: callback });
   const items1 = [obj, ];
   const obj1 = { label: null, id: null, page: null };
   const intl2 = navigation(1236).intl;
   obj1[0] = intl2.string(navigation(1236).t.ulKXHp);
   obj1[1] = constants.SPAM;
-  obj1[2] = callback2(require("../../../../message_request/native/spam/SpamMessageList.tsx"), { goToMessageRequestPreview: callback });
+  obj1[2] = callback2(PendingSpamMessageRequestRow, { goToMessageRequestPreview: callback });
   items1[1] = obj1;
   obj[0] = items1;
   obj[1] = tmp2[0];

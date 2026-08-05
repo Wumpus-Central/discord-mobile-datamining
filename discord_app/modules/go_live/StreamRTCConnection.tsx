@@ -1,3 +1,9 @@
+import { RTCConnectionEvent } from "../../lib/RTCConnectionEvent.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { removeExecutablePathPrefix } from "../game_detection/GameAnalyticsUtils.tsx";
+import { getSoundshareAnalyticsContext } from "utils/getSoundshareAnalyticsContext.tsx";
+import { getStreamSourceMetadata } from "utils/getStreamSourceMetadata.native.tsx";
+import { isStreamKey } from "utils/StreamKeyUtils.tsx";
 // discord_app/modules/go_live/StreamRTCConnection.tsx
 import _migrateDefaultStorage from "_migrateDefaultStorage";
 import { getSystemAnalyticsInfo } from "getSystemAnalyticsInfo";
@@ -147,7 +153,7 @@ prototype["getVoiceParticipantType"] = function getVoiceParticipantType() {
 prototype["initializeEvents"] = function initializeEvents() {
   const self = this;
   const _require = false;
-  this.on(_require("../../lib/RTCConnectionEvent.tsx").RTCConnectionEvent.State, (state) => {
+  this.on(_RTCConnectionEvent.RTCConnectionEvent.State, (state) => {
     let obj = self(outer1_2[19]);
     obj = { type: "RTC_CONNECTION_STATE", state };
     let merged = Object.assign(arg1);
@@ -583,7 +589,7 @@ prototype["initializeEvents"] = function initializeEvents() {
       }
     }
   });
-  this.on(_require("../../lib/RTCConnectionEvent.tsx").RTCConnectionEvent.Video, (arg0, arg1, arg2, arg3, arg4) => {
+  this.on(_RTCConnectionEvent.RTCConnectionEvent.Video, (arg0, arg1, arg2, arg3, arg4) => {
     const decodeStreamKeyResult = callback(outer1_2[16]).decodeStreamKey(self.streamKey);
     let tmp2 = decodeStreamKeyResult.guildId === arg0;
     if (tmp2) {
@@ -601,15 +607,15 @@ prototype["initializeEvents"] = function initializeEvents() {
       tmp6 = null == obj2.getMediaSessionId() || callback;
     }
   });
-  this.on(_require("../../lib/RTCConnectionEvent.tsx").RTCConnectionEvent.VideoSourceQualityChanged, (guildId, channelId, senderUserId, maxResolution, maxFrameRate, context) => {
+  this.on(_RTCConnectionEvent.RTCConnectionEvent.VideoSourceQualityChanged, (guildId, channelId, senderUserId, maxResolution, maxFrameRate, context) => {
     let obj = self(709);
     obj = { type: "MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED", guildId, channelId, senderUserId, maxResolution, maxFrameRate, context };
     obj.dispatch(obj);
   });
-  this.on(_require("../../lib/RTCConnectionEvent.tsx").RTCConnectionEvent.SecureFramesUpdate, () => {
+  this.on(_RTCConnectionEvent.RTCConnectionEvent.SecureFramesUpdate, () => {
     self(709).dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
   });
-  this.on(_require("../../lib/RTCConnectionEvent.tsx").RTCConnectionEvent.RosterMapUpdate, (userIds) => {
+  this.on(_RTCConnectionEvent.RTCConnectionEvent.RosterMapUpdate, (userIds) => {
     let obj = self(709);
     obj = { type: "RTC_CONNECTION_ROSTER_MAP_UPDATE", userIds };
     obj.dispatch(obj);
@@ -643,10 +649,10 @@ prototype["reportSoundshareFailure"] = function reportSoundshareFailure(desktopS
     obj[0] = code;
     obj[1] = failureReason;
     obj[2] = retry;
-    const merged = Object.assign(require("utils/getSoundshareAnalyticsContext.tsx")(desktopSource));
+    const merged = Object.assign(getSoundshareAnalyticsContext(desktopSource));
     const merged1 = Object.assign(self.getSoundshareAnalyticsProperties());
-    require("../../utils/AnalyticsUtils.tsx").track(constants.SOUNDSHARE_FAILED, obj);
-    const obj3 = require("../../utils/AnalyticsUtils.tsx");
+    expandEventProperties.track(constants.SOUNDSHARE_FAILED, obj);
+    const obj3 = expandEventProperties;
   }
 };
 prototype["getStreamAnalyticsProperties"] = function getStreamAnalyticsProperties() {
@@ -669,7 +675,7 @@ prototype["getStreamAnalyticsProperties"] = function getStreamAnalyticsPropertie
   ({ streamRegion, streamApplication, streamSourceType, actionContext } = analyticsContext);
   ({ ownerId, guildId } = streamContext);
   region = region.getRegion(hostname.getHostname());
-  let obj = require("../game_detection/GameAnalyticsUtils.tsx") /* removeExecutablePathPrefix */;
+  let obj = removeExecutablePathPrefix /* removeExecutablePathPrefix */;
   const runningGameAnalytics = obj.getRunningGameAnalytics(streamApplication);
   obj = { channel_id: this.channelId, rtc_connection_id: this.getRTCConnectionId(), media_session_id: this.getMediaSessionId(), parent_media_session_id: this.parentMediaSessionId, sender_user_id: ownerId, context: MediaEngineContextTypes.STREAM, guild_id: guildId, stream_region: streamRegion, stream_source_type: streamSourceType, guild_region: region, participant_type: null, share_application_name: null, share_application_id: null, share_application_executable: null, share_application_distributor: null, share_application_distributor_game_id: null, share_application_game_metadata: null, video_layout: null, client_event_source: null, voice_backend_version: null, rtc_worker_backend_version: null };
   ({ gameName, gameId, exe, distributor, sku, gameMetadata } = runningGameAnalytics);
@@ -697,9 +703,9 @@ prototype["trackVideoStartStats"] = function trackVideoStartStats() {
   const self = this;
   let tmp = null;
   if (this.isOwner) {
-    tmp = require("utils/getStreamSourceMetadata.native.tsx")();
+    tmp = getStreamSourceMetadata();
   }
-  let obj = require("../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = {};
   const merged = Object.assign(self.getStreamAnalyticsProperties());
   const merged1 = Object.assign(tmp);
@@ -831,7 +837,7 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(arg0) {
 };
 prototype["getExtraConnectionOptions"] = function getExtraConnectionOptions() {
   const obj = { streamUserId: null };
-  obj[0] = require("utils/StreamKeyUtils.tsx") /* isStreamKey */.decodeStreamKey(this.streamKey).ownerId;
+  obj[0] = isStreamKey /* isStreamKey */.decodeStreamKey(this.streamKey).ownerId;
   return obj;
 };
 prototype["getMediaStreamKey"] = function getMediaStreamKey() {

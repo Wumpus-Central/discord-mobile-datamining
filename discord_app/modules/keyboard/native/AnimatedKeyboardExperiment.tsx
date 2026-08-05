@@ -1,3 +1,4 @@
+import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/keyboard/native/AnimatedKeyboardExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
@@ -9,6 +10,6 @@ const result = require("set").fileFinishedImporting("modules/keyboard/native/Ani
 
 export const AnimatedKeyboardExperiment = apexExperiment;
 export const isAnimatedAndroidKeyboard = function isAnimatedAndroidKeyboard() {
-  const obj = require("../../../utils/PlatformUtils.tsx") /* set */;
-  return require("../../../utils/PlatformUtils.tsx") /* set */.isAndroid() && enabled;
+  const obj = set /* set */;
+  return set /* set */.isAndroid() && enabled;
 };

@@ -1,3 +1,8 @@
+import { launchCamera } from "../../../../_runtime/04840_launchCamera.js";
+import { openPicker } from "../../../../_runtime/04842_openPicker.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/image/native/ImagePicker.tsx
 import handleThemeChange from "handleThemeChange";
 import { ThemeTypes } from "sum";
@@ -10,7 +15,7 @@ export default {
     if ("any" !== mediaType.mediaType) {
       let str = mediaType.mediaType;
     } else {
-      let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
+      let obj = set /* set */;
       str = "mixed";
     }
     let selections = mediaType.selections;
@@ -22,7 +27,7 @@ export default {
       str2 = "pageSheet";
     }
     let tmp4Result = tmp4(4839);
-    obj2 = require("../../../utils/PlatformUtils.tsx") /* set */;
+    obj2 = set /* set */;
     const tmp3 = !mediaType.disableNewIOSPicker;
     tmp4Result = tmp4(4840);
     obj = {};
@@ -70,7 +75,7 @@ export default {
     });
   },
   launchCamera(arg0, arg1) {
-    require("../../../../_runtime/04840_launchCamera.js") /* launchCamera */.launchCamera(arg0, arg1);
+    launchCamera /* launchCamera */.launchCamera(arg0, arg1);
   },
   launchCameraAsync(arg0) {
     let closure_0 = arg0;
@@ -90,35 +95,35 @@ export default {
     let width;
     theme = theme.theme;
     ({ uri, width, height, includeBase64, mimeType, freeStyleCropEnabled } = arg0);
-    const internal = require("../../../../discord_common/js/packages/tokens/native.tsx").internal;
-    const semanticColor = internal.resolveSemanticColor(theme, require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW);
-    const internal2 = require("../../../../discord_common/js/packages/tokens/native.tsx").internal;
-    const semanticColor1 = internal2.resolveSemanticColor(theme, require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH);
-    const internal3 = require("../../../../discord_common/js/packages/tokens/native.tsx").internal;
-    const semanticColor2 = internal3.resolveSemanticColor(theme, require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_TEXT_HEADING_PRIMARY);
-    const internal4 = require("../../../../discord_common/js/packages/tokens/native.tsx").internal;
-    const semanticColor3 = internal4.resolveSemanticColor(theme, require("../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_MUTED);
-    const internal5 = require("../../../../discord_common/js/packages/tokens/native.tsx").internal;
-    const semanticColor4 = internal5.resolveSemanticColor(theme, require("../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_BRAND);
-    const internal6 = require("../../../../discord_common/js/packages/tokens/native.tsx").internal;
-    const semanticColor5 = internal6.resolveSemanticColor(theme, require("../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_DEFAULT);
-    let obj = require("../../../../_runtime/04842_openPicker.js");
+    const internal = Themes.internal;
+    const semanticColor = internal.resolveSemanticColor(theme, Themes.colors.BACKGROUND_BASE_LOW);
+    const internal2 = Themes.internal;
+    const semanticColor1 = internal2.resolveSemanticColor(theme, Themes.colors.BACKGROUND_SURFACE_HIGH);
+    const internal3 = Themes.internal;
+    const semanticColor2 = internal3.resolveSemanticColor(theme, Themes.colors.MOBILE_TEXT_HEADING_PRIMARY);
+    const internal4 = Themes.internal;
+    const semanticColor3 = internal4.resolveSemanticColor(theme, Themes.colors.TEXT_MUTED);
+    const internal5 = Themes.internal;
+    const semanticColor4 = internal5.resolveSemanticColor(theme, Themes.colors.TEXT_BRAND);
+    const internal6 = Themes.internal;
+    const semanticColor5 = internal6.resolveSemanticColor(theme, Themes.colors.TEXT_DEFAULT);
+    let obj = openPicker;
     obj = { mediaType: "photo", path: uri, width, height, includeBase64, mimeType, freeStyleCropEnabled, cropperStatusBarLight: theme === ThemeTypes.LIGHT, cropperNavigationBarLight: theme === ThemeTypes.LIGHT, cropperActiveWidgetColor: semanticColor2, cropperInactiveWidgetColor: semanticColor3, cropperControlsColor: semanticColor1, cropperControlsBarColor: semanticColor, cropperChooseColor: semanticColor4, cropperChooseText: null, cropperCancelColor: null, cropperCancelText: null, cropperToolbarColor: null, cropperToolbarWidgetColor: null, cropperToolbarTitle: null, cropperRotateByAngleAccessibilityLabel: null, cropperResetRotationAccessibilityLabel: null, cropperClampButtonAccessibilityLabel: null };
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[14] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["1Qm822"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[14] = intl.string(getSystemLocale /* getSystemLocale */.t["1Qm822"]);
     obj[15] = semanticColor5;
-    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[16] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["ETE/oC"]);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    obj[16] = intl2.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
     obj[17] = semanticColor;
     obj[18] = semanticColor2;
-    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[19] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.b0y3DL);
-    const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[20] = intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Izf9u1);
-    const intl5 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[21] = intl5.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.iz4w1M);
-    const intl6 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[22] = intl6.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.QHvDTL);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    obj[19] = intl3.string(getSystemLocale /* getSystemLocale */.t.b0y3DL);
+    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    obj[20] = intl4.string(getSystemLocale /* getSystemLocale */.t.Izf9u1);
+    const intl5 = getSystemLocale /* getSystemLocale */.intl;
+    obj[21] = intl5.string(getSystemLocale /* getSystemLocale */.t.iz4w1M);
+    const intl6 = getSystemLocale /* getSystemLocale */.intl;
+    obj[22] = intl6.string(getSystemLocale /* getSystemLocale */.t.QHvDTL);
     return obj.openCropper(obj);
   }
 };

@@ -1,3 +1,10 @@
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
+import { cancel } from "../../lib/uploader/Upload.tsx";
+import { toString } from "../../modules/media_uploads/native/VideoUploadUtils.tsx";
+import { getUploadFileSizeSum } from "../FileUtils.tsx";
+import { set } from "../PlatformUtils.tsx";
+import { items } from "../UploadUtils.tsx";
+import { getTimeFormat } from "TimeUtils.tsx";
 // discord_app/utils/native/UploadUtils.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -589,7 +596,7 @@ function getVideoQuality() {
 }
 function getAppDir() {
   if (obj.isAndroid()) {
-    if (null == require("../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx")) {
+    if (null == enforcing) {
       const _Error = Error;
       const error = new Error("RTNFileManager doesn't exist?");
       throw error;
@@ -601,7 +608,7 @@ function getAppDir() {
   } else {
     return "/private" + closure_6.DCDFileManager.DocumentsDirPath.replace(/Documents$/, "");
   }
-  obj = require("../PlatformUtils.tsx") /* set */;
+  obj = set /* set */;
 }
 function getFileInfo(closure_0, closure_1) {
   let allowOptimization;
@@ -618,7 +625,7 @@ function getFileInfo(closure_0, closure_1) {
   if (closure_1 === undefined) {
     str = "";
   }
-  if (item.platform !== require("../../lib/uploader/Upload.tsx") /* cancel */.UploadPlatform.REACT_NATIVE) {
+  if (item.platform !== cancel /* cancel */.UploadPlatform.REACT_NATIVE) {
     const _Error = Error;
     const error = new Error("Try to get file info for unsupported upload item");
     throw error;
@@ -885,17 +892,17 @@ function _shouldConvertToPNG() {
   return applyArgumentsResult;
 }
 function isVideo(uri, overrideType) {
-  let obj = require("../UploadUtils.tsx") /* items */;
+  let obj = items /* items */;
   obj = { uri, overrideType };
   return obj.getFile(obj).isVideo;
 }
 function isImage(uri, overrideType) {
-  let obj = require("../UploadUtils.tsx") /* items */;
+  let obj = items /* items */;
   obj = { uri, overrideType };
   return obj.getFile(obj).isImage;
 }
 function getType(uri) {
-  let obj = require("../UploadUtils.tsx") /* items */;
+  let obj = items /* items */;
   obj = { uri };
   return obj.getFile(obj).type;
 }
@@ -910,20 +917,20 @@ function convertVideo(videoMetadata) {
   let result1;
   let obj;
   let c7;
-  const VideoQualityTarget = require("../../modules/media_uploads/native/VideoUploadUtils.tsx") /* toString */.VideoQualityTarget;
+  const VideoQualityTarget = toString /* toString */.VideoQualityTarget;
   const result = VideoQualityTarget.fromCompressionQuality(videoQualitySetting);
-  obj = require("../../modules/media_uploads/native/VideoUploadUtils.tsx") /* toString */;
-  result1 = obj.canSkipVideoTranscode(result, videoMetadata, videoMetadata.fileSize, require("../FileUtils.tsx") /* getUploadFileSizeSum */.maxFileSize());
-  let obj2 = require("../FileUtils.tsx") /* getUploadFileSizeSum */;
-  const result2 = require("../../modules/media_uploads/native/VideoUploadUtils.tsx") /* toString */.calculateTargetDimensions(videoMetadata, result.targetResolution);
-  let obj3 = require("../../modules/media_uploads/native/VideoUploadUtils.tsx") /* toString */;
+  obj = toString /* toString */;
+  result1 = obj.canSkipVideoTranscode(result, videoMetadata, videoMetadata.fileSize, getUploadFileSizeSum /* getUploadFileSizeSum */.maxFileSize());
+  let obj2 = getUploadFileSizeSum /* getUploadFileSizeSum */;
+  const result2 = toString /* toString */.calculateTargetDimensions(videoMetadata, result.targetResolution);
+  let obj3 = toString /* toString */;
   obj = {};
-  const result3 = require("../../modules/media_uploads/native/VideoUploadUtils.tsx") /* toString */.calculateOptimalBitrate(videoMetadata, result, require("../../modules/media_uploads/native/VideoUploadUtils.tsx") /* toString */.DEFAULT_VIDEO_ENCODING_CONFIG.bitrateFloor);
-  const merged = Object.assign(require("../../modules/media_uploads/native/VideoUploadUtils.tsx") /* toString */.DEFAULT_VIDEO_ENCODING_CONFIG);
+  const result3 = toString /* toString */.calculateOptimalBitrate(videoMetadata, result, toString /* toString */.DEFAULT_VIDEO_ENCODING_CONFIG.bitrateFloor);
+  const merged = Object.assign(toString /* toString */.DEFAULT_VIDEO_ENCODING_CONFIG);
   obj.videoQuality = result;
   ({ width: obj5.targetWidth, height: obj5.targetHeight } = result2);
   obj.targetBitrate = result3;
-  let obj4 = require("../../modules/media_uploads/native/VideoUploadUtils.tsx") /* toString */;
+  let obj4 = toString /* toString */;
   if (obj6.isAndroid()) {
     if (tmpResult.getSystemVersionMajor() > 34) {
       let _Math = Math;
@@ -2488,8 +2495,8 @@ function getCaptionLabel(type, isVideo, item) {
   if (isVideo) {
     let str3 = "VIDEO";
     if (null != item.playableDuration) {
-      str3 = require("TimeUtils.tsx") /* getTimeFormat */.getTimeFormat(item.playableDuration);
-      const obj = require("TimeUtils.tsx") /* getTimeFormat */;
+      str3 = getTimeFormat /* getTimeFormat */.getTimeFormat(item.playableDuration);
+      const obj = getTimeFormat /* getTimeFormat */;
     }
     let str2 = str3;
   } else {
@@ -3081,10 +3088,10 @@ export const getFileSize = function getFileSize(uri) {
   if (obj.isIOS()) {
     replaced = uri.replace(/file:\/\//, "");
   }
-  obj = require("../PlatformUtils.tsx") /* set */;
+  obj = set /* set */;
   const tmp = require;
   if (tmpResult.isAndroid()) {
-    if (null == require("../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx")) {
+    if (null == enforcing) {
       let rejectResult = Promise.reject("RTNFileManager doesn't exist?");
     } else {
       rejectResult = tmp5(1271).getSize(replaced);
@@ -3101,7 +3108,7 @@ export { getFileInfo };
 export const shouldConvertToJPG = require("isPhotoKitAsset").shouldConvertToJPG;
 export const shouldForceConvertToJPG = require("isPhotoKitAsset").shouldForceConvertToJPG;
 export const shouldResolveToMediaFilePath = function shouldResolveToMediaFilePath(str) {
-  let isAndroidResult = require("../PlatformUtils.tsx") /* set */.isAndroid();
+  let isAndroidResult = set /* set */.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = null != str.match(/^content:\/\/.+$/i);
   }
@@ -3116,7 +3123,7 @@ export { isHEVCEncodingSupported };
 export { checkVideoEncodingSupport };
 export { calculateImageQualityMetrics };
 export const getFileFromUploadItem = function getFileFromUploadItem(result1) {
-  let obj = require("../UploadUtils.tsx") /* items */;
+  let obj = items /* items */;
   obj = { uri: result1.uri, overrideFilename: result1.filename, overrideType: result1.mimeType };
   return obj.getFile(obj);
 };

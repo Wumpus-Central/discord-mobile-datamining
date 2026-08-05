@@ -1,3 +1,19 @@
+import { registerAsset } from "../../../../../_runtime/07626_registerAsset.js";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
+import { ArrowLargeLeftIcon } from "../../../../design/components/Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { result } from "../../../../design/migrations/native/LegacyTokens.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { useMountLayoutEffect } from "../../../../hooks/useMountEffect.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { roundFPCountdownUnits } from "../../../billing/hooks/useFPDurationLeft.tsx";
+import { calculateFractionalPremiumInfo } from "../../../billing/hooks/useFractionalPremiumInfo.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { CheckIcon } from "PremiumFeaturesTable.tsx";
 // discord_app/modules/user_settings/premium/native/PremiumManagePlan.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import AccessibilityAnnouncer from "AccessibilityAnnouncer";
@@ -38,7 +54,7 @@ let metroImportAll;
 const require = arg1;
 function ManagePlanHeader() {
   const tmp = callback5();
-  let obj = _require("../../../../design/components/Navigator/native/useNavigation.native.tsx");
+  let obj = _useNavigation;
   _require = obj.useNavigation();
   obj = { style: tmp.headerContainer, children: null };
   obj = {
@@ -48,12 +64,12 @@ function ManagePlanHeader() {
     },
     children: null
   };
-  obj[2] = callback3(_require("../../../../design/components/Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx").ArrowLargeLeftIcon, { size: "md" });
-  const items = [callback3(_require("../../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, obj), , ];
+  obj[2] = callback3(_ArrowLargeLeftIcon.ArrowLargeLeftIcon, { size: "md" });
+  const items = [callback3(_PressableBase.PressableOpacity, obj), , ];
   const obj1 = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
-  const intl = _require("../../../../intl/index.native.tsx").intl;
-  obj1[2] = intl.string(_require("../../../../intl/index.native.tsx").t["1bX7Tx"]);
-  items[1] = callback3(_require("../../../../design/components/Text/native/Text.tsx").Text, obj1);
+  const intl = _getSystemLocale.intl;
+  obj1[2] = intl.string(_getSystemLocale.t["1bX7Tx"]);
+  items[1] = callback3(_Text.Text, obj1);
   items[2] = callback3(closure_8, { style: tmp.backButtonWrapper });
   obj[1] = items;
   return callback4(closure_8, obj);
@@ -478,7 +494,7 @@ function FractionalPremiumCredits(durationText) {
   let showPremiumFeaturesCard;
   let unactivatedHoursString;
   ({ fractionalPremiumInfo, showPremiumFeaturesCard, hasUnactivatedUnits, unactivatedHoursString, activationDate } = durationText);
-  const tmp3 = callback6(require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("FractionalPremiumCredits"));
+  const tmp3 = callback6(useIsMobileVisualRefreshExperimentEnabled("FractionalPremiumCredits"));
   let obj = { style: tmp3.container, children: null };
   if (showPremiumFeaturesCard) {
     obj = { premiumType: null, forFractionalPremium: true, hideButton: true };
@@ -488,41 +504,41 @@ function FractionalPremiumCredits(durationText) {
   const items = [showPremiumFeaturesCard, ];
   obj = { style: tmp3.extraInfoContainer, children: null };
   const obj1 = { variant: "eyebrow", color: "text-default", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Obre8v);
-  const items1 = [callback3(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1), , ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj1[2] = intl.string(getSystemLocale /* getSystemLocale */.t.Obre8v);
+  const items1 = [callback3(Text /* Text */.Text, obj1), , ];
   const obj2 = { variant: "text-md/semibold", color: "text-default", children: null };
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
   const obj3 = { helpCenterLink: null };
   let tmpResult = tmp(1945);
   obj3[0] = tmpResult.getArticleURL(constants.FRACTIONAL_PREMIUM_ABOUT);
-  obj2[2] = intl2.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.AYGoBn, obj3);
-  items1[1] = callback3(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+  obj2[2] = intl2.format(getSystemLocale /* getSystemLocale */.t.AYGoBn, obj3);
+  items1[1] = callback3(Text /* Text */.Text, obj2);
   const obj4 = { style: tmp3.fpRowStart, start: true, end: false, variant: "primary", children: null };
   const obj5 = { style: tmp3.fpRowIcon, children: null };
   const obj6 = { style: null, start: null, end: null, colors: null, children: null };
   const obj7 = { padding: 6, borderRadius: null };
   tmpResult = tmp(4706);
-  obj7[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm;
+  obj7[1] = Themes.radii.sm;
   obj6[0] = obj7;
   obj6[1] = { x: 0, y: 0 };
   obj6[2] = { x: 0, y: 1 };
-  const items2 = [require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.GUILD_BOOSTING_BLUE, require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.GUILD_BOOSTING_PURPLE];
+  const items2 = [Themes.unsafe_rawColors.GUILD_BOOSTING_BLUE, Themes.unsafe_rawColors.GUILD_BOOSTING_PURPLE];
   obj6[3] = items2;
   const obj8 = { children: null };
   const obj9 = { color: null, source: null, size: null };
-  obj9[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.WHITE;
-  obj9[1] = require("../../../../../_runtime/07626_registerAsset.js");
-  obj9[2] = require("../../../../design/void/native.tsx") /* Button */.IconSizes.LARGE;
-  obj8[0] = callback3(require("../../../../design/void/native.tsx") /* Button */.Icon, obj9);
+  obj9[0] = Themes.unsafe_rawColors.WHITE;
+  obj9[1] = registerAsset;
+  obj9[2] = Button /* Button */.IconSizes.LARGE;
+  obj8[0] = callback3(Button /* Button */.Icon, obj9);
   obj6[4] = callback3(closure_8, obj8);
   obj5[1] = callback3(tmpResult, obj6);
   const items3 = [callback3(closure_8, obj5), ];
   const obj10 = { style: tmp3.fpRowContent, children: null };
   const obj11 = { variant: "text-sm/semibold", style: tmp3.fpUnitsTitle, children: null };
-  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj11[2] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.DFMPWS);
-  const items4 = [callback3(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj11), ];
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj11[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.DFMPWS);
+  const items4 = [callback3(Text /* Text */.Text, obj11), ];
   if (hasUnactivatedUnits) {
     if (fractionalPremiumInfo.fractionalState === constants3.NONE) {
       const obj12 = { variant: "text-sm/medium", children: null };
@@ -533,7 +549,7 @@ function FractionalPremiumCredits(durationText) {
     obj10[1] = items4;
     items3[1] = tmp4(tmp5, obj10);
     obj4[4] = items3;
-    const items5 = [tmp4(require("../../../../design/components/Card/native/Card.native.tsx") /* PressableCard */.Card, obj4), , ];
+    const items5 = [tmp4(PressableCard /* PressableCard */.Card, obj4), , ];
     const obj13 = { style: null, children: null };
     obj13[0] = tmp3.dividerContainer;
     const obj14 = { style: null };
@@ -603,7 +619,7 @@ function FractionalPremiumCredits(durationText) {
   }
   const obj27 = { variant: "text-sm/medium", style: tmp3.fpUnitsStatusText, children: null };
   const intl4 = tmp9(1236).intl;
-  obj27[2] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["B66Z+f"]);
+  obj27[2] = intl4.string(getSystemLocale /* getSystemLocale */.t["B66Z+f"]);
   tmp8Result = tmp8(tmp9(4281).Text, obj27);
 }
 ({ Image: closure_6, ImageBackground: error, View: metroImportAll, ScrollView: c9, ActivityIndicator: c10 } = get_ActivityIndicator);
@@ -632,7 +648,7 @@ let closure_33 = createCacheKey.createStyles(obj3);
 let closure_35 = createCacheKey.createStyles((arg0) => {
   const tmp = getTableDividerWidth(arg0);
   let obj = { container: { display: "flex", flexDirection: "column", gap: 12 }, errorHeader: null, headerBackground: null, logoContainer: null, wumpusImg: null, logoStyle: null, errorHeaderPrimaryButton: null, extraInfoContainer: null, extraInfoTextContainer: null, mutationWarningContainer: null, mutationText: null, fpTimeRemaining: null, fpTimeRemainingPill: null, fpUnactivatedHoursPill: null, fpTimeRemainingText: null, fpUnitsTitle: null, fpUnitsStatusText: null, fpRowStart: null, fpRowIcon: null, fpRowContent: null, fpRowEnd: null, dividerContainer: null, divider: null, pillAndCardContainer: null, pillPosition: null };
-  obj = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, overflow: "hidden" };
+  obj = { backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH, borderRadius: Themes.radii.lg, overflow: "hidden" };
   obj[1] = obj;
   obj[2] = { padding: 16 };
   obj[3] = { flexDirection: "row", alignItems: "center", marginBottom: 12 };
@@ -640,29 +656,29 @@ let closure_35 = createCacheKey.createStyles((arg0) => {
   obj[5] = { height: 32, width: 78 };
   obj[6] = { marginBottom: 16, marginHorizontal: 16 };
   obj[7] = { paddingTop: 16, paddingHorizontal: 16, display: "flex", gap: 8 };
-  obj = { padding: 16, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH, display: "flex", gap: 18 };
+  obj = { padding: 16, borderRadius: Themes.radii.sm, backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH, display: "flex", gap: 18 };
   obj[8] = obj;
-  obj[9] = { display: "flex", flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 16, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH };
+  obj[9] = { display: "flex", flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 16, borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH };
   obj[10] = { flex: 1 };
-  const obj1 = { display: "flex", flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 16, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH };
-  obj[11] = { color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_BRAND };
-  const obj2 = { color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_BRAND };
-  obj[12] = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE, paddingVertical: 4, paddingHorizontal: 8 };
-  const obj3 = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE, paddingVertical: 4, paddingHorizontal: 8 };
-  obj[13] = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_STRONG, paddingVertical: 4, paddingHorizontal: 8 };
-  const obj4 = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_STRONG, paddingVertical: 4, paddingHorizontal: 8 };
-  obj[14] = { color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE };
-  const obj5 = { color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE };
-  obj[15] = { color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_TEXT_HEADING_PRIMARY };
-  const obj6 = { color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_TEXT_HEADING_PRIMARY };
-  obj[16] = { color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_BRAND, marginStart: 18, flexShrink: 1 };
-  const obj7 = { color: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_BRAND, marginStart: 18, flexShrink: 1 };
-  obj[17] = { padding: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_PADDING, minHeight: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH };
-  const obj8 = { padding: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_PADDING, minHeight: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH };
-  obj[18] = { marginEnd: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_PADDING };
+  const obj1 = { display: "flex", flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 16, borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH };
+  obj[11] = { color: Themes.colors.TEXT_BRAND };
+  const obj2 = { color: Themes.colors.TEXT_BRAND };
+  obj[12] = { borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE, paddingVertical: 4, paddingHorizontal: 8 };
+  const obj3 = { borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE, paddingVertical: 4, paddingHorizontal: 8 };
+  obj[13] = { borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.BACKGROUND_MOD_STRONG, paddingVertical: 4, paddingHorizontal: 8 };
+  const obj4 = { borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.BACKGROUND_MOD_STRONG, paddingVertical: 4, paddingHorizontal: 8 };
+  obj[14] = { color: Themes.colors.WHITE };
+  const obj5 = { color: Themes.colors.WHITE };
+  obj[15] = { color: Themes.colors.MOBILE_TEXT_HEADING_PRIMARY };
+  const obj6 = { color: Themes.colors.MOBILE_TEXT_HEADING_PRIMARY };
+  obj[16] = { color: Themes.colors.TEXT_BRAND, marginStart: 18, flexShrink: 1 };
+  const obj7 = { color: Themes.colors.TEXT_BRAND, marginStart: 18, flexShrink: 1 };
+  obj[17] = { padding: Themes.modules.mobile.TABLE_ROW_PADDING, minHeight: Themes.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH };
+  const obj8 = { padding: Themes.modules.mobile.TABLE_ROW_PADDING, minHeight: Themes.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH };
+  obj[18] = { marginEnd: Themes.modules.mobile.TABLE_ROW_PADDING };
   obj[19] = { flexShrink: 1, flexGrow: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-  const obj9 = { marginEnd: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_PADDING };
-  obj[20] = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWEST };
+  const obj9 = { marginEnd: Themes.modules.mobile.TABLE_ROW_PADDING };
+  obj[20] = { backgroundColor: Themes.colors.BACKGROUND_BASE_LOWEST };
   let prop;
   if (!arg0) {
     prop = tmp2(712).colors.TABLEROW_BACKGROUND_DEFAULT;
@@ -672,7 +688,7 @@ let closure_35 = createCacheKey.createStyles((arg0) => {
   if (arg0) {
     let DIVIDER_BACKGROUND = tmp2(712).colors.BORDER_SUBTLE;
   } else {
-    DIVIDER_BACKGROUND = require("../../../../design/migrations/native/LegacyTokens.tsx") /* result */.DIVIDER_BACKGROUND;
+    DIVIDER_BACKGROUND = result /* result */.DIVIDER_BACKGROUND;
   }
   obj11[1] = DIVIDER_BACKGROUND;
   obj[22] = obj11;
@@ -687,7 +703,7 @@ export default function PremiumManagePlan() {
   let tmp10;
   let tmp11;
   const tmp = createCacheKey();
-  const rect = require("../../../safe_area/useSafeAreaInsets.native.tsx")();
+  const rect = useSafeAreaInsets();
   const top = rect.top;
   let obj = navigation(7561);
   const youBarSettingsOutsideSafeAreaTop = obj.useYouBarSettingsOutsideSafeAreaTop();
@@ -710,8 +726,8 @@ export default function PremiumManagePlan() {
   let obj5 = navigation(589);
   const items3 = [closure_12];
   const stateFromStores1 = obj5.useStateFromStores(items3, () => currentUser.getCurrentUser());
-  const tmp12 = require("../../../billing/hooks/useFractionalPremiumInfo.tsx")({ forceFetch: true });
-  require("../../../../hooks/useMountEffect.tsx")(() => {
+  const tmp12 = calculateFractionalPremiumInfo({ forceFetch: true });
+  useMountLayoutEffect(() => {
     let isSubscriptionFetching = reset.hasFetchedSubscriptions();
     if (!isSubscriptionFetching) {
       isSubscriptionFetching = obj.isSubscriptionFetching;
@@ -731,7 +747,7 @@ export default function PremiumManagePlan() {
     const items = [reset.getPremiumTypeSubscription(), reset.hasFetchedSubscriptions()];
     return items;
   }), 2);
-  const tmp15 = require("../../../billing/hooks/useFPDurationLeft.tsx");
+  const tmp15 = roundFPCountdownUnits;
   let obj8 = navigation(3931);
   const unactivatedFractionalPremiumDurationString = obj8.getUnactivatedFractionalPremiumDurationString(tmp12);
   if (null !== tmp10) {
@@ -879,14 +895,14 @@ export default function PremiumManagePlan() {
   obj9[4] = flag;
   items9[5] = closure_29(tmp2Result, obj9);
   const obj10 = { style: tmp.featuresTable, variant: "nitro_home", titleOverride: null, isFractionalOnly: null, isPremiumGroup: null, premiumGroupRole: null };
-  tmp15Result = require("../../../billing/hooks/useFPDurationLeft.tsx")(tmp12.endsAt, navigation(12637).CountDownMessageTypes.SHORT_TIME);
+  tmp15Result = roundFPCountdownUnits(tmp12.endsAt, navigation(12637).CountDownMessageTypes.SHORT_TIME);
   const tmp31 = closure_9;
   const intl = tmp4(1236).intl;
   obj10[2] = intl.string(navigation(1236).t.QXx2gs);
   obj10[3] = tmp12.fractionalState === constants3.FP_ONLY;
   obj10[4] = result;
   obj10[5] = premiumGroupRole;
-  items9[6] = closure_29(require("PremiumFeaturesTable.tsx"), obj10);
+  items9[6] = closure_29(CheckIcon, obj10);
   obj1[1] = items9;
   items8[1] = closure_30(closure_8, obj1);
   obj[4] = items8;

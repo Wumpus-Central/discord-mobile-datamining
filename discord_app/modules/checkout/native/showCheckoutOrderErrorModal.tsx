@@ -1,3 +1,4 @@
+import { useAlertStore } from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 // discord_app/modules/checkout/native/showCheckoutOrderErrorModal.tsx
 import getSystemLocale from "getSystemLocale";
 import _slicedToArray from "_slicedToArray";
@@ -109,7 +110,7 @@ export const showRetryConfirmModal = function showRetryConfirmModal(dismissable)
   let onCloseCallback;
   ({ key, onCloseCallback } = dismissable);
   const merged = Object.assign(dismissable, Object.create(null));
-  let obj = require("../../../design/components/AlertModal/native/useAlertStore.native.tsx") /* useAlertStore */;
+  let obj = useAlertStore /* useAlertStore */;
   obj = {};
   const merged1 = Object.assign(merged);
   obj = { dismissable: dismissable.dismissable };

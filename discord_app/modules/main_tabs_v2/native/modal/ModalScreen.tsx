@@ -1,3 +1,5 @@
+import { trackImpression } from "../../../app_analytics/useTrackImpression.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/main_tabs_v2/native/modal/ModalScreen.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
@@ -43,7 +45,7 @@ export default function Modal(route) {
   obj[0] = modal(503).ImpressionTypes.MODAL;
   obj[1] = impressionName;
   obj[2] = impressionProperties;
-  require("../../../app_analytics/useTrackImpression.tsx")(obj);
+  trackImpression(obj);
   let callbacks = modal.callbacks;
   let onExited;
   if (callbacks != null) {
@@ -67,8 +69,8 @@ export default function Modal(route) {
     return currentResult;
   }, []);
   const layoutEffect = obj1.useLayoutEffect(() => modal(6843).trackAppUIViewed("ModalScreen"), []);
-  const tmp6 = require("../../../app_analytics/useTrackImpression.tsx");
-  ({ left, right } = require("../../../safe_area/useSafeAreaInsets.native.tsx")());
+  const tmp6 = trackImpression;
+  ({ left, right } = useSafeAreaInsets());
   let tmp7Result = tmp7(15816);
   const items = [absoluteFillObject.absoluteFillObject, ];
   let tmp16;

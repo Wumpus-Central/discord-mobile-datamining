@@ -1,3 +1,6 @@
+import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import { set } from "../../utils/Durations.tsx";
+import { urlUserId } from "BadgeDirectoryActionCreators.tsx";
 // discord_app/modules/badges/BadgeDirectoryStore.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
@@ -231,15 +234,15 @@ const badgeDirectoryStore = new BadgeDirectoryStore(require("dispatcher"), {
         if (Date.now() >= num2) {
           value = map2.get(id);
           if (value == null) {
-            value = new require("../../../discord_common/js/packages/backoff/Backoff.tsx")(require("../../utils/Durations.tsx").Millis.MINUTE, HOUR, true);
-            const tmp13 = require("../../../discord_common/js/packages/backoff/Backoff.tsx");
+            value = new fails(set.Millis.MINUTE, HOUR, true);
+            const tmp13 = fails;
           }
           const result = map2.set(id, value);
           const _Date2 = Date;
           const timestamp = Date.now();
           const result1 = obj3.set(id, timestamp + value.fail());
-          const badgeDirectory = require("BadgeDirectoryActionCreators.tsx") /* urlUserId */.fetchBadgeDirectory(id);
-          const obj5 = require("BadgeDirectoryActionCreators.tsx") /* urlUserId */;
+          const badgeDirectory = urlUserId /* urlUserId */.fetchBadgeDirectory(id);
+          const obj5 = urlUserId /* urlUserId */;
           const obj6 = map2;
         }
         obj3 = map3;

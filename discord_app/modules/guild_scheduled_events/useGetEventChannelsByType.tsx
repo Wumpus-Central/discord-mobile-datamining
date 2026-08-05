@@ -1,3 +1,5 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { canManageResource } from "../permissions/useManageResourcePermissions.tsx";
 // discord_app/modules/guild_scheduled_events/useGetEventChannelsByType.tsx
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
 import comparator from "comparator";
@@ -26,7 +28,7 @@ function getEventChannelsByType(id, channelTypeFromEntity) {
       let obj2 = channel;
       let tmp4 = require;
       let tmp5 = dependencyMap;
-      let obj3 = require("../permissions/useManageResourcePermissions.tsx") /* canManageResource */;
+      let obj3 = canManageResource /* canManageResource */;
       let manageResourcePermissions = obj3.getManageResourcePermissions(channel);
       let canManageAllEvents = manageResourcePermissions.canCreateGuildEvent;
       if (!canManageAllEvents) {
@@ -65,10 +67,10 @@ export const useCanCreateEventInStageChannel = function useCanCreateEventInStage
   const _require = isGuildStageVoice;
   const items = [getUncachedChannelPermissions];
   const items1 = [isGuildStageVoice];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_5.can(outer1_7, closure_0), items1);
-  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_5.can(outer1_7, closure_0), items1);
+  const obj = _initialize;
   const items2 = [handleStageInstanceCreateOrUpdate];
-  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => outer1_2.getStageInstanceByChannel(isGuildStageVoice.id));
+  const stateFromStores1 = _initialize.useStateFromStores(items2, () => outer1_2.getStageInstanceByChannel(isGuildStageVoice.id));
   let tmp3 = isGuildStageVoice.isGuildStageVoice() && stateFromStores;
   if (tmp3) {
     tmp3 = null == stateFromStores1;
@@ -79,8 +81,8 @@ export const useCanCreateEventInVoiceChannel = function useCanCreateEventInVoice
   const _require = isGuildVoice;
   const items = [getUncachedChannelPermissions];
   const items1 = [isGuildVoice];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_5.can(outer1_6, closure_0), items1);
-  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_5.can(outer1_6, closure_0), items1);
+  const obj = _initialize;
   return isGuildVoice.isGuildVoice() && stateFromStores;
 };
 export { getEventChannelsByType };
@@ -89,7 +91,7 @@ export const useGetEventChannelsByType = function useGetEventChannelsByType(id, 
   const dependencyMap = channelType;
   let items = [comparator];
   const items1 = [id, channelType];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
+  return _initialize.useStateFromStoresArray(items, () => {
     const items = [outer1_3];
     return outer1_8(closure_0, closure_1, items);
   }, items1);

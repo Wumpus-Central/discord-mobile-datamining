@@ -1,3 +1,5 @@
+import { GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT } from "../../game_community_upsell/native/GameCommunityUpsellExperiment.tsx";
+import { DetectableAppNames } from "../LocalAppDetectionTypes.tsx";
 // discord_app/modules/local_app_detection/native/LocalAppDetectionUtils.tsx
 import PlatformTypes from "PlatformTypes";
 import hasConsented from "hasConsented";
@@ -7,11 +9,11 @@ let c5;
 let closure_6;
 const require = arg1;
 function isGameCommunityUpsellMultiExperimentEnabled() {
-  const GameCommunityUpsellMultiExperiment = require("../../game_community_upsell/native/GameCommunityUpsellExperiment.tsx") /* GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT */.GameCommunityUpsellMultiExperiment;
+  const GameCommunityUpsellMultiExperiment = GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT /* GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT */.GameCommunityUpsellMultiExperiment;
   return GameCommunityUpsellMultiExperiment.getConfig({ location: "LocalAppDetectionUtils" }).enabled;
 }
 function getDetectableApp(arg0) {
-  if (require("../LocalAppDetectionTypes.tsx") /* DetectableAppNames */.DetectableAppNames.ROBLOX === arg0) {
+  if (DetectableAppNames /* DetectableAppNames */.DetectableAppNames.ROBLOX === arg0) {
     return { androidScheme: "roblox", iosScheme: "roblox" };
   } else if (tmp(12878).DetectableAppNames.MINECRAFT === arg0) {
     let obj = { androidScheme: "minecraft", iosScheme: "minecraft", predicate: null };

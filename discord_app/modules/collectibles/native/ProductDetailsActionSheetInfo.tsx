@@ -1,3 +1,10 @@
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getItemRecordsFromPurchases } from "../CollectiblesUtils.tsx";
+import { useCollectiblesMobileFlexibleBundlesExperiment } from "../experiments/CollectiblesMobileFlexibleBundlesExperiment.tsx";
+import { getBundleDescription } from "../hooks/useProductDescription.tsx";
+import { getProductPurchaseState } from "../hooks/useProductPurchaseState.tsx";
+import { PriceTag } from "InlinePriceTag.tsx";
 // discord_app/modules/collectibles/native/ProductDetailsActionSheetInfo.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -8,19 +15,19 @@ let c5;
 function ProductNameAndDescription(product) {
   product = product.product;
   const tmp = callback3();
-  let obj = require("../hooks/useProductDescription.tsx") /* getBundleDescription */;
+  let obj = getBundleDescription /* getBundleDescription */;
   obj = { style: tmp.description, children: null };
   const productDescription = obj.useProductDescription(product);
   obj = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, accessibilityRole: "header", children: product.name };
-  const items = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/medium", color: "text-default", children: productDescription })];
+  const items = [callback(Text /* Text */.Text, obj), callback(Text /* Text */.Text, { variant: "text-md/medium", color: "text-default", children: productDescription })];
   obj[1] = items;
   return callback2(View, obj);
 }
 function ProductPurchaseStatus(product) {
   product = product.product;
-  let obj = require("../CollectiblesUtils.tsx") /* getItemRecordsFromPurchases */;
+  let obj = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */;
   const result = obj.isPremiumCollectiblesProduct(product);
-  let obj1 = require("../hooks/useProductPurchaseState.tsx") /* getProductPurchaseState */;
+  let obj1 = getProductPurchaseState /* getProductPurchaseState */;
   const productPurchaseState = obj1.useProductPurchaseState(product);
   if (productPurchaseState.isPurchased) {
     obj = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
@@ -38,7 +45,7 @@ function ProductPurchaseStatus(product) {
       obj1 = { product: null, onTrackPress: null };
       obj1[0] = product;
       obj1[1] = product.onTrackPress;
-      children = tmp6(require("InlinePriceTag.tsx"), obj1);
+      children = tmp6(PriceTag, obj1);
     }
   }
   return closure_4(View, { children });
@@ -46,7 +53,7 @@ function ProductPurchaseStatus(product) {
 function BundleProductDetailsActionSheetInfo(onTrackPress) {
   const product = onTrackPress.product;
   const tmp = callback3();
-  let obj = require("../experiments/CollectiblesMobileFlexibleBundlesExperiment.tsx") /* useCollectiblesMobileFlexibleBundlesExperiment */;
+  let obj = useCollectiblesMobileFlexibleBundlesExperiment /* useCollectiblesMobileFlexibleBundlesExperiment */;
   const enabled = obj.useCollectiblesMobileFlexibleBundlesExperiment("BundleProductDetailsActionSheetInfo").enabled;
   const items = [tmp.body, ];
   let bundleBody = enabled;
@@ -78,7 +85,7 @@ export default function ProductDetailsActionSheetInfo(arg0) {
   let onTrackPress;
   let product;
   ({ product, onTrackPress } = arg0);
-  if (product.type === require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.BUNDLE) {
+  if (product.type === CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.BUNDLE) {
     let obj = { product: null, onTrackPress: null };
     obj[0] = product;
     obj[1] = onTrackPress;

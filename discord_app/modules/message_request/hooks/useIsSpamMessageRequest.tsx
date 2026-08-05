@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/message_request/hooks/useIsSpamMessageRequest.tsx
 import processChannel from "processChannel";
 
@@ -8,5 +9,5 @@ export const useIsSpamMessageRequest = function useIsSpamMessageRequest(id) {
   const _require = id;
   const items = [processChannel];
   const items1 = [id];
-  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_2.isSpam(closure_0), items1);
+  return _initialize.useStateFromStores(items, () => outer1_2.isSpam(closure_0), items1);
 };

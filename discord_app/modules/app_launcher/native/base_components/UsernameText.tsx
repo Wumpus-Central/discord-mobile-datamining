@@ -1,3 +1,5 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getNickname } from "../../../../utils/NicknameUtils.tsx";
 // discord_app/modules/app_launcher/native/base_components/UsernameText.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -21,7 +23,7 @@ export default function UsernameText(color) {
     str = "text-default";
   }
   let obj = { variant, color: str };
-  let obj1 = require("../../../../utils/NicknameUtils.tsx") /* getNickname */;
+  let obj1 = getNickname /* getNickname */;
   const name = obj1.getName(color.guildId, null, user);
   if (user.hasUniqueUsername()) {
     str = user.toString();
@@ -53,5 +55,5 @@ export default function UsernameText(color) {
     tmp13 = callback(closure_3, obj2);
   }
   obj1.children = tmp13;
-  return closure_4(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  return closure_4(Text /* Text */.Text, obj1);
 };

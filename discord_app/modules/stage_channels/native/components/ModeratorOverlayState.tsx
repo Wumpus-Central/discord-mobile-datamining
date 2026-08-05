@@ -1,3 +1,4 @@
+import { isIterable } from "../../../../../_runtime/03898_isIterable.js";
 // discord_app/modules/stage_channels/native/components/ModeratorOverlayState.tsx
 import identity from "identity";
 
@@ -17,7 +18,7 @@ const result = require("isIterable").fileFinishedImporting("modules/stage_channe
 
 export const useModeratorOverlayChannelState = function useModeratorOverlayChannelState(id) {
   const _require = id;
-  const dependencyMap = callback((dismissOverlay) => dismissOverlay.dismissOverlay, _require("../../../../../_runtime/03898_isIterable.js").shallow);
-  const items = [!callback((overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds, _require("../../../../../_runtime/03898_isIterable.js").shallow).has(id), () => callback(closure_0)];
+  const dependencyMap = callback((dismissOverlay) => dismissOverlay.dismissOverlay, _isIterable.shallow);
+  const items = [!callback((overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds, _isIterable.shallow).has(id), () => callback(closure_0)];
   return items;
 };

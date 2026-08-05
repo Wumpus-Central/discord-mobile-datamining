@@ -1,3 +1,5 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 // discord_app/modules/stickers/StickersActionCreators.tsx
 import loadSavedGuildStickers from "loadSavedGuildStickers";
 import _handleConnectionOpen from "_handleConnectionOpen";
@@ -543,18 +545,18 @@ export const updateGuildSticker = function updateGuildSticker(arg0, arg1, arg2) 
   return applyArgumentsResult;
 };
 export const addStickerPreview = function addStickerPreview(channelId, sticker, draftType) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "ADD_STICKER_PREVIEW", channelId, sticker, draftType };
   obj.dispatch(obj);
 };
 export const clearStickerPreview = function clearStickerPreview(channelId, draftType) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "CLEAR_STICKER_PREVIEW", channelId, draftType };
   obj.dispatch(obj);
 };
 export const favoriteSticker = function favoriteSticker(id) {
   const _require = id;
-  const FrecencyUserSettingsActionCreators = _require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = _updateUserGuildSettings.FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", (stickerIds) => {
     stickerIds = stickerIds.stickerIds;
     let tmp = stickerIds;
@@ -593,7 +595,7 @@ export const favoriteSticker = function favoriteSticker(id) {
 };
 export const unfavoriteSticker = function unfavoriteSticker(id) {
   const _require = id;
-  const FrecencyUserSettingsActionCreators = _require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = _updateUserGuildSettings.FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", (stickerIds) => {
     stickerIds = stickerIds.stickerIds;
     stickerIds.stickerIds = stickerIds.filter((arg0) => arg0 !== closure_0);

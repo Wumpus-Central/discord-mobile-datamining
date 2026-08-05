@@ -1,3 +1,6 @@
+import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/application_commands/native/ContextMenuCommandNavigator.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -22,9 +25,9 @@ export default function ContextMenuCommandNavigator() {
   const tmp = createNativeStackNavigator();
   const require = tmp;
   const layoutEffect = React.useLayoutEffect(() => tmp(6843).trackAppUIViewed(), []);
-  let obj = require("../../../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */;
+  let obj = NavigationStack /* NavigationStack */;
   const importDefault = obj.useAccessibilityNativeStackOptions();
-  const rect = require("../../safe_area/useSafeAreaInsets.native.tsx")();
+  const rect = useSafeAreaInsets();
   obj = { style: items, children: null };
   items = [tmp.container, { paddingLeft: rect.left, paddingRight: rect.right }];
   obj = {
@@ -57,8 +60,8 @@ export default function ContextMenuCommandNavigator() {
   const obj1 = { name: "root", options: null, getComponent: null };
   let obj2 = { title: null };
   ({ Navigator, Screen } = createNativeStackNavigator);
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj2[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.PHjkRE);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj2[0] = intl.string(getSystemLocale /* getSystemLocale */.t.PHjkRE);
   obj1[1] = obj2;
   obj1[2] = function getComponent() {
     return tmp(15812).default;

@@ -1,3 +1,5 @@
+import { TableRowInner } from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { useFrameMonitor } from "useFrameMonitor.tsx";
 // discord_app/modules/devtools/native/components/screens/performance/ScrollBenchmark.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -12,7 +14,7 @@ export default function ScrollBenchmark(subLabel) {
   if (str === undefined) {
     str = "Records frame times while you scroll the content below.";
   }
-  const tmp = require("useFrameMonitor.tsx")(subLabel.onResult);
+  const tmp = useFrameMonitor(subLabel.onResult);
   ({ monitoring, start } = tmp);
   let str2 = "Start scroll monitor";
   if (monitoring) {
@@ -28,5 +30,5 @@ export default function ScrollBenchmark(subLabel) {
     start = tmp.stop;
   }
   obj[4] = start;
-  return jsx(require("../../../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, { label: str2, subLabel: str, variant: null, arrow: true, onPress: null });
+  return jsx(TableRowInner /* TableRowInner */.TableRow, { label: str2, subLabel: str, variant: null, arrow: true, onPress: null });
 };

@@ -1,3 +1,9 @@
+import { apply } from "../../../../../_runtime/00012_apply.js";
+import { isDiscordFrontendDevelopment } from "../../../../utils/GlobalUtils.tsx";
+import { generateMessageRowData } from "MessageWithContent.tsx";
+import { generateBlockedGroupRowData } from "rows/BlockedGroup.tsx";
+import { generateLoadingRowData } from "rows/Loading.tsx";
+import { generateSeparatorRowData } from "rows/Separator.tsx";
 // discord_app/modules/messages/native/renderer/RowGenerator.tsx
 import handleThemeChange from "handleThemeChange";
 import Changeset from "Changeset";
@@ -18,7 +24,7 @@ class RowManager {
 }
 const prototype = RowManager.prototype;
 prototype["setOptions"] = function setOptions(arg0) {
-  const obj = require("../../../../../_runtime/00012_apply.js");
+  const obj = apply;
   this.options = obj.merge({}, obj, this.options, arg0);
 };
 prototype["generate"] = function generate(rowType) {
@@ -32,26 +38,26 @@ prototype["generate"] = function generate(rowType) {
     if (tmp2.IGNORED_GROUP !== rowType) {
       if (tmp2.SUSPENDED_USER_GROUP !== rowType) {
         if (tmp2.MESSAGE === rowType) {
-          return require("MessageWithContent.tsx") /* generateMessageRowData */.generateMessageRowData(rowType, self.options, theme);
+          return generateMessageRowData /* generateMessageRowData */.generateMessageRowData(rowType, self.options, theme);
         } else {
           if (constants2.DAY !== rowType) {
             if (tmp12.UNREAD !== rowType) {
               if (tmp12.SUMMARY !== rowType) {
                 if (constants3.LOAD_BEFORE !== rowType) {
                   if (constants3.LOAD_AFTER !== rowType) {
-                    require("../../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.assertNever(rowType);
+                    isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.assertNever(rowType);
                   }
                 }
-                return require("rows/Loading.tsx") /* generateLoadingRowData */.generateLoadingRowData(rowType, theme);
+                return generateLoadingRowData /* generateLoadingRowData */.generateLoadingRowData(rowType, theme);
               }
             }
           }
-          return require("rows/Separator.tsx") /* generateSeparatorRowData */.generateSeparatorRowData(rowType, theme);
+          return generateSeparatorRowData /* generateSeparatorRowData */.generateSeparatorRowData(rowType, theme);
         }
       }
     }
   }
-  return require("rows/BlockedGroup.tsx") /* generateBlockedGroupRowData */.generateBlockedGroupRowData(rowType, theme, self);
+  return generateBlockedGroupRowData /* generateBlockedGroupRowData */.generateBlockedGroupRowData(rowType, theme, self);
 };
 const result = require("UserOption").fileFinishedImporting("modules/messages/native/renderer/RowGenerator.tsx");
 

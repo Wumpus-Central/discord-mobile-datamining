@@ -1,3 +1,5 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { noop } from "../gateway/GatewaySocket.tsx";
 // discord_app/modules/multi_account/MultiAccountManager.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import initialize from "initialize";
@@ -40,11 +42,11 @@ class MultiAccountManager extends tmp2 {
 }
 const prototype = MultiAccountManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = require("../../Dispatcher.tsx").subscribe("CONNECTION_OPEN", this.handleConnectionOpen);
+  const subscription = dispatcher.subscribe("CONNECTION_OPEN", this.handleConnectionOpen);
   this.handleConnectionOpen();
 };
 prototype["_terminate"] = function _terminate() {
-  require("../../Dispatcher.tsx").unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen);
+  dispatcher.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen);
 };
 prototype["handleLogout"] = function handleLogout(isSwitchingAccount) {
   if (isSwitchingAccount.isSwitchingAccount) {
@@ -53,7 +55,7 @@ prototype["handleLogout"] = function handleLogout(isSwitchingAccount) {
   }
 };
 prototype["handleMultiAccountSwitchStart"] = function handleMultiAccountSwitchStart(targetUserId) {
-  const result = require("../gateway/GatewaySocket.tsx") /* noop */.setAccountSwitchUserId(targetUserId.targetUserId);
+  const result = noop /* noop */.setAccountSwitchUserId(targetUserId.targetUserId);
 };
 let result = require("initialize").fileFinishedImporting("modules/multi_account/MultiAccountManager.tsx");
 

@@ -1,3 +1,4 @@
+import { usePendingFolderGuildIds } from "../../usePendingFolderGuildIds.tsx";
 // discord_app/modules/guilds_bar/native/hooks/useGuildsBarCreatePendingFolderNode.tsx
 import noop from "noop";
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
@@ -10,7 +11,7 @@ export default function useGuildsBarCreatePendingFolderNode() {
   let obj = stateFromStores(589);
   const items = [handleGatewayJoinRequestUpdate];
   stateFromStores = obj.useStateFromStores(items, () => obj.hasFetchedRequestToJoinGuilds);
-  const arr2 = require("../../usePendingFolderGuildIds.tsx")();
+  const arr2 = usePendingFolderGuildIds();
   const items1 = [set];
   const stateFromStores1 = stateFromStores(589).useStateFromStores(items1, () => folderExpanded.isFolderExpanded(stateFromStores(table[5]).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER));
   const items2 = [stateFromStores];

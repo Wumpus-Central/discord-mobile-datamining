@@ -1,3 +1,4 @@
+import { BaseChannelSubtitle } from "../../../guild_sidebar/native/BaseChannelItem.tsx";
 // discord_app/modules/hub/native/components/HubSidebar.tsx
 import "UserPlusIcon";
 import { View } from "PlusMediumIcon";
@@ -18,7 +19,7 @@ function HubItem(arg0) {
   let unreadCount;
   ({ label, unreadCount } = arg0);
   ({ IconComponent, handleItemClick, active } = arg0);
-  const ChannelModes = require("../../../guild_sidebar/native/BaseChannelItem.tsx") /* BaseChannelSubtitle */.ChannelModes;
+  const ChannelModes = BaseChannelSubtitle /* BaseChannelSubtitle */.ChannelModes;
   if (active) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp5 = tmp2;
@@ -37,7 +38,7 @@ function HubItem(arg0) {
     tmp6Result = tmp6(tmp5(1297).Badge, obj);
   }
   obj[8] = tmp6Result;
-  return callback(require("../../../guild_sidebar/native/BaseChannelItem.tsx"), obj);
+  return callback(BaseChannelSubtitle, obj);
 }
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 createCacheKey = { container: null, row: null };

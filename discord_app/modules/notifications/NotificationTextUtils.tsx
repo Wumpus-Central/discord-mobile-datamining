@@ -1,3 +1,19 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { getNickname } from "../../utils/NicknameUtils.tsx";
+import { shouldShowAgeGateForVoiceChannel } from "../age_gate/AgeGateUtils.tsx";
+import { FSI } from "../bidi/IsolateString.tsx";
+import { isChannelCurrentlyVisible } from "../channel/ChannelVisibilityUtils.tsx";
+import { computeChannelName } from "../channel/useChannelName.tsx";
+import { isForwardMessage } from "../forwarding/isForwardMessage.tsx";
+import { getRootNavigationRef } from "../main_tabs_v2/RootNavigationRef.native.tsx";
+import { isMentioned } from "../messages/isMessageMentioned.tsx";
+import { isSystemMessage } from "../messages/isSystemMessage.tsx";
+import { computeThreadNotificationSetting } from "../threads/ThreadNotificationSettings.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import { useFocusModeEnabled } from "FocusModeUtils.tsx";
 // discord_app/modules/notifications/NotificationTextUtils.tsx
 import participantFromServer from "participantFromServer";
 import initialize from "initialize";
@@ -87,15 +103,15 @@ function shouldNotifyBase(currentUser, user, channel, arg3) {
       }
       return tmp6;
     }
-    obj2 = require("../age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
+    obj2 = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
     tmp2 = require;
   }
 }
 function renderTitle(channelName, channel, channel) {
-  const obj = require("../bidi/IsolateString.tsx") /* FSI */;
-  const isolateResult = require("../bidi/IsolateString.tsx") /* FSI */.isolate(channelName);
-  const obj2 = require("../bidi/IsolateString.tsx") /* FSI */;
-  const obj3 = require("../channel/useChannelName.tsx") /* computeChannelName */;
+  const obj = FSI /* FSI */;
+  const isolateResult = FSI /* FSI */.isolate(channelName);
+  const obj2 = FSI /* FSI */;
+  const obj3 = computeChannelName /* computeChannelName */;
   const tmp4 = mergeGuildAvatar;
   const tmp5 = upsertRelationship;
   let str = "";
@@ -105,7 +121,7 @@ function renderTitle(channelName, channel, channel) {
     const _HermesInternal = HermesInternal;
     str = ", " + tmpResult.isolate(tmpResult.computeChannelName(channel, tmp4, tmp5));
   }
-  return "" + isolateResult + " (" + obj2.isolate(require("../channel/useChannelName.tsx") /* computeChannelName */.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true)) + str + ")";
+  return "" + isolateResult + " (" + obj2.isolate(computeChannelName /* computeChannelName */.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true)) + str + ")";
 }
 function getInviteEmbedFormatString(type, _TD0la, _TD0la2, _TD0la3) {
   type = type.type;
@@ -136,7 +152,7 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
     flag2 = false;
   }
   if (null != message.flags) {
-    let obj = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+    let obj = hasFlag /* hasFlag */;
     if (obj.hasFlag(message.flags, constants3.SUPPRESS_NOTIFICATIONS)) {
       return false;
     }
@@ -184,7 +200,7 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
               if (obj5.isChannelCurrentlyVisible(channel1.id)) {
                 return false;
               }
-              obj5 = require("../channel/ChannelVisibilityUtils.tsx") /* isChannelCurrentlyVisible */;
+              obj5 = isChannelCurrentlyVisible /* isChannelCurrentlyVisible */;
             }
             if (upsertRelationship.isBlockedOrIgnoredForMessage(message)) {
               return false;
@@ -212,7 +228,7 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
                 if (muted.isMuted(channel1.id)) {
                   return false;
                 } else {
-                  const threadNotificationSetting = require("../threads/ThreadNotificationSettings.tsx") /* computeThreadNotificationSetting */.computeThreadNotificationSetting(channel1);
+                  const threadNotificationSetting = computeThreadNotificationSetting /* computeThreadNotificationSetting */.computeThreadNotificationSetting(channel1);
                   let tmp39 = threadNotificationSetting !== ThreadMemberFlags.NO_MESSAGES;
                   if (tmp39) {
                     result = threadNotificationSetting === ThreadMemberFlags.ALL_MESSAGES;
@@ -220,8 +236,8 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
                       obj = { rawMessage: null, userId: null, suppressEveryone: false, suppressRoles: false };
                       obj[0] = message;
                       obj[1] = currentUser.id;
-                      result = require("../messages/isMessageMentioned.tsx") /* isMentioned */.isRawMessageMentioned(obj);
-                      const tmp36Result = require("../messages/isMessageMentioned.tsx") /* isMentioned */;
+                      result = isMentioned /* isMentioned */.isRawMessageMentioned(obj);
+                      const tmp36Result = isMentioned /* isMentioned */;
                     }
                     tmp39 = result;
                   }
@@ -245,7 +261,7 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
                 obj1[1] = currentUser.id;
                 obj1[2] = result1;
                 obj1[3] = result2;
-                return require("../messages/isMessageMentioned.tsx") /* isMentioned */.isRawMessageMentioned(obj1);
+                return isMentioned /* isMentioned */.isRawMessageMentioned(obj1);
               }
             }
           }
@@ -293,7 +309,7 @@ export const shouldNotifyForSelectedChannel = function shouldNotifyForSelectedCh
             if (tmp16) {
               let tmp19 = store3.getStatus() !== constants6.DND;
               if (tmp19) {
-                const FocusMode = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.FocusMode;
+                const FocusMode = explicitContentFromProto /* explicitContentFromProto */.FocusMode;
                 const setting = FocusMode.getSetting();
                 let tmp23 = !setting;
                 if (!setting) {
@@ -336,8 +352,8 @@ export const shouldNotifyForForumThreadCreation = function shouldNotifyForForumT
       if (!result) {
         let result1 = !flag;
         if (!flag) {
-          result1 = require("../channel/ChannelVisibilityUtils.tsx") /* isChannelCurrentlyVisible */.isChannelCurrentlyVisible(channel2.id);
-          const obj3 = require("../channel/ChannelVisibilityUtils.tsx") /* isChannelCurrentlyVisible */;
+          result1 = isChannelCurrentlyVisible /* isChannelCurrentlyVisible */.isChannelCurrentlyVisible(channel2.id);
+          const obj3 = isChannelCurrentlyVisible /* isChannelCurrentlyVisible */;
         }
         let newForumThreadsCreated = !result1;
         if (!result1) {
@@ -376,8 +392,8 @@ export const shouldNotifyForReaction = function shouldNotifyForReaction(arg0) {
       if (tmp11) {
         let result = !includeSelectedChannel;
         if (!includeSelectedChannel) {
-          result = require("../channel/ChannelVisibilityUtils.tsx") /* isChannelCurrentlyVisible */.isChannelCurrentlyVisible(channel.id);
-          const obj = require("../channel/ChannelVisibilityUtils.tsx") /* isChannelCurrentlyVisible */;
+          result = isChannelCurrentlyVisible /* isChannelCurrentlyVisible */.isChannelCurrentlyVisible(channel.id);
+          const obj = isChannelCurrentlyVisible /* isChannelCurrentlyVisible */;
         }
         tmp11 = !result;
       }
@@ -392,14 +408,14 @@ export const shouldIncludeSelectedChannel = function shouldIncludeSelectedChanne
   let flag = true;
   if (!state.isVoicePanelFullscreen()) {
     if (null == store.getConnectedActivityLocation()) {
-      const rootNavigationRef = require("../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */.getRootNavigationRef();
+      const rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
       let tmp5 = null == rootNavigationRef || !rootNavigationRef.isReady();
       if (!tmp5) {
         tmp5 = !tmp3(9677).isChannelFocused();
         const tmp3Result = tmp3(9677);
       }
       flag = tmp5;
-      const obj3 = require("../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */;
+      const obj3 = getRootNavigationRef /* getRootNavigationRef */;
       tmp3 = require;
     } else {
       flag = true;
@@ -411,7 +427,7 @@ export const shouldIncludeSelectedChannel = function shouldIncludeSelectedChanne
 export { renderTitle };
 export const makeTextChatNotification = function makeTextChatNotification(getGuildId, content, bot) {
   let emoji;
-  let obj = require("../../utils/NicknameUtils.tsx");
+  let obj = getNickname;
   const name = obj.getName(getGuildId.getGuildId(), getGuildId.id, bot);
   const type = getGuildId.type;
   if (constants2.GUILD_ANNOUNCEMENT !== type) {
@@ -424,7 +440,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
               if (tmp4.GROUP_DM === type) {
                 let tmp6 = getGuildId.isManaged() && bot.bot;
                 if (tmp6) {
-                  let obj1 = require("../channel/useChannelName.tsx") /* computeChannelName */;
+                  let obj1 = computeChannelName /* computeChannelName */;
                   tmp6 = name === obj1.computeChannelName(getGuildId, mergeGuildAvatar, upsertRelationship);
                 }
                 tmp5 = name;
@@ -453,33 +469,33 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
               sticker_items = "stickerItems" in content ? content.stickerItems : content.stickers;
             }
             if ("message_reference" in content) {
-              let obj4 = require("../forwarding/isForwardMessage.tsx") /* isForwardMessage */;
+              let obj4 = isForwardMessage /* isForwardMessage */;
               let result = obj4.isForwardServerMessage(content);
             } else {
               result = tmp(5827)(content);
             }
             const items = [];
             if (result) {
-              const intl8 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-              let stringResult = intl8.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["9ddYKt"]);
+              const intl8 = getSystemLocale /* getSystemLocale */.intl;
+              let stringResult = intl8.string(getSystemLocale /* getSystemLocale */.t["9ddYKt"]);
               let tmp26 = items;
             } else {
               if (null != content.activity) {
                 if (null != content.application) {
                   if (content.activity.type === constants.JOIN) {
-                    const intl7 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+                    const intl7 = getSystemLocale /* getSystemLocale */.intl;
                     obj = { user: null, game: null };
                     obj[0] = name;
                     obj[1] = content.application.name;
-                    let str7 = intl7.formatToPlainString(getInviteEmbedFormatString(getGuildId, require("../../intl/index.native.tsx") /* getSystemLocale */.t.E8CgCh, require("../../intl/index.native.tsx") /* getSystemLocale */.t.c6KHWJ, require("../../intl/index.native.tsx") /* getSystemLocale */.t.Fy7rJN), obj);
+                    let str7 = intl7.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale /* getSystemLocale */.t.E8CgCh, getSystemLocale /* getSystemLocale */.t.c6KHWJ, getSystemLocale /* getSystemLocale */.t.Fy7rJN), obj);
                   } else {
                     str7 = "";
                     if (content.activity.type === tmp44.JOIN_REQUEST) {
-                      const intl9 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+                      const intl9 = getSystemLocale /* getSystemLocale */.intl;
                       obj1 = { user: null, game: null };
                       obj1[0] = name;
                       obj1[1] = content.application.name;
-                      str7 = intl9.formatToPlainString(getInviteEmbedFormatString(getGuildId, require("../../intl/index.native.tsx") /* getSystemLocale */.t["/TD0la"], require("../../intl/index.native.tsx") /* getSystemLocale */.t["/TD0la"], require("../../intl/index.native.tsx") /* getSystemLocale */.t["/TD0la"]), obj1);
+                      str7 = intl9.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale /* getSystemLocale */.t["/TD0la"], getSystemLocale /* getSystemLocale */.t["/TD0la"], getSystemLocale /* getSystemLocale */.t["/TD0la"]), obj1);
                     }
                   }
                   stringResult = str7;
@@ -488,35 +504,35 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
               }
               if (null != content.activity) {
                 if (content.activity.type === constants.LISTEN) {
-                  const intl6 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+                  const intl6 = getSystemLocale /* getSystemLocale */.intl;
                   let obj2 = { user: null };
                   obj2[0] = name;
-                  stringResult = intl6.formatToPlainString(getInviteEmbedFormatString(getGuildId, require("../../intl/index.native.tsx") /* getSystemLocale */.t.SaDdmN, require("../../intl/index.native.tsx") /* getSystemLocale */.t.qsODhp, require("../../intl/index.native.tsx") /* getSystemLocale */.t.WeiMTW), obj2);
+                  stringResult = intl6.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale /* getSystemLocale */.t.SaDdmN, getSystemLocale /* getSystemLocale */.t.qsODhp, getSystemLocale /* getSystemLocale */.t.WeiMTW), obj2);
                   tmp26 = items;
-                  const tmp43 = getInviteEmbedFormatString(getGuildId, require("../../intl/index.native.tsx") /* getSystemLocale */.t.SaDdmN, require("../../intl/index.native.tsx") /* getSystemLocale */.t.qsODhp, require("../../intl/index.native.tsx") /* getSystemLocale */.t.WeiMTW);
+                  const tmp43 = getInviteEmbedFormatString(getGuildId, getSystemLocale /* getSystemLocale */.t.SaDdmN, getSystemLocale /* getSystemLocale */.t.qsODhp, getSystemLocale /* getSystemLocale */.t.WeiMTW);
                 }
               }
               if (null != sticker_items) {
                 if (sticker_items.length > 0) {
-                  const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+                  const intl5 = getSystemLocale /* getSystemLocale */.intl;
                   const obj3 = { stickerName: null };
                   obj3[0] = sticker_items[0].name;
-                  stringResult = intl5.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.zY4v1B, obj3);
+                  stringResult = intl5.formatToPlainString(getSystemLocale /* getSystemLocale */.t.zY4v1B, obj3);
                   tmp26 = items;
                 }
               }
               if (content.type === constants4.PREMIUM_REFERRAL) {
-                const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+                const intl4 = getSystemLocale /* getSystemLocale */.intl;
                 obj4 = { username: null };
                 tmpResult = tmp(4124);
                 obj4[0] = tmpResult.getName(bot);
-                stringResult = intl4.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.lieTqU, obj4);
+                stringResult = intl4.formatToPlainString(getSystemLocale /* getSystemLocale */.t.lieTqU, obj4);
                 tmp26 = items;
               } else if (null != content.poll) {
-                const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+                const intl3 = getSystemLocale /* getSystemLocale */.intl;
                 const obj5 = { question: null };
                 obj5[0] = content.poll.question.text;
-                stringResult = intl3.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.ImizdM, obj5);
+                stringResult = intl3.formatToPlainString(getSystemLocale /* getSystemLocale */.t.ImizdM, obj5);
                 tmp26 = items;
               } else if (content.type === tmp23.POLL_RESULT) {
                 const embeds = content.embeds;
@@ -531,16 +547,16 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                   }
                 }
                 if (null == found) {
-                  let intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+                  let intl2 = getSystemLocale /* getSystemLocale */.intl;
                   const obj6 = { question: null };
                   obj6[0] = "";
-                  stringResult = intl2.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t["9WrecI"], obj6);
+                  stringResult = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t["9WrecI"], obj6);
                   tmp26 = items;
                 }
               } else {
                 if (null != content.components) {
                   if (content.components.length > 0) {
-                    if (content.components[0].type === require("../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.CHECKPOINT_CARD) {
+                    if (content.components[0].type === PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.CHECKPOINT_CARD) {
                       let intl = tmp24(1236).intl;
                       stringResult = intl.string(tmp24(1236).t.HWnMTQ);
                       tmp26 = items;
@@ -641,7 +657,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
       tmp5 = renderTitle(name, channel, obj2.getChannel(channel.parent_id));
     }
   }
-  if (require("../messages/isSystemMessage.tsx")(content)) {
+  if (isSystemMessage(content)) {
     tmp5 = name;
     if (null != guild.getGuild(getGuildId.getGuildId())) {
       tmp5 = renderTitle(name, getGuildId, channel);
@@ -654,7 +670,7 @@ export const allowInAppNotifications = function allowInAppNotifications() {
   if (handleRequiredAction.hasAction()) {
     return false;
   } else {
-    const ShowInAppNotifications = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.ShowInAppNotifications;
+    const ShowInAppNotifications = explicitContentFromProto /* explicitContentFromProto */.ShowInAppNotifications;
     let setting = ShowInAppNotifications.getSetting();
     if (setting) {
       setting = !obj.getFocusModeEnabled();
@@ -663,12 +679,12 @@ export const allowInAppNotifications = function allowInAppNotifications() {
   }
 };
 export const useAllowInAppNotifications = function useAllowInAppNotifications() {
-  const ShowInAppNotifications = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.ShowInAppNotifications;
+  const ShowInAppNotifications = explicitContentFromProto /* explicitContentFromProto */.ShowInAppNotifications;
   const setting = ShowInAppNotifications.useSetting();
-  const focusModeEnabled = require("FocusModeUtils.tsx") /* useFocusModeEnabled */.useFocusModeEnabled();
-  const obj = require("FocusModeUtils.tsx") /* useFocusModeEnabled */;
+  const focusModeEnabled = useFocusModeEnabled /* useFocusModeEnabled */.useFocusModeEnabled();
+  const obj = useFocusModeEnabled /* useFocusModeEnabled */;
   const items = [handleRequiredAction];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => handleRequiredAction.hasAction());
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => handleRequiredAction.hasAction());
   let tmp4 = !stateFromStores;
   if (!stateFromStores) {
     tmp4 = setting;

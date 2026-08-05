@@ -1,3 +1,5 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/modules/threads/ThreadNotificationSettings.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
@@ -51,7 +53,7 @@ function computeThreadNotificationSetting(channel) {
         }
       }
     }
-    obj6 = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+    obj6 = hasFlag /* hasFlag */;
   }
 }
 let result = require("storeThread").fileFinishedImporting("modules/threads/ThreadNotificationSettings.tsx");
@@ -61,5 +63,5 @@ export const useThreadNotificationSetting = function useThreadNotificationSettin
   const _require = channel;
   const items = [storeThread, updateUserGuildSettingsInternal, ensureGuildLoaded];
   const items1 = [channel];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_7(closure_0), items1);
+  return _initialize.useStateFromStores(items, () => outer1_7(closure_0), items1);
 };

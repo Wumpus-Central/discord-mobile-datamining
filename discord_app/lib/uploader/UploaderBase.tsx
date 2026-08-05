@@ -1,3 +1,4 @@
+import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/lib/uploader/UploaderBase.tsx
 import apply from "apply";
 import { AbortCodes } from "ME";
@@ -305,9 +306,9 @@ prototype["_recomputeProgressByFile"] = function _recomputeProgressByFile() {
 };
 prototype["_addAttachmentsToPayload"] = function _addAttachmentsToPayload(arg0, arg1, arg2) {
   const merged = Object.assign(arg0);
-  require("../../../_runtime/00012_apply.js");
+  apply;
   const items = [...arg2];
-  return require("../../../_runtime/00012_apply.js").set({}, arg1, items);
+  return apply.set({}, arg1, items);
 };
 prototype["clearProcessingMessageInterval"] = function clearProcessingMessageInterval() {
   const self = this;

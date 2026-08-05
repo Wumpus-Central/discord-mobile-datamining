@@ -1,3 +1,6 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/billing/native/PaymentFlowWarningMessage.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -20,10 +23,10 @@ export default function PaymentFlowWarningMessage(children) {
   const tmp = createCacheKey();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.icon, color: null, width: 16, height: 16 };
-  obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.YELLOW_300;
-  const items = [callback(require("../../../design/void/native.tsx") /* Button */.WarningCircle, obj), ];
+  obj[1] = Themes.unsafe_rawColors.YELLOW_300;
+  const items = [callback(Button /* Button */.WarningCircle, obj), ];
   obj = { variant: "text-sm/medium", style: tmp.text, children: children.message };
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 };

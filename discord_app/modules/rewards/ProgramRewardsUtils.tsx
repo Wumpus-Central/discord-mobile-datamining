@@ -1,3 +1,8 @@
+import { isPast } from "../../../_runtime/03708_isPast.js";
+import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
+import { apexExperiment } from "../croissant/crepe/CrepeExperiment.tsx";
+import { PremiumRewardsOrbsTreatment } from "../premium/tenure_reward/experiments/PremiumRewardsOrbsExperiment.tsx";
+import { RewardProgram } from "ProgramRewardsTypes.tsx";
 // discord_app/modules/rewards/ProgramRewardsUtils.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PremiumTypes } from "GuildFeatures";
@@ -8,11 +13,11 @@ function canFetchNitroProgramReward(canUseMonthlyOrbs) {
   if (canUseMonthlyOrbs === undefined) {
     str = "ProgramRewardsUtils";
   }
-  const NITRO = require("ProgramRewardsTypes.tsx") /* RewardProgram */.RewardProgram.NITRO;
+  const NITRO = RewardProgram /* RewardProgram */.RewardProgram.NITRO;
   if (str === undefined) {
     str = "ProgramRewardsUtils";
   }
-  if (require("ProgramRewardsTypes.tsx") /* RewardProgram */.RewardProgram.NITRO === NITRO) {
+  if (RewardProgram /* RewardProgram */.RewardProgram.NITRO === NITRO) {
     let tmpResult = tmp(12897);
     let flag = tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
   } else {
@@ -34,11 +39,11 @@ function canFetchXboxProgramReward(canUseMonthlyOrbs) {
   if (canUseMonthlyOrbs === undefined) {
     str = "ProgramRewardsUtils";
   }
-  const XBOX = require("ProgramRewardsTypes.tsx") /* RewardProgram */.RewardProgram.XBOX;
+  const XBOX = RewardProgram /* RewardProgram */.RewardProgram.XBOX;
   if (str === undefined) {
     str = "ProgramRewardsUtils";
   }
-  if (require("ProgramRewardsTypes.tsx") /* RewardProgram */.RewardProgram.NITRO === XBOX) {
+  if (RewardProgram /* RewardProgram */.RewardProgram.NITRO === XBOX) {
     let tmpResult = tmp(12897);
     let flag = tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
   } else {
@@ -69,8 +74,8 @@ export const isProgramRewardStale = function isProgramRewardStale(next_reward_da
     if (tmp) {
       const _Date = Date;
       const date = new Date(next_reward_date);
-      tmp = require("../../../_runtime/03708_isPast.js")(date);
-      const tmp4 = require("../../../_runtime/03708_isPast.js");
+      tmp = isPast(date);
+      const tmp4 = isPast;
     }
     return tmp;
   }
@@ -80,7 +85,7 @@ export const isEligibleForProgramReward = function isEligibleForProgramReward(ar
   if (canUseMonthlyOrbs === undefined) {
     str = "ProgramRewardsUtils";
   }
-  if (require("ProgramRewardsTypes.tsx") /* RewardProgram */.RewardProgram.NITRO === arg0) {
+  if (RewardProgram /* RewardProgram */.RewardProgram.NITRO === arg0) {
     let tmpResult = tmp(12897);
     return tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
   } else if (tmp(12894).RewardProgram.XBOX === arg0) {
@@ -95,17 +100,17 @@ export const useIsEligibleForProgramReward = function useIsEligibleForProgramRew
   if (location === undefined) {
     str = "ProgramRewardsUtils";
   }
-  const obj = require("../premium/tenure_reward/experiments/PremiumRewardsOrbsExperiment.tsx") /* PremiumRewardsOrbsTreatment */;
+  const obj = PremiumRewardsOrbsTreatment /* PremiumRewardsOrbsTreatment */;
   const tmp = require;
-  const isCrepeEnabled = require("../croissant/crepe/CrepeExperiment.tsx") /* apexExperiment */.useIsCrepeEnabled(str);
-  if (require("ProgramRewardsTypes.tsx") /* RewardProgram */.RewardProgram.NITRO === arg0) {
+  const isCrepeEnabled = apexExperiment /* apexExperiment */.useIsCrepeEnabled(str);
+  if (RewardProgram /* RewardProgram */.RewardProgram.NITRO === arg0) {
     return obj.usePremiumRewardsOrbsExperiment(str).isInTreatment;
   } else if (tmp(12894).RewardProgram.XBOX === arg0) {
     return isCrepeEnabled;
   } else {
     return false;
   }
-  const obj2 = require("../croissant/crepe/CrepeExperiment.tsx") /* apexExperiment */;
+  const obj2 = apexExperiment /* apexExperiment */;
 };
 export { canFetchNitroProgramReward };
 export { canFetchXboxProgramReward };
@@ -114,7 +119,7 @@ export const canFetchAnyProgramReward = function canFetchAnyProgramReward(Progra
   if (ProgramRewardsStore === undefined) {
     str = "ProgramRewardsUtils";
   }
-  const values = Object.values(require("ProgramRewardsTypes.tsx") /* RewardProgram */.RewardProgram);
+  const values = Object.values(RewardProgram /* RewardProgram */.RewardProgram);
   for (const item10015 of values) {
     if (typeof item10015 === "number") {
       let tmp4 = dependencyMap;
@@ -134,5 +139,5 @@ export const hasNecessaryPremiumSubscriptionStatus = function hasNecessaryPremiu
   if (currentUser == null) {
     currentUser = authStore.getCurrentUser();
   }
-  return require("../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.isPremiumExactly(currentUser, PremiumTypes.TIER_2);
+  return getPremiumPlanItem /* getPremiumPlanItem */.isPremiumExactly(currentUser, PremiumTypes.TIER_2);
 };

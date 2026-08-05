@@ -1,3 +1,4 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/user_settings/core/native/SettingsNavigator.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "getDeviceMetadata";
@@ -16,7 +17,7 @@ let unpackModuleId;
 let require = arg1;
 function LeftAlignedHeaderTitle(children) {
   const tmp = callback3();
-  return callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Heading, { lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, style: callback3().headerContainer, children: children.title });
+  return callback(Text /* Text */.Heading, { lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, style: callback3().headerContainer, children: children.title });
 }
 let c4 = importAllResult;
 ({ AnalyticsPages: metroImportAll, UserSettingsSections: c9 } = ME);

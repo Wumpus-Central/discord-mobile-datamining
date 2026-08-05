@@ -1,3 +1,10 @@
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { RefreshIcon } from "../../../../design/components/Icon/native/redesign/generated/RefreshIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useTrackQuestEventWithImpression } from "../../lib/analytics/AnalyticsHooks.tsx";
+import { useAdContentImpressionTrackerProps } from "../../lib/analytics/ContentImpressionTrackerHooks.tsx";
+import { formatWatchRemainingDurationShort } from "../../utils/MobileQuestVideoWatchCtaCopy.tsx";
+import { useWatchTaskPressHandler } from "QuestBottomSheetHooks.tsx";
 // discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheetFooter.tsx
 import apexExperiment from "apexExperiment";
 import useWatchTaskPressHandler from "useWatchTaskPressHandler";
@@ -124,20 +131,20 @@ function WatchTaskButton(arg0) {
   let sourceQuestContent;
   let taskDetails;
   ({ questId, sourceQuestContent, taskDetails } = arg0);
-  let obj = require("QuestBottomSheetHooks.tsx") /* useWatchTaskPressHandler */;
+  let obj = useWatchTaskPressHandler /* useWatchTaskPressHandler */;
   obj = { grow: true, size: "lg", onPress: obj.useWatchTaskPressHandler({ questId, sourceQuestContent }), text: null };
   const watchTaskPressHandler = obj.useWatchTaskPressHandler({ questId, sourceQuestContent });
-  obj[3] = require("../../utils/MobileQuestVideoWatchCtaCopy.tsx") /* formatWatchRemainingDurationShort */.getVideoQuestWatchCtaText(taskDetails);
-  return callback2(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj);
+  obj[3] = formatWatchRemainingDurationShort /* formatWatchRemainingDurationShort */.getVideoQuestWatchCtaText(taskDetails);
+  return callback2(Button /* Button */.Button, obj);
 }
 function NextButton(arg0) {
   let disabled;
   let onPress;
   ({ onPress, disabled } = arg0);
   const obj = { grow: true, size: "lg", onPress, disabled, text: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[4] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.a9OfTN);
-  return callback2(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t.a9OfTN);
+  return callback2(Button /* Button */.Button, obj);
 }
 function DefibButton(arg0) {
   let dependencyMap;
@@ -149,11 +156,11 @@ function DefibButton(arg0) {
   let apexExperiment;
   let useWatchTaskPressHandler;
   ({ loading, disabled } = arg0);
-  let obj = require("../../lib/analytics/AnalyticsHooks.tsx") /* useTrackQuestEventWithImpression */;
+  let obj = useTrackQuestEventWithImpression /* useTrackQuestEventWithImpression */;
   apexExperiment = obj.useTrackQuestContentClickedWithImpression();
-  useWatchTaskPressHandler = require("../../lib/analytics/ContentImpressionTrackerHooks.tsx") /* useAdContentImpressionTrackerProps */.useQuestImpressionId();
+  useWatchTaskPressHandler = useAdContentImpressionTrackerProps /* useAdContentImpressionTrackerProps */.useQuestImpressionId();
   obj = { grow: true, size: "lg", variant: "secondary", loading, disabled, icon: null, iconPosition: "end", onPress: null, text: null };
-  obj[5] = callback2(require("../../../../design/components/Icon/native/redesign/generated/RefreshIcon.tsx") /* RefreshIcon */.RefreshIcon, {});
+  obj[5] = callback2(RefreshIcon /* RefreshIcon */.RefreshIcon, {});
   obj[7] = function onPress(arg0) {
     let obj = outer1_0(outer1_2[32]);
     if (obj.shouldMigrateToAdAnalyticsInterface(outer1_0(outer1_2[32]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet_footer")) {
@@ -179,9 +186,9 @@ function DefibButton(arg0) {
       tmp11(arg0);
     }
   };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[8] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.nPThNb);
-  return callback2(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[8] = intl.string(getSystemLocale /* getSystemLocale */.t.nPThNb);
+  return callback2(Button /* Button */.Button, obj);
 }
 function ClaimButton(arg0) {
   let dependencyMap;
@@ -193,9 +200,9 @@ function ClaimButton(arg0) {
   let apexExperiment;
   let useWatchTaskPressHandler;
   ({ disabled, loading } = arg0);
-  let obj = require("../../lib/analytics/AnalyticsHooks.tsx") /* useTrackQuestEventWithImpression */;
+  let obj = useTrackQuestEventWithImpression /* useTrackQuestEventWithImpression */;
   apexExperiment = obj.useTrackQuestContentClickedWithImpression();
-  useWatchTaskPressHandler = require("../../lib/analytics/ContentImpressionTrackerHooks.tsx") /* useAdContentImpressionTrackerProps */.useQuestImpressionId();
+  useWatchTaskPressHandler = useAdContentImpressionTrackerProps /* useAdContentImpressionTrackerProps */.useQuestImpressionId();
   obj = {
     grow: true,
     size: "lg",
@@ -226,9 +233,9 @@ function ClaimButton(arg0) {
     },
     text: null
   };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[5] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.cfY4PE);
-  return callback2(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[5] = intl.string(getSystemLocale /* getSystemLocale */.t.cfY4PE);
+  return callback2(Button /* Button */.Button, obj);
 }
 function AnimatedFooter(arg0) {
   let backButton;

@@ -1,3 +1,7 @@
+import { 00038__ } from "../../_runtime/metro/00038__.js";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { timestamp } from "../modules/debug/Logger.tsx";
+import { handleImageLoad } from "../modules/image_upload/ImageLoaderUtils.tsx";
 // discord_app/utils/ApplicationAssetUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import timestamp from "timestamp";
@@ -532,7 +536,7 @@ let closure_11 = {
   [PlatformTypes.YOUTUBE]: obj,
   mp: {
     deserialize(str) {
-      require("../../_runtime/metro/00038__.js")(null != window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT, "MEDIA_PROXY_ENDPOINT not configured");
+      00038__(null != window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT, "MEDIA_PROXY_ENDPOINT not configured");
       try {
         const _URL = URL;
         const _location = location;
@@ -601,7 +605,7 @@ export const getAssetImage = function getAssetImage(application_id, media_assets
             const obj5 = closure_11[tmp23.TWITCH];
           }
         }
-        const obj3 = new require("../modules/debug/Logger.tsx")("ApplicationAssetUtils");
+        const obj3 = new timestamp("ApplicationAssetUtils");
         obj3.warn("getAssetImage: size must === [number, number] for Twitch");
       } else {
         const _Object = Object;
@@ -630,8 +634,8 @@ export const getAssetImage = function getAssetImage(application_id, media_assets
       let str4 = "";
       if (typeof applyResult === "number") {
         const _HermesInternal3 = HermesInternal;
-        str4 = "?size=" + require("../modules/image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */.getBestMediaProxySize(applyResult);
-        const obj4 = require("../modules/image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */;
+        str4 = "?size=" + handleImageLoad /* handleImageLoad */.getBestMediaProxySize(applyResult);
+        const obj4 = handleImageLoad /* handleImageLoad */;
       }
       const _window = window;
       if (null != window.GLOBAL_ENV.CDN_HOST) {
@@ -641,8 +645,8 @@ export const getAssetImage = function getAssetImage(application_id, media_assets
         let combined = "" + location.protocol + "//" + window.GLOBAL_ENV.CDN_HOST + "/app-assets/" + application_id + "/" + media_assets_large_image + "." + str + str4;
       } else {
         const _HermesInternal = HermesInternal;
-        combined = "" + require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.getAPIBaseURL() + "/applications/" + application_id + "/app-assets/" + media_assets_large_image + "." + str + str4;
-        const obj = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
+        combined = "" + sendRequest /* sendRequest */.getAPIBaseURL() + "/applications/" + application_id + "/app-assets/" + media_assets_large_image + "." + str + str4;
+        const obj = sendRequest /* sendRequest */;
       }
       return combined;
     }

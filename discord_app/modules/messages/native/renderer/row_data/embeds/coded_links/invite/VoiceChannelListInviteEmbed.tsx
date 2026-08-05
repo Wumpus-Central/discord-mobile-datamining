@@ -1,3 +1,4 @@
+import { getChannelAndRecipientsFromInvite } from "getChannelAndRecipientsFromInvite.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/VoiceChannelListInviteEmbed.tsx
 import { processColor } from "frozen";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -23,7 +24,7 @@ export const canShowVoiceChannelListInviteEmbed = function canShowVoiceChannelLi
     const guild = store2.getGuild(invite.guild.id);
     tmp = null;
     if (null != guild) {
-      let channel = require("getChannelAndRecipientsFromInvite.tsx")(invite).channel;
+      let channel = getChannelAndRecipientsFromInvite(invite).channel;
       tmp = null;
       if (null != channel) {
         tmp = null;

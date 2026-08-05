@@ -1,3 +1,4 @@
+import { _handleToggleVideo } from "../../voice_calls/native/CallsUtils.tsx";
 // discord_app/modules/video_calls/native/VoiceActionUtils.tsx
 function NOOP() {
 
@@ -18,23 +19,23 @@ export const createMuteHandler = function createMuteHandler(muteStates, stateFro
   if (flag) {
     let onPress = NOOP;
   } else {
-    onPress = require("../../voice_calls/native/CallsUtils.tsx") /* _handleToggleVideo */.handleToggleSelfMute;
+    onPress = _handleToggleVideo /* _handleToggleVideo */.handleToggleSelfMute;
   }
   if (muteStates.suppress) {
-    onPress = require("../../voice_calls/native/CallsUtils.tsx") /* _handleToggleVideo */.showSuppressedAlert;
+    onPress = _handleToggleVideo /* _handleToggleVideo */.showSuppressedAlert;
     dominantMuteState = tmp.SUPPRESS;
   }
   if (muteStates.mute) {
-    onPress = require("../../voice_calls/native/CallsUtils.tsx") /* _handleToggleVideo */.showServerMuteAlert;
+    onPress = _handleToggleVideo /* _handleToggleVideo */.showServerMuteAlert;
     dominantMuteState = tmp.SERVER_MUTE;
   }
   const mute = muteStates.selfMute || muteStates.mute || muteStates.suppress;
   return { mute, onPress, dominantMuteState };
 };
 export const createDeafHandler = function createDeafHandler(deafStates) {
-  let onPress = require("../../voice_calls/native/CallsUtils.tsx") /* _handleToggleVideo */.handleToggleSelfDeaf;
+  let onPress = _handleToggleVideo /* _handleToggleVideo */.handleToggleSelfDeaf;
   if (deafStates.deaf) {
-    onPress = require("../../voice_calls/native/CallsUtils.tsx") /* _handleToggleVideo */.showServerDeafenAlert;
+    onPress = _handleToggleVideo /* _handleToggleVideo */.showServerDeafenAlert;
   }
   const deaf = deafStates.selfDeaf || deafStates.deaf;
   return { deaf, onPress };

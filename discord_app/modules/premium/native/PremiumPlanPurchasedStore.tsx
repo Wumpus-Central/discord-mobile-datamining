@@ -1,3 +1,6 @@
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import { QUICK_SWITCHER } from "../../app_analytics/AnalyticsLocation.tsx";
+import { openPremiumPlanSelectionActionSheet } from "openPremiumPlanSelectionActionSheet.tsx";
 // discord_app/modules/premium/native/PremiumPlanPurchasedStore.tsx
 import setContent from "setContent";
 import GuildFeatures from "GuildFeatures";
@@ -16,7 +19,7 @@ export const setInitiatedPurchaseFromNewFlow = function setInitiatedPurchaseFrom
   let importDefault;
   let require;
   ({ productId: require, onPaymentSuccess: importDefault, onPaymentDismiss: dependencyMap } = arg0);
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
+  batchUpdates /* batchUpdates */.batchUpdates(() => {
     outer1_6.setState({ productId: closure_0, initiatedPurchaseFromNewFlow: true, onPaymentSuccess: closure_1, onPaymentDismiss: closure_2 });
   });
 };
@@ -24,16 +27,16 @@ export const setPaymentSuccess = function setPaymentSuccess() {
   if (keys.getState().initiatedPurchaseFromNewFlow) {
     const state = keys.getState();
     const onPaymentSuccess = state.onPaymentSuccess;
-    require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
+    batchUpdates /* batchUpdates */.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
     if (onPaymentSuccess != null) {
       onPaymentSuccess(state.productId);
     }
-    const obj2 = require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */;
+    const obj2 = batchUpdates /* batchUpdates */;
   }
 };
 export const setMobileWebRedirectCheckoutStatus = function setMobileWebRedirectCheckoutStatus(arg0) {
   const _require = arg0;
-  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_6.setState({ mobileWebRedirectCheckoutStatus: closure_0 }));
+  _batchUpdates.batchUpdates(() => outer1_6.setState({ mobileWebRedirectCheckoutStatus: closure_0 }));
 };
 export const handleMobileWebCheckoutStatus = function handleMobileWebCheckoutStatus(arg0) {
   const _require = arg0;
@@ -44,24 +47,24 @@ export const handleMobileWebCheckoutStatus = function handleMobileWebCheckoutSta
       if (key.getKey() !== closure_4) {
         const obj = { premiumType: null, analyticsLocations: null, analyticsLocation: null };
         obj[0] = TIER_2.TIER_2;
-        const items = [require("../../app_analytics/AnalyticsLocation.tsx").DEEPLINK];
+        const items = [QUICK_SWITCHER.DEEPLINK];
         obj[1] = items;
         obj[2] = {};
-        require("openPremiumPlanSelectionActionSheet.tsx")(obj);
-        const tmp3 = require("openPremiumPlanSelectionActionSheet.tsx");
+        openPremiumPlanSelectionActionSheet(obj);
+        const tmp3 = openPremiumPlanSelectionActionSheet;
       }
-      _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_6.setState({ isPaymentSuccess: true, mobileWebRedirectCheckoutStatus: closure_0 }));
+      _batchUpdates.batchUpdates(() => outer1_6.setState({ isPaymentSuccess: true, mobileWebRedirectCheckoutStatus: closure_0 }));
       if (null != onPaymentSuccess) {
         onPaymentSuccess(tmp13);
       }
-      const obj2 = _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx");
+      const obj2 = _batchUpdates;
     }
   }
 };
 export const showOldPaymentFlowSuccess = function showOldPaymentFlowSuccess(arg0) {
   if (keys.getState().initiatedPurchaseFromNewFlow) {
-    require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
-    const obj = require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */;
+    batchUpdates /* batchUpdates */.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
+    const obj = batchUpdates /* batchUpdates */;
   } else {
     arg0();
   }
@@ -77,7 +80,7 @@ export const reset = function reset() {
     obj[1] = tmp3;
     onPaymentDismiss(obj);
   }
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
+  batchUpdates /* batchUpdates */.batchUpdates(() => {
     let str = null;
     if (null != closure_0) {
       str = null;

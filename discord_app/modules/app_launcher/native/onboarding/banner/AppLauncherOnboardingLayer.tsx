@@ -1,3 +1,4 @@
+import { AppLauncherOnboardingBanner } from "AppLauncherOnboardingBanner.tsx";
 // discord_app/modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingLayer.tsx
 import { View } from "get ActivityIndicator";
 import { useBestActiveChatInputContainerHeight as closure_3 } from "updateChatInputContainerHeight";
@@ -25,7 +26,7 @@ const memoResult = require("noop").memo((visibleContent) => {
     obj = { context: null, visibleContent: null };
     obj[0] = context;
     obj[1] = visibleContent;
-    obj[1] = jsx(require("AppLauncherOnboardingBanner.tsx"), { context: null, visibleContent: null });
+    obj[1] = jsx(AppLauncherOnboardingBanner, { context: null, visibleContent: null });
     tmp3 = <View context={null} visibleContent={null} />;
   }
   return tmp3;

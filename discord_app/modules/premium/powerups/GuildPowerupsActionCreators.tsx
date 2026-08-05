@@ -1,3 +1,7 @@
+import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { _httpGetWithCountryCodeQuery } from "../../../utils/StoreUtils.tsx";
+import { items } from "mocks/GuildPowerupMocks.tsx";
 // discord_app/modules/premium/powerups/GuildPowerupsActionCreators.tsx
 import BoostedGuildTiers from "BoostedGuildTiers";
 import { Endpoints } from "ME";
@@ -8,22 +12,22 @@ let c4;
 let result = require("dispatcher").fileFinishedImporting("modules/premium/powerups/GuildPowerupsActionCreators.tsx");
 
 export const guildPowerupsAckNotification = function guildPowerupsAckNotification(closure_0) {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_POWERUPS_ACK_NOTIFICATION", guildId: closure_0 };
   obj.dispatch(obj);
 };
 export const guildPowerupsResetNotifications = function guildPowerupsResetNotifications() {
-  require("../../../Dispatcher.tsx").dispatch({ type: "GUILD_POWERUPS_RESET_NOTIFICATIONS" });
+  dispatcher.dispatch({ type: "GUILD_POWERUPS_RESET_NOTIFICATIONS" });
 };
 export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(closure_0) {
   const _require = closure_0;
   if (true === arg1) {
-    const MOCK_LEVELS = _require("mocks/GuildPowerupMocks.tsx").MOCK_LEVELS;
-    const combined = MOCK_LEVELS.concat(_require("mocks/GuildPowerupMocks.tsx").MOCK_PERKS);
+    const MOCK_LEVELS = _items.MOCK_LEVELS;
+    const combined = MOCK_LEVELS.concat(_items.MOCK_PERKS);
     let obj = {};
-    obj[constants.LEVEL] = _require("mocks/GuildPowerupMocks.tsx").MOCK_LEVELS;
-    obj[constants.PERK] = _require("mocks/GuildPowerupMocks.tsx").MOCK_PERKS;
-    let obj2 = require("../../../Dispatcher.tsx");
+    obj[constants.LEVEL] = _items.MOCK_LEVELS;
+    obj[constants.PERK] = _items.MOCK_PERKS;
+    let obj2 = dispatcher;
     obj = { type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS", guildId: null, allPowerups: null, powerupCatalog: null };
     obj[1] = closure_0;
     let sorted = combined.sort((skuId, skuId2) => {
@@ -46,8 +50,8 @@ export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(
     obj2[0] = closure_3;
     obj2[1] = closure_0;
     obj1[1] = obj2;
-    const obj5 = _require("../../../utils/StoreUtils.tsx");
-    obj1[3] = _require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const obj5 = __httpGetWithCountryCodeQuery;
+    obj1[3] = _sendRequest.rejectWithMigratedError();
     const result = obj5.httpGetWithCountryCodeQuery(obj1);
     return result.then((body) => {
       let allPowerups;
@@ -90,9 +94,9 @@ export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(
   if (arg1 === undefined) {
     flag = true;
   }
-  let obj = _require("../../../utils/StoreUtils.tsx");
+  let obj = __httpGetWithCountryCodeQuery;
   obj = { url: Endpoints.GUILD_POWERUPS(closure_0), query: { include_ends_at: flag }, oldFormErrors: true, rejectWithError: null };
-  obj[3] = _require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+  obj[3] = _sendRequest.rejectWithMigratedError();
   const result = obj.httpGetWithCountryCodeQuery(obj);
   return result.then((body) => {
     let obj = {};
@@ -142,10 +146,10 @@ export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(
   });
 };
 export const enablePowerupForGuild = function enablePowerupForGuild(arg0, arg1) {
-  const HTTP = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   return HTTP.post({ url: Endpoints.GUILD_POWERUP_TOGGLE(arg0, arg1), rejectWithError: true });
 };
 export const disablePowerupForGuild = function disablePowerupForGuild(arg0, arg1) {
-  const HTTP = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   return HTTP.del({ url: Endpoints.GUILD_POWERUP_TOGGLE(arg0, arg1), rejectWithError: true });
 };

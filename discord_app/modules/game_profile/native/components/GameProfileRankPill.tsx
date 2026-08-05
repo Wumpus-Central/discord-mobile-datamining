@@ -1,3 +1,7 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { TrophyIcon } from "../../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/game_profile/native/components/GameProfileRankPill.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -26,11 +30,11 @@ export default function GameProfileRankPill(arg0) {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.gameRankPill, children: null };
   obj = { size: "xxs", color: null };
-  obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BLACK;
-  const items = [callback(require("../../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx") /* TrophyIcon */.TrophyIcon, obj), ];
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  obj[1] = Themes.colors.BLACK;
+  const items = [callback(TrophyIcon /* TrophyIcon */.TrophyIcon, obj), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   const formatToPlainString = intl.formatToPlainString;
-  const t = require("../../../../intl/index.native.tsx") /* getSystemLocale */.t;
+  const t = getSystemLocale /* getSystemLocale */.t;
   if (compact) {
     const obj1 = { rank: null };
     obj1[0] = rank;
@@ -40,7 +44,7 @@ export default function GameProfileRankPill(arg0) {
     obj2[0] = rank;
     str = formatToPlainString(t.ehZXlZ, obj2);
   }
-  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-xs/bold", color: "text-overlay-dark", children: str.toUpperCase() });
+  items[1] = callback(Text /* Text */.Text, { variant: "text-xs/bold", color: "text-overlay-dark", children: str.toUpperCase() });
   obj[1] = items;
   obj[1] = closure_5(View, obj);
   return callback(View, obj);

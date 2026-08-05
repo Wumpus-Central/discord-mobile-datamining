@@ -1,3 +1,14 @@
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { dispatcher } from "../../../actions/UploadAttachmentActionCreators.tsx";
+import { cancel } from "../../../lib/uploader/Upload.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { ComponentDispatcher } from "../../../utils/ComponentDispatchUtils.tsx";
+import { openImagePickerUnhandled } from "../../../utils/native/UploadUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { NativePermissionsRequestOptions } from "../../native_permissions/NativePermissionUtils.tsx";
+import { openGiftModal } from "../../premium/native/utils/openGiftModal.tsx";
+import { navigateToThreadCreation } from "../../threads/native/navigateToThreadCreation.tsx";
+import { hideMediaKeyboardActionSheet } from "showMediaKeyboardActionSheet.tsx";
 // discord_app/modules/media_keyboard/native/MediaKeyboardUtils.tsx
 import map from "map";
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
@@ -227,12 +238,12 @@ function handleSelectKeyboardItem(channelId, item, isIncluded, arg3) {
   if (isIncluded) {
     const findUploadResult = closure_8.findUpload(channelId, DraftType.ChannelMessage, (closure_0) => image(outer1_2[11]).doesImageMatchUpload(image, closure_0));
     if (null != findUploadResult) {
-      require("../../../actions/UploadAttachmentActionCreators.tsx").remove(channelId, findUploadResult.id, tmp13.ChannelMessage);
-      const obj5 = require("../../../actions/UploadAttachmentActionCreators.tsx");
+      dispatcher.remove(channelId, findUploadResult.id, tmp13.ChannelMessage);
+      const obj5 = dispatcher;
     }
     tmp13 = DraftType;
   } else {
-    let obj = require("../../../actions/UploadAttachmentActionCreators.tsx");
+    let obj = dispatcher;
     obj = { channelId: null, file: null, draftType: null };
     obj[0] = channelId;
     image = item.node.image;
@@ -283,7 +294,7 @@ function showSimpleMediaKeyboard(channel) {
   } else if (tmp.INTERACTION_MODAL === CHAT) {
     InteractionModal = DraftType.InteractionModal;
   }
-  let obj = _require("showMediaKeyboardActionSheet.tsx");
+  let obj = _hideMediaKeyboardActionSheet;
   obj = {
     channel,
     draftType: InteractionModal,
@@ -663,8 +674,8 @@ function showSimpleMediaKeyboard(channel) {
         }
       });
     },
-    onClose: _require("showMediaKeyboardActionSheet.tsx").hideMediaKeyboardActionSheet,
-    onBack: _require("showMediaKeyboardActionSheet.tsx").hideMediaKeyboardActionSheet
+    onClose: _hideMediaKeyboardActionSheet.hideMediaKeyboardActionSheet,
+    onBack: _hideMediaKeyboardActionSheet.hideMediaKeyboardActionSheet
   };
   let result = obj.showMediaKeyboardActionSheet(obj);
 }
@@ -672,7 +683,7 @@ function showSimpleMediaKeyboard(channel) {
 export const addImagesFromPicker = function addImagesFromPicker(id, items, IMAGE_PICKER) {
   const _require = id;
   const importDefault = IMAGE_PICKER;
-  if (IMAGE_PICKER !== _require("../../../lib/uploader/Upload.tsx").UploadOrigin.FILE_ATTACHMENT) {
+  if (IMAGE_PICKER !== _cancel.UploadOrigin.FILE_ATTACHMENT) {
     const found = items.filter((uri) => {
       let closure_0 = uri;
       let tmp2 = null != closure_0;
@@ -697,10 +708,10 @@ export const addImagesFromPicker = function addImagesFromPicker(id, items, IMAGE
     obj[0] = mapped;
     obj[1] = id;
     obj[2] = DraftType.ChannelMessage;
-    require("../../../actions/UploadAttachmentActionCreators.tsx").addFiles(obj);
-    const obj3 = require("../../../actions/UploadAttachmentActionCreators.tsx");
+    dispatcher.addFiles(obj);
+    const obj3 = dispatcher;
   } else {
-    obj = require("../../../actions/UploadAttachmentActionCreators.tsx");
+    obj = dispatcher;
     obj = { files: null, channelId: null, draftType: null };
     obj[0] = items;
     obj[1] = id;
@@ -710,7 +721,7 @@ export const addImagesFromPicker = function addImagesFromPicker(id, items, IMAGE
 };
 export const addAttachmentForCommand = function addAttachmentForCommand(channelId, onSelectFiles, result1, outer1_1, IMAGE_PICKER) {
   const option = outer1_1.option;
-  let obj = require("../../../utils/native/UploadUtils.tsx") /* openImagePickerUnhandled */;
+  let obj = openImagePickerUnhandled /* openImagePickerUnhandled */;
   const filename = obj.getFileFromUploadItem(result1).filename;
   if (outer1_1.target === constants.COMMAND) {
     const current = onSelectFiles.current;
@@ -731,8 +742,8 @@ export const addAttachmentForCommand = function addAttachmentForCommand(channelI
   } else if (tmp2.INTERACTION_MODAL === target) {
     InteractionModal = DraftType.InteractionModal;
   }
-  require("../../../actions/UploadAttachmentActionCreators.tsx").remove(channelId, outer1_1.option.name, InteractionModal);
-  const obj4 = require("../../../actions/UploadAttachmentActionCreators.tsx");
+  dispatcher.remove(channelId, outer1_1.option.name, InteractionModal);
+  const obj4 = dispatcher;
   obj = { channelId, file: null, draftType: null, allowOptimization: false };
   const obj1 = {};
   const merged = Object.assign(result1);
@@ -741,7 +752,7 @@ export const addAttachmentForCommand = function addAttachmentForCommand(channelI
   obj1.filename = filename;
   obj[1] = obj1;
   obj[2] = InteractionModal;
-  require("../../../actions/UploadAttachmentActionCreators.tsx").addFile(obj);
+  dispatcher.addFile(obj);
 };
 export const handleCameraDialog = function handleCameraDialog(arg0) {
   let map;
@@ -750,7 +761,7 @@ export const handleCameraDialog = function handleCameraDialog(arg0) {
   let importDefault;
   let require;
   ({ channel: require, previewType: importDefault, onDismissKeyboard: dependencyMap, onRestoreKeyboard: map, onSelectFiles: CHANNEL_SIDEBAR_WIDTH } = arg0);
-  const permission = require("../../native_permissions/NativePermissionUtils.tsx").requestPermission(NativePermissionTypes.CAMERA);
+  const permission = NativePermissionsRequestOptions.requestPermission(NativePermissionTypes.CAMERA);
   permission.then((arg0) => {
     if (arg0) {
       let obj = _undefined2(_undefined3[14]);
@@ -924,9 +935,9 @@ export const handleViewAllDialog = function handleViewAllDialog(arg0) {
       }
     });
   }
-  obj = require("../../../utils/PlatformUtils.tsx") /* set */;
+  obj = set /* set */;
   const tmp = require;
-  resolved = require("../../native_permissions/NativePermissionUtils.tsx").requestPermission(NativePermissionTypes.PHOTOS);
+  resolved = NativePermissionsRequestOptions.requestPermission(NativePermissionTypes.PHOTOS);
 };
 export { handleLimitedPickerDialog };
 export const handleSelectGift = function handleSelectGift(analyticsLocations, chatInput, current2) {
@@ -935,7 +946,7 @@ export const handleSelectGift = function handleSelectGift(analyticsLocations, ch
   channelId = channelId.getChannelId();
   current.closeCustomKeyboard();
   channel = channel.getChannel(channelId);
-  const ComponentDispatch = _require("../../../utils/ComponentDispatchUtils.tsx").ComponentDispatch;
+  const ComponentDispatch = _ComponentDispatcher.ComponentDispatch;
   ComponentDispatch.dispatch(constants8.MEDIA_KEYBOARD_GIFT_SELECTED);
   let obj = { section: constants6.CHANNEL_TEXT_AREA, object: constants3.BUTTON_ICON, objectType: constants4.GIFT, page: null };
   let guild_id;
@@ -959,8 +970,8 @@ export const handleSelectGift = function handleSelectGift(analyticsLocations, ch
     guild_id1 = channel.guild_id;
   }
   obj[2] = guild_id1;
-  require("../../../utils/AnalyticsUtils.tsx").track(constants2.CHAT_INPUT_COMPONENT_VIEWED, obj);
-  const obj3 = require("../../../utils/AnalyticsUtils.tsx");
+  expandEventProperties.track(constants2.CHAT_INPUT_COMPONENT_VIEWED, obj);
+  const obj3 = expandEventProperties;
   const tmp3 = _require;
   let recipientId;
   if (null != channel) {
@@ -982,10 +993,10 @@ export const handleSelectGift = function handleSelectGift(analyticsLocations, ch
     };
   }
   obj1[4] = fn;
-  _require("../../premium/native/utils/openGiftModal.tsx").openGiftModal(obj1);
+  _openGiftModal.openGiftModal(obj1);
 };
 export const handleSelectThread = function handleSelectThread(channel, chatInput) {
-  let obj = require("../../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { type: constants7.START_THREAD, channel_id: channel.id, guild_id: null };
   let guild_id;
   if (channel != null) {
@@ -1000,10 +1011,10 @@ export const handleSelectThread = function handleSelectThread(channel, chatInput
       const current2 = chatInput.current;
       current2.blur();
     }
-    obj3 = require("../../../utils/PlatformUtils.tsx") /* set */;
+    obj3 = set /* set */;
     const tmp6 = require;
-    const result = require("../../threads/native/navigateToThreadCreation.tsx") /* navigateToThreadCreation */.navigateToThreadCreation(channel, "Plus Button");
-    const tmp6Result = require("../../threads/native/navigateToThreadCreation.tsx") /* navigateToThreadCreation */;
+    const result = navigateToThreadCreation /* navigateToThreadCreation */.navigateToThreadCreation(channel, "Plus Button");
+    const tmp6Result = navigateToThreadCreation /* navigateToThreadCreation */;
   }
 };
 export { handleAttachFile };
@@ -1013,7 +1024,7 @@ export const mediaNodeToUploadItem = function mediaNodeToUploadItem(item) {
   if (uri == null) {
     uri = image.uri;
   }
-  let obj = { id: uri, origin: require("../../../lib/uploader/Upload.tsx") /* cancel */.UploadOrigin.IMAGE_PICKER, uri: image.uri, originalUri: image.uri, mimeType: image.mimeType, width: image.width, height: image.height, filename: image.filename, playableDuration: image.playableDuration, platform: require("../../../lib/uploader/Upload.tsx") /* cancel */.UploadPlatform.REACT_NATIVE };
+  let obj = { id: uri, origin: cancel /* cancel */.UploadOrigin.IMAGE_PICKER, uri: image.uri, originalUri: image.uri, mimeType: image.mimeType, width: image.width, height: image.height, filename: image.filename, playableDuration: image.playableDuration, platform: cancel /* cancel */.UploadPlatform.REACT_NATIVE };
   let tmp = null != arg1;
   if (tmp) {
     obj = { createdUsingInAppCamera: null };
@@ -1036,12 +1047,12 @@ export const cropResultToUploadItem = function cropResultToUploadItem(path) {
   const obj = { id: null, uri: null, originalUri: null, mimeType: null, width: null, height: null, filename: null, platform: null };
   const arr = parts.pop();
   const str = path.path;
-  obj[0] = require("../../../../_runtime/00012_apply.js").uniqueId(path.path);
+  obj[0] = apply.uniqueId(path.path);
   obj[1] = combined;
   obj[2] = combined;
   ({ mime: obj[3], width: obj[4], height: obj[5] } = path);
   obj[6] = arr;
-  obj[7] = require("../../../lib/uploader/Upload.tsx") /* cancel */.UploadPlatform.REACT_NATIVE;
+  obj[7] = cancel /* cancel */.UploadPlatform.REACT_NATIVE;
   return obj;
 };
 export { handleSelectKeyboardItem };

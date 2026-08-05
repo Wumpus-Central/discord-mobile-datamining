@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { useIsConnectedToVoiceChannel } from "../../voice_chat/VoiceChatHooks.tsx";
 // discord_app/modules/video_calls/native/useIsFiveButtonLayout.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -8,10 +10,10 @@ const result = require("initialize").fileFinishedImporting("modules/video_calls/
 export const useIsFiveButtonLayout = function useIsFiveButtonLayout(id) {
   const _require = id;
   const items = [ensureGuildLoaded];
-  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_3.getChannel(closure_0));
-  const obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_3.getChannel(closure_0));
+  const obj = _initialize;
   const tmp = _require;
-  let isConnectedToVoiceChannel = _require("../../voice_chat/VoiceChatHooks.tsx").useIsConnectedToVoiceChannel(stateFromStores);
+  let isConnectedToVoiceChannel = _useIsConnectedToVoiceChannel.useIsConnectedToVoiceChannel(stateFromStores);
   let guild_id;
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
@@ -20,7 +22,7 @@ export const useIsFiveButtonLayout = function useIsFiveButtonLayout(id) {
     guild_id = null;
   }
   let guild_id1;
-  const obj3 = _require("../../voice_chat/VoiceChatHooks.tsx");
+  const obj3 = _useIsConnectedToVoiceChannel;
   if (stateFromStores != null) {
     guild_id1 = stateFromStores.guild_id;
   }

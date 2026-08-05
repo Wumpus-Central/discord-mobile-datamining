@@ -1,3 +1,5 @@
+import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import { mutable } from "../AccessibilityPreferencesSharedValue.native.tsx";
 // discord_app/design/animation/reanimated/timing/timing.tsx
 import { CONFIG_NEVER_ANIMATE_TIMING } from "CONFIG_NEVER_ANIMATE";
 
@@ -6,7 +8,7 @@ function withTiming(value, timingStandard, fn, fn2) {
   if (fn === undefined) {
     str = "respect-motion-settings";
   }
-  const accessibilityPreferencesSharedValue = require("../AccessibilityPreferencesSharedValue.native.tsx") /* mutable */.accessibilityPreferencesSharedValue;
+  const accessibilityPreferencesSharedValue = mutable /* mutable */.accessibilityPreferencesSharedValue;
   if ("animate-always" === str) {
     let tmp7 = timingStandard;
     if (tmp4) {
@@ -23,7 +25,7 @@ function withTiming(value, timingStandard, fn, fn2) {
   } else {
     tmp5 = CONFIG_NEVER_ANIMATE_TIMING;
   }
-  return require("../../../../modules/reanimated/ReanimatedRexport.tsx").withTiming(value, tmp5, fn2);
+  return ReanimatedRexport.withTiming(value, tmp5, fn2);
 }
 withTiming.__closure = { accessibilityPreferencesSharedValue: require("mutable").accessibilityPreferencesSharedValue, CONFIG_NEVER_ANIMATE_TIMING, ReduceMotion: require("module_4146").ReduceMotion, REAwithTiming: require("module_4146").withTiming };
 withTiming.__workletHash = 6710776253444;

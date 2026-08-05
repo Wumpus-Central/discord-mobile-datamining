@@ -1,3 +1,7 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { renderLabel } from "../../../components_native/common/IconLabelBlock.tsx";
+import { NavScrim } from "../../../design/components/Navigator/native/NavScrim.android.tsx";
+import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
 // discord_app/modules/integration_settings/native/IntegrationsSettingsEditWebhook.tsx
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_3 } from "comparator";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -239,7 +243,7 @@ prototype["render"] = function render() {
   let obj = { style: tmp.form, contentContainerStyle: items, children: null };
   items = [{ paddingTop: 16 }, self.props.contentContainerStyle];
   obj = { spacing: null, style: null, children: null };
-  obj[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24;
+  obj[0] = Themes.space.PX_24;
   obj[1] = { paddingHorizontal: tmp.row.padding };
   tmp2Result = null;
   if (props.webhookType !== constants.CHANNEL_FOLLOWER) {
@@ -256,8 +260,8 @@ prototype["render"] = function render() {
     obj[0] = obj1;
     const intl2 = tmp3(1236).intl;
     obj[1] = intl2.string(tmp3(1236).t["7+5GQa"]);
-    tmp2Result = tmp2(require("../../../components_native/common/IconLabelBlock.tsx"), obj);
-    const tmp8Result = require("../../../components_native/common/IconLabelBlock.tsx");
+    tmp2Result = tmp2(renderLabel, obj);
+    const tmp8Result = renderLabel;
   }
   const items1 = [tmp2Result, , , , ];
   const obj2 = { label: null, value: null, onChange: null, errorMessage: null };
@@ -319,11 +323,11 @@ let obj1 = { padding: require("Themes").modules.mobile.TABLE_ROW_PADDING };
 const result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/integration_settings/native/IntegrationsSettingsEditWebhook.tsx");
 
 export default function ConnectedEditWebhook(arg0) {
-  let obj = require("../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
+  let obj = useNavigation /* useNavigation */;
   obj = { children: null };
   obj = { navigation: obj.useNavigation() };
   const merged = Object.assign(arg0);
-  const items = [callback(EditWebhook, obj), callback(require("../../../design/components/Navigator/native/NavScrim.android.tsx") /* NavScrim */.NavScrim, {})];
+  const items = [callback(EditWebhook, obj), callback(NavScrim /* NavScrim */.NavScrim, {})];
   obj[0] = items;
   return callback2(closure_13, obj);
 };

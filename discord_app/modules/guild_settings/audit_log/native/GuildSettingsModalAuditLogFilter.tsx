@@ -1,3 +1,4 @@
+import { getPermissionChanges } from "../AuditLogUtils.tsx";
 // discord_app/modules/guild_settings/audit_log/native/GuildSettingsModalAuditLogFilter.tsx
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
@@ -231,8 +232,8 @@ export const createAuditLogFilterUserData = function createAuditLogFilterUserDat
 };
 export const createAuditLogFilterActionData = function createAuditLogFilterActionData(Button) {
   const _require = Button;
-  const obj = _require("../AuditLogUtils.tsx");
-  const mapped = _require("../AuditLogUtils.tsx").ACTION_FILTER_ITEMS().map((label, index) => ({ label: label.label, value: label.value, selected: closure_0 === label.value, index }));
+  const obj = _getPermissionChanges;
+  const mapped = _getPermissionChanges.ACTION_FILTER_ITEMS().map((label, index) => ({ label: label.label, value: label.value, selected: closure_0 === label.value, index }));
   return mapped.sort((selected, selected2) => {
     let num = -1;
     if (!selected.selected) {

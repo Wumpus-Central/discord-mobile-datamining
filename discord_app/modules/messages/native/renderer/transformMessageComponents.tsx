@@ -1,3 +1,6 @@
+import { urlMatchesFileExtension } from "../../MediaFormatTesters.tsx";
+import { MediaGalleryItemType } from "RowGeneratorTypes.tsx";
+import { nativeStyleProperties } from "RowGeneratorUtils.tsx";
 // discord_app/modules/messages/native/renderer/transformMessageComponents.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { processColor } from "set";
@@ -573,7 +576,7 @@ function transformUnfurledMediaItem(file, shouldShowMedia) {
             }
             tmpResult = tmp(4472);
           }
-          obj = require("../../MediaFormatTesters.tsx") /* urlMatchesFileExtension */;
+          obj = urlMatchesFileExtension /* urlMatchesFileExtension */;
         }
         const size = {};
         const merged = Object.assign(file);
@@ -584,7 +587,7 @@ function transformUnfurledMediaItem(file, shouldShowMedia) {
           size.width = 0;
         }
         if (VISUAL_PLACEHOLDER === tmp4(8040).MediaGalleryItemType.IMAGE) {
-          const obj4 = require("RowGeneratorUtils.tsx");
+          const obj4 = nativeStyleProperties;
           ({ proxyUrl, width: width2 } = size);
           if (width2 == null) {
             width2 = 0;
@@ -602,7 +605,7 @@ function transformUnfurledMediaItem(file, shouldShowMedia) {
       }
     }
   }
-  VISUAL_PLACEHOLDER = require("RowGeneratorTypes.tsx") /* MediaGalleryItemType */.MediaGalleryItemType.VISUAL_PLACEHOLDER;
+  VISUAL_PLACEHOLDER = MediaGalleryItemType /* MediaGalleryItemType */.MediaGalleryItemType.VISUAL_PLACEHOLDER;
   tmp4 = require;
 }
 let closure_3 = ["checkpointData"];
@@ -638,10 +641,10 @@ export const getUnfurledMediaItemType = function getUnfurledMediaItemType(arg0) 
             }
             tmpResult = tmp(4472);
           }
-          obj = require("../../MediaFormatTesters.tsx") /* urlMatchesFileExtension */;
+          obj = urlMatchesFileExtension /* urlMatchesFileExtension */;
         }
       }
     }
   }
-  return require("RowGeneratorTypes.tsx") /* MediaGalleryItemType */.MediaGalleryItemType.VISUAL_PLACEHOLDER;
+  return MediaGalleryItemType /* MediaGalleryItemType */.MediaGalleryItemType.VISUAL_PLACEHOLDER;
 };

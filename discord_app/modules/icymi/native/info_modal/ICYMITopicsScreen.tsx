@@ -1,3 +1,4 @@
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/icymi/native/info_modal/ICYMITopicsScreen.tsx
 import GuildPrimaryCategory from "GuildPrimaryCategory";
 import initialize from "initialize";
@@ -93,7 +94,7 @@ let result = require("noop").fileFinishedImporting("modules/icymi/native/info_mo
 
 export default function ICYMITopicsScreen() {
   const tmp = createCacheKey();
-  const bottom = require("../../../safe_area/useSafeAreaInsets.native.tsx")().bottom;
+  const bottom = useSafeAreaInsets().bottom;
   const tmp4 = callback(React.useState(new Set()), 2);
   const first = tmp4[0];
   importDefault = tmp4[1];

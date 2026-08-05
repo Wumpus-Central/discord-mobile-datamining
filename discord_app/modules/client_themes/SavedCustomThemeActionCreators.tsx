@@ -1,3 +1,5 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/client_themes/SavedCustomThemeActionCreators.tsx
 import validateSavedTheme from "validateSavedTheme";
 import { Endpoints } from "ME";
@@ -7,9 +9,9 @@ const result = require("dispatcher").fileFinishedImporting("modules/client_theme
 
 export const fetchUserCustomThemes = function fetchUserCustomThemes() {
   if (!fetching.isFetching()) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj.dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_START" });
-    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     obj = { url: null, oldFormErrors: true, rejectWithError: true };
     obj[0] = Endpoints.USERS_ME_CUSTOM_THEMES;
     const value = HTTP.get(obj);

@@ -1,3 +1,7 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { createAutocompleterResultForChannelId } from "../autocompleter/createAutocompleterResultForChannelId.tsx";
+import { sortByMatchScore } from "../autocompleter/index.tsx";
 // discord_app/modules/quickswitcher/QuickSwitcherStore.tsx
 import set from "set";
 import rebuild from "rebuild";
@@ -24,14 +28,14 @@ const require = arg1;
 function handleConnectionOpen() {
   let tmp = store3.getGuildCount() >= 3;
   if (!tmp) {
-    tmp = require("../../../_runtime/00012_apply.js").size(mutablePrivateChannels.getMutablePrivateChannels()) >= 20;
-    const obj = require("../../../_runtime/00012_apply.js");
+    tmp = apply.size(mutablePrivateChannels.getMutablePrivateChannels()) >= 20;
+    const obj = apply;
   }
   let c25 = tmp;
   let closure_30 = [];
 }
 function generateResultFromId(arg0) {
-  const tmp = require("../autocompleter/createAutocompleterResultForChannelId.tsx")(arg0);
+  const tmp = createAutocompleterResultForChannelId(arg0);
   let tmp2 = null;
   if (null != tmp) {
     if (null == c26) {
@@ -306,8 +310,8 @@ function handleQuickSwitcherShow(arg0) {
   let closure_32 = Date.now();
   let tmp13 = store;
   if (store == null) {
-    tmp13 = require("../autocompleter/index.tsx");
-    const items1 = [require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.USER, require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.GROUP_DM, require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.TEXT_CHANNEL, require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.GUILD, require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.APPLICATION, require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.GAME_PROFILE, require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.LINK, require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.IN_APP_NAVIGATION];
+    tmp13 = sortByMatchScore;
+    const items1 = [sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.USER, sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.GROUP_DM, sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.TEXT_CHANNEL, sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.GUILD, sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.APPLICATION, sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.GAME_PROFILE, sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.LINK, sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.IN_APP_NAVIGATION];
     let num = 5;
     if (null != queryMode) {
       num = 100;
@@ -349,7 +353,7 @@ function handleUserSearchUpdate(arg0, str) {
   }
   if (!flag) {
     let DOWN = require;
-    if (require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.USER === c26) {
+    if (sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.USER === c26) {
       let name = store3.getGuild(store4.getGuildId());
       if (null != name) {
         const intl7 = DOWN(1236).intl;
@@ -457,7 +461,7 @@ prototype["initialize"] = function initialize(channelHistory) {
   this.waitFor(rebuild, fetchFingerprint, ensureGuildLoaded, handleChanged, set, comparator, trackCommunicationDisabled, createGuildRecordFromRust, getUncachedChannelPermissions, generateOldThreadCutoff, handleConnectionOpen, closure_18, handleThemeChange, updateUserGuildSettingsInternal);
   const items = [handleThemeChange];
   this.syncWith(items, () => true);
-  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   let c24 = Storage.get(seenQSTutorial) || false;
   channelHistory = undefined;
   if (channelHistory != null) {
@@ -561,7 +565,7 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(require("dispatcher"
           const items = [queryMode];
           let items1 = items;
         } else {
-          items1 = [require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.USER, require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.GROUP_DM, require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.TEXT_CHANNEL, require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.GUILD, require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.APPLICATION, require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.GAME_PROFILE, require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.LINK, require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.IN_APP_NAVIGATION];
+          items1 = [sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.USER, sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.GROUP_DM, sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.TEXT_CHANNEL, sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.GUILD, sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.APPLICATION, sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.GAME_PROFILE, sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.LINK, sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.IN_APP_NAVIGATION];
         }
         store.setResultTypes(items1);
         let num = 5;
@@ -570,7 +574,7 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(require("dispatcher"
         }
         store.setLimit(num);
         const guildId = store4.getGuildId();
-        if (queryMode === require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.USER) {
+        if (queryMode === sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.USER) {
           if (null != guildId) {
             let obj = { userFilters: null };
             obj = { guild: null, friends: true };
@@ -586,7 +590,7 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(require("dispatcher"
         }
         tmp7 = require;
       }
-      if (queryMode === require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.USER) {
+      if (queryMode === sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.USER) {
         let guildId1 = store4.getGuildId();
         if (guildId1 == null) {
           guildId1 = null;
@@ -605,7 +609,7 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(require("dispatcher"
       return false;
     } else {
       c24 = true;
-      const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage = Storage /* Storage */.Storage;
       const result = Storage.set(seenQSTutorial, true);
     }
   },

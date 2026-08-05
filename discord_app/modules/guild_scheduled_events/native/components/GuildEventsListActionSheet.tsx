@@ -1,3 +1,4 @@
+import { useCanCreateAnEvent } from "../../useCanCreateAnEvent.tsx";
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventsListActionSheet.tsx
 import Background from "Background";
 import { View } from "expandEventProperties";
@@ -14,7 +15,7 @@ function GuildEventsListHeader(arg0) {
   let guild;
   ({ eventCount, guild } = arg0);
   let importDefault;
-  let tmp3Result = require("../../useCanCreateAnEvent.tsx")(guild.id);
+  let tmp3Result = useCanCreateAnEvent(guild.id);
   importDefault = tmp3Result;
   if (eventCount > 0) {
     const intl2 = tmp4(1236).intl;

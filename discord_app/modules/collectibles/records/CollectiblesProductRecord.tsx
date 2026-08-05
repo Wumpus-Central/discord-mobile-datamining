@@ -1,3 +1,5 @@
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import { getPricesFromServer } from "../../skus/utils/getPricesFromServer.tsx";
 // discord_app/modules/collectibles/records/CollectiblesProductRecord.tsx
 import _slicedToArray from "_slicedToArray";
 import fromServer from "fromServer";
@@ -49,7 +51,7 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
   obj.premiumType = tmp8;
   obj.categorySkuId = category_sku_id;
   obj.isCategoryReward = closure_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === merged.sku_id);
-  obj.prices = require("../../skus/utils/getPricesFromServer.tsx")(prices);
+  obj.prices = getPricesFromServer(prices);
   obj.items = callback(merged.items);
   let mapped;
   if (bundled_products != null) {
@@ -92,7 +94,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
     }
     if (null != collectibles) {
       if (skus.skus.length > 1) {
-        let type = _require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType.VARIANTS_GROUP;
+        let type = _CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP;
       } else {
         type = collectibles.type;
       }
@@ -128,7 +130,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
       obj[9] = closure_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === first.id);
       ({ prices: obj2[10], previewAssetPaths } = first);
       obj[11] = previewAssetPaths;
-      let str2 = _require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType.VARIANTS_GROUP;
+      let str2 = _CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP;
       let found;
       if (type === str2) {
         skus = skus.skus;

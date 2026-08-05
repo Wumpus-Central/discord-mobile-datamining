@@ -1,3 +1,9 @@
+import { set } from "../../actions/AlertActionCreators.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { ComponentDispatcher } from "../../utils/ComponentDispatchUtils.tsx";
+import { set } from "../../utils/Durations.tsx";
+import { ReactionTypes } from "../messages/MessageReactionsTypes.tsx";
 // discord_app/modules/reactions/ReactionActionCreators.tsx
 import set from "set";
 import fetchFingerprint from "fetchFingerprint";
@@ -23,7 +29,7 @@ function checkReactionResponse(arg0, arg1, isRetry) {
       const _isNaN = isNaN;
       if (!isNaN(parsed)) {
         const _setTimeout = setTimeout;
-        const timerId = setTimeout(arg1, parsed * require("../../utils/Durations.tsx").Millis.SECOND);
+        const timerId = setTimeout(arg1, parsed * set.Millis.SECOND);
       }
       return false;
     }
@@ -34,17 +40,17 @@ function checkReactionResponse(arg0, arg1, isRetry) {
         code = body.code;
       }
       if (constants.TOO_MANY_REACTIONS === code) {
-        let obj = require("../../actions/AlertActionCreators.tsx");
+        let obj = set;
         obj = { title: null, body: null, confirmText: null };
-        const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.lFddsR);
-        const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        obj[1] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.h27eIm);
-        const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        obj[2] = intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.BddRzS);
+        const intl = getSystemLocale /* getSystemLocale */.intl;
+        obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.lFddsR);
+        const intl2 = getSystemLocale /* getSystemLocale */.intl;
+        obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.h27eIm);
+        const intl3 = getSystemLocale /* getSystemLocale */.intl;
+        obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.BddRzS);
         obj.show(obj);
       } else if (tmp3.REACTION_BLOCKED === code) {
-        const ComponentDispatch = require("../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
+        const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
         ComponentDispatch.dispatch(constants2.SHAKE_APP, { duration: 200, intensity: 2 });
       }
     } else if (!isRetry.isRetry) {
@@ -55,7 +61,7 @@ function checkReactionResponse(arg0, arg1, isRetry) {
   }
 }
 function optimisticDispatch(type, channelId, messageId, arg3, userId) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type, channelId, messageId, userId: null, emoji: null, optimistic: true, colors: null, reactionType: null };
   userId = userId.userId;
   if (userId == null) {
@@ -68,7 +74,7 @@ function optimisticDispatch(type, channelId, messageId, arg3, userId) {
     colors = [];
   }
   obj[6] = colors;
-  const ReactionTypes = require("../messages/MessageReactionsTypes.tsx") /* ReactionTypes */.ReactionTypes;
+  const ReactionTypes = ReactionTypes /* ReactionTypes */.ReactionTypes;
   obj[7] = userId.burst ? ReactionTypes.BURST : ReactionTypes.NORMAL;
   obj.dispatch(obj);
 }
@@ -84,7 +90,7 @@ function makeURL(type) {
   }
   let NORMAL = type.type;
   if (NORMAL === undefined) {
-    NORMAL = require("../messages/MessageReactionsTypes.tsx") /* ReactionTypes */.ReactionTypes.NORMAL;
+    NORMAL = ReactionTypes /* ReactionTypes */.ReactionTypes.NORMAL;
   }
   if (null != emoji.id) {
     const _HermesInternal = HermesInternal;
@@ -1024,7 +1030,7 @@ export const playBurstReaction = function playBurstReaction(arg0) {
   let key;
   let messageId;
   ({ channelId, messageId, emoji, key } = arg0);
-  require("../../Dispatcher.tsx").dispatch({ type: "BURST_REACTION_EFFECT_PLAY", channelId, messageId, emoji, key });
+  dispatcher.dispatch({ type: "BURST_REACTION_EFFECT_PLAY", channelId, messageId, emoji, key });
 };
 export { removeAllReactions };
 export { removeEmojiReactions };

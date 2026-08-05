@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/guild_automod/AutomodErrorUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AbortCodes } from "ME";
@@ -23,8 +24,8 @@ function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
           isThreadResult = channel.isThread();
         }
         if (isThreadResult) {
-          const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-          return intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.DVdG9E);
+          const intl3 = getSystemLocale /* getSystemLocale */.intl;
+          return intl3.string(getSystemLocale /* getSystemLocale */.t.DVdG9E);
         } else {
           let isForumPostResult;
           if (channel != null) {
@@ -32,11 +33,11 @@ function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
           }
           if (isForumPostResult) {
             if (code === AbortCodes.AUTOMOD_TITLE_BLOCKED) {
-              const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-              return intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.ipgKDg);
+              const intl2 = getSystemLocale /* getSystemLocale */.intl;
+              return intl2.string(getSystemLocale /* getSystemLocale */.t.ipgKDg);
             } else if (code === tmp4.AUTOMOD_MESSAGE_BLOCKED) {
-              const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-              return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.ipgKDg);
+              const intl = getSystemLocale /* getSystemLocale */.intl;
+              return intl.string(getSystemLocale /* getSystemLocale */.t.ipgKDg);
             }
           } else {
             let isForumLikeChannelResult;
@@ -108,8 +109,8 @@ export const getAutomodErrorMessage = function getAutomodErrorMessage(messageDat
   if (null != tmp) {
     return tmp;
   } else if (null == messageData) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    let stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.zQ69pv);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.zQ69pv);
   } else {
     stringResult = getAutomodErrorMessageFromMessageData(messageData);
   }

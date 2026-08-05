@@ -1,3 +1,4 @@
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 // discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheetConsoleConnect.tsx
 import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource";
 import { View } from "AdCreativeType";
@@ -22,7 +23,7 @@ function NonInlineConsoleConnection(arg0) {
     obj.onPress = closure_0;
     return outer1_6(outer1_8, obj, type.type);
   });
-  return callback(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj);
+  return callback(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
 }
 function ConsoleRow(onPress) {
   onPress = onPress.onPress;

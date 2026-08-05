@@ -1,3 +1,4 @@
+import { trackInvite } from "../actions/MessageActionCreators.tsx";
 // discord_app/lib/InviteQueue.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import "enqueue";
@@ -17,8 +18,8 @@ class InviteQueue extends tmp4 {
 const prototype = InviteQueue.prototype;
 prototype["_sendInvite"] = function _sendInvite(channel, inviteKey, _location, inviteAnalyticsMetadata, ensureGuildLoaded) {
   const importDefault = ensureGuildLoaded;
-  const obj = require("../actions/MessageActionCreators.tsx");
-  require("../actions/MessageActionCreators.tsx").sendInvite(channel.id, inviteKey, _location, inviteAnalyticsMetadata).then(() => callback(null, true), () => callback(null, false));
+  const obj = trackInvite;
+  trackInvite.sendInvite(channel.id, inviteKey, _location, inviteAnalyticsMetadata).then(() => callback(null, true), () => callback(null, false));
 };
 function drain(location, sum, arg2, prototype, arg4, InviteQueue, drain, dependencyMap, arg8) {
   let self = this;

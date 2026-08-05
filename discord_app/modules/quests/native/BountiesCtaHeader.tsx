@@ -1,3 +1,11 @@
+import { metadata } from "../../../../discord_assets/assets/quests/bounties/bounty_banner.mp4.js";
+import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
+import { items } from "../../../../discord_common/js/packages/design/shared/ThemeTypes.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useTrackQuestEventWithImpression } from "../lib/analytics/AnalyticsHooks.tsx";
+import { BountiesBannerBackground } from "BountiesBannerBackground.tsx";
+import { openBountiesNuxPromoSheet } from "openBountiesNuxPromoSheet.tsx";
 // discord_app/modules/quests/native/BountiesCtaHeader.tsx
 import importAllResult from "metadata";
 import get_ActivityIndicator from "BOUNTIES_MODAL_KEY";
@@ -17,7 +25,7 @@ let unpackModuleId;
 const require = arg1;
 function BountiesCtaDescription(isEmptyOrCompleted) {
   isEmptyOrCompleted = isEmptyOrCompleted.isEmptyOrCompleted;
-  const t = require("../../../intl/index.native.tsx") /* getSystemLocale */.t;
+  const t = getSystemLocale /* getSystemLocale */.t;
   if (isEmptyOrCompleted) {
     let AZGGo1 = t.q4wlOE;
     let tmp5 = tmp2;
@@ -31,7 +39,7 @@ function BountiesCtaDescription(isEmptyOrCompleted) {
   const tmp7 = callback(tmp5(4281).Text, obj);
   const intl2 = tmp5(1236).intl;
   obj = { onClick: null };
-  obj[0] = require("openBountiesNuxPromoSheet.tsx");
+  obj[0] = openBountiesNuxPromoSheet;
   const formatResult = intl2.format(tmp5(1236).t.fjSvsC, obj);
   if (isEmptyOrCompleted) {
     obj = { variant: "text-sm/medium", children: null };
@@ -79,7 +87,7 @@ function BountiesCtaHeaderInner(bounties) {
     _undefined(outer1_2[17]).showModal(obj);
   }, items3);
   obj = { uri: null, style: null, children: null };
-  obj[0] = require("../../../../discord_assets/assets/quests/bounties/bounty_banner.mp4.js");
+  obj[0] = metadata;
   const items4 = [, ];
   ({ header: arr5[0], headerRoundedBottom: arr5[1] } = tmp);
   obj[1] = items4;
@@ -107,7 +115,7 @@ function BountiesCtaHeaderInner(bounties) {
   obj2[1] = items6;
   items5[1] = closure_11(closure_4, obj2);
   obj[2] = items5;
-  const items7 = [closure_11(require("BountiesBannerBackground.tsx"), obj), false];
+  const items7 = [closure_11(BountiesBannerBackground, obj), false];
   obj[2] = items7;
   return closure_11(closure_4, obj);
 }
@@ -117,24 +125,24 @@ let c3 = importAllResult;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles(() => {
   let obj = { container: null, header: null, headerRoundedBottom: null, newPill: null, newPillText: null, headerTextBox: null, description: null, bottomSection: null, bottomContent: null, placeholderCards: null };
-  obj = { width: "100%", backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH, borderWidth: 1, borderColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_MUTED, borderBottomLeftRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xxl, borderBottomRightRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xxl, overflow: "hidden" };
+  obj = { width: "100%", backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH, borderWidth: 1, borderColor: Themes.colors.BORDER_MUTED, borderBottomLeftRadius: Themes.radii.xxl, borderBottomRightRadius: Themes.radii.xxl, overflow: "hidden" };
   obj[0] = obj;
-  obj = { width: "100%", minHeight: 296, justifyContent: "flex-end", overflow: "hidden", backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH };
+  obj = { width: "100%", minHeight: 296, justifyContent: "flex-end", overflow: "hidden", backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH };
   obj[1] = obj;
-  obj[2] = { borderBottomLeftRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xxl, borderBottomRightRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xxl };
-  const obj1 = { borderBottomLeftRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xxl, borderBottomRightRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xxl };
-  obj[3] = { position: "absolute", top: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, left: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, zIndex: 1, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.round, paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, paddingVertical: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
-  const obj2 = { position: "absolute", top: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, left: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, zIndex: 1, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.round, paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, paddingVertical: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
-  obj[4] = { color: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
-  const obj3 = { color: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
-  obj[5] = { paddingBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_20, gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  obj[2] = { borderBottomLeftRadius: Themes.radii.xxl, borderBottomRightRadius: Themes.radii.xxl };
+  const obj1 = { borderBottomLeftRadius: Themes.radii.xxl, borderBottomRightRadius: Themes.radii.xxl };
+  obj[3] = { position: "absolute", top: Themes.space.PX_12, left: Themes.space.PX_12, zIndex: 1, backgroundColor: Themes.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: Themes.radii.round, paddingHorizontal: Themes.space.PX_8, paddingVertical: Themes.space.PX_4 };
+  const obj2 = { position: "absolute", top: Themes.space.PX_12, left: Themes.space.PX_12, zIndex: 1, backgroundColor: Themes.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: Themes.radii.round, paddingHorizontal: Themes.space.PX_8, paddingVertical: Themes.space.PX_4 };
+  obj[4] = { color: Themes.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
+  const obj3 = { color: Themes.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
+  obj[5] = { paddingBottom: Themes.space.PX_24, paddingHorizontal: Themes.space.PX_20, gap: Themes.space.PX_8 };
   obj[6] = { marginBottom: 16 };
-  const obj4 = { paddingBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_20, gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
-  obj[7] = { width: "100%", overflow: "hidden", borderBottomLeftRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xl, borderBottomRightRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xl };
-  const obj5 = { width: "100%", overflow: "hidden", borderBottomLeftRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xl, borderBottomRightRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xl };
-  obj[8] = { paddingBottom: 24, paddingHorizontal: 20, gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
-  const obj6 = { paddingBottom: 24, paddingHorizontal: 20, gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
-  obj[9] = { alignSelf: "stretch", height: 160, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.md, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
+  const obj4 = { paddingBottom: Themes.space.PX_24, paddingHorizontal: Themes.space.PX_20, gap: Themes.space.PX_8 };
+  obj[7] = { width: "100%", overflow: "hidden", borderBottomLeftRadius: Themes.radii.xl, borderBottomRightRadius: Themes.radii.xl };
+  const obj5 = { width: "100%", overflow: "hidden", borderBottomLeftRadius: Themes.radii.xl, borderBottomRightRadius: Themes.radii.xl };
+  obj[8] = { paddingBottom: 24, paddingHorizontal: 20, gap: Themes.space.PX_12 };
+  const obj6 = { paddingBottom: 24, paddingHorizontal: 20, gap: Themes.space.PX_12 };
+  obj[9] = { alignSelf: "stretch", height: 160, borderRadius: Themes.radii.md, backgroundColor: Themes.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
   return obj;
 });
 const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrCompleted) {
@@ -147,10 +155,10 @@ const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrComp
     tmp3 = isEmptyOrCompleted;
   }
   if (!tmp3) {
-    let obj = _require("../lib/analytics/AnalyticsHooks.tsx");
+    let obj = _useTrackQuestEventWithImpression;
     const bountyCarouselEmptyStateAnalytics = obj.useBountyCarouselEmptyStateAnalytics(null);
     obj = { theme: null, children: null };
-    obj[0] = _require("../../../../discord_common/js/packages/design/shared/ThemeTypes.tsx").ThemeTypes.DARKER;
+    obj[0] = _items.ThemeTypes.DARKER;
     if (tmp3) {
       obj = {};
       let merged = Object.assign(isEmptyOrCompleted);
@@ -172,7 +180,7 @@ const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrComp
       tmp9Result = tmp9(tmp7(11090).QuestContentImpressionTrackerNative, obj1);
     }
     obj[1] = tmp9Result;
-    return closure_10(_require("../../../../discord_common/js/packages/design/native.tsx").ThemeContextProvider, obj);
+    return closure_10(_ManaContext.ThemeContextProvider, obj);
   } else if (0 === isEmptyOrCompleted.bounties.length) {
     let COMPLETED = constants.EMPTY;
   } else {

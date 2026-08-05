@@ -1,3 +1,15 @@
+import { metadata } from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import { set } from "../../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useCurrentUser } from "../hooks/useCurrentUser.tsx";
+import { NameplateInner } from "../nameplates/native/Nameplate.tsx";
+import { getNameplateData } from "../nameplates/utils.tsx";
+import { useProfileEffect } from "../profile_effects/useProfileEffect.tsx";
+import { useMaybeFetchProfileFrame } from "../profile_frames/hooks/useMaybeFetchProfileFrame.tsx";
+import { AvatarDecorationSampleV2 } from "AvatarDecorationSampleV2.tsx";
 // discord_app/modules/collectibles/native/CollectiblesShopCheckoutDetails.tsx
 import FRACTIONAL_NITRO_COIN_SIZE from "FRACTIONAL_NITRO_COIN_SIZE";
 import { View } from "CollectiblesItemType";
@@ -16,7 +28,7 @@ let metroImportAll;
 let require = arg1;
 function ProfileEffectAssetPreview(item) {
   const tmp = callback4();
-  const tmp4 = require("../profile_effects/useProfileEffect.tsx")(item.item.skuId);
+  const tmp4 = useProfileEffect(item.item.skuId);
   let tmp5 = null;
   if (null != tmp4) {
     let obj = { style: null, children: null };
@@ -46,7 +58,7 @@ function ProfileFrameAssetPreview(arg0) {
   let item;
   let width;
   ({ item, width, height } = arg0);
-  const tmp3 = require("../profile_frames/hooks/useMaybeFetchProfileFrame.tsx")(item.skuId, "CollectiblesShopCheckoutDetails");
+  const tmp3 = useMaybeFetchProfileFrame(item.skuId, "CollectiblesShopCheckoutDetails");
   let tmp4 = null;
   if (null != tmp3) {
     const obj = { profileFrame: null, previewWidth: null, previewHeight: null, profileBackgroundColor: null };
@@ -109,16 +121,16 @@ function BundleAssetPreview(height) {
   return callback(rounded, obj);
 }
 function NameplateAssetPreview(item) {
-  let obj = require("../nameplates/utils.tsx") /* getNameplateData */;
+  let obj = getNameplateData /* getNameplateData */;
   const nameplateData = obj.getNameplateData(item.item);
   obj = { nameplate: nameplateData, fullOpacity: true, isSquarePreview: true, style: createCacheKey().nameplate };
-  return callback(require("../nameplates/native/Nameplate.tsx"), obj);
+  return callback(NameplateInner, obj);
 }
 function CollectibleProductPreview(arg0) {
   let product;
   let recipientUser;
   ({ product, recipientUser } = arg0);
-  if (product.type === require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT) {
+  if (product.type === CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT) {
     let num = 42;
   } else {
     num = 55;
@@ -137,7 +149,7 @@ function CollectibleProductPreviewContent(userAvatarSource) {
   let product;
   let width;
   ({ product, width, height } = userAvatarSource);
-  const ALL = require("../../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx") /* set */.FractionalPremiumSKUsSets.ALL;
+  const ALL = set /* set */.FractionalPremiumSKUsSets.ALL;
   if (ALL.has(product.skuId)) {
     let obj = { skuId: null, width: null, height: null };
     obj[0] = product.skuId;
@@ -147,10 +159,10 @@ function CollectibleProductPreviewContent(userAvatarSource) {
   } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
     obj = { source: null, style: null };
     const obj1 = { uri: null };
-    obj1[0] = require("../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js");
+    obj1[0] = metadata;
     obj[0] = obj1;
     obj[1] = tmp.externalProductImage;
-    return callback(require("../../../components_native/common/FastImage.tsx"), obj);
+    return callback(preload, obj);
   } else {
     const type = product.type;
     if (tmp2(1901).CollectiblesItemType.AVATAR_DECORATION === type) {
@@ -158,7 +170,7 @@ function CollectibleProductPreviewContent(userAvatarSource) {
       obj2[0] = product.items[0];
       obj2[1] = width;
       obj2[2] = userAvatarSource.userAvatarSource;
-      return callback(require("AvatarDecorationSampleV2.tsx"), obj2);
+      return callback(AvatarDecorationSampleV2, obj2);
     } else if (tmp2(1901).CollectiblesItemType.PROFILE_EFFECT === type) {
       const obj3 = { item: null };
       obj3[0] = product.items[0];
@@ -226,7 +238,7 @@ function ProductDetails(product) {
     obj[0] = tmp.productDetails;
     obj = { variant: "text-md/semibold", children: null };
     obj[1] = product.name;
-    obj[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+    obj[1] = callback(Text /* Text */.Text, obj);
     let tmp7 = callback(View, obj);
   } else {
     obj = { style: null, children: null };
@@ -239,10 +251,10 @@ function ProductDetails(product) {
     obj2[0] = tmp.productDetailsTextContainer;
     const obj3 = { variant: "text-md/semibold", children: null };
     obj3[1] = product.name;
-    const items2 = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3), ];
+    const items2 = [callback(Text /* Text */.Text, obj3), ];
     const obj4 = { variant: "text-sm/medium", children: null };
     obj4[1] = memo;
-    items2[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj4);
+    items2[1] = callback(Text /* Text */.Text, obj4);
     obj2[1] = items2;
     items1[1] = callback2(View, obj2);
     obj[1] = items1;
@@ -304,7 +316,7 @@ let obj4 = { gap: require("Themes").space.PX_4 };
 createCacheKey[8] = { height: 36, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", paddingHorizontal: require("Themes").space.PX_16, borderBottomLeftRadius: require("Themes").radii.lg, borderBottomRightRadius: require("Themes").radii.lg };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let closure_10 = createCacheKey.createStyles((arg0) => {
-  const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
+  const colors = Themes.colors;
   if (arg0) {
     let BORDER_FEEDBACK_CRITICAL = colors.BACKGROUND_BRAND;
     let tmp4 = tmp;
@@ -346,7 +358,7 @@ export default function CollectiblesShopCheckoutDetails(recipientUser) {
   }
   let dependencyMap;
   const tmp = createCacheKey();
-  let obj = require("../hooks/useCurrentUser.tsx") /* useCurrentUser */;
+  let obj = useCurrentUser /* useCurrentUser */;
   const currentUser = obj.useCurrentUser();
   let obj1 = flag2(3931);
   const canUseShopDiscountsResult = obj1.canUseShopDiscounts(currentUser);

@@ -1,3 +1,6 @@
+import { t } from "../../_runtime/03867_t.js";
+import { SentryUtils.native } from "../utils/SentryUtils.native.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/records/AuditLogRecord.tsx
 import "toJS";
 import ME from "ME";
@@ -73,9 +76,9 @@ function getTargetType(action) {
                               CHANNEL = constants.GUILD;
                             } else {
                               const _HermesInternal = HermesInternal;
-                              require("../utils/SentryUtils.native.tsx").captureMessage("Unknown target type for: " + action);
+                              SentryUtils.native.captureMessage("Unknown target type for: " + action);
                               CHANNEL = constants.UNKNOWN;
-                              const obj = require("../utils/SentryUtils.native.tsx");
+                              const obj = SentryUtils.native;
                             }
                           }
                         }
@@ -268,9 +271,9 @@ const prototype = function AuditLogRecord(timestampEnd) {
   tmp5.actionType = getActionType(tmp5.action);
   ({ targetId: tmp5.targetId, timestampStart } = timestampEnd);
   if (timestampStart == null) {
-    const tmp8 = require("../../_runtime/03867_t.js");
-    timestampStart = tmp8(require("../utils/SnowflakeUtils.tsx").extractTimestamp(tmp5.id));
-    const obj = require("../utils/SnowflakeUtils.tsx");
+    const tmp8 = t;
+    timestampStart = tmp8(DISCORD_EPOCH.extractTimestamp(tmp5.id));
+    const obj = DISCORD_EPOCH;
   }
   tmp5.timestampStart = timestampStart;
   let timestampStart2 = timestampEnd.timestampEnd;

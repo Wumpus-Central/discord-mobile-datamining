@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/user_settings/content_and_social/useNSFWAllowed.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 
@@ -6,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/user_settings/conte
 
 export const useNSFWAllowed = function useNSFWAllowed() {
   const items = [mergeGuildAvatar];
-  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+  return initialize /* initialize */.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;
     if (currentUser != null) {

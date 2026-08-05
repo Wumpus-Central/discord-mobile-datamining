@@ -1,30 +1,33 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
+import { items } from "../utils/QuestOrbMultiplierUtils.tsx";
 // discord_app/modules/quests/hooks/QuestOrbMultiplierHooks.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;
 function getQuestOrbMultiplierEligibilityForUser(isFractionalPremiumWithNoStandardSub) {
   if (null == isFractionalPremiumWithNoStandardSub) {
-    let INELIGIBLE = require("../utils/QuestOrbMultiplierUtils.tsx") /* items */.QuestOrbMultiplierEligibilityType.INELIGIBLE;
+    let INELIGIBLE = items /* items */.QuestOrbMultiplierEligibilityType.INELIGIBLE;
   } else {
     let QuestOrbMultiplierEligibilityType2 = dependencyMap;
     if (obj2.canUseMoreQuestOrbs(isFractionalPremiumWithNoStandardSub)) {
-      const questOrbMultiplierSource = require("../utils/QuestOrbMultiplierUtils.tsx") /* items */.getQuestOrbMultiplierSource(isFractionalPremiumWithNoStandardSub);
-      if (questOrbMultiplierSource === require("../utils/QuestOrbMultiplierUtils.tsx") /* items */.QuestOrbMultiplierSource.CREPE) {
+      const questOrbMultiplierSource = items /* items */.getQuestOrbMultiplierSource(isFractionalPremiumWithNoStandardSub);
+      if (questOrbMultiplierSource === items /* items */.QuestOrbMultiplierSource.CREPE) {
         QuestOrbMultiplierEligibilityType2 = tmp3(10394).QuestOrbMultiplierEligibilityType;
         let NITRO = QuestOrbMultiplierEligibilityType2.CREPE;
       } else {
         NITRO = tmp3(10394).QuestOrbMultiplierEligibilityType.NITRO;
       }
-      const obj = require("../utils/QuestOrbMultiplierUtils.tsx") /* items */;
+      const obj = items /* items */;
     } else {
       let result;
       if (isFractionalPremiumWithNoStandardSub != null) {
         result = isFractionalPremiumWithNoStandardSub.isFractionalPremiumWithNoStandardSub();
       }
-      const QuestOrbMultiplierEligibilityType = require("../utils/QuestOrbMultiplierUtils.tsx") /* items */.QuestOrbMultiplierEligibilityType;
+      const QuestOrbMultiplierEligibilityType = items /* items */.QuestOrbMultiplierEligibilityType;
       INELIGIBLE = result ? QuestOrbMultiplierEligibilityType.INELIGIBLE : QuestOrbMultiplierEligibilityType.UPSELL;
     }
-    obj2 = require("../../../utils/PremiumUtils.tsx");
+    obj2 = getPremiumPlanItem;
   }
   return INELIGIBLE;
 }
@@ -32,6 +35,6 @@ let result = require("items").fileFinishedImporting("modules/quests/hooks/QuestO
 
 export const useQuestOrbMultiplierEligibility = function useQuestOrbMultiplierEligibility() {
   const items = [mergeGuildAvatar];
-  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => callback(currentUser.getCurrentUser()));
+  return initialize /* initialize */.useStateFromStores(items, () => callback(currentUser.getCurrentUser()));
 };
 export { getQuestOrbMultiplierEligibilityForUser };

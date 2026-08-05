@@ -1,3 +1,5 @@
+import { set } from "../../../../utils/PlatformUtils.tsx";
+import { AccessibilityAnnouncer } from "../../../shared.tsx";
 // discord_app/design/void/Form/native/FormConstants.tsx
 import handleThemeChange from "handleThemeChange";
 import set from "set";
@@ -32,7 +34,7 @@ export const getThemedRippleConfig = function getThemedRippleConfig(arg0) {
   let radius;
   ({ radius, cornerRadius, color } = arg0);
   ({ foreground, borderless } = arg0);
-  let obj = require("../../../../utils/PlatformUtils.tsx") /* set */;
+  let obj = set /* set */;
   if (obj.isAndroid()) {
     if (null != color) {
       const sum = "" + color.toString() + cornerRadius + radius + tmp5;
@@ -53,8 +55,8 @@ export const getThemedRippleConfig = function getThemedRippleConfig(arg0) {
       }
       obj3 = map;
     } else {
-      require("../../../shared.tsx") /* AccessibilityAnnouncer */.isThemeLight(theme.theme) ? semanticColor1 : semanticColor;
-      const tmpResult = require("../../../shared.tsx") /* AccessibilityAnnouncer */;
+      AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeLight(theme.theme) ? semanticColor1 : semanticColor;
+      const tmpResult = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
     }
   } else {
     return closure_6;

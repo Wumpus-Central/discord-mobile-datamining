@@ -1,16 +1,17 @@
+import { HolidayEmojiAnimationType } from "HolidayEventsConfig.tsx";
 // discord_app/modules/holidays/HolidayEventsUtils.tsx
 const result = require("set").fileFinishedImporting("modules/holidays/HolidayEventsUtils.tsx");
 
 export default {
   isEligible() {
-    const isExperimentEligible = require("HolidayEventsConfig.tsx").getIsExperimentEligible();
+    const isExperimentEligible = HolidayEmojiAnimationType.getIsExperimentEligible();
     const timestamp = Date.now();
-    const obj = require("HolidayEventsConfig.tsx");
+    const obj = HolidayEmojiAnimationType;
     const tmp = importDefault;
-    return timestamp >= require("HolidayEventsConfig.tsx").startTimeMs && timestamp <= require("HolidayEventsConfig.tsx").endTimeMs && isExperimentEligible;
+    return timestamp >= HolidayEmojiAnimationType.startTimeMs && timestamp <= HolidayEmojiAnimationType.endTimeMs && isExperimentEligible;
   },
   useHolidaySoundpack() {
-    let obj = require("HolidayEventsConfig.tsx");
+    let obj = HolidayEmojiAnimationType;
     const isExperimentEligible = obj.useIsExperimentEligible();
     const timestamp = Date.now();
     let tmp6 = null;
@@ -29,11 +30,11 @@ export default {
     return tmp6;
   },
   useIsEligible() {
-    const isExperimentEligible = require("HolidayEventsConfig.tsx").useIsExperimentEligible();
+    const isExperimentEligible = HolidayEmojiAnimationType.useIsExperimentEligible();
     const timestamp = Date.now();
-    const obj = require("HolidayEventsConfig.tsx");
+    const obj = HolidayEmojiAnimationType;
     const tmp = importDefault;
-    return timestamp >= require("HolidayEventsConfig.tsx").startTimeMs && timestamp <= require("HolidayEventsConfig.tsx").endTimeMs && isExperimentEligible;
+    return timestamp >= HolidayEmojiAnimationType.startTimeMs && timestamp <= HolidayEmojiAnimationType.endTimeMs && isExperimentEligible;
   },
   getAppSpinnerSources() {
     const timestamp = Date.now();
@@ -58,9 +59,9 @@ export default {
     return tmp5;
   },
   getHolidaySoundpack() {
-    const isExperimentEligible = require("HolidayEventsConfig.tsx").getIsExperimentEligible();
+    const isExperimentEligible = HolidayEmojiAnimationType.getIsExperimentEligible();
     const timestamp = Date.now();
-    const obj = require("HolidayEventsConfig.tsx");
+    const obj = HolidayEmojiAnimationType;
     let soundpack = null;
     if (tmp5) {
       soundpack = null;

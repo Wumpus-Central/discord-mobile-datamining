@@ -1,3 +1,5 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { useSafeAreaInsets } from "../../modules/safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/components_native/channel_settings/ChannelSettingsInstantInvites.tsx
 import _slicedToArray from "_slicedToArray";
 import FastestList.android from "../../modules/fastest_list/FastestList.android.tsx";
@@ -33,10 +35,10 @@ export default function ConnectedChannelSettingsInstantInvites() {
   const callback = memo.useCallback((arg0) => {
 
   }, items);
-  let obj1 = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj1 = initialize /* initialize */;
   const items1 = [memo1];
   dependencyMap = obj1.useStateFromStores(items1, () => memo1.getChannel());
-  let obj2 = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj2 = initialize /* initialize */;
   const items2 = [memo1];
   const stateFromStoresObject = obj2.useStateFromStoresObject(items2, () => memo1.getInvites());
   invites = stateFromStoresObject.invites;
@@ -67,7 +69,7 @@ export default function ConnectedChannelSettingsInstantInvites() {
   }, items3);
   const tmp3 = invites(memo.useState(undefined), 2);
   const items4 = [ensureGuildLoaded];
-  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresArray(items4, () => {
+  const stateFromStoresArray = initialize /* initialize */.useStateFromStoresArray(items4, () => {
     if (null != closure_2) {
       const sortedLinkedChannelsForGuild = outer1_7.getSortedLinkedChannelsForGuild(tmp.guild_id);
       let found = sortedLinkedChannelsForGuild.filter((id) => id.id === id.id);
@@ -119,7 +121,7 @@ export default function ConnectedChannelSettingsInstantInvites() {
       obj1[2] = tmp4;
       obj1[3] = callback1;
       obj1[4] = tmp.gap.height;
-      obj1[5] = require("../../modules/safe_area/useSafeAreaInsets.native.tsx")().bottom;
+      obj1[5] = useSafeAreaInsets().bottom;
       obj[1] = callback(tmp2(8337), obj1);
       let tmp16Result = callback(stateFromStoresArray, obj);
     }

@@ -1,3 +1,5 @@
+import { Integer } from "../../../../_runtime/00014_Integer.js";
+import { Buffer } from "../../../../_runtime/00511_Buffer.js";
 // discord_common/js/packages/id-generator/IdGenerator.tsx
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/id-generator/IdGenerator.tsx");
 class IdGenerator {
@@ -10,9 +12,9 @@ class IdGenerator {
   }
 }
 IdGenerator.prototype["generate"] = function generate(arg0) {
-  const obj = require("../../../../_runtime/00014_Integer.js")(arg0);
+  const obj = Integer(arg0);
   this._sequenceNumber = +this._sequenceNumber + 1;
-  const str = new require("../../../../_runtime/00511_Buffer.js") /* Buffer */.Buffer(24);
+  const str = new Buffer /* Buffer */.Buffer(24);
   str.writeInt32LE(obj.mod(4294967296).toJSNumber() | 0, 0, true);
   const modResult = obj.mod(4294967296);
   const tmp2 = +this._sequenceNumber | 0;

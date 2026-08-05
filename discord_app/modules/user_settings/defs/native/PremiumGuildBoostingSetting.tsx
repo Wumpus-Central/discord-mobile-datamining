@@ -1,10 +1,12 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { componentDidMount } from "../../premium/native/UserSettingsPremiumGuildSubscriptions.tsx";
 // discord_app/modules/user_settings/defs/native/PremiumGuildBoostingSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["+CbP2v"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["+CbP2v"]);
   },
   parent: null,
   IconComponent: require("BoostGemIcon").BoostGemIcon,
@@ -13,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.GUILD_BOOSTING,
   getComponent() {
-    return require("../../premium/native/UserSettingsPremiumGuildSubscriptions.tsx") /* componentDidMount */.default;
+    return componentDidMount /* componentDidMount */.default;
   }
 };
 const route = createToggle.createRoute(obj);

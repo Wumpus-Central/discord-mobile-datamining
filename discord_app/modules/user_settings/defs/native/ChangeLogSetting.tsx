@@ -1,10 +1,12 @@
+import { ChangeLogScreen } from "../../../../components_native/ChangeLogModal.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/defs/native/ChangeLogSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.LRmNAl);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.LRmNAl);
   },
   parent: null,
   IconComponent: require("CircleInformationIcon").CircleInformationIcon,
@@ -13,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.CHANGE_LOG,
   getComponent() {
-    return require("../../../../components_native/ChangeLogModal.tsx") /* ChangeLogScreen */.ChangeLogScreen;
+    return ChangeLogScreen /* ChangeLogScreen */.ChangeLogScreen;
   }
 };
 const route = createToggle.createRoute(obj);

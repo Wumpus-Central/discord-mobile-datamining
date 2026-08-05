@@ -1,3 +1,4 @@
+import { shouldOpenActivityInPopoutWindow } from "ActivityPopoutUtils.native.tsx";
 // discord_app/modules/activities/handleJoinEmbeddedActivity.tsx
 import participantFromServer from "participantFromServer";
 import addApplication from "addApplication";
@@ -316,8 +317,8 @@ let result = require("ensureGuildLoaded").fileFinishedImporting("modules/activit
 
 export default function handleJoinEmbeddedActivity(arg0) {
   const _require = arg0;
-  const obj = _require("ActivityPopoutUtils.native.tsx");
-  return obj.wrapPreemptiveActivityPopout(_require("ActivityPopoutUtils.native.tsx").shouldOpenActivityInPopoutWindow(), () => (function handleJoinEmbeddedActivityInternal(closure_0) {
+  const obj = _shouldOpenActivityInPopoutWindow;
+  return obj.wrapPreemptiveActivityPopout(_shouldOpenActivityInPopoutWindow.shouldOpenActivityInPopoutWindow(), () => (function handleJoinEmbeddedActivityInternal(closure_0) {
     const self = this;
     const apply = closure_10.apply;
     if (typeof apply === "unknown") {

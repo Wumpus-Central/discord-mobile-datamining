@@ -1,3 +1,5 @@
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { set } from "useMaybeFetchCollectiblesCategories.tsx";
 // discord_app/modules/collectibles/hooks/useFetchCollectiblesProductCategory.tsx
 import _slicedToArray from "_slicedToArray";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
@@ -7,8 +9,8 @@ const result = require("set").fileFinishedImporting("modules/collectibles/hooks/
 
 export const useFetchCollectiblesProductCategory = function useFetchCollectiblesProductCategory(skuId) {
   const _require = skuId;
-  require("useMaybeFetchCollectiblesCategories.tsx")();
-  let obj = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
+  set();
+  let obj = _defaultAreStatesEqual;
   let items = [updateCategoriesAndProducts];
   const tmp2 = callback(obj.useStateFromStoresArray(items, () => {
     const items = [outer1_4.isFetchingCategories, outer1_4.getCategoryForProduct(closure_0)];

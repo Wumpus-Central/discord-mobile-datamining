@@ -1,3 +1,5 @@
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { recordChannelFetchStart } from "MessageCacheStats.tsx";
 // discord_app/modules/local_message_caching/LocalMessageCacheStatsManager.tsx
 import ME from "ME";
 import "initialize";
@@ -36,13 +38,13 @@ function makeLogLine(channelId) {
 function handleAppStateUpdate(state) {
   if (state.state === constants2.BACKGROUND) {
     const _Array = Array;
-    const fetchLogs = require("MessageCacheStats.tsx").fetchLogs;
+    const fetchLogs = recordChannelFetchStart.fetchLogs;
     const mapped = Array.from(fetchLogs.values()).map(makeLogLine);
-    let obj = require("../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { num_channels_fetch_started: null, num_channels_local_cached: null, num_channels_fetched_network: null, num_times_backgrounded: null, fetch_entries: null };
-    obj[0] = require("MessageCacheStats.tsx").channelsFetchStarted.size;
-    obj[1] = require("MessageCacheStats.tsx").channelsFetchedWithLocalMessages.size;
-    obj[2] = require("MessageCacheStats.tsx").channelsFetchedNetwork.size;
+    obj[0] = recordChannelFetchStart.channelsFetchStarted.size;
+    obj[1] = recordChannelFetchStart.channelsFetchedWithLocalMessages.size;
+    obj[2] = recordChannelFetchStart.channelsFetchedNetwork.size;
     const sum = c4 + 1;
     c4 = sum;
     obj[3] = sum;

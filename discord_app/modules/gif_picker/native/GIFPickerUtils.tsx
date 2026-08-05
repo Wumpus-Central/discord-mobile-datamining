@@ -1,10 +1,12 @@
+import { isDiscordProxiedAssetUrl } from "../../../utils/URLUtils.tsx";
+import { shouldRefreshAttachmentUrl } from "../../messages/SignedAttachmentLinkUtils.tsx";
 // discord_app/modules/gif_picker/native/GIFPickerUtils.tsx
 import noop from "noop";
 
 const require = arg1;
 function transformFavoriteGifUrl(url) {
   let combined = url;
-  const str = require("../../../utils/URLUtils.tsx").toURLSafe(url);
+  const str = isDiscordProxiedAssetUrl.toURLSafe(url);
   if (null != str) {
     if (obj6.isExternalProxiedAttachmentUrl(str)) {
       const formatted = str.pathname.toLowerCase();
@@ -25,7 +27,7 @@ function transformFavoriteGifUrl(url) {
     } else {
       const tmp14Result = tmp14(9661);
     }
-    obj6 = require("../../messages/SignedAttachmentLinkUtils.tsx") /* shouldRefreshAttachmentUrl */;
+    obj6 = shouldRefreshAttachmentUrl /* shouldRefreshAttachmentUrl */;
     tmp14 = require;
   }
   if (regex.test(arg1)) {
@@ -46,7 +48,7 @@ function transformFavoriteGifUrl(url) {
     }
     return combined;
   }
-  const obj = require("../../../utils/URLUtils.tsx");
+  const obj = isDiscordProxiedAssetUrl;
 }
 require("ME").GIFPickerResultTypes;
 const re5 = /(https?:\/\/)(?!media(?:\d+)?\.)(?:[^.]+\.)*giphy\.com/;

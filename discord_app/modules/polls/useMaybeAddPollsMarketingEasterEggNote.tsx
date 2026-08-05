@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/polls/useMaybeAddPollsMarketingEasterEggNote.tsx
 import _getSystemLocale from "_getSystemLocale";
 
@@ -5,7 +6,7 @@ const require = arg1;
 const result = require("getSystemLocale").fileFinishedImporting("modules/polls/useMaybeAddPollsMarketingEasterEggNote.tsx");
 
 export default function useMaybeAddPollsMarketingEasterEggNote(arg0) {
-  require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  initialize /* initialize */;
   [][0] = _getSystemLocale;
   let formatToPlainStringResult = arg0;
   if (":pizza:" === arg0) {

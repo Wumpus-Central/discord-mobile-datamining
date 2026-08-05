@@ -1,3 +1,4 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/guilds_bar/native/GuildsBarItemEmptyNUX.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -22,7 +23,7 @@ let c3 = importAllResult;
 let closure_13 = { top: 4, left: 12, bottom: 4, right: 12 };
 let closure_14 = createCacheKey.createStyles((width) => {
   let obj = { container: null, guildIndicator: null, icon: null, backdrop: null };
-  obj = { position: "relative", flexDirection: "row", alignItems: "center", marginTop: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.GUILD_BAR_ITEM_PADDING, height: 55, width };
+  obj = { position: "relative", flexDirection: "row", alignItems: "center", marginTop: Themes.modules.mobile.GUILD_BAR_ITEM_PADDING, height: 55, width };
   obj[0] = obj;
   obj = { position: "absolute", left: -closure_8 - width / 2, top: 4 };
   obj[1] = obj;

@@ -1,3 +1,4 @@
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/activities/DeveloperActivityShelfStore.tsx
 import { ApplicationFlags } from "ME";
 import { PersistedStore } from "initialize";
@@ -21,7 +22,7 @@ prototype["getState"] = function getState() {
   return closure_3;
 };
 prototype["getIsEnabled"] = function getIsEnabled() {
-  const DeveloperMode = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.DeveloperMode;
+  const DeveloperMode = explicitContentFromProto /* explicitContentFromProto */.DeveloperMode;
   let setting = DeveloperMode.getSetting();
   if (setting) {
     setting = closure_6.length > 0;

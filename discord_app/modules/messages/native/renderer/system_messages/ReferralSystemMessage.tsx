@@ -1,3 +1,7 @@
+import { registerAsset } from "../../../../../../_runtime/07626_registerAsset.js";
+import { createReferralTrialEmbedRedeemable } from "../row_data/embeds/ReferralTrialEmbed.tsx";
+import { createReferralTrialEmbedRedesign } from "../row_data/embeds/ReferralTrialEmbedRedesign.tsx";
+import { createCommonMessage } from "createCommonMessage.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/ReferralSystemMessage.tsx
 import emitChanges from "emitChanges";
 import fetchFingerprint from "fetchFingerprint";
@@ -22,31 +26,31 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
       referrer_id = relevantUserTrialOffer.referrer_id;
     }
     if (referrer_id === id) {
-      const obj3 = require("../row_data/embeds/ReferralTrialEmbed.tsx") /* createReferralTrialEmbedRedeemable */;
+      const obj3 = createReferralTrialEmbedRedeemable /* createReferralTrialEmbedRedeemable */;
       const referralTrialEmbedRedeemable = obj3.createReferralTrialEmbedRedeemable(message, theme, id, relevantUserTrialOffer);
       if (null == referralTrialEmbedRedeemable) {
         return null;
       } else {
         let obj = {};
-        const merged = Object.assign(require("createCommonMessage.tsx")(message));
+        const merged = Object.assign(createCommonMessage(message));
         obj.referralTrialOfferInfo = referralTrialEmbedRedeemable;
         const tmp17 = createCacheKey(theme);
-        obj.iconUrl = tmp8(7865).getAssetUriForEmbed(require("../../../../../../_runtime/07626_registerAsset.js"));
+        obj.iconUrl = tmp8(7865).getAssetUriForEmbed(registerAsset);
         ({ iconTintColor: obj4.iconTintColor, iconDividerColor: obj4.iconDividerColor } = tmp17);
         return obj;
       }
       tmp8 = require;
     } else {
-      const obj6 = require("../row_data/embeds/ReferralTrialEmbedRedesign.tsx") /* createReferralTrialEmbedRedesign */;
+      const obj6 = createReferralTrialEmbedRedesign /* createReferralTrialEmbedRedesign */;
       const referralTrialEmbedRedesign = obj6.createReferralTrialEmbedRedesign(message, theme, id, relevantUserTrialOffer);
       if (null == referralTrialEmbedRedesign) {
         return null;
       } else {
         obj = {};
-        const merged1 = Object.assign(require("createCommonMessage.tsx")(message));
+        const merged1 = Object.assign(createCommonMessage(message));
         obj.referralTrialOfferInfoRedesign = referralTrialEmbedRedesign;
         const tmp4 = createCacheKey(theme);
-        obj.iconUrl = tmp23(7865).getAssetUriForEmbed(require("../../../../../../_runtime/07626_registerAsset.js"));
+        obj.iconUrl = tmp23(7865).getAssetUriForEmbed(registerAsset);
         ({ iconTintColor: obj.iconTintColor, iconDividerColor: obj.iconDividerColor } = tmp4);
         obj.timestamp = undefined;
         return obj;

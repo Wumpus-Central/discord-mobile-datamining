@@ -1,3 +1,4 @@
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
 // discord_app/modules/color_picker/native/SaturationValueColorPicker.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -47,9 +48,9 @@ function ColorBox(hue) {
   items1 = ["rgb(255,255,255)", tmp2[0]];
   const obj2 = { colors: ["rgba(0, 0, 0, 0)", "#000"], children: null };
   const items2 = [tmp.colorBoxInner, colorBoxInnerStyle];
-  const tmp5 = require("../../../../_runtime/04706_LinearGradient.js");
+  const tmp5 = LinearGradient;
   obj2[1] = callback2(View, { style: items2 });
-  obj1[4] = callback2(require("../../../../_runtime/04706_LinearGradient.js"), obj2);
+  obj1[4] = callback2(LinearGradient, obj2);
   return callback2(tmp5, obj1);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);

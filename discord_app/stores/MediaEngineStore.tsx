@@ -1,3 +1,31 @@
+import { apply } from "../../_runtime/00012_apply.js";
+import { 13019__ } from "../../_runtime/metro/13019__.js";
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { set } from "../lib/DiscordNative.tsx";
+import { nativeMuteChanged } from "../modules/calls/NativeMuteManager.native.tsx";
+import { isClipsEnabled } from "../modules/clips/isClipsEnabled.tsx";
+import { mapped } from "../modules/errors/av_errors/AVError.tsx";
+import { NativeEventEmitter } from "../modules/external_pip/ExternalPip.android.tsx";
+import { getAGC2ExperimentConfig } from "../modules/media_engine/AGC2Experiment.tsx";
+import { apexExperiment } from "../modules/media_engine/AudioEffectsExperiment.tsx";
+import { getAudioFidelityExperimentConfig } from "../modules/media_engine/AudioFidelityExperiment.tsx";
+import { apexExperiment } from "../modules/media_engine/DisableCameraSimulcastExperiment.tsx";
+import { HdrCaptureMode } from "../modules/media_engine/GoLiveHdrExperiment.tsx";
+import { setPushToTalkState } from "../modules/media_engine/MediaEngineActionCreators.tsx";
+import { apexExperiment } from "../modules/media_engine/MobileAudioOutputExperiment.tsx";
+import { apexExperiment } from "../modules/media_engine/SilenceWarningExperiment.tsx";
+import { getVADBeforeProcessingExperimentConfig } from "../modules/media_engine/VADBeforeProcessingExperiment.tsx";
+import { NativePermissionsRequestOptions } from "../modules/native_permissions/NativePermissionUtils.tsx";
+import { set } from "../modules/noise_cancellation/getEffectiveNoiseCancellation.tsx";
+import { getKrispModel } from "../modules/noise_cancellation/KrispUtils.tsx";
+import { apexExperiment } from "../modules/voice_calls/PTTEducationExperiment.tsx";
+import { apexExperiment } from "../modules/voice_panel/SpatialAudioForVoiceExperiment.tsx";
+import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
+import { set } from "../utils/CrossPlatformNativeUtils.native.tsx";
+import { set } from "../utils/PlatformUtils.tsx";
+import { sanitizeFilename } from "../utils/web/DesktopNativeUtils.tsx";
 // discord_app/stores/MediaEngineStore.tsx
 import apexExperiment from "apexExperiment";
 import initialize from "initialize";
@@ -211,7 +239,7 @@ function getSettings() {
     let obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
     obj[0] = InputModes.VOICE_ACTIVITY;
     obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-    obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+    obj[1] = set /* set */.isPlatformEmbedded || false;
     obj[7] = [];
     obj[1] = obj;
     obj[17] = {};
@@ -230,7 +258,7 @@ function getSettings() {
     obj[31] = store3.supports(Features.VIDEO_HOOK);
     dependencyMap[DEFAULT] = obj;
     tmp3 = obj;
-    const tmp4 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+    const tmp4 = set /* set */.isPlatformEmbedded || false;
   }
   let CUSTOM = tmp3.activeInputProfile;
   if (CUSTOM == null) {
@@ -254,8 +282,8 @@ function getSettings() {
   }
   const merged3 = Object.assign(modeOptions2);
   if (null == obj1.vadDuringPreProcess) {
-    obj1.vadDuringPreProcess = require("../modules/media_engine/VADBeforeProcessingExperiment.tsx") /* getVADBeforeProcessingExperimentConfig */.getVADBeforeProcessingExperimentConfig({ location: "getSettings" }).enabled;
-    const obj7 = require("../modules/media_engine/VADBeforeProcessingExperiment.tsx") /* getVADBeforeProcessingExperimentConfig */;
+    obj1.vadDuringPreProcess = getVADBeforeProcessingExperimentConfig /* getVADBeforeProcessingExperimentConfig */.getVADBeforeProcessingExperimentConfig({ location: "getSettings" }).enabled;
+    const obj7 = getVADBeforeProcessingExperimentConfig /* getVADBeforeProcessingExperimentConfig */;
   }
   if (null != obj1.vadKrispActivationThreshold) {
     const obj2 = {};
@@ -265,7 +293,7 @@ function getSettings() {
     obj2.modeOptions = obj1;
     return obj2;
   }
-  const aGC2ExperimentConfig = require("../modules/media_engine/AGC2Experiment.tsx") /* getAGC2ExperimentConfig */.getAGC2ExperimentConfig({ location: "getSettings" });
+  const aGC2ExperimentConfig = getAGC2ExperimentConfig /* getAGC2ExperimentConfig */.getAGC2ExperimentConfig({ location: "getSettings" });
   if (null != aGC2ExperimentConfig.vadKrispActivationThreshold) {
     obj1.vadKrispActivationThreshold = aGC2ExperimentConfig.vadKrispActivationThreshold;
   }
@@ -274,10 +302,10 @@ function setInputMode(context) {
   const tmp = getSettings(context.context);
   const mode = tmp.mode;
   if (context.context === MediaEngineContextTypes.DEFAULT) {
-    let obj = require("../modules/media_engine/MediaEngineActionCreators.tsx") /* setPushToTalkState */;
+    let obj = setPushToTalkState /* setPushToTalkState */;
     obj.setPushToTalkState(false, false);
   }
-  let showPTTSpeakingIndicator = require("../modules/voice_calls/PTTEducationExperiment.tsx").getConfig({ location: "setInputMode" }).showPTTSpeakingIndicator;
+  let showPTTSpeakingIndicator = apexExperiment.getConfig({ location: "setInputMode" }).showPTTSpeakingIndicator;
   if (showPTTSpeakingIndicator) {
     showPTTSpeakingIndicator = mode === InputModes.PUSH_TO_TALK;
   }
@@ -329,8 +357,8 @@ function updateConnectionMuteDeaf(context) {
       tmp3 = c92;
     }
     if (!tmp3) {
-      tmp3 = !require("../modules/native_permissions/NativePermissionUtils.tsx").didHavePermission(NativePermissionTypes.AUDIO);
-      const obj = require("../modules/native_permissions/NativePermissionUtils.tsx");
+      tmp3 = !NativePermissionsRequestOptions.didHavePermission(NativePermissionTypes.AUDIO);
+      const obj = NativePermissionsRequestOptions;
     }
     let flag = tmp3;
   } else {
@@ -343,8 +371,8 @@ function updateConnectionMuteDeaf(context) {
   context.setSelfMute(flag);
   context.setSelfDeaf(tmp.deaf);
   if (context.context === MediaEngineContextTypes.DEFAULT) {
-    require("../modules/calls/NativeMuteManager.native.tsx").updateNativeMute();
-    const obj2 = require("../modules/calls/NativeMuteManager.native.tsx");
+    nativeMuteChanged.updateNativeMute();
+    const obj2 = nativeMuteChanged;
   }
 }
 function updateVideo(c94, arg1) {
@@ -412,16 +440,16 @@ function updateVideo(c94, arg1) {
           obj[1] = tmp2.quality.frameRate;
           if (null != tmp2.desktopSource) {
             const videoHook2 = getSettings().videoHook;
-            const obj20 = require("../modules/media_engine/GoLiveHdrExperiment.tsx") /* HdrCaptureMode */;
-            let isWindowsResult = require("../utils/PlatformUtils.tsx") /* set */.isWindows();
+            const obj20 = HdrCaptureMode /* HdrCaptureMode */;
+            let isWindowsResult = set /* set */.isWindows();
             if (isWindowsResult) {
-              const tmp41 = require("../lib/DiscordNative.tsx");
+              const tmp41 = set;
               let release;
               if (tmp41 != null) {
                 release = tmp41.os.release;
               }
-              isWindowsResult = require("../../_runtime/metro/13019__.js").satisfies(release, closure_29);
-              const obj6 = require("../../_runtime/metro/13019__.js");
+              isWindowsResult = 13019__.satisfies(release, closure_29);
+              const obj6 = 13019__;
             }
             if (!isWindowsResult) {
               let tmp70Result = tmp70(500);
@@ -458,13 +486,13 @@ function updateVideo(c94, arg1) {
                   isMacResult = obj10.supports(Features.SCREEN_CAPTURE_KIT);
                 }
                 if (isMacResult) {
-                  const tmp61 = require("../lib/DiscordNative.tsx");
+                  const tmp61 = set;
                   let release1;
                   if (tmp61 != null) {
                     release1 = tmp61.os.release;
                   }
-                  isMacResult = require("../../_runtime/metro/13019__.js").satisfies(release1, closure_24);
-                  const obj14 = require("../../_runtime/metro/13019__.js");
+                  isMacResult = 13019__.satisfies(release1, closure_24);
+                  const obj14 = 13019__;
                 }
                 let obj1 = { desktopDescription: null, quality: null };
                 obj[9] = isMacResult;
@@ -491,17 +519,17 @@ function updateVideo(c94, arg1) {
             } else {
               let isWindowsResult2 = tmp70(500).isWindows();
               if (isWindowsResult2) {
-                const tmp47 = require("../lib/DiscordNative.tsx");
+                const tmp47 = set;
                 let release2;
                 if (tmp47 != null) {
                   release2 = tmp47.os.release;
                 }
-                isWindowsResult2 = require("../../_runtime/metro/13019__.js").satisfies(release2, closure_27);
-                const obj8 = require("../../_runtime/metro/13019__.js");
+                isWindowsResult2 = 13019__.satisfies(release2, closure_27);
+                const obj8 = 13019__;
               }
               const tmp70Result3 = tmp70(500);
             }
-            const obj21 = require("../utils/PlatformUtils.tsx") /* set */;
+            const obj21 = set /* set */;
           }
           if (null != tmp2.cameraSource) {
             let obj2 = { videoDeviceGuid: null, audioDeviceGuid: null };
@@ -532,7 +560,7 @@ function updateVideo(c94, arg1) {
             firstResult = tmp32[DEFAULT_DEVICE_ID];
           }
           if (firstResult == null) {
-            obj3 = require("../../_runtime/00012_apply.js")(tmp32);
+            obj3 = apply(tmp32);
             const values = obj3.values();
             firstResult = values.first();
           }
@@ -561,7 +589,7 @@ function updateVideo(c94, arg1) {
       }
       store3.setGoLiveSource(null, STREAM);
     } else {
-      obj = require("../utils/PlatformUtils.tsx") /* set */;
+      obj = set /* set */;
     }
     obj2 = importAll(13009);
     const result1 = obj2.cancelAttachToProcess(tmp3.desktopSource.soundshareId);
@@ -569,39 +597,39 @@ function updateVideo(c94, arg1) {
 }
 function noiseCancellerErrorToAVUnderlyingError(noise_canceller_error) {
   if (NoiseCancellerError.KRISP_CPU_OVERUSE === noise_canceller_error) {
-    return require("../modules/errors/av_errors/AVError.tsx") /* mapped */.AVUnderlyingError.KrispCpuOveruse;
+    return mapped /* mapped */.AVUnderlyingError.KrispCpuOveruse;
   } else if (tmp.KRISP_FAILED === noise_canceller_error) {
-    return require("../modules/errors/av_errors/AVError.tsx") /* mapped */.AVUnderlyingError.KrispFailed;
+    return mapped /* mapped */.AVUnderlyingError.KrispFailed;
   } else if (tmp.KRISP_VAD_CPU_OVERUSE === noise_canceller_error) {
-    return require("../modules/errors/av_errors/AVError.tsx") /* mapped */.AVUnderlyingError.KrispVadCpuOveruse;
+    return mapped /* mapped */.AVUnderlyingError.KrispVadCpuOveruse;
   } else if (tmp.KRISP_INIT_ERROR === noise_canceller_error) {
-    return require("../modules/errors/av_errors/AVError.tsx") /* mapped */.AVUnderlyingError.KrispInitError;
+    return mapped /* mapped */.AVUnderlyingError.KrispInitError;
   } else if (tmp.KRISP_INIT_ERROR_NATIVE === noise_canceller_error) {
-    return require("../modules/errors/av_errors/AVError.tsx") /* mapped */.AVUnderlyingError.KrispInitErrorNative;
+    return mapped /* mapped */.AVUnderlyingError.KrispInitErrorNative;
   } else if (tmp.KRISP_INIT_ERROR_SSE4_NOT_SUPPORTED === noise_canceller_error) {
-    return require("../modules/errors/av_errors/AVError.tsx") /* mapped */.AVUnderlyingError.KrispInitErrorSse4NotSupported;
+    return mapped /* mapped */.AVUnderlyingError.KrispInitErrorSse4NotSupported;
   } else if (tmp.KRISP_INIT_ERROR_AVX2_NOT_SUPPORTED === noise_canceller_error) {
-    return require("../modules/errors/av_errors/AVError.tsx") /* mapped */.AVUnderlyingError.KrispInitErrorAvx2NotSupported;
+    return mapped /* mapped */.AVUnderlyingError.KrispInitErrorAvx2NotSupported;
   } else if (tmp.KRISP_INIT_ERROR_UNSIGNED === noise_canceller_error) {
-    return require("../modules/errors/av_errors/AVError.tsx") /* mapped */.AVUnderlyingError.KrispInitErrorUnsigned;
+    return mapped /* mapped */.AVUnderlyingError.KrispInitErrorUnsigned;
   } else if (tmp.KRISP_INIT_ERROR_GLOBAL_INIT === noise_canceller_error) {
-    return require("../modules/errors/av_errors/AVError.tsx") /* mapped */.AVUnderlyingError.KrispInitErrorGlobalInit;
+    return mapped /* mapped */.AVUnderlyingError.KrispInitErrorGlobalInit;
   } else if (tmp.KRISP_INIT_ERROR_WEIGHT_8K === noise_canceller_error) {
-    return require("../modules/errors/av_errors/AVError.tsx") /* mapped */.AVUnderlyingError.KrispInitErrorWeight8k;
+    return mapped /* mapped */.AVUnderlyingError.KrispInitErrorWeight8k;
   } else if (tmp.KRISP_INIT_ERROR_WEIGHT_16K === noise_canceller_error) {
-    return require("../modules/errors/av_errors/AVError.tsx") /* mapped */.AVUnderlyingError.KrispInitErrorWeight16k;
+    return mapped /* mapped */.AVUnderlyingError.KrispInitErrorWeight16k;
   } else if (tmp.KRISP_INIT_ERROR_WEIGHT_32K === noise_canceller_error) {
-    return require("../modules/errors/av_errors/AVError.tsx") /* mapped */.AVUnderlyingError.KrispInitErrorWeight32k;
+    return mapped /* mapped */.AVUnderlyingError.KrispInitErrorWeight32k;
   } else if (tmp.KRISP_INIT_ERROR_WEIGHT_VAD === noise_canceller_error) {
-    return require("../modules/errors/av_errors/AVError.tsx") /* mapped */.AVUnderlyingError.KrispInitErrorWeightVad;
+    return mapped /* mapped */.AVUnderlyingError.KrispInitErrorWeightVad;
   }
 }
 function handleVoiceProcessingError(noise_canceller_error) {
   obj.warn("Voice processing error: " + noise_canceller_error);
-  obj = require("../modules/errors/av_errors/AVError.tsx") /* mapped */;
-  obj = { type: require("../modules/errors/av_errors/AVError.tsx") /* mapped */.AVError.NOISE_CANCELLER_ERROR, underlyingError: noiseCancellerErrorToAVUnderlyingError(noise_canceller_error) };
+  obj = mapped /* mapped */;
+  obj = { type: mapped /* mapped */.AVError.NOISE_CANCELLER_ERROR, underlyingError: noiseCancellerErrorToAVUnderlyingError(noise_canceller_error) };
   obj.reportAVError(obj);
-  let obj2 = require("../utils/AnalyticsUtils.tsx");
+  let obj2 = expandEventProperties;
   obj = { noise_canceller_error };
   obj2.track(constants.VOICE_PROCESSING, obj);
   if (set3.has(noise_canceller_error)) {
@@ -633,12 +661,12 @@ function handleVideoFilterError(arg0, arg1) {
       str = "live";
     }
     obj[2] = str;
-    require("../Dispatcher.tsx").dispatch(obj);
+    dispatcher.dispatch(obj);
   } else {
     let AVUnderlyingError = dependencyMap;
-    obj = require("../modules/errors/av_errors/AVError.tsx") /* mapped */;
+    obj = mapped /* mapped */;
     obj = { type: null, underlyingError: null };
-    obj[0] = require("../modules/errors/av_errors/AVError.tsx") /* mapped */.AVError.VIDEO_BACKGROUND_UNAVAILABLE;
+    obj[0] = mapped /* mapped */.AVError.VIDEO_BACKGROUND_UNAVAILABLE;
     if (constants9.UNSUPPORTED === arg0) {
       AVUnderlyingError = tmp4(9091).AVUnderlyingError;
       let VideoBackgroundInitFailed = AVUnderlyingError.VideoBackgroundUnsupported;
@@ -661,11 +689,11 @@ function updateConnectionVoiceProcessing(setEchoCancellation) {
   obj = { enabled: tmp7 };
   const tmp5 = obj.hasNoiseSuppression(inputDeviceId) || tmp2.noiseSuppression;
   obj = { location: "getAutomaticGainControlConfig", disable: !tmp7 };
-  const merged = Object.assign(require("../modules/media_engine/AGC2Experiment.tsx") /* getAGC2ExperimentConfig */.getAGC2ExperimentConfig(obj).noiseCancellationConfig);
+  const merged = Object.assign(getAGC2ExperimentConfig /* getAGC2ExperimentConfig */.getAGC2ExperimentConfig(obj).noiseCancellationConfig);
   const result = setEchoCancellation.setAutomaticGainControl(obj);
   const noiseCancellation = tmp2.noiseCancellation;
-  const obj3 = require("../modules/media_engine/AGC2Experiment.tsx") /* getAGC2ExperimentConfig */;
-  const tmp13Result = require("../modules/noise_cancellation/getEffectiveNoiseCancellation.tsx")(noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
+  const obj3 = getAGC2ExperimentConfig /* getAGC2ExperimentConfig */;
+  const tmp13Result = set(noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
   if (tmp13Result !== noiseCancellation) {
     obj.info("Falling back to system noise suppression.");
   }
@@ -681,7 +709,7 @@ function updateConnectionVoiceProcessing(setEchoCancellation) {
   const tmpResult = tmp();
   const inputDeviceId2 = tmpResult.inputDeviceId;
   const obj1 = { location: "setNoiseCancellation", disable: !tmp13Result };
-  const tmp13 = require("../modules/noise_cancellation/getEffectiveNoiseCancellation.tsx");
+  const tmp13 = set;
   const tmp24 = obj.hasEchoCancellation(inputDeviceId2) || tmpResult.echoCancellation;
   tmp12Result = tmp12(10756);
   const tmp25 = obj.hasNoiseSuppression(inputDeviceId2) || tmpResult.noiseSuppression;
@@ -690,7 +718,7 @@ function updateConnectionVoiceProcessing(setEchoCancellation) {
   const result3 = store3.setVoiceSampleRateCap(voiceFidelityCaps.maxSampleRateHz);
   const result4 = store3.setVoiceChannelCountCap(voiceFidelityCaps.maxChannelCount);
   const tmp12Result1Result = tmp12Result(tmpResult.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
-  let isWindowsResult = require("../utils/PlatformUtils.tsx") /* set */.isWindows();
+  let isWindowsResult = set /* set */.isWindows();
   if (isWindowsResult) {
     const tmp12Result2 = tmp12(3896);
     let release;
@@ -746,7 +774,7 @@ function updateConnectionVoiceProcessing(setEchoCancellation) {
       const tmp8Result2 = tmp8(13017);
     }
   }
-  const tmp8Result1 = require("../utils/PlatformUtils.tsx") /* set */;
+  const tmp8Result1 = set /* set */;
   if (tmp8Result3.isWeb()) {
     let num = -100;
     if (tmp2.noiseCancellation) {
@@ -771,7 +799,7 @@ function mergeSettings(arg0, DEFAULT, arg2) {
     let obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
     obj[0] = InputModes.VOICE_ACTIVITY;
     obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-    obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+    obj[1] = set /* set */.isPlatformEmbedded || false;
     obj[7] = [];
     obj[1] = obj;
     obj[17] = {};
@@ -790,11 +818,11 @@ function mergeSettings(arg0, DEFAULT, arg2) {
     obj[31] = store3.supports(Features.VIDEO_HOOK);
     dependencyMap[DEFAULT] = obj;
     tmp3 = obj;
-    const tmp4 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+    const tmp4 = set /* set */.isPlatformEmbedded || false;
   }
   const merged1 = Object.assign(tmp3, arg0);
   if (flag) {
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
   }
   return tmp3;
@@ -814,13 +842,13 @@ function applySettings() {
         tmp5(13075)(tmp7.guid, inputDeviceId, obj);
       }
     }
-    obj3 = require("../modules/media_engine/AudioEffectsExperiment.tsx");
+    obj3 = apexExperiment;
     tmp5 = importDefault;
   }
   obj.setAudioOutputDevice(tmp.outputDeviceId);
   updateVideo();
   obj.setInputVolume(tmp.inputVolume);
-  obj2 = require("../utils/PlatformUtils.tsx") /* set */;
+  obj2 = set /* set */;
   const tmp3 = require;
   const setOutputVolume = obj.setOutputVolume;
   if (obj4.getConfig({ location: "MediaEngineStore.applySettings" }).audioOutputPresent) {
@@ -832,7 +860,7 @@ function applySettings() {
   const result = obj.setSidechainCompression(tmp.sidechainCompression);
   const result1 = obj.setSidechainCompressionStrength(tmp.sidechainCompressionStrength);
   const result2 = obj.setAudioInputBypassSystemProcessing(tmp.bypassSystemInputProcessing);
-  obj4 = require("../modules/media_engine/MobileAudioOutputExperiment.tsx");
+  obj4 = apexExperiment;
   if (tmp3Result.isLinux()) {
     let tmp14Result = tmp14(5292);
     if (tmp14Result != null) {
@@ -964,13 +992,13 @@ function maybeTryHookProcess(pidFromDesktopSource, sound) {
     if (null != mediaEngineStore) {
       let audioPid = pidFromDesktopSource;
       if (!obj.getExperimentalSoundshare()) {
-        let obj2 = require("../utils/CrossPlatformNativeUtils.native.tsx");
+        let obj2 = set;
         audioPid = obj2.getAudioPid(pidFromDesktopSource);
       }
       let str2 = "";
       if (null != audioPid) {
-        str2 = require("../utils/CrossPlatformNativeUtils.native.tsx").generateSessionFromPid(audioPid);
-        const obj4 = require("../utils/CrossPlatformNativeUtils.native.tsx");
+        str2 = set.generateSessionFromPid(audioPid);
+        const obj4 = set;
       }
       obj = { soundshareId: null, soundshareSession: null };
       obj[0] = audioPid;
@@ -1047,7 +1075,7 @@ function trackVoiceProcessing(location) {
     firstResult = tmp4[DEFAULT_DEVICE_ID];
   }
   if (firstResult == null) {
-    let obj = require("../../_runtime/00012_apply.js")(tmp4);
+    let obj = apply(tmp4);
     const values = obj.values();
     firstResult = values.first();
   }
@@ -1058,10 +1086,10 @@ function trackVoiceProcessing(location) {
   if (dependencyMap2[id] != null) {
     name = tmp9.name;
   }
-  const tmp11 = require("../modules/noise_cancellation/getEffectiveNoiseCancellation.tsx");
-  const tmp11Result = require("../modules/noise_cancellation/getEffectiveNoiseCancellation.tsx")(tmp.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
+  const tmp11 = set;
+  const tmp11Result = set(tmp.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
   obj = { echo_cancellation: tmp.echoCancellation, noise_cancellation: tmp.noiseCancellation, noise_suppression: tmp.noiseSuppression, automatic_gain_control: tmp.automaticGainControl, location, bypass_system_input_processing: tmp.bypassSystemInputProcessing, audio_subsystem: audioSubsystem, audio_layer: audioLayer, input_device: name, effective_noise_cancellation: tmp11Result };
-  require("../utils/AnalyticsUtils.tsx").track(constants.VOICE_PROCESSING, obj);
+  expandEventProperties.track(constants.VOICE_PROCESSING, obj);
 }
 function setLoopback() {
   const tmp2 = getSettings();
@@ -1075,16 +1103,16 @@ function setLoopback() {
   const tmp7 = set2.size <= 0;
   const tmp8 = require;
   obj = { location: "getAutomaticGainControlConfig", disable: !tmp6 };
-  const merged = Object.assign(require("../modules/media_engine/AGC2Experiment.tsx") /* getAGC2ExperimentConfig */.getAGC2ExperimentConfig(obj).noiseCancellationConfig);
+  const merged = Object.assign(getAGC2ExperimentConfig /* getAGC2ExperimentConfig */.getAGC2ExperimentConfig(obj).noiseCancellationConfig);
   store3.setLoopback(set2.size > 0, { echoCancellation: tmp4, echoCancellationPreEcho: tmp7, noiseSuppression: tmp5, automaticGainControlConfig: obj, noiseCancellation: tmp2.noiseCancellation });
   const tmpResult = tmp();
   const inputDeviceId2 = tmpResult.inputDeviceId;
   const obj1 = { echoCancellation: tmp4, echoCancellationPreEcho: tmp7, noiseSuppression: tmp5, automaticGainControlConfig: obj, noiseCancellation: tmp2.noiseCancellation };
-  const obj3 = require("../modules/media_engine/AGC2Experiment.tsx") /* getAGC2ExperimentConfig */;
+  const obj3 = getAGC2ExperimentConfig /* getAGC2ExperimentConfig */;
   const tmp13 = obj.hasEchoCancellation(inputDeviceId2) || tmpResult.echoCancellation;
   const tmp14 = obj.hasNoiseSuppression(inputDeviceId2) || tmpResult.noiseSuppression;
-  const tmp15 = require("../modules/noise_cancellation/getEffectiveNoiseCancellation.tsx");
-  const tmp15Result = require("../modules/noise_cancellation/getEffectiveNoiseCancellation.tsx")(tmpResult.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
+  const tmp15 = set;
+  const tmp15Result = set(tmpResult.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
   const voiceFidelityCaps = tmp8(13016).getVoiceFidelityCaps({ location: "updateVoiceFidelityCaps" }, { krispEnabled: tmp15Result, noiseSuppressionEnabled: tmp14, echoCancellationEnabled: tmp13 });
   const result = obj5.setVoiceSampleRateCap(voiceFidelityCaps.maxSampleRateHz);
   const result1 = obj5.setVoiceChannelCountCap(voiceFidelityCaps.maxChannelCount);
@@ -1512,7 +1540,7 @@ function setAudioSubsystem(arg0) {
       let obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -1531,11 +1559,11 @@ function setAudioSubsystem(arg0) {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT2] = obj;
       tmp24 = obj;
-      const tmp26 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp26 = set /* set */.isPlatformEmbedded || false;
     }
     const _Object2 = Object;
     const merged1 = Object.assign(tmp24, { automaticAudioSubsystem: true });
-    const Storage2 = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage2 = Storage /* Storage */.Storage;
     const result = Storage2.set(MediaEngineStore, dependencyMap);
     store3.queueAudioSubsystem(tmp.EXPERIMENTAL);
   } else {
@@ -1548,7 +1576,7 @@ function setAudioSubsystem(arg0) {
       const obj2 = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj2[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj2[1] = obj;
       obj2[17] = {};
@@ -1567,11 +1595,11 @@ function setAudioSubsystem(arg0) {
       obj2[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj2;
       tmp3 = obj2;
-      const tmp5 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp5 = set /* set */.isPlatformEmbedded || false;
     }
     const _Object = Object;
     const merged3 = Object.assign(tmp3, { automaticAudioSubsystem: false });
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result1 = Storage.set(MediaEngineStore, dependencyMap);
     store3.setAudioSubsystem(arg0);
   }
@@ -2852,8 +2880,8 @@ prototype["isSelfMute"] = function isSelfMute(DEFAULT) {
     mute = getSettings(DEFAULT).mute;
   }
   if (!mute) {
-    mute = !require("../modules/native_permissions/NativePermissionUtils.tsx").didHavePermission(NativePermissionTypes.AUDIO);
-    const obj = require("../modules/native_permissions/NativePermissionUtils.tsx");
+    mute = !NativePermissionsRequestOptions.didHavePermission(NativePermissionTypes.AUDIO);
+    const obj = NativePermissionsRequestOptions;
   }
   if (!mute) {
     mute = self.isSelfDeaf(DEFAULT);
@@ -3075,7 +3103,7 @@ prototype["getModeOptions"] = function getModeOptions(DEFAULT) {
 };
 prototype["getShortcuts"] = function getShortcuts() {
   const obj = {};
-  require("../../_runtime/00012_apply.js").each(closure_77, (mode) => {
+  apply.each(closure_77, (mode) => {
     let hasItem = mode.mode === outer1_20.PUSH_TO_TALK;
     if (hasItem) {
       hasItem = outer1_78.has(arg1);
@@ -3093,9 +3121,9 @@ prototype["getInputDeviceId"] = function getInputDeviceId() {
     firstResult = tmp[DEFAULT_DEVICE_ID];
   }
   if (firstResult == null) {
-    const values = require("../../_runtime/00012_apply.js")(tmp).values();
+    const values = apply(tmp).values();
     firstResult = values.first();
-    const obj = require("../../_runtime/00012_apply.js")(tmp);
+    const obj = apply(tmp);
   }
   if (null != firstResult) {
     id = firstResult.id;
@@ -3109,9 +3137,9 @@ prototype["getOutputDeviceId"] = function getOutputDeviceId() {
     firstResult = tmp[DEFAULT_DEVICE_ID];
   }
   if (firstResult == null) {
-    const values = require("../../_runtime/00012_apply.js")(tmp).values();
+    const values = apply(tmp).values();
     firstResult = values.first();
-    const obj = require("../../_runtime/00012_apply.js")(tmp);
+    const obj = apply(tmp);
   }
   if (null != firstResult) {
     id = firstResult.id;
@@ -3125,9 +3153,9 @@ prototype["getVideoDeviceId"] = function getVideoDeviceId() {
     firstResult = tmp[DEFAULT_DEVICE_ID];
   }
   if (firstResult == null) {
-    const values = require("../../_runtime/00012_apply.js")(tmp).values();
+    const values = apply(tmp).values();
     firstResult = values.first();
-    const obj = require("../../_runtime/00012_apply.js")(tmp);
+    const obj = apply(tmp);
   }
   if (null != firstResult) {
     id = firstResult.id;
@@ -3164,7 +3192,7 @@ prototype["hasH265HardwareDecode"] = function hasH265HardwareDecode() {
   return null !== c122 && c122;
 };
 prototype["getOpenH264Enabled"] = function getOpenH264Enabled() {
-  let openH264Enabled = require("../utils/PlatformUtils.tsx") /* set */.isLinux();
+  let openH264Enabled = set /* set */.isLinux();
   if (openH264Enabled) {
     openH264Enabled = getSettings().openH264Enabled;
   }
@@ -3212,7 +3240,7 @@ prototype["getAttenuateWhileSpeakingOthers"] = function getAttenuateWhileSpeakin
   return getSettings().attenuateWhileSpeakingOthers;
 };
 prototype["getAudioSubsystem"] = function getAudioSubsystem() {
-  let isWindowsResult = require("../utils/PlatformUtils.tsx") /* set */.isWindows();
+  let isWindowsResult = set /* set */.isWindows();
   if (isWindowsResult) {
     isWindowsResult = store3.supports(Features.AUTOMATIC_AUDIO_SUBSYSTEM);
   }
@@ -3271,7 +3299,7 @@ prototype["getInputDeviceOSVolume"] = function getInputDeviceOSVolume() {
 };
 prototype["getPacketDelay"] = function getPacketDelay() {
   let num = 0;
-  if (!require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
+  if (!set /* set */.isPlatformEmbedded) {
     const self = this;
     num = 0;
     if (this.getMode() === InputModes.VOICE_ACTIVITY) {
@@ -3312,36 +3340,36 @@ prototype["getExperimentalSoundshare"] = function getExperimentalSoundshare() {
 prototype["supportsExperimentalSoundshare"] = function supportsExperimentalSoundshare() {
   let supportsResult = store3.supports(Features.EXPERIMENTAL_SOUNDSHARE);
   if (supportsResult) {
-    const tmp4 = require("../lib/DiscordNative.tsx");
+    const tmp4 = set;
     let release;
     if (tmp4 != null) {
       release = tmp4.os.release;
     }
-    supportsResult = require("../../_runtime/metro/13019__.js").satisfies(release, closure_31);
-    const obj = require("../../_runtime/metro/13019__.js");
+    supportsResult = 13019__.satisfies(release, closure_31);
+    const obj = 13019__;
   }
   return supportsResult;
 };
 prototype["supportsHookSoundshare"] = function supportsHookSoundshare() {
-  let isWindowsResult = require("../utils/PlatformUtils.tsx") /* set */.isWindows();
+  let isWindowsResult = set /* set */.isWindows();
   if (isWindowsResult) {
     isWindowsResult = store3.supports(Features.SOUNDSHARE);
   }
   if (isWindowsResult) {
-    const tmp6 = require("../lib/DiscordNative.tsx");
+    const tmp6 = set;
     let release;
     if (tmp6 != null) {
       release = tmp6.os.release;
     }
-    isWindowsResult = require("../../_runtime/metro/13019__.js").satisfies(release, closure_30);
-    const obj2 = require("../../_runtime/metro/13019__.js");
+    isWindowsResult = 13019__.satisfies(release, closure_30);
+    const obj2 = 13019__;
   }
   return isWindowsResult;
 };
 prototype["getUseSystemScreensharePicker"] = function getUseSystemScreensharePicker() {
   let result = this.supportsSystemScreensharePicker();
   let useSystemScreensharePicker = getSettings().useSystemScreensharePicker;
-  require("../utils/PlatformUtils.tsx") /* set */;
+  set /* set */;
   if (result) {
     if (useSystemScreensharePicker == null) {
       useSystemScreensharePicker = tmp3;
@@ -3417,25 +3445,25 @@ prototype["supportsScreenSoundshare"] = function supportsScreenSoundshare() {
   if (obj.isMac()) {
     let supportsResult = store3.supports(Features.SOUNDSHARE);
     if (supportsResult) {
-      const tmp12 = require("../lib/DiscordNative.tsx");
+      const tmp12 = set;
       let release;
       if (tmp12 != null) {
         release = tmp12.os.release;
       }
-      supportsResult = require("../../_runtime/metro/13019__.js").satisfies(release, closure_25);
-      const obj5 = require("../../_runtime/metro/13019__.js");
+      supportsResult = 13019__.satisfies(release, closure_25);
+      const obj5 = 13019__;
     }
     if (supportsResult) {
       let tmpResult = tmp(500);
       let satisfiesResult = tmpResult.isMac() && obj4.supports(tmp9.SCREEN_CAPTURE_KIT);
       if (satisfiesResult) {
-        const tmp18 = require("../lib/DiscordNative.tsx");
+        const tmp18 = set;
         let release1;
         if (tmp18 != null) {
           release1 = tmp18.os.release;
         }
-        satisfiesResult = require("../../_runtime/metro/13019__.js").satisfies(release1, closure_24);
-        const obj7 = require("../../_runtime/metro/13019__.js");
+        satisfiesResult = 13019__.satisfies(release1, closure_24);
+        const obj7 = 13019__;
       }
       supportsResult = satisfiesResult;
     }
@@ -3482,7 +3510,7 @@ prototype["getSystemMicrophoneMode"] = function getSystemMicrophoneMode() {
     }
     return c128;
   }
-  obj = require("../utils/PlatformUtils.tsx") /* set */;
+  obj = set /* set */;
 };
 prototype["getVideoStreamParameters"] = function getVideoStreamParameters(context) {
   let DEFAULT = context;
@@ -3507,7 +3535,7 @@ prototype["getVideoStreamParameters"] = function getVideoStreamParameters(contex
       enableSimulcast = DEFAULT === MediaEngineContextTypes.DEFAULT;
     }
     if (enableSimulcast) {
-      const DisableCameraSimulcastExperiment = require("../modules/media_engine/DisableCameraSimulcastExperiment.tsx") /* apexExperiment */.DisableCameraSimulcastExperiment;
+      const DisableCameraSimulcastExperiment = apexExperiment /* apexExperiment */.DisableCameraSimulcastExperiment;
       enableSimulcast = DisableCameraSimulcastExperiment.getConfig({ location: "MediaEngineStore.getVideoStreamParameters" }).enableSimulcast;
     }
     if (enableSimulcast) {
@@ -3521,7 +3549,7 @@ prototype["getVideoStreamParameters"] = function getVideoStreamParameters(contex
 };
 prototype["fetchAsyncResources"] = function fetchAsyncResources() {
   const obj = { fetchDave: null };
-  obj[0] = require("../utils/PlatformUtils.tsx") /* set */.isWeb();
+  obj[0] = set /* set */.isWeb();
   return store3.fetchAsyncResources(obj);
 };
 prototype["startDavePreload"] = function startDavePreload() {
@@ -3534,7 +3562,7 @@ prototype["startDavePreload"] = function startDavePreload() {
         callback(table[78]).captureException(arg0);
       });
     }
-    obj = require("../utils/PlatformUtils.tsx") /* set */;
+    obj = set /* set */;
   }
 };
 prototype["getSupportedSecureFramesProtocolVersion"] = function getSupportedSecureFramesProtocolVersion() {
@@ -3576,7 +3604,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
               let obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
               obj[0] = InputModes.VOICE_ACTIVITY;
               obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-              obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+              obj[1] = set /* set */.isPlatformEmbedded || false;
               obj[7] = [];
               obj[1] = obj;
               obj[17] = {};
@@ -3595,11 +3623,11 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
               obj[31] = store3.supports(Features.VIDEO_HOOK);
               dependencyMap[DEFAULT] = obj;
               tmp10 = obj;
-              const tmp11 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+              const tmp11 = set /* set */.isPlatformEmbedded || false;
             }
             const _Object = Object;
             const merged1 = Object.assign(tmp10, { deaf: false, mute: false });
-            const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+            const Storage = Storage /* Storage */.Storage;
             const result = Storage.set(MediaEngineStore, dependencyMap);
             store3.eachConnection(updateConnectionMuteDeaf);
           }
@@ -3654,7 +3682,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
     let c90 = false;
     let c93 = false;
     const tmp = getSettings();
-    let isWindowsResult = require("../utils/PlatformUtils.tsx") /* set */.isWindows();
+    let isWindowsResult = set /* set */.isWindows();
     if (isWindowsResult) {
       isWindowsResult = store3.supports(Features.AUTOMATIC_AUDIO_SUBSYSTEM);
     }
@@ -3681,18 +3709,18 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
     if (enabled) {
       obj3.updateFieldTrial("WebRTC-Audio-iOS-Holding", "Enabled");
     }
-    const obj = require("../utils/PlatformUtils.tsx") /* set */;
-    const tmp2Result1 = require("../utils/PlatformUtils.tsx") /* set */;
+    const obj = set /* set */;
+    const tmp2Result1 = set /* set */;
     if (tmp17) {
-      const obj7 = require("../utils/web/DesktopNativeUtils.tsx");
-      const setMklZenOverrideEnabled = require("../utils/web/DesktopNativeUtils.tsx").requireModule("discord_krisp").setMklZenOverrideEnabled;
+      const obj7 = sanitizeFilename;
+      const setMklZenOverrideEnabled = sanitizeFilename.requireModule("discord_krisp").setMklZenOverrideEnabled;
       if (setMklZenOverrideEnabled != null) {
         const result1 = setMklZenOverrideEnabled(tmp2(13078).getMklZenOverrideExperimentConfig("handleConnectionOpen").enabled);
         const tmp2Result2 = tmp2(13078);
       }
-      const requireModuleResult = require("../utils/web/DesktopNativeUtils.tsx").requireModule("discord_krisp");
+      const requireModuleResult = sanitizeFilename.requireModule("discord_krisp");
     }
-    tmp17 = require("../utils/PlatformUtils.tsx") /* set */.isWindows() && c109;
+    tmp17 = set /* set */.isWindows() && c109;
     if (tmp2Result3.isIOS()) {
       const setNcModels = obj3.setNcModels;
       if (setNcModels != null) {
@@ -3702,7 +3730,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       mediaEngineStore.emitChange();
     }
     const inputDeviceId = tmp.inputDeviceId;
-    tmp2Result3 = require("../utils/PlatformUtils.tsx") /* set */;
+    tmp2Result3 = set /* set */;
     if (tmp2Result5.isWindows()) {
       if (obj12.getConfig({ location: "MediaEngineStore.setInputDevice" }).probeAudioEffects) {
         let guid;
@@ -3713,7 +3741,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
           tmp26(13075)(tmp28.guid, inputDeviceId, obj3);
         }
       }
-      obj12 = require("../modules/media_engine/AudioEffectsExperiment.tsx");
+      obj12 = apexExperiment;
       tmp26 = importDefault;
     }
     applyRemoteSettings();
@@ -3809,7 +3837,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
     const tmp = getSettings(context);
     let flag = tmp.deaf;
     if (context === MediaEngineContextTypes.DEFAULT) {
-      let obj = require("../modules/native_permissions/NativePermissionUtils.tsx");
+      let obj = NativePermissionsRequestOptions;
       const permission = obj.requestPermission(NativePermissionTypes.AUDIO);
       if (c92) {
         return false;
@@ -3837,7 +3865,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -3856,10 +3884,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp9 = obj;
-      const tmp10 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp10 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp9, { mute: tmp8, deaf: flag });
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
     store3.eachConnection(updateConnectionMuteDeaf);
   },
@@ -3877,7 +3905,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -3896,10 +3924,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp3 = obj;
-      const tmp4 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp4 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp3, obj);
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
     if (!context.playSoundEffect) {
       let c97 = true;
@@ -3921,7 +3949,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -3940,10 +3968,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp3 = obj;
-      const tmp4 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp4 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp3, obj);
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
     store3.eachConnection(updateConnectionMuteDeaf);
   },
@@ -4288,7 +4316,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       let obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -4307,12 +4335,12 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[context] = obj;
       tmp3 = obj;
-      const tmp4 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp4 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp3, { audioMixerSettings: settings });
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
-    let supportsResult = true === settings.enabled && require("../modules/voice_panel/SpatialAudioForVoiceExperiment.tsx").getConfig({ location: "MediaEngineStore" }).enabled;
+    let supportsResult = true === settings.enabled && apexExperiment.getConfig({ location: "MediaEngineStore" }).enabled;
     if (supportsResult) {
       supportsResult = store3.supports(Features.SPATIAL_AUDIO);
     }
@@ -4387,7 +4415,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       const obj1 = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj1[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj1[1] = set /* set */.isPlatformEmbedded || false;
       obj1[7] = [];
       obj[1] = obj1;
       obj[17] = {};
@@ -4406,17 +4434,17 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp4 = obj;
-      const tmp5 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp5 = set /* set */.isPlatformEmbedded || false;
     }
     const merged2 = Object.assign(tmp4, obj);
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
     store3.eachConnection(setInputMode);
   },
   AUDIO_SET_INPUT_VOLUME: function handleAudioSetInputVolume(volume) {
     volume = volume.volume;
     let obj = { inputVolume: null };
-    let obj1 = require("../../_runtime/00012_apply.js");
+    let obj1 = apply;
     obj[0] = obj1.clamp(volume, 0, closure_40);
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
     if (DEFAULT === undefined) {
@@ -4427,7 +4455,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -4446,10 +4474,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp3 = obj;
-      const tmp4 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp4 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp3, obj);
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
     store3.setInputVolume(volume);
   },
@@ -4464,7 +4492,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       let obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -4483,10 +4511,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp = obj;
-      const tmp2 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp2 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp, { outputVolume: volume });
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
     store3.setOutputVolume(volume);
   },
@@ -4497,7 +4525,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       firstResult = tmp[DEFAULT_DEVICE_ID];
     }
     if (firstResult == null) {
-      let obj = require("../../_runtime/00012_apply.js")(tmp);
+      let obj = apply(tmp);
       const values = obj.values();
       firstResult = values.first();
     }
@@ -4514,7 +4542,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -4533,10 +4561,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp6 = obj;
-      const tmp7 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp7 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp6, { inputDeviceId: id });
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
     store3.setAudioInputDevice(id);
     if (obj6.isWindows()) {
@@ -4549,7 +4577,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
           tmp20(13075)(tmp22.guid, id, obj5);
         }
       }
-      obj7 = require("../modules/media_engine/AudioEffectsExperiment.tsx");
+      obj7 = apexExperiment;
       tmp20 = importDefault;
     }
     store3.eachConnection(updateConnectionVoiceProcessing);
@@ -4557,7 +4585,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
     let c106;
     timeout3.stop();
     let c134 = false;
-    obj6 = require("../utils/PlatformUtils.tsx") /* set */;
+    obj6 = set /* set */;
     if (obj8.getConfig({ location: "MediaEngineStore.handleSetInputDevice" }).resetSilenceWarningOnDeviceChange) {
       let c102 = false;
       navigation.reset();
@@ -4570,7 +4598,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       firstResult = tmp[DEFAULT_DEVICE_ID];
     }
     if (firstResult == null) {
-      let obj = require("../../_runtime/00012_apply.js")(tmp);
+      let obj = apply(tmp);
       const values = obj.values();
       firstResult = values.first();
     }
@@ -4586,7 +4614,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -4605,10 +4633,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp6 = obj;
-      const tmp7 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp7 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp6, { outputDeviceId: id });
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
     store3.setAudioOutputDevice(id);
     store3.eachConnection(updateConnectionVoiceProcessing);
@@ -4624,7 +4652,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -4643,10 +4671,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp = obj;
-      const tmp2 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp2 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp, obj);
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
     store3.eachConnection((arg0) => {
       callback(arg0);
@@ -4666,7 +4694,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -4685,10 +4713,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp = obj;
-      const tmp2 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp2 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp, obj);
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
     require = closure_13.hasEchoCancellation(tmp.inputDeviceId) || tmp.echoCancellation;
     store3.eachConnection((setEchoCancellation) => setEchoCancellation.setEchoCancellation(closure_0));
@@ -4706,7 +4734,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -4725,10 +4753,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp = obj;
-      const tmp2 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp2 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp, obj);
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
     const result1 = store3.setSidechainCompression(tmp.sidechainCompression);
   },
@@ -4743,7 +4771,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -4762,10 +4790,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp = obj;
-      const tmp2 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp2 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp, obj);
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
     const result1 = store3.setSidechainCompressionStrength(tmp.sidechainCompressionStrength);
   },
@@ -4789,7 +4817,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -4808,10 +4836,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp = obj;
-      const tmp2 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp2 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp, obj);
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
     require = closure_13.hasNoiseSuppression(tmp.inputDeviceId) || tmp.noiseSuppression;
     store3.eachConnection((setNoiseSuppression) => setNoiseSuppression.setNoiseSuppression(closure_0));
@@ -4829,7 +4857,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -4848,10 +4876,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp = obj;
-      const tmp2 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp2 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp, obj);
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     let result = Storage.set(MediaEngineStore, dependencyMap);
     require = tmp;
     store3.eachConnection((setAutomaticGainControl) => {
@@ -4875,7 +4903,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -4894,10 +4922,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp = obj;
-      const tmp2 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp2 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp, obj);
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     let result = Storage.set(MediaEngineStore, dependencyMap);
     require = tmp;
     store3.eachConnection((setNoiseCancellation) => {
@@ -4915,7 +4943,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
     trackVoiceProcessing(enabled.location);
   },
   AUDIO_SET_KRISP_MODEL_OVERRIDE: function handleSetKrispModelOverride(model) {
-    const result = require("../modules/noise_cancellation/KrispUtils.tsx").setKrispModelOverride(model.model);
+    const result = getKrispModel.setKrispModelOverride(model.model);
     model = model.model;
     setLoopback();
   },
@@ -4930,7 +4958,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -4949,10 +4977,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp = obj;
-      const tmp2 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp2 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp, obj);
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
   },
   AUDIO_SET_DEBUG_LOGGING: function handleSetDebugLogging(enabled) {
@@ -4960,7 +4988,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
   },
   AUDIO_SET_KRISP_SUPPRESSION_LEVEL: function handleSetKrispSuppressionLevel(level) {
     level = level.level;
-    const result = require("../modules/noise_cancellation/KrispUtils.tsx").setKrispSuppressionLevel(level);
+    const result = getKrispModel.setKrispSuppressionLevel(level);
   },
   AUDIO_SET_NOISE_CANCELLATION_ENABLE_STATS: function handleSetNoiseCancellationEnableStats(enabled) {
     if (!obj.isWeb()) {
@@ -4982,7 +5010,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -5001,10 +5029,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp = obj;
-      const tmp2 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp2 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp, obj);
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
   },
   MEDIA_ENGINE_SET_EXPERIMENTAL_SOUNDSHARE: function handleSetExperimentalSoundshare(enabled) {
@@ -5018,7 +5046,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -5037,10 +5065,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp = obj;
-      const tmp2 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp2 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp, obj);
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
   },
   MEDIA_ENGINE_SET_USE_SYSTEM_SCREENSHARE_PICKER: function handleSetUseSystemScreensharePicker(enabled) {
@@ -5054,7 +5082,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -5073,10 +5101,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp = obj;
-      const tmp2 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp2 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp, obj);
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
   },
   AUDIO_SET_ATTENUATION: function handleSetAttenuation(attenuation) {
@@ -5091,7 +5119,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = _require("../utils/PlatformUtils.tsx").isPlatformEmbedded || false;
+      obj[1] = _set.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -5110,10 +5138,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp = obj;
-      const tmp2 = _require("../utils/PlatformUtils.tsx").isPlatformEmbedded || false;
+      const tmp2 = _set.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp, obj);
-    const Storage = _require("../../discord_common/js/packages/storage/Storage.tsx").Storage;
+    const Storage = _Storage.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
     _require = tmp;
     store3.eachConnection((setAttenuation) => setAttenuation.setAttenuation(_undefined.attenuation, _undefined.attenuateWhileSpeakingSelf, _undefined.attenuateWhileSpeakingOthers));
@@ -5156,7 +5184,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
     store3.eachConnection((setQoS) => setQoS.setQoS(enabled));
   },
   MEDIA_ENGINE_DEVICES: function handleDevices(videoDevices) {
-    const intl = _require("../intl/index.native.tsx").intl;
+    const intl = _getSystemLocale.intl;
     _require = videoDevices;
     const arr = videoDevices[{ audioinput: "inputDevices", audiooutput: "outputDevices", videoinput: "videoDevices" }[constants8.AUDIO_INPUT]];
     if (0 === arr.length) {
@@ -5167,7 +5195,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[obj.id] = obj;
       let valueResult = obj;
     } else {
-      const mapped = require("../../_runtime/00012_apply.js")(arr).map((id) => {
+      const mapped = apply(arr).map((id) => {
         let inputDevices;
         let outputDevices;
         let videoDevices;
@@ -5291,11 +5319,11 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
         }
         WEBCAM = outer1_68.WEBCAM;
       });
-      const arr2 = require("../../_runtime/00012_apply.js")(arr);
+      const arr2 = apply(arr);
       valueResult = mapped.keyBy("id").value();
       const iter = mapped.keyBy("id");
     }
-    let obj3 = require("../../_runtime/00012_apply.js");
+    let obj3 = apply;
     if (!obj3.isEqual(valueResult, valueResult)) {
       let id = getSettings().inputDeviceId;
       let firstResult = valueResult[id];
@@ -5690,7 +5718,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
     let outputVolume;
     let obj = { inputVolume: null, outputVolume: null };
     ({ inputVolume, outputVolume } = arg0);
-    let obj1 = require("../../_runtime/00012_apply.js");
+    let obj1 = apply;
     obj[0] = obj1.clamp(inputVolume, 0, closure_40);
     obj[1] = outputVolume;
     let DEFAULT = MediaEngineContextTypes.DEFAULT;
@@ -5702,7 +5730,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -5721,14 +5749,14 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp3 = obj;
-      const tmp4 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp4 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp3, obj);
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
   },
   AUDIO_RESET: function handleReset() {
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     Storage.remove(MediaEngineStore);
   },
   AUDIO_INPUT_DETECTED: function handleInputDetected(inputDetected) {
@@ -5744,7 +5772,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
         timeout2.stop();
       } else if (getSettings().mode === InputModes.VOICE_ACTIVITY) {
         if (c102) {
-          const config = require("../modules/media_engine/SilenceWarningExperiment.tsx").getConfig({ location: "MediaEngineStore.handleInputDetected" });
+          const config = apexExperiment.getConfig({ location: "MediaEngineStore.handleInputDetected" });
           const resetSilenceWarningAfterNMinutes = config.resetSilenceWarningAfterNMinutes;
           if (config.enableHardwareSilenceWarning) {
             timeout3.start(MINUTE, () => {
@@ -5778,7 +5806,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
               navigation.reset();
             });
           }
-          let obj = require("../modules/media_engine/SilenceWarningExperiment.tsx");
+          let obj = apexExperiment;
           tmp3 = importDefault;
         }
       }
@@ -5803,7 +5831,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       let obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -5822,10 +5850,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp = obj;
-      const tmp2 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp2 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp, { bypassSystemInputProcessing: bypassEnabled });
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
     const result1 = store3.setAudioInputBypassSystemProcessing(bypassEnabled);
     const tmp16 = getSettings();
@@ -5834,8 +5862,8 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
     const tmp12 = require;
     const tmp17 = closure_13.hasEchoCancellation(inputDeviceId) || tmp16.echoCancellation;
     const tmp18 = closure_13.hasNoiseSuppression(inputDeviceId) || tmp16.noiseSuppression;
-    const tmp19 = require("../modules/noise_cancellation/getEffectiveNoiseCancellation.tsx");
-    const tmp19Result = require("../modules/noise_cancellation/getEffectiveNoiseCancellation.tsx")(tmp16.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
+    const tmp19 = set;
+    const tmp19Result = set(tmp16.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
     const voiceFidelityCaps = tmp12(13016).getVoiceFidelityCaps({ location: "updateVoiceFidelityCaps" }, { krispEnabled: tmp19Result, noiseSuppressionEnabled: tmp18, echoCancellationEnabled: tmp17 });
     const result2 = obj3.setVoiceSampleRateCap(voiceFidelityCaps.maxSampleRateHz);
     const result3 = obj3.setVoiceChannelCountCap(voiceFidelityCaps.maxChannelCount);
@@ -5853,7 +5881,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
         let obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
         obj[0] = InputModes.VOICE_ACTIVITY;
         obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-        obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+        obj[1] = set /* set */.isPlatformEmbedded || false;
         obj[7] = [];
         obj[1] = obj;
         obj[17] = {};
@@ -5872,17 +5900,17 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
         obj[31] = store3.supports(Features.VIDEO_HOOK);
         dependencyMap[DEFAULT] = obj;
         tmp2 = obj;
-        const tmp4 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+        const tmp4 = set /* set */.isPlatformEmbedded || false;
       }
       const _Object = Object;
       const merged1 = Object.assign(tmp2, { mute: false, deaf: false });
-      const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage = Storage /* Storage */.Storage;
       const result = Storage.set(MediaEngineStore, dependencyMap);
     }
     store3.eachConnection(updateConnectionMuteDeaf);
   },
   MEDIA_ENGINE_SET_VIDEO_ENABLED: function handleSetVideoEnabled(enabled) {
-    const permission = require("../modules/native_permissions/NativePermissionUtils.tsx").requestPermission(NativePermissionTypes.CAMERA);
+    const permission = NativePermissionsRequestOptions.requestPermission(NativePermissionTypes.CAMERA);
     updateVideo(enabled.enabled);
   },
   MEDIA_ENGINE_PERMISSION: function handlePermission(kind) {
@@ -5918,10 +5946,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       if (qualityOptions == null) {
         qualityOptions = { resolution: 720, frameRate: 30 };
       }
-      const pidFromDesktopSource = require("../utils/CrossPlatformNativeUtils.native.tsx").getPidFromDesktopSource(sourceId);
+      const pidFromDesktopSource = set.getPidFromDesktopSource(sourceId);
       soundshareSession = null;
       soundshareId = null;
-      if (require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded) {
+      if (set /* set */.isPlatformEmbedded) {
         ({ soundshareId, soundshareSession } = maybeTryHookProcess(pidFromDesktopSource, desktopSettings.sound));
         const tmp17 = maybeTryHookProcess(pidFromDesktopSource, desktopSettings.sound);
       }
@@ -5945,7 +5973,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[1] = { resolution: null, frameRate: null };
       updateVideo(tmp25, obj);
       const obj1 = { resolution: null, frameRate: null };
-      const obj6 = require("../utils/CrossPlatformNativeUtils.native.tsx");
+      const obj6 = set;
       const tmp23 = updateVideo;
     } else {
       let cameraSettings;
@@ -5988,7 +6016,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       firstResult = tmp[DEFAULT_DEVICE_ID];
     }
     if (firstResult == null) {
-      let obj = require("../../_runtime/00012_apply.js")(tmp);
+      let obj = apply(tmp);
       const values = obj.values();
       firstResult = values.first();
     }
@@ -6004,7 +6032,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -6023,10 +6051,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp6 = obj;
-      const tmp7 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp7 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp6, { videoDeviceId: id });
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
     updateVideo();
   },
@@ -6067,7 +6095,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
   },
   APP_STATE_UPDATE: function handleFocus(state) {
     state = state.state;
-    require("../modules/external_pip/ExternalPip.android.tsx");
+    NativeEventEmitter;
     if (state === constants2.BACKGROUND) {
       if (c94) {
         if (!tmp2) {
@@ -6129,7 +6157,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -6148,10 +6176,10 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp = obj;
-      const tmp2 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp2 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp, obj);
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
     store3.setAecDump(tmp.aecDumpEnabled);
   },
@@ -6166,7 +6194,7 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       let obj = { mode: null, modeOptions: null, vadUseKrispSettingVersion: 0, ncUseKrispSettingVersion: 0, ncUseKrispjsSettingVersion: 0, mute: false, deaf: false, echoCancellation: true, noiseSuppression: false, automaticGainControl: true, noiseCancellation: true, bypassSystemInputProcessing: true, hardwareEnabledVersion: 0, silenceWarning: true, attenuation: 0, attenuateWhileSpeakingSelf: false, attenuateWhileSpeakingOthers: true, localMutes: null, disabledLocalVideos: null, videoToggleStateMap: null, localVolumes: null, audioMixerSettings: null, audioMixerSettingsVersion: 0, localPans: null, inputVolume: null, outputVolume: null, inputDeviceId: null, outputDeviceId: null, videoDeviceId: null, qos: false, qosMigrated: false, videoHook: null, experimentalSoundshare2: null, useSystemScreensharePicker: null, h265Enabled: true, vadThrehsoldMigrated: false, aecDumpEnabled: false, openH264Enabled: true, sidechainCompression: true, sidechainCompressionSettingVersion: 1, sidechainCompressionStrength: 50, automaticAudioSubsystem: true, activeInputProfile: null };
       obj[0] = InputModes.VOICE_ACTIVITY;
       obj = { threshold: -60, autoThreshold: null, vadUseKrisp: true, vadKrispActivationThreshold: 0.5, vadLeading: 5, vadTrailing: 25, delay: 20, shortcut: null, updatedAt: "Array" };
-      obj[1] = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      obj[1] = set /* set */.isPlatformEmbedded || false;
       obj[7] = [];
       obj[1] = obj;
       obj[17] = {};
@@ -6185,12 +6213,12 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
       obj[31] = store3.supports(Features.VIDEO_HOOK);
       dependencyMap[DEFAULT] = obj;
       tmp = obj;
-      const tmp2 = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded || false;
+      const tmp2 = set /* set */.isPlatformEmbedded || false;
     }
     const merged1 = Object.assign(tmp, { openH264Enabled: enabled });
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(MediaEngineStore, dependencyMap);
-    const tmp13 = require("../utils/web/DesktopNativeUtils.tsx");
+    const tmp13 = sanitizeFilename;
     if (tmp13 != null) {
       const setOpenH264Enabled = tmp13.setOpenH264Enabled;
       if (setOpenH264Enabled != null) {
@@ -6306,9 +6334,9 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
     let quality;
     let sourceId;
     ({ sourceId, quality } = applicationName);
-    let obj = require("../modules/clips/isClipsEnabled.tsx") /* isClipsEnabled */;
+    let obj = isClipsEnabled /* isClipsEnabled */;
     if (obj.isDecoupledClipsEnabled()) {
-      if (null != require("../lib/DiscordNative.tsx")) {
+      if (null != set) {
         let id;
         if (obj != null) {
           id = obj.desktopSource.id;
@@ -6435,9 +6463,9 @@ const mediaEngineStore = new MediaEngineStore(require("dispatcher"), {
     const obj = closure_13;
     const tmp2 = closure_13.hasEchoCancellation(inputDeviceId) || tmp.echoCancellation;
     const tmp3 = closure_13.hasNoiseSuppression(inputDeviceId) || tmp.noiseSuppression;
-    const tmp4 = require("../modules/noise_cancellation/getEffectiveNoiseCancellation.tsx");
-    const tmp4Result = require("../modules/noise_cancellation/getEffectiveNoiseCancellation.tsx")(tmp.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
-    const voiceFidelityCaps = require("../modules/media_engine/AudioFidelityExperiment.tsx") /* getAudioFidelityExperimentConfig */.getVoiceFidelityCaps({ location: "updateVoiceFidelityCaps" }, { krispEnabled: tmp4Result, noiseSuppressionEnabled: tmp3, echoCancellationEnabled: tmp2 });
+    const tmp4 = set;
+    const tmp4Result = set(tmp.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
+    const voiceFidelityCaps = getAudioFidelityExperimentConfig /* getAudioFidelityExperimentConfig */.getVoiceFidelityCaps({ location: "updateVoiceFidelityCaps" }, { krispEnabled: tmp4Result, noiseSuppressionEnabled: tmp3, echoCancellationEnabled: tmp2 });
     const result = store3.setVoiceSampleRateCap(voiceFidelityCaps.maxSampleRateHz);
     const result1 = store3.setVoiceChannelCountCap(voiceFidelityCaps.maxChannelCount);
   }

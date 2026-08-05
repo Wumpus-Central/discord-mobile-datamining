@@ -1,3 +1,4 @@
+import { getQuestLogger } from "../lib/getQuestLogger.tsx";
 // discord_app/modules/quests/managers/QuestMobileEmbedVisibilityManager.native.tsx
 import _slicedToArray from "_slicedToArray";
 import setContent from "setContent";
@@ -20,8 +21,8 @@ let require = arg1;
 ({ useChannelDetailsStore: error, getIsChannelDetailsSearchActive: metroImportAll } = useChannelDetailsStore);
 function log() {
   if (questLogger == null) {
-    questLogger = require("../lib/getQuestLogger.tsx") /* getQuestLogger */.getQuestLogger({ location: "QuestMobileEmbedVisibilityManager" });
-    const obj = require("../lib/getQuestLogger.tsx") /* getQuestLogger */;
+    questLogger = getQuestLogger /* getQuestLogger */.getQuestLogger({ location: "QuestMobileEmbedVisibilityManager" });
+    const obj = getQuestLogger /* getQuestLogger */;
   }
 }
 class QuestMobileEmbedVisibilityManager extends tmp3 {

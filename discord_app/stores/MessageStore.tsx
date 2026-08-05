@@ -1,3 +1,10 @@
+import { apply } from "../../_runtime/00012_apply.js";
+import { mergeMessage } from "../lib/ChannelMessages.tsx";
+import { items } from "../lib/MessageQueue.tsx";
+import { redactionSettingToRenderedString } from "../modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
+import { _handleConnectionOpen } from "../modules/gateway/GatewayConnectionStore.tsx";
+import { MAX_REACTIONS } from "../modules/reactions/ReactionUtils.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/stores/MessageStore.tsx
 import canEditMessage from "canEditMessage";
 import fetchFingerprint from "fetchFingerprint";
@@ -48,7 +55,7 @@ function reinjectEphemerals(channelId, truncateResult) {
   }
 }
 function handleConnectionOpen() {
-  const item = require("../lib/ChannelMessages.tsx").forEach((mutate) => {
+  const item = mergeMessage.forEach((mutate) => {
     callback(table[19]).commit(mutate.mutate({ ready: false, loadingMore: false }));
   });
   set.clear();
@@ -164,7 +171,7 @@ function receiveMediaMentionMessage(item10037) {
   }
   if (null != message_id) {
     const attachment_id = item10037.media_mention.attachment_id;
-    const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(attachment_id);
+    const orCreate = mergeMessage.getOrCreate(attachment_id);
     let obj = {};
     const merged = Object.assign(item10037);
     obj.channel_id = attachment_id;
@@ -181,7 +188,7 @@ function receiveMediaMentionMessage(item10037) {
     }
     obj[3] = guild_id;
     obj.message_reference = obj;
-    const obj3 = require("../lib/ChannelMessages.tsx");
+    const obj3 = mergeMessage;
     const tmp5 = importDefault;
     const mutation = orCreate.receiveMessage(obj, false).mutate({ ready: true });
     const receiveMessageResult = orCreate.receiveMessage(obj, false);
@@ -190,7 +197,7 @@ function receiveMediaMentionMessage(item10037) {
   }
 }
 function handleCleanup() {
-  const item = require("../lib/ChannelMessages.tsx").forEach((channelId) => {
+  const item = mergeMessage.forEach((channelId) => {
     channelId = channelId.channelId;
     if (null == channel.getChannel(channelId)) {
       callback(table[19]).clear(channelId);
@@ -200,7 +207,7 @@ function handleCleanup() {
 }
 function handleRelationshipUpdate() {
   let c0 = false;
-  const item = require("../lib/ChannelMessages.tsx").forEach((reset) => {
+  const item = mergeMessage.forEach((reset) => {
     outer1_1(outer1_2[19]).commit(reset.reset(reset.map((blocked) => {
       let result = blocked;
       if (blocked.blocked !== outer1_15.isBlockedForMessage(blocked)) {
@@ -219,7 +226,7 @@ function handleRelationshipUpdate() {
 }
 function performAuthorUpdate(guildId) {
   let closure_0 = guildId;
-  const item = require("../lib/ChannelMessages.tsx").forEach((channelId) => {
+  const item = mergeMessage.forEach((channelId) => {
     const channel = outer1_9.getChannel(channelId.channelId);
     let guild_id;
     if (channel != null) {
@@ -257,7 +264,7 @@ function handleReaction(optimistic) {
   const _require = optimistic;
   ({ type: importDefault, emoji: dependencyMap, reactionType: canEditMessage } = optimistic);
   ({ channelId, messageId, userId } = optimistic);
-  const value = require("../lib/ChannelMessages.tsx").get(channelId);
+  const value = mergeMessage.get(channelId);
   if (null == value) {
     return false;
   } else {
@@ -275,19 +282,19 @@ function handleReaction(optimistic) {
     } else {
       return false;
     }
-    obj3 = _require("../modules/reactions/ReactionUtils.tsx");
+    obj3 = _MAX_REACTIONS;
   }
-  const obj = require("../lib/ChannelMessages.tsx");
+  const obj = mergeMessage;
   tmp = importDefault;
 }
 function handleMessageSendFailedAutomod(arg0) {
   let messageData;
   let require;
   ({ type: require, messageData } = arg0);
-  const failedMessageId = require("../lib/MessageQueue.tsx") /* items */.getFailedMessageId(messageData);
-  const obj = require("../lib/MessageQueue.tsx") /* items */;
+  const failedMessageId = items /* items */.getFailedMessageId(messageData);
+  const obj = items /* items */;
   const tmp3 = importDefault;
-  const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(messageData.message.channelId);
+  const orCreate = mergeMessage.getOrCreate(messageData.message.channelId);
   if (orCreate.has(failedMessageId)) {
     const updateResult = orCreate.update(failedMessageId, (embeds) => {
       embeds = embeds.embeds;
@@ -310,7 +317,7 @@ function handleMessageSendFailedAutomod(arg0) {
   } else {
     return false;
   }
-  let obj2 = require("../lib/ChannelMessages.tsx");
+  let obj2 = mergeMessage;
 }
 ({ MessageFlags: closure_19, MessageReferenceTypes: closure_20, MessageStates: closure_21, MessageTypes: closure_22, Permissions: closure_23 } = ME);
 let set = new Set();
@@ -335,22 +342,22 @@ prototype["getMessages"] = function getMessages(arg0) {
     }
     if (initialize.isViewingRoles(guildId)) {
       if (!getUncachedChannelPermissions.can(constants4.VIEW_CHANNEL, channel)) {
-        const tmp11 = new require("../lib/ChannelMessages.tsx")(arg0);
+        const tmp11 = new mergeMessage(arg0);
         return tmp11;
       }
     }
   }
-  return require("../lib/ChannelMessages.tsx").getOrCreate(arg0);
+  return mergeMessage.getOrCreate(arg0);
 };
 prototype["getMessage"] = function getMessage(arg0, arg1) {
-  const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(arg0);
+  const orCreate = mergeMessage.getOrCreate(arg0);
   return orCreate.get(arg1);
 };
 prototype["getLastEditableMessage"] = function getLastEditableMessage(id) {
   const currentUser = authStore.getCurrentUser();
   const messages = this.getMessages(id);
-  const tmp = require("../../_runtime/00012_apply.js");
-  const reversed = require("../../_runtime/00012_apply.js")(messages.toArray()).reverse();
+  const tmp = apply;
+  const reversed = apply(messages.toArray()).reverse();
   return reversed.find((arg0) => {
     let id;
     if (id != null) {
@@ -390,15 +397,15 @@ prototype["getLastChatCommandMessage"] = function getLastChatCommandMessage(arg0
 };
 prototype["getLastMessage"] = function getLastMessage(channelId) {
   const messages = this.getMessages(channelId);
-  const tmp = require("../../_runtime/00012_apply.js");
-  const reversed = require("../../_runtime/00012_apply.js")(messages.toArray()).reverse();
+  const tmp = apply;
+  const reversed = apply(messages.toArray()).reverse();
   return reversed.get(0);
 };
 prototype["getLastNonCurrentUserMessage"] = function getLastNonCurrentUserMessage(closure_0) {
   const currentUser = authStore.getCurrentUser();
   const messages = this.getMessages(closure_0);
-  const tmp = require("../../_runtime/00012_apply.js");
-  const reversed = require("../../_runtime/00012_apply.js")(messages.toArray()).reverse();
+  const tmp = apply;
+  const reversed = apply(messages.toArray()).reverse();
   return reversed.find((author) => {
     let id;
     if (id != null) {
@@ -408,7 +415,7 @@ prototype["getLastNonCurrentUserMessage"] = function getLastNonCurrentUserMessag
   });
 };
 prototype["jumpedMessageId"] = function jumpedMessageId(arg0) {
-  const value = require("../lib/ChannelMessages.tsx").get(arg0);
+  const value = mergeMessage.get(arg0);
   let jumpTargetId;
   if (value != null) {
     jumpTargetId = value.jumpTargetId;
@@ -416,7 +423,7 @@ prototype["jumpedMessageId"] = function jumpedMessageId(arg0) {
   return jumpTargetId;
 };
 prototype["focusedMessageId"] = function focusedMessageId(arg0) {
-  const value = require("../lib/ChannelMessages.tsx").get(arg0);
+  const value = mergeMessage.get(arg0);
   let focusTargetId;
   if (value != null) {
     focusTargetId = value.focusTargetId;
@@ -424,12 +431,12 @@ prototype["focusedMessageId"] = function focusedMessageId(arg0) {
   return focusTargetId;
 };
 prototype["hasPresent"] = function hasPresent(arg0) {
-  const value = require("../lib/ChannelMessages.tsx").get(arg0);
-  const obj = require("../lib/ChannelMessages.tsx");
+  const value = mergeMessage.get(arg0);
+  const obj = mergeMessage;
   return null != value && value.ready && value.hasPresent();
 };
 prototype["isReady"] = function isReady(arg0) {
-  return require("../lib/ChannelMessages.tsx").getOrCreate(arg0).ready;
+  return mergeMessage.getOrCreate(arg0).ready;
 };
 prototype["whenReady"] = function whenReady(arg0, arg1) {
   const self = this;
@@ -444,7 +451,7 @@ prototype["whenReady"] = function whenReady(arg0, arg1) {
   });
 };
 prototype["isLoadingMessages"] = function isLoadingMessages(channelId) {
-  return require("../lib/ChannelMessages.tsx").getOrCreate(channelId).loadingMore;
+  return mergeMessage.getOrCreate(channelId).loadingMore;
 };
 prototype["hasCurrentUserSentMessage"] = function hasCurrentUserSentMessage(arg0) {
   const currentUser = authStore.getCurrentUser();
@@ -483,13 +490,13 @@ const messageStore = new MessageStore(require("dispatcher"), {
       let tmp9 = importDefault;
       let tmp8 = key10012;
       let tmp10 = dependencyMap;
-      let obj = require("../lib/ChannelMessages.tsx");
+      let obj = mergeMessage;
       let value = obj.get(key10012);
       if (null == value) {
         continue;
       } else {
         let tmp = require;
-        let _default = require("../modules/gateway/GatewayConnectionStore.tsx") /* _handleConnectionOpen */.default;
+        let _default = _handleConnectionOpen /* _handleConnectionOpen */.default;
         let isConnectedResult = _default.isConnected();
         if (!value.cached) {
           if (isConnectedResult) {
@@ -518,18 +525,18 @@ const messageStore = new MessageStore(require("dispatcher"), {
   CACHE_LOADED: function handleCacheLoaded(messages) {
     let tmp6;
     let tmp7;
-    const entries = require("../utils/SnowflakeUtils.tsx").entries(messages.messages);
-    const obj = require("../utils/SnowflakeUtils.tsx");
+    const entries = DISCORD_EPOCH.entries(messages.messages);
+    const obj = DISCORD_EPOCH;
     while (tmp2 !== undefined) {
       let tmp4 = callback;
       let tmp5 = callback(tmp3, 2);
       let tmp8 = importDefault;
       let tmp9 = dependencyMap;
       [tmp6, tmp7] = tmp5;
-      let obj2 = require("../lib/ChannelMessages.tsx");
+      let obj2 = mergeMessage;
       let orCreate = obj2.getOrCreate(tmp6);
       let addCachedMessagesResult = orCreate.addCachedMessages(tmp7, true);
-      let obj4 = require("../lib/ChannelMessages.tsx");
+      let obj4 = mergeMessage;
       let commitResult = obj4.commit(addCachedMessagesResult);
       continue;
     }
@@ -550,7 +557,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
     let truncate;
     ({ channelId, isBefore, isAfter, messages } = arg0);
     ({ jump, hasMoreBefore, hasMoreAfter, isStale, truncate, avoidInitialScroll } = arg0);
-    const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(channelId);
+    const orCreate = mergeMessage.getOrCreate(channelId);
     const complete = orCreate.loadComplete({ newMessages: messages, isBefore, isAfter, jump, hasMoreBefore, hasMoreAfter, cached: isStale, hasFetched: true, avoidInitialScroll });
     let tmp3 = null == truncate;
     if (!tmp3) {
@@ -571,7 +578,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
     if (!tmp3) {
       truncateResult = complete.truncate(isBefore, isAfter);
     }
-    const obj = require("../lib/ChannelMessages.tsx");
+    const obj = mergeMessage;
     const tmp = importDefault;
     const tmp7 = reinjectEphemerals(channelId, truncateResult);
     tmp(4955).commit(tmp7);
@@ -582,9 +589,9 @@ const messageStore = new MessageStore(require("dispatcher"), {
     }
   },
   LOAD_MESSAGES_FAILURE: function handleLoadMessagesFailure(channelId) {
-    const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(channelId.channelId);
-    const obj = require("../lib/ChannelMessages.tsx");
-    require("../lib/ChannelMessages.tsx").commit(orCreate.mutate({ loadingMore: false, error: true }));
+    const orCreate = mergeMessage.getOrCreate(channelId.channelId);
+    const obj = mergeMessage;
+    mergeMessage.commit(orCreate.mutate({ loadingMore: false, error: true }));
   },
   LOAD_MESSAGES_SUCCESS_CACHED: function handleLoadMessagesSuccessCached(truncate) {
     let after;
@@ -661,7 +668,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
     found(4955).commit(tmp10);
   },
   LOCAL_MESSAGES_LOADED: function handleLocalMessagesLoaded(channelId) {
-    let obj = require("../lib/ChannelMessages.tsx");
+    let obj = mergeMessage;
     const orCreate = obj.getOrCreate(channelId.channelId);
     const addCachedMessagesResult = orCreate.addCachedMessages(channelId.messages, channelId.stale);
     let isForegroundCacheLoad = channelId.isForegroundCacheLoad;
@@ -678,16 +685,16 @@ const messageStore = new MessageStore(require("dispatcher"), {
       obj[1] = addCachedMessagesResult.suppressRowAnimationSequenceId + 1;
       mutation = addCachedMessagesResult.mutate(obj);
     }
-    require("../lib/ChannelMessages.tsx").commit(mutation);
+    mergeMessage.commit(mutation);
   },
   LOAD_MESSAGE_INTERACTION_DATA_SUCCESS: function handleLoadMessageInteractionDataSuccess(messageId) {
     let closure_0 = messageId;
     messageId = messageId.messageId;
-    const value = require("../lib/ChannelMessages.tsx").get(messageId.channelId);
+    const value = mergeMessage.get(messageId.channelId);
     if (null != value) {
       if (value.has(messageId)) {
         const updateResult = value.update(messageId, (set) => set.set("interactionData", messageId.interactionData));
-        require("../lib/ChannelMessages.tsx").commit(updateResult);
+        mergeMessage.commit(updateResult);
       }
     }
     return false;
@@ -698,15 +705,15 @@ const messageStore = new MessageStore(require("dispatcher"), {
     let truncateTop;
     ({ channelId, truncateBottom, truncateTop } = arg0);
     tmp4.log("Truncating messages for " + channelId + " bottom:" + truncateBottom + " top:" + truncateTop);
-    const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(channelId);
-    const obj = require("../lib/ChannelMessages.tsx");
+    const orCreate = mergeMessage.getOrCreate(channelId);
+    const obj = mergeMessage;
     const truncateResult = orCreate.truncate(truncateBottom, truncateTop);
-    require("../lib/ChannelMessages.tsx").commit(truncateResult);
+    mergeMessage.commit(truncateResult);
   },
   CLEAR_MESSAGES: function handleClearMessages(channelId) {
     channelId = channelId.channelId;
     tmp4.log("Clearing messages for " + channelId);
-    require("../lib/ChannelMessages.tsx").clear(channelId);
+    mergeMessage.clear(channelId);
     set.clear();
   },
   MESSAGE_CREATE: function handleIncomingMessage(isPushNotification) {
@@ -714,10 +721,10 @@ const messageStore = new MessageStore(require("dispatcher"), {
     let message;
     let optimistic;
     ({ channelId, message, optimistic } = isPushNotification);
-    const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(channelId);
-    const obj = require("../lib/ChannelMessages.tsx");
+    const orCreate = mergeMessage.getOrCreate(channelId);
+    const obj = mergeMessage;
     const tmp3 = require;
-    const isConnectedResult = require("../modules/gateway/GatewayConnectionStore.tsx") /* _handleConnectionOpen */.default.isConnected();
+    const isConnectedResult = _handleConnectionOpen /* _handleConnectionOpen */.default.isConnected();
     if (isPushNotification.isPushNotification) {
       if (tmp3Result.isIOSPushNotificationRawPayloadFixExperimentEnabled()) {
         (function addPushNotificationMessageIfNotCached(channelId, message, isConnectedResult) {
@@ -770,7 +777,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
     let messageId;
     let require;
     ({ messageId, reason: require } = channelId);
-    const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(channelId.channelId);
+    const orCreate = mergeMessage.getOrCreate(channelId.channelId);
     if (null != orCreate) {
       if (orCreate.has(messageId)) {
         const value = orCreate.get(messageId, true);
@@ -804,7 +811,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
             return result2;
           });
         }
-        require("../lib/ChannelMessages.tsx").commit(removeResult);
+        mergeMessage.commit(removeResult);
       }
     }
     return false;
@@ -813,7 +820,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
   MESSAGE_EDIT_FAILED_AUTOMOD: handleMessageSendFailedAutomod,
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
     const id = message.message.id;
-    const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(message.message.channel_id);
+    const orCreate = mergeMessage.getOrCreate(message.message.channel_id);
     if (null != orCreate) {
       if (orCreate.has(id)) {
         let tmpResult = tmp(4955);
@@ -843,18 +850,18 @@ const messageStore = new MessageStore(require("dispatcher"), {
   },
   MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function handleMessageExplicitContentScanTimeout(messageId) {
     messageId = messageId.messageId;
-    const value = require("../lib/ChannelMessages.tsx").get(messageId.channelId);
+    const value = mergeMessage.get(messageId.channelId);
     if (null != value) {
       if (value.has(messageId)) {
-        const updateResult = value.update(messageId, require("../modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx") /* redactionSettingToRenderedString */.handleExplicitMediaScanTimeoutForMessage);
-        require("../lib/ChannelMessages.tsx").commit(updateResult);
+        const updateResult = value.update(messageId, redactionSettingToRenderedString /* redactionSettingToRenderedString */.handleExplicitMediaScanTimeoutForMessage);
+        mergeMessage.commit(updateResult);
       }
     }
     return false;
   },
   MESSAGE_DELETE: function handleMessageDelete(id) {
     id = id.id;
-    let obj = require("../lib/ChannelMessages.tsx");
+    let obj = mergeMessage;
     const orCreate = obj.getOrCreate(id.channelId);
     if (null != orCreate) {
       if (orCreate.has(id)) {
@@ -969,15 +976,15 @@ const messageStore = new MessageStore(require("dispatcher"), {
     let channelId;
     let messageId;
     ({ channelId, messageId } = arg0);
-    const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(channelId);
-    const obj = require("../lib/ChannelMessages.tsx");
-    require("../lib/ChannelMessages.tsx").commit(orCreate.mutate({ revealedMessageId: messageId }));
+    const orCreate = mergeMessage.getOrCreate(channelId);
+    const obj = mergeMessage;
+    mergeMessage.commit(orCreate.mutate({ revealedMessageId: messageId }));
   },
   THREAD_CREATE_LOCAL: function handleThreadCreateLocal(channelId) {
-    const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(channelId.channelId);
+    const orCreate = mergeMessage.getOrCreate(channelId.channelId);
     const complete = orCreate.loadComplete({ newMessages: [], hasMoreAfter: false, hasMoreBefore: false });
-    const obj = require("../lib/ChannelMessages.tsx");
-    require("../lib/ChannelMessages.tsx").commit(complete);
+    const obj = mergeMessage;
+    mergeMessage.commit(complete);
   },
   CHANNEL_DELETE: handleCleanup,
   THREAD_DELETE: handleCleanup,
@@ -994,7 +1001,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
   },
   THREAD_MEMBER_LIST_UPDATE: function handleThreadMemberListUpdate(guildId) {
     guildId = guildId.guildId;
-    let item = require("../lib/ChannelMessages.tsx").forEach((channelId) => {
+    let item = mergeMessage.forEach((channelId) => {
       const channel = outer1_9.getChannel(channelId.channelId);
       let guild_id;
       if (channel != null) {
@@ -1028,7 +1035,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
     let messageId;
     reactions = reactions.reactions;
     ({ channelId, messageId } = reactions);
-    const value = require("../lib/ChannelMessages.tsx").get(channelId);
+    const value = mergeMessage.get(channelId);
     if (null == value) {
       return false;
     } else {
@@ -1042,7 +1049,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
       });
       tmp(4955).commit(updateResult);
     }
-    const obj = require("../lib/ChannelMessages.tsx");
+    const obj = mergeMessage;
     tmp = importDefault;
   },
   MESSAGE_REACTION_REMOVE: handleReaction,
@@ -1050,14 +1057,14 @@ const messageStore = new MessageStore(require("dispatcher"), {
     let channelId;
     let messageId;
     ({ channelId, messageId } = arg0);
-    const value = require("../lib/ChannelMessages.tsx").get(channelId);
+    const value = mergeMessage.get(channelId);
     if (null == value) {
       return false;
     } else {
       const updateResult = value.update(messageId, (set) => set.set("reactions", []));
       tmp(4955).commit(updateResult);
     }
-    const obj = require("../lib/ChannelMessages.tsx");
+    const obj = mergeMessage;
     tmp = importDefault;
   },
   MESSAGE_REACTION_REMOVE_EMOJI: function handleRemoveEmojiReactions(emoji) {
@@ -1065,18 +1072,18 @@ const messageStore = new MessageStore(require("dispatcher"), {
     let messageId;
     emoji = emoji.emoji;
     ({ channelId, messageId } = emoji);
-    const value = require("../lib/ChannelMessages.tsx").get(channelId);
+    const value = mergeMessage.get(channelId);
     if (null == value) {
       return false;
     } else {
       const updateResult = value.update(messageId, (removeReactionsForEmoji) => removeReactionsForEmoji.removeReactionsForEmoji(emoji));
       tmp(4955).commit(updateResult);
     }
-    const obj = require("../lib/ChannelMessages.tsx");
+    const obj = mergeMessage;
     tmp = importDefault;
   },
   LOGOUT: function handleLogout() {
-    const item = require("../lib/ChannelMessages.tsx").forEach((channelId) => {
+    const item = mergeMessage.forEach((channelId) => {
       callback(table[19]).clear(channelId.channelId);
     });
     set.clear();
@@ -1097,7 +1104,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
       return false;
     } else {
       if (set.has(messageId)) {
-        const orCreate = require("../lib/ChannelMessages.tsx").getOrCreate(tmp);
+        const orCreate = mergeMessage.getOrCreate(tmp);
         const value = orCreate.get(messageId);
         if (null == value) {
           return false;
@@ -1108,7 +1115,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
           const mergeResult = orCreate.remove(messageId).merge(items);
           tmp2(4955).commit(mergeResult);
         }
-        const obj = require("../lib/ChannelMessages.tsx");
+        const obj = mergeMessage;
         tmp2 = importDefault;
       } else {
         return false;

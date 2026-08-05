@@ -1,16 +1,18 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { NAV_BAR_HEIGHT } from "../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 // discord_app/modules/mfa/native/MfaScreenUtils.tsx
 import createCacheKey from "createCacheKey";
 
 let obj = { useScreenStyles: null };
 obj[0] = createCacheKey.createStyles((arg0) => {
-  const NAV_BAR_HEIGHT = require("../../../design/components/Navigator/native/NavigatorConstants.native.tsx") /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT;
+  const NAV_BAR_HEIGHT = NAV_BAR_HEIGHT /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT;
   if (arg0) {
     let diff = NAV_BAR_HEIGHT;
   } else {
     diff = NAV_BAR_HEIGHT - tmp(5235).STATUS_BAR_HEIGHT;
   }
   let obj = { marginTop: diff, marginLeft: null, marginRight: null, paddingBottom: null, flex: 1, flexDirection: "column", justifyContent: "space-between", alignItems: "stretch" };
-  const space = require("../../../../discord_common/js/packages/tokens/native.tsx").space;
+  const space = Themes.space;
   if (arg0) {
     let PX_16 = space.PX_24;
     let tmp6 = tmp5;

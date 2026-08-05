@@ -1,3 +1,4 @@
+import { useInitialValue } from "useInitialValue.tsx";
 // discord_app/hooks/useResettingValue.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -14,7 +15,7 @@ export default function useResettingValue(arg0, arg1) {
   const importDefault = arg1;
   const tmp = callback(callback2(arg0), 2);
   const dependencyMap = tmp[1];
-  const tmp2 = require("useInitialValue.tsx")(() => {
+  const tmp2 = useInitialValue(() => {
     const timeout = new callback(4170).Timeout();
     return timeout;
   });

@@ -1,3 +1,5 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { isParentalConsentWarningFetchEnabled } from "ParentalConsentWarningFetchExperiment.tsx";
 // discord_app/modules/parent_tools/ParentalConsentWarningActionCreators.tsx
 import isParentalConsentWarningFetchEnabled from "isParentalConsentWarningFetchEnabled";
 import initialize from "initialize";
@@ -155,7 +157,7 @@ function fetchWarning() {
   } else {
     return Promise.resolve();
   }
-  obj = _require("ParentalConsentWarningFetchExperiment.tsx");
+  obj = _isParentalConsentWarningFetchEnabled;
 }
 function maybeFetchWarning() {
   const self = this;
@@ -334,5 +336,5 @@ export const resetFetchState = function resetFetchState() {
   importDefaultResult.succeed();
 };
 export const clearWarning = function clearWarning() {
-  require("../../Dispatcher.tsx").dispatch({ type: "PARENTAL_CONSENT_WARNING_CLEARED" });
+  dispatcher.dispatch({ type: "PARENTAL_CONSENT_WARNING_CLEARED" });
 };

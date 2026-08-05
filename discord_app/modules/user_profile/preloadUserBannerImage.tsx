@@ -1,3 +1,5 @@
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/user_profile/preloadUserBannerImage.tsx
 const result = require("set").fileFinishedImporting("modules/user_profile/preloadUserBannerImage.tsx");
 
@@ -21,12 +23,12 @@ export default function preloadUserBannerImage(user) {
         }
         let guildMemberBannerURL;
         if (tmp3) {
-          let obj = require("../../utils/AvatarUtils.tsx") /* getAvatarURL */;
+          let obj = getAvatarURL /* getAvatarURL */;
           obj = { id: null, guildId: null, banner: null, canAnimate: null, size: 600 };
           obj[0] = id;
           obj[1] = arg1;
           obj[2] = user.guild_member_profile.banner;
-          const GifAutoPlay = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.GifAutoPlay;
+          const GifAutoPlay = explicitContentFromProto /* explicitContentFromProto */.GifAutoPlay;
           obj[3] = GifAutoPlay.getSetting();
           guildMemberBannerURL = obj.getGuildMemberBannerURL(obj);
         }
@@ -41,10 +43,10 @@ export default function preloadUserBannerImage(user) {
           obj = { id: null, banner: null, canAnimate: null, size: 600 };
           obj[0] = id;
           obj[1] = user.user_profile.banner;
-          const GifAutoPlay2 = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.GifAutoPlay;
+          const GifAutoPlay2 = explicitContentFromProto /* explicitContentFromProto */.GifAutoPlay;
           obj[2] = GifAutoPlay2.getSetting();
-          guildMemberBannerURL = require("../../utils/AvatarUtils.tsx") /* getAvatarURL */.getUserBannerURL(obj);
-          const obj3 = require("../../utils/AvatarUtils.tsx") /* getAvatarURL */;
+          guildMemberBannerURL = getAvatarURL /* getAvatarURL */.getUserBannerURL(obj);
+          const obj3 = getAvatarURL /* getAvatarURL */;
         }
         if (null != guildMemberBannerURL) {
           const image = new globalThis.Image();

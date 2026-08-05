@@ -1,3 +1,4 @@
+import { Url } from "../../../_runtime/01469_Url.js";
 // discord_app/modules/coded_links/findCodedLinks.tsx
 import updateInvite from "updateInvite";
 import { PRIMARY_DOMAIN } from "ME";
@@ -205,7 +206,7 @@ function getPathsFromURL(target) {
 }
 function parseURLSafely(url) {
   try {
-    return require("../../../_runtime/01469_Url.js") /* Url */.parse(url);
+    return Url /* Url */.parse(url);
   } catch (err) {
     return null;
   }

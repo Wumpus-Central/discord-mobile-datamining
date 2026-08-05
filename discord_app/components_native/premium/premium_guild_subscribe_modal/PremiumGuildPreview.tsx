@@ -1,3 +1,16 @@
+import { registerAsset } from "../../../../_runtime/12787_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12788_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12789_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12790_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12791_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12792_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12793_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12794_registerAsset.js";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { GuildIconSizes } from "../../../modules/guild/native/GuildIcon.tsx";
+import { getGuildTierFromGuild } from "../../../utils/GuildBoostingUtils.tsx";
 // discord_app/components_native/premium/premium_guild_subscribe_modal/PremiumGuildPreview.tsx
 import "initialize";
 import get_ActivityIndicator from "Button";
@@ -19,43 +32,43 @@ function PremiumGuildTierPill(arg0) {
   let obj = { style: tmp.tierPill, children: null };
   obj = { style: tmp.tierPillImage, source: null };
   if (BoostedGuildTiers.NONE === tier) {
-    let tmp22 = require("../../../../_runtime/12788_registerAsset.js");
-    const tmp21 = require("../../../../_runtime/12787_registerAsset.js");
+    let tmp22 = registerAsset;
+    const tmp21 = registerAsset;
     if (obj5.isThemeDark(theme)) {
       tmp22 = tmp21;
     }
     let tmp7 = tmp22;
-    obj5 = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+    obj5 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   } else if (tmp6.TIER_1 === tier) {
-    let tmp17 = require("../../../../_runtime/12790_registerAsset.js");
-    const tmp16 = require("../../../../_runtime/12789_registerAsset.js");
+    let tmp17 = registerAsset;
+    const tmp16 = registerAsset;
     if (obj4.isThemeDark(theme)) {
       tmp17 = tmp16;
     }
     tmp7 = tmp17;
-    obj4 = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+    obj4 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   } else if (tmp6.TIER_2 === tier) {
-    let tmp12 = require("../../../../_runtime/12792_registerAsset.js");
-    const tmp11 = require("../../../../_runtime/12791_registerAsset.js");
+    let tmp12 = registerAsset;
+    const tmp11 = registerAsset;
     if (obj3.isThemeDark(theme)) {
       tmp12 = tmp11;
     }
     tmp7 = tmp12;
-    obj3 = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+    obj3 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   } else if (tmp6.TIER_3 === tier) {
-    let tmp8 = require("../../../../_runtime/12794_registerAsset.js");
-    const tmp26 = require("../../../../_runtime/12793_registerAsset.js");
+    let tmp8 = registerAsset;
+    const tmp26 = registerAsset;
     if (obj8.isThemeDark(theme)) {
       tmp8 = tmp26;
     }
     tmp7 = tmp8;
-    obj8 = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+    obj8 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   }
   obj[1] = tmp7;
   const items = [closure_7(closure_4, obj), ];
   obj = { style: tmp.tierPillText, children: null };
-  obj[1] = require("../../../utils/GuildBoostingUtils.tsx") /* getGuildTierFromGuild */.getTierName(tier);
-  items[1] = closure_7(require("../../../design/void/native.tsx") /* Button */.LegacyText, obj);
+  obj[1] = getGuildTierFromGuild /* getGuildTierFromGuild */.getTierName(tier);
+  items[1] = closure_7(Button /* Button */.LegacyText, obj);
   obj[1] = items;
   return closure_8(closure_3, obj);
 }
@@ -78,16 +91,16 @@ const result = require("handleThemeChange").fileFinishedImporting("components_na
 export default function PremiumGuildPreview(guild) {
   guild = guild.guild;
   const tmp = createCacheKey();
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [handleThemeChange];
   obj = { style: items1, children: null };
   items1 = [tmp.guild, guild.style];
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
   obj = { guild, size: null, selected: false };
-  obj[1] = require("../../../modules/guild/native/GuildIcon.tsx") /* GuildIconSizes */.GuildIconSizes.LARGE;
-  const items2 = [callback(require("../../../modules/guild/native/GuildIcon.tsx"), obj), ];
+  obj[1] = GuildIconSizes /* GuildIconSizes */.GuildIconSizes.LARGE;
+  const items2 = [callback(GuildIconSizes, obj), ];
   const obj1 = { style: tmp.guildInfo, children: null };
-  const items3 = [callback(require("../../../design/void/native.tsx") /* Button */.LegacyText, { style: tmp.guildName, children: guild.name }), callback(PremiumGuildTierPill, { tier: guild.premiumTier, theme: stateFromStores })];
+  const items3 = [callback(Button /* Button */.LegacyText, { style: tmp.guildName, children: guild.name }), callback(PremiumGuildTierPill, { tier: guild.premiumTier, theme: stateFromStores })];
   obj1[1] = items3;
   items2[1] = callback2(closure_3, obj1);
   obj[1] = items2;

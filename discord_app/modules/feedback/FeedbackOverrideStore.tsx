@@ -1,3 +1,4 @@
+import { optOutEligibilityCheck } from "FeedbackManager.tsx";
 // discord_app/modules/feedback/FeedbackOverrideStore.tsx
 import { Store } from "initialize";
 
@@ -21,7 +22,7 @@ const hotspotStore = new HotspotStore(require("dispatcher"), {
     feedbackType = feedbackType.feedbackType;
     const obj = {};
     ({ cooldown, chance } = feedbackType);
-    const merged = Object.assign(require("FeedbackManager.tsx") /* optOutEligibilityCheck */.FeedbackConfig[feedbackType]);
+    const merged = Object.assign(optOutEligibilityCheck /* optOutEligibilityCheck */.FeedbackConfig[feedbackType]);
     obj.cooldown = cooldown;
     obj.chance = chance;
     closure_2[feedbackType] = obj;

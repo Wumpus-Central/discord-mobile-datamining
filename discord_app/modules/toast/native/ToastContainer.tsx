@@ -1,3 +1,4 @@
+import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/toast/native/ToastContainer.tsx
 import importAllResult from "set";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -157,7 +158,7 @@ function getItemKey(key) {
   return key.key;
 }
 function wrapChildren(children) {
-  return jsx(require("../../../design/void/native.tsx") /* Button */.NonExpandingOverlayView, { children });
+  return jsx(Button /* Button */.NonExpandingOverlayView, { children });
 }
 let c3 = importAllResult;
 let obj = { container: null };

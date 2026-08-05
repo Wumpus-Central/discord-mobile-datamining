@@ -1,3 +1,7 @@
+import { parse } from "../../../_runtime/01464_parse.js";
+import { t } from "../../../_runtime/03984_t.js";
+import { getPathsFromURL } from "../../modules/coded_links/findCodedLinks.tsx";
+import { _resolveGiftCode } from "../GiftCodeUtils.tsx";
 // discord_app/utils/native/parseURL.tsx
 import _slicedToArray from "_slicedToArray";
 import ME from "ME";
@@ -18,7 +22,7 @@ function parseQuery(arg0) {
   try {
     const _Object = Object;
     const _Object2 = Object;
-    const entries = Object.entries(require("../../../_runtime/01464_parse.js").parse(arg0));
+    const entries = Object.entries(parse.parse(arg0));
     return Object.fromEntries(entries.map((arg0) => {
       let tmp;
       let tmp2;
@@ -79,7 +83,7 @@ export default function parseURL(arg0) {
     flag = false;
   }
   let uRL = importDefault;
-  let obj = require("../../../_runtime/03984_t.js");
+  let obj = t;
   const sanitizeUrlResult = obj.sanitizeUrl(arg0);
   if (null == sanitizeUrlResult) {
     obj = { payload: null };
@@ -98,7 +102,7 @@ export default function parseURL(arg0) {
     let tmp87Result = tmp87(str);
     ({ fingerprint, attemptId, installationId, referrer_id, sort, filter } = tmp87Result);
     ({ username, custom_id, link_id } = tmp87Result);
-    let obj1 = require("../../modules/coded_links/findCodedLinks.tsx") /* getPathsFromURL */;
+    let obj1 = getPathsFromURL /* getPathsFromURL */;
     const findCodedLinkResult = obj1.findCodedLink(sanitizeUrlResult);
     if (null != findCodedLinkResult) {
       const type = findCodedLinkResult.type;
@@ -220,7 +224,7 @@ export default function parseURL(arg0) {
         return obj11;
       }
     }
-    const findGiftCodesResult = require("../GiftCodeUtils.tsx") /* _resolveGiftCode */.findGiftCodes(sanitizeUrlResult);
+    const findGiftCodesResult = _resolveGiftCode /* _resolveGiftCode */.findGiftCodes(sanitizeUrlResult);
     if (findGiftCodesResult.length > 0) {
       const obj13 = { fingerprint: null, attemptId: null, installationId: null, payload: null };
       obj13[0] = fingerprint;

@@ -1,3 +1,6 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
+import { createRequestPayload } from "managers/SearchTabsFetchManager.tsx";
 // discord_app/modules/search/SearchActionCreators.tsx
 let result = require("dispatcher").fileFinishedImporting("modules/search/SearchActionCreators.tsx");
 
@@ -38,7 +41,7 @@ export default {
     const tmp10 = importDefault;
     const tokenizeQueryResult = obj.tokenizeQuery(searchQueryString);
     obj = { id: null, searchContext: null, searchQuery: null, searchTabs: null, getLimit: null, pagination: null, trackExactTotalHits: null };
-    const obj7 = require("managers/SearchTabsFetchManager.tsx");
+    const obj7 = createRequestPayload;
     obj[0] = searchContext(11624).getSearchContextId(searchContext);
     obj[1] = searchContext;
     obj[2] = obj;
@@ -193,18 +196,18 @@ export default {
     });
   },
   clearSearchRecentMessages() {
-    require("../../Dispatcher.tsx").dispatch({ type: "SEARCH_RECENT_MESSAGES_CLEAR" });
+    dispatcher.dispatch({ type: "SEARCH_RECENT_MESSAGES_CLEAR" });
   },
   clearAllSearchMesssages() {
-    require("../../Dispatcher.tsx").dispatch({ type: "SEARCH_MESSAGES_CLEAR_ALL" });
+    dispatcher.dispatch({ type: "SEARCH_MESSAGES_CLEAR_ALL" });
   },
   clearSearchMessages(id) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "SEARCH_MESSAGES_CLEAR", id };
     obj.dispatch(obj);
   },
   initializeAutocomplete(channelDetailsSearchContext) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "SEARCH_AUTOCOMPLETE_INITIALIZE", searchContext: channelDetailsSearchContext };
     obj.dispatch(obj);
   },
@@ -215,12 +218,12 @@ export default {
     let tokens;
     ({ queryString, searchContext, tokens, cursorScope } = arg0);
     if (queryString.trim().length > 0) {
-      const FrecencyUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators = updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators;
       const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
     }
-    require("../../Dispatcher.tsx").dispatch({ type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE", searchContext, tokens, cursorScope });
+    dispatcher.dispatch({ type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE", searchContext, tokens, cursorScope });
   },
   markSearchTokensRefreshed() {
-    require("../../Dispatcher.tsx").dispatch({ type: "SEARCH_TOKENS_REFRESHED" });
+    dispatcher.dispatch({ type: "SEARCH_TOKENS_REFRESHED" });
   }
 };

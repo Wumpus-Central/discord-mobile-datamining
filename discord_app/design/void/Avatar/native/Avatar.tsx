@@ -1,3 +1,6 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { getDecorationSizeForAvatarSize } from "../../../../modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx";
+import { StaticNativeCutoutAvatarImage } from "../../CutoutableAvatarImage/native/CutoutableAvatarImage.tsx";
 // discord_app/design/void/Avatar/native/Avatar.tsx
 import importAllResult from "noop";
 import { View } from "registerAsset";
@@ -12,7 +15,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function getStatusSize(arg0) {
-  if (require("../../CutoutableAvatarImage/native/CutoutableAvatarImage.tsx") /* StaticNativeCutoutAvatarImage */.AvatarSizes.XXSMALL !== arg0) {
+  if (StaticNativeCutoutAvatarImage /* StaticNativeCutoutAvatarImage */.AvatarSizes.XXSMALL !== arg0) {
     if (tmp(12215).AvatarSizes.XSMALL !== arg0) {
       if (tmp(12215).AvatarSizes.XSMALL_20 !== arg0) {
         if (tmp(12215).AvatarSizes.SMALL !== arg0) {
@@ -52,17 +55,17 @@ let c3 = importAllResult;
 ({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles((NORMAL) => {
   let obj = { status: { position: "absolute", right: -3, bottom: -3 }, speaking: null, stageSpeaking: null, voiceStatus: null, decoration: null, container: null };
-  obj = { position: "absolute", right: -2, bottom: -2, backgroundColor: "transparent", borderWidth: 4, borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.STATUS_SPEAKING };
+  obj = { position: "absolute", right: -2, bottom: -2, backgroundColor: "transparent", borderWidth: 4, borderColor: Themes.colors.STATUS_SPEAKING };
   obj[1] = obj;
   obj[2] = { position: "absolute", right: -2, bottom: -2 };
-  obj = { width: 24, height: 24, justifyContent: "center", alignItems: "center", backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.RED_400, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.md, right: 0, bottom: 0 };
+  obj = { width: 24, height: 24, justifyContent: "center", alignItems: "center", backgroundColor: Themes.unsafe_rawColors.RED_400, borderRadius: Themes.radii.md, right: 0, bottom: 0 };
   obj[3] = obj;
   const obj1 = { position: "absolute", top: null, left: null };
-  const decorationSizeForAvatarSize = require("../../../../modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx") /* getDecorationSizeForAvatarSize */.getDecorationSizeForAvatarSize(NORMAL);
-  obj1[1] = -(decorationSizeForAvatarSize - require("../../CutoutableAvatarImage/native/CutoutableAvatarImage.tsx") /* StaticNativeCutoutAvatarImage */.styles[NORMAL].width) / 2;
-  const obj5 = require("../../../../modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx") /* getDecorationSizeForAvatarSize */;
-  const decorationSizeForAvatarSize1 = require("../../../../modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx") /* getDecorationSizeForAvatarSize */.getDecorationSizeForAvatarSize(NORMAL);
-  obj1[2] = -(decorationSizeForAvatarSize1 - require("../../CutoutableAvatarImage/native/CutoutableAvatarImage.tsx") /* StaticNativeCutoutAvatarImage */.styles[NORMAL].width) / 2;
+  const decorationSizeForAvatarSize = getDecorationSizeForAvatarSize /* getDecorationSizeForAvatarSize */.getDecorationSizeForAvatarSize(NORMAL);
+  obj1[1] = -(decorationSizeForAvatarSize - StaticNativeCutoutAvatarImage /* StaticNativeCutoutAvatarImage */.styles[NORMAL].width) / 2;
+  const obj5 = getDecorationSizeForAvatarSize /* getDecorationSizeForAvatarSize */;
+  const decorationSizeForAvatarSize1 = getDecorationSizeForAvatarSize /* getDecorationSizeForAvatarSize */.getDecorationSizeForAvatarSize(NORMAL);
+  obj1[2] = -(decorationSizeForAvatarSize1 - StaticNativeCutoutAvatarImage /* StaticNativeCutoutAvatarImage */.styles[NORMAL].width) / 2;
   obj[4] = obj1;
   obj[5] = { position: "relative" };
   return obj;

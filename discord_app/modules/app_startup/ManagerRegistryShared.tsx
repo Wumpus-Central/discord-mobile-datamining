@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/app_startup/ManagerRegistryShared.tsx
 import set from "set";
 
@@ -87,5 +88,5 @@ export const initialize = function initialize(obj) {
     let tmp5 = populateMap(tmp3);
     continue;
   }
-  require("../../Dispatcher.tsx").addInterceptor(handleAction);
+  dispatcher.addInterceptor(handleAction);
 };

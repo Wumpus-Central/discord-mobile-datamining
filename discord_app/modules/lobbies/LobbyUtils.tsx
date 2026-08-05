@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/lobbies/LobbyUtils.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
@@ -29,7 +30,7 @@ export const canUnlinkLobbyChannel = function canUnlinkLobbyChannel(channel, clo
 export const useCanUnlinkLobbyChannel = function useCanUnlinkLobbyChannel(channel) {
   const _require = channel;
   const items = [getUncachedChannelPermissions];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     if (outer1_2 !== undefined) {
       let tmp3 = null != tmp;
       if (tmp3) {

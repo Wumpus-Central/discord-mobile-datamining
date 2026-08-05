@@ -1,3 +1,9 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { LockIcon } from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
+import { NitroWheelIcon } from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { PremiumFeaturesBackground } from "../../user_settings/premium/native/PremiumFeaturesBackground.tsx";
 // discord_app/modules/collectibles/native/CollectiblesBadges.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -34,9 +40,9 @@ export const NewBadge = function NewBadge(style) {
   let obj = { style: items, children: null };
   items = [tmp.newIconBadge, style.style];
   obj = { variant: "text-sm/bold", color: "text-overlay-light", style: tmp.badgeTextUppercase, children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.y2b7CA);
-  obj[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.y2b7CA);
+  obj[1] = callback(Text /* Text */.Text, obj);
   return callback(View, obj);
 };
 export const LockBadge = function LockBadge(isNew) {
@@ -52,23 +58,23 @@ export const LockBadge = function LockBadge(isNew) {
     const items = [tmp.newLockIconBadge, style];
     obj[1] = items;
     obj = { size: "xxs", color: null };
-    obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
-    const items1 = [callback(require("../../../design/components/Icon/native/redesign/generated/LockIcon.tsx") /* LockIcon */.LockIcon, obj), ];
+    obj[1] = Themes.colors.WHITE;
+    const items1 = [callback(LockIcon /* LockIcon */.LockIcon, obj), ];
     const obj1 = { variant: "text-xs/bold", color: "text-overlay-light", style: null, children: null };
     obj1[2] = tmp.badgeTextUppercase;
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj1[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.y2b7CA);
-    items1[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj1[3] = intl.string(getSystemLocale /* getSystemLocale */.t.y2b7CA);
+    items1[1] = callback(Text /* Text */.Text, obj1);
     obj[2] = items1;
-    let tmp7 = callback2(require("../../user_settings/premium/native/PremiumFeaturesBackground.tsx"), obj);
-    const tmp11 = require("../../user_settings/premium/native/PremiumFeaturesBackground.tsx");
+    let tmp7 = callback2(PremiumFeaturesBackground, obj);
+    const tmp11 = PremiumFeaturesBackground;
   } else {
     obj = { style: null, children: null };
     const items2 = [tmp.lockIconBadge, style];
     obj[0] = items2;
     const obj2 = { size: "sm", color: null };
-    obj2[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
-    obj[1] = callback(require("../../../design/components/Icon/native/redesign/generated/LockIcon.tsx") /* LockIcon */.LockIcon, obj2);
+    obj2[1] = Themes.colors.WHITE;
+    obj[1] = callback(LockIcon /* LockIcon */.LockIcon, obj2);
     tmp7 = callback(View, obj);
   }
   return tmp7;
@@ -86,23 +92,23 @@ export const PremiumBadge = function PremiumBadge(isNew) {
     const items = [tmp.newLockIconBadge, style];
     obj[1] = items;
     obj = { size: "xxs", color: null };
-    obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
-    const items1 = [callback(require("../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx") /* NitroWheelIcon */.NitroWheelIcon, obj), ];
+    obj[1] = Themes.colors.WHITE;
+    const items1 = [callback(NitroWheelIcon /* NitroWheelIcon */.NitroWheelIcon, obj), ];
     const obj1 = { variant: "text-xs/bold", color: "text-overlay-light", style: null, children: null };
     obj1[2] = tmp.badgeTextUppercase;
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj1[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.y2b7CA);
-    items1[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj1[3] = intl.string(getSystemLocale /* getSystemLocale */.t.y2b7CA);
+    items1[1] = callback(Text /* Text */.Text, obj1);
     obj[2] = items1;
-    let tmp7 = callback2(require("../../user_settings/premium/native/PremiumFeaturesBackground.tsx"), obj);
-    const tmp11 = require("../../user_settings/premium/native/PremiumFeaturesBackground.tsx");
+    let tmp7 = callback2(PremiumFeaturesBackground, obj);
+    const tmp11 = PremiumFeaturesBackground;
   } else {
     obj = { style: null, children: null };
     const items2 = [tmp.lockIconBadge, style];
     obj[0] = items2;
     const obj2 = { size: "sm", color: null };
-    obj2[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
-    obj[1] = callback(require("../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx") /* NitroWheelIcon */.NitroWheelIcon, obj2);
+    obj2[1] = Themes.colors.WHITE;
+    obj[1] = callback(NitroWheelIcon /* NitroWheelIcon */.NitroWheelIcon, obj2);
     tmp7 = callback(View, obj);
   }
   return tmp7;
@@ -112,9 +118,9 @@ export const LimitedTimeBadge = function LimitedTimeBadge(style) {
   let obj = { style: items, children: null };
   items = [tmp.limitedTimeBadge, style.style];
   obj = { variant: "text-xs/bold", color: "text-overlay-dark", style: tmp.badgeTextUppercase, children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["h/uBCR"]);
-  obj[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["h/uBCR"]);
+  obj[1] = callback(Text /* Text */.Text, obj);
   return callback(View, obj);
 };
 export const IconBadgePill = function IconBadgePill(isDark) {
@@ -152,7 +158,7 @@ export const IconTextBadge = function IconTextBadge(isDark) {
     str2 = "text-overlay-dark";
   }
   obj = { variant: "text-xs/bold", color: str2, style: tmp.badgeTextUppercase, children: label };
-  items1[1] = closure_5(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items1[1] = closure_5(Text /* Text */.Text, obj);
   obj[1] = items1;
   return closure_6(View, obj);
 };

@@ -1,3 +1,6 @@
+import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { context } from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 // discord_app/modules/guild_invite/native/action_sheet/InviteSelectActionSheet.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -18,7 +21,7 @@ export default function InviteSelectActionSheet(arg0) {
   ({ options, onChange: require } = arg0);
   ({ title, value } = arg0);
   let obj = { contentStyles: createCacheKey().content, header: null, children: null };
-  obj[1] = jsx(require("../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title });
+  obj[1] = jsx(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title });
   obj = {
     value,
     onChange(arg0) {
@@ -29,7 +32,7 @@ export default function InviteSelectActionSheet(arg0) {
     children: null
   };
   obj[3] = options.map((value) => callback2(callback(table[8]).TableRadioRow, { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel }, "" + value.value));
-  obj[2] = jsx(require("../../../../design/components/TableRow/native/TableRadioGroup.native.tsx") /* context */.TableRadioGroup, {
+  obj[2] = jsx(context /* context */.TableRadioGroup, {
     value,
     onChange(arg0) {
       callback(arg0);
@@ -38,7 +41,7 @@ export default function InviteSelectActionSheet(arg0) {
     hasIcons: false,
     children: null
   });
-  return jsx(require("../../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, {
+  return jsx(Background /* Background */.BottomSheet, {
     value,
     onChange(arg0) {
       callback(arg0);

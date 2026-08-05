@@ -1,3 +1,5 @@
+import { useIsRiotSocialSDKMigrationEnabled } from "../modules/application_account_linking/experiments/socialSDKMigration.tsx";
+import { isDiscordProxiedAssetUrl } from "../utils/URLUtils.tsx";
 // discord_app/lib/Platforms.tsx
 import { PlatformTypes } from "ME";
 import { ApplicationIdentityConnections } from "items1";
@@ -45,11 +47,11 @@ obj2[3] = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset"
 const obj4 = {
   replacedBy: ApplicationIdentityConnections.BATTLENET,
   getMigrationExperimentEnabled(location) {
-    const battlenetSocialSDKMigrationExperiment = require("../modules/application_account_linking/experiments/socialSDKMigration.tsx") /* useIsRiotSocialSDKMigrationEnabled */.battlenetSocialSDKMigrationExperiment;
+    const battlenetSocialSDKMigrationExperiment = useIsRiotSocialSDKMigrationEnabled /* useIsRiotSocialSDKMigrationEnabled */.battlenetSocialSDKMigrationExperiment;
     return battlenetSocialSDKMigrationExperiment.getConfig({ location }).enabled;
   },
   useMigrationExperimentEnabled(location) {
-    const battlenetSocialSDKMigrationExperiment = require("../modules/application_account_linking/experiments/socialSDKMigration.tsx") /* useIsRiotSocialSDKMigrationEnabled */.battlenetSocialSDKMigrationExperiment;
+    const battlenetSocialSDKMigrationExperiment = useIsRiotSocialSDKMigrationEnabled /* useIsRiotSocialSDKMigrationEnabled */.battlenetSocialSDKMigrationExperiment;
     return battlenetSocialSDKMigrationExperiment.useConfig({ location }).enabled;
   },
   helpCenterLink: "https://discord.com/blog/link-world-of-warcraft-with-discord",
@@ -86,12 +88,12 @@ obj11[3] = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset
 const obj13 = {
   replacedBy: ApplicationIdentityConnections.RIOT_GAMES,
   getMigrationExperimentEnabled(location) {
-    let obj = require("../modules/application_account_linking/experiments/socialSDKMigration.tsx") /* useIsRiotSocialSDKMigrationEnabled */;
+    let obj = useIsRiotSocialSDKMigrationEnabled /* useIsRiotSocialSDKMigrationEnabled */;
     obj = { location };
     return obj.getIsRiotSocialSDKMigrationEnabled(obj);
   },
   useMigrationExperimentEnabled(location) {
-    let obj = require("../modules/application_account_linking/experiments/socialSDKMigration.tsx") /* useIsRiotSocialSDKMigrationEnabled */;
+    let obj = useIsRiotSocialSDKMigrationEnabled /* useIsRiotSocialSDKMigrationEnabled */;
     obj = { location };
     return obj.useIsRiotSocialSDKMigrationEnabled(obj);
   },
@@ -190,12 +192,12 @@ obj38[2] = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset
 const obj40 = {
   replacedBy: ApplicationIdentityConnections.RIOT_GAMES,
   getMigrationExperimentEnabled(location) {
-    let obj = require("../modules/application_account_linking/experiments/socialSDKMigration.tsx") /* useIsRiotSocialSDKMigrationEnabled */;
+    let obj = useIsRiotSocialSDKMigrationEnabled /* useIsRiotSocialSDKMigrationEnabled */;
     obj = { location };
     return obj.getIsRiotSocialSDKMigrationEnabled(obj);
   },
   useMigrationExperimentEnabled(location) {
-    let obj = require("../modules/application_account_linking/experiments/socialSDKMigration.tsx") /* useIsRiotSocialSDKMigrationEnabled */;
+    let obj = useIsRiotSocialSDKMigrationEnabled /* useIsRiotSocialSDKMigrationEnabled */;
     obj = { location };
     return obj.useIsRiotSocialSDKMigrationEnabled(obj);
   },
@@ -288,7 +290,7 @@ const obj61 = {
     return tmp;
   },
   getByUrl(url) {
-    const toURLSafeResult = require("../utils/URLUtils.tsx").toURLSafe(url);
+    const toURLSafeResult = isDiscordProxiedAssetUrl.toURLSafe(url);
     if (null != toURLSafeResult) {
       const hostname = toURLSafeResult.hostname;
       let substr = hostname;
@@ -297,7 +299,7 @@ const obj61 = {
       }
       return table2[substr];
     }
-    const obj = require("../utils/URLUtils.tsx");
+    const obj = isDiscordProxiedAssetUrl;
   },
   isSupported(key10009) {
     const call = hasOwnProperty.call;

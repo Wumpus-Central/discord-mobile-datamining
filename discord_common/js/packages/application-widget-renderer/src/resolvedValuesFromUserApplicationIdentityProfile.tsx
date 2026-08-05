@@ -1,3 +1,5 @@
+import { ProfileDataDynamicType } from "../../../shared/shared-constants/ProfileDataDynamicType.tsx";
+import { resolveFieldValue } from "resolvedValues.tsx";
 // discord_common/js/packages/application-widget-renderer/src/resolvedValuesFromUserApplicationIdentityProfile.tsx
 import _slicedToArray from "_slicedToArray";
 
@@ -40,7 +42,7 @@ function resolvedValuesFromPrimary(data) {
         obj = { type: null, value: null };
         let tmp23 = require;
         let tmp24 = dependencyMap;
-        obj[0] = require("resolvedValues.tsx") /* resolveFieldValue */.ResolvedValueType.STRING;
+        obj[0] = resolveFieldValue /* resolveFieldValue */.ResolvedValueType.STRING;
         let tmp25 = tmp8;
         obj[1] = tmp9;
         obj[tmp7] = obj;
@@ -51,7 +53,7 @@ function resolvedValuesFromPrimary(data) {
           obj = { type: null, value: null };
           let tmp19 = require;
           let tmp20 = dependencyMap;
-          obj[0] = require("resolvedValues.tsx") /* resolveFieldValue */.ResolvedValueType.NUMBER;
+          obj[0] = resolveFieldValue /* resolveFieldValue */.ResolvedValueType.NUMBER;
           let tmp21 = tmp8;
           obj[1] = tmp9;
           obj[tmp7] = obj;
@@ -71,7 +73,7 @@ function resolvedValuesFromPrimary(data) {
                     let obj1 = { type: null, media: null };
                     let tmp15 = require;
                     let tmp16 = dependencyMap;
-                    obj1[0] = require("resolvedValues.tsx") /* resolveFieldValue */.ResolvedValueType.MEDIA;
+                    obj1[0] = resolveFieldValue /* resolveFieldValue */.ResolvedValueType.MEDIA;
                     let obj2 = { url: null, width: null, height: null };
                     let tmp17 = tmp8;
                     ({ proxy_url: obj3[0], width: obj3[1], height: obj3[2] } = tmp9);
@@ -106,7 +108,7 @@ function resolvedValuesFromDynamic(data) {
       let iter = nextResult;
       let tmp5 = require;
       let tmp6 = dependencyMap;
-      if (nextResult.type === require("../../../shared/shared-constants/ProfileDataDynamicType.tsx") /* ProfileDataDynamicType */.ProfileDataDynamicType.STRING) {
+      if (nextResult.type === ProfileDataDynamicType /* ProfileDataDynamicType */.ProfileDataDynamicType.STRING) {
         let tmp9 = nextResult;
         obj = { type: null, value: null };
         obj[0] = tmp5(12267).ResolvedValueType.STRING;
@@ -154,7 +156,7 @@ export default function resolvedValuesFromUserApplicationIdentityProfile(profile
     obj = {};
     if (null != profile.username) {
       obj = { type: null, value: null };
-      obj[0] = require("resolvedValues.tsx") /* resolveFieldValue */.ResolvedValueType.STRING;
+      obj[0] = resolveFieldValue /* resolveFieldValue */.ResolvedValueType.STRING;
       obj[1] = profile.username;
       obj.username = obj;
     }

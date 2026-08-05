@@ -1,3 +1,9 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { apexExperiment } from "../experiments/CollectiblesProfileFrameGiftingExperiment.tsx";
+import { apexExperiment } from "../experiments/CollectiblesProfileFramesEAMarketingExperiment.tsx";
+import { apexExperiment } from "../experiments/CollectiblesProfileFramesExperiment.tsx";
+import { apexExperiment } from "../experiments/CollectiblesProfileFramesPurchaseExperiment.tsx";
+import { useCanPurchaseFrames } from "useCanPurchaseFrames.tsx";
 // discord_app/modules/collectibles/hooks/useProfileFramesMarketing.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 
@@ -45,16 +51,16 @@ export const deriveProfileFramesMarketing = function deriveProfileFramesMarketin
   return obj;
 };
 export const useProfileFramesMarketing = function useProfileFramesMarketing(CollectiblesMobileAnnouncementActionSheet) {
-  let obj = require("useCanPurchaseFrames.tsx") /* useCanPurchaseFrames */;
+  let obj = useCanPurchaseFrames /* useCanPurchaseFrames */;
   const canViewProfileFramesInCollectiblesShop = obj.useCanViewProfileFramesInCollectiblesShop(CollectiblesMobileAnnouncementActionSheet);
-  let isProfileFramesEarlyAccessPhase = require("useCanPurchaseFrames.tsx") /* useCanPurchaseFrames */.useIsProfileFramesEarlyAccessPhase(CollectiblesMobileAnnouncementActionSheet);
-  const obj2 = require("useCanPurchaseFrames.tsx") /* useCanPurchaseFrames */;
-  const isProfileFramesEAMarketingEnabled = require("../experiments/CollectiblesProfileFramesEAMarketingExperiment.tsx") /* apexExperiment */.useIsProfileFramesEAMarketingEnabled(CollectiblesMobileAnnouncementActionSheet);
-  const obj3 = require("../experiments/CollectiblesProfileFramesEAMarketingExperiment.tsx") /* apexExperiment */;
-  const isProfileFrameGiftingEnabled = require("../experiments/CollectiblesProfileFrameGiftingExperiment.tsx") /* apexExperiment */.useIsProfileFrameGiftingEnabled(CollectiblesMobileAnnouncementActionSheet);
-  const obj4 = require("../experiments/CollectiblesProfileFrameGiftingExperiment.tsx") /* apexExperiment */;
+  let isProfileFramesEarlyAccessPhase = useCanPurchaseFrames /* useCanPurchaseFrames */.useIsProfileFramesEarlyAccessPhase(CollectiblesMobileAnnouncementActionSheet);
+  const obj2 = useCanPurchaseFrames /* useCanPurchaseFrames */;
+  const isProfileFramesEAMarketingEnabled = apexExperiment /* apexExperiment */.useIsProfileFramesEAMarketingEnabled(CollectiblesMobileAnnouncementActionSheet);
+  const obj3 = apexExperiment /* apexExperiment */;
+  const isProfileFrameGiftingEnabled = apexExperiment /* apexExperiment */.useIsProfileFrameGiftingEnabled(CollectiblesMobileAnnouncementActionSheet);
+  const obj4 = apexExperiment /* apexExperiment */;
   const items = [mergeGuildAvatar];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => callback(table[1]).isUserPaidTier2(currentUser.getCurrentUser()));
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => callback(table[1]).isUserPaidTier2(currentUser.getCurrentUser()));
   let tmp6 = canViewProfileFramesInCollectiblesShop;
   if (canViewProfileFramesInCollectiblesShop) {
     tmp6 = !isProfileFramesEarlyAccessPhase;
@@ -90,24 +96,24 @@ export const useProfileFramesMarketing = function useProfileFramesMarketing(Coll
   return obj;
 };
 export const getProfileFramesMarketing = function getProfileFramesMarketing(location) {
-  let obj = require("../experiments/CollectiblesProfileFramesExperiment.tsx");
+  let obj = apexExperiment;
   obj = { location };
   let enableProfileFrames = obj.getConfig(obj).enableProfileFrames;
   obj = { location };
-  const bucket = require("../experiments/CollectiblesProfileFramesPurchaseExperiment.tsx").getConfig(obj).bucket;
+  const bucket = apexExperiment.getConfig(obj).bucket;
   let tmp2 = enableProfileFrames;
   if (enableProfileFrames) {
-    tmp2 = bucket !== require("../experiments/CollectiblesProfileFramesPurchaseExperiment.tsx") /* apexExperiment */.ProfileFramesPurchaseBucket.CONTROL;
+    tmp2 = bucket !== apexExperiment /* apexExperiment */.ProfileFramesPurchaseBucket.CONTROL;
   }
   if (enableProfileFrames) {
-    enableProfileFrames = bucket === require("../experiments/CollectiblesProfileFramesPurchaseExperiment.tsx") /* apexExperiment */.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY;
+    enableProfileFrames = bucket === apexExperiment /* apexExperiment */.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY;
   }
-  const obj3 = require("../experiments/CollectiblesProfileFramesPurchaseExperiment.tsx");
-  const isProfileFramesEAMarketingEnabled = require("../experiments/CollectiblesProfileFramesEAMarketingExperiment.tsx") /* apexExperiment */.getIsProfileFramesEAMarketingEnabled(location);
-  const obj5 = require("../experiments/CollectiblesProfileFramesEAMarketingExperiment.tsx") /* apexExperiment */;
-  const isProfileFrameGiftingEnabled = require("../experiments/CollectiblesProfileFrameGiftingExperiment.tsx") /* apexExperiment */.getIsProfileFrameGiftingEnabled(location);
-  const obj6 = require("../experiments/CollectiblesProfileFrameGiftingExperiment.tsx") /* apexExperiment */;
-  const isUserPaidTier2Result = require("useCanPurchaseFrames.tsx") /* useCanPurchaseFrames */.isUserPaidTier2(currentUser.getCurrentUser());
+  const obj3 = apexExperiment;
+  const isProfileFramesEAMarketingEnabled = apexExperiment /* apexExperiment */.getIsProfileFramesEAMarketingEnabled(location);
+  const obj5 = apexExperiment /* apexExperiment */;
+  const isProfileFrameGiftingEnabled = apexExperiment /* apexExperiment */.getIsProfileFrameGiftingEnabled(location);
+  const obj6 = apexExperiment /* apexExperiment */;
+  const isUserPaidTier2Result = useCanPurchaseFrames /* useCanPurchaseFrames */.isUserPaidTier2(currentUser.getCurrentUser());
   if (tmp2) {
     tmp2 = !enableProfileFrames;
   }

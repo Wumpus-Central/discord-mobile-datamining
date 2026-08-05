@@ -1,3 +1,4 @@
+import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/stores/WebhooksStore.tsx
 import { Store } from "initialize";
 
@@ -26,16 +27,16 @@ prototype["getWebhooksForGuild"] = function getWebhooksForGuild(arg0) {
   if (null == dependencyMap[arg0]) {
     tmp[arg0] = {};
   }
-  return require("../../_runtime/00012_apply.js").values(dependencyMap[arg0]);
+  return apply.values(dependencyMap[arg0]);
 };
 prototype["getWebhooksForChannel"] = function getWebhooksForChannel(arg0, arg1) {
   const importDefault = arg1;
   if (null == dependencyMap[arg0]) {
     tmp2[arg0] = {};
   }
-  const tmp = require("../../_runtime/00012_apply.js");
-  const values = require("../../_runtime/00012_apply.js")(dependencyMap[arg0]).values();
-  const tmpResult = require("../../_runtime/00012_apply.js")(dependencyMap[arg0]);
+  const tmp = apply;
+  const values = apply(dependencyMap[arg0]).values();
+  const tmpResult = apply(dependencyMap[arg0]);
   return values.filter((channel_id) => channel_id.channel_id === closure_0).value();
 };
 Object.defineProperty(prototype, "error", {

@@ -1,3 +1,4 @@
+import { getNextShownUpcomingEventNoticeType } from "GuildScheduledEventUtils.tsx";
 // discord_app/modules/guild_scheduled_events/UpcomingEventNoticesStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import scheduledEventSort from "scheduledEventSort";
@@ -76,7 +77,7 @@ const upcomingEventNoticesStore = new UpcomingEventNoticesStore(require("dispatc
       if (null != guildScheduledEvent) {
         if (guildScheduledEvent.status === constants.SCHEDULED) {
           if (null == obj[guildEventId]) {
-            obj = require("GuildScheduledEventUtils.tsx") /* getNextShownUpcomingEventNoticeType */;
+            obj = getNextShownUpcomingEventNoticeType /* getNextShownUpcomingEventNoticeType */;
             if (obj.getNextShownUpcomingEventNoticeType(guildScheduledEvent, undefined, dependencyMap[guildEventId], false) === constants2.NEW_EVENT) {
               obj = {};
               const merged = Object.assign(obj);

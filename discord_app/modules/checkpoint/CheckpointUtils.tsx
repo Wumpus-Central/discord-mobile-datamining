@@ -1,3 +1,15 @@
+import { metadata } from "../../../discord_assets/assets/checkpoint/card-banana.png.js";
+import { metadata } from "../../../discord_assets/assets/checkpoint/card-capybara.png.js";
+import { metadata } from "../../../discord_assets/assets/checkpoint/card-cassette.png.js";
+import { metadata } from "../../../discord_assets/assets/checkpoint/card-cat.png.js";
+import { metadata } from "../../../discord_assets/assets/checkpoint/card-disco.png.js";
+import { metadata } from "../../../discord_assets/assets/checkpoint/card-donut.png.js";
+import { metadata } from "../../../discord_assets/assets/checkpoint/card-duck.png.js";
+import { metadata } from "../../../discord_assets/assets/checkpoint/card-origami.png.js";
+import { metadata } from "../../../discord_assets/assets/checkpoint/card-plant.png.js";
+import { metadata } from "../../../discord_assets/assets/checkpoint/card-snail.png.js";
+import { sleep } from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import { getDurationString } from "../notification_center/getTimestampString.tsx";
 // discord_app/modules/checkpoint/CheckpointUtils.tsx
 const items = [require("sleep").TimeUnits.HOURS, require("sleep").TimeUnits.MINUTES];
 const result = require("getSystemLocale").fileFinishedImporting("modules/checkpoint/CheckpointUtils.tsx");
@@ -5,10 +17,10 @@ const result = require("getSystemLocale").fileFinishedImporting("modules/checkpo
 export const getVoiceDurationString = function getVoiceDurationString(totalVoiceMinutes) {
   let time;
   let unit;
-  let obj = require("../../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */;
+  let obj = sleep /* sleep */;
   const timeAndUnit = obj.getTimeAndUnit(totalVoiceMinutes, items);
   ({ time, unit } = timeAndUnit);
-  const abbreviatedFormatter = require("../notification_center/getTimestampString.tsx") /* getDurationString */.getAbbreviatedFormatter();
+  const abbreviatedFormatter = getDurationString /* getDurationString */.getAbbreviatedFormatter();
   if (null == time) {
     const intl3 = tmp(1236).intl;
     return intl3.formatToPlainString(abbreviatedFormatter.minutes, { minutes: 0 });
@@ -28,29 +40,29 @@ export const getVoiceDurationString = function getVoiceDurationString(totalVoice
     }
     return formatToPlainStringResult;
   }
-  const obj2 = require("../notification_center/getTimestampString.tsx") /* getDurationString */;
+  const obj2 = getDurationString /* getDurationString */;
 };
 export const getCardAssetUrl = function getCardAssetUrl(cardId) {
   if (0 === cardId) {
-    return require("../../../discord_assets/assets/checkpoint/card-plant.png.js");
+    return metadata;
   } else if (1 === cardId) {
-    return require("../../../discord_assets/assets/checkpoint/card-donut.png.js");
+    return metadata;
   } else if (2 === cardId) {
-    return require("../../../discord_assets/assets/checkpoint/card-capybara.png.js");
+    return metadata;
   } else if (3 === cardId) {
-    return require("../../../discord_assets/assets/checkpoint/card-disco.png.js");
+    return metadata;
   } else if (4 === cardId) {
-    return require("../../../discord_assets/assets/checkpoint/card-origami.png.js");
+    return metadata;
   } else if (5 === cardId) {
-    return require("../../../discord_assets/assets/checkpoint/card-snail.png.js");
+    return metadata;
   } else if (6 === cardId) {
-    return require("../../../discord_assets/assets/checkpoint/card-duck.png.js");
+    return metadata;
   } else if (7 === cardId) {
-    return require("../../../discord_assets/assets/checkpoint/card-banana.png.js");
+    return metadata;
   } else if (8 === cardId) {
-    return require("../../../discord_assets/assets/checkpoint/card-cat.png.js");
+    return metadata;
   } else {
-    return require("../../../discord_assets/assets/checkpoint/card-cassette.png.js");
+    return metadata;
   }
 };
 export const getCheckpointPowerBarUnits = function getCheckpointPowerBarUnits(arg0) {

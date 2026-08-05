@@ -1,3 +1,6 @@
+import { CollectiblesItemType } from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { messagesProxy } from "FamilyCenter.messages.js";
 // discord_app/modules/parent_tools/FamilyCenterActivityPurchaseRowUtils.tsx
 import { isAvatarDecorationRecord } from "fromServer";
 import { isProfileEffectRecord } from "fromServer";
@@ -6,21 +9,21 @@ import GuildFeatures from "GuildFeatures";
 let c5;
 let closure_6;
 function getCollectibleTypeName(type) {
-  if (require("../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION === type) {
+  if (CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION === type) {
     const intl5 = tmp(1236).intl;
-    return intl5.string(require("FamilyCenter.messages.js").obi47v);
+    return intl5.string(messagesProxy.obi47v);
   } else if (tmp(1901).CollectiblesItemType.PROFILE_EFFECT === type) {
     const intl4 = tmp(1236).intl;
-    return intl4.string(require("FamilyCenter.messages.js").RX8BMR);
+    return intl4.string(messagesProxy.RX8BMR);
   } else if (tmp(1901).CollectiblesItemType.NAMEPLATE === type) {
     const intl3 = tmp(1236).intl;
-    return intl3.string(require("FamilyCenter.messages.js").nNGEHk);
+    return intl3.string(messagesProxy.nNGEHk);
   } else if (tmp(1901).CollectiblesItemType.BUNDLE === type) {
     const intl2 = tmp(1236).intl;
-    return intl2.string(require("FamilyCenter.messages.js").VS1fKo);
+    return intl2.string(messagesProxy.VS1fKo);
   } else if (tmp(1901).CollectiblesItemType.PROFILE_FRAME === type) {
     const intl = tmp(1236).intl;
-    return intl.string(require("FamilyCenter.messages.js").JiIY1l);
+    return intl.string(messagesProxy.JiIY1l);
   } else {
     return "";
   }
@@ -38,7 +41,7 @@ export const getAvatarDecorationPreviewUrl = function getAvatarDecorationPreview
     const first = product.items[0];
     let avatarDecorationURL = null;
     if (isAvatarDecorationRecord(first)) {
-      let obj = require("../../utils/AvatarUtils.tsx") /* getAvatarURL */;
+      let obj = getAvatarURL /* getAvatarURL */;
       obj = { avatarDecoration: null, size: 40, canAnimate: true };
       obj = { asset: null };
       obj[0] = first.asset;

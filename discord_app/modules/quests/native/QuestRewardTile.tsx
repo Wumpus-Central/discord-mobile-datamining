@@ -1,3 +1,4 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/quests/native/QuestRewardTile.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -13,7 +14,7 @@ const require = arg1;
 ({ AppState: closure_6, View: error } = get_ActivityIndicator);
 let closure_10 = createCacheKey.createStyles(() => {
   let obj = { container: null, video: null, image: null };
-  obj = { borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
+  obj = { borderRadius: Themes.radii.sm, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
   obj[0] = obj;
   obj[1] = { overflow: "hidden", height: "100%", width: "100%" };
   obj[2] = { height: "100%", width: "100%" };

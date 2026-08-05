@@ -1,3 +1,6 @@
+import { keys } from "../../../ConstantsIOS.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { _startContactSyncForDiscoverability } from "NUFActionCreators.tsx";
 // discord_app/modules/nuf/native/NewUserManager.tsx
 import NewUserTypes from "NewUserTypes";
 import handleSetLocationMetadata from "handleSetLocationMetadata";
@@ -69,7 +72,7 @@ const items = [
       }
     },
     transitionToStep() {
-      const result = require("NUFActionCreators.tsx") /* _startContactSyncForDiscoverability */.transitionToHubEmailConnectionModal(require("../../../ConstantsIOS.tsx") /* keys */.ModalAnimation.SLIDE_IN, true);
+      const result = _startContactSyncForDiscoverability /* _startContactSyncForDiscoverability */.transitionToHubEmailConnectionModal(keys /* keys */.ModalAnimation.SLIDE_IN, true);
     }
   },
   {
@@ -78,7 +81,7 @@ const items = [
       return store2.getType() === NewUserTypes.ORGANIC_REGISTERED;
     },
     transitionToStep() {
-      return require("NUFActionCreators.tsx") /* _startContactSyncForDiscoverability */.transitionToNUFGuildTemplatesModal(require("../../../ConstantsIOS.tsx") /* keys */.ModalAnimation.SLIDE_IN);
+      return _startContactSyncForDiscoverability /* _startContactSyncForDiscoverability */.transitionToNUFGuildTemplatesModal(keys /* keys */.ModalAnimation.SLIDE_IN);
     }
   },
 
@@ -94,7 +97,7 @@ items[5] = {
   key: obj.ACCEPT_INVITE,
   shouldShowStep: require("showInstantInviteActionSheet").hasDeferredInvite,
   transitionToStep() {
-    require("../../../Dispatcher.tsx").dispatch({ type: "DEFERRED_INVITE_SHOW" });
+    dispatcher.dispatch({ type: "DEFERRED_INVITE_SHOW" });
   }
 };
 let prototype = function NewUserManager() {
@@ -289,7 +292,7 @@ let obj2 = {
   key: obj.ACCEPT_INVITE,
   shouldShowStep: require("showInstantInviteActionSheet").hasDeferredInvite,
   transitionToStep() {
-    require("../../../Dispatcher.tsx").dispatch({ type: "DEFERRED_INVITE_SHOW" });
+    dispatcher.dispatch({ type: "DEFERRED_INVITE_SHOW" });
   }
 };
 let result = require("set").fileFinishedImporting("modules/nuf/native/NewUserManager.tsx");

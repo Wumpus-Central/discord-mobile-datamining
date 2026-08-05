@@ -1,3 +1,4 @@
+import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
 // discord_app/modules/in_app_reports/showReportModal.native.tsx
 import asyncRequireImpl from "asyncRequireImpl";
 
@@ -153,5 +154,5 @@ export const showReportModal = function showReportModal(arg0, arg1, arg2) {
   return applyArgumentsResult;
 };
 export const hideReportModal = function hideReportModal() {
-  require("../../actions/ModalActionCreators.tsx").popWithKey(IN_APP_REPORT_MODAL_KEY);
+  ModalActionCreators.popWithKey(IN_APP_REPORT_MODAL_KEY);
 };

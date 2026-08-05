@@ -1,3 +1,5 @@
+import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
+import { AppRowLabel } from "../screens/home/AppLauncherHomeScreen.tsx";
 // discord_app/modules/app_launcher/native/base_components/RecommendationAppRow.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -20,8 +22,8 @@ export default function RecommendationAppRow(onPress) {
   if (showsPromoted === undefined) {
     showsPromoted = false;
   }
-  let obj = require("../../../../utils/AvatarUtils.tsx");
+  let obj = getAvatarURL;
   obj = { id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true };
   const iconSource = obj.getApplicationIconSource(obj);
-  return jsx(require("../screens/home/AppLauncherHomeScreen.tsx") /* AppRowLabel */.BaseAppRow, { application, iconSource, onPress: onPress.onPress, isFirstRow, isLastRow, showsPromoted });
+  return jsx(AppRowLabel /* AppRowLabel */.BaseAppRow, { application, iconSource, onPress: onPress.onPress, isFirstRow, isLastRow, showsPromoted });
 };

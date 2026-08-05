@@ -1,3 +1,4 @@
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
 // discord_app/modules/discord_md5/native/DiscordMd5Native.tsx
 import { NativeModules } from "get ActivityIndicator";
 import "fromBlob";
@@ -13,7 +14,7 @@ prototype["fromFileUri"] = function fromFileUri(uri) {
     num = 4096;
   }
   if (obj.isAndroid()) {
-    if (null == require("../../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx")) {
+    if (null == enforcing) {
       const _Error = Error;
       const error = new Error("RTNFileManager doesn't exist?");
       let rejectResult = Promise.reject(error);

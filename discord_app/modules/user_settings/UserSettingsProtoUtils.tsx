@@ -1,3 +1,4 @@
+import { b64ToProto } from "UserSettingsUtils.tsx";
 // discord_app/modules/user_settings/UserSettingsProtoUtils.tsx
 const result = require("set").fileFinishedImporting("modules/user_settings/UserSettingsProtoUtils.tsx");
 
@@ -15,7 +16,7 @@ export const getProtoFieldClass = function getProtoFieldClass(PreloadedUserSetti
 };
 export const createModifiedProto = function createModifiedProto(closure_1, c2, closure_0, PreloadedUserSettings, closure_02) {
   if (null != closure_1) {
-    let fromBinaryResult = closure_0.fromBinary(closure_0.toBinary(closure_1), require("UserSettingsUtils.tsx") /* b64ToProto */.BINARY_READ_OPTIONS);
+    let fromBinaryResult = closure_0.fromBinary(closure_0.toBinary(closure_1), b64ToProto /* b64ToProto */.BINARY_READ_OPTIONS);
     const toBinaryResult = closure_0.toBinary(closure_1);
   } else {
     fromBinaryResult = closure_0.create();

@@ -1,3 +1,6 @@
+import { AlertActionCreators } from "../../../../actions/native/AlertActionCreators.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { set } from "../../../../utils/PlatformUtils.tsx";
 // discord_app/modules/premium/native/utils/PremiumManagementUtils.tsx
 import { SubscriptionStatusTypes } from "ME";
 import { PaymentGatewayToFriendlyName as closure_4 } from "sum";
@@ -8,12 +11,12 @@ function defaultMobileWebNitroManagementSuccessCallback() {
 }
 function defaultMobileWebNitroManagementFailureCallback(arg0) {
   tmp2.error("Failed to open mobile web Nitro Management page, error response: ", arg0);
-  let obj = require("../../../../actions/native/AlertActionCreators.tsx");
+  let obj = AlertActionCreators;
   obj = { title: null, body: null, hideActionSheet: true };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.NrBVjw);
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["gD+grx"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.NrBVjw);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["gD+grx"]);
   obj.show(obj);
 }
 let closure_6 = new require("timestamp")("PremiumManagementUtils");
@@ -120,7 +123,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
         } else {
           return null;
         }
-        obj7 = require("../../../../utils/PlatformUtils.tsx") /* set */;
+        obj7 = set /* set */;
       }
     }
     return null;

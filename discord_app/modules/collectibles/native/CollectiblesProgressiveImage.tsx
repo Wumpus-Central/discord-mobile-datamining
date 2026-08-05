@@ -1,3 +1,4 @@
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/collectibles/native/CollectiblesProgressiveImage.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -32,6 +33,6 @@ export const CollectiblesProgressiveImage = function CollectiblesProgressiveImag
     obj[1] = Easing.inOut(sharedValue(outer1_2[3]).Easing.ease);
     const result = sharedValue.set(obj.withTiming(1, obj));
   };
-  obj[1] = jsx(require("../../reanimated/ReanimatedRexport.tsx").Image, {});
+  obj[1] = jsx(ReanimatedRexport.Image, {});
   return <closure_3 />;
 };

@@ -1,3 +1,4 @@
+import { ErrorScreen } from "../ErrorScreen.tsx";
 // discord_app/modules/search/native/components/tabs/pages/messages/SearchIndexingScreen.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -14,5 +15,5 @@ export default function SearchIndexingScreen(searchContext) {
     obj.trackSearchIndexing(obj);
   }, items);
   const text = searchContext(11624).getIndexingErrorText(searchContext);
-  return jsx(require("../ErrorScreen.tsx"), { text });
+  return jsx(ErrorScreen, { text });
 };

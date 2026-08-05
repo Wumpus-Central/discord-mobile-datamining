@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import { isGuildOwner } from "GuildNSFWContentLevel";
@@ -81,7 +82,7 @@ export const useCanAccessMemberSafetyPage = function useCanAccessMemberSafetyPag
   const _require = id;
   const items = [createGuildRecordFromRust, mergeGuildAvatar];
   const items1 = [id];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let obj;
     let obj2;
     const items = [outer1_5, outer1_7];
@@ -95,7 +96,7 @@ export const useCanAccessBulkBanningFeature = function useCanAccessBulkBanningFe
   const _require = arg0;
   let items = [createGuildRecordFromRust, mergeGuildAvatar];
   const items1 = [arg0];
-  let stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  let stateFromStores = _initialize.useStateFromStores(items, () => {
     let obj;
     let obj2;
     const items = [outer1_5, outer1_7];
@@ -104,7 +105,7 @@ export const useCanAccessBulkBanningFeature = function useCanAccessBulkBanningFe
     const currentUser = obj2.getCurrentUser();
     return false;
   }, items1);
-  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const obj = _initialize;
   const items2 = [createGuildRecordFromRust, mergeGuildAvatar];
   const items3 = [arg0];
   if (stateFromStores) {
@@ -124,7 +125,7 @@ export const useCanAccessInviteCodeFeature = function useCanAccessInviteCodeFeat
   const _require = arg0;
   const items = [createGuildRecordFromRust, getUncachedChannelPermissions];
   const items1 = [arg0];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const guild = outer1_5.getGuild(closure_0);
     let canResult = null != guild;
     if (canResult) {
@@ -139,7 +140,7 @@ export const useCanBulkBanUser = function useCanBulkBanUser(arg0, arg1, arg2) {
   const dependencyMap = arg2;
   const items = [getUncachedChannelPermissions, createGuildRecordFromRust];
   const items1 = [arg1, arg0, arg2];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const guild = outer1_5.getGuild(closure_0);
     let tmp2 = null != guild;
     if (tmp2) {

@@ -1,3 +1,10 @@
+import { NitroWheelIcon } from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import { Layer } from "../../../design/components/Layers/native/LayerScope.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useCanPurchaseFrames } from "../hooks/useCanPurchaseFrames.tsx";
 // discord_app/modules/collectibles/native/FramesEarlyAccessBadge.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -74,19 +81,19 @@ function BadgeWithTooltip(tooltipPosition) {
 }
 function StaticBadge() {
   const tmp3 = createCacheKey();
-  let obj = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
-  const isThemeDarkResult = obj.isThemeDark(require("../../../hooks/useTheme.tsx")());
+  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const isThemeDarkResult = obj.isThemeDark(useTheme());
   let str = "text-overlay-light";
   if (isThemeDarkResult) {
     str = "control-overlay-primary-text-default";
   }
   const intl = tmp4(1236).intl;
-  const stringResult = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["1m6qcO"]);
+  const stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["1m6qcO"]);
   obj = { accessibilityLabel: stringResult, style: items, children: null };
   items = [tmp3.pillBase, isThemeDarkResult ? tmp3.pillDark : tmp3.pillLight];
-  const items1 = [callback2(require("../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx") /* NitroWheelIcon */.NitroWheelIcon, { size: "xs", color: str }), ];
+  const items1 = [callback2(NitroWheelIcon /* NitroWheelIcon */.NitroWheelIcon, { size: "xs", color: str }), ];
   obj = { variant: "text-sm/bold", color: str, style: tmp3.text, children: stringResult };
-  items1[1] = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items1[1] = callback2(Text /* Text */.Text, obj);
   obj[2] = items1;
   return callback3(closure_6, obj);
 }
@@ -106,7 +113,7 @@ export default function _default(tooltipPosition) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let obj = require("../hooks/useCanPurchaseFrames.tsx") /* useCanPurchaseFrames */;
+  let obj = useCanPurchaseFrames /* useCanPurchaseFrames */;
   if (!obj.useIsProfileFramesEarlyAccessPhase(tooltipPosition.location)) {
     return null;
   } else if (flag2) {
@@ -120,6 +127,6 @@ export default function _default(tooltipPosition) {
     const obj1 = { tooltipPosition: null };
     obj1[0] = str;
     obj[1] = tmp3(BadgeWithTooltip, obj1);
-    tmp3Result = tmp3(require("../../../design/components/Layers/native/LayerScope.native.tsx") /* Layer */.LayerScope, obj);
+    tmp3Result = tmp3(Layer /* Layer */.LayerScope, obj);
   }
 };

@@ -1,3 +1,7 @@
+import { parse } from "../../../_runtime/04203_parse.js";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
+import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 // discord_app/modules/build_overrides/BuildOverrideUtils.tsx
 import { BUILD_OVERRIDE_COOKIE_NAME as closure_4 } from "BUILD_OVERRIDE_TARGET_NAMES";
 import { PRIMARY_DOMAIN } from "ME";
@@ -29,7 +33,7 @@ function manualOverrideLinkMeta(str) {
   const match = str.match(regExp1);
   if (null != match) {
     if (2 === match.length) {
-      let obj = require("../../utils/PlatformUtils.tsx") /* set */;
+      let obj = set /* set */;
       obj = { targetBuildOverride: null, validForUserIds: null, expiresAt: "Mon, 1 Jan 2038 00:00:00 GMT" };
       obj = {};
       const _HermesInternal = HermesInternal;
@@ -52,7 +56,7 @@ const result = set.fileFinishedImporting("modules/build_overrides/BuildOverrideU
 export const APP_VERSION = Version;
 export { getAPIEndpoint };
 export const getBuildOverride = function getBuildOverride() {
-  let obj = require("../../utils/URLUtils.tsx");
+  let obj = isDiscordProxiedAssetUrl;
   const safeParseWithQueryResult = obj.safeParseWithQuery("" + location.protocol + "//" + location.host + "/__development/build_overrides");
   if (null == safeParseWithQueryResult) {
     let resolved = Promise.resolve(null);
@@ -61,7 +65,7 @@ export const getBuildOverride = function getBuildOverride() {
     if (Version) {
       safeParseWithQueryResult.query.version = tmp3;
     }
-    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     obj = { url: null, oldFormErrors: true, rejectWithError: false };
     obj[0] = importAll(1469).format(safeParseWithQueryResult);
     const value = HTTP.get(obj);
@@ -86,16 +90,16 @@ export const getBuildOverrideMeta = function getBuildOverrideMeta(url) {
         const _HermesInternal = HermesInternal;
         const obj1 = { type: "branch", id: null };
         obj1[1] = match[1];
-        obj["discord_" + require("../../utils/PlatformUtils.tsx") /* set */.getNativePlatform()] = obj1;
+        obj["discord_" + set /* set */.getNativePlatform()] = obj1;
         obj[0] = obj;
         obj[1] = [];
         tmp13 = obj;
-        const obj4 = require("../../utils/PlatformUtils.tsx") /* set */;
+        const obj4 = set /* set */;
       }
     }
     return Promise.resolve(tmp13);
   } else {
-    obj = require("../../utils/URLUtils.tsx");
+    obj = isDiscordProxiedAssetUrl;
     const safeParseWithQueryResult = obj.safeParseWithQuery(url);
     if (null == safeParseWithQueryResult) {
       let resolved = Promise.resolve(null);
@@ -107,7 +111,7 @@ export const getBuildOverrideMeta = function getBuildOverrideMeta(url) {
       }
       const _window = window;
       safeParseWithQueryResult.host = window.location.host;
-      const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+      const HTTP = sendRequest /* sendRequest */.HTTP;
       let obj2 = { url: null, oldFormErrors: true, rejectWithError: false };
       obj2 = importAll(1469);
       obj2[0] = obj2.format(safeParseWithQueryResult);
@@ -122,7 +126,7 @@ export const probablyHasBuildOverride = function probablyHasBuildOverride() {
 };
 export const getBuildOverrideExperiments = function getBuildOverrideExperiments() {
   try {
-    let experiments = require("../../../_runtime/04203_parse.js");
+    let experiments = parse;
     const _window = window;
     const tmp5 = experiments.parse(window.document.cookie)[closure_4];
     if (null == tmp5) {
@@ -159,7 +163,7 @@ export const validateURL = function validateURL(target) {
     obj[1] = target;
     return obj;
   } else {
-    obj = require("../../utils/URLUtils.tsx");
+    obj = isDiscordProxiedAssetUrl;
     const url = obj.safeParseWithQuery(target);
     if (null == url) {
       return null;

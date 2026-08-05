@@ -1,3 +1,17 @@
+import { registerAsset } from "../../../../../../../_runtime/12485_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/12486_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/12487_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/12488_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/12489_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/12490_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/12491_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/12492_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/12493_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/12494_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/12495_registerAsset.js";
+import { metadata } from "../../../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
+import { getGradientColorByPercentage } from "../../../../../client_themes/native/ClientThemesUtils.tsx";
+import { getEmbedThemeColors } from "getEmbedThemeColors.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/GiftCodeEmbed.tsx
 import get_ActivityIndicator from "registerAsset";
 import fetchFingerprint from "fetchFingerprint";
@@ -15,33 +29,33 @@ let closure_12;
 let unpackModuleId;
 function getGiftStyleUrl(arg0) {
   if (constants.BOX === arg0) {
-    return require("../../../../../../../_runtime/12485_registerAsset.js");
+    return registerAsset;
   } else if (tmp.CUP === arg0) {
-    return require("../../../../../../../_runtime/12486_registerAsset.js");
+    return registerAsset;
   } else if (tmp.SNOWGLOBE === arg0) {
-    return require("../../../../../../../_runtime/12487_registerAsset.js");
+    return registerAsset;
   } else if (tmp.STANDARD_BOX === arg0) {
-    return require("../../../../../../../_runtime/12488_registerAsset.js");
+    return registerAsset;
   } else if (tmp.COFFEE === arg0) {
-    return require("../../../../../../../_runtime/12489_registerAsset.js");
+    return registerAsset;
   } else if (tmp.CAKE === arg0) {
-    return require("../../../../../../../_runtime/12490_registerAsset.js");
+    return registerAsset;
   } else if (tmp.CHEST === arg0) {
-    return require("../../../../../../../_runtime/12491_registerAsset.js");
+    return registerAsset;
   } else if (tmp.SEASONAL_STANDARD_BOX === arg0) {
-    return require("../../../../../../../_runtime/12492_registerAsset.js");
+    return registerAsset;
   } else if (tmp.SEASONAL_CAKE === arg0) {
-    return require("../../../../../../../_runtime/12493_registerAsset.js");
+    return registerAsset;
   } else if (tmp.SEASONAL_CHEST === arg0) {
-    return require("../../../../../../../_runtime/12494_registerAsset.js");
+    return registerAsset;
   } else if (tmp.SEASONAL_COFFEE === arg0) {
-    return require("../../../../../../../_runtime/12495_registerAsset.js");
+    return registerAsset;
   } else if (tmp.NITROWEEN_STANDARD === arg0) {
     const obj = { uri: null };
-    obj[0] = require("../../../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js");
+    obj[0] = metadata;
     return obj;
   } else {
-    return require("../../../../../../../_runtime/12488_registerAsset.js");
+    return registerAsset;
   }
 }
 ({ Image: c3, processColor: c4 } = get_ActivityIndicator);
@@ -66,19 +80,19 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
   const importDefault = forcedTheme;
   if (null != message.author) {
     if (0 !== message.giftCodes.length) {
-      const colors = require("getEmbedThemeColors.tsx")(forcedTheme).colors;
+      const colors = getEmbedThemeColors(forcedTheme).colors;
       ({ headerColor: dependencyMap, titleColor: closure_3, subtitleColor: closure_4, bodyTextColor: fetchFingerprint, backgroundColor, resolvingGradientStart: updateGiftCode, resolvingGradientEnd: mergeGuildAvatar, acceptLabelDisabledBackgroundColor: addSku, acceptLabelDisabledColor: closure_9, thumbnailBackgroundColor: closure_10, acceptLabelGreenColor: closure_11, acceptBlurpleLabelBackgroundColor: closure_12 } = colors);
       let obj = { borderColor: null, backgroundColor: null, thumbnailCornerRadius: 3 };
       obj[0] = colors.borderColor;
       let tmp4 = backgroundColor;
       if (obj2.isThemeDark(forcedTheme)) {
-        const embedBackground = _require("../../../../../client_themes/native/ClientThemesUtils.tsx").getEmbedBackground();
+        const embedBackground = _getGradientColorByPercentage.getEmbedBackground();
         let tmp5Result = closure_4(embedBackground);
         if (tmp5Result == null) {
           tmp5Result = backgroundColor;
         }
         tmp4 = tmp5Result;
-        const tmp3Result = _require("../../../../../client_themes/native/ClientThemesUtils.tsx");
+        const tmp3Result = _getGradientColorByPercentage;
         const tmp5 = closure_4;
       }
       obj[1] = tmp4;

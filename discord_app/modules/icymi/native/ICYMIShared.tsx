@@ -1,3 +1,8 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { runAfterInteractions } from "../../../utils/native/RunAfterInteractionsUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { _safeTransitionTo } from "../../links/safeTransitionTo.native.tsx";
 // discord_app/modules/icymi/native/ICYMIShared.tsx
 import closure_3 from "createICYMIStyles";
 import { View } from "trackInvite";
@@ -32,8 +37,8 @@ function CutoutGuildIconWithUser(guild) {
   guild = guild.guild;
   let obj = { guild, icon: null };
   obj = { animate: true, style: callback3().authorIcon, guildId: guild.id, user: guild.author, size: null };
-  obj[4] = require("../../../design/void/native.tsx") /* Button */.AvatarSizes.XSMALL;
-  obj[1] = callback(require("../../../design/void/native.tsx") /* Button */.Avatar, obj);
+  obj[4] = Button /* Button */.AvatarSizes.XSMALL;
+  obj[1] = callback(Button /* Button */.Avatar, obj);
   return callback(CutoutGuildIcon, obj);
 }
 class CutoutGuildIcon {
@@ -141,7 +146,7 @@ class GuildContentPost {
 ({ AnalyticsObjects: c10, AnalyticsObjectTypes: unpackModuleId, AnalyticsPages: closure_12, DEFAULT_ROLE_COLOR_HEX: map1, MAX_MESSAGES_FOR_JUMP: closure_14, MessageFlags: closure_15, Permissions: closure_16, Routes: closure_17 } = ME);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
 let closure_21 = createICYMIStyles.createICYMIStyles((paddingBottom) => {
-  let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
+  let obj = set /* set */;
   let num = 0;
   if (obj.isAndroid()) {
     num = -2;
@@ -152,36 +157,36 @@ let closure_21 = createICYMIStyles.createICYMIStyles((paddingBottom) => {
     num2 = -2;
   }
   obj[1] = { flex: 1, marginTop: num2, overflow: "hidden", paddingTop: paddingBottom.margin };
-  obj = { position: "absolute", right: -4, bottom: -2, padding: 4, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.round, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
+  obj = { position: "absolute", right: -4, bottom: -2, padding: 4, borderRadius: Themes.radii.round, backgroundColor: Themes.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
   obj[2] = obj;
   obj[3] = { position: "absolute", right: -4, bottom: -2 };
   const tmp = require;
-  tmpResult = require("../../../utils/PlatformUtils.tsx") /* set */;
-  obj[4] = { tintColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_MUTED };
+  tmpResult = set /* set */;
+  obj[4] = { tintColor: Themes.colors.TEXT_MUTED };
   obj[5] = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: paddingBottom.margin, marginHorizontal: paddingBottom.margin };
   obj[6] = { flexDirection: "column", paddingBottom: paddingBottom.margin, marginHorizontal: paddingBottom.margin };
   obj[7] = { flexDirection: "row", flexGrow: 1 };
   obj[8] = { flexGrow: 1, flexShrink: 1, marginLeft: paddingBottom.margin };
   obj[9] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: 2 };
   obj[10] = { flexShrink: 1, flexGrow: 0, flexDirection: "row", alignItems: "center", gap: 6 };
-  const obj1 = { tintColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_MUTED };
-  obj[11] = { flexDirection: "row", justifyContent: "space-between", borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.sm };
+  const obj1 = { tintColor: Themes.colors.TEXT_MUTED };
+  obj[11] = { flexDirection: "row", justifyContent: "space-between", borderRadius: Themes.radii.sm };
   obj[12] = { flexShrink: 1, flexGrow: 0, width: "100%" };
-  const obj2 = { flexDirection: "row", justifyContent: "space-between", borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.sm };
-  obj[13] = { flexDirection: "row", alignItems: "center", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
+  const obj2 = { flexDirection: "row", justifyContent: "space-between", borderRadius: Themes.radii.sm };
+  obj[13] = { flexDirection: "row", alignItems: "center", gap: Themes.space.PX_4 };
   obj[14] = { flexDirection: "row", alignItems: "center", gap: 2, flex: 1 };
   obj[15] = { paddingVertical: 1 };
-  const obj3 = { flexDirection: "row", alignItems: "center", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
-  obj[16] = { height: 1, width: "100%", backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE };
+  const obj3 = { flexDirection: "row", alignItems: "center", gap: Themes.space.PX_4 };
+  obj[16] = { height: 1, width: "100%", backgroundColor: Themes.colors.BORDER_SUBTLE };
   obj[17] = { flexDirection: "row", alignItems: "center" };
-  const obj4 = { height: 1, width: "100%", backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE };
-  obj[18] = { padding: 8, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.md, display: "flex", flexDirection: "row", alignItems: "center", gap: 8 };
+  const obj4 = { height: 1, width: "100%", backgroundColor: Themes.colors.BORDER_SUBTLE };
+  obj[18] = { padding: 8, backgroundColor: Themes.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: Themes.radii.md, display: "flex", flexDirection: "row", alignItems: "center", gap: 8 };
   obj[19] = { flexGrow: 1, flexShrink: 1, marginRight: 12 };
   obj[20] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 2, justifySelf: "end" };
-  const obj5 = { padding: 8, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.md, display: "flex", flexDirection: "row", alignItems: "center", gap: 8 };
-  obj[21] = { width: 20, height: 20, tintColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_DEFAULT };
-  const obj6 = { width: 20, height: 20, tintColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_DEFAULT };
-  obj[22] = { tintColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_MUTED };
+  const obj5 = { padding: 8, backgroundColor: Themes.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: Themes.radii.md, display: "flex", flexDirection: "row", alignItems: "center", gap: 8 };
+  obj[21] = { width: 20, height: 20, tintColor: Themes.colors.INTERACTIVE_TEXT_DEFAULT };
+  const obj6 = { width: 20, height: 20, tintColor: Themes.colors.INTERACTIVE_TEXT_DEFAULT };
+  obj[22] = { tintColor: Themes.colors.TEXT_MUTED };
   return obj;
 });
 let closure_26 = { code: "function ICYMISharedTsx1(){const{interpolateColor,progress,bgColor,bgColorHighlighted}=this.__closure;return{backgroundColor:interpolateColor(progress.get(),[0,1],[bgColor,bgColorHighlighted])};}" };
@@ -195,16 +200,16 @@ export const navigateToPost = function navigateToPost(id, id2, id3) {
     obj = { page: outer1_12.ICYMI, object: outer1_10.ACK_MESSAGE_VIEWED, objectType: outer1_11.ACK_SEMI_AUTOMATIC };
     obj.ack(id, obj, true, true, closure_1);
   }, 1500);
-  require("../../links/safeTransitionTo.native.tsx")(closure_17.CHANNEL(id2, id, id3), { openChannel: true, navigationReplace: false });
+  _safeTransitionTo(closure_17.CHANNEL(id2, id, id3), { openChannel: true, navigationReplace: false });
   if (null != id3) {
-    _require("../../../utils/native/RunAfterInteractionsUtils.tsx").runAfterInteractions(() => {
+    _runAfterInteractions.runAfterInteractions(() => {
       let obj = id3(outer1_2[17]);
       obj = { channelId: id, limit: outer1_14, jump: null };
       obj = { messageId: id3, flash: true, jumpType: id(outer1_2[18]).JumpType.ANIMATED };
       obj[2] = obj;
       const messages = obj.fetchMessages(obj);
     }, 150);
-    let obj = _require("../../../utils/native/RunAfterInteractionsUtils.tsx");
+    let obj = _runAfterInteractions;
   }
 };
 export { Separator };

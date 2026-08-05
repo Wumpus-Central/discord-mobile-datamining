@@ -1,3 +1,8 @@
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { isForwardMessage } from "../../forwarding/isForwardMessage.tsx";
+import { PreviewIcon } from "../../main_tabs_v2/native/shared_components/ChannelRowPreview.tsx";
+import { useTruncatedGradientColors } from "hooks/useTruncatedGradientColors.tsx";
 // discord_app/modules/in_app_notifications/native/MessagePreviewText.tsx
 import getSystemLocale from "getSystemLocale";
 import { View } from "MessageEmbedTypes";
@@ -21,9 +26,9 @@ function NativeMessagePreviewContent(arg0) {
   let maxHeight;
   let message;
   ({ message, lineClamp, maxHeight } = arg0);
-  const tmp = require("hooks/useTruncatedGradientColors.tsx")();
+  const tmp = useTruncatedGradientColors();
   ({ gradientColors, gradientStyles } = tmp);
-  return callback(View, { children: callback(require("../../main_tabs_v2/native/shared_components/ChannelRowPreview.tsx") /* PreviewIcon */.NativeChannelRowPreview, { message, lineClamp, maxHeight, gradientStyles, gradientColors }) });
+  return callback(View, { children: callback(PreviewIcon /* PreviewIcon */.NativeChannelRowPreview, { message, lineClamp, maxHeight, gradientStyles, gradientColors }) });
 }
 class SystemMessageText {
   constructor(arg0) {
@@ -49,7 +54,7 @@ function EmbedMediaThumbnail(media) {
       num = result;
     }
   }
-  obj = { style: items, children: callback(require("../../../components_native/common/FastImage.tsx"), obj) };
+  obj = { style: items, children: callback(preload, obj) };
   items = [tmp.embedMediaContainer, { aspectRatio: num }];
   obj = { source: { uri: url }, style: tmp.embedMedia, resizeMode: "contain" };
   return callback(View, obj);
@@ -97,14 +102,14 @@ function EmbedCard(embed) {
   if (tmp9) {
     const obj2 = { variant: "text-xxs/normal", color: "text-subtle", lineClamp: 1, children: null };
     obj2[3] = name;
-    tmp9 = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+    tmp9 = callback(Text /* Text */.Text, obj2);
   }
   const items2 = [tmp9, , , ];
   let tmp13 = null != name1;
   if (tmp13) {
     const obj3 = { variant: "text-xs/medium", color: "text-default", lineClamp: 1, children: null };
     obj3[3] = name1;
-    tmp13 = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
+    tmp13 = callback(Text /* Text */.Text, obj3);
   }
   items2[1] = tmp13;
   let tmp18Result = null != rawTitle;
@@ -119,7 +124,7 @@ function EmbedCard(embed) {
     const obj4 = { variant: "text-xs/medium", color: "text-link", lineClamp: null, children: null };
     obj4[2] = num2;
     obj4[3] = rawTitle;
-    tmp18Result = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj4);
+    tmp18Result = callback(Text /* Text */.Text, obj4);
     const tmp18 = callback;
   }
   items2[2] = tmp18Result;
@@ -127,7 +132,7 @@ function EmbedCard(embed) {
   if (tmp21) {
     const obj5 = { variant: "text-xs/medium", color: "text-default", lineClamp: 3, children: null };
     obj5[3] = embed.rawDescription;
-    tmp21 = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj5);
+    tmp21 = callback(Text /* Text */.Text, obj5);
   }
   items2[3] = tmp21;
   obj1[1] = items2;
@@ -211,7 +216,7 @@ export default function MessagePreviewText(message) {
     items1[1] = callback(EmbedCard, obj2);
     obj[0] = items1;
     tmp43 = callback2(View, obj);
-  } else if (require("../../forwarding/isForwardMessage.tsx")(message)) {
+  } else if (isForwardMessage(message)) {
     let tmp29 = previewableMedia.length > 0;
     if (tmp29) {
       tmp29 = previewableMedia[0].type === tmp(9721).PreviewableMediaTypes.GIF;

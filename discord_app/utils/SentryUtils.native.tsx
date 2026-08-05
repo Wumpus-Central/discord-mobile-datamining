@@ -1,3 +1,4 @@
+import { getUpdatedOptions } from "ErrorCommonUtils.tsx";
 // discord_app/utils/SentryUtils.native.tsx
 import { NativeModules } from "get ActivityIndicator";
 import _maybeBackfillMissingBreadcrumbsFromTelemetryRing from "_maybeBackfillMissingBreadcrumbsFromTelemetryRing";
@@ -28,8 +29,8 @@ let obj = {
   },
   captureException(arg0, extra) {
     const _require = arg0;
-    const importAll = _require("ErrorCommonUtils.tsx").getUpdatedOptions(extra);
-    const obj = _require("ErrorCommonUtils.tsx");
+    const importAll = _getUpdatedOptions.getUpdatedOptions(extra);
+    const obj = _getUpdatedOptions;
     importAll(810).withScope((setTags) => {
       if (null != callback) {
         if (null != tmp.tags) {
@@ -45,7 +46,7 @@ let obj = {
   },
   captureCrash(error, extra) {
     const _require = error;
-    const updatedOptions = _require("ErrorCommonUtils.tsx").getUpdatedOptions(extra);
+    const updatedOptions = _getUpdatedOptions.getUpdatedOptions(extra);
     let tags;
     if (updatedOptions != null) {
       tags = updatedOptions.tags;
@@ -57,7 +58,7 @@ let obj = {
       }
     }
     const dependencyMap = Object.assign({ crash: "true" }, {});
-    let obj = _require("ErrorCommonUtils.tsx");
+    let obj = _getUpdatedOptions;
     updatedOptions(810).withScope((setExtras) => {
       if (tmp2) {
         setExtras.setExtras(tmp.extra);
@@ -87,8 +88,8 @@ let obj = {
   },
   captureMessage(arg0, extra) {
     const _require = arg0;
-    const updatedOptions = _require("ErrorCommonUtils.tsx").getUpdatedOptions(extra);
-    const obj = _require("ErrorCommonUtils.tsx");
+    const updatedOptions = _getUpdatedOptions.getUpdatedOptions(extra);
+    const obj = _getUpdatedOptions;
     importAll(810).withScope((setExtras) => {
       if (tmp2) {
         setExtras.setExtras(tmp.extra);

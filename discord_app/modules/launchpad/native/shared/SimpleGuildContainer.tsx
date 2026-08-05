@@ -1,3 +1,5 @@
+import { getMediaIcon } from "../../../guilds_bar/native/GuildsBarActivityIndicator.tsx";
+import { MaskedBadge } from "../../../main_tabs_v2/native/shared_components/MaskedBadge.tsx";
 // discord_app/modules/launchpad/native/shared/SimpleGuildContainer.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -27,7 +29,7 @@ let closure_12 = importAllResult.memo((backgroundColor) => {
     obj[0] = badge;
     obj[1] = unread;
     obj[2] = backgroundColor.backgroundColor;
-    obj[1] = callback(require("../../../main_tabs_v2/native/shared_components/MaskedBadge.tsx"), obj);
+    obj[1] = callback(MaskedBadge, obj);
     let tmp2 = callback(closure_5, obj);
   } else {
     tmp2 = null;
@@ -49,7 +51,7 @@ let closure_13 = importAllResult.memo((arg0) => {
     obj[0] = backgroundColor;
     obj[0] = obj;
     ({ source: obj3[1], IconComponent: obj3[2], isCurrentUserConnected: obj3[3] } = activityIndicatorState);
-    let tmp2 = callback(require("../../../guilds_bar/native/GuildsBarActivityIndicator.tsx") /* getMediaIcon */.GuildsBarActivityIndicatorBase, obj);
+    let tmp2 = callback(getMediaIcon /* getMediaIcon */.GuildsBarActivityIndicatorBase, obj);
   } else {
     tmp2 = null;
     if (null != guildId) {
@@ -58,7 +60,7 @@ let closure_13 = importAllResult.memo((arg0) => {
       const obj1 = { backgroundColor: null };
       obj1[0] = backgroundColor;
       obj[1] = obj1;
-      tmp2 = callback(require("../../../guilds_bar/native/GuildsBarActivityIndicator.tsx"), obj);
+      tmp2 = callback(getMediaIcon, obj);
     }
   }
   return tmp2;

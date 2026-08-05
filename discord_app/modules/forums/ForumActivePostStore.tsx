@@ -1,3 +1,8 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { set } from "../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx";
+import { set } from "../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
+import { areSetsEqual } from "../../../discord_common/js/shared/utils/SetUtils.tsx";
+import { getCreationDefaultFormatter } from "ForumUtils.tsx";
 // discord_app/modules/forums/ForumActivePostStore.tsx
 import handleThreadCreateOrUpdate from "handleThreadCreateOrUpdate";
 import updateState from "updateState";
@@ -26,13 +31,13 @@ function maybeRebuildState() {
   let c3 = null;
   let c12 = null;
   const set = new Set();
-  const LATEST_ACTIVITY = require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx") /* set */.ThreadSortOrder.LATEST_ACTIVITY;
-  const MATCH_SOME = require("../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx") /* set */.ThreadSearchTagSetting.MATCH_SOME;
+  const LATEST_ACTIVITY = set /* set */.ThreadSortOrder.LATEST_ACTIVITY;
+  const MATCH_SOME = set /* set */.ThreadSearchTagSetting.MATCH_SOME;
   let c16 = 0;
   let closure_19 = [];
-  let closure_20 = require("../../../_runtime/00012_apply.js").chain(items);
-  const obj2 = require("../../../_runtime/00012_apply.js");
-  let closure_21 = require("../../../_runtime/00012_apply.js").chain(items);
+  let closure_20 = apply.chain(items);
+  const obj2 = apply;
+  let closure_21 = apply.chain(items);
   set2.clear();
   set1.clear();
   return false;
@@ -76,9 +81,9 @@ function rebuildState(refreshThreadIds) {
       refreshThreadIds1 = sortThreadIds;
     }
     if (refreshThreadIds1) {
-      const obj3 = require("../../../_runtime/00012_apply.js");
-      _require = _require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx").ThreadSortOrder.LATEST_ACTIVITY;
-      let closure_21 = require("../../../_runtime/00012_apply.js").chain(closure_19).sort((id, id) => {
+      const obj3 = apply;
+      _require = _set.ThreadSortOrder.LATEST_ACTIVITY;
+      let closure_21 = apply.chain(closure_19).sort((id, id) => {
         let compare = outer1_2;
         let num = -1;
         if (!obj.isForumPostPinned(id)) {
@@ -106,10 +111,10 @@ function rebuildState(refreshThreadIds) {
         }
         return num;
       });
-      const chainResult = require("../../../_runtime/00012_apply.js").chain(closure_19);
-      const obj5 = require("../../../_runtime/00012_apply.js");
-      _require = _require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx").ThreadSortOrder.CREATION_DATE;
-      let closure_20 = require("../../../_runtime/00012_apply.js").chain(closure_19).sort((id, id) => {
+      const chainResult = apply.chain(closure_19);
+      const obj5 = apply;
+      _require = _set.ThreadSortOrder.CREATION_DATE;
+      let closure_20 = apply.chain(closure_19).sort((id, id) => {
         let compare = outer1_2;
         let num = -1;
         if (!obj.isForumPostPinned(id)) {
@@ -137,9 +142,9 @@ function rebuildState(refreshThreadIds) {
         }
         return num;
       });
-      const chainResult1 = require("../../../_runtime/00012_apply.js").chain(closure_19);
+      const chainResult1 = apply.chain(closure_19);
     }
-    const valueResult = LATEST_ACTIVITY === _require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx").ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20.value();
+    const valueResult = LATEST_ACTIVITY === _set.ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20.value();
     let found = valueResult;
     if (0 !== set.size) {
       _require = set;
@@ -186,7 +191,7 @@ function rebuildState(refreshThreadIds) {
       tmp33 = found1;
     }
     let closure_3 = tmp33;
-    const iter = LATEST_ACTIVITY === _require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx").ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20;
+    const iter = LATEST_ACTIVITY === _set.ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20;
     obj = set1;
   }
 }
@@ -217,7 +222,7 @@ prototype["getCanAckThreads"] = function getCanAckThreads() {
   return c18;
 };
 prototype["getThreadIds"] = function getThreadIds(id, closure_1, closure_2, closure_3) {
-  const areSetsEqualResult = require("../../../discord_common/js/shared/utils/SetUtils.tsx") /* areSetsEqual */.areSetsEqual(closure_2, closure_13);
+  const areSetsEqualResult = areSetsEqual /* areSetsEqual */.areSetsEqual(closure_2, closure_13);
   let tmp2 = !areSetsEqualResult;
   let closure_12 = id;
   closure_13 = closure_2;
@@ -262,13 +267,13 @@ const forumActivePostStore = new ForumActivePostStore(require("dispatcher"), {
         c12 = null;
         const _Set = Set;
         const set = new Set();
-        const LATEST_ACTIVITY = require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx") /* set */.ThreadSortOrder.LATEST_ACTIVITY;
-        const MATCH_SOME = require("../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx") /* set */.ThreadSearchTagSetting.MATCH_SOME;
+        const LATEST_ACTIVITY = set /* set */.ThreadSortOrder.LATEST_ACTIVITY;
+        const MATCH_SOME = set /* set */.ThreadSearchTagSetting.MATCH_SOME;
         let c16 = 0;
         let closure_19 = [];
-        let closure_20 = require("../../../_runtime/00012_apply.js").chain(items);
-        const obj = require("../../../_runtime/00012_apply.js");
-        let closure_21 = require("../../../_runtime/00012_apply.js").chain(items);
+        let closure_20 = apply.chain(items);
+        const obj = apply;
+        let closure_21 = apply.chain(items);
         set2.clear();
         set1.clear();
       }
@@ -312,7 +317,7 @@ const forumActivePostStore = new ForumActivePostStore(require("dispatcher"), {
     channel = channel.channel;
     if (null != channel.parent_id) {
       if (channel.parent_id === c12) {
-        const isForumPostPinnedResult = require("ForumUtils.tsx") /* getCreationDefaultFormatter */.isForumPostPinned(channel.id);
+        const isForumPostPinnedResult = getCreationDefaultFormatter /* getCreationDefaultFormatter */.isForumPostPinned(channel.id);
         const hasItem = set2.has(channel.id);
         if (isForumPostPinnedResult) {
           if (!hasItem) {

@@ -1,3 +1,9 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { FacepileGroupDMAvatar } from "../../group_dm/native/GroupDMAvatar.tsx";
+import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
+import { useTruncatedGradientColors } from "hooks/useTruncatedGradientColors.tsx";
+import { extractMetadataFromNotification } from "InAppNotificationUtils.tsx";
 // discord_app/modules/in_app_notifications/native/ReactionNotification.tsx
 import PreviewIcon from "PreviewIcon";
 import { View } from "extractMetadataFromNotification";
@@ -27,12 +33,12 @@ function ReactionNotificationBody(arg0) {
   let text;
   ({ secondaryText, messagePreview } = arg0);
   ({ text, hasMessageContent } = arg0);
-  let obj = require("InAppNotificationUtils.tsx") /* extractMetadataFromNotification */;
+  let obj = extractMetadataFromNotification /* extractMetadataFromNotification */;
   const messagePreviewTextVariant = obj.getMessagePreviewTextVariant();
   const tmp = createCacheKey();
-  ({ gradientColors, gradientStyles } = require("hooks/useTruncatedGradientColors.tsx")());
+  ({ gradientColors, gradientStyles } = useTruncatedGradientColors());
   obj = { variant: messagePreviewTextVariant, color: "text-default", style: tmp.italic, children: text };
-  const children = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , ];
+  const children = [callback(Text /* Text */.Text, obj), , ];
   let tmp8Result = null;
   if (null != secondaryText) {
     obj = { variant: "redesign/message-preview/medium", color: "text-link", lineClamp: null, children: null };
@@ -293,9 +299,9 @@ function ReactorNotificationIcon(notification) {
     if (channel.isGroupDM()) {
       let obj = { channel: null, size: null };
       obj[0] = channel;
-      obj[1] = require("../../../design/void/native.tsx") /* Button */.AvatarSizes.NORMAL;
-      let tmp8Result = callback(require("../../group_dm/native/GroupDMAvatar.tsx"), obj);
-      const tmp15 = require("../../group_dm/native/GroupDMAvatar.tsx");
+      obj[1] = Button /* Button */.AvatarSizes.NORMAL;
+      let tmp8Result = callback(FacepileGroupDMAvatar, obj);
+      const tmp15 = FacepileGroupDMAvatar;
     }
     return tmp8Result;
   }
@@ -307,17 +313,17 @@ function ReactorNotificationIcon(notification) {
       id = guild.id;
     }
     obj[1] = id;
-    obj[2] = require("../../../design/void/native.tsx") /* Button */.AvatarSizes.NORMAL;
-    tmp8Result = callback(require("../../../design/void/native.tsx") /* Button */.Avatar, obj);
+    obj[2] = Button /* Button */.AvatarSizes.NORMAL;
+    tmp8Result = callback(Button /* Button */.Avatar, obj);
     const tmp8 = callback;
     const tmp9 = require;
   } else {
     obj = { guild: null, size: null, style: null };
     obj[0] = guild;
-    obj[1] = require("../../guild/native/GuildIcon.tsx") /* GuildIconSizes */.GuildIconSizes.NORMAL;
+    obj[1] = GuildIconSizes /* GuildIconSizes */.GuildIconSizes.NORMAL;
     obj[2] = tmp.guildIcon;
-    tmp8Result = callback(require("../../guild/native/GuildIcon.tsx"), obj);
-    const tmp5 = require("../../guild/native/GuildIcon.tsx");
+    tmp8Result = callback(GuildIconSizes, obj);
+    const tmp5 = GuildIconSizes;
   }
 }
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: error } = set);

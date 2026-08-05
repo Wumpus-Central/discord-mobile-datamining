@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/intl/overrides/getDeviceSpecificString.tsx
 const result = require("set").fileFinishedImporting("modules/intl/overrides/getDeviceSpecificString.tsx");
 
@@ -13,6 +14,6 @@ export const getDeviceSpecificString = function getDeviceSpecificString(arg0, _2
   if (tmp3 == null) {
     tmp3 = _2Yp7dF;
   }
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   return intl.string(tmp3);
 };

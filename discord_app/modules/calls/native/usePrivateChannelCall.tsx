@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/calls/native/usePrivateChannelCall.tsx
 import getPrivateChannelCall from "getPrivateChannelCall";
 import noop from "noop";
@@ -10,7 +11,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
   const _require = arg0;
   let closure_1 = arg1;
   let dependencyMap = arg2;
-  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [ensureGuildLoaded];
   const items1 = [arg1, arg0];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {

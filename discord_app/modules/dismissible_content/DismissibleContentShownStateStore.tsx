@@ -1,3 +1,6 @@
+import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import { isActionRequired } from "../core/isActionRequired.tsx";
+import { set } from "DismissibleContentFatigueConfig.tsx";
 // discord_app/modules/dismissible_content/DismissibleContentShownStateStore.tsx
 import handleUpdateUser from "handleUpdateUser";
 import handleRequiredAction from "handleRequiredAction";
@@ -21,7 +24,7 @@ function withContent(currentlyShown, content) {
       const currentlyShownGroup = currentlyShown.currentlyShownGroup;
       currentlyShownGroup.add(content.groupName);
     }
-    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = _require("DismissibleContentFatigueConfig.tsx").CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = _set.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
     if (!CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(content.content)) {
       currentlyShown.shownFatigableCandidate = content;
       const prevFatigableCandidate = currentlyShown.prevFatigableCandidate;
@@ -186,12 +189,12 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, () => self.setHasRequiredAction());
 };
 prototype["setHasRequiredAction"] = function setHasRequiredAction() {
-  let closure_7 = require("../core/isActionRequired.tsx")(handleUpdateUser, handleRequiredAction);
+  let closure_7 = isActionRequired(handleUpdateUser, handleRequiredAction);
 };
 DismissibleContentShownStateStore.displayName = "DismissibleContentShownStateStore";
 identity = {
   CONNECTION_OPEN() {
-    require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
+    batchUpdates /* batchUpdates */.batchUpdates(() => {
       state.setState(() => {
         const obj = { candidates: null, shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: null, currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
         obj[0] = new Map();
@@ -207,7 +210,7 @@ identity = {
     taskRunner.unschedule();
   },
   LOGOUT() {
-    require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
+    batchUpdates /* batchUpdates */.batchUpdates(() => {
       state.setState(() => {
         const obj = { candidates: null, shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: null, currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
         obj[0] = new Map();
@@ -248,9 +251,9 @@ export const isStateInCooldown = function isStateInCooldown(shownFatigableCandid
 };
 export const addCandidateContent = function addCandidateContent(content) {
   const _require = content;
-  const CONTENT_TYPES_WITH_BYPASS_FATIGUE = _require("DismissibleContentFatigueConfig.tsx").CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+  const CONTENT_TYPES_WITH_BYPASS_FATIGUE = _set.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
   let closure_1 = CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(content.content);
-  _require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     outer1_6.setState((candidates) => {
       const obj = {};
       const merged = Object.assign(candidates);
@@ -275,7 +278,7 @@ export const addCandidateContent = function addCandidateContent(content) {
 export const removeCandidateContent = function removeCandidateContent(arg0, arg1) {
   const _require = arg0;
   let closure_1 = arg1;
-  _require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     outer1_6.setState((candidates) => {
       const obj = {};
       const merged = Object.assign(candidates);
@@ -388,7 +391,7 @@ export const getCurrentlyShownCounts = function getCurrentlyShownCounts() {
   return items1;
 };
 export const reset = function reset() {
-  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
+  batchUpdates /* batchUpdates */.batchUpdates(() => {
     state.setState(() => {
       const obj = { candidates: null, shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: null, currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
       obj[0] = new Map();
@@ -404,7 +407,7 @@ export const reset = function reset() {
   taskRunner.unschedule();
 };
 export const resetFatigueCooldown = function resetFatigueCooldown() {
-  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
+  batchUpdates /* batchUpdates */.batchUpdates(() => {
     state.setState((candidates) => {
       const obj = {};
       const merged = Object.assign(candidates);

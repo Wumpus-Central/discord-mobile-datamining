@@ -1,3 +1,4 @@
+import { messagesProxy } from "../intl/FavoritesGuild.messages.js";
 // discord_app/modules/favorites/hooks/useFavoritesGuildHideAction.tsx
 import noop from "noop";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -23,7 +24,7 @@ export default function useFavoritesGuildHideAction() {
   }, items);
   const intl = hasAccess(1236).intl;
   if (hasAccess) {
-    let ojM1xJ = require("../intl/FavoritesGuild.messages.js")["8FO0y9"];
+    let ojM1xJ = messagesProxy["8FO0y9"];
   } else {
     ojM1xJ = tmp(1236).t.ojM1xJ;
   }
@@ -31,7 +32,7 @@ export default function useFavoritesGuildHideAction() {
   let stringResult;
   if (hasAccess) {
     const intl2 = tmp(1236).intl;
-    stringResult = intl2.string(require("../intl/FavoritesGuild.messages.js").FaHxWl);
+    stringResult = intl2.string(messagesProxy.FaHxWl);
   }
   obj[2] = stringResult;
   obj[3] = callback;

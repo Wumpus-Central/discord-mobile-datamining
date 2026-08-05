@@ -1,3 +1,5 @@
+import { apexExperiment } from "../../experiments/BountiesVerticalScrollExperiment.tsx";
+import { FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY } from "bountiesSwipeUpNuxDevTools.tsx";
 // discord_app/modules/quests/native/BountiesModal/useBountySwipeUpNux.tsx
 import _slicedToArray from "_slicedToArray";
 
@@ -6,9 +8,9 @@ const result = require("FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY").fileFinishedIm
 
 export const useBountySwipeUpNux = function useBountySwipeUpNux(location) {
   let isEligible = location.isEligible;
-  const BountiesVerticalScrollExperiment = require("../../experiments/BountiesVerticalScrollExperiment.tsx") /* apexExperiment */.BountiesVerticalScrollExperiment;
+  const BountiesVerticalScrollExperiment = apexExperiment /* apexExperiment */.BountiesVerticalScrollExperiment;
   const tmp3 = "none" === BountiesVerticalScrollExperiment.useConfig({ location: location.location }).scrollAffordanceVariant;
-  let obj = require("bountiesSwipeUpNuxDevTools.tsx") /* FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY */;
+  let obj = FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY /* FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY */;
   const first = callback(obj.useForceBountiesSwipeUpNux(), 1)[0];
   if (isEligible) {
     if (tmp3) {

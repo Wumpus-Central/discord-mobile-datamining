@@ -1,3 +1,6 @@
+import { set } from "../../../../../discord_common/js/shared/shared-constants/ReportMenuType.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/in_app_reports/native/components/InAppReportsBreadCrumbs.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -53,12 +56,12 @@ export default function Breadcrumbs(element) {
       } else {
         obj = { style: null, children: null };
         obj[0] = tmp2.container;
-        let map = _require("../../../../design/components/Text/native/Text.tsx").Text;
+        let map = _Text.Text;
         obj = { style: null, accessibilityRole: "header", variant: "text-xs/bold", children: null };
         obj[0] = tmp2.title;
-        const REPORT_TO_MOD = _require("../../../../../discord_common/js/shared/shared-constants/ReportMenuType.tsx").ReportMenuTypeSets.REPORT_TO_MOD;
+        const REPORT_TO_MOD = _set.ReportMenuTypeSets.REPORT_TO_MOD;
         const hasItem = REPORT_TO_MOD.has(element.menuName);
-        const intl = _require("../../../../intl/index.native.tsx").intl;
+        const intl = _getSystemLocale.intl;
         const string = intl.string;
         if (hasItem) {
           let stringResult = string(_6mx_DP);

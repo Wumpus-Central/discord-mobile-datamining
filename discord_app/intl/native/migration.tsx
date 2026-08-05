@@ -1,3 +1,4 @@
+import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/intl/native/migration.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -5,7 +6,7 @@ import createCacheKey from "createCacheKey";
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyles((arg0) => {
-  const link = { color: require("../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_LINK, textDecorationLine: null };
+  const link = { color: Themes.colors.TEXT_LINK, textDecorationLine: null };
   let str = "none";
   if (arg0) {
     str = "underline";

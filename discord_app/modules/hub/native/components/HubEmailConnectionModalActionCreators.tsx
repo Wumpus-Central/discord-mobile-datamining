@@ -1,3 +1,4 @@
+import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 // discord_app/modules/hub/native/components/HubEmailConnectionModalActionCreators.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
@@ -8,7 +9,7 @@ const result = require("HubEmailConnectionModal").fileFinishedImporting("modules
 export default {
   open(closure_0) {
     closure_0 = arg1;
-    require("../../../../actions/ModalActionCreators.tsx").pushLazy(callback(function*() {
+    ModalActionCreators.pushLazy(callback(function*() {
       let closure_1 = tmp5;
       let closure_0 = tmp2;
       yield outer1_0(paths[3])(paths[2], paths.paths);
@@ -22,6 +23,6 @@ export default {
     }), closure_0, HUB_EMAIL_CONNECTION_MODAL_KEY);
   },
   close() {
-    require("../../../../actions/ModalActionCreators.tsx").popWithKey(HUB_EMAIL_CONNECTION_MODAL_KEY);
+    ModalActionCreators.popWithKey(HUB_EMAIL_CONNECTION_MODAL_KEY);
   }
 };

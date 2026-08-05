@@ -1,3 +1,7 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { snapVolumeToDefault } from "../user_settings/voice/AudioSettingsUtils.tsx";
 // discord_app/modules/game_console/GameConsoleActionCreators.tsx
 import expandEventProperties from "expandEventProperties";
 import createRTCConnection from "createRTCConnection";
@@ -193,7 +197,7 @@ function _getConnectNonce() {
   return applyArgumentsResult;
 }
 function cancelConnectRequest(arg0) {
-  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   return HTTP.del({ url: closure_8.CONNECT_REQUEST(arg0), rejectWithError: false });
 }
 function _fetchDevices() {
@@ -664,13 +668,13 @@ function _transferToPlayStation() {
 let result = require("handleUpdate").fileFinishedImporting("modules/game_console/GameConsoleActionCreators.tsx");
 
 export const waitForSession = function waitForSession(XBOX, id, closure_1) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "WAIT_FOR_REMOTE_SESSION", sessionType: XBOX, nonce: closure_1, channelId: id };
   obj.dispatch(obj);
 };
 export { disconnectRemote };
 export const connectToRemote = function connectToRemote(sessionId) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "REMOTE_SESSION_CONNECT", sessionId };
   obj.dispatch(obj);
 };
@@ -678,7 +682,7 @@ export const remoteVoiceStateUpdate = function remoteVoiceStateUpdate(remoteSess
   let selfDeaf;
   let selfMute;
   ({ selfMute, selfDeaf } = arg1);
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "REMOTE_COMMAND", sessionId: remoteSessionId, payload: { type: "VOICE_STATE_UPDATE", self_mute: selfMute, self_deaf: selfDeaf } };
   obj.dispatch(obj);
   const sessionById = store.getSessionById(remoteSessionId);
@@ -689,10 +693,10 @@ export const remoteVoiceStateUpdate = function remoteVoiceStateUpdate(remoteSess
       os = clientInfo.os;
     }
   }
-  require("../../utils/AnalyticsUtils.tsx").track(constants.REMOTE_COMMAND_SENT, { command_type: "VOICE_STATE_UPDATE", remote_platform: os });
+  expandEventProperties.track(constants.REMOTE_COMMAND_SENT, { command_type: "VOICE_STATE_UPDATE", remote_platform: os });
 };
 export const remoteDisconnect = function remoteDisconnect(remoteSessionId) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "REMOTE_COMMAND", sessionId: remoteSessionId, payload: { type: "DISCONNECT" } };
   obj.dispatch(obj);
   const sessionById = store.getSessionById(remoteSessionId);
@@ -703,11 +707,11 @@ export const remoteDisconnect = function remoteDisconnect(remoteSessionId) {
       os = clientInfo.os;
     }
   }
-  require("../../utils/AnalyticsUtils.tsx").track(constants.REMOTE_COMMAND_SENT, { command_type: "DISCONNECT", remote_platform: os });
+  expandEventProperties.track(constants.REMOTE_COMMAND_SENT, { command_type: "DISCONNECT", remote_platform: os });
   disconnectRemote();
 };
 export const remoteAudioSettingsUpdate = function remoteAudioSettingsUpdate(sessionId, arg1, first) {
-  let obj = require("../user_settings/voice/AudioSettingsUtils.tsx") /* snapVolumeToDefault */;
+  let obj = snapVolumeToDefault /* snapVolumeToDefault */;
   const result = obj.coerceAudioContextForProto(first);
   if (null != result) {
     obj = { type: "REMOTE_COMMAND", sessionId: null, payload: null };
@@ -717,8 +721,8 @@ export const remoteAudioSettingsUpdate = function remoteAudioSettingsUpdate(sess
     obj[2] = arg1;
     const merged = Object.assign(arg3);
     obj[2] = obj;
-    require("../../Dispatcher.tsx").dispatch(obj);
-    const obj3 = require("../../Dispatcher.tsx");
+    dispatcher.dispatch(obj);
+    const obj3 = dispatcher;
     const sessionById = store.getSessionById(sessionId);
     let os;
     if (sessionById != null) {
@@ -729,8 +733,8 @@ export const remoteAudioSettingsUpdate = function remoteAudioSettingsUpdate(sess
     }
     const obj1 = { command_type: "AUDIO_SETTINGS_UPDATE", remote_platform: null };
     obj1[1] = os;
-    require("../../utils/AnalyticsUtils.tsx").track(constants.REMOTE_COMMAND_SENT, obj1);
-    const obj6 = require("../../utils/AnalyticsUtils.tsx");
+    expandEventProperties.track(constants.REMOTE_COMMAND_SENT, obj1);
+    const obj6 = expandEventProperties;
   }
 };
 export { getConnectNonce };
@@ -746,7 +750,7 @@ export const fetchDevices = function fetchDevices(closure_0) {
   return applyArgumentsResult;
 };
 export const persistSelectedDeviceId = function persistSelectedDeviceId(closure_0, value) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GAME_CONSOLE_SELECT_DEVICE", platform: closure_0, deviceId: value };
   obj.dispatch(obj);
 };

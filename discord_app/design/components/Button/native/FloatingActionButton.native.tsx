@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { MINIMUM_HIT_AREA } from "ButtonConstants.native.tsx";
 // discord_app/design/components/Button/native/FloatingActionButton.native.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -11,12 +13,12 @@ const styles = createCacheKey.createStyles(() => {
   }
   let obj = { button: null, iconButtonPill: null };
   obj = {};
-  const merged = Object.assign(require("../../../../../discord_common/js/packages/tokens/native.tsx").shadows.SHADOW_HIGH);
+  const merged = Object.assign(Themes.shadows.SHADOW_HIGH);
   obj[0] = obj;
-  obj = { minWidth: require("ButtonConstants.native.tsx") /* MINIMUM_HIT_AREA */.FAB_BUTTON_SIZE, minHeight: require("ButtonConstants.native.tsx") /* MINIMUM_HIT_AREA */.FAB_BUTTON_SIZE, padding: 0 };
+  obj = { minWidth: MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.FAB_BUTTON_SIZE, minHeight: MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.FAB_BUTTON_SIZE, padding: 0 };
   if (flag) {
     const obj1 = { borderRadius: null };
-    obj1[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg;
+    obj1[0] = Themes.radii.lg;
     let obj2 = obj1;
   } else {
     obj2 = {};

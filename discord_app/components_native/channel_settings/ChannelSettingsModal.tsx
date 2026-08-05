@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/components_native/channel_settings/ChannelSettingsModal.tsx
 import "EditLinkedLobby";
 import { View } from "WebhookItem";
@@ -37,15 +38,15 @@ export const getChannelSettingsScreens = function getChannelSettingsScreens(chan
     }
   };
   obj = { title: null, render: null };
-  const intl = _require("../../intl/index.native.tsx").intl;
-  obj[0] = intl.string(_require("../../intl/index.native.tsx").t.h850Ss);
+  const intl = _getSystemLocale.intl;
+  obj[0] = intl.string(_getSystemLocale.t.h850Ss);
   obj[1] = function render() {
     return outer1_8(callback(pinsScreen[9]), { channelId: closure_0 });
   };
   obj[constants.NOTIFICATIONS] = obj;
   const obj1 = { title: null, render: null };
-  const intl2 = _require("../../intl/index.native.tsx").intl;
-  obj1[0] = intl2.string(_require("../../intl/index.native.tsx").t["mp1N/2"]);
+  const intl2 = _getSystemLocale.intl;
+  obj1[0] = intl2.string(_getSystemLocale.t["mp1N/2"]);
   obj1[1] = function render() {
     let obj = { type: outer1_5.GUILD_CHANNEL, guildId: callback, channelId: closure_0 };
     obj = { style: pinsScreen.pinsScreen, children: outer1_8(callback(pinsScreen[10]), obj) };
@@ -60,15 +61,15 @@ export const getChannelSettingsScreens = function getChannelSettingsScreens(chan
     }
   };
   const obj2 = { title: null, postponeRender: true, render: null };
-  const intl3 = _require("../../intl/index.native.tsx").intl;
-  obj2[0] = intl3.string(_require("../../intl/index.native.tsx").t.ngRFjZ);
+  const intl3 = _getSystemLocale.intl;
+  obj2[0] = intl3.string(_getSystemLocale.t.ngRFjZ);
   obj2[2] = function render() {
     return callback2(callback(pinsScreen[12]), {});
   };
   obj[constants.INSTANT_INVITES] = obj2;
   const obj3 = { title: null, render: null };
-  const intl4 = _require("../../intl/index.native.tsx").intl;
-  obj3[0] = intl4.string(_require("../../intl/index.native.tsx").t.xrmhRX);
+  const intl4 = _getSystemLocale.intl;
+  obj3[0] = intl4.string(_getSystemLocale.t.xrmhRX);
   obj3[1] = function render(arg0) {
     const obj = {};
     const merged = Object.assign(arg0);
@@ -77,69 +78,69 @@ export const getChannelSettingsScreens = function getChannelSettingsScreens(chan
   };
   obj[constants.PERMISSIONS] = obj3;
   const obj4 = { title: null, postponeRender: true, render: null };
-  const intl5 = _require("../../intl/index.native.tsx").intl;
-  obj4[0] = intl5.string(_require("../../intl/index.native.tsx").t.vPHdP5);
+  const intl5 = _getSystemLocale.intl;
+  obj4[0] = intl5.string(_getSystemLocale.t.vPHdP5);
   obj4[2] = function render(arg0) {
     const merged = Object.assign(arg0);
     return outer1_8(callback(pinsScreen[14]), { channelId: closure_0 });
   };
   obj[constants.NEW_PERMISSION] = obj4;
   const obj5 = { title: null, render: null };
-  const intl6 = _require("../../intl/index.native.tsx").intl;
-  obj5[0] = intl6.string(_require("../../intl/index.native.tsx").t.D4p9TR);
+  const intl6 = _getSystemLocale.intl;
+  obj5[0] = intl6.string(_getSystemLocale.t.D4p9TR);
   obj5[1] = function render(arg0) {
     const merged = Object.assign(arg0);
     return outer1_8(callback(pinsScreen[15]), { channelId: closure_0 });
   };
   obj[constants.PERMISSION_OVERRIDES] = obj5;
   const obj6 = { title: null, render: null };
-  const intl7 = _require("../../intl/index.native.tsx").intl;
-  obj6[0] = intl7.string(_require("../../intl/index.native.tsx").t.CIsNZw);
+  const intl7 = _getSystemLocale.intl;
+  obj6[0] = intl7.string(_getSystemLocale.t.CIsNZw);
   obj6[1] = function render(arg0) {
     const merged = Object.assign(arg0);
     return outer1_8(callback(pinsScreen[16]), { channelId: closure_0 });
   };
   obj[constants.INTEGRATIONS] = obj6;
   const obj7 = { title: null, render: null };
-  const intl8 = _require("../../intl/index.native.tsx").intl;
-  obj7[0] = intl8.string(_require("../../intl/index.native.tsx").t.jp25Id);
+  const intl8 = _getSystemLocale.intl;
+  obj7[0] = intl8.string(_getSystemLocale.t.jp25Id);
   obj7[1] = function render() {
     return outer1_8(callback(pinsScreen[17]), { channelId: closure_0, webhookType: outer1_6.INCOMING });
   };
   obj[constants.WEBHOOKS] = obj7;
   const obj8 = { title: null, render: null };
-  const intl9 = _require("../../intl/index.native.tsx").intl;
-  obj8[0] = intl9.string(_require("../../intl/index.native.tsx").t["6SE3L3"]);
+  const intl9 = _getSystemLocale.intl;
+  obj8[0] = intl9.string(_getSystemLocale.t["6SE3L3"]);
   obj8[1] = function render(arg0) {
     const merged = Object.assign(arg0);
     return callback2(callback(pinsScreen[18]), {});
   };
   obj[constants.EDIT_WEBHOOK] = obj8;
   const obj9 = { title: null, render: null };
-  const intl10 = _require("../../intl/index.native.tsx").intl;
-  obj9[0] = intl10.string(_require("../../intl/index.native.tsx").t.OJknhi);
+  const intl10 = _getSystemLocale.intl;
+  obj9[0] = intl10.string(_getSystemLocale.t.OJknhi);
   obj9[1] = function render(arg0) {
     const merged = Object.assign(arg0);
     return callback2(callback(pinsScreen[19]), {});
   };
   obj[constants.EDIT_LINKED_LOBBY] = obj9;
   const obj10 = { title: null, render: null };
-  const intl11 = _require("../../intl/index.native.tsx").intl;
-  obj10[0] = intl11.string(_require("../../intl/index.native.tsx").t.OrV60r);
+  const intl11 = _getSystemLocale.intl;
+  obj10[0] = intl11.string(_getSystemLocale.t.OrV60r);
   obj10[1] = function render() {
     return outer1_8(callback(pinsScreen[17]), { channelId: closure_0, webhookType: outer1_6.CHANNEL_FOLLOWER });
   };
   obj[constants.CHANNELS_FOLLOWED] = obj10;
   const obj11 = { title: null, render: null };
-  const intl12 = _require("../../intl/index.native.tsx").intl;
-  obj11[0] = intl12.string(_require("../../intl/index.native.tsx").t["+caQHK"]);
+  const intl12 = _getSystemLocale.intl;
+  obj11[0] = intl12.string(_getSystemLocale.t["+caQHK"]);
   obj11[1] = function render() {
     return outer1_8(callback(pinsScreen[20]), { channelId: closure_0 });
   };
   obj[constants.CHANGE_CATEGORY] = obj11;
   const obj12 = { title: null, render: null };
-  const intl13 = _require("../../intl/index.native.tsx").intl;
-  obj12[0] = intl13.string(_require("../../intl/index.native.tsx").t["Ms8bX+"]);
+  const intl13 = _getSystemLocale.intl;
+  obj12[0] = intl13.string(_getSystemLocale.t["Ms8bX+"]);
   obj12[1] = function render() {
     return outer1_8(callback(pinsScreen[21]), { channelId: closure_0 });
   };
@@ -151,8 +152,8 @@ export const getChannelSettingsScreens = function getChannelSettingsScreens(chan
     }
   };
   const obj13 = { title: null, render: null };
-  const intl14 = _require("../../intl/index.native.tsx").intl;
-  obj13[0] = intl14.string(_require("../../intl/index.native.tsx").t["kQvoC/"]);
+  const intl14 = _getSystemLocale.intl;
+  obj13[0] = intl14.string(_getSystemLocale.t["kQvoC/"]);
   obj13[1] = function render() {
     return outer1_8(callback(pinsScreen[23]), { channelId: closure_0 });
   };

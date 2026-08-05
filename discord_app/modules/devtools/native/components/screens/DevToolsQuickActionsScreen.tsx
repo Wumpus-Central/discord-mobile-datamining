@@ -1,3 +1,13 @@
+import { asyncRequireImpl } from "../../../../../../_runtime/01959_asyncRequireImpl.js";
+import { DismissibleContent } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { ModalActionCreators } from "../../../../../actions/ModalActionCreators.tsx";
+import { saveGuildFolders } from "../../../../../actions/UserSettingsActionCreators.tsx";
+import { dispatcher } from "../../../../../Dispatcher.tsx";
+import { setFontSize } from "../../../../a11y/AccessibilityActionCreators.tsx";
+import { UNSAFE_isDismissibleContentDismissed } from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import { _startContactSyncForDiscoverability } from "../../../../nuf/native/NUFActionCreators.tsx";
+import { setNewUser } from "../../../../nuf/NUFActionCreators.tsx";
+import { updateUserGuildSettings } from "../../../../user_settings/UserSettingsProtoActionCreators.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsQuickActionsScreen.tsx
 import TwoFASetupModalActionCreators from "../../../../user_settings/account/native/mfa_modal_flow/TwoFASetupModalActionCreators.tsx";
 import _handleConnectionOpen from "_handleConnectionOpen";
@@ -26,49 +36,49 @@ let closure_22;
 let closure_23;
 const require = arg1;
 function handleNewUserOnboarding() {
-  require("../../../../nuf/NUFActionCreators.tsx") /* setNewUser */.setNewUser(NewUserTypes.ORGANIC_REGISTERED);
-  const obj = require("../../../../nuf/NUFActionCreators.tsx") /* setNewUser */;
-  require("../../../../../Dispatcher.tsx").wait(require("../../../../nuf/native/NUFActionCreators.tsx") /* _startContactSyncForDiscoverability */.startOnboarding);
+  setNewUser /* setNewUser */.setNewUser(NewUserTypes.ORGANIC_REGISTERED);
+  const obj = setNewUser /* setNewUser */;
+  dispatcher.wait(_startContactSyncForDiscoverability /* _startContactSyncForDiscoverability */.startOnboarding);
 }
 function handleThemeChange(arg0) {
-  require("../../../../../actions/UserSettingsActionCreators.tsx").updateTheme(arg0 ? ThemeTypes.LIGHT : ThemeTypes.DARK);
+  saveGuildFolders.updateTheme(arg0 ? ThemeTypes.LIGHT : ThemeTypes.DARK);
 }
 function handleReducedMotionChange(arg0) {
   let str = "no-preference";
   if (arg0) {
     str = "reduce";
   }
-  const result = require("../../../../a11y/AccessibilityActionCreators.tsx") /* setFontSize */.setPrefersReducedMotion(str);
+  const result = setFontSize /* setFontSize */.setPrefersReducedMotion(str);
 }
 function handleLaunchWelcomeReset() {
-  const result = require("../../../../user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.removeDismissedContent(require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.SEEN_LAUNCH_WELCOME);
-  const obj = require("../../../../user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */;
-  const result1 = require("../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.SEEN_OLD_DESIGN);
+  const result = updateUserGuildSettings /* updateUserGuildSettings */.removeDismissedContent(DismissibleContent /* DismissibleContent */.DismissibleContent.SEEN_LAUNCH_WELCOME);
+  const obj = updateUserGuildSettings /* updateUserGuildSettings */;
+  const result1 = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.SEEN_OLD_DESIGN);
 }
 function showVibingWumpus() {
-  let obj = require("../../../../../actions/ModalActionCreators.tsx");
+  let obj = ModalActionCreators;
   obj = {
     onClose() {
 
     }
   };
-  obj.pushLazy(require("../../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(10298, dependencyMap.paths), obj, VIBING_WUMPUS_MODAL_KEY);
+  obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(10298, dependencyMap.paths), obj, VIBING_WUMPUS_MODAL_KEY);
 }
 function handleResetDoubleTapState() {
-  const result = require("../../../../user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.removeDismissedContent(require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.DOUBLE_TAP_TO_REACT_UPSELL);
-  const obj = require("../../../../user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */;
-  const result1 = require("../../../../user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.removeDismissedContent(require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER);
-  const obj2 = require("../../../../user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */;
-  const result2 = require("../../../../user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.removeDismissedContent(require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL);
-  const PreloadedUserSettingsActionCreators = require("../../../../user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.PreloadedUserSettingsActionCreators;
+  const result = updateUserGuildSettings /* updateUserGuildSettings */.removeDismissedContent(DismissibleContent /* DismissibleContent */.DismissibleContent.DOUBLE_TAP_TO_REACT_UPSELL);
+  const obj = updateUserGuildSettings /* updateUserGuildSettings */;
+  const result1 = updateUserGuildSettings /* updateUserGuildSettings */.removeDismissedContent(DismissibleContent /* DismissibleContent */.DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER);
+  const obj2 = updateUserGuildSettings /* updateUserGuildSettings */;
+  const result2 = updateUserGuildSettings /* updateUserGuildSettings */.removeDismissedContent(DismissibleContent /* DismissibleContent */.DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL);
+  const PreloadedUserSettingsActionCreators = updateUserGuildSettings /* updateUserGuildSettings */.PreloadedUserSettingsActionCreators;
   PreloadedUserSettingsActionCreators.updateAsync("textAndImages", (arg0) => {
     arg0.defaultReactionEmoji = undefined;
-  }, require("../../../../user_settings/UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.UserSettingsDelay.INFREQUENT_USER_ACTION);
+  }, updateUserGuildSettings /* updateUserGuildSettings */.UserSettingsDelay.INFREQUENT_USER_ACTION);
 }
 function launchTotpSetupSuccess() {
-  let arr = require("../../../../../actions/ModalActionCreators.tsx");
+  let arr = ModalActionCreators;
   arr = arr.pop();
-  const items = [require("../../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(13931, dependencyMap.paths), require("../../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(13933, dependencyMap.paths)];
+  const items = [asyncRequireImpl /* asyncRequireImpl */(13931, dependencyMap.paths), asyncRequireImpl /* asyncRequireImpl */(13933, dependencyMap.paths)];
   Promise.all(items).then((arg0) => {
     const iter = arg0[Symbol.iterator]();
     let nextResult;
@@ -185,9 +195,9 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: require("Themes").space.PX_16 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 function launchMFA() {
-  let arr = require("../../../../../actions/ModalActionCreators.tsx");
+  let arr = ModalActionCreators;
   arr = arr.pop();
-  require("../../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(14881, dependencyMap.paths).then((openMFAModal) => {
+  asyncRequireImpl /* asyncRequireImpl */(14881, dependencyMap.paths).then((openMFAModal) => {
     const items = [{ type: "webauthn", challenge: "{}" }, { type: "totp" }, { type: "backup" }, { type: "sms" }, { type: "password" }];
     openMFAModal.openMFAModal({ ticket: "ticket", methods: items }, () => {
 

@@ -1,3 +1,14 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { AttachmentIcon } from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
+import { ImageIcon } from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
+import { LinkIcon } from "../../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
+import { MusicIcon } from "../../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
+import { PhoneCallIcon } from "../../../../design/components/Icon/native/redesign/generated/PhoneCallIcon.tsx";
+import { PhoneHangUpIcon } from "../../../../design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx";
+import { StickerIcon } from "../../../../design/components/Icon/native/redesign/generated/StickerIcon.tsx";
+import { VideoIcon } from "../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
+import { getOrParseMessagePreviewMarkupAST } from "../../../message_previews/native/MessagePreviewMarkup.tsx";
+import { getFontScale } from "../../../screen/native/useFontScale.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx
 import importAllResult from "useTheme";
 import { View } from "map";
@@ -13,35 +24,35 @@ function PreviewIcon(icon) {
   if ("image" === icon) {
     let obj = {};
     const merged1 = Object.assign(merged);
-    return callback(require("../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx") /* ImageIcon */.ImageIcon, obj);
+    return callback(ImageIcon /* ImageIcon */.ImageIcon, obj);
   } else if ("video" === icon) {
     obj = {};
     const merged2 = Object.assign(merged);
-    return callback(require("../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx") /* VideoIcon */.VideoIcon, obj);
+    return callback(VideoIcon /* VideoIcon */.VideoIcon, obj);
   } else if ("audio" === icon) {
     const obj1 = {};
     const merged3 = Object.assign(merged);
-    return callback(require("../../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx") /* MusicIcon */.MusicIcon, obj1);
+    return callback(MusicIcon /* MusicIcon */.MusicIcon, obj1);
   } else if ("attachment" === icon) {
     const obj2 = {};
     const merged4 = Object.assign(merged);
-    return callback(require("../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx") /* AttachmentIcon */.AttachmentIcon, obj2);
+    return callback(AttachmentIcon /* AttachmentIcon */.AttachmentIcon, obj2);
   } else if ("link" === icon) {
     const obj3 = {};
     const merged5 = Object.assign(merged);
-    return callback(require("../../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx") /* LinkIcon */.LinkIcon, obj3);
+    return callback(LinkIcon /* LinkIcon */.LinkIcon, obj3);
   } else if ("sticker" === icon) {
     const obj4 = {};
     const merged6 = Object.assign(merged);
-    return callback(require("../../../../design/components/Icon/native/redesign/generated/StickerIcon.tsx") /* StickerIcon */.StickerIcon, obj4);
+    return callback(StickerIcon /* StickerIcon */.StickerIcon, obj4);
   } else if ("call-active" === icon) {
     const obj5 = {};
     const merged7 = Object.assign(merged);
-    return callback(require("../../../../design/components/Icon/native/redesign/generated/PhoneCallIcon.tsx") /* PhoneCallIcon */.PhoneCallIcon, obj5);
+    return callback(PhoneCallIcon /* PhoneCallIcon */.PhoneCallIcon, obj5);
   } else if ("call-ended" === icon) {
     obj = {};
     const merged8 = Object.assign(merged);
-    return callback(require("../../../../design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx") /* PhoneHangUpIcon */.PhoneHangUpIcon, obj);
+    return callback(PhoneHangUpIcon /* PhoneHangUpIcon */.PhoneHangUpIcon, obj);
   }
 }
 class ChannelRowPreview {
@@ -229,13 +240,13 @@ let closure_9 = importAllResult.memo((arg0) => {
   let markup;
   let muted;
   ({ markup, channelId, guildId, muted, layout, color } = arg0);
-  const fontScale = require("../../../screen/native/useFontScale.tsx") /* getFontScale */.useFontScale();
-  const obj = require("../../../screen/native/useFontScale.tsx") /* getFontScale */;
-  return require("../../../message_previews/native/MessagePreviewMarkup.tsx") /* getOrParseMessagePreviewMarkupAST */.renderMessagePreviewMarkup({ content, muted, guildId, channelId, layout, color, fontScale });
+  const fontScale = getFontScale /* getFontScale */.useFontScale();
+  const obj = getFontScale /* getFontScale */;
+  return getOrParseMessagePreviewMarkupAST /* getOrParseMessagePreviewMarkupAST */.renderMessagePreviewMarkup({ content, muted, guildId, channelId, layout, color, fontScale });
 });
 const memoResult = importAllResult.memo((message) => {
   const _require = message;
-  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [upsertRelationship];
   const items1 = [message.message.author.id];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_5.isBlockedOrIgnored(message.message.author.id), items1);

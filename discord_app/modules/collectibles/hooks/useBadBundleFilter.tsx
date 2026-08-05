@@ -1,3 +1,5 @@
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 // discord_app/modules/collectibles/hooks/useBadBundleFilter.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import map from "map";
@@ -7,9 +9,9 @@ let result = require("map").fileFinishedImporting("modules/collectibles/hooks/us
 
 export const useBadBundleFilter = function useBadBundleFilter() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
-  const canUseShopDiscountsResult = require("../../../utils/PremiumUtils.tsx").canUseShopDiscounts(stateFromStores);
+  const stateFromStores = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  const canUseShopDiscountsResult = getPremiumPlanItem.canUseShopDiscounts(stateFromStores);
   require = canUseShopDiscountsResult;
   const items1 = [canUseShopDiscountsResult];
   return useCallback((arr) => {

@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { result } from "../resolveMessageContentColors.tsx";
+import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/ChannelLinkedToLobbySystemMessage.tsx
 import addApplication from "addApplication";
 import { HelpdeskArticles } from "ME";
@@ -10,7 +13,7 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
   let theme;
   message = message.message;
   ({ roleStyle, theme } = message);
-  const tmp3 = require("../resolveMessageContentColors.tsx")(theme);
+  const tmp3 = result(theme);
   let str = message.applicationId;
   if (str == null) {
     str = "";
@@ -19,7 +22,7 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
   if (null == application) {
     return null;
   } else {
-    let obj = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */;
+    let obj = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
     const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
     obj = { username: null, usernameOnClick: null, applicationName: null, applicationNameOnClick: null, urlOnClick: null };
     obj[0] = messageAuthorWithProcessedColor.nick;
@@ -37,8 +40,8 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
     obj2[2] = tmp3.linkColor;
     obj[4] = obj2;
     const obj3 = { content: null };
-    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj3[0] = intl.formatToParts(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.gZfhOw, obj);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj3[0] = intl.formatToParts(getSystemLocale /* getSystemLocale */.t.gZfhOw, obj);
     const merged = Object.assign(tmp(7882)(message));
     return obj3;
   }

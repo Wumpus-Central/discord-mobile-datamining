@@ -1,3 +1,5 @@
+import { designConfig } from "../../../config.tsx";
+import { PostponeRender } from "PostponeRender.native.tsx";
 // discord_app/design/components/Navigator/native/NavigatorScreen.native.tsx
 import { jsxs } from "jsxProd";
 import importAllResult from "noop";
@@ -11,7 +13,7 @@ const memoResult = require("noop").memo((arg0) => {
   ({ screen, route } = arg0);
   const customNavbar = screen.customNavbar;
   ({ navigation, viewStyle } = arg0);
-  const designConfig = require("../../../config.tsx") /* designConfig */.designConfig;
+  const designConfig = designConfig /* designConfig */.designConfig;
   const trackNavigatorScreenImpression = designConfig.useTrackNavigatorScreenImpression(screen, route);
   let customNavbarResult = null;
   if (null != customNavbar) {
@@ -20,7 +22,7 @@ const memoResult = require("noop").memo((arg0) => {
   const obj = { postpone: screen.postponeRender, ignoreKeyboard: screen.ignoreKeyboard, viewStyle, children: null };
   const items = [customNavbarResult, screen.render(route.params, navigation)];
   obj[3] = items;
-  return jsxs(require("PostponeRender.native.tsx") /* PostponeRender */.PostponeRender, { postpone: screen.postponeRender, ignoreKeyboard: screen.ignoreKeyboard, viewStyle, children: null });
+  return jsxs(PostponeRender /* PostponeRender */.PostponeRender, { postpone: screen.postponeRender, ignoreKeyboard: screen.ignoreKeyboard, viewStyle, children: null });
 });
 const result = require("designConfig").fileFinishedImporting("design/components/Navigator/native/NavigatorScreen.native.tsx");
 

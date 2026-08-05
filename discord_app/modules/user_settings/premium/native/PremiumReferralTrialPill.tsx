@@ -1,3 +1,5 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/premium/native/PremiumReferralTrialPill.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -15,9 +17,9 @@ export const PremiumReferralTrialPill = (hasExtraMargin) => {
   let obj = { style: hasExtraMargin.hasExtraMargin ? tmp.pillParentExtraMargin : tmp.pillParent, children: null };
   obj = { style: tmp.pillContainer, children: null };
   obj = { variant: "text-xs/bold", style: tmp.text, children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Y1q7js).toUpperCase();
-  obj[1] = jsx(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-xs/bold", style: tmp.text, children: null });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.Y1q7js).toUpperCase();
+  obj[1] = jsx(Text /* Text */.Text, { variant: "text-xs/bold", style: tmp.text, children: null });
   obj[1] = <View variant="text-xs/bold" style={tmp.text}>{null}</View>;
   return <View variant="text-xs/bold" style={tmp.text}>{null}</View>;
 };

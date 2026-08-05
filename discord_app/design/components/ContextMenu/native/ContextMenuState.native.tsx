@@ -1,3 +1,6 @@
+import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import { HapticFeedbackTypes } from "../../../../modules/haptics/HapticUtils.native.tsx";
+import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 // discord_app/design/components/ContextMenu/native/ContextMenuState.native.tsx
 import noop from "noop";
 import keys from "keys";
@@ -31,9 +34,9 @@ function updateContextMenuState(absoluteX, absoluteY, closure_17) {
     const result1 = num / 4;
     if (activeIndex.get() !== result1) {
       const result2 = activeIndex.set(result1);
-      const obj = require("../../../../modules/reanimated/ReanimatedRexport.tsx");
-      require("../../../../modules/reanimated/ReanimatedRexport.tsx").runOnJS(require("../../../../modules/haptics/HapticUtils.native.tsx") /* HapticFeedbackTypes */.triggerHapticFeedback)(require("../../../../modules/haptics/HapticUtils.native.tsx") /* HapticFeedbackTypes */.HapticFeedbackTypes.IMPACT_LIGHT);
-      const runOnJSResult = require("../../../../modules/reanimated/ReanimatedRexport.tsx").runOnJS(require("../../../../modules/haptics/HapticUtils.native.tsx") /* HapticFeedbackTypes */.triggerHapticFeedback);
+      const obj = ReanimatedRexport;
+      ReanimatedRexport.runOnJS(HapticFeedbackTypes /* HapticFeedbackTypes */.triggerHapticFeedback)(HapticFeedbackTypes /* HapticFeedbackTypes */.HapticFeedbackTypes.IMPACT_LIGHT);
+      const runOnJSResult = ReanimatedRexport.runOnJS(HapticFeedbackTypes /* HapticFeedbackTypes */.triggerHapticFeedback);
     }
   }
   const result3 = activeIndex.set(-1);
@@ -52,10 +55,10 @@ export const INDEX_BOUNDS_HEIGHT_OFFSET = 3;
 export const ContextMenuStore = keys;
 export const showContextMenu = function showContextMenu(arg0) {
   const _require = arg0;
-  _require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_3.setState({ menu: closure_0 }));
+  _batchUpdates.batchUpdates(() => outer1_3.setState({ menu: closure_0 }));
 };
 export const hideContextMenu = function hideContextMenu() {
-  require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
+  batchUpdates /* batchUpdates */.batchUpdates(() => {
     state.setState((menu) => {
       let obj = menu;
       if (null != menu.menu) {

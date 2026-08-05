@@ -1,3 +1,10 @@
+import { t } from "../../_runtime/03867_t.js";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { set } from "../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
+import { set } from "../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
+import { parseRawEmojiObject } from "../modules/emojis/UnicodeEmojis.tsx";
+import { MAX_REACTIONS } from "../modules/reactions/ReactionUtils.tsx";
+import { fromGuildPropertiesWithAdditionalFields } from "../utils/GuildRecordUtils.tsx";
 // discord_app/stores/ChannelSettingsStore.tsx
 import { createChannelRecordFromInvite as closure_9 } from "createChannelRecord";
 import createFromServer from "createFromServer";
@@ -28,15 +35,15 @@ function normalizeChannelPropertyForCompare(arg0, arg1, arg2) {
   } else if ("defaultSortOrder" === arg0) {
     let LATEST_ACTIVITY = str;
     if (str == null) {
-      LATEST_ACTIVITY = require("../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx") /* set */.ThreadSortOrder.LATEST_ACTIVITY;
+      LATEST_ACTIVITY = set /* set */.ThreadSortOrder.LATEST_ACTIVITY;
     }
     return LATEST_ACTIVITY;
   } else if ("defaultForumLayout" === arg0) {
     if (arg2 === constants2.GUILD_MEDIA) {
-      return require("../../discord_common/js/shared/shared-constants/ForumLayout.tsx") /* set */.ForumLayout.GRID;
+      return set /* set */.ForumLayout.GRID;
     } else {
       if (null == str) {
-        let LIST = require("../../discord_common/js/shared/shared-constants/ForumLayout.tsx") /* set */.ForumLayout.LIST;
+        let LIST = set /* set */.ForumLayout.LIST;
       } else {
         LIST = str;
       }
@@ -48,7 +55,7 @@ function normalizeChannelPropertyForCompare(arg0, arg1, arg2) {
         if ("defaultReactionEmoji" === arg0) {
           let tmp2 = null;
           if (null != str) {
-            let obj = require("../modules/reactions/ReactionUtils.tsx") /* MAX_REACTIONS */;
+            let obj = MAX_REACTIONS /* MAX_REACTIONS */;
             if (obj.isCustomReactionEmojiId(str.emojiId)) {
               obj = { emojiId: null };
               obj[0] = str.emojiId;
@@ -60,9 +67,9 @@ function normalizeChannelPropertyForCompare(arg0, arg1, arg2) {
                 tmp5 = null;
                 if ("" !== emojiName) {
                   obj = { emojiName: null };
-                  obj[0] = require("../modules/emojis/UnicodeEmojis.tsx").translateInlineEmojiToSurrogates(emojiName);
+                  obj[0] = parseRawEmojiObject.translateInlineEmojiToSurrogates(emojiName);
                   tmp5 = obj;
-                  const obj3 = require("../modules/emojis/UnicodeEmojis.tsx");
+                  const obj3 = parseRawEmojiObject;
                 }
               }
               tmp2 = tmp5;
@@ -92,12 +99,12 @@ function _createInvite(code) {
   obj[4] = callback(code.channel);
   let fromInviteGuildResult = null;
   if (null != code.guild) {
-    fromInviteGuildResult = require("../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */.fromInviteGuild(code.guild);
-    const obj2 = require("../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
+    fromInviteGuildResult = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */.fromInviteGuild(code.guild);
+    const obj2 = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
   }
   obj[5] = fromInviteGuildResult;
   ({ uses: obj[6], max_uses: obj[7], max_age: obj[8] } = code);
-  obj[9] = require("../../_runtime/03867_t.js")(code.created_at);
+  obj[9] = t(code.created_at);
   ({ type: obj[10], roles: obj[11] } = code);
   tmp = new tmp(obj);
   return tmp;
@@ -270,7 +277,7 @@ const channelSettingsStore = new ChannelSettingsStore(require("dispatcher"), {
       }
       if (tmp15) {
         let c21 = true;
-        const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+        const HTTP = sendRequest /* sendRequest */.HTTP;
         obj = { url: null, oldFormErrors: true, rejectWithError: true };
         obj[0] = closure_15.INSTANT_INVITES(store.id);
         const value = HTTP.get(obj);
@@ -445,7 +452,7 @@ const channelSettingsStore = new ChannelSettingsStore(require("dispatcher"), {
     }
     if (tmp) {
       let c21 = true;
-      const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+      const HTTP = sendRequest /* sendRequest */.HTTP;
       const obj = { url: null, oldFormErrors: true, rejectWithError: true };
       obj[0] = closure_15.INSTANT_INVITES(store.id);
       const value = HTTP.get(obj);
@@ -562,7 +569,7 @@ let obj = {
       }
       if (tmp15) {
         let c21 = true;
-        const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+        const HTTP = sendRequest /* sendRequest */.HTTP;
         obj = { url: null, oldFormErrors: true, rejectWithError: true };
         obj[0] = closure_15.INSTANT_INVITES(store.id);
         const value = HTTP.get(obj);
@@ -737,7 +744,7 @@ let obj = {
     }
     if (tmp) {
       let c21 = true;
-      const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+      const HTTP = sendRequest /* sendRequest */.HTTP;
       const obj = { url: null, oldFormErrors: true, rejectWithError: true };
       obj[0] = closure_15.INSTANT_INVITES(store.id);
       const value = HTTP.get(obj);

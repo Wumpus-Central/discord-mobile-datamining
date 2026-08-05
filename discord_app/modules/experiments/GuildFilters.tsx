@@ -1,3 +1,5 @@
+import { Integer } from "../../../_runtime/00014_Integer.js";
+import { MurmurHashV3 } from "../../../_runtime/01217_MurmurHashV3.js";
 // discord_app/modules/experiments/GuildFilters.tsx
 import _slicedToArray from "_slicedToArray";
 import getGuild from "getGuild";
@@ -14,7 +16,7 @@ import importDefaultResult7 from "MurmurHashV3";
 
 function isInRange(arg0, arg1, arg2) {
   try {
-    const obj = require("../../../_runtime/00014_Integer.js")(arg0);
+    const obj = Integer(arg0);
     let tmp6 = null;
     if (null != arg1) {
       tmp6 = tmp3(14)(arg1);
@@ -50,7 +52,7 @@ function getRangeData(arg0) {
     [tmp7, tmp8] = tmp6;
     let tmp9 = importDefault;
     let tmp10 = dependencyMap;
-    let obj = require("../../../_runtime/01217_MurmurHashV3.js");
+    let obj = MurmurHashV3;
     if (obj.v3("min_id") === tmp7) {
       min = tmp8;
     } else {
@@ -72,7 +74,7 @@ obj[require("MurmurHashV3").v3("guild_ids")] = (arg0) => {
     let tmp5 = tmp4[1];
     let tmp6 = importDefault;
     let tmp7 = dependencyMap;
-    let obj = require("../../../_runtime/01217_MurmurHashV3.js");
+    let obj = MurmurHashV3;
     if (tmp4[0] === obj.v3("guild_ids")) {
       let tmp8 = tmp5;
       importDefault = tmp5;

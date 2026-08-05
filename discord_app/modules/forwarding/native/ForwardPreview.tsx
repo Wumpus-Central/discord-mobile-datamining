@@ -1,3 +1,10 @@
+import { DCDChatItem } from "../../../components_native/chat/ChatItem.tsx";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { SolidCutout } from "../../../design/components/Icon/native/ClipView.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
+import { getSrcWithWidthAndHeight } from "../../../utils/native/ImageUtils.tsx";
+import { messagesProxy } from "../../checkpoint/Checkpoint.messages.js";
+import { useForwardPreviewContent } from "../ForwardPreviewUtils.tsx";
 // discord_app/modules/forwarding/native/ForwardPreview.tsx
 import preload from "preload";
 import { View } from "ImageIcon";
@@ -18,7 +25,7 @@ function MessagePreview(content) {
     TEXT_SUBTLE = tmp(712).colors.TEXT_SUBTLE;
   }
   let obj = attachmentCount(4285);
-  const tmp4 = obj.createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(require("../../../hooks/useTheme.tsx")());
+  const tmp4 = obj.createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(useTheme());
   importDefault = tmp4;
   const items = [tmp4.seeMoreLabelColor, attachmentCount];
   const callback = React.useCallback((message) => {
@@ -37,10 +44,10 @@ function MessagePreview(content) {
   }, []);
   obj = { pointerEvents: "none", horizontalOffset: 0, modifyRow: callback, message: null, rowGenerator: null };
   obj = { messageSnapshots: [], content: content.contentMessage.content };
-  const tmp3 = require("../../../hooks/useTheme.tsx")();
+  const tmp3 = useTheme();
   obj[3] = message.merge(obj);
   obj[4] = memo;
-  return callback(require("../../../components_native/chat/ChatItem.tsx"), obj);
+  return callback(DCDChatItem, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let c7 = 56;
@@ -74,7 +81,7 @@ export const ForwardPreview = function ForwardPreview(message) {
   message = message.message;
   ({ channel, forwardOptions } = message);
   const tmp = createCacheKey();
-  let obj = require("../ForwardPreviewUtils.tsx") /* useForwardPreviewContent */;
+  let obj = useForwardPreviewContent /* useForwardPreviewContent */;
   const forwardPreviewContent = obj.useForwardPreviewContent({ message, channel, forwardOptions });
   ({ attachments, embeds, hasContent, contentMessage } = forwardPreviewContent);
   let checkpointData = null;
@@ -124,12 +131,12 @@ export const ForwardPreview = function ForwardPreview(message) {
           const obj1 = { style: null, source: null, width: null, height: null };
           obj1[0] = tmp.videoThumbnail;
           const obj2 = { uri: null };
-          let obj17 = require("../../../utils/native/ImageUtils.tsx");
+          let obj17 = getSrcWithWidthAndHeight;
           obj2[0] = obj17.getMobileOptimizedSrc(attachments[0].proxy_url, c7, c7, "png");
           obj1[1] = obj2;
           obj1[2] = c7;
           obj1[3] = c7;
-          const items1 = [callback(require("../../../components_native/common/FastImage.tsx"), obj1), ];
+          const items1 = [callback(preload, obj1), ];
           const obj3 = { style: null, size: "md", color: "white" };
           obj3[0] = tmp.playIcon;
           items1[1] = callback(tmp2(9722).CirclePlayIcon, obj3);
@@ -137,7 +144,7 @@ export const ForwardPreview = function ForwardPreview(message) {
           let tmp7 = callback2(View, obj);
           let tmp8 = AttachmentIcon;
           let tmp9 = formatToPlainStringResult;
-          const tmp28 = require("../../../components_native/common/FastImage.tsx");
+          const tmp28 = preload;
         }
       }
       if (length > 0) {
@@ -145,16 +152,16 @@ export const ForwardPreview = function ForwardPreview(message) {
         obj4[0] = tmp.attachmentPreview;
         const obj5 = { source: null, width: null, height: null };
         const obj6 = { uri: null };
-        let obj13 = require("../../../utils/native/ImageUtils.tsx");
+        let obj13 = getSrcWithWidthAndHeight;
         obj6[0] = obj13.getMobileOptimizedSrc(attachments[0].proxy_url, c7, c7);
         obj5[0] = obj6;
         obj5[1] = c7;
         obj5[2] = c7;
-        obj4[1] = callback(require("../../../components_native/common/FastImage.tsx"), obj5);
+        obj4[1] = callback(preload, obj5);
         tmp7 = callback(View, obj4);
         tmp8 = AttachmentIcon;
         tmp9 = formatToPlainStringResult;
-        const tmp22 = require("../../../components_native/common/FastImage.tsx");
+        const tmp22 = preload;
       } else {
         const first = embeds[0];
         let proxyURL;
@@ -172,16 +179,16 @@ export const ForwardPreview = function ForwardPreview(message) {
           obj7[0] = tmp.attachmentPreview;
           const obj8 = { source: null, width: null, height: null };
           let obj9 = { uri: null };
-          obj9 = require("../../../utils/native/ImageUtils.tsx");
+          obj9 = getSrcWithWidthAndHeight;
           obj9[0] = obj9.getMobileOptimizedSrc(embeds[0].thumbnail.proxyURL, c7, c7);
           obj8[0] = obj9;
           obj8[1] = c7;
           obj8[2] = c7;
-          obj7[1] = callback(require("../../../components_native/common/FastImage.tsx"), obj8);
+          obj7[1] = callback(preload, obj8);
           tmp7 = callback(View, obj7);
           tmp8 = AttachmentIcon;
           tmp9 = formatToPlainStringResult;
-          const tmp17 = require("../../../components_native/common/FastImage.tsx");
+          const tmp17 = preload;
         }
       }
     }
@@ -227,7 +234,7 @@ export const ForwardPreview = function ForwardPreview(message) {
       const items2 = [obj13];
       obj15[0] = items2;
       obj15[1] = tmp7;
-      const items3 = [callback(require("../../../design/components/Icon/native/ClipView.tsx"), obj15), ];
+      const items3 = [callback(SolidCutout, obj15), ];
       const obj16 = { style: null, variant: "text-xs/semibold", color: "text-default", children: null };
       obj16[0] = tmp.overflowCount;
       const items4 = ["+", length - 1];
@@ -244,7 +251,7 @@ export const ForwardPreview = function ForwardPreview(message) {
   if (tmp36Result) {
     const obj20 = { variant: "text-md/medium", children: null };
     const intl5 = tmp2(1236).intl;
-    obj20[1] = intl5.string(require("../../checkpoint/Checkpoint.messages.js").goiR2u);
+    obj20[1] = intl5.string(messagesProxy.goiR2u);
     tmp36Result = tmp36(tmp2(4281).Text, obj20);
   }
   const items6 = [tmp36Result, , ];
@@ -314,9 +321,9 @@ export const ForwardPreview = function ForwardPreview(message) {
     const obj28 = { uri: null };
     obj28[0] = tmp2Result.getCardAssetUrl(num5);
     obj26[3] = obj28;
-    obj25[1] = tmp36(require("../../../components_native/common/FastImage.tsx"), obj26);
+    obj25[1] = tmp36(preload, obj26);
     tmp36Result3 = tmp36(tmp35, obj25);
-    const tmp46 = require("../../../components_native/common/FastImage.tsx");
+    const tmp46 = preload;
   }
   items5[3] = tmp36Result3;
   obj17[1] = items5;

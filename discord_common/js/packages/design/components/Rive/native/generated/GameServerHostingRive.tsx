@@ -1,3 +1,5 @@
+import { BaseRive } from "../BaseRive.tsx";
+import { getDerivedStateFromError } from "../RiveErrorBoundary.tsx";
 // discord_common/js/packages/design/components/Rive/native/generated/GameServerHostingRive.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
@@ -14,7 +16,7 @@ let closure_9 = {
     let playIfNeeded;
     let reducedMotionEnabled;
     ({ instance, reducedMotionEnabled, playIfNeeded } = arg0);
-    const booleanBinding = require("../BaseRive.tsx") /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
     return null;
   },
   hytale_gameplay: function HytalegameplayBindings(arg0) {
@@ -22,7 +24,7 @@ let closure_9 = {
     let playIfNeeded;
     let reducedMotionEnabled;
     ({ instance, reducedMotionEnabled, playIfNeeded } = arg0);
-    const booleanBinding = require("../BaseRive.tsx") /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
     return null;
   }
 };
@@ -69,7 +71,7 @@ const forwardRefResult = importAllResult.forwardRef(function GameServerHostingRi
   obj = { ref };
   const merged = Object.assign(fallback);
   obj[1] = <closure_10 ref={arg1} />;
-  return jsx(require("../RiveErrorBoundary.tsx") /* getDerivedStateFromError */.RiveErrorBoundary, { ref });
+  return jsx(getDerivedStateFromError /* getDerivedStateFromError */.RiveErrorBoundary, { ref });
 });
 const result = require("jsxProd").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/GameServerHostingRive.tsx");
 

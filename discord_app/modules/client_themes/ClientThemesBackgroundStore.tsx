@@ -1,3 +1,11 @@
+import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
+import { UNSAFE_isDismissibleContentDismissed } from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { isPerModeThemingActive } from "../user_settings/isPerModeThemingActive.tsx";
+import { setSystemTheme } from "../user_settings/ThemeActionCreators.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import { getThemeForColor } from "ClientThemesUtils.tsx";
 // discord_app/modules/client_themes/ClientThemesBackgroundStore.tsx
 import initialize from "initialize";
 import handleThemeChange from "handleThemeChange";
@@ -12,7 +20,7 @@ import { PersistedStore } from "initialize";
 
 const require = arg1;
 function isSyncedModeThemesEnabled() {
-  return require("../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
+  return useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
 }
 function reset() {
   if (c14) {
@@ -21,17 +29,17 @@ function reset() {
   let c15 = false;
 }
 function handleUserStoreChange() {
-  const tmp = !require("../../utils/PremiumUtils.tsx").canUseClientThemes(currentUser.getCurrentUser());
+  const tmp = !getPremiumPlanItem.canUseClientThemes(currentUser.getCurrentUser());
   if (tmp === c14) {
     return false;
   } else {
     c14 = tmp;
   }
-  const obj = require("../../utils/PremiumUtils.tsx");
+  const obj = getPremiumPlanItem;
 }
 function handleSelectivelySyncedStoreChange() {
   if (initialize.shouldSync("appearance")) {
-    const ClientThemeSettings = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.ClientThemeSettings;
+    const ClientThemeSettings = explicitContentFromProto /* explicitContentFromProto */.ClientThemeSettings;
     const backgroundGradientPresetId = ClientThemeSettings.getSetting().backgroundGradientPresetId;
     if (null == backgroundGradientPresetId) {
       if (null == c3) {
@@ -49,14 +57,14 @@ function handleSelectivelySyncedStoreChange() {
   }
 }
 function handleSyncedModeChange() {
-  return require("../user_settings/isPerModeThemingActive.tsx") /* isPerModeThemingActive */.isPerModeThemingActive(isSyncedModeThemesEnabled);
+  return isPerModeThemingActive /* isPerModeThemingActive */.isPerModeThemingActive(isSyncedModeThemesEnabled);
 }
 function handleSameAsDeviceThemeToggle() {
-  return require("../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
+  return useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
 }
 function handleUserSettingsProtoStoreUpdate() {
   if (initialize.shouldSync("appearance")) {
-    const ClientThemeSettings = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.ClientThemeSettings;
+    const ClientThemeSettings = explicitContentFromProto /* explicitContentFromProto */.ClientThemeSettings;
     const backgroundGradientPresetId = ClientThemeSettings.getSetting().backgroundGradientPresetId;
     let result = useSystemTheme.useSystemTheme !== SystemThemeState.ON;
     if (!result) {
@@ -66,8 +74,8 @@ function handleUserSettingsProtoStoreUpdate() {
       result = handleThemeChange.isSameAsDeviceThemeEnabled();
     }
     if (!result) {
-      require("../user_settings/ThemeActionCreators.tsx") /* setSystemTheme */.setUseSystemTheme(SystemThemeState.OFF);
-      const tmpResult = require("../user_settings/ThemeActionCreators.tsx") /* setSystemTheme */;
+      setSystemTheme /* setSystemTheme */.setUseSystemTheme(SystemThemeState.OFF);
+      const tmpResult = setSystemTheme /* setSystemTheme */;
     }
     if (null != backgroundGradientPresetId) {
       let tmp13 = null == tmp12;
@@ -160,15 +168,15 @@ Object.defineProperty(prototype, "gradientPreset", {
     } else {
       return closure_3;
     }
-    obj = require("../user_settings/isPerModeThemingActive.tsx") /* isPerModeThemingActive */;
+    obj = isPerModeThemingActive /* isPerModeThemingActive */;
   },
   set: undefined
 });
 prototype["getLinearGradient"] = function getLinearGradient() {
   let linearGradientForBackgroundGradient = null;
   if (null != this.gradientPreset) {
-    linearGradientForBackgroundGradient = require("ClientThemesUtils.tsx") /* getThemeForColor */.getLinearGradientForBackgroundGradient(tmp.gradientPreset);
-    const obj = require("ClientThemesUtils.tsx") /* getThemeForColor */;
+    linearGradientForBackgroundGradient = getThemeForColor /* getThemeForColor */.getLinearGradientForBackgroundGradient(tmp.gradientPreset);
+    const obj = getThemeForColor /* getThemeForColor */;
   }
   return linearGradientForBackgroundGradient;
 };
@@ -217,7 +225,7 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(require("dis
     channelId = channelId.channelId;
     if (null != channelId) {
       if (null != channelId.guildId) {
-        if (!obj2.UNSAFE_isDismissibleContentDismissed(require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.CLIENT_THEMES_COACHMARK)) {
+        if (!obj2.UNSAFE_isDismissibleContentDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.CLIENT_THEMES_COACHMARK)) {
           if (tmp6Result.ageEligibleForPremiumUpsell(tmp)) {
             channel = channel.getChannel(channelId);
             let tmp4 = null != channel;
@@ -230,7 +238,7 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(require("dis
           }
           tmp6Result = tmp6(4124);
         }
-        obj2 = require("../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */;
+        obj2 = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */;
         tmp6 = require;
       }
     }

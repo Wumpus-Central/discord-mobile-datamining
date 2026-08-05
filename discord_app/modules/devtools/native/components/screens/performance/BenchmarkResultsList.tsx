@@ -1,3 +1,5 @@
+import { TableRowInner } from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowGroupTitle } from "../../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 // discord_app/modules/devtools/native/components/screens/performance/BenchmarkResultsList.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -43,9 +45,9 @@ export default function BenchmarkResultsList(results) {
     ];
     obj = { label: "Clear results", variant: "danger", arrow: true, onPress: null };
     obj[3] = tmp;
-    items[1] = callback(require("../../../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
+    items[1] = callback(TableRowInner /* TableRowInner */.TableRow, obj);
     obj[2] = items;
-    tmp2 = callback2(require("../../../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj);
+    tmp2 = callback2(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
   }
   return tmp2;
 };

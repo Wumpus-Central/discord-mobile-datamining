@@ -1,3 +1,7 @@
+import { SafeAreaPaddingView } from "../../../../../components_native/common/SafeAreaView.tsx";
+import { ForLaterFreemiumConfig } from "../../../../saved_messages/ForLaterExperiment.tsx";
+import { CoachmarkImg } from "../../../../saved_messages/native/useForLaterCoachmark.tsx";
+import { getRootNavigationRef } from "../../../RootNavigationRef.native.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/notifications/Notifications.tsx
 import importAllResult from "context";
 import { View } from "SavedMessageSortTypes";
@@ -11,7 +15,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function goBack() {
-  const navigation = require("../../../RootNavigationRef.native.tsx") /* getRootNavigationRef */.getRootNavigationRef();
+  const navigation = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
   if (null != navigation) {
     if (navigation.canGoBack()) {
       navigation.goBack();
@@ -132,10 +136,10 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
   nestedInLaunchPad = nestedInLaunchPad.nestedInLaunchPad;
   let _require;
   const tmp = callback3();
-  let obj = _require("../../../../saved_messages/ForLaterExperiment.tsx");
+  let obj = _ForLaterFreemiumConfig;
   const isForLaterExperimentOn = obj.useIsForLaterExperimentOn("NativeNotifications");
   const ref = importAllResult.useRef(null);
-  const tmp8 = require("../../../../saved_messages/native/useForLaterCoachmark.tsx")(ref);
+  const tmp8 = CoachmarkImg(ref);
   _require = tmp8;
   const items = [tmp8];
   const callback = importAllResult.useCallback(() => _undefined(outer1_6.TAKE_ACTION), items);
@@ -187,7 +191,7 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
   }
   const obj7 = { children: null };
   obj[1] = tmp10Result;
-  const items4 = [closure_7(_require("../../../../../components_native/common/SafeAreaView.tsx").SafeAreaPaddingView, obj), ];
+  const items4 = [closure_7(_SafeAreaPaddingView.SafeAreaPaddingView, obj), ];
   const items5 = [tmp.headerBorder];
   items4[1] = closure_7(View, { style: items5 });
   obj7[0] = items4;

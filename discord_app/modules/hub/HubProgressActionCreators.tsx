@@ -1,3 +1,4 @@
+import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 // discord_app/modules/hub/HubProgressActionCreators.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { HUB_PROGRESS_STEP_ORDER } from "items";
@@ -39,7 +40,7 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
 };
 export const skipHubProgress = function skipHubProgress(id) {
   const _require = HUB_PROGRESS_STEP_ORDER;
-  const result = _require("../user_settings/UserSettingsProtoActionCreators.tsx").updateUserGuildSettings(id, (hubProgress) => {
+  const result = _updateUserGuildSettings.updateUserGuildSettings(id, (hubProgress) => {
     let flag = false;
     for (const item10008 of closure_0) {
       let tmp = item10008;
@@ -55,5 +56,5 @@ export const skipHubProgress = function skipHubProgress(id) {
       continue;
     }
     return flag;
-  }, _require("../user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay.INFREQUENT_USER_ACTION);
+  }, _updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
 };

@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_scheduled_events/useGuildScheduledEventUserCount.tsx
 import { useEffect } from "noop";
 import scheduledEventSort from "scheduledEventSort";
@@ -10,7 +11,7 @@ export default function useGuildScheduledEventUserCount(arg0, arg1, arg2) {
   const dependencyMap = arg2;
   let items = [scheduledEventSort];
   let items1 = [arg1, arg0, arg2];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_4.getUserCount(closure_1, closure_2));
+  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_4.getUserCount(closure_1, closure_2));
   useEffect(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {

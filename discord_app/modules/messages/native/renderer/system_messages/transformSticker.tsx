@@ -1,3 +1,7 @@
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { apexExperiment } from "../../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx";
+import { getStickerExtensionFromFormatType } from "../../../../stickers/StickersUtils.tsx";
+import { explicitContentFromProto } from "../../../../user_settings/UserSettings.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/transformSticker.tsx
 import noop from "noop";
 import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID";
@@ -12,7 +16,7 @@ function transform(id, isPreview) {
   }
   obj.asset = str;
   obj = { isPreview: !isPreview };
-  let str2 = require("../../../../stickers/StickersUtils.tsx") /* getStickerExtensionFromFormatType */.getStickerAssetUrl(id, obj);
+  let str2 = getStickerExtensionFromFormatType /* getStickerExtensionFromFormatType */.getStickerAssetUrl(id, obj);
   if (str2 == null) {
     str2 = "";
   }
@@ -29,7 +33,7 @@ function transform(id, isPreview) {
   }
   obj.accessibilityLabel = stringResult;
   const intl2 = tmp2(1236).intl;
-  obj.accessibilityHint = intl2.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.GCEruV);
+  obj.accessibilityHint = intl2.string(getSystemLocale /* getSystemLocale */.t.GCEruV);
   return obj;
 }
 let result = require("getStickerExtensionFromFormatType").fileFinishedImporting("modules/messages/native/renderer/system_messages/transformSticker.tsx");
@@ -54,7 +58,7 @@ export default function useTransformedSticker(sticker) {
   }, items);
 };
 export const transformSticker = function transformSticker(tmp5Result1) {
-  const AnimateStickers = require("../../../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.AnimateStickers;
+  const AnimateStickers = explicitContentFromProto /* explicitContentFromProto */.AnimateStickers;
   const setting = AnimateStickers.getSetting();
-  return transform(tmp5Result1, setting === StickerAnimationSettings.ALWAYS_ANIMATE, require("../../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx") /* apexExperiment */.shouldSkipAccessibilityLabels());
+  return transform(tmp5Result1, setting === StickerAnimationSettings.ALWAYS_ANIMATE, apexExperiment /* apexExperiment */.shouldSkipAccessibilityLabels());
 };

@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { showShareActionSheet } from "../../action_sheet/native/showShareActionSheet.tsx";
+import { messagesProxy } from "../FamilyCenter.messages.js";
 // discord_app/modules/parent_tools/native/shareGuardianConnectLink.tsx
 import { FAMILY_CENTER_REQUEST_QR_CODE_URL as closure_3 } from "items";
 
@@ -8,9 +11,9 @@ export const shareGuardianConnectLink = function shareGuardianConnectLink(global
   if (username == null) {
     username = globalName.username;
   }
-  let obj = require("../../action_sheet/native/showShareActionSheet.tsx") /* showShareActionSheet */;
+  let obj = showShareActionSheet /* showShareActionSheet */;
   obj = { message: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.formatToPlainString(require("../FamilyCenter.messages.js").lVD5Nd, { username, url: callback(globalName.id, closure_2) });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.formatToPlainString(messagesProxy.lVD5Nd, { username, url: callback(globalName.id, closure_2) });
   obj.showShareActionSheet(obj, "Family Center Connect Guardian");
 };

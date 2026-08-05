@@ -1,3 +1,4 @@
+import { trackViewedEvent } from "../shared/SafetyWarningUtils.tsx";
 // discord_app/modules/self_mod/inappropriate_conversation/InappropriateConversationUtils.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -22,7 +23,7 @@ export const getSafetyAlertsSettingOrDefault = function getSafetyAlertsSettingOr
   if (flag == null) {
     flag = true;
   }
-  let userIsTeen = require("../shared/SafetyWarningUtils.tsx") /* trackViewedEvent */.getUserIsTeen();
+  let userIsTeen = trackViewedEvent /* trackViewedEvent */.getUserIsTeen();
   if (!userIsTeen) {
     userIsTeen = true === isStaffResult;
   }

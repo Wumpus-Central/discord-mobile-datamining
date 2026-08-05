@@ -1,3 +1,4 @@
+import { getLayoutStyles } from "layouts/ChannelListLayout.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelPressableWrapper.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -15,7 +16,7 @@ export const renderChannelPressableWrapper = function renderChannelPressableWrap
   if (flag === undefined) {
     flag = false;
   }
-  let obj = require("layouts/ChannelListLayout.tsx") /* getLayoutStyles */;
+  let obj = getLayoutStyles /* getLayoutStyles */;
   const layout2 = obj.getLayoutStyles(layout, launchpad).layout;
   if (isThread) {
     let marginThread = layout2.marginThread;

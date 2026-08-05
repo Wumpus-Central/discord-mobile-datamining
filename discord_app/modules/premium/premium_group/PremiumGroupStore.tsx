@@ -1,3 +1,4 @@
+import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/premium/premium_group/PremiumGroupStore.tsx
 import reset from "reset";
 import SubscriptionStatusTypes from "SubscriptionStatusTypes";
@@ -12,7 +13,7 @@ function handleMutationStart() {
 }
 function handleMutationSuccess(subscriptionId) {
   subscriptionId = subscriptionId.subscriptionId;
-  require("../../../Dispatcher.tsx").wait(() => {
+  dispatcher.wait(() => {
     const subscriptionGroupMembers = subscriptionId(outer1_2[4]).fetchSubscriptionGroupMembers(subscriptionId);
     return subscriptionGroupMembers.catch(outer1_6);
   });
@@ -75,12 +76,12 @@ const premiumGroupStore = new PremiumGroupStore(require("dispatcher"), {
     const isFetching = closure_7.membersData.isFetching;
     let flag = !isFetching;
     if (!isFetching) {
-      require("../../../Dispatcher.tsx").wait(() => {
+      dispatcher.wait(() => {
         const subscriptionGroupMembers = subscriptionId(outer1_2[4]).fetchSubscriptionGroupMembers(subscriptionId);
         return subscriptionGroupMembers.catch(outer1_6);
       });
       flag = true;
-      const obj = require("../../../Dispatcher.tsx");
+      const obj = dispatcher;
     }
     return flag;
   },
@@ -98,12 +99,12 @@ const premiumGroupStore = new PremiumGroupStore(require("dispatcher"), {
     const isFetching = closure_7.membershipData.isFetching;
     let flag = !isFetching;
     if (!isFetching) {
-      require("../../../Dispatcher.tsx").wait(() => {
+      dispatcher.wait(() => {
         const premiumGroupMembership = callback(table[4]).fetchPremiumGroupMembership();
         return premiumGroupMembership.catch(closure_6);
       });
       flag = true;
-      const obj = require("../../../Dispatcher.tsx");
+      const obj = dispatcher;
     }
     return flag;
   },
@@ -134,7 +135,7 @@ const premiumGroupStore = new PremiumGroupStore(require("dispatcher"), {
   PREMIUM_GROUP_REMOVE_INVITE_FAILURE: function handleRemoveInviteFailure(subscriptionId) {
     subscriptionId = subscriptionId.subscriptionId;
     if (subscriptionId.errorCode === constants.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED) {
-      require("../../../Dispatcher.tsx").wait(() => {
+      dispatcher.wait(() => {
         const subscriptionGroupMembers = subscriptionId(outer1_2[4]).fetchSubscriptionGroupMembers(subscriptionId);
         return subscriptionGroupMembers.catch(outer1_6);
       });

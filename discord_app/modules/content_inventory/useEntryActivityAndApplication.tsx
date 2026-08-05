@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/content_inventory/useEntryActivityAndApplication.tsx
 import _slicedToArray from "_slicedToArray";
 import participantFromServer from "participantFromServer";
@@ -8,7 +9,7 @@ const result = require("entryToKey").fileFinishedImporting("modules/content_inve
 
 export default function useEntryActivityAndApplication(extra) {
   const _require = extra;
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [entryToKey];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getMatchingActivity(closure_0));
   let application_id;
@@ -27,7 +28,7 @@ export default function useEntryActivityAndApplication(extra) {
   const tmp = _require;
   const tmp4 = first(5616);
   const items2 = [participantFromServer];
-  obj[1] = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
+  obj[1] = _initialize.useStateFromStores(items2, () => {
     let id;
     if (first != null) {
       id = first.id;

@@ -1,3 +1,6 @@
+import { LinkIcon } from "../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
+import { useRoleIcon } from "../../guild_boosting/native/RoleIconUtils.tsx";
+import { getHigherContrastColor } from "../../user_profile/utils/getHigherContrastColor.tsx";
 // discord_app/modules/connections/native/VerifiedRoleIcon.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -37,11 +40,11 @@ export default function VerifiedRoleIcon(arg0) {
   if (roleColor == null) {
     roleColor = closure_3;
   }
-  let obj = require("../../user_profile/utils/getHigherContrastColor.tsx") /* getHigherContrastColor */;
+  let obj = getHigherContrastColor /* getHigherContrastColor */;
   const items = [WHITE, PRIMARY_630];
   const diff = size - size / 8 * 2;
   const higherContrastColor = obj.getHigherContrastColor({ backgroundColor: roleColor, colors: items });
-  let obj1 = require("../../guild_boosting/native/RoleIconUtils.tsx") /* useRoleIcon */;
+  let obj1 = useRoleIcon /* useRoleIcon */;
   obj = { guildId, roleId: null, size: null };
   if (roleId == null) {
     let id;
@@ -65,7 +68,7 @@ export default function VerifiedRoleIcon(arg0) {
     obj2[1] = diff;
     obj1[0] = obj2;
     obj1[2] = higherContrastColor;
-    roleIcon = tmp9(require("../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx") /* LinkIcon */.LinkIcon, obj1);
+    roleIcon = tmp9(LinkIcon /* LinkIcon */.LinkIcon, obj1);
   }
   obj[1] = roleIcon;
   return <View style={items1}>{null}</View>;

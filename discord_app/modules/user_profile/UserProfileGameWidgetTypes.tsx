@@ -1,3 +1,5 @@
+import { GAME_WIDGET_LIMITS_BY_TYPE } from "../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
+import { findGameWidget } from "WidgetUtils.tsx";
 // discord_app/modules/user_profile/UserProfileGameWidgetTypes.tsx
 const items = [require("WidgetType").WidgetType.CURRENT_GAMES, require("WidgetType").WidgetType.FAVORITE_GAMES, require("WidgetType").WidgetType.WANT_TO_PLAY_GAMES, require("WidgetType").WidgetType.PLAYED_GAMES];
 let BaseGameWidget;
@@ -26,7 +28,7 @@ prototype["isValid"] = function isValid() {
   const self = this;
   let tmp = this.games.length > 0;
   if (tmp) {
-    tmp = self.games.length <= require("../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx") /* GAME_WIDGET_LIMITS_BY_TYPE */.GAME_WIDGET_LIMITS_BY_TYPE[self.type];
+    tmp = self.games.length <= GAME_WIDGET_LIMITS_BY_TYPE /* GAME_WIDGET_LIMITS_BY_TYPE */.GAME_WIDGET_LIMITS_BY_TYPE[self.type];
   }
   return tmp;
 };
@@ -36,8 +38,8 @@ prototype["isEqual"] = function isEqual(type) {
     const self = this;
     let areWidgetGamesEqualResult = type.type === this.type;
     if (areWidgetGamesEqualResult) {
-      areWidgetGamesEqualResult = require("WidgetUtils.tsx") /* findGameWidget */.areWidgetGamesEqual(self.games, type.games, self.type);
-      const obj = require("WidgetUtils.tsx") /* findGameWidget */;
+      areWidgetGamesEqualResult = findGameWidget /* findGameWidget */.areWidgetGamesEqual(self.games, type.games, self.type);
+      const obj = findGameWidget /* findGameWidget */;
     }
     tmp = areWidgetGamesEqualResult;
   }

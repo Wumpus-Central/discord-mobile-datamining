@@ -1,3 +1,7 @@
+import { registerAsset } from "../../../../_runtime/08054_registerAsset.js";
+import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { Linking } from "../../../lib/native/Linking.tsx";
 // discord_app/modules/now_playing/native/UserActivitySpotify.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -120,7 +124,7 @@ prototype["render"] = function render() {
   const _require = parts.length - 1;
   const obj = { children: null };
   obj[0] = parts.map((children) => self.renderLink(children, arg1, arg1 === closure_0));
-  return callback(_require("../../../design/void/native.tsx").LegacyText, obj);
+  return callback(_Button.LegacyText, obj);
 };
 const PureComponent3 = importAllResult.PureComponent;
 class SpotifyAlbum extends PureComponent3 {
@@ -156,7 +160,7 @@ class SpotifyAlbum extends PureComponent3 {
   }
 }
 SpotifyAlbum.prototype["render"] = function render() {
-  return callback(require("../../../design/void/native.tsx") /* Button */.LegacyText, { onPress: this.handleOpenSpotifyAlbum, suppressHighlighting: true, children: this.props.text });
+  return callback(Button /* Button */.LegacyText, { onPress: this.handleOpenSpotifyAlbum, suppressHighlighting: true, children: this.props.text });
 };
 let result = require("WEB_OPEN").fileFinishedImporting("modules/now_playing/native/UserActivitySpotify.tsx");
 
@@ -165,7 +169,7 @@ export const canOpenSpotifyUrl = function canOpenSpotifyUrl() {
 };
 export const attributeInstall = function attributeInstall() {
   let obj = importAll(1578);
-  const HTTP = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   obj = { url: closure_7.INSTALL_ATTRIBUTION(obj.getConstants().Identifier), rejectWithError: true };
   const value = HTTP.get(obj);
 };
@@ -176,8 +180,8 @@ export const openUrl = function openUrl(arg0, ALBUM, album_id) {
     });
     const openURLResult = closure_4.openURL(closure_7.PLAYER_OPEN(ALBUM, album_id, true, "mobile"));
   } else {
-    catchPromise = require("../../../lib/native/Linking.tsx").openURL(closure_7.WEB_OPEN(ALBUM, album_id, "mobile"));
-    const obj = require("../../../lib/native/Linking.tsx");
+    catchPromise = Linking.openURL(closure_7.WEB_OPEN(ALBUM, album_id, "mobile"));
+    const obj = Linking;
   }
   return catchPromise;
 };
@@ -253,7 +257,7 @@ export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
   let obj = { style: activity.style, children: null };
   obj = { icon: null, text: null, size: "sm", onPress: null, grow: true };
   obj = { source: null };
-  obj[0] = require("../../../../_runtime/08054_registerAsset.js");
+  obj[0] = registerAsset;
   obj[0] = callback(activity(4695).Button.Icon, obj);
   const intl = activity(1236).intl;
   obj[1] = intl.formatToPlainString(activity(1236).t.LEgD7t, { platform: activity.name });

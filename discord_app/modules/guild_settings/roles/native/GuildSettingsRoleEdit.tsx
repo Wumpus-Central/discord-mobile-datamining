@@ -1,3 +1,12 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { HeaderSection } from "GuildSettingsRoleEditConnectionsControls.tsx";
+import { GuildSettingsRoleEditDisplay } from "GuildSettingsRoleEditDisplay.tsx";
+import { GuildSettingsRoleEditPermission } from "GuildSettingsRoleEditPermissions.tsx";
+import { onMembersLoadFail } from "GuildSettingsRoleMembers.tsx";
 // discord_app/modules/guild_settings/roles/native/GuildSettingsRoleEdit.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import fetchFingerprint from "fetchFingerprint";
@@ -436,19 +445,19 @@ prototype["renderSubScreenButtons"] = function renderSubScreenButtons() {
 prototype["renderDeleteButton"] = function renderDeleteButton() {
   let obj = { hasIcons: false, children: null };
   obj = { variant: "danger", label: null, onPress: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.c9ej8n);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.c9ej8n);
   obj[2] = this.handleDeleteRole;
-  obj[1] = callback2(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
-  return callback2(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj);
+  obj[1] = callback2(TableRowInner /* TableRowInner */.TableRow, obj);
+  return callback2(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
 };
 prototype["renderManagedRoleWarningText"] = function renderManagedRoleWarningText() {
   let obj = { style: createCacheKey(this.context).managedRolesWarningContainer, children: null };
   obj = { messageType: null, children: null };
-  obj[0] = require("../../../../design/void/native.tsx") /* Button */.HelpMessageTypes.WARNING;
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.k5d7DJ);
-  obj[1] = callback2(require("../../../../design/void/native.tsx") /* Button */.HelpMessage, obj);
+  obj[0] = Button /* Button */.HelpMessageTypes.WARNING;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.k5d7DJ);
+  obj[1] = callback2(Button /* Button */.HelpMessage, obj);
   return callback2(View, obj);
 };
 prototype["render"] = function render() {
@@ -498,7 +507,7 @@ prototype["render"] = function render() {
     ({ handleNameChanged: obj3[6], handleMentionableChanged: obj3[7], handleHoistChanged: obj3[8] } = self);
     obj[9] = locked;
     obj[10] = newRole;
-    let tmp11Result = callback2(require("GuildSettingsRoleEditDisplay.tsx"), obj);
+    let tmp11Result = callback2(GuildSettingsRoleEditDisplay, obj);
   } else if (tmp9.PERMISSIONS === effectiveSection) {
     obj = { guild: null, role: null, permissions: null, onPermissionsChanged: null, contentContainerStyle: null };
     obj[0] = guild;
@@ -506,7 +515,7 @@ prototype["render"] = function render() {
     obj[2] = permissions;
     obj[3] = self.handlePermissionsChanged;
     obj[4] = self.props.contentContainerStyle;
-    tmp11Result = callback2(require("GuildSettingsRoleEditPermissions.tsx"), obj);
+    tmp11Result = callback2(GuildSettingsRoleEditPermission, obj);
   } else if (tmp9.MEMBERS === effectiveSection) {
     obj = { guild: null, role: null, locked: null, contentContainerStyle: null };
     obj[0] = guild;
@@ -517,23 +526,23 @@ prototype["render"] = function render() {
     }
     obj[2] = tmp15;
     obj[3] = self.props.contentContainerStyle;
-    tmp11Result = callback2(require("GuildSettingsRoleMembers.tsx"), obj);
+    tmp11Result = callback2(onMembersLoadFail, obj);
     const tmp11 = callback2;
-    const tmp14 = require("GuildSettingsRoleMembers.tsx");
+    const tmp14 = onMembersLoadFail;
   } else if (tmp9.VERIFICATIONS === effectiveSection) {
     const obj1 = { guild: null, role: null, locked: null, integrations: null };
     obj1[0] = guild;
     obj1[1] = role;
     obj1[2] = locked;
     obj1[3] = integrations;
-    tmp11Result = callback2(require("GuildSettingsRoleEditConnectionsControls.tsx"), obj1);
+    tmp11Result = callback2(HeaderSection, obj1);
   }
   const obj2 = { style: tmp.container, children: null };
   if (tmp2) {
     const obj3 = { spacing: null, style: null, children: null };
-    obj3[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24;
+    obj3[0] = Themes.space.PX_24;
     const obj4 = { flex: 1, paddingHorizontal: null };
-    obj4[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
+    obj4[1] = Themes.space.PX_16;
     obj3[1] = obj4;
     obj3[2] = tmp11Result;
     let tmp22Result = tmp22(tmp24(4693).Stack, obj3);
@@ -541,7 +550,7 @@ prototype["render"] = function render() {
     const obj5 = { contentContainerStyle: null, children: null };
     obj5[0] = tmp.form;
     const obj6 = { spacing: null, children: null };
-    obj6[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24;
+    obj6[0] = Themes.space.PX_24;
     let result = null;
     if (effectiveSection === tmp9.DISPLAY) {
       result = null;

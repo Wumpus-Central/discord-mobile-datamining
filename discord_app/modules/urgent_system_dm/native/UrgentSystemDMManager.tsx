@@ -1,13 +1,16 @@
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { navigateToSystemDM } from "../navigateToSystemDM.tsx";
 // discord_app/modules/urgent_system_dm/native/UrgentSystemDMManager.tsx
 const require = arg1;
 const tmp2 = new require("maybeShowUrgentMessageModal")(() => {
-  let obj = require("../../../actions/native/AlertActionCreators.tsx");
+  let obj = AlertActionCreators;
   obj = { title: null, body: null, isDismissable: false, onConfirm: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.bAhz9l);
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["7KjxW3"]);
-  obj[3] = require("../navigateToSystemDM.tsx");
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.bAhz9l);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["7KjxW3"]);
+  obj[3] = navigateToSystemDM;
   return obj.show(obj);
 });
 const result = require("getSystemLocale").fileFinishedImporting("modules/urgent_system_dm/native/UrgentSystemDMManager.tsx");

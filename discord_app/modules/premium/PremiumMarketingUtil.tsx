@@ -1,3 +1,6 @@
+import { pushLayer } from "../../actions/LayerActionCreators.tsx";
+import { transitionTo } from "../routing/router_utils.tsx";
+import { openUserSettings } from "../user_settings/core/native/openUserSettings.tsx";
 // discord_app/modules/premium/PremiumMarketingUtil.tsx
 import ME from "ME";
 
@@ -7,13 +10,13 @@ let obj1;
 const result = require("pushLayer").fileFinishedImporting("modules/premium/PremiumMarketingUtil.tsx");
 
 export const navigateToPremiumHomePage = function navigateToPremiumHomePage() {
-  require("../user_settings/core/native/openUserSettings.tsx") /* openUserSettings */.openUserSettings({ screen: constants2.PREMIUM });
+  openUserSettings /* openUserSettings */.openUserSettings({ screen: constants2.PREMIUM });
 };
 export const navigateToNitroHomePage = function navigateToNitroHomePage(arg0) {
   if (arg0 != null) {
     arg0();
   }
-  require("../../actions/LayerActionCreators.tsx") /* pushLayer */.popLayer();
-  const obj = require("../../actions/LayerActionCreators.tsx") /* pushLayer */;
-  require("../routing/router_utils.tsx") /* transitionTo */.transitionTo(constants.APPLICATION_STORE);
+  pushLayer /* pushLayer */.popLayer();
+  const obj = pushLayer /* pushLayer */;
+  transitionTo /* transitionTo */.transitionTo(constants.APPLICATION_STORE);
 };

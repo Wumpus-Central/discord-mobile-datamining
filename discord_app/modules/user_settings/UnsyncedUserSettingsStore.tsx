@@ -1,3 +1,6 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { getSystemTheme } from "../themes/getSystemTheme.native.tsx";
 // discord_app/modules/user_settings/UnsyncedUserSettingsStore.tsx
 import { SystemThemeState } from "SystemThemeState";
 import { ListDensityMode } from "MAX_FAVORITES";
@@ -24,7 +27,7 @@ prototype["initialize"] = function initialize(arg0) {
   }
   const useSystemTheme = obj.useSystemTheme;
   if (null != useSystemTheme) {
-    if (null != require("../themes/getSystemTheme.native.tsx")()) {
+    if (null != getSystemTheme()) {
       let UNSET = useSystemTheme;
     }
     obj.useSystemTheme = UNSET;
@@ -325,11 +328,11 @@ UnsyncedUserSettingsStore.displayName = "UnsyncedUserSettingsStore";
 UnsyncedUserSettingsStore.persistKey = "UnsyncedUserSettingsStore";
 const items = [
   () => {
-    const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const value = Storage.get("UserSettingsStore");
-    const Storage2 = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage2 = Storage /* Storage */.Storage;
     Storage2.remove("UserSettingsStore");
-    return require("../../../_runtime/00012_apply.js").pick(value, "dataSavingMode", "videoUploadQuality", "lowQualityImageMode", "useSystemTheme", "expressionPickerWidth", "disableVoiceChannelChangeAlert", "disableHardwareMuteSilenceAlert", "disableHideSelfStreamAndVideoConfirmationAlert", "pushUpsellDismissed", "disableEmbeddedActivityPopOutAlert", "disableActivityHardwareAccelerationPrompt", "disableInviteWithTextChannelActivityLaunch", "disableActivityHostLeftNitroUpsell", "disableCallUserConfirmationPrompt", "disableApplicationSubscriptionCancellationSurvey", "enableAndroidChatListAnimations");
+    return apply.pick(value, "dataSavingMode", "videoUploadQuality", "lowQualityImageMode", "useSystemTheme", "expressionPickerWidth", "disableVoiceChannelChangeAlert", "disableHardwareMuteSilenceAlert", "disableHideSelfStreamAndVideoConfirmationAlert", "pushUpsellDismissed", "disableEmbeddedActivityPopOutAlert", "disableActivityHardwareAccelerationPrompt", "disableInviteWithTextChannelActivityLaunch", "disableActivityHostLeftNitroUpsell", "disableCallUserConfirmationPrompt", "disableApplicationSubscriptionCancellationSurvey", "enableAndroidChatListAnimations");
   },
   (arg0) => {
     delete tmp[tmp2];

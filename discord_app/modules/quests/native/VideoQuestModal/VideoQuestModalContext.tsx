@@ -1,3 +1,4 @@
+import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestModalContext.tsx
 import importAllResult from "noop";
 
@@ -7,6 +8,6 @@ const result = require("set").fileFinishedImporting("modules/quests/native/Video
 export default context;
 export const useVideoQuestModalContext = function useVideoQuestModalContext() {
   context = importAllResult.useContext(context);
-  require("../../../../../_runtime/metro/00038__.js")(null != context, "useVideoQuestModalContext must be used within a VideoQuestModalProvider");
+  00038__(null != context, "useVideoQuestModalContext must be used within a VideoQuestModalProvider");
   return context;
 };

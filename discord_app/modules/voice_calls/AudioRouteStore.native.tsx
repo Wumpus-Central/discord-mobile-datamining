@@ -1,3 +1,6 @@
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeAudioRouteEmitterModule.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
+import { RouteTypes } from "VoiceCallTypes.tsx";
 // discord_app/modules/voice_calls/AudioRouteStore.native.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import createRTCConnection from "createRTCConnection";
@@ -11,20 +14,20 @@ function handleAudioRouteChanged(arr) {
   if (null != arr) {
     if ("" !== arr) {
       if (arr.includes("Bluetooth")) {
-        let UNKNOWN = require("VoiceCallTypes.tsx") /* RouteTypes */.RouteTypes.BLUETOOTH;
+        let UNKNOWN = RouteTypes /* RouteTypes */.RouteTypes.BLUETOOTH;
       } else if (arr.includes("Speaker")) {
-        UNKNOWN = require("VoiceCallTypes.tsx") /* RouteTypes */.RouteTypes.SPEAKER;
+        UNKNOWN = RouteTypes /* RouteTypes */.RouteTypes.SPEAKER;
       } else if (arr.includes("Receiver")) {
-        UNKNOWN = require("VoiceCallTypes.tsx") /* RouteTypes */.RouteTypes.RECEIVER;
+        UNKNOWN = RouteTypes /* RouteTypes */.RouteTypes.RECEIVER;
       } else {
         const hasItem = arr.includes("Headphones");
-        const RouteTypes = require("VoiceCallTypes.tsx") /* RouteTypes */.RouteTypes;
+        const RouteTypes = RouteTypes /* RouteTypes */.RouteTypes;
         UNKNOWN = hasItem ? RouteTypes.WIRED : RouteTypes.UNKNOWN;
       }
     }
     c6 = tmp;
   }
-  UNKNOWN = require("VoiceCallTypes.tsx") /* RouteTypes */.RouteTypes.UNKNOWN;
+  UNKNOWN = RouteTypes /* RouteTypes */.RouteTypes.UNKNOWN;
 }
 const NativeModules = get_ActivityIndicator.NativeModules;
 let UNKNOWN = require("RouteTypes").RouteTypes.UNKNOWN;
@@ -51,7 +54,7 @@ const audioRouteStoreClass = new AudioRouteStoreClass(require("dispatcher"), {
     if (null === _null) {
       if (isConnectedResult) {
         let _catch = dependencyMap;
-        let UNKNOWN = require("VoiceCallTypes.tsx") /* RouteTypes */.RouteTypes.UNKNOWN;
+        let UNKNOWN = RouteTypes /* RouteTypes */.RouteTypes.UNKNOWN;
         let addListenerResult;
         if (nativeEventEmitter != tmp3) {
           addListenerResult = obj.addListener("audio-route-changed", (routeType) => {
@@ -61,7 +64,7 @@ const audioRouteStoreClass = new AudioRouteStoreClass(require("dispatcher"), {
         }
         _null = addListenerResult;
         if (tmp11Result.isAndroid()) {
-          const obj3 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeAudioRouteEmitterModule.tsx");
+          const obj3 = enforcing;
           tmp3 = obj3 == tmp3;
           let currentRoute;
           if (!tmp3) {
@@ -74,7 +77,7 @@ const audioRouteStoreClass = new AudioRouteStoreClass(require("dispatcher"), {
         }
         obj = nativeEventEmitter;
         const tmp11 = require;
-        tmp11Result = require("../../utils/PlatformUtils.tsx") /* set */;
+        tmp11Result = set /* set */;
         const nextPromise = currentRoute1.then((routeType) => {
           callback(routeType.routeType, routeType.multipleRoutesAvailable);
         });
@@ -106,7 +109,7 @@ const audioRouteStoreClass = new AudioRouteStoreClass(require("dispatcher"), {
       if (AudioRoutePicker != tmp3) {
         AudioRoutePicker.resetPortOverride();
       }
-      UNKNOWN = require("VoiceCallTypes.tsx") /* RouteTypes */.RouteTypes.UNKNOWN;
+      UNKNOWN = RouteTypes /* RouteTypes */.RouteTypes.UNKNOWN;
       _null.remove();
       _null = tmp3;
     }

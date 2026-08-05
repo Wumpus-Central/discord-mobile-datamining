@@ -1,3 +1,4 @@
+import { parseRawEmojiObject } from "../../emojis/UnicodeEmojis.tsx";
 // discord_app/modules/custom_status/utils/userSettingToActivity.tsx
 import { useMemo } from "noop";
 import getEmojiToGroupId from "getEmojiToGroupId";
@@ -13,8 +14,8 @@ function _activityFromSetting(emojiName) {
     if (null != emojiName.emojiName) {
       tmp = null;
       if ("" !== emojiName.emojiName) {
-        const obj5 = require("../../emojis/UnicodeEmojis.tsx");
-        const byName = obj5.getByName(require("../../emojis/UnicodeEmojis.tsx").convertSurrogateToName(emojiName.emojiName, false));
+        const obj5 = parseRawEmojiObject;
+        const byName = obj5.getByName(parseRawEmojiObject.convertSurrogateToName(emojiName.emojiName, false));
         let tmp2 = null;
         if (null != byName) {
           obj = { id: null, name: null, animated: false };
@@ -22,7 +23,7 @@ function _activityFromSetting(emojiName) {
           tmp2 = obj;
         }
         tmp = tmp2;
-        const obj6 = require("../../emojis/UnicodeEmojis.tsx");
+        const obj6 = parseRawEmojiObject;
       }
     }
   }

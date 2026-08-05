@@ -1,3 +1,5 @@
+import { t } from "../../../_runtime/03867_t.js";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/auth_sessions/AuthSessionsUtils.tsx
 import noop from "noop";
 import fetchFingerprint from "fetchFingerprint";
@@ -32,11 +34,11 @@ export const useAuthSessions = function useAuthSessions() {
 export const formatDate = function formatDate(arg0) {
   const timestamp = Date.now();
   if ((timestamp - arg0.valueOf()) / 1000 / 60 / 60 < 1) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    let stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.TXCmfL);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.TXCmfL);
   } else {
-    stringResult = require("../../../_runtime/03867_t.js")(arg0).fromNow();
-    const obj = require("../../../_runtime/03867_t.js")(arg0);
+    stringResult = t(arg0).fromNow();
+    const obj = t(arg0);
   }
   return stringResult;
 };

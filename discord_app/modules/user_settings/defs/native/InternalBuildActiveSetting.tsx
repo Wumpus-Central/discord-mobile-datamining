@@ -1,3 +1,4 @@
+import { useStaffOrDeveloperSettingPredicate } from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
 // discord_app/modules/user_settings/defs/native/InternalBuildActiveSetting.tsx
 import checkForNewerBuild from "checkForNewerBuild";
 import createToggle from "createToggle";
@@ -13,8 +14,8 @@ createToggle = {
     return "Build installed from builds.discord.tools";
   },
   usePredicate: function useHasCheckNativeUpdateSetting() {
-    const obj = require("../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx") /* useStaffOrDeveloperSettingPredicate */;
-    return hasUpdatesConfigured.hasUpdatesConfigured && require("../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx") /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
+    const obj = useStaffOrDeveloperSettingPredicate /* useStaffOrDeveloperSettingPredicate */;
+    return hasUpdatesConfigured.hasUpdatesConfigured && useStaffOrDeveloperSettingPredicate /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
   }
 };
 createToggle = createToggle.createStatic(createToggle);

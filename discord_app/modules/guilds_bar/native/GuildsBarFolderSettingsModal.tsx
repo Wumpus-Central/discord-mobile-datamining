@@ -1,3 +1,7 @@
+import { FormRoleColorPicker } from "../../../components_native/common/color_picker/FormRoleColorPicker.tsx";
+import { Form } from "../../../design/void/Form/native/index.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/guilds_bar/native/GuildsBarFolderSettingsModal.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -16,23 +20,23 @@ function GuildFolderSettingsScene(arg0) {
   ({ name, onNameChange, color, onColorChange } = arg0);
   let obj = { children: null };
   obj = { title: null, children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.tGRbjA);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.tGRbjA);
   obj = { placeholder: null, value: null, onChange: null, showTopContainer: false, maxLength: 32, autoFocus: true, clearButtonVisibility: null };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.xV9hVh);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.xV9hVh);
   obj[1] = name;
   obj[2] = onNameChange;
-  obj[6] = require("../../../design/void/native.tsx") /* Button */.ClearButtonVisibility.WITH_CONTENT;
-  obj[1] = callback(require("../../../design/void/Form/native/index.tsx") /* Form */.FormInput, obj);
-  const items = [callback(require("../../../design/void/Form/native/index.tsx") /* Form */.FormSection, obj), ];
+  obj[6] = Button /* Button */.ClearButtonVisibility.WITH_CONTENT;
+  obj[1] = callback(Form /* Form */.FormInput, obj);
+  const items = [callback(Form /* Form */.FormSection, obj), ];
   const obj1 = { title: null, children: null };
-  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[0] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.xpurRF);
-  obj1[1] = callback(require("../../../components_native/common/color_picker/FormRoleColorPicker.tsx"), { color, onChange: onColorChange });
-  items[1] = callback(require("../../../design/void/Form/native/index.tsx") /* Form */.FormSection, obj1);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.xpurRF);
+  obj1[1] = callback(FormRoleColorPicker, { color, onChange: onColorChange });
+  items[1] = callback(Form /* Form */.FormSection, obj1);
   obj[0] = items;
-  return callback2(require("../../../design/void/Form/native/index.tsx") /* Form */.Form, obj);
+  return callback2(Form /* Form */.Form, obj);
 }
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 let c10 = "Folder Settings";

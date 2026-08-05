@@ -1,3 +1,5 @@
+import { componentDidMount } from "../../../components_native/common/Alert.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/game_console/native/XboxInstallAlert.tsx
 import "noop";
 import XBOX_URL_BASE from "XBOX_URL_BASE";
@@ -18,14 +20,14 @@ export default function XboxInstallAlert(arg0) {
   const _require = createCacheKey();
   let obj = {};
   const merged = Object.assign(arg0);
-  const intl = _require("../../../intl/index.native.tsx").intl;
-  obj.title = intl.string(_require("../../../intl/index.native.tsx").t["12Kx2v"]);
-  const intl2 = _require("../../../intl/index.native.tsx").intl;
-  obj.body = intl2.string(_require("../../../intl/index.native.tsx").t.msZW3j);
-  const intl3 = _require("../../../intl/index.native.tsx").intl;
-  obj.confirmText = intl3.string(_require("../../../intl/index.native.tsx").t["n+VrqG"]);
-  const intl4 = _require("../../../intl/index.native.tsx").intl;
-  obj.cancelText = intl4.string(_require("../../../intl/index.native.tsx").t.kYaBOg);
+  const intl = _getSystemLocale.intl;
+  obj.title = intl.string(_getSystemLocale.t["12Kx2v"]);
+  const intl2 = _getSystemLocale.intl;
+  obj.body = intl2.string(_getSystemLocale.t.msZW3j);
+  const intl3 = _getSystemLocale.intl;
+  obj.confirmText = intl3.string(_getSystemLocale.t["n+VrqG"]);
+  const intl4 = _getSystemLocale.intl;
+  obj.cancelText = intl4.string(_getSystemLocale.t.kYaBOg);
   obj.fillCancelText = true;
   obj.renderConfirmRightIcon = function renderConfirmRightIcon() {
     const obj = { source: null, style: null };
@@ -43,5 +45,5 @@ export default function XboxInstallAlert(arg0) {
       openURL(closure_4);
     }
   };
-  return jsx(require("../../../components_native/common/Alert.tsx"), {});
+  return jsx(componentDidMount, {});
 };

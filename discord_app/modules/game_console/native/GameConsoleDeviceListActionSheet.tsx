@@ -1,3 +1,9 @@
+import { registerAsset } from "../../../../_runtime/10782_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10783_registerAsset.js";
+import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/game_console/native/GameConsoleDeviceListActionSheet.tsx
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
@@ -28,33 +34,33 @@ function TransferFooter(arg0) {
   obj[1] = transferring;
   obj[2] = onPress;
   const intl = tmp3(1236).intl;
-  obj[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.FYi3ry);
-  obj[2] = closure_12(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj);
-  return closure_12(require("../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.FYi3ry);
+  obj[2] = closure_12(Button /* Button */.Button, obj);
+  return closure_12(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 }
 function DeviceOption(children) {
   const tmp = createCacheKey();
   let obj = { style: tmp.deviceOption, children: null };
-  obj = { style: tmp.deviceIcon, source: require("../../../../_runtime/10782_registerAsset.js") };
+  obj = { style: tmp.deviceIcon, source: registerAsset };
   const items = [callback(closure_8, obj), ];
   obj = { style: tmp.deviceText, color: "mobile-text-heading-primary", variant: "text-md/bold", children: children.name };
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items;
   return callback2(closure_7, obj);
 }
 function EmptyState() {
   const tmp = createCacheKey();
   let obj = { style: tmp.emptyContainer, children: null };
-  obj = { source: require("../../../../_runtime/10783_registerAsset.js"), style: tmp.emptyArt };
+  obj = { source: registerAsset, style: tmp.emptyArt };
   const items = [callback(closure_8, obj), , ];
   obj = { style: tmp.emptyHeader, variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.OkJf1e);
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.OkJf1e);
+  items[1] = callback(Text /* Text */.Text, obj);
   const obj1 = { style: tmp.emptyBody, variant: "text-md/normal", color: "text-default", children: null };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[3] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["of/l5Z"]);
-  items[2] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[3] = intl2.string(getSystemLocale /* getSystemLocale */.t["of/l5Z"]);
+  items[2] = callback(Text /* Text */.Text, obj1);
   obj[1] = items;
   return callback2(closure_7, obj);
 }

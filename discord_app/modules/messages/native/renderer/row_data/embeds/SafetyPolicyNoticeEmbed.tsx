@@ -1,3 +1,7 @@
+import { t } from "../../../../../../../_runtime/03867_t.js";
+import { registerAsset } from "../../../../../../../_runtime/07773_registerAsset.js";
+import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
+import { frozen } from "../../EmbedUtils.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/SafetyPolicyNoticeEmbed.tsx
 import { Image } from "get ActivityIndicator";
 import { MessageEmbedTypes } from "ME";
@@ -43,19 +47,19 @@ export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEm
         if (null != rawValue) {
           if (null != parsed) {
             let obj = { titleText: null, titleIcon: null, subtitleText: null, descriptionText: null, ctaText: null, classificationId: null };
-            const intl = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-            obj[0] = intl.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t["4CxGXi"]);
-            obj[1] = require("../../EmbedUtils.tsx") /* frozen */.getAssetUriForEmbed(Image.resolveAssetSource(require("../../../../../../../_runtime/07773_registerAsset.js")));
-            const intl2 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+            const intl = getSystemLocale /* getSystemLocale */.intl;
+            obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["4CxGXi"]);
+            obj[1] = frozen /* frozen */.getAssetUriForEmbed(Image.resolveAssetSource(registerAsset));
+            const intl2 = getSystemLocale /* getSystemLocale */.intl;
             obj = { daysAgo: null };
-            const obj2 = require("../../EmbedUtils.tsx") /* frozen */;
-            const obj4 = require("../../../../../../../_runtime/03867_t.js")();
-            obj[0] = obj4.diff(require("../../../../../../../_runtime/03867_t.js").unix(parsed), "days");
-            obj[2] = intl2.formatToPlainString(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.eevFb6, obj);
-            const intl3 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-            obj[3] = intl3.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t["5CLb0A"]);
-            const intl4 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-            obj[4] = intl4.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.zKnzwm);
+            const obj2 = frozen /* frozen */;
+            const obj4 = t();
+            obj[0] = obj4.diff(t.unix(parsed), "days");
+            obj[2] = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.eevFb6, obj);
+            const intl3 = getSystemLocale /* getSystemLocale */.intl;
+            obj[3] = intl3.string(getSystemLocale /* getSystemLocale */.t["5CLb0A"]);
+            const intl4 = getSystemLocale /* getSystemLocale */.intl;
+            obj[4] = intl4.string(getSystemLocale /* getSystemLocale */.t.zKnzwm);
             obj[5] = rawValue;
             return obj;
           }

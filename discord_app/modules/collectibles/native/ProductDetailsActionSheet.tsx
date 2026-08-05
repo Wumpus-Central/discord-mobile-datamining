@@ -1,3 +1,5 @@
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { context } from "../CollectiblesAnalyticsContext.tsx";
 // discord_app/modules/collectibles/native/ProductDetailsActionSheet.tsx
 import initialize from "initialize";
 import apexExperiment from "apexExperiment";
@@ -381,7 +383,7 @@ function ProductDetailsActionSheetInner(product) {
   return callback3(require(analyticsLocations[21]).AnalyticsLocationProvider, obj7);
 }
 function ProductDetailsActionSheetWithOrderCTX(arg0) {
-  let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
+  let obj = set /* set */;
   obj = {};
   const merged = Object.assign(arg0);
   obj.paymentGateway = obj.isIOS() ? closure_12.APPLE_ADVANCED_COMMERCE : closure_12.GOOGLE;
@@ -424,5 +426,5 @@ export default function ProductDetailsActionSheet(shopAnalyticsContext) {
   obj = {};
   const merged1 = Object.assign(merged);
   obj[1] = callback3(ProductDetailsActionSheetWithOrderCTX, obj);
-  return callback3(require("../CollectiblesAnalyticsContext.tsx") /* context */.CollectiblesAnalyticsProvider, obj);
+  return callback3(context /* context */.CollectiblesAnalyticsProvider, obj);
 };

@@ -1,3 +1,8 @@
+import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
+import { RowButtonWrapper } from "../../../../design/components/TableRow/native/RowButton.native.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/voice_panel/native/controls/VoicePanelFloatingCTAContainer.tsx
 import _slicedToArray from "_slicedToArray";
 import VOICE_PANEL_DRAWER_MAX_WIDTH from "VOICE_PANEL_DRAWER_MAX_WIDTH";
@@ -17,8 +22,8 @@ function FloatingCTA(trailing) {
   let obj = { children: null };
   obj = { experimental_withBlurBackground: true, arrow: null == trailing, trailing };
   const merged1 = Object.assign(merged);
-  obj[0] = jsx(require("../../../../design/components/TableRow/native/RowButton.native.tsx") /* RowButtonWrapper */.RowButton, { experimental_withBlurBackground: true, arrow: null == trailing, trailing });
-  return jsx(require("../../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, { experimental_withBlurBackground: true, arrow: null == trailing, trailing });
+  obj[0] = jsx(RowButtonWrapper /* RowButtonWrapper */.RowButton, { experimental_withBlurBackground: true, arrow: null == trailing, trailing });
+  return jsx(Stack /* Stack */.Stack, { experimental_withBlurBackground: true, arrow: null == trailing, trailing });
 }
 class VoicePanelFloatingCTAContainer {
   constructor(arg0) {
@@ -163,7 +168,7 @@ const result = require("ensureGuildLoaded").fileFinishedImporting("modules/voice
 
 export default VoicePanelFloatingCTAContainer;
 export const getFloatingCTATotalViewHeight = function getFloatingCTATotalViewHeight(chatInputFloating) {
-  return require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */.resolveRefreshToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_HEIGHT, chatInputFloating) + 16;
+  return useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */.resolveRefreshToken(Themes.modules.mobile.TABLE_ROW_HEIGHT, chatInputFloating) + 16;
 };
 export const renderVoicePanelFloatingCTA = function renderVoicePanelFloatingCTA(arg0, arg1, state, cleanUp) {
   let obj = { theme: ThemeTypes.DARK, children: null };
@@ -172,5 +177,5 @@ export const renderVoicePanelFloatingCTA = function renderVoicePanelFloatingCTA(
   obj.state = state;
   obj.cleanUp = cleanUp;
   obj[1] = <VoicePanelFloatingCTAContainer />;
-  return jsx(require("../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */.ThemeContextProvider, {}, arg0);
+  return jsx(ManaContext /* ManaContext */.ThemeContextProvider, {}, arg0);
 };

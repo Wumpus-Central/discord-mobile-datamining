@@ -1,3 +1,7 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { useUserIdsForLinkStatus } from "../hooks/useUserLinks.tsx";
+import { FamilyCenterUsernameHeader } from "FamilyCenterUsernameHeader.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterRequestorDetails.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -21,14 +25,14 @@ const result = require("jsxProd").fileFinishedImporting("modules/parent_tools/na
 export default function FamilyCenterRequestorDetails(otherUser) {
   otherUser = otherUser.otherUser;
   const tmp = createCacheKey();
-  let obj = require("../hooks/useUserLinks.tsx") /* useUserIdsForLinkStatus */;
+  let obj = useUserIdsForLinkStatus /* useUserIdsForLinkStatus */;
   obj = { style: tmp.container, children: null };
   const linkTimestampText = obj.useLinkTimestampText(otherUser.id, otherUser.status);
   obj = { avatarStyle: tmp.avatar, user: otherUser, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Warning" };
   obj[4] = otherUser.avatarDecoration;
-  const items = [callback(require("../../../design/void/native.tsx") /* Button */.Avatar, obj), ];
+  const items = [callback(Button /* Button */.Avatar, obj), ];
   const obj1 = { style: tmp.detailsContainer, children: null };
-  const items1 = [callback(require("FamilyCenterUsernameHeader.tsx"), { user: otherUser }), callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-xs/semibold", color: "text-muted", children: linkTimestampText })];
+  const items1 = [callback(FamilyCenterUsernameHeader, { user: otherUser }), callback(Text /* Text */.Text, { variant: "text-xs/semibold", color: "text-muted", children: linkTimestampText })];
   obj1[1] = items1;
   items[1] = callback2(View, obj1);
   obj[1] = items;

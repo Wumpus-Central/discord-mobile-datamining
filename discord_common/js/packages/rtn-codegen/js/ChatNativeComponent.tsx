@@ -1,3 +1,4 @@
+import { renderElement } from "../../../../../_runtime/00114_renderElement.js";
 // discord_common/js/packages/rtn-codegen/js/ChatNativeComponent.tsx
 import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
@@ -9,26 +10,26 @@ obj[2] = obj;
 obj = {
   scrollTo(arg0, arg1, arg2, arg3, arg4) {
     const items = [arg1, arg2, arg3, arg4];
-    require("../../../../../_runtime/00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "scrollTo", items);
+    renderElement /* renderElement */.dispatchCommand(arg0, "scrollTo", items);
   },
   scrollToBottom(arg0, arg1) {
     const items = [arg1];
-    require("../../../../../_runtime/00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "scrollToBottom", items);
+    renderElement /* renderElement */.dispatchCommand(arg0, "scrollToBottom", items);
   },
   scrollIntoView(arg0, arg1, arg2, arg3) {
     const items = [arg1, arg2, arg3];
-    require("../../../../../_runtime/00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "scrollIntoView", items);
+    renderElement /* renderElement */.dispatchCommand(arg0, "scrollIntoView", items);
   },
   updateRows(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
     const items = [arg1, arg2, arg3, arg4, arg5, arg6, arg7];
-    require("../../../../../_runtime/00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "updateRows", items);
+    renderElement /* renderElement */.dispatchCommand(arg0, "updateRows", items);
   },
   clearRows(arg0, arg1) {
     const items = [arg1];
-    require("../../../../../_runtime/00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "clearRows", items);
+    renderElement /* renderElement */.dispatchCommand(arg0, "clearRows", items);
   },
   fadeIn(arg0) {
-    require("../../../../../_runtime/00114_renderElement.js") /* renderElement */.dispatchCommand(arg0, "fadeIn", []);
+    renderElement /* renderElement */.dispatchCommand(arg0, "fadeIn", []);
   }
 };
 const value = setRuntimeConfigProvider.get("DCDChat", () => obj);

@@ -1,3 +1,8 @@
+import { registerAsset } from "../../../../../../_runtime/11960_registerAsset.js";
+import { Button } from "../../../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { _uploadContacts } from "../../../../contact_sync/native/ContactSyncUtils.tsx";
 // discord_app/modules/main_tabs_v2/native/friends/components/AddFriendsContactSyncEmptyState.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -29,28 +34,28 @@ const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/na
 export default function AddFriendsContactSyncEmptyState() {
   const tmp = createCacheKey();
   let obj = { style: tmp.content, children: null };
-  obj = { resizeMode: "contain", style: tmp.headerImage, source: require("../../../../../../_runtime/11960_registerAsset.js") };
+  obj = { resizeMode: "contain", style: tmp.headerImage, source: registerAsset };
   const items = [callback(closure_4, obj), , , ];
   obj = { style: tmp.title, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["/G+nci"]);
-  items[1] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["/G+nci"]);
+  items[1] = callback(Text /* Text */.Text, obj);
   const obj1 = { style: tmp.subtitle, children: null };
   const obj2 = { style: tmp.subtitleText, variant: "text-sm/medium", children: null };
-  const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
   const obj3 = { learnMoreHook: null };
-  obj3[0] = require("../../../../contact_sync/native/ContactSyncUtils.tsx") /* _uploadContacts */.handleOpenLearnMoreLink;
-  obj2[2] = intl2.format(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.OXdOPf, obj3);
-  obj1[1] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+  obj3[0] = _uploadContacts /* _uploadContacts */.handleOpenLearnMoreLink;
+  obj2[2] = intl2.format(getSystemLocale /* getSystemLocale */.t.OXdOPf, obj3);
+  obj1[1] = callback(Text /* Text */.Text, obj2);
   items[2] = callback(closure_3, obj1);
   const obj4 = { style: tmp.trailing, children: null };
   const obj5 = { variant: "primary", size: "lg", text: null, onPress: null };
-  const intl3 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj5[2] = intl3.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.QUXSpo);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj5[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.QUXSpo);
   obj5[3] = function onPress() {
     callback(table[10]).openContactSyncModal({}, "Add Friends Contact Sync Empty State");
   };
-  obj4[1] = callback(require("../../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj5);
+  obj4[1] = callback(Button /* Button */.Button, obj5);
   items[3] = callback(closure_3, obj4);
   obj[1] = items;
   return callback2(closure_3, obj);

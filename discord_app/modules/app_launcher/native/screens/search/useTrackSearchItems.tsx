@@ -1,3 +1,4 @@
+import { context } from "../../AppLauncherContext.tsx";
 // discord_app/modules/app_launcher/native/screens/search/useTrackSearchItems.tsx
 import noop from "noop";
 
@@ -8,7 +9,7 @@ export const useTrackSearchItems = function useTrackSearchItems(callback3, memo1
   const _require = callback3;
   const dependencyMap = memo1;
   const React = first;
-  let obj = _require("../../AppLauncherContext.tsx");
+  let obj = _context;
   const entrypoint = obj.useAppLauncherContext().entrypoint;
   let closure_4 = React.useRef({});
   let closure_5 = React.useRef(first);

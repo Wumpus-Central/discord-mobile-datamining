@@ -1,9 +1,10 @@
+import { fetchStore } from "UserApplicationIdentityActionCreators.tsx";
 // discord_app/modules/user_application_identity/UserApplicationIdentityManager.tsx
 import "initialize";
 
 const require = arg1;
 function handleUserApplicationIdentityGatewayEvent(user_id) {
-  const useUserApplicationIdentities = require("UserApplicationIdentityActionCreators.tsx") /* fetchStore */.useUserApplicationIdentities;
+  const useUserApplicationIdentities = fetchStore /* fetchStore */.useUserApplicationIdentities;
   useUserApplicationIdentities.refetch(user_id.user_id);
 }
 let prototype = function UserApplicationIdentityManager() {

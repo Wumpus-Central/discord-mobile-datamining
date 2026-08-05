@@ -1,3 +1,8 @@
+import { set } from "../../actions/AlertActionCreators.tsx";
+import { Text } from "../../design/components/Text/native/Text.tsx";
+import { Button } from "../../design/void/native.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { SvgComponent } from "native/ActivityAnnouncement.tsx";
 // discord_app/modules/activities/confirmActivityAgeGateAlert.native.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -10,9 +15,9 @@ const require = arg1;
 function ConfirmActivityGateContent(children) {
   const tmp = createCacheKey();
   let obj = { style: tmp.alertContainer, children: null };
-  const items = [callback(require("native/ActivityAnnouncement.tsx"), {}), ];
+  const items = [callback(SvgComponent, {}), ];
   obj = { style: tmp.alertBodyText, variant: "text-md/normal", children: children.description };
-  items[1] = callback(require("../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }
@@ -28,19 +33,19 @@ export const confirmActivityAgeGateAlert = function confirmActivityAgeGateAlert(
   let onAgree;
   let onDisagree;
   ({ application, onAgree, onDisagree } = arg0);
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   let obj = { applicationName: application.name };
-  const formatToPlainStringResult = intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.OgmIqy, obj);
+  const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.OgmIqy, obj);
   obj = { title: null, children: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, confirmColor: null };
-  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.SSDPOF);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.SSDPOF);
   obj[1] = callback(ConfirmActivityGateContent, { description: formatToPlainStringResult });
-  const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.hg1uxn);
-  const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.wVq7uo);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.hg1uxn);
+  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl4.string(getSystemLocale /* getSystemLocale */.t.wVq7uo);
   obj[4] = onAgree;
   obj[5] = onDisagree;
-  obj[6] = require("../../design/void/native.tsx") /* Button */.ButtonColors.RED;
-  return Promise.resolve(require("../../actions/AlertActionCreators.tsx").show(obj));
+  obj[6] = Button /* Button */.ButtonColors.RED;
+  return Promise.resolve(set.show(obj));
 };

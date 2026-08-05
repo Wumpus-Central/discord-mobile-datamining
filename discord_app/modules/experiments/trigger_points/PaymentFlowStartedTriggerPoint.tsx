@@ -1,3 +1,4 @@
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx
 import { AnalyticEvents } from "ME";
 
@@ -10,6 +11,6 @@ export const trackPaymentFlowStartedAnalyticsAndCTP = function trackPaymentFlowS
   if (arg1 === undefined) {
     obj = {};
   }
-  require("../../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.PAYMENT_FLOW_STARTED, basePurchaseAnalytics, obj);
+  expandEventProperties.track(AnalyticEvents.PAYMENT_FLOW_STARTED, basePurchaseAnalytics, obj);
   commonTriggerPointConfiguration.trigger();
 };

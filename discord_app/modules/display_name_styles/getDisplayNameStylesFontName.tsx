@@ -1,3 +1,4 @@
+import { messagesProxy } from "intl/DisplayNameStyles.messages.js";
 // discord_app/modules/display_name_styles/getDisplayNameStylesFontName.tsx
 const obj = {};
 obj[require("DisplayNameFont").DisplayNameFont.DEFAULT] = require("messagesProxy").ZEL6mz;
@@ -17,7 +18,7 @@ const result = require("set").fileFinishedImporting("modules/display_name_styles
 export default function getDisplayNameStylesFontName(arg0) {
   let ZEL6mz = obj[arg0];
   if (ZEL6mz == null) {
-    ZEL6mz = require("intl/DisplayNameStyles.messages.js").ZEL6mz;
+    ZEL6mz = messagesProxy.ZEL6mz;
   }
   return ZEL6mz;
 };

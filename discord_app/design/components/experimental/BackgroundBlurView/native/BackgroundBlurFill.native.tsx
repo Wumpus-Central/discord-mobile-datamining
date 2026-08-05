@@ -1,3 +1,6 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { isBlurDisabled } from "../../../../../modules/visual_effect_view/native/VisualEffectView.tsx";
+import { animatedComponent } from "../../../../../modules/visual_effect_view/native/VisualEffectViewAnimated.tsx";
 // discord_app/design/components/experimental/BackgroundBlurView/native/BackgroundBlurFill.native.tsx
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";
@@ -59,11 +62,11 @@ export const BackgroundBlurFill = function BackgroundBlurFill(arg0) {
   obj2 = React;
   const tmp = blurTheme;
   if (android_fallbackColor == null) {
-    android_fallbackColor = tmpResult.useToken(require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SCRIM, blurTheme);
+    android_fallbackColor = tmpResult.useToken(Themes.colors.BACKGROUND_SCRIM, blurTheme);
   }
   style = [StyleSheet.absoluteFill, ];
   style[1] = style;
-  return jsx(require("../../../../../modules/visual_effect_view/native/VisualEffectView.tsx"), { blurTheme, blurStyle, blurAmount, blurTintRgba, android_fallbackColor, android_blurTargetViewNativeId, style });
+  return jsx(isBlurDisabled, { blurTheme, blurStyle, blurAmount, blurTintRgba, android_fallbackColor, android_blurTargetViewNativeId, style });
 };
 export const BackgroundBlurFillAnimated = function BackgroundBlurFillAnimated(arg0) {
   let android_blurTargetViewNativeId;
@@ -104,7 +107,7 @@ export const BackgroundBlurFillAnimated = function BackgroundBlurFillAnimated(ar
     }, items1);
   }
   if (android_fallbackColor == null) {
-    android_fallbackColor = tmpResult.useToken(require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SCRIM, blurTheme);
+    android_fallbackColor = tmpResult.useToken(Themes.colors.BACKGROUND_SCRIM, blurTheme);
   }
   obj = { blurTheme, blurStyle, blurAmount, blurTintRgba, android_fallbackColor, android_blurTargetViewNativeId, style: items2 };
   items2 = [StyleSheet.absoluteFill, style];
@@ -120,7 +123,7 @@ export const BackgroundBlurFillAnimated = function BackgroundBlurFillAnimated(ar
     tmp6 = obj;
   }
   const merged = Object.assign(tmp6);
-  return tmp4(require("../../../../../modules/visual_effect_view/native/VisualEffectViewAnimated.tsx"), obj);
+  return tmp4(animatedComponent, obj);
 };
 export const BackgroundBlurFillWithPress = function BackgroundBlurFillWithPress(style) {
   let blurTheme;
@@ -150,9 +153,9 @@ export const BackgroundBlurFillWithPress = function BackgroundBlurFillWithPress(
     return str;
   }, items);
   let tmp2Result = tmp2(3989);
-  token = tmp2Result.useToken(require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SCRIM, blurTheme);
+  token = tmp2Result.useToken(Themes.colors.BACKGROUND_SCRIM, blurTheme);
   tmp2Result = tmp2(3989);
-  token1 = tmp2Result.useToken(require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SCRIM_LIGHTBOX, blurTheme);
+  token1 = tmp2Result.useToken(Themes.colors.BACKGROUND_SCRIM_LIGHTBOX, blurTheme);
   const isBlurDisabledResult = blurTheme(4685).isBlurDisabled(merged);
   c5 = isBlurDisabledResult;
   const tmp2Result1 = blurTheme(4685);
@@ -207,5 +210,5 @@ export const BackgroundBlurFillWithPress = function BackgroundBlurFillWithPress(
     tmp14 = obj2;
   }
   const merged1 = Object.assign(tmp14);
-  return tmp12(require("../../../../../modules/visual_effect_view/native/VisualEffectViewAnimated.tsx"), obj1);
+  return tmp12(animatedComponent, obj1);
 };

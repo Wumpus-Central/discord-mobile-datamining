@@ -1,3 +1,6 @@
+import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
+import { ActivityIndicator } from "../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import { map } from "../../design/tokens/native/useToken.tsx";
 // discord_app/components_native/common/MessageLoadingSpinner.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -13,10 +16,10 @@ let c4 = result;
 const result1 = set.fileFinishedImporting("components_native/common/MessageLoadingSpinner.tsx");
 
 export default function MessageLoadingSpinner(color) {
-  let obj = require("../../design/tokens/native/useToken.tsx") /* map */;
+  let obj = map /* map */;
   color = color.color;
   if (color == null) {
-    color = obj.useToken(require("../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BRAND);
+    color = obj.useToken(Themes.colors.BACKGROUND_BRAND);
   }
   if (null != closure_4) {
     obj = {};
@@ -27,7 +30,7 @@ export default function MessageLoadingSpinner(color) {
     obj = { animating: null };
     obj[0] = color.animate;
     const merged1 = Object.assign(color);
-    tmp8 = jsx(require("../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx") /* ActivityIndicator */.ActivityIndicator, { animating: null });
+    tmp8 = jsx(ActivityIndicator /* ActivityIndicator */.ActivityIndicator, { animating: null });
   }
   return tmp8;
 };

@@ -1,3 +1,5 @@
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/nuf/native/components/NUFGuildTemplates.tsx
 import GuildTemplateId from "GuildTemplateId";
 import CreationIntent from "CreationIntent";
@@ -367,8 +369,8 @@ export default function NUFGuildTemplates() {
     return obj;
   }, []);
   obj[1] = Keyboard.dismiss;
-  let intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["13/7kX"]);
+  let intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["13/7kX"]);
   obj[3] = constants.GUILD_TEMPLATES;
-  return jsx(require("../../../../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */.Navigator, { screens: null, onWillFocus: null, headerBackTitle: null, initialRouteName: null });
+  return jsx(NavigationStack /* NavigationStack */.Navigator, { screens: null, onWillFocus: null, headerBackTitle: null, initialRouteName: null });
 };

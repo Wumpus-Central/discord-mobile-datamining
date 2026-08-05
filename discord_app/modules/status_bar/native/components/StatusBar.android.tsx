@@ -1,3 +1,4 @@
+import { pushStackEntry } from "StatusBarManager.android.tsx";
 // discord_app/modules/status_bar/native/components/StatusBar.android.tsx
 import { StatusBar } from "get ActivityIndicator";
 
@@ -10,13 +11,13 @@ class StatusBarAndroid extends StatusBar {
 }
 const prototype = StatusBarAndroid.prototype;
 prototype["componentDidMount"] = function componentDidMount() {
-  this._stackEntry = require("StatusBarManager.android.tsx").pushStackEntry(this.props);
+  this._stackEntry = pushStackEntry.pushStackEntry(this.props);
 };
 prototype["componentDidUpdate"] = function componentDidUpdate() {
-  this._stackEntry = require("StatusBarManager.android.tsx").replaceStackEntry(this._stackEntry, this.props);
+  this._stackEntry = pushStackEntry.replaceStackEntry(this._stackEntry, this.props);
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
-  require("StatusBarManager.android.tsx").popStackEntry(this._stackEntry);
+  pushStackEntry.popStackEntry(this._stackEntry);
   this._stackEntry = null;
 };
 prototype["render"] = function render() {

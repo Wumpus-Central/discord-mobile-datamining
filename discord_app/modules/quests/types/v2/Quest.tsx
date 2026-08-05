@@ -1,3 +1,5 @@
+import { _rewardRedemptionInstructionsFromServer } from "Reward.tsx";
+import { _firstPartyTasksFromServer } from "Task.tsx";
 // discord_app/modules/quests/types/v2/Quest.tsx
 const result = require("questCtaConfigFromServer").fileFinishedImporting("modules/quests/types/v2/Quest.tsx");
 
@@ -5,11 +7,11 @@ export const questFromServerV2 = function questFromServerV2(id) {
   obj = { id: id.id, configVersion: 2, startsAt: id.starts_at, expiresAt: id.expires_at, features: id.features, assets: obj, colors: obj, messages: obj1, taskConfigV2: null, rewardsConfig: null, cosponsorMetadata: null, sharePolicy: null, ctaConfig: null };
   obj = { hero: id.assets.hero, heroVideo: id.assets.hero_video, questBarHero: id.assets.quest_bar_hero, questBarHeroBlurhash: id.assets.quest_bar_hero_blurhash, questBarHeroVideo: id.assets.quest_bar_hero_video, gameTile: id.assets.game_tile, logotype: id.assets.logotype, gameTileLight: id.assets.game_tile_light, gameTileDark: id.assets.game_tile_dark, logotypeLight: id.assets.logotype_light, logotypeDark: id.assets.logotype_dark };
   obj = { primary: id.colors.primary, secondary: id.colors.secondary };
-  obj[8] = require("Task.tsx") /* _firstPartyTasksFromServer */.questTaskConfigV2FromServer(id.task_config_v2);
+  obj[8] = _firstPartyTasksFromServer /* _firstPartyTasksFromServer */.questTaskConfigV2FromServer(id.task_config_v2);
   obj1 = { questName: id.messages.quest_name, gameTitle: id.messages.game_title, gamePublisher: id.messages.game_publisher };
-  const obj5 = require("Task.tsx") /* _firstPartyTasksFromServer */;
+  const obj5 = _firstPartyTasksFromServer /* _firstPartyTasksFromServer */;
   const tmp = require;
-  obj[9] = require("Reward.tsx") /* _rewardRedemptionInstructionsFromServer */.questRewardsConfigV2FromServer(id.rewards_config);
+  obj[9] = _rewardRedemptionInstructionsFromServer /* _rewardRedemptionInstructionsFromServer */.questRewardsConfigV2FromServer(id.rewards_config);
   const cosponsor_metadata = id.cosponsor_metadata;
   let tmp3;
   if (null != cosponsor_metadata) {
@@ -19,7 +21,7 @@ export const questFromServerV2 = function questFromServerV2(id) {
   }
   obj[10] = tmp3;
   obj[11] = id.share_policy;
-  const obj6 = require("Reward.tsx") /* _rewardRedemptionInstructionsFromServer */;
+  const obj6 = _rewardRedemptionInstructionsFromServer /* _rewardRedemptionInstructionsFromServer */;
   obj[12] = tmp(7094).questCtaConfigFromServer(id.cta_config);
   return obj;
 };

@@ -1,3 +1,5 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { defaultFormatter } from "AnimatedCounterUtils.tsx";
 // discord_app/modules/forums/native/posts/AnimatedCounter.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -191,7 +193,7 @@ function BasicCounter(arg0) {
   ({ count, textStyle, textColor, textVariant, formatter } = arg0);
   const obj = { variant: textVariant, color: textColor, style: textStyle, children: null };
   obj[3] = formatter(count);
-  return callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  return callback(Text /* Text */.Text, obj);
 }
 let c4 = importAllResult;
 ({ StyleSheet: c5, View: closure_6 } = get_ActivityIndicator);
@@ -221,7 +223,7 @@ const memoResult = importAllResult.memo((textColor) => {
   }
   let defaultFormatter = textColor.formatter;
   if (defaultFormatter === undefined) {
-    defaultFormatter = require("AnimatedCounterUtils.tsx") /* defaultFormatter */.defaultFormatter;
+    defaultFormatter = defaultFormatter /* defaultFormatter */.defaultFormatter;
   }
   if (animate) {
     let obj = { count: null, formatter: null, springConfig: null, textColor: null, textVariant: null, textStyle: null };

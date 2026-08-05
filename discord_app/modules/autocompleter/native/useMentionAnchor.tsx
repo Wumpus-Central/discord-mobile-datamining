@@ -1,3 +1,4 @@
+import { AutocompleteFormDivider } from "AutocompleteUtils.tsx";
 // discord_app/modules/autocompleter/native/useMentionAnchor.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -33,7 +34,7 @@ export default function useMentionAnchor(c22) {
       startsWithResult = arg1 >= anchor + arg3.length;
     }
     if (startsWithResult) {
-      let obj1 = _require("AutocompleteUtils.tsx");
+      let obj1 = _AutocompleteFormDivider;
       startsWithResult = obj1.isUnbrokenRun(c22, anchor + arg3.length, arg1);
     }
     tmp5 = startsWithResult;
@@ -71,7 +72,7 @@ export default function useMentionAnchor(c22) {
           }
         }
         tmp16 = tmp18;
-        obj9 = _require("AutocompleteUtils.tsx");
+        obj9 = _AutocompleteFormDivider;
         tmp25 = _require;
       }
       if (null != tmp16) {

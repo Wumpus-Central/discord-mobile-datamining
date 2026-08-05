@@ -1,3 +1,7 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { messagesProxy } from "FamilyCenter.messages.js";
+import { setsEqual } from "FamilyCenterRestrictedHoursUtils.tsx";
 // discord_app/modules/parent_tools/RestrictedScheduleNotificationUtils.tsx
 let Created;
 let Disabled;
@@ -26,7 +30,7 @@ function isOnlyDayLoss(label, label2) {
     } else {
       return false;
     }
-    obj2 = require("../../../_runtime/00012_apply.js");
+    obj2 = apply;
     tmp7 = importDefault;
   }
 }
@@ -142,7 +146,7 @@ export const diffSchedules = function diffSchedules(arr, toScheduleSnapshotResul
             if (isEqualResult) {
               let tmp10 = importDefault;
               let tmp11 = dependencyMap;
-              obj = require("../../../_runtime/00012_apply.js");
+              obj = apply;
               let tmp12 = tmp7;
               let tmp13 = tmp5;
               isEqualResult = obj.isEqual(tmp8.startTime, tmp6.startTime);
@@ -150,7 +154,7 @@ export const diffSchedules = function diffSchedules(arr, toScheduleSnapshotResul
             if (isEqualResult) {
               let tmp14 = importDefault;
               let tmp15 = dependencyMap;
-              let obj1 = require("../../../_runtime/00012_apply.js");
+              let obj1 = apply;
               let tmp16 = tmp7;
               let tmp17 = tmp5;
               isEqualResult = obj1.isEqual(tmp8.endTime, tmp6.endTime);
@@ -158,7 +162,7 @@ export const diffSchedules = function diffSchedules(arr, toScheduleSnapshotResul
             if (isEqualResult) {
               let tmp18 = importDefault;
               let tmp19 = dependencyMap;
-              let obj2 = require("../../../_runtime/00012_apply.js");
+              let obj2 = apply;
               let tmp20 = tmp7;
               let items2 = [];
               let tmp21 = items2;
@@ -248,18 +252,18 @@ export const diffSchedules = function diffSchedules(arr, toScheduleSnapshotResul
   let set = new Set(items1);
 };
 export const getRestrictedScheduleNotificationTitle = function getRestrictedScheduleNotificationTitle(kind) {
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   return intl.string(obj[kind]);
 };
 export const getRestrictedScheduleNotificationSubtitle = function getRestrictedScheduleNotificationSubtitle(rule) {
   let result = null;
   if (null != rule) {
-    result = require("FamilyCenterRestrictedHoursUtils.tsx") /* setsEqual */.formatRestrictedScheduleInAppSubtitle(rule);
-    const obj = require("FamilyCenterRestrictedHoursUtils.tsx") /* setsEqual */;
+    result = setsEqual /* setsEqual */.formatRestrictedScheduleInAppSubtitle(rule);
+    const obj = setsEqual /* setsEqual */;
   }
   if (result == null) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    result = intl.string(require("FamilyCenter.messages.js")["8OlpoY"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    result = intl.string(messagesProxy["8OlpoY"]);
   }
   return result;
 };

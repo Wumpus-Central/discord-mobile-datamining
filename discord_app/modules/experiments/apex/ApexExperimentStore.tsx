@@ -1,3 +1,5 @@
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { Version } from "../../build_overrides/BuildOverrideUtils.tsx";
 // discord_app/modules/experiments/apex/ApexExperimentStore.tsx
 import _slicedToArray from "_slicedToArray";
 import "_toPropertyKey";
@@ -69,7 +71,7 @@ class ApexExperimentStore extends tmp2 {
 const prototype = ApexExperimentStore.prototype;
 prototype["initialize"] = function initialize(version) {
   this.waitFor(fetchFingerprint);
-  const storedState = this.loadStoredState(version, require("../../build_overrides/BuildOverrideUtils.tsx") /* Version */.getBuildOverrideExperiments());
+  const storedState = this.loadStoredState(version, Version /* Version */.getBuildOverrideExperiments());
 };
 prototype["maybeEmitDebugExperimentEvent"] = function maybeEmitDebugExperimentEvent() {
   const self = this;
@@ -82,7 +84,7 @@ prototype["maybeEmitDebugExperimentEvent"] = function maybeEmitDebugExperimentEv
     if (0 !== variantId) {
       if (variantId !== self.lastEmittedDebugVariantId) {
         self.lastEmittedDebugVariantId = variantId;
-        let obj = require("../../../utils/AnalyticsUtils.tsx");
+        let obj = expandEventProperties;
         obj = { experiment: "2026-03-debug-experiment", apex_debug_variant: null, experiment_location: "apex_assignments_received" };
         obj[1] = variantId;
         obj.track(AnalyticEvents.EXPERIMENT_APEX_DEBUGGING_EVENT, obj);

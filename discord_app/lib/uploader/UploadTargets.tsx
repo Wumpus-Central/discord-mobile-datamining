@@ -1,3 +1,6 @@
+import { getCreateAttachmentURL } from "../../modules/guild_products/GuildProductAttachmentUploadTarget.tsx";
+import { getCreateAttachmentURL } from "../../modules/icymi/ICYMIAttachmentUploadTarget.tsx";
+import { items } from "../../utils/UploadUtils.tsx";
 // discord_app/lib/uploader/UploadTargets.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
@@ -27,7 +30,7 @@ prototype["getMaxAttachmentsCount"] = function getMaxAttachmentsCount() {
   return closure_6;
 };
 prototype["getMaxTotalAttachmentSize"] = function getMaxTotalAttachmentSize() {
-  return require("../../utils/UploadUtils.tsx") /* items */.MAX_TOTAL_ATTACHMENT_SIZE;
+  return items /* items */.MAX_TOTAL_ATTACHMENT_SIZE;
 };
 Object.defineProperty(prototype, "shouldReactNativeCompressUploads", {
   get: function shouldReactNativeCompressUploads() {
@@ -41,10 +44,10 @@ const result = require("getUploadFileSizeSum").fileFinishedImporting("lib/upload
 export const UploadTargets = obj;
 export const getUploadTarget = function getUploadTarget(target) {
   if (obj.GUILD_PRODUCT_ATTACHMENT === target) {
-    const tmp14 = new require("../../modules/guild_products/GuildProductAttachmentUploadTarget.tsx")();
+    const tmp14 = new getCreateAttachmentURL();
     return tmp14;
   } else if (tmp.GRAVITY_ATTACHMENT === target) {
-    const tmp8 = new require("../../modules/icymi/ICYMIAttachmentUploadTarget.tsx")();
+    const tmp8 = new getCreateAttachmentURL();
     return tmp8;
   } else {
     const MESSAGE_ATTACHMENT = tmp.MESSAGE_ATTACHMENT;

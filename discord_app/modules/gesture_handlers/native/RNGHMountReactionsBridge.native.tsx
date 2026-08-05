@@ -1,10 +1,11 @@
+import { RNGHMountReactionsEffectExperiment } from "RNGHMountReactionsEffectExperiment.tsx";
 // discord_app/modules/gesture_handlers/native/RNGHMountReactionsBridge.native.tsx
 let c3 = false;
 const result = require("set").fileFinishedImporting("modules/gesture_handlers/native/RNGHMountReactionsBridge.native.tsx");
 
 export const installRNGHMountReactionsBridge = function installRNGHMountReactionsBridge() {
   if (!c3) {
-    const RNGHMountReactionsEffectExperiment = require("RNGHMountReactionsEffectExperiment.tsx") /* RNGHMountReactionsEffectExperiment */.RNGHMountReactionsEffectExperiment;
+    const RNGHMountReactionsEffectExperiment = RNGHMountReactionsEffectExperiment /* RNGHMountReactionsEffectExperiment */.RNGHMountReactionsEffectExperiment;
     global.__DISCORD_RNGH_USE_LAYOUT_EFFECT__ = RNGHMountReactionsEffectExperiment.getConfig({ location: "rngh-mount-reactions" }).useLayoutEffect;
     global.__DISCORD_RNGH_ON_STALE_MOUNT__ = () => {
 

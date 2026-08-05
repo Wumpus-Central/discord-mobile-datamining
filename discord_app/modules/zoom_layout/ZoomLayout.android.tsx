@@ -1,3 +1,4 @@
+import { __INTERNAL_VIEW_CONFIG } from "../../../discord_common/js/packages/rtn-codegen/js/ZoomLayoutNativeComponent.tsx";
 // discord_app/modules/zoom_layout/ZoomLayout.android.tsx
 import importAllResult from "noop";
 import { PixelRatio } from "get ActivityIndicator";
@@ -46,7 +47,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   let obj = {};
   const merged = Object.assign(arg0);
   obj.ref = ref;
-  return jsx(require("../../../discord_common/js/packages/rtn-codegen/js/ZoomLayoutNativeComponent.tsx"), {});
+  return jsx(__INTERNAL_VIEW_CONFIG, {});
 });
 let result = require("jsxProd").fileFinishedImporting("modules/zoom_layout/ZoomLayout.android.tsx");
 

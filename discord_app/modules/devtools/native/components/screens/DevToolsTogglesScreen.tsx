@@ -1,3 +1,6 @@
+import { fuzzysearch } from "../../../../../../_runtime/05197_fuzzysearch.js";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { useSafeAreaInsetsKeyboardAware } from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsTogglesScreen.tsx
 import _slicedToArray from "_slicedToArray";
 import SearchField from "SearchField";
@@ -15,7 +18,7 @@ function fuzzySearchToggle(str, str2, str3) {
   let tmp = 0 === str.length;
   if (!tmp) {
     const formatted = str.toLowerCase();
-    let tmp3ResultResult = require("../../../../../../_runtime/05197_fuzzysearch.js")(formatted, str2.toLowerCase());
+    let tmp3ResultResult = fuzzysearch(formatted, str2.toLowerCase());
     if (!tmp3ResultResult) {
       const formatted1 = str.toLowerCase();
       tmp3ResultResult = tmp3(5197)(formatted1, str3.toLowerCase());
@@ -23,7 +26,7 @@ function fuzzySearchToggle(str, str2, str3) {
     }
     tmp = tmp3ResultResult;
     tmp3 = importDefault;
-    const tmp5 = require("../../../../../../_runtime/05197_fuzzysearch.js");
+    const tmp5 = fuzzysearch;
   }
   return tmp;
 }
@@ -121,7 +124,7 @@ export default function DevToolsTogglesScreen() {
   }), items1, first(589).statesWillNeverBeEqual);
   obj = { style: tmp.wrap, contentContainerStyle: null, children: null };
   const items2 = [tmp.container, ];
-  obj = { paddingBottom: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 + require("../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx")({ includeKeyboardHeight: true }).insets.bottom };
+  obj = { paddingBottom: Themes.space.PX_16 + useSafeAreaInsetsKeyboardAware({ includeKeyboardHeight: true }).insets.bottom };
   items2[1] = obj;
   obj[1] = items2;
   obj1 = { title: "Actions", hasIcons: false, children: null };

@@ -1,3 +1,10 @@
+import { ActionSheet } from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import { ActionSheetRowIcon } from "../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { useFavoritesGuildHideAction } from "../hooks/useFavoritesGuildHideAction.tsx";
+import { useFavoritesGuildResetAction } from "../hooks/useFavoritesGuildResetAction.tsx";
 // discord_app/modules/favorites/native/FavoritesGuildActionSheet.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -6,22 +13,22 @@ let c3;
 let c4;
 let require = arg1;
 function FavoritesGuildActionSheet() {
-  const tmp2 = require("../hooks/useFavoritesGuildHideAction.tsx")();
+  const tmp2 = useFavoritesGuildHideAction();
   const require = tmp2;
-  const tmp3 = require("../hooks/useFavoritesGuildResetAction.tsx")();
+  const tmp3 = useFavoritesGuildResetAction();
   importDefault = tmp3;
   let obj = { header: null, children: null };
   obj = { title: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.wMWyci);
-  obj[0] = callback(require("../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.wMWyci);
+  obj[0] = callback(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
   obj = { label: tmp2.label, subLabel: tmp2.subLabel, icon: null, variant: null, onPress: null };
   if (tmp2.isPreview) {
     let EyeSlashIcon = tmp5(5270).XSmallIcon;
   } else {
     EyeSlashIcon = tmp5(8306).EyeSlashIcon;
   }
-  obj[2] = callback(require("../../../design/components/Sheet/native/ActionSheetRow.native.tsx") /* ActionSheetRowIcon */.ActionSheetRow.Icon, { IconComponent: EyeSlashIcon });
+  obj[2] = callback(ActionSheetRowIcon /* ActionSheetRowIcon */.ActionSheetRow.Icon, { IconComponent: EyeSlashIcon });
   let str = "danger";
   if (tmp2.isPreview) {
     str = "default";
@@ -31,7 +38,7 @@ function FavoritesGuildActionSheet() {
     tmp3(outer1_2[10]).hideActionSheet(outer1_5);
     tmp2.perform();
   };
-  const items = [callback(require("../../../design/components/Sheet/native/ActionSheetRow.native.tsx") /* ActionSheetRowIcon */.ActionSheetRow, obj), ];
+  const items = [callback(ActionSheetRowIcon /* ActionSheetRowIcon */.ActionSheetRow, obj), ];
   let tmp4Result = null;
   if (tmp3.isAvailable) {
     const obj1 = { label: null, subLabel: null, icon: null, variant: "danger", onPress: null };
@@ -46,15 +53,15 @@ function FavoritesGuildActionSheet() {
     tmp4Result = tmp4(tmp5(5648).ActionSheetRow, obj1);
   }
   items[1] = tmp4Result;
-  obj[1] = closure_4(require("../../../design/components/Sheet/native/ActionSheetRow.native.tsx") /* ActionSheetRowIcon */.ActionSheetRow.Group, { hasIcons: true, children: items });
-  return callback(require("../../../design/components/Sheet/native/ActionSheet.native.tsx") /* ActionSheet */.ActionSheet, obj);
+  obj[1] = closure_4(ActionSheetRowIcon /* ActionSheetRowIcon */.ActionSheetRow.Group, { hasIcons: true, children: items });
+  return callback(ActionSheet /* ActionSheet */.ActionSheet, obj);
 }
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 FavoritesGuildActionSheet = "FavoritesGuildActionSheet";
 const result = require("useFavoritesGuildHideAction").fileFinishedImporting("modules/favorites/native/FavoritesGuildActionSheet.tsx");
 
 export const openFavoritesGuildActionSheet = function openFavoritesGuildActionSheet() {
-  let obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx") /* ACTION_SHEET_HEIGHT_HALF */;
+  let obj = ACTION_SHEET_HEIGHT_HALF /* ACTION_SHEET_HEIGHT_HALF */;
   obj = { content: callback(FavoritesGuildActionSheet, {}), key: FavoritesGuildActionSheet };
   obj.showActionSheet(obj);
 };

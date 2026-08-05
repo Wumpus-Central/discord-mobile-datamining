@@ -1,3 +1,4 @@
+import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/stores/RTCDebugStore.tsx
 import _slicedToArray from "_slicedToArray";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -350,8 +351,8 @@ obj = {
             obj[4] = str;
             obj.dispatch(obj);
           });
-          require("../Dispatcher.tsx").wait(() => callback(table[5]).open());
-          const obj3 = require("../Dispatcher.tsx");
+          dispatcher.wait(() => callback(table[5]).open());
+          const obj3 = dispatcher;
         }
       }
     }

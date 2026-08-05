@@ -1,3 +1,5 @@
+import { isTracing } from "../app-start-performance/AppStartPerformance.tsx";
+import { logger } from "Emitter.tsx";
 // discord_common/js/packages/flux/Store.tsx
 let closure_4 = [];
 let c5 = false;
@@ -82,7 +84,7 @@ Store["initialize"] = function initialize() {
 };
 Store["destroy"] = function destroy() {
   closure_4.length = 0;
-  require("Emitter.tsx").destroy();
+  logger.destroy();
 };
 Store["getAll"] = function getAll() {
   return closure_4;
@@ -113,8 +115,8 @@ prototype["initializeIfNeeded"] = function initializeIfNeeded() {
     const _Date2 = Date;
     const diff = Date.now() - timestamp;
     if (diff > 5) {
-      require("../app-start-performance/AppStartPerformance.tsx").mark("\u{1F9A5}", `${self.getName()}.initialize()`, diff);
-      const obj = require("../app-start-performance/AppStartPerformance.tsx");
+      isTracing.mark("\u{1F9A5}", `${self.getName()}.initialize()`, diff);
+      const obj = isTracing;
     }
   }
 };
@@ -186,7 +188,7 @@ prototype["waitFor"] = function waitFor() {
   _dispatcher.addDependencies(dispatchToken, mapped.filter((arg0) => null != arg0));
 };
 prototype["emitChange"] = function emitChange() {
-  require("Emitter.tsx").markChanged(this);
+  logger.markChanged(this);
 };
 prototype["getDispatchToken"] = function getDispatchToken() {
   return this._dispatchToken;

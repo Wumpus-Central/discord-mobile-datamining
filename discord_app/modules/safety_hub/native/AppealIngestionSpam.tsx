@@ -1,3 +1,6 @@
+import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { AppealIngestionModal } from "AppealIngestionModal.tsx";
 // discord_app/modules/safety_hub/native/AppealIngestionSpam.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -13,8 +16,8 @@ export default function AppealIngestionSpam() {
   let obj = { children: null };
   obj = { style: tmp.container, children: null };
   obj = { bottom: true, style: tmp.container, children: null };
-  obj[2] = jsx(require("../../../design/void/native.tsx") /* Button */.LegacyText, { children: "TODO - SPAM" });
-  obj[1] = jsx(require("../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, { bottom: true, style: tmp.container, children: null });
+  obj[2] = jsx(Button /* Button */.LegacyText, { children: "TODO - SPAM" });
+  obj[1] = jsx(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, { bottom: true, style: tmp.container, children: null });
   obj[0] = <View bottom style={tmp.container}>{null}</View>;
-  return jsx(require("AppealIngestionModal.tsx") /* AppealIngestionModal */.AppealIngestionModalScreen, { bottom: true, style: tmp.container, children: null });
+  return jsx(AppealIngestionModal /* AppealIngestionModal */.AppealIngestionModalScreen, { bottom: true, style: tmp.container, children: null });
 };

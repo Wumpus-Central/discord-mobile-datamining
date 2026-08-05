@@ -1,3 +1,4 @@
+import { registerAsset } from "../../../../../../../_runtime/10489_registerAsset.js";
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkPreConnect.tsx
 import noop from "noop";
 import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkModalScenes";
@@ -22,7 +23,7 @@ export default function CrunchyrollLinkPreConnect() {
     navigation.push(outer1_4.ERROR);
   }, items1);
   obj = { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: null, imgStyle: null, title: null, body: null, redirectDestination: null };
-  obj[3] = require("../../../../../../../_runtime/10489_registerAsset.js");
+  obj[3] = registerAsset;
   obj[4] = callback().image;
   const intl = navigation(1236).intl;
   obj[5] = intl.string(navigation(1236).t.siPkNp);

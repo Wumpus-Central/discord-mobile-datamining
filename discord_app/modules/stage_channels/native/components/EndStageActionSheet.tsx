@@ -1,3 +1,4 @@
+import { ScrollHandlingActionSheet } from "ScrollHandlingActionSheet.tsx";
 // discord_app/modules/stage_channels/native/components/EndStageActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -57,5 +58,5 @@ export default function EndStageActionSheet(channel) {
   items[3] = callback(View, obj4);
   obj[1] = items;
   obj[0] = callback2(View, obj);
-  return callback(require("ScrollHandlingActionSheet.tsx"), obj);
+  return callback(ScrollHandlingActionSheet, obj);
 };

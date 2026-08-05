@@ -1,3 +1,7 @@
+import { registerAsset } from "../../../../_runtime/07841_registerAsset.js";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
 // discord_app/modules/safety_hub/native/AppealIngestionExternalLink.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -37,12 +41,12 @@ export default function AppealIngestionExternalLink(children) {
   };
   obj = { style: tmp.childContainer, children: null };
   obj = { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: children.text };
-  const items = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+  const items = [callback(Text /* Text */.Text, obj), ];
   const obj1 = { source: null, color: null };
-  obj1[0] = require("../../../../_runtime/07841_registerAsset.js") /* registerAsset */;
+  obj1[0] = registerAsset /* registerAsset */;
   obj1[1] = tmp.chevron.color;
-  items[1] = callback(require("../../../design/void/native.tsx") /* Button */.Icon, obj1);
+  items[1] = callback(Button /* Button */.Icon, obj1);
   obj[1] = items;
   obj[3] = callback2(View, obj);
-  return callback(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableHighlight, obj);
+  return callback(PressableBase /* PressableBase */.PressableHighlight, obj);
 };

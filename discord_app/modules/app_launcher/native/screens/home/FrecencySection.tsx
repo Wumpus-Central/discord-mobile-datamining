@@ -1,3 +1,5 @@
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { usePlaceholderWidth } from "../../hooks/usePlaceholderSize.tsx";
 // discord_app/modules/app_launcher/native/screens/home/FrecencySection.tsx
 import ApplicationCommandSectionType from "ApplicationCommandSectionType";
 import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING";
@@ -15,11 +17,11 @@ let closure_6;
 let unpackModuleId;
 const require = arg1;
 function Placeholder() {
-  const tmp = require("../../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("AppLauncherRecents-native");
+  const tmp = useIsMobileVisualRefreshExperimentEnabled("AppLauncherRecents-native");
   const tmp2 = createCacheKey();
-  let obj = require("../../hooks/usePlaceholderSize.tsx") /* usePlaceholderWidth */;
+  let obj = usePlaceholderWidth /* usePlaceholderWidth */;
   const placeholderWidth = obj.usePlaceholderWidth(20, 90);
-  let obj1 = require("../../hooks/usePlaceholderSize.tsx") /* usePlaceholderWidth */;
+  let obj1 = usePlaceholderWidth /* usePlaceholderWidth */;
   const items = [tmp2.commandContainer, ];
   let rowShadow = !tmp;
   const placeholderWidth1 = obj1.usePlaceholderWidth(20, 70);

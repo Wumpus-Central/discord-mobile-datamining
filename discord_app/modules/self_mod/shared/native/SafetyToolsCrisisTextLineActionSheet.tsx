@@ -1,3 +1,4 @@
+import { SafetyToolsActionSheetWrapper } from "SafetyToolsActionSheetWrapper.tsx";
 // discord_app/modules/self_mod/shared/native/SafetyToolsCrisisTextLineActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -57,5 +58,5 @@ export default function SafetyToolsCrisisTextLineActionSheet(trackAnalyticsEvent
   items[2] = callback(trackAnalyticsEvent(4695).Button, obj2);
   obj[1] = items;
   obj[7] = callback2(View, obj);
-  return callback(require("SafetyToolsActionSheetWrapper.tsx"), obj);
+  return callback(SafetyToolsActionSheetWrapper, obj);
 };

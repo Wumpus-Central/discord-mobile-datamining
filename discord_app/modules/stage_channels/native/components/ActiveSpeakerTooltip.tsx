@@ -1,3 +1,4 @@
+import { UserSummaryItem } from "../../../../components_native/common/UserSummaryItem.tsx";
 // discord_app/modules/stage_channels/native/components/ActiveSpeakerTooltip.tsx
 import _slicedToArray from "_slicedToArray";
 import { View } from "get ActivityIndicator";
@@ -51,7 +52,7 @@ const memoResult = importAllResult.memo((channel) => {
       obj2[1] = first;
       obj2[3] = channel.id;
       obj2[4] = channel.getGuildId();
-      obj1[1] = callback3(require("../../../../components_native/common/UserSummaryItem.tsx"), obj2);
+      obj1[1] = callback3(UserSummaryItem, obj2);
       const items2 = [callback3(View, obj1), ];
       const obj3 = { style: null, children: null };
       obj3[0] = tmp.participantNameplateContainer;
@@ -66,7 +67,7 @@ const memoResult = importAllResult.memo((channel) => {
       obj[1] = items2;
       obj[3] = callback4(View, obj);
       tmp5 = callback3(tmp2(4812).PressableOpacity, obj);
-      const tmp10 = require("../../../../components_native/common/UserSummaryItem.tsx");
+      const tmp10 = UserSummaryItem;
     }
   }
   return tmp5;

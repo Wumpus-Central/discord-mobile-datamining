@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { set } from "../../../utils/Durations.tsx";
 // discord_app/modules/content_inventory/memberlist/useTimestampTickedNow.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -26,7 +28,7 @@ export const useTimestampTickedNow = function useTimestampTickedNow() {
   }), 2);
   _require = now[1];
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  let stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  let stateFromStores = _initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let slowTickMode = !isAppFocused;
   if (isAppFocused) {
     if (stateFromStores) {
@@ -34,7 +36,7 @@ export const useTimestampTickedNow = function useTimestampTickedNow() {
     }
     slowTickMode = stateFromStores;
   }
-  const SECOND = require("../../../utils/Durations.tsx").Millis.SECOND;
+  const SECOND = set.Millis.SECOND;
   if (slowTickMode) {
     let result = 15 * SECOND;
   } else {

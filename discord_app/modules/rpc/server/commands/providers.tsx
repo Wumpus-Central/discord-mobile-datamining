@@ -1,3 +1,5 @@
+import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
+import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
 // discord_app/modules/rpc/server/commands/providers.tsx
 import importDefaultResult from "sum";
 import closure_5 from "set";
@@ -28,7 +30,7 @@ obj = { [RPCCommands.GET_PROVIDER_ACCESS_TOKEN]: obj };
 obj = {
   scope: { [RPC_SCOPE_CONFIG.ANY]: items1 },
   validation(string) {
-    let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(string);
+    let obj = createRpcJoiSchemaObject(string);
     obj = { provider: null, connection_redirect: null };
     const requiredResult = obj.required();
     obj[0] = string.string().required();
@@ -43,9 +45,9 @@ obj = {
     let _require = provider;
     const connection_redirect = args.connection_redirect;
     let dependencyMap;
-    let obj = _require("../../RPCHelpers.tsx");
+    let obj = _recurseReplaceContentTree;
     const result = obj.validatePostMessageTransport(socket.transport);
-    let obj1 = _require("../../RPCHelpers.tsx");
+    let obj1 = _recurseReplaceContentTree;
     const validateApplicationResult = obj1.validateApplication(socket.application);
     const value = connection_redirect(4966).get(provider);
     dependencyMap = value;
@@ -210,7 +212,7 @@ items1 = [RPC_AUTHENTICATED_SCOPE];
 obj = {
   scope: { [RPC_SCOPE_CONFIG.ANY]: items2 },
   validation(string) {
-    let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(string);
+    let obj = createRpcJoiSchemaObject(string);
     obj = { provider: null };
     const requiredResult = obj.required();
     obj[0] = string.string().required();

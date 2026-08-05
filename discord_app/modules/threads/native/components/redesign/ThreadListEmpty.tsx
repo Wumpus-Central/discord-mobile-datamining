@@ -1,3 +1,7 @@
+import { registerAsset } from "../../../../../../_runtime/11521_registerAsset.js";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/threads/native/components/redesign/ThreadListEmpty.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -20,18 +24,18 @@ const memoResult = require("noop").memo((onCreateThreadPress) => {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.iconWrapper, children: null };
   obj = { source: null, size: null };
-  obj[0] = require("../../../../../../_runtime/11521_registerAsset.js");
-  obj[1] = require("../../../../../design/void/native.tsx") /* Button */.Icon.Sizes.MEDIUM;
-  obj[1] = callback(require("../../../../../design/void/native.tsx") /* Button */.Icon, obj);
+  obj[0] = registerAsset;
+  obj[1] = Button /* Button */.Icon.Sizes.MEDIUM;
+  obj[1] = callback(Button /* Button */.Icon, obj);
   const items = [callback(View, obj), , , ];
   const obj1 = { style: tmp.title, accessibilityRole: "header", maxFontSizeMultiplier: 2, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[5] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.HgTQ8p);
-  items[1] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj1[5] = intl.string(getSystemLocale /* getSystemLocale */.t.HgTQ8p);
+  items[1] = callback(Text /* Text */.Text, obj1);
   const obj2 = { style: tmp.subtext, maxFontSizeMultiplier: 2, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj2[4] = intl2.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.jmq9GC);
-  items[2] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj2[4] = intl2.string(getSystemLocale /* getSystemLocale */.t.jmq9GC);
+  items[2] = callback(Text /* Text */.Text, obj2);
   let tmp4Result = null != onCreateThreadPress;
   if (tmp4Result) {
     const obj3 = { onPress: null, text: null };

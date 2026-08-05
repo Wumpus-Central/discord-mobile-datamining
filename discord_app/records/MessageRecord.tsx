@@ -1,3 +1,6 @@
+import { ApplicationIntegrationType } from "../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
+import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { isForwardMessage } from "../modules/forwarding/isForwardMessage.tsx";
 // discord_app/records/MessageRecord.tsx
 import "toJS";
 import ME from "ME";
@@ -83,7 +86,7 @@ class MinimalMessageRecord extends tmp2 {
   }
 }
 MinimalMessageRecord.prototype["hasFlag"] = function hasFlag(arg0) {
-  return require("../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(this.flags, arg0);
+  return hasFlag /* hasFlag */.hasFlag(this.flags, arg0);
 };
 class MessageRecord extends MinimalMessageRecord {
   constructor(arg0) {
@@ -196,7 +199,7 @@ prototype["getReaction"] = function getReaction(arg0) {
 };
 prototype["getContentMessage"] = function getContentMessage() {
   let self = this;
-  if (require("../modules/forwarding/isForwardMessage.tsx")(this)) {
+  if (isForwardMessage(this)) {
     self = this.messageSnapshots[0].message;
   }
   return self;
@@ -536,7 +539,7 @@ prototype["canDeleteOwnMessage"] = function canDeleteOwnMessage(id1) {
       tmp2 = 1 === Object.keys(prop).length;
     }
     if (tmp2) {
-      tmp2 = require("../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx") /* ApplicationIntegrationType */.ApplicationIntegrationType.USER_INSTALL in prop;
+      tmp2 = ApplicationIntegrationType /* ApplicationIntegrationType */.ApplicationIntegrationType.USER_INSTALL in prop;
     }
     return tmp2;
   }
@@ -580,5 +583,5 @@ export const ModeratorReport = function ModeratorReport(arg0) {
 }.prototype;
 export const MessageSnapshotRecord = prototype2;
 export const isMessageComponentsV2 = function isMessageComponentsV2(contentMessage) {
-  return require("../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(contentMessage.flags, IS_COMPONENTS_V2.IS_COMPONENTS_V2);
+  return hasFlag /* hasFlag */.hasFlag(contentMessage.flags, IS_COMPONENTS_V2.IS_COMPONENTS_V2);
 };

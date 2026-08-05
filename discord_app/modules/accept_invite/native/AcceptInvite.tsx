@@ -1,3 +1,9 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { PressableCard } from "../../../design/components/Card/native/Card.native.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
+import { handleImageLoad } from "../../image_upload/ImageLoaderUtils.tsx";
+import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 // discord_app/modules/accept_invite/native/AcceptInvite.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -39,7 +45,7 @@ function getInviteState(invite) {
                       if (tmp4.APP_OPENED !== state) {
                         if (tmp4.APP_OPENING !== state) {
                           if (tmp4.ACCEPTING !== state) {
-                            require("../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.assertNever(state);
+                            isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.assertNever(state);
                           }
                         }
                       }
@@ -59,9 +65,9 @@ function getInviteState(invite) {
   return constants.LOADING;
 }
 function InviteResolving() {
-  let obj = require("../../../design/tokens/native/useToken.tsx") /* map */;
+  let obj = map /* map */;
   obj = { style: createCacheKey().resolvingContainer, children: null };
-  obj = { color: obj.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_DEFAULT), size: "large" };
+  obj = { color: obj.useToken(Themes.colors.INTERACTIVE_TEXT_DEFAULT), size: "large" };
   obj[1] = callback2(closure_5, obj);
   return callback2(closure_7, obj);
 }
@@ -115,7 +121,7 @@ export default function AcceptInvite(invite) {
   invite = invite.invite;
   const merged = Object.assign(invite, Object.create(null));
   const tmp2 = createCacheKey();
-  ({ height, width } = require("../../screen/useWindowDimensions.native.tsx")());
+  ({ height, width } = useWindowDimensions());
   let obj = invite;
   if (invite == null) {
     obj = {};
@@ -130,7 +136,7 @@ export default function AcceptInvite(invite) {
   } else {
     obj = { id: null, splash: null, size: null };
     ({ id: obj3[0], splash: obj3[1] } = guild);
-    let obj3 = require("../../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */;
+    let obj3 = handleImageLoad /* handleImageLoad */;
     obj[2] = width * obj3.getDevicePixelRatio();
     guildSplashSource = tmp3(1416).getGuildSplashSource(obj);
     const tmp3Result = tmp3(1416);
@@ -143,7 +149,7 @@ export default function AcceptInvite(invite) {
   const merged1 = Object.assign(merged);
   obj3[1] = callback2(AcceptInviteCardComponent, { invite });
   obj2[1] = callback2(closure_7, obj3);
-  items1[1] = callback2(require("../../../design/components/Card/native/Card.native.tsx") /* PressableCard */.Card, obj2);
+  items1[1] = callback2(PressableCard /* PressableCard */.Card, obj2);
   obj[1] = items1;
   return callback3(closure_7, obj);
 };

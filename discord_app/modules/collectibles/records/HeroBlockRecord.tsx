@@ -1,9 +1,10 @@
+import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 // discord_app/modules/collectibles/records/HeroBlockRecord.tsx
 let prototype;
 prototype = function HeroBlockRecord(unpublished_at) {
   let summary;
   const obj = Object.create(new.target.prototype);
-  obj.type = require("../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx") /* ShopBlockType */.ShopBlockType.HERO;
+  obj.type = ShopBlockType /* ShopBlockType */.ShopBlockType.HERO;
   ({ category_sku_id: tmp.categorySkuId, name: tmp.name, summary } = unpublished_at);
   obj.summary = summary.trim();
   ({ category_store_listing_id: tmp.categoryStoreListingId, title: tmp.title, ranked_sku_ids: tmp.rankedSkuIds } = unpublished_at);

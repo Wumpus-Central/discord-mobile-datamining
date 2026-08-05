@@ -1,3 +1,6 @@
+import { useInitialValue } from "../../../../hooks/useInitialValue.tsx";
+import { useTimeout } from "../../../../hooks/useTimeout.tsx";
+import { useCreateSubscriptionParams } from "../../../billing/native/subscription/useCreateSubscriptionParams.tsx";
 // discord_app/modules/payments/native/hooks/NativePaymentHooks.ios.tsx
 import reset from "reset";
 import _slicedToArray from "_slicedToArray";
@@ -105,7 +108,7 @@ function useCreateSubscription(planId) {
       const obj = first(tmp6[10]);
     }
   }, items1);
-  require("../../../../hooks/useTimeout.tsx")(() => {
+  useTimeout(() => {
     let tmp = memo;
     if (!memo) {
       tmp = outer1_15;
@@ -135,9 +138,9 @@ function useCreateSubscription(planId) {
   const items2 = [callback];
   const items3 = [planId];
   const stateFromStores = first(589).useStateFromStores(items2, () => callback.get(first), items3);
-  const tmp11 = require("../../../billing/native/subscription/useCreateSubscriptionParams.tsx")(stateFromStores, tmp3[2]);
+  const tmp11 = useCreateSubscriptionParams(stateFromStores, tmp3[2]);
   React = tmp11;
-  const tmp12 = require("../../../../hooks/useInitialValue.tsx")(() => first(_undefined[15]).getNewAnalyticsLoadId());
+  const tmp12 = useInitialValue(() => first(_undefined[15]).getNewAnalyticsLoadId());
   c6 = tmp12;
   const items4 = [tmp12, analyticsLocation, applicationId, planId, skuId];
   callback = React.useCallback(() => {

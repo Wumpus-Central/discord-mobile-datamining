@@ -1,3 +1,7 @@
+import { identity } from "../../../_runtime/00700_identity.js";
+import { isIterable } from "../../../_runtime/03898_isIterable.js";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx
 import _slicedToArray from "_slicedToArray";
 import { DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY } from "getFriendlyDurationString";
@@ -8,7 +12,7 @@ const require = arg1;
 let closure_4 = keys.createStore((arg0, arg1) => {
   const _require = arg0;
   const dependencyMap = arg1;
-  let Storage = _require("../../../discord_common/js/packages/storage/Storage.tsx").Storage;
+  let Storage = _Storage.Storage;
   let items = Storage.get(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY);
   if (items == null) {
     items = [];
@@ -36,7 +40,7 @@ let closure_4 = keys.createStore((arg0, arg1) => {
 });
 Storage.asyncGet(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, (arg0) => {
   const _require = arg0;
-  _require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     const obj = { notificationDismissedInGuilds: null };
     obj[0] = new Set(closure_0);
     return outer1_4.setState(obj);
@@ -45,11 +49,11 @@ Storage.asyncGet(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, (arg0
 let result = require("Storage").fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx");
 
 export const useCommunicationDisabledNoticeStore = function useCommunicationDisabledNoticeStore(arg0) {
-  const tmp = callback(require("../../../_runtime/00700_identity.js") /* identity */.useStoreWithEqualityFn(closure_4, (arg0) => {
+  const tmp = callback(identity /* identity */.useStoreWithEqualityFn(closure_4, (arg0) => {
     const items = [, ];
     ({ notificationDismissedInGuilds: arr[0], dismissNotification: arr[1] } = arg0);
     return items;
-  }, require("../../../_runtime/03898_isIterable.js") /* isIterable */.shallow), 2);
+  }, isIterable /* isIterable */.shallow), 2);
   const first = tmp[0];
   let items = [!first.has(arg0), tmp[1]];
   return items;

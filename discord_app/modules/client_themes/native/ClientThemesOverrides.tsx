@@ -1,3 +1,4 @@
+import { useIsUsingClientTheme } from "useIsUsingClientTheme.tsx";
 // discord_app/modules/client_themes/native/ClientThemesOverrides.tsx
 import noop from "noop";
 import createCacheKey from "createCacheKey";
@@ -47,7 +48,7 @@ export const useGradientMidpoint = function useGradientMidpoint() {
 };
 export const useClientThemesOverride = function useClientThemesOverride(themedChatInput) {
   let tmp2;
-  if (require("useIsUsingClientTheme.tsx")()) {
+  if (useIsUsingClientTheme()) {
     let none = themedChatInput;
     if (themedChatInput == null) {
       none = tmp.none;

@@ -1,3 +1,5 @@
+import { rebuild } from "../messages/MessageParser.tsx";
+import { useCanUnarchiveThread } from "ThreadHooks.tsx";
 // discord_app/modules/threads/ThreadCreationHooks.tsx
 import snowflakeSequence from "snowflakeSequence";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -89,9 +91,9 @@ function getDefaultThreadName(stateFromStores, parentMessageId) {
     if (str3 == null) {
       str3 = "";
     }
-    const obj = require("../messages/MessageParser.tsx");
+    const obj = rebuild;
     const tmp17 = importDefault;
-    const str4 = require("../messages/MessageParser.tsx").unparse(str3, stateFromStores.id, true);
+    const str4 = rebuild.unparse(str3, stateFromStores.id, true);
     const tmp17Result = tmp17(8166);
     let str7 = tmp17(8166)(str4.split("\n")[0], true).replace(/^[ #-]+/, "");
     const items = [];
@@ -566,7 +568,7 @@ let result = require("noop").fileFinishedImporting("modules/threads/ThreadCreati
 
 export const PrivateThreadMode = obj;
 export const usePrivateThreadMode = function usePrivateThreadMode(parentChannel) {
-  const obj = require("ThreadHooks.tsx") /* useCanUnarchiveThread */;
+  const obj = useCanUnarchiveThread /* useCanUnarchiveThread */;
   const canStartPublicThread = obj.useCanStartPublicThread(parentChannel);
   if (!obj2.useCanStartPrivateThread(parentChannel)) {
     return tmp2.Disabled;

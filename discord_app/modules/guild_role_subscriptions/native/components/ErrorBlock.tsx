@@ -1,3 +1,4 @@
+import { MessageBlock } from "MessageBlock.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/ErrorBlock.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -7,7 +8,7 @@ const result = require("MessageBlock").fileFinishedImporting("modules/guild_role
 
 export default function ErrorBlock(children) {
   const obj = { color: null, children: null };
-  obj[0] = require("MessageBlock.tsx") /* MessageBlock */.MessageBlockColors.RED;
+  obj[0] = MessageBlock /* MessageBlock */.MessageBlockColors.RED;
   obj[1] = children.children;
-  return jsx(require("MessageBlock.tsx"), { color: null, children: null });
+  return jsx(MessageBlock, { color: null, children: null });
 };

@@ -1,3 +1,11 @@
+import { Button } from "../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../design/components/Text/native/Text.tsx";
+import { Button } from "../../design/void/native.tsx";
+import { PressableBase } from "../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { getMixedGradientColor } from "../../modules/client_themes/native/ThemedGradient.tsx";
+import { getIsScreenLandscape } from "../../modules/screen/useIsScreenLandscape.native.tsx";
+import { useWindowDimensions } from "../../modules/screen/useWindowDimensions.native.tsx";
 // discord_app/components_native/common/Alert.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "set";
@@ -136,7 +144,7 @@ prototype["renderHeader"] = function renderHeader() {
       }
       obj = { children: null };
       obj[6] = renderContentResult;
-      const items = [closure_7(require("../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+      const items = [closure_7(Text /* Text */.Text, obj), ];
       obj = { style: null };
       obj[0] = tmp.divider;
       items[1] = closure_7(closure_5, obj);
@@ -164,7 +172,7 @@ prototype["renderBody"] = function renderBody() {
       renderContentResult = self.renderContent(body);
     }
     obj[2] = renderContentResult;
-    obj[1] = closure_7(require("../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+    obj[1] = closure_7(Text /* Text */.Text, obj);
     tmp5Result = tmp5(closure_6, obj);
     const tmp6 = closure_6;
   }
@@ -185,8 +193,8 @@ prototype["renderButtons"] = function renderButtons() {
   const props = this.props;
   ({ cancelText, confirmText } = props);
   if (undefined === confirmText) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    confirmText = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.BddRzS);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    confirmText = intl.string(getSystemLocale /* getSystemLocale */.t.BddRzS);
   }
   ({ confirmColor, secondaryConfirmText, renderConfirmIcon, renderConfirmRightIcon, renderConfirmButton, isConfirmButtonDisabled } = props);
   let tmp15Result = null;
@@ -198,7 +206,7 @@ prototype["renderButtons"] = function renderButtons() {
       obj = { variant: "secondary", onPress: null, text: null };
       obj[1] = self.handleCancel;
       obj[2] = cancelText;
-      obj[1] = callback(require("../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj);
+      obj[1] = callback(Button /* Button */.Button, obj);
       tmp6 = callback(closure_5, obj);
     }
     let tmp11;
@@ -208,8 +216,8 @@ prototype["renderButtons"] = function renderButtons() {
       obj[2] = self.handleSecondaryConfirm;
       const obj1 = { variant: "text-sm/semibold", color: "text-link", children: null };
       obj1[2] = secondaryConfirmText;
-      obj[3] = callback(require("../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
-      tmp11 = callback(require("../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+      obj[3] = callback(Text /* Text */.Text, obj1);
+      tmp11 = callback(PressableBase /* PressableBase */.PressableOpacity, obj);
     }
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.buttons;
@@ -219,7 +227,7 @@ prototype["renderButtons"] = function renderButtons() {
     }
     if (renderConfirmButtonResult == null) {
       let str = "active";
-      if (require("../../design/void/native.tsx") /* Button */.ButtonColors.GREEN !== confirmColor) {
+      if (Button /* Button */.ButtonColors.GREEN !== confirmColor) {
         str = "destructive";
         if (tmp21(1297).ButtonColors.RED !== confirmColor) {
           str = "secondary";
@@ -267,7 +275,7 @@ prototype["renderButtons"] = function renderButtons() {
         str2 = str3;
       }
       obj3[6] = str2;
-      renderConfirmButtonResult = callback(require("../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj3);
+      renderConfirmButtonResult = callback(Button /* Button */.Button, obj3);
       const tmp20 = callback;
     }
     const items = [renderConfirmButtonResult, tmp6, tmp11];
@@ -298,7 +306,7 @@ prototype["render"] = function render() {
   let obj = { children: null };
   ({ style, isLandscape, onClose } = props);
   obj = { absolute: true, componentStyles: tmp.gradient };
-  const items = [callback(require("../../modules/client_themes/native/ThemedGradient.tsx"), obj), ];
+  const items = [callback(getMixedGradientColor, obj), ];
   obj = { onAccessibilityEscape: onClose, style: items1, children: null };
   items1 = [tmp.alert, style, { width }];
   const items2 = [this.renderHeader(), this.renderBody(), this.renderButtons(), this.renderFooter()];
@@ -321,8 +329,8 @@ Alert.contextType = require("ManaContext").ThemeContext;
 const obj4 = { borderRadius: require("Themes").radii.sm };
 Alert.defaultProps = { confirmColor: require("Button").ButtonColors.BRAND, autoCloseOnConfirm: true };
 const memoResult = importAllResult.memo((arg0) => {
-  const size = require("../../modules/screen/useWindowDimensions.native.tsx")();
-  let obj = require("../../modules/screen/useIsScreenLandscape.native.tsx") /* getIsScreenLandscape */;
+  const size = useWindowDimensions();
+  let obj = getIsScreenLandscape /* getIsScreenLandscape */;
   const isScreenLandscape = obj.useIsScreenLandscape();
   obj = { width: Math.min(0.9 * Math.min(size.width, size.height), 400), contentHeight: 0.7 * size.height, isLandscape: isScreenLandscape };
   const merged = Object.assign(arg0);
@@ -334,7 +342,7 @@ let result = require("jsxProd").fileFinishedImporting("components_native/common/
 
 export default memoResult;
 export const getAlertButtonVariant = function getAlertButtonVariant(confirmColor) {
-  if (require("../../design/void/native.tsx") /* Button */.ButtonColors.GREEN === confirmColor) {
+  if (Button /* Button */.ButtonColors.GREEN === confirmColor) {
     return "active";
   } else if (tmp(1297).ButtonColors.RED === confirmColor) {
     return "destructive";

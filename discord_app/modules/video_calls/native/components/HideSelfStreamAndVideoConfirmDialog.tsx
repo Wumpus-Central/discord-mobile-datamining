@@ -1,3 +1,4 @@
+import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
 // discord_app/modules/video_calls/native/components/HideSelfStreamAndVideoConfirmDialog.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -68,5 +69,5 @@ export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
   items[1] = closure_5(tmp6(4281).Text, obj1);
   obj[1] = items;
   obj.children = callback(View, obj);
-  return closure_5(require("../../../../components_native/common/Alert.tsx"), obj);
+  return closure_5(componentDidMount, obj);
 };

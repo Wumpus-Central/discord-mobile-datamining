@@ -1,3 +1,6 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../../screen/native/useScaledTextLineHeight.android.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/guilds/GuildProgressButton.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -41,9 +44,9 @@ export default function GuildProgressButton(guild) {
   return jsx(guild(7780).RowButton, { source: null });
 };
 export const getScaledGuildProgressButtonHeight = function getScaledGuildProgressButtonHeight(fontScale, isRefreshEnabled) {
-  const refreshToken = require("../../../../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */.resolveRefreshToken(require("../../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_PADDING, isRefreshEnabled);
-  const obj = require("../../../../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */;
-  const sum = refreshToken + require("../../../../screen/native/useScaledTextLineHeight.android.tsx") /* map */.scaleTextLineHeight("text-md/semibold", fontScale);
-  const obj2 = require("../../../../screen/native/useScaledTextLineHeight.android.tsx") /* map */;
-  return sum + 2 * require("../../../../screen/native/useScaledTextLineHeight.android.tsx") /* map */.scaleTextLineHeight("text-xs/medium", fontScale) + refreshToken;
+  const refreshToken = useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */.resolveRefreshToken(Themes.modules.mobile.TABLE_ROW_PADDING, isRefreshEnabled);
+  const obj = useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */;
+  const sum = refreshToken + map /* map */.scaleTextLineHeight("text-md/semibold", fontScale);
+  const obj2 = map /* map */;
+  return sum + 2 * map /* map */.scaleTextLineHeight("text-xs/medium", fontScale) + refreshToken;
 };

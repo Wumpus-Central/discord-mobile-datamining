@@ -1,3 +1,4 @@
+import { ThirdPartyGameApplicationWebsiteCategory } from "../../../../../discord_common/js/shared/shared-constants/ThirdPartyGameApplicationWebsiteCategory.tsx";
 // discord_app/modules/game_profile/native/utils/getGameProfileWebsiteData.tsx
 import { jsx } from "jsxProd";
 
@@ -5,7 +6,7 @@ const result = require("GlobeEarthIcon").fileFinishedImporting("modules/game_pro
 
 export default function getGameProfileWebsiteData(category) {
   category = category.category;
-  if (require("../../../../../discord_common/js/shared/shared-constants/ThirdPartyGameApplicationWebsiteCategory.tsx") /* ThirdPartyGameApplicationWebsiteCategory */.ThirdPartyGameApplicationWebsiteCategory.OFFICIAL === category) {
+  if (ThirdPartyGameApplicationWebsiteCategory /* ThirdPartyGameApplicationWebsiteCategory */.ThirdPartyGameApplicationWebsiteCategory.OFFICIAL === category) {
     let obj = { icon: null, action: null, title: null, url: null };
     obj = { size: "md", color: null };
     obj[1] = arg1;

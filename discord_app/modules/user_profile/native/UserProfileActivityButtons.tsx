@@ -1,3 +1,10 @@
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getStreamURL } from "../../activities/utils/getStreamURL.tsx";
+import { _isStreaming } from "../../activities/utils/isStreaming.tsx";
+import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
 // discord_app/modules/user_profile/native/UserProfileActivityButtons.tsx
 import handleInviteData from "handleInviteData";
 import "getEmbeddedActivityLocationChannelId";
@@ -97,9 +104,9 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
   let analyticsLocations;
   let set;
   let JOINED = dependencyMap;
-  analyticsLocations = require("../../app_analytics/useAnalyticsLocations.tsx")().analyticsLocations;
+  analyticsLocations = context().analyticsLocations;
   set = { id: application.id, deeplink_uri: application.deepLinkUri };
-  let obj = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
   const items = [analyticsLocations, createGuildRecordFromRust, closure_7, upsertRelationship, handleConnectionOpen, updateVoiceState, getUncachedChannelPermissions, updateActivities, filterPlayingActivities, onAction];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_1(outer1_2[22])({ user: closure_0, currentUser: closure_1, activity: closure_2, application, channelId: null, isEmbedded: false, ChannelStore: analyticsLocations, GuildStore: outer1_8, GuildMemberCountStore: outer1_7, RelationshipStore: outer1_11, SelectedChannelStore: outer1_12, VoiceStateStore: outer1_14, PermissionStore: outer1_10, LocalActivityStore: outer1_9, SelfPresenceStore: outer1_13, EmbeddedActivitiesStore: onAction }));
   let tmp3 = null;
@@ -141,15 +148,15 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
     tmp4 = null;
     if (null != sync_id) {
       let obj = { text: null, icon: null, variant: "secondary", onPress: null };
-      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
       obj = { platform: null };
       obj[0] = activity.name;
-      obj[0] = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.LEgD7t, obj);
+      obj[0] = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.LEgD7t, obj);
       obj = { size: null, source: null, disableColor: true, style: null };
-      obj[0] = require("../../../design/void/native.tsx") /* Button */.Icon.Sizes.SMALL;
+      obj[0] = Button /* Button */.Icon.Sizes.SMALL;
       obj[1] = sync_id(8054);
       obj[3] = tmp.icon;
-      obj[1] = jsx(require("../../../design/void/native.tsx") /* Button */.Icon, { size: null, source: null, disableColor: true, style: null });
+      obj[1] = jsx(Button /* Button */.Icon, { size: null, source: null, disableColor: true, style: null });
       obj[3] = callback(function*() {
         if (c5 === 2) {
           c5 = 3;
@@ -226,7 +233,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
           }
         }
       });
-      tmp4 = jsx(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, { size: null, source: null, disableColor: true, style: null });
+      tmp4 = jsx(Button /* Button */.Button, { size: null, source: null, disableColor: true, style: null });
     }
   }
   return tmp4;
@@ -236,20 +243,20 @@ export const WatchActivityButton = function WatchActivityButton(arg0) {
   let require;
   ({ activity, onAction: require } = arg0);
   let importDefault;
-  const tmp2 = require("../../activities/utils/getStreamURL.tsx")(activity);
+  const tmp2 = getStreamURL(activity);
   importDefault = tmp2;
   let tmp3 = null;
-  if (require("../../activities/utils/isStreaming.tsx")(activity)) {
+  if (_isStreaming(activity)) {
     tmp3 = null;
     if (null != tmp2) {
       const obj = { text: null, variant: "secondary", onPress: null };
-      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.I6JG46);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.I6JG46);
       obj[2] = function onPress() {
         callback({ action: "PRESS_WATCH_BUTTON" });
         _undefined(outer1_2[34]).openURL(_undefined);
       };
-      tmp3 = jsx(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, { text: null, variant: "secondary", onPress: null });
+      tmp3 = jsx(Button /* Button */.Button, { text: null, variant: "secondary", onPress: null });
     }
   }
   return tmp3;

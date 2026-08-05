@@ -1,3 +1,5 @@
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/EntitlementActionCreators.tsx
 import set from "set";
 import { Endpoints } from "ME";
@@ -116,13 +118,13 @@ export const fetchUserEntitlementsForApplication = function fetchUserEntitlement
   if (arg1 === undefined) {
     flag = true;
   }
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj.wait(() => {
     let obj = outer1_1(outer1_2[2]);
     obj = { type: "ENTITLEMENT_FETCH_APPLICATION_START", applicationId: closure_0 };
     obj.dispatch(obj);
   });
-  const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+  const HTTP = _sendRequest.HTTP;
   obj = { url: Endpoints.ENTITLEMENTS_FOR_APPLICATION(closure_18), oldFormErrors: true, query: { exclude_consumed: flag }, rejectWithError: true };
   const value = HTTP.get(obj);
   return value.then((body) => {

@@ -1,3 +1,5 @@
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { readSnowflake } from "InviteCodeUtils.tsx";
 // discord_app/modules/instant_invite/resolveInvite.tsx
 import fetchFingerprint from "fetchFingerprint";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -23,11 +25,11 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
   const _require = inviteKey;
   const importDefault = arg1;
   const dependencyMap = inviteInstanceId;
-  let obj = _require("InviteCodeUtils.tsx");
+  let obj = _readSnowflake;
   const result = obj.parseExtraDataFromInviteKey(inviteKey);
   const baseCode = result.baseCode;
   ({ targetChannelId, targetMessageId, guildScheduledEventId } = result);
-  let obj1 = require("../../utils/AnalyticsUtils.tsx");
+  let obj1 = expandEventProperties;
   obj = { invite_code: baseCode, invite_instance_id: null };
   inviteInstanceId = undefined;
   if (inviteInstanceId != null) {

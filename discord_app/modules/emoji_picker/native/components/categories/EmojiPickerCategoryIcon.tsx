@@ -1,3 +1,15 @@
+import { BicycleIcon } from "../../../../../design/components/Icon/native/redesign/generated/BicycleIcon.tsx";
+import { ClockIcon } from "../../../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
+import { FlagIcon } from "../../../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
+import { FoodIcon } from "../../../../../design/components/Icon/native/redesign/generated/FoodIcon.tsx";
+import { GameControllerIcon } from "../../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
+import { HeartIcon } from "../../../../../design/components/Icon/native/redesign/generated/HeartIcon.tsx";
+import { NatureIcon } from "../../../../../design/components/Icon/native/redesign/generated/NatureIcon.tsx";
+import { NitroWheelIcon } from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import { ObjectIcon } from "../../../../../design/components/Icon/native/redesign/generated/ObjectIcon.tsx";
+import { ReactionIcon } from "../../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
+import { StarIcon } from "../../../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
+import { TrophyIcon } from "../../../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
 // discord_app/modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx
 import { EmojiCategories } from "EmojiCategoryTypes";
 import { jsx } from "jsxProd";
@@ -7,32 +19,32 @@ const require = arg1;
 const memoResult = require("noop").memo(function EmojiPickerCategoryIcon(id) {
   id = id.id;
   if (EmojiCategories.TOP_GUILD_EMOJI === id) {
-    return jsx(require("../../../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx") /* TrophyIcon */.TrophyIcon, {});
+    return jsx(TrophyIcon /* TrophyIcon */.TrophyIcon, {});
   } else if (tmp.FAVORITES === id) {
-    return jsx(require("../../../../../design/components/Icon/native/redesign/generated/StarIcon.tsx") /* StarIcon */.StarIcon, {});
+    return jsx(StarIcon /* StarIcon */.StarIcon, {});
   } else if (tmp.RECENT === id) {
-    return jsx(require("../../../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx") /* ClockIcon */.ClockIcon, {});
+    return jsx(ClockIcon /* ClockIcon */.ClockIcon, {});
   } else if (tmp.PEOPLE === id) {
-    return jsx(require("../../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx") /* ReactionIcon */.ReactionIcon, {});
+    return jsx(ReactionIcon /* ReactionIcon */.ReactionIcon, {});
   } else if (tmp.NATURE === id) {
-    return jsx(require("../../../../../design/components/Icon/native/redesign/generated/NatureIcon.tsx") /* NatureIcon */.NatureIcon, {});
+    return jsx(NatureIcon /* NatureIcon */.NatureIcon, {});
   } else if (tmp.FOOD === id) {
-    return jsx(require("../../../../../design/components/Icon/native/redesign/generated/FoodIcon.tsx") /* FoodIcon */.FoodIcon, {});
+    return jsx(FoodIcon /* FoodIcon */.FoodIcon, {});
   } else if (tmp.ACTIVITY === id) {
-    return jsx(require("../../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx") /* GameControllerIcon */.GameControllerIcon, {});
+    return jsx(GameControllerIcon /* GameControllerIcon */.GameControllerIcon, {});
   } else if (tmp.TRAVEL === id) {
-    return jsx(require("../../../../../design/components/Icon/native/redesign/generated/BicycleIcon.tsx") /* BicycleIcon */.BicycleIcon, {});
+    return jsx(BicycleIcon /* BicycleIcon */.BicycleIcon, {});
   } else if (tmp.OBJECTS === id) {
-    return jsx(require("../../../../../design/components/Icon/native/redesign/generated/ObjectIcon.tsx") /* ObjectIcon */.ObjectIcon, {});
+    return jsx(ObjectIcon /* ObjectIcon */.ObjectIcon, {});
   } else if (tmp.SYMBOLS === id) {
-    return jsx(require("../../../../../design/components/Icon/native/redesign/generated/HeartIcon.tsx") /* HeartIcon */.HeartIcon, {});
+    return jsx(HeartIcon /* HeartIcon */.HeartIcon, {});
   } else if (tmp.FLAGS === id) {
-    return jsx(require("../../../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx") /* FlagIcon */.FlagIcon, {});
+    return jsx(FlagIcon /* FlagIcon */.FlagIcon, {});
   } else {
     if (tmp.CUSTOM !== id) {
       const PREMIUM_UPSELL = tmp.PREMIUM_UPSELL;
     }
-    return jsx(require("../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx") /* NitroWheelIcon */.NitroWheelIcon, {});
+    return jsx(NitroWheelIcon /* NitroWheelIcon */.NitroWheelIcon, {});
   }
 });
 const result = require("jsxProd").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx");

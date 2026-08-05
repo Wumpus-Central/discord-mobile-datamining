@@ -1,3 +1,4 @@
+import { Button } from "../../../../design/void/native.tsx";
 // discord_app/modules/forums/native/posts/ForumPostNewTag.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -12,5 +13,5 @@ const result = require("createCacheKey").fileFinishedImporting("modules/forums/n
 
 export default function ForumPostNewTag(containerStyle) {
   containerStyle = [containerStyle.containerStyle, createCacheKey().container];
-  return jsx(require("../../../../design/void/native.tsx") /* Button */.NewTag, { containerStyle, variant: "text-xs/bold", color: "badge-text-brand" });
+  return jsx(Button /* Button */.NewTag, { containerStyle, variant: "text-xs/bold", color: "badge-text-brand" });
 };

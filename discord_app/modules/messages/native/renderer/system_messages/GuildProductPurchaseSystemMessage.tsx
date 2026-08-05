@@ -1,3 +1,8 @@
+import { ensureAvatarSource } from "../../../../../utils/native/AvatarUtils.tsx";
+import { useNullableMessageAuthor } from "../../../useMessageAuthor.tsx";
+import { createCommonMessage } from "createCommonMessage.tsx";
+import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
+import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/GuildProductPurchaseSystemMessage.tsx
 import hasFlag from "hasFlag";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -28,11 +33,11 @@ export const createGuildProductPurchaseSystemMessage = function createGuildProdu
     if (channel != null) {
       const guildId = channel.getGuildId();
     }
-    let obj1 = require("../../../useMessageAuthor.tsx") /* useNullableMessageAuthor */;
+    let obj1 = useNullableMessageAuthor /* useNullableMessageAuthor */;
     const guildMemberAvatar = obj1.getMessageAuthor(message).guildMemberAvatar;
-    let obj2 = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */;
+    let obj2 = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
     const messageAuthorWithProcessedColor = obj2.getMessageAuthorWithProcessedColor(message);
-    require("../../../../../utils/native/AvatarUtils.tsx") /* ensureAvatarSource */;
+    ensureAvatarSource /* ensureAvatarSource */;
     if (null != guildMemberAvatar) {
       if (null != guildId) {
         let tmp5Result = tmp5(1416);
@@ -50,14 +55,14 @@ export const createGuildProductPurchaseSystemMessage = function createGuildProdu
       obj2[0] = message;
       obj2[1] = messageAuthorWithProcessedColor;
       obj2[2] = message.roleStyle;
-      obj1[1] = require("formatUsernameOnClick.tsx")(obj2);
+      obj1[1] = formatUsernameOnClick(obj2);
       obj1[2] = product_name;
       obj[0] = tmp5Result.getGuildProductPurchaseSystemMessageContentMobile(obj1);
       obj[2] = messageAuthorWithProcessedColor.nick;
       obj[3] = tmp9(guildMemberAvatarSource).uri;
       const intl = tmp5(1236).intl;
       obj[4] = intl.string(tmp5(1236).t.s2N5HS);
-      const merged1 = Object.assign(require("createCommonMessage.tsx")(obj));
+      const merged1 = Object.assign(createCommonMessage(obj));
       return obj;
     }
     guildMemberAvatarSource = author.getAvatarSource(undefined);

@@ -1,3 +1,6 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { EmailVerificationModalActionCreators } from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/account/native/UserSettingsAccountUnverifiedHeader.tsx
 import "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -8,26 +11,26 @@ let c4;
 let c5;
 const require = arg1;
 function handleOpenEmailVerification() {
-  require("../../../../actions/native/EmailVerificationModalActionCreators.tsx").open();
+  EmailVerificationModalActionCreators.open();
 }
 function getBannerText(currentUser) {
   if (null == currentUser) {
     return null;
   } else if (null == currentUser.email) {
     let obj = { title: null, button: null };
-    const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[0] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/yqgqs"]);
-    const intl4 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[1] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.ydw5nX);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    obj[0] = intl3.string(getSystemLocale /* getSystemLocale */.t["/yqgqs"]);
+    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    obj[1] = intl4.string(getSystemLocale /* getSystemLocale */.t.ydw5nX);
     let tmp3 = obj;
   } else {
     tmp3 = null;
     if (!currentUser.verified) {
       obj = { title: null, button: null };
-      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["3sWbf3"]);
-      const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["13ofGu"]);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["3sWbf3"]);
+      const intl2 = getSystemLocale /* getSystemLocale */.intl;
+      obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["13ofGu"]);
       tmp3 = obj;
     }
   }
@@ -44,7 +47,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/user_settings/a
 
 export default function UserSettingsAccountUnverifiedHeader() {
   const tmp = createCacheKey();
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [mergeGuildAvatar];
   const tmp4 = getBannerText(obj.useStateFromStores(items, () => currentUser.getCurrentUser()));
   let tmp5 = null;

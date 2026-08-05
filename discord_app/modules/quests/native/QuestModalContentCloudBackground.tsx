@@ -1,3 +1,7 @@
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { isThemeLight } from "../../../design/utils/shared/themes.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
 // discord_app/modules/quests/native/QuestModalContentCloudBackground.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -65,8 +69,8 @@ export default function QuestModalContentCloudBackground(align) {
     str2 = resizeMode;
   }
   const tmp = callback("bottom" === str);
-  let obj = require("../../../design/utils/shared/themes.tsx") /* isThemeLight */;
-  let obj1 = require("../../../hooks/useTheme.tsx") /* useTheme */;
+  let obj = isThemeLight /* isThemeLight */;
+  let obj1 = useTheme /* useTheme */;
   const isThemeDarkResult = obj.isThemeDark(obj1.useTheme());
   obj = { style: items, children: null };
   items = [tmp.wrapper, style];
@@ -74,7 +78,7 @@ export default function QuestModalContentCloudBackground(align) {
     obj = { colors: null, style: null };
     obj[0] = "top" === str ? items : closure_9;
     obj[1] = tmp.gradient;
-    tmp6(require("../../../../_runtime/04706_LinearGradient.js"), obj);
+    tmp6(LinearGradient, obj);
   } else {
     obj1 = { style: null };
     obj1[0] = tmp.solidBackground;
@@ -84,7 +88,7 @@ export default function QuestModalContentCloudBackground(align) {
     obj2[0] = items2;
     obj2[1] = importDefault(isThemeDarkResult ? 14270 : 14271);
     obj2[2] = str2;
-    items1[1] = tmp6(require("../../../components_native/common/FastImage.tsx"), obj2);
+    items1[1] = tmp6(preload, obj2);
     obj[1] = items1;
     return tmp4(tmp5, obj);
   }

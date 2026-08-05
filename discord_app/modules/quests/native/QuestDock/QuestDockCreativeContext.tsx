@@ -1,3 +1,4 @@
+import { AdCreativeType } from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 // discord_app/modules/quests/native/QuestDock/QuestDockCreativeContext.tsx
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
@@ -8,7 +9,7 @@ const result = require("AdCreativeType").fileFinishedImporting("modules/quests/n
 
 export const getDeliveredQuest = function getDeliveredQuest(mobileQuestDock) {
   let quest = null;
-  if (mobileQuestDock.type === require("../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx") /* AdCreativeType */.AdCreativeType.QUEST) {
+  if (mobileQuestDock.type === AdCreativeType /* AdCreativeType */.AdCreativeType.QUEST) {
     quest = mobileQuestDock.quest;
   }
   return quest;

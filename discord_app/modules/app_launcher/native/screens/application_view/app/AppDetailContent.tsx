@@ -1,3 +1,5 @@
+import { TableRowInner } from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { usePlaceholderWidth } from "../../../hooks/usePlaceholderSize.tsx";
 // discord_app/modules/app_launcher/native/screens/application_view/app/AppDetailContent.tsx
 import ME from "ME";
 import findCommandInSection from "findCommandInSection";
@@ -25,9 +27,9 @@ function PlaceholderCommandRow(isFirstRow) {
     flag2 = false;
   }
   const tmp = createCacheKey();
-  let obj = require("../../../hooks/usePlaceholderSize.tsx") /* usePlaceholderWidth */;
+  let obj = usePlaceholderWidth /* usePlaceholderWidth */;
   const placeholderWidth = obj.usePlaceholderWidth(10, 50);
-  let obj1 = require("../../../hooks/usePlaceholderSize.tsx") /* usePlaceholderWidth */;
+  let obj1 = usePlaceholderWidth /* usePlaceholderWidth */;
   const placeholderWidth1 = obj1.usePlaceholderWidth(30, 90);
   obj = { label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null };
   obj = { style: null };
@@ -43,7 +45,7 @@ function PlaceholderCommandRow(isFirstRow) {
   obj[1] = callback2(View, obj2);
   obj[3] = flag;
   obj[4] = flag2;
-  return callback2(require("../../../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
+  return callback2(TableRowInner /* TableRowInner */.TableRow, obj);
 }
 class CommandRow {
   constructor(arg0) {

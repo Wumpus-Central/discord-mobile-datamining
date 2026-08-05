@@ -1,3 +1,5 @@
+import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
+import { isAnimatedBackgroundOption } from "VideoBackgroundUtils.tsx";
 // discord_app/modules/video_backgrounds/LastUsedVideoBackgroundOption.tsx
 import noop from "noop";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -12,8 +14,8 @@ export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgro
   if (voiceAndVideo != null) {
     prop = voiceAndVideo.videoBackgroundFilterDesktop;
   }
-  const videoBackgroundOptionFromProto = require("VideoBackgroundUtils.tsx") /* isAnimatedBackgroundOption */.getVideoBackgroundOptionFromProto(prop, currentUser.id);
-  const obj = require("VideoBackgroundUtils.tsx") /* isAnimatedBackgroundOption */;
+  const videoBackgroundOptionFromProto = isAnimatedBackgroundOption /* isAnimatedBackgroundOption */.getVideoBackgroundOptionFromProto(prop, currentUser.id);
+  const obj = isAnimatedBackgroundOption /* isAnimatedBackgroundOption */;
   const tmp2 = require;
   if (!obj2.isCustomBackgroundOption(videoBackgroundOptionFromProto)) {
     if (typeof videoBackgroundOptionFromProto !== "number") {
@@ -25,7 +27,7 @@ export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgro
     let tmp6 = tmp7;
   } else {
     tmp6 = null;
-    const obj3 = require("../../utils/PremiumUtils.tsx");
+    const obj3 = getPremiumPlanItem;
   }
   return tmp6;
 };

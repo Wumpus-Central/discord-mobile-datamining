@@ -1,3 +1,12 @@
+import { registerAsset } from "../../../../../_runtime/12514_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13116_registerAsset.js";
+import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { nameFromUser } from "../../../../utils/UserUtils.tsx";
+import { render } from "../../../guild/native/GuildInviteIcon.tsx";
+import { useIsWindowLarge } from "../../../screen/native/useIsWindowLarge.tsx";
 // discord_app/modules/auth/native/components/Welcome.tsx
 import nameFromUser from "nameFromUser";
 import get_ActivityIndicator from "module_38";
@@ -37,21 +46,21 @@ function InviteCard(invite) {
     if (null != guild) {
       let obj = { guild: null };
       obj[0] = guild;
-      let tmp14 = callback(require("../../../guild/native/GuildInviteIcon.tsx"), obj);
-      const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      let stringResult = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["3rE1P8"]);
+      let tmp14 = callback(render, obj);
+      const intl2 = getSystemLocale /* getSystemLocale */.intl;
+      let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t["3rE1P8"]);
       let name = guild.name;
       let tmp17 = require;
       let tmp18 = callback;
     } else if (null != tmp2) {
-      require("../../../../../_runtime/metro/00038__.js")(null != inviter, "Null inviter");
+      00038__(null != inviter, "Null inviter");
       obj = { user: null, guildId: "a" };
       const tmp12 = new createdAt(inviter);
       obj[0] = tmp12;
-      tmp14 = callback(require("../../../../design/void/native.tsx") /* Button */.Avatar, obj);
-      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      stringResult = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.OsdY8B);
-      let obj1 = require("../../../../utils/UserUtils.tsx");
+      tmp14 = callback(Button /* Button */.Avatar, obj);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.OsdY8B);
+      let obj1 = nameFromUser;
       name = obj1.getFormattedName(inviter);
       tmp17 = require;
       tmp18 = callback;
@@ -61,14 +70,14 @@ function InviteCard(invite) {
       obj = { user: null, guildId: "a" };
       const tmp33 = new createdAt(inviter);
       obj[0] = tmp33;
-      const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      stringResult = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["+ITYkQ"]);
-      const tmp35 = callback(require("../../../../design/void/native.tsx") /* Button */.Avatar, obj);
-      name = require("../../../../utils/UserUtils.tsx").getFormattedName(inviter, true);
+      const intl3 = getSystemLocale /* getSystemLocale */.intl;
+      stringResult = intl3.string(getSystemLocale /* getSystemLocale */.t["+ITYkQ"]);
+      const tmp35 = callback(Button /* Button */.Avatar, obj);
+      name = nameFromUser.getFormattedName(inviter, true);
       tmp14 = tmp35;
       tmp17 = require;
       tmp18 = callback;
-      const obj9 = require("../../../../utils/UserUtils.tsx");
+      const obj9 = nameFromUser;
     }
     obj1 = { style: null, children: null };
     const items = [tmp.container, invite.style];
@@ -95,13 +104,13 @@ function GuildTemplateCard(arg0) {
   const tmp = createCacheKey();
   let obj = { style: items, children: null };
   items = [tmp.container, style];
-  obj = { source: require("../../../../../_runtime/12514_registerAsset.js") };
+  obj = { source: registerAsset };
   const items1 = [callback(closure_5, obj), ];
   obj = { style: tmp.text, children: null };
   const obj1 = { variant: "text-sm/medium", color: "text-subtle", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.QzUORX);
-  const items2 = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1), callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: guildTemplate.name })];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj1[2] = intl.string(getSystemLocale /* getSystemLocale */.t.QzUORX);
+  const items2 = [callback(Text /* Text */.Text, obj1), callback(Text /* Text */.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: guildTemplate.name })];
   obj[1] = items2;
   items1[1] = callback2(closure_4, obj);
   obj[1] = items1;
@@ -111,7 +120,7 @@ function Centerpiece(inlineButtons) {
   let guildTemplate;
   let invite;
   ({ invite, guildTemplate } = inlineButtons);
-  const tmp2 = require("../../../screen/native/useIsWindowLarge.tsx")();
+  const tmp2 = useIsWindowLarge();
   const tmp3 = callback3(tmp2);
   let tmp7 = null != guildTemplate;
   if (tmp7) {
@@ -120,7 +129,7 @@ function Centerpiece(inlineButtons) {
   let obj = { style: items, children: null };
   items = [tmp3.centerpieceContainer];
   obj = { alwaysBounceVertical: false, contentContainerStyle: tmp3.scrollViewContainer, children: null };
-  obj = { style: tmp3.logo, source: require("../../../../../_runtime/13116_registerAsset.js") /* registerAsset */ };
+  obj = { style: tmp3.logo, source: registerAsset /* registerAsset */ };
   const items1 = [callback(closure_5, obj), , ];
   const obj1 = { style: tmp3.header, lineClamp: null, variant: "display-md", color: "text-overlay-light", maxFontSizeMultiplier: 1, children: null };
   let num = 2;
@@ -129,8 +138,8 @@ function Centerpiece(inlineButtons) {
   }
   obj1[1] = num;
   const intl = tmp4(1236).intl;
-  obj1[5] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["3S2xmm"]);
-  const items2 = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Heading, obj1), , , ];
+  obj1[5] = intl.string(getSystemLocale /* getSystemLocale */.t["3S2xmm"]);
+  const items2 = [callback(Text /* Text */.Heading, obj1), , , ];
   const items3 = [tmp3.subHeader, ];
   if (null != invite) {
     let subHeaderWithInvite = tmp3.subHeaderWithInvite;
@@ -140,8 +149,8 @@ function Centerpiece(inlineButtons) {
   const obj2 = { variant: "text-md/medium", color: "text-overlay-light", style: items3, maxFontSizeMultiplier: 3, children: null };
   items3[1] = subHeaderWithInvite;
   const intl2 = tmp4(1236).intl;
-  obj2[4] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Gtcthl);
-  items2[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+  obj2[4] = intl2.string(getSystemLocale /* getSystemLocale */.t.Gtcthl);
+  items2[1] = callback(Text /* Text */.Text, obj2);
   let tmp9Result = null;
   if (null != invite) {
     const obj3 = { invite: null };

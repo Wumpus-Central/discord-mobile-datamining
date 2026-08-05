@@ -1,3 +1,6 @@
+import { createEmptyState } from "../modules/channel_text_area/slate/SlateUtils.tsx";
+import { rebuild } from "../modules/messages/MessageParser.tsx";
+import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
 // discord_app/stores/EditMessageStore.tsx
 import reinjectEphemerals from "reinjectEphemerals";
 import { Store } from "initialize";
@@ -64,15 +67,15 @@ const editMessageStore = new EditMessageStore(require("dispatcher"), {
     let source;
     ({ channelId, content } = arg0);
     ({ messageId, source } = arg0);
-    const UseLegacyChatInput = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.UseLegacyChatInput;
+    const UseLegacyChatInput = explicitContentFromProto /* explicitContentFromProto */.UseLegacyChatInput;
     const setting = UseLegacyChatInput.getSetting();
-    let obj = require("../modules/messages/MessageParser.tsx");
+    let obj = rebuild;
     const unparseResult = obj.unparse(content, channelId);
     obj = { channelId, messageId, textValue: unparseResult, richValue: null };
     if (setting) {
       content = unparseResult;
     }
-    obj[3] = require("../modules/channel_text_area/slate/SlateUtils.tsx") /* createEmptyState */.toRichValue(content);
+    obj[3] = createEmptyState /* createEmptyState */.toRichValue(content);
     closure_4[channelId] = obj;
     closure_5[channelId] = source;
   },

@@ -1,3 +1,6 @@
+import { Text } from "../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { set } from "../../utils/Durations.tsx";
 // discord_app/components_native/common/CountDown.tsx
 import { jsx } from "jsxProd";
 import { Component } from "noop";
@@ -28,8 +31,8 @@ prototype["render"] = function render() {
   const style = this.props;
   ({ postDeadlineText, deadline, freezeAtRemainingSeconds } = style);
   if (deadline === Infinity) {
-    const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    let children = intl5.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.PqEzn8);
+    const intl5 = getSystemLocale /* getSystemLocale */.intl;
+    let children = intl5.string(getSystemLocale /* getSystemLocale */.t.PqEzn8);
   } else {
     const _Math5 = Math;
     const _Number = Number;
@@ -41,15 +44,15 @@ prototype["render"] = function render() {
     }
     if (result < 0) {
       const _Math = Math;
-      const items = [Math.floor(result / require("../../utils/Durations.tsx").Seconds.DAY), , , ];
+      const items = [Math.floor(result / set.Seconds.DAY), , , ];
       const _Math2 = Math;
-      const result1 = result % require("../../utils/Durations.tsx").Seconds.DAY;
-      items[1] = Math.floor(result1 / require("../../utils/Durations.tsx").Seconds.HOUR);
+      const result1 = result % set.Seconds.DAY;
+      items[1] = Math.floor(result1 / set.Seconds.HOUR);
       const _Math3 = Math;
-      const result2 = result1 % require("../../utils/Durations.tsx").Seconds.HOUR;
-      items[2] = Math.floor(result2 / require("../../utils/Durations.tsx").Seconds.MINUTE);
+      const result2 = result1 % set.Seconds.HOUR;
+      items[2] = Math.floor(result2 / set.Seconds.MINUTE);
       const _Math4 = Math;
-      items[3] = Math.floor(result2 % require("../../utils/Durations.tsx").Seconds.MINUTE);
+      items[3] = Math.floor(result2 % set.Seconds.MINUTE);
       let num = 0;
       if (0 === items[0]) {
         items.shift();
@@ -66,14 +69,14 @@ prototype["render"] = function render() {
       const joined = mapped.join(":");
       children = joined;
       if (tmp) {
-        const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        const items1 = [intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.QJyuxY), , , ];
-        const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        items1[1] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["1LyF1h"]);
-        const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        items1[2] = intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.n7dksO);
-        const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        items1[3] = intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["6m/6nM"]);
+        const intl = getSystemLocale /* getSystemLocale */.intl;
+        const items1 = [intl.string(getSystemLocale /* getSystemLocale */.t.QJyuxY), , , ];
+        const intl2 = getSystemLocale /* getSystemLocale */.intl;
+        items1[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["1LyF1h"]);
+        const intl3 = getSystemLocale /* getSystemLocale */.intl;
+        items1[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.n7dksO);
+        const intl4 = getSystemLocale /* getSystemLocale */.intl;
+        items1[3] = intl4.string(getSystemLocale /* getSystemLocale */.t["6m/6nM"]);
         let tmp11 = num;
         let tmp12 = joined;
         if (-1 !== joined.indexOf(":")) {
@@ -105,7 +108,7 @@ prototype["render"] = function render() {
     const NumberResult = Number(deadline);
     tmp2 = null != freezeAtRemainingSeconds && result <= freezeAtRemainingSeconds;
   }
-  return jsx(require("../../design/components/Text/native/Text.tsx") /* Text */.Text, { tabularNumbers: true, variant: "text-md/semibold", style: style.style, children });
+  return jsx(Text /* Text */.Text, { tabularNumbers: true, variant: "text-md/semibold", style: style.style, children });
 };
 let result = require("getSystemLocale").fileFinishedImporting("components_native/common/CountDown.tsx");
 

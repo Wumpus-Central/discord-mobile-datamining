@@ -1,3 +1,6 @@
+import { siteKey } from "../../../_runtime/16227_siteKey.js";
+import { convertStringArrayToSkemaErrorItems } from "../../../discord_common/js/packages/http-utils/V8APIError.tsx";
+import { expandEventProperties } from "../AnalyticsUtils.tsx";
 // discord_app/utils/native/CaptchaUtils.tsx
 import noop from "noop";
 import get_ActivityIndicator from "set";
@@ -23,12 +26,12 @@ export default {
   showCaptcha() {
     let RECAPTCHA = arg0;
     if (arg0 === undefined) {
-      RECAPTCHA = require("../../../discord_common/js/packages/http-utils/V8APIError.tsx") /* convertStringArrayToSkemaErrorItems */.CaptchaTypes.RECAPTCHA;
+      RECAPTCHA = convertStringArrayToSkemaErrorItems /* convertStringArrayToSkemaErrorItems */.CaptchaTypes.RECAPTCHA;
     }
     const self = this;
     closure_4.dismiss();
-    require("../AnalyticsUtils.tsx").track(constants.OPEN_MODAL, { type: "CAPTCHA" });
-    if (RECAPTCHA === require("../../../discord_common/js/packages/http-utils/V8APIError.tsx") /* convertStringArrayToSkemaErrorItems */.CaptchaTypes.HCAPTCHA) {
+    expandEventProperties.track(constants.OPEN_MODAL, { type: "CAPTCHA" });
+    if (RECAPTCHA === convertStringArrayToSkemaErrorItems /* convertStringArrayToSkemaErrorItems */.CaptchaTypes.HCAPTCHA) {
       if (null != arg1) {
         let showHcaptchaResult = self.showHcaptcha(arg1, arg2);
       }
@@ -247,7 +250,7 @@ export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
   };
   let obj2 = siteKey(514);
   const merged1 = Object.assign(merged);
-  return jsx(require("../../../_runtime/16227_siteKey.js"), {
+  return jsx(siteKey, {
     siteKey,
     onMessage(nativeEvent) {
       if (null != nativeEvent.nativeEvent.data) {

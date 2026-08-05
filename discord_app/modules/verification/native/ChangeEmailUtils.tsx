@@ -1,3 +1,4 @@
+import { keys } from "../../../ConstantsIOS.tsx";
 // discord_app/modules/verification/native/ChangeEmailUtils.tsx
 import set from "set";
 import ChangeEmailFields from "ChangeEmailFields";
@@ -139,13 +140,13 @@ export const saveEmail = function saveEmail(arg0, c2, outer1_7) {
   return applyArgumentsResult;
 };
 export const finishChangeEmailFlow = function finishChangeEmailFlow(closure_2, closure_4) {
-  const replaced = closure_2.replace(require("../../../ConstantsIOS.tsx") /* keys */.VerificationModalScenes.CHANGE_EMAIL_COMPLETE, { email: closure_4 });
+  const replaced = closure_2.replace(keys /* keys */.VerificationModalScenes.CHANGE_EMAIL_COMPLETE, { email: closure_4 });
 };
 export const finishVerifyEmailFlow = function finishVerifyEmailFlow(closure_2, closure_7) {
-  const tmp3 = closure_7(require("../../../ConstantsIOS.tsx") /* keys */.VerificationModalScenes.RESEND_EMAIL);
+  const tmp3 = closure_7(keys /* keys */.VerificationModalScenes.RESEND_EMAIL);
   if (-1 !== tmp3) {
     closure_2.pop(closure_2.getState().routes.length - tmp3);
   } else {
-    const replaced = closure_2.replace(require("../../../ConstantsIOS.tsx") /* keys */.VerificationModalScenes.RESEND_EMAIL);
+    const replaced = closure_2.replace(keys /* keys */.VerificationModalScenes.RESEND_EMAIL);
   }
 };

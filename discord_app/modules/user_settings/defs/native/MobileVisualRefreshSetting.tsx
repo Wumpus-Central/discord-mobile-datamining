@@ -1,3 +1,7 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { dispatcher } from "../../../../Dispatcher.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/user_settings/defs/native/MobileVisualRefreshSetting.tsx
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";
@@ -7,17 +11,17 @@ const require = arg1;
 const name = require("useIsMobileVisualRefreshExperimentEnabled").MobileVisualRefreshExperiment.definition.name;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.s3amTp);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.s3amTp);
   },
   useDescription() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6e1ir2"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["6e1ir2"]);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   usePredicate: function useIsInDTesterExperimentVariant() {
     const items = [initialize, fetchFingerprint];
-    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+    return initialize /* initialize */.useStateFromStores(items, () => {
       serverAssignment = serverAssignment.getServerAssignment("user", id.getId(), closure_5);
       let tmp2 = null != serverAssignment;
       if (tmp2) {
@@ -27,11 +31,11 @@ createToggle = {
     });
   },
   useValue: function useIsRefreshEnabled() {
-    const MobileVisualRefreshExperiment = require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */.MobileVisualRefreshExperiment;
+    const MobileVisualRefreshExperiment = useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */.MobileVisualRefreshExperiment;
     return MobileVisualRefreshExperiment.useConfig({ location: "SettingsAppearance" }).enabled;
   },
   onValueChange: function onToggleRefresh(arg0) {
-    const dispatch = require("../../../../Dispatcher.tsx").dispatch;
+    const dispatch = dispatcher.dispatch;
     if (arg0) {
       let obj = { type: "APEX_EXPERIMENT_OVERRIDE_DELETE", experimentName: null };
       obj[1] = name;

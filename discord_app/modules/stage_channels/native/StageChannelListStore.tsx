@@ -1,3 +1,4 @@
+import { isIterable } from "../../../../_runtime/03898_isIterable.js";
 // discord_app/modules/stage_channels/native/StageChannelListStore.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -49,5 +50,5 @@ export const useActiveSpeakerPillState = function useActiveSpeakerPillState() {
     const items = [, ];
     ({ showActiveSpeakerPill: arr[0], setShowActiveSpeakerPill: arr[1] } = arg0);
     return items;
-  }, require("../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
+  }, isIterable /* isIterable */.shallow);
 };

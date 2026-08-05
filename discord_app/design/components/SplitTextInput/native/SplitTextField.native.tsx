@@ -1,3 +1,7 @@
+import { useInputStyles } from "../../Input/native/InputFieldContainer.native.tsx";
+import { useInputClearButton } from "../../Input/native/useInputClearButton.native.tsx";
+import { BaseTextField } from "../../TextField/native/BaseTextField.native.tsx";
+import { useTextFieldState } from "../../TextField/native/useTextField.native.tsx";
 // discord_app/design/components/SplitTextInput/native/SplitTextField.native.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -13,13 +17,13 @@ const forwardRefResult = require("noop").forwardRef((size, ref) => {
   let inputStyle;
   let state;
   let trailing;
-  let obj = require("../../Input/native/InputFieldContainer.native.tsx") /* useInputStyles */;
+  let obj = useInputStyles /* useInputStyles */;
   obj = { size: size.size, isRound: size.isRound };
   const inputStyles = obj.useInputStyles(obj);
-  let obj2 = require("../../TextField/native/useTextField.native.tsx") /* useTextFieldState */;
+  let obj2 = useTextFieldState /* useTextFieldState */;
   const textField = obj2.useTextField(size, ref);
   ({ inputProps, innerRef, state } = textField);
-  let obj3 = require("../../Input/native/useInputClearButton.native.tsx") /* useInputClearButton */;
+  let obj3 = useInputClearButton /* useInputClearButton */;
   const inputClearButtonConfig = obj3.useInputClearButtonConfig(size, state);
   let tmp6;
   if (null != inputClearButtonConfig) {
@@ -58,7 +62,7 @@ const forwardRefResult = require("noop").forwardRef((size, ref) => {
   obj3.leading = tmp8;
   obj3.trailing = trailing;
   obj3.inputStyle = inputStyle;
-  return jsx(require("../../TextField/native/BaseTextField.native.tsx") /* BaseTextField */.BaseTextField, {});
+  return jsx(BaseTextField /* BaseTextField */.BaseTextField, {});
 });
 const result = require("jsxProd").fileFinishedImporting("design/components/SplitTextInput/native/SplitTextField.native.tsx");
 

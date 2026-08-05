@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/media_engine/useMuteAwareLocalVolume.tsx
 import noop from "noop";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -10,7 +11,7 @@ export default function useMuteAwareLocalVolume(arg0, arg1) {
   let closure_1 = arg1;
   let obj = { effectiveVolume: null, handleVolumeChange: null };
   const items = [_detectH265HardwareDecode];
-  obj[0] = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  obj[0] = _initialize.useStateFromStores(items, () => {
     let num = 0;
     if (null != closure_0) {
       num = 0;

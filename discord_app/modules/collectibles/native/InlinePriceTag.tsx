@@ -1,3 +1,16 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
+import { getItemRecordsFromPurchases } from "../CollectiblesUtils.tsx";
+import { useCanPurchaseFrames } from "../hooks/useCanPurchaseFrames.tsx";
+import { useCurrentUser } from "../hooks/useCurrentUser.tsx";
+import { useProductDisableState } from "../hooks/useProductDisableState.tsx";
+import { hasAtLeastOneGPlaySynced } from "CollectiblesUtils.tsx";
+import { useVirtualCurrencyData } from "hooks/useVirtualCurrencyData.tsx";
+import { useOpenNitroSubscribeActionSheet } from "useOpenNitroSubscribeActionSheet.tsx";
 // discord_app/modules/collectibles/native/InlinePriceTag.tsx
 import "useVirtualCurrencyData";
 import get_ActivityIndicator from "useProductDisableState";
@@ -33,7 +46,7 @@ function PriceTag(accessibilityLabel) {
   const obj = { children: null };
   const items = [icon, ];
   const items1 = [createCacheKey().priceTag, style];
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant, style: items1, color: str, accessibilityLabel: accessibilityLabel.accessibilityLabel, children: priceFormatted });
+  items[1] = callback(Text /* Text */.Text, { variant, style: items1, color: str, accessibilityLabel: accessibilityLabel.accessibilityLabel, children: priceFormatted });
   obj[0] = items;
   return callback2(closure_10, obj);
 }
@@ -50,7 +63,7 @@ function OrbsPriceTag(arg0) {
   if (null == vcData.price) {
     return null;
   } else {
-    let result = product.type === require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.BUNDLE;
+    let result = product.type === CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.BUNDLE;
     if (result) {
       let tmp16Result = tmp16(6921);
       result = tmp16Result.isOrbsExclusiveProduct(product);
@@ -128,13 +141,13 @@ function OrbsPriceTag(arg0) {
 function BundleDiscountV2(discountPercentage) {
   discountPercentage = discountPercentage.discountPercentage;
   let tmp4 = null;
-  if (discountPercentage >= require("../CollectiblesUtils.tsx") /* getItemRecordsFromPurchases */.DISCOUNT_DISPLAY_MINIMUM_THRESHOLD) {
+  if (discountPercentage >= getItemRecordsFromPurchases /* getItemRecordsFromPurchases */.DISCOUNT_DISPLAY_MINIMUM_THRESHOLD) {
     let obj = { style: null, children: null };
     obj[0] = tmp.discount;
     obj = { variant: "text-md/normal", color: "text-feedback-positive", children: null };
     const items = ["-", discountPercentage, "%"];
     obj[2] = items;
-    obj[1] = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+    obj[1] = callback2(Text /* Text */.Text, obj);
     tmp4 = callback(closure_4, obj);
   }
   return tmp4;
@@ -150,13 +163,13 @@ createCacheKey[12] = { marginRight: 4 };
 createCacheKey[13] = { opacity: 0.5 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let closure_15 = createCacheKey.createStyles(() => {
-  const discount = { backgroundColor: "rgba(46, 204, 113, 0.25)", flexDirection: "row", flexShrink: 1, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xs - 1, paddingHorizontal: 6, marginLeft: 6, paddingTop: null, paddingBottom: null };
+  const discount = { backgroundColor: "rgba(46, 204, 113, 0.25)", flexDirection: "row", flexShrink: 1, borderRadius: Themes.radii.xs - 1, paddingHorizontal: 6, marginLeft: 6, paddingTop: null, paddingBottom: null };
   let num;
   if (obj2.isAndroid()) {
     num = 0;
   }
   discount[6] = num;
-  obj2 = require("../../../utils/PlatformUtils.tsx") /* set */;
+  obj2 = set /* set */;
   const tmp2 = require;
   let num2;
   if (tmp2Result.isAndroid()) {
@@ -175,23 +188,23 @@ export default function InlinePriceTag(arg0) {
   let dependencyMap;
   const tmp = createCacheKey();
   importDefault = tmp;
-  let obj = require("../hooks/useCurrentUser.tsx") /* useCurrentUser */;
+  let obj = useCurrentUser /* useCurrentUser */;
   const currentUser = obj.useCurrentUser();
-  let obj1 = require("../CollectiblesUtils.tsx") /* getItemRecordsFromPurchases */;
+  let obj1 = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */;
   const shopDiscountSource = obj1.getShopDiscountSource(currentUser);
-  let obj2 = require("../../../utils/PremiumUtils.tsx");
+  let obj2 = getPremiumPlanItem;
   const canUseShopDiscountsResult = obj2.canUseShopDiscounts(currentUser);
-  dependencyMap = require("useOpenNitroSubscribeActionSheet.tsx")(constants.SHOP_PRODUCT_DETAILS);
-  let obj3 = require("../hooks/useProductDisableState.tsx") /* useProductDisableState */;
+  dependencyMap = useOpenNitroSubscribeActionSheet(constants.SHOP_PRODUCT_DETAILS);
+  let obj3 = useProductDisableState /* useProductDisableState */;
   const isDisabled = obj3.useProductDisableState(product.skuId).isDisabled;
-  let obj4 = require("CollectiblesUtils.tsx") /* hasAtLeastOneGPlaySynced */;
+  let obj4 = hasAtLeastOneGPlaySynced /* hasAtLeastOneGPlaySynced */;
   const formattedPriceForCollectiblesProduct = obj4.getFormattedPriceForCollectiblesProduct(product, false, true);
-  let obj5 = require("hooks/useVirtualCurrencyData.tsx") /* useVirtualCurrencyData */;
+  let obj5 = useVirtualCurrencyData /* useVirtualCurrencyData */;
   const virtualCurrencyData = obj5.useVirtualCurrencyData(product, canUseShopDiscountsResult);
-  let obj6 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj6 = initialize /* initialize */;
   const items = [updateProduct];
   const stateFromStores = obj6.useStateFromStores(items, () => fetchingGoogleSkus.isFetchingGoogleSkus());
-  let obj7 = require("../hooks/useCanPurchaseFrames.tsx") /* useCanPurchaseFrames */;
+  let obj7 = useCanPurchaseFrames /* useCanPurchaseFrames */;
   const isProfileFramesEarlyAccessPhase = obj7.useIsProfileFramesEarlyAccessPhase("InlinePriceTag");
   if (stateFromStores) {
     if (null == formattedPriceForCollectiblesProduct) {

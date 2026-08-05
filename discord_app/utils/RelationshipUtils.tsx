@@ -1,12 +1,15 @@
+import { NotificationActionCreators } from "../actions/NotificationActionCreators.tsx";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { getAvatarURL } from "AvatarUtils.tsx";
 // discord_app/utils/RelationshipUtils.tsx
 import { FriendsSections } from "ME";
 
 const result = require("getAvatarURL").fileFinishedImporting("utils/RelationshipUtils.tsx");
 
 export const showPendingNotification = function showPendingNotification(user) {
-  const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-  let obj = require("../actions/NotificationActionCreators.tsx");
-  const stringResult = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["t3+Af3"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  let obj = NotificationActionCreators;
+  const stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["t3+Af3"]);
   obj = {
     omitViewTracking: true,
     omitClickTracking: true,
@@ -16,13 +19,13 @@ export const showPendingNotification = function showPendingNotification(user) {
     },
     isUserAvatar: true
   };
-  obj.showNotification(require("AvatarUtils.tsx").getUserAvatarURL(user), user.username, stringResult, {}, obj);
+  obj.showNotification(getAvatarURL.getUserAvatarURL(user), user.username, stringResult, {}, obj);
 };
 export const showAcceptedNotification = function showAcceptedNotification(user) {
   const _require = user;
-  const intl = _require("../intl/index.native.tsx").intl;
-  let obj = require("../actions/NotificationActionCreators.tsx");
-  const stringResult = intl.string(_require("../intl/index.native.tsx").t.MYr3Ka);
+  const intl = _getSystemLocale.intl;
+  let obj = NotificationActionCreators;
+  const stringResult = intl.string(_getSystemLocale.t.MYr3Ka);
   obj = {
     omitViewTracking: true,
     omitClickTracking: true,
@@ -34,5 +37,5 @@ export const showAcceptedNotification = function showAcceptedNotification(user) 
     },
     isUserAvatar: true
   };
-  obj.showNotification(require("AvatarUtils.tsx").getUserAvatarURL(user), user.username, stringResult, {}, obj);
+  obj.showNotification(getAvatarURL.getUserAvatarURL(user), user.username, stringResult, {}, obj);
 };

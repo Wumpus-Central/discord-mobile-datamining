@@ -1,10 +1,12 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { onPress } from "../../connections/native/ConnectionsSettingScreen.tsx";
 // discord_app/modules/user_settings/defs/native/ConnectionsSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["3fe7U5"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["3fe7U5"]);
   },
   parent: null,
   IconComponent: require("PuzzlePieceIcon").PuzzlePieceIcon,
@@ -13,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.CONNECTIONS,
   getComponent() {
-    return require("../../connections/native/ConnectionsSettingScreen.tsx") /* onPress */.default;
+    return onPress /* onPress */.default;
   }
 };
 const route = createToggle.createRoute(obj);

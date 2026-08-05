@@ -1,3 +1,4 @@
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 // discord_app/modules/interaction_components/native/InteractionModal.tsx
 import "noop";
 import get_ActivityIndicator from "Button";
@@ -11,7 +12,7 @@ let closure_6;
 let error;
 const require = arg1;
 function onClose() {
-  return require("../../../actions/ModalActionCreators.tsx").popWithKey(interaction_modal);
+  return ModalActionCreators.popWithKey(interaction_modal);
 }
 class InteractionModal {
   constructor(arg0) {
@@ -121,6 +122,6 @@ const result = require("getModalState").fileFinishedImporting("modules/interacti
 
 export default InteractionModal;
 export const openInteractionModal = function openInteractionModal(closure_0) {
-  let arr = require("../../../actions/ModalActionCreators.tsx");
+  let arr = ModalActionCreators;
   arr = arr.push(InteractionModal, closure_0, interaction_modal);
 };

@@ -1,10 +1,11 @@
+import { NativeGiftContextProvider } from "../../../../payments/native/NativeGiftContext.tsx";
 // discord_app/modules/premium/gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx
 import { PremiumTypes } from "GuildFeatures";
 
 const result = require("set").fileFinishedImporting("modules/premium/gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx");
 
 export default function useShouldShowGiftingPromotionDeco(arg0) {
-  const nativeGiftContext = require("../../../../payments/native/NativeGiftContext.tsx") /* NativeGiftContextProvider */.useNativeGiftContext();
+  const nativeGiftContext = NativeGiftContextProvider /* NativeGiftContextProvider */.useNativeGiftContext();
   const claimableRewards = nativeGiftContext.claimableRewards;
   if (null != arg0) {
     let tmp4 = arg0 === PremiumTypes.TIER_2;

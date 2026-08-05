@@ -1,3 +1,4 @@
+import { useIsMobileVisualRefreshExperimentEnabled } from "../experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/themes/native/useNativeThemeUpdater.tsx
 import noop from "noop";
 import handleThemeChange from "handleThemeChange";
@@ -6,7 +7,7 @@ let require = arg1;
 const result = require("useIsMobileVisualRefreshExperimentEnabled").fileFinishedImporting("modules/themes/native/useNativeThemeUpdater.tsx");
 
 export default function useNativeThemeUpdater() {
-  const tmp = require("../experiments/MobileVisualRefreshExperiment.tsx")("useNativeThemeUpdater");
+  const tmp = useIsMobileVisualRefreshExperimentEnabled("useNativeThemeUpdater");
   const require = tmp;
   importDefault = React.useRef(theme.theme);
   const items = [tmp];

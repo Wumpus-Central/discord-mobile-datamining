@@ -1,3 +1,6 @@
+import { dispatcher } from "../Dispatcher.tsx";
+import { matchPath } from "../modules/routing/matchPathCompat.tsx";
+import { RouteParam } from "../modules/routing/RouteUtils.tsx";
 // discord_app/actions/DefaultRouteActionCreators.tsx
 import initialize from "initialize";
 import { Routes } from "ME";
@@ -6,9 +9,9 @@ const require = arg1;
 const result = require("matchPath").fileFinishedImporting("actions/DefaultRouteActionCreators.tsx");
 
 export const saveLastRoute = function saveLastRoute(pathname) {
-  let obj = require("../modules/routing/matchPathCompat.tsx") /* matchPath */;
+  let obj = matchPath /* matchPath */;
   obj = { path: null };
-  const RouteParam = require("../modules/routing/RouteUtils.tsx") /* RouteParam */.RouteParam;
+  const RouteParam = RouteParam /* RouteParam */.RouteParam;
   obj[0] = Routes.CHANNEL(RouteParam.guildId());
   const matchPathResult = obj.matchPath(pathname, obj);
   let guildId;
@@ -25,14 +28,14 @@ export const saveLastRoute = function saveLastRoute(pathname) {
   if (tmp4) {
     obj = { type: "SAVE_LAST_ROUTE", path: null };
     obj[1] = pathname;
-    require("../Dispatcher.tsx").dispatch(obj);
-    const obj3 = require("../Dispatcher.tsx");
+    dispatcher.dispatch(obj);
+    const obj3 = dispatcher;
   }
 };
 export const saveLastNonVoiceRoute = function saveLastNonVoiceRoute(Routes) {
-  let obj = require("../modules/routing/matchPathCompat.tsx") /* matchPath */;
+  let obj = matchPath /* matchPath */;
   obj = { path: null };
-  const RouteParam = require("../modules/routing/RouteUtils.tsx") /* RouteParam */.RouteParam;
+  const RouteParam = RouteParam /* RouteParam */.RouteParam;
   obj[0] = Routes.CHANNEL(RouteParam.guildId());
   const matchPathResult = obj.matchPath(Routes, obj);
   let guildId;
@@ -49,7 +52,7 @@ export const saveLastNonVoiceRoute = function saveLastNonVoiceRoute(Routes) {
   if (tmp4) {
     obj = { type: "SAVE_LAST_NON_VOICE_ROUTE", path: null };
     obj[1] = Routes;
-    require("../Dispatcher.tsx").dispatch(obj);
-    const obj3 = require("../Dispatcher.tsx");
+    dispatcher.dispatch(obj);
+    const obj3 = dispatcher;
   }
 };

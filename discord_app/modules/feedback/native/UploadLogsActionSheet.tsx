@@ -1,3 +1,8 @@
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/feedback/native/UploadLogsActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -29,17 +34,17 @@ export default function UploadLogsActionSheet(arg0) {
   let tmp = createCacheKey();
   let obj = { header: null, children: null };
   obj = { title: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.KTjjrG);
-  obj[0] = callback(require("../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.KTjjrG);
+  obj[0] = callback(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
   obj = { style: tmp.container, children: null };
   const obj1 = { variant: "text-sm/normal", color: "text-muted", style: tmp.body, children: null };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[3] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["ZvRR/t"]);
-  const items = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1), , , ];
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[3] = intl2.string(getSystemLocale /* getSystemLocale */.t["ZvRR/t"]);
+  const items = [callback(Text /* Text */.Text, obj1), , , ];
   let obj2 = { text: null, onPress: null };
-  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj2[0] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.EbwFfR);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj2[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.EbwFfR);
   obj2[1] = function onPress() {
     let obj = outer1_0(outer1_2[11]);
     obj.uploadDebugLogFiles(outer1_5.RTC);
@@ -59,16 +64,16 @@ export default function UploadLogsActionSheet(arg0) {
     const tmp3 = outer1_1;
     outer1_1(outer1_2[13]).hideActionSheet();
   };
-  items[1] = callback(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj2);
+  items[1] = callback(Button /* Button */.Button, obj2);
   items[2] = callback(View, { style: tmp.buttonSpacer });
   const obj4 = { text: null, variant: "secondary", onPress: null };
-  const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj4[0] = intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["ETE/oC"]);
+  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  obj4[0] = intl4.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
   obj4[2] = function onPress() {
     return callback(table[13]).hideActionSheet();
   };
-  items[3] = callback(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj4);
+  items[3] = callback(Button /* Button */.Button, obj4);
   obj[1] = items;
   obj[1] = callback2(View, obj);
-  return callback(require("../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, obj);
+  return callback(Background /* Background */.BottomSheet, obj);
 };

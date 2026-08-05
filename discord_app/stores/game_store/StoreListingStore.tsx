@@ -1,3 +1,4 @@
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 // discord_app/stores/game_store/StoreListingStore.tsx
 import _getSystemLocale from "_getSystemLocale";
 import createFromServer from "createFromServer";
@@ -74,7 +75,7 @@ prototype["getUnpublishedForSKU"] = function getUnpublishedForSKU(skuId) {
   } else {
     const _Array = Array;
     const mapped = Array.from(tmp).map((arg0) => table[arg0]);
-    items = mapped.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
+    items = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
     const arr = Array.from(tmp);
   }
   return items;

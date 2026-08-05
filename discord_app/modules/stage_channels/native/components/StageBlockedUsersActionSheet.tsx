@@ -1,3 +1,7 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/stage_channels/native/components/StageBlockedUsersActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import renderDefaultEmpty from "renderDefaultEmpty";
@@ -19,14 +23,14 @@ function RestrictedUser(guildId) {
   const tmp = createCacheKey();
   user = participant.user;
   let speaker = participant.speaker;
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [buildStageChannelUserRoles];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_7.isModerator(user.id, closure_0));
-  let obj1 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj1 = initialize /* initialize */;
   const items1 = [upsertRelationship];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => outer1_6.isBlocked(user.id));
   const avatarSource = user.getAvatarSource(guildId.guildId);
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   if (speaker) {
     const intl3 = tmp2(1236).intl;
     let stringResult = intl3.string(tmp2(1236).t.LqMmG2);
@@ -40,9 +44,9 @@ function RestrictedUser(guildId) {
   obj = { style: tmp.userContainer, children: null };
   obj = { style: tmp.avatarContainer, children: null };
   obj1 = { source: avatarSource, size: null, style: null };
-  obj1[1] = require("../../../../design/void/native.tsx") /* Button */.AvatarSizes.REFRESH_MEDIUM_32;
+  obj1[1] = Button /* Button */.AvatarSizes.REFRESH_MEDIUM_32;
   obj1[2] = tmp.avatar;
-  const items2 = [callback(require("../../../../design/void/native.tsx") /* Button */.CutoutableAvatarImage, obj1), ];
+  const items2 = [callback(Button /* Button */.CutoutableAvatarImage, obj1), ];
   if (speaker) {
     const obj2 = { style: null, children: null };
     const items3 = [tmp.iconContainer];
@@ -60,7 +64,7 @@ function RestrictedUser(guildId) {
   const obj4 = { style: tmp.flex, children: null };
   const obj5 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: null };
   obj5[2] = participant.user.toString();
-  const items5 = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj5), ];
+  const items5 = [callback(Text /* Text */.Text, obj5), ];
   const user2 = participant.user;
   const hasUniqueUsernameResult = user2.hasUniqueUsername();
   let tmp9Result = !hasUniqueUsernameResult;
@@ -85,9 +89,9 @@ function RestrictedUser(guildId) {
   }
   const obj9 = { children: null };
   obj8[1] = stringResult1;
-  const items8 = [callback(require("../../../../design/void/native.tsx") /* Button */.LegacyText, obj8), ];
+  const items8 = [callback(Button /* Button */.LegacyText, obj8), ];
   const items9 = [" ", "| ", stringResult];
-  items8[1] = closure_10(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/medium", color: "text-muted", children: items9 });
+  items8[1] = closure_10(Text /* Text */.Text, { variant: "text-sm/medium", color: "text-muted", children: items9 });
   obj7[1] = items8;
   items7[1] = closure_10(View, obj7);
   obj9[0] = items7;
@@ -106,14 +110,14 @@ function StageBlockedUsersActionSheetHeader(arg0) {
       obj[0] = tmp.header;
       obj = { style: null, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
       obj[0] = tmp.title;
-      const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[4] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Uzdyho);
-      const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+      const intl3 = getSystemLocale /* getSystemLocale */.intl;
+      obj[4] = intl3.string(getSystemLocale /* getSystemLocale */.t.Uzdyho);
+      const items = [callback(Text /* Text */.Text, obj), ];
       const obj1 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
       obj1[0] = tmp.description;
-      const intl4 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj1[3] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["P/KFXz"]);
-      items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+      const intl4 = getSystemLocale /* getSystemLocale */.intl;
+      obj1[3] = intl4.string(getSystemLocale /* getSystemLocale */.t["P/KFXz"]);
+      items[1] = callback(Text /* Text */.Text, obj1);
       obj[1] = items;
       let obj6 = obj;
     }
@@ -124,18 +128,18 @@ function StageBlockedUsersActionSheetHeader(arg0) {
     obj[0] = tmp.header;
     const obj2 = { style: null, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
     obj2[0] = tmp.title;
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     const obj3 = { number: null };
     obj3[0] = ignoredUserCount;
-    obj2[4] = intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.wvygk8, obj3);
-    const items1 = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2), ];
+    obj2[4] = intl.format(getSystemLocale /* getSystemLocale */.t.wvygk8, obj3);
+    const items1 = [callback(Text /* Text */.Text, obj2), ];
     const obj4 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj4[0] = tmp.description;
-    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
     const obj5 = { number: null };
     obj5[0] = ignoredUserCount;
-    obj4[3] = intl2.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Ri3o33, obj5);
-    items1[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj4);
+    obj4[3] = intl2.format(getSystemLocale /* getSystemLocale */.t.Ri3o33, obj5);
+    items1[1] = callback(Text /* Text */.Text, obj4);
     obj[1] = items1;
     obj6 = obj;
   } else {
@@ -143,18 +147,18 @@ function StageBlockedUsersActionSheetHeader(arg0) {
     obj6[0] = tmp.header;
     const obj7 = { style: null, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
     obj7[0] = tmp.title;
-    const intl5 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl5 = getSystemLocale /* getSystemLocale */.intl;
     const obj8 = { number: null };
     obj8[0] = blockedUserCount;
-    obj7[4] = intl5.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.HviVA9, obj8);
-    const items2 = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj7), ];
+    obj7[4] = intl5.format(getSystemLocale /* getSystemLocale */.t.HviVA9, obj8);
+    const items2 = [callback(Text /* Text */.Text, obj7), ];
     const obj9 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj9[0] = tmp.description;
-    const intl6 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl6 = getSystemLocale /* getSystemLocale */.intl;
     const obj10 = { number: null };
     obj10[0] = blockedUserCount;
-    obj9[3] = intl6.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["28qZMU"], obj10);
-    items2[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj9);
+    obj9[3] = intl6.format(getSystemLocale /* getSystemLocale */.t["28qZMU"], obj10);
+    items2[1] = callback(Text /* Text */.Text, obj9);
     obj6[1] = items2;
   }
 }

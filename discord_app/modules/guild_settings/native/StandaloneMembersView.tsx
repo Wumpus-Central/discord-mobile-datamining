@@ -1,3 +1,4 @@
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/guild_settings/native/StandaloneMembersView.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -16,7 +17,7 @@ export default function StandaloneMembersView(guildId) {
   const effect = React.useEffect(() => {
     navigation(8943).init(guildId);
   }, items);
-  obj = { paddingBottom: 16 + require("../../safe_area/useSafeAreaInsets.native.tsx")().bottom };
+  obj = { paddingBottom: 16 + useSafeAreaInsets().bottom };
   dependencyMap = { contentContainerStyle: obj };
   obj = {};
   const obj1 = { headerLeft: null, headerTitle: null, render: null };

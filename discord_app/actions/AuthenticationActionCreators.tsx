@@ -1,3 +1,10 @@
+import { encodeProperties } from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { getRootNavigationRef } from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
+import { set } from "../utils/CrossPlatformNativeUtils.native.tsx";
+import { TrackedHTTPUtils } from "../utils/TrackedHTTPUtils.tsx";
 // discord_app/actions/AuthenticationActionCreators.tsx
 import closure_5 from "str2";
 import { setPromoEmailConsentState } from "setPromoEmailConsentState";
@@ -19,13 +26,13 @@ function handleLogout(arg0, ME) {
   if (ME === undefined) {
     DEFAULT_LOGGED_OUT = constants.DEFAULT_LOGGED_OUT;
   }
-  let obj = require("../utils/CrossPlatformNativeUtils.native.tsx");
+  let obj = set;
   const result = obj.clearNavigationHistory();
   obj = { type: "LOGOUT" };
   const merged = Object.assign(undefined);
-  const obj3 = require("../Dispatcher.tsx");
+  const obj3 = dispatcher;
   const tmp2 = importDefault;
-  require("../Dispatcher.tsx").dispatch(obj).catch((error) => {
+  dispatcher.dispatch(obj).catch((error) => {
     logger.error("Error while dispatching LOGOUT", error);
     if (DiscordErrors != null) {
       DiscordErrors.softCrash(error);
@@ -33,7 +40,7 @@ function handleLogout(arg0, ME) {
     throw error;
   });
   if (null != DEFAULT_LOGGED_OUT) {
-    const rootNavigationRef = require("../modules/main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */.getRootNavigationRef();
+    const rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
     if (null != rootNavigationRef) {
       tmp2(4490).popAll();
       obj = { index: 0, routes: null };
@@ -47,7 +54,7 @@ function handleLogout(arg0, ME) {
       tmp11(1222).transitionTo(DEFAULT_LOGGED_OUT, obj1);
       const tmp11Result = tmp11(1222);
     }
-    const obj8 = require("../modules/main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */;
+    const obj8 = getRootNavigationRef /* getRootNavigationRef */;
     tmp11 = require;
   }
 }
@@ -59,7 +66,7 @@ let obj = { MFA: "MFA", SUCCESS: "SUCCESS" };
 obj = {
   startSession(arg0) {
     let closure_0 = arg0;
-    require("../Dispatcher.tsx").wait(() => {
+    dispatcher.wait(() => {
       let obj = outer1_1(outer1_3[8]);
       obj = { type: "START_SESSION", token: closure_0 };
       obj.dispatch(obj);
@@ -219,8 +226,8 @@ obj = {
     }
     obj[4] = loginInstanceId;
     obj[1] = obj;
-    obj[4] = { event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.USER_LOGIN_MFA };
-    const obj1 = { event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.USER_LOGIN_MFA };
+    obj[4] = { event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_LOGIN_MFA };
+    const obj1 = { event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_LOGIN_MFA };
     const postResult = obj.post(obj);
     return obj.post(obj).then((body) => {
       if (closure_0) {
@@ -475,8 +482,8 @@ obj = {
     if (arg1 === undefined) {
       flag = true;
     }
-    require("../Dispatcher.tsx").dispatch({ type: "LOGIN" });
-    let obj = require("../Dispatcher.tsx");
+    dispatcher.dispatch({ type: "LOGIN" });
+    let obj = dispatcher;
     return new Promise((arg0) => {
       let closure_0 = arg0;
       setImmediate(() => {
@@ -602,20 +609,20 @@ obj = {
     })();
   },
   loginReset(isMultiAccount) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "LOGIN_RESET", isMultiAccount };
     obj.dispatch(obj);
   },
   loginStatusReset() {
-    require("../Dispatcher.tsx").dispatch({ type: "LOGIN_STATUS_RESET" });
+    dispatcher.dispatch({ type: "LOGIN_STATUS_RESET" });
   },
   logoutInternal(arg0) {
-    let obj = require("../utils/CrossPlatformNativeUtils.native.tsx");
+    let obj = set;
     const result = obj.clearNavigationHistory();
     obj = { type: "LOGOUT" };
     const merged = Object.assign(arg0);
-    const obj3 = require("../Dispatcher.tsx");
-    require("../Dispatcher.tsx").dispatch(obj).catch((error) => {
+    const obj3 = dispatcher;
+    dispatcher.dispatch(obj).catch((error) => {
       logger.error("Error while dispatching LOGOUT", error);
       if (DiscordErrors != null) {
         DiscordErrors.softCrash(error);
@@ -633,13 +640,13 @@ obj = {
     let obj = DEFAULT_LOGGED_OUT(5094);
     obj = { url: closure_9.LOGOUT, body: null, oldFormErrors: true, trackedActionData: null };
     obj = { provider: callback2(), token: null, voip_provider: null, voip_token: null };
-    const Storage = _require("../../discord_common/js/packages/storage/Storage.tsx").Storage;
+    const Storage = _Storage.Storage;
     obj[1] = Storage.get(closure_10);
     obj[2] = closure_14;
-    const Storage2 = _require("../../discord_common/js/packages/storage/Storage.tsx").Storage;
+    const Storage2 = _Storage.Storage;
     obj[3] = Storage2.get(closure_11);
     obj[1] = obj;
-    obj[3] = { event: _require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").NetworkActionNames.USER_LOGOUT, properties: obj2 };
+    obj[3] = { event: _encodeProperties.NetworkActionNames.USER_LOGOUT, properties: obj2 };
     let tmp4 = null != arg2;
     if (tmp4) {
       let str = importAll(707).getToken(arg2);
@@ -654,10 +661,10 @@ obj = {
       const obj6 = importAll(707);
     }
     const merged = Object.assign(tmp4);
-    const obj1 = { event: _require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").NetworkActionNames.USER_LOGOUT, properties: obj2 };
+    const obj1 = { event: _encodeProperties.NetworkActionNames.USER_LOGOUT, properties: obj2 };
     const tmp3 = _require;
-    obj.rejectWithError = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
-    const tmp3Result = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+    obj.rejectWithError = _sendRequest.rejectWithMigratedError();
+    const tmp3Result = _sendRequest;
     return obj.post(obj).finally(() => {
       let tmp2 = null != closure_2;
       if (tmp2) {
@@ -678,19 +685,19 @@ obj = {
     let obj = { wasLoggedIn: null != token, tokenHasChanged: token !== token };
     tmp4.log("Switching accounts", obj);
     obj = { isSwitchingAccount: true, goHomeAfterSwitching: flag };
-    const result = require("../utils/CrossPlatformNativeUtils.native.tsx").clearNavigationHistory();
+    const result = set.clearNavigationHistory();
     obj = { type: "LOGOUT" };
     const merged = Object.assign(obj);
-    const obj3 = require("../utils/CrossPlatformNativeUtils.native.tsx");
-    const obj5 = require("../Dispatcher.tsx");
-    require("../Dispatcher.tsx").dispatch(obj).catch((error) => {
+    const obj3 = set;
+    const obj5 = dispatcher;
+    dispatcher.dispatch(obj).catch((error) => {
       logger.error("Error while dispatching LOGOUT", error);
       if (DiscordErrors != null) {
         DiscordErrors.softCrash(error);
       }
       throw error;
     });
-    const dispatchResult = require("../Dispatcher.tsx").dispatch(obj);
+    const dispatchResult = dispatcher.dispatch(obj);
     return this.loginToken(token, true).then(() => {
       const tmp = closure_0 === outer1_7.getToken();
       outer1_16.log("Switched accounts finished", { isCorrectToken: tmp });
@@ -703,7 +710,7 @@ obj = {
     if (arg1 === undefined) {
       DEFAULT_LOGGED_OUT = constants.DEFAULT_LOGGED_OUT;
     }
-    const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     const value = HTTP.get({ url: closure_9.ME, oldFormErrors: true, rejectWithError: true });
     return value.catch(() => {
       outer1_19(closure_0, DEFAULT_LOGGED_OUT);
@@ -733,25 +740,25 @@ obj = {
     })();
   },
   authorizePayment(token) {
-    let obj = require("../utils/TrackedHTTPUtils.tsx");
+    let obj = TrackedHTTPUtils;
     obj = { url: closure_9.AUTHORIZE_PAYMENT, body: obj, trackedActionData: null, rejectWithError: true };
     obj = { token };
-    obj[2] = { event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.AUTHORIZE_PAYMENT };
+    obj[2] = { event: encodeProperties /* encodeProperties */.NetworkActionNames.AUTHORIZE_PAYMENT };
     return obj.post(obj);
   },
   authorizeIPAddress(closure_0) {
-    let obj = require("../utils/TrackedHTTPUtils.tsx");
+    let obj = TrackedHTTPUtils;
     obj = { url: closure_9.AUTHORIZE_IP, body: obj, trackedActionData: null, rejectWithError: true };
     obj = { token: closure_0 };
-    obj[2] = { event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.AUTHORIZE_IP };
+    obj[2] = { event: encodeProperties /* encodeProperties */.NetworkActionNames.AUTHORIZE_IP };
     return obj.post(obj);
   },
   verifyResend() {
-    let obj = require("../utils/TrackedHTTPUtils.tsx");
+    let obj = TrackedHTTPUtils;
     obj = { url: closure_9.VERIFY_RESEND, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-    obj = { event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.USER_VERIFY_RESEND };
+    obj = { event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_VERIFY_RESEND };
     obj[2] = obj;
-    obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
     return obj.post(obj);
   },
   resetPassword(arg0, arg1, arg2) {
@@ -1031,12 +1038,12 @@ obj = {
     })();
   },
   setFingerprint(fingerprint) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "FINGERPRINT", fingerprint };
     obj.dispatch(obj);
   },
   getExperiments(withGuildExperiments) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "EXPERIMENTS_FETCH", withGuildExperiments };
     obj.dispatch(obj);
   },
@@ -1048,7 +1055,7 @@ obj = {
       timeout = setTimeout(() => {
         callback(709).dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: true });
       }, 5000);
-      const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+      const HTTP = sendRequest /* sendRequest */.HTTP;
       let obj = { url: null, retries: 2, oldFormErrors: true, rejectWithError: true };
       obj[0] = closure_9.AUTH_LOCATION_METADATA;
       const value = HTTP.get(obj);
@@ -1100,7 +1107,7 @@ obj = {
     return nextPromise;
   },
   closeSuspendedUser() {
-    require("../Dispatcher.tsx").dispatch({ type: "CLOSE_SUSPENDED_USER" });
+    dispatcher.dispatch({ type: "CLOSE_SUSPENDED_USER" });
   }
 };
 let tmp4 = new require("hasConsented")("AuthenticationActionCreators");

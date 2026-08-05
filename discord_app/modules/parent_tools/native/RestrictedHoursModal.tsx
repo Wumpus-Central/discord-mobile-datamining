@@ -1,3 +1,6 @@
+import { ActivityIndicator } from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import { useBackPressHandler } from "../../routing/native/useBackPressHandler.tsx";
+import { useIsInRestrictedHours } from "../hooks/useIsInRestrictedHours.tsx";
 // discord_app/modules/parent_tools/native/RestrictedHoursModal.tsx
 import _slicedToArray from "_slicedToArray";
 import NavigationStack from "NavigationStack";
@@ -16,7 +19,7 @@ function RestrictedHoursLogoutBlockingLayer(visible) {
   if (visible.visible) {
     const obj = { style: null, pointerEvents: "auto", accessibilityLiveRegion: "polite", children: null };
     obj[0] = tmp.logoutBlockingLayer;
-    obj[3] = callback2(require("../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx") /* ActivityIndicator */.ActivityIndicator, { size: "large" });
+    obj[3] = callback2(ActivityIndicator /* ActivityIndicator */.ActivityIndicator, { size: "large" });
     tmp2 = callback2(closure_5, obj);
   }
   return tmp2;
@@ -199,7 +202,7 @@ let result = require("get ActivityIndicator").fileFinishedImporting("modules/par
 export default function RestrictedHoursModal() {
   let _slicedToArray;
   let tmp4;
-  const tmp = require("../hooks/useIsInRestrictedHours.tsx")();
+  const tmp = useIsInRestrictedHours();
   let callback = tmp;
   importDefault = React.useRef(false);
   const dependencyMap = React.useRef(true);
@@ -247,7 +250,7 @@ export default function RestrictedHoursModal() {
       const obj = callback(16230);
     }
   }, items1);
-  require("../../routing/native/useBackPressHandler.tsx")(() => true);
+  useBackPressHandler(() => true);
   obj = { screens: navigatorScreens, initialRouteName: constants.MAIN };
   return callback2(callback(11248).Modal, obj);
 };

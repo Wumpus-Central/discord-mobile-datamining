@@ -1,3 +1,6 @@
+import { sendRequest } from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { createRPCCommand } from "../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";
+import { prototype } from "../../RPCError.tsx";
 // discord_app/modules/rpc/server/commands/AuthCommandsFactory.tsx
 import _slicedToArray from "_slicedToArray";
 import closure_5 from "RPC_SCOPE_CONFIG";
@@ -586,16 +589,16 @@ function authenticate(authorization) {
   if (authorization.authorization.accessToken) {
     let obj = { errorCode: null };
     obj[0] = constants2.INVALID_COMMAND;
-    const tmp19 = new require("../../RPCError.tsx")(obj, "Already authenticated");
+    const tmp19 = new prototype(obj, "Already authenticated");
     throw tmp19;
   } else if (authorization.authorization.authing) {
     obj = { errorCode: null };
     obj[0] = constants2.INVALID_COMMAND;
-    const tmp11 = new require("../../RPCError.tsx")(obj, "Already authenticating");
+    const tmp11 = new prototype(obj, "Already authenticating");
     throw tmp11;
   } else {
     authorization.authorization.authing = true;
-    const HTTP = _require("../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     obj = { url: null, headers: null, oldFormErrors: true, rejectWithError: false };
     obj[0] = OAUTH2_CURRENT_AUTH.OAUTH2_CURRENT_AUTH;
     let obj1 = { Authorization: null };
@@ -824,7 +827,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
       }
     }
   };
-  obj[constants.AUTHENTICATE] = _require("../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx").createRPCCommand(constants.AUTHENTICATE, obj);
+  obj[constants.AUTHENTICATE] = _createRPCCommand.createRPCCommand(constants.AUTHENTICATE, obj);
   obj[constants.AUTHORIZE] = {
     handler(socket) {
       socket = socket.socket;

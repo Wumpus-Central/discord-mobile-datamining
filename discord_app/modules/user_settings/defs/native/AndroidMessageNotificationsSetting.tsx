@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { set } from "../../../../utils/PlatformUtils.tsx";
 // discord_app/modules/user_settings/defs/native/AndroidMessageNotificationsSetting.tsx
 import _initializeAndroidNotificationSettingsStore from "_initializeAndroidNotificationSettingsStore";
 import createToggle from "createToggle";
@@ -13,7 +15,7 @@ function useAndroidMessageNotificationsSettingValue() {
 }
 function useHasAndroidMessageNotificationsSetting() {
   const tmp = callback();
-  let isAndroidResult = require("../../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
+  let isAndroidResult = set /* set */.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = null != tmp;
   }
@@ -22,8 +24,8 @@ function useHasAndroidMessageNotificationsSetting() {
 ({ useAndroidMessageNotificationsEnabled: obj1, setAndroidMessageNotificationsEnabled } = _initializeAndroidNotificationSettingsStore);
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["zViLy+"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["zViLy+"]);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: useAndroidMessageNotificationsSettingValue,
@@ -32,8 +34,8 @@ const toggle = createToggle.createToggle({
 });
 const obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["zViLy+"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["zViLy+"]);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: useAndroidMessageNotificationsSettingValue,

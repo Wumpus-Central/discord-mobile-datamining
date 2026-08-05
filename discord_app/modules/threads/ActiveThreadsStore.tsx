@@ -1,3 +1,5 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/threads/ActiveThreadsStore.tsx
 import createChannelRecord from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -58,7 +60,7 @@ function deleteThread(channel) {
           if (obj3.isEmpty(dependencyMap[guild_id][parent_id])) {
             delete tmp2[tmp3];
           }
-          obj3 = require("../../../_runtime/00012_apply.js");
+          obj3 = apply;
         }
         tmp9 = tmp11;
       }
@@ -101,11 +103,11 @@ prototype["getThreadsForParent"] = function getThreadsForParent(guild_id, id) {
   return tmp;
 };
 prototype["hasThreadsForChannel"] = function hasThreadsForChannel(guild_id, id) {
-  return !require("../../../_runtime/00012_apply.js").isEmpty(this.getThreadsForParent(guild_id, id));
+  return !apply.isEmpty(this.getThreadsForParent(guild_id, id));
 };
 prototype["forEachGuild"] = function forEachGuild(arg0) {
   const importDefault = arg0;
-  const keys = require("../../utils/SnowflakeUtils.tsx").keys(closure_5);
+  const keys = DISCORD_EPOCH.keys(closure_5);
   const item = keys.forEach((arg0) => {
     callback(arg0, outer1_5[arg0]);
   });
@@ -145,8 +147,8 @@ const activeThreadsStore = new ActiveThreadsStore(require("dispatcher"), {
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(channels) {
     let closure_5 = {};
-    const found = require("../../../_runtime/00012_apply.js")(channels.channels).filter((type) => set.has(type.type));
-    const arr = require("../../../_runtime/00012_apply.js")(channels.channels);
+    const found = apply(channels.channels).filter((type) => set.has(type.type));
+    const arr = apply(channels.channels);
     let item = found.groupBy("guild_id").forEach((arr) => {
       let closure_0 = arg1;
       closure_5[arg1] = {};

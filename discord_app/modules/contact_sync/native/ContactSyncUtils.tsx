@@ -1,3 +1,14 @@
+import { encodeProperties } from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { hasFlag } from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { PlatformTypes } from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { Linking } from "../../../lib/native/Linking.tsx";
+import { combined } from "../../../utils/HelpdeskUtils.tsx";
+import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
+import { TrackedHTTPUtils } from "../../../utils/TrackedHTTPUtils.tsx";
+import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
+import { _requestAndSyncContacts } from "ContactSyncManager.tsx";
 // discord_app/modules/contact_sync/native/ContactSyncUtils.tsx
 import closure_3 from "ME";
 import { NativeModules } from "module_4490";
@@ -77,7 +88,7 @@ export const ContactSyncPermissionDenied = error;
 export const ContactSyncFailedUserHasNoPhone = error1;
 export const ContactImageFetchFailed = error2;
 export const isContactSyncAvailable = function isContactSyncAvailable() {
-  let isIOSResult = require("../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */.isIOS();
+  let isIOSResult = PlatformTypes /* PlatformTypes */.isIOS();
   if (!isIOSResult) {
     const DCDContactSyncManager = NativeModules.DCDContactSyncManager;
     let flag;
@@ -92,7 +103,7 @@ export const isContactSyncAvailable = function isContactSyncAvailable() {
   return isIOSResult;
 };
 export const checkContactPermissions = function checkContactPermissions() {
-  let isIOSResult = require("../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */.isIOS();
+  let isIOSResult = PlatformTypes /* PlatformTypes */.isIOS();
   if (!isIOSResult) {
     const DCDContactSyncManager = NativeModules.DCDContactSyncManager;
     let flag;
@@ -123,24 +134,24 @@ export const uploadContacts = function uploadContacts(c3, arg1) {
   return applyArgumentsResult;
 };
 export const bulkAddFriends = function bulkAddFriends(user_ids, bulkAddToken) {
-  let obj = require("../../../utils/TrackedHTTPUtils.tsx");
+  let obj = TrackedHTTPUtils;
   obj = { url: closure_12.USER_BULK_RELATIONSHIPS, body: obj, trackedActionData: null, rejectWithError: false };
   obj = { user_ids, token: bulkAddToken };
-  obj[2] = { event: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
-  const obj1 = { event: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
+  obj[2] = { event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
+  const obj1 = { event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
   return obj.post(obj).then((body) => body.body);
 };
 export const adminDeleteContactSync = function adminDeleteContactSync() {
   callback2();
   callback3();
-  let obj = require("ContactSyncManager.tsx") /* _requestAndSyncContacts */;
+  let obj = _requestAndSyncContacts /* _requestAndSyncContacts */;
   const result = obj.removeLastUserContactsUpload();
-  const ContactSyncEnabled = require("../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.ContactSyncEnabled;
+  const ContactSyncEnabled = explicitContentFromProto /* explicitContentFromProto */.ContactSyncEnabled;
   ContactSyncEnabled.updateSetting(false);
   obj = { url: closure_12.CONNECTION(constants2.CONTACTS, "@me"), oldFormErrors: true, trackedActionData: null, rejectWithError: false };
-  obj = { event: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.USER_CONNECTIONS_UPDATE };
+  obj = { event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_CONNECTIONS_UPDATE };
   obj[2] = obj;
-  return require("../../../utils/TrackedHTTPUtils.tsx").delete(obj);
+  return TrackedHTTPUtils.delete(obj);
 };
 export const getImageForContactId = function getImageForContactId(closure_0, arg1) {
   let DCDContactSyncManager = NativeModules.DCDContactSyncManager;
@@ -199,27 +210,27 @@ export const getStoredContacts = function getStoredContacts() {
     const _JSON = JSON;
     return JSON.parse(tmp2);
   } catch (tmp4) {
-    require("../../../utils/SentryUtils.native.tsx").captureException(tmp4);
-    const obj = require("../../../utils/SentryUtils.native.tsx");
+    SentryUtils.native.captureException(tmp4);
+    const obj = SentryUtils.native;
   }
 };
 export const useContactSyncAccount = function useContactSyncAccount() {
   const items = [set];
-  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => localAccount.getLocalAccount(constants.CONTACTS));
+  return initialize /* initialize */.useStateFromStores(items, () => localAccount.getLocalAccount(constants.CONTACTS));
 };
 export const useContactSyncEnabled = function useContactSyncEnabled() {
   const items = [set];
-  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+  return initialize /* initialize */.useStateFromStores(items, () => {
     localAccount = localAccount.getLocalAccount(constants.CONTACTS);
     return null != localAccount && localAccount.friendSync && localAccount.type === constants.CONTACTS;
   });
 };
 export const useContactSyncUserIsDiscoverable = function useContactSyncUserIsDiscoverable() {
-  const FriendDiscoverySettings = require("../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.FriendDiscoverySettings;
+  const FriendDiscoverySettings = explicitContentFromProto /* explicitContentFromProto */.FriendDiscoverySettings;
   const setting = FriendDiscoverySettings.useSetting();
-  let obj = require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+  let obj = hasFlag /* hasFlag */;
   let hasFlagResult = obj.hasFlag(setting, constants3.FIND_BY_PHONE);
-  const hasFlagResult1 = require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(setting, constants3.FIND_BY_EMAIL);
+  const hasFlagResult1 = hasFlag /* hasFlag */.hasFlag(setting, constants3.FIND_BY_EMAIL);
   obj = { phone: hasFlagResult, email: hasFlagResult1, any: null };
   if (!hasFlagResult) {
     hasFlagResult = hasFlagResult1;
@@ -235,12 +246,12 @@ export const isContactSyncEnabled = function isContactSyncEnabled(contactSyncAcc
   return tmp;
 };
 export const getOpenLearnMoreUrl = function getOpenLearnMoreUrl() {
-  return require("../../../utils/HelpdeskUtils.tsx").getArticleURL(constants4.CONTACT_SYNC);
+  return combined.getArticleURL(constants4.CONTACT_SYNC);
 };
 export const handleOpenLearnMoreLink = function handleOpenLearnMoreLink() {
-  const obj = require("../../../lib/native/Linking.tsx");
-  obj.openURL(require("../../../utils/HelpdeskUtils.tsx").getArticleURL(constants4.CONTACT_SYNC));
+  const obj = Linking;
+  obj.openURL(combined.getArticleURL(constants4.CONTACT_SYNC));
 };
 export const transitionToAddFriendsLandingPage = function transitionToAddFriendsLandingPage() {
-  require("../../../actions/ModalActionCreators.tsx").popWithKey(closure_9);
+  ModalActionCreators.popWithKey(closure_9);
 };

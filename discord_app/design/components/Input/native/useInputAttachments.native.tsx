@@ -1,3 +1,5 @@
+import { ICON_SIZE } from "../../Icon/IconSize.tsx";
+import { Text } from "../../Text/native/Text.tsx";
 // discord_app/design/components/Input/native/useInputAttachments.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -59,7 +61,7 @@ const result = require("get ActivityIndicator").fileFinishedImporting("design/co
 export const estimateAttachmentWidth = function estimateAttachmentWidth(arg0, arg1) {
   let num = 0;
   if (null != arg0) {
-    num = require("../../Icon/IconSize.tsx") /* ICON_SIZE */.ICON_SIZE.xs + arg1;
+    num = ICON_SIZE /* ICON_SIZE */.ICON_SIZE.xs + arg1;
   }
   return num;
 };
@@ -72,7 +74,7 @@ export const renderInputAttachment = function renderInputAttachment(arg0, leadin
       const obj = { variant: "text-md/normal", style: null, children: null };
       obj[1] = text;
       obj[2] = leadingText;
-      tmp2 = jsx(require("../../Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/normal", style: null, children: null });
+      tmp2 = jsx(Text /* Text */.Text, { variant: "text-md/normal", style: null, children: null });
     }
   }
   return tmp2;

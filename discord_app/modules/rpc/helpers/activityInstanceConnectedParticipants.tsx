@@ -1,3 +1,5 @@
+import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
+import { getEmbeddedActivityLocationChannelId } from "../../activities/utils/embeddedActivityLocationUtils.tsx";
 // discord_app/modules/rpc/helpers/activityInstanceConnectedParticipants.tsx
 import participantFromServer from "participantFromServer";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -65,12 +67,12 @@ export const activityInstanceConnectedParticipants = function activityInstanceCo
     obj[0] = [];
     return obj;
   } else {
-    _require = _require("../../activities/utils/embeddedActivityLocationUtils.tsx").getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
-    const obj2 = _require("../../activities/utils/embeddedActivityLocationUtils.tsx");
-    const embeddedActivityLocationChannelId = _require("../../activities/utils/embeddedActivityLocationUtils.tsx").getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
+    _require = _getEmbeddedActivityLocationChannelId.getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
+    const obj2 = _getEmbeddedActivityLocationChannelId;
+    const embeddedActivityLocationChannelId = _getEmbeddedActivityLocationChannelId.getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
     obj = { participants: null };
     const _Array = Array;
-    const obj3 = _require("../../activities/utils/embeddedActivityLocationUtils.tsx");
+    const obj3 = _getEmbeddedActivityLocationChannelId;
     obj[0] = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
       const user = outer1_4.getUser(arg0);
       if (null != user) {
@@ -81,7 +83,7 @@ export const activityInstanceConnectedParticipants = function activityInstanceCo
         obj.nickname = nickname;
         return obj;
       }
-    }).filter(_require("../../../utils/GlobalUtils.tsx").isNotNullish);
+    }).filter(_isDiscordFrontendDevelopment.isNotNullish);
     return obj;
   }
 };

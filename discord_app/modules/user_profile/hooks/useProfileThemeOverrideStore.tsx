@@ -1,3 +1,6 @@
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
+import { getProfileTheme } from "../UserProfileGradientUtils.tsx";
 // discord_app/modules/user_profile/hooks/useProfileThemeOverrideStore.tsx
 import { ThemeTypes } from "ME";
 import keys from "keys";
@@ -21,7 +24,7 @@ const result = require("useTheme").fileFinishedImporting("modules/user_profile/h
 export const useProfileThemeOverrideStore = tmp2;
 export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
   const tmp = tmp2((themeOverride) => themeOverride.themeOverride);
-  const tmp3 = require("../../../hooks/useTheme.tsx")();
+  const tmp3 = useTheme();
   if (null == tmp) {
     return null;
   } else {
@@ -46,7 +49,7 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
       if (null != first) {
         tmp8 = tmp3;
         if (null != tmp7) {
-          let obj = require("../UserProfileGradientUtils.tsx") /* getProfileTheme */;
+          let obj = getProfileTheme /* getProfileTheme */;
           let profileTheme = obj.getProfileTheme(first);
           if (profileTheme == null) {
             profileTheme = tmp3;
@@ -68,8 +71,8 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
     if (themeType !== ThemeTypes.DARK) {
       let isThemeLightResult = themeType === tmp11.DARK;
       if (isThemeLightResult) {
-        isThemeLightResult = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeLight(tmp3);
-        const obj3 = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+        isThemeLightResult = AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeLight(tmp3);
+        const obj3 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
       }
       let DARKER = themeType;
       if (isThemeLightResult) {
@@ -77,7 +80,7 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
       }
     } else {
       DARKER = tmp3;
-      const obj2 = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+      const obj2 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
     }
     obj = { theme: null, primaryColor: null, secondaryColor: null };
     obj[0] = DARKER;

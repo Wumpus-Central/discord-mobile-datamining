@@ -1,3 +1,4 @@
+import { MyTableRow } from "../../design_system/native/UserSettingsDesignSystemTableRow.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemsTableRowSetting.tsx
 import createToggle from "createToggle";
 
@@ -11,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_TABLE_ROW,
   getComponent() {
-    return require("../../design_system/native/UserSettingsDesignSystemTableRow.tsx") /* MyTableRow */.default;
+    return MyTableRow /* MyTableRow */.default;
   }
 };
 const route = createToggle.createRoute(obj);

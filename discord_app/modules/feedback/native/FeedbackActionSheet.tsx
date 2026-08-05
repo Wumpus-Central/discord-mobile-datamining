@@ -1,3 +1,4 @@
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/feedback/native/FeedbackActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import BottomSheetModal from "BottomSheetModal";
@@ -10,7 +11,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function closeActionSheet() {
-  require("../../action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet();
+  ACTION_SHEET_HEIGHT_HALF.hideActionSheet();
 }
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 createCacheKey = { container: null, ratingsHeader: null, reasonsList: null };

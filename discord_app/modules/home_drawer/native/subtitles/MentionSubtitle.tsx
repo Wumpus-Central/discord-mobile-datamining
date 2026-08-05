@@ -1,3 +1,6 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { styles } from "useSubtitleStyles.tsx";
 // discord_app/modules/home_drawer/native/subtitles/MentionSubtitle.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -15,7 +18,7 @@ export default function MentionSubtitle(channel) {
   let guild;
   channel = channel.channel;
   ({ guild, channelName, count } = channel);
-  let obj = require("useSubtitleStyles.tsx") /* styles */;
+  let obj = styles /* styles */;
   const subtitleStyles = obj.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {
@@ -30,14 +33,14 @@ export default function MentionSubtitle(channel) {
   const items = [callback(channelIconComponentWithGuild, obj), ];
   const obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children: null };
   const intl = tmp(1236).intl;
-  obj1[4] = intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.L9YdGH, {
+  obj1[4] = intl.format(getSystemLocale /* getSystemLocale */.t.L9YdGH, {
     channelName,
     count: count - 1,
     channelHook(children) {
       return callback2(callback(table[6]).Text, { variant: "text-xs/medium", children }, arg1);
     }
   });
-  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  items[1] = callback(Text /* Text */.Text, obj1);
   obj[1] = items;
   return callback2(View, obj);
 };

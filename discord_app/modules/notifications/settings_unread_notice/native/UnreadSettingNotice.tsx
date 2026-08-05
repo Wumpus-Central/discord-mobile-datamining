@@ -1,3 +1,7 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { UnreadSettingNoticeImpressionTracking } from "../UnreadSettingNoticeImpressionTracking.tsx";
 // discord_app/modules/notifications/settings_unread_notice/native/UnreadSettingNotice.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -24,12 +28,12 @@ export default function UnreadSettingNoticeConnected(channel) {
   const tmp = createCacheKey();
   let obj = { style: tmp.content, children: null };
   obj = { id: channel.channel.id };
-  const items = [callback(require("../UnreadSettingNoticeImpressionTracking.tsx"), obj), , ];
+  const items = [callback(UnreadSettingNoticeImpressionTracking, obj), , ];
   obj = { style: tmp.informations, children: null };
   const obj1 = { variant: "text-md/semibold", children: null };
-  const intl = _require("../../../../intl/index.native.tsx").intl;
-  obj1[1] = intl.string(_require("../../../../intl/index.native.tsx").t.i4xQ5o);
-  obj[1] = callback(_require("../../../../design/components/Text/native/Text.tsx").Text, obj1);
+  const intl = _getSystemLocale.intl;
+  obj1[1] = intl.string(_getSystemLocale.t.i4xQ5o);
+  obj[1] = callback(_Text.Text, obj1);
   items[1] = callback(View, obj);
   const obj2 = { style: tmp.actions, children: null };
   const obj3 = {
@@ -42,10 +46,10 @@ export default function UnreadSettingNoticeConnected(channel) {
     children: null
   };
   const obj4 = { variant: "text-xs/medium", color: "text-link", children: null };
-  const intl2 = _require("../../../../intl/index.native.tsx").intl;
-  obj4[2] = intl2.string(_require("../../../../intl/index.native.tsx").t.KyUKhT);
-  obj3[3] = callback(_require("../../../../design/components/Text/native/Text.tsx").Text, obj4);
-  obj2[1] = callback(_require("../../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, obj3);
+  const intl2 = _getSystemLocale.intl;
+  obj4[2] = intl2.string(_getSystemLocale.t.KyUKhT);
+  obj3[3] = callback(_Text.Text, obj4);
+  obj2[1] = callback(_PressableBase.PressableOpacity, obj3);
   items[2] = callback(View, obj2);
   obj[1] = items;
   return callback2(View, obj);

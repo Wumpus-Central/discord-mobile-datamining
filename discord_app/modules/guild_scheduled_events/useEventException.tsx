@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_scheduled_events/useEventException.tsx
 import scheduledEventSort from "scheduledEventSort";
 
@@ -7,7 +8,7 @@ const result = require("set").fileFinishedImporting("modules/guild_scheduled_eve
 export default function useEventException(arg0, arg1) {
   let _require = arg1;
   const items = [scheduledEventSort];
-  const stateFromStoresArray = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = _initialize.useStateFromStoresArray(items, () => {
     const guildScheduledEvent = outer1_2.getGuildScheduledEvent(closure_0);
     let prop;
     if (guildScheduledEvent != null) {

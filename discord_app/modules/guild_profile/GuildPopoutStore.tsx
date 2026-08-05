@@ -1,3 +1,4 @@
+import { _startLurking } from "../../utils/GuildDiscoveryUtils.tsx";
 // discord_app/modules/guild_profile/GuildPopoutStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import { Store } from "initialize";
@@ -43,7 +44,7 @@ const guildPopoutStore = new GuildPopoutStore(require("dispatcher"), {
   },
   GUILD_POPOUT_FETCH_SUCCESS: function handleFetchSuccess(guildId) {
     guildId = guildId.guildId;
-    let obj = require("../../utils/GuildDiscoveryUtils.tsx") /* _startLurking */;
+    let obj = _startLurking /* _startLurking */;
     obj = {};
     const discoverableGuild = obj.makeDiscoverableGuild(guildId.guild);
     const merged = Object.assign(closure_4.guilds[guildId]);

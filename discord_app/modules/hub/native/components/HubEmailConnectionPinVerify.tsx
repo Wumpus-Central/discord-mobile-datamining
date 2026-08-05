@@ -1,3 +1,5 @@
+import { registerAsset } from "../../../../../_runtime/09039_registerAsset.js";
+import { dispatcher } from "../../../toast/native/ToastActionCreators.tsx";
 // discord_app/modules/hub/native/components/HubEmailConnectionPinVerify.tsx
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "jsxProd";
@@ -13,8 +15,8 @@ let closure_6;
 let error;
 const require = arg1;
 function presentResendToast(content) {
-  let obj = require("../../../toast/native/ToastActionCreators.tsx");
-  obj = { key: "HUB_EMAIL_RESET", content, icon: require("../../../../../_runtime/09039_registerAsset.js") };
+  let obj = dispatcher;
+  obj = { key: "HUB_EMAIL_RESET", content, icon: registerAsset };
   obj.open(obj);
 }
 ({ View: closure_6, Image: error } = get_ActivityIndicator);

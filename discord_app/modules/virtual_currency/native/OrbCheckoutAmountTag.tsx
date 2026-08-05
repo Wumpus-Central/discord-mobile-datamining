@@ -1,3 +1,5 @@
+import { OrbsIcon } from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/virtual_currency/native/OrbCheckoutAmountTag.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -18,7 +20,7 @@ export default function OrbCheckoutAmountTag(orbAmount) {
   const tmp = callback2();
   let obj = { style: tmp.orbAmountTag, children: null };
   obj = { size: "custom", color: "icon-strong", style: tmp.orbsIcon };
-  const items = [callback(require("../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx") /* OrbsIcon */.OrbsIcon, obj), ];
+  const items = [callback(OrbsIcon /* OrbsIcon */.OrbsIcon, obj), ];
   if (null == orbAmount) {
     const intl2 = tmp5(1236).intl;
     let stringResult = intl2.string(tmp5(1236).t.pfChQr);
@@ -34,7 +36,7 @@ export default function OrbCheckoutAmountTag(orbAmount) {
     str = orbAmount;
   }
   obj1[2] = str;
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  items[1] = callback(Text /* Text */.Text, obj1);
   obj[1] = items;
   return closure_4(View, obj);
 };

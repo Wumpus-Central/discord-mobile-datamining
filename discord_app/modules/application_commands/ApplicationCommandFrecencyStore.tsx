@@ -1,3 +1,4 @@
+import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/application_commands/ApplicationCommandFrecencyStore.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import TRUE_OPTION_NAME from "TRUE_OPTION_NAME";
@@ -15,7 +16,7 @@ function handleUserSettingsProtoStoreChange() {
   if (applicationCommands == null) {
     applicationCommands = {};
   }
-  tmp3.overwriteHistory(require("../../../_runtime/00012_apply.js").mapValues(applicationCommands, (recentUses) => {
+  tmp3.overwriteHistory(apply.mapValues(applicationCommands, (recentUses) => {
     const obj = {};
     const merged = Object.assign(recentUses);
     recentUses = recentUses.recentUses;

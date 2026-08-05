@@ -1,3 +1,9 @@
+import { DismissibleContent } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { CircleErrorIcon } from "../../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import { XSmallIcon } from "../../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
+import { RowButtonWrapper } from "../../../../../design/components/TableRow/native/RowButton.native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { UNSAFE_isDismissibleContentDismissed } from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 // discord_app/modules/voice_panel/native/controls/utils/VoicePanelFloatingCTAUtils.tsx
 import DismissibleContent from "DismissibleContent";
 import hideLiveChannelNotice from "hideLiveChannelNotice";
@@ -157,13 +163,13 @@ function useFloatingCTAProps(stateFromStores) {
 function getBadConnectionCTAProps(arg0) {
   const _require = arg0;
   let obj = { label: null, subLabel: null, icon: null, onPress: null, trailing: null };
-  const intl = _require("../../../../../intl/index.native.tsx").intl;
-  obj[0] = intl.string(_require("../../../../../intl/index.native.tsx").t.uv1tVh);
-  const intl2 = _require("../../../../../intl/index.native.tsx").intl;
-  obj[1] = intl2.string(_require("../../../../../intl/index.native.tsx").t["gQ14+g"]);
+  const intl = _getSystemLocale.intl;
+  obj[0] = intl.string(_getSystemLocale.t.uv1tVh);
+  const intl2 = _getSystemLocale.intl;
+  obj[1] = intl2.string(_getSystemLocale.t["gQ14+g"]);
   obj = { IconComponent: null, variant: "translucent" };
-  obj[0] = _require("../../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx").CircleErrorIcon;
-  obj[2] = jsx(_require("../../../../../design/components/TableRow/native/RowButton.native.tsx").RowButton.Icon, { IconComponent: null, variant: "translucent" });
+  obj[0] = _CircleErrorIcon.CircleErrorIcon;
+  obj[2] = jsx(_RowButtonWrapper.RowButton.Icon, { IconComponent: null, variant: "translucent" });
   obj[3] = function onPress() {
     let tmp;
     if (callback != null) {
@@ -172,34 +178,34 @@ function getBadConnectionCTAProps(arg0) {
     return tmp;
   };
   obj = { accessibilityRole: "button", accessibilityLabel: null, hitSlop: 4, onPress: null, children: null };
-  const intl3 = _require("../../../../../intl/index.native.tsx").intl;
-  obj[1] = intl3.string(_require("../../../../../intl/index.native.tsx").t.cpT0Cq);
+  const intl3 = _getSystemLocale.intl;
+  obj[1] = intl3.string(_getSystemLocale.t.cpT0Cq);
   obj[3] = function onPress() {
     const result = callback(outer1_2[30]).UNSAFE_markDismissibleContentAsDismissed(callback(outer1_2[32]).DismissibleContent.VOICE_PANEL_BAD_CONNECTION_CTA);
     if (callback != null) {
       callback();
     }
   };
-  obj[4] = jsx(_require("../../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx").XSmallIcon, { color: "interactive-icon-default" });
+  obj[4] = jsx(_XSmallIcon.XSmallIcon, { color: "interactive-icon-default" });
   obj[4] = <Pressable accessibilityRole="button" accessibilityLabel={null} hitSlop={4} onPress={null}>{null}</Pressable>;
   return obj;
 }
 function handleSoundboardMobileFloatingCtaClose() {
-  const result = require("../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA);
+  const result = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA);
 }
 function CloseSoundboardMobileFloatingCtaIcon() {
   const obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.cpT0Cq);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
   obj[2] = handleSoundboardMobileFloatingCtaClose;
-  obj[3] = jsx(require("../../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx") /* XSmallIcon */.XSmallIcon, { color: "interactive-icon-default" });
+  obj[3] = jsx(XSmallIcon /* XSmallIcon */.XSmallIcon, { color: "interactive-icon-default" });
   return <Pressable accessibilityRole="button" accessibilityLabel={null} onPress={null}>{null}</Pressable>;
 }
 function getDismissableCTAProps(arg0) {
   let dismissableContent;
   let require;
   ({ dismissableContent, channel: require } = arg0);
-  if (require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.VOICE_PANEL_BAD_CONNECTION_CTA === dismissableContent) {
+  if (DismissibleContent /* DismissibleContent */.DismissibleContent.VOICE_PANEL_BAD_CONNECTION_CTA === dismissableContent) {
     return getBadConnectionCTAProps();
   } else if (tmp(1358).DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA === dismissableContent) {
     let obj = { icon: null, onPress: null, label: null, trailing: null };

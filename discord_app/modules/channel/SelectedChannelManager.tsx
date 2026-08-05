@@ -1,3 +1,7 @@
+import { SelectedChannelActionCreators } from "../../actions/SelectedChannelActionCreators.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { transitionTo } from "../routing/router_utils.tsx";
+import { transitionToGuild } from "../routing/transitionToGuild.native.tsx";
 // discord_app/modules/channel/SelectedChannelManager.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -25,8 +29,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   const channelId = store.getChannelId(closure_9);
   const voiceChannelId = store.getVoiceChannelId();
   if (guild.id === channelId) {
-    require("../routing/transitionToGuild.native.tsx") /* transitionToGuild */.transitionToGuild(guild.id);
-    const obj = require("../routing/transitionToGuild.native.tsx") /* transitionToGuild */;
+    transitionToGuild /* transitionToGuild */.transitionToGuild(guild.id);
+    const obj = transitionToGuild /* transitionToGuild */;
   }
   let tmp6 = guild.id === voiceChannelId;
   if (tmp6) {
@@ -36,8 +40,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
     tmp6 = null == voiceChannelId;
   }
   if (tmp6) {
-    const voiceChannel = require("../../actions/SelectedChannelActionCreators.tsx").selectVoiceChannel(findFirstVoiceChannelId(guild.id));
-    const obj2 = require("../../actions/SelectedChannelActionCreators.tsx");
+    const voiceChannel = SelectedChannelActionCreators.selectVoiceChannel(findFirstVoiceChannelId(guild.id));
+    const obj2 = SelectedChannelActionCreators;
   }
 };
 prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
@@ -46,20 +50,20 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
     const originChannelId = channel.originChannelId;
     const channelId = store.getChannelId(closure_10);
     if (tmp) {
-      require("../routing/router_utils.tsx") /* transitionTo */.transitionTo(closure_8.CHANNEL(closure_9, channel.id));
-      const obj = require("../routing/router_utils.tsx") /* transitionTo */;
+      transitionTo /* transitionTo */.transitionTo(closure_8.CHANNEL(closure_9, channel.id));
+      const obj = transitionTo /* transitionTo */;
     }
     const obj3 = store;
     tmp = null == guildId.getGuildId() && null != originChannelId && originChannelId === channelId;
     if (tmp7) {
-      const voiceChannel = require("../../actions/SelectedChannelActionCreators.tsx").selectVoiceChannel(channel.id, videoEnabled.isVideoEnabled());
-      const obj2 = require("../../actions/SelectedChannelActionCreators.tsx");
+      const voiceChannel = SelectedChannelActionCreators.selectVoiceChannel(channel.id, videoEnabled.isVideoEnabled());
+      const obj2 = SelectedChannelActionCreators;
     }
     tmp7 = null != originChannelId && originChannelId === store.getVoiceChannelId();
   }
 };
 prototype["handleLogout"] = function handleLogout() {
-  require("../../Dispatcher.tsx").dispatch({ type: "VOICE_CHANNEL_SELECT", channelId: null, guildId: null, video: false, currentVoiceChannelId: null, joinVoiceId: null });
+  dispatcher.dispatch({ type: "VOICE_CHANNEL_SELECT", channelId: null, guildId: null, video: false, currentVoiceChannelId: null, joinVoiceId: null });
 };
 const selectedChannelManager = new SelectedChannelManager();
 const result = require("handleConnectionOpen").fileFinishedImporting("modules/channel/SelectedChannelManager.tsx");

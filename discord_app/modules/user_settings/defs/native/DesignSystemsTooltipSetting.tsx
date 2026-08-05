@@ -1,3 +1,4 @@
+import { Content } from "../../design_system/native/UserSettingsDesignSystemTooltip.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemsTooltipSetting.tsx
 import createToggle from "createToggle";
 
@@ -11,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_TOOLTIP,
   getComponent() {
-    return require("../../design_system/native/UserSettingsDesignSystemTooltip.tsx") /* Content */.default;
+    return Content /* Content */.default;
   }
 };
 const route = createToggle.createRoute(obj);

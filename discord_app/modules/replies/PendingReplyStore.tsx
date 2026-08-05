@@ -1,3 +1,4 @@
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/replies/PendingReplyStore.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -14,8 +15,8 @@ prototype["getState"] = function getState() {
   let tmp6;
   let tmp7;
   let obj = {};
-  const entries = require("../../utils/SnowflakeUtils.tsx").entries(closure_5);
-  const obj2 = require("../../utils/SnowflakeUtils.tsx");
+  const entries = DISCORD_EPOCH.entries(closure_5);
+  const obj2 = DISCORD_EPOCH;
   while (tmp2 !== undefined) {
     let tmp4 = callback;
     let tmp5 = callback(tmp3, 2);
@@ -107,7 +108,7 @@ const pendingReplyStore = new PendingReplyStore(require("dispatcher"), {
     delete tmp[tmp2];
   },
   CONNECTION_OPEN: function handleConnectionOpen() {
-    const keys = require("../../utils/SnowflakeUtils.tsx").keys(closure_6);
+    const keys = DISCORD_EPOCH.keys(closure_6);
     const item = keys.forEach((arg0) => {
       if (null == channel.getChannel(arg0)) {
         delete tmp[tmp2];

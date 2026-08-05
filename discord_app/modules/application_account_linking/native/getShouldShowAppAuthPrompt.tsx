@@ -1,3 +1,5 @@
+import { tokensToAppTokensMap } from "../../oauth2/AuthorizedAppsActionCreators.tsx";
+import { getAuthorizationApp } from "../hooks/useAuthorizationApp.tsx";
 // discord_app/modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx
 import recomputeFromAppTokens from "recomputeFromAppTokens";
 import { FetchState } from "recomputeFromAppTokens";
@@ -10,7 +12,7 @@ export const getShouldShowAppAuthPrompt = function getShouldShowAppAuthPrompt(ap
     return false;
   } else {
     let response = dependencyMap;
-    const authorizationApp = require("../hooks/useAuthorizationApp.tsx") /* getAuthorizationApp */.getAuthorizationApp(application);
+    const authorizationApp = getAuthorizationApp /* getAuthorizationApp */.getAuthorizationApp(application);
     if (null == authorizationApp) {
       return false;
     } else {
@@ -34,9 +36,9 @@ export const getShouldShowAppAuthPrompt = function getShouldShowAppAuthPrompt(ap
           return tmp4;
         } else if (fetchStateForApplication.getFetchStateForApplication(parentId) === FetchState.NOT_FETCHED) {
           const items = [parentId];
-          response = require("../../oauth2/AuthorizedAppsActionCreators.tsx").fetch(items);
+          response = tokensToAppTokensMap.fetch(items);
           let flag2 = false;
-          const obj2 = require("../../oauth2/AuthorizedAppsActionCreators.tsx");
+          const obj2 = tokensToAppTokensMap;
         } else {
           flag2 = !(obj.getFetchStateForApplication(parentId) === tmp5.FETCHED && null != obj.getNewestTokenForApplication(parentId));
           const tmp6 = obj.getFetchStateForApplication(parentId) === tmp5.FETCHED && null != obj.getNewestTokenForApplication(parentId);
@@ -45,6 +47,6 @@ export const getShouldShowAppAuthPrompt = function getShouldShowAppAuthPrompt(ap
         return false;
       }
     }
-    const obj3 = require("../hooks/useAuthorizationApp.tsx") /* getAuthorizationApp */;
+    const obj3 = getAuthorizationApp /* getAuthorizationApp */;
   }
 };

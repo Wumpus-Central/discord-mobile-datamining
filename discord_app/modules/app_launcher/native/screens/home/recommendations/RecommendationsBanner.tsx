@@ -1,3 +1,8 @@
+import { preload } from "../../../../../../components_native/common/FastImage.tsx";
+import { getAvatarURL } from "../../../../../../utils/AvatarUtils.tsx";
+import { useEmbeddedActivityBackground } from "../../../../../activities/utils/useEmbeddedActivityBackground.tsx";
+import { hasFetchedColors } from "../../../../../avatar/useAvatarColor.tsx";
+import { useDisplayProfile } from "../../../../../user_profile/hooks/useDisplayProfile.tsx";
 // discord_app/modules/app_launcher/native/screens/home/recommendations/RecommendationsBanner.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -21,7 +26,7 @@ let closure_10 = importAllResult.memo((applicationId) => {
   let obj1 = heroMediaDimensions(11382);
   heroMediaDimensions = obj1.useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
   obj = { applicationId: applicationId.applicationId, size: heroMediaDimensions.width, names: ["embedded_cover"] };
-  const tmp4 = require("../../../../../activities/utils/useEmbeddedActivityBackground.tsx")(obj);
+  const tmp4 = useEmbeddedActivityBackground(obj);
   importDefault = tmp4;
   let items = [heroMediaDimensions, tmp4];
   const memo = importAllResult.useMemo(() => {
@@ -43,7 +48,7 @@ let closure_10 = importAllResult.memo((applicationId) => {
     obj = { style: null, source: null, resizeMode: "cover" };
     obj[0] = imageStyle;
     obj[1] = imageSource;
-    let tmp8 = jsx(require("../../../../../../components_native/common/FastImage.tsx"), { style: null, source: null, resizeMode: "cover" });
+    let tmp8 = jsx(preload, { style: null, source: null, resizeMode: "cover" });
   } else {
     obj1 = { style: null };
     obj1[0] = imageStyle;
@@ -61,12 +66,12 @@ let closure_11 = importAllResult.memo((applicationBot) => {
     id = closure_7;
   }
   const tmp = importDefault;
-  const tmp3 = require("../../../../../user_profile/hooks/useDisplayProfile.tsx");
-  const obj = { displayProfile: require("../../../../../user_profile/hooks/useDisplayProfile.tsx")(id), user: null };
-  const tmp3Result = require("../../../../../user_profile/hooks/useDisplayProfile.tsx")(id);
+  const tmp3 = useDisplayProfile;
+  const obj = { displayProfile: useDisplayProfile(id), user: null };
+  const tmp3Result = useDisplayProfile(id);
   const tmpResult = tmp(8761);
   obj[1] = new createdAt(applicationBot);
-  return <tmpResult displayProfile={require("../../../../../user_profile/hooks/useDisplayProfile.tsx")(id)} user={null} />;
+  return <tmpResult displayProfile={useDisplayProfile(id)} user={null} />;
 });
 const memoResult = importAllResult.memo(function RecommendationBanner(arg0) {
   let applicationBot;
@@ -77,9 +82,9 @@ const memoResult = importAllResult.memo(function RecommendationBanner(arg0) {
   ({ applicationId, applicationBot, overrideImageUrl } = arg0);
   ({ applicationEmbedded, applicationIcon } = arg0);
   const tmp = callback();
-  let obj = require("../../../../../../utils/AvatarUtils.tsx");
+  let obj = getAvatarURL;
   const applicationIconSource = obj.getApplicationIconSource({ id: applicationId, icon: applicationIcon, bot: applicationBot, botIconFirst: true });
-  require("../../../../../avatar/useAvatarColor.tsx");
+  hasFetchedColors;
   if (typeof applicationIconSource !== "number") {
     let uri;
     if (applicationIconSource != null) {
@@ -94,7 +99,7 @@ const memoResult = importAllResult.memo(function RecommendationBanner(arg0) {
     const obj1 = { uri: null };
     obj1[0] = overrideImageUrl;
     obj[1] = obj1;
-    obj[1] = jsx(require("../../../../../../components_native/common/FastImage.tsx"), { style: null, source: null, resizeMode: "cover" });
+    obj[1] = jsx(preload, { style: null, source: null, resizeMode: "cover" });
     let tmp11 = <View style={null} source={null} resizeMode="cover" />;
   } else if (applicationEmbedded) {
     const obj2 = { applicationId: null };

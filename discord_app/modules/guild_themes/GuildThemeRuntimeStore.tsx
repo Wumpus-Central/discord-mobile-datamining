@@ -1,3 +1,5 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { cloneGuildThemeSettings } from "guildThemeSerialization.tsx";
 // discord_app/modules/guild_themes/GuildThemeRuntimeStore.tsx
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -20,7 +22,7 @@ function snapshotSelectedGuildId(guildId) {
     if (guild != null) {
       guildTheme = guild.guildTheme;
     }
-    const cloneGuildThemeResult = require("guildThemeSerialization.tsx") /* cloneGuildThemeSettings */.cloneGuildTheme(guildTheme);
+    const cloneGuildThemeResult = cloneGuildThemeSettings /* cloneGuildThemeSettings */.cloneGuildTheme(guildTheme);
     const guild1 = store.getGuild(guildId);
     let hasItem;
     if (guild1 != null) {
@@ -46,7 +48,7 @@ function snapshotSelectedGuildId(guildId) {
       obj[2] = tmp8;
       flag = true;
     }
-    const obj3 = require("guildThemeSerialization.tsx") /* cloneGuildThemeSettings */;
+    const obj3 = cloneGuildThemeSettings /* cloneGuildThemeSettings */;
     const obj4 = store;
     tmp11 = require;
   }
@@ -59,7 +61,7 @@ function handleSavedGuildTheme(guildId) {
   guildId = guildId.guildId;
   let tmp = guildId === store2.getGuildId();
   if (tmp) {
-    let obj = require("guildThemeSerialization.tsx") /* cloneGuildThemeSettings */;
+    let obj = cloneGuildThemeSettings /* cloneGuildThemeSettings */;
     const cloneGuildThemeResult = obj.cloneGuildTheme(guildId.guildTheme);
     const guild = store.getGuild(guildId);
     let hasItem;
@@ -226,7 +228,7 @@ const guildThemeRuntimeStore = new GuildThemeRuntimeStore(require("dispatcher"),
             tmp19 = tmp17;
           }
           if (tmp19) {
-            obj = require("guildThemeSerialization.tsx") /* cloneGuildThemeSettings */;
+            obj = cloneGuildThemeSettings /* cloneGuildThemeSettings */;
             const guild2 = obj4.getGuild(id);
             guildTheme = undefined;
             if (guild2 != null) {
@@ -242,8 +244,8 @@ const guildThemeRuntimeStore = new GuildThemeRuntimeStore(require("dispatcher"),
           }
           let flag5 = guildId !== id;
           if (!flag5) {
-            flag5 = !require("../../../_runtime/00012_apply.js") /* apply */.isEqual(obj.guildTheme, guildTheme2);
-            const obj2 = require("../../../_runtime/00012_apply.js") /* apply */;
+            flag5 = !apply /* apply */.isEqual(obj.guildTheme, guildTheme2);
+            const obj2 = apply /* apply */;
           }
           if (!flag5) {
             flag5 = obj.hasThemeFeature !== tmp11;

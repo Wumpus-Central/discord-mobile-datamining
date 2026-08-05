@@ -1,3 +1,5 @@
+import { context } from "../../window/native/AppEntryKeyContext.tsx";
+import { computeEntryState } from "KeyboardUIStore.native.tsx";
 // discord_app/modules/keyboard/native/useSystemKeyboardHeight.native.tsx
 let closure_3 = { excludeSafeAreaInsets: false };
 const result = require("set").fileFinishedImporting("modules/keyboard/native/useSystemKeyboardHeight.native.tsx");
@@ -13,7 +15,7 @@ export default function useSystemKeyboardHeight() {
   }
   let importDefault;
   importDefault = flag(1477).useAppEntryKey();
-  return require("KeyboardUIStore.native.tsx")((arg0) => flag ? arg0.byAppEntry[closure_1].keyboardHeightExcludingSafeAreaInsets : arg0.byAppEntry[closure_1].keyboardHeight);
+  return computeEntryState((arg0) => flag ? arg0.byAppEntry[closure_1].keyboardHeightExcludingSafeAreaInsets : arg0.byAppEntry[closure_1].keyboardHeight);
 };
 export const getSystemKeyboardHeight = function getSystemKeyboardHeight(arg0) {
   let tmp = arg0;
@@ -26,8 +28,8 @@ export const getSystemKeyboardHeight = function getSystemKeyboardHeight(arg0) {
   }
   let DEFAULT_APP_ENTRY_KEY = tmp.appEntryKey;
   if (DEFAULT_APP_ENTRY_KEY === undefined) {
-    DEFAULT_APP_ENTRY_KEY = require("../../window/native/AppEntryKeyContext.tsx") /* context */.DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = context /* context */.DEFAULT_APP_ENTRY_KEY;
   }
-  const tmp4 = require("KeyboardUIStore.native.tsx").getState().byAppEntry[DEFAULT_APP_ENTRY_KEY];
+  const tmp4 = computeEntryState.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY];
   return flag ? tmp4.keyboardHeightExcludingSafeAreaInsets : tmp4.keyboardHeight;
 };

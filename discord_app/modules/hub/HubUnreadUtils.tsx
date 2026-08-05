@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/hub/HubUnreadUtils.tsx
 import isFetching from "isFetching";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
@@ -9,7 +10,7 @@ export const useHubUnreadCount = function useHubUnreadCount(arg0) {
   const _require = arg0;
   const items = [isFetching, generateOldThreadCutoff];
   const items1 = [arg0];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     if (null == callback) {
       return 0;
     } else {

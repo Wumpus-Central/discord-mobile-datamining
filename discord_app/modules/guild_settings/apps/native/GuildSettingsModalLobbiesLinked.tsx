@@ -1,3 +1,8 @@
+import { NavScrim } from "../../../../design/components/Navigator/native/NavScrim.android.tsx";
+import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
+import { map } from "../../../../design/tokens/native/useToken.tsx";
+import { Form } from "../../../../design/void/Form/native/index.tsx";
+import { getChannelsAllowedToUnlink } from "../../../lobbies/hooks/useChannelsAllowedToUnlink.tsx";
 // discord_app/modules/guild_settings/apps/native/GuildSettingsModalLobbiesLinked.tsx
 import "noop";
 import upsertRelationship from "upsertRelationship";
@@ -60,9 +65,9 @@ export default function GuildSettingsModalLobbiesLinked(arg0) {
   let _require;
   let keys;
   ({ contentContainerStyle, guildId } = arg0);
-  let obj = _require("../../../../design/tokens/native/useToken.tsx");
+  let obj = _map;
   const token = obj.useToken(keys(712).modules.mobile.TABLE_ROW_PADDING);
-  let obj1 = _require("../../../lobbies/hooks/useChannelsAllowedToUnlink.tsx");
+  let obj1 = _getChannelsAllowedToUnlink;
   const channelsAllowedToUnlink = obj1.useChannelsAllowedToUnlink(guildId);
   let obj2 = keys(12);
   const groupByResult = obj2.groupBy(channelsAllowedToUnlink, (linkedLobby) => {
@@ -84,8 +89,8 @@ export default function GuildSettingsModalLobbiesLinked(arg0) {
   obj2 = { style: { paddingHorizontal: token }, spacing: null, children: null };
   obj2[1] = keys(712).space.PX_24;
   obj2[2] = keys.map((applicationId) => outer1_6(outer1_9, { applicationId, channels: _undefined[applicationId], isOnlySection: 1 === keys.length }, applicationId));
-  obj[1] = callback(_require("../../../../design/components/Stack/native/Stack.native.tsx").Stack, obj2);
-  const items1 = [callback(_require("../../../../design/void/Form/native/index.tsx").Form, obj), callback(_require("../../../../design/components/Navigator/native/NavScrim.android.tsx").NavScrim, {})];
+  obj[1] = callback(_Stack.Stack, obj2);
+  const items1 = [callback(_Form.Form, obj), callback(_NavScrim.NavScrim, {})];
   obj[0] = items1;
   return callback2(closure_7, obj);
 };

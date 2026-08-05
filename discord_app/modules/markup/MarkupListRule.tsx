@@ -1,3 +1,4 @@
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
 // discord_app/modules/markup/MarkupListRule.tsx
 import closure_10 from "t";
 
@@ -71,7 +72,7 @@ obj.parse = function parse(arg0, arg1, arg2) {
   const regExp = new RegExp("(%INDENT_CAPTURE_PATTERN%)((?:[*-]|\\d+\\.)) +[^\\n]*(?:\\n(?!%INDENT_CAPTURE_PATTERN%(?:[*-]|\\d+\\.) )[^\\n]*)*(\n|$)".replaceAll("%INDENT_CAPTURE_PATTERN%", " {" + num3 + "," + num3 + 1 + "}"), "gm");
   regExp1 = new RegExp("^ {1," + num2 + "}", "gm");
   const match1 = str3.match(regExp);
-  require("../../../_runtime/metro/00038__.js")(null != match1, "markup list items can not be parsed.");
+  00038__(null != match1, "markup list items can not be parsed.");
   regex2 = false;
   let str = arg0[0];
   const str2 = arg0[0].replace(closure_8, "");

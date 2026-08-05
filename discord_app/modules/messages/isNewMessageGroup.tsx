@@ -1,3 +1,5 @@
+import { resetCache } from "../../utils/DateUtils.tsx";
+import { isSystemMessage } from "isSystemMessage.tsx";
 // discord_app/modules/messages/isNewMessageGroup.tsx
 import ME from "ME";
 
@@ -18,7 +20,7 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
     } else {
       let REPLY = constants;
       if (type.type > constants.DEFAULT) {
-        const tmp35 = require("isSystemMessage.tsx")(content);
+        const tmp35 = isSystemMessage(content);
         let tmp36 = !tmp35;
         if (tmp35) {
           type = type.type;
@@ -27,7 +29,7 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
         }
         let tmp32 = tmp36;
       } else {
-        tmp32 = require("isSystemMessage.tsx")(content);
+        tmp32 = isSystemMessage(content);
         if (!tmp32) {
           let tmp7 = content.author.id !== type.author.id;
           if (!tmp7) {
@@ -46,7 +48,7 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                 }
                 let tmp15 = !tmp14;
                 if (tmp14) {
-                  const isSameDayResult = require("../../utils/DateUtils.tsx") /* resetCache */.isSameDay(content.timestamp, type.timestamp);
+                  const isSameDayResult = resetCache /* resetCache */.isSameDay(content.timestamp, type.timestamp);
                   let tmp18 = !isSameDayResult;
                   if (isSameDayResult) {
                     const isWithinIntervalResult = tmp16(3955).isWithinInterval(content.timestamp, type.timestamp, closure_6);
@@ -100,7 +102,7 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                     const tmp16Result = tmp16(3955);
                   }
                   tmp15 = tmp18;
-                  const obj2 = require("../../utils/DateUtils.tsx") /* resetCache */;
+                  const obj2 = resetCache /* resetCache */;
                   tmp16 = require;
                 }
                 tmp11 = tmp15;

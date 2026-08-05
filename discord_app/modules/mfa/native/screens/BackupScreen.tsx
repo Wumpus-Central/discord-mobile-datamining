@@ -1,3 +1,4 @@
+import { finishMFACheck } from "../../../../../discord_common/js/shared/MFA.tsx";
 // discord_app/modules/mfa/native/screens/BackupScreen.tsx
 import Text from "Text";
 import _slicedToArray from "_slicedToArray";
@@ -9,9 +10,9 @@ let error;
 let metroImportAll;
 const require = arg1;
 function isValidClipboardCode(arg0) {
-  let tmp3 = arg0.length >= require("../../../../../discord_common/js/shared/MFA.tsx") /* finishMFACheck */.BACKUP_CODE_MIN_LENGTH;
+  let tmp3 = arg0.length >= finishMFACheck /* finishMFACheck */.BACKUP_CODE_MIN_LENGTH;
   if (tmp3) {
-    tmp3 = arg0.length <= require("../../../../../discord_common/js/shared/MFA.tsx") /* finishMFACheck */.BACKUP_CODE_MAX_LENGTH;
+    tmp3 = arg0.length <= finishMFACheck /* finishMFACheck */.BACKUP_CODE_MAX_LENGTH;
   }
   return tmp3;
 }

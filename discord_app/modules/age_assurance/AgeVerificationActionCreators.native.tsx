@@ -1,3 +1,4 @@
+import { Linking } from "../../lib/native/Linking.tsx";
 // discord_app/modules/age_assurance/AgeVerificationActionCreators.native.tsx
 import SafetyToastType from "SafetyToastType";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -219,6 +220,6 @@ export default {
     }
   },
   openUrl(arg0) {
-    require("../../lib/native/Linking.tsx").openURL(arg0);
+    Linking.openURL(arg0);
   }
 };

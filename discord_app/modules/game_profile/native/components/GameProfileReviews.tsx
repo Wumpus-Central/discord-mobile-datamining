@@ -1,3 +1,4 @@
+import { buildSteamStoreUrl } from "../../hooks/useSteamWebsiteUrl.tsx";
 // discord_app/modules/game_profile/native/components/GameProfileReviews.tsx
 import noop from "noop";
 import get_ActivityIndicator from "SteamReleaseStatus";
@@ -228,7 +229,7 @@ export default function GameProfileReviews(arg0) {
   let trackAction;
   ({ game, trackAction } = arg0);
   const tmp = createCacheKey();
-  let obj = require("../../hooks/useSteamWebsiteUrl.tsx") /* buildSteamStoreUrl */;
+  let obj = buildSteamStoreUrl /* buildSteamStoreUrl */;
   let id;
   if (game != null) {
     id = game.id;

@@ -1,3 +1,9 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { navigationToRootTabHelper } from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { trackQuestEvent } from "../lib/analytics/AnalyticsActions.tsx";
+import { _manuallyStartConsoleQuest } from "../QuestActionCreators.tsx";
+import { getQuestDeliveryDataForPlacement } from "QuestDataUtils.tsx";
+import { getApplicationIdsByTaskTypes } from "QuestTaskUtils.tsx";
 // discord_app/modules/quests/utils/VideoQuestUtils.tsx
 import handleConnectionInfoChange from "handleConnectionInfoChange";
 import initializeState from "initializeState";
@@ -10,7 +16,7 @@ const result = require("_toPropertyKey").fileFinishedImporting("modules/quests/u
 
 export const getVideoQuestWatchCtaText = require("formatWatchRemainingDurationShort").getVideoQuestWatchCtaText;
 export const sendVideoProgress = function sendVideoProgress(quest, currentTime) {
-  let isQuestExpiredResult = require("QuestDataUtils.tsx") /* getQuestDeliveryDataForPlacement */.isQuestExpired(quest);
+  let isQuestExpiredResult = getQuestDeliveryDataForPlacement /* getQuestDeliveryDataForPlacement */.isQuestExpired(quest);
   if (!isQuestExpiredResult) {
     const userStatus = quest.userStatus;
     let enrolledAt;
@@ -28,8 +34,8 @@ export const sendVideoProgress = function sendVideoProgress(quest, currentTime) 
     isQuestExpiredResult = null != completedAt;
   }
   if (!isQuestExpiredResult) {
-    require("../QuestActionCreators.tsx") /* _manuallyStartConsoleQuest */.updateVideoProgress(quest.id, currentTime);
-    const tmpResult = require("../QuestActionCreators.tsx") /* _manuallyStartConsoleQuest */;
+    _manuallyStartConsoleQuest /* _manuallyStartConsoleQuest */.updateVideoProgress(quest.id, currentTime);
+    const tmpResult = _manuallyStartConsoleQuest /* _manuallyStartConsoleQuest */;
   }
 };
 export const getVideoOrientation = function getVideoOrientation(assets) {
@@ -102,8 +108,8 @@ export const formatVideoProgressRatio = function formatVideoProgressRatio(bound,
 export const getVideoQuestEndCardCtaText = function getVideoQuestEndCardCtaText(ctaConfig) {
   let buttonLabel = ctaConfig.ctaConfig.buttonLabel;
   if (buttonLabel == null) {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    buttonLabel = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.iiTtpJ);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    buttonLabel = intl.string(getSystemLocale /* getSystemLocale */.t.iiTtpJ);
   }
   return buttonLabel;
 };
@@ -138,7 +144,7 @@ export const handleVideoQuestModalClose = function handleVideoQuestModalClose(ar
       tmp4 = null == completedAt;
     }
     if (tmp4) {
-      let obj2 = require("QuestDataUtils.tsx") /* getQuestDeliveryDataForPlacement */;
+      let obj2 = getQuestDeliveryDataForPlacement /* getQuestDeliveryDataForPlacement */;
       let isQuestExpiredResult = obj2.isQuestExpired(quest);
       if (!isQuestExpiredResult) {
         const userStatus3 = quest.userStatus;
@@ -185,8 +191,8 @@ export const handleVideoQuestModalClose = function handleVideoQuestModalClose(ar
     obj[2] = videoSessionId;
     obj[2] = obj;
     obj[3] = sourceQuestContent;
-    require("../lib/analytics/AnalyticsActions.tsx") /* trackQuestEvent */.trackQuestEvent(obj);
-    const obj5 = require("../lib/analytics/AnalyticsActions.tsx") /* trackQuestEvent */;
+    trackQuestEvent /* trackQuestEvent */.trackQuestEvent(obj);
+    const obj5 = trackQuestEvent /* trackQuestEvent */;
     const obj1 = { questId: null, event: null, properties: null, sourceQuestContent: null };
     obj1[0] = questId;
     obj1[1] = AnalyticEvents.QUEST_VIDEO_MODAL_CLOSED;
@@ -196,8 +202,8 @@ export const handleVideoQuestModalClose = function handleVideoQuestModalClose(ar
     obj2[2] = effectiveConnectionSpeed.getEffectiveConnectionSpeed();
     obj1[2] = obj2;
     obj1[3] = sourceQuestContent;
-    require("../lib/analytics/AnalyticsActions.tsx") /* trackQuestEvent */.trackQuestEvent(obj1);
-    const obj8 = require("../lib/analytics/AnalyticsActions.tsx") /* trackQuestEvent */;
+    trackQuestEvent /* trackQuestEvent */.trackQuestEvent(obj1);
+    const obj8 = trackQuestEvent /* trackQuestEvent */;
   }
 };
 export const getVideoQuestModalKey = function getVideoQuestModalKey(questId) {
@@ -212,10 +218,10 @@ export const computeMaxSeekableTime = function computeMaxSeekableTime(arg0, arg1
   return bound;
 };
 export const isVideoQuestProgressing = function isVideoQuestProgressing(closure_0) {
-  let isModalOpenResult = require("QuestTaskUtils.tsx") /* getApplicationIdsByTaskTypes */.hasWatchVideoTasks(closure_0);
+  let isModalOpenResult = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */.hasWatchVideoTasks(closure_0);
   if (isModalOpenResult) {
     const _HermesInternal = HermesInternal;
-    isModalOpenResult = require("../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */.isModalOpen("VIDEO-QUEST-" + closure_0.id);
+    isModalOpenResult = navigationToRootTabHelper /* navigationToRootTabHelper */.isModalOpen("VIDEO-QUEST-" + closure_0.id);
   }
   return isModalOpenResult;
 };

@@ -1,3 +1,5 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { isVersionEqual } from "../../utils/SecondaryIndexMapUtils.tsx";
 // discord_app/modules/game_relationships/GameRelationshipStoreHooks.tsx
 import _slicedToArray from "_slicedToArray";
 import recountRelationshipTypes from "recountRelationshipTypes";
@@ -10,10 +12,10 @@ export const useGameRelationshipsByType = function useGameRelationshipsByType(FR
   const _require = FRIEND;
   let items = [recountRelationshipTypes];
   const items1 = [FRIEND];
-  return callback(_require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return callback(_initialize.useStateFromStores(items, () => {
     const items = [outer1_3.getGameRelationshipsByType(closure_0), outer1_3.getGameRelationshipsVersion()];
     return items;
-  }, items1, _require("../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual), 1)[0];
+  }, items1, _isVersionEqual.isVersionEqual), 1)[0];
 };
 export const useGameFriendsForUser = function useGameFriendsForUser(id) {
   const FRIEND = RelationshipTypes.FRIEND;
@@ -39,20 +41,20 @@ export const useHasGameRelationshipsForUser = function useHasGameRelationshipsFo
   const _require = arg0;
   let items = [recountRelationshipTypes];
   const items1 = [arg0];
-  return callback(_require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return callback(_initialize.useStateFromStores(items, () => {
     const gameRelationshipsForUser = outer1_3.getGameRelationshipsForUser(closure_0);
     const items = [gameRelationshipsForUser.length > 0, outer1_3.getGameRelationshipsVersion()];
     return items;
-  }, items1, _require("../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual), 1)[0];
+  }, items1, _isVersionEqual.isVersionEqual), 1)[0];
 };
 export const useHasGameRelationshipsForUserByType = function useHasGameRelationshipsForUserByType(arg0, arg1) {
   const _require = arg0;
   const dependencyMap = arg1;
   let items = [recountRelationshipTypes];
   const items1 = [arg1, arg0];
-  return callback(_require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return callback(_initialize.useStateFromStores(items, () => {
     const gameRelationshipsForUserByType = outer1_3.getGameRelationshipsForUserByType(closure_0, closure_1);
     const items = [gameRelationshipsForUserByType.length > 0, outer1_3.getGameRelationshipsVersion()];
     return items;
-  }, items1, _require("../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual), 1)[0];
+  }, items1, _isVersionEqual.isVersionEqual), 1)[0];
 };

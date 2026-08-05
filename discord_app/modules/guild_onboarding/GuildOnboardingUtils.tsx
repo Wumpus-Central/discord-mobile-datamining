@@ -1,3 +1,7 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { shallowEqual } from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
+import { useCanChannelBeDefault } from "DefaultChannelUtils.tsx";
 // discord_app/modules/guild_onboarding/GuildOnboardingUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import set from "set";
@@ -15,7 +19,7 @@ const require = arg1;
 function isChattableChannel(guild_id) {
   let tmp = null != guild_id;
   if (tmp) {
-    const canChannelBeDefaultResult = require("DefaultChannelUtils.tsx") /* useCanChannelBeDefault */.canChannelBeDefault(guild_id.guild_id, guild_id.id);
+    const canChannelBeDefaultResult = useCanChannelBeDefault /* useCanChannelBeDefault */.canChannelBeDefault(guild_id.guild_id, guild_id.id);
     if (!canChannelBeDefaultResult) {
       tmp = canChannelBeDefaultResult;
     } else {
@@ -30,7 +34,7 @@ function isChattableChannel(guild_id) {
       }
       const tmp7 = importAll(3918);
     }
-    const obj = require("DefaultChannelUtils.tsx") /* useCanChannelBeDefault */;
+    const obj = useCanChannelBeDefault /* useCanChannelBeDefault */;
   }
   return tmp;
 }
@@ -54,7 +58,7 @@ function getFlattenedDefaultChannels(closure_0, arr, arg2, fn) {
     let obj = channel;
     let tmp = require;
     let tmp2 = dependencyMap;
-    let obj2 = require("DefaultChannelUtils.tsx") /* useCanChannelBeDefault */;
+    let obj2 = useCanChannelBeDefault /* useCanChannelBeDefault */;
     if (obj2.canChannelBeDefault(channel.guild_id, channel.id)) {
       let tmp3 = channel;
       if (!arr.includes(obj.id)) {
@@ -83,9 +87,9 @@ function getFlattenedDefaultChannels(closure_0, arr, arg2, fn) {
 function areStatesEqual(arg0, arg1) {
   let tmp = arg0[0].length === arg1[0].length && arg0[1].length === arg1[1].length;
   if (tmp) {
-    tmp = require("../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(arg0[0], arg1[0]) && require("../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(arg0[1], arg1[1]);
+    tmp = shallowEqual(arg0[0], arg1[0]) && shallowEqual(arg0[1], arg1[1]);
     const tmp2 = importDefault;
-    const tmp4 = require("../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(arg0[0], arg1[0]) && require("../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(arg0[1], arg1[1]);
+    const tmp4 = shallowEqual(arg0[0], arg1[0]) && shallowEqual(arg0[1], arg1[1]);
   }
   return tmp;
 }
@@ -97,7 +101,7 @@ export const ONBOARDING_EPOCH = date;
 export const useGuildOnboardingSettingsAvailable = function useGuildOnboardingSettingsAvailable(arg0) {
   const _require = arg0;
   const items = [createGuildRecordFromRust, getUncachedChannelPermissions];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const guild = outer1_8.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
@@ -282,7 +286,7 @@ export const isChattableChannelId = function isChattableChannelId(arg0) {
   channel = channel.getChannel(arg0);
   let tmp = null != channel;
   if (tmp) {
-    const canChannelBeDefaultResult = require("DefaultChannelUtils.tsx") /* useCanChannelBeDefault */.canChannelBeDefault(channel.guild_id, channel.id);
+    const canChannelBeDefaultResult = useCanChannelBeDefault /* useCanChannelBeDefault */.canChannelBeDefault(channel.guild_id, channel.id);
     if (!canChannelBeDefaultResult) {
       tmp = canChannelBeDefaultResult;
     } else {
@@ -297,7 +301,7 @@ export const isChattableChannelId = function isChattableChannelId(arg0) {
       }
       const tmp7 = importAll(3918);
     }
-    const obj2 = require("DefaultChannelUtils.tsx") /* useCanChannelBeDefault */;
+    const obj2 = useCanChannelBeDefault /* useCanChannelBeDefault */;
   }
   return tmp;
 };
@@ -305,7 +309,7 @@ export { isChattableChannel };
 export const useIsChattableChannel = function useIsChattableChannel(arg0) {
   const _require = arg0;
   const items = [ensureGuildLoaded];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const channel = outer1_4.getChannel(callback);
     let isNotNullishResult = callback(outer1_3[13]).isNotNullish(channel);
     if (isNotNullishResult) {
@@ -428,7 +432,7 @@ export const useChattableDefaultChannels = function useChattableDefaultChannels(
   let closure_1 = arg1;
   let items = [comparator];
   let items1 = [arg0, arg1];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const items = [];
     const items1 = [];
     const iter = outer1_6.getChannels(callback)[outer1_7][Symbol.iterator]();
@@ -484,12 +488,12 @@ export const useChattableDefaultChannels = function useChattableDefaultChannels(
 export const getSelectedRoleIds = function getSelectedRoleIds(selectedOptions) {
   const mapped = selectedOptions.map((roleIds) => roleIds.roleIds);
   const flatResult = mapped.flat();
-  return new Set(mapped.flat().filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish));
+  return new Set(mapped.flat().filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish));
 };
 export const getSelectedChannelIds = function getSelectedChannelIds(selectedOptions) {
   const mapped = selectedOptions.map((channelIds) => channelIds.channelIds);
   const flatResult = mapped.flat();
-  return new Set(mapped.flat().filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish));
+  return new Set(mapped.flat().filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish));
 };
 export const getProviderConnectionState = function getProviderConnectionState(connections) {
   const found = connections.filter((connection_type) => {

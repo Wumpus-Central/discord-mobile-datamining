@@ -1,3 +1,4 @@
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 // discord_app/modules/icymi/native/custom_scores/ICYMICustomScoresModal.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -17,7 +18,7 @@ const result = require("createNativeStackNavigator").fileFinishedImporting("modu
 
 export default function ICYMICustomScoresModal() {
   const _require = createNativeStackNavigator();
-  let obj = _require("../../../../design/components/Navigator/native/Navigator.native.tsx");
+  let obj = _NavigationStack;
   let closure_1 = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions() {

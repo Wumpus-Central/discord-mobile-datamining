@@ -1,3 +1,5 @@
+import { useSafeAreaInsetsKeyboardAware } from "../../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import { ThreadListSection } from "../../../../../threads/native/components/redesign/ThreadList.tsx";
 // discord_app/modules/main_tabs_v2/native/sidebar/details/screens/ThreadsScreen.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -37,8 +39,8 @@ function ThreadsScreen(channel) {
   }
   obj[1] = tmp10;
   obj[2] = callback1;
-  const tmp9 = require("../../../../../threads/native/components/redesign/ThreadList.tsx");
-  obj[3] = { paddingBottom: require("../../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx")({ includeKeyboardHeight: true }).insets.bottom + tmp4(712).space.PX_16, paddingHorizontal: 16 };
+  const tmp9 = ThreadListSection;
+  obj[3] = { paddingBottom: useSafeAreaInsetsKeyboardAware({ includeKeyboardHeight: true }).insets.bottom + tmp4(712).space.PX_16, paddingHorizontal: 16 };
   obj[1] = <tmp9 channel={channel} onCreateThreadPress={null} onThreadPress={null} contentContainerStyle={null} />;
   return <tmp8 channel={channel} onCreateThreadPress={null} onThreadPress={null} contentContainerStyle={null} />;
 }

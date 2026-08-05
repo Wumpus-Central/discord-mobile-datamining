@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/quests/native/BountiesModal/BountiesEndCardPressableCta.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -14,9 +15,9 @@ const require = arg1;
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 let closure_9 = createCacheKey.createStyles(() => {
   let obj = { image: null, info: null, ctaContainer: null };
-  obj = { width: END_CARD_IMAGE_SIZE, height: END_CARD_IMAGE_SIZE, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.xl, borderWidth: 1, borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_MUTED };
+  obj = { width: END_CARD_IMAGE_SIZE, height: END_CARD_IMAGE_SIZE, borderRadius: Themes.radii.xl, borderWidth: 1, borderColor: Themes.colors.BORDER_MUTED };
   obj[0] = obj;
-  obj = { gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, alignItems: "center", marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
+  obj = { gap: Themes.space.PX_4, alignItems: "center", marginTop: Themes.space.PX_12 };
   obj[1] = obj;
   obj[2] = { position: "relative", alignItems: "center" };
   return obj;

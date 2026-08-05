@@ -1,3 +1,5 @@
+import { isTracing } from "../app-start-performance/AppStartPerformance.tsx";
+import { Storage } from "../storage/Storage.tsx";
 // discord_common/js/packages/flux/PersistedStore.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { Store } from "initialize";
@@ -214,8 +216,8 @@ prototype["initializeIfNeeded"] = function initializeIfNeeded() {
     const _Date2 = Date;
     const diff = Date.now() - timestamp;
     if (diff > 5) {
-      require("../app-start-performance/AppStartPerformance.tsx").mark("\u{1F9A5}", `${self.getName()}.initialize()`, diff);
-      const obj = require("../app-start-performance/AppStartPerformance.tsx");
+      isTracing.mark("\u{1F9A5}", `${self.getName()}.initialize()`, diff);
+      const obj = isTracing;
     }
   }
 };
@@ -224,14 +226,14 @@ PersistedStore["migrateAndReadStoreState"] = function migrateAndReadStoreState(E
   let _version;
   if (null != c7) {
     if (PersistedStore.shouldClear(c7, EmojiStore)) {
-      const Storage2 = require("../storage/Storage.tsx") /* Storage */.Storage;
+      const Storage2 = Storage /* Storage */.Storage;
       Storage2.remove(EmojiStore);
       return { state: "ct", requiresPersist: "Array" };
     }
   }
   let value = null;
   if (null == PersistedStore._clearAllPromise) {
-    const Storage = require("../storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     value = Storage.get(EmojiStore);
   }
   if (value == null) {
@@ -303,11 +305,11 @@ prototype["asyncPersist"] = function asyncPersist() {
 };
 prototype["persist"] = function persist() {
   const state = this.getState();
-  const Storage = require("../storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   const result = Storage.set(this.getClass().persistKey, { _state: state, _version: this._version });
 };
 prototype["clear"] = function clear() {
-  const Storage = require("../storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   Storage.remove(this.getClass().persistKey);
 };
 let set = new Set();

@@ -1,3 +1,8 @@
+import { registerAsset } from "../../../../../_runtime/09944_registerAsset.js";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { DeviceMedia } from "../../../device/native/DeviceMedia.tsx";
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardFooter.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -26,26 +31,26 @@ const memoResult = importAllResult.memo(function MediaKeyboardFooter(arg0) {
   let onViewAll;
   ({ disabled, onViewAll } = arg0);
   const tmp = callback3();
-  let obj = require("../../../device/native/DeviceMedia.tsx");
+  let obj = DeviceMedia;
   if (obj.useHasReachedEnd()) {
     obj = { style: null, children: null };
     obj[0] = tmp.container;
     obj = { variant: "text-sm/normal", style: null, children: null };
     obj[1] = tmp.label;
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.mKSwAW);
-    const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , ];
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.mKSwAW);
+    const items = [callback(Text /* Text */.Text, obj), , ];
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.buttonWrapper;
     const obj2 = { variant: "primary", size: "sm", onPress: null, text: null, disabled: null };
     obj2[2] = onViewAll;
-    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj2[3] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.ZT24In);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    obj2[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.ZT24In);
     obj2[4] = disabled;
-    obj1[1] = callback(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj2);
+    obj1[1] = callback(Button /* Button */.Button, obj2);
     items[1] = callback(closure_3, obj1);
     const obj3 = { source: null };
-    obj3[0] = require("../../../../../_runtime/09944_registerAsset.js");
+    obj3[0] = registerAsset;
     items[2] = callback(closure_4, obj3);
     obj[1] = items;
     let tmp6 = callback2(closure_3, obj);

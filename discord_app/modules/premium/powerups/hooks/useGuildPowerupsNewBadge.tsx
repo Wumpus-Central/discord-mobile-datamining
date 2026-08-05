@@ -1,3 +1,6 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useSelectedDismissibleContent } from "../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
+import { useGuildPowerupNewPerkMarketingVersion } from "useGuildPowerupNewPerkMarketingVersion.tsx";
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupsNewBadge.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -17,16 +20,16 @@ export default function useGuildPowerupsNewBadge(arg0) {
   let _require;
   let importDefault;
   _require = arg0;
-  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [calculateAppliedBoosts];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getStateForGuild(closure_0));
-  const tmp4Result = require("useGuildPowerupNewPerkMarketingVersion.tsx")(arg0, stateFromStores);
+  const tmp4Result = useGuildPowerupNewPerkMarketingVersion(arg0, stateFromStores);
   let num = 0;
   if (tmp4Result >= constants.GUILD_THEME) {
     num = tmp4Result;
   }
   const tmp = _require;
-  const tmp4 = require("useGuildPowerupNewPerkMarketingVersion.tsx");
+  const tmp4 = useGuildPowerupNewPerkMarketingVersion;
   let tmp6 = null;
   if (num > 0) {
     tmp6 = null;
@@ -34,7 +37,7 @@ export default function useGuildPowerupsNewBadge(arg0) {
       tmp6 = closure_8;
     }
   }
-  const tmp7 = callback(_require("../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx").useSelectedVersionedDismissibleContent(tmp6, num), 2);
+  const tmp7 = callback(_useSelectedDismissibleContent.useSelectedVersionedDismissibleContent(tmp6, num), 2);
   _require = tmp8;
   importDefault = tmp9;
   const items1 = [tmp7[0] === closure_8, tmp7[1]];
@@ -55,8 +58,8 @@ export default function useGuildPowerupsNewBadge(arg0) {
 export const useAutoDismissGuildPowerupsNewBadge = function useAutoDismissGuildPowerupsNewBadge(guildId) {
   const _require = guildId;
   const items = [calculateAppliedBoosts];
-  const stateFromStores = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_5.getStateForGuild(closure_0));
-  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_5.getStateForGuild(closure_0));
+  let obj = _initialize;
   const tmp2Result = num(11776)(guildId, stateFromStores);
   num = 0;
   if (tmp2Result >= constants.GUILD_THEME) {

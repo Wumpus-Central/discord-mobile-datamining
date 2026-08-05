@@ -1,3 +1,6 @@
+import { int2hslRaw } from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { useDominantRGBFromImage } from "../../calls/native/VideoBackground.tsx";
 // discord_app/modules/profile_customization/native/ProfileCustomizationUtils.tsx
 let result = require("int2hslRaw").fileFinishedImporting("modules/profile_customization/native/ProfileCustomizationUtils.tsx");
 
@@ -6,7 +9,7 @@ export const useEditBannerSource = function useEditBannerSource(arg0) {
   let pendingBanner;
   ({ displayProfile, pendingBanner } = arg0);
   if (null != pendingBanner) {
-    return require("../../calls/native/VideoBackground.tsx") /* useDominantRGBFromImage */.memoizedImageSource(pendingBanner);
+    return useDominantRGBFromImage /* useDominantRGBFromImage */.memoizedImageSource(pendingBanner);
   } else {
     if (null === pendingBanner) {
       let result;
@@ -24,8 +27,8 @@ export const useEditBannerSource = function useEditBannerSource(arg0) {
           if (displayProfile != null) {
             bannerURL = displayProfile.getBannerURL({ size: 600, canAnimate: true });
           }
-          source = require("../../../utils/AvatarUtils.tsx") /* getAvatarURL */.makeSource(bannerURL);
-          const obj = require("../../../utils/AvatarUtils.tsx") /* getAvatarURL */;
+          source = getAvatarURL /* getAvatarURL */.makeSource(bannerURL);
+          const obj = getAvatarURL /* getAvatarURL */;
         }
         return source;
       }
@@ -36,8 +39,8 @@ export const useEditBannerSource = function useEditBannerSource(arg0) {
     }
     let source1 = null;
     if (null != previewBanner) {
-      source1 = require("../../../utils/AvatarUtils.tsx") /* getAvatarURL */.makeSource(previewBanner);
-      const obj2 = require("../../../utils/AvatarUtils.tsx") /* getAvatarURL */;
+      source1 = getAvatarURL /* getAvatarURL */.makeSource(previewBanner);
+      const obj2 = getAvatarURL /* getAvatarURL */;
     }
     return source1;
   }
@@ -48,11 +51,11 @@ export const useUserProfileBannerBackgroundColor = function useUserProfileBanner
   let user;
   ({ user, pendingAvatarSrc, displayProfile } = arg0);
   if (null == user) {
-    const obj3 = require("../../calls/native/VideoBackground.tsx") /* useDominantRGBFromImage */;
-    const memoizedImageSourceResult = require("../../calls/native/VideoBackground.tsx") /* useDominantRGBFromImage */.memoizedImageSource(null);
-    const obj4 = require("../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
+    const obj3 = useDominantRGBFromImage /* useDominantRGBFromImage */;
+    const memoizedImageSourceResult = useDominantRGBFromImage /* useDominantRGBFromImage */.memoizedImageSource(null);
+    const obj4 = int2hslRaw /* int2hslRaw */;
     let primaryColor;
-    const obj5 = require("../../calls/native/VideoBackground.tsx") /* useDominantRGBFromImage */;
+    const obj5 = useDominantRGBFromImage /* useDominantRGBFromImage */;
     if (displayProfile != null) {
       primaryColor = displayProfile.primaryColor;
     }
@@ -63,7 +66,7 @@ export const useUserProfileBannerBackgroundColor = function useUserProfileBanner
   } else if (null == pendingAvatarSrc) {
     pendingAvatarSrc = user.getAvatarURL(tmp, 80);
   } else if (pendingAvatarSrc == null) {
-    let obj = require("../../../utils/AvatarUtils.tsx") /* getAvatarURL */;
+    let obj = getAvatarURL /* getAvatarURL */;
     obj = {};
     const merged = Object.assign(user);
     obj.avatar = null;
@@ -76,11 +79,11 @@ export const getAvatarSource = function getAvatarSource(getAvatarURL) {
   } else {
     let userAvatarURL = arg2;
     if (undefined === arg2) {
-      let memoizedImageSourceResult = require("../../calls/native/VideoBackground.tsx") /* useDominantRGBFromImage */.memoizedImageSource(getAvatarURL.getAvatarURL(arg1, 80, !arg3));
-      const obj4 = require("../../calls/native/VideoBackground.tsx") /* useDominantRGBFromImage */;
+      let memoizedImageSourceResult = useDominantRGBFromImage /* useDominantRGBFromImage */.memoizedImageSource(getAvatarURL.getAvatarURL(arg1, 80, !arg3));
+      const obj4 = useDominantRGBFromImage /* useDominantRGBFromImage */;
       const tmp2 = !arg3;
     } else {
-      let obj = require("../../calls/native/VideoBackground.tsx") /* useDominantRGBFromImage */;
+      let obj = useDominantRGBFromImage /* useDominantRGBFromImage */;
       if (userAvatarURL == null) {
         obj = {};
         const merged = Object.assign(getAvatarURL);

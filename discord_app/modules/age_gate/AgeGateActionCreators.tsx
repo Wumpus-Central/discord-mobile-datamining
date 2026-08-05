@@ -1,3 +1,7 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { trackAgeGateSubmitted } from "../auth/experiment/trackAgeGateSubmitted.tsx";
 // discord_app/modules/age_gate/AgeGateActionCreators.tsx
 import { AgeGateAnalyticAction } from "result";
 import ME from "ME";
@@ -9,11 +13,11 @@ const result = require("trackAgeGateSubmitted").fileFinishedImporting("modules/a
 
 export const submitDateOfBirth = function submitDateOfBirth(c0, outer1_2) {
   const _require = outer1_2;
-  require("../auth/experiment/trackAgeGateSubmitted.tsx")(c0, outer1_2);
-  let obj = require("../../utils/AnalyticsUtils.tsx");
+  trackAgeGateSubmitted(c0, outer1_2);
+  let obj = expandEventProperties;
   obj = { source: outer1_2, action: AgeGateAnalyticAction.AGE_GATE_SUBMITTED };
   obj.track(constants.AGE_GATE_ACTION, obj);
-  const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+  const HTTP = _sendRequest.HTTP;
   obj = { url: constants2.ME, oldFormErrors: true, body: null, rejectWithError: false };
   obj[2] = { date_of_birth: c0.format("YYYY-MM-DD") };
   const obj1 = { date_of_birth: c0.format("YYYY-MM-DD") };
@@ -25,14 +29,14 @@ export const submitDateOfBirth = function submitDateOfBirth(c0, outer1_2) {
   });
 };
 export const preventUnderageRegistration = function preventUnderageRegistration(REGISTER) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj.dispatch({ type: "AGE_GATE_PREVENT_UNDERAGE_REGISTRATION" });
   obj = { source: REGISTER, action: AgeGateAnalyticAction.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION };
-  require("../../utils/AnalyticsUtils.tsx").track(constants.AGE_GATE_ACTION, obj);
+  expandEventProperties.track(constants.AGE_GATE_ACTION, obj);
 };
 export const logoutUnderageNewUser = function logoutUnderageNewUser(source) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj.dispatch({ type: "AGE_GATE_LOGOUT_UNDERAGE_NEW_USER" });
   obj = { source, action: AgeGateAnalyticAction.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER };
-  require("../../utils/AnalyticsUtils.tsx").track(constants.AGE_GATE_ACTION, obj);
+  expandEventProperties.track(constants.AGE_GATE_ACTION, obj);
 };

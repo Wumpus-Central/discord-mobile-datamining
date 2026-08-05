@@ -1,3 +1,5 @@
+import { create } from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
+import { PerkConfigType } from "types.tsx";
 // discord_app/modules/premium/perks_state/PerksStateUtils.tsx
 import _slicedToArray from "_slicedToArray";
 
@@ -5,7 +7,7 @@ const require = arg1;
 function parseServerPerkConfigKind(kind) {
   if (null != kind.kind) {
     const type = kind.kind.type;
-    if (require("types.tsx") /* PerkConfigType */.PerkConfigType.INCREASED_FILE_UPLOAD_SIZE === type) {
+    if (PerkConfigType /* PerkConfigType */.PerkConfigType.INCREASED_FILE_UPLOAD_SIZE === type) {
       let obj = { type: null, maxSize: null };
       obj[0] = tmp(1891).PerkConfigType.INCREASED_FILE_UPLOAD_SIZE;
       obj[1] = kind.kind.max_size;
@@ -45,7 +47,7 @@ function getPerkSource(perks, MONTHLY_ORBS) {
         flag = hasItem;
       }
       if (flag) {
-        const items = [require("../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx") /* create */.PerkSource.SOURCE_NITRO];
+        const items = [create /* create */.PerkSource.SOURCE_NITRO];
         source = items;
       }
     }

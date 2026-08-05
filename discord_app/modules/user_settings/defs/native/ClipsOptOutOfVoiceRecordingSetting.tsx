@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/defs/native/ClipsOptOutOfVoiceRecordingSetting.tsx
 import getSystemLocale from "getSystemLocale";
 import createToggle from "createToggle";
@@ -76,12 +77,12 @@ function _updateClipsAllowVoiceRecording() {
 }
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.AGDDkH);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.AGDDkH);
   },
   useDescription() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["wW9/zQ"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["wW9/zQ"]);
   },
   parent: require("MobileSetting").MobileSetting.CLIPS,
   useValue: require("explicitContentFromProto").ClipsAllowVoiceRecording.useSetting,

@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/guild_role_subscriptions/ui/RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec.tsx
 import getHash from "getHash";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -11,17 +13,17 @@ const result = require("ME").fileFinishedImporting("modules/guild_role_subscript
 
 export default {
   title() {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.aTFQKh);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.aTFQKh);
   },
   description() {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.oTbFQg);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.oTbFQg);
   },
   canCreateGuild: false,
   useIsGuildSupported() {
     const items = [getHash, getUncachedChannelPermissions];
-    return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => (features) => {
+    return initialize /* initialize */.useStateFromStores(items, () => (features) => {
       features = features.features;
       let hasItem = features.has(constants.ROLE_SUBSCRIPTIONS_ENABLED);
       if (hasItem) {

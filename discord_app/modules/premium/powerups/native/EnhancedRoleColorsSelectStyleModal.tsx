@@ -1,3 +1,11 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { useTheme } from "../../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useGuildSettingsRoleExampleMessage } from "../../../guild_settings/roles/hooks/useGuildSettingsRoleExampleMessage.tsx";
+import { setOptions } from "../../../messages/native/renderer/RowGenerator.tsx";
+import { useHasEnhancedRoleColors } from "../hooks/useHasEnhancedRoleColors.tsx";
 // discord_app/modules/premium/powerups/native/EnhancedRoleColorsSelectStyleModal.tsx
 import get_ActivityIndicator from "extractColorStringsFromServerColors";
 import { RoleColorsStyle } from "handleSetSection";
@@ -15,31 +23,31 @@ let c9;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null, stylesContainer: null, button: null, message: null, text: null, upsellContainer: null, upsellText: null, selected: null, disabled: null };
-  obj = { marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32 };
+  obj = { marginHorizontal: Themes.space.PX_12, marginBottom: Themes.space.PX_32 };
   obj[0] = obj;
-  obj = { display: "flex", flexDirection: "row", gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  obj = { display: "flex", flexDirection: "row", gap: Themes.space.PX_8 };
   obj[1] = obj;
-  obj[2] = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, overflow: "hidden", height: 100, width: 100, flex: 1, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWEST, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" };
-  const obj1 = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, overflow: "hidden", height: 100, width: 100, flex: 1, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWEST, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" };
-  obj[3] = { width: 400, flex: 1, marginStart: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, alignSelf: "flex-start" };
+  obj[2] = { borderRadius: Themes.radii.sm, overflow: "hidden", height: 100, width: 100, flex: 1, backgroundColor: Themes.colors.BACKGROUND_BASE_LOWEST, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" };
+  const obj1 = { borderRadius: Themes.radii.sm, overflow: "hidden", height: 100, width: 100, flex: 1, backgroundColor: Themes.colors.BACKGROUND_BASE_LOWEST, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" };
+  obj[3] = { width: 400, flex: 1, marginStart: Themes.space.PX_8, marginVertical: Themes.space.PX_8, alignSelf: "flex-start" };
   if (arg0 === ThemeTypes.LIGHT) {
     let BACKGROUND_SURFACE_HIGH = tmp(712).colors.BACKGROUND_BASE_LOW;
   } else {
     BACKGROUND_SURFACE_HIGH = tmp(712).colors.BACKGROUND_SURFACE_HIGH;
   }
-  const obj2 = { width: 400, flex: 1, marginStart: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, alignSelf: "flex-start" };
+  const obj2 = { width: 400, flex: 1, marginStart: Themes.space.PX_8, marginVertical: Themes.space.PX_8, alignSelf: "flex-start" };
   const tmp3 = ThemeTypes;
-  obj[4] = { width: "100%", textAlign: "center", backgroundColor: BACKGROUND_SURFACE_HIGH, paddingVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  obj[4] = { width: "100%", textAlign: "center", backgroundColor: BACKGROUND_SURFACE_HIGH, paddingVertical: Themes.space.PX_8 };
   if (arg0 === tmp3.LIGHT) {
     let BACKGROUND_SURFACE_HIGH2 = tmp(712).colors.BACKGROUND_BASE_LOW;
   } else {
     BACKGROUND_SURFACE_HIGH2 = tmp(712).colors.BACKGROUND_SURFACE_HIGH;
   }
-  const obj3 = { width: "100%", textAlign: "center", backgroundColor: BACKGROUND_SURFACE_HIGH, paddingVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
-  obj[5] = { backgroundColor: BACKGROUND_SURFACE_HIGH2, padding: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm };
+  const obj3 = { width: "100%", textAlign: "center", backgroundColor: BACKGROUND_SURFACE_HIGH, paddingVertical: Themes.space.PX_8 };
+  obj[5] = { backgroundColor: BACKGROUND_SURFACE_HIGH2, padding: Themes.space.PX_8, marginTop: Themes.space.PX_16, borderRadius: Themes.radii.sm };
   obj[6] = { textAlign: "center" };
-  const obj4 = { backgroundColor: BACKGROUND_SURFACE_HIGH2, padding: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm };
-  obj[7] = { borderWidth: 1, borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BRAND };
+  const obj4 = { backgroundColor: BACKGROUND_SURFACE_HIGH2, padding: Themes.space.PX_8, marginTop: Themes.space.PX_16, borderRadius: Themes.radii.sm };
+  obj[7] = { borderWidth: 1, borderColor: Themes.colors.BACKGROUND_BRAND };
   obj[8] = { opacity: 0.5 };
   return obj;
 });
@@ -56,21 +64,21 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
   let closure_4;
   let c5;
   ({ guildId, role } = arg0);
-  const tmp3 = callback2(require("../../../../hooks/useTheme.tsx")());
+  const tmp3 = callback2(useTheme());
   dependencyMap = tmp3;
-  let obj = require("../hooks/useHasEnhancedRoleColors.tsx") /* useHasEnhancedRoleColors */;
+  let obj = useHasEnhancedRoleColors /* useHasEnhancedRoleColors */;
   hasEnhancedRoleColorsForRole = obj.useHasEnhancedRoleColorsForRole(guildId, role);
-  let obj1 = require("../../../guild_settings/roles/hooks/useGuildSettingsRoleExampleMessage.tsx") /* useGuildSettingsRoleExampleMessage */;
-  let intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  closure_4 = obj1.useGuildSettingsRoleExampleMessage(intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Mi9Kbe));
-  c5 = new require("../../../messages/native/renderer/RowGenerator.tsx")();
+  let obj1 = useGuildSettingsRoleExampleMessage /* useGuildSettingsRoleExampleMessage */;
+  let intl = getSystemLocale /* getSystemLocale */.intl;
+  closure_4 = obj1.useGuildSettingsRoleExampleMessage(intl.string(getSystemLocale /* getSystemLocale */.t.Mi9Kbe));
+  c5 = new setOptions();
   obj = { header: null, children: null };
   obj = { title: null };
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["9wVJRB"]);
-  obj[0] = callback(require("../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t["9wVJRB"]);
+  obj[0] = callback(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
   obj1 = { style: tmp3.container, children: null };
-  const tmp6 = new require("../../../messages/native/renderer/RowGenerator.tsx")();
+  const tmp6 = new setOptions();
   let items = [
     callback(closure_4, {
       style: tmp3.stylesContainer,
@@ -155,5 +163,5 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
   items[1] = tmp8Result;
   obj1[1] = items;
   obj[1] = closure_10(closure_4, obj1);
-  return callback(require("../../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, obj);
+  return callback(Background /* Background */.BottomSheet, obj);
 };

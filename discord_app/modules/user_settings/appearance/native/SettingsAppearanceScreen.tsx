@@ -1,3 +1,5 @@
+import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 // discord_app/modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx
 import importAllResult from "noop";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
@@ -22,7 +24,7 @@ const memoResult = importAllResult.memo(() => {
     }
   });
   let items = [handleThemeChange, isSyncedModeThemesEnabled];
-  const stateFromStoresObject = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = _defaultAreStatesEqual.useStateFromStoresObject(items, () => {
     const obj = { theme: theme.theme, gradientPresetId: null };
     gradientPreset = gradientPreset.gradientPreset;
     let str;
@@ -40,8 +42,8 @@ const memoResult = importAllResult.memo(() => {
   ({ theme, gradientPresetId } = stateFromStoresObject);
   const tmp3 = callback();
   _require = tmp3;
-  let obj = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
-  nativeStackNavigation = _require("../../../../design/components/Navigator/native/useNavigation.native.tsx").useNativeStackNavigation();
+  let obj = _defaultAreStatesEqual;
+  nativeStackNavigation = _useNavigation.useNativeStackNavigation();
   let items1 = [nativeStackNavigation, , , , ];
   ({ fontScale: arr2[1], isClassicChatFontScaleEnabled: arr2[2], persistedFontScale: arr2[3], persistedIsClassicChatFontScaleEnabled: arr2[4] } = tmp3);
   const effect = importAllResult.useEffect(() => {
@@ -104,7 +106,7 @@ const memoResult = importAllResult.memo(() => {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  let obj2 = _require("../../../../design/components/Navigator/native/useNavigation.native.tsx");
+  let obj2 = _useNavigation;
   return jsx(nativeStackNavigation(13793), { node }, "" + theme + "-" + gradientPresetId);
 });
 const result = require("initialize").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx");

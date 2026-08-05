@@ -1,3 +1,7 @@
+import { cloneDeep } from "../../../../_runtime/04397_cloneDeep.js";
+import { flatRest } from "../../../../_runtime/04426_flatRest.js";
+import { BaseConnectionEvent } from "BaseConnectionEvent.tsx";
+import { WantsVideoQuality } from "VideoQualityManager.tsx";
 // discord_common/js/packages/media-engine/BaseConnection.tsx
 import BaseConnectionEvent from "BaseConnectionEvent";
 import DesktopSources from "DesktopSources";
@@ -67,7 +71,7 @@ prototype["destroy"] = function destroy() {
   const framerateReducer = this.framerateReducer;
   framerateReducer.destroy();
   this.setConnectionState(constants.DISCONNECTED);
-  this.emit(require("BaseConnectionEvent.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.Destroy, this);
+  this.emit(BaseConnectionEvent /* BaseConnectionEvent */.BaseConnectionEvent.Destroy, this);
   this.removeAllListeners();
 };
 prototype["getLocalMute"] = function getLocalMute(hasItem) {
@@ -82,7 +86,7 @@ prototype["getLocalVideoDisabled"] = function getLocalVideoDisabled(arg0) {
 };
 prototype["setLocalVideoDisabled"] = function setLocalVideoDisabled(arg0, arg1) {
   this.disabledLocalVideos[arg0] = arg1;
-  this.emit(require("BaseConnectionEvent.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.LocalVideoDisabled, arg0, arg1);
+  this.emit(BaseConnectionEvent /* BaseConnectionEvent */.BaseConnectionEvent.LocalVideoDisabled, arg0, arg1);
 };
 prototype["getHasActiveVideoOutputSink"] = function getHasActiveVideoOutputSink(arg0) {
   const activeOutputSinks = this.activeOutputSinks;
@@ -112,7 +116,7 @@ prototype["setHasActiveVideoOutputSink"] = function setHasActiveVideoOutputSink(
   const hasActiveVideoOutputSink1 = self.getHasActiveVideoOutputSink(arg0);
   self.isActiveOutputSinksEnabled = true;
   if (hasActiveVideoOutputSink !== hasActiveVideoOutputSink1) {
-    self.emit(require("BaseConnectionEvent.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.ActiveSinksChange, arg0, hasActiveVideoOutputSink1);
+    self.emit(BaseConnectionEvent /* BaseConnectionEvent */.BaseConnectionEvent.ActiveSinksChange, arg0, hasActiveVideoOutputSink1);
   }
 };
 prototype["getActiveOutputSinkTrackingEnabled"] = function getActiveOutputSinkTrackingEnabled() {
@@ -140,7 +144,7 @@ prototype["presentDesktopSourcePicker"] = function presentDesktopSourcePicker(ar
 
 };
 prototype["getStreamParameters"] = function getStreamParameters() {
-  return require("../../../../_runtime/04397_cloneDeep.js")(this.videoStreamParameters);
+  return cloneDeep(this.videoStreamParameters);
 };
 prototype["setExperimentFlag"] = function setExperimentFlag(arg0, arg1) {
   const experimentFlags = this.experimentFlags;
@@ -154,7 +158,7 @@ prototype["setConnectionState"] = function setConnectionState(DISCONNECTED) {
   const logger = this.logger;
   logger.info("Connection state change: " + this.connectionState + " => " + DISCONNECTED);
   this.connectionState = DISCONNECTED;
-  this.emit(require("BaseConnectionEvent.tsx") /* BaseConnectionEvent */.BaseConnectionEvent.ConnectionStateChange, this.connectionState);
+  this.emit(BaseConnectionEvent /* BaseConnectionEvent */.BaseConnectionEvent.ConnectionStateChange, this.connectionState);
 };
 prototype["updateVideoQuality"] = function updateVideoQuality(closure_8) {
   let bitrateTarget;
@@ -171,7 +175,7 @@ prototype["updateVideoQuality"] = function updateVideoQuality(closure_8) {
   }
   const result = self.applyQualityConstraints({}, self.videoStreamParameters[num].ssrc);
   ({ quality, constraints } = result);
-  const tmp2 = require("../../../../_runtime/04397_cloneDeep.js")(self.videoStreamParameters);
+  const tmp2 = cloneDeep(self.videoStreamParameters);
   if (null != quality) {
     ({ bitrateMax: tmp2[num].maxBitrate, bitrateMin: tmp2[num].minBitrate, bitrateTarget } = quality);
     if (bitrateTarget == null) {
@@ -224,7 +228,7 @@ prototype["updateVideoQuality"] = function updateVideoQuality(closure_8) {
       tmp6 = tmp11;
     } while (num2 < self.videoStreamParameters.length);
   }
-  tmp5.streamParameters = require("../../../../_runtime/04397_cloneDeep.js")(self.videoStreamParameters);
+  tmp5.streamParameters = cloneDeep(self.videoStreamParameters);
   const prop = self.videoStreamParameters;
   const items = [
     ...prop.map((maxPixelCount) => {
@@ -237,7 +241,7 @@ prototype["updateVideoQuality"] = function updateVideoQuality(closure_8) {
   ];
   tmp5.remoteSinkWantsPixelCount = Math.max.apply(items);
   if (null != closure_8) {
-    let obj = require("../../../../_runtime/04426_flatRest.js")(tmp5, closure_8);
+    let obj = flatRest(tmp5, closure_8);
   } else {
     obj = {};
     const merged = Object.assign(tmp5);
@@ -250,7 +254,7 @@ prototype["applyVideoQualityMode"] = function applyVideoQualityMode(mode) {
   const self = this;
   if (this.context === constants2.DEFAULT) {
     const videoQualityManager = self.videoQualityManager;
-    videoQualityManager.setQualityOverwrite(require("VideoQualityManager.tsx") /* WantsVideoQuality */.VIDEO_QUALITY_MODES_TO_OVERWRITES[mode]);
+    videoQualityManager.setQualityOverwrite(WantsVideoQuality /* WantsVideoQuality */.VIDEO_QUALITY_MODES_TO_OVERWRITES[mode]);
     self.updateVideoQuality();
   }
 };

@@ -1,3 +1,4 @@
+import { set } from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 // discord_app/modules/guilds_bar/useGuildMediaState.tsx
 import participantFromServer from "participantFromServer";
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
@@ -21,7 +22,7 @@ function canConnectToChannel(type) {
   }
   let canBasicChannelResult = null != type;
   if (canBasicChannelResult) {
-    canBasicChannelResult = type.type !== require("../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx") /* set */.ChannelTypes.GUILD_STAGE_VOICE;
+    canBasicChannelResult = type.type !== set /* set */.ChannelTypes.GUILD_STAGE_VOICE;
   }
   if (canBasicChannelResult) {
     canBasicChannelResult = arg1 !== type.id;

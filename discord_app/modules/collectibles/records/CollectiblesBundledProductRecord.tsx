@@ -1,3 +1,4 @@
+import { getPricesFromServer } from "../../skus/utils/getPricesFromServer.tsx";
 // discord_app/modules/collectibles/records/CollectiblesBundledProductRecord.tsx
 let prototype;
 prototype = function CollectiblesBundledProductRecord(arg0) {
@@ -16,7 +17,7 @@ prototype["fromServer"] = function fromServer(arg0) {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);
-  obj.prices = require("../../skus/utils/getPricesFromServer.tsx")(prices);
+  obj.prices = getPricesFromServer(prices);
   obj.type = type;
   obj.premiumType = premium_type;
   obj.name = name;

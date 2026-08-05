@@ -1,3 +1,4 @@
+import { usePrevious } from "../../../hooks/usePrevious.tsx";
 // discord_app/modules/activities/native/EmbeddedActivityWebView.tsx
 import closure_4 from "items3";
 import _slicedToArray from "_slicedToArray";
@@ -1053,5 +1054,5 @@ export { BaseActivityWebView };
 export const useHasInvalidUrlErrorState = function useHasInvalidUrlErrorState() {
   const tmp = callback(React.useState(false), 2);
   const first = tmp[0];
-  return { hasInvalidUrlError: first, setHasInvalidUrlError: tmp[1], hadInvalidUrlError: require("../../../hooks/usePrevious.tsx")(first) };
+  return { hasInvalidUrlError: first, setHasInvalidUrlError: tmp[1], hadInvalidUrlError: usePrevious(first) };
 };

@@ -1,3 +1,7 @@
+import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import { FormRadio } from "../../Forms/native/FormRadio.native.tsx";
+import { context } from "TableRadioGroup.native.tsx";
+import { TableRowInner } from "TableRow.native.tsx";
 // discord_app/design/components/TableRow/native/TableRadioRow.native.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -22,7 +26,7 @@ export const TableRadioRow = function TableRadioRow(value) {
   ({ legacyCompat_selected, legacyCompat_onPress: dependencyMap } = value);
   const merged = Object.assign(value, Object.create(null));
   let onSelect;
-  const context = onSelect.useContext(require("TableRadioGroup.native.tsx") /* context */.TableRadioGroupContext);
+  const context = onSelect.useContext(context /* context */.TableRadioGroupContext);
   onSelect = context.onSelect;
   if (legacyCompat_selected == null) {
     legacyCompat_selected = context.selectedValue === value;
@@ -31,7 +35,7 @@ export const TableRadioRow = function TableRadioRow(value) {
   const nodeText = tmp2Result.getNodeText(label);
   tmp2Result = tmp2(3991);
   const nodeText1 = tmp2Result.getNodeText(subLabel);
-  const radioA11yNative = require("../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx") /* useCheckboxA11yNative */.useRadioA11yNative({ selected: legacyCompat_selected, disabled });
+  const radioA11yNative = useCheckboxA11yNative /* useCheckboxA11yNative */.useRadioA11yNative({ selected: legacyCompat_selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const obj = {};
   const merged1 = Object.assign(merged);
@@ -54,6 +58,6 @@ export const TableRadioRow = function TableRadioRow(value) {
     }
     onSelect(closure_0);
   };
-  obj.trailing = jsx(require("../../Forms/native/FormRadio.native.tsx") /* FormRadio */.FormRadio, { selected: legacyCompat_selected });
-  return jsx(require("TableRow.native.tsx") /* TableRowInner */.TableRow, {});
+  obj.trailing = jsx(FormRadio /* FormRadio */.FormRadio, { selected: legacyCompat_selected });
+  return jsx(TableRowInner /* TableRowInner */.TableRow, {});
 };

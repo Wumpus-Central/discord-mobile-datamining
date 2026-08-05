@@ -1,3 +1,5 @@
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { maybeFetchCollectiblesForInvoices } from "FamilyCenterActionCreators.tsx";
 // discord_app/modules/parent_tools/FamilyCenterStore.tsx
 import _slicedToArray from "_slicedToArray";
 import { getCountryCodeByAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME";
@@ -123,7 +125,7 @@ function handleInitialLoad(arg0) {
     ageGroup = null;
   }
   let c20 = false;
-  let closure_21 = require("../../utils/SnowflakeUtils.tsx").fromTimestamp(Date.now());
+  let closure_21 = DISCORD_EPOCH.fromTimestamp(Date.now());
   let c19 = true;
 }
 function handleLinkedUserFetch(linkedUsers) {
@@ -231,7 +233,7 @@ function handleTeenActivityFetch(familyCenterTeenActivity) {
     }
     let c20 = false;
     const _Date = Date;
-    let closure_21 = require("../../utils/SnowflakeUtils.tsx").fromTimestamp(Date.now());
+    let closure_21 = DISCORD_EPOCH.fromTimestamp(Date.now());
     if (spendingLimit == null) {
       spendingLimit = null;
     }
@@ -318,8 +320,8 @@ function handleCurrentUserUpdate(user) {
     if (linked_users.some((arg0) => undefined === table[arg0.user_id])) {
       const _Object = Object;
       if (user.linked_users.length > Object.keys(reduced).length) {
-        const linkedUsers = require("FamilyCenterActionCreators.tsx").fetchLinkedUsers();
-        const obj2 = require("FamilyCenterActionCreators.tsx");
+        const linkedUsers = maybeFetchCollectiblesForInvoices.fetchLinkedUsers();
+        const obj2 = maybeFetchCollectiblesForInvoices;
       }
     }
     linked_users = user.linked_users;
@@ -607,8 +609,8 @@ prototype["getLinkTimestamp"] = function getLinkTimestamp(closure_0) {
 prototype["getRangeStartTimestamp"] = function getRangeStartTimestamp() {
   let extractTimestampResult = null;
   if (null != c11) {
-    extractTimestampResult = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(c11);
-    const obj = require("../../utils/SnowflakeUtils.tsx");
+    extractTimestampResult = DISCORD_EPOCH.extractTimestamp(c11);
+    const obj = DISCORD_EPOCH;
   }
   return extractTimestampResult;
 };
@@ -720,8 +722,8 @@ prototype["getAgeGroup"] = function getAgeGroup() {
 prototype["canRefetch"] = function canRefetch() {
   let tmp = null === c21;
   if (!tmp) {
-    tmp = require("../../utils/SnowflakeUtils.tsx").age(c21) > closure_6;
-    const obj = require("../../utils/SnowflakeUtils.tsx");
+    tmp = DISCORD_EPOCH.age(c21) > closure_6;
+    const obj = DISCORD_EPOCH;
   }
   return tmp;
 };

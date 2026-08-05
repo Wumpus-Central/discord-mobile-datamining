@@ -1,3 +1,6 @@
+import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { shortenAndLocalizeNumber } from "../../../../utils/NumberUtils.tsx";
+import { Text } from "../../Text/native/Text.tsx";
 // discord_app/design/components/Pile/native/PileOverflow.native.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -22,7 +25,7 @@ export const PileOverflow = function PileOverflow(size) {
   let value;
   size = size.size;
   ({ borderRadius, value } = size);
-  let obj = require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
   const items = [_getSystemLocale];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   const items1 = [createCacheKey().container, ];
@@ -39,8 +42,8 @@ export const PileOverflow = function PileOverflow(size) {
     str = "text-md/semibold";
   }
   const obj1 = { lineClamp: 1, maxFontSizeMultiplier: 2, variant: str, children: null };
-  const items2 = ["+", require("../../../../utils/NumberUtils.tsx") /* shortenAndLocalizeNumber */.humanizeValue(value, stateFromStores)];
+  const items2 = ["+", shortenAndLocalizeNumber /* shortenAndLocalizeNumber */.humanizeValue(value, stateFromStores)];
   obj1[3] = items2;
-  obj[1] = closure_4(require("../../Text/native/Text.tsx") /* Text */.Text, obj1);
+  obj[1] = closure_4(Text /* Text */.Text, obj1);
   return closure_5(View, obj);
 };

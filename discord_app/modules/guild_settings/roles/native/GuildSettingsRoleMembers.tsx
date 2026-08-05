@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../../_runtime/08256_registerAsset.js";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { dispatcher } from "../../../toast/native/ToastActionCreators.tsx";
 // discord_app/modules/guild_settings/roles/native/GuildSettingsRoleMembers.tsx
 import _slicedToArray from "_slicedToArray";
 import _toPropertyKey from "_toPropertyKey";
@@ -11,10 +14,10 @@ let c9;
 let metroImportAll;
 const require = arg1;
 function onMembersLoadFail() {
-  let obj = require("../../../toast/native/ToastActionCreators.tsx");
-  obj = { key: "ERROR_OCCURRED_TRY_AGAIN", icon: require("../../../../../_runtime/08256_registerAsset.js"), content: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.fEptJP);
+  let obj = dispatcher;
+  obj = { key: "ERROR_OCCURRED_TRY_AGAIN", icon: registerAsset, content: null };
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.fEptJP);
   obj.open(obj);
 }
 ({ jsx: metroImportAll, jsxs: c9 } = jsxProd);

@@ -1,3 +1,4 @@
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/parent_tools/hooks/useSelectedTab.tsx
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import items from "items";
@@ -12,7 +13,7 @@ const result = require("ME").fileFinishedImporting("modules/parent_tools/hooks/u
 export default function useSelectedMyFamilyTab() {
   let obj = { selectedTab: null, handleTabChange: null };
   const items = [freshTeenActivityWithMap];
-  obj[0] = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */.useStateFromStores(items, () => selectedTab.getSelectedTab());
+  obj[0] = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => selectedTab.getSelectedTab());
   obj[1] = function handleTabChange(tab) {
     let obj = callback(6907);
     tab = obj.selectTab(tab);

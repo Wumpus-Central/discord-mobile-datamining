@@ -1,3 +1,7 @@
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { ModalActionCreators } from "../ModalActionCreators.tsx";
 // discord_app/actions/native/EmailVerificationModalActionCreators.tsx
 import { AnalyticEvents } from "ME";
 
@@ -11,13 +15,13 @@ export default {
       flag = false;
     }
     if (flag) {
-      require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED);
-      const obj = require("../../utils/AnalyticsUtils.tsx");
+      expandEventProperties.track(AnalyticEvents.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED);
+      const obj = expandEventProperties;
     }
-    require("../ModalActionCreators.tsx").pushLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8263, dependencyMap.paths), { isChangeEmail: flag }, EMAIL_VERIFICATION_MODAL_KEY);
+    ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(8263, dependencyMap.paths), { isChangeEmail: flag }, EMAIL_VERIFICATION_MODAL_KEY);
   },
   close() {
-    require("../../Dispatcher.tsx").wait(() => {
+    dispatcher.wait(() => {
       callback(table[2]).popWithKey(closure_4);
     });
   }

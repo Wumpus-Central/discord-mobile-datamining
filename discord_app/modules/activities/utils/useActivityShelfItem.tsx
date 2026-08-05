@@ -1,3 +1,10 @@
+import { getApplicationFlags } from "../../applications/utils/ApplicationFlagUtils.tsx";
+import { canLaunchFrame } from "../../frames/utils/canLaunchFrame.tsx";
+import { useEmbeddedApps } from "../useEmbeddedAppsForChannel.tsx";
+import { getPlatform } from "getPlatform.tsx";
+import { useCurrentEmbeddedActivity } from "useCurrentEmbeddedActivity.tsx";
+import { useCurrentEmbeddedApplication } from "useCurrentEmbeddedApplication.tsx";
+import { useEmbeddedActivityBackground } from "useEmbeddedActivityBackground.tsx";
 // discord_app/modules/activities/utils/useActivityShelfItem.tsx
 import set from "set";
 import participantFromServer from "participantFromServer";
@@ -18,11 +25,11 @@ function useActivityAction(applicationId) {
   if ("channel" === context.type) {
     channel = context.channel;
   }
-  const tmp4 = require("useCurrentEmbeddedActivity.tsx")();
-  const tmp5 = require("useCurrentEmbeddedApplication.tsx")({ fetchesApplication });
+  const tmp4 = useCurrentEmbeddedActivity();
+  const tmp5 = useCurrentEmbeddedApplication({ fetchesApplication });
   obj = getOrFetchApplication(5616);
   getOrFetchApplication = obj.useGetOrFetchApplication(applicationId.applicationId, fetchesApplication);
-  require("../useEmbeddedAppsForChannel.tsx")(channel);
+  useEmbeddedApps(channel);
   if (null == getOrFetchApplication) {
     return START;
   } else {
@@ -84,7 +91,7 @@ function useOnActivityItemSelected(arg0) {
   let tmp = useActivityAction({ context, applicationId: str, fetchesApplication });
   analyticsLocations = context(5610)().analyticsLocations;
   closure_14 = context(10628)();
-  obj = require("../../frames/utils/canLaunchFrame.tsx") /* canLaunchFrame */;
+  obj = canLaunchFrame /* canLaunchFrame */;
   closure_15 = obj.canLaunchFrame(application);
   if (null == application) {
     return () => {
@@ -369,7 +376,7 @@ export default function useActivityShelfItem(backgroundResolution) {
   const activity = activityItem.activity;
   ({ launchingComponentId, commandOrigin, source } = backgroundResolution);
   let obj = application(500);
-  const tmp5 = activity.client_platform_config[require("getPlatform.tsx")(undefined, obj.getOS(obj))];
+  const tmp5 = activity.client_platform_config[getPlatform(undefined, obj.getOS(obj))];
   const timestamp = Date.now();
   let tmp7 = null != tmp5.label_until;
   if (tmp7) {
@@ -385,7 +392,7 @@ export default function useActivityShelfItem(backgroundResolution) {
   }
   obj = { applicationId: application.id, size: num, names: assetNames, format: "webp" };
   let tmp9 = null;
-  const tmp3 = require("getPlatform.tsx");
+  const tmp3 = getPlatform;
   if (null != activity.activity_preview_video_asset_id) {
     tmp9 = tmp(11357)(application.id, activity.activity_preview_video_asset_id);
   }
@@ -394,7 +401,7 @@ export default function useActivityShelfItem(backgroundResolution) {
   if ("channel" === context.type) {
     channel = context.channel;
   }
-  const tmp8 = require("useEmbeddedActivityBackground.tsx")(obj);
+  const tmp8 = useEmbeddedActivityBackground(obj);
   obj = { context, applicationId: application.id };
   const found = tmpResult(channel).find((embeddedActivity) => application.id === embeddedActivity.embeddedActivity.applicationId);
   const obj1 = { application: activityItem.application, context, locationObject, embeddedActivitiesManager, onActivityItemSelectedProp: onActivityItemSelected, launchingComponentId, commandOrigin, source };
@@ -429,10 +436,10 @@ export const getStaffReleasePhase = function getStaffReleasePhase(application) {
   if (!obj.hasApplicationFlag(application, ApplicationFlags.EMBEDDED_RELEASED)) {
     let tmpResult = tmp(7510);
   }
-  obj = require("../../applications/utils/ApplicationFlagUtils.tsx") /* getApplicationFlags */;
+  obj = getApplicationFlags /* getApplicationFlags */;
   const tmp3 = ApplicationFlags;
   tmpResult = tmp(500);
-  const str = arg1.client_platform_config[require("getPlatform.tsx")(undefined, tmpResult.getOS(tmpResult))].release_phase;
+  const str = arg1.client_platform_config[getPlatform(undefined, tmpResult.getOS(tmpResult))].release_phase;
   let replaced;
   if (STAFF_RELEASE_PHASES.includes(str)) {
     replaced = str.replace("_", " ").replace(/(^\w|\s\w)/g, (str) => str.toUpperCase());

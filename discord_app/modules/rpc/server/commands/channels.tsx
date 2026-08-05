@@ -1,3 +1,10 @@
+import { apply } from "../../../../../_runtime/00012_apply.js";
+import { set } from "../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import { generateAcceptInviteOptions } from "../../../../actions/InstantInviteActionCreators.tsx";
+import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
+import { getCurrentEmbeddedActivityChannel } from "../../helpers/getCurrentEmbeddedActivityChannel.tsx";
+import { prototype } from "../../RPCError.tsx";
+import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
 // discord_app/modules/rpc/server/commands/channels.tsx
 import createChannelRecord from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -30,24 +37,24 @@ obj[1] = function handler(args) {
     let obj = { errorCode: null };
     obj[0] = constants2.INVALID_CHANNEL;
     const _HermesInternal = HermesInternal;
-    let tmp14 = require("../../RPCError.tsx");
+    let tmp14 = prototype;
     tmp14 = new tmp14(obj, "Invalid channel id: " + channel_id);
     throw tmp14;
   } else {
     if (channel.isPrivate()) {
       const scopes = socket.authorization.scopes;
-      if (!scopes.includes(require("../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx") /* set */.OAuth2Scopes.RPC)) {
+      if (!scopes.includes(set /* set */.OAuth2Scopes.RPC)) {
         if (!scopes.includes(tmp(8824).OAuth2Scopes.DM_CHANNELS_READ)) {
           obj = { errorCode: null };
           obj[0] = constants2.INVALID_PERMISSIONS;
-          const tmp8 = new require("../../RPCError.tsx")(obj, "Invalid scope");
+          const tmp8 = new prototype(obj, "Invalid scope");
           throw tmp8;
         }
       }
       tmp = require;
     }
-    const obj3 = require("../../RPCHelpers.tsx") /* recurseReplaceContentTree */;
-    return obj3.transformChannel(channel, require("../../RPCHelpers.tsx") /* recurseReplaceContentTree */.hasMessageReadPermission(channel, socket.application.id, socket.authorization.scopes));
+    const obj3 = recurseReplaceContentTree /* recurseReplaceContentTree */;
+    return obj3.transformChannel(channel, recurseReplaceContentTree /* recurseReplaceContentTree */.hasMessageReadPermission(channel, socket.application.id, socket.authorization.scopes));
   }
 };
 obj[RPCCommands.GET_CHANNEL] = obj;
@@ -56,7 +63,7 @@ obj[RPCCommands.GET_CHANNELS] = {
   handler(args) {
     const guild_id = args.args.guild_id;
     let guild;
-    let obj = require("../../../../../_runtime/00012_apply.js");
+    let obj = apply;
     const values = obj.values(store.loadAllGuildAndPrivateChannelsFromDisk());
     let found = values;
     if (guild_id) {
@@ -65,7 +72,7 @@ obj[RPCCommands.GET_CHANNELS] = {
         obj = { errorCode: null };
         obj[0] = constants2.INVALID_GUILD;
         const _HermesInternal = HermesInternal;
-        let tmpResult = require("../../RPCError.tsx");
+        let tmpResult = prototype;
         tmpResult = new tmpResult(obj, "Invalid guild id: " + guild_id);
         throw tmpResult;
       } else {
@@ -84,7 +91,7 @@ const items1 = [require("set").OAuth2Scopes.GUILDS_MEMBERS_READ, require("set").
 obj3[RPC_SCOPE_CONFIG.ANY] = items1;
 obj2[0] = obj3;
 obj2[1] = function handler() {
-  const tmp3 = require("../../helpers/getCurrentEmbeddedActivityChannel.tsx")();
+  const tmp3 = getCurrentEmbeddedActivityChannel();
   if (null == tmp3) {
     let obj = { errorCode: null };
     obj[0] = constants2.INVALID_CHANNEL;
@@ -103,7 +110,7 @@ const obj1 = {
   handler(args) {
     const guild_id = args.args.guild_id;
     let guild;
-    let obj = require("../../../../../_runtime/00012_apply.js");
+    let obj = apply;
     const values = obj.values(store.loadAllGuildAndPrivateChannelsFromDisk());
     let found = values;
     if (guild_id) {
@@ -112,7 +119,7 @@ const obj1 = {
         obj = { errorCode: null };
         obj[0] = constants2.INVALID_GUILD;
         const _HermesInternal = HermesInternal;
-        let tmpResult = require("../../RPCError.tsx");
+        let tmpResult = prototype;
         tmpResult = new tmpResult(obj, "Invalid guild id: " + guild_id);
         throw tmpResult;
       } else {
@@ -128,7 +135,7 @@ const obj1 = {
 obj[RPCCommands.SELECT_VOICE_CHANNEL] = {
   scope: require("set").OAuth2Scopes.RPC,
   validation(string) {
-    let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(string);
+    let obj = createRpcJoiSchemaObject(string);
     obj = { channel_id: null, timeout: null, force: null, navigate: null };
     const requiredResult = obj.required();
     obj[0] = string.string().allow(null);
@@ -240,9 +247,9 @@ obj5[1] = function handler(socket) {
   }
   let transformChannelResult = null;
   if (null != channel) {
-    const obj = require("../../RPCHelpers.tsx") /* recurseReplaceContentTree */;
-    transformChannelResult = obj.transformChannel(channel, require("../../RPCHelpers.tsx") /* recurseReplaceContentTree */.hasMessageReadPermission(channel, socket.application.id, socket.authorization.scopes));
-    const obj2 = require("../../RPCHelpers.tsx") /* recurseReplaceContentTree */;
+    const obj = recurseReplaceContentTree /* recurseReplaceContentTree */;
+    transformChannelResult = obj.transformChannel(channel, recurseReplaceContentTree /* recurseReplaceContentTree */.hasMessageReadPermission(channel, socket.application.id, socket.authorization.scopes));
+    const obj2 = recurseReplaceContentTree /* recurseReplaceContentTree */;
   }
   return transformChannelResult;
 };
@@ -250,7 +257,7 @@ obj[RPCCommands.GET_SELECTED_VOICE_CHANNEL] = obj5;
 let obj4 = {
   scope: require("set").OAuth2Scopes.RPC,
   validation(string) {
-    let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(string);
+    let obj = createRpcJoiSchemaObject(string);
     obj = { channel_id: null, timeout: null, force: null, navigate: null };
     const requiredResult = obj.required();
     obj[0] = string.string().allow(null);
@@ -351,7 +358,7 @@ let obj4 = {
 obj[RPCCommands.SELECT_TEXT_CHANNEL] = {
   scope: require("set").OAuth2Scopes.RPC,
   validation(string) {
-    let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(string);
+    let obj = createRpcJoiSchemaObject(string);
     obj = { channel_id: null, timeout: null };
     const requiredResult = obj.required();
     obj[0] = string.string().allow(null);
@@ -450,7 +457,7 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = {
 const obj7 = {
   scope: require("set").OAuth2Scopes.RPC,
   validation(string) {
-    let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(string);
+    let obj = createRpcJoiSchemaObject(string);
     obj = { channel_id: null, timeout: null };
     const requiredResult = obj.required();
     obj[0] = string.string().allow(null);
@@ -552,7 +559,7 @@ obj[RPCCommands.CREATE_CHANNEL_INVITE] = {
     args = args.args;
     const channel_id = args.channel_id;
     const merged = Object.assign(args, Object.create(null));
-    const invite = require("../../../../actions/InstantInviteActionCreators.tsx").createInvite(channel_id, merged, "RPC");
+    const invite = generateAcceptInviteOptions.createInvite(channel_id, merged, "RPC");
     return invite.catch(() => {
       let tmp = outer1_1(outer1_2[9]);
       tmp = new tmp({ errorCode: outer1_12.INVALID_PERMISSIONS }, "Unable to generate an invite for " + channel_id + ". Does this user have permissions?");
@@ -566,7 +573,7 @@ const obj8 = {
     args = args.args;
     const channel_id = args.channel_id;
     const merged = Object.assign(args, Object.create(null));
-    const invite = require("../../../../actions/InstantInviteActionCreators.tsx").createInvite(channel_id, merged, "RPC");
+    const invite = generateAcceptInviteOptions.createInvite(channel_id, merged, "RPC");
     return invite.catch(() => {
       let tmp = outer1_1(outer1_2[9]);
       tmp = new tmp({ errorCode: outer1_12.INVALID_PERMISSIONS }, "Unable to generate an invite for " + channel_id + ". Does this user have permissions?");

@@ -1,3 +1,4 @@
+import { getRootNavigationRef } from "../main_tabs_v2/RootNavigationRef.native.tsx";
 // discord_app/modules/routing/convertRouteToNavigation.native.tsx
 import { Routes } from "ME";
 
@@ -10,7 +11,7 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
   let navigationReplace;
   let openChannel;
   pathname = pathname.pathname;
-  let obj = require("../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */;
+  let obj = getRootNavigationRef /* getRootNavigationRef */;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {

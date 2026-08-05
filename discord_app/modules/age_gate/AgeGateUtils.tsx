@@ -1,3 +1,10 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { AgeGatedFeature } from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
+import { combined } from "../../utils/HelpdeskUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { useAgeVerificationRunner } from "../age_assurance/AgeVerificationUtils.tsx";
+import { isFeatureAgeGated } from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
+import { openAgeGateModal } from "AgeGateModalActionCreators.tsx";
 // discord_app/modules/age_gate/AgeGateUtils.tsx
 import { isGuildNSFW } from "GuildNSFWContentLevel";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -11,9 +18,9 @@ import set from "initialize";
 let GuildNSFWContentLevel;
 let c9;
 function shouldShowAgeGateForVoiceChannel(channelId) {
-  const result = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
-  const obj = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
-  let tmp4 = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
+  const result = useAgeVerificationRunner /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
+  const obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
+  let tmp4 = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
   if (tmp4) {
     const currentUser = authStore.getCurrentUser();
     let flag = false;
@@ -46,9 +53,9 @@ function isChannelContentGated(channel, arg1) {
     if (currentUser != null) {
       const nsfwAllowed = currentUser.nsfwAllowed;
     }
-    const obj = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
-    const isFeatureAgeGatedResult = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES);
-    let result = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
+    const obj = isFeatureAgeGated /* isFeatureAgeGated */;
+    const isFeatureAgeGatedResult = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES);
+    let result = useAgeVerificationRunner /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
     if (didAgreeResult) {
       didAgreeResult = false !== nsfwAllowed;
     }
@@ -75,19 +82,19 @@ function isChannelContentGated(channel, arg1) {
 }
 function useIsChannelContentGated(channel) {
   const _require = channel;
-  const shouldShowTiggerPawtect = _require("../age_assurance/AgeVerificationUtils.tsx").useShouldShowTiggerPawtect();
-  const obj = _require("../age_assurance/AgeVerificationUtils.tsx");
+  const shouldShowTiggerPawtect = _useAgeVerificationRunner.useShouldShowTiggerPawtect();
+  const obj = _useAgeVerificationRunner;
   const items = [initialize];
-  let stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  let stateFromStores = _initialize.useStateFromStores(items, () => {
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
     }
     return outer1_5.didAgree(guild_id);
   });
-  const obj2 = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const obj2 = _initialize;
   const items1 = [mergeGuildAvatar];
-  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  const stateFromStores1 = _initialize.useStateFromStores(items1, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;
     if (currentUser != null) {
@@ -95,11 +102,11 @@ function useIsChannelContentGated(channel) {
     }
     return false === nsfwAllowed;
   });
-  const obj3 = _require("../../../discord_common/js/packages/flux/index.tsx");
-  let isFeatureAgeGated = _require("../regional_feature_config/RegionalFeatureConfigUtils.tsx").useIsFeatureAgeGated(_require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx").AgeGatedFeature.AGE_GATED_SPACES);
-  const obj4 = _require("../regional_feature_config/RegionalFeatureConfigUtils.tsx");
+  const obj3 = _initialize;
+  let isFeatureAgeGated = _isFeatureAgeGated.useIsFeatureAgeGated(_AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES);
+  const obj4 = _isFeatureAgeGated;
   const items2 = [createGuildRecordFromRust];
-  const stateFromStores2 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
+  const stateFromStores2 = _initialize.useStateFromStores(items2, () => {
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
@@ -154,9 +161,9 @@ export const userNeedsAgeGate = function userNeedsAgeGate() {
   const currentUser = authStore.getCurrentUser();
   let tmp2 = null != currentUser;
   if (tmp2) {
-    const obj = require("../../utils/SnowflakeUtils.tsx");
-    tmp2 = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(currentUser.id) > date.getTime();
-    const extractTimestampResult = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(currentUser.id);
+    const obj = DISCORD_EPOCH;
+    tmp2 = DISCORD_EPOCH.extractTimestamp(currentUser.id) > date.getTime();
+    const extractTimestampResult = DISCORD_EPOCH.extractTimestamp(currentUser.id);
   }
   if (tmp2) {
     tmp2 = null == currentUser.nsfwAllowed;
@@ -167,14 +174,14 @@ export const guildNeedsAgeGate = function guildNeedsAgeGate(nsfwLevel) {
   return items.includes(nsfwLevel.nsfwLevel);
 };
 export const shouldAgeVerifyForAgeGate = function shouldAgeVerifyForAgeGate() {
-  const result = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
-  const obj = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
-  const obj2 = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
-  return require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
+  const result = useAgeVerificationRunner /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
+  const obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
+  const obj2 = isFeatureAgeGated /* isFeatureAgeGated */;
+  return isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
 };
 export const useShouldAgeVerifyForAgeGate = function useShouldAgeVerifyForAgeGate() {
-  let isFeatureAgeGated = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.useIsFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES);
-  const obj = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
+  let isFeatureAgeGated = isFeatureAgeGated /* isFeatureAgeGated */.useIsFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES);
+  const obj = isFeatureAgeGated /* isFeatureAgeGated */;
   if (isFeatureAgeGated) {
     isFeatureAgeGated = obj2.useShouldShowTiggerPawtect();
   }
@@ -182,11 +189,11 @@ export const useShouldAgeVerifyForAgeGate = function useShouldAgeVerifyForAgeGat
 };
 export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentForGuild(stateFromStores) {
   let NSFW_CHANNEL_AGE_VERIFY = dependencyMap;
-  let obj = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
+  let obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
   const isAgeVerified = obj.useIsAgeVerified();
   const tmp3 = isGuildNSFW(stateFromStores);
   const items = [mergeGuildAvatar];
-  stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+  stateFromStores = initialize /* initialize */.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;
     if (currentUser != null) {
@@ -194,9 +201,9 @@ export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentF
     }
     return false === nsfwAllowed;
   });
-  const obj2 = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
-  const isFeatureAgeGated = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.useIsFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES);
-  const obj3 = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
+  const obj2 = initialize /* initialize */;
+  const isFeatureAgeGated = isFeatureAgeGated /* isFeatureAgeGated */.useIsFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES);
+  const obj3 = isFeatureAgeGated /* isFeatureAgeGated */;
   let shouldShowTiggerPawtect = isFeatureAgeGated;
   if (isFeatureAgeGated) {
     shouldShowTiggerPawtect = obj4.useShouldShowTiggerPawtect();
@@ -241,11 +248,11 @@ export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentF
     const intl5 = tmp(1236).intl;
     let NSFW_CHANNEL_UNDERAGE = tmp(1236).t;
     obj = { helpURL: null };
-    obj[0] = require("../../utils/HelpdeskUtils.tsx").getArticleURL(constants.NSFW_AGE_GATING);
+    obj[0] = combined.getArticleURL(constants.NSFW_AGE_GATING);
     obj[1] = intl5.format(tmp3 ? NSFW_CHANNEL_UNDERAGE["6++3cX"] : NSFW_CHANNEL_UNDERAGE["2kHZes"], obj);
     NSFW_CHANNEL_UNDERAGE = tmp(7722).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE;
     obj[3] = NSFW_CHANNEL_UNDERAGE;
-    const obj7 = require("../../utils/HelpdeskUtils.tsx");
+    const obj7 = combined;
     const tmp9 = tmp3 ? NSFW_CHANNEL_UNDERAGE["6++3cX"] : NSFW_CHANNEL_UNDERAGE["2kHZes"];
   } else {
     obj[0] = stringResult;
@@ -259,16 +266,16 @@ export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentF
   }
 };
 export const useAgeGateVerifyContent = function useAgeGateVerifyContent(source) {
-  let obj = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
+  let obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
   const isAgeVerified = obj.useIsAgeVerified();
-  let obj1 = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
-  const isFeatureAgeGated = obj1.useIsFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES);
-  let obj2 = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
+  let obj1 = isFeatureAgeGated /* isFeatureAgeGated */;
+  const isFeatureAgeGated = obj1.useIsFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES);
+  let obj2 = useAgeVerificationRunner /* useAgeVerificationRunner */;
   let shouldShowTiggerPawtect = isFeatureAgeGated;
   if (isFeatureAgeGated) {
     shouldShowTiggerPawtect = obj2.useShouldShowTiggerPawtect();
   }
-  require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  initialize /* initialize */;
   [][0] = mergeGuildAvatar;
   if (source !== AgeGateSource.JOIN_LARGE_GUILD_UNDERAGE) {
     if (source !== tmp6.ACCESS_LARGE_GUILD_UNDERAGE) {
@@ -314,9 +321,9 @@ export const useAgeGateVerifyContent = function useAgeGateVerifyContent(source) 
                 obj1[0] = intl.string(tmp(1236).t["H0SG/g"]);
                 const intl2 = tmp(1236).intl;
                 obj2 = { helpURL: null };
-                obj2[0] = require("../../utils/HelpdeskUtils.tsx").getArticleURL(constants.AGE_GATE);
+                obj2[0] = combined.getArticleURL(constants.AGE_GATE);
                 obj1[1] = intl2.format(tmp(1236).t["6++3cX"], obj2);
-                const obj6 = require("../../utils/HelpdeskUtils.tsx");
+                const obj6 = combined;
               }
             }
           }
@@ -380,23 +387,23 @@ export const shouldShowAgeGateForCurrentUser = function shouldShowAgeGateForCurr
   if (null == currentUser) {
     return false;
   } else {
-    const result = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
-    const obj = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
-    const obj2 = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
-    const tmp5 = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
-    return true !== currentUser.nsfwAllowed || require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    const result = useAgeVerificationRunner /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
+    const obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
+    const obj2 = isFeatureAgeGated /* isFeatureAgeGated */;
+    const tmp5 = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    return true !== currentUser.nsfwAllowed || isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
   }
 };
 export const shouldShowAgeGateForGuildContentLevel = function shouldShowAgeGateForGuildContentLevel(arg0) {
   const currentUser = authStore.getCurrentUser();
   let flag = false;
   if (null != currentUser) {
-    const result = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
-    const obj = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
-    const obj2 = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
-    const tmp5 = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
-    flag = true !== currentUser.nsfwAllowed || require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
-    const tmp6 = true !== currentUser.nsfwAllowed || require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    const result = useAgeVerificationRunner /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
+    const obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
+    const obj2 = isFeatureAgeGated /* isFeatureAgeGated */;
+    const tmp5 = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    flag = true !== currentUser.nsfwAllowed || isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    const tmp6 = true !== currentUser.nsfwAllowed || isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
   }
   if (flag) {
     if (null != arg0) {
@@ -414,12 +421,12 @@ export const shouldShowAgeGateForChannelId = function shouldShowAgeGateForChanne
   const currentUser = authStore.getCurrentUser();
   let flag = false;
   if (null != currentUser) {
-    const result = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
-    const obj = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
-    const obj2 = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
-    const tmp5 = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
-    flag = true !== currentUser.nsfwAllowed || require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
-    const tmp6 = true !== currentUser.nsfwAllowed || require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    const result = useAgeVerificationRunner /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
+    const obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
+    const obj2 = isFeatureAgeGated /* isFeatureAgeGated */;
+    const tmp5 = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    flag = true !== currentUser.nsfwAllowed || isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    const tmp6 = true !== currentUser.nsfwAllowed || isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
   }
   let tmp7 = !flag;
   if (flag) {
@@ -435,9 +442,9 @@ export { shouldShowAgeGateForVoiceChannel };
 export const maybeOpenAgeGateForVoiceChannel = function maybeOpenAgeGateForVoiceChannel(id) {
   let flag = shouldShowAgeGateForVoiceChannel(id);
   if (flag) {
-    require("AgeGateModalActionCreators.tsx") /* openAgeGateModal */.openAgeGateModal(AgeGateSource.NSFW_VOICE_CHANNEL);
+    openAgeGateModal /* openAgeGateModal */.openAgeGateModal(AgeGateSource.NSFW_VOICE_CHANNEL);
     flag = true;
-    const obj = require("AgeGateModalActionCreators.tsx") /* openAgeGateModal */;
+    const obj = openAgeGateModal /* openAgeGateModal */;
   }
   return flag;
 };
@@ -445,12 +452,12 @@ export const maybeShowAgeGate = function maybeShowAgeGate(guildId, channelId, JO
   const currentUser = authStore.getCurrentUser();
   let flag = false;
   if (null != currentUser) {
-    const result = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
-    const obj2 = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
-    const obj3 = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
-    const tmp5 = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
-    flag = true !== currentUser.nsfwAllowed || require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
-    const tmp6 = true !== currentUser.nsfwAllowed || require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    const result = useAgeVerificationRunner /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
+    const obj2 = useAgeVerificationRunner /* useAgeVerificationRunner */;
+    const obj3 = isFeatureAgeGated /* isFeatureAgeGated */;
+    const tmp5 = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    flag = true !== currentUser.nsfwAllowed || isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    const tmp6 = true !== currentUser.nsfwAllowed || isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
   }
   let flag3 = false;
   if (flag) {
@@ -469,8 +476,8 @@ export const maybeShowAgeGate = function maybeShowAgeGate(guildId, channelId, JO
     if (null == NSFW_SERVER) {
       NSFW_SERVER = AgeGateSource.NSFW_SERVER;
     }
-    require("AgeGateModalActionCreators.tsx") /* openAgeGateModal */.openAgeGateModal(NSFW_SERVER);
-    const obj7 = require("AgeGateModalActionCreators.tsx") /* openAgeGateModal */;
+    openAgeGateModal /* openAgeGateModal */.openAgeGateModal(NSFW_SERVER);
+    const obj7 = openAgeGateModal /* openAgeGateModal */;
   } else {
     const currentUser1 = obj.getCurrentUser();
     let tmp13 = null != currentUser1 && null == currentUser1.nsfwAllowed;
@@ -478,12 +485,12 @@ export const maybeShowAgeGate = function maybeShowAgeGate(guildId, channelId, JO
       const currentUser2 = obj.getCurrentUser();
       let flag4 = false;
       if (null != currentUser2) {
-        const result1 = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
-        const obj4 = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
-        const obj5 = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
-        const tmp18 = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result1;
-        flag4 = true !== currentUser2.nsfwAllowed || require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result1;
-        const tmp19 = true !== currentUser2.nsfwAllowed || require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result1;
+        const result1 = useAgeVerificationRunner /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
+        const obj4 = useAgeVerificationRunner /* useAgeVerificationRunner */;
+        const obj5 = isFeatureAgeGated /* isFeatureAgeGated */;
+        const tmp18 = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result1;
+        flag4 = true !== currentUser2.nsfwAllowed || isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result1;
+        const tmp19 = true !== currentUser2.nsfwAllowed || isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result1;
       }
       let tmp21 = !flag4;
       if (flag4) {
@@ -500,8 +507,8 @@ export const maybeShowAgeGate = function maybeShowAgeGate(guildId, channelId, JO
       if (NSFW_SERVER == null) {
         NSFW_CHANNEL = AgeGateSource.NSFW_CHANNEL;
       }
-      require("AgeGateModalActionCreators.tsx") /* openAgeGateModal */.openAgeGateModal(NSFW_CHANNEL);
-      const obj6 = require("AgeGateModalActionCreators.tsx") /* openAgeGateModal */;
+      openAgeGateModal /* openAgeGateModal */.openAgeGateModal(NSFW_CHANNEL);
+      const obj6 = openAgeGateModal /* openAgeGateModal */;
     }
   }
 };
@@ -521,7 +528,7 @@ export const isChannelAgeVerificationGated = function isChannelAgeVerificationGa
     return false;
   } else {
     let tmp4 = null != isNSFW;
-    const result = require("../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
+    const result = useAgeVerificationRunner /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
     if (tmp4) {
       let isNSFWResult = isNSFW.isNSFW();
       if (!isNSFWResult) {
@@ -572,16 +579,16 @@ export const isCurrentUserMissingDateOfBirth = function isCurrentUserMissingDate
   return null != currentUser && null == currentUser.nsfwAllowed;
 };
 export const shouldAgeVerifyForSettingsToggles = function shouldAgeVerifyForSettingsToggles() {
-  let isFeatureAgeGatedResult = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.COMMANDS_TOGGLE);
-  const obj = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
+  let isFeatureAgeGatedResult = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.COMMANDS_TOGGLE);
+  const obj = isFeatureAgeGated /* isFeatureAgeGated */;
   if (isFeatureAgeGatedResult) {
     isFeatureAgeGatedResult = obj2.shouldShowTiggerPawtect();
   }
   return isFeatureAgeGatedResult;
 };
 export const useShouldAgeVerifyForSettingsToggles = function useShouldAgeVerifyForSettingsToggles() {
-  let isFeatureAgeGated = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.useIsFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.COMMANDS_TOGGLE);
-  const obj = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
+  let isFeatureAgeGated = isFeatureAgeGated /* isFeatureAgeGated */.useIsFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.COMMANDS_TOGGLE);
+  const obj = isFeatureAgeGated /* isFeatureAgeGated */;
   if (isFeatureAgeGated) {
     isFeatureAgeGated = obj2.useShouldShowTiggerPawtect();
   }

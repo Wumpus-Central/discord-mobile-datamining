@@ -1,3 +1,6 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { useNewUserDismissibleContent } from "NewUserDismissibleContentRegistry.tsx";
 // discord_app/modules/dismissible_content/useGetDismissibleContent.tsx
 import noop from "noop";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -71,7 +74,7 @@ let result = require("handleConnectionOpen").fileFinishedImporting("modules/dism
 export const useGetDismissibleContent = function useGetDismissibleContent(items3, APP_LAUNCHER_ONBOARDING) {
   let _require = APP_LAUNCHER_ONBOARDING;
   const items = [handleConnectionClosedOrResumed];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     const userContent = settings.settings.userContent;
     let dismissedContents;
     if (userContent != null) {
@@ -80,12 +83,12 @@ export const useGetDismissibleContent = function useGetDismissibleContent(items3
     return dismissedContents;
   });
   let stateFromStores1 = stateFromStores;
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items1 = [anyOverlayRenderingLocked];
-  stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => anyOverlayRenderingLocked.getGuildId());
+  stateFromStores1 = _initialize.useStateFromStores(items1, () => anyOverlayRenderingLocked.getGuildId());
   let dependencyMap = stateFromStores1;
-  const obj2 = _require("../../../discord_common/js/packages/flux/index.tsx");
-  const newUserDismissibleContent = _require("NewUserDismissibleContentRegistry.tsx").useNewUserDismissibleContent(items3);
+  const obj2 = _initialize;
+  const newUserDismissibleContent = _useNewUserDismissibleContent.useNewUserDismissibleContent(items3);
   let found1 = null;
   if (handleConnectionClosedOrResumed.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
     const found = newUserDismissibleContent.find((closure_0) => {
@@ -107,7 +110,7 @@ export const useGetDismissibleContent = function useGetDismissibleContent(items3
   }
   _require = tmp5;
   dependencyMap = APP_LAUNCHER_ONBOARDING;
-  const obj3 = _require("NewUserDismissibleContentRegistry.tsx");
+  const obj3 = _useNewUserDismissibleContent;
   let tmpResult = tmp(5933);
   anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
   tmpResult = tmp(589);
@@ -123,7 +126,7 @@ export const useGetDismissibleContent = function useGetDismissibleContent(items3
     return hasItem;
   });
   const items2 = [stateFromStores2];
-  const stateFromStores3 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
+  const stateFromStores3 = _initialize.useStateFromStores(items2, () => {
     let hasUserHitDCCapResult = null != closure_0;
     if (hasUserHitDCCapResult) {
       hasUserHitDCCapResult = stateFromStores1.hasUserHitDCCap(tmp, closure_1);
@@ -205,7 +208,7 @@ export const useGetVersionedDismissibleContent = function useGetVersionedDismiss
   let stateFromStores = groupName;
   _require = COLLECTIBLES_SHOP_ENTRY_MARKETING;
   const items = [handleConnectionClosedOrResumed];
-  const lastDismissedVersion = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const lastDismissedVersion = _initialize.useStateFromStores(items, () => {
     let tmp2 = null;
     if (null !== closure_0) {
       const userContent = newSnowflakeId.settings.userContent;
@@ -223,10 +226,10 @@ export const useGetVersionedDismissibleContent = function useGetVersionedDismiss
     }
     return tmp2;
   }).lastDismissedVersion;
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const obj2 = handleConnectionClosedOrResumed;
   const items1 = [anyOverlayRenderingLocked];
-  stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => anyOverlayRenderingLocked.getGuildId());
+  stateFromStores = _initialize.useStateFromStores(items1, () => anyOverlayRenderingLocked.getGuildId());
   let dependencyMap = stateFromStores;
   let React = null;
   let tmp4 = null;
@@ -262,7 +265,7 @@ export const useGetVersionedDismissibleContent = function useGetVersionedDismiss
   _require = tmp4;
   dependencyMap = groupName;
   React = latestVersion;
-  const obj3 = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const obj3 = _initialize;
   tmpResult = tmp(5933);
   anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
   const tmp10 = ref((currentlyShown) => {
@@ -273,12 +276,12 @@ export const useGetVersionedDismissibleContent = function useGetVersionedDismiss
     }
     return hasItem;
   });
-  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores([], () => {
+  const stateFromStores1 = _initialize.useStateFromStores([], () => {
 
   });
-  const tmpResult1 = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const tmpResult1 = _initialize;
   const items2 = [stateFromStores1];
-  const stateFromStores2 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
+  const stateFromStores2 = _initialize.useStateFromStores(items2, () => {
     let hasUserHitDCCapResult = null != closure_0;
     if (hasUserHitDCCapResult) {
       hasUserHitDCCapResult = stateFromStores1.hasUserHitDCCap(tmp, closure_1);
@@ -361,7 +364,7 @@ export const useGetTimeRecurringDismissibleContent = function useGetTimeRecurrin
   let numTimesDismissed;
   let _require = prop;
   const items = [handleConnectionClosedOrResumed];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     let tmp2 = null;
     if (null !== closure_0) {
       const userContent = newSnowflakeId.settings.userContent;
@@ -380,9 +383,9 @@ export const useGetTimeRecurringDismissibleContent = function useGetTimeRecurrin
     return tmp2;
   });
   ({ lastDismissedAtMs, numTimesDismissed } = stateFromStores);
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items1 = [anyOverlayRenderingLocked];
-  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => anyOverlayRenderingLocked.getGuildId());
+  const stateFromStores1 = _initialize.useStateFromStores(items1, () => anyOverlayRenderingLocked.getGuildId());
   let dependencyMap = null;
   let tmp5 = null;
   if (null != prop) {
@@ -396,7 +399,7 @@ export const useGetTimeRecurringDismissibleContent = function useGetTimeRecurrin
   }
   _require = tmp5;
   dependencyMap = groupName;
-  const obj2 = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const obj2 = _initialize;
   tmpResult = tmp(5933);
   anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
   const tmp11 = ref((currentlyShown) => {
@@ -407,12 +410,12 @@ export const useGetTimeRecurringDismissibleContent = function useGetTimeRecurrin
     }
     return hasItem;
   });
-  const stateFromStores2 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores([], () => {
+  const stateFromStores2 = _initialize.useStateFromStores([], () => {
 
   });
-  const tmpResult1 = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const tmpResult1 = _initialize;
   const items2 = [stateFromStores2];
-  const stateFromStores3 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
+  const stateFromStores3 = _initialize.useStateFromStores(items2, () => {
     let hasUserHitDCCapResult = null != closure_0;
     if (hasUserHitDCCapResult) {
       hasUserHitDCCapResult = stateFromStores1.hasUserHitDCCap(tmp, closure_1);
@@ -494,7 +497,7 @@ export const useGetSnowflakeBoundDismissibleContent = function useGetSnowflakeBo
   let stateFromStores = groupName;
   _require = prop;
   const items = [handleConnectionClosedOrResumed];
-  const lastDismissedObjectId = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const lastDismissedObjectId = _initialize.useStateFromStores(items, () => {
     let tmp2 = null;
     if (null !== closure_0) {
       const userContent = newSnowflakeId.settings.userContent;
@@ -512,10 +515,10 @@ export const useGetSnowflakeBoundDismissibleContent = function useGetSnowflakeBo
     }
     return tmp2;
   }).lastDismissedObjectId;
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const obj2 = handleConnectionClosedOrResumed;
   const items1 = [anyOverlayRenderingLocked];
-  stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => anyOverlayRenderingLocked.getGuildId());
+  stateFromStores = _initialize.useStateFromStores(items1, () => anyOverlayRenderingLocked.getGuildId());
   let dependencyMap = stateFromStores;
   let React = null;
   let tmp4 = null;
@@ -553,7 +556,7 @@ export const useGetSnowflakeBoundDismissibleContent = function useGetSnowflakeBo
   _require = tmp4;
   dependencyMap = groupName;
   handleConnectionClosedOrResumed = newSnowflakeId;
-  const obj3 = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const obj3 = _initialize;
   tmpResult = tmp(5933);
   anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
   const tmp12 = ref((currentlyShown) => {
@@ -564,12 +567,12 @@ export const useGetSnowflakeBoundDismissibleContent = function useGetSnowflakeBo
     }
     return hasItem;
   });
-  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores([], () => {
+  const stateFromStores1 = _initialize.useStateFromStores([], () => {
 
   });
-  const tmpResult1 = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const tmpResult1 = _initialize;
   const items2 = [stateFromStores1];
-  const stateFromStores2 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
+  const stateFromStores2 = _initialize.useStateFromStores(items2, () => {
     let hasUserHitDCCapResult = null != closure_0;
     if (hasUserHitDCCapResult) {
       hasUserHitDCCapResult = stateFromStores1.hasUserHitDCCap(tmp, closure_1);
@@ -651,7 +654,7 @@ export const useGetSnowflakeBoundGuildDismissibleContent_UNSAFE = function useGe
   let importDefault = current;
   let dependencyMap = arg3;
   const items = [handleConnectionClosedOrResumed];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => guildDismissedContentState.getGuildDismissedContentState(closure_1));
+  const stateFromStores = _initialize.useStateFromStores(items, () => guildDismissedContentState.getGuildDismissedContentState(closure_1));
   let tmp4 = null;
   if (null != prop) {
     let tmp5 = null;
@@ -679,7 +682,7 @@ export const useGetSnowflakeBoundGuildDismissibleContent_UNSAFE = function useGe
           tmp13 = prop;
         } else {
           tmp13 = null;
-          const obj5 = require("../../utils/SnowflakeUtils.tsx");
+          const obj5 = DISCORD_EPOCH;
         }
       }
       React = tmp13;
@@ -693,7 +696,7 @@ export const useGetSnowflakeBoundGuildDismissibleContent_UNSAFE = function useGe
           if (1 === obj4.compare(arg1, lastDismissedObjectId)) {
             tmp11 = prop;
           }
-          obj4 = require("../../utils/SnowflakeUtils.tsx");
+          obj4 = DISCORD_EPOCH;
         }
         React = tmp11;
         tmp7 = tmp11;
@@ -704,7 +707,7 @@ export const useGetSnowflakeBoundGuildDismissibleContent_UNSAFE = function useGe
   importDefault = current;
   dependencyMap = arg3;
   handleConnectionClosedOrResumed = arg1;
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   obj2 = handleConnectionClosedOrResumed;
   tmpResult = tmp(5933);
   const anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
@@ -716,12 +719,12 @@ export const useGetSnowflakeBoundGuildDismissibleContent_UNSAFE = function useGe
     }
     return hasItem;
   });
-  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores([], () => {
+  const stateFromStores1 = _initialize.useStateFromStores([], () => {
 
   });
-  const tmpResult1 = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const tmpResult1 = _initialize;
   const items1 = [stateFromStores1];
-  const stateFromStores2 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  const stateFromStores2 = _initialize.useStateFromStores(items1, () => {
     let hasUserHitDCCapResult = null != closure_0;
     if (hasUserHitDCCapResult) {
       hasUserHitDCCapResult = stateFromStores1.hasUserHitDCCap(tmp, closure_1);
@@ -802,7 +805,7 @@ export const useGetTimeRecurringSnowflakeBoundDismissibleContent = function useG
   let _require = newSnowflakeId;
   let stateFromStores = groupName;
   const items = [anyOverlayRenderingLocked];
-  stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => anyOverlayRenderingLocked.getGuildId());
+  stateFromStores = _initialize.useStateFromStores(items, () => anyOverlayRenderingLocked.getGuildId());
   let dependencyMap = stateFromStores;
   let React = null;
   let result = null == contentType;
@@ -818,7 +821,7 @@ export const useGetTimeRecurringSnowflakeBoundDismissibleContent = function useG
   _require = tmp6;
   dependencyMap = groupName;
   let handleConnectionClosedOrResumed = newSnowflakeId;
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   tmpResult = tmp(5933);
   anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
   const tmp7 = ref((currentlyShown) => {
@@ -829,12 +832,12 @@ export const useGetTimeRecurringSnowflakeBoundDismissibleContent = function useG
     }
     return hasItem;
   });
-  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores([], () => {
+  const stateFromStores1 = _initialize.useStateFromStores([], () => {
 
   });
-  const tmpResult1 = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const tmpResult1 = _initialize;
   const items1 = [stateFromStores1];
-  const stateFromStores2 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  const stateFromStores2 = _initialize.useStateFromStores(items1, () => {
     let hasUserHitDCCapResult = null != closure_0;
     if (hasUserHitDCCapResult) {
       hasUserHitDCCapResult = stateFromStores1.hasUserHitDCCap(tmp, closure_1);
@@ -915,10 +918,10 @@ export const useGetSingleUseGuildDismissibleContent_UNSAFE = function useGetSing
   let _require = current;
   let closure_1 = CHANNEL_NOTICES;
   const items = [handleConnectionClosedOrResumed];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_4.getGuildDismissedContentState(closure_0));
+  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_4.getGuildDismissedContentState(closure_0));
   let dependencyMap = stateFromStores;
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
-  const newUserDismissibleContent = _require("NewUserDismissibleContentRegistry.tsx").useNewUserDismissibleContent(items4);
+  let obj = _initialize;
+  const newUserDismissibleContent = _useNewUserDismissibleContent.useNewUserDismissibleContent(items4);
   let found1 = null;
   if (handleConnectionClosedOrResumed.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
     const found = newUserDismissibleContent.find((arg0) => {
@@ -946,7 +949,7 @@ export const useGetSingleUseGuildDismissibleContent_UNSAFE = function useGetSing
   _require = tmp4;
   closure_1 = current;
   dependencyMap = CHANNEL_NOTICES;
-  const obj2 = _require("NewUserDismissibleContentRegistry.tsx");
+  const obj2 = _useNewUserDismissibleContent;
   let tmpResult = tmp(5933);
   const anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
   tmpResult = tmp(589);
@@ -962,7 +965,7 @@ export const useGetSingleUseGuildDismissibleContent_UNSAFE = function useGetSing
     return hasItem;
   });
   const items1 = [stateFromStores1];
-  const stateFromStores2 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  const stateFromStores2 = _initialize.useStateFromStores(items1, () => {
     let hasUserHitDCCapResult = null != closure_0;
     if (hasUserHitDCCapResult) {
       hasUserHitDCCapResult = stateFromStores1.hasUserHitDCCap(tmp, closure_1);
@@ -1043,7 +1046,7 @@ export const useGetTimeRecurringGuildDismissibleContent_UNSAFE = function useGet
   let _require = current;
   let closure_1 = GUILD_HEADER_TOOLTIPS;
   const items = [handleConnectionClosedOrResumed];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_4.getGuildDismissedContentState(closure_0));
+  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_4.getGuildDismissedContentState(closure_0));
   let tmp4 = null;
   if (null != prop) {
     let tmp5 = null;
@@ -1078,7 +1081,7 @@ export const useGetTimeRecurringGuildDismissibleContent_UNSAFE = function useGet
   _require = tmp7;
   closure_1 = current;
   dependencyMap = GUILD_HEADER_TOOLTIPS;
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   tmpResult = tmp(5933);
   const anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
   const tmp16 = ref((currentlyShown) => {
@@ -1089,12 +1092,12 @@ export const useGetTimeRecurringGuildDismissibleContent_UNSAFE = function useGet
     }
     return hasItem;
   });
-  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores([], () => {
+  const stateFromStores1 = _initialize.useStateFromStores([], () => {
 
   });
-  const tmpResult1 = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const tmpResult1 = _initialize;
   const items1 = [stateFromStores1];
-  const stateFromStores2 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  const stateFromStores2 = _initialize.useStateFromStores(items1, () => {
     let hasUserHitDCCapResult = null != closure_0;
     if (hasUserHitDCCapResult) {
       hasUserHitDCCapResult = stateFromStores1.hasUserHitDCCap(tmp, closure_1);
@@ -1173,7 +1176,7 @@ export const useGetTimeRecurringGuildDismissibleContent_UNSAFE = function useGet
 };
 export const useDangerouslyPeekDismissibleContents = function useDangerouslyPeekDismissibleContents(items1) {
   const items = [handleConnectionClosedOrResumed];
-  _require = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  _require = _initialize.useStateFromStores(items, () => {
     const userContent = settings.settings.userContent;
     let dismissedContents;
     if (userContent != null) {

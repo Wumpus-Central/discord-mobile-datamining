@@ -1,3 +1,4 @@
+import { CodeRow } from "../../../user_settings/account/native/UserSettingsAccountBackupCodes.tsx";
 // discord_app/modules/webauthn/native/nav_steps/WebAuthnSuccessStep.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -20,5 +21,5 @@ export default function WebAuthnSuccessStep() {
   obj = { onGenerate: null, headerLabel: null };
   const intl = navigation(1236).intl;
   obj[1] = intl.format(navigation(1236).t.iVTs6i, {});
-  return jsx(require("../../../user_settings/account/native/UserSettingsAccountBackupCodes.tsx"), { onGenerate: null, headerLabel: null });
+  return jsx(CodeRow, { onGenerate: null, headerLabel: null });
 };

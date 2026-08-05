@@ -1,3 +1,4 @@
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
 // discord_app/modules/activities/native/openIgnoreThermalStateAlert.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -7,7 +8,7 @@ const result = require("module_4624").fileFinishedImporting("modules/activities/
 
 export const openIgnoreThermalStateAlert = function openIgnoreThermalStateAlert(arg0) {
   let closure_0 = arg0;
-  let obj = require("../../../actions/native/AlertActionCreators.tsx");
+  let obj = AlertActionCreators;
   obj = {
     importer() {
       return callback(outer1_2[4])(outer1_2[3], outer1_2.paths).then((IgnoreThermalStateAlert) => {

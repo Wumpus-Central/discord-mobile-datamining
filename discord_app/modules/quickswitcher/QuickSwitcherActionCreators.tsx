@@ -1,3 +1,7 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { set } from "../../utils/ValidationUtils.tsx";
+import { sortByMatchScore } from "../autocompleter/index.tsx";
 // discord_app/modules/quickswitcher/QuickSwitcherActionCreators.tsx
 import setLibraryApplications from "setLibraryApplications";
 import _slicedToArray from "_slicedToArray";
@@ -30,14 +34,14 @@ function trackClose(QUICKSWITCHER_CLOSED, type) {
   ({ results, queryMode, query } = props);
   const guildId = store2.getGuildId();
   const channelId = store.getChannelId(guildId);
-  const obj2 = require("../autocompleter/index.tsx") /* sortByMatchScore */;
+  const obj2 = sortByMatchScore /* sortByMatchScore */;
   const tmp6 = results[obj2.findNextSelectedResult(obj2, require(undefined, 7230) /* sortByMatchScore */.FindResultDirections.DOWN, -1, results)];
-  const isEmailResult = require("../../utils/ValidationUtils.tsx").isEmail(query);
-  const obj3 = require("../../utils/ValidationUtils.tsx");
+  const isEmailResult = set.isEmail(query);
+  const obj3 = set;
   const tmp7 = importDefault;
-  const isPhoneNumberResult = require("../../utils/ValidationUtils.tsx").isPhoneNumber(query);
-  const obj4 = require("../../utils/ValidationUtils.tsx");
-  const isUserTagLikeResult = require("../../utils/ValidationUtils.tsx").isUserTagLike(query);
+  const isPhoneNumberResult = set.isPhoneNumber(query);
+  const obj4 = set;
+  const isUserTagLikeResult = set.isUserTagLike(query);
   let tmp11 = null != channelId;
   if (tmp11) {
     tmp11 = isStaticChannelRoute(channelId);
@@ -155,7 +159,7 @@ function show() {
       }
       tmp6 = type;
     }
-    let obj = require("../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { source: null, current_guild_id: null, current_channel_id: null, current_channel_type: null };
     obj[0] = str;
     obj[1] = guildId;
@@ -171,7 +175,7 @@ function show() {
   const items = [str2.replace(regExp, ""), tmp14];
   const tmp15 = callback2(items, 2);
   const merged = Object.assign({ query: tmp15[0], queryMode: tmp15[1] });
-  require("../../Dispatcher.tsx").dispatch(obj);
+  dispatcher.dispatch(obj);
 }
 function _openInviteFromQuickSwitcher() {
   const self = this;
@@ -288,7 +292,7 @@ export const trackOpen = function trackOpen(arg0) {
       }
       tmp6 = type;
     }
-    let obj = require("../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { source: null, current_guild_id: null, current_channel_id: null, current_channel_type: null };
     obj[0] = arg0;
     obj[1] = guildId;
@@ -301,7 +305,7 @@ export { trackClose };
 export { show };
 export const hide = function hide() {
   trackClose(constants.QUICKSWITCHER_CLOSED);
-  require("../../Dispatcher.tsx").dispatch({ type: "QUICKSWITCHER_HIDE" });
+  dispatcher.dispatch({ type: "QUICKSWITCHER_HIDE" });
 };
 export const toggle = function toggle() {
   let str = arg0;
@@ -310,14 +314,14 @@ export const toggle = function toggle() {
   }
   if (closure_11.isOpen()) {
     trackClose(constants.QUICKSWITCHER_CLOSED);
-    require("../../Dispatcher.tsx").dispatch({ type: "QUICKSWITCHER_HIDE" });
-    const obj = require("../../Dispatcher.tsx");
+    dispatcher.dispatch({ type: "QUICKSWITCHER_HIDE" });
+    const obj = dispatcher;
   } else {
     show(str);
   }
 };
 export const search = function search(str) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   let tmp = dependencyMap[str.charAt(str, 0)];
   if (tmp == null) {
     tmp = null;
@@ -330,7 +334,7 @@ export const search = function search(str) {
   obj.dispatch(obj);
 };
 export const selectResult = function selectResult(selectedIndex) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "QUICKSWITCHER_SELECT", selectedIndex };
   obj.dispatch(obj);
 };
@@ -342,12 +346,12 @@ export const switchToResult = function switchToResult(record) {
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj.dispatch({ type: "QUICKSWITCHER_HIDE" });
   trackClose(constants.QUICKSWITCHER_RESULT_SELECTED, record);
   ({ type, record } = record);
   obj = { page: constants2.QUICK_SWITCHER };
-  if (require("../autocompleter/index.tsx") /* sortByMatchScore */.AutocompleterResultTypes.GUILD === type) {
+  if (sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.GUILD === type) {
     let tmp5Result = tmp5(5866);
     tmp5Result.transitionToGuild(record.id, { navigationReplace: true });
   } else if (tmp5(7230).AutocompleterResultTypes.TEXT_CHANNEL === type) {
@@ -436,5 +440,5 @@ export const switchToResult = function switchToResult(record) {
       }
     }
   }
-  require("../../Dispatcher.tsx").dispatch({ type: "QUICKSWITCHER_SWITCH_TO", result: record });
+  dispatcher.dispatch({ type: "QUICKSWITCHER_SWITCH_TO", result: record });
 };

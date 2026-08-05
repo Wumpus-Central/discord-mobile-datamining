@@ -1,3 +1,5 @@
+import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/forwarding/native/ForwardStaffToNonStaffWarningModal.tsx
 import jsxProd from "jsxProd";
 
@@ -12,22 +14,22 @@ export default function ForwardStaffToNonStaffWarningModal(arg0) {
   let onConfirm;
   ({ onConfirm, onBack } = arg0);
   let obj = { title: null, content: null, actions: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.YrV3I9);
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.MXSMtl);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.YrV3I9);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.MXSMtl);
   obj = { children: null };
   obj = { text: null, onPress: null };
-  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.X7eUJq);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.X7eUJq);
   obj[1] = onConfirm;
-  const items = [callback(require("../../../design/components/AlertModal/native/AlertModal.native.tsx") /* getAlertModalItemKey */.AlertActionButton, obj, "confirm"), ];
+  const items = [callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, obj, "confirm"), ];
   const obj1 = { variant: "secondary", text: null, onPress: null };
-  const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[1] = intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["13/7kX"]);
+  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[1] = intl4.string(getSystemLocale /* getSystemLocale */.t["13/7kX"]);
   obj1[2] = onBack;
-  items[1] = callback(require("../../../design/components/AlertModal/native/AlertModal.native.tsx") /* getAlertModalItemKey */.AlertActionButton, obj1, "back");
+  items[1] = callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, obj1, "back");
   obj[0] = items;
   obj[2] = callback2(closure_3, obj);
-  return callback(require("../../../design/components/AlertModal/native/AlertModal.native.tsx") /* getAlertModalItemKey */.AlertModal, obj);
+  return callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertModal, obj);
 };

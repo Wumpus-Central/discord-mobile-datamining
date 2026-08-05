@@ -1,3 +1,4 @@
+import { callback } from "../actions/ConnectedAccountsActionCreators.tsx";
 // discord_app/stores/ConnectedAccountsStore.tsx
 import toString from "toString";
 import { Store } from "initialize";
@@ -107,7 +108,7 @@ const connectedAccountsStore = new ConnectedAccountsStore(require("dispatcher"),
         let c5 = false;
       }
     }
-    const response = require("../actions/ConnectedAccountsActionCreators.tsx").fetch();
+    const response = callback.fetch();
   },
   USER_CONNECTIONS_INTEGRATION_JOINING: function handleJoining(integrationId) {
     closure_8[integrationId.integrationId] = integrationId.joining;
@@ -149,7 +150,7 @@ const connectedAccountsStore = new ConnectedAccountsStore(require("dispatcher"),
     let provider;
     let state;
     ({ code, state, openid_params, provider } = arg0);
-    require("../actions/ConnectedAccountsActionCreators.tsx").callback(provider, { code, state, openid_params });
+    callback.callback(provider, { code, state, openid_params });
   }
 });
 const result = set.fileFinishedImporting("stores/ConnectedAccountsStore.tsx");

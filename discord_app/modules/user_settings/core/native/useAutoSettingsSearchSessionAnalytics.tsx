@@ -1,3 +1,5 @@
+import { useMountLayoutEffect } from "../../../../hooks/useMountEffect.tsx";
+import { usePrevious } from "../../../../hooks/usePrevious.tsx";
 // discord_app/modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx
 import noop from "noop";
 import getState from "getState";
@@ -12,9 +14,9 @@ export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSea
     state = state.getState();
     return state === stateFromStores(table[4]).AppStates.ACTIVE;
   });
-  const tmp2 = require("../../../../hooks/usePrevious.tsx")(stateFromStores);
+  const tmp2 = usePrevious(stateFromStores);
   importDefault = tmp2;
-  require("../../../../hooks/useMountEffect.tsx")(() => () => {
+  useMountLayoutEffect(() => () => {
     callback(table[7]).terminate();
   });
   const items1 = [stateFromStores, tmp2];

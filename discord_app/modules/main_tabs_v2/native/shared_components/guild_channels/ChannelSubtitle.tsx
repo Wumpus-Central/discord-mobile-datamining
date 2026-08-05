@@ -1,3 +1,6 @@
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getChannelSubtitleData } from "../../../../channel/native/getChannelSubtitleData.tsx";
+import { getLayoutStyles } from "layouts/ChannelListLayout.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -13,7 +16,7 @@ function ChannelSubtitle(arg0) {
   let textProps;
   ({ muted, textProps } = arg0);
   ({ connected, channelId, guildId, layout, subtitle } = arg0);
-  let obj = require("../../../../channel/native/getChannelSubtitleData.tsx") /* getChannelSubtitleData */;
+  let obj = getChannelSubtitleData /* getChannelSubtitleData */;
   const channelSubtitleData = obj.getChannelSubtitleData(subtitle);
   if (null == channelSubtitleData) {
     return null;
@@ -44,12 +47,12 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
     return null;
   } else {
     let obj = { variant: null, color: "text-muted", lineClamp: 1, maxFontSizeMultiplier: 1.75 };
-    obj[0] = require("layouts/ChannelListLayout.tsx") /* getLayoutStyles */.getLayoutStyles(layout).messagePreview.text.variant;
+    obj[0] = getLayoutStyles /* getLayoutStyles */.getLayoutStyles(layout).messagePreview.text.variant;
     if (typeof subtitle === "string") {
       obj = {};
       const merged = Object.assign(obj);
       obj.children = subtitle;
-      let tmp9 = jsx(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, {});
+      let tmp9 = jsx(Text /* Text */.Text, {});
     } else {
       obj = { channelId: null, guildId: null, layout: null, subtitle: null, muted: null, connected: null, textProps: null };
       obj[0] = tmp2;

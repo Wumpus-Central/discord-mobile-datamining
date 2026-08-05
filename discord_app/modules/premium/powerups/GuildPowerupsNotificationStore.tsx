@@ -1,3 +1,4 @@
+import { getExpiringGuildEntitlements } from "utils/getExpiringGuildEntitlements.tsx";
 // discord_app/modules/premium/powerups/GuildPowerupsNotificationStore.tsx
 import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -50,7 +51,7 @@ const guildPowerupsNotificationStore = new GuildPowerupsNotificationStore(requir
     }
     const stateForGuild = stateForGuild2.getStateForGuild(guildId);
     const stateForGuild1 = stateForGuild.getStateForGuild(guildId);
-    let obj = require("utils/getExpiringGuildEntitlements.tsx") /* getExpiringGuildEntitlements */;
+    let obj = getExpiringGuildEntitlements /* getExpiringGuildEntitlements */;
     let unlockedPowerups;
     if (stateForGuild != null) {
       unlockedPowerups = stateForGuild.unlockedPowerups;

@@ -1,3 +1,5 @@
+import { updateAssets } from "../../../utils/ApplicationAssetUtils.tsx";
+import { getDevicePixelRatio } from "../../../utils/getDevicePixelRatio.native.tsx";
 // discord_app/modules/activities/utils/usePresenceActivityInviteCoverImageURL.tsx
 import noop from "noop";
 import getCoverImageURL from "getCoverImageURL";
@@ -12,7 +14,7 @@ function _getPresenceActivityInviteCoverImageURL(messageId) {
   if (null === coverImageURL) {
     return { cachedImageURL: null, imageURL: null };
   } else {
-    const result = 600 * require("../../../utils/getDevicePixelRatio.native.tsx")();
+    const result = 600 * getDevicePixelRatio();
     obj = { cachedImageURL: null, imageURL: null };
     obj[0] = coverImageURL;
     let invite_cover_image;
@@ -24,8 +26,8 @@ function _getPresenceActivityInviteCoverImageURL(messageId) {
     }
     let assetImage = null;
     if (null != invite_cover_image) {
-      assetImage = require("../../../utils/ApplicationAssetUtils.tsx") /* updateAssets */.getAssetImage(presenceActivity.application_id, presenceActivity.assets.invite_cover_image, result);
-      const obj2 = require("../../../utils/ApplicationAssetUtils.tsx") /* updateAssets */;
+      assetImage = updateAssets /* updateAssets */.getAssetImage(presenceActivity.application_id, presenceActivity.assets.invite_cover_image, result);
+      const obj2 = updateAssets /* updateAssets */;
     }
     if (assetImage == null) {
       assetImage = coverImageURL;

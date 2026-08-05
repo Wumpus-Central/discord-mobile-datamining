@@ -1,3 +1,5 @@
+import { Directions } from "../../../../_runtime/05368_Directions.js";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/collectibles/native/BundleProductDetailsActionSheetPreview.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -84,8 +86,8 @@ let closure_16 = memo((arg0) => {
     children: null
   };
   obj = { horizontal: true, showsHorizontalScrollIndicator: false, contentContainerStyle: tmp.bundleThumbnailRow, role: "radiogroup", "aria-label": null, children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[4] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.cTbdgu);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t.cTbdgu);
   obj[5] = items.map((item, index) => {
     const obj = { item, index, isSelected: index === closure_1, setSelected: closure_2, label: null, trackedSkuId: null, onTrackPress: null };
     let name;
@@ -112,7 +114,7 @@ let closure_16 = memo((arg0) => {
     return outer1_12(outer1_15, obj, item.skuId);
   });
   obj[1] = callback6(closure_9, obj);
-  return callback6(require("../../../../_runtime/05368_Directions.js") /* Directions */.GestureDetector, obj);
+  return callback6(Directions /* Directions */.GestureDetector, obj);
 });
 let obj5 = { gap: require("Themes").space.PX_8 };
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/collectibles/native/BundleProductDetailsActionSheetPreview.tsx");

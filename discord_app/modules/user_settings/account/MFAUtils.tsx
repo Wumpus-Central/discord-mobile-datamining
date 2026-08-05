@@ -1,3 +1,6 @@
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { _crypto } from "../../../utils/MFAUtils.tsx";
 // discord_app/modules/user_settings/account/MFAUtils.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -22,7 +25,7 @@ export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(
   } else {
     if (!stateFromStores.hasAnyStaffLevel()) {
       if (stateFromStores.hasFlag(constants.PARTNER)) {
-        const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        const intl2 = getSystemLocale /* getSystemLocale */.intl;
         const string2 = intl2.string;
         if (flag) {
           let string2Result = string2(_9UucjT);
@@ -30,7 +33,7 @@ export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(
           string2Result = string2(_9UucjT.Sq6Q1u);
         }
       } else if (null == stateFromStores.email) {
-        const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        const intl = getSystemLocale /* getSystemLocale */.intl;
         const string = intl.string;
         if (flag) {
           let stringResult = string(_9VWpT9);
@@ -39,9 +42,9 @@ export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(
         }
       }
     }
-    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
     const string3 = intl3.string;
-    let YJGvuD = require("../../../intl/index.native.tsx") /* getSystemLocale */.t;
+    let YJGvuD = getSystemLocale /* getSystemLocale */.t;
     if (flag) {
       YJGvuD = YJGvuD.YJGvuD;
       let string3Result = string3(YJGvuD);
@@ -52,14 +55,14 @@ export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(
 };
 export const useIsMFAEnabled = function useIsMFAEnabled() {
   const items = [mergeGuildAvatar];
-  return require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */.useStateFromStores(items, () => {
+  return defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     return null != currentUser && currentUser.mfaEnabled;
   });
 };
 export const MFAAvailability = obj;
 export const useMFAAvailability = function useMFAAvailability() {
-  const obj = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
+  const obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -69,7 +72,7 @@ export const useMFAAvailability = function useMFAAvailability() {
     }
     return verified;
   });
-  if (require("../../../utils/MFAUtils.tsx") /* _crypto */.hasCrypto) {
+  if (_crypto /* _crypto */.hasCrypto) {
     if (false === stateFromStores) {
       let AVAILABLE = obj.UNAVAILABLE_UNVERIFIED;
     } else {

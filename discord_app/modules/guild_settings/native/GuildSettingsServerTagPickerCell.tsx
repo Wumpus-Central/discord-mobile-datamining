@@ -1,3 +1,4 @@
+import { useCheckboxA11yNative } from "../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 // discord_app/modules/guild_settings/native/GuildSettingsServerTagPickerCell.tsx
 import "noop";
 import { Pressable } from "get ActivityIndicator";
@@ -25,7 +26,7 @@ export default function GuildSettingsServerTagPickerCell(accessibilityLabel) {
   }
   ({ onPress, children } = accessibilityLabel);
   const tmp = createCacheKey();
-  let obj = require("../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx") /* useCheckboxA11yNative */;
+  let obj = useCheckboxA11yNative /* useCheckboxA11yNative */;
   let radioA11yNative = obj.useRadioA11yNative({ selected });
   if ("button" === accessibilityRole) {
     obj = { accessibilityRole: "button", accessibilityState: null };

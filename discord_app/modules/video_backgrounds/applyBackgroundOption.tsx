@@ -1,3 +1,6 @@
+import { isVideoBackgroundSupported } from "isVideoBackgroundSupported.tsx";
+import { getLastUsedVideoBackgroundOption } from "LastUsedVideoBackgroundOption.tsx";
+import { _fetchVideoFilterAssets } from "VideoBackgroundActionCreators.tsx";
 // discord_app/modules/video_backgrounds/applyBackgroundOption.tsx
 import 00038__ from "../../../_runtime/metro/00038__.js";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -34,7 +37,7 @@ function _getFilterBlob() {
   return applyArgumentsResult;
 }
 function applyBackgroundMediaFilterSettings(arg0, target, graph, image, blob) {
-  let obj = require("VideoBackgroundActionCreators.tsx") /* _fetchVideoFilterAssets */;
+  let obj = _fetchVideoFilterAssets /* _fetchVideoFilterAssets */;
   obj = { graph, target, image, blob };
   const result = obj.applyMediaFilterSettings({ [arg0]: obj });
 }
@@ -454,8 +457,8 @@ export const applyBackgroundOptionPreview = function applyBackgroundOptionPrevie
 export const applyInitialVideoBackgroundOption = function applyInitialVideoBackgroundOption() {
   currentUser = currentUser.getCurrentUser();
   if (null != currentUser) {
-    const lastUsedVideoBackgroundOption = require("LastUsedVideoBackgroundOption.tsx") /* getLastUsedVideoBackgroundOption */.getLastUsedVideoBackgroundOption(currentUser);
-    let tmp6 = require("isVideoBackgroundSupported.tsx")();
+    const lastUsedVideoBackgroundOption = getLastUsedVideoBackgroundOption /* getLastUsedVideoBackgroundOption */.getLastUsedVideoBackgroundOption(currentUser);
+    let tmp6 = isVideoBackgroundSupported();
     if (tmp6) {
       tmp6 = !hasBeenApplied.hasBeenApplied;
     }
@@ -466,6 +469,6 @@ export const applyInitialVideoBackgroundOption = function applyInitialVideoBackg
       applyBackgroundOptionLive(lastUsedVideoBackgroundOption, { track: false }).catch(NOOP);
       const promise = applyBackgroundOptionLive(lastUsedVideoBackgroundOption, { track: false });
     }
-    const obj = require("LastUsedVideoBackgroundOption.tsx") /* getLastUsedVideoBackgroundOption */;
+    const obj = getLastUsedVideoBackgroundOption /* getLastUsedVideoBackgroundOption */;
   }
 };

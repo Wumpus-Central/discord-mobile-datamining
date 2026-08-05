@@ -1,3 +1,5 @@
+import { fails } from "../backoff/Backoff.tsx";
+import { shallowEqual } from "../shallow-equal/shallowEqual.tsx";
 // discord_common/js/packages/flux/createFetchStore.tsx
 import closure_3 from "keys";
 import _slicedToArray from "_slicedToArray";
@@ -12,8 +14,8 @@ function areStatesEqual(items, current) {
   if (Array.isArray(items)) {
     const _Array = Array;
     if (Array.isArray(current)) {
-      let result = require("../shallow-equal/shallowEqual.tsx") /* shallowEqual */.areArraysShallowEqual(items, current);
-      const obj = require("../shallow-equal/shallowEqual.tsx") /* shallowEqual */;
+      let result = shallowEqual /* shallowEqual */.areArraysShallowEqual(items, current);
+      const obj = shallowEqual /* shallowEqual */;
     }
     return result;
   }
@@ -31,7 +33,7 @@ function defaultRetryableErrors(status) {
   return tmp;
 }
 function defaultBackoff() {
-  return new require("../backoff/Backoff.tsx")();
+  return new fails();
 }
 ({ useCallback: c5, useEffect: closure_6, useState: error } = noop);
 const SymbolResult = Symbol("NO_DATA");
@@ -53,7 +55,7 @@ prototype["setRetryAfter"] = function setRetryAfter(retryAfter) {
 };
 let closure_13 = keys.create(() => {
   const obj = { isLoading: false, error: null, backoff: null, lastSuccessAt: null, failureLockedUntil: null };
-  obj[2] = new require("../backoff/Backoff.tsx")();
+  obj[2] = new fails();
   return obj;
 });
 let result = require("noop").fileFinishedImporting("../discord_common/js/packages/flux/createFetchStore.tsx");

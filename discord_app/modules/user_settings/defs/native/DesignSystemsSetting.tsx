@@ -1,3 +1,4 @@
+import { SettingsDesignSystemsScreen } from "../../design_system/native/UserSettingsDesignSystemsScreen.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemsSetting.tsx
 import createToggle from "createToggle";
 
@@ -13,7 +14,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM,
   getComponent() {
-    return require("../../design_system/native/UserSettingsDesignSystemsScreen.tsx") /* SettingsDesignSystemsScreen */.default;
+    return SettingsDesignSystemsScreen /* SettingsDesignSystemsScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

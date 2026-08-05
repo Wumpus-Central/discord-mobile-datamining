@@ -1,3 +1,5 @@
+import { inlineStyles } from "../../../../../_runtime/08437_inlineStyles.js";
+import { getTransformedBadgeColors } from "GuildBadgeUtils.tsx";
 // discord_app/modules/guild_tag/native/badges/GuildBadgeWaterDrop.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -21,7 +23,7 @@ export const GuildBadgeWaterDrop = function GuildBadgeWaterDrop(primaryTintColor
     num2 = 24;
   }
   const merged = Object.assign(primaryTintColor, Object.create(null));
-  let obj = require("GuildBadgeUtils.tsx") /* getTransformedBadgeColors */;
+  let obj = getTransformedBadgeColors /* getTransformedBadgeColors */;
   obj = { primaryBaseColors: closure_4, primaryTintColor: primaryTintColor.primaryTintColor, primaryTintLuminances: closure_5, primaryLuminanceWeights: items };
   const primaryColorsTransformed = obj.getTransformedBadgeColors(obj).primaryColorsTransformed;
   obj = {};
@@ -30,7 +32,7 @@ export const GuildBadgeWaterDrop = function GuildBadgeWaterDrop(primaryTintColor
   obj.height = num2;
   obj.viewBox = "0 0 16 16";
   obj.fill = "none";
-  items = [callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { d: "M13 6V5h-1V4h-1V3h-1V2H9V1H7v1H6v1H5v1H4v1H3v1H2v2H1v5h1v1h2v1h8v-1h2v-1h1V8h-1V6h-1Z", fill: primaryColorsTransformed[1] }), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { d: "M7 0v1h2V0H7ZM6 1v1h1V1H6ZM9 1v1h1V1H9ZM10 2v1h1V2h-1ZM11 3v1h1V3h-1ZM12 4v1h1V4h-1ZM13 5v1h1V5h-1ZM14 6v2h1V6h-1ZM1 6v2h1V6H1ZM0 8v5h1V8H0ZM15 8v5h1V8h-1ZM5 2v1h1V2H5ZM4 3v1h1V3H4ZM3 4v1h1V4H3ZM2 5v1h1V5H2ZM1 13v1h1v-1H1ZM14 13v1h1v-1h-1ZM4 15v1h8v-1H4Z", fill: "#000" }), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { d: "M4 14v1h8v-1H4Z", fill: primaryColorsTransformed[0] }), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { d: "M2 14v1h2v-1H2ZM14 15v-1h-2v1h2Z", fill: "#000" }), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { d: "M7 1v1h2V1H7Z", fill: primaryColorsTransformed[2] }), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { opacity: 0.5, d: "M11 8V7h-1V6H9V5H7v1H6v1H5v1H4v3h1v1h6v-1h1V8h-1Z", fill: "#fff" }), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { d: "M6 2v1h1V2H6ZM5 3v1h1V3H5ZM6 4v1h1V4H6ZM4 4v1h1V4H4ZM3 5v1h1V5H3ZM2 6v2h1V6H2ZM1 8v2h1V8H1Z", fill: primaryColorsTransformed[2] }), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { d: "M12 5v1h1V5h-1ZM13 6v2h1V6h-1ZM14 8v4h-1v1h-1v1h2v-1h1V8h-1ZM2 14h2v-1H2v1Z", fill: primaryColorsTransformed[0] })];
+  items = [callback(inlineStyles /* inlineStyles */.Path, { d: "M13 6V5h-1V4h-1V3h-1V2H9V1H7v1H6v1H5v1H4v1H3v1H2v2H1v5h1v1h2v1h8v-1h2v-1h1V8h-1V6h-1Z", fill: primaryColorsTransformed[1] }), callback(inlineStyles /* inlineStyles */.Path, { d: "M7 0v1h2V0H7ZM6 1v1h1V1H6ZM9 1v1h1V1H9ZM10 2v1h1V2h-1ZM11 3v1h1V3h-1ZM12 4v1h1V4h-1ZM13 5v1h1V5h-1ZM14 6v2h1V6h-1ZM1 6v2h1V6H1ZM0 8v5h1V8H0ZM15 8v5h1V8h-1ZM5 2v1h1V2H5ZM4 3v1h1V3H4ZM3 4v1h1V4H3ZM2 5v1h1V5H2ZM1 13v1h1v-1H1ZM14 13v1h1v-1h-1ZM4 15v1h8v-1H4Z", fill: "#000" }), callback(inlineStyles /* inlineStyles */.Path, { d: "M4 14v1h8v-1H4Z", fill: primaryColorsTransformed[0] }), callback(inlineStyles /* inlineStyles */.Path, { d: "M2 14v1h2v-1H2ZM14 15v-1h-2v1h2Z", fill: "#000" }), callback(inlineStyles /* inlineStyles */.Path, { d: "M7 1v1h2V1H7Z", fill: primaryColorsTransformed[2] }), callback(inlineStyles /* inlineStyles */.Path, { opacity: 0.5, d: "M11 8V7h-1V6H9V5H7v1H6v1H5v1H4v3h1v1h6v-1h1V8h-1Z", fill: "#fff" }), callback(inlineStyles /* inlineStyles */.Path, { d: "M6 2v1h1V2H6ZM5 3v1h1V3H5ZM6 4v1h1V4H6ZM4 4v1h1V4H4ZM3 5v1h1V5H3ZM2 6v2h1V6H2ZM1 8v2h1V8H1Z", fill: primaryColorsTransformed[2] }), callback(inlineStyles /* inlineStyles */.Path, { d: "M12 5v1h1V5h-1ZM13 6v2h1V6h-1ZM14 8v4h-1v1h-1v1h2v-1h1V8h-1ZM2 14h2v-1H2v1Z", fill: primaryColorsTransformed[0] })];
   obj.children = items;
-  return callback2(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Svg, obj);
+  return callback2(inlineStyles /* inlineStyles */.Svg, obj);
 };

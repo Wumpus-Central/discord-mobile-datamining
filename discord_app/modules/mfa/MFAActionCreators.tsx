@@ -1,3 +1,4 @@
+import { MFAModal } from "native/MFAModal.tsx";
 // discord_app/modules/mfa/MFAActionCreators.tsx
 import { SELECT_NAMES } from "get webauthn";
 
@@ -7,5 +8,5 @@ export const openMFAModal = function openMFAModal(methods) {
   const _require = arg1;
   methods = methods.methods;
   methods.methods = methods.filter((type) => Object.hasOwn(closure_2, type.type));
-  _require("native/MFAModal.tsx").openMFAModal(methods, (arg0) => callback(outer1_1[2]).trySubmit(arg0, callback), arg2);
+  _MFAModal.openMFAModal(methods, (arg0) => callback(outer1_1[2]).trySubmit(arg0, callback), arg2);
 };

@@ -1,3 +1,6 @@
+import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
+import { ApplicationCommandSectionType } from "../../../../application_commands/ApplicationCommandTypes.tsx";
+import { result } from "../hooks/useCanShowAppLauncherOnboarding.tsx";
 // discord_app/modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingStore.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
@@ -22,7 +25,7 @@ const appLauncherOnboardingStore = new AppLauncherOnboardingStore(require("dispa
     let commandOrigin;
     context = context.context;
     ({ command, commandOrigin } = context);
-    let tmp = commandOrigin !== require("../../../../application_commands/ApplicationCommandTypes.tsx") /* ApplicationCommandSectionType */.CommandOrigin.APPLICATION_LAUNCHER;
+    let tmp = commandOrigin !== ApplicationCommandSectionType /* ApplicationCommandSectionType */.CommandOrigin.APPLICATION_LAUNCHER;
     if (tmp) {
       tmp = null != context.channel;
     }
@@ -50,11 +53,11 @@ const appLauncherOnboardingStore = new AppLauncherOnboardingStore(require("dispa
       if (null != currentUser.id) {
         if (null != message.author) {
           if (currentUser.id === message.author.id) {
-            let obj = require("../../../../../utils/SnowflakeUtils.tsx");
+            let obj = DISCORD_EPOCH;
             const extractTimestampResult = obj.extractTimestamp(message.id);
             const _Date = Date;
             const timestamp = Date.now();
-            if (timestamp <= extractTimestampResult + require("../hooks/useCanShowAppLauncherOnboarding.tsx") /* result */.RECENT_MESSAGE_MS) {
+            if (timestamp <= extractTimestampResult + result /* result */.RECENT_MESSAGE_MS) {
               obj = { timeMs: null, guildId: null, channelId: null };
               obj[0] = extractTimestampResult;
               obj[1] = guildId;

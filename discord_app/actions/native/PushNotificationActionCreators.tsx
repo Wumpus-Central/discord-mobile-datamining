@@ -1,3 +1,7 @@
+import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { TrackedHTTPUtils } from "../../utils/TrackedHTTPUtils.tsx";
 // discord_app/actions/native/PushNotificationActionCreators.tsx
 import timestamp from "timestamp";
 import initialize from "initialize";
@@ -144,13 +148,13 @@ let obj = {
     }
     const canUseMultiAccountNotifications = obj.canUseMultiAccountNotifications;
     tmp4.log("Registering push notification token: " + token + ", is voip:" + flag + ", multi-account:" + canUseMultiAccountNotifications);
-    const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(flag ? closure_8 : closure_7, token);
     if (canUseMultiAccountNotifications) {
       const self = this;
       let syncDeviceResult = this.syncDevice(token, flag);
     } else {
-      obj = require("../../utils/TrackedHTTPUtils.tsx");
+      obj = TrackedHTTPUtils;
       obj = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: false };
       obj[0] = constants.DEVICES;
       if (flag) {
@@ -254,11 +258,11 @@ let obj = {
   },
   unregisterDevice(token) {
     tmp4.log("Unregistering push notification token: " + token);
-    let obj = require("../../utils/TrackedHTTPUtils.tsx");
+    let obj = TrackedHTTPUtils;
     obj = { url: constants.DEVICES, body: null, trackedActionData: null, rejectWithError: false };
     obj = { provider: callback2(), token };
     obj[1] = obj;
-    obj[2] = { event: require("../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.USER_UNREGISTER_DEVICE_TOKEN };
+    obj[2] = { event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_UNREGISTER_DEVICE_TOKEN };
     return obj.delete(obj);
   }
 };
@@ -268,24 +272,24 @@ let result = require("fetchFingerprint").fileFinishedImporting("actions/native/P
 export default obj;
 export const setPushPermissionState = function setPushPermissionState(PROMPT_SEEN) {
   let closure_0 = PROMPT_SEEN;
-  require("../../Dispatcher.tsx").wait(() => {
+  dispatcher.wait(() => {
     let obj = outer1_1(outer1_3[15]);
     obj = { type: "PUSH_NOTIFICATION_PERMISSION_SET_STATE", permissionState: closure_0 };
     obj.dispatch(obj);
   });
 };
 export const setPushPermissionReactivationSeen = function setPushPermissionReactivationSeen(promptType) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "PUSH_NOTIFICATION_PERMISSION_REACTIVATION_SEEN", promptType };
   obj.dispatch(obj);
 };
 export const setPushNotificationPermissionEligibleForPrompt = function setPushNotificationPermissionEligibleForPrompt(CHANNEL_BANNER) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "PUSH_NOTIFICATION_PERMISSION_SET_ELIGIBLE", promptType: CHANNEL_BANNER };
   obj.dispatch(obj);
 };
 export const updateNotificationAuthorizationStatus = function updateNotificationAuthorizationStatus(closure_0) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "PUSH_NOTIFICATION_AUTHORIZATION_STATUS_UPDATE", authorizationStatus: closure_0 };
   obj.dispatch(obj);
 };

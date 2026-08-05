@@ -1,3 +1,4 @@
+import { commonTriggerPointConfiguration } from "trigger_points/ConnectionOpenTriggerPoint.tsx";
 // discord_app/modules/experiments/ExperimentTriggerPointStore.tsx
 import getHash from "getHash";
 import initialize from "initialize";
@@ -7,7 +8,7 @@ import importDefaultResult from "dispatcher";
 
 const require = arg1;
 function handleConnectionOpen() {
-  const ConnectionOpenTriggerPoint = require("trigger_points/ConnectionOpenTriggerPoint.tsx") /* commonTriggerPointConfiguration */.ConnectionOpenTriggerPoint;
+  const ConnectionOpenTriggerPoint = commonTriggerPointConfiguration /* commonTriggerPointConfiguration */.ConnectionOpenTriggerPoint;
   ConnectionOpenTriggerPoint.trigger();
 }
 class ExperimentTriggerPointStore extends Store {

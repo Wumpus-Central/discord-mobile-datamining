@@ -1,3 +1,7 @@
+import { getNickname } from "../../utils/NicknameUtils.tsx";
+import { getParticipantUserKey } from "../calls/getParticipantUserKey.tsx";
+import { useAudienceRequestToSpeakState } from "useAudienceRequestToSpeakState.tsx";
+import { getHighestHoistedRole } from "useGuildMemberDisplayRole.tsx";
 // discord_app/modules/stage_channels/StageChannelParticipants.tsx
 import reset from "reset";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -44,7 +48,7 @@ function sortKey(speaker) {
     num = 999;
   }
   const combined = "" + num;
-  return "" + str2 + str3 + str4 + str + combined.padStart(3, "0") + connectedOn + require("../calls/getParticipantUserKey.tsx")(userNick, user);
+  return "" + str2 + str3 + str4 + str + combined.padStart(3, "0") + connectedOn + getParticipantUserKey(userNick, user);
 }
 function requestToSpeakSortKey(user) {
   user = user.user;
@@ -71,7 +75,7 @@ function getParticipantIndex(arg0) {
   if (tmp3) {
     items.push(obj.ALL_REQUESTED_TO_SPEAK);
   }
-  if (rtsState === require("useAudienceRequestToSpeakState.tsx") /* useAudienceRequestToSpeakState */.RequestToSpeakStates.REQUESTED_TO_SPEAK) {
+  if (rtsState === useAudienceRequestToSpeakState /* useAudienceRequestToSpeakState */.RequestToSpeakStates.REQUESTED_TO_SPEAK) {
     items.push(obj.REQUESTED_TO_SPEAK_ONLY);
   }
   if (speaker) {
@@ -149,17 +153,17 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
         nick = member1.nick;
       }
       if (nick == null) {
-        let obj = require("../../utils/NicknameUtils.tsx");
+        let obj = getNickname;
         nick = obj.getName(self.guildId, self.channelId, user);
       }
       obj = { user: null, userNick: null, nick: null, comparator: null, voiceState: null, role: null, speaker: null, member: null, blocked: null, ignored: null, isFriend: null, connectedOn: null };
       obj[0] = user;
-      obj[1] = require("../../utils/NicknameUtils.tsx").getName(self.guildId, self.channelId, user);
+      obj[1] = getNickname.getName(self.guildId, self.channelId, user);
       obj[2] = nick;
       obj[3] = getComparator(voiceStateForChannel, nick);
       obj[4] = voiceStateForChannel;
-      const obj3 = require("../../utils/NicknameUtils.tsx");
-      obj[5] = require("useGuildMemberDisplayRole.tsx") /* getHighestHoistedRole */.getHighestHoistedRole(self.guildId, userId);
+      const obj3 = getNickname;
+      obj[5] = getHighestHoistedRole /* getHighestHoistedRole */.getHighestHoistedRole(self.guildId, userId);
       obj[6] = speaker.isSpeaker(userId, self.channelId);
       obj[7] = member1;
       obj[8] = upsertRelationship.isBlocked(user.id);
@@ -293,5 +297,5 @@ export default StageChannelParticipants;
 export const StageChannelParticipantNamedIndex = obj;
 export const StageChannelParticipantTypes = obj;
 export const isRequestedToSpeakAll = function isRequestedToSpeakAll(rtsState) {
-  return rtsState === require("useAudienceRequestToSpeakState.tsx") /* useAudienceRequestToSpeakState */.RequestToSpeakStates.REQUESTED_TO_SPEAK || rtsState === require("useAudienceRequestToSpeakState.tsx") /* useAudienceRequestToSpeakState */.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+  return rtsState === useAudienceRequestToSpeakState /* useAudienceRequestToSpeakState */.RequestToSpeakStates.REQUESTED_TO_SPEAK || rtsState === useAudienceRequestToSpeakState /* useAudienceRequestToSpeakState */.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 };

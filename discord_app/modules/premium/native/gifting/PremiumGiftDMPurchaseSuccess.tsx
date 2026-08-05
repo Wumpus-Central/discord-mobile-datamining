@@ -1,3 +1,7 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { NativeGiftContextProvider } from "../../../payments/native/NativeGiftContext.tsx";
+import { PremiumGiftBackgroundAnimation } from "PremiumGiftBackgroundAnimation.android.tsx";
 // discord_app/modules/premium/native/gifting/PremiumGiftDMPurchaseSuccess.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -19,19 +23,19 @@ const result = require("jsxProd").fileFinishedImporting("modules/premium/native/
 
 export default function PremiumGiftDMSuccessBody() {
   const tmp = createCacheKey();
-  let obj = require("../../../payments/native/NativeGiftContext.tsx") /* NativeGiftContextProvider */;
+  let obj = NativeGiftContextProvider /* NativeGiftContextProvider */;
   obj = { children: null };
   obj = { children: null };
-  obj[0] = callback(require("PremiumGiftBackgroundAnimation.android.tsx"), { giftStyle: obj.useNativeGiftContext().giftStyle });
+  obj[0] = callback(PremiumGiftBackgroundAnimation, { giftStyle: obj.useNativeGiftContext().giftStyle });
   const items = [callback(View, obj), , ];
   const obj1 = { style: tmp.title, variant: "heading-lg/bold", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.MqZXbv);
-  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj1[2] = intl.string(getSystemLocale /* getSystemLocale */.t.MqZXbv);
+  items[1] = callback(Text /* Text */.Text, obj1);
   const obj2 = { style: tmp.description, variant: "text-md/medium", children: null };
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj2[2] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Y1keV0);
-  items[2] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj2[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.Y1keV0);
+  items[2] = callback(Text /* Text */.Text, obj2);
   obj[0] = items;
   return callback2(closure_6, obj);
 };

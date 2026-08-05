@@ -1,3 +1,5 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { getComboId } from "../../utils/LibraryApplicationUtils.tsx";
 // discord_app/stores/game_store/EntitlementStore.tsx
 import createFromServer from "createFromServer";
 import setLibraryApplications from "setLibraryApplications";
@@ -69,7 +71,7 @@ prototype["get"] = function get(arg0) {
   return dependencyMap[arg0];
 };
 prototype["getGiftable"] = function getGiftable() {
-  return require("../../../_runtime/00012_apply.js").values(closure_10);
+  return apply.values(closure_10);
 };
 prototype["getForApplication"] = function getForApplication(arg0) {
   if (null == dependencyMap3[arg0]) {
@@ -200,8 +202,8 @@ prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, applicationI
     }
     let tmp13 = null == libraryApplication || libraryApplication.sku.id !== arg1;
     if (!tmp13) {
-      tmp13 = !require("../../utils/LibraryApplicationUtils.tsx") /* getComboId */.isUserEntitledToLibraryApplication(libraryApplication);
-      const obj3 = require("../../utils/LibraryApplicationUtils.tsx") /* getComboId */;
+      tmp13 = !getComboId /* getComboId */.isUserEntitledToLibraryApplication(libraryApplication);
+      const obj3 = getComboId /* getComboId */;
     }
     let tmp16 = !tmp13;
     if (tmp13) {

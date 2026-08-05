@@ -1,3 +1,7 @@
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { v1 } from "../../../../_runtime/00514_v1.js";
+import { set } from "../../../utils/Durations.tsx";
+import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
 // discord_app/modules/in_app_notifications/native/InAppNotificationUtils.tsx
 import noop from "noop";
 import { REACTION_MILESTONE_COUNTS } from "set";
@@ -121,7 +125,7 @@ const result = require("ME").fileFinishedImporting("modules/in_app_notifications
 export const isReactionMilestoneNotification = function isReactionMilestoneNotification(reactions, type) {
   if (null != type) {
     if (type !== constants2.GUILD_ANNOUNCEMENT) {
-      return REACTION_MILESTONE_COUNTS.has(require("../../../../_runtime/00012_apply.js") /* apply */.sumBy(reactions, (count_details) => {
+      return REACTION_MILESTONE_COUNTS.has(apply /* apply */.sumBy(reactions, (count_details) => {
         count_details = count_details.count_details;
         let num;
         if (count_details != null) {
@@ -144,7 +148,7 @@ export const isReactionMilestoneNotification = function isReactionMilestoneNotif
   return false;
 };
 export const generateInAppNotificationId = function generateInAppNotificationId() {
-  return require("../../../../_runtime/00514_v1.js") /* v1 */.v4();
+  return v1 /* v1 */.v4();
 };
 export const getMessagePreviewTextVariant = function getMessagePreviewTextVariant() {
   let str = "text-md/medium";
@@ -161,16 +165,16 @@ export const getNotificationDuration = function getNotificationDuration(ALERT) {
           if (tmp.REACTION !== ALERT) {
             if (tmp.MESSAGE_REQUEST !== ALERT) {
               if (tmp.ALERT === ALERT) {
-                return 30 * require("../../../utils/Durations.tsx").Millis.SECOND;
+                return 30 * set.Millis.SECOND;
               } else {
                 if (tmp.MESSAGE_REMINDER !== ALERT) {
                   if (tmp.RESTRICTED_HOURS_WARNING !== ALERT) {
                     if (tmp.RESTRICTED_SCHEDULE_UPDATED === ALERT) {
-                      return 7 * require("../../../utils/Durations.tsx").Millis.SECOND;
+                      return 7 * set.Millis.SECOND;
                     }
                   }
                 }
-                return 10 * require("../../../utils/Durations.tsx").Millis.SECOND;
+                return 10 * set.Millis.SECOND;
               }
             }
           }
@@ -178,7 +182,7 @@ export const getNotificationDuration = function getNotificationDuration(ALERT) {
       }
     }
   }
-  return 5 * require("../../../utils/Durations.tsx").Millis.SECOND;
+  return 5 * set.Millis.SECOND;
 };
 export const useHasPreviewableMedia = function useHasPreviewableMedia(message) {
   let closure_0 = message;
@@ -234,7 +238,7 @@ export const trackInAppNotificationAccessoryClicked = function trackInAppNotific
   let guildId;
   let messageId;
   ({ guildId, channelId, messageId } = extractMetadataFromNotification(notification));
-  let obj = require("../../app_analytics/AppAnalyticsUtils.tsx");
+  let obj = collectGuildAnalyticsMetadata;
   obj = { type: notification.type, in_app_notification_id: notification.inAppNotificationId, notif_guild_id: guildId, notif_channel_id: channelId, message_id: messageId, accessory: REACTION_BUTTON };
   obj.trackWithMetadata(constants.IN_APP_NOTIFICATION_ACCESSORY_CLICKED, obj);
 };
@@ -246,5 +250,5 @@ export const trackDismissed = function trackDismissed(arg0) {
   let messageId;
   let type;
   ({ guildId, channelId, type, dismissReason, inAppNotificationId, messageId } = arg0);
-  require("../../app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, { type, guild_id: guildId, channel_id: channelId, dismiss_reason: dismissReason, in_app_notification_id: inAppNotificationId, message_id: messageId });
+  collectGuildAnalyticsMetadata.trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, { type, guild_id: guildId, channel_id: channelId, dismiss_reason: dismissReason, in_app_notification_id: inAppNotificationId, message_id: messageId });
 };

@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { NotificationNudgeBottomSheet } from "NotificationNudgeBottomSheet.tsx";
 // discord_app/modules/nuf/native/components/notification/PostCallDisconnectNudge.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -20,15 +22,15 @@ export default function PostCallDisconnectNudge(arg0) {
   let onHide;
   ({ markAsDismissed, onHide } = arg0);
   const obj = { title: null, body: null, actionLocation: null, surface: null, markAsDismissed: null, onHide: null };
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.pJbYq1);
-  const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.vegtFT);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.pJbYq1);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.vegtFT);
   obj[2] = constants.CALL_DISCONNECT;
   obj[3] = constants2.CALL_DISCONNECT_BOTTOM_SHEET;
   obj[4] = markAsDismissed;
   obj[5] = onHide;
-  return jsx(require("NotificationNudgeBottomSheet.tsx"), { title: null, body: null, actionLocation: null, surface: null, markAsDismissed: null, onHide: null });
+  return jsx(NotificationNudgeBottomSheet, { title: null, body: null, actionLocation: null, surface: null, markAsDismissed: null, onHide: null });
 };
 export const POST_CALL_DISCONNECT_NUDGE_KEY = "post-call-disconnect-nudge-key";
 export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() {

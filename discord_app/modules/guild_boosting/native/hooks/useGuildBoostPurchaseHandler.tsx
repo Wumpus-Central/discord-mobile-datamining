@@ -1,3 +1,4 @@
+import { MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG } from "../../../payments/utils/MobileWebRedirectCheckoutUtils.tsx";
 // discord_app/modules/guild_boosting/native/hooks/useGuildBoostPurchaseHandler.tsx
 import PaymentFlowStep from "PaymentFlowStep";
 import noop from "noop";
@@ -10,7 +11,7 @@ let result = require("ME").fileFinishedImporting("modules/guild_boosting/native/
 
 export default function useGuildBoostPurchaseHandler(arg0) {
   let _require = arg0;
-  let obj = _require("../../../payments/utils/MobileWebRedirectCheckoutUtils.tsx");
+  let obj = _MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG;
   _require = undefined;
   const result = obj.isMobileWebRedirectCheckoutEnabled();
   _require = callback((arg0, arg1) => {

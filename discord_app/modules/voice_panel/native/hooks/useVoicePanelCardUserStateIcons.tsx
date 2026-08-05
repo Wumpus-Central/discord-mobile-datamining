@@ -1,3 +1,7 @@
+import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { useEnsureSyncedChannelVoiceStates } from "../../../voice_calls/RTCConnectionDesyncHooks.tsx";
+import { isStableVoiceStateEqual } from "../utils/VoiceStateIconUtils.tsx";
+import { dismissPanel } from "../VoicePanelStateContext.tsx";
 // discord_app/modules/voice_panel/native/hooks/useVoicePanelCardUserStateIcons.tsx
 import noop from "noop";
 import createRTCConnection from "createRTCConnection";
@@ -26,12 +30,12 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
   let isRTCDisconnectedUIVisible;
   let callback;
   let callback1;
-  setShowFloatingCTA = setShowFloatingCTA.useContext(require("../VoicePanelStateContext.tsx")).setShowFloatingCTA;
+  setShowFloatingCTA = setShowFloatingCTA.useContext(dismissPanel).setShowFloatingCTA;
   let tmp6;
   if (arg0 === stateFromStores.USER) {
     tmp6 = id;
   }
-  muteDeafenIconState = _require("../utils/VoiceStateIconUtils.tsx").useMuteDeafenIconState(tmp6, guildId);
+  muteDeafenIconState = _isStableVoiceStateEqual.useMuteDeafenIconState(tmp6, guildId);
   let tmp4Result = tmp4(9101);
   let tmp8;
   if (arg0 === stateFromStores.USER) {
@@ -41,10 +45,10 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
   tmp4Result = tmp4(647);
   let items = [muteDeafenIconState];
   stateFromStores = tmp4Result.useStateFromStores(items, () => muteDeafenIconState.isConnected());
-  let obj2 = _require("../utils/VoiceStateIconUtils.tsx");
+  let obj2 = _isStableVoiceStateEqual;
   let items1 = [videoIconState];
   const items2 = [tmp, id];
-  stateFromStores1 = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => {
+  stateFromStores1 = _defaultAreStatesEqual.useStateFromStores(items1, () => {
     let voicePlatformForChannel = null;
     if (null != closure_2) {
       voicePlatformForChannel = null;
@@ -67,8 +71,8 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
   if (showTileVolumeIndicator) {
     showTileVolumeIndicator = arg0 === tmp5.STREAM;
   }
-  const tmp4Result1 = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
-  isRTCDisconnectedUIVisible = _require("../../../voice_calls/RTCConnectionDesyncHooks.tsx").useIsRTCDisconnectedUIVisible(tmp, id);
+  const tmp4Result1 = _defaultAreStatesEqual;
+  isRTCDisconnectedUIVisible = _useEnsureSyncedChannelVoiceStates.useIsRTCDisconnectedUIVisible(tmp, id);
   const items3 = [setShowFloatingCTA];
   callback = obj.useCallback(() => {
 

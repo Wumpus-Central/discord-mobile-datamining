@@ -1,3 +1,7 @@
+import { DCDChatItem } from "../../../../components_native/chat/ChatItem.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { hexToRgba } from "../../../../utils/ColorUtils.tsx";
 // discord_app/modules/in_app_reports/native/components/InAppReportsMessagePreview.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -21,15 +25,15 @@ const result = require("jsxProd").fileFinishedImporting("modules/in_app_reports/
 
 export default function MessagePreview(message) {
   const tmp = createCacheKey();
-  let obj = require("../../../../utils/ColorUtils.tsx") /* hexToRgba */;
+  let obj = hexToRgba /* hexToRgba */;
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.iouM3a);
-  const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.iouM3a);
+  const items = [callback(Text /* Text */.Text, obj), ];
   const hexWithOpacityResult = obj.hexWithOpacity(tmp.borderColor.color, 0.08);
   const items1 = [tmp.chatItemContainer, { borderColor: hexWithOpacityResult }];
-  items[1] = callback(View, { style: items1, children: callback(require("../../../../components_native/chat/ChatItem.tsx"), obj2) });
+  items[1] = callback(View, { style: items1, children: callback(DCDChatItem, obj2) });
   obj[1] = items;
   return callback2(View, obj);
 };

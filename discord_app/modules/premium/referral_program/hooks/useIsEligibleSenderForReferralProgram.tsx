@@ -1,3 +1,5 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useMaybeFetchReferralsRemaining } from "useMaybeFetchReferralsRemaining.tsx";
 // discord_app/modules/premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx
 import emitChanges from "emitChanges";
 
@@ -9,8 +11,8 @@ export const useIsEligibleSenderForReferralProgram = function useIsEligibleSende
   if (result === undefined) {
     flag = false;
   }
-  const maybeFetchReferralsRemaining = require("useMaybeFetchReferralsRemaining.tsx") /* useMaybeFetchReferralsRemaining */.useMaybeFetchReferralsRemaining(flag);
-  const obj = require("useMaybeFetchReferralsRemaining.tsx") /* useMaybeFetchReferralsRemaining */;
+  const maybeFetchReferralsRemaining = useMaybeFetchReferralsRemaining /* useMaybeFetchReferralsRemaining */.useMaybeFetchReferralsRemaining(flag);
+  const obj = useMaybeFetchReferralsRemaining /* useMaybeFetchReferralsRemaining */;
   const items = [emitChanges];
-  return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => isEligibleToSendReferrals.getIsEligibleToSendReferrals());
+  return initialize /* initialize */.useStateFromStores(items, () => isEligibleToSendReferrals.getIsEligibleToSendReferrals());
 };

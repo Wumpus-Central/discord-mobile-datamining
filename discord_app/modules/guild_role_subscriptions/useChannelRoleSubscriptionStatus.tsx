@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx
 import isSubscriptionGated from "isSubscriptionGated";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -50,6 +51,6 @@ export default function useChannelRoleSubscriptionStatus(arg0) {
   const _require = arg0;
   const items = [ensureGuildLoaded, isSubscriptionGated, getUncachedChannelPermissions];
   const items1 = [arg0];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => outer1_7(closure_0, outer1_3, outer1_2, outer1_4), items1);
+  return _initialize.useStateFromStoresObject(items, () => outer1_7(closure_0, outer1_3, outer1_2, outer1_4), items1);
 };
 export { getChannelRoleSubscriptionStatus };

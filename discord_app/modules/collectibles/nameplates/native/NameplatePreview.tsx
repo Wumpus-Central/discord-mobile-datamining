@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/collectibles/nameplates/native/NameplatePreview.tsx
 import noop from "noop";
 import { View } from "Text";
@@ -13,10 +14,10 @@ const require = arg1;
 let closure_9 = createCacheKey.createStyles((arg0) => {
   let num = 0;
   if (arg0) {
-    num = require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm;
+    num = Themes.radii.sm;
   }
   let obj = { container: null, nameplate: null, avatar: null, content: null };
-  obj = { borderRadius: num, padding: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, flexDirection: "row", alignItems: "center", width: "100%", backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWEST };
+  obj = { borderRadius: num, padding: Themes.space.PX_8, flexDirection: "row", alignItems: "center", width: "100%", backgroundColor: Themes.colors.BACKGROUND_BASE_LOWEST };
   obj[0] = obj;
   let num2 = 0;
   if (arg0) {
@@ -25,7 +26,7 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   obj[1] = { borderRadius: num2 };
   obj = { borderRadius: tmp3(712).radii.round, marginRight: tmp3(712).space.PX_8 };
   obj[2] = obj;
-  obj[3] = { flex: 1, paddingRight: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_40 };
+  obj[3] = { flex: 1, paddingRight: Themes.space.PX_40 };
   return obj;
 });
 const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/collectibles/nameplates/native/NameplatePreview.tsx");

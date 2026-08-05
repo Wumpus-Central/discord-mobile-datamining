@@ -1,3 +1,6 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { handleAutomaticGainControlChange } from "../../voice/native/UserSettingsVoiceUtils.tsx";
 // discord_app/modules/user_settings/defs/native/NoiseSuppressionSetting.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createToggle from "createToggle";
@@ -5,21 +8,21 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.t8Qhib);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.t8Qhib);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useValue: function useNoiseSuppressionSettingValue() {
     const items = [_detectH265HardwareDecode];
-    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => noiseSuppression.getNoiseSuppression());
+    return initialize /* initialize */.useStateFromStores(items, () => noiseSuppression.getNoiseSuppression());
   },
   onValueChange: function onNoiseSuppressionSettingValueChange(arg0) {
-    const NoiseSuppressionOpt = require("../../voice/native/UserSettingsVoiceUtils.tsx") /* handleAutomaticGainControlChange */.NoiseSuppressionOpt;
-    const result = require("../../voice/native/UserSettingsVoiceUtils.tsx") /* handleAutomaticGainControlChange */.handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
+    const NoiseSuppressionOpt = handleAutomaticGainControlChange /* handleAutomaticGainControlChange */.NoiseSuppressionOpt;
+    const result = handleAutomaticGainControlChange /* handleAutomaticGainControlChange */.handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
   },
   usePredicate: function useHasNoiseSuppressionSetting() {
     const items = [_detectH265HardwareDecode];
-    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => !noiseCancellationSupported.isNoiseCancellationSupported());
+    return initialize /* initialize */.useStateFromStores(items, () => !noiseCancellationSupported.isNoiseCancellationSupported());
   }
 };
 createToggle = createToggle.createToggle(createToggle);

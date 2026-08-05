@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_communication_disabled/useCanToggleCommunicationDisableOnUser.tsx
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -48,7 +49,7 @@ export default function useCanToggleCommunicationDisableOnUser(arg0, arg1) {
   let closure_1 = arg1;
   let items = [mergeGuildAvatar, createGuildRecordFromRust, getUncachedChannelPermissions];
   const items1 = [arg0, arg1];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const items = [outer1_6, outer1_4, outer1_5];
     return outer1_8(closure_0, closure_1, items);
   }, items1);

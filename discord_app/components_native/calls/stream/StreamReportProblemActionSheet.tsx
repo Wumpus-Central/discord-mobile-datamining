@@ -1,3 +1,10 @@
+import { BottomSheetModal } from "../../../../_runtime/05340_BottomSheetModal.js";
+import { ActionSheet } from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import { ActionSheetRowIcon } from "../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { useMountLayoutEffect } from "../../../hooks/useMountEffect.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getStreamIssueReportOptions } from "../../../modules/go_live/utils/getStreamIssueReportOptions.tsx";
 // discord_app/components_native/calls/stream/StreamReportProblemActionSheet.tsx
 import "noop";
 import sortActivity from "sortActivity";
@@ -16,7 +23,7 @@ export default function ReportProblem(arg0) {
   let importDefault;
   let require;
   ({ stream: require, analyticsData: importDefault } = arg0);
-  require("../../../hooks/useMountEffect.tsx")(() => {
+  useMountLayoutEffect(() => {
     let obj = outer1_0(outer1_2[7]);
     const streamerApplication = obj.getStreamerApplication(ownerId, outer1_3);
     obj = { type: "Stream Issue Sheet", other_user_id: ownerId.ownerId, application_id: null, application_name: null, game_id: null };
@@ -38,7 +45,7 @@ export default function ReportProblem(arg0) {
     outer1_1(outer1_2[8]).track(outer1_4.OPEN_POPOUT, obj);
   });
   let tmp = createCacheKey();
-  const mapped = require("../../../modules/go_live/utils/getStreamIssueReportOptions.tsx")({ isStreamer: false, isEndStream: false }).map((label) => {
+  const mapped = getStreamIssueReportOptions({ isStreamer: false, isEndStream: false }).map((label) => {
     const value = label.value;
     return outer1_5(outer1_0(outer1_2[13]).ActionSheetRow, {
       label: label.label,
@@ -58,11 +65,11 @@ export default function ReportProblem(arg0) {
   });
   let obj = { scrollable: true, header: null, children: null };
   obj = { title: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.XuqqwI);
-  obj[1] = jsx(require("../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title: null });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.XuqqwI);
+  obj[1] = jsx(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title: null });
   obj = { style: tmp.container, children: null };
-  obj[1] = jsx(require("../../../design/components/Sheet/native/ActionSheetRow.native.tsx") /* ActionSheetRowIcon */.ActionSheetRow.Group, { hasIcons: false, children: mapped });
-  obj[2] = jsx(require("../../../../_runtime/05340_BottomSheetModal.js") /* BottomSheetModal */.BottomSheetScrollView, { style: tmp.container, children: null });
-  return jsx(require("../../../design/components/Sheet/native/ActionSheet.native.tsx") /* ActionSheet */.ActionSheet, { style: tmp.container, children: null });
+  obj[1] = jsx(ActionSheetRowIcon /* ActionSheetRowIcon */.ActionSheetRow.Group, { hasIcons: false, children: mapped });
+  obj[2] = jsx(BottomSheetModal /* BottomSheetModal */.BottomSheetScrollView, { style: tmp.container, children: null });
+  return jsx(ActionSheet /* ActionSheet */.ActionSheet, { style: tmp.container, children: null });
 };

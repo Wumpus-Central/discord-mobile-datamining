@@ -1,3 +1,9 @@
+import { Directions } from "../../../../../_runtime/05368_Directions.js";
+import { registerAsset } from "../../../../../_runtime/10591_registerAsset.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useParticipantTileTapGesture } from "../useParticipantTileTapGesture.tsx";
 // discord_app/modules/video_calls/native/components/ScreenshareTile.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -31,18 +37,18 @@ export default function ScreenShareTile(onSingleTap) {
     onDoubleTap = NOOP;
   }
   const tmp = createCacheKey();
-  let obj = { gesture: require("../useParticipantTileTapGesture.tsx")({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap }), children: null };
+  let obj = { gesture: useParticipantTileTapGesture({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap }), children: null };
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.liveContainer, children: null };
-  obj[1] = callback(require("../../../../design/void/native.tsx") /* Button */.LiveTag, {});
+  obj[1] = callback(Button /* Button */.LiveTag, {});
   const items = [callback(closure_3, obj), , ];
-  const tmp2 = require("../useParticipantTileTapGesture.tsx")({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap });
-  items[1] = callback(closure_4, { source: require("../../../../../_runtime/10591_registerAsset.js"), style: tmp.image, resizeMode: "contain" });
+  const tmp2 = useParticipantTileTapGesture({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap });
+  items[1] = callback(closure_4, { source: registerAsset, style: tmp.image, resizeMode: "contain" });
   const obj2 = { style: tmp.label, variant: "text-xs/bold", color: "text-overlay-light", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj2[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.G84gtR);
-  items[2] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj2[3] = intl.string(getSystemLocale /* getSystemLocale */.t.G84gtR);
+  items[2] = callback(Text /* Text */.Text, obj2);
   obj[1] = items;
   obj[1] = callback2(closure_3, obj);
-  return callback(require("../../../../../_runtime/05368_Directions.js") /* Directions */.GestureDetector, obj);
+  return callback(Directions /* Directions */.GestureDetector, obj);
 };

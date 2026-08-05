@@ -1,3 +1,4 @@
+import { set } from "../../../../utils/PlatformUtils.tsx";
 // discord_app/modules/user_settings/privacy_and_safety/native/UserSettingsNativeBridgeManager.tsx
 import { NativeModules } from "get ActivityIndicator";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -5,7 +6,7 @@ import "initialize";
 
 let prototype = function UserSettingsNativeBridgeManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.saveExplicitContentSettingsToDisk = require("../../../../utils/PlatformUtils.tsx") /* set */.isIOS() ? (() => {
+  applyArgumentsResult.saveExplicitContentSettingsToDisk = set /* set */.isIOS() ? (() => {
     settings = settings.settings;
     if (settings != null) {
       const textAndImages = settings.textAndImages;

@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../../_runtime/11590_registerAsset.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/directory_channels/native/components/GuildDirectorySearch.tsx
 import _slicedToArray from "_slicedToArray";
 import HeaderBackImage from "HeaderBackImage";
@@ -21,16 +24,16 @@ function DefaultState() {
   const tmp = createCacheKey();
   const require = tmp;
   let obj = { style: tmp.emptyWrapper, children: null };
-  obj = { style: tmp.emptyStateImage, source: require("../../../../../_runtime/11590_registerAsset.js") };
+  obj = { style: tmp.emptyStateImage, source: registerAsset };
   const items = [callback(closure_7, obj), ];
   obj = { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.aYLd8O, {
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.format(getSystemLocale /* getSystemLocale */.t.aYLd8O, {
     protipHook(children) {
       return outer1_12(tmp(outer1_3[12]).LegacyText, { style: tmp.proTip, children }, "protip");
     }
   });
-  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items;
   return callback2(closure_6, obj);
 }
@@ -56,7 +59,7 @@ function EmptyState(channel) {
     formatResult = intl.string(tmp2(1236).t.vYyEnv);
   }
   obj = { style: tmp.emptyWrapper, children: null };
-  obj1 = { style: tmp.emptyStateImage, source: require("../../../../../_runtime/11590_registerAsset.js") };
+  obj1 = { style: tmp.emptyStateImage, source: registerAsset };
   const items1 = [callback(closure_7, obj1), , ];
   const obj2 = { style: tmp.emptyStateTitle, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp2(1236).intl;

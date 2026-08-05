@@ -1,3 +1,7 @@
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { XSmallIcon } from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
 // discord_app/modules/screen_recording/native/ScreenRecordingActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -65,7 +69,7 @@ export default function ScreenRecordingActionSheet() {
     }
   }
   obj = { style: tmp.container, children: null };
-  const items = [callback(_require("../../../design/components/Text/native/Text.tsx").Text, { variant: "heading-xl/bold", children: str }), callback(_require("../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/normal", children: str2 }), ];
+  const items = [callback(_Text.Text, { variant: "heading-xl/bold", children: str }), callback(_Text.Text, { variant: "text-md/normal", children: str2 }), ];
   obj = {
     disabled: tmp2,
     text: "Done",
@@ -75,7 +79,7 @@ export default function ScreenRecordingActionSheet() {
       callback2(outer1_2[8]).hideActionSheet();
     }
   };
-  items[2] = callback(_require("../../../design/components/Button/native/Button.native.tsx").Button, obj);
+  items[2] = callback(_Button.Button, obj);
   obj[1] = items;
   const obj1 = { style: tmp.container, children: null };
   const obj2 = {
@@ -86,21 +90,21 @@ export default function ScreenRecordingActionSheet() {
     accessibilityLabel: "close",
     children: null
   };
-  obj2[3] = callback(_require("../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx").XSmallIcon, { size: "md", color: "text-default" });
-  const items1 = [callback(_require("../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, obj2), callback(_require("../../../design/components/Text/native/Text.tsx").Text, { variant: "heading-xl/bold", children: tmp5.title }), , ];
+  obj2[3] = callback(_XSmallIcon.XSmallIcon, { size: "md", color: "text-default" });
+  const items1 = [callback(_PressableBase.PressableOpacity, obj2), callback(_Text.Text, { variant: "heading-xl/bold", children: tmp5.title }), , ];
   const obj4 = { variant: "text-md/normal", children: null };
   const obj3 = { variant: "heading-xl/bold", children: tmp5.title };
   const tmp11 = callback2(View, obj);
   const tmp6 = callback2;
   const tmp9 = _require;
-  obj4[1] = require("../../markup/MarkupUtils.tsx").parse(tmp5.instructions);
-  items1[2] = callback(_require("../../../design/components/Text/native/Text.tsx").Text, obj4);
+  obj4[1] = require("../../markup/MarkupUtils.tsx") /* get defaultRules */.parse(tmp5.instructions);
+  items1[2] = callback(_Text.Text, obj4);
   const obj5 = { style: tmp.buttonContainer, children: null };
   let tmp12 = !flag;
   if (flag) {
     tmp12 = tmp2;
   }
-  obj5[1] = callback(_require("../../../design/components/Button/native/Button.native.tsx").Button, {
+  obj5[1] = callback(_Button.Button, {
     disabled: tmp12,
     text: "Next",
     loading: tmp2,

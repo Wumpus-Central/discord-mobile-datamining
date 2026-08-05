@@ -1,3 +1,4 @@
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/soundboard/searchSounds.tsx
 import getEmojiToGroupId from "getEmojiToGroupId";
 import ME from "ME";
@@ -6,12 +7,12 @@ let c4;
 let c5;
 const require = arg1;
 function trackSearchStart(location_stack, channel_id) {
-  let obj = require("../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { channel_id, search_type: constants2.SOUNDBOARD, location_stack };
   obj.track(constants.SEARCH_STARTED, obj);
 }
 function trackSearchResultViewed(total_results, location_stack, channel_id, query) {
-  let obj = require("../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { search_type: constants2.SOUNDBOARD, channel_id, query, total_results: total_results.length, location_stack };
   obj.track(constants.SEARCH_RESULT_VIEWED, obj);
 }

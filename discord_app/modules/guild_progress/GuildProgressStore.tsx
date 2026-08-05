@@ -1,3 +1,4 @@
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/guild_progress/GuildProgressStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -29,7 +30,7 @@ prototype["initialize"] = function initialize(arg0) {
   this.waitFor(fetchFingerprint, ensureGuildLoaded, createGuildRecordFromRust);
   let closure_6 = {};
   if (null != arg0) {
-    const keys = require("../../utils/SnowflakeUtils.tsx").keys(arg0);
+    const keys = DISCORD_EPOCH.keys(arg0);
     const item = keys.forEach((arg0) => {
       let tmp2 = null != tmp;
       if (tmp2) {
@@ -42,7 +43,7 @@ prototype["initialize"] = function initialize(arg0) {
         closure_6[arg0] = set;
       }
     });
-    const obj = require("../../utils/SnowflakeUtils.tsx");
+    const obj = DISCORD_EPOCH;
   }
 };
 prototype["getProgress"] = function getProgress(arg0) {

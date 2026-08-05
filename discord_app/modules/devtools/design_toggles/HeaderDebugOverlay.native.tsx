@@ -1,3 +1,5 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useDesignToggle } from "useDesignToggle.tsx";
 // discord_app/modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -47,7 +49,7 @@ export default function useHeaderDebugOverlay(arg0, arg1) {
     obj1[0] = items2;
     const obj2 = { variant: "text-xs/bold", color: "text-overlay-light", children: null };
     obj2[2] = tmp6;
-    obj1[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+    obj1[1] = callback(Text /* Text */.Text, obj2);
     obj[1] = callback(View, obj1);
     items1[1] = callback(View, obj);
     obj[0] = items1;
@@ -55,5 +57,5 @@ export default function useHeaderDebugOverlay(arg0, arg1) {
   } else {
     return null;
   }
-  tmp2 = require("useDesignToggle.tsx")("show_header_debug_info");
+  tmp2 = useDesignToggle("show_header_debug_info");
 };

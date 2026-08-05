@@ -1,3 +1,5 @@
+import { handleLogout } from "../../actions/AuthenticationActionCreators.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/multi_account/MultiAccountActionCreators.tsx
 import setSecondaryToken from "setSecondaryToken";
 import fetchFingerprint from "fetchFingerprint";
@@ -160,9 +162,9 @@ export const switchAccount = function switchAccount(id, switchSynchronously, CHO
     obj.log("Switching accounts failed because there was no token");
     obj = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE", userId: null };
     obj[1] = id;
-    require("../../Dispatcher.tsx").dispatch(obj);
+    dispatcher.dispatch(obj);
     let resolved = Promise.resolve();
-    const obj7 = require("../../Dispatcher.tsx");
+    const obj7 = dispatcher;
   } else {
     let tmp4 = CHOOSE_ACCOUNT;
     const obj1 = { type: "MULTI_ACCOUNT_SWITCH_START", targetUserId: null, location: null };
@@ -171,34 +173,34 @@ export const switchAccount = function switchAccount(id, switchSynchronously, CHO
       tmp4 = null;
     }
     obj1[2] = tmp4;
-    require("../../Dispatcher.tsx").dispatch(obj1);
-    const obj4 = require("../../Dispatcher.tsx");
+    dispatcher.dispatch(obj1);
+    const obj4 = dispatcher;
     const tmp5 = importDefault;
-    resolved = require("../../actions/AuthenticationActionCreators.tsx").switchAccountToken(token, switchSynchronously);
-    const tmp5Result = require("../../actions/AuthenticationActionCreators.tsx");
+    resolved = handleLogout.switchAccountToken(token, switchSynchronously);
+    const tmp5Result = handleLogout;
   }
   return resolved;
 };
 export const moveAccount = function moveAccount(arg0, to) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "MULTI_ACCOUNT_MOVE_ACCOUNT", from: arg0, to };
   obj.dispatch(obj);
 };
 export const removeAccount = function removeAccount(userId) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "MULTI_ACCOUNT_REMOVE_ACCOUNT", userId };
   obj.dispatch(obj);
 };
 export const updatePushSyncToken = function updatePushSyncToken(id, token) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "MULTI_ACCOUNT_UPDATE_PUSH_SYNC_TOKEN", userId: id, pushSyncToken: token };
   obj.dispatch(obj);
 };
 export const invalidatePushSyncTokens = function invalidatePushSyncTokens(invalid_push_sync_tokens) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "MULTI_ACCOUNT_INVALIDATE_PUSH_SYNC_TOKENS", invalidPushSyncTokens: invalid_push_sync_tokens };
   obj.dispatch(obj);
 };
 export const reportAccountSwitchTimeout = function reportAccountSwitchTimeout() {
-  require("../../Dispatcher.tsx").dispatch({ type: "MULTI_ACCOUNT_SWITCH_TIMEOUT" });
+  dispatcher.dispatch({ type: "MULTI_ACCOUNT_SWITCH_TIMEOUT" });
 };

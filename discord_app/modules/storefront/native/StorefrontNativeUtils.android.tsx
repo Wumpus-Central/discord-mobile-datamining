@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/storefront/native/StorefrontNativeUtils.android.tsx
 import noop from "noop";
 
@@ -29,7 +30,7 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
   }, items);
   const items1 = [stateFromStores(5767)];
   const items2 = [tmp2];
-  stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  stateFromStores = _initialize.useStateFromStores(items1, () => {
     let product = null;
     if (null != c0) {
       product = stateFromStores(outer1_2[3]).getProduct(tmp);

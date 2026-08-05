@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { AccessibilityAnnouncer } from "../../../shared.tsx";
 // discord_app/design/void/Form/native/FormSwitch.tsx
 import "noop";
 import { Switch } from "get ActivityIndicator";
@@ -33,9 +35,9 @@ export default function FormSwitch(value) {
     color = tmp4.track.color;
   }
   if (null == borderColor) {
-    let obj = require("../../../shared.tsx") /* AccessibilityAnnouncer */;
+    let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
     if (obj.isThemeDark(tmp7)) {
-      borderColor = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_400;
+      borderColor = Themes.unsafe_rawColors.PRIMARY_400;
     }
   }
   obj = { accessible, trackColor: { true: color, false: borderColor }, ios_backgroundColor: null, value: null, disabled: null, style: null, onValueChange: null, accessibilityState: null, accessibilityLabel: null, accessibilityHint: null };

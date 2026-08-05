@@ -1,3 +1,4 @@
+import { useMountLayoutEffect } from "../../../hooks/useMountEffect.tsx";
 // discord_app/modules/dismissible_content/native/DismissibleActionSheet.tsx
 import noop from "noop";
 
@@ -5,7 +6,7 @@ const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("module
 
 export const DismissibleActionSheet = function DismissibleActionSheet(arg0) {
   const importDefault = arg0;
-  require("../../../hooks/useMountEffect.tsx")(() => {
+  useMountLayoutEffect(() => {
     let obj = lib(outer1_1[2]);
     obj = {};
     const merged = Object.assign(lib);

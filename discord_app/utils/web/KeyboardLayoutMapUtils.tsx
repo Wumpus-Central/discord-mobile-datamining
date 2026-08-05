@@ -1,3 +1,4 @@
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/utils/web/KeyboardLayoutMapUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import closure_3 from "set";
@@ -933,7 +934,7 @@ prototype2["reset"] = function reset() {
   this.save();
 };
 prototype2["save"] = function save() {
-  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   const result = Storage.set(c15, this.keyMap);
 };
 prototype2["getLayoutMap"] = function getLayoutMap() {

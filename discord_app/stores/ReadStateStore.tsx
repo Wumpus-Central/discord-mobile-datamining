@@ -1,3 +1,19 @@
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { DiscordAppState.native } from "../modules/app_state/DiscordAppState.native.tsx";
+import { isChangelogChannel } from "../modules/changelog/utils/isChangelogChannel.tsx";
+import { getRootNavigationRef } from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
+import { filterOutMessageRequestsAndSpam } from "../modules/message_request/MessageRequestUtils.tsx";
+import { isMentioned } from "../modules/messages/isMessageMentioned.tsx";
+import { _networkAwareRetry } from "../modules/network/networkAwareRetry.tsx";
+import { isIOSPushNotificationRawPayloadFixExperimentEnabled } from "../modules/notifications/IOSPushNotificationRawPayloadFixExperiment.tsx";
+import { getFocusedChannelId } from "../modules/panels/isChannelFocused.native.tsx";
+import { doesThreadMembersActionAffectMe } from "../modules/threads/ThreadActionUtils.tsx";
+import { has } from "../utils/BasicPermissionUtils.tsx";
+import { set } from "../utils/Durations.tsx";
+import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
+import { updateGuildUnreadSentinel } from "GuildReadStateStore.tsx";
+import { getState } from "native/AppStateStore.tsx";
 // discord_app/stores/ReadStateStore.tsx
 import getHash from "getHash";
 import ReadStateTypes from "ReadStateTypes";
@@ -65,17 +81,17 @@ let closure_53;
 let closure_54;
 let require = arg1;
 function generateOldThreadCutoff() {
-  return require("../utils/SnowflakeUtils.tsx").fromTimestamp(Date.now() - closure_69);
+  return DISCORD_EPOCH.fromTimestamp(Date.now() - closure_69);
 }
 function setDecayedReadStateTimer() {
   const timestamp = Date.now();
-  let closure_71 = timestamp - 7 * require("../utils/Durations.tsx").Millis.DAY;
+  let closure_71 = timestamp - 7 * set.Millis.DAY;
   const timestamp1 = Date.now();
-  let closure_72 = timestamp1 - 3 * require("../utils/Durations.tsx").Millis.DAY;
+  let closure_72 = timestamp1 - 3 * set.Millis.DAY;
   clearTimeout(timeout);
   timeout = setTimeout(() => {
     callback2(709).dispatch({ type: "DECAY_READ_STATES" });
-  }, require("../utils/Durations.tsx").Millis.HOUR);
+  }, set.Millis.HOUR);
 }
 function parseTimestamp(arg0) {
   if (null == arg0) {
@@ -103,14 +119,14 @@ function shouldBadgeMessage(channel_id, id) {
       obj[1] = id.id;
       obj[2] = updateUserGuildSettingsInternal.isSuppressEveryoneEnabled(channel.guild_id);
       obj[3] = updateUserGuildSettingsInternal.isSuppressRolesEnabled(channel.guild_id);
-      let tmp8Result = require("../modules/messages/isMessageMentioned.tsx")(obj);
+      let tmp8Result = isMentioned(obj);
       if (!tmp8Result) {
         tmp8Result = null != channel && channel.isPrivate() && !obj3.isGuildOrCategoryOrChannelMuted(channel.guild_id, channel.id);
         const tmp10 = null != channel && channel.isPrivate() && !obj3.isGuildOrCategoryOrChannelMuted(channel.guild_id, channel.id);
       }
       tmp4 = tmp8Result;
       obj3 = updateUserGuildSettingsInternal;
-      const tmp8 = require("../modules/messages/isMessageMentioned.tsx");
+      const tmp8 = isMentioned;
     }
     tmp = tmp4;
   }
@@ -311,7 +327,7 @@ function shouldAutomaticallyAck(value, arg1) {
           }
           return false;
         }
-        obj5 = require("../modules/app_state/DiscordAppState.native.tsx");
+        obj5 = DiscordAppState.native;
       }
       if (tmp4) {
         if (!value._persisted) {
@@ -371,7 +387,7 @@ function shouldAutomaticallyAck(value, arg1) {
           if (null != messages) {
             if (messages.ready) {
               if (!messages.loadingMore) {
-                const result = require("../modules/panels/isChannelFocused.native.tsx") /* getFocusedChannelId */.isChannelFocusedForReadStateAck(value.channelId, arg1);
+                const result = getFocusedChannelId /* getFocusedChannelId */.isChannelFocusedForReadStateAck(value.channelId, arg1);
                 const currentUser9 = obj.getCurrentUser();
                 if (result) {
                   let hasAnyStaffLevelResult9;
@@ -394,7 +410,7 @@ function shouldAutomaticallyAck(value, arg1) {
                     flag6 = false;
                   }
                 }
-                const obj10 = require("../modules/panels/isChannelFocused.native.tsx") /* getFocusedChannelId */;
+                const obj10 = getFocusedChannelId /* getFocusedChannelId */;
               }
               return flag6;
             }
@@ -623,8 +639,8 @@ function getThreadAckMessageTimestamp(guildId, channelId) {
     const _Math = Math;
     let bound = Math.max(num3, num4);
     if (bound <= 0) {
-      bound = require("../utils/SnowflakeUtils.tsx").extractTimestamp(channelId) - 1;
-      const obj5 = require("../utils/SnowflakeUtils.tsx");
+      bound = DISCORD_EPOCH.extractTimestamp(channelId) - 1;
+      const obj5 = DISCORD_EPOCH;
     }
     const _isNaN4 = isNaN;
     let isNaNResult = isNaN(bound);
@@ -753,8 +769,8 @@ function handleGuildFeatureAck(id) {
         ackedId = value.lastMessageId;
       }
       if (ackedId == null) {
-        ackedId = require("../utils/SnowflakeUtils.tsx").fromTimestamp(value.getAckTimestamp());
-        const obj2 = require("../utils/SnowflakeUtils.tsx");
+        ackedId = DISCORD_EPOCH.fromTimestamp(value.getAckTimestamp());
+        const obj2 = DISCORD_EPOCH;
       }
       const obj = { messageId: null, local: null, trackAnalytics: false };
       obj[0] = ackedId;
@@ -959,8 +975,8 @@ prototype["getAllChannelIdsForWindowId"] = function getAllChannelIdsForWindowId(
   let obj3;
   let tmp6;
   const set = new Set();
-  const entries = require("../utils/SnowflakeUtils.tsx").entries(this.channelWindowIds);
-  const obj2 = require("../utils/SnowflakeUtils.tsx");
+  const entries = DISCORD_EPOCH.entries(this.channelWindowIds);
+  const obj2 = DISCORD_EPOCH;
   while (tmp2 !== undefined) {
     let tmp4 = callback2;
     let tmp5 = callback2(tmp3, 2);
@@ -1001,8 +1017,8 @@ prototype["removeWindowId"] = function removeWindowId(arg0, arg1) {
   }
 };
 prototype["forEachChannel"] = function forEachChannel(arg0) {
-  const entries = require("../utils/SnowflakeUtils.tsx").entries(this.channelWindowIds);
-  const obj = require("../utils/SnowflakeUtils.tsx");
+  const entries = DISCORD_EPOCH.entries(this.channelWindowIds);
+  const obj = DISCORD_EPOCH;
   while (tmp2 !== undefined) {
     let tmp4 = callback2;
     let tmp5 = callback2(tmp3, 2);
@@ -1403,8 +1419,8 @@ Object.defineProperty(prototype2, "lastMessageId", {
     this._lastMessageId = _lastMessageId;
     let num = 0;
     if (null != _lastMessageId) {
-      num = require("../utils/SnowflakeUtils.tsx").extractTimestamp(_lastMessageId);
-      const obj = require("../utils/SnowflakeUtils.tsx");
+      num = DISCORD_EPOCH.extractTimestamp(_lastMessageId);
+      const obj = DISCORD_EPOCH;
     }
     this._lastMessageTimestamp = num;
   }
@@ -1427,8 +1443,8 @@ Object.defineProperty(prototype2, "ackMessageId", {
     this._ackMessageId = _ackMessageId;
     let num = 0;
     if (null != _ackMessageId) {
-      num = require("../utils/SnowflakeUtils.tsx").extractTimestamp(_ackMessageId);
-      const obj = require("../utils/SnowflakeUtils.tsx");
+      num = DISCORD_EPOCH.extractTimestamp(_ackMessageId);
+      const obj = DISCORD_EPOCH;
     }
     this._ackMessageTimestamp = num;
   }
@@ -1669,8 +1685,8 @@ prototype2["handleGuildEventRemoval"] = function handleGuildEventRemoval(guild_i
     if (!isNaN(ackTimestamp)) {
       let _ackMessageId = self._ackMessageId;
       if (_ackMessageId == null) {
-        _ackMessageId = require("../utils/SnowflakeUtils.tsx").fromTimestamp(ackTimestamp);
-        let tmpResult = require("../utils/SnowflakeUtils.tsx");
+        _ackMessageId = DISCORD_EPOCH.fromTimestamp(ackTimestamp);
+        let tmpResult = DISCORD_EPOCH;
       }
       importDefault = null;
       const dependencyMap = 0;
@@ -1711,8 +1727,8 @@ prototype2["canTrackUnreads"] = function canTrackUnreads() {
         return tmp3;
       } else if ("basicPermissions" in basicPermissions) {
         basicPermissions = basicPermissions.basicPermissions;
-        let hasItem = require("../utils/BasicPermissionUtils.tsx").has(basicPermissions, BasicPermissions.VIEW_CHANNEL);
-        const obj = require("../utils/BasicPermissionUtils.tsx");
+        let hasItem = has.has(basicPermissions, BasicPermissions.VIEW_CHANNEL);
+        const obj = has;
       } else {
         const isChannelGatedResult = isSubscriptionGated.isChannelGated(self.guildId, self.channelId);
         hasItem = !isChannelGatedResult;
@@ -1750,7 +1766,7 @@ prototype2["canBeUnread"] = function canBeUnread() {
     }
     return self.canTrackUnreads();
   }
-  obj = require("../modules/message_request/MessageRequestUtils.tsx") /* filterOutMessageRequestsAndSpam */;
+  obj = filterOutMessageRequestsAndSpam /* filterOutMessageRequestsAndSpam */;
   tmp = require;
 };
 prototype2["canHaveMentions"] = function canHaveMentions() {
@@ -1760,7 +1776,7 @@ prototype2["canHaveMentions"] = function canHaveMentions() {
     let tmp3 = !tmp2;
     if (!(self._isThread && !self._isJoinedThread)) {
       const items = [processChannel, closure_12];
-      const result = require("../modules/message_request/MessageRequestUtils.tsx") /* filterOutMessageRequestsAndSpam */.isMessageRequestOrSpamRequest(self.channelId, items);
+      const result = filterOutMessageRequestsAndSpam /* filterOutMessageRequestsAndSpam */.isMessageRequestOrSpamRequest(self.channelId, items);
       let tmp9 = !result;
       if (!result) {
         let result1 = tmp4(6903).isOptInEnabledForGuild(self._guildId);
@@ -1775,7 +1791,7 @@ prototype2["canHaveMentions"] = function canHaveMentions() {
         const tmp4Result = tmp4(6903);
       }
       tmp3 = tmp9;
-      const obj = require("../modules/message_request/MessageRequestUtils.tsx") /* filterOutMessageRequestsAndSpam */;
+      const obj = filterOutMessageRequestsAndSpam /* filterOutMessageRequestsAndSpam */;
       tmp4 = require;
     }
     tmp = tmp3;
@@ -1796,7 +1812,7 @@ prototype2["getGuildChannelUnreadState"] = function getGuildChannelUnreadState(b
     }
   }
   if ("basicPermissions" in basicPermissions) {
-    let obj = require("../utils/BasicPermissionUtils.tsx");
+    let obj = has;
     if (!obj.has(basicPermissions.basicPermissions, BasicPermissions.VIEW_CHANNEL)) {
       return { mentionCount: 0, unread: false, isMentionLowImportance: false };
     }
@@ -1863,7 +1879,7 @@ prototype2["ackPins"] = function ackPins() {
         return false;
       } else {
         self._persisted = true;
-        require("../modules/network/networkAwareRetry.tsx")(() => {
+        _networkAwareRetry(() => {
           const HTTP = self(outer1_2[42]).HTTP;
           return HTTP.post({ url: outer1_39.PINS_ACK(self.channelId), oldFormErrors: true, rejectWithError: true });
         });
@@ -2007,7 +2023,7 @@ prototype2["ack"] = function ack(immediate) {
   }
 };
 prototype2["takeSnapshot"] = function takeSnapshot() {
-  const _default = require("GuildReadStateStore.tsx") /* updateGuildUnreadSentinel */.default;
+  const _default = updateGuildUnreadSentinel /* updateGuildUnreadSentinel */.default;
   const guildId = this.guildId;
   const obj = { unread: this.hasUnread(), mentionCount: this.mentionCount, guildUnread: null, guildMentionCount: null, takenAt: null };
   let hasUnreadResult = null;
@@ -2078,7 +2094,7 @@ prototype2["_ack"] = function _ack(closure_1, c0) {
       tmp4 = recalculateFlagsResult;
     }
     const require = tmp4;
-    require("../modules/network/networkAwareRetry.tsx")(() => {
+    _networkAwareRetry(() => {
       const HTTP = tmp4(530).HTTP;
       obj = { url: outer1_39.MESSAGE_ACK(self.channelId, outgoingAck), body: obj, oldFormErrors: true, rejectWithError: true };
       obj = { token: outer1_63, last_viewed: self.lastViewed, flags: tmp4 };
@@ -2107,7 +2123,7 @@ prototype2["_ack"] = function _ack(closure_1, c0) {
         tmp5 = dependencyMap;
       }
     });
-    let promise = require("../modules/network/networkAwareRetry.tsx")(() => {
+    let promise = _networkAwareRetry(() => {
       const HTTP = tmp4(530).HTTP;
       obj = { url: outer1_39.MESSAGE_ACK(self.channelId, outgoingAck), body: obj, oldFormErrors: true, rejectWithError: true };
       obj = { token: outer1_63, last_viewed: self.lastViewed, flags: tmp4 };
@@ -2144,7 +2160,7 @@ prototype2["_nonChannelAck"] = function _nonChannelAck() {
         }
         self._persisted = true;
         self = importDefault;
-        require("../modules/network/networkAwareRetry.tsx")(() => {
+        _networkAwareRetry(() => {
           const HTTP = callback(outer1_2[42]).HTTP;
           return HTTP.post({ url: callback, body: {}, oldFormErrors: true, rejectWithError: true });
         });
@@ -2164,7 +2180,7 @@ prototype2["delete"] = function delete() {
   const basicChannel = store3.getBasicChannel(this.channelId);
   ({ channelId, type } = this);
   let obj = { remote: flag, persisted: this._persisted, channelMissing: null == basicChannel, isOld: null, validType: null, readableType: null, oldThreadCutoff: null, mentionCount: null, channelId: null, ackMessageId: null, lastMessageId: null };
-  const fromTimestampResult = require("../utils/SnowflakeUtils.tsx").fromTimestamp(Date.now() - closure_69);
+  const fromTimestampResult = DISCORD_EPOCH.fromTimestamp(Date.now() - closure_69);
   let tmp7 = this.mentionCount > 0;
   if (!tmp7) {
     let tmp3Result = tmp3(11);
@@ -2199,16 +2215,16 @@ prototype2["delete"] = function delete() {
     tmp14 = callback3(basicChannel.type);
   }
   obj[5] = tmp14;
-  const obj2 = require("../utils/SnowflakeUtils.tsx");
+  const obj2 = DISCORD_EPOCH;
   const tmp5 = closure_69;
-  obj[6] = require("../utils/SnowflakeUtils.tsx").fromTimestamp(Date.now() - tmp5);
+  obj[6] = DISCORD_EPOCH.fromTimestamp(Date.now() - tmp5);
   ({ mentionCount: obj[7], channelId: obj[8], _ackMessageId: obj[9], _lastMessageId: obj[10] } = self);
   tmp6.log("Deleting ReadState", channelId, type, obj);
   if (flag) {
     flag = self._persisted;
   }
   if (flag) {
-    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     obj = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
     obj[0] = closure_39.CHANNEL_ACK(self.channelId);
     obj = { version: 2, read_state_type: null };
@@ -2242,8 +2258,8 @@ prototype2["shouldDeleteReadState"] = function shouldDeleteReadState(closure_1) 
                 if (currentUser != null) {
                   id = currentUser.id;
                 }
-                flag = require("../utils/SnowflakeUtils.tsx").cast(id) === self.channelId;
-                const obj7 = require("../utils/SnowflakeUtils.tsx");
+                flag = DISCORD_EPOCH.cast(id) === self.channelId;
+                const obj7 = DISCORD_EPOCH;
               }
             }
             return !flag;
@@ -2256,7 +2272,7 @@ prototype2["shouldDeleteReadState"] = function shouldDeleteReadState(closure_1) 
     if (null == basicChannel) {
       let tmp29 = self.mentionCount > 0;
       if (!tmp29) {
-        let tmp32 = require("../utils/SnowflakeUtils.tsx").compare(self.channelId, closure_1) <= 0;
+        let tmp32 = DISCORD_EPOCH.compare(self.channelId, closure_1) <= 0;
         if (tmp32) {
           let tmp33 = null != self._ackMessageId;
           if (tmp33) {
@@ -2275,7 +2291,7 @@ prototype2["shouldDeleteReadState"] = function shouldDeleteReadState(closure_1) 
           tmp32 = tmp34;
         }
         tmp29 = tmp32;
-        const obj4 = require("../utils/SnowflakeUtils.tsx");
+        const obj4 = DISCORD_EPOCH;
       }
       let hasItem = tmp29;
     } else {
@@ -2299,7 +2315,7 @@ prototype2["shouldDeleteReadState"] = function shouldDeleteReadState(closure_1) 
               if (!isActiveResult) {
                 let tmp17 = self.mentionCount > 0;
                 if (!tmp17) {
-                  obj = require("../utils/SnowflakeUtils.tsx");
+                  obj = DISCORD_EPOCH;
                   let tmp20 = obj.compare(self.channelId, closure_1) <= 0;
                   if (tmp20) {
                     let tmp21 = null != self._ackMessageId;
@@ -2352,7 +2368,7 @@ prototype2["getAckTimestamp"] = function getAckTimestamp() {
   }
   if (self._isThread) {
     self._ackMessageTimestamp = getThreadAckMessageTimestamp(self.guildId, self.channelId);
-    self._ackMessageId = require("../utils/SnowflakeUtils.tsx").fromTimestamp(self._ackMessageTimestamp);
+    self._ackMessageId = DISCORD_EPOCH.fromTimestamp(self._ackMessageTimestamp);
     return self._ackMessageTimestamp;
   } else {
     if (self.type !== ReadStateTypes.GUILD_EVENT) {
@@ -2391,15 +2407,15 @@ prototype2["getAckTimestamp"] = function getAckTimestamp() {
           const _isNaN4 = isNaN;
           let extractTimestampResult = joinedAt;
           if (isNaN(joinedAt)) {
-            extractTimestampResult = require("../utils/SnowflakeUtils.tsx").extractTimestamp(self.channelId);
-            const obj4 = require("../utils/SnowflakeUtils.tsx");
+            extractTimestampResult = DISCORD_EPOCH.extractTimestamp(self.channelId);
+            const obj4 = DISCORD_EPOCH;
           }
         }
         const _Date2 = Date;
         joinedAt = Date.now();
       } else {
-        extractTimestampResult = require("../utils/SnowflakeUtils.tsx").extractTimestamp(self.channelId);
-        const obj2 = require("../utils/SnowflakeUtils.tsx");
+        extractTimestampResult = DISCORD_EPOCH.extractTimestamp(self.channelId);
+        const obj2 = DISCORD_EPOCH;
       }
       self._ackMessageTimestamp = extractTimestampResult;
       return extractTimestampResult;
@@ -2411,8 +2427,8 @@ Object.defineProperty(prototype2, "oldestUnreadTimestamp", {
   get: function oldestUnreadTimestamp() {
     let num = 0;
     if (null != this.oldestUnreadMessageId) {
-      num = require("../utils/SnowflakeUtils.tsx").extractTimestamp(tmp.oldestUnreadMessageId);
-      const obj = require("../utils/SnowflakeUtils.tsx");
+      num = DISCORD_EPOCH.extractTimestamp(tmp.oldestUnreadMessageId);
+      const obj = DISCORD_EPOCH;
     }
     return num;
   },
@@ -2445,8 +2461,8 @@ prototype2["syncThreadSettings"] = function syncThreadSettings() {
 prototype2["recordLastViewedTime"] = function recordLastViewedTime() {
   const self = this;
   const timestamp = Date.now();
-  const diff = timestamp - require("../utils/SnowflakeUtils.tsx") /* DISCORD_EPOCH */.DISCORD_EPOCH;
-  const rounded = Math.ceil(diff / require("../utils/Durations.tsx").Millis.DAY);
+  const diff = timestamp - DISCORD_EPOCH /* DISCORD_EPOCH */.DISCORD_EPOCH;
+  const rounded = Math.ceil(diff / set.Millis.DAY);
   if (rounded !== this.lastViewed) {
     self.lastViewed = rounded;
     if (tmp4) {
@@ -2468,7 +2484,7 @@ class ReadStateStoreClass extends Store {
 const prototype3 = ReadStateStoreClass.prototype;
 prototype3["initialize"] = function initialize() {
   const items = [percentageScrolled, mergeGuildAvatar, createGuildRecordFromRust, handleConnectionOpen, ensureGuildLoaded, closure_32, reinjectEphemerals, getUncachedChannelPermissions, getParticipants, handleThreadCreateOrUpdate, storeThread, handlePermissionsChange, scheduledEventSort, closure_8, isSubscriptionGated, updateUserGuildSettingsInternal, map, _validate, processChannel, handleConnectionClosedOrResumed, closure_12];
-  items.push(require("native/AppStateStore.tsx") /* getState */.default);
+  items.push(getState /* getState */.default);
   this.waitFor(handleThreadCreateOrUpdate, fetchFingerprint, getParticipants, handlePermissionsChange, ensureGuildLoaded, percentageScrolled, participantFromServer, isSubscriptionGated, handleConnectionOpen, scheduledEventSort, createGuildRecordFromRust, checkIdleAFK, storeThread, reinjectEphemerals, _validate, getUncachedChannelPermissions, upsertRelationship, closure_32, updateUserGuildSettingsInternal, handleConnectionClosedOrResumed, mergeGuildAvatar, map);
   const items1 = [handlePermissionsChange];
   this.syncWith(items1, handleChannelSectionStoreUpdate);
@@ -2544,7 +2560,7 @@ prototype3["getMentionCount"] = function getMentionCount(arg0) {
     }
     return num;
   }, 0);
-  if (!require("../modules/changelog/utils/isChangelogChannel.tsx")(arg0)) {
+  if (!isChangelogChannel(arg0)) {
     let num = value;
   } else {
     num = 1;
@@ -2694,7 +2710,7 @@ prototype3["isNewForumThread"] = function isNewForumThread(id, parent_id, guild)
         const _Date2 = Date;
         joinedAt = Date.now();
       }
-      obj3 = require("../utils/SnowflakeUtils.tsx");
+      obj3 = DISCORD_EPOCH;
       tmp9 = importDefault;
     }
   }
@@ -2788,14 +2804,14 @@ obj = {
         let combined = items.concat(modified_messages);
         let tmp2 = require;
         let tmp3 = dependencyMap;
-        let found = combined.filter(require("../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
+        let found = combined.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
         let tmp5 = found;
         let tmp6 = found;
         for (const item10026 of found) {
           let tmp8 = importDefault;
           let tmp9 = dependencyMap;
           let tmp7 = item10026;
-          let obj = require("../utils/SnowflakeUtils.tsx");
+          let obj = DISCORD_EPOCH;
           if (1 === obj.compare(item10026.id, ifExists.lastMessageId)) {
             let tmp10 = item10026;
             ifExists.lastMessageId = tmp7.id;
@@ -2888,8 +2904,8 @@ obj = {
     if (null != id) {
       let value = ReadState.get(id, ReadStateTypes.NOTIFICATION_CENTER);
       let _Date = Date;
-      value.lastMessageId = require("../utils/SnowflakeUtils.tsx").fromTimestamp(Date.now());
-      const obj2 = require("../utils/SnowflakeUtils.tsx");
+      value.lastMessageId = DISCORD_EPOCH.fromTimestamp(Date.now());
+      const obj2 = DISCORD_EPOCH;
     }
     mergeRelationships(relationships);
     mergeChannels(initialPrivateChannels);
@@ -2941,7 +2957,7 @@ obj = {
           continue;
         }
       })(readState.entries);
-    }, 10 * require("../utils/Durations.tsx").Millis.SECOND);
+    }, 10 * set.Millis.SECOND);
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function handleConnectionOpenSupplemental(lazyPrivateChannels) {
     lazyPrivateChannels = lazyPrivateChannels.lazyPrivateChannels;
@@ -2973,13 +2989,13 @@ obj = {
   OVERLAY_INITIALIZE: function handleOverlayInitialize(readStates) {
     readStates = readStates.readStates;
     const timestamp = Date.now();
-    let closure_71 = timestamp - 7 * require("../utils/Durations.tsx").Millis.DAY;
+    let closure_71 = timestamp - 7 * set.Millis.DAY;
     const timestamp1 = Date.now();
-    let closure_72 = timestamp1 - 3 * require("../utils/Durations.tsx").Millis.DAY;
+    let closure_72 = timestamp1 - 3 * set.Millis.DAY;
     clearTimeout(timeout);
     timeout = setTimeout(() => {
       callback2(709).dispatch({ type: "DECAY_READ_STATES" });
-    }, require("../utils/Durations.tsx").Millis.HOUR);
+    }, set.Millis.HOUR);
     let c63 = null;
     const selectedChannelId = readStates.selectedChannelId;
     const currentSidebarChannelId = store2.getCurrentSidebarChannelId(selectedChannelId);
@@ -2996,13 +3012,13 @@ obj = {
     readStates = readStates.readStates;
     let c64 = true;
     const timestamp = Date.now();
-    let closure_71 = timestamp - 7 * require("../utils/Durations.tsx").Millis.DAY;
+    let closure_71 = timestamp - 7 * set.Millis.DAY;
     const timestamp1 = Date.now();
-    let closure_72 = timestamp1 - 3 * require("../utils/Durations.tsx").Millis.DAY;
+    let closure_72 = timestamp1 - 3 * set.Millis.DAY;
     clearTimeout(timeout);
     timeout = setTimeout(() => {
       callback2(709).dispatch({ type: "DECAY_READ_STATES" });
-    }, require("../utils/Durations.tsx").Millis.HOUR);
+    }, set.Millis.HOUR);
     const item = readStates.forEach((type) => {
       let CHANNEL = type.type;
       if (CHANNEL == null) {
@@ -3026,7 +3042,7 @@ obj = {
   GUILD_CREATE: function handleGuildCreate(guild) {
     guild = guild.guild;
     let importDefault;
-    importDefault = require("../utils/SnowflakeUtils.tsx").fromTimestamp(Date.now() - closure_69);
+    importDefault = DISCORD_EPOCH.fromTimestamp(Date.now() - closure_69);
     const item = ReadState.forEach((guildId) => {
       let result = guildId.guildId === guild.id;
       if (result) {
@@ -3087,7 +3103,7 @@ obj = {
     if (null != messages) {
       if (messages.length > 0) {
         value.rebuildChannelState();
-        const obj3 = require("../utils/SnowflakeUtils.tsx");
+        const obj3 = DISCORD_EPOCH;
       }
       if (!messages.hasPresent()) {
         if (messages.jumpTargetId !== value.ackMessageId) {
@@ -3107,7 +3123,7 @@ obj = {
       }
     }
     const mapped = messages.map((thread) => thread.thread);
-    const found = mapped.filter(require("../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
+    const found = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
     const item = found.forEach((type) => {
       let last_pin_timestamp;
       if (callback2(type.type)) {
@@ -3147,8 +3163,8 @@ obj = {
         const id = messages[0].id;
         let tmp4 = null == value.lastMessageId;
         if (!tmp4) {
-          tmp4 = require("../utils/SnowflakeUtils.tsx").compare(id, value.lastMessageId) > 0;
-          const obj3 = require("../utils/SnowflakeUtils.tsx");
+          tmp4 = DISCORD_EPOCH.compare(id, value.lastMessageId) > 0;
+          const obj3 = DISCORD_EPOCH;
         }
         if (tmp4) {
           value.lastMessageId = id;
@@ -3158,7 +3174,7 @@ obj = {
     } else {
       return false;
     }
-    obj = require("../modules/notifications/IOSPushNotificationRawPayloadFixExperiment.tsx") /* isIOSPushNotificationRawPayloadFixExperimentEnabled */;
+    obj = isIOSPushNotificationRawPayloadFixExperimentEnabled /* isIOSPushNotificationRawPayloadFixExperimentEnabled */;
   },
   MESSAGE_CREATE: function handleIncomingMessage(isPushNotification) {
     let channelId;
@@ -3204,7 +3220,7 @@ obj = {
         }
       }
     }
-    let obj6 = require("../modules/main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */;
+    let obj6 = getRootNavigationRef /* getRootNavigationRef */;
     const rootNavigationRef = obj6.getRootNavigationRef();
     let isReadyResult;
     if (rootNavigationRef != null) {
@@ -3314,8 +3330,8 @@ obj = {
                       if (tmp39) {
                         let lastMessageId = value1.lastMessageId;
                         if (lastMessageId == null) {
-                          lastMessageId = require("../utils/SnowflakeUtils.tsx").fromTimestamp(value1.getAckTimestamp());
-                          const obj19 = require("../utils/SnowflakeUtils.tsx");
+                          lastMessageId = DISCORD_EPOCH.fromTimestamp(value1.getAckTimestamp());
+                          const obj19 = DISCORD_EPOCH;
                         }
                         const obj7 = { messageId: null, local: null, trackAnalytics: false };
                         obj7[0] = lastMessageId;
@@ -3428,7 +3444,7 @@ obj = {
       let value = ReadState.get(channel.id);
       let ackMessageId = value.ackMessageId;
       if (ackMessageId == null) {
-        let obj1 = require("../utils/SnowflakeUtils.tsx");
+        let obj1 = DISCORD_EPOCH;
         ackMessageId = obj1.fromTimestamp(value.getAckTimestamp());
       }
       value.ackMessageIdAtChannelSelect = ackMessageId;
@@ -3537,8 +3553,8 @@ obj = {
     let value = ReadState.get(channelId);
     let ackMessageId = value.ackMessageId;
     if (ackMessageId == null) {
-      ackMessageId = require("../utils/SnowflakeUtils.tsx").fromTimestamp(value.getAckTimestamp());
-      const obj3 = require("../utils/SnowflakeUtils.tsx");
+      ackMessageId = DISCORD_EPOCH.fromTimestamp(value.getAckTimestamp());
+      const obj3 = DISCORD_EPOCH;
     }
     value.ackMessageIdAtChannelSelect = ackMessageId;
     value.recordLastViewedTime();
@@ -3699,7 +3715,7 @@ obj = {
     return value.syncThreadSettings();
   },
   THREAD_MEMBERS_UPDATE: function handleThreadMembersUpdate(id) {
-    let result = require("../modules/threads/ThreadActionUtils.tsx") /* doesThreadMembersActionAffectMe */.doesThreadMembersActionAffectMe(id);
+    let result = doesThreadMembersActionAffectMe /* doesThreadMembersActionAffectMe */.doesThreadMembersActionAffectMe(id);
     if (result) {
       const value = ReadState.get(id.id);
       result = value.syncThreadSettings();
@@ -3931,8 +3947,8 @@ obj = {
               lastMessageId = value.lastMessageId;
             }
             if (lastMessageId == null) {
-              lastMessageId = require("../utils/SnowflakeUtils.tsx").fromTimestamp(value.getAckTimestamp());
-              const obj2 = require("../utils/SnowflakeUtils.tsx");
+              lastMessageId = DISCORD_EPOCH.fromTimestamp(value.getAckTimestamp());
+              const obj2 = DISCORD_EPOCH;
             }
             const obj = { messageId: null, local: null, trackAnalytics: false };
             obj[0] = lastMessageId;
@@ -3971,11 +3987,11 @@ obj = {
       }
       let num2 = 0;
       if (null != value.ackMessageId) {
-        num2 = require("../utils/SnowflakeUtils.tsx").extractTimestamp(value.ackMessageId);
-        const obj4 = require("../utils/SnowflakeUtils.tsx");
+        num2 = DISCORD_EPOCH.extractTimestamp(value.ackMessageId);
+        const obj4 = DISCORD_EPOCH;
       }
       if (num2 < time) {
-        value.lastMessageId = require("../utils/SnowflakeUtils.tsx").fromTimestamp(time);
+        value.lastMessageId = DISCORD_EPOCH.fromTimestamp(time);
         if (_validate.tabFocused) {
           value = obj.get(currentUser.id, ReadStateTypes.NOTIFICATION_CENTER);
           if (tmp15) {
@@ -4001,7 +4017,7 @@ obj = {
             value.mentionCount = mentionCount + 1;
           }
         }
-        const obj8 = require("../utils/SnowflakeUtils.tsx");
+        const obj8 = DISCORD_EPOCH;
         tmp20 = importDefault;
       }
     }
@@ -4021,8 +4037,8 @@ obj = {
       let num = 0;
       const time = date.getTime();
       if (null != value.ackMessageId) {
-        num = require("../utils/SnowflakeUtils.tsx").extractTimestamp(value.ackMessageId);
-        const obj = require("../utils/SnowflakeUtils.tsx");
+        num = DISCORD_EPOCH.extractTimestamp(value.ackMessageId);
+        const obj = DISCORD_EPOCH;
       }
       if (num <= time) {
         const _Math = Math;
@@ -4078,8 +4094,8 @@ obj = {
             ackedId = value.lastMessageId;
           }
           if (ackedId == null) {
-            ackedId = require("../utils/SnowflakeUtils.tsx").fromTimestamp(value.getAckTimestamp());
-            const obj2 = require("../utils/SnowflakeUtils.tsx");
+            ackedId = DISCORD_EPOCH.fromTimestamp(value.getAckTimestamp());
+            const obj2 = DISCORD_EPOCH;
           }
           const obj = { messageId: null, local: null, trackAnalytics: false };
           obj[0] = ackedId;

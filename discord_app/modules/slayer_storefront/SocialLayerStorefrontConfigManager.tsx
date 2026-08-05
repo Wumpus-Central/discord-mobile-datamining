@@ -1,3 +1,4 @@
+import { _fetchSocialLayerStorefront } from "SocialLayerStorefrontActionCreators.tsx";
 // discord_app/modules/slayer_storefront/SocialLayerStorefrontConfigManager.tsx
 import "initialize";
 
@@ -12,7 +13,7 @@ class SocialLayerStorefrontConfigManager extends tmp2 {
   }
 }
 SocialLayerStorefrontConfigManager.prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
-  const socialLayerStorefrontConfig = require("SocialLayerStorefrontActionCreators.tsx") /* _fetchSocialLayerStorefront */.fetchSocialLayerStorefrontConfig();
+  const socialLayerStorefrontConfig = _fetchSocialLayerStorefront /* _fetchSocialLayerStorefront */.fetchSocialLayerStorefrontConfig();
 };
 const socialLayerStorefrontConfigManager = new SocialLayerStorefrontConfigManager();
 const result = require("set").fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontConfigManager.tsx");

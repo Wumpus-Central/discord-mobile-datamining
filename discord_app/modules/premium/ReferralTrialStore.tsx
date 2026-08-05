@@ -1,3 +1,5 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { _fetchReferralEligibleUsers } from "ReferralTrialActionCreators.tsx";
 // discord_app/modules/premium/ReferralTrialStore.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { NOOP_NULL } from "ME";
@@ -73,8 +75,8 @@ prototype["checkAndFetchReferralsRemaining"] = function checkAndFetchReferralsRe
     tmp = tmp5;
   }
   if (tmp) {
-    const referralsRemaining = require("ReferralTrialActionCreators.tsx") /* _fetchReferralEligibleUsers */.fetchReferralsRemaining();
-    const obj = require("ReferralTrialActionCreators.tsx") /* _fetchReferralEligibleUsers */;
+    const referralsRemaining = _fetchReferralEligibleUsers /* _fetchReferralEligibleUsers */.fetchReferralsRemaining();
+    const obj = _fetchReferralEligibleUsers /* _fetchReferralEligibleUsers */;
   }
 };
 prototype["getReferralsRemaining"] = function getReferralsRemaining(arg0) {
@@ -142,11 +144,11 @@ const referralTrialStore = new ReferralTrialStore(require("dispatcher"), {
     }
     if (!set1.has(userTrialOfferId)) {
       set1.add(userTrialOfferId);
-      require("../../Dispatcher.tsx").wait(() => {
+      dispatcher.wait(() => {
         const referralTrialOffer = userTrialOfferId(outer1_2[2]).resolveReferralTrialOffer(userTrialOfferId);
         return referralTrialOffer.catch(outer1_4);
       });
-      const obj2 = require("../../Dispatcher.tsx");
+      const obj2 = dispatcher;
     }
   },
   BILLING_REFERRALS_REMAINING_FETCH_START: function handleReferralsRemainingFetchStart(arg0) {
@@ -195,12 +197,12 @@ const referralTrialStore = new ReferralTrialStore(require("dispatcher"), {
   },
   BILLING_CREATE_REFERRAL_SUCCESS: function handleCreateReferralSuccess(userTrialOffer) {
     userTrialOffer = userTrialOffer.userTrialOffer;
-    const referralsRemaining = require("ReferralTrialActionCreators.tsx") /* _fetchReferralEligibleUsers */.fetchReferralsRemaining();
+    const referralsRemaining = _fetchReferralEligibleUsers /* _fetchReferralEligibleUsers */.fetchReferralsRemaining();
     const result = map1.set(userTrialOffer.id, userTrialOffer);
     set.add(userTrialOffer.user_id);
   },
   CREATE_REFERRALS_SUCCESS: function handleCreateReferralsSuccess(arg0) {
-    const referralsRemaining = require("ReferralTrialActionCreators.tsx") /* _fetchReferralEligibleUsers */.fetchReferralsRemaining();
+    const referralsRemaining = _fetchReferralEligibleUsers /* _fetchReferralEligibleUsers */.fetchReferralsRemaining();
     for (const item10012 of tmp) {
       let tmp3 = map1;
       let result = map1.set(item10012.id, item10012);
@@ -249,11 +251,11 @@ const referralTrialStore = new ReferralTrialStore(require("dispatcher"), {
       }
       if (!hasItem) {
         set1.add(content);
-        require("../../Dispatcher.tsx").wait(() => {
+        dispatcher.wait(() => {
           const referralTrialOffer = content(outer1_2[2]).resolveReferralTrialOffer(content);
           return referralTrialOffer.catch(outer1_4);
         });
-        const obj = require("../../Dispatcher.tsx");
+        const obj = dispatcher;
       }
     }
   },

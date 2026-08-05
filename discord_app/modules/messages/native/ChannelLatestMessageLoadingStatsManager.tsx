@@ -1,3 +1,4 @@
+import { isClickstreamEnabled } from "../../app_analytics/clickstream/Clickstream.tsx";
 // discord_app/modules/messages/native/ChannelLatestMessageLoadingStatsManager.tsx
 import { AnalyticEvents } from "ME";
 import set from "set";
@@ -29,7 +30,7 @@ prototype["finish"] = function finish(channelId) {
         const seenChannelIds = tmp10.seenChannelIds;
         seenChannelIds.add(channelId.channelId);
       }
-      let obj = require("../../app_analytics/clickstream/Clickstream.tsx") /* isClickstreamEnabled */;
+      let obj = isClickstreamEnabled /* isClickstreamEnabled */;
       obj = { load_duration_ms: null, were_messages_cached: null, is_first_load: null };
       obj[0] = diff;
       obj[1] = channelId.areMessagesCached;

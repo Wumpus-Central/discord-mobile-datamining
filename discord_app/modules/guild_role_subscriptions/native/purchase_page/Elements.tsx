@@ -1,3 +1,10 @@
+import { registerAsset } from "../../../../../_runtime/15531_registerAsset.js";
+import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { useStoreFrontPrice } from "../../../billing/native/subscription/useStoreFrontPrice.tsx";
+import { notSupported } from "../../../payments/native/hooks/NativePaymentHooks.android.tsx";
 // discord_app/modules/guild_role_subscriptions/native/purchase_page/Elements.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -100,23 +107,23 @@ export const ArrowButton = function ArrowButton(arg0) {
   const tmp = createCacheKey();
   let obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
   obj = { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text };
-  const items = [callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+  const items = [callback2(Text /* Text */.Text, obj), ];
   obj = { size: null, source: null, style: null };
-  obj[0] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.SMALL;
-  obj[1] = require("../../../../../_runtime/15531_registerAsset.js");
+  obj[0] = Button /* Button */.Icon.Sizes.SMALL;
+  obj[1] = registerAsset;
   obj[2] = tmp.arrowButtonIcon;
-  items[1] = callback2(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
+  items[1] = callback2(Button /* Button */.Icon, obj);
   obj[3] = items;
-  return callback3(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  return callback3(PressableBase /* PressableBase */.PressableOpacity, obj);
 };
 export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPlan(listingId) {
-  const obj = require("../../../payments/native/hooks/NativePaymentHooks.android.tsx");
+  const obj = notSupported;
   const _require = callback(importAll(14363).useSubscriptionPlan(listingId), 1)[0];
   const obj2 = importAll(14363);
   const tmp2 = _require;
   const items = [addSubscriptionPlan];
-  const stateFromStores = _require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => outer1_8.get(id.id));
-  const price = require("../../../billing/native/subscription/useStoreFrontPrice.tsx")(stateFromStores, obj.useNativeIAPPayments().storeFront).price;
+  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => outer1_8.get(id.id));
+  const price = useStoreFrontPrice(stateFromStores, obj.useNativeIAPPayments().storeFront).price;
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;

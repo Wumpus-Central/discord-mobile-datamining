@@ -1,3 +1,4 @@
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/guild_automod/AutomodQuarantineUtils.tsx
 import noop from "noop";
 import zustandStore from "zustandStore";
@@ -20,7 +21,7 @@ export const useCurrentUserHasAutomodQuarantinedProfile = function useCurrentUse
   const _require = arg0;
   const items = [fetchFingerprint, trackCommunicationDisabled];
   const items1 = [arg0];
-  return _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
+  return _defaultAreStatesEqual.useStateFromStores(items, () => {
     if (null == callback) {
       return false;
     } else {
@@ -33,7 +34,7 @@ export const useGuildAutomodProfileQuarantineErrors = function useGuildAutomodPr
   const _require = id;
   let items = [fetchFingerprint, trackCommunicationDisabled, handleConnectionOpen, createGuildRecordFromRust];
   let items1 = [id];
-  return _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresObject(items, () => {
+  return _defaultAreStatesEqual.useStateFromStoresObject(items, () => {
     let guildId = id;
     if (id == null) {
       guildId = outer1_8.getGuildId();

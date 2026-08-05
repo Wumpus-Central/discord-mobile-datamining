@@ -1,3 +1,8 @@
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Form } from "../../../../design/void/Form/native/index.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/webauthn/native/nav_steps/WebAuthnNameStep.tsx
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
@@ -123,7 +128,7 @@ export default function WebAuthnNameStep(arg0) {
     return applyArgumentsResult;
   }
   let tmp = callback4();
-  let obj = require("../../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
+  let obj = useNavigation /* useNavigation */;
   dependencyMap = obj.useNavigation();
   const tmp6 = callback(first.useState(false), 2);
   closure_3 = tmp6[1];
@@ -136,12 +141,12 @@ export default function WebAuthnNameStep(arg0) {
   obj = { children: null };
   obj = { showTopContainer: false, value: first, onChange: tmp5Result[1], style: tmp.margin, error: tmp8, title: null, placeholder: null, disabled: null, clearButtonVisibility: null, autoFocus: true, showBorder: true, required: true, large: true };
   let intl = tmp2(1236).intl;
-  obj[5] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["Jzd+z/"]);
+  obj[5] = intl.string(getSystemLocale /* getSystemLocale */.t["Jzd+z/"]);
   const intl2 = tmp2(1236).intl;
-  obj[6] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["I/sJtJ"]);
+  obj[6] = intl2.string(getSystemLocale /* getSystemLocale */.t["I/sJtJ"]);
   obj[7] = tmp6[0];
-  obj[8] = require("../../../../design/void/native.tsx") /* Button */.ClearButtonVisibility.WITH_CONTENT;
-  const items = [callback2(require("../../../../design/void/Form/native/index.tsx") /* Form */.FormInput, obj), callback2(require("../../../../design/void/Form/native/index.tsx") /* Form */.FormDivider, {}), ];
+  obj[8] = Button /* Button */.ClearButtonVisibility.WITH_CONTENT;
+  const items = [callback2(Form /* Form */.FormInput, obj), callback2(Form /* Form */.FormDivider, {}), ];
   let obj1 = { style: tmp.margin, children: null };
   let obj2 = {
     onPress() {
@@ -159,10 +164,10 @@ export default function WebAuthnNameStep(arg0) {
     size: "lg"
   };
   const intl3 = tmp2(1236).intl;
-  obj2[1] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["5dyZ1S"]);
+  obj2[1] = intl3.string(getSystemLocale /* getSystemLocale */.t["5dyZ1S"]);
   obj2[2] = "" === first;
-  obj1[1] = callback2(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj2);
+  obj1[1] = callback2(Button /* Button */.Button, obj2);
   items[2] = callback2(_onPress, obj1);
   obj[0] = items;
-  return callback3(require("../../../../design/void/Form/native/index.tsx") /* Form */.Form, obj);
+  return callback3(Form /* Form */.Form, obj);
 };

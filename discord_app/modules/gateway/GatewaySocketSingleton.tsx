@@ -1,3 +1,6 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { DiscordAppState.native } from "../app_state/DiscordAppState.native.tsx";
 // discord_app/modules/gateway/GatewaySocketSingleton.tsx
 import fetchFingerprint from "fetchFingerprint";
 import set from "set";
@@ -17,16 +20,16 @@ obj.handleIdentify = () => {
   if (null == token) {
     return null;
   } else {
-    const state = require("../app_state/DiscordAppState.native.tsx").getState();
+    const state = DiscordAppState.native.getState();
     const installationForTracking = obj.getInstallationForTracking();
     obj = { token: null, properties: null, presence: null };
     obj[0] = token;
     const obj1 = {};
-    const obj5 = require("../app_state/DiscordAppState.native.tsx");
-    const merged = Object.assign(require("../../utils/AnalyticsUtils.tsx").getSuperProperties());
+    const obj5 = DiscordAppState.native;
+    const merged = Object.assign(expandEventProperties.getSuperProperties());
     obj1.client_app_state = state;
     obj1.is_fast_connect = false;
-    const obj8 = require("../../utils/AnalyticsUtils.tsx");
+    const obj8 = expandEventProperties;
     obj1.gateway_connect_reasons = importAll(675).describeConnectionReasons();
     if (null != installationForTracking) {
       const obj2 = { installation_id: null };
@@ -58,13 +61,13 @@ obj.on("disconnect", (arg0) => {
   let code;
   let reason;
   ({ code, reason } = arg0);
-  require("../../Dispatcher.tsx").dispatch({ type: "CONNECTION_CLOSED", code, reason });
+  dispatcher.dispatch({ type: "CONNECTION_CLOSED", code, reason });
 });
 obj.on("close", (arg0) => {
   let code;
   let reason;
   ({ code, reason } = arg0);
-  require("../../Dispatcher.tsx").dispatch({ type: "CONNECTION_INTERRUPTED", code, reason });
+  dispatcher.dispatch({ type: "CONNECTION_INTERRUPTED", code, reason });
 });
 const result = set.fileFinishedImporting("modules/gateway/GatewaySocketSingleton.tsx");
 

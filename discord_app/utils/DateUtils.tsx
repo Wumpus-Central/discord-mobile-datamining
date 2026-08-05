@@ -1,3 +1,7 @@
+import { t } from "../../_runtime/03867_t.js";
+import { create } from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
 // discord_app/utils/DateUtils.tsx
 import importDefaultResult from "_getSystemLocale";
 import importDefaultResult1 from "dispatcher";
@@ -8,9 +12,9 @@ function resetCache() {
   let closure_5 = Object.create(null);
 }
 function syncHourCycleToIntlConfig() {
-  const TimestampHourCycle = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.TimestampHourCycle;
+  const TimestampHourCycle = explicitContentFromProto /* explicitContentFromProto */.TimestampHourCycle;
   const setting = TimestampHourCycle.getSetting();
-  let result = setting !== require("../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.TimestampHourCycle.AUTO;
+  let result = setting !== create /* create */.TimestampHourCycle.AUTO;
   if (result) {
     result = tmp4(3972).supportsSystemDateFormatter();
     const tmp4Result = tmp4(3972);
@@ -31,7 +35,7 @@ function syncHourCycleToIntlConfig() {
         let tmp17 = require;
         let tmp18 = dependencyMap;
         let tmp19 = dependencyMap;
-        if (setting === require("../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.TimestampHourCycle.H12) {
+        if (setting === create /* create */.TimestampHourCycle.H12) {
           let tmp26 = nextResult;
           tmp13.hourCycle = "h12";
         }
@@ -41,7 +45,7 @@ function syncHourCycleToIntlConfig() {
         let tmp21 = require;
         let tmp22 = dependencyMap;
         let tmp23 = dependencyMap;
-        if (setting === require("../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.TimestampHourCycle.H23) {
+        if (setting === create /* create */.TimestampHourCycle.H23) {
           let tmp25 = nextResult;
           tmp13.hourCycle = "h23";
         }
@@ -97,9 +101,9 @@ function dateFormat(date, LL, setting) {
   if (!obj.isMoment(date)) {
     obj2 = tmp(3867)(date);
   }
-  obj = require("../../_runtime/03867_t.js");
+  obj = t;
   if (setting == null) {
-    const TimestampHourCycle = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.TimestampHourCycle;
+    const TimestampHourCycle = explicitContentFromProto /* explicitContentFromProto */.TimestampHourCycle;
     setting = TimestampHourCycle.getSetting();
   }
   const combined = "" + obj2.locale() + ":" + LL + ":" + setting;
@@ -159,9 +163,9 @@ export const calendarFormat = function calendarFormat(timestamp, arg1, setting) 
   if (arg1 === undefined) {
     flag = false;
   }
-  const obj = require("../../_runtime/03867_t.js");
-  const obj3 = require("../../_runtime/03867_t.js")();
-  const localeDataResult = require("../../_runtime/03867_t.js").localeData();
+  const obj = t;
+  const obj3 = t();
+  const localeDataResult = t.localeData();
   const tmp3 = differenceInCalendarDays;
   let toDateResult = timestamp;
   if (obj4.isMoment(timestamp)) {
@@ -192,12 +196,12 @@ export const calendarFormat = function calendarFormat(timestamp, arg1, setting) 
     }
     return dateFormat(timestamp, localeDataResult.calendar(str2, tmp8, obj3), setting);
   }
-  obj4 = require("../../_runtime/03867_t.js");
+  obj4 = t;
 };
 export const calendarFormatCompact = function calendarFormatCompact(timestamp) {
-  const obj = require("../../_runtime/03867_t.js");
-  const obj3 = require("../../_runtime/03867_t.js")();
-  const localeDataResult = require("../../_runtime/03867_t.js").localeData();
+  const obj = t;
+  const obj3 = t();
+  const localeDataResult = t.localeData();
   const tmp2 = differenceInCalendarDays;
   let toDateResult = timestamp;
   if (obj4.isMoment(timestamp)) {
@@ -226,11 +230,11 @@ export const dateStringToMoment = function dateStringToMoment(arg0) {
     const error = new Error("Date string exceeds maximum length");
     throw error;
   } else {
-    return require("../../_runtime/03867_t.js")(arg0);
+    return t(arg0);
   }
 };
 export const accessibilityLabelCalendarFormat = function accessibilityLabelCalendarFormat(timestamp) {
-  const obj = require("../../_runtime/03867_t.js");
+  const obj = t;
   const date = new Date();
   const tmp4 = differenceInCalendarDays(timestamp, date);
   let str = "sameElse";
@@ -294,17 +298,17 @@ export const diffAsUnits = function diffAsUnits(date, closure_0) {
 };
 export const unitsAsStrings = function unitsAsStrings(diffAsUnitsResult, days2) {
   if (diffAsUnitsResult.days > 0) {
-    const intl3 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
     let obj = { days: null, hours: null };
     ({ days: obj3[0], hours: obj3[1] } = diffAsUnitsResult);
     let formatToPlainStringResult = intl3.formatToPlainString(days2.days, obj);
   } else if (diffAsUnitsResult.hours > 0) {
-    const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
     obj = { hours: null, minutes: null };
     ({ hours: obj2[0], minutes: obj2[1] } = diffAsUnitsResult);
     formatToPlainStringResult = intl2.formatToPlainString(days2.hours, obj);
   } else {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     obj = { minutes: null };
     const _Math = Math;
     obj[0] = Math.max(1, diffAsUnitsResult.minutes);
@@ -338,8 +342,8 @@ export const formatDateForDatetimeLocal = function formatDateForDatetimeLocal(ar
       const error = new Error("Date string exceeds maximum length");
       throw error;
     } else {
-      str = require("../../_runtime/03867_t.js")(arg0).format("YYYY-MM-DDTHH:mm");
-      const obj = require("../../_runtime/03867_t.js")(arg0);
+      str = t(arg0).format("YYYY-MM-DDTHH:mm");
+      const obj = t(arg0);
     }
   }
   return str;

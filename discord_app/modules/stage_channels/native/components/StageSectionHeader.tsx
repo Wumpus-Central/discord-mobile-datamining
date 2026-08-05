@@ -1,3 +1,5 @@
+import { registerAsset } from "../../../../../_runtime/05600_registerAsset.js";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/stage_channels/native/components/StageSectionHeader.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -61,10 +63,10 @@ export default function StageSectionHeader(collapsed) {
   const obj3 = { style: tmp.collapseButton, children: null };
   const obj4 = { style: animatedStyle, children: null };
   const obj5 = { source: null, style: null };
-  obj5[0] = require("../../../../../_runtime/05600_registerAsset.js");
+  obj5[0] = registerAsset;
   obj5[1] = tmp.collapseIcon;
   obj4[1] = closure_6(collapsed(1297).Icon, obj5);
-  obj3[1] = closure_6(require("../../../reanimated/ReanimatedRexport.tsx").View, obj4);
+  obj3[1] = closure_6(ReanimatedRexport.View, obj4);
   items1[2] = closure_6(closure_4, obj3);
   obj1[2] = items1;
   obj[1] = callback(closure_3, obj1);

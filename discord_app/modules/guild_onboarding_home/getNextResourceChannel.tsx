@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_onboarding_home/getNextResourceChannel.tsx
 import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
 
@@ -19,7 +20,7 @@ export const usePreviousAndNextResourceChannel = function usePreviousAndNextReso
   const _require = guild_id;
   const dependencyMap = id;
   const items = [handleSettingsLoadSuccess];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_2.getResourceChannels(closure_0));
+  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_2.getResourceChannels(closure_0));
   const findIndexResult = stateFromStores.findIndex((channelId) => channelId.channelId === closure_1);
   if (findIndexResult >= 0) {
     if (stateFromStores.length > 1) {

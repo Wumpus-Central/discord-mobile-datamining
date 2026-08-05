@@ -1,3 +1,5 @@
+import { _extends } from "../../../_runtime/metro/04113__extends.js";
+import { getAuthenticationPath } from "../../../discord_common/js/shared/utils/PathUtils.tsx";
 // discord_app/modules/auth/RedirectUnauthenticated.tsx
 import "noop";
 import { Routes } from "ME";
@@ -11,17 +13,17 @@ export default function RedirectUnauthenticated() {
   if (CONFERENCE_MODE_ENABLED) {
     let to = Routes.REGISTER;
   } else {
-    to = require("../../../discord_common/js/shared/utils/PathUtils.tsx") /* getAuthenticationPath */.getLoginPath(tmp4, false);
-    const tmp2Result = require("../../../discord_common/js/shared/utils/PathUtils.tsx") /* getAuthenticationPath */;
+    to = getAuthenticationPath /* getAuthenticationPath */.getLoginPath(tmp4, false);
+    const tmp2Result = getAuthenticationPath /* getAuthenticationPath */;
   }
-  return jsx(require("../../../_runtime/metro/04113__extends.js") /* _extends */.Redirect, { to });
+  return jsx(_extends /* _extends */.Redirect, { to });
 };
 export const getRedirectPath = function getRedirectPath() {
   if (CONFERENCE_MODE_ENABLED) {
     let REGISTER = Routes.REGISTER;
   } else {
-    REGISTER = require("../../../discord_common/js/shared/utils/PathUtils.tsx") /* getAuthenticationPath */.getLoginPath(tmp, false);
-    const obj = require("../../../discord_common/js/shared/utils/PathUtils.tsx") /* getAuthenticationPath */;
+    REGISTER = getAuthenticationPath /* getAuthenticationPath */.getLoginPath(tmp, false);
+    const obj = getAuthenticationPath /* getAuthenticationPath */;
   }
   return REGISTER;
 };

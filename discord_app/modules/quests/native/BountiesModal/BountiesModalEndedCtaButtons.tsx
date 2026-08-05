@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/quests/native/BountiesModal/BountiesModalEndedCtaButtons.tsx
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -7,7 +8,7 @@ let c4;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles(() => {
   let obj = { container: null };
-  obj = { gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  obj = { gap: Themes.space.PX_8 };
   obj[0] = obj;
   return obj;
 });

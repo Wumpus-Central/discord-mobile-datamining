@@ -1,3 +1,8 @@
+import { registerAsset } from "../../../../../_runtime/09638_registerAsset.js";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { id } from "../CallStateHooks.tsx";
+import { OngoingCallStatusLabel } from "../components/OngoingCallStatusLabel.tsx";
+import { OnGoingCallTimer } from "../components/OngoingCallTimer.tsx";
 // discord_app/modules/voice_calls/native/action_sheet/VoiceChannelHeader.tsx
 import "Button";
 import { View } from "getSystemLocale";
@@ -17,11 +22,11 @@ const require = arg1;
 function PrivateChannelSubtitle(channel) {
   channel = channel.channel;
   const tmp = createCacheKey();
-  const state = require("../CallStateHooks.tsx")(channel.id).state;
+  const state = id(channel.id).state;
   let obj = { style: tmp.subtitleWrapper, children: null };
   obj = { useAllAloneText: false, channel, voiceState: state, style: tmp.subtitle };
-  const items = [callback(require("../components/OngoingCallStatusLabel.tsx"), obj), , ];
-  let tmp6Result = state === require("../CallStateHooks.tsx") /* id */.CallStates.CONNECTED;
+  const items = [callback(OngoingCallStatusLabel, obj), , ];
+  let tmp6Result = state === id /* id */.CallStates.CONNECTED;
   if (tmp6Result) {
     obj = { style: null, variant: "text-xs/medium", color: "text-overlay-light", children: " - " };
     obj[0] = tmp.subtitle;
@@ -33,7 +38,7 @@ function PrivateChannelSubtitle(channel) {
     const obj1 = { channelId: null, style: null };
     obj1[0] = channel.id;
     obj1[1] = tmp.subtitle;
-    tmp6Result = tmp6(require("../components/OngoingCallTimer.tsx"), obj1);
+    tmp6Result = tmp6(OnGoingCallTimer, obj1);
   }
   items[2] = tmp6Result;
   obj[1] = items;
@@ -147,10 +152,10 @@ class VoiceChannelHeader {
 }
 function AddMemberButton(onPress) {
   const obj = { onPress: onPress.onPress, iconSource: null, iconStyle: null, accessibilityLabel: null };
-  obj[1] = require("../../../../../_runtime/09638_registerAsset.js");
+  obj[1] = registerAsset;
   obj[2] = createCacheKey().icons;
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6Qgrev"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["6Qgrev"]);
   return callback(IconButton, obj);
 }
 class IconButton {

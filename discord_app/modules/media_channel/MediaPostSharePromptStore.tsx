@@ -1,3 +1,5 @@
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { useIsFirstMessageInMediaPost } from "useIsFirstMessageInMediaPost.tsx";
 // discord_app/modules/media_channel/MediaPostSharePromptStore.tsx
 import isSubscriptionGated from "isSubscriptionGated";
 import fetchFingerprint from "fetchFingerprint";
@@ -36,13 +38,13 @@ const mediaPostSharePromptStore = new MediaPostSharePromptStore(require("dispatc
           if (null != channel) {
             if (null != channel.parent_id) {
               if (channelGated.isChannelGated(channel.guild_id, channel.parent_id)) {
-                set.add(require("../../utils/SnowflakeUtils.tsx").castMessageIdAsChannelId(isPushNotification.message.id));
-                const obj = require("../../utils/SnowflakeUtils.tsx");
+                set.add(DISCORD_EPOCH.castMessageIdAsChannelId(isPushNotification.message.id));
+                const obj = DISCORD_EPOCH;
               }
             }
           }
         }
-        obj2 = require("useIsFirstMessageInMediaPost.tsx") /* useIsFirstMessageInMediaPost */;
+        obj2 = useIsFirstMessageInMediaPost /* useIsFirstMessageInMediaPost */;
       }
     }
   },

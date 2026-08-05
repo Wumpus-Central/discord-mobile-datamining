@@ -1,3 +1,5 @@
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { isInteractionComponent } from "ComponentStateContext.tsx";
 // discord_app/modules/interaction_components/InteractionModalUtils.tsx
 import handleChanged from "handleChanged";
 import _slicedToArray from "_slicedToArray";
@@ -2188,7 +2190,7 @@ function _submitModal() {
 let result = require("noop").fileFinishedImporting("modules/interaction_components/InteractionModalUtils.tsx");
 
 export const useIsFirstTextInputInModal = function useIsFirstTextInputInModal(id) {
-  const componentStateContext = require("ComponentStateContext.tsx") /* isInteractionComponent */.useComponentStateContext();
+  const componentStateContext = isInteractionComponent /* isInteractionComponent */.useComponentStateContext();
   let first;
   if (componentStateContext != null) {
     const modal = componentStateContext.modal;
@@ -2409,7 +2411,7 @@ export const useIframeModalState = function useIframeModalState(channelId) {
   const applicationBaseUrl = memo.applicationBaseUrl;
   ({ applicationIconURL, applicationName } = memo);
   channel = channel.getChannel(channelId.channelId);
-  require("../../../_runtime/metro/00038__.js")(null != channel, "channel should not be null");
+  00038__(null != channel, "channel should not be null");
   let obj = { instance_id: "" + channelId.channelId + ":" + application.id + ":" + customId, custom_id: customId, channel_id: channelId.channelId };
   if (tmp4) {
     obj.guild_id = channel.guild_id;

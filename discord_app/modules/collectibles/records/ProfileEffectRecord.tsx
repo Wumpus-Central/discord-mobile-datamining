@@ -1,3 +1,4 @@
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 // discord_app/modules/collectibles/records/ProfileEffectRecord.tsx
 import "fromServer";
 
@@ -6,7 +7,7 @@ let prototype;
 prototype = function ProfileEffectRecord(arg0) {
   const tmp2 = new prototype(arg0, new.target, new.target, tmp);
   // ThrowIfThisInitialized (0x7c)
-  tmp2.type = require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT;
+  tmp2.type = CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT;
   ({ title: tmp2.title, description: tmp2.description, accessibilityLabel: tmp2.accessibilityLabel, reducedMotionSrc: tmp2.reducedMotionSrc, thumbnailPreviewSrc: tmp2.thumbnailPreviewSrc, effects: tmp2.effects, animationType: tmp2.animationType, staticFrameSrc: tmp2.staticFrameSrc } = arg0);
   return tmp2;
 }.prototype;
@@ -22,7 +23,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   }
   tmp = new tmp(obj, arg0, this, merged);
   // ThrowIfThisInitialized (0x7c)
-  tmp.type = require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT;
+  tmp.type = CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT;
   ({ title: tmp4.title, description: tmp4.description, accessibilityLabel: tmp4.accessibilityLabel, reducedMotionSrc: tmp4.reducedMotionSrc, thumbnailPreviewSrc: tmp4.thumbnailPreviewSrc, effects: tmp4.effects, animationType: tmp4.animationType, staticFrameSrc: tmp4.staticFrameSrc } = obj);
   return tmp;
 };

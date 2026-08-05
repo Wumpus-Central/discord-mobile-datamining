@@ -1,3 +1,5 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { _generateAnimationSource } from "BurstReactionEffectUtils.tsx";
 // discord_app/modules/messages/native/burst_reactions/BurstReactionAnimation.tsx
 import "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -21,9 +23,9 @@ export default function BurstReactionAnimation(arg0) {
     withFadeOut = true;
   }
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = require("BurstReactionEffectUtils.tsx") /* _generateAnimationSource */;
+  let obj = _generateAnimationSource /* _generateAnimationSource */;
   const burstReactionAnimationSource = obj.useBurstReactionAnimationSource({ emoji, messageId, channelId, isFullscreen });
-  require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  initialize /* initialize */;
   [][0] = maybeApplyNoTextColorForLightCustomTheme;
   if (null == burstReactionAnimationSource) {
     return null;

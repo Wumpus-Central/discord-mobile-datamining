@@ -1,3 +1,6 @@
+import { set } from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
+import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import { set } from "../monitoring/MonitoringAgent.tsx";
 // discord_app/modules/captcha/CaptchaStore.tsx
 import _slicedToArray from "_slicedToArray";
 import keys from "keys";
@@ -12,7 +15,7 @@ export const isCaptchaStoreVolumeEmpty = function isCaptchaStoreVolumeEmpty() {
 };
 export const incrementCaptchaServeVolume = function incrementCaptchaServeVolume(arg0) {
   const _require = arg0;
-  _require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     outer1_4.setState((arg0) => {
       let sum = arg0;
       if (null == closure_0) {
@@ -46,10 +49,10 @@ export const flushCaptchaServeVolume = function flushCaptchaServeVolume() {
     let tmp8 = importDefault;
     let tmp9 = dependencyMap;
     [tmp6, tmp7] = tmp5;
-    let obj = require("../monitoring/MonitoringAgent.tsx");
+    let obj = set;
     obj = { name: null, tags: null };
     let tmp10 = require;
-    obj[0] = require("../../../discord_common/js/shared/shared-constants/MetricEvents.tsx") /* set */.MetricEvents.CAPTCHA_SERVE_VOLUME_DISTRIBUTION;
+    obj[0] = set /* set */.MetricEvents.CAPTCHA_SERVE_VOLUME_DISTRIBUTION;
     let _HermesInternal = HermesInternal;
     let items = ["user_flow:" + tmp6];
     obj[1] = items;
@@ -57,5 +60,5 @@ export const flushCaptchaServeVolume = function flushCaptchaServeVolume() {
     continue;
   }
   tmp2 = entries[Symbol.iterator]();
-  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => state.setState({ captchaServeVolume: {} }));
+  batchUpdates /* batchUpdates */.batchUpdates(() => state.setState({ captchaServeVolume: {} }));
 };

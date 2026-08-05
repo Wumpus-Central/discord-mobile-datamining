@@ -1,3 +1,4 @@
+import { useTheme } from "../../../../hooks/useTheme.tsx";
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingProgressBarMarker.tsx
 import noop from "noop";
 import get_ActivityIndicator from "getGuildTierFromGuild";
@@ -253,8 +254,8 @@ export default function ProgressBarMarker(arg0) {
     return tmp13(tmp14, obj);
   }
   tmp5Result = tmp5(4131);
-  const tmp4 = require("../../../../hooks/useTheme.tsx")();
-  const isThemeDarkResult = tmp5Result.isThemeDark(require("../../../../hooks/useTheme.tsx")());
+  const tmp4 = useTheme();
+  const isThemeDarkResult = tmp5Result.isThemeDark(useTheme());
   const hexWithOpacity = sharedValue(4129).hexWithOpacity;
   const unsafe_rawColors = tmp2(712).unsafe_rawColors;
   if (isThemeDarkResult) {

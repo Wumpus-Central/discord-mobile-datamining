@@ -1,3 +1,7 @@
+import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { addVersionedDismissedContent } from "../../dismissible_content/DismissibleContentUtils.tsx";
+import { CountryListMode } from "constants.tsx";
 // discord_app/modules/premium/promotions/PromotionUtils.tsx
 import closure_3 from "ME";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -201,21 +205,21 @@ export const shouldShowOutboundPromotionNotice = function shouldShowOutboundProm
   }
   let tmp6 = null != id;
   if (tmp6) {
-    tmp6 = !require("../../dismissible_content/DismissibleContentUtils.tsx") /* addVersionedDismissedContent */.isTimeRecurringSnowflakeBoundDismissibleContentDismissed(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, id, { cooldownDurationMs: 259200000 });
-    let obj = require("../../dismissible_content/DismissibleContentUtils.tsx") /* addVersionedDismissedContent */;
+    tmp6 = !addVersionedDismissedContent /* addVersionedDismissedContent */.isTimeRecurringSnowflakeBoundDismissibleContentDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, id, { cooldownDurationMs: 259200000 });
+    let obj = addVersionedDismissedContent /* addVersionedDismissedContent */;
   }
   return tmp6;
 };
 export const isDedicatedSurfacePromotion = function isDedicatedSurfacePromotion(promotion) {
   let hasItem = null != promotion.partnerId;
   if (hasItem) {
-    const DEDICATED_SURFACE_PARTNER_IDS = require("constants.tsx") /* CountryListMode */.DEDICATED_SURFACE_PARTNER_IDS;
+    const DEDICATED_SURFACE_PARTNER_IDS = CountryListMode /* CountryListMode */.DEDICATED_SURFACE_PARTNER_IDS;
     hasItem = DEDICATED_SURFACE_PARTNER_IDS.has(promotion.partnerId);
   }
   return hasItem;
 };
 export const shouldShowOutboundPromotionOnPlatform = function shouldShowOutboundPromotionOnPlatform(promotion) {
-  const isIOSResult = require("../../../utils/PlatformUtils.tsx") /* set */.isIOS();
+  const isIOSResult = set /* set */.isIOS();
   let tmp2 = !isIOSResult;
   if (isIOSResult) {
     tmp2 = !promotion.hasFlag(PromotionFlags.IS_BLOCKED_IOS);
@@ -262,5 +266,5 @@ export const getClaimedEndedOutboundPromotions = function getClaimedEndedOutboun
   });
 };
 export const isRecurringPromotion = function isRecurringPromotion(promotionType) {
-  return promotionType.promotionType === require("constants.tsx") /* CountryListMode */.PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING;
+  return promotionType.promotionType === CountryListMode /* CountryListMode */.PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING;
 };

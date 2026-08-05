@@ -1,3 +1,5 @@
+import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
+import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
 // discord_app/modules/rpc/server/commands/logs.tsx
 import ME from "ME";
 
@@ -7,7 +9,7 @@ let RPC_APPLICATION_LOGGING_CATEGORY;
 let c3 = new require("recurseReplaceContentTree")(RPC_APPLICATION_LOGGING_CATEGORY);
 let obj = {
   validation(string) {
-    let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(string);
+    let obj = createRpcJoiSchemaObject(string);
     obj = { level: null, message: null };
     const requiredResult = obj.required();
     const stringResult = string.string();
@@ -22,7 +24,7 @@ let obj = {
     let socket;
     ({ socket, args } = arg0);
     const level = args.level;
-    const result = require("../../RPCHelpers.tsx") /* recurseReplaceContentTree */.validatePostMessageTransport(socket.transport);
+    const result = recurseReplaceContentTree /* recurseReplaceContentTree */.validatePostMessageTransport(socket.transport);
     const combined = "" + socket.application.id + " - " + args.message;
     if ("log" === level) {
       tmp3.log(combined);

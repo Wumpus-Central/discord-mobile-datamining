@@ -1,3 +1,5 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { useNativeForumPostContent } from "hooks/useNativeForumPostContent.tsx";
 // discord_app/modules/forums/native/posts/ForumPostMessageContent.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -22,7 +24,7 @@ export default function ForumPostMessageContent(senderModifier) {
     num = 2;
   }
   const tmp = callback();
-  ({ content, style, variant } = require("hooks/useNativeForumPostContent.tsx")({ message, messageLoaded, messageContent, isMessageDeleted, senderModifier: senderModifier.senderModifier }));
+  ({ content, style, variant } = useNativeForumPostContent({ message, messageLoaded, messageContent, isMessageDeleted, senderModifier: senderModifier.senderModifier }));
   const obj = { variant, color: null, lineClamp: null, ellipsizeMode: "tail", style: null, children: null };
   let str = "text-muted";
   if (hasUnreads) {
@@ -33,5 +35,5 @@ export default function ForumPostMessageContent(senderModifier) {
   const items = [style, tmp.text];
   obj[4] = items;
   obj[5] = content;
-  return jsx(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant, color: null, lineClamp: null, ellipsizeMode: "tail", style: null, children: null });
+  return jsx(Text /* Text */.Text, { variant, color: null, lineClamp: null, ellipsizeMode: "tail", style: null, children: null });
 };

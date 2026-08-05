@@ -1,3 +1,4 @@
+import { useDiscountOffer } from "useDiscountOffer.tsx";
 // discord_app/modules/premium/hooks/usePremiumDiscountOffer.android.tsx
 import updateProduct from "updateProduct";
 import GuildFeatures from "GuildFeatures";
@@ -23,7 +24,7 @@ export const usePremiumDiscountOffer = function usePremiumDiscountOffer() {
     }
     tmp5 = tmp6;
   }
-  tmp4 = require("useDiscountOffer.tsx")(closure_4);
+  tmp4 = useDiscountOffer(closure_4);
   values = Object.values(tmp(5770).DiscountIdToProductOfferId[closure_5]);
   let tmp8 = null;
   if (0 !== values.length) {

@@ -1,3 +1,4 @@
+import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/lib/VoiceStateAnalytics.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import updateVoiceState from "updateVoiceState";
@@ -50,10 +51,10 @@ prototype["getUserVoiceSettingsStats"] = function getUserVoiceSettingsStats(arg0
   set.delete(this.userId);
   const obj = { num_local_voice_user_mutes: null, num_local_voice_volumes: null };
   let arr = Array.from(set);
-  obj[0] = require("../../_runtime/00012_apply.js") /* apply */.intersection(arr, Array.from(this.totalParticipants)).length;
-  const obj4 = require("../../_runtime/00012_apply.js") /* apply */;
+  obj[0] = apply /* apply */.intersection(arr, Array.from(this.totalParticipants)).length;
+  const obj4 = apply /* apply */;
   arr = Array.from(set1);
-  obj[1] = require("../../_runtime/00012_apply.js") /* apply */.intersection(arr, Array.from(this.totalParticipants)).length;
+  obj[1] = apply /* apply */.intersection(arr, Array.from(this.totalParticipants)).length;
   return obj;
 };
 prototype["setSpeaking"] = function setSpeaking(userId, speaking) {

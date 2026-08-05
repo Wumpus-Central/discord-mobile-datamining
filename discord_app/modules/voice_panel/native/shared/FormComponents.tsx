@@ -1,3 +1,7 @@
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { set } from "../../../core/native/NativeView.tsx";
+import { VideoDisabledSvgIcon } from "VoiceStateIcons.tsx";
 // discord_app/modules/voice_panel/native/shared/FormComponents.tsx
 import getSystemLocale from "getSystemLocale";
 import sortActivity from "sortActivity";
@@ -20,9 +24,9 @@ function VoiceBadges(arg0) {
     let tmp3Result = tmp3(5663);
     obj = { state: null, size: null, style: null };
     obj[0] = muteDeafenIconState;
-    obj[1] = require("../../../../design/void/native.tsx") /* Button */.IconSizes.SMALL;
+    obj[1] = Button /* Button */.IconSizes.SMALL;
     obj[2] = tmp.icon;
-    obj[1] = callback(require("VoiceStateIcons.tsx") /* VideoDisabledSvgIcon */.MuteDeafenIcon, obj);
+    obj[1] = callback(VideoDisabledSvgIcon /* VideoDisabledSvgIcon */.MuteDeafenIcon, obj);
     tmp6 = callback(tmp3Result, obj);
   }
   const items = [tmp6, ];
@@ -33,14 +37,14 @@ function VoiceBadges(arg0) {
     tmp3Result = tmp3(5663);
     const obj2 = { state: null, size: null, style: null };
     obj2[0] = videoIconState;
-    obj2[1] = require("../../../../design/void/native.tsx") /* Button */.IconSizes.SMALL;
+    obj2[1] = Button /* Button */.IconSizes.SMALL;
     obj2[2] = tmp.icon;
-    obj1[1] = callback(require("VoiceStateIcons.tsx") /* VideoDisabledSvgIcon */.VideoIcon, obj2);
+    obj1[1] = callback(VideoDisabledSvgIcon /* VideoDisabledSvgIcon */.VideoIcon, obj2);
     tmp10 = callback(tmp3Result, obj1);
   }
   items[1] = tmp10;
   obj[1] = items;
-  return closure_6(require("../../../core/native/NativeView.tsx"), obj);
+  return closure_6(set, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: { marginHorizontal: 16 }, voiceBadgesContainer: { flexDirection: "row" }, iconWrapper: null, icon: null, notConnectedAvatar: null, memberRow: null };
@@ -60,8 +64,8 @@ export const VoicePanelFormSection = function VoicePanelFormSection(style) {
   const tmp2 = createCacheKey();
   obj = {};
   const merged1 = Object.assign(merged);
-  obj[1] = callback(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj);
-  return callback(require("../../../core/native/NativeView.tsx"), obj);
+  obj[1] = callback(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
+  return callback(set, obj);
 };
 export const MemberRowItem = function MemberRowItem(user) {
   let guildId;

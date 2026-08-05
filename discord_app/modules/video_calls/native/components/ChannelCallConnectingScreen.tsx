@@ -1,3 +1,9 @@
+import { BottomSheetModal } from "../../../../../_runtime/05340_BottomSheetModal.js";
+import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { useTheme } from "../../../../hooks/useTheme.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { UserSettingsVoice } from "../../../user_settings/voice/native/UserSettingsVoice.tsx";
+import { ChannelCallMicButton } from "ChannelCallMicButton.tsx";
 // discord_app/modules/video_calls/native/components/ChannelCallConnectingScreen.tsx
 import VoiceChatCallScreenHeaderIconInner from "VoiceChatCallScreenHeaderIconInner";
 import { View } from "useIsVoiceChannelFull";
@@ -18,13 +24,13 @@ const require = arg1;
 function VoiceSettingsActionSheet() {
   let obj = { scrollable: true, children: null };
   obj = { children: null };
-  obj[0] = callback(require("../../../user_settings/voice/native/UserSettingsVoice.tsx"), {});
-  obj[1] = callback(require("../../../../../_runtime/05340_BottomSheetModal.js") /* BottomSheetModal */.BottomSheetScrollView, obj);
-  return callback(require("../../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, obj);
+  obj[0] = callback(UserSettingsVoice, {});
+  obj[1] = callback(BottomSheetModal /* BottomSheetModal */.BottomSheetScrollView, obj);
+  return callback(Background /* Background */.BottomSheet, obj);
 }
 function JoinMutedButton(channel) {
-  const tmp = require("../../../../hooks/useTheme.tsx")();
-  return callback(require("ChannelCallMicButton.tsx") /* ChannelCallMicButton */.ChannelCallMicButton, { channel: channel.channel, disableTint: "light" === require("../../../../hooks/useTheme.tsx")(), isSmallSize: false });
+  const tmp = useTheme();
+  return callback(ChannelCallMicButton /* ChannelCallMicButton */.ChannelCallMicButton, { channel: channel.channel, disableTint: "light" === useTheme(), isSmallSize: false });
 }
 function JoinVoiceButton(channel) {
   channel = channel.channel;
@@ -128,7 +134,7 @@ createCacheKey = createCacheKey.createStyles(createCacheKey);
 let result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallConnectingScreen.tsx");
 
 export const showVoiceSettingsActionSheet = function showVoiceSettingsActionSheet(guildId) {
-  let obj = require("../../../action_sheet/native/ActionSheetActionCreators.tsx");
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { guildId };
   obj.openLazy(() => Promise.resolve(closure_16), "voice settings", obj);
 };

@@ -1,3 +1,5 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { useGuildTagBadgeCollection } from "../../guild_tag/useGuildTagBadgeCollection.tsx";
 // discord_app/modules/guild_settings/native/GuildSettingsServerTagBadgeGrid.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -30,13 +32,13 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
   guildId = guildId.guildId;
   ({ selectedBadge: importDefault, onSelectBadge: dependencyMap, cellSize: noop } = guildId);
   const tmp = createCacheKey();
-  ({ unlockedBadges, lockedBadges } = require("../../guild_tag/useGuildTagBadgeCollection.tsx")());
+  ({ unlockedBadges, lockedBadges } = useGuildTagBadgeCollection());
   const items = [guildId];
   const callback = React.useCallback(() => {
     outer1_1(outer1_2[7])({ guildId, autoOpenPerkId: "guildTagsBadgePacks" });
   }, items);
   let obj = { spacing: null, children: null };
-  obj[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8;
+  obj[0] = Themes.space.PX_8;
   obj = { variant: "text-md/medium", color: "text-subtle", accessibilityRole: "header", children: null };
   const intl = guildId(1236).intl;
   obj[3] = intl.string(guildId(1236).t.wRnfnY);
@@ -75,7 +77,7 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
     obj3[3] = intl3.string(tmp7(1236).t.U5p3GZ);
     items2[1] = tmp8(tmp7(4281).Text, obj3);
     const obj4 = { size: "md", color: null };
-    obj4[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_SUBTLE;
+    obj4[1] = Themes.colors.ICON_SUBTLE;
     items2[2] = tmp8(tmp7(5660).ChevronSmallRightIcon, obj4);
     obj1[4] = items2;
     tmp6Result = tmp6(closure_4, obj1);

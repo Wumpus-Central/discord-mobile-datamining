@@ -1,3 +1,7 @@
+import { useMountLayoutEffect } from "../../../hooks/useMountEffect.tsx";
+import { isMetaQuest } from "../../device/MetaQuestUtils.android.tsx";
+import { openUserSettings } from "../../user_settings/core/native/openUserSettings.tsx";
+import { FreemiumAppIconIds } from "../AppIconTypes.tsx";
 // discord_app/modules/app_icons/native/AppIconUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "ME";
@@ -180,7 +184,7 @@ if (set.isAndroid()) {
   DCDIconManager = require("isMetaQuest").NativeModules.DCDIconManager;
 }
 function useCurrentAppIcon() {
-  const tmp = callback(React.useState(_require("../AppIconTypes.tsx").FreemiumAppIconIds.DEFAULT), 2);
+  const tmp = callback(React.useState(_FreemiumAppIconIds.FreemiumAppIconIds.DEFAULT), 2);
   _require = tmp[1];
   const importDefault = React.useCallback(callback2(function*() {
     if (c3 === 2) {
@@ -238,7 +242,7 @@ function useCurrentAppIcon() {
       }
     }
   }), []);
-  require("../../../hooks/useMountEffect.tsx")(() => {
+  useMountLayoutEffect(() => {
     callback();
     const subscription = callback(709).subscribe("APP_ICON_UPDATED", callback);
     return () => {
@@ -266,7 +270,7 @@ export const useAppIcons = function useAppIcons() {
   let closure_1;
   let tmp4;
   let tmp6;
-  const currentAppIcon = callback(React.useState(_require("../AppIconTypes.tsx").FreemiumAppIconIds.DEFAULT), 2);
+  const currentAppIcon = callback(React.useState(_FreemiumAppIconIds.FreemiumAppIconIds.DEFAULT), 2);
   _require = currentAppIcon[1];
   const importDefault = React.useCallback(callback2(function*() {
     if (c3 === 2) {
@@ -324,7 +328,7 @@ export const useAppIcons = function useAppIcons() {
       }
     }
   }), []);
-  require("../../../hooks/useMountEffect.tsx")(() => {
+  useMountLayoutEffect(() => {
     callback();
     const subscription = callback(709).subscribe("APP_ICON_UPDATED", callback);
     return () => {
@@ -373,7 +377,7 @@ export const useAppIcons = function useAppIcons() {
     c4 = 0;
     return arg1;
   }), []);
-  require("../../../hooks/useMountEffect.tsx")(() => {
+  useMountLayoutEffect(() => {
     dependencyMap();
     const subscription = callback(709).subscribe("APP_ICON_UPDATED", dependencyMap);
     return () => {
@@ -383,10 +387,10 @@ export const useAppIcons = function useAppIcons() {
   return { officialAppIcons, limitedTimeAppIcons, currentAppIcon: currentAppIcon[0] };
 };
 export const navigateToAppIconSettings = function navigateToAppIconSettings() {
-  let obj = require("../../user_settings/core/native/openUserSettings.tsx") /* openUserSettings */;
+  let obj = openUserSettings /* openUserSettings */;
   obj = { screen: constants.APP_ICONS };
   obj.openUserSettings(obj);
 };
 export const isAppIconsSupported = function isAppIconsSupported() {
-  return !require("../../device/MetaQuestUtils.android.tsx") /* isMetaQuest */.isMetaQuest();
+  return !isMetaQuest /* isMetaQuest */.isMetaQuest();
 };

@@ -1,3 +1,6 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
+import { Emoji } from "../../emojis/native/Emoji.tsx";
 // discord_app/modules/guild_onboarding/native/CustomizeCommunity.tsx
 import registerAsset from "registerAsset";
 import get_ActivityIndicator from "initialize";
@@ -31,7 +34,7 @@ function EmptyCustomizeCommunity(setTab) {
   const items = [handleConnectionOpen];
   importDefault = obj1.useStateFromStores(items, () => guildId.getGuildId());
   obj = { style: tmp.emptyContainer, children: null };
-  obj = { style: tmp.emptyContainerImage, source: importDefault(obj.isThemeDark(require("../../../hooks/useTheme.tsx")()) ? 10938 : 10939) };
+  obj = { style: tmp.emptyContainerImage, source: importDefault(obj.isThemeDark(useTheme()) ? 10938 : 10939) };
   const items1 = [closure_16(closure_5, obj), , ];
   obj1 = { style: tmp.emptyContainerHeader, children: null };
   const intl = tmp2(1236).intl;
@@ -58,10 +61,10 @@ function PromptTitle(item) {
   if (item.required) {
     obj = { variant: "text-md/bold", color: "text-feedback-critical", children: null };
     obj[2] = [" ", "*"];
-    tmp3Result = tmp3(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+    tmp3Result = tmp3(Text /* Text */.Text, obj);
   }
   items[1] = tmp3Result;
-  obj[1] = closure_17(require("../../../design/components/Text/native/Text.tsx") /* Text */.Heading, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: items });
+  obj[1] = closure_17(Text /* Text */.Heading, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: items });
   return closure_16(closure_4, obj);
 }
 function PromptHelpText(arg0) {
@@ -219,10 +222,10 @@ function DropdownOption(option) {
       str = "";
     }
     obj1[3] = str;
-    obj[1] = callback(require("../../emojis/native/Emoji.tsx"), obj1);
+    obj[1] = callback(Emoji, obj1);
     tmp10Result = tmp10(tmp9, obj);
     tmp11 = importDefault;
-    const tmp12 = require("../../emojis/native/Emoji.tsx");
+    const tmp12 = Emoji;
   }
   const items1 = [tmp10Result, callback(option(4281).Text, { variant: "text-md/semibold", children: option.title })];
   obj[1] = items1;

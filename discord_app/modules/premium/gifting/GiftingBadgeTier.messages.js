@@ -1,10 +1,12 @@
+import { registerAsset } from "../../../../_runtime/02384_registerAsset.js";
+import { loadJsonAsset } from "../../asset_json/native/AssetJsonUtils.tsx";
 // discord_app/modules/premium/gifting/GiftingBadgeTier.messages.js
 import 01274__ from "../../../../_runtime/metro/01274__.js";
 import 01274__ from "../../../../_runtime/metro/01274__.js";
 
 const loader = module_1274.createLoader({
   () => {
-    const jsonAsset = require("../../asset_json/native/AssetJsonUtils.tsx") /* loadJsonAsset */.loadJsonAsset(require("../../../../_runtime/02384_registerAsset.js") /* registerAsset */);
+    const jsonAsset = loadJsonAsset /* loadJsonAsset */.loadJsonAsset(registerAsset /* registerAsset */);
     return jsonAsset.then((arg0) => ({ default: arg0 }));
   }
 }, "en-US");

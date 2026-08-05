@@ -1,3 +1,9 @@
+import { CircleCheckIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
+import { FileUpIcon } from "../../../../design/components/Icon/native/redesign/generated/FileUpIcon.tsx";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { formatSize } from "../../../../utils/FileSizeUtils.tsx";
+import { flattenComponents } from "../../InteractionComponentUtils.tsx";
 // discord_app/modules/interaction_components/native/actions/FileUploadActionComponent.tsx
 import ME from "ME";
 import initialize from "initialize";
@@ -19,27 +25,27 @@ function MainAreaCanUpload(arg0) {
   let types;
   ({ minValues, maxValues } = arg0);
   ({ openFilePicker, types, maxSizeBytes } = arg0);
-  let obj = require("../../../../utils/FileSizeUtils.tsx") /* formatSize */;
+  let obj = formatSize /* formatSize */;
   obj = { onPress: openFilePicker, icon: null, label: null, subLabel: null, start: true, end: true, arrow: true };
   obj = { IconComponent: null };
-  obj[0] = require("../../../../design/components/Icon/native/redesign/generated/FileUpIcon.tsx") /* FileUpIcon */.FileUpIcon;
-  obj[1] = callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow.Icon, obj);
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/2JwTv"], { maxValues });
-  const formatSizeResult = obj.formatSize(maxSizeBytes / require("../../../../utils/FileSizeUtils.tsx") /* formatSize */.BYTE_IN_KB, { useKibibytes: true, useSpace: true });
-  obj[3] = require("../../InteractionComponentUtils.tsx") /* flattenComponents */.getFileUploadComponentSubtitle(minValues, maxValues, types, formatSizeResult);
-  return callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
+  obj[0] = FileUpIcon /* FileUpIcon */.FileUpIcon;
+  obj[1] = callback(TableRowInner /* TableRowInner */.TableRow.Icon, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.format(getSystemLocale /* getSystemLocale */.t["/2JwTv"], { maxValues });
+  const formatSizeResult = obj.formatSize(maxSizeBytes / formatSize /* formatSize */.BYTE_IN_KB, { useKibibytes: true, useSpace: true });
+  obj[3] = flattenComponents /* flattenComponents */.getFileUploadComponentSubtitle(minValues, maxValues, types, formatSizeResult);
+  return callback(TableRowInner /* TableRowInner */.TableRow, obj);
 }
 function MainAreaLimitReached() {
   let obj = { icon: null, label: null, subLabel: null, disabled: true, start: true, end: true };
   obj = { IconComponent: null };
-  obj[0] = require("../../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx") /* CircleCheckIcon */.CircleCheckIcon;
-  obj[0] = callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow.Icon, obj);
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["0PhgpK"]);
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.HYg2Hn);
-  return callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
+  obj[0] = CircleCheckIcon /* CircleCheckIcon */.CircleCheckIcon;
+  obj[0] = callback(TableRowInner /* TableRowInner */.TableRow.Icon, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["0PhgpK"]);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.HYg2Hn);
+  return callback(TableRowInner /* TableRowInner */.TableRow, obj);
 }
 function File(upload) {
   upload = upload.upload;

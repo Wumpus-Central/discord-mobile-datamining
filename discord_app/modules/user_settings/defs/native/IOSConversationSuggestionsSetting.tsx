@@ -1,3 +1,6 @@
+import { isIterable } from "../../../../../_runtime/03898_isIterable.js";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { set } from "../../../../utils/PlatformUtils.tsx";
 // discord_app/modules/user_settings/defs/native/IOSConversationSuggestionsSetting.tsx
 import noop from "noop";
 import identity from "identity";
@@ -8,8 +11,8 @@ let closure_4 = identity.createWithEqualityFn(() => ({ isEnabled: true }));
 require("get ActivityIndicator").NativeModules.IntentsHandler;
 identity = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.J8foZq);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.J8foZq);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useIOSConversationSuggestionsSettingValue() {
@@ -20,7 +23,7 @@ identity = {
         callback(table[4]).batchUpdates(() => outer1_4.setState({ isEnabled: closure_0 }));
       });
     }, []);
-    return callback((isEnabled) => isEnabled.isEnabled, require("../../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
+    return callback((isEnabled) => isEnabled.isEnabled, isIterable /* isIterable */.shallow);
   },
   onValueChange: function onIOSConversationSuggestionsSettingValueChange(arg0) {
     const result = IntentsHandler.setConversationSuggestionsEnabled(arg0);
@@ -32,7 +35,7 @@ identity = {
     });
   },
   usePredicate: function useHasIOSConversationSuggestionsSetting() {
-    return !require("../../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
+    return !set /* set */.isAndroid();
   }
 };
 identity = createToggle.createToggle(identity);

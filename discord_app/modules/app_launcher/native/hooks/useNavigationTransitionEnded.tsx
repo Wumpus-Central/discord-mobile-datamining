@@ -1,3 +1,4 @@
+import { Link } from "../../../../../_runtime/01481_Link.js";
 // discord_app/modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -11,7 +12,7 @@ export default function useNavigationTransitionEnded() {
   const require = tmp2;
   const tmp3 = useAppLauncherNavigation();
   const dependencyMap = tmp3;
-  route = require("../../../../../_runtime/01481_Link.js") /* Link */.useRoute();
+  route = Link /* Link */.useRoute();
   const items = [tmp3, route, tmp[1]];
   const effect = React.useEffect(() => tmp3.addListener("transitionEnd", () => {
     state = state.getState();

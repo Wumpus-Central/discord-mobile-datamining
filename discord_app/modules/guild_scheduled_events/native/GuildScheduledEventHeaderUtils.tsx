@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../_runtime/08965_registerAsset.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { getRRule } from "../utils/ScheduleUtils.tsx";
 // discord_app/modules/guild_scheduled_events/native/GuildScheduledEventHeaderUtils.tsx
 import scheduledEventSort from "scheduledEventSort";
 import { GuildScheduledEventEntityTypes as closure_5 } from "GUILD_EVENT_MAX_NAME_LENGTH";
@@ -20,7 +23,7 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
   ({ startDateTimeString, diffMinutes, currentOrPastEvent, upcomingEvent } = eventTimeData.eventTimeData);
   ({ event, recurrenceId } = eventTimeData);
   ({ isStage, theme, isCanceled } = eventTimeData);
-  let obj = require("../utils/ScheduleUtils.tsx") /* getRRule */;
+  let obj = getRRule /* getRRule */;
   if (null != recurrenceId) {
     let tmp5 = obj.getNextRecurrenceIdInEvent(event) === recurrenceId;
     if (tmp5) {
@@ -31,8 +34,8 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
     tmp4 = callback2(event);
   }
   const tmp7 = callback(event);
-  const ICON_SUBTLE = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_SUBTLE;
-  let tmp8Result = require("../../../../_runtime/08965_registerAsset.js");
+  const ICON_SUBTLE = Themes.colors.ICON_SUBTLE;
+  let tmp8Result = registerAsset;
   if (tmp4) {
     const intl4 = tmp(1236).intl;
     let stringResult = intl4.string(tmp(1236).t["X2K3/4"]);

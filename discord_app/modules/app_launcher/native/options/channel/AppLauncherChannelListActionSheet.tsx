@@ -1,3 +1,6 @@
+import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { computeChannelName } from "../../../../channel/useChannelName.tsx";
 // discord_app/modules/app_launcher/native/options/channel/AppLauncherChannelListActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -48,11 +51,11 @@ function ChannelListItem(arg0) {
   ({ channel, index } = arg0);
   ({ totalCount, onPress } = arg0);
   const obj = { onPress, label: null, icon: null, start: null, end: null };
-  obj[1] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: require("../../../../channel/useChannelName.tsx")(channel) });
+  obj[1] = callback(Text /* Text */.Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: computeChannelName(channel) });
   obj[2] = callback(ChannelIcon, { channel });
   obj[3] = 0 === index;
   obj[4] = index === totalCount - 1;
-  return callback(require("../../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj, channel.id);
+  return callback(TableRowInner /* TableRowInner */.TableRow, obj, channel.id);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const AppLauncherChannelListActionSheet = "AppLauncherChannelListActionSheet";

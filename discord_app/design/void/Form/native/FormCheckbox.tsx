@@ -1,3 +1,4 @@
+import { Button } from "../../native.tsx";
 // discord_app/design/void/Form/native/FormCheckbox.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -9,5 +10,5 @@ const result = require("createCacheKey").fileFinishedImporting("design/void/Form
 
 export default function FormCheckbox(selected) {
   const tmp = callback();
-  return jsx(require("../../native.tsx") /* Button */.Checkbox, { style: callback().checkbox, selected: selected.selected });
+  return jsx(Button /* Button */.Checkbox, { style: callback().checkbox, selected: selected.selected });
 };

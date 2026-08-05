@@ -1,3 +1,4 @@
+import { isStreamKey } from "../../../go_live/utils/StreamKeyUtils.tsx";
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamSendHighPacketLoss.tsx
 import reset from "reset";
 import initialize from "initialize";
@@ -14,7 +15,7 @@ export const AVErrorStreamSendHighPacketLossDefinition = {
     } else if (0 === obj.getViewerIds(currentUserActiveStream).length) {
       return null;
     } else {
-      rTCConnection = rTCConnection.getRTCConnection(require("../../../go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */.encodeStreamKey(currentUserActiveStream));
+      rTCConnection = rTCConnection.getRTCConnection(isStreamKey /* isStreamKey */.encodeStreamKey(currentUserActiveStream));
       let mediaEngineConnectionId;
       if (rTCConnection != null) {
         mediaEngineConnectionId = rTCConnection.getMediaEngineConnectionId();
@@ -39,7 +40,7 @@ export const AVErrorStreamSendHighPacketLossDefinition = {
         }
         return tmp6;
       }
-      const obj5 = require("../../../go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */;
+      const obj5 = isStreamKey /* isStreamKey */;
     }
   },
   makeErrorContextKey(streamKey) {

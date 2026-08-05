@@ -1,3 +1,7 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { getEmojiUnavailableReason } from "../../utils/EmojiUtils.tsx";
+import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
 // discord_app/modules/voice_channel_effects/VoiceChannelEffectsUtils.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import VoiceChannelEffectAnimationType from "VoiceChannelEffectAnimationType";
@@ -65,15 +69,15 @@ export const getEffectUrl = function getEffectUrl(emoji) {
     }
     obj[1] = animated;
     obj[2] = tmp;
-    return require("../../utils/AvatarUtils.tsx").getEmojiURL(obj);
+    return getAvatarURL.getEmojiURL(obj);
   } else {
-    obj = require("../emojis/UnicodeEmojis.tsx");
+    obj = parseRawEmojiObject;
     const result = obj.convertSurrogateToName(emoji.name, false);
-    const byName = require("../emojis/UnicodeEmojis.tsx").getByName(result);
+    const byName = parseRawEmojiObject.getByName(result);
     let str = "";
     if (null != byName) {
-      str = require("../../utils/EmojiUtils.tsx").getURL(byName.surrogates);
-      const tmp2Result = require("../../utils/EmojiUtils.tsx");
+      str = getEmojiUnavailableReason.getURL(byName.surrogates);
+      const tmp2Result = getEmojiUnavailableReason;
     }
     return str;
   }
@@ -84,7 +88,7 @@ export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
   } else {
     let emojiName = "userId";
     let yZYxzF = dependencyMap;
-    const mapped = require("../../../_runtime/00012_apply.js")(closure_7).map((arg0) => {
+    const mapped = apply(closure_7).map((arg0) => {
       let tmp = arg0[emojiName];
       if (tmp == null) {
         tmp = null;
@@ -92,11 +96,11 @@ export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
       return tmp;
     });
     const found = mapped.filter((arg0) => null != arg0);
-    const arr = require("../../../_runtime/00012_apply.js")(closure_7);
+    const arr = apply(closure_7);
     let obj = found.uniq().value();
     emojiName = "emojiName";
     const iter = found.uniq();
-    const mapped1 = require("../../../_runtime/00012_apply.js")(closure_7).map((arg0) => {
+    const mapped1 = apply(closure_7).map((arg0) => {
       let tmp = arg0[emojiName];
       if (tmp == null) {
         tmp = null;
@@ -104,7 +108,7 @@ export const getEffectAnnouncement = function getEffectAnnouncement(closure_7) {
       return tmp;
     });
     const found1 = mapped1.filter((arg0) => null != arg0);
-    const arr3 = require("../../../_runtime/00012_apply.js")(closure_7);
+    const arr3 = apply(closure_7);
     const valueResult = found1.uniq().value();
     if (valueResult.length < 2) {
       let str2;

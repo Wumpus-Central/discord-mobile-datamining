@@ -1,3 +1,4 @@
+import { useMyCurrentStageChannelRole } from "../../../stage_channels/useMyCurrentStageChannelRole.tsx";
 // discord_app/modules/voice_panel/native/header/VoicePanelHeader.tsx
 import registerAsset from "registerAsset";
 import importAllResult from "Themes";
@@ -28,7 +29,7 @@ const require = arg1;
 function MusicMuteButton(channelId) {
   channelId = channelId.channelId;
   let stateFromStores;
-  const tmp3 = require("../../../stage_channels/useMyCurrentStageChannelRole.tsx")(channelId);
+  const tmp3 = useMyCurrentStageChannelRole(channelId);
   if (tmp3 != null) {
     const speaker = tmp3.speaker;
   }

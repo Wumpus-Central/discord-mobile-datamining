@@ -1,3 +1,5 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/user_settings/defs/native/useSyncedModeThemeName.tsx
 import handleThemeChange from "handleThemeChange";
 import { BACKGROUND_GRADIENT_PRESETS_MAP as closure_4 } from "items1";
@@ -7,9 +9,9 @@ const result = require("useIsMobileVisualRefreshExperimentEnabled").fileFinished
 
 export const useSyncedModeThemeName = function useSyncedModeThemeName(DARK) {
   const _require = DARK;
-  importDefault = require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("useSyncedModeThemeName");
+  importDefault = useIsMobileVisualRefreshExperimentEnabled("useSyncedModeThemeName");
   const items = [handleThemeChange];
-  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const syncedClientTheme = outer1_3.getSyncedClientTheme(DARK);
     const themeName = DARK(outer1_2[4]).getThemeName(outer1_3.themePreferenceForSystemTheme(DARK), callback);
     let prop;

@@ -1,3 +1,4 @@
+import { set } from "../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 // discord_app/modules/rpc/server/events/VoiceSettingsEventsFactory.tsx
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
 import { RPCEvents } from "ME";
@@ -13,7 +14,7 @@ export default function createVoiceSettingsEventHandlers(arg0, arg1) {
   let obj = {};
   obj = { scope: null, handler: null };
   obj = {};
-  const items = [_require("../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx").OAuth2Scopes.RPC, _require("../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx").OAuth2Scopes.RPC_VOICE_READ];
+  const items = [_set.OAuth2Scopes.RPC, _set.OAuth2Scopes.RPC_VOICE_READ];
   obj[constants.ANY] = items;
   obj[0] = obj;
   obj[1] = function handler() {

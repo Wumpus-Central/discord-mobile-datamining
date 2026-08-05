@@ -1,3 +1,6 @@
+import { open } from "../raw/Host.tsx";
+import { logger } from "../raw/Runtime.tsx";
+import { TableId } from "../types/index.tsx";
 // discord_common/js/packages/kv-storage/js/api/Database.tsx
 import set from "set";
 
@@ -51,18 +54,18 @@ Database["openSyncUnsafe"] = function openSyncUnsafe(arg0, arg1) {
   return obj;
 };
 Database["delete"] = function delete(arg0) {
-  const Host = require("../raw/Host.tsx") /* open */.Host;
+  const Host = open /* open */.Host;
   return Host.delete(arg0);
 };
 prototype["close"] = function close() {
   const self = this;
-  this.lastState = require("../types/index.tsx") /* TableId */.DatabaseState.Closed;
+  this.lastState = TableId /* TableId */.DatabaseState.Closed;
   const raw = this.raw;
   if (raw != null) {
     raw.close();
   }
   self.raw = null;
-  const Runtime = require("../raw/Runtime.tsx") /* logger */.Runtime;
+  const Runtime = logger /* logger */.Runtime;
   const result = Runtime.removeCompletionCallback(self.databaseStateCallback);
 };
 prototype["disable"] = function disable(arg0) {
@@ -70,7 +73,7 @@ prototype["disable"] = function disable(arg0) {
   if (null == this.raw) {
     let resolved = Promise.resolve();
   } else {
-    self.lastState = require("../types/index.tsx") /* TableId */.DatabaseState.Disabled;
+    self.lastState = TableId /* TableId */.DatabaseState.Disabled;
     const obj = { type: "db.disable", handle: 0, reason: null };
     obj[2] = arg0;
     resolved = self.execute(obj);
@@ -173,7 +176,7 @@ prototype["incrementalVacuum"] = function incrementalVacuum() {
 prototype["instantaneousState"] = function instantaneousState() {
   const self = this;
   if (null == this.raw) {
-    let Closed = require("../types/index.tsx") /* TableId */.DatabaseState.Closed;
+    let Closed = TableId /* TableId */.DatabaseState.Closed;
   } else {
     Closed = self.executeSync({ type: "db.state" });
     self.lastState = Closed;

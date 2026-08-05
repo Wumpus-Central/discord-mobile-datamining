@@ -1,3 +1,6 @@
+import { head } from "../../_runtime/07684_head.js";
+import { reverse } from "../../_runtime/07686_reverse.js";
+import { 07687__ } from "../../_runtime/metro/07687__.js";
 // discord_app/stores/InstantInviteStore.tsx
 import createFromServer from "createFromServer";
 import { InviteTargetTypes } from "InviteSendStates";
@@ -83,9 +86,9 @@ const instantInviteStore = new InstantInviteStore(require("dispatcher"), {
   },
   FRIEND_INVITE_CREATE_SUCCESS: function handleFriendInviteCreateSuccess(invite) {
     closure_8[invite.invite.code] = createFromServer.createFromServer(invite.invite);
-    const tmp = require("../../_runtime/07684_head.js");
-    const tmp2 = require("../../_runtime/07686_reverse.js");
-    let tmpResult = tmp(tmp2(require("../../_runtime/metro/07687__.js")(Object.values(closure_8), "createdAt")));
+    const tmp = head;
+    const tmp2 = reverse;
+    let tmpResult = tmp(tmp2(07687__(Object.values(closure_8), "createdAt")));
     if (tmpResult == null) {
       tmpResult = null;
     }
@@ -105,9 +108,9 @@ const instantInviteStore = new InstantInviteStore(require("dispatcher"), {
         }
       });
     }
-    const tmp2 = require("../../_runtime/07684_head.js");
-    const tmp3 = require("../../_runtime/07686_reverse.js");
-    let tmp2Result = tmp2(tmp3(require("../../_runtime/metro/07687__.js")(Object.values(closure_8), "createdAt")));
+    const tmp2 = head;
+    const tmp3 = reverse;
+    let tmp2Result = tmp2(tmp3(07687__(Object.values(closure_8), "createdAt")));
     if (tmp2Result == null) {
       tmp2Result = null;
     }
@@ -157,9 +160,9 @@ const instantInviteStore = new InstantInviteStore(require("dispatcher"), {
     const item = invites.forEach((code) => {
       closure_8[code.code] = createFromServer.createFromServer(code);
     });
-    const tmp2 = require("../../_runtime/07684_head.js");
-    const tmp3 = require("../../_runtime/07686_reverse.js");
-    let tmp2Result = tmp2(tmp3(require("../../_runtime/metro/07687__.js")(Object.values(closure_8), "createdAt")));
+    const tmp2 = head;
+    const tmp3 = reverse;
+    let tmp2Result = tmp2(tmp3(07687__(Object.values(closure_8), "createdAt")));
     if (tmp2Result == null) {
       tmp2Result = null;
     }

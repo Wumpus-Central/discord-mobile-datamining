@@ -1,3 +1,4 @@
+import { DemoModal } from "../../design_system/native/UserSettingsDesignSystemAlertModal.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemsBackgroundBlurViewSetting.tsx
 import createToggle from "createToggle";
 
@@ -11,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_BACKGROUND_BLUR_VIEW,
   getComponent() {
-    return require("../../design_system/native/UserSettingsDesignSystemAlertModal.tsx") /* DemoModal */.default;
+    return DemoModal /* DemoModal */.default;
   }
 };
 const route = createToggle.createRoute(obj);

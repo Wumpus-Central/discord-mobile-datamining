@@ -1,3 +1,5 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { nameFromUser } from "../../../utils/UserUtils.tsx";
 // discord_app/modules/guild_settings/native/GuildSettingsModalMemberEdit.tsx
 import importAllResult from "Text";
 import get_ActivityIndicator from "TableCheckboxRow";
@@ -501,8 +503,8 @@ prototype["render"] = function render() {
     let obj = { style: null, children: null };
     obj[0] = tmp.rowLabel;
     obj = { variant: "text-sm/medium", children: null };
-    obj[1] = require("../../../utils/UserUtils.tsx").getUserTag(user);
-    const items = [callback3(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+    obj[1] = nameFromUser.getUserTag(user);
+    const items = [callback3(Text /* Text */.Text, obj), ];
     let tmp18Result = null;
     if (user.bot) {
       obj = { verified: null };
@@ -648,7 +650,7 @@ prototype["render"] = function render() {
       }
       const tmp19Result = tmp19(3902);
     }
-    const obj28 = require("../../../utils/UserUtils.tsx");
+    const obj28 = nameFromUser;
     tmp16 = closure_20;
   }
 };

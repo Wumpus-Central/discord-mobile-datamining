@@ -1,3 +1,7 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { formatSingleCurrencyPrice } from "../../utils/PriceUtils.tsx";
+import { StorefrontPromotionRewardType } from "StorefrontTypes.tsx";
 // discord_app/modules/storefront/StorefrontUtils.tsx
 import noop from "noop";
 import _getSystemLocale from "_getSystemLocale";
@@ -214,26 +218,26 @@ function formatSKUPrice(arg0, arg1) {
   ({ normalPrice, discountedPrice, discountPercent, userPrice } = arg0);
   let formatPriceResult = null;
   if (null != normalPrice) {
-    let obj = require("../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */;
+    let obj = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
     formatPriceResult = obj.formatPrice(normalPrice.amount, normalPrice.currency);
   }
   obj = { normalPrice: formatPriceResult, discountedPrice: null, discountPercent: null, userPrice: null };
   let formatPriceResult1 = null;
   if (null != discountedPrice) {
-    formatPriceResult1 = require("../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */.formatPrice(discountedPrice.amount, discountedPrice.currency);
-    const obj3 = require("../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */;
+    formatPriceResult1 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */.formatPrice(discountedPrice.amount, discountedPrice.currency);
+    const obj3 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
   }
   obj[1] = formatPriceResult1;
   let formatPercentResult = null;
   if (null != discountPercent) {
-    formatPercentResult = require("../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */.formatPercent(arg1, -discountPercent / 100);
-    const obj4 = require("../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */;
+    formatPercentResult = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */.formatPercent(arg1, -discountPercent / 100);
+    const obj4 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
   }
   obj[2] = formatPercentResult;
   let formatPriceResult2 = null;
   if (null != userPrice) {
-    formatPriceResult2 = require("../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */.formatPrice(userPrice.amount, userPrice.currency);
-    const obj5 = require("../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */;
+    formatPriceResult2 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */.formatPrice(userPrice.amount, userPrice.currency);
+    const obj5 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
   }
   obj[3] = formatPriceResult2;
   return obj;
@@ -243,27 +247,27 @@ const result = require("mergeGuildAvatar").fileFinishedImporting("modules/storef
 
 export const transformStorefrontPricesServer = function transformStorefrontPricesServer(storefront_pricing) {
   let obj = { skuPriceMap: null, pricingResultIdMap: null, rewardResultIdMap: null };
-  obj[0] = require("../../../_runtime/00012_apply.js").mapValues(storefront_pricing.sku_price_map, (pricingResultId) => ({ pricingResultId: pricingResultId.pricing_result_id, rewardResultIds: pricingResultId.reward_result_ids }));
-  const obj2 = require("../../../_runtime/00012_apply.js");
-  obj[1] = require("../../../_runtime/00012_apply.js").mapValues(storefront_pricing.pricing_result_id_map, (arg0) => callback(12).mapValues(arg0, (user_price) => {
+  obj[0] = apply.mapValues(storefront_pricing.sku_price_map, (pricingResultId) => ({ pricingResultId: pricingResultId.pricing_result_id, rewardResultIds: pricingResultId.reward_result_ids }));
+  const obj2 = apply;
+  obj[1] = apply.mapValues(storefront_pricing.pricing_result_id_map, (arg0) => callback(12).mapValues(arg0, (user_price) => {
     const obj = { userPrice: user_price.map((currency) => ({ currency: currency.currency, amount: currency.amount })), prices: null };
     user_price = user_price.user_price;
     obj[1] = callback(table[6]).mapValues(user_price.prices, (arg0) => callback(table[6]).mapValues(arg0, (arr) => arr.map(() => { ... })));
     return obj;
   }));
-  const obj3 = require("../../../_runtime/00012_apply.js");
-  obj[2] = require("../../../_runtime/00012_apply.js").mapValues(storefront_pricing.reward_result_id_map, (arg0) => callback(12).mapValues(arg0, (type) => ({ type: type.type, amount: type.amount })));
+  const obj3 = apply;
+  obj[2] = apply.mapValues(storefront_pricing.reward_result_id_map, (arg0) => callback(12).mapValues(arg0, (type) => ({ type: type.type, amount: type.amount })));
   return obj;
 };
 export const transformPriceSetAssignmentToStorefrontPurchaseType = function transformPriceSetAssignmentToStorefrontPurchaseType(arg0) {
   if (null == arg0) {
-    return require("StorefrontTypes.tsx") /* StorefrontPromotionRewardType */.StorefrontPurchaseType.SELF_PURCHASE;
+    return StorefrontPromotionRewardType /* StorefrontPromotionRewardType */.StorefrontPurchaseType.SELF_PURCHASE;
   } else if (constants.DEFAULT === arg0) {
-    return require("StorefrontTypes.tsx") /* StorefrontPromotionRewardType */.StorefrontPurchaseType.SELF_PURCHASE;
+    return StorefrontPromotionRewardType /* StorefrontPromotionRewardType */.StorefrontPurchaseType.SELF_PURCHASE;
   } else if (tmp9.GIFT === arg0) {
-    return require("StorefrontTypes.tsx") /* StorefrontPromotionRewardType */.StorefrontPurchaseType.GIFT;
+    return StorefrontPromotionRewardType /* StorefrontPromotionRewardType */.StorefrontPurchaseType.GIFT;
   } else {
-    return require("StorefrontTypes.tsx") /* StorefrontPromotionRewardType */.StorefrontPurchaseType.SELF_PURCHASE;
+    return StorefrontPromotionRewardType /* StorefrontPromotionRewardType */.StorefrontPurchaseType.SELF_PURCHASE;
   }
 };
 export const isSlayerSkuAvailableOnThisPlatform = function isSlayerSkuAvailableOnThisPlatform(sku) {
@@ -303,14 +307,14 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
   const require = tmp2;
   let stateFromStores;
   const items = [_getSystemLocale];
-  stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => locale.locale);
+  stateFromStores = initialize /* initialize */.useStateFromStores(items, () => locale.locale);
   const items1 = [tmp2, stateFromStores];
   return React.useMemo(() => outer1_14(closure_0, stateFromStores), items1);
 };
 export const useFormatSKUPrice = function useFormatSKUPrice(arg0) {
   const _require = arg0;
   const items = [_getSystemLocale];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => locale.locale);
+  const stateFromStores = _initialize.useStateFromStores(items, () => locale.locale);
   const items1 = [arg0, stateFromStores];
   return React.useMemo(() => outer1_14(closure_0, stateFromStores), items1);
 };

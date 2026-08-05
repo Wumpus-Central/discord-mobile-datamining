@@ -1,3 +1,6 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useAuthorizedSlayerApplications } from "../../authorized_apps/useAuthorizedSlayerApplications.tsx";
 // discord_app/modules/user_settings/content_and_social/native/ContentAndSocialScreen.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
@@ -185,7 +188,7 @@ export const ConnectedGamesPage = function ConnectedGamesPage() {
   let showLoadingIndicator;
   let slayerSdkApplications;
   const tmp = createCacheKey();
-  ({ showLoadingIndicator, slayerSdkApplications } = require("../../authorized_apps/useAuthorizedSlayerApplications.tsx")());
+  ({ showLoadingIndicator, slayerSdkApplications } = useAuthorizedSlayerApplications());
   if (showLoadingIndicator) {
     let obj = { style: null };
     obj[0] = tmp.loadingIndicator;
@@ -194,15 +197,15 @@ export const ConnectedGamesPage = function ConnectedGamesPage() {
     obj = { style: null, children: null };
     obj[0] = tmp.emptyContainer;
     let obj1 = { variant: "text-md/semibold", color: "text-strong", children: null };
-    let intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj1[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["+0U77d"]);
-    let items = [callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1), ];
+    let intl = getSystemLocale /* getSystemLocale */.intl;
+    obj1[2] = intl.string(getSystemLocale /* getSystemLocale */.t["+0U77d"]);
+    let items = [callback2(Text /* Text */.Text, obj1), ];
     let obj2 = { variant: "text-sm/normal", color: "text-muted", children: null };
-    let intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    let intl2 = getSystemLocale /* getSystemLocale */.intl;
     const obj3 = { helpdeskArticle: null };
     obj3[0] = tmp2(1945).getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
-    obj2[2] = intl2.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.V8wClM, obj3);
-    items[1] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+    obj2[2] = intl2.format(getSystemLocale /* getSystemLocale */.t.V8wClM, obj3);
+    items[1] = callback2(Text /* Text */.Text, obj2);
     obj[1] = items;
     tmp7 = callback3(closure_6, obj);
     const tmp2Result = tmp2(1945);

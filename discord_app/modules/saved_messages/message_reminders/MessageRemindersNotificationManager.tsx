@@ -1,3 +1,4 @@
+import { set } from "../../../utils/Durations.tsx";
 // discord_app/modules/saved_messages/message_reminders/MessageRemindersNotificationManager.tsx
 import getTimeSafe from "getTimeSafe";
 import "initialize";
@@ -30,7 +31,7 @@ function scheduleNextNotification() {
       let _Date = Date;
       const timestamp = Date.now();
       dueAt = found.saveData.dueAt;
-      const sum = timestamp + require("../../../utils/Durations.tsx").Millis.WEEK;
+      const sum = timestamp + set.Millis.WEEK;
       if (dueAt.getTime() <= sum) {
         const dueAt2 = found.saveData.dueAt;
         const _Date2 = Date;

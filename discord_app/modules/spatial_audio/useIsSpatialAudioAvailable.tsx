@@ -1,3 +1,4 @@
+import { apexExperiment } from "../voice_panel/SpatialAudioForVoiceExperiment.tsx";
 // discord_app/modules/spatial_audio/useIsSpatialAudioAvailable.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { Features } from "DesktopSources";
@@ -6,7 +7,7 @@ const require = arg1;
 const result = require("apexExperiment").fileFinishedImporting("modules/spatial_audio/useIsSpatialAudioAvailable.tsx");
 
 export default function useIsSpatialAudioAvailable(location) {
-  let obj = require("../voice_panel/SpatialAudioForVoiceExperiment.tsx");
+  let obj = apexExperiment;
   obj = { location };
   let enabled = obj.useConfig(obj).enabled;
   const items = [_detectH265HardwareDecode];
@@ -16,7 +17,7 @@ export default function useIsSpatialAudioAvailable(location) {
   return enabled;
 };
 export const isSpatialAudioAvailable = function isSpatialAudioAvailable(RTCConnectionStore) {
-  let obj = require("../voice_panel/SpatialAudioForVoiceExperiment.tsx");
+  let obj = apexExperiment;
   obj = { location: RTCConnectionStore };
   let enabled = obj.getConfig(obj).enabled;
   if (enabled) {

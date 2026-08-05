@@ -1,3 +1,4 @@
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/channel/trackWaveCtaClicked.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AnalyticEvents } from "ME";
@@ -13,7 +14,7 @@ export const getDmHasMessageHistory = function getDmHasMessageHistory(arg0) {
   return null != lastMessageId;
 };
 export const trackWaveCtaClicked = function trackWaveCtaClicked(channelId) {
-  let obj = require("../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { channel_id: channelId.channelId, source: channelId.source, dm_has_message_history: null };
   const channel = store.getChannel(channelId.channelId);
   let lastMessageId;

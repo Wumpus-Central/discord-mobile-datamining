@@ -1,3 +1,4 @@
+import { registerAsset } from "../../../../../_runtime/09397_registerAsset.js";
 // discord_app/modules/activities/panel/native/MinimizeActivityButton.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -21,7 +22,7 @@ const memoResult = importAllResult.memo(function MinimizeActivityButton(arg0) {
       let obj = { style: null, children: null };
       obj[0] = tmp2.buttonParent;
       obj = { icon: null, accessibilityLabel: null, onPress: null, text: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1, shrink: true };
-      obj[0] = require("../../../../../_runtime/09397_registerAsset.js");
+      obj[0] = registerAsset;
       const intl2 = setMode(1236).intl;
       obj[1] = intl2.string(setMode(1236).t.brPQ5U);
       obj[2] = callback;
@@ -32,7 +33,7 @@ const memoResult = importAllResult.memo(function MinimizeActivityButton(arg0) {
     return tmp3;
   }
   obj = { icon: null, accessibilityLabel: null, onPress: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1 };
-  obj[0] = require("../../../../../_runtime/09397_registerAsset.js");
+  obj[0] = registerAsset;
   const intl = setMode(1236).intl;
   obj[1] = intl.string(setMode(1236).t.brPQ5U);
   obj[2] = callback;

@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/hub/useIsHubForGuild.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
@@ -9,7 +10,7 @@ export default function useIsHubForGuild(arg0) {
   const _require = arg0;
   const items = [createGuildRecordFromRust];
   const items1 = [arg0];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     if (null == closure_0) {
       return false;
     } else {

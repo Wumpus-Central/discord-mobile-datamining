@@ -1,3 +1,7 @@
+import { map } from "../../../../design/tokens/native/useToken.tsx";
+import { DoubleTapEmojiEditNudgeInner } from "../../../double_tap_to_react/native/DoubleTapEmojiEditNudge.tsx";
+import { EmojiPickerRowButton } from "../../../reactions/native/EmojiReactionRowButton.tsx";
+import { useEmojisForReactionRow } from "../../../reactions/native/useEmojisForReactionRow.tsx";
 // discord_app/modules/action_sheet/native/components/EmojiRow.tsx
 import "noop";
 import { View } from "QUICK_SWITCHER";
@@ -20,17 +24,17 @@ export default function EmojiRow(arg0) {
   let closure_3;
   let closure_4;
   let token;
-  let obj = require("../../../../design/tokens/native/useToken.tsx") /* map */;
+  let obj = map /* map */;
   dependencyMap = obj.useToken(channel(712).modules.mobile.EMOJI_ROW_EMOJI_SIZE);
-  let obj1 = require("../../../../design/tokens/native/useToken.tsx") /* map */;
+  let obj1 = map /* map */;
   closure_3 = obj1.useToken(channel(712).modules.mobile.EMOJI_ROW_EMOJI_FONT_SIZE);
-  let obj2 = require("../../../../design/tokens/native/useToken.tsx") /* map */;
+  let obj2 = map /* map */;
   closure_4 = obj2.useToken(channel(712).modules.mobile.EMOJI_ROW_EMOJI_LINE_HEIGHT);
-  token = require("../../../../design/tokens/native/useToken.tsx") /* map */.useToken(channel(712).modules.mobile.EMOJI_ROW_EMOJI_CONTAINER_SIZE);
-  let obj4 = require("../../../../design/tokens/native/useToken.tsx") /* map */;
-  const token1 = require("../../../../design/tokens/native/useToken.tsx") /* map */.useToken(channel(712).modules.mobile.EMOJI_ROW_EMOJI_MIN_SPACING);
-  const obj5 = require("../../../../design/tokens/native/useToken.tsx") /* map */;
-  const emojisForReactionRow = require("../../../reactions/native/useEmojisForReactionRow.tsx") /* useEmojisForReactionRow */.useEmojisForReactionRow(channel, closure_4, token + token1);
+  token = map /* map */.useToken(channel(712).modules.mobile.EMOJI_ROW_EMOJI_CONTAINER_SIZE);
+  let obj4 = map /* map */;
+  const token1 = map /* map */.useToken(channel(712).modules.mobile.EMOJI_ROW_EMOJI_MIN_SPACING);
+  const obj5 = map /* map */;
+  const emojisForReactionRow = useEmojisForReactionRow /* useEmojisForReactionRow */.useEmojisForReactionRow(channel, closure_4, token + token1);
   const tmp3 = callback2();
   obj = { style: tmp3.emojiRowContainer, children: null };
   obj = { style: tmp3.emojiRow, children: null };
@@ -73,12 +77,12 @@ export default function EmojiRow(arg0) {
       return outer1_0(8423).handleAddNewReactions(channel, id.id, outer1_0(7143).ReactionLocations.MESSAGE);
     }
   };
-  items[1] = token(require("../../../reactions/native/EmojiReactionRowButton.tsx") /* EmojiPickerRowButton */.EmojiPickerRowButton, obj1);
+  items[1] = token(EmojiPickerRowButton /* EmojiPickerRowButton */.EmojiPickerRowButton, obj1);
   obj[1] = items;
   const items1 = [callback(closure_3, obj), ];
   obj2 = { location: null };
   obj2[0] = channel(5630).MESSAGE_LONG_PRESS_MENU;
-  items1[1] = token(require("../../../double_tap_to_react/native/DoubleTapEmojiEditNudge.tsx") /* DoubleTapEmojiEditNudgeInner */.DoubleTapEmojiEditNudge, obj2);
+  items1[1] = token(DoubleTapEmojiEditNudgeInner /* DoubleTapEmojiEditNudgeInner */.DoubleTapEmojiEditNudge, obj2);
   obj[1] = items1;
   return callback(closure_3, obj);
 };

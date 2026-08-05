@@ -1,3 +1,4 @@
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/gplay/native/GPlayAnalyticsStore.tsx
 import keys from "keys";
 
@@ -8,7 +9,7 @@ const result = require("set").fileFinishedImporting("modules/gplay/native/GPlayA
 export const setGPlayAnalytics = function setGPlayAnalytics(arg0, arg1) {
   const _require = arg0;
   const dependencyMap = arg1;
-  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     outer1_3.setState((analyticsByProductId) => {
       let obj = { analyticsByProductId: null };
       obj = {};
@@ -21,7 +22,7 @@ export const setGPlayAnalytics = function setGPlayAnalytics(arg0, arg1) {
 };
 export const deleteGPlayAnalytics = function deleteGPlayAnalytics(arg0) {
   const _require = arg0;
-  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     outer1_3.setState((analyticsByProductId) => {
       analyticsByProductId = {};
       const merged = Object.assign(analyticsByProductId.analyticsByProductId);

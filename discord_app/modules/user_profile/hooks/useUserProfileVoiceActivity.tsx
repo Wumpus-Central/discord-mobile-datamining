@@ -1,3 +1,4 @@
+import { isEmbeddedActivity } from "../../activities/utils/isEmbeddedActivity.tsx";
 // discord_app/modules/user_profile/hooks/useUserProfileVoiceActivity.tsx
 import sortActivity from "sortActivity";
 import updateVoiceState from "updateVoiceState";
@@ -42,7 +43,7 @@ export const isUserProfileVoiceActivityForChannel = function isUserProfileVoiceA
   let voiceChannelId;
   voiceStateForSession = voiceStateForSession.voiceStateForSession;
   ({ activity, voiceChannelId } = voiceStateForSession);
-  let tmp = require("../../activities/utils/isEmbeddedActivity.tsx")(activity);
+  let tmp = isEmbeddedActivity(activity);
   if (tmp) {
     let channelId;
     if (voiceStateForSession != null) {

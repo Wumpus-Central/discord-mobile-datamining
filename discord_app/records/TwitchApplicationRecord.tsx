@@ -1,3 +1,4 @@
+import { getPlatformUserUrl } from "../lib/Platforms.tsx";
 // discord_app/records/TwitchApplicationRecord.tsx
 import "createExecutable";
 
@@ -15,7 +16,7 @@ class TwitchApplicationRecord extends tmp2 {
   }
 }
 TwitchApplicationRecord.prototype["getIconURL"] = function getIconURL() {
-  return require("../lib/Platforms.tsx").get("twitch").icon.lightPNG;
+  return getPlatformUserUrl.get("twitch").icon.lightPNG;
 };
 
 export default TwitchApplicationRecord;

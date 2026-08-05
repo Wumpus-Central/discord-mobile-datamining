@@ -1,3 +1,6 @@
+import { getPreviewVideoAssetUrl } from "../../../../../activities/utils/getPreviewVideoAssetUrl.tsx";
+import { useEmbeddedActivityBackground } from "../../../../../activities/utils/useEmbeddedActivityBackground.tsx";
+import { useDefaultAppLauncherWidth } from "../../../hooks/useDefaultAppLauncherWidth.tsx";
 // discord_app/modules/app_launcher/native/screens/application_view/activity/HeroMedia.tsx
 import "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -16,7 +19,7 @@ export default function HeroMedia(width) {
   ({ applicationId, containerHeight } = width);
   const tmp = callback();
   width = { width: width.width }.width;
-  require("../../../hooks/useDefaultAppLauncherWidth.tsx") /* useDefaultAppLauncherWidth */;
+  useDefaultAppLauncherWidth /* useDefaultAppLauncherWidth */;
   let bound = width;
   if (width == null) {
     let tmp8 = width;
@@ -27,7 +30,7 @@ export default function HeroMedia(width) {
   }
   const diff = bound - 2 * DEFAULT_CONTENT_PADDING;
   const rounded = Math.floor(9 * diff / 16);
-  const tmp13 = require("../../../../../activities/utils/useEmbeddedActivityBackground.tsx")({ applicationId, size: diff, names: ["embedded_cover"] });
+  const tmp13 = useEmbeddedActivityBackground({ applicationId, size: diff, names: ["embedded_cover"] });
   let tmp2Result = tmp2(589);
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => useReducedMotion.useReducedMotion, []);
@@ -43,7 +46,7 @@ export default function HeroMedia(width) {
   }
   let tmp18 = null;
   if (null != prop1) {
-    tmp18 = require("../../../../../activities/utils/getPreviewVideoAssetUrl.tsx")(applicationId, prop.activity_preview_video_asset_id);
+    tmp18 = getPreviewVideoAssetUrl(applicationId, prop.activity_preview_video_asset_id);
   }
   let tmp21Result = null;
   if (null != tmp18) {
@@ -107,7 +110,7 @@ export const useHeroMediaDimensions = function useHeroMediaDimensions(arg0) {
     obj = {};
   }
   const width = obj.width;
-  require("../../../hooks/useDefaultAppLauncherWidth.tsx") /* useDefaultAppLauncherWidth */;
+  useDefaultAppLauncherWidth /* useDefaultAppLauncherWidth */;
   let bound = width;
   if (width == null) {
     let tmp5 = width;

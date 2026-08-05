@@ -1,3 +1,4 @@
+import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
 // discord_app/modules/auth/AuthInviteStore.tsx
 import { Store } from "initialize";
 
@@ -15,7 +16,7 @@ const authInviteStore = new AuthInviteStore(require("dispatcher"), {
     if (null == guild) {
       return false;
     } else {
-      closure_2[guild.id] = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */.fromInviteGuild(guild);
+      closure_2[guild.id] = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */.fromInviteGuild(guild);
     }
   }
 });

@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useMessagePreview } from "../../../main_tabs_v2/useMessagePreviews.tsx";
+import { explicitContentFromProto } from "../../UserSettings.tsx";
 // discord_app/modules/user_settings/defs/native/DmsMessagePreviewsSetting.tsx
 import noop from "noop";
 import createToggle from "createToggle";
@@ -5,15 +8,15 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.OAOUoQ);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.OAOUoQ);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   useValue: function useDMsMessagePreviewsValue() {
-    return require("../../../main_tabs_v2/useMessagePreviews.tsx") /* useMessagePreview */.useMessagePreviewSetting();
+    return useMessagePreview /* useMessagePreview */.useMessagePreviewSetting();
   },
   onValueChange: function onDMsMessagePreviewsValueChange(arg0) {
-    const MessagePreviewSetting = require("../../UserSettings.tsx") /* explicitContentFromProto */.MessagePreviewSetting;
+    const MessagePreviewSetting = explicitContentFromProto /* explicitContentFromProto */.MessagePreviewSetting;
     MessagePreviewSetting.updateSetting(arg0);
   },
   useOptions: function useDMsMessagePreviewsOptions() {

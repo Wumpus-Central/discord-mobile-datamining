@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { set } from "../AlertActionCreators.tsx";
 // discord_app/actions/native/BundleUpdaterActionCreators.tsx
 import { NativeModules } from "get ActivityIndicator";
 
@@ -7,16 +9,16 @@ const result = require("getSystemLocale").fileFinishedImporting("actions/native/
 export default {
   prepareUpdate(versionRequired) {
     if (versionRequired) {
-      let obj = require("../AlertActionCreators.tsx");
+      let obj = set;
       obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.GQZdmI);
-      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[1] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Fizu9y);
-      const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[2] = intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.UefCDS);
-      const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[3] = intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["1SzcG6"]);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.GQZdmI);
+      const intl2 = getSystemLocale /* getSystemLocale */.intl;
+      obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.Fizu9y);
+      const intl3 = getSystemLocale /* getSystemLocale */.intl;
+      obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.UefCDS);
+      const intl4 = getSystemLocale /* getSystemLocale */.intl;
+      obj[3] = intl4.string(getSystemLocale /* getSystemLocale */.t["1SzcG6"]);
       obj[4] = function onConfirm() {
         BundleUpdaterManager = BundleUpdaterManager.BundleUpdaterManager;
         return BundleUpdaterManager.reload();

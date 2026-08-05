@@ -1,3 +1,7 @@
+import { toNativeHorizontalOffset } from "../../../../../../../_runtime/15071_toNativeHorizontalOffset.js";
+import { noop } from "../../../../../../../discord_common/js/packages/flash-list/index.js";
+import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSuggestedFriend.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "Text";
@@ -140,7 +144,7 @@ const memoResult = importAllResult.memo((arg0) => {
 const memoResult1 = importAllResult.memo((suggestedFriend) => {
   let tmp2;
   let tmp3;
-  let obj = require("../../../../../../../discord_common/js/packages/flash-list/index.js") /* noop */;
+  let obj = noop /* noop */;
   const items = [suggestedFriend.suggestedFriend.user.id];
   obj = {};
   [tmp2, tmp3] = callback(obj.useRecyclingState(false, items), 2);
@@ -152,7 +156,7 @@ const memoResult1 = importAllResult.memo((suggestedFriend) => {
 const memoResult2 = importAllResult.memo((arg0) => {
   let tmp2;
   let tmp3;
-  let obj = require("../../../../../../../_runtime/15071_toNativeHorizontalOffset.js") /* toNativeHorizontalOffset */;
+  let obj = toNativeHorizontalOffset /* toNativeHorizontalOffset */;
   obj = {};
   [tmp2, tmp3] = callback(obj.useRecyclingState(false), 2);
   const merged = Object.assign(arg0);
@@ -163,10 +167,10 @@ const memoResult2 = importAllResult.memo((arg0) => {
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSuggestedFriend.tsx");
 
 export const getMessagesItemSuggestedFriendHeight = function getMessagesItemSuggestedFriendHeight(fontScale) {
-  const obj = require("../../../../../screen/native/useScaledTextLineHeight.android.tsx") /* map */;
-  const scaleTextLineHeightResult = require("../../../../../screen/native/useScaledTextLineHeight.android.tsx") /* map */.scaleTextLineHeight("redesign/channel-title/semibold", fontScale);
-  const sum = scaleTextLineHeightResult + require("../../../../../screen/native/useScaledTextLineHeight.android.tsx") /* map */.scaleTextLineHeight("text-xs/medium", fontScale);
-  return sum + require("../../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
+  const obj = map /* map */;
+  const scaleTextLineHeightResult = map /* map */.scaleTextLineHeight("redesign/channel-title/semibold", fontScale);
+  const sum = scaleTextLineHeightResult + map /* map */.scaleTextLineHeight("text-xs/medium", fontScale);
+  return sum + Themes.space.PX_16;
 };
 export const MessagesItemSuggestedFriendFast = memoResult;
 export const MessagesItemSuggestedFriendFlash = memoResult1;

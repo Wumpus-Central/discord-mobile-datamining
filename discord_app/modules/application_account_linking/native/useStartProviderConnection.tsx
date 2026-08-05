@@ -1,3 +1,4 @@
+import { useProviderConnection } from "../hooks/useProviderConnection.tsx";
 // discord_app/modules/application_account_linking/native/useStartProviderConnection.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import noop from "noop";
@@ -10,7 +11,7 @@ export const useStartProviderConnection = function useStartProviderConnection(pr
   let canConnect;
   let hasConnection;
   let loading;
-  let obj = _require("../hooks/useProviderConnection.tsx");
+  let obj = _useProviderConnection;
   const providerConnection = obj.useProviderConnection(provider_id);
   const startConnection = providerConnection.startConnection;
   _require = startConnection;

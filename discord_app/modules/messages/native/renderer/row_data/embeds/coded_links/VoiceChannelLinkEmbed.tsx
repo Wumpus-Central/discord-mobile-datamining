@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../../../../../intl/index.native.tsx";
+import { set } from "../../../../../../../utils/PlatformUtils.tsx";
+import { getEmbedThemeColors } from "../getEmbedThemeColors.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/VoiceChannelLinkEmbed.tsx
 import _slicedToArray from "_slicedToArray";
 import { Image } from "get ActivityIndicator";
@@ -24,7 +27,7 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
       if (null != guild) {
         if (getUncachedChannelPermissions.can(Permissions.VIEW_CHANNEL, channel)) {
           if (obj9.can(tmp26.CONNECT, channel)) {
-            ({ colors, baseColors } = require("../getEmbedThemeColors.tsx")(closure_2));
+            ({ colors, baseColors } = getEmbedThemeColors(closure_2));
             let icon;
             if (guild != null) {
               icon = guild.icon;
@@ -49,14 +52,14 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
             obj = {};
             const merged = Object.assign(baseColors);
             tmp4 = importDefault;
-            const tmp6 = require("../getEmbedThemeColors.tsx")(closure_2);
+            const tmp6 = getEmbedThemeColors(closure_2);
             let str;
             if (obj5.isAndroid()) {
               str = "";
             }
             obj.headerText = str;
             obj.headerColor = colors.headerColor;
-            obj5 = require("../../../../../../../utils/PlatformUtils.tsx") /* set */;
+            obj5 = set /* set */;
             const intl = tmp16(1236).intl;
             const string = intl.string;
             const t = tmp16(1236).t;
@@ -93,7 +96,7 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
             const intl2 = tmp16(1236).intl;
             const obj1 = { guildName: null };
             obj1[0] = guild.name;
-            obj.channelName = intl2.formatToPlainString(require("../../../../../../../intl/index.native.tsx") /* getSystemLocale */.t["2wimj5"], obj1);
+            obj.channelName = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t["2wimj5"], obj1);
             obj.subtitle = "";
             obj.type = InviteTypes.GUILD;
             obj.inviteSplash = undefined;

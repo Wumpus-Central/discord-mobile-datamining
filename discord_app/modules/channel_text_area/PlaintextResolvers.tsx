@@ -1,3 +1,6 @@
+import { getEmojiUnavailableReason } from "../../utils/EmojiUtils.tsx";
+import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
+import { createEmptyState } from "slate/SlateUtils.tsx";
 // discord_app/modules/channel_text_area/PlaintextResolvers.tsx
 import _slicedToArray from "_slicedToArray";
 import getEmojiToGroupId from "getEmojiToGroupId";
@@ -109,7 +112,7 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention) {
       return null;
     })(text, throwTypeErrorResult, id, tmp, tmp2);
   } else if (":" === first) {
-    const EMOJI_NAME_RE = require("../emojis/UnicodeEmojis.tsx").EMOJI_NAME_RE;
+    const EMOJI_NAME_RE = parseRawEmojiObject.EMOJI_NAME_RE;
     const match = EMOJI_NAME_RE.exec(text);
     let tmp7 = null;
     if (null != match) {
@@ -143,7 +146,7 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention) {
           const _HermesInternal = HermesInternal;
           const combined = ":" + obj2.name + ":";
         }
-        tmp4Result = require("../../utils/EmojiUtils.tsx");
+        tmp4Result = getEmojiUnavailableReason;
       }
     }
     return tmp7;
@@ -201,8 +204,8 @@ export const resolveApplicationCommandOption = function resolveApplicationComman
   const tmp = resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention);
   let voidToOptionValueResult = null;
   if (null != tmp) {
-    voidToOptionValueResult = require("slate/SlateUtils.tsx") /* createEmptyState */.voidToOptionValue(tmp);
-    const obj = require("slate/SlateUtils.tsx") /* createEmptyState */;
+    voidToOptionValueResult = createEmptyState /* createEmptyState */.voidToOptionValue(tmp);
+    const obj = createEmptyState /* createEmptyState */;
   }
   return voidToOptionValueResult;
 };

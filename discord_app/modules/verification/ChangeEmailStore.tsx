@@ -1,3 +1,4 @@
+import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/verification/ChangeEmailStore.tsx
 import keys from "keys";
 
@@ -10,7 +11,7 @@ export const useChangeEmailStore = obj;
 export const setChangeEmailError = function setChangeEmailError(arg0, arg1) {
   const _require = arg0;
   const dependencyMap = arg1;
-  _require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_3.setState((errors) => {
+  _batchUpdates.batchUpdates(() => outer1_3.setState((errors) => {
     let obj = { errors: null };
     obj = {};
     const merged = Object.assign(errors.errors);
@@ -46,8 +47,8 @@ export const useChangeEmailError = function useChangeEmailError(arg0) {
 };
 export const setEmailToken = function setEmailToken(arg0) {
   const _require = arg0;
-  _require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_3.setState({ emailToken: closure_0 }));
+  _batchUpdates.batchUpdates(() => outer1_3.setState({ emailToken: closure_0 }));
 };
 export const resetChangeEmailStore = function resetChangeEmailStore() {
-  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => state.setState(closure_2, true));
+  batchUpdates /* batchUpdates */.batchUpdates(() => state.setState(closure_2, true));
 };

@@ -1,3 +1,5 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { useStrangerDangerWarning } from "../self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx";
 // discord_app/modules/messages/useShowConvoStarterInDM.tsx
 import { useRef } from "noop";
 import processChannel from "processChannel";
@@ -27,12 +29,12 @@ export const useShowConvoStarterInDM = function useShowConvoStarterInDM(channel)
   if (tmp) {
     recipientId = channel.getRecipientId();
   }
-  const strangerDangerWarning = _require("../self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx").useStrangerDangerWarning(channel.id);
+  const strangerDangerWarning = _useStrangerDangerWarning.useStrangerDangerWarning(channel.id);
   const hasFlagResult = channel.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);
-  const obj = _require("../self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx");
+  const obj = _useStrangerDangerWarning;
   const items = [recipientId, processChannel, strangerDangerWarning, hasFlagResult];
   const items1 = [strangerDangerWarning, tmp, channel.id, recipientId, hasFlagResult];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     if (ref2.current !== id.id) {
       ref.current = false;
       tmp.current = tmp2.id;

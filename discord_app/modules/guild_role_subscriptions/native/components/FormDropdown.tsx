@@ -1,3 +1,7 @@
+import { registerAsset } from "../../../../../_runtime/10711_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13151_registerAsset.js";
+import { Button } from "../../../../design/void/native.tsx";
+import { styles } from "FormStyles.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/FormDropdown.tsx
 import "noop";
 import { Fonts } from "ME";
@@ -11,16 +15,16 @@ let c4;
 const require = arg1;
 function LockedIcon() {
   const obj = { size: null, source: null };
-  obj[0] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.MEDIUM;
-  obj[1] = require("../../../../../_runtime/13151_registerAsset.js");
-  return callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
+  obj[0] = Button /* Button */.Icon.Sizes.MEDIUM;
+  obj[1] = registerAsset;
+  return callback(Button /* Button */.Icon, obj);
 }
 function DropdownIcon() {
   const obj = { style: { transform: items }, size: null, source: null };
   items = [{ rotate: "90deg" }];
-  obj[1] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.MEDIUM;
-  obj[2] = require("../../../../../_runtime/10711_registerAsset.js");
-  return callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
+  obj[1] = Button /* Button */.Icon.Sizes.MEDIUM;
+  obj[2] = registerAsset;
+  return callback(Button /* Button */.Icon, obj);
 }
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 createCacheKey = { container: { alignItems: "center", flexDirection: "row" }, content: { marginStart: 8, flexGrow: 1 }, placeholder: null, text: null };
@@ -43,7 +47,7 @@ export default function FormDropdown(arg0) {
   ({ leading, onPress, placeholder } = arg0);
   const tmp = createCacheKey();
   const tmp2 = importDefault;
-  const tmp4 = require("FormStyles.tsx")();
+  const tmp4 = styles();
   let obj = { style: items, accessibilityRole: "spinbutton", disabled, onPress: null, children: null };
   items = [tmp.container, tmp4.dropdownInput];
   let tmp9;
@@ -61,7 +65,7 @@ export default function FormDropdown(arg0) {
     label = placeholder;
   }
   obj[1] = label;
-  items1[1] = closure_3(require("../../../../design/void/native.tsx") /* Button */.LegacyText, obj);
+  items1[1] = closure_3(Button /* Button */.LegacyText, obj);
   items1[2] = tmp5Result;
   obj[4] = items1;
   return tmp7(tmp2(8979), obj);

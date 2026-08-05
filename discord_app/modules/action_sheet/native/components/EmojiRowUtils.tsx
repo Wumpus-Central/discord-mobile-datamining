@@ -1,3 +1,4 @@
+import { hasFlag } from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/modules/action_sheet/native/components/EmojiRowUtils.tsx
 import ME from "ME";
 
@@ -22,8 +23,8 @@ export const shouldShowEmojiRow = function shouldShowEmojiRow(closure_8, message
     tmp = message.type !== constants3.THREAD_STARTER_MESSAGE;
   }
   if (tmp) {
-    tmp = !require("../../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(message.flags, constants.EPHEMERAL);
-    const obj = require("../../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+    tmp = !hasFlag /* hasFlag */.hasFlag(message.flags, constants.EPHEMERAL);
+    const obj = hasFlag /* hasFlag */;
   }
   return tmp;
 };

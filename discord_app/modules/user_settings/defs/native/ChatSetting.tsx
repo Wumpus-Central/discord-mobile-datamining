@@ -1,10 +1,12 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { VideoUploadQualityNitroUpsell } from "../../chat/native/SettingsChatScreen.tsx";
 // discord_app/modules/user_settings/defs/native/ChatSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/VQax8"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["/VQax8"]);
   },
   parent: null,
   IconComponent: require("ImageTextIcon").ImageTextIcon,
@@ -13,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.TEXT,
   getComponent() {
-    return require("../../chat/native/SettingsChatScreen.tsx") /* VideoUploadQualityNitroUpsell */.default;
+    return VideoUploadQualityNitroUpsell /* VideoUploadQualityNitroUpsell */.default;
   }
 };
 const route = createToggle.createRoute(obj);

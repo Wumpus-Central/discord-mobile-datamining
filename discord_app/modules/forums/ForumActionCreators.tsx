@@ -1,3 +1,9 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { markAnalyticsFeedItemSeen } from "../../utils/AnalyticsFeedItemSeenActionCreators.tsx";
+import { maybeMarkSeen } from "../../utils/AnalyticsFeedItemSeenManager.tsx";
+import { prototype } from "tracking/ForumChannelSeenManager.tsx";
 // discord_app/modules/forums/ForumActionCreators.tsx
 import sendRequest from "sendRequest";
 import ME from "ME";
@@ -144,12 +150,12 @@ let result = require("set").fileFinishedImporting("modules/forums/ForumActionCre
 
 export default {
   resort(id) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "RESORT_THREADS", channelId: id };
     obj.dispatch(obj);
   },
   createForumTag(name, channelId) {
-    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     let obj = { url: closure_5.FORUM_TAGS(channelId), body: null, rejectWithError: null };
     obj = { name: name.name, emoji_id: name.emojiId, emoji_name: null, moderated: null };
     let emojiName;
@@ -159,11 +165,11 @@ export default {
     obj[2] = emojiName;
     obj[3] = name.moderated;
     obj[1] = obj;
-    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+    obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   updateForumTag(id, channelId) {
-    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     let obj = { url: closure_5.FORUM_TAG(channelId, id.id), body: null, rejectWithError: null };
     obj = { name: id.name, emoji_id: id.emojiId, emoji_name: null, moderated: null };
     let emojiName;
@@ -173,22 +179,22 @@ export default {
     obj[2] = emojiName;
     obj[3] = id.moderated;
     obj[1] = obj;
-    obj[2] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    obj[2] = _sendRequest.rejectWithMigratedError();
     _require = HTTP.put(obj);
     const intl = tmp(1236).intl;
-    const tmpResult = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+    const tmpResult = _sendRequest;
     const intl2 = tmp(1236).intl;
-    withErrorHandling(() => closure_0, intl.string(_require("../../intl/index.native.tsx").t.T8sBLJ), intl2.string(_require("../../intl/index.native.tsx").t.imcb5u));
+    withErrorHandling(() => closure_0, intl.string(_getSystemLocale.t.T8sBLJ), intl2.string(_getSystemLocale.t.imcb5u));
   },
   deleteForumTag(closure_0, id) {
-    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     const obj = { url: closure_5.FORUM_TAG(closure_0, id), rejectWithError: null };
-    obj[1] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    obj[1] = _sendRequest.rejectWithMigratedError();
     _require = HTTP.del(obj);
-    const intl = _require("../../intl/index.native.tsx").intl;
-    const obj2 = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
-    const intl2 = _require("../../intl/index.native.tsx").intl;
-    withErrorHandling(() => closure_0, intl.string(_require("../../intl/index.native.tsx").t["0ZkNDU"]), intl2.string(_require("../../intl/index.native.tsx").t.imcb5u));
+    const intl = _getSystemLocale.intl;
+    const obj2 = _sendRequest;
+    const intl2 = _getSystemLocale.intl;
+    withErrorHandling(() => closure_0, intl.string(_getSystemLocale.t["0ZkNDU"]), intl2.string(_getSystemLocale.t.imcb5u));
   },
   updateForumPostTags(id, arg1) {
     let closure_0 = id;
@@ -208,24 +214,24 @@ export default {
     })();
   },
   hideAdminOnboarding(channelId, hide) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "ADMIN_ONBOARDING_GUIDE_HIDE", channelId, hide };
     obj.dispatch(obj);
   },
   markPostAsSeen(arg0, feedItemId, timestampMillis) {
-    const obj = require("../../utils/AnalyticsFeedItemSeenActionCreators.tsx") /* markAnalyticsFeedItemSeen */;
-    const result = obj.markAnalyticsFeedItemSeen(require("tracking/ForumChannelSeenManager.tsx") /* prototype */.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
+    const obj = markAnalyticsFeedItemSeen /* markAnalyticsFeedItemSeen */;
+    const result = obj.markAnalyticsFeedItemSeen(prototype /* prototype */.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
   },
   markPostAsUnseen(arg0, feedItemId, timestampMillis) {
-    const obj = require("../../utils/AnalyticsFeedItemSeenActionCreators.tsx") /* markAnalyticsFeedItemSeen */;
-    const result = obj.markAnalyticsFeedItemUnseen(require("tracking/ForumChannelSeenManager.tsx") /* prototype */.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
+    const obj = markAnalyticsFeedItemSeen /* markAnalyticsFeedItemSeen */;
+    const result = obj.markAnalyticsFeedItemUnseen(prototype /* prototype */.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
   },
   flushSeenItems(arg0, IMMEDIATE_WITH_COOLDOWN) {
     if (IMMEDIATE_WITH_COOLDOWN === undefined) {
-      IMMEDIATE_WITH_COOLDOWN = require("../../utils/AnalyticsFeedItemSeenManager.tsx") /* maybeMarkSeen */.ForceFlushType.IMMEDIATE_WITH_COOLDOWN;
+      IMMEDIATE_WITH_COOLDOWN = maybeMarkSeen /* maybeMarkSeen */.ForceFlushType.IMMEDIATE_WITH_COOLDOWN;
     }
-    const obj = require("../../utils/AnalyticsFeedItemSeenActionCreators.tsx") /* markAnalyticsFeedItemSeen */;
-    const result = obj.flushAnalyticsFeedItems(require("tracking/ForumChannelSeenManager.tsx") /* prototype */.getForumPostSeenManagerId(arg0), IMMEDIATE_WITH_COOLDOWN);
+    const obj = markAnalyticsFeedItemSeen /* markAnalyticsFeedItemSeen */;
+    const result = obj.flushAnalyticsFeedItems(prototype /* prototype */.getForumPostSeenManagerId(arg0), IMMEDIATE_WITH_COOLDOWN);
   },
   searchForumPosts(guild_id, id, outer1_5, c1, c2) {
     let closure_0 = guild_id;
@@ -271,12 +277,12 @@ export default {
     })();
   },
   updateForumSearchQuery(id, query) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "FORUM_SEARCH_QUERY_UPDATED", channelId: id, query };
     obj.dispatch(obj);
   },
   clearForumSearch(id) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "FORUM_SEARCH_CLEAR", channelId: id };
     obj.dispatch(obj);
   }

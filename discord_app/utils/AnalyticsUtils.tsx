@@ -1,3 +1,7 @@
+import { v1 } from "../../_runtime/00514_v1.js";
+import { IGNORE_ANALYTICS_BREADCRUMB_EVENTS } from "../modules/errors/CommonSentryInitUtils.tsx";
+import { getHermesInstrumentedStatsSummary } from "ProcessUtils.native.tsx";
+import { SentryUtils.native } from "SentryUtils.native.tsx";
 // discord_app/utils/AnalyticsUtils.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import withEqualityFn from "withEqualityFn";
@@ -29,18 +33,18 @@ function expandEventProperties(arg0) {
   let obj2 = obj;
   if (null == obj.location) {
     if (null == obj.source) {
-      tmp.client_performance_cpu = require("ProcessUtils.native.tsx").getCurrentCPUUsagePercent();
-      const obj6 = require("ProcessUtils.native.tsx");
-      tmp.client_performance_memory = require("ProcessUtils.native.tsx").getCurrentMemoryUsageKB();
-      const obj7 = require("ProcessUtils.native.tsx");
-      tmp.cpu_core_count = require("ProcessUtils.native.tsx").getCPUCoreCount();
+      tmp.client_performance_cpu = getHermesInstrumentedStatsSummary.getCurrentCPUUsagePercent();
+      const obj6 = getHermesInstrumentedStatsSummary;
+      tmp.client_performance_memory = getHermesInstrumentedStatsSummary.getCurrentMemoryUsageKB();
+      const obj7 = getHermesInstrumentedStatsSummary;
+      tmp.cpu_core_count = getHermesInstrumentedStatsSummary.getCPUCoreCount();
       tmp.accessibility_features = getAccessibilityFeatures();
       tmp.rendered_locale = obj2(1236).intl.currentLocale;
       const _Math = Math;
       const _performance = performance;
       tmp.uptime_app = Math.floor((performance.now() - closure_18) / c15);
-      const obj8 = require("ProcessUtils.native.tsx");
-      const processUptime = require("ProcessUtils.native.tsx").getProcessUptime();
+      const obj8 = getHermesInstrumentedStatsSummary;
+      const processUptime = getHermesInstrumentedStatsSummary.getProcessUptime();
       if (null != processUptime) {
         const _Math2 = Math;
         tmp.uptime_process_renderer = Math.floor(processUptime);
@@ -116,9 +120,9 @@ if (isBlockedDomain.isLibdiscoreInitialized()) {
   launchSignature = obj2.generateLaunchSignature(obj3.getGlobalObject());
 }
 function addBreadcrumb(arg0) {
-  const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = require("../modules/errors/CommonSentryInitUtils.tsx") /* IGNORE_ANALYTICS_BREADCRUMB_EVENTS */.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
+  const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = IGNORE_ANALYTICS_BREADCRUMB_EVENTS /* IGNORE_ANALYTICS_BREADCRUMB_EVENTS */.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
   if (!IGNORE_ANALYTICS_BREADCRUMB_EVENTS.includes(arg0)) {
-    let obj = require("SentryUtils.native.tsx");
+    let obj = SentryUtils.native;
     obj = { category: "analytics", message: null };
     obj[1] = arg0;
     obj.addBreadcrumb(obj);
@@ -748,6 +752,6 @@ export const trackNetworkAction = function trackNetworkAction(event, arg1) {
   callback5(event, tmp2);
 };
 export const getNewAnalyticsLoadId = function getNewAnalyticsLoadId() {
-  return require("../../_runtime/00514_v1.js") /* v1 */.v4();
+  return v1 /* v1 */.v4();
 };
 export const AnalyticsSchema = require("ME");

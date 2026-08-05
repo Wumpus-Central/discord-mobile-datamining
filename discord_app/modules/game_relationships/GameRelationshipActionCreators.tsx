@@ -1,3 +1,6 @@
+import { set } from "../../actions/AlertActionCreators.tsx";
+import { V6OrEarlierAPIError } from "../../errors/index.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/game_relationships/GameRelationshipActionCreators.tsx
 import sendRequest from "sendRequest";
 import ME from "ME";
@@ -6,17 +9,17 @@ let c4;
 let c5;
 const require = arg1;
 function showRequestFailedAlert(arg0) {
-  const aPIError = new require("../../errors/index.tsx") /* V6OrEarlierAPIError */.APIError(arg0);
+  const aPIError = new V6OrEarlierAPIError /* V6OrEarlierAPIError */.APIError(arg0);
   let anyErrorMessage = aPIError.getAnyErrorMessage();
   const obj = { title: null, body: null };
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["328j/I"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["328j/I"]);
   if (null == anyErrorMessage) {
     const intl2 = tmp(1236).intl;
     anyErrorMessage = intl2.string(tmp(1236).t.fEptJP);
   }
   obj[1] = anyErrorMessage;
-  require("../../actions/AlertActionCreators.tsx").show(obj);
+  set.show(obj);
 }
 function deleteGameRelationship() {
   const self = this;

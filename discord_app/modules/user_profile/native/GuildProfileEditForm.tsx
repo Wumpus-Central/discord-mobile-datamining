@@ -1,3 +1,7 @@
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
+import { QUICK_SWITCHER } from "../../app_analytics/AnalyticsLocation.tsx";
+import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
+import { ProfilePreviewButton } from "UserProfileEditBannerButton.tsx";
 // discord_app/modules/user_profile/native/GuildProfileEditForm.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import usePremiumUpsellConfig from "usePremiumUpsellConfig";
@@ -35,13 +39,13 @@ function EditGuildProfileBanner(user) {
   let c4;
   let analyticsLocations;
   ({ displayProfile, guildMember, pendingAvatarSrc, pendingThemeColors, disabled } = user);
-  let obj = require("../../../utils/PremiumUtils.tsx");
+  let obj = getPremiumPlanItem;
   let result = obj.canUsePremiumGuildMemberProfile(user);
   c4 = result;
-  analyticsLocations = require("../../app_analytics/useAnalyticsLocations.tsx")(require("../../app_analytics/AnalyticsLocation.tsx").EDIT_BANNER).analyticsLocations;
+  analyticsLocations = context(QUICK_SWITCHER.EDIT_BANNER).analyticsLocations;
   obj = { value: analyticsLocations, children: null };
   obj = { user, displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, showProfilePreviewButton: false, showEditButton: null, onPressEdit: null, editButtonAccessibilityLabel: null, editDisabled: null };
-  const tmp3 = require("../../app_analytics/useAnalyticsLocations.tsx");
+  const tmp3 = context;
   if (result) {
     result = null != guildMember;
   }
@@ -86,7 +90,7 @@ function EditGuildProfileBanner(user) {
   let intl = tmp5(1236).intl;
   obj[8] = intl.string(user(1236).t["95hPAe"]);
   obj[9] = disabled;
-  obj[1] = closure_18(require("UserProfileEditBannerButton.tsx"), obj);
+  obj[1] = closure_18(ProfilePreviewButton, obj);
   return closure_18(user(5610).AnalyticsLocationProvider, obj);
 }
 let closure_3 = ["nick", "bio", "guild_tag"];

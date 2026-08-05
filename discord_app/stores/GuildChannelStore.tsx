@@ -1,3 +1,4 @@
+import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/stores/GuildChannelStore.tsx
 import isSubscriptionGated from "isSubscriptionGated";
 import initializeFromUserSettings from "initializeFromUserSettings";
@@ -89,7 +90,7 @@ function rebuildGuildChannels(guildId) {
       }
     }
   }
-  const item = require("../../_runtime/00012_apply.js").forEach(tmp7, (channel) => {
+  const item = apply.forEach(tmp7, (channel) => {
     channel = channel.channel;
     obj2.count = obj2.count + 1;
     let type = channel.type;

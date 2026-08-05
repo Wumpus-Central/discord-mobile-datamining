@@ -1,3 +1,13 @@
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { ChannelRTCActionCreators } from "../../actions/ChannelRTCActionCreators.tsx";
+import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
+import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
+import { shouldShowAgeGateForVoiceChannel } from "../../modules/age_gate/AgeGateUtils.tsx";
+import { navigationToRootTabHelper } from "../../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { openStageChannelSettings } from "../../modules/stage_channels/StageChannelActionCreatorExtras.native.tsx";
+import { runAfterInteractions } from "RunAfterInteractionsUtils.tsx";
 // discord_app/utils/native/PrivateChannelCallUtils.tsx
 import upsertRelationship from "upsertRelationship";
 import runAfterInteractions from "runAfterInteractions";
@@ -17,10 +27,10 @@ let map1;
 let unpackModuleId;
 const require = arg1;
 function openChannelCallModal(channel) {
-  let obj = require("../../modules/age_gate/AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
+  let obj = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
   if (!obj.maybeOpenAgeGateForVoiceChannel(channel.id)) {
-    const result = require("../../actions/ChannelRTCActionCreators.tsx").rebuildRTCActiveChannels();
-    const obj2 = require("../../actions/ChannelRTCActionCreators.tsx");
+    const result = ChannelRTCActionCreators.rebuildRTCActiveChannels();
+    const obj2 = ChannelRTCActionCreators;
     const tmp3 = importDefault;
     if (tmpResult.isVoicePanelEnabled(channel)) {
       state = state.getState();
@@ -118,14 +128,14 @@ function guardPrivateCallForChannel(id, arg1) {
               }
             }
           });
-          let obj = require("../../actions/native/AlertActionCreators.tsx");
+          let obj = AlertActionCreators;
           obj = { title: null, body: null, cancelText: null, onConfirm: null, onCancel: null };
-          const intl = _require("../../intl/index.native.tsx").intl;
-          obj[0] = intl.string(_require("../../intl/index.native.tsx").t["91WuJ9"]);
-          const intl2 = _require("../../intl/index.native.tsx").intl;
-          obj[1] = intl2.string(_require("../../intl/index.native.tsx").t["Rs+Vk1"]);
-          const intl3 = _require("../../intl/index.native.tsx").intl;
-          obj[2] = intl3.string(_require("../../intl/index.native.tsx").t["ETE/oC"]);
+          const intl = _getSystemLocale.intl;
+          obj[0] = intl.string(_getSystemLocale.t["91WuJ9"]);
+          const intl2 = _getSystemLocale.intl;
+          obj[1] = intl2.string(_getSystemLocale.t["Rs+Vk1"]);
+          const intl3 = _getSystemLocale.intl;
+          obj[2] = intl3.string(_getSystemLocale.t["ETE/oC"]);
           obj[3] = function onConfirm() {
             return callback();
           };
@@ -153,39 +163,39 @@ export const isVoiceChannelModalKey = function isVoiceChannelModalKey(openModalK
 export { openChannelCallModal };
 export const maybeShowAgeGateModal = function maybeShowAgeGateModal(width) {
   if (obj.shouldShowAgeGateForChannelId(width)) {
-    require("RunAfterInteractionsUtils.tsx") /* runAfterInteractions */.runAfterInteractions(() => {
+    runAfterInteractions /* runAfterInteractions */.runAfterInteractions(() => {
       callback(table[20]).openAgeGateModal(constants.NSFW_VOICE_CHANNEL);
     }, 150);
-    const tmpResult = require("RunAfterInteractionsUtils.tsx") /* runAfterInteractions */;
+    const tmpResult = runAfterInteractions /* runAfterInteractions */;
   }
 };
 export const openVoiceChannelActionSheet = function openVoiceChannelActionSheet(closure_0) {
-  let obj = require("../../modules/action_sheet/native/ActionSheetActionCreators.tsx");
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel: closure_0 };
-  obj.openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(12937, dependencyMap.paths), "" + c17 + "-" + closure_0.id, obj);
+  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(12937, dependencyMap.paths), "" + c17 + "-" + closure_0.id, obj);
 };
 export const hideVoiceChannelActionSheet = function hideVoiceChannelActionSheet(closure_0) {
-  require("../../modules/action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet("" + c17 + "-" + closure_0.id);
+  ACTION_SHEET_HEIGHT_HALF.hideActionSheet("" + c17 + "-" + closure_0.id);
 };
 export const dismissVoiceChannelScreens = function dismissVoiceChannelScreens(channel, onExited) {
   const combined = "" + c17 + "-" + channel.id;
-  require("../../actions/ModalActionCreators.tsx").popWithKey(combined, onExited);
+  ModalActionCreators.popWithKey(combined, onExited);
   if (key.getKey() === combined) {
-    require("../../modules/action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet();
-    const tmp2Result = require("../../modules/action_sheet/native/ActionSheetActionCreators.tsx");
+    ACTION_SHEET_HEIGHT_HALF.hideActionSheet();
+    const tmp2Result = ACTION_SHEET_HEIGHT_HALF;
   }
 };
 export { monkeyPatchCall };
 export const showGuardCallAlert = function showGuardCallAlert(arg0) {
   const _require = arg0;
-  let obj = require("../../actions/native/AlertActionCreators.tsx");
+  let obj = AlertActionCreators;
   obj = { title: null, body: null, cancelText: null, onConfirm: null, onCancel: null };
-  const intl = _require("../../intl/index.native.tsx").intl;
-  obj[0] = intl.string(_require("../../intl/index.native.tsx").t["91WuJ9"]);
-  const intl2 = _require("../../intl/index.native.tsx").intl;
-  obj[1] = intl2.string(_require("../../intl/index.native.tsx").t["Rs+Vk1"]);
-  const intl3 = _require("../../intl/index.native.tsx").intl;
-  obj[2] = intl3.string(_require("../../intl/index.native.tsx").t["ETE/oC"]);
+  const intl = _getSystemLocale.intl;
+  obj[0] = intl.string(_getSystemLocale.t["91WuJ9"]);
+  const intl2 = _getSystemLocale.intl;
+  obj[1] = intl2.string(_getSystemLocale.t["Rs+Vk1"]);
+  const intl3 = _getSystemLocale.intl;
+  obj[2] = intl3.string(_getSystemLocale.t["ETE/oC"]);
   obj[3] = function onConfirm() {
     return callback();
   };
@@ -596,14 +606,14 @@ export const navigateToVoiceChannel = function navigateToVoiceChannel(channel, L
   if (channel.isPrivate()) {
     openChannelCallModal(channel);
   } else if (channel.isGuildStageVoice()) {
-    require("../../modules/stage_channels/StageChannelActionCreatorExtras.native.tsx") /* openStageChannelSettings */.openStageChannel(channel);
-    const obj2 = require("../../modules/stage_channels/StageChannelActionCreatorExtras.native.tsx") /* openStageChannelSettings */;
+    openStageChannelSettings /* openStageChannelSettings */.openStageChannel(channel);
+    const obj2 = openStageChannelSettings /* openStageChannelSettings */;
   } else {
     const _HermesInternal = HermesInternal;
     const combined = "" + c17 + "-" + channel.id;
     if (!obj.isModalOpen(combined)) {
       openChannelCallModal(channel);
     }
-    obj = require("../../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */;
+    obj = navigationToRootTabHelper /* navigationToRootTabHelper */;
   }
 };

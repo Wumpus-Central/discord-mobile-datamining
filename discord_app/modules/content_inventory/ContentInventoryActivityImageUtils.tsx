@@ -1,3 +1,11 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { isCrunchyrollActivity } from "../activities/utils/isCrunchyrollActivity.tsx";
+import { isOnXbox } from "../activities/utils/isOnXbox.tsx";
+import { useGetOrFetchApplications } from "../applications/useGetOrFetchApplications.tsx";
+import { importDefaultResult1 } from "../games/hooks/useGame.tsx";
+import { unpackStageChannelParty } from "../stage_channels/StageChannelRichPresenceUtils.tsx";
+import { useEntryActivityAndApplication } from "useEntryActivityAndApplication.tsx";
 // discord_app/modules/content_inventory/ContentInventoryActivityImageUtils.tsx
 import { useEffect } from "noop";
 import addApplication from "addApplication";
@@ -31,8 +39,8 @@ function useComputedImagesForActivity(activity, getIconURL) {
         }
         obj[1] = small_image;
         obj[2] = ImageSizes.SMALL;
-        guildIconURL = require("../../utils/AvatarUtils.tsx").getGuildIconURL(obj);
-        const obj12 = require("../../utils/AvatarUtils.tsx");
+        guildIconURL = getAvatarURL.getGuildIconURL(obj);
+        const obj12 = getAvatarURL;
       }
       let tmp14;
       if (null != guildIconURL) {
@@ -44,7 +52,7 @@ function useComputedImagesForActivity(activity, getIconURL) {
       obj2[0] = tmp14;
       obj8 = obj2;
       const tmp15Result = tmp15(9574);
-    } else if (require("../activities/utils/isOnXbox.tsx")(activity)) {
+    } else if (isOnXbox(activity)) {
       const obj3 = { largeImage: null, smallImage: "a" };
       const obj4 = { src: null, alt: null };
       let tmp2Result = tmp2(4966);
@@ -98,7 +106,7 @@ function useComputedImagesForActivity(activity, getIconURL) {
         obj[1] = stringResult;
       }
     }
-    obj17 = require("../stage_channels/StageChannelRichPresenceUtils.tsx") /* unpackStageChannelParty */;
+    obj17 = unpackStageChannelParty /* unpackStageChannelParty */;
   }
   return obj8;
 }
@@ -198,7 +206,7 @@ function useTrackActivityDefaultIcon(arg0) {
   }, items1);
 }
 function useRichImageForActivity(activity, activityApplication) {
-  require("../applications/useGetOrFetchApplications.tsx") /* useGetOrFetchApplications */;
+  useGetOrFetchApplications /* useGetOrFetchApplications */;
   if (activity != null) {
     const application_id = activity.application_id;
   }
@@ -236,7 +244,7 @@ function useRichImageForActivity(activity, activityApplication) {
       tmp5 = obj;
     }
     let tmp10;
-    if (!require("../activities/utils/isCrunchyrollActivity.tsx")(activity)) {
+    if (!isCrunchyrollActivity(activity)) {
       let small_image;
       if (activity != null) {
         const assets4 = activity.assets;
@@ -317,13 +325,13 @@ export const getApplicationImage = function getApplicationImage(getIconURL) {
     let obj = { src: null, alt: null };
     obj[0] = iconURL;
     if (null == name) {
-      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      let stringResult = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["2B/phM"]);
+      const intl2 = getSystemLocale /* getSystemLocale */.intl;
+      let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t["2B/phM"]);
     } else {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
       obj = { applicationName: null };
       obj[0] = name;
-      stringResult = intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.tiKyYg, obj);
+      stringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.tiKyYg, obj);
     }
     obj[1] = stringResult;
     return obj;
@@ -339,7 +347,7 @@ export const useImageForContentEntry = function useImageForContentEntry(tracking
   if (showCoverImage === undefined) {
     showCoverImage = true;
   }
-  ({ activity, activityApplication, fallbackApplication } = require("useEntryActivityAndApplication.tsx")(entry));
+  ({ activity, activityApplication, fallbackApplication } = useEntryActivityAndApplication(entry));
   let obj = fallbackApplication;
   if (fallbackApplication == null) {
     obj = activityApplication;
@@ -350,7 +358,7 @@ export const useImageForContentEntry = function useImageForContentEntry(tracking
   if (obj != null) {
     canonicalGameId = obj.getCanonicalGameId();
   }
-  let obj1 = require("../games/hooks/useGame.tsx") /* importDefaultResult1 */;
+  let obj1 = importDefaultResult1 /* importDefaultResult1 */;
   const data = obj1.useGame(canonicalGameId).data;
   if (data != null) {
     const coverURL = data.getCoverURL();

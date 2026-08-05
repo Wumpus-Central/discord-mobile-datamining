@@ -1,3 +1,7 @@
+import { PlatformTypes } from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
+import { useSKUPrice } from "../storefront/StorefrontUtils.tsx";
 // discord_app/modules/wishlists/WishlistActionCreators.tsx
 import fromServer from "fromServer";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
@@ -23,15 +27,15 @@ function extraWishlistParams() {
     if (tmpResult.isIOS()) {
       obj.payment_gateway = constants.APPLE;
     }
-    tmpResult = require("../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
+    tmpResult = PlatformTypes /* PlatformTypes */;
   }
   return obj;
 }
 function maybeDispatchAdditionalActions(wishlist_items) {
   wishlist_items = wishlist_items.wishlist_items;
   const mapped = wishlist_items.map((sku) => sku.sku);
-  const found = mapped.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
-  let obj = require("../../Dispatcher.tsx");
+  const found = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+  let obj = dispatcher;
   obj.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: found });
   const storefront_pricing = wishlist_items.storefront_pricing;
   if (null != storefront_pricing) {
@@ -39,10 +43,10 @@ function maybeDispatchAdditionalActions(wishlist_items) {
     obj = { type: "skus", skuIds: null };
     obj[1] = found.map((id) => id.id);
     obj[1] = obj;
-    const tmp3Result = require("../../Dispatcher.tsx");
-    obj[2] = require("../storefront/StorefrontUtils.tsx") /* useSKUPrice */.transformStorefrontPricesServer(storefront_pricing);
+    const tmp3Result = dispatcher;
+    obj[2] = useSKUPrice /* useSKUPrice */.transformStorefrontPricesServer(storefront_pricing);
     tmp3Result.dispatch(obj);
-    const tmpResult = require("../storefront/StorefrontUtils.tsx") /* useSKUPrice */;
+    const tmpResult = useSKUPrice /* useSKUPrice */;
   }
 }
 ({ AnalyticEvents: c10, Endpoints: unpackModuleId, PaymentGateways: closure_12 } = ME);

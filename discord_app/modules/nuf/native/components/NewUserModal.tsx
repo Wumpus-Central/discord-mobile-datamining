@@ -1,3 +1,5 @@
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { useNavigatorBackPressHandler } from "../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx";
 // discord_app/modules/nuf/native/components/NewUserModal.tsx
 import _slicedToArray from "_slicedToArray";
 import headerTitle from "headerTitle";
@@ -37,7 +39,7 @@ export default function NewUserModal(arg0) {
   first1 = tmp3[0];
   React = tmp3[1];
   closure_5 = React.useRef(null);
-  let obj = _require("../../../../design/components/Navigator/native/Navigator.native.tsx");
+  let obj = _NavigationStack;
   callback = obj.useAccessibilityNativeStackOptions();
   const items = [first1, first];
   callback = React.useCallback((flag) => {
@@ -61,7 +63,7 @@ export default function NewUserModal(arg0) {
       outer1_1(outer1_2[12]).popWithKey(outer1_0(outer1_2[13]).NEW_USER_MODAL_KEY);
     });
   }, items);
-  let obj1 = _require("../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx");
+  let obj1 = _useNavigatorBackPressHandler;
   obj1.useNavigatorBackPressHandler(() => {
     MinimizeApp = MinimizeApp.MinimizeApp;
     MinimizeApp.minimizeApp();

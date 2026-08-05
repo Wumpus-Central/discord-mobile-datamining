@@ -1,3 +1,7 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { experiment } from "../../../game_server/GameServerExperiment.tsx";
+import { experiment } from "../experiments/ServerThemeExperiment.tsx";
+import { apexExperiment } from "../experiments/ServerThemeUserExperiment.tsx";
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupNewPerkMarketingVersion.tsx
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -17,11 +21,11 @@ const result = require("getUncachedChannelPermissions").fileFinishedImporting("m
 export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
   const _require = guildId;
   const dependencyMap = arg1;
-  const gameServerEnabled = _require("../../../game_server/GameServerExperiment.tsx").useGameServerEnabled(guildId, "useGuildPowerupNewPerkMarketingVersion");
-  let obj = _require("../../../game_server/GameServerExperiment.tsx");
+  const gameServerEnabled = _experiment.useGameServerEnabled(guildId, "useGuildPowerupNewPerkMarketingVersion");
+  let obj = _experiment;
   let tmp = _require;
   const items = [stateFromStores];
-  stateFromStores = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  stateFromStores = _initialize.useStateFromStores(items, () => {
     const guild = stateFromStores.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
@@ -30,14 +34,14 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
     }
     return hasItem;
   });
-  const obj2 = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  const obj2 = _initialize;
   const tmp4 = stateFromStores;
-  let serverThemeEnabled = _require("../experiments/ServerThemeExperiment.tsx").useServerThemeEnabled(guildId, "useGuildPowerupNewPerkMarketingVersion");
-  const obj3 = _require("../experiments/ServerThemeExperiment.tsx");
+  let serverThemeEnabled = _experiment.useServerThemeEnabled(guildId, "useGuildPowerupNewPerkMarketingVersion");
+  const obj3 = _experiment;
   if (serverThemeEnabled) {
     serverThemeEnabled = obj4.useServerThemeUserEnabled("useGuildPowerupNewPerkMarketingVersion");
   }
-  obj4 = _require("../experiments/ServerThemeUserExperiment.tsx");
+  obj4 = _apexExperiment;
   const items1 = [serverThemeEnabled, tmp4];
   const stateFromStores1 = tmp(589).useStateFromStores(items1, () => serverThemeEnabled.can(outer1_8.MANAGE_GUILD, stateFromStores.getGuild(closure_0)));
   const items2 = [arg1, gameServerEnabled, stateFromStores, serverThemeEnabled, guildId, stateFromStores1];

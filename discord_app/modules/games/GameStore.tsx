@@ -1,3 +1,4 @@
+import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 // discord_app/modules/games/GameStore.tsx
 import applicationId from "applicationId";
 import { Store } from "initialize";
@@ -108,7 +109,7 @@ prototype["getCoverImageUrl"] = function getCoverImageUrl(arg0, size) {
   } else if (null == size) {
     return coverURL;
   } else {
-    let str = require("../../utils/URLUtils.tsx").toURLSafe(coverURL);
+    let str = isDiscordProxiedAssetUrl.toURLSafe(coverURL);
     str = coverURL;
     if (null != str) {
       const searchParams = str.searchParams;

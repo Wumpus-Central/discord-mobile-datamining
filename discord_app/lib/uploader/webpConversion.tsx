@@ -1,3 +1,4 @@
+import { MurmurHashV3 } from "../../../_runtime/01217_MurmurHashV3.js";
 // discord_app/lib/uploader/webpConversion.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
@@ -224,7 +225,7 @@ function _shouldConvertToWebP2() {
 }
 function hashImageData(data) {
   const uint8Array = new Uint8Array(data.data.buffer);
-  return require("../../../_runtime/01217_MurmurHashV3.js")(uint8Array).toString(16);
+  return MurmurHashV3(uint8Array).toString(16);
 }
 function _performWebPConversion() {
   const self = this;

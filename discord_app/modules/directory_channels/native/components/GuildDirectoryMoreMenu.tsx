@@ -1,3 +1,4 @@
+import { useCanManageGuildDirectoryEntry } from "../../useCanManageGuildDirectoryEntry.tsx";
 // discord_app/modules/directory_channels/native/components/GuildDirectoryMoreMenu.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -9,7 +10,7 @@ export default function GuildDirectoryMoreMenu(entry) {
   let canRemove;
   let isEntryAdmin;
   entry = entry.entry;
-  const tmp2 = require("../../useCanManageGuildDirectoryEntry.tsx")(entry);
+  const tmp2 = useCanManageGuildDirectoryEntry(entry);
   const items = [];
   ({ isEntryAdmin, canRemove } = tmp2);
   if (tmp2.canEdit) {

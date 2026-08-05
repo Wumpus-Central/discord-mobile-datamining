@@ -1,3 +1,6 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { handleLogout } from "../../actions/AuthenticationActionCreators.tsx";
+import { MessageRequestConsentStatusTypes } from "MessageRequestTypes.tsx";
 // discord_app/modules/message_request/MessageRequestActionCreators.tsx
 import handleLogout from "handleLogout";
 import { Endpoints } from "ME";
@@ -96,34 +99,34 @@ export const acceptMessageRequest = function acceptMessageRequest(arg0) {
   return applyArgumentsResult;
 };
 export const clearMessageRequestState = function clearMessageRequestState(id) {
-  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   let obj = { url: Endpoints.CHANNEL_RECIPIENT_ME(id), body: null, rejectWithError: null };
-  obj = { consent_status: require("MessageRequestTypes.tsx") /* MessageRequestConsentStatusTypes */.MessageRequestConsentStatusTypes.UNSPECIFIED };
+  obj = { consent_status: MessageRequestConsentStatusTypes /* MessageRequestConsentStatusTypes */.MessageRequestConsentStatusTypes.UNSPECIFIED };
   obj[1] = obj;
-  obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+  obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
   return HTTP.put(obj);
 };
 export const markAsMessageRequest = function markAsMessageRequest(id) {
-  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   let obj = { url: Endpoints.CHANNEL_RECIPIENT_ME(id), body: null, rejectWithError: null };
-  obj = { consent_status: require("MessageRequestTypes.tsx") /* MessageRequestConsentStatusTypes */.MessageRequestConsentStatusTypes.PENDING };
+  obj = { consent_status: MessageRequestConsentStatusTypes /* MessageRequestConsentStatusTypes */.MessageRequestConsentStatusTypes.PENDING };
   obj[1] = obj;
-  obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+  obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
   return HTTP.put(obj);
 };
 export const rejectMessageRequest = function rejectMessageRequest(closure_0) {
-  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   const obj = { url: Endpoints.CHANNEL_RECIPIENT_ME(closure_0), rejectWithError: null };
-  obj[1] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+  obj[1] = sendRequest /* sendRequest */.rejectWithMigratedError();
   return HTTP.del(obj);
 };
 export const rejectMessageRequestBatch = function rejectMessageRequestBatch(closure_0) {
-  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   obj = { url: Endpoints.CHANNEL_RECIPIENT_REJECT_BATCH(), body: obj, rejectWithError: null };
   obj = { channel_ids: closure_0 };
-  obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+  obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
   return HTTP.put(obj);
 };
 export const fetchUserCountryCode = function fetchUserCountryCode() {
-  const locationMetadata = require("../../actions/AuthenticationActionCreators.tsx").getLocationMetadata();
+  const locationMetadata = handleLogout.getLocationMetadata();
 };

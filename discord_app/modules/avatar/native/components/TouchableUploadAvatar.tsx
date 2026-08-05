@@ -1,3 +1,9 @@
+import { registerAsset } from "../../../../../_runtime/12036_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13116_registerAsset.js";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/avatar/native/components/TouchableUploadAvatar.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -30,7 +36,7 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
   }
   const tmp = createCacheKey();
   if (!showPendingAvatar) {
-    let tmp3 = require("../../../../../_runtime/13116_registerAsset.js");
+    let tmp3 = registerAsset;
   } else {
     tmp3 = avatarSource;
   }
@@ -42,25 +48,25 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
     obj[0] = tmp.avatarContainer;
     obj = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
     obj[0] = onSelectAvatar.onSelectAvatar;
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["70lEQe"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["70lEQe"]);
     obj = { style: null, children: null };
     obj[0] = tmp.avatarWrapper;
     const obj1 = { resizeMode: "contain", style: null, source: null };
     obj1[1] = defaultLogoStyle;
     obj1[2] = tmp3;
-    const items = [callback(require("../../../../components_native/common/FastImage.tsx"), obj1), ];
+    const items = [callback(preload, obj1), ];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.uploadAvatarWrapper;
     const obj3 = { size: null, source: null, style: null };
-    obj3[0] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.MEDIUM;
-    obj3[1] = require("../../../../../_runtime/12036_registerAsset.js");
+    obj3[0] = Button /* Button */.Icon.Sizes.MEDIUM;
+    obj3[1] = registerAsset;
     obj3[2] = tmp.uploadAvatarIcon;
-    obj2[1] = callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj3);
+    obj2[1] = callback(Button /* Button */.Icon, obj3);
     items[1] = callback(View, obj2);
     obj[1] = items;
     obj[3] = callback2(View, obj);
-    obj[1] = callback(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+    obj[1] = callback(PressableBase /* PressableBase */.PressableOpacity, obj);
     return callback(View, obj);
   }
   defaultLogoStyle = tmp.defaultLogoStyle;

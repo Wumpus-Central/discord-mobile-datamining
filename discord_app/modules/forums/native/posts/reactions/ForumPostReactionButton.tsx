@@ -1,3 +1,9 @@
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { ReactionTypes } from "../../../../messages/MessageReactionsTypes.tsx";
+import { handleOutOfSuperReactions } from "../../../../reactions/native/ReactionUtils.tsx";
+import { useNativeForumPostHandlers } from "../hooks/useNativeForumPostHandlers.tsx";
 // discord_app/modules/forums/native/posts/reactions/ForumPostReactionButton.tsx
 import set from "set";
 import { View } from "Emoji";
@@ -150,14 +156,14 @@ export const AdditionalReactionCount = function AdditionalReactionCount(arg0) {
   let threadId;
   ({ count, threadId, containerStyle } = arg0);
   const obj = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.N8hbZB);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.N8hbZB);
   const items = [createCacheKey().container, containerStyle];
   obj[2] = items;
-  obj[3] = require("../hooks/useNativeForumPostHandlers.tsx")({ threadId }).onTapReactionCount;
+  obj[3] = useNativeForumPostHandlers({ threadId }).onTapReactionCount;
   const items1 = ["+", count];
-  obj[4] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "heading-sm/medium", color: "interactive-text-default", children: items1 });
-  return callback2(require("../../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  obj[4] = callback(Text /* Text */.Text, { variant: "heading-sm/medium", color: "interactive-text-default", children: items1 });
+  return callback2(PressableBase /* PressableBase */.PressableOpacity, obj);
 };
 export const AddReactionButton = function AddReactionButton(reactionType) {
   let containerStyle;
@@ -165,15 +171,15 @@ export const AddReactionButton = function AddReactionButton(reactionType) {
   let NORMAL = reactionType.reactionType;
   ({ threadId, containerStyle } = reactionType);
   if (NORMAL === undefined) {
-    NORMAL = require("../../../../messages/MessageReactionsTypes.tsx") /* ReactionTypes */.ReactionTypes.NORMAL;
+    NORMAL = ReactionTypes /* ReactionTypes */.ReactionTypes.NORMAL;
   }
   const obj = { style: items, accessible: true, accessibilityLabel: null, onPress: null, children: null };
   items = [createCacheKey().container, containerStyle];
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.lfIHs4);
-  obj[3] = require("../hooks/useNativeForumPostHandlers.tsx")({ threadId, reactionType: NORMAL }).onTapAddReaction;
-  obj[4] = callback2(require("../../../../reactions/native/ReactionUtils.tsx") /* handleOutOfSuperReactions */.ADD_REACTION_ICON_COMPONENTS[NORMAL], { size: "xs" });
-  return callback2(require("../../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.lfIHs4);
+  obj[3] = useNativeForumPostHandlers({ threadId, reactionType: NORMAL }).onTapAddReaction;
+  obj[4] = callback2(handleOutOfSuperReactions /* handleOutOfSuperReactions */.ADD_REACTION_ICON_COMPONENTS[NORMAL], { size: "xs" });
+  return callback2(PressableBase /* PressableBase */.PressableOpacity, obj);
 };
 export const ForumPostReactionButton = function ForumPostReactionButton(emojiSize) {
   let animateCount;

@@ -1,3 +1,8 @@
+import { n } from "../../../../../_runtime/00689_n.js";
+import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { set } from "../../../../utils/PlatformUtils.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardBottomSheetActions.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -20,20 +25,20 @@ let closure_8 = createCacheKey.createStyles((arg0, arg1, arg2, arg3) => {
   obj.alignItems = "center";
   obj.top = undefined;
   obj[0] = obj;
-  obj = { paddingVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.MEDIA_KEYBOARD_BAR_MARGIN_HORIZONTAL, marginBottom: null, borderRadius: null, backgroundColor: null, paddingHorizontal: null, borderWidth: null };
-  let obj3 = require("../../../../utils/PlatformUtils.tsx") /* set */;
+  obj = { paddingVertical: Themes.space.PX_8, marginHorizontal: Themes.modules.mobile.MEDIA_KEYBOARD_BAR_MARGIN_HORIZONTAL, marginBottom: null, borderRadius: null, backgroundColor: null, paddingHorizontal: null, borderWidth: null };
+  let obj3 = set /* set */;
   if (obj3.isIOS()) {
     PX_24 = tmp3(712).space.PX_24;
   }
   let tmp5 = arg2;
   obj[2] = PX_24;
-  obj[3] = require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.MEDIA_KEYBOARD_BAR_BORDER_RADIUS;
+  obj[3] = Themes.modules.mobile.MEDIA_KEYBOARD_BAR_BORDER_RADIUS;
   if (arg2 == null) {
     tmp5 = arg1;
   }
   obj[4] = tmp5;
-  obj[5] = require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.MEDIA_KEYBOARD_BAR_PADDING_HORIZONTAL;
-  obj[6] = require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.MEDIA_KEYBOARD_BAR_BORDER_WIDTH;
+  obj[5] = Themes.modules.mobile.MEDIA_KEYBOARD_BAR_PADDING_HORIZONTAL;
+  obj[6] = Themes.modules.mobile.MEDIA_KEYBOARD_BAR_BORDER_WIDTH;
   const merged1 = Object.assign(tmp3(712).shadows.SHADOW_HIGH);
   if (arg3) {
     const obj1 = { borderColor: null };
@@ -47,10 +52,10 @@ let closure_8 = createCacheKey.createStyles((arg0, arg1, arg2, arg3) => {
   obj[1] = obj;
   obj3 = { gap: tmp3(712).modules.mobile.MEDIA_KEYBOARD_BAR_GAP, alignItems: "stretch", flexDirection: "row", marginHorizontal: tmp3(712).modules.mobile.MEDIA_KEYBOARD_BAR_BUTTONS_MARGIN_HORIZONTAL };
   obj[2] = obj3;
-  obj[3] = { flexBasis: 64, minHeight: 48, flexGrow: 1, justifyContent: "center", flexDirection: "column", alignItems: "center", padding: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.MEDIA_KEYBOARD_BUTTON_PADDING, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.MEDIA_KEYBOARD_BUTTON_BORDER_RADIUS, gap: 4 };
+  obj[3] = { flexBasis: 64, minHeight: 48, flexGrow: 1, justifyContent: "center", flexDirection: "column", alignItems: "center", padding: Themes.modules.mobile.MEDIA_KEYBOARD_BUTTON_PADDING, borderRadius: Themes.modules.mobile.MEDIA_KEYBOARD_BUTTON_BORDER_RADIUS, gap: 4 };
   const obj5 = {};
   const merged3 = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj5.color = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW;
+  obj5.color = Themes.colors.BACKGROUND_BASE_LOW;
   obj[4] = obj5;
   return obj;
 });
@@ -65,21 +70,21 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetActions
   const gradientValue = obj.useGradientValue(onHeightChange(4096).GradientPercentage.END);
   let hexResult = null;
   if (null != gradientValue) {
-    let obj1 = require("../../../../../_runtime/00689_n.js")(gradientValue);
+    let obj1 = n(gradientValue);
     hexResult = obj1.alpha(0.95).hex();
     let alphaResult = obj1.alpha(0.95);
   }
   let tmpResult = tmp(3989);
-  const token = tmpResult.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CARD_BACKGROUND_DEFAULT);
-  const obj5 = require("../../../../../_runtime/00689_n.js")(token);
-  let hexResult1 = require("../../../../../_runtime/00689_n.js")(token).alpha(0.95).hex();
+  const token = tmpResult.useToken(Themes.colors.CARD_BACKGROUND_DEFAULT);
+  const obj5 = n(token);
+  let hexResult1 = n(token).alpha(0.95).hex();
   tmpResult = tmp(1348);
   const enabled = tmpResult.useMobileVisualRefreshConfig({ location: "MediaKeyboardBottomSheetActions" }).enabled;
-  const alphaResult1 = require("../../../../../_runtime/00689_n.js")(token).alpha(0.95);
+  const alphaResult1 = n(token).alpha(0.95);
   if (enabled) {
-    hexResult1 = tmpResult1.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_FLOATINGBAR_BACKGROUND_HIGHER);
+    hexResult1 = tmpResult1.useToken(Themes.colors.MOBILE_FLOATINGBAR_BACKGROUND_HIGHER);
   }
-  const tmp9Result = closure_8(require("../../../safe_area/useSafeAreaInsets.native.tsx")().bottom, hexResult1, hexResult, enabled);
+  const tmp9Result = closure_8(useSafeAreaInsets().bottom, hexResult1, hexResult, enabled);
   importDefault = tmp9Result;
   const tmp9 = closure_8;
   tmpResult1 = onHeightChange(3989);
@@ -112,9 +117,9 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetActions
   const tmpResult4 = onHeightChange(3989);
   const merged = Object.assign(memo);
   obj.pointerEvents = "none";
-  const items2 = [callback(require("../../../../../_runtime/04706_LinearGradient.js"), obj), ];
+  const items2 = [callback(LinearGradient, obj), ];
   obj1 = { style: tmp9Result.container, children: null };
-  const tmp6Result = require("../../../../../_runtime/04706_LinearGradient.js");
+  const tmp6Result = LinearGradient;
   obj1[1] = callback(closure_5, {
     style: tmp9Result.buttonsContainer,
     children: overflowButtons.map((accessibilityLabel) => {

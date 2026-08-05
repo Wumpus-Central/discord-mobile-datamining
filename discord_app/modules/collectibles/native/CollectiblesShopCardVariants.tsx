@@ -1,3 +1,8 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { CheckmarkSmallIcon } from "../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
+import { PlusSmallIcon } from "../../../design/components/Icon/native/redesign/generated/PlusSmallIcon.tsx";
+import { useIsVariantColorLight } from "../hooks/useIsVariantColorLight.tsx";
+import { getProductPurchaseState } from "../hooks/useProductPurchaseState.tsx";
 // discord_app/modules/collectibles/native/CollectiblesShopCardVariants.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -11,7 +16,7 @@ const require = arg1;
 function VariantOption(variant) {
   variant = variant.variant;
   const tmp = callback3(variant.isSelected);
-  let obj = require("../hooks/useProductPurchaseState.tsx") /* getProductPurchaseState */;
+  let obj = getProductPurchaseState /* getProductPurchaseState */;
   let isPurchased = obj.useProductPurchaseState(variant).isPurchased;
   obj = { style: items, children: null };
   items = [tmp.variantOption, { zIndex: variant.zIndex }];
@@ -27,10 +32,10 @@ function VariantOption(variant) {
   return closure_4(View, obj);
 }
 function VariantCheckmark(variant) {
-  const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
-  const tmp = require("../hooks/useIsVariantColorLight.tsx")(variant.variant);
+  const colors = Themes.colors;
+  const tmp = useIsVariantColorLight(variant.variant);
   const tmp2 = closure_4;
-  return tmp2(require("../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx") /* CheckmarkSmallIcon */.CheckmarkSmallIcon, { color: require("../hooks/useIsVariantColorLight.tsx")(variant.variant) ? colors.BLACK : colors.WHITE, size: "xxs" });
+  return tmp2(CheckmarkSmallIcon /* CheckmarkSmallIcon */.CheckmarkSmallIcon, { color: useIsVariantColorLight(variant.variant) ? colors.BLACK : colors.WHITE, size: "xxs" });
 }
 function VariantOverflowOption(isSelected) {
   const tmp = callback3(isSelected.isSelected);
@@ -40,8 +45,8 @@ function VariantOverflowOption(isSelected) {
   items1 = [, ];
   ({ variantOptionInner: arr2[0], variantOverflowInner: arr2[1] } = tmp);
   obj = { color: null, size: "xxs" };
-  obj[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
-  obj[1] = callback(require("../../../design/components/Icon/native/redesign/generated/PlusSmallIcon.tsx") /* PlusSmallIcon */.PlusSmallIcon, obj);
+  obj[0] = Themes.colors.WHITE;
+  obj[1] = callback(PlusSmallIcon /* PlusSmallIcon */.PlusSmallIcon, obj);
   obj[1] = callback(View, obj);
   return callback(View, obj);
 }
@@ -52,17 +57,17 @@ obj[0] = obj;
 let closure_6 = createCacheKey.createStyles(obj);
 let closure_7 = createCacheKey.createStyles((arg0) => {
   let obj = { variantOption: null, variantOptionInner: null, variantOverflowInner: null };
-  obj = { marginStart: -require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, width: 14, height: 14, borderWidth: 1, borderColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.round, justifyContent: "center", alignItems: "center" };
+  obj = { marginStart: -Themes.space.PX_4, width: 14, height: 14, borderWidth: 1, borderColor: Themes.colors.BACKGROUND_BASE_LOW, borderRadius: Themes.radii.round, justifyContent: "center", alignItems: "center" };
   obj[0] = obj;
-  obj = { width: "100%", height: "100%", justifyContent: "center", alignItems: "center", borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.round, borderWidth: null, borderColor: null };
+  obj = { width: "100%", height: "100%", justifyContent: "center", alignItems: "center", borderRadius: Themes.radii.round, borderWidth: null, borderColor: null };
   let num = 0;
   if (arg0) {
     num = 1;
   }
   obj[5] = num;
-  obj[6] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BUTTON_OUTLINE_PRIMARY_TEXT;
+  obj[6] = Themes.colors.BUTTON_OUTLINE_PRIMARY_TEXT;
   obj[1] = obj;
-  obj[2] = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_MUTED };
+  obj[2] = { backgroundColor: Themes.colors.ICON_MUTED };
   return obj;
 });
 const memoResult = require("noop").memo(function CardProductVariants(product) {

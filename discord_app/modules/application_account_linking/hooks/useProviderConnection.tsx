@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/application_account_linking/hooks/useProviderConnection.tsx
 import set from "set";
 import noop from "noop";
@@ -8,7 +9,7 @@ const result = require("set").fileFinishedImporting("modules/application_account
 
 export const useProviderConnection = function useProviderConnection(provider_id) {
   let _require = provider_id;
-  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let account = null;
@@ -19,7 +20,7 @@ export const useProviderConnection = function useProviderConnection(provider_id)
   });
   const items1 = [closure_5];
   let tmp3 = null != stateFromStores;
-  const stateFromStores1 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => fetching.isFetching());
+  const stateFromStores1 = _initialize.useStateFromStores(items1, () => fetching.isFetching());
   if (tmp3) {
     tmp3 = !stateFromStores.revoked;
   }

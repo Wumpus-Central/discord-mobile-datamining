@@ -1,9 +1,10 @@
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/stores/CollapsedVoiceChannelStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { PersistedStore } from "initialize";
 
 function handleConnectionOpen() {
-  const obj = require("../utils/SnowflakeUtils.tsx");
+  const obj = DISCORD_EPOCH;
   const keys = obj.keys(obj);
   const item = keys.forEach((arg0) => {
     if (null == channel.getChannel(arg0)) {

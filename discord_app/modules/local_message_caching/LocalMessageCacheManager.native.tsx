@@ -1,3 +1,7 @@
+import { t } from "../../../_runtime/03867_t.js";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { resetCache } from "../../utils/DateUtils.tsx";
 // discord_app/modules/local_message_caching/LocalMessageCacheManager.native.tsx
 import reinjectEphemerals from "reinjectEphemerals";
 import _slicedToArray from "_slicedToArray";
@@ -37,9 +41,9 @@ function getAllCachedMessages() {
 }
 function messageTimestampIsInInterval(arg0, arg1) {
   if (null != arg0) {
-    const tmp4 = require("../../../_runtime/03867_t.js")();
-    const tmp5 = require("../../../_runtime/03867_t.js")(arg0);
-    return require("../../utils/DateUtils.tsx") /* resetCache */.isWithinInterval(tmp4, tmp5, arg1);
+    const tmp4 = t();
+    const tmp5 = t(arg0);
+    return resetCache /* resetCache */.isWithinInterval(tmp4, tmp5, arg1);
   } else {
     return false;
   }
@@ -327,7 +331,7 @@ const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessage
 let closure_13 = 5 * require("set").Millis.MINUTE;
 let closure_14 = 14 * require("set").Millis.DAY;
 function _getMessages(outer1_2) {
-  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   let obj = Storage.get(LocalMessageCacheManagerMessageCacheKey);
   if (null == obj) {
     obj = {};
@@ -351,7 +355,7 @@ function _writeMessage(arg0, id) {
   if (typeof _getMessages !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   obj = Storage.get(LocalMessageCacheManagerMessageCacheKey);
   if (null == obj) {
     obj = {};
@@ -369,7 +373,7 @@ function _writeMessage(arg0, id) {
   } else {
     delete tmp[tmp2];
   }
-  const Storage2 = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage2 = Storage /* Storage */.Storage;
   const result = Storage2.set(LocalMessageCacheManagerMessageCacheKey, obj);
   return obj;
 }
@@ -1003,48 +1007,48 @@ class LocalMessageCacheManager extends tmp3 {
 }
 const prototype = LocalMessageCacheManager.prototype;
 prototype["_terminate"] = function _terminate() {
-  require("../../Dispatcher.tsx").unsubscribe("LOGOUT", this.handleLogout);
-  const obj = require("../../Dispatcher.tsx");
-  require("../../Dispatcher.tsx").unsubscribe("MESSAGE_CREATE", this.handleMessageCreate);
-  const obj2 = require("../../Dispatcher.tsx");
-  require("../../Dispatcher.tsx").unsubscribe("MESSAGE_SEND_FAILED", this.handleTextMessageFailed);
-  const obj3 = require("../../Dispatcher.tsx");
-  require("../../Dispatcher.tsx").unsubscribe("UPLOAD_START", this.handleFileUploadStart);
-  const obj4 = require("../../Dispatcher.tsx");
-  require("../../Dispatcher.tsx").unsubscribe("MESSAGE_DELETE", this.handleMessageDelete);
-  const obj5 = require("../../Dispatcher.tsx");
-  require("../../Dispatcher.tsx").unsubscribe("UPLOAD_RESTORE_FAILED_UPLOAD", this.handleRestoreFailedUpload);
-  const obj6 = require("../../Dispatcher.tsx");
-  require("../../Dispatcher.tsx").unsubscribe("UPLOAD_COMPLETE", this.handleUploadComplete);
-  const obj7 = require("../../Dispatcher.tsx");
-  require("../../Dispatcher.tsx").unsubscribe("UPLOAD_PROGRESS", this.handleUploadProgress);
-  const obj8 = require("../../Dispatcher.tsx");
-  require("../../Dispatcher.tsx").unsubscribe("LOAD_MESSAGES_SUCCESS", this.handleLoadMessagesSuccess);
-  const obj9 = require("../../Dispatcher.tsx");
-  require("../../Dispatcher.tsx").unsubscribe("CACHE_LOADED", this.handleCacheLoaded);
-  const obj10 = require("../../Dispatcher.tsx");
-  require("../../Dispatcher.tsx").unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  dispatcher.unsubscribe("LOGOUT", this.handleLogout);
+  const obj = dispatcher;
+  dispatcher.unsubscribe("MESSAGE_CREATE", this.handleMessageCreate);
+  const obj2 = dispatcher;
+  dispatcher.unsubscribe("MESSAGE_SEND_FAILED", this.handleTextMessageFailed);
+  const obj3 = dispatcher;
+  dispatcher.unsubscribe("UPLOAD_START", this.handleFileUploadStart);
+  const obj4 = dispatcher;
+  dispatcher.unsubscribe("MESSAGE_DELETE", this.handleMessageDelete);
+  const obj5 = dispatcher;
+  dispatcher.unsubscribe("UPLOAD_RESTORE_FAILED_UPLOAD", this.handleRestoreFailedUpload);
+  const obj6 = dispatcher;
+  dispatcher.unsubscribe("UPLOAD_COMPLETE", this.handleUploadComplete);
+  const obj7 = dispatcher;
+  dispatcher.unsubscribe("UPLOAD_PROGRESS", this.handleUploadProgress);
+  const obj8 = dispatcher;
+  dispatcher.unsubscribe("LOAD_MESSAGES_SUCCESS", this.handleLoadMessagesSuccess);
+  const obj9 = dispatcher;
+  dispatcher.unsubscribe("CACHE_LOADED", this.handleCacheLoaded);
+  const obj10 = dispatcher;
+  dispatcher.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 prototype["_initialize"] = function _initialize() {
   const self = this;
   tmp2.verbose("cache manager initialize");
-  let subscription = require("../../Dispatcher.tsx").subscribe("LOGOUT", this.handleLogout);
-  let obj = require("../../Dispatcher.tsx");
-  let subscription1 = require("../../Dispatcher.tsx").subscribe("MESSAGE_CREATE", this.handleMessageCreate);
-  let obj2 = require("../../Dispatcher.tsx");
-  const subscription2 = require("../../Dispatcher.tsx").subscribe("MESSAGE_SEND_FAILED", this.handleTextMessageFailed);
-  let obj3 = require("../../Dispatcher.tsx");
-  const subscription3 = require("../../Dispatcher.tsx").subscribe("UPLOAD_START", this.handleFileUploadStart);
-  const obj4 = require("../../Dispatcher.tsx");
-  const subscription4 = require("../../Dispatcher.tsx").subscribe("MESSAGE_DELETE", this.handleMessageDelete);
-  const obj5 = require("../../Dispatcher.tsx");
-  const subscription5 = require("../../Dispatcher.tsx").subscribe("UPLOAD_RESTORE_FAILED_UPLOAD", this.handleRestoreFailedUpload);
-  const obj6 = require("../../Dispatcher.tsx");
-  const subscription6 = require("../../Dispatcher.tsx").subscribe("UPLOAD_COMPLETE", this.handleUploadComplete);
-  const obj7 = require("../../Dispatcher.tsx");
-  const subscription7 = require("../../Dispatcher.tsx").subscribe("UPLOAD_PROGRESS", this.handleUploadProgress);
-  const obj8 = require("../../Dispatcher.tsx");
-  const subscription8 = require("../../Dispatcher.tsx").subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  let subscription = dispatcher.subscribe("LOGOUT", this.handleLogout);
+  let obj = dispatcher;
+  let subscription1 = dispatcher.subscribe("MESSAGE_CREATE", this.handleMessageCreate);
+  let obj2 = dispatcher;
+  const subscription2 = dispatcher.subscribe("MESSAGE_SEND_FAILED", this.handleTextMessageFailed);
+  let obj3 = dispatcher;
+  const subscription3 = dispatcher.subscribe("UPLOAD_START", this.handleFileUploadStart);
+  const obj4 = dispatcher;
+  const subscription4 = dispatcher.subscribe("MESSAGE_DELETE", this.handleMessageDelete);
+  const obj5 = dispatcher;
+  const subscription5 = dispatcher.subscribe("UPLOAD_RESTORE_FAILED_UPLOAD", this.handleRestoreFailedUpload);
+  const obj6 = dispatcher;
+  const subscription6 = dispatcher.subscribe("UPLOAD_COMPLETE", this.handleUploadComplete);
+  const obj7 = dispatcher;
+  const subscription7 = dispatcher.subscribe("UPLOAD_PROGRESS", this.handleUploadProgress);
+  const obj8 = dispatcher;
+  const subscription8 = dispatcher.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
   callback(function*() {
     if (c8 === 2) {
       c8 = 3;

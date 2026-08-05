@@ -1,3 +1,7 @@
+import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
+import { useInitialValue } from "../../../hooks/useInitialValue.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useBackPressHandler } from "../../../modules/routing/native/useBackPressHandler.tsx";
 // discord_app/components_native/premium/premium_guild_subscribe_modal/PremiumGuildSubscribeModal.tsx
 import _slicedToArray from "_slicedToArray";
 import PendingCancellationWarning from "PendingCancellationWarning";
@@ -17,7 +21,7 @@ export default function PremiumGuildSubscribeModal(arg0) {
   ({ guildId: require, guildBoostSlots: importDefault, intent: dependencyMap, onResult: _slicedToArray } = arg0);
   let first;
   let handleThemeChange;
-  let tmp = require("../../../hooks/useInitialValue.tsx")(() => {
+  let tmp = useInitialValue(() => {
     const items = [];
     if (null != closure_0) {
       let arr1 = closure_1;
@@ -126,7 +130,7 @@ export default function PremiumGuildSubscribeModal(arg0) {
   first = tmp2[0];
   handleThemeChange = tmp2[1];
   let items = [first];
-  require("../../../modules/routing/native/useBackPressHandler.tsx")(first.useCallback(() => {
+  useBackPressHandler(first.useCallback(() => {
     let flag = first === outer1_6.GUILD_SELECT;
     if (flag) {
       outer1_0(outer1_2[8]).closeApplyBoostModal();
@@ -136,8 +140,8 @@ export default function PremiumGuildSubscribeModal(arg0) {
     return flag;
   }, items));
   let obj = { screens: tmp.screens, initialRouteStack: initialStack, headerBackTitle: null, onStateChange: null };
-  let intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["13/7kX"]);
+  let intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["13/7kX"]);
   obj[3] = function onStateChange(arg0) {
     let tmp;
     if (arg0 != null) {
@@ -147,5 +151,5 @@ export default function PremiumGuildSubscribeModal(arg0) {
       callback(tmp.name);
     }
   };
-  return jsx(require("../../../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */.Navigator, { screens: tmp.screens, initialRouteStack: initialStack, headerBackTitle: null, onStateChange: null });
+  return jsx(NavigationStack /* NavigationStack */.Navigator, { screens: tmp.screens, initialRouteStack: initialStack, headerBackTitle: null, onStateChange: null });
 };

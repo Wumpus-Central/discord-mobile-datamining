@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/video_calls/native/components/CallBarAction.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -163,9 +165,9 @@ export const ToggledActionButton = function ToggledActionButton(showBadge) {
   const merged = Object.assign(showBadge, Object.create(null));
   let WHITE = null;
   if (isActive) {
-    WHITE = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.WHITE;
+    WHITE = Themes.unsafe_rawColors.WHITE;
   }
-  const unsafe_rawColors = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
+  const unsafe_rawColors = Themes.unsafe_rawColors;
   if (!disableTint) {
     const tmp5 = isActive ? unsafe_rawColors.PRIMARY_900 : unsafe_rawColors.WHITE;
   }
@@ -194,8 +196,8 @@ export const PrimaryActionButton = function PrimaryActionButton(isSmallSize) {
     flag = false;
   }
   const merged = Object.assign(isSmallSize, Object.create(null));
-  let obj = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.RED_400, imageStyle: null, isSmallSize: null };
-  obj = { tintColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.WHITE };
+  let obj = { backgroundColor: Themes.unsafe_rawColors.RED_400, imageStyle: null, isSmallSize: null };
+  obj = { tintColor: Themes.unsafe_rawColors.WHITE };
   obj[1] = obj;
   obj[2] = flag;
   const merged1 = Object.assign(merged);
@@ -219,7 +221,7 @@ export const NotifiedActionButton = function NotifiedActionButton(isMentioned) {
     const obj1 = { style: null, variant: "text-xs/semibold", color: "text-overlay-light", children: null };
     obj1[0] = tmp2.notificationText;
     obj1[3] = isMentioned.notifications;
-    obj[1] = tmp3(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+    obj[1] = tmp3(Text /* Text */.Text, obj1);
     obj.children = tmp3(tmp4, obj);
     obj[0] = tmp3(ActionButton, obj);
     return tmp3(tmp4, obj);

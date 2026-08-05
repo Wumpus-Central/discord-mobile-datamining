@@ -1,3 +1,7 @@
+import { registerAsset } from "../../../../_runtime/16487_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16488_registerAsset.js";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/guild_settings/native/AssetChooser.tsx
 import closure_3 from "createCacheKey";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -130,14 +134,14 @@ prototype["render"] = function render() {
   const disabled = this.props.disabled;
   const source = this.getSource();
   let obj = { accessibilityRole: "button", accessibilityLabel: null, style: null, onPress: null, disabled: null, children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["MsUY/S"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["MsUY/S"]);
   obj[2] = tmp.assetWrapper;
   obj[3] = this.handleChooseAsset;
   obj[4] = disabled;
   let tmp9 = source;
   if (null == source) {
-    tmp9 = require("../../../../_runtime/16487_registerAsset.js");
+    tmp9 = registerAsset;
   }
   obj = { source: tmp9, style: tmp.asset, children: null };
   let tmp5Result = null;
@@ -146,13 +150,13 @@ prototype["render"] = function render() {
     obj[0] = tmp.uploadIconWrapper;
     const obj1 = { style: null, source: null };
     obj1[0] = tmp.uploadIcon;
-    obj1[1] = require("../../../../_runtime/16488_registerAsset.js");
+    obj1[1] = registerAsset;
     obj[1] = tmp5(closure_5, obj1);
     tmp5Result = tmp5(closure_4, obj);
   }
   obj[2] = tmp5Result;
   obj[5] = closure_9(closure_6, obj);
-  const children = [closure_9(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj), ];
+  const children = [closure_9(PressableBase /* PressableBase */.PressableOpacity, obj), ];
   tmp5Result = null;
   if (null != source) {
     tmp5Result = null;

@@ -1,3 +1,4 @@
+import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
 // discord_app/modules/user_settings/clips/native/SettingsClipsScreen.tsx
 import noop from "noop";
 import { MobileSetting } from "MobileSetting";
@@ -12,5 +13,5 @@ export default function ClipsSettingsScreen() {
     const sections = [{ settings: items }];
     return callback(table[3]).createList({ sections });
   }, []);
-  return jsx(require("../../../settings/native/renderer/SettingLayout.tsx"), { node });
+  return jsx(SettingLayout, { node });
 };

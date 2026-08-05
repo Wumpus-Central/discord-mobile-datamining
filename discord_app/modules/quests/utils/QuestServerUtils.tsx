@@ -1,3 +1,6 @@
+import { t } from "../../../../_runtime/04484_t.js";
+import { QuestRewardTypes } from "../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
+import { questFromServerV2 } from "../types/v2/Quest.tsx";
 // discord_app/modules/quests/utils/QuestServerUtils.tsx
 import _slicedToArray from "_slicedToArray";
 
@@ -26,7 +29,7 @@ function progressFromServer(progress) {
   return obj;
 }
 function getSimpleRewardFromServer(type) {
-  if (type.type === require("../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx") /* QuestRewardTypes */.QuestRewardTypes.VIRTUAL_CURRENCY) {
+  if (type.type === QuestRewardTypes /* QuestRewardTypes */.QuestRewardTypes.VIRTUAL_CURRENCY) {
     let obj = { skuId: null, type: null, name: null, nameWithArticle: null, collectibleProduct: null, orbQuantity: null };
     ({ sku_id: obj2[0], type: obj2[1], name: obj2[2], name_with_article: obj2[3], collectible_product: obj2[4], orb_quantity: obj2[5] } = type);
   } else {
@@ -47,7 +50,7 @@ function _questsEntitlementFromServer(skuId) {
   if (null != quest_rewards) {
     quest_rewards = tenant_metadata.quest_rewards;
     const tag = quest_rewards.reward.tag;
-    if (require("../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx") /* QuestRewardTypes */.QuestRewardTypes.IN_GAME === tag) {
+    if (QuestRewardTypes /* QuestRewardTypes */.QuestRewardTypes.IN_GAME === tag) {
       obj = { questRewards: null };
       obj = { reward: null };
       const obj1 = { tag: null };
@@ -81,16 +84,16 @@ const result = require("questFromServerV2").fileFinishedImporting("modules/quest
 
 export const isQuestWithKnownConfigVersion = function isQuestWithKnownConfigVersion(config) {
   try {
-    const match = require("../../../../_runtime/04484_t.js") /* t */.match(config.config);
-    const str = require("../../../../_runtime/04484_t.js") /* t */;
+    const match = t /* t */.match(config.config);
+    const str = t /* t */;
     return match.with({ config_version: 2 }, () => true).exhaustive();
   } catch (err) {
     return false;
   }
 };
 export const questConfigFromServer = function questConfigFromServer(body) {
-  const match = require("../../../../_runtime/04484_t.js") /* t */.match(body);
-  const str = require("../../../../_runtime/04484_t.js") /* t */;
+  const match = t /* t */.match(body);
+  const str = t /* t */;
   return match.with({ config_version: 2 }, (id) => callback(table[2]).questFromServerV2(id)).exhaustive();
 };
 export const questUserStatusFromServer = function questUserStatusFromServer(body) {
@@ -112,8 +115,8 @@ export const questUserStatusFromServer = function questUserStatusFromServer(body
 export const questWithUserStatusFromServer = function questWithUserStatusFromServer(body) {
   let claimed_tier;
   let obj = { id: body.id, preview: body.preview, config: null, userStatus: null, targetedContent: null, trafficMetadataSealed: null };
-  const match = require("../../../../_runtime/04484_t.js") /* t */.match(body.config);
-  const str = require("../../../../_runtime/04484_t.js") /* t */;
+  const match = t /* t */.match(body.config);
+  const str = t /* t */;
   obj[2] = match.with({ config_version: 2 }, (id) => callback(table[2]).questFromServerV2(id)).exhaustive();
   let tmp = null;
   if (null != body.user_status) {
@@ -147,7 +150,7 @@ export const getClaimedQuestWithUserStatusFromServer = function getClaimedQuestW
   obj = { id: config.id, startsAt: config.starts_at, expiresAt: config.expires_at, features: config.features, messages: obj, assets: obj1, colors: obj2, rewards: rewards.map(getSimpleRewardFromServer), cosponsorMetadata: null };
   obj = { questName: config.messages.quest_name, gamePublisher: config.messages.game_publisher, gameTitle: config.messages.game_title };
   rewards = config.rewards;
-  obj[8] = require("../types/v2/Quest.tsx") /* questFromServerV2 */.questCosponsorMetadataFromServer(config.cosponsor_metadata);
+  obj[8] = questFromServerV2 /* questFromServerV2 */.questCosponsorMetadataFromServer(config.cosponsor_metadata);
   obj[1] = obj;
   let tmp = null;
   if (null != id.user_status) {

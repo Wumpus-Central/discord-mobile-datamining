@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/premium/powerups/native/hooks/useGuildPowerupsCoachmark.tsx
 import messagesProxy from "messagesProxy";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -19,7 +20,7 @@ const require = arg1;
 ({ AnalyticsPages: c9, AnalyticsSections: c10 } = ME);
 let closure_14 = createCacheKey.createStyles((arg0) => {
   let obj = { coachmarkImage: null, coachmarkCover: null, boostGemBackground: null };
-  obj = { height: 120, width: 260 - 2 * require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.md };
+  obj = { height: 120, width: 260 - 2 * Themes.space.PX_16, borderRadius: Themes.radii.md };
   obj[0] = obj;
   obj[1] = { resizeMode: "cover" };
   let str = "#0000003D";

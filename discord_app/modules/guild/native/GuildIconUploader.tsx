@@ -1,3 +1,9 @@
+import { registerAsset } from "../../../../_runtime/11112_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11113_registerAsset.js";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/guild/native/GuildIconUploader.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import handleThemeChange from "handleThemeChange";
@@ -57,15 +63,15 @@ prototype["renderIcon"] = function renderIcon() {
     const obj2 = { style: null, variant: "text-xs/bold", color: "text-default", children: null };
     obj2[0] = tmp.emptyGuildIconText;
     const intl = tmp10(1236).intl;
-    obj6 = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+    obj6 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
     const tmp6 = closure_7;
     const tmp7 = closure_3;
     const tmp9 = closure_4;
-    obj2[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["3UB9ad"]).toUpperCase();
-    items2[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+    obj2[3] = intl.string(getSystemLocale /* getSystemLocale */.t["3UB9ad"]).toUpperCase();
+    items2[1] = callback(Text /* Text */.Text, obj2);
     obj1[1] = items2;
     tmp6Result = tmp6(tmp7, obj1);
-    const str = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["3UB9ad"]);
+    const str = intl.string(getSystemLocale /* getSystemLocale */.t["3UB9ad"]);
   }
   return tmp6Result;
 };
@@ -88,14 +94,14 @@ prototype["renderUpload"] = function renderUpload() {
     obj3[0] = iconBackgroundColor;
     items1[1] = obj3;
     obj2[0] = items1;
-    obj2[1] = require("../../../../_runtime/11112_registerAsset.js");
+    obj2[1] = registerAsset;
     obj1[1] = tmp2(closure_4, obj2);
     obj[1] = tmp2(tmp3, obj1);
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.emptyIconWrapper;
     const obj4 = { source: null };
-    obj4[0] = require("../../../../_runtime/11113_registerAsset.js");
+    obj4[0] = registerAsset;
     obj[1] = tmp2(closure_4, obj4);
   }
   return closure_6(closure_3, obj);
@@ -121,7 +127,7 @@ prototype["render"] = function render() {
   const items1 = [closure_6(closure_3, obj), self.renderUpload()];
   obj[1] = items1;
   obj[3] = callback2(closure_3, obj);
-  return closure_6(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  return closure_6(PressableBase /* PressableBase */.PressableOpacity, obj);
 };
 GuildIconUploader.contextType = require("ManaContext").ThemeContext;
 let obj3 = { borderWidth: 2, borderStyle: "dashed", justifyContent: "center", alignItems: "center", borderColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };

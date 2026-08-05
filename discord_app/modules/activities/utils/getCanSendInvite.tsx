@@ -1,3 +1,6 @@
+import { getPartySize } from "getPartySize.tsx";
+import { hasPartySize } from "hasPartySize.tsx";
+import { result } from "isInviteActive.tsx";
 // discord_app/modules/activities/utils/getCanSendInvite.tsx
 import ME from "ME";
 
@@ -10,7 +13,7 @@ export const getCanSendInvite = function getCanSendInvite(findActivityResult, au
   if (author.author.id === id1) {
     return false;
   } else {
-    if (require("isInviteActive.tsx")(findActivityResult, author, application.id)) {
+    if (result(findActivityResult, author, application.id)) {
       const activity = author.activity;
       let type;
       if (activity != null) {
@@ -19,10 +22,10 @@ export const getCanSendInvite = function getCanSendInvite(findActivityResult, au
       if (type !== constants2.JOIN_REQUEST) {
         return false;
       } else if (tmp11(5837)(findActivityResult, constants.JOIN)) {
-        const partySize = require("getPartySize.tsx") /* getPartySize */.getPartySize(findActivityResult);
-        const obj = require("getPartySize.tsx") /* getPartySize */;
+        const partySize = getPartySize /* getPartySize */.getPartySize(findActivityResult);
+        const obj = getPartySize /* getPartySize */;
         const tmp5 = require;
-        const hasPartySizeResult = require("hasPartySize.tsx") /* hasPartySize */.hasPartySize(partySize);
+        const hasPartySizeResult = hasPartySize /* hasPartySize */.hasPartySize(partySize);
         let isPartyFullResult = !hasPartySizeResult;
         if (hasPartySizeResult) {
           isPartyFullResult = tmp5(11070).isPartyFull(partySize);

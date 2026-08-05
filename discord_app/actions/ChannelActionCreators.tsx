@@ -1,3 +1,10 @@
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { isChangelogChannel } from "../modules/changelog/utils/isChangelogChannel.tsx";
+import { getRootNavigationRef } from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
+import { transitionTo } from "../modules/routing/router_utils.tsx";
+import { _httpGetWithCountryCodeQuery } from "../utils/StoreUtils.tsx";
+import { SelectedChannelActionCreators } from "SelectedChannelActionCreators.tsx";
 // discord_app/actions/ChannelActionCreators.tsx
 import _slicedToArray from "_slicedToArray";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
@@ -289,11 +296,11 @@ export default {
           tmp3 = channel;
           const tmp6Result = tmp6(4293);
         } else {
-          const privateChannel = require("SelectedChannelActionCreators.tsx").selectPrivateChannel(channel.id);
+          const privateChannel = SelectedChannelActionCreators.selectPrivateChannel(channel.id);
           tmp3 = channel;
-          const obj3 = require("SelectedChannelActionCreators.tsx");
+          const obj3 = SelectedChannelActionCreators;
         }
-        obj2 = require("../modules/main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */;
+        obj2 = getRootNavigationRef /* getRootNavigationRef */;
         tmp6 = require;
       }
     }
@@ -416,8 +423,8 @@ export default {
   },
   _openPrivateChannel(body) {
     const tmp = callback2(body);
-    require("../Dispatcher.tsx").dispatch({ type: "CHANNEL_CREATE", channel: tmp });
-    const obj = require("../Dispatcher.tsx");
+    dispatcher.dispatch({ type: "CHANNEL_CREATE", channel: tmp });
+    const obj = dispatcher;
     const tmp2 = importDefault;
     const tmp5 = require;
     if (null != obj2.getRootNavigationRef()) {
@@ -438,7 +445,7 @@ export default {
     if (arg2 === undefined) {
       flag2 = false;
     }
-    if (require("../modules/changelog/utils/isChangelogChannel.tsx")(id)) {
+    if (isChangelogChannel(id)) {
       let tmpResult = tmp(698);
       let obj = { last_changelog_id: null, unread_count: null };
       obj[0] = handleUserSettingsProtoStoreChange.latestChangelogId();
@@ -449,13 +456,13 @@ export default {
     obj = { id, guild_id: "Array", parent_id: "isArray" };
     tmpResult.dispatch({ type: "CHANNEL_DELETE", channel: obj, silent: flag2 });
     if (flag) {
-      require("../modules/routing/router_utils.tsx") /* transitionTo */.transitionTo(constants2.FRIENDS);
-      const obj5 = require("../modules/routing/router_utils.tsx") /* transitionTo */;
+      transitionTo /* transitionTo */.transitionTo(constants2.FRIENDS);
+      const obj5 = transitionTo /* transitionTo */;
     }
-    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     const obj1 = { url: closure_11.CHANNEL(id), query: { silent: flag2 }, oldFormErrors: true, rejectWithError: null };
-    obj1[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
-    const obj7 = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
+    obj1[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    const obj7 = sendRequest /* sendRequest */;
     const delResult = HTTP.del(obj1);
     return HTTP.del(obj1).then(() => {
       const AccessibilityAnnouncer = callback(4131).AccessibilityAnnouncer;
@@ -468,7 +475,7 @@ export default {
     });
   },
   bulkLeaveGroupDMs(channel_ids) {
-    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     obj = { url: closure_11.USER_CHANNELS_BULK_LEAVE, body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { channel_ids };
     return HTTP.post(obj);
@@ -550,11 +557,11 @@ export default {
     });
   },
   removeRecipient(arg0, arg1) {
-    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     return HTTP.del({ url: closure_11.CHANNEL_RECIPIENT(arg0, arg1), oldFormErrors: true, rejectWithError: true });
   },
   setDMOwner(arg0, owner) {
-    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     obj = { url: closure_11.CHANNEL(arg0), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { owner };
     return HTTP.patch(obj);
@@ -894,11 +901,11 @@ export default {
     })();
   },
   convertToGuild(arg0) {
-    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     return HTTP.post({ url: closure_11.CHANNEL_CONVERT(arg0), oldFormErrors: true, rejectWithError: true });
   },
   preload(arg0, channelId) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     let tmp = null;
     if (arg0 !== closure_13) {
       tmp = arg0;
@@ -913,7 +920,7 @@ export default {
     } else {
       result = closure_11.CHANNEL_STORE_LISTING(arg0);
     }
-    const result1 = _require("../utils/StoreUtils.tsx").httpGetWithCountryCodeQuery(result);
+    const result1 = __httpGetWithCountryCodeQuery.httpGetWithCountryCodeQuery(result);
     return result1.then((body) => {
       let obj = outer1_1(outer1_2[13]);
       obj = { type: "STORE_LISTING_FETCH_SUCCESS", channelId: closure_0, storeListing: body.body };

@@ -1,3 +1,6 @@
+import { CollapsingText } from "../../../Button/native/BaseTextButton.native.tsx";
+import { MINIMUM_HIT_AREA } from "../../../Button/native/ButtonConstants.native.tsx";
+import { useInputStyles } from "../../../Input/native/InputFieldContainer.native.tsx";
 // discord_app/design/components/experimental/Button/native/InputButton.native.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { Text } from "get ActivityIndicator";
@@ -34,10 +37,10 @@ const forwardRefResult = require("noop").forwardRef((size, ref) => {
   }
   ({ accessibilityLabel, accessibilityValue, maxFontSizeMultiplier } = size);
   if (undefined === maxFontSizeMultiplier) {
-    maxFontSizeMultiplier = require("../../../Button/native/ButtonConstants.native.tsx") /* MINIMUM_HIT_AREA */.BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER;
+    maxFontSizeMultiplier = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER;
   }
   const tmp4 = callback(size, closure_2);
-  let obj = require("../../../Input/native/InputFieldContainer.native.tsx") /* useInputStyles */;
+  let obj = useInputStyles /* useInputStyles */;
   const inputStyles = obj.useInputStyles({ size: str, isRound: undefined !== isRound && isRound, hasLeadingIcon: tmp7 });
   const tmp9 = callback2();
   if (null != icon) {
@@ -84,7 +87,7 @@ const forwardRefResult = require("noop").forwardRef((size, ref) => {
     }
     obj4[3] = value;
     obj2.textElement = <Text style={null} numberOfLines={1} maxFontSizeMultiplier={null}>{null}</Text>;
-    return jsx(require("../../../Button/native/BaseTextButton.native.tsx") /* CollapsingText */.BaseTextButton, {});
+    return jsx(CollapsingText /* CollapsingText */.BaseTextButton, {});
   }
 });
 const result = require("get ActivityIndicator").fileFinishedImporting("design/components/experimental/Button/native/InputButton.native.tsx");

@@ -1,3 +1,5 @@
+import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
+import { create } from "gradient.tsx";
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_icon.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
@@ -27,10 +29,10 @@ prototype["create"] = function create(arr) {
   let obj = { boxAnimationUrl: "", trinketAnimationUrl: "", trinketGlowAnimationUrl: "" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, require("../../../../../../../_runtime/metro/01307__.js").MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = require("../../../../../../../_runtime/metro/01307__.js").reflectionMergePartial(this, obj, arr);
-    const tmpResult = require("../../../../../../../_runtime/metro/01307__.js");
+    const result = 01307__.reflectionMergePartial(this, obj, arr);
+    const tmpResult = 01307__;
   }
   return obj;
 };
@@ -57,7 +59,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (4 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let Gradient = require("gradient.tsx") /* create */.Gradient;
+        let Gradient = create /* create */.Gradient;
         let tmp24 = Gradient;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -84,7 +86,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onRead;
+              onRead = 01307__.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -100,27 +102,27 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(boxAnimationUrl, tag, writeUnknownFields) {
   if ("" !== boxAnimationUrl.boxAnimationUrl) {
-    tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(boxAnimationUrl.boxAnimationUrl);
-    const tagResult = tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(1, 01307__.WireType.LengthDelimited).string(boxAnimationUrl.boxAnimationUrl);
+    const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
   }
   if ("" !== boxAnimationUrl.trinketAnimationUrl) {
-    tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(boxAnimationUrl.trinketAnimationUrl);
-    const tagResult1 = tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(2, 01307__.WireType.LengthDelimited).string(boxAnimationUrl.trinketAnimationUrl);
+    const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
   }
   if ("" !== boxAnimationUrl.trinketGlowAnimationUrl) {
-    tag.tag(3, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(boxAnimationUrl.trinketGlowAnimationUrl);
-    const tagResult2 = tag.tag(3, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(3, 01307__.WireType.LengthDelimited).string(boxAnimationUrl.trinketGlowAnimationUrl);
+    const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
   }
   if (boxAnimationUrl.gradient) {
-    const Gradient = require("gradient.tsx") /* create */.Gradient;
-    const tagResult3 = tag.tag(4, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined = Gradient.internalBinaryWrite(boxAnimationUrl.gradient, tag.tag(4, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = Gradient.internalBinaryWrite(boxAnimationUrl.gradient, tag.tag(4, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const Gradient = create /* create */.Gradient;
+    const tagResult3 = tag.tag(4, 01307__.WireType.LengthDelimited);
+    const joined = Gradient.internalBinaryWrite(boxAnimationUrl.gradient, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = Gradient.internalBinaryWrite(boxAnimationUrl.gradient, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onWrite;
+      onWrite = 01307__.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, boxAnimationUrl, tag);

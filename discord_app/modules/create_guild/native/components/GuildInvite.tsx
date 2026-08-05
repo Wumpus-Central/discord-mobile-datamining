@@ -1,3 +1,6 @@
+import { GroupIcon } from "../../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/create_guild/native/components/GuildInvite.tsx
 import Text from "Text";
 import useNavigation from "useNavigation";
@@ -27,12 +30,12 @@ const require = arg1;
 function SeeMoreFooter(openInviteSheet) {
   let obj = { icon: null, onPress: null, label: null, end: true };
   obj = { style: createCacheKey().friendIcon, children: null };
-  obj[1] = callback(require("../../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx") /* GroupIcon */.GroupIcon, { size: "sm" });
+  obj[1] = callback(GroupIcon /* GroupIcon */.GroupIcon, { size: "sm" });
   obj[0] = callback(closure_6, obj);
   obj[1] = openInviteSheet.openInviteSheet;
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.zrLIIz);
-  return callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.zrLIIz);
+  return callback(TableRowInner /* TableRowInner */.TableRow, obj);
 }
 function GuildInviteSuggestionRows(openInviteSheet) {
   let require;

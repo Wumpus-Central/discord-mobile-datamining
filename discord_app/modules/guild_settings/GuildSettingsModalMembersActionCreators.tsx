@@ -1,3 +1,5 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/guild_settings/GuildSettingsModalMembersActionCreators.tsx
 import ME from "ME";
 
@@ -8,15 +10,15 @@ const result = require("sendRequest").fileFinishedImporting("modules/guild_setti
 
 export default {
   startEditingRoles(id, id2) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "GUILD_SETTINGS_MODAL_MEMBERS_START_EDITING", guildId: id, userId: id2 };
     obj.dispatch(obj);
   },
   stopEditingRoles() {
-    require("../../Dispatcher.tsx").dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_STOP_EDITING" });
+    dispatcher.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_STOP_EDITING" });
   },
   toggleRole(roleId, state) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "GUILD_SETTINGS_MODAL_MEMBERS_TOGGLE_ROLE", roleId, state };
     obj.dispatch(obj);
   },
@@ -24,15 +26,15 @@ export default {
     function onEnd() {
       return callback(table[1]).dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_ROLES_SAVE_COMPLETE" });
     }
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_ROLES_SAVE" });
-    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     obj = { url: closure_3.GUILD_MEMBER(guildId, outer1_1), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { roles };
     HTTP.patch(obj).then(onEnd, onEnd);
   },
   startEditingNickname() {
-    require("../../Dispatcher.tsx").dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_START_EDITING_NICKNAME" });
+    dispatcher.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_START_EDITING_NICKNAME" });
   },
   changeNickname(guildId, outer1_1, nick) {
     const _require = outer1_1;
@@ -41,13 +43,13 @@ export default {
     } else {
       GUILD_MEMBER_NICKResult = closure_3.GUILD_MEMBER(guildId, outer1_1);
     }
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME" });
-    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     obj = { url: GUILD_MEMBER_NICKResult, body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { nick };
-    obj[3] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
-    const obj4 = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+    obj[3] = _sendRequest.rejectWithMigratedError();
+    const obj4 = _sendRequest;
     HTTP.patch(obj).then(() => {
       callback(table[1]).dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME_SUCCESS" });
     }, (status) => {

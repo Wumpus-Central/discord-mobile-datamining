@@ -1,3 +1,6 @@
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx";
+import { context } from "../window/native/AppEntryKeyContext.tsx";
+import { useSafeAreaInsets } from "useSafeAreaInsets.native.tsx";
 // discord_app/modules/safe_area/useStableSafeAreaInsets.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -41,14 +44,14 @@ export default function useStableSafeAreaInsets() {
 };
 export const getStableSafeAreaInsets = function getStableSafeAreaInsets(DEFAULT_APP_ENTRY_KEY) {
   if (DEFAULT_APP_ENTRY_KEY === undefined) {
-    DEFAULT_APP_ENTRY_KEY = require("../window/native/AppEntryKeyContext.tsx") /* context */.DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = context /* context */.DEFAULT_APP_ENTRY_KEY;
   }
   if (obj.isAndroid()) {
-    let stableSafeAreaInsets = require("../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx").getStableSafeAreaInsets(DEFAULT_APP_ENTRY_KEY);
-    const obj3 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx");
+    let stableSafeAreaInsets = enforcing.getStableSafeAreaInsets(DEFAULT_APP_ENTRY_KEY);
+    const obj3 = enforcing;
   } else {
-    stableSafeAreaInsets = require("useSafeAreaInsets.native.tsx") /* useSafeAreaInsets */.getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY);
-    const tmp3Result = require("useSafeAreaInsets.native.tsx") /* useSafeAreaInsets */;
+    stableSafeAreaInsets = useSafeAreaInsets /* useSafeAreaInsets */.getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY);
+    const tmp3Result = useSafeAreaInsets /* useSafeAreaInsets */;
   }
   return stableSafeAreaInsets;
 };

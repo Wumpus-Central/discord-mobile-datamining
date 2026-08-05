@@ -1,3 +1,10 @@
+import { v1 } from "../../../../../_runtime/00514_v1.js";
+import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { getChannelIconURL } from "../../../../modules/channel/getChannelIcon.tsx";
+import { getReactNativeSVGImageSource } from "../../../../modules/svg/native/getReactNativeSVGImageSource.tsx";
+import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
+import { SolidCutout } from "../../../components/Icon/native/ClipView.tsx";
 // discord_app/design/void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -21,10 +28,10 @@ function StaticNativeCutoutAvatarImage(cutout) {
     return items;
   }, items);
   const obj = { style, cutouts: memo, children: null };
-  const tmp2 = require("../../../../modules/svg/native/getReactNativeSVGImageSource.tsx")(source);
+  const tmp2 = getReactNativeSVGImageSource(source);
   const items1 = [obj.image, imageStyle];
-  obj[2] = callback(require("../../../../components_native/common/FastImage.tsx"), { style: items1, source: tmp2, usesSmallCache: true });
-  return callback(require("../../../components/Icon/native/ClipView.tsx"), obj);
+  obj[2] = callback(preload, { style: items1, source: tmp2, usesSmallCache: true });
+  return callback(SolidCutout, obj);
 }
 function AnimatedNativeCutoutAvatarImage(cutout) {
   let imageStyle;
@@ -68,7 +75,7 @@ function AnimatedNativeCutoutAvatarImage(cutout) {
   const animatedProps = obj.useAnimatedProps(fn);
   obj = { style, animatedProps, children: null };
   const items = [obj.image, imageStyle];
-  obj[2] = callback(require("../../../../components_native/common/FastImage.tsx"), { style: items, source: require("../../../../modules/svg/native/getReactNativeSVGImageSource.tsx")(source), usesSmallCache: true });
+  obj[2] = callback(preload, { style: items, source: getReactNativeSVGImageSource(source), usesSmallCache: true });
   return callback(cutout(8103).ClipViewAnimated, obj);
 }
 function NativeCutoutAvatarImage(animate) {
@@ -117,7 +124,7 @@ function CutoutAvatarImage(arg0) {
   }
   let Circle = require;
   let obj = dependencyMap;
-  let obj1 = require("../../../../../_runtime/00514_v1.js") /* v1 */;
+  let obj1 = v1 /* v1 */;
   const v4Result = obj1.v4();
   const tintColor = closure_4.flatten(style).tintColor;
   if (null != source) {
@@ -129,12 +136,12 @@ function CutoutAvatarImage(arg0) {
       obj1 = { tintColor: null };
       obj1[0] = tintColor;
       obj[0] = obj1;
-      obj[1] = require("../../../../modules/svg/native/getReactNativeSVGImageSource.tsx")(source);
-      obj[5] = callback(require("../../../../components_native/common/FastImage.tsx"), obj);
+      obj[1] = getReactNativeSVGImageSource(source);
+      obj[5] = callback(preload, obj);
       let tmp8 = callback(Circle(8437).ForeignObject, obj);
       let tmp9 = importDefault;
       let tmp10 = callback;
-      const tmp14 = require("../../../../components_native/common/FastImage.tsx");
+      const tmp14 = preload;
     }
     const obj2 = { style: null, children: null };
     obj2[0] = style;
@@ -196,7 +203,7 @@ function CutoutAvatarImage(arg0) {
     tmp9Result = tmp9(8437);
   }
   const obj10 = { x: "0", y: "0", height: "100%", width: "100%", href: null, mask: null };
-  obj10[4] = require("../../../../modules/svg/native/getReactNativeSVGImageSource.tsx")(source);
+  obj10[4] = getReactNativeSVGImageSource(source);
   obj10[5] = "url(#" + v4Result + ")";
   tmp8 = callback(Circle(8437).Image, obj10);
   tmp9 = importDefault;
@@ -280,7 +287,7 @@ const memoResult = importAllResult.memo((style) => {
   } else if (null != user) {
     avatarSource = user.getAvatarSource(tmp6, animate2, size2);
   } else if (null != channel) {
-    let obj1 = require("../../../../modules/channel/getChannelIcon.tsx") /* getChannelIconURL */;
+    let obj1 = getChannelIconURL /* getChannelIconURL */;
     const channelIconURL = obj1.getChannelIconURL(channel, size2);
     let tmp13 = channelIconURL;
     if (typeof channelIconURL !== "number") {
@@ -301,9 +308,9 @@ const memoResult = importAllResult.memo((style) => {
     const user2 = obj.user;
     if (null != user2) {
       if (!tmp30) {
-        const obj4 = require("../../../../utils/AvatarUtils.tsx");
-        source = obj4.makeSource(require("../../../../utils/AvatarUtils.tsx").getDefaultAvatarURL(user2.id, user2.discriminator));
-        const obj5 = require("../../../../utils/AvatarUtils.tsx");
+        const obj4 = getAvatarURL;
+        source = obj4.makeSource(getAvatarURL.getDefaultAvatarURL(user2.id, user2.discriminator));
+        const obj5 = getAvatarURL;
       }
     }
     if (null != cutout) {
@@ -340,11 +347,11 @@ const memoResult = importAllResult.memo((style) => {
         tmp22 = source;
       }
       obj2[2] = tmp22;
-      return callback(require("../../../../components_native/common/FastImage.tsx"), obj2, "image");
+      return callback(preload, obj2, "image");
     }
   }
 }, function customShallowEqual(source, source2) {
-  if (require("../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(source, source2, ["source"])) {
+  if (shallowEqual(source, source2, ["source"])) {
     source = source.source;
     const source1 = source2.source;
     if (source === source1) {
@@ -361,7 +368,7 @@ const memoResult = importAllResult.memo((style) => {
               } else {
                 let num = 0;
                 if (0 < source.length) {
-                  while (require("../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(source[num], source1[num])) {
+                  while (shallowEqual(source[num], source1[num])) {
                     num = num + 1;
                   }
                   return false;

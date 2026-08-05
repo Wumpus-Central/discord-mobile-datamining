@@ -1,3 +1,5 @@
+import { AccessibilityAnnouncer } from "../../design/shared.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/relationships/RelationshipManager.tsx
 import { RelationshipTypes } from "ME";
 import "initialize";
@@ -5,20 +7,20 @@ import "initialize";
 function handleRelationshipAdd(relationship) {
   relationship = relationship.relationship;
   if (!tmp) {
-    const AccessibilityAnnouncer = require("../../design/shared.tsx") /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const AccessibilityAnnouncer = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     const obj = { username: null };
     obj[0] = relationship.user.username;
-    AccessibilityAnnouncer.announce(intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.zH0kC7, obj));
+    AccessibilityAnnouncer.announce(intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.zH0kC7, obj));
     const result = importAll(16428).showPendingNotification(relationship.user);
     const obj2 = importAll(16428);
   }
 }
 function handleFriendRequestAccepted(user) {
   user = user.user;
-  const AccessibilityAnnouncer = require("../../design/shared.tsx") /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  AccessibilityAnnouncer.announce(intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t["/+7xky"], { username: user.username }));
+  const AccessibilityAnnouncer = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  AccessibilityAnnouncer.announce(intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["/+7xky"], { username: user.username }));
   const result = importAll(16428).showAcceptedNotification(user);
 }
 let prototype = function RelationshipManager() {

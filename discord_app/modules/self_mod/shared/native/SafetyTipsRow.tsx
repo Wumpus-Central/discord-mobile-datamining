@@ -1,3 +1,4 @@
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 // discord_app/modules/self_mod/shared/native/SafetyTipsRow.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -24,5 +25,5 @@ export default function SafetyTipsRow(arg0) {
   obj[1] = tip;
   obj[2] = description;
   obj[3] = end;
-  return jsx(_require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, { icon: null, label: null, subLabel: null, end: null });
+  return jsx(_TableRowInner.TableRow, { icon: null, label: null, subLabel: null, end: null });
 };

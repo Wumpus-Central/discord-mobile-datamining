@@ -1,3 +1,7 @@
+import { keys } from "../../ConstantsIOS.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
+import { okAsync } from "../app_database/modules/KvCacheVersion.tsx";
+import { _writeCaches } from "CacheActionCreators.tsx";
 // discord_app/modules/cache/CacheManager.native.tsx
 import _handleConnectionOpen from "_handleConnectionOpen";
 import handleClearCaches from "handleClearCaches";
@@ -25,7 +29,7 @@ class CacheManager extends tmp3 {
 }
 const prototype = CacheManager.prototype;
 prototype["handleConnectionOpen"] = function handleConnectionOpen() {
-  const result = require("../app_database/modules/KvCacheVersion.tsx").doesDatabaseVersionMatchJsConstants();
+  const result = okAsync.doesDatabaseVersionMatchJsConstants();
   result.then((arg0) => {
     if (!arg0) {
       callback(table[6]).writeCaches();
@@ -37,10 +41,10 @@ prototype["handleConnectionClose"] = function handleConnectionClose() {
   return false;
 };
 prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
-  const obj = require("../../utils/PlatformUtils.tsx") /* set */;
+  const obj = set /* set */;
   const tmp = require;
-  const AppStates = require("../../ConstantsIOS.tsx") /* keys */.AppStates;
-  let isConnectedResult = (require("../../utils/PlatformUtils.tsx") /* set */.isAndroid() ? AppStates.BACKGROUND : AppStates.INACTIVE) === state.state;
+  const AppStates = keys /* keys */.AppStates;
+  let isConnectedResult = (set /* set */.isAndroid() ? AppStates.BACKGROUND : AppStates.INACTIVE) === state.state;
   if (isConnectedResult) {
     isConnectedResult = connected.isConnected();
   }
@@ -55,8 +59,8 @@ prototype["handleWindowFocus"] = function handleWindowFocus(focused) {
     const _Date = Date;
     if (Date.now() - lastWriteTime.lastWriteTime > closure_6) {
       tmp2.verbose("Writing cache from window unfocus");
-      require("CacheActionCreators.tsx") /* _writeCaches */.writeCaches();
-      const obj = require("CacheActionCreators.tsx") /* _writeCaches */;
+      _writeCaches /* _writeCaches */.writeCaches();
+      const obj = _writeCaches /* _writeCaches */;
     } else {
       tmp2.verbose("Not writing cache from window unfocus");
     }

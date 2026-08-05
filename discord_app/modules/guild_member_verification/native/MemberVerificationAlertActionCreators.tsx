@@ -1,3 +1,4 @@
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
 // discord_app/modules/guild_member_verification/native/MemberVerificationAlertActionCreators.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -24,7 +25,7 @@ export const openMemberVerificationSuccessAlert = function openMemberVerificatio
       });
     }
   };
-  require("../../../actions/native/AlertActionCreators.tsx").openLazy(obj);
+  AlertActionCreators.openLazy(obj);
 };
 export const openMemberVerificationPendingAlert = function openMemberVerificationPendingAlert(guildId) {
   let closure_0 = guildId;
@@ -51,7 +52,7 @@ export const openMemberVerificationPendingAlert = function openMemberVerificatio
       });
     }
   };
-  require("../../../actions/native/AlertActionCreators.tsx").openLazy(obj);
+  AlertActionCreators.openLazy(obj);
 };
 export const openMemberVerificationCancelPendingAlert = function openMemberVerificationCancelPendingAlert(arg0) {
   let dependencyMap;
@@ -83,7 +84,7 @@ export const openMemberVerificationCancelPendingAlert = function openMemberVerif
       });
     }
   };
-  require("../../../actions/native/AlertActionCreators.tsx").openLazy(obj);
+  AlertActionCreators.openLazy(obj);
 };
 export const openMemberVerificationRejectedAlert = function openMemberVerificationRejectedAlert(canWithdraw) {
   let onClose;
@@ -181,7 +182,7 @@ export const openMemberVerificationUpdateAlert = function openMemberVerification
       });
     }
   };
-  require("../../../actions/native/AlertActionCreators.tsx").openLazy(obj);
+  AlertActionCreators.openLazy(obj);
 };
 export function closeMemberVerificationAlert(arg0) {
   let closure_0 = arg0;
@@ -217,5 +218,5 @@ export const openMemberVerificationIncompleteAlert = function openMemberVerifica
       });
     }
   };
-  require("../../../actions/native/AlertActionCreators.tsx").openLazy(obj);
+  AlertActionCreators.openLazy(obj);
 };

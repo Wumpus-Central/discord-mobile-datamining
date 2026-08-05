@@ -1,3 +1,7 @@
+import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
+import { create } from "../../common/v1/localized_string.tsx";
+import { create } from "cta_button.tsx";
+import { create } from "help_article.tsx";
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/announcement_modal_variant_1_properties.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
@@ -57,10 +61,10 @@ prototype["create"] = function create(arr) {
   let obj = { header: "", pill: "", body: "", imageLink: "", imageLinkLightTheme: "" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, require("../../../../../../../_runtime/metro/01307__.js").MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = require("../../../../../../../_runtime/metro/01307__.js").reflectionMergePartial(this, obj, arr);
-    const tmpResult = require("../../../../../../../_runtime/metro/01307__.js");
+    const result = 01307__.reflectionMergePartial(this, obj, arr);
+    const tmpResult = 01307__;
   }
   return obj;
 };
@@ -91,7 +95,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (6 === tmp5) {
         let tmp37 = require;
         let tmp38 = dependencyMap;
-        let LocalizedString3 = require("../../common/v1/localized_string.tsx") /* create */.LocalizedString;
+        let LocalizedString3 = create /* create */.LocalizedString;
         let tmp39 = LocalizedString3;
         let tmp40 = pos;
         let tmp41 = readUnknownField;
@@ -99,7 +103,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (7 === tmp5) {
         let tmp32 = require;
         let tmp33 = dependencyMap;
-        let LocalizedString2 = require("../../common/v1/localized_string.tsx") /* create */.LocalizedString;
+        let LocalizedString2 = create /* create */.LocalizedString;
         let tmp34 = LocalizedString2;
         let tmp35 = pos;
         let tmp36 = readUnknownField;
@@ -107,7 +111,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (8 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let LocalizedString = require("../../common/v1/localized_string.tsx") /* create */.LocalizedString;
+        let LocalizedString = create /* create */.LocalizedString;
         let tmp29 = LocalizedString;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -115,7 +119,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (9 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let HelpArticle = require("help_article.tsx") /* create */.HelpArticle;
+        let HelpArticle = create /* create */.HelpArticle;
         let tmp24 = HelpArticle;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -142,7 +146,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onRead;
+              onRead = 01307__.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -158,53 +162,53 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(header, tag, writeUnknownFields) {
   if ("" !== header.header) {
-    tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(header.header);
-    const tagResult = tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(1, 01307__.WireType.LengthDelimited).string(header.header);
+    const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
   }
   if ("" !== header.pill) {
-    tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(header.pill);
-    const tagResult1 = tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(2, 01307__.WireType.LengthDelimited).string(header.pill);
+    const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
   }
   if ("" !== header.body) {
-    tag.tag(3, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(header.body);
-    const tagResult2 = tag.tag(3, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(3, 01307__.WireType.LengthDelimited).string(header.body);
+    const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
   }
   if ("" !== header.imageLink) {
-    tag.tag(4, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(header.imageLink);
-    const tagResult3 = tag.tag(4, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(4, 01307__.WireType.LengthDelimited).string(header.imageLink);
+    const tagResult3 = tag.tag(4, 01307__.WireType.LengthDelimited);
   }
   if ("" !== header.imageLinkLightTheme) {
-    tag.tag(5, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(header.imageLinkLightTheme);
-    const tagResult4 = tag.tag(5, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(5, 01307__.WireType.LengthDelimited).string(header.imageLinkLightTheme);
+    const tagResult4 = tag.tag(5, 01307__.WireType.LengthDelimited);
   }
   if (header.headerLocalized) {
-    const LocalizedString = require("../../common/v1/localized_string.tsx") /* create */.LocalizedString;
-    const tagResult5 = tag.tag(6, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(6, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(6, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const LocalizedString = create /* create */.LocalizedString;
+    const tagResult5 = tag.tag(6, 01307__.WireType.LengthDelimited);
+    const joined = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.pillLocalized) {
-    const LocalizedString2 = require("../../common/v1/localized_string.tsx") /* create */.LocalizedString;
-    const tagResult6 = tag.tag(7, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined1 = LocalizedString2.internalBinaryWrite(header.pillLocalized, tag.tag(7, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(header.pillLocalized, tag.tag(7, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const LocalizedString2 = create /* create */.LocalizedString;
+    const tagResult6 = tag.tag(7, 01307__.WireType.LengthDelimited);
+    const joined1 = LocalizedString2.internalBinaryWrite(header.pillLocalized, tag.tag(7, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(header.pillLocalized, tag.tag(7, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.bodyLocalized) {
-    const LocalizedString3 = require("../../common/v1/localized_string.tsx") /* create */.LocalizedString;
-    const tagResult7 = tag.tag(8, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined2 = LocalizedString3.internalBinaryWrite(header.bodyLocalized, tag.tag(8, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = LocalizedString3.internalBinaryWrite(header.bodyLocalized, tag.tag(8, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const LocalizedString3 = create /* create */.LocalizedString;
+    const tagResult7 = tag.tag(8, 01307__.WireType.LengthDelimited);
+    const joined2 = LocalizedString3.internalBinaryWrite(header.bodyLocalized, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult2 = LocalizedString3.internalBinaryWrite(header.bodyLocalized, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.helpArticle) {
-    const HelpArticle = require("help_article.tsx") /* create */.HelpArticle;
-    const tagResult8 = tag.tag(9, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined3 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(9, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult3 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(9, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const HelpArticle = create /* create */.HelpArticle;
+    const tagResult8 = tag.tag(9, 01307__.WireType.LengthDelimited);
+    const joined3 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(9, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult3 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(9, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onWrite;
+      onWrite = 01307__.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, header, tag);
@@ -238,7 +242,7 @@ let items = [
     name: "body_localized",
     kind: "message",
     T() {
-      return require("../../common/v1/localized_string.tsx") /* create */.LocalizedString;
+      return create /* create */.LocalizedString;
     }
   },
   {
@@ -268,10 +272,10 @@ prototype2["create"] = function create(arr) {
   let obj = { heroArtLocalizedVideoLinksDarkTheme: {}, heroArtLocalizedVideoLinksLightTheme: {}, heroArtVideoSubtitleLinks: {} };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, require("../../../../../../../_runtime/metro/01307__.js").MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = require("../../../../../../../_runtime/metro/01307__.js").reflectionMergePartial(this, obj, arr);
-    const tmpResult = require("../../../../../../../_runtime/metro/01307__.js");
+    const result = 01307__.reflectionMergePartial(this, obj, arr);
+    const tmpResult = 01307__;
   }
   return obj;
 };
@@ -317,7 +321,7 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onRead;
+              onRead = 01307__.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -449,11 +453,11 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(heroArtLocalize
   while (iter !== undefined) {
     let tmp3 = require;
     let tmp4 = dependencyMap;
-    let tagResult = tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    let tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
-    let tagResult1 = forkResult.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    let tagResult1 = forkResult.tag(1, 01307__.WireType.LengthDelimited);
     let stringResult = tagResult1.string(nextResult);
-    let tagResult2 = stringResult.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    let tagResult2 = stringResult.tag(2, 01307__.WireType.LengthDelimited);
     let stringResult1 = tagResult2.string(heroArtLocalizedVideoLinksDarkTheme.heroArtLocalizedVideoLinksDarkTheme[nextResult]);
     let joined = stringResult1.join();
     continue;
@@ -462,11 +466,11 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(heroArtLocalize
   for (const item10053 of keys1) {
     let tmp7 = require;
     let tmp8 = dependencyMap;
-    let tagResult3 = arg1.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    let tagResult3 = arg1.tag(2, 01307__.WireType.LengthDelimited);
     let forkResult1 = tagResult3.fork();
-    let tagResult4 = forkResult1.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    let tagResult4 = forkResult1.tag(1, 01307__.WireType.LengthDelimited);
     let stringResult2 = tagResult4.string(item10053);
-    let tagResult5 = stringResult2.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    let tagResult5 = stringResult2.tag(2, 01307__.WireType.LengthDelimited);
     let stringResult3 = tagResult5.string(arg0.heroArtLocalizedVideoLinksLightTheme[item10053]);
     let joined1 = stringResult3.join();
     continue;
@@ -477,11 +481,11 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(heroArtLocalize
   while (iter2 !== undefined) {
     let tmp12 = require;
     let tmp13 = dependencyMap;
-    let tagResult6 = tag.tag(3, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    let tagResult6 = tag.tag(3, 01307__.WireType.LengthDelimited);
     let forkResult2 = tagResult6.fork();
-    let tagResult7 = forkResult2.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    let tagResult7 = forkResult2.tag(1, 01307__.WireType.LengthDelimited);
     let stringResult4 = tagResult7.string(nextResult1);
-    let tagResult8 = stringResult4.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    let tagResult8 = stringResult4.tag(2, 01307__.WireType.LengthDelimited);
     let stringResult5 = tagResult8.string(heroArtLocalizedVideoLinksDarkTheme.heroArtVideoSubtitleLinks[nextResult1]);
     let joined2 = stringResult5.join();
     continue;
@@ -489,7 +493,7 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(heroArtLocalize
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onWrite;
+      onWrite = 01307__.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, heroArtLocalizedVideoLinksDarkTheme, tag);
@@ -516,10 +520,10 @@ prototype3["create"] = function create(arr) {
   let obj = { link: "", locale: "", isDefault: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, require("../../../../../../../_runtime/metro/01307__.js").MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = require("../../../../../../../_runtime/metro/01307__.js").reflectionMergePartial(this, obj, arr);
-    const tmpResult = require("../../../../../../../_runtime/metro/01307__.js");
+    const result = 01307__.reflectionMergePartial(this, obj, arr);
+    const tmpResult = 01307__;
   }
   return obj;
 };
@@ -565,7 +569,7 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onRead;
+              onRead = 01307__.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -581,21 +585,21 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 };
 prototype3["internalBinaryWrite"] = function internalBinaryWrite(link, tag, writeUnknownFields) {
   if ("" !== link.link) {
-    tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(link.link);
-    const tagResult = tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(1, 01307__.WireType.LengthDelimited).string(link.link);
+    const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
   }
   if ("" !== link.locale) {
-    tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(link.locale);
-    const tagResult1 = tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(2, 01307__.WireType.LengthDelimited).string(link.locale);
+    const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
   }
   if (false !== link.isDefault) {
-    tag.tag(3, require("../../../../../../../_runtime/metro/01307__.js").WireType.Varint).bool(link.isDefault);
-    const tagResult2 = tag.tag(3, require("../../../../../../../_runtime/metro/01307__.js").WireType.Varint);
+    tag.tag(3, 01307__.WireType.Varint).bool(link.isDefault);
+    const tagResult2 = tag.tag(3, 01307__.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onWrite;
+      onWrite = 01307__.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, link, tag);
@@ -635,10 +639,10 @@ prototype4["create"] = function create(arr) {
   let obj = { disclaimerText: "" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, require("../../../../../../../_runtime/metro/01307__.js").MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = require("../../../../../../../_runtime/metro/01307__.js").reflectionMergePartial(this, obj, arr);
-    const tmpResult = require("../../../../../../../_runtime/metro/01307__.js");
+    const result = 01307__.reflectionMergePartial(this, obj, arr);
+    const tmpResult = 01307__;
   }
   return obj;
 };
@@ -661,7 +665,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else if (2 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let HelpArticle = require("help_article.tsx") /* create */.HelpArticle;
+        let HelpArticle = create /* create */.HelpArticle;
         let tmp29 = HelpArticle;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -669,7 +673,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else if (3 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let LocalizedString = require("../../common/v1/localized_string.tsx") /* create */.LocalizedString;
+        let LocalizedString = create /* create */.LocalizedString;
         let tmp24 = LocalizedString;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -696,7 +700,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onRead;
+              onRead = 01307__.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -712,25 +716,25 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 };
 prototype4["internalBinaryWrite"] = function internalBinaryWrite(disclaimerText, tag, writeUnknownFields) {
   if ("" !== disclaimerText.disclaimerText) {
-    tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(disclaimerText.disclaimerText);
-    const tagResult = tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(1, 01307__.WireType.LengthDelimited).string(disclaimerText.disclaimerText);
+    const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
   }
   if (disclaimerText.disclaimerHelpArticle) {
-    const HelpArticle = require("help_article.tsx") /* create */.HelpArticle;
-    const tagResult1 = tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined = HelpArticle.internalBinaryWrite(disclaimerText.disclaimerHelpArticle, tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = HelpArticle.internalBinaryWrite(disclaimerText.disclaimerHelpArticle, tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const HelpArticle = create /* create */.HelpArticle;
+    const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
+    const joined = HelpArticle.internalBinaryWrite(disclaimerText.disclaimerHelpArticle, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = HelpArticle.internalBinaryWrite(disclaimerText.disclaimerHelpArticle, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (disclaimerText.disclaimerTextLocalized) {
-    const LocalizedString = require("../../common/v1/localized_string.tsx") /* create */.LocalizedString;
-    const tagResult2 = tag.tag(3, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined1 = LocalizedString.internalBinaryWrite(disclaimerText.disclaimerTextLocalized, tag.tag(3, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(disclaimerText.disclaimerTextLocalized, tag.tag(3, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const LocalizedString = create /* create */.LocalizedString;
+    const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
+    const joined1 = LocalizedString.internalBinaryWrite(disclaimerText.disclaimerTextLocalized, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(disclaimerText.disclaimerTextLocalized, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onWrite;
+      onWrite = 01307__.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, disclaimerText, tag);
@@ -744,7 +748,7 @@ const items3 = [
     name: "disclaimer_help_article",
     kind: "message",
     T() {
-      return require("help_article.tsx") /* create */.HelpArticle;
+      return create /* create */.HelpArticle;
     }
   },
   {
@@ -855,10 +859,10 @@ prototype5["create"] = function create(arr) {
   let obj = { header: "", subheader: "", videoLink: "", helpArticleId: "", featureCards: [], heroArtVideoLinkLightTheme: "", heroArtImageLinkDarkTheme: "", heroArtImageLinkLightTheme: "", modalTopPill: "", heroArtVideoSubtitles: [], dismissKey: "", body: "" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, require("../../../../../../../_runtime/metro/01307__.js").MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = require("../../../../../../../_runtime/metro/01307__.js").reflectionMergePartial(this, obj, arr);
-    const tmpResult = require("../../../../../../../_runtime/metro/01307__.js");
+    const result = 01307__.reflectionMergePartial(this, obj, arr);
+    const tmpResult = 01307__;
   }
   return obj;
 };
@@ -878,20 +882,20 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wr
   let length;
   let length2;
   if ("" !== header.header) {
-    tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(header.header);
-    const tagResult = tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(1, 01307__.WireType.LengthDelimited).string(header.header);
+    const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
   }
   if ("" !== header.subheader) {
-    tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(header.subheader);
-    const tagResult1 = tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(2, 01307__.WireType.LengthDelimited).string(header.subheader);
+    const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
   }
   if ("" !== header.videoLink) {
-    tag.tag(3, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(header.videoLink);
-    const tagResult2 = tag.tag(3, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(3, 01307__.WireType.LengthDelimited).string(header.videoLink);
+    const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
   }
   if ("" !== header.helpArticleId) {
-    tag.tag(4, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(header.helpArticleId);
-    const tagResult3 = tag.tag(4, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(4, 01307__.WireType.LengthDelimited).string(header.helpArticleId);
+    const tagResult3 = tag.tag(4, 01307__.WireType.LengthDelimited);
   }
   let num5 = 0;
   if (0 < header.featureCards.length) {
@@ -899,7 +903,7 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wr
       let tmp13 = object;
       let tmp14 = require;
       let tmp15 = dependencyMap;
-      let tagResult4 = tag.tag(5, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+      let tagResult4 = tag.tag(5, 01307__.WireType.LengthDelimited);
       let internalBinaryWriteResult = object.internalBinaryWrite(header.featureCards[num5], tagResult4.fork(), writeUnknownFields);
       let joined = internalBinaryWriteResult.join();
       num5 = num5 + 1;
@@ -907,26 +911,26 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wr
     } while (num5 < length);
   }
   if (header.button) {
-    const CTAButton = require("cta_button.tsx") /* create */.CTAButton;
-    const tagResult5 = tag.tag(6, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined1 = CTAButton.internalBinaryWrite(header.button, tag.tag(6, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = CTAButton.internalBinaryWrite(header.button, tag.tag(6, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const CTAButton = create /* create */.CTAButton;
+    const tagResult5 = tag.tag(6, 01307__.WireType.LengthDelimited);
+    const joined1 = CTAButton.internalBinaryWrite(header.button, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = CTAButton.internalBinaryWrite(header.button, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("" !== header.heroArtVideoLinkLightTheme) {
-    tag.tag(8, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(header.heroArtVideoLinkLightTheme);
-    const tagResult6 = tag.tag(8, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(8, 01307__.WireType.LengthDelimited).string(header.heroArtVideoLinkLightTheme);
+    const tagResult6 = tag.tag(8, 01307__.WireType.LengthDelimited);
   }
   if ("" !== header.heroArtImageLinkDarkTheme) {
-    tag.tag(9, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(header.heroArtImageLinkDarkTheme);
-    const tagResult7 = tag.tag(9, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(9, 01307__.WireType.LengthDelimited).string(header.heroArtImageLinkDarkTheme);
+    const tagResult7 = tag.tag(9, 01307__.WireType.LengthDelimited);
   }
   if ("" !== header.heroArtImageLinkLightTheme) {
-    tag.tag(10, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(header.heroArtImageLinkLightTheme);
-    const tagResult8 = tag.tag(10, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(10, 01307__.WireType.LengthDelimited).string(header.heroArtImageLinkLightTheme);
+    const tagResult8 = tag.tag(10, 01307__.WireType.LengthDelimited);
   }
   if ("" !== header.modalTopPill) {
-    tag.tag(11, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(header.modalTopPill);
-    const tagResult9 = tag.tag(11, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(11, 01307__.WireType.LengthDelimited).string(header.modalTopPill);
+    const tagResult9 = tag.tag(11, 01307__.WireType.LengthDelimited);
   }
   let num11 = 0;
   if (0 < header.heroArtVideoSubtitles.length) {
@@ -934,7 +938,7 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wr
       let tmp32 = variant1StorageType;
       let tmp33 = require;
       let tmp34 = dependencyMap;
-      let tagResult10 = tag.tag(13, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+      let tagResult10 = tag.tag(13, 01307__.WireType.LengthDelimited);
       let internalBinaryWriteResult2 = variant1StorageType.internalBinaryWrite(header.heroArtVideoSubtitles[num11], tagResult10.fork(), writeUnknownFields);
       let joined2 = internalBinaryWriteResult2.join();
       num11 = num11 + 1;
@@ -942,51 +946,51 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wr
     } while (num11 < length2);
   }
   if (header.storage) {
-    const tagResult11 = tag.tag(14, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined3 = tmp2.internalBinaryWrite(header.storage, tag.tag(14, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult3 = tmp2.internalBinaryWrite(header.storage, tag.tag(14, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult11 = tag.tag(14, 01307__.WireType.LengthDelimited);
+    const joined3 = tmp2.internalBinaryWrite(header.storage, tag.tag(14, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult3 = tmp2.internalBinaryWrite(header.storage, tag.tag(14, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.disclaimer) {
-    const tagResult12 = tag.tag(15, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined4 = subtitleType.internalBinaryWrite(header.disclaimer, tag.tag(15, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult4 = subtitleType.internalBinaryWrite(header.disclaimer, tag.tag(15, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult12 = tag.tag(15, 01307__.WireType.LengthDelimited);
+    const joined4 = subtitleType.internalBinaryWrite(header.disclaimer, tag.tag(15, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult4 = subtitleType.internalBinaryWrite(header.disclaimer, tag.tag(15, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.helpArticle) {
-    const HelpArticle = require("help_article.tsx") /* create */.HelpArticle;
-    const tagResult13 = tag.tag(18, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined5 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(18, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult5 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(18, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const HelpArticle = create /* create */.HelpArticle;
+    const tagResult13 = tag.tag(18, 01307__.WireType.LengthDelimited);
+    const joined5 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(18, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult5 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(18, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.headerLocalized) {
-    const LocalizedString = require("../../common/v1/localized_string.tsx") /* create */.LocalizedString;
-    const tagResult14 = tag.tag(19, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined6 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(19, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult6 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(19, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const LocalizedString = create /* create */.LocalizedString;
+    const tagResult14 = tag.tag(19, 01307__.WireType.LengthDelimited);
+    const joined6 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(19, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult6 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(19, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.subheaderLocalized) {
-    const LocalizedString2 = require("../../common/v1/localized_string.tsx") /* create */.LocalizedString;
-    const tagResult15 = tag.tag(20, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined7 = LocalizedString2.internalBinaryWrite(header.subheaderLocalized, tag.tag(20, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult7 = LocalizedString2.internalBinaryWrite(header.subheaderLocalized, tag.tag(20, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const LocalizedString2 = create /* create */.LocalizedString;
+    const tagResult15 = tag.tag(20, 01307__.WireType.LengthDelimited);
+    const joined7 = LocalizedString2.internalBinaryWrite(header.subheaderLocalized, tag.tag(20, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult7 = LocalizedString2.internalBinaryWrite(header.subheaderLocalized, tag.tag(20, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.modalTopPillLocalized) {
-    const LocalizedString3 = require("../../common/v1/localized_string.tsx") /* create */.LocalizedString;
-    const tagResult16 = tag.tag(21, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
-    const joined8 = LocalizedString3.internalBinaryWrite(header.modalTopPillLocalized, tag.tag(21, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult8 = LocalizedString3.internalBinaryWrite(header.modalTopPillLocalized, tag.tag(21, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).fork(), writeUnknownFields);
+    const LocalizedString3 = create /* create */.LocalizedString;
+    const tagResult16 = tag.tag(21, 01307__.WireType.LengthDelimited);
+    const joined8 = LocalizedString3.internalBinaryWrite(header.modalTopPillLocalized, tag.tag(21, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult8 = LocalizedString3.internalBinaryWrite(header.modalTopPillLocalized, tag.tag(21, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("" !== header.dismissKey) {
-    tag.tag(7, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(header.dismissKey);
-    const tagResult17 = tag.tag(7, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(7, 01307__.WireType.LengthDelimited).string(header.dismissKey);
+    const tagResult17 = tag.tag(7, 01307__.WireType.LengthDelimited);
   }
   if ("" !== header.body) {
-    tag.tag(12, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(header.body);
-    const tagResult18 = tag.tag(12, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(12, 01307__.WireType.LengthDelimited).string(header.body);
+    const tagResult18 = tag.tag(12, 01307__.WireType.LengthDelimited);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onWrite;
+      onWrite = 01307__.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, header, tag);

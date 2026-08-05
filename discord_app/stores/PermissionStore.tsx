@@ -1,3 +1,7 @@
+import { apply } from "../../_runtime/00012_apply.js";
+import { doesThreadMembersActionAffectMe } from "../modules/threads/ThreadActionUtils.tsx";
+import { has } from "../utils/BasicPermissionUtils.tsx";
+import { fromGuildPropertiesWithAdditionalFields } from "../utils/GuildRecordUtils.tsx";
 // discord_app/stores/PermissionStore.tsx
 import initialize from "initialize";
 import closure_5 from "initialize";
@@ -75,7 +79,7 @@ function getUncachedChannelPermissions(id, arg1) {
             }
             return NONE2;
           }
-          obj2 = require("../../_runtime/00012_apply.js");
+          obj2 = apply;
         }
       }
       obj = { user: null, context: null, checkElevated: null };
@@ -157,7 +161,7 @@ function handleGuildRole(guildId) {
   guildId = guildId.guildId;
   delete tmp[tmp2];
   const mutableBasicGuildChannelsForGuild = store.getMutableBasicGuildChannelsForGuild(guildId);
-  const item = require("../../_runtime/00012_apply.js").forEach(mutableBasicGuildChannelsForGuild, (arg0) => {
+  const item = apply.forEach(mutableBasicGuildChannelsForGuild, (arg0) => {
     delete tmp2[tmp];
   });
   closure_22 = closure_22 + 1;
@@ -193,7 +197,7 @@ function handleImpersonateUpdate(guildId) {
   guildId = guildId.guildId;
   delete tmp[tmp2];
   const mutableBasicGuildChannelsForGuild = store.getMutableBasicGuildChannelsForGuild(guildId);
-  const item = require("../../_runtime/00012_apply.js").forEach(mutableBasicGuildChannelsForGuild, (arg0) => {
+  const item = apply.forEach(mutableBasicGuildChannelsForGuild, (arg0) => {
     delete tmp2[tmp];
   });
   closure_22 = closure_22 + 1;
@@ -231,7 +235,7 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
       NONE = tmp11;
     }
   } else {
-    let obj = require("../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
+    let obj = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
     if (obj.isGuildRecord(context)) {
       const id = context.id;
       let NONE2 = dependencyMap[id];
@@ -410,13 +414,13 @@ prototype["can"] = function can(arg0, arg1, arg2, arg3, arg4) {
 };
 prototype["canBasicChannel"] = function canBasicChannel(VIEW_CHANNEL, basicChannel) {
   if ("basicPermissions" in basicChannel) {
-    let hasItem = require("../utils/BasicPermissionUtils.tsx").has(basicChannel.basicPermissions, VIEW_CHANNEL);
-    const obj3 = require("../utils/BasicPermissionUtils.tsx");
+    let hasItem = has.has(basicChannel.basicPermissions, VIEW_CHANNEL);
+    const obj3 = has;
   } else {
     const obj = importAll(506);
     const tmp8 = computePermissions(basicChannel, arg2, arg3, arg4);
-    hasItem = obj.has(tmp8, require("../utils/BasicPermissionUtils.tsx").asBigFlag(VIEW_CHANNEL));
-    const obj2 = require("../utils/BasicPermissionUtils.tsx");
+    hasItem = obj.has(tmp8, has.asBigFlag(VIEW_CHANNEL));
+    const obj2 = has;
   }
   return hasItem;
 };
@@ -427,8 +431,8 @@ prototype["computeBasicPermissions"] = function computeBasicPermissions(basicCha
   if ("basicPermissions" in basicChannel) {
     let basicPermissions = basicChannel.basicPermissions;
   } else {
-    basicPermissions = require("../utils/BasicPermissionUtils.tsx").asBasicFlag(computePermissions(basicChannel));
-    const obj = require("../utils/BasicPermissionUtils.tsx");
+    basicPermissions = has.asBasicFlag(computePermissions(basicChannel));
+    const obj = has;
   }
   return basicPermissions;
 };
@@ -631,7 +635,7 @@ const permissionStore = new PermissionStore(require("dispatcher"), {
     return flag;
   },
   THREAD_MEMBERS_UPDATE: function handleThreadMembersUpdate(guildId) {
-    let flag = require("../modules/threads/ThreadActionUtils.tsx") /* doesThreadMembersActionAffectMe */.doesThreadMembersActionAffectMe(guildId);
+    let flag = doesThreadMembersActionAffectMe /* doesThreadMembersActionAffectMe */.doesThreadMembersActionAffectMe(guildId);
     if (flag) {
       guildId = guildId.guildId;
       flag = true;

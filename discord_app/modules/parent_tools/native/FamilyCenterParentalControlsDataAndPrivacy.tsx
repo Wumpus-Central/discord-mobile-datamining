@@ -1,3 +1,4 @@
+import { SettingLayout } from "../../settings/native/renderer/SettingLayout.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterParentalControlsDataAndPrivacy.tsx
 import noop from "noop";
 import { HelpdeskArticles } from "ME";
@@ -48,5 +49,5 @@ export default function FamilyCenterParentalControlsDataAndPrivacy() {
     obj = { sections: memo };
     return obj.createList(obj);
   }, items);
-  return jsx(require("../../settings/native/renderer/SettingLayout.tsx"), { node });
+  return jsx(SettingLayout, { node });
 };

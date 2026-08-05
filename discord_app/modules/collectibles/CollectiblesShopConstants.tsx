@@ -1,3 +1,4 @@
+import { set } from "../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
 // discord_app/modules/collectibles/CollectiblesShopConstants.tsx
 import set from "CollectibleSearchSortType";
 
@@ -56,7 +57,7 @@ export const SHOP_ALL_PAGE_SIZE = 5;
 export const ShopPurchaseType = { FIAT: 0, [0]: "FIAT", ORB: 1, [1]: "ORB", PREMIUM_PURCHASE: 2, [2]: "PREMIUM_PURCHASE", PROMOTIONAL: 3, [3]: "PROMOTIONAL", TENURE_REWARD: 4, [4]: "TENURE_REWARD", GIFT: 5, [5]: "GIFT" };
 export const EXTERNAL_PRODUCT_SKU_IDS = obj;
 export const isFractionalPremiumSku = function isFractionalPremiumSku(arg0) {
-  const ALL = require("../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx") /* set */.FractionalPremiumSKUsSets.ALL;
+  const ALL = set /* set */.FractionalPremiumSKUsSets.ALL;
   return ALL.has(arg0);
 };
 export const isExternalProduct = function isExternalProduct(arg0) {

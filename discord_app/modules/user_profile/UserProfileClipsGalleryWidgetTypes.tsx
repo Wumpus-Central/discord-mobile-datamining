@@ -1,3 +1,4 @@
+import { isUndefinedOrNull } from "../../../_runtime/00659_isUndefinedOrNull.js";
 // discord_app/modules/user_profile/UserProfileClipsGalleryWidgetTypes.tsx
 function convertClip(gameId) {
   let obj = { game_id: gameId.gameId, title: gameId.title, tags: gameId.tags };
@@ -41,7 +42,7 @@ prototype["isEqual"] = function isEqual(clips) {
   let tmp = clips instanceof ClipsGalleryWidget;
   if (tmp) {
     const self = this;
-    tmp = require("../../../_runtime/00659_isUndefinedOrNull.js")(this.clips, clips.clips);
+    tmp = isUndefinedOrNull(this.clips, clips.clips);
   }
   return tmp;
 };

@@ -1,3 +1,7 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { _toPropertyKey } from "../../../discord_common/js/packages/transition-group/TransitionGroup.tsx";
+import { Button } from "../../design/void/native.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/components_native/common/UnreadBars.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -143,9 +147,9 @@ prototype["render"] = function render() {
   obj = { style: items, nativeID: "unread-bar-view-" + mention + "-" + section, children: null };
   items[1] = mention;
   const obj1 = { style: tmp.unreadText, maxFontSizeMultiplier: 1.5, children: null };
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
+  const t = getSystemLocale /* getSystemLocale */.t;
   if (props.compact) {
     let stringResult = string(t.y2b7CA);
   } else if (mention) {
@@ -154,7 +158,7 @@ prototype["render"] = function render() {
     stringResult = string(t.FCRiT3);
   }
   obj1[2] = stringResult;
-  obj[2] = closure_8(require("../../design/void/native.tsx") /* Button */.LegacyText, obj1);
+  obj[2] = closure_8(Button /* Button */.LegacyText, obj1);
   obj[2] = closure_8(closure_4, obj);
   obj[5] = closure_8(RN.View, obj);
   return closure_8(closure_6, obj);
@@ -179,7 +183,7 @@ export default function UnreadBars(contentInset) {
   function handlePress(section) {
     callback({ section: section.section, item: section.row, animated: true });
   }
-  let obj1 = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj1 = initialize /* initialize */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = { component: importAllResult.Fragment, children: null };
@@ -206,5 +210,5 @@ export default function UnreadBars(contentInset) {
   }
   items1[1] = tmp6;
   obj[1] = items1;
-  return closure_9(require("../../../discord_common/js/packages/transition-group/TransitionGroup.tsx") /* _toPropertyKey */.TransitionGroup, obj);
+  return closure_9(_toPropertyKey /* _toPropertyKey */.TransitionGroup, obj);
 };

@@ -1,3 +1,5 @@
+import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { usePlaceholderWidth } from "../../hooks/usePlaceholderSize.tsx";
 // discord_app/modules/app_launcher/native/screens/search/SearchLocalAndGlobalContentView.tsx
 import EmptyState from "EmptyState";
 import importAllResult from "isActivityInTextSupportedForChannel";
@@ -95,9 +97,9 @@ function PlaceholderCommandRow(isFirstRow) {
     flag2 = false;
   }
   const tmp = callback3();
-  let obj = require("../../hooks/usePlaceholderSize.tsx") /* usePlaceholderWidth */;
+  let obj = usePlaceholderWidth /* usePlaceholderWidth */;
   const placeholderWidth = obj.usePlaceholderWidth(10, 50);
-  let obj1 = require("../../hooks/usePlaceholderSize.tsx") /* usePlaceholderWidth */;
+  let obj1 = usePlaceholderWidth /* usePlaceholderWidth */;
   const placeholderWidth1 = obj1.usePlaceholderWidth(30, 90);
   obj = { icon: null, label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null };
   obj = { style: tmp.loadingCommandAppIcon };
@@ -117,7 +119,7 @@ function PlaceholderCommandRow(isFirstRow) {
   obj[6] = function onPress() {
 
   };
-  return callback2(require("../../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
+  return callback2(TableRowInner /* TableRowInner */.TableRow, obj);
 }
 function keyExtractor(type) {
   if (type.type === obj.PLACERHOLDER) {

@@ -1,3 +1,5 @@
+import { _createForOfIteratorHelper } from "../../../../_runtime/00531__createForOfIteratorHelper.js";
+import { fails } from "../backoff/Backoff.tsx";
 // discord_common/js/packages/http-utils/HTTPUtils.tsx
 import set from "fails";
 
@@ -25,7 +27,7 @@ function sendRequest(arg0, signal) {
       arg4(obj);
     }
   } else {
-    const promise = require("../../../../_runtime/00531__createForOfIteratorHelper.js")[arg0](signal.url);
+    const promise = _createForOfIteratorHelper[arg0](signal.url);
     if (null != signal.onRequestCreated) {
       signal.onRequestCreated(promise);
     }
@@ -306,7 +308,7 @@ function cleanupRequestEntry(url) {
         backoff = value.backoff;
       }
       if (backoff == null) {
-        backoff = new require("../backoff/Backoff.tsx")(1000, 60000);
+        backoff = new fails(1000, 60000);
       }
       ({ headers, body } = arg1);
       let prop;

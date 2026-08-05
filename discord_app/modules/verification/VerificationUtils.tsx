@@ -1,3 +1,5 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/verification/VerificationUtils.tsx
 import ME from "ME";
 
@@ -47,23 +49,23 @@ export default {
   },
   getButtonTitle(arg0) {
     if (VerificationTypes.EMAIL === arg0) {
-      const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl5.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["1MPz27"]);
+      const intl5 = getSystemLocale /* getSystemLocale */.intl;
+      return intl5.string(getSystemLocale /* getSystemLocale */.t["1MPz27"]);
     } else if (tmp.PHONE === arg0) {
-      const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.mjJeco);
+      const intl4 = getSystemLocale /* getSystemLocale */.intl;
+      return intl4.string(getSystemLocale /* getSystemLocale */.t.mjJeco);
     } else if (tmp.REVERIFY_EMAIL === arg0) {
-      const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.nmdPFX);
+      const intl3 = getSystemLocale /* getSystemLocale */.intl;
+      return intl3.string(getSystemLocale /* getSystemLocale */.t.nmdPFX);
     } else if (tmp.REVERIFY_PHONE === arg0) {
-      const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.of2125);
+      const intl2 = getSystemLocale /* getSystemLocale */.intl;
+      return intl2.string(getSystemLocale /* getSystemLocale */.t.of2125);
     } else {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["oF6+Ww"]);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t["oF6+Ww"]);
     }
   },
   areVerificationTypesEqual(arg0, arg1) {
-    return require("../../../_runtime/00012_apply.js").isEqual(arg0, arg1);
+    return apply.isEqual(arg0, arg1);
   }
 };

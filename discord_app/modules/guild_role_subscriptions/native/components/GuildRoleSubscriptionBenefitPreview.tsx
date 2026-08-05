@@ -1,3 +1,9 @@
+import { registerAsset } from "../../../../../_runtime/10711_registerAsset.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { parseRawEmojiObject } from "../../../emojis/UnicodeEmojis.tsx";
+import { getUsedTemplateChannelsForGuild } from "../../tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx";
+import { EmojiIcon } from "EmojiIcon.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitPreview.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -20,15 +26,15 @@ function BaseBenefitRow(isInteractive) {
   }
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.emojiContainer, children: callback(require("EmojiIcon.tsx"), { guildId, id: emoji }) };
+  obj = { style: tmp.emojiContainer, children: callback(EmojiIcon, { guildId, id: emoji }) };
   const items = [callback(View, obj), , ];
   const items1 = [tmp.benefitColumn, contentStyle];
   items[1] = callback(View, { style: items1, children });
   let tmp4Result = true === flag;
   if (tmp4Result) {
     obj = { source: null };
-    obj[0] = require("../../../../../_runtime/10711_registerAsset.js");
-    tmp4Result = callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
+    obj[0] = registerAsset;
+    tmp4Result = callback(Button /* Button */.Icon, obj);
   }
   items[2] = tmp4Result;
   obj[1] = items;
@@ -45,14 +51,14 @@ function DescriptiveBenefitRow(benefit) {
     const obj = { style: null, variant: "text-sm/medium", color: "interactive-text-default", children: null };
     obj[0] = tmp.benefitDescription;
     obj[3] = benefit.description;
-    tmp2 = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+    tmp2 = callback(Text /* Text */.Text, obj);
   }
   let emoji = benefit.emoji_id;
   if (emoji == null) {
     let str = "";
     if (null != benefit.emoji_name) {
-      str = require("../../../emojis/UnicodeEmojis.tsx").convertSurrogateToName(benefit.emoji_name, false);
-      const obj2 = require("../../../emojis/UnicodeEmojis.tsx");
+      str = parseRawEmojiObject.convertSurrogateToName(benefit.emoji_name, false);
+      const obj2 = parseRawEmojiObject;
     }
     emoji = str;
   }
@@ -67,7 +73,7 @@ function ChannelBenefitRow(benefit) {
   benefit = benefit.benefit;
   ({ guildId, isInteractive } = benefit);
   const tmp = callback3();
-  let obj = require("../../tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx") /* getUsedTemplateChannelsForGuild */;
+  let obj = getUsedTemplateChannelsForGuild /* getUsedTemplateChannelsForGuild */;
   const channelWithTemplateFallback = obj.useChannelWithTemplateFallback(benefit.ref_id);
   let channelIcon = null;
   if (null != channelWithTemplateFallback) {
@@ -103,7 +109,7 @@ function ChannelBenefitRow(benefit) {
 }
 function IntangibleBenefitRow(benefit) {
   benefit = benefit.benefit;
-  obj = { benefit, guildId: benefit.guildId, isInteractive: benefit.isInteractive, children: callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj) };
+  obj = { benefit, guildId: benefit.guildId, isInteractive: benefit.isInteractive, children: callback(Text /* Text */.Text, obj) };
   obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: benefit.name };
   return callback(DescriptiveBenefitRow, obj);
 }
@@ -115,10 +121,10 @@ function EmojiBenefitRow(benefit) {
   const tmp = callback3();
   let obj = { emoji: benefit.id, guildId, contentStyle: tmp.emojiRow, isInteractive, children: null };
   obj = { style: tmp.emojiColons, variant: "text-md/medium", color: "text-muted", children: ":" };
-  const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , ];
+  const items = [callback(Text /* Text */.Text, obj), , ];
   obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: benefit.name };
-  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
-  items[2] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.emojiColons, variant: "text-md/medium", color: "text-muted", children: ":" });
+  items[1] = callback(Text /* Text */.Text, obj);
+  items[2] = callback(Text /* Text */.Text, { style: tmp.emojiColons, variant: "text-md/medium", color: "text-muted", children: ":" });
   obj[4] = items;
   return callback2(BaseBenefitRow, obj);
 }

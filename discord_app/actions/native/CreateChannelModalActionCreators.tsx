@@ -1,3 +1,4 @@
+import { ModalActionCreators } from "../ModalActionCreators.tsx";
 // discord_app/actions/native/CreateChannelModalActionCreators.tsx
 import { CREATEABLE_NON_VOCAL_CHANNEL_NAME_TYPES as closure_3 } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -10,7 +11,7 @@ export default {
   open(arg0, arg1, arg2, arg3) {
     const self = this;
     if (null != arg1) {
-      const obj2 = require("../ModalActionCreators.tsx");
+      const obj2 = ModalActionCreators;
       const tmp = arg0;
       let obj = { channelType: null, guildId: null, categoryId: null, cloneChannelId: null, onChannelCreated: null };
       obj[0] = tmp;
@@ -36,6 +37,6 @@ export default {
     }
   },
   close() {
-    require("../ModalActionCreators.tsx").popWithKey(CREATE_CHANNEL_MODAL_KEY);
+    ModalActionCreators.popWithKey(CREATE_CHANNEL_MODAL_KEY);
   }
 };

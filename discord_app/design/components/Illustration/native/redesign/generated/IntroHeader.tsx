@@ -1,3 +1,5 @@
+import { AccessibilityAnnouncer } from "../../../../../shared.tsx";
+import { getIllustrationSource } from "../../index.tsx";
 // discord_app/design/components/Illustration/native/redesign/generated/IntroHeader.tsx
 import "noop";
 import { Image } from "get ActivityIndicator";
@@ -7,7 +9,7 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("design/components/Illustration/native/redesign/generated/IntroHeader.tsx");
 
 export const getIntroHeaderSource = function getIntroHeaderSource(theme) {
-  let obj = require("../../index.tsx") /* getIllustrationSource */;
+  let obj = getIllustrationSource /* getIllustrationSource */;
   obj = {
     dark() {
       return callback(16618);
@@ -22,7 +24,7 @@ export const getIntroHeaderSource = function getIntroHeaderSource(theme) {
   return obj.getIllustrationSource(theme, obj);
 };
 export const useIntroHeaderSource = function useIntroHeaderSource() {
-  let obj = require("../../../../../shared.tsx") /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   obj = {
     dark() {
       return callback(16618);
@@ -34,10 +36,10 @@ export const useIntroHeaderSource = function useIntroHeaderSource() {
       return callback(16620);
     }
   };
-  return require("../../index.tsx") /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return getIllustrationSource /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const IntroHeader = function IntroHeader(arg0) {
-  let obj = require("../../../../../shared.tsx") /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   obj = {
     dark() {
       return callback(16618);
@@ -50,7 +52,7 @@ export const IntroHeader = function IntroHeader(arg0) {
     }
   };
   obj = {};
-  const illustrationSource = require("../../index.tsx") /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = getIllustrationSource /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

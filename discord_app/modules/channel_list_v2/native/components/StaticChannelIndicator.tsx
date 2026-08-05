@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../../design/tokens/native/useToken.tsx";
 // discord_app/modules/channel_list_v2/native/components/StaticChannelIndicator.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { UnreadSetting } from "ReadStateTypes";
@@ -25,11 +27,11 @@ export default function ChannelIndicator(arg0) {
   let unread;
   ({ unread, resolvedUnreadSetting, style } = arg0);
   const tmp = callback();
-  require("../../../../design/tokens/native/useToken.tsx") /* map */;
+  map /* map */;
   if (resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES) {
-    let CHANNELS_DEFAULT = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_ACTIVE;
+    let CHANNELS_DEFAULT = Themes.colors.INTERACTIVE_TEXT_ACTIVE;
   } else {
-    CHANNELS_DEFAULT = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CHANNELS_DEFAULT;
+    CHANNELS_DEFAULT = Themes.colors.CHANNELS_DEFAULT;
   }
   let tmp7 = null;
   if (unread) {

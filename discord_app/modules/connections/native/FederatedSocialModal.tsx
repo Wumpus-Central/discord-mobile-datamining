@@ -1,3 +1,7 @@
+import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
+import { HeaderBackImage } from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getPlatformUserUrl } from "../../../lib/Platforms.tsx";
 // discord_app/modules/connections/native/FederatedSocialModal.tsx
 import closure_3 from "createCacheKey";
 import _slicedToArray from "_slicedToArray";
@@ -15,21 +19,21 @@ const result = require("noop").fileFinishedImporting("modules/connections/native
 
 export default function FederatedSocialModal(platformType) {
   const _require = platformType;
-  let screens = require("../../../lib/Platforms.tsx");
+  let screens = getPlatformUserUrl;
   let value = screens.get(platformType.platformType);
   let name;
   if (value != null) {
     name = value.name;
   }
   if (name == null) {
-    let intl = _require("../../../intl/index.native.tsx").intl;
-    name = intl.string(_require("../../../intl/index.native.tsx").t["bU/GZm"]);
+    let intl = _getSystemLocale.intl;
+    name = intl.string(_getSystemLocale.t["bU/GZm"]);
   }
   screens = { root: null };
   let obj = { headerTitle: null, headerLeft: null, render: null };
-  let intl2 = _require("../../../intl/index.native.tsx").intl;
-  obj[0] = intl2.formatToPlainString(_require("../../../intl/index.native.tsx").t["ImMhq+"], { serviceName: name });
-  obj[1] = _require("../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderBackButton(platformType.onClose);
+  let intl2 = _getSystemLocale.intl;
+  obj[0] = intl2.formatToPlainString(_getSystemLocale.t["ImMhq+"], { serviceName: name });
+  obj[1] = _HeaderBackImage.getHeaderBackButton(platformType.onClose);
   obj[2] = function render() {
     let closure_0;
     let closure_1;
@@ -192,5 +196,5 @@ export default function FederatedSocialModal(platformType) {
     return outer1_8(platformType(outer1_2[11]).SafeAreaPaddingView, obj);
   };
   screens[0] = obj;
-  return callback(_require("../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, { initialRouteName: "root", screens });
+  return callback(_NavigationStack.Navigator, { initialRouteName: "root", screens });
 };

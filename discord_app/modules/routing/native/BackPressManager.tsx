@@ -1,11 +1,14 @@
+import { updateContextMenuState } from "../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
+import { KeyboardTypes } from "../../keyboard/native/KeyboardTypes.tsx";
+import { useKeyboardType } from "../../keyboard/native/useKeyboardType.tsx";
 // discord_app/modules/routing/native/BackPressManager.tsx
 import "initialize";
 
 function handleBackPress() {
-  let obj = require("../../../design/components/ContextMenu/native/ContextMenuState.native.tsx") /* updateContextMenuState */;
+  let obj = updateContextMenuState /* updateContextMenuState */;
   obj.hideContextMenu();
-  const keyboardType = require("../../keyboard/native/useKeyboardType.tsx") /* useKeyboardType */.getKeyboardType();
-  let flag = keyboardType !== require("../../keyboard/native/KeyboardTypes.tsx") /* KeyboardTypes */.KeyboardTypes.SYSTEM;
+  const keyboardType = useKeyboardType /* useKeyboardType */.getKeyboardType();
+  let flag = keyboardType !== KeyboardTypes /* KeyboardTypes */.KeyboardTypes.SYSTEM;
   if (flag) {
     obj = { type: null };
     obj[0] = tmp(1579).KeyboardTypes.SYSTEM;

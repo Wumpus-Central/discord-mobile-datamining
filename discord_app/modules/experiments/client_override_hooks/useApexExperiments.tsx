@@ -1,3 +1,4 @@
+import { create } from "../../../../discord_common/js/packages/protos/discord_protos/discord_experimentation/v1/experiment.tsx";
 // discord_app/modules/experiments/client_override_hooks/useApexExperiments.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -7,7 +8,7 @@ let c3;
 let c4;
 const require = arg1;
 function makeClientVariant(id) {
-  return { id, label: "Variant " + id, shortLabel: "Variant " + id, type: require("../../../../discord_common/js/packages/protos/discord_protos/discord_experimentation/v1/experiment.tsx") /* create */.Variation_Type.UNSPECIFIED };
+  return { id, label: "Variant " + id, shortLabel: "Variant " + id, type: create /* create */.Variation_Type.UNSPECIFIED };
 }
 function mergeApexExperiments(experimentsMetadata, registeredExperiments) {
   let _slicedToArray;

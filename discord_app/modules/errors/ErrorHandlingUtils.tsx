@@ -1,3 +1,4 @@
+import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
 // discord_app/modules/errors/ErrorHandlingUtils.tsx
 import set from "set";
 
@@ -64,7 +65,7 @@ export const captureOrIgnoreApiError = function captureOrIgnoreApiError(aPIError
     tmp = flag;
   }
   if (!tmp) {
-    require("../../utils/SentryUtils.native.tsx").captureException(aPIError);
-    const obj = require("../../utils/SentryUtils.native.tsx");
+    SentryUtils.native.captureException(aPIError);
+    const obj = SentryUtils.native;
   }
 };

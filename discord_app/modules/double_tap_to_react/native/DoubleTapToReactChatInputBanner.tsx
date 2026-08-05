@@ -1,3 +1,11 @@
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { XSmallIcon } from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { renderChannelBadge } from "../../channel_list_v2/native/components/index.tsx";
+import { Emoji } from "../../emojis/native/Emoji.tsx";
 // discord_app/modules/double_tap_to_react/native/DoubleTapToReactChatInputBanner.tsx
 import SelectedDismissibleContent from "SelectedDismissibleContent";
 import encodeProperties from "encodeProperties";
@@ -18,7 +26,7 @@ const require = arg1;
 function DoubleTapToReactChatInputBannerInner(emoji) {
   emoji = emoji.emoji;
   const tmp = createCacheKey();
-  let obj = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   obj = { style: tmp.container, children: null };
@@ -38,26 +46,26 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
     }
     obj2[1] = animated;
     obj2[2] = EMOJI_URL_BASE_SIZE;
-    let url = require("../../../utils/AvatarUtils.tsx").getEmojiURL(obj2);
-    const tmp8Result = require("../../../utils/AvatarUtils.tsx");
+    let url = getAvatarURL.getEmojiURL(obj2);
+    const tmp8Result = getAvatarURL;
   } else {
     url = emoji.url;
   }
   obj1[4] = url;
-  const items1 = [closure_9(require("../../emojis/native/Emoji.tsx"), obj1), closure_9(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "heading-xl/semibold", color: "interactive-text-default", children: "1" })];
+  const items1 = [closure_9(Emoji, obj1), closure_9(Text /* Text */.Text, { variant: "heading-xl/semibold", color: "interactive-text-default", children: "1" })];
   obj[1] = items1;
   const items2 = [closure_10(View, obj), , ];
   const obj3 = { style: tmp.text, children: null };
   const obj4 = { style: tmp.header, children: null };
   const obj5 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1236).intl;
-  obj5[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["6RUX7d"]);
-  const items3 = [closure_9(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj5), closure_9(require("../../channel_list_v2/native/components/index.tsx") /* renderChannelBadge */.NewBadge, {})];
+  obj5[2] = intl.string(getSystemLocale /* getSystemLocale */.t["6RUX7d"]);
+  const items3 = [closure_9(Text /* Text */.Text, obj5), closure_9(renderChannelBadge /* renderChannelBadge */.NewBadge, {})];
   obj4[1] = items3;
   const items4 = [closure_10(View, obj4), ];
   const obj6 = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl2 = tmp2(1236).intl;
-  obj6[2] = intl2.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["5/l2rR"], {
+  obj6[2] = intl2.format(getSystemLocale /* getSystemLocale */.t["5/l2rR"], {
     emojiName: emoji.name,
     emojiNameHook(children) {
       return callback2(callback(4281).Text, { variant: "text-xs/bold", color: "text-strong", children }, arg1);
@@ -66,16 +74,16 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
       return callback2(callback(4281).Text, { variant: "text-xs/medium", color: "text-brand", children }, arg1);
     }
   });
-  items4[1] = closure_9(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj6);
+  items4[1] = closure_9(Text /* Text */.Text, obj6);
   obj3[1] = items4;
   items2[1] = closure_10(View, obj3);
   const obj8 = { hitSlop: 8, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
   const intl3 = tmp2(1236).intl;
-  obj8[2] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.cpT0Cq);
+  obj8[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
   obj8[3] = emoji.handleDismissBanner;
   obj8[4] = tmp.closeButton;
-  obj8[5] = closure_9(require("../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx") /* XSmallIcon */.XSmallIcon, { size: "sm", color: "icon-subtle" });
-  items2[2] = closure_9(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj8);
+  obj8[5] = closure_9(XSmallIcon /* XSmallIcon */.XSmallIcon, { size: "sm", color: "icon-subtle" });
+  items2[2] = closure_9(PressableBase /* PressableBase */.PressableOpacity, obj8);
   obj[1] = items2;
   return closure_10(View, obj);
 }

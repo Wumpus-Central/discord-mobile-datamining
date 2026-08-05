@@ -1,3 +1,5 @@
+import { keys } from "../../../ConstantsIOS.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/shared_space_warnings/show_voice_channel_warning/showVoiceChannelBlockedUserWarning.native.tsx
 import getState from "getState";
 import useSharedSpacesWarningStore from "useSharedSpacesWarningStore";
@@ -11,9 +13,9 @@ const result = require("GdmWarningMedium").fileFinishedImporting("modules/shared
 
 export const showVoiceChannelBlockedUserWarning = function showVoiceChannelBlockedUserWarning(channelId, id) {
   state = state.getState();
-  if (state === require("../../../ConstantsIOS.tsx") /* keys */.AppStates.ACTIVE) {
+  if (state === keys /* keys */.AppStates.ACTIVE) {
     callback2();
-    let obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
+    let obj = ACTION_SHEET_HEIGHT_HALF;
     obj = { channelId: null, blockedUserId: null, impressionName: null, impressionProperties: null };
     obj[0] = channelId;
     obj[1] = id;

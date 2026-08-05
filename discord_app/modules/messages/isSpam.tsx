@@ -1,3 +1,4 @@
+import { getDecisionOutcomeFromMessage } from "../guild_automod/AutomodMessageUtils.tsx";
 // discord_app/modules/messages/isSpam.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
@@ -36,8 +37,8 @@ export const isSpam = function isSpam(author) {
     flag = false;
   }
   if (flag) {
-    flag = !require("../guild_automod/AutomodMessageUtils.tsx") /* getDecisionOutcomeFromMessage */.isAutomodMessageRecord(author);
-    const obj2 = require("../guild_automod/AutomodMessageUtils.tsx") /* getDecisionOutcomeFromMessage */;
+    flag = !getDecisionOutcomeFromMessage /* getDecisionOutcomeFromMessage */.isAutomodMessageRecord(author);
+    const obj2 = getDecisionOutcomeFromMessage /* getDecisionOutcomeFromMessage */;
   }
   return flag;
 };

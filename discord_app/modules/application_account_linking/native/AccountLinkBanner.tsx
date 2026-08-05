@@ -1,3 +1,4 @@
+import { apexExperiment } from "../experiments/mobileAccountLinkingExperiment.tsx";
 // discord_app/modules/application_account_linking/native/AccountLinkBanner.tsx
 import get_ActivityIndicator from "Button";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -195,19 +196,19 @@ obj3[5] = { marginTop: PX_122, width: "100%" };
 let closure_23 = createCacheKey.createStyles(obj3);
 let obj4 = { flexDirection: "row", gap: require("Themes").space.PX_12 };
 const memoResult = importAllResult.memo((arg0) => {
-  let obj = require("../experiments/mobileAccountLinkingExperiment.tsx");
+  let obj = apexExperiment;
   const config = obj.useConfig({ location: "AccountLinkBanner" });
   const bannerSize = config.bannerSize;
   let tmp5Result = null;
   if (config.enabled) {
-    let tmp8 = bannerSize === require("../experiments/mobileAccountLinkingExperiment.tsx") /* apexExperiment */.MobileAccountLinkingBannerSize.LARGE;
+    let tmp8 = bannerSize === apexExperiment /* apexExperiment */.MobileAccountLinkingBannerSize.LARGE;
     if (tmp8) {
       obj = {};
       const merged = Object.assign(arg0);
       tmp8 = callback(AccountLinkLargeBanner, obj);
     }
     const items = [tmp8, ];
-    let tmp14 = bannerSize === require("../experiments/mobileAccountLinkingExperiment.tsx") /* apexExperiment */.MobileAccountLinkingBannerSize.MEDIUM;
+    let tmp14 = bannerSize === apexExperiment /* apexExperiment */.MobileAccountLinkingBannerSize.MEDIUM;
     if (tmp14) {
       obj = {};
       const merged1 = Object.assign(arg0);
@@ -230,11 +231,11 @@ export const ACCOUNT_LINK_BANNER_MARGIN_TOP = PX_8;
 export const ACCOUNT_LINK_BANNER_MARGIN_BOTTOM = PX_82;
 export const getScaledAccountLinkBannerHeight = function getScaledAccountLinkBannerHeight(fontScale) {
   let sum3 = dependencyMap;
-  const config = require("../experiments/mobileAccountLinkingExperiment.tsx").getConfig({ location: "getScaledAccountLinkBannerHeight" });
+  const config = apexExperiment.getConfig({ location: "getScaledAccountLinkBannerHeight" });
   const bannerSize = config.bannerSize;
   if (!config.enabled) {
     return 0;
-  } else if (bannerSize === require("../experiments/mobileAccountLinkingExperiment.tsx") /* apexExperiment */.MobileAccountLinkingBannerSize.LARGE) {
+  } else if (bannerSize === apexExperiment /* apexExperiment */.MobileAccountLinkingBannerSize.LARGE) {
     const sum = PX_8 + PX_12 + closure_16 + PX_16;
     let tmp3Result = tmp3(9370);
     const sum1 = sum + tmp3Result.scaleTextLineHeight(c17, fontScale) + PX_4;

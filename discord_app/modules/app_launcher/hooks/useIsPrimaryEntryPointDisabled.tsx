@@ -1,3 +1,4 @@
+import { getPlatform } from "../../activities/utils/getPlatform.tsx";
 // discord_app/modules/app_launcher/hooks/useIsPrimaryEntryPointDisabled.tsx
 import createExecutable from "createExecutable";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -69,7 +70,7 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
   let reason;
   if (activityAction !== channel(11356).ActivityAction.LEAVE) {
     const tmp10 = application instanceof createExecutable ? application.embeddedActivityConfig : application.embedded_activity_config;
-    require("../../activities/utils/getPlatform.tsx");
+    getPlatform;
     tmp2(500);
     if (null != tmp10) {
       const supported_platforms = tmp10.supported_platforms;

@@ -1,3 +1,6 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { useIsSearchResultsFeedbackExperimentEnabled } from "../search/experiments/SearchResultsFeedbackExperiment.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/feedback/FeedbackManager.tsx
 import set from "set";
 import createRTCConnection from "createRTCConnection";
@@ -12,7 +15,7 @@ let closure_6;
 let require = arg1;
 function optOutEligibilityCheck(hotspot) {
   const _require = hotspot;
-  const InAppFeedbackStates = _require("../user_settings/UserSettings.tsx").InAppFeedbackStates;
+  const InAppFeedbackStates = _explicitContentFromProto.InAppFeedbackStates;
   const tmp3 = InAppFeedbackStates.getSetting()[hotspot.feedbackType];
   let optOutExpiryTime;
   if (tmp3 != null) {
@@ -33,7 +36,7 @@ function optOutEligibilityCheck(hotspot) {
     tmp10 = !tmp5;
   }
   if (tmp10) {
-    const InAppFeedbackStates2 = _require("../user_settings/UserSettings.tsx").InAppFeedbackStates;
+    const InAppFeedbackStates2 = _explicitContentFromProto.InAppFeedbackStates;
     InAppFeedbackStates2.updateSetting((arg0) => {
       let obj = {};
       const merged = Object.assign(arg0);
@@ -55,7 +58,7 @@ function triggerRateEligibilityCheck(chance) {
 }
 function recencyEligibilityCheck(cooldown, storageKey) {
   const _require = storageKey;
-  const InAppFeedbackStates = _require("../user_settings/UserSettings.tsx").InAppFeedbackStates;
+  const InAppFeedbackStates = _explicitContentFromProto.InAppFeedbackStates;
   const tmp3 = InAppFeedbackStates.getSetting()[storageKey.feedbackType];
   let lastImpressionTime;
   if (tmp3 != null) {
@@ -95,7 +98,7 @@ function recencyEligibilityCheck(cooldown, storageKey) {
     });
   }
   const items = [lastImpressionTime, tmp7];
-  let num = _require("../../../_runtime/00012_apply.js").max(items);
+  let num = _apply.max(items);
   if (num == null) {
     num = 0;
   }
@@ -166,7 +169,7 @@ obj5.storageKey = "searchResultsFeedback";
 obj5.feedbackType = FeedbackType.SEARCH_RESULTS;
 const items1 = [
   function searchResultsEligibilityCheck() {
-    return require("../search/experiments/SearchResultsFeedbackExperiment.tsx") /* useIsSearchResultsFeedbackExperimentEnabled */.getIsSearchResultsFeedbackExperimentEnabled({ location: "FeedbackManager" });
+    return useIsSearchResultsFeedbackExperimentEnabled /* useIsSearchResultsFeedbackExperimentEnabled */.getIsSearchResultsFeedbackExperimentEnabled({ location: "FeedbackManager" });
   }
 ];
 obj5.eligibilityChecks = items1;

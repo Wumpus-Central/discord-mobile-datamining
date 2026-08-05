@@ -1,3 +1,6 @@
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { getEmptyActivityFormatter } from "../FamilyCenterUtils.tsx";
+import { useSelectedTeen } from "useSelectedTeen.tsx";
 // discord_app/modules/parent_tools/hooks/useUserLinks.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -18,7 +21,7 @@ let result = require("freshTeenActivityWithMap").fileFinishedImporting("modules/
 export const useUserIdsForLinkStatus = function useUserIdsForLinkStatus(arg0) {
   const _require = arg0;
   const items = [freshTeenActivityWithMap];
-  const stateFromStores = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => linkedUsers.getLinkedUsers());
+  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => linkedUsers.getLinkedUsers());
   const items1 = [stateFromStores, arg0];
   return React.useMemo(() => {
     const values = Object.values(stateFromStores);
@@ -41,7 +44,7 @@ export const useUserIdsForLinkStatus = function useUserIdsForLinkStatus(arg0) {
 export const useUsersForLinkStatus = function useUsersForLinkStatus(PENDING) {
   let _require = PENDING;
   const items = [freshTeenActivityWithMap];
-  const stateFromStores = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => linkedUsers.getLinkedUsers());
+  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => linkedUsers.getLinkedUsers());
   const items1 = [stateFromStores, PENDING];
   _require = React.useMemo(() => {
     const values = Object.values(stateFromStores);
@@ -60,9 +63,9 @@ export const useUsersForLinkStatus = function useUsersForLinkStatus(PENDING) {
     const mapped = sorted.map((user_id) => user_id.user_id);
     return mapped.filter((arg0) => null != arg0);
   }, items1);
-  const obj = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
+  const obj = _defaultAreStatesEqual;
   const items2 = [mergeGuildAvatar];
-  const stateFromStoresArray = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items2, () => closure_0.map((arg0) => user.getUser(arg0)));
+  const stateFromStoresArray = _defaultAreStatesEqual.useStateFromStoresArray(items2, () => closure_0.map((arg0) => user.getUser(arg0)));
   return stateFromStoresArray.filter((arg0) => null != arg0);
 };
 export const useActiveLinkUserIds = function useActiveLinkUserIds() {
@@ -111,7 +114,7 @@ export const useActiveLinkUsers = function useActiveLinkUsers() {
   let _require = ACTIVE;
   let stateFromStores;
   const items = [freshTeenActivityWithMap];
-  stateFromStores = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => linkedUsers.getLinkedUsers());
+  stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => linkedUsers.getLinkedUsers());
   const items1 = [stateFromStores, ACTIVE];
   _require = React.useMemo(() => {
     const values = Object.values(stateFromStores);
@@ -130,9 +133,9 @@ export const useActiveLinkUsers = function useActiveLinkUsers() {
     const mapped = sorted.map((user_id) => user_id.user_id);
     return mapped.filter((arg0) => null != arg0);
   }, items1);
-  const obj = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
+  const obj = _defaultAreStatesEqual;
   const items2 = [mergeGuildAvatar];
-  const stateFromStoresArray = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items2, () => closure_0.map((arg0) => user.getUser(arg0)));
+  const stateFromStoresArray = _defaultAreStatesEqual.useStateFromStoresArray(items2, () => closure_0.map((arg0) => user.getUser(arg0)));
   return stateFromStoresArray.filter((arg0) => null != arg0);
 };
 export const useHasActiveLinks = function useHasActiveLinks() {
@@ -179,10 +182,10 @@ export const useHasActiveParentLinks = function useHasActiveParentLinks() {
 };
 export const useUserQRLinkUrl = function useUserQRLinkUrl() {
   const items = [freshTeenActivityWithMap];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */.useStateFromStores(items, () => linkCode.getLinkCode());
-  const obj = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
+  const stateFromStores = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => linkCode.getLinkCode());
+  const obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
   const items1 = [mergeGuildAvatar];
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */.useStateFromStores(items1, () => currentUser.getCurrentUser());
+  const stateFromStores1 = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items1, () => currentUser.getCurrentUser());
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;
@@ -281,11 +284,11 @@ export const useAcceptedRequestsCount = function useAcceptedRequestsCount() {
 };
 export const useActivityWindowTimeStamp = function useActivityWindowTimeStamp(activityWindowTimestampFormatter) {
   const _require = activityWindowTimestampFormatter;
-  let closure_1 = _require("useSelectedTeen.tsx").useSelectedTeenId();
-  const obj = _require("useSelectedTeen.tsx");
+  let closure_1 = _useSelectedTeen.useSelectedTeenId();
+  const obj = _useSelectedTeen;
   const tmp = _require;
   const items = [freshTeenActivityWithMap];
-  const stateFromStores = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => {
     let rangeStartTimestamp = null;
     if (null != closure_1) {
       rangeStartTimestamp = outer1_5.getRangeStartTimestamp();
@@ -304,12 +307,12 @@ export const useActivityWindowTimeStamp = function useActivityWindowTimeStamp(ac
 export const useLinkTimestampText = function useLinkTimestampText(id, status) {
   const _require = id;
   const items = [freshTeenActivityWithMap];
-  const stateFromStores = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => outer1_5.getLinkTimestamp(closure_0));
+  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => outer1_5.getLinkTimestamp(closure_0));
   if (null == stateFromStores) {
     return null;
   } else {
     const _Date = Date;
-    _require("../FamilyCenterUtils.tsx").formatLinkTimestamp(Date.parse(stateFromStores), status === constants.PENDING ? closure_10 : closure_6);
-    const tmpResult = _require("../FamilyCenterUtils.tsx");
+    _getEmptyActivityFormatter.formatLinkTimestamp(Date.parse(stateFromStores), status === constants.PENDING ? closure_10 : closure_6);
+    const tmpResult = _getEmptyActivityFormatter;
   }
 };

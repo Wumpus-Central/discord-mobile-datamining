@@ -1,3 +1,7 @@
+import { StarIcon } from "../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
+import { StarOutlineIcon } from "../../../design/components/Icon/native/redesign/generated/StarOutlineIcon.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { messagesProxy } from "../intl/FavoritesGuild.messages.js";
 // discord_app/modules/favorites/native/buildFavoritesSectionButtons.tsx
 import _slicedToArray from "_slicedToArray";
 import StarIcon from "StarIcon";
@@ -170,9 +174,9 @@ export default function buildFavoritesSectionButtons(hasFavoritesAccess) {
     if (tmp) {
       if (tmp2) {
         let obj = { label: null, IconComponent: null, isDestructive: true, onPress: null };
-        const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        obj[0] = intl2.string(require("../intl/FavoritesGuild.messages.js").TN4nAX);
-        obj[1] = require("../../../design/components/Icon/native/redesign/generated/StarIcon.tsx") /* StarIcon */.StarIcon;
+        const intl2 = getSystemLocale /* getSystemLocale */.intl;
+        obj[0] = intl2.string(messagesProxy.TN4nAX);
+        obj[1] = StarIcon /* StarIcon */.StarIcon;
         obj[3] = function onPress() {
           return (function removeChannelFromFavorites(closure_0) {
             const self = this;
@@ -190,9 +194,9 @@ export default function buildFavoritesSectionButtons(hasFavoritesAccess) {
         tmp6 = null;
         if (!tmp3) {
           obj = { label: null, IconComponent: null, trailing: null, onPress: null };
-          const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-          obj[0] = intl.string(require("../intl/FavoritesGuild.messages.js").G9fGlP);
-          obj[1] = require("../../../design/components/Icon/native/redesign/generated/StarOutlineIcon.tsx") /* StarOutlineIcon */.StarOutlineIcon;
+          const intl = getSystemLocale /* getSystemLocale */.intl;
+          obj[0] = intl.string(messagesProxy.G9fGlP);
+          obj[1] = StarOutlineIcon /* StarOutlineIcon */.StarOutlineIcon;
           let tmp10;
           if (tmp4) {
             obj = { size: null };

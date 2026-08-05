@@ -1,3 +1,5 @@
+import { registerAsset } from "../../../../../../../_runtime/05916_registerAsset.js";
+import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/main_tabs_v2/native/sidebar/details/header_v2/ChannelDetailsNavigationBar.tsx
 import importAllResult from "registerAsset";
 import { View } from "IconButton";
@@ -80,16 +82,16 @@ function SearchButton(channelId) {
   const stateFromStores = obj.useStateFromStores(items1, () => outer1_7.getChannel(channelId));
   const shouldHideChannelContent = channelId(4498).useShouldHideChannelContent(stateFromStores);
   let obj2 = channelId(4498);
-  const token = channelId(3989).useToken(require("../../../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
+  const token = channelId(3989).useToken(Themes.modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
   const obj3 = channelId(3989);
-  const token1 = channelId(3989).useToken(require("../../../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
+  const token1 = channelId(3989).useToken(Themes.modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
   obj = { accessibilityLabel: null, onPress: null, variant: null, size: null, icon: null, disabled: null };
   const intl = channelId(1236).intl;
   obj[0] = intl.string(channelId(1236).t["5h0QOP"]);
   obj[1] = callback;
   obj[2] = token1;
   obj[3] = token;
-  obj[4] = require("../../../../../../../_runtime/05916_registerAsset.js");
+  obj[4] = registerAsset;
   obj[5] = shouldHideChannelContent;
   return callback2(channelId(7672).IconButton, obj, constants.SEARCH);
 }

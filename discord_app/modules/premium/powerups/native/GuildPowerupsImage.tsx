@@ -1,3 +1,6 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { __INTERNAL_VIEW_CONFIG } from "../../../../../discord_common/js/packages/rtn-codegen/js/APNGDecorationNativeComponent.tsx";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsImage.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { jsx } from "jsxProd";
@@ -16,7 +19,7 @@ export default function GuildPowerupsImage(style) {
   }
   style = style.style;
   const tmp = callback();
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (obj2.isAndroid()) {
@@ -26,11 +29,11 @@ export default function GuildPowerupsImage(style) {
         const items1 = [tmp.image, style];
         obj[0] = items1;
         obj[1] = imageUrl;
-        let tmp6 = jsx(require("../../../../../discord_common/js/packages/rtn-codegen/js/APNGDecorationNativeComponent.tsx"), { style: null, url: null });
+        let tmp6 = jsx(__INTERNAL_VIEW_CONFIG, { style: null, url: null });
       }
       return tmp6;
     }
   }
   const items2 = [tmp.image, style];
-  tmp6 = jsx(require("../../../../components_native/common/FastImage.tsx"), { style: items2, source: { uri: imageUrl } });
+  tmp6 = jsx(preload, { style: items2, source: { uri: imageUrl } });
 };

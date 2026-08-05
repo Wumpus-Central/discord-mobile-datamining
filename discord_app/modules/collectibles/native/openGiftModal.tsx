@@ -1,3 +1,5 @@
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 // discord_app/modules/collectibles/native/openGiftModal.tsx
 let c3 = "Shop Gift Modal";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/collectibles/native/openGiftModal.tsx");
@@ -11,10 +13,10 @@ export const openShopGiftModal = function openShopGiftModal(arg0) {
   let onGiftModalDismiss;
   let skuId;
   ({ navigationParams, skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin } = arg0);
-  let obj = require("../../../actions/ModalActionCreators.tsx");
+  let obj = ModalActionCreators;
   obj = { skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin };
-  obj.pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(9495, dependencyMap.paths), obj, c3, navigationParams);
+  obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(9495, dependencyMap.paths), obj, c3, navigationParams);
 };
 export const closeShopGiftModal = function closeShopGiftModal() {
-  require("../../../actions/ModalActionCreators.tsx").popWithKey(c3);
+  ModalActionCreators.popWithKey(c3);
 };

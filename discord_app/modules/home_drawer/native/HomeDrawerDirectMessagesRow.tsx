@@ -1,3 +1,8 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { MobileHomeDrawerExperiment } from "HomeDrawerExperiment.tsx";
+import { HomeDrawerSharedItem } from "HomeDrawerShared.tsx";
 // discord_app/modules/home_drawer/native/HomeDrawerDirectMessagesRow.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -12,7 +17,7 @@ let metroImportAll;
 const require = arg1;
 function HomeDrawerDMsRow() {
   const tmp = createCacheKey();
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [upsertRelationship, sortActivity];
   const stateFromStores = obj.useStateFromStores(items, () => {
     friendIDs = friendIDs.getFriendIDs();
@@ -37,10 +42,10 @@ function HomeDrawerDMsRow() {
   const obj3 = { title: null, subtitle: null };
   const obj4 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
   const intl2 = tmp2(1236).intl;
-  obj4[3] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.YUU0RF);
-  obj3[0] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj4);
+  obj4[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.YUU0RF);
+  obj3[0] = callback(Text /* Text */.Text, obj4);
   obj3[1] = tmp5;
-  return callback(require("HomeDrawerShared.tsx") /* HomeDrawerSharedItem */.HomeDrawerSharedItem, obj3);
+  return callback(HomeDrawerSharedItem /* HomeDrawerSharedItem */.HomeDrawerSharedItem, obj3);
 }
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 createCacheKey = { subtitle: { flexDirection: "row", alignItems: "center", gap: 4 }, onlineDot: null };
@@ -50,7 +55,7 @@ createCacheKey = createCacheKey.createStyles(createCacheKey);
 const result = require("sortActivity").fileFinishedImporting("modules/home_drawer/native/HomeDrawerDirectMessagesRow.tsx");
 
 export default function HomeDrawerDMsRowWrapper() {
-  const MobileHomeDrawerExperiment = require("HomeDrawerExperiment.tsx") /* MobileHomeDrawerExperiment */.MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = MobileHomeDrawerExperiment /* MobileHomeDrawerExperiment */.MobileHomeDrawerExperiment;
   let tmp2 = null;
   if (MobileHomeDrawerExperiment.useConfig({ location: "dm-expanded-children" }).enableHome) {
     tmp2 = null;

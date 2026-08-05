@@ -1,3 +1,12 @@
+import { AtIcon } from "../../../../../../design/components/Icon/native/redesign/generated/AtIcon.tsx";
+import { AttachmentIcon } from "../../../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
+import { CalendarIcon } from "../../../../../../design/components/Icon/native/redesign/generated/CalendarIcon.tsx";
+import { CalendarMinusIcon } from "../../../../../../design/components/Icon/native/redesign/generated/CalendarMinusIcon.tsx";
+import { CalendarPlusIcon } from "../../../../../../design/components/Icon/native/redesign/generated/CalendarPlusIcon.tsx";
+import { ChannelListMagnifyingGlassIcon } from "../../../../../../design/components/Icon/native/redesign/generated/ChannelListMagnifyingGlassIcon.tsx";
+import { RobotIcon } from "../../../../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
+import { UserIcon } from "../../../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
+import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
 // discord_app/modules/search/native/components/layout/autocomplete/SearchFilterUtils.tsx
 import MessageEmbedTypes from "MessageEmbedTypes";
 import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations";
@@ -14,35 +23,35 @@ let result = require("ME").fileFinishedImporting("modules/search/native/componen
 
 export const getSearchTokenLabel = function getSearchTokenLabel(closure_0, searchTokenType) {
   if (constants.FILTER_FROM === searchTokenType) {
-    const intl9 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl9.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t["6iuVMn"]);
+    const intl9 = getSystemLocale /* getSystemLocale */.intl;
+    return intl9.string(getSystemLocale /* getSystemLocale */.t["6iuVMn"]);
   } else if (tmp.FILTER_HAS === searchTokenType) {
-    const intl8 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl8.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.DMAzx8);
+    const intl8 = getSystemLocale /* getSystemLocale */.intl;
+    return intl8.string(getSystemLocale /* getSystemLocale */.t.DMAzx8);
   } else if (tmp.FILTER_MENTIONS === searchTokenType) {
-    const intl7 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl7.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.CMKzQx);
+    const intl7 = getSystemLocale /* getSystemLocale */.intl;
+    return intl7.string(getSystemLocale /* getSystemLocale */.t.CMKzQx);
   } else if (tmp.FILTER_IN === searchTokenType) {
     if (closure_0.type === constants2.DMS) {
-      const intl6 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      let stringResult = intl6.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t["8Fmo42"]);
+      const intl6 = getSystemLocale /* getSystemLocale */.intl;
+      let stringResult = intl6.string(getSystemLocale /* getSystemLocale */.t["8Fmo42"]);
     } else {
-      const intl5 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      stringResult = intl5.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.cdPmq8);
+      const intl5 = getSystemLocale /* getSystemLocale */.intl;
+      stringResult = intl5.string(getSystemLocale /* getSystemLocale */.t.cdPmq8);
     }
     return stringResult;
   } else if (tmp.FILTER_ON === searchTokenType) {
-    const intl4 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl4.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.h4qGfp);
+    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    return intl4.string(getSystemLocale /* getSystemLocale */.t.h4qGfp);
   } else if (tmp.FILTER_BEFORE === searchTokenType) {
-    const intl3 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl3.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.c9qSBR);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    return intl3.string(getSystemLocale /* getSystemLocale */.t.c9qSBR);
   } else if (tmp.FILTER_AFTER === searchTokenType) {
-    const intl2 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl2.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.hcMwDW);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    return intl2.string(getSystemLocale /* getSystemLocale */.t.hcMwDW);
   } else if (tmp.FILTER_AUTHOR_TYPE === searchTokenType) {
-    const intl = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.C4r6xL);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.C4r6xL);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -52,29 +61,29 @@ export const getSearchTokenLabel = function getSearchTokenLabel(closure_0, searc
 };
 export const getSearchTokenSubLabel = function getSearchTokenSubLabel(searchTokenType) {
   if (constants.FILTER_FROM === searchTokenType) {
-    const intl8 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl8.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.kkGlww);
+    const intl8 = getSystemLocale /* getSystemLocale */.intl;
+    return intl8.string(getSystemLocale /* getSystemLocale */.t.kkGlww);
   } else if (tmp.FILTER_HAS === searchTokenType) {
-    const intl7 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl7.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.gUfZa2);
+    const intl7 = getSystemLocale /* getSystemLocale */.intl;
+    return intl7.string(getSystemLocale /* getSystemLocale */.t.gUfZa2);
   } else if (tmp.FILTER_IN === searchTokenType) {
-    const intl6 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl6.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.qDUdlT);
+    const intl6 = getSystemLocale /* getSystemLocale */.intl;
+    return intl6.string(getSystemLocale /* getSystemLocale */.t.qDUdlT);
   } else if (tmp.FILTER_MENTIONS === searchTokenType) {
-    const intl5 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl5.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.ILtwK5);
+    const intl5 = getSystemLocale /* getSystemLocale */.intl;
+    return intl5.string(getSystemLocale /* getSystemLocale */.t.ILtwK5);
   } else if (tmp.FILTER_ON === searchTokenType) {
-    const intl4 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl4.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.t8bWvr);
+    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    return intl4.string(getSystemLocale /* getSystemLocale */.t.t8bWvr);
   } else if (tmp.FILTER_BEFORE === searchTokenType) {
-    const intl3 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl3.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.YEN3uU);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    return intl3.string(getSystemLocale /* getSystemLocale */.t.YEN3uU);
   } else if (tmp.FILTER_AFTER === searchTokenType) {
-    const intl2 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl2.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.hwbB7s);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    return intl2.string(getSystemLocale /* getSystemLocale */.t.hwbB7s);
   } else if (tmp.FILTER_AUTHOR_TYPE === searchTokenType) {
-    const intl = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.tJPdhZ);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.tJPdhZ);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -84,21 +93,21 @@ export const getSearchTokenSubLabel = function getSearchTokenSubLabel(searchToke
 };
 export const getSearchTokenIcon = function getSearchTokenIcon(searchTokenType) {
   if (constants.FILTER_FROM === searchTokenType) {
-    return require("../../../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx") /* UserIcon */.UserIcon;
+    return UserIcon /* UserIcon */.UserIcon;
   } else if (tmp.FILTER_HAS === searchTokenType) {
-    return require("../../../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx") /* AttachmentIcon */.AttachmentIcon;
+    return AttachmentIcon /* AttachmentIcon */.AttachmentIcon;
   } else if (tmp.FILTER_IN === searchTokenType) {
-    return require("../../../../../../design/components/Icon/native/redesign/generated/ChannelListMagnifyingGlassIcon.tsx") /* ChannelListMagnifyingGlassIcon */.ChannelListMagnifyingGlassIcon;
+    return ChannelListMagnifyingGlassIcon /* ChannelListMagnifyingGlassIcon */.ChannelListMagnifyingGlassIcon;
   } else if (tmp.FILTER_MENTIONS === searchTokenType) {
-    return require("../../../../../../design/components/Icon/native/redesign/generated/AtIcon.tsx") /* AtIcon */.AtIcon;
+    return AtIcon /* AtIcon */.AtIcon;
   } else if (tmp.FILTER_ON === searchTokenType) {
-    return require("../../../../../../design/components/Icon/native/redesign/generated/CalendarIcon.tsx") /* CalendarIcon */.CalendarIcon;
+    return CalendarIcon /* CalendarIcon */.CalendarIcon;
   } else if (tmp.FILTER_BEFORE === searchTokenType) {
-    return require("../../../../../../design/components/Icon/native/redesign/generated/CalendarMinusIcon.tsx") /* CalendarMinusIcon */.CalendarMinusIcon;
+    return CalendarMinusIcon /* CalendarMinusIcon */.CalendarMinusIcon;
   } else if (tmp.FILTER_AFTER === searchTokenType) {
-    return require("../../../../../../design/components/Icon/native/redesign/generated/CalendarPlusIcon.tsx") /* CalendarPlusIcon */.CalendarPlusIcon;
+    return CalendarPlusIcon /* CalendarPlusIcon */.CalendarPlusIcon;
   } else if (tmp.FILTER_AUTHOR_TYPE === searchTokenType) {
-    return require("../../../../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx") /* RobotIcon */.RobotIcon;
+    return RobotIcon /* RobotIcon */.RobotIcon;
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;

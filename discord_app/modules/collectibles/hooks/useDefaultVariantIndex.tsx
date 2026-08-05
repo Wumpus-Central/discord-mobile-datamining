@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getProductOrbPrice } from "../utils/CollectiblesProductUtils.tsx";
 // discord_app/modules/collectibles/hooks/useDefaultVariantIndex.tsx
 import map from "map";
 
@@ -6,7 +8,7 @@ const result = require("getProductOrbPrice").fileFinishedImporting("modules/coll
 
 export const useDefaultVariantIndex = function useDefaultVariantIndex(product) {
   const items = [map];
-  _require = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => purchases.purchases);
+  _require = _initialize.useStateFromStores(items, () => purchases.purchases);
   let num = 0;
   if (null != product) {
     num = 0;
@@ -15,7 +17,7 @@ export const useDefaultVariantIndex = function useDefaultVariantIndex(product) {
       const variants = product.variants;
       num = Math.max(0, variants.findIndex((skuId) => !set.has(skuId.skuId)));
     }
-    tmpResult = _require("../utils/CollectiblesProductUtils.tsx");
+    tmpResult = _getProductOrbPrice;
   }
   return num;
 };

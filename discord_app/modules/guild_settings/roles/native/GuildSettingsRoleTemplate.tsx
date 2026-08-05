@@ -1,3 +1,6 @@
+import { _getRequireWildcardCache } from "../../../../../_runtime/07799__getRequireWildcardCache.js";
+import { Pagination } from "../../../../../_runtime/13339_Pagination.js";
+import { useIsWindowLarge } from "../../../screen/native/useIsWindowLarge.tsx";
 // discord_app/modules/guild_settings/roles/native/GuildSettingsRoleTemplate.tsx
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
@@ -73,7 +76,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
   maybeApplyNoTextColorForLightCustomTheme = tmp6[1];
   const tmp8 = callback(ref.useState(closure_18), 2);
   createGuildRecordFromRust = tmp8[1];
-  const tmp2 = require("../../../screen/native/useIsWindowLarge.tsx")();
+  const tmp2 = useIsWindowLarge();
   [tmp10, c10] = callback(ref.useState(false), 2);
   const effect = ref.useEffect(() => {
     const result = screenReaderEnabled.isScreenReaderEnabled();
@@ -94,7 +97,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
     children: null
   };
   obj = { style: tmp.sliderContainer, children: null };
-  obj = { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: callback2(require("../../../../../_runtime/07799__getRequireWildcardCache.js"), obj1) };
+  obj = { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: callback2(_getRequireWildcardCache, obj1) };
   let items = [callback2(first, obj), ];
   obj1 = {
     maximumValue: values.length - 1,
@@ -267,7 +270,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
   obj3[10] = first1;
   obj3[11] = tmp.carousel;
   obj3[12] = !tmp10;
-  items1[1] = tmp14(require("../../../../../_runtime/13339_Pagination.js"), obj3);
+  items1[1] = tmp14(Pagination, obj3);
   obj[2] = items1;
   return tmp12(tmp13, obj);
 };

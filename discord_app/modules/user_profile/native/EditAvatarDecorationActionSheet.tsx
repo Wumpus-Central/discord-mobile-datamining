@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/user_profile/native/EditAvatarDecorationActionSheet.tsx
 import set from "set";
 import getSystemLocale from "getSystemLocale";
@@ -125,14 +126,14 @@ function AvatarDecorationSectionPreview(previewSkuId) {
   }, items);
   let obj = { style: createCacheKey().avatarDisplayContainer, accessibilityLabel: null, accessibilityRole: "image", accessible: true, children: null };
   if (null != memo) {
-    const intl2 = _require("../../../intl/index.native.tsx").intl;
+    const intl2 = _getSystemLocale.intl;
     obj = { a11y_text: null };
     obj[0] = memo.label;
-    let formatToPlainStringResult = intl2.formatToPlainString(_require("../../../intl/index.native.tsx").t.Do2lxE, obj);
+    let formatToPlainStringResult = intl2.formatToPlainString(_getSystemLocale.t.Do2lxE, obj);
     let tmp10 = _require;
   } else {
-    const intl = _require("../../../intl/index.native.tsx").intl;
-    formatToPlainStringResult = intl.string(_require("../../../intl/index.native.tsx").t["7hRBmC"]);
+    const intl = _getSystemLocale.intl;
+    formatToPlainStringResult = intl.string(_getSystemLocale.t["7hRBmC"]);
     tmp10 = _require;
   }
   obj[1] = formatToPlainStringResult;

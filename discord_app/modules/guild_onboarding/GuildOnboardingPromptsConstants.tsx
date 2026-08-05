@@ -1,3 +1,6 @@
+import { isUndefinedOrNull } from "../../../_runtime/00659_isUndefinedOrNull.js";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { isNullOrEmpty } from "../../utils/StringUtils.tsx";
 // discord_app/modules/guild_onboarding/GuildOnboardingPromptsConstants.tsx
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
@@ -33,14 +36,14 @@ function validateOnboardingConnection(connection_type) {
     if (obj3.isNullOrEmpty(connection_type.application_id)) {
       items.push("Application ID is required for application connections");
     }
-    obj3 = require("../../utils/StringUtils.tsx") /* isNullOrEmpty */;
+    obj3 = isNullOrEmpty /* isNullOrEmpty */;
     const tmp9 = require;
     if (!tmp9Result.isNullOrEmpty(connection_type.provider_id)) {
       items.push("Platform ID not allowed for application connections");
     }
-    tmp9Result = require("../../utils/StringUtils.tsx") /* isNullOrEmpty */;
+    tmp9Result = isNullOrEmpty /* isNullOrEmpty */;
   } else if (tmp.PROVIDER_CONNECTED_ACCOUNT === connection_type) {
-    obj = require("../../utils/StringUtils.tsx") /* isNullOrEmpty */;
+    obj = isNullOrEmpty /* isNullOrEmpty */;
     if (obj.isNullOrEmpty(connection_type.provider_id)) {
       items.push("Platform ID is required for platform connections");
     } else if (!closure_11.includes(connection_type.provider_id)) {
@@ -50,7 +53,7 @@ function validateOnboardingConnection(connection_type) {
       items.push("Application ID not allowed for platform connections");
     }
     const tmp3 = require;
-    tmp3Result = require("../../utils/StringUtils.tsx") /* isNullOrEmpty */;
+    tmp3Result = isNullOrEmpty /* isNullOrEmpty */;
   } else {
     const connection_type2 = connection_type.connection_type;
     items.push("Invalid connection type");
@@ -100,20 +103,20 @@ export const isDefaultPrompt = function isDefaultPrompt(options) {
     const _String = String;
     const _Date = Date;
     obj[0] = String(Date.now());
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[1] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.vY91C9);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.vY91C9);
     obj[2] = [];
     obj[6] = obj.MULTIPLE_CHOICE;
     const id = obj.id;
     const id2 = options.id;
     const tmp7 = callback2(obj, closure_3);
-    return require("../../../_runtime/00659_isUndefinedOrNull.js")(tmp7, callback2(options, closure_4));
+    return isUndefinedOrNull(tmp7, callback2(options, closure_4));
   }
 };
 export const getDefaultPrompt = function getDefaultPrompt() {
   const obj = { id: String(Date.now()), title: null, options: null, singleSelect: false, required: false, inOnboarding: true, type: null };
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.vY91C9);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.vY91C9);
   obj[2] = [];
   obj[6] = obj.MULTIPLE_CHOICE;
   return obj;

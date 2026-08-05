@@ -1,3 +1,5 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { canStreamInChannel } from "../go_live/utils/StreamPermissionUtils.tsx";
 // discord_app/modules/video_calls/useHasVideoPermission.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -9,7 +11,7 @@ export default function useHasVideoPermission(arg0) {
   const _require = arg0;
   const items = [createGuildRecordFromRust, getUncachedChannelPermissions];
   const items1 = [arg0];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let tmp = null != callback;
     if (tmp) {
       let isPrivateResult = obj.isPrivate();
@@ -25,7 +27,7 @@ export default function useHasVideoPermission(arg0) {
 export const getVideoPermission = function getVideoPermission(channel) {
   let isPrivateResult = channel.isPrivate();
   if (!isPrivateResult) {
-    const obj = require("../go_live/utils/StreamPermissionUtils.tsx") /* canStreamInChannel */;
+    const obj = canStreamInChannel /* canStreamInChannel */;
     isPrivateResult = obj.canStreamInChannel(channel, createGuildRecordFromRust, getUncachedChannelPermissions, false);
   }
   return isPrivateResult;

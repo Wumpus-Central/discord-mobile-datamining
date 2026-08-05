@@ -1,3 +1,7 @@
+import { t } from "../../../_runtime/03867_t.js";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import { getClearAfterDuration } from "utils/getClearAfterDuration.tsx";
 // discord_app/modules/custom_status/setCustomStatus.tsx
 import { ClearAfterValues } from "StatusTypes";
 import { AnalyticEvents } from "ME";
@@ -16,11 +20,11 @@ export default function setCustomStatus(arg0) {
   const trimmed = text.trim();
   if (trimmed.length <= 0) {
     if (null == emojiInfo) {
-      const CustomStatusSetting = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.CustomStatusSetting;
+      const CustomStatusSetting = explicitContentFromProto /* explicitContentFromProto */.CustomStatusSetting;
       return CustomStatusSetting.updateSetting(undefined);
     }
   }
-  const CustomStatusSetting2 = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.CustomStatusSetting;
+  const CustomStatusSetting2 = explicitContentFromProto /* explicitContentFromProto */.CustomStatusSetting;
   let str = "";
   if (trimmed.length > 0) {
     str = trimmed;
@@ -31,10 +35,10 @@ export default function setCustomStatus(arg0) {
     str2 = "0";
     if (clearAfter !== ClearAfterValues.DONT_CLEAR) {
       const _String = String;
-      const obj2 = require("../../../_runtime/03867_t.js")();
-      const addResult = require("../../../_runtime/03867_t.js")().add(require("utils/getClearAfterDuration.tsx")(clearAfter), "ms");
-      str2 = String(require("../../../_runtime/03867_t.js")().add(require("utils/getClearAfterDuration.tsx")(clearAfter), "ms").toDate().getTime());
-      const toDateResult = require("../../../_runtime/03867_t.js")().add(require("utils/getClearAfterDuration.tsx")(clearAfter), "ms").toDate();
+      const obj2 = t();
+      const addResult = t().add(getClearAfterDuration(clearAfter), "ms");
+      str2 = String(t().add(getClearAfterDuration(clearAfter), "ms").toDate().getTime());
+      const toDateResult = t().add(getClearAfterDuration(clearAfter), "ms").toDate();
     }
   }
   obj[1] = str2;
@@ -52,9 +56,9 @@ export default function setCustomStatus(arg0) {
   }
   obj[3] = str5;
   if (createdAtMs == null) {
-    const obj5 = require("../../../_runtime/03867_t.js")();
-    createdAtMs = require("../../../_runtime/03867_t.js")().toDate().getTime();
-    const toDateResult1 = require("../../../_runtime/03867_t.js")().toDate();
+    const obj5 = t();
+    createdAtMs = t().toDate().getTime();
+    const toDateResult1 = t().toDate();
   }
   obj[4] = String(createdAtMs);
   const updateSettingResult = CustomStatusSetting2.updateSetting(obj);
@@ -85,6 +89,6 @@ export default function setCustomStatus(arg0) {
   }
   obj[4] = value;
   obj[5] = analyticsLocations;
-  require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.CUSTOM_STATUS_UPDATED, obj);
+  expandEventProperties.track(AnalyticEvents.CUSTOM_STATUS_UPDATED, obj);
   return updateSettingResult;
 };

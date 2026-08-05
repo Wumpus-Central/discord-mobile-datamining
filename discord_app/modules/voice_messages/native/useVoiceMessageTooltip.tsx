@@ -1,3 +1,4 @@
+import { useTooltip } from "../../../design/components/Tooltip/native/useTooltip.native.tsx";
 // discord_app/modules/voice_messages/native/useVoiceMessageTooltip.tsx
 import noop from "noop";
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore";
@@ -42,7 +43,7 @@ export default function useVoiceMessageTooltip() {
       };
     }
   }, items1);
-  let obj = require("../../../design/components/Tooltip/native/useTooltip.native.tsx") /* useTooltip */;
+  let obj = useTooltip /* useTooltip */;
   const tooltip = obj.useTooltip(ref, memo);
   obj = { tooltipTargetRef: ref, showVoiceMessagesTooltip: closure_5 };
   return obj;

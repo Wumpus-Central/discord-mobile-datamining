@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/design/components/Tabs/native/Tabs.native.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -21,18 +22,18 @@ let c9 = 0.04;
 let closure_10 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
 let closure_11 = createCacheKey.createStyles((gap) => {
   let obj = { container: null, controlsContainer: null, indicatorContainer: null, indicator: null };
-  obj = { display: "flex", flexGrow: 1, minWidth: "100%", flexDirection: "row", alignItems: "center", borderBottomColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE, borderBottomWidth: 1 };
+  obj = { display: "flex", flexGrow: 1, minWidth: "100%", flexDirection: "row", alignItems: "center", borderBottomColor: Themes.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
   obj[0] = obj;
-  obj = { marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, flexDirection: "row", gap };
+  obj = { marginHorizontal: Themes.space.PX_16, flexDirection: "row", gap };
   obj[1] = obj;
-  obj[2] = { position: "absolute", width: "100%", height: "100%", flexDirection: "row", alignItems: "flex-end", marginLeft: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
+  obj[2] = { position: "absolute", width: "100%", height: "100%", flexDirection: "row", alignItems: "flex-end", marginLeft: Themes.space.PX_16 };
   if ("gradient-background" === arg1) {
     let TEXT_BRAND = tmp(712).colors.TEXT_STRONG;
   } else {
     TEXT_BRAND = tmp(712).colors.TEXT_BRAND;
   }
-  const obj1 = { position: "absolute", width: "100%", height: "100%", flexDirection: "row", alignItems: "flex-end", marginLeft: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
-  obj[3] = { height: 2, backgroundColor: TEXT_BRAND, borderTopStartRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.xs, borderTopEndRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.xs };
+  const obj1 = { position: "absolute", width: "100%", height: "100%", flexDirection: "row", alignItems: "flex-end", marginLeft: Themes.space.PX_16 };
+  obj[3] = { height: 2, backgroundColor: TEXT_BRAND, borderTopStartRadius: Themes.radii.xs, borderTopEndRadius: Themes.radii.xs };
   return obj;
 });
 let closure_13 = { code: "function TabsNativeTsx1(){const{activeIndex,itemCount}=this.__closure;return Math.round(Math.min(Math.max(activeIndex.get(),0),itemCount-1));}" };

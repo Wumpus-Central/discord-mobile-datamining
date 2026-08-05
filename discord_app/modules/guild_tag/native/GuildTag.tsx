@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/guild_tag/native/GuildTag.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -44,8 +45,8 @@ const memoResult = importAllResult.memo((arg0) => {
   if (null != source) {
     let obj = { source: null, alt: null, style: null };
     obj[0] = source;
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.HHYPgJ);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.HHYPgJ);
     obj = { width: null, height: null };
     obj[0] = size;
     obj[1] = size;

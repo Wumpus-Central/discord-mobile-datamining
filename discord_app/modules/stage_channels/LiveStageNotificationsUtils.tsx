@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/stage_channels/LiveStageNotificationsUtils.tsx
 import handleInviteData from "handleInviteData";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -10,7 +11,7 @@ export const useCanSendStageStartNotification = function useCanSendStageStartNot
   const _require = first;
   const items = [getUncachedChannelPermissions];
   const items1 = [first];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = outer1_3.can(outer1_4.MENTION_EVERYONE, tmp);

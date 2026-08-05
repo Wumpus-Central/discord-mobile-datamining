@@ -1,10 +1,11 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/defs/native/SupportSetting.tsx
 import createToggle from "createToggle";
 
 const pressable = createToggle.createPressable({
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["Yl/Riu"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["Yl/Riu"]);
   },
   parent: null,
   IconComponent: require("CircleQuestionIcon").CircleQuestionIcon,
@@ -13,8 +14,8 @@ const pressable = createToggle.createPressable({
 });
 const obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["Yl/Riu"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["Yl/Riu"]);
   },
   parent: null,
   IconComponent: require("CircleQuestionIcon").CircleQuestionIcon,

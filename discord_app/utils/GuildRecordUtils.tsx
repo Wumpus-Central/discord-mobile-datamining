@@ -1,3 +1,6 @@
+import { 00038__ } from "../../_runtime/metro/00038__.js";
+import { areSetsEqual } from "../../discord_common/js/shared/utils/SetUtils.tsx";
+import { cloneGuildThemeSettings } from "../modules/guild_themes/guildThemeSerialization.tsx";
 // discord_app/utils/GuildRecordUtils.tsx
 import isValueEqual from "isValueEqual";
 import GuildNSFWContentLevel from "GuildNSFWContentLevel";
@@ -39,7 +42,7 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
     home_header = null;
   }
   obj[8] = home_header;
-  obj[9] = require("../../discord_common/js/shared/utils/SetUtils.tsx") /* areSetsEqual */.toSetInplace(properties.features);
+  obj[9] = areSetsEqual /* areSetsEqual */.toSetInplace(properties.features);
   let preferredLocale = properties.preferred_locale;
   if (preferredLocale == null) {
     preferredLocale = closure_7.preferredLocale;
@@ -174,12 +177,12 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
   } else {
     tmp35 = null;
     if (null != theme) {
-      let fromServerGuildThemeResult = require("../modules/guild_themes/guildThemeSerialization.tsx") /* cloneGuildThemeSettings */.fromServerGuildTheme(theme);
+      let fromServerGuildThemeResult = cloneGuildThemeSettings /* cloneGuildThemeSettings */.fromServerGuildTheme(theme);
       if (fromServerGuildThemeResult == null) {
         fromServerGuildThemeResult = { enabled: false, themeSettings: null };
       }
       tmp35 = fromServerGuildThemeResult;
-      const tmp8Result = require("../modules/guild_themes/guildThemeSerialization.tsx") /* cloneGuildThemeSettings */;
+      const tmp8Result = cloneGuildThemeSettings /* cloneGuildThemeSettings */;
     }
   }
   obj[37] = tmp35;
@@ -240,7 +243,7 @@ export const fromServer = function fromServer(joined_at, joinedAt) {
     num = 0;
   }
   if (null == joined_at.properties) {
-    require("../../_runtime/metro/00038__.js")(null != joinedAt, "If guild.properties is null, existingGuild must be passed in");
+    00038__(null != joinedAt, "If guild.properties is null, existingGuild must be passed in");
     let obj = { joinedAt: null, premiumSubscriberCount: null };
     obj[0] = date;
     obj[1] = num;
@@ -305,7 +308,7 @@ export const fromGuild = function fromGuild(guild, fromGuildResult) {
 };
 export const fromInviteGuild = function fromInviteGuild(guild) {
   let obj = { id: guild.id, name: guild.name, description: guild.description, icon: guild.icon, splash: guild.splash, banner: guild.banner, features: null, verificationLevel: null, vanityURLCode: null, premiumSubscriberCount: null, nsfwLevel: null, premiumTier: null, homeHeader: null };
-  obj[6] = require("../../discord_common/js/shared/utils/SetUtils.tsx") /* areSetsEqual */.toSetInplace(guild.features);
+  obj[6] = areSetsEqual /* areSetsEqual */.toSetInplace(guild.features);
   ({ verification_level: obj[7], vanity_url_code: obj[8], premium_subscription_count: obj[9], nsfw_level: obj[10], premium_tier: obj[11], home_header: obj[12] } = guild);
   obj = {};
   const merged = Object.assign(closure_7);
@@ -324,7 +327,7 @@ export const fromGuildProfile = function fromGuildProfile(profile) {
     premiumTier = closure_7.premiumTier;
   }
   obj[5] = premiumTier;
-  obj[6] = require("../../discord_common/js/shared/utils/SetUtils.tsx") /* areSetsEqual */.toSetInplace(profile.features);
+  obj[6] = areSetsEqual /* areSetsEqual */.toSetInplace(profile.features);
   obj = {};
   const merged = Object.assign(closure_7);
   const merged1 = Object.assign(obj);
@@ -359,7 +362,7 @@ export const fromDirectoryGuild = function fromDirectoryGuild(id) {
     splash = null;
   }
   obj[4] = splash;
-  obj[5] = require("../../discord_common/js/shared/utils/SetUtils.tsx") /* areSetsEqual */.toSetInplace(id.features);
+  obj[5] = areSetsEqual /* areSetsEqual */.toSetInplace(id.features);
   obj = {};
   const merged = Object.assign(closure_7);
   const merged1 = Object.assign(obj);
@@ -387,7 +390,7 @@ export const fromGuildDirectoryEntry = function fromGuildDirectoryEntry(entry) {
     splash = null;
   }
   obj[4] = splash;
-  obj[5] = require("../../discord_common/js/shared/utils/SetUtils.tsx") /* areSetsEqual */.toSetInplace(entry.features);
+  obj[5] = areSetsEqual /* areSetsEqual */.toSetInplace(entry.features);
   obj = {};
   const merged = Object.assign(closure_7);
   const merged1 = Object.assign(obj);
@@ -410,7 +413,7 @@ export const fromVerificationGateGuild = function fromVerificationGateGuild(stat
     splash = null;
   }
   obj[4] = splash;
-  obj[5] = require("../../discord_common/js/shared/utils/SetUtils.tsx") /* areSetsEqual */.toSetInplace(stateFromStores1.features);
+  obj[5] = areSetsEqual /* areSetsEqual */.toSetInplace(stateFromStores1.features);
   let verificationLevel = stateFromStores1.verification_level;
   if (verificationLevel == null) {
     verificationLevel = closure_7.verificationLevel;
@@ -448,7 +451,7 @@ export const fromClientDiscoverableGuild = function fromClientDiscoverableGuild(
     icon = null;
   }
   obj[6] = icon;
-  obj[7] = require("../../discord_common/js/shared/utils/SetUtils.tsx") /* areSetsEqual */.toSetInplace(guild.features);
+  obj[7] = areSetsEqual /* areSetsEqual */.toSetInplace(guild.features);
   let premiumSubscriberCount = guild.premiumSubscriptionCount;
   if (premiumSubscriberCount == null) {
     premiumSubscriberCount = closure_7.premiumSubscriberCount;
@@ -486,7 +489,7 @@ export const fromGuildBasic = function fromGuildBasic(id) {
     discovery_splash = null;
   }
   obj[5] = discovery_splash;
-  obj[6] = require("../../discord_common/js/shared/utils/SetUtils.tsx") /* areSetsEqual */.toSetInplace(id.features);
+  obj[6] = areSetsEqual /* areSetsEqual */.toSetInplace(id.features);
   obj = {};
   const merged = Object.assign(closure_7);
   const merged1 = Object.assign(obj);
@@ -495,7 +498,7 @@ export const fromGuildBasic = function fromGuildBasic(id) {
 export const dangerouslyConstructGuildRecordFromUntypedObject = function dangerouslyConstructGuildRecordFromUntypedObject(c0) {
   let latestOnboardingQuestionId;
   const obj = { id: c0.id, name: tmp, description: tmp2, ownerId: tmp3, icon: tmp4, splash: tmp5, banner: tmp6, homeHeader: tmp7, features: null, preferredLocale: null, afkChannelId: null, afkTimeout: null, systemChannelId: null, verificationLevel: null, joinedAt: null, defaultMessageNotifications: null, mfaLevel: null, application_id: null, explicitContentFilter: null, vanityURLCode: null, premiumTier: null, premiumSubscriberCount: null, premiumProgressBarEnabled: null, premiumProgressBarEnabledUserUpdatedAt: null, systemChannelFlags: null, discoverySplash: null, rulesChannelId: null, safetyAlertsChannelId: null, publicUpdatesChannelId: null, maxStageVideoChannelUsers: null, maxVideoChannelUsers: null, maxMembers: null, nsfwLevel: null, ownerConfiguredContentLevel: null, hubType: null, latestOnboardingQuestionId: null, profile: null, guildTheme: null, premiumFeatures: null, moderatorReporting: null, gameApplicationIds: null, officialMessageColor: null, verificationRoleId: null };
-  obj[8] = require("../../discord_common/js/shared/utils/SetUtils.tsx") /* areSetsEqual */.toSetInplace(c0.features);
+  obj[8] = areSetsEqual /* areSetsEqual */.toSetInplace(c0.features);
   let preferredLocale = c0.preferredLocale;
   if (!preferredLocale) {
     preferredLocale = closure_7.preferredLocale;
@@ -668,9 +671,9 @@ export const toGuildProperties = function toGuildProperties(id) {
     const guildTheme = id.guildTheme;
     obj = { enabled: null };
     obj[0] = guildTheme.enabled;
-    const merged = Object.assign(require("../modules/guild_themes/guildThemeSerialization.tsx") /* cloneGuildThemeSettings */.toServerGuildThemeSettings(guildTheme.themeSettings));
+    const merged = Object.assign(cloneGuildThemeSettings /* cloneGuildThemeSettings */.toServerGuildThemeSettings(guildTheme.themeSettings));
     tmp4 = obj;
-    const obj4 = require("../modules/guild_themes/guildThemeSerialization.tsx") /* cloneGuildThemeSettings */;
+    const obj4 = cloneGuildThemeSettings /* cloneGuildThemeSettings */;
   }
   obj[37] = tmp4;
   let tmp9 = null;
@@ -686,7 +689,7 @@ export const toGuildProperties = function toGuildProperties(id) {
 export const fromSerializedGuildRecord = function fromSerializedGuildRecord(item10009) {
   const obj = {};
   const merged = Object.assign(item10009);
-  obj.features = require("../../discord_common/js/shared/utils/SetUtils.tsx") /* areSetsEqual */.toSetInplace(item10009.features);
+  obj.features = areSetsEqual /* areSetsEqual */.toSetInplace(item10009.features);
   let date = null;
   if (null != item10009.joinedAt) {
     const _Date = Date;

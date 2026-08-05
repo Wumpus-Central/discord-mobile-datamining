@@ -1,3 +1,4 @@
+import { SearchTokenTypes } from "../../SearchUtils.tsx";
 // discord_app/modules/search/native/message_parsers/MessageSearchResultParser.tsx
 import hasFlag from "hasFlag";
 import { EMBED_TYPES_WITHOUT_DESCRIPTION as closure_3 } from "MessageEmbedTypes";
@@ -103,11 +104,11 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
     }
     return content;
   };
-  let obj = require("../../SearchUtils.tsx") /* SearchTokenTypes */;
-  const tokenizeQueryResult = require("../../SearchUtils.tsx") /* SearchTokenTypes */.tokenizeQuery(searchQueryString);
-  const searchQueryFromTokens = require("../../SearchUtils.tsx") /* SearchTokenTypes */.getSearchQueryFromTokens(tokenizeQueryResult);
-  const obj2 = require("../../SearchUtils.tsx") /* SearchTokenTypes */;
-  const str = require("../../SearchUtils.tsx") /* SearchTokenTypes */.getQueryContentString(searchQueryFromTokens);
+  let obj = SearchTokenTypes /* SearchTokenTypes */;
+  const tokenizeQueryResult = SearchTokenTypes /* SearchTokenTypes */.tokenizeQuery(searchQueryString);
+  const searchQueryFromTokens = SearchTokenTypes /* SearchTokenTypes */.getSearchQueryFromTokens(tokenizeQueryResult);
+  const obj2 = SearchTokenTypes /* SearchTokenTypes */;
+  const str = SearchTokenTypes /* SearchTokenTypes */.getQueryContentString(searchQueryFromTokens);
   let str2;
   if (str != null) {
     str2 = str.trim();

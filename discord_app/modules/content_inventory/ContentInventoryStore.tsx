@@ -1,3 +1,4 @@
+import { isMatchingListeningActivity } from "matchUtils.tsx";
 // discord_app/modules/content_inventory/ContentInventoryStore.tsx
 import { Store } from "initialize";
 
@@ -54,7 +55,7 @@ prototype["getMatchingInboxEntry"] = function getMatchingInboxEntry(feedId) {
         }
         return items1;
       }, []);
-      return require("matchUtils.tsx") /* isMatchingListeningActivity */.findMatchingEntry(reduced, activity);
+      return isMatchingListeningActivity /* isMatchingListeningActivity */.findMatchingEntry(reduced, activity);
     }
   }
 };

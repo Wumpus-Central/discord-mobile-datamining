@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/parent_tools/hooks/useUserIsTeenAgeGroup.tsx
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 
@@ -6,5 +7,5 @@ const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/
 
 export default function useUserIsTeenAgeGroup() {
   const items = [freshTeenActivityWithMap];
-  return "teen" === require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => ageGroup.getAgeGroup());
+  return "teen" === initialize /* initialize */.useStateFromStores(items, () => ageGroup.getAgeGroup());
 };

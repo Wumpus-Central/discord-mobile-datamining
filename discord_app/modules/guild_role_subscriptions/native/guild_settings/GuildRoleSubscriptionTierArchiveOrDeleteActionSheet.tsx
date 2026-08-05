@@ -1,3 +1,12 @@
+import { BottomSheetModal } from "../../../../../_runtime/05340_BottomSheetModal.js";
+import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import { useArchiveOrDelete } from "useArchiveOrDelete.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionTierArchiveOrDeleteActionSheet.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -29,21 +38,21 @@ export default function GuildRoleSubscriptionTierArchiveOrDeleteActionSheet(grou
   groupListingId = groupListingId.groupListingId;
   ({ editStateId, guildId } = groupListingId);
   const tmp = createCacheKey();
-  require("../../../../../_runtime/metro/00038__.js")(null != groupListingId, "group listing id cannot be null");
-  const tmp4 = require("useArchiveOrDelete.tsx")(guildId, groupListingId, editStateId);
+  00038__(null != groupListingId, "group listing id cannot be null");
+  const tmp4 = useArchiveOrDelete(guildId, groupListingId, editStateId);
   let deleting = tmp4.deleting;
   ({ headerText, buttonText, descriptionText, handleArchiveOrDelete, archiving } = tmp4);
   let obj = { style: tmp.container, children: null };
-  obj = { contentContainerStyle: { paddingBottom: require("../../../safe_area/useSafeAreaInsets.native.tsx")().bottom }, children: null };
-  const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: headerText }), callback(require("../../../../design/void/native.tsx") /* Button */.Spacer, { size: 12 }), callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/normal", color: "text-default", children: descriptionText }), callback(require("../../../../design/void/native.tsx") /* Button */.Spacer, { size: 24 }), , , ];
+  obj = { contentContainerStyle: { paddingBottom: useSafeAreaInsets().bottom }, children: null };
+  const items = [callback(Text /* Text */.Text, { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: headerText }), callback(Button /* Button */.Spacer, { size: 12 }), callback(Text /* Text */.Text, { variant: "text-sm/normal", color: "text-default", children: descriptionText }), callback(Button /* Button */.Spacer, { size: 24 }), , , ];
   obj = { text: buttonText, variant: "destructive", grow: true, onPress: handleArchiveOrDelete, disabled: null };
   if (!deleting) {
     deleting = archiving;
   }
   const obj1 = { backdropOpacity: 0.8, children: null };
   obj[4] = deleting;
-  items[4] = callback(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj);
-  items[5] = callback(require("../../../../design/void/native.tsx") /* Button */.Spacer, { size: 24 });
+  items[4] = callback(Button /* Button */.Button, obj);
+  items[5] = callback(Button /* Button */.Spacer, { size: 24 });
   const obj2 = {
     onPress() {
       return callback(table[13]).hideActionSheet();
@@ -54,11 +63,11 @@ export default function GuildRoleSubscriptionTierArchiveOrDeleteActionSheet(grou
   };
   const obj3 = { variant: "text-sm/semibold", color: "interactive-text-active", children: null };
   const intl = tmp6(1236).intl;
-  obj3[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["ETE/oC"]);
-  obj2[3] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
+  obj3[2] = intl.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
+  obj2[3] = callback(Text /* Text */.Text, obj3);
   items[6] = callback(closure_3, obj2);
   obj[1] = items;
-  obj[1] = closure_6(require("../../../../../_runtime/05340_BottomSheetModal.js") /* BottomSheetModal */.BottomSheetScrollView, obj);
+  obj[1] = closure_6(BottomSheetModal /* BottomSheetModal */.BottomSheetScrollView, obj);
   obj1[1] = callback(closure_4, obj);
-  return callback(require("../../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, obj1);
+  return callback(Background /* Background */.BottomSheet, obj1);
 };

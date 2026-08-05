@@ -1,3 +1,5 @@
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceThermalStateModule.tsx";
+import { DCDDeviceManager } from "../../utils/native/DeviceUtils.tsx";
 // discord_app/modules/device/ThermalUtils.native.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import set from "set";
@@ -16,13 +18,13 @@ let closure_5 = keys.create((arg0) => {
   let thermalState = dependencyMap;
   if (obj.isAndroid()) {
     if (tmpResult.getSystemVersionMajor() >= 29) {
-      thermalState = require("../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceThermalStateModule.tsx").getThermalState();
+      thermalState = enforcing.getThermalState();
       let resolved = Promise.resolve(thermalState);
-      const obj3 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceThermalStateModule.tsx");
+      const obj3 = enforcing;
     } else {
       resolved = Promise.resolve(undefined);
     }
-    tmpResult = _require("../../utils/native/DeviceUtils.tsx");
+    tmpResult = _DCDDeviceManager;
   } else {
     const DCDDeviceThermalStateManager = NativeModules.DCDDeviceThermalStateManager;
     const thermalState1 = DCDDeviceThermalStateManager.getThermalState();

@@ -1,3 +1,4 @@
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/provisional_accounts/MessageSessionMetadataManager.tsx
 import { AnalyticEvents } from "ME";
 import "initialize";
@@ -34,7 +35,7 @@ prototype["_getAuthorizedApplicationIds"] = function _getAuthorizedApplicationId
 prototype["_trackIfSessionMetadataExists"] = function _trackIfSessionMetadataExists(message) {
   let author;
   if (null != message.session_metadata) {
-    let obj = require("../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { message_id: null, channel_id: null, author_id: null, authorized_application_ids: null };
     ({ id: obj2[0], channel_id: obj2[1], author } = message);
     let id;

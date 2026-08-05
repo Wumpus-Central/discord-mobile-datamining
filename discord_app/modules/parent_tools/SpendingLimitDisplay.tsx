@@ -1,3 +1,7 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { formatSingleCurrencyPrice } from "../../utils/PriceUtils.tsx";
+import { messagesProxy } from "FamilyCenter.messages.js";
+import { spendingLimitEqual } from "SpendingLimitUtils.tsx";
 // discord_app/modules/parent_tools/SpendingLimitDisplay.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
@@ -11,8 +15,8 @@ function getSpendingLimitDisplayState(amount) {
     return { kind: "blocked" };
   } else {
     const currency = amount.currency;
-    const obj6 = require("../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */;
-    const formatRateResult = obj6.formatRate(require("../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */.formatPrice(amount.amount, currency), SubscriptionIntervalTypes.MONTH, 1);
+    const obj6 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
+    const formatRateResult = obj6.formatRate(formatSingleCurrencyPrice /* formatSingleCurrencyPrice */.formatPrice(amount.amount, currency), SubscriptionIntervalTypes.MONTH, 1);
     if (arg1 >= amount.amount) {
       let obj = { kind: "spent", monthlyText: null };
       obj[1] = formatRateResult;
@@ -29,7 +33,7 @@ function getSpendingLimitDisplayState(amount) {
         const intl = tmp5(1236).intl;
         const obj1 = { amount: null };
         obj1[0] = tmp5(5764).formatPrice(diff, currency);
-        obj[2] = intl.formatToPlainString(require("FamilyCenter.messages.js")["+Q+bU1"], obj1);
+        obj[2] = intl.formatToPlainString(messagesProxy["+Q+bU1"], obj1);
         const tmp5Result = tmp5(5764);
       } else {
         obj = { kind: "on", monthlyText: null };
@@ -37,14 +41,14 @@ function getSpendingLimitDisplayState(amount) {
       }
       return obj;
     }
-    const obj7 = require("../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */;
+    const obj7 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
   }
 }
 const result = require("GuildFeatures").fileFinishedImporting("modules/parent_tools/SpendingLimitDisplay.tsx");
 
 export const useSpendingLimitFromUserSettings = function useSpendingLimitFromUserSettings() {
   const items = [handleConnectionClosedOrResumed];
-  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+  return initialize /* initialize */.useStateFromStores(items, () => {
     const safetySettings = settings.settings.safetySettings;
     let oneTimePurchaseLimit;
     if (safetySettings != null) {
@@ -62,13 +66,13 @@ export const useSpendingLimitFromUserSettings = function useSpendingLimitFromUse
       tmp2 = obj;
     }
     return tmp2;
-  }, undefined, require("SpendingLimitUtils.tsx") /* spendingLimitEqual */.spendingLimitEqual);
+  }, undefined, spendingLimitEqual /* spendingLimitEqual */.spendingLimitEqual);
 };
 export const CLOSE_TO_LIMIT_THRESHOLD_MAJOR_UNITS = 10;
 export { getSpendingLimitDisplayState };
 export const useSpendingLimitDisplayState = function useSpendingLimitDisplayState(cap) {
   const items = [freshTeenActivityWithMap];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => monthlyPurchases.getMonthlyPurchases());
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => monthlyPurchases.getMonthlyPurchases());
   let num;
   if (stateFromStores != null) {
     num = stateFromStores.total_amount;

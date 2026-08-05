@@ -1,3 +1,6 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { useAudienceRequestToSpeakState } from "../../useAudienceRequestToSpeakState.tsx";
 // discord_app/modules/stage_channels/native/components/AudienceTile.tsx
 import { View } from "AccessibilityAnnouncer";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -10,8 +13,8 @@ let closure_6;
 const require = arg1;
 function RaisedHandIcon(rtsState) {
   const tmp = styles();
-  let activeBackground = rtsState.rtsState === require("../../useAudienceRequestToSpeakState.tsx") /* useAudienceRequestToSpeakState */.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-  const unsafe_rawColors = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
+  let activeBackground = rtsState.rtsState === useAudienceRequestToSpeakState /* useAudienceRequestToSpeakState */.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+  const unsafe_rawColors = Themes.unsafe_rawColors;
   if (activeBackground) {
     let PRIMARY_800 = unsafe_rawColors.WHITE;
     let tmp5 = tmp4;
@@ -28,7 +31,7 @@ function RaisedHandIcon(rtsState) {
   obj = { style: tmp.raisedHand, source: null, color: null };
   obj[1] = tmp5(7813);
   obj[2] = PRIMARY_800;
-  obj[1] = closure_5(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
+  obj[1] = closure_5(Button /* Button */.Icon, obj);
   return closure_5(View, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

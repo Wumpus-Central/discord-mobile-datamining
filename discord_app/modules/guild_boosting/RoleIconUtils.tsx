@@ -1,3 +1,6 @@
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
+import { handleImageLoad } from "../image_upload/ImageLoaderUtils.tsx";
 // discord_app/modules/guild_boosting/RoleIconUtils.tsx
 import ME from "ME";
 import set from "set";
@@ -19,9 +22,9 @@ export const getRoleIconData = function getRoleIconData(role, arg1) {
   } else {
     let byName;
     if (null != role.unicodeEmoji) {
-      let obj = require("../emojis/UnicodeEmojis.tsx");
-      byName = obj.getByName(require("../emojis/UnicodeEmojis.tsx").convertSurrogateToName(role.unicodeEmoji, false));
-      const obj2 = require("../emojis/UnicodeEmojis.tsx");
+      let obj = parseRawEmojiObject;
+      byName = obj.getByName(parseRawEmojiObject.convertSurrogateToName(role.unicodeEmoji, false));
+      const obj2 = parseRawEmojiObject;
     }
     ({ id, icon } = role);
     let tmp4;
@@ -29,7 +32,7 @@ export const getRoleIconData = function getRoleIconData(role, arg1) {
       tmp4 = icon;
       if (!icon.startsWith("data:")) {
         let str2 = "png";
-        if (require("../../utils/AvatarUtils.tsx") /* getAvatarURL */.SUPPORTS_WEBP) {
+        if (getAvatarURL /* getAvatarURL */.SUPPORTS_WEBP) {
           str2 = "webp";
         }
         let str3 = "quality=lossless";
@@ -63,8 +66,8 @@ export const getRoleIconData = function getRoleIconData(role, arg1) {
   }
 };
 export const replaceRoleIconSourceSize = function replaceRoleIconSourceSize(str) {
-  const obj = require("../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */;
-  return str.replace(/size=[0-9]+/g, "size=" + obj.getBestMediaProxySize(arg1 * require("../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */.getDevicePixelRatio()));
+  const obj = handleImageLoad /* handleImageLoad */;
+  return str.replace(/size=[0-9]+/g, "size=" + obj.getBestMediaProxySize(arg1 * handleImageLoad /* handleImageLoad */.getDevicePixelRatio()));
 };
 export const isRoleIconAssetUrl = function isRoleIconAssetUrl(str) {
   let startsWithResult = str.startsWith(closure_5);

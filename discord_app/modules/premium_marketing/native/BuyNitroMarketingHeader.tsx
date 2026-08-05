@@ -1,3 +1,4 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/premium_marketing/native/BuyNitroMarketingHeader.tsx
 import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "registerAsset";
@@ -23,7 +24,7 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2) => {
       num = tmp(712).space.PX_8;
     }
   }
-  let obj = { marginHorizontal: -require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 + num, marginTop: null, marginBottom: null, overflow: null };
+  let obj = { marginHorizontal: -Themes.space.PX_16 + num, marginTop: null, marginBottom: null, overflow: null };
   let PX_8;
   if (arg1) {
     if (arg2) {
@@ -31,7 +32,7 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2) => {
     }
   }
   obj[1] = PX_8;
-  obj[2] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
+  obj[2] = Themes.space.PX_16;
   let str;
   if (arg1) {
     if (arg2) {
@@ -48,7 +49,7 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2) => {
     num2 = 0;
   }
   obj.top = num2;
-  obj.color = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWER;
+  obj.color = Themes.colors.BACKGROUND_BASE_LOWER;
   let sm;
   if (arg1) {
     if (arg2) {
@@ -57,13 +58,13 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   }
   obj.borderRadius = sm;
   obj[1] = obj;
-  const tmp3 = -require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
+  const tmp3 = -Themes.space.PX_16;
   const tmp5 = absoluteFillObject;
-  obj[2] = { position: "absolute", top: -require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, right: "call", left: "Object", alignSelf: -0.00000000000000000000000000000000655267580642877 };
-  const obj1 = { position: "absolute", top: -require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, right: "call", left: "Object", alignSelf: -0.00000000000000000000000000000000655267580642877 };
-  obj[3] = { position: "absolute", top: arg0 + require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_20, right: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
+  obj[2] = { position: "absolute", top: -Themes.space.PX_16, right: "call", left: "Object", alignSelf: -0.00000000000000000000000000000000655267580642877 };
+  const obj1 = { position: "absolute", top: -Themes.space.PX_16, right: "call", left: "Object", alignSelf: -0.00000000000000000000000000000000655267580642877 };
+  obj[3] = { position: "absolute", top: arg0 + Themes.space.PX_20, right: Themes.space.PX_4 };
   const obj3 = { height: null };
-  obj3[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_80 + require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4;
+  obj3[0] = Themes.space.PX_80 + Themes.space.PX_4;
   obj[4] = obj3;
   let num4 = 0;
   if (arg1) {
@@ -74,20 +75,20 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   if (!arg1) {
     num5 = tmp(712).space.PX_8;
   }
-  obj4[2] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 + num5;
+  obj4[2] = Themes.space.PX_8 + num5;
   const items = [{ scaleX: -1 }];
   obj4[3] = items;
   obj[5] = obj4;
-  const obj5 = { alignItems: "center", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, paddingTop: null, paddingHorizontal: null, paddingBottom: null };
+  const obj5 = { alignItems: "center", gap: Themes.space.PX_8, paddingTop: null, paddingHorizontal: null, paddingBottom: null };
   const sum = arg0 + tmp(712).space.PX_80;
-  obj5[2] = sum + require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4;
-  obj5[3] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
+  obj5[2] = sum + Themes.space.PX_4;
+  obj5[3] = Themes.space.PX_16;
   const space = tmp(712).space;
   obj5[4] = arg1 ? space.PX_24 : space.PX_32;
   obj[6] = obj5;
   const obj6 = {};
   const merged1 = Object.assign(tmp5.absoluteFillObject);
-  obj6.height = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_96;
+  obj6.height = Themes.space.PX_96;
   obj6.position = "absolute";
   obj6.top = undefined;
   obj[7] = obj6;

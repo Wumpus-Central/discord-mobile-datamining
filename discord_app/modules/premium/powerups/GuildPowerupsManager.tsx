@@ -1,3 +1,5 @@
+import { getFavoritesAwareGuildName } from "../../favorites/FavoritesUtils.tsx";
+import { getUnitId } from "../../guild_boosting/experiments/BoostToUnlockMobileCoachmarkExperiment.tsx";
 // discord_app/modules/premium/powerups/GuildPowerupsManager.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -69,8 +71,8 @@ prototype["handleSelectedGuildChange"] = function handleSelectedGuildChange() {
             const tmp10Result5 = tmp10(15173);
           }
           if (showCoachmark) {
-            showCoachmark = require("../../guild_boosting/experiments/BoostToUnlockMobileCoachmarkExperiment.tsx").getConfig({ location: "GuildPowerupsManager" }).showCoachmark;
-            const obj8 = require("../../guild_boosting/experiments/BoostToUnlockMobileCoachmarkExperiment.tsx");
+            showCoachmark = getUnitId.getConfig({ location: "GuildPowerupsManager" }).showCoachmark;
+            const obj8 = getUnitId;
           }
           if (tmp10(4521).isMobile) {
             if (!isMobile) {
@@ -91,7 +93,7 @@ prototype["handleSelectedGuildChange"] = function handleSelectedGuildChange() {
         obj9 = calculateAppliedBoosts;
       }
     }
-    obj12 = require("../../favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
+    obj12 = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
   }
 };
 prototype["handleEntitlementUpdate"] = function handleEntitlementUpdate(guildId) {

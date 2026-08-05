@@ -1,3 +1,7 @@
+import { registerAsset } from "../../../../../../_runtime/08243_registerAsset.js";
+import { componentDidMount } from "../../../../../components_native/common/Alert.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/guild_member_verification/native/components/alerts/MemberVerificationAlertUpdate.tsx
 import "noop";
 import { Image } from "get ActivityIndicator";
@@ -16,24 +20,24 @@ export default function MemberVerificationAlertUpdate(onClose) {
   const tmp = callback3();
   let obj = {};
   const merged = Object.assign(onClose);
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj.confirmText = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.b8siyY);
-  const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj.cancelText = intl2.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["ETE/oC"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj.confirmText = intl.string(getSystemLocale /* getSystemLocale */.t.b8siyY);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj.cancelText = intl2.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
   obj.onConfirm = function onConfirm() {
     return callback(table[7]).openURL(constants.IOS);
   };
   obj.onCancel = onClose.onClose;
-  obj = { source: require("../../../../../../_runtime/08243_registerAsset.js"), style: tmp.headerImage };
+  obj = { source: registerAsset, style: tmp.headerImage };
   const items = [callback(Image, obj), , ];
   obj = { style: tmp.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl3 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl3.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.kkjNHU);
-  items[1] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl3.string(getSystemLocale /* getSystemLocale */.t.kkjNHU);
+  items[1] = callback(Text /* Text */.Text, obj);
   const obj1 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl4 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[3] = intl4.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.gnkqzQ);
-  items[2] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[3] = intl4.string(getSystemLocale /* getSystemLocale */.t.gnkqzQ);
+  items[2] = callback(Text /* Text */.Text, obj1);
   obj.children = items;
-  return callback2(require("../../../../../components_native/common/Alert.tsx"), obj);
+  return callback2(componentDidMount, obj);
 };

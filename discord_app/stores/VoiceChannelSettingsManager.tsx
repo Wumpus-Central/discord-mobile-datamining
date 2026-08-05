@@ -1,3 +1,4 @@
+import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/stores/VoiceChannelSettingsManager.tsx
 import fetchFingerprint from "fetchFingerprint";
 import bitrate from "bitrate";
@@ -15,8 +16,8 @@ function updateVoiceSettings() {
     if (tmp5) {
       obj = { type: "SET_CHANNEL_BITRATE", bitrate: null };
       obj[1] = channel.bitrate;
-      require("../Dispatcher.tsx").dispatch(obj);
-      const obj2 = require("../Dispatcher.tsx");
+      dispatcher.dispatch(obj);
+      const obj2 = dispatcher;
     }
     tmp5 = null != channel && tmp2 !== channel.bitrate;
   }
@@ -31,8 +32,8 @@ function updateVoiceSettings() {
       if (tmp10 !== AUTO) {
         obj = { type: "SET_CHANNEL_VIDEO_QUALITY_MODE", mode: null };
         obj[1] = AUTO;
-        require("../Dispatcher.tsx").dispatch(obj);
-        const obj4 = require("../Dispatcher.tsx");
+        dispatcher.dispatch(obj);
+        const obj4 = dispatcher;
       }
     }
   }

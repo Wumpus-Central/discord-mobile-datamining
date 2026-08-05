@@ -1,3 +1,4 @@
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/media_channel/native/MediaPostMultipleThumbnailActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -34,7 +35,7 @@ export default function MediaPostThumbnailActionSheet(markAsDismissed) {
   };
   obj = { style: tmp.container, children: null };
   obj = { contentContainerStyle: items, children: null };
-  items = [tmp.contentContainer, { paddingBottom: require("../../safe_area/useSafeAreaInsets.native.tsx")().bottom }];
+  items = [tmp.contentContainer, { paddingBottom: useSafeAreaInsets().bottom }];
   const obj1 = { style: tmp.topContainer, children: null };
   const obj2 = { style: tmp.setAsThumbnailContainer, children: null };
   const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };

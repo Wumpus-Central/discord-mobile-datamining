@@ -1,3 +1,5 @@
+import { getEmojiUnavailableReason } from "../../../utils/EmojiUtils.tsx";
+import { parseRawEmojiObject } from "../../emojis/UnicodeEmojis.tsx";
 // discord_app/modules/double_tap_to_react/native/DoubleTapToReactUtils.tsx
 import DismissibleContent from "DismissibleContent";
 import { isContentShown } from "withContent";
@@ -15,7 +17,7 @@ const require = arg1;
 let result = set.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapToReactUtils.tsx");
 
 export const getFallbackDoubleTapDisambiguatedEmoji = function getFallbackDoubleTapDisambiguatedEmoji() {
-  let byName = require("../../emojis/UnicodeEmojis.tsx").getByName("heart");
+  let byName = parseRawEmojiObject.getByName("heart");
   if (byName == null) {
     byName = null;
   }
@@ -37,7 +39,7 @@ export const reactionEmojiFromSettingsValue = function reactionEmojiFromSettings
     if ("" !== emojiName) {
       let result = emojiName;
       if (null == tmp) {
-        let obj = require("../../emojis/UnicodeEmojis.tsx");
+        let obj = parseRawEmojiObject;
         result = obj.convertNameToSurrogate(emojiName);
       }
       str2 = result;
@@ -70,8 +72,8 @@ export const disambiguatedEmojiFromSettingsValue = function disambiguatedEmojiFr
   if (null == customEmojiById) {
     let byName = null;
     if (null != tmp2) {
-      byName = require("../../emojis/UnicodeEmojis.tsx").getByName(tmp2);
-      const obj = require("../../emojis/UnicodeEmojis.tsx");
+      byName = parseRawEmojiObject.getByName(tmp2);
+      const obj = parseRawEmojiObject;
     }
     customEmojiById = byName;
   }
@@ -108,7 +110,7 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
         if ("" !== emojiName) {
           let result = emojiName;
           if (null == tmp5) {
-            let obj1 = require("../../emojis/UnicodeEmojis.tsx");
+            let obj1 = parseRawEmojiObject;
             result = obj1.convertNameToSurrogate(emojiName);
           }
           str2 = result;
@@ -125,7 +127,7 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
       }
       obj[2] = animated;
       if (null == setting) {
-        let obj3 = require("../../emojis/UnicodeEmojis.tsx");
+        let obj3 = parseRawEmojiObject;
         const result1 = obj3.convertNameToSurrogate("heart");
         let tmp11 = null;
         if ("" !== result1) {
@@ -161,7 +163,7 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
         tmp(7143).removeReaction(obj1);
       } else {
         if (flag) {
-          let obj7 = require("../../emojis/UnicodeEmojis.tsx");
+          let obj7 = parseRawEmojiObject;
           let byName = obj7.getByName("heart");
           if (byName == null) {
             byName = null;
@@ -186,7 +188,7 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
           if (null == customEmojiById) {
             let byName1 = null;
             if (null != tmp13) {
-              let obj6 = require("../../emojis/UnicodeEmojis.tsx");
+              let obj6 = parseRawEmojiObject;
               byName1 = obj6.getByName(tmp13);
             }
             customEmojiById = byName1;
@@ -198,7 +200,7 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
             obj3[0] = customEmojiById;
             obj3[1] = channel;
             obj3[2] = constants2.REACTION;
-            const emojiUnavailableReason = require("../../../utils/EmojiUtils.tsx").getEmojiUnavailableReason(obj3);
+            const emojiUnavailableReason = getEmojiUnavailableReason.getEmojiUnavailableReason(obj3);
             if (emojiUnavailableReason === constants.PREMIUM_LOCKED) {
               const lazyResult = React.lazy(() => obj(paths[16])(paths[15], paths.paths));
               const obj4 = { emojiName: null };
@@ -210,7 +212,7 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
               obj5[1] = emojiUnavailableReason;
               const result3 = tmp(7889).showDoubleTapErrorToast(obj5);
             }
-            const obj12 = require("../../../utils/EmojiUtils.tsx");
+            const obj12 = getEmojiUnavailableReason;
           }
           const result4 = tmp(4254).triggerHapticFeedback(tmp(4254).HapticFeedbackTypes.IMPACT_LIGHT);
           const tmpResult5 = tmp(7143);

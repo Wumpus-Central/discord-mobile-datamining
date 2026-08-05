@@ -1,3 +1,8 @@
+import { getSoundPack } from "../soundpacks/getSoundsForPack.tsx";
+import { setSoundpack } from "../soundpacks/SoundpackActions.tsx";
+import { HolidayEmojiAnimationType } from "HolidayEventsConfig.tsx";
+import { HolidayEmojiAnimationType } from "HolidayEventsUtils.tsx";
+import { setIncomingRingtone } from "setIncomingRingtone.android.tsx";
 // discord_app/modules/holidays/HolidayEventsManager.tsx
 import initialize from "initialize";
 import Soundpacks from "Soundpacks";
@@ -25,11 +30,11 @@ const prototype = HolidayEventsManager.prototype;
 prototype["updateSoundpack"] = function updateSoundpack() {
   const soundpack = store.getSoundpack();
   const lastSoundpackExperimentId = store.getLastSoundpackExperimentId();
-  const experiment = require("HolidayEventsConfig.tsx").experiment;
+  const experiment = HolidayEmojiAnimationType.experiment;
   if (experiment != null) {
     const name = experiment.definition.name;
   }
-  let isEligibleResult = require("HolidayEventsUtils.tsx").isEligible();
+  let isEligibleResult = HolidayEmojiAnimationType.isEligible();
   if (isEligibleResult) {
     if (isEligibleResult) {
       isEligibleResult = null != tmp3(16327).soundpack;
@@ -41,25 +46,25 @@ prototype["updateSoundpack"] = function updateSoundpack() {
       isEligibleResult = soundpack !== tmp3(16327).soundpack;
     }
     if (isEligibleResult) {
-      require("../soundpacks/SoundpackActions.tsx") /* setSoundpack */.setSoundpack(tmp3(16327).soundpack, name);
-      const obj3 = require("../soundpacks/SoundpackActions.tsx") /* setSoundpack */;
+      setSoundpack /* setSoundpack */.setSoundpack(tmp3(16327).soundpack, name);
+      const obj3 = setSoundpack /* setSoundpack */;
     }
   } else {
-    require("../soundpacks/SoundpackActions.tsx") /* setSoundpack */.setSoundpack(Soundpacks.CLASSIC, null);
-    const obj2 = require("../soundpacks/SoundpackActions.tsx") /* setSoundpack */;
+    setSoundpack /* setSoundpack */.setSoundpack(Soundpacks.CLASSIC, null);
+    const obj2 = setSoundpack /* setSoundpack */;
   }
 };
 prototype["updateRingtone"] = function updateRingtone() {
   if (obj.isEligible()) {
-    const tmpResult = require("../soundpacks/getSoundsForPack.tsx");
+    const tmpResult = getSoundPack;
     if (null != tmpResultResult.call_ringing) {
-      require("setIncomingRingtone.android.tsx") /* setIncomingRingtone */.setIncomingRingtone("call_ringing", `${tmp7.call_ringing}.mp3`);
-      const obj3 = require("setIncomingRingtone.android.tsx") /* setIncomingRingtone */;
+      setIncomingRingtone /* setIncomingRingtone */.setIncomingRingtone("call_ringing", `${tmp7.call_ringing}.mp3`);
+      const obj3 = setIncomingRingtone /* setIncomingRingtone */;
     }
-    tmpResultResult = require("../soundpacks/getSoundsForPack.tsx")(store.getSoundpack());
+    tmpResultResult = getSoundPack(store.getSoundpack());
   } else {
-    require("setIncomingRingtone.android.tsx") /* setIncomingRingtone */.setIncomingRingtone("call_ringing", "call_ringing.mp3");
-    const obj2 = require("setIncomingRingtone.android.tsx") /* setIncomingRingtone */;
+    setIncomingRingtone /* setIncomingRingtone */.setIncomingRingtone("call_ringing", "call_ringing.mp3");
+    const obj2 = setIncomingRingtone /* setIncomingRingtone */;
   }
 };
 const holidayEventsManager = new HolidayEventsManager();

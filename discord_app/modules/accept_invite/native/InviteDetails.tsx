@@ -1,3 +1,11 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { nameFromUser } from "../../../utils/UserUtils.tsx";
+import { getGuildBadgeSource } from "../../guild/native/GuildBadge.tsx";
+import { render } from "../../guild/native/GuildInviteIcon.tsx";
+import { InviteTypes } from "../../instant_invite/InviteTypeUtils.tsx";
+import { InviteRolesList } from "InviteRolesList.tsx";
 // discord_app/modules/accept_invite/native/InviteDetails.tsx
 import _slicedToArray from "_slicedToArray";
 import getAvatarURL from "getAvatarURL";
@@ -77,15 +85,15 @@ function InviteDestinationIcon(invite) {
     obj = { style: null, guild: null, size: null, textScale: 2 };
     obj[0] = tmp.avatar;
     obj[1] = invite.guild;
-    obj[2] = require("../../guild/native/GuildInviteIcon.tsx").Sizes.LARGE;
-    tmp2Result = tmp2(require("../../guild/native/GuildInviteIcon.tsx"), obj);
-    const tmp9 = require("../../guild/native/GuildInviteIcon.tsx");
+    obj[2] = render.Sizes.LARGE;
+    tmp2Result = tmp2(render, obj);
+    const tmp9 = render;
   }
 }
 function InviteHeader(invite) {
   invite = invite.invite;
   const tmp = createCacheKey();
-  let obj = require("../../instant_invite/InviteTypeUtils.tsx") /* InviteTypes */;
+  let obj = InviteTypes /* InviteTypes */;
   if (obj.isGroupDMInvite(invite)) {
     const channel = invite.channel;
     let name;
@@ -93,7 +101,7 @@ function InviteHeader(invite) {
       name = channel.name;
     }
     if (name == null) {
-      let obj1 = require("../../../utils/UserUtils.tsx");
+      let obj1 = nameFromUser;
       name = obj1.getFormattedName(invite.inviter);
     }
   } else {
@@ -105,9 +113,9 @@ function InviteHeader(invite) {
   if (tmp2Result.isFriendInvite(invite)) {
     const intl = tmp2(1236).intl;
     obj = { username: null };
-    obj[0] = require("../../../utils/UserUtils.tsx").getFormattedName(invite.inviter);
+    obj[0] = nameFromUser.getFormattedName(invite.inviter);
     name = intl.formatToPlainString(tmp2(1236).t["4aF92R"], obj);
-    const obj5 = require("../../../utils/UserUtils.tsx");
+    const obj5 = nameFromUser;
   }
   let tmp9 = null;
   if (null != name) {
@@ -116,7 +124,7 @@ function InviteHeader(invite) {
     obj1 = { guild: null, style: null, disableColor: true };
     obj1[0] = invite.guild;
     obj1[1] = tmp.featureIcon;
-    const items = [callback2(require("../../guild/native/GuildBadge.tsx"), obj1), ];
+    const items = [callback2(getGuildBadgeSource, obj1), ];
     const obj2 = { style: null, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     obj2[0] = tmp.guildNameText;
     obj2[3] = name;
@@ -272,11 +280,11 @@ function InviteMemberCounts(invite) {
           obj1[0] = tmp.dotOnline;
           const items = [callback2(tmp18, obj1), ];
           const obj2 = { variant: "text-xs/medium", color: "text-default", children: null };
-          const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+          const intl = getSystemLocale /* getSystemLocale */.intl;
           const obj3 = { membersOnline: null };
           obj3[0] = tmp2.onlineCount;
-          obj2[2] = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["LC+S+m"], obj3);
-          items[1] = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+          obj2[2] = intl.format(getSystemLocale /* getSystemLocale */.t["LC+S+m"], obj3);
+          items[1] = callback2(Text /* Text */.Text, obj2);
           obj[0] = items;
           tmp17Result = tmp17(closure_14, obj);
         }
@@ -288,11 +296,11 @@ function InviteMemberCounts(invite) {
           obj5[0] = tmp.dotOffline;
           const items2 = [callback2(tmp18, obj5), ];
           const obj6 = { variant: "text-xs/medium", color: "text-default", children: null };
-          const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+          const intl2 = getSystemLocale /* getSystemLocale */.intl;
           const obj7 = { count: null };
           obj7[0] = tmp2.memberCount;
-          obj6[2] = intl2.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.zRl6XR, obj7);
-          items2[1] = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj6);
+          obj6[2] = intl2.format(getSystemLocale /* getSystemLocale */.t.zRl6XR, obj7);
+          items2[1] = callback2(Text /* Text */.Text, obj6);
           obj4[0] = items2;
           tmp17Result = tmp17(closure_14, obj4);
         }
@@ -365,7 +373,7 @@ export default function InviteDetails(invite) {
   obj2 = {};
   const merged3 = Object.assign(obj);
   items2[3] = callback2(InviteMemberCounts, obj2);
-  items2[4] = callback2(require("InviteRolesList.tsx"), { invite, style: tmp.rolesList });
+  items2[4] = callback2(InviteRolesList, { invite, style: tmp.rolesList });
   let tmp8Result = null != guild_scheduled_event;
   if (tmp8Result) {
     const obj4 = { style: null, children: null };
@@ -388,8 +396,8 @@ export default function InviteDetails(invite) {
   }
   let userAvatarSource = null;
   if (null != stateFromStores) {
-    userAvatarSource = require("../../../utils/AvatarUtils.tsx").getUserAvatarSource(stateFromStores, false, 20);
-    const tmp15Result = require("../../../utils/AvatarUtils.tsx");
+    userAvatarSource = getAvatarURL.getUserAvatarSource(stateFromStores, false, 20);
+    const tmp15Result = getAvatarURL;
   }
   let tmp10Result;
   if (null != userAvatarSource) {

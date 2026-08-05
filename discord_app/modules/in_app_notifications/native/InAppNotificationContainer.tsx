@@ -1,3 +1,13 @@
+import { BugReporterNotification } from "../../bug_reporter/native/BugReporterNotification.tsx";
+import { AlertNotification } from "AlertNotification.tsx";
+import { ForumThreadCreatedNotification } from "ForumThreadCreatedNotification.tsx";
+import { MessageFailedToSendNotification } from "MessageFailedToSendNotification.tsx";
+import { MessageNotification } from "MessageNotification.tsx";
+import { MessageNotificationDetachedContent } from "MessageNotificationDetachedContent.tsx";
+import { MessageRequestInAppNotification } from "MessageRequestNotification.tsx";
+import { ReactionNotificationBody } from "ReactionNotification.tsx";
+import { NotificationAvatar } from "ReminderNotification.tsx";
+import { RestrictedHoursWarningNotification } from "RestrictedHoursWarningNotification.tsx";
 // discord_app/modules/in_app_notifications/native/InAppNotificationContainer.tsx
 import DISCORD_EPOCH from "DISCORD_EPOCH";
 import NotificationAvatar from "NotificationAvatar";
@@ -36,38 +46,38 @@ function NotificationWrapper(notification) {
   if (constants.MESSAGE === type) {
     let obj = { notification: null };
     obj[0] = notification;
-    return callback(require("MessageNotification.tsx"), obj);
+    return callback(MessageNotification, obj);
   } else if (tmp.MESSAGE_FAILED_TO_SEND === type) {
     obj = { notification: null };
     obj[0] = notification;
-    return callback(require("MessageFailedToSendNotification.tsx"), obj);
+    return callback(MessageFailedToSendNotification, obj);
   } else if (tmp.FORUM_THREAD_CREATED === type) {
     const obj1 = { notification: null };
     obj1[0] = notification;
-    return callback(require("ForumThreadCreatedNotification.tsx"), obj1);
+    return callback(ForumThreadCreatedNotification, obj1);
   } else if (tmp.BUG_REPORTER === type) {
     const obj2 = { notification: null };
     obj2[0] = notification;
-    return callback(require("../../bug_reporter/native/BugReporterNotification.tsx") /* BugReporterNotification */.BugReporterNotification, obj2);
+    return callback(BugReporterNotification /* BugReporterNotification */.BugReporterNotification, obj2);
   } else if (tmp.ALERT === type) {
     const obj3 = { notification: null };
     obj3[0] = notification;
-    return callback(require("AlertNotification.tsx"), obj3);
+    return callback(AlertNotification, obj3);
   } else if (tmp.REACTION === type) {
     const obj4 = { notification: null };
     obj4[0] = notification;
-    return callback(require("ReactionNotification.tsx"), obj4);
+    return callback(ReactionNotificationBody, obj4);
   } else if (tmp.MESSAGE_REMINDER === type) {
     const obj5 = { notification: null };
     obj5[0] = notification;
-    return callback(require("ReminderNotification.tsx"), obj5);
+    return callback(NotificationAvatar, obj5);
   } else {
     if (tmp.RESTRICTED_HOURS_WARNING !== type) {
       if (tmp.RESTRICTED_SCHEDULE_UPDATED !== type) {
         if (tmp.MESSAGE_REQUEST === type) {
           obj = { notification: null };
           obj[0] = notification;
-          return callback(require("MessageRequestNotification.tsx"), obj);
+          return callback(MessageRequestInAppNotification, obj);
         } else {
           return null;
         }
@@ -75,7 +85,7 @@ function NotificationWrapper(notification) {
     }
     const obj6 = { notification: null };
     obj6[0] = notification;
-    return callback(require("RestrictedHoursWarningNotification.tsx"), obj6);
+    return callback(RestrictedHoursWarningNotification, obj6);
   }
 }
 function DetachedNotificationContent(notification) {
@@ -84,7 +94,7 @@ function DetachedNotificationContent(notification) {
   if (notification.type === constants.MESSAGE) {
     const obj = { notification: null };
     obj[0] = notification;
-    tmp = callback(require("MessageNotificationDetachedContent.tsx") /* MessageNotificationDetachedContent */.MessageNotificationDetachedContent, obj);
+    tmp = callback(MessageNotificationDetachedContent /* MessageNotificationDetachedContent */.MessageNotificationDetachedContent, obj);
   }
   return tmp;
 }

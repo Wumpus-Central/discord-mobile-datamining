@@ -1,3 +1,6 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { apexExperiment } from "../../../media_engine/MobileAudioOutputExperiment.tsx";
 // discord_app/modules/user_settings/defs/native/OutputVolumeSetting.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createToggle from "createToggle";
@@ -5,25 +8,25 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.xPHVBs);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.xPHVBs);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   maximum: 200,
   useValue: function useOutputVolumeSettingValue() {
     const items = [_detectH265HardwareDecode];
-    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => outputVolume.getOutputVolume());
+    return initialize /* initialize */.useStateFromStores(items, () => outputVolume.getOutputVolume());
   },
   onValueChange: require("trackDeviceChanged").setOutputVolume,
   useSearchTerms() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    const items = [intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["3182VD"]), ];
-    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    items[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["DGq/PR"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const items = [intl.string(getSystemLocale /* getSystemLocale */.t["3182VD"]), ];
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    items[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["DGq/PR"]);
     return items;
   },
   usePredicate() {
-    return require("../../../media_engine/MobileAudioOutputExperiment.tsx").useConfig({ location: "OutputVolumeSetting" }).audioOutputPresent;
+    return apexExperiment.useConfig({ location: "OutputVolumeSetting" }).audioOutputPresent;
   }
 };
 createToggle = createToggle.createVolumeSlider(createToggle);

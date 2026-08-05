@@ -1,3 +1,4 @@
+import { registerAsset } from "../../../../../_runtime/12783_registerAsset.js";
 // discord_app/modules/guild_role_subscriptions/native/components/ChannelSelectorActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import Text from "Text";
@@ -164,7 +165,7 @@ export default function ChannelSelectorActionSheet(guildId) {
     }
     const obj4 = { color: null, source: null };
     obj4[0] = str;
-    obj4[1] = require("../../../../../_runtime/12783_registerAsset.js");
+    obj4[1] = registerAsset;
     const items3 = [tmp8(tmp5(1297).Icon, obj4), ];
     const obj5 = { style: null, variant: "text-md/medium", color: "text-link", children: null };
     obj5[0] = tmp.createChannelLabel;

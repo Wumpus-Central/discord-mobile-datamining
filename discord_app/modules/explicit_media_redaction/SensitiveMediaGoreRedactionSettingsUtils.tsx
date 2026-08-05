@@ -1,3 +1,6 @@
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { SettingsDefaultFeature } from "../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -16,13 +19,13 @@ function resolveGoreSettingWithDefaults(isFriend) {
     flag = false;
   }
   if (null != setting) {
-    if (setting !== require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION) {
+    if (setting !== create /* create */.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION) {
       return setting;
     }
   }
   currentUser = currentUser.getCurrentUser();
   let ExplicitContentRedaction = dependencyMap;
-  if (obj.isSettingTeenByDefault(require("../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx") /* SettingsDefaultFeature */.SettingsDefaultFeature.SENSITIVE_CONTENT)) {
+  if (obj.isSettingTeenByDefault(SettingsDefaultFeature /* SettingsDefaultFeature */.SettingsDefaultFeature.SENSITIVE_CONTENT)) {
     if (isDm === undefined) {
       isDm = false;
     }
@@ -89,17 +92,17 @@ export const resolveGoreSettingWithDefaultsForTeen = function resolveGoreSetting
   }
   if (flag) {
     if (flag2) {
-      let BLUR = require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.BLUR;
+      let BLUR = create /* create */.ExplicitContentRedaction.BLUR;
     }
     return BLUR;
   }
-  const ExplicitContentRedaction = require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction;
+  const ExplicitContentRedaction = create /* create */.ExplicitContentRedaction;
   BLUR = flag ? ExplicitContentRedaction.BLOCK : ExplicitContentRedaction.BLUR;
 };
 export const getGoreContentSettingOrDefault = function getGoreContentSettingOrDefault(arg0) {
   let setting = arg0;
   if (arg0 == null) {
-    const GoreContentSettings = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.GoreContentSettings;
+    const GoreContentSettings = explicitContentFromProto /* explicitContentFromProto */.GoreContentSettings;
     setting = GoreContentSettings.getSetting();
   }
   let goreContentGuilds;
@@ -120,7 +123,7 @@ export const getGoreContentSettingOrDefault = function getGoreContentSettingOrDe
   return obj;
 };
 export const updateGoreContentSetting = function updateGoreContentSetting(arg0) {
-  const GoreContentSettings = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.GoreContentSettings;
+  const GoreContentSettings = explicitContentFromProto /* explicitContentFromProto */.GoreContentSettings;
   const setting = GoreContentSettings.getSetting();
   let goreContentGuilds;
   if (setting != null) {
@@ -137,7 +140,7 @@ export const updateGoreContentSetting = function updateGoreContentSetting(arg0) 
     goreContentFriendDm = setting.goreContentFriendDm;
   }
   obj[2] = resolveGoreSettingWithDefaults({ setting: goreContentFriendDm, isDm: true, isFriend: true });
-  const GoreContentSettings2 = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.GoreContentSettings;
+  const GoreContentSettings2 = explicitContentFromProto /* explicitContentFromProto */.GoreContentSettings;
   obj = {};
   const merged = Object.assign(obj);
   const merged1 = Object.assign(arg0);

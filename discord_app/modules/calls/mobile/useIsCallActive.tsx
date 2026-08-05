@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/calls/mobile/useIsCallActive.tsx
 import callConnect from "callConnect";
 import getParticipants from "getParticipants";
@@ -11,7 +12,7 @@ export default function useIsCallActive(arg0, arg1) {
   const dependencyMap = arg1;
   const items = [callConnect, getParticipants];
   const items1 = [arg0, arg1];
-  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let isCallActiveResult = outer1_2.isCallActive(closure_0, closure_1);
     if (isCallActiveResult) {
       const participants = outer1_3.getParticipants(closure_0);
@@ -33,7 +34,7 @@ export const useIsCallActiveNullable = function useIsCallActiveNullable(id) {
   const dependencyMap = arg1;
   const items = [callConnect, getParticipants];
   const items1 = [id, arg1];
-  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       let isCallActiveResult = outer1_2.isCallActive(tmp, closure_1);

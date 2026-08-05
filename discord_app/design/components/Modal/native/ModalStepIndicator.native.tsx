@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { messagesProxy } from "../../../intl/Mana.messages.js";
 // discord_app/design/components/Modal/native/ModalStepIndicator.native.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -103,9 +105,9 @@ export const ModalStepIndicator = function ModalStepIndicator(arg0) {
       obj[1] = items;
       return <View style={null}>{null}</View>;
     } else {
-      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
       const obj1 = { accessible: true, accessibilityRole: "progressbar", accessibilityLabel: null, accessibilityValue: null, importantForAccessibility: "yes", style: null, children: null };
-      obj1[2] = intl.string(require("../../../intl/Mana.messages.js").KUwsC0);
+      obj1[2] = intl.string(messagesProxy.KUwsC0);
       const obj2 = { min: 1, max: null, now: null };
       obj2[1] = totalSteps;
       obj2[2] = currentStep + 1;

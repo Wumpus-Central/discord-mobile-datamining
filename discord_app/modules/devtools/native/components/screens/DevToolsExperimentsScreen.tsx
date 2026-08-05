@@ -1,3 +1,12 @@
+import { apply } from "../../../../../../_runtime/00012_apply.js";
+import { extractId } from "../../../../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
+import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { Button } from "../../../../../design/void/native.tsx";
+import { useExperimentAssignment } from "../../../../experiments/client_override_hooks/useExperimentAssignments.tsx";
+import { trackExposureToExperiment } from "../../../../experiments/ExperimentManager.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsExperimentsScreen.tsx
 import Background from "Background";
 import importAllResult from "module_8337";
@@ -22,7 +31,7 @@ function UserExperimentDebugView(id) {
   const installationForTracking = store2.getInstallationForTracking();
   let maybeExtractIdResult = null;
   if (null != installationForTracking) {
-    let obj = require("../../../../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx") /* extractId */;
+    let obj = extractId /* extractId */;
     maybeExtractIdResult = obj.maybeExtractId(installationForTracking);
   }
   let tmp7 = id;
@@ -32,11 +41,11 @@ function UserExperimentDebugView(id) {
       tmp7 = maybeExtractIdResult;
     }
   }
-  let obj1 = require("../../../../experiments/client_override_hooks/useExperimentAssignments.tsx") /* useExperimentAssignment */;
+  let obj1 = useExperimentAssignment /* useExperimentAssignment */;
   const experimentAssignment = obj1.useExperimentAssignment(experiment, tmp7);
-  let obj2 = require("../../../../experiments/client_override_hooks/useExperimentAssignments.tsx") /* useExperimentAssignment */;
+  let obj2 = useExperimentAssignment /* useExperimentAssignment */;
   const experimentServerAssignment = obj2.useExperimentServerAssignment(experiment, tmp7);
-  let obj3 = require("../../../../../../_runtime/00012_apply.js");
+  let obj3 = apply;
   const tmp = callback3();
   const mapped = obj3.sortBy(store.getRecentExposures(constants2.USER, id.id), (arg0) => {
     let tmp;
@@ -48,7 +57,7 @@ function UserExperimentDebugView(id) {
     [tmp, tmp2] = arg0;
     return "" + new Date(tmp2).toLocaleString() + " (" + tmp + ")";
   });
-  if (experiment.system === require("../../../../experiments/ExperimentManager.tsx") /* trackExposureToExperiment */.ExperimentSystem.LEGACY) {
+  if (experiment.system === trackExposureToExperiment /* trackExposureToExperiment */.ExperimentSystem.LEGACY) {
     let NOT_ELIGIBLE = experimentAssignment;
     if (experimentAssignment == null) {
       NOT_ELIGIBLE = constants.NOT_ELIGIBLE;
@@ -70,7 +79,7 @@ function UserExperimentDebugView(id) {
   }
   obj1 = { title: "Overview", hasIcons: false, children: tmp17(tmp8(5315).TableRow, obj) };
   obj[1] = str4;
-  const items = [closure_11(require("../../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj1), closure_11(require("../../../../../design/void/native.tsx") /* Button */.Spacer, { size: 16 }), , , , , ];
+  const items = [closure_11(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj1), closure_11(Button /* Button */.Spacer, { size: 16 }), , , , , ];
   let str5 = "None";
   let str6 = "None";
   if (null != experimentServerAssignment) {
@@ -78,16 +87,16 @@ function UserExperimentDebugView(id) {
     str6 = JSON.stringify(experimentServerAssignment, undefined, 2);
   }
   obj2 = { title: "Server Descriptor", hasIcons: false, children: tmp17(tmp8(5315).TableRow, { label: str6 }) };
-  items[2] = closure_11(require("../../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj2);
-  items[3] = closure_11(require("../../../../../design/void/native.tsx") /* Button */.Spacer, { size: 16 });
+  items[2] = closure_11(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj2);
+  items[3] = closure_11(Button /* Button */.Spacer, { size: 16 });
   let json = str5;
   if (null != override) {
     const _JSON2 = JSON;
     json = JSON.stringify(override.originalDescriptor, undefined, 2);
   }
   obj3 = { title: "Override Descriptor", hasIcons: false, children: tmp17(tmp8(5315).TableRow, { label: json }) };
-  items[4] = closure_11(require("../../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj3);
-  items[5] = closure_11(require("../../../../../design/void/native.tsx") /* Button */.Spacer, { size: 16 });
+  items[4] = closure_11(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj3);
+  items[5] = closure_11(Button /* Button */.Spacer, { size: 16 });
   if (0 !== mapped.length) {
     str5 = mapped.join("\n");
   }
@@ -98,7 +107,7 @@ function UserExperimentDebugView(id) {
   });
   const tmp15 = closure_12;
   const tmp16 = View;
-  items[6] = closure_11(require("../../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: closure_11(require("../../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, { label: str5 }) });
+  items[6] = closure_11(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: closure_11(TableRowInner /* TableRowInner */.TableRow, { label: str5 }) });
   obj[1] = items;
   return tmp15(tmp16, obj);
 }
@@ -108,7 +117,7 @@ function GuildExperimentDebugView(arg0) {
   ({ id, override } = arg0);
   let obj;
   const loadedGuildExperiment = store.getLoadedGuildExperiment(id);
-  obj = require("../../../../../../_runtime/00012_apply.js");
+  obj = apply;
   const tmp = callback3();
   let mapped = obj.sortBy(store.getRecentExposures(constants2.GUILD, id), (arg0) => {
     let tmp;
@@ -120,7 +129,7 @@ function GuildExperimentDebugView(arg0) {
     [tmp, tmp2] = arg0;
     return "" + new Date(tmp2).toLocaleString() + " (" + tmp + ")";
   });
-  let obj1 = require("../../../../../../_runtime/00012_apply.js");
+  let obj1 = apply;
   const sortByResult = obj.sortBy(store.getRecentExposures(constants2.GUILD, id), (arg0) => {
     let tmp;
     [, tmp] = arg0;
@@ -154,7 +163,7 @@ function GuildExperimentDebugView(arg0) {
     let arr = items.push("" + tmp5.name + ": " + tmp10);
     continue;
   }
-  let obj3 = require("../../../../../../_runtime/00012_apply.js")(obj);
+  let obj3 = apply(obj);
   const keys = obj3.keys();
   const mapped1 = keys.map(Number);
   const sorted = mapped1.sort();
@@ -282,9 +291,9 @@ function ExperimentActionSheet(arg0) {
   ({ override, options, onCopyLink } = arg0);
   let obj = { header: null, children: null };
   obj = { title: experiment.title, subtitle: id };
-  obj[0] = callback(require("../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
+  obj[0] = callback(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
   obj[1] = callback(ExperimentDetails, { experiment, override, id, options, onCopyLink });
-  return callback(require("../../../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, obj);
+  return callback(Background /* Background */.BottomSheet, obj);
 }
 let c4 = importAllResult;
 ({ ExperimentBuckets: c9, ExperimentTypes: c10 } = ExperimentBuckets);

@@ -1,3 +1,6 @@
+import { ForumChannelCloseSearchButton } from "../../../../forums/native/ForumChannelSearch.tsx";
+import { useIsForumChannelSearchActive } from "../../../../forums/native/hooks/useIsForumChannelSearchActive.tsx";
+import { GuildChannelMemberCount } from "GuildChannelHeader.tsx";
 // discord_app/modules/main_tabs_v2/native/channel/header/ForumChannelHeader.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -16,7 +19,7 @@ const memoResult = require("noop").memo((arg0) => {
   let searchPlaceholder;
   ({ channelId, guildId } = arg0);
   ({ screenIndex, pressable, isGuildMemberCountVisible, isNavigationScreen, searchPlaceholder } = arg0);
-  let obj = require("../../../../forums/native/hooks/useIsForumChannelSearchActive.tsx") /* useIsForumChannelSearchActive */;
+  let obj = useIsForumChannelSearchActive /* useIsForumChannelSearchActive */;
   if (obj.useIsForumChannelSearchActive(channelId)) {
     obj = { style: null, children: null };
     obj[0] = tmp.search;
@@ -24,7 +27,7 @@ const memoResult = require("noop").memo((arg0) => {
     obj[0] = channelId;
     obj[1] = guildId;
     obj[2] = searchPlaceholder;
-    obj[1] = tmp4(require("../../../../forums/native/ForumChannelSearch.tsx") /* ForumChannelCloseSearchButton */.ForumChannelSearchInput, obj);
+    obj[1] = tmp4(ForumChannelCloseSearchButton /* ForumChannelCloseSearchButton */.ForumChannelSearchInput, obj);
     let tmp4Result = tmp4(View, obj);
   } else {
     const obj1 = { channelId: null, guildId: null, pressable: null, isGuildMemberCountVisible: null, isNavigationScreen: null, screenIndex: null };
@@ -34,7 +37,7 @@ const memoResult = require("noop").memo((arg0) => {
     obj1[3] = isGuildMemberCountVisible;
     obj1[4] = isNavigationScreen;
     obj1[5] = screenIndex;
-    tmp4Result = tmp4(require("GuildChannelHeader.tsx"), obj1);
+    tmp4Result = tmp4(GuildChannelMemberCount, obj1);
   }
   return tmp4Result;
 });

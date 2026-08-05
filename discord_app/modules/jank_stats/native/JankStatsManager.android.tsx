@@ -1,3 +1,6 @@
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { getDeviceMetadata } from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 // discord_app/modules/jank_stats/native/JankStatsManager.android.tsx
 import ME from "ME";
 import "initialize";
@@ -65,7 +68,7 @@ prototype["scheduleReport"] = function scheduleReport() {
   }
 };
 prototype["sendReport"] = function sendReport(background) {
-  let obj = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx");
+  let obj = enforcing;
   let report;
   if (obj != null) {
     report = obj.requestReport();
@@ -77,13 +80,13 @@ prototype["sendReport"] = function sendReport(background) {
   }
   if (!tmp4) {
     obj = {};
-    const tmpResult = require("../../../utils/AnalyticsUtils.tsx");
-    const merged = Object.assign(require("../../tti_analytics/native/TTIAnalyticsUtils.tsx") /* getDeviceMetadata */.getDeviceMetadata());
+    const tmpResult = expandEventProperties;
+    const merged = Object.assign(getDeviceMetadata /* getDeviceMetadata */.getDeviceMetadata());
     obj.version = 2;
     ({ totalFrameCount: obj3.total_frame_count, jankFrameCount: obj3.jank_frame_count, frameMetricsTotalFrameCount: obj3.frame_metrics_total_frame_count, frameMetricsJankFrameCount: obj3.frame_metrics_jank_frame_count } = report);
     obj.trigger = background;
     tmpResult.track(constants2.ANDROID_JANK_STATS, obj);
-    const obj4 = require("../../tti_analytics/native/TTIAnalyticsUtils.tsx") /* getDeviceMetadata */;
+    const obj4 = getDeviceMetadata /* getDeviceMetadata */;
   }
 };
 const jankStatsManager = new JankStatsManager();

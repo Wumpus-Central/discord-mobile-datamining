@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../intl/index.native.tsx";
 // discord_app/errors/UploadVoiceDebugLogsError.tsx
 let obj = { GENERAL: 0, [0]: "GENERAL", NO_FILE: 1, [1]: "NO_FILE", PROGRESS: 2, [2]: "PROGRESS", UPLOAD: 3, [3]: "UPLOAD", READ: 4, [4]: "READ" };
 class UploadVoiceDebugLogsError {
@@ -11,21 +12,21 @@ Object.defineProperty(UploadVoiceDebugLogsError.prototype, "displayMessage", {
   get: function displayMessage() {
     const code = this.code;
     if (obj.NO_FILE === code) {
-      const intl5 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl5.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.dDMp2Z);
+      const intl5 = getSystemLocale /* getSystemLocale */.intl;
+      return intl5.string(getSystemLocale /* getSystemLocale */.t.dDMp2Z);
     } else if (tmp.PROGRESS === code) {
-      const intl4 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl4.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.XBxyvo);
+      const intl4 = getSystemLocale /* getSystemLocale */.intl;
+      return intl4.string(getSystemLocale /* getSystemLocale */.t.XBxyvo);
     } else if (tmp.UPLOAD === code) {
-      const intl3 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl3.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["6b6rwk"]);
+      const intl3 = getSystemLocale /* getSystemLocale */.intl;
+      return intl3.string(getSystemLocale /* getSystemLocale */.t["6b6rwk"]);
     } else if (tmp.READ === code) {
-      const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.VUc3ti);
+      const intl2 = getSystemLocale /* getSystemLocale */.intl;
+      return intl2.string(getSystemLocale /* getSystemLocale */.t.VUc3ti);
     } else {
       const GENERAL = tmp.GENERAL;
-      const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.VzHcSm);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.VzHcSm);
     }
   },
   set: undefined

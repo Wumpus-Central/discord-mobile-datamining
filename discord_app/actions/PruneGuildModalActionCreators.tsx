@@ -1,3 +1,4 @@
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 // discord_app/actions/PruneGuildModalActionCreators.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
@@ -94,10 +95,10 @@ export default {
     })();
   },
   prune(c0, days, include_roles) {
-    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     obj = { url: Endpoints.GUILD_PRUNE(c0), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { days, compute_prune_count: false, include_roles };
-    obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
     return HTTP.post(obj);
   }
 };

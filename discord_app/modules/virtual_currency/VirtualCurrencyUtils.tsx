@@ -1,3 +1,5 @@
+import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { UNSAFE_isDismissibleContentDismissed } from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 // discord_app/modules/virtual_currency/VirtualCurrencyUtils.tsx
 import { COLLECTIBLES_APPLICATION_ID as closure_2 } from "ME";
 import { EXTERNAL_PRODUCT_SKU_IDS } from "items";
@@ -13,8 +15,8 @@ export const get1PShopApplicationIdForSKU = function get1PShopApplicationIdForSK
   return skuId === EXTERNAL_PRODUCT_SKU_IDS.FRACTIONAL_PREMIUM ? closure_6 : closure_2;
 };
 export const dismissOrbsOnboardingExperience = function dismissOrbsOnboardingExperience() {
-  let obj = require("../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */;
-  if (!obj.UNSAFE_isDismissibleContentDismissed(require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL)) {
+  let obj = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */;
+  if (!obj.UNSAFE_isDismissibleContentDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL)) {
     let tmpResult = tmp(4101);
     obj = { dismissAction: null, groupName: null };
     obj[0] = constants2.INDIRECT_ACTION;

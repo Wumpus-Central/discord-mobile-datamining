@@ -1,3 +1,6 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/message_request/native/RestrictedBlockedMessageGroup.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -29,11 +32,11 @@ export default function RestrictedBlockedMessageGroup(arg0) {
   }, []);
   let obj = { style: tmp.toggle, accessibilityRole: "button", accessibilityState: { expanded: mapped }, onPress: callback, children: null };
   obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   obj = { count: messages.length };
-  obj[2] = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["+FcYM/"], obj);
-  obj[4] = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
-  const children = [callback2(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj), ];
+  obj[2] = intl.format(getSystemLocale /* getSystemLocale */.t["+FcYM/"], obj);
+  obj[4] = callback2(Text /* Text */.Text, obj);
+  const children = [callback2(PressableBase /* PressableBase */.PressableOpacity, obj), ];
   if (mapped) {
     mapped = messages.map((id) => outer1_5(outer1_4, { children: callback(id) }, id.id));
   }

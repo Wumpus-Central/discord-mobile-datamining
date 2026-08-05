@@ -1,3 +1,4 @@
+import { logger } from "../../discord_common/js/packages/media-engine/native/ios/VoiceEngine.tsx";
 // discord_app/lib/injectMediaEngine.native.tsx
 import inject from "inject";
 
@@ -13,7 +14,7 @@ inject.inject({
 
   },
   getVoiceEngine() {
-    return require("../../discord_common/js/packages/media-engine/native/ios/VoiceEngine.tsx") /* logger */.default;
+    return logger /* logger */.default;
   },
   getOpenH264LibraryPath() {
 

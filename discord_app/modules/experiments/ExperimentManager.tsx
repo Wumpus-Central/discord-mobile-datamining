@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/experiments/ExperimentManager.tsx
 import getHash from "getHash";
 import { registerExperiment } from "getHash";
@@ -58,16 +59,16 @@ export const overrideBucket = function overrideBucket(system, closure_0, id) {
       tmp10 = id;
     }
     obj[2] = tmp10;
-    require("../../Dispatcher.tsx").dispatch(obj);
-    const obj5 = require("../../Dispatcher.tsx");
+    dispatcher.dispatch(obj);
+    const obj5 = dispatcher;
   } else if (tmp.APEX === system) {
     if (null == id) {
       obj = { type: "APEX_EXPERIMENT_OVERRIDE_DELETE", experimentName: null };
       obj[1] = closure_0;
-      require("../../Dispatcher.tsx").dispatch(obj);
-      const obj3 = require("../../Dispatcher.tsx");
+      dispatcher.dispatch(obj);
+      const obj3 = dispatcher;
     } else {
-      obj = require("../../Dispatcher.tsx");
+      obj = dispatcher;
       const obj1 = { type: "APEX_EXPERIMENT_OVERRIDE_CREATE", experimentName: null, variantId: null };
       obj1[1] = closure_0;
       obj1[2] = id;

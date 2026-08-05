@@ -1,3 +1,7 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { ClydeIcon } from "../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/slayer_storefront/native/SocialLayerStorefrontBadges.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -25,12 +29,12 @@ export const ExclusiveBadge = function ExclusiveBadge() {
   const tmp = createCacheKey();
   let obj = { style: tmp.exclusiveBadge, children: null };
   obj = { size: "xs", color: null };
-  obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
-  const items = [callback(require("../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx") /* ClydeIcon */.ClydeIcon, obj), ];
+  obj[1] = Themes.colors.WHITE;
+  const items = [callback(ClydeIcon /* ClydeIcon */.ClydeIcon, obj), ];
   obj = { variant: "text-xs/bold", color: "text-overlay-light", style: tmp.exclusiveBadgeText, children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.RiDMFz);
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.RiDMFz);
+  items[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 };

@@ -1,3 +1,10 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { useChatLayout } from "../../chat/native/useChatLayout.tsx";
 // discord_app/modules/quests/native/QuestHomeEmptyState.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -29,25 +36,25 @@ export default function QuestHomeEmptyState(subtitle) {
   let title;
   ({ action, title } = subtitle);
   if (title === undefined) {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    title = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.SdlRnK);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    title = intl.string(getSystemLocale /* getSystemLocale */.t.SdlRnK);
   }
   subtitle = subtitle.subtitle;
   if (subtitle === undefined) {
-    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    subtitle = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["R7mv+G"]);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    subtitle = intl2.string(getSystemLocale /* getSystemLocale */.t["R7mv+G"]);
   }
   const tmp5 = createCacheKey();
-  let obj = require("../../../design/tokens/native/useToken.tsx") /* map */;
-  const token = obj.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWER);
+  let obj = map /* map */;
+  const token = obj.useToken(Themes.colors.BACKGROUND_BASE_LOWER);
   obj = { bottom: null, style: null, children: null };
-  let obj2 = require("../../../utils/PlatformUtils.tsx") /* set */;
+  let obj2 = set /* set */;
   obj[0] = obj2.isAndroid();
   obj[1] = tmp5.container;
   obj = { style: tmp5.container, children: null };
   const obj1 = { style: tmp5.emptyStateContainer, children: null };
   obj2 = { style: tmp5.emptyStateContentContainer, children: null };
-  const items = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp5.emptyStateContentTitle, children: title }), callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/normal", color: "text-default", style: tmp5.emptyStateContentDescription, children: subtitle }), ];
+  const items = [callback(Text /* Text */.Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp5.emptyStateContentTitle, children: title }), callback(Text /* Text */.Text, { variant: "text-md/normal", color: "text-default", style: tmp5.emptyStateContentDescription, children: subtitle }), ];
   let tmp9Result = null != action;
   if (tmp9Result) {
     const obj5 = { style: null, children: null };
@@ -59,7 +66,7 @@ export default function QuestHomeEmptyState(subtitle) {
   obj2[1] = items;
   const items1 = [closure_7(closure_3, obj2), ];
   let tmp11Result = null;
-  if (!require("../../chat/native/useChatLayout.tsx")().isChatLockedOpen) {
+  if (!useChatLayout().isChatLockedOpen) {
     const obj6 = { children: null };
     const obj7 = { style: null, source: null, resizeMode: "cover" };
     obj7[0] = tmp5.emptyImage;
@@ -78,5 +85,5 @@ export default function QuestHomeEmptyState(subtitle) {
   obj1[1] = items1;
   obj[1] = closure_7(closure_3, obj1);
   obj[2] = callback(closure_3, obj);
-  return callback(require("../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return callback(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 };

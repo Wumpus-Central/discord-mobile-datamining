@@ -1,3 +1,4 @@
+import { expandEventProperties } from "../../../../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/user_settings/premium/native/utils/PremiumNitroHomeUtils.tsx
 import { AnalyticEvents } from "ME";
 
@@ -17,7 +18,7 @@ export const trackIfScrolledToBottom = function trackIfScrolledToBottom(trackedT
     current = sum < Math.floor(tmp3.height);
   }
   if (!current) {
-    let obj = require("../../../../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { type: null };
     obj[0] = trackedType.trackedType;
     obj.track(AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, obj);

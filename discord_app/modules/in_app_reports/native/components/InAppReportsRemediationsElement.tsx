@@ -1,3 +1,5 @@
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/in_app_reports/native/components/InAppReportsRemediationsElement.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -14,9 +16,9 @@ const result = require("jsxProd").fileFinishedImporting("modules/in_app_reports/
 export default function RemediationsElement(children) {
   let obj = { style: createCacheKey().container, children: null };
   obj = { title: null, hasIcons: true, children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["k+QA9N"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["k+QA9N"]);
   obj[2] = children.children;
-  obj[1] = jsx(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, { title: null, hasIcons: true, children: null });
+  obj[1] = jsx(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, { title: null, hasIcons: true, children: null });
   return <View title={null} hasIcons>{null}</View>;
 };

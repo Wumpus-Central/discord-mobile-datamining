@@ -1,3 +1,5 @@
+import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
+import { useProfileThemeValues } from "../useProfileThemeValues.native.tsx";
 // discord_app/modules/user_profile/native/UserProfileSection.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -26,10 +28,10 @@ export default function UserProfileSection(title) {
   ({ headerIcon, trailingIcon, showContainer, children, style } = title);
   const merged = Object.assign(title, Object.create(null));
   const tmp2 = createCacheKey();
-  let obj = require("../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */;
+  let obj = ManaContext /* ManaContext */;
   const themeContext = obj.useThemeContext();
   ({ theme, primaryColor } = themeContext);
-  let obj1 = require("../useProfileThemeValues.native.tsx") /* useProfileThemeValues */;
+  let obj1 = useProfileThemeValues /* useProfileThemeValues */;
   const profileThemeValues = obj1.useProfileThemeValues(theme);
   obj = {};
   const merged1 = Object.assign(tmp2.contentContainer);

@@ -1,3 +1,6 @@
+import { getMixedGradientColor } from "../../client_themes/native/ThemedGradient.tsx";
+import { useActiveThemeType } from "../../client_themes/native/useActiveTheme.tsx";
+import { t } from "../../voice_panel/native/utils/roundToNearestPixel.tsx";
 // discord_app/modules/channel_list_v2/native/ScreenAlignedThemedGradient.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -10,8 +13,8 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1) => {
   let obj = { container: null };
   obj = {};
   const merged = Object.assign(closure_3.absoluteFillObject);
-  obj = { translateX: require("../../voice_panel/native/utils/roundToNearestPixel.tsx")(-arg0) };
-  const items = [obj, { translateY: require("../../voice_panel/native/utils/roundToNearestPixel.tsx")(-arg1) }];
+  obj = { translateX: t(-arg0) };
+  const items = [obj, { translateY: t(-arg1) }];
   obj.transform = items;
   obj[0] = obj;
   return obj;
@@ -23,10 +26,10 @@ export default function ScreenAlignedThemedGradient(arg0) {
   let offsetX;
   let offsetY;
   ({ offsetX, offsetY } = arg0);
-  let obj = require("../../client_themes/native/useActiveTheme.tsx") /* useActiveThemeType */;
+  let obj = useActiveThemeType /* useActiveThemeType */;
   const isClientThemeOrCustomThemeActive = obj.useIsClientThemeOrCustomThemeActive();
-  obj = { pointerEvents: "none", style: callback(offsetX, offsetY).container, children: jsx(require("../../client_themes/native/ThemedGradient.tsx"), { absolute: true, tall: true, wide: true, mix: isClientThemeOrCustomThemeActive }) };
-  return <closure_4 pointerEvents="none" style={callback(offsetX, offsetY).container}>{jsx(require("../../client_themes/native/ThemedGradient.tsx"), { absolute: true, tall: true, wide: true, mix: isClientThemeOrCustomThemeActive })}</closure_4>;
+  obj = { pointerEvents: "none", style: callback(offsetX, offsetY).container, children: jsx(getMixedGradientColor, { absolute: true, tall: true, wide: true, mix: isClientThemeOrCustomThemeActive }) };
+  return <closure_4 pointerEvents="none" style={callback(offsetX, offsetY).container}>{jsx(getMixedGradientColor, { absolute: true, tall: true, wide: true, mix: isClientThemeOrCustomThemeActive })}</closure_4>;
 };
 export const ScreenAlignedThemedGradientSliding = function ScreenAlignedThemedGradientSliding(offsetX) {
   offsetX = offsetX.offsetX;

@@ -1,3 +1,4 @@
+import { messagesProxy } from "../../../report_to_mod/ReportToMod.messages.js";
 // discord_app/modules/in_app_reports/native/components/InAppReportsBottomButton.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -34,7 +35,7 @@ export default function InAppReportsBottomButton(button) {
       const intl2 = tmp17(1236).intl;
       const string = intl2.string;
       if (isModeratorReport) {
-        let stringResult = string(require("../../../report_to_mod/ReportToMod.messages.js").ZUyreS);
+        let stringResult = string(messagesProxy.ZUyreS);
       } else {
         const intl3 = tmp17(1236).intl;
         const stringResult1 = string(tmp17(1236).t["G+vU89"]);
@@ -55,7 +56,7 @@ export default function InAppReportsBottomButton(button) {
       const intl4 = tmp17(1236).intl;
       const string2 = intl4.string;
       if (isModeratorReport) {
-        let string2Result = string2(require("../../../report_to_mod/ReportToMod.messages.js").psKFdJ);
+        let string2Result = string2(messagesProxy.psKFdJ);
       } else {
         string2Result = string2(tmp17(1236).t.h6D8Vy);
       }

@@ -1,14 +1,16 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { messagesProxy } from "../../../notifications/profile_updates/sender/NotifyFriendsOnProfileUpdate.messages.js";
 // discord_app/modules/user_settings/defs/native/NotifyFriendsOnProfileUpdateSetting.tsx
 import createToggle from "createToggle";
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../notifications/profile_updates/sender/NotifyFriendsOnProfileUpdate.messages.js").F3llsQ);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(messagesProxy.F3llsQ);
   },
   useDescription() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../notifications/profile_updates/sender/NotifyFriendsOnProfileUpdate.messages.js")["6goWcz"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(messagesProxy["6goWcz"]);
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   useValue: require("explicitContentFromProto").NotifyFriendsOnProfileUpdate.useSetting,
@@ -16,12 +18,12 @@ const toggle = createToggle.createToggle({
 });
 const obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../notifications/profile_updates/sender/NotifyFriendsOnProfileUpdate.messages.js").F3llsQ);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(messagesProxy.F3llsQ);
   },
   useDescription() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../notifications/profile_updates/sender/NotifyFriendsOnProfileUpdate.messages.js")["6goWcz"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(messagesProxy["6goWcz"]);
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   useValue: require("explicitContentFromProto").NotifyFriendsOnProfileUpdate.useSetting,

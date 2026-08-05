@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/messages/EmbeddedApplicationInstanceUtils.tsx
 import noop from "noop";
 
@@ -8,9 +9,9 @@ function getJoinOrStartButtonState(channel) {
   let joinability;
   ({ embeddedActivity, joinability, currentEmbeddedActivity } = channel);
   let obj = { disabled: false, isJoinAction: !tmp, text: null, tooltip: "Array" };
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
+  const t = getSystemLocale /* getSystemLocale */.t;
   if (null == embeddedActivity) {
     let stringResult = string(t.RscU7I);
     let tmp6 = tmp2;

@@ -1,3 +1,6 @@
+import { NavigationStack } from "../../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { useInitialValue } from "../../../../../hooks/useInitialValue.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/account/native/mfa_modal_flow/TwoFASetupModal.tsx
 import NavigationStack from "NavigationStack";
 import { View } from "useInitialValue";
@@ -24,7 +27,7 @@ export default function TwoFASetupModal(initialRouteName) {
   }
   let obj = {
     initialRouteName: LANDING,
-    screens: require("../../../../../hooks/useInitialValue.tsx")(() => {
+    screens: useInitialValue(() => {
       let obj = callback(8289);
       callback = obj.generateTotpSecret();
       obj = {};
@@ -68,9 +71,9 @@ export default function TwoFASetupModal(initialRouteName) {
     headerBackTitle: null,
     headerTitleAlign: "center"
   };
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["13/7kX"]);
-  return callback(require("../../../../../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */.Navigator, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["13/7kX"]);
+  return callback(NavigationStack /* NavigationStack */.Navigator, obj);
 };
 export const TwoFASetupModalScreen = function TwoFASetupModalScreen(children) {
   let navigation;

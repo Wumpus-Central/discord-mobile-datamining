@@ -1,3 +1,19 @@
+import { t } from "../../_runtime/04484_t.js";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { collectGuildAnalyticsMetadata } from "../modules/app_analytics/AppAnalyticsUtils.tsx";
+import { redactionSettingToRenderedString } from "../modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
+import { getInviteURL } from "../modules/instant_invite/getInviteURL.tsx";
+import { readSnowflake } from "../modules/instant_invite/InviteCodeUtils.tsx";
+import { createMessage } from "../modules/messages/createMessage.tsx";
+import { snowflakeSequence } from "../modules/messages/createNonce.tsx";
+import { fetchAndReconcileGiftIntentDismissals } from "../modules/premium/gifting/PremiumGiftingIntentActionCreators.tsx";
+import { combined } from "../utils/HelpdeskUtils.tsx";
+import { getPremiumPlanItem } from "../utils/PremiumUtils.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
+import { items } from "../utils/UploadUtils.tsx";
 // discord_app/actions/MessageActionCreators.tsx
 import ClickArea from "ClickArea";
 import trackRoundtrip from "trackRoundtrip";
@@ -60,7 +76,7 @@ function trackInvite(channelId) {
   }
   id = id.getId();
   invite = invite.getInvite(inviteKey);
-  let obj = require("../modules/instant_invite/InviteCodeUtils.tsx") /* readSnowflake */;
+  let obj = readSnowflake /* readSnowflake */;
   const result = obj.parseExtraDataFromInviteKey(inviteKey);
   let result1 = null != invite;
   if (result1) {
@@ -156,8 +172,8 @@ function trackInvite(channelId) {
     obj.invite_instance_id = inviteInstanceId;
     const merged1 = Object.assign(overrideProperties);
     const tmp3Result2 = tmp3(4271);
-    require("../modules/app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(constants.INVITE_SENT, obj);
-    const obj13 = require("../modules/app_analytics/AppAnalyticsUtils.tsx");
+    collectGuildAnalyticsMetadata.trackWithMetadata(constants.INVITE_SENT, obj);
+    const obj13 = collectGuildAnalyticsMetadata;
   } else {
     let tmp12 = null != invite;
     if (tmp12) {
@@ -186,8 +202,8 @@ function trackInvite(channelId) {
       obj2.invite_instance_id = inviteInstanceId1;
       const merged3 = Object.assign(overrideProperties);
       const tmp3Result3 = tmp3(4271);
-      require("../modules/app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(constants.INVITE_SENT, obj2);
-      const obj8 = require("../modules/app_analytics/AppAnalyticsUtils.tsx");
+      collectGuildAnalyticsMetadata.trackWithMetadata(constants.INVITE_SENT, obj2);
+      const obj8 = collectGuildAnalyticsMetadata;
     }
   }
 }
@@ -207,14 +223,14 @@ RemoteFetch.prototype["markComplete"] = function markComplete() {
 let obj = {
   messageName: "SLOWMODE_RATE_LIMITED",
   messageGetter(rateLimitPerUser) {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.IWntYg, { seconds: rateLimitPerUser.rateLimitPerUser });
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.IWntYg, { seconds: rateLimitPerUser.rateLimitPerUser });
   }
 };
 obj = {
   messageName: "INVALID_MESSAGE_SEND_NO_MUTUAL_GUILDS",
   messageGetter(rawRecipients) {
-    let obj = require("../utils/HelpdeskUtils.tsx");
+    let obj = combined;
     const articleURL = obj.getArticleURL(constants7.DM_COULD_NOT_BE_DELIVERED);
     rawRecipients = rawRecipients.rawRecipients;
     if (rawRecipients == null) {
@@ -223,25 +239,25 @@ obj = {
     if (rawRecipients.isDM()) {
       if (1 === rawRecipients.length) {
         if (rawRecipients.some((bot) => bot.bot)) {
-          const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+          const intl2 = getSystemLocale /* getSystemLocale */.intl;
           obj = { helpUrl: null };
           obj[0] = articleURL;
-          let formatToPlainStringResult = intl2.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.SkGL7l, obj);
+          let formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.SkGL7l, obj);
         }
         return formatToPlainStringResult;
       }
     }
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    formatToPlainStringResult = intl.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.llTkqr, { helpUrl: articleURL });
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.llTkqr, { helpUrl: articleURL });
   }
 };
 obj = {
   messageName: "INVALID_MESSAGE_SEND_USER",
   messageGetter() {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     const obj = { helpUrl: null };
-    obj[0] = require("../utils/HelpdeskUtils.tsx").getArticleURL(constants7.DM_COULD_NOT_BE_DELIVERED);
-    return intl.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.SkGL7l, obj);
+    obj[0] = combined.getArticleURL(constants7.DM_COULD_NOT_BE_DELIVERED);
+    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.SkGL7l, obj);
   }
 };
 let closure_54 = {
@@ -253,99 +269,99 @@ let closure_54 = {
     messageGetter(isForumLikeChannel) {
       if (!isForumLikeChannel.isForumLikeChannel()) {
         if (!isForumLikeChannel.isForumPost()) {
-          const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-          let stringResult = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["5EMPA7"]);
+          const intl = getSystemLocale /* getSystemLocale */.intl;
+          let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["5EMPA7"]);
         }
         return stringResult;
       }
-      const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-      stringResult = intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["/jUd2+"]);
+      const intl2 = getSystemLocale /* getSystemLocale */.intl;
+      stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t["/jUd2+"]);
     }
   },
   [AbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS]: {
     messageName: "TOO_MANY_ANNOUNCEMENT_THREADS",
     messageGetter() {
-      const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["aY+lLC"]);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t["aY+lLC"]);
     }
   },
   [AbortCodes.HARMFUL_LINK_MESSAGE_BLOCKED]: {
     messageName: "HARMFUL_LINK_MESSAGE_BLOCKED",
     messageGetter() {
-      const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.zSG3Qy, { helpUrl: constants8.HARMFUL_LINKS });
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.zSG3Qy, { helpUrl: constants8.HARMFUL_LINKS });
     }
   },
   [AbortCodes.HARMFUL_URL_BLOCKED]: {
     messageName: "HARMFUL_URL_BLOCKED",
     messageGetter() {
-      const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.WxX2Fd);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.WxX2Fd);
     }
   },
   [AbortCodes.EMAIL_VERIFICATION_REQUIRED]: {
     messageName: "BOT_REQUIRES_EMAIL_VERIFICATION",
     messageGetter() {
-      const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.k1Cjqr);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.k1Cjqr);
     }
   },
   [AbortCodes.GUILD_MESSAGE_UPDATE_RATE_LIMIT_EXCEEDED]: {
     messageName: "GUILD_MESSAGE_UPDATE_RATE_LIMIT_EXCEEDED",
     messageGetter() {
-      const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.Z5SUuv);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.Z5SUuv);
     }
   },
   [AbortCodes.RATE_LIMIT_DM_OPEN]: {
     messageName: "BOT_DM_RATE_LIMITED",
     messageGetter() {
-      const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.E8nbNb);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.E8nbNb);
     }
   },
   [AbortCodes.SEND_MESSAGE_TEMPORARILY_DISABLED]: {
     messageName: "BOT_DM_SEND_MESSAGE_TEMPORARILY_DISABLED",
     messageGetter() {
-      const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.aRUbah);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.aRUbah);
     }
   },
   [AbortCodes.INVALID_MESSAGE_SEND_GAME_FRIEND_DM]: {
     messageName: "BOT_DM_SEND_MESSAGE_INVALID_FOR_GAME_FRIEND",
     messageGetter() {
-      const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["/meGhR"]);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t["/meGhR"]);
     }
   },
   [AbortCodes.INVALID_MESSAGE_SEND_PROVISIONAL_ACCOUNT_OFFLINE]: {
     messageName: "BOT_DM_SEND_MESSAGE_INVALID_OFFLINE_PROVISIONAL_ACCOUNT",
     messageGetter() {
-      const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.Oc1Zjw);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.Oc1Zjw);
     }
   },
   [AbortCodes.TOTAL_ATTACHMENT_SIZE_TOO_LARGE]: {
     messageName: "TOTAL_ATTACHMENT_SIZE_TOO_LARGE",
     messageGetter() {
-      const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
       const obj = { maxSizeMb: null };
-      obj[0] = require("../utils/UploadUtils.tsx") /* items */.MAX_TOTAL_ATTACHMENT_SIZE_MB;
-      return intl.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.DYFPg2, obj);
+      obj[0] = items /* items */.MAX_TOTAL_ATTACHMENT_SIZE_MB;
+      return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.DYFPg2, obj);
     }
   },
   [AbortCodes.CLOUD_UPLOAD_NOT_FOUND]: {
     messageName: "CLOUD_UPLOAD_NOT_FOUND",
     messageGetter() {
-      const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.bQldfH);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.bQldfH);
     }
   },
   [AbortCodes.INVALID_PERMISSIONS]: {
     messageName: "INVALID_PERMISSIONS",
     messageGetter() {
-      const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.zl4Weq);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.zl4Weq);
     }
   }
 };
@@ -360,23 +376,23 @@ let obj14 = {
       obj = {};
     }
     obj = { type: "MESSAGE_CREATE", channelId, message, optimistic: flag, sendMessageOptions: obj, isPushNotification: false };
-    require("../Dispatcher.tsx").dispatch(obj);
+    dispatcher.dispatch(obj);
   },
   sendBotMessage(id, intl, messageName, nonce) {
     if (null != messageName) {
-      let obj = require("../modules/app_analytics/AppAnalyticsUtils.tsx");
+      let obj = collectGuildAnalyticsMetadata;
       obj = { message_author: "Clyde", message_name: null };
       obj[1] = messageName;
       obj.trackWithMetadata(constants.AUTOMATED_MESSAGE_RECEIVED, obj);
     }
     obj = { messageId: nonce, channelId: id, content: intl, loggingName: messageName };
-    obj14.receiveMessage(id, require("../modules/messages/createMessage.tsx") /* createMessage */.createBotMessage(obj));
+    obj14.receiveMessage(id, createMessage /* createMessage */.createBotMessage(obj));
   },
   sendNitroSystemMessage(channelId, content, nonce) {
     obj = { channelId, nonce, type: constants6.NITRO_NOTIFICATION, content, flags: closure_33.EPHEMERAL, author: obj };
     obj = { id: closure_40, username: "Nitro Notification", discriminator: closure_41, avatar: "nitro", bot: true };
     obj = {};
-    const merged = Object.assign(require("../modules/messages/createMessage.tsx")(obj));
+    const merged = Object.assign(createMessage(obj));
     obj.state = constants9.SENT;
     obj.channel_id = channelId;
     obj14.receiveMessage(channelId, obj, true);
@@ -385,7 +401,7 @@ let obj14 = {
     obj = { channelId, type: constants6.GIFTING_PROMPT, content: "", flags: closure_33.EPHEMERAL, author: obj, giftingPrompt };
     obj = { id: closure_40, username: "Gifting Prompt", discriminator: closure_41, avatar: "gifting_prompt", bot: true };
     obj = {};
-    const merged = Object.assign(require("../modules/messages/createMessage.tsx")(obj));
+    const merged = Object.assign(createMessage(obj));
     obj.state = constants9.SENT;
     obj14.receiveMessage(channelId, obj, true);
   },
@@ -393,7 +409,7 @@ let obj14 = {
     obj = { channelId, type: constants6.GUILD_BOOST_UPSELL, content: "", flags: closure_33.EPHEMERAL, author: obj, boostingPrompt };
     obj = { id: closure_40, username: "Guild Boost Upsell", discriminator: closure_41, avatar: "guild_boost_upsell", bot: true };
     obj = {};
-    const merged = Object.assign(require("../modules/messages/createMessage.tsx")(obj));
+    const merged = Object.assign(createMessage(obj));
     obj.state = constants9.SENT;
     obj14.receiveMessage(channelId, obj, true);
   },
@@ -408,13 +424,13 @@ let obj14 = {
       if (null != obj) {
         obj14.sendBotMessage(c0, obj.messageGetter(channel), obj.messageName);
       } else {
-        const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+        const intl = getSystemLocale /* getSystemLocale */.intl;
         obj = { helpUrl: null };
-        obj[0] = require("../utils/HelpdeskUtils.tsx").getArticleURL(constants7.DM_COULD_NOT_BE_DELIVERED);
+        obj[0] = combined.getArticleURL(constants7.DM_COULD_NOT_BE_DELIVERED);
         const _HermesInternal = HermesInternal;
-        const obj3 = require("../utils/HelpdeskUtils.tsx");
-        obj14.sendBotMessage(c0, intl.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.SkGL7l, obj), "SEND_FAILED (" + num + ")");
-        const formatToPlainStringResult = intl.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.SkGL7l, obj);
+        const obj3 = combined;
+        obj14.sendBotMessage(c0, intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.SkGL7l, obj), "SEND_FAILED (" + num + ")");
+        const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.SkGL7l, obj);
       }
     }
   },
@@ -426,8 +442,8 @@ let obj14 = {
       let obj = { isDM: null, isGDM: null };
       obj[0] = channel.isDM();
       obj[1] = channel.isGroupDM();
-      const match = require("../../_runtime/04484_t.js") /* t */.match(obj);
-      const str = require("../../_runtime/04484_t.js") /* t */;
+      const match = t /* t */.match(obj);
+      const str = t /* t */;
       const withResult = match.with({ isDM: true }, () => {
         const obj = { message: null, messageName: "BOT_DM_EXPLICIT_CONTENT" };
         const intl = callback(1236).intl;
@@ -477,37 +493,37 @@ let obj14 = {
         obj[0] = intl.string(callback(1236).t.i4AbAS);
         return obj;
       });
-      const nonce = require("../modules/messages/createNonce.tsx") /* snowflakeSequence */.createNonce();
+      const nonce = snowflakeSequence /* snowflakeSequence */.createNonce();
       obj14.sendBotMessage(c0, message, messageName, nonce);
-      const obj8 = require("../modules/messages/createNonce.tsx") /* snowflakeSequence */;
+      const obj8 = snowflakeSequence /* snowflakeSequence */;
       obj = { action: null, messageId: null, channelId: null, context: null };
-      obj[0] = require("../modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx") /* redactionSettingToRenderedString */.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT;
+      obj[0] = redactionSettingToRenderedString /* redactionSettingToRenderedString */.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT;
       obj[1] = nonce;
       obj[2] = c0;
       obj[3] = EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED;
-      const result = require("../modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx") /* redactionSettingToRenderedString */.trackMediaRedactionAction(obj);
+      const result = redactionSettingToRenderedString /* redactionSettingToRenderedString */.trackMediaRedactionAction(obj);
       let tmp = null != attachments;
       if (tmp) {
         tmp = attachments.length > 0;
       }
       if (tmp) {
-        let obj1 = require("../Dispatcher.tsx");
+        let obj1 = dispatcher;
         obj1 = { type: "MESSAGE_EXPLICIT_CONTENT_FP_CREATE", messageId: null, channelId: null, attachments: null };
         obj1[1] = nonce;
         obj1[2] = c0;
         obj1[3] = attachments;
         obj1.dispatch(obj1);
       }
-      const obj9 = require("../modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx") /* redactionSettingToRenderedString */;
+      const obj9 = redactionSettingToRenderedString /* redactionSettingToRenderedString */;
     }
   },
   truncateMessages(channelId, truncateBottom, truncateTop) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "TRUNCATE_MESSAGES", channelId, truncateBottom, truncateTop };
     obj.dispatch(obj);
   },
   clearChannel(channelId) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "CLEAR_MESSAGES", channelId };
     obj.dispatch(obj);
   },
@@ -520,8 +536,8 @@ let obj14 = {
       obj[1] = obj;
       obj[2] = channelId;
       obj[3] = arg1;
-      require("../Dispatcher.tsx").dispatch(obj);
-      const obj4 = require("../Dispatcher.tsx");
+      dispatcher.dispatch(obj);
+      const obj4 = dispatcher;
     } else {
       const obj1 = { channelId: null, limit: null, jump: null };
       obj1[0] = channelId;
@@ -531,7 +547,7 @@ let obj14 = {
     }
   },
   trackJump(channelId, id, Present, extraProperties) {
-    let obj = require("../modules/app_analytics/AppAnalyticsUtils.tsx");
+    let obj = collectGuildAnalyticsMetadata;
     obj = { context: Present, channel_id: channelId, message_id: id };
     const merged = Object.assign(extraProperties);
     obj.trackWithMetadata(constants.JUMP, obj);
@@ -1072,7 +1088,7 @@ let obj14 = {
           if (null == messageId1) {
             if (null != before) {
               if (messages.hasBeforeCached(before)) {
-                let obj3 = require("../Dispatcher.tsx");
+                let obj3 = dispatcher;
                 let obj = { type: "LOAD_MESSAGES_SUCCESS_CACHED", channelId: null, before: null, limit: null, truncate: null };
                 obj[1] = channelId;
                 obj[2] = before;
@@ -1086,7 +1102,7 @@ let obj14 = {
             const tmp4 = null == after || !messages.hasAfterCached(after);
             flag = !tmp4;
             if (!tmp4) {
-              let obj1 = require("../Dispatcher.tsx");
+              let obj1 = dispatcher;
               obj = { type: "LOAD_MESSAGES_SUCCESS_CACHED", channelId: null, after: null, limit: null, truncate: null };
               obj[1] = channelId;
               obj[2] = after;
@@ -1108,7 +1124,7 @@ let obj14 = {
             obj1[2] = jump;
             obj1[3] = limit;
             obj1[4] = truncate;
-            require("../Dispatcher.tsx").dispatch(obj1);
+            dispatcher.dispatch(obj1);
             return true;
           }
         }
@@ -1124,7 +1140,7 @@ let obj14 = {
             obj2[2] = focus;
             obj2[3] = limit;
             obj2[4] = truncate;
-            require("../Dispatcher.tsx").dispatch(obj2);
+            dispatcher.dispatch(obj2);
             return true;
           } else {
             obj3 = {};
@@ -1142,8 +1158,8 @@ let obj14 = {
           if (tmp13 != null) {
             messageId5 = tmp13.messageId;
           }
-          num = require("../utils/SnowflakeUtils.tsx").extractTimestamp(messageId5);
-          const obj7 = require("../utils/SnowflakeUtils.tsx");
+          num = DISCORD_EPOCH.extractTimestamp(messageId5);
+          const obj7 = DISCORD_EPOCH;
         }
         const firstResult = messages.first();
         const lastResult = messages.last();
@@ -1153,8 +1169,8 @@ let obj14 = {
           flag4 = null != firstResult;
         }
         if (flag4) {
-          flag4 = require("../utils/SnowflakeUtils.tsx").extractTimestamp(firstResult.id) >= num;
-          const obj8 = require("../utils/SnowflakeUtils.tsx");
+          flag4 = DISCORD_EPOCH.extractTimestamp(firstResult.id) >= num;
+          const obj8 = DISCORD_EPOCH;
         }
         if (!flag4) {
           const hasMoreAfter = messages.hasMoreAfter;
@@ -1163,20 +1179,20 @@ let obj14 = {
             tmp25 = null != lastResult;
           }
           if (tmp25) {
-            tmp25 = require("../utils/SnowflakeUtils.tsx").extractTimestamp(lastResult.id) <= num;
-            const obj9 = require("../utils/SnowflakeUtils.tsx");
+            tmp25 = DISCORD_EPOCH.extractTimestamp(lastResult.id) <= num;
+            const obj9 = DISCORD_EPOCH;
           }
           flag4 = tmp25;
         }
         if (!flag4) {
           let tmp28 = null != firstResult && null != lastResult;
           if (tmp28) {
-            tmp28 = require("../utils/SnowflakeUtils.tsx").extractTimestamp(firstResult.id) < num;
-            const obj10 = require("../utils/SnowflakeUtils.tsx");
+            tmp28 = DISCORD_EPOCH.extractTimestamp(firstResult.id) < num;
+            const obj10 = DISCORD_EPOCH;
           }
           if (tmp28) {
-            tmp28 = require("../utils/SnowflakeUtils.tsx").extractTimestamp(lastResult.id) > num;
-            const obj11 = require("../utils/SnowflakeUtils.tsx");
+            tmp28 = DISCORD_EPOCH.extractTimestamp(lastResult.id) > num;
+            const obj11 = DISCORD_EPOCH;
           }
           flag4 = tmp28;
         }
@@ -1185,9 +1201,9 @@ let obj14 = {
           obj4[1] = channelId;
           obj4[2] = tmp13;
           obj4[3] = closure_34;
-          require("../Dispatcher.tsx").dispatch(obj4);
+          dispatcher.dispatch(obj4);
           flag4 = true;
-          const obj12 = require("../Dispatcher.tsx");
+          const obj12 = dispatcher;
         }
         return flag4;
       }
@@ -1372,7 +1388,7 @@ let obj14 = {
     return obj;
   },
   sendInvite(c1, code, c3, c4, content) {
-    const tmp = require("../modules/instant_invite/getInviteURL.tsx")(code);
+    const tmp = getInviteURL(code);
     content = tmp;
     if (null != content) {
       const _HermesInternal = HermesInternal;
@@ -1426,13 +1442,13 @@ let obj14 = {
       obj = {};
     }
     ({ messageReference, allowedMentions } = obj);
-    const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     obj = { url: closure_28.MESSAGES_GREET(id), body: { sticker_ids: items, allowed_mentions: allowedMentions, message_reference: messageReference }, oldFormErrors: true, rejectWithError: null, context: null };
     items = [outer1_14];
-    obj[3] = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    obj[3] = _sendRequest.rejectWithMigratedError();
     obj = { location: constants10.GREET };
     obj[4] = obj;
-    const obj3 = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+    const obj3 = _sendRequest;
     return HTTP.post(obj).then((body) => {
       outer1_14(outer1_3[65]).donateSentMessage(body.body.content, closure_0);
       outer1_55.receiveMessage(closure_0, body.body);
@@ -1464,10 +1480,10 @@ let obj14 = {
   },
   validateMessage(invalidEmojis, currentUser, throwTypeErrorResult) {
     if (invalidEmojis.some((animated) => animated.animated)) {
-      let obj = require("../utils/PremiumUtils.tsx");
+      let obj = getPremiumPlanItem;
       if (!obj.canUseAnimatedEmojis(currentUser)) {
-        const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-        let stringResult = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["V5/GgC"]);
+        const intl = getSystemLocale /* getSystemLocale */.intl;
+        let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["V5/GgC"]);
         let str = "INVALID_ANIMATED_EMOJI_BODY";
       }
       obj = { errorMessage: null, errorMessageName: null };
@@ -1475,8 +1491,8 @@ let obj14 = {
       obj[1] = str;
       return obj;
     }
-    const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    stringResult = intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["Q87rI/"]);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t["Q87rI/"]);
     str = "INVALID_EXTERNAL_EMOJI_BODY";
   },
   _sendMessage(arg0, arg1, arg2) {
@@ -2480,12 +2496,12 @@ let obj14 = {
     })();
   },
   startEditMessage(channelId, messageId, content, source) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "MESSAGE_START_EDIT", channelId, messageId, content, source };
     obj.dispatch(obj);
   },
   startEditMessageRecord(id, flags, source) {
-    let obj = require("../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+    let obj = hasFlag /* hasFlag */;
     if (obj.hasFlag(flags.flags, closure_33.IS_COMPONENTS_V2)) {
       const components = flags.components;
       const found = components.filter((type) => type.type === callback(table[79]).ComponentType.TEXT_DISPLAY);
@@ -2497,19 +2513,19 @@ let obj14 = {
         obj[2] = flags.id;
         obj[3] = joined;
         obj[4] = source;
-        require("../Dispatcher.tsx").dispatch(obj);
+        dispatcher.dispatch(obj);
       }
     }
     obj = { type: "MESSAGE_START_EDIT", channelId: id, messageId: flags.id, content: flags.content, source };
-    require("../Dispatcher.tsx").dispatch(obj);
+    dispatcher.dispatch(obj);
   },
   updateEditMessage(channelId, textValue, richValue) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "MESSAGE_UPDATE_EDIT", channelId, textValue, richValue };
     obj.dispatch(obj);
   },
   endEditMessage(id, response) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "MESSAGE_END_EDIT", channelId: id, response };
     obj.dispatch(obj);
   },
@@ -2967,17 +2983,17 @@ let obj14 = {
   },
   dismissAutomatedMessage(loggingName) {
     if (null != loggingName.loggingName) {
-      let obj = require("../modules/app_analytics/AppAnalyticsUtils.tsx");
+      let obj = collectGuildAnalyticsMetadata;
       obj = { message_name: null, message_author: null };
       obj[0] = loggingName.loggingName;
       obj[1] = loggingName.author.username;
       obj.trackWithMetadata(constants.AUTOMATED_MESSAGE_DISMISSED, obj);
     }
-    const result = require("../modules/premium/gifting/PremiumGiftingIntentActionCreators.tsx") /* fetchAndReconcileGiftIntentDismissals */.logGiftIntentMessageDismissed(loggingName.channel_id, loggingName.id);
+    const result = fetchAndReconcileGiftIntentDismissals /* fetchAndReconcileGiftIntentDismissals */.logGiftIntentMessageDismissed(loggingName.channel_id, loggingName.id);
     this.deleteMessage(loggingName.channel_id, loggingName.id, true);
   },
   revealMessage(id, messageId) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "MESSAGE_REVEAL", channelId: id, messageId };
     obj.dispatch(obj);
   },
@@ -3083,99 +3099,99 @@ let obj1 = {
   messageGetter(isForumLikeChannel) {
     if (!isForumLikeChannel.isForumLikeChannel()) {
       if (!isForumLikeChannel.isForumPost()) {
-        const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-        let stringResult = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["5EMPA7"]);
+        const intl = getSystemLocale /* getSystemLocale */.intl;
+        let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["5EMPA7"]);
       }
       return stringResult;
     }
-    const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    stringResult = intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["/jUd2+"]);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t["/jUd2+"]);
   }
 };
 let obj10 = {
   messageName: "BOT_DM_SEND_MESSAGE_INVALID_OFFLINE_PROVISIONAL_ACCOUNT",
   messageGetter() {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.Oc1Zjw);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.Oc1Zjw);
   }
 };
 let obj11 = {
   messageName: "TOTAL_ATTACHMENT_SIZE_TOO_LARGE",
   messageGetter() {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     const obj = { maxSizeMb: null };
-    obj[0] = require("../utils/UploadUtils.tsx") /* items */.MAX_TOTAL_ATTACHMENT_SIZE_MB;
-    return intl.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.DYFPg2, obj);
+    obj[0] = items /* items */.MAX_TOTAL_ATTACHMENT_SIZE_MB;
+    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.DYFPg2, obj);
   }
 };
 let obj12 = {
   messageName: "CLOUD_UPLOAD_NOT_FOUND",
   messageGetter() {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.bQldfH);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.bQldfH);
   }
 };
 let obj13 = {
   messageName: "INVALID_PERMISSIONS",
   messageGetter() {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.zl4Weq);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.zl4Weq);
   }
 };
 let obj2 = {
   messageName: "TOO_MANY_ANNOUNCEMENT_THREADS",
   messageGetter() {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["aY+lLC"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["aY+lLC"]);
   }
 };
 let obj3 = {
   messageName: "HARMFUL_LINK_MESSAGE_BLOCKED",
   messageGetter() {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.zSG3Qy, { helpUrl: constants8.HARMFUL_LINKS });
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.zSG3Qy, { helpUrl: constants8.HARMFUL_LINKS });
   }
 };
 let obj4 = {
   messageName: "HARMFUL_URL_BLOCKED",
   messageGetter() {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.WxX2Fd);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.WxX2Fd);
   }
 };
 let obj5 = {
   messageName: "BOT_REQUIRES_EMAIL_VERIFICATION",
   messageGetter() {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.k1Cjqr);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.k1Cjqr);
   }
 };
 let obj6 = {
   messageName: "GUILD_MESSAGE_UPDATE_RATE_LIMIT_EXCEEDED",
   messageGetter() {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.Z5SUuv);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.Z5SUuv);
   }
 };
 let obj7 = {
   messageName: "BOT_DM_RATE_LIMITED",
   messageGetter() {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.E8nbNb);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.E8nbNb);
   }
 };
 let obj8 = {
   messageName: "BOT_DM_SEND_MESSAGE_TEMPORARILY_DISABLED",
   messageGetter() {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.aRUbah);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.aRUbah);
   }
 };
 let obj9 = {
   messageName: "BOT_DM_SEND_MESSAGE_INVALID_FOR_GAME_FRIEND",
   messageGetter() {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["/meGhR"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["/meGhR"]);
   }
 };
 const tmp6 = new require("updateSubmittedGuildJoinRequestTotal")("MessageQueue");

@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreateModal.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -16,7 +17,7 @@ export default function GuildSettingsStickerCreateModal(arg0) {
   ({ onGoBack: c2, ref: c3 } = stickerId(9594)());
   const tmp2 = stickerId(9594)();
   const tmp3 = c3;
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   if (null != stickerId) {
   } else {
   }

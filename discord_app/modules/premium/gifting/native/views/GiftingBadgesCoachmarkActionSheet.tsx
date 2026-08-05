@@ -1,3 +1,8 @@
+import { metadata } from "../../../../../../discord_assets/assets/gifting/new_gifting_badges.png.js";
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { messagesProxy } from "../../GiftingBadge.messages.js";
+import { GiftingBadgeIcon } from "GiftingBadgeIcon.tsx";
 // discord_app/modules/premium/gifting/native/views/GiftingBadgesCoachmarkActionSheet.tsx
 import initialize from "initialize";
 import get_ActivityIndicator from "metadata";
@@ -38,7 +43,7 @@ function HasBadgeCoachmark(markAsDismissed) {
   if (tmp4Result) {
     const obj1 = { icon: null, size: 120 };
     obj1[0] = currentTier.simple_icon_url;
-    tmp4Result = tmp4(require("GiftingBadgeIcon.tsx"), obj1);
+    tmp4Result = tmp4(GiftingBadgeIcon, obj1);
   }
   obj[1] = tmp4Result;
   const items2 = [closure_8(closure_5, obj), , ];
@@ -49,14 +54,14 @@ function HasBadgeCoachmark(markAsDismissed) {
   if (str == null) {
     str = "";
   }
-  obj3[3] = intl.format(require("../../GiftingBadge.messages.js")["a+jfuy"], { tierName: str });
+  obj3[3] = intl.format(messagesProxy["a+jfuy"], { tierName: str });
   const items3 = [closure_8(markAsDismissed(4281).Text, obj3), ];
   const obj4 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = tmp5(1236).intl;
   if (giftCount == null) {
     giftCount = 0;
   }
-  obj4[3] = intl2.formatToPlainString(require("../../GiftingBadge.messages.js").QxRA6w, { giftCount });
+  obj4[3] = intl2.formatToPlainString(messagesProxy.QxRA6w, { giftCount });
   items3[1] = closure_8(markAsDismissed(4281).Text, obj4);
   obj2[1] = items3;
   items2[1] = closure_9(closure_5, obj2);
@@ -93,7 +98,7 @@ function NewBadgeCoachmark(markAsDismissed) {
   obj = { style: tmp.graphicContainer, children: null };
   const obj1 = { source: null, style: null };
   const obj2 = { uri: null };
-  obj2[0] = require("../../../../../../discord_assets/assets/gifting/new_gifting_badges.png.js");
+  obj2[0] = metadata;
   obj1[0] = obj2;
   obj1[1] = tmp.newBadgeImage;
   obj[1] = callback(closure_4, obj1);
@@ -101,20 +106,20 @@ function NewBadgeCoachmark(markAsDismissed) {
   const obj3 = { style: tmp.textContainer, children: null };
   const obj4 = { style: tmp.text, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   const intl = markAsDismissed(1236).intl;
-  obj4[3] = intl.string(require("../../GiftingBadge.messages.js").Q2RQka);
+  obj4[3] = intl.string(messagesProxy.Q2RQka);
   const items3 = [callback(markAsDismissed(4281).Text, obj4), ];
   const obj5 = { style: tmp.text, variant: "text-sm/medium", color: "text-muted", children: null };
   const intl2 = markAsDismissed(1236).intl;
-  obj5[3] = intl2.string(require("../../GiftingBadge.messages.js")["3EQnkg"]);
+  obj5[3] = intl2.string(messagesProxy["3EQnkg"]);
   items3[1] = callback(markAsDismissed(4281).Text, obj5);
   obj3[1] = items3;
   items2[1] = callback2(closure_5, obj3);
   const obj6 = { style: tmp.footer, children: null };
   const obj7 = { grow: true, text: null, icon: null, onPress: null };
   const intl3 = markAsDismissed(1236).intl;
-  obj7[1] = intl3.string(require("../../GiftingBadge.messages.js").DZnomS);
+  obj7[1] = intl3.string(messagesProxy.DZnomS);
   const obj8 = { size: "sm", color: null };
-  obj8[1] = require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_PRIMARY_TEXT_DEFAULT;
+  obj8[1] = Themes.colors.CONTROL_PRIMARY_TEXT_DEFAULT;
   obj7[2] = callback(markAsDismissed(9493).GiftIcon, obj8);
   obj7[3] = callback;
   obj6[1] = callback(markAsDismissed(4695).Button, obj7);
@@ -140,7 +145,7 @@ const result = require("map").fileFinishedImporting("modules/premium/gifting/nat
 
 export default function GiftingBadgesCoachmarkActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
-  let obj = require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [map];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let getCurrentTier;

@@ -1,3 +1,4 @@
+import { isMetaQuest } from "../../device/MetaQuestUtils.android.tsx";
 // discord_app/modules/notifications/native/playInAppMessageSound.tsx
 import DesktopNotificationTypes from "DesktopNotificationTypes";
 import { isInAppMessageSoundsEnabled as closure_3 } from "isInAppMessageSoundsEnabled";
@@ -23,7 +24,7 @@ export const playInAppMessageSound = function playInAppMessageSound(notification
         tmp3 = message1;
       }
     }
-    obj2 = require("../../device/MetaQuestUtils.android.tsx") /* isMetaQuest */;
+    obj2 = isMetaQuest /* isMetaQuest */;
     tmp8 = require;
   }
 };

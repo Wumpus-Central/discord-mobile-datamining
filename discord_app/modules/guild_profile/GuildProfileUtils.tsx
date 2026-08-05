@@ -1,3 +1,4 @@
+import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
 // discord_app/modules/guild_profile/GuildProfileUtils.tsx
 import { createChannelRecordFromInvite as closure_2 } from "createChannelRecord";
 import { GuildFeatures } from "ME";
@@ -27,7 +28,7 @@ export const guildInviteCanEmbedProfile = function guildInviteCanEmbedProfile(gu
   if (null == guild.guild) {
     return false;
   } else {
-    const features = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */.fromInviteGuild(guild.guild).features;
+    const features = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */.fromInviteGuild(guild.guild).features;
     if (features.has(GuildFeatures.HUB)) {
       return false;
     } else {
@@ -45,6 +46,6 @@ export const guildInviteCanEmbedProfile = function guildInviteCanEmbedProfile(gu
       }
       return !isGuildVoiceOrThreadResult;
     }
-    const obj = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
+    const obj = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
   }
 };

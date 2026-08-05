@@ -1,3 +1,5 @@
+import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/native_permissions/mobile/PermissionsAlertModal.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -16,14 +18,14 @@ export default function PermissionsAlertModal(arg0) {
   let obj = { title, content: body, actions: null };
   obj = { children: null };
   obj = { onPress: onConfirm, text: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.jVcuVY);
-  const items = [callback(require("../../../design/components/AlertModal/native/AlertModal.native.tsx") /* getAlertModalItemKey */.AlertActionButton, obj, "confirm"), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.jVcuVY);
+  const items = [callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, obj, "confirm"), ];
   const obj1 = { variant: "secondary", text: null };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.cpT0Cq);
-  items[1] = callback(require("../../../design/components/AlertModal/native/AlertModal.native.tsx") /* getAlertModalItemKey */.AlertActionButton, obj1, "close");
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
+  items[1] = callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, obj1, "close");
   obj[0] = items;
-  obj[2] = callback2(require("../../../design/components/AlertModal/native/AlertModal.native.tsx") /* getAlertModalItemKey */.AlertActions, obj);
-  return callback(require("../../../design/components/AlertModal/native/AlertModal.native.tsx") /* getAlertModalItemKey */.AlertModal, obj);
+  obj[2] = callback2(getAlertModalItemKey /* getAlertModalItemKey */.AlertActions, obj);
+  return callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertModal, obj);
 };

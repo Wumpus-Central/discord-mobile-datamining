@@ -1,3 +1,4 @@
+import { context } from "../app_analytics/useAnalyticsLocations.tsx";
 // discord_app/modules/user_profile/UserProfileAnalyticsContext.tsx
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
@@ -28,7 +29,7 @@ export const UserProfileAnalyticsProvider = (children) => {
     ref1.current = openedAt;
     ref.current = undefined;
   }
-  obj = { analyticsLocations: require("../app_analytics/useAnalyticsLocations.tsx")().analyticsLocations, value };
+  obj = { analyticsLocations: context().analyticsLocations, value };
   closure_6 = obj.useRef(obj);
   const effect = obj.useEffect(() => {
     closure_6.current = obj;

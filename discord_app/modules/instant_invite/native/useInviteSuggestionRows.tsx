@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/instant_invite/native/useInviteSuggestionRows.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -17,7 +18,7 @@ export default function _default(arg0, arg1, arg2, arg3) {
   const dependencyMap = arg2;
   const callback = arg3;
   let items = [_computeRows];
-  const rows = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => inviteSuggestionRows.getInviteSuggestionRows());
+  const rows = _initialize.useStateFromStores(items, () => inviteSuggestionRows.getInviteSuggestionRows());
   let tmp2 = callback(rows.useState(true), 2);
   const isFetchingRows = tmp2[0];
   let createGuildRecordFromRust = tmp2[1];

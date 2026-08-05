@@ -1,3 +1,7 @@
+import { start } from "../../../discord_common/js/packages/timers/Timers.tsx";
+import { trackInvite } from "../../actions/MessageActionCreators.tsx";
+import { SelectedChannelActionCreators } from "../../actions/SelectedChannelActionCreators.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/voice_calls/CallIdleManager.tsx
 import participantFromServer from "participantFromServer";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -29,11 +33,11 @@ function disconnect() {
   if (flag) {
     const currentClientVoiceChannelId1 = currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null);
     if (null != currentClientVoiceChannelId1) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      require("../../actions/MessageActionCreators.tsx").sendBotMessage(currentClientVoiceChannelId1, intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.XYof5G, { number: 3 }));
-      const obj3 = require("../../actions/MessageActionCreators.tsx");
-      const voiceChannel = require("../../actions/SelectedChannelActionCreators.tsx").selectVoiceChannel(null);
-      const obj4 = require("../../actions/SelectedChannelActionCreators.tsx");
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      trackInvite.sendBotMessage(currentClientVoiceChannelId1, intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.XYof5G, { number: 3 }));
+      const obj3 = trackInvite;
+      const voiceChannel = SelectedChannelActionCreators.selectVoiceChannel(null);
+      const obj4 = SelectedChannelActionCreators;
     }
   }
 }
@@ -41,7 +45,7 @@ let c7 = 180000;
 let prototype = function CallIdleManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   const require = applyArgumentsResult;
-  const timeout = new require("../../../discord_common/js/packages/timers/Timers.tsx") /* start */.Timeout();
+  const timeout = new start /* start */.Timeout();
   applyArgumentsResult.idleTimeout = timeout;
   applyArgumentsResult.handleConnectionClosed = function handleConnectionClosed() {
     const idleTimeout = applyArgumentsResult.idleTimeout;

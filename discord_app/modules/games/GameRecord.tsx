@@ -1,3 +1,5 @@
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { getGameMediaRefURL } from "getGameMediaRefURL.tsx";
 // discord_app/modules/games/GameRecord.tsx
 import "toJS";
 import createExecutable from "createExecutable";
@@ -134,7 +136,7 @@ prototype["getIconURL"] = function getIconURL(size, format) {
   if (media != null) {
     icon = media.icon;
   }
-  return require("getGameMediaRefURL.tsx")(this.id, icon, { size, format });
+  return getGameMediaRefURL(this.id, icon, { size, format });
 };
 prototype["getBannerURL"] = function getBannerURL(size) {
   const media = this.media;
@@ -142,7 +144,7 @@ prototype["getBannerURL"] = function getBannerURL(size) {
   if (media != null) {
     banner = media.banner;
   }
-  return require("getGameMediaRefURL.tsx")(this.id, banner, { keepAspectRatio: true, size });
+  return getGameMediaRefURL(this.id, banner, { keepAspectRatio: true, size });
 };
 prototype["getCoverURL"] = function getCoverURL(size) {
   const media = this.media;
@@ -151,10 +153,10 @@ prototype["getCoverURL"] = function getCoverURL(size) {
     cover = media.cover;
   }
   let str = "png";
-  if (require("../../utils/AvatarUtils.tsx") /* getAvatarURL */.SUPPORTS_WEBP) {
+  if (getAvatarURL /* getAvatarURL */.SUPPORTS_WEBP) {
     str = "webp";
   }
-  return require("getGameMediaRefURL.tsx")(this.id, cover, { keepAspectRatio: true, format: str, size });
+  return getGameMediaRefURL(this.id, cover, { keepAspectRatio: true, format: str, size });
 };
 prototype["getArtworkURLs"] = function getArtworkURLs() {
   const self = this;

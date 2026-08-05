@@ -1,3 +1,8 @@
+import { shallowEqual } from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import { ChatTTITracker } from "../../chat/native/ChatTTITracker.tsx";
+import { openMediaModalOverlayAltTextSheet } from "../../media_viewer/native/components/overlay/openMediaModalOverlayAltTextSheet.tsx";
+import { useMessageAuthorActivities } from "MessagesHooks.tsx";
+import { getVisibleMessages } from "MessagesUtils.tsx";
 // discord_app/modules/messages/native/MessagesRenderer.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import getMessageJumpData from "getMessageJumpData";
@@ -21,10 +26,10 @@ let closure_19;
 let map1;
 const require = arg1;
 function handleTapShowAltText(description) {
-  require("../../media_viewer/native/components/overlay/openMediaModalOverlayAltTextSheet.tsx")({ description: description.nativeEvent.description });
+  openMediaModalOverlayAltTextSheet({ description: description.nativeEvent.description });
 }
 function handleMediaPlayFinishedAnalytics(nativeEvent) {
-  const result = require("MessagesUtils.tsx") /* getVisibleMessages */.handleMediaPlayFinishedAnalytics(nativeEvent.nativeEvent);
+  const result = getVisibleMessages /* getVisibleMessages */.handleMediaPlayFinishedAnalytics(nativeEvent.nativeEvent);
 }
 function isLoadingAtTop(arg0, arg1) {
   if (arg1) {
@@ -305,7 +310,7 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
     first(outer1_2[17]).updateRows(ref5.current, { rows, isLoadingAtTop: tmp, scrollData, HACK_iOSForceAnimations, forceReload, isAnimated });
     ref1.current = hasMoreMessagesAfter;
   }, []);
-  let obj = _require("MessagesHooks.tsx");
+  let obj = _useMessageAuthorActivities;
   let chatUpdatesQueue = obj.useChatUpdatesQueue(ref5, callback);
   let items = [, ];
   ({ canChat: arr[0], channel: arr[1] } = messages);
@@ -1342,13 +1347,13 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
         handleVisibleMessagesChange({ firstVisibleMessageRowIndex: nativeEvent.firstVisibleMessageIndex, lastVisibleMessageRowIndex: nativeEvent.lastVisibleMessageIndex, firstVisibleMessagePercentVisible: nativeEvent.firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible: nativeEvent.lastVisibleMessagePercentVisible, source: messages(outer1_2[41]).QuestsVisibleMessagesChangedSource.VISIBILITY_CHANGED });
       }
     }),
-    findMessageIndex(_require("../../chat/native/ChatTTITracker.tsx").ChatTTITracker, { messages: messages.messages })
+    findMessageIndex(_ChatTTITracker.ChatTTITracker, { messages: messages.messages })
   ];
   obj3[0] = items4;
   return callback(closure_18, obj3);
 });
 forwardRefResult.displayName = "Messages";
-const memoResult = importAllResult.memo(forwardRefResult, (interactionStates, interactionStates2) => require("../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(interactionStates, interactionStates2, ["interactionStates"], { shouldWarnLargeObjects: false }) && require("../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(interactionStates.interactionStates, interactionStates2.interactionStates));
+const memoResult = importAllResult.memo(forwardRefResult, (interactionStates, interactionStates2) => shallowEqual(interactionStates, interactionStates2, ["interactionStates"], { shouldWarnLargeObjects: false }) && shallowEqual(interactionStates.interactionStates, interactionStates2.interactionStates));
 let result = require("noop").fileFinishedImporting("modules/messages/native/MessagesRenderer.tsx");
 
 export default memoResult;

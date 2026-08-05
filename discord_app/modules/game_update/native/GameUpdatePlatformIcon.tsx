@@ -1,3 +1,4 @@
+import { PlatformType } from "../../../../discord_common/js/shared/shared-constants/PlatformType.tsx";
 // discord_app/modules/game_update/native/GameUpdatePlatformIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -13,7 +14,7 @@ export const GameUpdatePlatformIcon = function GameUpdatePlatformIcon(color) {
     size = "xs";
   }
   color = color.color;
-  if (require("../../../../discord_common/js/shared/shared-constants/PlatformType.tsx") /* PlatformType */.PlatformType.DESKTOP === platform) {
+  if (PlatformType /* PlatformType */.PlatformType.DESKTOP === platform) {
     let obj = { size: null, color: null };
     obj[0] = size;
     obj[1] = color;

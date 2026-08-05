@@ -1,3 +1,7 @@
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { useTheme } from "../../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/premium/native/Header.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -16,12 +20,12 @@ export default function Header(style) {
   let obj = { style: items, children: null };
   items = [tmp.container, style.style];
   obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", source: null };
-  const tmp4 = require("../../../../hooks/useTheme.tsx")();
+  const tmp4 = useTheme();
   const tmp5 = closure_5;
   const tmp6 = View;
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.lpNrPu);
-  const tmp8 = require("../../../../components_native/common/FastImage.tsx");
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.lpNrPu);
+  const tmp8 = preload;
   if (obj3.isThemeDark(tmp4)) {
     let tmp2Result = tmp2(7671);
   } else {
@@ -31,8 +35,8 @@ export default function Header(style) {
   const items1 = [closure_4(tmp8, obj), ];
   obj = { style: tmp.headerText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp9(1236).intl;
-  obj[3] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.SD5MJW);
-  items1[1] = closure_4(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  obj[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.SD5MJW);
+  items1[1] = closure_4(Text /* Text */.Text, obj);
   obj[1] = items1;
   return tmp5(tmp6, obj);
 };

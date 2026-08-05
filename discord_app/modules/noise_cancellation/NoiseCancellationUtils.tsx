@@ -1,3 +1,5 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { set } from "getEffectiveNoiseCancellation.tsx";
 // discord_app/modules/noise_cancellation/NoiseCancellationUtils.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 
@@ -10,11 +12,11 @@ export const getNoiseCancellationDeferredToSystem = function getNoiseCancellatio
     obj = _detectH265HardwareDecode;
   }
   const systemMicrophoneMode = obj.getSystemMicrophoneMode();
-  return !require("getEffectiveNoiseCancellation.tsx")(true, systemMicrophoneMode);
+  return !set(true, systemMicrophoneMode);
 };
 export const useNoiseCancellationDeferredToSystem = function useNoiseCancellationDeferredToSystem() {
   const items = [_detectH265HardwareDecode];
-  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+  return initialize /* initialize */.useStateFromStores(items, () => {
     systemMicrophoneMode = systemMicrophoneMode.getSystemMicrophoneMode();
     return !callback(table[1])(true, systemMicrophoneMode);
   });

@@ -1,3 +1,5 @@
+import { registerAsset } from "../../../../../_runtime/12042_registerAsset.js";
+import { BaseChannelSubtitle } from "../../../guild_sidebar/native/BaseChannelItem.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsRow.tsx
 import noop from "noop";
 import { Routes } from "ME";
@@ -53,7 +55,7 @@ export default function GuildRoleSubscriptionsRow(selected) {
   obj[1] = DEFAULT;
   obj[7] = jsx(tmp6(11665).BaseChannelName, { name: null, mode: null });
   obj = { disableColor: true, mode: DEFAULT, source: null };
-  obj[2] = require("../../../../../_runtime/12042_registerAsset.js");
+  obj[2] = registerAsset;
   obj[8] = jsx(tmp6(11665).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: null });
-  return jsx(require("../../../guild_sidebar/native/BaseChannelItem.tsx"), { disableColor: true, mode: DEFAULT, source: null });
+  return jsx(BaseChannelSubtitle, { disableColor: true, mode: DEFAULT, source: null });
 };

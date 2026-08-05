@@ -1,3 +1,5 @@
+import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
+import { Layer } from "../../../../design/components/Layers/native/LayerScope.native.tsx";
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemCoachmark.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -171,7 +173,7 @@ export default function UserSettingsDesignSystemCoachmark() {
   obj = { children: null };
   obj = { children: null };
   obj[0] = callback(Content, {});
-  obj[0] = callback(require("../../../../design/components/Layers/native/LayerScope.native.tsx") /* Layer */.LayerScope, obj);
+  obj[0] = callback(Layer /* Layer */.LayerScope, obj);
   obj[2] = callback(closure_6, obj);
-  return callback(require("../../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return callback(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 };

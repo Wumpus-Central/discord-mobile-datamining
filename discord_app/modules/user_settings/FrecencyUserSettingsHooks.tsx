@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/user_settings/FrecencyUserSettingsHooks.tsx
 import noop from "noop";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -11,5 +12,5 @@ export const useFrecencySettings = function useFrecencySettings() {
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
   const items = [handleConnectionClosedOrResumed];
-  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => obj.frecencyWithoutFetchingLatest);
+  return initialize /* initialize */.useStateFromStores(items, () => obj.frecencyWithoutFetchingLatest);
 };

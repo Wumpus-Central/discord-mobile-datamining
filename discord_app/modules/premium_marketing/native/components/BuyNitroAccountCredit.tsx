@@ -1,3 +1,6 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { areSetsEqual } from "../../../../../discord_common/js/shared/utils/SetUtils.tsx";
+import { AccountCreditTier } from "../../../premium/native/PremiumAccountCredit.tsx";
 // discord_app/modules/premium_marketing/native/components/BuyNitroAccountCredit.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import reset from "reset";
@@ -13,7 +16,7 @@ obj = { borderRadius: require("Themes").modules.mobile.TABLE_ROW_BORDER_RADIUS }
 obj[0] = obj;
 let closure_8 = createCacheKey.createStyles(obj);
 const memoResult = require("noop").memo(function BuyNitroAccountCredit() {
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [addEntitlement];
   const stateFromStores = obj.useStateFromStores(items, () => {
     forApplication = forApplication.getForApplication(closure_6);
@@ -22,13 +25,13 @@ const memoResult = require("noop").memo(function BuyNitroAccountCredit() {
       forApplication = new Set();
     }
     return forApplication;
-  }, [], require("../../../../../discord_common/js/shared/utils/SetUtils.tsx") /* areSetsEqual */.areSetsEqual);
+  }, [], areSetsEqual /* areSetsEqual */.areSetsEqual);
   const tmp = callback();
   const items1 = [reset];
-  const stateFromStores1 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
-  const obj2 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
+  const obj2 = initialize /* initialize */;
   const items2 = [mergeGuildAvatar];
-  const stateFromStores2 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items2, () => {
+  const stateFromStores2 = initialize /* initialize */.useStateFromStores(items2, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
     if (currentUser != null) {
@@ -40,7 +43,7 @@ const memoResult = require("noop").memo(function BuyNitroAccountCredit() {
     return flag;
   });
   obj = { creditListContainerStyle: tmp.creditList, currentSubscription: stateFromStores1, entitlements: stateFromStores, hasPremiumGroup: stateFromStores2 };
-  return jsx(require("../../../premium/native/PremiumAccountCredit.tsx"), { creditListContainerStyle: tmp.creditList, currentSubscription: stateFromStores1, entitlements: stateFromStores, hasPremiumGroup: stateFromStores2 });
+  return jsx(AccountCreditTier, { creditListContainerStyle: tmp.creditList, currentSubscription: stateFromStores1, entitlements: stateFromStores, hasPremiumGroup: stateFromStores2 });
 });
 const result = require("reset").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroAccountCredit.tsx");
 

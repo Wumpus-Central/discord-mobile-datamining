@@ -1,3 +1,5 @@
+import { inject } from "../../../../discord_common/js/packages/media-engine/native/inject.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/go_live/native/VoiceEngineStreamingManager.tsx
 import closure_3 from "ME";
 import { Linking } from "isStreamKey";
@@ -168,7 +170,7 @@ class VoiceEngineStreamingManager extends tmp6 {
 }
 const prototype = VoiceEngineStreamingManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const voiceEngine = require("../../../../discord_common/js/packages/media-engine/native/inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   let result = voiceEngine.setBroadcastRequestCallback(() => {
     logger.log("Broadcast Requested");
     callback2(38)(null != voiceEngine, "Voice Engine should be initialized in callback");
@@ -228,12 +230,12 @@ prototype["_initialize"] = function _initialize() {
     obj[0] = intl.string(callback(1236).t.iYQlwv);
     const result = obj.presentLocalNotification(obj);
   });
-  let obj = require("../../../../discord_common/js/packages/media-engine/native/inject.tsx") /* inject */;
+  let obj = inject /* inject */;
   // GetOwnPrivateBySym (0x65)
-  const subscription = require("../../../Dispatcher.tsx").subscribe("VOICE_CHANNEL_SELECT", importDefault);
+  const subscription = dispatcher.subscribe("VOICE_CHANNEL_SELECT", importDefault);
 };
 prototype["_terminate"] = function _terminate() {
-  const voiceEngine = require("../../../../discord_common/js/packages/media-engine/native/inject.tsx") /* inject */.getVoiceEngine();
+  const voiceEngine = inject /* inject */.getVoiceEngine();
   if (null != voiceEngine) {
     const result = voiceEngine.setBroadcastRequestCallback(closure_10);
     const result1 = voiceEngine.setBroadcastFinishedCallback(closure_10);
@@ -242,9 +244,9 @@ prototype["_terminate"] = function _terminate() {
   }
   timeout.stop();
   timeout1.stop();
-  const obj = require("../../../../discord_common/js/packages/media-engine/native/inject.tsx") /* inject */;
+  const obj = inject /* inject */;
   // GetOwnPrivateBySym (0x65)
-  require("../../../Dispatcher.tsx").unsubscribe("VOICE_CHANNEL_SELECT", this);
+  dispatcher.unsubscribe("VOICE_CHANNEL_SELECT", this);
 };
 prototype["getApplicationNames"] = function getApplicationNames() {
   return closure_16;

@@ -1,3 +1,4 @@
+import { isFeatureTeenByDefault } from "RegionalFeatureConfigModels.tsx";
 // discord_app/modules/regional_feature_config/RegionalFeatureConfigStore.tsx
 import DEFAULT_COUNTRY_CODE_NAME from "DEFAULT_COUNTRY_CODE_NAME";
 import { Store } from "initialize";
@@ -79,7 +80,7 @@ const regionalFeatureConfigStore = new RegionalFeatureConfigStore(require("dispa
     }
     let fromConnectionOpenResult = null;
     if (null != countryCode.regionalFeatureConfig) {
-      const RegionalFeatureConfig = require("RegionalFeatureConfigModels.tsx") /* isFeatureTeenByDefault */.RegionalFeatureConfig;
+      const RegionalFeatureConfig = isFeatureTeenByDefault /* isFeatureTeenByDefault */.RegionalFeatureConfig;
       fromConnectionOpenResult = RegionalFeatureConfig.fromConnectionOpen(countryCode.regionalFeatureConfig);
     }
     let c4 = fromConnectionOpenResult;

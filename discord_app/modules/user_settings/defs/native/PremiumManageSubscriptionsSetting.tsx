@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
+import { PremiumPlanSelectSettingScreen } from "../../premium/native/PremiumManagePlanScreen.tsx";
 // discord_app/modules/user_settings/defs/native/PremiumManageSubscriptionsSetting.tsx
 import noop from "noop";
 import createToggle from "createToggle";
@@ -5,8 +8,8 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["z5YcJ+"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["z5YcJ+"]);
   },
   parent: null,
   IconComponent: require("SubscriptionIcon").SubscriptionIcon,
@@ -22,8 +25,8 @@ createToggle = {
     }, []);
   },
   usePredicate: function useShowManageSubscriptionsSetting() {
-    let hasPremiumSubscriptionToDisplay = require("../../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.useHasPremiumSubscriptionToDisplay();
-    const obj = require("../../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */;
+    let hasPremiumSubscriptionToDisplay = getPremiumPlanItem /* getPremiumPlanItem */.useHasPremiumSubscriptionToDisplay();
+    const obj = getPremiumPlanItem /* getPremiumPlanItem */;
     if (hasPremiumSubscriptionToDisplay) {
       hasPremiumSubscriptionToDisplay = obj2.useMobileNitroManageSubscriptionsSettingsExperiment({ location: "useShowManageSubscriptionsSetting" });
     }
@@ -34,7 +37,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.PREMIUM_MANAGE_PLAN,
   getComponent() {
-    return require("../../premium/native/PremiumManagePlanScreen.tsx") /* PremiumPlanSelectSettingScreen */.default;
+    return PremiumPlanSelectSettingScreen /* PremiumPlanSelectSettingScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

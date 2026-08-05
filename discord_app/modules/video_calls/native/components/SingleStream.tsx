@@ -1,3 +1,4 @@
+import { StreamTextOverlay } from "StreamTile.tsx";
 // discord_app/modules/video_calls/native/components/SingleStream.tsx
 import "noop";
 import VoiceChatDrawerState from "VoiceChatDrawerState";
@@ -22,5 +23,5 @@ export default function SingleStream(channel) {
   };
   obj[4] = channel.participant;
   obj[5] = { flex: 1 };
-  return jsx(require("StreamTile.tsx"), { gestureEnabled: true, resizeMode: null, onSingleTap: null, onDoubleTap: null, participant: null, style: null });
+  return jsx(StreamTextOverlay, { gestureEnabled: true, resizeMode: null, onSingleTap: null, onDoubleTap: null, participant: null, style: null });
 };

@@ -1,3 +1,4 @@
+import { Button } from "../../../../design/void/native.tsx";
 // discord_app/modules/search/native/components/HighlightText.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -15,5 +16,5 @@ const result = require("jsxProd").fileFinishedImporting("modules/search/native/c
 
 export default function HighlightText(children) {
   const tmp = createCacheKey();
-  return jsx(require("../../../../design/void/native.tsx") /* Button */.LegacyText, { style: createCacheKey().text, children: children.children });
+  return jsx(Button /* Button */.LegacyText, { style: createCacheKey().text, children: children.children });
 };

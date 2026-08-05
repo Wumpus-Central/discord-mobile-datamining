@@ -1,3 +1,7 @@
+import { noop } from "../../../../discord_common/js/packages/flash-list/index.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/quests/native/QuestHomeOrbShopCarousel.tsx
 import _slicedToArray from "_slicedToArray";
 import Layer from "Layer";
@@ -19,12 +23,12 @@ function ItemSeparator() {
 }
 function QuestHomeOrbShopCarouselHeading(orbAmount) {
   let obj = { style: null, children: null };
-  obj = { paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
+  obj = { paddingHorizontal: Themes.space.PX_16, marginBottom: Themes.space.PX_16 };
   obj[0] = obj;
   obj = { variant: "text-md/semibold", children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.CXlsRP, { orbAmount: orbAmount.orbRewardAmount });
-  obj[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Heading, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.format(getSystemLocale /* getSystemLocale */.t.CXlsRP, { orbAmount: orbAmount.orbRewardAmount });
+  obj[1] = callback(Text /* Text */.Heading, obj);
   return callback(View, obj);
 }
 function QuestHomeOrbShopCarouselPlaceholder() {
@@ -35,8 +39,8 @@ function QuestHomeOrbShopCarouselPlaceholder() {
   }, []);
   const callback1 = React.useCallback((arg0) => "placeholder-" + arg0, []);
   let obj = { horizontal: true, accessibilityRole: "list", accessibilityLabel: null, accessibilityState: null, data: null, keyExtractor: null, renderItem: null, decelerationRate: "fast", snapToInterval: null, showsHorizontalScrollIndicator: false, ListHeaderComponent: null, ListFooterComponent: null, ItemSeparatorComponent: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.hVV8Wi);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.hVV8Wi);
   obj[3] = { busy: true };
   obj[4] = closure_15;
   obj[5] = callback1;
@@ -45,7 +49,7 @@ function QuestHomeOrbShopCarouselPlaceholder() {
   obj[10] = ListEdgeSpacer;
   obj[11] = ListEdgeSpacer;
   obj[12] = ItemSeparator;
-  return callback(require("../../../../discord_common/js/packages/flash-list/index.js") /* noop */.FlashList, obj);
+  return callback(noop /* noop */.FlashList, obj);
 }
 ({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
 const PX_16 = require("Themes").space.PX_16;

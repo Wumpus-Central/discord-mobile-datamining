@@ -1,3 +1,7 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { handleSaveTheme } from "../../appearance/native/UserSettingsAppearanceThemeUtils.tsx";
 // discord_app/modules/user_settings/defs/native/SameAsDeviceThemeSetting.tsx
 import handleThemeChange from "handleThemeChange";
 import createToggle from "createToggle";
@@ -5,19 +9,19 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.c445ix);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.c445ix);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   usePredicate() {
-    return require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("SameAsDeviceThemeSetting");
+    return useIsMobileVisualRefreshExperimentEnabled("SameAsDeviceThemeSetting");
   },
   useValue: function useSameAsDeviceThemeValue() {
     const items = [handleThemeChange];
-    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
+    return initialize /* initialize */.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
   onValueChange: function onSameAsDeviceThemeValueChange(arg0) {
-    const obj = require("../../appearance/native/UserSettingsAppearanceThemeUtils.tsx") /* handleSaveTheme */;
+    const obj = handleSaveTheme /* handleSaveTheme */;
     if (arg0) {
       const result = obj.enableSameAsDeviceTheme();
     } else {
@@ -25,8 +29,8 @@ createToggle = {
     }
   },
   useDescription() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["+tBsvs"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["+tBsvs"]);
   }
 };
 createToggle = createToggle.createToggle(createToggle);

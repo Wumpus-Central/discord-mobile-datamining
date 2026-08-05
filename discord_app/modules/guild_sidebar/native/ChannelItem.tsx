@@ -1,3 +1,8 @@
+import { registerAsset } from "../../../../_runtime/15138_registerAsset.js";
+import { BookCheckIcon } from "../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { getChannelIcon } from "../../../utils/native/ChannelUtils.tsx";
+import { BaseChannelSubtitle } from "BaseChannelItem.tsx";
 // discord_app/modules/guild_sidebar/native/ChannelItem.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { View } from "BookCheckIcon";
@@ -20,24 +25,24 @@ function getChannelMode(selected) {
   let unread;
   ({ unread, channel } = selected);
   if (selected.selected) {
-    const ChannelModes = require("BaseChannelItem.tsx") /* BaseChannelSubtitle */.ChannelModes;
+    const ChannelModes = BaseChannelSubtitle /* BaseChannelSubtitle */.ChannelModes;
     if (!isGuildVocalResult) {
       const SELECTED = ChannelModes.SELECTED;
     }
     isGuildVocalResult = channel.isGuildVocal();
   } else {
     if (tmp2) {
-      let DEFAULT = require("BaseChannelItem.tsx") /* BaseChannelSubtitle */.ChannelModes.LOCKED;
+      let DEFAULT = BaseChannelSubtitle /* BaseChannelSubtitle */.ChannelModes.LOCKED;
     } else if (tmp) {
-      DEFAULT = require("BaseChannelItem.tsx") /* BaseChannelSubtitle */.ChannelModes.MUTED;
+      DEFAULT = BaseChannelSubtitle /* BaseChannelSubtitle */.ChannelModes.MUTED;
     } else if (unread) {
       if (selected.resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES) {
-        let UNREAD_LESS_IMPORTANT = require("BaseChannelItem.tsx") /* BaseChannelSubtitle */.ChannelModes.UNREAD_IMPORTANT;
+        let UNREAD_LESS_IMPORTANT = BaseChannelSubtitle /* BaseChannelSubtitle */.ChannelModes.UNREAD_IMPORTANT;
       } else {
-        UNREAD_LESS_IMPORTANT = require("BaseChannelItem.tsx") /* BaseChannelSubtitle */.ChannelModes.UNREAD_LESS_IMPORTANT;
+        UNREAD_LESS_IMPORTANT = BaseChannelSubtitle /* BaseChannelSubtitle */.ChannelModes.UNREAD_LESS_IMPORTANT;
       }
     } else {
-      DEFAULT = require("BaseChannelItem.tsx") /* BaseChannelSubtitle */.ChannelModes.DEFAULT;
+      DEFAULT = BaseChannelSubtitle /* BaseChannelSubtitle */.ChannelModes.DEFAULT;
     }
     return DEFAULT;
   }
@@ -59,7 +64,7 @@ function ChannelIcon(arg0) {
     return callback2(DMChannelIcon, obj);
   } else {
     if (channel.type === tmp4.GROUP_DM) {
-      obj = require("../../../utils/AvatarUtils.tsx");
+      obj = getAvatarURL;
       obj = { id: null, icon: null, applicationId: null, size: 20 };
       ({ id: obj2[0], icon: obj2[1] } = channel);
       obj[2] = channel.getApplicationId();
@@ -73,16 +78,16 @@ function ChannelIcon(arg0) {
       tmp5 = importDefault;
     }
     if (tmp2) {
-      let tmp12 = require("../../../../_runtime/15138_registerAsset.js");
-      let BookCheckIcon = require("../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx") /* BookCheckIcon */.BookCheckIcon;
+      let tmp12 = registerAsset;
+      let BookCheckIcon = BookCheckIcon /* BookCheckIcon */.BookCheckIcon;
       let tmp9 = require;
     } else {
       tmp9 = require;
-      let obj2 = require("../../../utils/native/ChannelUtils.tsx") /* getChannelIcon */;
+      let obj2 = getChannelIcon /* getChannelIcon */;
       obj2 = { isRulesChannel: false, locked: null };
       obj2[1] = locked;
       const channelIcon = obj2.getChannelIcon(channel, obj2);
-      let obj4 = require("../../../utils/native/ChannelUtils.tsx") /* getChannelIcon */;
+      let obj4 = getChannelIcon /* getChannelIcon */;
       const obj3 = { isRulesChannel: false, locked: null };
       obj3[1] = locked;
       BookCheckIcon = obj4.getChannelIconComponent(channel, obj3);

@@ -1,9 +1,10 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/forums/ForumPlatformUtils.native.tsx
 const result = require("set").fileFinishedImporting("modules/forums/ForumPlatformUtils.native.tsx");
 
 export default {
   getForumChannelPermissionText() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.LG9VAi);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.LG9VAi);
   }
 };

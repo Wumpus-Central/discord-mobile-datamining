@@ -1,3 +1,5 @@
+import { _launchFrameOnNative } from "../../frames/FramesActionCreators.native.tsx";
+import { canLaunchFrame } from "../../frames/utils/canLaunchFrame.tsx";
 // discord_app/modules/activities/utils/tryLaunchAsFrame.tsx
 import addApplication from "addApplication";
 
@@ -9,16 +11,16 @@ export const tryLaunchAsFrame = function tryLaunchAsFrame(applicationId) {
   application = application.getApplication(applicationId);
   let tmp2 = null == application;
   if (!tmp2) {
-    let obj = require("../../frames/utils/canLaunchFrame.tsx") /* canLaunchFrame */;
+    let obj = canLaunchFrame /* canLaunchFrame */;
     tmp2 = !obj.canLaunchFrame(application);
   }
   let flag = !tmp2;
   if (!tmp2) {
     obj = { applicationId: null };
     obj[0] = applicationId;
-    require("../../frames/FramesActionCreators.native.tsx").launchFrame(obj);
+    _launchFrameOnNative.launchFrame(obj);
     flag = true;
-    const obj2 = require("../../frames/FramesActionCreators.native.tsx");
+    const obj2 = _launchFrameOnNative;
   }
   return flag;
 };

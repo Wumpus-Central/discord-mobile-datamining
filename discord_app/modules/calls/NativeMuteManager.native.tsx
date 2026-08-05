@@ -1,3 +1,4 @@
+import { trackDeviceChanged } from "../../actions/AudioActionCreators.tsx";
 // discord_app/modules/calls/NativeMuteManager.native.tsx
 import importDefaultResult from "handleAudioRouteChanged";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -44,8 +45,8 @@ prototype["nativeMuteChanged"] = function nativeMuteChanged() {
     } else if (!self.ignoreForAudioRouteChange) {
       self.needToUnmuteNative = true;
       obj2.log("Native mute changed > toggling mute");
-      require("../../actions/AudioActionCreators.tsx").toggleSelfMute({ playSoundEffect: false });
-      const obj = require("../../actions/AudioActionCreators.tsx");
+      trackDeviceChanged.toggleSelfMute({ playSoundEffect: false });
+      const obj = trackDeviceChanged;
     }
   }
 };

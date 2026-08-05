@@ -1,3 +1,5 @@
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import { resolveNsfwTogglesWithDefaults } from "../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx";
 // discord_app/modules/application_commands/CommandPermissionContext.tsx
 import noop from "noop";
 import initialize from "initialize";
@@ -68,7 +70,7 @@ export const buildPermissionContext = function buildPermissionContext(channel, i
     }
   }
   if (null == obj) {
-    let viewNsfwCommandsOrDefault = require("../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx") /* resolveNsfwTogglesWithDefaults */.getViewNsfwCommandsOrDefault();
+    let viewNsfwCommandsOrDefault = resolveNsfwTogglesWithDefaults /* resolveNsfwTogglesWithDefaults */.getViewNsfwCommandsOrDefault();
     id = id.getId();
     currentUser = currentUser.getCurrentUser();
     let flag;
@@ -92,7 +94,7 @@ export const buildPermissionContext = function buildPermissionContext(channel, i
       items = [];
     }
     let isThreadResult = channel instanceof tmp;
-    const obj2 = require("../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx") /* resolveNsfwTogglesWithDefaults */;
+    const obj2 = resolveNsfwTogglesWithDefaults /* resolveNsfwTogglesWithDefaults */;
     if (isThreadResult) {
       isThreadResult = channel.isThread();
     }
@@ -220,17 +222,17 @@ export const computeCommandContextType = function computeCommandContextType(chan
         type = channel.type;
       }
       if (type !== constants.DM) {
-        const PRIVATE_CHANNEL = require("../../flow/Server.tsx") /* PermissionOverwriteType */.InteractionContextType.PRIVATE_CHANNEL;
+        const PRIVATE_CHANNEL = PermissionOverwriteType /* PermissionOverwriteType */.InteractionContextType.PRIVATE_CHANNEL;
       } else {
         let recipientId;
         if (channel != null) {
           recipientId = channel.getRecipientId();
         }
       }
-      const BOT_DM = require("../../flow/Server.tsx") /* PermissionOverwriteType */.InteractionContextType.BOT_DM;
+      const BOT_DM = PermissionOverwriteType /* PermissionOverwriteType */.InteractionContextType.BOT_DM;
     }
   }
-  return require("../../flow/Server.tsx") /* PermissionOverwriteType */.InteractionContextType.GUILD;
+  return PermissionOverwriteType /* PermissionOverwriteType */.InteractionContextType.GUILD;
 };
 export const getContextGuildId = function getContextGuildId(context) {
   return context instanceof ChannelRecordBase ? context.guild_id : context.id;

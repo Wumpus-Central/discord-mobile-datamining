@@ -1,3 +1,4 @@
+import { maybeFetchTopEmojisByGuild } from "TopEmojisUtils.tsx";
 // discord_app/modules/emojis/top_emojis/TopEmojisDataManager.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import { EmojiInteractionPoint } from "set";
@@ -15,8 +16,8 @@ TopEmojisDataManager.prototype["handleInteraction"] = function handleInteraction
   const items = [EmojiInteractionPoint.EmojiButtonMouseEntered];
   if (items.includes(interaction.interaction)) {
     guildId = guildId.getGuildId();
-    const result = require("TopEmojisUtils.tsx") /* maybeFetchTopEmojisByGuild */.maybeFetchTopEmojisByGuild(guildId);
-    const obj = require("TopEmojisUtils.tsx") /* maybeFetchTopEmojisByGuild */;
+    const result = maybeFetchTopEmojisByGuild /* maybeFetchTopEmojisByGuild */.maybeFetchTopEmojisByGuild(guildId);
+    const obj = maybeFetchTopEmojisByGuild /* maybeFetchTopEmojisByGuild */;
   }
 };
 const topEmojisDataManager = new TopEmojisDataManager();

@@ -1,3 +1,4 @@
+import { getComboShakeIntensity } from "PoggermodeUtils.tsx";
 // discord_app/modules/poggermode/PoggermodeStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -108,8 +109,8 @@ prototype["getComboScore"] = function getComboScore(arg0, arg1) {
   const value = secondaryIndexMap.get("" + arg0 + "-" + arg1);
   let num = 0;
   if (null != value) {
-    num = require("PoggermodeUtils.tsx") /* getComboShakeIntensity */.getComboScore(value);
-    const obj = require("PoggermodeUtils.tsx") /* getComboShakeIntensity */;
+    num = getComboShakeIntensity /* getComboShakeIntensity */.getComboScore(value);
+    const obj = getComboShakeIntensity /* getComboShakeIntensity */;
   }
   return num;
 };
@@ -155,8 +156,8 @@ prototype["getUserComboShakeIntensity"] = function getUserComboShakeIntensity(id
   const userCombo = this.getUserCombo(id, throwTypeErrorResult);
   let num = 0;
   if (null != userCombo) {
-    num = require("PoggermodeUtils.tsx") /* getComboShakeIntensity */.getComboShakeIntensity(userCombo, LEVEL_4) * arg2;
-    const obj = require("PoggermodeUtils.tsx") /* getComboShakeIntensity */;
+    num = getComboShakeIntensity /* getComboShakeIntensity */.getComboShakeIntensity(userCombo, LEVEL_4) * arg2;
+    const obj = getComboShakeIntensity /* getComboShakeIntensity */;
   }
   return num;
 };

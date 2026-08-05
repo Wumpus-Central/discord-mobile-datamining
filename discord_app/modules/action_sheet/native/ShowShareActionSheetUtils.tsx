@@ -1,3 +1,7 @@
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { isDiscordProxiedAssetUrl } from "../../../utils/URLUtils.tsx";
+import { apexExperiment } from "../../media_viewer/native/MobileMediaViewerShareExperiment.tsx";
+import { decideFileExtension } from "../../media/FileExtensionUtils.tsx";
 // discord_app/modules/action_sheet/native/ShowShareActionSheetUtils.tsx
 import { AnalyticEvents } from "ME";
 import { SHARE_SHEET_PRESENT_DELAY_MS as closure_4 } from "SHARE_PREPARING_MODAL_KEY";
@@ -6,7 +10,7 @@ const result = require("expandEventProperties").fileFinishedImporting("modules/a
 
 export const trackAppClickInNativeShareSheet = function trackAppClickInNativeShareSheet(app, _location) {
   let str = app;
-  let obj = require("../../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   if (app == null) {
     str = "";
   }
@@ -16,7 +20,7 @@ export const trackAppClickInNativeShareSheet = function trackAppClickInNativeSha
 export const getMediaShareParams = function getMediaShareParams(source) {
   let contentType;
   let videoURI;
-  let obj = require("../../media_viewer/native/MobileMediaViewerShareExperiment.tsx") /* apexExperiment */;
+  let obj = apexExperiment /* apexExperiment */;
   if (obj.getMobileMediaViewerShareExperimentEnabled("shareMediaSource")) {
     if (true !== source.disableDownload) {
       if (null != source.shareURI) {
@@ -62,7 +66,7 @@ export const getMediaShareParams = function getMediaShareParams(source) {
           obj4[0] = source.shareURI;
           return obj4;
         }
-        obj11 = require("../../../utils/URLUtils.tsx");
+        obj11 = isDiscordProxiedAssetUrl;
       }
     }
   }
@@ -76,5 +80,5 @@ export const getMediaShareParams = function getMediaShareParams(source) {
   return { mediaFallbackUrl };
 };
 export const resolveShareFileExtension = function resolveShareFileExtension(closure_0, contentType) {
-  return require("../../media/FileExtensionUtils.tsx") /* decideFileExtension */.decideFileExtension(closure_0, contentType, true);
+  return decideFileExtension /* decideFileExtension */.decideFileExtension(closure_0, contentType, true);
 };

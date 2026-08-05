@@ -1,3 +1,4 @@
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/emoji_picker/hooks/useTopAndNewlyAddedEmojis.tsx
 import getEmojiToGroupId from "getEmojiToGroupId";
 import { EmojiIntention } from "set";
@@ -11,7 +12,7 @@ export default function useTopAndNewlyAddedEmojis(arg0, arg1) {
   const dependencyMap = arg1;
   const items = [getEmojiToGroupId];
   const items1 = [arg0, arg1];
-  return _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresObject(items, () => {
+  return _defaultAreStatesEqual.useStateFromStoresObject(items, () => {
     let obj = outer1_2;
     if (outer1_2 !== undefined) {
       if (tmp2 !== outer1_3.REACTION) {

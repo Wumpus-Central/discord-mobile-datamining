@@ -1,3 +1,6 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getEmptyActivityFormatter } from "../FamilyCenterUtils.tsx";
+import { useActionsForDisplayType } from "../hooks/useFamilyCenterActivities.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterActivityTotal.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -17,16 +20,16 @@ const result = require("jsxProd").fileFinishedImporting("modules/parent_tools/na
 
 export default function FamilyCenterActivityTotal(displayType) {
   displayType = displayType.displayType;
-  let obj = require("../hooks/useFamilyCenterActivities.tsx") /* useActionsForDisplayType */;
+  let obj = useActionsForDisplayType /* useActionsForDisplayType */;
   const actionTotalsForDisplayType = obj.useActionTotalsForDisplayType(displayType);
   const tmp = createCacheKey();
-  let num = require("../hooks/useFamilyCenterActivities.tsx") /* useActionsForDisplayType */.useFormattedTotalForDisplayType(displayType);
+  let num = useActionsForDisplayType /* useActionsForDisplayType */.useFormattedTotalForDisplayType(displayType);
   let str = "text-muted";
   if (actionTotalsForDisplayType > 0) {
     str = "text-brand";
   }
-  const obj2 = require("../hooks/useFamilyCenterActivities.tsx") /* useActionsForDisplayType */;
-  const activityTypeTextConfigs = require("../FamilyCenterUtils.tsx") /* getEmptyActivityFormatter */.getActivityTypeTextConfigs();
+  const obj2 = useActionsForDisplayType /* useActionsForDisplayType */;
+  const activityTypeTextConfigs = getEmptyActivityFormatter /* getEmptyActivityFormatter */.getActivityTypeTextConfigs();
   const value = activityTypeTextConfigs.get(displayType);
   let tooltipHeaderResult;
   if (value != null) {
@@ -38,7 +41,7 @@ export default function FamilyCenterActivityTotal(displayType) {
     num = 0;
   }
   obj[2] = num;
-  const items = [closure_3(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), closure_3(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/semibold", children: tooltipHeaderResult })];
+  const items = [closure_3(Text /* Text */.Text, obj), closure_3(Text /* Text */.Text, { variant: "text-sm/semibold", children: tooltipHeaderResult })];
   obj[1] = items;
   return closure_4(View, obj);
 };

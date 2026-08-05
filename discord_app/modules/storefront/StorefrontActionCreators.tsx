@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/storefront/StorefrontActionCreators.tsx
 import parseSkuIds from "parseSkuIds";
 import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd";
@@ -520,7 +521,7 @@ export const fetchStorefrontPricesForSkuIds = function fetchStorefrontPricesForS
   return applyArgumentsResult;
 };
 export const setStorefrontPromotionIdOverride = function setStorefrontPromotionIdOverride(promotionIdOverride) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "STOREFRONT_PROMOTION_ID_OVERRIDE_SET", promotionIdOverride };
   obj.dispatch(obj);
 };

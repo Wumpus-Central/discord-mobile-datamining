@@ -1,3 +1,8 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { b64ToProto } from "UserSettingsUtils.tsx";
 // discord_app/modules/user_settings/FrecencySettingsMigrations.tsx
 import MAX_FAVORITES from "MAX_FAVORITES";
 import { ID_REGEX } from "ME";
@@ -72,7 +77,7 @@ let items = [
         return false;
       } else {
         if (null == favoriteGifs.favoriteGifs) {
-          const FavoriteGIFs = require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx") /* create */.FavoriteGIFs;
+          const FavoriteGIFs = create /* create */.FavoriteGIFs;
           favoriteGifs.favoriteGifs = FavoriteGIFs.create();
         }
         favoriteGifs.favoriteGifs.gifs = {};
@@ -91,7 +96,7 @@ let items = [
   {
     version: 3,
     run(favoriteStickers) {
-      const PersistedStore = require("../../../discord_common/js/packages/flux/index.tsx").PersistedStore;
+      const PersistedStore = initialize.PersistedStore;
       const items = [
         (arg0) => {
           let tmp = arg0;
@@ -126,7 +131,7 @@ let items = [
       } else {
         let flag = false;
         if (state.favorites.length > 0) {
-          const FavoriteStickers = require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx") /* create */.FavoriteStickers;
+          const FavoriteStickers = create /* create */.FavoriteStickers;
           favoriteStickers.favoriteStickers = FavoriteStickers.create();
           let tmpResult = tmp(12);
           favoriteStickers.favoriteStickers.stickerIds = tmpResult.uniq(state.favorites).slice(0, closure_3);
@@ -135,24 +140,24 @@ let items = [
         }
         tmpResult = tmp(12);
         if (tmpResult.size(state.usageHistory) > 0) {
-          const StickerFrecency = require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx") /* create */.StickerFrecency;
+          const StickerFrecency = create /* create */.StickerFrecency;
           favoriteStickers.stickerFrecency = StickerFrecency.create();
-          favoriteStickers.stickerFrecency.stickers = require("UserSettingsUtils.tsx") /* b64ToProto */.serializeUsageHistory(state.usageHistory, 100);
+          favoriteStickers.stickerFrecency.stickers = b64ToProto /* b64ToProto */.serializeUsageHistory(state.usageHistory, 100);
           flag = true;
-          const obj3 = require("UserSettingsUtils.tsx") /* b64ToProto */;
+          const obj3 = b64ToProto /* b64ToProto */;
         }
         return flag;
       }
     },
     cleanup() {
-      const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage = Storage /* Storage */.Storage;
       Storage.remove("StickersPersistedStore");
     }
   },
   {
     version: 4,
     run(favoriteEmojis) {
-      const PersistedStore = require("../../../discord_common/js/packages/flux/index.tsx").PersistedStore;
+      const PersistedStore = initialize.PersistedStore;
       const items = [
         () => {
           const Storage = callback(table[6]).Storage;
@@ -170,7 +175,7 @@ let items = [
         }
         let flag = false;
         if (tmp3) {
-          const FavoriteEmojis = require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx") /* create */.FavoriteEmojis;
+          const FavoriteEmojis = create /* create */.FavoriteEmojis;
           favoriteEmojis.favoriteEmojis = FavoriteEmojis.create();
           let tmpResult = tmp(12);
           favoriteEmojis.favoriteEmojis.emojis = tmpResult.uniq(state.favorites).slice(0, closure_3);
@@ -179,21 +184,21 @@ let items = [
         }
         tmpResult = tmp(12);
         if (tmpResult.size(state.usageHistory) > 0) {
-          const EmojiFrecency = require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx") /* create */.EmojiFrecency;
+          const EmojiFrecency = create /* create */.EmojiFrecency;
           favoriteEmojis.emojiFrecency = EmojiFrecency.create();
-          favoriteEmojis.emojiFrecency.emojis = require("UserSettingsUtils.tsx") /* b64ToProto */.serializeUsageHistory(state.usageHistory, 100);
+          favoriteEmojis.emojiFrecency.emojis = b64ToProto /* b64ToProto */.serializeUsageHistory(state.usageHistory, 100);
           flag = true;
-          const obj3 = require("UserSettingsUtils.tsx") /* b64ToProto */;
+          const obj3 = b64ToProto /* b64ToProto */;
         }
         return flag;
       }
     },
     cleanup() {
-      const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage = Storage /* Storage */.Storage;
       Storage.remove("EmojiStore");
-      const Storage2 = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage2 = Storage /* Storage */.Storage;
       Storage2.remove("EmojiUsageHistory");
-      const Storage3 = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage3 = Storage /* Storage */.Storage;
       Storage3.remove("EmojiDiversitySurrogate");
     }
   },
@@ -212,8 +217,8 @@ let items = [
       if (0 === arr.length) {
         return false;
       } else {
-        const values = require("../../../_runtime/00012_apply.js")(favoriteGifs.favoriteGifs.gifs).values();
-        const obj = require("../../../_runtime/00012_apply.js")(favoriteGifs.favoriteGifs.gifs);
+        const values = apply(favoriteGifs.favoriteGifs.gifs).values();
+        const obj = apply(favoriteGifs.favoriteGifs.gifs);
         const item = values.sortBy("order").forEach((arg0, arg1) => {
           const sum = arr.length + 1 + arg1;
           arg0.order = sum;
@@ -294,25 +299,25 @@ let items = [
   {
     version: 7,
     run(applicationCommandFrecency) {
-      const PersistedStore = require("../../../discord_common/js/packages/flux/index.tsx").PersistedStore;
+      const PersistedStore = initialize.PersistedStore;
       const state = PersistedStore.migrateAndReadStoreState("ApplicationCommandFrecency", []).state;
       if (null == state) {
         return false;
       } else {
         let flag = false;
         if (tmpResult.size(state.usageHistory) > 0) {
-          const ApplicationCommandFrecency = require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx") /* create */.ApplicationCommandFrecency;
+          const ApplicationCommandFrecency = create /* create */.ApplicationCommandFrecency;
           applicationCommandFrecency.applicationCommandFrecency = ApplicationCommandFrecency.create();
-          applicationCommandFrecency.applicationCommandFrecency.applicationCommands = require("UserSettingsUtils.tsx") /* b64ToProto */.serializeUsageHistory(state.usageHistory, 500);
+          applicationCommandFrecency.applicationCommandFrecency.applicationCommands = b64ToProto /* b64ToProto */.serializeUsageHistory(state.usageHistory, 500);
           flag = true;
-          const obj = require("UserSettingsUtils.tsx") /* b64ToProto */;
+          const obj = b64ToProto /* b64ToProto */;
         }
         return flag;
       }
       const tmp = importDefault;
     },
     cleanup() {
-      const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage = Storage /* Storage */.Storage;
       Storage.remove("ApplicationCommandFrecency");
     }
   },
@@ -328,7 +333,7 @@ let items = [
         let tmpResult = tmp(12);
         let flag = false;
         if (tmpResult.size(state.favoriteSounds) > 0) {
-          const FavoriteSoundboardSounds = _require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx").FavoriteSoundboardSounds;
+          const FavoriteSoundboardSounds = _create.FavoriteSoundboardSounds;
           arg0.favoriteSoundboardSounds = FavoriteSoundboardSounds.create();
           tmpResult = tmp(11);
           const keys = tmpResult.keys(state.favoriteSounds);
@@ -347,14 +352,14 @@ let items = [
       }
     },
     cleanup() {
-      const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage = Storage /* Storage */.Storage;
       Storage.remove("SoundboardFavoriteStore");
     }
   },
   {
     version: 9,
     run(guildAndChannelFrecency) {
-      const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage = Storage /* Storage */.Storage;
       const value = Storage.get(selectedChannelGuildFrecency);
       if (null == value) {
         return false;
@@ -370,14 +375,14 @@ let items = [
           }
           continue;
         }
-        const GuildAndChannelFrecency = require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx") /* create */.GuildAndChannelFrecency;
+        const GuildAndChannelFrecency = create /* create */.GuildAndChannelFrecency;
         guildAndChannelFrecency.guildAndChannelFrecency = GuildAndChannelFrecency.create();
-        guildAndChannelFrecency.guildAndChannelFrecency.guildAndChannels = require("UserSettingsUtils.tsx") /* b64ToProto */.serializeUsageHistory(value, 100);
+        guildAndChannelFrecency.guildAndChannelFrecency.guildAndChannels = b64ToProto /* b64ToProto */.serializeUsageHistory(value, 100);
         return true;
       }
     },
     cleanup() {
-      const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage = Storage /* Storage */.Storage;
       Storage.remove(selectedChannelGuildFrecency);
     }
   },
@@ -393,9 +398,9 @@ let items = [
         }
         let flag = false;
         if (obj2.size(emojis) > 0) {
-          const EmojiFrecency = require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx") /* create */.EmojiFrecency;
+          const EmojiFrecency = create /* create */.EmojiFrecency;
           const obj = EmojiFrecency.create();
-          const EmojiFrecency2 = require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx") /* create */.EmojiFrecency;
+          const EmojiFrecency2 = create /* create */.EmojiFrecency;
           EmojiFrecency2.mergePartial(obj, emojiFrecency.emojiFrecency);
           if (null != emojiFrecency.emojiReactionFrecency) {
             const EmojiFrecency3 = tmp3(1341).EmojiFrecency;
@@ -438,7 +443,7 @@ let items = [
                 }
                 let tmp3 = require;
                 let tmp4 = dependencyMap;
-                let isMatch = tmp9.format !== require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx") /* create */.GIFType.IMAGE;
+                let isMatch = tmp9.format !== create /* create */.GIFType.IMAGE;
                 if (isMatch) {
                   let obj = /\.(webp|avif|gif)(\?|$)/i;
                   isMatch = obj.test(tmp9.src);

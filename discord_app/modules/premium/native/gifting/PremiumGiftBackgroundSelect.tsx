@@ -1,3 +1,4 @@
+import { NativeGiftContextProvider } from "../../../payments/native/NativeGiftContext.tsx";
 // discord_app/modules/premium/native/gifting/PremiumGiftBackgroundSelect.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -102,7 +103,7 @@ let closure_10 = { code: "function PremiumGiftBackgroundSelectTsx1(){const{STAND
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundSelect.tsx");
 
 export default function PremiumGiftBackgroundSelect() {
-  let obj = require("../../../payments/native/NativeGiftContext.tsx") /* NativeGiftContextProvider */;
+  let obj = NativeGiftContextProvider /* NativeGiftContextProvider */;
   const nativeGiftContext = obj.useNativeGiftContext();
   obj = { giftStyle: nativeGiftContext.giftStyle, setGiftStyle: nativeGiftContext.setGiftStyle };
   return callback2(GiftBackgroundSelect, obj);

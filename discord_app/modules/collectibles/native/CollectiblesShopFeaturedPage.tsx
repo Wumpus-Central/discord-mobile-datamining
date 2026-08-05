@@ -1,3 +1,7 @@
+import { getNoResultsSource } from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { block } from "ShopBlockItem.tsx";
 // discord_app/modules/collectibles/native/CollectiblesShopFeaturedPage.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -16,15 +20,15 @@ export default function _default(shopBlock) {
       let obj = { block: null, screen: null };
       obj[0] = shopBlock;
       obj[1] = constants.FEATURED_PAGE;
-      let tmp6 = jsx(require("ShopBlockItem.tsx"), { block: null, screen: null });
+      let tmp6 = jsx(block, { block: null, screen: null });
     }
     return tmp6;
   }
   obj = { style: callback().container, children: null };
   obj = { style: { marginTop: 42 }, Illustration: null, body: null };
-  obj[1] = require("../../../design/components/Illustration/native/redesign/generated/NoResults.tsx") /* getNoResultsSource */.NoResults;
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.eAn6z2);
-  obj[1] = jsx(require("../../../design/void/native.tsx") /* Button */.EmptyState, { style: { marginTop: 42 }, Illustration: null, body: null });
+  obj[1] = getNoResultsSource /* getNoResultsSource */.NoResults;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.eAn6z2);
+  obj[1] = jsx(Button /* Button */.EmptyState, { style: { marginTop: 42 }, Illustration: null, body: null });
   tmp6 = <View style={{ marginTop: 42 }} Illustration={null} body={null} />;
 };

@@ -1,3 +1,7 @@
+import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeShareManagerModule.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 // discord_app/stores/native/ShareStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -27,10 +31,10 @@ const shareStore = new ShareStore(require("dispatcher"), {
     return false;
   },
   LOGOUT: function handleLogout() {
-    require("../../../discord_common/js/packages/rtn-codegen/js/NativeShareManagerModule.tsx").setSelectedChannel(null, null);
-    const obj = require("../../../discord_common/js/packages/rtn-codegen/js/NativeShareManagerModule.tsx");
-    const obj2 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeShareManagerModule.tsx");
-    const result = obj2.setAuthenticationToken(null, require("../../utils/AnalyticsUtils.tsx").getSuperPropertiesBase64());
+    enforcing.setSelectedChannel(null, null);
+    const obj = enforcing;
+    const obj2 = enforcing;
+    const result = obj2.setAuthenticationToken(null, expandEventProperties.getSuperPropertiesBase64());
     let c5 = null;
     return false;
   },
@@ -61,26 +65,26 @@ const shareStore = new ShareStore(require("dispatcher"), {
             recipients = [];
           }
           const mapped = recipients.map(getUser.getUser);
-          obj.recipients = mapped.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
+          obj.recipients = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
           json1 = JSON.stringify(obj);
         }
-        require("../../../discord_common/js/packages/rtn-codegen/js/NativeShareManagerModule.tsx").setSelectedChannel(json1, json);
+        enforcing.setSelectedChannel(json1, json);
         c3 = null;
         c4 = null;
-        const obj3 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeShareManagerModule.tsx");
+        const obj3 = enforcing;
       }
     }
     if (null != c5) {
       obj = { client_app_state: null };
       obj[0] = state;
-      const result = require("../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.extendSuperProperties(obj);
-      const obj4 = require("../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */;
-      const obj6 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeShareManagerModule.tsx");
-      const result1 = obj6.setAuthenticationToken(c5, require("../../utils/AnalyticsUtils.tsx").getSuperPropertiesBase64());
+      const result = encodeProperties /* encodeProperties */.extendSuperProperties(obj);
+      const obj4 = encodeProperties /* encodeProperties */;
+      const obj6 = enforcing;
+      const result1 = obj6.setAuthenticationToken(c5, expandEventProperties.getSuperPropertiesBase64());
       if (state === AppStates.INACTIVE) {
         c5 = null;
       }
-      const obj7 = require("../../utils/AnalyticsUtils.tsx");
+      const obj7 = expandEventProperties;
     }
     return false;
   }

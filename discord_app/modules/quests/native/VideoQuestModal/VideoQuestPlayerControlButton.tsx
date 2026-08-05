@@ -1,3 +1,5 @@
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { isBlurDisabled } from "../../../visual_effect_view/native/VisualEffectView.tsx";
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestPlayerControlButton.tsx
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -31,8 +33,8 @@ const memoResult = importAllResult.memo((arg0) => {
   items[2] = style;
   const merged1 = Object.assign(merged);
   obj = { style: tmp2.blur, blurAmount: 0.2, blurStyle: "default", blurTheme: "dark", children };
-  obj.children = jsx(require("../../../visual_effect_view/native/VisualEffectView.tsx"), { style: tmp2.blur, blurAmount: 0.2, blurStyle: "default", blurTheme: "dark", children });
-  return jsx(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, { style: tmp2.blur, blurAmount: 0.2, blurStyle: "default", blurTheme: "dark", children });
+  obj.children = jsx(isBlurDisabled, { style: tmp2.blur, blurAmount: 0.2, blurStyle: "default", blurTheme: "dark", children });
+  return jsx(PressableBase /* PressableBase */.PressableOpacity, { style: tmp2.blur, blurAmount: 0.2, blurStyle: "default", blurTheme: "dark", children });
 });
 const result = require("createCacheKey").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayerControlButton.tsx");
 

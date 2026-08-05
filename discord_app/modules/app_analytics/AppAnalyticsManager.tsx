@@ -1,3 +1,6 @@
+import { getGamePlatform } from "../activities/utils/getGamePlatform.tsx";
+import { _openRobloxURLWithRootPlaceId } from "../roblox_subgame_detection/RobloxSubgameUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "AppAnalyticsUtils.tsx";
 // discord_app/modules/app_analytics/AppAnalyticsManager.tsx
 import initialize from "initialize";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -75,7 +78,7 @@ prototype["_trackStartSpeaking"] = function _trackStartSpeaking() {
   if (this._currentUserSpeaking) {
     const channelId = store.getChannelId();
     const guildId = store.getGuildId();
-    let obj = require("AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */;
+    let obj = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
     obj = { mode: null, priority: null, channel: null, server: null, channel_id: null, guild_id: null, rtc_connection_id: null, media_session_id: null, voice_state_count: null };
     obj[0] = _detectH265HardwareDecode.getMode();
     obj[1] = anyoneHasFlagInContext.isCurrentUserPrioritySpeaking();
@@ -109,8 +112,8 @@ prototype["_trackStartListening"] = function _trackStartListening() {
       obj[7] = store.getMediaSessionId();
       obj[8] = getVoiceStatesForGuild.countVoiceStatesForChannel(self._voiceChannelId);
       const merged = Object.assign(self.getGameMetadata());
-      require("AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */.trackWithMetadata(constants.START_LISTENING, obj);
-      const obj2 = require("AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */;
+      collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.trackWithMetadata(constants.START_LISTENING, obj);
+      const obj2 = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
     }
   }
 };
@@ -122,7 +125,7 @@ prototype["_terminate"] = function _terminate() {
 prototype["getGameMetadata"] = function getGameMetadata() {
   const findActivityResult = filterPlayingActivities.findActivity((type) => type.type === constants.PLAYING);
   currentGameForAnalytics = currentGameForAnalytics.getCurrentGameForAnalytics();
-  const obj = { game_platform: require("../activities/utils/getGamePlatform.tsx")(findActivityResult), game_name: null, game_exe_name: null, game_id: null, game_distributor: null, game_distributor_game_id: null, game_metadata: null };
+  const obj = { game_platform: getGamePlatform(findActivityResult), game_name: null, game_exe_name: null, game_id: null, game_distributor: null, game_distributor_game_id: null, game_metadata: null };
   let name = null;
   if (null != findActivityResult) {
     name = findActivityResult.name;
@@ -150,8 +153,8 @@ prototype["getGameMetadata"] = function getGameMetadata() {
   obj[5] = sku;
   let subgameMetadata = null;
   if (null != currentGameForAnalytics) {
-    subgameMetadata = require("../roblox_subgame_detection/RobloxSubgameUtils.tsx") /* _openRobloxURLWithRootPlaceId */.getSubgameMetadata(currentGameForAnalytics);
-    const obj2 = require("../roblox_subgame_detection/RobloxSubgameUtils.tsx") /* _openRobloxURLWithRootPlaceId */;
+    subgameMetadata = _openRobloxURLWithRootPlaceId /* _openRobloxURLWithRootPlaceId */.getSubgameMetadata(currentGameForAnalytics);
+    const obj2 = _openRobloxURLWithRootPlaceId /* _openRobloxURLWithRootPlaceId */;
   }
   obj[6] = subgameMetadata;
   return obj;

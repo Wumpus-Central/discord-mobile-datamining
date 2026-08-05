@@ -1,3 +1,4 @@
+import { Text } from "../../../components/Text/native/Text.tsx";
 // discord_app/design/void/Form/native/FormSubLabel.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -15,5 +16,5 @@ export default function FormSubLabel(color) {
   if (color === undefined) {
     color = "text-subtle";
   }
-  return jsx(require("../../../components/Text/native/Text.tsx") /* Text */.Text, { color, variant: "text-xs/normal", lineClamp, style, accessible, children });
+  return jsx(Text /* Text */.Text, { color, variant: "text-xs/normal", lineClamp, style, accessible, children });
 };

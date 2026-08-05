@@ -1,3 +1,7 @@
+import { items } from "../../lib/MessageQueue.tsx";
+import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
+import { getAutomodErrorMessageFromErrorResponse } from "AutomodErrorUtils.tsx";
+import { getDecisionOutcomeFromMessage } from "AutomodMessageUtils.tsx";
 // discord_app/modules/guild_automod/GuildAutomodMessageStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import reinjectEphemerals from "reinjectEphemerals";
@@ -10,13 +14,13 @@ let error;
 const require = arg1;
 function handleMessageSendFailedAutomod(messageData) {
   messageData = messageData.messageData;
-  let obj = require("../../lib/MessageQueue.tsx") /* items */;
+  let obj = items /* items */;
   const failedMessageId = obj.getFailedMessageId(messageData);
   obj = { id: failedMessageId, isBlockedEdit: null, messageData: null, errorMessage: null };
-  obj[1] = require("../../lib/MessageQueue.tsx") /* items */.isMessageDataEdit(messageData);
+  obj[1] = items /* items */.isMessageDataEdit(messageData);
   obj[2] = messageData;
-  const obj3 = require("../../lib/MessageQueue.tsx") /* items */;
-  obj[3] = require("AutomodErrorUtils.tsx") /* getAutomodErrorMessageFromErrorResponse */.getAutomodErrorMessage(messageData, messageData.errorResponseBody);
+  const obj3 = items /* items */;
+  obj[3] = getAutomodErrorMessageFromErrorResponse /* getAutomodErrorMessageFromErrorResponse */.getAutomodErrorMessage(messageData, messageData.errorResponseBody);
   closure_8[failedMessageId] = obj;
   closure_9 = closure_9 + 1;
   return true;
@@ -130,10 +134,10 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(require("dispatche
     } else if (message.type !== constants2.AUTO_MODERATION_ACTION) {
       return false;
     } else {
-      const messageRecord = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.createMessageRecord(message);
-      const obj = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
+      const messageRecord = createMinimalMessageRecord /* createMinimalMessageRecord */.createMessageRecord(message);
+      const obj = createMinimalMessageRecord /* createMinimalMessageRecord */;
       const tmp = require;
-      let result = require("AutomodMessageUtils.tsx") /* getDecisionOutcomeFromMessage */.isAutomodMessageRecord(messageRecord);
+      let result = getDecisionOutcomeFromMessage /* getDecisionOutcomeFromMessage */.isAutomodMessageRecord(messageRecord);
       if (result) {
         let flag = tmp(6876).isAutomodNotification(messageRecord);
         if (flag) {

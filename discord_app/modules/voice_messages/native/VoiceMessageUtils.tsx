@@ -1,3 +1,9 @@
+import { byteLength } from "../../../../_runtime/00206_byteLength.js";
+import { BaseConnectionEvent } from "../../../../discord_common/js/packages/media-engine/index.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { HapticFeedbackTypes } from "../../haptics/HapticUtils.native.tsx";
+import { downsampleWaveform } from "../downsampleWaveform.tsx";
 // discord_app/modules/voice_messages/native/VoiceMessageUtils.tsx
 import timestamp from "timestamp";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -133,7 +139,7 @@ function _startAudioRecording() {
 }
 function resetAudioRecording() {
   mediaEngine = mediaEngine.getMediaEngine();
-  mediaEngine.removeListener(require("../../../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.MediaEngineEvent.VoiceActivity, closure_21);
+  mediaEngine.removeListener(BaseConnectionEvent /* BaseConnectionEvent */.MediaEngineEvent.VoiceActivity, closure_21);
   callback3();
 }
 function stopAndGetAudioRecording() {
@@ -147,12 +153,12 @@ function stopAndGetAudioRecording() {
   });
   let arr3 = mapped;
   if (mapped.length > closure_16) {
-    arr3 = require("../downsampleWaveform.tsx")(mapped, tmp3);
+    arr3 = downsampleWaveform(mapped, tmp3);
   }
   const mapped1 = arr3.map((arg0) => Math.min(arg0, closure_13));
   const uint8Array = new Uint8Array(mapped1);
-  let closure_0 = require("../../../../_runtime/00206_byteLength.js").fromByteArray(uint8Array);
-  const obj = require("../../../../_runtime/00206_byteLength.js");
+  let closure_0 = byteLength.fromByteArray(uint8Array);
+  const obj = byteLength;
   return new Promise((arg0) => {
     let closure_0 = arg0;
     const mediaEngine = outer1_4.getMediaEngine();
@@ -347,11 +353,11 @@ let result = require("VoiceMessageRecordingStatus").fileFinishedImporting("modul
 export const generateBase64EncodedWaveform = function generateBase64EncodedWaveform(arg0) {
   let arr = arg0;
   if (arg0.length > closure_16) {
-    arr = require("../downsampleWaveform.tsx")(arg0, tmp);
+    arr = downsampleWaveform(arg0, tmp);
   }
   const mapped = arr.map((arg0) => Math.min(arg0, closure_13));
   const uint8Array = new Uint8Array(mapped);
-  return require("../../../../_runtime/00206_byteLength.js").fromByteArray(uint8Array);
+  return byteLength.fromByteArray(uint8Array);
 };
 export const startAudioRecording = function startAudioRecording(outer1_0) {
   const self = this;
@@ -376,7 +382,7 @@ export const endAudioRecording = function endAudioRecording() {
 export { stopAndCacheAudioRecording };
 export const emitVoiceMessageRecorded = function emitVoiceMessageRecorded(CANCELLED_DURATION, durationSecs, first) {
   if (null != first) {
-    let obj = require("../../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { recording_start_timestamp: null, recording_stop_timestamp: null, duration_secs: null, result: null, initialize_secs: null };
     obj[0] = first;
     const _Date = Date;
@@ -389,8 +395,8 @@ export const emitVoiceMessageRecorded = function emitVoiceMessageRecorded(CANCEL
   }
 };
 export const triggerHaptic = function triggerHaptic() {
-  const obj = require("../../haptics/HapticUtils.native.tsx") /* HapticFeedbackTypes */;
-  const obj2 = require("../../../utils/PlatformUtils.tsx") /* set */;
-  const HapticFeedbackTypes = require("../../haptics/HapticUtils.native.tsx") /* HapticFeedbackTypes */.HapticFeedbackTypes;
-  const result = obj.triggerHapticFeedback(require("../../../utils/PlatformUtils.tsx") /* set */.isAndroid() ? HapticFeedbackTypes.IMPACT_LIGHT : HapticFeedbackTypes.IMPACT_MEDIUM);
+  const obj = HapticFeedbackTypes /* HapticFeedbackTypes */;
+  const obj2 = set /* set */;
+  const HapticFeedbackTypes = HapticFeedbackTypes /* HapticFeedbackTypes */.HapticFeedbackTypes;
+  const result = obj.triggerHapticFeedback(set /* set */.isAndroid() ? HapticFeedbackTypes.IMPACT_LIGHT : HapticFeedbackTypes.IMPACT_MEDIUM);
 };

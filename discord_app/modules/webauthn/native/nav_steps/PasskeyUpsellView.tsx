@@ -1,3 +1,5 @@
+import { registerAsset } from "../../../../../_runtime/13880_registerAsset.js";
+import { combined } from "../../../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/webauthn/native/nav_steps/PasskeyUpsellView.tsx
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
@@ -65,13 +67,13 @@ export default function PasskeyUpsellView() {
     obj[0] = navigation(outer1_2[13]).getHeaderCloseButton(onCancel);
     navigation.setOptions(obj);
   }, items);
-  let obj1 = require("../../../../utils/HelpdeskUtils.tsx");
+  let obj1 = combined;
   const articleURL = obj1.getArticleURL(HelpdeskArticles.SETTING_UP_TWO_FACTOR);
   obj = { bottom: true, style: tmp4.container, children: null };
   obj = { contentContainerStyle: tmp4.scrollViewContainer, children: null };
   obj1 = { style: tmp4.headerContainer, children: null };
   const obj2 = { source: null, style: null };
-  obj2[0] = require("../../../../../_runtime/13880_registerAsset.js");
+  obj2[0] = registerAsset;
   obj2[1] = tmp4.headerImage;
   const items1 = [callback(closure_6, obj2), , ];
   const obj3 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp4.headerText, children: null };

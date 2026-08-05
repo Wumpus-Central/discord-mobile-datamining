@@ -1,3 +1,4 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/voice_panel/native/hooks/useCanConnect.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -12,7 +13,7 @@ export default function useCanConnect(arg0) {
   const _require = arg0;
   const items = [ensureGuildLoaded, getUncachedChannelPermissions, createGuildRecordFromRust, updateVoiceState];
   const items1 = [arg0];
-  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
+  return _initialize.useStateFromStoresObject(items, () => {
     const channel = outer1_2.getChannel(callback);
     let tmp = null != channel;
     if (tmp) {

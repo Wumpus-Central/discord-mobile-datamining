@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../_runtime/16373_registerAsset.js";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 // discord_app/modules/multi_account/native/MultiAccountManagerNative.tsx
 import { SWITCH_ACCOUNTS_MODAL_KEY } from "MAX_ACCOUNTS";
 import ME from "ME";
@@ -83,7 +86,7 @@ class MultiAccountManagerNative extends tmp5 {
 }
 const prototype = MultiAccountManagerNative.prototype;
 prototype["onSwitchStart"] = function onSwitchStart() {
-  const obj = require("../../../actions/ModalActionCreators.tsx");
+  const obj = ModalActionCreators;
   obj.popWithKey(SWITCH_ACCOUNTS_MODAL_KEY);
   tmp3.info("Closing fast-connect socket because of account switch logout");
   let result = obj(15).closeFastConnectSocket();
@@ -120,15 +123,15 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
   }, 100);
 };
 prototype["onSwitchError"] = function onSwitchError(currentUser) {
-  let obj = require("../../toast/native/ToastActionCreators.tsx");
+  let obj = dispatcher;
   obj = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR", content: null, icon: null };
   const intl = obj(1236).intl;
   obj[1] = intl.string(obj(1236).t.pqvKWA);
-  obj[2] = require("../../../../_runtime/16373_registerAsset.js");
+  obj[2] = registerAsset;
   obj.open(obj);
 };
 prototype["onSwitchComplete"] = function onSwitchComplete() {
-  const obj = require("../../../actions/ModalActionCreators.tsx");
+  const obj = ModalActionCreators;
   obj.popWithKey(SWITCH_ACCOUNTS_MODAL_KEY);
   obj.pop();
   if (null !== c9) {

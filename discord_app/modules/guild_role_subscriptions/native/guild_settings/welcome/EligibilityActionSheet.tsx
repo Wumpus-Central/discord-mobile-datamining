@@ -1,3 +1,5 @@
+import { useCreatorMonetizationEligibilityItems } from "../../../../creator_monetization_eligibility/guild_settings/useCreatorMonetizationEligibilityItems.tsx";
+import { EligibilityChecklistRow } from "../../components/EligibilityChecklist.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/EligibilityActionSheet.tsx
 import noop from "noop";
 import { UserSettingsSections } from "ME";
@@ -38,8 +40,8 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
   const intl = onRequireModeratorMFAClick(1236).intl;
   obj[3] = intl.string(onRequireModeratorMFAClick(1236).t["3s47iN"]);
   const items1 = [callback(onRequireModeratorMFAClick(4281).Heading, obj), ];
-  obj = { style: tmp.container, items: require("../../../../creator_monetization_eligibility/guild_settings/useCreatorMonetizationEligibilityItems.tsx")(onRequireModeratorMFAClick.eligibility, memo) };
-  items1[1] = callback(require("../../components/EligibilityChecklist.tsx"), obj);
+  obj = { style: tmp.container, items: useCreatorMonetizationEligibilityItems(onRequireModeratorMFAClick.eligibility, memo) };
+  items1[1] = callback(EligibilityChecklistRow, obj);
   obj[1] = items1;
   return callback2(onRequireModeratorMFAClick(5338).BottomSheet, obj);
 };

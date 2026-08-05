@@ -1,3 +1,4 @@
+import { isClickstreamEnabled } from "../../clickstream/Clickstream.tsx";
 // discord_app/modules/app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
@@ -22,7 +23,7 @@ export default function trackChannelOpenedClickstream(channelId) {
                   if (tmp.MEMBER_SAFETY !== channelId) {
                     if (tmp.GUILD_ONBOARDING !== channelId) {
                       if (tmp.GUILD_BOOSTS !== channelId) {
-                        let obj = require("../../clickstream/Clickstream.tsx") /* isClickstreamEnabled */;
+                        let obj = isClickstreamEnabled /* isClickstreamEnabled */;
                         obj = { channel_id: null, channel_type: null };
                         obj[0] = channelId;
                         channel = channel.getChannel(channelId);

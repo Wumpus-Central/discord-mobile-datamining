@@ -1,3 +1,5 @@
+import { isPublicSystemMessage } from "../../../public_guilds/PublicGuildsUtils.tsx";
+import { isCrosspost } from "../../isCrosspost.tsx";
 // discord_app/modules/messages/native/renderer/getTagProperties.tsx
 import { Image } from "get ActivityIndicator";
 import { MessageTagTypes } from "MESSAGE_GROUP_SPACING";
@@ -16,10 +18,10 @@ export default function getTagProperties(arg0) {
   ({ channel, colors } = arg0);
   const author = message.author;
   const isVerifiedBotResult = author.isVerifiedBot();
-  let obj = require("../../../public_guilds/PublicGuildsUtils.tsx") /* isPublicSystemMessage */;
+  let obj = isPublicSystemMessage /* isPublicSystemMessage */;
   if (!obj.isPublicSystemMessage(message)) {
     if (!isSystemDM) {
-      if (require("../../isCrosspost.tsx")(message)) {
+      if (isCrosspost(message)) {
         const intl2 = tmp2(1236).intl;
         let stringResult = intl2.string(tmp2(1236).t.PuJGuM);
         let SYSTEM_DM_TAG_SYSTEM_TYPE = MessageTagTypes.BOT_TAG_SERVER_TYPE;
@@ -81,7 +83,7 @@ export default function getTagProperties(arg0) {
           } else {
             stringResult3 = string(t.qwJHjo);
           }
-          tmp14 = require("../../isCrosspost.tsx")(message);
+          tmp14 = isCrosspost(message);
         }
       }
       const intl5 = tmp2(1236).intl;

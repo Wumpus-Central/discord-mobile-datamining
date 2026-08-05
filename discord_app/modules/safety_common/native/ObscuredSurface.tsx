@@ -1,3 +1,7 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { ImageWarningIcon } from "../../../design/components/Icon/native/redesign/generated/ImageWarningIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { context } from "../ObscuredSurfaceContext.tsx";
 // discord_app/modules/safety_common/native/ObscuredSurface.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -25,7 +29,7 @@ export default function ObscuredSurface(obscured) {
   let tmp3Result = children;
   if (obscured.obscured) {
     let obj = { value: null, children: null };
-    obj[0] = require("../ObscuredSurfaceContext.tsx") /* context */.OBSCURED_VALUE;
+    obj[0] = context /* context */.OBSCURED_VALUE;
     obj = { style: null, children: null };
     obj[0] = tmp.container;
     obj = { style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", accessible: false, "aria-hidden": true, children: null };
@@ -38,27 +42,27 @@ export default function ObscuredSurface(obscured) {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.warning;
     const obj3 = { size: "lg", color: null };
-    obj3[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_DEFAULT;
-    const items1 = [callback(require("../../../design/components/Icon/native/redesign/generated/ImageWarningIcon.tsx") /* ImageWarningIcon */.ImageWarningIcon, obj3), , ];
+    obj3[1] = Themes.colors.TEXT_DEFAULT;
+    const items1 = [callback(ImageWarningIcon /* ImageWarningIcon */.ImageWarningIcon, obj3), , ];
     if (heading == null) {
       const intl = tmp4(1236).intl;
       heading = intl.string(tmp4(1236).t.xC8Saf);
     }
     const obj4 = { variant: "heading-md/semibold", color: "text-strong", children: null };
     obj4[2] = heading;
-    items1[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj4);
+    items1[1] = callback(Text /* Text */.Text, obj4);
     if (description == null) {
       const intl2 = tmp4(1236).intl;
       description = intl2.string(tmp4(1236).t["0fc/DG"]);
     }
     const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
     obj5[2] = description;
-    items1[2] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj5);
+    items1[2] = callback(Text /* Text */.Text, obj5);
     obj2[1] = items1;
     items[2] = closure_5(View, obj2);
     obj[1] = items;
     obj[1] = closure_5(View, obj);
-    tmp3Result = tmp3(require("../ObscuredSurfaceContext.tsx") /* context */.ObscuredSurfaceContext.Provider, obj);
+    tmp3Result = tmp3(context /* context */.ObscuredSurfaceContext.Provider, obj);
   }
   return tmp3Result;
 };

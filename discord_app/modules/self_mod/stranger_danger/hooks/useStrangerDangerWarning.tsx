@@ -1,3 +1,8 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useIsMessageRequest } from "../../../message_request/hooks/useIsMessageRequest.tsx";
+import { useIsSpamMessageRequest } from "../../../message_request/hooks/useIsSpamMessageRequest.tsx";
+import { useChannelSafetyWarning } from "../../hooks/useChannelSafetyWarning.tsx";
+import { useUserIsTeen } from "../../hooks/useUserIsTeen.tsx";
 // discord_app/modules/self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { SafetyWarningTypes } from "handleConnectionOpen";
@@ -7,20 +12,20 @@ const result = require("initialize").fileFinishedImporting("modules/self_mod/str
 
 export const useStrangerDangerWarning = function useStrangerDangerWarning(id) {
   const items = [mergeGuildAvatar];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = initialize /* initialize */;
   const tmp = require;
-  const isSpamMessageRequest = require("../../../message_request/hooks/useIsSpamMessageRequest.tsx") /* useIsSpamMessageRequest */.useIsSpamMessageRequest(id);
-  const obj3 = require("../../../message_request/hooks/useIsSpamMessageRequest.tsx") /* useIsSpamMessageRequest */;
-  const isMessageRequest = require("../../../message_request/hooks/useIsMessageRequest.tsx") /* useIsMessageRequest */.useIsMessageRequest(id);
-  const obj4 = require("../../../message_request/hooks/useIsMessageRequest.tsx") /* useIsMessageRequest */;
-  const channelSafetyWarning = require("../../hooks/useChannelSafetyWarning.tsx") /* useChannelSafetyWarning */.useChannelSafetyWarning(id, SafetyWarningTypes.STRANGER_DANGER);
-  const obj5 = require("../../hooks/useChannelSafetyWarning.tsx") /* useChannelSafetyWarning */;
-  const userIsTeen = require("../../hooks/useUserIsTeen.tsx") /* useUserIsTeen */.useUserIsTeen();
+  const isSpamMessageRequest = useIsSpamMessageRequest /* useIsSpamMessageRequest */.useIsSpamMessageRequest(id);
+  const obj3 = useIsSpamMessageRequest /* useIsSpamMessageRequest */;
+  const isMessageRequest = useIsMessageRequest /* useIsMessageRequest */.useIsMessageRequest(id);
+  const obj4 = useIsMessageRequest /* useIsMessageRequest */;
+  const channelSafetyWarning = useChannelSafetyWarning /* useChannelSafetyWarning */.useChannelSafetyWarning(id, SafetyWarningTypes.STRANGER_DANGER);
+  const obj5 = useChannelSafetyWarning /* useChannelSafetyWarning */;
+  const userIsTeen = useUserIsTeen /* useUserIsTeen */.useUserIsTeen();
   if (stateFromStores != null) {
     const isStaffResult = stateFromStores.isStaff();
   }
-  const obj6 = require("../../hooks/useUserIsTeen.tsx") /* useUserIsTeen */;
+  const obj6 = useUserIsTeen /* useUserIsTeen */;
   if (userIsTeen) {
     if (!isSpamMessageRequest) {
       if (!isMessageRequest) {

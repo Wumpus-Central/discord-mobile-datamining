@@ -1,3 +1,4 @@
+import { useCollectibleListLayout } from "../../native/useCollectibleListLayout.tsx";
 // discord_app/modules/collectibles/profile_frames/native/EditProfileFrameSection.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -37,7 +38,7 @@ const memoResult = importAllResult.memo((arg0) => {
   let obj = { children: null };
   obj = { style: tmp.row, children: null };
   const items1 = [...items, null, null];
-  const substr = items1.slice(0, require("../../native/useCollectibleListLayout.tsx") /* useCollectibleListLayout */.ROW_SIZE);
+  const substr = items1.slice(0, useCollectibleListLayout /* useCollectibleListLayout */.ROW_SIZE);
   obj[1] = substr.map((skuId) => {
     if (skuId === outer1_0(outer1_2[8]).NONE_ITEM) {
       let obj = { size: null, onPress: null, isSelected: null, asDefault: null };

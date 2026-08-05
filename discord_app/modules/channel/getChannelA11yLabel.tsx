@@ -1,3 +1,7 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { nameFromUser } from "../../utils/UserUtils.tsx";
+import { isRoleRequired } from "isRoleRequired.tsx";
+import { computeChannelName } from "useChannelName.tsx";
 // discord_app/modules/channel/getChannelA11yLabel.tsx
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
 import upsertRelationship from "upsertRelationship";
@@ -35,9 +39,9 @@ export default function getChannelA11yLabel(mentionCount) {
     flag = false;
   }
   const voiceChannelStartTime = mentionCount.voiceChannelStartTime;
-  let obj = require("useChannelName.tsx") /* computeChannelName */;
+  let obj = computeChannelName /* computeChannelName */;
   const channelName = obj.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
-  if (require("isRoleRequired.tsx")(channel)) {
+  if (isRoleRequired(channel)) {
     const intl = tmp(1236).intl;
     const stringResult = intl.string(tmp(1236).t["4qvAtn"]);
   }
@@ -210,13 +214,13 @@ export default function getChannelA11yLabel(mentionCount) {
 };
 export const getStatusLabel = function getStatusLabel(status) {
   if (constants2.ONLINE === status) {
-    return require("../../utils/UserUtils.tsx") /* nameFromUser */.humanizeStatus(tmp.ONLINE);
+    return nameFromUser /* nameFromUser */.humanizeStatus(tmp.ONLINE);
   } else if (tmp.IDLE === status) {
-    return require("../../utils/UserUtils.tsx") /* nameFromUser */.humanizeStatus(tmp.IDLE);
+    return nameFromUser /* nameFromUser */.humanizeStatus(tmp.IDLE);
   } else if (tmp.DND === status) {
-    return require("../../utils/UserUtils.tsx") /* nameFromUser */.humanizeStatus(tmp.DND);
+    return nameFromUser /* nameFromUser */.humanizeStatus(tmp.DND);
   } else if (tmp.INVISIBLE === status) {
-    return require("../../utils/UserUtils.tsx") /* nameFromUser */.humanizeStatus(tmp.INVISIBLE);
+    return nameFromUser /* nameFromUser */.humanizeStatus(tmp.INVISIBLE);
   } else {
     return "";
   }
@@ -228,12 +232,12 @@ export const getChannelA11yHint = function getChannelA11yHint(userStatus) {
   const items = [];
   ({ channel, muted } = userStatus);
   if (userStatus.isFavorite) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    items.push(intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.cCPjSK));
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    items.push(intl.string(getSystemLocale /* getSystemLocale */.t.cCPjSK));
   }
   if (true === muted) {
-    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    items.push(intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.C4zCMb));
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    items.push(intl2.string(getSystemLocale /* getSystemLocale */.t.C4zCMb));
     return items.join(", ");
   } else {
     if (channel.type === constants.DM) {
@@ -241,21 +245,21 @@ export const getChannelA11yHint = function getChannelA11yHint(userStatus) {
         let ONLINE = constants2;
         if (constants2.ONLINE === userStatus) {
           ONLINE = ONLINE.ONLINE;
-          let str = require("../../utils/UserUtils.tsx") /* nameFromUser */.humanizeStatus(ONLINE);
-          const obj3 = require("../../utils/UserUtils.tsx") /* nameFromUser */;
+          let str = nameFromUser /* nameFromUser */.humanizeStatus(ONLINE);
+          const obj3 = nameFromUser /* nameFromUser */;
         } else {
           if (ONLINE.IDLE === userStatus) {
-            str = require("../../utils/UserUtils.tsx") /* nameFromUser */.humanizeStatus(ONLINE.IDLE);
-            const obj2 = require("../../utils/UserUtils.tsx") /* nameFromUser */;
+            str = nameFromUser /* nameFromUser */.humanizeStatus(ONLINE.IDLE);
+            const obj2 = nameFromUser /* nameFromUser */;
           } else if (ONLINE.DND !== userStatus) {
             str = "";
             if (ONLINE.INVISIBLE === userStatus) {
-              str = require("../../utils/UserUtils.tsx") /* nameFromUser */.humanizeStatus(ONLINE.INVISIBLE);
-              const obj4 = require("../../utils/UserUtils.tsx") /* nameFromUser */;
+              str = nameFromUser /* nameFromUser */.humanizeStatus(ONLINE.INVISIBLE);
+              const obj4 = nameFromUser /* nameFromUser */;
             }
           }
-          str = require("../../utils/UserUtils.tsx") /* nameFromUser */.humanizeStatus(ONLINE.DND);
-          const obj = require("../../utils/UserUtils.tsx") /* nameFromUser */;
+          str = nameFromUser /* nameFromUser */.humanizeStatus(ONLINE.DND);
+          const obj = nameFromUser /* nameFromUser */;
         }
         items.push(str);
       }

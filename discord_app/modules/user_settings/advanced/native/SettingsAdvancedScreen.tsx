@@ -1,3 +1,4 @@
+import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
 // discord_app/modules/user_settings/advanced/native/SettingsAdvancedScreen.tsx
 import importAllResult from "noop";
 import { MobileSetting } from "MobileSetting";
@@ -34,7 +35,7 @@ const memoResult = importAllResult.memo(() => {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  return jsx(require("../../../settings/native/renderer/SettingLayout.tsx"), { node });
+  return jsx(SettingLayout, { node });
 });
 const result = require("ME").fileFinishedImporting("modules/user_settings/advanced/native/SettingsAdvancedScreen.tsx");
 

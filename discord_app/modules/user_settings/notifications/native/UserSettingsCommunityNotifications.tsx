@@ -1,3 +1,4 @@
+import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/user_settings/notifications/native/UserSettingsCommunityNotifications.tsx
 import "noop";
 import computeAlertSettings from "computeAlertSettings";
@@ -16,7 +17,7 @@ export default function UserSettingsCommunityNotifications() {
   let items = [computeAlertSettings];
   stateFromStores = obj.useStateFromStores(items, () => guildAlertSettings.getGuildAlertSettings());
   const tmp = callback2();
-  const keys = require("../../../../utils/SnowflakeUtils.tsx").keys(stateFromStores);
+  const keys = DISCORD_EPOCH.keys(stateFromStores);
   let tmp5 = null;
   if (0 !== keys.length) {
     obj = { children: null };

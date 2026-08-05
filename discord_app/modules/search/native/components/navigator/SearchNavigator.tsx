@@ -1,3 +1,4 @@
+import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/search/native/components/navigator/SearchNavigator.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -36,7 +37,7 @@ const memoResult = importAllResult.memo((route) => {
       obj.trackSearchClosed(obj);
     };
   }, items);
-  const rect = require("../../../../safe_area/useSafeAreaInsets.native.tsx")();
+  const rect = useSafeAreaInsets();
   obj = { style: items1, children: null };
   items1 = [callback3().container, { paddingLeft: rect.left, paddingRight: rect.right }];
   obj = { id: "search-navigator", screenOptions: null, children: null };

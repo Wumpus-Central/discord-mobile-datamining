@@ -1,20 +1,21 @@
+import { getSystemLocale } from "../intl/index.native.tsx";
 // discord_app/errors/V6OrEarlierAPIError.tsx
 import { Links } from "ME";
 import { V6OrEarlierAPIError } from "sendRequest";
 
 const prototype = function APIErrorWithDefaultMessage(arg0, arg1) {
   if (null != arg1) {
-    const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
     let obj = { statusPageURL: null, details: null };
     obj[0] = Links.STATUS;
     const _HermesInternal = HermesInternal;
     obj[1] = "" + arg1;
-    intl2.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.aKRa0Q, obj);
+    intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.aKRa0Q, obj);
   } else {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     obj = { statusPageURL: null };
     obj[0] = Links.STATUS;
-    intl.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t.aTVNes, obj);
+    intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.aTVNes, obj);
   }
   tmp = new tmp();
   // ThrowIfThisInitialized (0x7c)

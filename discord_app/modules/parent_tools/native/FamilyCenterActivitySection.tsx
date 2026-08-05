@@ -1,3 +1,6 @@
+import { getEmptyActivityFormatter } from "../FamilyCenterUtils.tsx";
+import { useActionsForDisplayType } from "../hooks/useFamilyCenterActivities.tsx";
+import { useIsInAdultAgeGroup } from "../hooks/useIsInAdultAgeGroup.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterActivitySection.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -17,13 +20,13 @@ const require = arg1;
 function FamilyCenterActivitySectionHeader(displayType) {
   displayType = displayType.displayType;
   const tmp = createCacheKey();
-  let flag = require("../hooks/useIsInAdultAgeGroup.tsx")();
-  let obj = require("../FamilyCenterUtils.tsx") /* getEmptyActivityFormatter */;
+  let flag = useIsInAdultAgeGroup();
+  let obj = getEmptyActivityFormatter /* getEmptyActivityFormatter */;
   const activityTypeTextConfigs = obj.getActivityTypeTextConfigs();
   const value = activityTypeTextConfigs.get(displayType);
-  const actionsForDisplayType = require("../hooks/useFamilyCenterActivities.tsx") /* useActionsForDisplayType */.useActionsForDisplayType(displayType);
-  const obj4 = require("../hooks/useFamilyCenterActivities.tsx") /* useActionsForDisplayType */;
-  const formattedTotalForDisplayType = require("../hooks/useFamilyCenterActivities.tsx") /* useActionsForDisplayType */.useFormattedTotalForDisplayType(displayType);
+  const actionsForDisplayType = useActionsForDisplayType /* useActionsForDisplayType */.useActionsForDisplayType(displayType);
+  const obj4 = useActionsForDisplayType /* useActionsForDisplayType */;
+  const formattedTotalForDisplayType = useActionsForDisplayType /* useActionsForDisplayType */.useFormattedTotalForDisplayType(displayType);
   if (displayType === constants.PURCHASES) {
     let length = formattedTotalForDisplayType;
     let sectionHeaderResult;

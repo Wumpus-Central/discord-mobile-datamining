@@ -1,3 +1,4 @@
+import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
 // discord_app/utils/LibraryApplicationUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -19,9 +20,9 @@ export const convertComboId = function convertComboId(str) {
   return { applicationId: tmp[0], branchId: tmp[1] };
 };
 export const shouldShareApplicationActivity = function shouldShareApplicationActivity(application_id, closure_7) {
-  const ShowCurrentGame = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.ShowCurrentGame;
+  const ShowCurrentGame = explicitContentFromProto /* explicitContentFromProto */.ShowCurrentGame;
   if (ShowCurrentGame.getSetting()) {
-    const StatusSetting = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.StatusSetting;
+    const StatusSetting = explicitContentFromProto /* explicitContentFromProto */.StatusSetting;
     if (StatusSetting.getSetting() !== constants3.INVISIBLE) {
       const activeLibraryApplication = closure_7.getActiveLibraryApplication(application_id);
       let tmp7 = null == activeLibraryApplication;

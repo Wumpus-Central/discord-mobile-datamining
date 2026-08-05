@@ -1,3 +1,8 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { TwinButtons } from "../../../../../design/components/experimental/native.tsx";
+import { SolidCutout } from "../../../../../design/components/Icon/native/ClipView.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -41,7 +46,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((arg0, ref) =
     obj = { cutouts: null, children: null };
     obj[0] = items;
     obj[1] = tmp3;
-    items = [tmp2(require("../../../../../design/components/Icon/native/ClipView.tsx"), obj), ];
+    items = [tmp2(SolidCutout, obj), ];
     const obj1 = { style: null };
     obj1[0] = tmp.dot;
     items[1] = tmp2(View, obj1);
@@ -51,21 +56,21 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((arg0, ref) =
   let tmp10;
   if (showRedDot) {
     const obj2 = { text: null };
-    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj2[0] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.y2b7CA);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj2[0] = intl.string(getSystemLocale /* getSystemLocale */.t.y2b7CA);
     tmp10 = obj2;
   }
   const obj3 = { ref, style: tmp.container, accessibilityRole: "button", accessibilityLabel, accessibilityValue: tmp10, onPress, hitSlop: null, children: null };
-  obj3[6] = require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8;
+  obj3[6] = Themes.space.PX_8;
   const items1 = [tmp4, ];
   const obj4 = { style: tmp.label, variant: "text-xs/semibold", color: "text-default", maxFontSizeMultiplier: 2, children: null };
   if (label == null) {
     label = accessibilityLabel;
   }
   obj4[4] = label;
-  items1[1] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj4);
+  items1[1] = callback(Text /* Text */.Text, obj4);
   obj3[7] = items1;
-  return callback2(require("../../../../../design/components/experimental/native.tsx") /* TwinButtons */.PressableScale, obj3);
+  return callback2(TwinButtons /* TwinButtons */.PressableScale, obj3);
 }));
 const result1 = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx");
 

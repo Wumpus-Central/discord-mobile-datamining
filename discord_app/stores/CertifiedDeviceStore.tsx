@@ -1,3 +1,5 @@
+import { apply } from "../../_runtime/00012_apply.js";
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/stores/CertifiedDeviceStore.tsx
 import { DeviceTypes } from "DesktopSources";
 import { Store } from "initialize";
@@ -10,10 +12,10 @@ class CertifiedDeviceStore extends Store {
 }
 const prototype = CertifiedDeviceStore.prototype;
 prototype["initialize"] = function initialize() {
-  const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   const value = Storage.get(CertifiedDeviceStore);
   if (null != value) {
-    let item = require("../../_runtime/00012_apply.js").forEach(value, (arr) => {
+    let item = apply.forEach(value, (arr) => {
       const item = arr.forEach((type) => {
         if (tmp) {
           type.hardwareMute = false;
@@ -31,7 +33,7 @@ prototype["initialize"] = function initialize() {
         return id;
       });
     });
-    const arr = require("../../_runtime/00012_apply.js");
+    const arr = apply;
   }
 };
 prototype["isCertified"] = function isCertified(found) {
@@ -51,7 +53,7 @@ prototype["getCertifiedDeviceName"] = function getCertifiedDeviceName(inputDevic
 };
 prototype["getCertifiedDeviceByType"] = function getCertifiedDeviceByType(arg0) {
   let closure_0 = arg0;
-  return require("../../_runtime/00012_apply.js").find(closure_6, (type) => type.type === closure_0);
+  return apply.find(closure_6, (type) => type.type === closure_0);
 };
 prototype["isHardwareMute"] = function isHardwareMute(arg0) {
   let flag = false;
@@ -119,7 +121,7 @@ const certifiedDeviceStore = new CertifiedDeviceStore(require("dispatcher"), {
       closure_6[id.id] = id;
       return id;
     });
-    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const result = Storage.set(CertifiedDeviceStore, tmp);
     closure_7 = closure_7 + 1;
   }

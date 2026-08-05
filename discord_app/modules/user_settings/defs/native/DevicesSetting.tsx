@@ -1,10 +1,12 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { UserSettingsSessions } from "../../devices/native/UserSettingsSessions.tsx";
 // discord_app/modules/user_settings/defs/native/DevicesSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["+1h0k/"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["+1h0k/"]);
   },
   parent: null,
   IconComponent: require("LaptopPhoneIcon").LaptopPhoneIcon,
@@ -13,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.SESSIONS,
   getComponent() {
-    return require("../../devices/native/UserSettingsSessions.tsx") /* UserSettingsSessions */.default;
+    return UserSettingsSessions /* UserSettingsSessions */.default;
   }
 };
 const route = createToggle.createRoute(obj);

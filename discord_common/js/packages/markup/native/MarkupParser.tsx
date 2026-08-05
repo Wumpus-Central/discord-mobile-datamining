@@ -1,3 +1,5 @@
+import { t } from "../../../../../_runtime/03984_t.js";
+import { collectAst } from "../MarkupASTUtils.tsx";
 // discord_common/js/packages/markup/native/MarkupParser.tsx
 function saferParse(arg0, arg1, inline) {
   let ast;
@@ -14,10 +16,10 @@ function saferParse(arg0, arg1, inline) {
   `;
     }
     const tmp8 = arg0(text, inline);
-    const flattenAstResult = require("../MarkupASTUtils.tsx") /* collectAst */.flattenAst(inline, tmp8);
-    const obj = require("../MarkupASTUtils.tsx") /* collectAst */;
-    const obj2 = require("../MarkupASTUtils.tsx") /* collectAst */;
-    ({ hasBailedAst, ast } = require("../MarkupASTUtils.tsx") /* collectAst */.constrainAst(flattenAstResult));
+    const flattenAstResult = collectAst /* collectAst */.flattenAst(inline, tmp8);
+    const obj = collectAst /* collectAst */;
+    const obj2 = collectAst /* collectAst */;
+    ({ hasBailedAst, ast } = collectAst /* collectAst */.constrainAst(flattenAstResult));
     if (tmp6) {
       ast = tmp6(ast, inline.inline, hasBailedAst);
     }
@@ -35,7 +37,7 @@ const result = require("set").fileFinishedImporting("../discord_common/js/packag
 
 export default {
   astParserFor(importDefaultResultResult) {
-    let closure_0 = require("../../../../../_runtime/03984_t.js").parserFor(importDefaultResultResult);
+    let closure_0 = t.parserFor(importDefaultResultResult);
     return (arg0, inline) => {
       let str = arg0;
       if (arg0 === undefined) {
@@ -55,10 +57,10 @@ export default {
     };
   },
   reactParserFor(defaultRules) {
-    let closure_0 = require("../../../../../_runtime/03984_t.js").parserFor(defaultRules);
-    let obj = require("../../../../../_runtime/03984_t.js");
-    const obj2 = require("../../../../../_runtime/03984_t.js");
-    importDefault = obj2.reactFor(require("../../../../../_runtime/03984_t.js").ruleOutput(defaultRules, "react"));
+    let closure_0 = t.parserFor(defaultRules);
+    let obj = t;
+    const obj2 = t;
+    importDefault = obj2.reactFor(t.ruleOutput(defaultRules, "react"));
     return () => {
       let str = arg0;
       if (arg0 === undefined) {

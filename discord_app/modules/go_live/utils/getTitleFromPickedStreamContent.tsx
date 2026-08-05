@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/go_live/utils/getTitleFromPickedStreamContent.tsx
 const result = require("set").fileFinishedImporting("modules/go_live/utils/getTitleFromPickedStreamContent.tsx");
 
@@ -13,8 +14,8 @@ export default function getTitleFromPickedStreamContent(windows) {
   } else {
     joined = null;
     if (windows.displays.length > 0) {
-      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      joined = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.R4wpLN);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      joined = intl.string(getSystemLocale /* getSystemLocale */.t.R4wpLN);
     }
   }
   return joined;

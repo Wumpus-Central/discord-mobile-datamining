@@ -1,3 +1,5 @@
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { useMobileTenureBadgeImages } from "hooks/useMobileTenureBadgeImages.tsx";
 // discord_app/modules/premium/tiered_tenure_badging/native/TieredTenureBadgeCoachmark.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -11,7 +13,7 @@ const require = arg1;
 function CoachmarkImg(badge) {
   badge = badge.badge;
   const tmp = callback2();
-  let obj = require("hooks/useMobileTenureBadgeImages.tsx") /* useMobileTenureBadgeImages */;
+  let obj = useMobileTenureBadgeImages /* useMobileTenureBadgeImages */;
   let id;
   if (badge != null) {
     id = badge.id;
@@ -29,7 +31,7 @@ function CoachmarkImg(badge) {
     const obj1 = { uri: null };
     obj1[0] = medium;
     obj[2] = obj1;
-    obj[1] = jsx(require("../../../../components_native/common/FastImage.tsx"), { resizeMode: "contain", style: null, source: null });
+    obj[1] = jsx(preload, { resizeMode: "contain", style: null, source: null });
     tmp5 = <View resizeMode="contain" style={null} source={null} />;
   }
   return tmp5;

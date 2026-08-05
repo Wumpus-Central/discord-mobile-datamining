@@ -1,3 +1,4 @@
+import { preload } from "../../../components_native/common/FastImage.tsx";
 // discord_app/modules/markup/native/MarkupReactGameMentionRule.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -51,7 +52,7 @@ export default function MarkupGameMention(arg0) {
       const obj1 = { uri: null };
       obj1[0] = icon;
       obj[1] = obj1;
-      tmp9Result = tmp9(require("../../../components_native/common/FastImage.tsx"), obj);
+      tmp9Result = tmp9(preload, obj);
     }
     let str3 = "button";
     if (state.noStyleAndInteraction) {

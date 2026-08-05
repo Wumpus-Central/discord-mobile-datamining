@@ -1,12 +1,16 @@
+import { getNumSubscriptionsPurchasedFromSystemMessage } from "../../../../premium/getNumSubscriptionsPurchasedFromSystemMessage.tsx";
+import { createCommonMessage } from "createCommonMessage.tsx";
+import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
+import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionSystemMessage.tsx
 const result = require("formatUsernameOnClick").fileFinishedImporting("modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionSystemMessage.tsx");
 
 export const createUserPremiumGuildSubscriptionSystemMessage = function createUserPremiumGuildSubscriptionSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  const tmp3 = require("../../../../premium/getNumSubscriptionsPurchasedFromSystemMessage.tsx")(message);
-  let obj = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */;
+  const tmp3 = getNumSubscriptionsPurchasedFromSystemMessage(message);
+  let obj = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  const tmp6 = require("formatUsernameOnClick.tsx")({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
+  const tmp6 = formatUsernameOnClick({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   if (tmp3 > 1) {
     const intl2 = tmp4(1236).intl;
     obj = { username: null, usernameOnClick: null, numSubscriptions: null };
@@ -21,6 +25,6 @@ export const createUserPremiumGuildSubscriptionSystemMessage = function createUs
     obj[1] = tmp6;
     formatToPartsResult = intl.formatToParts(tmp4(1236).t.ihxM9x, obj);
   }
-  const merged = Object.assign(require("createCommonMessage.tsx")(roleStyle));
+  const merged = Object.assign(createCommonMessage(roleStyle));
   return { content: formatToPartsResult };
 };

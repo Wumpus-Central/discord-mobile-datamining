@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { isSystemMessage } from "../../../../messages/isSystemMessage.tsx";
+import { getStickerExtensionFromFormatType } from "../../../../stickers/StickersUtils.tsx";
 // discord_app/modules/forums/native/posts/hooks/useNativeForumPostContent.tsx
 import { MessageFlags } from "ME";
 import createCacheKey from "createCacheKey";
@@ -16,13 +19,13 @@ export default function useNativeForumPostContent(arg0) {
   const tmp = callback();
   if (isMessageDeleted) {
     let obj = { content: null, style: null, variant: "text-sm/normal" };
-    const intl9 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[0] = intl9.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.U8Rr2l);
+    const intl9 = getSystemLocale /* getSystemLocale */.intl;
+    obj[0] = intl9.string(getSystemLocale /* getSystemLocale */.t.U8Rr2l);
     obj[1] = tmp.italics;
     return obj;
   } else {
     if (null != message) {
-      if (require("../../../../messages/isSystemMessage.tsx")(message)) {
+      if (isSystemMessage(message)) {
         obj = { content: null, style: null, variant: "text-sm/normal" };
         obj[0] = messageContent;
         obj[1] = tmp.italics;
@@ -68,8 +71,8 @@ export default function useNativeForumPostContent(arg0) {
               obj[0] = tmp20;
               return obj;
             } else if (null == message) {
-              const intl6 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-              let stringResult = intl6.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.mE3KJN);
+              const intl6 = getSystemLocale /* getSystemLocale */.intl;
+              let stringResult = intl6.string(getSystemLocale /* getSystemLocale */.t.mE3KJN);
             } else {
               if (obj5.getMessageStickers(message).length > 0) {
                 const intl5 = tmp28(1236).intl;
@@ -97,7 +100,7 @@ export default function useNativeForumPostContent(arg0) {
                 }
                 tmp14 = MessageFlags;
               }
-              obj5 = require("../../../../stickers/StickersUtils.tsx") /* getStickerExtensionFromFormatType */;
+              obj5 = getStickerExtensionFromFormatType /* getStickerExtensionFromFormatType */;
             }
           }
         }
@@ -105,16 +108,16 @@ export default function useNativeForumPostContent(arg0) {
     }
     if (!(null != message && message.blocked)) {
       if (!tmp7) {
-        const intl7 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        let stringResult1 = intl7.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.yWK7ZM);
+        const intl7 = getSystemLocale /* getSystemLocale */.intl;
+        let stringResult1 = intl7.string(getSystemLocale /* getSystemLocale */.t.yWK7ZM);
       }
       const obj1 = { content: null, style: null, variant: "text-sm/normal" };
       obj1[0] = stringResult1;
       obj1[1] = tmp.italics;
       return obj1;
     }
-    const intl8 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    stringResult1 = intl8.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.Lkp2fB);
+    const intl8 = getSystemLocale /* getSystemLocale */.intl;
+    stringResult1 = intl8.string(getSystemLocale /* getSystemLocale */.t.Lkp2fB);
     tmp6 = null != message && message.ignored;
   }
 };

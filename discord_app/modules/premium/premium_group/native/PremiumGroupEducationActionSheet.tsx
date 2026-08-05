@@ -1,3 +1,8 @@
+import { CircleErrorIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { messagesProxy } from "../PremiumGroup.messages.js";
 // discord_app/modules/premium/premium_group/native/PremiumGroupEducationActionSheet.tsx
 import { View } from "get ActivityIndicator";
 import { HELP_CENTER_LINK } from "SubscriptionStatusTypes";
@@ -21,14 +26,14 @@ export default function PremiumGroupEducationActionSheet(children) {
   let obj = { children: null };
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.aboutContainer, children: null };
-  const items = [callback(require("../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx") /* CircleErrorIcon */.CircleErrorIcon, { size: "lg", style: tmp.warningIcon }), callback(View, { style: tmp.aboutTextContainer, children: callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/medium", color: "text-overlay-light", children: children.aboutText }) })];
+  const items = [callback(CircleErrorIcon /* CircleErrorIcon */.CircleErrorIcon, { size: "lg", style: tmp.warningIcon }), callback(View, { style: tmp.aboutTextContainer, children: callback(Text /* Text */.Text, { variant: "text-sm/medium", color: "text-overlay-light", children: children.aboutText }) })];
   obj[1] = items;
   const items1 = [callback2(View, obj), ];
   const obj3 = { variant: "text-sm/medium", color: "text-overlay-light", style: tmp.helpdeskText, children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj3[3] = intl.format(require("../PremiumGroup.messages.js").ah1Ecm, { helpCenterLink: HELP_CENTER_LINK });
-  items1[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj3[3] = intl.format(messagesProxy.ah1Ecm, { helpCenterLink: HELP_CENTER_LINK });
+  items1[1] = callback(Text /* Text */.Text, obj3);
   obj[1] = items1;
   obj[0] = callback2(View, obj);
-  return callback(require("../../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, obj);
+  return callback(Background /* Background */.BottomSheet, obj);
 };

@@ -1,3 +1,6 @@
+import { useCheckboxA11yNative } from "../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import { FormCheckbox } from "../../../../../design/components/Forms/native/FormCheckbox.native.tsx";
+import { memoResult1 } from "../../../native/DetailedGuildIdentityUserRow.tsx";
 // discord_app/modules/guild_settings/roles/native/action_sheet/AddMembersActionSheet.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
@@ -54,14 +57,14 @@ function MemberRow(arg0) {
   let userId;
   ({ disabled, checked } = arg0);
   ({ start, end, guildId, userId, onPress } = arg0);
-  let obj = require("../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx") /* useCheckboxA11yNative */;
+  let obj = useCheckboxA11yNative /* useCheckboxA11yNative */;
   const checkboxA11yNative = obj.useCheckboxA11yNative({ checked, disabled });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
   obj = { start, end, guildId, userId, onPress, disabled, trailing: null, accessibilityRole: null, accessibilityState: null };
-  obj[6] = callback2(require("../../../../../design/components/Forms/native/FormCheckbox.native.tsx") /* FormCheckbox */.FormCheckbox, { checked });
+  obj[6] = callback2(FormCheckbox /* FormCheckbox */.FormCheckbox, { checked });
   obj[7] = accessibilityRole;
   obj[8] = accessibilityState;
-  return callback2(require("../../../native/DetailedGuildIdentityUserRow.tsx"), obj);
+  return callback2(memoResult1, obj);
 }
 class AddMembersBody {
   constructor(arg0) {

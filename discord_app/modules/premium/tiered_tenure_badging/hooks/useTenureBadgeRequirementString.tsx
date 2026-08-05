@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { usePremiumSince } from "useTenureBadging.tsx";
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useTenureBadgeRequirementString.tsx
 import { TieredTenureBadge } from "GuildFeatures";
 
@@ -6,7 +8,7 @@ const result = require("getTieredTenureBadgeData").fileFinishedImporting("module
 export const useTenureBadgeRequirementString = function useTenureBadgeRequirementString() {
   let id;
   let tenureReqNumMonths;
-  let obj = require("useTenureBadging.tsx") /* usePremiumSince */;
+  let obj = usePremiumSince /* usePremiumSince */;
   const tieredTenureBadge = obj.useTieredTenureBadge();
   if (null == tieredTenureBadge) {
     return null;
@@ -55,14 +57,14 @@ export const getTenureBadgeRequirementString = function getTenureBadgeRequiremen
             }
           }
         }
-        const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        const intl = getSystemLocale /* getSystemLocale */.intl;
         let obj = { years: null };
         obj[0] = tenureReqNumMonths / 12;
-        return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.qOdyDe, obj);
+        return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.qOdyDe, obj);
       }
     }
   }
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
   obj = { months: tenureReqNumMonths };
-  return intl2.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.erUSmA, obj);
+  return intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.erUSmA, obj);
 };

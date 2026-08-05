@@ -1,3 +1,5 @@
+import { isTracing } from "../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/gateway/GatewaySocketAnalytics.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -100,7 +102,7 @@ export const logReadyPayloadReceived = function logReadyPayloadReceived(socket, 
     }
   })(data);
   if (null != compressionAnalytics) {
-    let obj = require("../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx");
+    let obj = isTracing;
     let _Math = Math;
     obj.addDetail("payload_size(kb)", Math.round(compressionAnalytics.uncompressed_byte_size / 1024));
   }
@@ -108,7 +110,7 @@ export const logReadyPayloadReceived = function logReadyPayloadReceived(socket, 
   if (num2 == null) {
     num2 = 0;
   }
-  require("../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx").addDetail("server_time(ms)", num2);
+  isTracing.addDetail("server_time(ms)", num2);
   obj = {};
   const merged = Object.assign(compressionAnalytics);
   const merged1 = Object.assign(tmp);
@@ -376,7 +378,7 @@ export const logGatewayConnected = function logGatewayConnected(gatewayUrl) {
   let now;
   let socket;
   ({ socket, altGateway, now } = gatewayUrl);
-  let obj = require("../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { num_failed_connect_attempts: socket.failedConnectAttempts, gateway_url: gatewayUrl.gatewayUrl, assigned_to_alt_gateway: altGateway.isAssignedToAltGateway(), did_fall_back_from_alt_gateway: altGateway.getDidFallBack(), is_reconnect: socket.hasConnectedOnce, is_fast_connect: socket.isFastConnect, duration_ms_since_first_connect_attempt: now - socket.firstConnectAttemptStartTime, duration_ms_since_connect_attempt_start: now - socket.connectionStartTime };
   obj.track(constants.GATEWAY_CONNECTED, obj, { logEventProperties: true });
 };
@@ -413,7 +415,7 @@ export const logResumeAnalytics = function logResumeAnalytics(resumeAnalytics) {
     obj[5] = Math.floor(resumeAnalytics.totalWaitTime);
     const _Math6 = Math;
     obj[6] = Math.floor(resumeAnalytics.dispatchTime);
-    require("../../utils/AnalyticsUtils.tsx").track(constants.CONNECTION_RESUMED, obj, { logEventProperties: true });
-    const obj2 = require("../../utils/AnalyticsUtils.tsx");
+    expandEventProperties.track(constants.CONNECTION_RESUMED, obj, { logEventProperties: true });
+    const obj2 = expandEventProperties;
   }
 };

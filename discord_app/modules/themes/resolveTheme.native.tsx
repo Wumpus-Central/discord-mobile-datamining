@@ -1,3 +1,4 @@
+import { getToken } from "../../utils/AuthenticationUtils.tsx";
 // discord_app/modules/themes/resolveTheme.native.tsx
 import reset from "reset";
 import initialize from "initialize";
@@ -48,6 +49,6 @@ export default function resolveTheme(arg0, arg1) {
       tmp10 = tmp14(1348).isMobileVisualRefreshEnabled("resolveTheme") ? closure_7 : closure_6[theme1];
       const tmp14Result = tmp14(1348);
     }
-    obj2 = require("../../utils/AuthenticationUtils.tsx") /* getToken */;
+    obj2 = getToken /* getToken */;
   }
 };

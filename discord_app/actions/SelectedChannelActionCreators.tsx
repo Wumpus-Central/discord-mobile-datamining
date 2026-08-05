@@ -1,3 +1,6 @@
+import { dispatcher } from "../Dispatcher.tsx";
+import { transitionTo } from "../modules/routing/router_utils.tsx";
+import { selectVoiceChannelAdditional } from "SelectedChannelActionCreatorsAdditional.native.tsx";
 // discord_app/actions/SelectedChannelActionCreators.tsx
 import set from "set";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -24,10 +27,10 @@ export default {
     if (guildId !== closure_7) {
       tmp = guildId;
     }
-    require("../Dispatcher.tsx").dispatch({ type: "CHANNEL_SELECT", guildId: tmp, channelId, messageId, jumpType, source, skipMessageFetch });
+    dispatcher.dispatch({ type: "CHANNEL_SELECT", guildId: tmp, channelId, messageId, jumpType, source, skipMessageFetch });
   },
   selectPrivateChannel(id) {
-    require("../modules/routing/router_utils.tsx") /* transitionTo */.transitionTo(closure_8.CHANNEL(closure_7, id));
+    transitionTo /* transitionTo */.transitionTo(closure_8.CHANNEL(closure_7, id));
   },
   selectVoiceChannel(id, c1, flag2) {
     let flag = c1;
@@ -50,7 +53,7 @@ export default {
         const mediaEngine = supported.getMediaEngine();
         mediaEngine.interact();
       }
-      const obj5 = require("SelectedChannelActionCreatorsAdditional.native.tsx") /* selectVoiceChannelAdditional */;
+      const obj5 = selectVoiceChannelAdditional /* selectVoiceChannelAdditional */;
       const voiceChannelAdditional = obj5.selectVoiceChannelAdditional(id, guildId, flag, flag2, obj);
     }
   },

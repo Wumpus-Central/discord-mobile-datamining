@@ -1,3 +1,4 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/premium/powerups/hooks/useIsGuildThemePerkEnabled.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
@@ -10,7 +11,7 @@ export default function useIsGuildThemePerkEnabled(arg0) {
   const _require = arg0;
   const items = [createGuildRecordFromRust, calculateAppliedBoosts];
   const items1 = [arg0];
-  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let tmp2 = null != callback;
     if (tmp2) {
       const guild = outer1_2.getGuild(tmp);

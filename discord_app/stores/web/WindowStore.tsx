@@ -1,3 +1,5 @@
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { getWindowId } from "../../utils/web/WindowIdUtils.tsx";
 // discord_app/stores/web/WindowStore.tsx
 import { Store } from "initialize";
 import set from "getWindowId";
@@ -12,7 +14,7 @@ const prototype = WindowStore.prototype;
 prototype["isFocused"] = function isFocused() {
   let mainWindowId = arg0;
   if (arg0 === undefined) {
-    let obj = require("../../utils/web/WindowIdUtils.tsx") /* getWindowId */;
+    let obj = getWindowId /* getWindowId */;
     mainWindowId = obj.getMainWindowId();
   }
   let value = map.get(mainWindowId);
@@ -30,7 +32,7 @@ prototype["isAppFocused"] = function isAppFocused() {
 prototype["isVisible"] = function isVisible() {
   let mainWindowId = arg0;
   if (arg0 === undefined) {
-    let obj = require("../../utils/web/WindowIdUtils.tsx") /* getWindowId */;
+    let obj = getWindowId /* getWindowId */;
     mainWindowId = obj.getMainWindowId();
   }
   let value = map.get(mainWindowId);
@@ -57,7 +59,7 @@ prototype["getLastFocusedWindowId"] = function getLastFocusedWindowId() {
 prototype["isElementFullScreen"] = function isElementFullScreen() {
   let mainWindowId = arg0;
   if (arg0 === undefined) {
-    let obj = require("../../utils/web/WindowIdUtils.tsx") /* getWindowId */;
+    let obj = getWindowId /* getWindowId */;
     mainWindowId = obj.getMainWindowId();
   }
   let value = map.get(mainWindowId);
@@ -72,7 +74,7 @@ prototype["isElementFullScreen"] = function isElementFullScreen() {
 prototype["windowSize"] = function windowSize() {
   let mainWindowId = arg0;
   if (arg0 === undefined) {
-    let obj = require("../../utils/web/WindowIdUtils.tsx") /* getWindowId */;
+    let obj = getWindowId /* getWindowId */;
     mainWindowId = obj.getMainWindowId();
   }
   let value = map.get(mainWindowId);
@@ -87,7 +89,7 @@ prototype["windowSize"] = function windowSize() {
 WindowStore.displayName = "WindowStore";
 const windowStore = new WindowStore(require("dispatcher"), {
   WINDOW_INIT: function handleWindowInit(isElementFullscreen) {
-    require("../../../_runtime/metro/00038__.js")(!map.has(isElementFullscreen.windowId), "Window initialized multiple times");
+    00038__(!map.has(isElementFullscreen.windowId), "Window initialized multiple times");
     const focused = isElementFullscreen.focused;
     obj = { windowSize: obj, isElementFullscreen: isElementFullscreen.isElementFullscreen, focused, visible: isElementFullscreen.visible };
     obj = { width: isElementFullscreen.width, height: isElementFullscreen.height };

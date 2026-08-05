@@ -1,3 +1,10 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { hexToRgba } from "../../../utils/ColorUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { useShouldUseFabricChatInput } from "useShouldUseFabricChatInput.tsx";
 // discord_app/modules/chat_input/native/ChatInputNativeComponent.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -36,17 +43,17 @@ const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) =>
   markAsSpoilerTitle = markAsSpoilerTitle.markAsSpoilerTitle;
   ({ accessibilityLabel, customKeyboard, placeholder, editable } = markAsSpoilerTitle);
   if (markAsSpoilerTitle === undefined) {
-    const intl = _require("../../../intl/index.native.tsx").intl;
-    markAsSpoilerTitle = intl.string(_require("../../../intl/index.native.tsx").t["gsI+xC"]);
+    const intl = _getSystemLocale.intl;
+    markAsSpoilerTitle = intl.string(_getSystemLocale.t["gsI+xC"]);
   }
   _require = undefined;
   ({ setNoExtractUI, shouldShowCursor, onBeginFocus, onEndBlur, onChangeContentSize, onMaxHeightChanged, onSelectionOrTextChange, onTextFlushed, onPasteImage, onPasteCommand, onTapAction, onRequestSend, verticalInset } = markAsSpoilerTitle);
   const tmp3 = callback2();
-  let obj = _require("../../../hooks/useTheme.tsx");
+  let obj = _useTheme;
   const theme = obj.useTheme();
-  const isThemeDarkResult = _require("../../../design/shared.tsx").isThemeDark(theme);
-  const obj2 = _require("../../../design/shared.tsx");
-  const unsafe_rawColors = require("../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
+  const isThemeDarkResult = _AccessibilityAnnouncer.isThemeDark(theme);
+  const obj2 = _AccessibilityAnnouncer;
+  const unsafe_rawColors = Themes.unsafe_rawColors;
   if (isThemeDarkResult) {
     let PRIMARY_500 = unsafe_rawColors.WHITE;
     let tmp9 = tmp8;
@@ -58,7 +65,7 @@ const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) =>
   if (null != gradientPreset.gradientPreset) {
     num = 0.8;
   }
-  const obj3 = _require("../../../utils/ColorUtils.tsx");
+  const obj3 = _hexToRgba;
   let tmp4Result = tmp4(500);
   let tmp11;
   if (!tmp4Result.isAndroid()) {
@@ -69,14 +76,14 @@ const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) =>
   if (!tmp4Result.isAndroid()) {
     tmp12 = customKeyboard;
   }
-  const hexWithOpacityResult = _require("../../../utils/ColorUtils.tsx").hexWithOpacity(PRIMARY_500, num);
+  const hexWithOpacityResult = _hexToRgba.hexWithOpacity(PRIMARY_500, num);
   let num2 = 2;
   if (isThemeDarkResult) {
     num2 = 1;
   }
-  const tmp4Result1 = _require("../../../utils/PlatformUtils.tsx");
+  const tmp4Result1 = _set;
   const tmp13 = tmp9(11285)(onMaxHeightChanged);
-  _require = _require("useShouldUseFabricChatInput.tsx").useShouldUseFabricChatInput();
+  _require = _useShouldUseFabricChatInput.useShouldUseFabricChatInput();
   obj = { accessibilityLabel: tmp11, children: tmp12, editable, keyboardAppearance: num2, keyboardType: str, markAsSpoilerTitle, maxHeight: tmp13, onBeginFocus, onEndBlur, onChangeContentSize, onSelectionOrTextChange, onTextFlushed, onPasteImage, onPasteCommand, onTapAction, onRequestSend, placeholder, placeholderColor: tmp3.placeholderColor.color, ref, selectionColor: hexWithOpacityResult, setNoExtractUI, shouldShowCursor, style: tmp3.style, textColor: tmp3.textColor.color, verticalInset };
   return jsx(callback(importAllResult.useState(() => {
     if (callback) {

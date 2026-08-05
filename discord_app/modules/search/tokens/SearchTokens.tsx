@@ -1,3 +1,10 @@
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { t } from "../../../../_runtime/03867_t.js";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getMatch } from "../../../lib/QueryTokenizer.tsx";
+import { NOOP } from "../../../utils/AutocompleteUtils.tsx";
+import { SearchTokenTypes } from "../SearchUtils.tsx";
+import { ANSWER_IN_REGEX } from "SearchTokensUtils.tsx";
 // discord_app/modules/search/tokens/SearchTokens.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -22,8 +29,8 @@ let closure_6;
 const require = arg1;
 function getShortcuts() {
   let obj = {};
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.HYiVEQ)] = () => {
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl.string(getSystemLocale /* getSystemLocale */.t.HYiVEQ)] = () => {
     const obj = callback(3867)();
     const addResult = callback(3867)().startOf("day").add(0, "day");
     const items = [addResult, ];
@@ -31,8 +38,8 @@ function getShortcuts() {
     items[1] = addResult.clone().add(1, "day");
     return items;
   };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.cu86KC)] = () => {
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl2.string(getSystemLocale /* getSystemLocale */.t.cu86KC)] = () => {
     const obj = callback(3867)();
     const addResult = callback(3867)().startOf("day").add(-1, "day");
     const items = [addResult, ];
@@ -40,8 +47,8 @@ function getShortcuts() {
     items[1] = addResult.clone().add(1, "day");
     return items;
   };
-  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["FvBj/6"])] = () => {
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl3.string(getSystemLocale /* getSystemLocale */.t["FvBj/6"])] = () => {
     const obj = callback(3867)();
     const addResult = callback(3867)().startOf("week").add(0, "week");
     const items = [addResult, ];
@@ -49,8 +56,8 @@ function getShortcuts() {
     items[1] = addResult.clone().add(1, "week");
     return items;
   };
-  const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["20uWCw"])] = () => {
+  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl4.string(getSystemLocale /* getSystemLocale */.t["20uWCw"])] = () => {
     const obj = callback(3867)();
     const addResult = callback(3867)().startOf("month").add(0, "month");
     const items = [addResult, ];
@@ -58,8 +65,8 @@ function getShortcuts() {
     items[1] = addResult.clone().add(1, "month");
     return items;
   };
-  const intl5 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl5.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["dXC/hn"])] = () => {
+  const intl5 = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl5.string(getSystemLocale /* getSystemLocale */.t["dXC/hn"])] = () => {
     const obj = callback(3867)();
     const addResult = callback(3867)().startOf("year").add(0, "year");
     const items = [addResult, ];
@@ -124,8 +131,8 @@ function dateValidator(getFullMatch) {
     const tmp23 = callback(tmp2(), 2);
   } else {
     const _Set3 = Set;
-    const obj20 = require("../../../../_runtime/03867_t.js");
-    const set = new Set(require("../../../../_runtime/03867_t.js").months().map((str) => str.toLowerCase()));
+    const obj20 = t;
+    const set = new Set(t.months().map((str) => str.toLowerCase()));
     if (set.has(formatted)) {
       const localResult = tmp32(3867)(formatted, "MMMM").local();
       const items = [localResult, ];
@@ -174,7 +181,7 @@ function dateValidator(getFullMatch) {
       }
       const weekdaysResult = tmp32Result.weekdays();
     }
-    const monthsResult = require("../../../../_runtime/03867_t.js").months();
+    const monthsResult = t.months();
   }
   const isValidResult = obj9.isValid();
   let tmp25 = !isValidResult;
@@ -218,15 +225,15 @@ function isValidChannelAutocomplete(token, guildId) {
       const combined = store2.getChannels(guildId)[closure_5].concat(store2.getChannels(guildId)[closure_6]);
       importDefault = store2.getTextChannelNameDisambiguations(guildId);
       const obj3 = store2.getChannels(guildId)[closure_5];
-      const obj4 = require("../../../../_runtime/00012_apply.js");
-      const mapped = require("../../../../_runtime/00012_apply.js").chain(combined).map((channel) => channel.channel);
+      const obj4 = apply;
+      const mapped = apply.chain(combined).map((channel) => channel.channel);
       if (null != guildId) {
         let allThreadsForGuild = store.getAllThreadsForGuild(guildId);
       } else {
         allThreadsForGuild = [];
       }
       const combined1 = mapped.concat(allThreadsForGuild);
-      const chainResult = require("../../../../_runtime/00012_apply.js").chain(combined);
+      const chainResult = apply.chain(combined);
       const valueResult = combined1.filter((channel) => {
         let name;
         if (dependencyMap[channel.id] != null) {
@@ -303,38 +310,38 @@ function isValidChannelAutocomplete(token, guildId) {
 }
 function getHasMap() {
   const obj = {};
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ZNR2fi)] = "link";
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["20uQR3"])] = "embed";
-  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.L4lxyE)] = "poll";
-  const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.nrpA5E)] = "snapshot";
-  const intl5 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl5.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["AV/v6i"])] = "file";
-  const intl6 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl6.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.XM9XGP)] = "video";
-  const intl7 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl7.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.TNLcpx)] = "image";
-  const intl8 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl8.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.F8Wf0e)] = "sound";
-  const intl9 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl9.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.PJgX2h)] = "sticker";
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl.string(getSystemLocale /* getSystemLocale */.t.ZNR2fi)] = "link";
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl2.string(getSystemLocale /* getSystemLocale */.t["20uQR3"])] = "embed";
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl3.string(getSystemLocale /* getSystemLocale */.t.L4lxyE)] = "poll";
+  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl4.string(getSystemLocale /* getSystemLocale */.t.nrpA5E)] = "snapshot";
+  const intl5 = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl5.string(getSystemLocale /* getSystemLocale */.t["AV/v6i"])] = "file";
+  const intl6 = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl6.string(getSystemLocale /* getSystemLocale */.t.XM9XGP)] = "video";
+  const intl7 = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl7.string(getSystemLocale /* getSystemLocale */.t.TNLcpx)] = "image";
+  const intl8 = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl8.string(getSystemLocale /* getSystemLocale */.t.F8Wf0e)] = "sound";
+  const intl9 = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl9.string(getSystemLocale /* getSystemLocale */.t.PJgX2h)] = "sticker";
   return obj;
 }
 function isValidHasAutocomplete(token) {
-  return require("SearchTokensUtils.tsx") /* ANSWER_IN_REGEX */.validateForMapWithNegation("has", getHasMap(), token);
+  return ANSWER_IN_REGEX /* ANSWER_IN_REGEX */.validateForMapWithNegation("has", getHasMap(), token);
 }
 function isValidAuthorTypeAutocomplete(token) {
-  let obj = require("SearchTokensUtils.tsx") /* ANSWER_IN_REGEX */;
+  let obj = ANSWER_IN_REGEX /* ANSWER_IN_REGEX */;
   obj = {};
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.tPZo4p)] = "user";
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.JL7sRS)] = "bot";
-  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.WjkIKU)] = "webhook";
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl.string(getSystemLocale /* getSystemLocale */.t.tPZo4p)] = "user";
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl2.string(getSystemLocale /* getSystemLocale */.t.JL7sRS)] = "bot";
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj[intl3.string(getSystemLocale /* getSystemLocale */.t.WjkIKU)] = "webhook";
   return obj.validateForMapWithNegation("author_type", obj, token);
 }
 function isValidPinnedAutocomplete(getMatch) {
@@ -352,19 +359,19 @@ function isValidPinnedAutocomplete(getMatch) {
   return flag;
 }
 function generateDateAutocompletions() {
-  const obj = require("../../../../_runtime/03867_t.js");
-  const monthsResult = require("../../../../_runtime/03867_t.js").months();
-  const items = [...Array.from(new Set(require("../../../../_runtime/03867_t.js").months().map((str) => str.toLowerCase())))];
-  const set = new Set(require("../../../../_runtime/03867_t.js").months().map((str) => str.toLowerCase()));
-  const obj2 = require("../../../../_runtime/03867_t.js");
-  const weekdaysResult = require("../../../../_runtime/03867_t.js").weekdays();
-  let arraySpreadResult = HermesBuiltin.arraySpread(Array.from(new Set(require("../../../../_runtime/03867_t.js").weekdays().map((str) => str.toLowerCase()))), tmp2);
-  const set1 = new Set(require("../../../../_runtime/03867_t.js").weekdays().map((str) => str.toLowerCase()));
+  const obj = t;
+  const monthsResult = t.months();
+  const items = [...Array.from(new Set(t.months().map((str) => str.toLowerCase())))];
+  const set = new Set(t.months().map((str) => str.toLowerCase()));
+  const obj2 = t;
+  const weekdaysResult = t.weekdays();
+  let arraySpreadResult = HermesBuiltin.arraySpread(Array.from(new Set(t.weekdays().map((str) => str.toLowerCase()))), tmp2);
+  const set1 = new Set(t.weekdays().map((str) => str.toLowerCase()));
   const fullYear = new Date().getFullYear();
   const date = new Date();
-  const obj4 = require("../../../../_runtime/00012_apply.js");
-  const rangeResult = require("../../../../_runtime/00012_apply.js").range(2015, fullYear + 1);
-  arraySpreadResult = HermesBuiltin.arraySpread(Array.from(new Set(require("../../../../_runtime/00012_apply.js").range(2015, fullYear + 1).map((arg0) => arg0.toString()))), arraySpreadResult);
+  const obj4 = apply;
+  const rangeResult = apply.range(2015, fullYear + 1);
+  arraySpreadResult = HermesBuiltin.arraySpread(Array.from(new Set(apply.range(2015, fullYear + 1).map((arg0) => arg0.toString()))), arraySpreadResult);
   HermesBuiltin.arraySpread(Object.keys(getShortcuts()), arraySpreadResult);
   return items;
 }
@@ -580,7 +587,7 @@ function getChannelAutocompletions(arg0) {
     if ("#" === str2[0]) {
       substr1 = str2.substring(1);
     }
-    let obj2 = _require("../SearchUtils.tsx");
+    let obj2 = _SearchTokenTypes;
     if (obj2.isGuildLikeSearchContext(searchContext)) {
       const guildId = searchContext.guildId;
       _require = undefined;
@@ -591,16 +598,16 @@ function getChannelAutocompletions(arg0) {
       obj[2] = guildId;
       let tmpResult = tmp(5126);
       obj[7] = tmpResult.getBoosterMap(tmp(7230).AutocompleterResultTypes.TEXT_CHANNEL);
-      const obj12 = require("../../../utils/AutocompleteUtils.tsx");
+      const obj12 = NOOP;
       const tmp7 = importDefault;
-      const queryChannelsResult = require("../../../utils/AutocompleteUtils.tsx").queryChannels(obj);
+      const queryChannelsResult = NOOP.queryChannels(obj);
       obj = { query: null, type: null, guildId: null, limit: Infinity, allowEmptyQueries: true, allowSnowflake: true, boosters: null };
       obj[0] = substr1;
       obj[1] = closure_6;
       obj[2] = guildId;
       tmpResult = tmp(5126);
       obj[6] = tmpResult.getBoosterMap(tmp(7230).AutocompleterResultTypes.VOICE_CHANNEL);
-      const combined = queryChannelsResult.concat(require("../../../utils/AutocompleteUtils.tsx").queryChannels(obj));
+      const combined = queryChannelsResult.concat(NOOP.queryChannels(obj));
       const mapped = combined.map((record) => record.record);
       if (0 === substr1.length) {
         _require = store3.getChannelId(guildId);
@@ -611,7 +618,7 @@ function getChannelAutocompletions(arg0) {
         }
       }
       importDefault = store2.getTextChannelNameDisambiguations(guildId);
-      const obj16 = require("../../../utils/AutocompleteUtils.tsx");
+      const obj16 = NOOP;
       const obj19 = tmp7(12)(mapped);
       const takeResult = tmp7(12)(mapped).take(maxResults);
       substr = tmp7(12)(mapped).take(maxResults).map((channel) => {
@@ -644,19 +651,19 @@ function getChannelAutocompletions(arg0) {
           const obj1 = { query: null, limit: null, fuzzy: true, boosters: null };
           obj1[0] = substr1;
           obj1[1] = maxResults;
-          const obj4 = require("../../../utils/AutocompleteUtils.tsx");
+          const obj4 = NOOP;
           obj1[3] = tmp(5126).getBoosterMap(tmp(7230).AutocompleterResultTypes.GROUP_DM);
           const tmpResult1 = tmp(5126);
           const queryGroupDMsResult = obj4.queryGroupDMs(obj1);
           obj2 = { query: null, limit: null, boosters: null };
           obj2[0] = substr1;
           obj2[1] = maxResults;
-          const obj8 = require("../../../utils/AutocompleteUtils.tsx");
+          const obj8 = NOOP;
           obj2[2] = tmp(5126).getBoosterMap(tmp(7230).AutocompleterResultTypes.USER);
           const tmpResult2 = tmp(5126);
           const queryDMChannelsResult = obj8.queryDMChannels(obj2);
-          const tmp6 = require("../../../../_runtime/00012_apply.js");
-          const sorted = require("../../../../_runtime/00012_apply.js")(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(tmp(7230).sortByMatchScore);
+          const tmp6 = apply;
+          const sorted = apply(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(tmp(7230).sortByMatchScore);
           const mapped1 = sorted.map((record) => {
             record = record.record;
             const obj = { text: record.comparator, channel: record, key: null };
@@ -667,7 +674,7 @@ function getChannelAutocompletions(arg0) {
             obj[2] = id;
             return obj;
           });
-          const tmp6Result = require("../../../../_runtime/00012_apply.js")(queryGroupDMsResult.concat(queryDMChannelsResult));
+          const tmp6Result = apply(queryGroupDMsResult.concat(queryDMChannelsResult));
           const iter = mapped1.filter((text) => null != text.text && null != text.channel && null != text.key);
           substr = mapped1.filter((text) => null != text.text && null != text.channel && null != text.key).value().slice(0, maxResults);
           const valueResult = mapped1.filter((text) => null != text.text && null != text.channel && null != text.key).value();
@@ -1135,7 +1142,7 @@ export const getLocalizedAuthorTypeAnswer = function getLocalizedAuthorTypeAnswe
   return combined;
 };
 export const getRandomDateShortcut = function getRandomDateShortcut() {
-  return require("../../../../_runtime/00012_apply.js").sample(generateDateAutocompletions());
+  return apply.sample(generateDateAutocompletions());
 };
 export { getUserAutocompletions };
 export const ComponentTypes = obj;
@@ -1153,9 +1160,9 @@ export const isMeAutcompleteAnswer = function isMeAutcompleteAnswer(str) {
     return false;
   } else {
     const replaced = str.toLowerCase().replace(/^@/, "");
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     str = str.toLowerCase();
-    let startsWithResult = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Qf3ptv).startsWith(replaced);
+    let startsWithResult = intl.string(getSystemLocale /* getSystemLocale */.t.Qf3ptv).startsWith(replaced);
     if (!startsWithResult) {
       const substr = closure_14.substring(1);
       startsWithResult = substr.startsWith(replaced);
@@ -1169,7 +1176,7 @@ export const isValidFilterAnswerForSubmit = function isValidFilterAnswerForSubmi
   } else {
     const _HermesInternal = HermesInternal;
     const items = ["filter:" + trimmed, trimmed];
-    const token = new require("../../../lib/QueryTokenizer.tsx") /* getMatch */.Token(items, tmp);
+    const token = new getMatch /* getMatch */.Token(items, tmp);
     if (SearchTokenTypes.ANSWER_HAS === tmp) {
       let tmp7Result = tmp7(11628);
       return tmp7Result.validateForMapWithNegation("has", getHasMap(), token);

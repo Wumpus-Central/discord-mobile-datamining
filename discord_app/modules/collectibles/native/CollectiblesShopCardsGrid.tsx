@@ -1,3 +1,4 @@
+import { CollectiblesShopCardInternalV2 } from "CollectiblesShopCardV2.tsx";
 // discord_app/modules/collectibles/native/CollectiblesShopCardsGrid.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -20,7 +21,7 @@ function ShopCardGridItem(index) {
   ({ product, cardWidth, preferVCPrice, unpublishedAt, disableBundleStaticBackground, muteBundleStaticBackground } = index);
   const memo = React.useMemo(() => ({ tilePosition: index }), items);
   const obj = { newValue: memo, children: null };
-  obj[1] = jsx(require("CollectiblesShopCardV2.tsx"), { unpublishedAt, product, cardWidth, preferVCPrice, disableBundleStaticBackground, muteBundleStaticBackground });
+  obj[1] = jsx(CollectiblesShopCardInternalV2, { unpublishedAt, product, cardWidth, preferVCPrice, disableBundleStaticBackground, muteBundleStaticBackground });
   return jsx(index(9265).CollectiblesAnalyticsProvider, { newValue: memo, children: null });
 }
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);

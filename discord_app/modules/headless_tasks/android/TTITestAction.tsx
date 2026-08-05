@@ -1,3 +1,7 @@
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx";
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { getHermesInstrumentedStatsSummary } from "../../../utils/ProcessUtils.native.tsx";
 // discord_app/modules/headless_tasks/android/TTITestAction.tsx
 import importDefaultResult from "ensureGuildLoaded";
 import { applicationReady } from "linkFromAppsFlyer";
@@ -10,12 +14,12 @@ let closure_0 = arg1;
 function sendReply(status, message) {
   const merged = Object.assign(arg2);
   const json = JSON.stringify({ type: "response", status, message });
-  require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
+  enforcing.logToDevice(json);
 }
 function sendStatus(message) {
   tmp2.log(message);
   const json = JSON.stringify({ type: "status", message });
-  require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
+  enforcing.logToDevice(json);
 }
 function getErrorDetails(headers) {
   if (null != headers) {
@@ -365,7 +369,7 @@ let obj = {
   "setup-test": setupTTITest,
   ping() {
     const json = JSON.stringify({ type: "pong" });
-    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
+    enforcing.logToDevice(json);
   },
   () => {
     let obj = callback(9791);
@@ -373,7 +377,7 @@ let obj = {
     obj = { type: "response", status: "success", message: "reset-component-profiler" };
     const merged = Object.assign(undefined);
     const json = JSON.stringify(obj);
-    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
+    enforcing.logToDevice(json);
   },
   () => {
     let obj = callback(9791);
@@ -381,7 +385,7 @@ let obj = {
     obj = { type: "response", status: "success", message: "pause-component-profiler" };
     const merged = Object.assign(undefined);
     const json = JSON.stringify(obj);
-    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
+    enforcing.logToDevice(json);
   },
   () => {
     let obj = callback(9791);
@@ -389,7 +393,7 @@ let obj = {
     obj = { type: "response", status: "success", message: "resume-component-profiler" };
     const merged = Object.assign(undefined);
     const json = JSON.stringify(obj);
-    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
+    enforcing.logToDevice(json);
   },
   () => {
     let obj = { stats: null };
@@ -398,10 +402,10 @@ let obj = {
     const merged = Object.assign(obj);
     const json = JSON.stringify(obj);
     const obj2 = callback(9791);
-    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
+    enforcing.logToDevice(json);
   },
   () => {
-    let obj = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx");
+    let obj = enforcing;
     let report;
     if (obj != null) {
       report = obj.requestReport();
@@ -410,53 +414,53 @@ let obj = {
     obj = { type: "response", status: "success", message: "dump-jank-stats" };
     const merged = Object.assign(obj);
     const json = JSON.stringify(obj);
-    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
+    enforcing.logToDevice(json);
   },
   (multiplier) => {
-    let obj = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx");
+    let obj = enforcing;
     if (obj != null) {
       const result = obj.setJankHeuristicMultiplier(multiplier.multiplier);
     }
     obj = { type: "response", status: "success", message: "set-jank-multiplier" };
     const merged = Object.assign(undefined);
     const json = JSON.stringify(obj);
-    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
+    enforcing.logToDevice(json);
   },
   () => {
-    let obj = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeJankStatsModule.tsx");
+    let obj = enforcing;
     if (obj != null) {
       obj.startTracking();
     }
     obj = { type: "response", status: "success", message: "start-jank-stats" };
     const merged = Object.assign(undefined);
     const json = JSON.stringify(obj);
-    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
+    enforcing.logToDevice(json);
   },
   (action) => {
-    let obj = require("../../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj.dispatch(action.action);
     obj = { type: "response", status: "success", message: "flux-dispatch" };
     const merged = Object.assign(undefined);
     const json = JSON.stringify(obj);
-    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
+    enforcing.logToDevice(json);
   },
   () => {
     let obj = { token: token.getToken() };
     obj = { type: "response", status: "success", message: "get-token" };
     const merged = Object.assign(obj);
     const json = JSON.stringify(obj);
-    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
+    enforcing.logToDevice(json);
   },
   () => {
     let obj = { cumulativeCPU: null, currentMemoryUsage: null };
-    obj[0] = require("../../../utils/ProcessUtils.native.tsx").getCumulativeCPUUsage();
-    const obj2 = require("../../../utils/ProcessUtils.native.tsx");
-    obj[1] = require("../../../utils/ProcessUtils.native.tsx").getCurrentMemoryUsageKB();
+    obj[0] = getHermesInstrumentedStatsSummary.getCumulativeCPUUsage();
+    const obj2 = getHermesInstrumentedStatsSummary;
+    obj[1] = getHermesInstrumentedStatsSummary.getCurrentMemoryUsageKB();
     obj = { type: "response", status: "success", message: "get-resource-usage" };
     const merged = Object.assign(obj);
     const json = JSON.stringify(obj);
-    const obj3 = require("../../../utils/ProcessUtils.native.tsx");
-    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx").logToDevice(json);
+    const obj3 = getHermesInstrumentedStatsSummary;
+    enforcing.logToDevice(json);
   },
   backchannel: null
 };

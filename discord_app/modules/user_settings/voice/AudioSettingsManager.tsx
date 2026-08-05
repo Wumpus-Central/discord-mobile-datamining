@@ -1,3 +1,7 @@
+import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import { AudioSettingsDefaultVolumes } from "../../../../discord_common/js/shared/shared-constants/AudioSettingsDefaultVolumes.tsx";
+import { updateUserGuildSettings } from "../UserSettingsProtoActionCreators.tsx";
+import { getPendingAudioSettings } from "AudioSettingsPending.tsx";
 // discord_app/modules/user_settings/voice/AudioSettingsManager.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
@@ -11,7 +15,7 @@ import importDefaultResult1 from "apply";
 
 const require = arg1;
 function handleConnectionOpen() {
-  let Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  let Storage = Storage /* Storage */.Storage;
   const id = store.getId();
   if (typeof SETTINGS_MIGRATION_KEY !== "function") {
     HermesBuiltin.throwTypeError();
@@ -139,9 +143,9 @@ function handleSetLocalVolume(arg0) {
     }
     obj = { volume: null };
     obj[0] = volume;
-    const result = require("AudioSettingsPending.tsx") /* getPendingAudioSettings */.updatePendingSettings(context, userId, obj);
+    const result = getPendingAudioSettings /* getPendingAudioSettings */.updatePendingSettings(context, userId, obj);
     lib();
-    const obj2 = require("AudioSettingsPending.tsx") /* getPendingAudioSettings */;
+    const obj2 = getPendingAudioSettings /* getPendingAudioSettings */;
   }
 }
 function handleSetLocalMute(arg0) {
@@ -149,12 +153,12 @@ function handleSetLocalMute(arg0) {
   let userId;
   ({ context, userId } = arg0);
   if (userId !== store.getId()) {
-    let obj = require("AudioSettingsPending.tsx") /* getPendingAudioSettings */;
+    let obj = getPendingAudioSettings /* getPendingAudioSettings */;
     obj = { muted: null };
     obj[0] = _detectH265HardwareDecode.isLocalMute(userId, context);
     const result = obj.updatePendingSettings(context, userId, obj);
     lib.cancel();
-    const PreloadedUserSettingsActionCreators = require("../UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.PreloadedUserSettingsActionCreators;
+    const PreloadedUserSettingsActionCreators = updateUserGuildSettings /* updateUserGuildSettings */.PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", (arg0) => {
       const callback = arg0;
       let c1 = false;
@@ -222,7 +226,7 @@ function handleSetLocalMute(arg0) {
         callback2 = tmp25;
       });
       return c1;
-    }, require("../UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.UserSettingsDelay.INFREQUENT_USER_ACTION);
+    }, updateUserGuildSettings /* updateUserGuildSettings */.UserSettingsDelay.INFREQUENT_USER_ACTION);
     const isLocalMuteResult = _detectH265HardwareDecode.isLocalMute(userId, context);
   }
 }
@@ -230,12 +234,12 @@ function handleSetLocalSoundboardMute(userId) {
   userId = userId.userId;
   if (userId !== store.getId()) {
     const result = localSoundboardMuted.isLocalSoundboardMuted(userId);
-    let obj = require("AudioSettingsPending.tsx") /* getPendingAudioSettings */;
+    let obj = getPendingAudioSettings /* getPendingAudioSettings */;
     obj = { soundboardMuted: null };
     obj[0] = result;
     const result1 = obj.updatePendingSettings(userId.context, userId, obj);
     lib.cancel();
-    const PreloadedUserSettingsActionCreators = require("../UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.PreloadedUserSettingsActionCreators;
+    const PreloadedUserSettingsActionCreators = updateUserGuildSettings /* updateUserGuildSettings */.PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", (arg0) => {
       const callback = arg0;
       let c1 = false;
@@ -303,18 +307,18 @@ function handleSetLocalSoundboardMute(userId) {
         callback2 = tmp25;
       });
       return c1;
-    }, require("../UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.UserSettingsDelay.INFREQUENT_USER_ACTION);
+    }, updateUserGuildSettings /* updateUserGuildSettings */.UserSettingsDelay.INFREQUENT_USER_ACTION);
   }
 }
 function handleResetMediaEngineSettings(arg0) {
   if (arg0 == null) {
     HermesBuiltin.throwTypeError();
   } else {
-    const PreloadedUserSettingsActionCreators = require("../UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.PreloadedUserSettingsActionCreators;
+    const PreloadedUserSettingsActionCreators = updateUserGuildSettings /* updateUserGuildSettings */.PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", (arg0) => {
       arg0.user = {};
       arg0.stream = {};
-    }, require("../UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.UserSettingsDelay.INFREQUENT_USER_ACTION);
+    }, updateUserGuildSettings /* updateUserGuildSettings */.UserSettingsDelay.INFREQUENT_USER_ACTION);
   }
 }
 function SETTINGS_MIGRATION_KEY(arg0) {
@@ -322,14 +326,14 @@ function SETTINGS_MIGRATION_KEY(arg0) {
 }
 function DEFAULT_VOLUME_FOR_CONTEXT(arg0) {
   if (arg0 === MediaEngineContextTypes.STREAM) {
-    let USER = require("../../../../discord_common/js/shared/shared-constants/AudioSettingsDefaultVolumes.tsx") /* AudioSettingsDefaultVolumes */.AudioSettingsDefaultVolumes.STREAM;
+    let USER = AudioSettingsDefaultVolumes /* AudioSettingsDefaultVolumes */.AudioSettingsDefaultVolumes.STREAM;
   } else {
-    USER = require("../../../../discord_common/js/shared/shared-constants/AudioSettingsDefaultVolumes.tsx") /* AudioSettingsDefaultVolumes */.AudioSettingsDefaultVolumes.USER;
+    USER = AudioSettingsDefaultVolumes /* AudioSettingsDefaultVolumes */.AudioSettingsDefaultVolumes.USER;
   }
   return USER;
 }
 let closure_12 = require("apply").debounce(() => {
-  const PreloadedUserSettingsActionCreators = require("../UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.PreloadedUserSettingsActionCreators;
+  const PreloadedUserSettingsActionCreators = updateUserGuildSettings /* updateUserGuildSettings */.PreloadedUserSettingsActionCreators;
   PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", (arg0) => {
     const callback = arg0;
     let c1 = false;
@@ -397,7 +401,7 @@ let closure_12 = require("apply").debounce(() => {
       callback2 = tmp25;
     });
     return c1;
-  }, require("../UserSettingsProtoActionCreators.tsx") /* updateUserGuildSettings */.UserSettingsDelay.INFREQUENT_USER_ACTION);
+  }, updateUserGuildSettings /* updateUserGuildSettings */.UserSettingsDelay.INFREQUENT_USER_ACTION);
 }, 2000);
 let closure_13 = require("apply").debounce(require("disconnectRemote").remoteAudioSettingsUpdate, 500, { maxWait: 500 });
 let prototype = function AudioSettingsManager() {

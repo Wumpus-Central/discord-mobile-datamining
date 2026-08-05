@@ -1,3 +1,4 @@
+import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/chat_input/native/getChatInputPositionStyle.tsx
 let obj = {};
 const merged = Object.assign(require("get ActivityIndicator").StyleSheet.absoluteFillObject);
@@ -14,7 +15,7 @@ export default function getChatInputPositionStyle() {
     if (obj2.isIOS()) {
       tmp = obj;
     }
-    obj2 = require("../../../utils/PlatformUtils.tsx") /* set */;
+    obj2 = set /* set */;
   }
   return tmp;
 };

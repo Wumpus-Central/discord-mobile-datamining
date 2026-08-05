@@ -1,3 +1,8 @@
+import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/oauth2/native/OAuth2AuthorizeModal.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -26,9 +31,9 @@ export default function OAuth2AuthorizeModal(arg0) {
   const tmp = createCacheKey();
   const tmp4 = sharedValue(10422)(arg0);
   const require = tmp4;
-  let obj = require("../../reanimated/ReanimatedRexport.tsx");
+  let obj = ReanimatedRexport;
   sharedValue = obj.useSharedValue(0);
-  let obj1 = require("../../reanimated/ReanimatedRexport.tsx");
+  let obj1 = ReanimatedRexport;
   const fn = function b() {
     let opacity = sharedValue.get();
     if (opacity == null) {
@@ -83,12 +88,12 @@ export default function OAuth2AuthorizeModal(arg0) {
     tmp11Result = tmp11(tmp5(5270).XSmallIcon, obj4);
   }
   obj2[3] = tmp11Result;
-  const items2 = [closure_5(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj2), , ];
+  const items2 = [closure_5(PressableBase /* PressableBase */.PressableOpacity, obj2), , ];
   const obj5 = { style: tmp.title, children: null };
   const obj6 = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
   const intl3 = tmp5(1236).intl;
-  obj6[2] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["y+/PE9"]);
-  obj5[1] = closure_5(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj6);
+  obj6[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["y+/PE9"]);
+  obj5[1] = closure_5(Text /* Text */.Text, obj6);
   items2[1] = closure_5(View, obj5);
   const items3 = [tmp.titleContainerBorder, animatedStyle];
   items2[2] = closure_5(sharedValue(4146).View, { style: items3 });
@@ -100,7 +105,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   obj8.onScroll = callback;
   obj8.centerContent = true;
   obj7[2] = closure_5(sharedValue(10855), obj8);
-  items4[1] = closure_5(require("../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj7);
+  items4[1] = closure_5(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj7);
   obj[1] = items4;
   return closure_6(View, obj);
 };

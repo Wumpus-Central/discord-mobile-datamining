@@ -1,3 +1,7 @@
+import { apexExperiment } from "../modules/age_gate/ServerNSFWLevelExperiment.tsx";
+import { getAvatarURL } from "../utils/AvatarUtils.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
+import { isNullOrEmpty } from "../utils/StringUtils.tsx";
 // discord_app/records/GuildRecord.tsx
 import isValueEqual from "isValueEqual";
 import ME from "ME";
@@ -33,7 +37,7 @@ export const getGuildIconURL = function getGuildIconURL(id, size) {
   if (arg3 === undefined) {
     flag2 = false;
   }
-  let obj = require("../utils/AvatarUtils.tsx");
+  let obj = getAvatarURL;
   obj = { id: id.id, size, icon: id.icon, canAnimate: flag, lossless: flag2 };
   return obj.getGuildIconURL(obj);
 };
@@ -43,14 +47,14 @@ export const getGuildIconSource = function getGuildIconSource(arg0, arg1, flag) 
   if (flag === undefined) {
     flag = false;
   }
-  return require("../utils/AvatarUtils.tsx").getAnimatableSourceWithFallback(flag, (canAnimate) => {
+  return getAvatarURL.getAnimatableSourceWithFallback(flag, (canAnimate) => {
     let obj = callback(outer1_2[2]);
     obj = { id: closure_0.id, size: callback, icon: closure_0.icon, canAnimate };
     return obj.getGuildIconSource(obj);
   });
 };
 export const getGuildAcronym = function getGuildAcronym(guild) {
-  return require("../utils/StringUtils.tsx") /* isNullOrEmpty */.getAcronym(guild.name);
+  return isNullOrEmpty /* isNullOrEmpty */.getAcronym(guild.name);
 };
 export const isGuildOwner = function isGuildOwner(guild, currentUser) {
   let tmp = currentUser;
@@ -87,7 +91,7 @@ export const isGuildLurker = function isGuildLurker(guild) {
   return null == guild.joinedAt;
 };
 export const getGuildEveryoneRoleId = function getGuildEveryoneRoleId(closure_7) {
-  return require("../utils/SnowflakeUtils.tsx").castGuildIdAsEveryoneGuildRoleId(closure_7.id);
+  return DISCORD_EPOCH.castGuildIdAsEveryoneGuildRoleId(closure_7.id);
 };
 export const updateJoinedAt = function updateJoinedAt(guild, joinedAt) {
   let date = joinedAt;
@@ -116,6 +120,6 @@ export const isGuildNSFW = function isGuildNSFW(guild) {
       }
       hasItem = has(DEFAULT);
     }
-    obj = require("../modules/age_gate/ServerNSFWLevelExperiment.tsx") /* apexExperiment */;
+    obj = apexExperiment /* apexExperiment */;
   }
 };

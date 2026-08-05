@@ -1,3 +1,5 @@
+import { useCountdown } from "../../../hooks/useCountdown.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/billing/hooks/useFPDurationLeft.tsx
 function roundFPCountdownUnits(arg0) {
   let obj = {};
@@ -63,26 +65,26 @@ const result = require("resetCache").fileFinishedImporting("modules/billing/hook
 export default function useFPDurationLeft(toDate) {
   if (obj.SHORT_TIME_LEFT === arg1) {
     obj = { days: null, hours: null, minutes: null };
-    obj[0] = require("../../../intl/index.native.tsx") /* getSystemLocale */.t["/wnvqA"];
-    obj[1] = require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Jsq0XN;
-    obj[2] = require("../../../intl/index.native.tsx") /* getSystemLocale */.t["SBd+Bs"];
+    obj[0] = getSystemLocale /* getSystemLocale */.t["/wnvqA"];
+    obj[1] = getSystemLocale /* getSystemLocale */.t.Jsq0XN;
+    obj[2] = getSystemLocale /* getSystemLocale */.t["SBd+Bs"];
   } else if (tmp.LONG_TIME_LEFT === arg1) {
     obj = { days: null, hours: null, minutes: null };
-    obj[0] = require("../../../intl/index.native.tsx") /* getSystemLocale */.t.UD5nn5;
-    obj[1] = require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Hg8Fee;
-    obj[2] = require("../../../intl/index.native.tsx") /* getSystemLocale */.t.XSbQZZ;
+    obj[0] = getSystemLocale /* getSystemLocale */.t.UD5nn5;
+    obj[1] = getSystemLocale /* getSystemLocale */.t.Hg8Fee;
+    obj[2] = getSystemLocale /* getSystemLocale */.t.XSbQZZ;
   } else {
     if (tmp.ENDS_IN === arg1) {
       const obj1 = { days: null, hours: null, minutes: null };
-      obj1[0] = require("../../../intl/index.native.tsx") /* getSystemLocale */.t.rLqNad;
-      obj1[1] = require("../../../intl/index.native.tsx") /* getSystemLocale */.t.d1LvCA;
-      obj1[2] = require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Z2LX7K;
+      obj1[0] = getSystemLocale /* getSystemLocale */.t.rLqNad;
+      obj1[1] = getSystemLocale /* getSystemLocale */.t.d1LvCA;
+      obj1[2] = getSystemLocale /* getSystemLocale */.t.Z2LX7K;
     } else if (tmp.CREDITS_ENDS_IN !== arg1) {
       if (tmp.SHORT_TIME === arg1) {
         obj = { days: null, hours: null, minutes: null };
-        obj[0] = require("../../../intl/index.native.tsx") /* getSystemLocale */.t.fYmirx;
-        obj[1] = require("../../../intl/index.native.tsx") /* getSystemLocale */.t["C3RO+g"];
-        obj[2] = require("../../../intl/index.native.tsx") /* getSystemLocale */.t.r77oHc;
+        obj[0] = getSystemLocale /* getSystemLocale */.t.fYmirx;
+        obj[1] = getSystemLocale /* getSystemLocale */.t["C3RO+g"];
+        obj[2] = getSystemLocale /* getSystemLocale */.t.r77oHc;
       } else {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
@@ -91,11 +93,11 @@ export default function useFPDurationLeft(toDate) {
       }
     }
     const obj2 = { days: null, hours: null, minutes: null };
-    obj2[0] = require("../../../intl/index.native.tsx") /* getSystemLocale */.t.xQ3zuN;
-    obj2[1] = require("../../../intl/index.native.tsx") /* getSystemLocale */.t.SFU7QN;
-    obj2[2] = require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Y4FNdL;
+    obj2[0] = getSystemLocale /* getSystemLocale */.t.xQ3zuN;
+    obj2[1] = getSystemLocale /* getSystemLocale */.t.SFU7QN;
+    obj2[2] = getSystemLocale /* getSystemLocale */.t.Y4FNdL;
   }
-  roundFPCountdownUnits(require("../../../hooks/useCountdown.tsx")(toDate.toDate(), 60000));
+  roundFPCountdownUnits(useCountdown(toDate.toDate(), 60000));
 };
 export const CountDownMessageTypes = obj;
 export { roundFPCountdownUnits };

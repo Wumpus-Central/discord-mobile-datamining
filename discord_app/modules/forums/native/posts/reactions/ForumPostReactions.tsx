@@ -1,3 +1,6 @@
+import { useReactionPermissions } from "../../../../messages/useReactionPermissions.tsx";
+import { useLoadForumUnreadCounts } from "../../../ForumHooks.tsx";
+import { BurstReactionButton } from "ForumPostReactionButton.tsx";
 // discord_app/modules/forums/native/posts/reactions/ForumPostReactions.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -150,8 +153,8 @@ export const MostCommonForumPostReaction = function MostCommonForumPostReaction(
   thread = thread.thread;
   ({ parentChannel, firstMessage, locationAnalyticsObject } = thread);
   const tmp = callback2();
-  ({ disableReactionCreates, disableReactionUpdates } = require("../../../../messages/useReactionPermissions.tsx")(thread));
-  let obj = require("../../../ForumHooks.tsx") /* useLoadForumUnreadCounts */;
+  ({ disableReactionCreates, disableReactionUpdates } = useReactionPermissions(thread));
+  let obj = useLoadForumUnreadCounts /* useLoadForumUnreadCounts */;
   const first = obj.useSomeForumPostReactions({ parentChannel, message: firstMessage }).reactions[0];
   if (null != first) {
     if (!disableReactionUpdates) {
@@ -161,7 +164,7 @@ export const MostCommonForumPostReaction = function MostCommonForumPostReaction(
         obj[1] = thread;
         obj[2] = first;
         obj[3] = locationAnalyticsObject;
-        let tmp7 = callback(require("ForumPostReactionButton.tsx") /* BurstReactionButton */.ForumPostReactionButton, obj);
+        let tmp7 = callback(BurstReactionButton /* BurstReactionButton */.ForumPostReactionButton, obj);
       } else {
         tmp7 = null;
       }

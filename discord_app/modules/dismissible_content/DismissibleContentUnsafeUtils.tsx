@@ -1,3 +1,6 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { useNewUserDismissibleContent } from "NewUserDismissibleContentRegistry.tsx";
 // discord_app/modules/dismissible_content/DismissibleContentUnsafeUtils.tsx
 import isSingleUseDismissibleContent from "isSingleUseDismissibleContent";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -434,7 +437,7 @@ export const useIsDismissibleContentDismissed_UNSAFE = function useIsDismissible
     obj = {};
   }
   const items = [handleConnectionClosedOrResumed, handleConnectionOpen];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_6(closure_0, obj));
+  return _initialize.useStateFromStores(items, () => outer1_6(closure_0, obj));
 };
 export const UNSAFE_markDismissibleContentAsDismissed = function UNSAFE_markDismissibleContentAsDismissed(DONUT_MOBILE_NUX, arg1) {
   const self = this;
@@ -447,7 +450,7 @@ export const UNSAFE_markDismissibleContentAsDismissed = function UNSAFE_markDism
   return applyArgumentsResult;
 };
 export const UNSAFE_isSnowflakeBoundDismissibleContentDismissed = function UNSAFE_isSnowflakeBoundDismissibleContentDismissed(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, promotionId) {
-  let obj = require("NewUserDismissibleContentRegistry.tsx") /* useNewUserDismissibleContent */;
+  let obj = useNewUserDismissibleContent /* useNewUserDismissibleContent */;
   if (obj.disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE)) {
     return { isDismissed: true, lastDismissedSnowflakeId: null };
   } else {
@@ -460,8 +463,8 @@ export const UNSAFE_isSnowflakeBoundDismissibleContentDismissed = function UNSAF
     }
     let tmp6 = null != prop;
     if (tmp6) {
-      tmp6 = 1 !== require("../../utils/SnowflakeUtils.tsx").compare(promotionId, prop);
-      const obj2 = require("../../utils/SnowflakeUtils.tsx");
+      tmp6 = 1 !== DISCORD_EPOCH.compare(promotionId, prop);
+      const obj2 = DISCORD_EPOCH;
     }
     obj = { isDismissed: null, lastDismissedSnowflakeId: null };
     obj[0] = tmp6;

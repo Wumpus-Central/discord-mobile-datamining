@@ -1,3 +1,9 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { t } from "../../../_runtime/03867_t.js";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { EmojiTerms } from "../emoji_terms/EmojiTerms.tsx";
+import { parseRawEmojiObject } from "UnicodeEmojis.tsx";
+import { dedupeEmojisByNameOrId } from "utils/dedupeEmojisByNameOrId.tsx";
 // discord_app/modules/emojis/EmojiStore.tsx
 import dedupeEmojisByNameOrId from "dedupeEmojisByNameOrId";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -189,7 +195,7 @@ function handleUserSettingsProtoStoreChange() {
     }
   }
   if (null != value) {
-    let obj = require("UnicodeEmojis.tsx");
+    let obj = parseRawEmojiObject;
     const result = obj.setDefaultDiversitySurrogate(value);
   }
   EmojiDisambiguations.reset();
@@ -210,7 +216,7 @@ function handleUserSettingsProtoStoreChange() {
   if (emojis1 == null) {
     emojis1 = {};
   }
-  importDefaultResult2.overwriteHistory(require("../../../_runtime/00012_apply.js").mapValues(emojis, (recentUses) => {
+  importDefaultResult2.overwriteHistory(apply.mapValues(emojis, (recentUses) => {
     const obj = {};
     const merged = Object.assign(recentUses);
     recentUses = recentUses.recentUses;
@@ -218,9 +224,9 @@ function handleUserSettingsProtoStoreChange() {
     obj.recentUses = mapped.filter((arg0) => arg0 > 0);
     return obj;
   }), obj.pendingUsages);
-  const obj4 = require("../../../_runtime/00012_apply.js");
+  const obj4 = apply;
   let tmp = closure_8;
-  importDefaultResult3.overwriteHistory(require("../../../_runtime/00012_apply.js").mapValues(emojis1, (recentUses) => {
+  importDefaultResult3.overwriteHistory(apply.mapValues(emojis1, (recentUses) => {
     const obj = {};
     const merged = Object.assign(recentUses);
     recentUses = recentUses.recentUses;
@@ -387,7 +393,7 @@ prototype["isUsable"] = function isUsable(emoji) {
   }
 };
 prototype["emojiIds"] = function emojiIds() {
-  return require("../../utils/SnowflakeUtils.tsx").keys(this._emojiMap);
+  return DISCORD_EPOCH.keys(this._emojiMap);
 };
 Object.defineProperty(prototype, "emojis", {
   get: function emojis(database) {
@@ -429,9 +435,9 @@ prototype["_computeEmojiUsability"] = function _computeEmojiUsability() {
       }
       continue;
     }
-    self._usableEmojis = require("../../../_runtime/00012_apply.js").sortBy(items, (name) => name.name);
+    self._usableEmojis = apply.sortBy(items, (name) => name.name);
     self._hiddenEmojiIds = set;
-    const obj2 = require("../../../_runtime/00012_apply.js");
+    const obj2 = apply;
   }
 };
 Object.defineProperty(prototype, "usableEmojis", {
@@ -749,7 +755,7 @@ prototype2["getFrequentlyUsedEmojisWithoutFetchingLatest"] = function getFrequen
     });
     const found = mapped.filter(self(1351).isNotNullish);
     const items = [];
-    HermesBuiltin.arraySpread(require("utils/dedupeEmojisByNameOrId.tsx")(found).values(), 0);
+    HermesBuiltin.arraySpread(dedupeEmojisByNameOrId(found).values(), 0);
     self.frequentlyUsed = items;
     return self.frequentlyUsed;
   }
@@ -775,7 +781,7 @@ prototype2["rebuildFrequentlyUsedReactionsEmojisWithoutFetchingLatest"] = functi
     return byId;
   });
   const found = mapped.filter(self(1351).isNotNullish);
-  obj = require("utils/dedupeEmojisByNameOrId.tsx")(found);
+  obj = dedupeEmojisByNameOrId(found);
   const items = [...obj.values()];
   self.frequentlyUsedReactionEmojis = items;
   self.frequentlyUsedReactionNamesAndIds = new Set(obj.keys());
@@ -790,7 +796,7 @@ prototype2["isFrequentlyUsedReactionEmojiWithoutFetchingLatest"] = function isFr
   if (null != id.id) {
     return frequentlyUsedReactionNamesAndIds.has(id.id);
   } else {
-    let result = require("UnicodeEmojis.tsx").convertSurrogateToBase(id.surrogates);
+    let result = parseRawEmojiObject.convertSurrogateToBase(id.surrogates);
     if (result == null) {
       result = id;
     }
@@ -824,7 +830,7 @@ prototype2["rebuildFavoriteEmojisWithoutFetchingLatest"] = function rebuildFavor
     return byId;
   });
   const found = mapped.filter(self(1351).isNotNullish);
-  obj = require("utils/dedupeEmojisByNameOrId.tsx")(found);
+  obj = dedupeEmojisByNameOrId(found);
   const items = [...obj.values()];
   self.favorites = items;
   self.favoriteNamesAndIds = new Set(obj.keys());
@@ -908,8 +914,8 @@ prototype2["getEscapedCustomEmoticonNames"] = function getEscapedCustomEmoticonN
 };
 prototype2["nameMatchesChain"] = function nameMatchesChain(matchComparator) {
   let closure_0 = matchComparator;
-  const tmp = require("../../../_runtime/00012_apply.js");
-  return require("../../../_runtime/00012_apply.js")(this.getDisambiguatedEmoji()).filter((arg0) => {
+  const tmp = apply;
+  return apply(this.getDisambiguatedEmoji()).filter((arg0) => {
     let name;
     let names;
     ({ names, name } = arg0);
@@ -944,7 +950,7 @@ let merged = Object.assign({
     return 100;
   },
   lookupKey(id1) {
-    let byName = require("UnicodeEmojis.tsx").getByName(id1);
+    let byName = parseRawEmojiObject.getByName(id1);
     if (byName == null) {
       const tmp3 = getEmojiToGroupId()[id1];
       let tmp4;
@@ -977,7 +983,7 @@ const merged1 = Object.assign({
     return 100;
   },
   lookupKey(id1) {
-    let byName = require("UnicodeEmojis.tsx").getByName(id1);
+    let byName = parseRawEmojiObject.getByName(id1);
     if (byName == null) {
       const tmp3 = getEmojiToGroupId()[id1];
       let tmp4;
@@ -1064,7 +1070,7 @@ Object.defineProperty(prototype3, "categories", {
 });
 Object.defineProperty(prototype3, "diversitySurrogate", {
   get: function diversitySurrogate() {
-    let str = require("UnicodeEmojis.tsx").getDefaultDiversitySurrogate();
+    let str = parseRawEmojiObject.getDefaultDiversitySurrogate();
     if (str == null) {
       str = "";
     }
@@ -1361,7 +1367,7 @@ prototype3["getTopEmojisMetadata"] = function getTopEmojisMetadata(guildId) {
 };
 prototype3["hasUsableEmojiInAnyGuild"] = function hasUsableEmojiInAnyGuild() {
   loadSavedEmojis();
-  const keys = require("../../utils/SnowflakeUtils.tsx").keys(closure_32);
+  const keys = DISCORD_EPOCH.keys(closure_32);
   return keys.some((arg0) => table[arg0].usableEmojis.length > 0);
 };
 prototype3["hasFavoriteEmojis"] = function hasFavoriteEmojis(arg0) {
@@ -1552,9 +1558,9 @@ const emojiStore = new EmojiStore(require("dispatcher"), {
           trackUsage(items1);
         }
       }
-      let obj = require("UnicodeEmojis.tsx");
-      emoji = obj.getByName(require("UnicodeEmojis.tsx").convertSurrogateToName(optimistic.emoji.name, false));
-      const obj2 = require("UnicodeEmojis.tsx");
+      let obj = parseRawEmojiObject;
+      emoji = obj.getByName(parseRawEmojiObject.convertSurrogateToName(optimistic.emoji.name, false));
+      const obj2 = parseRawEmojiObject;
     } else {
       return false;
     }
@@ -1563,7 +1569,7 @@ const emojiStore = new EmojiStore(require("dispatcher"), {
     trackUsage(emojiUsed.emojiUsed);
   },
   USER_SETTINGS_PROTO_UPDATE: function handleUserSettingsProtoUpdate(settings) {
-    const obj = require("../emoji_terms/EmojiTerms.tsx");
+    const obj = EmojiTerms;
     obj.setEmojiLocale(locale.locale);
     if (settings.settings.type === UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
       if (settings.wasSaved) {
@@ -1578,9 +1584,9 @@ const emojiStore = new EmojiStore(require("dispatcher"), {
   TOP_EMOJIS_FETCH_SUCCESS: function handleTopEmojisLoaded(topEmojisMetadata) {
     topEmojisMetadata = topEmojisMetadata.topEmojisMetadata;
     const obj = { emojiIds: topEmojisMetadata.map((emojiId) => emojiId.emojiId), topEmojisTTL: null };
-    const tmp = require("../../../_runtime/03867_t.js");
-    const tmpResult = require("../../../_runtime/03867_t.js")(require("../../../_runtime/03867_t.js")());
-    obj[1] = require("../../../_runtime/03867_t.js")(require("../../../_runtime/03867_t.js")()).add(1, "days").valueOf();
+    const tmp = t;
+    const tmpResult = t(t());
+    obj[1] = t(t()).add(1, "days").valueOf();
     const result = map.set(topEmojisMetadata.guildId, obj);
   },
   TOGGLE_GUILD_EXPANDED_STATE: function toggleGuildExpandedState(guildId) {

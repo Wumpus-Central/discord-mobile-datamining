@@ -1,3 +1,8 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { preload } from "../../components_native/common/FastImage.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import { smartOutput } from "MarkupRulesUtils.tsx";
+import { handleTapCommandMention } from "native/MarkupReactCommandRule.tsx";
 // discord_app/modules/markup/MarkupReactRules.native.tsx
 import showUserProfileActionSheet from "showUserProfileActionSheet";
 import get_ActivityIndicator from "getRootNavigationRef";
@@ -291,7 +296,7 @@ function MarkupBlockQuote(state) {
     textColor = state.textColor;
   }
   obj[1] = textColor;
-  obj[2] = require("MarkupRulesUtils.tsx") /* smartOutput */.smartOutput(node, output, state);
+  obj[2] = smartOutput /* smartOutput */.smartOutput(node, output, state);
   return closure_16(MarkupText, obj, state.key);
 }
 function MarkupInlineCode(arg0) {
@@ -357,7 +362,7 @@ function MarkupCodeBlock(state) {
     textColor = state.textColor;
   }
   obj[1] = textColor;
-  const items = [require("MarkupRulesUtils.tsx") /* smartOutput */.smartOutput(node, output, state), "\n"];
+  const items = [smartOutput /* smartOutput */.smartOutput(node, output, state), "\n"];
   obj[2] = items;
   return closure_17(MarkupText, obj, state.key);
 }
@@ -365,9 +370,9 @@ function MarkupCustomEmoji(styles) {
   let node;
   let state;
   ({ state, node } = styles);
-  const AnimateEmoji = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.AnimateEmoji;
+  const AnimateEmoji = explicitContentFromProto /* explicitContentFromProto */.AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  let obj = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (node.src) {
@@ -396,8 +401,8 @@ function MarkupCustomEmoji(styles) {
       tmp13 = setting;
     }
     obj1[2] = tmp13;
-    let tmp4Result = tmp4(require("../../components_native/common/FastImage.tsx"), obj1, state.key);
-    const tmp10 = require("../../components_native/common/FastImage.tsx");
+    let tmp4Result = tmp4(preload, obj1, state.key);
+    const tmp10 = preload;
   } else {
     let textColor;
     if (state != null) {
@@ -608,7 +613,7 @@ function MarkupCommandMention(state) {
     mention = tmp.mention;
   }
   obj[3] = mention;
-  return tmp2(require("native/MarkupReactCommandRule.tsx"), obj, state.key);
+  return tmp2(handleTapCommandMention, obj, state.key);
 }
 ({ PixelRatio: c4, Pressable: c5, View: closure_6, Text: error } = get_ActivityIndicator);
 ({ EMOJI_CHAT_SIZE, GuildFeatures: map1 } = ME);
@@ -1246,8 +1251,8 @@ export const plainMentionRenderer = function plainMentionRenderer(content, outpu
   if (typeof content.content === "string") {
     content = content.content;
   } else {
-    content = require("MarkupRulesUtils.tsx") /* smartOutput */.smartOutput(content, output, state);
-    const obj = require("MarkupRulesUtils.tsx") /* smartOutput */;
+    content = smartOutput /* smartOutput */.smartOutput(content, output, state);
+    const obj = smartOutput /* smartOutput */;
   }
   return content;
 };

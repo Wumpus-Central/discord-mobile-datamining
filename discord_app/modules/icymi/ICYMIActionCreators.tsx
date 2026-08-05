@@ -1,3 +1,5 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { generateHydrationId } from "ICYMIUtils.tsx";
 // discord_app/modules/icymi/ICYMIActionCreators.tsx
 import generateHydrationId from "generateHydrationId";
 import { Endpoints } from "ME";
@@ -394,12 +396,12 @@ export default {
     })();
   },
   fetchForStatusNotification(arg0) {
-    let obj = require("ICYMIUtils.tsx") /* generateHydrationId */;
+    let obj = generateHydrationId /* generateHydrationId */;
     if (obj.icymiEnabled("fetchInitialStatus")) {
       obj = { type: "LOAD_ICYMI_FROM_NOTIFICATION", customStatusItem: null };
       obj[1] = arg0;
-      require("../../Dispatcher.tsx").dispatch(obj);
-      const obj2 = require("../../Dispatcher.tsx");
+      dispatcher.dispatch(obj);
+      const obj2 = dispatcher;
     }
   },
   fetchHydrated(arg0, arg1, arg2) {
@@ -769,65 +771,65 @@ export default {
     })();
   },
   reloadICYMITab() {
-    require("../../Dispatcher.tsx").dispatch({ type: "RELOAD_ICYMI" });
+    dispatcher.dispatch({ type: "RELOAD_ICYMI" });
   },
   loadHydratedAttempt(hydrationId) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "LOAD_ICYMI_HYDRATED_ATTEMPT", hydrationId };
     obj.dispatch(obj);
   },
   openICYMITab() {
-    require("../../Dispatcher.tsx").dispatch({ type: "ICYMI_TAB_OPENED" });
+    dispatcher.dispatch({ type: "ICYMI_TAB_OPENED" });
   },
   closeICYMITab() {
-    require("../../Dispatcher.tsx").dispatch({ type: "ICYMI_TAB_CLOSED" });
+    dispatcher.dispatch({ type: "ICYMI_TAB_CLOSED" });
   },
   startItemsDwell(items) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "ICYMI_ITEMS_DWELL_START", items };
     obj.dispatch(obj);
   },
   triggerItemsLongImpression(found) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "ICYMI_ITEMS_LONG_IMPRESSION", items: found };
     obj.dispatch(obj);
   },
   ackGravityItems(items, override) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "ICYMI_ACK_ITEMS", items, override };
     return obj.dispatch(obj);
   },
   gravityScrollEvent(timestamp) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "ICYMI_SCROLL_EVENT", timestamp };
     return obj.dispatch(obj);
   },
   setFilters(filters) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "SET_ICYMI_FILTERS", filters };
     return obj.dispatch(obj);
   },
   giveFeedback() {
-    return require("../../Dispatcher.tsx").dispatch({ type: "ICYMI_FEEDBACK_GIVEN" });
+    return dispatcher.dispatch({ type: "ICYMI_FEEDBACK_GIVEN" });
   },
   clearReadStates() {
-    return require("../../Dispatcher.tsx").dispatch({ type: "CLEAR_ICYMI_READ_STATES" });
+    return dispatcher.dispatch({ type: "CLEAR_ICYMI_READ_STATES" });
   },
   addedRecommendedGuild() {
-    return require("../../Dispatcher.tsx").dispatch({ type: "ICYMI_JOINED_RECOMMENDED_GUILD" });
+    return dispatcher.dispatch({ type: "ICYMI_JOINED_RECOMMENDED_GUILD" });
   },
   setVideosMuted(muted) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "ICYMI_SET_VIDEOS_MUTED", muted };
     obj.dispatch(obj);
   },
   setTabFocused(isFocused) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "ICYMI_SET_FOCUSED_TAB", focused: isFocused };
     obj.dispatch(obj);
   },
   setCardHeight(itemId, height) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "ICYMI_SET_CARD_HEIGHT", itemId, height };
     obj.dispatch(obj);
   },
@@ -837,27 +839,27 @@ export default {
       const _Date = Date;
       timestamp = Date.now();
     }
-    require("../../Dispatcher.tsx").dispatch({ type: "ICYMI_TAKE_SURVEY", takenAt: timestamp });
+    dispatcher.dispatch({ type: "ICYMI_TAKE_SURVEY", takenAt: timestamp });
   },
   itemInteracted(id, type, open_profile) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "ICYMI_ITEM_INTERACTED", itemId: id, itemType: type, actionType: open_profile };
     obj.dispatch(obj);
   },
   feedItemActioned(arg0) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "ICYMI_FEED_ITEM_ACTIONED" };
     const merged = Object.assign(arg0);
     obj.dispatch(obj);
   },
   feedFilterActioned(arg0) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "ICYMI_FEED_FILTER_ACTIONED" };
     const merged = Object.assign(arg0);
     obj.dispatch(obj);
   },
   feedPageActioned(arg0) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "ICYMI_FEED_PAGE_ACTIONED" };
     const merged = Object.assign(arg0);
     obj.dispatch(obj);

@@ -1,3 +1,8 @@
+import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { render } from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitModalHeader.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
@@ -48,16 +53,16 @@ export default function GuildRoleSubscriptionBenefitModalHeader(canSave) {
   items = [, ];
   ({ headerButtonContainer: arr[0], headerButtonStart: arr[1] } = tmp);
   const obj1 = { style: tmp.headerButton, variant: "text-md/medium", color: "interactive-text-active", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["ETE/oC"]);
-  obj[3] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
-  const items1 = [callback2(require("../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx"), obj), , ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj1[3] = intl.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
+  obj[3] = callback2(Text /* Text */.Text, obj1);
+  const items1 = [callback2(render, obj), , ];
   const obj2 = { style: tmp.titleContainer, children: null };
-  const items2 = [callback2(require("../../../../design/void/native.tsx") /* Button */.LegacyText, { style: tmp.title, accessibilityRole: "header", children: title }), ];
+  const items2 = [callback2(Button /* Button */.LegacyText, { style: tmp.title, accessibilityRole: "header", children: title }), ];
   const obj3 = { style: tmp.title, accessibilityRole: "header", children: title };
   const tmp3 = callback3;
-  const tmp6 = require("../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx");
-  items2[1] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.subtitle, variant: "text-xs/medium", color: "text-default", children: callback(obj.useName(listingId), 1)[0] });
+  const tmp6 = render;
+  items2[1] = callback2(Text /* Text */.Text, { style: tmp.subtitle, variant: "text-xs/medium", color: "text-default", children: callback(obj.useName(listingId), 1)[0] });
   obj2[1] = items2;
   items1[1] = callback3(View, obj2);
   const obj5 = { style: items3, accessibilityRole: "button", disabled: !canSave, onPress: onSave, children: null };
@@ -72,9 +77,9 @@ export default function GuildRoleSubscriptionBenefitModalHeader(canSave) {
   const obj6 = { style: items4, children: null };
   items4[1] = disabledButton;
   const intl2 = tmp4(1236).intl;
-  obj6[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["R3BPH+"]);
-  obj5[4] = callback2(require("../../../../design/void/native.tsx") /* Button */.LegacyText, obj6);
-  items1[2] = callback2(require("../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx"), obj5);
+  obj6[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["R3BPH+"]);
+  obj5[4] = callback2(Button /* Button */.LegacyText, obj6);
+  items1[2] = callback2(render, obj5);
   obj[2] = items1;
-  return tmp3(require("../../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return tmp3(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 };

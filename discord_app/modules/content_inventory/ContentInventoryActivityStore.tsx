@@ -1,3 +1,4 @@
+import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/content_inventory/ContentInventoryActivityStore.tsx
 import sortActivity from "sortActivity";
 import map from "map";
@@ -86,7 +87,7 @@ function handlePresenceUpdates() {
     if (iter === undefined) {
       let tmp15 = importDefault;
       let tmp16 = dependencyMap;
-      let obj2 = require("../../../_runtime/00012_apply.js");
+      let obj2 = apply;
       let items = [];
       let tmp17 = items;
       let tmp18 = set1;

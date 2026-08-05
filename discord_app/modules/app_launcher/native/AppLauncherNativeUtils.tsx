@@ -1,3 +1,9 @@
+import { registerAsset } from "../../../../_runtime/01855_registerAsset.js";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
+import { getShelfBadgeTypeIfActive } from "../utils/AppLauncherUtils.tsx";
+import { context } from "AppLauncherContext.tsx";
+import { Placeholder } from "screens/home/FrecencySection.tsx";
 // discord_app/modules/app_launcher/native/AppLauncherNativeUtils.tsx
 import postMessageToWebView from "postMessageToWebView";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -28,7 +34,7 @@ export const handleApplicationSelected = function handleApplicationSelected(entr
     navigates = true;
   }
   entrypoint = entrypoint.entrypoint;
-  let obj = require("../../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */;
+  let obj = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
   obj = { location: _location, section: null, application_id: null, section_name: null, query: null, search_results_position: null, source: null };
   if (application.id === BuiltInSectionId.BUILT_IN) {
     let APP = tmp(6891).ApplicationCommandTriggerSections.BUILT_IN;
@@ -70,8 +76,8 @@ export const handleViewAllSelected = function handleViewAllSelected(arg0) {
   let title;
   ({ navigation, sectionName, applications, sectionItemType, commands } = arg0);
   ({ location: _location, context, sectionOverallPosition, sectionDescriptors, title, promotedApplicationIds } = arg0);
-  let obj = require("../../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */;
-  obj = { section_name: sectionName, num: sectionItemType === require("screens/home/FrecencySection.tsx") /* Placeholder */.SectionItemType.APPS ? applications.length : commands.length };
+  let obj = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
+  obj = { section_name: sectionName, num: sectionItemType === Placeholder /* Placeholder */.SectionItemType.APPS ? applications.length : commands.length };
   obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_SECTION_VIEW_MORE, obj);
   navigation.navigate(constants.APP_LIST_VIEW, { analyticsLocation: _location, context, sectionName, sectionOverallPosition, applications, sectionItemType, commands, sectionDescriptors, title, promotedApplicationIds });
 };
@@ -255,10 +261,10 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
 };
 export const getAppLauncherIconSource = function getAppLauncherIconSource(application) {
   if (null == application) {
-    let applicationIconSource = require("../../../../_runtime/01855_registerAsset.js");
+    let applicationIconSource = registerAsset;
   } else {
-    let obj = require("../utils/AppLauncherUtils.tsx") /* getShelfBadgeTypeIfActive */;
-    const obj2 = require("../../../utils/AvatarUtils.tsx");
+    let obj = getShelfBadgeTypeIfActive /* getShelfBadgeTypeIfActive */;
+    const obj2 = getAvatarURL;
     if (isRealApplicationResult) {
       obj = { id: null, icon: null, bot: null, botIconFirst: false };
       ({ id: obj3[0], icon: obj3[1], bot: obj3[2] } = application);
@@ -272,7 +278,7 @@ export const getAppLauncherIconSource = function getAppLauncherIconSource(applic
 };
 export const useLogAppLauncherEmptyStateView = function useLogAppLauncherEmptyStateView(COMMAND_NOT_FOUND, query) {
   const _require = COMMAND_NOT_FOUND;
-  const entrypoint = _require("AppLauncherContext.tsx").useAppLauncherContext().entrypoint;
+  const entrypoint = _context.useAppLauncherContext().entrypoint;
   const items = [COMMAND_NOT_FOUND, query, entrypoint];
   const effect = React.useEffect(() => {
     if (null != COMMAND_NOT_FOUND) {

@@ -1,3 +1,4 @@
+import { set } from "../../../utils/Durations.tsx";
 // discord_app/modules/global_discovery_apps/stores/MyGuildApplicationsStore.tsx
 import { PersistedStore } from "initialize";
 
@@ -88,7 +89,7 @@ obj = {
     closure_3.fetchState = obj.ERROR;
     if (null != retryAfterSeconds) {
       const _Date = Date;
-      const result = retryAfterSeconds * require("../../../utils/Durations.tsx").Millis.SECOND;
+      const result = retryAfterSeconds * set.Millis.SECOND;
       tmp.nextFetchRetryTimeMs = Date.now() + result;
     }
   },

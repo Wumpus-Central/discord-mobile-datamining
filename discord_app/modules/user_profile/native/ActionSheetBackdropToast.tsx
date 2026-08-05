@@ -1,3 +1,6 @@
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
+import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 // discord_app/modules/user_profile/native/ActionSheetBackdropToast.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -32,10 +35,10 @@ export const ActionSheetBackdropToast = function ActionSheetBackdropToast(childr
   let sharedValue;
   let sharedValue1;
   const tmp = set();
-  const height = require("../../screen/useWindowDimensions.native.tsx")().height;
+  const height = useWindowDimensions().height;
   let result = height * closure_5;
   importDefault = result;
-  const diff = height - isExpanded(5235).NAV_BAR_HEIGHT_MULTILINE - require("../../safe_area/useSafeAreaInsets.native.tsx")().top;
+  const diff = height - isExpanded(5235).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsets().top;
   dependencyMap = diff;
   let obj = isExpanded(4146);
   sharedValue = obj.useSharedValue(0);
@@ -92,6 +95,6 @@ export const ActionSheetBackdropToast = function ActionSheetBackdropToast(childr
   obj1 = { style: items2, children: null };
   items2 = [tmp.toast, animatedStyle];
   obj1[1] = jsx(isExpanded(4281).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: children.text });
-  obj[2] = jsx(require("../../reanimated/ReanimatedRexport.tsx").View, { style: items2, children: null });
+  obj[2] = jsx(ReanimatedRexport.View, { style: items2, children: null });
   return <sharedValue1 style={items1} pointerEvents="none">{null}</sharedValue1>;
 };

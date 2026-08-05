@@ -1,3 +1,4 @@
+import { set } from "../../../utils/Durations.tsx";
 // discord_app/modules/quests/utils/QuestTaskUtils.tsx
 import initializeState from "initializeState";
 
@@ -167,7 +168,7 @@ function _getTaskDetailsForType(arg0) {
       obj1[0] = target;
       obj1[1] = target2;
       const _Math3 = Math;
-      obj1[2] = Math.ceil(target2 / require("../../../utils/Durations.tsx").Seconds.MINUTE);
+      obj1[2] = Math.ceil(target2 / set.Seconds.MINUTE);
       let num7 = 0;
       if (target2 > 0) {
         const _Math4 = Math;
@@ -239,7 +240,7 @@ function _getTaskDetailsForType(arg0) {
             const date = new Date(lastBeatAt);
             const diff = timestamp - date.valueOf();
             obj1 = quest(12);
-            num2 = obj1.floor(diff / require("../../../utils/Durations.tsx").Millis.SECOND, 2);
+            num2 = obj1.floor(diff / set.Millis.SECOND, 2);
           }
         }
         sum = num + num2;

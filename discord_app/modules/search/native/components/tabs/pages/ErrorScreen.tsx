@@ -1,3 +1,5 @@
+import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
+import { useSafeAreaInsetsKeyboardAware } from "../../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 // discord_app/modules/search/native/components/tabs/pages/ErrorScreen.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -16,8 +18,8 @@ const memoResult = importAllResult.memo((text) => {
     const AccessibilityAnnouncer = text(outer1_2[5]).AccessibilityAnnouncer;
     AccessibilityAnnouncer.announce(closure_0, "polite");
   }, items);
-  obj = { style: items1, children: jsx(require("../../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj) };
-  items1 = [tmp.container, { paddingBottom: require("../../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx")({ includeKeyboardHeight: true }).insets.bottom }];
+  obj = { style: items1, children: jsx(Text /* Text */.Text, obj) };
+  items1 = [tmp.container, { paddingBottom: useSafeAreaInsetsKeyboardAware({ includeKeyboardHeight: true }).insets.bottom }];
   obj = { variant: "text-sm/medium", color: "text-muted", style: tmp.text, children: text };
   return <View variant="text-sm/medium" color="text-muted" style={tmp.text}>{text}</View>;
 });

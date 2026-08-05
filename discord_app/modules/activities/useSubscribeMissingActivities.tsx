@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/activities/useSubscribeMissingActivities.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -43,7 +44,7 @@ export default function useSubscribeMissingActivities(arg0, arg1) {
   first = tmp[0];
   let items1 = [sortActivity];
   const items2 = [first];
-  stateFromStoresArray = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => {
+  stateFromStoresArray = _initialize.useStateFromStoresArray(items1, () => {
     let items = [];
     const item = first.forEach((author) => {
       const items = author;

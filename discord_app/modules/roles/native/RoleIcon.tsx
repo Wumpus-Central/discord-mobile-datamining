@@ -1,3 +1,4 @@
+import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/roles/native/RoleIcon.tsx
 import "noop";
 import { Image } from "get ActivityIndicator";
@@ -27,7 +28,7 @@ export default function RoleIcon(arg0) {
       const items = [obj, { fontFamily: "System", fontSize: size, marginBottom: -2 }];
       obj[1] = items;
       obj[2] = unicodeEmoji.surrogates;
-      tmp = jsx(require("../../../design/void/native.tsx") /* Button */.LegacyText, { adjustsFontSizeToFit: true, style: null, children: null });
+      tmp = jsx(Button /* Button */.LegacyText, { adjustsFontSizeToFit: true, style: null, children: null });
     }
   }
   return tmp;

@@ -1,3 +1,7 @@
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
+import { useUserProfileColors } from "../hooks/native/useUserProfileColors.tsx";
+import { useUserProfileGradientColors } from "../hooks/native/useUserProfileGradientColors.tsx";
 // discord_app/modules/user_profile/native/UserProfileFixedBackground.tsx
 import _slicedToArray from "_slicedToArray";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -16,13 +20,13 @@ const memoResult = require("noop").memo((style) => {
   let theme;
   style = style.style;
   ({ gradientHeight, bannerHeight } = style);
-  let obj = require("../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */;
+  let obj = ManaContext /* ManaContext */;
   const themeContext = obj.useThemeContext();
   ({ primaryColor, secondaryColor, theme } = themeContext);
-  const gradientFallbackBackground = require("../hooks/native/useUserProfileColors.tsx") /* useUserProfileColors */.useUserProfileColors({ theme, primaryColor, secondaryColor }).gradientFallbackBackground;
-  const obj2 = require("../hooks/native/useUserProfileColors.tsx") /* useUserProfileColors */;
-  const obj3 = require("../hooks/native/useUserProfileGradientColors.tsx") /* useUserProfileGradientColors */;
-  const first = callback(require("../hooks/native/useUserProfileGradientColors.tsx") /* useUserProfileGradientColors */.useUserProfileGradientColors(primaryColor, secondaryColor, gradientFallbackBackground), 2)[0];
+  const gradientFallbackBackground = useUserProfileColors /* useUserProfileColors */.useUserProfileColors({ theme, primaryColor, secondaryColor }).gradientFallbackBackground;
+  const obj2 = useUserProfileColors /* useUserProfileColors */;
+  const obj3 = useUserProfileGradientColors /* useUserProfileGradientColors */;
+  const first = callback(useUserProfileGradientColors /* useUserProfileGradientColors */.useUserProfileGradientColors(primaryColor, secondaryColor, gradientFallbackBackground), 2)[0];
   if (null != primaryColor) {
     if (null != secondaryColor) {
       const _Math = Math;
@@ -35,7 +39,7 @@ const memoResult = require("noop").memo((style) => {
       obj[1] = items1;
       const items2 = [closure_4.absoluteFill, style];
       obj[2] = items2;
-      return jsx(require("../../../../_runtime/04706_LinearGradient.js"), { colors: null, locations: null, style: null, pointerEvents: "none" });
+      return jsx(LinearGradient, { colors: null, locations: null, style: null, pointerEvents: "none" });
     }
   }
   style = [closure_4.absoluteFill, { backgroundColor: gradientFallbackBackground }, ];

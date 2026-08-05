@@ -1,3 +1,12 @@
+import { registerAsset } from "../../../../../_runtime/10805_registerAsset.js";
+import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
+import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
+import { openChannelCallModal } from "../../../../utils/native/PrivateChannelCallUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../../../app_analytics/AppAnalyticsUtils.tsx";
+import { componentDidMount } from "../../../status_bar/native/components/StatusBar.android.tsx";
+import { CameraButton } from "../../../video_calls/native/components/ChannelCallHeaderButtons.tsx";
+import { ChannelCallNavigatorIcon } from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
+import { useMyCurrentStageChannelRole } from "../../useMyCurrentStageChannelRole.tsx";
 // discord_app/modules/stage_channels/native/components/StageActionHeader.tsx
 import { View } from "module_4490";
 import getParticipants from "getParticipants";
@@ -286,7 +295,7 @@ const memoResult = importAllResult.memo((onOpenRTCDebugOverlay) => {
   let channel;
   let fullscreenStream;
   ({ channel, fullscreenStream } = onOpenRTCDebugOverlay);
-  const tmp3 = require("../../useMyCurrentStageChannelRole.tsx")(channel.id);
+  const tmp3 = useMyCurrentStageChannelRole(channel.id);
   let speaker;
   if (tmp3 != null) {
     speaker = tmp3.speaker;
@@ -302,10 +311,10 @@ const memoResult = importAllResult.memo((onOpenRTCDebugOverlay) => {
   if (fullscreenStream) {
     obj = { channel: null };
     obj[0] = channel;
-    fullscreenStream = tmp7(require("../../../video_calls/native/components/ChannelCallHeaderButtons.tsx") /* CameraButton */.GridButton, obj);
+    fullscreenStream = tmp7(CameraButton /* CameraButton */.GridButton, obj);
   }
   items[3] = fullscreenStream;
-  items[4] = callback(require("../../../video_calls/native/components/ChannelCallHeaderButtons.tsx") /* CameraButton */.CameraButton, {});
+  items[4] = callback(CameraButton /* CameraButton */.CameraButton, {});
   items[5] = callback(StageInviteButton, { channelId: channel.id });
   items[6] = callback(StageSettingsButton, { channelId: channel.id, onOpenRTCDebugOverlay: onOpenRTCDebugOverlay.onOpenRTCDebugOverlay });
   obj[2] = items;
@@ -315,15 +324,15 @@ let result = require("getParticipants").fileFinishedImporting("modules/stage_cha
 
 export default memoResult;
 export const closeStageModal = function closeStageModal(id) {
-  let obj = require("../../../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { video_layout: "pop out" };
-  const merged = Object.assign(require("../../../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */.collectVoiceAnalyticsMetadata(id.id));
+  const merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectVoiceAnalyticsMetadata(id.id));
   obj.track(constants.VIDEO_LAYOUT_TOGGLED, obj);
-  const obj3 = require("../../../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */;
-  require("../../../status_bar/native/components/StatusBar.android.tsx").setHidden(false);
-  const obj4 = require("../../../status_bar/native/components/StatusBar.android.tsx");
-  const obj5 = require("../../../../actions/ModalActionCreators.tsx");
-  obj5.popWithKey(require("../../../../utils/native/PrivateChannelCallUtils.tsx") /* openChannelCallModal */.getVoiceChannelKey(id.id));
+  const obj3 = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
+  componentDidMount.setHidden(false);
+  const obj4 = componentDidMount;
+  const obj5 = ModalActionCreators;
+  obj5.popWithKey(openChannelCallModal /* openChannelCallModal */.getVoiceChannelKey(id.id));
 };
 export { HideStageChannelCallIcon };
 export { StageChannelCallHeader };
@@ -334,7 +343,7 @@ export const HideChannelCallButton = function HideChannelCallButton(channel) {
   const stateFromStores = obj.useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
   obj = { source: null, accessibilityLabel: null, onPress: null, containerStyle: null, disableBackground: true, children: null };
   const tmp = callback2();
-  obj[0] = require("../../../../../_runtime/10805_registerAsset.js");
+  obj[0] = registerAsset;
   const intl = channel(1236).intl;
   obj[1] = intl.string(channel(1236).t.cpT0Cq);
   obj[2] = function onPress() {
@@ -352,7 +361,7 @@ export const HideChannelCallButton = function HideChannelCallButton(channel) {
   };
   obj[3] = tmp.iconContainer;
   obj[5] = callback(channel(1297).MaskedBadge, { value: stateFromStores, maskStyle: {} });
-  return callback(require("../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx"), obj);
+  return callback(ChannelCallNavigatorIcon, obj);
 };
 export { StageSettingsButton };
 export { StageInviteButton };

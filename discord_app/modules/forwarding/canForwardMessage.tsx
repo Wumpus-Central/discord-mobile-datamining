@@ -1,3 +1,5 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/modules/forwarding/canForwardMessage.tsx
 import isSubscriptionGated from "isSubscriptionGated";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -52,8 +54,8 @@ function canForwardMessage(state) {
       hasItem = null == state.activityInstance;
     }
     if (hasItem) {
-      hasItem = 0 === require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.removeFlag(state.flags, closure_10);
-      const obj5 = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+      hasItem = 0 === hasFlag /* hasFlag */.removeFlag(state.flags, closure_10);
+      const obj5 = hasFlag /* hasFlag */;
     }
     if (hasItem) {
       const channel = obj3.getChannel(state.channel_id);
@@ -106,5 +108,5 @@ export { canForwardMessage };
 export const useCanForwardMessage = function useCanForwardMessage(message) {
   const _require = message;
   const items = [getUncachedChannelPermissions, isSubscriptionGated, ensureGuildLoaded, createGuildRecordFromRust];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_11(closure_0, outer1_5, outer1_2, outer1_3, outer1_4));
+  return _initialize.useStateFromStores(items, () => outer1_11(closure_0, outer1_5, outer1_2, outer1_3, outer1_4));
 };

@@ -1,3 +1,6 @@
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { BadgeCategory } from "../BadgeCategory.tsx";
+import { GuildVisibility } from "../GuildTraits.tsx";
 // discord_app/modules/guild_badge/native/GuildBadgeImageSource.tsx
 const require = arg1;
 let obj = {};
@@ -42,9 +45,9 @@ export const resolveImageSource = function resolveImageSource(premiumImageSource
   imageSource = premiumImageSource.imageSource;
 };
 export const getGuildBadgeImageSource = function getGuildBadgeImageSource(guild, closure_2) {
-  const obj = require("../GuildTraits.tsx") /* GuildVisibility */;
+  const obj = GuildVisibility /* GuildVisibility */;
   const guildTraits = obj.getGuildTraits(guild);
-  const obj2 = require("../BadgeCategory.tsx") /* BadgeCategory */;
+  const obj2 = BadgeCategory /* BadgeCategory */;
   const tmp4 = obj[obj2.getBadgeCategory(obj2, guildTraits)];
   if (null == tmp4) {
     return null;
@@ -56,7 +59,7 @@ export const getGuildBadgeImageSource = function getGuildBadgeImageSource(guild,
         }
       }
       premiumImageSource = tmp4.imageSource;
-      tmpResult = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+      tmpResult = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
     }
     premiumImageSource = tmp4.premiumImageSource;
   }

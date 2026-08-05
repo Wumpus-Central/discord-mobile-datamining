@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/virtual_currency/VirtualCurrencyActionCreators.tsx
 import sendRequest from "sendRequest";
 import addSku from "addSku";
@@ -346,7 +347,7 @@ export const redeemVirtualCurrencyForSKU = function redeemVirtualCurrencyForSKU(
   return applyArgumentsResult;
 };
 export const setBalancePillOverlay = function setBalancePillOverlay(balancePillOverlay) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "VIRTUAL_CURRENCY_SET_BALANCE_PILL_OVERLAY", balancePillOverlay };
   return obj.dispatch(obj);
 };

@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/notifications_inbox/NotificationsInboxConstants.tsx
 import { NOTIFICATIONS_INBOX } from "ME";
 
@@ -19,17 +20,17 @@ export const MAX_UNREAD_MESSAGES_PER_CHANNEL = 10;
 export const NOTIFICATIONS_INBOX_FEATURE = "notifications-inbox";
 export const getNotificationsInboxGuild = function getNotificationsInboxGuild(arg0) {
   if (arg0 === obj.BOOKMARKS) {
-    const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    let stringResult = intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["2pAkDA"]);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    let stringResult = intl3.string(getSystemLocale /* getSystemLocale */.t["2pAkDA"]);
     let tmp2 = require;
   } else if (arg0 === tmp.MENTIONS) {
-    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    stringResult = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.jbV6MM);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t.jbV6MM);
     tmp2 = require;
   } else {
     tmp2 = require;
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.HcoRu0);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.HcoRu0);
   }
   obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: "row" };
   obj[4] = [];
@@ -42,12 +43,12 @@ export const InboxMessageType = { ALL_MESSAGES_CHANNEL: "ALL_MESSAGES_CHANNEL", 
 export const MESSAGE_CATEGORY_DISPLAY_MAP = obj;
 export const getFilterMap = function getFilterMap() {
   const obj = {};
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[obj.ALL] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.iWyjNt);
-  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[obj.MENTIONS] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.jbV6MM);
-  const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[obj.BOOKMARKS] = intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["+rlGYW"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[obj.ALL] = intl.string(getSystemLocale /* getSystemLocale */.t.iWyjNt);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[obj.MENTIONS] = intl2.string(getSystemLocale /* getSystemLocale */.t.jbV6MM);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj[obj.BOOKMARKS] = intl3.string(getSystemLocale /* getSystemLocale */.t["+rlGYW"]);
   return obj;
 };
 export const ChannelLoadState = { UNLOADED: "unloaded", LOADED: "loaded", LOADED_UNREAD: "loadedUnread" };

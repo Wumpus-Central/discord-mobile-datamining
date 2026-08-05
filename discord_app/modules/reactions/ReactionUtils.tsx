@@ -1,3 +1,8 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
+import { ReactionTypes } from "../messages/MessageReactionsTypes.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/reactions/ReactionUtils.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ME from "ME";
@@ -12,8 +17,8 @@ let result = require("AccountNotificationFlags").fileFinishedImporting("modules/
 export const MAX_REACTIONS = 20;
 export const getReactionEmojiName = function getReactionEmojiName(emoji) {
   if (null == emoji.id) {
-    let result = require("../emojis/UnicodeEmojis.tsx").convertSurrogateToName(emoji.name);
-    const obj = require("../emojis/UnicodeEmojis.tsx");
+    let result = parseRawEmojiObject.convertSurrogateToName(emoji.name);
+    const obj = parseRawEmojiObject;
   } else {
     const _HermesInternal = HermesInternal;
     result = ":" + emoji.name + ":";
@@ -21,7 +26,7 @@ export const getReactionEmojiName = function getReactionEmojiName(emoji) {
   return result;
 };
 export const getAccessibleEmojiDisplayName = function getAccessibleEmojiDisplayName(me, count, emoji, arg3) {
-  const t = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
+  const t = getSystemLocale /* getSystemLocale */.t;
   if (arg3) {
     if (me) {
       Z_l_qu = t.i9DXqM;
@@ -46,8 +51,8 @@ export const getAccessibleEmojiDisplayName = function getAccessibleEmojiDisplayN
     const obj = { reactions: null, emojiName: null };
     obj[0] = count;
     if (null == emoji.id) {
-      let str2 = require("../emojis/UnicodeEmojis.tsx").convertSurrogateToName(emoji.name);
-      const obj2 = require("../emojis/UnicodeEmojis.tsx");
+      let str2 = parseRawEmojiObject.convertSurrogateToName(emoji.name);
+      const obj2 = parseRawEmojiObject;
     } else {
       const _HermesInternal = HermesInternal;
       str2 = ":" + emoji.name + ":";
@@ -67,12 +72,12 @@ export const getAccessibleEmojiDisplayName = function getAccessibleEmojiDisplayN
   }
 };
 export const isMeReaction = function isMeReaction(me, me_burst, arg2) {
-  let tmp3 = arg2 === require("../messages/MessageReactionsTypes.tsx") /* ReactionTypes */.ReactionTypes.BURST;
+  let tmp3 = arg2 === ReactionTypes /* ReactionTypes */.ReactionTypes.BURST;
   if (tmp3) {
     tmp3 = true === me_burst;
   }
   if (!tmp3) {
-    let tmp5 = arg2 === require("../messages/MessageReactionsTypes.tsx") /* ReactionTypes */.ReactionTypes.NORMAL;
+    let tmp5 = arg2 === ReactionTypes /* ReactionTypes */.ReactionTypes.NORMAL;
     if (tmp5) {
       tmp5 = true === me;
     }
@@ -143,9 +148,9 @@ export const shouldApplyReaction = function shouldApplyReaction(optimistic) {
   return !optimistic;
 };
 export const updateReactionNotificationsSetting = function updateReactionNotificationsSetting(NumberResult, setting) {
-  const ReactionNotifications = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.ReactionNotifications;
+  const ReactionNotifications = explicitContentFromProto /* explicitContentFromProto */.ReactionNotifications;
   ReactionNotifications.updateSetting(NumberResult);
-  let obj = require("../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { update_type: constants3.ACCOUNT, reaction_notifications: NumberResult, reaction_notifications_old: setting };
   obj.track(constants2.NOTIFICATION_SETTINGS_UPDATED, obj);
 };

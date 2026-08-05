@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { isFabric } from "../../../../utils/native/FabricUtils.tsx";
 // discord_app/design/components/Sheet/native/BottomSheet.native.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "ActionSheetHeaderBar";
@@ -46,10 +48,10 @@ let closure_18 = createCacheKey.createStyles((arg0) => {
     flag = false;
   }
   let obj = { background: null, wrapper: null, wrapperWithBorder: null, content: null, gradient: null, handleIndicator: null, backgroundOverlay: null, header: null, body: null };
-  obj = { overflow: "hidden", borderTopLeftRadius: closure_13, borderTopRightRadius: closure_13, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_ACTIONSHEET_BACKGROUND };
+  obj = { overflow: "hidden", borderTopLeftRadius: closure_13, borderTopRightRadius: closure_13, backgroundColor: Themes.colors.MOBILE_ACTIONSHEET_BACKGROUND };
   obj[0] = obj;
   obj[1] = { overflow: "hidden", flex: 1 };
-  obj = { overflow: "hidden", marginTop: closure_11, marginHorizontal: closure_11, borderTopLeftRadius: closure_12, borderTopRightRadius: closure_12, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_ACTIONSHEET_BACKGROUND };
+  obj = { overflow: "hidden", marginTop: closure_11, marginHorizontal: closure_11, borderTopLeftRadius: closure_12, borderTopRightRadius: closure_12, backgroundColor: Themes.colors.MOBILE_ACTIONSHEET_BACKGROUND };
   obj[2] = obj;
   let tmp4;
   if (arg0) {
@@ -72,16 +74,16 @@ let closure_18 = createCacheKey.createStyles((arg0) => {
   }
   obj1[3] = num2;
   obj[3] = obj1;
-  let obj4 = require("../../../../utils/native/FabricUtils.tsx") /* isFabric */;
+  let obj4 = isFabric /* isFabric */;
   let str2;
   if (obj4.isIosFabric()) {
     str2 = "hidden";
   }
   obj[4] = { height: "100%", overflow: str2, borderTopLeftRadius: closure_14, borderTopRightRadius: closure_14 };
-  obj[5] = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_STRONG };
+  obj[5] = { backgroundColor: Themes.colors.BACKGROUND_MOD_STRONG };
   obj4 = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj4.backgroundColor = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT;
+  obj4.backgroundColor = Themes.colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT;
   obj[6] = obj4;
   obj[7] = { marginBottom: 16 };
   obj[8] = { flex: 1 };

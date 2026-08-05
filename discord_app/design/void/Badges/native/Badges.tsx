@@ -1,3 +1,4 @@
+import { Text } from "../../../components/Text/native/Text.tsx";
 // discord_app/design/void/Badges/native/Badges.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -46,6 +47,6 @@ export const TextBadge = function TextBadge(color) {
   const obj = { style: items, children: null };
   items = [tmp2.base, tmp2[DANGER], style];
   const items1 = [tmp3.text, tmp3["" + DANGER + "Text"], textStyle];
-  obj[1] = jsx(require("../../../components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-xs/bold", style: items1, children: text });
+  obj[1] = jsx(Text /* Text */.Text, { variant: "text-xs/bold", style: items1, children: text });
   return <View style={items}>{null}</View>;
 };

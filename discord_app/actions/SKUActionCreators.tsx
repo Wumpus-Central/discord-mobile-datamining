@@ -1,3 +1,4 @@
+import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/SKUActionCreators.tsx
 import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery";
 import getPromotionIdOverride from "getPromotionIdOverride";
@@ -1212,13 +1213,13 @@ export const resendPaymentVerificationEmail = function resendPaymentVerification
   return applyArgumentsResult;
 };
 export const clearPurchaseError = function clearPurchaseError() {
-  require("../Dispatcher.tsx").dispatch({ type: "SKU_PURCHASE_CLEAR_ERROR" });
+  dispatcher.dispatch({ type: "SKU_PURCHASE_CLEAR_ERROR" });
 };
 export const showPurchaseConfirmationStep = function showPurchaseConfirmationStep() {
-  require("../Dispatcher.tsx").wait(() => callback(table[4]).dispatch({ type: "SKU_PURCHASE_SHOW_CONFIRMATION_STEP" }));
+  dispatcher.wait(() => callback(table[4]).dispatch({ type: "SKU_PURCHASE_SHOW_CONFIRMATION_STEP" }));
 };
 export const updateSKUPaymentIsGift = function updateSKUPaymentIsGift(isGift) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "SKU_PURCHASE_UPDATE_IS_GIFT", isGift };
   obj.dispatch(obj);
 };

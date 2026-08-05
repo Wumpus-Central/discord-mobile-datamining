@@ -1,3 +1,5 @@
+import { Input } from "../../Input/native/Input.native.tsx";
+import { SplitTextField } from "SplitTextField.native.tsx";
 // discord_app/design/components/SplitTextInput/native/SplitTextInput.native.tsx
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
@@ -8,8 +10,8 @@ const forwardRefResult = require("noop").forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0);
   obj = { ref };
   const merged1 = Object.assign(arg0);
-  obj.children = jsx(require("SplitTextField.native.tsx") /* SplitTextField */.SplitTextField, { ref });
-  return jsx(require("../../Input/native/Input.native.tsx") /* Input */.Input, { ref });
+  obj.children = jsx(SplitTextField /* SplitTextField */.SplitTextField, { ref });
+  return jsx(Input /* Input */.Input, { ref });
 });
 const result = require("Input").fileFinishedImporting("design/components/SplitTextInput/native/SplitTextInput.native.tsx");
 

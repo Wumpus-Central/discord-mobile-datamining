@@ -1,3 +1,4 @@
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceModule.tsx";
 // discord_app/utils/native/DeviceUtils.tsx
 import set from "set";
 import set from "enforcing";
@@ -82,10 +83,10 @@ export const getDeviceMediaPerformanceClass = function getDeviceMediaPerformance
       tmp5 = null == value;
     }
     if (tmp5) {
-      mediaPerformanceClass2 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceModule.tsx").getMediaPerformanceClass();
+      mediaPerformanceClass2 = enforcing.getMediaPerformanceClass();
       const Storage2 = tmp(595).Storage;
       const result = Storage2.set(mediaPerformanceClass, mediaPerformanceClass2);
-      const obj2 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceModule.tsx");
+      const obj2 = enforcing;
     }
     tmp3 = mediaPerformanceClass2;
   }

@@ -1,3 +1,5 @@
+import { keys } from "../../ConstantsIOS.tsx";
+import { Linking } from "../../lib/native/Linking.tsx";
 // discord_app/modules/mobile_native_updater/MobileNativeUpdateUtils.tsx
 import set from "set";
 import { UPDATE_CONFIG } from "UPDATE_CHECK_INTERVAL";
@@ -109,9 +111,9 @@ function openBuildInstallerUrl(install) {
       const _HermesInternal = HermesInternal;
       tmp2.error("Attempted to follow invalid install URL " + str);
     } else {
-      const openURLExternally = require("../../lib/native/Linking.tsx").default.openURLExternally;
+      const openURLExternally = Linking.default.openURLExternally;
       if (obj.isIOS()) {
-        openURLExternally(str.toString(), require("../../ConstantsIOS.tsx") /* keys */.WebBrowserType.SAFARI);
+        openURLExternally(str.toString(), keys /* keys */.WebBrowserType.SAFARI);
       } else {
         openURLExternally(str.toString());
       }

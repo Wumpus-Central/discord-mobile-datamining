@@ -1,3 +1,6 @@
+import { ICON_SIZE } from "../../../design/components/Icon/IconSize.tsx";
+import { getLayoutStyles } from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
+import { smartOutput } from "../MarkupRulesUtils.tsx";
 // discord_app/modules/markup/native/MarkupMessagePreviewReactRules.tsx
 import "set";
 import { MUTED_OPACITY_CONTENT } from "hairlineWidth";
@@ -10,8 +13,8 @@ function defaultReactFn(content, output, state) {
   if (typeof content.content === "string") {
     content = content.content;
   } else {
-    content = require("../MarkupRulesUtils.tsx") /* smartOutput */.smartOutput(content, output, state);
-    const obj = require("../MarkupRulesUtils.tsx") /* smartOutput */;
+    content = smartOutput /* smartOutput */.smartOutput(content, output, state);
+    const obj = smartOutput /* smartOutput */;
   }
   return content;
 }
@@ -229,7 +232,7 @@ const regExp = new RegExp(require("regExp").ANSI_CONTROL_SEQUENCE_RE, "g");
 const result = require("jsxProd").fileFinishedImporting("modules/markup/native/MarkupMessagePreviewReactRules.tsx");
 
 export default function createChannelListMessagePreviewReactRules(layout, iconColor) {
-  let obj = require("../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx") /* getLayoutStyles */;
+  let obj = getLayoutStyles /* getLayoutStyles */;
   const layoutStyles = obj.getLayoutStyles(layout);
   let bound = arg2;
   if (null != arg3) {
@@ -237,7 +240,7 @@ export default function createChannelListMessagePreviewReactRules(layout, iconCo
     bound = Math.min(arg2, arg3);
   }
   obj = { iconColor, iconSize: layoutStyles.messagePreview.messageTypeIconSizeNew, channelIconSize: layoutStyles.messagePreview.messageTypeIconSize, customEmojiSize: null };
-  let num = require("../../../design/components/Icon/IconSize.tsx") /* ICON_SIZE */.ICON_SIZE[layoutStyles.messagePreview.messageTypeIconSizeNew];
+  let num = ICON_SIZE /* ICON_SIZE */.ICON_SIZE[layoutStyles.messagePreview.messageTypeIconSizeNew];
   if (num == null) {
     num = 0;
   }

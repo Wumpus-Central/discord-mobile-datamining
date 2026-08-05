@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/game_profile/native/components/GameProfileAnnouncements.tsx
 import importAllResult from "set";
 import get_ActivityIndicator from "Button";
@@ -155,7 +156,7 @@ function EmbedAnnouncementCard(message) {
       const obj18 = { style: null, children: null };
       obj18[0] = tmp.reactionInfo;
       const obj19 = { size: "xs", color: null };
-      obj19[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_MUTED;
+      obj19[1] = Themes.colors.TEXT_MUTED;
       const items6 = [tmp12(tmp35(7576).ReactionIcon, obj19), ];
       let tmp46 = null != obj20;
       if (tmp46) {
@@ -273,7 +274,7 @@ function MessageAnnouncementCard(message) {
     const obj9 = { style: null, children: null };
     obj9[0] = tmp.reactionInfo;
     const obj10 = { size: "xs", color: null };
-    obj10[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_MUTED;
+    obj10[1] = Themes.colors.TEXT_MUTED;
     const items3 = [tmp27(tmp28(7576).ReactionIcon, obj10), ];
     let tmp34 = null != obj11;
     if (tmp34) {

@@ -1,3 +1,4 @@
+import { Tracking } from "../../../../tracking/Tracking.tsx";
 // discord_app/modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx
 import noop from "noop";
 import handleReaction from "handleReaction";
@@ -119,7 +120,7 @@ export const trackMessageItemPress = function trackMessageItemPress(messageId) {
   messageId = messageId.messageId;
   ({ searchContext, channelId, index } = messageId);
   message = message.getMessage(messageId);
-  let obj = require("../../../../tracking/Tracking.tsx");
+  let obj = Tracking;
   obj = { searchContext, channelId, messageId, userId: null, index: null, entityType: null };
   let id;
   if (message != null) {

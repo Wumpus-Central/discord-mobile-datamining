@@ -1,3 +1,5 @@
+import { Directions } from "../../../../_runtime/05368_Directions.js";
+import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/DiscordGestureHandlerRootViewNativeComponent.tsx";
 // discord_app/modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx
 import "noop";
 import { StyleSheet } from "get ActivityIndicator";
@@ -12,6 +14,6 @@ export default function DiscordGestureHandlerRootView(arg0) {
   let style;
   ({ children, style } = arg0);
   const obj = { style: styles.flex, children: null };
-  obj[1] = jsx(require("../../../../_runtime/05368_Directions.js") /* Directions */.GestureHandlerRootView, { style, children });
-  return jsx(require("../../../../discord_common/js/packages/rtn-codegen/js/DiscordGestureHandlerRootViewNativeComponent.tsx"), { style: styles.flex, children: null });
+  obj[1] = jsx(Directions /* Directions */.GestureHandlerRootView, { style, children });
+  return jsx(__INTERNAL_VIEW_CONFIG, { style: styles.flex, children: null });
 };

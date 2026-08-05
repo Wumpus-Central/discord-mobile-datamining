@@ -1,3 +1,4 @@
+import { preload } from "../../../../components_native/common/FastImage.tsx";
 // discord_app/modules/guild_role_subscriptions/native/feature_education/GenericUpsellActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -42,7 +43,7 @@ export default function GenericUpsellActionSheet(markAsDismissed) {
     children: null
   };
   obj = { children: null };
-  const items = [callback(require("../../../../components_native/common/FastImage.tsx"), { source: imageSource, style: tmp.image }), callback(markAsDismissed(5594).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose })];
+  const items = [callback(preload, { source: imageSource, style: tmp.image }), callback(markAsDismissed(5594).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose })];
   obj[0] = items;
   obj[4] = callback2(View, obj);
   const obj2 = { style: tmp.content, children: null };

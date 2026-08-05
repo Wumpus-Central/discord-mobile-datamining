@@ -1,3 +1,4 @@
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/modules/go_live/GoLiveAutoQualityExperiment.tsx
 import initialize from "initialize";
 import ApplicationStreamPresets from "ApplicationStreamPresets";
@@ -32,7 +33,7 @@ export const useGoLiveAutoQualityExperimentConfig = function useGoLiveAutoQualit
   return location(589).useStateFromStores(items, () => outer1_6.getConfig({ location }));
 };
 export const maybeMigrateToAutoQuality = function maybeMigrateToAutoQuality() {
-  const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   let num = Storage.get(GoLiveAutoQualityMigrationVersion);
   if (num == null) {
     num = 0;

@@ -1,3 +1,7 @@
+import { ActivityIndicator } from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import { KeyboardAwareView } from "../../../keyboard/native/KeyboardAwareView.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import { MemberVerificationModal } from "MemberVerificationModal.tsx";
 // discord_app/modules/guild_member_verification/native/components/MemberVerificationScreen.tsx
 import closure_4 from "makeAuthenticated";
 import { View } from "useSafeAreaInsets";
@@ -11,11 +15,11 @@ import makeAuthenticated from "makeAuthenticated";
 
 const require = arg1;
 function Loading() {
-  return <View style={createCacheKey().flexLoading}>{jsx(require("../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx") /* ActivityIndicator */.ActivityIndicator, {})}</View>;
+  return <View style={createCacheKey().flexLoading}>{jsx(ActivityIndicator /* ActivityIndicator */.ActivityIndicator, {})}</View>;
 }
 function MemberVerificationRouteView(arg0) {
   const merged = Object.assign(arg0);
-  return jsx(require("MemberVerificationModal.tsx"), {});
+  return jsx(MemberVerificationModal, {});
 }
 function ExistingJoinRequestHandler(guildId) {
   guildId = guildId.guildId;
@@ -138,7 +142,7 @@ const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerific
       const obj2 = navigation(outer1_3[16]);
     }
   }, items);
-  require("../../../safe_area/useSafeAreaInsets.native.tsx")();
+  useSafeAreaInsets();
   if (null == guildId) {
     let tmp10 = <Loading />;
   } else {
@@ -156,9 +160,9 @@ const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerific
     obj1[0] = guildId;
     obj1[1] = callback;
     obj[1] = <MemberVerificationRouteView guildId={null} onClose={null} />;
-    obj[2] = jsx(require("../../../keyboard/native/KeyboardAwareView.tsx"), { marginLeft: null, marginRight: null });
+    obj[2] = jsx(KeyboardAwareView, { marginLeft: null, marginRight: null });
     tmp10 = <ExistingJoinRequestHandler marginLeft={null} marginRight={null} />;
-    const tmp3Result = require("../../../keyboard/native/KeyboardAwareView.tsx");
+    const tmp3Result = KeyboardAwareView;
   }
   return tmp10;
 });

@@ -1,3 +1,4 @@
+import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/collectibles/CollectiblesPurchaseStore.tsx
 import { Store } from "initialize";
 
@@ -76,7 +77,7 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(require("dispatc
           return items;
         }));
       }
-      obj = require("../../../_runtime/00012_apply.js") /* apply */;
+      obj = apply /* apply */;
     }
     let c8 = true;
     let c4 = false;
@@ -105,7 +106,7 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(require("dispatc
             return items;
           }));
         }
-        obj = require("../../../_runtime/00012_apply.js") /* apply */;
+        obj = apply /* apply */;
       }
       let c5;
       let c7;

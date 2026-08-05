@@ -1,3 +1,6 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { canSeeChannelSummaries } from "../../experiments/ChannelSummariesExperiment.tsx";
+import { set } from "../../utils/Durations.tsx";
 // discord_app/modules/summaries/SummaryStore.tsx
 import _slicedToArray from "_slicedToArray";
 import getHash from "getHash";
@@ -179,7 +182,7 @@ prototype["shouldFetch"] = function shouldFetch(arg0, arg1) {
   } else {
     return false;
   }
-  obj = require("../../experiments/ChannelSummariesExperiment.tsx") /* canSeeChannelSummaries */;
+  obj = canSeeChannelSummaries /* canSeeChannelSummaries */;
 };
 prototype["channelAffinities"] = function channelAffinities() {
   return closure_21;
@@ -197,7 +200,7 @@ prototype["shouldFetchChannelAffinities"] = function shouldFetchChannelAffinitie
     if (tmp4) {
       const _Date = Date;
       const diff = Date.now() - closure_23.lastResponse;
-      tmp4 = diff < 30 * require("../../utils/Durations.tsx").Millis.SECOND;
+      tmp4 = diff < 30 * set.Millis.SECOND;
     }
     tmp = !tmp4;
   }
@@ -574,7 +577,7 @@ obj = {
     ({ receivedAt: require, error: importDefault } = requestArgs);
     const channelIds = requestArgs.requestArgs.channelIds;
     let dependencyMap;
-    let obj = require("../../../_runtime/00012_apply.js");
+    let obj = apply;
     dependencyMap = obj.toPairs(requestArgs.summaries).reduce((arg0, arg1) => {
       const tmp = callback2(arg1, 2);
       const first = tmp[0];
@@ -613,7 +616,7 @@ obj = {
   CONVERSATION_SUMMARY_UPDATE(channel_id) {
     channel_id = channel_id.channel_id;
     const timestamp = Date.now();
-    let obj = require("../../../_runtime/00012_apply.js");
+    let obj = apply;
     const chainResult = obj.chain(channel_id.summaries);
     const tmp2 = importDefault;
     const found = obj.chain(channel_id.summaries).sortBy((start_id) => callback(11).extractTimestamp(start_id.start_id)).filter((arg0) => Object.keys(arg0).length > 0);

@@ -1,3 +1,4 @@
+import { inlineStyles } from "../../../../../_runtime/08437_inlineStyles.js";
 // discord_app/modules/client_themes/images/native/SynchronizeIconNative.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -12,14 +13,14 @@ export default function SynchronizeIcon(iconStyles) {
   const fill = iconStyles.fill;
   let obj = { style: iconStyles.iconStyles, x: "0px", y: "0px", width: "24", height: "24", viewBox: "0 0 24 24", fill, children: null };
   obj = { id: "Frame_-_24px", children: null };
-  obj[1] = callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Rect, { y: "0", fill: "none", width: "24", height: "24" });
-  const items = [callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.G, obj), ];
+  obj[1] = callback(inlineStyles /* inlineStyles */.Rect, { y: "0", fill: "none", width: "24", height: "24" });
+  const items = [callback(inlineStyles /* inlineStyles */.G, obj), ];
   obj = { id: "Filled_Icons", children: null };
   const obj1 = { children: null };
-  const items1 = [callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { fill, d: "M6.351,6.351C7.824,4.871,9.828,4,12,4c4.411,0,8,3.589,8,8h2c0-5.515-4.486-10-10-10 C9.285,2,6.779,3.089,4.938,4.938L3,3v6h6L6.351,6.351z" }), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { fill, d: "M17.649,17.649C16.176,19.129,14.173,20,12,20c-4.411,0-8-3.589-8-8H2c0,5.515,4.486,10,10,10 c2.716,0,5.221-1.089,7.062-2.938L21,21v-6h-6L17.649,17.649z" })];
+  const items1 = [callback(inlineStyles /* inlineStyles */.Path, { fill, d: "M6.351,6.351C7.824,4.871,9.828,4,12,4c4.411,0,8,3.589,8,8h2c0-5.515-4.486-10-10-10 C9.285,2,6.779,3.089,4.938,4.938L3,3v6h6L6.351,6.351z" }), callback(inlineStyles /* inlineStyles */.Path, { fill, d: "M17.649,17.649C16.176,19.129,14.173,20,12,20c-4.411,0-8-3.589-8-8H2c0,5.515,4.486,10,10,10 c2.716,0,5.221-1.089,7.062-2.938L21,21v-6h-6L17.649,17.649z" })];
   obj1[0] = items1;
-  obj[1] = callback2(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.G, obj1);
-  items[1] = callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.G, obj);
+  obj[1] = callback2(inlineStyles /* inlineStyles */.G, obj1);
+  items[1] = callback(inlineStyles /* inlineStyles */.G, obj);
   obj[7] = items;
-  return callback2(require("../../../../../_runtime/08437_inlineStyles.js"), obj);
+  return callback2(inlineStyles, obj);
 };

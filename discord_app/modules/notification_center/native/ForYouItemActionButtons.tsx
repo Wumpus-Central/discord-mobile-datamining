@@ -1,3 +1,5 @@
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { useCanReplyToMessage } from "../../replies/canReplyToMessage.tsx";
 // discord_app/modules/notification_center/native/ForYouItemActionButtons.tsx
 import closure_3 from "ME";
 import handleSupportedURL from "handleSupportedURL";
@@ -277,7 +279,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(it
   }
   const notification_center_v2 = "notification_center_v2";
   let tmp2 = _require;
-  let obj = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
+  let obj = _defaultAreStatesEqual;
   const items = [id];
   const stateFromStores = obj.useStateFromStores(items, () => {
     const message = item.message;
@@ -287,7 +289,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(it
     }
     return id.getChannel(channel_id);
   });
-  let obj1 = _require("../../replies/canReplyToMessage.tsx");
+  let obj1 = _useCanReplyToMessage;
   let message = item.message;
   const canReplyToMessage = obj1.useCanReplyToMessage(stateFromStores, item.message);
   if (message != null) {

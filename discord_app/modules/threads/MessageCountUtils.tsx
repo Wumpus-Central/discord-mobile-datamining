@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/threads/MessageCountUtils.tsx
 import AbortCodes from "AbortCodes";
 
@@ -8,7 +10,7 @@ function _formatMessageCountLabel(count, iTS3Xe, id) {
   if (null != count) {
     str = "0";
     if (count >= 0) {
-      require("../../utils/SnowflakeUtils.tsx");
+      DISCORD_EPOCH;
       if (null == id) {
         let str3 = "50+";
         str = str3;
@@ -22,10 +24,10 @@ function _formatMessageCountLabel(count, iTS3Xe, id) {
     }
   }
   if ("0" === str) {
-    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    let stringResult = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.eXHkhl);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t.eXHkhl);
   } else {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     const obj = { count: null };
     obj[0] = str;
     stringResult = intl.formatToPlainString(iTS3Xe, obj);
@@ -36,12 +38,12 @@ function _formatMessageCountLabel(count, iTS3Xe, id) {
 const result = require("getSystemLocale").fileFinishedImporting("modules/threads/MessageCountUtils.tsx");
 
 export const shouldUseOldMaxMessageCount = function shouldUseOldMaxMessageCount(arg0) {
-  return require("../../utils/SnowflakeUtils.tsx").compare("992549565104128000", arg0) > -1;
+  return DISCORD_EPOCH.compare("992549565104128000", arg0) > -1;
 };
 export const getMessageCountText = function getMessageCountText(stateFromStores, id) {
   if (null != stateFromStores) {
     if (stateFromStores >= 0) {
-      require("../../utils/SnowflakeUtils.tsx");
+      DISCORD_EPOCH;
       if (null == id) {
         let str = "50+";
         return str;
@@ -57,8 +59,8 @@ export const getMessageCountText = function getMessageCountText(stateFromStores,
   return "0";
 };
 export const formatMobileMessageCountLabel = function formatMobileMessageCountLabel(count, id) {
-  return _formatMessageCountLabel(count, require("../../intl/index.native.tsx") /* getSystemLocale */.t.iTS3Xe, id);
+  return _formatMessageCountLabel(count, getSystemLocale /* getSystemLocale */.t.iTS3Xe, id);
 };
 export const formatMessageCountLabel = function formatMessageCountLabel(count, id) {
-  return _formatMessageCountLabel(count, require("../../intl/index.native.tsx") /* getSystemLocale */.t.rfAXDV, id);
+  return _formatMessageCountLabel(count, getSystemLocale /* getSystemLocale */.t.rfAXDV, id);
 };

@@ -1,3 +1,13 @@
+import { Directions } from "../../../../../_runtime/05368_Directions.js";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { MicrophoneIcon } from "../../../../design/components/Icon/native/redesign/generated/MicrophoneIcon.tsx";
+import { XSmallBoldIcon } from "../../../../design/components/Icon/native/redesign/generated/XSmallBoldIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useGradientBottom } from "../../../client_themes/native/ClientThemesOverrides.tsx";
+import { navigationToRootTabHelper } from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { _startAudioRecording } from "../VoiceMessageUtils.tsx";
 // discord_app/modules/voice_messages/native/components/VoiceMessageButton.tsx
 import getState from "getState";
 import getSystemLocale from "getSystemLocale";
@@ -33,14 +43,14 @@ const require = arg1;
 function VoiceMessageRecordingCancelledToastIcon() {
   let obj = { style: callback().icon, "aria-hidden": true, children: null };
   obj = { color: null, size: "xs" };
-  obj[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
-  obj[2] = jsx(require("../../../../design/components/Icon/native/redesign/generated/XSmallBoldIcon.tsx") /* XSmallBoldIcon */.XSmallBoldIcon, { color: null, size: "xs" });
+  obj[0] = Themes.colors.WHITE;
+  obj[2] = jsx(XSmallBoldIcon /* XSmallBoldIcon */.XSmallBoldIcon, { color: null, size: "xs" });
   return <closure_6 color={null} size="xs" />;
 }
 function triggerHapticGuarded() {
   if (state.getState().showRecordingOverlay) {
-    require("../VoiceMessageUtils.tsx") /* _startAudioRecording */.triggerHaptic();
-    const obj = require("../VoiceMessageUtils.tsx") /* _startAudioRecording */;
+    _startAudioRecording /* _startAudioRecording */.triggerHaptic();
+    const obj = _startAudioRecording /* _startAudioRecording */;
   }
 }
 let c5 = importAllResult;
@@ -80,19 +90,19 @@ const memoResult = importAllResult.memo((disabled) => {
   let callback2;
   let callback3;
   let c14;
-  let obj = _require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx");
-  let obj1 = _require("../../../client_themes/native/ClientThemesOverrides.tsx");
+  let obj = _useIsMobileVisualRefreshExperimentEnabled;
+  let obj1 = _useGradientBottom;
   const clientThemesOverride = obj1.useClientThemesOverride(createCacheKey().themedChatInput);
   const tmp3 = state((voiceMessageAnimationState) => voiceMessageAnimationState.voiceMessageAnimationState);
   dependencyMap = tmp3;
   let tmp = createCacheKey();
-  sharedValue = _require("../../../reanimated/ReanimatedRexport.tsx").useSharedValue(0);
+  sharedValue = _ReanimatedRexport.useSharedValue(0);
   _require = undefined;
   sharedValue1 = undefined;
   let ref = importAllResult.useRef(false);
   _require = ref;
-  let obj3 = _require("../../../reanimated/ReanimatedRexport.tsx");
-  sharedValue1 = _require("../../../reanimated/ReanimatedRexport.tsx").useSharedValue(false);
+  let obj3 = _ReanimatedRexport;
+  sharedValue1 = _ReanimatedRexport.useSharedValue(false);
   let items = [ref, sharedValue1];
   const items1 = [
     ref,
@@ -334,9 +344,9 @@ const memoResult = importAllResult.memo((disabled) => {
       }
     };
   }, items4);
-  let obj4 = _require("../../../reanimated/ReanimatedRexport.tsx");
+  let obj4 = _ReanimatedRexport;
   const items5 = [first, tmp7[2], channelId];
-  const isModalOpen = _require("../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx").useIsModalOpen();
+  const isModalOpen = _navigationToRootTabHelper.useIsModalOpen();
   const effect4 = importAllResult.useEffect(() => {
     function cancel() {
       const self = this;
@@ -608,7 +618,7 @@ const memoResult = importAllResult.memo((disabled) => {
       return;
     }
   }
-  obj = { voiceMessageAnimationState: tmp3, runOnJS: _require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, triggerHapticGuarded };
+  obj = { voiceMessageAnimationState: tmp3, runOnJS: _ReanimatedRexport.runOnJS, triggerHapticGuarded };
   Z.__closure = obj;
   Z.__workletHash = 9127775028714;
   Z.__initData = closure_30;
@@ -639,9 +649,9 @@ const memoResult = importAllResult.memo((disabled) => {
       const obj = callback(_undefined[18]);
     }
   }, items9);
-  let obj5 = _require("../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx");
+  let obj5 = _navigationToRootTabHelper;
   const tmp23 = sharedValue1(8935);
-  let intl = _require("../../../../intl/index.native.tsx").intl;
+  let intl = _getSystemLocale.intl;
   const tmp24 = sharedValue(function*() {
     if (c2 === 2) {
       c2 = 3;
@@ -756,7 +766,7 @@ const memoResult = importAllResult.memo((disabled) => {
         throw tmp12;
       }
     }
-  }), intl.string(_require("../../../../intl/index.native.tsx").t.lwy6aX)));
+  }), intl.string(_getSystemLocale.t.lwy6aX)));
   const memo = importAllResult.useMemo(() => {
     const Gesture = callback(_undefined[38]).Gesture;
     const PanResult = Gesture.Pan();
@@ -866,10 +876,10 @@ const memoResult = importAllResult.memo((disabled) => {
         throw tmp12;
       }
     }
-  }), intl.string(_require("../../../../intl/index.native.tsx").t.lwy6aX));
-  obj1[1] = _require("../../../../design/components/Icon/native/redesign/generated/MicrophoneIcon.tsx").MicrophoneIcon;
-  const intl2 = _require("../../../../intl/index.native.tsx").intl;
-  obj1[3] = intl2.string(_require("../../../../intl/index.native.tsx").t.lwy6aX);
+  }), intl.string(_getSystemLocale.t.lwy6aX));
+  obj1[1] = _MicrophoneIcon.MicrophoneIcon;
+  const intl2 = _getSystemLocale.intl;
+  obj1[3] = intl2.string(_getSystemLocale.t.lwy6aX);
   obj1[4] = accessibilityActions;
   obj1[5] = onAccessibilityAction;
   obj1[6] = disabled;
@@ -879,7 +889,7 @@ const memoResult = importAllResult.memo((disabled) => {
   }
   obj1[7] = tmp30;
   obj[1] = jsx(sharedValue1(11522), { ref: sharedValue1(11541)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null });
-  return jsx(_require("../../../../../_runtime/05368_Directions.js").GestureDetector, { gesture: memo, children: null });
+  return jsx(_Directions.GestureDetector, { gesture: memo, children: null });
 });
 let result = require("noop").fileFinishedImporting("modules/voice_messages/native/components/VoiceMessageButton.tsx");
 

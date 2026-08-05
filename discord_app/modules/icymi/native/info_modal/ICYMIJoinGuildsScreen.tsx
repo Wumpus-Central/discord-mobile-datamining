@@ -1,3 +1,8 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { SolidCutout } from "../../../../design/components/Icon/native/ClipView.tsx";
+import { ServerIcon } from "../../../../design/components/Icon/native/redesign/generated/ServerIcon.tsx";
+import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
+import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
 // discord_app/modules/icymi/native/info_modal/ICYMIJoinGuildsScreen.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import set from "set";
@@ -31,15 +36,15 @@ function SelectedServerIcon(guild) {
     obj = { style: null, guild: null, size: null };
     obj[0] = tmp.guildIconBorder;
     obj[1] = guild;
-    obj[2] = require("../../../guild/native/GuildIcon.tsx") /* GuildIconSizes */.GuildIconSizes.LARGE;
-    let tmp3Result = tmp3(require("../../../guild/native/GuildIcon.tsx"), obj);
-    const tmp12 = require("../../../guild/native/GuildIcon.tsx");
+    obj[2] = GuildIconSizes /* GuildIconSizes */.GuildIconSizes.LARGE;
+    let tmp3Result = tmp3(GuildIconSizes, obj);
+    const tmp12 = GuildIconSizes;
   } else {
     tmp3Result = null;
     if (tmp2) {
       obj = { size: "md", color: null };
-      obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_MUTED;
-      tmp3Result = tmp3(require("../../../../design/components/Icon/native/redesign/generated/ServerIcon.tsx") /* ServerIcon */.ServerIcon, obj);
+      obj[1] = Themes.colors.ICON_MUTED;
+      tmp3Result = tmp3(ServerIcon /* ServerIcon */.ServerIcon, obj);
     }
   }
   obj[1] = tmp3Result;
@@ -133,7 +138,7 @@ function CutoutGuildBanner(guild) {
     hasItem = features.has(GuildFeatures.ANIMATED_BANNER);
   }
   if (null != guild.banner) {
-    let obj1 = require("../../../../utils/AvatarUtils.tsx");
+    let obj1 = getAvatarURL;
     const animatableSourceWithFallback = obj1.getAnimatableSourceWithFallback(hasItem, (hasItem) => {
       let obj = outer1_1(outer1_2[17]);
       obj = { id: guild.id, banner: guild.banner };
@@ -159,15 +164,15 @@ function CutoutGuildBanner(guild) {
     tmp11Result = tmp11(tmp10, obj3);
   }
   obj[1] = tmp11Result;
-  const items3 = [closure_12(require("../../../../design/components/Icon/native/ClipView.tsx"), obj), ];
+  const items3 = [closure_12(SolidCutout, obj), ];
   const obj4 = { style: items4, guild, size: null, animate: null };
   items4 = [, ];
   ({ guildIcon: arr5[0], guildIconBorder: arr5[1] } = tmp);
-  const tmp13 = require("../../../../design/components/Icon/native/ClipView.tsx");
+  const tmp13 = SolidCutout;
   const tmp9 = closure_13;
   obj4[2] = guild(5661).GuildIconSizes.LARGE;
   obj4[3] = !stateFromStores;
-  items3[1] = closure_12(require("../../../guild/native/GuildIcon.tsx"), obj4);
+  items3[1] = closure_12(GuildIconSizes, obj4);
   obj[1] = items3;
   return tmp9(closure_6, obj);
 }
@@ -231,44 +236,44 @@ function FeaturedServer(guild) {
 let c15 = 50;
 let closure_16 = createICYMIStyles.createICYMIStyles((margin) => {
   let obj = { container: null, scrollContentContainer: null, footer: null, title: null, subtitle: null, separator: null, featuredServerContainer: null, featuredServerInnerContainer: null, buttonContainer: null, featuredServerTitle: null, guildIcon: null, bannerImage: null, emptyBanner: null, guildsScrollContainer: null, guildsColumn: null, selectedServersRowContainer: null, selectedServerIcon: null, noServerContainer: null, noServerExtraContainer: null, pressableUnderlayColor: null, guildIconBorder: null };
-  obj = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOWER, position: "relative", flex: 1, marginHorizontal: margin.margin };
+  obj = { backgroundColor: Themes.colors.BACKGROUND_BASE_LOWER, position: "relative", flex: 1, marginHorizontal: margin.margin };
   obj[0] = obj;
-  obj = { paddingTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  obj = { paddingTop: Themes.space.PX_8 };
   obj[1] = obj;
-  obj[2] = { position: "absolute", bottom: 0, left: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, right: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, paddingBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
-  const obj1 = { position: "absolute", bottom: 0, left: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, right: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, paddingBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
-  obj[3] = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  const obj2 = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  obj[4] = { marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  const obj3 = { marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  obj[5] = { height: hairlineWidth.hairlineWidth, width: "100%", backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE };
-  const obj4 = { height: hairlineWidth.hairlineWidth, width: "100%", backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE };
-  obj[6] = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CARD_BACKGROUND_DEFAULT, overflow: "hidden", marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
-  const obj5 = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.lg, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CARD_BACKGROUND_DEFAULT, overflow: "hidden", marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
-  obj[7] = { marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, marginTop: 36 };
-  const obj6 = { marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, marginTop: 36 };
-  obj[8] = { marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, marginTop: margin.margin };
-  const obj7 = { marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, marginTop: margin.margin };
-  obj[9] = { marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  obj[2] = { position: "absolute", bottom: 0, left: Themes.space.PX_24, right: Themes.space.PX_24, paddingBottom: Themes.space.PX_8 };
+  const obj1 = { position: "absolute", bottom: 0, left: Themes.space.PX_24, right: Themes.space.PX_24, paddingBottom: Themes.space.PX_8 };
+  obj[3] = { marginTop: Themes.space.PX_24, marginBottom: Themes.space.PX_8, marginHorizontal: Themes.space.PX_24 };
+  const obj2 = { marginTop: Themes.space.PX_24, marginBottom: Themes.space.PX_8, marginHorizontal: Themes.space.PX_24 };
+  obj[4] = { marginHorizontal: Themes.space.PX_24 };
+  const obj3 = { marginHorizontal: Themes.space.PX_24 };
+  obj[5] = { height: hairlineWidth.hairlineWidth, width: "100%", backgroundColor: Themes.colors.BORDER_SUBTLE };
+  const obj4 = { height: hairlineWidth.hairlineWidth, width: "100%", backgroundColor: Themes.colors.BORDER_SUBTLE };
+  obj[6] = { borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.CARD_BACKGROUND_DEFAULT, overflow: "hidden", marginHorizontal: Themes.space.PX_8, marginVertical: Themes.space.PX_8 };
+  const obj5 = { borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.CARD_BACKGROUND_DEFAULT, overflow: "hidden", marginHorizontal: Themes.space.PX_8, marginVertical: Themes.space.PX_8 };
+  obj[7] = { marginHorizontal: Themes.space.PX_12, marginTop: 36 };
+  const obj6 = { marginHorizontal: Themes.space.PX_12, marginTop: 36 };
+  obj[8] = { marginBottom: Themes.space.PX_12, marginTop: margin.margin };
+  const obj7 = { marginBottom: Themes.space.PX_12, marginTop: margin.margin };
+  obj[9] = { marginBottom: Themes.space.PX_8 };
   obj[10] = { position: "absolute", top: 50, left: 12 };
   obj[11] = { height: 73, width: "100%" };
-  const obj8 = { marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
-  obj[12] = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_SUBTLE };
-  const obj9 = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_SUBTLE };
-  obj[13] = { flex: 1, marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
-  const obj10 = { flex: 1, marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
-  obj[14] = { flex: 1, flexDirection: "column", gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
-  const obj11 = { flex: 1, flexDirection: "column", gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
-  obj[15] = { height: c15, width: "100%", marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  const obj12 = { height: c15, width: "100%", marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  obj[16] = { flex: 1, width: c15, height: c15, alignItems: "center", justifyContent: "center", borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_STRONG, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.md, borderWidth: 1 };
-  const obj13 = { flex: 1, width: c15, height: c15, alignItems: "center", justifyContent: "center", borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_STRONG, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.md, borderWidth: 1 };
-  obj[17] = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_MUTED, borderStyle: "dashed" };
+  const obj8 = { marginBottom: Themes.space.PX_8 };
+  obj[12] = { backgroundColor: Themes.colors.BACKGROUND_MOD_SUBTLE };
+  const obj9 = { backgroundColor: Themes.colors.BACKGROUND_MOD_SUBTLE };
+  obj[13] = { flex: 1, marginHorizontal: Themes.space.PX_8 };
+  const obj10 = { flex: 1, marginHorizontal: Themes.space.PX_8 };
+  obj[14] = { flex: 1, flexDirection: "column", gap: Themes.space.PX_16 };
+  const obj11 = { flex: 1, flexDirection: "column", gap: Themes.space.PX_16 };
+  obj[15] = { height: c15, width: "100%", marginBottom: Themes.space.PX_24 };
+  const obj12 = { height: c15, width: "100%", marginBottom: Themes.space.PX_24 };
+  obj[16] = { flex: 1, width: c15, height: c15, alignItems: "center", justifyContent: "center", borderColor: Themes.colors.BORDER_STRONG, borderRadius: Themes.radii.md, borderWidth: 1 };
+  const obj13 = { flex: 1, width: c15, height: c15, alignItems: "center", justifyContent: "center", borderColor: Themes.colors.BORDER_STRONG, borderRadius: Themes.radii.md, borderWidth: 1 };
+  obj[17] = { backgroundColor: Themes.colors.BACKGROUND_MOD_MUTED, borderStyle: "dashed" };
   obj[18] = { opacity: 0.4 };
-  const obj14 = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_MUTED, borderStyle: "dashed" };
-  obj[19] = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_BACKGROUND_ACTIVE };
-  const obj15 = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_BACKGROUND_ACTIVE };
-  obj[20] = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.md };
+  const obj14 = { backgroundColor: Themes.colors.BACKGROUND_MOD_MUTED, borderStyle: "dashed" };
+  obj[19] = { backgroundColor: Themes.colors.INTERACTIVE_BACKGROUND_ACTIVE };
+  const obj15 = { backgroundColor: Themes.colors.INTERACTIVE_BACKGROUND_ACTIVE };
+  obj[20] = { borderRadius: Themes.radii.md };
   return obj;
 });
 let closure_18 = { code: "function ICYMIJoinGuildsScreenTsx1(){const{withTiming,selectedGuilds,SELECTED_SERVER_SIZE_WITH_BORDER,tokens}=this.__closure;return{opacity:withTiming(selectedGuilds.length>0?1:0),height:withTiming(selectedGuilds.length>0?SELECTED_SERVER_SIZE_WITH_BORDER:0),marginTop:withTiming(selectedGuilds.length>0?tokens.space.PX_24:0)};}" };

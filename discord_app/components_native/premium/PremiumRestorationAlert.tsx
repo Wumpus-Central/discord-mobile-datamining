@@ -1,3 +1,4 @@
+import { componentDidMount } from "../common/UntouchableAlert.tsx";
 // discord_app/components_native/premium/PremiumRestorationAlert.tsx
 import importDefaultResult from "updateProduct";
 import { jsx } from "jsxProd";
@@ -11,7 +12,7 @@ PremiumRestorationAlert.prototype["render"] = function render() {
   let isBusy;
   let onClose;
   ({ isBusy, onClose } = this.props);
-  return jsx(require("../common/UntouchableAlert.tsx"), { loading, onClose });
+  return jsx(componentDidMount, { loading, onClose });
 };
 const items = [importDefaultResult];
 const tmp4 = require("initialize").connectStores(items, () => ({ isBusy: importDefaultResult.isBusy() }))(PremiumRestorationAlert);

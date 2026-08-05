@@ -1,3 +1,4 @@
+import { registerAsset } from "../../../../_runtime/12476_registerAsset.js";
 // discord_app/modules/saved_messages/native/useForLaterCoachmark.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -9,7 +10,7 @@ import createCacheKey from "createCacheKey";
 const require = arg1;
 function CoachmarkImg() {
   const obj = { source: null, style: null };
-  obj[0] = require("../../../../_runtime/12476_registerAsset.js");
+  obj[0] = registerAsset;
   obj[1] = callback2().imageContainer;
   return <Image source={null} style={null} />;
 }

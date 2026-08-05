@@ -1,3 +1,8 @@
+import { SelectedChannelActionCreators } from "../../actions/SelectedChannelActionCreators.tsx";
+import { watchStream } from "../../actions/StreamActionCreators.tsx";
+import { shouldShowVoiceChannelChangeConfirmation } from "../channel/shouldShowVoiceChannelChangeConfirmation.tsx";
+import { _initialize } from "StageChannelNewUserManager.tsx";
+import { Permissions } from "StageChannelPermissions.tsx";
 // discord_app/modules/stage_channels/StageChannelModalActionCreators.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import reset from "reset";
@@ -13,7 +18,7 @@ function connectToStage(channel, flag) {
   }
   if (!flag) {
     const _require = channel;
-    const canResult = getUncachedChannelPermissions.can(_require("StageChannelPermissions.tsx").JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
+    const canResult = getUncachedChannelPermissions.can(_Permissions.JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
     let tmp6 = !canResult;
     if (canResult) {
       let num = importAll(7697).shouldShowBlockedUsers(channel.id) && tmp !== channel.id;
@@ -32,22 +37,22 @@ function connectToStage(channel, flag) {
       return false;
     }
   }
-  require("StageChannelNewUserManager.tsx").initialize();
+  _initialize.initialize();
   const obj = closure_9;
-  const obj4 = require("StageChannelNewUserManager.tsx");
-  const voiceChannel = require("../../actions/SelectedChannelActionCreators.tsx").selectVoiceChannel(channel.id);
+  const obj4 = _initialize;
+  const voiceChannel = SelectedChannelActionCreators.selectVoiceChannel(channel.id);
   if (obj.getVoiceChannelId() !== channel.id) {
     return false;
   } else {
     allApplicationStreamsForChannel = allApplicationStreamsForChannel.getAllApplicationStreamsForChannel(channel.id);
     const found = allApplicationStreamsForChannel.find((currentUserActiveStream) => !streamMarkedFull.isStreamMarkedFull(channel(table[13]).encodeStreamKey(currentUserActiveStream)));
     if (null != found) {
-      _require("../../actions/StreamActionCreators.tsx").watchStream(found, { noFocus: true });
-      const obj6 = _require("../../actions/StreamActionCreators.tsx");
+      _watchStream.watchStream(found, { noFocus: true });
+      const obj6 = _watchStream;
     }
     return true;
   }
-  const obj5 = require("../../actions/SelectedChannelActionCreators.tsx");
+  const obj5 = SelectedChannelActionCreators;
 }
 function connectAndOpen(channel, flag) {
   const _require = channel;
@@ -68,8 +73,8 @@ function connectAndOpen(channel, flag) {
     result = voiceChannelId !== channel.id;
   }
   if (result) {
-    result = _require("../channel/shouldShowVoiceChannelChangeConfirmation.tsx").shouldShowVoiceChannelChangeConfirmation(channel);
-    const obj = _require("../channel/shouldShowVoiceChannelChangeConfirmation.tsx");
+    result = _shouldShowVoiceChannelChangeConfirmation.shouldShowVoiceChannelChangeConfirmation(channel);
+    const obj = _shouldShowVoiceChannelChangeConfirmation;
   }
   if (result) {
     result = flag2(7697).showChannelChangeConfirmationAlert(channel, () => {

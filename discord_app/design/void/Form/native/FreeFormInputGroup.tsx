@@ -1,3 +1,8 @@
+import { set } from "../../../../utils/PlatformUtils.tsx";
+import { context } from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import { Label } from "FreeFormErrorLabel.tsx";
+import { FreeFormLabel } from "FreeFormLabel.tsx";
+import { ClearButton } from "FreeFormTextInput.tsx";
 // discord_app/design/void/Form/native/FreeFormInputGroup.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -32,7 +37,7 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
   const tmp2 = callback2();
   let isAndroidResult = enableAndroidSanitizedInputWorkaround;
   if (enableAndroidSanitizedInputWorkaround) {
-    let obj = require("../../../../utils/PlatformUtils.tsx") /* set */;
+    let obj = set /* set */;
     isAndroidResult = obj.isAndroid();
   }
   if (!isAndroidResult) {
@@ -41,10 +46,10 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
   if (!enableAndroidSanitizedInputWorkaround) {
     let str = keyboardType;
   } else {
-    let obj1 = require("../../../../utils/PlatformUtils.tsx") /* set */;
+    let obj1 = set /* set */;
     str = "visible-password";
   }
-  const context = importAllResult.useContext(require("../../../components/RedesignCompat/native/RedesignCompat.native.tsx") /* context */.RedesignCompatContext);
+  const context = importAllResult.useContext(context /* context */.RedesignCompatContext);
   const id = importAllResult.useId();
   if (context) {
     ({ placeholder, onChangeText, clearButtonVisibility } = merged);
@@ -70,7 +75,7 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
       obj1[0] = tmp2.label;
       obj1[1] = id;
       obj1[2] = label;
-      tmp14 = callback(require("FreeFormLabel.tsx"), obj1);
+      tmp14 = callback(FreeFormLabel, obj1);
     }
     const items = [tmp14, , , ];
     const obj2 = {};
@@ -92,13 +97,13 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
     obj2.keyboardType = str;
     const items1 = [tmp2.input, accessibilityLabel.textStyle];
     obj2.style = items1;
-    items[1] = callback(require("FreeFormTextInput.tsx"), obj2);
+    items[1] = callback(ClearButton, obj2);
     let tmp17Result = null;
     if (null != error) {
       const obj3 = { style: null, children: null };
       obj3[0] = tmp2.error;
       obj3[1] = error;
-      tmp17Result = tmp17(require("FreeFormErrorLabel.tsx"), obj3);
+      tmp17Result = tmp17(Label, obj3);
     }
     items[2] = tmp17Result;
     tmp17Result = null;

@@ -1,3 +1,5 @@
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 // discord_app/modules/application_commands/ApplicationCommandAutocompleteStore.tsx
 import handleInit from "handleInit";
 import { AnalyticEvents } from "ME";
@@ -299,7 +301,7 @@ set = {
         if (activeOption != null) {
           type = activeOption.type;
         }
-        tmp29 = type === _require("../../flow/Server.tsx").ApplicationCommandOptionType.INTEGER;
+        tmp29 = type === _PermissionOverwriteType.ApplicationCommandOptionType.INTEGER;
       }
       _require = tmp29;
       let mapped;
@@ -336,7 +338,7 @@ set = {
       obj = { duration_ms: null, error: false, num_options: null };
       obj[0] = num;
       obj[2] = mapped.length;
-      _require("../app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, obj);
+      _collectGuildAnalyticsMetadata.trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, obj);
       map2.delete(nonce);
       const optionNameToAutocompleteQueries3 = value.optionNameToAutocompleteQueries;
       const value2 = optionNameToAutocompleteQueries3.get(value.name);
@@ -373,7 +375,7 @@ set = {
         }
         let obj = { duration_ms: null, error: true };
         obj[0] = num;
-        require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */.trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, obj);
+        collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, obj);
         map2.delete(nonce);
         const channelId = value.channelId;
         if (!map1.has(channelId)) {

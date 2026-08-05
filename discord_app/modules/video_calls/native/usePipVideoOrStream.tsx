@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/video_calls/native/usePipVideoOrStream.tsx
 import participantFromServer from "participantFromServer";
 import getParticipants from "getParticipants";
@@ -20,7 +21,7 @@ export default function usePipVideoOrStream(arg0) {
   const _require = arg0;
   const items = [getParticipants, updateSpeaker, reset];
   const items1 = [arg0];
-  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     if (null != c0) {
       let videoParticipants = outer1_4.getVideoParticipants(tmp);
     } else {

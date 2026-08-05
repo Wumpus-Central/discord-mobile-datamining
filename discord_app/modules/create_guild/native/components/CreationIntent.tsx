@@ -1,3 +1,10 @@
+import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
+import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { SCREEN_READER_ENABLED_GETTER } from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 // discord_app/modules/create_guild/native/components/CreationIntent.tsx
 import set from "set";
 import get_ActivityIndicator from "ListSelectionItem";
@@ -81,9 +88,9 @@ export default function CreationIntent(arg0) {
     }
   }
   let tmp = createCacheKey();
-  let obj = require("../../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
+  let obj = useNavigation /* useNavigation */;
   dependencyMap = obj.useNavigation();
-  let obj1 = require("../../../a11y/native/useIsScreenReaderEnabled.native.tsx") /* SCREEN_READER_ENABLED_GETTER */;
+  let obj1 = SCREEN_READER_ENABLED_GETTER /* SCREEN_READER_ENABLED_GETTER */;
   isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
   ref = isScreenReaderEnabled.useRef(null);
   const items = [isScreenReaderEnabled];
@@ -113,20 +120,20 @@ export default function CreationIntent(arg0) {
   obj = { style: tmp.scrollContainer, children: null };
   obj1 = { style: tmp.headerContainer, children: null };
   let obj2 = { ref, style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj2[5] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.f3MvGS);
-  const items2 = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj2[5] = intl.string(getSystemLocale /* getSystemLocale */.t.f3MvGS);
+  const items2 = [callback(Text /* Text */.Text, obj2), ];
   let obj3 = { style: tmp.headerDescription, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj3[3] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.nOzc7w);
-  items2[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj3[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.nOzc7w);
+  items2[1] = callback(Text /* Text */.Text, obj3);
   obj1[1] = items2;
   const items3 = [callback2(ref, obj1), , ];
   const obj4 = { style: tmp.sections, children: null };
   const obj5 = { hasIcons: true, children: null };
   const tmp13 = trigger(11608);
   const obj6 = { Icon: null, message: null, onPress: null };
-  const tmp14 = require("../../../../design/assets/native.tsx") /* AccountAgeTier10LargeBadge */;
+  const tmp14 = AccountAgeTier10LargeBadge /* AccountAgeTier10LargeBadge */;
   if (closure_14) {
     obj6[0] = tmp14.ChairIllocon;
     const intl5 = tmp2(1236).intl;
@@ -166,17 +173,17 @@ export default function CreationIntent(arg0) {
     obj5[1] = items5;
     tmp16 = obj5;
   }
-  obj4[1] = callback2(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, tmp16);
+  obj4[1] = callback2(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, tmp16);
   items3[1] = callback(ref, obj4);
   const obj9 = { style: tmp.skipDescription, variant: "text-sm/medium", color: "text-default", children: null };
   const intl7 = tmp2(1236).intl;
-  obj9[3] = intl7.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["SMc+Gz"], {
+  obj9[3] = intl7.format(getSystemLocale /* getSystemLocale */.t["SMc+Gz"], {
     onSkip(arg0) {
       onPress(null);
     }
   });
-  items3[2] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj9);
+  items3[2] = callback(Text /* Text */.Text, obj9);
   obj[1] = items3;
   obj[2] = callback2(onPress, obj);
-  return callback(require("../../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return callback(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 };

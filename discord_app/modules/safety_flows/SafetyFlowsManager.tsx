@@ -1,15 +1,16 @@
+import { _openSafetyFlow } from "openSafetyFlow.native.tsx";
 // discord_app/modules/safety_flows/SafetyFlowsManager.tsx
 import "initialize";
 
 const require = arg1;
 function handleConnectionOpenSupplemental() {
-  require("openSafetyFlow.native.tsx") /* _openSafetyFlow */.openSafetyFlow();
+  _openSafetyFlow /* _openSafetyFlow */.openSafetyFlow();
 }
 function handleSafetyFlowsModalOpen() {
-  require("openSafetyFlow.native.tsx") /* _openSafetyFlow */.openSafetyFlow();
+  _openSafetyFlow /* _openSafetyFlow */.openSafetyFlow();
 }
 function handleUserRequiredActionUpdate(requiredAction) {
-  require("openSafetyFlow.native.tsx") /* _openSafetyFlow */.openSafetyFlow({ requiredAction: requiredAction.requiredAction });
+  _openSafetyFlow /* _openSafetyFlow */.openSafetyFlow({ requiredAction: requiredAction.requiredAction });
 }
 let prototype = function SafetyFlowsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

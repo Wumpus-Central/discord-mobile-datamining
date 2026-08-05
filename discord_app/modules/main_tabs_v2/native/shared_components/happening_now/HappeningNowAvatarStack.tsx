@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../../../design/void/native.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAvatarStack.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -14,15 +16,15 @@ const require = arg1;
 let closure_10 = { damping: 17, stiffness: 320, mass: 0.5 };
 let closure_11 = createCacheKey.createStyles((arg0, marginLeft) => {
   let obj = { avatarStack: { flexDirection: "row" }, stageAvatarStack: null, avatarBubbles: null, avatars: null, shiftedAvatar: null, userCounter: null, ellipsisWrapper: null, ellipsisBorder: null };
-  obj = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_SUBTLE, borderRadius: 24, paddingLeft: 4, paddingRight: 4, paddingVertical: 4 };
+  obj = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: Themes.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 24, paddingLeft: 4, paddingRight: 4, paddingVertical: 4 };
   obj[1] = obj;
   obj[2] = { display: "flex", flexDirection: "row" };
   obj[3] = { display: "flex", flexDirection: "row" };
   obj[4] = { marginLeft: -marginLeft };
-  obj = { backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_STRONG, flexDirection: "row", alignItems: "center", justifyContent: "center", marginLeft: -marginLeft, height: require("../../../../../design/void/native.tsx") /* Button */.AVATAR_SIZE_MAP[arg0], minWidth: require("../../../../../design/void/native.tsx") /* Button */.AVATAR_SIZE_MAP[arg0], borderRadius: 10, paddingHorizontal: 4, paddingTop: 1 };
+  obj = { backgroundColor: Themes.colors.BACKGROUND_MOD_STRONG, flexDirection: "row", alignItems: "center", justifyContent: "center", marginLeft: -marginLeft, height: Button /* Button */.AVATAR_SIZE_MAP[arg0], minWidth: Button /* Button */.AVATAR_SIZE_MAP[arg0], borderRadius: 10, paddingHorizontal: 4, paddingTop: 1 };
   obj[5] = obj;
   obj[6] = { display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "flex-end", overflow: "hidden", marginLeft: -4 - marginLeft };
-  obj[7] = { borderColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.CARD_SECONDARY_BG };
+  obj[7] = { borderColor: Themes.colors.CARD_SECONDARY_BG };
   return obj;
 });
 let closure_12 = { code: "function HappeningNowAvatarStackTsx1(){const{interpolate,typingValue,ELLIPSIS_WIDTH}=this.__closure;return{opacity:interpolate(typingValue.get(),[0,1],[0,1]),width:interpolate(typingValue.get(),[0,1],[0,ELLIPSIS_WIDTH])};}" };

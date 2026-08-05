@@ -1,3 +1,6 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useIsActivityFocused } from "../../../activities/useIsActivityFocused.tsx";
+import { areParticipantStatesEqual } from "../useIsPrivateAudioOnlyCall.tsx";
 // discord_app/modules/video_calls/native/components/RevealProvider.tsx
 import importAllResult from "noop";
 import setContent from "setContent";
@@ -15,14 +18,14 @@ let require = arg1;
 function useRevealProviderValue(arg0, channel) {
   let tmp = arg0;
   const items = [setContent];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => null != key.getKey());
-  const obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => null != key.getKey());
+  const obj = initialize /* initialize */;
   const tmp2 = require;
-  const tmp5 = require("../useIsPrivateAudioOnlyCall.tsx")(channel);
+  const tmp5 = areParticipantStatesEqual(channel);
   const tmp6 = callback2();
   const items1 = [set];
-  const stateFromStores1 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
-  const obj2 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
+  const obj2 = initialize /* initialize */;
   if (!arg0) {
     tmp = stateFromStores;
   }
@@ -39,7 +42,7 @@ function useRevealProviderValue(arg0, channel) {
     tmp = stateFromStores1;
   }
   require = tmp;
-  const tmp8 = require("../../../activities/useIsActivityFocused.tsx")(channel.id);
+  const tmp8 = useIsActivityFocused(channel.id);
   const tmp10 = tmp2(500).isIOS() && tmp8;
   importDefault = tmp10;
   const items2 = [tmp, tmp10];

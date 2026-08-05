@@ -1,3 +1,4 @@
+import { isUndefinedOrNull } from "../../_runtime/00659_isUndefinedOrNull.js";
 // discord_app/stores/LocalActivityStore.tsx
 import _slicedToArray from "_slicedToArray";
 import participantFromServer from "participantFromServer";
@@ -229,7 +230,7 @@ const localActivityStore = new LocalActivityStore(require("dispatcher"), {
     let socketId;
     ({ socketId, pid, activity, partyPrivacy } = arg0);
     const items = [pid, activity, partyPrivacy];
-    if (require("../../_runtime/00659_isUndefinedOrNull.js")(table[socketId], items)) {
+    if (isUndefinedOrNull(table[socketId], items)) {
       return false;
     } else {
       if (null != activity) {

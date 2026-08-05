@@ -1,3 +1,6 @@
+import { isCrunchyrollActivity } from "../activities/utils/isCrunchyrollActivity.tsx";
+import { isPlayedGameEntry } from "ContentInventoryTypes.tsx";
+import { calculateTimestampDurations } from "utils.tsx";
 // discord_app/modules/content_inventory/matchUtils.tsx
 import { ActivityTypes } from "ME";
 import { CRUNCHYROLL_CLIENT_ID } from "CRUNCHYROLL_LINK_DEST_ORIGIN";
@@ -56,7 +59,7 @@ export const isSpotifyEntry = function isSpotifyEntry(extra) {
   return isTopArtistEntryResult;
 };
 export const isCrunchyrollEntry = function isCrunchyrollEntry(extra) {
-  let isWatchedMediaEntryResult = require("ContentInventoryTypes.tsx") /* isPlayedGameEntry */.isWatchedMediaEntry(extra);
+  let isWatchedMediaEntryResult = isPlayedGameEntry /* isPlayedGameEntry */.isWatchedMediaEntry(extra);
   if (isWatchedMediaEntryResult) {
     isWatchedMediaEntryResult = extra.extra.application_id === CRUNCHYROLL_CLIENT_ID;
   }
@@ -81,15 +84,15 @@ export const isMatchingApplicationActivity = function isMatchingApplicationActiv
 };
 export { isMatchingListeningActivity };
 export const isMatchingWatchActivity = function isMatchingWatchActivity(closure_0, details) {
-  const tmp2 = require("../activities/utils/isCrunchyrollActivity.tsx")(details);
+  const tmp2 = isCrunchyrollActivity(details);
   let tmp3 = !tmp2;
   if (tmp2) {
-    let isWatchedMediaEntryResult = require("ContentInventoryTypes.tsx") /* isPlayedGameEntry */.isWatchedMediaEntry(closure_0);
+    let isWatchedMediaEntryResult = isPlayedGameEntry /* isPlayedGameEntry */.isWatchedMediaEntry(closure_0);
     if (isWatchedMediaEntryResult) {
       isWatchedMediaEntryResult = closure_0.extra.application_id === CRUNCHYROLL_CLIENT_ID;
     }
     tmp3 = !isWatchedMediaEntryResult;
-    const obj = require("ContentInventoryTypes.tsx") /* isPlayedGameEntry */;
+    const obj = isPlayedGameEntry /* isPlayedGameEntry */;
   }
   let tmp7 = !tmp3;
   if (!tmp3) {
@@ -99,7 +102,7 @@ export const isMatchingWatchActivity = function isMatchingWatchActivity(closure_
 };
 export const findMatchingEntry = function findMatchingEntry(entries, activity) {
   const _require = activity;
-  const found = entries.filter(_require("utils.tsx").isEntryActive);
+  const found = entries.filter(_calculateTimestampDurations.isEntryActive);
   if (activity.type === ActivityTypes.PLAYING) {
     const found1 = found.filter(tmp(8826).isGamingLikeEntry);
     let found2 = found1.find((extra) => {

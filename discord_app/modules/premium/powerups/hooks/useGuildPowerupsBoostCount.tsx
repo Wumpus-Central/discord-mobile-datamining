@@ -1,3 +1,4 @@
+import { experiment } from "../../../game_server/GameServerExperiment.tsx";
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx
 import noop from "noop";
 import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
@@ -71,7 +72,7 @@ export const getGuildPowerupsBoostCount = function getGuildPowerupsBoostCount(id
   if (total == null) {
     total = 0;
   }
-  let obj = require("../../../game_server/GameServerExperiment.tsx") /* experiment */;
+  let obj = experiment /* experiment */;
   const gameServerEnabled = obj.getGameServerEnabled(id, "GuildPowerupsBoostCount");
   const stateForGuild = stateForGuild2.getStateForGuild(id);
   let appliedBoosts;

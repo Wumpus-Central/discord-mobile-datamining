@@ -1,3 +1,8 @@
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { context } from "../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/custom_status/native/ClearAfterOptionsActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -28,19 +33,19 @@ export default function ClearAfterOptionsActionSheet(arg0) {
   closure_1 = tmp2[0];
   let obj = { contentStyles: tmp.content, header: null, children: null };
   obj = { title: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["5XnRQ+"]);
-  obj[1] = callback2(require("../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["5XnRQ+"]);
+  obj[1] = callback2(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
   obj = { onChange: tmp2[1], title: null, defaultValue: null, hasIcons: false, children: null };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.E45wvP);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.E45wvP);
   obj[2] = initialValue;
   obj[4] = ClearAfterOptions.map((value) => {
     const obj = { value, label: null };
     obj[1] = callback2(9443)(value);
     return callback3(callback(7794).TableRadioRow, obj, value);
   });
-  const items = [callback2(require("../../../design/components/TableRow/native/TableRadioGroup.native.tsx") /* context */.TableRadioGroup, obj), ];
+  const items = [callback2(context /* context */.TableRadioGroup, obj), ];
   const obj1 = { style: tmp.buttonWrapper, children: null };
   const obj2 = {
     onPress() {
@@ -49,10 +54,10 @@ export default function ClearAfterOptionsActionSheet(arg0) {
     },
     text: null
   };
-  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj2[1] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.TyCVIq);
-  obj1[1] = callback2(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj2);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj2[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.TyCVIq);
+  obj1[1] = callback2(Button /* Button */.Button, obj2);
   items[1] = callback2(View, obj1);
   obj[2] = items;
-  return callback3(require("../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, obj);
+  return callback3(Background /* Background */.BottomSheet, obj);
 };

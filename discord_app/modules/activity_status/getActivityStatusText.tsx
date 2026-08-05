@@ -1,3 +1,5 @@
+import { StatusDisplayTypes } from "../../../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx";
+import { isEmbeddedActivity } from "../activities/utils/isEmbeddedActivity.tsx";
 // discord_app/modules/activity_status/getActivityStatusText.tsx
 import { ActivityTypes } from "ME";
 
@@ -60,7 +62,7 @@ export default function getActivityStatusText(name) {
   if (name != null) {
     status_display_type = name.status_display_type;
   }
-  if (status_display_type !== require("../../../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx") /* StatusDisplayTypes */.StatusDisplayTypes.NAME) {
+  if (status_display_type !== StatusDisplayTypes /* StatusDisplayTypes */.StatusDisplayTypes.NAME) {
     let status_display_type1;
     if (name != null) {
       status_display_type1 = name.status_display_type;
@@ -81,7 +83,7 @@ export default function getActivityStatusText(name) {
   } else {
     tmp17 = tmp2;
   }
-  if (require("../activities/utils/isEmbeddedActivity.tsx")(name)) {
+  if (isEmbeddedActivity(name)) {
     const tmp28 = tmp21(9572)(tmp2);
     let obj = { text: null, tooltip: null };
     obj[0] = tmp28;

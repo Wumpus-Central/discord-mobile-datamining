@@ -1,3 +1,4 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 // discord_app/modules/creator_monetization_eligibility/CreatorMonetizationEligibilityActionCreators.tsx
 import fetchApplication from "fetchApplication";
 import { Endpoints } from "ME";
@@ -474,15 +475,15 @@ export const ownershipTransferOnboard = function ownershipTransferOnboard() {
   return applyArgumentsResult;
 };
 export const acceptNewTerms = function acceptNewTerms(arg0) {
-  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   const obj = { url: Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(arg0), rejectWithError: null };
-  obj[1] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+  obj[1] = sendRequest /* sendRequest */.rejectWithMigratedError();
   return HTTP.post(obj);
 };
 export const acceptNewTermsDemonetized = function acceptNewTermsDemonetized(arg0) {
-  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   const obj = { url: Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(arg0), rejectWithError: null };
-  obj[1] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+  obj[1] = sendRequest /* sendRequest */.rejectWithMigratedError();
   return HTTP.post(obj);
 };
 export const removeMonetization = function removeMonetization() {

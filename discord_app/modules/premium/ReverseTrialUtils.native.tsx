@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/premium/ReverseTrialUtils.native.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 
@@ -6,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/premium/ReverseTria
 
 export const useIsInReverseTrial = function useIsInReverseTrial() {
   const items = [mergeGuildAvatar];
-  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+  return initialize /* initialize */.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
     if (currentUser != null) {

@@ -1,3 +1,8 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { create } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { SettingsDefaultFeature } from "../../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
+import { isFeatureAgeGated } from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
+import { explicitContentFromProto } from "../UserSettings.tsx";
 // discord_app/modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ExplicitContentFilterToDmSpamFilterV2 as closure_3 } from "items";
@@ -7,15 +12,15 @@ const result = require("explicitContentFromProto").fileFinishedImporting("module
 
 export const useDerivedDmSpamFilterSettingValue = function useDerivedDmSpamFilterSettingValue() {
   let DmSpamFilterV2 = dependencyMap;
-  const DmSpamFilterV22 = require("../UserSettings.tsx") /* explicitContentFromProto */.DmSpamFilterV2;
+  const DmSpamFilterV22 = explicitContentFromProto /* explicitContentFromProto */.DmSpamFilterV2;
   const setting = DmSpamFilterV22.useSetting();
-  const ExplicitContentFilter = require("../UserSettings.tsx") /* explicitContentFromProto */.ExplicitContentFilter;
+  const ExplicitContentFilter = explicitContentFromProto /* explicitContentFromProto */.ExplicitContentFilter;
   const setting1 = ExplicitContentFilter.useSetting();
   const items = [mergeGuildAvatar];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
-  const isSettingTeenByDefault = require("../../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.useIsSettingTeenByDefault(require("../../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx") /* SettingsDefaultFeature */.SettingsDefaultFeature.SPAM_FILTERS);
-  if (setting !== require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.DmSpamFilterV2.DEFAULT_UNSET) {
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = initialize /* initialize */;
+  const isSettingTeenByDefault = isFeatureAgeGated /* isFeatureAgeGated */.useIsSettingTeenByDefault(SettingsDefaultFeature /* SettingsDefaultFeature */.SettingsDefaultFeature.SPAM_FILTERS);
+  if (setting !== create /* create */.DmSpamFilterV2.DEFAULT_UNSET) {
     return setting;
   } else {
     let nsfwAllowed;

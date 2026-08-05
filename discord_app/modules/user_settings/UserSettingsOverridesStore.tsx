@@ -1,3 +1,4 @@
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/modules/user_settings/UserSettingsOverridesStore.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { PersistedStore } from "initialize";
@@ -61,12 +62,12 @@ UserSettingsOverridesStore.displayName = "UserSettingsOverridesStore";
 UserSettingsOverridesStore.persistKey = "UserSettingsOverridesStore";
 let items = [
   () => {
-    const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     let obj = Storage.get("UserSettingsStoreOverrides");
     if (obj == null) {
       obj = {};
     }
-    const Storage2 = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage2 = Storage /* Storage */.Storage;
     Storage2.remove("UserSettingsStoreOverrides");
     return obj;
   }

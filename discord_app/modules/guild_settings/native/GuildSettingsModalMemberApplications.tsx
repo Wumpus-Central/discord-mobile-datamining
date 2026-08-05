@@ -1,3 +1,6 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { nameFromUser } from "../../../utils/UserUtils.tsx";
 // discord_app/modules/guild_settings/native/GuildSettingsModalMemberApplications.tsx
 import importAllResult from "getNoResultsSource";
 import get_ActivityIndicator from "getSystemLocale";
@@ -24,18 +27,18 @@ obj[3] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((user) => {
   user = user.user;
-  let obj = require("../../../utils/UserUtils.tsx");
+  let obj = nameFromUser;
   const globalName = obj.getGlobalName(user);
   let username = globalName;
   if (globalName == null) {
     username = user.username;
   }
-  const children = [closure_7(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/semibold", children: username }), ];
+  const children = [closure_7(Text /* Text */.Text, { variant: "text-md/semibold", children: username }), ];
   let tmp5Result = null != globalName;
   if (tmp5Result) {
     obj = { variant: "text-xs/medium", children: null };
     obj[1] = user.username;
-    tmp5Result = tmp5(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+    tmp5Result = tmp5(Text /* Text */.Text, obj);
   }
   children[1] = tmp5Result;
   return closure_8(closure_5, { children });
@@ -56,7 +59,7 @@ let closure_12 = importAllResult.memo((joinRequest) => {
     } else {
       let userAvatarSource = null;
       if (null != user) {
-        let obj = require("../../../utils/AvatarUtils.tsx");
+        let obj = getAvatarURL;
         userAvatarSource = obj.getUserAvatarSource(user);
       }
       obj = { arrow: true, icon: null, label: null, onPress: null, start: null, end: null };

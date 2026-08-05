@@ -1,3 +1,5 @@
+import { Emoji } from "../../emojis/native/Emoji.tsx";
+import { getSoundboardEmojiUrl } from "utils/getSoundboardEmojiUrl.tsx";
 // discord_app/modules/soundboard/native/SoundButton.tsx
 import importAllResult from "getPremiumPlanItem";
 import { View } from "QUICK_SWITCHER";
@@ -116,13 +118,13 @@ function SoundButtonEmoji(arg0) {
   items = [tmp.emojiWrapper, animatedStyle];
   const obj3 = { style: obj4.useAnimatedStyle(fn2), children: null };
   obj4 = { fastImageStyle: tmp.emoji, textEmojiStyle: tmp.emoji, src: null, name: null };
-  obj4[2] = require("utils/getSoundboardEmojiUrl.tsx")(sound, 24);
+  obj4[2] = getSoundboardEmojiUrl(sound, 24);
   let str = sound.emojiName;
   if (str == null) {
     str = "";
   }
   obj4[3] = str;
-  obj3[1] = closure_6(require("../../emojis/native/Emoji.tsx"), obj4);
+  obj3[1] = closure_6(Emoji, obj4);
   obj2[1] = closure_6(closure_8, obj3);
   return closure_6(closure_8, obj2);
 }

@@ -1,3 +1,6 @@
+import { useChatLayout } from "../../../chat/native/useChatLayout.tsx";
+import { navigationToRootTabHelper } from "../../helpers/NavigationRouteUtils.native.tsx";
+import { getRootNavigationRef } from "../../RootNavigationRef.native.tsx";
 // discord_app/modules/main_tabs_v2/native/panels/useChannelScreensFromNavigation.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -42,7 +45,7 @@ function getActiveTabsRoute(coerceTabsRouteResult) {
         obj[2] = coerceTabsRouteResult.params.params;
         return obj;
       } else {
-        obj = require("../../RootNavigationRef.native.tsx") /* getRootNavigationRef */;
+        obj = getRootNavigationRef /* getRootNavigationRef */;
         const rootNavigationRef = obj.getRootNavigationRef();
         let isReadyResult;
         if (rootNavigationRef != null) {
@@ -56,7 +59,7 @@ function getActiveTabsRoute(coerceTabsRouteResult) {
   }
 }
 function resolveBackgroundScreen(index) {
-  let obj = require("../../helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */;
+  let obj = navigationToRootTabHelper /* navigationToRootTabHelper */;
   const coerceTabsRouteResult = obj.coerceTabsRoute(index.routes[0]);
   if (null == coerceTabsRouteResult) {
     return [];
@@ -65,7 +68,7 @@ function resolveBackgroundScreen(index) {
     if (null == tmp11) {
       return [];
     } else {
-      const coerceGuildsRouteResult = require("../../helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */.coerceGuildsRoute(tmp11);
+      const coerceGuildsRouteResult = navigationToRootTabHelper /* navigationToRootTabHelper */.coerceGuildsRoute(tmp11);
       if (null == coerceGuildsRouteResult) {
         return [];
       } else {
@@ -105,7 +108,7 @@ function resolveBackgroundScreen(index) {
           BACKGROUND_SAVED = obj.BACKGROUND_SAVED;
         }
       }
-      const tmpResult = require("../../helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */;
+      const tmpResult = navigationToRootTabHelper /* navigationToRootTabHelper */;
     }
   }
 }
@@ -155,7 +158,7 @@ export default function useChannelScreensFromNavigation(arg0) {
   let dependencyMap;
   let tmp3;
   let closure_0 = arg0;
-  const tmp = require("../../../chat/native/useChatLayout.tsx")();
+  const tmp = useChatLayout();
   importDefault = tmp;
   [tmp3, dependencyMap] = callback(React.useState(() => {
     const arr = outer1_13(store.getState(), closure_1);
@@ -240,7 +243,7 @@ export default function useChannelScreensFromNavigation(arg0) {
 export const ChannelScreenType = obj;
 export { getActiveTabsRoute };
 export const isActiveTabsGuilds = function isActiveTabsGuilds(state) {
-  const coerceTabsRouteResult = require("../../helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */.coerceTabsRoute(state.routes[0]);
+  const coerceTabsRouteResult = navigationToRootTabHelper /* navigationToRootTabHelper */.coerceTabsRoute(state.routes[0]);
   if (null == coerceTabsRouteResult) {
     return false;
   } else {
@@ -252,6 +255,6 @@ export const isActiveTabsGuilds = function isActiveTabsGuilds(state) {
     }
     return tmp6;
   }
-  const obj = require("../../helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */;
+  const obj = navigationToRootTabHelper /* navigationToRootTabHelper */;
   tmp = require;
 };

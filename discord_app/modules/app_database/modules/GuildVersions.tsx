@@ -1,3 +1,4 @@
+import { items } from "../DatabaseDaos.tsx";
 // discord_app/modules/app_database/modules/GuildVersions.tsx
 import _slicedToArray from "_slicedToArray";
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment";
@@ -179,7 +180,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGui
   const self = this;
   this.reset();
   const items = [...unavailableGuilds.unavailableGuilds];
-  const result = require("../DatabaseDaos.tsx").guildVersionsTransaction(database);
+  const result = items.guildVersionsTransaction(database);
   result.deleteAllExcept(items);
   for (const item10029 of tmp3) {
     let items1 = [item10029];
@@ -353,7 +354,7 @@ prototype["commit"] = function commit(database) {
   let tmp7;
   const self = this;
   if (this.pending.size > 0) {
-    const result = require("../DatabaseDaos.tsx").guildVersionsTransaction(database);
+    const result = items.guildVersionsTransaction(database);
     const pending2 = self.pending;
     const tmp21 = pending2[Symbol.iterator]();
     while (tmp21 !== undefined) {
@@ -380,7 +381,7 @@ prototype["commit"] = function commit(database) {
     }
     const pending = self.pending;
     pending.clear();
-    const obj2 = require("../DatabaseDaos.tsx");
+    const obj2 = items;
   }
 };
 let set = Object.create(GuildVersions.prototype);

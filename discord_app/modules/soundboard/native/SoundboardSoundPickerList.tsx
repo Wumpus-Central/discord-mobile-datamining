@@ -1,3 +1,5 @@
+import { renderDefaultEmpty } from "../../../lib/native/FastList.tsx";
+import { SoundButtonOverlay } from "../SoundboardTypes.tsx";
 // discord_app/modules/soundboard/native/SoundboardSoundPickerList.tsx
 import importAllResult from "registerAsset";
 import { View } from "GuildIconSizes";
@@ -15,7 +17,7 @@ let metroImportAll;
 const require = arg1;
 function getSectionLabel(category) {
   const type = category.category.categoryInfo.type;
-  if (require("../SoundboardTypes.tsx") /* SoundButtonOverlay */.SoundboardSoundGridSectionType.GUILD === type) {
+  if (SoundButtonOverlay /* SoundButtonOverlay */.SoundboardSoundGridSectionType.GUILD === type) {
     return category.category.categoryInfo.guild.name;
   } else if (tmp(4737).SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl3 = tmp(1236).intl;
@@ -367,7 +369,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerListCompon
     optimizeListItemRender: true,
     inActionSheet: true
   };
-  return callback(require("../../../lib/native/FastList.tsx"), obj);
+  return callback(renderDefaultEmpty, obj);
 });
 let result = require("mergeGuildAvatar").fileFinishedImporting("modules/soundboard/native/SoundboardSoundPickerList.tsx");
 

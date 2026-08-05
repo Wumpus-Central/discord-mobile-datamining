@@ -1,3 +1,6 @@
+import { useSoundboardConfig } from "../../hooks/useSoundboardConfig.tsx";
+import { dismissPanel } from "../../VoicePanelStateContext.tsx";
+import { useVoicePanelButtonStyles } from "VoicePanelStyles.tsx";
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelSoundboardButton.tsx
 import noop from "noop";
 import jsxProd from "jsxProd";
@@ -22,10 +25,10 @@ export default function SoundboardButton(arg0) {
   let wrapperSpecs;
   ({ props, wrapperSpecs } = arg0);
   const tmp3 = createCacheKey();
-  let obj = require("VoicePanelStyles.tsx") /* useVoicePanelButtonStyles */;
+  let obj = useVoicePanelButtonStyles /* useVoicePanelButtonStyles */;
   const voicePanelButtonStyles = obj.useVoicePanelButtonStyles(wrapperSpecs);
-  const tmp6 = require("../../hooks/useSoundboardConfig.tsx");
-  ({ disabled, handlePress, visible } = require("../../hooks/useSoundboardConfig.tsx")(React.useContext(require("../../VoicePanelStateContext.tsx")).channelId, require("../../hooks/useSoundboardConfig.tsx") /* useSoundboardConfig */.SoundboardButtonLocation.VOICE_PANEL_CONTROLS));
+  const tmp6 = useSoundboardConfig;
+  ({ disabled, handlePress, visible } = useSoundboardConfig(React.useContext(dismissPanel).channelId, useSoundboardConfig /* useSoundboardConfig */.SoundboardButtonLocation.VOICE_PANEL_CONTROLS));
   if (disabled) {
     let color = tmp(712).colors.ICON_MUTED;
   } else {

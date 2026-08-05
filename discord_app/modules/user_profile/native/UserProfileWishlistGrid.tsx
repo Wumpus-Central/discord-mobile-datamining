@@ -1,3 +1,4 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/user_profile/native/UserProfileWishlistGrid.tsx
 import get from "get";
 import Themes from "Themes";
@@ -121,28 +122,28 @@ let closure_26 = createCacheKey.createStyles(() => {
     flag = false;
   }
   let obj = { headerRow: null, headerButtons: null, gridWrapper: null, itemsContainer: null, emptyState: null, emptyStateText: null, emptyStateCta: null, disclaimer: null, disclaimerTop: null, disclaimerBottom: null };
-  obj = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
+  obj = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: Themes.space.PX_12 };
   obj[0] = obj;
-  obj = { flexDirection: "row", alignItems: "center", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  obj = { flexDirection: "row", alignItems: "center", gap: Themes.space.PX_8 };
   obj[1] = obj;
   obj[2] = { width: "100%", alignItems: "center" };
-  obj[3] = { flexDirection: "row", flexWrap: "wrap", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, justifyContent: "flex-start" };
-  const space = require("../../../../discord_common/js/packages/tokens/native.tsx").space;
+  obj[3] = { flexDirection: "row", flexWrap: "wrap", gap: Themes.space.PX_16, justifyContent: "flex-start" };
+  const space = Themes.space;
   const obj2 = { alignItems: "center", paddingTop: flag ? space.PX_24 : space.PX_48, paddingBottom: null, paddingHorizontal: null, gap: null };
   const space2 = tmp(712).space;
   obj2[2] = flag ? space2.PX_12 : space2.PX_48;
-  obj2[3] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32;
-  obj2[4] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8;
+  obj2[3] = Themes.space.PX_32;
+  obj2[4] = Themes.space.PX_8;
   obj[4] = obj2;
   obj[5] = { textAlign: "center" };
-  const obj1 = { flexDirection: "row", flexWrap: "wrap", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, justifyContent: "flex-start" };
-  obj[6] = { marginTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  const obj3 = { marginTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  obj[7] = { padding: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, borderWidth: 1, borderColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE };
-  const obj4 = { padding: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, borderWidth: 1, borderColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE };
-  obj[8] = { marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
-  const obj5 = { marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
-  obj[9] = { marginTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
+  const obj1 = { flexDirection: "row", flexWrap: "wrap", gap: Themes.space.PX_16, justifyContent: "flex-start" };
+  obj[6] = { marginTop: Themes.space.PX_24 };
+  const obj3 = { marginTop: Themes.space.PX_24 };
+  obj[7] = { padding: Themes.space.PX_8, gap: Themes.space.PX_4, flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: Themes.radii.sm, borderWidth: 1, borderColor: Themes.colors.BORDER_SUBTLE };
+  const obj4 = { padding: Themes.space.PX_8, gap: Themes.space.PX_4, flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: Themes.radii.sm, borderWidth: 1, borderColor: Themes.colors.BORDER_SUBTLE };
+  obj[8] = { marginBottom: Themes.space.PX_16 };
+  const obj5 = { marginBottom: Themes.space.PX_16 };
+  obj[9] = { marginTop: Themes.space.PX_16 };
   return obj;
 });
 const tmp6 = new require("updateCategoriesAndProducts")("UserProfileWishlistGrid");

@@ -1,3 +1,4 @@
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/modules/age_assurance/AgeVerificationStore.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
@@ -99,7 +100,7 @@ const ageVerificationStore = new AgeVerificationStore(require("dispatcher"), {
       combined = "AgeVerificationStore_" + id;
     }
     if (null != combined) {
-      const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage = Storage /* Storage */.Storage;
       const value = Storage.get(combined);
       if (null != value) {
         if (typeof value === "object") {
@@ -151,7 +152,7 @@ const ageVerificationStore = new AgeVerificationStore(require("dispatcher"), {
       combined = "AgeVerificationStore_" + id;
     }
     if (null != combined) {
-      const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage = Storage /* Storage */.Storage;
       const obj = { reactiveCheckStatus: null, reactiveCheckMissAt: null };
       obj[0] = status;
       obj[1] = timestamp;
@@ -172,7 +173,7 @@ const ageVerificationStore = new AgeVerificationStore(require("dispatcher"), {
       combined = "AgeVerificationStore_" + id;
     }
     if (null != combined) {
-      const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage = Storage /* Storage */.Storage;
       const obj = { reactiveCheckStatus: null, reactiveCheckMissAt: null };
       obj[0] = suppress;
       obj[1] = c8;

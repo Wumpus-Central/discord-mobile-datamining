@@ -1,3 +1,4 @@
+import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/quests/native/AppStoreOverlayTelemetryManager.tsx
 import { AnalyticEvents } from "ME";
 import "initialize";
@@ -18,7 +19,7 @@ class AppStoreOverlayTelemetryManager extends tmp2 {
 }
 AppStoreOverlayTelemetryManager.prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
   state = state.state;
-  const isAndroidResult = require("../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
+  const isAndroidResult = set /* set */.isAndroid();
   if (isAndroidResult) {
     return !isAndroidResult;
   } else {

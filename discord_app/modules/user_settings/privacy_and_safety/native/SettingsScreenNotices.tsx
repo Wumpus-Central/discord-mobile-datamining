@@ -1,3 +1,6 @@
+import { AgeGatedFeature } from "../../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
+import { useAgeVerificationRunner } from "../../../age_assurance/AgeVerificationUtils.tsx";
+import { isFeatureAgeGated } from "../../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 // discord_app/modules/user_settings/privacy_and_safety/native/SettingsScreenNotices.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -40,10 +43,10 @@ const obj3 = {
 items[2] = {
   order: 200,
   predicate() {
-    let isFeatureAgeGatedResult = require("../../../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
+    let isFeatureAgeGatedResult = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
     if (isFeatureAgeGatedResult) {
-      isFeatureAgeGatedResult = !require("../../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.isAgeVerified();
-      const tmpResult = require("../../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
+      isFeatureAgeGatedResult = !useAgeVerificationRunner /* useAgeVerificationRunner */.isAgeVerified();
+      const tmpResult = useAgeVerificationRunner /* useAgeVerificationRunner */;
     }
     return isFeatureAgeGatedResult;
   },
@@ -53,10 +56,10 @@ obj1[0] = items;
 const obj4 = {
   order: 200,
   predicate() {
-    let isFeatureAgeGatedResult = require("../../../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
+    let isFeatureAgeGatedResult = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
     if (isFeatureAgeGatedResult) {
-      isFeatureAgeGatedResult = !require("../../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.isAgeVerified();
-      const tmpResult = require("../../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
+      isFeatureAgeGatedResult = !useAgeVerificationRunner /* useAgeVerificationRunner */.isAgeVerified();
+      const tmpResult = useAgeVerificationRunner /* useAgeVerificationRunner */;
     }
     return isFeatureAgeGatedResult;
   },
@@ -67,10 +70,10 @@ const obj5 = { order: 100, predicate: require("getEmptyActivityFormatter").isPar
 items1[1] = {
   order: 200,
   predicate() {
-    let isFeatureAgeGatedResult = require("../../../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
+    let isFeatureAgeGatedResult = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
     if (isFeatureAgeGatedResult) {
-      isFeatureAgeGatedResult = !require("../../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.isAgeVerified();
-      const tmpResult = require("../../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
+      isFeatureAgeGatedResult = !useAgeVerificationRunner /* useAgeVerificationRunner */.isAgeVerified();
+      const tmpResult = useAgeVerificationRunner /* useAgeVerificationRunner */;
     }
     return isFeatureAgeGatedResult;
   },
@@ -80,10 +83,10 @@ obj1[1] = items1;
 const obj6 = {
   order: 200,
   predicate() {
-    let isFeatureAgeGatedResult = require("../../../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.isFeatureAgeGated(require("../../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx") /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
+    let isFeatureAgeGatedResult = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
     if (isFeatureAgeGatedResult) {
-      isFeatureAgeGatedResult = !require("../../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */.isAgeVerified();
-      const tmpResult = require("../../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
+      isFeatureAgeGatedResult = !useAgeVerificationRunner /* useAgeVerificationRunner */.isAgeVerified();
+      const tmpResult = useAgeVerificationRunner /* useAgeVerificationRunner */;
     }
     return isFeatureAgeGatedResult;
   },

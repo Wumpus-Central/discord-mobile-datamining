@@ -1,13 +1,16 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getIsEligibleForQuests } from "../../../quests/lib/QuestsEligibility.tsx";
+import { QuestHomeSetting } from "../../../quests/native/QuestHomeSetting.tsx";
 // discord_app/modules/user_settings/defs/native/QuestHomeSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.JALI2K);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.JALI2K);
   },
   usePredicate() {
-    return require("../../../quests/lib/QuestsEligibility.tsx") /* getIsEligibleForQuests */.getIsEligibleForQuests();
+    return getIsEligibleForQuests /* getIsEligibleForQuests */.getIsEligibleForQuests();
   },
   parent: null,
   IconComponent: require("QuestsIcon").QuestsIcon,
@@ -24,7 +27,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.QUESTS,
   getComponent() {
-    return require("../../../quests/native/QuestHomeSetting.tsx") /* QuestHomeSetting */.default;
+    return QuestHomeSetting /* QuestHomeSetting */.default;
   }
 };
 const route = createToggle.createRoute(obj);

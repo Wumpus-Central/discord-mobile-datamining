@@ -1,3 +1,7 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { transitionToChannel } from "../routing/transitionToChannel.tsx";
 // discord_app/modules/guild_onboarding_home/GuildOnboardingHomeActionCreators.tsx
 import closure_3 from "ME";
 import initialize from "initialize";
@@ -257,15 +261,15 @@ export const selectHomeResourceChannel = function selectHomeResourceChannel(clos
       isFullServerPreviewResult = null == resourceForChannel;
     }
     if (!isFullServerPreviewResult) {
-      let obj = require("../../utils/AnalyticsUtils.tsx");
+      let obj = expandEventProperties;
       obj = { guild_id: null, channel_id: null, server_guide_channel_type: "resource", channel_action_type: -1 };
       obj[0] = closure_0;
       obj[1] = channel.id;
       obj.track(constants.SERVER_GUIDE_CHANNEL_SELECTED, obj);
     }
     if (flag) {
-      require("../routing/transitionToChannel.tsx") /* transitionToChannel */.transitionToChannel(channelId, { navigationReplace: false });
-      const obj3 = require("../routing/transitionToChannel.tsx") /* transitionToChannel */;
+      transitionToChannel /* transitionToChannel */.transitionToChannel(channelId, { navigationReplace: false });
+      const obj3 = transitionToChannel /* transitionToChannel */;
     }
   }
 };
@@ -283,17 +287,17 @@ export const selectNewMemberActionChannel = function selectNewMemberActionChanne
     isFullServerPreviewResult = null == actionForChannel;
   }
   if (!isFullServerPreviewResult) {
-    let obj = require("../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { guild_id: null, channel_id: null, server_guide_channel_type: "member action", channel_action_type: null };
     obj[0] = guild_id;
     obj[1] = channel.id;
     obj[3] = actionForChannel.actionType;
     obj.track(constants.SERVER_GUIDE_CHANNEL_SELECTED, obj);
   }
-  require("../routing/transitionToChannel.tsx") /* transitionToChannel */.transitionToChannel(id);
+  transitionToChannel /* transitionToChannel */.transitionToChannel(id);
 };
 export const completeNewMemberAction = function completeNewMemberAction(c0, c1) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "COMPLETE_NEW_MEMBER_ACTION", guildId: c0, channelId: c1 };
   obj.dispatch(obj);
   if (!initialize.isFullServerPreview(c0)) {
@@ -325,7 +329,7 @@ export const completeNewMemberAction = function completeNewMemberAction(c0, c1) 
         tmpResult.track(constants.SERVER_GUIDE_ACTION_COMPLETED, obj);
       }
     }
-    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     const obj1 = { url: null, rejectWithError: true };
     obj1[0] = closure_9.GUILD_MEMBER_ACTION_UPDATE(c0, c1);
     HTTP.post(obj1);

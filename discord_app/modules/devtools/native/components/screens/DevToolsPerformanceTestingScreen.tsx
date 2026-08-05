@@ -1,3 +1,8 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { useNavigation } from "../../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
+import { DevToolsScreens } from "../DevToolsScreens.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsPerformanceTestingScreen.tsx
 import { ScrollView } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -10,14 +15,14 @@ obj = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, padding: 
 obj[0] = obj;
 let closure_5 = createCacheKey.createStyles(obj);
 const memoResult = require("noop").memo(function DevToolsPerformanceTestingScreen() {
-  let obj = _require("../../../../../design/components/Navigator/native/useNavigation.native.tsx");
+  let obj = _useNavigation;
   _require = obj.useNavigation();
   obj = { style: callback().container, contentContainerStyle: null, children: null };
   obj = { paddingBottom: null };
-  obj[0] = require("../../../../safe_area/useSafeAreaInsets.native.tsx")().bottom + require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
+  obj[0] = useSafeAreaInsets().bottom + Themes.space.PX_16;
   obj[1] = obj;
   const obj1 = { hasIcons: true, children: null };
-  const entries = Object.entries(_require("../DevToolsScreens.tsx").PerformanceTestingScreens);
+  const entries = Object.entries(_DevToolsScreens.PerformanceTestingScreens);
   obj1[1] = entries.map((arg0) => {
     let tmp;
     [tmp, ] = arg0;
@@ -36,7 +41,7 @@ const memoResult = require("noop").memo(function DevToolsPerformanceTestingScree
     };
     return outer1_4(callback(outer1_2[9]).TableRow, obj, tmp);
   });
-  obj[2] = jsx(_require("../../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, { hasIcons: true, children: null });
+  obj[2] = jsx(_TableRowGroupTitle.TableRowGroup, { hasIcons: true, children: null });
   return <ScrollView paddingBottom={null} />;
 });
 const result = require("jsxProd").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsPerformanceTestingScreen.tsx");

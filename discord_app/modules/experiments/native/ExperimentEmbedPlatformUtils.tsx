@@ -1,3 +1,7 @@
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { makeClientVariant } from "../client_override_hooks/useApexExperiments.tsx";
+import { parseRegisteredExperiments } from "../client_override_hooks/useLegacyExperiments.tsx";
 // discord_app/modules/experiments/native/ExperimentEmbedPlatformUtils.tsx
 const regExp = new RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i");
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/experiments/native/ExperimentEmbedPlatformUtils.tsx");
@@ -10,10 +14,10 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
   if (null != experimentTreatmentFromEmbedURL) {
     const _Number = Number;
     if (!Number.isNaN(experimentTreatmentFromEmbedURL)) {
-      let obj = _require("../client_override_hooks/useLegacyExperiments.tsx");
+      let obj = _parseRegisteredExperiments;
       const legacyExperiments = obj.getLegacyExperiments();
       ({ experiments, overridesInfo } = legacyExperiments);
-      const apexExperiments = _require("../client_override_hooks/useApexExperiments.tsx").getApexExperiments();
+      const apexExperiments = _makeClientVariant.getApexExperiments();
       let tmp5 = experiments[experimentFromEmbedURL];
       if (tmp5 == null) {
         tmp5 = apexExperiments.experiments[experimentFromEmbedURL];
@@ -40,9 +44,9 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
           const tmpResult1 = tmp(4207);
         }
       }
-      const obj2 = _require("../client_override_hooks/useApexExperiments.tsx");
+      const obj2 = _makeClientVariant;
     }
   }
   obj = { id: experimentFromEmbedURL };
-  require("../../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(_require("../../../../_runtime/01959_asyncRequireImpl.js")(11118, dependencyMap.paths), "ExperimentOverrideSheet", obj);
+  ACTION_SHEET_HEIGHT_HALF.openLazy(_asyncRequireImpl(11118, dependencyMap.paths), "ExperimentOverrideSheet", obj);
 };

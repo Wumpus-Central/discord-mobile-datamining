@@ -1,3 +1,4 @@
+import { isDiscordFrontendDevelopment } from "../../../../utils/GlobalUtils.tsx";
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamBadNetworkQuality.tsx
 import initialize from "initialize";
 import { RTCConnectionQuality } from "ME";
@@ -19,7 +20,7 @@ export const AVErrorStreamBadNetworkQualityDefinition = {
       }
       return tmp;
     });
-    return mapped.filter(require("../../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
+    return mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
   },
   makeErrorContextKey(streamKey) {
     return "" + streamKey.streamKey + ":" + streamKey.mediaSessionId;

@@ -1,3 +1,4 @@
+import { updateAssets } from "../../../utils/ApplicationAssetUtils.tsx";
 // discord_app/modules/activities/utils/getCoverImageFromActivity.tsx
 import { ACTIVITY_INVITE_COVER_IMAGE_SIZE as closure_2 } from "items3";
 
@@ -11,8 +12,8 @@ export default function getCoverImageFromActivity(assets, application_id) {
       assetImage = null;
       if (null != assets.assets.large_image) {
         const items = [closure_2, closure_2];
-        assetImage = require("../../../utils/ApplicationAssetUtils.tsx") /* updateAssets */.getAssetImage(application_id, assets.assets.large_image, items);
-        const obj = require("../../../utils/ApplicationAssetUtils.tsx") /* updateAssets */;
+        assetImage = updateAssets /* updateAssets */.getAssetImage(application_id, assets.assets.large_image, items);
+        const obj = updateAssets /* updateAssets */;
       }
     }
   }

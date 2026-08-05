@@ -1,3 +1,5 @@
+import { FormSwitch } from "../../../../design/components/Forms/native/FormSwitch.native.tsx";
+import { Form } from "../../../../design/void/Form/native/index.tsx";
 // discord_app/modules/visual_effect_view/native/overrides/VEVOOPropBlurAmount.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -36,7 +38,7 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurAmount() {
   if (str == null) {
     str = "";
   }
-  obj = { label: "Blur Amount " + str, leadingStyle: tmp.enabledSwitchStyle, leading: tmp7(require("../../../../design/components/Forms/native/FormSwitch.native.tsx") /* FormSwitch */.FormSwitch, obj), subLabel: tmp7(first(14959), obj1), disabled: !tmp3 };
+  obj = { label: "Blur Amount " + str, leadingStyle: tmp.enabledSwitchStyle, leading: tmp7(FormSwitch /* FormSwitch */.FormSwitch, obj), subLabel: tmp7(first(14959), obj1), disabled: !tmp3 };
   obj = {
     value: tmp3,
     onValueChange(arg0) {
@@ -50,7 +52,7 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurAmount() {
   };
   const ref = importAllResult.useRef(first);
   const tmp8 = require;
-  return jsx(require("../../../../design/void/Form/native/index.tsx") /* Form */.FormRow, {
+  return jsx(Form /* Form */.FormRow, {
     value: tmp3,
     onValueChange(arg0) {
       callback(arg0);

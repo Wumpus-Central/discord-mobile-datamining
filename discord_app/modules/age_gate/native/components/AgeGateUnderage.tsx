@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/age_gate/native/components/AgeGateUnderage.tsx
 import noop from "noop";
 import { View } from "Button";
@@ -16,7 +17,7 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
     num = 80;
   }
   let obj = { container: null, header: null, body: null, buttonWrapper: null };
-  obj = { alignItems: "center", justifyContent: "center", flex: 1, padding: 16, paddingTop: 0, paddingBottom: num, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW };
+  obj = { alignItems: "center", justifyContent: "center", flex: 1, padding: 16, paddingTop: 0, paddingBottom: num, backgroundColor: Themes.colors.BACKGROUND_BASE_LOW };
   obj[0] = obj;
   obj[1] = { marginTop: 16 };
   obj[2] = { marginTop: 8, lineHeight: 20, textAlign: "center" };

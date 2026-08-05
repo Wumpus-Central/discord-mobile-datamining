@@ -1,3 +1,4 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 // discord_app/modules/guild_settings/GuildSettingsFetchActionCreators.tsx
 import dispatcher from "dispatcher";
 import { BasicApplicationRecord } from "createExecutable";
@@ -70,7 +71,7 @@ export const fetchGuildIntegrationsApplications = function fetchGuildIntegration
   return applyArgumentsResult;
 };
 export const fetchGuildEmbed = function fetchGuildEmbed(arg0) {
-  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   const value = HTTP.get({ url: Endpoints.GUILD_WIDGET(arg0), oldFormErrors: true, rejectWithError: true });
   return value.then((body) => {
     let obj = callback(table[5]);

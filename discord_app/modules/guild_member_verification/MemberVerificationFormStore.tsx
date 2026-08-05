@@ -1,3 +1,5 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { MAX_RESULTS_PER_PAGE } from "MemberVerificationTypes.tsx";
 // discord_app/modules/guild_member_verification/MemberVerificationFormStore.tsx
 import { Store } from "initialize";
 
@@ -17,7 +19,7 @@ prototype["getRulesPrompt"] = function getRulesPrompt(guildId) {
   if (dependencyMap[guildId] != null) {
     formFields = tmp2.formFields;
   }
-  return require("../../../_runtime/00012_apply.js").find(formFields, require("MemberVerificationTypes.tsx") /* MAX_RESULTS_PER_PAGE */.isTermsFormField);
+  return apply.find(formFields, MAX_RESULTS_PER_PAGE /* MAX_RESULTS_PER_PAGE */.isTermsFormField);
 };
 MemberVerificationFormStore.displayName = "MemberVerificationFormStore";
 obj = {

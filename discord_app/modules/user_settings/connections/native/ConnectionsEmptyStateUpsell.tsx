@@ -1,3 +1,7 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/user_settings/connections/native/ConnectionsEmptyStateUpsell.tsx
 import useSafeAreaInsets from "useSafeAreaInsets";
 import { View } from "Text";
@@ -54,13 +58,13 @@ function OtherConnectionsCard(count) {
   let obj = { onPress: callback, style: callback3().card, border: "strong", children: null };
   obj = { variant: "text-md/medium", color: "interactive-text-default", children: null };
   obj[2] = "+" + count.count;
-  obj[3] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
-  return callback(require("../../../../design/components/Card/native/Card.native.tsx") /* PressableCard */.Card, obj);
+  obj[3] = callback(Text /* Text */.Text, obj);
+  return callback(PressableCard /* PressableCard */.Card, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles(() => {
   let obj = { container: { flex: 1, alignItems: "center" }, content: { flex: 1, width: "100%", maxWidth: 260, alignItems: "center", justifyContent: "center" }, card: { flex: 1, maxHeight: 76, maxWidth: 76, aspectRatio: 1, alignItems: "center", justifyContent: "center", padding: 12 }, textContainer: { marginTop: 32 }, text: { textAlign: "center" }, iconContainer: null, icon: null };
-  obj = { flex: 1, maxHeight: 52, maxWidth: 52, aspectRatio: 1, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, alignItems: "center", justifyContent: "center", padding: 8 };
+  obj = { flex: 1, maxHeight: 52, maxWidth: 52, aspectRatio: 1, borderRadius: Themes.radii.round, alignItems: "center", justifyContent: "center", padding: 8 };
   obj[5] = obj;
   obj[6] = { flex: 1, aspectRatio: 1 };
   return obj;
@@ -77,7 +81,7 @@ export default function ConnectionsEmptyStateUpsell() {
   const memo1 = React.useMemo(() => emptyStatePlatforms.slice(3, 5), items1);
   obj = { style: null, children: null };
   const items2 = [tmp.container, ];
-  obj = { paddingBottom: require("../../../safe_area/useSafeAreaInsets.native.tsx")().bottom };
+  obj = { paddingBottom: useSafeAreaInsets().bottom };
   items2[1] = obj;
   obj[0] = items2;
   const obj1 = { style: tmp.content, children: null };

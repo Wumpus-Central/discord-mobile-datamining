@@ -1,3 +1,4 @@
+import { set } from "../../../../actions/AlertActionCreators.tsx";
 // discord_app/modules/channel_permissions/native/components/EasyChannelPermissionSettings.tsx
 import CirclePlusIcon from "CirclePlusIcon";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -403,7 +404,7 @@ function ChannelPermissionSettingsBasicView(channel) {
   return null;
 }
 function onBack() {
-  require("../../../../actions/AlertActionCreators.tsx").close();
+  set.close();
   return false;
 }
 ({ View: error, ScrollView: metroImportAll } = get_ActivityIndicator);

@@ -1,3 +1,4 @@
+import { validatePremiumType } from "../modules/user/UserStoreUtils.tsx";
 // discord_app/stores/DeveloperExperimentStore.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -12,7 +13,7 @@ if (!tmp2) {
   tmp2 = window.GLOBAL_ENV.RELEASE_CHANNEL === Environments.STAGING;
 }
 function init() {
-  let closure_5 = require("../modules/user/UserStoreUtils.tsx") /* validatePremiumType */.isStaffEnv(authStore.getCurrentUser());
+  let closure_5 = validatePremiumType /* validatePremiumType */.isStaffEnv(authStore.getCurrentUser());
 }
 let c5 = tmp2;
 class DeveloperExperimentStore extends Store {

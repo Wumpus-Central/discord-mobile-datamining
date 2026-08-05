@@ -1,3 +1,7 @@
+import { registerAsset } from "../../_runtime/07870_registerAsset.js";
+import { ModalActionCreators } from "../actions/ModalActionCreators.tsx";
+import { render } from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import { useSafeAreaInsets } from "../modules/safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/components_native/QRScannerModal.tsx
 import _slicedToArray from "_slicedToArray";
 import AlertActionCreators from "../actions/native/AlertActionCreators.tsx";
@@ -53,7 +57,7 @@ export default function QRScannerModal(showHelp) {
   const tmp = undefined !== showHelp && showHelp;
   const tmp2 = callback(React.useState(true), 2);
   let obj = { style: { flex: 1 }, children: null };
-  ({ bottom, top } = require("../modules/safe_area/useSafeAreaInsets.native.tsx")());
+  ({ bottom, top } = useSafeAreaInsets());
   if (tmp3) {
     obj = { style: null };
     const items = [, ];
@@ -126,15 +130,15 @@ export default function QRScannerModal(showHelp) {
   }
   const items1 = [tmp10Result, , ];
   let obj1 = { accessibilityRole: "button", accessibilityLabel: null, source: null, style: null, onPress: null };
-  const tmp7 = require("../modules/safe_area/useSafeAreaInsets.native.tsx")();
+  const tmp7 = useSafeAreaInsets();
   let tmp8 = closure_9;
   let intl = onScanSuccess(1236).intl;
   obj1[1] = intl.string(onScanSuccess(1236).t.cpT0Cq);
-  obj1[2] = require("../../_runtime/07870_registerAsset.js");
+  obj1[2] = registerAsset;
   const items2 = [tmp12.closeButton, { marginTop: top }];
   obj1[3] = items2;
-  obj1[4] = require("../actions/ModalActionCreators.tsx").pop;
-  items1[1] = tmp14(require("../design/void/TouchableHitBox/native/TouchableHitBox.tsx"), obj1);
+  obj1[4] = ModalActionCreators.pop;
+  items1[1] = tmp14(render, obj1);
   let tmp14Result = null;
   if (tmp) {
     tmp14Result = null;

@@ -1,3 +1,4 @@
+import { compareGuildRoles } from "../../utils/GuildRoleUtils.tsx";
 // discord_app/modules/user_profile/UserProfileRoleUtils.tsx
 const result = require("set").fileFinishedImporting("modules/user_profile/UserProfileRoleUtils.tsx");
 
@@ -14,8 +15,8 @@ export const sortRolesByVerification = function sortRolesByVerification(tags, ta
   }
   if (undefined === guild_connections) {
     if (tmp3) {
-      let num2 = require("../../utils/GuildRoleUtils.tsx") /* compareGuildRoles */.compareGuildRoles(tags, tags2);
-      const obj = require("../../utils/GuildRoleUtils.tsx") /* compareGuildRoles */;
+      let num2 = compareGuildRoles /* compareGuildRoles */.compareGuildRoles(tags, tags2);
+      const obj = compareGuildRoles /* compareGuildRoles */;
     } else {
       num2 = -1;
     }

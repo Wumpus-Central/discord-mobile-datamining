@@ -1,3 +1,4 @@
+import { set } from "../utils/PlatformUtils.tsx";
 // discord_app/stores/NotificationSettingsStore.tsx
 import ME from "ME";
 import { DeviceSettingsStore } from "initialize";
@@ -76,7 +77,7 @@ const items = [
     if (null != obj.desktopType) {
       return obj;
     } else {
-      obj.desktopType = require("../utils/PlatformUtils.tsx") /* set */.isPlatformEmbedded ? DesktopNotificationTypes.ALL : DesktopNotificationTypes.NEVER;
+      obj.desktopType = set /* set */.isPlatformEmbedded ? DesktopNotificationTypes.ALL : DesktopNotificationTypes.NEVER;
     }
   }
 ];

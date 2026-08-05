@@ -1,3 +1,4 @@
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
 // discord_app/modules/activities/Constants.tsx
 import { ChannelTypes } from "ME";
 import set from "set";
@@ -11,7 +12,7 @@ obj = { label_type: require("PermissionOverwriteType").EmbeddedActivityLabelType
 obj = { application_id: "", requires_age_gate: false, legacy_responsive_aspect_ratio: false, default_orientation_lock_state: obj.UNLOCKED, tablet_default_orientation_lock_state: obj.UNLOCKED, supported_platforms: null, client_platform_config: null, has_csp_exception: false, displays_advertisements: false, blocked_locales: null, supported_locales: null };
 const items3 = [require("PermissionOverwriteType").EmbeddedActivitySupportedPlatforms.WEB];
 obj[5] = items3;
-obj[6] = { [require("../../flow/Server.tsx").EmbeddedActivitySupportedPlatforms.WEB]: obj, [require("../../flow/Server.tsx").EmbeddedActivitySupportedPlatforms.IOS]: obj, [require("../../flow/Server.tsx").EmbeddedActivitySupportedPlatforms.ANDROID]: obj };
+obj[6] = { [PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.WEB]: obj, [PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.IOS]: obj, [PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.ANDROID]: obj };
 obj[9] = [];
 obj[10] = [];
 const items4 = [, , ];

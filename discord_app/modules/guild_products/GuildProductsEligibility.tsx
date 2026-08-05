@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_products/GuildProductsEligibility.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
@@ -9,7 +10,7 @@ export const useGuildEligibleForGuildProducts = function useGuildEligibleForGuil
   const _require = id;
   const items = [createGuildRecordFromRust];
   const items1 = [id];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     if (null == closure_0) {
       return false;
     } else {

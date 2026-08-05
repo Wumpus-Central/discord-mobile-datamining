@@ -1,3 +1,6 @@
+import { set } from "../../../core/native/NativeView.tsx";
+import { useVoicePanelCardUserStateIcons } from "../hooks/useVoicePanelCardUserStateIcons.tsx";
+import { areStableParticipantsEqual } from "../utils/useStableParticipant.tsx";
 // discord_app/modules/voice_panel/native/header/VoicePanelHeaderUserState.tsx
 import importAllResult from "noop";
 import getParticipants from "getParticipants";
@@ -12,14 +15,14 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
   if (participant != null) {
     type = participant.type;
   }
-  let obj = require("../utils/useStableParticipant.tsx") /* areStableParticipantsEqual */;
+  let obj = areStableParticipantsEqual /* areStableParticipantsEqual */;
   let id;
   if (obj.isStableParticipantWithUser(participant)) {
     id = participant.user.id;
   }
-  const tmp4 = require("../hooks/useVoicePanelCardUserStateIcons.tsx");
+  const tmp4 = useVoicePanelCardUserStateIcons;
   const items = [];
-  const iter = require("../hooks/useVoicePanelCardUserStateIcons.tsx")(type, id, guildId)[Symbol.iterator]();
+  const iter = useVoicePanelCardUserStateIcons(type, id, guildId)[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp9 = nextResult;
@@ -27,7 +30,7 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
     let tmp11 = require;
     let tmp12 = dependencyMap;
     let tmp13 = dependencyMap;
-    if (nextResult.type === require("../hooks/useVoicePanelCardUserStateIcons.tsx") /* useVoicePanelCardUserStateIcons */.VoicePanelCardUserStateIconType.USER_VIDEO_ICON) {
+    if (nextResult.type === useVoicePanelCardUserStateIcons /* useVoicePanelCardUserStateIcons */.VoicePanelCardUserStateIconType.USER_VIDEO_ICON) {
       let tmp29 = jsx;
       let tmp30 = jsx;
       let tmp31 = tmp10;
@@ -75,9 +78,9 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
     const items2 = [tmp.iconContainer, userIcons];
     obj3[0] = items2;
     obj3[1] = items;
-    return jsx(require("../../../core/native/NativeView.tsx"), { style: null, children: null });
+    return jsx(set, { style: null, children: null });
   }
-  const tmp4Result = require("../hooks/useVoicePanelCardUserStateIcons.tsx")(type, id, guildId);
+  const tmp4Result = useVoicePanelCardUserStateIcons(type, id, guildId);
 }
 let c3 = importAllResult;
 let closure_6 = require("module_4146").createAnimatedComponent(require("TwinButtons").BackgroundBlurView);

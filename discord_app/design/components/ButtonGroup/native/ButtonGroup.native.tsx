@@ -1,3 +1,4 @@
+import { Stack } from "../../Stack/native/Stack.native.tsx";
 // discord_app/design/components/ButtonGroup/native/ButtonGroup.native.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -26,5 +27,5 @@ export const ButtonGroup = function ButtonGroup(size) {
   const items = [callback().container, style];
   obj.style = items;
   obj.children = children;
-  return jsx(require("../../Stack/native/Stack.native.tsx") /* Stack */.Stack, {});
+  return jsx(Stack /* Stack */.Stack, {});
 };

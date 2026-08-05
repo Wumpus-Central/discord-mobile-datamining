@@ -1,3 +1,6 @@
+import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import { FormCheckbox } from "FormCheckbox.tsx";
+import { FormRow } from "FormRow.tsx";
 // discord_app/design/void/Form/native/FormCheckboxRow.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -12,7 +15,7 @@ export default function FormCheckboxRow(selected) {
   let accessibilityState;
   selected = selected.selected;
   const merged = Object.assign(selected, Object.create(null));
-  let obj = require("../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx") /* useCheckboxA11yNative */;
+  let obj = useCheckboxA11yNative /* useCheckboxA11yNative */;
   const checkboxA11yNative = obj.useCheckboxA11yNative({ checked: selected });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
   obj = {};
@@ -20,7 +23,7 @@ export default function FormCheckboxRow(selected) {
   const merged1 = Object.assign(merged);
   obj.accessibilityRole = accessibilityRole;
   obj.accessibilityState = accessibilityState;
-  obj.trailing = jsx(require("FormCheckbox.tsx"), { selected });
+  obj.trailing = jsx(FormCheckbox, { selected });
   obj.trailingWrapperStyle = tmp2.checkboxWrapperStyle;
-  return jsx(require("FormRow.tsx"), {});
+  return jsx(FormRow, {});
 };

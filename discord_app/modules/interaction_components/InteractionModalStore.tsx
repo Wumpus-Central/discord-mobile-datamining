@@ -1,3 +1,4 @@
+import { trackInvite } from "../../actions/MessageActionCreators.tsx";
 // discord_app/modules/interaction_components/InteractionModalStore.tsx
 import { Store } from "initialize";
 
@@ -24,21 +25,21 @@ obj = {
   },
   INTERACTION_MODAL_CREATE: function handleInteractionModalCreate(nonce) {
     if (nonce.nonce === c7) {
-      require("../../actions/MessageActionCreators.tsx").deleteMessage(c6, c5, true);
+      trackInvite.deleteMessage(c6, c5, true);
       c5 = null;
       c6 = null;
       c7 = null;
-      const obj = require("../../actions/MessageActionCreators.tsx");
+      const obj = trackInvite;
     }
     return false;
   },
   INTERACTION_IFRAME_MODAL_CREATE: function handleInteractionIframeModalCreate(nonce) {
     if (nonce.nonce === c7) {
-      require("../../actions/MessageActionCreators.tsx").deleteMessage(c6, c5, true);
+      trackInvite.deleteMessage(c6, c5, true);
       c5 = null;
       c6 = null;
       c7 = null;
-      const obj = require("../../actions/MessageActionCreators.tsx");
+      const obj = trackInvite;
     }
     return false;
   },

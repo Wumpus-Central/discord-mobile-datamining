@@ -1,3 +1,7 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
+import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/user_settings/premium/native/UserSettingsGiftingBadgeProgress.tsx
 import _slicedToArray from "_slicedToArray";
 import getGiftingBadgeProgressPercent from "getGiftingBadgeProgressPercent";
@@ -90,46 +94,46 @@ function GiftingBadgeIntro(analyticsLocation) {
 ({ Pressable: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles((arg0) => {
-  let obj = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_MUTED, borderRadius: null, padding: null, gap: null };
+  let obj = { backgroundColor: Themes.colors.BACKGROUND_MOD_MUTED, borderRadius: null, padding: null, gap: null };
   let num = 0;
   if (arg0) {
     num = tmp(712).radii.md;
   }
   obj = { wrapper: null, progressContainer: null, progressRow: null, progressTitleText: null, progressBarContainer: null, progressBarTrack: null, progressBarFill: null, progressLabels: null, divider: null, dropdownRow: null, badgesRow: null, badgeItem: null, badgeItemActive: null, badgeCopy: null, footerText: null, introContent: null, introGrid: null, introGridItem: null };
   obj[1] = num;
-  obj[2] = require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
-  obj[3] = require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
+  obj[2] = Themes.space.PX_16;
+  obj[3] = Themes.space.PX_16;
   obj[0] = obj;
   obj = { gap: tmp(712).space.PX_8 };
   obj[1] = obj;
-  obj[2] = { flexDirection: "row", alignItems: "center", gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
+  obj[2] = { flexDirection: "row", alignItems: "center", gap: Themes.space.PX_4 };
   obj[3] = { flex: 1 };
-  const obj1 = { flexDirection: "row", alignItems: "center", gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
-  obj[4] = { paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
-  const obj2 = { paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
-  obj[5] = { height: 6, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_NORMAL, overflow: "hidden" };
-  const obj3 = { height: 6, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_NORMAL, overflow: "hidden" };
-  obj[6] = { height: 6, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.BRAND_500 };
-  const obj4 = { height: 6, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.BRAND_500 };
-  obj[7] = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", minHeight: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
-  const obj5 = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", minHeight: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
-  obj[8] = { height: 1, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_NORMAL };
+  const obj1 = { flexDirection: "row", alignItems: "center", gap: Themes.space.PX_4 };
+  obj[4] = { paddingHorizontal: Themes.space.PX_8 };
+  const obj2 = { paddingHorizontal: Themes.space.PX_8 };
+  obj[5] = { height: 6, borderRadius: Themes.radii.round, backgroundColor: Themes.colors.BACKGROUND_MOD_NORMAL, overflow: "hidden" };
+  const obj3 = { height: 6, borderRadius: Themes.radii.round, backgroundColor: Themes.colors.BACKGROUND_MOD_NORMAL, overflow: "hidden" };
+  obj[6] = { height: 6, borderRadius: Themes.radii.round, backgroundColor: Themes.unsafe_rawColors.BRAND_500 };
+  const obj4 = { height: 6, borderRadius: Themes.radii.round, backgroundColor: Themes.unsafe_rawColors.BRAND_500 };
+  obj[7] = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", minHeight: Themes.space.PX_16, marginTop: Themes.space.PX_4 };
+  const obj5 = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", minHeight: Themes.space.PX_16, marginTop: Themes.space.PX_4 };
+  obj[8] = { height: 1, backgroundColor: Themes.colors.BACKGROUND_MOD_NORMAL };
   obj[9] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-  const obj6 = { height: 1, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_NORMAL };
-  obj[10] = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
-  const obj7 = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
-  obj[11] = { width: "33.33%", alignItems: "center", justifyContent: "center", padding: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
-  const obj8 = { width: "33.33%", alignItems: "center", justifyContent: "center", padding: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
-  obj[12] = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_MUTED, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.md, borderWidth: 1, borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_MUTED };
+  const obj6 = { height: 1, backgroundColor: Themes.colors.BACKGROUND_MOD_NORMAL };
+  obj[10] = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingVertical: Themes.space.PX_4 };
+  const obj7 = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingVertical: Themes.space.PX_4 };
+  obj[11] = { width: "33.33%", alignItems: "center", justifyContent: "center", padding: Themes.space.PX_8, gap: Themes.space.PX_8 };
+  const obj8 = { width: "33.33%", alignItems: "center", justifyContent: "center", padding: Themes.space.PX_8, gap: Themes.space.PX_8 };
+  obj[12] = { backgroundColor: Themes.colors.BACKGROUND_MOD_MUTED, borderRadius: Themes.radii.md, borderWidth: 1, borderColor: Themes.colors.BORDER_MUTED };
   obj[13] = { alignItems: "center", gap: 2 };
-  const obj9 = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_MUTED, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.md, borderWidth: 1, borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_MUTED };
-  obj[14] = { textAlign: "center", marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
-  const obj10 = { textAlign: "center", marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
-  obj[15] = { paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
-  const obj11 = { paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
-  obj[16] = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
-  const obj12 = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingVertical: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
-  obj[17] = { width: "33.33%", alignItems: "center", justifyContent: "center", padding: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  const obj9 = { backgroundColor: Themes.colors.BACKGROUND_MOD_MUTED, borderRadius: Themes.radii.md, borderWidth: 1, borderColor: Themes.colors.BORDER_MUTED };
+  obj[14] = { textAlign: "center", marginBottom: Themes.space.PX_16 };
+  const obj10 = { textAlign: "center", marginBottom: Themes.space.PX_16 };
+  obj[15] = { paddingHorizontal: Themes.space.PX_8, gap: Themes.space.PX_4 };
+  const obj11 = { paddingHorizontal: Themes.space.PX_8, gap: Themes.space.PX_4 };
+  obj[16] = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingVertical: Themes.space.PX_4, paddingHorizontal: Themes.space.PX_16 };
+  const obj12 = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingVertical: Themes.space.PX_4, paddingHorizontal: Themes.space.PX_16 };
+  obj[17] = { width: "33.33%", alignItems: "center", justifyContent: "center", padding: Themes.space.PX_8, gap: Themes.space.PX_8 };
   return obj;
 });
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/premium/native/UserSettingsGiftingBadgeProgress.tsx");
@@ -146,11 +150,11 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
   let dependencyMap;
   let analyticsLocations;
   currentTier = undefined;
-  const tmp3 = callback4(require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("UserSettingsGiftingBadgeProgress"));
+  const tmp3 = callback4(useIsMobileVisualRefreshExperimentEnabled("UserSettingsGiftingBadgeProgress"));
   importDefault = tmp3;
   [tmp5, c2] = analyticsLocations(currentTier.useState(false), 2);
   const tmp4 = analyticsLocations(currentTier.useState(false), 2);
-  analyticsLocations = require("../../../app_analytics/useAnalyticsLocations.tsx")(require("../../../app_analytics/AnalyticsLocation.tsx").USER_SETTINGS_GIFT_INVENTORY).analyticsLocations;
+  analyticsLocations = context(QUICK_SWITCHER.USER_SETTINGS_GIFT_INVENTORY).analyticsLocations;
   let obj = analyticsLocation(589);
   let items = [map];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
@@ -368,5 +372,5 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     obj2[1] = items5;
     return closure_10(closure_6, obj2);
   }
-  let tmp6 = require("../../../app_analytics/useAnalyticsLocations.tsx");
+  let tmp6 = context;
 };

@@ -1,3 +1,5 @@
+import { useCurrentUser } from "../hooks/useCurrentUser.tsx";
+import { firstAvatarDecoration } from "../hooks/useShopProductItems.tsx";
 // discord_app/modules/collectibles/native/AvatarDecorationProductPreview.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -9,9 +11,9 @@ let closure_4 = createCacheKey.createStyles({ fullSizePreview: { flex: 1, alignI
 const result = require("jsxProd").fileFinishedImporting("modules/collectibles/native/AvatarDecorationProductPreview.tsx");
 
 export default function AvatarDecorationProductPreview(product) {
-  let obj = require("../hooks/useCurrentUser.tsx") /* useCurrentUser */;
+  let obj = useCurrentUser /* useCurrentUser */;
   const currentUser = obj.useCurrentUser();
-  let obj1 = require("../hooks/useShopProductItems.tsx") /* firstAvatarDecoration */;
+  let obj1 = firstAvatarDecoration /* firstAvatarDecoration */;
   const firstAvatarDecoration = obj1.useShopProductItems(product.product).firstAvatarDecoration;
   let tmp5 = null;
   if (null != firstAvatarDecoration) {

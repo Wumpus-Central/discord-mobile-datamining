@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/video_calls/native/SurfaceDirectRendererExperiment.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ApexExperiment from "ApexExperiment";
@@ -16,6 +17,6 @@ export const useSurfaceDirectRendererExperiment = function useSurfaceDirectRende
   const _require = userId;
   const items = [fetchFingerprint];
   const items1 = [userId];
-  const obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
-  return null != userId && !_require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_0 === outer1_2.getId(), items1) && closure_3.useConfig(location).enableSurfaceDirectRenderer;
+  const obj = _initialize;
+  return null != userId && !_initialize.useStateFromStores(items, () => closure_0 === outer1_2.getId(), items1) && closure_3.useConfig(location).enableSurfaceDirectRenderer;
 };

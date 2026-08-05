@@ -1,3 +1,4 @@
+import { AccessibilityAnnouncer } from "../../../shared.tsx";
 // discord_app/design/void/EmptyState/native/EmptyState.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -26,7 +27,7 @@ export default function EmptyState(Illustration) {
   let children;
   let title;
   const tmp = createCacheKey();
-  require("../../../shared.tsx") /* AccessibilityAnnouncer */;
+  AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   if (null != Illustration.Illustration) {
     let obj = { accessible: false, importantForAccessibility: "no", accessibilityRole: "none", resizeMode: "contain", style: null };
     const items = [tmp.emptyImage, Illustration.imageStyle];

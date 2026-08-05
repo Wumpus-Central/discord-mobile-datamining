@@ -1,12 +1,13 @@
+import { t } from "../../../../../_runtime/03867_t.js";
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useTimeUntilNextBadge.tsx
 import { useMemo } from "noop";
 
 const result = require("useNextTenureBadge").fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTimeUntilNextBadge.tsx");
 
 export const computeDaysUntilNextBadgeDate = function computeDaysUntilNextBadgeDate(arg0, arg1) {
-  const obj = require("../../../../../_runtime/03867_t.js")(arg0);
-  const addResult = require("../../../../../_runtime/03867_t.js")(arg0).add(arg1, "months");
-  return Math.max(0, require("../../../../../_runtime/03867_t.js")(arg0).add(arg1, "months").add(1, "day").diff(require("../../../../../_runtime/03867_t.js")(), "days"));
+  const obj = t(arg0);
+  const addResult = t(arg0).add(arg1, "months");
+  return Math.max(0, t(arg0).add(arg1, "months").add(1, "day").diff(t(), "days"));
 };
 export const useTimeUntilNextBadge = function useTimeUntilNextBadge() {
   nextTenureBadge = nextTenureBadge(12621).useNextTenureBadge();

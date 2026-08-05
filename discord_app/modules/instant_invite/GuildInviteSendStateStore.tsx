@@ -1,3 +1,4 @@
+import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/instant_invite/GuildInviteSendStateStore.tsx
 import keys from "keys";
 
@@ -8,7 +9,7 @@ export const setSendState = function setSendState(arg0, arg1, arg2) {
   const _require = arg0;
   const dependencyMap = arg1;
   let closure_2 = arg2;
-  _require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     state.setState((arg0) => {
       let obj = {};
       const merged = Object.assign(arg0);

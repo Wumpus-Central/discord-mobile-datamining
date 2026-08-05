@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_profile/hooks/useGuildProfile.tsx
 import set from "set";
 import noop from "noop";
@@ -8,12 +9,12 @@ const result = require("handleUpdateStart").fileFinishedImporting("modules/guild
 
 export const useGuildProfile = function useGuildProfile(guildId) {
   const _require = guildId;
-  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [handleUpdateStart];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getProfile(closure_0));
   const items1 = [handleUpdateStart];
   obj = { guildProfile: stateFromStores, fetchGuildProfile: null, fetchStatus: null };
-  const stateFromStores1 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => outer1_4.getFetchStatus(closure_0));
+  const stateFromStores1 = _initialize.useStateFromStores(items1, () => outer1_4.getFetchStatus(closure_0));
   const items2 = [guildId];
   obj[1] = React.useCallback(callback(() => {
     let closure_0 = arg0;

@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { DCDChatItem } from "../../../../components_native/chat/ChatItem.tsx";
 // discord_app/modules/messages/native/long_press/LongPressMessageChatItemPreview.tsx
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -13,6 +15,6 @@ const result = require("Themes").fileFinishedImporting("modules/messages/native/
 export default function LongPressMessageChatItemPreview(message) {
   const obj = { rowGenerator: closure_4, message: message.message, maxHeight: callback().chatItem.maxHeight, backgroundColor: null };
   const tmp = callback();
-  obj[3] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_ALERT_BACKGROUND_DEFAULT;
-  return jsx(require("../../../../components_native/chat/ChatItem.tsx"), { rowGenerator: closure_4, message: message.message, maxHeight: callback().chatItem.maxHeight, backgroundColor: null });
+  obj[3] = Themes.colors.MOBILE_ALERT_BACKGROUND_DEFAULT;
+  return jsx(DCDChatItem, { rowGenerator: closure_4, message: message.message, maxHeight: callback().chatItem.maxHeight, backgroundColor: null });
 };

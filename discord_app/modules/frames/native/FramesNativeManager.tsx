@@ -1,3 +1,10 @@
+import { v1 } from "../../../../_runtime/00514_v1.js";
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { ComponentDispatcher } from "../../../utils/ComponentDispatchUtils.tsx";
+import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
+import { _launchFrameOnNative } from "../FramesActionCreators.native.tsx";
 // discord_app/modules/frames/native/FramesNativeManager.tsx
 import closure_3 from "WebView";
 import map from "map";
@@ -156,10 +163,10 @@ prototype["showRPCDisconnectErrorUI"] = function showRPCDisconnectErrorUI(reason
   let code;
   let message;
   ({ code, message } = reason);
-  let obj = require("../../../actions/native/AlertActionCreators.tsx");
+  let obj = AlertActionCreators;
   obj = { title: null, body: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.hbiAO6, { code });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.hbiAO6, { code });
   obj[1] = message;
   obj.show(obj);
 };
@@ -167,7 +174,7 @@ prototype["leaveFrame"] = function leaveFrame(applicationId) {
   const self = this;
   applicationId = applicationId.applicationId;
   this.releaseWebView();
-  let obj = require("../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */;
+  let obj = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
   if (obj.isNotNullish(applicationId)) {
     obj = { applicationId: null };
     obj[0] = applicationId;
@@ -176,14 +183,14 @@ prototype["leaveFrame"] = function leaveFrame(applicationId) {
 };
 prototype["clearFrameState"] = function clearFrameState(applicationId) {
   applicationId = applicationId.applicationId;
-  require("../FramesActionCreators.native.tsx").stopFrame({ applicationId });
-  const obj = require("../FramesActionCreators.native.tsx");
-  require("../../../Dispatcher.tsx").dispatch({ type: "FRAME_SET_ORIENTATION_LOCK_STATE", applicationId, lockState: null, pictureInPictureLockState: null });
+  _launchFrameOnNative.stopFrame({ applicationId });
+  const obj = _launchFrameOnNative;
+  dispatcher.dispatch({ type: "FRAME_SET_ORIENTATION_LOCK_STATE", applicationId, lockState: null, pictureInPictureLockState: null });
 };
 prototype["releaseWebView"] = function releaseWebView() {
   const releaseIframeIdResult = this.releaseIframeId();
   if (null != releaseIframeIdResult) {
-    const ComponentDispatch = require("../../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
+    const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
     const obj = { id: null };
     obj[0] = releaseIframeIdResult;
     ComponentDispatch.dispatch(ComponentActions.IFRAME_UNMOUNT, obj);
@@ -203,7 +210,7 @@ prototype["getOrCreateIframeId"] = function getOrCreateIframeId() {
   if (null != iframeId) {
     return iframeId;
   } else {
-    const v4Result = require("../../../../_runtime/00514_v1.js") /* v1 */.v4();
+    const v4Result = v1 /* v1 */.v4();
     tmp.iframeId = v4Result;
     return v4Result;
   }

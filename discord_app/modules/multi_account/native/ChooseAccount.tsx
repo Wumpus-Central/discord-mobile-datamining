@@ -1,3 +1,9 @@
+import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Form } from "../../../design/void/Form/native/index.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useMultiAccountUsers } from "../useMultiAccount.tsx";
 // discord_app/modules/multi_account/native/ChooseAccount.tsx
 import closure_4 from "ME";
 import "Text";
@@ -127,17 +133,17 @@ export default function ChooseAccount() {
     return applyArgumentsResult;
   }
   let tmp = createCacheKey();
-  let obj = _require("../../../design/components/Navigator/native/useNavigation.native.tsx");
+  let obj = _useNavigation;
   _require = obj.useNavigation();
-  let obj1 = _require("../useMultiAccount.tsx");
+  let obj1 = _useMultiAccountUsers;
   const multiAccountUsers = obj1.useMultiAccountUsers().multiAccountUsers;
   obj = { headerText: null, subHeader: null, backgroundImageSource: null, backgroundImageCover: true, contentStyle: null, children: null };
-  let intl = _require("../../../intl/index.native.tsx").intl;
-  obj[0] = intl.string(_require("../../../intl/index.native.tsx").t.bVbB63);
+  let intl = _getSystemLocale.intl;
+  obj[0] = intl.string(_getSystemLocale.t.bVbB63);
   obj = { variant: "text-sm/medium", color: "text-default", children: null };
-  let intl2 = _require("../../../intl/index.native.tsx").intl;
-  obj[2] = intl2.string(_require("../../../intl/index.native.tsx").t["0M5fN7"]);
-  obj[1] = callback(_require("../../../design/components/Text/native/Text.tsx").Text, obj);
+  let intl2 = _getSystemLocale.intl;
+  obj[2] = intl2.string(_getSystemLocale.t["0M5fN7"]);
+  obj[1] = callback(_Text.Text, obj);
   obj[2] = multiAccountUsers(13118);
   obj[4] = tmp.container;
   obj1 = { style: tmp.mainCard, children: null };
@@ -213,11 +219,11 @@ export default function ChooseAccount() {
   let obj2 = { leading: null, label: null, labelStyle: null, onPress: null };
   let obj3 = { themedColor: null, size: null, source: null };
   obj3[0] = multiAccountUsers(712).colors.TEXT_LINK;
-  obj3[1] = _require("../../../design/void/native.tsx").Icon.Sizes.SMALL_20;
+  obj3[1] = _Button.Icon.Sizes.SMALL_20;
   obj3[2] = multiAccountUsers(14984);
-  obj2[0] = callback(_require("../../../design/void/Form/native/index.tsx").FormRow.Icon, obj3);
-  let intl3 = _require("../../../intl/index.native.tsx").intl;
-  obj2[1] = intl3.string(_require("../../../intl/index.native.tsx").t.bPP34Q);
+  obj2[0] = callback(_Form.FormRow.Icon, obj3);
+  let intl3 = _getSystemLocale.intl;
+  obj2[1] = intl3.string(_getSystemLocale.t.bPP34Q);
   obj2[2] = tmp.addAccountLabel;
   obj2[3] = function handlePressAddAccount() {
     if (multiAccountUsers.length >= outer1_7) {
@@ -236,7 +242,7 @@ export default function ChooseAccount() {
       obj.track(outer1_9.LOGIN_VIEWED, { source: "choose_account_add_account" });
     }
   };
-  items[1] = callback(_require("../../../design/void/Form/native/index.tsx").FormRow, obj2);
+  items[1] = callback(_Form.FormRow, obj2);
   obj1[1] = items;
   obj[5] = callback2(View, obj1);
   return callback(multiAccountUsers(8310), obj);

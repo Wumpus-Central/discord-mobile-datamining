@@ -1,3 +1,4 @@
+import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/voice_panel/native/controls/trackVoicePanelTabOpened.tsx
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import { AnalyticEvents } from "ME";
@@ -11,6 +12,6 @@ export default function trackVoicePanelTabOpened(arg0, tab, source) {
     hasUnreadResult = obj.getMentionCount(arg0) > 0;
   }
   obj = { tab, source, is_chat_badged: hasUnreadResult };
-  require("../../../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.VOICE_PANEL_TAB_OPENED, obj);
+  expandEventProperties.track(AnalyticEvents.VOICE_PANEL_TAB_OPENED, obj);
 };
 export const VoicePanelTabAnalyticsSources = { STORE: "store", GESTURE: "gesture", PREJOIN_BUTTON: "prejoin button", CONNECTED_BUTTON: "connected button", VOICE_CONTROLS: "voice controls", HEADER_BUTTON: "header button" };

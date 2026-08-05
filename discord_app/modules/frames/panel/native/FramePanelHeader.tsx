@@ -1,3 +1,7 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useBaseActivityPanelHeaderContent } from "../../../activities/panel/native/ActivityPanelHeader.tsx";
+import { useGetOrFetchApplications } from "../../../applications/useGetOrFetchApplications.tsx";
+import { context } from "FramePanelStateContext.tsx";
 // discord_app/modules/frames/panel/native/FramePanelHeader.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -19,7 +23,7 @@ let closure_8 = importAllResult.memo(function FramePanelHeaderContentInner(arg0)
   let wrapperOffset;
   ({ landscape, setMode } = arg0);
   ({ pipState, wrapperOffset } = arg0);
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [map];
   const stateFromStores = obj.useStateFromStores(items, () => connectedFrame.getConnectedFrame(), []);
   let applicationId;
@@ -27,7 +31,7 @@ let closure_8 = importAllResult.memo(function FramePanelHeaderContentInner(arg0)
     applicationId = stateFromStores.applicationId;
   }
   const items1 = [applicationId];
-  const first = callback(require("../../../applications/useGetOrFetchApplications.tsx")(items1), 1)[0];
+  const first = callback(useGetOrFetchApplications(items1), 1)[0];
   let tmpResult = tmp(15968);
   const baseActivityPanelHeaderContent = tmpResult.useBaseActivityPanelHeaderContent({ landscape, setMode, wrapperOffset, pipState });
   ({ gesture, headerWrapperStyles, headerStyles } = baseActivityPanelHeaderContent);
@@ -99,8 +103,8 @@ let closure_8 = importAllResult.memo(function FramePanelHeaderContentInner(arg0)
   }
 });
 const memoResult = importAllResult.memo(() => {
-  let obj = require("../../../activities/panel/native/ActivityPanelHeader.tsx") /* useBaseActivityPanelHeaderContent */;
-  obj = { context: require("FramePanelStateContext.tsx") };
+  let obj = useBaseActivityPanelHeaderContent /* useBaseActivityPanelHeaderContent */;
+  obj = { context: context };
   const baseActivityPanelHeader = obj.useBaseActivityPanelHeader(obj);
   obj = { style: baseActivityPanelHeader.headerStyles, children: callback2(closure_8, obj1) };
   return callback2(View, obj);

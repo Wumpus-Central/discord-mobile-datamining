@@ -1,3 +1,5 @@
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { serialize } from "../../tti_analytics/TTITracker.tsx";
 // discord_app/modules/gateway/native/fast_connect.tsx
 import checkEnv from "../../../utils/checkEnv.tsx";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -7,7 +9,7 @@ let AppState;
 let c4;
 function createFastConnectSocket() {
   if (null != window.WebSocket) {
-    let obj = _require("../../../utils/PlatformUtils.tsx");
+    let obj = _set;
     if (obj.isAndroid()) {
       let supportsZstd = obj(12825).getConstants().supportsZstd;
       const obj2 = obj(12825);
@@ -112,7 +114,7 @@ export function getLastFastConnectIdentifyUserId() {
 }
 export const identifyWebSocket = function identifyWebSocket() {
   if (null != window._ws) {
-    const beginFastConnect = require("../../tti_analytics/TTITracker.tsx").beginFastConnect;
+    const beginFastConnect = serialize.beginFastConnect;
     beginFastConnect.measure(() => {
       let client_state = callback2;
       let prepareIdentifyResult = table;

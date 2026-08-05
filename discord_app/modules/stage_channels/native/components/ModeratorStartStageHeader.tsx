@@ -1,3 +1,5 @@
+import { useMyCurrentStageChannelRole } from "../../useMyCurrentStageChannelRole.tsx";
+import { HideStageChannelCallIcon } from "StageActionHeader.tsx";
 // discord_app/modules/stage_channels/native/components/ModeratorStartStageHeader.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -14,13 +16,13 @@ obj[0] = obj;
 let closure_6 = createCacheKey.createStyles(obj);
 const memoResult = require("noop").memo((channel) => {
   channel = channel.channel;
-  const tmp3 = require("../../useMyCurrentStageChannelRole.tsx")(channel.id);
+  const tmp3 = useMyCurrentStageChannelRole(channel.id);
   let speaker;
   if (tmp3 != null) {
     speaker = tmp3.speaker;
   }
   let obj = { style: callback2().header, pointerEvents: "box-none", children: null };
-  const items = [callback(require("StageActionHeader.tsx") /* HideStageChannelCallIcon */.HideStageChannelCallIcon, { channel }), callback(require("StageActionHeader.tsx") /* HideStageChannelCallIcon */.StageChannelCallHeader, { channel }), , ];
+  const items = [callback(HideStageChannelCallIcon /* HideStageChannelCallIcon */.HideStageChannelCallIcon, { channel }), callback(HideStageChannelCallIcon /* HideStageChannelCallIcon */.StageChannelCallHeader, { channel }), , ];
   if (speaker) {
     obj = { channelId: null };
     obj[0] = channel.id;
@@ -28,7 +30,7 @@ const memoResult = require("noop").memo((channel) => {
   }
   items[2] = speaker;
   obj = { channelId: channel.id };
-  items[3] = callback(require("StageActionHeader.tsx") /* HideStageChannelCallIcon */.StageInviteButton, obj);
+  items[3] = callback(HideStageChannelCallIcon /* HideStageChannelCallIcon */.StageInviteButton, obj);
   obj[2] = items;
   return closure_5(View, obj);
 });

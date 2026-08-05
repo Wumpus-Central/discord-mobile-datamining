@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { BountiesModalProgress } from "BountiesModalProgress.tsx";
 // discord_app/modules/quests/native/BountiesModal/BountyVideo.tsx
 import _slicedToArray from "_slicedToArray";
 import preload from "preload";
@@ -29,9 +31,9 @@ let closure_15 = createCacheKey.createStyles(() => {
   obj.overflow = "hidden";
   obj.borderRadius = lg;
   obj[0] = obj;
-  obj = { position: "absolute", top: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, left: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, flexDirection: "row", alignItems: "center", gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  obj = { position: "absolute", top: Themes.space.PX_8, left: Themes.space.PX_8, flexDirection: "row", alignItems: "center", gap: Themes.space.PX_8 };
   obj[1] = obj;
-  obj[2] = { position: "absolute", bottom: 0, height: require("BountiesModalProgress.tsx") /* BountiesModalProgress */.PROGRESS_BAR_HEIGHT, left: lg, right: lg };
+  obj[2] = { position: "absolute", bottom: 0, height: BountiesModalProgress /* BountiesModalProgress */.PROGRESS_BAR_HEIGHT, left: lg, right: lg };
   const obj2 = {};
   const merged1 = Object.assign(closure_6.absoluteFillObject);
   obj2.backgroundColor = "#000000";

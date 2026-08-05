@@ -1,3 +1,10 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { NavScrim } from "../../../../design/components/Navigator/native/NavScrim.android.tsx";
+import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
+import { Form } from "../../../../design/void/Form/native/index.tsx";
+import { combined } from "../../../../utils/HelpdeskUtils.tsx";
+import { useUserIsTeen } from "../../../self_mod/hooks/useUserIsTeen.tsx";
+import { GuildSettingsActionCreators } from "../../GuildSettingsActionCreators.tsx";
 // discord_app/modules/guild_settings/safety/native/GuildSettingsModalModeration.tsx
 import importAllResult from "Text";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -24,7 +31,7 @@ function GuildSettingsOwnerConfiguredContentLevel(guild) {
   if (DEFAULT2 == null) {
     DEFAULT2 = constants3.DEFAULT;
   }
-  let obj = require("../../../self_mod/hooks/useUserIsTeen.tsx") /* useUserIsTeen */;
+  let obj = useUserIsTeen /* useUserIsTeen */;
   let tmp7 = DEFAULT === constants3.AGE_RESTRICTED;
   const userIsTeen = obj.useUserIsTeen();
   if (tmp7) {
@@ -37,7 +44,7 @@ function GuildSettingsOwnerConfiguredContentLevel(guild) {
     obj[0] = intl.string(tmp3(1236).t.YJlvBM);
     const intl2 = tmp3(1236).intl;
     obj = { helpArticleLink: null };
-    obj[0] = require("../../../../utils/HelpdeskUtils.tsx").getArticleURL(constants2.NSFW_SERVER_AGE_RESTRICTION);
+    obj[0] = combined.getArticleURL(constants2.NSFW_SERVER_AGE_RESTRICTION);
     obj[2] = intl2.format(tmp3(1236).t.iyQQ62, obj);
     const obj1 = { label: null, value: null, onValueChange: null, disabled: null };
     const intl3 = tmp3(1236).intl;
@@ -47,7 +54,7 @@ function GuildSettingsOwnerConfiguredContentLevel(guild) {
     obj1[3] = tmp7;
     obj[3] = callback(tmp3(5650).TableSwitchRow, obj1);
     tmp9 = callback(tmp3(5649).TableRowGroup, obj, "filter-section");
-    const obj4 = require("../../../../utils/HelpdeskUtils.tsx");
+    const obj4 = combined;
   }
   return tmp9;
 }
@@ -157,13 +164,13 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
   obj[1] = intl.string(self(1236).t.bPgfJz);
   const intl2 = self(1236).intl;
   obj = { helpdeskArticle: null };
-  obj[0] = require("../../../../utils/HelpdeskUtils.tsx").getArticleURL(constants2.SAFE_DIRECT_MESSAGING);
+  obj[0] = combined.getArticleURL(constants2.SAFE_DIRECT_MESSAGING);
   obj[2] = intl2.format(self(1236).t.BI4ukC, obj);
   obj[3] = guild.explicitContentFilter;
   obj[4] = function onChange(explicitContentFilter) {
     return self.handleExplicitContentFilterChange(explicitContentFilter);
   };
-  const obj3 = require("../../../../utils/HelpdeskUtils.tsx");
+  const obj3 = combined;
   const features = guild.features;
   const contentFilterOptions = self(13987).generateContentFilterOptions(features.has(constants.COMMUNITY));
   obj[5] = contentFilterOptions.map((value) => {
@@ -192,7 +199,7 @@ prototype["render"] = function render() {
   let obj = { contentContainerStyle: items, children: null };
   items = [{ paddingTop: 16 }, this.props.contentContainerStyle];
   obj = { style: createCacheKey(this.context).stack, spacing: null, children: null };
-  obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24;
+  obj[1] = Themes.space.PX_24;
   const items1 = [this.renderVerificationLevelSection(), this.renderExplicitContentFilter(), ];
   if (canManageGuild) {
     obj = { guild: null, hasChanges: null };
@@ -203,24 +210,24 @@ prototype["render"] = function render() {
   const obj1 = { children: null };
   items1[2] = canManageGuild;
   obj[2] = items1;
-  obj[1] = closure_11(require("../../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
-  const items2 = [closure_10(require("../../../../design/void/Form/native/index.tsx") /* Form */.Form, obj), closure_10(require("../../../../design/components/Navigator/native/NavScrim.android.tsx") /* NavScrim */.NavScrim, {})];
+  obj[1] = closure_11(Stack /* Stack */.Stack, obj);
+  const items2 = [closure_10(Form /* Form */.Form, obj), closure_10(NavScrim /* NavScrim */.NavScrim, {})];
   obj1[0] = items2;
   return closure_11(closure_12, obj1);
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
   if (this.props.hasChanges) {
-    require("../../GuildSettingsActionCreators.tsx").cancelChanges(tmp.props.guild.id);
-    const obj = require("../../GuildSettingsActionCreators.tsx");
+    GuildSettingsActionCreators.cancelChanges(tmp.props.guild.id);
+    const obj = GuildSettingsActionCreators;
   }
 };
 prototype["handleVerificationLevelChange"] = function handleVerificationLevelChange(verificationLevel) {
-  let obj = require("../../GuildSettingsActionCreators.tsx");
+  let obj = GuildSettingsActionCreators;
   obj = { verificationLevel };
   obj.updateGuild(obj);
 };
 prototype["handleExplicitContentFilterChange"] = function handleExplicitContentFilterChange(explicitContentFilter) {
-  let obj = require("../../GuildSettingsActionCreators.tsx");
+  let obj = GuildSettingsActionCreators;
   obj = { explicitContentFilter };
   obj.updateGuild(obj);
 };

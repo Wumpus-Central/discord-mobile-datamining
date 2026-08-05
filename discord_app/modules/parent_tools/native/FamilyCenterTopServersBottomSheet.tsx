@@ -1,3 +1,9 @@
+import { ActionSheet } from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import { TableRowGroupTitle } from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
+import { messagesProxy } from "../FamilyCenter.messages.js";
 // discord_app/modules/parent_tools/native/FamilyCenterTopServersBottomSheet.tsx
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import jsxProd from "jsxProd";
@@ -21,7 +27,7 @@ function GuildRow(guildActivity) {
     obj = { guild: null, style: null };
     obj[0] = stateFromStores;
     obj[1] = tmp.guildIcon;
-    obj[2] = callback(require("../../guild/native/GuildIcon.tsx"), obj);
+    obj[2] = callback(GuildIconSizes, obj);
     return callback(tmp2(5315).TableRow, obj);
   }
   tmp = createCacheKey();
@@ -37,12 +43,12 @@ export default function FamilyCenterTopGuildsBottomSheet(topGuildActivities) {
   topGuildActivities = topGuildActivities.topGuildActivities;
   let obj = { children: null };
   obj = { variant: "text-md/bold", style: createCacheKey().header, children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../FamilyCenter.messages.js").Lq9Set);
-  const items = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(messagesProxy.Lq9Set);
+  const items = [callback(Text /* Text */.Text, obj), ];
   obj = { hasIcons: true, children: null };
   obj[1] = topGuildActivities.map((guildActivity) => callback(closure_7, { guildActivity }, guildActivity.guild_id));
-  items[1] = callback(require("../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj);
+  items[1] = callback(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
   obj[0] = items;
-  return callback2(require("../../../design/components/Sheet/native/ActionSheet.native.tsx") /* ActionSheet */.ActionSheet, obj);
+  return callback2(ActionSheet /* ActionSheet */.ActionSheet, obj);
 };

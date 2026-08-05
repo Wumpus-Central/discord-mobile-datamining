@@ -1,3 +1,5 @@
+import { registerAsset } from "../../../../_runtime/10462_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10840_registerAsset.js";
 // discord_app/modules/game_console/native/getConsoleIcon.tsx
 import { VoicePlatforms } from "ParticipantTypes";
 
@@ -13,11 +15,11 @@ export default function getConsoleIcon(arg0) {
 };
 export const getConsoleIconForVoicePlatform = function getConsoleIconForVoicePlatform(voicePlatform) {
   if (voicePlatform === VoicePlatforms.XBOX) {
-    let tmp2 = require("../../../../_runtime/10462_registerAsset.js");
+    let tmp2 = registerAsset;
   } else {
     tmp2 = null;
     if (voicePlatform === tmp.PLAYSTATION) {
-      tmp2 = require("../../../../_runtime/10840_registerAsset.js");
+      tmp2 = registerAsset;
     }
   }
   return tmp2;

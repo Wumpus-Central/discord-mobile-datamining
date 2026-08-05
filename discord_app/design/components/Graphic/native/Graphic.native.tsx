@@ -1,3 +1,4 @@
+import { preload } from "../../../../components_native/common/FastImage.tsx";
 // discord_app/design/components/Graphic/native/Graphic.native.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -7,7 +8,7 @@ import createCacheKey from "createCacheKey";
 const require = arg1;
 function ImageGraphic(source) {
   const tmp = callback();
-  return jsx(require("../../../../components_native/common/FastImage.tsx"), { source: source.src, style: callback().image, resizeMode: "contain", accessibilityElementsHidden: true });
+  return jsx(preload, { source: source.src, style: callback().image, resizeMode: "contain", accessibilityElementsHidden: true });
 }
 function RiveGraphic(riveProps) {
   riveProps = riveProps.riveProps;

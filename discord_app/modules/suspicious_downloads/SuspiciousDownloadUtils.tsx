@@ -1,3 +1,4 @@
+import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 // discord_app/modules/suspicious_downloads/SuspiciousDownloadUtils.tsx
 import set from "set";
 
@@ -14,7 +15,7 @@ const result = set.fileFinishedImporting("modules/suspicious_downloads/Suspiciou
 export const isSuspiciousDownload = function isSuspiciousDownload(localUri) {
   let hostname;
   let pathname;
-  const obj = require("../../utils/URLUtils.tsx");
+  const obj = isDiscordProxiedAssetUrl;
   let toURLSafeResult = obj.toURLSafe(localUri);
   if (toURLSafeResult == null) {
     toURLSafeResult = {};

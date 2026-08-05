@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { maybeFetchCollectiblesForInvoices } from "../../../parent_tools/FamilyCenterActionCreators.tsx";
+import { useParentalControlledExplicitContentSettings } from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
 // discord_app/modules/user_settings/defs/native/ParentalControlsUseDataToCustomizeDiscordSetting.tsx
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import { Consents } from "ME";
@@ -6,12 +9,12 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.MNKzyg);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.MNKzyg);
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useDataToCustomizeDiscordSettingValue() {
-    return require("../../../parent_tools/hooks/useParentalControlSettings.tsx") /* useParentalControlledExplicitContentSettings */.useParentalControlledConsent(Consents.PERSONALIZATION).hasConsented;
+    return useParentalControlledExplicitContentSettings /* useParentalControlledExplicitContentSettings */.useParentalControlledConsent(Consents.PERSONALIZATION).hasConsented;
   },
   onValueChange: function handlePersonalizationChange(arg0) {
     selectedTeenId = selectedTeenId.getSelectedTeenId();
@@ -27,8 +30,8 @@ createToggle = {
       } else {
         items2 = [Consents.PERSONALIZATION];
       }
-      require("../../../parent_tools/FamilyCenterActionCreators.tsx").updateTeenConsents(selectedTeenId, items1, items2);
-      const obj = require("../../../parent_tools/FamilyCenterActionCreators.tsx");
+      maybeFetchCollectiblesForInvoices.updateTeenConsents(selectedTeenId, items1, items2);
+      const obj = maybeFetchCollectiblesForInvoices;
     }
   }
 };

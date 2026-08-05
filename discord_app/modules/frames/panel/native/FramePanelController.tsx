@@ -1,3 +1,7 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { BaseActivityPanelController } from "../../../activities/panel/native/ActivityPanelController.tsx";
+import { _launchFrameOnNative } from "../../FramesActionCreators.native.tsx";
+import { context } from "FramePanelStateContext.tsx";
 // discord_app/modules/frames/panel/native/FramePanelController.tsx
 import "noop";
 import addApplication from "addApplication";
@@ -13,7 +17,7 @@ export default function FramePanelController(children) {
   let hasConnectedActivity;
   let mode;
   let orientationLockStateForApp;
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [map, addApplication];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let obj = store;
@@ -38,13 +42,13 @@ export default function FramePanelController(children) {
   }, []);
   ({ mode, hasConnectedActivity, connectedActivityAppId, currentApp, orientationLockStateForApp } = stateFromStoresObject);
   obj = { context: null, orientationLockStateForApp: null, mode: null, hasConnectedActivity: null, connectedActivityAppId: null, currentApp: null, updateActivityPanelMode: null, children: null };
-  obj[0] = require("FramePanelStateContext.tsx");
+  obj[0] = context;
   obj[1] = orientationLockStateForApp;
   obj[2] = mode;
   obj[3] = hasConnectedActivity;
   obj[4] = connectedActivityAppId;
   obj[5] = currentApp;
-  obj[6] = require("../../FramesActionCreators.native.tsx").updateFramePanelMode;
+  obj[6] = _launchFrameOnNative.updateFramePanelMode;
   obj[7] = children.children;
-  return jsx(require("../../../activities/panel/native/ActivityPanelController.tsx") /* BaseActivityPanelController */.BaseActivityPanelController, { context: null, orientationLockStateForApp: null, mode: null, hasConnectedActivity: null, connectedActivityAppId: null, currentApp: null, updateActivityPanelMode: null, children: null });
+  return jsx(BaseActivityPanelController /* BaseActivityPanelController */.BaseActivityPanelController, { context: null, orientationLockStateForApp: null, mode: null, hasConnectedActivity: null, connectedActivityAppId: null, currentApp: null, updateActivityPanelMode: null, children: null });
 };

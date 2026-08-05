@@ -1,3 +1,6 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../../../design/void/Pressables/native/Pressables.tsx";
 // discord_app/modules/search/native/components/list/SearchListRow.tsx
 import { View } from "get ActivityIndicator";
 import { SEARCH_ROW_TAP_STATE_PADDING as closure_4 } from "MessageEmbedTypes";
@@ -12,7 +15,7 @@ const require = arg1;
 let closure_7 = createCacheKey.createStyles((marginLeft) => {
   obj = { pressable: obj, body: { flexDirection: "row", alignItems: "center" }, labels: { justifyContent: "center", flex: 1 }, underlayColor: null, text: null, iconContainer: null, extrasContainer: null };
   obj = { paddingHorizontal: 16, paddingVertical: closure_4 };
-  obj = { backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_BACKGROUND_ACTIVE };
+  obj = { backgroundColor: Themes.colors.INTERACTIVE_BACKGROUND_ACTIVE };
   obj[3] = obj;
   obj[4] = { flexShrink: 1 };
   obj[5] = { marginRight: 12 };
@@ -63,7 +66,7 @@ const memoResult = require("noop").memo((accessibilityRole) => {
     const obj1 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", style: null, children: null };
     obj1[3] = tmpResult.text;
     obj1[4] = label;
-    tmp7Result = tmp7(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+    tmp7Result = tmp7(Text /* Text */.Text, obj1);
   }
   const items5 = [tmp7Result, subLabel];
   obj[1] = items5;
@@ -81,7 +84,7 @@ const memoResult = require("noop").memo((accessibilityRole) => {
   }
   items1[2] = tmp7Result;
   obj[10] = items1;
-  return closure_6(require("../../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableHighlight, obj);
+  return closure_6(PressableBase /* PressableBase */.PressableHighlight, obj);
 });
 const result = require("MessageEmbedTypes").fileFinishedImporting("modules/search/native/components/list/SearchListRow.tsx");
 

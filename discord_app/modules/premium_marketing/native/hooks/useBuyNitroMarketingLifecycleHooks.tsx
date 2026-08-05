@@ -1,3 +1,5 @@
+import { MarketingComponentType } from "../../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
+import { usePromotionMarketingComponent } from "../../../premium/hooks/usePromotionMarketingComponent.tsx";
 // discord_app/modules/premium_marketing/native/hooks/useBuyNitroMarketingLifecycleHooks.tsx
 import noop from "noop";
 import usePremiumPlanPurchasedStore from "usePremiumPlanPurchasedStore";
@@ -21,7 +23,7 @@ export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingL
   const dependencyMap = tmp;
   _require = initialLoadCompleted;
   promotionMarketingComponent = undefined;
-  promotionMarketingComponent = _require("../../../premium/hooks/usePromotionMarketingComponent.tsx").usePromotionMarketingComponent(_require("../../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx").MarketingComponentType.PREMIUM_TAB);
+  promotionMarketingComponent = _usePromotionMarketingComponent.usePromotionMarketingComponent(_MarketingComponentType.MarketingComponentType.PREMIUM_TAB);
   const items = [initialLoadCompleted, promotionMarketingComponent];
   const effect = React.useEffect(() => {
     let tmp = initialLoadCompleted;

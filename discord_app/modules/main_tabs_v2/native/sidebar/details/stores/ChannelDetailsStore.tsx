@@ -1,3 +1,4 @@
+import { batchUpdates } from "../../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/main_tabs_v2/native/sidebar/details/stores/ChannelDetailsStore.tsx
 import keys from "keys";
 
@@ -11,7 +12,7 @@ let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/s
 
 export const useChannelDetailsStore = obj;
 export const deleteChannelStates = function deleteChannelStates() {
-  require("../../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx") /* batchUpdates */.batchUpdates(() => {
+  batchUpdates /* batchUpdates */.batchUpdates(() => {
     const obj = { states: null };
     obj[0] = new Map();
     return state.setState(obj);

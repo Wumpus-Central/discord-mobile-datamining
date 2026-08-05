@@ -1,3 +1,6 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { useIsAppDM } from "../../../app_dms/useIsAppDM.tsx";
+import { apexExperiment } from "../../../nuf/native/PostReactionPermissionNudgeExperiment.tsx";
 // discord_app/modules/chat_input/native/accessories/ChatInputNotificationNudge.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "getOrRefreshPushSyncToken";
@@ -110,7 +113,7 @@ function ChatInputNotificationNudgeImpl(onDismiss) {
 ({ EventActionLocation: map1, EventActionType: closure_14, NotificationNudgeAnalyticsAction: closure_15, NotificationNudgeSurface: closure_16 } = EventActionType);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = createCacheKey.createStyles((arg0) => {
-  let obj = { display: "flex", flexDirection: "row", padding: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, alignItems: "center", borderTopWidth: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_TOP_BORDER_WIDTH, borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_FLOATING_ACCESSORY_BORDER, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, borderWidth: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_MARGIN_BOTTOM, gap: null };
+  let obj = { display: "flex", flexDirection: "row", padding: Themes.space.PX_12, backgroundColor: Themes.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, alignItems: "center", borderTopWidth: Themes.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_TOP_BORDER_WIDTH, borderColor: Themes.colors.MOBILE_FLOATING_ACCESSORY_BORDER, borderRadius: Themes.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, borderWidth: Themes.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, marginBottom: Themes.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_MARGIN_BOTTOM, gap: null };
   let num;
   if (arg0) {
     num = 12;
@@ -130,7 +133,7 @@ let closure_19 = createCacheKey.createStyles((arg0) => {
     str = tmp(712).colors.BACKGROUND_MOD_STRONG;
   }
   obj1[1] = str;
-  obj1[2] = require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round;
+  obj1[2] = Themes.radii.round;
   obj[2] = obj1;
   let num3 = 0;
   if (!arg0) {
@@ -162,14 +165,14 @@ export default function ChatInputNotificationNudge(channel) {
   });
   let tmp5 = !stateFromStores;
   if (!stateFromStores) {
-    tmp5 = !require("../../../app_dms/useIsAppDM.tsx")(channel);
+    tmp5 = !useIsAppDM(channel);
   }
   let tmpResult = tmp(11692);
   const shouldShowPushNotificationNudgeByPromptType = tmpResult.useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.CHANNEL_BANNER);
   tmpResult = tmp(11692);
   const shouldShowPushNotificationNudgeByPromptType1 = tmpResult.useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.POST_REACTION_BANNER);
   const tmp4 = importDefault;
-  const tmp4Result = require("../../../nuf/native/PostReactionPermissionNudgeExperiment.tsx");
+  const tmp4Result = apexExperiment;
   let prop = null;
   if (tmp5) {
     prop = null;

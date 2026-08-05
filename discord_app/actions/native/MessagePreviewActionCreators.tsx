@@ -1,3 +1,5 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/actions/native/MessagePreviewActionCreators.tsx
 import ME from "ME";
 
@@ -10,7 +12,7 @@ export default {
   fetchMessages(channelId, around) {
     const _require = channelId;
     let closure_1 = around;
-    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     obj = { url: closure_3.MESSAGES(channelId), query: obj, retries: 2, oldFormErrors: true, rejectWithError: true };
     obj = { limit: closure_4, around };
     const value = HTTP.get(obj);
@@ -21,6 +23,6 @@ export default {
     });
   },
   clearMessages() {
-    require("../../Dispatcher.tsx").dispatch({ type: "CLEAR_MESSAGES_AROUND_SUCCESS" });
+    dispatcher.dispatch({ type: "CLEAR_MESSAGES_AROUND_SUCCESS" });
   }
 };

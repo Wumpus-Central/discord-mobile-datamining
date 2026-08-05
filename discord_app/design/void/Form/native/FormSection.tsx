@@ -1,3 +1,6 @@
+import { context } from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import { Divider } from "FormDivider.tsx";
+import { FormTitle } from "FormTitle.tsx";
 // discord_app/design/void/Form/native/FormSection.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -55,7 +58,7 @@ export default function FormSection(arg0) {
   ({ titleViewStyle, titleTextStyle, sectionBodyStyle, wrapperStyle } = arg0);
   const tmp2 = createCacheKey();
   let obj = React;
-  if (React.useContext(require("../../../components/RedesignCompat/native/RedesignCompat.native.tsx") /* context */.RedesignCompatContext)) {
+  if (React.useContext(context /* context */.RedesignCompatContext)) {
     const Children = obj.Children;
     const toArrayResult = Children.toArray(children);
     const found = toArrayResult.filter((type) => {
@@ -79,7 +82,7 @@ export default function FormSection(arg0) {
     let flag = false;
     if (obj.isValidElement(element)) {
       flag = false;
-      if (element.type !== require("FormDivider.tsx")) {
+      if (element.type !== Divider) {
         flag = false;
         if (null != element.props) {
           const props = element.props;
@@ -120,8 +123,8 @@ export default function FormSection(arg0) {
       obj3[5] = thinTitle;
       obj3[6] = uppercaseTitle;
       obj3[7] = inset;
-      tmp6 = callback(require("FormTitle.tsx"), obj3);
-      const tmp10 = require("FormTitle.tsx");
+      tmp6 = callback(FormTitle, obj3);
+      const tmp10 = FormTitle;
     }
     const emptySectionHeader = tmp2.emptySectionHeader;
     let titledSectionNoBorderOrMargin = emptySectionHeader;

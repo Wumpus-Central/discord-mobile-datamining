@@ -1,3 +1,5 @@
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { useScaledRowHeight } from "useScaledRowHeight.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx
 import _slicedToArray from "_slicedToArray";
 import registerAsset from "registerAsset";
@@ -40,7 +42,7 @@ export default function useMemberListAction(channel) {
   let callback1;
   let tmp = callback();
   importDefault = tmp;
-  const tmp4 = require("../../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("useMemberListAction");
+  const tmp4 = useIsMobileVisualRefreshExperimentEnabled("useMemberListAction");
   dependencyMap = tmp4;
   const items = [c9];
   stateFromStores = channel(647).useStateFromStores(items, () => {
@@ -94,7 +96,7 @@ export default function useMemberListAction(channel) {
   if (channel != null) {
     id = channel.id;
   }
-  const tmp15 = require("useScaledRowHeight.tsx")();
+  const tmp15 = useScaledRowHeight();
   c9 = tmp15;
   const tmp16 = stateFromStores(React.useState(undefined), 2);
   first = tmp16[0];

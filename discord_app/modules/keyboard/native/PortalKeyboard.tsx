@@ -1,3 +1,5 @@
+import { Portal } from "../../../../_runtime/04156_Portal.js";
+import { navigationToRootTabHelper } from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 // discord_app/modules/keyboard/native/PortalKeyboard.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -11,7 +13,7 @@ export const PortalKeyboardState = { EMPTY: "empty", REQUEST_OPEN: "request_open
 export const PORTAL_HOST_NAME_DEFAULT = "default";
 export const PORTAL_HOST_NAME_MODAL = "modal";
 export const PortalKeyboard = function PortalKeyboard(children) {
-  let obj = require("../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */;
+  let obj = navigationToRootTabHelper /* navigationToRootTabHelper */;
   if (obj.useIsModalOpen()) {
     if (tmpResult.isIOS()) {
       let tmp3 = modal;
@@ -28,5 +30,5 @@ export const PortalKeyboardHost = function PortalKeyboardHost(name) {
   if (name === undefined) {
     name = c3;
   }
-  return jsx(require("../../../../_runtime/04156_Portal.js") /* Portal */.PortalHost, { name });
+  return jsx(Portal /* Portal */.PortalHost, { name });
 };

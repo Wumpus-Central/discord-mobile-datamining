@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { combined } from "../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/stage_channels/StageChannelsConstants.tsx
 import { HelpdeskArticles } from "ME";
 
@@ -19,15 +21,15 @@ export const STAGE_BOOSTING_SHEET_KEY = "stage-boosting";
 export const STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY = "stage-channel-audience-notice-shown";
 export const RequestToSpeakPermissionStates = { EVERYONE: 1, [1]: "EVERYONE", NO_ONE: 2, [2]: "NO_ONE", ROLES: 3, [3]: "ROLES" };
 export const getStagePublicInfoText = function getStagePublicInfoText() {
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  const items = [intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["9XlQ9W"]), , , ];
-  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  items[1] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.lF0IbB);
-  const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const items = [intl.string(getSystemLocale /* getSystemLocale */.t["9XlQ9W"]), , , ];
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  items[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.lF0IbB);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
   const obj = { articleURL: null };
-  obj[0] = require("../../utils/HelpdeskUtils.tsx").getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES);
-  items[2] = intl3.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.q2jZ6N, obj);
-  const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  items[3] = intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.xfb7ZU);
+  obj[0] = combined.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES);
+  items[2] = intl3.format(getSystemLocale /* getSystemLocale */.t.q2jZ6N, obj);
+  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  items[3] = intl4.string(getSystemLocale /* getSystemLocale */.t.xfb7ZU);
   return items;
 };

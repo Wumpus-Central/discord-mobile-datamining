@@ -1,10 +1,13 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { messagesProxy } from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
+import { ApplyButton } from "../../../display_name_styles/native/DisplayNameStylesEditScreen.tsx";
 // discord_app/modules/user_settings/defs/native/DisplayNameStylesRouteSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../display_name_styles/intl/DisplayNameStyles.messages.js").ZPMAlX);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(messagesProxy.ZPMAlX);
   },
   parent: null,
   unsearchable: true,
@@ -16,7 +19,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DISPLAY_NAME_STYLES,
   getComponent() {
-    return require("../../../display_name_styles/native/DisplayNameStylesEditScreen.tsx") /* ApplyButton */.default;
+    return ApplyButton /* ApplyButton */.default;
   }
 };
 const route = createToggle.createRoute(obj);

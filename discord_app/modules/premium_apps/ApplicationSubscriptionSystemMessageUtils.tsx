@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx
 const result = require("set").fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx");
 
@@ -7,18 +8,18 @@ export const getApplicationSubscriptionSystemMessageASTContent = function getApp
   let usernameOnClick;
   ({ application, username, usernameOnClick } = arg0);
   if (null != application) {
-    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
     let obj = { username: null, applicationName: null, usernameOnClick: null };
     obj[0] = username;
     obj[1] = application.name;
     obj[2] = usernameOnClick;
-    let formatToPartsResult = intl2.formatToParts(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Tes5Ou, obj);
+    let formatToPartsResult = intl2.formatToParts(getSystemLocale /* getSystemLocale */.t.Tes5Ou, obj);
   } else {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     obj = { username: null, usernameOnClick: null };
     obj[0] = username;
     obj[1] = usernameOnClick;
-    formatToPartsResult = intl.formatToParts(require("../../intl/index.native.tsx") /* getSystemLocale */.t.PUJtgi, obj);
+    formatToPartsResult = intl.formatToParts(getSystemLocale /* getSystemLocale */.t.PUJtgi, obj);
   }
   return formatToPartsResult;
 };

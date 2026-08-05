@@ -1,3 +1,4 @@
+import { combined } from "../../../../../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/user_settings/connections/native/two_way_link/xbox/XboxLinkLanding.tsx
 import noop from "noop";
 import { XboxLinkModalScenes } from "XboxLinkModalScenes";
@@ -16,9 +17,9 @@ export default function XboxLinkLanding() {
   let obj = navigation(1480);
   navigation = obj.useNavigation();
   const tmp = callback();
-  const articleURL = require("../../../../../../utils/HelpdeskUtils.tsx").getArticleURL(constants.XBOX_CONNECTION);
+  const articleURL = combined.getArticleURL(constants.XBOX_CONNECTION);
   let intl = navigation(1236).intl;
-  const obj2 = require("../../../../../../utils/HelpdeskUtils.tsx");
+  const obj2 = combined;
   let items = [navigation];
   const memo = React.useMemo(() => {
     let obj = { label: null, icon: null };

@@ -1,3 +1,4 @@
+import { getIsScreenLandscape } from "../../../screen/useIsScreenLandscape.native.tsx";
 // discord_app/modules/stage_channels/native/components/StageGridRow.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -12,7 +13,7 @@ const memoResult = require("noop").memo((row) => {
   ({ channel: require, participants } = row);
   let THIRD;
   const tmp = callback();
-  let obj = require("../../../screen/useIsScreenLandscape.native.tsx") /* getIsScreenLandscape */;
+  let obj = getIsScreenLandscape /* getIsScreenLandscape */;
   let containerLandscape = obj.useIsScreenLandscape();
   let num = 3;
   if (0 === row.row) {

@@ -1,3 +1,4 @@
+import { BaseConnectionEvent } from "index.tsx";
 // discord_common/js/packages/media-engine/MediaEngineDummy.tsx
 import DesktopSources from "DesktopSources";
 import "on";
@@ -23,7 +24,7 @@ class MediaEngineDummy extends tmp3 {
 }
 const prototype = MediaEngineDummy.prototype;
 prototype["destroy"] = function destroy() {
-  this.emit(require("index.tsx") /* BaseConnectionEvent */.MediaEngineEvent.Destroy);
+  this.emit(BaseConnectionEvent /* BaseConnectionEvent */.MediaEngineEvent.Destroy);
   this.removeAllListeners();
 };
 prototype["interact"] = function interact() {

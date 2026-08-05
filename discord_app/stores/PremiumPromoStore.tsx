@@ -1,3 +1,4 @@
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/stores/PremiumPromoStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import upsertRelationship from "upsertRelationship";
@@ -20,9 +21,9 @@ const premiumPromoStore = new PremiumPromoStore(require("dispatcher"), {
     let tmp2 = friendIDs.getFriendIDs().length >= 10;
     if (tmp2) {
       const _Date = Date;
-      const obj = require("../utils/SnowflakeUtils.tsx");
-      tmp2 = require("../utils/SnowflakeUtils.tsx").extractTimestamp(id.getId()) < Date.now() - closure_4;
-      const extractTimestampResult = require("../utils/SnowflakeUtils.tsx").extractTimestamp(id.getId());
+      const obj = DISCORD_EPOCH;
+      tmp2 = DISCORD_EPOCH.extractTimestamp(id.getId()) < Date.now() - closure_4;
+      const extractTimestampResult = DISCORD_EPOCH.extractTimestamp(id.getId());
     }
     let c5 = tmp2;
     return c5 !== tmp2;

@@ -1,3 +1,5 @@
+import { HavenGenres } from "constants.tsx";
+import { messagesProxy } from "Haven.messages.js";
 // discord_app/modules/haven/HavenUtils.tsx
 function parseParticipant(userId) {
   return { userId: userId.user_id, position: userId.position, avatar: userId.avatar };
@@ -15,15 +17,15 @@ export const parseRoom = function parseRoom(roomId) {
   return { roomId: roomId.room_id, participants: participants.map(parseParticipant), seats: seats.map(parseSeat) };
 };
 export const getHavenSoundControlName = function getHavenSoundControlName(arg0) {
-  if (require("constants.tsx") /* HavenGenres */.HavenSoundKeys.RADIO === arg0) {
+  if (HavenGenres /* HavenGenres */.HavenSoundKeys.RADIO === arg0) {
     const intl3 = tmp(1236).intl;
-    return intl3.string(require("Haven.messages.js").AjiGKB);
+    return intl3.string(messagesProxy.AjiGKB);
   } else if (tmp(12932).HavenSoundKeys.ENVIRONMENT === arg0) {
     const intl2 = tmp(1236).intl;
-    return intl2.string(require("Haven.messages.js").YEYIbI);
+    return intl2.string(messagesProxy.YEYIbI);
   } else if (tmp(12932).HavenSoundKeys.CAMPFIRE === arg0) {
     const intl = tmp(1236).intl;
-    return intl.string(require("Haven.messages.js")["Vk9+Ez"]);
+    return intl.string(messagesProxy["Vk9+Ez"]);
   } else {
     return "";
   }

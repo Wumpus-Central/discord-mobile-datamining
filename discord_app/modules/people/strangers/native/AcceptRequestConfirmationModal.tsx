@@ -1,3 +1,4 @@
+import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
 // discord_app/modules/people/strangers/native/AcceptRequestConfirmationModal.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -39,5 +40,5 @@ export default function AcceptRequestConfirmationModal(onConfirm) {
   items[1] = callback(onConfirm(4281).Text, obj1);
   obj[1] = items;
   obj[4] = callback2(View, obj);
-  return callback(require("../../../../components_native/common/Alert.tsx"), obj);
+  return callback(componentDidMount, obj);
 };

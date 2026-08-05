@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/design/components/TableRow/native/TableRow.native.tsx
 import noop from "noop";
 import get_ActivityIndicator from "set";
@@ -223,7 +224,7 @@ let closure_10 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   if (arg3 === undefined) {
     flag = false;
   }
-  let obj = { padding: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_PADDING, minHeight: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", opacity: null, borderRadius: null };
+  let obj = { padding: Themes.modules.mobile.TABLE_ROW_PADDING, minHeight: Themes.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", opacity: null, borderRadius: null };
   let num = 1;
   if (arg0) {
     num = 0.5;

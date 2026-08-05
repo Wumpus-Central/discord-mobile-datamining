@@ -1,3 +1,5 @@
+import { ACTION_SHEET_HEIGHT_HALF } from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { useGuildScheduledEventUserCount } from "../../../useGuildScheduledEventUserCount.tsx";
 // discord_app/modules/guild_scheduled_events/native/components/event_detail/EventDetailInfoSheet.tsx
 import usePrimaryActionButtonType from "usePrimaryActionButtonType";
 import { View } from "getGuildEventsForCurrentUser";
@@ -111,7 +113,7 @@ export default function EventDetailInfoSheet(guildEvent) {
   const items9 = [callback(guildEvent(9058).BellIcon, { size: "sm", style: tmp.interestedIcon }), ];
   const obj6 = { variant: "text-sm/medium", color: "text-default", children: null };
   const intl = guildEvent(1236).intl;
-  obj6[2] = intl.format(guildEvent(1236).t["+DLsD8"], { count: require("../../../useGuildScheduledEventUserCount.tsx")(guildEvent.guild_id, guildEvent.id, recurrenceId) });
+  obj6[2] = intl.format(guildEvent(1236).t["+DLsD8"], { count: useGuildScheduledEventUserCount(guildEvent.guild_id, guildEvent.id, recurrenceId) });
   items9[1] = callback(guildEvent(4281).Text, obj6);
   obj4[1] = items9;
   items8[4] = callback2(creator, obj4);
@@ -232,5 +234,5 @@ export default function EventDetailInfoSheet(guildEvent) {
   return callback2(creator, obj);
 };
 export const closeGuildEventInfoActionSheet = function closeGuildEventInfoActionSheet() {
-  require("../../../../action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet(closure_11);
+  ACTION_SHEET_HEIGHT_HALF.hideActionSheet(closure_11);
 };

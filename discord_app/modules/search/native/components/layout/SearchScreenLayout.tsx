@@ -1,3 +1,6 @@
+import { jsx } from "../../../../panels/morphable/native/AppFreezer.tsx";
+import { NoSearchResultsScreen } from "../tabs/SearchTabsLayout.tsx";
+import { AutocompleteScreen } from "autocomplete/AutocompleteScreen.tsx";
 // discord_app/modules/search/native/components/layout/SearchScreenLayout.tsx
 import { View } from "get ActivityIndicator";
 import prototype from "prototype";
@@ -20,7 +23,7 @@ function SearchFreezeContainer(visible) {
   obj = { style: items, "aria-hidden": !visible, children };
   items[1] = visible ? tmp.visible : tmp.hidden;
   obj[2] = closure_5(View, obj);
-  return closure_5(require("../../../../panels/morphable/native/AppFreezer.tsx"), obj);
+  return closure_5(jsx, obj);
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ hidden: { opacity: 0 }, visible: { flex: 1 } });
@@ -32,8 +35,8 @@ const memoResult = require("noop").memo((width) => {
   const items1 = [searchContext];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.isAutocompleteVisible(searchContext), items1);
   obj = { children: null };
-  obj = { visible: !stateFromStores, containerStyle, children: callback(require("../tabs/SearchTabsLayout.tsx"), { searchContext, width: width.width }) };
-  const items2 = [callback(SearchFreezeContainer, obj), callback(SearchFreezeContainer, { visible: stateFromStores, containerStyle, children: callback(require("autocomplete/AutocompleteScreen.tsx"), { searchContext }) })];
+  obj = { visible: !stateFromStores, containerStyle, children: callback(NoSearchResultsScreen, { searchContext, width: width.width }) };
+  const items2 = [callback(SearchFreezeContainer, obj), callback(SearchFreezeContainer, { visible: stateFromStores, containerStyle, children: callback(AutocompleteScreen, { searchContext }) })];
   obj[0] = items2;
   return callback2(closure_6, obj);
 });

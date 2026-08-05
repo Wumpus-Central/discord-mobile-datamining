@@ -1,3 +1,5 @@
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/in_app_reports/native/components/InAppReportModal.tsx
 import HeaderActionButton from "HeaderActionButton";
 import _slicedToArray from "_slicedToArray";
@@ -257,9 +259,9 @@ export default function InAppReportModal(arg0) {
       let obj = { screens: null, initialRouteStack: null, headerBackTitle: null };
       obj[0] = screens;
       obj[1] = initialStack;
-      let intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["13/7kX"]);
-      tmp9 = jsx(require("../../../../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */.Navigator, { screens: null, initialRouteStack: null, headerBackTitle: null });
+      let intl = getSystemLocale /* getSystemLocale */.intl;
+      obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["13/7kX"]);
+      tmp9 = jsx(NavigationStack /* NavigationStack */.Navigator, { screens: null, initialRouteStack: null, headerBackTitle: null });
     }
   }
   return tmp9;

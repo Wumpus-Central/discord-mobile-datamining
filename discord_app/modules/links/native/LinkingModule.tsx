@@ -1,3 +1,4 @@
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeLinkingModule.tsx";
 // discord_app/modules/links/native/LinkingModule.tsx
 import { NativeModules } from "get ActivityIndicator";
 
@@ -6,8 +7,8 @@ let result = require("enforcing").fileFinishedImporting("modules/links/native/Li
 export default {
   tryOpenUrlAsUniversalLink(closure_0) {
     if (obj.isAndroid()) {
-      let result = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeLinkingModule.tsx").tryOpenUrlAsUniversalLink(closure_0);
-      const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeLinkingModule.tsx");
+      let result = enforcing.tryOpenUrlAsUniversalLink(closure_0);
+      const obj2 = enforcing;
     } else {
       const DCDLinkingManager = NativeModules.DCDLinkingManager;
       result = DCDLinkingManager.tryOpenUrlAsUniversalLink(closure_0);
@@ -16,8 +17,8 @@ export default {
   },
   tryOpenScheme(closure_0) {
     if (obj.isAndroid()) {
-      let tryOpenSchemeResult = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeLinkingModule.tsx").tryOpenScheme(closure_0);
-      const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeLinkingModule.tsx");
+      let tryOpenSchemeResult = enforcing.tryOpenScheme(closure_0);
+      const obj2 = enforcing;
     } else {
       const DCDLinkingManager = NativeModules.DCDLinkingManager;
       tryOpenSchemeResult = DCDLinkingManager.tryOpenScheme(closure_0);

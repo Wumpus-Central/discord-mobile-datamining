@@ -1,3 +1,7 @@
+import { trackInvite } from "../../../../actions/MessageActionCreators.tsx";
+import { dispatcher } from "../../../../Dispatcher.tsx";
+import { apexExperiment } from "../../experiments/FriendshipAnniversaryBackendPersistenceExperiment.tsx";
+import { fetchAndReconcileGiftIntentDismissals } from "../PremiumGiftingIntentActionCreators.tsx";
 // discord_app/modules/premium/gifting/shared/GiftIntentReconcilingManager.tsx
 import dropChannelIfEmpty from "dropChannelIfEmpty";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -72,7 +76,7 @@ prototype["maybeReconcileServerDismissals"] = function maybeReconcileServerDismi
 prototype["isReconcileEligible"] = function isReconcileEligible(maybeReconcileServerDismissals) {
   let enabled = 0 !== store.getFriendAnniversaries().length;
   if (enabled) {
-    const FriendshipAnniversaryBackendPersistenceExperiment = require("../../experiments/FriendshipAnniversaryBackendPersistenceExperiment.tsx") /* apexExperiment */.FriendshipAnniversaryBackendPersistenceExperiment;
+    const FriendshipAnniversaryBackendPersistenceExperiment = apexExperiment /* apexExperiment */.FriendshipAnniversaryBackendPersistenceExperiment;
     const obj = { location: null };
     obj[0] = maybeReconcileServerDismissals;
     enabled = FriendshipAnniversaryBackendPersistenceExperiment.getConfig(obj).enabled;
@@ -95,8 +99,8 @@ prototype["attemptReconcileFetch"] = function attemptReconcileFetch() {
   const serverDismissalTimestampMs = this.getServerDismissalTimestampMs();
   if (!tmp2) {
     self.isReconciling = true;
-    const andReconcileGiftIntentDismissals = require("../PremiumGiftingIntentActionCreators.tsx") /* fetchAndReconcileGiftIntentDismissals */.fetchAndReconcileGiftIntentDismissals(serverDismissalTimestampMs);
-    const obj = require("../PremiumGiftingIntentActionCreators.tsx") /* fetchAndReconcileGiftIntentDismissals */;
+    const andReconcileGiftIntentDismissals = fetchAndReconcileGiftIntentDismissals /* fetchAndReconcileGiftIntentDismissals */.fetchAndReconcileGiftIntentDismissals(serverDismissalTimestampMs);
+    const obj = fetchAndReconcileGiftIntentDismissals /* fetchAndReconcileGiftIntentDismissals */;
   }
 };
 prototype["onReconcileSuccess"] = function onReconcileSuccess(dismissals) {
@@ -162,7 +166,7 @@ prototype["removeRemotelyDismissedGiftIntentCards"] = function removeRemotelyDis
             if (tmp11) {
               let tmp15 = importDefault;
               let tmp16 = dependencyMap;
-              let obj = require("../../../../Dispatcher.tsx");
+              let obj = dispatcher;
               obj = { type: "MESSAGE_DELETE", id: null, channelId: null };
               let tmp17 = item10031;
               obj[1] = tmp9.id;
@@ -197,7 +201,7 @@ prototype["maybeRetryHeldGiftingPromptSystemMessage"] = function maybeRetryHeldG
   }
 };
 prototype["shouldHoldGiftingPromptSystemMessageForServerReconcile"] = function shouldHoldGiftingPromptSystemMessageForServerReconcile(location) {
-  const FriendshipAnniversaryBackendPersistenceExperiment = require("../../experiments/FriendshipAnniversaryBackendPersistenceExperiment.tsx") /* apexExperiment */.FriendshipAnniversaryBackendPersistenceExperiment;
+  const FriendshipAnniversaryBackendPersistenceExperiment = apexExperiment /* apexExperiment */.FriendshipAnniversaryBackendPersistenceExperiment;
   let enabled = FriendshipAnniversaryBackendPersistenceExperiment.getConfig({ location }).enabled;
   if (enabled) {
     const self = this;
@@ -211,7 +215,7 @@ prototype["trySendGiftingPromptSystemMessage"] = function trySendGiftingPromptSy
     this.heldGiftingPromptSystemMessage = true;
     let flag = false;
   } else {
-    let obj = require("../../../../actions/MessageActionCreators.tsx");
+    let obj = trackInvite;
     obj = { giftIntentType: null, recipientUserId: null, giftIntentSecondaryAction: null };
     obj[0] = FRIEND_ANNIVERSARY;
     obj[1] = closure_0;

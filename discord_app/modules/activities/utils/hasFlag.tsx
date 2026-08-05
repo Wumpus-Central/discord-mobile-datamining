@@ -1,3 +1,4 @@
+import { hasFlag } from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/modules/activities/utils/hasFlag.tsx
 import { ActivityFlags } from "ME";
 
@@ -12,8 +13,8 @@ export default function hasFlag(flags) {
       if (num == null) {
         num = 0;
       }
-      hasFlagResult = require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(num, arg1);
-      const obj = require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+      hasFlagResult = hasFlag /* hasFlag */.hasFlag(num, arg1);
+      const obj = hasFlag /* hasFlag */;
     }
     tmp = hasFlagResult;
   }

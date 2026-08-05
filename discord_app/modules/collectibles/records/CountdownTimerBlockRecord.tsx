@@ -1,8 +1,9 @@
+import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 // discord_app/modules/collectibles/records/CountdownTimerBlockRecord.tsx
 let prototype;
 prototype = function CountdownTimerBlockRecord(end_time) {
   const obj = Object.create(new.target.prototype);
-  obj.type = require("../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx") /* ShopBlockType */.ShopBlockType.COUNTDOWN_TIMER;
+  obj.type = ShopBlockType /* ShopBlockType */.ShopBlockType.COUNTDOWN_TIMER;
   ({ title: tmp.title, body: tmp.body, banner_url: tmp.bannerUrl } = end_time);
   obj.endTime = new Date(end_time.end_time);
   obj.textColor = end_time.text_color;
@@ -13,7 +14,7 @@ prototype["fromServer"] = function fromServer(end_time) {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);
-  obj.type = require("../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx") /* ShopBlockType */.ShopBlockType.COUNTDOWN_TIMER;
+  obj.type = ShopBlockType /* ShopBlockType */.ShopBlockType.COUNTDOWN_TIMER;
   ({ title: tmp2.title, body: tmp2.body, banner_url: tmp2.bannerUrl } = end_time);
   obj.endTime = new Date(end_time.end_time);
   obj.textColor = end_time.text_color;

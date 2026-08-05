@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/polls/chat/usePollMessageContextItemTypes.tsx
 import fetchFingerprint from "fetchFingerprint";
 
@@ -7,7 +8,7 @@ let closure_4 = [];
 const result = require("set").fileFinishedImporting("modules/polls/chat/usePollMessageContextItemTypes.tsx");
 
 export default function usePollMessageContextItemTypes(poll) {
-  const obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const obj = initialize /* initialize */;
   const items = [fetchFingerprint];
   poll = poll.poll;
   const stateFromStores = obj.useStateFromStores(items, () => id.getId());

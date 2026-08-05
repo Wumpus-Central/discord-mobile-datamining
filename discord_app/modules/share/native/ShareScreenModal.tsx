@@ -1,3 +1,4 @@
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 // discord_app/modules/share/native/ShareScreenModal.tsx
 import jsxProd from "jsxProd";
 import _slicedToArray from "_slicedToArray";
@@ -8,7 +9,7 @@ import { jsx } from "jsxProd";
 
 let require = arg1;
 function onClose() {
-  require("../../../actions/ModalActionCreators.tsx").popWithKey(SHARE_SCREEN_MODAL_KEY);
+  ModalActionCreators.popWithKey(SHARE_SCREEN_MODAL_KEY);
 }
 let c9 = new require("ensureGuildLoaded")("ShareScreenModal");
 const tmp2 = new require("ensureGuildLoaded")("ShareScreenModal");

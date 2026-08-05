@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/defs/native/SystemNotificationsSetting.tsx
 import closure_3 from "EventActionType";
 import { NativeModules } from "get ActivityIndicator";
@@ -101,8 +102,8 @@ function _handleEnableSystemNotification() {
 ({ EventActionType: error, EventActionLocation: metroImportAll } = EventActionType);
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.nl2Dqx);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.nl2Dqx);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   onPress: function handleEnableSystemNotification() {

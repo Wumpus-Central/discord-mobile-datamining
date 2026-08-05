@@ -1,3 +1,4 @@
+import { set } from "../../utils/PlatformUtils.tsx";
 // discord_app/modules/system_date_format/SystemDateFormatter.native.tsx
 if (null != global.__DiscordCreateDateFormatter) {
   let __DiscordCreateDateFormatter = global.__DiscordCreateDateFormatter;
@@ -25,5 +26,5 @@ const result = require("enforcing").fileFinishedImporting("modules/system_date_f
 
 export const makeFormatter = __DiscordCreateDateFormatter;
 export const supportsSystemDateFormatter = function supportsSystemDateFormatter() {
-  return require("../../utils/PlatformUtils.tsx") /* set */.isIOS();
+  return set /* set */.isIOS();
 };

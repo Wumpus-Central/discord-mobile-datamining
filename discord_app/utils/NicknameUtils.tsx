@@ -1,3 +1,6 @@
+import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { nameFromUser } from "UserUtils.tsx";
 // discord_app/utils/NicknameUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -25,8 +28,8 @@ function getNickname(id, arg1, id) {
 }
 function getName(id, arg1, id) {
   if (null == id) {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    let stringResult = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.sKdZ6U);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.sKdZ6U);
   } else {
     stringResult = null;
     if (null != id) {
@@ -48,8 +51,8 @@ function getName(id, arg1, id) {
       }
     }
     if (stringResult == null) {
-      stringResult = require("UserUtils.tsx").getName(id);
-      const obj2 = require("UserUtils.tsx");
+      stringResult = nameFromUser.getName(id);
+      const obj2 = nameFromUser;
     }
   }
   return stringResult;
@@ -59,7 +62,7 @@ function useName(arg0, arg1, arg2) {
   let closure_1 = arg1;
   const dependencyMap = arg2;
   const items = [trackCommunicationDisabled, ensureGuildLoaded, upsertRelationship];
-  return _require("../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_6(closure_0, closure_1, closure_2));
+  return _initialize.useStateFromStores(items, () => outer1_6(closure_0, closure_1, closure_2));
 }
 const result = require("upsertRelationship").fileFinishedImporting("utils/NicknameUtils.tsx");
 

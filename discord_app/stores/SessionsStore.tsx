@@ -1,3 +1,4 @@
+import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/stores/SessionsStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import { Store } from "initialize";
@@ -31,7 +32,7 @@ prototype["getSession"] = function getSession() {
 };
 prototype["getRemoteActivities"] = function getRemoteActivities() {
   const importDefault = store.getSessionId();
-  const found = require("../../_runtime/00012_apply.js").find(closure_4, (active) => {
+  const found = apply.find(closure_4, (active) => {
     active = active.active;
     if (active) {
       active = active.sessionId !== closure_0;
@@ -42,7 +43,7 @@ prototype["getRemoteActivities"] = function getRemoteActivities() {
 };
 prototype["getHiddenActivities"] = function getHiddenActivities() {
   const importDefault = store.getSessionId();
-  const found = require("../../_runtime/00012_apply.js").find(closure_4, (active) => {
+  const found = apply.find(closure_4, (active) => {
     active = active.active;
     if (active) {
       active = active.sessionId !== closure_0;
@@ -61,7 +62,7 @@ prototype["getSessionById"] = function getSessionById(sessionId) {
   return table[sessionId];
 };
 prototype["getActiveSession"] = function getActiveSession() {
-  return require("../../_runtime/00012_apply.js").find(closure_4, (active) => active.active);
+  return apply.find(closure_4, (active) => active.active);
 };
 prototype["getRemoteApplicationActivity"] = function getRemoteApplicationActivity(application_id) {
   const importDefault = application_id;
@@ -69,7 +70,7 @@ prototype["getRemoteApplicationActivity"] = function getRemoteApplicationActivit
     return null;
   } else {
     const dependencyMap = store.getSessionId();
-    const found = require("../../_runtime/00012_apply.js").find(closure_4, (active) => {
+    const found = apply.find(closure_4, (active) => {
       active = active.active;
       if (active) {
         active = active.sessionId !== closure_1;
@@ -91,7 +92,7 @@ prototype["getRemoteApplicationActivity"] = function getRemoteApplicationActivit
       }
       return found1;
     }
-    const arr3 = require("../../_runtime/00012_apply.js");
+    const arr3 = apply;
   }
 };
 SessionsStore.displayName = "SessionsStore";

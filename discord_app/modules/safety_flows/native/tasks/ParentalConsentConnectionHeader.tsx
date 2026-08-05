@@ -1,3 +1,8 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import { messagesProxy } from "../../SafetyFlows.messages.js";
 // discord_app/modules/safety_flows/native/tasks/ParentalConsentConnectionHeader.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -19,7 +24,7 @@ const result = require("mergeGuildAvatar").fileFinishedImporting("modules/safety
 
 export const ParentalConsentConnectionNavbar = function ParentalConsentConnectionNavbar() {
   const tmp = createCacheKey();
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -29,7 +34,7 @@ export const ParentalConsentConnectionNavbar = function ParentalConsentConnectio
     }
     return username;
   });
-  obj = { style: { paddingTop: require("../../../safe_area/useSafeAreaInsets.native.tsx")().top }, children: null };
+  obj = { style: { paddingTop: useSafeAreaInsets().top }, children: null };
   obj = { style: tmp.row, children: null };
   const obj1 = {
     accessibilityRole: "button",
@@ -41,14 +46,14 @@ export const ParentalConsentConnectionNavbar = function ParentalConsentConnectio
     },
     children: null
   };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[5] = intl.string(require("../../SafetyFlows.messages.js")["3HuGuY"]);
-  const items1 = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj1[5] = intl.string(messagesProxy["3HuGuY"]);
+  const items1 = [callback(Text /* Text */.Text, obj1), ];
   let tmp5Result = null != stateFromStores;
   if (tmp5Result) {
     const obj2 = { accessibilityRole: "header", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj2[3] = stateFromStores;
-    tmp5Result = tmp5(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+    tmp5Result = tmp5(Text /* Text */.Text, obj2);
   }
   items1[1] = tmp5Result;
   obj[1] = items1;

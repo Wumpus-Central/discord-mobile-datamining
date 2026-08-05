@@ -1,3 +1,6 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { WarningIcon } from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsDisabledWarning.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -17,10 +20,10 @@ export default function GuildPowerupsDisabledWarning(children) {
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
   obj = { color: null, size: "md" };
-  obj[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_FEEDBACK_WARNING;
-  const items = [callback(require("../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx") /* WarningIcon */.WarningIcon, obj), ];
+  obj[0] = Themes.colors.TEXT_FEEDBACK_WARNING;
+  const items = [callback(WarningIcon /* WarningIcon */.WarningIcon, obj), ];
   obj = { style: tmp.text, variant: "text-md/semibold", color: "text-feedback-warning", children: children.text };
-  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 };

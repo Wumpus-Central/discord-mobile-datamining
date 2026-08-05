@@ -1,3 +1,4 @@
+import { useWideAuthView } from "useWideAuthView.tsx";
 // discord_app/modules/auth/native/useOrientationLock.tsx
 import noop from "noop";
 
@@ -5,7 +6,7 @@ let require = arg1;
 const result = require("isMetaQuest").fileFinishedImporting("modules/auth/native/useOrientationLock.tsx");
 
 export default function usePortraitOrientationOnly() {
-  let tmp = require("useWideAuthView.tsx")();
+  let tmp = useWideAuthView();
   const require = tmp;
   const items = [tmp];
   const effect = React.useEffect(() => {

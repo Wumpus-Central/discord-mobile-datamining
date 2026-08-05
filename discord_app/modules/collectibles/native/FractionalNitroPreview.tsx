@@ -1,3 +1,8 @@
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { metadata } from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { NitroIcon } from "NitroIcon.tsx";
 // discord_app/modules/collectibles/native/FractionalNitroPreview.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -25,19 +30,19 @@ const result = require("ME").fileFinishedImporting("modules/collectibles/native/
 export const FractionalNitroPreview = function FractionalNitroPreview() {
   const tmp = createCacheKey();
   const require = tmp;
-  let items = [require("../../../intl/index.native.tsx") /* getSystemLocale */.t.E1NP2x, require("../../../intl/index.native.tsx") /* getSystemLocale */.t.kpMomJ, require("../../../intl/index.native.tsx") /* getSystemLocale */.t.xT1Vfn, require("../../../intl/index.native.tsx") /* getSystemLocale */.t.myyAEr, require("../../../intl/index.native.tsx") /* getSystemLocale */.t.zTk8Ul];
+  let items = [getSystemLocale /* getSystemLocale */.t.E1NP2x, getSystemLocale /* getSystemLocale */.t.kpMomJ, getSystemLocale /* getSystemLocale */.t.xT1Vfn, getSystemLocale /* getSystemLocale */.t.myyAEr, getSystemLocale /* getSystemLocale */.t.zTk8Ul];
   let obj = { style: tmp.container, children: null };
   obj = { colors: ["#000000", "#36266d"], start: VerticalGradient.START, end: VerticalGradient.END, style: tmp.gradient };
-  const items1 = [callback(require("../../../../_runtime/04706_LinearGradient.js"), obj), , , ];
+  const items1 = [callback(LinearGradient, obj), , , ];
   obj = { source: null, style: null };
   const obj1 = { uri: null };
-  obj1[0] = require("../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js");
+  obj1[0] = metadata;
   obj[0] = obj1;
   obj[1] = tmp.headerImage;
-  items1[1] = callback(require("../../../components_native/common/FastImage.tsx"), obj);
-  const tmp2 = require("../../../components_native/common/FastImage.tsx");
-  items1[2] = callback(View, { style: tmp.nitroIconContainer, children: callback(require("NitroIcon.tsx"), {}) });
-  const obj2 = { style: tmp.nitroIconContainer, children: callback(require("NitroIcon.tsx"), {}) };
+  items1[1] = callback(preload, obj);
+  const tmp2 = preload;
+  items1[2] = callback(View, { style: tmp.nitroIconContainer, children: callback(NitroIcon, {}) });
+  const obj2 = { style: tmp.nitroIconContainer, children: callback(NitroIcon, {}) };
   items1[3] = callback(View, {
     style: tmp.benefits,
     children: items.map((arg0, arg1) => {

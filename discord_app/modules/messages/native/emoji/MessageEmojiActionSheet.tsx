@@ -1,3 +1,8 @@
+import { v1 } from "../../../../../_runtime/00514_v1.js";
+import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { useEmojiAndSource } from "../../../emojis/hooks/useEmojiAndSource.tsx";
+import { CustomEmojiContent } from "CustomEmojiContent.tsx";
+import { Emoji } from "StandardEmojiContent.tsx";
 // discord_app/modules/messages/native/emoji/MessageEmojiActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -10,7 +15,7 @@ import set from "ME";
 const require = arg1;
 function MessageStandardEmojiActionSheet(emojiNode) {
   let _require;
-  let obj = _require("../../../../../_runtime/00514_v1.js");
+  let obj = _v1;
   const v4Result = obj.v4();
   _require = v4Result;
   obj = {
@@ -23,14 +28,14 @@ function MessageStandardEmojiActionSheet(emojiNode) {
     children: null
   };
   obj = { style: callback().contentWrapper, children: null };
-  obj[1] = jsx(require("StandardEmojiContent.tsx"), { emojiNode: emojiNode.emojiNode, nonce: v4Result });
+  obj[1] = jsx(Emoji, { emojiNode: emojiNode.emojiNode, nonce: v4Result });
   obj[2] = <View style={callback().contentWrapper}>{null}</View>;
-  return jsx(_require("../../../../design/components/Sheet/native/BottomSheet.native.tsx").BottomSheet, { style: callback().contentWrapper, children: null });
+  return jsx(_Background.BottomSheet, { style: callback().contentWrapper, children: null });
 }
 function MessageCustomEmojiActionSheet(emojiNode) {
   emojiNode = emojiNode.emojiNode;
   let _require;
-  let obj = _require("../../../emojis/hooks/useEmojiAndSource.tsx");
+  let obj = _useEmojiAndSource;
   obj = { emojiId: emojiNode.id };
   const emojiAndSource = obj.useEmojiAndSource(obj);
   if (emojiAndSource.isFetching) {
@@ -54,7 +59,7 @@ function MessageCustomEmojiActionSheet(emojiNode) {
     obj2[4] = tmp9;
     obj2[5] = tmp8;
     obj2[6] = v4Result;
-    obj1[1] = jsx(require("CustomEmojiContent.tsx"), { emojiNode: null, sourceType: null, expressionSourceApplication: null, expressionSourceGuild: null, customEmojiFromJoinedGuild: null, hasJoinedEmojiSourceGuild: null, nonce: null });
+    obj1[1] = jsx(CustomEmojiContent, { emojiNode: null, sourceType: null, expressionSourceApplication: null, expressionSourceGuild: null, customEmojiFromJoinedGuild: null, hasJoinedEmojiSourceGuild: null, nonce: null });
     obj[2] = <View style={null}>{null}</View>;
     return jsx(tmp2(5338).BottomSheet, { startExpanded: true, onDismiss: null, children: null });
   }

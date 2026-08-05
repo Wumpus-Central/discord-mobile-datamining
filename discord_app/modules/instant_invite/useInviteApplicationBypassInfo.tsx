@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/instant_invite/useInviteApplicationBypassInfo.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
@@ -13,7 +14,7 @@ export const useInviteApplicationBypassInfo = function useInviteApplicationBypas
   const items = [getUncachedChannelPermissions];
   const items1 = [guild];
   let hasItem;
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_2.can(outer1_4.KICK_MEMBERS, closure_0), items1);
+  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_2.can(outer1_4.KICK_MEMBERS, closure_0), items1);
   if (guild != null) {
     const features = guild.features;
     hasItem = features.has(constants.MEMBER_VERIFICATION_MANUAL_APPROVAL);

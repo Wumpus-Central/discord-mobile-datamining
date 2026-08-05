@@ -1,8 +1,9 @@
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
 // discord_app/modules/voice_messages/downsampleWaveform.tsx
 const result = require("set").fileFinishedImporting("modules/voice_messages/downsampleWaveform.tsx");
 
 export default function downsampleWaveform(arg0, arg1) {
-  require("../../../_runtime/metro/00038__.js")(arg0.length >= arg1, "Waveform smaller than samples");
+  00038__(arg0.length >= arg1, "Waveform smaller than samples");
   if (arg0.length === arg1) {
     return arg0;
   } else {

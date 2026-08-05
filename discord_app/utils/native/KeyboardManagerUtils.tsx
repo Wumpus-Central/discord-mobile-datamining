@@ -1,3 +1,4 @@
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeKeyboardModule.tsx";
 // discord_app/utils/native/KeyboardManagerUtils.tsx
 import { NativeModules } from "get ActivityIndicator";
 
@@ -5,7 +6,7 @@ let result = require("enforcing").fileFinishedImporting("utils/native/KeyboardMa
 
 export const dismissGlobalKeyboard = function dismissGlobalKeyboard() {
   if (obj.isAndroid()) {
-    const obj2 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeKeyboardModule.tsx");
+    const obj2 = enforcing;
     if (obj2 != null) {
       const result = obj2.dismissGlobalKeyboard();
     }
@@ -16,7 +17,7 @@ export const dismissGlobalKeyboard = function dismissGlobalKeyboard() {
 };
 export const clearCurrentFocusAndDismissKeyboard = function clearCurrentFocusAndDismissKeyboard() {
   if (obj.isAndroid()) {
-    const obj2 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeKeyboardModule.tsx");
+    const obj2 = enforcing;
     if (obj2 != null) {
       const result = obj2.clearCurrentFocusAndDismissKeyboard();
     }
@@ -24,7 +25,7 @@ export const clearCurrentFocusAndDismissKeyboard = function clearCurrentFocusAnd
 };
 export const onKeyboardChanged = function onKeyboardChanged(open) {
   if (obj.isAndroid()) {
-    const obj2 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeKeyboardModule.tsx");
+    const obj2 = enforcing;
     if (obj2 != null) {
       obj2.onKeyboardChanged(open);
     }

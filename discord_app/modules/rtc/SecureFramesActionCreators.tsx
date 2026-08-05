@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/rtc/SecureFramesActionCreators.tsx
 import ME from "ME";
 import fetchFingerprint from "fetchFingerprint";
@@ -316,7 +317,7 @@ const result = require("ensureGuildLoaded").fileFinishedImporting("modules/rtc/S
 
 export default {
   clearUploadedKeyVersions() {
-    require("../../Dispatcher.tsx").dispatch({ type: "SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR" });
+    dispatcher.dispatch({ type: "SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR" });
   },
   updatePersistentCodesEnabled(arg0) {
     const self = this;
@@ -329,32 +330,32 @@ export default {
     return applyArgumentsResult;
   },
   addUploadedKeyVersion(closure_0) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD", keyVersion: closure_0 };
     obj.dispatch(obj);
   },
   createSecureFramesVerifiedKey(userId, key) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "SECURE_FRAMES_VERIFIED_KEY_CREATE", userId, key };
     obj.dispatch(obj);
   },
   deleteSecureFramesVerifiedKey(closure_0, closure_1) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "SECURE_FRAMES_VERIFIED_KEY_DELETE", userId: closure_0, serializedKey: closure_1 };
     obj.dispatch(obj);
   },
   deleteSecureFramesUserVerifiedKeys(closure_0) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE", userId: closure_0 };
     obj.dispatch(obj);
   },
   createSecureFramesTransientKey(userId, key) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "SECURE_FRAMES_TRANSIENT_KEY_CREATE", userId, key };
     obj.dispatch(obj);
   },
   deleteSecureFramesTransientKey(userId) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "SECURE_FRAMES_TRANSIENT_KEY_DELETE", userId };
     obj.dispatch(obj);
   }

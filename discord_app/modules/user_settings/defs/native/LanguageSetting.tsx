@@ -1,3 +1,6 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { handleLanguageChange } from "../../language_and_time/native/UserSettingsLocale.tsx";
 // discord_app/modules/user_settings/defs/native/LanguageSetting.tsx
 import _getSystemLocale from "_getSystemLocale";
 import createToggle from "createToggle";
@@ -5,17 +8,17 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.IHMsPn);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.IHMsPn);
   },
   parent: null,
   IconComponent: require("LanguageIcon").LanguageIcon,
   useTrailing: function useLanguageSettingTrailing() {
     const items = [_getSystemLocale];
-    _require = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => locale.locale);
-    const obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+    _require = _initialize.useStateFromStores(items, () => locale.locale);
+    const obj = _initialize;
     const tmp = _require;
-    const availableLocales = _require("../../../../intl/index.native.tsx").getAvailableLocales();
+    const availableLocales = _getSystemLocale.getAvailableLocales();
     const found = availableLocales.find((value) => value.value === closure_0);
     let stringResult = null;
     if (null != found) {
@@ -29,7 +32,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.LANGUAGE,
   getComponent() {
-    return require("../../language_and_time/native/UserSettingsLocale.tsx") /* handleLanguageChange */.default;
+    return handleLanguageChange /* handleLanguageChange */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

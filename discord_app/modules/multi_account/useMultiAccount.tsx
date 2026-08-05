@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/multi_account/useMultiAccount.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -9,7 +10,7 @@ let result = require("initialize").fileFinishedImporting("modules/multi_account/
 
 export const useMultiAccountUsers = function useMultiAccountUsers() {
   let items = [initialize, mergeGuildAvatar];
-  const stateFromStoresObject = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = initialize /* initialize */.useStateFromStoresObject(items, () => {
     let obj = users;
     users = users.getUsers();
     currentUser = currentUser.getCurrentUser();

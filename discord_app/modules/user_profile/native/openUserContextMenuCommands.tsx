@@ -1,3 +1,4 @@
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/user_profile/native/openUserContextMenuCommands.tsx
 let result = require("navigationToRootTabHelper").fileFinishedImporting("modules/user_profile/native/openUserContextMenuCommands.tsx");
 
@@ -9,8 +10,8 @@ export default function openUserContextMenuCommands(analyticsLocations) {
   ({ userId, selectedChannel, showUserProfile } = analyticsLocations);
   let obj = analyticsLocations(8711);
   const result = obj.trackUserProfileAction({ action: "PRESS_VIEW_APP_COMMANDS", analyticsLocations });
-  require("../../action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet();
-  const obj2 = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
+  ACTION_SHEET_HEIGHT_HALF.hideActionSheet();
+  const obj2 = ACTION_SHEET_HEIGHT_HALF;
   obj = {
     channel: selectedChannel,
     commandType: analyticsLocations(1906).ApplicationCommandType.USER,

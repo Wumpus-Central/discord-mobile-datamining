@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_member_verification/hooks/useCurrentUserGuildJoinRequest.tsx
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 
@@ -8,7 +9,7 @@ export const useCurrentUserGuildJoinRequest = function useCurrentUserGuildJoinRe
   const _require = guildId;
   const items = [handleGatewayJoinRequestUpdate];
   const items1 = [guildId];
-  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let request = null;
     if (null != closure_0) {
       request = outer1_2.getRequest(tmp);

@@ -1,3 +1,7 @@
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { keys } from "../../../ConstantsIOS.tsx";
+import { hexToRgba } from "../../../utils/ColorUtils.tsx";
 // discord_app/modules/guild_onboarding/native/GuildOnboardingPrompts.tsx
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
 import get from "get";
@@ -54,12 +58,12 @@ function BackgroundImageGradient(uri) {
   const tmp = createCacheKey();
   let obj = { children: null };
   const items = [tmp.backgroundImage];
-  const items1 = [callback2(require("../../../components_native/common/FastImage.tsx"), { source: { uri: uri.splashUrl }, style: items, resizeMode: "cover" }), ];
+  const items1 = [callback2(preload, { source: { uri: uri.splashUrl }, style: items, resizeMode: "cover" }), ];
   obj = { style: tmp.backgroundColorGradient, start: null, end: null, colors: null };
-  obj[1] = require("../../../ConstantsIOS.tsx") /* keys */.VerticalGradient.START;
-  obj[2] = require("../../../ConstantsIOS.tsx") /* keys */.VerticalGradient.END;
-  const tmp2 = require("../../../../_runtime/04706_LinearGradient.js");
-  const items2 = [require("../../../utils/ColorUtils.tsx") /* hexToRgba */.hexWithOpacity(color, 0.16), color];
+  obj[1] = keys /* keys */.VerticalGradient.START;
+  obj[2] = keys /* keys */.VerticalGradient.END;
+  const tmp2 = LinearGradient;
+  const items2 = [hexToRgba /* hexToRgba */.hexWithOpacity(color, 0.16), color];
   obj[3] = items2;
   items1[1] = callback2(tmp2, obj);
   obj[0] = items1;

@@ -1,3 +1,15 @@
+import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
+import { useAlertStore } from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import { ActionSheetRowIcon } from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getNickname } from "../../../../utils/NicknameUtils.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
+import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
+import { useGuildOnboardingAvailable } from "../../../guild_onboarding/useGuildOnboardingAvailable.tsx";
+import { experiment } from "../../../guild/TidaWebformExperiment.tsx";
+import { useOpenProfileSettings } from "../../../profile_customization/useOpenProfileSettings.tsx";
+import { DiscordTag } from "../../../user_profile/native/DiscordTag.tsx";
 // discord_app/modules/guild_action_sheet/native/components/GuildActionSheetActions.tsx
 import getSystemLocale from "getSystemLocale";
 import { View } from "initialize";
@@ -44,7 +56,7 @@ function BrowseChannelsOption(guild) {
   guild = guild.guild;
   let obj = guild(4101);
   const result = obj.useIsDismissibleContentDismissed_UNSAFE(guild(1358).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX);
-  const tmp2 = require("../../../guild_onboarding/useGuildOnboardingAvailable.tsx")(guild);
+  const tmp2 = useGuildOnboardingAvailable(guild);
   const items = [generateOldThreadCutoff];
   const stateFromStores = guild(589).useStateFromStores(items, () => outer1_11.hasUnread(guild.id, outer1_20.GUILD_ONBOARDING_QUESTION));
   const obj2 = guild(589);
@@ -89,13 +101,13 @@ function ChangeIdentityOption(arg0) {
   ({ guild, user } = arg0);
   let _require;
   const tmp = createCacheKey();
-  let obj = require("../../../../utils/NicknameUtils.tsx");
+  let obj = getNickname;
   const nickname = obj.getNickname(guild.id, undefined, user);
-  _require = require("../../../profile_customization/useOpenProfileSettings.tsx")({ guild, analyticsLocations: require("../../../app_analytics/useAnalyticsLocations.tsx")(require("../../../app_analytics/AnalyticsLocation.tsx").GUILD_SETTINGS).analyticsLocations });
-  const intl = _require("../../../../intl/index.native.tsx").intl;
+  _require = useOpenProfileSettings({ guild, analyticsLocations: context(QUICK_SWITCHER.GUILD_SETTINGS).analyticsLocations });
+  const intl = _getSystemLocale.intl;
   const features = guild.features;
   const hasItem = features.has(constants.HUB);
-  const t = _require("../../../../intl/index.native.tsx").t;
+  const t = _getSystemLocale.t;
   obj = { label: intl.string(hasItem ? t["+MWrWt"] : t["PKQB/H"]), subLabel: null, onPress: null };
   let tmp9 = nickname;
   if (null != user) {
@@ -113,7 +125,7 @@ function ChangeIdentityOption(arg0) {
       obj2[0] = user;
       obj2[1] = nickname;
       ({ identityName: obj5[2], identityName: obj5[3], identityName: obj5[4] } = tmp);
-      items[1] = tmp6(require("../../../user_profile/native/DiscordTag.tsx"), obj2);
+      items[1] = tmp6(DiscordTag, obj2);
       obj[1] = items;
       tmp9 = callback3(View, obj);
     }
@@ -123,7 +135,7 @@ function ChangeIdentityOption(arg0) {
     outer1_1(outer1_2[25]).hideActionSheet();
     callback();
   };
-  return closure_21(_require("../../../../design/components/Sheet/native/ActionSheetRow.native.tsx").ActionSheetRow, obj);
+  return closure_21(_ActionSheetRowIcon.ActionSheetRow, obj);
 }
 function GuildThemePreferenceOption(guild) {
   guild = guild.guild;
@@ -377,16 +389,16 @@ export const GuildActionSheetPrimaryActions = function GuildActionSheetPrimaryAc
   return tmp12;
 };
 export const handleLeaveServer = function handleLeaveServer(guild) {
-  let obj = require("../../../action_sheet/native/ActionSheetActionCreators.tsx");
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj.hideActionSheet();
   const lazyResult = React.lazy(() => callback(paths[28])(paths[57], paths.paths));
   obj = { guild };
-  require("../../../../design/components/AlertModal/native/useAlertStore.native.tsx") /* useAlertStore */.openAlert("guild-action-sheet-leave-server", callback2(lazyResult, obj));
+  useAlertStore /* useAlertStore */.openAlert("guild-action-sheet-leave-server", callback2(lazyResult, obj));
 };
 export const GuildActionSheetDirectoryActions = function GuildActionSheetDirectoryActions(guild) {
   guild = guild.guild;
   const currentUser = authStore.getCurrentUser();
-  require("../../../../../_runtime/metro/00038__.js")(null != currentUser, "GuildActionSheetDirectoryActions: user cannot be undefined");
+  00038__(null != currentUser, "GuildActionSheetDirectoryActions: user cannot be undefined");
   const items = [];
   items.push(callback2(NotificationAction, { guild }));
   items.push(callback2(ChangeIdentityOption, { guild, user: currentUser }));
@@ -538,7 +550,7 @@ export const GuildDeveloperOptionAction = function GuildDeveloperOptionAction(gu
   guild = guild.guild;
   const DeveloperMode = guild(3958).DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  require("../../../guild/TidaWebformExperiment.tsx");
+  experiment;
   if (setting) {
     const items = [];
     let obj = { label: null, onPress: null };

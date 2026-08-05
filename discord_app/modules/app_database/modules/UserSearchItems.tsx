@@ -1,3 +1,4 @@
+import { items } from "../DatabaseDaos.tsx";
 // discord_app/modules/app_database/modules/UserSearchItems.tsx
 import ME from "ME";
 import recountRelationshipTypes from "recountRelationshipTypes";
@@ -183,7 +184,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
     }
     continue;
   }
-  const result = require("../DatabaseDaos.tsx").userSearchItemsTransaction(database);
+  const result = items.userSearchItemsTransaction(database);
   result.delete();
   result.putAll(Object.values(obj));
 };

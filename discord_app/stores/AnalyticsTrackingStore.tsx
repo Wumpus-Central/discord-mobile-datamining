@@ -1,3 +1,6 @@
+import { encodeProperties } from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { trackHeartbeat } from "../modules/analytics_sessions/SessionHeartbeatScheduler.tsx";
+import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
 // discord_app/stores/AnalyticsTrackingStore.tsx
 import importDefaultResult from "fetchFingerprint";
 import encodeProperties from "encodeProperties";
@@ -10,7 +13,7 @@ encodeProperties = {
   waitFor: items,
   getFingerprint: importDefaultResult.getFingerprint,
   getSessionId() {
-    const session = require("../modules/analytics_sessions/SessionHeartbeatScheduler.tsx") /* trackHeartbeat */.getSession();
+    const session = trackHeartbeat /* trackHeartbeat */.getSession();
     return session.then((uuid) => {
       let sessionId;
       if (uuid != null) {
@@ -20,32 +23,32 @@ encodeProperties = {
     });
   },
   getLaunchSignature() {
-    return require("../utils/AnalyticsUtils.tsx") /* expandEventProperties */.launchSignature;
+    return expandEventProperties /* expandEventProperties */.launchSignature;
   },
   scheduleWhenIdle: require("setOriginWindow").requestSafeIdleCallback,
   sendUnloadRequest: require("sendUnloadRequest").sendUnloadRequest
 };
 encodeProperties = {
   CONNECTION_OPEN(arg0) {
-    return require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.AnalyticsActionHandlers.handleConnectionOpen(arg0);
+    return encodeProperties /* encodeProperties */.AnalyticsActionHandlers.handleConnectionOpen(arg0);
   },
   OVERLAY_INITIALIZE(arg0) {
-    return require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.AnalyticsActionHandlers.handleConnectionOpen(arg0);
+    return encodeProperties /* encodeProperties */.AnalyticsActionHandlers.handleConnectionOpen(arg0);
   },
   CURRENT_USER_UPDATE(arg0) {
-    return require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.AnalyticsActionHandlers.handleConnectionOpen(arg0);
+    return encodeProperties /* encodeProperties */.AnalyticsActionHandlers.handleConnectionOpen(arg0);
   },
   CONNECTION_CLOSED() {
-    return require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.AnalyticsActionHandlers.handleConnectionClosed();
+    return encodeProperties /* encodeProperties */.AnalyticsActionHandlers.handleConnectionClosed();
   },
   FINGERPRINT() {
-    return require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.AnalyticsActionHandlers.handleFingerprint();
+    return encodeProperties /* encodeProperties */.AnalyticsActionHandlers.handleFingerprint();
   },
   TRACK(arg0) {
-    return require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.AnalyticsActionHandlers.handleTrack(arg0);
+    return encodeProperties /* encodeProperties */.AnalyticsActionHandlers.handleTrack(arg0);
   },
   SET_ANALYTICS_TOKEN(arg0) {
-    return require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.AnalyticsActionHandlers.handleSetAnalyticsToken(arg0);
+    return encodeProperties /* encodeProperties */.AnalyticsActionHandlers.handleSetAnalyticsToken(arg0);
   }
 };
 items = [importDefaultResult];

@@ -1,3 +1,8 @@
+import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
+import { useTheme } from "../../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/channel_following/native/components/ChannelFollowSuccessAlert.tsx
 import "noop";
 import { Image } from "set";
@@ -12,44 +17,44 @@ let items = [require("registerAsset"), require("registerAsset"), require("regist
 let items1 = [require("registerAsset"), require("registerAsset"), require("registerAsset")];
 const items2 = [
   () => {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["w2o/60"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["w2o/60"]);
   },
   () => {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.FiAvKg);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.FiAvKg);
   },
   () => {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.vKUFek);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.vKUFek);
   },
   () => {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.veQl5T);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.veQl5T);
   },
   () => {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Pxb7BR);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.Pxb7BR);
   },
   () => {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["W03w++"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["W03w++"]);
   },
   () => {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["95HTb5"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["95HTb5"]);
   },
   () => {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["+XFelz"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["+XFelz"]);
   },
   () => {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.hedHel);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.hedHel);
   },
   () => {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.jgC65t);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.jgC65t);
   }
 ];
 let closure_9 = createCacheKey.createStyles({ text: { marginTop: 16, lineHeight: 20, textAlign: "center" }, header: { textAlign: "center" }, image: { alignSelf: "center", marginTop: -72, marginBottom: 16, width: "100%", resizeMode: "contain" } });
@@ -57,8 +62,8 @@ const result = require("jsxProd").fileFinishedImporting("modules/channel_followi
 
 export default function ChannelFollowSuccessAlert(arg0) {
   const tmp = callback3();
-  let obj = require("../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
-  const tmp6 = obj.isThemeDark(require("../../../../hooks/useTheme.tsx")()) ? items1 : items;
+  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const tmp6 = obj.isThemeDark(useTheme()) ? items1 : items;
   require = tmp6;
   let tmp5Result = tmp5(6813);
   items = [tmp6];
@@ -67,19 +72,19 @@ export default function ChannelFollowSuccessAlert(arg0) {
   const stableMemo1 = tmp5Result.useStableMemo(() => callback(table[14]).sample(closure_8), []);
   obj = {};
   const tmp2 = importDefault;
-  const tmp4 = require("../../../../hooks/useTheme.tsx")();
+  const tmp4 = useTheme();
   const merged = Object.assign(arg0);
   const intl = tmp5(1236).intl;
-  obj.confirmText = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["+IrDzN"]);
+  obj.confirmText = intl.string(getSystemLocale /* getSystemLocale */.t["+IrDzN"]);
   obj = { source: stableMemo, style: tmp.image };
   items1 = [callback(Image, obj), , ];
   const obj1 = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   obj1[3] = stableMemo1();
-  items1[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  items1[1] = callback(Text /* Text */.Text, obj1);
   const obj2 = { style: tmp.text, variant: "text-md/medium", color: "text-muted", children: null };
   const intl2 = tmp5(1236).intl;
-  obj2[3] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["2QbSea"]);
-  items1[2] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+  obj2[3] = intl2.string(getSystemLocale /* getSystemLocale */.t["2QbSea"]);
+  items1[2] = callback(Text /* Text */.Text, obj2);
   obj.children = items1;
-  return callback2(require("../../../../components_native/common/Alert.tsx"), obj);
+  return callback2(componentDidMount, obj);
 };

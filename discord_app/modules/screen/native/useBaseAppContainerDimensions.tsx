@@ -1,3 +1,5 @@
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
+import { useWindowDimensions } from "../useWindowDimensions.native.tsx";
 // discord_app/modules/screen/native/useBaseAppContainerDimensions.tsx
 import noop from "noop";
 
@@ -17,10 +19,10 @@ export default function useBaseAppContainerDimensions() {
 export const getBaseAppContainerDimensions = function getBaseAppContainerDimensions() {
   let height;
   let width;
-  let obj = require("../useWindowDimensions.native.tsx") /* useWindowDimensions */;
+  let obj = useWindowDimensions /* useWindowDimensions */;
   const windowDimensions = obj.getWindowDimensions();
   ({ width, height } = windowDimensions);
-  const rect = require("../../safe_area/useSafeAreaInsets.native.tsx") /* useSafeAreaInsets */.getSafeAreaInsets();
+  const rect = useSafeAreaInsets /* useSafeAreaInsets */.getSafeAreaInsets();
   obj = { width: width - rect.left - rect.right, height };
   return obj;
 };

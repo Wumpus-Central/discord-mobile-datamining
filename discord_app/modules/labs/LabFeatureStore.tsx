@@ -1,3 +1,4 @@
+import { hide_icymi_tab } from "LabFeatures.tsx";
 // discord_app/modules/labs/LabFeatureStore.tsx
 import { DeviceSettingsStore } from "initialize";
 
@@ -9,7 +10,7 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return { toggleStates: closure_2 };
 };
 prototype["initialize"] = function initialize(toggleStates) {
-  for (const key10008 in require("LabFeatures.tsx")) {
+  for (const key10008 in hide_icymi_tab) {
     let tmp = key10008;
     let flag;
     let tmp2 = closure_2;

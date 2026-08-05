@@ -1,3 +1,9 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { NotificationActionCreators } from "../../../../actions/NotificationActionCreators.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { apexExperiment } from "../../../parent_tools/FamilyCenterV3Experiment.tsx";
+import { useUserIsTeenAgeGroup } from "../../../parent_tools/hooks/useUserIsTeenAgeGroup.tsx";
+import { useUserIdsForLinkStatus } from "../../../parent_tools/hooks/useUserLinks.tsx";
 // discord_app/modules/user_settings/defs/native/ScreenDowntimeReminderSetting.tsx
 import DesktopNotificationTypes from "DesktopNotificationTypes";
 import createToggle from "createToggle";
@@ -5,26 +11,26 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.z6tZKH);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.z6tZKH);
   },
   useDescription() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.TummoQ);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.TummoQ);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue() {
     const items = [DesktopNotificationTypes];
-    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => obj.screenDowntimeReminder);
+    return initialize /* initialize */.useStateFromStores(items, () => obj.screenDowntimeReminder);
   },
   onValueChange(screenDowntimeReminder) {
-    return require("../../../../actions/NotificationActionCreators.tsx").setScreenDowntimeReminder(screenDowntimeReminder);
+    return NotificationActionCreators.setScreenDowntimeReminder(screenDowntimeReminder);
   },
   usePredicate() {
-    let isFamilyCenterV3Enabled = require("../../../parent_tools/FamilyCenterV3Experiment.tsx") /* apexExperiment */.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeReminderSetting" });
-    const obj = require("../../../parent_tools/FamilyCenterV3Experiment.tsx") /* apexExperiment */;
-    const tmp2 = require("../../../parent_tools/hooks/useUserIsTeenAgeGroup.tsx")();
-    const hasActiveParentLinks = require("../../../parent_tools/hooks/useUserLinks.tsx") /* useUserIdsForLinkStatus */.useHasActiveParentLinks();
+    let isFamilyCenterV3Enabled = apexExperiment /* apexExperiment */.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeReminderSetting" });
+    const obj = apexExperiment /* apexExperiment */;
+    const tmp2 = useUserIsTeenAgeGroup();
+    const hasActiveParentLinks = useUserIdsForLinkStatus /* useUserIdsForLinkStatus */.useHasActiveParentLinks();
     if (isFamilyCenterV3Enabled) {
       isFamilyCenterV3Enabled = tmp2;
     }

@@ -1,3 +1,4 @@
+import { combined } from "../../../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/age_gate/native/components/ExistingUserAgeGateConfirm.tsx
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
@@ -66,7 +67,7 @@ export default function ExistingUserAgeGateConfirm(age) {
   const intl2 = onConfirm(1236).intl;
   const obj2 = { helpURL: null };
   const tmp2 = callback(React.useState(false), 2);
-  obj2[0] = require("../../../../utils/HelpdeskUtils.tsx").getArticleURL(HelpdeskArticles.AGE_GATE);
+  obj2[0] = combined.getArticleURL(HelpdeskArticles.AGE_GATE);
   obj1[3] = intl2.format(onConfirm(1236).t.n3QjDE, obj2);
   items[1] = callback2(onConfirm(4281).Text, obj1);
   const obj3 = { style: tmp.buttonWrapper, children: null };

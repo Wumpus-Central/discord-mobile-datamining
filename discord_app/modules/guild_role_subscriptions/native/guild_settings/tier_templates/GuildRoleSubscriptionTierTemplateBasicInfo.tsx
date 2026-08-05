@@ -1,3 +1,4 @@
+import { preload } from "../../../../../components_native/common/FastImage.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateBasicInfo.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -36,7 +37,7 @@ export const GuildRoleSubscriptionTierTemplateBasicInfo = function GuildRoleSubs
   obj = { style: tmp.header, children: null };
   ({ image, name, price_tier, description } = template.listings[0]);
   obj = { source: { uri: image }, style: tmp.image };
-  const items = [callback(require("../../../../../components_native/common/FastImage.tsx"), obj), callback(template(1297).Spacer, { size: 16 }), ];
+  const items = [callback(preload, obj), callback(template(1297).Spacer, { size: 16 }), ];
   const obj1 = { style: { flexShrink: 1 }, children: null };
   const items1 = [callback(template(4281).Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", style: { flexWrap: "wrap" }, children: name }), callback(template(1297).Spacer, { size: 4 }), ];
   const obj2 = { variant: "heading-md/medium", style: subscriptionPlanTextStyle, children: null };

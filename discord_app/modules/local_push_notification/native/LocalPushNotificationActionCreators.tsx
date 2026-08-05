@@ -1,3 +1,4 @@
+import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/local_push_notification/native/LocalPushNotificationActionCreators.tsx
 import { LocalNotificationTypes } from "LocalNotificationTypes";
 import { AnalyticEvents } from "ME";
@@ -47,6 +48,6 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
     } else {
       dispatch();
     }
-    obj = require("../../../Dispatcher.tsx");
+    obj = dispatcher;
   }
 };

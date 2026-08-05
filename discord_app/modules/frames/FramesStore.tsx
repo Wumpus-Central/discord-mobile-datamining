@@ -1,3 +1,4 @@
+import { getURLForApplication } from "../activities/getURLForApplication.tsx";
 // discord_app/modules/frames/FramesStore.tsx
 import { FrameLayoutModes } from "FrameLayoutModes";
 import { ActivityPanelModes } from "ActivityPanelModes";
@@ -70,7 +71,7 @@ const framesStoreClass = new FramesStoreClass(require("dispatcher"), {
     let proxyTicket;
     applicationId = applicationId.applicationId;
     ({ proxyTicket, channelId } = applicationId);
-    const tmp = require("../activities/getURLForApplication.tsx")(applicationId);
+    const tmp = getURLForApplication(applicationId);
     if (null != tmp) {
       map.delete(applicationId);
       const obj = { applicationId: null, url: null, connectedSince: null, layoutMode: null, activityPanelMode: null, proxyTicket: null, channelId: null };

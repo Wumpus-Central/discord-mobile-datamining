@@ -1,3 +1,4 @@
+import { registerAsset } from "../../../../../../_runtime/12036_registerAsset.js";
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsNavigator.tsx
 import importAllResult from "useSafeAreaInsets";
 import { View } from "useNavigatorBackPressHandler";
@@ -35,7 +36,7 @@ function CreateThreadHeaderButton(channel) {
     const intl = tmp(1236).intl;
     obj[0] = intl.string(tmp(1236).t.rBIGBL);
     obj[1] = tmp4;
-    obj[2] = require("../../../../../../_runtime/12036_registerAsset.js");
+    obj[2] = registerAsset;
     tmp5 = callback(tmp(8193).HeaderIconButton, obj);
   }
   return tmp5;

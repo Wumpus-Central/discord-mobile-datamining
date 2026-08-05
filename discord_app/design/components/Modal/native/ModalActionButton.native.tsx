@@ -1,3 +1,4 @@
+import { Button } from "../../Button/native/Button.native.tsx";
 // discord_app/design/components/Modal/native/ModalActionButton.native.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -27,7 +28,7 @@ export const ModalActionButton = function ModalActionButton(variant) {
   const merged1 = Object.assign(merged);
   obj.variant = variant;
   obj.size = "lg";
-  items[1] = callback(require("../../Button/native/Button.native.tsx") /* Button */.Button, obj);
+  items[1] = callback(Button /* Button */.Button, obj);
   obj[0] = items;
   return closure_5(closure_4, obj);
 };

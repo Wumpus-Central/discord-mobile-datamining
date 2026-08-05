@@ -1,3 +1,9 @@
+import { registerAsset } from "../../../../../../_runtime/13937_registerAsset.js";
+import { SafeAreaPaddingView } from "../../../../../components_native/common/SafeAreaView.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { TwoFAModalSetupSections } from "TwoFASetupModal.tsx";
+import { styles } from "TwoFASetupStyles.tsx";
 // discord_app/modules/user_settings/account/native/mfa_modal_flow/TwoFASetupLanding.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -16,27 +22,27 @@ const result = require("jsxProd").fileFinishedImporting("modules/user_settings/a
 
 export default function TwoFASetupLanding() {
   const tmp = callback3();
-  let obj = require("TwoFASetupStyles.tsx") /* styles */;
+  let obj = styles /* styles */;
   const twoFASetupStyles = obj.useTwoFASetupStyles();
   obj = { children: null };
   obj = { style: tmp.container, children: null };
   const obj1 = { bottom: true, style: tmp.container, children: null };
   const obj2 = { source: null, style: null };
-  obj2[0] = require("../../../../../../_runtime/13937_registerAsset.js");
+  obj2[0] = registerAsset;
   obj2[1] = tmp.authIcon;
   const items = [callback(closure_3, obj2), , ];
   const obj3 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj3[2] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["9E74Dx"]);
-  items[1] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Heading, obj3);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj3[2] = intl.string(getSystemLocale /* getSystemLocale */.t["9E74Dx"]);
+  items[1] = callback(Text /* Text */.Heading, obj3);
   const obj4 = { variant: "text-md/normal", style: items1, children: null };
   items1 = [, ];
   ({ modalBody: arr2[0], text: arr2[1] } = twoFASetupStyles);
-  const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj4[2] = intl2.format(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.A7Aehw, { googleAuthURL: "https://support.google.com/accounts/answer/1066447?hl=en", authyURL: "https://www.authy.com/" });
-  items[2] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj4);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj4[2] = intl2.format(getSystemLocale /* getSystemLocale */.t.A7Aehw, { googleAuthURL: "https://support.google.com/accounts/answer/1066447?hl=en", authyURL: "https://www.authy.com/" });
+  items[2] = callback(Text /* Text */.Text, obj4);
   obj1[2] = items;
-  obj[1] = callback2(require("../../../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj1);
+  obj[1] = callback2(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj1);
   obj[0] = callback(closure_4, obj);
-  return callback(require("TwoFASetupModal.tsx") /* TwoFAModalSetupSections */.TwoFASetupModalScreen, obj);
+  return callback(TwoFAModalSetupSections /* TwoFAModalSetupSections */.TwoFASetupModalScreen, obj);
 };

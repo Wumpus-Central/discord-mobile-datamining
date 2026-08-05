@@ -1,3 +1,4 @@
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 // discord_app/modules/storefront/SKUPricesStore.tsx
 import _getSystemLocale from "_getSystemLocale";
 import { Store } from "initialize";
@@ -64,7 +65,7 @@ prototype["getRewardsForSkuId"] = function getRewardsForSkuId(id) {
   if (null != id) {
     if (null != dependencyMap[id]) {
       const mapped = tmp2.rewardResultIds.map((arg0) => table[arg0]);
-      return mapped.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
+      return mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
     }
   }
 };

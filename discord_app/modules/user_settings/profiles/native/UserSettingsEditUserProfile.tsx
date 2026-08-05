@@ -1,3 +1,5 @@
+import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
+import { EditUserProfileBanner } from "../../../user_profile/native/UserProfileEditForm.tsx";
 // discord_app/modules/user_settings/profiles/native/UserSettingsEditUserProfile.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -20,13 +22,13 @@ export default function UserSettingsEditUserProfile(arg0) {
   let tmp7 = null;
   if (null != stateFromStores) {
     obj = { value: null, children: null };
-    obj[0] = tmp3(require("../../../app_analytics/AnalyticsLocation.tsx").USER_SETTINGS_USER_PROFILE).analyticsLocations;
+    obj[0] = tmp3(QUICK_SWITCHER.USER_SETTINGS_USER_PROFILE).analyticsLocations;
     obj = { currentUser: null };
     obj[0] = stateFromStores;
     const merged = Object.assign(arg0);
-    obj[1] = jsx(require("../../../user_profile/native/UserProfileEditForm.tsx"), { currentUser: null });
+    obj[1] = jsx(EditUserProfileBanner, { currentUser: null });
     tmp7 = jsx(stateFromStores(5610).AnalyticsLocationProvider, { currentUser: null });
-    const tmpResult = require("../../../user_profile/native/UserProfileEditForm.tsx");
+    const tmpResult = EditUserProfileBanner;
   }
   return tmp7;
 };

@@ -1,3 +1,4 @@
+import { InappropriateConversationExperiment } from "inappropriate_conversation/SelfModInappropriateConversationExperiment.tsx";
 // discord_app/modules/self_mod/ChannelSafetyWarningsManager.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -37,7 +38,7 @@ function handleChannelSelect(channelId) {
     } else {
       return false;
     }
-    obj6 = require("inappropriate_conversation/SelfModInappropriateConversationExperiment.tsx") /* InappropriateConversationExperiment */;
+    obj6 = InappropriateConversationExperiment /* InappropriateConversationExperiment */;
   }
 }
 function handleChannelUpdates(channels) {

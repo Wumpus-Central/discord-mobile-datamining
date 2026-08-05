@@ -1,3 +1,6 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
+import { useSimilarGames } from "../../hooks/useSimilarGames.tsx";
 // discord_app/modules/game_profile/native/components/GameProfileSimilarGames.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -16,7 +19,7 @@ function Spacer() {
 }
 function ListPadding() {
   let obj = { style: null };
-  obj = { width: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
+  obj = { width: Themes.space.PX_16 };
   obj[0] = obj;
   return callback(closure_6, obj);
 }
@@ -123,13 +126,13 @@ export default function GameProfileSimilarGames(trackAction) {
   const GameProfileSimilarGamesMobileExperiment = trackAction(9226).GameProfileSimilarGamesMobileExperiment;
   const config = GameProfileSimilarGamesMobileExperiment.useConfig({ location: "GameProfileSimilarGames" });
   ({ enabled, dense } = config);
-  const tmp6 = require("../../hooks/useSimilarGames.tsx")(trackAction.gameId, enabled);
+  const tmp6 = useSimilarGames(trackAction.gameId, enabled);
   const similarGames = tmp6.similarGames;
   let num = 3;
   if (dense) {
     num = 4;
   }
-  const result = (require("../../../screen/useWindowDimensions.native.tsx")().width - 2 * PX_16 - (num - 1) * PX_12 - PX_12) / num;
+  const result = (useWindowDimensions().width - 2 * PX_16 - (num - 1) * PX_12 - PX_12) / num;
   importDefault = result;
   if (tmp6.isFetching) {
     let obj = { style: null, children: null };

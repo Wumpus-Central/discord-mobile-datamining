@@ -1,23 +1,27 @@
+import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
+import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { apexExperiment } from "../../../bug_reporter/BugReporterExperiment.tsx";
 // discord_app/modules/user_settings/defs/native/BugReporterSetting.tsx
 import zustandStore from "zustandStore";
 import createToggle from "createToggle";
 
 const require = arg1;
 function useBugReporterExperimentSettingPredicate() {
-  return require("../../../bug_reporter/BugReporterExperiment.tsx").useConfig({ location: "native-settings" }).hasBugReporterAccess;
+  return apexExperiment.useConfig({ location: "native-settings" }).hasBugReporterAccess;
 }
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/tZh0A"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["/tZh0A"]);
   },
   parent: null,
   IconComponent: require("BugIcon").BugIcon,
   onPress: function handleBugReporterSettingPress() {
     if (!field.getField("isReportOpen")) {
       field.setState({ isReportOpen: true });
-      require("../../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(9782, dependencyMap.paths));
-      const obj2 = require("../../../../actions/ModalActionCreators.tsx");
+      ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(9782, dependencyMap.paths));
+      const obj2 = ModalActionCreators;
     }
   },
   withArrow: true,

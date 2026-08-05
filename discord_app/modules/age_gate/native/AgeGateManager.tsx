@@ -1,3 +1,5 @@
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { shouldShowAgeGateForVoiceChannel } from "../AgeGateUtils.tsx";
 // discord_app/modules/age_gate/native/AgeGateManager.tsx
 import closure_3 from "ME";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -25,7 +27,7 @@ const prototype = AgeGateManager.prototype;
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   const guildId = store.getGuildId();
   channelId = channelId.getChannelId();
-  require("../AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */.maybeShowAgeGate(guildId, channelId);
+  shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */.maybeShowAgeGate(guildId, channelId);
 };
 prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
   let channelId;
@@ -41,13 +43,13 @@ prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
     tmp2 = type !== constants.GUILD_VOICE;
   }
   if (tmp2) {
-    require("../AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */.maybeShowAgeGate(guildId, channelId);
-    const obj = require("../AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
+    shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */.maybeShowAgeGate(guildId, channelId);
+    const obj = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
   }
 };
 prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(source) {
   source = source.source;
-  require("../../../actions/ModalActionCreators.tsx").pushLazy(callback(function*() {
+  ModalActionCreators.pushLazy(callback(function*() {
     let closure_1 = tmp5;
     let closure_0 = tmp2;
     yield outer1_0(paths[10])(paths[9], paths.paths);
@@ -61,7 +63,7 @@ prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(source) {
   }), { source }, closure_7);
 };
 prototype["handleAgeGateModalClose"] = function handleAgeGateModalClose() {
-  require("../../../actions/ModalActionCreators.tsx").popWithKey(closure_7);
+  ModalActionCreators.popWithKey(closure_7);
 };
 prototype["handleGuildUpdate"] = function handleGuildUpdate(guild) {
   guild = guild.guild;
@@ -71,8 +73,8 @@ prototype["handleGuildUpdate"] = function handleGuildUpdate(guild) {
     tmp2 = guild.owner_configured_content_level === constants2.AGE_RESTRICTED;
   }
   if (tmp2) {
-    require("../AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */.maybeShowAgeGate(guild.id, null);
-    const obj = require("../AgeGateUtils.tsx") /* shouldShowAgeGateForVoiceChannel */;
+    shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */.maybeShowAgeGate(guild.id, null);
+    const obj = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
   }
 };
 const ageGateManager = new AgeGateManager();

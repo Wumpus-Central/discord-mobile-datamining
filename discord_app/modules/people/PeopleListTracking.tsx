@@ -1,3 +1,4 @@
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/people/PeopleListTracking.tsx
 import { AnalyticEvents } from "ME";
 
@@ -9,47 +10,47 @@ export const trackFriendsListItemClicked = function trackFriendsListItemClicked(
   let tab;
   let targetUserId;
   ({ targetUserId, tab } = arg0);
-  const obj = require("../../utils/AnalyticsUtils.tsx");
+  const obj = expandEventProperties;
   obj.track(AnalyticEvents.FRIENDS_LIST_ITEM_ACTION, { target_user_id: targetUserId, tab, action_type: obj.ROW_CLICKED });
 };
 export const trackFriendsListItemMessageClicked = function trackFriendsListItemMessageClicked(arg0) {
   let tab;
   let targetUserId;
   ({ targetUserId, tab } = arg0);
-  const obj = require("../../utils/AnalyticsUtils.tsx");
+  const obj = expandEventProperties;
   obj.track(AnalyticEvents.FRIENDS_LIST_ITEM_ACTION, { target_user_id: targetUserId, tab, action_type: obj.MESSAGE_CLICKED });
 };
 export const trackFriendsListItemVideoCallClicked = function trackFriendsListItemVideoCallClicked(arg0) {
   let tab;
   let targetUserId;
   ({ targetUserId, tab } = arg0);
-  const obj = require("../../utils/AnalyticsUtils.tsx");
+  const obj = expandEventProperties;
   obj.track(AnalyticEvents.FRIENDS_LIST_ITEM_ACTION, { target_user_id: targetUserId, tab, action_type: obj.VIDEO_CALL_CLICKED });
 };
 export const trackFriendsListItemVoiceCallClicked = function trackFriendsListItemVoiceCallClicked(arg0) {
   let tab;
   let targetUserId;
   ({ targetUserId, tab } = arg0);
-  const obj = require("../../utils/AnalyticsUtils.tsx");
+  const obj = expandEventProperties;
   obj.track(AnalyticEvents.FRIENDS_LIST_ITEM_ACTION, { target_user_id: targetUserId, tab, action_type: obj.VOICE_CALL_CLICKED });
 };
 export const trackFriendsListItemRemoveFriendClicked = function trackFriendsListItemRemoveFriendClicked(arg0) {
   let tab;
   let targetUserId;
   ({ targetUserId, tab } = arg0);
-  const obj = require("../../utils/AnalyticsUtils.tsx");
+  const obj = expandEventProperties;
   obj.track(AnalyticEvents.FRIENDS_LIST_ITEM_ACTION, { target_user_id: targetUserId, tab, action_type: obj.REMOVE_FRIEND_CLICKED });
 };
 export const trackFriendsListItemContextMenuInteracted = function trackFriendsListItemContextMenuInteracted(arg0) {
   let tab;
   let targetUserId;
   ({ targetUserId, tab } = arg0);
-  const obj = require("../../utils/AnalyticsUtils.tsx");
+  const obj = expandEventProperties;
   obj.track(AnalyticEvents.FRIENDS_LIST_ITEM_ACTION, { target_user_id: targetUserId, tab, action_type: obj.CONTEXT_MENU_INTERACTED });
 };
 export const trackViewFriendRequestNote = function trackViewFriendRequestNote(arg0) {
   let analyticsLocation;
   let noteLength;
   ({ analyticsLocation, noteLength } = arg0);
-  require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.FRIEND_REQUEST_NOTE_VIEWED, { location: analyticsLocation, note_length: noteLength });
+  expandEventProperties.track(AnalyticEvents.FRIEND_REQUEST_NOTE_VIEWED, { location: analyticsLocation, note_length: noteLength });
 };

@@ -1,3 +1,6 @@
+import { apply } from "../../_runtime/00012_apply.js";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/stores/CallStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -38,9 +41,9 @@ function callConnect() {
     dependencyMap[channelId] = tmp8;
     obj = { type: "CALL_CONNECT", channelId: null };
     obj[1] = channelId;
-    require("../Dispatcher.tsx").dispatch(obj);
+    dispatcher.dispatch(obj);
     flag = true;
-    const obj3 = require("../Dispatcher.tsx");
+    const obj3 = dispatcher;
     const tmp7 = dependencyMap;
   }
   return flag;
@@ -129,7 +132,7 @@ const callStore = new CallStore(require("dispatcher"), {
       if (1 !== dependencyMap2[channelId].indexOf("all")) {
         tmp3 = null;
       }
-      const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+      const HTTP = sendRequest /* sendRequest */.HTTP;
       obj = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
       obj[0] = Endpoints.CALL_RING(channelId);
       obj = { recipients: null };
@@ -185,7 +188,7 @@ const callStore = new CallStore(require("dispatcher"), {
     if (recipients == null) {
       recipients = ["all"];
     }
-    dependencyMap2[channelId] = require("../../_runtime/00012_apply.js").union(items, recipients);
+    dependencyMap2[channelId] = apply.union(items, recipients);
   },
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {
     if (null == channelId.channelId) {

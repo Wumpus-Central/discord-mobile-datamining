@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/design/components/Forms/native/FormRadio.native.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -5,16 +6,16 @@ import createCacheKey from "createCacheKey";
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyles(() => {
-  const CONTROL_RADIO_ICON_SIZE_DEFAULT = require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CONTROL_RADIO_ICON_SIZE_DEFAULT;
-  const CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT = require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT;
+  const CONTROL_RADIO_ICON_SIZE_DEFAULT = Themes.modules.mobile.CONTROL_RADIO_ICON_SIZE_DEFAULT;
+  const CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT = Themes.modules.mobile.CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT;
   let obj = { radio: null, unselected: null, selected: null, dot: null };
-  obj = { width: CONTROL_RADIO_ICON_SIZE_DEFAULT, height: CONTROL_RADIO_ICON_SIZE_DEFAULT, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round, borderWidth: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CONTROL_RADIO_ICON_BORDER_WIDTH, borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.RADIO_BORDER_DEFAULT };
+  obj = { width: CONTROL_RADIO_ICON_SIZE_DEFAULT, height: CONTROL_RADIO_ICON_SIZE_DEFAULT, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: Themes.radii.round, borderWidth: Themes.modules.mobile.CONTROL_RADIO_ICON_BORDER_WIDTH, borderColor: Themes.colors.RADIO_BORDER_DEFAULT };
   obj[0] = obj;
-  obj = { backgroundColor: "transparent", borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.RADIO_BORDER_DEFAULT };
+  obj = { backgroundColor: "transparent", borderColor: Themes.colors.RADIO_BORDER_DEFAULT };
   obj[1] = obj;
-  obj[2] = { borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.REDESIGN_INPUT_CONTROL_SELECTED, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.REDESIGN_INPUT_CONTROL_SELECTED };
-  const obj1 = { borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.REDESIGN_INPUT_CONTROL_SELECTED, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.REDESIGN_INPUT_CONTROL_SELECTED };
-  obj[3] = { width: CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT, height: CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.round };
+  obj[2] = { borderColor: Themes.colors.REDESIGN_INPUT_CONTROL_SELECTED, backgroundColor: Themes.colors.REDESIGN_INPUT_CONTROL_SELECTED };
+  const obj1 = { borderColor: Themes.colors.REDESIGN_INPUT_CONTROL_SELECTED, backgroundColor: Themes.colors.REDESIGN_INPUT_CONTROL_SELECTED };
+  obj[3] = { width: CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT, height: CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT, backgroundColor: Themes.colors.WHITE, borderRadius: Themes.radii.round };
   return obj;
 });
 let closure_6 = { code: "function FormRadioNativeTsx1(){const{withSpring,selectedShared,selectedStyles,unselectedStyles,SUBTLE_SPRING}=this.__closure;return withSpring(selectedShared.get()?selectedStyles.borderColor:unselectedStyles.borderColor,SUBTLE_SPRING,'animate-always');}" };

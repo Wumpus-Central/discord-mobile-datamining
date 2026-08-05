@@ -1,3 +1,4 @@
+import { t } from "../../_runtime/03867_t.js";
 // discord_app/records/LibraryApplicationRecord.tsx
 import "toJS";
 import addApplication from "addApplication";
@@ -32,7 +33,7 @@ LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
   obj = { id: id.sku.id, type: id.sku.type, premium: id.sku.premium, preorderReleaseAt: null, preorderApproximateReleaseDate: null };
   let entitlementsResult = null;
   if (null != id.sku.preorder_release_at) {
-    entitlements = require("../../_runtime/03867_t.js");
+    entitlements = t;
     entitlementsResult = entitlements(id.sku.preorder_release_at);
   }
   obj[3] = entitlementsResult;

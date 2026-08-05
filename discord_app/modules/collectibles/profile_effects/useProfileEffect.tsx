@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/collectibles/profile_effects/useProfileEffect.tsx
 import noop from "noop";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
@@ -10,7 +11,7 @@ let result = require("map").fileFinishedImporting("modules/collectibles/profile_
 export default function useProfileEffect(arg0) {
   const _require = arg0;
   const items = [updateCategoriesAndProducts, map];
-  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     if (null != closure_0) {
       const product = outer1_3.getProduct(tmp);
       let first;

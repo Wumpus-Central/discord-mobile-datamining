@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/harvester/HarvesterUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -31,12 +32,12 @@ export const harvestDisabled = function harvestDisabled(created_at, stateFromSto
 export const useRequestHarvestStatus = function useRequestHarvestStatus() {
   let require;
   let tmp3;
-  let obj = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [harvestType];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => harvestType.harvestType);
-  const obj3 = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => harvestType.harvestType);
+  const obj3 = initialize /* initialize */;
   [tmp3, require] = callback(React.useState(() => Date.now()), 2);
   let sum = tmp3;
   if (null != stateFromStores1) {

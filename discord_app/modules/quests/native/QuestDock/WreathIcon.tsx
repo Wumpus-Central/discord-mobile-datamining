@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../../_runtime/14249_registerAsset.js";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { BaseIconImage } from "../../../../design/components/Icon/native/BaseIconImage.tsx";
 // discord_app/modules/quests/native/QuestDock/WreathIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -8,13 +11,13 @@ const result = require("Themes").fileFinishedImporting("modules/quests/native/Qu
 export default function WreathIcon(color) {
   let INTERACTIVE_TEXT_DEFAULT = color.color;
   if (INTERACTIVE_TEXT_DEFAULT === undefined) {
-    INTERACTIVE_TEXT_DEFAULT = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_DEFAULT;
+    INTERACTIVE_TEXT_DEFAULT = Themes.colors.INTERACTIVE_TEXT_DEFAULT;
   }
   const merged = Object.assign(color, Object.create(null));
   const obj = { source: null, color: null, style: null };
-  obj[0] = require("../../../../../_runtime/14249_registerAsset.js") /* registerAsset */;
+  obj[0] = registerAsset /* registerAsset */;
   obj[1] = INTERACTIVE_TEXT_DEFAULT;
   obj[2] = color.style;
   const merged1 = Object.assign(merged);
-  return jsx(require("../../../../design/components/Icon/native/BaseIconImage.tsx") /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
+  return jsx(BaseIconImage /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
 };

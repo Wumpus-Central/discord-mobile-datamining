@@ -1,3 +1,5 @@
+import { SentryUtils.native } from "../../../../utils/SentryUtils.native.tsx";
+import { _fetchAdUser } from "../../../ads/native/AdUserActionCreators.android.tsx";
 // discord_app/modules/quests/native/ATTModal/ATTManager.android.tsx
 import "initialize";
 
@@ -13,10 +15,10 @@ class ATTManager extends tmp2 {
 const prototype = ATTManager.prototype;
 prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
   try {
-    const adUser = require("../../../ads/native/AdUserActionCreators.android.tsx") /* _fetchAdUser */.fetchAdUser("post_connection_open");
+    const adUser = _fetchAdUser /* _fetchAdUser */.fetchAdUser("post_connection_open");
   } catch (tmp4) {
-    require("../../../../utils/SentryUtils.native.tsx").captureException(tmp4);
-    const obj2 = require("../../../../utils/SentryUtils.native.tsx");
+    SentryUtils.native.captureException(tmp4);
+    const obj2 = SentryUtils.native;
   }
 };
 prototype["_terminate"] = function _terminate() {

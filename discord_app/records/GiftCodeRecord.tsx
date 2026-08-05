@@ -1,3 +1,5 @@
+import { t } from "../../_runtime/03867_t.js";
+import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/records/GiftCodeRecord.tsx
 import "toJS";
 import createFromServer from "createFromServer";
@@ -33,7 +35,7 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   }
   let tmp4 = null;
   if (null != user.expires_at) {
-    tmp4 = require("../../_runtime/03867_t.js")(user.expires_at);
+    tmp4 = t(user.expires_at);
   }
   const redeemed = user.redeemed;
   if (null != user.subscription_plan) {
@@ -96,8 +98,8 @@ prototype["isExpired"] = function isExpired() {
   const expiresAt = this.expiresAt;
   let isAfterResult = null != expiresAt;
   if (isAfterResult) {
-    isAfterResult = require("../../_runtime/03867_t.js")().isAfter(expiresAt);
-    const obj = require("../../_runtime/03867_t.js")();
+    isAfterResult = t().isAfter(expiresAt);
+    const obj = t();
   }
   return isAfterResult;
 };
@@ -141,13 +143,13 @@ Object.defineProperty(prototype, "premiumSubscriptionType", {
 });
 Object.defineProperty(prototype, "isSelfRedeemable", {
   get: function isSelfRedeemable() {
-    return !require("../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(this.flags, frozen.NOT_SELF_REDEEMABLE);
+    return !hasFlag /* hasFlag */.hasFlag(this.flags, frozen.NOT_SELF_REDEEMABLE);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "isExistingPremiumSubscriptionDisallowed", {
   get: function isExistingPremiumSubscriptionDisallowed() {
-    return require("../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(this.flags, frozen.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
+    return hasFlag /* hasFlag */.hasFlag(this.flags, frozen.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
   },
   set: undefined
 });

@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageConstants.tsx
 let obj = { id: "781323471249604648", format_type: require("StickerFormat").StickerFormat.APNG, description: "Cheerful Choco jumps out of gift box", name: "Surprise" };
 let items = [obj, , , , ];
@@ -12,17 +13,17 @@ const obj2 = { id: "813951723822645278", format_type: require("StickerFormat").S
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageConstants.tsx");
 
 export const getJoinButtonLabels = function getJoinButtonLabels() {
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  const items = [intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.b6wEe6), ];
-  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  items[1] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.i8o9hX);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const items = [intl.string(getSystemLocale /* getSystemLocale */.t.b6wEe6), ];
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  items[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.i8o9hX);
   return items;
 };
 export const getRenewButtonLabels = function getRenewButtonLabels() {
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  const items = [intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.vqnToc), ];
-  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  items[1] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["9yh+dM"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const items = [intl.string(getSystemLocale /* getSystemLocale */.t.vqnToc), ];
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  items[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["9yh+dM"]);
   return items;
 };
 export const STICKERS = items;

@@ -1,3 +1,7 @@
+import { registerAsset } from "../../../_runtime/07954_registerAsset.js";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
+import { isCrosspost } from "../messages/isCrosspost.tsx";
 // discord_app/modules/public_guilds/PublicGuildsUtils.tsx
 import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PUBLIC_SUCCESS_MODAL_SEEN_KEY";
 import { AnalyticEvents } from "ME";
@@ -9,7 +13,7 @@ let c5;
 const result = require("isCrosspost").fileFinishedImporting("modules/public_guilds/PublicGuildsUtils.tsx");
 
 export const isPublicSystemMessage = function isPublicSystemMessage(message) {
-  let tmp = require("../messages/isCrosspost.tsx")(message);
+  let tmp = isCrosspost(message);
   if (tmp) {
     tmp = message.messageReference.guild_id === closure_3;
   }
@@ -23,11 +27,11 @@ export const isPublicSystemMessage = function isPublicSystemMessage(message) {
   return tmp;
 };
 export const getPublicSystemMessageAvatar = function getPublicSystemMessageAvatar() {
-  return require("../../../_runtime/07954_registerAsset.js");
+  return registerAsset;
 };
 export const trackEnableCommunityFlow = function trackEnableCommunityFlow(fromStep) {
-  let obj = require("../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { flow_type: closure_5, from_step: fromStep.fromStep, to_step: fromStep.toStep };
-  const merged = Object.assign(require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(fromStep.guildId));
+  const merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(fromStep.guildId));
   obj.track(AnalyticEvents.USER_FLOW_TRANSITION, obj);
 };

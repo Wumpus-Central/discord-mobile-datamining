@@ -1,3 +1,5 @@
+import { context } from "../../../../app_analytics/useAnalyticsLocations.tsx";
+import { useGuildBoostPurchaseHandler } from "../../../../guild_boosting/native/hooks/useGuildBoostPurchaseHandler.tsx";
 // discord_app/modules/premium/powerups/native/hooks/useGuildPowerupsBoostAction.tsx
 import useGuildBoostPurchaseHandler from "useGuildBoostPurchaseHandler";
 import noop from "noop";
@@ -19,10 +21,10 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
   const importDefault = arg1;
   let dependencyMap = arg2;
   const callback = arg4;
-  const tmp = require("../../../../guild_boosting/native/hooks/useGuildBoostPurchaseHandler.tsx")(arg3);
+  const tmp = useGuildBoostPurchaseHandler(arg3);
   const shouldUseMobileWebRedirectCheckout = tmp.shouldUseMobileWebRedirectCheckout;
   const handleMobileWebRedirectCheckout = tmp.handleMobileWebRedirectCheckout;
-  const analyticsLocations = require("../../../../app_analytics/useAnalyticsLocations.tsx")().analyticsLocations;
+  const analyticsLocations = context().analyticsLocations;
   let items = [arg1, arg2, arg0, arg4, shouldUseMobileWebRedirectCheckout, handleMobileWebRedirectCheckout, analyticsLocations];
   return shouldUseMobileWebRedirectCheckout.useCallback(callback(function*() {
     if (c3 === 2) {

@@ -1,3 +1,5 @@
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/auth/native/components/RegistrationBailoutButton.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -9,12 +11,12 @@ const result = require("createCacheKey").fileFinishedImporting("modules/auth/nat
 
 export default function RegistrationBailoutButton(onBail) {
   const obj = { shrink: true, text: null, size: null, look: null, color: null, style: null, onPress: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.CZ7wvG);
-  obj[2] = require("../../../../design/void/native.tsx") /* Button */.Button.Sizes.MEDIUM;
-  obj[3] = require("../../../../design/void/native.tsx") /* Button */.ButtonLooks.LINK;
-  obj[4] = require("../../../../design/void/native.tsx") /* Button */.ButtonColors.LINK;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.CZ7wvG);
+  obj[2] = Button /* Button */.Button.Sizes.MEDIUM;
+  obj[3] = Button /* Button */.ButtonLooks.LINK;
+  obj[4] = Button /* Button */.ButtonColors.LINK;
   obj[5] = callback().bail;
   obj[6] = onBail.onBail;
-  return jsx(require("../../../../design/void/native.tsx") /* Button */.Button, { shrink: true, text: null, size: null, look: null, color: null, style: null, onPress: null });
+  return jsx(Button /* Button */.Button, { shrink: true, text: null, size: null, look: null, color: null, style: null, onPress: null });
 };

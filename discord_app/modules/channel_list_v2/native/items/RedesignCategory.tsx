@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { set } from "../../../../utils/PlatformUtils.tsx";
 // discord_app/modules/channel_list_v2/native/items/RedesignCategory.tsx
 import useFavoritesGuildCategoryAddAction from "useFavoritesGuildCategoryAddAction";
 import { View } from "initialize";
@@ -139,7 +141,7 @@ function renderCategoryItem(arg0) {
     obj7[1] = trailingAction.perform;
     obj7[2] = closure_15;
     obj7[3] = closure_16;
-    let colors = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors;
+    let colors = Themes.colors;
     const obj8 = { size: "xxs", color: null };
     obj8[1] = muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE;
     colors = tmp6(trailingAction(12020).PlusMediumIcon, obj8);
@@ -171,10 +173,10 @@ const styles = createCacheKey.createStyles(() => {
   const merged1 = Object.assign(flag ? { marginLeft: 4 } : { marginRight: 3 });
   obj[3] = {};
   const obj1 = {};
-  obj4 = require("../../../../utils/PlatformUtils.tsx") /* set */;
+  obj4 = set /* set */;
   const tmp = flag ? { flexShrink: 1 } : { flex: 1 };
   const tmp4 = flag ? { marginLeft: 4 } : { marginRight: 3 };
-  obj[4] = { paddingLeft: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginLeft: "auto" };
+  obj[4] = { paddingLeft: Themes.space.PX_8, marginLeft: "auto" };
   return obj;
 });
 let closure_15 = { top: 16, bottom: 16, left: 16, right: 16 };

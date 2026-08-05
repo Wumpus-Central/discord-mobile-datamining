@@ -1,12 +1,15 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../../../design/tokens/native/useToken.tsx";
+import { useTheme } from "../../../../../hooks/useTheme.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/util/usePressUnderlayColor.tsx
 import { DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR as closure_3 } from "CHANNEL_THEME_COLOR_PALETTE";
 
 const result = require("map").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/util/usePressUnderlayColor.tsx");
 
 export default function usePressUnderlayColor(arr) {
-  const tmp2 = require("../../../../../hooks/useTheme.tsx")();
+  const tmp2 = useTheme();
   const tmp3 = require;
-  const token = require("../../../../../design/tokens/native/useToken.tsx") /* map */.useToken(require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_BACKGROUND_ACTIVE);
+  const token = map /* map */.useToken(Themes.colors.INTERACTIVE_BACKGROUND_ACTIVE);
   let substr;
   if (arr != null) {
     substr = arr.slice(0, arr.length - 2);

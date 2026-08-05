@@ -1,3 +1,4 @@
+import { PreviewOverlay } from "GuildThemePreviewArt.tsx";
 // discord_app/modules/guild_themes/native/GuildThemeNuxPreviewGraphic.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -19,6 +20,6 @@ export default function GuildThemeNuxPreviewGraphic(arg0) {
   if (!isPersonal) {
     tmp4 = themeSettings;
   }
-  obj[3] = jsx(require("GuildThemePreviewArt.tsx"), { themeSettings: tmp4 });
+  obj[3] = jsx(PreviewOverlay, { themeSettings: tmp4 });
   return <View accessibilityElementsHidden importantForAccessibility="no-hide-descendants" style={createCacheKey().container}>{null}</View>;
 };

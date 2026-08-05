@@ -1,3 +1,4 @@
+import { handleChannelSelect } from "SharedSpacesWarningManager.tsx";
 // discord_app/modules/shared_space_warnings/VoiceChannelBlockedUserStore.tsx
 import upsertRelationship from "upsertRelationship";
 import updateVoiceState from "updateVoiceState";
@@ -44,8 +45,8 @@ function processUserInChannel(channelId, id) {
             delete tmp[tmp2];
           }
           if (flag3) {
-            const result = require("SharedSpacesWarningManager.tsx").handleBlockedOrIgnoredUserVoiceChannelJoin(channelId, id);
-            const obj4 = require("SharedSpacesWarningManager.tsx");
+            const result = handleChannelSelect.handleBlockedOrIgnoredUserVoiceChannelJoin(channelId, id);
+            const obj4 = handleChannelSelect;
           }
           return flag4;
         }

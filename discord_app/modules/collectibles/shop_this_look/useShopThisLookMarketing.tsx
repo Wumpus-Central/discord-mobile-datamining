@@ -1,3 +1,6 @@
+import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { useSelectedDismissibleContent } from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
+import { useEquippedCollectibleSkuIds } from "../hooks/useMaybeFetchEquippedCollectibleProducts.tsx";
 // discord_app/modules/collectibles/shop_this_look/useShopThisLookMarketing.tsx
 import _slicedToArray from "_slicedToArray";
 
@@ -5,11 +8,11 @@ const require = arg1;
 const result = require("useSelectedDismissibleContent").fileFinishedImporting("modules/collectibles/shop_this_look/useShopThisLookMarketing.tsx");
 
 export const useShopThisLookMarketing = function useShopThisLookMarketing(id, guildId, isShopThisLookMobileEnabled) {
-  let obj = require("../hooks/useMaybeFetchEquippedCollectibleProducts.tsx") /* useEquippedCollectibleSkuIds */;
-  require("../../dismissible_content/hooks/useSelectedDismissibleContent.tsx") /* useSelectedDismissibleContent */;
+  let obj = useEquippedCollectibleSkuIds /* useEquippedCollectibleSkuIds */;
+  useSelectedDismissibleContent /* useSelectedDismissibleContent */;
   if (isShopThisLookMobileEnabled) {
     if (tmp3) {
-      const items = [require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.SHOP_THIS_LOOK_WEB_MARKETING];
+      const items = [DismissibleContent /* DismissibleContent */.DismissibleContent.SHOP_THIS_LOOK_WEB_MARKETING];
     }
     const tmp8 = callback(tmp5([], undefined, true), 2);
     obj = { isVisible: null, markAsDismissed: null };

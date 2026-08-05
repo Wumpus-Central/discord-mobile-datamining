@@ -1,3 +1,6 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { useWideAuthView } from "../useWideAuthView.tsx";
+import { context } from "WideAuthScrollContext.tsx";
 // discord_app/modules/auth/native/components/AuthFormView.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -13,7 +16,7 @@ const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null, flex: null, content: null, subHeader: null };
-  obj = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW, flex: 1 };
+  obj = { backgroundColor: Themes.colors.BACKGROUND_BASE_LOW, flex: 1 };
   obj[0] = obj;
   obj[1] = { flex: 1 };
   let num = 0;
@@ -57,9 +60,9 @@ export default function AuthFormView(arg0) {
   ({ children, headerText, subHeader, contentStyle } = arg0);
   let _require;
   ({ backgroundImageSource, backgroundImageCover } = arg0);
-  const tmp3 = require("../useWideAuthView.tsx")();
+  const tmp3 = useWideAuthView();
   const tmp4 = callback2(tmp3);
-  _require = React.useContext(_require("WideAuthScrollContext.tsx").WideAuthScrollContext);
+  _require = React.useContext(_context.WideAuthScrollContext);
   if (tmp3) {
     let obj = { contentInset: null, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, scrollEventThrottle: 16, onScroll: null, style: null, contentContainerStyle: null, children: null };
     obj[0] = { top: 0 };

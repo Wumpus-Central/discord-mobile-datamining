@@ -1,3 +1,4 @@
+import { resolvedValuesFromUserApplicationIdentityProfile } from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetBottomProgressLayout.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -39,24 +40,24 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   if (objective != null) {
     image = objective.fields.image;
   }
-  const items = [require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.MEDIA];
+  const items = [resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
-  let obj = require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */;
+  let obj = resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */;
   const singleStringOrSkeleton = obj.resolveSingleStringOrSkeleton(objective, "name", resolveFieldValue);
-  let obj1 = require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */;
+  let obj1 = resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */;
   const singleStringOrSkeleton1 = obj1.resolveSingleStringOrSkeleton(objective, "description", resolveFieldValue);
   const progress = bottomConfig.components.progress;
   let current;
   if (progress != null) {
     current = progress.fields.current;
   }
-  const items1 = [require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.NUMBER];
+  const items1 = [resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.NUMBER];
   let iter = resolveFieldValue(current, items1);
   let max;
   if (progress != null) {
     max = progress.fields.max;
   }
-  const items2 = [require("../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx") /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.NUMBER];
+  const items2 = [resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.NUMBER];
   let iter2 = resolveFieldValue(max, items2);
   let tmp3Result = tmp3(12264);
   obj = { style: tmp.root, children: null };

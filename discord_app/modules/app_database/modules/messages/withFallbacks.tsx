@@ -1,3 +1,6 @@
+import { totalLength } from "../../util/ExtendedMemoryLru.tsx";
+import { LIMITED_GUILD_MEMBER_THRESHOLD } from "isLimitedChannel.tsx";
+import { isReadableChannel } from "isReadableChannel.tsx";
 // discord_app/modules/app_database/modules/messages/withFallbacks.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -32,7 +35,7 @@ export const withFallbacks = function withFallbacks(extendedMemoryLru, arg1) {
   if (extendedMemoryLru.totalLength >= arg1) {
     return extendedMemoryLru;
   } else {
-    extendedMemoryLru = new require("../../util/ExtendedMemoryLru.tsx") /* totalLength */.ExtendedMemoryLru(extendedMemoryLru.primaryCapacity, extendedMemoryLru.extendedCapacity);
+    extendedMemoryLru = new totalLength /* totalLength */.ExtendedMemoryLru(extendedMemoryLru.primaryCapacity, extendedMemoryLru.extendedCapacity);
     const diff = arg1 - extendedMemoryLru.totalLength;
     guildFolders = guildFolders.getGuildFolders();
     const iter = guildFolders[Symbol.iterator]();
@@ -54,14 +57,14 @@ export const withFallbacks = function withFallbacks(extendedMemoryLru, arg1) {
           if (isReadableChannelResult) {
             let tmp13 = require;
             let tmp14 = dependencyMap;
-            let obj3 = require("isReadableChannel.tsx") /* isReadableChannel */;
+            let obj3 = isReadableChannel /* isReadableChannel */;
             let tmp15 = item10025;
             isReadableChannelResult = obj3.isReadableChannel(tmp10);
           }
           if (isReadableChannelResult) {
             let tmp16 = require;
             let tmp17 = dependencyMap;
-            let obj4 = require("isLimitedChannel.tsx") /* LIMITED_GUILD_MEMBER_THRESHOLD */;
+            let obj4 = LIMITED_GUILD_MEMBER_THRESHOLD /* LIMITED_GUILD_MEMBER_THRESHOLD */;
             let tmp18 = item10025;
             isReadableChannelResult = !obj4.isLimitedChannel(tmp10);
           }

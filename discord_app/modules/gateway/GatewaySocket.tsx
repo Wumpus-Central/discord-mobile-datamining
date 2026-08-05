@@ -1,3 +1,13 @@
+import { isTracing } from "../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
+import { set } from "../monitoring/MonitoringAgent.tsx";
+import { CLOSED } from "ConnectionState.tsx";
+import { items } from "GatewayCompressionHandler.tsx";
+import { prettyPrintTrace_ } from "GatewaySocketAnalytics.tsx";
+import { presenceUpdate } from "GatewaySocketOpCodes.tsx";
 // discord_app/modules/gateway/GatewaySocket.tsx
 import set from "set";
 import pack from "pack";
@@ -161,12 +171,12 @@ prototype["handleActiveStateChange"] = function handleActiveStateChange(currentP
 };
 prototype["handleUpdateTimeSpentSessionId"] = function handleUpdateTimeSpentSessionId(createdAtTimestamp, uuid, clientLaunchId) {
   const self = this;
-  if (this.connectionState_ === require("ConnectionState.tsx").SESSION_ESTABLISHED) {
+  if (this.connectionState_ === CLOSED.SESSION_ESTABLISHED) {
     const obj = { initialization_timestamp: null, session_id: null, client_launch_id: null };
     obj[0] = createdAtTimestamp;
     obj[1] = uuid;
     obj[2] = clientLaunchId;
-    self.send(require("GatewaySocketOpCodes.tsx") /* presenceUpdate */.Opcode.UPDATE_TIME_SPENT_SESSION_ID, obj);
+    self.send(presenceUpdate /* presenceUpdate */.Opcode.UPDATE_TIME_SPENT_SESSION_ID, obj);
     self._sendHeartbeat();
   }
 };
@@ -459,10 +469,10 @@ prototype["_handleHello"] = function _handleHello(d) {
   this.heartbeatInterval = heartbeat_interval;
   const timestamp = Date.now();
   const diff = timestamp - this.connectionStartTime;
-  let obj = require("GatewaySocketAnalytics.tsx") /* prettyPrintTrace_ */;
+  let obj = prettyPrintTrace_ /* prettyPrintTrace_ */;
   tmp3.verbose("[HELLO] via " + obj.getConnectionPath(d) + ", heartbeat interval: " + heartbeat_interval + ", took " + diff + " ms");
   obj = { socket: this, altGateway: this.altGateway, gatewayUrl: this._getGatewayUrl(), now: timestamp };
-  require("GatewaySocketAnalytics.tsx") /* prettyPrintTrace_ */.logGatewayConnected(obj);
+  prettyPrintTrace_ /* prettyPrintTrace_ */.logGatewayConnected(obj);
   this.receivedHelloThisAttempt = true;
   this.failedConnectAttempts = 0;
   this.firstConnectAttemptStartTime = 0;
@@ -471,7 +481,7 @@ prototype["_handleHello"] = function _handleHello(d) {
 prototype["_handleReconnect"] = function _handleReconnect() {
   tmp3.verbose("[RECONNECT] gateway requested I reconnect.");
   this._cleanup((close) => close.close(4000));
-  this.connectionState = require("ConnectionState.tsx").WILL_RECONNECT;
+  this.connectionState = CLOSED.WILL_RECONNECT;
   this._connect();
 };
 prototype["_handleInvalidSession"] = function _handleInvalidSession(d) {
@@ -493,39 +503,39 @@ prototype["_handleDispatch"] = function _handleDispatch(d, type, arg2) {
   if ("READY" === type) {
     const session_id = d.session_id;
     self.sessionId = session_id;
-    const connectionPath = require("GatewaySocketAnalytics.tsx") /* prettyPrintTrace_ */.getConnectionPath(d);
-    const obj = require("GatewaySocketAnalytics.tsx") /* prettyPrintTrace_ */;
-    require("../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx").setServerTrace(connectionPath);
+    const connectionPath = prettyPrintTrace_ /* prettyPrintTrace_ */.getConnectionPath(d);
+    const obj = prettyPrintTrace_ /* prettyPrintTrace_ */;
+    isTracing.setServerTrace(connectionPath);
     const _HermesInternal2 = HermesInternal;
     tmp3.info("[READY] took " + diff + "ms, as " + session_id);
     const _HermesInternal3 = HermesInternal;
     tmp3.verbose("" + connectionPath);
-    self.connectionState = require("ConnectionState.tsx").SESSION_ESTABLISHED;
+    self.connectionState = CLOSED.SESSION_ESTABLISHED;
     const gatewayBackoff2 = self.gatewayBackoff;
     gatewayBackoff2.succeed();
     self.iosGoingAwayEventCount = 0;
     const altGateway2 = self.altGateway;
     altGateway2.recordSuccess();
     self.setResumeUrl(d.resume_gateway_url);
-    const obj2 = require("../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx");
+    const obj2 = isTracing;
   } else if ("READY_SUPPLEMENTAL" === type) {
     const _HermesInternal = HermesInternal;
     tmp3.info("[READY_SUPPLEMENTAL] took " + diff + "ms");
-    self.connectionState = require("ConnectionState.tsx").SESSION_ESTABLISHED;
+    self.connectionState = CLOSED.SESSION_ESTABLISHED;
     const gatewayBackoff = self.gatewayBackoff;
     gatewayBackoff.succeed();
     self.iosGoingAwayEventCount = 0;
     const altGateway = self.altGateway;
     altGateway.recordSuccess();
   } else if ("RESUMED" === type) {
-    tmp3.verbose(require("GatewaySocketAnalytics.tsx") /* prettyPrintTrace_ */.getConnectionPath(d));
-    self.connectionState = require("ConnectionState.tsx").SESSION_ESTABLISHED;
+    tmp3.verbose(prettyPrintTrace_ /* prettyPrintTrace_ */.getConnectionPath(d));
+    self.connectionState = CLOSED.SESSION_ESTABLISHED;
     const gatewayBackoff3 = self.gatewayBackoff;
     gatewayBackoff3.succeed();
     self.iosGoingAwayEventCount = 0;
     const altGateway3 = self.altGateway;
     altGateway3.recordSuccess();
-    const obj3 = require("GatewaySocketAnalytics.tsx") /* prettyPrintTrace_ */;
+    const obj3 = prettyPrintTrace_ /* prettyPrintTrace_ */;
   }
   const dispatcher = self.dispatcher;
   dispatcher.receiveDispatch(d, type, arg2);
@@ -591,7 +601,7 @@ prototype["_handleHeartbeatAck"] = function _handleHeartbeatAck(d) {
 prototype["_handleHeartbeatTimeout"] = function _handleHeartbeatTimeout() {
   const self = this;
   this._cleanup((close) => close.close(4000));
-  this.connectionState = require("ConnectionState.tsx").WILL_RECONNECT;
+  this.connectionState = CLOSED.WILL_RECONNECT;
   const result = this._maybeFallBackFromAltGateway();
   const gatewayBackoff = this.gatewayBackoff;
   const result1 = gatewayBackoff.fail(() => self._connect()) / 1000;
@@ -607,12 +617,12 @@ prototype["_handleClose"] = function _handleClose(wasClean, c13, reason) {
   self._cleanup();
   self.emit("close", { code: c13, reason });
   if (c13 === c13) {
-    self.connectionState = require("ConnectionState.tsx").CLOSED;
+    self.connectionState = CLOSED.CLOSED;
     tmp3.warn("[WS CLOSED] because of authentication failure, marking as closed.");
     return self._reset(flag, c13, reason);
   } else {
     const result = self._tryDetectInvalidIOSToken(c13, reason, flag);
-    self.connectionState = require("ConnectionState.tsx").WILL_RECONNECT;
+    self.connectionState = CLOSED.WILL_RECONNECT;
     if (!self.receivedHelloThisAttempt) {
       self.failedConnectAttempts = self.failedConnectAttempts + 1;
     }
@@ -640,7 +650,7 @@ prototype["_tryDetectInvalidIOSToken"] = function _tryDetectInvalidIOSToken(c13,
   let self = this;
   self = this;
   const _require = flag;
-  let obj = _require("../../utils/PlatformUtils.tsx");
+  let obj = _set;
   let isIOSResult = obj.isIOS();
   if (isIOSResult) {
     isIOSResult = null != self.token;
@@ -654,7 +664,7 @@ prototype["_tryDetectInvalidIOSToken"] = function _tryDetectInvalidIOSToken(c13,
   if (isIOSResult) {
     self.iosGoingAwayEventCount = self.iosGoingAwayEventCount + 1;
     if (3 === self.iosGoingAwayEventCount) {
-      const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+      const HTTP = _sendRequest.HTTP;
       obj = { url: null, headers: null, rejectWithError: false };
       obj[0] = constants2.ME;
       obj = { authorization: null };
@@ -756,7 +766,7 @@ prototype["_clearHelloTimeout"] = function _clearHelloTimeout() {
 };
 prototype["_cleanup"] = function _cleanup(arg0) {
   const self = this;
-  const Emitter = require("../../../discord_common/js/packages/flux/index.tsx").Emitter;
+  const Emitter = initialize.Emitter;
   Emitter.resume();
   this._stopHeartbeater();
   this._clearHelloTimeout();
@@ -774,12 +784,12 @@ prototype["_cleanup"] = function _cleanup(arg0) {
   const gatewayBackoff = self.gatewayBackoff;
   gatewayBackoff.cancel();
   self.compressionHandler.close();
-  self.compressionHandler = require("GatewayCompressionHandler.tsx") /* items */.getCompressionHandler(closure_10);
+  self.compressionHandler = items /* items */.getCompressionHandler(closure_10);
 };
 prototype["_doResume"] = function _doResume() {
   const self = this;
-  this.connectionState = require("ConnectionState.tsx").RESUMING;
-  let obj = require("GatewaySocketAnalytics.tsx") /* prettyPrintTrace_ */;
+  this.connectionState = CLOSED.RESUMING;
+  let obj = prettyPrintTrace_ /* prettyPrintTrace_ */;
   this.dispatcher.resumeAnalytics = obj.createResumeAnalytics(Date.now() - this.connectionStartTime);
   let str = this.sessionId;
   if (str == null) {
@@ -787,7 +797,7 @@ prototype["_doResume"] = function _doResume() {
   }
   tmp3.info("[RESUME] resuming session " + str + ", seq: " + self.seq);
   obj = { token: self.token, session_id: self.sessionId, seq: self.seq };
-  self.send(require("GatewaySocketOpCodes.tsx") /* presenceUpdate */.Opcode.RESUME, obj, false);
+  self.send(presenceUpdate /* presenceUpdate */.Opcode.RESUME, obj, false);
 };
 prototype["_doIdentify"] = function _doIdentify() {
   const self = this;
@@ -965,7 +975,7 @@ prototype["_doFastConnectIdentify"] = function _doFastConnectIdentify() {
   const handleIdentifyResult = this.handleIdentify();
   if (null !== handleIdentifyResult) {
     self.token = handleIdentifyResult.token;
-    self.connectionState = require("ConnectionState.tsx").IDENTIFYING;
+    self.connectionState = CLOSED.IDENTIFYING;
     const _Date = Date;
     self.identifyStartTime = Date.now();
     self.identifyCount = self.identifyCount + 1;
@@ -999,28 +1009,28 @@ prototype["_consumeQOSPayload"] = function _consumeQOSPayload() {
 };
 prototype["_sendHeartbeat"] = function _sendHeartbeat() {
   const _consumeQOSPayloadResult = this._consumeQOSPayload();
-  this.send(require("GatewaySocketOpCodes.tsx") /* presenceUpdate */.Opcode.QOS_HEARTBEAT, { seq: this.seq, qos: this._consumeQOSPayload() }, false);
+  this.send(presenceUpdate /* presenceUpdate */.Opcode.QOS_HEARTBEAT, { seq: this.seq, qos: this._consumeQOSPayload() }, false);
   this.lastHeartbeatTime = Date.now();
 };
 prototype["getLogger"] = function getLogger() {
   return closure_9;
 };
 prototype["willReconnect"] = function willReconnect() {
-  return this.connectionState === require("ConnectionState.tsx").WILL_RECONNECT;
+  return this.connectionState === CLOSED.WILL_RECONNECT;
 };
 prototype["isClosed"] = function isClosed() {
-  return this.connectionState === require("ConnectionState.tsx").CLOSED;
+  return this.connectionState === CLOSED.CLOSED;
 };
 prototype["isSessionEstablished"] = function isSessionEstablished() {
-  let tmp3 = this.connectionState === require("ConnectionState.tsx").SESSION_ESTABLISHED;
+  let tmp3 = this.connectionState === CLOSED.SESSION_ESTABLISHED;
   if (!tmp3) {
-    tmp3 = this.connectionState === require("ConnectionState.tsx").RESUMING;
+    tmp3 = this.connectionState === CLOSED.RESUMING;
   }
   return tmp3;
 };
 prototype["isConnected"] = function isConnected() {
   const self = this;
-  let tmp3 = this.connectionState === require("ConnectionState.tsx").IDENTIFYING;
+  let tmp3 = this.connectionState === CLOSED.IDENTIFYING;
   if (!tmp3) {
     tmp3 = self.connectionState === tmp(12821).RESUMING;
   }
@@ -1035,7 +1045,7 @@ prototype["connect"] = function connect() {
     const altGateway = self.altGateway;
     altGateway.reset();
     tmp3.verbose(".connect() called, new state is WILL_RECONNECT");
-    self.connectionState = require("ConnectionState.tsx").WILL_RECONNECT;
+    self.connectionState = CLOSED.WILL_RECONNECT;
     self.firstConnectAttemptStartTime = 0;
     self._connect();
     let flag = true;
@@ -1056,7 +1066,7 @@ prototype["resetSocketAndClearCacheOnError"] = function resetSocketAndClearCache
   tmp3.error("resetSocketAndClearCacheOnError during " + action + ": " + error.message, error.stack);
   let obj1 = self(667);
   const usesClientModsResult = obj1.usesClientMods();
-  let obj2 = require("../monitoring/MonitoringAgent.tsx");
+  let obj2 = set;
   obj = { name: self(6975).MetricEvents.SOCKET_CRASHED, tags: null };
   if (metricAction == null) {
     metricAction = action;
@@ -1079,7 +1089,7 @@ prototype["resetSocketAndClearCacheOnError"] = function resetSocketAndClearCache
   self._reset(true, 1000, "Resetting socket due to error.");
   const dispatcher = self.dispatcher;
   dispatcher.clear();
-  self.connectionState = require("ConnectionState.tsx").WILL_RECONNECT;
+  self.connectionState = CLOSED.WILL_RECONNECT;
   let dispatchExceptionBackoff = self.dispatchExceptionBackoff;
   dispatchExceptionBackoff.cancel();
   if (0 === self.dispatchExceptionBackoff._fails) {
@@ -1095,10 +1105,10 @@ prototype["resetSocketAndClearCacheOnError"] = function resetSocketAndClearCache
     dispatchExceptionBackoff2.fail(() => self._connect());
   }
   self.didForceClearGuildHashes = true;
-  const tmp4Result1 = require("../../Dispatcher.tsx");
+  const tmp4Result1 = dispatcher;
   tmp4Result1.dispatch({ type: "CLEAR_CACHES", reason: "Socket reset during " + action });
   const obj3 = { type: "CLEAR_CACHES", reason: "Socket reset during " + action };
-  require("../../Dispatcher.tsx").dispatch({ type: "LIBDISCORE_RESET" });
+  dispatcher.dispatch({ type: "LIBDISCORE_RESET" });
   clearTimeout(self.dispatchSuccessTimer);
   self.dispatchSuccessTimer = setTimeout(() => {
     const dispatchExceptionBackoff = self.dispatchExceptionBackoff;
@@ -1236,7 +1246,7 @@ prototype["resetBackoff"] = function resetBackoff(reason) {
     self._connect();
   } else {
     if (flag) {
-      flag = self.connectionState !== require("ConnectionState.tsx").SESSION_ESTABLISHED;
+      flag = self.connectionState !== CLOSED.SESSION_ESTABLISHED;
     }
     if (flag) {
       self._handleClose(true, 0, str);

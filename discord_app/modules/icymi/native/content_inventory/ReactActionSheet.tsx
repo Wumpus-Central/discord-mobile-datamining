@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { context } from "../ICYMIContext.tsx";
 // discord_app/modules/icymi/native/content_inventory/ReactActionSheet.tsx
 import set from "set";
 import SendMessageIcon from "SendMessageIcon";
@@ -420,7 +422,7 @@ export default function ReactActionSheet(arg0) {
     obj = {};
     const merged1 = Object.assign(merged);
     obj[0] = callback2(ReactActionSheetBase, obj);
-    return callback2(require("../ICYMIContext.tsx") /* context */.ICYMIContextProvider, obj);
+    return callback2(context /* context */.ICYMIContextProvider, obj);
   }
 };
 export const getStatusReplyContent = function getStatusReplyContent(reply) {
@@ -433,9 +435,9 @@ export const getStatusReplyContent = function getStatusReplyContent(reply) {
   if (isForward === undefined) {
     isForward = false;
   }
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   const formatToPlainString = intl.formatToPlainString;
-  const t = require("../../../../intl/index.native.tsx") /* getSystemLocale */.t;
+  const t = getSystemLocale /* getSystemLocale */.t;
   if (isForward) {
     let obj = { username: null };
     obj[0] = username;

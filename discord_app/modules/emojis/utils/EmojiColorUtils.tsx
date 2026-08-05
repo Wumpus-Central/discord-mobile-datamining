@@ -1,3 +1,6 @@
+import { hslToRgb } from "../../../utils/Color.tsx";
+import { hexToRgba } from "../../../utils/ColorUtils.tsx";
+import { getURL } from "../../../utils/EmojiUtilsPlatformed.native.tsx";
 // discord_app/modules/emojis/utils/EmojiColorUtils.tsx
 function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {
   let colors;
@@ -17,9 +20,9 @@ function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {
   if (null != colors) {
     palette = null;
     if (colors.length >= 1) {
-      let obj = require("../../../utils/ColorUtils.tsx") /* hexToRgba */;
+      let obj = hexToRgba /* hexToRgba */;
       const findColorByHsvResult = obj.findColorByHsv(colors);
-      let obj1 = require("../../../utils/Color.tsx");
+      let obj1 = hslToRgb;
       const parseStringResult = obj1.parseString(findColorByHsvResult);
       palette = null;
       if (null != parseStringResult) {
@@ -120,7 +123,7 @@ function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {
       }
     }
   }
-  return require("../../../utils/EmojiUtilsPlatformed.native.tsx").applyPlatformToThemedEmojiColorPalette({ palette, shouldProcessMobileColors });
+  return getURL.applyPlatformToThemedEmojiColorPalette({ palette, shouldProcessMobileColors });
 }
 let c3 = "#ffffff";
 let c4 = "#36393e";

@@ -1,3 +1,5 @@
+import { dispatcher } from "../Dispatcher.tsx";
+import { transitionTo } from "../modules/routing/router_utils.tsx";
 // discord_app/actions/FriendsActionCreators.tsx
 import { Routes } from "ME";
 
@@ -17,11 +19,11 @@ export default {
       tmp(1222).transitionTo(tmp3.FRIENDS);
       const tmpResult = tmp(1222);
     }
-    obj2 = require("../modules/routing/router_utils.tsx") /* transitionTo */;
+    obj2 = transitionTo /* transitionTo */;
     tmp = require;
     const tmp5 = importDefault;
     obj = { type: "FRIENDS_SET_SECTION", section: PENDING };
-    require("../Dispatcher.tsx").dispatch(obj);
+    dispatcher.dispatch(obj);
     if (flag) {
       obj = { tab_opened: null };
       obj[0] = PENDING;
@@ -29,12 +31,12 @@ export default {
     }
   },
   setSection(section) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "FRIENDS_SET_SECTION", section };
     obj.dispatch(obj);
   },
   setInitialSection(section) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "FRIENDS_SET_INITIAL_SECTION", section };
     obj.dispatch(obj);
   }

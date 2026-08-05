@@ -1,3 +1,13 @@
+import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
+import { PremiumFeatureList } from "../../../../components_native/premium/PremiumFeatureList.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
+import { formatSingleCurrencyPrice } from "../../../../utils/PriceUtils.tsx";
+import { calculateFractionalPremiumInfo } from "../../../billing/hooks/useFractionalPremiumInfo.tsx";
+import { usePremiumPlanPrice } from "../../../premium/native/hooks/usePremiumPlanPrice.tsx";
+import { messagesProxy } from "../../../premium/premium_group/PremiumGroup.messages.js";
+import { PremiumFeaturesWumpus } from "PremiumFeaturesWumpus.tsx";
+import { usePremiumFeatures } from "utils/usePremiumFeatures.tsx";
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesCard.tsx
 import useDiscountedPremiumProductInfo from "useDiscountedPremiumProductInfo";
 import "messagesProxy";
@@ -71,10 +81,10 @@ function PriceText(fractionalPremiumInfo) {
   let subscriptionTrial;
   ({ premiumItem, discountedPriceString, discountOffer, activeDiscountInfo, subscriptionTrial, premiumType, premiumSubscription } = fractionalPremiumInfo);
   const tmp = createCacheKey();
-  const tmp4 = require("../../../premium/native/hooks/usePremiumPlanPrice.tsx")(premiumItem.basePlanId);
-  let obj = require("../../../../utils/PremiumUtils.tsx");
+  const tmp4 = usePremiumPlanPrice(premiumItem.basePlanId);
+  let obj = getPremiumPlanItem;
   const intervalStringAsNoun = obj.getIntervalStringAsNoun(premiumItem.interval);
-  let obj1 = require("../../../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */;
+  let obj1 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
   let priceString;
   if (tmp4 != null) {
     priceString = tmp4.priceString;
@@ -163,7 +173,7 @@ function PriceText(fractionalPremiumInfo) {
             priceString1 = closure_11;
           }
           obj3[2] = priceString1;
-          formatResult = intl4.format(require("../../../premium/premium_group/PremiumGroup.messages.js").FwjZzr, obj3);
+          formatResult = intl4.format(messagesProxy.FwjZzr, obj3);
           const tmp7Result1 = tmp7(7966);
         }
       }
@@ -224,10 +234,10 @@ function PriceText(fractionalPremiumInfo) {
   if (priceString3 == null) {
     priceString3 = closure_11;
   }
-  const items = [callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/bold", color: "text-overlay-light", children: priceString3 }), ];
+  const items = [callback2(Text /* Text */.Text, { variant: "text-md/bold", color: "text-overlay-light", children: priceString3 }), ];
   const obj9 = { variant: "text-md/normal", color: "text-overlay-light", children: null };
   obj9[2] = " / " + intervalStringAsNoun;
-  items[1] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj9);
+  items[1] = callback2(Text /* Text */.Text, obj9);
   obj8[2] = items;
   tmp11Result = closure_19(View, obj8);
 }
@@ -267,14 +277,14 @@ export default function PremiumFeaturesCard(premiumType) {
   let interval1;
   let premiumBundleWithPredicate;
   const tmp3 = createCacheKey();
-  require("../../../../../_runtime/metro/00038__.js")(set.has(premiumType), "only Tier 0 and Tier 2 are supported");
+  00038__(set.has(premiumType), "only Tier 0 and Tier 2 are supported");
   let obj = premiumType(6820);
   const premiumTrialOffer = obj.usePremiumTrialOffer();
   let obj1 = premiumType(7263);
   const premiumDiscountOffer = obj1.usePremiumDiscountOffer();
   let obj2 = premiumType(7974);
   const activeDiscountInfo = obj2.useActiveDiscountInfo();
-  const tmp6 = require("../../../../../_runtime/metro/00038__.js");
+  const tmp6 = 00038__;
   let obj3 = premiumType(6819);
   let subscription_trial;
   const premiumTrialOfferPremiumType = obj3.usePremiumTrialOfferPremiumType();
@@ -304,7 +314,7 @@ export default function PremiumFeaturesCard(premiumType) {
   }), 2);
   const first = tmp19[0];
   maybeApplyNoTextColorForLightCustomTheme = table2[premiumType];
-  const tmp12 = require("../../../billing/hooks/useFractionalPremiumInfo.tsx")();
+  const tmp12 = calculateFractionalPremiumInfo();
   const items1 = [interval1];
   const stateFromStores = premiumType(589).useStateFromStores(items1, () => {
     const items = [maybeApplyNoTextColorForLightCustomTheme];
@@ -336,7 +346,7 @@ export default function PremiumFeaturesCard(premiumType) {
   if (interval1 == null) {
     interval1 = constants.MONTH;
   }
-  const tmp23 = require("utils/usePremiumFeatures.tsx")(premiumType, flag, UNSPECIFIED);
+  const tmp23 = usePremiumFeatures(premiumType, flag, UNSPECIFIED);
   premiumBundleWithPredicate = premiumType(6780).getPremiumBundleWithPredicate((additionalPlans) => {
     let interval;
     let numPremiumGuild;
@@ -357,7 +367,7 @@ export default function PremiumFeaturesCard(premiumType) {
     }
     return tmp;
   });
-  require("../../../../../_runtime/metro/00038__.js")(null != premiumBundleWithPredicate, "could not find a premium item");
+  00038__(null != premiumBundleWithPredicate, "could not find a premium item");
   const tmp8Result4 = premiumType(6780);
   const items3 = [premiumBundleWithPredicate];
   const discountedPriceString = premiumType(7324).useDiscountedPremiumProductInfo(premiumDiscountOffer, items3).discountedPriceString;
@@ -375,7 +385,7 @@ export default function PremiumFeaturesCard(premiumType) {
     }
     tmp32 = flag4;
   }
-  const tmp34 = require("../../../premium/native/hooks/usePremiumPlanPrice.tsx")(premiumBundleWithPredicate.basePlanId);
+  const tmp34 = usePremiumPlanPrice(premiumBundleWithPredicate.basePlanId);
   obj = { style: tmp3.containerWrapper, onLayout, children: null };
   obj1 = { style: tmp3.pill, discountOffer: premiumDiscountOffer, isActiveDiscount: null != activeDiscountInfo, shouldShowDiscountUpsell: tmp31, premiumType, trialOffer: premiumTrialOffer };
   const items4 = [callback2(premiumType(6811).PremiumPill, obj1), ];
@@ -392,7 +402,7 @@ export default function PremiumFeaturesCard(premiumType) {
     tmp37Result = tmp37(tmp4(8549), obj5);
   }
   obj4[1] = tmp37Result;
-  const items5 = [callback2(analyticsLocations, obj4), callback2(require("PremiumFeaturesWumpus.tsx"), { premiumType }), , , ];
+  const items5 = [callback2(analyticsLocations, obj4), callback2(PremiumFeaturesWumpus, { premiumType }), , , ];
   if (flag3) {
     flag3 = null == activeDiscountInfo;
   }
@@ -417,7 +427,7 @@ export default function PremiumFeaturesCard(premiumType) {
   }
   let tmp37Result1 = premiumType === premiumTrialOfferPremiumType;
   items5[2] = tmp37Result;
-  items5[3] = callback2(require("../../../../components_native/premium/PremiumFeatureList.tsx"), { style: tmp3.featureList, features: tmp23, iconStyle: tmp3.featureIcon, labelStyle: tmp3.featureLabel, rowStyle: tmp3.featureRow });
+  items5[3] = callback2(PremiumFeatureList, { style: tmp3.featureList, features: tmp23, iconStyle: tmp3.featureIcon, labelStyle: tmp3.featureLabel, rowStyle: tmp3.featureRow });
   if (hideButton) {
     items5[4] = !hideButton;
     obj3[1] = items5;

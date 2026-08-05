@@ -1,3 +1,5 @@
+import { PermissionOverwriteType } from "../../../../../flow/Server.tsx";
+import { createGuildProductPurchaseSystemMessage } from "GuildProductPurchaseSystemMessage.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx");
 
@@ -8,9 +10,9 @@ export const createPurchaseNotificationSystemMessage = function createPurchaseNo
     type = purchaseNotification.type;
   }
   let guildProductPurchaseSystemMessage = null;
-  if (type === require("../../../../../flow/Server.tsx") /* PermissionOverwriteType */.PurchaseNotificationType.GUILD_PRODUCT) {
-    guildProductPurchaseSystemMessage = require("GuildProductPurchaseSystemMessage.tsx") /* createGuildProductPurchaseSystemMessage */.createGuildProductPurchaseSystemMessage(message);
-    const tmp2Result = require("GuildProductPurchaseSystemMessage.tsx") /* createGuildProductPurchaseSystemMessage */;
+  if (type === PermissionOverwriteType /* PermissionOverwriteType */.PurchaseNotificationType.GUILD_PRODUCT) {
+    guildProductPurchaseSystemMessage = createGuildProductPurchaseSystemMessage /* createGuildProductPurchaseSystemMessage */.createGuildProductPurchaseSystemMessage(message);
+    const tmp2Result = createGuildProductPurchaseSystemMessage /* createGuildProductPurchaseSystemMessage */;
   }
   return guildProductPurchaseSystemMessage;
 };

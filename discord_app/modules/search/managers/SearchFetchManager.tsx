@@ -1,3 +1,4 @@
+import { fetch } from "../SearchFetcher.tsx";
 // discord_app/modules/search/managers/SearchFetchManager.tsx
 import { AbstractSearchFetchManager } from "cleanUp";
 
@@ -9,7 +10,7 @@ SearchFetchManager.prototype["create"] = function create(arg0) {
   let searchType;
   ({ id, searchType, searchQuery } = arg0);
   this.cancel(id);
-  const searchFetcherImpl = new require("../SearchFetcher.tsx") /* fetch */.SearchFetcherImpl(id, searchType, searchQuery);
+  const searchFetcherImpl = new fetch /* fetch */.SearchFetcherImpl(id, searchType, searchQuery);
   const result = this.set(id, searchFetcherImpl);
   return searchFetcherImpl;
 };

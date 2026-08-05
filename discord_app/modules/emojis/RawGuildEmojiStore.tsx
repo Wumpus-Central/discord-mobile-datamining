@@ -1,3 +1,4 @@
+import { EmojiTypes } from "EmojiTypes.tsx";
 // discord_app/modules/emojis/RawGuildEmojiStore.tsx
 import _slicedToArray from "_slicedToArray";
 import { TypeTag } from "TypeTag";
@@ -17,7 +18,7 @@ function fromServer(guildId) {
     ({ id: obj2.id, animated: obj2.animated, name: obj2.name, require_colons: obj2.require_colons, available: obj2.available, roles: obj2.roles, managed: obj2.managed, version: obj2.version } = nextResult);
     let tmp3 = require;
     let tmp4 = dependencyMap;
-    obj.type = require("EmojiTypes.tsx") /* EmojiTypes */.EmojiTypes.GUILD;
+    obj.type = EmojiTypes /* EmojiTypes */.EmojiTypes.GUILD;
     obj[nextResult.id] = obj;
     continue;
   }

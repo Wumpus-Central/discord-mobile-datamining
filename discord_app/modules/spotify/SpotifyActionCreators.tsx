@@ -1,3 +1,7 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { set } from "../../utils/GameUtils.native.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
 // discord_app/modules/spotify/SpotifyActionCreators.tsx
 import isProtocolRegistered from "isProtocolRegistered";
 import WEB_OPEN from "WEB_OPEN";
@@ -326,7 +330,7 @@ const result = require("ME").fileFinishedImporting("modules/spotify/SpotifyActio
 export const SpotifyAPI = obj;
 export const getAccessToken = function getAccessToken(id) {
   const _require = id;
-  const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+  const HTTP = _sendRequest.HTTP;
   const value = HTTP.get({ url: closure_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, id), oldFormErrors: true, rejectWithError: false });
   const obj = { url: closure_7.CONNECTION_ACCESS_TOKEN(constants.SPOTIFY, id), oldFormErrors: true, rejectWithError: false };
   return value.catch((body) => {
@@ -550,19 +554,19 @@ export const pause = function pause(arg0, arg1) {
 export const fetchIsSpotifyProtocolRegistered = function fetchIsSpotifyProtocolRegistered() {
   if (!protocolRegistered.isProtocolRegistered()) {
     if (obj.isDesktop()) {
-      const obj2 = require("../../utils/GameUtils.native.tsx");
-      require("../../utils/GameUtils.native.tsx").isProtocolRegistered(closure_4).then((isRegistered) => {
+      const obj2 = set;
+      set.isProtocolRegistered(closure_4).then((isRegistered) => {
         let obj = callback(table[5]);
         obj = { type: "SPOTIFY_SET_PROTOCOL_REGISTERED", isRegistered };
         obj.dispatch(obj);
       });
-      const isProtocolRegisteredResult = require("../../utils/GameUtils.native.tsx").isProtocolRegistered(closure_4);
+      const isProtocolRegisteredResult = set.isProtocolRegistered(closure_4);
     }
-    obj = require("../../utils/PlatformUtils.tsx") /* set */;
+    obj = set /* set */;
   }
 };
 export const setActiveDevice = function setActiveDevice(accountId, deviceId) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "SPOTIFY_SET_ACTIVE_DEVICE", accountId, deviceId };
   obj.dispatch(obj);
 };

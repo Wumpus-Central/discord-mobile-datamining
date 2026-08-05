@@ -1,3 +1,11 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { _isStreaming } from "../../activities/utils/isStreaming.tsx";
+import { getLayoutStyle } from "shared/getLayoutStyles.tsx";
+import { renderChannelBadge } from "shared/renderChannelBadge.tsx";
+import { ChannelContent } from "shared/renderChannelContent.tsx";
+import { renderChannelWrapper } from "shared/renderChannelWrapper.tsx";
+import { UnreadBadge } from "shared/UnreadBadge.tsx";
+import { useChannelUnreadBadgeState } from "shared/useChannelUnreadBadgeState.tsx";
 // discord_app/modules/launchpad/native/LaunchPadSearchResultUser.tsx
 import importAllResult from "PressableBase";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -41,7 +49,7 @@ function UserResult(user) {
     flag2 = false;
   }
   const tmp = callback2();
-  const tmp4 = require("shared/getLayoutStyles.tsx")();
+  const tmp4 = getLayoutStyle();
   let items = [user.id];
   const callback = importAllResult.useCallback(() => {
     const items = [user.id];
@@ -81,7 +89,7 @@ function UserResult(user) {
   obj = { onPress: callback, underlayColor: tmp.pressableUnderlayColor.backgroundColor, style: items4, children: null };
   items4 = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
   obj = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
-  const items5 = [callback(require("shared/UnreadBadge.tsx"), obj), , ];
+  const items5 = [callback(UnreadBadge, obj), , ];
   obj1 = { user, guildId: "e", isMobileOnline: true, isVROnline: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZl", status: null, streaming: "e5e4d3553458200eb99b9008a3084c0d", style: "ro.messages.e5e4d3553458200eb99b9008a3084c0d.compiled.messages", size: "jsona", animate: "QUESTS_VISIBLE_MOBILE_MESSAGES_CHANGED", typing: null, autoStatusCutout: "primary" };
   obj1[2] = isMobileOnline;
   obj1[3] = isVROnline;
@@ -93,7 +101,7 @@ function UserResult(user) {
     }
   }
   obj1[4] = tmp19;
-  obj1[5] = require("../../activities/utils/isStreaming.tsx")(activities);
+  obj1[5] = _isStreaming(activities);
   obj1[6] = tmp4.icon.margin;
   obj1[7] = tmp4.icon.avatarSize;
   let tmp21 = !stateFromStores1;
@@ -110,7 +118,7 @@ function UserResult(user) {
   const tmp16 = closure_14;
   const tmp17 = closure_13;
   const tmp18 = UnreadSetting;
-  const tmp2Result1 = require("shared/renderChannelWrapper.tsx");
+  const tmp2Result1 = renderChannelWrapper;
   if (comparator == null) {
     comparator = tmp2(4124).getUserTag(user);
     const tmp2Result3 = tmp2(4124);
@@ -135,8 +143,8 @@ function UserResult(user) {
   obj2[4] = flag;
   obj2[5] = relativeTimestamp;
   obj2[6] = num;
-  obj2[7] = require("shared/renderChannelBadge.tsx")({ mentionCount: num, locale: stateFromStores });
-  items5[2] = require("shared/renderChannelContent.tsx")(obj2);
+  obj2[7] = renderChannelBadge({ mentionCount: num, locale: stateFromStores });
+  items5[2] = ChannelContent(obj2);
   obj4[0] = items5;
   obj[3] = tmp2Result1(tmp16(tmp17, obj4), { fontScale });
   return tmp2Result(callback(user(4812).PressableHighlight, obj));
@@ -147,16 +155,16 @@ function UserResultWithChannel(arg0) {
   let require;
   let unread;
   ({ user: require, channel } = arg0);
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [updateUserGuildSettingsInternal];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_9.isChannelMuted(undefined, channel.id));
-  const baseChannelUnreadBadgeState = require("shared/useChannelUnreadBadgeState.tsx") /* useChannelUnreadBadgeState */.useBaseChannelUnreadBadgeState(channel, stateFromStores);
+  const baseChannelUnreadBadgeState = useChannelUnreadBadgeState /* useChannelUnreadBadgeState */.useBaseChannelUnreadBadgeState(channel, stateFromStores);
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
-  const obj2 = require("shared/useChannelUnreadBadgeState.tsx") /* useChannelUnreadBadgeState */;
+  const obj2 = useChannelUnreadBadgeState /* useChannelUnreadBadgeState */;
   const items1 = [handleTypingStart];
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => outer1_8.isTyping(channel.id, id.id));
+  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => outer1_8.isTyping(channel.id, id.id));
   obj = {};
-  const obj3 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const obj3 = initialize /* initialize */;
   const merged = Object.assign(arg0);
   obj.channel = channel;
   obj.lastMessage = channel(14453)(channel, { unread });

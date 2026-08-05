@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/errors/hooks/useVideoStreamError.tsx
 import fetchFingerprint from "fetchFingerprint";
 import isAVErrorContextOfType from "isAVErrorContextOfType";
@@ -10,7 +11,7 @@ export default function useVideoStreamError(arg0, arg1) {
   const _require = arg0;
   const dependencyMap = arg1;
   let items = [isAVErrorContextOfType, fetchFingerprint];
-  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     let getActiveErrorsOfType;
     let getActiveErrorsOfType2;
     if (outer1_2.getId() !== dependencyMap) {
@@ -36,7 +37,7 @@ export const useVideoStreamErrorContext = function useVideoStreamErrorContext(ar
   const _require = arg0;
   const dependencyMap = arg1;
   const items = [isAVErrorContextOfType, fetchFingerprint];
-  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let getActiveErrorsOfType;
     let getActiveErrorsOfType2;
     if (outer1_2.getId() !== dependencyMap) {

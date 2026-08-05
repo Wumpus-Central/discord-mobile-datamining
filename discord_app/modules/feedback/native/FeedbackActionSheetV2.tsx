@@ -1,3 +1,7 @@
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { useMountLayoutEffect } from "../../../hooks/useMountEffect.tsx";
+import { usePrevious } from "../../../hooks/usePrevious.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/feedback/native/FeedbackActionSheetV2.tsx
 import _slicedToArray from "_slicedToArray";
 import TableRowInner from "TableRowInner";
@@ -11,7 +15,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function closeActionSheet() {
-  require("../../action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet();
+  ACTION_SHEET_HEIGHT_HALF.hideActionSheet();
 }
 ({ jsx: error, Fragment: metroImportAll, jsxs: c9 } = jsxProd);
 createCacheKey = { container: null, ratingsBody: null, problemsList: null };
@@ -62,9 +66,9 @@ export default function FeedbackActionSheetV2(optionsTree) {
   let tmp = first2();
   let obj = ref;
   ref = ref.useRef(null);
-  const tmp5 = require("../../../hooks/usePrevious.tsx")(optionsTree);
+  const tmp5 = usePrevious(optionsTree);
   c5 = tmp5;
-  let obj1 = require("../../../../_runtime/00012_apply.js");
+  let obj1 = apply;
   const tmp7 = callback(ref.useState(obj1.shuffle(optionsTree.map((problemOptions) => {
     const obj = {};
     const merged = Object.assign(problemOptions);
@@ -112,7 +116,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
   first5 = tmp6Result[0];
   closure_15 = tmp6Result[1];
   [c16, c17] = callback(obj.useState(false), 2);
-  require("../../../hooks/useMountEffect.tsx")(() => {
+  useMountLayoutEffect(() => {
     if (closure_1 != null) {
       tmp();
     }

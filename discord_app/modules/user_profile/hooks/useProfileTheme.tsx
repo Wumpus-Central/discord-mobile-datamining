@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
 // discord_app/modules/user_profile/hooks/useProfileTheme.tsx
 import _slicedToArray from "_slicedToArray";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -16,9 +18,9 @@ export default function useProfileTheme(arg0) {
   let user;
   ({ user, displayProfile, pendingAvatarSrc } = arg0);
   ({ pendingThemeColors, isPreview, forceUserTheme } = arg0);
-  const tmp2 = require("../../../hooks/useTheme.tsx")();
+  const tmp2 = useTheme();
   const tmp3 = useEffectiveThemeOverride();
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => obj.syncProfileThemeWithUserTheme);
   if (pendingAvatarSrc == null) {

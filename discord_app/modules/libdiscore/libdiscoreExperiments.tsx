@@ -1,3 +1,5 @@
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { isBlockedDomain } from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
 // discord_app/modules/libdiscore/libdiscoreExperiments.tsx
 import { ensureValidMode } from "ensureValidMode";
 
@@ -36,7 +38,7 @@ prototype["getCachedConfig"] = function getCachedConfig() {
     } else {
       self.cachedConfig = undefined;
     }
-    obj = require("../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx") /* isBlockedDomain */;
+    obj = isBlockedDomain /* isBlockedDomain */;
     tmp = require;
   }
   return self.cachedConfig;
@@ -45,7 +47,7 @@ prototype["setExperiment"] = function setExperiment(apexExperiment) {
   this.inner = apexExperiment;
 };
 prototype["getCurrentConfig"] = function getCurrentConfig() {
-  require("../../../_runtime/metro/00038__.js")(null != this.inner, "experiment must be set before calling getCurrentConfig");
+  00038__(null != this.inner, "experiment must be set before calling getCurrentConfig");
   const inner = this.inner;
   if ("getCurrentConfig" in this.inner) {
     let currentConfig = inner.getCurrentConfig({ location: "default" });
@@ -248,8 +250,8 @@ export const clearLibdiscoreExperimentCache = function clearLibdiscoreExperiment
   if (obj.isLibdiscoreInitialized()) {
     tmp6.info("Clearing libdiscore experiment cache and disabling sync");
     let c7 = true;
-    const experimentCacher = require("../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx") /* isBlockedDomain */.getExperimentCacher();
+    const experimentCacher = isBlockedDomain /* isBlockedDomain */.getExperimentCacher();
     experimentCacher.clearCache();
-    const tmpResult = require("../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx") /* isBlockedDomain */;
+    const tmpResult = isBlockedDomain /* isBlockedDomain */;
   }
 };

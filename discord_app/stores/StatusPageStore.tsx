@@ -1,3 +1,4 @@
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/stores/StatusPageStore.tsx
 import { Store } from "initialize";
 
@@ -10,7 +11,7 @@ class MaintenanceStore extends Store {
 }
 const prototype = MaintenanceStore.prototype;
 prototype["initialize"] = function initialize() {
-  const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   let closure_5 = Storage.get(MaintenanceStore);
 };
 prototype["getIncident"] = function getIncident() {
@@ -61,7 +62,7 @@ const maintenanceStore = new MaintenanceStore(require("dispatcher"), {
       return false;
     } else {
       const id = _null.id;
-      const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage = Storage /* Storage */.Storage;
       const result = Storage.set(MaintenanceStore, id);
     }
   }

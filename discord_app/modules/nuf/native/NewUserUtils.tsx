@@ -1,3 +1,7 @@
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { NEW_USER_MODAL_KEY } from "components/NewUserModalTypes.tsx";
+import { trackNUFStep } from "NewUserAnalyticsUtils.tsx";
 // discord_app/modules/nuf/native/NewUserUtils.tsx
 import importDefaultResult from "ME";
 import { NativeModules } from "transitionTo";
@@ -82,11 +86,11 @@ function _shouldSkipContactSyncStep() {
   return applyArgumentsResult;
 }
 function lastStepComplete(STEP_GUILD_TEMPLATE) {
-  require("NewUserAnalyticsUtils.tsx") /* trackNUFStep */.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
-  const obj = require("NewUserAnalyticsUtils.tsx") /* trackNUFStep */;
-  if (obj2.isModalOpen(require("components/NewUserModalTypes.tsx") /* NEW_USER_MODAL_KEY */.NEW_USER_MODAL_KEY)) {
-    require("../../../actions/ModalActionCreators.tsx").popWithKey(tmp(16392).NEW_USER_MODAL_KEY);
-    const obj3 = require("../../../actions/ModalActionCreators.tsx");
+  trackNUFStep /* trackNUFStep */.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
+  const obj = trackNUFStep /* trackNUFStep */;
+  if (obj2.isModalOpen(NEW_USER_MODAL_KEY /* NEW_USER_MODAL_KEY */.NEW_USER_MODAL_KEY)) {
+    ModalActionCreators.popWithKey(tmp(16392).NEW_USER_MODAL_KEY);
+    const obj3 = ModalActionCreators;
   }
   let tmpResult = tmp(1222);
   tmpResult.transitionTo(constants.ME, { navigationReplace: true });
@@ -442,7 +446,7 @@ let items = [
     key: "accept-invite",
     shouldShowStep: require("showInstantInviteActionSheet").hasDeferredInvite,
     transitionStep() {
-      require("../../../Dispatcher.tsx").dispatch({ type: "DEFERRED_INVITE_SHOW" });
+      dispatcher.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     }
   }
 ];
@@ -450,7 +454,7 @@ let obj1 = {
   key: "accept-invite",
   shouldShowStep: require("showInstantInviteActionSheet").hasDeferredInvite,
   transitionStep() {
-    require("../../../Dispatcher.tsx").dispatch({ type: "DEFERRED_INVITE_SHOW" });
+    dispatcher.dispatch({ type: "DEFERRED_INVITE_SHOW" });
   }
 };
 let result = require("initialize").fileFinishedImporting("modules/nuf/native/NewUserUtils.tsx");

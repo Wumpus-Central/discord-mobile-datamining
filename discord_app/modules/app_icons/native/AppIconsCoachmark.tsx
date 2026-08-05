@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../_runtime/08652_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/15871_registerAsset.js";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 // discord_app/modules/app_icons/native/AppIconsCoachmark.tsx
 import noop from "noop";
 import get_ActivityIndicator from "fetchCurrentAppIcon";
@@ -32,7 +35,7 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   let obj = markAsDismissed(589);
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = require("../../../utils/PremiumUtils.tsx");
+  let obj1 = getPremiumPlanItem;
   const items1 = [markAsDismissed];
   const callback = React.useCallback(() => {
     outer1_1(outer1_2[9]).hideActionSheet();
@@ -49,12 +52,12 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   };
   obj = { style: tmp.info, children: null };
   obj1 = { source: null, style: null };
-  obj1[0] = require("../../../../_runtime/15871_registerAsset.js");
+  obj1[0] = registerAsset;
   obj1[1] = tmp.image;
   const items2 = [callback(closure_4, obj1), , ];
   const obj2 = { style: tmp.titleContainer, children: null };
   const obj3 = { source: null, size: null, style: null, disableColor: true };
-  obj3[0] = require("../../../../_runtime/08652_registerAsset.js");
+  obj3[0] = registerAsset;
   obj3[1] = markAsDismissed(1297).IconSizes.MEDIUM;
   obj3[2] = tmp.nitroWheel;
   const items3 = [callback(markAsDismissed(1297).Icon, obj3), ];

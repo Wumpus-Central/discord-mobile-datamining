@@ -1,3 +1,8 @@
+import { apply } from "../../_runtime/00012_apply.js";
+import { isUndefinedOrNull } from "../../_runtime/00659_isUndefinedOrNull.js";
+import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { isListeningOnSpotify } from "../modules/activities/utils/isListeningOnSpotify.tsx";
+import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
 // discord_app/stores/SelfPresenceStore.tsx
 import upsertAccount from "upsertAccount";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -60,7 +65,7 @@ function shouldShowActivity(flags) {
   } else {
     const type = flags.type;
     if (constants2.LISTENING === type) {
-      if (require("../modules/activities/utils/isListeningOnSpotify.tsx")(flags)) {
+      if (isListeningOnSpotify(flags)) {
         let shouldShowActivityResult = upsertAccount.shouldShowActivity();
       } else {
         shouldShowActivityResult = null != flags.application_id;
@@ -97,7 +102,7 @@ function shouldShowActivity(flags) {
       return result1;
     }
   }
-  obj = require("../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+  obj = hasFlag /* hasFlag */;
 }
 function handleUpdate() {
   let num = idleSince.getIdleSince();
@@ -113,7 +118,7 @@ function handleUpdate() {
     IDLE = INVISIBLE;
     ONLINE = INVISIBLE;
   } else {
-    const StatusSetting = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.StatusSetting;
+    const StatusSetting = explicitContentFromProto /* explicitContentFromProto */.StatusSetting;
     ONLINE = StatusSetting.getSetting();
     if (ONLINE === StatusTypes.UNKNOWN) {
       ONLINE = StatusTypes.ONLINE;
@@ -133,7 +138,7 @@ function handleUpdate() {
       let found = activities.filter(shouldShowActivity);
     }
     let flag = false;
-    if (!require("../../_runtime/00659_isUndefinedOrNull.js")(found, found)) {
+    if (!isUndefinedOrNull(found, found)) {
       let closure_21 = filterPlayingActivities(found);
       flag = true;
     }
@@ -146,11 +151,11 @@ function handleUpdate() {
       const items = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(found, 0);
       arraySpreadResult = HermesBuiltin.arraySpread(remoteActivities.filter((type) => type.type !== constants.CUSTOM_STATUS), arraySpreadResult);
-      const tmp12Result = require("../../_runtime/00012_apply.js");
-      const tmp12ResultResult = require("../../_runtime/00012_apply.js")(items.sort(sortActivity));
-      const valueResult = require("../../_runtime/00012_apply.js")(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name).value();
+      const tmp12Result = apply;
+      const tmp12ResultResult = apply(items.sort(sortActivity));
+      const valueResult = apply(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name).value();
       let closure_27 = filterPlayingActivities(valueResult);
-      const iter = require("../../_runtime/00012_apply.js")(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name);
+      const iter = apply(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name);
     }
   }
   found = [];

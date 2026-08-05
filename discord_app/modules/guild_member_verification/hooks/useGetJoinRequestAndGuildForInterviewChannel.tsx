@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_member_verification/hooks/useGetJoinRequestAndGuildForInterviewChannel.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -22,7 +23,7 @@ export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
   callback = castResult;
   let obj = first(11);
   const items = [updateSubmittedGuildJoinRequestTotal, handleGatewayJoinRequestUpdate, joinRequestGuild, getUncachedChannelPermissions];
-  const stateFromStoresObject = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = initialize /* initialize */.useStateFromStoresObject(items, () => {
     const request = outer1_7.getRequest(_slicedToArray);
     if (null == request) {
       return { joinRequest: null, isModmin: false, guild: null };

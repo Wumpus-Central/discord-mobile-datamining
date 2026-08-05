@@ -1,14 +1,16 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { apexExperiment } from "../../../game_mentions/GameMentionsMobileExperiment.tsx";
 // discord_app/modules/user_settings/defs/native/GameMentionsAutocompleteSetting.tsx
 import createToggle from "createToggle";
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.c0oFDw);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.c0oFDw);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   usePredicate() {
-    const GameMentionsMobileExperiment = require("../../../game_mentions/GameMentionsMobileExperiment.tsx") /* apexExperiment */.GameMentionsMobileExperiment;
+    const GameMentionsMobileExperiment = apexExperiment /* apexExperiment */.GameMentionsMobileExperiment;
     return GameMentionsMobileExperiment.useConfig({ location: "GameMentionsInAutocomplete" }).enabled;
   },
   useValue: require("explicitContentFromProto").IncludeGameMentionsInAutocomplete.useSetting,
@@ -16,12 +18,12 @@ const toggle = createToggle.createToggle({
 });
 const obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.c0oFDw);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.c0oFDw);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   usePredicate() {
-    const GameMentionsMobileExperiment = require("../../../game_mentions/GameMentionsMobileExperiment.tsx") /* apexExperiment */.GameMentionsMobileExperiment;
+    const GameMentionsMobileExperiment = apexExperiment /* apexExperiment */.GameMentionsMobileExperiment;
     return GameMentionsMobileExperiment.useConfig({ location: "GameMentionsInAutocomplete" }).enabled;
   },
   useValue: require("explicitContentFromProto").IncludeGameMentionsInAutocomplete.useSetting,

@@ -1,3 +1,4 @@
+import { fetchCurrentAppIcon } from "AppIconUtils.tsx";
 // discord_app/modules/app_icons/native/AppIconPremiumManager.tsx
 import FreemiumAppIconIds from "FreemiumAppIconIds";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -139,9 +140,9 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
 prototype["resetIcon"] = function resetIcon(arg0, c0, ORPHANED) {
   const _require = arg0;
   let closure_1 = ORPHANED;
-  let obj = _require("AppIconUtils.tsx");
-  const setAppIconResult = _require("AppIconUtils.tsx").setAppIcon(DEFAULT, c0);
-  _require("AppIconUtils.tsx").setAppIcon(DEFAULT, c0).then(() => {
+  let obj = _fetchCurrentAppIcon;
+  const setAppIconResult = _fetchCurrentAppIcon.setAppIcon(DEFAULT, c0);
+  _fetchCurrentAppIcon.setAppIcon(DEFAULT, c0).then(() => {
     let obj = ORPHANED(outer1_2[10]);
     obj = { previous_icon_id: closure_0, reset_to_icon_id: outer1_8, reset_reason: ORPHANED };
     obj.track(outer1_6.APP_ICON_AUTO_RESET, obj);

@@ -1,3 +1,4 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/forums/native/posts/ForumPostTitle.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -28,5 +29,5 @@ export default function ForumPostTitle(arg0) {
     str = "mobile-text-heading-primary";
   }
   const tmp = createCacheKey();
-  return jsx(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/semibold", color: str, lineClamp, ellipsizeMode, style: createCacheKey().title, onTextLayout, children: title });
+  return jsx(Text /* Text */.Text, { variant: "text-md/semibold", color: str, lineClamp, ellipsizeMode, style: createCacheKey().title, onTextLayout, children: title });
 };

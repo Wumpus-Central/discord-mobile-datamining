@@ -1,3 +1,4 @@
+import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/SubscriptionPlanActionCreators.tsx
 import _deletePaymentSource from "_deletePaymentSource";
 import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd";
@@ -188,5 +189,5 @@ export const fetchPremiumSubscriptionPlans = function fetchPremiumSubscriptionPl
   return Promise.all(found.map((arg0) => outer1_8(arg0, closure_0, closure_1, undefined, closure_2, _deletePaymentSource)));
 };
 export const resetSubscriptionPlanData = function resetSubscriptionPlanData() {
-  require("../Dispatcher.tsx").dispatch({ type: "SUBSCRIPTION_PLANS_RESET" });
+  dispatcher.dispatch({ type: "SUBSCRIPTION_PLANS_RESET" });
 };

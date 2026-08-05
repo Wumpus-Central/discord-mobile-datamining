@@ -1,3 +1,6 @@
+import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/contact_sync/native/components/ContactSyncError.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -17,7 +20,7 @@ export default function ContactSyncError(error) {
     tmp2 = "" !== error;
   }
   _require = tmp2;
-  let obj = _require("../../../reanimated/ReanimatedRexport.tsx");
+  let obj = _ReanimatedRexport;
   const fn = function l() {
     let obj = _undefined(outer1_2[4]);
     let num = 0;
@@ -27,13 +30,13 @@ export default function ContactSyncError(error) {
     obj = { height: obj.withTiming(num) };
     return obj;
   };
-  obj = { withTiming: _require("../../../../design/animation/reanimated/timing/timing.tsx").withTiming, hasError: tmp2, ERROR_HEIGHT: 44 };
+  obj = { withTiming: _CONFIG_NEVER_ANIMATE_TIMING.withTiming, hasError: tmp2, ERROR_HEIGHT: 44 };
   fn.__closure = obj;
   fn.__workletHash = 14558247431913;
   fn.__initData = closure_5;
   const animatedStyle = obj.useAnimatedStyle(fn);
   obj = { style: items, children: null };
   items = [tmp.container, error.style, animatedStyle];
-  obj[1] = jsx(_require("../../../../design/components/Text/native/Text.tsx").Text, { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp.error, children: error });
-  return jsx(require("../../../reanimated/ReanimatedRexport.tsx").View, { style: items, children: null });
+  obj[1] = jsx(_Text.Text, { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp.error, children: error });
+  return jsx(ReanimatedRexport.View, { style: items, children: null });
 };

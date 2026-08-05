@@ -1,3 +1,10 @@
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { set } from "../../../actions/AlertActionCreators.tsx";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { saveProfileAndAccountRequest } from "../../../actions/UserSettingsAccountActionCreators.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { _startContactSyncForDiscoverability } from "../../nuf/native/NUFActionCreators.tsx";
 // discord_app/modules/avatar/native/AddAvatarModalActionCreators.tsx
 import { ADD_AVATAR_MODAL_KEY } from "ADD_AVATAR_MODAL_KEY";
 import { AnalyticEvents } from "ME";
@@ -9,35 +16,35 @@ export const handlePressNext = function handlePressNext(pendingImage, first, fn)
     let obj = { default_avatar_selected: null, is_guild_profile: false, location: null };
     obj[0] = first;
     obj[2] = { page: "Onboarding" };
-    require("../../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.USER_AVATAR_UPDATED, obj);
-    const obj3 = require("../../../utils/AnalyticsUtils.tsx");
+    expandEventProperties.track(AnalyticEvents.USER_AVATAR_UPDATED, obj);
+    const obj3 = expandEventProperties;
     obj = { avatar: null, avatar_description: null };
     ({ imageUri: obj6[0], description: obj6[1] } = pendingImage);
-    const result = require("../../../actions/UserSettingsAccountActionCreators.tsx") /* saveProfileAndAccountRequest */.saveProfileAndAccountRequest(obj);
-    const obj5 = require("../../../actions/UserSettingsAccountActionCreators.tsx") /* saveProfileAndAccountRequest */;
+    const result = saveProfileAndAccountRequest /* saveProfileAndAccountRequest */.saveProfileAndAccountRequest(obj);
+    const obj5 = saveProfileAndAccountRequest /* saveProfileAndAccountRequest */;
   }
   if (null != fn) {
     fn();
   } else {
-    obj = require("../../../actions/ModalActionCreators.tsx");
+    obj = ModalActionCreators;
     obj.popWithKey(ADD_AVATAR_MODAL_KEY);
-    require("../../nuf/native/NUFActionCreators.tsx") /* _startContactSyncForDiscoverability */.nextOnboardingStep({ skip: false });
-    const obj2 = require("../../nuf/native/NUFActionCreators.tsx") /* _startContactSyncForDiscoverability */;
+    _startContactSyncForDiscoverability /* _startContactSyncForDiscoverability */.nextOnboardingStep({ skip: false });
+    const obj2 = _startContactSyncForDiscoverability /* _startContactSyncForDiscoverability */;
   }
 };
 export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
   const _require = arg0;
-  let obj = require("../../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj.track(AnalyticEvents.NUO_TRANSITION, { flow_type: "Mobile NUX Post Reg", from_step: "Skip avatar modal", skip_attempt: true });
   obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false };
-  const intl = _require("../../../intl/index.native.tsx").intl;
-  obj[0] = intl.string(_require("../../../intl/index.native.tsx").t.DnKHuV);
-  const intl2 = _require("../../../intl/index.native.tsx").intl;
-  obj[1] = intl2.string(_require("../../../intl/index.native.tsx").t["1EPySE"]);
-  const intl3 = _require("../../../intl/index.native.tsx").intl;
-  obj[2] = intl3.string(_require("../../../intl/index.native.tsx").t["7eZ3ji"]);
-  const intl4 = _require("../../../intl/index.native.tsx").intl;
-  obj[3] = intl4.string(_require("../../../intl/index.native.tsx").t.nhJ8OC);
+  const intl = _getSystemLocale.intl;
+  obj[0] = intl.string(_getSystemLocale.t.DnKHuV);
+  const intl2 = _getSystemLocale.intl;
+  obj[1] = intl2.string(_getSystemLocale.t["1EPySE"]);
+  const intl3 = _getSystemLocale.intl;
+  obj[2] = intl3.string(_getSystemLocale.t["7eZ3ji"]);
+  const intl4 = _getSystemLocale.intl;
+  obj[3] = intl4.string(_getSystemLocale.t.nhJ8OC);
   obj[4] = function onConfirm() {
     callback(outer1_2[6]).setPendingChanges({ avatar: null });
     const obj = callback(outer1_2[6]);
@@ -52,8 +59,8 @@ export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
       const tmpResult = tmp(tmp2[11]);
     }
   };
-  require("../../../actions/AlertActionCreators.tsx").show(obj);
+  set.show(obj);
 };
 export const openAddAvatarModal = function openAddAvatarModal() {
-  require("../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(16379, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
+  ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(16379, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
 };

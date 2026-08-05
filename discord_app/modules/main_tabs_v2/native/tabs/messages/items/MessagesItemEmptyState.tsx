@@ -1,3 +1,7 @@
+import { registerAsset } from "../../../../../../../_runtime/15082_registerAsset.js";
+import { Button } from "../../../../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemEmptyState.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -39,23 +43,23 @@ const memoResult = importAllResult.memo(function MessagesItemEmptyState() {
       }
     }
   }, []);
-  obj[1] = require("../../../../../../../_runtime/15082_registerAsset.js");
+  obj[1] = registerAsset;
   obj[2] = tmp.image;
   obj[1] = callback(closure_4, obj);
   const items = [callback(closure_5, obj), , , ];
   const obj1 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: tmp.title, maxFontSizeMultiplier: 2, children: null };
-  const intl = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[4] = intl.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t["8JZof8"]);
-  items[1] = callback(require("../../../../../../design/components/Text/native/Text.tsx") /* Text */.Heading, obj1);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj1[4] = intl.string(getSystemLocale /* getSystemLocale */.t["8JZof8"]);
+  items[1] = callback(Text /* Text */.Heading, obj1);
   const obj2 = { color: "text-default", variant: "text-md/medium", style: tmp.body, maxFontSizeMultiplier: 2, children: null };
-  const intl2 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj2[4] = intl2.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t["qm+H7x"]);
-  items[2] = callback(require("../../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj2[4] = intl2.string(getSystemLocale /* getSystemLocale */.t["qm+H7x"]);
+  items[2] = callback(Text /* Text */.Text, obj2);
   const obj3 = { text: null, onPress: null, size: "lg" };
-  const intl3 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj3[0] = intl3.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.zIJnA6);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj3[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.zIJnA6);
   obj3[1] = callback;
-  items[3] = callback(require("../../../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj3);
+  items[3] = callback(Button /* Button */.Button, obj3);
   obj[2] = items;
   return callback2(closure_5, obj);
 });

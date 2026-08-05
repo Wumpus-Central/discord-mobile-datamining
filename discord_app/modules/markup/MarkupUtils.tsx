@@ -1,3 +1,7 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { combineMarkupRules } from "combineMarkupRules.tsx";
+import { MarkupText } from "MarkupReactRules.native.tsx";
+import { parseLink } from "MarkupRules.tsx";
 // discord_app/modules/markup/MarkupUtils.tsx
 import importDefaultResult from "apply";
 import importDefaultResult1 from "apply";
@@ -32,17 +36,17 @@ import importDefaultResult28 from "apply";
 let closure_3 = ["url", "autolink", "link", "mailto", "tel"];
 let obj = { enableBuildOverrides: false, enableEmojiClick: true };
 let closure_5 = require("apply").once(() => {
-  const items = [require("MarkupReactRules.native.tsx")({ enableBuildOverrides: true })];
-  const items1 = [require("MarkupRules.tsx").RULES, ];
+  const items = [MarkupText({ enableBuildOverrides: true })];
+  const items1 = [parseLink.RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
-  return require("combineMarkupRules.tsx")(items1);
+  return combineMarkupRules(items1);
 });
 let closure_6 = require("apply").once(() => {
-  const obj = require("../../../_runtime/00012_apply.js");
-  const items = [require("MarkupReactRules.native.tsx")(obj)];
-  const items1 = [require("MarkupRules.tsx").RULES, ];
+  const obj = apply;
+  const items = [MarkupText(obj)];
+  const items1 = [parseLink.RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
-  return obj.omit(require("combineMarkupRules.tsx")(items1), "paragraph", "newline");
+  return obj.omit(combineMarkupRules(items1), "paragraph", "newline");
 });
 let closure_7 = require("apply").once(() => {
   let obj = {};
@@ -51,15 +55,15 @@ let closure_7 = require("apply").once(() => {
   obj.shouldCloseDefaultModals = true;
   obj.shouldStopPropagation = true;
   const merged1 = Object.assign({});
-  const items = [require("MarkupReactRules.native.tsx")(obj), ];
+  const items = [MarkupText(obj), ];
   obj = { codeBlock: null };
-  obj = { react: require("MarkupRules.tsx").RULES.text.react };
+  obj = { react: parseLink.RULES.text.react };
   obj[0] = obj;
   items[1] = obj;
-  const items1 = [require("MarkupRules.tsx").CHANNEL_TOPIC_RULES, ];
-  const tmp = require("MarkupReactRules.native.tsx");
+  const items1 = [parseLink.CHANNEL_TOPIC_RULES, ];
+  const tmp = MarkupText;
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
-  return require("combineMarkupRules.tsx")(items1);
+  return combineMarkupRules(items1);
 });
 let closure_8 = require("apply").once(() => {
   let obj = {};
@@ -68,72 +72,72 @@ let closure_8 = require("apply").once(() => {
   obj.shouldCloseDefaultModals = true;
   obj.shouldStopPropagation = true;
   const merged1 = Object.assign({ emojiFocusable: false });
-  const items = [require("MarkupReactRules.native.tsx")(obj), ];
+  const items = [MarkupText(obj), ];
   obj = { codeBlock: null };
-  obj = { react: require("MarkupRules.tsx").RULES.text.react };
+  obj = { react: parseLink.RULES.text.react };
   obj[0] = obj;
   items[1] = obj;
-  const items1 = [require("MarkupRules.tsx").CHANNEL_TOPIC_RULES, ];
-  const tmp = require("MarkupReactRules.native.tsx");
+  const items1 = [parseLink.CHANNEL_TOPIC_RULES, ];
+  const tmp = MarkupText;
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
-  return require("combineMarkupRules.tsx")(items1);
+  return combineMarkupRules(items1);
 });
 let closure_9 = require("apply").once(() => {
   const obj = {};
   const merged = Object.assign(obj);
   obj.enableEmojiClick = false;
-  const items = [require("MarkupReactRules.native.tsx")(obj)];
-  const items1 = [require("MarkupRules.tsx").VOICE_CHANNEL_STATUS_RULES, ];
-  const tmp = require("MarkupReactRules.native.tsx");
+  const items = [MarkupText(obj)];
+  const items1 = [parseLink.VOICE_CHANNEL_STATUS_RULES, ];
+  const tmp = MarkupText;
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
-  return require("combineMarkupRules.tsx")(items1);
+  return combineMarkupRules(items1);
 });
 let closure_10 = require("apply").once(() => {
-  const items = [require("MarkupReactRules.native.tsx")(obj)];
-  const items1 = [require("MarkupRules.tsx").EMBED_TITLE_RULES, ];
+  const items = [MarkupText(obj)];
+  const items1 = [parseLink.EMBED_TITLE_RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
-  return require("combineMarkupRules.tsx")(items1);
+  return combineMarkupRules(items1);
 });
 let closure_11 = require("apply").once(() => {
-  const obj = require("../../../_runtime/00012_apply.js");
-  const items = [require("MarkupReactRules.native.tsx")(obj)];
-  const items1 = [require("MarkupRules.tsx").EMBED_TITLE_RULES, ];
+  const obj = apply;
+  const items = [MarkupText(obj)];
+  const items1 = [parseLink.EMBED_TITLE_RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
-  return obj.omit(require("combineMarkupRules.tsx")(items1), closure_3);
+  return obj.omit(combineMarkupRules(items1), closure_3);
 });
 let closure_12 = require("apply").once(() => {
-  const items = [require("MarkupReactRules.native.tsx")(obj)];
-  const items1 = [require("MarkupRules.tsx").INLINE_REPLY_RULES, ];
+  const items = [MarkupText(obj)];
+  const items1 = [parseLink.INLINE_REPLY_RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
-  return require("combineMarkupRules.tsx")(items1);
+  return combineMarkupRules(items1);
 });
 let closure_13 = require("apply").once(() => {
-  const items = [require("MarkupReactRules.native.tsx")(obj)];
-  const items1 = [require("MarkupRules.tsx").GUILD_VERIFICATION_FORM_RULES, ];
+  const items = [MarkupText(obj)];
+  const items1 = [parseLink.GUILD_VERIFICATION_FORM_RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
-  return require("combineMarkupRules.tsx")(items1);
+  return combineMarkupRules(items1);
 });
 let closure_14 = require("apply").once(() => {
   const obj = {};
   const merged = Object.assign(obj);
   obj.shouldStopPropagation = true;
-  const items = [require("MarkupReactRules.native.tsx")(obj)];
-  const items1 = [require("MarkupRules.tsx").GUILD_EVENT_RULES, ];
+  const items = [MarkupText(obj)];
+  const items1 = [parseLink.GUILD_EVENT_RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
-  return require("combineMarkupRules.tsx")(items1);
+  return combineMarkupRules(items1);
 });
 let closure_15 = require("apply").once(() => {
-  const items = [require("MarkupReactRules.native.tsx")(obj)];
-  const items1 = [require("MarkupRules.tsx").AUTO_MODERATION_SYSTEM_MESSAGE_RULES, ];
+  const items = [MarkupText(obj)];
+  const items1 = [parseLink.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
-  return require("combineMarkupRules.tsx")(items1);
+  return combineMarkupRules(items1);
 });
 let closure_16 = require("apply").once(() => {
-  const items = [require("MarkupReactRules.native.tsx")(obj)];
-  const items1 = [require("MarkupRules.tsx").RULES, ];
-  const tmp = require("../../../_runtime/00012_apply.js");
+  const items = [MarkupText(obj)];
+  const items1 = [parseLink.RULES, ];
+  const tmp = apply;
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
-  const items2 = [require("combineMarkupRules.tsx")(items1), "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "list", "heading", "subtext", ...closure_3];
+  const items2 = [combineMarkupRules(items1), "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "list", "heading", "subtext", ...closure_3];
   return tmp.omit.apply(items2);
 });
 obj = { text: require("parseLink").RULES.text };
@@ -158,7 +162,7 @@ obj = {
   combineAndInjectMentionRule(arg0, arg1) {
     const items = [arg0, ];
     items[HermesBuiltin.arraySpread(arg1, 1)] = {};
-    return require("combineMarkupRules.tsx")(items);
+    return combineMarkupRules(items);
   },
   createReactRules: require("MarkupText"),
   defaultReactRuleOptions: obj

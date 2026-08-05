@@ -1,10 +1,11 @@
+import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 // discord_app/modules/collectibles/records/FeaturedBlockRecord.tsx
 import { FeaturedCategorySubblockRecord as closure_2 } from "fromServer";
 
 let prototype;
 prototype = function FeaturedBlockRecord(subblocks) {
   const obj = Object.create(new.target.prototype);
-  obj.type = require("../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx") /* ShopBlockType */.ShopBlockType.FEATURED;
+  obj.type = ShopBlockType /* ShopBlockType */.ShopBlockType.FEATURED;
   subblocks = subblocks.subblocks;
   obj.subblocks = subblocks.map((type) => {
     if (type.type === callback(table[2]).FeaturedSubblockType.CATEGORY) {
@@ -22,7 +23,7 @@ prototype["fromServer"] = function fromServer(subblocks) {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);
-  obj.type = require("../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx") /* ShopBlockType */.ShopBlockType.FEATURED;
+  obj.type = ShopBlockType /* ShopBlockType */.ShopBlockType.FEATURED;
   subblocks = subblocks.subblocks;
   obj.subblocks = subblocks.map((type) => {
     if (type.type === callback(table[2]).FeaturedSubblockType.CATEGORY) {

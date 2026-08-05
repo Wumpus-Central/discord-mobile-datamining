@@ -1,3 +1,10 @@
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { _detectH265HardwareDecode } from "../../stores/MediaEngineStore.tsx";
+import { isStreamKey } from "../go_live/utils/StreamKeyUtils.tsx";
+import { apexExperiment } from "AutoclippingDefaultOverrideExperiment.tsx";
+import { apexExperiment } from "DistributedClipsExperiment.tsx";
+import { isClipsEnabled } from "isClipsEnabled.tsx";
 // discord_app/modules/clips/ClipsStore.tsx
 import closure_3 from "RESOLUTION_720";
 import initialize from "initialize";
@@ -163,7 +170,7 @@ function trackSharedRemoteClipId(arg0, arg1, arg2) {
   } else {
     return false;
   }
-  obj = require("DistributedClipsExperiment.tsx");
+  obj = apexExperiment;
 }
 ({ CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_6, ClipSaveTypes: error, ClipsUserEducationType: metroImportAll, ClipsLogger: c9, MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: c10, ClipsHardwareClassification: unpackModuleId, ClipsSaveNoOpReason: closure_12, ClipsLengthSettings, ClipsViewerConnectivitySettings, DEFAULT_MAX_AUTO_CLIPS, DEFAULT_CLIPS_BITRATE_PERCENT } = result);
 let c14 = "default";
@@ -231,7 +238,7 @@ prototype["getSettings"] = function getSettings() {
 prototype["getEnableAutoclipping"] = function getEnableAutoclipping() {
   let enabled = closure_31.clipsSettings.enableAutoclipping;
   if (enabled == null) {
-    const AutoclippingDefaultOverrideExperiment = require("AutoclippingDefaultOverrideExperiment.tsx") /* apexExperiment */.AutoclippingDefaultOverrideExperiment;
+    const AutoclippingDefaultOverrideExperiment = apexExperiment /* apexExperiment */.AutoclippingDefaultOverrideExperiment;
     enabled = AutoclippingDefaultOverrideExperiment.getConfig({ location: "getAutoclippingDefault" }).enabled;
   }
   return enabled;
@@ -406,7 +413,7 @@ let items = [
     return obj;
   },
   (clipsSettings) => {
-    const _default = require("../../stores/MediaEngineStore.tsx") /* _detectH265HardwareDecode */.default;
+    const _default = _detectH265HardwareDecode /* _detectH265HardwareDecode */.default;
     let hardwareEncoding;
     if (_default != null) {
       hardwareEncoding = _default.getHardwareEncoding();
@@ -616,7 +623,7 @@ obj = {
     if (tmp5) {
       tmp5 = obj.id === clip.gameSessionId;
     }
-    require("../../../_runtime/metro/00038__.js")(tmp5, "Promoting clip candidates that do not match current autoclip session");
+    00038__(tmp5, "Promoting clip candidates that do not match current autoclip session");
     obj = {};
     const merged1 = Object.assign(obj);
     obj.candidateClipsPromoted = obj.candidateClipsPromoted + 1;
@@ -629,7 +636,7 @@ obj = {
     const items1 = [];
     items1[HermesBuiltin.arraySpread(newClipIds1, 0)] = clip.id;
     obj.newClipIds = items1;
-    const tmp4 = require("../../../_runtime/metro/00038__.js");
+    const tmp4 = 00038__;
     delete tmp2[tmp];
     closure_16[clip.id] = clip;
     obj.hasClips = true;
@@ -656,7 +663,7 @@ obj = {
     let pid;
     let sourceName;
     ({ sourceName, pid } = arg0);
-    let obj = require("isClipsEnabled.tsx") /* isClipsEnabled */;
+    let obj = isClipsEnabled /* isClipsEnabled */;
     if (obj.isClipsEnabled()) {
       let tmp2 = sourceName;
       if (null != pid) {
@@ -685,7 +692,7 @@ obj = {
   STREAM_STOP: function handleStreamStop(arg0) {
     let tmp2 = null != _null;
     if (tmp2) {
-      let obj = require("../go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */;
+      let obj = isStreamKey /* isStreamKey */;
       const tmp6 = obj.decodeStreamKey(tmp).ownerId === store.getId();
       if (tmp6) {
         let tmp8 = null;
@@ -787,11 +794,11 @@ obj = {
   },
   RTC_CONNECTION_FLAGS: function handleRTCConnectionFlagsUpdate(flags) {
     const obj = { clipsEnabled: null, allowVoiceRecording: null, allowAnyViewerClips: null };
-    obj[0] = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(flags.flags, VoiceFlags.CLIPS_ENABLED);
-    const obj2 = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
-    obj[1] = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(flags.flags, VoiceFlags.ALLOW_VOICE_RECORDING);
-    const obj3 = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
-    obj[2] = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(flags.flags, VoiceFlags.ALLOW_ANY_VIEWER_CLIPS);
+    obj[0] = hasFlag /* hasFlag */.hasFlag(flags.flags, VoiceFlags.CLIPS_ENABLED);
+    const obj2 = hasFlag /* hasFlag */;
+    obj[1] = hasFlag /* hasFlag */.hasFlag(flags.flags, VoiceFlags.ALLOW_VOICE_RECORDING);
+    const obj3 = hasFlag /* hasFlag */;
+    obj[2] = hasFlag /* hasFlag */.hasFlag(flags.flags, VoiceFlags.ALLOW_ANY_VIEWER_CLIPS);
     closure_25[flags.userId] = obj;
   },
   CLIPS_SHOW_CALL_WARNING: function handleShowCallWarning(channelId) {
@@ -820,7 +827,7 @@ obj = {
   },
   CLIPS_INIT: function handleClipsInit(applicationName) {
     let c26 = null;
-    let obj = require("isClipsEnabled.tsx") /* isClipsEnabled */;
+    let obj = isClipsEnabled /* isClipsEnabled */;
     if (obj.isClipsEnabled()) {
       obj = { applicationName: null, newClipIds: null, ended: false };
       obj[0] = applicationName.applicationName;

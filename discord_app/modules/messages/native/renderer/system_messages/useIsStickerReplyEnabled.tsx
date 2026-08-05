@@ -1,3 +1,4 @@
+import { useCanUnarchiveThread } from "../../../../threads/ThreadHooks.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -18,7 +19,7 @@ export const computeIsStickerReplyEnabled = function computeIsStickerReplyEnable
     }
     tmp2 = isPending;
   }
-  const isReadOnlyThread = require("../../../../threads/ThreadHooks.tsx") /* useCanUnarchiveThread */.computeIsReadOnlyThread(channel);
+  const isReadOnlyThread = useCanUnarchiveThread /* useCanUnarchiveThread */.computeIsReadOnlyThread(channel);
   let canResult = getUncachedChannelPermissions.can(Permissions.SEND_MESSAGES, channel);
   if (canResult) {
     canResult = !isReadOnlyThread;

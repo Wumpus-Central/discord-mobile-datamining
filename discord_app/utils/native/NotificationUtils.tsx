@@ -1,3 +1,7 @@
+import { getOrRefreshPushSyncToken } from "../../actions/native/PushNotificationActionCreators.tsx";
+import { NativeModules } from "../../lib/pushnotification/PushNotification.tsx";
+import { createSoundForPack } from "../../modules/sound_playback/SoundUtils.tsx";
+import { expandEventProperties } from "../AnalyticsUtils.tsx";
 // discord_app/utils/native/NotificationUtils.tsx
 import expandEventProperties from "expandEventProperties";
 import { NativeModules } from "get ActivityIndicator";
@@ -9,7 +13,7 @@ let result = require("set").fileFinishedImporting("utils/native/NotificationUtil
 
 export default {
   hasPermission() {
-    return require("../../lib/pushnotification/PushNotification.tsx").requestPermissions((badge) => {
+    return NativeModules.requestPermissions((badge) => {
       let _alert;
       let sound;
       ({ alert: _alert, sound } = badge);
@@ -24,11 +28,11 @@ export default {
   },
   requestPermission(arg0) {
     const _require = arg0;
-    let result = _require("../../actions/native/PushNotificationActionCreators.tsx").setPushPermissionState(PermissionStateType.REQUESTED);
-    let obj = _require("../../actions/native/PushNotificationActionCreators.tsx");
-    require("../AnalyticsUtils.tsx").track(AnalyticEvents.PERMISSIONS_REQUESTED, { type: "notification" });
-    const obj2 = require("../AnalyticsUtils.tsx");
-    const permissions = require("../../lib/pushnotification/PushNotification.tsx").requestPermissions();
+    let result = _getOrRefreshPushSyncToken.setPushPermissionState(PermissionStateType.REQUESTED);
+    let obj = _getOrRefreshPushSyncToken;
+    expandEventProperties.track(AnalyticEvents.PERMISSIONS_REQUESTED, { type: "notification" });
+    const obj2 = expandEventProperties;
+    const permissions = NativeModules.requestPermissions();
     permissions.then((sound) => {
       let _alert;
       let badge;
@@ -102,6 +106,6 @@ export default {
     if (arg1 === undefined) {
       num = 1;
     }
-    require("../../modules/sound_playback/SoundUtils.tsx") /* createSoundForPack */.playSound(arg0, num, undefined, arg2);
+    createSoundForPack /* createSoundForPack */.playSound(arg0, num, undefined, arg2);
   }
 };

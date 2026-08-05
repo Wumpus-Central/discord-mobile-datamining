@@ -1,3 +1,12 @@
+import { 00038__ } from "../../_runtime/metro/00038__.js";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { isStreamKey } from "../modules/go_live/utils/StreamKeyUtils.tsx";
+import { transitionToStream } from "../modules/go_live/utils/transitionToStream.native.tsx";
+import { allowChannelAccess } from "../utils/ChannelUtils.tsx";
+import { isPremiumResolution } from "../utils/StreamQualityUtils.tsx";
+import { ChannelActionCreators } from "ChannelActionCreators.tsx";
+import { SelectedChannelActionCreators } from "SelectedChannelActionCreators.tsx";
 // discord_app/actions/StreamActionCreators.tsx
 import fetchFingerprint from "fetchFingerprint";
 import set from "set";
@@ -20,7 +29,7 @@ function watchStream(stream, forceMultiple) {
   if (null == remoteSessionId.getRemoteSessionId()) {
     const channelId = stream.channelId;
     if (null == stream.guildId) {
-      const encodeStreamKeyResult = require("../modules/go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */.encodeStreamKey(stream);
+      const encodeStreamKeyResult = isStreamKey /* isStreamKey */.encodeStreamKey(stream);
       forceMultiple = undefined;
       if (forceMultiple != null) {
         forceMultiple = forceMultiple.forceMultiple;
@@ -29,12 +38,12 @@ function watchStream(stream, forceMultiple) {
         const allActiveStreamsForChannel = authStore.getAllActiveStreamsForChannel(channelId);
         forceMultiple = allActiveStreamsForChannel.filter((ownerId) => ownerId.ownerId !== id.getId()).length >= MAX_VALUE;
       }
-      const obj2 = require("../modules/go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */;
+      const obj2 = isStreamKey /* isStreamKey */;
       const tmp18 = importDefault;
       let obj = { type: "STREAM_WATCH", streamKey: null, allowMultiple: null };
       obj[1] = encodeStreamKeyResult;
       obj[2] = forceMultiple;
-      require("../Dispatcher.tsx").dispatch(obj);
+      dispatcher.dispatch(obj);
       let forceFocus;
       if (forceMultiple != null) {
         forceFocus = forceMultiple.forceFocus;
@@ -54,14 +63,14 @@ function watchStream(stream, forceMultiple) {
         const participant = tmp18(4478).selectParticipant(stream.channelId, encodeStreamKeyResult);
         const tmp18Result = tmp18(4478);
       }
-      const obj3 = require("../Dispatcher.tsx");
+      const obj3 = dispatcher;
     } else {
       const channel = store.getChannel(channelId);
-      require("../../_runtime/metro/00038__.js")(null != channel, "Cannot join a null voice channel");
+      00038__(null != channel, "Cannot join a null voice channel");
       const isInChannelResult = updateVoiceState.isInChannel(channelId);
       let isChannelFullResult = !isInChannelResult;
       if (!isInChannelResult) {
-        obj = require("../utils/ChannelUtils.tsx") /* allowChannelAccess */;
+        obj = allowChannelAccess /* allowChannelAccess */;
         isChannelFullResult = obj.isChannelFull(channel, tmp6, createGuildRecordFromRust);
       }
       tmp6 = updateVoiceState;
@@ -239,7 +248,7 @@ function _notifyStreamStart() {
 let result = require("initialize").fileFinishedImporting("actions/StreamActionCreators.tsx");
 
 export const startStream = function startStream(guildId, channelId) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   if (null != guildId) {
     let CALL = StreamTypes.GUILD;
   } else {
@@ -250,14 +259,14 @@ export const startStream = function startStream(guildId, channelId) {
   obj.dispatch(obj);
 };
 export const setStreamPaused = function setStreamPaused(currentUserActiveStream, paused) {
-  let obj = require("../modules/go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */;
+  let obj = isStreamKey /* isStreamKey */;
   const encodeStreamKeyResult = obj.encodeStreamKey(currentUserActiveStream);
   obj = { type: "STREAM_SET_PAUSED", streamKey: encodeStreamKeyResult, paused };
-  require("../Dispatcher.tsx").dispatch(obj);
+  dispatcher.dispatch(obj);
 };
 export { watchStream };
 export const toggleSelfStreamHidden = function toggleSelfStreamHidden(channelId, selfStreamHidden) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "STREAM_UPDATE_SELF_HIDDEN", channelId, selfStreamHidden };
   obj.dispatch(obj);
 };
@@ -270,16 +279,16 @@ export const watchStreamAndTransitionToStream = function watchStreamAndTransitio
       windowOpen = store2.getVoiceChannelId() === channelId;
     }
     if (!windowOpen) {
-      require("../modules/go_live/utils/transitionToStream.native.tsx")(stream);
+      transitionToStream(stream);
     }
   } else {
     const channel = store.getChannel(channelId);
-    require("../../_runtime/metro/00038__.js")(null != channel, "Cannot join a null voice channel");
+    00038__(null != channel, "Cannot join a null voice channel");
     const isInChannelResult = updateVoiceState.isInChannel(channelId);
     let isChannelFullResult = !isInChannelResult;
     if (!isInChannelResult) {
-      isChannelFullResult = require("../utils/ChannelUtils.tsx") /* allowChannelAccess */.isChannelFull(channel, tmp6, createGuildRecordFromRust);
-      const obj = require("../utils/ChannelUtils.tsx") /* allowChannelAccess */;
+      isChannelFullResult = allowChannelAccess /* allowChannelAccess */.isChannelFull(channel, tmp6, createGuildRecordFromRust);
+      const obj = allowChannelAccess /* allowChannelAccess */;
     }
     tmp6 = updateVoiceState;
   }
@@ -297,21 +306,21 @@ export const stopStream = function stopStream(streamKey) {
     if (flag === undefined) {
       flag = true;
     }
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "STREAM_CLOSE", streamKey: null, canShowFeedback: null };
     obj[1] = streamKey;
     obj[2] = flag;
     obj.dispatch(obj);
   }
   obj = { type: "STREAM_STOP", streamKey, appContext: constants.APP };
-  require("../Dispatcher.tsx").dispatch(obj);
+  dispatcher.dispatch(obj);
 };
 export const closeStream = function closeStream(encodeStreamKeyResult1, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
   }
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "STREAM_CLOSE", streamKey: encodeStreamKeyResult1, canShowFeedback: flag };
   obj.dispatch(obj);
 };
@@ -326,7 +335,7 @@ export const fetchStreamPreview = function fetchStreamPreview(closure_0, closure
   return applyArgumentsResult;
 };
 export const setLayout = function setLayout(layout) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "STREAM_LAYOUT_UPDATE", layout };
   obj.dispatch(obj);
 };
@@ -342,15 +351,15 @@ export const notifyStreamStart = function notifyStreamStart() {
 };
 export const updateStreamSettings = function updateStreamSettings(noTrack) {
   if (true !== noTrack.noTrack) {
-    let obj = require("../utils/StreamQualityUtils.tsx") /* isPremiumResolution */;
+    let obj = isPremiumResolution /* isPremiumResolution */;
     const result = obj.trackStreamSettingsUpdate(noTrack.preset, noTrack.resolution, noTrack.frameRate, noTrack.soundshareEnabled);
   }
   obj = { type: "STREAM_UPDATE_SETTINGS" };
   const merged = Object.assign(noTrack);
-  require("../Dispatcher.tsx").dispatch(obj);
+  dispatcher.dispatch(obj);
 };
 export const changeStreamRegion = function changeStreamRegion(encodeStreamKeyResult, preferredRegion) {
-  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   obj = { url: closure_13.STREAM(encodeStreamKeyResult), body: obj, oldFormErrors: true, rejectWithError: true };
   obj = { region: preferredRegion };
   HTTP.patch(obj);
@@ -362,38 +371,38 @@ export const stopOwnStream = function stopOwnStream(arg0) {
   }
   const currentUserActiveStream = authStore.getCurrentUserActiveStream();
   if (null != currentUserActiveStream) {
-    const encodeStreamKeyResult = require("../modules/go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */.encodeStreamKey(currentUserActiveStream);
+    const encodeStreamKeyResult = isStreamKey /* isStreamKey */.encodeStreamKey(currentUserActiveStream);
     if (flag === undefined) {
       flag = true;
     }
     if (flag === undefined) {
       flag = true;
     }
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "STREAM_CLOSE", streamKey: null, canShowFeedback: null };
     obj[1] = encodeStreamKeyResult;
     obj[2] = flag;
     obj.dispatch(obj);
-    const obj5 = require("../modules/go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */;
+    const obj5 = isStreamKey /* isStreamKey */;
     obj = { type: "STREAM_STOP", streamKey: null, appContext: null };
     obj[1] = encodeStreamKeyResult;
     obj[2] = constants.APP;
-    require("../Dispatcher.tsx").dispatch(obj);
-    const obj3 = require("../Dispatcher.tsx");
+    dispatcher.dispatch(obj);
+    const obj3 = dispatcher;
   }
 };
 export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWatchStream(arg0, streamKey) {
   const _require = arg0;
   id = id.getId();
-  const importDefault = _require("../modules/go_live/utils/StreamKeyUtils.tsx").decodeStreamKey(streamKey);
+  const importDefault = _isStreamKey.decodeStreamKey(streamKey);
   const voiceChannelId = store2.getVoiceChannelId();
   if (tmp4) {
-    require("SelectedChannelActionCreators.tsx").disconnect();
-    const obj2 = require("SelectedChannelActionCreators.tsx");
+    SelectedChannelActionCreators.disconnect();
+    const obj2 = SelectedChannelActionCreators;
   }
-  let obj = _require("../modules/go_live/utils/StreamKeyUtils.tsx");
+  let obj = _isStreamKey;
   tmp4 = null != voiceChannelId && voiceChannelId !== arg0;
-  require("ChannelActionCreators.tsx").addRecipient(arg0, id, undefined, () => {
+  ChannelActionCreators.addRecipient(arg0, id, undefined, () => {
     const tmp = callback(outer1_2[25]);
     const call = tmp.call;
     const fn = () => {

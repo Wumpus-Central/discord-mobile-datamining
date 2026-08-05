@@ -1,10 +1,12 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { SettingsAdvancedScreen } from "../../advanced/native/SettingsAdvancedScreen.tsx";
 // discord_app/modules/user_settings/defs/native/AdvancedSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["8/udY0"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["8/udY0"]);
   },
   parent: null,
   IconComponent: require("SettingsIcon").SettingsIcon,
@@ -13,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.ADVANCED,
   getComponent() {
-    return require("../../advanced/native/SettingsAdvancedScreen.tsx").default;
+    return SettingsAdvancedScreen.default;
   }
 };
 const route = createToggle.createRoute(obj);

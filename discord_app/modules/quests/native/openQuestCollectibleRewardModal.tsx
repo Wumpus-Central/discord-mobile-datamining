@@ -1,3 +1,10 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { MODAL_KEY } from "../../collectibles/native/ProductPurchaseSuccessActionCreators.tsx";
+import { useQuests } from "../hooks/QuestHooks.tsx";
+import { getQuestLogger } from "../lib/getQuestLogger.tsx";
+import { _getDefaultRewardName } from "../utils/QuestRewardUtils.tsx";
 // discord_app/modules/quests/native/openQuestCollectibleRewardModal.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { QuestsExperimentLocations } from "QuestsExperimentLocations";
@@ -11,19 +18,19 @@ const require = arg1;
 function QuestCollectibleRewardModalMessages(quest) {
   quest = quest.quest;
   const tmp = createCacheKey();
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = require("../utils/QuestRewardUtils.tsx") /* _getDefaultRewardName */;
+  let obj1 = _getDefaultRewardName /* _getDefaultRewardName */;
   const defaultRewardNameWithArticle = obj1.getDefaultRewardNameWithArticle(quest.config, stateFromStores);
   obj = { children: null };
-  const claimedCollectibleRewardMessage = require("../hooks/QuestHooks.tsx") /* useQuests */.useClaimedCollectibleRewardMessage(quest.config);
+  const claimedCollectibleRewardMessage = useQuests /* useQuests */.useClaimedCollectibleRewardMessage(quest.config);
   obj = { variant: "heading-xl/bold", style: tmp.title, children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.YNaxMp, { itemName: defaultRewardNameWithArticle });
-  const items1 = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.format(getSystemLocale /* getSystemLocale */.t.YNaxMp, { itemName: defaultRewardNameWithArticle });
+  const items1 = [callback(Text /* Text */.Text, obj), ];
   obj1 = { variant: "text-md/medium", style: tmp.title, children: claimedCollectibleRewardMessage };
-  items1[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  items1[1] = callback(Text /* Text */.Text, obj1);
   obj[0] = items1;
   return callback2(closure_6, obj);
 }
@@ -38,7 +45,7 @@ export const openQuestCollectibleRewardModal = function openQuestCollectibleRewa
   let product;
   let require;
   ({ quest: require, product } = onSuccess);
-  let obj = require("../lib/getQuestLogger.tsx") /* getQuestLogger */;
+  let obj = getQuestLogger /* getQuestLogger */;
   obj = { location: QuestsExperimentLocations.QUEST_HOME_MOBILE };
   const questLogger = obj.getQuestLogger(obj);
   if (null != product) {
@@ -48,8 +55,8 @@ export const openQuestCollectibleRewardModal = function openQuestCollectibleRewa
       return outer1_5(outer1_9, { quest: closure_0 });
     };
     obj[2] = onSuccess.onSuccess;
-    require("../../collectibles/native/ProductPurchaseSuccessActionCreators.tsx").open(obj);
-    const obj4 = require("../../collectibles/native/ProductPurchaseSuccessActionCreators.tsx");
+    MODAL_KEY.open(obj);
+    const obj4 = MODAL_KEY;
   } else {
     questLogger.warn("Product is null");
   }

@@ -1,3 +1,7 @@
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { combined } from "../../../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/contact_sync/native/components/RedesignContactSyncDiscoverabilityFooter.tsx
 import { HelpdeskArticles } from "ME";
 import { jsx } from "jsxProd";
@@ -9,15 +13,15 @@ export default function RedesignContactSyncDiscoverabilityFooter(arg0) {
   let onValueChanged;
   ({ discoverabilityEnabled, onValueChanged } = arg0);
   let obj = { hasIcons: false, helperText: null, children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   obj = { helpdeskUrl: null };
-  obj[0] = require("../../../../utils/HelpdeskUtils.tsx").getArticleURL(HelpdeskArticles.CONTACT_SYNC);
-  obj[1] = intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.zopgpe, obj);
+  obj[0] = combined.getArticleURL(HelpdeskArticles.CONTACT_SYNC);
+  obj[1] = intl.format(getSystemLocale /* getSystemLocale */.t.zopgpe, obj);
   obj = { label: null, onValueChange: null, value: null };
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.a5QL24);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.a5QL24);
   obj[1] = onValueChanged;
   obj[2] = discoverabilityEnabled;
-  obj[2] = jsx(require("../../../../design/components/TableRow/native/TableSwitchRow.native.tsx") /* TableSwitchRow */.TableSwitchRow, { label: null, onValueChange: null, value: null });
-  return jsx(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, { label: null, onValueChange: null, value: null });
+  obj[2] = jsx(TableSwitchRow /* TableSwitchRow */.TableSwitchRow, { label: null, onValueChange: null, value: null });
+  return jsx(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, { label: null, onValueChange: null, value: null });
 };

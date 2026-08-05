@@ -1,3 +1,4 @@
+import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
 // discord_app/modules/sentry/SentryExperimentFeatureFlagManager.tsx
 import getHash from "getHash";
 import initialize from "initialize";
@@ -27,7 +28,7 @@ function flushFlags(items, set) {
     let tmp4 = importDefault;
     let tmp5 = dependencyMap;
     let tmp3 = nextResult;
-    let obj = require("../../utils/SentryUtils.native.tsx");
+    let obj = SentryUtils.native;
     let addFeatureFlagResult = obj.addFeatureFlag(nextResult, true);
     if (set != null) {
       let tmp7 = nextResult;

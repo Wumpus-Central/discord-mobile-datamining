@@ -1,3 +1,8 @@
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { NativeAPNGView } from "../../../components_native/common/NativeAPNGView.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { StickerFormat } from "../StickersTypes.tsx";
+import { NativeLottieView } from "NativeLottieView.tsx";
 // discord_app/modules/stickers/native/Sticker.tsx
 import "noop";
 import { PixelRatio } from "get ActivityIndicator";
@@ -23,7 +28,7 @@ export default function Sticker(opaque) {
   if (flag) {
     num = 1;
   }
-  if (sticker.format_type === require("../StickersTypes.tsx") /* StickerFormat */.StickerFormat.LOTTIE) {
+  if (sticker.format_type === StickerFormat /* StickerFormat */.StickerFormat.LOTTIE) {
     let tmpResult = tmp(4619);
     let str = tmpResult.getStickerAssetUrl(sticker);
   } else if (sticker.format_type === tmp(4951).StickerFormat.APNG) {
@@ -43,8 +48,8 @@ export default function Sticker(opaque) {
     str = "";
   }
   const intl = tmp(1236).intl;
-  const formatToPlainStringResult = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.rk6pOw, { stickerName: sticker.name });
-  if (sticker.format_type === require("../StickersTypes.tsx") /* StickerFormat */.StickerFormat.LOTTIE) {
+  const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.rk6pOw, { stickerName: sticker.name });
+  if (sticker.format_type === StickerFormat /* StickerFormat */.StickerFormat.LOTTIE) {
     const obj2 = { url: null, asset: null, width: null, height: null, opacity: null, renderMode: null, accessibilityLabel: null };
     obj2[0] = str;
     let str4 = sticker.id;
@@ -58,7 +63,7 @@ export default function Sticker(opaque) {
     const NativeLottieRenderMode = tmp(7916).NativeLottieRenderMode;
     obj2[5] = animated ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
     obj2[6] = formatToPlainStringResult;
-    return jsx(require("NativeLottieView.tsx"), { url: null, asset: null, width: null, height: null, opacity: null, renderMode: null, accessibilityLabel: null });
+    return jsx(NativeLottieView, { url: null, asset: null, width: null, height: null, opacity: null, renderMode: null, accessibilityLabel: null });
   } else {
     if (sticker.format_type === tmp(4951).StickerFormat.APNG) {
       if ("type" in sticker) {
@@ -77,7 +82,7 @@ export default function Sticker(opaque) {
       const obj5 = {};
       const tmpResult3 = tmp(4619);
       const merged = Object.assign(obj3);
-      return jsx(require("../../../components_native/common/NativeAPNGView.tsx"), {});
+      return jsx(NativeAPNGView, {});
     }
     const obj6 = { resizeMode: "contain", style: null, placeholder: null, source: null, accessible: true, accessibilityLabel: null };
     const obj7 = { height: null, width: null, opacity: null };
@@ -86,7 +91,7 @@ export default function Sticker(opaque) {
     obj7[2] = num;
     obj6[1] = obj7;
     const tmp12 = jsx;
-    const tmp14 = require("../../../components_native/common/FastImage.tsx");
+    const tmp14 = preload;
     if (tmpResult4.isThemeDark(theme.theme)) {
       let tmp13Result = tmp13(5302);
     } else {
@@ -102,7 +107,7 @@ export default function Sticker(opaque) {
   const obj1 = { stickerName: sticker.name };
 };
 export const getStickerAssetUrl = function getStickerAssetUrl(sticker, closure_7, first) {
-  if (sticker.format_type === require("../StickersTypes.tsx") /* StickerFormat */.StickerFormat.LOTTIE) {
+  if (sticker.format_type === StickerFormat /* StickerFormat */.StickerFormat.LOTTIE) {
     let tmpResult = tmp(4619);
     let str = tmpResult.getStickerAssetUrl(sticker);
   } else if (sticker.format_type === tmp(4951).StickerFormat.APNG) {

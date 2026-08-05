@@ -1,3 +1,10 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { CircleXIcon } from "../../../design/components/Icon/native/redesign/generated/CircleXIcon.tsx";
+import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useIsSafetyHubLoading } from "../hooks/useSafetyHubLoading.tsx";
 // discord_app/modules/safety_hub/native/SafetyHubErrorActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -22,7 +29,7 @@ export default function SafetyHubErrorActionSheet(arg0) {
     HermesBuiltin.throwTypeError();
   } else {
     const tmp3 = createCacheKey();
-    const tmp6 = require("../hooks/useSafetyHubLoading.tsx")();
+    const tmp6 = useIsSafetyHubLoading();
     let obj = { children: null };
     obj = { style: null, children: null };
     const items = [tmp3.errorContainer];
@@ -31,27 +38,27 @@ export default function SafetyHubErrorActionSheet(arg0) {
     const items1 = [tmp3.redesignErrorIconContainer];
     obj[0] = items1;
     const obj1 = { size: "custom", color: null, style: null };
-    obj1[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT;
+    obj1[1] = Themes.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT;
     const items2 = [tmp3.redesignErrorIcon];
     obj1[2] = items2;
-    obj[1] = callback(require("../../../design/components/Icon/native/redesign/generated/CircleXIcon.tsx") /* CircleXIcon */.CircleXIcon, obj1);
+    obj[1] = callback(CircleXIcon /* CircleXIcon */.CircleXIcon, obj1);
     const items3 = [callback(View, obj), ];
     const obj2 = { variant: "heading-lg/normal", children: null };
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj2[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.TDRvqs);
-    items3[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj2[1] = intl.string(getSystemLocale /* getSystemLocale */.t.TDRvqs);
+    items3[1] = callback(Text /* Text */.Text, obj2);
     obj[1] = items3;
     const items4 = [callback2(View, obj), ];
     const obj3 = { onPress: null, text: null, loading: null, disabled: null };
     obj3[0] = function onPress() {
       return callback(table[11]).getSafetyHubData();
     };
-    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj3[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.R1AN4F);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    obj3[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.R1AN4F);
     obj3[2] = tmp6;
     obj3[3] = tmp6;
-    items4[1] = callback(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj3);
+    items4[1] = callback(Button /* Button */.Button, obj3);
     obj[0] = items4;
-    return callback2(require("../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, obj);
+    return callback2(Background /* Background */.BottomSheet, obj);
   }
 };

@@ -1,3 +1,6 @@
+import { nameFromUser } from "../../../../utils/UserUtils.tsx";
+import { usePremiumGroupMembers } from "usePremiumGroupMembers.tsx";
+import { usePremiumGroupMembership } from "usePremiumGroupMembership.tsx";
 // discord_app/modules/premium/premium_group/hooks/usePremiumGroupPrimaryName.tsx
 const result = require("nameFromUser").fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupPrimaryName.tsx");
 
@@ -14,7 +17,7 @@ export default function usePremiumGroupPrimaryName() {
   if (flag2 === undefined) {
     flag2 = true;
   }
-  const premiumGroupMembership = require("usePremiumGroupMembership.tsx")({ useCachedData: flag, fetch: flag2 }).premiumGroupMembership;
+  const premiumGroupMembership = usePremiumGroupMembership({ useCachedData: flag, fetch: flag2 }).premiumGroupMembership;
   let subscriptionId;
   if (premiumGroupMembership != null) {
     subscriptionId = premiumGroupMembership.subscriptionId;
@@ -22,7 +25,7 @@ export default function usePremiumGroupPrimaryName() {
   if (subscriptionId == null) {
     subscriptionId = null;
   }
-  const premiumGroupMembers = require("usePremiumGroupMembers.tsx")(subscriptionId, { useCachedData: flag, fetch: flag2 }).premiumGroupMembers;
+  const premiumGroupMembers = usePremiumGroupMembers(subscriptionId, { useCachedData: flag, fetch: flag2 }).premiumGroupMembers;
   let primary;
   if (premiumGroupMembers != null) {
     primary = premiumGroupMembers.primary;
@@ -33,8 +36,8 @@ export default function usePremiumGroupPrimaryName() {
     if (premiumGroupMembers != null) {
       primary1 = premiumGroupMembers.primary;
     }
-    nameFromUserResult = require("../../../../utils/UserUtils.tsx") /* nameFromUser */.nameFromUser(primary1);
-    const obj2 = require("../../../../utils/UserUtils.tsx") /* nameFromUser */;
+    nameFromUserResult = nameFromUser /* nameFromUser */.nameFromUser(primary1);
+    const obj2 = nameFromUser /* nameFromUser */;
   }
   return nameFromUserResult;
 };

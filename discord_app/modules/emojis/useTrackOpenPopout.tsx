@@ -1,3 +1,5 @@
+import { useMountLayoutEffect } from "../../hooks/useMountEffect.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 // discord_app/modules/emojis/useTrackOpenPopout.tsx
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -15,9 +17,9 @@ export const useTrackOpenPopout = (emojiId) => {
   let require;
   ({ currentGuildId, popoutData: require, nonce: importDefault, demoMode: dependencyMap } = emojiId);
   let current;
-  let merged = Object.assign(require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */.collectChannelAnalyticsMetadata(channel.getChannel(channelId.getChannelId(currentGuildId))));
+  let merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectChannelAnalyticsMetadata(channel.getChannel(channelId.getChannelId(currentGuildId))));
   current = current.useRef({ guild_id: currentGuildId, emoji_id: emojiId.emojiId }).current;
-  require("../../hooks/useMountEffect.tsx")(() => {
+  useMountLayoutEffect(() => {
     let obj = outer1_0(outer1_2[7]);
     const result = obj.initiateEmojiInteraction(outer1_6.TrackOpenPopoutUsed);
     if (!closure_2) {

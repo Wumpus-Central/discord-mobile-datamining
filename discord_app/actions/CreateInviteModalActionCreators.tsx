@@ -1,3 +1,6 @@
+import { dispatcher } from "../Dispatcher.tsx";
+import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
+import { generateAcceptInviteOptions } from "InstantInviteActionCreators.tsx";
 // discord_app/actions/CreateInviteModalActionCreators.tsx
 import updateWithLatestInvite from "updateWithLatestInvite";
 import { AnalyticEvents } from "ME";
@@ -16,7 +19,7 @@ export default {
       str = "";
     }
     ({ targetType, targetUserId, targetApplicationId, skipCreateInvite } = location);
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "CREATE_INVITE_MODAL_INIT", guildId, channelId, targetType, targetUserId, targetApplicationId };
     obj.dispatch(obj);
     if (!skipCreateInvite) {
@@ -26,7 +29,7 @@ export default {
   },
   openSettings(guildId, channelId, source, onClose) {
     const inviteSettings = store.getInviteSettings();
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "CREATE_INVITE_MODAL_OPEN" };
     const merged = Object.assign(inviteSettings);
     obj.guildId = guildId;
@@ -34,15 +37,15 @@ export default {
     obj.onClose = onClose;
     obj.dispatch(obj);
     obj = { type: "Instant Invite", source };
-    require("../utils/AnalyticsUtils.tsx").track(AnalyticEvents.OPEN_MODAL, obj);
+    expandEventProperties.track(AnalyticEvents.OPEN_MODAL, obj);
   },
   updateSettings(settings) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "CREATE_INVITE_MODAL_UPDATE_SETTINGS", settings };
     obj.dispatch(obj);
   },
   resetSettings() {
-    require("../Dispatcher.tsx").dispatch({ type: "CREATE_INVITE_MODAL_RESET_SETTINGS" });
+    dispatcher.dispatch({ type: "CREATE_INVITE_MODAL_RESET_SETTINGS" });
   },
   createInvite(arg0, arg1) {
     let flags;
@@ -56,7 +59,7 @@ export default {
     let obj = store;
     const pendingSettings = store.getPendingSettings();
     if (null != pendingSettings) {
-      require("../Dispatcher.tsx").dispatch({ type: "CREATE_INVITE_MODAL_GENERATE_INVITE" });
+      dispatcher.dispatch({ type: "CREATE_INVITE_MODAL_GENERATE_INVITE" });
       const channelId = pendingSettings.channelId;
       ({ maxAge, maxUses, temporary, targetType, targetUserId, targetApplicationId, flags, roleIds } = pendingSettings);
       const invite = obj.getInvite();
@@ -67,7 +70,7 @@ export default {
           code = invite.code;
         }
       }
-      const obj4 = require("../Dispatcher.tsx");
+      const obj4 = dispatcher;
       const tmp7 = importDefault;
       obj = { temporary: null, validate: null, max_age: null, max_uses: null, target_type: null, target_user_id: null, target_application_id: null, flags: null, role_ids: null };
       obj[0] = temporary;
@@ -81,7 +84,7 @@ export default {
       obj[6] = targetApplicationId;
       obj[7] = flags;
       obj[8] = roleIds;
-      const invite1 = require("InstantInviteActionCreators.tsx").createInvite(channelId, obj, arg0);
+      const invite1 = generateAcceptInviteOptions.createInvite(channelId, obj, arg0);
       invite1.then(() => {
         let obj = outer1_1(outer1_2[2]);
         obj = { type: "CREATE_INVITE_MODAL_GENERATE_INVITE_SUCCESS", channelId };
@@ -98,12 +101,12 @@ export default {
         }
         callback(709).dispatch({ type: "CREATE_INVITE_MODAL_GENERATE_INVITE_FAILURE", message });
       });
-      const tmp7Result = require("InstantInviteActionCreators.tsx");
+      const tmp7Result = generateAcceptInviteOptions;
     }
   },
   close() {
     const onClose = store.onClose;
-    require("../Dispatcher.tsx").dispatch({ type: "CREATE_INVITE_MODAL_CLOSE" });
+    dispatcher.dispatch({ type: "CREATE_INVITE_MODAL_CLOSE" });
     if (onClose != null) {
       onClose();
     }

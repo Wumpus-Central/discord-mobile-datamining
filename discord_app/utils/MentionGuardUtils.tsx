@@ -1,3 +1,5 @@
+import { 00038__ } from "../../_runtime/metro/00038__.js";
+import { rebuild } from "../modules/messages/MessageParser.tsx";
 // discord_app/utils/MentionGuardUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import getMemberListId from "getMemberListId";
@@ -47,7 +49,7 @@ const result = require("getUncachedChannelPermissions").fileFinishedImporting("u
 export default {
   shouldShowEveryoneGuard(extractEveryoneRoleResult, getGuildId) {
     const guildId = getGuildId.getGuildId();
-    require("../../_runtime/metro/00038__.js")(null != guildId, "isGuildChannel with null guildId");
+    00038__(null != guildId, "isGuildChannel with null guildId");
     importDefault = extractEveryoneRoleResult;
     const dependencyMap = 0;
     if (getGuildId.isThread()) {
@@ -100,8 +102,8 @@ export default {
     return tmp3;
   },
   extractEveryoneRole(arg0, getGuildId) {
-    const obj = require("../modules/messages/MessageParser.tsx");
-    const obj2 = require("../modules/messages/MessageParser.tsx").parsePreprocessor(getGuildId, arg0)[Symbol.iterator]();
+    const obj = rebuild;
+    const obj2 = rebuild.parsePreprocessor(getGuildId, arg0)[Symbol.iterator]();
     while (obj2 !== undefined) {
       let tmp3 = parsedItemUsesEveryoneRole;
       let tmp4 = parsedItemUsesEveryoneRole(tmp2);

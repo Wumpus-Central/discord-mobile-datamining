@@ -1,3 +1,6 @@
+import { ICYMINavigator } from "../../../icymi/native/navigator/ICYMINavigator.tsx";
+import { Guilds } from "../tabs/guilds/Guilds.tsx";
+import { goBack } from "../tabs/notifications/Notifications.tsx";
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarStackNavigator.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -14,13 +17,13 @@ let c9;
 let unpackModuleId;
 const require = arg1;
 function getGuildsComponent() {
-  return require("../tabs/guilds/Guilds.tsx").default;
+  return Guilds.default;
 }
 function getNotificationsComponent() {
-  return require("../tabs/notifications/Notifications.tsx") /* goBack */.ThemedNotifications;
+  return goBack /* goBack */.ThemedNotifications;
 }
 function getICYMIComponent() {
-  return require("../../../icymi/native/navigator/ICYMINavigator.tsx") /* ICYMINavigator */.default;
+  return ICYMINavigator /* ICYMINavigator */.default;
 }
 let c3 = importAllResult;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);

@@ -1,3 +1,5 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { isForegrounded } from "SessionForegroundUtils.native.tsx";
 // discord_app/modules/analytics_sessions/SessionAdManager.tsx
 import importDefaultResult from "fetchFingerprint";
 import ME from "ME";
@@ -130,32 +132,32 @@ class SessionAdManager extends tmp3 {
 }
 const prototype = SessionAdManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  this.focusedOrForegrounded = require("SessionForegroundUtils.native.tsx") /* isForegrounded */.isForegrounded();
+  this.focusedOrForegrounded = isForegrounded /* isForegrounded */.isForegrounded();
   importDefaultResult.addChangeListener(this.handleAuthenticationChange);
-  const obj = require("SessionForegroundUtils.native.tsx") /* isForegrounded */;
-  const subscription = require("../../Dispatcher.tsx").subscribe("WINDOW_FOCUS", this.handleWindowFocus);
-  const obj2 = require("../../Dispatcher.tsx");
-  const subscription1 = require("../../Dispatcher.tsx").subscribe("APP_STATE_UPDATE", this.handleAppStateUpdate);
-  const obj3 = require("../../Dispatcher.tsx");
-  const subscription2 = require("../../Dispatcher.tsx").subscribe("QUESTS_ENROLL_SUCCESS", this.handleEnrollmentSuccess);
-  const obj4 = require("../../Dispatcher.tsx");
-  const subscription3 = require("../../Dispatcher.tsx").subscribe("LOGIN_SUCCESS", this.handleLogin);
-  const obj5 = require("../../Dispatcher.tsx");
-  const subscription4 = require("../../Dispatcher.tsx").subscribe("LOGOUT", this.handleLogout);
+  const obj = isForegrounded /* isForegrounded */;
+  const subscription = dispatcher.subscribe("WINDOW_FOCUS", this.handleWindowFocus);
+  const obj2 = dispatcher;
+  const subscription1 = dispatcher.subscribe("APP_STATE_UPDATE", this.handleAppStateUpdate);
+  const obj3 = dispatcher;
+  const subscription2 = dispatcher.subscribe("QUESTS_ENROLL_SUCCESS", this.handleEnrollmentSuccess);
+  const obj4 = dispatcher;
+  const subscription3 = dispatcher.subscribe("LOGIN_SUCCESS", this.handleLogin);
+  const obj5 = dispatcher;
+  const subscription4 = dispatcher.subscribe("LOGOUT", this.handleLogout);
   const result = this.scheduleHeartbeatTracking();
 };
 prototype["_terminate"] = function _terminate() {
   const result = this.stopAnalyticHeartbeat();
   importDefaultResult.removeChangeListener(this.handleAuthenticationChange);
-  require("../../Dispatcher.tsx").unsubscribe("WINDOW_FOCUS", this.handleWindowFocus);
-  const obj = require("../../Dispatcher.tsx");
-  require("../../Dispatcher.tsx").unsubscribe("APP_STATE_UPDATE", this.handleAppStateUpdate);
-  const obj2 = require("../../Dispatcher.tsx");
-  require("../../Dispatcher.tsx").unsubscribe("QUESTS_ENROLL_SUCCESS", this.handleEnrollmentSuccess);
-  const obj3 = require("../../Dispatcher.tsx");
-  require("../../Dispatcher.tsx").unsubscribe("LOGIN_SUCCESS", this.handleLogin);
-  const obj4 = require("../../Dispatcher.tsx");
-  require("../../Dispatcher.tsx").unsubscribe("LOGOUT", this.handleLogout);
+  dispatcher.unsubscribe("WINDOW_FOCUS", this.handleWindowFocus);
+  const obj = dispatcher;
+  dispatcher.unsubscribe("APP_STATE_UPDATE", this.handleAppStateUpdate);
+  const obj2 = dispatcher;
+  dispatcher.unsubscribe("QUESTS_ENROLL_SUCCESS", this.handleEnrollmentSuccess);
+  const obj3 = dispatcher;
+  dispatcher.unsubscribe("LOGIN_SUCCESS", this.handleLogin);
+  const obj4 = dispatcher;
+  dispatcher.unsubscribe("LOGOUT", this.handleLogout);
 };
 const sessionAdManager = new SessionAdManager();
 let result = require("initialize").fileFinishedImporting("modules/analytics_sessions/SessionAdManager.tsx");

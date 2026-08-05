@@ -1,3 +1,5 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/notification_center/native/ForYouReadSectionHeader.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -20,8 +22,8 @@ export const ForYouReadSectionHeader = function ForYouReadSectionHeader() {
   const tmp = createCacheKey();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.textHeader, variant: "text-sm/semibold", children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.hftC1K);
-  obj[1] = jsx(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.textHeader, variant: "text-sm/semibold", children: null });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.hftC1K);
+  obj[1] = jsx(Text /* Text */.Text, { style: tmp.textHeader, variant: "text-sm/semibold", children: null });
   return <closure_2 style={tmp.textHeader} variant="text-sm/semibold">{null}</closure_2>;
 };

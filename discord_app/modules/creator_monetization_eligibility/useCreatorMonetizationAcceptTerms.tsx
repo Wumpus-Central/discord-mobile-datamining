@@ -1,3 +1,5 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { set } from "CreatorMonetizationEligibilityExperimentUtils.tsx";
 // discord_app/modules/creator_monetization_eligibility/useCreatorMonetizationAcceptTerms.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import _slicedToArray from "_slicedToArray";
@@ -14,19 +16,19 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
   let tmp4;
   const _require = arg0;
   let closure_1 = arg1;
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [createGuildRecordFromRust];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_8.getGuild(closure_0));
   const tmp2 = isExpeditedOnboardingGuild(React.useState(), 2);
   let dependencyMap = tmp2[1];
   [tmp4, mergeGuildAvatar] = isExpeditedOnboardingGuild(React.useState(false), 2);
   let tmp3 = isExpeditedOnboardingGuild(React.useState(false), 2);
-  isExpeditedOnboardingGuild = _require("CreatorMonetizationEligibilityExperimentUtils.tsx").useIsExpeditedOnboardingGuild(stateFromStores);
+  isExpeditedOnboardingGuild = _set.useIsExpeditedOnboardingGuild(stateFromStores);
   obj = { canSubmitAcceptance: null, error: null, loading: null, submitAcceptTermsRequest: null };
-  let obj2 = _require("CreatorMonetizationEligibilityExperimentUtils.tsx");
+  let obj2 = _set;
   const items1 = [closure_9];
   const items2 = [stateFromStores];
-  obj[0] = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  obj[0] = _initialize.useStateFromStores(items1, () => {
     let tmp3 = null != stateFromStores;
     if (tmp3) {
       tmp3 = outer1_7(tmp2, tmp);

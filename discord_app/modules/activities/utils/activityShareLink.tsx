@@ -1,10 +1,12 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { isDiscordProxiedAssetUrl } from "../../../utils/URLUtils.tsx";
 // discord_app/modules/activities/utils/activityShareLink.tsx
 const items = [require("getPathsFromURL").parseQuestsEmbedCode];
 const result = require("getSystemLocale").fileFinishedImporting("modules/activities/utils/activityShareLink.tsx");
 
 export const resolveActivityShareMessageContent = function resolveActivityShareMessageContent(c3, closure_14, closure_12) {
   const _require = false;
-  const replaced = c3.replaceAll(require("../../../utils/URLUtils.tsx").URL_REGEX, (arg0) => {
+  const replaced = c3.replaceAll(isDiscordProxiedAssetUrl.URL_REGEX, (arg0) => {
     let c0 = arg0;
     const someResult = outer1_3.some((arg0) => null != arg0(c0));
     if (someResult) {
@@ -19,12 +21,12 @@ export const resolveActivityShareMessageContent = function resolveActivityShareM
   });
   let combined = replaced;
   if (!_require) {
-    const intl = _require("../../../intl/index.native.tsx").intl;
+    const intl = _getSystemLocale.intl;
     const obj = { applicationName: null, link: null };
     obj[0] = closure_14.name;
     obj[1] = closure_12;
     let _HermesInternal = HermesInternal;
-    combined = "" + replaced + "\n\n" + intl.formatToMarkdownString(_require("../../../intl/index.native.tsx").t.dZJpdG, obj);
+    combined = "" + replaced + "\n\n" + intl.formatToMarkdownString(_getSystemLocale.t.dZJpdG, obj);
   }
   return combined;
 };

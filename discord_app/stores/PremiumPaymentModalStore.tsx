@@ -1,3 +1,4 @@
+import { V6OrEarlierAPIError } from "../errors/index.tsx";
 // discord_app/stores/PremiumPaymentModalStore.tsx
 import { Store } from "initialize";
 
@@ -37,10 +38,10 @@ const premiumPaymentModalStore = new PremiumPaymentModalStore(require("dispatche
   PREMIUM_PAYMENT_UPDATE_SUCCESS: handleClearError,
   PREMIUM_PAYMENT_ERROR_CLEAR: handleClearError,
   BRAINTREE_TOKENIZE_PAYPAL_FAIL: function handlePayPalTokenizeFailure(message) {
-    const billingError = new require("../errors/index.tsx") /* V6OrEarlierAPIError */.BillingError(message.message);
+    const billingError = new V6OrEarlierAPIError /* V6OrEarlierAPIError */.BillingError(message.message);
   },
   BRAINTREE_TOKENIZE_VENMO_FAIL: function handleVenmoTokenizeFailure(message) {
-    const billingError = new require("../errors/index.tsx") /* V6OrEarlierAPIError */.BillingError(message.message);
+    const billingError = new V6OrEarlierAPIError /* V6OrEarlierAPIError */.BillingError(message.message);
   },
   SKU_PURCHASE_SUCCESS: function handleSKUPurchaseSuccess(arg0) {
     let c3;

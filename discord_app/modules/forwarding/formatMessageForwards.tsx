@@ -1,3 +1,6 @@
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { resetCache } from "../../utils/DateUtils.tsx";
+import { isForwardMessage } from "isForwardMessage.tsx";
 // discord_app/modules/forwarding/formatMessageForwards.tsx
 import getGuild from "getGuild";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -44,7 +47,7 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
     obj3 = getGuild;
   }
   ({ snapshotIndex, parentMessage } = this);
-  let obj4 = require("../../utils/DateUtils.tsx") /* resetCache */;
+  let obj4 = resetCache /* resetCache */;
   const result = obj4.calendarFormatCompact(this.messageSnapshot.message.timestamp);
   const channel = obj.getChannel(this.parentMessage.channel_id);
   if (null != channel) {
@@ -72,7 +75,7 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
           obj1[0] = guild.name;
           obj2 = { id: null, size: 16, icon: null, canAnimate: false };
           ({ id: obj22[0], icon: obj22[2] } = guild);
-          obj1[1] = require("../../utils/AvatarUtils.tsx").getGuildIconURL(obj2);
+          obj1[1] = getAvatarURL.getGuildIconURL(obj2);
           obj1[2] = result;
           const intl3 = tmp3(1236).intl;
           obj3 = { origin: null, timestamp: null };
@@ -80,7 +83,7 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
           obj3[1] = result;
           obj1[3] = intl3.formatToPlainString(tmp3(1236).t["+l04BN"], obj3);
           obj[1] = obj1;
-          const obj21 = require("../../utils/AvatarUtils.tsx");
+          const obj21 = getAvatarURL;
         }
         return obj;
       } else {
@@ -131,7 +134,7 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
       const obj11 = { originLabel: null, originIconUrl: null, timestampLabel: null, accessibilityLabel: null };
       obj11[0] = guild1.name;
       ({ id: obj18[0], icon: obj18[2] } = guild1);
-      obj11[1] = require("../../utils/AvatarUtils.tsx").getGuildIconURL({ id: null, size: 16, icon: null, canAnimate: false });
+      obj11[1] = getAvatarURL.getGuildIconURL({ id: null, size: 16, icon: null, canAnimate: false });
       obj11[2] = result;
       const intl2 = tmp3(1236).intl;
       const obj13 = { origin: null, timestamp: null };
@@ -140,7 +143,7 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
       obj11[3] = intl2.formatToPlainString(tmp3(1236).t["+l04BN"], obj13);
       obj10[1] = obj11;
       const obj12 = { id: null, size: 16, icon: null, canAnimate: false };
-      const obj17 = require("../../utils/AvatarUtils.tsx");
+      const obj17 = getAvatarURL;
     }
     return obj10;
   }
@@ -149,7 +152,7 @@ let result = require("createGuildRecordFromRust").fileFinishedImporting("modules
 
 export { MessageForward };
 export const maybeCreateSingleForwardForMessage = function maybeCreateSingleForwardForMessage(message) {
-  if (require("isForwardMessage.tsx")(message)) {
+  if (isForwardMessage(message)) {
     const first = message.messageSnapshots[0];
     if (null != first) {
       if (typeof MessageForward !== "function") {

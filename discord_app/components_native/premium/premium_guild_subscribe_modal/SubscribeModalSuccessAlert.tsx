@@ -1,3 +1,10 @@
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { keys } from "../../../ConstantsIOS.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { componentDidMount } from "../../common/Alert.tsx";
 // discord_app/components_native/premium/premium_guild_subscribe_modal/SubscribeModalSuccessAlert.tsx
 import _slicedToArray from "_slicedToArray";
 import registerAsset from "registerAsset";
@@ -44,7 +51,7 @@ export default function SubscribeModalSuccessAlert(arg0) {
   let importDefault;
   let dependencyMap;
   const tmp = createCacheKey();
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [createGuildRecordFromRust];
   let someResult = null != guildBoostSlots;
   const stateFromStores = obj.useStateFromStores(items, () => outer1_7.getGuild(closure_0));
@@ -63,9 +70,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const tmp7 = callback(React.useState(false), 2);
   dependencyMap = tmp7[1];
   obj = { style: tmp.wrapper, confirmText: null, onConfirm: null, children: null };
-  const tmp9 = require("../../../hooks/useTheme.tsx")();
+  const tmp9 = useTheme();
   const intl = tmp2(1236).intl;
-  obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.YKxJCI);
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.YKxJCI);
   obj[2] = function onConfirm() {
     callback2(4624).close();
     const obj = callback2(4624);
@@ -84,13 +91,13 @@ export default function SubscribeModalSuccessAlert(arg0) {
   };
   const items1 = [callback2(PremiumPaymentGuildAnimation, obj), ];
   const obj1 = { style: tmp.activated, start: null, end: null, colors: null, children: null };
-  const tmp11 = require("../../common/Alert.tsx");
-  obj1[1] = require("../../../ConstantsIOS.tsx") /* keys */.HorizontalGradient.START;
-  obj1[2] = require("../../../ConstantsIOS.tsx") /* keys */.HorizontalGradient.END;
+  const tmp11 = componentDidMount;
+  obj1[1] = keys /* keys */.HorizontalGradient.START;
+  obj1[2] = keys /* keys */.HorizontalGradient.END;
   obj1[3] = Gradients.PREMIUM_GUILD;
   const obj2 = { style: tmp.activatedBackground, children: null };
   const obj3 = { style: tmp.activatedImage, source: null };
-  const tmp14 = require("../../../../_runtime/04706_LinearGradient.js");
+  const tmp14 = LinearGradient;
   const tmp15 = closure_6;
   if (tmp2Result.isThemeLight(tmp9)) {
     let tmp8Result = tmp8(12802);
@@ -113,11 +120,11 @@ export default function SubscribeModalSuccessAlert(arg0) {
   }
   const obj6 = { children: null };
   obj5[2] = stringResult;
-  const items3 = [callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj5), ];
+  const items3 = [callback2(Text /* Text */.Text, obj5), ];
   const obj7 = { style: tmp.text, variant: "text-sm/medium", children: null };
   const intl3 = tmp2(1236).intl;
-  obj7[2] = intl3.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.r0IGsP, { guildName: stateFromStores.name, guildSubscriptionQuantity: num });
-  items3[1] = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj7);
+  obj7[2] = intl3.format(getSystemLocale /* getSystemLocale */.t.r0IGsP, { guildName: stateFromStores.name, guildSubscriptionQuantity: num });
+  items3[1] = callback2(Text /* Text */.Text, obj7);
   obj4[1] = items3;
   items2[1] = closure_10(closure_5, obj4);
   obj6[0] = items2;

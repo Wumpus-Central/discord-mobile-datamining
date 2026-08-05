@@ -1,3 +1,5 @@
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceMessagesHeaderItem.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -14,8 +16,8 @@ const result = require("jsxProd").fileFinishedImporting("modules/user_settings/a
 export default function MessagesHeaderItem(animatedStyles) {
   let obj = { style: createCacheKey().messagesHeaderContainer, children: null };
   obj = { animated: true, style: animatedStyles.animatedStyles.textNormal, variant: "text-lg/bold", children: null };
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.OIgYlQ);
-  obj[1] = jsx(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { animated: true, style: animatedStyles.animatedStyles.textNormal, variant: "text-lg/bold", children: null });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.OIgYlQ);
+  obj[1] = jsx(Text /* Text */.Text, { animated: true, style: animatedStyles.animatedStyles.textNormal, variant: "text-lg/bold", children: null });
   return <View animated style={arg0.animatedStyles.textNormal} variant="text-lg/bold">{null}</View>;
 };

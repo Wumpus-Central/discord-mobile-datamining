@@ -1,3 +1,4 @@
+import { SearchTokenTypes } from "../SearchUtils.tsx";
 // discord_app/modules/search/managers/SearchTokensManager.tsx
 import { subscribeToIntlLoadingSuccess as closure_2 } from "_setAppLocale";
 import "initialize";
@@ -12,7 +13,7 @@ class SearchTokensManager extends tmp2 {
 }
 const prototype = SearchTokensManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  this._unsubscribeIntlLoadingStore = callback(require("../SearchUtils.tsx") /* SearchTokenTypes */.refreshSearchTokens);
+  this._unsubscribeIntlLoadingStore = callback(SearchTokenTypes /* SearchTokenTypes */.refreshSearchTokens);
 };
 prototype["_terminate"] = function _terminate() {
   const _unsubscribeIntlLoadingStore = this._unsubscribeIntlLoadingStore;

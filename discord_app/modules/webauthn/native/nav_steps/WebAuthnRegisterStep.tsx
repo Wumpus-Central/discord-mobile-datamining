@@ -1,3 +1,4 @@
+import { _promptForRegisterCredential } from "../NativeCeremonies.tsx";
 // discord_app/modules/webauthn/native/nav_steps/WebAuthnRegisterStep.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -102,7 +103,7 @@ export default function WebAuthnRegisterStep() {
   items3[2] = tmp18Result;
   obj[1] = items3;
   const items4 = [closure_8(closure_5, obj), , ];
-  let shouldDisplayAndroidFidoSelector = require("../NativeCeremonies.tsx").shouldDisplayAndroidFidoSelector;
+  let shouldDisplayAndroidFidoSelector = _promptForRegisterCredential.shouldDisplayAndroidFidoSelector;
   if (shouldDisplayAndroidFidoSelector) {
     const obj3 = { authenticatorSelection: null, registering: null, onChange: null };
     obj3[0] = first;

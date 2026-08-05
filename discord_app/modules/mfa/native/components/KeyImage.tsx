@@ -1,3 +1,4 @@
+import { registerAsset } from "../../../../../_runtime/13890_registerAsset.js";
 // discord_app/modules/mfa/native/components/KeyImage.tsx
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -8,7 +9,7 @@ const result = require("createCacheKey").fileFinishedImporting("modules/mfa/nati
 
 export const KeyImage = function KeyImage() {
   const obj = { source: null, style: null };
-  obj[0] = require("../../../../../_runtime/13890_registerAsset.js");
+  obj[0] = registerAsset;
   obj[1] = callback().icon;
   return <Image source={null} style={null} />;
 };

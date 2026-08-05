@@ -1,3 +1,8 @@
+import { apply } from "../../_runtime/00012_apply.js";
+import { getFavoritesAwareGuildName } from "../modules/favorites/FavoritesUtils.tsx";
+import { useOptInEnabledForGuild } from "../modules/opt_in_channels/isOptInEnabled.tsx";
+import { doesThreadMembersActionAffectMe } from "../modules/threads/ThreadActionUtils.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/stores/GuildReadStateStore.tsx
 import findOrCreateMessageRecord from "findOrCreateMessageRecord";
 import _validate from "_validate";
@@ -92,7 +97,7 @@ function isCountableChannel(channel, mentionCount, arg2) {
         }
       }
       if (!channel.isPrivate()) {
-        let result1 = require("../modules/opt_in_channels/isOptInEnabled.tsx") /* useOptInEnabledForGuild */.isOptInEnabledForGuild(channel.guild_id);
+        let result1 = useOptInEnabledForGuild /* useOptInEnabledForGuild */.isOptInEnabledForGuild(channel.guild_id);
         let tmp11 = null != channel.guild_id;
         if (tmp11) {
           if (result1) {
@@ -112,7 +117,7 @@ function isCountableChannel(channel, mentionCount, arg2) {
         } else if (!getUncachedChannelPermissions.can(channel.accessPermissions, channel)) {
           return false;
         }
-        const obj = require("../modules/opt_in_channels/isOptInEnabled.tsx") /* useOptInEnabledForGuild */;
+        const obj = useOptInEnabledForGuild /* useOptInEnabledForGuild */;
       }
       let tmp16 = num > 0;
       if (!tmp16) {
@@ -184,7 +189,7 @@ function aggregateGuildState(guild_id, unreadByType, unread) {
   });
   unreadByType.lowImportanceMentionCount = 0;
   unreadByType.highImportanceMentionCount = 0;
-  const item = require("../utils/SnowflakeUtils.tsx").forEach(unreadByType.mentionCounts, (count) => {
+  const item = DISCORD_EPOCH.forEach(unreadByType.mentionCounts, (count) => {
     count = count.count;
     if (count.isMentionLowImportance) {
       tmp.lowImportanceMentionCount = tmp.lowImportanceMentionCount + count;
@@ -457,7 +462,7 @@ function recountGuild(guildId) {
       }
       const mutedChannels = obj11.getMutedChannels(tmp2);
       const channelOverrides = obj11.getChannelOverrides(tmp2);
-      let obj2 = require("../modules/opt_in_channels/isOptInEnabled.tsx") /* useOptInEnabledForGuild */;
+      let obj2 = useOptInEnabledForGuild /* useOptInEnabledForGuild */;
       const result = obj2.isOptInEnabledForGuild(tmp2);
       const mutableBasicGuildChannelsForGuild = store2.getMutableBasicGuildChannelsForGuild(tmp2);
       for (const key10034 in mutableBasicGuildChannelsForGuild) {
@@ -896,7 +901,7 @@ function handleChannelSelect(arg0) {
   let channelId;
   let guildId;
   ({ channelId, guildId } = arg0);
-  const isFavoritesGuildIdResult = require("../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
+  const isFavoritesGuildIdResult = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
   let tmp2 = !isFavoritesGuildIdResult;
   if (!isFavoritesGuildIdResult) {
     let tmp4 = null != channelId;
@@ -914,13 +919,13 @@ function handleChannelUpdate(channel) {
   return recountChannels(channel.getGuildId(), items);
 }
 function handleChannelUpdates(channels) {
-  const obj = require("../../_runtime/00012_apply.js")(channels.channels);
-  return require("../../_runtime/00012_apply.js")(channels.channels).groupBy((getGuildId) => getGuildId.getGuildId()).reduce((arg0, arr) => callback(arg2, arr.map((id) => id.id)) || arg0, false);
+  const obj = apply(channels.channels);
+  return apply(channels.channels).groupBy((getGuildId) => getGuildId.getGuildId()).reduce((arg0, arr) => callback(arg2, arr.map((id) => id.id)) || arg0, false);
 }
 function handleBulkAck(channels) {
-  const mapped = require("../../_runtime/00012_apply.js")(channels.channels).map((channelId) => channelId.channelId);
+  const mapped = apply(channels.channels).map((channelId) => channelId.channelId);
   const found = mapped.filter((arg0) => null != store.getChannel(arg0));
-  const arr = require("../../_runtime/00012_apply.js")(channels.channels);
+  const arr = apply(channels.channels);
   return found.groupBy((arg0) => {
     const channel = store.getChannel(arg0);
     let guildId;
@@ -950,7 +955,7 @@ function handleThreadMemberUpdate(id) {
   return recountChannels(id.guildId, items);
 }
 function handleThreadMembersUpdate(id) {
-  let result = require("../modules/threads/ThreadActionUtils.tsx") /* doesThreadMembersActionAffectMe */.doesThreadMembersActionAffectMe(id);
+  let result = doesThreadMembersActionAffectMe /* doesThreadMembersActionAffectMe */.doesThreadMembersActionAffectMe(id);
   if (result) {
     const items = [id.id];
     result = recountChannels(id.guildId, items);
@@ -986,7 +991,7 @@ function handleUserGuildSettingsFullUpdate(userGuildSettings) {
     }
     return guild_id;
   }));
-  const keys = require("../utils/SnowflakeUtils.tsx").keys(closure_22);
+  const keys = DISCORD_EPOCH.keys(closure_22);
   return keys.reduce((arg0, arg1) => {
     let hasItem = set.has(arg1);
     if (hasItem) {

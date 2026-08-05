@@ -1,3 +1,4 @@
+import { Stack } from "../../Stack/native/Stack.native.tsx";
 // discord_app/design/components/RowGroup/native/RowGroup.native.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -31,7 +32,7 @@ export const RowGroup = function RowGroup(children) {
     obj = { direction: "horizontal", spacing: 4, children: null };
     const items = [tmp7, trailing];
     obj[2] = items;
-    tmp2Result = tmp2(require("../../Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
+    tmp2Result = tmp2(Stack /* Stack */.Stack, obj);
     tmp5 = require;
   }
   const items1 = [tmp2Result, callback(View, { style: tmp.content, children: children.children })];

@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/voice_calls/RTCConnectionDesyncHooks.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -18,16 +19,16 @@ export const useEnsureSyncedChannelVoiceStates = function useEnsureSyncedChannel
   const _require = id;
   const dependencyMap = voiceStates;
   let items = [retryFailedUsers, createRTCConnection];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     let desyncedVoiceStates = null;
     if (closure_0 === outer1_10.getChannelId()) {
       desyncedVoiceStates = outer1_9.getDesyncedVoiceStates();
     }
     return desyncedVoiceStates;
   });
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items1 = [stateFromStoresArray];
-  const React = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => {
+  const React = _initialize.useStateFromStoresArray(items1, () => {
     if (null == closure_0) {
       let items = [];
     } else {
@@ -36,15 +37,15 @@ export const useEnsureSyncedChannelVoiceStates = function useEnsureSyncedChannel
     }
     return items;
   });
-  const obj2 = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const obj2 = _initialize;
   const items2 = [mergeGuildAvatar];
-  stateFromStoresArray = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items2, () => {
+  stateFromStoresArray = _initialize.useStateFromStoresArray(items2, () => {
     const mapped = noop.map((arg0) => user.getUser(arg0));
     return mapped.filter(id(voiceStates[13]).isNotNullish);
   });
-  const obj3 = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const obj3 = _initialize;
   const items3 = [ensureGuildLoaded];
-  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => outer1_7.getBasicChannel(closure_0));
+  const stateFromStores1 = _initialize.useStateFromStores(items3, () => outer1_7.getBasicChannel(closure_0));
   const items4 = [stateFromStoresArray, ];
   let guild_id;
   if (stateFromStores1 != null) {
@@ -106,7 +107,7 @@ export const useEnsureSyncedChannelVoiceStates = function useEnsureSyncedChannel
 export const useDesyncedChannelParticipants = function useDesyncedChannelParticipants(arg0) {
   const _require = arg0;
   const items = [retryFailedUsers, createRTCConnection];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let desyncedParticipants = null;
     if (closure_0 === outer1_10.getChannelId()) {
       desyncedParticipants = outer1_9.getDesyncedParticipants();
@@ -150,18 +151,18 @@ export const useIsRTCDisconnectedUIVisible = function useIsRTCDisconnectedUIVisi
   const _require = arg0;
   const dependencyMap = id;
   const items = [stateFromStores2];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => stateFromStores2.getId() === closure_1);
-  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const stateFromStores = _initialize.useStateFromStores(items, () => stateFromStores2.getId() === closure_1);
+  const obj = _initialize;
   const items1 = [createRTCConnection];
-  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => channelId.getChannelId());
+  const stateFromStores1 = _initialize.useStateFromStores(items1, () => channelId.getChannelId());
   React = React.useRef(null);
-  const obj2 = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const obj2 = _initialize;
   [tmp4, getParticipants] = stateFromStores1(React.useState(false), 2);
   const tmp3 = stateFromStores1(React.useState(false), 2);
   [tmp6, isVoiceMuted] = stateFromStores1(React.useState(false), 2);
   const tmp5 = stateFromStores1(React.useState(false), 2);
   const items2 = [createRTCConnection, updateVoiceState];
-  stateFromStores2 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
+  stateFromStores2 = _initialize.useStateFromStores(items2, () => {
     let isUserConnectedResult = null != closure_1;
     if (isUserConnectedResult) {
       isUserConnectedResult = null != closure_0;
@@ -177,9 +178,9 @@ export const useIsRTCDisconnectedUIVisible = function useIsRTCDisconnectedUIVisi
     }
     return isUserConnectedResult;
   });
-  const obj3 = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const obj3 = _initialize;
   const items3 = [createRTCConnection, updateVoiceState];
-  const stateFromStores3 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => {
+  const stateFromStores3 = _initialize.useStateFromStores(items3, () => {
     let tmp2 = null != closure_1;
     if (tmp2) {
       tmp2 = null != closure_0;

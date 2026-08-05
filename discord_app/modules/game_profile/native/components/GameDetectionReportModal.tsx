@@ -1,3 +1,4 @@
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 // discord_app/modules/game_profile/native/components/GameDetectionReportModal.tsx
 import _slicedToArray from "_slicedToArray";
 import TextArea from "TextArea";
@@ -260,6 +261,6 @@ export default function GameDetectionReportModal(applicationId) {
     }
   }), []);
   const initialRouteStack = [{ name: REPORT, params: { applicationId: applicationId.applicationId } }];
-  return callback2(require("../../../../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */.Navigator, { screens, initialRouteStack });
+  return callback2(NavigationStack /* NavigationStack */.Navigator, { screens, initialRouteStack });
 };
 export const MODAL_KEY = "game-detection-report";

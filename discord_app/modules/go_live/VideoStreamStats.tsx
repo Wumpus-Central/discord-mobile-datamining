@@ -1,3 +1,4 @@
+import { sleep } from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 // discord_app/modules/go_live/VideoStreamStats.tsx
 import ApplicationStreamPresets from "ApplicationStreamPresets";
 import { StreamLayouts } from "ME";
@@ -39,12 +40,12 @@ prototype["start"] = function start() {
   ({ resolution: this._targetResolution, fps: this._targetFPS } = state);
   const _statInterval = this._statInterval;
   _statInterval.start(1000, this._sampleStats);
-  this._lastLayoutChanged = require("../../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */.now();
+  this._lastLayoutChanged = sleep /* sleep */.now();
 };
 prototype["stop"] = function stop() {
   const _statInterval = this._statInterval;
   _statInterval.stop();
-  this._streamEnd = require("../../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */.now();
+  this._streamEnd = sleep /* sleep */.now();
   this._incrementLayout(this._lastLayout, (this._streamEnd - this._lastLayoutChanged) / 1000);
 };
 prototype["autoQualityChange"] = function autoQualityChange() {
@@ -54,12 +55,12 @@ prototype["layoutChange"] = function layoutChange(_lastLayout) {
   const self = this;
   if (_lastLayout !== this._lastLayout) {
     if (null == self._streamEnd) {
-      const nowResult = require("../../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */.now();
+      const nowResult = sleep /* sleep */.now();
       self._incrementLayout(self._lastLayout, (nowResult - self._lastLayoutChanged) / 1000);
       self._layoutChanges = self._layoutChanges + 1;
       self._lastLayout = _lastLayout;
       self._lastLayoutChanged = nowResult;
-      const obj = require("../../../discord_common/js/packages/time-utils/TimeUtils.tsx") /* sleep */;
+      const obj = sleep /* sleep */;
     }
   }
 };

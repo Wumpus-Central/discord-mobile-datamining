@@ -1,3 +1,5 @@
+import { GuildsBar } from "../../../../guilds_bar/native/GuildsBar.tsx";
+import { context } from "../../../../home_drawer/native/useHomeDrawerGesture.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/guilds/HomePanelContent.tsx
 import { View } from "get ActivityIndicator";
 import withEqualityFn from "withEqualityFn";
@@ -55,7 +57,7 @@ let closure_7 = createCacheKey.createStyles((width) => {
 let closure_8 = { code: "function HomePanelContentTsx1(){const{isGradientTheme,maxX,interpolateColor,panelSpringTranslateX,baseLowest,panelBg}=this.__closure;if(isGradientTheme||maxX<=0){return{backgroundColor:'transparent'};}return{backgroundColor:interpolateColor(panelSpringTranslateX.get(),[0,maxX],[baseLowest,panelBg])};}" };
 const memoResult = require("noop").memo(() => {
   const tmp = callback(DM_WIDTH);
-  let obj = require("../../../../home_drawer/native/useHomeDrawerGesture.tsx") /* context */;
+  let obj = context /* context */;
   if (obj.useIsHomeDrawerEnabled()) {
     let tmp3Result = tmp3(HomeDrawerPanelContent, {});
   } else {
@@ -63,7 +65,7 @@ const memoResult = require("noop").memo(() => {
     obj[0] = tmp.container;
     obj = { style: null, children: null };
     obj[0] = tmp.guildLisetContainerDefault;
-    obj[1] = tmp3(require("../../../../guilds_bar/native/GuildsBar.tsx"), {});
+    obj[1] = tmp3(GuildsBar, {});
     obj[1] = tmp3(View, obj);
     tmp3Result = tmp3(View, obj);
   }

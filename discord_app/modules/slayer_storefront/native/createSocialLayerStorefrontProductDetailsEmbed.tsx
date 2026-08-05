@@ -1,3 +1,7 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getEmbedThemeColors } from "../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
+import { useSKUPrice } from "../../storefront/StorefrontUtils.tsx";
+import { getPrice } from "../SlayerStorefrontUtils.tsx";
 // discord_app/modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx
 import _slicedToArray from "_slicedToArray";
 import useGetOrFetchApplications from "useGetOrFetchApplications";
@@ -15,7 +19,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
   let guildOrApplication;
   let skuId;
   ({ skuId, guildOrApplication } = theme);
-  ({ colors, baseColors } = require("../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx")(theme.theme));
+  ({ colors, baseColors } = getEmbedThemeColors(theme.theme));
   let obj = addSku;
   const value = addSku.get(skuId);
   let applicationId;
@@ -25,7 +29,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
   application = application.getApplication(applicationId);
   const isFetchingResult = obj.isFetching(skuId);
   let result = null != applicationId;
-  const tmp3 = require("../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx")(theme.theme);
+  const tmp3 = getEmbedThemeColors(theme.theme);
   if (result) {
     result = obj2.isFetchingApplication(applicationId);
   }
@@ -35,8 +39,8 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
     name = application.name;
   }
   if (name == null) {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    let str = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.vyaWs7);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    let str = intl.string(getSystemLocale /* getSystemLocale */.t.vyaWs7);
     name = str.toUpperCase();
   }
   if (!isFetchingResult) {
@@ -46,9 +50,9 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
       if (null != application) {
         if (tmp(10916)(application)) {
           if ("guild" !== guildOrApplication.type) {
-            const result1 = require("../../storefront/StorefrontUtils.tsx") /* useSKUPrice */.isSlayerSkuAvailableOnThisPlatform(value);
-            const obj4 = require("../../storefront/StorefrontUtils.tsx") /* useSKUPrice */;
-            const str4 = require("../SlayerStorefrontUtils.tsx") /* getPrice */.getCardImageURL(value);
+            const result1 = useSKUPrice /* useSKUPrice */.isSlayerSkuAvailableOnThisPlatform(value);
+            const obj4 = useSKUPrice /* useSKUPrice */;
+            const str4 = getPrice /* getPrice */.getCardImageURL(value);
             str = undefined;
             if (str4 != null) {
               str = str4.toString();
@@ -63,7 +67,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
             obj.titleText = value.name;
             obj.titleColor = colors.titleColor;
             const intl2 = tmp12(1236).intl;
-            obj.subtitle = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.V91tvy);
+            obj.subtitle = intl2.string(getSystemLocale /* getSystemLocale */.t.V91tvy);
             obj.subtitleColor = colors.subtitleColor;
             obj.thumbnailUrl = str;
             obj.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

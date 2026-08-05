@@ -1,3 +1,4 @@
+import { useQuests } from "../hooks/QuestHooks.tsx";
 // discord_app/modules/quests/native/QuestRewardDetailsBottomSheet.native.tsx
 import noop from "noop";
 import { View } from "set";
@@ -84,7 +85,7 @@ export default function QuestRewardDetailsBottomSheetConnected(questId) {
     const obj = callback(11080);
     callback2(4253).hideActionSheet();
   }, []);
-  let obj = require("../hooks/QuestHooks.tsx") /* useQuests */;
+  let obj = useQuests /* useQuests */;
   const nonNullableQuest = obj.useNonNullableQuest(questId.questId, callback);
   let tmp3 = null;
   if (null != nonNullableQuest) {

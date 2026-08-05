@@ -1,3 +1,5 @@
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { Button } from "../../../../../design/void/native.tsx";
 // discord_app/modules/premium/gifting/native/views/GiftingRewardPreviewAvatar.tsx
 import "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -8,12 +10,12 @@ const require = arg1;
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/premium/gifting/native/views/GiftingRewardPreviewAvatar.tsx");
 
 export default function GiftingRewardPreviewAvatar(asset) {
-  let obj = require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [maybeApplyNoTextColorForLightCustomTheme];
   let tmp5;
-  const stateFromStores1 = require("../../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
+  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   if (null != asset.asset) {
     obj = { asset: null };
     obj[0] = asset.asset;
@@ -23,5 +25,5 @@ export default function GiftingRewardPreviewAvatar(asset) {
   obj[2] = tmp5;
   obj[3] = !stateFromStores1;
   const merged = Object.assign(asset);
-  return jsx(require("../../../../../design/void/native.tsx") /* Button */.Avatar, { user: stateFromStores, guildId: "r", avatarDecoration: "ct", animate: null });
+  return jsx(Button /* Button */.Avatar, { user: stateFromStores, guildId: "r", avatarDecoration: "ct", animate: null });
 };

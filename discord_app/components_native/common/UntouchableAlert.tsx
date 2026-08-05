@@ -1,3 +1,4 @@
+import { ActivityIndicator } from "../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 // discord_app/components_native/common/UntouchableAlert.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -35,7 +36,7 @@ prototype["render"] = function render() {
   if (this.props.loading) {
     const obj = { style: null, children: null };
     obj[0] = tmp.container;
-    obj[1] = jsx(require("../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx") /* ActivityIndicator */.ActivityIndicator, {});
+    obj[1] = jsx(ActivityIndicator /* ActivityIndicator */.ActivityIndicator, {});
     tmp2 = <View style={null}>{null}</View>;
   }
   return tmp2;

@@ -1,3 +1,6 @@
+import { useInitialValue } from "../../../../../hooks/useInitialValue.tsx";
+import { _calculateScrollOffset } from "../../../../safe_area/useSafeAreaAvoidingInputs.native.tsx";
+import { useSafeAreaInsetsKeyboardAware } from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 // discord_app/modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreate.tsx
 import loadSavedGuildStickers from "loadSavedGuildStickers";
 import ReactionIcon from "ReactionIcon";
@@ -395,9 +398,9 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   let tmp12 = ref1(ref2.useState(undefined), 2);
   first1 = tmp12[0];
   callback = tmp12[1];
-  const insets = require("../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx")({ includeKeyboardHeight: true }).insets;
+  const insets = useSafeAreaInsetsKeyboardAware({ includeKeyboardHeight: true }).insets;
   const items = [{ ref: ref1, offset: { type: "toRef", ref: ref2 } }, { ref: ref2, offset: { type: "toBottom" } }];
-  const onFocus = require("../../../../safe_area/useSafeAreaAvoidingInputs.native.tsx")({ insets, inputs: items, scrollViewRef: ref }).onFocus;
+  const onFocus = _calculateScrollOffset({ insets, inputs: items, scrollViewRef: ref }).onFocus;
   stickerById = undefined;
   const tmp11 = ref1(ref2.useState(undefined), 2);
   if (null != stickerId) {
@@ -413,9 +416,9 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     }
     return applyArgumentsResult;
   }
-  const tmp16Result = require("../../../../../hooks/useInitialValue.tsx")(stickerById);
+  const tmp16Result = useInitialValue(stickerById);
   c16 = tmp16Result;
-  const tmp20 = require("../../../../../hooks/useInitialValue.tsx")(() => {
+  const tmp20 = useInitialValue(() => {
     let tags = c16;
     if (null != c16) {
       let customEmojiById = null;

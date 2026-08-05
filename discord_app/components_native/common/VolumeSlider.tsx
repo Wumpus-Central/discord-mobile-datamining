@@ -1,3 +1,9 @@
+import { _getRequireWildcardCache } from "../../../_runtime/07799__getRequireWildcardCache.js";
+import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
+import { VoiceNormalIcon } from "../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
+import { VoiceXIcon } from "../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
+import { map } from "../../design/tokens/native/useToken.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/components_native/common/VolumeSlider.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -25,7 +31,7 @@ export default function VolumeSlider(maxTrackTintColor) {
   let value;
   let PRIMARY_400 = maxTrackTintColor.maxTrackTintColor;
   if (PRIMARY_400 === undefined) {
-    PRIMARY_400 = require("../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_400;
+    PRIMARY_400 = Themes.unsafe_rawColors.PRIMARY_400;
   }
   ({ maxVolume, value } = maxTrackTintColor);
   if (maxVolume === undefined) {
@@ -34,15 +40,15 @@ export default function VolumeSlider(maxTrackTintColor) {
   ({ onValueChange: require, onResponderGrant } = maxTrackTintColor);
   const merged = Object.assign(maxTrackTintColor, Object.create(null));
   const tmp4 = callback2();
-  let obj = require("../../design/tokens/native/useToken.tsx") /* map */;
+  let obj = map /* map */;
   let minTrackColor = merged.minTrackColor;
   if (minTrackColor == null) {
-    minTrackColor = obj.useToken(require("../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BRAND);
+    minTrackColor = obj.useToken(Themes.colors.BACKGROUND_BRAND);
   }
   obj = { style: items, children: null };
   items = [tmp4.volumerSlider, maxTrackTintColor.style];
   obj = { style: tmp4.leftIcon };
-  const items1 = [callback(require("../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx") /* VoiceXIcon */.VoiceXIcon, obj), , ];
+  const items1 = [callback(VoiceXIcon /* VoiceXIcon */.VoiceXIcon, obj), , ];
   const obj1 = { style: tmp4.volumerSliderNative, value: null, minimumValue: 0, maximumValue: null, minimumTrackTintColor: null, maximumTrackTintColor: null, accessibilityLabel: null, onValueChange: null, onResponderGrant: null };
   let tmp5Result = tmp5(4732);
   obj1[1] = tmp5Result.amplitudeToPerceptual(value);
@@ -50,7 +56,7 @@ export default function VolumeSlider(maxTrackTintColor) {
   obj1[4] = minTrackColor;
   obj1[5] = PRIMARY_400;
   const intl = tmp5(1236).intl;
-  obj1[6] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.xPHVBs);
+  obj1[6] = intl.string(getSystemLocale /* getSystemLocale */.t.xPHVBs);
   obj1[7] = function onValueChange(arg0) {
     return callback(outer1_0(outer1_2[10]).perceptualToAmplitude(arg0));
   };
@@ -63,8 +69,8 @@ export default function VolumeSlider(maxTrackTintColor) {
     onResponderGrant = fn;
   }
   obj1[8] = onResponderGrant;
-  items1[1] = callback(require("../../../_runtime/07799__getRequireWildcardCache.js"), obj1);
-  items1[2] = callback(require("../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx") /* VoiceNormalIcon */.VoiceNormalIcon, { style: tmp4.rightIcon });
+  items1[1] = callback(_getRequireWildcardCache, obj1);
+  items1[2] = callback(VoiceNormalIcon /* VoiceNormalIcon */.VoiceNormalIcon, { style: tmp4.rightIcon });
   obj[1] = items1;
   return closure_6(View, obj);
 };

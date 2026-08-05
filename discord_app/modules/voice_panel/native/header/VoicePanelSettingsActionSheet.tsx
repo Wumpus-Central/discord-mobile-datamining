@@ -1,3 +1,7 @@
+import { BottomSheetModal } from "../../../../../_runtime/05340_BottomSheetModal.js";
+import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
+import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { VoicePanelSettingsOverviewHeader } from "VoicePanelSettingsOverview.tsx";
 // discord_app/modules/voice_panel/native/header/VoicePanelSettingsActionSheet.tsx
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -12,10 +16,10 @@ const memoResult = require("noop").memo(function VoicePanelSettingsActionSheet(a
   let obj = { startExpanded: true, scrollable: true, children: null };
   obj = { children: null };
   obj = { bottom: true, style: callback().wrapper, children: null };
-  obj[2] = jsx(require("VoicePanelSettingsOverview.tsx"), { guildId, channelId });
-  obj[0] = jsx(require("../../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, { bottom: true, style: callback().wrapper, children: null });
-  obj[2] = jsx(require("../../../../../_runtime/05340_BottomSheetModal.js") /* BottomSheetModal */.BottomSheetScrollView, { bottom: true, style: callback().wrapper, children: null });
-  return jsx(require("../../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, { bottom: true, style: callback().wrapper, children: null });
+  obj[2] = jsx(VoicePanelSettingsOverviewHeader, { guildId, channelId });
+  obj[0] = jsx(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, { bottom: true, style: callback().wrapper, children: null });
+  obj[2] = jsx(BottomSheetModal /* BottomSheetModal */.BottomSheetScrollView, { bottom: true, style: callback().wrapper, children: null });
+  return jsx(Background /* Background */.BottomSheet, { bottom: true, style: callback().wrapper, children: null });
 });
 const result = require("createCacheKey").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelSettingsActionSheet.tsx");
 

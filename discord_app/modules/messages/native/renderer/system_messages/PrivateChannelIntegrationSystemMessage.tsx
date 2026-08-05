@@ -1,3 +1,6 @@
+import { createCommonMessage } from "createCommonMessage.tsx";
+import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
+import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/PrivateChannelIntegrationSystemMessage.tsx
 import { MessageTypes } from "ME";
 
@@ -5,9 +8,9 @@ const result = require("formatUsernameOnClick").fileFinishedImporting("modules/m
 
 export const createPrivateChannelIntegrationSystemMessage = function createPrivateChannelIntegrationSystemMessage(roleStyle, type) {
   const message = roleStyle.message;
-  let obj = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */;
+  let obj = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  const tmp5 = require("formatUsernameOnClick.tsx")({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
+  const tmp5 = formatUsernameOnClick({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   const application = message.application;
   let bot;
   if (application != null) {
@@ -35,6 +38,6 @@ export const createPrivateChannelIntegrationSystemMessage = function createPriva
     obj1[3] = tmp7;
     privateChannelIntegrationAddedSystemMessageASTContent = tmpResult.getPrivateChannelIntegrationRemovedSystemMessageASTContent(obj1);
   }
-  const merged = Object.assign(require("createCommonMessage.tsx")(roleStyle));
+  const merged = Object.assign(createCommonMessage(roleStyle));
   return { content: privateChannelIntegrationAddedSystemMessageASTContent };
 };

@@ -1,3 +1,7 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { getEmoji } from "GuildProfileBuilders.tsx";
 // discord_app/modules/guild_profile/GuildProfileActionCreators.tsx
 import dispatcher from "dispatcher";
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
@@ -85,15 +89,15 @@ export const getGuildProfile = function getGuildProfile(outer1_0) {
     }
     obj = { type: "GUILD_PROFILE_FETCH", guildId: null };
     obj[1] = outer1_0;
-    require("../../Dispatcher.tsx").dispatch(obj);
-    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    dispatcher.dispatch(obj);
+    const HTTP = _sendRequest.HTTP;
     obj = { url: null, rejectWithError: null };
     obj[0] = closure_9.GUILD_PROFILE(outer1_0);
-    const obj2 = require("../../Dispatcher.tsx");
+    const obj2 = dispatcher;
     const obj6 = store;
-    obj[1] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    obj[1] = _sendRequest.rejectWithMigratedError();
     const value = HTTP.get(obj);
-    const obj5 = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+    const obj5 = _sendRequest;
     resolved1 = value.then((body) => {
       let obj = outer1_0(outer1_2[7]);
       const guildProfileFromServer = obj.buildGuildProfileFromServer(body.body);
@@ -121,18 +125,18 @@ export const saveGuildProfile = function saveGuildProfile(outer1_0, name) {
   if (store.getIsUpdating(outer1_0)) {
     let resolved = Promise.resolve(null);
   } else {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "GUILD_PROFILE_UPDATE", guildId: null, updates: null };
     obj[1] = outer1_0;
     obj[2] = name;
     obj.dispatch(obj);
-    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     obj = { url: null, body: null, rejectWithError: null };
     obj[0] = closure_9.GUILD_PROFILE(outer1_0);
-    obj[1] = _require("GuildProfileBuilders.tsx").buildGuildProfileUpdateForServer(name);
-    const obj4 = _require("GuildProfileBuilders.tsx");
-    obj[2] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
-    const obj5 = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+    obj[1] = _getEmoji.buildGuildProfileUpdateForServer(name);
+    const obj4 = _getEmoji;
+    obj[2] = _sendRequest.rejectWithMigratedError();
+    const obj5 = _sendRequest;
     const patchResult = HTTP.patch(obj);
     resolved = HTTP.patch(obj).then((body) => {
       let obj = outer1_0(outer1_2[7]);
@@ -162,19 +166,19 @@ export const setGuildProfileVisibility = function setGuildProfileVisibility(oute
   if (store.getIsUpdating(outer1_0)) {
     let resolved = Promise.resolve(null);
   } else {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "GUILD_PROFILE_UPDATE_VISIBILITY", guildId: null, visibility: null };
     obj[1] = outer1_0;
     obj[2] = arg1;
     obj.dispatch(obj);
-    const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     obj = { url: null, body: null, rejectWithError: null };
     obj[0] = closure_9.GUILD_PROFILE_VISIBILITY(outer1_0);
     const obj1 = { visibility: null };
     obj1[0] = arg1;
     obj[1] = obj1;
-    obj[2] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
-    const obj5 = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+    obj[2] = _sendRequest.rejectWithMigratedError();
+    const obj5 = _sendRequest;
     const putResult = HTTP.put(obj);
     resolved = HTTP.put(obj).then((body) => {
       const visibility = body.body.visibility;
@@ -211,7 +215,7 @@ export const fetchGuildTopGames = function fetchGuildTopGames() {
 };
 export const trackGuildProfileViewed = function trackGuildProfileViewed(guildId, analyticsLocations) {
   const tmp = null != selfMember.getSelfMember(guildId);
-  let obj = require("../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { guild_id: guildId, location_stack: analyticsLocations, is_member: tmp, has_join_request: null != request.getRequest(guildId) };
   obj.track(constants.GUILD_PROFILE_VIEWED, obj);
 };

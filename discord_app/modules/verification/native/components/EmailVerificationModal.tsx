@@ -1,3 +1,4 @@
+import { EmailVerificationModalActionCreators } from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
 // discord_app/modules/verification/native/components/EmailVerificationModal.tsx
 import _slicedToArray from "_slicedToArray";
 import NavigationStack from "NavigationStack";
@@ -9,7 +10,7 @@ import { jsx } from "set";
 const require = arg1;
 function closeModal() {
   resetChangeEmailStore();
-  require("../../../../actions/native/EmailVerificationModalActionCreators.tsx").close();
+  EmailVerificationModalActionCreators.close();
 }
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/verification/native/components/EmailVerificationModal.tsx");
 

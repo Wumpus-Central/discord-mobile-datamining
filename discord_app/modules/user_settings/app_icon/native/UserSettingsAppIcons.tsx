@@ -1,3 +1,6 @@
+import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
+import { BackwardsCompatibleAppIconRows } from "../../../app_icons/native/AppIconRows.tsx";
+import { NitroUpsellButton } from "../../../premium/components/native/NitroUpsellButton.tsx";
 // discord_app/modules/user_settings/app_icon/native/UserSettingsAppIcons.tsx
 import items from "items";
 import { View } from "openPremiumModal";
@@ -135,7 +138,7 @@ const memoResult = require("getSystemLocale").memo(() => {
   let obj2 = stateFromStores(1897);
   const isPremiumResult = obj2.isPremium(stateFromStores);
   let dependencyMap = isPremiumResult;
-  const analyticsLocations = require("../../../app_analytics/useAnalyticsLocations.tsx")().analyticsLocations;
+  const analyticsLocations = context().analyticsLocations;
   obj = { page: constants.APP_ICONS };
   obj = { children: null };
   obj1 = { accessibilityRole: "radiogroup", children: null };
@@ -151,7 +154,7 @@ const memoResult = require("getSystemLocale").memo(() => {
       return applyArgumentsResult;
     }
   };
-  obj1[1] = callback(require("../../../app_icons/native/AppIconRows.tsx"), obj2);
+  obj1[1] = callback(BackwardsCompatibleAppIconRows, obj2);
   obj[0] = callback(obj, obj1);
   const children = [callback(stateFromStores(7777).Form, obj), ];
   let tmp9Result = !isPremiumResult;
@@ -166,9 +169,9 @@ const memoResult = require("getSystemLocale").memo(() => {
     };
     const intl = tmp2(1236).intl;
     obj4[1] = intl.string(tmp2(1236).t.M0rDSO);
-    obj3[1] = tmp9(require("../../../premium/components/native/NitroUpsellButton.tsx"), obj4);
+    obj3[1] = tmp9(NitroUpsellButton, obj4);
     tmp9Result = tmp9(obj, obj3);
-    const tmp6Result = require("../../../premium/components/native/NitroUpsellButton.tsx");
+    const tmp6Result = NitroUpsellButton;
   }
   children[1] = tmp9Result;
   return closure_11(closure_10, { children });

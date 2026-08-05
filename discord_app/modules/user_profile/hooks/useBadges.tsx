@@ -1,3 +1,4 @@
+import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 // discord_app/modules/user_profile/hooks/useBadges.tsx
 import initialize from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -7,7 +8,7 @@ const legacy_username = "legacy_username";
 const result = require("explicitContentFromProto").fileFinishedImporting("modules/user_profile/hooks/useBadges.tsx");
 
 export default function useBadges(getBadges) {
-  const LegacyUsernameDisabled = require("../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.LegacyUsernameDisabled;
+  const LegacyUsernameDisabled = explicitContentFromProto /* explicitContentFromProto */.LegacyUsernameDisabled;
   let setting = LegacyUsernameDisabled.useSetting();
   if (undefined !== arg1) {
     setting = arg1;

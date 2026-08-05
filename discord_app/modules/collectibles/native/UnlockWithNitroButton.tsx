@@ -1,3 +1,7 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { CollapsingText } from "../../../design/components/Button/native/BaseTextButton.native.tsx";
+import { NitroWheelIcon } from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import { useOpenNitroSubscribeActionSheet } from "useOpenNitroSubscribeActionSheet.tsx";
 // discord_app/modules/collectibles/native/UnlockWithNitroButton.tsx
 import "noop";
 import updateProduct from "updateProduct";
@@ -17,7 +21,7 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
   }
   ({ onTrackPress: require, text } = shouldShrink);
   let importDefault;
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [map, updateProduct];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let isPurchasingProductResult = null != isClaiming.isClaiming;
@@ -26,7 +30,7 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
     }
     return isPurchasingProductResult;
   });
-  importDefault = require("useOpenNitroSubscribeActionSheet.tsx")();
+  importDefault = useOpenNitroSubscribeActionSheet();
   if (text == null) {
     const intl = tmp(1236).intl;
     text = intl.string(tmp(1236).t.sEAnVH);
@@ -49,7 +53,7 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
     str = "sm";
   }
   obj[4] = str;
-  obj[6] = jsx(require("../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx") /* NitroWheelIcon */.NitroWheelIcon, { size: "sm", color: "white" });
+  obj[6] = jsx(NitroWheelIcon /* NitroWheelIcon */.NitroWheelIcon, { size: "sm", color: "white" });
   obj[7] = function onPress() {
     if (closure_0 != null) {
       tmp(outer1_5.UNLOCK_WITH_NITRO);
@@ -57,5 +61,5 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
     callback2();
   };
   obj[8] = stateFromStores;
-  return jsx(require("../../../design/components/Button/native/BaseTextButton.native.tsx") /* CollapsingText */.BaseTextButton, { textElement: tmp4Result, text: null, accessibilityLabel: null, variant: "primary", size: null, grow: true, icon: null, onPress: null, disabled: null });
+  return jsx(CollapsingText /* CollapsingText */.BaseTextButton, { textElement: tmp4Result, text: null, accessibilityLabel: null, variant: "primary", size: null, grow: true, icon: null, onPress: null, disabled: null });
 };

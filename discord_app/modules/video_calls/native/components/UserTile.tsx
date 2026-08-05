@@ -1,3 +1,8 @@
+import { registerAsset } from "../../../../../_runtime/07811_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10621_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10622_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10623_registerAsset.js";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/video_calls/native/components/UserTile.tsx
 import Emoji from "Emoji";
 import importAllResult from "getSystemLocale";
@@ -151,11 +156,11 @@ let closure_19 = importAllResult.memo((userId) => {
   }, items1), 3);
   let tmp5 = tmp4[1];
   if (tmp4[0]) {
-    let tmp6 = require("../../../../../_runtime/07811_registerAsset.js");
+    let tmp6 = registerAsset;
   } else if (deafened) {
-    tmp6 = require("../../../../../_runtime/10621_registerAsset.js");
+    tmp6 = registerAsset;
   } else if (muted) {
-    tmp6 = require("../../../../../_runtime/10622_registerAsset.js");
+    tmp6 = registerAsset;
   }
   if (tmp5) {
     tmp5 = !tmp4[2];
@@ -167,7 +172,7 @@ let closure_19 = importAllResult.memo((userId) => {
       const items2 = [tmp.statusWrapper, style];
       obj[0] = items2;
       obj = { source: null, size: null, disableColor: true };
-      obj[0] = require("../../../../../_runtime/10623_registerAsset.js");
+      obj[0] = registerAsset;
       obj[1] = tmp2(1297).Icon.Sizes.SMALL;
       obj[1] = callback2(tmp2(1297).Icon, obj);
       tmp14 = callback2(View, obj);
@@ -186,8 +191,8 @@ let closure_19 = importAllResult.memo((userId) => {
       const obj3 = { source: null, size: null, color: null, disableColor: null };
       obj3[0] = tmp6;
       obj3[1] = tmp2(1297).Icon.Sizes.SMALL;
-      obj3[2] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.WHITE;
-      obj3[3] = tmp6 === require("../../../../../_runtime/07811_registerAsset.js");
+      obj3[2] = Themes.unsafe_rawColors.WHITE;
+      obj3[3] = tmp6 === registerAsset;
       obj2[1] = callback2(tmp2(1297).Icon, obj3);
       tmp19Result = tmp19(View, obj2);
       const tmp20 = View;

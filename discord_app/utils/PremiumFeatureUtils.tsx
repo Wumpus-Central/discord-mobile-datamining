@@ -1,3 +1,4 @@
+import { isPremiumAtLeast } from "PremiumTypeUtils.tsx";
 // discord_app/utils/PremiumFeatureUtils.tsx
 import setPremiumTypeActual from "setPremiumTypeActual";
 import ME from "ME";
@@ -23,7 +24,7 @@ function getUserMaxFileSize(currentUser) {
       if (obj.isPremium(currentUser)) {
         fileSize = table[currentUser.premiumType].fileSize;
       }
-      obj = require("PremiumTypeUtils.tsx") /* isPremiumAtLeast */;
+      obj = isPremiumAtLeast /* isPremiumAtLeast */;
     }
     fileSize = closure_3;
   }

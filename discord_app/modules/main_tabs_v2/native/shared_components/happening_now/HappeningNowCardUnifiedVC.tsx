@@ -1,3 +1,7 @@
+import { defaultAreStatesEqual } from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { IconOrPreview } from "HappeningNowCardActivity.tsx";
+import { HappeningNowCardEmbeddedActivity } from "HappeningNowCardEmbeddedActivity.tsx";
+import { formatVoiceActivityTitle } from "HappeningNowCardVoice.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUnifiedVC.tsx
 import "noop";
 import participantFromServer from "participantFromServer";
@@ -64,7 +68,7 @@ export default function HappeningNowCardUnifiedVC(arg0) {
     obj[3] = stream;
     obj[4] = fullwidth;
     obj[5] = panelVariant;
-    let tmp5 = jsx(require("HappeningNowCardActivity.tsx"), { index: null, userId: null, guildId: null, stream: null, fullwidth: null, panelVariant: null });
+    let tmp5 = jsx(IconOrPreview, { index: null, userId: null, guildId: null, stream: null, fullwidth: null, panelVariant: null });
   } else if (null != activity) {
     obj = { index: null, voiceState: null, fullwidth: null, guildId: null, activity: null, userId: null, cardKey: null, panelVariant: null };
     obj[0] = index;
@@ -75,7 +79,7 @@ export default function HappeningNowCardUnifiedVC(arg0) {
     obj[5] = userId;
     obj[6] = cardKey;
     obj[7] = panelVariant;
-    tmp5 = jsx(require("HappeningNowCardEmbeddedActivity.tsx"), { index: null, voiceState: null, fullwidth: null, guildId: null, activity: null, userId: null, cardKey: null, panelVariant: null });
+    tmp5 = jsx(HappeningNowCardEmbeddedActivity, { index: null, voiceState: null, fullwidth: null, guildId: null, activity: null, userId: null, cardKey: null, panelVariant: null });
   } else {
     let obj1 = { index: null, voiceState: null, fullwidth: null, guildId: null, panelVariant: null };
     obj1[0] = index;
@@ -83,7 +87,7 @@ export default function HappeningNowCardUnifiedVC(arg0) {
     obj1[2] = fullwidth;
     obj1[3] = guildId;
     obj1[4] = panelVariant;
-    tmp5 = jsx(require("HappeningNowCardVoice.tsx"), { index: null, voiceState: null, fullwidth: null, guildId: null, panelVariant: null });
+    tmp5 = jsx(formatVoiceActivityTitle, { index: null, voiceState: null, fullwidth: null, guildId: null, panelVariant: null });
   }
   return tmp5;
 };
@@ -91,7 +95,7 @@ export const useCallActivityData = function useCallActivityData(channel_id) {
   const _require = channel_id;
   const items = [participantFromServer, reset, upsertRelationship];
   const items1 = [channel_id];
-  return _require("../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresObject(items, () => {
+  return _defaultAreStatesEqual.useStateFromStoresObject(items, () => {
     if (null == channelId) {
       return {};
     } else {

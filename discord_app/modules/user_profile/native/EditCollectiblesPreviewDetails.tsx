@@ -1,3 +1,8 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
+import { getItemRecordsFromPurchases } from "../../collectibles/CollectiblesUtils.tsx";
+import { useCollectiblesData } from "../../collectibles/hooks/useCollectiblesData.tsx";
 // discord_app/modules/user_profile/native/EditCollectiblesPreviewDetails.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -18,12 +23,12 @@ function EditCollectiblesPreviewDescription(arg0) {
   ({ user, purchase } = arg0);
   let stringResult = dependencyMap;
   ({ product, nitroJoinCTA, nitroUpgradeCTA } = arg0);
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [_getSystemLocale];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
-  let obj1 = require("../../../utils/PremiumUtils.tsx");
+  let obj1 = getPremiumPlanItem;
   const canUseCollectiblesResult = obj1.canUseCollectibles(user);
-  let obj2 = require("../../collectibles/CollectiblesUtils.tsx") /* getItemRecordsFromPurchases */;
+  let obj2 = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */;
   let result = obj2.isPremiumCollectiblesProduct(product);
   if (!result) {
     let tmpResult = tmp(6922);
@@ -97,7 +102,7 @@ function EditCollectiblesPreviewDescription(arg0) {
       obj6[2] = stringResult;
       let tmp25Result = callback(tmp(4281).Text, obj6);
     } else {
-      const tmp4Result = require("../../../utils/PremiumUtils.tsx");
+      const tmp4Result = getPremiumPlanItem;
       const Text = tmp(4281).Text;
       const obj7 = { variant: "text-sm/medium", color: "text-default", children: null };
       if (isPremiumResult) {
@@ -107,7 +112,7 @@ function EditCollectiblesPreviewDescription(arg0) {
         obj7[2] = nitroJoinCTA;
         tmp25Result = tmp25(Text, obj7);
       }
-      isPremiumResult = require("../../../utils/PremiumUtils.tsx").isPremium(user);
+      isPremiumResult = getPremiumPlanItem.isPremium(user);
     }
   } else {
     const obj8 = { variant: "text-sm/medium", color: "text-default", children: null };
@@ -129,7 +134,7 @@ export default function EditCollectiblesPreviewDetails(previewSkuId) {
   previewSkuId = previewSkuId.previewSkuId;
   ({ user, nitroJoinCTA, nitroUpgradeCTA } = previewSkuId);
   const tmp = callback2();
-  ({ product, purchase } = require("../../collectibles/hooks/useCollectiblesData.tsx")(previewSkuId));
+  ({ product, purchase } = useCollectiblesData(previewSkuId));
   let tmp5Result = null;
   if (null != previewSkuId) {
     if (null != product) {
@@ -148,7 +153,7 @@ export default function EditCollectiblesPreviewDetails(previewSkuId) {
       }
       obj = { variant: "text-md/bold", color: "text-default", children: null };
       obj[2] = name;
-      const items = [closure_5(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+      const items = [closure_5(Text /* Text */.Text, obj), ];
       obj = { user: null, product: null, purchase: null, nitroJoinCTA: null, nitroUpgradeCTA: null };
       obj[0] = user;
       obj[1] = product;

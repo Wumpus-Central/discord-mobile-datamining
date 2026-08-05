@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { FormGuildGatingModeSelector } from "../components/FormGuildGatingModeSelector.tsx";
+import { Header } from "../components/GuildRoleSubscriptionTierEditStep.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionGroupGatingModal.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
@@ -14,12 +17,12 @@ export default function GuildRoleSubscriptionGroupGatingModal(arg0) {
   [tmp2, tmp3] = callback(usePriceTiers.useGroupIsFullGateState(), 2);
   const obj = { title: null, description: null, canProceedToNextStep: true, nextStep: null };
   const tmp = callback(usePriceTiers.useGroupIsFullGateState(), 2);
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.N38nNP);
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.csJWVI);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.N38nNP);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.csJWVI);
   obj[3] = constants.GROUP;
   const merged = Object.assign(arg0);
-  obj.children = jsx(require("../components/FormGuildGatingModeSelector.tsx"), { isFullServerGating: tmp2, onChange: tmp3 });
-  return jsx(require("../components/GuildRoleSubscriptionTierEditStep.tsx"), { title: null, description: null, canProceedToNextStep: true, nextStep: null });
+  obj.children = jsx(FormGuildGatingModeSelector, { isFullServerGating: tmp2, onChange: tmp3 });
+  return jsx(Header, { title: null, description: null, canProceedToNextStep: true, nextStep: null });
 };

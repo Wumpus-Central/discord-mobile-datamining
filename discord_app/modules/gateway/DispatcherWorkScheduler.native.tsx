@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/gateway/DispatcherWorkScheduler.native.tsx
 import DISPATCHER_STANDARD_TIMEOUT_MS from "DISPATCHER_STANDARD_TIMEOUT_MS";
 import { AppStates } from "ME";
@@ -58,7 +59,7 @@ export const createDispatcherWorkScheduler = function createDispatcherWorkSchedu
   const tmp3 = new DispatcherWorkScheduler("Trying to call a non-function", tmp, DispatcherWorkScheduler, new.target, undefined);
   // ThrowIfThisInitialized (0x7c)
   importDefault = tmp3;
-  const subscription = require("../../Dispatcher.tsx").subscribe("APP_STATE_UPDATE", (arg0) => {
+  const subscription = dispatcher.subscribe("APP_STATE_UPDATE", (arg0) => {
     const result = obj._trackAppBackgrounded(tmp2 === tmp);
   });
   return tmp3;

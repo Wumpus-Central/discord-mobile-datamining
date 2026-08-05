@@ -1,3 +1,4 @@
+import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/blocking/BlockedUserUtils.tsx
 import upsertRelationship from "upsertRelationship";
 
@@ -45,7 +46,7 @@ export const voiceStateHasBlockedUsers = function voiceStateHasBlockedUsers(user
   return blockedOrIgnored.isBlockedOrIgnored(userId.userId);
 };
 export const filterBlockedUsersFromVoiceStates = function filterBlockedUsersFromVoiceStates(voiceStates) {
-  const found = require("../../../_runtime/00012_apply.js")(voiceStates).filter((userId) => !blockedOrIgnored.isBlockedOrIgnored(userId.userId));
-  const arr = require("../../../_runtime/00012_apply.js")(voiceStates);
+  const found = apply(voiceStates).filter((userId) => !blockedOrIgnored.isBlockedOrIgnored(userId.userId));
+  const arr = apply(voiceStates);
   return found.keyBy("userId").value();
 };

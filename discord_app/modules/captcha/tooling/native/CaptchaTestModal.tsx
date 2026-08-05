@@ -1,3 +1,5 @@
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/captcha/tooling/native/CaptchaTestModal.tsx
 import closure_3 from "createCacheKey";
 import _slicedToArray from "_slicedToArray";
@@ -223,7 +225,7 @@ export default function CaptchaTestModal() {
     return obj;
   }, items);
   let obj = { screens: memo, initialRouteName: constants.TEST_CAPTCHA, headerBackTitle: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["13/7kX"]);
-  return callback(require("../../../../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */.Navigator, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["13/7kX"]);
+  return callback(NavigationStack /* NavigationStack */.Navigator, obj);
 };

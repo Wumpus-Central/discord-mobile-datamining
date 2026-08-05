@@ -1,3 +1,7 @@
+import { registerAsset } from "../../../../../_runtime/08610_registerAsset.js";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { Emoji } from "../../../emojis/native/Emoji.tsx";
+import { useEmojiByIdOrName } from "../../useEmojiByIdOrName.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/EmojiIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -23,7 +27,7 @@ export default function EmojiIcon(size) {
   if (lineHeight === undefined) {
     lineHeight = num + 4;
   }
-  let obj = require("../../useEmojiByIdOrName.tsx") /* useEmojiByIdOrName */;
+  let obj = useEmojiByIdOrName /* useEmojiByIdOrName */;
   const emojiByIdOrName = obj.useEmojiByIdOrName(guildId, id);
   if (null == emojiByIdOrName) {
     let tmp4 = null;
@@ -33,9 +37,9 @@ export default function EmojiIcon(size) {
       obj[0] = num;
       obj[1] = num;
       obj[1] = obj;
-      obj[2] = require("../../../../../_runtime/08610_registerAsset.js");
-      tmp4 = jsx(require("../../../../components_native/common/FastImage.tsx"), { width: null, height: null });
-      const tmp7 = require("../../../../components_native/common/FastImage.tsx");
+      obj[2] = registerAsset;
+      tmp4 = jsx(preload, { width: null, height: null });
+      const tmp7 = preload;
     }
     let tmp8Result = tmp4;
   } else {
@@ -74,8 +78,8 @@ export default function EmojiIcon(size) {
       url = emojiByIdOrName.url;
     }
     obj1[4] = url;
-    tmp8Result = jsx(require("../../../emojis/native/Emoji.tsx"), { style: null, fastImageStyle: null, textEmojiStyle: null, name: null, src: null });
-    const tmp10 = require("../../../emojis/native/Emoji.tsx");
+    tmp8Result = jsx(Emoji, { style: null, fastImageStyle: null, textEmojiStyle: null, name: null, src: null });
+    const tmp10 = Emoji;
     const tmp8 = jsx;
     tmp9 = importDefault;
   }

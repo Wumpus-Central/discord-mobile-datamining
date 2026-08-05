@@ -1,3 +1,4 @@
+import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesBackground.tsx
 import "noop";
 import { Gradients } from "items";
@@ -40,5 +41,5 @@ export default function PremiumFeaturesBackground(opacity) {
   obj[3] = num(691).HorizontalGradient.END;
   const merged1 = Object.assign(merged);
   obj.children = children;
-  return jsx(require("../../../../../_runtime/04706_LinearGradient.js"), { style: items, colors: mapped, start: null, end: null });
+  return jsx(LinearGradient, { style: items, colors: mapped, start: null, end: null });
 };

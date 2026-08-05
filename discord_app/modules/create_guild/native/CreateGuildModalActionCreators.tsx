@@ -1,3 +1,6 @@
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { _startContactSyncForDiscoverability } from "../../nuf/native/NUFActionCreators.tsx";
 // discord_app/modules/create_guild/native/CreateGuildModalActionCreators.tsx
 import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics";
 
@@ -8,26 +11,26 @@ const result = require("CreateGuildModal").fileFinishedImporting("modules/create
 
 export default {
   openCreateGuildModal(onSuccess) {
-    let obj = require("../../../actions/ModalActionCreators.tsx");
+    let obj = ModalActionCreators;
     obj = { onSuccess };
-    obj.pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(11976, dependencyMap.paths), obj, closure_4);
+    obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(11976, dependencyMap.paths), obj, closure_4);
   },
   closeCreateGuildModal() {
-    require("../../../actions/ModalActionCreators.tsx").popWithKey(closure_4);
+    ModalActionCreators.popWithKey(closure_4);
   },
   closeCreateGuildOnboardingModal() {
-    require("../../../actions/ModalActionCreators.tsx").popWithKey(closure_4);
-    const obj = require("../../../actions/ModalActionCreators.tsx");
-    require("../../nuf/native/NUFActionCreators.tsx") /* _startContactSyncForDiscoverability */.nextOnboardingStep({});
+    ModalActionCreators.popWithKey(closure_4);
+    const obj = ModalActionCreators;
+    _startContactSyncForDiscoverability /* _startContactSyncForDiscoverability */.nextOnboardingStep({});
   },
   openGuildInviteScreen(channel) {
-    let obj = require("../../../actions/ModalActionCreators.tsx");
+    let obj = ModalActionCreators;
     obj = { channel };
-    obj.pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(11976, dependencyMap.paths), obj, closure_4);
+    obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(11976, dependencyMap.paths), obj, closure_4);
   },
   openGuildJoinServerScreen() {
-    let obj = require("../../../actions/ModalActionCreators.tsx");
+    let obj = ModalActionCreators;
     obj = { initialState: constants.JOIN_SERVER };
-    obj.pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(11976, dependencyMap.paths), obj, closure_4);
+    obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(11976, dependencyMap.paths), obj, closure_4);
   }
 };

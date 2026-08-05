@@ -1,3 +1,5 @@
+import { v1 } from "../../../../_runtime/00514_v1.js";
+import { trackSettingSearchInputFocused } from "Tracking.tsx";
 // discord_app/modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx
 class SettingSearchSessionAnalyticsManager {
 }
@@ -9,21 +11,21 @@ prototype["isSessionActive"] = function isSessionActive() {
   return null != this.searchSessionId;
 };
 prototype["initialize"] = function initialize() {
-  this.searchSessionId = require("../../../../_runtime/00514_v1.js") /* v1 */.v4();
+  this.searchSessionId = v1 /* v1 */.v4();
   this.searchSessionStartTime = Date.now();
   this.isQueryEnteredTracked = false;
 };
 prototype["maybeTrackQueryEntered"] = function maybeTrackQueryEntered() {
   if (!this.isQueryEnteredTracked) {
-    const result = require("Tracking.tsx") /* trackSettingSearchInputFocused */.trackSettingSearchQueryEntered();
+    const result = trackSettingSearchInputFocused /* trackSettingSearchInputFocused */.trackSettingSearchQueryEntered();
     tmp.isQueryEnteredTracked = true;
-    const obj = require("Tracking.tsx") /* trackSettingSearchInputFocused */;
+    const obj = trackSettingSearchInputFocused /* trackSettingSearchInputFocused */;
   }
 };
 prototype["terminate"] = function terminate() {
   const self = this;
   if (tmp) {
-    let obj = require("Tracking.tsx") /* trackSettingSearchInputFocused */;
+    let obj = trackSettingSearchInputFocused /* trackSettingSearchInputFocused */;
     obj = { searchSessionDuration: null };
     const _Date = Date;
     obj[0] = Date.now() - self.searchSessionStartTime;

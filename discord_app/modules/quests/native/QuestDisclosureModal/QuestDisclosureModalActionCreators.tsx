@@ -1,3 +1,7 @@
+import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
+import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
+import { apexExperiment } from "../../experiments/AdAnalyticsInterfaceExperiment.tsx";
+import { getApplicationIdsByTaskTypes } from "../../utils/QuestTaskUtils.tsx";
 // discord_app/modules/quests/native/QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx
 const QUEST_DISCLOSURE_MODAL = "QUEST_DISCLOSURE_MODAL";
 let result = require("emitClickEventWithCreative").fileFinishedImporting("modules/quests/native/QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx");
@@ -10,9 +14,9 @@ export default {
     let trackingCtx;
     ({ quest, trackingCtx } = isTargetedDisclosure);
     ({ gamePublisher, gameTitle } = quest.config.messages);
-    let obj = require("../../utils/QuestTaskUtils.tsx") /* getApplicationIdsByTaskTypes */;
-    let obj1 = require("../../experiments/AdAnalyticsInterfaceExperiment.tsx") /* apexExperiment */;
-    if (obj1.shouldMigrateToAdAnalyticsInterface(require("../../experiments/AdAnalyticsInterfaceExperiment.tsx") /* apexExperiment */.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_disclosure_modal")) {
+    let obj = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */;
+    let obj1 = apexExperiment /* apexExperiment */;
+    if (obj1.shouldMigrateToAdAnalyticsInterface(apexExperiment /* apexExperiment */.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_disclosure_modal")) {
       let tmpResult = tmp(9435);
       obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, questContentPosition: null };
       obj[0] = tmp(9439).AdUserActionType.CLICK_INTERNAL;
@@ -32,15 +36,15 @@ export default {
     obj1 = { gamePublisher, gameTitle, isTargetedDisclosure: isTargetedDisclosure.isTargetedDisclosure, cosponsorName: null, isVideoQuest: null };
     const cosponsorMetadata = quest.config.cosponsorMetadata;
     let name;
-    const obj7 = require("../../../../actions/ModalActionCreators.tsx");
+    const obj7 = ModalActionCreators;
     if (cosponsorMetadata != null) {
       name = cosponsorMetadata.name;
     }
     obj1[3] = name;
     obj1[4] = hasWatchVideoTasksResult;
-    obj7.pushLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(14251, tmp2.paths), obj1, QUEST_DISCLOSURE_MODAL);
+    obj7.pushLazy(asyncRequireImpl /* asyncRequireImpl */(14251, tmp2.paths), obj1, QUEST_DISCLOSURE_MODAL);
   },
   hideModal() {
-    require("../../../../actions/ModalActionCreators.tsx").popWithKey(QUEST_DISCLOSURE_MODAL);
+    ModalActionCreators.popWithKey(QUEST_DISCLOSURE_MODAL);
   }
 };

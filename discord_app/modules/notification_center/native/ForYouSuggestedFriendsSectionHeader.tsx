@@ -1,3 +1,5 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/notification_center/native/ForYouSuggestedFriendsSectionHeader.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -25,8 +27,8 @@ export default function ForYouSuggestedFriendsSectionHeader(showDivider) {
   let obj = { style: items, children: null };
   items[1] = noDivider;
   obj = { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["1uAmCw"]);
-  obj[1] = jsx(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["1uAmCw"]);
+  obj[1] = jsx(Text /* Text */.Text, { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null });
   return <View style={tmp.text} color="text-muted" variant="text-sm/semibold">{null}</View>;
 };

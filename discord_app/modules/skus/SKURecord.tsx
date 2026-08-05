@@ -1,3 +1,7 @@
+import { t } from "../../../_runtime/03867_t.js";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { getPricesFromServer } from "utils/getPricesFromServer.tsx";
+import { transformProfileEffectKeyFrameFromServer } from "utils/transformSKUTenantMetadata.tsx";
 // discord_app/modules/skus/SKURecord.tsx
 import "toJS";
 import createExecutable from "createExecutable";
@@ -50,12 +54,12 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   obj[7] = name;
   let tmp6 = null;
   if (null != id.release_date) {
-    tmp6 = require("../../../_runtime/03867_t.js")(id.release_date);
+    tmp6 = t(id.release_date);
   }
   obj[8] = tmp6;
   let tmp9 = null;
   if (null != id.preorder_release_at) {
-    tmp9 = require("../../../_runtime/03867_t.js")(id.preorder_release_at);
+    tmp9 = t(id.preorder_release_at);
   }
   obj[9] = tmp9;
   ({ preorder_approximate_release_date: obj[10], summary: obj[11] } = id);
@@ -71,7 +75,7 @@ SKURecord["createFromServer"] = function createFromServer(id) {
     tmp14 = obj;
   }
   obj[22] = tmp14;
-  obj[23] = require("utils/getPricesFromServer.tsx")(id.prices);
+  obj[23] = getPricesFromServer(id.prices);
   let flag = id.premium;
   if (flag == null) {
     flag = false;
@@ -109,7 +113,7 @@ SKURecord["createFromServer"] = function createFromServer(id) {
     mapped = [];
   }
   obj[34] = mapped;
-  obj[35] = require("utils/transformSKUTenantMetadata.tsx")(id.tenant_metadata);
+  obj[35] = transformProfileEffectKeyFrameFromServer(id.tenant_metadata);
   const selected_options = id.selected_options;
   let mapped1;
   if (selected_options != null) {
@@ -248,7 +252,7 @@ Object.defineProperty(prototype, "isTheGameAwardsWinner", {
 });
 Object.defineProperty(prototype, "available", {
   get: function available() {
-    let hasFlagResult = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(this.flags, constants2.AVAILABLE);
+    let hasFlagResult = hasFlag /* hasFlag */.hasFlag(this.flags, constants2.AVAILABLE);
     if (!hasFlagResult) {
       hasFlagResult = null != this.externalPurchaseUrl;
     }
@@ -269,27 +273,27 @@ prototype["isAvailableForDistribution"] = function isAvailableForDistribution() 
     const premium = self.premium;
     let hasFlagResult = !premium;
     if (premium) {
-      hasFlagResult = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(self.flags, constants2.PREMIUM_AND_DISTRIBUTION);
-      const obj = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+      hasFlagResult = hasFlag /* hasFlag */.hasFlag(self.flags, constants2.PREMIUM_AND_DISTRIBUTION);
+      const obj = hasFlag /* hasFlag */;
     }
     available = hasFlagResult;
   }
   return available;
 };
 prototype["isAvailable"] = function isAvailable() {
-  return require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(this.flags, constants2.AVAILABLE);
+  return hasFlag /* hasFlag */.hasFlag(this.flags, constants2.AVAILABLE);
 };
 prototype["isPremiumPerk"] = function isPremiumPerk() {
   const self = this;
   let premium = this.premium;
   if (premium) {
-    let hasFlagResult = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(self.flags, constants2.PREMIUM_PURCHASE);
+    let hasFlagResult = hasFlag /* hasFlag */.hasFlag(self.flags, constants2.PREMIUM_PURCHASE);
     if (!hasFlagResult) {
       hasFlagResult = tmp(1384).hasFlag(self.flags, tmp3.PREMIUM_AND_DISTRIBUTION);
       const tmpResult = tmp(1384);
     }
     premium = hasFlagResult;
-    const obj = require("../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+    const obj = hasFlag /* hasFlag */;
     tmp = require;
     tmp3 = constants2;
   }

@@ -1,3 +1,8 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { combined } from "../../../utils/HelpdeskUtils.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
+import { formatSingleCurrencyPrice } from "../../../utils/PriceUtils.tsx";
 // discord_app/modules/premium/promotions/PromotionStringUtils.tsx
 import addSubscriptionPlan from "addSubscriptionPlan";
 import GuildFeatures from "GuildFeatures";
@@ -11,14 +16,14 @@ const result = require("initialize").fileFinishedImporting("modules/premium/prom
 export const useFormatStringWithCommonPremiumParams = function useFormatStringWithCommonPremiumParams(body) {
   let str = "...";
   const items = [addSubscriptionPlan];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => loadedForSKU.isLoadedForSKU(TIER_2.TIER_2));
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => loadedForSKU.isLoadedForSKU(TIER_2.TIER_2));
   if (-1 !== body.indexOf("{price}")) {
     if (stateFromStores) {
       try {
-        const defaultPrice = require("../../../utils/PremiumUtils.tsx").getDefaultPrice(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
-        const obj2 = require("../../../utils/PremiumUtils.tsx");
-        str = require("../../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */.formatPrice(defaultPrice.amount, defaultPrice.currency);
-        const tmpResult = require("../../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */;
+        const defaultPrice = getPremiumPlanItem.getDefaultPrice(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
+        const obj2 = getPremiumPlanItem;
+        str = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */.formatPrice(defaultPrice.amount, defaultPrice.currency);
+        const tmpResult = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
       } catch (err) {
       }
     }
@@ -49,11 +54,11 @@ export const getHelpArticleLinkProps = function getHelpArticleLinkProps(helpArti
         linkText = helpArticle.linkText;
       }
       const obj = { url: null, linkText: null };
-      obj[0] = require("../../../utils/HelpdeskUtils.tsx").getArticleURL(id);
+      obj[0] = combined.getArticleURL(id);
       obj[1] = linkText;
       return obj;
     }
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    linkText = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["sBp+u0"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    linkText = intl.string(getSystemLocale /* getSystemLocale */.t["sBp+u0"]);
   }
 };

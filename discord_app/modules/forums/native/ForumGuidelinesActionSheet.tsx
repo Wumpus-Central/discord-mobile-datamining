@@ -1,3 +1,5 @@
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/forums/native/ForumGuidelinesActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import Background from "Background";
@@ -183,8 +185,8 @@ export default function ForumGuidelinesActionSheet(channel) {
   return closure_8(closure_9, { children });
 };
 export const openForumGuidelinesActionSheet = function openForumGuidelinesActionSheet(arg0) {
-  let obj = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = {};
   const merged = Object.assign(arg0);
-  obj.openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(9836, dependencyMap.paths), closure_6, obj);
+  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(9836, dependencyMap.paths), closure_6, obj);
 };

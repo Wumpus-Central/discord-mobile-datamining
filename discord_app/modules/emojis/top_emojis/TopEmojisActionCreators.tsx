@@ -1,3 +1,6 @@
+import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { RouteParam } from "../../routing/RouteUtils.tsx";
 // discord_app/modules/emojis/top_emojis/TopEmojisActionCreators.tsx
 import { Endpoints } from "ME";
 
@@ -5,12 +8,12 @@ const result = require("dispatcher").fileFinishedImporting("modules/emojis/top_e
 
 export const fetchTopEmojis = function fetchTopEmojis(guildId) {
   const _require = guildId;
-  let obj = _require("../../routing/RouteUtils.tsx");
+  let obj = _RouteParam;
   if (!obj.isPseudoGuildId(guildId)) {
     obj = { type: "TOP_EMOJIS_FETCH", guildId: null };
     obj[1] = guildId;
-    require("../../../Dispatcher.tsx").dispatch(obj);
-    const HTTP = _require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    dispatcher.dispatch(obj);
+    const HTTP = _sendRequest.HTTP;
     obj = { url: null, oldFormErrors: true, rejectWithError: true };
     obj[0] = Endpoints.TOP_EMOJIS_FOR_GUILD(guildId);
     const value = HTTP.get(obj);
@@ -26,23 +29,23 @@ export const fetchTopEmojis = function fetchTopEmojis(guildId) {
       obj = { type: "TOP_EMOJIS_FETCH_FAILURE", guildId: closure_0 };
       return obj.dispatch(obj);
     });
-    const obj2 = require("../../../Dispatcher.tsx");
+    const obj2 = dispatcher;
   }
 };
 export const updateNewlyAddedLastSeen = function updateNewlyAddedLastSeen(guildId, id) {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj.dispatch({ type: "NEWLY_ADDED_EMOJI_SEEN_UPDATED" });
   if (tmp4) {
     obj = { type: "NEWLY_ADDED_EMOJI_SEEN_PENDING", guildId: null, emojiId: null };
     obj[1] = guildId;
     obj[2] = id;
-    require("../../../Dispatcher.tsx").dispatch(obj);
-    const tmpResult = require("../../../Dispatcher.tsx");
+    dispatcher.dispatch(obj);
+    const tmpResult = dispatcher;
   }
 };
 export const updateNewlyAddedEmojiSeenAcknowledged = function updateNewlyAddedEmojiSeenAcknowledged(arg0, arg1) {
   if (tmp) {
-    let obj = require("../../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED", guildId: null, emojiId: null };
     obj[1] = arg0;
     obj[2] = arg1;

@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/game_profile/hooks/useGameAnnouncements.tsx
 import { useEffect } from "noop";
 import getSimilarGames from "getSimilarGames";
@@ -9,7 +10,7 @@ export default function useGameAnnouncements(arg0, arg1) {
   let hasFetched;
   const _require = arg0;
   const dependencyMap = arg1;
-  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [getSimilarGames];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let announcements;

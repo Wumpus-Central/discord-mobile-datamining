@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/stage_channels/StageChannelNewUserManager.tsx
 import fetchFingerprint from "fetchFingerprint";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -41,10 +42,10 @@ class StageChannelNewUserManager extends tmp2 {
 }
 const prototype = StageChannelNewUserManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = require("../../Dispatcher.tsx").subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
+  const subscription = dispatcher.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
 };
 prototype["_terminate"] = function _terminate() {
-  require("../../Dispatcher.tsx").unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
+  dispatcher.unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
 };
 const stageChannelNewUserManager = new StageChannelNewUserManager();
 let result = require("buildStageChannelUserRoles").fileFinishedImporting("modules/stage_channels/StageChannelNewUserManager.tsx");

@@ -1,3 +1,11 @@
+import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
+import { registerAsset } from "../../../../../_runtime/12654_registerAsset.js";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { useTheme } from "../../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesTable.tsx
 import _slicedToArray from "_slicedToArray";
 import PremiumTier0LogoSmall from "PremiumTier0LogoSmall";
@@ -16,26 +24,26 @@ let metroImportAll;
 let unpackModuleId;
 const require = arg1;
 function CheckIcon() {
-  let obj = require("../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   const tmp = importDefault;
-  const tmp3 = require("../../../../hooks/useTheme.tsx")();
-  const unsafe_rawColors = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
-  const isThemeDarkResult = obj.isThemeDark(require("../../../../hooks/useTheme.tsx")());
+  const tmp3 = useTheme();
+  const unsafe_rawColors = Themes.unsafe_rawColors;
+  const isThemeDarkResult = obj.isThemeDark(useTheme());
   obj = { source: null, color: null, size: null };
   obj[0] = tmp(12653);
-  obj[1] = obj.isThemeDark(require("../../../../hooks/useTheme.tsx")()) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
-  obj[2] = require("../../../../design/void/native.tsx") /* Button */.IconSizes.SMALL;
-  return callback2(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
+  obj[1] = obj.isThemeDark(useTheme()) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
+  obj[2] = Button /* Button */.IconSizes.SMALL;
+  return callback2(Button /* Button */.Icon, obj);
 }
 function CloseIcon() {
   const obj = { source: null, style: null, size: null };
-  obj[0] = require("../../../../../_runtime/12654_registerAsset.js");
+  obj[0] = registerAsset;
   obj[1] = callback3().icon;
-  obj[2] = require("../../../../design/void/native.tsx") /* Button */.IconSizes.SMALL;
-  return callback2(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
+  obj[2] = Button /* Button */.IconSizes.SMALL;
+  return callback2(Button /* Button */.Icon, obj);
 }
 function CellText(children) {
-  return callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.text });
+  return callback2(Text /* Text */.Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.text });
 }
 function Row(withTopBorderRadius) {
   let column1;
@@ -126,15 +134,15 @@ function Row(withTopBorderRadius) {
   items3[4] = bottomBorderRadius;
   let formatToPlainStringResult;
   if (null != column1AccessibilityLabel) {
-    const intl = _require("../../../../intl/index.native.tsx").intl;
-    const intl2 = _require("../../../../intl/index.native.tsx").intl;
+    const intl = _getSystemLocale.intl;
+    const intl2 = _getSystemLocale.intl;
     const obj1 = { accessibilityLabel: null, rowNumber: null, rowName: null, columnNumber: 1, columnName: null };
     obj1[0] = column1AccessibilityLabel;
     obj1[1] = rowNumber;
     obj1[2] = rowName;
-    obj1[4] = intl.string(_require("../../../../intl/index.native.tsx").t["t9uG/o"]);
-    formatToPlainStringResult = intl2.formatToPlainString(_require("../../../../intl/index.native.tsx").t.EZjXN3, obj1);
-    const stringResult = intl.string(_require("../../../../intl/index.native.tsx").t["t9uG/o"]);
+    obj1[4] = intl.string(_getSystemLocale.t["t9uG/o"]);
+    formatToPlainStringResult = intl2.formatToPlainString(_getSystemLocale.t.EZjXN3, obj1);
+    const stringResult = intl.string(_getSystemLocale.t["t9uG/o"]);
   }
   obj[1] = formatToPlainStringResult;
   obj[2] = !flag3;
@@ -173,15 +181,15 @@ function Row(withTopBorderRadius) {
         obj4[0] = items4;
         let formatToPlainStringResult1;
         if (null != column2AccessibilityLabel) {
-          const intl3 = _require("../../../../intl/index.native.tsx").intl;
-          const intl4 = _require("../../../../intl/index.native.tsx").intl;
+          const intl3 = _getSystemLocale.intl;
+          const intl4 = _getSystemLocale.intl;
           const obj5 = { accessibilityLabel: null, rowNumber: null, rowName: null, columnNumber: 2, columnName: null };
           obj5[0] = column2AccessibilityLabel;
           obj5[1] = rowNumber;
           obj5[2] = rowName;
-          obj5[4] = intl3.string(_require("../../../../intl/index.native.tsx").t.lG6a5x);
-          formatToPlainStringResult1 = intl4.formatToPlainString(_require("../../../../intl/index.native.tsx").t.EZjXN3, obj5);
-          const stringResult1 = intl3.string(_require("../../../../intl/index.native.tsx").t.lG6a5x);
+          obj5[4] = intl3.string(_getSystemLocale.t.lG6a5x);
+          formatToPlainStringResult1 = intl4.formatToPlainString(_getSystemLocale.t.EZjXN3, obj5);
+          const stringResult1 = intl3.string(_getSystemLocale.t.lG6a5x);
         }
         obj4[1] = formatToPlainStringResult1;
         obj4[2] = !flag3;
@@ -194,7 +202,7 @@ function Row(withTopBorderRadius) {
         ({ START: obj9[1], END: obj9[2] } = HorizontalGradient);
         obj6[3] = ["rgba(133, 71, 198, 0.10)", "rgba(184, 69, 193, 0.10)", "rgba(171, 93, 138, 0.10)"];
         obj6[4] = column2;
-        obj4[3] = tmp5(require("../../../../../_runtime/04706_LinearGradient.js"), obj6);
+        obj4[3] = tmp5(LinearGradient, obj6);
       }
       items2[2] = tmp5(tmp4, obj4);
       obj[2] = items2;
@@ -222,15 +230,15 @@ function Row(withTopBorderRadius) {
   items6[4] = flag2;
   let formatToPlainStringResult2;
   if (null != column2AccessibilityLabel) {
-    const intl5 = _require("../../../../intl/index.native.tsx").intl;
-    const intl6 = _require("../../../../intl/index.native.tsx").intl;
+    const intl5 = _getSystemLocale.intl;
+    const intl6 = _getSystemLocale.intl;
     const obj9 = { accessibilityLabel: null, rowNumber: null, rowName: null, columnNumber: 2, columnName: null };
     obj9[0] = column2AccessibilityLabel;
     obj9[1] = rowNumber;
     obj9[2] = rowName;
-    obj9[4] = intl5.string(_require("../../../../intl/index.native.tsx").t.lG6a5x);
-    formatToPlainStringResult2 = intl6.formatToPlainString(_require("../../../../intl/index.native.tsx").t.EZjXN3, obj9);
-    const stringResult2 = intl5.string(_require("../../../../intl/index.native.tsx").t.lG6a5x);
+    obj9[4] = intl5.string(_getSystemLocale.t.lG6a5x);
+    formatToPlainStringResult2 = intl6.formatToPlainString(_getSystemLocale.t.EZjXN3, obj9);
+    const stringResult2 = intl5.string(_getSystemLocale.t.lG6a5x);
   }
   obj8[1] = formatToPlainStringResult2;
   obj8[2] = !flag3;

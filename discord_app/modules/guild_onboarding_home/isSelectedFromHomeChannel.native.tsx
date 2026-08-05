@@ -1,3 +1,5 @@
+import { navigationToRootTabHelper } from "../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { getRootNavigationRef } from "../main_tabs_v2/RootNavigationRef.native.tsx";
 // discord_app/modules/guild_onboarding_home/isSelectedFromHomeChannel.native.tsx
 import "handlePermissionsChange";
 import "handleConnectionOpen";
@@ -8,14 +10,14 @@ const result = require("set").fileFinishedImporting("modules/guild_onboarding_ho
 
 export default function isSelectedFromHomeChannel(id) {
   let coerceChannelRouteResult1;
-  const rootNavigationRef = require("../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       const rootState = rootNavigationRef.getRootState();
       if (null == rootState) {
         return false;
       } else {
-        const coerceMainRouteResult = require("../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */.coerceMainRoute(rootState.routes[rootState.index]);
+        const coerceMainRouteResult = navigationToRootTabHelper /* navigationToRootTabHelper */.coerceMainRoute(rootState.routes[rootState.index]);
         if (null == coerceMainRouteResult) {
           return false;
         } else {
@@ -31,7 +33,7 @@ export default function isSelectedFromHomeChannel(id) {
                 if (null != tmp4) {
                   let tmp6 = require;
                   let tmp7 = dependencyMap;
-                  let obj3 = require("../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */;
+                  let obj3 = navigationToRootTabHelper /* navigationToRootTabHelper */;
                   let coerceChannelRouteResult = obj3.coerceChannelRoute(tmp4);
                   if (null != coerceChannelRouteResult) {
                     if (coerceChannelRouteResult.params.channelId === id.id) {
@@ -54,7 +56,7 @@ export default function isSelectedFromHomeChannel(id) {
             return false;
           }
         }
-        const tmpResult = require("../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */;
+        const tmpResult = navigationToRootTabHelper /* navigationToRootTabHelper */;
       }
     }
   }

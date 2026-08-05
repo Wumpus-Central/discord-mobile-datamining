@@ -1,3 +1,11 @@
+import { BottomSheetModal } from "../../../../../../_runtime/05340_BottomSheetModal.js";
+import { SafeAreaPaddingView } from "../../../../../components_native/common/SafeAreaView.tsx";
+import { ActionSheet } from "../../../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { useTheme } from "../../../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { request } from "../../../../applications/useGetOrFetchApplicationBatched.tsx";
 // discord_app/modules/guild_settings/roles/native/action_sheet/SelectConnectionActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import TableRowGroupTitle from "TableRowGroupTitle";
@@ -11,7 +19,7 @@ function IdentityApplicationRow(arg0) {
   let applicationId;
   let onPress;
   ({ applicationId, onPress } = arg0);
-  let obj = require("../../../../applications/useGetOrFetchApplicationBatched.tsx") /* request */;
+  let obj = request /* request */;
   const getOrFetchApplicationBatched = obj.useGetOrFetchApplicationBatched(applicationId);
   if (null == getOrFetchApplicationBatched) {
     return null;
@@ -49,10 +57,10 @@ export default function SelectConnectionActionSheet(arg0) {
   let require;
   ({ addConnection: require, excludedConnections: importDefault, excludedApplications: dependencyMap, integrations, onCompleteApplication: _slicedToArray, gameApplicationIds, onCompleteIdentityApplication } = arg0);
   let closure_5;
-  closure_5 = require("../../../../../hooks/useTheme.tsx")();
+  closure_5 = useTheme();
   let obj = { title: null };
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.Sm0YG7);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.Sm0YG7);
   const tmp5 = callback(onCompleteIdentityApplication.useState(0), 2);
   const first = tmp5[0];
   let found;
@@ -146,7 +154,7 @@ export default function SelectConnectionActionSheet(arg0) {
     num = 0;
   }
   const intl2 = tmp3(1236).intl;
-  const items = [intl2.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["3fe7U5"])];
+  const items = [intl2.string(getSystemLocale /* getSystemLocale */.t["3fe7U5"])];
   if (num > 0) {
     const intl3 = tmp3(1236).intl;
     items.push(intl3.string(tmp3(1236).t.PHjkRE));
@@ -169,7 +177,7 @@ export default function SelectConnectionActionSheet(arg0) {
       tmp15 = mapped2;
     }
   }
-  obj = { scrollable: true, header: callback2(require("../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj), startExpanded: true, children: null };
+  obj = { scrollable: true, header: callback2(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj), startExpanded: true, children: null };
   if (num > 0) {
     const obj1 = { children: null };
     const obj2 = { state: null };
@@ -182,9 +190,9 @@ export default function SelectConnectionActionSheet(arg0) {
   const items1 = [tmp2Result, ];
   const obj3 = { children: null };
   const obj4 = { bottom: true, children: null };
-  obj4[1] = callback2(require("../../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, { hasIcons: true, children: tmp15 });
-  obj3[0] = callback2(require("../../../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj4);
-  items1[1] = callback2(require("../../../../../../_runtime/05340_BottomSheetModal.js") /* BottomSheetModal */.BottomSheetScrollView, obj3);
+  obj4[1] = callback2(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, { hasIcons: true, children: tmp15 });
+  obj3[0] = callback2(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj4);
+  items1[1] = callback2(BottomSheetModal /* BottomSheetModal */.BottomSheetScrollView, obj3);
   obj[3] = items1;
-  return closure_7(require("../../../../../design/components/Sheet/native/ActionSheet.native.tsx") /* ActionSheet */.ActionSheet, obj);
+  return closure_7(ActionSheet /* ActionSheet */.ActionSheet, obj);
 };

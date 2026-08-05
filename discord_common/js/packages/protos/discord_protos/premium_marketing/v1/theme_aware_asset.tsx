@@ -1,3 +1,4 @@
+import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/theme_aware_asset.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
@@ -20,10 +21,10 @@ prototype["create"] = function create(arr) {
   let obj = { lightUrl: "", darkUrl: "", lightStaticUrl: "", darkStaticUrl: "" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, require("../../../../../../../_runtime/metro/01307__.js").MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = require("../../../../../../../_runtime/metro/01307__.js").reflectionMergePartial(this, obj, arr);
-    const tmpResult = require("../../../../../../../_runtime/metro/01307__.js");
+    const result = 01307__.reflectionMergePartial(this, obj, arr);
+    const tmpResult = 01307__;
   }
   return obj;
 };
@@ -71,7 +72,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onRead;
+              onRead = 01307__.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -87,25 +88,25 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(lightUrl, tag, writeUnknownFields) {
   if ("" !== lightUrl.lightUrl) {
-    tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(lightUrl.lightUrl);
-    const tagResult = tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(1, 01307__.WireType.LengthDelimited).string(lightUrl.lightUrl);
+    const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
   }
   if ("" !== lightUrl.darkUrl) {
-    tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(lightUrl.darkUrl);
-    const tagResult1 = tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(2, 01307__.WireType.LengthDelimited).string(lightUrl.darkUrl);
+    const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
   }
   if ("" !== lightUrl.lightStaticUrl) {
-    tag.tag(3, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(lightUrl.lightStaticUrl);
-    const tagResult2 = tag.tag(3, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(3, 01307__.WireType.LengthDelimited).string(lightUrl.lightStaticUrl);
+    const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
   }
   if ("" !== lightUrl.darkStaticUrl) {
-    tag.tag(4, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(lightUrl.darkStaticUrl);
-    const tagResult3 = tag.tag(4, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(4, 01307__.WireType.LengthDelimited).string(lightUrl.darkStaticUrl);
+    const tagResult3 = tag.tag(4, 01307__.WireType.LengthDelimited);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onWrite;
+      onWrite = 01307__.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, lightUrl, tag);

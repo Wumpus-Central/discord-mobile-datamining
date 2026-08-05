@@ -1,3 +1,13 @@
+import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
+import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { apexExperiment } from "../../../media_engine/MobileAudioOutputExperiment.tsx";
+import { SoundboardVolume } from "UserSettingsSoundboardVolume.tsx";
+import { handleInputModePress } from "UserSettingsVoiceInputOptions.tsx";
+import { UserSettingsVoiceOverlay } from "UserSettingsVoiceOverlay.tsx";
+import { VoiceProcessingOptions } from "UserSettingsVoiceProcessing.tsx";
 // discord_app/modules/user_settings/voice/native/UserSettingsVoice.tsx
 import "noop";
 import { View } from "set";
@@ -15,28 +25,28 @@ const result = require("getUserAgnosticState").fileFinishedImporting("modules/us
 
 export default function UserSettingsVoice() {
   const tmp = callback2();
-  let obj = require("../../../media_engine/MobileAudioOutputExperiment.tsx");
+  let obj = apexExperiment;
   let nonContextualStreamOutputPresent = obj.useConfig({ location: "NewUserSettingsVoice" }).nonContextualStreamOutputPresent;
   obj = { style: tmp.container, children: null };
-  const items = [callback(require("UserSettingsVoiceInputOptions.tsx"), {}), , , , , , ];
+  const items = [callback(handleInputModePress, {}), , , , , , ];
   if (nonContextualStreamOutputPresent) {
     nonContextualStreamOutputPresent = tmp4(tmp2(10746), {});
   }
   items[1] = nonContextualStreamOutputPresent;
   obj = { style: tmp.tableRow, variant: "text-sm/medium", children: null };
   const intl = tmp7(1236).intl;
-  obj[2] = intl.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["V+B3FH"], { guideURL: closure_5 });
-  items[2] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
-  items[3] = callback(require("UserSettingsSoundboardVolume.tsx"), {});
+  obj[2] = intl.format(getSystemLocale /* getSystemLocale */.t["V+B3FH"], { guideURL: closure_5 });
+  items[2] = callback(Text /* Text */.Text, obj);
+  items[3] = callback(SoundboardVolume, {});
   const obj2 = { spacing: 24, children: null };
-  items[4] = isMobileOverlaySupported() && callback(require("UserSettingsVoiceOverlay.tsx"), {});
-  items[5] = callback(require("UserSettingsVoiceProcessing.tsx"), {});
-  items[6] = callback(require("../../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, { bottom: true });
+  items[4] = isMobileOverlaySupported() && callback(UserSettingsVoiceOverlay, {});
+  items[5] = callback(VoiceProcessingOptions, {});
+  items[6] = callback(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, { bottom: true });
   obj2[1] = items;
-  obj[1] = closure_7(require("../../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj2);
+  obj[1] = closure_7(Stack /* Stack */.Stack, obj2);
   return callback(View, obj);
 };
 export const UserSettingsTableRowGroup = function UserSettingsTableRowGroup(arg0) {
   const merged = Object.assign(arg0);
-  return callback(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, {});
+  return callback(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, {});
 };

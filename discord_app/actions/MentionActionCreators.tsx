@@ -1,3 +1,5 @@
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/MentionActionCreators.tsx
 import ME from "ME";
 
@@ -12,13 +14,13 @@ export default {
     let guildFilter;
     let roleFilter;
     ({ guildFilter, roleFilter, everyoneFilter } = arg0);
-    require("../Dispatcher.tsx").dispatch({ type: "SET_RECENT_MENTIONS_FILTER", guildFilter, roleFilter, everyoneFilter });
+    dispatcher.dispatch({ type: "SET_RECENT_MENTIONS_FILTER", guildFilter, roleFilter, everyoneFilter });
   },
   clearMentions() {
-    require("../Dispatcher.tsx").dispatch({ type: "CLEAR_MENTIONS" });
+    dispatcher.dispatch({ type: "CLEAR_MENTIONS" });
   },
   truncateMentions(size) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "TRUNCATE_MENTIONS", size };
     obj.dispatch(obj);
   },
@@ -40,7 +42,7 @@ export default {
     if (flag2 === undefined) {
       flag2 = true;
     }
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj.dispatch({ type: "LOAD_RECENT_MENTIONS", guildId });
     const HTTP = before(530).HTTP;
     obj = { url: closure_3.MENTIONS, query: { before, limit, guild_id: guildId, roles: flag, everyone: flag2, feature: feature.feature }, retries: 2, oldFormErrors: true, rejectWithError: true };
@@ -55,13 +57,13 @@ export default {
     });
   },
   deleteRecentMention(id) {
-    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     let obj = { url: closure_3.MENTIONS_MESSAGE_ID(id), retries: 2, oldFormErrors: true, rejectWithError: true };
     HTTP.del(obj);
     obj = { type: "RECENT_MENTION_DELETE", id };
-    require("../Dispatcher.tsx").dispatch(obj);
+    dispatcher.dispatch(obj);
   },
   setRecentMentionsStale() {
-    require("../Dispatcher.tsx").dispatch({ type: "SET_RECENT_MENTIONS_STALE" });
+    dispatcher.dispatch({ type: "SET_RECENT_MENTIONS_STALE" });
   }
 };

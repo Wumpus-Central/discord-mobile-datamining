@@ -1,3 +1,5 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { trackMemberApplicationViewed } from "GuildJoinRequestAnalyticUtils.tsx";
 // discord_app/modules/guild_member_verification/GuildJoinRequestActionCreators.tsx
 import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE";
 import { createChannelRecordFromServer as closure_4 } from "createChannelRecord";
@@ -872,25 +874,25 @@ export default {
     return applyArgumentsResult;
   },
   setSelectedApplicationTab(guildId, applicationTab) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB", guildId, applicationTab };
     obj.dispatch(obj);
   },
   setSelectedSortOrder(guildId, sortOrder, applicationStatus) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "GUILD_JOIN_REQUESTS_SET_SORT_ORDER", guildId, sortOrder, applicationStatus };
     obj.dispatch(obj);
   },
   setSelectedGuildJoinRequest(guildId, request) {
     if (null != request) {
-      let obj = require("GuildJoinRequestAnalyticUtils.tsx") /* trackMemberApplicationViewed */;
+      let obj = trackMemberApplicationViewed /* trackMemberApplicationViewed */;
       obj = { guildId: null, applicationStatus: null, applicationUserId: null };
       obj[0] = guildId;
       ({ applicationStatus: obj2[1], userId: obj2[2] } = request);
       const result = obj.trackMemberApplicationViewed(obj);
     }
     obj = { type: "GUILD_JOIN_REQUESTS_SET_SELECTED", guildId, request };
-    require("../../Dispatcher.tsx").dispatch(obj);
+    dispatcher.dispatch(obj);
   },
   fetchJoinRequestForInterview(MAX_RESULTS_PER_PAGE) {
     const self = this;

@@ -1,3 +1,8 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
+import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
+import { MAX_REFERRALS_SENT } from "../hooks/useReferralProgramBannerDetails.tsx";
 // discord_app/modules/premium/referral_program/native/ReferralProgramPerkCard.tsx
 import asyncRequireImpl from "asyncRequireImpl";
 import { View } from "ACTION_SHEET_HEIGHT_HALF";
@@ -16,18 +21,18 @@ function ReferredFriendAvatar(user) {
   let obj = { style: createCacheKey().referredFriendAvatar, children: null };
   obj = { source: null, size: null };
   obj[0] = user.getAvatarSource(undefined, false, 24);
-  obj[1] = require("../../../../design/void/native.tsx") /* Button */.AvatarSizes.XSMALL;
-  obj[1] = callback(require("../../../../design/void/native.tsx") /* Button */.Avatar, obj);
+  obj[1] = Button /* Button */.AvatarSizes.XSMALL;
+  obj[1] = callback(Button /* Button */.Avatar, obj);
   return callback(View, obj);
 }
 function AvailableReferralSlot(children) {
-  return callback(View, { style: createCacheKey().availableReferralSlot, children: callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-xs/medium", color: "text-strong", children: children.slotIndex }) });
+  return callback(View, { style: createCacheKey().availableReferralSlot, children: callback(Text /* Text */.Text, { variant: "text-xs/medium", color: "text-strong", children: children.slotIndex }) });
 }
 function ProgressIndicator(referralSentUsers) {
   referralSentUsers = referralSentUsers.referralSentUsers;
   const items = [];
   let num = 0;
-  if (0 < require("../hooks/useReferralProgramBannerDetails.tsx") /* MAX_REFERRALS_SENT */.MAX_REFERRALS_SENT) {
+  if (0 < MAX_REFERRALS_SENT /* MAX_REFERRALS_SENT */.MAX_REFERRALS_SENT) {
     do {
       let tmp2 = num;
       if (null != referralSentUsers[num]) {
@@ -46,7 +51,7 @@ function ProgressIndicator(referralSentUsers) {
       num = num + 1;
       let tmp9 = require;
       let tmp10 = dependencyMap;
-    } while (num < require("../hooks/useReferralProgramBannerDetails.tsx") /* MAX_REFERRALS_SENT */.MAX_REFERRALS_SENT);
+    } while (num < MAX_REFERRALS_SENT /* MAX_REFERRALS_SENT */.MAX_REFERRALS_SENT);
   }
   obj = { style: createCacheKey().progressIndicatorContainer, children: items };
   return callback(View, obj);
@@ -80,7 +85,7 @@ export const ReferralProgramPerkCard = function ReferralProgramPerkCard() {
   const items1 = [emitChanges];
   const stateFromStores1 = obj3.useStateFromStores(items1, () => store.getHasEligibleFriends());
   let obj4 = importDefault;
-  analyticsLocations = require("../../../app_analytics/useAnalyticsLocations.tsx")(require("../../../app_analytics/AnalyticsLocation.tsx").PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR).analyticsLocations;
+  analyticsLocations = context(QUICK_SWITCHER.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR).analyticsLocations;
   let everyResult = stateFromStores.size === analyticsLocations(12624).MAX_REFERRALS_SENT;
   if (everyResult) {
     const items2 = [];

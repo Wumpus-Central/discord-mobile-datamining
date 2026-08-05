@@ -1,3 +1,5 @@
+import { MessageQueue } from "../../../../_runtime/00039_MessageQueue.js";
+import { isFabric } from "../../../utils/native/FabricUtils.tsx";
 // discord_app/modules/voice_overlay/native/MobileVoiceOverlayLifecycleManager.android.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";
@@ -422,16 +424,16 @@ class MobileVoiceOverlayManager {
 const prototype = MobileVoiceOverlayManager.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
-  let obj = require("../../../utils/native/FabricUtils.tsx") /* isFabric */;
+  let obj = isFabric /* isFabric */;
   if (!tmp2) {
     if (typeof NativeCallableInterface !== "function") {
       HermesBuiltin.throwTypeError();
     }
     obj = Object.create(NativeCallableInterface.prototype);
     obj.manager = self;
-    const result = require("../../../../_runtime/00039_MessageQueue.js").registerCallableModule("MobileVoiceOverlayManager", obj);
+    const result = MessageQueue.registerCallableModule("MobileVoiceOverlayManager", obj);
     self.isBatchedBridgeInitialized = true;
-    const obj2 = require("../../../../_runtime/00039_MessageQueue.js");
+    const obj2 = MessageQueue;
     const tmp4 = NativeCallableInterface;
   }
   if (getUserAgnosticState.getEnabled()) {

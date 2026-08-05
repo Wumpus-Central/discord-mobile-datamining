@@ -1,3 +1,4 @@
+import { _openRobloxURLWithRootPlaceId } from "../roblox_subgame_detection/RobloxSubgameUtils.tsx";
 // discord_app/modules/game_detection/GameAnalyticsUtils.tsx
 import gameFromServer from "gameFromServer";
 
@@ -65,8 +66,8 @@ export const getRunningGameAnalytics = function getRunningGameAnalytics(streamAp
     obj[4] = sku;
     let subgameMetadata;
     if (null != streamApplication) {
-      subgameMetadata = require("../roblox_subgame_detection/RobloxSubgameUtils.tsx") /* _openRobloxURLWithRootPlaceId */.getSubgameMetadata(streamApplication);
-      const obj4 = require("../roblox_subgame_detection/RobloxSubgameUtils.tsx") /* _openRobloxURLWithRootPlaceId */;
+      subgameMetadata = _openRobloxURLWithRootPlaceId /* _openRobloxURLWithRootPlaceId */.getSubgameMetadata(streamApplication);
+      const obj4 = _openRobloxURLWithRootPlaceId /* _openRobloxURLWithRootPlaceId */;
     }
     obj[5] = subgameMetadata;
     obj[6] = str;

@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { useMaybeFetchCollectiblesCategoriesShared } from "useMaybeFetchCollectiblesCategoriesShared.tsx";
 // discord_app/modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.mobile.tsx
 import getUserAgnosticState from "getUserAgnosticState";
 
@@ -11,7 +13,7 @@ export default function useMaybeFetchCollectiblesCategories(paymentGateway) {
   if (paymentGateway != null) {
     paymentGateway = paymentGateway.paymentGateway;
   }
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [getUserAgnosticState];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ noCache: store.get("shop_disable_cache"), includeUnpublished: store.get("shop_include_unpublished") }));
   ({ noCache, includeUnpublished } = stateFromStoresObject);
@@ -30,5 +32,5 @@ export default function useMaybeFetchCollectiblesCategories(paymentGateway) {
   if (paymentGateway != null) {
     noOp = paymentGateway.noOp;
   }
-  return require("useMaybeFetchCollectiblesCategoriesShared.tsx") /* useMaybeFetchCollectiblesCategoriesShared */.useMaybeFetchCollectiblesCategoriesShared(obj, noOp, arg1);
+  return useMaybeFetchCollectiblesCategoriesShared /* useMaybeFetchCollectiblesCategoriesShared */.useMaybeFetchCollectiblesCategoriesShared(obj, noOp, arg1);
 };

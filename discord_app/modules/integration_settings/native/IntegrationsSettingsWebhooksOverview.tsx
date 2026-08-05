@@ -1,3 +1,10 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { NavScrim } from "../../../design/components/Navigator/native/NavScrim.android.tsx";
+import { Stack } from "../../../design/components/Stack/native/Stack.native.tsx";
+import { Form } from "../../../design/void/Form/native/index.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { combined } from "../../../utils/HelpdeskUtils.tsx";
 // discord_app/modules/integration_settings/native/IntegrationsSettingsWebhooksOverview.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import importAllResult from "initialize";
@@ -73,7 +80,7 @@ function ConnectedWebhookItem(arg0) {
   let require;
   ({ channelId: require, user: importDefault } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let id;
@@ -84,7 +91,7 @@ function ConnectedWebhookItem(arg0) {
   });
   const items1 = [ensureGuildLoaded];
   obj = {};
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => outer1_5.getChannel(closure_0));
+  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => outer1_5.getChannel(closure_0));
   const merged1 = Object.assign(merged);
   obj.user = stateFromStores;
   obj.channel = stateFromStores1;
@@ -214,17 +221,17 @@ class WebhooksOverview extends PureComponent {
 const prototype = WebhooksOverview.prototype;
 prototype["getHelpText"] = function getHelpText() {
   if (this.props.webhookType === constants2.CHANNEL_FOLLOWER) {
-    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
     let obj = { helpdeskArticle: null };
-    obj[0] = require("../../../utils/HelpdeskUtils.tsx").getArticleURL(constants.CHANNEL_FOLLOWING);
-    let formatResult = intl2.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["5u+aV1"], obj);
-    const obj4 = require("../../../utils/HelpdeskUtils.tsx");
+    obj[0] = combined.getArticleURL(constants.CHANNEL_FOLLOWING);
+    let formatResult = intl2.format(getSystemLocale /* getSystemLocale */.t["5u+aV1"], obj);
+    const obj4 = combined;
   } else {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     obj = { articleURL: null };
-    obj[0] = require("../../../utils/HelpdeskUtils.tsx").getArticleURL(constants.WEBHOOKS_INTRODUCTION);
-    formatResult = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["3hX7G+"], obj);
-    const obj2 = require("../../../utils/HelpdeskUtils.tsx");
+    obj[0] = combined.getArticleURL(constants.WEBHOOKS_INTRODUCTION);
+    formatResult = intl.format(getSystemLocale /* getSystemLocale */.t["3hX7G+"], obj);
+    const obj2 = combined;
   }
   return formatResult;
 };
@@ -293,11 +300,11 @@ prototype["render"] = function render() {
   let obj = { children: null };
   obj = { style: tmp.form, contentContainerStyle: this.props.contentContainerStyle, children: null };
   obj = { spacing: null, style: null, children: null };
-  obj[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24;
+  obj[0] = Themes.space.PX_24;
   obj[1] = tmp.content;
   obj[2] = this.renderWebhooks();
-  obj[2] = callback(require("../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
-  const items = [callback(require("../../../design/void/Form/native/index.tsx") /* Form */.Form, obj), callback(require("../../../design/components/Navigator/native/NavScrim.android.tsx") /* NavScrim */.NavScrim, {})];
+  obj[2] = callback(Stack /* Stack */.Stack, obj);
+  const items = [callback(Form /* Form */.Form, obj), callback(NavScrim /* NavScrim */.NavScrim, {})];
   obj[0] = items;
   return callback2(closure_19, obj);
 };

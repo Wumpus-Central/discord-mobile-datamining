@@ -1,3 +1,14 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { useMountLayoutEffect } from "../../../hooks/useMountEffect.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getPlatformUserUrl } from "../../../lib/Platforms.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { getChannelIcon } from "../../../utils/native/ChannelUtils.tsx";
+import { computeChannelName } from "../../channel/useChannelName.tsx";
+import { officialApplicationIds } from "../ConnectionsUtils.tsx";
 // discord_app/modules/connections/native/GuildRoleConnectionsConnectAccountsActionSheet.tsx
 import _getSystemLocale from "_getSystemLocale";
 import apply from "apply";
@@ -37,20 +48,20 @@ let metroImportAll;
 const require = arg1;
 function PlatformIcon(platformType) {
   const tmp = createCacheKey();
-  let obj = require("../../../lib/Platforms.tsx");
+  let obj = getPlatformUserUrl;
   const value = obj.get(platformType.platformType);
-  const tmp3 = require("../../../hooks/useTheme.tsx")();
+  const tmp3 = useTheme();
   const tmp5 = require;
-  const obj2 = require("../../../utils/AvatarUtils.tsx") /* getAvatarURL */;
+  const obj2 = getAvatarURL /* getAvatarURL */;
   const icon = value.icon;
-  const source = obj2.makeSource(require("../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeLight(tmp3) ? icon.lightPNG : icon.darkPNG);
+  const source = obj2.makeSource(AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeLight(tmp3) ? icon.lightPNG : icon.darkPNG);
   obj = { source, style: tmp.platformIcon, disableColor: true };
   return callback2(tmp5(1297).Icon, obj);
 }
 function ChannelName(channel) {
   channel = channel.channel;
   const tmp = createCacheKey();
-  let obj = require("../../../utils/native/ChannelUtils.tsx") /* getChannelIcon */;
+  let obj = getChannelIcon /* getChannelIcon */;
   const channelIcon = obj.getChannelIcon(channel);
   obj = { style: items, children: null };
   items = [tmp.channelName, channel.style];
@@ -62,10 +73,10 @@ function ChannelName(channel) {
     tmp8 = callback2(tmp2(1297).Icon, obj);
   }
   const items1 = [tmp8, ];
-  const tmp5 = require("../../channel/useChannelName.tsx")(channel);
+  const tmp5 = computeChannelName(channel);
   const tmp6 = closure_30;
   const tmp7 = closure_8;
-  items1[1] = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "heading-lg/semibold", color: "text-default", style: tmp.channelNameText, lineClamp: 1, children: require("../../channel/useChannelName.tsx")(channel) });
+  items1[1] = callback2(Text /* Text */.Text, { variant: "heading-lg/semibold", color: "text-default", style: tmp.channelNameText, lineClamp: 1, children: computeChannelName(channel) });
   obj[1] = items1;
   return tmp6(tmp7, obj);
 }
@@ -81,23 +92,23 @@ function ConnectionsCheck(result) {
   } else {
     if (null != description) {
       if (constants2.LESS_THAN === operator) {
-        const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        const intl = getSystemLocale /* getSystemLocale */.intl;
         let obj = { description: null, count: null };
         obj[0] = description;
         const _Math = Math;
         const _Number = Number;
         obj[1] = Math.max(0, Number(value) - 1);
-        let formatResult = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["2p7dA3"], obj);
+        let formatResult = intl.format(getSystemLocale /* getSystemLocale */.t["2p7dA3"], obj);
       } else {
         formatResult = description;
         if (tmp16.GREATER_THAN === operator) {
-          const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+          const intl2 = getSystemLocale /* getSystemLocale */.intl;
           obj = { description: null, count: null };
           obj[0] = description;
           const _Math2 = Math;
           const _Number2 = Number;
           obj[1] = Math.max(0, Number(value) + 1);
-          formatResult = intl2.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["2p7dA3"], obj);
+          formatResult = intl2.format(getSystemLocale /* getSystemLocale */.t["2p7dA3"], obj);
         }
       }
     } else {
@@ -115,7 +126,7 @@ function ConnectionsCheck(result) {
       } else {
         return null;
       }
-      obj = require("../ConnectionsUtils.tsx") /* officialApplicationIds */;
+      obj = officialApplicationIds /* officialApplicationIds */;
       const obj1 = { connectionType: null, connectionMetadataField: null, operator: null, operatorText: null, value: null };
       obj1[0] = connectionType;
       obj1[1] = connectionMetadataField;
@@ -134,7 +145,7 @@ function ConnectionsCheck(result) {
       obj2[1] = str;
       obj2[2] = tmp.connectionsCheck;
       obj2[3] = formatResult;
-      tmp21Result = closure_29(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+      tmp21Result = closure_29(Text /* Text */.Text, obj2);
       const tmp21 = closure_29;
     }
     return tmp21Result;
@@ -428,7 +439,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     }
   }, items3);
   let tmp3 = callback(React.useState(0), 2);
-  getUncachedChannelPermissions = eligibilityStatesGroups(3989).useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.GREEN_330);
+  getUncachedChannelPermissions = eligibilityStatesGroups(3989).useToken(Themes.unsafe_rawColors.GREEN_330);
   obj = { children: null };
   const keys = Object.keys(memo1);
   const sorted = keys.sort((arg0, arg1) => {
@@ -710,11 +721,11 @@ function ConnectedUserAccountOptions(account) {
   const tmp7 = callback(first.useState(1 === account.visibility), 2);
   first1 = tmp7[0];
   closure_8 = tmp7[1];
-  require("../../../hooks/useMountEffect.tsx")(() => {
+  useMountLayoutEffect(() => {
     callback(!first1);
     callback2(first);
   });
-  let obj = require("../../../lib/Platforms.tsx");
+  let obj = getPlatformUserUrl;
   const value = obj.get(account.type);
   let tmp12;
   if (set.has(account.type)) {

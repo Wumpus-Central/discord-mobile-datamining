@@ -1,3 +1,7 @@
+import { SearchField } from "../../../../design/components/TextField/native/SearchField.native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { set } from "../../../../utils/PlatformUtils.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/SearchBarNav.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -24,11 +28,11 @@ const forwardRefResult = importAllResult.forwardRef((onClose, ref) => {
   const merged = Object.assign(onClose, Object.create(null));
   const tmp2 = callback();
   let obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["ETE/oC"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
   obj[2] = onClose.onClose;
   obj[3] = { top: 8, right: 8, bottom: 8, left: 8 };
-  let obj1 = require("../../../../utils/PlatformUtils.tsx") /* set */;
+  let obj1 = set /* set */;
   if (obj1.isAndroid()) {
     obj = { style: null };
     obj[0] = tmp2.cancelIcon;
@@ -41,7 +45,7 @@ const forwardRefResult = importAllResult.forwardRef((onClose, ref) => {
     tmp3Result = tmp3(tmp4(4281).Text, obj);
   }
   obj[4] = tmp3Result;
-  tmp3Result = tmp3(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  tmp3Result = tmp3(PressableBase /* PressableBase */.PressableOpacity, obj);
   obj1 = { style: tmp2.container, children: null };
   let tmp4Result = tmp4(500);
   let tmp10 = null;
@@ -52,7 +56,7 @@ const forwardRefResult = importAllResult.forwardRef((onClose, ref) => {
   const obj2 = { style: tmp2.flex, children: null };
   const obj3 = { children: null };
   const merged1 = Object.assign(merged);
-  obj3[0] = closure_3(require("../../../../design/components/TextField/native/SearchField.native.tsx") /* SearchField */.SearchField, { size: "md", isRound: true, ref });
+  obj3[0] = closure_3(SearchField /* SearchField */.SearchField, { size: "md", isRound: true, ref });
   obj2[1] = closure_3(closure_2, obj3);
   items[1] = closure_3(closure_2, obj2);
   tmp4Result = tmp4(500);

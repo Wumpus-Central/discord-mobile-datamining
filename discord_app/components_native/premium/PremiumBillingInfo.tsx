@@ -1,3 +1,6 @@
+import { QUICK_SWITCHER } from "../../modules/app_analytics/AnalyticsLocation.tsx";
+import { context } from "../../modules/app_analytics/useAnalyticsLocations.tsx";
+import { createSubscriptionInvoicePreview } from "../../modules/premium/PremiumSubscriptionInvoice.tsx";
 // discord_app/components_native/premium/PremiumBillingInfo.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
@@ -51,10 +54,10 @@ const result = require("get ActivityIndicator").fileFinishedImporting("component
 export default function PremiumBillingInfo(subscription) {
   subscription = subscription.subscription;
   const tmp = createCacheKey();
-  let obj = require("../../modules/premium/PremiumSubscriptionInvoice.tsx") /* createSubscriptionInvoicePreview */;
-  obj = { subscriptionId: subscription.id, renewal: true, applyEntitlements: true, analyticsLocations: require("../../modules/app_analytics/useAnalyticsLocations.tsx")(), analyticsLocation: require("../../modules/app_analytics/AnalyticsLocation.tsx").PREMIUM_BILLING_INFO };
+  let obj = createSubscriptionInvoicePreview /* createSubscriptionInvoicePreview */;
+  obj = { subscriptionId: subscription.id, renewal: true, applyEntitlements: true, analyticsLocations: context(), analyticsLocation: QUICK_SWITCHER.PREMIUM_BILLING_INFO };
   const first = callback(obj.useFetchSubscriptionInvoicePreview(obj), 1)[0];
-  require("../../modules/premium/PremiumSubscriptionInvoice.tsx") /* createSubscriptionInvoicePreview */;
+  createSubscriptionInvoicePreview /* createSubscriptionInvoicePreview */;
   if (null == first) {
     return null;
   } else {

@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/self_mod/hooks/useChannelSafetyWarning.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 
@@ -9,7 +10,7 @@ export const useChannelSafetyWarning = function useChannelSafetyWarning(channelI
   const dependencyMap = LIKELY_ATO;
   const items = [handleConnectionOpen];
   const items1 = [channelId];
-  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_2.getChannelSafetyWarnings(closure_0), items1);
+  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_2.getChannelSafetyWarnings(closure_0), items1);
   const found = stateFromStores.filter((type) => type.type === closure_1);
   return found.find((dismiss_timestamp) => {
     let tmp = null == dismiss_timestamp.dismiss_timestamp;

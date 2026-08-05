@@ -1,3 +1,13 @@
+import { t } from "../../../_runtime/03867_t.js";
+import { getEffectiveVideoProvider } from "../../utils/EmbedUtils.tsx";
+import { _resolveGiftCode } from "../../utils/GiftCodeUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { getPathsFromURL } from "../coded_links/findCodedLinks.tsx";
+import { flattenComponents } from "../interaction_components/InteractionComponentUtils.tsx";
+import { transformMessagePoll } from "../polls/transformMessagPoll.tsx";
+import { getStickerExtensionFromFormatType } from "../stickers/StickersUtils.tsx";
+import { isMentioned } from "isMessageMentioned.tsx";
+import { useNullableMessageAuthor } from "useMessageAuthor.tsx";
 // discord_app/modules/messages/MessageRecordUtils.tsx
 import createFromServer from "createFromServer";
 import hasFlag from "hasFlag";
@@ -36,8 +46,8 @@ function createMinimalMessageRecord(timestamp) {
   } else {
     const embeds = timestamp.embeds;
     const mapped = embeds.map((footer) => message2(outer1_2[15]).sanitizeEmbed(message2.channel_id, message2.id, footer));
-    items = _require("../../utils/EmbedUtils.tsx").mergeEmbedsOnURL(mapped);
-    const obj2 = _require("../../utils/EmbedUtils.tsx");
+    items = _getEffectiveVideoProvider.mergeEmbedsOnURL(mapped);
+    const obj2 = _getEffectiveVideoProvider;
   }
   obj.embeds = items;
   const date = new Date(timestamp.timestamp);
@@ -45,12 +55,12 @@ function createMinimalMessageRecord(timestamp) {
   if (components == null) {
     components = [];
   }
-  obj.components = _require("../interaction_components/InteractionComponentUtils.tsx").transformComponents(components);
+  obj.components = _flattenComponents.transformComponents(components);
   const NON_PARSED = constants3.NON_PARSED;
   if (NON_PARSED.has(timestamp.type)) {
     let items1 = [];
   } else {
-    items1 = require("../coded_links/findCodedLinks.tsx")(timestamp.content);
+    items1 = getPathsFromURL(timestamp.content);
   }
   obj.codedLinks = items1;
   tmp = new tmp(obj);
@@ -95,7 +105,7 @@ function createMessageRecord(message, message) {
       user = new closure_7(message.author);
     }
   }
-  let obj2 = require("useMessageAuthor.tsx") /* useNullableMessageAuthor */;
+  let obj2 = useNullableMessageAuthor /* useNullableMessageAuthor */;
   obj = { channel_id: message.channel_id, author: user };
   const messageAuthor = obj2.getMessageAuthor(obj);
   if (message != null) {
@@ -124,7 +134,7 @@ function createMessageRecord(message, message) {
     }
     str = "";
     tmp17 = content;
-    obj5 = require("../../utils/SnowflakeUtils.tsx");
+    obj5 = DISCORD_EPOCH;
   }
   let tmp20;
   if (message.type === constants2.PREMIUM_GROUP_INVITE) {
@@ -134,7 +144,7 @@ function createMessageRecord(message, message) {
     }
     str = "";
     tmp20 = content1;
-    obj6 = require("../../utils/SnowflakeUtils.tsx");
+    obj6 = DISCORD_EPOCH;
   }
   obj = {};
   let tmp23 = closure_6;
@@ -173,7 +183,7 @@ function createMessageRecord(message, message) {
   obj.mentioned = tmp9Result.isMentioned(obj1);
   tmp9Result = tmp9(4519);
   const isGiftCodeEmbedResult = tmp9Result.isGiftCodeEmbed(message);
-  const findGiftCodes = require("../../utils/GiftCodeUtils.tsx") /* _resolveGiftCode */.findGiftCodes;
+  const findGiftCodes = _resolveGiftCode /* _resolveGiftCode */.findGiftCodes;
   if (isGiftCodeEmbedResult) {
     let url;
     if (message != null) {
@@ -194,13 +204,13 @@ function createMessageRecord(message, message) {
     if (null != call.ended_timestamp) {
       const _Date = Date;
       const date = new Date(call.ended_timestamp);
-      tmp39Result = require("../../../_runtime/03867_t.js")(date);
-      const tmp39 = require("../../../_runtime/03867_t.js");
+      tmp39Result = t(date);
+      const tmp39 = t;
     }
     let durationResult = null;
     if (null != tmp39Result) {
-      durationResult = require("../../../_runtime/03867_t.js").duration(tmp39Result.diff(tmp35));
-      const obj12 = require("../../../_runtime/03867_t.js");
+      durationResult = t.duration(tmp39Result.diff(tmp35));
+      const obj12 = t;
     }
     obj2 = { participants: null, endedTimestamp: null, duration: null };
     obj2[0] = call.participants;
@@ -240,7 +250,7 @@ function createMessageRecord(message, message) {
     ({ interaction_metadata: obj7.interactionMetadata, role_subscription_data: obj7.roleSubscriptionData, purchase_notification: obj7.purchaseNotification } = message);
     let tmp50;
     if (null != message.poll) {
-      tmp50 = require("../polls/transformMessagPoll.tsx")(message.poll);
+      tmp50 = transformMessagePoll(message.poll);
     }
     obj.poll = tmp50;
     obj.sharedClientTheme = message.shared_client_theme;
@@ -335,12 +345,12 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         if (null != call.ended_timestamp) {
           const _Date = Date;
           const date = new Date(call.ended_timestamp);
-          tmp = require("../../../_runtime/03867_t.js")(date);
-          const tmp4 = require("../../../_runtime/03867_t.js");
+          tmp = t(date);
+          const tmp4 = t;
         }
         let durationResult = null;
         if (null != tmp) {
-          obj = require("../../../_runtime/03867_t.js");
+          obj = t;
           durationResult = obj.duration(tmp.diff(tmp46));
         }
         obj = { participants: null, endedTimestamp: null, duration: null };
@@ -388,8 +398,8 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         }
         let result8 = result7;
         if (null != message2.components) {
-          result8 = result7.set("components", _require("../interaction_components/InteractionComponentUtils.tsx").transformComponents(message2.components));
-          const obj14 = _require("../interaction_components/InteractionComponentUtils.tsx");
+          result8 = result7.set("components", _flattenComponents.transformComponents(message2.components));
+          const obj14 = _flattenComponents;
         }
         let result9 = result8;
         if (null != message2.role_subscription_data) {
@@ -398,7 +408,7 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         if (null == message2.reactions) {
           let result10 = result9;
           if (null != message2.poll) {
-            result10 = result9.set("poll", require("../polls/transformMessagPoll.tsx")(message2.poll));
+            result10 = result9.set("poll", transformMessagePoll(message2.poll));
           }
           let flag = false;
           let result11 = result10;
@@ -422,8 +432,8 @@ export const updateMessageRecord = function updateMessageRecord(message, message
             const obj1 = { message: null, userId: null };
             obj1[0] = result13;
             obj1[1] = store.getId();
-            result14 = result13.set("mentioned", require("isMessageMentioned.tsx")(obj1));
-            const tmp43 = require("isMessageMentioned.tsx");
+            result14 = result13.set("mentioned", isMentioned(obj1));
+            const tmp43 = isMentioned;
           }
           return result14;
         } else {
@@ -487,15 +497,15 @@ export const updateMessageRecord = function updateMessageRecord(message, message
       } else {
         const embeds = message2.embeds;
         const mapped = embeds.map((footer) => message2(outer1_2[15]).sanitizeEmbed(message2.channel_id, message2.id, footer));
-        items3 = _require("../../utils/EmbedUtils.tsx").mergeEmbedsOnURL(mapped);
-        const obj9 = _require("../../utils/EmbedUtils.tsx");
+        items3 = _getEffectiveVideoProvider.mergeEmbedsOnURL(mapped);
+        const obj9 = _getEffectiveVideoProvider;
       }
       const result17 = result4.set("embeds", items3);
     }
   }
 };
 export const canEditMessageWithStickers = function canEditMessageWithStickers(content) {
-  let tmp = 0 === require("../stickers/StickersUtils.tsx") /* getStickerExtensionFromFormatType */.getMessageStickers(content).length;
+  let tmp = 0 === getStickerExtensionFromFormatType /* getStickerExtensionFromFormatType */.getMessageStickers(content).length;
   if (!tmp) {
     tmp = "" !== content.content;
   }

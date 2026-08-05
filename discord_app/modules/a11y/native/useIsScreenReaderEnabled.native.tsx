@@ -1,3 +1,4 @@
+import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/modules/a11y/native/useIsScreenReaderEnabled.native.tsx
 import { AccessibilityInfo } from "get ActivityIndicator";
 import keys from "keys";
@@ -38,7 +39,7 @@ let closure_5 = keys.create((arg0) => {
     }));
   });
   const listener = AccessibilityInfo.addEventListener("screenReaderChanged", updateScreenReaderEnabled);
-  let Storage = _require("../../../../discord_common/js/packages/storage/Storage.tsx").Storage;
+  let Storage = _Storage.Storage;
   screenReaderEnabled = Storage.get(screenReaderEnabled);
   if (screenReaderEnabled == null) {
     screenReaderEnabled = false;

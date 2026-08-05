@@ -1,3 +1,8 @@
+import { useChatLayout } from "../../chat/native/useChatLayout.tsx";
+import { MobileHomeDrawerExperiment } from "../../home_drawer/native/HomeDrawerExperiment.tsx";
+import { matchPath } from "../../routing/matchPathCompat.tsx";
+import { transitionTo } from "../../routing/router_utils.tsx";
+import { RouteParam } from "../../routing/RouteUtils.tsx";
 // discord_app/modules/main_tabs_v2/native/getInitialNavigationState.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
@@ -16,7 +21,7 @@ function getInitialGuildState(closure_6, channelId, flag, flag2) {
   if (channelId == null) {
     channelId = channelId.getChannelId(closure_6);
   }
-  let obj = require("../../chat/native/useChatLayout.tsx") /* useChatLayout */;
+  let obj = useChatLayout /* useChatLayout */;
   const isChatLockedOpen = obj.getChatLayout().isChatLockedOpen;
   if (flag) {
     if (null != channelId) {
@@ -65,15 +70,15 @@ function computeInitialNavigationStateWithoutLogging() {
   let channelId;
   let guildId;
   if (null != token.getToken()) {
-    let obj1 = require("../../routing/router_utils.tsx") /* transitionTo */;
+    let obj1 = transitionTo /* transitionTo */;
     const _location = obj1.getHistory().location;
-    let obj2 = require("../../routing/matchPathCompat.tsx") /* matchPath */;
+    let obj2 = matchPath /* matchPath */;
     let obj = { path: null };
-    const RouteParam = require("../../routing/RouteUtils.tsx") /* RouteParam */.RouteParam;
-    const RouteParam2 = require("../../routing/RouteUtils.tsx") /* RouteParam */.RouteParam;
+    const RouteParam = RouteParam /* RouteParam */.RouteParam;
+    const RouteParam2 = RouteParam /* RouteParam */.RouteParam;
     obj[0] = closure_7.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }), ":messageId?");
     const matchPathResult = obj2.matchPath(_location.pathname, obj);
-    const MobileHomeDrawerExperiment = require("../../home_drawer/native/HomeDrawerExperiment.tsx") /* MobileHomeDrawerExperiment */.MobileHomeDrawerExperiment;
+    const MobileHomeDrawerExperiment = MobileHomeDrawerExperiment /* MobileHomeDrawerExperiment */.MobileHomeDrawerExperiment;
     const tmp5 = MobileHomeDrawerExperiment.getConfig({ location: "app-start" }).landOnHome && null == matchPathResult;
     if (null == matchPathResult) {
       obj = { path: null };

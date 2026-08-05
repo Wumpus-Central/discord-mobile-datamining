@@ -1,3 +1,4 @@
+import { handleNameInputScreenOrSuggestions } from "../../../../contact_sync/native/ContactSyncModalActionCreators.tsx";
 // discord_app/modules/main_tabs_v2/native/friends/screens/AddFriendsScreen.tsx
 import ActivityIndicator from "ActivityIndicator";
 import upsertRelationship from "upsertRelationship";
@@ -22,7 +23,7 @@ let error;
 let map1;
 const require = arg1;
 function handleFindFriends() {
-  require("../../../../contact_sync/native/ContactSyncModalActionCreators.tsx") /* handleNameInputScreenOrSuggestions */.openContactSyncModal({}, constants.FRIENDS_ADD_FRIENDS_MODAL);
+  handleNameInputScreenOrSuggestions /* handleNameInputScreenOrSuggestions */.openContactSyncModal({}, constants.FRIENDS_ADD_FRIENDS_MODAL);
 }
 function handleShare() {
   const self = this;

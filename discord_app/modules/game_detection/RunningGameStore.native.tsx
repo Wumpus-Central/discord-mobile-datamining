@@ -1,3 +1,4 @@
+import { DevToolsFocusedPidsTrackMode } from "../overlay/OverlayTypes.tsx";
 // discord_app/modules/game_detection/RunningGameStore.native.tsx
 import handleLoadMessages from "handleLoadMessages";
 import gameFromServer from "gameFromServer";
@@ -128,7 +129,7 @@ export const getRawOverlayGameStatus = function getRawOverlayGameStatus() {
   if (arg1 === undefined) {
     const items = [gameFromServer, setLibraryApplications, handleLoadMessages];
   }
-  return { source: require("../overlay/OverlayTypes.tsx") /* DevToolsFocusedPidsTrackMode */.OverlayGameStatusSource.UNKNOWN, enabledOOP: false, enabledLegacy: false, overlayMethod: require("../overlay/OverlayTypes.tsx") /* DevToolsFocusedPidsTrackMode */.OverlayMethod.Disabled, reason: "Dummy implementation" };
+  return { source: DevToolsFocusedPidsTrackMode /* DevToolsFocusedPidsTrackMode */.OverlayGameStatusSource.UNKNOWN, enabledOOP: false, enabledLegacy: false, overlayMethod: DevToolsFocusedPidsTrackMode /* DevToolsFocusedPidsTrackMode */.OverlayMethod.Disabled, reason: "Dummy implementation" };
 };
 export function isDetectionEnabled() {
   return false;

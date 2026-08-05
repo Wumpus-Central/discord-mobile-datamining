@@ -1,3 +1,6 @@
+import { useIsCallActive } from "../../../../calls/mobile/useIsCallActive.tsx";
+import { getHumanizedCallDuration } from "../../../getHumanizedCallDuration.tsx";
+import { createCommonMessage } from "createCommonMessage.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/CallSystemMessage.tsx
 import getParticipants from "getParticipants";
 import fetchFingerprint from "fetchFingerprint";
@@ -14,9 +17,9 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
   const channelId = message.getChannelId();
   const call = message.call;
   userVoiceChannelId = userVoiceChannelId.getUserVoiceChannelId(ME, id);
-  const tmp6 = require("../../../getHumanizedCallDuration.tsx")(message);
+  const tmp6 = getHumanizedCallDuration(message);
   participants = participants.getParticipants(channelId);
-  let obj = require("../../../../calls/mobile/useIsCallActive.tsx") /* useIsCallActive */;
+  let obj = useIsCallActive /* useIsCallActive */;
   const checkIsCallActiveResult = obj.checkIsCallActive(channelId, message.id);
   let tmp9 = !checkIsCallActiveResult;
   if (!checkIsCallActiveResult) {
@@ -70,6 +73,6 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
   }
   obj = { title: stringResult1, description: formatToPlainStringResult, isCallActive: checkIsCallActiveResult, missed: tmp9, avatarURLs: mapped, rawMilliseconds: timestamp.valueOf() };
   timestamp = message.timestamp;
-  const merged = Object.assign(require("createCommonMessage.tsx")(message));
+  const merged = Object.assign(createCommonMessage(message));
   return obj;
 };

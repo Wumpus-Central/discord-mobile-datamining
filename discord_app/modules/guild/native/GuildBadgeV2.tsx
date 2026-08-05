@@ -1,3 +1,8 @@
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { BadgeCategory } from "../../guild_badge/BadgeCategory.tsx";
+import { GuildVisibility } from "../../guild_badge/GuildTraits.tsx";
+import { badgeVariants } from "../../guild_badge/native/GuildBadgeImageSource.tsx";
 // discord_app/modules/guild/native/GuildBadgeV2.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -12,10 +17,10 @@ export default function GuildBadgeV2(arg0) {
   let size;
   ({ guild, size } = arg0);
   if (size === undefined) {
-    size = require("../../../design/void/native.tsx") /* Button */.Icon.Sizes.MEDIUM;
+    size = Button /* Button */.Icon.Sizes.MEDIUM;
   }
   const merged = Object.assign(arg0, Object.create(null));
-  require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+  AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   if (null == guild) {
     return null;
   } else {
@@ -34,11 +39,11 @@ export default function GuildBadgeV2(arg0) {
   tmp4 = callback();
 };
 export const hasGuildBadge = function hasGuildBadge(fromGuildProfileResult) {
-  const guildTraits = require("../../guild_badge/GuildTraits.tsx") /* GuildVisibility */.getGuildTraits(fromGuildProfileResult);
-  const obj = require("../../guild_badge/GuildTraits.tsx") /* GuildVisibility */;
+  const guildTraits = GuildVisibility /* GuildVisibility */.getGuildTraits(fromGuildProfileResult);
+  const obj = GuildVisibility /* GuildVisibility */;
   const tmp = require;
-  const badgeCategory = require("../../guild_badge/BadgeCategory.tsx") /* BadgeCategory */.getBadgeCategory(guildTraits);
-  const tmp5 = require("../../guild_badge/native/GuildBadgeImageSource.tsx") /* badgeVariants */.badgeVariants[badgeCategory];
+  const badgeCategory = BadgeCategory /* BadgeCategory */.getBadgeCategory(guildTraits);
+  const tmp5 = badgeVariants /* badgeVariants */.badgeVariants[badgeCategory];
   let tmp6 = null != tmp5;
   if (tmp6) {
     tmp6 = null != tmp(9181).resolveImageSource(tmp5, guildTraits, arg1);

@@ -1,3 +1,7 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getNickname } from "../../../utils/NicknameUtils.tsx";
+import { DiscordTag } from "../../user_profile/native/DiscordTag.tsx";
 // discord_app/modules/guild_settings/native/DetailedGuildIdentityUserRow.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -20,7 +24,7 @@ const memoResult = importAllResult.memo((height) => {
   let user;
   ({ guildId, user } = height);
   const tmp = callback2();
-  let obj = require("../../../utils/NicknameUtils.tsx");
+  let obj = getNickname;
   let nickname = obj.getNickname(guildId, undefined, user);
   if (nickname == null) {
     nickname = tmp2(4124).getGlobalName(user);
@@ -28,17 +32,17 @@ const memoResult = importAllResult.memo((height) => {
   }
   const hasAvatarForGuildResult = user.hasAvatarForGuild(guildId);
   obj = { style: { height: height.contentHeight }, children: null };
-  const items = [callback(require("../../user_profile/native/DiscordTag.tsx"), { user, nick: nickname }), ];
+  const items = [callback(DiscordTag, { user, nick: nickname }), ];
   if (hasAvatarForGuildResult) {
     obj = { style: null, children: null };
     obj[0] = tmp.mainIdentity;
     let tmp8Result = null;
     if (hasAvatarForGuildResult) {
       const obj1 = { size: null, style: null, user: null, guildId: "Array" };
-      obj1[0] = require("../../../design/void/native.tsx") /* Button */.AvatarSizes.SIZE_16;
+      obj1[0] = Button /* Button */.AvatarSizes.SIZE_16;
       obj1[1] = tmp.primaryAvatar;
       obj1[2] = user;
-      tmp8Result = tmp8(require("../../../design/void/native.tsx") /* Button */.Avatar, obj1);
+      tmp8Result = tmp8(Button /* Button */.Avatar, obj1);
     }
     const items1 = [tmp8Result, ];
     const obj2 = { user: null, usernameStyle: null, hideBotTag: true };
@@ -77,7 +81,7 @@ const memoResult1 = importAllResult.memo(function DetailedGuildIdentityUserRow(a
   ({ disabled, guildId, leading, onPress, trailing, userId: require, subLabel, accessibilityRole, accessibilityState } = arrow);
   let SMALL = dependencyMap;
   ({ end, start } = arrow);
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getUser(closure_0));
   if (null == stateFromStores) {

@@ -1,3 +1,4 @@
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeRemoteAuthCryptoModule.tsx";
 // discord_app/modules/remote_auth/RemoteAuthCrypto.android.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
@@ -14,10 +15,10 @@ prototype["generateRsaKeyPair"] = function generateRsaKeyPair() {
   })();
 };
 prototype["serializePublicKey"] = function serializePublicKey(c3) {
-  return require("../../../discord_common/js/packages/rtn-codegen/js/NativeRemoteAuthCryptoModule.tsx").getEncodedPublicKey();
+  return enforcing.getEncodedPublicKey();
 };
 prototype["publicKeyFingerprint"] = function publicKeyFingerprint(c3) {
-  return require("../../../discord_common/js/packages/rtn-codegen/js/NativeRemoteAuthCryptoModule.tsx").getPublicKeyFingerprint();
+  return enforcing.getPublicKeyFingerprint();
 };
 prototype["decryptEncodedCiphertext"] = function decryptEncodedCiphertext(closure_0, closure_02) {
   closure_0 = closure_02;
@@ -41,7 +42,7 @@ prototype["decryptNonce"] = function decryptNonce(arg0, outer1_2) {
   })();
 };
 prototype["release"] = function release() {
-  require("../../../discord_common/js/packages/rtn-codegen/js/NativeRemoteAuthCryptoModule.tsx").releaseKeyPair();
+  enforcing.releaseKeyPair();
 };
 const result = require("set").fileFinishedImporting("modules/remote_auth/RemoteAuthCrypto.android.tsx");
 

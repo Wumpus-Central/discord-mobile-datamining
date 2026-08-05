@@ -1,3 +1,9 @@
+import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
+import { KeyCommandsView } from "../modules/keyboard/native/KeyCommandsView.tsx";
+import { navigationToRootTabHelper } from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { PictureInPictureGlobal } from "../modules/video_calls/native/components/PictureInPictureGlobal.tsx";
+import { usePipVideoOrStream } from "../modules/video_calls/native/usePipVideoOrStream.tsx";
+import { isVoicePanelEnabled } from "../modules/voice_panel/VoicePanelUtils.native.tsx";
 // discord_app/components_native/MainShared.tsx
 import ActionSheetPresenter from "ActionSheetPresenter";
 import { NativeModules } from "BurstReactionAnimationContainerInner";
@@ -16,13 +22,13 @@ export const SoundPlayer = require("MuteDeafen");
 export const MainViewTooltipActionSheetsV2 = require("trackActionSheetImpression");
 export const ToastContainer = require("AnimatedToast");
 export const PictureInPictureGlobalContainer = function PictureInPictureGlobalContainer() {
-  let obj = require("../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [ensureGuildLoaded, createRTCConnection];
   const stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channelId.getChannelId()));
-  const hasPipParticipant = require("../modules/video_calls/native/usePipVideoOrStream.tsx") /* usePipVideoOrStream */.useHasPipParticipant({ isActivityViewFocused: false });
-  const obj2 = require("../modules/video_calls/native/usePipVideoOrStream.tsx") /* usePipVideoOrStream */;
-  const isModalOpen = require("../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */.useIsModalOpen();
-  require("../modules/voice_panel/VoicePanelUtils.native.tsx") /* isVoicePanelEnabled */;
+  const hasPipParticipant = usePipVideoOrStream /* usePipVideoOrStream */.useHasPipParticipant({ isActivityViewFocused: false });
+  const obj2 = usePipVideoOrStream /* usePipVideoOrStream */;
+  const isModalOpen = navigationToRootTabHelper /* navigationToRootTabHelper */.useIsModalOpen();
+  isVoicePanelEnabled /* isVoicePanelEnabled */;
   let tmp7 = null;
   if (null != stateFromStores) {
     tmp7 = null;
@@ -33,7 +39,7 @@ export const PictureInPictureGlobalContainer = function PictureInPictureGlobalCo
         if (!tmp6) {
           obj = { channel: null };
           obj[0] = stateFromStores;
-          tmp7 = jsx(require("../modules/video_calls/native/components/PictureInPictureGlobal.tsx"), { channel: null });
+          tmp7 = jsx(PictureInPictureGlobal, { channel: null });
         }
       }
     }
@@ -58,7 +64,7 @@ export const useAppKeyCommands = function useAppKeyCommands() {
     const items = [obj];
     return items;
   }, []);
-  const keyCommands = require("../modules/keyboard/native/KeyCommandsView.tsx") /* KeyCommandsView */.useKeyCommands(memo);
+  const keyCommands = KeyCommandsView /* KeyCommandsView */.useKeyCommands(memo);
 };
 export const useScreenReaderEnabled = function useScreenReaderEnabled() {
   const effect = React.useEffect(() => {

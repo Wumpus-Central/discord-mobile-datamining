@@ -1,3 +1,4 @@
+import { CodedLinkActionCreators } from "../modules/coded_links/web/CodedLinkActionCreators.tsx";
 // discord_app/actions/GiftCodeActionCreators.tsx
 import GuildFeatures from "GuildFeatures";
 import addApplication from "addApplication";
@@ -341,7 +342,7 @@ export default {
     })();
   },
   openNativeGiftCodeModal(arg0) {
-    require("../modules/coded_links/web/CodedLinkActionCreators.tsx").openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
+    CodedLinkActionCreators.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
   }
 };
 export { resolveGiftCode };

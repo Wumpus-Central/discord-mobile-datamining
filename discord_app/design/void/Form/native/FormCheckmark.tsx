@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { CheckmarkSmallIcon } from "../../../components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
 // discord_app/design/void/Form/native/FormCheckmark.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -9,8 +11,8 @@ export default function RowCheckmark(selected) {
   let tmp = null;
   if (selected.selected) {
     const obj = { color: null };
-    obj[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.BRAND_500;
-    tmp = jsx(require("../../../components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx") /* CheckmarkSmallIcon */.CheckmarkSmallIcon, { color: null });
+    obj[0] = Themes.unsafe_rawColors.BRAND_500;
+    tmp = jsx(CheckmarkSmallIcon /* CheckmarkSmallIcon */.CheckmarkSmallIcon, { color: null });
   }
   return tmp;
 };

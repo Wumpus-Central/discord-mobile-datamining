@@ -1,3 +1,5 @@
+import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
+import { isActionedApplicationStatus } from "GuildJoinRequestUtils.tsx";
 // discord_app/modules/guild_member_verification/UserGuildJoinRequestStore.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
@@ -16,7 +18,7 @@ function handleGatewayJoinRequestUpdate(arg0) {
         return false;
       }
     }
-    obj = require("GuildJoinRequestUtils.tsx") /* isActionedApplicationStatus */;
+    obj = isActionedApplicationStatus /* isActionedApplicationStatus */;
     if (obj.isApprovedAndAcked(obj)) {
       delete tmp[tmp2];
       if (c3 === guildId) {
@@ -54,8 +56,8 @@ prototype["computeGuildIds"] = function computeGuildIds() {
 prototype["getJoinRequestGuild"] = function getJoinRequestGuild(guildId) {
   let fromGuildBasicResult = null;
   if (null != dependencyMap[guildId]) {
-    fromGuildBasicResult = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */.fromGuildBasic(dependencyMap[guildId]);
-    const obj = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
+    fromGuildBasicResult = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */.fromGuildBasic(dependencyMap[guildId]);
+    const obj = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
   }
   return fromGuildBasicResult;
 };
@@ -107,7 +109,7 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(require("dispatc
       } else {
         tmp8[guildId] = obj;
       }
-      obj2 = require("GuildJoinRequestUtils.tsx") /* isActionedApplicationStatus */;
+      obj2 = isActionedApplicationStatus /* isActionedApplicationStatus */;
     } else {
       delete tmp3[tmp2];
       if (c3 === guildId) {

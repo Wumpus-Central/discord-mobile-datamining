@@ -1,3 +1,5 @@
+import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/user_settings/defs/native/SafetyGuildSettingGuildSelect.tsx
 import noop from "noop";
 import insertUnsortedGuilds from "insertUnsortedGuilds";
@@ -36,7 +38,7 @@ createToggle = {
   },
   parent: MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onGuildSelectPress() {
-    require("../../../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(14779, dependencyMap.paths), "SettingsPrivacyAndSafetyGuildSelectActionSheet");
+    ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(14779, dependencyMap.paths), "SettingsPrivacyAndSafetyGuildSelectActionSheet");
   }
 };
 createToggle = createToggle.createGuildSelector(createToggle);

@@ -1,3 +1,4 @@
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
 // discord_app/modules/forums/ForumPostUnreadCountStore.tsx
 import handleThreadCreateOrUpdate from "handleThreadCreateOrUpdate";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -17,7 +18,7 @@ prototype["getCount"] = function getCount(arg0) {
   return dependencyMap[arg0];
 };
 prototype["getThreadIdsMissingCounts"] = function getThreadIdsMissingCounts(guild_id, threadIds) {
-  require("../../../_runtime/metro/00038__.js")(handleThreadCreateOrUpdate.hasLoaded(guild_id), "must wait for THREAD_LIST_SYNC before calling this");
+  00038__(handleThreadCreateOrUpdate.hasLoaded(guild_id), "must wait for THREAD_LIST_SYNC before calling this");
   return threadIds.filter((arg0) => {
     let tmp = !(arg0 in closure_5);
     if (tmp) {

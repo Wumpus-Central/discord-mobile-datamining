@@ -1,3 +1,5 @@
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/self_mod/SafetyToolsActionCreators.native.tsx
 import { getSafetyToolsActionSheetKey as closure_3 } from "LOCATION_CONTEXT_MOBILE";
 
@@ -6,7 +8,7 @@ const result = require("SafetyToolsActionSheet").fileFinishedImporting("modules/
 export const openSafetyToolsActionSheet = function openSafetyToolsActionSheet(channelId, recipientId, warningId, warningType) {
   const tmp = callback(channelId);
   const require = tmp;
-  let obj = require("../action_sheet/native/ActionSheetActionCreators.tsx");
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = {
     channelId,
     warningId,
@@ -16,5 +18,5 @@ export const openSafetyToolsActionSheet = function openSafetyToolsActionSheet(ch
       outer1_1(outer1_2[1]).hideActionSheet(closure_0);
     }
   };
-  obj.openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(10288, dependencyMap.paths), tmp, obj);
+  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(10288, dependencyMap.paths), tmp, obj);
 };

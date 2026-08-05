@@ -1,3 +1,7 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
+import { useNavigation } from "../../design/components/Navigator/native/useNavigation.native.tsx";
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
 // discord_app/components_native/channel_settings/ChannelSettingsIntegrationsOverview.tsx
 import "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -29,7 +33,7 @@ function LinkedLobbyFormSection(channel) {
     obj[0] = getOrFetchApplication.name;
     obj1 = { source: null, size: null };
     ({ id: obj7[0], icon: obj7[1] } = getOrFetchApplication);
-    obj1[0] = require("../../utils/AvatarUtils.tsx").getApplicationIconSource({ id: null, icon: null });
+    obj1[0] = getAvatarURL.getApplicationIconSource({ id: null, icon: null });
     obj1[1] = tmp(1297).AvatarSizes.REFRESH_MEDIUM_32;
     obj[1] = callback(tmp(1297).Avatar, obj1);
     obj[3] = function onPress() {
@@ -38,7 +42,7 @@ function LinkedLobbyFormSection(channel) {
     obj[2] = callback(tmp(5315).TableRow, obj);
     tmp5 = callback(tmp(5649).TableRowGroup, obj);
     const obj2 = { id: null, icon: null };
-    const obj6 = require("../../utils/AvatarUtils.tsx");
+    const obj6 = getAvatarURL;
   }
   return tmp5;
 }
@@ -55,9 +59,9 @@ export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
   let require;
   ({ channelId: require, canManageWebhooks, canUnlinkLobby } = arg0);
   let importDefault;
-  let obj = require("../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
+  let obj = useNavigation /* useNavigation */;
   importDefault = obj.useNavigation();
-  let obj1 = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj1 = initialize /* initialize */;
   const items = [ensureGuildLoaded];
   const stateFromStores = obj1.useStateFromStores(items, () => outer1_3.getChannel(closure_0));
   let tmp6Result = null;
@@ -66,9 +70,9 @@ export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
     obj[0] = tmp4.screenContainer;
     obj = { style: null, spacing: null, children: null };
     obj1 = { paddingHorizontal: null };
-    obj1[0] = require("../../../discord_common/js/packages/tokens/native.tsx").space.PX_12;
+    obj1[0] = Themes.space.PX_12;
     obj[0] = obj1;
-    obj[1] = require("../../../discord_common/js/packages/tokens/native.tsx").space.PX_24;
+    obj[1] = Themes.space.PX_24;
     if (canManageWebhooks) {
       const obj2 = { hasIcons: true, children: null };
       const obj3 = { label: null, subLabel: null, icon: null, arrow: true, onPress: null };

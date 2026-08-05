@@ -1,3 +1,5 @@
+import { BaseConnectionEvent } from "../../../discord_common/js/packages/media-engine/index.tsx";
+import { getCurrentUserSigningKey } from "SecureFramesUtils.tsx";
 // discord_app/modules/rtc/SecureFramesVerifiedStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import createRTCConnection from "createRTCConnection";
@@ -53,7 +55,7 @@ function handleUserUpdate(userId) {
       }
       flag = isKeyVerifiedResult !== map.get(userId);
       const result = map.set(userId, isKeyVerifiedResult);
-      obj = require("SecureFramesUtils.tsx") /* getCurrentUserSigningKey */;
+      obj = getCurrentUserSigningKey /* getCurrentUserSigningKey */;
     }
     const allActiveStreamKeys = store2.getAllActiveStreamKeys();
     const reduced = allActiveStreamKeys.reduce((arg0, streamKey) => {
@@ -114,7 +116,7 @@ const secureFramesVerifiedStore = new SecureFramesVerifiedStore(require("dispatc
     if (state.state !== RTCConnectionStates.DISCONNECTED) {
       return false;
     } else {
-      if (require("../../../discord_common/js/packages/media-engine/index.tsx") /* BaseConnectionEvent */.MediaEngineContextTypes.STREAM === context) {
+      if (BaseConnectionEvent /* BaseConnectionEvent */.MediaEngineContextTypes.STREAM === context) {
         let tmp6 = null != streamKey;
         if (tmp6) {
           map1.delete(streamKey);

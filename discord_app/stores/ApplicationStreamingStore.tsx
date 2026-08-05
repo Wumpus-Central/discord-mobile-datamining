@@ -1,3 +1,7 @@
+import { canSpectate } from "../modules/go_live/utils/canSpectate.tsx";
+import { getTitleFromPickedStreamContent } from "../modules/go_live/utils/getTitleFromPickedStreamContent.tsx";
+import { isStreamKey } from "../modules/go_live/utils/StreamKeyUtils.tsx";
+import { canStreamInChannel } from "../modules/go_live/utils/StreamPermissionUtils.tsx";
 // discord_app/stores/ApplicationStreamingStore.tsx
 import set from "set";
 import initialize from "initialize";
@@ -42,7 +46,7 @@ function handleStreamUpdate(streamKey) {
     map1.delete(streamKey);
   }
   const obj = {};
-  const merged = Object.assign(require("../modules/go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */.decodeStreamKey(streamKey));
+  const merged = Object.assign(isStreamKey /* isStreamKey */.decodeStreamKey(streamKey));
   obj.state = paused ? closure_18.PAUSED : closure_18.ACTIVE;
   const result = map.set(streamKey, obj);
   closure_5[streamKey] = { streamKey, region, viewerIds };
@@ -91,7 +95,7 @@ prototype["isSelfStreamHidden"] = function isSelfStreamHidden(channelId) {
 };
 prototype["getLastActiveStream"] = function getLastActiveStream() {
   let tmp = null;
-  if (require("../modules/go_live/utils/canSpectate.tsx")(_detectH265HardwareDecode)) {
+  if (canSpectate(_detectH265HardwareDecode)) {
     const _Array = Array;
     let arr = Array.from(map.values());
     arr = arr.pop();
@@ -103,7 +107,7 @@ prototype["getLastActiveStream"] = function getLastActiveStream() {
   return tmp;
 };
 prototype["getAllActiveStreams"] = function getAllActiveStreams() {
-  if (require("../modules/go_live/utils/canSpectate.tsx")(_detectH265HardwareDecode)) {
+  if (canSpectate(_detectH265HardwareDecode)) {
     const _Array = Array;
     let items = Array.from(map.values());
   } else {
@@ -113,7 +117,7 @@ prototype["getAllActiveStreams"] = function getAllActiveStreams() {
 };
 prototype["getAllActiveStreamsForChannel"] = function getAllActiveStreamsForChannel(channelId) {
   let closure_0 = channelId;
-  if (require("../modules/go_live/utils/canSpectate.tsx")(_detectH265HardwareDecode)) {
+  if (canSpectate(_detectH265HardwareDecode)) {
     const _Array = Array;
     let found = Array.from(map.values()).filter((channelId) => channelId.channelId === closure_0);
     const arr = Array.from(map.values());
@@ -124,7 +128,7 @@ prototype["getAllActiveStreamsForChannel"] = function getAllActiveStreamsForChan
 };
 prototype["getActiveStreamForStreamKey"] = function getActiveStreamForStreamKey(id) {
   let tmp = null;
-  if (require("../modules/go_live/utils/canSpectate.tsx")(_detectH265HardwareDecode)) {
+  if (canSpectate(_detectH265HardwareDecode)) {
     let value = map.get(id);
     if (value == null) {
       value = null;
@@ -134,10 +138,10 @@ prototype["getActiveStreamForStreamKey"] = function getActiveStreamForStreamKey(
   return tmp;
 };
 prototype["getActiveStreamForApplicationStream"] = function getActiveStreamForApplicationStream(streamForUser) {
-  if (require("../modules/go_live/utils/canSpectate.tsx")(_detectH265HardwareDecode)) {
+  if (canSpectate(_detectH265HardwareDecode)) {
     if (null != streamForUser) {
       const self = this;
-      let activeStreamForStreamKey = this.getActiveStreamForStreamKey(require("../modules/go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */.encodeStreamKey(streamForUser));
+      let activeStreamForStreamKey = this.getActiveStreamForStreamKey(isStreamKey /* isStreamKey */.encodeStreamKey(streamForUser));
       if (activeStreamForStreamKey == null) {
         activeStreamForStreamKey = null;
       }
@@ -184,7 +188,7 @@ prototype["getStreamerActiveStreamMetadata"] = function getStreamerActiveStreamM
     const activeStreamForUser = this.getActiveStreamForUser(id, channel.getGuildId());
     let tmp4 = null;
     if (null != activeStreamForUser) {
-      const obj2 = require("../modules/go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */;
+      const obj2 = isStreamKey /* isStreamKey */;
       let tmp8 = dependencyMap3[obj2.encodeStreamKey(obj2, activeStreamForUser)];
       if (tmp8 == null) {
         tmp8 = null;
@@ -212,7 +216,7 @@ prototype["getIsActiveStreamPreviewDisabled"] = function getIsActiveStreamPrevie
   return flag;
 };
 prototype["getAnyStreamForUser"] = function getAnyStreamForUser(userId) {
-  if (require("../modules/go_live/utils/canSpectate.tsx")(_detectH265HardwareDecode)) {
+  if (canSpectate(_detectH265HardwareDecode)) {
     let tmp4 = null;
     if (null != dependencyMap[userId]) {
       const _Object = Object;
@@ -250,7 +254,7 @@ prototype["getAnyStreamForUser"] = function getAnyStreamForUser(userId) {
   }
 };
 prototype["getAnyDiscoverableStreamForUser"] = function getAnyDiscoverableStreamForUser(arg0) {
-  if (require("../modules/go_live/utils/canSpectate.tsx")(_detectH265HardwareDecode)) {
+  if (canSpectate(_detectH265HardwareDecode)) {
     let tmp4 = null;
     if (null != dependencyMap[arg0]) {
       const _Object = Object;
@@ -291,7 +295,7 @@ prototype["getAnyDiscoverableStreamForUser"] = function getAnyDiscoverableStream
   }
 };
 prototype["getStreamForUser"] = function getStreamForUser(id, guildId) {
-  if (require("../modules/go_live/utils/canSpectate.tsx")(_detectH265HardwareDecode)) {
+  if (canSpectate(_detectH265HardwareDecode)) {
     let tmp5;
     if (dependencyMap[id] != null) {
       let tmp6 = guildId;
@@ -316,7 +320,7 @@ prototype["getStreamForUser"] = function getStreamForUser(id, guildId) {
         const basicChannel1 = obj.getBasicChannel(tmp5.channelId);
         let first = null != basicChannel1;
         if (first) {
-          const obj2 = require("../modules/go_live/utils/StreamPermissionUtils.tsx") /* canStreamInChannel */;
+          const obj2 = canStreamInChannel /* canStreamInChannel */;
           first = obj2.canWatchStream(basicChannel1, updateVoiceState, createGuildRecordFromRust, getUncachedChannelPermissions, set)[0];
         }
         flag = first;
@@ -335,7 +339,7 @@ prototype["getStreamForUser"] = function getStreamForUser(id, guildId) {
 };
 prototype["getRTCStream"] = function getRTCStream(arg0) {
   let tmp = null;
-  if (require("../modules/go_live/utils/canSpectate.tsx")(_detectH265HardwareDecode)) {
+  if (canSpectate(_detectH265HardwareDecode)) {
     let tmp4 = dependencyMap2[arg0];
     if (tmp4 == null) {
       tmp4 = null;
@@ -346,7 +350,7 @@ prototype["getRTCStream"] = function getRTCStream(arg0) {
 };
 prototype["getAllApplicationStreams"] = function getAllApplicationStreams() {
   const items = [];
-  if (require("../modules/go_live/utils/canSpectate.tsx")(_detectH265HardwareDecode)) {
+  if (canSpectate(_detectH265HardwareDecode)) {
     for (const key10011 in closure_4) {
       let tmp5 = key10011;
       let tmp6 = dependencyMap;
@@ -390,7 +394,7 @@ prototype["getAllApplicationStreams"] = function getAllApplicationStreams() {
 prototype["getAllApplicationStreamsForChannel"] = function getAllApplicationStreamsForChannel(id) {
   let closure_0 = id;
   const items = [];
-  if (require("../modules/go_live/utils/canSpectate.tsx")(_detectH265HardwareDecode)) {
+  if (canSpectate(_detectH265HardwareDecode)) {
     for (const key10012 in closure_4) {
       let tmp5 = key10012;
       let tmp6 = dependencyMap;
@@ -435,11 +439,11 @@ prototype["getAllApplicationStreamsForChannel"] = function getAllApplicationStre
   return found;
 };
 prototype["getViewerIds"] = function getViewerIds(currentUserActiveStream) {
-  if (require("../modules/go_live/utils/canSpectate.tsx")(_detectH265HardwareDecode)) {
+  if (canSpectate(_detectH265HardwareDecode)) {
     let encodeStreamKeyResult = currentUserActiveStream;
     if (typeof currentUserActiveStream !== "string") {
-      encodeStreamKeyResult = require("../modules/go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */.encodeStreamKey(currentUserActiveStream);
-      const obj = require("../modules/go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */;
+      encodeStreamKeyResult = isStreamKey /* isStreamKey */.encodeStreamKey(currentUserActiveStream);
+      const obj = isStreamKey /* isStreamKey */;
     }
     let tmp5 = null;
     if (null != encodeStreamKeyResult) {
@@ -455,7 +459,7 @@ prototype["getCurrentAppIntent"] = function getCurrentAppIntent() {
 };
 prototype["getStreamingState"] = function getStreamingState() {
   const obj = { activeStreams: null, streamsByUserAndGuild: null, rtcStreams: null, streamerActiveStreamMetadatas: null };
-  if (require("../modules/go_live/utils/canSpectate.tsx")(_detectH265HardwareDecode)) {
+  if (canSpectate(_detectH265HardwareDecode)) {
     const _Array = Array;
     obj[0] = Array.from(map.entries());
     obj[1] = closure_4;
@@ -563,7 +567,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(require("dispatc
         pid = tmp20.pid;
       }
       if (tmp2) {
-        const tmp6 = require("../modules/go_live/utils/getTitleFromPickedStreamContent.tsx")(content);
+        const tmp6 = getTitleFromPickedStreamContent(content);
         let obj = { pid: null, id: null };
         obj[0] = pid;
         let id;
@@ -706,7 +710,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(require("dispatc
   },
   STREAM_WATCH: function handleStreamWatch(streamKey) {
     streamKey = streamKey.streamKey;
-    let obj = require("../modules/go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */;
+    let obj = isStreamKey /* isStreamKey */;
     const decodeStreamKeyResult = obj.decodeStreamKey(streamKey);
     map.delete(streamKey);
     obj = {};
@@ -855,7 +859,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(require("dispatc
     let channelId;
     let selfStreamHidden;
     ({ channelId, selfStreamHidden } = arg0);
-    let isStreamKeyResult = require("../modules/go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */.isStreamKey(c24);
+    let isStreamKeyResult = isStreamKey /* isStreamKey */.isStreamKey(c24);
     if (isStreamKeyResult) {
       let hasItem;
       if (c24 != null) {
@@ -942,8 +946,8 @@ const applicationStreamingStore = new ApplicationStreamingStore(require("dispatc
     });
     let isStreamKeyResult = null != id;
     if (isStreamKeyResult) {
-      isStreamKeyResult = require("../modules/go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */.isStreamKey(id);
-      const obj = require("../modules/go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */;
+      isStreamKeyResult = isStreamKey /* isStreamKey */.isStreamKey(id);
+      const obj = isStreamKey /* isStreamKey */;
     }
     if (isStreamKeyResult) {
       isStreamKeyResult = id.includes(store2.getId());

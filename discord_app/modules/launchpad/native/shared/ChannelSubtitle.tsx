@@ -1,3 +1,6 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getChannelSubtitleData } from "../../../channel/native/getChannelSubtitleData.tsx";
+import { getLayoutStyle } from "getLayoutStyles.tsx";
 // discord_app/modules/launchpad/native/shared/ChannelSubtitle.tsx
 import "noop";
 import { SUBTITLE_OPACITY_NORMAL } from "hairlineWidth";
@@ -13,7 +16,7 @@ function ChannelSubtitle(arg0) {
   let textProps;
   ({ muted, textProps } = arg0);
   ({ connected, channelId, guildId, subtitle } = arg0);
-  let obj = require("../../../channel/native/getChannelSubtitleData.tsx") /* getChannelSubtitleData */;
+  let obj = getChannelSubtitleData /* getChannelSubtitleData */;
   const channelSubtitleData = obj.getChannelSubtitleData(subtitle);
   if (null == channelSubtitleData) {
     return null;
@@ -49,7 +52,7 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
     return null;
   } else {
     let obj = { variant: null, color: "text-muted", lineClamp: 1, maxFontSizeMultiplier: 1.75, style: null };
-    obj[0] = require("getLayoutStyles.tsx")().messagePreview.text.variant;
+    obj[0] = getLayoutStyle().messagePreview.text.variant;
     let num = 1;
     if (!muted) {
       num = SUBTITLE_OPACITY_NORMAL;
@@ -61,7 +64,7 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
       obj = {};
       const merged = Object.assign(obj);
       obj.children = subtitle;
-      let tmp9 = jsx(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, {});
+      let tmp9 = jsx(Text /* Text */.Text, {});
     } else {
       const obj1 = { channelId: null, guildId: null, subtitle: null, muted: null, connected: null, textProps: null };
       obj1[0] = tmp;

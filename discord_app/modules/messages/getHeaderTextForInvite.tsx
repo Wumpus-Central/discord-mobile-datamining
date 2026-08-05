@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/messages/getHeaderTextForInvite.tsx
 const result = require("set").fileFinishedImporting("modules/messages/getHeaderTextForInvite.tsx");
 
@@ -10,9 +11,9 @@ export const getHeaderTextForInvite = function getHeaderTextForInvite(arg0) {
   let isVoiceChannel;
   ({ isOwnInvite, isGuest, isStage, isStream } = arg0);
   ({ isVoiceChannel, isHubGuild } = arg0);
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   const string = intl.string;
-  let N85DCl = require("../../intl/index.native.tsx") /* getSystemLocale */.t;
+  let N85DCl = getSystemLocale /* getSystemLocale */.t;
   if (isVoiceChannel) {
     if (!isOwnInvite) {
       if (isStream) {

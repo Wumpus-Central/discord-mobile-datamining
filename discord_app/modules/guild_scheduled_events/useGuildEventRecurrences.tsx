@@ -1,3 +1,5 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { usePrevValue } from "../../hooks/usePrevValue.tsx";
 // discord_app/modules/guild_scheduled_events/useGuildEventRecurrences.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -10,10 +12,10 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
   const _require = arg0;
   const importDefault = arg1;
   const dependencyMap = byWeekday;
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   let items = [first];
   const stateFromStores = obj.useStateFromStores(items, () => first.getGuildScheduledEvent(closure_0));
-  const tmp4 = require("../../hooks/usePrevValue.tsx")(byWeekday);
+  const tmp4 = usePrevValue(byWeekday);
   let noop = tmp4;
   if (null != byWeekday) {
     if (null != stateFromStores) {

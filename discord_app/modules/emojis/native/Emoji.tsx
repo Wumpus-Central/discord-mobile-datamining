@@ -1,3 +1,6 @@
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { getEmojiUnavailableReason } from "../../../utils/EmojiUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/emojis/native/Emoji.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -17,12 +20,12 @@ export default function Emoji(arg0) {
   let textEmojiStyle;
   ({ src, name } = arg0);
   ({ style, textEmojiStyle, fastImageStyle, forceTextEmoji, adjustsFontSizeToFit } = arg0);
-  let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
+  let obj = set /* set */;
   let uRL = src;
   if (obj.isAndroid()) {
     uRL = src;
     if (null == src) {
-      let obj1 = require("../../../utils/EmojiUtils.tsx");
+      let obj1 = getEmojiUnavailableReason;
       uRL = obj1.getURL(name);
     }
   }
@@ -32,7 +35,7 @@ export default function Emoji(arg0) {
       if ("" !== uRL) {
         obj = { resizeMode: "contain", style: null, placeholder: null, source: null };
         obj[1] = fastImageStyle;
-        const tmp10 = require("../../../components_native/common/FastImage.tsx");
+        const tmp10 = preload;
         if (tmpResult.isThemeDark(theme.theme)) {
           let tmp9Result = tmp9(5302);
         } else {

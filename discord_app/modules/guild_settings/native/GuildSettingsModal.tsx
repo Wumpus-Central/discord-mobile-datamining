@@ -1,3 +1,5 @@
+import { GuildSettingsActionCreators } from "../GuildSettingsActionCreators.tsx";
+import { dispatcher } from "../GuildSettingsModalChannelsActionCreators.tsx";
 // discord_app/modules/guild_settings/native/GuildSettingsModal.tsx
 import InvitesDisabledRow from "InvitesDisabledRow";
 import GuildSettingsModalServerTag from "GuildSettingsModalServerTag";
@@ -10,9 +12,9 @@ let error;
 let metroImportAll;
 const require = arg1;
 function close() {
-  require("../GuildSettingsModalChannelsActionCreators.tsx").terminate();
-  const obj = require("../GuildSettingsModalChannelsActionCreators.tsx");
-  require("../GuildSettingsActionCreators.tsx").close();
+  dispatcher.terminate();
+  const obj = dispatcher;
+  GuildSettingsActionCreators.close();
 }
 ({ GuildSettingsSections: error, WebhookTypes: metroImportAll } = ME);
 const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModal.tsx");

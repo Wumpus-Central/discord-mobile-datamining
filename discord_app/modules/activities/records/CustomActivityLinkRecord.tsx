@@ -1,3 +1,4 @@
+import { CustomLinkType } from "../../../../discord_common/js/shared/activities/utils/CustomActivityLinkUtils.tsx";
 // discord_app/modules/activities/records/CustomActivityLinkRecord.tsx
 let result = require("fetchCustomActivityLink").fileFinishedImporting("modules/activities/records/CustomActivityLinkRecord.tsx");
 class CustomActivityLinkRecord {
@@ -30,7 +31,7 @@ class CustomActivityLinkRecord {
 }
 CustomActivityLinkRecord.prototype["getAssetURL"] = function getAssetURL() {
   const self = this;
-  if (this.type === require("../../../../discord_common/js/shared/activities/utils/CustomActivityLinkUtils.tsx") /* CustomLinkType */.CustomLinkType.MANAGED) {
+  if (this.type === CustomLinkType /* CustomLinkType */.CustomLinkType.MANAGED) {
     let tmpResult = tmp(8051);
     let assetImage = tmpResult.getAssetImage(self.applicationId, self.assetId, 512);
   } else if (self.type === tmp(12129).CustomLinkType.QUICK) {

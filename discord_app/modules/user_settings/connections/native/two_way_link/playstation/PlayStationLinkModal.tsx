@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../../../../_runtime/07837_registerAsset.js";
+import { HeaderActionButton } from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
+import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkModal.tsx
 import noop from "noop";
 import { PlayStationLinkModalScenes as closure_4 } from "PlayStationLinkModalScenes";
@@ -6,13 +9,13 @@ import { jsx } from "jsxProd";
 const require = arg1;
 function CloseButton() {
   const obj = { source: null, onPress: null, accessibilityLabel: null };
-  obj[0] = require("../../../../../../../_runtime/07837_registerAsset.js");
+  obj[0] = registerAsset;
   obj[1] = function onPress() {
     return callback(table[5]).hideModal();
   };
-  const intl = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.cpT0Cq);
-  return jsx(require("../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx") /* HeaderActionButton */.HeaderActionButton, { source: null, onPress: null, accessibilityLabel: null });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
+  return jsx(HeaderActionButton /* HeaderActionButton */.HeaderActionButton, { source: null, onPress: null, accessibilityLabel: null });
 }
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkModal.tsx");
 

@@ -1,3 +1,9 @@
+import { isAlertOrActionSheetOpen } from "../../../../components_native/chat/isAlertOrActionSheetOpen.tsx";
+import { isLinkTrusted } from "../../../../utils/MaskedLinkUtils.tsx";
+import { parseQuery } from "../../../../utils/native/parseURL.tsx";
+import { GameProfileActionCreators.native } from "../../../game_profile/GameProfileActionCreators.native.tsx";
+import { GameProfileEmbedAction } from "../../../game_profile/GameProfileAnalyticUtils.tsx";
+import { isLinkTrusted } from "../../../markup/MarkupReactLinkUtils.tsx";
 // discord_app/modules/messages/native/handlers/handleMessagesTapLink.tsx
 import { getSection } from "getIndexKey";
 import addApplication from "addApplication";
@@ -26,10 +32,10 @@ function handleMessagesTapURLLink(data, channelId) {
     const node = data.node;
     let flag2 = false;
     if (null != node) {
-      let obj = require("../../../markup/MarkupReactLinkUtils.tsx") /* isLinkTrusted */;
+      let obj = isLinkTrusted /* isLinkTrusted */;
       flag2 = false;
       if (obj.isLinkTrusted(node)) {
-        const payload = require("../../../../utils/native/parseURL.tsx")(tmp).payload;
+        const payload = parseQuery(tmp).payload;
         flag2 = false;
         if (payload.type === constants.INVITE) {
           flag2 = false;
@@ -52,7 +58,7 @@ function handleMessagesTapURLLink(data, channelId) {
       tmp2 = require;
     }
     if (!flag2) {
-      const payload2 = require("../../../../utils/native/parseURL.tsx")(data.url).payload;
+      const payload2 = parseQuery(data.url).payload;
       let flag3 = false;
       if (payload2.type === constants.GAME_PROFILE) {
         const gameId = payload2.gameId;
@@ -69,14 +75,14 @@ function handleMessagesTapURLLink(data, channelId) {
         }
         obj = { gameId: null, source: null, sourceUserId: null, gameProfileModalChecks: null };
         obj[0] = gameId;
-        obj[1] = require("../../../game_profile/GameProfileAnalyticUtils.tsx") /* GameProfileEmbedAction */.GameProfileSources.Deeplink;
+        obj[1] = GameProfileEmbedAction /* GameProfileEmbedAction */.GameProfileSources.Deeplink;
         obj[2] = tmp13;
         obj = { shouldOpenGameProfile: true, gameId: null };
         obj[1] = gameId;
         obj[3] = obj;
-        require("../../../game_profile/GameProfileActionCreators.native.tsx").default.openGameProfileModal(obj);
+        GameProfileActionCreators.native.default.openGameProfileModal(obj);
         flag3 = true;
-        const _default = require("../../../game_profile/GameProfileActionCreators.native.tsx").default;
+        const _default = GameProfileActionCreators.native.default;
       }
       flag2 = flag3;
     }
@@ -92,9 +98,9 @@ function handleMessagesTapURLLink(data, channelId) {
       obj1[1] = isLinkTrustedResult;
       obj1[2] = data.messageId;
       obj1[3] = channelId;
-      require("../../../../utils/MaskedLinkUtils.tsx") /* isLinkTrusted */.handleClick(obj1);
+      isLinkTrusted /* isLinkTrusted */.handleClick(obj1);
       flag = true;
-      const obj5 = require("../../../../utils/MaskedLinkUtils.tsx") /* isLinkTrusted */;
+      const obj5 = isLinkTrusted /* isLinkTrusted */;
       tmp19 = require;
     }
   }
@@ -132,6 +138,6 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
     }
     tmp4 = handleMessagesTapURLLink;
   } else {
-    const obj = require("../../../../components_native/chat/isAlertOrActionSheetOpen.tsx") /* isAlertOrActionSheetOpen */;
+    const obj = isAlertOrActionSheetOpen /* isAlertOrActionSheetOpen */;
   }
 };

@@ -1,3 +1,4 @@
+import { firstAvatarDecoration } from "useShopProductItems.tsx";
 // discord_app/modules/collectibles/hooks/usePreviewCollectiblesProduct.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -13,7 +14,7 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
   const _require = product;
   const dependencyMap = arg1;
   let _slicedToArray = arg2;
-  const shopProductItems = _require("useShopProductItems.tsx").useShopProductItems(product);
+  const shopProductItems = _firstAvatarDecoration.useShopProductItems(product);
   const firstProfileEffect = shopProductItems.firstProfileEffect;
   const firstAvatarDecoration = shopProductItems.firstAvatarDecoration;
   const firstNameplate = shopProductItems.firstNameplate;

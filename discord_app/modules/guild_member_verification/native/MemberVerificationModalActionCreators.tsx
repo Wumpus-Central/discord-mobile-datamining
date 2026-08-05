@@ -1,3 +1,7 @@
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { _fetchVerificationForm } from "../MemberVerificationActionCreators.tsx";
 // discord_app/modules/guild_member_verification/native/MemberVerificationModalActionCreators.tsx
 import items from "items";
 import { AnalyticEvents } from "ME";
@@ -9,13 +13,13 @@ const result = require("expandEventProperties").fileFinishedImporting("modules/g
 
 export default {
   openMemberVerificationModal(guildId, connect) {
-    let obj = require("../MemberVerificationActionCreators.tsx");
+    let obj = _fetchVerificationForm;
     const verificationForm = obj.fetchVerificationForm(guildId);
     obj = { type: closure_3, guild_id: guildId };
-    require("../../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.OPEN_MODAL, obj);
-    const obj2 = require("../../../utils/AnalyticsUtils.tsx");
+    expandEventProperties.track(AnalyticEvents.OPEN_MODAL, obj);
+    const obj2 = expandEventProperties;
     obj = { guildId, onClose: connect };
-    require("../../../actions/ModalActionCreators.tsx").pushLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8225, dependencyMap.paths), obj, closure_4);
+    ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(8225, dependencyMap.paths), obj, closure_4);
   },
   closeMemberVerificationModal() {
     let flag = arg0;
@@ -23,11 +27,11 @@ export default {
       flag = false;
     }
     if (!flag) {
-      let obj = require("../../../utils/AnalyticsUtils.tsx");
+      let obj = expandEventProperties;
       obj = { type: null };
       obj[0] = closure_3;
       obj.track(AnalyticEvents.MODAL_DISMISSED, obj);
     }
-    require("../../../actions/ModalActionCreators.tsx").popWithKey(closure_4);
+    ModalActionCreators.popWithKey(closure_4);
   }
 };

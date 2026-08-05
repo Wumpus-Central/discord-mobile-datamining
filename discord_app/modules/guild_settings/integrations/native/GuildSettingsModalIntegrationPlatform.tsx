@@ -1,3 +1,4 @@
+import { getPlatformUserUrl } from "../../../../lib/Platforms.tsx";
 // discord_app/modules/guild_settings/integrations/native/GuildSettingsModalIntegrationPlatform.tsx
 import get_ActivityIndicator from "module_4624";
 import handleFormInit from "handleFormInit";
@@ -113,7 +114,7 @@ IntegrationItem.prototype["render"] = function render() {
       let str = "twitch.tv/";
       combined = "twitch.tv/" + integration.name;
     }
-    let obj = require("../../../../lib/Platforms.tsx");
+    let obj = getPlatformUserUrl;
     const value = obj.get(integration.type);
     if (null == value) {
       str = undefined;

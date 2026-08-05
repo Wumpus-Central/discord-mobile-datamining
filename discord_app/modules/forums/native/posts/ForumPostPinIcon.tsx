@@ -1,3 +1,5 @@
+import { registerAsset } from "../../../../../_runtime/11307_registerAsset.js";
+import { Button } from "../../../../design/void/native.tsx";
 // discord_app/modules/forums/native/posts/ForumPostPinIcon.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -18,8 +20,8 @@ export default function ForumPostPinIcon(containerStyle) {
   let obj = { style: items, children: null };
   items = [tmp.pin, containerStyle.containerStyle];
   obj = { source: null, style: null };
-  obj[0] = require("../../../../../_runtime/11307_registerAsset.js");
+  obj[0] = registerAsset;
   obj[1] = tmp.pinIcon;
-  obj[1] = jsx(require("../../../../design/void/native.tsx") /* Button */.Icon, { source: null, style: null });
+  obj[1] = jsx(Button /* Button */.Icon, { source: null, style: null });
   return <View source={null} style={null} />;
 };

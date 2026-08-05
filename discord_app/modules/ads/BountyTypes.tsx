@@ -1,3 +1,4 @@
+import { resolveAsset } from "../quests/lib/AssetUtils.tsx";
 // discord_app/modules/ads/BountyTypes.tsx
 const result = require("set").fileFinishedImporting("modules/ads/BountyTypes.tsx");
 
@@ -21,13 +22,13 @@ export const bountyCtaFromServer = function bountyCtaFromServer(url) {
 };
 export const bountyFromServer = function bountyFromServer(creative_content) {
   let obj = { id: creative_content.id, advertiserName: creative_content.advertiser_name, productName: creative_content.product_name, productIcon: null, videoPreview: null, imagePreview: null, videoHls: null, cta: null, rewardTimerSeconds: null };
-  let obj1 = require("../quests/lib/AssetUtils.tsx") /* resolveAsset */;
+  let obj1 = resolveAsset /* resolveAsset */;
   obj[3] = obj1.resolveOptionalAdCreativeCdnUrl(creative_content.product_icon);
-  obj[4] = require("../quests/lib/AssetUtils.tsx") /* resolveAsset */.resolveOptionalAdCreativeCdnUrl(creative_content.video_preview);
-  const obj3 = require("../quests/lib/AssetUtils.tsx") /* resolveAsset */;
-  obj[5] = require("../quests/lib/AssetUtils.tsx") /* resolveAsset */.resolveOptionalAdCreativeCdnUrl(creative_content.image_preview);
-  const obj4 = require("../quests/lib/AssetUtils.tsx") /* resolveAsset */;
-  obj[6] = require("../quests/lib/AssetUtils.tsx") /* resolveAsset */.resolveAdCreativeCdnUrl(creative_content.video_hls);
+  obj[4] = resolveAsset /* resolveAsset */.resolveOptionalAdCreativeCdnUrl(creative_content.video_preview);
+  const obj3 = resolveAsset /* resolveAsset */;
+  obj[5] = resolveAsset /* resolveAsset */.resolveOptionalAdCreativeCdnUrl(creative_content.image_preview);
+  const obj4 = resolveAsset /* resolveAsset */;
+  obj[6] = resolveAsset /* resolveAsset */.resolveAdCreativeCdnUrl(creative_content.video_hls);
   const cta = creative_content.cta;
   obj = { url: cta.url, buttonLabel: cta.button_label, android: null, ios: null };
   let tmp;

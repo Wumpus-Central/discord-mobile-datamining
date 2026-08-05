@@ -1,8 +1,9 @@
+import { useCreatorMonetizationEligibilityItems } from "useCreatorMonetizationEligibilityItems.tsx";
 // discord_app/modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationIneligibleReasons.tsx
 const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationIneligibleReasons.tsx");
 
 export const useCreatorMonetizationIneligibleReasons = function useCreatorMonetizationIneligibleReasons(eligibility) {
-  const obj = require("useCreatorMonetizationEligibilityItems.tsx")(eligibility);
+  const obj = useCreatorMonetizationEligibilityItems(eligibility);
   let flatMapResult;
   if (obj != null) {
     flatMapResult = obj.flatMap((checked) => {

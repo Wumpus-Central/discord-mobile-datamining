@@ -1,10 +1,11 @@
+import { ACTION_SHEET_HEIGHT_HALF } from "../../../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/design/components/Sheet/native/showSimpleActionSheet.native.tsx
 const result = require("asyncRequireImpl").fileFinishedImporting("design/components/Sheet/native/showSimpleActionSheet.native.tsx");
 
 export const showSimpleActionSheet = function showSimpleActionSheet(key) {
   key = key.key;
   const merged = Object.assign(key, Object.create(null));
-  let obj = require("../../../../modules/action_sheet/native/ActionSheetActionCreators.tsx");
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = {};
   const merged1 = Object.assign(merged);
   obj.hideActionSheet = function hideActionSheet() {

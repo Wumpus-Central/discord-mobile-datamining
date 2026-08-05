@@ -1,3 +1,7 @@
+import { result } from "../resolveMessageContentColors.tsx";
+import { createCommonMessage } from "createCommonMessage.tsx";
+import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
+import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/ChangeChannelNameSystemMessage.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 
@@ -9,10 +13,10 @@ export const createChangeChannelNameSystemMessage = function createChangeChannel
   let theme;
   message = message.message;
   ({ theme, roleStyle } = message);
-  const tmp3 = require("../resolveMessageContentColors.tsx")(theme);
-  let obj = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */;
+  const tmp3 = result(theme);
+  let obj = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  const tmp6 = require("formatUsernameOnClick.tsx")({ message, author: messageAuthorWithProcessedColor, roleStyle });
+  const tmp6 = formatUsernameOnClick({ message, author: messageAuthorWithProcessedColor, roleStyle });
   channel = channel.getChannel(message.channel_id);
   let flag;
   if (channel != null) {
@@ -29,7 +33,7 @@ export const createChangeChannelNameSystemMessage = function createChangeChannel
   } else {
     rk0be9 = tmp4(1236).t.rk0be9;
   }
-  const tmp8 = require("createCommonMessage.tsx")(message);
+  const tmp8 = createCommonMessage(message);
   const intl = tmp4(1236).intl;
   const formatToParts = intl.formatToParts;
   if (flag) {

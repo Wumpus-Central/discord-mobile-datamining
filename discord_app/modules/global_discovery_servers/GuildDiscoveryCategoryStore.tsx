@@ -1,3 +1,6 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 // discord_app/modules/global_discovery_servers/GuildDiscoveryCategoryStore.tsx
 import DEFAULT_DISCOVERY_CATEGORY_ID from "DEFAULT_DISCOVERY_CATEGORY_ID";
 import { Store } from "initialize";
@@ -23,9 +26,9 @@ prototype["getDiscoveryCategories"] = function getDiscoveryCategories() {
     return closure_9.find((categoryId) => categoryId.categoryId === closure_0);
   });
   const obj = { categoryId: closure_5, name: null };
-  const found = mapped.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Ym2Ri6);
+  const found = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.Ym2Ri6);
   const items = [obj, ...found];
   return items;
 };
@@ -35,9 +38,9 @@ prototype["getClanDiscoveryCategories"] = function getClanDiscoveryCategories() 
     return closure_9.find((categoryId) => categoryId.categoryId === closure_0);
   });
   const obj = { categoryId: closure_5, name: null };
-  const found = mapped.filter(require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.QToH29);
+  const found = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.QToH29);
   const items = [obj, ...found];
   return items;
 };
@@ -49,8 +52,8 @@ prototype["getFetchedLocale"] = function getFetchedLocale() {
 };
 prototype["getCategoryName"] = function getCategoryName(arg0) {
   if (arg0 === closure_5) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    let stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Ym2Ri6);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.Ym2Ri6);
   } else {
     stringResult = table[arg0];
   }
@@ -116,7 +119,7 @@ export const areDiscoveryCategoriesEqual = function areDiscoveryCategoriesEqual(
     ({ categoryId: arr[0], name: arr[1] } = arg0);
     return items;
   });
-  return require("../../../_runtime/00012_apply.js").isEqual(mapped, arr2.map((arg0) => {
+  return apply.isEqual(mapped, arr2.map((arg0) => {
     const items = [, ];
     ({ categoryId: arr[0], name: arr[1] } = arg0);
     return items;

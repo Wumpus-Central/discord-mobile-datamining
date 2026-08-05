@@ -1,3 +1,4 @@
+import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateSelectedActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -28,7 +29,7 @@ export default function GuildRoleSubscriptionTierTemplateSelectedActionSheet(mar
     children: null
   };
   obj = { style: tmp.container, children: null };
-  obj = { contentContainerStyle: { paddingBottom: require("../../../../safe_area/useSafeAreaInsets.native.tsx")().bottom }, children: null };
+  obj = { contentContainerStyle: { paddingBottom: useSafeAreaInsets().bottom }, children: null };
   const obj1 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = markAsDismissed(1236).intl;
   obj1[2] = intl.string(markAsDismissed(1236).t.Y0PTc0);

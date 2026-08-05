@@ -1,3 +1,8 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { add } from "../../../../design/components/Layers/native/LayerContext.native.tsx";
+import { SidebarCoachmarkOverlayLayer } from "../../../main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx";
+import { GUILD_POWERUP_NOTIFICATION_COOLDOWN } from "../constants/GuildPowerupsNotification.tsx";
+import { useGuildPowerupsCoachmark } from "hooks/useGuildPowerupsCoachmark.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsChannelRow.tsx
 import messagesProxy from "messagesProxy";
 import { View } from "Layer";
@@ -13,9 +18,9 @@ function GuildPowerupsChannelRowIndicator(indicator) {
     return null;
   } else {
     const type = indicator.type;
-    if (require("../constants/GuildPowerupsNotification.tsx") /* GUILD_POWERUP_NOTIFICATION_COOLDOWN */.GuildPowerupNotificationIndicatorType.WARNING === type) {
+    if (GUILD_POWERUP_NOTIFICATION_COOLDOWN /* GUILD_POWERUP_NOTIFICATION_COOLDOWN */.GuildPowerupNotificationIndicatorType.WARNING === type) {
       let obj = { color: null, size: "sm" };
-      obj[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.STATUS_WARNING;
+      obj[0] = Themes.colors.STATUS_WARNING;
       return callback(tmp4(7716).CircleErrorIcon, obj);
     } else if (tmp4(11768).GuildPowerupNotificationIndicatorType.UNREAD === type) {
       obj = { value: null, isMentionLowImportance: true };
@@ -31,7 +36,7 @@ function GuildPowerupsCoachmarkHost(arg0) {
   let popout;
   let targetRef;
   ({ targetRef, guildId, popout } = arg0);
-  require("hooks/useGuildPowerupsCoachmark.tsx")(targetRef, guildId, popout);
+  useGuildPowerupsCoachmark(targetRef, guildId, popout);
   return null;
 }
 function GuildPowerupsCoachmark(arg0) {
@@ -39,14 +44,14 @@ function GuildPowerupsCoachmark(arg0) {
   let popout;
   let targetRef;
   ({ targetRef, guildId, popout } = arg0);
-  const context = React.useContext(require("../../../main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx") /* SidebarCoachmarkOverlayLayer */.SidebarCoachmarkOverlayContext);
+  const context = React.useContext(SidebarCoachmarkOverlayLayer /* SidebarCoachmarkOverlayLayer */.SidebarCoachmarkOverlayContext);
   const tmp5 = callback(GuildPowerupsCoachmarkHost, { targetRef, guildId, popout });
   let tmp4Result = tmp5;
   if (null != context) {
     const obj = { value: null, children: null };
     obj[0] = context;
     obj[1] = tmp5;
-    tmp4Result = callback(require("../../../../design/components/Layers/native/LayerContext.native.tsx") /* add */.LayerContext.Provider, obj);
+    tmp4Result = callback(add /* add */.LayerContext.Provider, obj);
   }
   return tmp4Result;
 }

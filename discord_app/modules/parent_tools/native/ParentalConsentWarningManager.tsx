@@ -1,3 +1,6 @@
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { frozen } from "../ParentalConsentWarningTypes.tsx";
 // discord_app/modules/parent_tools/native/ParentalConsentWarningManager.tsx
 import setContent from "setContent";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
@@ -18,7 +21,7 @@ function maybePresentModal(daysRemaining) {
   if (daysRemaining != null) {
     const surfaces = daysRemaining.surfaces;
     if (surfaces != null) {
-      hasItem = surfaces.includes(require("../ParentalConsentWarningTypes.tsx") /* frozen */.ParentalConsentWarningSurface.MODAL);
+      hasItem = surfaces.includes(frozen /* frozen */.ParentalConsentWarningSurface.MODAL);
     }
   }
   let tmp5 = true === hasItem && null != daysRemaining;
@@ -45,8 +48,8 @@ function maybePresentModal(daysRemaining) {
   if (tmp5) {
     const obj = { daysRemaining: null };
     obj[0] = daysRemaining;
-    require("../../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(16416, dependencyMap.paths), "ParentalConsentWarningModal", obj);
-    const obj2 = require("../../action_sheet/native/ActionSheetActionCreators.tsx");
+    ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(16416, dependencyMap.paths), "ParentalConsentWarningModal", obj);
+    const obj2 = ACTION_SHEET_HEIGHT_HALF;
   }
 }
 ({ UserLinkStatus: error, UserLinkType: metroImportAll } = items);

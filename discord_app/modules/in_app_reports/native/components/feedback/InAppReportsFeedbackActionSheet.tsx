@@ -1,3 +1,7 @@
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { newGetEnglishMessageText } from "../../../../../intl/migration.tsx";
+import { closeActionSheet } from "../../../../feedback/native/FeedbackActionSheet.tsx";
+import { getInAppReportsFeedbackOptions } from "../../../getInAppReportsFeedbackOptions.tsx";
 // discord_app/modules/in_app_reports/native/components/feedback/InAppReportsFeedbackActionSheet.tsx
 import "noop";
 import { AnalyticEvents } from "ME";
@@ -11,16 +15,16 @@ export default function InAppReportsFeedbackActionSheet(arg0) {
   let importDefault;
   let require;
   ({ reportId: require, reportType: importDefault } = arg0);
-  let obj = require("../../../../../intl/migration.tsx") /* newGetEnglishMessageText */;
+  let obj = newGetEnglishMessageText /* newGetEnglishMessageText */;
   const result = obj.improperGetEnglishIntlMessageText("CALL_FEEDBACK_OPTION_OTHER");
   obj = { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null };
-  const tmp = require("../../../getInAppReportsFeedbackOptions.tsx")();
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.MP5lDj);
-  const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl2.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["7Ct0Dj"]);
-  const intl3 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[4] = intl3.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.FJmoxF);
+  const tmp = getInAppReportsFeedbackOptions();
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.MP5lDj);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl2.string(getSystemLocale /* getSystemLocale */.t["7Ct0Dj"]);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj[4] = intl3.string(getSystemLocale /* getSystemLocale */.t.FJmoxF);
   obj[5] = tmp;
   const items = [result];
   obj[6] = items;
@@ -64,5 +68,5 @@ export default function InAppReportsFeedbackActionSheet(arg0) {
       const obj4 = outer1_0(tmp2[11]);
     }
   };
-  return jsx(require("../../../../feedback/native/FeedbackActionSheet.tsx"), { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null });
+  return jsx(closeActionSheet, { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null });
 };

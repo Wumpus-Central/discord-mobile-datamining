@@ -1,3 +1,7 @@
+import { set } from "../../../../core/native/NativeView.tsx";
+import { useDrawerToggle } from "../useDrawerToggle.tsx";
+import { AnimatedButtonWrapper } from "VoicePanelAnimatedButtonWrapper.tsx";
+import { useVoicePanelButtonStyles } from "VoicePanelStyles.tsx";
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelDrawerToggleButton.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -23,23 +27,23 @@ export default function VoicePanelDrawerToggleButton(arg0) {
   let wrapperSpecs;
   ({ props, openTab, wrapperSpecs } = arg0);
   const tmp = createCacheKey();
-  let obj = require("VoicePanelStyles.tsx") /* useVoicePanelButtonStyles */;
+  let obj = useVoicePanelButtonStyles /* useVoicePanelButtonStyles */;
   const voicePanelButtonStyles = obj.useVoicePanelButtonStyles(wrapperSpecs);
-  ({ isDrawerOpen, handlePress, accessibilityLabel } = require("../useDrawerToggle.tsx")(openTab));
+  ({ isDrawerOpen, handlePress, accessibilityLabel } = useDrawerToggle(openTab));
   obj = { onPress: handlePress, props, accessibilityLabel, children: null };
-  const tmp5 = require("../useDrawerToggle.tsx")(openTab);
+  const tmp5 = useDrawerToggle(openTab);
   const tmp6 = closure_4;
   const items = [tmp.circle, { backgroundColor: voicePanelButtonStyles.iconBg.backgroundColor }];
-  const items1 = [callback(require("../../../../core/native/NativeView.tsx"), { style: items }), ];
+  const items1 = [callback(set, { style: items }), ];
   obj = { style: tmp.iconContainer, children: null };
-  const tmp7 = require("VoicePanelAnimatedButtonWrapper.tsx");
+  const tmp7 = AnimatedButtonWrapper;
   if (isDrawerOpen) {
     let ChevronSmallUpIcon = tmp2(9396).ChevronSmallDownIcon;
   } else {
     ChevronSmallUpIcon = tmp2(12751).ChevronSmallUpIcon;
   }
   obj[1] = callback(ChevronSmallUpIcon, { color: voicePanelButtonStyles.iconFill.color });
-  items1[1] = callback(require("../../../../core/native/NativeView.tsx"), obj);
+  items1[1] = callback(set, obj);
   obj[3] = items1;
   return tmp6(tmp7, obj);
 };

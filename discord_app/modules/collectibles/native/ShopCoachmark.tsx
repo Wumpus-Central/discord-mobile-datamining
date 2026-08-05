@@ -1,3 +1,4 @@
+import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/collectibles/native/ShopCoachmark.tsx
 import noop from "noop";
 import { ContentDismissActionType } from "ContentDismissActionType";
@@ -10,8 +11,8 @@ function CoachmarkImg(arg0) {
   let source;
   ({ source, decorationAsset } = arg0);
   const obj = { style: callback().image, source, avatarDecoration: { asset: decorationAsset }, size: null };
-  obj[3] = require("../../../design/void/native.tsx") /* Button */.AvatarSizes.XXLARGE;
-  return jsx(require("../../../design/void/native.tsx") /* Button */.Avatar, { style: callback().image, source, avatarDecoration: { asset: decorationAsset }, size: null });
+  obj[3] = Button /* Button */.AvatarSizes.XXLARGE;
+  return jsx(Button /* Button */.Avatar, { style: callback().image, source, avatarDecoration: { asset: decorationAsset }, size: null });
 }
 let closure_6 = createCacheKey.createStyles({ image: { marginTop: 12 } });
 const result = require("jsxProd").fileFinishedImporting("modules/collectibles/native/ShopCoachmark.tsx");

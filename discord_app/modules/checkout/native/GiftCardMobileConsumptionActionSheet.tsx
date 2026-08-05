@@ -1,3 +1,6 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
+import { messagesProxy } from "../messages/GiftCard.messages.js";
 // discord_app/modules/checkout/native/GiftCardMobileConsumptionActionSheet.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -55,17 +58,17 @@ export default function GiftCardMobileConsumptionActionSheet(markAsDismissed) {
     children: null
   };
   obj = { style: items2, children: null };
-  items2 = [tmp.container, { paddingBottom: require("../../safe_area/useSafeAreaInsets.native.tsx")().bottom }];
+  items2 = [tmp.container, { paddingBottom: useSafeAreaInsets().bottom }];
   obj = { spacing: null, children: null };
-  obj[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
+  obj[0] = Themes.space.PX_16;
   const items3 = [callback(View, { style: tmp.illustration, children: callback(markAsDismissed(5936).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }) }), , ];
   const obj2 = { variant: "text-md/medium", color: "text-default", style: tmp.body, children: null };
   const intl = markAsDismissed(1236).intl;
-  obj2[3] = intl.string(require("../messages/GiftCard.messages.js").V3DI1E);
+  obj2[3] = intl.string(messagesProxy.V3DI1E);
   items3[1] = callback(markAsDismissed(4281).Text, obj2);
   const obj3 = { size: "lg", variant: "secondary", grow: true, text: null, onPress: null };
   const intl2 = markAsDismissed(1236).intl;
-  obj3[3] = intl2.string(require("../messages/GiftCard.messages.js").YZePWx);
+  obj3[3] = intl2.string(messagesProxy.YZePWx);
   obj3[4] = function onPress() {
     return callback(outer1_5.USER_DISMISS);
   };

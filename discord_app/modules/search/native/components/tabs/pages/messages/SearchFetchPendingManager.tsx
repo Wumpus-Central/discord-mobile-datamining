@@ -1,3 +1,4 @@
+import { useInitialValue } from "../../../../../../../hooks/useInitialValue.tsx";
 // discord_app/modules/search/native/components/tabs/pages/messages/SearchFetchPendingManager.tsx
 import noop from "noop";
 
@@ -33,7 +34,7 @@ const result = require("useInitialValue").fileFinishedImporting("modules/search/
 
 export const useSearchFetchPendingManager = function useSearchFetchPendingManager(searchContext) {
   const importDefault = searchContext;
-  const tmp = require("../../../../../../../hooks/useInitialValue.tsx")(() => {
+  const tmp = useInitialValue(() => {
     if (typeof closure_3 !== "function") {
       HermesBuiltin.throwTypeError();
     }

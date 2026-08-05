@@ -1,11 +1,15 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useUserIsConsideredAdult } from "../../../parent_tools/hooks/useUserIsConsideredAdult.tsx";
+import { InappropriateConversationsDefaultOn } from "../../../self_mod/inappropriate_conversation/InappropriateConversationsDefaultOn.tsx";
+import { InappropriateConversationExperiment } from "../../../self_mod/inappropriate_conversation/SelfModInappropriateConversationExperiment.tsx";
 // discord_app/modules/user_settings/defs/native/DirectMessageSafetyAlertsSetting.tsx
 import { MobileSetting } from "MobileSetting";
 import createToggle from "createToggle";
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.qFsx5q);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.qFsx5q);
   },
   parent() {
     return MobileSetting.CONTENT_AND_SOCIAL;
@@ -13,14 +17,14 @@ const toggle = createToggle.createToggle({
   useValue: require("useSafetyAlertsSettingOrDefault").useSafetyAlertsSettingOrDefault,
   onValueChange: require("updateDmSafetyAlertsSetting").updateDmSafetyAlertsSetting,
   usePredicate: function useHasDmSafetyAlertsSetting() {
-    let flag = require("../../../parent_tools/hooks/useUserIsConsideredAdult.tsx")();
+    let flag = useUserIsConsideredAdult();
     if (flag == null) {
       flag = true;
     }
-    const isEligibleForInappropriateConversationWarning = require("../../../self_mod/inappropriate_conversation/SelfModInappropriateConversationExperiment.tsx") /* InappropriateConversationExperiment */.useIsEligibleForInappropriateConversationWarning({ location: "user_settings_mobile_redesign" });
-    const obj = require("../../../self_mod/inappropriate_conversation/SelfModInappropriateConversationExperiment.tsx") /* InappropriateConversationExperiment */;
+    const isEligibleForInappropriateConversationWarning = InappropriateConversationExperiment /* InappropriateConversationExperiment */.useIsEligibleForInappropriateConversationWarning({ location: "user_settings_mobile_redesign" });
+    const obj = InappropriateConversationExperiment /* InappropriateConversationExperiment */;
     let tmp4 = !flag;
-    const isEligibleForInappropriateConversationDefaultOn = require("../../../self_mod/inappropriate_conversation/InappropriateConversationsDefaultOn.tsx") /* InappropriateConversationsDefaultOn */.useIsEligibleForInappropriateConversationDefaultOn({ location: "user_settings_mobile_redesign" });
+    const isEligibleForInappropriateConversationDefaultOn = InappropriateConversationsDefaultOn /* InappropriateConversationsDefaultOn */.useIsEligibleForInappropriateConversationDefaultOn({ location: "user_settings_mobile_redesign" });
     if (!flag) {
       tmp4 = isEligibleForInappropriateConversationWarning;
     }
@@ -32,8 +36,8 @@ const toggle = createToggle.createToggle({
 });
 let obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.qFsx5q);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.qFsx5q);
   },
   parent() {
     return MobileSetting.CONTENT_AND_SOCIAL;
@@ -41,14 +45,14 @@ let obj = {
   useValue: require("useSafetyAlertsSettingOrDefault").useSafetyAlertsSettingOrDefault,
   onValueChange: require("updateDmSafetyAlertsSetting").updateDmSafetyAlertsSetting,
   usePredicate: function useHasDmSafetyAlertsSetting() {
-    let flag = require("../../../parent_tools/hooks/useUserIsConsideredAdult.tsx")();
+    let flag = useUserIsConsideredAdult();
     if (flag == null) {
       flag = true;
     }
-    const isEligibleForInappropriateConversationWarning = require("../../../self_mod/inappropriate_conversation/SelfModInappropriateConversationExperiment.tsx") /* InappropriateConversationExperiment */.useIsEligibleForInappropriateConversationWarning({ location: "user_settings_mobile_redesign" });
-    const obj = require("../../../self_mod/inappropriate_conversation/SelfModInappropriateConversationExperiment.tsx") /* InappropriateConversationExperiment */;
+    const isEligibleForInappropriateConversationWarning = InappropriateConversationExperiment /* InappropriateConversationExperiment */.useIsEligibleForInappropriateConversationWarning({ location: "user_settings_mobile_redesign" });
+    const obj = InappropriateConversationExperiment /* InappropriateConversationExperiment */;
     let tmp4 = !flag;
-    const isEligibleForInappropriateConversationDefaultOn = require("../../../self_mod/inappropriate_conversation/InappropriateConversationsDefaultOn.tsx") /* InappropriateConversationsDefaultOn */.useIsEligibleForInappropriateConversationDefaultOn({ location: "user_settings_mobile_redesign" });
+    const isEligibleForInappropriateConversationDefaultOn = InappropriateConversationsDefaultOn /* InappropriateConversationsDefaultOn */.useIsEligibleForInappropriateConversationDefaultOn({ location: "user_settings_mobile_redesign" });
     if (!flag) {
       tmp4 = isEligibleForInappropriateConversationWarning;
     }

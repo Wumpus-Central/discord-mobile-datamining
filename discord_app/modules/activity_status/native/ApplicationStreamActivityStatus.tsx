@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { ActivityStatusIcon } from "ActivityStatusIcon.tsx";
+import { ActivityStatusText } from "ActivityStatusText.tsx";
 // discord_app/modules/activity_status/native/ApplicationStreamActivityStatus.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -42,14 +45,14 @@ export default function ApplicationStreamActivityStatus(hideText) {
     tmp2 = name1;
   }
   if (null != tmp2) {
-    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
     let obj = { name: null };
     obj[0] = tmp2;
-    let formatResult = intl2.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["0wJXSh"], obj);
+    let formatResult = intl2.format(getSystemLocale /* getSystemLocale */.t["0wJXSh"], obj);
     let tmp7 = require;
   } else {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    formatResult = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.eXan7B);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    formatResult = intl.string(getSystemLocale /* getSystemLocale */.t.eXan7B);
     tmp7 = require;
   }
   let tmp12 = !hideIcon;
@@ -57,8 +60,8 @@ export default function ApplicationStreamActivityStatus(hideText) {
     obj = { icon: null, style: null };
     obj[0] = tmp7(9563).TvIcon;
     obj[1] = iconStyle;
-    tmp12 = callback(require("ActivityStatusIcon.tsx"), obj);
-    const tmp15 = require("ActivityStatusIcon.tsx");
+    tmp12 = callback(ActivityStatusIcon, obj);
+    const tmp15 = ActivityStatusIcon;
   }
   const children = [tmp12, ];
   let tmp16 = !flag;
@@ -67,7 +70,7 @@ export default function ApplicationStreamActivityStatus(hideText) {
     obj[0] = textStyle;
     obj[1] = maxFontSizeMultiplier;
     obj[2] = formatResult;
-    tmp16 = callback(require("ActivityStatusText.tsx"), obj);
+    tmp16 = callback(ActivityStatusText, obj);
   }
   children[1] = tmp16;
   return closure_5(closure_4, { children });

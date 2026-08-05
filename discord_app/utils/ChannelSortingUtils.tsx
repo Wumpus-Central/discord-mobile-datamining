@@ -1,3 +1,4 @@
+import { getFlattenedChannelList } from "../modules/channel/getFlattedChannelList.tsx";
 // discord_app/utils/ChannelSortingUtils.tsx
 import createChannelRecord from "createChannelRecord";
 import { ChannelTypes } from "ME";
@@ -672,7 +673,7 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
     if (items.length > 0) {
       tmp11 = items;
     }
-    const tmp10Result = require("../modules/channel/getFlattedChannelList.tsx")(tmp11, channels, (channel) => _null(channel.channel.type));
+    const tmp10Result = getFlattenedChannelList(tmp11, channels, (channel) => _null(channel.channel.type));
     importDefault = localChannel;
     dependencyMap = false;
     callback = undefined;
@@ -764,13 +765,13 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
     }
     num11 = num8;
     const updates1 = generateUpdates(tmp10Result);
-    const tmp10 = require("../modules/channel/getFlattedChannelList.tsx");
+    const tmp10 = getFlattenedChannelList;
   }
   if (localChannel.isGuildVocal()) {
     if (items.length > 0) {
       _categories = items;
     }
-    const tmp18Result = require("../modules/channel/getFlattedChannelList.tsx")(_categories, channels, (channel) => {
+    const tmp18Result = getFlattenedChannelList(_categories, channels, (channel) => {
       channel = channel.channel;
       return channel.isGuildVocal();
     });
@@ -864,7 +865,7 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
       num11 = callback;
     }
     const updates2 = generateUpdates(tmp18Result);
-    const tmp18 = require("../modules/channel/getFlattedChannelList.tsx");
+    const tmp18 = getFlattenedChannelList;
   }
   let tmp23 = localChannel.parent_id !== parentId;
   if (tmp23) {

@@ -1,3 +1,11 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { createTextStyle } from "../../../rebrand/native/TextStyles.tsx";
+import { usePremiumFeatures } from "../../../user_settings/premium/native/utils/usePremiumFeatures.tsx";
+import { apexExperiment } from "../../gifting/experiments/NitroGiftPriceCopyExperiment.tsx";
+import { useShouldShowGiftingPromotionDeco } from "../../gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx";
+import { useThemeAndReducedMotionAwareAssetUrl } from "../../promotions/MarketingComponentHooks.tsx";
+import { usePremiumProductPricingString } from "../hooks/usePremiumProductPricingString.tsx";
 // discord_app/modules/premium/native/gifting/PremiumGiftFeaturesCard.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "module_9961";
@@ -45,31 +53,31 @@ let obj12 = { marginTop: require("Themes").space.PX_12 };
 obj10[2] = { marginTop: require("Themes").space.PX_8 };
 let closure_17 = createCacheKey.createStyles(() => {
   let obj = { promotional: null, card: null, logo: null, promotionalLogo: null, promotionalLogoSingleLine: null, promotionalLogoSmallCompact: null, pricing: null, featureTitle: null, features: null, button: null, promotionalButton: null, featureIcon: null, featureText: null, wumpusNoPrice: null, promotionalCardImage: null, promotionalBackground: null };
-  obj = { overflow: "hidden", borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm };
+  obj = { overflow: "hidden", borderRadius: Themes.radii.sm };
   obj[0] = obj;
-  obj = { justifyContent: "flex-start", borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BG_SURFACE_RAISED };
-  const merged = Object.assign(require("../../../../../discord_common/js/packages/tokens/native.tsx").shadows.SHADOW_LOW);
+  obj = { justifyContent: "flex-start", borderRadius: Themes.radii.sm, backgroundColor: Themes.colors.BG_SURFACE_RAISED };
+  const merged = Object.assign(Themes.shadows.SHADOW_LOW);
   obj[1] = obj;
-  obj[2] = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_40, marginStart: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  const obj1 = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_40, marginStart: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  obj[3] = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  const obj2 = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  obj[4] = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32 };
+  obj[2] = { marginTop: Themes.space.PX_40, marginStart: Themes.space.PX_24 };
+  const obj1 = { marginTop: Themes.space.PX_40, marginStart: Themes.space.PX_24 };
+  obj[3] = { marginTop: Themes.space.PX_24 };
+  const obj2 = { marginTop: Themes.space.PX_24 };
+  obj[4] = { marginTop: Themes.space.PX_32 };
   obj[5] = { marginTop: 18 };
-  const obj3 = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32 };
-  obj[6] = { maxWidth: 140, marginStart: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  const obj4 = { maxWidth: 140, marginStart: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  obj[7] = { marginStart: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  const obj5 = { marginStart: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  obj[8] = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  const obj6 = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  obj[9] = { marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  const obj7 = { marginHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, marginBottom: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24 };
-  obj[10] = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
+  const obj3 = { marginTop: Themes.space.PX_32 };
+  obj[6] = { maxWidth: 140, marginStart: Themes.space.PX_24 };
+  const obj4 = { maxWidth: 140, marginStart: Themes.space.PX_24 };
+  obj[7] = { marginStart: Themes.space.PX_24 };
+  const obj5 = { marginStart: Themes.space.PX_24 };
+  obj[8] = { marginTop: Themes.space.PX_8, marginHorizontal: Themes.space.PX_24 };
+  const obj6 = { marginTop: Themes.space.PX_8, marginHorizontal: Themes.space.PX_24 };
+  obj[9] = { marginHorizontal: Themes.space.PX_24, marginBottom: Themes.space.PX_24 };
+  const obj7 = { marginHorizontal: Themes.space.PX_24, marginBottom: Themes.space.PX_24 };
+  obj[10] = { marginTop: Themes.space.PX_12 };
   obj[11] = { width: 24, height: 24 };
   const obj9 = {};
-  const obj8 = { marginTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
-  const merged1 = Object.assign(require("../../../rebrand/native/TextStyles.tsx")(Fonts.PRIMARY_NORMAL, require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE, 16));
+  const obj8 = { marginTop: Themes.space.PX_12 };
+  const merged1 = Object.assign(createTextStyle(Fonts.PRIMARY_NORMAL, Themes.colors.WHITE, 16));
   obj9.marginStart = -8;
   obj[12] = obj9;
   obj[13] = { height: 75, right: 8 };
@@ -97,7 +105,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
   }
   const merged = Object.assign(variant, Object.create(null));
   let _require;
-  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [createEmptyPromotionsByType];
   const stateFromStores = obj.useStateFromStores(items, () => {
     marketingComponentByType = marketingComponentByType.getMarketingComponentByType(_undefined(table[11]).MarketingComponentType.GIFT_PLAN_SELECTION_CARD_BANNER);
@@ -110,7 +118,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
     }
     return prop;
   });
-  let obj1 = _require("../../promotions/MarketingComponentHooks.tsx");
+  let obj1 = _useThemeAndReducedMotionAwareAssetUrl;
   let cardAsset;
   if (stateFromStores != null) {
     cardAsset = stateFromStores.cardAsset;
@@ -120,19 +128,19 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
   if (stateFromStores != null) {
     backgroundAsset = stateFromStores.backgroundAsset;
   }
-  const themeAndReducedMotionAwareAssetUrl1 = _require("../../promotions/MarketingComponentHooks.tsx").useThemeAndReducedMotionAwareAssetUrl(backgroundAsset);
+  const themeAndReducedMotionAwareAssetUrl1 = _useThemeAndReducedMotionAwareAssetUrl.useThemeAndReducedMotionAwareAssetUrl(backgroundAsset);
   let tmp9 = null != claimableRewards;
   if (tmp9) {
     tmp9 = 1 === claimableRewards.length;
   }
   const tmp10 = callback3(tmp9);
-  const tmp2Result = _require("../../promotions/MarketingComponentHooks.tsx");
-  let stringResult1 = require("../hooks/usePremiumProductPricingString.tsx")(premiumType, constants.MONTH);
-  const tmp12 = require("../../../user_settings/premium/native/utils/usePremiumFeatures.tsx")(premiumType);
-  let obj3 = require("../../gifting/experiments/NitroGiftPriceCopyExperiment.tsx");
+  const tmp2Result = _useThemeAndReducedMotionAwareAssetUrl;
+  let stringResult1 = usePremiumProductPricingString(premiumType, constants.MONTH);
+  const tmp12 = usePremiumFeatures(premiumType);
+  let obj3 = apexExperiment;
   const config = obj3.useConfig({ location: "PremiumGiftFeaturesCard" });
   ({ showGiftPrice, useNewCopy } = config);
-  let promotionalButton = require("../../gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx")(premiumType) && null != claimableRewards;
+  let promotionalButton = useShouldShowGiftingPromotionDeco(premiumType) && null != claimableRewards;
   if (promotionalButton) {
     promotionalButton = claimableRewards.length > 0;
   }
@@ -140,7 +148,7 @@ const memoResult = importAllResult.memo(function PremiumGiftFeaturesCard(variant
   if (promotionalButton) {
     tmp16 = null != themeAndReducedMotionAwareAssetUrl;
   }
-  const tmp14 = require("../hooks/usePremiumProductPricingString.tsx")(premiumType, constants.YEAR);
+  const tmp14 = usePremiumProductPricingString(premiumType, constants.YEAR);
   [tmp18, c0] = callback(importAllResult.useState(0), 2);
   const items1 = [tmp10.card, style, ];
   let promotional = promotionalButton;

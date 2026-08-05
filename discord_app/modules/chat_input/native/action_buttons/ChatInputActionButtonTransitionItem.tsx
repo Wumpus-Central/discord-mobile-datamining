@@ -1,3 +1,6 @@
+import { wrapChildrenDefault } from "../../../../design/components/TransitionGroup/TransitionGroup.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import { useChatInputFloatingBounce } from "useChatInputFloatingBounce.tsx";
 // discord_app/modules/chat_input/native/action_buttons/ChatInputActionButtonTransitionItem.tsx
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";
@@ -73,12 +76,12 @@ function BounceTransitionItem(state) {
   state = state.state;
   ({ cleanup, bounceEnterDelayMs, children } = state);
   let obj = { visible: null, initiallyVisible: null, enterDelayMs: null, onExitComplete: null, interactiveDuringEnter: true };
-  obj[0] = state !== require("../../../../design/components/TransitionGroup/TransitionGroup.tsx") /* wrapChildrenDefault */.TransitionStates.YEETED;
-  obj[1] = state !== require("../../../../design/components/TransitionGroup/TransitionGroup.tsx") /* wrapChildrenDefault */.TransitionStates.ENTERED;
+  obj[0] = state !== wrapChildrenDefault /* wrapChildrenDefault */.TransitionStates.YEETED;
+  obj[1] = state !== wrapChildrenDefault /* wrapChildrenDefault */.TransitionStates.ENTERED;
   obj[2] = bounceEnterDelayMs;
   obj[3] = cleanup;
-  const tmp = require("useChatInputFloatingBounce.tsx");
-  ({ isInteractive, animatedStyle } = require("useChatInputFloatingBounce.tsx")(obj));
+  const tmp = useChatInputFloatingBounce;
+  ({ isInteractive, animatedStyle } = useChatInputFloatingBounce(obj));
   obj = { style: items };
   items = [closure_6.transitionItemCentered, animatedStyle];
   let str = "none";
@@ -93,7 +96,7 @@ function BounceTransitionItem(state) {
   obj[2] = str2;
   const merged = Object.assign(obj);
   obj.children = children;
-  return jsx(require("../../../reanimated/ReanimatedRexport.tsx").View, { pointerEvents: str, accessibilityElementsHidden: !isInteractive, importantForAccessibility: null });
+  return jsx(ReanimatedRexport.View, { pointerEvents: str, accessibilityElementsHidden: !isInteractive, importantForAccessibility: null });
 }
 const styles = StyleSheet.create({ transitionItem: { position: "absolute" }, transitionItemCentered: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, alignItems: "center", justifyContent: "center" } });
 let closure_7 = { code: "function ChatInputActionButtonTransitionItemTsx1(finished){const{runOnJS,cleanup}=this.__closure;if(finished===true){runOnJS(cleanup)();}}" };

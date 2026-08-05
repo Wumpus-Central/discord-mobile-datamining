@@ -1,3 +1,5 @@
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { handleImageLoad } from "../../image_upload/ImageLoaderUtils.tsx";
 // discord_app/modules/global_discovery_apps/utils/getCollectionItemAssetUrl.tsx
 import { Endpoints } from "ME";
 
@@ -14,13 +16,13 @@ export const getCollectionItemAssetUrl = function getCollectionItemAssetUrl(arg0
   if (containerWidth === undefined) {
     containerWidth = 1024;
   }
-  let obj = require("../../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */;
-  let str = obj.getBestMediaProxySize(containerWidth * require("../../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */.getDevicePixelRatio());
+  let obj = handleImageLoad /* handleImageLoad */;
+  let str = obj.getBestMediaProxySize(containerWidth * handleImageLoad /* handleImageLoad */.getDevicePixelRatio());
   obj = { size: str.toString() };
-  const obj2 = require("../../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */;
+  const obj2 = handleImageLoad /* handleImageLoad */;
   str = new URLSearchParams(obj).toString();
   let str3 = "png";
-  if (require("../../../utils/AvatarUtils.tsx") /* getAvatarURL */.SUPPORTS_WEBP) {
+  if (getAvatarURL /* getAvatarURL */.SUPPORTS_WEBP) {
     str3 = "webp";
   }
   if (null != closure_4) {

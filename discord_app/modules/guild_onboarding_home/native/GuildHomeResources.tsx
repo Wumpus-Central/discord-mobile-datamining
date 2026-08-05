@@ -1,3 +1,5 @@
+import { registerAsset } from "../../../../_runtime/15556_registerAsset.js";
+import { useResourceChannels } from "../useResourceChannels.tsx";
 // discord_app/modules/guild_onboarding_home/native/GuildHomeResources.tsx
 import getDefaultRules from "get defaultRules";
 import get_ActivityIndicator from "PressableBase";
@@ -173,7 +175,7 @@ const result = require("ensureGuildLoaded").fileFinishedImporting("modules/guild
 export default function GuildHomeResources(guildId) {
   guildId = guildId.guildId;
   const tmp = createCacheKey();
-  const arr = require("../useResourceChannels.tsx")(guildId);
+  const arr = useResourceChannels(guildId);
   if (0 === arr.length) {
     let obj = { style: null, children: null };
     obj[0] = tmp.emptyStateContainer;
@@ -183,7 +185,7 @@ export default function GuildHomeResources(guildId) {
     const items = [callback(guildId(4281).Text, obj), , ];
     const obj1 = { style: null, source: null };
     obj1[0] = tmp.emptyStateImage;
-    obj1[1] = require("../../../../_runtime/15556_registerAsset.js");
+    obj1[1] = registerAsset;
     items[1] = callback(closure_5, obj1);
     const obj2 = { onPress: null, text: null };
     obj2[0] = function onPress() {

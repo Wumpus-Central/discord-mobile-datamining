@@ -1,3 +1,7 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { updateImpersonating } from "../impersonate/ImpersonateActionCreators.tsx";
 // discord_app/modules/guild_onboarding/GuildOnboardingActionCreators.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import _slicedToArray from "_slicedToArray";
@@ -131,13 +135,13 @@ let obj = {
     let dispatch = store2.getOnboardingPrompt(id);
     if (null != dispatch) {
       if (dispatch.singleSelect) {
-        let obj = require("../../../_runtime/00012_apply.js");
-        let withoutResult = obj.without(require("../../../_runtime/00012_apply.js").map(dispatch.options, "id"), id2);
-        const arr2 = require("../../../_runtime/00012_apply.js");
+        let obj = apply;
+        let withoutResult = obj.without(apply.map(dispatch.options, "id"), id2);
+        const arr2 = apply;
       } else {
         withoutResult = [];
       }
-      dispatch = require("../../Dispatcher.tsx").dispatch;
+      dispatch = dispatcher.dispatch;
       obj = { type: "GUILD_ONBOARDING_SELECT_OPTION", guildId: null, promptId: null, optionId: null, selected: null, removedOptionIds: null };
       obj[1] = guildId;
       obj[2] = id;
@@ -145,7 +149,7 @@ let obj = {
       obj[4] = arg3;
       obj[5] = withoutResult;
       dispatch(obj);
-      const tmp7 = require("../../Dispatcher.tsx");
+      const tmp7 = dispatcher;
     }
   },
   updateOnboardingResponses: null,
@@ -167,21 +171,21 @@ obj[2] = function updateRolesLocal(guildId, items2, differenceResult1) {
     roles = [];
   }
   if (initialize.isViewingRoles(guildId)) {
-    const obj5 = require("../impersonate/ImpersonateActionCreators.tsx") /* updateImpersonating */;
-    const obj6 = require("../../../_runtime/00012_apply.js");
-    const result = obj5.updateImpersonatedRoles(guildId, obj6.difference(require("../../../_runtime/00012_apply.js").union(roles, items2), differenceResult1));
-    const obj7 = require("../../../_runtime/00012_apply.js");
+    const obj5 = updateImpersonating /* updateImpersonating */;
+    const obj6 = apply;
+    const result = obj5.updateImpersonatedRoles(guildId, obj6.difference(apply.union(roles, items2), differenceResult1));
+    const obj7 = apply;
   } else {
     if (tmp2) {
-      let obj = require("../../Dispatcher.tsx");
+      let obj = dispatcher;
       obj = { type: "GUILD_MEMBER_UPDATE_LOCAL", guildId: null, roles: null, addedRoleIds: null, removedRoleIds: null };
       obj[1] = guildId;
-      const obj3 = require("../../../_runtime/00012_apply.js");
-      obj[2] = obj3.difference(require("../../../_runtime/00012_apply.js").union(roles, items2), differenceResult1);
+      const obj3 = apply;
+      obj[2] = obj3.difference(apply.union(roles, items2), differenceResult1);
       obj[3] = items2;
       obj[4] = differenceResult1;
       obj.dispatch(obj);
-      const obj4 = require("../../../_runtime/00012_apply.js");
+      const obj4 = apply;
     }
     tmp2 = items2.length > 0 || differenceResult1.length > 0;
   }
@@ -225,7 +229,7 @@ obj[3] = function completeOnboarding(guildId, prompts) {
   const tmp12 = importDefault;
   const tmp2Result2 = items1(5217);
   obj = {};
-  const obj8 = require("../../utils/AnalyticsUtils.tsx");
+  const obj8 = expandEventProperties;
   const merged = Object.assign(items1(4479).collectGuildAnalyticsMetadata(guildId));
   obj.step = prompts.length - 1;
   let num2 = 0;
@@ -294,12 +298,12 @@ obj[4] = function onboardExistingMember(id, set) {
   }
 };
 obj[5] = function finishOnboarding(guildId) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_ONBOARDING_COMPLETE", guildId };
   obj.dispatch(obj);
 };
 obj[6] = function setUserOnboardingStep(guildId, step) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_ONBOARDING_SET_STEP", guildId, step };
   obj.dispatch(obj);
 };

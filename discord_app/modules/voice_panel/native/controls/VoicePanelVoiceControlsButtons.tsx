@@ -1,3 +1,25 @@
+import { registerAsset } from "../../../../../_runtime/07828_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10269_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10762_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/16060_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/16061_registerAsset.js";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { trackDeviceChanged } from "../../../../actions/AudioActionCreators.tsx";
+import { HeadphonesSlashIcon } from "../../../../design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowArrow } from "../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { TableRowIcon } from "../../../../design/components/TableRow/native/TableRowIcon.native.tsx";
+import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useHideSelfVideo } from "../../../calls/useHideSelfVideo.tsx";
+import { useGameConsoleAccounts } from "../../../game_console/useGameConsoleAccounts.tsx";
+import { useMuteAwareLocalVolume } from "../../../media_engine/useMuteAwareLocalVolume.tsx";
+import { voiceSettings } from "../../../video_calls/native/ChannelCallUtils.tsx";
+import { _handleToggleVideo } from "../../../voice_calls/native/CallsUtils.tsx";
+import { useCanInviteMembers } from "../hooks/useCanInviteMembers.tsx";
+import { useInviteMembersCallback } from "../hooks/useInviteMembersCallback.tsx";
+import { useSoundboardConfig } from "../hooks/useSoundboardConfig.tsx";
 // discord_app/modules/voice_panel/native/controls/VoicePanelVoiceControlsButtons.tsx
 import SoundboardIcon from "SoundboardIcon";
 import TableRowGroupTitle from "TableRowGroupTitle";
@@ -138,7 +160,7 @@ class GameConsoleAccountButton {
   }
 }
 function toggleDeaf() {
-  require("../../../../actions/AudioActionCreators.tsx").toggleSelfDeaf();
+  trackDeviceChanged.toggleSelfDeaf();
 }
 ({ AnalyticEvents: map1, PlatformTypes: closure_14 } = ME);
 let result = require("participantFromServer").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelVoiceControlsButtons.tsx");
@@ -147,14 +169,14 @@ export const GameConsoles = function GameConsoles(arg0) {
   let importDefault;
   let require;
   ({ channel: require, connected: importDefault } = arg0);
-  const arr = require("../../../game_console/useGameConsoleAccounts.tsx")();
+  const arr = useGameConsoleAccounts();
   let tmp2 = null;
   if (arr.length > 0) {
     const obj = { title: null, hasIcons: true, children: null };
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["mbi/fB"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["mbi/fB"]);
     obj[2] = arr.map((account) => outer1_17(outer1_18, { account, channel: closure_0, connected: closure_1 }, account.type));
-    tmp2 = jsx(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, { title: null, hasIcons: true, children: null });
+    tmp2 = jsx(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, { title: null, hasIcons: true, children: null });
   }
   return tmp2;
 };
@@ -198,7 +220,7 @@ export const ChatButton = function ChatButton(openTab) {
   return jsx(openTab(5315).TableRow, { IconComponent: null });
 };
 export const SoundboardButton = function SoundboardButton(channel) {
-  const tmp2 = require("../hooks/useSoundboardConfig.tsx");
+  const tmp2 = useSoundboardConfig;
   let tmp7 = null;
   if (tmp2Result.visible) {
     let obj = { label: null, onPress: null, disabled: null, icon: null };
@@ -236,7 +258,7 @@ export const ScreenshareButton = function ScreenshareButton(channel) {
   return jsx(onPress(5315).TableRow, { disabled: !isFeatureEnabled, onPress: callback, icon: null, label: null });
 };
 export const StreamVolumeItem = function StreamVolumeItem() {
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [reset, fetchFingerprint];
   const stateFromStores = obj.useStateFromStores(items, () => {
     lastActiveStream = lastActiveStream.getLastActiveStream();
@@ -253,7 +275,7 @@ export const StreamVolumeItem = function StreamVolumeItem() {
   if (stateFromStores != null) {
     ownerId = stateFromStores.ownerId;
   }
-  require("../../../media_engine/useMuteAwareLocalVolume.tsx")(ownerId, MediaEngineContextTypes.STREAM);
+  useMuteAwareLocalVolume(ownerId, MediaEngineContextTypes.STREAM);
   let tmp11Result = null;
   if (null != stateFromStores) {
     obj = { title: null, hasIcons: false, children: null };
@@ -279,44 +301,44 @@ export const StreamVolumeItem = function StreamVolumeItem() {
   return tmp11Result;
 };
 export const DeafenSwitch = function DeafenSwitch() {
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [_detectH265HardwareDecode];
   const stateFromStores = obj.useStateFromStores(items, () => selfDeaf.isSelfDeaf());
   obj = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
   obj = { IconComponent: null, source: null };
-  obj[0] = require("../../../../design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx") /* HeadphonesSlashIcon */.HeadphonesSlashIcon;
-  obj[1] = require("../../../../../_runtime/16061_registerAsset.js");
-  obj[0] = jsx(require("../../../../design/components/TableRow/native/TableRowIcon.native.tsx") /* TableRowIcon */.TableRowIcon, { IconComponent: null, source: null });
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.wjcRFX);
+  obj[0] = HeadphonesSlashIcon /* HeadphonesSlashIcon */.HeadphonesSlashIcon;
+  obj[1] = registerAsset;
+  obj[0] = jsx(TableRowIcon /* TableRowIcon */.TableRowIcon, { IconComponent: null, source: null });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.wjcRFX);
   obj[2] = stateFromStores;
   obj[3] = toggleDeaf;
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[4] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.wjcRFX);
-  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[5] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.M3VN2U);
-  return jsx(require("../../../../design/components/TableRow/native/TableSwitchRow.native.tsx") /* TableSwitchRow */.TableSwitchRow, { IconComponent: null, source: null });
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[4] = intl2.string(getSystemLocale /* getSystemLocale */.t.wjcRFX);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj[5] = intl3.string(getSystemLocale /* getSystemLocale */.t.M3VN2U);
+  return jsx(TableSwitchRow /* TableSwitchRow */.TableSwitchRow, { IconComponent: null, source: null });
 };
 export const AudioRouteButton = function AudioRouteButton(arg0) {
   let importDefault;
   let require;
   ({ channel: require, connected: importDefault } = arg0);
-  let obj = require("../../../voice_calls/native/CallsUtils.tsx") /* _handleToggleVideo */;
+  let obj = _handleToggleVideo /* _handleToggleVideo */;
   obj = { icon: null, onPress: null, label: null, trailing: null };
-  obj[0] = jsx(require("../../../../design/components/TableRow/native/TableRowIcon.native.tsx") /* TableRowIcon */.TableRowIcon, { source: obj.useMaskedSpeakerStates().routeSource });
+  obj[0] = jsx(TableRowIcon /* TableRowIcon */.TableRowIcon, { source: obj.useMaskedSpeakerStates().routeSource });
   obj[1] = function onPress() {
     const result = outer1_0(outer1_2[44]).showAudioOutputSelector(id.id, closure_1);
   };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["A/Ly/2"]);
-  obj[3] = jsx(require("../../../../design/components/TableRow/native/TableRowArrow.native.tsx") /* TableRowArrow */.TableRowArrow, {});
-  return jsx(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, { icon: null, onPress: null, label: null, trailing: null });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["A/Ly/2"]);
+  obj[3] = jsx(TableRowArrow /* TableRowArrow */.TableRowArrow, {});
+  return jsx(TableRowInner /* TableRowInner */.TableRow, { icon: null, onPress: null, label: null, trailing: null });
 };
 export const InviteButton = function InviteButton(channel) {
   channel = channel.channel;
-  let obj = require("../hooks/useCanInviteMembers.tsx") /* useCanInviteMembers */;
+  let obj = useCanInviteMembers /* useCanInviteMembers */;
   const canInviteMembers = obj.useCanInviteMembers(channel.id);
-  require("../hooks/useInviteMembersCallback.tsx") /* useInviteMembersCallback */;
+  useInviteMembersCallback /* useInviteMembersCallback */;
   let tmp8 = null;
   if (!tmp5) {
     tmp8 = null;
@@ -327,7 +349,7 @@ export const InviteButton = function InviteButton(channel) {
         obj[0] = tmp7;
         obj = { IconComponent: null, source: null };
         obj[0] = tmp(9637).GroupPlusIcon;
-        obj[1] = require("../../../../../_runtime/10762_registerAsset.js");
+        obj[1] = registerAsset;
         obj[1] = jsx(tmp(5321).TableRowIcon, { IconComponent: null, source: null });
         const intl = tmp(1236).intl;
         obj[2] = intl.string(tmp(1236).t["f1+QIK"]);
@@ -364,10 +386,10 @@ export const HideNonVideoParticipants = function HideNonVideoParticipants(channe
   return jsx(channelId(5650).TableSwitchRow, { IconComponent: null, source: null });
 };
 export const HideSelfVideo = function HideSelfVideo() {
-  const tmp3 = callback(require("../../../calls/useHideSelfVideo.tsx")(id.getId()), 3);
+  const tmp3 = callback(useHideSelfVideo(id.getId()), 3);
   const require = tmp4;
   importDefault = tmp3[2];
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [CHANNEL_SIDEBAR_WIDTH];
   const dependencyMap = obj.useStateFromStores(items, () => obj.disableHideSelfStreamAndVideoConfirmationAlert);
   let tmp6 = null;
@@ -410,10 +432,10 @@ export const HideSelfVideo = function HideSelfVideo() {
 export const LeaveActivitiesButton = function LeaveActivitiesButton() {
   let obj = { icon: null, label: null, onPress: null };
   obj = { source: null };
-  obj[0] = require("../../../../../_runtime/10269_registerAsset.js");
-  obj[0] = jsx(require("../../../../design/components/TableRow/native/TableRowIcon.native.tsx") /* TableRowIcon */.TableRowIcon, { source: null });
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["R/FK4A"]);
+  obj[0] = registerAsset;
+  obj[0] = jsx(TableRowIcon /* TableRowIcon */.TableRowIcon, { source: null });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["R/FK4A"]);
   obj[2] = function onPress() {
     currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
     let obj = callback(table[56]);
@@ -429,12 +451,12 @@ export const LeaveActivitiesButton = function LeaveActivitiesButton() {
     obj[1] = applicationId;
     obj.leaveActivity(obj);
   };
-  return jsx(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, { source: null });
+  return jsx(TableRowInner /* TableRowInner */.TableRow, { source: null });
 };
 export const ShareActivityLogsButton = function ShareActivityLogsButton() {
   let label;
   let onPress;
-  let obj = require("../../../video_calls/native/ChannelCallUtils.tsx") /* voiceSettings */;
+  let obj = voiceSettings /* voiceSettings */;
   const shareActivityLogsResult = obj.shareActivityLogs();
   let icon = shareActivityLogsResult.icon;
   ({ label, onPress } = shareActivityLogsResult);
@@ -442,27 +464,27 @@ export const ShareActivityLogsButton = function ShareActivityLogsButton() {
   if (null != icon) {
     obj = { source: null };
     obj[0] = icon;
-    icon = tmp4(require("../../../../design/components/TableRow/native/TableRowIcon.native.tsx") /* TableRowIcon */.TableRowIcon, obj);
+    icon = tmp4(TableRowIcon /* TableRowIcon */.TableRowIcon, obj);
   }
-  return jsx(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, { icon, label, onPress });
+  return jsx(TableRowInner /* TableRowInner */.TableRow, { icon, label, onPress });
 };
 export const ToggleShowActivitiesDebugOverlay = function ToggleShowActivitiesDebugOverlay() {
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [initialize];
   const stateFromStores = obj.useStateFromStores(items, () => showActivitiesDebugOverlay.getShowActivitiesDebugOverlay());
   obj = { icon: null, value: null, onValueChange: null, label: null };
   obj = { source: null };
-  obj[0] = require("../../../../../_runtime/07828_registerAsset.js");
-  obj[0] = jsx(require("../../../../design/components/TableRow/native/TableRowIcon.native.tsx") /* TableRowIcon */.TableRowIcon, { source: null });
+  obj[0] = registerAsset;
+  obj[0] = jsx(TableRowIcon /* TableRowIcon */.TableRowIcon, { source: null });
   obj[1] = stateFromStores;
   obj[2] = function onValueChange(visible) {
     let obj = callback(table[59]);
     obj = { type: "EMBEDDED_ACTIVITY_SET_DEBUG_OVERLAY_VISIBILITY", visible };
     obj.dispatch(obj);
   };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["qv5/SP"]);
-  return jsx(require("../../../../design/components/TableRow/native/TableSwitchRow.native.tsx") /* TableSwitchRow */.TableSwitchRow, { source: null });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["qv5/SP"]);
+  return jsx(TableSwitchRow /* TableSwitchRow */.TableSwitchRow, { source: null });
 };
 export const VoiceSettingsButton = function VoiceSettingsButton(guildId) {
   guildId = guildId.guildId;
@@ -473,7 +495,7 @@ export const VoiceSettingsButton = function VoiceSettingsButton(guildId) {
   let obj = { onPress: callback, icon: null, label: null, subLabel: null, trailing: null };
   obj = { IconComponent: null, source: null };
   obj[0] = guildId(5920).SettingsIcon;
-  obj[1] = require("../../../../../_runtime/16060_registerAsset.js");
+  obj[1] = registerAsset;
   obj[1] = jsx(guildId(5321).TableRowIcon, { IconComponent: null, source: null });
   const intl = guildId(1236).intl;
   obj[2] = intl.string(guildId(1236).t.NiTd0e);
@@ -485,7 +507,7 @@ export const VoiceSettingsButton = function VoiceSettingsButton(guildId) {
 export const ReportStreamIssueButton = function ReportStreamIssueButton(stream) {
   let label;
   let onPress;
-  let obj = require("../../../video_calls/native/ChannelCallUtils.tsx") /* voiceSettings */;
+  let obj = voiceSettings /* voiceSettings */;
   const reportStreamIssueResult = obj.reportStreamIssue(stream.stream);
   let icon = reportStreamIssueResult.icon;
   ({ label, onPress } = reportStreamIssueResult);
@@ -493,14 +515,14 @@ export const ReportStreamIssueButton = function ReportStreamIssueButton(stream) 
   if (null != icon) {
     obj = { source: null };
     obj[0] = icon;
-    icon = tmp4(require("../../../../design/components/TableRow/native/TableRowIcon.native.tsx") /* TableRowIcon */.TableRowIcon, obj);
+    icon = tmp4(TableRowIcon /* TableRowIcon */.TableRowIcon, obj);
   }
-  return jsx(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, { icon, label, onPress });
+  return jsx(TableRowInner /* TableRowInner */.TableRow, { icon, label, onPress });
 };
 export const RTCDebugPanelButton = function RTCDebugPanelButton() {
   let label;
   let onPress;
-  let obj = require("../../../video_calls/native/ChannelCallUtils.tsx") /* voiceSettings */;
+  let obj = voiceSettings /* voiceSettings */;
   const rtcDebugPanelResult = obj.rtcDebugPanel(() => {
 
   });
@@ -510,7 +532,7 @@ export const RTCDebugPanelButton = function RTCDebugPanelButton() {
   if (null != icon) {
     obj = { source: null };
     obj[0] = icon;
-    icon = tmp4(require("../../../../design/components/TableRow/native/TableRowIcon.native.tsx") /* TableRowIcon */.TableRowIcon, obj);
+    icon = tmp4(TableRowIcon /* TableRowIcon */.TableRowIcon, obj);
   }
-  return jsx(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, { icon, label, onPress });
+  return jsx(TableRowInner /* TableRowInner */.TableRow, { icon, label, onPress });
 };

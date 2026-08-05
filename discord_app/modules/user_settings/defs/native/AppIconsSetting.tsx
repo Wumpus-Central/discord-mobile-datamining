@@ -1,3 +1,8 @@
+import { DismissibleContent } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { fetchCurrentAppIcon } from "../../../app_icons/native/AppIconUtils.tsx";
+import { DismissibleNewTag } from "../../../dismissible_content/native/DismissibleNewBadge.tsx";
+import { UserSettingsAppIcons } from "../../app_icon/native/UserSettingsAppIcons.tsx";
 // discord_app/modules/user_settings/defs/native/AppIconsSetting.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -8,15 +13,15 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.N4YDao);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.N4YDao);
   },
   parent: null,
   IconComponent: require("SettingsItemAppIcon"),
   useTrailing: function useAppIconSettingTrailing() {
     const obj = { dismissibleContent: null, newPremiumStyle: true };
-    obj[0] = require("../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.CUSTOM_APP_ICONS_NEW_BADGE;
-    return jsx(require("../../../dismissible_content/native/DismissibleNewBadge.tsx"), { dismissibleContent: null, newPremiumStyle: true });
+    obj[0] = DismissibleContent /* DismissibleContent */.DismissibleContent.CUSTOM_APP_ICONS_NEW_BADGE;
+    return jsx(DismissibleNewTag, { dismissibleContent: null, newPremiumStyle: true });
   },
   usePreNavigationAction: function useAppIconSettingPreNavigationAction() {
     const items = [first(1358).DismissibleContent.CUSTOM_APP_ICONS_NEW_BADGE];
@@ -32,14 +37,14 @@ createToggle = {
     }, items1);
   },
   usePredicate() {
-    return require("../../../app_icons/native/AppIconUtils.tsx") /* fetchCurrentAppIcon */.isAppIconsSupported();
+    return fetchCurrentAppIcon /* fetchCurrentAppIcon */.isAppIconsSupported();
   },
   screen: createToggle
 };
 createToggle = {
   route: require("ME").UserSettingsSections.APP_ICONS,
   getComponent() {
-    return require("../../app_icon/native/UserSettingsAppIcons.tsx").default;
+    return UserSettingsAppIcons.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

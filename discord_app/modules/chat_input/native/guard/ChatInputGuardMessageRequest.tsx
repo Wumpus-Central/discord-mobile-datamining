@@ -1,3 +1,4 @@
+import { ChatInputGuard } from "ChatInputGuard.tsx";
 // discord_app/modules/chat_input/native/guard/ChatInputGuardMessageRequest.tsx
 import useIsMessageRequestRestrictedViewer from "useIsMessageRequestRestrictedViewer";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -238,7 +239,7 @@ const memoResult = require("noop").memo(function ChatInputGuardMessageRequest(ch
     isRejectLoading = isOptimisticRejected;
   }
   obj[10] = isRejectLoading;
-  return tmp7(require("ChatInputGuard.tsx"), obj);
+  return tmp7(ChatInputGuard, obj);
 });
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardMessageRequest.tsx");
 

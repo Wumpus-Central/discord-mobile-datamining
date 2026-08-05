@@ -1,3 +1,5 @@
+import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
+import { componentDidMount } from "Timer.tsx";
 // discord_app/modules/voice_calls/native/components/OngoingCallTimer.tsx
 import "noop";
 import callConnect from "callConnect";
@@ -20,8 +22,8 @@ export default function OnGoingCallTimer(style) {
   }, items1);
   let timestamp = 0;
   if (null != stateFromStores) {
-    timestamp = require("../../../../utils/SnowflakeUtils.tsx").extractTimestamp(stateFromStores);
-    const obj2 = require("../../../../utils/SnowflakeUtils.tsx");
+    timestamp = DISCORD_EPOCH.extractTimestamp(stateFromStores);
+    const obj2 = DISCORD_EPOCH;
   }
-  return jsx(require("Timer.tsx"), { style: style.style, timestamp });
+  return jsx(componentDidMount, { style: style.style, timestamp });
 };

@@ -1,3 +1,4 @@
+import { messagesProxy } from "../FamilyCenter.messages.js";
 // discord_app/modules/parent_tools/native/FamilyCenterBannerButton.tsx
 import ConnectGuardianBottomSheet from "ConnectGuardianBottomSheet";
 import { View } from "shareGuardianConnectLink";
@@ -158,7 +159,7 @@ export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeB
   } else {
     obj = { text: null, onPress: null };
     const intl = tmp(1236).intl;
-    obj[0] = intl.string(require("../FamilyCenter.messages.js").z4a9HP);
+    obj[0] = intl.string(messagesProxy.z4a9HP);
     obj[1] = function onPress() {
       let obj = outer1_1(outer1_2[16]);
       obj = { action: outer1_9.ScanQRCodeButton };

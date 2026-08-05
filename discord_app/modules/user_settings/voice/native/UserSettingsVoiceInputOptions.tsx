@@ -1,3 +1,6 @@
+import { VoiceSensitivity } from "../../../../components_native/common/VoiceSensitivity.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { showSimpleActionSheet } from "../../../action_sheet/native/showSimpleActionSheet.tsx";
 // discord_app/modules/user_settings/voice/native/UserSettingsVoiceInputOptions.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -11,22 +14,22 @@ let error;
 let metroImportAll;
 const require = arg1;
 function handleInputModePress() {
-  let obj = require("../../../action_sheet/native/showSimpleActionSheet.tsx") /* showSimpleActionSheet */;
+  let obj = showSimpleActionSheet /* showSimpleActionSheet */;
   obj = { key: "InputMode", header: null, options: null, hasIcons: false };
   obj = { title: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["pS+K2L"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["pS+K2L"]);
   obj[1] = obj;
   const obj1 = { label: null, onPress: null };
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[0] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Q8gkVL);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.Q8gkVL);
   obj1[1] = function onPress() {
     callback(9077).setMode(constants.PUSH_TO_TALK);
   };
   const items = [obj1, ];
   const obj2 = { label: null, onPress: null };
-  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj2[0] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.cHCEOJ);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj2[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.cHCEOJ);
   obj2[1] = function onPress() {
     callback(9077).setMode(constants.VOICE_ACTIVITY);
   };
@@ -89,7 +92,7 @@ export default function UserSettingsVoiceInputOptions() {
       obj = { threshold };
       return obj.setMode(inputMode, obj);
     };
-    obj5[1] = tmp5(require("../../../../components_native/common/VoiceSensitivity.tsx"), obj6);
+    obj5[1] = tmp5(VoiceSensitivity, obj6);
     obj4[1] = tmp5(View, obj5);
     items2[1] = tmp5(tmp(5315).TableRow, obj4);
     obj2[0] = items2;

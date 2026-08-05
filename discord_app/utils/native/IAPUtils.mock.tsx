@@ -1,9 +1,10 @@
+import { items } from "../../modules/billing/native/iapProducts.tsx";
 // discord_app/utils/native/IAPUtils.mock.tsx
 const result = require("set").fileFinishedImporting("utils/native/IAPUtils.mock.tsx");
 
 export default {
   loadProducts() {
-    return Promise.resolve(require("../../modules/billing/native/iapProducts.tsx") /* items */.copiedIAPProducts);
+    return Promise.resolve(items /* items */.copiedIAPProducts);
   },
   purchaseProduct() {
     const error = new Error("IAPUtils is mocked \u2014 purchases cannot be completed in this build.");

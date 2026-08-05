@@ -1,3 +1,4 @@
+import { flatten } from "../../../../_runtime/04434_flatten.js";
 // discord_app/modules/user_settings/dev_tools/UserSettingsExperimentsUtils.tsx
 function matchesDeep(item10014, item10021) {
   if (Array.isArray(item10014)) {
@@ -146,6 +147,6 @@ export const getBestMatches = function getBestMatches(arg0, str) {
       continue;
     }
     const found1 = items.filter((arg0) => undefined !== arg0);
-    return require("../../../../_runtime/04434_flatten.js")(found1.reverse());
+    return flatten(found1.reverse());
   }
 };

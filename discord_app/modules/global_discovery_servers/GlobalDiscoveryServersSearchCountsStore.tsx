@@ -1,3 +1,4 @@
+import { V6OrEarlierAPIError } from "../../errors/index.tsx";
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersSearchCountsStore.tsx
 import { Store } from "initialize";
 
@@ -16,7 +17,7 @@ prototype["handleSearchCountSuccess"] = function handleSearchCountSuccess(catego
   this.isInitialFetchComplete = true;
 };
 prototype["handleSearchCountFailure"] = function handleSearchCountFailure(error) {
-  const aPIError = new require("../../errors/index.tsx") /* V6OrEarlierAPIError */.APIError(error);
+  const aPIError = new V6OrEarlierAPIError /* V6OrEarlierAPIError */.APIError(error);
   this.error = aPIError;
   this.isFetching = false;
 };

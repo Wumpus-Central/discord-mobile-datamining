@@ -1,3 +1,4 @@
+import { set } from "../../../../core/native/NativeView.tsx";
 // discord_app/modules/voice_panel/native/controls/activities/ActivityItemMissingCard.tsx
 import Themes from "Themes";
 import importAllResult from "noop";
@@ -111,7 +112,7 @@ const memoResult = importAllResult.memo(function ActivityItemMissingCard(arg0) {
   obj = { style: callback3().loadingActivity, children: null };
   const tmp = callback3();
   obj[1] = callback(ActivityIndicator, { size: "large" });
-  tmp4 = callback(require("../../../../core/native/NativeView.tsx"), obj);
+  tmp4 = callback(set, obj);
 });
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityItemMissingCard.tsx");
 

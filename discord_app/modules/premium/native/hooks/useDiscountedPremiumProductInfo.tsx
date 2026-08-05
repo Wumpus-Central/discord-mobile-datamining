@@ -1,3 +1,4 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/premium/native/hooks/useDiscountedPremiumProductInfo.tsx
 import noop from "noop";
 import updateProduct from "updateProduct";
@@ -25,7 +26,7 @@ export const useDiscountedPremiumProductInfo = function useDiscountedPremiumProd
       return items3.find((basePlanId) => planIds.includes(basePlanId.basePlanId));
     }
   }, items);
-  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items1 = [stateFromStores];
   const items2 = [memo];
   stateFromStores = obj.useStateFromStores(items1, () => {

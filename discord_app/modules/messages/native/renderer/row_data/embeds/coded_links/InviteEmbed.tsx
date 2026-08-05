@@ -1,3 +1,5 @@
+import { InviteTypes } from "../../../../../../instant_invite/InviteTypeUtils.tsx";
+import { createResolvingGuildInvite } from "invite/GuildInvite.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/InviteEmbed.tsx
 import updateInvite from "updateInvite";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -21,25 +23,25 @@ export const createInviteEmbed = function createInviteEmbed(closure_0, code, upd
       let id = currentUser.id;
     }
     if (invite.state === constants.RESOLVING) {
-      return require("invite/GuildInvite.tsx") /* createResolvingGuildInvite */.createResolvingGuildInvite(updateInvite);
+      return createResolvingGuildInvite /* createResolvingGuildInvite */.createResolvingGuildInvite(updateInvite);
     } else {
       if (invite.state !== tmp5.EXPIRED) {
         if (invite.state !== tmp5.BANNED) {
           if (invite.state === tmp5.ERROR) {
             const inviteError = obj.getInviteError(code);
             if (null == inviteError) {
-              let erroredGuildInvite = require("invite/GuildInvite.tsx") /* createResolvingGuildInvite */.createErroredGuildInvite(code, tmp28, updateInvite);
-              const obj15 = require("invite/GuildInvite.tsx") /* createResolvingGuildInvite */;
+              let erroredGuildInvite = createResolvingGuildInvite /* createResolvingGuildInvite */.createErroredGuildInvite(code, tmp28, updateInvite);
+              const obj15 = createResolvingGuildInvite /* createResolvingGuildInvite */;
             } else if (inviteError.code === constants2.INVITES_DISABLED) {
-              erroredGuildInvite = require("invite/GuildInvite.tsx") /* createResolvingGuildInvite */.createDisabledGuildInvite(invite, updateInvite);
-              const obj14 = require("invite/GuildInvite.tsx") /* createResolvingGuildInvite */;
+              erroredGuildInvite = createResolvingGuildInvite /* createResolvingGuildInvite */.createDisabledGuildInvite(invite, updateInvite);
+              const obj14 = createResolvingGuildInvite /* createResolvingGuildInvite */;
             } else {
-              erroredGuildInvite = require("invite/GuildInvite.tsx") /* createResolvingGuildInvite */.createErroredGuildInvite(code, tmp28, updateInvite);
-              const obj13 = require("invite/GuildInvite.tsx") /* createResolvingGuildInvite */;
+              erroredGuildInvite = createResolvingGuildInvite /* createResolvingGuildInvite */.createErroredGuildInvite(code, tmp28, updateInvite);
+              const obj13 = createResolvingGuildInvite /* createResolvingGuildInvite */;
             }
             return erroredGuildInvite;
           } else {
-            const inviteType = require("../../../../../../instant_invite/InviteTypeUtils.tsx") /* InviteTypes */.getInviteType(invite);
+            const inviteType = InviteTypes /* InviteTypes */.getInviteType(invite);
             if (InviteTypes.GROUP_DM === inviteType) {
               let tmp29Result = tmp29(12506);
               return tmp29Result.createGroupDMInvite(invite, tmp28, updateInvite);
@@ -81,11 +83,11 @@ export const createInviteEmbed = function createInviteEmbed(closure_0, code, upd
               }
               const tmp29Result1 = tmp29(7115);
             }
-            const obj18 = require("../../../../../../instant_invite/InviteTypeUtils.tsx") /* InviteTypes */;
+            const obj18 = InviteTypes /* InviteTypes */;
           }
         }
       }
-      return require("invite/GuildInvite.tsx") /* createResolvingGuildInvite */.createExpiredGuildInvite(closure_0, id === tmp4, updateInvite);
+      return createResolvingGuildInvite /* createResolvingGuildInvite */.createExpiredGuildInvite(closure_0, id === tmp4, updateInvite);
     }
   }
 };

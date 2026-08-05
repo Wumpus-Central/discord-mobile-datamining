@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { hexToRgba } from "../../../../utils/ColorUtils.tsx";
 // discord_app/modules/voice_panel/native/card/DominantColorUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -46,8 +48,8 @@ export const useDominantRGBFromImage = function useDominantRGBFromImage(arg0) {
     hexToRgbResult = tmp3.get(arg0);
   }
   if (hexToRgbResult == null) {
-    hexToRgbResult = _require("../../../../utils/ColorUtils.tsx").hexToRgb(require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_800);
-    const obj2 = _require("../../../../utils/ColorUtils.tsx");
+    hexToRgbResult = _hexToRgba.hexToRgb(Themes.unsafe_rawColors.PRIMARY_800);
+    const obj2 = _hexToRgba;
   }
   const tmp7 = callback(React.useState(hexToRgbResult), 2);
   const dependencyMap = tmp7[1];
@@ -132,8 +134,8 @@ export const useDominantColorFromImage = function useDominantColorFromImage(arg0
     hexToRgbResult = tmp3.get(arg0);
   }
   if (hexToRgbResult == null) {
-    hexToRgbResult = _require("../../../../utils/ColorUtils.tsx").hexToRgb(require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_800);
-    const obj2 = _require("../../../../utils/ColorUtils.tsx");
+    hexToRgbResult = _hexToRgba.hexToRgb(Themes.unsafe_rawColors.PRIMARY_800);
+    const obj2 = _hexToRgba;
   }
   [tmp8, dependencyMap] = callback(React.useState(hexToRgbResult), 2);
   const items = [arg0];

@@ -1,3 +1,5 @@
+import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
+import { getQuestDeliveryDataForPlacement } from "../../utils/QuestDataUtils.tsx";
 // discord_app/modules/quests/lib/analytics/BrandSafetyContext.tsx
 import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -13,9 +15,9 @@ let c4;
 let result = require("createGuildRecordFromRust").fileFinishedImporting("modules/quests/lib/analytics/BrandSafetyContext.tsx");
 
 export const getBrandSafetyContext = function getBrandSafetyContext(questContent) {
-  let obj = _require("../../utils/QuestDataUtils.tsx");
+  let obj = _getQuestDeliveryDataForPlacement;
   const result = obj.isBillableQuestContent(questContent);
-  let obj1 = _require("../../utils/QuestDataUtils.tsx");
+  let obj1 = _getQuestDeliveryDataForPlacement;
   const adContext = obj1.getAdContext(questContent);
   const tmp4 = callback2();
   const tmp5 = callback();
@@ -98,12 +100,12 @@ export const getBrandSafetyContext = function getBrandSafetyContext(questContent
             if (null != banner) {
               obj = { id: null, banner: null };
               ({ id: obj5[0], banner: obj5[1] } = guild);
-              let guildBannerURL = require("../../../../utils/AvatarUtils.tsx").getGuildBannerURL(obj, true);
+              let guildBannerURL = getAvatarURL.getGuildBannerURL(obj, true);
               if (guildBannerURL == null) {
                 guildBannerURL = null;
               }
               tmp15 = guildBannerURL;
-              const obj4 = require("../../../../utils/AvatarUtils.tsx");
+              const obj4 = getAvatarURL;
             }
             if (null !== tmp15) {
               obj.selected_guild_banner_url = tmp15;

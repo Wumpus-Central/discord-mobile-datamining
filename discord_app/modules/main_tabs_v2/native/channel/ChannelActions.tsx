@@ -1,3 +1,7 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { PhoneCallIcon } from "../../../../design/components/Icon/native/redesign/generated/PhoneCallIcon.tsx";
+import { PhoneHangUpIcon } from "../../../../design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx";
+import { PrivateChannelButtons } from "header/PrivateChannelButtons.tsx";
 // discord_app/modules/main_tabs_v2/native/channel/ChannelActions.tsx
 import "apply";
 import { View } from "initialize";
@@ -18,13 +22,13 @@ let unpackModuleId;
 const require = arg1;
 function JoinCallButton() {
   const obj = { size: "sm", color: null };
-  obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.GREEN_360;
-  return jsx(require("../../../../design/components/Icon/native/redesign/generated/PhoneCallIcon.tsx") /* PhoneCallIcon */.PhoneCallIcon, { size: "sm", color: null });
+  obj[1] = Themes.unsafe_rawColors.GREEN_360;
+  return jsx(PhoneCallIcon /* PhoneCallIcon */.PhoneCallIcon, { size: "sm", color: null });
 }
 function EndCallButton() {
   const obj = { size: "sm", color: null };
-  obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.RED_400;
-  return jsx(require("../../../../design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx") /* PhoneHangUpIcon */.PhoneHangUpIcon, { size: "sm", color: null });
+  obj[1] = Themes.unsafe_rawColors.RED_400;
+  return jsx(PhoneHangUpIcon /* PhoneHangUpIcon */.PhoneHangUpIcon, { size: "sm", color: null });
 }
 function ChannelActionButtons(channel) {
   channel = channel.channel;
@@ -291,7 +295,7 @@ export default function ChannelActions(channelId) {
     const obj2 = { channelId: null, screenIndex: null };
     obj2[0] = channelId;
     obj2[1] = screenIndex;
-    tmp4Result = tmp4(require("header/PrivateChannelButtons.tsx"), obj2);
+    tmp4Result = tmp4(PrivateChannelButtons, obj2);
   }
   obj[1] = tmp4Result;
   return <View style={containerStyle}>{null}</View>;

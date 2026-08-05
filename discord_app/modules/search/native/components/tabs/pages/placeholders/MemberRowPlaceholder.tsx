@@ -1,3 +1,4 @@
+import { FormRowPlaceholderItem } from "FormRowPlaceholder.tsx";
 // discord_app/modules/search/native/components/tabs/pages/placeholders/MemberRowPlaceholder.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -8,5 +9,5 @@ const result = require("createCacheKey").fileFinishedImporting("modules/search/n
 
 export default function MemberRowPlaceholderItem() {
   const tmp = callback();
-  return jsx(require("FormRowPlaceholder.tsx"), { style: callback().container });
+  return jsx(FormRowPlaceholderItem, { style: callback().container });
 };

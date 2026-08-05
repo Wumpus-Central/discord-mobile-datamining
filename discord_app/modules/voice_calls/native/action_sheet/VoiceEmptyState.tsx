@@ -1,3 +1,8 @@
+import { registerAsset } from "../../../../../_runtime/12954_registerAsset.js";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import { JoinVoiceChannelButton } from "JoinVoiceChannelButton.tsx";
 // discord_app/modules/voice_calls/native/action_sheet/VoiceEmptyState.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -29,19 +34,19 @@ export default function VoiceEmptyState(channel) {
   const tmp = createCacheKey();
   let obj = { style: null, children: null };
   const items = [tmp.container, ];
-  obj = { paddingBottom: require("../../../safe_area/useSafeAreaInsets.native.tsx")().bottom };
+  obj = { paddingBottom: useSafeAreaInsets().bottom };
   items[1] = obj;
   obj[0] = items;
   obj = { title: null, body: null, lightSource: null, darkSource: null, titleStyle: null, bodyStyle: null, imageStyle: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/HABZo"]);
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["5Jy2FY"]);
-  obj[2] = require("../../../../../_runtime/12954_registerAsset.js");
-  obj[3] = require("../../../../../_runtime/12954_registerAsset.js");
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["/HABZo"]);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["5Jy2FY"]);
+  obj[2] = registerAsset;
+  obj[3] = registerAsset;
   ({ emptyTitle: obj3[4], emptyBody: obj3[5] } = tmp);
   obj[6] = { marginBottom: 16, marginTop: 20 };
-  const items1 = [callback(require("../../../../design/void/native.tsx") /* Button */.ThemedEmptyState, obj), callback(require("JoinVoiceChannelButton.tsx"), { channel: channel.channel, style: tmp.button })];
+  const items1 = [callback(Button /* Button */.ThemedEmptyState, obj), callback(JoinVoiceChannelButton, { channel: channel.channel, style: tmp.button })];
   obj[1] = items1;
   return callback2(View, obj);
 };

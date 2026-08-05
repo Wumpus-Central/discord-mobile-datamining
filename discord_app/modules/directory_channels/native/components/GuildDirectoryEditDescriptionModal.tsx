@@ -1,3 +1,6 @@
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { HeaderBackImage } from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import { GuildDirectoryEditDescriptionModalActionCreators } from "GuildDirectoryEditDescriptionModalActionCreators.tsx";
 // discord_app/modules/directory_channels/native/components/GuildDirectoryEditDescriptionModal.tsx
 import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT";
 import "noop";
@@ -134,7 +137,7 @@ export default function GuildDirectoryEditDescriptionModal(arg0) {
   const _require = arg0;
   obj = {};
   obj = { fullscreen: true, headerLeft: null, headerTitle: null, render: null };
-  obj[1] = _require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderCloseButton(require("GuildDirectoryEditDescriptionModalActionCreators.tsx").close);
+  obj[1] = _HeaderBackImage.getHeaderCloseButton(GuildDirectoryEditDescriptionModalActionCreators.close);
   obj[2] = function headerTitle() {
     return null;
   };
@@ -145,5 +148,5 @@ export default function GuildDirectoryEditDescriptionModal(arg0) {
   obj[EDIT_DESCRIPTION] = obj;
   obj[0] = obj;
   obj[1] = EDIT_DESCRIPTION;
-  return callback(_require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, obj);
+  return callback(_NavigationStack.Navigator, obj);
 };

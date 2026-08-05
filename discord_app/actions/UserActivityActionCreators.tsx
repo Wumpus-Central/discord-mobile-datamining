@@ -1,3 +1,5 @@
+import { dispatcher } from "../Dispatcher.tsx";
+import { asString } from "../modules/spotify/SpotifyUtils.tsx";
 // discord_app/actions/UserActivityActionCreators.tsx
 import sendRequest from "sendRequest";
 import sortActivity from "sortActivity";
@@ -59,14 +61,14 @@ function _getMetadata() {
 const result = require("ME").fileFinishedImporting("actions/UserActivityActionCreators.tsx");
 
 export const sync = function sync(activity, userId) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "ACTIVITY_SYNC", activity, userId };
   obj.dispatch(obj);
 };
 export const play = function play(closure_0, closure_1) {
   const _require = closure_0;
-  const spotifyMetadataFromActivity = _require("../modules/spotify/SpotifyUtils.tsx").getSpotifyMetadataFromActivity(closure_0, closure_1);
-  let obj = _require("../modules/spotify/SpotifyUtils.tsx");
+  const spotifyMetadataFromActivity = _asString.getSpotifyMetadataFromActivity(closure_0, closure_1);
+  let obj = _asString;
   spotifyMetadataFromActivity.then((metadata) => {
     let obj = callback(outer1_2[3]);
     obj = { type: "ACTIVITY_PLAY", activity: closure_0, userId: callback, metadata };

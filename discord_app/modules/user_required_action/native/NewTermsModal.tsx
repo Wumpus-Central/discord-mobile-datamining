@@ -1,3 +1,7 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { showSimpleActionSheet } from "../../action_sheet/native/showSimpleActionSheet.tsx";
+import { trackImpression } from "../../app_analytics/useTrackImpression.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/user_required_action/native/NewTermsModal.tsx
 import closure_3 from "ME";
 import _slicedToArray from "_slicedToArray";
@@ -20,11 +24,11 @@ function handleTouch() {
   closure_7.dismiss();
 }
 function handleMoreActions() {
-  let obj = require("../../action_sheet/native/showSimpleActionSheet.tsx") /* showSimpleActionSheet */;
+  let obj = showSimpleActionSheet /* showSimpleActionSheet */;
   obj = { key: "NewTermsModalMore", options: null, hasIcons: false };
   obj = { label: null, isDestructive: true, onPress: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["2jxGer"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["2jxGer"]);
   obj[2] = function onPress() {
     return callback(table[11]).logout("new_terms_modal");
   };
@@ -54,7 +58,7 @@ let result = require("noop").fileFinishedImporting("modules/user_required_action
 
 export default function NewTermsModal() {
   const tmp = createCacheKey();
-  const rect = require("../../safe_area/useSafeAreaInsets.native.tsx")();
+  const rect = useSafeAreaInsets();
   const top = rect.top;
   const memo = React.useMemo(() => action.getAction(), []);
   const tmp5 = callback2(React.useState(false), 2);
@@ -123,7 +127,7 @@ export default function NewTermsModal() {
   obj[0] = memo(503).ImpressionTypes.VIEW;
   obj[1] = memo(503).ImpressionNames.USER_AGREEMENTS;
   obj[2] = { required_action: memo };
-  require("../../app_analytics/useTrackImpression.tsx")(obj, {}, []);
+  trackImpression(obj, {}, []);
   let tmp10 = null;
   if (null != memo) {
     obj = { style: null, children: null };

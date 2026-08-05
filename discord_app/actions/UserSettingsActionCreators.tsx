@@ -1,3 +1,6 @@
+import { dispatcher } from "../Dispatcher.tsx";
+import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
+import { updateUserGuildSettings } from "../modules/user_settings/UserSettingsProtoActionCreators.tsx";
 // discord_app/actions/UserSettingsActionCreators.tsx
 import closure_3 from "SystemThemeState";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
@@ -14,35 +17,35 @@ const result = require("initialize").fileFinishedImporting("actions/UserSettings
 
 export default {
   overrideLocale(locale) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "USER_SETTINGS_LOCALE_OVERRIDE", locale };
     obj.dispatch(obj);
   },
   updatedUnsyncedSettings(settings) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "UNSYNCED_USER_SETTINGS_UPDATE", settings };
     obj.dispatch(obj);
   },
   setShouldSyncTextSettings(shouldSync) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { shouldSync, settings: null };
     if (shouldSync) {
       obj = {};
     } else {
       obj = { inlineAttachmentMedia: null, inlineEmbedMedia: null, renderEmbeds: null, renderReactions: null, animateEmoji: null, animateStickers: null, gifAutoPlay: null };
-      const InlineAttachmentMedia = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.InlineAttachmentMedia;
+      const InlineAttachmentMedia = explicitContentFromProto /* explicitContentFromProto */.InlineAttachmentMedia;
       obj[0] = InlineAttachmentMedia.getSetting();
-      const InlineEmbedMedia = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.InlineEmbedMedia;
+      const InlineEmbedMedia = explicitContentFromProto /* explicitContentFromProto */.InlineEmbedMedia;
       obj[1] = InlineEmbedMedia.getSetting();
-      const RenderEmbeds = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.RenderEmbeds;
+      const RenderEmbeds = explicitContentFromProto /* explicitContentFromProto */.RenderEmbeds;
       obj[2] = RenderEmbeds.getSetting();
-      const RenderReactions = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.RenderReactions;
+      const RenderReactions = explicitContentFromProto /* explicitContentFromProto */.RenderReactions;
       obj[3] = RenderReactions.getSetting();
-      const AnimateEmoji = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.AnimateEmoji;
+      const AnimateEmoji = explicitContentFromProto /* explicitContentFromProto */.AnimateEmoji;
       obj[4] = AnimateEmoji.getSetting();
-      const AnimateStickers = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.AnimateStickers;
+      const AnimateStickers = explicitContentFromProto /* explicitContentFromProto */.AnimateStickers;
       obj[5] = AnimateStickers.getSetting();
-      const GifAutoPlay = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.GifAutoPlay;
+      const GifAutoPlay = explicitContentFromProto /* explicitContentFromProto */.GifAutoPlay;
       obj[6] = GifAutoPlay.getSetting();
     }
     obj[1] = obj;
@@ -193,29 +196,29 @@ export default {
     })();
   },
   applySettingsOverride(settings) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "USER_SETTINGS_OVERRIDE_APPLY", settings };
     obj.dispatch(obj);
   },
   clearSettingsOverride(gifAutoPlay, animateEmoji, animateStickers) {
     const items = [...arguments];
-    require("../Dispatcher.tsx").dispatch({ type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: items });
+    dispatcher.dispatch({ type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: items });
   },
   updateLocale(arg0) {
     const _require = arg0;
-    const PreloadedUserSettingsActionCreators = _require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
+    const PreloadedUserSettingsActionCreators = _updateUserGuildSettings.PreloadedUserSettingsActionCreators;
     return PreloadedUserSettingsActionCreators.updateAsync("localization", (arg0) => {
       const StringValue = callback(outer1_2[8]).StringValue;
       arg0.locale = StringValue.create({ value: callback });
-    }, _require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay.INFREQUENT_USER_ACTION);
+    }, _updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
   },
   updateTheme(theme) {
     const _require = theme;
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { theme };
     obj.dispatch({ type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: { appearance: { settings: obj } } });
     if (initialize.shouldSync("appearance")) {
-      const PreloadedUserSettingsActionCreators = _require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
+      const PreloadedUserSettingsActionCreators = _updateUserGuildSettings.PreloadedUserSettingsActionCreators;
       PreloadedUserSettingsActionCreators.updateAsync("appearance", (arg0) => {
         if (outer1_7.DARK === theme) {
           let DARK = theme(outer1_2[7]).Theme.DARK;
@@ -229,13 +232,13 @@ export default {
           DARK = theme(outer1_2[7]).Theme.DARK;
         }
         arg0.theme = DARK;
-      }, _require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay.INFREQUENT_USER_ACTION);
+      }, _updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
     }
   }
 };
 export const saveGuildFolders = function saveGuildFolders(compatibleGuildFolders) {
   const _require = compatibleGuildFolders;
-  const PreloadedUserSettingsActionCreators = _require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
+  const PreloadedUserSettingsActionCreators = _updateUserGuildSettings.PreloadedUserSettingsActionCreators;
   return PreloadedUserSettingsActionCreators.updateAsync("guildFolders", (arg0) => {
     arg0.folders = compatibleGuildFolders.map((guildIds) => {
       const GuildFolder = callback(table[7]).GuildFolder;
@@ -268,7 +271,7 @@ export const saveGuildFolders = function saveGuildFolders(compatibleGuildFolders
       }
       return obj;
     });
-  }, _require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay.FREQUENT_USER_ACTION);
+  }, _updateUserGuildSettings.UserSettingsDelay.FREQUENT_USER_ACTION);
 };
 export const saveClientTheme = function saveClientTheme(backgroundGradientPresetId, INFREQUENT_USER_ACTION) {
   backgroundGradientPresetId = backgroundGradientPresetId.backgroundGradientPresetId;

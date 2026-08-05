@@ -1,3 +1,4 @@
+import { isStreamKey } from "../go_live/utils/StreamKeyUtils.tsx";
 // discord_app/modules/media_engine/MediaEngineStatsStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import initialize from "initialize";
@@ -323,7 +324,7 @@ const mediaEngineStatsStore = new MediaEngineStatsStore(require("dispatcher"), {
       if (null == mediaEngineConnectionId) {
         return false;
       } else {
-        const ownerId = require("../go_live/utils/StreamKeyUtils.tsx") /* isStreamKey */.decodeStreamKey(streamKey).ownerId;
+        const ownerId = isStreamKey /* isStreamKey */.decodeStreamKey(streamKey).ownerId;
         let tmp11;
         if (dependencyMap2[mediaEngineConnectionId] != null) {
           tmp11 = tmp10[ownerId];

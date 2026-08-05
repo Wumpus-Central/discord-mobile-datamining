@@ -1,3 +1,9 @@
+import { registerAsset } from "../../../../../_runtime/11968_registerAsset.js";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/contact_sync/native/components/ContactSyncInviteFriends.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -22,28 +28,28 @@ const result = require("mergeGuildAvatar").fileFinishedImporting("modules/contac
 
 export default function ContactSyncInviteFriends() {
   let tmp = createCacheKey();
-  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [mergeGuildAvatar];
   _require = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   obj = { children: null };
   obj = { style: tmp.container, children: null };
   const obj1 = { style: tmp.art, source: null };
-  obj1[1] = require("../../../../../_runtime/11968_registerAsset.js");
-  const items1 = [callback(require("../../../../components_native/common/FastImage.tsx"), obj1), , ];
+  obj1[1] = registerAsset;
+  const items1 = [callback(preload, obj1), , ];
   const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  let intl = _require("../../../../intl/index.native.tsx").intl;
-  obj2[4] = intl.string(_require("../../../../intl/index.native.tsx").t.ZxBpLf);
-  items1[1] = callback(_require("../../../../design/components/Text/native/Text.tsx").Text, obj2);
+  let intl = _getSystemLocale.intl;
+  obj2[4] = intl.string(_getSystemLocale.t.ZxBpLf);
+  items1[1] = callback(_Text.Text, obj2);
   const obj3 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = _require("../../../../intl/index.native.tsx").intl;
-  obj3[3] = intl2.string(_require("../../../../intl/index.native.tsx").t["fXtCJ+"]);
-  items1[2] = callback(_require("../../../../design/components/Text/native/Text.tsx").Text, obj3);
+  const intl2 = _getSystemLocale.intl;
+  obj3[3] = intl2.string(_getSystemLocale.t["fXtCJ+"]);
+  items1[2] = callback(_Text.Text, obj3);
   obj[1] = items1;
   const items2 = [callback2(View, obj), ];
   const obj4 = { style: tmp.button, children: null };
   const obj5 = { variant: "primary", size: "lg", text: null, onPress: null };
-  const intl3 = _require("../../../../intl/index.native.tsx").intl;
-  obj5[2] = intl3.string(_require("../../../../intl/index.native.tsx").t["6Qgrev"]);
+  const intl3 = _getSystemLocale.intl;
+  obj5[2] = intl3.string(_getSystemLocale.t["6Qgrev"]);
   obj5[3] = function onPress() {
     let obj = outer1_1(outer1_2[13]);
     obj = { friend_add_type: "Invite", source_page: outer1_6.CONTACT_SYNC_MODAL };
@@ -60,7 +66,7 @@ export default function ContactSyncInviteFriends() {
     const tmp5 = callback;
     callback(outer1_2[15]).showShareActionSheet({ message: formatToPlainStringResult }, tmp3.CONTACT_SYNC_MODAL);
   };
-  obj4[1] = callback(_require("../../../../design/components/Button/native/Button.native.tsx").Button, obj5);
+  obj4[1] = callback(_Button.Button, obj5);
   items2[1] = callback(View, obj4);
   obj[0] = items2;
   return callback2(closure_9, obj);

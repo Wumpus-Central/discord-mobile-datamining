@@ -1,3 +1,4 @@
+import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
 // discord_app/modules/guild_invite/native/InviteSettingsModal.tsx
 import _slicedToArray from "_slicedToArray";
 import dispatcher from "dispatcher";
@@ -172,5 +173,5 @@ export default function InviteSettingsModal() {
     obj[constants.ADVANCED] = obj;
     return obj;
   }, []);
-  return jsx(require("../../../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */.Navigator, { screens: memo, initialRouteName: constants.ADVANCED });
+  return jsx(NavigationStack /* NavigationStack */.Navigator, { screens: memo, initialRouteName: constants.ADVANCED });
 };

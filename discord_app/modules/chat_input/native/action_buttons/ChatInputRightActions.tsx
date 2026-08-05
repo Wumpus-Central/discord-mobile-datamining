@@ -1,3 +1,9 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { wrapChildrenDefault } from "../../../../design/components/TransitionGroup/TransitionGroup.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import { renderChatInputActionButtonGiftAndThread } from "ChatInputActionButtonGiftOrThread.tsx";
+import { FadeTransitionItem } from "ChatInputActionButtonTransitionItem.tsx";
+import { useChatInputFloatingBounce } from "useChatInputFloatingBounce.tsx";
 // discord_app/modules/chat_input/native/action_buttons/ChatInputRightActions.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -19,20 +25,20 @@ function LeftSlot(state) {
   let wrapperStyle;
   state = state.state;
   ({ cleanup, channel, onPress, slotWidth, wrapperStyle } = state);
-  let obj = { visible: state !== require("../../../../design/components/TransitionGroup/TransitionGroup.tsx") /* wrapChildrenDefault */.TransitionStates.YEETED, initiallyVisible: state !== require("../../../../design/components/TransitionGroup/TransitionGroup.tsx") /* wrapChildrenDefault */.TransitionStates.ENTERED, enterDelayMs: closure_6, onExitComplete: cleanup };
-  ({ animatedStyle, isInteractive } = require("useChatInputFloatingBounce.tsx")(obj));
+  let obj = { visible: state !== wrapChildrenDefault /* wrapChildrenDefault */.TransitionStates.YEETED, initiallyVisible: state !== wrapChildrenDefault /* wrapChildrenDefault */.TransitionStates.ENTERED, enterDelayMs: closure_6, onExitComplete: cleanup };
+  ({ animatedStyle, isInteractive } = useChatInputFloatingBounce(obj));
   obj = { style: items };
   items = [wrapperStyle, { width: slotWidth }, animatedStyle];
-  const tmp = require("useChatInputFloatingBounce.tsx")(obj);
-  const merged = Object.assign(require("ChatInputActionButtonTransitionItem.tsx") /* FadeTransitionItem */.interactivityProps(isInteractive));
-  obj.children = callback2(require("ChatInputActionButtonGiftOrThread.tsx"), { canStartThreads: false, channel, onPress, styleButton: "ct", shouldShowThread: "Instance" });
-  return callback2(require("../../../reanimated/ReanimatedRexport.tsx").View, obj);
+  const tmp = useChatInputFloatingBounce(obj);
+  const merged = Object.assign(FadeTransitionItem /* FadeTransitionItem */.interactivityProps(isInteractive));
+  obj.children = callback2(renderChatInputActionButtonGiftAndThread, { canStartThreads: false, channel, onPress, styleButton: "ct", shouldShowThread: "Instance" });
+  return callback2(ReanimatedRexport.View, obj);
 }
 let c4 = importAllResult;
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 let closure_9 = createCacheKey.createStyles(() => {
   let obj = { container: null, leftSlot: null };
-  obj = { flexDirection: "row", alignItems: "center", gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_ACTION_BUTTON_GAP };
+  obj = { flexDirection: "row", alignItems: "center", gap: Themes.modules.mobile.CHAT_INPUT_ACTION_BUTTON_GAP };
   obj[0] = obj;
   obj[1] = { alignItems: "center", justifyContent: "center" };
   return obj;

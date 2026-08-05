@@ -1,3 +1,4 @@
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 // discord_app/modules/parent_tools/hooks/useFamilyCenterActivities.tsx
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import { TeenActionDisplayType } from "items";
@@ -8,16 +9,16 @@ let result = require("defaultAreStatesEqual").fileFinishedImporting("modules/par
 export const useActionsForDisplayType = function useActionsForDisplayType(displayType) {
   const _require = displayType;
   const items = [freshTeenActivityWithMap];
-  return _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items, () => outer1_2.getActionsForDisplayType(closure_0));
+  return _defaultAreStatesEqual.useStateFromStoresArray(items, () => outer1_2.getActionsForDisplayType(closure_0));
 };
 export const useActionTotalsForDisplayType = function useActionTotalsForDisplayType(displayType) {
   const _require = displayType;
   const items = [freshTeenActivityWithMap];
-  return _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => outer1_2.getTotalForDisplayType(closure_0));
+  return _defaultAreStatesEqual.useStateFromStores(items, () => outer1_2.getTotalForDisplayType(closure_0));
 };
 export const useHasActionForAnyDisplayType = function useHasActionForAnyDisplayType() {
   const items = [freshTeenActivityWithMap];
-  return require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */.useStateFromStores(items, () => {
+  return defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => {
     const values = Object.values(closure_3);
     return values.some((closure_0) => totalForDisplayType.getTotalForDisplayType(closure_0) > 0);
   });
@@ -25,7 +26,7 @@ export const useHasActionForAnyDisplayType = function useHasActionForAnyDisplayT
 export const useFormattedTotalForDisplayType = function useFormattedTotalForDisplayType(displayType) {
   const _require = displayType;
   const items = [freshTeenActivityWithMap];
-  let num = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => outer1_2.getTotalForDisplayType(closure_0));
+  let num = _defaultAreStatesEqual.useStateFromStores(items, () => outer1_2.getTotalForDisplayType(closure_0));
   if (num == null) {
     num = 0;
   }
@@ -55,5 +56,5 @@ export const useFormattedTotalForDisplayType = function useFormattedTotalForDisp
   } else {
     return num;
   }
-  const obj = _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx");
+  const obj = _defaultAreStatesEqual;
 };

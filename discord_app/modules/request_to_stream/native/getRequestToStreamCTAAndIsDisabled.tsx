@@ -1,3 +1,8 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
+import { result } from "../../activities/utils/isInviteActive.tsx";
+import { messagesProxy } from "../RequestToStream.messages.js";
+import { canFulfillStreamRequest } from "../useCanFulfillStreamRequest.tsx";
 // discord_app/modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
@@ -6,14 +11,14 @@ const require = arg1;
 const result = require("canFulfillStreamRequest").fileFinishedImporting("modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx");
 
 export default function getRequestToStreamCTAAndIsDisabled(id) {
-  const tmp3 = callback(require("../useCanFulfillStreamRequest.tsx") /* canFulfillStreamRequest */.canFulfillStreamRequest(id, true), 2);
+  const tmp3 = callback(canFulfillStreamRequest /* canFulfillStreamRequest */.canFulfillStreamRequest(id, true), 2);
   id = id.getId();
-  const obj = require("../useCanFulfillStreamRequest.tsx") /* canFulfillStreamRequest */;
-  const obj2 = require("../../../utils/SnowflakeUtils.tsx");
-  const sum = require("../../../utils/SnowflakeUtils.tsx").extractTimestamp(id.id) + require("../../activities/utils/isInviteActive.tsx") /* result */.EMBED_LIFETIME;
-  const extractTimestampResult = require("../../../utils/SnowflakeUtils.tsx").extractTimestamp(id.id);
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  const stringResult = intl.string(require("../RequestToStream.messages.js")["5+172e"]);
+  const obj = canFulfillStreamRequest /* canFulfillStreamRequest */;
+  const obj2 = DISCORD_EPOCH;
+  const sum = DISCORD_EPOCH.extractTimestamp(id.id) + result /* result */.EMBED_LIFETIME;
+  const extractTimestampResult = DISCORD_EPOCH.extractTimestamp(id.id);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const stringResult = intl.string(messagesProxy["5+172e"]);
   if (tmp9) {
     const intl6 = tmp(1236).intl;
     let text = intl6.string(tmp6(2739).u4QmWl);

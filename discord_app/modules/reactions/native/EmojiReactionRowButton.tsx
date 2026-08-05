@@ -1,3 +1,9 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { ReactionIcon } from "../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { EmojiTypes } from "../../emojis/EmojiTypes.tsx";
 // discord_app/modules/reactions/native/EmojiReactionRowButton.tsx
 import noop from "noop";
 import { Platform } from "get ActivityIndicator";
@@ -9,7 +15,7 @@ import createCacheKey from "createCacheKey";
 const require = arg1;
 let closure_6 = createCacheKey.createStyles((width) => {
   let obj = { emojiContainer: null };
-  obj = { width, height: width, alignItems: "center", justifyContent: "center", backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_EMOJI_BUTTON_BACKGROUND, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.button.BORDER_RADIUS, overflow: "hidden" };
+  obj = { width, height: width, alignItems: "center", justifyContent: "center", backgroundColor: Themes.colors.MOBILE_EMOJI_BUTTON_BACKGROUND, borderRadius: Themes.modules.button.BORDER_RADIUS, overflow: "hidden" };
   obj[0] = obj;
   return obj;
 });
@@ -20,7 +26,7 @@ let closure_7 = createCacheKey.createStyles((width, fontSize, lineHeight) => {
   }
   obj = { emojiImage: obj, emojiText: null };
   obj = { width, height: width };
-  obj = { lineHeight, fontSize, color: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center", width: tmp, height: tmp };
+  obj = { lineHeight, fontSize, color: Themes.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center", width: tmp, height: tmp };
   const merged = Object.assign(tmp2);
   obj[1] = obj;
   return obj;
@@ -32,24 +38,24 @@ export const EmojiPickerRowButton = function EmojiPickerRowButton(iconSize) {
   let styles;
   let str = iconSize.iconSize;
   ({ onPress, styles } = iconSize);
-  let obj = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   const tmp = callback(iconSize.emojiContainerSize);
-  const obj2 = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
-  const unsafe_rawColors = require("../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
-  const isThemeLightResult = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme);
+  const obj2 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const unsafe_rawColors = Themes.unsafe_rawColors;
+  const isThemeLightResult = AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme);
   obj = { activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, hitSlop: 4, onPress: null, style: null, children: null };
   const intl = tmp2(1236).intl;
-  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.lfIHs4);
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.lfIHs4);
   obj[4] = onPress;
   const items = [tmp.emojiContainer, styles];
   obj[5] = items;
-  obj = { color: require("../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null };
+  obj = { color: AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null };
   if (str == null) {
     str = "md";
   }
   obj[1] = str;
-  obj[6] = jsx(require("../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx") /* ReactionIcon */.ReactionIcon, { color: require("../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
-  return jsx(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, { color: require("../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
+  obj[6] = jsx(ReactionIcon /* ReactionIcon */.ReactionIcon, { color: AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
+  return jsx(PressableBase /* PressableBase */.PressableOpacity, { color: AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
 };
 export const EmojiReactionRowButton = function EmojiReactionRowButton(emojiContainerSize) {
   let animated;
@@ -65,19 +71,19 @@ export const EmojiReactionRowButton = function EmojiReactionRowButton(emojiConta
   const tmp = callback(emojiContainerSize.emojiContainerSize);
   const memo = React.useMemo(() => ({ foreground: true }), []);
   obj = { androidRippleConfig: memo, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, disabled: null, hitSlop: 4, onPress: null, style: null, children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   let name;
   if (animated != null) {
     name = animated.name;
   }
-  obj[3] = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["/iYSo6"], { emojiName: name });
+  obj[3] = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["/iYSo6"], { emojiName: name });
   obj[4] = null == animated;
   obj[6] = onPress;
   const items = [tmp.emojiContainer, styles];
   obj[7] = items;
   if (null == animated) {
     obj[8] = null;
-    return tmp4(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+    return tmp4(PressableBase /* PressableBase */.PressableOpacity, obj);
   } else {
     obj = { textEmojiStyle: null, fastImageStyle: null, name: null, src: null };
     ({ emojiText: obj3[0], emojiImage: obj3[1] } = tmp2);
@@ -106,6 +112,6 @@ export const getEmojiKey = function getEmojiKey(type, arg1) {
   if (null == type) {
     return arg1;
   } else {
-    type.type === require("../../emojis/EmojiTypes.tsx") /* EmojiTypes */.EmojiTypes.UNICODE ? type.surrogates : type.id;
+    type.type === EmojiTypes /* EmojiTypes */.EmojiTypes.UNICODE ? type.surrogates : type.id;
   }
 };

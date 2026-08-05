@@ -1,3 +1,5 @@
+import { _createGatewayCheckoutContext } from "../../utils/BillingUtils.tsx";
+import { formatSingleCurrencyPrice } from "../../utils/PriceUtils.tsx";
 // discord_app/stores/native/IAPStore.android.tsx
 import GPlayConnectionState from "GPlayConnectionState";
 import { CurrencyCodes } from "sum";
@@ -9,8 +11,8 @@ function updateProduct(currencyCode) {
   const result = currencyCode.price / 100;
   if ("BG" === c14) {
     if (formatted === CurrencyCodes.EUR) {
-      let formatDualPriceForBGResult = require("../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */.formatDualPriceForBG(result, { convertToMajorUnits: false });
-      const obj2 = require("../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */;
+      let formatDualPriceForBGResult = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */.formatDualPriceForBG(result, { convertToMajorUnits: false });
+      const obj2 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
     }
     let obj = {};
     const merged = Object.assign(currencyCode);
@@ -19,7 +21,7 @@ function updateProduct(currencyCode) {
     obj.priceString = formatDualPriceForBGResult;
     return obj;
   }
-  obj = require("../../utils/PriceUtils.tsx") /* formatSingleCurrencyPrice */;
+  obj = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
   formatDualPriceForBGResult = obj.formatSingleCurrencyPrice(result, formatted, { convertToMajorUnits: false });
 }
 function skusLoaded(arg0) {
@@ -62,8 +64,8 @@ function skusLoaded(arg0) {
       let c13 = false;
     }
   } catch (tmp7) {
-    let result = require("../../utils/BillingUtils.tsx") /* _createGatewayCheckoutContext */.captureBillingException(tmp7);
-    const obj = require("../../utils/BillingUtils.tsx") /* _createGatewayCheckoutContext */;
+    let result = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */.captureBillingException(tmp7);
+    const obj = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */;
   }
 }
 GPlayConnectionState = GPlayConnectionState.GPlayConnectionState;

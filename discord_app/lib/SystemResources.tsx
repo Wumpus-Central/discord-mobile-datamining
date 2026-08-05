@@ -1,3 +1,4 @@
+import { getHermesInstrumentedStatsSummary } from "../utils/ProcessUtils.native.tsx";
 // discord_app/lib/SystemResources.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
@@ -24,7 +25,7 @@ prototype["getStats"] = function getStats() {
   const report = cpuHistogram.getReport();
   const memoryHistogram = this.memoryHistogram;
   const report1 = memoryHistogram.getReport();
-  let obj = require("../utils/ProcessUtils.native.tsx");
+  let obj = getHermesInstrumentedStatsSummary;
   const cumulativeCPUUsage = obj.getCumulativeCPUUsage();
   let result;
   if (null != this.startCPU) {
@@ -47,10 +48,10 @@ prototype["getStats"] = function getStats() {
 };
 prototype["takeSample"] = function takeSample() {
   const self = this;
-  const cumulativeCPUUsage = require("../utils/ProcessUtils.native.tsx").getCumulativeCPUUsage();
-  const obj = require("../utils/ProcessUtils.native.tsx");
+  const cumulativeCPUUsage = getHermesInstrumentedStatsSummary.getCumulativeCPUUsage();
+  const obj = getHermesInstrumentedStatsSummary;
   const tmp = importDefault;
-  const currentMemoryUsageKB = require("../utils/ProcessUtils.native.tsx").getCurrentMemoryUsageKB();
+  const currentMemoryUsageKB = getHermesInstrumentedStatsSummary.getCurrentMemoryUsageKB();
   if (null != cumulativeCPUUsage) {
     let flag = true;
     if (null != self.lastCPU) {

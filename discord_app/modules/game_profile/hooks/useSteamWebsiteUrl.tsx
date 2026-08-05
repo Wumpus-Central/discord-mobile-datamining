@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/game_profile/hooks/useSteamWebsiteUrl.tsx
 import handleLoadMessages from "handleLoadMessages";
 import { Distributors } from "ME";
@@ -12,7 +13,7 @@ export const useSteamWebsiteUrl = function useSteamWebsiteUrl(id) {
   const _require = id;
   const items = [handleLoadMessages];
   const items1 = [id];
-  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     if (null == id) {
       return null;
     } else {

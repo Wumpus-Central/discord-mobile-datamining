@@ -1,3 +1,4 @@
+import { TransferOwnershipModalActionCreators } from "TransferOwnershipModalActionCreators.tsx";
 // discord_app/modules/guild_settings/safety/native/TransferOwnershipModal.tsx
 import encodeProperties from "encodeProperties";
 import noop from "noop";
@@ -8,7 +9,7 @@ let c5;
 let closure_6;
 const require = arg1;
 function closeModal() {
-  require("TransferOwnershipModalActionCreators.tsx").close();
+  TransferOwnershipModalActionCreators.close();
 }
 ({ TransferOwnershipModalScenes: c5, TransferOwnershipVerificationTypes: closure_6 } = TransferOwnershipModalScenes);
 let result = require("TransferOwnershipModalScenes").fileFinishedImporting("modules/guild_settings/safety/native/TransferOwnershipModal.tsx");

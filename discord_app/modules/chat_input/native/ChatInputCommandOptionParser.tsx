@@ -1,3 +1,11 @@
+import { registerAsset } from "../../../../_runtime/07751_registerAsset.js";
+import { getEmojiUnavailableReason } from "../../../utils/EmojiUtils.tsx";
+import { AutocompleteFormDivider } from "../../autocompleter/native/AutocompleteUtils.tsx";
+import { apexExperiment } from "../../game_mentions/GameMentionsMobileExperiment.tsx";
+import { getGameMediaRefURL } from "../../games/getGameMediaRefURL.tsx";
+import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
+import { getUsers } from "ApplicationCommandOptionValueParser.tsx";
+import { addRule } from "ChatInputParser.tsx";
 // discord_app/modules/chat_input/native/ChatInputCommandOptionParser.tsx
 import { Image } from "Themes";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -46,10 +54,10 @@ function findGameMentionTokens(text, name, items) {
   return obj;
 }
 function buildGameMentionResult(id) {
-  let uri = require("../../games/getGameMediaRefURL.tsx")(id.id, id.icon, { size: 32 });
+  let uri = getGameMediaRefURL(id.id, id.icon, { size: 32 });
   const obj = { location: 0, length: callback(id.name).length, icon: null, iconSize: 16, iconCornerRadius: 4, iconSpacing: 4 };
   if (obj2.isNullOrEmpty(uri)) {
-    uri = Image.resolveAssetSource(require("../../../../_runtime/07751_registerAsset.js")).uri;
+    uri = Image.resolveAssetSource(registerAsset).uri;
   }
   obj[2] = uri;
   return obj;
@@ -138,7 +146,7 @@ export const getMatchedOptionsWithValue = (length2, activeCommand) => {
                 let obj1 = { type: null, option: null };
                 let tmp13 = require;
                 let tmp14 = dependencyMap;
-                obj1[0] = require("ChatInputParser.tsx") /* addRule */.ChatInputParseResultDataType.COMMAND_OPTION;
+                obj1[0] = addRule /* addRule */.ChatInputParseResultDataType.COMMAND_OPTION;
                 obj1[1] = options[num];
                 obj[2] = obj1;
                 let addResult = set.add(num);
@@ -218,7 +226,7 @@ export const getMatchedOptions = (arg0, activeCommand) => {
                 obj = { type: null, option: null };
                 let tmp5 = require;
                 let tmp6 = dependencyMap;
-                obj[0] = require("ChatInputParser.tsx") /* addRule */.ChatInputParseResultDataType.COMMAND_OPTION;
+                obj[0] = addRule /* addRule */.ChatInputParseResultDataType.COMMAND_OPTION;
                 obj[1] = options[num];
                 obj[2] = obj;
                 let arr = items.push(obj);
@@ -270,7 +278,7 @@ export const getEmojiHighlightNodes = function getEmojiHighlightNodes(channel, a
       if (null != byId) {
         let tmp5 = importDefault;
         let tmp6 = dependencyMap;
-        let obj2 = require("../../../utils/EmojiUtils.tsx");
+        let obj2 = getEmojiUnavailableReason;
         let obj = { emoji: null, channel: null, intention: null };
         obj[0] = byId;
         obj[1] = channel;
@@ -431,10 +439,10 @@ export const getGameHighlightNodes = function getGameHighlightNodes(mentionGames
   return items1;
 };
 export const getGameMentionInputNodes = function getGameMentionInputNodes(arr) {
-  const GameMentionsMobileExperiment = _require("../../game_mentions/GameMentionsMobileExperiment.tsx").GameMentionsMobileExperiment;
+  const GameMentionsMobileExperiment = _apexExperiment.GameMentionsMobileExperiment;
   const config = GameMentionsMobileExperiment.getConfig({ location: "game mention input highlight" });
   if (config.enabled) {
-    const IncludeGameMentionsInAutocomplete = _require("../../user_settings/UserSettings.tsx").IncludeGameMentionsInAutocomplete;
+    const IncludeGameMentionsInAutocomplete = _explicitContentFromProto.IncludeGameMentionsInAutocomplete;
     if (IncludeGameMentionsInAutocomplete.getSetting()) {
       if (!tmp4) {
         arr = closure_9;
@@ -445,7 +453,7 @@ export const getGameMentionInputNodes = function getGameMentionInputNodes(arr) {
           do {
             let tmp7 = _require;
             let tmp8 = dependencyMap;
-            let obj = _require("../../autocompleter/native/AutocompleteUtils.tsx");
+            let obj = _AutocompleteFormDivider;
             let tmp9 = index;
             if (obj.isWhitespaceSeparatingBoundary(arr, index)) {
               arr = items.push(index);
@@ -489,7 +497,7 @@ export const getChannelHighlightNodes = function getChannelHighlightNodes(channe
   let _loop4Result;
   const _require = arg1;
   let items = [];
-  const dependencyMap = _require("ApplicationCommandOptionValueParser.tsx").getChannels(channel);
+  const dependencyMap = _getUsers.getChannels(channel);
   let c3 = 0;
   function _loop4() {
     let arr = lib;

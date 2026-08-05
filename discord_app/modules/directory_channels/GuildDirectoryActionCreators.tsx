@@ -1,3 +1,5 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { TrackedHTTPUtils } from "../../utils/TrackedHTTPUtils.tsx";
 // discord_app/modules/directory_channels/GuildDirectoryActionCreators.tsx
 import importDefaultResult from "dispatcher";
 import getSearchState from "getSearchState";
@@ -493,16 +495,16 @@ export const addDirectoryGuildEntry = function addDirectoryGuildEntry(c0, id, c3
   return applyArgumentsResult;
 };
 export const removeDirectoryGuildEntry = function removeDirectoryGuildEntry(channelId, guildId) {
-  let obj = require("../../utils/TrackedHTTPUtils.tsx");
+  let obj = TrackedHTTPUtils;
   obj = { url: Endpoints.DIRECTORY_CHANNEL_ENTRY(channelId, guildId), trackedActionData: null, rejectWithError: true };
   obj = { event: callback(503).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE, properties: obj1 };
   obj[1] = obj;
   obj.delete(obj);
-  require("../../Dispatcher.tsx").dispatch({ type: "GUILD_DIRECTORY_ENTRY_DELETE", channelId, guildId });
+  dispatcher.dispatch({ type: "GUILD_DIRECTORY_ENTRY_DELETE", channelId, guildId });
 };
 export const searchDirectoryEntries = importDefaultResult3Result;
 export const clearDirectorySearch = function clearDirectorySearch(id) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_DIRECTORY_SEARCH_CLEAR", channelId: id };
   obj.dispatch(obj);
 };
@@ -517,7 +519,7 @@ export const updateDirectoryEntry = function updateDirectoryEntry(channelId, gui
   return applyArgumentsResult;
 };
 export const selectDirectoryCategory = function selectDirectoryCategory(id, value) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_DIRECTORY_CATEGORY_SELECT", channelId: id, categoryId: value };
   obj.dispatch(obj);
 };

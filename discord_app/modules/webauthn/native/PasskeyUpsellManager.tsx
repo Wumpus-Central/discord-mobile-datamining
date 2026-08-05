@@ -1,3 +1,7 @@
+import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { _crypto } from "../../../utils/MFAUtils.tsx";
+import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import { PasskeyUpsellActionCreators } from "PasskeyUpsellActionCreators.tsx";
 // discord_app/modules/webauthn/native/PasskeyUpsellManager.tsx
 import fetchFingerprint from "fetchFingerprint";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -22,7 +26,7 @@ class PasskeyUpsellManager extends tmp2 {
 const prototype = PasskeyUpsellManager.prototype;
 prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
   if (c8) {
-    if (require("../../../utils/MFAUtils.tsx") /* _crypto */.hasWebAuthn) {
+    if (_crypto /* _crypto */.hasWebAuthn) {
       if (loginStatus.getLoginStatus() === LoginStates.NONE) {
         if (obj.attemptedPasswordLogin()) {
           let tmpResult = tmp(4101);
@@ -33,8 +37,8 @@ prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
                 currentUser = currentUser.getCurrentUser();
                 if (tmp6) {
                   if (obj3.hasFetchedCredentials()) {
-                    require("PasskeyUpsellActionCreators.tsx").openPasskeyUpsell();
-                    const obj6 = require("PasskeyUpsellActionCreators.tsx");
+                    PasskeyUpsellActionCreators.openPasskeyUpsell();
+                    const obj6 = PasskeyUpsellActionCreators;
                   } else if (!c7) {
                     c7 = true;
                     const webAuthnCredentials = tmp(5740).fetchWebAuthnCredentials();
@@ -59,9 +63,9 @@ prototype["handleLogout"] = function handleLogout() {
   let c8 = false;
 };
 prototype["markDismissed"] = function markDismissed(USER_DISMISS) {
-  let obj = require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */;
+  let obj = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */;
   obj = { dismissAction: USER_DISMISS, forceTrack: true };
-  return obj.UNSAFE_markDismissibleContentAsDismissed(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.PASSWORDLESS_UPSELL, obj);
+  return obj.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.PASSWORDLESS_UPSELL, obj);
 };
 const passkeyUpsellManager = new PasskeyUpsellManager();
 let result = require("hasFetchedCredentials").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellManager.tsx");

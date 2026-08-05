@@ -1,3 +1,4 @@
+import { guildHasOnboardingHome } from "guildHasOnboardingHome.tsx";
 // discord_app/modules/guild_onboarding_home/hasPendingMemberAction.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -14,7 +15,7 @@ export const hasPendingMemberAction = function hasPendingMemberAction(guild_id, 
   channel = channel.getChannel(selectedChannelId);
   let hasItem = null != guild && null != channel;
   if (hasItem) {
-    hasItem = require("guildHasOnboardingHome.tsx")(guild);
+    hasItem = guildHasOnboardingHome(guild);
   }
   if (hasItem) {
     const features = guild.features;

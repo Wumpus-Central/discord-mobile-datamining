@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/stage_channels/useGuildEligibleForStageChannels.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
@@ -25,7 +26,7 @@ export const useGuildEligibleForStageChannels = function useGuildEligibleForStag
   const _require = arg0;
   let items = [createGuildRecordFromRust];
   const items1 = [arg0];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let obj;
     const items = [outer1_2];
     [obj] = items;

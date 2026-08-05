@@ -1,3 +1,4 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/chat_input/native/ChatInput.tsx
 import INITIAL_STATE from "INITIAL_STATE";
 import getChatInputMaxHeight from "getChatInputMaxHeight";
@@ -46,20 +47,20 @@ const require = arg1;
 ({ InAppCameraUsedCameraPreviewTypes: closure_32, MediaKeyboardTarget: closure_33 } = DRAG_HANDLE);
 ({ jsx: closure_34, jsxs: closure_35, Fragment: closure_36 } = jsxProd);
 let closure_37 = createCacheKey.createStyles((arg0, arg1, arg2) => {
-  let obj = { position: "relative", paddingVertical: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, paddingHorizontal: closure_21 - closure_22, backgroundColor: null, borderTopWidth: 1, borderColor: null };
+  let obj = { position: "relative", paddingVertical: Themes.space.PX_8, paddingHorizontal: closure_21 - closure_22, backgroundColor: null, borderTopWidth: 1, borderColor: null };
   let BACKGROUND_BASE_LOW = arg0;
   if (arg0 == null) {
     BACKGROUND_BASE_LOW = tmp(712).colors.BACKGROUND_BASE_LOW;
   }
   obj = { container: null, containerInner: null, inputDefault: null, input: null, rightAccessory: null, refreshButtonAlignment: null, accessories: null, floatingContainer: null, floatingInputBox: null, floatingInputBoxPressed: null, floatingInputBoxTyping: null, floatingMainContents: null, inputFlat: null, floatingScrimOverlap: null, overflowVisible: null };
   obj[3] = BACKGROUND_BASE_LOW;
-  obj[5] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE;
+  obj[5] = Themes.colors.BORDER_SUBTLE;
   obj[0] = obj;
   obj[1] = { flexDirection: "row", alignItems: "flex-end" };
   obj = {};
   const merged = Object.assign(arg1 ? { alignSelf: "stretch", marginLeft: 0, marginTop: 0 } : { flex: 1, marginLeft: 6 });
   obj[2] = obj;
-  const obj1 = { flexDirection: "row", alignItems: "stretch", borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_BORDER_RADIUS, paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_PILL_PADDING, marginHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_PILL_MARGIN_HORIZONTAL, overflow: "hidden", flex: 1, borderWidth: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INPUT_BORDER_DEFAULT, backgroundColor: null };
+  const obj1 = { flexDirection: "row", alignItems: "stretch", borderRadius: Themes.modules.mobile.CHAT_INPUT_BORDER_RADIUS, paddingHorizontal: Themes.modules.mobile.CHAT_INPUT_PILL_PADDING, marginHorizontal: Themes.modules.mobile.CHAT_INPUT_PILL_MARGIN_HORIZONTAL, overflow: "hidden", flex: 1, borderWidth: Themes.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: Themes.colors.INPUT_BORDER_DEFAULT, backgroundColor: null };
   if (null != arg0) {
     let CHAT_INPUT_BACKGROUND = tmp(712).colors.CARD_SECONDARY_BG;
   } else {
@@ -67,21 +68,21 @@ let closure_37 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   }
   obj1[9] = CHAT_INPUT_BACKGROUND;
   obj[3] = obj1;
-  obj[4] = { flexDirection: "column", justifyContent: "flex-end", alignItems: "center", paddingVertical: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_PILL_PADDING };
-  const obj2 = { flexDirection: "column", justifyContent: "flex-end", alignItems: "center", paddingVertical: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_PILL_PADDING };
+  obj[4] = { flexDirection: "column", justifyContent: "flex-end", alignItems: "center", paddingVertical: Themes.modules.mobile.CHAT_INPUT_PILL_PADDING };
+  const obj2 = { flexDirection: "column", justifyContent: "flex-end", alignItems: "center", paddingVertical: Themes.modules.mobile.CHAT_INPUT_PILL_PADDING };
   const tmp3 = arg1 ? { alignSelf: "stretch", marginLeft: 0, marginTop: 0 } : { flex: 1, marginLeft: 6 };
-  obj[5] = { marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH };
+  obj[5] = { marginBottom: Themes.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH };
   obj[6] = { position: "absolute", bottom: "100%", left: 0, right: 0 };
-  const obj3 = { marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH };
-  obj[7] = { borderTopWidth: 0, borderColor: "transparent", borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.none, backgroundColor: "transparent", paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: 0, overflow: "visible" };
-  const obj4 = { borderTopWidth: 0, borderColor: "transparent", borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.none, backgroundColor: "transparent", paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: 0, overflow: "visible" };
-  obj[8] = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT, borderWidth: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_CHATINPUT_BORDER_DEFAULT, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, flexDirection: "column", overflow: "hidden" };
-  const obj5 = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT, borderWidth: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_CHATINPUT_BORDER_DEFAULT, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, flexDirection: "column", overflow: "hidden" };
-  obj[9] = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_CHATINPUT_BACKGROUND_ACTIVE, borderColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_CHATINPUT_BORDER_ACTIVE };
+  const obj3 = { marginBottom: Themes.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH };
+  obj[7] = { borderTopWidth: 0, borderColor: "transparent", borderRadius: Themes.radii.none, backgroundColor: "transparent", paddingHorizontal: Themes.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: 0, overflow: "visible" };
+  const obj4 = { borderTopWidth: 0, borderColor: "transparent", borderRadius: Themes.radii.none, backgroundColor: "transparent", paddingHorizontal: Themes.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: 0, overflow: "visible" };
+  obj[8] = { backgroundColor: Themes.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT, borderWidth: Themes.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: Themes.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, borderRadius: Themes.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, flexDirection: "column", overflow: "hidden" };
+  const obj5 = { backgroundColor: Themes.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT, borderWidth: Themes.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: Themes.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, borderRadius: Themes.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, flexDirection: "column", overflow: "hidden" };
+  obj[9] = { backgroundColor: Themes.colors.MOBILE_CHATINPUT_BACKGROUND_ACTIVE, borderColor: Themes.colors.MOBILE_CHATINPUT_BORDER_ACTIVE };
   obj[10] = { shadowOpacity: 0, elevation: 0 };
-  const obj6 = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_CHATINPUT_BACKGROUND_ACTIVE, borderColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_CHATINPUT_BORDER_ACTIVE };
-  obj[11] = { flexDirection: "row", alignItems: "flex-end", paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL, paddingVertical: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL, gap: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_FLOATING_CONTENT_GAP };
-  const obj7 = { flexDirection: "row", alignItems: "flex-end", paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL, paddingVertical: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL, gap: require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_FLOATING_CONTENT_GAP };
+  const obj6 = { backgroundColor: Themes.colors.MOBILE_CHATINPUT_BACKGROUND_ACTIVE, borderColor: Themes.colors.MOBILE_CHATINPUT_BORDER_ACTIVE };
+  obj[11] = { flexDirection: "row", alignItems: "flex-end", paddingHorizontal: Themes.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL, paddingVertical: Themes.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL, gap: Themes.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_GAP };
+  const obj7 = { flexDirection: "row", alignItems: "flex-end", paddingHorizontal: Themes.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL, paddingVertical: Themes.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL, gap: Themes.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_GAP };
   let num = -6;
   if (obj11.isAndroid()) {
     num = -5;

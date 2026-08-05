@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { set } from "../../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
 // discord_app/modules/collectibles/hooks/useProductDisableState.tsx
 import reset from "reset";
 
@@ -5,7 +7,7 @@ const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useProductDisableState.tsx");
 
 export const useProductDisableState = function useProductDisableState(skuId) {
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [reset];
   const stateFromStores = obj.useStateFromStores(items, () => {
     premiumSubscription = premiumSubscription.getPremiumSubscription();
@@ -15,7 +17,7 @@ export const useProductDisableState = function useProductDisableState(skuId) {
     }
     return true === prop;
   });
-  const ALL = require("../../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx") /* set */.FractionalPremiumSKUsSets.ALL;
+  const ALL = set /* set */.FractionalPremiumSKUsSets.ALL;
   if (ALL.has(skuId)) {
     obj = { isDisabled: null, disabledReason: null };
     obj[0] = stateFromStores;

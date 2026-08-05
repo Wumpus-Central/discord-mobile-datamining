@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/main_tabs_v2/native/channel/header/GuildChannelHeader.tsx
 import set from "set";
 import importAllResult from "ICON_SIZE";
@@ -30,7 +31,7 @@ function GuildChannelMemberCount(channel) {
   if (flag === undefined) {
     flag = false;
   }
-  const token = channel(3989).useToken(require("../../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHANNEL_HEADER_ICON_SIZE);
+  const token = channel(3989).useToken(Themes.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
   let obj = channel(3989);
   const items = [getMemberListId, initialize];
   const stateFromStoresObject = channel(589).useStateFromStoresObject(items, () => {

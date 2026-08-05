@@ -1,3 +1,5 @@
+import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
+import { handleImageLoad } from "../image_upload/ImageLoaderUtils.tsx";
 // discord_app/modules/image_proxy/ImageProxyUtils.tsx
 import set from "set";
 
@@ -32,7 +34,7 @@ export const getSizedImageProxyURL = function getSizedImageProxyURL(value, arg1)
   let keepAspectRatio;
   let size;
   ({ size, keepAspectRatio } = arg1);
-  const str = require("../../utils/URLUtils.tsx").toURLSafe(value);
+  const str = isDiscordProxiedAssetUrl.toURLSafe(value);
   if (null != str) {
     let startsWithResult = set.has(str.hostname);
     if (startsWithResult) {
@@ -42,13 +44,13 @@ export const getSizedImageProxyURL = function getSizedImageProxyURL(value, arg1)
     if (startsWithResult) {
       if (null != size) {
         const _String = String;
-        const obj2 = require("../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */;
-        const StringResult = String(obj2.getBestMediaProxySize(size * require("../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */.getDevicePixelRatio()));
+        const obj2 = handleImageLoad /* handleImageLoad */;
+        const StringResult = String(obj2.getBestMediaProxySize(size * handleImageLoad /* handleImageLoad */.getDevicePixelRatio()));
         const searchParams = str.searchParams;
         const result = searchParams.set("width", StringResult);
         const searchParams2 = str.searchParams;
         const result1 = searchParams2.set("height", StringResult);
-        const obj3 = require("../image_upload/ImageLoaderUtils.tsx") /* handleImageLoad */;
+        const obj3 = handleImageLoad /* handleImageLoad */;
       }
       if (null != keepAspectRatio) {
         const searchParams3 = str.searchParams;

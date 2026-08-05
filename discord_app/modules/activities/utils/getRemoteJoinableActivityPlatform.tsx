@@ -1,3 +1,4 @@
+import { hasFlag } from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/modules/activities/utils/getRemoteJoinableActivityPlatform.tsx
 import isConnected from "isConnected";
 import handleUpdate from "handleUpdate";
@@ -62,7 +63,7 @@ export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActiv
         }
         return tmp4;
       }
-      obj5 = require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
+      obj5 = hasFlag /* hasFlag */;
       tmp = constants;
     }
     return null;

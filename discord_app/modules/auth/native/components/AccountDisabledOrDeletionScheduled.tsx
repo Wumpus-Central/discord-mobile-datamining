@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/auth/native/components/AccountDisabledOrDeletionScheduled.tsx
 import noop from "noop";
 import { View } from "set";
@@ -11,7 +12,7 @@ let metroImportAll;
 const require = arg1;
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
-  const space = require("../../../../../discord_common/js/packages/tokens/native.tsx").space;
+  const space = Themes.space;
   if (arg0) {
     let PX_16 = space.PX_8;
     let tmp4 = tmp;

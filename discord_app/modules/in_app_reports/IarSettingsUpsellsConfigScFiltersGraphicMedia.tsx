@@ -1,16 +1,19 @@
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { resolveGoreSettingWithDefaults } from "../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx";
 // discord_app/modules/in_app_reports/IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx
 let obj = {
   getTitle() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.RVX1zT);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.RVX1zT);
   },
   getDisabledTitle() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.SYkEBi);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.SYkEBi);
   },
   getDescription() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.aqlmp8);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.aqlmp8);
   },
   eligibleReportSubtypes: null,
   onApply: null,
@@ -22,17 +25,17 @@ obj[4] = function onApply() {
   let goreContentFriendDm;
   let goreContentGuilds;
   let goreContentNonFriendDm;
-  let obj = require("../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx") /* resolveGoreSettingWithDefaults */;
-  const goreContentSettingOrDefault = require("../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx") /* resolveGoreSettingWithDefaults */.getGoreContentSettingOrDefault();
+  let obj = resolveGoreSettingWithDefaults /* resolveGoreSettingWithDefaults */;
+  const goreContentSettingOrDefault = resolveGoreSettingWithDefaults /* resolveGoreSettingWithDefaults */.getGoreContentSettingOrDefault();
   obj = {};
   ({ goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm } = goreContentSettingOrDefault);
-  if (goreContentGuilds === require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.SHOW) {
+  if (goreContentGuilds === create /* create */.ExplicitContentRedaction.SHOW) {
     obj.goreContentGuilds = tmp(1306).ExplicitContentRedaction.BLUR;
   }
-  if (goreContentFriendDm === require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.SHOW) {
+  if (goreContentFriendDm === create /* create */.ExplicitContentRedaction.SHOW) {
     obj.goreContentFriendDm = tmp(1306).ExplicitContentRedaction.BLUR;
   }
-  if (goreContentNonFriendDm === require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.SHOW) {
+  if (goreContentNonFriendDm === create /* create */.ExplicitContentRedaction.SHOW) {
     obj.goreContentNonFriendDm = tmp(1306).ExplicitContentRedaction.BLUR;
   }
   return obj.updateGoreContentSetting(obj);
@@ -41,10 +44,10 @@ obj[5] = function predicate() {
   let goreContentFriendDm;
   let goreContentGuilds;
   let goreContentNonFriendDm;
-  const goreContentSettingOrDefault = require("../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx") /* resolveGoreSettingWithDefaults */.getGoreContentSettingOrDefault();
+  const goreContentSettingOrDefault = resolveGoreSettingWithDefaults /* resolveGoreSettingWithDefaults */.getGoreContentSettingOrDefault();
   ({ goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm } = goreContentSettingOrDefault);
-  const obj = require("../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx") /* resolveGoreSettingWithDefaults */;
-  return goreContentGuilds === require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.SHOW || goreContentFriendDm === require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.SHOW || goreContentNonFriendDm === require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.ExplicitContentRedaction.SHOW;
+  const obj = resolveGoreSettingWithDefaults /* resolveGoreSettingWithDefaults */;
+  return goreContentGuilds === create /* create */.ExplicitContentRedaction.SHOW || goreContentFriendDm === create /* create */.ExplicitContentRedaction.SHOW || goreContentNonFriendDm === create /* create */.ExplicitContentRedaction.SHOW;
 };
 const result = require("getSystemLocale").fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx");
 

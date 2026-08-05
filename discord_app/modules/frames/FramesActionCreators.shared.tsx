@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/frames/FramesActionCreators.shared.tsx
 import leaveCurrentFrame from "leaveCurrentFrame";
 import map from "map";
@@ -332,16 +333,16 @@ export const launchFrame = function launchFrame(closure_0) {
   return applyArgumentsResult;
 };
 export const stopFrame = function stopFrame(applicationId) {
-  require("../../Dispatcher.tsx").dispatch({ type: "FRAME_STOP", applicationId: applicationId.applicationId });
+  dispatcher.dispatch({ type: "FRAME_STOP", applicationId: applicationId.applicationId });
 };
 export const updateFrameLayoutMode = function updateFrameLayoutMode(arg0) {
   let applicationId;
   let layoutMode;
   ({ applicationId, layoutMode } = arg0);
-  require("../../Dispatcher.tsx").dispatch({ type: "FRAME_UPDATE_LAYOUT_MODE", applicationId, layoutMode });
+  dispatcher.dispatch({ type: "FRAME_UPDATE_LAYOUT_MODE", applicationId, layoutMode });
 };
 export const updateFramePanelMode = function updateFramePanelMode(PIP) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "FRAME_SET_PANEL_MODE", activityPanelMode: PIP };
   obj.dispatch(obj);
 };

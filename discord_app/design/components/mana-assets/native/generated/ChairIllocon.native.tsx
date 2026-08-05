@@ -1,3 +1,5 @@
+import { metadata } from "../../../../../../discord_assets/assets/mana/asset-library/generated/ChairIllocon-2x.png.js";
+import { preload } from "../../../../../components_native/common/FastImage.tsx";
 // discord_app/design/components/mana-assets/native/generated/ChairIllocon.native.tsx
 import { jsx } from "jsxProd";
 
@@ -14,12 +16,12 @@ export const ChairIllocon = function ChairIllocon(size) {
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = require("../../../../../../discord_assets/assets/mana/asset-library/generated/ChairIllocon-2x.png.js");
+  obj[0] = metadata;
   obj[1] = obj;
   const items = [{ width: num, height: num }];
   obj[2] = items;
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(require("../../../../../components_native/common/FastImage.tsx"), { uri: null });
+  return jsx(preload, { uri: null });
 };

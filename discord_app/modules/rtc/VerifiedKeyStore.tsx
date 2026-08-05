@@ -1,3 +1,5 @@
+import { set } from "../../../discord_common/js/packages/libdave/index.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/rtc/VerifiedKeyStore.tsx
 import { PersistedStore } from "initialize";
 
@@ -19,7 +21,7 @@ prototype["getState"] = function getState() {
   return { users: closure_3 };
 };
 prototype["getKeyTrustedAt"] = function getKeyTrustedAt(arg0, uint8Array) {
-  const obj = require("../../../discord_common/js/packages/libdave/index.tsx") /* set */;
+  const obj = set /* set */;
   let tmp2;
   if (dependencyMap[arg0] != null) {
     tmp2 = tmp[obj.serializeKey(obj, uint8Array)];
@@ -30,7 +32,7 @@ prototype["isKeyVerified"] = function isKeyVerified(arg0, uint8Array) {
   return null != this.getKeyTrustedAt(arg0, uint8Array);
 };
 prototype["getUserIds"] = function getUserIds() {
-  return require("../../utils/SnowflakeUtils.tsx").keys(closure_3);
+  return DISCORD_EPOCH.keys(closure_3);
 };
 prototype["getUserVerifiedKeys"] = function getUserVerifiedKeys(closure_0) {
   return dependencyMap[closure_0];
@@ -48,8 +50,8 @@ const verifiedKeyStore = new VerifiedKeyStore(require("dispatcher"), {
     }
     dependencyMap[userId] = obj;
     const uint8Array = new Uint8Array(key);
-    const obj2 = require("../../../discord_common/js/packages/libdave/index.tsx") /* set */;
-    obj[require("../../../discord_common/js/packages/libdave/index.tsx") /* set */.serializeKey(uint8Array)] = Date.now();
+    const obj2 = set /* set */;
+    obj[set /* set */.serializeKey(uint8Array)] = Date.now();
   },
   SECURE_FRAMES_VERIFIED_KEY_DELETE: function handleSecureFramesVerifiedKeyDelete(arg0) {
     let tmp6 = null;

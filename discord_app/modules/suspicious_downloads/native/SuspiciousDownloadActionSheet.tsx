@@ -1,3 +1,4 @@
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/suspicious_downloads/native/SuspiciousDownloadActionSheet.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -20,7 +21,7 @@ export default function SuspiciousDownloadActionSheet(href) {
   const tmp = createCacheKey();
   let obj = { startExpanded: true, children: null };
   obj = { spacing: 16, justify: "center", align: "center", style: items, children: null };
-  items = [tmp.container, { paddingBottom: require("../../safe_area/useSafeAreaInsets.native.tsx")().bottom }];
+  items = [tmp.container, { paddingBottom: useSafeAreaInsets().bottom }];
   obj = { spacing: 8, justify: "center", align: "center", children: null };
   const items1 = [callback(href(5936).TrafficConeSpotIllustration, {}), , ];
   const obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };

@@ -1,3 +1,7 @@
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
+import { ActivitiesActionCreators } from "../actions/ActivitiesActionCreators.tsx";
+import { removeExecutablePathPrefix } from "../modules/game_detection/GameAnalyticsUtils.tsx";
+import { getComboId } from "../utils/LibraryApplicationUtils.tsx";
 // discord_app/stores/ActivityTrackingStore.tsx
 import initialize from "initialize";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -24,7 +28,7 @@ function stopActivity(applicationId, flag) {
     delete tmp3[tmp2];
   }
   delete tmp3[tmp];
-  const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   const result = Storage.set(ActivityTrackingStore, obj);
 }
 function updateActivity(applicationId) {
@@ -41,7 +45,7 @@ function updateActivity(applicationId) {
   if (num > closure_12 + closure_13) {
     num = 0;
   }
-  let obj = _require("../utils/LibraryApplicationUtils.tsx");
+  let obj = _getComboId;
   const result = obj.shouldShareApplicationActivity(applicationId.applicationId, setLibraryApplications);
   voiceChannelId = voiceChannelId.getVoiceChannelId();
   sessionId = sessionId.getSessionId();
@@ -61,7 +65,7 @@ function updateActivity(applicationId) {
   obj[7] = voiceChannelId;
   obj[8] = sessionId;
   obj[9] = mediaSessionId;
-  require("../actions/ActivitiesActionCreators.tsx").updateActivity(obj);
+  ActivitiesActionCreators.updateActivity(obj);
   applicationId.updatedAt = timestamp;
   if (null == dependencyMap[applicationId.applicationId]) {
     const interval = new tmp3(4170).Interval();
@@ -105,7 +109,7 @@ function handleRunningGamesChange(flag) {
         obj[2] = tmp3.distributor;
         let tmp10 = require;
         let tmp11 = dependencyMap;
-        let obj3 = require("../modules/game_detection/GameAnalyticsUtils.tsx") /* removeExecutablePathPrefix */;
+        let obj3 = removeExecutablePathPrefix /* removeExecutablePathPrefix */;
         let str = tmp3.exePath;
         if (str == null) {
           str = "";
@@ -191,7 +195,7 @@ obj = {
       return false;
     } else {
       tmp3.token = tmp;
-      const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage = Storage /* Storage */.Storage;
       const result = Storage.set(ActivityTrackingStore, tmp2);
     }
   },
@@ -201,7 +205,7 @@ obj = {
     } else {
       tmp2.token = null;
       tmp2.updatedAt = null;
-      const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+      const Storage = Storage /* Storage */.Storage;
       const result = Storage.set(ActivityTrackingStore, tmp);
     }
   }

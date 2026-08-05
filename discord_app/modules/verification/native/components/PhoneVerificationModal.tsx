@@ -1,3 +1,7 @@
+import { encodeProperties } from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { HeaderBackImage } from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/verification/native/components/PhoneVerificationModal.tsx
 import HeaderBackImage from "HeaderBackImage";
 import "noop";
@@ -13,9 +17,9 @@ export default function PhoneVerificationModal(onClose) {
   const _require = onClose;
   obj = {};
   obj = { headerTitle: null, headerLeft: null, render: null };
-  obj[0] = _require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderNoTitle();
-  const obj4 = _require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx");
-  obj[1] = _require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderCloseButton(onClose.onClose);
+  obj[0] = _HeaderBackImage.getHeaderNoTitle();
+  const obj4 = _HeaderBackImage;
+  obj[1] = _HeaderBackImage.getHeaderCloseButton(onClose.onClose);
   obj[2] = function render(reason) {
     const onClose = reason;
     let closure_1 = arg1;
@@ -48,9 +52,9 @@ export default function PhoneVerificationModal(onClose) {
   };
   obj[VerificationModalScenes.ADD_PHONE] = obj;
   let obj1 = { headerTitle: null, impressionName: null, render: null };
-  const obj5 = _require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx");
-  obj1[0] = _require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderNoTitle();
-  obj1[1] = _require("../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").ImpressionNames.USER_VERIFY_PHONE;
+  const obj5 = _HeaderBackImage;
+  obj1[0] = _HeaderBackImage.getHeaderNoTitle();
+  obj1[1] = _encodeProperties.ImpressionNames.USER_VERIFY_PHONE;
   obj1[2] = function render(arg0, arg1) {
     let closure_0 = arg1;
     let obj = {};
@@ -152,8 +156,8 @@ export default function PhoneVerificationModal(onClose) {
   };
   obj[VerificationModalScenes.VERIFY_PHONE] = obj1;
   let obj2 = { headerTitle: null, render: null };
-  const obj7 = _require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx");
-  obj2[0] = _require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderNoTitle();
+  const obj7 = _HeaderBackImage;
+  obj2[0] = _HeaderBackImage.getHeaderNoTitle();
   obj2[1] = function render(arg0) {
     const merged = Object.assign(arg0);
     return callback2(callback(table[11]), {});
@@ -161,7 +165,7 @@ export default function PhoneVerificationModal(onClose) {
   obj[VerificationModalScenes.VERIFY_PASSWORD] = obj2;
   obj[0] = obj;
   obj[1] = VerificationModalScenes.ADD_PHONE;
-  const intl = _require("../../../../intl/index.native.tsx").intl;
-  obj[2] = intl.string(_require("../../../../intl/index.native.tsx").t["13/7kX"]);
-  return jsx(_require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, { headerTitle: null, headerLeft: null, render: null });
+  const intl = _getSystemLocale.intl;
+  obj[2] = intl.string(_getSystemLocale.t["13/7kX"]);
+  return jsx(_NavigationStack.Navigator, { headerTitle: null, headerLeft: null, render: null });
 };

@@ -1,3 +1,4 @@
+import { CodeSplittingUtils } from "../modules/core/CodeSplittingUtils.tsx";
 // discord_app/utils/BraintreeUtils.tsx
 import getClient from "getClient";
 import { PaymentSettings } from "ME";
@@ -6,7 +7,7 @@ const require = arg1;
 const result = require("module_3949").fileFinishedImporting("utils/BraintreeUtils.tsx");
 
 export const getBraintreeSDK = function getBraintreeSDK() {
-  let obj = require("../modules/core/CodeSplittingUtils.tsx");
+  let obj = CodeSplittingUtils;
   obj = {
     createPromise() {
       return callback(paths[4])(paths[3], paths.paths);

@@ -1,3 +1,5 @@
+import { BaseRive } from "../BaseRive.tsx";
+import { getDerivedStateFromError } from "../RiveErrorBoundary.tsx";
 // discord_common/js/packages/design/components/Rive/native/generated/ThemeAwareNitroWishlistingWumpusRive.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
@@ -15,8 +17,8 @@ let closure_9 = {
     let onDataBindingChange;
     let playIfNeeded;
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = require("../BaseRive.tsx") /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = require("../BaseRive.tsx") /* BaseRive */;
+    const booleanBinding = BaseRive /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const obj = BaseRive /* BaseRive */;
     let logoColor;
     if (dataBinding != null) {
       logoColor = dataBinding.logoColor;
@@ -25,7 +27,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       logoColor1 = onDataBindingChange.logoColor;
     }
-    const colorBinding = require("../BaseRive.tsx") /* BaseRive */.useColorBinding("logoColor", instance, logoColor, logoColor1, playIfNeeded);
+    const colorBinding = BaseRive /* BaseRive */.useColorBinding("logoColor", instance, logoColor, logoColor1, playIfNeeded);
     return null;
   }
 };
@@ -72,7 +74,7 @@ const forwardRefResult = importAllResult.forwardRef(function ThemeAwareNitroWish
   obj = { ref };
   const merged = Object.assign(fallback);
   obj[1] = <closure_10 ref={arg1} />;
-  return jsx(require("../RiveErrorBoundary.tsx") /* getDerivedStateFromError */.RiveErrorBoundary, { ref });
+  return jsx(getDerivedStateFromError /* getDerivedStateFromError */.RiveErrorBoundary, { ref });
 });
 const result = require("jsxProd").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/ThemeAwareNitroWishlistingWumpusRive.tsx");
 

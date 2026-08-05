@@ -1,3 +1,5 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { snowballStem } from "snowballStemmer.tsx";
 // discord_app/lib/search/EnglishAnalyzer.tsx
 import set from "MAX_MESSAGE_SEARCH_RESULTS_OFFSET";
 
@@ -24,7 +26,7 @@ function shouldHighlight(arg0, set) {
   } else if (isStopWord(tmp)) {
     return false;
   } else {
-    const snowballStemResult = require("snowballStemmer.tsx") /* snowballStem */.snowballStem(tmp);
+    const snowballStemResult = snowballStem /* snowballStem */.snowballStem(tmp);
     if (flag) {
       const values = set.values();
       for (const item10025 of values) {
@@ -39,7 +41,7 @@ function shouldHighlight(arg0, set) {
     } else {
       return set.has(snowballStemResult);
     }
-    const obj = require("snowballStemmer.tsx") /* snowballStem */;
+    const obj = snowballStem /* snowballStem */;
   }
 }
 function highlightAST(content, arg1, arg2) {
@@ -105,13 +107,13 @@ let set = new Set(["a", "an", "and", "are", "as", "at", "be", "but", "by", "for"
 const result = set.fileFinishedImporting("lib/search/EnglishAnalyzer.tsx");
 
 export const analyze = function analyze(str) {
-  const tmp = require("../../../_runtime/00012_apply.js");
-  const mapped = require("../../../_runtime/00012_apply.js")(str.split(/\W+/)).map(stripPossessive);
-  const tmpResult = require("../../../_runtime/00012_apply.js")(str.split(/\W+/));
+  const tmp = apply;
+  const mapped = apply(str.split(/\W+/)).map(stripPossessive);
+  const tmpResult = apply(str.split(/\W+/));
   const mapped1 = mapped.reject(isBlank).map(lowercase);
   const rejectResult = mapped.reject(isBlank);
   const rejectResult1 = mapped1.reject(isStopWord);
-  return mapped1.reject(isStopWord).map(require("snowballStemmer.tsx") /* snowballStem */.snowballStem).value();
+  return mapped1.reject(isStopWord).map(snowballStem /* snowballStem */.snowballStem).value();
 };
 export { shouldHighlight };
 export { highlightAST };

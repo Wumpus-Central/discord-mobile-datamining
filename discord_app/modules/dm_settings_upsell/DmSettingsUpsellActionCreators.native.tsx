@@ -1,3 +1,6 @@
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/dm_settings_upsell/DmSettingsUpsellActionCreators.native.tsx
 import DM_SETTINGS_UPSELL_LAST_SHOWN_KEY from "DM_SETTINGS_UPSELL_LAST_SHOWN_KEY";
 
@@ -8,7 +11,7 @@ let result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/
 
 export default {
   openDmSettingsUpsellModal(guildId) {
-    const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const value = Storage.get(closure_3);
     const timestamp = Date.now();
     if (null != value) {
@@ -17,7 +20,7 @@ export default {
         const tmpResult = tmp(16281);
       }
     }
-    require("../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(16280, dependencyMap.paths), "dm_settings_upsell_modal", { guildId });
+    ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(16280, dependencyMap.paths), "dm_settings_upsell_modal", { guildId });
     const Storage2 = tmp(595).Storage;
     const result = Storage2.set(closure_3, timestamp);
   }

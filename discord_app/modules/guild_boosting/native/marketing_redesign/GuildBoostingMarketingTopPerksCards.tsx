@@ -1,3 +1,10 @@
+import { registerAsset } from "../../../../../_runtime/12779_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12781_registerAsset.js";
+import { 12780__ } from "../../../../../_runtime/metro/12780__.js";
+import { play } from "../../../../components_native/common/LottieAnimationView.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { items } from "MarketingCardsScroller.tsx";
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTopPerksCards.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -23,60 +30,60 @@ createCacheKey = createCacheKey.createStyles(createCacheKey);
 let items = [
   {
     getHeadingCopy() {
-      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.y4ft4D);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.y4ft4D);
     },
     getBodyCopy() {
-      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.HTvLGu);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.HTvLGu);
     },
     getGraphic(style) {
-      return callback(closure_3, { style, source: require("../../../../../_runtime/12779_registerAsset.js") });
+      return callback(closure_3, { style, source: registerAsset });
     }
   },
   {
     getHeadingCopy() {
-      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.PbAyub);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.PbAyub);
     },
     getBodyCopy() {
-      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.wOYbTv);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.wOYbTv);
     },
     getGraphic(arg0) {
       const obj = { source: null, autoPlay: null, style: null };
-      obj[0] = require("../../../../../_runtime/metro/12780__.js");
+      obj[0] = 12780__;
       obj[1] = !useReducedMotion.useReducedMotion;
       obj[2] = arg0;
-      return callback(require("../../../../components_native/common/LottieAnimationView.tsx"), obj);
+      return callback(play, obj);
     }
   },
   {
     getHeadingCopy() {
-      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/bX4Jn"]);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t["/bX4Jn"]);
     },
     getBodyCopy() {
-      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.yCjoUC);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.yCjoUC);
     },
     getGraphic(style) {
-      return callback(closure_3, { style, source: require("../../../../../_runtime/12781_registerAsset.js") });
+      return callback(closure_3, { style, source: registerAsset });
     }
   }
 ];
 const obj1 = { borderRadius: require("Themes").radii.xs, height: 128, marginBottom: 16, overflow: "hidden", width: 211 };
 const obj2 = {
   getHeadingCopy() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.y4ft4D);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.y4ft4D);
   },
   getBodyCopy() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.HTvLGu);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.HTvLGu);
   },
   getGraphic(style) {
-    return callback(closure_3, { style, source: require("../../../../../_runtime/12779_registerAsset.js") });
+    return callback(closure_3, { style, source: registerAsset });
   }
 };
 const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTopPerksCards.tsx");
@@ -86,9 +93,9 @@ export default function GuildBoostingMarketingTopPerksCards() {
   const require = tmp;
   let obj = { style: tmp.wrapper, children: null };
   obj = { style: tmp.heading, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.aGdB3E);
-  let items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Heading, obj), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.aGdB3E);
+  let items = [callback(Text /* Text */.Heading, obj), ];
   obj = { itemCount: items.length, cardWidth: 324, cardMarginRight: 16, contentContainerStyle: tmp.scrollerContent, children: null };
   obj[4] = items.map((getGraphic) => {
     const items = [tmp.card, ];
@@ -108,7 +115,7 @@ export default function GuildBoostingMarketingTopPerksCards() {
     obj[1] = items1;
     return outer1_7(outer1_4, obj, arg1);
   });
-  items[1] = callback(require("MarketingCardsScroller.tsx") /* items */.MarketingCardsScroller, obj);
+  items[1] = callback(items /* items */.MarketingCardsScroller, obj);
   obj[1] = items;
   return callback2(closure_4, obj);
 };

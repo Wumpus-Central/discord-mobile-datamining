@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { AccessibilityAnnouncer } from "../../../shared.tsx";
 // discord_app/design/void/TextInput/native/TextInput.tsx
 import { TextInput } from "get ActivityIndicator";
 import ME from "ME";
@@ -18,11 +20,11 @@ let closure_6 = createCacheKey.createStyles(obj);
 const forwardRefResult = require("noop").forwardRef((style, ref) => {
   const merged = Object.assign(style, Object.create(null));
   const tmp2 = callback();
-  let obj = require("../../../shared.tsx") /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   const theme = obj.useThemeContext().theme;
-  const obj2 = require("../../../shared.tsx") /* AccessibilityAnnouncer */;
-  const unsafe_rawColors = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
-  const tmp6 = require("../../../shared.tsx") /* AccessibilityAnnouncer */.isThemeDark(theme) ? unsafe_rawColors.PRIMARY_100 : unsafe_rawColors.PRIMARY_500;
+  const obj2 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const unsafe_rawColors = Themes.unsafe_rawColors;
+  const tmp6 = AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(theme) ? unsafe_rawColors.PRIMARY_100 : unsafe_rawColors.PRIMARY_500;
   obj = { ref, style: items, keyboardAppearance: null, placeholderTextColor: null, selectionColor: null };
   items = [tmp2.input, style.style];
   let tmp3Result = tmp3(4131);

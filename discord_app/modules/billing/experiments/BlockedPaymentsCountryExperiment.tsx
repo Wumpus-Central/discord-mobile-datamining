@@ -1,3 +1,4 @@
+import { useGeoForUser } from "../../premium/hooks/useGeoForUser.native.tsx";
 // discord_app/modules/billing/experiments/BlockedPaymentsCountryExperiment.tsx
 import createExperiment from "createExperiment";
 import ApexExperiment from "ApexExperiment";
@@ -15,7 +16,7 @@ export const useBlockedPaymentsConfig = function useBlockedPaymentsConfig() {
     enabled = closure_3.useConfig({ location: "c519a9_1" }).enabled;
   }
   if (!enabled) {
-    enabled = "RU" === require("../../premium/hooks/useGeoForUser.native.tsx")().defaultBillingCountryCode;
+    enabled = "RU" === useGeoForUser().defaultBillingCountryCode;
   }
   return enabled;
 };

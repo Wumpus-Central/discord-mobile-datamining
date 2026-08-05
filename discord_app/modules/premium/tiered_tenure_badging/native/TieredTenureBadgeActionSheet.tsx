@@ -1,3 +1,5 @@
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { useMobileTenureBadgeImages } from "hooks/useMobileTenureBadgeImages.tsx";
 // discord_app/modules/premium/tiered_tenure_badging/native/TieredTenureBadgeActionSheet.tsx
 import useSafeAreaInsets from "useSafeAreaInsets";
 import { View } from "trackImpression";
@@ -20,7 +22,7 @@ function TieredTenureBadgeItem(arg0) {
   let premiumSince;
   ({ badge, isUsersBadge, premiumSince } = arg0);
   const tmp = createCacheKey();
-  let obj = require("hooks/useMobileTenureBadgeImages.tsx") /* useMobileTenureBadgeImages */;
+  let obj = useMobileTenureBadgeImages /* useMobileTenureBadgeImages */;
   const mobileTenureBadgeImages = obj.useMobileTenureBadgeImages(badge);
   if (mobileTenureBadgeImages != null) {
     const small = mobileTenureBadgeImages.small;
@@ -43,7 +45,7 @@ function TieredTenureBadgeItem(arg0) {
     obj[0] = items;
     obj = { resizeMode: "contain", source: null };
     obj[1] = small;
-    const items1 = [callback(require("../../../../components_native/common/FastImage.tsx"), obj), , , ];
+    const items1 = [callback(preload, obj), , , ];
     const obj1 = { style: null, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj1[0] = tmp.badgeName;
     const intl = tmp2(1236).intl;

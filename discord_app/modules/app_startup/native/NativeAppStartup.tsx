@@ -1,3 +1,7 @@
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeFastConnectModule.tsx";
+import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
+import { databaseName } from "../../app_database/system/DatabaseManager.tsx";
 // discord_app/modules/app_startup/native/NativeAppStartup.tsx
 import onStageConnectionError from "onStageConnectionError";
 import closure_5 from "timestamp";
@@ -412,12 +416,12 @@ function _loadStorage() {
 }
 function loadKvStorage() {
   try {
-    require("../../app_database/system/DatabaseManager.tsx").initialize();
+    databaseName.initialize();
     return Promise.resolve();
   } catch (tmp4) {
     tmp10.warn("DatabaseManager.initialize errored.", tmp4);
-    require("../../../utils/SentryUtils.native.tsx").captureException(tmp4);
-    const obj2 = require("../../../utils/SentryUtils.native.tsx");
+    SentryUtils.native.captureException(tmp4);
+    const obj2 = SentryUtils.native;
   }
 }
 function initializeIntl() {
@@ -1085,11 +1089,11 @@ function _initHeadlessTask() {
   return applyArgumentsResult;
 }
 function initializeTokenStorage() {
-  const Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   if (null == Storage.get(closure_17)) {
     if (tmpResult.isAndroid()) {
-      let token = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeFastConnectModule.tsx").getConstants().token;
-      const obj3 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeFastConnectModule.tsx");
+      let token = enforcing.getConstants().token;
+      const obj3 = enforcing;
     } else {
       token = closure_10.DCDFastConnectManager.token;
     }

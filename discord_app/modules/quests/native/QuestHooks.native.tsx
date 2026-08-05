@@ -1,3 +1,9 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { navigationToRootTabHelper } from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { getFocusedChannelId } from "../../panels/isChannelFocused.native.tsx";
+import { useIsWindowLarge } from "../../screen/native/useIsWindowLarge.tsx";
+import { apexExperiment } from "../experiments/NewAdRequestBehaviorExperiment.tsx";
+import { getIsEligibleForQuests } from "../lib/QuestsEligibility.tsx";
 // discord_app/modules/quests/native/QuestHooks.native.tsx
 import closure_3 from "QuestsExperimentLocations";
 import getIsEligibleForQuests from "getIsEligibleForQuests";
@@ -12,10 +18,10 @@ let c9;
 let metroImportAll;
 const require = arg1;
 function useIsMobileQuestDockRenderedBase(deliveredQuest) {
-  const tmp2 = require("../../screen/native/useIsWindowLarge.tsx")();
+  const tmp2 = useIsWindowLarge();
   const items = [initializeState];
   let userStatus;
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => null != questPreviewOverride.getQuestPreviewOverride(callback(table[11]).QuestContent.QUEST_BAR_MOBILE), []);
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => null != questPreviewOverride.getQuestPreviewOverride(callback(table[11]).QuestContent.QUEST_BAR_MOBILE), []);
   if (deliveredQuest != null) {
     userStatus = deliveredQuest.userStatus;
   }
@@ -33,8 +39,8 @@ function useIsMobileQuestDockRenderedBase(deliveredQuest) {
   }
   tmp3Result = tmp3(10374);
   const isQuestExpired = tmp3Result.useIsQuestExpired(deliveredQuest);
-  const obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
-  const isEligibleForQuests = require("../lib/QuestsEligibility.tsx") /* getIsEligibleForQuests */.getIsEligibleForQuests();
+  const obj = initialize /* initialize */;
+  const isEligibleForQuests = getIsEligibleForQuests /* getIsEligibleForQuests */.getIsEligibleForQuests();
   if (stateFromStores) {
     if (!tmp8) {
       let tmp11 = null != deliveredQuest && !tmp2;
@@ -44,7 +50,7 @@ function useIsMobileQuestDockRenderedBase(deliveredQuest) {
   tmp11 = null != deliveredQuest && isEligibleForQuests && !isQuestExpired && null == claimedAt && !isDismissedResult && !tmp2;
 }
 function useIsMobileQuestDockRendered() {
-  const obj = require("../experiments/NewAdRequestBehaviorExperiment.tsx");
+  const obj = apexExperiment;
   const items = [initializeState];
   let stateFromStores = stateFromStores2(589).useStateFromStores(items, () => questPreviewOverride.getQuestPreviewOverride(stateFromStores2(5131).QuestContent.QUEST_BAR_MOBILE), []);
   const obj2 = stateFromStores2(589);
@@ -107,7 +113,7 @@ export const useMobileQuestDockHeight = function useMobileQuestDockHeight() {
   return num;
 };
 export const useMobileQuestDock = function useMobileQuestDock() {
-  let obj = require("../experiments/NewAdRequestBehaviorExperiment.tsx");
+  let obj = apexExperiment;
   const items = [initializeState];
   stateFromStores = stateFromStores(589).useStateFromStores(items, () => questPreviewOverride.getQuestPreviewOverride(stateFromStores(5131).QuestContent.QUEST_BAR_MOBILE), []);
   const obj2 = stateFromStores(589);
@@ -145,23 +151,23 @@ export const useMobileQuestDock = function useMobileQuestDock() {
 export const useIsMobileQuestDockVisibleToUser = function useIsMobileQuestDockVisibleToUser(deliveredQuest, isMobileQuestDockRenderedBase) {
   const _require = deliveredQuest;
   let tmp = isMobileQuestDockRenderedBase;
-  const isChannelFocused = _require("../../panels/isChannelFocused.native.tsx").useIsChannelFocused();
-  const obj = _require("../../panels/isChannelFocused.native.tsx");
-  const currentNavigationRouteName = _require("../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx").useCurrentNavigationRouteName();
-  const obj2 = _require("../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx");
-  let tmp4 = null != _require("../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx").coerceGuildsRoute({ name: currentNavigationRouteName });
-  const obj3 = _require("../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx");
+  const isChannelFocused = _getFocusedChannelId.useIsChannelFocused();
+  const obj = _getFocusedChannelId;
+  const currentNavigationRouteName = _navigationToRootTabHelper.useCurrentNavigationRouteName();
+  const obj2 = _navigationToRootTabHelper;
+  let tmp4 = null != _navigationToRootTabHelper.coerceGuildsRoute({ name: currentNavigationRouteName });
+  const obj3 = _navigationToRootTabHelper;
   const items = [initializeState];
-  let stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  let stateFromStores = _initialize.useStateFromStores(items, () => {
     let isClaimingRewardResult = null != closure_0;
     if (isClaimingRewardResult) {
       isClaimingRewardResult = outer1_7.isClaimingReward(tmp.id);
     }
     return isClaimingRewardResult;
   });
-  const obj4 = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  const obj4 = _initialize;
   const items1 = [setContent];
-  const stateFromStores1 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  const stateFromStores1 = _initialize.useStateFromStores(items1, () => {
     key = key.getKey();
     let tmp2 = key === closure_10;
     if (!tmp2) {

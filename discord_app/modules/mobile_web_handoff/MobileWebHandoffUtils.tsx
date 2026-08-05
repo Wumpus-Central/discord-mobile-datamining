@@ -1,3 +1,4 @@
+import { v1 } from "../../../_runtime/00514_v1.js";
 // discord_app/modules/mobile_web_handoff/MobileWebHandoffUtils.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
@@ -91,7 +92,7 @@ const result = require("v1").fileFinishedImporting("modules/mobile_web_handoff/M
 
 export default {
   generateNonce() {
-    return require("../../../_runtime/00514_v1.js") /* v1 */.v4();
+    return v1 /* v1 */.v4();
   },
   createHandoffToken(closure_0) {
     const self = this;

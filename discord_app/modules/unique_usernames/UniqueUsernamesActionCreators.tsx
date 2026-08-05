@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/unique_usernames/UniqueUsernamesActionCreators.tsx
 import expandEventProperties from "expandEventProperties";
 import ME from "ME";
@@ -10,7 +11,7 @@ const result = require("getSystemLocale").fileFinishedImporting("modules/unique_
 
 export default {
   resetSuggestions() {
-    return require("../../Dispatcher.tsx").dispatch({ type: "UNIQUE_USERNAME_SUGGESTIONS_RESET" });
+    return dispatcher.dispatch({ type: "UNIQUE_USERNAME_SUGGESTIONS_RESET" });
   },
   fetchSuggestionsRegistration(arg0) {
     let closure_0 = arg0;

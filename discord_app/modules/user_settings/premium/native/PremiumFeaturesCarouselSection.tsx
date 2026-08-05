@@ -1,3 +1,6 @@
+import { Pagination } from "../../../../../_runtime/09964_Pagination.js";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesCarouselSection.tsx
 import _slicedToArray from "_slicedToArray";
 import isMetaQuest from "isMetaQuest";
@@ -42,9 +45,9 @@ function CarouselCard(arg0) {
   const tmp = callback4();
   let obj = { style, children: null };
   obj = { variant: "heading-md/extrabold", color: "text-overlay-light", style: tmp.cardTitle, children: title };
-  const items = [callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+  const items = [callback2(Text /* Text */.Text, obj), ];
   const items1 = [tmp.image, imageStyle];
-  items[1] = callback2(require("../../../../components_native/common/FastImage.tsx"), { source: imageSrc, style: items1, resizeMode: "contain" });
+  items[1] = callback2(preload, { source: imageSrc, style: items1, resizeMode: "contain" });
   obj[1] = items;
   return callback3(PremiumFeaturesCardBackground, obj);
 }
@@ -143,7 +146,7 @@ function PremiumFeaturesCarousel(arg0) {
       };
       obj[8] = { parallaxScrollingScale: 1, parallaxScrollingOffset: 45 };
       obj[9] = tmp7;
-      let tmp19 = callback2(require("../../../../../_runtime/09964_Pagination.js"), obj);
+      let tmp19 = callback2(Pagination, obj);
     }
     let items3 = [tmp19, ];
     let obj1 = { containerStyle: null, numberOfItems: null, currentIndex: null };

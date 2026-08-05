@@ -1,3 +1,4 @@
+import { __DiscordCreateDateFormatter } from "../modules/system_date_format/SystemDateFormatter.native.tsx";
 // discord_app/lib/makeDateFormatter.tsx
 function defaultMeridiem(arg0, arg1, arg2) {
   if (arg0 < 12) {
@@ -154,11 +155,11 @@ export default function makeFormatter(str) {
   _require = tmp;
   let result = undefined === arg1 && !flag;
   if (result) {
-    result = undefined !== _require("../modules/system_date_format/SystemDateFormatter.native.tsx").makeFormatter;
+    result = undefined !== ___DiscordCreateDateFormatter.makeFormatter;
   }
   if (result) {
-    result = _require("../modules/system_date_format/SystemDateFormatter.native.tsx").supportsSystemDateFormatter();
-    const obj = _require("../modules/system_date_format/SystemDateFormatter.native.tsx");
+    result = ___DiscordCreateDateFormatter.supportsSystemDateFormatter();
+    const obj = ___DiscordCreateDateFormatter;
   }
   let replaced = str;
   if (!result) {

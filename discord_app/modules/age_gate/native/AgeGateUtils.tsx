@@ -1,3 +1,5 @@
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/age_gate/native/AgeGateUtils.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -27,7 +29,7 @@ export const isNSFWInvite = function isNSFWInvite(guild) {
   return set.has(nsfw_level);
 };
 export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
-  let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
+  let obj = set /* set */;
   if (obj.isIOS()) {
     let nsfw_level;
     if (invite != null) {
@@ -53,7 +55,7 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
     let flag2 = !tmp10;
     if (!tmp10) {
       id = undefined;
-      const obj2 = require("../../../actions/ModalActionCreators.tsx");
+      const obj2 = ModalActionCreators;
       if (invite != null) {
         const guild3 = invite.guild;
         if (guild3 != null) {
@@ -101,6 +103,6 @@ export const shouldNSFWGateGuild = function shouldNSFWGateGuild(guildId) {
   } else {
     return false;
   }
-  obj = require("../../../utils/PlatformUtils.tsx") /* set */;
+  obj = set /* set */;
   tmp = require;
 };

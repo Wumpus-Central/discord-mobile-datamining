@@ -1,3 +1,7 @@
+import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
+import { performRedirect } from "HandleConfirmPaymentRegistry.tsx";
 // discord_app/modules/billing/actions/BillingActionCreators.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import closure_5 from "ME";
@@ -1450,12 +1454,12 @@ function _payInvoiceManually() {
 function handlePaymentConfirmation(body, paymentSource) {
   if (null != paymentSource) {
     if (set.has(paymentSource.type)) {
-      const adyenPaymentConfirmationHandler = new require("HandleConfirmPaymentRegistry.tsx") /* performRedirect */.AdyenPaymentConfirmationHandler(paymentSource, body);
+      const adyenPaymentConfirmationHandler = new performRedirect /* performRedirect */.AdyenPaymentConfirmationHandler(paymentSource, body);
       let confirmPaymentResult = adyenPaymentConfirmationHandler.confirmPayment();
     }
     return confirmPaymentResult;
   }
-  confirmPaymentResult = new require("HandleConfirmPaymentRegistry.tsx") /* performRedirect */.StripePaymentConfirmationHandler(paymentSource, body).confirmPayment();
+  confirmPaymentResult = new performRedirect /* performRedirect */.StripePaymentConfirmationHandler(paymentSource, body).confirmPayment();
 }
 function _redirectedPaymentSucceeded() {
   const self = this;
@@ -2584,7 +2588,7 @@ export const cancelSubscription = function cancelSubscription(id, c4) {
 export const deleteRenewalMutation = function deleteRenewalMutation(items) {
   let obj = { items: items.items };
   obj = { amount: 0, currency: items.currency };
-  return updateSubscription(items, obj, obj, require("../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.getItemPlansTotalServerPrice(items.items, items.currency, items.paymentSourceId), arg1);
+  return updateSubscription(items, obj, obj, getPremiumPlanItem /* getPremiumPlanItem */.getItemPlansTotalServerPrice(items.items, items.currency, items.paymentSourceId), arg1);
 };
 export { updateSubscription };
 export const resubscribeToSubscription = function resubscribeToSubscription(currency, outer1_6, id) {
@@ -2596,10 +2600,10 @@ export const resubscribeToSubscription = function resubscribeToSubscription(curr
   if (id != null) {
     id = id.id;
   }
-  return updateSubscription(currency, obj, obj, require("../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.getItemPlansTotalServerPrice(items, currency, id), outer1_6, arg4);
+  return updateSubscription(currency, obj, obj, getPremiumPlanItem /* getPremiumPlanItem */.getItemPlansTotalServerPrice(items, currency, id), outer1_6, arg4);
 };
 export const upgradeSubscription = function upgradeSubscription(renewalMutations, basePlanId, arg2, itemPlansTotalServerPrice) {
-  let obj = require("../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */;
+  let obj = getPremiumPlanItem /* getPremiumPlanItem */;
   obj = { status: constants.ACTIVE, items: obj.getItemsWithUpsertedPremiumPlanId(renewalMutations, basePlanId) };
   return updateSubscription(renewalMutations, obj, arg2, itemPlansTotalServerPrice, arg4, arg5);
 };
@@ -2614,16 +2618,16 @@ export const changePaymentSource = function changePaymentSource(items, paymentSo
   return updateSubscription(items, obj, obj, currency, arg3, arg4);
 };
 export const clearUpdatePaymentSourceError = function clearUpdatePaymentSourceError() {
-  require("../../../Dispatcher.tsx").dispatch({ type: "BILLING_PAYMENT_SOURCE_UPDATE_CLEAR_ERROR" });
+  dispatcher.dispatch({ type: "BILLING_PAYMENT_SOURCE_UPDATE_CLEAR_ERROR" });
 };
 export const clearRemovePaymentSourceError = function clearRemovePaymentSourceError() {
-  require("../../../Dispatcher.tsx").dispatch({ type: "BILLING_PAYMENT_SOURCE_REMOVE_CLEAR_ERROR" });
+  dispatcher.dispatch({ type: "BILLING_PAYMENT_SOURCE_REMOVE_CLEAR_ERROR" });
 };
 export const clearPaymentAuthenticationError = function clearPaymentAuthenticationError() {
-  require("../../../Dispatcher.tsx").dispatch({ type: "PAYMENT_AUTHENTICATION_CLEAR_ERROR" });
+  dispatcher.dispatch({ type: "PAYMENT_AUTHENTICATION_CLEAR_ERROR" });
 };
 export const cancelPaymentAuthentication = function cancelPaymentAuthentication() {
-  require("../../../Dispatcher.tsx").dispatch({ type: "PAYMENT_AUTHENTICATION_CANCEL" });
+  dispatcher.dispatch({ type: "PAYMENT_AUTHENTICATION_CANCEL" });
 };
 export const voidPendingPayment = function voidPendingPayment() {
   const self = this;
@@ -2642,7 +2646,7 @@ export const popupBridgeCallback = function popupBridgeCallback(paymentSourceTyp
   let state;
   paymentSourceType = paymentSourceType.paymentSourceType;
   ({ state, path, query, insecure } = paymentSourceType);
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj.dispatch({ type: "BILLING_POPUP_BRIDGE_CALLBACK_START", paymentSourceType });
   const HTTP = paymentSourceType(530).HTTP;
   obj = { url: closure_10.BILLING_POPUP_BRIDGE_CALLBACK(paymentSourceType), body: { state, path, query, insecure }, oldFormErrors: true, rejectWithError: false };
@@ -2664,13 +2668,13 @@ export const fetchIpCountryCode = function fetchIpCountryCode() {
   return applyArgumentsResult;
 };
 export const fetchPaymentSourceCreationContext = function fetchPaymentSourceCreationContext() {
-  const HTTP = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   return HTTP.get({ url: closure_10.BILLING_PAYMENT_SOURCE_CREATION_CONTEXT, oldFormErrors: true, rejectWithError: false });
 };
 export const clearAndFetchPaymentSourceCreationContext = function clearAndFetchPaymentSourceCreationContext() {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj.dispatch({ type: "PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_START" });
-  const HTTP = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   obj = { url: closure_10.BILLING_PAYMENT_SOURCE_CREATION_CONTEXT, oldFormErrors: true, rejectWithError: false };
   const value = HTTP.get(obj);
   value.then((body) => {
@@ -2725,13 +2729,13 @@ export const fetchIpLocation = function fetchIpLocation() {
   return applyArgumentsResult;
 };
 export const resetPaymentIntentId = function resetPaymentIntentId() {
-  require("../../../Dispatcher.tsx").dispatch({ type: "RESET_PAYMENT_ID" });
+  dispatcher.dispatch({ type: "RESET_PAYMENT_ID" });
 };
 export const resetSubscriptionStore = function resetSubscriptionStore() {
-  require("../../../Dispatcher.tsx").dispatch({ type: "BILLING_SUBSCRIPTION_RESET" });
+  dispatcher.dispatch({ type: "BILLING_SUBSCRIPTION_RESET" });
 };
 export const startBrowserCheckout = function startBrowserCheckout(loadId) {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "USER_PAYMENT_BROWSER_CHECKOUT_STARTED", loadId };
   obj.dispatch(obj);
 };

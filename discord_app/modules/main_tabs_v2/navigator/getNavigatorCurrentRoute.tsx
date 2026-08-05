@@ -1,11 +1,12 @@
+import { getRootNavigationRef } from "../RootNavigationRef.native.tsx";
 // discord_app/modules/main_tabs_v2/navigator/getNavigatorCurrentRoute.tsx
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/navigator/getNavigatorCurrentRoute.tsx");
 
 export default function getNavigatorCurrentRoute() {
   let rootNavigationRef = arg0;
   if (arg0 === undefined) {
-    rootNavigationRef = require("../RootNavigationRef.native.tsx") /* getRootNavigationRef */.getRootNavigationRef();
-    const obj2 = require("../RootNavigationRef.native.tsx") /* getRootNavigationRef */;
+    rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
+    const obj2 = getRootNavigationRef /* getRootNavigationRef */;
   }
   let isReadyResult;
   if (rootNavigationRef != null) {

@@ -1,3 +1,4 @@
+import { hasFlag } from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 // discord_app/modules/interaction_components/content_inventory_entry/utils.tsx
 import { MessageEmbedFlags } from "ME";
 
@@ -8,5 +9,5 @@ export const isContentInventoryFallbackEmbed = function isContentInventoryFallba
   if (num == null) {
     num = 0;
   }
-  return require("../../../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.hasFlag(num, MessageEmbedFlags.IS_CONTENT_INVENTORY_ENTRY);
+  return hasFlag /* hasFlag */.hasFlag(num, MessageEmbedFlags.IS_CONTENT_INVENTORY_ENTRY);
 };

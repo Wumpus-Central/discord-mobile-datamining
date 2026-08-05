@@ -1,11 +1,14 @@
+import { SettingsDefaultFeature } from "../../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
+import { useAgeVerificationRunner } from "../../age_assurance/AgeVerificationUtils.tsx";
+import { isFeatureAgeGated } from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 // discord_app/modules/message_request/hooks/useIsMessageRequestRestrictedViewer.tsx
 const result = require("SettingsDefaultFeature").fileFinishedImporting("modules/message_request/hooks/useIsMessageRequestRestrictedViewer.tsx");
 
 export const useIsMessageRequestRestrictedViewer = function useIsMessageRequestRestrictedViewer(ChatInputGuardMessageRequest) {
-  let obj = require("../../age_assurance/AgeVerificationUtils.tsx") /* useAgeVerificationRunner */;
+  let obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
   const isExplicitlyVerifiedAdult = obj.useIsExplicitlyVerifiedAdult();
-  const isSettingTeenByDefault = require("../../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */.useIsSettingTeenByDefault(require("../../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx") /* SettingsDefaultFeature */.SettingsDefaultFeature.MESSAGE_REQUEST_RESTRICTIONS);
-  const obj2 = require("../../regional_feature_config/RegionalFeatureConfigUtils.tsx") /* isFeatureAgeGated */;
+  const isSettingTeenByDefault = isFeatureAgeGated /* isFeatureAgeGated */.useIsSettingTeenByDefault(SettingsDefaultFeature /* SettingsDefaultFeature */.SettingsDefaultFeature.MESSAGE_REQUEST_RESTRICTIONS);
+  const obj2 = isFeatureAgeGated /* isFeatureAgeGated */;
   obj = { location: ChatInputGuardMessageRequest };
   let enabled = !isExplicitlyVerifiedAdult;
   if (!isExplicitlyVerifiedAdult) {

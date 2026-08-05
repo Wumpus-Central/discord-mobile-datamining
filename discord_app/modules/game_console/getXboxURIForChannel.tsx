@@ -1,3 +1,4 @@
+import { computeChannelName } from "../channel/useChannelName.tsx";
 // discord_app/modules/game_console/getXboxURIForChannel.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -26,7 +27,7 @@ export default function getXboxURIForChannel(channelId) {
     tmp4 = closure_9;
   }
   const obj = { guildId: tmp4, channelId: channelId.id, channelName: null, guildName: null, muted: null, deafened: null, nonce: null };
-  obj[2] = require("../channel/useChannelName.tsx") /* computeChannelName */.computeChannelName(channelId, mergeGuildAvatar, upsertRelationship);
+  obj[2] = computeChannelName /* computeChannelName */.computeChannelName(channelId, mergeGuildAvatar, upsertRelationship);
   let name;
   if (guild != null) {
     name = guild.name;

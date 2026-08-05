@@ -1,3 +1,6 @@
+import { parse } from "../../../../_runtime/01464_parse.js";
+import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/game_community_upsell/native/MobileGameCommunitiesActionCreators.tsx
 import { Endpoints } from "ME";
 
@@ -13,10 +16,10 @@ export const fetchMobileGameCommunities = function fetchMobileGameCommunities(ar
   if (arg2 === undefined) {
     num = 20;
   }
-  const HTTP = _require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+  const HTTP = _sendRequest.HTTP;
   let obj = { url: Endpoints.MOBILE_GAME_COMMUNITIES, query: null, oldFormErrors: true, rejectWithError: true };
   obj = { game_ids: arr, limit: num, ignored_guild_ids: items };
-  obj[1] = require("../../../../_runtime/01464_parse.js").stringify(obj);
+  obj[1] = parse.stringify(obj);
   const value = HTTP.get(obj);
   return value.then((body) => {
     let obj = outer1_1(outer1_2[3]);
@@ -27,7 +30,7 @@ export const fetchMobileGameCommunities = function fetchMobileGameCommunities(ar
   });
 };
 export const dismissGuild = function dismissGuild(guildId) {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "MOBILE_GAME_COMMUNITIES_DISMISS_GUILD", guildId };
   obj.dispatch(obj);
 };

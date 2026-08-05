@@ -1,3 +1,7 @@
+import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
+import { nameFromUser } from "../../../../../../utils/UserUtils.tsx";
+import { ForwardingIcon } from "../../../../../forwarding/native/ForwardingIcon.tsx";
+import { SearchTokenTypes } from "../../../../SearchUtils.tsx";
 // discord_app/modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import upsertRelationship from "upsertRelationship";
@@ -26,9 +30,9 @@ export const getSearchQueryUserIds = function getSearchQueryUserIds(items) {
   obj = store2;
 };
 export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
-  const intl = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  if (intl.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.nrpA5E) === text) {
-    return require("../../../../../forwarding/native/ForwardingIcon.tsx");
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  if (intl.string(getSystemLocale /* getSystemLocale */.t.nrpA5E) === text) {
+    return ForwardingIcon;
   } else {
     const intl3 = tmp(1236).intl;
     if (intl3.string(tmp(1236).t.ZNR2fi) === text) {
@@ -72,8 +76,8 @@ export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
   }
 };
 export const getSearchFilterAuthorTypeIcon = function getSearchFilterAuthorTypeIcon(text) {
-  const intl = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  if (intl.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.tPZo4p) === text) {
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  if (intl.string(getSystemLocale /* getSystemLocale */.t.tPZo4p) === text) {
     return tmp(11136).UserIcon;
   } else {
     const intl3 = tmp(1236).intl;
@@ -88,7 +92,7 @@ export const getSearchFilterAuthorTypeIcon = function getSearchFilterAuthorTypeI
   }
 };
 export const toSearchListUserItem = function toSearchListUserItem(items, user, callback2) {
-  let obj = require("../../../../SearchUtils.tsx") /* SearchTokenTypes */;
+  let obj = SearchTokenTypes /* SearchTokenTypes */;
   const guildIdFromSearchContext = obj.getGuildIdFromSearchContext(items);
   if (null == user) {
     return null;
@@ -101,8 +105,8 @@ export const toSearchListUserItem = function toSearchListUserItem(items, user, c
       nickname = nick.getNick(guildIdFromSearchContext, user.id);
     }
     if (nickname == null) {
-      nickname = require("../../../../../../utils/UserUtils.tsx").getName(user);
-      const obj2 = require("../../../../../../utils/UserUtils.tsx");
+      nickname = nameFromUser.getName(user);
+      const obj2 = nameFromUser;
     }
     obj = { type: null, props: null };
     obj[0] = SearchListItemTypes.DM;
@@ -132,8 +136,8 @@ export const toSearchListChannelItem = function toSearchListChannelItem(channel,
       obj[1] = user;
       let nickname = store.getNickname(user.id);
       if (nickname == null) {
-        nickname = require("../../../../../../utils/UserUtils.tsx").getName(user);
-        const obj6 = require("../../../../../../utils/UserUtils.tsx");
+        nickname = nameFromUser.getName(user);
+        const obj6 = nameFromUser;
       }
       obj[2] = nickname;
       obj[3] = function onPress() {

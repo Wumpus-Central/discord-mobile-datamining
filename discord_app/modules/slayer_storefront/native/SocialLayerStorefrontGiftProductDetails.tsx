@@ -1,3 +1,4 @@
+import { SlayerStorefrontItemCard } from "SlayerStorefrontItemCard.tsx";
 // discord_app/modules/slayer_storefront/native/SocialLayerStorefrontGiftProductDetails.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -45,7 +46,7 @@ export default function SocialLayerStorefrontGiftProductDetails(sku) {
     return applicationIconURL;
   }, items);
   obj = { style: tmp.container, children: null };
-  const items1 = [callback(require("SlayerStorefrontItemCard.tsx"), { sku, size: 55 }), , ];
+  const items1 = [callback(SlayerStorefrontItemCard, { sku, size: 55 }), , ];
   obj1 = { style: tmp.text, children: null };
   let tmp6Result = null != getOrFetchApplication;
   if (tmp6Result) {

@@ -1,3 +1,10 @@
+import { t } from "../../../../../../_runtime/03867_t.js";
+import { registerAsset } from "../../../../../../_runtime/07718_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/07936_registerAsset.js";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { AccessibilityAnnouncer } from "../../../../../design/shared.tsx";
+import { getDecisionOutcomeFromMessage } from "../../../../guild_automod/AutomodMessageUtils.tsx";
+import { createCommonMessage } from "createCommonMessage.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/AutoModerationActionSystemMessage.tsx
 import get_ActivityIndicator from "DATE_CONFIG";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -12,8 +19,8 @@ let c3;
 let c4;
 ({ processColor: c3, Image: c4 } = get_ActivityIndicator);
 let closure_11 = apply.memoize((arg0) => {
-  let obj = require("../../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
-  const unsafe_rawColors = require("../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
+  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const unsafe_rawColors = Themes.unsafe_rawColors;
   obj = { defaultUsernameColor: null };
   const isThemeDarkResult = obj.isThemeDark(arg0);
   const tmp = require;
@@ -40,7 +47,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
   ({ message, theme, roleStyle } = message);
   const defaultUsernameColor = callback2(theme).defaultUsernameColor;
   const tmp = require;
-  let obj = require("../../../../guild_automod/AutomodMessageUtils.tsx") /* getDecisionOutcomeFromMessage */;
+  let obj = getDecisionOutcomeFromMessage /* getDecisionOutcomeFromMessage */;
   if (obj.isAutomodMessageRecord(message)) {
     let tmpResult = tmp(6876);
     const result = tmpResult.extractAutomodMessageFields(message);
@@ -71,20 +78,20 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
           if (tmp(7908).AutomodNotificationEmbedTypeKeys.MENTION_RAID === notificationType) {
             let fromNowResult;
             if (null != resolvedReason.raidDatetime) {
-              fromNowResult = require("../../../../../../_runtime/03867_t.js")(resolvedReason.raidDatetime).fromNow();
-              const obj17 = require("../../../../../../_runtime/03867_t.js")(resolvedReason.raidDatetime);
+              fromNowResult = t(resolvedReason.raidDatetime).fromNow();
+              const obj17 = t(resolvedReason.raidDatetime);
             }
             obj = { subtitleLeft: null, header: null, headerColor: null, headerIconURL: null, headerIconColor: null, body: null, shouldShowActions: false };
             obj[0] = fromNowResult;
             const intl5 = tmp(1236).intl;
             obj[1] = intl5.string(tmp(1236).t.C2uIXE);
-            const internal3 = require("../../../../../../discord_common/js/packages/tokens/native.tsx").internal;
-            obj[2] = tmp(7855).processColorOrThrow(internal3.resolveSemanticColor(theme, require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_FEEDBACK_CRITICAL));
+            const internal3 = Themes.internal;
+            obj[2] = tmp(7855).processColorOrThrow(internal3.resolveSemanticColor(theme, Themes.colors.TEXT_FEEDBACK_CRITICAL));
             const tmpResult4 = tmp(7855);
-            obj[3] = closure_4.resolveAssetSource(tmp(1416).makeSource(require("../../../../../../_runtime/07718_registerAsset.js"))).uri;
+            obj[3] = closure_4.resolveAssetSource(tmp(1416).makeSource(registerAsset)).uri;
             const tmpResult5 = tmp(1416);
-            const internal4 = require("../../../../../../discord_common/js/packages/tokens/native.tsx").internal;
-            obj[4] = tmp(7855).processColorOrThrow(internal4.resolveSemanticColor(theme, require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_FEEDBACK_CRITICAL));
+            const internal4 = Themes.internal;
+            obj[4] = tmp(7855).processColorOrThrow(internal4.resolveSemanticColor(theme, Themes.colors.TEXT_FEEDBACK_CRITICAL));
             const intl6 = tmp(1236).intl;
             obj[5] = intl6.string(tmp(1236).t.SWIWEV);
             str = "";
@@ -134,17 +141,17 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
               const intl2 = tmp(1236).intl;
               obj1[0] = intl2.string(tmp(1236).t.lVLiFp);
               const ensureAvatarSourceResult = tmpResult8.ensureAvatarSource(guildMemberAvatarSource);
-              const internal = require("../../../../../../discord_common/js/packages/tokens/native.tsx").internal;
-              obj1[1] = tmp(7855).processColorOrThrow(internal.resolveSemanticColor(theme, require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_FEEDBACK_POSITIVE));
+              const internal = Themes.internal;
+              obj1[1] = tmp(7855).processColorOrThrow(internal.resolveSemanticColor(theme, Themes.colors.TEXT_FEEDBACK_POSITIVE));
               const tmpResult10 = tmp(7855);
-              obj1[2] = closure_4.resolveAssetSource(tmp(1416).makeSource(require("../../../../../../_runtime/07936_registerAsset.js"))).uri;
+              obj1[2] = closure_4.resolveAssetSource(tmp(1416).makeSource(registerAsset)).uri;
               const tmpResult11 = tmp(1416);
-              const internal2 = require("../../../../../../discord_common/js/packages/tokens/native.tsx").internal;
-              obj1[3] = tmp(7855).processColorOrThrow(internal2.resolveSemanticColor(theme, require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_FEEDBACK_POSITIVE));
+              const internal2 = Themes.internal;
+              obj1[3] = tmp(7855).processColorOrThrow(internal2.resolveSemanticColor(theme, Themes.colors.TEXT_FEEDBACK_POSITIVE));
               const intl3 = tmp(1236).intl;
               obj1[4] = intl3.string(tmp(1236).t["QV/8u5"]);
               const tmpResult12 = tmp(7855);
-              obj1[6] = require("../../../../../../_runtime/03867_t.js")(message.timestamp).fromNow();
+              obj1[6] = t(message.timestamp).fromNow();
               const intl4 = tmp(1236).intl;
               obj1[7] = intl4.string(tmp(1236).t.qlFrXW);
               obj1[8] = ensureAvatarSourceResult.uri;
@@ -161,7 +168,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
               str = "";
               tmp14 = obj1;
               tmp15 = stringResult;
-              const obj16 = require("../../../../../../_runtime/03867_t.js")(message.timestamp);
+              const obj16 = t(message.timestamp);
             }
             guildMemberAvatarSource = author.getAvatarSource(undefined, false, 16);
             tmpResult8 = tmp(1419);
@@ -169,13 +176,13 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
             const obj2 = { header: null, headerColor: null, headerIconURL: null, headerIconColor: null, body: null, shouldShowActions: false };
             const intl17 = tmp(1236).intl;
             obj2[0] = intl17.string(tmp(1236).t.VdZCcC);
-            const internal7 = require("../../../../../../discord_common/js/packages/tokens/native.tsx").internal;
-            obj2[1] = tmp(7855).processColorOrThrow(internal7.resolveSemanticColor(theme, require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_SUBTLE));
+            const internal7 = Themes.internal;
+            obj2[1] = tmp(7855).processColorOrThrow(internal7.resolveSemanticColor(theme, Themes.colors.TEXT_SUBTLE));
             const tmpResult13 = tmp(7855);
-            obj2[2] = closure_4.resolveAssetSource(tmp(1416).makeSource(require("../../../../../../_runtime/07718_registerAsset.js"))).uri;
+            obj2[2] = closure_4.resolveAssetSource(tmp(1416).makeSource(registerAsset)).uri;
             const tmpResult14 = tmp(1416);
-            const internal8 = require("../../../../../../discord_common/js/packages/tokens/native.tsx").internal;
-            obj2[3] = tmp(7855).processColorOrThrow(internal8.resolveSemanticColor(theme, require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_SUBTLE));
+            const internal8 = Themes.internal;
+            obj2[3] = tmp(7855).processColorOrThrow(internal8.resolveSemanticColor(theme, Themes.colors.TEXT_SUBTLE));
             const intl18 = tmp(1236).intl;
             obj2[4] = intl18.string(tmp(1236).t["NxHYX/"]);
             str = "";
@@ -187,8 +194,8 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       }
       let fromNowResult1;
       if (null != resolvedReason.raidDatetime) {
-        fromNowResult1 = require("../../../../../../_runtime/03867_t.js")(resolvedReason.raidDatetime).fromNow();
-        const obj22 = require("../../../../../../_runtime/03867_t.js")(resolvedReason.raidDatetime);
+        fromNowResult1 = t(resolvedReason.raidDatetime).fromNow();
+        const obj22 = t(resolvedReason.raidDatetime);
       }
       let str2 = "";
       if (null != resolvedReason.raidDatetime) {
@@ -224,8 +231,8 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       }
       obj5[4] = stringResult1;
       const tmpResult3 = tmp(6876);
-      const internal5 = require("../../../../../../discord_common/js/packages/tokens/native.tsx").internal;
-      obj5[5] = tmp(7855).processColorOrThrow(internal5.resolveSemanticColor(theme, require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_FEEDBACK_CRITICAL));
+      const internal5 = Themes.internal;
+      obj5[5] = tmp(7855).processColorOrThrow(internal5.resolveSemanticColor(theme, Themes.colors.TEXT_FEEDBACK_CRITICAL));
       let tmpResult18 = closure_4;
       let getRaidAlertResolveCTAText = closure_4.resolveAssetSource;
       let internal6 = tmp(1416);
@@ -233,7 +240,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       obj5[6] = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 7935 : 7718))).uri;
       const tmpResult16 = tmp(7855);
       internal6 = tmp45(712).internal;
-      obj5[7] = tmp(7855).processColorOrThrow(internal6.resolveSemanticColor(theme, require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_FEEDBACK_CRITICAL));
+      obj5[7] = tmp(7855).processColorOrThrow(internal6.resolveSemanticColor(theme, Themes.colors.TEXT_FEEDBACK_CRITICAL));
       intl9 = tmp(1236).intl;
       const obj6 = { dateTime: null };
       obj6[0] = str2;
@@ -262,7 +269,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
         }
       }
       const obj8 = {};
-      const merged = Object.assign(require("createCommonMessage.tsx")(message));
+      const merged = Object.assign(createCommonMessage(message));
       obj8.roleIcon = roleIcon;
       obj8.authorId = author.id;
       const intl11 = tmp(1236).intl;

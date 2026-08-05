@@ -1,3 +1,8 @@
+import { registerAsset } from "../../../../../../../_runtime/07965_registerAsset.js";
+import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { createCacheKey } from "../../../../../../design/components/Styles/native/createStyles.tsx";
+import { getPremiumGroupInviteEmbedText } from "../../../../../premium/premium_group/PremiumGroupUtils.native.tsx";
+import { frozen } from "../../EmbedUtils.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/PremiumGroupInviteEmbed.tsx
 import SubscriptionStatusTypes from "SubscriptionStatusTypes";
 
@@ -17,25 +22,25 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
   let linkTextColor;
   if (null != message.author) {
     let obj = { headerTextColor: null, bodyTextColor: null, linkTextColor: null, backgroundColor: null, betaPillTextColor: null, betaPillBackgroundColor: null };
-    obj[0] = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_TEXT_HEADING_PRIMARY;
-    obj[1] = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_DEFAULT;
-    obj[2] = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_LINK;
-    obj[3] = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_NORMAL;
-    obj[4] = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BLACK;
-    obj[5] = require("../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
-    const obj4 = require("../../../../../../design/components/Styles/native/createStyles.tsx") /* createCacheKey */;
+    obj[0] = Themes.colors.MOBILE_TEXT_HEADING_PRIMARY;
+    obj[1] = Themes.colors.TEXT_DEFAULT;
+    obj[2] = Themes.colors.TEXT_LINK;
+    obj[3] = Themes.colors.BACKGROUND_MOD_NORMAL;
+    obj[4] = Themes.colors.BLACK;
+    obj[5] = Themes.colors.WHITE;
+    const obj4 = createCacheKey /* createCacheKey */;
     const tmp8 = importDefault;
-    ({ backgroundColor, headerTextColor, bodyTextColor, linkTextColor, betaPillTextColor, betaPillBackgroundColor } = require("../../../../../../design/components/Styles/native/createStyles.tsx") /* createCacheKey */.createNativeStyleProperties(obj)(theme));
-    const tmp9 = require("../../../../../../design/components/Styles/native/createStyles.tsx") /* createCacheKey */.createNativeStyleProperties(obj)(theme);
+    ({ backgroundColor, headerTextColor, bodyTextColor, linkTextColor, betaPillTextColor, betaPillBackgroundColor } = createCacheKey /* createCacheKey */.createNativeStyleProperties(obj)(theme));
+    const tmp9 = createCacheKey /* createCacheKey */.createNativeStyleProperties(obj)(theme);
     const author = message.author;
-    const assetUriForEmbed = require("../../EmbedUtils.tsx") /* frozen */.getAssetUriForEmbed(require("../../../../../../../_runtime/07965_registerAsset.js"));
-    const obj6 = require("../../EmbedUtils.tsx") /* frozen */;
+    const assetUriForEmbed = frozen /* frozen */.getAssetUriForEmbed(registerAsset);
+    const obj6 = frozen /* frozen */;
     obj = { sender: null, channel: null, isSender: null, inviteState: null };
     obj[0] = author;
     obj[1] = channel;
     obj[2] = id === author.id;
     obj[3] = constants.UNKNOWN;
-    const premiumGroupInviteEmbedText = require("../../../../../premium/premium_group/PremiumGroupUtils.native.tsx") /* getPremiumGroupInviteEmbedText */.getPremiumGroupInviteEmbedText(obj);
+    const premiumGroupInviteEmbedText = getPremiumGroupInviteEmbedText /* getPremiumGroupInviteEmbedText */.getPremiumGroupInviteEmbedText(obj);
     if (null != premiumGroupInviteEmbedText) {
       ({ header, body } = premiumGroupInviteEmbedText);
       const intl = tmp6(1236).intl;
@@ -60,6 +65,6 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
       obj2[10] = formatToPartsResult;
       return obj2;
     }
-    const obj7 = require("../../../../../premium/premium_group/PremiumGroupUtils.native.tsx") /* getPremiumGroupInviteEmbedText */;
+    const obj7 = getPremiumGroupInviteEmbedText /* getPremiumGroupInviteEmbedText */;
   }
 };

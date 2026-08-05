@@ -1,3 +1,5 @@
+import { NavigationStack } from "../../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { setWarningBoosts } from "DevToolsGuildPowerupsScreen.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsGuildPowerupsModal.tsx
 import { jsx } from "jsxProd";
 import createNativeStackNavigator from "createNativeStackNavigator";
@@ -8,7 +10,7 @@ createNativeStackNavigator = createNativeStackNavigator.createNativeStackNavigat
 const memoResult = require("noop").memo(function DevToolsGuildPowerupsModal() {
   let Navigator;
   let Screen;
-  let obj = _require("../../../../../design/components/Navigator/native/Navigator.native.tsx");
+  let obj = _NavigationStack;
   _require = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions(navigation) {
@@ -33,15 +35,15 @@ const memoResult = require("noop").memo(function DevToolsGuildPowerupsModal() {
     options() {
       return { title: "Guild Powerups" };
     },
-    component: require("DevToolsGuildPowerupsScreen.tsx")
+    component: setWarningBoosts
   };
   ({ Navigator, Screen } = createNativeStackNavigator);
   obj[1] = <Screen name="DevToolsGuildPowerups" options={function options() {
     return { title: "Guild Powerups" };
-  }} component={require("DevToolsGuildPowerupsScreen.tsx")} />;
+  }} component={setWarningBoosts} />;
   return <Navigator name="DevToolsGuildPowerups" options={function options() {
     return { title: "Guild Powerups" };
-  }} component={require("DevToolsGuildPowerupsScreen.tsx")} />;
+  }} component={setWarningBoosts} />;
 });
 const result = require("createNativeStackNavigator").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildPowerupsModal.tsx");
 

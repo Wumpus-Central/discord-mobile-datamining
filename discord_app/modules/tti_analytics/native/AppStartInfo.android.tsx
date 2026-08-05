@@ -1,3 +1,4 @@
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIModule.tsx";
 // discord_app/modules/tti_analytics/native/AppStartInfo.android.tsx
 import _slicedToArray from "_slicedToArray";
 import asyncGeneratorStep from "asyncGeneratorStep";
@@ -7,7 +8,7 @@ const result = require("enforcing").fileFinishedImporting("modules/tti_analytics
 
 export const AppStartInfo = {
   getAppUIViewed() {
-    const mainActivityCreationTime = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIModule.tsx").getMainActivityCreationTime();
+    const mainActivityCreationTime = enforcing.getMainActivityCreationTime();
     let tmp2 = null != mainActivityCreationTime;
     if (tmp2) {
       let flag = table[mainActivityCreationTime];

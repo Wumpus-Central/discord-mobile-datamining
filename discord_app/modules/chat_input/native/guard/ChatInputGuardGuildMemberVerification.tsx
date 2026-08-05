@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../../_runtime/11730_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/11731_registerAsset.js";
+import { ChatInputGuard } from "ChatInputGuard.tsx";
 // discord_app/modules/chat_input/native/guard/ChatInputGuardGuildMemberVerification.tsx
 import { Image } from "ChatInputGuard";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -19,7 +22,7 @@ const memoResult = require("module_11732").memo(function ChatInputGuardGuildMemb
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
   if (guildId(4105).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
-    let tmp8 = require("../../../../../_runtime/11730_registerAsset.js");
+    let tmp8 = registerAsset;
     const intl3 = tmp2(1236).intl;
     let stringResult = intl3.string(tmp2(1236).t.lk30cY);
     let fn = function _() {
@@ -30,7 +33,7 @@ const memoResult = require("module_11732").memo(function ChatInputGuardGuildMemb
       const result = guildId(outer1_2[12]).openMemberVerificationRejectedAlert(obj);
     };
   } else if (tmp2(4105).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-    tmp8 = require("../../../../../_runtime/11731_registerAsset.js");
+    tmp8 = registerAsset;
     const intl2 = tmp2(1236).intl;
     stringResult = intl2.string(tmp2(1236).t["5iLvSx"]);
     fn = function _() {
@@ -74,7 +77,7 @@ const memoResult = require("module_11732").memo(function ChatInputGuardGuildMemb
   const intl4 = tmp2(1236).intl;
   obj1[4] = intl4.string(guildId(1236).t["r8/DT+"]);
   obj1[5] = fn;
-  return jsx(require("ChatInputGuard.tsx"), { type: "simple-action", icon: tmp13Result, message: stringResult, actionIcon: tmp7, actionLabel: null, actionOnPress: null });
+  return jsx(ChatInputGuard, { type: "simple-action", icon: tmp13Result, message: stringResult, actionIcon: tmp7, actionLabel: null, actionOnPress: null });
 });
 let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardGuildMemberVerification.tsx");
 

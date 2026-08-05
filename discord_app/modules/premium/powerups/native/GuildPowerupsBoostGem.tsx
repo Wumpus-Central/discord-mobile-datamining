@@ -1,3 +1,4 @@
+import { BoostGem } from "images/BoostGem.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsBoostGem.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -17,6 +18,6 @@ export default function GuildPowerupsBoostGem(arg0) {
   const obj = { style: null, children: null };
   const items = [callback().boostGemContainer, style];
   obj[0] = items;
-  obj[1] = jsx(require("images/BoostGem.tsx"), { width: gemWidth, height: gemHeight });
+  obj[1] = jsx(BoostGem, { width: gemWidth, height: gemHeight });
   return <View style={null}>{null}</View>;
 };

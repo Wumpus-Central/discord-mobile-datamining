@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/age_gate/useIsNsfwGated.tsx
 import initialize from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -9,7 +10,7 @@ export default function useIsNsfwGated(nsfw) {
   const _require = nsfw;
   nsfw = nsfw.nsfw;
   const items = [mergeGuildAvatar];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;
     if (currentUser != null) {
@@ -17,9 +18,9 @@ export default function useIsNsfwGated(nsfw) {
     }
     return nsfwAllowed;
   });
-  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const obj = _initialize;
   const items1 = [initialize];
-  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => outer1_2.didAgree(nsfw.guild_id));
+  const stateFromStores1 = _initialize.useStateFromStores(items1, () => outer1_2.didAgree(nsfw.guild_id));
   let tmp3 = !stateFromStores1;
   if (nsfw) {
     if (stateFromStores1) {

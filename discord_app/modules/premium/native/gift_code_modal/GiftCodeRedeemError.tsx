@@ -1,3 +1,8 @@
+import { Link } from "../../../../../_runtime/01481_Link.js";
+import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/premium/native/gift_code_modal/GiftCodeRedeemError.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -24,7 +29,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/premium/native/
 
 export default function GiftCodeRedeemError(children) {
   const tmp = createCacheKey();
-  let obj = require("../../../../../_runtime/01481_Link.js") /* Link */;
+  let obj = Link /* Link */;
   const theme = obj.useTheme();
   obj = { bottom: true, style: tmp.container, children: null };
   obj = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
@@ -36,20 +41,20 @@ export default function GiftCodeRedeemError(children) {
   const items = [closure_6(closure_3, { source: tmp9Result }), , ];
   const obj1 = { variant: "heading-xl/bold", style: tmp.header, children: null };
   const intl = tmp2(1236).intl;
-  obj1[2] = intl.formatToMarkdownString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.JUvC0s, {});
-  items[1] = closure_6(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
-  items[2] = closure_6(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-lg/medium", style: tmp.message, children: children.message });
+  obj1[2] = intl.formatToMarkdownString(getSystemLocale /* getSystemLocale */.t.JUvC0s, {});
+  items[1] = closure_6(Text /* Text */.Text, obj1);
+  items[2] = closure_6(Text /* Text */.Text, { variant: "text-lg/medium", style: tmp.message, children: children.message });
   obj[2] = items;
   const items1 = [closure_7(closure_5, obj), ];
   const obj3 = { style: tmp.footer, children: null };
   const obj4 = { text: null, size: "md", onPress: null };
   const intl2 = tmp2(1236).intl;
-  obj4[0] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.cpT0Cq);
+  obj4[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
   obj4[2] = function onPress() {
     return callback(table[12]).pop();
   };
-  obj3[1] = closure_6(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj4);
+  obj3[1] = closure_6(Button /* Button */.Button, obj4);
   items1[1] = closure_6(closure_4, obj3);
   obj[2] = items1;
-  return closure_7(require("../../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return closure_7(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 };

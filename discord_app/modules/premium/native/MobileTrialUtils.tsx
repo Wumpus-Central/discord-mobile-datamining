@@ -1,13 +1,16 @@
+import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import { usePremiumTrialOffer } from "../hooks/usePremiumTrialOffer.android.tsx";
 // discord_app/modules/premium/native/MobileTrialUtils.tsx
 import { PremiumSubscriptionSKUToPremiumType as closure_2 } from "GuildFeatures";
 
 let result = require("UNSAFE_isDismissibleContentDismissed").fileFinishedImporting("modules/premium/native/MobileTrialUtils.tsx");
 
 export const useShouldShowPremiumTrialUserSettingsAvatarBadge = function useShouldShowPremiumTrialUserSettingsAvatarBadge() {
-  const premiumTrialOffer = require("../hooks/usePremiumTrialOffer.android.tsx") /* usePremiumTrialOffer */.usePremiumTrialOffer();
-  const obj = require("../hooks/usePremiumTrialOffer.android.tsx") /* usePremiumTrialOffer */;
+  const premiumTrialOffer = usePremiumTrialOffer /* usePremiumTrialOffer */.usePremiumTrialOffer();
+  const obj = usePremiumTrialOffer /* usePremiumTrialOffer */;
   let tmp3 = null != premiumTrialOffer;
-  const result = require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */.useIsDismissibleContentDismissed_UNSAFE(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.PREMIUM_MOBILE_TRIAL_USER_SETTINGS_AVATAR_BADGE);
+  const result = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */.useIsDismissibleContentDismissed_UNSAFE(DismissibleContent /* DismissibleContent */.DismissibleContent.PREMIUM_MOBILE_TRIAL_USER_SETTINGS_AVATAR_BADGE);
   if (tmp3) {
     let expires_at;
     if (premiumTrialOffer != null) {
@@ -21,7 +24,7 @@ export const useShouldShowPremiumTrialUserSettingsAvatarBadge = function useShou
   return tmp3;
 };
 export const usePremiumTrialOfferPremiumType = function usePremiumTrialOfferPremiumType() {
-  const premiumTrialOffer = require("../hooks/usePremiumTrialOffer.android.tsx") /* usePremiumTrialOffer */.usePremiumTrialOffer();
+  const premiumTrialOffer = usePremiumTrialOffer /* usePremiumTrialOffer */.usePremiumTrialOffer();
   let sku_id;
   if (premiumTrialOffer != null) {
     const subscription_trial = premiumTrialOffer.subscription_trial;
@@ -32,7 +35,7 @@ export const usePremiumTrialOfferPremiumType = function usePremiumTrialOfferPrem
   return table[sku_id];
 };
 export const useNitroTrialCtaOverride = function useNitroTrialCtaOverride(user_profile_premium_upsell_card) {
-  let obj = require("../hooks/usePremiumTrialOffer.android.tsx") /* usePremiumTrialOffer */;
+  let obj = usePremiumTrialOffer /* usePremiumTrialOffer */;
   const premiumTrialOffer = obj.usePremiumTrialOffer();
   let subscription_trial;
   if (premiumTrialOffer != null) {

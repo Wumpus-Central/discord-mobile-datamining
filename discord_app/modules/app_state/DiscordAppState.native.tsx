@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/app_state/DiscordAppState.native.tsx
 import getState from "getState";
 
@@ -13,6 +14,6 @@ export default {
   },
   useCanUIRequestGatewaySocket() {
     const items = [getState];
-    return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => "active" === state.getState());
+    return initialize /* initialize */.useStateFromStores(items, () => "active" === state.getState());
   }
 };

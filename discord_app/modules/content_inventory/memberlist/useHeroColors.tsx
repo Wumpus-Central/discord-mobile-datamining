@@ -1,3 +1,4 @@
+import { n } from "../../../../_runtime/00689_n.js";
 // discord_app/modules/content_inventory/memberlist/useHeroColors.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -126,9 +127,9 @@ export const getHeroColors = function getHeroColors(game_name) {
   let tmp11 = hex2intResult;
   let tmp12 = hex2intResult;
   if (tmp2Result1.getDarkness(hex2intResult) < c7) {
-    const obj5 = require("../../../../_runtime/00689_n.js")(tmp11);
+    const obj5 = n(tmp11);
     const tmp14 = dependencyMap;
-    const numResult = require("../../../../_runtime/00689_n.js")(tmp11).darken(0.5).num();
+    const numResult = n(tmp11).darken(0.5).num();
     const sum = num2 + 1;
     tmp12 = numResult;
     while (sum < 8) {
@@ -143,16 +144,16 @@ export const getHeroColors = function getHeroColors(game_name) {
         break;
       }
     }
-    const darkenResult = require("../../../../_runtime/00689_n.js")(tmp11).darken(0.5);
+    const darkenResult = n(tmp11).darken(0.5);
   }
   tmp2Result1 = num(688);
   let num3 = 1;
   let tmp19 = hex2intResult1;
   let tmp20 = hex2intResult1;
   if (obj8.getDarkness(hex2intResult1) < c7) {
-    const obj9 = require("../../../../_runtime/00689_n.js")(tmp19);
+    const obj9 = n(tmp19);
     const tmp22 = dependencyMap;
-    const numResult1 = require("../../../../_runtime/00689_n.js")(tmp19).darken(0.5).num();
+    const numResult1 = n(tmp19).darken(0.5).num();
     const sum1 = num3 + 1;
     tmp20 = numResult1;
     while (sum1 < 8) {
@@ -167,7 +168,7 @@ export const getHeroColors = function getHeroColors(game_name) {
         break;
       }
     }
-    const darkenResult1 = require("../../../../_runtime/00689_n.js")(tmp19).darken(0.5);
+    const darkenResult1 = n(tmp19).darken(0.5);
   }
   obj = { primaryColor: null, secondaryColor: null };
   obj8 = num(688);

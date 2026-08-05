@@ -1,3 +1,7 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useVoiceStateForRemoteSession } from "../../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
+import { useCanCurrentUserSpeakInChannel } from "../../../stage_channels/useCanSpeakInChannel.tsx";
+import { useIsInvitedToSpeak } from "../../../stage_channels/useIsInvitedToSpeak.tsx";
 // discord_app/modules/connectivity/native/components/GlobalStatusContent.tsx
 import "ChannelCallCameraPreview";
 import { View } from "getIsScreenLandscape";
@@ -28,9 +32,9 @@ export default function ConnectivityGlobalStatusContent() {
   let remotePlatform;
   let rtcConnectionState;
   const tmp = createCacheKey();
-  const tmp4 = require("../../../game_console/hooks/useVoiceStateForRemoteSession.tsx")();
+  const tmp4 = useVoiceStateForRemoteSession();
   const require = tmp4;
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [createRTCConnection, createGuildRecordFromRust, ensureGuildLoaded, handleUpdate];
   const items1 = [tmp4];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
@@ -84,11 +88,11 @@ export default function ConnectivityGlobalStatusContent() {
   if (channel != null) {
     id = channel.id;
   }
-  let tmp2ResultResult = require("../../../stage_channels/useCanSpeakInChannel.tsx")(id);
-  const tmp2Result = require("../../../stage_channels/useCanSpeakInChannel.tsx");
+  let tmp2ResultResult = useCanCurrentUserSpeakInChannel(id);
+  const tmp2Result = useCanCurrentUserSpeakInChannel;
   let tmp5Result = tmp5(4131);
   let tmp14 = tmp12;
-  const tmp11 = require("../../../stage_channels/useIsInvitedToSpeak.tsx")();
+  const tmp11 = useIsInvitedToSpeak();
   if (isGuildStageVoiceResult) {
     if (!tmp2ResultResult) {
       tmp2ResultResult = tmp11;

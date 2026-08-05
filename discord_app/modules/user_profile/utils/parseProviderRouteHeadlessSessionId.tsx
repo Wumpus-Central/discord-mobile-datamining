@@ -1,3 +1,4 @@
+import { getPlatformUserUrl } from "../../../lib/Platforms.tsx";
 // discord_app/modules/user_profile/utils/parseProviderRouteHeadlessSessionId.tsx
 import _slicedToArray from "_slicedToArray";
 
@@ -10,7 +11,7 @@ export default function parseProviderRouteHeadlessSessionId(str) {
       const first = callback(str.slice(2).split(","), 1)[0];
       if (null != first) {
         if (0 !== first.length) {
-          const value = require("../../../lib/Platforms.tsx").get(first);
+          const value = getPlatformUserUrl.get(first);
           let tmp5 = null;
           if (null != value) {
             tmp5 = null;

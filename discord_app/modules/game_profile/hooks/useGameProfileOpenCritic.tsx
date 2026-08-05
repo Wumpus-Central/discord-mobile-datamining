@@ -1,8 +1,13 @@
+import { metadata } from "../../../../discord_assets/assets/game-profile/opencritic-fair.png.js";
+import { metadata } from "../../../../discord_assets/assets/game-profile/opencritic-mighty.png.js";
+import { metadata } from "../../../../discord_assets/assets/game-profile/opencritic-strong.png.js";
+import { metadata } from "../../../../discord_assets/assets/game-profile/opencritic-weak.png.js";
+import { OpenCriticTier } from "../../../../discord_common/js/shared/shared-constants/OpenCriticTier.tsx";
 // discord_app/modules/game_profile/hooks/useGameProfileOpenCritic.tsx
 const result = require("metadata").fileFinishedImporting("modules/game_profile/hooks/useGameProfileOpenCritic.tsx");
 
 export const getOpenCriticTierText = function getOpenCriticTierText(tier) {
-  if (require("../../../../discord_common/js/shared/shared-constants/OpenCriticTier.tsx") /* OpenCriticTier */.OpenCriticTier.MIGHTY === tier) {
+  if (OpenCriticTier /* OpenCriticTier */.OpenCriticTier.MIGHTY === tier) {
     const intl4 = tmp(1236).intl;
     return intl4.string(tmp(1236).t.aZej2g);
   } else if (tmp(9239).OpenCriticTier.STRONG === tier) {
@@ -17,19 +22,19 @@ export const getOpenCriticTierText = function getOpenCriticTierText(tier) {
   }
 };
 export const getOpenCriticTierImage = function getOpenCriticTierImage(tier) {
-  if (require("../../../../discord_common/js/shared/shared-constants/OpenCriticTier.tsx") /* OpenCriticTier */.OpenCriticTier.MIGHTY === tier) {
-    return require("../../../../discord_assets/assets/game-profile/opencritic-mighty.png.js");
+  if (OpenCriticTier /* OpenCriticTier */.OpenCriticTier.MIGHTY === tier) {
+    return metadata;
   } else if (tmp(9239).OpenCriticTier.STRONG === tier) {
-    return require("../../../../discord_assets/assets/game-profile/opencritic-strong.png.js");
+    return metadata;
   } else if (tmp(9239).OpenCriticTier.FAIR === tier) {
-    return require("../../../../discord_assets/assets/game-profile/opencritic-fair.png.js");
+    return metadata;
   } else if (tmp(9239).OpenCriticTier.WEAK === tier) {
-    return require("../../../../discord_assets/assets/game-profile/opencritic-weak.png.js");
+    return metadata;
   }
 };
 export const getOpenCriticCircleRatingColor = function getOpenCriticCircleRatingColor(tier) {
   let foregroundColor = "#fc430a";
-  if (require("../../../../discord_common/js/shared/shared-constants/OpenCriticTier.tsx") /* OpenCriticTier */.OpenCriticTier.MIGHTY !== tier) {
+  if (OpenCriticTier /* OpenCriticTier */.OpenCriticTier.MIGHTY !== tier) {
     foregroundColor = "#9e00b4";
     if (tmp(9239).OpenCriticTier.STRONG !== tier) {
       foregroundColor = "#4aa1ce";

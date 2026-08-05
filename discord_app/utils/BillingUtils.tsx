@@ -1,3 +1,6 @@
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { set } from "../errors/BillingError.tsx";
+import { SentryUtils.native } from "SentryUtils.native.tsx";
 // discord_app/utils/BillingUtils.tsx
 import set from "set";
 import { PaymentGateways } from "sum";
@@ -99,7 +102,7 @@ export const createGatewayCheckoutContext = function createGatewayCheckoutContex
   return applyArgumentsResult;
 };
 export const captureBillingException = function captureBillingException(error, tags) {
-  let obj = require("SentryUtils.native.tsx");
+  let obj = SentryUtils.native;
   obj = {};
   const merged = Object.assign(tags);
   tags = undefined;
@@ -113,7 +116,7 @@ export const captureBillingException = function captureBillingException(error, t
   obj.captureException(error, obj);
 };
 export const isExpectedHttpClientError = function isExpectedHttpClientError(onSignFailure) {
-  let tmp2 = onSignFailure instanceof require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTPResponseError;
+  let tmp2 = onSignFailure instanceof sendRequest /* sendRequest */.HTTPResponseError;
   if (tmp2) {
     tmp2 = onSignFailure.status >= 400;
   }
@@ -121,7 +124,7 @@ export const isExpectedHttpClientError = function isExpectedHttpClientError(onSi
     tmp2 = onSignFailure.status < 500;
   }
   if (!tmp2) {
-    let tmp4 = onSignFailure instanceof require("../errors/BillingError.tsx");
+    let tmp4 = onSignFailure instanceof set;
     if (tmp4) {
       tmp4 = null != onSignFailure.status;
     }
@@ -136,7 +139,7 @@ export const isExpectedHttpClientError = function isExpectedHttpClientError(onSi
   return tmp2;
 };
 export const captureBillingMessage = function captureBillingMessage(arg0, tags) {
-  let obj = require("SentryUtils.native.tsx");
+  let obj = SentryUtils.native;
   obj = {};
   const merged = Object.assign(tags);
   tags = undefined;

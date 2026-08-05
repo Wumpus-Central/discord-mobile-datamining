@@ -1,40 +1,42 @@
+import { t } from "../../../../_runtime/03867_t.js";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/saved_messages/message_reminders/MessageRemindersTypes.tsx
 const items = [
   {
     getDueAt() {
-      const obj = require("../../../../_runtime/03867_t.js")();
-      return require("../../../../_runtime/03867_t.js")().add(30, "minutes").toDate();
+      const obj = t();
+      return t().add(30, "minutes").toDate();
     },
     getLabel() {
-      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["OV8l/H"]);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t["OV8l/H"]);
     }
   },
   {
     getDueAt() {
-      const obj = require("../../../../_runtime/03867_t.js")();
-      return require("../../../../_runtime/03867_t.js")().add(1, "hour").toDate();
+      const obj = t();
+      return t().add(1, "hour").toDate();
     },
     getLabel() {
-      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["zf0R+0"]);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t["zf0R+0"]);
     }
   },
   {
     getDueAt() {
-      const obj = require("../../../../_runtime/03867_t.js")();
-      return require("../../../../_runtime/03867_t.js")().add(4, "hour").toDate();
+      const obj = t();
+      return t().add(4, "hour").toDate();
     },
     getLabel() {
-      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["5gztZN"]);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t["5gztZN"]);
     }
   },
   {
     getDueAt() {
-      const obj = require("../../../../_runtime/03867_t.js")();
-      const addResult = require("../../../../_runtime/03867_t.js")().startOf("day").add(9, "hours");
-      const startOfResult = require("../../../../_runtime/03867_t.js")().startOf("day");
+      const obj = t();
+      const addResult = t().startOf("day").add(9, "hours");
+      const startOfResult = t().startOf("day");
       if (obj4.hour() >= 9) {
         let toDateResult = addResult.add(1, "day").toDate();
         const addResult1 = addResult.add(1, "day");
@@ -45,18 +47,18 @@ const items = [
     },
     getLabel() {
       if (obj.hour() >= 9) {
-        const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        let stringResult = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["7MKr2P"]);
+        const intl2 = getSystemLocale /* getSystemLocale */.intl;
+        let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t["7MKr2P"]);
       } else {
-        const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        stringResult = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.FnFI3m);
+        const intl = getSystemLocale /* getSystemLocale */.intl;
+        stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.FnFI3m);
       }
       return stringResult;
     }
   },
   {
     getDueAt() {
-      const dayResult = require("../../../../_runtime/03867_t.js")().day();
+      const dayResult = t().day();
       if (0 === dayResult) {
         let num3 = 1;
       } else {
@@ -68,15 +70,15 @@ const items = [
           const addResult = tmp(3867)().startOf("day").add(9, "hours");
         }
       }
-      const obj = require("../../../../_runtime/03867_t.js")();
-      const obj5 = require("../../../../_runtime/03867_t.js")();
-      const dayResult1 = require("../../../../_runtime/03867_t.js")().day(num3);
-      const startOfResult1 = require("../../../../_runtime/03867_t.js")().day(num3).startOf("day");
-      return require("../../../../_runtime/03867_t.js")().day(num3).startOf("day").add(9, "hours").toDate();
+      const obj = t();
+      const obj5 = t();
+      const dayResult1 = t().day(num3);
+      const startOfResult1 = t().day(num3).startOf("day");
+      return t().day(num3).startOf("day").add(9, "hours").toDate();
     },
     getLabel() {
-      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["q+Ls05"]);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t["q+Ls05"]);
     }
   }
 ];

@@ -1,3 +1,4 @@
+import { useMountEffect } from "../../../../../discord_common/js/shared/hooks/useMountEffect.tsx";
 // discord_app/modules/messages/native/hooks/useChannelLoading.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -13,7 +14,7 @@ export default function useChannelLoading(arg0) {
   ({ channelId: require, jumpTargetId: importDefault, oldestUnreadMessageId: dependencyMap, shouldJumpToOriginalPost: _slicedToArray } = arg0);
   let first;
   first = callback(first.useState(() => new callback(table[2])("Messages")), 1)[0];
-  require("../../../../../discord_common/js/shared/hooks/useMountEffect.tsx")(() => {
+  useMountEffect(() => {
     let obj = outer1_0(outer1_2[3]);
     obj = { jumpTargetId: closure_1, oldestUnreadMessageId: closure_2, shouldJumpToOriginalPost: callback2(false), channelId: closure_0, tracker: first };
     const result = obj.startOrCancelChannelLatestMessagesLoad(obj);

@@ -1,3 +1,8 @@
+import { KeyIcon } from "../../../../../design/components/Icon/native/redesign/generated/KeyIcon.tsx";
+import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowArrow } from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
+import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/devtools/native/components/screens/DevToolsAgeVerificationScreen.tsx
 import Themes from "Themes";
 import "noop";
@@ -73,14 +78,14 @@ export default function DevToolsAgeVerificationScreen() {
   const tmp = createCacheKey();
   let obj = { style: tmp.container, contentContainerStyle: null, children: null };
   const items = [tmp.content, ];
-  obj = { paddingBottom: tmp.content.padding + require("../../../../safe_area/useSafeAreaInsets.native.tsx")().bottom };
+  obj = { paddingBottom: tmp.content.padding + useSafeAreaInsets().bottom };
   items[1] = obj;
   obj[1] = items;
   obj = { title: "Quick Actions", hasIcons: true, children: null };
   const obj1 = { label: "Launch Age Verification Test Tool", onPress: showAgeVerificationTestModal, icon: null, trailing: null };
-  obj1[2] = callback2(require("../../../../../design/components/Icon/native/redesign/generated/KeyIcon.tsx") /* KeyIcon */.KeyIcon, {});
-  obj1[3] = callback2(require("../../../../../design/components/TableRow/native/TableRowArrow.native.tsx") /* TableRowArrow */.TableRowArrow, {});
-  const items1 = [callback2(require("../../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj1), ];
+  obj1[2] = callback2(KeyIcon /* KeyIcon */.KeyIcon, {});
+  obj1[3] = callback2(TableRowArrow /* TableRowArrow */.TableRowArrow, {});
+  const items1 = [callback2(TableRowInner /* TableRowInner */.TableRow, obj1), ];
   const obj2 = {
     label: "Launch Age Verification Modal",
     onPress() {
@@ -91,10 +96,10 @@ export default function DevToolsAgeVerificationScreen() {
     icon: null,
     trailing: null
   };
-  obj2[2] = callback2(require("../../../../../design/components/Icon/native/redesign/generated/KeyIcon.tsx") /* KeyIcon */.KeyIcon, {});
-  obj2[3] = callback2(require("../../../../../design/components/TableRow/native/TableRowArrow.native.tsx") /* TableRowArrow */.TableRowArrow, {});
-  items1[1] = callback2(require("../../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj2);
+  obj2[2] = callback2(KeyIcon /* KeyIcon */.KeyIcon, {});
+  obj2[3] = callback2(TableRowArrow /* TableRowArrow */.TableRowArrow, {});
+  items1[1] = callback2(TableRowInner /* TableRowInner */.TableRow, obj2);
   obj[2] = items1;
-  obj[2] = callback3(require("../../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj);
+  obj[2] = callback3(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
   return callback2(ScrollView, obj);
 };

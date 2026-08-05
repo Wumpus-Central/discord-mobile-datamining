@@ -1,3 +1,6 @@
+import { getMixedGradientColor } from "../../client_themes/native/ThemedGradient.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
+import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 // discord_app/modules/one_time_login/native/OneTimeLoginModal.tsx
 import closure_3 from "ME";
 import CircleErrorIcon from "CircleErrorIcon";
@@ -48,9 +51,9 @@ export default function OneTimeLoginModal(token) {
   let callback4;
   const tmp = createCacheKey();
   importDefault = tmp;
-  const tmp2 = require("../../safe_area/useSafeAreaInsets.native.tsx")();
+  const tmp2 = useSafeAreaInsets();
   dependencyMap = tmp2;
-  height = require("../../screen/useWindowDimensions.native.tsx")().height;
+  height = useWindowDimensions().height;
   const items = [tmp2.bottom, height];
   const items1 = [token];
   const memo = callback.useMemo(() => {
@@ -181,10 +184,10 @@ export default function OneTimeLoginModal(token) {
   obj = { dark: null };
   obj[0] = token(4096).OverlayOpacity.LEVEL_1;
   obj[6] = obj;
-  const items6 = [callback(require("../../client_themes/native/ThemedGradient.tsx"), obj), ];
+  const items6 = [callback(getMixedGradientColor, obj), ];
   let obj1 = { style: tmp.container, children: null };
   let obj2 = { style: tmp.centerContent, children: null };
-  const tmp11 = require("../../client_themes/native/ThemedGradient.tsx");
+  const tmp11 = getMixedGradientColor;
   const items7 = [callback(callback3, { source: token(13116), style: tmp.logo }), ];
   let obj4 = { style: tmp.loadingContainer, children: null };
   const items8 = [callback(callback2, {}), ];

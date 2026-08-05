@@ -1,3 +1,6 @@
+import { v1 } from "../../../../_runtime/00514_v1.js";
+import { format } from "../../../../_runtime/00669_format.js";
+import { set } from "getDescription.tsx";
 // discord_common/js/packages/dynamic-links/generateDynamicLink.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
@@ -30,7 +33,7 @@ export default function generateDynamicLink(arg0, arg1) {
   const encodeURIComponentResult1 = encodeURIComponent("discord://app/open#" + str.toString());
   const items = ["WebView", "(iPhone|iPod|iPad)(?!.*Safari/)"];
   const regExp = new RegExp("(" + items.join("|") + ")", "ig");
-  const tmp9 = require("../../../../_runtime/00669_format.js");
+  const tmp9 = format;
   let match;
   if (tmp9 != null) {
     if (tmp9.ua != null) {
@@ -64,7 +67,7 @@ export default function generateDynamicLink(arg0, arg1) {
     const _encodeURIComponent2 = encodeURIComponent;
     encodeURIComponentResult4 = encodeURIComponent(iosFallbackLink);
   }
-  const combined = "" + c6 + "/Hs5r/?deep_link_value=" + encodeURIComponentResult + "&pid=" + utmSource + "&af_force_deeplink=" + str3 + "&af_og_description=" + encodeURIComponent(require("getDescription.tsx")()) + "&af_dp=" + encodeURIComponentResult1;
+  const combined = "" + c6 + "/Hs5r/?deep_link_value=" + encodeURIComponentResult + "&pid=" + utmSource + "&af_force_deeplink=" + str3 + "&af_og_description=" + encodeURIComponent(set()) + "&af_dp=" + encodeURIComponentResult1;
   let sum = combined;
   if (null != encodeURIComponentResult3) {
     const _HermesInternal = HermesInternal;
@@ -78,7 +81,7 @@ export default function generateDynamicLink(arg0, arg1) {
   return sum1;
 };
 export const generateAttemptId = function generateAttemptId() {
-  return require("../../../../_runtime/00514_v1.js") /* v1 */.v4();
+  return v1 /* v1 */.v4();
 };
 export const parseDynamicLink = function parseDynamicLink(str) {
   if (str.startsWith(c6)) {

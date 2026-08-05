@@ -1,14 +1,17 @@
+import { apexExperiment } from "BountiesStage1Experiment.tsx";
+import { apexExperiment } from "BountiesVerticalScrollExperiment.tsx";
+import { apexExperiment } from "QuestHomeBountiesExperiment.tsx";
 // discord_app/modules/quests/experiments/useBountiesExperience.tsx
 const result = require("apexExperiment").fileFinishedImporting("modules/quests/experiments/useBountiesExperience.tsx");
 
 export const useBountiesExperience = function useBountiesExperience(VIDEO_MODAL_MOBILE) {
-  const BountiesVerticalScrollExperiment = require("BountiesVerticalScrollExperiment.tsx") /* apexExperiment */.BountiesVerticalScrollExperiment;
+  const BountiesVerticalScrollExperiment = apexExperiment /* apexExperiment */.BountiesVerticalScrollExperiment;
   let obj = { location: VIDEO_MODAL_MOBILE };
   const config = BountiesVerticalScrollExperiment.useConfig(obj);
-  const BountiesStage1Experiment = require("BountiesStage1Experiment.tsx") /* apexExperiment */.BountiesStage1Experiment;
+  const BountiesStage1Experiment = apexExperiment /* apexExperiment */.BountiesStage1Experiment;
   obj = { location: VIDEO_MODAL_MOBILE };
   const config1 = BountiesStage1Experiment.useConfig(obj);
-  const QuestHomeBountiesExperiment = require("QuestHomeBountiesExperiment.tsx") /* apexExperiment */.QuestHomeBountiesExperiment;
+  const QuestHomeBountiesExperiment = apexExperiment /* apexExperiment */.QuestHomeBountiesExperiment;
   obj = { location: VIDEO_MODAL_MOBILE };
   let num = 50;
   const config2 = QuestHomeBountiesExperiment.useConfig(obj);

@@ -1,3 +1,10 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { resetCache } from "../../../../utils/DateUtils.tsx";
+import { useMaybeGetSortedBoosts } from "../hooks/useMaybeGetSortedBoosts.tsx";
+import { getBoostRowMessageText } from "../utils/getBoostRowMessageText.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsRecentActivitySection.tsx
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -16,12 +23,12 @@ function GuildPowerupsRecentActivityRow(row) {
   row = row.row;
   ({ boost, phase, sortKey } = row);
   const tmp = callback3();
-  let obj = require("../hooks/useMaybeGetSortedBoosts.tsx") /* useMaybeGetSortedBoosts */;
+  let obj = useMaybeGetSortedBoosts /* useMaybeGetSortedBoosts */;
   const getBoostUserConfig = obj.useGetBoostUserConfig(boost);
   ({ roleColor, roleColorStrings, username } = getBoostUserConfig);
-  let obj1 = require("../../../../utils/DateUtils.tsx") /* resetCache */;
+  let obj1 = resetCache /* resetCache */;
   const date = new Date(sortKey);
-  let obj2 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj2 = initialize /* initialize */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj2.useStateFromStores(items, () => roleStyle.roleStyle);
   if ("username" === stateFromStores) {
@@ -44,7 +51,7 @@ function GuildPowerupsRecentActivityRow(row) {
     obj[0] = tmp.boostRowContainer;
     if ("gave" === phase) {
       obj1 = { color: null, size: "sm" };
-      obj1[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.GUILD_BOOSTING_PINK;
+      obj1[0] = Themes.unsafe_rawColors.GUILD_BOOSTING_PINK;
       obj2 = obj1;
     } else {
       obj2 = { size: "sm" };
@@ -76,7 +83,7 @@ function GuildPowerupsRecentActivityRow(row) {
     items2[2] = closure_5(tmp2(4281).Text, { variant: "text-md/medium", color: "interactive-text-active", children: " " });
     const obj6 = { variant: "text-md/medium", lineClamp: 1, style: null, children: null };
     obj6[2] = tmp.messageText;
-    obj6[3] = require("../utils/getBoostRowMessageText.tsx")(row);
+    obj6[3] = getBoostRowMessageText(row);
     items2[3] = closure_5(tmp2(4281).Text, obj6);
     obj3[1] = items2;
     items1[1] = closure_6(View, obj3);
@@ -104,15 +111,15 @@ const result = require("jsxProd").fileFinishedImporting("modules/premium/powerup
 
 export default function GuildPowerupsRecentActivitySection(guildId) {
   const tmp = callback3();
-  const arr = require("../hooks/useMaybeGetSortedBoosts.tsx")(guildId.guildId, 10);
+  const arr = useMaybeGetSortedBoosts(guildId.guildId, 10);
   let tmp3 = null;
   if (0 !== arr.length) {
     let obj = { style: null, children: null };
     obj[0] = tmp.sectionContainer;
     obj = { variant: "heading-lg/semibold", color: "text-subtle", children: null };
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.yM9Krm);
-    const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.yM9Krm);
+    const items = [callback(Text /* Text */.Text, obj), ];
     obj = { style: null, children: null };
     obj[0] = tmp.boostContainer;
     obj[1] = arr.map((boost) => callback(closure_8, { row: boost }, "boost-" + boost.boost.id));

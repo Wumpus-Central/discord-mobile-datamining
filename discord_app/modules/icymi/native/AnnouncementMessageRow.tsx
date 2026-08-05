@@ -1,3 +1,4 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/icymi/native/AnnouncementMessageRow.tsx
 import importAllResult from "getSystemLocale";
 import { View } from "generateHydrationId";
@@ -18,7 +19,7 @@ let c3 = importAllResult;
 let closure_13 = createICYMIStyles.createICYMIStyles((inset) => {
   obj = { pressable: obj, footer: null };
   obj = { flex: 1, paddingLeft: inset.inset };
-  obj = { marginVertical: inset.margin, gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, paddingHorizontal: ITEM_PADDING, marginLeft: inset.inset };
+  obj = { marginVertical: inset.margin, gap: Themes.space.PX_8, paddingHorizontal: ITEM_PADDING, marginLeft: inset.inset };
   obj[1] = obj;
   return obj;
 });

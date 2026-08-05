@@ -1,3 +1,4 @@
+import { set } from "ContentImpressionTracker.tsx";
 // discord_app/modules/quests/lib/analytics/ContentImpressionTrackerHooks.tsx
 import noop from "noop";
 import initializeState from "initializeState";
@@ -73,10 +74,10 @@ export const useQuestStatusChanged = function useQuestStatusChanged(adContentIds
   return memo !== adCreativeType(stateFromStores[5])(memo);
 };
 export const useQuestImpressionRef = function useQuestImpressionRef() {
-  return React.useContext(require("ContentImpressionTracker.tsx") /* set */.QuestImpressionContext);
+  return React.useContext(set /* set */.QuestImpressionContext);
 };
 export const useQuestImpression = function useQuestImpression() {
-  const context = React.useContext(require("ContentImpressionTracker.tsx") /* set */.QuestImpressionContext);
+  const context = React.useContext(set /* set */.QuestImpressionContext);
   let current;
   if (context != null) {
     current = context.current;
@@ -84,7 +85,7 @@ export const useQuestImpression = function useQuestImpression() {
   return current;
 };
 export const useQuestImpressionId = function useQuestImpressionId() {
-  const context = React.useContext(require("ContentImpressionTracker.tsx") /* set */.QuestImpressionContext);
+  const context = React.useContext(set /* set */.QuestImpressionContext);
   let current;
   if (context != null) {
     current = context.current;

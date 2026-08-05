@@ -1,3 +1,8 @@
+import { isThemeLight } from "../../../design/utils/shared/themes.tsx";
+import { IconSizes } from "../../../design/void/Icon/native/Icon.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { GameIcon } from "../../game_detection/native/GameIcon.tsx";
+import { useStartAuthorize } from "useStartAuthorize.tsx";
 // discord_app/modules/application_account_linking/native/ConnectionDeprecationBottomSheet.tsx
 import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase";
 import { View } from "IncentivizedAccountLinkConfirmationBottomSheet";
@@ -15,18 +20,18 @@ function ConnectionIcon(arg0) {
   let theme;
   ({ platform, theme } = arg0);
   const tmp = createCacheKey();
-  let obj = require("../../../design/utils/shared/themes.tsx") /* isThemeLight */;
+  let obj = isThemeLight /* isThemeLight */;
   const isThemeDarkResult = obj.isThemeDark(theme);
   const tmp2 = require;
   const icon = platform.icon;
   obj = { style: tmp.iconContainer, children: null };
-  const source = require("../../../utils/AvatarUtils.tsx") /* getAvatarURL */.makeSource(isThemeDarkResult ? icon.darkPNG : icon.lightPNG);
+  const source = getAvatarURL /* getAvatarURL */.makeSource(isThemeDarkResult ? icon.darkPNG : icon.lightPNG);
   obj = { size: null, source: null, disableColor: true, style: null };
-  const obj2 = require("../../../utils/AvatarUtils.tsx") /* getAvatarURL */;
+  const obj2 = getAvatarURL /* getAvatarURL */;
   obj[0] = tmp2(4697).IconSizes.CUSTOM;
   obj[1] = source;
   obj[3] = tmp.connectionIcon;
-  obj[1] = callback(require("../../../design/void/Icon/native/Icon.tsx"), obj);
+  obj[1] = callback(IconSizes, obj);
   return callback(View, obj);
 }
 function ApplicationIcon(application) {
@@ -36,9 +41,9 @@ function ApplicationIcon(application) {
   if (null != application) {
     obj = { game: null, size: null };
     obj[0] = application;
-    obj[1] = require("../../game_detection/native/GameIcon.tsx") /* GameIcon */.GameIconSizes.NORMAL;
-    tmpResult = tmp(require("../../game_detection/native/GameIcon.tsx"), obj);
-    const tmp6 = require("../../game_detection/native/GameIcon.tsx");
+    obj[1] = GameIcon /* GameIcon */.GameIconSizes.NORMAL;
+    tmpResult = tmp(GameIcon, obj);
+    const tmp6 = GameIcon;
   }
   obj[1] = tmpResult;
   return closure_8(View, obj);
@@ -210,7 +215,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = function useShouldS
     }
   }
   const getOrFetchApplication = deprecatedPlatformTypes(5616).useGetOrFetchApplication(replacedBy);
-  const tmp5 = require("useStartAuthorize.tsx")(getOrFetchApplication);
+  const tmp5 = useStartAuthorize(getOrFetchApplication);
   ({ hasAlreadyLinked, canStartAuthorization } = tmp5);
   if (!fetchingConnections) {
     fetchingConnections = !tmp5.fetched;

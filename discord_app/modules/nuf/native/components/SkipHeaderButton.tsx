@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { GenericHeaderTitle } from "../../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 // discord_app/modules/nuf/native/components/SkipHeaderButton.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -15,8 +17,8 @@ export default function SkipHeaderButton(label) {
   const tmp = createCacheKey();
   label = label.label;
   if (label == null) {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    label = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["5Wxrcd"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    label = intl.string(getSystemLocale /* getSystemLocale */.t["5Wxrcd"]);
   }
   const obj = {};
   const merged = Object.assign(label);
@@ -29,5 +31,5 @@ export default function SkipHeaderButton(label) {
   obj.labelStyle = items;
   obj.label = label;
   obj.accessibilityLabel = label;
-  return jsx(require("../../../main_tabs_v2/native/shared_components/HeaderShared.tsx") /* GenericHeaderTitle */.HeaderTextButton, {});
+  return jsx(GenericHeaderTitle /* GenericHeaderTitle */.HeaderTextButton, {});
 };

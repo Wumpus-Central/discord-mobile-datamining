@@ -1,3 +1,5 @@
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppDatabaseModule.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/app_database/system/StartupData.native.tsx
 import { NativeModules } from "get ActivityIndicator";
 
@@ -5,7 +7,7 @@ const result = require("enforcing").fileFinishedImporting("modules/app_database/
 
 export const getUserId = function getUserId() {
   if (obj.isAndroid()) {
-    let userId = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAppDatabaseModule.tsx").getConstants().userId;
+    let userId = enforcing.getConstants().userId;
     let tmp6 = null;
     if (null != userId) {
       tmp6 = userId;
@@ -18,12 +20,12 @@ export const getUserId = function getUserId() {
     }
     return userId;
   }
-  obj = require("../../../utils/PlatformUtils.tsx") /* set */;
+  obj = set /* set */;
 };
 export const setUserId = function setUserId(id) {
   if (obj.isAndroid()) {
-    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAppDatabaseModule.tsx").setUserId(id);
-    const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeAppDatabaseModule.tsx");
+    enforcing.setUserId(id);
+    const obj2 = enforcing;
   } else {
     const DCDAppDatabase = NativeModules.DCDAppDatabase;
     DCDAppDatabase.setUserId(id);

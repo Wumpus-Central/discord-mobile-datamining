@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/video_calls/useMuteStates.tsx
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";
@@ -67,6 +68,6 @@ const result = require("_detectH265HardwareDecode").fileFinishedImporting("modul
 export default function useMuteStates(arg0) {
   const _require = arg0;
   const items = [fetchFingerprint, updateVoiceState, _detectH265HardwareDecode, getUncachedChannelPermissions, initialize];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => outer1_8({ channel: closure_0, authenticationStore: outer1_3, voiceStateStore: outer1_6, mediaEngineStore: outer1_4, permissionStore: outer1_5, impersonateStore: outer1_2 }));
+  return _initialize.useStateFromStoresObject(items, () => outer1_8({ channel: closure_0, authenticationStore: outer1_3, voiceStateStore: outer1_6, mediaEngineStore: outer1_4, permissionStore: outer1_5, impersonateStore: outer1_2 }));
 };
 export { getMuteStates };

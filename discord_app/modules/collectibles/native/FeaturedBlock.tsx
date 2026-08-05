@@ -1,3 +1,5 @@
+import { QUICK_SWITCHER } from "../../app_analytics/AnalyticsLocation.tsx";
+import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
 // discord_app/modules/collectibles/native/FeaturedBlock.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -22,10 +24,10 @@ const result = require("jsxProd").fileFinishedImporting("modules/collectibles/na
 
 export default function FeaturedBlock(featuredBlock) {
   const tmp = callback();
-  let obj = { value: require("../../app_analytics/useAnalyticsLocations.tsx")(require("../../app_analytics/AnalyticsLocation.tsx").COLLECTIBLES_SHOP_FEATURED_BLOCK).analyticsLocations, children: null };
+  let obj = { value: context(QUICK_SWITCHER.COLLECTIBLES_SHOP_FEATURED_BLOCK).analyticsLocations, children: null };
   obj = { style: tmp.container, children: null };
   obj = { featuredBlock: featuredBlock.featuredBlock, style: tmp.featuredSubblock };
   obj[1] = <Subblocks featuredBlock={arg0.featuredBlock} style={tmp.featuredSubblock} />;
   obj[1] = <View featuredBlock={arg0.featuredBlock} style={tmp.featuredSubblock} />;
-  return jsx(require("../../app_analytics/useAnalyticsLocations.tsx") /* context */.AnalyticsLocationProvider, { featuredBlock: featuredBlock.featuredBlock, style: tmp.featuredSubblock });
+  return jsx(context /* context */.AnalyticsLocationProvider, { featuredBlock: featuredBlock.featuredBlock, style: tmp.featuredSubblock });
 };

@@ -1,3 +1,6 @@
+import { t } from "../../../../../_runtime/03867_t.js";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useStaffOrDeveloperSettingPredicate } from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
 // discord_app/modules/user_settings/defs/native/InternalBuildUpdateSetting.tsx
 import checkForNewerBuild from "checkForNewerBuild";
 import { jsx } from "jsxProd";
@@ -20,7 +23,7 @@ createToggle = {
   },
   useDescription: function useInternalBuildUpdateDescription() {
     const items = [checkForNewerBuild];
-    const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+    const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => {
       const newBuild = checkForNewerBuild.latestFetchedBuild().newBuild;
       let build;
       if (newBuild != null) {
@@ -28,9 +31,9 @@ createToggle = {
       }
       return build;
     });
-    const obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+    const obj = initialize /* initialize */;
     const items1 = [checkForNewerBuild];
-    const stateFromStores1 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => checkForNewerBuild.latestFetchedBuild().lastCheck);
+    const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => checkForNewerBuild.latestFetchedBuild().lastCheck);
     if (null != stateFromStores) {
       const _HermesInternal2 = HermesInternal;
       let str = "Open build " + stateFromStores + " installer in a browser";
@@ -38,15 +41,15 @@ createToggle = {
       str = "Never refreshed";
       if (null != stateFromStores1) {
         const _HermesInternal = HermesInternal;
-        str = "Last refreshed " + require("../../../../../_runtime/03867_t.js")(stateFromStores1).fromNow();
-        const obj3 = require("../../../../../_runtime/03867_t.js")(stateFromStores1);
+        str = "Last refreshed " + t(stateFromStores1).fromNow();
+        const obj3 = t(stateFromStores1);
       }
     }
     return str;
   },
   usePredicate: function useHasInternalBuildUpdateSetting() {
-    const obj = require("../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx") /* useStaffOrDeveloperSettingPredicate */;
-    return checkForNewerBuild.hasUpdatesConfigured && require("../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx") /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
+    const obj = useStaffOrDeveloperSettingPredicate /* useStaffOrDeveloperSettingPredicate */;
+    return checkForNewerBuild.hasUpdatesConfigured && useStaffOrDeveloperSettingPredicate /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
   },
   onPress: function handleInstallNativeUpdateSettingPress() {
     const newBuild = checkForNewerBuild.latestFetchedBuild().newBuild;

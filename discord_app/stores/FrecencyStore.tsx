@@ -1,3 +1,4 @@
+import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/stores/FrecencyStore.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -70,7 +71,7 @@ function initFrecency() {
   if (null == guildAndChannels) {
     return false;
   } else {
-    obj = require("../../_runtime/00012_apply.js");
+    obj = apply;
     tmp2.overwriteHistory(obj.mapValues(guildAndChannels, (recentUses) => {
       const obj = {};
       const merged = Object.assign(recentUses);

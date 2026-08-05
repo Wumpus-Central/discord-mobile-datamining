@@ -1,3 +1,7 @@
+import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useSafetyHubClassifications } from "../hooks/useSafetyHubClassifications.tsx";
 // discord_app/modules/safety_hub/native/AppealIngestionModal.tsx
 import closure_4 from "SafetyHubView";
 import _slicedToArray from "_slicedToArray";
@@ -37,7 +41,7 @@ export default function AppealIngestionModal(classificationId) {
   let _require;
   let flag;
   let flag2;
-  let obj = _require("../hooks/useSafetyHubClassifications.tsx");
+  let obj = _useSafetyHubClassifications;
   const safetyHubClassification = obj.useSafetyHubClassification(classificationId.classificationId);
   ({ isDsaEligible: c0, classification } = safetyHubClassification);
   flag = undefined;
@@ -136,8 +140,8 @@ export default function AppealIngestionModal(classificationId) {
     headerTitleAlign: "center"
   };
   const intl = tmp(1236).intl;
-  obj[2] = intl.string(_require("../../../intl/index.native.tsx").t["13/7kX"]);
-  return callback2(_require("../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, obj);
+  obj[2] = intl.string(_getSystemLocale.t["13/7kX"]);
+  return callback2(_NavigationStack.Navigator, obj);
 };
 export const AppealIngestionModalHeader = function AppealIngestionModalHeader(arg0) {
   let headerText;
@@ -153,7 +157,7 @@ export const AppealIngestionModalHeader = function AppealIngestionModalHeader(ar
     obj = { style: null, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
     obj[0] = tmp.header;
     obj[4] = headerText;
-    tmp4 = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+    tmp4 = callback2(Text /* Text */.Text, obj);
   }
   const items = [tmp4, ];
   let tmp8 = null;
@@ -163,7 +167,7 @@ export const AppealIngestionModalHeader = function AppealIngestionModalHeader(ar
       obj = { style: null, variant: "text-md/medium", color: "text-default", children: null };
       obj[0] = tmp.subheader;
       obj[3] = subHeaderText;
-      tmp8 = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+      tmp8 = callback2(Text /* Text */.Text, obj);
     }
   }
   items[1] = tmp8;

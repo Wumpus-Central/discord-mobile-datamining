@@ -1,3 +1,6 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { useCanCurrentUserSpeakInChannel } from "../../stage_channels/useCanSpeakInChannel.tsx";
+import { useIsFiveButtonLayout } from "useIsFiveButtonLayout.tsx";
 // discord_app/modules/video_calls/native/useActionBarHeight.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { InputModes } from "ME";
@@ -8,12 +11,12 @@ let sum = 2 * require("ActionButton").SMALL_ACTION_BUTTON_DIMENSIONS.buttonRadiu
 const result = require("ACTION_SHEET_START_HEIGHT_RATIO").fileFinishedImporting("modules/video_calls/native/useActionBarHeight.tsx");
 
 export default function useActionBarHeight(id) {
-  const isFiveButtonLayout = require("useIsFiveButtonLayout.tsx") /* useIsFiveButtonLayout */.useIsFiveButtonLayout(id);
-  const obj = require("useIsFiveButtonLayout.tsx") /* useIsFiveButtonLayout */;
-  const tmp2 = require("../../stage_channels/useCanSpeakInChannel.tsx")(id);
+  const isFiveButtonLayout = useIsFiveButtonLayout /* useIsFiveButtonLayout */.useIsFiveButtonLayout(id);
+  const obj = useIsFiveButtonLayout /* useIsFiveButtonLayout */;
+  const tmp2 = useCanCurrentUserSpeakInChannel(id);
   const items = [_detectH265HardwareDecode];
   let num = 88;
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => mode.getMode() === constants.PUSH_TO_TALK);
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => mode.getMode() === constants.PUSH_TO_TALK);
   if (isFiveButtonLayout) {
     num = closure_6;
   }

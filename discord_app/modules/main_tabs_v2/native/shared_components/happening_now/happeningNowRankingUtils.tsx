@@ -1,3 +1,4 @@
+import { apply } from "../../../../../../_runtime/00012_apply.js";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/happeningNowRankingUtils.tsx
 import upsertRelationship from "upsertRelationship";
 import updateVoiceState from "updateVoiceState";
@@ -97,5 +98,5 @@ export const sortHappeningNowCards = function sortHappeningNowCards(result) {
       return flag;
     }
   ];
-  return require("../../../../../../_runtime/00012_apply.js") /* apply */.orderBy(result, items, ["asc", "asc"]);
+  return apply /* apply */.orderBy(result, items, ["asc", "asc"]);
 };

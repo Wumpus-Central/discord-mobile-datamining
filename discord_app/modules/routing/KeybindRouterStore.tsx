@@ -1,3 +1,4 @@
+import { matchPath } from "matchPathCompat.tsx";
 // discord_app/modules/routing/KeybindRouterStore.tsx
 import ME from "ME";
 import identity from "identity";
@@ -8,7 +9,7 @@ function getMatchData(pathname) {
   let channelId;
   let guildId;
   let str = pathname;
-  let obj = require("matchPathCompat.tsx") /* matchPath */;
+  let obj = matchPath /* matchPath */;
   let str2 = pathname;
   if (pathname == null) {
     str2 = "";

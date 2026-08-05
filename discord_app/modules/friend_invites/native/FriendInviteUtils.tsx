@@ -1,3 +1,5 @@
+import { generateAcceptInviteOptions } from "../../../actions/InstantInviteActionCreators.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/friend_invites/native/FriendInviteUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";
@@ -8,8 +10,8 @@ let result = require("generateAcceptInviteOptions").fileFinishedImporting("modul
 export const DEFAULT_EXPIRATION_DAYS = 7;
 export const DEFAULT_EXPIRATION_USES = 5;
 export const revokeAllFriendInvites = function revokeAllFriendInvites() {
-  let obj = require("../../../actions/InstantInviteActionCreators.tsx");
-  require("../../../actions/InstantInviteActionCreators.tsx").revokeFriendInvites().then(() => {
+  let obj = generateAcceptInviteOptions;
+  generateAcceptInviteOptions.revokeFriendInvites().then(() => {
     let obj = callback2(3986);
     obj = { key: "TOAST_FRIEND_INVITES_REVOKED", content: null, icon: null };
     const intl = callback(1236).intl;
@@ -26,12 +28,12 @@ export const acceptFriendInvite = function acceptFriendInvite(invite, arg1) {
       dMFromUserId = dMFromUserId.getDMFromUserId(invite.inviter.id);
     }
     if (null != dMFromUserId) {
-      require("../../../actions/InstantInviteActionCreators.tsx").transitionToInvite(invite, { forceTransition: true });
-      const obj3 = require("../../../actions/InstantInviteActionCreators.tsx");
-      require("../../../Dispatcher.tsx").wait(() => callback(table[7])());
-      const obj4 = require("../../../Dispatcher.tsx");
+      generateAcceptInviteOptions.transitionToInvite(invite, { forceTransition: true });
+      const obj3 = generateAcceptInviteOptions;
+      dispatcher.wait(() => callback(table[7])());
+      const obj4 = dispatcher;
     } else {
-      let obj = require("../../../actions/InstantInviteActionCreators.tsx");
+      let obj = generateAcceptInviteOptions;
       obj = { inviteKey: null, context: null, callback: null };
       obj[0] = invite.code;
       obj[1] = arg1;

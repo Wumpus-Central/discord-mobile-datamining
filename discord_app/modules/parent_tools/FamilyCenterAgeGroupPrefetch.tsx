@@ -1,3 +1,4 @@
+import { maybeFetchCollectiblesForInvoices } from "FamilyCenterActionCreators.tsx";
 // discord_app/modules/parent_tools/FamilyCenterAgeGroupPrefetch.tsx
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 
@@ -11,8 +12,8 @@ export const prefetchFamilyCenterAgeGroupWhen = function prefetchFamilyCenterAge
   if (tmp) {
     if (!freshTeenActivityWithMap.isLoading()) {
       if (obj.canRefetch()) {
-        require("FamilyCenterActionCreators.tsx").initialPageLoad();
-        const obj2 = require("FamilyCenterActionCreators.tsx");
+        maybeFetchCollectiblesForInvoices.initialPageLoad();
+        const obj2 = maybeFetchCollectiblesForInvoices;
       }
     }
     obj = freshTeenActivityWithMap;

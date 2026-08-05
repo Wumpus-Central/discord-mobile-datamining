@@ -1,3 +1,4 @@
+import { TableId } from "../types/index.tsx";
 // discord_common/js/packages/kv-storage/js/util/Key.tsx
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/kv-storage/js/util/Key.tsx");
 
@@ -11,7 +12,7 @@ export const combineKey = function combineKey(prefix, key) {
     items1[HermesBuiltin.arraySpread(prefix, 0)] = key;
   }
   if (items1.length >= 1) {
-    if (items1.length <= require("../types/index.tsx") /* TableId */.MAXIMUM_KEY_BITS) {
+    if (items1.length <= TableId /* TableId */.MAXIMUM_KEY_BITS) {
       return items1;
     }
   }
@@ -27,7 +28,7 @@ export const combineKeyPrefix = function combineKeyPrefix(prefix, items) {
     items1 = [];
     items1[HermesBuiltin.arraySpread(prefix, 0)] = items;
   }
-  if (items1.length <= require("../types/index.tsx") /* TableId */.MAXIMUM_KEY_BITS) {
+  if (items1.length <= TableId /* TableId */.MAXIMUM_KEY_BITS) {
     return items1;
   } else {
     const _Error = Error;

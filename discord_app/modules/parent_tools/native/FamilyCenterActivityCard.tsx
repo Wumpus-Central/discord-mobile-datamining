@@ -1,3 +1,18 @@
+import { registerAsset } from "../../../../_runtime/07556_registerAsset.js";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { render } from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { messagesProxy } from "../FamilyCenter.messages.js";
+import { getEmptyActivityFormatter } from "../FamilyCenterUtils.tsx";
+import { useAgeSpecificText } from "../hooks/useAgeSpecificText.tsx";
+import { useActionsForDisplayType } from "../hooks/useFamilyCenterActivities.tsx";
+import { useIsInAdultAgeGroup } from "../hooks/useIsInAdultAgeGroup.tsx";
+import { useSelectedTeenUser } from "../hooks/useSelectedTeenUser.tsx";
+import { useUserIdsForLinkStatus } from "../hooks/useUserLinks.tsx";
+import { SpendingLimitRow } from "FamilyCenterSettingsControls.tsx";
+import { FamilyCenterTopActivity } from "FamilyCenterTopActivity.tsx";
+import { FamilyCenterUsernameHeader } from "FamilyCenterUsernameHeader.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterActivityCard.tsx
 import importAllResult from "asyncRequireImpl";
 import { View } from "module_4490";
@@ -16,18 +31,18 @@ let metroImportAll;
 let require = arg1;
 function FamilyCenterActivityCardPrefaceText() {
   const tmp = callback3();
-  const tmp4 = require("../hooks/useIsInAdultAgeGroup.tsx")();
-  let obj = require("../hooks/useUserLinks.tsx") /* useUserIdsForLinkStatus */;
+  const tmp4 = useIsInAdultAgeGroup();
+  let obj = useUserIdsForLinkStatus /* useUserIdsForLinkStatus */;
   const activeLinkUserIds = obj.useActiveLinkUserIds();
-  let obj1 = require("../FamilyCenterUtils.tsx") /* getEmptyActivityFormatter */;
+  let obj1 = getEmptyActivityFormatter /* getEmptyActivityFormatter */;
   const activityWindowTimestampFormatter = obj1.getActivityWindowTimestampFormatter(tmp4);
-  let obj2 = require("../hooks/useUserLinks.tsx") /* useUserIdsForLinkStatus */;
+  let obj2 = useUserIdsForLinkStatus /* useUserIdsForLinkStatus */;
   const activityWindowTimeStamp = obj2.useActivityWindowTimeStamp(activityWindowTimestampFormatter);
-  let obj3 = require("../hooks/useAgeSpecificText.tsx") /* useAgeSpecificText */;
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  let obj3 = useAgeSpecificText /* useAgeSpecificText */;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   obj = { activeLinks: activeLinkUserIds.length };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  const ageSpecificText = obj3.useAgeSpecificText(intl.formatToPlainString(require("../FamilyCenter.messages.js").tazvHQ, obj), intl2.string(require("../FamilyCenter.messages.js").KrLnkE));
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  const ageSpecificText = obj3.useAgeSpecificText(intl.formatToPlainString(messagesProxy.tazvHQ, obj), intl2.string(messagesProxy.KrLnkE));
   obj = { style: tmp.container, children: null };
   let tmp12 = null;
   if (!tmp4) {
@@ -47,35 +62,35 @@ function FamilyCenterActivityCardPrefaceText() {
     }
   }
   obj2[3] = tmp15;
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+  items[1] = callback(Text /* Text */.Text, obj2);
   obj3 = {
     onPress() {
       callback2(paths[17]).pushLazy(callback(paths[19])(paths[18], paths.paths));
     },
     children: null
   };
-  const formatToPlainStringResult = intl.formatToPlainString(require("../FamilyCenter.messages.js").tazvHQ, obj);
+  const formatToPlainStringResult = intl.formatToPlainString(messagesProxy.tazvHQ, obj);
   const tmp10 = closure_9;
   const tmp11 = View;
   const obj4 = { color: tmp.icon.color, source: null, size: null, style: null };
-  obj4[1] = require("../../../../_runtime/07556_registerAsset.js");
-  obj4[2] = require("../../../design/void/native.tsx") /* Button */.Icon.Sizes.EXTRA_SMALL;
+  obj4[1] = registerAsset;
+  obj4[2] = Button /* Button */.Icon.Sizes.EXTRA_SMALL;
   obj4[3] = tmp.icon;
-  obj3[1] = callback(require("../../../design/void/native.tsx") /* Button */.Icon, obj4);
-  items[2] = callback(require("../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx"), obj3);
+  obj3[1] = callback(Button /* Button */.Icon, obj4);
+  items[2] = callback(render, obj3);
   obj[1] = items;
   return tmp10(tmp11, obj);
 }
 function FamilyCenterHeaderSubText() {
-  const tmp2 = require("../hooks/useIsInAdultAgeGroup.tsx")();
-  let obj = require("../hooks/useUserLinks.tsx") /* useUserIdsForLinkStatus */;
+  const tmp2 = useIsInAdultAgeGroup();
+  let obj = useUserIdsForLinkStatus /* useUserIdsForLinkStatus */;
   const activeLinkUserIds = obj.useActiveLinkUserIds();
-  const activityWindowTimestampFormatter = require("../FamilyCenterUtils.tsx") /* getEmptyActivityFormatter */.getActivityWindowTimestampFormatter(tmp2);
-  require("../hooks/useUserLinks.tsx") /* useUserIdsForLinkStatus */;
+  const activityWindowTimestampFormatter = getEmptyActivityFormatter /* getEmptyActivityFormatter */.getActivityWindowTimestampFormatter(tmp2);
+  useUserIdsForLinkStatus /* useUserIdsForLinkStatus */;
   if (!tmp2) {
     obj = { variant: "text-sm/medium", color: "text-muted", children: null };
     obj[2] = tmp6;
-    let tmp7 = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+    let tmp7 = callback(Text /* Text */.Text, obj);
   } else {
     tmp7 = null;
   }
@@ -226,7 +241,7 @@ const memoResult = importAllResult.memo((arg0) => {
   let user;
   ({ user, inSelector } = arg0);
   const tmp = callback4();
-  const AvatarSizes = require("../../../design/void/native.tsx") /* Button */.AvatarSizes;
+  const AvatarSizes = Button /* Button */.AvatarSizes;
   if (inSelector) {
     let NORMAL = AvatarSizes.SMALL;
     let tmp4 = tmp2;
@@ -246,7 +261,7 @@ const memoResult = importAllResult.memo((arg0) => {
   }
   const obj1 = { style: items1, children: null };
   items1[1] = nonSelectorHeader;
-  const items2 = [callback(require("FamilyCenterUsernameHeader.tsx"), { user }), callback(FamilyCenterHeaderSubText, {})];
+  const items2 = [callback(FamilyCenterUsernameHeader, { user }), callback(FamilyCenterHeaderSubText, {})];
   obj1[1] = items2;
   items[1] = closure_9(View, obj1);
   obj[1] = items;
@@ -285,9 +300,9 @@ const result = require("items").fileFinishedImporting("modules/parent_tools/nati
 export default function FamilyCenterActivityCard() {
   const tmp = callback6();
   const require = tmp;
-  let obj = require("../hooks/useSelectedTeenUser.tsx") /* useSelectedTeenUser */;
+  let obj = useSelectedTeenUser /* useSelectedTeenUser */;
   const selectedTeenUser = obj.useSelectedTeenUser();
-  require("../hooks/useFamilyCenterActivities.tsx") /* useActionsForDisplayType */;
+  useActionsForDisplayType /* useActionsForDisplayType */;
   if (undefined === selectedTeenUser) {
     return null;
   } else {
@@ -320,7 +335,7 @@ export default function FamilyCenterActivityCard() {
       }
       return outer1_8(outer1_4, { style: other, children: outer1_8(outer1_1(outer1_2[31]), { displayType: tmp }) }, "total-" + tmp);
     });
-    const items2 = [callback(View, obj3), callback(require("FamilyCenterTopActivity.tsx"), {}), ];
+    const items2 = [callback(View, obj3), callback(FamilyCenterTopActivity, {}), ];
     let tmp11Result = null;
     if (tmp6) {
       const obj4 = { style: null, children: null };
@@ -339,7 +354,7 @@ export default function FamilyCenterActivityCard() {
     items[1] = closure_9(View, obj1);
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.settingsControls;
-    obj5[1] = callback(require("FamilyCenterSettingsControls.tsx"), {});
+    obj5[1] = callback(SpendingLimitRow, {});
     items[2] = callback(View, obj5);
     obj[1] = items;
     return closure_9(View, obj);

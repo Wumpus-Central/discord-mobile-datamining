@@ -1,3 +1,4 @@
+import { _openMediaModal } from "../../media_viewer/native/components/openMediaModal.tsx";
 // discord_app/modules/user_profile/native/openUserProfileAvatarMediaViewer.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { AVATAR_MAX_SIZE } from "ME";
@@ -17,7 +18,7 @@ export default function openUserProfileAvatarMediaViewer(user) {
   }
   const avatarURL = user.getAvatarURL(guildId, tmp, animate);
   if (typeof avatarURL === "string") {
-    let obj = require("../../media_viewer/native/components/openMediaModal.tsx") /* _openMediaModal */;
+    let obj = _openMediaModal /* _openMediaModal */;
     obj = { initialSources: null, originViewOrOriginLayout: null, analyticsSource: "user_profile_avatar", openAs: "action-sheet", shareable: false, disableDownload: true, disableMediaOverlayButton: true, disableMediaOverlayFooter: true };
     obj = { uri: null, mediaIndex: 0, height: null, width: null, accessoryType: "embed" };
     obj[0] = avatarURL;

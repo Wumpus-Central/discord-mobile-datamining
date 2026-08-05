@@ -1,3 +1,5 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { GIF_PROVIDER } from "../GifProvider.tsx";
 // discord_app/modules/gif_picker/native/GIFPickerHeader.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "Text";
@@ -140,7 +142,7 @@ const memoResult = importAllResult.memo(function GIFPickerHeader(arg0) {
   ({ categoryType, onQueryClear } = arg0);
   ({ columnWidth, onQueryChange, onFavoritesQueryChange, searchInputRef } = arg0);
   const tmp = callback();
-  require("../GifProvider.tsx") /* GIF_PROVIDER */;
+  GIF_PROVIDER /* GIF_PROVIDER */;
   let obj = { style: tmp.container, children: null };
   if (categoryType === GIFPickerResultTypes.SEARCH) {
     obj = { size: "md", onChange: null, placeholder: null, onClear: null, ref: null, isRound: true };
@@ -161,7 +163,7 @@ const memoResult = importAllResult.memo(function GIFPickerHeader(arg0) {
     obj2[0] = intl5.string(tmp2(1236).t.ffgJrs);
     obj1[3] = intl4.formatToPlainString(tmp2(1236).t.UTypEu, obj2);
     const obj3 = { color: null, size: "sm" };
-    obj3[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_ACTIVE;
+    obj3[0] = Themes.colors.INTERACTIVE_TEXT_ACTIVE;
     const items = [tmp6(tmp2(9860).ChevronLargeLeftIcon, obj3), ];
     if (categoryType === tmp8.TRENDING_GIFS) {
       const intl3 = tmp2(1236).intl;

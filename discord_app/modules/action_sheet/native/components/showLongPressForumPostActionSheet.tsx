@@ -1,12 +1,14 @@
+import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
+import { ACTION_SHEET_HEIGHT_HALF } from "../ActionSheetActionCreators.tsx";
 // discord_app/modules/action_sheet/native/components/showLongPressForumPostActionSheet.tsx
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/action_sheet/native/components/showLongPressForumPostActionSheet.tsx");
 
 export default function showLongPressForumPostActionSheet(thread, parentChannel) {
   let hideActionSheet = arg2;
   if (arg2 === undefined) {
-    hideActionSheet = require("../ActionSheetActionCreators.tsx").hideActionSheet;
+    hideActionSheet = ACTION_SHEET_HEIGHT_HALF.hideActionSheet;
   }
-  let obj = require("../ActionSheetActionCreators.tsx");
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { thread, parentChannel, onClose: hideActionSheet };
-  obj.openLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(9817, dependencyMap.paths), "ForumPostLongPressActionSheet", obj);
+  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(9817, dependencyMap.paths), "ForumPostLongPressActionSheet", obj);
 };

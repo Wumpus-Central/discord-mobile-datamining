@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/client_themes/native/useCustomThemeDisplaySettings.tsx
 import _slicedToArray from "_slicedToArray";
 import reset from "reset";
@@ -9,7 +10,7 @@ export const useCustomThemeDisplaySettings = function useCustomThemeDisplaySetti
   let tmp2;
   let tmp3;
   let tmp4;
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   let items = [reset];
   [tmp2, tmp3, tmp4] = callback(obj.useStateFromStoresArray(items, () => {
     const items = [store.getCustomTheme(), store.getBaseTheme(), store.getPreviewTheme()];

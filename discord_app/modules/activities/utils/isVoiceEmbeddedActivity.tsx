@@ -1,3 +1,4 @@
+import { set } from "../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 // discord_app/modules/activities/utils/isVoiceEmbeddedActivity.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -15,7 +16,7 @@ export default function isVoiceEmbeddedActivity(arg0) {
   const channel = obj.getChannel(arg0);
   let tmp3 = null != channel;
   if (tmp3) {
-    let tmp6 = channel.type === require("../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx") /* set */.ChannelTypes.GUILD_VOICE;
+    let tmp6 = channel.type === set /* set */.ChannelTypes.GUILD_VOICE;
     if (!tmp6) {
       let isPrivateResult = channel.isPrivate();
       if (isPrivateResult) {

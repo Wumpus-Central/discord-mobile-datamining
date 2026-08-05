@@ -1,8 +1,10 @@
+import { context } from "../ManaContext/ManaContext.native.tsx";
+import { remapTypographyVariant } from "typographyVariantRemap.tsx";
 // discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx");
 
 export const useTypographyVariantRemap = function useTypographyVariantRemap(variant, arg1) {
-  const experiments = require("../ManaContext/ManaContext.native.tsx") /* context */.useManaContext().experiments;
+  const experiments = context /* context */.useManaContext().experiments;
   let enabledExperiments;
   if (experiments != null) {
     enabledExperiments = experiments.enabledExperiments;
@@ -10,7 +12,7 @@ export const useTypographyVariantRemap = function useTypographyVariantRemap(vari
   if (enabledExperiments == null) {
     enabledExperiments = [];
   }
-  const obj = require("../ManaContext/ManaContext.native.tsx") /* context */;
+  const obj = context /* context */;
   const tmp = require;
-  return require("typographyVariantRemap.tsx") /* remapTypographyVariant */.remapTypographyVariant(enabledExperiments, variant, arg1);
+  return remapTypographyVariant /* remapTypographyVariant */.remapTypographyVariant(enabledExperiments, variant, arg1);
 };

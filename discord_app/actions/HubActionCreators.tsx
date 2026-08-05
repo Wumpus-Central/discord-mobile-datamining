@@ -1,3 +1,6 @@
+import { encodeProperties } from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { TrackedHTTPUtils } from "../utils/TrackedHTTPUtils.tsx";
 // discord_app/actions/HubActionCreators.tsx
 import sendRequest from "sendRequest";
 import { Endpoints } from "ME";
@@ -7,11 +10,11 @@ const result = require("module_5094").fileFinishedImporting("actions/HubActionCr
 
 export default {
   signup(email, school) {
-    let obj = require("../utils/TrackedHTTPUtils.tsx");
+    let obj = TrackedHTTPUtils;
     obj = { url: Endpoints.HUB_WAITLIST_SIGNUP, body: obj, trackedActionData: null, rejectWithError: null };
     obj = { email, school };
     obj[2] = {
-      event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.HUB_WAITLIST_SIGNUP,
+      event: encodeProperties /* encodeProperties */.NetworkActionNames.HUB_WAITLIST_SIGNUP,
       properties(body) {
         let email_domain;
         if (body != null) {
@@ -29,7 +32,7 @@ export default {
       }
     };
     const obj1 = {
-      event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.HUB_WAITLIST_SIGNUP,
+      event: encodeProperties /* encodeProperties */.NetworkActionNames.HUB_WAITLIST_SIGNUP,
       properties(body) {
         let email_domain;
         if (body != null) {
@@ -46,7 +49,7 @@ export default {
         return callback(table[4]).exact({ is_edu_email });
       }
     };
-    obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
     return obj.post(obj);
   },
   sendVerificationEmail(outer1_0, arg1, outer1_02) {

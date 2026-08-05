@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/user_profile/hooks/useNote.tsx
 import dispatcher from "dispatcher";
 import noop from "noop";
@@ -113,7 +114,7 @@ const result = require("getNote").fileFinishedImporting("modules/user_profile/ho
 export default function useNote(arg0) {
   const _require = arg0;
   const items = [getNote];
-  let stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_5.getNote(closure_0));
+  let stateFromStores = _initialize.useStateFromStores(items, () => outer1_5.getNote(closure_0));
   const items1 = [stateFromStores, arg0];
   const effect = React.useEffect(() => {
     if (null == stateFromStores) {

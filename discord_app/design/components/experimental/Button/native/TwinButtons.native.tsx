@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { getFontScale } from "../../../../../modules/screen/native/useFontScale.tsx";
 // discord_app/design/components/experimental/Button/native/TwinButtons.native.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -11,7 +13,7 @@ let closure_6 = createCacheKey.createStyles((arg0) => {
     str = "column";
   }
   const container = { flexDirection: str, gap: null };
-  const space = require("../../../../../../discord_common/js/packages/tokens/native.tsx").space;
+  const space = Themes.space;
   container[1] = arg0 ? space.PX_8 : space.PX_12;
   return { container, button: { flex: 1 } };
 });
@@ -19,7 +21,7 @@ const result = require("jsxProd").fileFinishedImporting("design/components/exper
 
 export const TwinButtons = function TwinButtons(children) {
   let _require;
-  let obj = _require("../../../../../modules/screen/native/useFontScale.tsx");
+  let obj = _getFontScale;
   let tmp = callback(obj.useFontScale() > 1.2);
   _require = tmp;
   obj = {

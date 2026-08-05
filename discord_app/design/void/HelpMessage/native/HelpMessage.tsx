@@ -1,3 +1,9 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { CircleCheckIcon } from "../../../components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
+import { CircleErrorIcon } from "../../../components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import { CircleInformationIcon } from "../../../components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
+import { CircleXIcon } from "../../../components/Icon/native/redesign/generated/CircleXIcon.tsx";
+import { Text } from "../../../components/Text/native/Text.tsx";
 // discord_app/design/void/HelpMessage/native/HelpMessage.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -55,7 +61,7 @@ export default function HelpMessage(children) {
   }
   let xs = children.borderRadius;
   if (xs === undefined) {
-    xs = require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.xs;
+    xs = Themes.radii.xs;
   }
   const tmp3 = createCacheKey();
   const items = [tmp3.container, , ];
@@ -74,22 +80,22 @@ export default function HelpMessage(children) {
   obj = { style: tmp3.row, children: null };
   if (int2hslRaw.WARNING === messageType) {
     obj = { color: null };
-    obj[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.YELLOW_300;
-    let tmp7 = callback(require("../../../components/Icon/native/redesign/generated/CircleErrorIcon.tsx") /* CircleErrorIcon */.CircleErrorIcon, obj);
+    obj[0] = Themes.unsafe_rawColors.YELLOW_300;
+    let tmp7 = callback(CircleErrorIcon /* CircleErrorIcon */.CircleErrorIcon, obj);
   } else if (tmp6.INFO === messageType) {
     const obj1 = { color: null };
-    obj1[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.BLUE_345;
-    tmp7 = callback(require("../../../components/Icon/native/redesign/generated/CircleInformationIcon.tsx") /* CircleInformationIcon */.CircleInformationIcon, obj1);
+    obj1[0] = Themes.unsafe_rawColors.BLUE_345;
+    tmp7 = callback(CircleInformationIcon /* CircleInformationIcon */.CircleInformationIcon, obj1);
   } else if (tmp6.ERROR === messageType) {
     const obj2 = { color: null };
-    obj2[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.RED_400;
-    tmp7 = callback(require("../../../components/Icon/native/redesign/generated/CircleXIcon.tsx") /* CircleXIcon */.CircleXIcon, obj2);
+    obj2[0] = Themes.unsafe_rawColors.RED_400;
+    tmp7 = callback(CircleXIcon /* CircleXIcon */.CircleXIcon, obj2);
   } else if (tmp6.SUCCESS === messageType) {
     const obj3 = { color: null };
-    obj3[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.GREEN_400;
-    tmp7 = callback(require("../../../components/Icon/native/redesign/generated/CircleCheckIcon.tsx") /* CircleCheckIcon */.CircleCheckIcon, obj3);
+    obj3[0] = Themes.unsafe_rawColors.GREEN_400;
+    tmp7 = callback(CircleCheckIcon /* CircleCheckIcon */.CircleCheckIcon, obj3);
   }
-  const items1 = [tmp7, callback(require("../../../components/Text/native/Text.tsx") /* Text */.Text, { style: tmp3.content, color: str, variant: textVariant, children: children.children })];
+  const items1 = [tmp7, callback(Text /* Text */.Text, { style: tmp3.content, color: str, variant: textVariant, children: children.children })];
   obj[1] = items1;
   const items2 = [closure_5(View, obj), children.button];
   obj[1] = items2;

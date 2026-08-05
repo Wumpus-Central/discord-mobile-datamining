@@ -1,3 +1,5 @@
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
 // discord_app/modules/client_themes/ClientThemesTypes.tsx
 import { PROTO_THEME_MAP_WEB_REFRESH as closure_3 } from "SystemThemeState";
 
@@ -16,9 +18,9 @@ export const getProtoThemeFromBaseTheme = function getProtoThemeFromBaseTheme(ar
     const _Error = Error;
     const _HermesInternal = HermesInternal;
     const error = new Error("No ProtoTheme found for base theme: " + arg0);
-    require("../../utils/SentryUtils.native.tsx").captureException(error);
-    let UNSET = _require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx").Theme.UNSET;
-    const obj = require("../../utils/SentryUtils.native.tsx");
+    SentryUtils.native.captureException(error);
+    let UNSET = _create.Theme.UNSET;
+    const obj = SentryUtils.native;
   } else {
     const _parseInt = parseInt;
     UNSET = parseInt(found[0]);

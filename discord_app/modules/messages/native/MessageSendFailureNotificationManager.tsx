@@ -1,3 +1,7 @@
+import { dispatcher } from "../../../actions/native/InAppNotificationActionCreators.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { NativeModules } from "../../../lib/pushnotification/PushNotification.tsx";
+import { extractMetadataFromNotification } from "../../in_app_notifications/native/InAppNotificationUtils.tsx";
 // discord_app/modules/messages/native/MessageSendFailureNotificationManager.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import closure_4 from "handleConnectionOpen";
@@ -16,12 +20,12 @@ function handleMessageSendFailure(shouldNotify) {
   ({ channelId, messageId } = shouldNotify);
   if (shouldNotify.shouldNotify) {
     if ("active" !== state.getState()) {
-      let obj = require("../../../lib/pushnotification/PushNotification.tsx");
+      let obj = NativeModules;
       obj = { category: "local", alertTitle: null, alertBody: null, userInfo: null };
-      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.LdlH2M);
-      const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[2] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.xxRPOT);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.LdlH2M);
+      const intl2 = getSystemLocale /* getSystemLocale */.intl;
+      obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.xxRPOT);
       obj = { channelId: null, messageId: null, type: null };
       obj[0] = channelId;
       obj[1] = messageId;
@@ -30,8 +34,8 @@ function handleMessageSendFailure(shouldNotify) {
       const result = obj.presentLocalNotification(obj);
     } else if (channelId !== channelId.getChannelId(guildId.getGuildId())) {
       const MESSAGE_FAILED_TO_SEND = constants.MESSAGE_FAILED_TO_SEND;
-      const notificationDuration = require("../../in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */.getNotificationDuration(MESSAGE_FAILED_TO_SEND);
-      const obj4 = require("../../in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */;
+      const notificationDuration = extractMetadataFromNotification /* extractMetadataFromNotification */.getNotificationDuration(MESSAGE_FAILED_TO_SEND);
+      const obj4 = extractMetadataFromNotification /* extractMetadataFromNotification */;
       const obj1 = { type: null, channelId: null, messageId: null, key: null, duration: null, onDismiss: null, inAppNotificationId: null };
       obj1[0] = MESSAGE_FAILED_TO_SEND;
       obj1[1] = channelId;
@@ -41,10 +45,10 @@ function handleMessageSendFailure(shouldNotify) {
       obj1[5] = function onDismiss() {
         callback(table[7]).clearNotification();
       };
-      const obj5 = require("../../../actions/native/InAppNotificationActionCreators.tsx");
-      obj1[6] = require("../../in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */.generateInAppNotificationId();
+      const obj5 = dispatcher;
+      obj1[6] = extractMetadataFromNotification /* extractMetadataFromNotification */.generateInAppNotificationId();
       obj5.enqueueNotification(obj1);
-      const obj7 = require("../../in_app_notifications/native/InAppNotificationUtils.tsx") /* extractMetadataFromNotification */;
+      const obj7 = extractMetadataFromNotification /* extractMetadataFromNotification */;
     }
   }
 }

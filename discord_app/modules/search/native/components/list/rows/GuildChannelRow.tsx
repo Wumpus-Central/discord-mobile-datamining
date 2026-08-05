@@ -1,3 +1,8 @@
+import { getChannelIcon } from "../../../../../../utils/native/ChannelUtils.tsx";
+import { computeChannelName } from "../../../../../channel/useChannelName.tsx";
+import { ChannelContentComponent } from "../../../../../main_tabs_v2/native/shared_components/guild_channels/ChannelContent.tsx";
+import { LaunchpadChannelIcon } from "../../../../../main_tabs_v2/native/shared_components/guild_channels/ChannelItem.tsx";
+import { SearchListRow } from "../SearchListRow.tsx";
 // discord_app/modules/search/native/components/list/rows/GuildChannelRow.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { CHANNEL_LIST_SEARCH_LAYOUT as closure_5 } from "MessageEmbedTypes";
@@ -12,9 +17,9 @@ function GuildChannelLabel(channel) {
   channel = channel.channel;
   let obj = { style: callback().content, children: null };
   const tmp = callback();
-  const tmp2 = require("../../../../../channel/useChannelName.tsx")(channel);
+  const tmp2 = computeChannelName(channel);
   obj = { channel, layout: closure_5, name: tmp2 };
-  obj[1] = require("../../../../../main_tabs_v2/native/shared_components/guild_channels/ChannelContent.tsx") /* ChannelContentComponent */.renderChannelContent(obj);
+  obj[1] = ChannelContentComponent /* ChannelContentComponent */.renderChannelContent(obj);
   return <closure_4 channel={channel} layout={closure_5} name={tmp2} />;
 }
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
@@ -32,11 +37,11 @@ const memoResult = require("noop").memo(function GuildChannelRow(channel) {
   ({ subtitle, trailing, extras, onPress, voiceStates } = channel);
   const merged = Object.assign(channel, Object.create(null));
   const tmp2 = callback();
-  let obj = require("../../../../../main_tabs_v2/native/shared_components/guild_channels/ChannelItem.tsx") /* LaunchpadChannelIcon */;
+  let obj = LaunchpadChannelIcon /* LaunchpadChannelIcon */;
   const channelAccessibilityProps = obj.getChannelAccessibilityProps({ channel, unread: false, mentionCount: 0, voiceStates });
   obj = { style: tmp2.simpleIcon, source: null };
-  obj[1] = require("../../../../../../utils/native/ChannelUtils.tsx") /* getChannelIcon */.getSimpleChannelIcon(channel);
-  const obj3 = require("../../../../../../utils/native/ChannelUtils.tsx") /* getChannelIcon */;
+  obj[1] = getChannelIcon /* getChannelIcon */.getSimpleChannelIcon(channel);
+  const obj3 = getChannelIcon /* getChannelIcon */;
   obj = {};
   const merged1 = Object.assign(channelAccessibilityProps);
   const merged2 = Object.assign(merged);
@@ -48,7 +53,7 @@ const memoResult = require("noop").memo(function GuildChannelRow(channel) {
   obj.onPress = onPress;
   obj.trailing = trailing;
   obj.extras = extras;
-  return jsx(require("../SearchListRow.tsx") /* SearchListRow */.SearchListRow, {});
+  return jsx(SearchListRow /* SearchListRow */.SearchListRow, {});
 });
 const result = require("MessageEmbedTypes").fileFinishedImporting("modules/search/native/components/list/rows/GuildChannelRow.tsx");
 

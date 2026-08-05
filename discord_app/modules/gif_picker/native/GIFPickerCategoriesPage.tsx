@@ -1,3 +1,5 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { transformFavoriteGifUrl } from "GIFPickerUtils.tsx";
 // discord_app/modules/gif_picker/native/GIFPickerCategoriesPage.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -9,9 +11,9 @@ const require = arg1;
 let c3 = importAllResult;
 let closure_7 = createCacheKey.createStyles((height) => {
   let obj = { item: null, placeholder: null };
-  obj = { height, flexDirection: "row", gap: require("GIFPickerUtils.tsx") /* transformFavoriteGifUrl */.GIF_PICKER_GUTTER_SPACING, paddingBottom: require("GIFPickerUtils.tsx") /* transformFavoriteGifUrl */.GIF_PICKER_GUTTER_SPACING };
+  obj = { height, flexDirection: "row", gap: transformFavoriteGifUrl /* transformFavoriteGifUrl */.GIF_PICKER_GUTTER_SPACING, paddingBottom: transformFavoriteGifUrl /* transformFavoriteGifUrl */.GIF_PICKER_GUTTER_SPACING };
   obj[0] = obj;
-  obj = { backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE, height: height - require("GIFPickerUtils.tsx") /* transformFavoriteGifUrl */.GIF_PICKER_GUTTER_SPACING, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.xs, flex: 1 };
+  obj = { backgroundColor: Themes.colors.BORDER_SUBTLE, height: height - transformFavoriteGifUrl /* transformFavoriteGifUrl */.GIF_PICKER_GUTTER_SPACING, borderRadius: Themes.radii.xs, flex: 1 };
   obj[1] = obj;
   return obj;
 });

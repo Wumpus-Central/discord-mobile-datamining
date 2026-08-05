@@ -1,3 +1,4 @@
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 // discord_app/modules/in_app_reports/native/components/InAppReportsMultiSelect.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -36,7 +37,7 @@ export default function MultiSelect(arg0) {
           checked: tmp in closure_1
         }, tmp);
       });
-      obj[1] = jsx(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, { hasIcons: false, children: null });
+      obj[1] = jsx(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, { hasIcons: false, children: null });
       return <View hasIcons={false}>{null}</View>;
     }
   }

@@ -1,3 +1,4 @@
+import { format } from "parse.tsx";
 // discord_common/js/packages/i18n/i18n.tsx
 import 16178__ from "../../../../_runtime/metro/16178__.js";
 import 16179__ from "../../../../_runtime/metro/16179__.js";
@@ -213,7 +214,7 @@ prototype["setLocale"] = function setLocale(_requestedLocale) {
   }
 };
 prototype["setUpdateRules"] = function setUpdateRules(arg0) {
-  require("parse.tsx") /* format */.setUpdateRules(arg0);
+  format /* format */.setUpdateRules(arg0);
 };
 prototype["getLanguages"] = function getLanguages() {
   return this._languages;

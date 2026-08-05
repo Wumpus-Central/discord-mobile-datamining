@@ -1,3 +1,4 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 // discord_app/modules/friend_suggestions/FriendSuggestionActionCreators.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
@@ -35,7 +36,7 @@ export default {
     })();
   },
   ignore(id) {
-    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     HTTP.del({ url: Endpoints.FRIEND_SUGGESTION(id), rejectWithError: true });
   }
 };

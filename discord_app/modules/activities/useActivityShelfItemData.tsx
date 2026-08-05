@@ -1,3 +1,4 @@
+import { useActivityShelfItems } from "useActivityShelfItems.tsx";
 // discord_app/modules/activities/useActivityShelfItemData.tsx
 import noop from "noop";
 
@@ -5,7 +6,7 @@ const result = require("set").fileFinishedImporting("modules/activities/useActiv
 
 export const useActivityShelfItemData = function useActivityShelfItemData(guild_id1, applicationId) {
   const importDefault = applicationId;
-  const tmp = require("useActivityShelfItems.tsx")({ guildId: guild_id1 });
+  const tmp = useActivityShelfItems({ guildId: guild_id1 });
   const dependencyMap = tmp;
   const items = [tmp, applicationId];
   return React.useMemo(() => {

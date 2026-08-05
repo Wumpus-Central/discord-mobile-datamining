@@ -1,3 +1,4 @@
+import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/lib/guild/GuildMemberRequester.tsx
 class GuildMemberRequestState {
   constructor(arg0, arg1) {
@@ -108,7 +109,7 @@ prototype2["acknowledge"] = function acknowledge(_guildId) {
 };
 prototype2["flushRequests"] = function flushRequests() {
   const self = this;
-  const item = require("../../../_runtime/00012_apply.js").forEach(this._guildStates, (flushRequests) => flushRequests.flushRequests(self._onChange));
+  const item = apply.forEach(this._guildStates, (flushRequests) => flushRequests.flushRequests(self._onChange));
 };
 prototype2["requestUnacknowledged"] = function requestUnacknowledged() {
   if (arr.reduce(this._guildStates, (arg0, requestUnacknowledged) => false !== requestUnacknowledged.requestUnacknowledged() || arg0, false)) {

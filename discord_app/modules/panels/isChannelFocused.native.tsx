@@ -1,3 +1,6 @@
+import { useChatLayout } from "../chat/native/useChatLayout.tsx";
+import { getInitialGuildState } from "../main_tabs_v2/native/getInitialNavigationState.tsx";
+import { getRootNavigationRef } from "../main_tabs_v2/RootNavigationRef.native.tsx";
 // discord_app/modules/panels/isChannelFocused.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -10,9 +13,9 @@ const require = arg1;
 function getFocusedChannelId() {
   let params = require;
   let paramsResult3 = dependencyMap;
-  const rootNavigationRef = require("../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */.getRootNavigationRef();
-  const obj = require("../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */;
-  const isChatLockedOpen = require("../chat/native/useChatLayout.tsx") /* useChatLayout */.getChatLayout().isChatLockedOpen;
+  const rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
+  const obj = getRootNavigationRef /* getRootNavigationRef */;
+  const isChatLockedOpen = useChatLayout /* useChatLayout */.getChatLayout().isChatLockedOpen;
   let tmp2 = null;
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -39,7 +42,7 @@ function getFocusedChannelId() {
   if (tmp2 !== c9) {
     return c9;
   } else {
-    const tmp19 = require("../main_tabs_v2/native/getInitialNavigationState.tsx")();
+    const tmp19 = getInitialGuildState();
     let routes2 = params(4136);
     let tmp8;
     if (tmp19 != tmp2) {
@@ -147,7 +150,7 @@ export const isChannelFocused = function isChannelFocused() {
 export const useIsChannelFocused = function useIsChannelFocused() {
   const tmp = callback(React.useState(() => null != callback2()), 2);
   let closure_0 = tmp[1];
-  const items = [require("../chat/native/useChatLayout.tsx")()];
+  const items = [useChatLayout()];
   const effect = React.useEffect(() => {
     callback(null != outer1_10());
   }, items);

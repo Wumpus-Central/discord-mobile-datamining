@@ -1,103 +1,105 @@
+import { WidgetGameTag } from "../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/user_profile/UserProfileGameWidgetTagMetadata.tsx
 let obj = { RIBBON: "ribbon", THUMBS_UP: "thumbsUp", THUMBS_DOWN: "thumbsDown", FRIENDS: "friends" };
 obj = {
   getText() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.jbIRBE);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.jbIRBE);
   },
   iconRole: obj.RIBBON
 };
 obj = {
   getText() {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.xcFFv6);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.xcFFv6);
   },
   iconRole: obj.RIBBON
 };
 let closure_2 = {
-  [require("../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx").WidgetGameTag.BETTER_THAN_YOU]: obj,
-  [require("../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx").WidgetGameTag.CASUAL]: obj,
-  [require("../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx").WidgetGameTag.INTERMEDIATE]: {
+  [WidgetGameTag.WidgetGameTag.BETTER_THAN_YOU]: obj,
+  [WidgetGameTag.WidgetGameTag.CASUAL]: obj,
+  [WidgetGameTag.WidgetGameTag.INTERMEDIATE]: {
     getText() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["A/mIs/"]);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t["A/mIs/"]);
     },
     iconRole: obj.RIBBON
   },
-  [require("../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx").WidgetGameTag.EXPERT]: {
+  [WidgetGameTag.WidgetGameTag.EXPERT]: {
     getText() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.RIOFc2);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.RIOFc2);
     },
     iconRole: obj.RIBBON
   },
-  [require("../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx").WidgetGameTag.OBSESSED]: {
+  [WidgetGameTag.WidgetGameTag.OBSESSED]: {
     getText() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.isPJDu);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.isPJDu);
     },
     iconRole: obj.THUMBS_UP
   },
-  [require("../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx").WidgetGameTag.LOVE_IT]: {
+  [WidgetGameTag.WidgetGameTag.LOVE_IT]: {
     getText() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["1rN7BF"]);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t["1rN7BF"]);
     },
     iconRole: obj.THUMBS_UP
   },
-  [require("../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx").WidgetGameTag.KIND_OF_LOVE_IT]: {
+  [WidgetGameTag.WidgetGameTag.KIND_OF_LOVE_IT]: {
     getText() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.bCBpVg);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.bCBpVg);
     },
     iconRole: obj.THUMBS_UP
   },
-  [require("../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx").WidgetGameTag.KIND_OF_HATE_IT]: {
+  [WidgetGameTag.WidgetGameTag.KIND_OF_HATE_IT]: {
     getText() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["/WcmcP"]);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t["/WcmcP"]);
     },
     iconRole: obj.THUMBS_DOWN
   },
-  [require("../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx").WidgetGameTag.RAGE_QUITTING]: {
+  [WidgetGameTag.WidgetGameTag.RAGE_QUITTING]: {
     getText() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["NXZ/MZ"]);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t["NXZ/MZ"]);
     },
     iconRole: obj.THUMBS_DOWN
   },
-  [require("../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx").WidgetGameTag.OPEN_TO_PLAY]: {
+  [WidgetGameTag.WidgetGameTag.OPEN_TO_PLAY]: {
     getText() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.q30PoH);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.q30PoH);
     },
     iconRole: obj.FRIENDS
   },
-  [require("../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx").WidgetGameTag.LOOKING_FOR_GROUP]: {
+  [WidgetGameTag.WidgetGameTag.LOOKING_FOR_GROUP]: {
     getText() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.DWWAAQ);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.DWWAAQ);
     },
     iconRole: obj.FRIENDS
   },
-  [require("../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx").WidgetGameTag.LOOKING_FOR_TIPS]: {
+  [WidgetGameTag.WidgetGameTag.LOOKING_FOR_TIPS]: {
     getText() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.KQDVvH);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.KQDVvH);
     },
     iconRole: obj.FRIENDS
   },
-  [require("../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx").WidgetGameTag.OPEN_TO_TEACH]: {
+  [WidgetGameTag.WidgetGameTag.OPEN_TO_TEACH]: {
     getText() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["5HhQo+"]);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t["5HhQo+"]);
     },
     iconRole: obj.FRIENDS
   },
-  [require("../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx").WidgetGameTag.LOOKING_TO_DISCUSS]: {
+  [WidgetGameTag.WidgetGameTag.LOOKING_TO_DISCUSS]: {
     getText() {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.GipOCq);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.GipOCq);
     },
     iconRole: obj.FRIENDS
   }

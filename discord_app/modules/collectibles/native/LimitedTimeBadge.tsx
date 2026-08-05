@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { useCountdown } from "../../../hooks/useCountdown.tsx";
 // discord_app/modules/collectibles/native/LimitedTimeBadge.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -21,14 +23,14 @@ export default function LimitedTimeBadge(unpublishedAt) {
   let days;
   let hours;
   const tmp = createCacheKey();
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [handleThemeChange];
   const stateFromStores = obj.useStateFromStores(items, () => callback(table[9]).isThemeDark(theme.theme));
-  let obj1 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj1 = initialize /* initialize */;
   const items1 = [_getSystemLocale];
   const items2 = ["en-US", "en-GB"];
   const hasItem = items2.includes(obj1.useStateFromStores(items1, () => locale.locale));
-  ({ days, hours } = require("../../../hooks/useCountdown.tsx")(unpublishedAt.unpublishedAt, 1000, undefined, true));
+  ({ days, hours } = useCountdown(unpublishedAt.unpublishedAt, 1000, undefined, true));
   if (hasItem) {
     if (days > 1) {
       const intl6 = tmp2(1236).intl;

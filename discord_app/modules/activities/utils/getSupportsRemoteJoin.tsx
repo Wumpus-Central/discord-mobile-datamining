@@ -1,3 +1,4 @@
+import { hasFlag } from "hasFlag.tsx";
 // discord_app/modules/activities/utils/getSupportsRemoteJoin.tsx
 import { ActivityFlags } from "ME";
 
@@ -6,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/activities/utils/ge
 export const getSupportsRemoteJoin = function getSupportsRemoteJoin(applicationActivity) {
   let tmp = null != applicationActivity;
   if (tmp) {
-    tmp = require("hasFlag.tsx")(applicationActivity, ActivityFlags.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN);
+    tmp = hasFlag(applicationActivity, ActivityFlags.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN);
   }
   return tmp;
 };

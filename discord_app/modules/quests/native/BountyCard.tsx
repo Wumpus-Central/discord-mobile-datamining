@@ -1,3 +1,4 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/quests/native/BountyCard.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "CircleCheckIcon";
@@ -22,7 +23,7 @@ let c4 = importAllResult;
 let c12 = 188;
 let closure_13 = createCacheKey.createStyles(() => {
   let obj = { tile: null, card: null, cardImage: null, previewVideo: null, badge: null, badgeContent: null, badgeText: null, startButton: null, cardFooter: null, advertiserRow: null, advertiserName: null, advertiserIcon: null };
-  obj = { gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
+  obj = { gap: Themes.space.PX_12 };
   obj[0] = obj;
   obj = { width: c12, height: 313, overflow: "hidden", padding: 0 };
   obj[1] = obj;
@@ -30,18 +31,18 @@ let closure_13 = createCacheKey.createStyles(() => {
   obj[2] = {};
   const merged1 = Object.assign(closure_6.absoluteFillObject);
   obj[3] = {};
-  obj[4] = { position: "absolute", top: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, left: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.round, paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, paddingVertical: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, color: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
+  obj[4] = { position: "absolute", top: Themes.space.PX_12, left: Themes.space.PX_12, backgroundColor: Themes.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: Themes.radii.round, paddingHorizontal: Themes.space.PX_8, paddingVertical: Themes.space.PX_4, color: Themes.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
   const obj1 = {};
   const obj2 = {};
-  const obj3 = { position: "absolute", top: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, left: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.round, paddingHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, paddingVertical: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, color: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
-  obj[5] = { flexDirection: "row", alignItems: "center", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
-  const obj4 = { flexDirection: "row", alignItems: "center", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
-  obj[6] = { textTransform: "uppercase", color: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
-  const obj5 = { textTransform: "uppercase", color: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
-  obj[7] = { position: "absolute", bottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, left: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, right: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  const obj3 = { position: "absolute", top: Themes.space.PX_12, left: Themes.space.PX_12, backgroundColor: Themes.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: Themes.radii.round, paddingHorizontal: Themes.space.PX_8, paddingVertical: Themes.space.PX_4, color: Themes.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
+  obj[5] = { flexDirection: "row", alignItems: "center", gap: Themes.space.PX_4 };
+  const obj4 = { flexDirection: "row", alignItems: "center", gap: Themes.space.PX_4 };
+  obj[6] = { textTransform: "uppercase", color: Themes.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
+  const obj5 = { textTransform: "uppercase", color: Themes.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
+  obj[7] = { position: "absolute", bottom: Themes.space.PX_8, left: Themes.space.PX_8, right: Themes.space.PX_8 };
   obj[8] = { flexDirection: "column", alignItems: "flex-start", maxWidth: c12 };
-  const obj6 = { position: "absolute", bottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, left: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, right: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
-  obj[9] = { flexDirection: "row", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, alignItems: "center" };
+  const obj6 = { position: "absolute", bottom: Themes.space.PX_8, left: Themes.space.PX_8, right: Themes.space.PX_8 };
+  obj[9] = { flexDirection: "row", gap: Themes.space.PX_4, alignItems: "center" };
   obj[10] = { flexShrink: 1 };
   obj[11] = { flexShrink: 0, opacity: 0.7 };
   return obj;

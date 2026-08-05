@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/devtools/DevToolsSettingsStore.tsx
 import init from "init";
 import { DeviceSettingsStore } from "initialize";
@@ -19,7 +20,7 @@ prototype["initialize"] = function initialize(arg0) {
   obj = {};
   const merged = Object.assign(obj);
   obj.sortedScreenKeys = sortedScreenKeys;
-  require("../../Dispatcher.tsx").actionLogger.persist = init.isDeveloper;
+  dispatcher.actionLogger.persist = init.isDeveloper;
 };
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return closure_3;

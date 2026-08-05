@@ -1,3 +1,4 @@
+import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/app_analytics/ImpressionStore.tsx
 import identity from "identity";
 
@@ -7,7 +8,7 @@ const result = require("encodeProperties").fileFinishedImporting("modules/app_an
 
 export const setCurrentImpression = function setCurrentImpression(arg0) {
   const _require = arg0;
-  _require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     outer1_3.setState((impressions) => {
       impressions = [];
       impressions[HermesBuiltin.arraySpread(impressions.impressions, 0)] = closure_0;
@@ -17,7 +18,7 @@ export const setCurrentImpression = function setCurrentImpression(arg0) {
 };
 export const cleanupImpression = function cleanupImpression(arg0) {
   const _require = arg0;
-  _require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     outer1_3.setState((impressions) => {
       impressions = impressions.impressions;
       return { impressions: impressions.filter((sequenceId) => sequenceId.sequenceId !== sequenceId.sequenceId) };
@@ -27,7 +28,7 @@ export const cleanupImpression = function cleanupImpression(arg0) {
 export const setDebugTrackedData = function setDebugTrackedData(arg0, arg1) {
   const _require = arg0;
   const dependencyMap = arg1;
-  _require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     outer1_3.setState(() => {
       let obj = { debugTrackedData: null };
       obj = { name: closure_0 };

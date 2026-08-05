@@ -1,3 +1,6 @@
+import { dispatcher } from "../../../actions/UploadAttachmentActionCreators.tsx";
+import { findGameMentionTokens } from "../../chat_input/native/ChatInputCommandOptionParser.tsx";
+import { addRule } from "../../chat_input/native/ChatInputParser.tsx";
 // discord_app/modules/application_commands/native/ApplicationCommandManager.tsx
 import _slicedToArray from "_slicedToArray";
 import { DraftType } from "handleChanged";
@@ -1117,8 +1120,8 @@ prototype["getMentionGames"] = function getMentionGames() {
 };
 prototype["buildGameMentionNode"] = function buildGameMentionNode(game) {
   const styles = this.styles;
-  const obj = { type: require("../../chat_input/native/ChatInputParser.tsx") /* addRule */.ChatInputNodeType.GAME_HIGHLIGHT, style: styles.gameMention(), deleteNodeOnBackspace: true, editDisabled: true };
-  const merged = Object.assign(require("../../chat_input/native/ChatInputCommandOptionParser.tsx") /* findGameMentionTokens */.buildGameMentionResult(game));
+  const obj = { type: addRule /* addRule */.ChatInputNodeType.GAME_HIGHLIGHT, style: styles.gameMention(), deleteNodeOnBackspace: true, editDisabled: true };
+  const merged = Object.assign(findGameMentionTokens /* findGameMentionTokens */.buildGameMentionResult(game));
   return obj;
 };
 prototype["setPreferredOptionValue"] = function setPreferredOptionValue(id, name, displayText) {
@@ -1197,8 +1200,8 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       tmp91 = null != self.activeCommand;
     }
     if (tmp91) {
-      require("../../../actions/UploadAttachmentActionCreators.tsx").clearAll(channel.id, DraftType.SlashCommand);
-      const obj7 = require("../../../actions/UploadAttachmentActionCreators.tsx");
+      dispatcher.clearAll(channel.id, DraftType.SlashCommand);
+      const obj7 = dispatcher;
     }
     let name;
     if (activeOption != null) {
@@ -1754,7 +1757,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
           continue;
         }
         if (items3.length > 0) {
-          obj4 = require("../../../actions/UploadAttachmentActionCreators.tsx");
+          obj4 = dispatcher;
           obj4.removeFiles(channel.id, items3, DraftType.SlashCommand);
         }
       }

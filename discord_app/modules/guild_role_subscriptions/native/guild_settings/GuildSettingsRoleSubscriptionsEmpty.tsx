@@ -1,3 +1,5 @@
+import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Placeholder } from "../components/Placeholder.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEmpty.tsx
 import "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -10,7 +12,7 @@ let c5;
 const require = arg1;
 function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
   guild = guild.guild;
-  let obj = require("../../../../design/components/Navigator/native/useNavigation.native.tsx") /* useNavigation */;
+  let obj = useNavigation /* useNavigation */;
   const str = obj.useNavigation();
   if (tmp3.loading) {
     let tmp7 = jsx(tmp2(16640), {});
@@ -44,7 +46,7 @@ export default function GuildSettingsRoleSubscriptionsEmpty(guildId) {
   const items = [createGuildRecordFromRust];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_3.getGuild(guildId));
   if (null == stateFromStores) {
-    let tmp5 = jsx(require("../components/Placeholder.tsx"), {});
+    let tmp5 = jsx(Placeholder, {});
   } else {
     obj = { guild: null };
     obj[0] = stateFromStores;

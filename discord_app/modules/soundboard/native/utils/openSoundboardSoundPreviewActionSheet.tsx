@@ -1,8 +1,10 @@
+import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/soundboard/native/utils/openSoundboardSoundPreviewActionSheet.tsx
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/soundboard/native/utils/openSoundboardSoundPreviewActionSheet.tsx");
 
 export default function openSoundboardSoundPreviewActionSheet(channelId, sound) {
-  let obj = require("../../../action_sheet/native/ActionSheetActionCreators.tsx");
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channelId, sound };
-  obj.openLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(16020, dependencyMap.paths), "SoundboardSoundPreviewActionSheet", obj);
+  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(16020, dependencyMap.paths), "SoundboardSoundPreviewActionSheet", obj);
 };

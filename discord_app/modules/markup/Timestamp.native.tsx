@@ -1,3 +1,4 @@
+import { items } from "useFormattedTimestamp.tsx";
 // discord_app/modules/markup/Timestamp.native.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -17,7 +18,7 @@ export default function Timestamp(node) {
   if (style == null) {
     style = node.style;
   }
-  const tmp2 = require("useFormattedTimestamp.tsx")(node);
+  const tmp2 = items(node);
   const tmp3 = jsx;
   return tmp3(node(1297).LegacyText, {
     style,
@@ -26,6 +27,6 @@ export default function Timestamp(node) {
       obj = { key: "TIMESTAMP", content: node.full };
       obj.open(obj);
     },
-    children: require("useFormattedTimestamp.tsx")(node)
+    children: items(node)
   });
 };

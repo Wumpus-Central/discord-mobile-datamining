@@ -1,3 +1,5 @@
+import { isIterable } from "../../../_runtime/03898_isIterable.js";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/modules/guild_scheduled_events/StageChannelUpsellCardStore.tsx
 import { GUILD_EVENT_STAGE_UPSELL_CARD_KEY as closure_2 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import identity from "identity";
@@ -5,7 +7,7 @@ import identity from "identity";
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   const _require = arg0;
   const obj = { hasSeenUpsellCard: null, markAsSeen: null };
-  let Storage = _require("../../../discord_common/js/packages/storage/Storage.tsx").Storage;
+  let Storage = _Storage.Storage;
   obj[0] = true === Storage.get(closure_2);
   obj[1] = function markAsSeen() {
     const Storage = callback(outer1_1[2]).Storage;
@@ -21,5 +23,5 @@ export const useStageChannelUpsellCardStore = function useStageChannelUpsellCard
     const items = [, ];
     ({ hasSeenUpsellCard: arr[0], markAsSeen: arr[1] } = arg0);
     return items;
-  }, require("../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
+  }, isIterable /* isIterable */.shallow);
 };

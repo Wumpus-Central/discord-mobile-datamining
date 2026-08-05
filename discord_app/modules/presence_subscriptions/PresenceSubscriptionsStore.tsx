@@ -1,3 +1,4 @@
+import { ActivitiesActionCreators } from "../../actions/ActivitiesActionCreators.tsx";
 // discord_app/modules/presence_subscriptions/PresenceSubscriptionsStore.tsx
 import _slicedToArray from "_slicedToArray";
 import sortActivity from "sortActivity";
@@ -27,8 +28,8 @@ const delayedCall = new require("start").DelayedCall(3000, function flush() {
     continue;
   }
   if (0 !== items.length) {
-    require("../../actions/ActivitiesActionCreators.tsx").subscribeActivities(items);
-    const obj = require("../../actions/ActivitiesActionCreators.tsx");
+    ActivitiesActionCreators.subscribeActivities(items);
+    const obj = ActivitiesActionCreators;
   }
 });
 class PresenceSubscriptionsStore extends Store {

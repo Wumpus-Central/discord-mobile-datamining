@@ -1,3 +1,7 @@
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { useCanRingToGuildVoiceChannel } from "../modules/calls/useCanRing.tsx";
+import { SelectedChannelActionCreators } from "SelectedChannelActionCreators.tsx";
 // discord_app/actions/CallActionCreators.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";
@@ -24,7 +28,7 @@ export default {
     if (null != arg3) {
       if (!blocked.isBlocked(arg3)) {
         const _require = user.getUser(arg3);
-        const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+        const HTTP = _sendRequest.HTTP;
         let obj = { url: null, oldFormErrors: true, rejectWithError: true };
         obj[0] = self.CALL(id);
         const value = HTTP.get(obj);
@@ -65,7 +69,7 @@ export default {
         });
       }
     } else {
-      obj = require("SelectedChannelActionCreators.tsx");
+      obj = SelectedChannelActionCreators;
       let voiceChannel = obj.selectVoiceChannel(id, c1);
       if (arg2) {
         self.ring(id);
@@ -78,7 +82,7 @@ export default {
   ring(channelId, items, gdm_invite) {
     channel = channel.getChannel(channelId);
     if (null != channel) {
-      let obj = require("../modules/calls/useCanRing.tsx") /* useCanRingToGuildVoiceChannel */;
+      let obj = useCanRingToGuildVoiceChannel /* useCanRingToGuildVoiceChannel */;
       const CALLABLE = constants.CALLABLE;
       const result = obj.canRingUsersInChannel(channel);
       if (result) {
@@ -94,11 +98,11 @@ export default {
           let obj1 = { type: "GUILD_LOCAL_RING_START", ringing: null, guildId: null };
           obj1[1] = items;
           obj1[2] = channel.guild_id;
-          require("../Dispatcher.tsx").dispatch(obj1);
-          const obj6 = require("../Dispatcher.tsx");
+          dispatcher.dispatch(obj1);
+          const obj6 = dispatcher;
         }
       } else if (tmp7) {
-        obj1 = require("../Dispatcher.tsx");
+        obj1 = dispatcher;
         const obj2 = { type: "CALL_ENQUEUE_RING", channelId: null, recipients: null };
         obj2[1] = channelId;
         obj2[2] = items;
@@ -108,7 +112,7 @@ export default {
     }
   },
   stopRinging(channelId, items) {
-    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     obj = { url: closure_6.CALL_STOP_RINGING(channelId), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { recipients: items };
     return HTTP.post(obj);

@@ -1,3 +1,5 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/interactions/FileTypeFiltering.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -11,16 +13,16 @@ function fileTypesFormattedStringHelper(arr, locale) {
       const listFormat = new Intl.ListFormat(locale, { type: "disjunction" });
       const items = [];
       if (arr.includes("image")) {
-        const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        items.push(intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["0r2WwT"]));
+        const intl = getSystemLocale /* getSystemLocale */.intl;
+        items.push(intl.string(getSystemLocale /* getSystemLocale */.t["0r2WwT"]));
       }
       if (arr.includes("video")) {
-        const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        items.push(intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["al+5qH"]));
+        const intl2 = getSystemLocale /* getSystemLocale */.intl;
+        items.push(intl2.string(getSystemLocale /* getSystemLocale */.t["al+5qH"]));
       }
       if (arr.includes("audio")) {
-        const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        items.push(intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Kzll3E));
+        const intl3 = getSystemLocale /* getSystemLocale */.intl;
+        items.push(intl3.string(getSystemLocale /* getSystemLocale */.t.Kzll3E));
       }
       const push = items.push;
       const found = arr.filter((str) => str.startsWith("."));
@@ -46,7 +48,7 @@ const result = require("_getSystemLocale").fileFinishedImporting("modules/intera
 export const useFileTypesFormattedString = function useFileTypesFormattedString(fileTypes) {
   const _require = fileTypes;
   const items = [_getSystemLocale];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => locale.locale);
+  const stateFromStores = _initialize.useStateFromStores(items, () => locale.locale);
   const items1 = [fileTypes, stateFromStores];
   return React.useMemo(() => outer1_11(closure_0, stateFromStores), items1);
 };

@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { filterLayer } from "../../../../user_profile/native/UserProfilePreview.tsx";
 // discord_app/modules/collectibles/profile_effects/native/previews/ProfileEffectUserPreview.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -10,15 +12,15 @@ export default function ProfileEffectUserPreview(profileEffect) {
   const merged = Object.assign(profileEffect, Object.create(null));
   let obj = { profileEffectOverride: profileEffect, accessibilityLabel: null };
   if (null != profileEffect) {
-    const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
     obj = { a11y_text: null };
     obj[0] = profileEffect.accessibilityLabel;
-    let formatToPlainStringResult = intl2.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.mbHmX2, obj);
+    let formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.mbHmX2, obj);
   } else {
-    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    formatToPlainStringResult = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.XYdHeC);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    formatToPlainStringResult = intl.string(getSystemLocale /* getSystemLocale */.t.XYdHeC);
   }
   obj[1] = formatToPlainStringResult;
   const merged1 = Object.assign(merged);
-  return jsx(require("../../../../user_profile/native/UserProfilePreview.tsx"), { profileEffectOverride: profileEffect, accessibilityLabel: null });
+  return jsx(filterLayer, { profileEffectOverride: profileEffect, accessibilityLabel: null });
 };

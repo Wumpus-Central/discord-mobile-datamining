@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_role_subscriptions/useUserRoleSubscriptionRelationship.tsx
 import computeRolesForGuild from "computeRolesForGuild";
 import { UserGuildRoleSubscriptionRelationship as closure_3 } from "MAX_SUBSCRIPTION_TIERS";
@@ -7,7 +8,7 @@ const result = require("initialize").fileFinishedImporting("modules/guild_role_s
 
 export default function useUserRoleSubscriptionRelationship() {
   let items = [computeRolesForGuild];
-  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+  return initialize /* initialize */.useStateFromStores(items, () => {
     let obj;
     const items = [computeRolesForGuild];
     [obj] = items;

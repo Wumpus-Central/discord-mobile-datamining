@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { resetCache } from "../utils/DateUtils.tsx";
+import { set } from "../utils/Durations.tsx";
 // discord_app/errors/AppliedGuildBoostError.tsx
 import "prototype";
 
@@ -13,10 +16,10 @@ class AppliedGuildBoostError extends tmp2 {
   }
 }
 AppliedGuildBoostError.prototype["_getMessageFromRateLimit"] = function _getMessageFromRateLimit(body) {
-  let obj = require("../utils/DateUtils.tsx") /* resetCache */;
-  const diffAsUnitsResult = obj.diffAsUnits(0, body.body.retry_after * require("../utils/Durations.tsx").Millis.SECOND);
-  obj = { days: require("../intl/index.native.tsx") /* getSystemLocale */.t["iXc/Ib"], hours: require("../intl/index.native.tsx") /* getSystemLocale */.t.WW9P57, minutes: require("../intl/index.native.tsx") /* getSystemLocale */.t.I7rYev };
-  return require("../utils/DateUtils.tsx") /* resetCache */.unitsAsStrings(diffAsUnitsResult, obj);
+  let obj = resetCache /* resetCache */;
+  const diffAsUnitsResult = obj.diffAsUnits(0, body.body.retry_after * set.Millis.SECOND);
+  obj = { days: getSystemLocale /* getSystemLocale */.t["iXc/Ib"], hours: getSystemLocale /* getSystemLocale */.t.WW9P57, minutes: getSystemLocale /* getSystemLocale */.t.I7rYev };
+  return resetCache /* resetCache */.unitsAsStrings(diffAsUnitsResult, obj);
 };
 const result = require("set").fileFinishedImporting("errors/AppliedGuildBoostError.tsx");
 

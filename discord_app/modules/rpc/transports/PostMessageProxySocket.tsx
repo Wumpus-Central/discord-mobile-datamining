@@ -1,3 +1,4 @@
+import { HANDSHAKE } from "../RPCOpcodes.tsx";
 // discord_app/modules/rpc/transports/PostMessageProxySocket.tsx
 import { TransportTypes } from "RPC_SCOPE_CONFIG";
 import { RPCCloseCodes } from "ME";
@@ -62,7 +63,7 @@ prototype["send"] = function send(arg0) {
   if (onSendingToRPCClient != null) {
     onSendingToRPCClient(arg0, self.id);
   }
-  const items = [require("../RPCOpcodes.tsx").FRAME, arg0];
+  const items = [HANDSHAKE.FRAME, arg0];
   const result = self.postMessageToRPCClient(items, self.source.origin);
 };
 prototype["close"] = function close(arg0, arg1) {

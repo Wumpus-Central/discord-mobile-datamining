@@ -1,3 +1,9 @@
+import { t } from "../../../../../_runtime/03867_t.js";
+import { isIterable } from "../../../../../_runtime/03898_isIterable.js";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { saveProfileAndAccountRequest } from "../../../../actions/UserSettingsAccountActionCreators.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { RequestDataScreen } from "../../privacy_and_safety/native/RequestDataScreen.tsx";
 // discord_app/modules/user_settings/defs/native/RequestYourDataSetting.tsx
 import { ActivityIndicator } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -10,10 +16,10 @@ let UserSettingsSections;
 let c5;
 function useIsHarvestRequestDisabled() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = initialize /* initialize */;
   const tmp = require;
-  let harvestDisabledResult = callback((isRequesting) => isRequesting.isRequesting, require("../../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
+  let harvestDisabledResult = callback((isRequesting) => isRequesting.isRequesting, isIterable /* isIterable */.shallow);
   let tmp6 = null == stateFromStores;
   if (!tmp6) {
     if (!harvestDisabledResult) {
@@ -28,19 +34,19 @@ function useIsHarvestRequestDisabled() {
 let closure_7 = identity.createWithEqualityFn(() => ({ isRequesting: false, harvestRequest: null }));
 obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.XAHCgJ);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.XAHCgJ);
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   useTrailing: function useHarvestRequestSettingTrailing() {
     let tmp = null;
-    if (callback((isRequesting) => isRequesting.isRequesting, require("../../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow)) {
+    if (callback((isRequesting) => isRequesting.isRequesting, isIterable /* isIterable */.shallow)) {
       tmp = <ActivityIndicator />;
     }
     return tmp;
   },
   useDescription: function useRequestYourDataSettingDescription() {
-    const tmp3 = callback((harvestRequest) => harvestRequest.harvestRequest, require("../../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
+    const tmp3 = callback((harvestRequest) => harvestRequest.harvestRequest, isIterable /* isIterable */.shallow);
     currentUser = currentUser.getCurrentUser();
     if (null == currentUser) {
       return null;
@@ -50,9 +56,9 @@ obj = {
     } else if (null == tmp3) {
       return null;
     } else {
-      const addResult = require("../../../../../_runtime/03867_t.js")(tmp3.created_at).add(closure_5, "days");
+      const addResult = t(tmp3.created_at).add(closure_5, "days");
       let formatToPlainStringResult = null;
-      if (!addResult.isBefore(require("../../../../../_runtime/03867_t.js")())) {
+      if (!addResult.isBefore(t())) {
         const intl = tmp(1236).intl;
         const obj = { date: null };
         obj[0] = addResult.format("MMMM Do YYYY");
@@ -64,10 +70,10 @@ obj = {
   useIsDisabled: useIsHarvestRequestDisabled,
   usePreNavigationAction() {
     const items = [mergeGuildAvatar];
-    const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-    const obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+    const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+    const obj = initialize /* initialize */;
     const tmp = require;
-    let harvestDisabledResult = callback((isRequesting) => isRequesting.isRequesting, require("../../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
+    let harvestDisabledResult = callback((isRequesting) => isRequesting.isRequesting, isIterable /* isIterable */.shallow);
     let tmp6 = null == stateFromStores;
     if (!tmp6) {
       if (!harvestDisabledResult) {
@@ -91,7 +97,7 @@ obj = {
 obj = {
   route: UserSettingsSections.REQUEST_DATA,
   getComponent() {
-    return require("../../privacy_and_safety/native/RequestDataScreen.tsx").default;
+    return RequestDataScreen.default;
   }
 };
 const route = createToggle.createRoute(obj);
@@ -99,7 +105,7 @@ const result = require("MobileSetting").fileFinishedImporting("modules/user_sett
 
 export default route;
 export const fetchHarvestStatus = function fetchHarvestStatus() {
-  const harvestStatus = require("../../../../actions/UserSettingsAccountActionCreators.tsx") /* saveProfileAndAccountRequest */.getHarvestStatus();
+  const harvestStatus = saveProfileAndAccountRequest /* saveProfileAndAccountRequest */.getHarvestStatus();
   harvestStatus.then((arg0) => {
     const callback = arg0;
     callback(705).batchUpdates(() => {

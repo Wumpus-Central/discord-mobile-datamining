@@ -1,3 +1,6 @@
+import { create } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { isPerModeThemingActive } from "../../user_settings/isPerModeThemingActive.tsx";
 // discord_app/modules/client_themes/native/CustomThemeMobileStore.tsx
 import initialize from "initialize";
 import handleThemeChange from "handleThemeChange";
@@ -14,10 +17,10 @@ function reset() {
   let c4;
 }
 function handleSyncedModeChange() {
-  return require("../../user_settings/isPerModeThemingActive.tsx") /* isPerModeThemingActive */.isPerModeThemingActive(isSyncedModeThemesEnabled);
+  return isPerModeThemingActive /* isPerModeThemingActive */.isPerModeThemingActive(isSyncedModeThemesEnabled);
 }
 function handleSameAsDeviceThemeToggle() {
-  return require("../../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("CustomThemeMobileStore");
+  return useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("CustomThemeMobileStore");
 }
 function loadFromProtoSettings() {
   if (initialize.shouldSync("appearance")) {
@@ -25,7 +28,7 @@ function loadFromProtoSettings() {
     if (null != appearance) {
       let UNSET = appearance.theme;
       if (UNSET == null) {
-        UNSET = require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.Theme.UNSET;
+        UNSET = create /* create */.Theme.UNSET;
       }
       let closure_2 = PROTO_THEME_MAP_MOBILE[UNSET];
       const clientThemeSettings = appearance.clientThemeSettings;
@@ -42,7 +45,7 @@ function handleSelectivelySyncedUserSettingsUpdate() {
     if (null != appearance) {
       let UNSET = appearance.theme;
       if (UNSET == null) {
-        UNSET = require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.Theme.UNSET;
+        UNSET = create /* create */.Theme.UNSET;
       }
       let closure_2 = PROTO_THEME_MAP_MOBILE[UNSET];
       const clientThemeSettings = appearance.clientThemeSettings;
@@ -54,7 +57,7 @@ function handleSelectivelySyncedUserSettingsUpdate() {
   }
 }
 function isSyncedModeThemesEnabled() {
-  return require("../../themes/experiments/MobileVisualRefreshExperiment.tsx") /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("CustomThemeMobileStore");
+  return useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("CustomThemeMobileStore");
 }
 class CustomThemeMobileStore extends PersistedStore {
 }
@@ -84,7 +87,7 @@ prototype["getState"] = function getState() {
   return obj;
 };
 prototype["getCustomTheme"] = function getCustomTheme() {
-  let obj = require("../../user_settings/isPerModeThemingActive.tsx") /* isPerModeThemingActive */;
+  let obj = isPerModeThemingActive /* isPerModeThemingActive */;
   obj = { baseTheme: null, customTheme: null };
   if (obj.isPerModeThemingActive(isSyncedModeThemesEnabled)) {
     obj[0] = store.theme;
@@ -112,7 +115,7 @@ prototype["getCustomTheme"] = function getCustomTheme() {
   return customTheme;
 };
 prototype["getBaseTheme"] = function getBaseTheme() {
-  let obj = require("../../user_settings/isPerModeThemingActive.tsx") /* isPerModeThemingActive */;
+  let obj = isPerModeThemingActive /* isPerModeThemingActive */;
   obj = { baseTheme: null, customTheme: null };
   if (obj.isPerModeThemingActive(isSyncedModeThemesEnabled)) {
     obj[0] = store.theme;
@@ -176,7 +179,7 @@ prototype["getCustomThemeDisplaySettings"] = function getCustomThemeDisplaySetti
   }
 };
 prototype["hasCustomTheme"] = function hasCustomTheme() {
-  let obj = require("../../user_settings/isPerModeThemingActive.tsx") /* isPerModeThemingActive */;
+  let obj = isPerModeThemingActive /* isPerModeThemingActive */;
   obj = { baseTheme: null, customTheme: null };
   if (obj.isPerModeThemingActive(isSyncedModeThemesEnabled)) {
     obj[0] = store.theme;
@@ -236,7 +239,7 @@ const customThemeMobileStore = new CustomThemeMobileStore(require("dispatcher"),
       if (null != tmp3) {
         let UNSET = tmp3.theme;
         if (UNSET == null) {
-          UNSET = require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.Theme.UNSET;
+          UNSET = create /* create */.Theme.UNSET;
         }
         let closure_2 = PROTO_THEME_MAP_MOBILE[UNSET];
         const clientThemeSettings = tmp3.clientThemeSettings;

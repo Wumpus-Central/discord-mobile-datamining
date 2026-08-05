@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/message_request/hooks/useSpamMessageRequestsCount.tsx
 import processChannel from "processChannel";
 
@@ -6,5 +7,5 @@ const result = require("set").fileFinishedImporting("modules/message_request/hoo
 
 export const useSpamMessageRequestCount = function useSpamMessageRequestCount() {
   const items = [processChannel];
-  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => spamChannelsCount.getSpamChannelsCount());
+  return initialize /* initialize */.useStateFromStores(items, () => spamChannelsCount.getSpamChannelsCount());
 };

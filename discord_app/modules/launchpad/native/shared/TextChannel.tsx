@@ -1,3 +1,5 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { getLayoutStyle } from "getLayoutStyles.tsx";
 // discord_app/modules/launchpad/native/shared/TextChannel.tsx
 import importAllResult from "usePressUnderlayColor";
 import { View } from "isChannelSpoilerGated";
@@ -16,11 +18,11 @@ let c3 = importAllResult;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles(() => {
   let obj = { pressable: null, selectedBorder: null, rowSelected: null };
-  obj = { flex: 1, borderRadius: require("getLayoutStyles.tsx")().container.borderRadius, marginBottom: 1 };
+  obj = { flex: 1, borderRadius: getLayoutStyle().container.borderRadius, marginBottom: 1 };
   obj[0] = obj;
-  obj = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderWidth: 1, borderColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_MUTED, borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.md };
+  obj = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderWidth: 1, borderColor: Themes.colors.BORDER_MUTED, borderRadius: Themes.radii.md };
   obj[1] = obj;
-  obj[2] = { borderRadius: require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.md, backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_MUTED };
+  obj[2] = { borderRadius: Themes.radii.md, backgroundColor: Themes.colors.BACKGROUND_MOD_MUTED };
   return obj;
 });
 const memoResult = importAllResult.memo(function TextChannel(subtitle) {

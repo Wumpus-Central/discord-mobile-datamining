@@ -1,3 +1,4 @@
+import { PlatformTypes } from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 // discord_app/design/components/Sticky/native/StickyWrapper.native.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -29,7 +30,7 @@ export const StickyWrapper = function StickyWrapper(header) {
     obj[0] = items1;
     obj[1] = header;
     tmp5Result = closure_3(tmp2, obj);
-    obj2 = require("../../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
+    obj2 = PlatformTypes /* PlatformTypes */;
     const tmp5 = closure_3;
   }
   const items2 = [tmp5Result, header.children];

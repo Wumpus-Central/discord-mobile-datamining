@@ -1,3 +1,5 @@
+import { ActionSheetHeaderPressableText } from "../../../../design/components/Sheet/native/ActionSheetHeaderPressableText.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/action_sheet/native/components/ContextMenuSubmenuActionSheetHeader.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -12,14 +14,14 @@ export default function ContextMenuSubmenuActionSheetHeader(onBack) {
   let fn = onBack.onBack;
   let obj = { style: callback().headerContainer, children: null };
   obj = { label: null, onPress: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["13/7kX"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["13/7kX"]);
   if (fn == null) {
     fn = () => {
 
     };
   }
   obj[1] = fn;
-  obj[1] = jsx(require("../../../../design/components/Sheet/native/ActionSheetHeaderPressableText.native.tsx") /* ActionSheetHeaderPressableText */.ActionSheetHeaderPressableText, { label: null, onPress: null });
+  obj[1] = jsx(ActionSheetHeaderPressableText /* ActionSheetHeaderPressableText */.ActionSheetHeaderPressableText, { label: null, onPress: null });
   return <View label={null} onPress={null} />;
 };

@@ -1,3 +1,4 @@
+import { DEFAULT_BADGE_SIZE } from "Badge.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/MaskedBadge.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -45,7 +46,7 @@ export default function MaskedBadge(backgroundColor) {
       obj[0] = size;
       obj[1] = backgroundColor;
       obj[2] = tmp.unreadBadge;
-      tmp7Result = jsx(require("Badge.tsx"), { size: null, maskColor: null, style: null });
+      tmp7Result = jsx(DEFAULT_BADGE_SIZE, { size: null, maskColor: null, style: null });
     }
   }
   return tmp7Result;

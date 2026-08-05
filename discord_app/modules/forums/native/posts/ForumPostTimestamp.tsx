@@ -1,3 +1,4 @@
+import { useLoadForumUnreadCounts } from "../../ForumHooks.tsx";
 // discord_app/modules/forums/native/posts/ForumPostTimestamp.tsx
 import "noop";
 import { useForumChannelStore } from "set";
@@ -17,7 +18,7 @@ export default function ForumPostTimestamp(thread) {
   const tmp = callback();
   const tmp2 = require;
   let color = "text-muted";
-  const children = require("../../ForumHooks.tsx") /* useLoadForumUnreadCounts */.useLastActiveTimestamp(thread, useForumChannelStore(thread.parent_id).sortOrder, format);
+  const children = useLoadForumUnreadCounts /* useLoadForumUnreadCounts */.useLastActiveTimestamp(thread, useForumChannelStore(thread.parent_id).sortOrder, format);
   if (hasUnreads) {
     color = "text-default";
   }

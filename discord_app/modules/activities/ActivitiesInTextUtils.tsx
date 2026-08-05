@@ -1,3 +1,5 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { set } from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 // discord_app/modules/activities/ActivitiesInTextUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -15,10 +17,10 @@ function isActivityInTextSupportedForChannel(channel) {
       if (channel != null) {
         type = channel.type;
       }
-      hasItem = type === require("../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx") /* set */.ChannelTypes.GUILD_CATEGORY;
+      hasItem = type === set /* set */.ChannelTypes.GUILD_CATEGORY;
     }
     if (hasItem) {
-      const items = [require("../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx") /* set */.ChannelTypes.GUILD_TEXT, require("../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx") /* set */.ChannelTypes.GUILD_VOICE, require("../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx") /* set */.ChannelTypes.GROUP_DM, require("../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx") /* set */.ChannelTypes.DM];
+      const items = [set /* set */.ChannelTypes.GUILD_TEXT, set /* set */.ChannelTypes.GUILD_VOICE, set /* set */.ChannelTypes.GROUP_DM, set /* set */.ChannelTypes.DM];
       hasItem = items.includes(channel.type);
     }
     return hasItem;
@@ -49,7 +51,7 @@ export const isActivitiesInTextEnabled = function isActivitiesInTextEnabled(chan
 export const useIsActivitiesInTextEnabled = function useIsActivitiesInTextEnabled(id) {
   const _require = id;
   const items = [ensureGuildLoaded, getUncachedChannelPermissions];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const channel = outer1_2.getChannel(closure_0);
     let flag = false;
     if (null != channel) {
@@ -84,7 +86,7 @@ export const getIsAppLauncherEnabled = function getIsAppLauncherEnabled(channel)
 export const useIsAppLauncherEnabled = function useIsAppLauncherEnabled(id) {
   const _require = id;
   const items = [ensureGuildLoaded];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const channel = outer1_2.getChannel(closure_0);
     let tmp2 = null != channel;
     if (tmp2) {

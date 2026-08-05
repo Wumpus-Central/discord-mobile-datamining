@@ -1,3 +1,10 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useEmitAppealIngestionEvent } from "../hooks/useEmitAppealIngestionEvent.tsx";
+import { useSafetyHubClassifications } from "../hooks/useSafetyHubClassifications.tsx";
+import { AppealIngestionActivitySummary } from "AppealIngestionActivitySummary.tsx";
+import { AppealIngestionModal } from "AppealIngestionModal.tsx";
+import { AppealIngestionPolicySummary } from "AppealIngestionPolicySummary.tsx";
 // discord_app/modules/safety_hub/native/AppealIngestionSpeedBump.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -24,16 +31,16 @@ export default function AppealIngestionSpeedBump(arg0) {
   let isSpam;
   ({ isCoppa, isSpam } = arg0);
   let _require;
-  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [handleSafetyHubRequestAgeVerificationResetModalAction];
   let stateFromStores = obj.useStateFromStores(items, () => appealClassificationId.getAppealClassificationId());
-  let obj1 = _require("../hooks/useSafetyHubClassifications.tsx");
+  let obj1 = _useSafetyHubClassifications;
   if (stateFromStores == null) {
     stateFromStores = EMPTY_STRING_SNOWFLAKE_ID;
   }
   const safetyHubClassification = obj1.useSafetyHubClassification(stateFromStores);
   const tmp = callback2();
-  _require = _require("../hooks/useEmitAppealIngestionEvent.tsx").useEmitAppealIngestionEvent();
+  _require = _useEmitAppealIngestionEvent.useEmitAppealIngestionEvent();
   ({ isDsaEligible, classification } = safetyHubClassification);
   let str;
   if (classification != null) {
@@ -51,20 +58,20 @@ export default function AppealIngestionSpeedBump(arg0) {
     flagged_content = [];
   }
   const intl = tmp2(1236).intl;
-  const tmp2Result = _require("../hooks/useEmitAppealIngestionEvent.tsx");
+  const tmp2Result = _useEmitAppealIngestionEvent;
   const intl2 = tmp2(1236).intl;
-  const stringResult = intl.string(_require("../../../intl/index.native.tsx").t["C5q+pW"]);
-  const items1 = [callback(_require("AppealIngestionModal.tsx").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(_require("../../../intl/index.native.tsx").t.URt7VI) }), ];
+  const stringResult = intl.string(_getSystemLocale.t["C5q+pW"]);
+  const items1 = [callback(_AppealIngestionModal.AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(_getSystemLocale.t.URt7VI) }), ];
   obj = { style: tmp.container, children: null };
   let tmp9Result = flagged_content.length > 0;
   if (tmp9Result) {
     obj = { flaggedContent: null };
     obj[0] = flagged_content;
-    tmp9Result = tmp9(require("AppealIngestionActivitySummary.tsx"), obj);
+    tmp9Result = tmp9(AppealIngestionActivitySummary, obj);
   }
   const items2 = [tmp9Result, , , , , ];
   obj1 = { classification: safetyHubClassification.classification };
-  items2[1] = callback(require("AppealIngestionPolicySummary.tsx"), obj1);
+  items2[1] = callback(AppealIngestionPolicySummary, obj1);
   tmp9Result = isCoppa;
   if (isCoppa) {
     const obj2 = { text: null, url: null, onPress: null };
@@ -117,5 +124,5 @@ export default function AppealIngestionSpeedBump(arg0) {
   obj[1] = items2;
   items1[1] = closure_9(View, obj);
   obj6[0] = items1;
-  return closure_9(_require("AppealIngestionModal.tsx").AppealIngestionModalScreen, obj6);
+  return closure_9(_AppealIngestionModal.AppealIngestionModalScreen, obj6);
 };

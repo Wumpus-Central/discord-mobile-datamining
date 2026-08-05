@@ -1,3 +1,6 @@
+import { saveGuildFolders } from "../../../../actions/UserSettingsActionCreators.tsx";
+import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
+import { explicitContentFromProto } from "../../UserSettings.tsx";
 // discord_app/modules/user_settings/chat/native/UserSettingsText.tsx
 import "registerAsset";
 import { View } from "dispatcher";
@@ -216,11 +219,11 @@ export default function UserSettingsText() {
   return callback(setting4, obj);
 };
 export const setStickerAutocomplete = function setStickerAutocomplete(enabled) {
-  let obj = require("../../../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { enabled, location: obj };
   obj = { section: constants2.SETTINGS_TEXT_AND_IMAGES };
   obj.track(constants.STICKERS_IN_AUTOCOMPLETE_TOGGLED, obj);
-  const IncludeStickersInAutocomplete = require("../../UserSettings.tsx") /* explicitContentFromProto */.IncludeStickersInAutocomplete;
+  const IncludeStickersInAutocomplete = explicitContentFromProto /* explicitContentFromProto */.IncludeStickersInAutocomplete;
   IncludeStickersInAutocomplete.updateSetting(enabled);
 };
 export const setLowQualityImageMode = function setLowQualityImageMode(lowQualityImageMode) {
@@ -229,9 +232,9 @@ export const setLowQualityImageMode = function setLowQualityImageMode(lowQuality
   let viewImageDescriptions;
   lowQualityImageMode = lowQualityImageMode.lowQualityImageMode;
   ({ videoUploadQuality, viewImageDescriptions, dataSavingMode } = lowQualityImageMode);
-  require("../../../../utils/AnalyticsUtils.tsx").track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "low_quality_image_mode" });
-  const obj = require("../../../../utils/AnalyticsUtils.tsx");
-  const result = require("../../../../actions/UserSettingsActionCreators.tsx").updatedUnsyncedSettings({ lowQualityImageMode });
+  expandEventProperties.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "low_quality_image_mode" });
+  const obj = expandEventProperties;
+  const result = saveGuildFolders.updatedUnsyncedSettings({ lowQualityImageMode });
 };
 export const setDataSavingMode = function setDataSavingMode(dataSavingMode) {
   let lowQualityImageMode;
@@ -239,9 +242,9 @@ export const setDataSavingMode = function setDataSavingMode(dataSavingMode) {
   let viewImageDescriptions;
   dataSavingMode = dataSavingMode.dataSavingMode;
   ({ videoUploadQuality, viewImageDescriptions, lowQualityImageMode } = dataSavingMode);
-  require("../../../../utils/AnalyticsUtils.tsx").track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "data_saving_mode" });
-  const obj = require("../../../../utils/AnalyticsUtils.tsx");
-  const result = require("../../../../actions/UserSettingsActionCreators.tsx").updatedUnsyncedSettings({ dataSavingMode });
+  expandEventProperties.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "data_saving_mode" });
+  const obj = expandEventProperties;
+  const result = saveGuildFolders.updatedUnsyncedSettings({ dataSavingMode });
 };
 export const setVideoUploadQuality = function setVideoUploadQuality(videoUploadQuality) {
   let dataSavingMode;
@@ -249,9 +252,9 @@ export const setVideoUploadQuality = function setVideoUploadQuality(videoUploadQ
   let viewImageDescriptions;
   videoUploadQuality = videoUploadQuality.videoUploadQuality;
   ({ viewImageDescriptions, lowQualityImageMode, dataSavingMode } = videoUploadQuality);
-  require("../../../../utils/AnalyticsUtils.tsx").track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "video_upload_quality" });
-  const obj = require("../../../../utils/AnalyticsUtils.tsx");
-  const result = require("../../../../actions/UserSettingsActionCreators.tsx").updatedUnsyncedSettings({ videoUploadQuality });
+  expandEventProperties.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "video_upload_quality" });
+  const obj = expandEventProperties;
+  const result = saveGuildFolders.updatedUnsyncedSettings({ videoUploadQuality });
 };
 export const setImageDescriptions = function setImageDescriptions(viewImageDescriptions) {
   let dataSavingMode;
@@ -259,7 +262,7 @@ export const setImageDescriptions = function setImageDescriptions(viewImageDescr
   let videoUploadQuality;
   viewImageDescriptions = viewImageDescriptions.viewImageDescriptions;
   ({ videoUploadQuality, lowQualityImageMode, dataSavingMode } = viewImageDescriptions);
-  require("../../../../utils/AnalyticsUtils.tsx").track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "image_descriptions" });
-  const ViewImageDescriptions = require("../../UserSettings.tsx") /* explicitContentFromProto */.ViewImageDescriptions;
+  expandEventProperties.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "image_descriptions" });
+  const ViewImageDescriptions = explicitContentFromProto /* explicitContentFromProto */.ViewImageDescriptions;
   ViewImageDescriptions.updateSetting(viewImageDescriptions);
 };

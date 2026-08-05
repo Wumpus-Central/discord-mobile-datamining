@@ -1,3 +1,7 @@
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import { AccessibilityAnnouncer } from "../../design/shared.tsx";
+import { set } from "../../utils/CrossPlatformNativeUtils.native.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 // discord_app/modules/a11y/AccessibilityStore.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import handleThemeChange from "handleThemeChange";
@@ -19,7 +23,7 @@ function maybeApplyNoTextColorForLightCustomTheme() {
       tmp3 = theme.theme !== ThemeTypes.LIGHT;
     }
     if (!tmp3) {
-      const ClientThemeSettings = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.ClientThemeSettings;
+      const ClientThemeSettings = explicitContentFromProto /* explicitContentFromProto */.ClientThemeSettings;
       const setting = ClientThemeSettings.getSetting();
       let tmp10 = null != setting.backgroundGradientPresetId;
       if (!tmp10) {
@@ -198,7 +202,7 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
     if (null != obj.messageGroupSpacing) {
       let messageGroupSpacing = obj.messageGroupSpacing;
     } else {
-      const MessageDisplayCompact = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.MessageDisplayCompact;
+      const MessageDisplayCompact = explicitContentFromProto /* explicitContentFromProto */.MessageDisplayCompact;
       messageGroupSpacing = MessageDisplayCompact.getSetting() ? closure_10 : closure_11;
     }
     return messageGroupSpacing;
@@ -207,14 +211,14 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingIncreased", {
   get: function isMessageGroupSpacingIncreased() {
-    const MessageDisplayCompact = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.MessageDisplayCompact;
+    const MessageDisplayCompact = explicitContentFromProto /* explicitContentFromProto */.MessageDisplayCompact;
     return this.messageGroupSpacing > (MessageDisplayCompact.getSetting() ? closure_10 : closure_11);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingDecreased", {
   get: function isMessageGroupSpacingDecreased() {
-    const MessageDisplayCompact = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.MessageDisplayCompact;
+    const MessageDisplayCompact = explicitContentFromProto /* explicitContentFromProto */.MessageDisplayCompact;
     return this.messageGroupSpacing < (MessageDisplayCompact.getSetting() ? closure_10 : closure_11);
   },
   set: undefined
@@ -376,7 +380,7 @@ AccessibilityStore.displayName = "AccessibilityStore";
 AccessibilityStore.persistKey = "AccessibilityStore";
 let items = [
   () => {
-    const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     const fontScale = Storage.get("a11yFontScale") || 100;
     const Storage2 = tmp(595).Storage;
     let zoom = Storage2.get("a11yZoom");
@@ -441,7 +445,7 @@ let items = [
   (saturation) => {
     const obj = {};
     const merged = Object.assign(saturation);
-    obj.alwaysShowLinkDecorations = saturation.saturation <= require("../../design/shared.tsx") /* AccessibilityAnnouncer */.LOW_SATURATION_THRESHOLD;
+    obj.alwaysShowLinkDecorations = saturation.saturation <= AccessibilityAnnouncer /* AccessibilityAnnouncer */.LOW_SATURATION_THRESHOLD;
     return obj;
   },
   (arg0) => {
@@ -508,7 +512,7 @@ const accessibilityStore = new AccessibilityStore(require("dispatcher"), {
           obj = {};
           const merged = Object.assign(obj);
           obj.zoom = zoom.zoom;
-          require("../../utils/CrossPlatformNativeUtils.native.tsx").setZoomFactor(obj.zoom);
+          set.setZoomFactor(obj.zoom);
         }
       }
     }
@@ -527,8 +531,8 @@ const accessibilityStore = new AccessibilityStore(require("dispatcher"), {
     }
     if (obj.zoom !== Accessibility.ZOOM_DEFAULT) {
       obj.zoom = tmp.ZOOM_DEFAULT;
-      require("../../utils/CrossPlatformNativeUtils.native.tsx").setZoomFactor(obj.zoom);
-      const obj2 = require("../../utils/CrossPlatformNativeUtils.native.tsx");
+      set.setZoomFactor(obj.zoom);
+      const obj2 = set;
     }
   },
   ACCESSIBILITY_KEYBOARD_MODE_ENABLE: function handleEnableKeyboardMode() {

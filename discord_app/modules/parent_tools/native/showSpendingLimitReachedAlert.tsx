@@ -1,8 +1,10 @@
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
+import { V6OrEarlierAPIError } from "../../../errors/index.tsx";
 // discord_app/modules/parent_tools/native/showSpendingLimitReachedAlert.tsx
 const result = require("useUserIdsForLinkStatus").fileFinishedImporting("modules/parent_tools/native/showSpendingLimitReachedAlert.tsx");
 
 export const isSpendingLimitError = function isSpendingLimitError(billingError) {
-  let tmp3 = billingError instanceof require("../../../errors/index.tsx") /* V6OrEarlierAPIError */.BillingError;
+  let tmp3 = billingError instanceof V6OrEarlierAPIError /* V6OrEarlierAPIError */.BillingError;
   if (tmp3) {
     let tmp4 = billingError.code === tmp(3953).ErrorCodes.BILLING_SPENDING_LIMIT_REACHED;
     if (!tmp4) {
@@ -15,7 +17,7 @@ export const isSpendingLimitError = function isSpendingLimitError(billingError) 
 export const showSpendingLimitReachedAlert = function showSpendingLimitReachedAlert() {
   let obj = activeLinkUserIds(7259);
   activeLinkUserIds = obj.getActiveLinkUserIds();
-  let obj1 = require("../../../actions/native/AlertActionCreators.tsx");
+  let obj1 = AlertActionCreators;
   obj = { title: null, body: null, isDismissable: true };
   const intl = activeLinkUserIds(1236).intl;
   obj[0] = intl.string(activeLinkUserIds(1236).t.QJKKrT);

@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/self_mod/hooks/useUserIsTeen.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 
@@ -6,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/self_mod/hooks/useU
 
 export const useUserIsTeen = function useUserIsTeen() {
   const items = [mergeGuildAvatar];
-  return false === require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+  return false === initialize /* initialize */.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;
     if (currentUser != null) {

@@ -1,3 +1,6 @@
+import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import { AnimatedRenderItem } from "../../AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
+import { Coachmark } from "Coachmark.native.tsx";
 // discord_app/design/components/Coachmark/native/AnimatedCoachmark.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -13,10 +16,10 @@ function renderTooltipItem(arg0, enterExitAnimatedStyles) {
     obj = {};
     const merged = Object.assign(arg0);
     obj.enterExitAnimatedStyles = enterExitAnimatedStyles;
-    tmpResult = tmp(require("Coachmark.native.tsx") /* Coachmark */.CoachmarkContainer, obj);
+    tmpResult = tmp(Coachmark /* Coachmark */.CoachmarkContainer, obj);
   }
   obj[2] = tmpResult;
-  return jsx(require("../../../../modules/reanimated/ReanimatedRexport.tsx").View, { style: items, pointerEvents: "box-none", children: null });
+  return jsx(ReanimatedRexport.View, { style: items, pointerEvents: "box-none", children: null });
 }
 let result = require("get ActivityIndicator").fileFinishedImporting("design/components/Coachmark/native/AnimatedCoachmark.native.tsx");
 
@@ -44,5 +47,5 @@ export const AnimatedCoachmark = function AnimatedCoachmark(visible) {
   obj[2] = result;
   obj[3] = result;
   obj[4] = renderTooltipItem;
-  return tmp6(require("../../AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx"), obj);
+  return tmp6(AnimatedRenderItem, obj);
 };

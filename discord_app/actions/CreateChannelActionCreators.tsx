@@ -1,3 +1,6 @@
+import { encodeProperties } from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { TrackedHTTPUtils } from "../utils/TrackedHTTPUtils.tsx";
 // discord_app/actions/CreateChannelActionCreators.tsx
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import ME from "ME";
@@ -136,11 +139,11 @@ export default {
     });
   },
   createRoleSubscriptionTemplateChannel(closure_0, name, type, topic) {
-    let obj = require("../utils/TrackedHTTPUtils.tsx");
+    let obj = TrackedHTTPUtils;
     obj = { url: closure_6.GUILD_CHANNELS(closure_0), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { name, type, topic };
     obj[3] = {
-      event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.CHANNEL_CREATE,
+      event: encodeProperties /* encodeProperties */.NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
         let obj = callback(table[6]);
         let id;
@@ -163,7 +166,7 @@ export default {
       }
     };
     const obj1 = {
-      event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.CHANNEL_CREATE,
+      event: encodeProperties /* encodeProperties */.NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
         let obj = callback(table[6]);
         let id;
@@ -185,7 +188,7 @@ export default {
         return obj.exact(obj);
       }
     };
-    obj[4] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+    obj[4] = sendRequest /* sendRequest */.rejectWithMigratedError();
     return obj.post(obj);
   }
 };

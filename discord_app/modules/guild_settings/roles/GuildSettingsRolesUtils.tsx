@@ -1,3 +1,5 @@
+import { fuzzysearch } from "../../../../_runtime/05197_fuzzysearch.js";
+import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
 // discord_app/modules/guild_settings/roles/GuildSettingsRolesUtils.tsx
 import noop from "noop";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -182,14 +184,14 @@ export const filterFullMembersByQuery = function filterFullMembersByQuery(str, i
   const formatted = str.trim().toLowerCase();
   let tmp8Result = id.id === formatted;
   if (!tmp8Result) {
-    tmp8Result = require("../../../../_runtime/05197_fuzzysearch.js")(formatted, id.name.toLowerCase());
+    tmp8Result = fuzzysearch(formatted, id.name.toLowerCase());
     const str2 = id.name;
-    const tmp5 = require("../../../../_runtime/05197_fuzzysearch.js");
+    const tmp5 = fuzzysearch;
   }
   if (!tmp8Result) {
-    tmp8Result = require("../../../../_runtime/05197_fuzzysearch.js")(formatted, id.userTag.toLowerCase());
+    tmp8Result = fuzzysearch(formatted, id.userTag.toLowerCase());
     const str3 = id.userTag;
-    const tmp8 = require("../../../../_runtime/05197_fuzzysearch.js");
+    const tmp8 = fuzzysearch;
   }
   return tmp8Result;
 };
@@ -203,7 +205,7 @@ export const getSectionAnalyticsName = function getSectionAnalyticsName(DISPLAY)
   } else if (tmp.VERIFICATIONS === DISPLAY) {
     return "Connections";
   } else {
-    require("../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.assertNever(DISPLAY);
+    isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.assertNever(DISPLAY);
   }
 };
 export const filterRole = function filterRole(name, str) {

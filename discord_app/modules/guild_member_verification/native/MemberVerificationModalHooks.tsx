@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_member_verification/native/MemberVerificationModalHooks.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -51,7 +52,7 @@ export const useSetInitialVerificationEffect = function useSetInitialVerificatio
 };
 export const useUserVerificationState = function useUserVerificationState() {
   const items = [mergeGuildAvatar];
-  return require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStoresObject(items, () => {
+  return initialize /* initialize */.useStateFromStoresObject(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
     if (currentUser != null) {
@@ -77,5 +78,5 @@ export const useInitialVerification = function useInitialVerification(id) {
   const _require = id;
   const items = [map];
   const items1 = [id];
-  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_4.getInitialVerificationState(closure_0), items1);
+  return _initialize.useStateFromStores(items, () => outer1_4.getInitialVerificationState(closure_0), items1);
 };

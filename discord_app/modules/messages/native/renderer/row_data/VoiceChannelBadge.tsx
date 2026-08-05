@@ -1,3 +1,4 @@
+import { experiment } from "../../../../channel/VoiceChannelBadgeExperiment.tsx";
 // discord_app/modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx
 import { Image } from "get ActivityIndicator";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -8,7 +9,7 @@ import { Permissions } from "ME";
 let result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx");
 
 export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guildId) {
-  let obj = require("../../../../channel/VoiceChannelBadgeExperiment.tsx") /* experiment */;
+  let obj = experiment /* experiment */;
   if (obj.getVoiceChannelBadgeExperiment({ guildId, location: "VoiceChannelBadgeNative" }).enabled) {
     if (null != guildId) {
       discoverableVoiceState = discoverableVoiceState.getDiscoverableVoiceState(guildId, id);

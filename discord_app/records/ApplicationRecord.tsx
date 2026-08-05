@@ -1,3 +1,6 @@
+import { ApplicationOverlayMethodFlags } from "../../discord_common/js/shared/shared-constants/ApplicationOverlayMethodFlags.tsx";
+import { getAvatarURL } from "../utils/AvatarUtils.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/records/ApplicationRecord.tsx
 import "toJS";
 import createFromServer from "createFromServer";
@@ -92,7 +95,7 @@ Object.defineProperty(prototype, "connectionEntrypointUrl", {
 prototype["getIconURL"] = function getIconURL(arg0, arg1) {
   let gameAssetURL = null;
   if (null != this.icon) {
-    let obj = require("../utils/AvatarUtils.tsx");
+    let obj = getAvatarURL;
     obj = { id: null, hash: null, size: null, format: null };
     ({ id: obj2[0], icon: obj2[1] } = this);
     obj[2] = arg0;
@@ -104,7 +107,7 @@ prototype["getIconURL"] = function getIconURL(arg0, arg1) {
 prototype["getIconSource"] = function getIconSource(arg0, arg1) {
   let gameAssetSource = null;
   if (null != this.icon) {
-    let obj = require("../utils/AvatarUtils.tsx");
+    let obj = getAvatarURL;
     obj = { id: null, hash: null, size: null, format: null };
     ({ id: obj2[0], icon: obj2[1] } = this);
     obj[2] = arg0;
@@ -116,7 +119,7 @@ prototype["getIconSource"] = function getIconSource(arg0, arg1) {
 prototype["getSplashURL"] = function getSplashURL(arg0, arg1) {
   let gameAssetURL = null;
   if (null != this.splash) {
-    let obj = require("../utils/AvatarUtils.tsx");
+    let obj = getAvatarURL;
     obj = { id: null, hash: null, size: null, keepAspectRatio: true, format: null };
     ({ id: obj2[0], splash: obj2[1] } = this);
     obj[2] = arg0;
@@ -128,7 +131,7 @@ prototype["getSplashURL"] = function getSplashURL(arg0, arg1) {
 prototype["getCoverImageURL"] = function getCoverImageURL(arg0) {
   let applicationIconURL = null;
   if (null != this.coverImage) {
-    let obj = require("../utils/AvatarUtils.tsx");
+    let obj = getAvatarURL;
     obj = { id: null, icon: null, size: null, keepAspectRatio: true };
     ({ id: obj2[0], coverImage: obj2[1] } = this);
     obj[2] = arg0;
@@ -280,7 +283,7 @@ ApplicationRecord["createFromServer"] = function createFromServer(bot) {
   obj.bot = tmp3;
   ({ third_party_skus: obj.thirdPartySkus, role_connections_verification_url: obj.roleConnectionsVerificationUrl, overlay_warn: obj.overlayWarn, overlay_compatibility_hook: obj.overlayCompatibilityHook, overlay_methods } = bot);
   if (overlay_methods == null) {
-    overlay_methods = require("../../discord_common/js/shared/shared-constants/ApplicationOverlayMethodFlags.tsx") /* ApplicationOverlayMethodFlags */.ApplicationOverlayMethodFlags.DEFAULT;
+    overlay_methods = ApplicationOverlayMethodFlags /* ApplicationOverlayMethodFlags */.ApplicationOverlayMethodFlags.DEFAULT;
   }
   obj.overlayMethods = overlay_methods;
   ({ hook: obj.hook, store_listing_sku_id: obj.storeListingSkuId, guild_id: obj.guildId, guild: obj.guild } = bot);
@@ -347,8 +350,8 @@ ApplicationRecord["createFromServer"] = function createFromServer(bot) {
 prototype2["getCanonicalGameId"] = function getCanonicalGameId() {
   const self = this;
   if (this.type === ApplicationTypes.GAME) {
-    let castResult = require("../utils/SnowflakeUtils.tsx").cast(self.id);
-    const obj = require("../utils/SnowflakeUtils.tsx");
+    let castResult = DISCORD_EPOCH.cast(self.id);
+    const obj = DISCORD_EPOCH;
   } else {
     const linkedGames = self.linkedGames;
     castResult = undefined;
@@ -676,7 +679,7 @@ Object.defineProperty(prototype2, "supportsOutOfProcessOverlay", {
   set: undefined
 });
 ApplicationRecord["supportsOutOfProcessOverlay"] = function supportsOutOfProcessOverlay(arg0) {
-  const OUT_OF_PROCESS = require("../../discord_common/js/shared/shared-constants/ApplicationOverlayMethodFlags.tsx") /* ApplicationOverlayMethodFlags */.ApplicationOverlayMethodFlags.OUT_OF_PROCESS;
+  const OUT_OF_PROCESS = ApplicationOverlayMethodFlags /* ApplicationOverlayMethodFlags */.ApplicationOverlayMethodFlags.OUT_OF_PROCESS;
   return null != arg0 && (arg0 & OUT_OF_PROCESS) === OUT_OF_PROCESS;
 };
 const result = require("createdAt").fileFinishedImporting("records/ApplicationRecord.tsx");

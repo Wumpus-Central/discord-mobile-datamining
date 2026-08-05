@@ -1,3 +1,5 @@
+import { Button } from "../../../../../design/void/native.tsx";
+import { FacepileGroupDMAvatar } from "../../../../group_dm/native/GroupDMAvatar.tsx";
 // discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceChannelRowItem.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -64,8 +66,8 @@ export default function ChannelRowItem(isUnread) {
     const obj1 = { sources: null, size: null };
     const items2 = [avatar1, avatar2];
     obj1[0] = items2;
-    obj1[1] = require("../../../../../design/void/native.tsx") /* Button */.AvatarSizes.LARGE_48;
-    let tmp5Result = tmp5(require("../../../../group_dm/native/GroupDMAvatar.tsx") /* FacepileGroupDMAvatar */.FacepileGroupDMAvatar, obj1);
+    obj1[1] = Button /* Button */.AvatarSizes.LARGE_48;
+    let tmp5Result = tmp5(FacepileGroupDMAvatar /* FacepileGroupDMAvatar */.FacepileGroupDMAvatar, obj1);
     let tmp6 = require;
   } else {
     tmp6 = require;
@@ -73,8 +75,8 @@ export default function ChannelRowItem(isUnread) {
     obj2[0] = status;
     obj2[1] = avatar1;
     obj2[2] = obj4;
-    obj2[3] = require("../../../../../design/void/native.tsx") /* Button */.AvatarSizes.LARGE_48;
-    tmp5Result = tmp5(require("../../../../../design/void/native.tsx") /* Button */.Avatar, obj2);
+    obj2[3] = Button /* Button */.AvatarSizes.LARGE_48;
+    tmp5Result = tmp5(Button /* Button */.Avatar, obj2);
   }
   obj[1] = tmp5Result;
   items1[1] = closure_4(View, obj);

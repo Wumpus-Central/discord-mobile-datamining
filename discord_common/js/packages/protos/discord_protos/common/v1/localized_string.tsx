@@ -1,3 +1,4 @@
+import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
 // discord_common/js/packages/protos/discord_protos/common/v1/localized_string.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
@@ -19,10 +20,10 @@ prototype["create"] = function create(arr) {
   let obj = { default: "", localizations: {} };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, require("../../../../../../../_runtime/metro/01307__.js").MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = require("../../../../../../../_runtime/metro/01307__.js").reflectionMergePartial(this, obj, arr);
-    const tmpResult = require("../../../../../../../_runtime/metro/01307__.js");
+    const result = 01307__.reflectionMergePartial(this, obj, arr);
+    const tmpResult = 01307__;
   }
   return obj;
 };
@@ -66,7 +67,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onRead;
+              onRead = 01307__.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -119,8 +120,8 @@ prototype["binaryReadMap2"] = function binaryReadMap2(arg0, pos) {
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(localizations, tag, writeUnknownFields) {
   if ("" !== localizations.default) {
-    tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited).string(localizations.default);
-    const tagResult = tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    tag.tag(1, 01307__.WireType.LengthDelimited).string(localizations.default);
+    const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
   }
   const keys = Object.keys(localizations.localizations);
   const iter = keys[Symbol.iterator]();
@@ -128,11 +129,11 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(localizations, t
   while (iter !== undefined) {
     let tmp6 = require;
     let tmp7 = dependencyMap;
-    let tagResult1 = tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    let tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
     let forkResult = tagResult1.fork();
-    let tagResult2 = forkResult.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    let tagResult2 = forkResult.tag(1, 01307__.WireType.LengthDelimited);
     let stringResult1 = tagResult2.string(nextResult);
-    let tagResult3 = stringResult1.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    let tagResult3 = stringResult1.tag(2, 01307__.WireType.LengthDelimited);
     let stringResult2 = tagResult3.string(localizations.localizations[nextResult]);
     let joined = stringResult2.join();
     continue;
@@ -140,7 +141,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(localizations, t
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onWrite;
+      onWrite = 01307__.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, localizations, tag);
@@ -165,10 +166,10 @@ prototype2["create"] = function create(arr) {
   let obj = { default: "0", localizations: {} };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, require("../../../../../../../_runtime/metro/01307__.js").MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = require("../../../../../../../_runtime/metro/01307__.js").reflectionMergePartial(this, obj, arr);
-    const tmpResult = require("../../../../../../../_runtime/metro/01307__.js");
+    const result = 01307__.reflectionMergePartial(this, obj, arr);
+    const tmpResult = 01307__;
   }
   return obj;
 };
@@ -213,7 +214,7 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onRead;
+              onRead = 01307__.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -266,8 +267,8 @@ prototype2["binaryReadMap2"] = function binaryReadMap2(arg0, pos) {
 };
 prototype2["internalBinaryWrite"] = function internalBinaryWrite(localizations, tag, writeUnknownFields) {
   if ("0" !== localizations.default) {
-    tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.Bit64).fixed64(localizations.default);
-    const tagResult = tag.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.Bit64);
+    tag.tag(1, 01307__.WireType.Bit64).fixed64(localizations.default);
+    const tagResult = tag.tag(1, 01307__.WireType.Bit64);
   }
   const keys = Object.keys(localizations.localizations);
   const iter = keys[Symbol.iterator]();
@@ -275,11 +276,11 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(localizations, 
   while (iter !== undefined) {
     let tmp6 = require;
     let tmp7 = dependencyMap;
-    let tagResult1 = tag.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    let tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
     let forkResult = tagResult1.fork();
-    let tagResult2 = forkResult.tag(1, require("../../../../../../../_runtime/metro/01307__.js").WireType.LengthDelimited);
+    let tagResult2 = forkResult.tag(1, 01307__.WireType.LengthDelimited);
     let stringResult = tagResult2.string(nextResult);
-    let tagResult3 = stringResult.tag(2, require("../../../../../../../_runtime/metro/01307__.js").WireType.Bit64);
+    let tagResult3 = stringResult.tag(2, 01307__.WireType.Bit64);
     let fixed64Result1 = tagResult3.fixed64(localizations.localizations[nextResult]);
     let joined = fixed64Result1.join();
     continue;
@@ -287,7 +288,7 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(localizations, 
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = require("../../../../../../../_runtime/metro/01307__.js").UnknownFieldHandler.onWrite;
+      onWrite = 01307__.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, localizations, tag);

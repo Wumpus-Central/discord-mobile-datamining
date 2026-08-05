@@ -1,3 +1,4 @@
+import { useNavigation } from "../../../../../design/components/Navigator/native/useNavigation.native.tsx";
 // discord_app/modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx
 import noop from "noop";
 import zustandStore from "zustandStore";
@@ -10,7 +11,7 @@ export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearch
   const _require = ref;
   const dependencyMap = memo;
   let current = ref.useField("selected");
-  const navigation = _require("../../../../../design/components/Navigator/native/useNavigation.native.tsx").useNavigation();
+  const navigation = _useNavigation.useNavigation();
   ref = navigation.useRef(scrollTarget);
   if (current == null) {
     current = ref.current;

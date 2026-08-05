@@ -1,3 +1,6 @@
+import { TableRowGroupTitle } from "../../TableRow/native/TableRowGroup.native.tsx";
+import { TableRowIcon } from "../../TableRow/native/TableRowIcon.native.tsx";
+import { TableSwitchRow } from "../../TableRow/native/TableSwitchRow.native.tsx";
 // discord_app/design/components/Sheet/native/ActionSheetRow.native.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -26,19 +29,19 @@ ActionSheetRow.Icon = function ActionSheetRowIcon(IconComponent) {
   const obj = { source: IconComponent.source, IconComponent: null, variant: null };
   obj[1] = IconComponent;
   obj[2] = context;
-  return jsx(require("../../TableRow/native/TableRowIcon.native.tsx") /* TableRowIcon */.TableRowIcon, { source: IconComponent.source, IconComponent: null, variant: null });
+  return jsx(TableRowIcon /* TableRowIcon */.TableRowIcon, { source: IconComponent.source, IconComponent: null, variant: null });
 };
 ActionSheetRow.Group = function ActionSheetRowGroup(arg0) {
   let children;
   let hasIcons;
   let title;
   ({ children, title, hasIcons } = arg0);
-  return <View>{jsx(require("../../TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, { hasIcons, title, children })}</View>;
+  return <View>{jsx(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, { hasIcons, title, children })}</View>;
 };
 const result = require("jsxProd").fileFinishedImporting("design/components/Sheet/native/ActionSheetRow.native.tsx");
 
 export { ActionSheetRow };
 export const ActionSheetSwitchRow = function ActionSheetSwitchRow(arg0) {
   const merged = Object.assign(arg0);
-  return jsx(require("../../TableRow/native/TableSwitchRow.native.tsx") /* TableSwitchRow */.TableSwitchRow, {});
+  return jsx(TableSwitchRow /* TableSwitchRow */.TableSwitchRow, {});
 };

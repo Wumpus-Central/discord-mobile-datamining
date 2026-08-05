@@ -1,3 +1,4 @@
+import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeIntentsModule.tsx";
 // discord_app/modules/instant_invite/native/DCDSendUtils.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 
@@ -16,8 +17,8 @@ export const sendSMS = function sendSMS(body, recipients) {
     if (recipients == null) {
       recipients = [];
     }
-    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeIntentsModule.tsx").sendSMS(str, recipients);
-    const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeIntentsModule.tsx");
+    enforcing.sendSMS(str, recipients);
+    const obj2 = enforcing;
   } else {
     const DCDSend = closure_4.DCDSend;
     DCDSend.sendSMS(body, recipients);
@@ -37,8 +38,8 @@ export const sendMail = function sendMail(subject, subject, recipients) {
     if (recipients == null) {
       recipients = [];
     }
-    require("../../../../discord_common/js/packages/rtn-codegen/js/NativeIntentsModule.tsx").sendMail(str, str2, recipients);
-    const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeIntentsModule.tsx");
+    enforcing.sendMail(str, str2, recipients);
+    const obj2 = enforcing;
   } else {
     const DCDSend = closure_4.DCDSend;
     DCDSend.sendMail(subject, subject);
@@ -46,8 +47,8 @@ export const sendMail = function sendMail(subject, subject, recipients) {
 };
 export const canSendSMS = function canSendSMS() {
   if (obj.isAndroid()) {
-    let resolved = Promise.resolve(require("../../../../discord_common/js/packages/rtn-codegen/js/NativeIntentsModule.tsx").canSendSMS());
-    const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeIntentsModule.tsx");
+    let resolved = Promise.resolve(enforcing.canSendSMS());
+    const obj2 = enforcing;
   } else {
     const DCDSend = closure_4.DCDSend;
     resolved = DCDSend.canSendSMS();
@@ -56,8 +57,8 @@ export const canSendSMS = function canSendSMS() {
 };
 export const canSendMail = function canSendMail() {
   if (obj.isAndroid()) {
-    let resolved = Promise.resolve(require("../../../../discord_common/js/packages/rtn-codegen/js/NativeIntentsModule.tsx").canSendMail());
-    const obj2 = require("../../../../discord_common/js/packages/rtn-codegen/js/NativeIntentsModule.tsx");
+    let resolved = Promise.resolve(enforcing.canSendMail());
+    const obj2 = enforcing;
   } else {
     const DCDSend = closure_4.DCDSend;
     resolved = DCDSend.canSendMail();
@@ -68,7 +69,7 @@ export const canOpenUrlScheme = function canOpenUrlScheme(closure_3) {
   const _require = closure_3;
   if (obj.isAndroid()) {
     try {
-      return Promise.resolve(require("../../../../discord_common/js/packages/rtn-codegen/js/NativeIntentsModule.tsx").canOpenUrlScheme(closure_3));
+      return Promise.resolve(enforcing.canOpenUrlScheme(closure_3));
     } catch (err) {
       return Promise.resolve(false);
     }

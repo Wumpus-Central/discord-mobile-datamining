@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/video_calls/useSelectedParticipant.tsx
 import getParticipants from "getParticipants";
 
@@ -7,5 +8,5 @@ const result = require("set").fileFinishedImporting("modules/video_calls/useSele
 export default function useSelectedParticipant(arg0) {
   const _require = arg0;
   const items = [getParticipants];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_2.getSelectedParticipant(id.id));
+  return _initialize.useStateFromStores(items, () => outer1_2.getSelectedParticipant(id.id));
 };

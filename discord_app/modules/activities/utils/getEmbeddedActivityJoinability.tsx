@@ -1,3 +1,5 @@
+import { allowChannelAccess } from "../../../utils/ChannelUtils.tsx";
+import { isActivitySupportedOnClientPlatform } from "isActivitySupportedOnClientPlatform.tsx";
 // discord_app/modules/activities/utils/getEmbeddedActivityJoinability.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -80,8 +82,8 @@ function getEmbeddedActivityJoinability(arg0) {
                   return obj.IS_AFK_CHANNEL;
                 } else {
                   const currentClientVoiceChannelId = VoiceStateStore.getCurrentClientVoiceChannelId(channel.getGuildId());
-                  const obj2 = require("../../../utils/ChannelUtils.tsx") /* allowChannelAccess */;
-                  const isChannelFullResult = require("../../../utils/ChannelUtils.tsx") /* allowChannelAccess */.isChannelFull(channel, VoiceStateStore, GuildStore);
+                  const obj2 = allowChannelAccess /* allowChannelAccess */;
+                  const isChannelFullResult = allowChannelAccess /* allowChannelAccess */.isChannelFull(channel, VoiceStateStore, GuildStore);
                   if (PermissionStore.can(Permissions.USE_EMBEDDED_ACTIVITIES, channel)) {
                     if (channel.isVocal()) {
                       if (currentClientVoiceChannelId !== tmp10) {
@@ -105,7 +107,7 @@ function getEmbeddedActivityJoinability(arg0) {
       } else {
         return obj.ACTIVITY_NOT_SUPPORTED_ON_OS;
       }
-      tmp7 = require("isActivitySupportedOnClientPlatform.tsx");
+      tmp7 = isActivitySupportedOnClientPlatform;
     } else {
       return obj.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS;
     }

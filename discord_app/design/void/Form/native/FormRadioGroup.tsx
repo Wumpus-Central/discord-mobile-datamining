@@ -1,3 +1,6 @@
+import { context } from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import { context } from "../../../components/TableRow/native/TableRadioGroup.native.tsx";
+import { FormSection } from "FormSection.tsx";
 // discord_app/design/void/Form/native/FormRadioGroup.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -20,7 +23,7 @@ export default function FormRadioGroup(arg0) {
   ({ title, children, hint } = arg0);
   ({ hasIcons, accessibilityLabel, value, icon } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  if (React.useContext(require("../../../components/RedesignCompat/native/RedesignCompat.native.tsx") /* context */.RedesignCompatContext)) {
+  if (React.useContext(context /* context */.RedesignCompatContext)) {
     let obj = { style: null, children: null };
     obj[0] = { marginBottom: 24, marginHorizontal: 12 };
     obj = { children: null };
@@ -30,7 +33,7 @@ export default function FormRadioGroup(arg0) {
     obj1[2] = title;
     obj1[3] = accessibilityLabel;
     obj1[4] = children;
-    obj[0] = callback(require("../../../components/TableRow/native/TableRadioGroup.native.tsx") /* context */.TableRadioGroup, obj1);
+    obj[0] = callback(context /* context */.TableRadioGroup, obj1);
     const items = [callback(View, obj), ];
     let tmp13Result = null;
     if (null != hint) {
@@ -52,8 +55,8 @@ export default function FormRadioGroup(arg0) {
     obj[4] = icon;
     const merged1 = Object.assign(merged);
     obj.children = children;
-    tmp11Result = callback(require("FormSection.tsx"), obj);
-    const tmp6 = require("FormSection.tsx");
+    tmp11Result = callback(FormSection, obj);
+    const tmp6 = FormSection;
   }
   return tmp11Result;
 };

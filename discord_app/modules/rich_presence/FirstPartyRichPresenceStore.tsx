@@ -1,3 +1,4 @@
+import { isUndefinedOrNull } from "../../../_runtime/00659_isUndefinedOrNull.js";
 // discord_app/modules/rich_presence/FirstPartyRichPresenceStore.tsx
 import { Store } from "initialize";
 
@@ -12,7 +13,7 @@ function updateActivities() {
     }
     continue;
   }
-  const tmp6 = require("../../../_runtime/00659_isUndefinedOrNull.js")(items, items);
+  const tmp6 = isUndefinedOrNull(items, items);
   let flag = !tmp6;
   if (!tmp6) {
     flag = true;

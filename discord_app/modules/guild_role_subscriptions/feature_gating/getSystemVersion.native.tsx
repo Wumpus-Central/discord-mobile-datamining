@@ -1,6 +1,7 @@
+import { DCDDeviceManager } from "../../../utils/native/DeviceUtils.tsx";
 // discord_app/modules/guild_role_subscriptions/feature_gating/getSystemVersion.native.tsx
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/feature_gating/getSystemVersion.native.tsx");
 
 export const getSystemVersion = function getSystemVersion() {
-  return require("../../../utils/native/DeviceUtils.tsx") /* DCDDeviceManager */.getSystemVersion();
+  return DCDDeviceManager /* DCDDeviceManager */.getSystemVersion();
 };

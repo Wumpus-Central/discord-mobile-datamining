@@ -1,3 +1,14 @@
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
+import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
+import { getMuteStates } from "../video_calls/useMuteStates.tsx";
+import { VoiceChannelEffectSentLocation } from "../voice_channel_effects/VoiceChannelEffectsActionCreators.tsx";
+import { _fetchDefaultSoundsFromApi2 } from "SoundboardActionCreators.tsx";
+import { SoundButtonOverlay } from "SoundboardTypes.tsx";
 // discord_app/modules/soundboard/SoundboardUtils.tsx
 import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -40,7 +51,7 @@ function canUseSoundboardSound(closure_0, closure_1, channel) {
   if (arg3 === undefined) {
     flag = true;
   }
-  let result = require("../../utils/PremiumUtils.tsx").canUseSoundboardEverywhere(closure_0);
+  let result = getPremiumPlanItem.canUseSoundboardEverywhere(closure_0);
   if (!result) {
     let guild_id;
     if (channel != null) {
@@ -82,7 +93,7 @@ function canUseSoundboardSound(closure_0, closure_1, channel) {
   return result;
 }
 function canMakeSound(channel) {
-  let obj = require("../video_calls/useMuteStates.tsx") /* getMuteStates */;
+  let obj = getMuteStates /* getMuteStates */;
   obj = { channel };
   const muteStates = obj.getMuteStates(obj);
   const mute = muteStates.mute;
@@ -216,7 +227,7 @@ function _maybePlayCustomJoinSound() {
 let result = require("createChannelRecord").fileFinishedImporting("modules/soundboard/SoundboardUtils.tsx");
 
 export const getAmplitudinalSoundboardVolume = function getAmplitudinalSoundboardVolume() {
-  const SoundboardSettings = require("../user_settings/UserSettings.tsx") /* explicitContentFromProto */.SoundboardSettings;
+  const SoundboardSettings = explicitContentFromProto /* explicitContentFromProto */.SoundboardSettings;
   const setting = SoundboardSettings.getSetting();
   let num;
   if (setting != null) {
@@ -231,12 +242,12 @@ export { hasPermissionToPlaySound };
 export { canUseSoundboardSound };
 export { canMakeSound };
 export const playSound = function playSound(soundId, channelId) {
-  let obj = require("SoundboardActionCreators.tsx") /* _fetchDefaultSoundsFromApi2 */;
-  obj.playSoundLocally(channelId, soundId, require("SoundboardTypes.tsx") /* SoundButtonOverlay */.LocalSoundTrigger.SOUNDBOARD);
-  const result = require("../voice_channel_effects/VoiceChannelEffectsActionCreators.tsx") /* VoiceChannelEffectSentLocation */.sendVoiceChannelSoundboardEffect(channelId, soundId, false, arg2, arg3);
-  const obj2 = require("../voice_channel_effects/VoiceChannelEffectsActionCreators.tsx") /* VoiceChannelEffectSentLocation */;
+  let obj = _fetchDefaultSoundsFromApi2 /* _fetchDefaultSoundsFromApi2 */;
+  obj.playSoundLocally(channelId, soundId, SoundButtonOverlay /* SoundButtonOverlay */.LocalSoundTrigger.SOUNDBOARD);
+  const result = VoiceChannelEffectSentLocation /* VoiceChannelEffectSentLocation */.sendVoiceChannelSoundboardEffect(channelId, soundId, false, arg2, arg3);
+  const obj2 = VoiceChannelEffectSentLocation /* VoiceChannelEffectSentLocation */;
   obj = { type: "SOUNDBOARD_TRACK_USAGE", soundId: soundId.soundId };
-  require("../../Dispatcher.tsx").dispatch(obj);
+  dispatcher.dispatch(obj);
 };
 export const hasSetAnyCustomJoinSound = function hasSetAnyCustomJoinSound() {
   let guilds = handleConnectionClosedOrResumed.settings.guilds;
@@ -266,7 +277,7 @@ export const useSoundBoardDismissContentTypes = function useSoundBoardDismissCon
     flag = false;
   }
   const items = [mergeGuildAvatar];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [];
   if (!flag) {
     let guilds = handleConnectionClosedOrResumed.settings.guilds;
@@ -282,11 +293,11 @@ export const useSoundBoardDismissContentTypes = function useSoundBoardDismissCon
     if (!values.some((joinSound) => null != joinSound.joinSound)) {
       const result = tmp(4124).ageEligibleForPremiumUpsell(stateFromStores);
       const tmpResult = tmp(4124);
-      const obj5 = require("../../utils/PremiumUtils.tsx");
+      const obj5 = getPremiumPlanItem;
       if (tmp9) {
         items1.push(tmp(1358).DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL);
       }
-      tmp9 = require("../../utils/PremiumUtils.tsx").canUseCustomCallSounds(stateFromStores) || result;
+      tmp9 = getPremiumPlanItem.canUseCustomCallSounds(stateFromStores) || result;
     }
   }
   return items1;
@@ -294,7 +305,7 @@ export const useSoundBoardDismissContentTypes = function useSoundBoardDismissCon
 export const removeCustomJoinSound = function removeCustomJoinSound(closure_0) {
   const _require = closure_0;
   let closure_1 = arg1;
-  const result = _require("../user_settings/UserSettingsProtoActionCreators.tsx").updateUserGuildSettings(closure_0, (arg0) => {
+  const result = _updateUserGuildSettings.updateUserGuildSettings(closure_0, (arg0) => {
     let _location;
     let changeType;
     let soundSource;
@@ -314,13 +325,13 @@ export const removeCustomJoinSound = function removeCustomJoinSound(closure_0) {
     obj[3] = soundType;
     obj[4] = soundSource;
     callback2(outer1_2[23]).track(outer1_12.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, obj);
-  }, _require("../user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay.INFREQUENT_USER_ACTION);
+  }, _updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const updateCustomJoinSound = function updateCustomJoinSound(closure_0) {
   const _require = closure_0;
   let closure_1 = arg1;
   const dependencyMap = arg2;
-  const result = _require("../user_settings/UserSettingsProtoActionCreators.tsx").updateUserGuildSettings(closure_0, (joinSound) => {
+  const result = _updateUserGuildSettings.updateUserGuildSettings(closure_0, (joinSound) => {
     const AnalyticsSoundSource = callback(table[13]).AnalyticsSoundSource;
     if (lib.guildId === outer1_10) {
       let CUSTOM = AnalyticsSoundSource.DEFAULT;
@@ -349,14 +360,14 @@ export const updateCustomJoinSound = function updateCustomJoinSound(closure_0) {
     obj[3] = tmp6(tmp5[13]).AnalyticsSoundType.ENTRY;
     obj[4] = CUSTOM;
     obj.track(outer1_12.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, obj);
-  }, _require("../user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay.INFREQUENT_USER_ACTION);
+  }, _updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const trackCustomCallSoundExternallyDeleted = function trackCustomCallSoundExternallyDeleted(location_stack) {
-  require("../../utils/AnalyticsUtils.tsx").track(constants2.USER_CUSTOM_CALL_SOUND_SETTING_GUILD_REMOVED, { location_stack: location_stack.location });
+  expandEventProperties.track(constants2.USER_CUSTOM_CALL_SOUND_SETTING_GUILD_REMOVED, { location_stack: location_stack.location });
 };
 export const trackSoundFavorited = function trackSoundFavorited(location) {
   const sound = location.sound;
-  let obj = require("../app_analytics/AppAnalyticsUtils.tsx");
+  let obj = collectGuildAnalyticsMetadata;
   obj = { location: location.location, expression_type: ExpressionPickerViewType.SOUNDBOARD, expression_id: sound.soundId, expression_name: sound.name, expression_guild_id: sound.guildId };
   obj.trackWithMetadata(constants2.EXPRESSION_FAVORITED, obj);
 };

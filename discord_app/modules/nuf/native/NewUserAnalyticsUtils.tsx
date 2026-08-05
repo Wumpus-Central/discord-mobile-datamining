@@ -1,3 +1,4 @@
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 // discord_app/modules/nuf/native/NewUserAnalyticsUtils.tsx
 import { AnalyticEvents } from "ME";
 
@@ -7,7 +8,7 @@ let result = require("set").fileFinishedImporting("modules/nuf/native/NewUserAna
 export const trackNUFStep = function trackNUFStep(STEP_GUILD_TEMPLATE, STEP_FRIEND_LIST, arg2) {
   const timestamp = Date.now();
   const result = (timestamp - timestamp) / 1000;
-  let obj = require("../../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = {};
   const merged = Object.assign(arg2);
   obj.flow_type = "Mobile NUX Post Reg";

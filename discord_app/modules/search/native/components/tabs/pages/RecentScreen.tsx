@@ -1,3 +1,6 @@
+import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
+import { PressableBase } from "../../../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
 // discord_app/modules/search/native/components/tabs/pages/RecentScreen.tsx
 import _slicedToArray from "_slicedToArray";
 import deserialize from "deserialize";
@@ -37,13 +40,13 @@ function ClearAllHistory(searchContext) {
 }
 function ViewAll(onJumpToMedia) {
   let obj = { onPress: onJumpToMedia.onJumpToMedia, accessibilityRole: "button", unstable_pressDelay: 130, accessibilityLabel: null, children: null };
-  const intl = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.Ofpgwh);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.Ofpgwh);
   obj = { variant: "text-sm/semibold", color: "text-brand", children: null };
-  const intl2 = require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl2.string(require("../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.Ofpgwh);
-  obj[4] = jsx(require("../../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(require("../../../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.Ofpgwh);
+  obj[4] = jsx(Text /* Text */.Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  return jsx(PressableBase /* PressableBase */.PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
 }
 let c5 = importAllResult;
 ({ EMPTY_SEARCH_QUERY_STRING: c10, MESSAGE_PLACEHOLDER_ITEM_SIZE: unpackModuleId, SearchListItemTypes: closure_12, SearchTabs: map1 } = MessageEmbedTypes);

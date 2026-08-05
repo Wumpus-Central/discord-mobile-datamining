@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { combined } from "HelpdeskUtils.tsx";
+import { getPremiumPlanItem } from "PremiumUtils.tsx";
 // discord_app/utils/InviteErrorUtils.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
@@ -22,36 +25,36 @@ export const getDescriptiveInviteError = function getDescriptiveInviteError(code
         let tmp14 = closure_6;
       }
       let obj = { title: null, description: null };
-      const intl7 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl7 = getSystemLocale /* getSystemLocale */.intl;
       obj = { quantity: null };
       obj[0] = tmp14;
-      obj[0] = intl7.formatToPlainString(require("../intl/index.native.tsx") /* getSystemLocale */.t["ttJ/hj"], obj);
-      const intl8 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[1] = intl8.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.iLyuDO);
+      obj[0] = intl7.formatToPlainString(getSystemLocale /* getSystemLocale */.t["ttJ/hj"], obj);
+      const intl8 = getSystemLocale /* getSystemLocale */.intl;
+      obj[1] = intl8.string(getSystemLocale /* getSystemLocale */.t.iLyuDO);
       return obj;
     }
     tmp14 = closure_7;
-    obj5 = require("PremiumUtils.tsx");
+    obj5 = getPremiumPlanItem;
   } else if (tmp.GUILD_AT_CAPACITY === code) {
     const obj1 = { title: null, description: null };
-    const intl5 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj1[0] = intl5.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.ZZlox4);
-    const intl6 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj1[1] = intl6.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.ZUEGFn);
+    const intl5 = getSystemLocale /* getSystemLocale */.intl;
+    obj1[0] = intl5.string(getSystemLocale /* getSystemLocale */.t.ZZlox4);
+    const intl6 = getSystemLocale /* getSystemLocale */.intl;
+    obj1[1] = intl6.string(getSystemLocale /* getSystemLocale */.t.ZUEGFn);
     return obj1;
   } else if (tmp.GUILD_JOIN_INVITE_LIMITED_ACCESS === code) {
     const obj2 = { title: null, description: null };
-    const intl3 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj2[0] = intl3.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.kJwpBW);
-    const intl4 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj2[1] = intl4.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.ZUEGFn);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    obj2[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.kJwpBW);
+    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    obj2[1] = intl4.string(getSystemLocale /* getSystemLocale */.t.ZUEGFn);
     return obj2;
   } else if (tmp.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED === code) {
     obj = { title: null, description: null };
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[0] = intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["u/xsK9"]);
-    const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[1] = intl2.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.SxY4IW);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["u/xsK9"]);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.SxY4IW);
     return obj;
   } else {
     return null;
@@ -59,24 +62,24 @@ export const getDescriptiveInviteError = function getDescriptiveInviteError(code
 };
 export const getInviteError = function getInviteError(arg0) {
   if (constants.TOO_MANY_USER_GUILDS === arg0) {
-    const intl6 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl6.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.iLyuDO);
+    const intl6 = getSystemLocale /* getSystemLocale */.intl;
+    return intl6.string(getSystemLocale /* getSystemLocale */.t.iLyuDO);
   } else if (tmp.GUILD_AT_CAPACITY === arg0) {
-    const intl5 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl5.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.M6unNJ);
+    const intl5 = getSystemLocale /* getSystemLocale */.intl;
+    return intl5.string(getSystemLocale /* getSystemLocale */.t.M6unNJ);
   } else if (tmp.INVALID_COUNTRY_CODE === arg0) {
-    const intl4 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl4.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.sRJGR1);
+    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    return intl4.string(getSystemLocale /* getSystemLocale */.t.sRJGR1);
   } else if (tmp.INVALID_CANNOT_FRIEND_SELF === arg0) {
-    const intl3 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl3.string(require("../intl/index.native.tsx") /* getSystemLocale */.t["mY2R+F"]);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    return intl3.string(getSystemLocale /* getSystemLocale */.t["mY2R+F"]);
   } else if (tmp.INVITES_DISABLED === arg0) {
-    const intl2 = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
     const obj = { articleLink: null };
-    obj[0] = require("HelpdeskUtils.tsx").getArticleURL(constants2.INVITE_DISABLED);
-    return intl2.format(require("../intl/index.native.tsx") /* getSystemLocale */.t.RXSeLl, obj);
+    obj[0] = combined.getArticleURL(constants2.INVITE_DISABLED);
+    return intl2.format(getSystemLocale /* getSystemLocale */.t.RXSeLl, obj);
   } else {
-    const intl = require("../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../intl/index.native.tsx") /* getSystemLocale */.t.dDZRdy);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.dDZRdy);
   }
 };

@@ -1,3 +1,4 @@
+import { hexToRgba } from "../../../utils/ColorUtils.tsx";
 // discord_app/modules/calls/native/VideoBackground.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -30,8 +31,8 @@ function useDominantRGBFromImage(arg0, arg1) {
     hexToRgbResult = tmp3(8116).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
-    hexToRgbResult = _require("../../../utils/ColorUtils.tsx").hexToRgb(tmp3(712).unsafe_rawColors.PRIMARY_800);
-    const obj2 = _require("../../../utils/ColorUtils.tsx");
+    hexToRgbResult = _hexToRgba.hexToRgb(tmp3(712).unsafe_rawColors.PRIMARY_800);
+    const obj2 = _hexToRgba;
   }
   const tmp8 = callback(importAllResult.useState(hexToRgbResult), 2);
   callback = tmp8[1];

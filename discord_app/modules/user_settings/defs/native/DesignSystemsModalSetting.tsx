@@ -1,3 +1,4 @@
+import { DemoModal } from "../../design_system/native/UserSettingsDesignSystemModal.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemsModalSetting.tsx
 import createToggle from "createToggle";
 
@@ -11,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_MODAL,
   getComponent() {
-    return require("../../design_system/native/UserSettingsDesignSystemModal.tsx") /* DemoModal */.default;
+    return DemoModal /* DemoModal */.default;
   }
 };
 const route = createToggle.createRoute(obj);

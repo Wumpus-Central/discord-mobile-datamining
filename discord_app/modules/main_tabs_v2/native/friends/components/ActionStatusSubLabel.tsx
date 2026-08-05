@@ -1,3 +1,4 @@
+import { AccessibilityAnnouncer } from "../../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 // discord_app/modules/main_tabs_v2/native/friends/components/ActionStatusSubLabel.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -8,7 +9,7 @@ let c3;
 let c4;
 const require = arg1;
 function announceActioned(intl) {
-  const AccessibilityAnnouncer = require("../../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx") /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+  const AccessibilityAnnouncer = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(intl);
 }
 ({ jsx: c3, jsxs: c4 } = jsxProd);

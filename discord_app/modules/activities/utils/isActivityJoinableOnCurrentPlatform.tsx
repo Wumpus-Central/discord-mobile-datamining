@@ -1,3 +1,5 @@
+import { PlatformTypes } from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import { hasFlag } from "hasFlag.tsx";
 // discord_app/modules/activities/utils/isActivityJoinableOnCurrentPlatform.tsx
 import ME from "ME";
 
@@ -10,7 +12,7 @@ const result = require("isMetaQuest").fileFinishedImporting("modules/activities/
 export default function isActivityJoinableOnCurrentPlatform(type) {
   let tmp = null == type;
   if (!tmp) {
-    tmp = !require("hasFlag.tsx")(type, constants.JOIN);
+    tmp = !hasFlag(type, constants.JOIN);
   }
   if (!tmp) {
     tmp = type.type !== constants3.PLAYING;
@@ -55,7 +57,7 @@ export default function isActivityJoinableOnCurrentPlatform(type) {
       }
       return hasItem;
     }
-    obj = require("../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
+    obj = PlatformTypes /* PlatformTypes */;
   } else {
     return false;
   }
@@ -77,7 +79,7 @@ export const getCurrentActivityGamePlatform = function getCurrentActivityGamePla
 export const isActivityJoinable = function isActivityJoinable(type) {
   let tmp = null == type;
   if (!tmp) {
-    tmp = !require("hasFlag.tsx")(type, constants.JOIN);
+    tmp = !hasFlag(type, constants.JOIN);
   }
   if (!tmp) {
     tmp = type.type !== constants3.PLAYING;

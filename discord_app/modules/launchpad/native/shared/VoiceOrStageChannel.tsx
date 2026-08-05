@@ -1,3 +1,10 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
+import { sortKey } from "../../../stage_channels/StageChannelParticipants.tsx";
+import { useStageParticipants } from "../../../stage_channels/StageChannelParticipantStoreHooks.tsx";
+import { useIsConnectedToVoiceChannel } from "../../../voice_chat/VoiceChatHooks.tsx";
+import { LaunchpadChannelIcon } from "renderChannelItem.tsx";
+import { useChannelUnreadBadgeState } from "useChannelUnreadBadgeState.tsx";
 // discord_app/modules/launchpad/native/shared/VoiceOrStageChannel.tsx
 import _getSystemLocale from "_getSystemLocale";
 import importAllResult from "transitionTo";
@@ -142,19 +149,19 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
   }
   ({ id, guild_id } = channel);
   const tmp3 = callback(4221)();
-  let obj = _require("../../../../design/shared.tsx");
+  let obj = _AccessibilityAnnouncer;
   const tmp6 = callback3(callback(8203)(), obj.isThemeLight(tmp3));
   const tmp7 = callback(15921)();
-  let obj1 = _require("../../../voice_chat/VoiceChatHooks.tsx");
+  let obj1 = _useIsConnectedToVoiceChannel;
   const isConnectedToVoiceChannel = obj1.useIsConnectedToVoiceChannel(channel);
-  let obj2 = _require("useChannelUnreadBadgeState.tsx");
+  let obj2 = _useChannelUnreadBadgeState;
   const baseChannelUnreadBadgeState = obj2.useBaseChannelUnreadBadgeState(channel, !isConnectedToVoiceChannel);
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
-  let obj3 = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  let obj3 = _initialize;
   const items = [updateUserGuildSettingsInternal];
   const stateFromStores = obj3.useStateFromStores(items, () => outer1_9.resolveUnreadSetting(closure_0));
-  let obj4 = _require("../../../stage_channels/StageChannelParticipantStoreHooks.tsx");
-  const stageParticipantsCount = obj4.useStageParticipantsCount(channel.id, _require("../../../stage_channels/StageChannelParticipants.tsx").StageChannelParticipantNamedIndex.AUDIENCE);
+  let obj4 = _useStageParticipants;
+  const stageParticipantsCount = obj4.useStageParticipantsCount(channel.id, _sortKey.StageChannelParticipantNamedIndex.AUDIENCE);
   let userLimit = stageParticipantsCount + voiceStates.length;
   _require = channel;
   callback = undefined;
@@ -258,10 +265,10 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
   items1 = [channel, callback];
   items2 = [channel.id];
   const arr5 = callback(11358)(channel);
-  let obj7 = _require("renderChannelItem.tsx");
+  let obj7 = _LaunchpadChannelIcon;
   obj = { channel, unread, mentionCount, voiceStates, embeddedActivitiesCount: arr5.length };
   const channelAccessibilityProps = obj7.getChannelAccessibilityProps(obj);
-  let obj9 = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  let obj9 = _initialize;
   const items3 = [handleStageInstanceCreateOrUpdate];
   const items4 = [channel.id];
   const stateFromStores1 = obj9.useStateFromStores(items3, () => outer1_7.getStageInstanceByChannel(lib.id), items4);

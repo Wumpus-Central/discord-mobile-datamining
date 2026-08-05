@@ -1,3 +1,5 @@
+import { getMixedGradientColor } from "../../../../client_themes/native/ThemedGradient.tsx";
+import { UserSettingsFriendRequests } from "../../../../user_settings/content_and_social/native/UserSettingsFriendRequests.tsx";
 // discord_app/modules/main_tabs_v2/native/friends/screens/FriendRequestsSettingsScreen.tsx
 import "noop";
 import { ScrollView } from "get ActivityIndicator";
@@ -16,8 +18,8 @@ const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/na
 
 export default function FriendRequestsSettingsScreen() {
   let obj = { children: null };
-  const items = [callback(require("../../../../client_themes/native/ThemedGradient.tsx"), { absolute: true }), ];
-  obj = { style: createCacheKey().container, children: callback(require("../../../../user_settings/content_and_social/native/UserSettingsFriendRequests.tsx"), {}) };
+  const items = [callback(getMixedGradientColor, { absolute: true }), ];
+  obj = { style: createCacheKey().container, children: callback(UserSettingsFriendRequests, {}) };
   items[1] = callback(ScrollView, obj);
   obj[0] = items;
   return callback2(closure_4, obj);

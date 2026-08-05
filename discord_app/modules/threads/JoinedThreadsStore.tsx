@@ -1,3 +1,4 @@
+import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/threads/JoinedThreadsStore.tsx
 import { ALL_CHANNEL_TYPES } from "createChannelRecord";
 import fetchFingerprint from "fetchFingerprint";
@@ -181,13 +182,13 @@ const joinedThreadsStoreClass = new JoinedThreadsStoreClass(require("dispatcher"
     });
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(joinedThreads) {
-    const mapped = require("../../../_runtime/00012_apply.js")(joinedThreads.joinedThreads).map((joinTimestamp) => {
+    const mapped = apply(joinedThreads.joinedThreads).map((joinTimestamp) => {
       const obj = {};
       const merged = Object.assign(joinTimestamp);
       obj.joinTimestamp = new Date(joinTimestamp.joinTimestamp);
       return obj;
     });
-    const arr = require("../../../_runtime/00012_apply.js")(joinedThreads.joinedThreads);
+    const arr = apply(joinedThreads.joinedThreads);
     let closure_4 = mapped.keyBy("threadId").value();
   },
   GUILD_CREATE: function handleGuildCreate(guild) {

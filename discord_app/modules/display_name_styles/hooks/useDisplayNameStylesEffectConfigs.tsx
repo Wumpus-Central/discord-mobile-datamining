@@ -1,3 +1,4 @@
+import { useDisplayNameStylesEffectDefaultColors } from "useDisplayNameStylesEffectDefaultColors.native.tsx";
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx
 import noop from "noop";
 
@@ -16,7 +17,7 @@ const result = require("messagesProxy").fileFinishedImporting("modules/display_n
 export const DISPLAY_NAME_STYLES_EFFECT_NAMES = obj;
 export const useDisplayNameStylesEffectConfig = function useDisplayNameStylesEffectConfig(effectId) {
   let closure_0 = effectId;
-  const tmp = require("useDisplayNameStylesEffectDefaultColors.native.tsx")()[effectId];
+  const tmp = useDisplayNameStylesEffectDefaultColors()[effectId];
   importDefault = tmp;
   const items = [effectId, tmp];
   return React.useMemo(() => {

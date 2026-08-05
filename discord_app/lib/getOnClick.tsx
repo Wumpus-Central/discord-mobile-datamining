@@ -1,3 +1,5 @@
+import { getPathsFromURL } from "../modules/coded_links/findCodedLinks.tsx";
+import { isDiscordProxiedAssetUrl } from "../utils/URLUtils.tsx";
 // discord_app/lib/getOnClick.tsx
 import _runPrimaryAppCommandOrJoinEmbeddedActivity from "_runPrimaryAppCommandOrJoinEmbeddedActivity";
 import fetchFingerprint from "fetchFingerprint";
@@ -306,7 +308,7 @@ export default function getOnClick(url) {
   let c3;
   pathname = undefined;
   obj = undefined;
-  obj = _require("../modules/coded_links/findCodedLinks.tsx");
+  obj = _getPathsFromURL;
   const findCodedLinkResult = obj.findCodedLink(url);
   c3 = findCodedLinkResult;
   if (null != findCodedLinkResult) {
@@ -731,7 +733,7 @@ export default function getOnClick(url) {
       };
     }
   }
-  let toURLSafeResult = require("../utils/URLUtils.tsx").toURLSafe(url);
+  let toURLSafeResult = isDiscordProxiedAssetUrl.toURLSafe(url);
   if (toURLSafeResult == null) {
     toURLSafeResult = {};
   }

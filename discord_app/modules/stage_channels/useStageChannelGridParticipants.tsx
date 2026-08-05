@@ -1,3 +1,6 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { throttleStateFn } from "../../hooks/useThrottle.tsx";
+import { isVersionEqual } from "../../utils/SecondaryIndexMapUtils.tsx";
 // discord_app/modules/stage_channels/useStageChannelGridParticipants.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -14,14 +17,14 @@ export const useStageChannelParticipantsList = function useStageChannelParticipa
   let _slicedToArray = arg2;
   const items = [getActiveStageChannelIds];
   const items1 = [arg0];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     const items = [closure_0, outer1_5.getParticipantsVersion(closure_0)];
     return items;
-  }, items1, _require("../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual);
-  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  }, items1, _isVersionEqual.isVersionEqual);
+  const obj = _initialize;
   const items2 = [stateFromStores1];
   const items3 = [arg0];
-  stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => stateFromStores1.getSelectedParticipantId(closure_0), items3);
+  stateFromStores1 = _initialize.useStateFromStores(items2, () => stateFromStores1.getSelectedParticipantId(closure_0), items3);
   const items4 = [stateFromStores, arg1, stateFromStores1, arg2, arg0];
   return stateFromStores.useMemo(() => {
     const items = [];
@@ -131,14 +134,14 @@ export const useStageChannelParticipantsListThrottled = function useStageChannel
   const dependencyMap = memo;
   let items = [getActiveStageChannelIds];
   let items1 = [id];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     const items = [closure_0, outer1_5.getParticipantsVersion(closure_0)];
     return items;
-  }, items1, _require("../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual);
-  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  }, items1, _isVersionEqual.isVersionEqual);
+  const obj = _initialize;
   let items2 = [stateFromStores1];
   let items3 = [id];
-  stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => stateFromStores1.getSelectedParticipantId(closure_0), items3);
+  stateFromStores1 = _initialize.useStateFromStores(items2, () => stateFromStores1.getSelectedParticipantId(closure_0), items3);
   let items4 = [stateFromStores, memo, stateFromStores1, flag, id];
   memo = stateFromStores.useMemo(() => {
     const items = [];
@@ -216,12 +219,12 @@ export const useStageChannelParticipantsListThrottled = function useStageChannel
     const items6 = [items, items1];
     return items6;
   }, items4);
-  const obj2 = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const obj2 = _initialize;
   [tmp5, tmp6] = flag(memo, 2);
   const tmp4 = flag(memo, 2);
   let items5 = [memo[_require(undefined, 5109).StageChannelParticipantNamedIndex.AUDIENCE]];
-  const obj3 = _require("../../hooks/useThrottle.tsx");
-  [tmp8, tmp9] = flag(_require("../../hooks/useThrottle.tsx").useThrottledState(memo, throttleDurationForChannel, items5), 2);
+  const obj3 = _throttleStateFn;
+  [tmp8, tmp9] = flag(_throttleStateFn.useThrottledState(memo, throttleDurationForChannel, items5), 2);
   if (flag) {
     let SELECTED = tmp10.MEDIA;
     let tmp11 = tmp10;

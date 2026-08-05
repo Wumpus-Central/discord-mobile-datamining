@@ -1,3 +1,6 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useThermalState } from "../../device/useThermalState.tsx";
+import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/activities/native/ActivitiesDebugOverlay.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -19,10 +22,10 @@ const result = require("jsxProd").fileFinishedImporting("modules/activities/nati
 
 export default function ActivitiesDebugOverlay() {
   const tmp = createCacheKey();
-  const tmp4 = require("../../device/useThermalState.tsx")();
+  const tmp4 = useThermalState();
   let str = "text-overlay-light";
   let str2 = "";
-  if (require("../../device/useThermalState.tsx") /* useThermalState */.ThermalStates.UNHANDLED !== tmp4) {
+  if (useThermalState /* useThermalState */.ThermalStates.UNHANDLED !== tmp4) {
     str = "text-feedback-positive";
     str2 = "nominal";
     if (tmp5(10554).ThermalStates.NOMINAL !== tmp4) {
@@ -40,13 +43,13 @@ export default function ActivitiesDebugOverlay() {
       }
     }
   }
-  const rect = require("../../safe_area/useSafeAreaInsets.native.tsx")();
+  const rect = useSafeAreaInsets();
   let obj = { style: items, pointerEvents: "none", children: null };
   items = [tmp.container, ];
   obj = { paddingTop: rect.top + 16, paddingLeft: rect.left + 16 };
   items[1] = obj;
   obj = { style: tmp.row, children: null };
-  const items1 = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/normal", color: "text-overlay-light", children: ["thermal state:", " "] }), callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/normal", color: str, children: str2 })];
+  const items1 = [callback(Text /* Text */.Text, { variant: "text-md/normal", color: "text-overlay-light", children: ["thermal state:", " "] }), callback2(Text /* Text */.Text, { variant: "text-md/normal", color: str, children: str2 })];
   obj[1] = items1;
   obj[2] = callback(View, obj);
   return callback2(View, obj);

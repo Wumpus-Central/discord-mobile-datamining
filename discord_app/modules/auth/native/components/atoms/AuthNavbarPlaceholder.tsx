@@ -1,3 +1,4 @@
+import { HeaderBackImage } from "../../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 // discord_app/modules/auth/native/components/atoms/AuthNavbarPlaceholder.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -12,5 +13,5 @@ const result = require("createCacheKey").fileFinishedImporting("modules/auth/nat
 
 export default function AuthNavbarPlaceholder() {
   const tmp = createCacheKey();
-  return jsx(require("../../../../../design/components/Navigator/native/NavigatorHeader.native.tsx") /* HeaderBackImage */.FauxHeader, { style: createCacheKey().navBar, children: null });
+  return jsx(HeaderBackImage /* HeaderBackImage */.FauxHeader, { style: createCacheKey().navBar, children: null });
 };

@@ -1,3 +1,7 @@
+import { 00038__ } from "../../../../_runtime/metro/00038__.js";
+import { getEmptyActivityFormatter } from "../FamilyCenterUtils.tsx";
+import { FamilyCenterActivityGiftRow } from "FamilyCenterActivityGiftRow.tsx";
+import { FamilyCenterActivityPurchaseRow } from "FamilyCenterActivityPurchaseRow.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterActivityRow.tsx
 import importAllResult from "messagesProxy";
 import { View } from "getGuildBadgeSource";
@@ -28,7 +32,7 @@ const memoResult = importAllResult.memo((action) => {
   action = action.action;
   const tmp = callback3();
   const value = ACTION_TO_TEXT.get(action.display_type);
-  require("../../../../_runtime/metro/00038__.js")(null != value, "No text for action type");
+  00038__(null != value, "No text for action type");
   let obj = action(647);
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getUser(action.entity_id));
@@ -86,7 +90,7 @@ const memoResult1 = importAllResult.memo((action) => {
   const items = [freshTeenActivityWithMap];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getGuild(action.entity_id));
   const value = ACTION_TO_TEXT.get(action.display_type);
-  require("../../../../_runtime/metro/00038__.js")(null != value, "No text for action type");
+  00038__(null != value, "No text for action type");
   if (undefined === stateFromStores) {
     return null;
   } else {
@@ -156,7 +160,7 @@ export default function FamilyCenterActivityRow(action) {
   let skuId;
   let subscriptionPlanId;
   action = action.action;
-  let obj = require("../FamilyCenterUtils.tsx") /* getEmptyActivityFormatter */;
+  let obj = getEmptyActivityFormatter /* getEmptyActivityFormatter */;
   if (!obj.isUserAction(action)) {
     let tmpResult = tmp(6961);
     if (!tmpResult.isGuildAction(action)) {
@@ -175,7 +179,7 @@ export default function FamilyCenterActivityRow(action) {
     if (null != purchaseInfo) {
       obj = { skuId: null, subscriptionPlanId: null, total: null, currency: null };
       ({ sku_id: obj11[0], subscription_plan_id: obj11[1], total: obj11[2], currency: obj11[3] } = purchaseInfo);
-      tmp14 = callback(require("FamilyCenterActivityPurchaseRow.tsx"), obj);
+      tmp14 = callback(FamilyCenterActivityPurchaseRow, obj);
     }
     return tmp14;
   } else {
@@ -194,7 +198,7 @@ export default function FamilyCenterActivityRow(action) {
         obj[4] = claimed;
         obj[5] = offeredAt;
         obj[6] = claimedAt;
-        return callback(require("FamilyCenterActivityGiftRow.tsx"), obj);
+        return callback(FamilyCenterActivityGiftRow, obj);
       }
     } else {
       if (tmpResult5.isUserAction(action)) {
@@ -212,5 +216,5 @@ export default function FamilyCenterActivityRow(action) {
     }
     tmpResult3 = tmp(6961);
   }
-  tmpResult2 = require("../FamilyCenterUtils.tsx") /* getEmptyActivityFormatter */;
+  tmpResult2 = getEmptyActivityFormatter /* getEmptyActivityFormatter */;
 };

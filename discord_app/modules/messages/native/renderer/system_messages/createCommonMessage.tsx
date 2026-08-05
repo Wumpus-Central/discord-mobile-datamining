@@ -1,3 +1,11 @@
+import { registerAsset } from "../../../../../../_runtime/07883_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/07884_registerAsset.js";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { AccessibilityAnnouncer } from "../../../../../design/shared.tsx";
+import { hexToRgba } from "../../../../../utils/ColorUtils.tsx";
+import { resetCache } from "../../../../../utils/DateUtils.tsx";
+import { MessageAccessibilityAction } from "../../MessageAccessibilityActions.tsx";
+import { frozen } from "../EmbedUtils.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/createCommonMessage.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createCacheKey from "createCacheKey";
@@ -7,8 +15,8 @@ const require = arg1;
 const result = createCacheKey.experimental_createToken((theme) => {
   let str = "rgba(201,210,240,0.6)";
   if (obj.isThemeDark(theme.theme)) {
-    str = require("../../../../../utils/ColorUtils.tsx") /* hexToRgba */.hexWithOpacity(require("../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.WHITE, 0.1);
-    const tmpResult = require("../../../../../utils/ColorUtils.tsx") /* hexToRgba */;
+    str = hexToRgba /* hexToRgba */.hexWithOpacity(Themes.unsafe_rawColors.WHITE, 0.1);
+    const tmpResult = hexToRgba /* hexToRgba */;
   }
   return str;
 });
@@ -23,17 +31,17 @@ export default function createCommonMessage(reactions) {
   const tmp = createCacheKey(theme);
   const obj = { id: message.id, channelId: message.channel_id, type: message.type, mentioned: message.mentioned, timestamp: null, timestampColor: null, dark: null, highlightColor: null, reactions: null, swipeToReplyIconUrl: null, swipeToEditIconUrl: null, accessibilityActions: null };
   channel = channel.getChannel(message.channel_id);
-  obj[4] = require("../../../../../utils/DateUtils.tsx") /* resetCache */.calendarFormat(message.timestamp, true);
+  obj[4] = resetCache /* resetCache */.calendarFormat(message.timestamp, true);
   obj[5] = tmp.timestampColor;
-  const obj2 = require("../../../../../utils/DateUtils.tsx") /* resetCache */;
-  obj[6] = require("../../../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeDark(theme);
+  const obj2 = resetCache /* resetCache */;
+  obj[6] = AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(theme);
   obj[7] = tmp.highlightColor;
   obj[8] = reactions.reactions;
-  const obj3 = require("../../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
-  obj[9] = require("../EmbedUtils.tsx") /* frozen */.getAssetUriForEmbed(require("../../../../../../_runtime/07883_registerAsset.js"));
-  const obj4 = require("../EmbedUtils.tsx") /* frozen */;
-  obj[10] = require("../EmbedUtils.tsx") /* frozen */.getAssetUriForEmbed(require("../../../../../../_runtime/07884_registerAsset.js"));
-  const obj5 = require("../EmbedUtils.tsx") /* frozen */;
-  obj[11] = require("../../MessageAccessibilityActions.tsx") /* MessageAccessibilityAction */.createMessageAccessibilityActions(message, channel);
+  const obj3 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  obj[9] = frozen /* frozen */.getAssetUriForEmbed(registerAsset);
+  const obj4 = frozen /* frozen */;
+  obj[10] = frozen /* frozen */.getAssetUriForEmbed(registerAsset);
+  const obj5 = frozen /* frozen */;
+  obj[11] = MessageAccessibilityAction /* MessageAccessibilityAction */.createMessageAccessibilityActions(message, channel);
   return obj;
 };

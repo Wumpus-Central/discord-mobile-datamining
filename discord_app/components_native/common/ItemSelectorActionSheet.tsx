@@ -1,3 +1,5 @@
+import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
+import { useSafeAreaInsets } from "../../modules/safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/components_native/common/ItemSelectorActionSheet.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -20,7 +22,7 @@ export default function ItemSelectorActionSheet(arg0) {
   ({ selectedItem: importDefault, onItemSelect: dependencyMap, onClose } = arg0);
   ({ body, hasIcons } = arg0);
   let obj = items(3989);
-  const token = obj.useToken(require("../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_PADDING);
+  const token = obj.useToken(Themes.modules.mobile.TABLE_ROW_PADDING);
   const findIndexResult = items.findIndex((value) => value.value === closure_1);
   obj = { title, trailing: null };
   let tmp6Result = null;
@@ -33,7 +35,7 @@ export default function ItemSelectorActionSheet(arg0) {
   obj[1] = tmp6Result;
   const obj2 = { contentContainerStyle: null, children: null };
   const obj3 = { paddingHorizontal: token, paddingBottom: null };
-  obj3[1] = require("../../modules/safe_area/useSafeAreaInsets.native.tsx")().bottom + require("../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
+  obj3[1] = useSafeAreaInsets().bottom + Themes.space.PX_16;
   obj2[0] = obj3;
   items = [body, ];
   let num = -1;

@@ -1,3 +1,5 @@
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/premium/native/PremiumPlanWhatYouLoseActionSheet.tsx
 import Background from "Background";
 import { View } from "registerAsset";
@@ -14,9 +16,9 @@ function WhatYouLoseItem(arg0) {
   ({ imageSource, text } = arg0);
   const tmp = createCacheKey();
   let obj = { style: tmp.item, children: null };
-  const items = [callback(require("../../../components_native/common/FastImage.tsx"), { source: imageSource }), ];
+  const items = [callback(preload, { source: imageSource }), ];
   obj = { variant: "text-md/medium", style: tmp.itemLabel, children: text };
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }

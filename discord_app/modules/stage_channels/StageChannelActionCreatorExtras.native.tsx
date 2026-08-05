@@ -1,3 +1,9 @@
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
+import { showUserProfileActionSheet } from "../user_profile/native/showUserProfileActionSheet.tsx";
+import { useIsStageVoicePanelEnabled } from "StageVoicePanelExperiment.tsx";
+import { useStageBlockedUsersCount } from "useStageBlockedUsersCount.tsx";
 // discord_app/modules/stage_channels/StageChannelActionCreatorExtras.native.tsx
 import { setIsOnStartStageScreen } from "setIsOnStartStageScreen";
 import MAX_STAGE_TOPIC_LENGTH from "MAX_STAGE_TOPIC_LENGTH";
@@ -11,43 +17,43 @@ let metroImportAll;
 const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/stage_channels/StageChannelActionCreatorExtras.native.tsx");
 
 export const openStageChannelSettings = function openStageChannelSettings(closure_0) {
-  let obj = require("../action_sheet/native/ActionSheetActionCreators.tsx");
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel: closure_0 };
-  obj.openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(7700, dependencyMap.paths), closure_5, obj);
+  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(7700, dependencyMap.paths), closure_5, obj);
 };
 export function openEndGuildEventConfirmationModal() {
 
 }
 export const openStageChannelAudienceNoticeModal = function openStageChannelAudienceNoticeModal(channelId) {
-  let obj = require("../action_sheet/native/ActionSheetActionCreators.tsx");
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channelId };
-  obj.openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(7774, dependencyMap.paths), closure_4, obj);
+  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(7774, dependencyMap.paths), closure_4, obj);
 };
 export const openStageBlockedUsersSheet = function openStageBlockedUsersSheet(channel, onAccept) {
-  let obj = require("../action_sheet/native/ActionSheetActionCreators.tsx");
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel, onAccept };
-  obj.openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(7815, dependencyMap.paths), closure_6, obj);
+  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(7815, dependencyMap.paths), closure_6, obj);
 };
 export const openStageSettingsSheet = function openStageSettingsSheet(closure_0, closure_1) {
-  let obj = require("../action_sheet/native/ActionSheetActionCreators.tsx");
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channelId: closure_0, onOpenRTCDebugOverlay: closure_1 };
-  obj.openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(7822, dependencyMap.paths), closure_7, obj);
+  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(7822, dependencyMap.paths), closure_7, obj);
 };
 export const openEndStageModal = function openEndStageModal(closure_0) {
-  let obj = require("../action_sheet/native/ActionSheetActionCreators.tsx");
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel: closure_0 };
-  obj.openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(12567, dependencyMap.paths), closure_8, obj);
+  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(12567, dependencyMap.paths), closure_8, obj);
 };
 export const openStageChannel = function openStageChannel(outer1_0) {
   if (outer1_0.isGuildStageVoice()) {
-    let obj = require("StageVoicePanelExperiment.tsx") /* useIsStageVoicePanelEnabled */;
+    let obj = useIsStageVoicePanelEnabled /* useIsStageVoicePanelEnabled */;
     if (obj.isStageVoicePanelEnabled("stage_channel_action_creator_extras")) {
       let tmpResult = tmp(4494);
       tmpResult.openGuildVoiceModal(outer1_0);
     } else {
       obj = { channel: null };
       obj[0] = outer1_0;
-      const obj2 = require("../../actions/ModalActionCreators.tsx");
+      const obj2 = ModalActionCreators;
       tmpResult = tmp(4494);
       obj2.pushLazy(tmp(1959)(10556, tmp2.paths), obj, tmpResult.getVoiceChannelKey(outer1_0.id));
       const tmp4 = tmp(1959)(10556, tmp2.paths);
@@ -59,27 +65,27 @@ export const showPlatformUserProfile = function showPlatformUserProfile(arg0) {
   const obj = {};
   const merged = Object.assign(arg0);
   obj.isVoiceContext = true;
-  require("../user_profile/native/showUserProfileActionSheet.tsx")(obj);
+  showUserProfileActionSheet(obj);
 };
 export const shouldShowBlockedUsers = function shouldShowBlockedUsers(id) {
-  const stageBlockedUsersCount = require("useStageBlockedUsersCount.tsx") /* useStageBlockedUsersCount */.getStageBlockedUsersCount(id);
-  const obj = require("useStageBlockedUsersCount.tsx") /* useStageBlockedUsersCount */;
-  const obj2 = require("useStageBlockedUsersCount.tsx") /* useStageBlockedUsersCount */;
-  return stageBlockedUsersCount > 0 || require("useStageBlockedUsersCount.tsx") /* useStageBlockedUsersCount */.getStageIgnoredUsersCount(id) > 0;
+  const stageBlockedUsersCount = useStageBlockedUsersCount /* useStageBlockedUsersCount */.getStageBlockedUsersCount(id);
+  const obj = useStageBlockedUsersCount /* useStageBlockedUsersCount */;
+  const obj2 = useStageBlockedUsersCount /* useStageBlockedUsersCount */;
+  return stageBlockedUsersCount > 0 || useStageBlockedUsersCount /* useStageBlockedUsersCount */.getStageIgnoredUsersCount(id) > 0;
 };
 export const navigateToStage = function navigateToStage(id) {
   if (arg1 !== id.id) {
     setIsOnStartStageScreen(true);
   }
   if (id.isGuildStageVoice()) {
-    let obj = require("StageVoicePanelExperiment.tsx") /* useIsStageVoicePanelEnabled */;
+    let obj = useIsStageVoicePanelEnabled /* useIsStageVoicePanelEnabled */;
     if (obj.isStageVoicePanelEnabled("stage_channel_action_creator_extras")) {
       let tmp3Result = tmp3(4494);
       tmp3Result.openGuildVoiceModal(id);
     } else {
       obj = { channel: null };
       obj[0] = id;
-      const obj2 = require("../../actions/ModalActionCreators.tsx");
+      const obj2 = ModalActionCreators;
       tmp3Result = tmp3(4494);
       obj2.pushLazy(tmp3(1959)(10556, tmp4.paths), obj, tmp3Result.getVoiceChannelKey(id.id));
       const tmp6 = tmp3(1959)(10556, tmp4.paths);

@@ -1,3 +1,7 @@
+import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { Text } from "../../../components/Text/native/Text.tsx";
 // discord_app/design/void/NewTag/native/NewTag.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -34,11 +38,11 @@ export default function NewTag(color) {
   }
   let sm = color.borderRadius;
   if (sm === undefined) {
-    sm = require("../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm;
+    sm = Themes.radii.sm;
   }
   let colors = color.colors;
   if (colors === undefined) {
-    const items = [require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PREMIUM_TIER_2_PURPLE, require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PREMIUM_TIER_2_PINK];
+    const items = [Themes.unsafe_rawColors.PREMIUM_TIER_2_PURPLE, Themes.unsafe_rawColors.PREMIUM_TIER_2_PINK];
     colors = items;
   }
   const merged = Object.assign(color, Object.create(null));
@@ -47,7 +51,7 @@ export default function NewTag(color) {
     let obj = { style: null, start: null, end: null, colors: null, children: null };
     obj = { borderRadius: null, marginLeft: null };
     obj[0] = sm;
-    obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4;
+    obj[1] = Themes.space.PX_4;
     obj[0] = obj;
     ({ START: obj3[1], END: obj3[2] } = HorizontalGradient);
     obj[3] = colors;
@@ -60,12 +64,12 @@ export default function NewTag(color) {
     const merged1 = Object.assign(merged);
     const items2 = [tmp6.tagText, textStyle];
     obj2.style = items2;
-    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj2.children = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.y2b7CA);
-    obj1[1] = tmp7(require("../../../components/Text/native/Text.tsx") /* Text */.Text, obj2);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    obj2.children = intl2.string(getSystemLocale /* getSystemLocale */.t.y2b7CA);
+    obj1[1] = tmp7(Text /* Text */.Text, obj2);
     obj[4] = tmp7(closure_3, obj1);
-    let tmp7Result = tmp7(require("../../../../../_runtime/04706_LinearGradient.js"), obj);
-    const tmp17 = require("../../../../../_runtime/04706_LinearGradient.js");
+    let tmp7Result = tmp7(LinearGradient, obj);
+    const tmp17 = LinearGradient;
   } else {
     obj = { style: null, children: null };
     const items3 = [tmp6.tagContainer, containerStyle];
@@ -76,9 +80,9 @@ export default function NewTag(color) {
     const merged2 = Object.assign(merged);
     const items4 = [tmp6.tagText, textStyle];
     obj3.style = items4;
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj3.children = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.y2b7CA);
-    obj[1] = tmp7(require("../../../components/Text/native/Text.tsx") /* Text */.Text, obj3);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj3.children = intl.string(getSystemLocale /* getSystemLocale */.t.y2b7CA);
+    obj[1] = tmp7(Text /* Text */.Text, obj3);
     tmp7Result = tmp7(closure_3, obj);
   }
   return tmp7Result;

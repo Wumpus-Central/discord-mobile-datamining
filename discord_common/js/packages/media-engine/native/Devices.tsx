@@ -1,3 +1,4 @@
+import { format } from "../../../../../_runtime/00669_format.js";
 // discord_common/js/packages/media-engine/native/Devices.tsx
 import AudioSubsystems from "AudioSubsystems";
 
@@ -60,7 +61,7 @@ export const sanitizeDevices = function sanitizeDevices(AUDIO_INPUT, items) {
     isMatch = !importDefault;
   }
   if (isMatch) {
-    const tmp5 = require("../../../../../_runtime/00669_format.js");
+    const tmp5 = format;
     let family;
     if (tmp5 != null) {
       const os = tmp5.os;
@@ -72,7 +73,7 @@ export const sanitizeDevices = function sanitizeDevices(AUDIO_INPUT, items) {
   }
   if (isMatch) {
     let obj = /^win/i;
-    isMatch = obj.test(require("../../../../../_runtime/00669_format.js").os.family);
+    isMatch = obj.test(format.os.family);
   }
   if (isMatch) {
     obj = { id: null, type: null, index: -1, name: "Default" };

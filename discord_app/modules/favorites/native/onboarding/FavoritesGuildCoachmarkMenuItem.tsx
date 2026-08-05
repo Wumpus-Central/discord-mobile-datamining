@@ -1,3 +1,4 @@
+import { items1 } from "../../FavoritesDismissibleContent.tsx";
 // discord_app/modules/favorites/native/onboarding/FavoritesGuildCoachmarkMenuItem.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -73,7 +74,7 @@ let set = new Set(items);
 const result = set.fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkMenuItem.tsx");
 
 export default function FavoritesGuildCoachmarkMenuItem(arg0) {
-  let obj = require("../../FavoritesDismissibleContent.tsx") /* items1 */;
+  let obj = items1 /* items1 */;
   const isFavoritesMenuItemPopoverPending = obj.useIsFavoritesMenuItemPopoverPending();
   const tmp2 = callback(React.useState(isFavoritesMenuItemPopoverPending), 2);
   const first = tmp2[0];

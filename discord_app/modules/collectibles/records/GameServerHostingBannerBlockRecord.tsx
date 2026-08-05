@@ -1,8 +1,9 @@
+import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 // discord_app/modules/collectibles/records/GameServerHostingBannerBlockRecord.tsx
 let prototype;
 prototype = function GameServerHostingBannerBlockRecord(is_dismissible) {
   const obj = Object.create(new.target.prototype);
-  obj.type = require("../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx") /* ShopBlockType */.ShopBlockType.GAME_SERVER_HOSTING_BANNER;
+  obj.type = ShopBlockType /* ShopBlockType */.ShopBlockType.GAME_SERVER_HOSTING_BANNER;
   obj.isDismissible = is_dismissible.is_dismissible;
   return obj;
 }.prototype;
@@ -11,7 +12,7 @@ prototype["fromServer"] = function fromServer(is_dismissible) {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);
-  obj.type = require("../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx") /* ShopBlockType */.ShopBlockType.GAME_SERVER_HOSTING_BANNER;
+  obj.type = ShopBlockType /* ShopBlockType */.ShopBlockType.GAME_SERVER_HOSTING_BANNER;
   obj.isDismissible = is_dismissible.is_dismissible;
   return obj;
 };

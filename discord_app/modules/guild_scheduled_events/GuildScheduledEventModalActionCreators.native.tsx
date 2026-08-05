@@ -1,3 +1,6 @@
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
+import { getRRule } from "utils/ScheduleUtils.tsx";
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx
 import asyncRequireImpl from "asyncRequireImpl";
 import { EXPLICIT_END_EVENT_SHEET_KEY as closure_4 } from "GUILD_EVENT_MAX_NAME_LENGTH";
@@ -11,14 +14,14 @@ function openGuildEventDetails(arg0) {
   let recurrenceId;
   ({ event, recurrenceId } = arg0);
   ({ eventId, onClose } = arg0);
-  let obj = require("../action_sheet/native/ActionSheetActionCreators.tsx");
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { eventId, event, onCloseActionSheet: onClose, recurrenceId: null };
   if (recurrenceId == null) {
-    recurrenceId = require("utils/ScheduleUtils.tsx") /* getRRule */.getNextRecurrenceIdInEvent(event);
-    const tmp2Result = require("utils/ScheduleUtils.tsx") /* getRRule */;
+    recurrenceId = getRRule /* getRRule */.getNextRecurrenceIdInEvent(event);
+    const tmp2Result = getRRule /* getRRule */;
   }
   obj[3] = recurrenceId;
-  obj.openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8873, dependencyMap.paths), closure_5, obj, "stack");
+  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(8873, dependencyMap.paths), closure_5, obj, "stack");
 }
 function _transitionToEventDetailsFromInvite() {
   const self = this;
@@ -113,7 +116,7 @@ export const transitionToEventDetailsFromInvite = function transitionToEventDeta
   return applyArgumentsResult;
 };
 export const openEndEventModal = function openEndEventModal(channel) {
-  let obj = require("../action_sheet/native/ActionSheetActionCreators.tsx");
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel };
-  obj.openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(9069, dependencyMap.paths), closure_4, obj);
+  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(9069, dependencyMap.paths), closure_4, obj);
 };

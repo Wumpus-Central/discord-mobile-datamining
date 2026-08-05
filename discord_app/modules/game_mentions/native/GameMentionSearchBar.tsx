@@ -1,3 +1,8 @@
+import { GameControllerIcon } from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Form } from "../../../design/void/Form/native/index.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useGameMentionSearchBarHeight } from "../hooks/native/useGameMentionSearchBarHeight.tsx";
 // discord_app/modules/game_mentions/native/GameMentionSearchBar.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -24,19 +29,19 @@ const memoResult = importAllResult.memo(function GameMentionSearchBar() {
   let obj = { style: tmp.container, children: null };
   obj = { accessible: true, accessibilityRole: "header", children: null };
   obj = { style: tmp.headerRow, children: null };
-  const items = [callback(require("../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx") /* GameControllerIcon */.GameControllerIcon, { size: "sm", style: tmp.icon }), ];
+  const items = [callback(GameControllerIcon /* GameControllerIcon */.GameControllerIcon, { size: "sm", style: tmp.icon }), ];
   const obj2 = { variant: null, color: "mobile-text-heading-primary", children: "@game" };
-  obj2[0] = require("../hooks/native/useGameMentionSearchBarHeight.tsx") /* useGameMentionSearchBarHeight */.GAME_MENTION_SEARCH_BAR_TITLE_VARIANT;
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+  obj2[0] = useGameMentionSearchBarHeight /* useGameMentionSearchBarHeight */.GAME_MENTION_SEARCH_BAR_TITLE_VARIANT;
+  items[1] = callback(Text /* Text */.Text, obj2);
   obj[1] = items;
   const items1 = [callback2(View, obj), ];
   const obj3 = { style: tmp.description, variant: null, color: "text-muted", children: null };
-  obj3[1] = require("../hooks/native/useGameMentionSearchBarHeight.tsx") /* useGameMentionSearchBarHeight */.GAME_MENTION_SEARCH_BAR_DESCRIPTION_VARIANT;
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj3[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["1kR88y"]);
-  items1[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
+  obj3[1] = useGameMentionSearchBarHeight /* useGameMentionSearchBarHeight */.GAME_MENTION_SEARCH_BAR_DESCRIPTION_VARIANT;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj3[3] = intl.string(getSystemLocale /* getSystemLocale */.t["1kR88y"]);
+  items1[1] = callback(Text /* Text */.Text, obj3);
   obj[2] = items1;
-  const items2 = [callback2(View, obj), callback(require("../../../design/void/Form/native/index.tsx") /* Form */.FormDivider, { style: tmp.divider })];
+  const items2 = [callback2(View, obj), callback(Form /* Form */.FormDivider, { style: tmp.divider })];
   obj[1] = items2;
   return callback2(View, obj);
 });

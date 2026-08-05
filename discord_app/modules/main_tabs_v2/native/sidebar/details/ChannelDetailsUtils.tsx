@@ -1,3 +1,4 @@
+import { set } from "../../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx
 import { ChannelDetailsButtonTypes } from "ChannelDetailsNavigatorScreens";
 
@@ -8,7 +9,7 @@ export const getChannelDetailsButtons = function getChannelDetailsButtons(channe
   if (stateFromStores === undefined) {
     flag = false;
   }
-  if (channel.type === require("../../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx") /* set */.ChannelTypes.GUILD_DIRECTORY) {
+  if (channel.type === set /* set */.ChannelTypes.GUILD_DIRECTORY) {
     let items = [];
   } else {
     items = [, , ];

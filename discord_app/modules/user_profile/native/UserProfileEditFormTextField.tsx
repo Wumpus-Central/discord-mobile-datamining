@@ -1,3 +1,5 @@
+import { TextArea } from "../../../design/components/TextInput/native/TextArea.native.tsx";
+import { TextInput } from "../../../design/components/TextInput/native/TextInput.native.tsx";
 // discord_app/modules/user_profile/native/UserProfileEditFormTextField.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -29,13 +31,13 @@ export default function UserProfileEditFormTextField(inputRef) {
     obj = { ref: null };
     obj[0] = inputRef;
     const merged2 = Object.assign(obj);
-    let tmp9 = jsx(require("../../../design/components/TextInput/native/TextArea.native.tsx") /* TextArea */.TextArea, { ref: null });
+    let tmp9 = jsx(TextArea /* TextArea */.TextArea, { ref: null });
   } else {
     obj = { ref: null };
     obj[0] = inputRef;
     const merged3 = Object.assign(obj);
     obj.isClearable = true;
-    tmp9 = jsx(require("../../../design/components/TextInput/native/TextInput.native.tsx") /* TextInput */.TextInput, { ref: null });
+    tmp9 = jsx(TextInput /* TextInput */.TextInput, { ref: null });
   }
   return tmp9;
 };

@@ -1,9 +1,11 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { getTimestampString } from "../threads/getTimestampString.tsx";
 // discord_app/modules/guild_mod_dash_member_safety/DateUtils.tsx
 function getJoinedAtDateFormatter() {
-  return { seconds: require("../../intl/index.native.tsx") /* getSystemLocale */.t["FsBhl/"], minutes: require("../../intl/index.native.tsx") /* getSystemLocale */.t["4d1mgT"], hours: require("../../intl/index.native.tsx") /* getSystemLocale */.t["2wkczD"], days: require("../../intl/index.native.tsx") /* getSystemLocale */.t["ocdS+f"], months: require("../../intl/index.native.tsx") /* getSystemLocale */.t["az14+h"], years: require("../../intl/index.native.tsx") /* getSystemLocale */.t["5Gk1ns"] };
+  return { seconds: getSystemLocale /* getSystemLocale */.t["FsBhl/"], minutes: getSystemLocale /* getSystemLocale */.t["4d1mgT"], hours: getSystemLocale /* getSystemLocale */.t["2wkczD"], days: getSystemLocale /* getSystemLocale */.t["ocdS+f"], months: getSystemLocale /* getSystemLocale */.t["az14+h"], years: getSystemLocale /* getSystemLocale */.t["5Gk1ns"] };
 }
 function getAccountAgeDateFormatter() {
-  return { hours: require("../../intl/index.native.tsx") /* getSystemLocale */.t.JZP2Rs, days: require("../../intl/index.native.tsx") /* getSystemLocale */.t["3moSHc"], months: require("../../intl/index.native.tsx") /* getSystemLocale */.t["0Ddwr1"], years: require("../../intl/index.native.tsx") /* getSystemLocale */.t.cR7lcs };
+  return { hours: getSystemLocale /* getSystemLocale */.t.JZP2Rs, days: getSystemLocale /* getSystemLocale */.t["3moSHc"], months: getSystemLocale /* getSystemLocale */.t["0Ddwr1"], years: getSystemLocale /* getSystemLocale */.t.cR7lcs };
 }
 const obj = { JOINED_AT: 0, [0]: "JOINED_AT", ACCOUNT_AGE: 1, [1]: "ACCOUNT_AGE" };
 const result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/DateUtils.tsx");
@@ -25,7 +27,7 @@ export const formatDateRelativeTime = function formatDateRelativeTime(arg0, arg1
   } else if (arg1 === tmp.ACCOUNT_AGE) {
     tmp2 = getAccountAgeDateFormatter;
   }
-  return require("../threads/getTimestampString.tsx")(arg0, tmp2, false);
+  return getTimestampString(arg0, tmp2, false);
 };
 export const getJoinedAtTimestamp = function getJoinedAtTimestamp(joinedAt) {
   if (null != joinedAt) {

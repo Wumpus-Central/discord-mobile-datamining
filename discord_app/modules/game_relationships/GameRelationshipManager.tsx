@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/game_relationships/GameRelationshipManager.tsx
 import recountRelationshipTypes from "recountRelationshipTypes";
 import { RelationshipTypes } from "ME";
@@ -22,13 +23,13 @@ class GameRelationshipManager extends tmp2 {
 }
 const prototype = GameRelationshipManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = require("../../Dispatcher.tsx").subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  const subscription = dispatcher.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 prototype["_terminate"] = function _terminate() {
-  require("../../Dispatcher.tsx").unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  dispatcher.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 prototype["destroy"] = function destroy() {
-  require("../../Dispatcher.tsx").unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  dispatcher.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 const gameRelationshipManager = new GameRelationshipManager();
 const result = require("initialize").fileFinishedImporting("modules/game_relationships/GameRelationshipManager.tsx");

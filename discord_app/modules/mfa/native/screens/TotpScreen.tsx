@@ -1,3 +1,4 @@
+import { finishMFACheck } from "../../../../../discord_common/js/shared/MFA.tsx";
 // discord_app/modules/mfa/native/screens/TotpScreen.tsx
 import MFAOptionScreen from "MFAOptionScreen";
 import _slicedToArray from "_slicedToArray";
@@ -6,7 +7,7 @@ import { jsx } from "jsxProd";
 
 const require = arg1;
 function isValidClipboardCode(arg0) {
-  let isMatch = arg0.length === require("../../../../../discord_common/js/shared/MFA.tsx") /* finishMFACheck */.TOTP_CODE_LENGTH;
+  let isMatch = arg0.length === finishMFACheck /* finishMFACheck */.TOTP_CODE_LENGTH;
   if (isMatch) {
     isMatch = /^\d+$/.test(arg0);
     const obj = /^\d+$/;

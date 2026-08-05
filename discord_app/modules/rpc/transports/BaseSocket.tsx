@@ -1,3 +1,4 @@
+import { prototype } from "../RPCError.tsx";
 // discord_app/modules/rpc/transports/BaseSocket.tsx
 import ME from "ME";
 
@@ -25,7 +26,7 @@ class BaseSocket {
   }
 }
 BaseSocket.prototype["checkRpcVersion"] = function checkRpcVersion(version) {
-  let tmp2 = require("../RPCError.tsx");
+  let tmp2 = prototype;
   tmp2 = new tmp2({ closeCode: constants.INVALID_VERSION }, "Invalid Version: " + version);
   throw tmp2;
 };

@@ -1,3 +1,4 @@
+import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/device/native/getDeviceMediaPhotos.tsx
 import { NativeModules } from "get ActivityIndicator";
 
@@ -21,9 +22,9 @@ export default function getDeviceMediaPhotos(arg0) {
       callback(table[2]).captureException(arg0, { tags: { source: "DEVICE_MEDIA" } });
     };
   }
-  let obj = require("../../../utils/PlatformUtils.tsx") /* set */;
+  let obj = set /* set */;
   if (obj.isIOS()) {
-    const obj3 = require("DCDPhotos.tsx");
+    const obj3 = require("DCDPhotos.tsx") /* get ActivityIndicator */;
     if (obj3 != null) {
       obj = { first: null, groupTypes: "Recents", assetType: "All", after: null, extensions: null };
       obj[0] = batchSize;

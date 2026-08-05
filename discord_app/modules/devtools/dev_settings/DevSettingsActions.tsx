@@ -1,3 +1,4 @@
+import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/devtools/dev_settings/DevSettingsActions.tsx
 import getUserAgnosticState from "getUserAgnosticState";
 
@@ -8,7 +9,7 @@ export const toggle = function toggle(toggle, flag) {
   if (typeof flag !== "boolean") {
     tmp = !store.get(toggle);
   }
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "DEV_TOOLS_DEV_SETTING_SET", toggle, value: tmp };
   obj.dispatch(obj);
 };
@@ -22,7 +23,7 @@ export const clearAll = function clearAll() {
     }
     let tmp = importDefault;
     let tmp2 = dependencyMap;
-    let obj = require("../../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "DEV_TOOLS_DEV_SETTING_SET", toggle: null, value: null };
     obj[1] = key10005;
     obj[2] = flag;

@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/favorites/FavoritesUtils.tsx
 import { FAVORITES_RAW_GUILD_ID } from "date";
 import { FAVORITES } from "ME";
@@ -12,8 +13,8 @@ export const getFavoritesAwareGuildName = function getFavoritesAwareGuildName(gu
       tmp2 = id === FAVORITES;
     }
     if (tmp2) {
-      const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      let name = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.wMWyci);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      let name = intl.string(getSystemLocale /* getSystemLocale */.t.wMWyci);
     } else {
       name = guild.name;
     }

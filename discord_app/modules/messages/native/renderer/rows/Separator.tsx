@@ -1,3 +1,4 @@
+import { isDiscordFrontendDevelopment } from "../../../../../utils/GlobalUtils.tsx";
 // discord_app/modules/messages/native/renderer/rows/Separator.tsx
 import Changeset from "Changeset";
 import createCacheKey from "createCacheKey";
@@ -47,7 +48,7 @@ export const generateSeparatorRowData = function generateSeparatorRowData(text, 
     obj1[6] = changeType;
     return obj1;
   } else {
-    obj = require("../../../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */;
+    obj = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
     obj.assertNever(rowType);
   }
 };

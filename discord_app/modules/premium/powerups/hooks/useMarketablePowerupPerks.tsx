@@ -1,3 +1,4 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/premium/powerups/hooks/useMarketablePowerupPerks.tsx
 import noop from "noop";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
@@ -13,7 +14,7 @@ const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useMark
 export default function useMarketablePowerupPerks(arg0) {
   const _require = arg0;
   let items = [calculateAppliedBoosts];
-  const stateFromStores = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     const stateForGuild = outer1_4.getStateForGuild(closure_0);
     let tmp2;
     if (stateForGuild != null) {

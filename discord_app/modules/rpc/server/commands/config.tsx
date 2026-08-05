@@ -1,3 +1,6 @@
+import { dispatcher } from "../../../../Dispatcher.tsx";
+import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
+import { prototype } from "../../RPCError.tsx";
 // discord_app/modules/rpc/server/commands/config.tsx
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
 import ME from "ME";
@@ -12,7 +15,7 @@ export default {
   [ME.RPCCommands.SET_CONFIG]: {
     scope: RPC_AUTHENTICATED_SCOPE,
     validation(boolean) {
-      let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(boolean);
+      let obj = createRpcJoiSchemaObject(boolean);
       obj = { use_interactive_pip: boolean.boolean() };
       return obj.required().keys(obj);
     },
@@ -23,16 +26,16 @@ export default {
         let obj = { errorCode: null };
         obj[0] = RPCErrors.INVALID_COMMAND;
         const _HermesInternal = HermesInternal;
-        let tmp15 = require("../../RPCError.tsx");
+        let tmp15 = prototype;
         tmp15 = new tmp15(obj, "command not available from \"" + socket.transport + " transport");
         throw tmp15;
       } else if (null == socket.application.id) {
         obj = { errorCode: null };
         obj[0] = RPCErrors.INVALID_COMMAND;
-        const tmp11 = new require("../../RPCError.tsx")(obj, "invalid application");
+        const tmp11 = new prototype(obj, "invalid application");
         throw tmp11;
       } else {
-        obj = require("../../../../Dispatcher.tsx");
+        obj = dispatcher;
         const obj1 = { type: "EMBEDDED_ACTIVITY_SET_CONFIG", applicationId: null, config: null };
         obj1[1] = socket.application.id;
         const obj2 = { useInteractivePIP: null };

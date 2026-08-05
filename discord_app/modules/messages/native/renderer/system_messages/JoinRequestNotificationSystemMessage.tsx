@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
+import { createCommonMessage } from "createCommonMessage.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/JoinRequestNotificationSystemMessage.tsx
 import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal";
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
@@ -10,7 +13,7 @@ const result = require("createGuildRecordFromRust").fileFinishedImporting("modul
 
 export const createJoinRequestNotificationSystemMessage = function createJoinRequestNotificationSystemMessage(message) {
   message = message.message;
-  let obj = require("../../../../../utils/SnowflakeUtils.tsx");
+  let obj = DISCORD_EPOCH;
   request = request.getRequest(obj.cast(message.channel_id));
   let tmp4;
   if (null != request) {
@@ -45,48 +48,48 @@ export const createJoinRequestNotificationSystemMessage = function createJoinReq
   }
   if (MessageTypes.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION === type) {
     if (null == username) {
-      const intl5 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      let stringResult = intl5.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["2VLV0d"]);
+      const intl5 = getSystemLocale /* getSystemLocale */.intl;
+      let stringResult = intl5.string(getSystemLocale /* getSystemLocale */.t["2VLV0d"]);
     }
-    const intl6 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl6 = getSystemLocale /* getSystemLocale */.intl;
     obj = { username: null, guildName: null };
     obj[0] = username;
     obj[1] = name;
-    stringResult = intl6.formatToParts(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.EloBG4, obj);
+    stringResult = intl6.formatToParts(getSystemLocale /* getSystemLocale */.t.EloBG4, obj);
   } else {
     if (tmp13.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION === type) {
       if (null != username) {
         if (null != name) {
-          const intl4 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+          const intl4 = getSystemLocale /* getSystemLocale */.intl;
           obj = { username: null, guildName: null };
           obj[0] = username;
           obj[1] = name;
-          let formatToPartsResult = intl4.formatToParts(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["UGN/Yy"], obj);
+          let formatToPartsResult = intl4.formatToParts(getSystemLocale /* getSystemLocale */.t["UGN/Yy"], obj);
         }
         let str = formatToPartsResult;
       }
-      const intl3 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      formatToPartsResult = intl3.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.FVF6qU);
+      const intl3 = getSystemLocale /* getSystemLocale */.intl;
+      formatToPartsResult = intl3.string(getSystemLocale /* getSystemLocale */.t.FVF6qU);
     } else {
       str = "";
       if (tmp13.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION === type) {
         if (null != username) {
           if (null != name) {
-            const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+            const intl2 = getSystemLocale /* getSystemLocale */.intl;
             const obj1 = { username: null, guildName: null };
             obj1[0] = username;
             obj1[1] = name;
-            let formatToPartsResult1 = intl2.formatToParts(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.u4movT, obj1);
+            let formatToPartsResult1 = intl2.formatToParts(getSystemLocale /* getSystemLocale */.t.u4movT, obj1);
           }
           str = formatToPartsResult1;
         }
-        const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-        formatToPartsResult1 = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.BMlbE7);
+        const intl = getSystemLocale /* getSystemLocale */.intl;
+        formatToPartsResult1 = intl.string(getSystemLocale /* getSystemLocale */.t.BMlbE7);
       }
     }
     const obj2 = { content: null };
     obj2[0] = str;
-    const merged = Object.assign(require("createCommonMessage.tsx")(message));
+    const merged = Object.assign(createCommonMessage(message));
     return obj2;
   }
 };

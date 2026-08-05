@@ -1,3 +1,6 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { XSmallBoldIcon } from "../../../design/components/Icon/native/redesign/generated/XSmallBoldIcon.tsx";
+import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 // discord_app/modules/double_tap_to_react/native/DoubleTapErrorToast.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -9,8 +12,8 @@ const require = arg1;
 function DoubleTapErrorToastIcon() {
   let obj = { style: createCacheKey().icon, "aria-hidden": true, children: null };
   obj = { color: null, size: "xs" };
-  obj[0] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
-  obj[2] = jsx(require("../../../design/components/Icon/native/redesign/generated/XSmallBoldIcon.tsx") /* XSmallBoldIcon */.XSmallBoldIcon, { color: null, size: "xs" });
+  obj[0] = Themes.colors.WHITE;
+  obj[2] = jsx(XSmallBoldIcon /* XSmallBoldIcon */.XSmallBoldIcon, { color: null, size: "xs" });
   return <View color={null} size="xs" />;
 }
 createCacheKey = { icon: null };
@@ -23,7 +26,7 @@ export const showDoubleTapErrorToast = function showDoubleTapErrorToast(arg0) {
   let importDefault;
   let require;
   ({ emojiName: require, reason: importDefault } = arg0);
-  let obj = require("../../toast/native/ToastActionCreators.tsx");
+  let obj = dispatcher;
   obj = {
     key: "EMOJI_DOUBLE_TAP_ERROR",
     icon() {

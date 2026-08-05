@@ -1,3 +1,5 @@
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/EligibilityChecklist.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -25,9 +27,9 @@ function EligibilityChecklistRow(item) {
     tmp6Result = tmp6(16653);
   }
   obj[1] = tmp6Result;
-  const items1 = [closure_4(require("../../../../components_native/common/FastImage.tsx"), obj), ];
+  const items1 = [closure_4(preload, obj), ];
   obj = { style: tmp.rowTextColumn, children: null };
-  const items2 = [closure_4(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.rowLabel, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: item.checked ? item.checkedLabel : item.uncheckedLabel }), closure_4(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/normal", color: "interactive-text-default", children: item.description }), ];
+  const items2 = [closure_4(Text /* Text */.Text, { style: tmp.rowLabel, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: item.checked ? item.checkedLabel : item.uncheckedLabel }), closure_4(Text /* Text */.Text, { variant: "text-sm/normal", color: "interactive-text-default", children: item.description }), ];
   let tmp5Result = null != item.actionHandler && null != item.actionLabel;
   if (tmp5Result) {
     const obj3 = { style: null, children: null };

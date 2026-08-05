@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useSelectedDismissibleContent } from "../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
+import { SettingsAccessibilityScreen } from "../../accessibility/native/SettingsAccessibilityScreen.tsx";
 // discord_app/modules/user_settings/defs/native/AccessibilitySetting.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -9,14 +12,14 @@ const require = arg1;
 let items = [require("DismissibleContent").DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.G0neg7);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.G0neg7);
   },
   parent: null,
   IconComponent: require("AccessibilityIcon").AccessibilityIcon,
   useTrailing() {
     let tmp4;
-    let obj = require("../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx") /* useSelectedDismissibleContent */;
+    let obj = useSelectedDismissibleContent /* useSelectedDismissibleContent */;
     [tmp4, r10012] = callback(obj.useSelectedDismissibleContent(items), 2);
     let tmp5 = null;
     if (null != tmp4) {
@@ -60,7 +63,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.ACCESSIBILITY,
   getComponent() {
-    return require("../../accessibility/native/SettingsAccessibilityScreen.tsx") /* SettingsAccessibilityScreen */.default;
+    return SettingsAccessibilityScreen /* SettingsAccessibilityScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

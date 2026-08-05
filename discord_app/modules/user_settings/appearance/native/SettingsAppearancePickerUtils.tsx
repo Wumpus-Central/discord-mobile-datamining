@@ -1,10 +1,14 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { ClientThemeType } from "../../../client_themes/ClientThemesTypes.tsx";
+import { getCustomThemesName } from "../../../client_themes/native/MobileThemesUtils.tsx";
+import { getSystemTheme } from "../../../themes/getSystemTheme.native.tsx";
 // discord_app/modules/user_settings/appearance/native/SettingsAppearancePickerUtils.tsx
 import noop from "noop";
 import { ThemeTypes } from "sum";
 
 const require = arg1;
 function getMaxColors() {
-  const allMobileThemes = require("../../../client_themes/native/MobileThemesUtils.tsx") /* getCustomThemesName */.getAllMobileThemes();
+  const allMobileThemes = getCustomThemesName /* getCustomThemesName */.getAllMobileThemes();
   let num = 0;
   const iter = allMobileThemes[Symbol.iterator]();
   const nextResult = iter.next();
@@ -15,7 +19,7 @@ function getMaxColors() {
     let tmp5 = require;
     let tmp6 = dependencyMap;
     let tmp7 = dependencyMap;
-    if (require("../../../client_themes/ClientThemesTypes.tsx") /* ClientThemeType */.ClientThemeType.STANDARD_BACKGROUND_THEME === type) {
+    if (ClientThemeType /* ClientThemeType */.ClientThemeType.STANDARD_BACKGROUND_THEME === type) {
       let _Math3 = Math;
       let tmp14 = num;
       num = Math.max(1, num);
@@ -117,7 +121,7 @@ function convertStandardThemeToAnimatedTheme(theme, items, BACKGROUND_SURFACE_HI
       }
     }
   }
-  const internal = require("../../../../../discord_common/js/packages/tokens/native.tsx").internal;
+  const internal = Themes.internal;
   let obj = { enabledExperiments: items };
   const semanticColor = internal.resolveSemanticColor(str, BACKGROUND_SURFACE_HIGH, obj);
   obj = { theme: theme.theme, name: theme.getName(), midpointPercentage: 50, angle: 0, colors: null };
@@ -218,7 +222,7 @@ export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThe
     items = [];
   }
   if (BACKGROUND_SURFACE_HIGH === undefined) {
-    BACKGROUND_SURFACE_HIGH = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_SURFACE_HIGH;
+    BACKGROUND_SURFACE_HIGH = Themes.colors.BACKGROUND_SURFACE_HIGH;
   }
   const items1 = [];
   const iter = arg0[Symbol.iterator]();
@@ -229,7 +233,7 @@ export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThe
     let tmp6 = require;
     let tmp7 = dependencyMap;
     let tmp8 = dependencyMap;
-    if (require("../../../client_themes/ClientThemesTypes.tsx") /* ClientThemeType */.ClientThemeType.STANDARD_BACKGROUND_THEME === type) {
+    if (ClientThemeType /* ClientThemeType */.ClientThemeType.STANDARD_BACKGROUND_THEME === type) {
       let tmp17 = convertStandardThemeToAnimatedTheme;
       let tmp18 = nextResult;
       let arr = items1.push(convertStandardThemeToAnimatedTheme(tmp5, items, BACKGROUND_SURFACE_HIGH));
@@ -254,7 +258,7 @@ export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThe
 };
 export const useLaunchWelcomeSystemTheme = function useLaunchWelcomeSystemTheme() {
   let tmp = importDefault;
-  const tmp4 = require("../../../themes/getSystemTheme.native.tsx")() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARKER;
+  const tmp4 = getSystemTheme() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARKER;
   token = token(3989).useToken(tmp(712).colors.BACKGROUND_BASE_LOW, tmp4);
   let items = [token];
   return React.useMemo(() => {

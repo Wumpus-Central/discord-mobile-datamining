@@ -1,3 +1,4 @@
+import { useFavoritesAccess } from "../FavoritesHooks.tsx";
 // discord_app/modules/favorites/hooks/useIsFavoritesGuildVisible.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import initializeFromUserSettings from "initializeFromUserSettings";
@@ -43,9 +44,9 @@ export const isFavoritesGuildVisible = function isFavoritesGuildVisible() {
   let hasAccess;
   let isExperimentEnabled;
   let isFreemium;
-  const favoritesAccess = require("../FavoritesHooks.tsx") /* useFavoritesAccess */.getFavoritesAccess();
+  const favoritesAccess = useFavoritesAccess /* useFavoritesAccess */.getFavoritesAccess();
   ({ isExperimentEnabled, isFreemium, hasAccess } = favoritesAccess);
-  const obj = require("../FavoritesHooks.tsx") /* useFavoritesAccess */;
+  const obj = useFavoritesAccess /* useFavoritesAccess */;
   const obj2 = handleConnectionOpen;
   const tmp4 = initializeFromUserSettings;
   let tmp5 = isExperimentEnabled;

@@ -1,3 +1,4 @@
+import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
 // discord_app/modules/user_profile/hooks/native/useCardGridLayout.tsx
 import { PROFILE_SIDE_PADDING } from "ARBITRARY_LARGE_OFFSET";
 
@@ -28,7 +29,7 @@ export default function useCardGridLayout() {
     sidePadding = PROFILE_SIDE_PADDING;
   }
   if (containerWidth == null) {
-    containerWidth = require("../../../screen/useWindowDimensions.native.tsx")().width;
+    containerWidth = useWindowDimensions().width;
   }
   if (maxWidth == null) {
     maxWidth = Infinity;

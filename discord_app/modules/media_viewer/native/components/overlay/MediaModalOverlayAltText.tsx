@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlayAltText.tsx
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -6,7 +7,7 @@ import importAllResult from "noop";
 const require = arg1;
 let closure_4 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null };
-  obj = { backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE, marginVertical: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginHorizontal: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginRight: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 + arg0, paddingHorizontal: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, paddingVertical: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, alignSelf: "flex-end" };
+  obj = { backgroundColor: Themes.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE, marginVertical: Themes.space.PX_8, marginHorizontal: Themes.space.PX_8, marginRight: Themes.space.PX_8 + arg0, paddingHorizontal: Themes.space.PX_8, paddingVertical: Themes.space.PX_4, borderRadius: Themes.radii.sm, alignSelf: "flex-end" };
   obj[0] = obj;
   return obj;
 });

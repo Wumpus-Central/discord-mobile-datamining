@@ -1,3 +1,5 @@
+import { usePrevious } from "../../../../hooks/usePrevious.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/app_launcher/native/base_components/ExpandableList.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -44,7 +46,7 @@ export default function ExpandableList(items) {
   first = tmp2[0];
   closure_6 = tmp2[1];
   let obj7 = dependencyMap;
-  let tmp5 = require("../../../../hooks/usePrevious.tsx")(first);
+  let tmp5 = usePrevious(first);
   if (tmp5 == null) {
     tmp5 = first;
   }
@@ -162,7 +164,7 @@ export default function ExpandableList(items) {
   }
   items6[1] = tmp16Result;
   obj[1] = items6;
-  const items7 = [c7(require("../../../reanimated/ReanimatedRexport.tsx").View, obj), ];
+  const items7 = [c7(ReanimatedRexport.View, obj), ];
   if (!showsExpandCTAOverride) {
     obj3 = { children: null };
     items7[1] = showsExpandCTAOverride;

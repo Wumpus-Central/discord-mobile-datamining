@@ -1,3 +1,4 @@
+import { useToggleOnIAPSuccess } from "useToggleOnIAPSuccess.tsx";
 // discord_app/modules/billing/native/subscription/useResubscribeSubscriptionParams.tsx
 import noop from "noop";
 
@@ -6,7 +7,7 @@ const result = require("v1").fileFinishedImporting("modules/billing/native/subsc
 
 export default function useResubscribeSubscriptionParams(arg0) {
   let closure_0 = arg0;
-  const tmp = require("useToggleOnIAPSuccess.tsx")();
+  const tmp = useToggleOnIAPSuccess();
   importDefault = tmp;
   const items = [arg0, tmp];
   return React.useMemo(() => {

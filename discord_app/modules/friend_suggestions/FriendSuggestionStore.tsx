@@ -1,3 +1,6 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { FriendSuggestionActionCreators } from "FriendSuggestionActionCreators.tsx";
+import { maybeDispatchDevOnlyDummyFriendSuggestions } from "maybeDispatchDevOnlyDummyFriendSuggestions.tsx";
 // discord_app/modules/friend_suggestions/FriendSuggestionStore.tsx
 import createdAt from "createdAt";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -41,11 +44,11 @@ const friendSuggestionStore = new FriendSuggestionStore(require("dispatcher"), {
       if (flag2) {
         c6 = true;
         c7 = false;
-        const response = require("FriendSuggestionActionCreators.tsx").fetch();
-        const obj = require("FriendSuggestionActionCreators.tsx");
+        const response = FriendSuggestionActionCreators.fetch();
+        const obj = FriendSuggestionActionCreators;
       }
     } else {
-      require("maybeDispatchDevOnlyDummyFriendSuggestions.tsx")();
+      maybeDispatchDevOnlyDummyFriendSuggestions();
     }
   },
   FRIEND_SUGGESTION_CREATE: function handleFriendSuggestionCreate(suggestion) {
@@ -57,7 +60,7 @@ const friendSuggestionStore = new FriendSuggestionStore(require("dispatcher"), {
       }
       let obj = { key: null, name: null, user: null, mutualFriendsCount: null, contactNames: null };
       obj[0] = suggestion.suggested_user.id;
-      const firstResult = require("../../../_runtime/00012_apply.js").first(suggestion.reasons);
+      const firstResult = apply.first(suggestion.reasons);
       let name;
       if (firstResult != null) {
         name = firstResult.name;
@@ -75,7 +78,7 @@ const friendSuggestionStore = new FriendSuggestionStore(require("dispatcher"), {
         const merged = Object.assign(obj);
         obj[obj.key] = obj;
       }
-      const obj2 = require("../../../_runtime/00012_apply.js");
+      const obj2 = apply;
     }
   },
   FRIEND_SUGGESTION_DELETE: function handleFriendSuggestionDelete(arg0) {
@@ -86,8 +89,8 @@ const friendSuggestionStore = new FriendSuggestionStore(require("dispatcher"), {
   },
   LOAD_FRIEND_SUGGESTIONS_SUCCESS: function handleLoadFriendSuggestionsSuccess(suggestions) {
     let c6 = false;
-    let obj = require("../../../_runtime/00012_apply.js");
-    const mapped = require("../../../_runtime/00012_apply.js").chain(suggestions.suggestions).map((contact_names) => {
+    let obj = apply;
+    const mapped = apply.chain(suggestions.suggestions).map((contact_names) => {
       if (null != contact_names.contact_names) {
         if (contact_names.contact_names.length >= 2) {
           contact_names = contact_names.contact_names;
@@ -108,10 +111,10 @@ const friendSuggestionStore = new FriendSuggestionStore(require("dispatcher"), {
         return obj;
       }
     });
-    const chainResult = require("../../../_runtime/00012_apply.js").chain(suggestions.suggestions);
+    const chainResult = apply.chain(suggestions.suggestions);
     let closure_4 = mapped.keyBy((key) => key.key).value();
     const iter = mapped.keyBy((key) => key.key);
-    require("../../../_runtime/00012_apply.js").keys(closure_4).length;
+    apply.keys(closure_4).length;
   },
   LOAD_FRIEND_SUGGESTIONS_FAILURE: function handleLoadFriendSuggestionsFailure() {
     let c6 = false;
@@ -122,8 +125,8 @@ const result = require("apply").fileFinishedImporting("modules/friend_suggestion
 
 export default friendSuggestionStore;
 export const transformFriendSuggestions = function transformFriendSuggestions(arg0) {
-  const obj = require("../../../_runtime/00012_apply.js");
-  const mapped = require("../../../_runtime/00012_apply.js").chain(arg0).map((contact_names) => {
+  const obj = apply;
+  const mapped = apply.chain(arg0).map((contact_names) => {
     if (null != contact_names.contact_names) {
       if (contact_names.contact_names.length >= 2) {
         contact_names = contact_names.contact_names;
@@ -144,6 +147,6 @@ export const transformFriendSuggestions = function transformFriendSuggestions(ar
       return obj;
     }
   });
-  const chainResult = require("../../../_runtime/00012_apply.js").chain(arg0);
+  const chainResult = apply.chain(arg0);
   return mapped.keyBy((key) => key.key).value();
 };

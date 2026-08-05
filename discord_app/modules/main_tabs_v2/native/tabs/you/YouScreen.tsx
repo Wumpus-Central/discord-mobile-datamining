@@ -1,3 +1,10 @@
+import { n } from "../../../../../../_runtime/00689_n.js";
+import { defaultAreStatesEqual } from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { PlatformTypes } from "../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import { PressableBase } from "../../../../../design/void/Pressables/native/Pressables.tsx";
+import { getRootNavigationRef } from "../../../RootNavigationRef.native.tsx";
+import { IconWithBadge } from "../../shared_components/BackIconWithBadge.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouScreen.tsx
 import useUserProfileOverscrollStyles from "useUserProfileOverscrollStyles";
 import closure_4 from "n";
@@ -30,7 +37,7 @@ let closure_6;
 let map1;
 const require = arg1;
 function handleBackButtonPress() {
-  const navigation = require("../../../RootNavigationRef.native.tsx") /* getRootNavigationRef */.getRootNavigationRef();
+  const navigation = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
   if (null != navigation) {
     if (navigation.canGoBack()) {
       navigation.goBack();
@@ -40,7 +47,7 @@ function handleBackButtonPress() {
   }
 }
 function BackButton(paddingTop) {
-  let obj = require("../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
   const items = [updateGuildUnreadSentinel];
   const stateFromStores = obj.useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
   if (stateFromStores > 0) {
@@ -54,8 +61,8 @@ function BackButton(paddingTop) {
   }
   obj = { style: items1, accessibilityRole: "button", accessibilityLabel: formatToPlainStringResult, onPress: handleBackButtonPress, children: null };
   items1 = [callback4().backButton, { top: paddingTop.paddingTop }];
-  obj[4] = callback2(require("../../shared_components/BackIconWithBadge.tsx") /* IconWithBadge */.CloseIconWithBadgeOnSide, { count: stateFromStores });
-  return callback2(require("../../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  obj[4] = callback2(IconWithBadge /* IconWithBadge */.CloseIconWithBadgeOnSide, { count: stateFromStores });
+  return callback2(PressableBase /* PressableBase */.PressableOpacity, obj);
 }
 function UnconnectedYouScreen(arg0) {
   let bannerAnimatedStyle;
@@ -564,15 +571,15 @@ function UnconnectedYouScreen(arg0) {
 ({ YOU_ACTION_SHEET_TOP_INSET: closure_12, YOU_AVATAR_SIZE: map1, YOU_SCREEN_ID: closure_14, YOU_SCROLL_EVENT_THROTTLE: closure_15 } = YOU_SCREEN_ID);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
 let closure_23 = createCacheKey.createStyles((marginTop) => {
-  let obj = require("../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
+  let obj = PlatformTypes /* PlatformTypes */;
   let xl;
   if (obj.isIOS()) {
-    xl = require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.xl;
+    xl = Themes.radii.xl;
   }
   obj = { borderTopLeftRadius: xl, borderTopRightRadius: null };
   let xl1;
   if (tmpResult.isIOS()) {
-    xl1 = require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.xl;
+    xl1 = Themes.radii.xl;
   }
   obj[1] = xl1;
   obj = { container: null, background: null, scrollView: null, profileEffectLayer: null, banner: null, gifTag: null, gifTagText: null, content: null };
@@ -589,19 +596,19 @@ let closure_23 = createCacheKey.createStyles((marginTop) => {
   const obj2 = { overflow: "hidden" };
   const obj3 = { flex: 1 };
   const tmp = require;
-  tmpResult = require("../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
-  const tmp10 = require("../../../../../../_runtime/00689_n.js");
-  const tmp10Result = require("../../../../../../_runtime/00689_n.js")(require("../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.WHITE);
-  obj4[5] = require("../../../../../../_runtime/00689_n.js")(require("../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.WHITE).alpha(0.9).css();
+  tmpResult = PlatformTypes /* PlatformTypes */;
+  const tmp10 = n;
+  const tmp10Result = n(Themes.unsafe_rawColors.WHITE);
+  obj4[5] = n(Themes.unsafe_rawColors.WHITE).alpha(0.9).css();
   obj[5] = obj4;
-  const alphaResult = require("../../../../../../_runtime/00689_n.js")(require("../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.WHITE).alpha(0.9);
-  obj[6] = { color: require("../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_800, fontSize: 14 };
+  const alphaResult = n(Themes.unsafe_rawColors.WHITE).alpha(0.9);
+  obj[6] = { color: Themes.unsafe_rawColors.PRIMARY_800, fontSize: 14 };
   obj[7] = { marginTop, flex: 1, flexGrow: 1 };
   return obj;
 });
 let closure_24 = createCacheKey.createStyles(() => {
   let obj = { backButton: null };
-  obj = { position: "absolute", marginTop: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4, left: require("../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16, zIndex: 99, alignItems: "center", justifyContent: "center" };
+  obj = { position: "absolute", marginTop: Themes.space.PX_4, left: Themes.space.PX_16, zIndex: 99, alignItems: "center", justifyContent: "center" };
   obj[0] = obj;
   return obj;
 });

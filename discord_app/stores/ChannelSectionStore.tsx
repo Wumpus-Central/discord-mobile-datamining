@@ -1,3 +1,6 @@
+import { SidebarType } from "../modules/sidebar/SidebarActionTypes.tsx";
+import { ComponentDispatcher } from "../utils/ComponentDispatchUtils.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/stores/ChannelSectionStore.tsx
 import getHash from "getHash";
 import handleReaction from "handleReaction";
@@ -30,7 +33,7 @@ function handlePermissionsChange() {
       let tmp15 = dependencyMap[tmp6];
       let tmp16 = require;
       let tmp17 = dependencyMap;
-      if (tmp15.type === require("../modules/sidebar/SidebarActionTypes.tsx") /* SidebarType */.SidebarType.VIEW_THREAD) {
+      if (tmp15.type === SidebarType /* SidebarType */.SidebarType.VIEW_THREAD) {
         let tmp7 = channel;
         channel = channel.getChannel(tmp15.channelId);
         let canResult = null != channel;
@@ -192,7 +195,7 @@ prototype["getCurrentSidebarChannelId"] = function getCurrentSidebarChannelId(ch
   } else {
     let tmp9 = null;
     if (null != dependencyMap[tmp]) {
-      if (tmp8.type !== require("../modules/sidebar/SidebarActionTypes.tsx") /* SidebarType */.SidebarType.VIEW_THREAD) {
+      if (tmp8.type !== SidebarType /* SidebarType */.SidebarType.VIEW_THREAD) {
         if (tmp8.type !== tmp10(5809).SidebarType.VIEW_CHANNEL) {
           channelId = null;
         }
@@ -223,7 +226,7 @@ prototype["getCurrentSidebarMessageId"] = function getCurrentSidebarMessageId(ch
   } else {
     let tmp9 = null;
     if (null != dependencyMap[tmp]) {
-      if (tmp8.type !== require("../modules/sidebar/SidebarActionTypes.tsx") /* SidebarType */.SidebarType.VIEW_THREAD) {
+      if (tmp8.type !== SidebarType /* SidebarType */.SidebarType.VIEW_THREAD) {
         if (tmp8.type !== tmp10(5809).SidebarType.VIEW_CHANNEL) {
           let tmp12 = null;
         }
@@ -258,7 +261,7 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
   },
   CHANNEL_TOGGLE_MEMBERS_SECTION: function handleChannelToggleMembersSection() {
     if (c22) {
-      const ComponentDispatch = require("../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
+      const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
       ComponentDispatch.dispatch(constants2.SEARCH_RESULTS_CLOSE);
     }
     if (c17) {
@@ -364,7 +367,7 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
   },
   USER_PROFILE_SIDEBAR_TOGGLE_SECTION: function handleUserProfileSidebarToggleSection() {
     if (!c19) {
-      const ComponentDispatch = require("../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
+      const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
       ComponentDispatch.dispatch(constants2.SEARCH_RESULTS_CLOSE);
     }
     let flag = false;
@@ -504,7 +507,7 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
   },
   CHANNEL_TOGGLE_CONVERSATIONS_SECTION: function handleChannelToggleConversationsSection() {
     if (c22) {
-      const ComponentDispatch = require("../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
+      const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
       ComponentDispatch.dispatch(constants2.SEARCH_RESULTS_CLOSE);
     }
     let c16 = false;
@@ -546,7 +549,7 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
     let flag = !c18;
     if (!c18) {
       if (c22) {
-        const ComponentDispatch = require("../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
+        const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
         ComponentDispatch.dispatch(constants2.SEARCH_RESULTS_CLOSE);
       }
       let c16 = false;
@@ -584,7 +587,7 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
       obj[1] = channelId;
       obj[2] = details;
       let tmp9 = obj;
-      if (sidebarType === require("../modules/sidebar/SidebarActionTypes.tsx") /* SidebarType */.SidebarType.VIEW_MOD_REPORT) {
+      if (sidebarType === SidebarType /* SidebarType */.SidebarType.VIEW_MOD_REPORT) {
         obj = {};
         const merged = Object.assign(obj);
         obj.baseChannelId = baseChannelId;
@@ -646,7 +649,7 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
     }
     if (null != tmp) {
       const obj = { type: null, parentChannelId: null, parentMessageId: null, location: null };
-      obj[0] = require("../modules/sidebar/SidebarActionTypes.tsx") /* SidebarType */.SidebarType.CREATE_THREAD;
+      obj[0] = SidebarType /* SidebarType */.SidebarType.CREATE_THREAD;
       obj[1] = parentChannelId;
       obj[2] = parentMessageId;
       obj[3] = _location;
@@ -699,7 +702,7 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
           if (tmp14) {
             let tmp12 = require;
             let tmp13 = dependencyMap;
-            tmp14 = tmp18.type === require("../modules/sidebar/SidebarActionTypes.tsx") /* SidebarType */.SidebarType.VIEW_CHANNEL;
+            tmp14 = tmp18.type === SidebarType /* SidebarType */.SidebarType.VIEW_CHANNEL;
           }
           if (tmp14) {
             tmp14 = tmp18.channelId === channel.id;
@@ -738,15 +741,15 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
     } else {
       let tmp5 = null != tmp12;
       if (tmp5) {
-        tmp5 = tmp12.type === require("../modules/sidebar/SidebarActionTypes.tsx") /* SidebarType */.SidebarType.CREATE_THREAD;
+        tmp5 = tmp12.type === SidebarType /* SidebarType */.SidebarType.CREATE_THREAD;
       }
       if (tmp5) {
-        let obj = require("../utils/SnowflakeUtils.tsx");
+        let obj = DISCORD_EPOCH;
         tmp5 = tmp12.parentMessageId === obj.castChannelIdAsMessageId(channel.id);
       }
       if (tmp5) {
         obj = { type: null, channelId: null };
-        obj[0] = require("../modules/sidebar/SidebarActionTypes.tsx") /* SidebarType */.SidebarType.VIEW_THREAD;
+        obj[0] = SidebarType /* SidebarType */.SidebarType.VIEW_THREAD;
         obj[1] = channel.id;
         dependencyMap[channel.parent_id] = obj;
       }
@@ -755,7 +758,7 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
   THREAD_DELETE: function handleThreadDelete(channel) {
     channel = channel.channel;
     if (null != dependencyMap[channel.parent_id]) {
-      if (tmp3.type === require("../modules/sidebar/SidebarActionTypes.tsx") /* SidebarType */.SidebarType.VIEW_THREAD) {
+      if (tmp3.type === SidebarType /* SidebarType */.SidebarType.VIEW_THREAD) {
         if (tmp3.channelId === channel.id) {
           const parent_id = channel.parent_id;
           delete tmp2[tmp];
@@ -770,6 +773,6 @@ const result = set.fileFinishedImporting("stores/ChannelSectionStore.tsx");
 export default channelSectionStore;
 export const MESSAGE_REQUESTS_BASE_CHANNEL_ID = "message_requests";
 export const isViewChannelSidebar = function isViewChannelSidebar(type) {
-  const items = [require("../modules/sidebar/SidebarActionTypes.tsx") /* SidebarType */.SidebarType.VIEW_CHANNEL, require("../modules/sidebar/SidebarActionTypes.tsx") /* SidebarType */.SidebarType.VIEW_THREAD, require("../modules/sidebar/SidebarActionTypes.tsx") /* SidebarType */.SidebarType.VIEW_MESSAGE_REQUEST, require("../modules/sidebar/SidebarActionTypes.tsx") /* SidebarType */.SidebarType.VIEW_MOD_REPORT];
+  const items = [SidebarType /* SidebarType */.SidebarType.VIEW_CHANNEL, SidebarType /* SidebarType */.SidebarType.VIEW_THREAD, SidebarType /* SidebarType */.SidebarType.VIEW_MESSAGE_REQUEST, SidebarType /* SidebarType */.SidebarType.VIEW_MOD_REPORT];
   return items.includes(type.type);
 };

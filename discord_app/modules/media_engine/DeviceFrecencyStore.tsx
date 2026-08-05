@@ -1,3 +1,4 @@
+import { apply } from "../../../_runtime/00012_apply.js";
 // discord_app/modules/media_engine/DeviceFrecencyStore.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -155,7 +156,7 @@ prototype["getUsageStats"] = function getUsageStats() {
 };
 DeviceFrecencyStore.displayName = "DeviceFrecencyStore";
 DeviceFrecencyStore.persistKey = "DeviceFrecencyStore";
-let items = [(arg0) => require("../../../_runtime/00012_apply.js").mapKeys(arg0, (arg0, arg1) => table[arg1])];
+let items = [(arg0) => apply.mapKeys(arg0, (arg0, arg1) => table[arg1])];
 DeviceFrecencyStore.migrations = items;
 const deviceFrecencyStore = new DeviceFrecencyStore(require("dispatcher"), {
   AUDIO_SET_INPUT_DEVICE(oldId) {

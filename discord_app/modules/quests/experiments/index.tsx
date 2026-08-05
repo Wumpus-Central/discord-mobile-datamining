@@ -1,3 +1,5 @@
+import { getQuestOrbMultiplierEligibilityForUser } from "../hooks/QuestOrbMultiplierHooks.tsx";
+import { items } from "../utils/QuestOrbMultiplierUtils.tsx";
 // discord_app/modules/quests/experiments/index.tsx
 import ApexExperiment from "ApexExperiment";
 import ApexExperiment from "ApexExperiment";
@@ -48,9 +50,9 @@ export const MutedVideoQuestNewDefaultsVariant = obj2;
 export const MutedVideoQuestNewDefaultsExperiment = apexExperiment4;
 export const useQuestOrbsMultiplierMarketing = function useQuestOrbsMultiplierMarketing(location) {
   let obj = { location };
-  const questOrbMultiplierEligibility = require("../hooks/QuestOrbMultiplierHooks.tsx") /* getQuestOrbMultiplierEligibilityForUser */.useQuestOrbMultiplierEligibility();
-  const obj2 = require("../hooks/QuestOrbMultiplierHooks.tsx") /* getQuestOrbMultiplierEligibilityForUser */;
-  obj = { shouldShowBonusOrbsUX: questOrbMultiplierEligibility !== require("../utils/QuestOrbMultiplierUtils.tsx") /* items */.QuestOrbMultiplierEligibilityType.INELIGIBLE && questOrbMultiplierEligibility !== require("../utils/QuestOrbMultiplierUtils.tsx") /* items */.QuestOrbMultiplierEligibilityType.CREPE && closure_2.useConfig(obj).enabled, multiplier: tmp(10500).QuestOrbsMultiplier.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100 };
+  const questOrbMultiplierEligibility = getQuestOrbMultiplierEligibilityForUser /* getQuestOrbMultiplierEligibilityForUser */.useQuestOrbMultiplierEligibility();
+  const obj2 = getQuestOrbMultiplierEligibilityForUser /* getQuestOrbMultiplierEligibilityForUser */;
+  obj = { shouldShowBonusOrbsUX: questOrbMultiplierEligibility !== items /* items */.QuestOrbMultiplierEligibilityType.INELIGIBLE && questOrbMultiplierEligibility !== items /* items */.QuestOrbMultiplierEligibilityType.CREPE && closure_2.useConfig(obj).enabled, multiplier: tmp(10500).QuestOrbsMultiplier.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100 };
   return obj;
 };
 export const VideoQuestPlayerRefactorExperiment = apexExperiment5;

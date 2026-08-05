@@ -1,3 +1,5 @@
+import { useChannelPresetSettings } from "../utils/notficationSettingsChannelFlagUtils.tsx";
+import { NotificationSettingsMessageUnreadActionSheet } from "NotificationSettingsMessageUnreadActionSheet.tsx";
 // discord_app/modules/notifications/settings/native/NotificationSettingsMessageUnreadChannelActionSheet.tsx
 import "noop";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
@@ -13,7 +15,7 @@ export default function NotificationSettingsMessageUnreadChannelActionSheet(chan
   let notification;
   let unread;
   const _require = channel;
-  let obj = _require("../utils/notficationSettingsChannelFlagUtils.tsx");
+  let obj = _useChannelPresetSettings;
   const channelPresetSettings = obj.useChannelPresetSettings(channel.channel);
   ({ unread, notification } = channelPresetSettings);
   obj = { value: unread, disabledMentionOnlyWithReason: null, onChange: null };
@@ -35,5 +37,5 @@ export default function NotificationSettingsMessageUnreadChannelActionSheet(chan
     const NotificationLabel = channel(outer1_2[11]).NotificationLabel;
     const result = obj.updateChannelOverrideSettings(channel.channel.guild_id, channel.channel.id, obj, NotificationLabel.unreads(ONLY_MENTIONS));
   };
-  return jsx(require("NotificationSettingsMessageUnreadActionSheet.tsx"), { value: unread, disabledMentionOnlyWithReason: null, onChange: null });
+  return jsx(NotificationSettingsMessageUnreadActionSheet, { value: unread, disabledMentionOnlyWithReason: null, onChange: null });
 };

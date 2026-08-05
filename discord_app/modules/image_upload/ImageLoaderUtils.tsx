@@ -1,3 +1,6 @@
+import { getDevicePixelRatio } from "../../utils/getDevicePixelRatio.native.tsx";
+import { fit } from "../../utils/ImageUtils.tsx";
+import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 // discord_app/modules/image_upload/ImageLoaderUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import fails from "fails";
@@ -45,7 +48,7 @@ function getSrcWithWidthAndHeight(quality) {
     flag2 = false;
   }
   if (!src.startsWith("data:image")) {
-    let obj = require("../../utils/URLUtils.tsx");
+    let obj = isDiscordProxiedAssetUrl;
     if (!obj.isDiscordCdnUrl(src)) {
       const items = [, ];
       [arr[0], tmp6] = callback(src.split("?"), 2);
@@ -81,8 +84,8 @@ function getSrcWithWidthAndHeight(quality) {
       obj[1] = targetHeight;
       obj[2] = closure_6;
       obj[3] = closure_6;
-      const obj3 = require("../../utils/ImageUtils.tsx") /* fit */;
-      ({ width, height } = require("../../utils/ImageUtils.tsx") /* fit */.fit(obj));
+      const obj3 = fit /* fit */;
+      ({ width, height } = fit /* fit */.fit(obj));
       if (width !== sourceWidth) {
         if ((function isAttachmentLadderEnabled(arg0) {
           try {
@@ -446,6 +449,6 @@ export const getImageSrc = function getImageSrc(format) {
     const _Math4 = Math;
     bound1 = Math.min(rounded1, maxHeight);
   }
-  const tmp10 = require("../../utils/getDevicePixelRatio.native.tsx")();
+  const tmp10 = getDevicePixelRatio();
   return getSrcWithWidthAndHeight({ src: format.src, sourceWidth: width, sourceHeight: height, targetWidth: bound * tmp10, targetHeight: bound1 * tmp10, format, quality, animated: flag, srcIsAnimated: flag2 });
 };

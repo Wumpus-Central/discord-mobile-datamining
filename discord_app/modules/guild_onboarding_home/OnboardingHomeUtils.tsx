@@ -1,3 +1,6 @@
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { getFavoritesAwareGuildName } from "../favorites/FavoritesUtils.tsx";
+import { useIsNewMember } from "useIsNewMember.tsx";
 // discord_app/modules/guild_onboarding_home/OnboardingHomeUtils.tsx
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -14,11 +17,11 @@ let result = require("createGuildRecordFromRust").fileFinishedImporting("modules
 
 export const useCanSeeOnboardingHome = function useCanSeeOnboardingHome(guild_id) {
   const _require = guild_id;
-  const tmp = require("useIsNewMember.tsx")(guild_id);
+  const tmp = useIsNewMember(guild_id);
   importDefault = tmp;
   const items = [ensureGuildLoaded, createGuildRecordFromRust, initialize];
   const items1 = [guild_id, tmp];
-  return _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
+  return _defaultAreStatesEqual.useStateFromStores(items, () => {
     if (guild_id !== outer1_8) {
       if (!obj3.isFavoritesGuildId(tmp2)) {
         let has = outer1_5.getGuild(tmp2);
@@ -136,7 +139,7 @@ export const canSeeOnboardingHome = function canSeeOnboardingHome(id) {
           return hasItem1;
         }
       }
-      obj3 = require("../favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
+      obj3 = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
       tmp14 = require;
     }
     return false;

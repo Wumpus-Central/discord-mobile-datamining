@@ -1,3 +1,6 @@
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 // discord_app/modules/premium/native/renderPremiumButtonText.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -20,7 +23,7 @@ function PremiumText(basePlanId) {
   let text;
   ({ style, isCurrentPlan, isGift, product, text } = basePlanId);
   const tmp = createCacheKey();
-  let obj = require("../../../utils/PremiumUtils.tsx");
+  let obj = getPremiumPlanItem;
   const intervalType = obj.getInterval(basePlanId.basePlanId).intervalType;
   let combined = null;
   if (intervalType === constants.YEAR) {
@@ -35,7 +38,7 @@ function PremiumText(basePlanId) {
     obj[0] = tmp.premiumText;
     obj = { style: null, numberOfLines: 1, accessibilityLabel: null, children: null };
     obj[0] = style;
-    const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
     let title;
     if (product != null) {
       title = product.title;
@@ -43,9 +46,9 @@ function PremiumText(basePlanId) {
     const obj1 = { product: null, description: null };
     obj1[0] = title;
     obj1[1] = text;
-    obj[2] = intl3.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.E0lS2r, obj1);
+    obj[2] = intl3.formatToPlainString(getSystemLocale /* getSystemLocale */.t.E0lS2r, obj1);
     obj[3] = text;
-    const items = [closure_7(require("../../../design/void/native.tsx") /* Button */.LegacyText, obj), ];
+    const items = [closure_7(Button /* Button */.LegacyText, obj), ];
     let tmp16Result = null;
     if (null != combined) {
       const obj2 = { style: null, children: null };
@@ -53,7 +56,7 @@ function PremiumText(basePlanId) {
       const obj3 = { style: null, numberOfLines: 1, children: null };
       obj3[0] = style;
       obj3[2] = combined;
-      obj2[1] = tmp16(require("../../../design/void/native.tsx") /* Button */.LegacyText, obj3);
+      obj2[1] = tmp16(Button /* Button */.LegacyText, obj3);
       tmp16Result = tmp16(tmp15, obj2);
     }
     items[1] = tmp16Result;
@@ -68,9 +71,9 @@ function PremiumText(basePlanId) {
       priceString = closure_5;
     }
     if (intervalType !== constants.MONTH) {
-      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl = getSystemLocale /* getSystemLocale */.intl;
       const formatToPlainString = intl.formatToPlainString;
-      let t = require("../../../intl/index.native.tsx") /* getSystemLocale */.t;
+      let t = getSystemLocale /* getSystemLocale */.t;
       if (isGift) {
         const obj4 = { price: null };
         obj4[0] = priceString;
@@ -81,9 +84,9 @@ function PremiumText(basePlanId) {
         formatToPlainStringResult = formatToPlainString(isCurrentPlan ? t.dFbQCa : t["rS8FA+"], obj5);
       }
     }
-    const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
     const formatToPlainString2 = intl2.formatToPlainString;
-    t = require("../../../intl/index.native.tsx") /* getSystemLocale */.t;
+    t = getSystemLocale /* getSystemLocale */.t;
     if (isGift) {
       t = { price: null };
       t[0] = priceString;

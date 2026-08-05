@@ -1,3 +1,4 @@
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 // discord_app/modules/parent_tools/FamilyCenterModels.tsx
 import "toJS";
 
@@ -68,7 +69,7 @@ prototype["isActiveAt"] = function isActiveAt(closure_0, c1) {
             }
           }
           if (sum > sum1) {
-            if (closure_0 === require("../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx") /* create */.DayOfWeek.MONDAY) {
+            if (closure_0 === create /* create */.DayOfWeek.MONDAY) {
               let SUNDAY = tmp6(1892).DayOfWeek.SUNDAY;
             } else {
               SUNDAY = closure_0 - 1;

@@ -1,3 +1,8 @@
+import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { set } from "../../../../utils/PlatformUtils.tsx";
+import { JoinCallButton } from "../channel/ChannelActions.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/HeaderShared.tsx
 import importAllResult from "ChannelHeader";
 import get_ActivityIndicator from "shallowEqual";
@@ -127,7 +132,7 @@ function HeaderChannelActions(arg0) {
   const tmp = callback2();
   const merged = Object.assign(route.params);
   obj.screenIndex = screenIndex;
-  return callback(require("../channel/ChannelActions.tsx"), obj);
+  return callback(JoinCallButton, obj);
 }
 let c3 = importAllResult;
 ({ View: c4, Platform } = get_ActivityIndicator);
@@ -228,7 +233,7 @@ const memoResult = importAllResult.memo(function HeaderInner(style) {
   obj[1] = items1;
   return tmp9(tmp10, obj);
 }, (back, back2) => {
-  let tmpResultResult = require("../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(back, back2, ["back"]);
+  let tmpResultResult = shallowEqual(back, back2, ["back"]);
   if (tmpResultResult) {
     back = back.back;
     if (back == null) {
@@ -238,8 +243,8 @@ const memoResult = importAllResult.memo(function HeaderInner(style) {
     if (back1 == null) {
       back1 = {};
     }
-    tmpResultResult = require("../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(back, back1);
-    const tmpResult = require("../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx");
+    tmpResultResult = shallowEqual(back, back1);
+    const tmpResult = shallowEqual;
   }
   return tmpResultResult;
 });
@@ -272,11 +277,11 @@ export function getRenderBackImage(navigation) {
 }
 export const getRenderModalBackImage = function getRenderModalBackImage(navigation) {
   const _require = navigation;
-  return _require("../../../../utils/PlatformUtils.tsx").isAndroid() ? undefined : (() => outer1_6(outer1_1(outer1_2[12]), { navigation: closure_0 }));
+  return _set.isAndroid() ? undefined : (() => outer1_6(outer1_1(outer1_2[12]), { navigation: closure_0 }));
 };
 export const getRenderModalCloseImage = function getRenderModalCloseImage(navigation) {
   const _require = navigation;
-  return _require("../../../../utils/PlatformUtils.tsx").isAndroid() ? undefined : (() => outer1_6(outer1_1(outer1_2[12]), { navigation: closure_0, type: "close" }));
+  return _set.isAndroid() ? undefined : (() => outer1_6(outer1_1(outer1_2[12]), { navigation: closure_0, type: "close" }));
 };
 export const Header = memoResult;
 export function getDefaultStackHeaderProps(navigation) {
@@ -332,6 +337,6 @@ export const HeaderIconButton = function HeaderIconButton(color) {
   if (tintColor == null) {
     tintColor = tmp.actionButtonIcon.tintColor;
   }
-  obj[4] = closure_6(require("../../../../design/void/native.tsx") /* Button */.Icon, { color: tintColor, source, resizeMode });
-  return closure_6(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  obj[4] = closure_6(Button /* Button */.Icon, { color: tintColor, source, resizeMode });
+  return closure_6(PressableBase /* PressableBase */.PressableOpacity, obj);
 };

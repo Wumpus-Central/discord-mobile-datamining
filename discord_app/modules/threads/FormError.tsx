@@ -1,11 +1,13 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { getAutomodErrorMessageFromErrorResponse } from "../guild_automod/AutomodErrorUtils.tsx";
 // discord_app/modules/threads/FormError.tsx
 let obj = { EmptyContent: 0, [0]: "EmptyContent", AutomodViolation: 1, [1]: "AutomodViolation", ApiValidation: 2, [2]: "ApiValidation" };
 const result = require("set").fileFinishedImporting("modules/threads/FormError.tsx");
 
 export const FormSubmitErrorType = obj;
 export const makeEmptyTitleError = function makeEmptyTitleError() {
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  let stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.uXA573);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.uXA573);
   obj = { type: obj.EmptyContent, message: null };
   if (stringResult == null) {
     stringResult = null;
@@ -14,8 +16,8 @@ export const makeEmptyTitleError = function makeEmptyTitleError() {
   return obj;
 };
 export const makeEmptyMessageError = function makeEmptyMessageError() {
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  let stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.kesTVT);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.kesTVT);
   obj = { type: obj.EmptyContent, message: null };
   if (stringResult == null) {
     stringResult = null;
@@ -24,8 +26,8 @@ export const makeEmptyMessageError = function makeEmptyMessageError() {
   return obj;
 };
 export const makeApiNameRequiredError = function makeApiNameRequiredError() {
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  let stringResult = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.uXA573);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.uXA573);
   obj = { type: obj.ApiValidation, message: null };
   if (stringResult == null) {
     stringResult = null;
@@ -34,7 +36,7 @@ export const makeApiNameRequiredError = function makeApiNameRequiredError() {
   return obj;
 };
 export const makeAutomodViolationError = function makeAutomodViolationError(errorResponseBody, id) {
-  let obj = require("../guild_automod/AutomodErrorUtils.tsx") /* getAutomodErrorMessageFromErrorResponse */;
+  let obj = getAutomodErrorMessageFromErrorResponse /* getAutomodErrorMessageFromErrorResponse */;
   id = undefined;
   if (id != null) {
     id = id.id;

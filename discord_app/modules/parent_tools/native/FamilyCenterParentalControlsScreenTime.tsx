@@ -1,3 +1,4 @@
+import { messagesProxy } from "../FamilyCenter.messages.js";
 // discord_app/modules/parent_tools/native/FamilyCenterParentalControlsScreenTime.tsx
 import { View } from "get ActivityIndicator";
 import { UserSettingsSections } from "ME";
@@ -21,7 +22,7 @@ function ScheduleRuleRow(rule) {
   obj = { label: scheduleRuleDateRange, subLabel: rule(9670).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
   const intl = rule(1236).intl;
   const string = intl.string;
-  const tmp4 = require("../FamilyCenter.messages.js");
+  const tmp4 = messagesProxy;
   if (rule.enabled) {
     let stringResult = string(tmp4["8vDHRq"]);
   } else {

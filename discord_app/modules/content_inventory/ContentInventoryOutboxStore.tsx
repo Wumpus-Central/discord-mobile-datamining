@@ -1,3 +1,4 @@
+import { isMatchingListeningActivity } from "matchUtils.tsx";
 // discord_app/modules/content_inventory/ContentInventoryOutboxStore.tsx
 import { Store } from "initialize";
 import set from "dispatcher";
@@ -16,7 +17,7 @@ prototype["getMatchingOutboxEntry"] = function getMatchingOutboxEntry(activity) 
   const value = map.get(activity.userId);
   if (null != value) {
     if (null != activity) {
-      return require("matchUtils.tsx") /* isMatchingListeningActivity */.findMatchingEntry(value.entries, activity);
+      return isMatchingListeningActivity /* isMatchingListeningActivity */.findMatchingEntry(value.entries, activity);
     }
   }
 };

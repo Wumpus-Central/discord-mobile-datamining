@@ -1,3 +1,4 @@
+import { Sample } from "../../design_system/native/UserSettingsDesignSystemTextInput.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemsTextInputSetting.tsx
 import createToggle from "createToggle";
 
@@ -11,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_TEXT_INPUT,
   getComponent() {
-    return require("../../design_system/native/UserSettingsDesignSystemTextInput.tsx") /* Sample */.default;
+    return Sample /* Sample */.default;
   }
 };
 const route = createToggle.createRoute(obj);

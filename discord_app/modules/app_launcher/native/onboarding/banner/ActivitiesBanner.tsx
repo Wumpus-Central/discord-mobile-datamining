@@ -1,3 +1,5 @@
+import { useActivityApplications } from "../hooks/useActivityApplications.tsx";
+import { BannerBase } from "BannerBase.tsx";
 // discord_app/modules/app_launcher/native/onboarding/banner/ActivitiesBanner.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
@@ -9,7 +11,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/na
 export default function ActivitiesBanner(context) {
   let tmp4;
   let tmp5;
-  let obj = require("../hooks/useActivityApplications.tsx") /* useActivityApplications */;
+  let obj = useActivityApplications /* useActivityApplications */;
   obj = { guildId: context.context.channel.guild_id, fetchesShelf: false };
   [tmp4, tmp5] = callback(obj.useActivityApplications(obj), 2);
   let tmp6Result = null;
@@ -22,8 +24,8 @@ export default function ActivitiesBanner(context) {
       const obj1 = { activityName: null };
       obj1[0] = tmp4.name;
       obj[1] = intl.formatToPlainString(tmp(1236).t.zHMWuV, obj1);
-      tmp6Result = jsx(require("BannerBase.tsx"), { image: null, text: null });
-      const tmp7Result = require("BannerBase.tsx");
+      tmp6Result = jsx(BannerBase, { image: null, text: null });
+      const tmp7Result = BannerBase;
     }
   }
   return tmp6Result;

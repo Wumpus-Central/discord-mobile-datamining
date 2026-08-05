@@ -1,3 +1,8 @@
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { TableRowInner } from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getApplicationCommandsIconSource } from "ApplicationCommandUtils.tsx";
 // discord_app/modules/application_commands/native/ContextMenuCommandItem.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -62,7 +67,7 @@ export const ContextMenuCommandLoadingItem = function ContextMenuCommandLoadingI
   obj = { style: null };
   const items = [tmp.loadingName, ];
   obj = { width: null };
-  obj[0] = "" + require("../../../../_runtime/00012_apply.js").random(60, 80) + "%";
+  obj[0] = "" + apply.random(60, 80) + "%";
   items[1] = obj;
   obj[0] = items;
   obj[0] = <View width={null} />;
@@ -71,21 +76,21 @@ export const ContextMenuCommandLoadingItem = function ContextMenuCommandLoadingI
   obj[1] = <View style={items1} />;
   obj[2] = start;
   obj[3] = end;
-  return jsx(require("../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, { width: null });
+  return jsx(TableRowInner /* TableRowInner */.TableRow, { width: null });
 };
 export const ContextMenuCommandEmptyItem = function ContextMenuCommandEmptyItem(arg0) {
   let end;
   let start;
   ({ start, end } = arg0);
   const obj = { label: null, icon: null, start: null, end: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.YSNlV2);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.YSNlV2);
   const items = [, ];
   ({ commandIcon: arr[0], loadingIcon: arr[1] } = createCacheKey());
   obj[1] = <View style={items} />;
   obj[2] = start;
   obj[3] = end;
-  return jsx(require("../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, { label: null, icon: null, start: null, end: null });
+  return jsx(TableRowInner /* TableRowInner */.TableRow, { label: null, icon: null, start: null, end: null });
 };
 export const ContextMenuCommandAppItem = function ContextMenuCommandAppItem(section) {
   let end;
@@ -93,7 +98,7 @@ export const ContextMenuCommandAppItem = function ContextMenuCommandAppItem(sect
   let start;
   section = section.section;
   ({ onPress, start, end } = section);
-  let obj = require("ApplicationCommandUtils.tsx") /* getApplicationCommandsIconSource */;
+  let obj = getApplicationCommandsIconSource /* getApplicationCommandsIconSource */;
   const applicationCommandsIconSource = obj.getApplicationCommandsIconSource(section);
   obj = { onPress, label: section.name, icon: null, start: null, end: null, arrow: true };
   let tmp4Result = null != applicationCommandsIconSource;
@@ -101,10 +106,10 @@ export const ContextMenuCommandAppItem = function ContextMenuCommandAppItem(sect
     obj = { style: null, source: null };
     obj[0] = tmp.commandIcon;
     obj[1] = applicationCommandsIconSource;
-    tmp4Result = tmp4(require("../../../components_native/common/FastImage.tsx"), obj);
+    tmp4Result = tmp4(preload, obj);
   }
   obj[2] = tmp4Result;
   obj[3] = start;
   obj[4] = end;
-  return jsx(require("../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, { onPress, label: section.name, icon: null, start: null, end: null, arrow: true });
+  return jsx(TableRowInner /* TableRowInner */.TableRow, { onPress, label: section.name, icon: null, start: null, end: null, arrow: true });
 };

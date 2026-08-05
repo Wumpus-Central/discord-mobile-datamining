@@ -1,3 +1,11 @@
+import { registerAsset } from "../../../../../_runtime/07776_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/07811_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/07812_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/07813_registerAsset.js";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { ScrollHandlingActionSheet } from "ScrollHandlingActionSheet.tsx";
 // discord_app/modules/stage_channels/native/components/StageAudienceNotificationSheet.tsx
 import "registerAsset";
 import { View } from "registerAsset";
@@ -11,15 +19,15 @@ let error;
 let metroImportAll;
 const require = arg1;
 function handleDismiss() {
-  require("../../../action_sheet/native/ActionSheetActionCreators.tsx").hideActionSheet(closure_5);
+  ACTION_SHEET_HEIGHT_HALF.hideActionSheet(closure_5);
 }
 function BulletIcon(source) {
   const tmp = createCacheKey();
   let obj = { style: tmp.headerBulletIconContainer, children: null };
   obj = { source: source.source, size: null, style: null };
-  obj[1] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.MEDIUM;
+  obj[1] = Button /* Button */.Icon.Sizes.MEDIUM;
   obj[2] = tmp.headerBulletIconComponent;
-  obj[1] = callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj);
+  obj[1] = callback(Button /* Button */.Icon, obj);
   return callback(View, obj);
 }
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
@@ -48,10 +56,10 @@ export default function StageAudienceNotificationSheet(channelId) {
   obj = { style: tmp.header, children: null };
   const obj1 = { source: null, style: null };
   const tmp7 = importDefault;
-  const tmp8 = require("ScrollHandlingActionSheet.tsx");
-  obj1[0] = require("../../../../../_runtime/07776_registerAsset.js");
+  const tmp8 = ScrollHandlingActionSheet;
+  obj1[0] = registerAsset;
   obj1[1] = tmp.headerImage;
-  const items1 = [callback(require("../../../../components_native/common/FastImage.tsx"), obj1), , ];
+  const items1 = [callback(preload, obj1), , ];
   const obj2 = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1236).intl;
   obj2[4] = intl.string(channelId(1236).t.UVuXCs);
@@ -59,7 +67,7 @@ export default function StageAudienceNotificationSheet(channelId) {
   const obj3 = { style: tmp.headerBulletList, children: null };
   const obj4 = { leading: null, label: null };
   const obj5 = { source: null };
-  obj5[0] = require("../../../../../_runtime/07811_registerAsset.js");
+  obj5[0] = registerAsset;
   obj4[0] = callback(BulletIcon, obj5);
   const obj6 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = tmp2(1236).intl;
@@ -68,7 +76,7 @@ export default function StageAudienceNotificationSheet(channelId) {
   const items2 = [callback(channelId(7777).FormRow, obj4), , , ];
   const obj7 = { leading: null, label: null };
   const obj8 = { source: null };
-  obj8[0] = require("../../../../../_runtime/07812_registerAsset.js");
+  obj8[0] = registerAsset;
   obj7[0] = callback(BulletIcon, obj8);
   const obj9 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
   const intl3 = tmp2(1236).intl;
@@ -77,7 +85,7 @@ export default function StageAudienceNotificationSheet(channelId) {
   items2[1] = callback(channelId(7777).FormRow, obj7);
   const obj10 = { leading: null, label: null };
   const obj11 = { source: null };
-  obj11[0] = require("../../../../../_runtime/07813_registerAsset.js");
+  obj11[0] = registerAsset;
   obj10[0] = callback(BulletIcon, obj11);
   const obj12 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
   const intl4 = tmp2(1236).intl;

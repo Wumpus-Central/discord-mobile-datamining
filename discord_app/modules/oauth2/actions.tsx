@@ -1,3 +1,6 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { getAuthenticationPath } from "../../../discord_common/js/shared/utils/PathUtils.tsx";
+import { handleLogout } from "../../actions/AuthenticationActionCreators.tsx";
 // discord_app/modules/oauth2/actions.tsx
 import handleLogout from "handleLogout";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -363,10 +366,10 @@ const result = require("handleConnectionOpen").fileFinishedImporting("modules/oa
 
 export { getLocationContextServer };
 export const acceptWhitelist = function acceptWhitelist(token) {
-  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   obj = { url: obj.OAUTH2_WHITELIST_ACCEPT, query: obj, oldFormErrors: true, rejectWithError: null };
   obj = { token };
-  obj[3] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+  obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
   return HTTP.post(obj);
 };
 export const authorize = function authorize() {
@@ -410,8 +413,8 @@ export const fetchChannels = function fetchChannels(closure_0) {
   return applyArgumentsResult;
 };
 export const logoutWithRedirect = function logoutWithRedirect(pathname, login_required_account_manager) {
-  const obj = require("../../actions/AuthenticationActionCreators.tsx");
-  obj.logout(login_required_account_manager, require("../../../discord_common/js/shared/utils/PathUtils.tsx") /* getAuthenticationPath */.getLoginPath(pathname.pathname + pathname.search, false));
+  const obj = handleLogout;
+  obj.logout(login_required_account_manager, getAuthenticationPath /* getAuthenticationPath */.getLoginPath(pathname.pathname + pathname.search, false));
 };
 export const verifyUserCode = function verifyUserCode(outer1_0) {
   const self = this;

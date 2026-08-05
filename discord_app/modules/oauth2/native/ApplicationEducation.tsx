@@ -1,3 +1,6 @@
+import { set } from "../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useIsSocialLayerParentApplication } from "../../applications/useIsSocialLayerParentApplication.tsx";
 // discord_app/modules/oauth2/native/ApplicationEducation.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -21,7 +24,7 @@ function ApplicationEducationEntry(children) {
   }
   const items = [iconComponentResult, ];
   obj = { variant: "text-md/normal", style: tmp.entryText, children: children.text };
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items;
   return closure_6(View, obj);
 }
@@ -37,8 +40,8 @@ export default function ApplicationEducation(arg0) {
   let application;
   ({ application, accountScopes } = arg0);
   const items = [];
-  const tmp3 = require("../../applications/useIsSocialLayerParentApplication.tsx")(application);
-  if (accountScopes.includes(require("../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx") /* set */.OAuth2Scopes.SDK_SOCIAL_LAYER)) {
+  const tmp3 = useIsSocialLayerParentApplication(application);
+  if (accountScopes.includes(set /* set */.OAuth2Scopes.SDK_SOCIAL_LAYER)) {
     const intl5 = tmp4(1236).intl;
     if (tmp3) {
       let obj = { applicationName: null };

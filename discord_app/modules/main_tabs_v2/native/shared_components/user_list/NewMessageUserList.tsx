@@ -1,3 +1,5 @@
+import { fuzzysearch } from "../../../../../../_runtime/05197_fuzzysearch.js";
+import { computeChannelName } from "../../../../channel/useChannelName.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/NewMessageUserList.tsx
 import _slicedToArray from "_slicedToArray";
 import NoResults from "NoResults";
@@ -25,7 +27,7 @@ function matchGroupDMRecipients(trimmed1, recipients) {
       let tmp19 = importDefault;
       let tmp20 = dependencyMap;
       let toLocaleLowerCaseResult = username.toLocaleLowerCase();
-      if (require("../../../../../../_runtime/05197_fuzzysearch.js")(trimmed1, toLocaleLowerCaseResult)) {
+      if (fuzzysearch(trimmed1, toLocaleLowerCaseResult)) {
         let tmp16 = obj;
         obj.return();
         let num3 = 1;
@@ -73,12 +75,12 @@ function matchGroupDM(id, trimmed1) {
   if ("" === trimmed1) {
     return 0;
   } else {
-    const channelName = require("../../../../channel/useChannelName.tsx") /* computeChannelName */.computeChannelName(id, mergeGuildAvatar, upsertRelationship);
+    const channelName = computeChannelName /* computeChannelName */.computeChannelName(id, mergeGuildAvatar, upsertRelationship);
     const toLocaleLowerCaseResult = channelName.toLocaleLowerCase();
     let num = 3;
     if (!toLocaleLowerCaseResult.startsWith(trimmed1)) {
       let num2 = 2;
-      if (!require("../../../../../../_runtime/05197_fuzzysearch.js")(trimmed1, toLocaleLowerCaseResult)) {
+      if (!fuzzysearch(trimmed1, toLocaleLowerCaseResult)) {
         num2 = matchGroupDMRecipients(trimmed1, id);
       }
       num = num2;

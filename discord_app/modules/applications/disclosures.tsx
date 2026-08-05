@@ -1,3 +1,4 @@
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx";
 // discord_app/modules/applications/disclosures.tsx
 import set from "set";
 import { Endpoints } from "ME";
@@ -133,7 +134,7 @@ export const ackDisclosures = function ackDisclosures(closure_0, outer1_50) {
   return applyArgumentsResult;
 };
 export const getTextForDisclosure = function getTextForDisclosure(toFixed) {
-  if (require("../../../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx") /* create */.ApplicationDisclosureType.IP_LOCATION === toFixed) {
+  if (create /* create */.ApplicationDisclosureType.IP_LOCATION === toFixed) {
     const intl2 = tmp(1236).intl;
     return intl2.string(tmp(1236).t["6wPmjo"]);
   } else if (tmp(10428).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === toFixed) {

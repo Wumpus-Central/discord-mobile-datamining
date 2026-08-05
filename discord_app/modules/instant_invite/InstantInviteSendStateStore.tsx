@@ -1,3 +1,4 @@
+import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/instant_invite/InstantInviteSendStateStore.tsx
 import keys from "keys";
 
@@ -9,7 +10,7 @@ export const setSendState = function setSendState(arg0, arg1, arg2) {
   const dependencyMap = arg1;
   let obj = arg2;
   const state = obj.getState();
-  obj = _require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx");
+  obj = _batchUpdates;
   obj.batchUpdates(() => {
     let obj = {};
     const merged = Object.assign(table);

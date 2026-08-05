@@ -1,3 +1,7 @@
+import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
+import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
+import { dismissGlobalKeyboard } from "../../../../utils/native/KeyboardManagerUtils.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/emoji_picker/native/components/openEmojiActionSheet.tsx
 import { EMOJI_URL_BASE_SIZE } from "set";
 
@@ -15,17 +19,17 @@ export const openEmojiActionSheet = function openEmojiActionSheet(uniqueName) {
         const _HermesInternal = HermesInternal;
         obj[1] = ":" + name + ":";
       }
-      const result = require("../../../../utils/native/KeyboardManagerUtils.tsx") /* dismissGlobalKeyboard */.dismissGlobalKeyboard();
-      const obj6 = require("../../../action_sheet/native/ActionSheetActionCreators.tsx");
+      const result = dismissGlobalKeyboard /* dismissGlobalKeyboard */.dismissGlobalKeyboard();
+      const obj6 = ACTION_SHEET_HEIGHT_HALF;
       obj = { emojiNode: null };
       obj[0] = obj;
-      obj6.openLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(8656, dependencyMap.paths), "MessageEmojiActionSheet", obj, "stack");
+      obj6.openLazy(asyncRequireImpl /* asyncRequireImpl */(8656, dependencyMap.paths), "MessageEmojiActionSheet", obj, "stack");
     }
     obj = { id: null, alt: null, src: null };
     obj[0] = uniqueName.id;
     obj[1] = name;
     if (null != uniqueName.id) {
-      let obj1 = require("../../../../utils/AvatarUtils.tsx");
+      let obj1 = getAvatarURL;
       obj1 = { id: null, animated: null, size: null };
       ({ id: obj3[0], animated: obj3[1] } = uniqueName);
       obj1[2] = EMOJI_URL_BASE_SIZE;

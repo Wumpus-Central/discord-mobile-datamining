@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCustomStatus.tsx
 import closure_3 from "HAPPENING_NOW_PANELS_CONTAINER_PADDING";
 import _slicedToArray from "_slicedToArray";
@@ -45,7 +46,7 @@ let closure_18 = createCacheKey.createStyles((arg0) => {
     num = 12;
   }
   obj[5] = { justifyContent: "center", paddingLeft: num };
-  obj[6] = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, justifyContent: "center", alignItems: "center", borderRadius: require("../../../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, overflow: "hidden" };
+  obj[6] = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, justifyContent: "center", alignItems: "center", borderRadius: Themes.radii.sm, overflow: "hidden" };
   return obj;
 });
 const result = require("noop").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCustomStatus.tsx");

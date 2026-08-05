@@ -1,3 +1,4 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/icymi/native/ICYMIGuildEventRow.tsx
 import DISCORD_EPOCH from "DISCORD_EPOCH";
 import get_ActivityIndicator from "useGuildScheduledEventUserCount";
@@ -178,19 +179,19 @@ function ICYMIGuildEventRow(event) {
 let closure_13 = createICYMIStyles.createICYMIStyles((margin) => {
   obj = { container: obj, card: null, title: null, timeAndUserPillContainer: null, separator: null, eventsChannelIcon: null, infoContainer: null, locationContainer: null };
   obj = { marginHorizontal: margin.margin, marginBottom: margin.margin, marginLeft: margin.margin + margin.inset };
-  obj = { marginTop: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
+  obj = { marginTop: Themes.space.PX_12 };
   obj[1] = obj;
-  obj[2] = { marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
-  const obj1 = { marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
-  obj[3] = { flexDirection: "row", alignItems: "center", marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, justifyContent: "space-between" };
-  const obj2 = { flexDirection: "row", alignItems: "center", marginBottom: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, justifyContent: "space-between" };
-  obj[4] = { height: 1, width: "100%", backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE, marginVertical: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
-  const obj3 = { height: 1, width: "100%", backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE, marginVertical: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_12 };
-  obj[5] = { tintColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_DEFAULT };
-  const obj4 = { tintColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_DEFAULT };
-  obj[6] = { gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
-  const obj5 = { gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
-  obj[7] = { alignItems: "center", flexDirection: "row", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  obj[2] = { marginBottom: Themes.space.PX_4 };
+  const obj1 = { marginBottom: Themes.space.PX_4 };
+  obj[3] = { flexDirection: "row", alignItems: "center", marginBottom: Themes.space.PX_8, justifyContent: "space-between" };
+  const obj2 = { flexDirection: "row", alignItems: "center", marginBottom: Themes.space.PX_8, justifyContent: "space-between" };
+  obj[4] = { height: 1, width: "100%", backgroundColor: Themes.colors.BORDER_SUBTLE, marginVertical: Themes.space.PX_12 };
+  const obj3 = { height: 1, width: "100%", backgroundColor: Themes.colors.BORDER_SUBTLE, marginVertical: Themes.space.PX_12 };
+  obj[5] = { tintColor: Themes.colors.INTERACTIVE_TEXT_DEFAULT };
+  const obj4 = { tintColor: Themes.colors.INTERACTIVE_TEXT_DEFAULT };
+  obj[6] = { gap: Themes.space.PX_4 };
+  const obj5 = { gap: Themes.space.PX_4 };
+  obj[7] = { alignItems: "center", flexDirection: "row", gap: Themes.space.PX_8 };
   return obj;
 });
 let result = require("scheduledEventSort").fileFinishedImporting("modules/icymi/native/ICYMIGuildEventRow.tsx");

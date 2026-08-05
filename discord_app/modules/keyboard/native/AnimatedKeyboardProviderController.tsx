@@ -1,3 +1,5 @@
+import { KeyboardChatScrollView } from "../../../../_runtime/01595_KeyboardChatScrollView.js";
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/keyboard/native/AnimatedKeyboardProviderController.tsx
 import jsxProd from "jsxProd";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
@@ -14,7 +16,7 @@ let closure_6 = { code: "function AnimatedKeyboardProviderControllerTsx1(e){cons
 let closure_7 = { code: "function AnimatedKeyboardProviderControllerTsx2(e){const{animatedKeyboardHeight}=this.__closure;animatedKeyboardHeight.set(e.height);}" };
 let closure_8 = { code: "function AnimatedKeyboardProviderControllerTsx3(e){const{animatedKeyboardState,KeyboardState,animatedKeyboardHeight}=this.__closure;animatedKeyboardState.set(e.height===0?KeyboardState.CLOSED:KeyboardState.OPEN);animatedKeyboardHeight.set(e.height);}" };
 let closure_9 = require("noop").memo(() => {
-  let obj = require("../../../../_runtime/01595_KeyboardChatScrollView.js") /* KeyboardChatScrollView */;
+  let obj = KeyboardChatScrollView /* KeyboardChatScrollView */;
   obj = { onStart: null, onMove: null, onEnd: null };
   const fn = function o(height) {
     if (0 === height.height) {
@@ -24,7 +26,7 @@ let closure_9 = require("noop").memo(() => {
     }
     const result = store2.set(OPEN);
   };
-  obj = { animatedKeyboardState: mutable1, KeyboardState: require("../../reanimated/ReanimatedRexport.tsx").KeyboardState };
+  obj = { animatedKeyboardState: mutable1, KeyboardState: ReanimatedRexport.KeyboardState };
   fn.__closure = obj;
   fn.__workletHash = 12130162639136;
   fn.__initData = closure_6;
@@ -45,7 +47,7 @@ let closure_9 = require("noop").memo(() => {
     const result = store2.set(OPEN);
     const result1 = store.set(height.height);
   };
-  fn3.__closure = { animatedKeyboardState: mutable1, KeyboardState: require("../../reanimated/ReanimatedRexport.tsx").KeyboardState, animatedKeyboardHeight: mutable };
+  fn3.__closure = { animatedKeyboardState: mutable1, KeyboardState: ReanimatedRexport.KeyboardState, animatedKeyboardHeight: mutable };
   fn3.__workletHash = 10688534401196;
   fn3.__initData = closure_8;
   obj[2] = fn3;
@@ -57,7 +59,7 @@ let obj = {
     const obj = { enabled: true, navigationBarTranslucent: true, preserveEdgeToEdge: true, statusBarTranslucent: true, children: null };
     const items = [children.children, callback(closure_9, {})];
     obj[4] = items;
-    return callback2(require("../../../../_runtime/01595_KeyboardChatScrollView.js") /* KeyboardChatScrollView */.KeyboardProvider, obj);
+    return callback2(KeyboardChatScrollView /* KeyboardChatScrollView */.KeyboardProvider, obj);
   },
   animatedKeyboardHeight: mutable,
   animatedKeyboardState: mutable1

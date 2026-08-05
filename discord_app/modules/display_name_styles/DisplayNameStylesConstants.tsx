@@ -1,3 +1,4 @@
+import { DisplayNameEffect } from "../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
 // discord_app/modules/display_name_styles/DisplayNameStylesConstants.tsx
 let items = [require("DisplayNameEffect").DisplayNameEffect.SOLID, require("DisplayNameEffect").DisplayNameEffect.GRADIENT, require("DisplayNameEffect").DisplayNameEffect.NEON, require("DisplayNameEffect").DisplayNameEffect.TOON, require("DisplayNameEffect").DisplayNameEffect.POP];
 const items1 = [require("DisplayNameFont").DisplayNameFont.PLAYPEN_SANS, require("DisplayNameFont").DisplayNameFont.ORBITRON, require("DisplayNameFont").DisplayNameFont.NEW_ROCKER, require("DisplayNameFont").DisplayNameFont.KALAM];
@@ -20,7 +21,7 @@ export const DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS = 0.72;
 export const MIN_PRISM_GRADIENT_WIDTH = 38;
 export const DISPLAY_NAME_STYLES_PRISM_PRESETS = items6;
 export const getColorPresetsForEffect = function getColorPresetsForEffect(arg0) {
-  if (require("../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx") /* DisplayNameEffect */.DisplayNameEffect.GUMMY === arg0) {
+  if (DisplayNameEffect /* DisplayNameEffect */.DisplayNameEffect.GUMMY === arg0) {
     return items5;
   } else if (tmp(1887).DisplayNameEffect.PRISM === arg0) {
     return items6;

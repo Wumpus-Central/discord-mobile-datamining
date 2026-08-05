@@ -1,3 +1,4 @@
+import { transformUser } from "../../helpers/transformUser.tsx";
 // discord_app/modules/rpc/server/commands/users.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
@@ -15,7 +16,7 @@ obj = {
     user = user.getUser(args.args.id);
     let tmp2 = null;
     if (null != user) {
-      tmp2 = require("../../helpers/transformUser.tsx")(user);
+      tmp2 = transformUser(user);
     }
     return tmp2;
   }

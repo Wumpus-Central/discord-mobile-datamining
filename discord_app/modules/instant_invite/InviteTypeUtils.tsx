@@ -1,3 +1,4 @@
+import { getEstablishedDate } from "../guild_profile/GuildProfileUtils.tsx";
 // discord_app/modules/instant_invite/InviteTypeUtils.tsx
 import { isEventUpcoming } from "scheduledEventSort";
 import createChannelRecord from "createChannelRecord";
@@ -97,7 +98,7 @@ export const getGuildInviteExtendedType = function getGuildInviteExtendedType(in
   } else if (invite.target_type === constants.EMBEDDED_APPLICATION) {
     PROFILE = obj.APPLICATION;
   } else {
-    obj = require("../guild_profile/GuildProfileUtils.tsx") /* getEstablishedDate */;
+    obj = getEstablishedDate /* getEstablishedDate */;
     if (obj.guildInviteCanEmbedProfile(invite)) {
       PROFILE = obj.PROFILE;
     } else {

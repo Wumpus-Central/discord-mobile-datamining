@@ -1,3 +1,4 @@
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/home_drawer/native/HomeDrawerStore.tsx
 import { DM_WIDTH } from "ME";
 import identity from "identity";
@@ -6,12 +7,12 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   const _require = arg0;
   const dependencyMap = arg1;
   let obj = { panelX: null, gestureState: null, maxX: 0, lastInteractionAt: null, isPanelTouchActive: null, setPanelX: null, updateMaxX: null, noteInteraction: null };
-  obj[0] = _require("../../reanimated/ReanimatedRexport.tsx").makeMutable(0);
-  const obj2 = _require("../../reanimated/ReanimatedRexport.tsx");
-  obj[1] = _require("../../reanimated/ReanimatedRexport.tsx").makeMutable({ active: false, initialX: 0, initialY: 0, panelX: 0 });
+  obj[0] = _ReanimatedRexport.makeMutable(0);
+  const obj2 = _ReanimatedRexport;
+  obj[1] = _ReanimatedRexport.makeMutable({ active: false, initialX: 0, initialY: 0, panelX: 0 });
   obj[3] = { current: 0 };
-  const obj3 = _require("../../reanimated/ReanimatedRexport.tsx");
-  obj[4] = _require("../../reanimated/ReanimatedRexport.tsx").makeMutable(false);
+  const obj3 = _ReanimatedRexport;
+  obj[4] = _ReanimatedRexport.makeMutable(false);
   obj[5] = function setPanelX(arg0) {
     let gestureState;
     let panelX;

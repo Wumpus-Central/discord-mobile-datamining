@@ -1,3 +1,4 @@
+import { ChannelActionCreators } from "ChannelActionCreators.tsx";
 // discord_app/actions/ActivitiesActionCreators.tsx
 import sendRequest from "sendRequest";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -120,8 +121,8 @@ export default {
     let require;
     const self = this;
     ({ type: importDefault, activity: dependencyMap, content: sendRequest, location: require } = userId);
-    const obj = require("ChannelActionCreators.tsx");
-    return require("ChannelActionCreators.tsx").ensurePrivateChannel(userId.userId).then((channelId) => self.sendActivityInvite({ channelId, type: closure_1, activity: closure_2, content: sendRequest, location: closure_0 }));
+    const obj = ChannelActionCreators;
+    return ChannelActionCreators.ensurePrivateChannel(userId.userId).then((channelId) => self.sendActivityInvite({ channelId, type: closure_1, activity: closure_2, content: sendRequest, location: closure_0 }));
   },
   getJoinSecret(arg0, arg1, arg2, arg3, arg4) {
     let closure_0 = arg0;

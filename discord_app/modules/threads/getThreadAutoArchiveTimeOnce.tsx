@@ -1,3 +1,5 @@
+import { set } from "../../utils/Durations.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/threads/getThreadAutoArchiveTimeOnce.tsx
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 
@@ -8,14 +10,14 @@ export default function getThreadAutoArchiveTimeOnce(threadMetadata) {
     return 0;
   } else {
     let num3 = 0;
-    const result = threadMetadata.threadMetadata.autoArchiveDuration * require("../../utils/Durations.tsx").Millis.MINUTE;
+    const result = threadMetadata.threadMetadata.autoArchiveDuration * set.Millis.MINUTE;
     if (null != threadMetadata.threadMetadata) {
       let id = generateOldThreadCutoff.lastMessageId(threadMetadata.id);
       if (id == null) {
         id = threadMetadata.id;
       }
       let num = 0;
-      const tmp12Result = require("../../utils/SnowflakeUtils.tsx");
+      const tmp12Result = DISCORD_EPOCH;
       if (null != threadMetadata.lastNonMessageActivityTimestamp) {
         const _Date = Date;
         const date = new Date(threadMetadata.lastNonMessageActivityTimestamp);
@@ -28,8 +30,8 @@ export default function getThreadAutoArchiveTimeOnce(threadMetadata) {
         num2 = date1.getTime();
       }
       const _Math = Math;
-      num3 = Math.max(require("../../utils/SnowflakeUtils.tsx").extractTimestamp(id), num, num2);
-      const extractTimestampResult = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(id);
+      num3 = Math.max(DISCORD_EPOCH.extractTimestamp(id), num, num2);
+      const extractTimestampResult = DISCORD_EPOCH.extractTimestamp(id);
     }
     return num3 + result;
   }
@@ -43,7 +45,7 @@ export const getThreadLastActivityTime = function getThreadLastActivityTime(thre
       id = threadMetadata.id;
     }
     let num = 0;
-    const obj = require("../../utils/SnowflakeUtils.tsx");
+    const obj = DISCORD_EPOCH;
     if (null != threadMetadata.lastNonMessageActivityTimestamp) {
       const _Date = Date;
       const date = new Date(threadMetadata.lastNonMessageActivityTimestamp);
@@ -56,6 +58,6 @@ export const getThreadLastActivityTime = function getThreadLastActivityTime(thre
       num2 = date1.getTime();
     }
     const _Math = Math;
-    return Math.max(require("../../utils/SnowflakeUtils.tsx").extractTimestamp(id), num, num2);
+    return Math.max(DISCORD_EPOCH.extractTimestamp(id), num, num2);
   }
 };

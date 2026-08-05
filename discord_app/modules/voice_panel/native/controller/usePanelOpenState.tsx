@@ -1,3 +1,4 @@
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 // discord_app/modules/voice_panel/native/controller/usePanelOpenState.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -22,7 +23,7 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
     const state = first.getState();
     return state.closeChannel(closure_0);
   }
-  let obj = _require("../../../reanimated/ReanimatedRexport.tsx");
+  let obj = _ReanimatedRexport;
   const fn = function f() {
     return { connected: connected.get() };
   };
@@ -46,7 +47,7 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
       return;
     }
   }
-  obj = { runOnJS: _require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, doCloseChannel };
+  obj = { runOnJS: _ReanimatedRexport.runOnJS, doCloseChannel };
   O.__closure = obj;
   O.__workletHash = 9166012598595;
   O.__initData = closure_10;

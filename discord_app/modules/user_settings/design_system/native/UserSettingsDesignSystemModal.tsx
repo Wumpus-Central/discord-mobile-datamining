@@ -1,3 +1,11 @@
+import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { Modal } from "../../../../design/components/Modal/native/Modal.native.tsx";
+import { ModalContent } from "../../../../design/components/Modal/native/ModalContent.native.tsx";
+import { ModalScreen } from "../../../../design/components/Modal/native/ModalScreen.native.tsx";
+import { StepModal } from "../../../../design/components/Modal/native/StepModal.native.tsx";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemModal.tsx
 import _slicedToArray from "_slicedToArray";
 import ModalDisclaimer from "ModalDisclaimer";
@@ -11,7 +19,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function DemoModal() {
-  let obj = require("../../../../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */;
+  let obj = NavigationStack /* NavigationStack */;
   const navigatorScreens = obj.useNavigatorScreens(() => {
     let obj = {};
     obj = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
@@ -126,10 +134,10 @@ function DemoModal() {
     return obj;
   }, []);
   obj = { screens: navigatorScreens, initialRouteName: constants.START };
-  return callback2(require("../../../../design/components/Modal/native/Modal.native.tsx") /* Modal */.Modal, obj);
+  return callback2(Modal /* Modal */.Modal, obj);
 }
 function DemoStepModal() {
-  let obj = require("../../../../design/components/Navigator/native/Navigator.native.tsx") /* NavigationStack */;
+  let obj = NavigationStack /* NavigationStack */;
   const navigatorScreens = obj.useNavigatorScreens(() => {
     let obj = {};
     obj = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
@@ -249,7 +257,7 @@ function DemoStepModal() {
     return items;
   }, []);
   obj = { screens: navigatorScreens, steps: memo, initialRouteName: constants.START };
-  return callback2(require("../../../../design/components/Modal/native/StepModal.native.tsx") /* StepModal */.StepModal, obj);
+  return callback2(StepModal /* StepModal */.StepModal, obj);
 }
 function DemoScreen(arg0) {
   let action;
@@ -275,9 +283,9 @@ function DemoScreen(arg0) {
     tmp5 = callback2(closure_5, obj);
   }
   obj = { children: null };
-  const items = [tmp5, callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: title }), children];
+  const items = [tmp5, callback2(Text /* Text */.Text, { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: title }), children];
   obj[0] = items;
-  children = [closure_8(require("../../../../design/components/Modal/native/ModalContent.native.tsx") /* ModalContent */.ModalContent, obj), ];
+  children = [closure_8(ModalContent /* ModalContent */.ModalContent, obj), ];
   if (footer == null) {
     let tmp8Result = null != disclaimer;
     if (tmp8Result) {
@@ -307,7 +315,7 @@ function DemoScreen(arg0) {
     footer = tmp2(tmp3(11246).ModalFooter, obj5);
   }
   children[1] = footer;
-  return closure_8(require("../../../../design/components/Modal/native/ModalScreen.native.tsx") /* ModalScreen */.ModalScreen, { children });
+  return closure_8(ModalScreen /* ModalScreen */.ModalScreen, { children });
 }
 function SwitchesScreen(onAction) {
   let arr2;
@@ -348,11 +356,11 @@ function SwitchesScreen(onAction) {
   return callback3(DemoScreen, obj);
 }
 function openDemoModal() {
-  let arr = require("../../../../actions/ModalActionCreators.tsx");
+  let arr = ModalActionCreators;
   arr = arr.push(DemoModal);
 }
 function openDemoStepModal() {
-  let arr = require("../../../../actions/ModalActionCreators.tsx");
+  let arr = ModalActionCreators;
   arr = arr.push(DemoStepModal);
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
@@ -373,7 +381,7 @@ export default function UserSettingsDesignSystemModal() {
   let obj = { children: null };
   obj = { style: createCacheKey().container, children: null };
   obj = { onPress: openDemoModal, text: "Show Modal" };
-  const items = [callback2(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj), callback2(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, { onPress: openDemoStepModal, text: "Show Stepped Modal" })];
+  const items = [callback2(Button /* Button */.Button, obj), callback2(Button /* Button */.Button, { onPress: openDemoStepModal, text: "Show Stepped Modal" })];
   obj[1] = items;
   obj[0] = callback3(closure_5, obj);
   return callback2(closure_6, obj);

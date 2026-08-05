@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/cache/CacheActionCreators.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { ChannelLoader } from "ensureGuildLoaded";
@@ -128,5 +129,5 @@ export const writeCaches = function writeCaches(arg0) {
   return applyArgumentsResult;
 };
 export const clearCaches = function clearCaches() {
-  require("../../Dispatcher.tsx").dispatch({ type: "CLEAR_CACHES", reason: "Requested by user", preventWritingCachesAgainThisSession: true, resetSocket: true });
+  dispatcher.dispatch({ type: "CLEAR_CACHES", reason: "Requested by user", preventWritingCachesAgainThisSession: true, resetSocket: true });
 };

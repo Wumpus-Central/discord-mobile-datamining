@@ -1,3 +1,6 @@
+import { apply } from "../../../../_runtime/00012_apply.js";
+import { calculatePositionDeltas } from "../../../utils/DragAndDropUtils.tsx";
+import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
 // discord_app/modules/guild_settings/roles/GuildSettingsRolesStore.tsx
 import { set } from "isValueEqual";
 import map from "map";
@@ -210,7 +213,7 @@ let closure_33 = require("applyOverwrites").debounce(() => {
   if (c24) {
     if (null != user) {
       if (null != closure_25) {
-        let obj = require("../../../utils/DragAndDropUtils.tsx");
+        let obj = calculatePositionDeltas;
         obj = { oldOrdering: null, newOrdering: null, idGetter: null, existingPositionGetter: null, ascending: false };
         obj[0] = store.getSortedRoles(user.id);
         obj[1] = closure_25;
@@ -301,10 +304,10 @@ prototype["hasSectionChanges"] = function hasSectionChanges(id, effectiveSection
     }
     let tmp7 = null != tmp;
     if (tmp7) {
-      const obj2 = require("../../../../_runtime/00012_apply.js");
-      const pickResult = require("../../../../_runtime/00012_apply.js").pick(tmp.role, tmp.fields);
-      tmp7 = !isRoleEqual(pickResult, require("../../../../_runtime/00012_apply.js").pick(tmp.original, tmp.fields));
-      const obj3 = require("../../../../_runtime/00012_apply.js");
+      const obj2 = apply;
+      const pickResult = apply.pick(tmp.role, tmp.fields);
+      tmp7 = !isRoleEqual(pickResult, apply.pick(tmp.original, tmp.fields));
+      const obj3 = apply;
     }
     return tmp7;
   }
@@ -363,7 +366,7 @@ Object.defineProperty(prototype, "formState", {
 prototype["getSortDeltas"] = function getSortDeltas() {
   if (null != user) {
     if (null != closure_25) {
-      let obj = require("../../../utils/DragAndDropUtils.tsx");
+      let obj = calculatePositionDeltas;
       obj = { oldOrdering: null, newOrdering: null, idGetter: null, existingPositionGetter: null, ascending: false };
       obj[0] = store.getSortedRoles(user.id);
       obj[1] = closure_25;
@@ -409,7 +412,7 @@ obj = {
       let closure_0 = arg0;
       return closure_25.find((id) => id.id === closure_0);
     });
-    closure_25 = mapped.filter(require("../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish);
+    closure_25 = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
     let c24 = true;
     callback();
   },
@@ -713,7 +716,7 @@ obj = {
       return false;
     } else {
       ({ fields, role, original } = tmp);
-      const pickResult = require("../../../../_runtime/00012_apply.js").pick(original, fields);
+      const pickResult = apply.pick(original, fields);
       const index = items.indexOf(role);
       if (index >= 0) {
         obj = {};
@@ -1028,7 +1031,7 @@ obj = {
         callback();
       }
       obj = map;
-      obj2 = require("../../../../_runtime/00012_apply.js");
+      obj2 = apply;
     }
   },
   GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS: function handleUpdateRoleConnectionConfigurations(roleId) {

@@ -1,3 +1,4 @@
+import { metadata } from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
 // discord_app/modules/user_profile/native/WishlistViewerCoachmark.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -12,11 +13,11 @@ function CoachmarkImage() {
   const tmp = callback();
   let obj = { style: tmp.imageContainer, children: null };
   obj = { source: null, style: null };
-  obj = { uri: require("../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js") };
+  obj = { uri: metadata };
   obj[0] = obj;
   obj[1] = tmp.image;
-  obj[1] = <closure_5 uri={require("../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js")} />;
-  return <closure_4 uri={require("../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js")} />;
+  obj[1] = <closure_5 uri={metadata} />;
+  return <closure_4 uri={metadata} />;
 }
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 let closure_8 = createCacheKey.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" }, image: { width: 160, height: 106 } });

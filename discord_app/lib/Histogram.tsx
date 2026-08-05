@@ -1,3 +1,4 @@
+import { TDigest } from "../../_runtime/07123_TDigest.js";
 // discord_app/lib/Histogram.tsx
 const result = require("set").fileFinishedImporting("lib/Histogram.tsx");
 class Histogram {
@@ -20,7 +21,7 @@ prototype["addSample"] = function addSample(currentCPUUsagePercent, diff) {
   this.total = this.total + currentCPUUsagePercent * num;
   this.totalWeight = this.totalWeight + num;
   this.samples = this.samples + 1;
-  const push = require("../../_runtime/07123_TDigest.js") /* TDigest */.TDigest.prototype.push;
+  const push = TDigest /* TDigest */.TDigest.prototype.push;
   const call = push.call;
   const digest = this.digest;
   if (typeof call === "unknown") {

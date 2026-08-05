@@ -1,3 +1,5 @@
+import { AccessibilityAnnouncer } from "../../../../../shared.tsx";
+import { getIllustrationSource } from "../../index.tsx";
 // discord_app/design/components/Illustration/native/redesign/generated/FeedbackModalHappyDesaturated.tsx
 import "noop";
 import { Image } from "get ActivityIndicator";
@@ -7,7 +9,7 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("design/components/Illustration/native/redesign/generated/FeedbackModalHappyDesaturated.tsx");
 
 export const getFeedbackModalHappyDesaturatedSource = function getFeedbackModalHappyDesaturatedSource(theme) {
-  let obj = require("../../index.tsx") /* getIllustrationSource */;
+  let obj = getIllustrationSource /* getIllustrationSource */;
   obj = {
     dark() {
       return callback(11018);
@@ -22,7 +24,7 @@ export const getFeedbackModalHappyDesaturatedSource = function getFeedbackModalH
   return obj.getIllustrationSource(theme, obj);
 };
 export const useFeedbackModalHappyDesaturatedSource = function useFeedbackModalHappyDesaturatedSource() {
-  let obj = require("../../../../../shared.tsx") /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   obj = {
     dark() {
       return callback(11018);
@@ -34,10 +36,10 @@ export const useFeedbackModalHappyDesaturatedSource = function useFeedbackModalH
       return callback(11020);
     }
   };
-  return require("../../index.tsx") /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return getIllustrationSource /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const FeedbackModalHappyDesaturated = function FeedbackModalHappyDesaturated(arg0) {
-  let obj = require("../../../../../shared.tsx") /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   obj = {
     dark() {
       return callback(11018);
@@ -50,7 +52,7 @@ export const FeedbackModalHappyDesaturated = function FeedbackModalHappyDesatura
     }
   };
   obj = {};
-  const illustrationSource = require("../../index.tsx") /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = getIllustrationSource /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

@@ -1,3 +1,6 @@
+import { useSafeAreaInsets } from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
+import { NavigationStack } from "../../Navigator/native/Navigator.native.tsx";
+import { NAV_BAR_HEIGHT } from "../../Navigator/native/NavigatorConstants.native.tsx";
 // discord_app/design/components/Modal/native/Modal.native.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -8,7 +11,7 @@ const result = require("useSafeAreaInsets").fileFinishedImporting("design/compon
 export const Modal = function Modal(arg0) {
   let obj = {};
   const merged = Object.assign(arg0);
-  obj = { height: require("../../Navigator/native/NavigatorConstants.native.tsx") /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT + require("../../../../modules/safe_area/useSafeAreaInsets.native.tsx")().top };
+  obj = { height: NAV_BAR_HEIGHT /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT + useSafeAreaInsets().top };
   obj.headerStyle = obj;
-  return jsx(require("../../Navigator/native/Navigator.native.tsx") /* NavigationStack */.Navigator, { height: require("../../Navigator/native/NavigatorConstants.native.tsx") /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT + require("../../../../modules/safe_area/useSafeAreaInsets.native.tsx")().top });
+  return jsx(NavigationStack /* NavigationStack */.Navigator, { height: NAV_BAR_HEIGHT /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT + useSafeAreaInsets().top });
 };

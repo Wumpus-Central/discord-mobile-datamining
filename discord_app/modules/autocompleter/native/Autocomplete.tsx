@@ -1,3 +1,18 @@
+import { registerAsset } from "../../../../_runtime/08038_registerAsset.js";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { TableRowInner } from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowTrailingText } from "../../../design/components/TableRow/native/TableRowTrailingText.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Form } from "../../../design/void/Form/native/index.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getChannelIcon } from "../../../utils/native/ChannelUtils.tsx";
+import { isNullOrEmpty } from "../../../utils/StringUtils.tsx";
+import { ChannelAutocompleteEmojiUpsell } from "../../channel_text_area/native/ChannelAutocompleteEmojiUpsell.tsx";
+import { computeChannelName } from "../../channel/useChannelName.tsx";
+import { getGameMediaRefURL } from "../../games/getGameMediaRefURL.tsx";
+import { Sticker } from "../../stickers/native/Sticker.tsx";
+import { useStickerPackCategories } from "../../stickers/StickersHooks.tsx";
 // discord_app/modules/autocompleter/native/Autocomplete.tsx
 import getChannelIcon from "getChannelIcon";
 import { View } from "getSystemLocale";
@@ -15,7 +30,7 @@ let metroImportAll;
 const require = arg1;
 function AutocompleteLabel(text) {
   const tmp = createCacheKey();
-  return callback(require("../../../design/void/Form/native/index.tsx") /* Form */.FormRow.Label, { style: createCacheKey().leading, text: text.text });
+  return callback(Form /* Form */.FormRow.Label, { style: createCacheKey().leading, text: text.text });
 }
 ({ ChannelTypes: metroImportAll, Fonts } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
@@ -102,8 +117,8 @@ const obj9 = {
       tmp2Result = tmp2(AutocompleteLabel, obj1);
     }
     obj[2] = tmp2Result;
-    obj[3] = closure_9(require("../../../design/components/TableRow/native/TableRowTrailingText.native.tsx") /* TableRowTrailingText */.TableRowTrailingText, { text: description });
-    return closure_9(require("../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
+    obj[3] = closure_9(TableRowTrailingText /* TableRowTrailingText */.TableRowTrailingText, { text: description });
+    return closure_9(TableRowInner /* TableRowInner */.TableRow, obj);
   },
   Role(colorString) {
     let name;
@@ -121,14 +136,14 @@ const obj9 = {
     }
     obj = { style: items, text: "@" + name };
     items[1] = tmp5;
-    obj[2] = closure_9(require("../../../design/void/Form/native/index.tsx") /* Form */.FormRow.Label, obj);
+    obj[2] = closure_9(Form /* Form */.FormRow.Label, obj);
     let str = "";
     if (showDescription) {
       const intl = tmp3(1236).intl;
       str = intl.string(tmp3(1236).t.HrUmDH);
     }
-    obj[3] = closure_9(require("../../../design/components/TableRow/native/TableRowTrailingText.native.tsx") /* TableRowTrailingText */.TableRowTrailingText, { text: str });
-    return closure_9(require("../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
+    obj[3] = closure_9(TableRowTrailingText /* TableRowTrailingText */.TableRowTrailingText, { text: str });
+    return closure_9(TableRowInner /* TableRowInner */.TableRow, obj);
   },
   Channel(onPress) {
     let category;
@@ -136,14 +151,14 @@ const obj9 = {
     ({ channel, category } = onPress);
     const tmp = createCacheKey();
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = require("../../../../_runtime/08038_registerAsset.js");
+      let channelIconWithGuild = registerAsset;
     } else {
-      let obj = require("../../../utils/native/ChannelUtils.tsx") /* getChannelIcon */;
+      let obj = getChannelIcon /* getChannelIcon */;
       channelIconWithGuild = obj.getChannelIconWithGuild(channel, tmp2);
     }
     obj = { source: channelIconWithGuild, style: tmp.autocompleteIcon };
-    const tmp9 = callback(require("../../../design/void/native.tsx") /* Button */.Icon, obj);
-    const channelName = require("../../channel/useChannelName.tsx") /* computeChannelName */.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+    const tmp9 = callback(Button /* Button */.Icon, obj);
+    const channelName = computeChannelName /* computeChannelName */.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
     obj = { onPress: onPress.onPress, accessibilityRole: "menuitem", leading: tmp9, label: null, trailing: null };
     obj[3] = callback(AutocompleteLabel, { text: channelName });
     const obj1 = { style: tmp.trailing, variant: "text-sm/medium", color: "text-muted", children: null };
@@ -152,8 +167,8 @@ const obj9 = {
       name = category.name;
     }
     obj1[3] = name;
-    obj[4] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
-    return callback(require("../../../design/void/Form/native/index.tsx") /* Form */.FormRow, obj);
+    obj[4] = callback(Text /* Text */.Text, obj1);
+    return callback(Form /* Form */.FormRow, obj);
   },
   Emoji(url) {
     let name;
@@ -170,7 +185,7 @@ const obj9 = {
       obj = { uri: null };
       obj[0] = url;
       obj[1] = obj;
-      let tmp5 = callback(require("../../../components_native/common/FastImage.tsx"), obj);
+      let tmp5 = callback(preload, obj);
       let tmp2 = callback;
     } else {
       tmp2 = callback;
@@ -179,21 +194,21 @@ const obj9 = {
       ({ emoji: arr[0], emojiText: arr[1] } = tmp);
       obj[0] = items1;
       obj[2] = surrogates;
-      tmp5 = callback(require("../../../design/void/native.tsx") /* Button */.LegacyText, obj);
+      tmp5 = callback(Button /* Button */.LegacyText, obj);
     }
     const obj1 = { onPress, accessibilityRole: "menuitem", leading: tmp5, label: null };
     const obj2 = { text: null };
     obj2[0] = ":" + name + ":";
     obj1[3] = tmp2(AutocompleteLabel, obj2);
-    return tmp2(require("../../../design/void/Form/native/index.tsx") /* Form */.FormRow, obj1);
+    return tmp2(Form /* Form */.FormRow, obj1);
   },
   EmojiPremiumUpsell(arg0) {
     let onPress;
     let results;
     ({ results, onPress } = arg0);
     const obj = { onPress, accessibilityRole: "menuitem", label: null };
-    obj[2] = callback(require("../../channel_text_area/native/ChannelAutocompleteEmojiUpsell.tsx"), { results });
-    return callback(require("../../../design/void/Form/native/index.tsx") /* Form */.FormRow, obj);
+    obj[2] = callback(ChannelAutocompleteEmojiUpsell, { results });
+    return callback(Form /* Form */.FormRow, obj);
   },
   Choice(arg0) {
     let choice;
@@ -202,7 +217,7 @@ const obj9 = {
     let obj = { onPress, accessibilityRole: "menuitem", label: null };
     obj = { text: choice.displayName };
     obj[2] = callback(AutocompleteLabel, obj);
-    return callback(require("../../../design/void/Form/native/index.tsx") /* Form */.FormRow, obj);
+    return callback(Form /* Form */.FormRow, obj);
   },
   ChoiceLoading() {
     const tmp = createCacheKey();
@@ -212,7 +227,7 @@ const obj9 = {
     const items = [tmp.commandChoiceLoadingItem, { width: memo }];
     obj[1] = callback(View, { style: items });
     obj[1] = callback(View, obj);
-    return callback(require("../../../design/void/Form/native/index.tsx") /* Form */.FormRow, obj);
+    return callback(Form /* Form */.FormRow, obj);
   },
   Sticker(arg0) {
     let isInteracting;
@@ -220,22 +235,22 @@ const obj9 = {
     let onPress;
     let sticker;
     ({ sticker, onPress, onLongPress, isInteracting } = arg0);
-    let obj = require("../../stickers/StickersHooks.tsx") /* useStickerPackCategories */;
+    let obj = useStickerPackCategories /* useStickerPackCategories */;
     const shouldAnimateSticker = obj.useShouldAnimateSticker(isInteracting);
     obj = { accessibilityRole: "menuitem", style: createCacheKey().stickerContainer, onPress, onLongPress, pointerEvents: "box-only", children: null };
-    obj[5] = callback(require("../../stickers/native/Sticker.tsx"), { sticker, size: 40, animated: shouldAnimateSticker });
-    return callback(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+    obj[5] = callback(Sticker, { sticker, size: 40, animated: shouldAnimateSticker });
+    return callback(PressableBase /* PressableBase */.PressableOpacity, obj);
   },
   Label(text) {
     const obj = { label: null };
     obj[0] = callback(AutocompleteLabel, { text: text.label });
-    return callback(require("../../../design/void/Form/native/index.tsx") /* Form */.FormRow, obj);
+    return callback(Form /* Form */.FormRow, obj);
   },
   Game(game) {
     game = game.game;
     const tmp = createCacheKey();
-    const tmp4 = require("../../games/getGameMediaRefURL.tsx")(game.id, game.icon, { size: 32 });
-    let obj = require("../../../utils/StringUtils.tsx") /* isNullOrEmpty */;
+    const tmp4 = getGameMediaRefURL(game.id, game.icon, { size: 32 });
+    let obj = isNullOrEmpty /* isNullOrEmpty */;
     if (obj.isNullOrEmpty(tmp4)) {
       obj = { size: "sm", style: null };
       obj[1] = tmp.gameIcon;
@@ -247,12 +262,12 @@ const obj9 = {
       const obj1 = { uri: null };
       obj1[0] = tmp4;
       obj[1] = obj1;
-      tmp6Result = tmp6(require("../../../components_native/common/FastImage.tsx"), obj);
+      tmp6Result = tmp6(preload, obj);
       tmp8 = tmp6;
     }
     const obj2 = { onPress: game.onPress, accessibilityRole: "menuitem", leading: tmp6Result, label: null };
     obj2[3] = tmp8(AutocompleteLabel, { text: game.name });
-    return tmp8(require("../../../design/void/Form/native/index.tsx") /* Form */.FormRow, obj2);
+    return tmp8(Form /* Form */.FormRow, obj2);
   }
 };
 const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/autocompleter/native/Autocomplete.tsx");

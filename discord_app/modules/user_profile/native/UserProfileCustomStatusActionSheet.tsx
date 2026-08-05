@@ -1,3 +1,8 @@
+import { getNickname } from "../../../utils/NicknameUtils.tsx";
+import { useCustomStatusActivityForUser } from "../../custom_status/utils/useCustomStatusActivityForUser.tsx";
+import { HeaderAvatar } from "../../profile_customization/native/HeaderAvatar.tsx";
+import { EmojiImage } from "UserProfileCustomStatusBubble.tsx";
+import { UserProfileStackedActionSheet } from "UserProfileStackedActionSheet.tsx";
 // discord_app/modules/user_profile/native/UserProfileCustomStatusActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -43,7 +48,7 @@ export default function UserProfileCustomStatusActionSheet(user) {
     }
     return id === user.id;
   }, items1);
-  let obj1 = require("../../../utils/NicknameUtils.tsx");
+  let obj1 = getNickname;
   const name = obj1.useName(guildId, channelId, user);
   const intl = user(1236).intl;
   if (stateFromStores) {
@@ -56,10 +61,10 @@ export default function UserProfileCustomStatusActionSheet(user) {
   obj = { title: stringResult, children: null };
   obj1 = { style: tmp.statusPreviewContainer, children: null };
   const obj2 = { style: tmp.avatarContainer, children: null };
-  const tmp6 = require("../../custom_status/utils/useCustomStatusActivityForUser.tsx")(user.id);
-  obj2[1] = callback(require("../../profile_customization/native/HeaderAvatar.tsx"), { user, statusStyle: tmp.avatarStatus });
-  const items2 = [callback(View, obj2), callback(require("UserProfileCustomStatusBubble.tsx"), { customStatusActivity: tmp6, hasCustomProfileTheme: false, showFullStatus: true, style: tmp.customStatusBubble, previewEmoji, previewText })];
+  const tmp6 = useCustomStatusActivityForUser(user.id);
+  obj2[1] = callback(HeaderAvatar, { user, statusStyle: tmp.avatarStatus });
+  const items2 = [callback(View, obj2), callback(EmojiImage, { customStatusActivity: tmp6, hasCustomProfileTheme: false, showFullStatus: true, style: tmp.customStatusBubble, previewEmoji, previewText })];
   obj1[1] = items2;
   obj[1] = callback2(View, obj1);
-  return callback(require("UserProfileStackedActionSheet.tsx"), obj);
+  return callback(UserProfileStackedActionSheet, obj);
 };

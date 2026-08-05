@@ -1,3 +1,6 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { int2hslRaw } from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesEffectDefaultColors.native.tsx
 import noop from "noop";
 import items3 from "items3";
@@ -10,8 +13,8 @@ let require = arg1;
 const result = require("int2hslRaw").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesEffectDefaultColors.native.tsx");
 
 export default function useDisplayNameStylesEffectDefaultColors() {
-  let obj = require("../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
-  const hex2intResult = obj.hex2int(require("../../../design/tokens/native/useToken.tsx") /* map */.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_DEFAULT));
+  let obj = int2hslRaw /* int2hslRaw */;
+  const hex2intResult = obj.hex2int(map /* map */.useToken(Themes.colors.TEXT_DEFAULT));
   require = hex2intResult;
   let items = [hex2intResult];
   return React.useMemo(() => {

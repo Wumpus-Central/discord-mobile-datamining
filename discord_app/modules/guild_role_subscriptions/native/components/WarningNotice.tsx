@@ -1,3 +1,7 @@
+import { registerAsset } from "../../../../../_runtime/08256_registerAsset.js";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/WarningNotice.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -37,11 +41,11 @@ export default function WarningNotice(arg0) {
   ({ container: arr[1], containerYellow: arr[2] } = tmp);
   obj = { style: tmp.horizontalContainer, children: null };
   obj = { style: tmp.alertIcon, source: null };
-  obj[1] = require("../../../../../_runtime/08256_registerAsset.js");
-  const items1 = [callback(require("../../../../components_native/common/FastImage.tsx"), obj), ];
+  obj[1] = registerAsset;
+  const items1 = [callback(preload, obj), ];
   const items2 = [, ];
   ({ message: arr3[0], textYellow: arr3[1] } = tmp);
-  items1[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: items2, variant: "text-sm/medium", color: "interactive-text-active", children: notice });
+  items1[1] = callback(Text /* Text */.Text, { style: items2, variant: "text-sm/medium", color: "interactive-text-active", children: notice });
   obj[1] = items1;
   const items3 = [callback2(View, obj), ];
   let tmp4Result = null != onClick && null != ctaLabel;
@@ -53,7 +57,7 @@ export default function WarningNotice(arg0) {
     obj2[1] = disabled;
     obj2[2] = submitting;
     obj2[3] = ctaLabel;
-    obj1[1] = tmp4(require("../../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj2);
+    obj1[1] = tmp4(Button /* Button */.Button, obj2);
     tmp4Result = tmp4(tmp3, obj1);
   }
   items3[1] = tmp4Result;

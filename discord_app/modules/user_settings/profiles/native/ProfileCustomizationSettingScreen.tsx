@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { UserSettingsEditGuildProfile } from "UserSettingsEditGuildProfile.tsx";
+import { UserSettingsEditUserProfile } from "UserSettingsEditUserProfile.tsx";
 // discord_app/modules/user_settings/profiles/native/ProfileCustomizationSettingScreen.tsx
 import zustandStore from "zustandStore";
 import _objectWithoutProperties from "_objectWithoutProperties";
@@ -25,23 +28,23 @@ let closure_17 = createCacheKey.createStyles({ container: { height: "100%" }, co
 let items = [
   {
     renderLabel() {
-      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["2p07FR"]);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t["2p07FR"]);
     },
     id: "edit-user-profile",
     renderPage(autoFocusElement) {
-      return callback(require("UserSettingsEditUserProfile.tsx"), { autoFocusElement: autoFocusElement.autoFocusElement });
+      return callback(UserSettingsEditUserProfile, { autoFocusElement: autoFocusElement.autoFocusElement });
     },
     subSection: ProfileCustomizationSubsection.USER_PROFILE
   },
   {
     renderLabel() {
-      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.kPHroX);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      return intl.string(getSystemLocale /* getSystemLocale */.t.kPHroX);
     },
     id: "edit-user-profiles-guilds",
     renderPage() {
-      return callback(require("UserSettingsEditGuildProfile.tsx"), {});
+      return callback(UserSettingsEditGuildProfile, {});
     },
     subSection: ProfileCustomizationSubsection.GUILD
   }
@@ -234,12 +237,12 @@ const memoResult = importAllResult.memo(() => {
 });
 let obj = {
   renderLabel() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["2p07FR"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["2p07FR"]);
   },
   id: "edit-user-profile",
   renderPage(autoFocusElement) {
-    return callback(require("UserSettingsEditUserProfile.tsx"), { autoFocusElement: autoFocusElement.autoFocusElement });
+    return callback(UserSettingsEditUserProfile, { autoFocusElement: autoFocusElement.autoFocusElement });
   },
   subSection: ProfileCustomizationSubsection.USER_PROFILE
 };

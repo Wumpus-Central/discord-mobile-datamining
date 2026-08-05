@@ -1,3 +1,5 @@
+import { apply } from "../../_runtime/00012_apply.js";
+import { t } from "../../_runtime/03867_t.js";
 // discord_app/lib/Frecency.tsx
 function DEFAULT_FRECENCY(arg0, arg1, numOfRecentUses) {
   return Math.ceil(arg0 * (arg1 / numOfRecentUses.numOfRecentUses));
@@ -185,7 +187,7 @@ prototype["getFrecency"] = function getFrecency(id) {
 prototype["compute"] = function compute() {
   let self = this;
   self = this;
-  const dependencyMap = require("../../_runtime/03867_t.js")();
+  const dependencyMap = t();
   let maxByResult = null;
   if (this.calculateMaxTotalUse) {
     let tmpResult = tmp(12);
@@ -226,7 +228,7 @@ prototype["compute"] = function compute() {
       const arr2 = maxByResult(table[0]);
     }
   });
-  const mapped = require("../../_runtime/00012_apply.js")(self.usageHistory).map((frecency) => {
+  const mapped = apply(self.usageHistory).map((frecency) => {
     const lookupKeyResult = self.lookupKey(arg1);
     let tmp2 = null;
     if (null != lookupKeyResult) {
@@ -236,7 +238,7 @@ prototype["compute"] = function compute() {
     return tmp2;
   });
   const found = mapped.filter((arg0) => null !== arg0);
-  let arr2 = require("../../_runtime/00012_apply.js")(self.usageHistory);
+  let arr2 = apply(self.usageHistory);
   const mapped1 = found.sortBy((arg0) => {
     let tmp;
     [, tmp] = arg0;

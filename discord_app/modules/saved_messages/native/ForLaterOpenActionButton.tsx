@@ -1,3 +1,9 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { styleProperties } from "../../../design/components/Button/native/ButtonHooks.native.tsx";
+import { SolidCutout } from "../../../design/components/Icon/native/ClipView.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
+import { SavedMessageSortTypes } from "../SavedMessagesTypes.tsx";
 // discord_app/modules/saved_messages/native/ForLaterOpenActionButton.tsx
 import importAllResult from "IconButton";
 import { View } from "EntitlementFeatureNames";
@@ -12,12 +18,12 @@ function BadgedIcon(arg0) {
   let showRedDot;
   let type;
   ({ type, showRedDot } = arg0);
-  let obj = require("../../../design/tokens/native/useToken.tsx") /* map */;
-  const token = obj.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_TEXT_DEFAULT, require("../../../hooks/useTheme.tsx")());
+  let obj = map /* map */;
+  const token = obj.useToken(Themes.colors.INTERACTIVE_TEXT_DEFAULT, useTheme());
   const tmp6 = callback2();
-  let obj1 = require("../../../design/components/Button/native/ButtonHooks.native.tsx") /* styleProperties */;
+  let obj1 = styleProperties /* styleProperties */;
   const iconSizeStyles = obj1.useIconSizeStyles("sm", true, 2);
-  if (type === require("../SavedMessagesTypes.tsx") /* SavedMessageSortTypes */.SavedMessageSortTypes.REMINDER) {
+  if (type === SavedMessageSortTypes /* SavedMessageSortTypes */.SavedMessageSortTypes.REMINDER) {
     let BookmarkIcon = tmp4(4249).ClockIcon;
   } else {
     BookmarkIcon = tmp4(10191).BookmarkIcon;
@@ -33,13 +39,13 @@ function BadgedIcon(arg0) {
     const obj2 = { size: "sm", color: null };
     obj2[1] = token;
     obj1[1] = tmp8(BookmarkIcon, obj2);
-    const items2 = [tmp8(require("../../../design/components/Icon/native/ClipView.tsx"), obj1), ];
+    const items2 = [tmp8(SolidCutout, obj1), ];
     const obj3 = { style: null };
     obj3[0] = tmp6.dot;
     items2[1] = tmp8(tmp9, obj3);
     obj[1] = items2;
     let tmp8Result = callback(tmp9, obj);
-    const tmpResult = require("../../../design/components/Icon/native/ClipView.tsx");
+    const tmpResult = SolidCutout;
   } else {
     const obj4 = { size: "sm", color: null };
     obj4[1] = token;

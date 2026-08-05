@@ -1,3 +1,6 @@
+import { v1 } from "../../../_runtime/00514_v1.js";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { getCachedPrivateChannelObfuscation } from "PrivateChannelHidingExperiment.tsx";
 // discord_app/modules/gateway/ChannelResyncManager.tsx
 import _handleConnectionOpen from "_handleConnectionOpen";
 import fetchFingerprint from "fetchFingerprint";
@@ -477,7 +480,7 @@ function _getResyncGuilds() {
 }
 function scheduleIntegrityCheck(guild_id) {
   const _require = guild_id;
-  let obj = _require("PrivateChannelHidingExperiment.tsx");
+  let obj = _getCachedPrivateChannelObfuscation;
   if (obj.isChannelMetadataIntegrityCheckEnabled("scheduleIntegrityCheck")) {
     if (null != dependencyMap3[guild_id]) {
       let _clearTimeout = clearTimeout;
@@ -492,21 +495,21 @@ function scheduleIntegrityCheck(guild_id) {
     if (null != dependencyMap[guild_id]) {
       let requestId = tmp15.requestId;
     } else {
-      const v4Result = _require("../../../_runtime/00514_v1.js").v4();
+      const v4Result = _v1.v4();
       obj = { guildId: null, requestId: null, source: "integrity_check", requestedUserId: null };
       obj[0] = guild_id;
       obj[1] = v4Result;
       obj[3] = id.getId();
       tmp14[guild_id] = obj;
       requestId = v4Result;
-      const tmp4Result = _require("../../../_runtime/00514_v1.js");
+      const tmp4Result = _v1;
     }
     if (!tmp8) {
       obj = { guild_id: null, request_id: null };
       obj[0] = guild_id;
       obj[1] = requestId;
-      require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.GUILD_CHANNEL_INTEGRITY_CHECK_REQUESTED, obj);
-      let obj4 = require("../../utils/AnalyticsUtils.tsx");
+      expandEventProperties.track(AnalyticEvents.GUILD_CHANNEL_INTEGRITY_CHECK_REQUESTED, obj);
+      let obj4 = expandEventProperties;
     }
     const _Math = Math;
     const _Math2 = Math;

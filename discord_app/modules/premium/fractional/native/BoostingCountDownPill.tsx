@@ -1,3 +1,7 @@
+import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/premium/fractional/native/BoostingCountDownPill.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -8,11 +12,11 @@ let c4;
 let c5;
 let closure_6;
 function handlePress() {
-  let obj = require("../../../action_sheet/native/ActionSheetActionCreators.tsx");
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { aboutText: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["07lzz7"]);
-  obj.openLazy(require("../../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(12694, dependencyMap.paths), "NitroCreditEducationActionSheet", obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["07lzz7"]);
+  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(12694, dependencyMap.paths), "NitroCreditEducationActionSheet", obj);
 }
 ({ TouchableOpacity: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -46,7 +50,7 @@ export default function BoostingCountDownPill(style) {
     const obj1 = { variant: "text-sm/bold", style: null, children: null };
     obj1[1] = tmp.fpDurationText;
     obj1[2] = fpDurationText.toUpperCase();
-    obj[1] = tmp2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+    obj[1] = tmp2(Text /* Text */.Text, obj1);
     tmp2Result = tmp2(tmp6, obj);
   }
   const items1 = [tmp2Result, ];
@@ -57,8 +61,8 @@ export default function BoostingCountDownPill(style) {
   }
   const obj3 = { variant: "text-md/normal", color: "interactive-text-active", style: prop, children: null };
   const intl = tmp10(1236).intl;
-  obj3[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["5nrJDO"]);
-  obj2[1] = closure_5(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
+  obj3[3] = intl.string(getSystemLocale /* getSystemLocale */.t["5nrJDO"]);
+  obj2[1] = closure_5(Text /* Text */.Text, obj3);
   items1[1] = closure_5(closure_4, obj2);
   obj[1] = items1;
   obj[2] = closure_6(closure_4, obj);

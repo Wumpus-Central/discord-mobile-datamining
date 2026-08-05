@@ -1,3 +1,7 @@
+import { dispatcher } from "../Dispatcher.tsx";
+import { collectGuildAnalyticsMetadata } from "../modules/app_analytics/AppAnalyticsUtils.tsx";
+import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
+import { ComponentDispatcher } from "../utils/ComponentDispatchUtils.tsx";
 // discord_app/actions/ChannelRTCActionCreators.tsx
 import ME from "ME";
 
@@ -9,20 +13,20 @@ const result = require("expandEventProperties").fileFinishedImporting("actions/C
 
 export default {
   rebuildRTCActiveChannels() {
-    require("../Dispatcher.tsx").dispatch({ type: "CHANNEL_RTC_ACTIVE_CHANNELS" });
+    dispatcher.dispatch({ type: "CHANNEL_RTC_ACTIVE_CHANNELS" });
   },
   selectParticipant(id, id2) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "CHANNEL_RTC_SELECT_PARTICIPANT", channelId: id, id: id2 };
     obj.dispatch(obj);
   },
   popoutParticipant(channelId, participantId) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "CHANNEL_RTC_POPOUT_PARTICIPANT", channelId, participantId };
     obj.dispatch(obj);
   },
   returnParticipant(channelId, participantId) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "CHANNEL_RTC_RETURN_PARTICIPANT", channelId, participantId };
     obj.dispatch(obj);
   },
@@ -31,37 +35,37 @@ export default {
     if (arg2 === undefined) {
       APP = constants.APP;
     }
-    let obj = require("../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = { video_layout: layout };
-    const merged = Object.assign(require("../modules/app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */.collectVoiceAnalyticsMetadata(channelId));
+    const merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectVoiceAnalyticsMetadata(channelId));
     obj.track(constants2.VIDEO_LAYOUT_TOGGLED, obj);
-    const obj3 = require("../modules/app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */;
+    const obj3 = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
     obj = { type: "CHANNEL_RTC_UPDATE_LAYOUT", channelId, layout, appContext: APP };
-    require("../Dispatcher.tsx").dispatch(obj);
+    dispatcher.dispatch(obj);
   },
   toggleParticipants(channelId, participantsOpen) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "CHANNEL_RTC_UPDATE_PARTICIPANTS_OPEN", channelId, participantsOpen };
     obj.dispatch(obj);
   },
   toggleVoiceParticipantsHidden(channelId, voiceParticipantsHidden) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "CHANNEL_RTC_UPDATE_VOICE_PARTICIPANTS_HIDDEN", channelId, voiceParticipantsHidden };
     obj.dispatch(obj);
   },
   updateStageStreamSize(channelId, large) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "CHANNEL_RTC_UPDATE_STAGE_STREAM_SIZE", channelId, large };
     obj.dispatch(obj);
   },
   updateStageVideoLimitBoostUpsellDismissed(channelId, dismissed) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "CHANNEL_RTC_UPDATE_STAGE_VIDEO_LIMIT_BOOST_UPSELL_DISMISSED", channelId, dismissed };
     obj.dispatch(obj);
   },
   updateChatOpen(id, shown) {
     const _require = id;
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId: id, chatOpen: shown };
     obj.dispatch(obj);
     if (shown) {
@@ -71,12 +75,12 @@ export default {
         ComponentDispatch.dispatch(outer1_5.FOCUS_CHANNEL_TEXT_AREA, { channelId: id });
       }, 0);
     } else {
-      let ComponentDispatch = _require("../utils/ComponentDispatchUtils.tsx").ComponentDispatch;
+      let ComponentDispatch = _ComponentDispatcher.ComponentDispatch;
       ComponentDispatch.dispatch(constants3.FOCUS_CHAT_BUTTON);
     }
   },
   jumpToVoiceChannelMessage(voiceGuildId2, voiceChannelId2, voiceMessageId2, jumpType) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "CHANNEL_RTC_JUMP_TO_VOICE_CHANNEL_MESSAGE", guildId: voiceGuildId2, channelId: voiceChannelId2, messageId: voiceMessageId2, jumpType };
     obj.dispatch(obj);
   }

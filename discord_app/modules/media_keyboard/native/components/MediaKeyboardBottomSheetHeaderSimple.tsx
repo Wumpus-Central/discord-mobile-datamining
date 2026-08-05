@@ -1,3 +1,4 @@
+import { MediaKeyboardBottomSheetHandle } from "MediaKeyboardBottomSheetHandle.tsx";
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardBottomSheetHeaderSimple.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -12,7 +13,7 @@ const memoResult = require("noop").memo(function MediaKeyboardBottomSheetHeaderS
   let animatedIndex;
   let onPress;
   ({ animatedIndex, onPress } = arg0);
-  return <View style={callback().headerHandleOnlyWrap}>{jsx(require("MediaKeyboardBottomSheetHandle.tsx"), { animatedIndex, onPress })}</View>;
+  return <View style={callback().headerHandleOnlyWrap}>{jsx(MediaKeyboardBottomSheetHandle, { animatedIndex, onPress })}</View>;
 });
 const result = require("DRAG_HANDLE").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetHeaderSimple.tsx");
 

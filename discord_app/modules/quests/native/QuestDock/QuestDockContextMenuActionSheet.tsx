@@ -1,3 +1,4 @@
+import { WreathIcon } from "WreathIcon.tsx";
 // discord_app/modules/quests/native/QuestDock/QuestDockContextMenuActionSheet.tsx
 import useQuests from "useQuests";
 import "emitClickEventWithCreative";
@@ -63,7 +64,7 @@ export default function QuestDockContextMenuActionSheet(quest) {
   const obj4 = { hasIcons: true, children: null };
   const obj5 = { icon: null, label: null, onPress: null };
   const obj6 = { IconComponent: null };
-  obj6[0] = require("WreathIcon.tsx");
+  obj6[0] = WreathIcon;
   obj5[0] = callback2(tmp(5648).ActionSheetRow.Icon, obj6);
   const obj7 = { text: null };
   const intl2 = tmp(1236).intl;

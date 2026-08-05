@@ -1,3 +1,6 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/toast/native/Toast.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -14,7 +17,7 @@ function ToastIcon(recolorLegacyIcon) {
   let icon;
   let iconColor;
   ({ icon, IconComponent, iconColor } = recolorLegacyIcon);
-  let obj = require("../../../design/tokens/native/useToken.tsx") /* map */;
+  let obj = map /* map */;
   if (iconColor == null) {
     iconColor = "mobile-text-heading-primary";
   }
@@ -39,7 +42,7 @@ function ToastIcon(recolorLegacyIcon) {
       const obj3 = { resizeMode: "contain", source: null };
       obj3[1] = icon;
       const merged = Object.assign(obj);
-      tmp8 = callback2(require("../../../design/void/native.tsx") /* Button */.Icon, obj3);
+      tmp8 = callback2(Button /* Button */.Icon, obj3);
     }
   }
   return tmp8;
@@ -57,7 +60,7 @@ function ToastContent(content) {
     obj[0] = content.onTextLayout;
     obj[1] = tmp.contentContainer;
     obj[5] = content;
-    tmp4 = callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+    tmp4 = callback2(Text /* Text */.Text, obj);
   }
   return tmp4;
 }

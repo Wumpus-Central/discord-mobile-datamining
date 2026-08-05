@@ -1,3 +1,5 @@
+import { AlertActionCreators } from "../../../../actions/native/AlertActionCreators.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx
 const result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx");
 
@@ -12,14 +14,14 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
     }
     let obj = onConfirm(4624);
     obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.pvRCSu);
-    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.DRi46S);
-    const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[2] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6GQDFu"]);
-    const intl4 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[3] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.DmDzZB);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.pvRCSu);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.DRi46S);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["6GQDFu"]);
+    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    obj[3] = intl4.string(getSystemLocale /* getSystemLocale */.t.DmDzZB);
     obj[4] = function onConfirm() {
       callback();
       onConfirm();
@@ -37,16 +39,16 @@ export const showDiscardChangesAlert = function showDiscardChangesAlert(arg0) {
   let onCancel;
   let onConfirm;
   ({ onConfirm, onCancel } = arg0);
-  let obj = require("../../../../actions/native/AlertActionCreators.tsx");
+  let obj = AlertActionCreators;
   obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.pvRCSu);
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.DRi46S);
-  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6GQDFu"]);
-  const intl4 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.DmDzZB);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.pvRCSu);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.DRi46S);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["6GQDFu"]);
+  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl4.string(getSystemLocale /* getSystemLocale */.t.DmDzZB);
   obj[4] = onConfirm;
   obj[5] = onCancel;
   return obj.show(obj);

@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/media_channel/MediaChannelActionCreators.tsx
 import set from "set";
 import { Endpoints } from "ME";
@@ -146,7 +147,7 @@ function _unfurlEmbedUrl() {
 const result = require("dispatcher").fileFinishedImporting("modules/media_channel/MediaChannelActionCreators.tsx");
 
 export const dismissMediaPostSharePrompt = function dismissMediaPostSharePrompt(threadId) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "DISMISS_MEDIA_POST_SHARE_PROMPT", threadId };
   obj.dispatch(obj);
 };

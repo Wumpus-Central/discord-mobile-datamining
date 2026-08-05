@@ -1,3 +1,4 @@
+import { AppLauncherSelectOptionFormRow } from "../../base_components/AppLauncherSelectOptionFormRow.tsx";
 // discord_app/modules/app_launcher/native/options/user/AppLauncherUserOption.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -117,5 +118,5 @@ export default function AppLauncherUserOption(option) {
   }
   obj[6] = tmp9Result;
   obj[7] = autoFocus;
-  return c6(require("../../base_components/AppLauncherSelectOptionFormRow.tsx"), obj);
+  return c6(AppLauncherSelectOptionFormRow, obj);
 };

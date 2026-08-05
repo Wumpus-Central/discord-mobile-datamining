@@ -1,3 +1,5 @@
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 // discord_app/modules/guild_antiraid/GuildAntiRaidActionCreators.tsx
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -338,13 +340,13 @@ export const trackReportRaidViewed = function trackReportRaidViewed(onChange, on
     items = [];
   }
   if (0 !== items.length) {
-    let obj = require("../../utils/AnalyticsUtils.tsx");
+    let obj = expandEventProperties;
     obj = {};
-    const merged = Object.assign(require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(onChange));
+    const merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(onChange));
     obj.guild_id = onChange;
     obj.raid_types = items;
     obj.track(constants.GUILD_RAID_REPORTED, obj);
-    const obj3 = require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */;
+    const obj3 = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
   }
 };
 export const setGuildRaidAlerts = function setGuildRaidAlerts() {

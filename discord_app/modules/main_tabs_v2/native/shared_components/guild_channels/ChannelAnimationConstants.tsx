@@ -1,3 +1,4 @@
+import { CONFIG_NEVER_ANIMATE } from "../../../../../design/animation/reanimated/spring/spring.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelAnimationConstants.tsx
 let obj = { damping: 35, stiffness: 275, mass: 1, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };
 const fn = function n() {
@@ -5,11 +6,11 @@ const fn = function n() {
   items = [{ scale: 0 }];
   obj = { transform: null, opacity: null };
   obj = { scale: null };
-  obj[0] = require("../../../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring(1, obj);
+  obj[0] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(1, obj);
   const items1 = [obj];
   obj[0] = items1;
-  const obj4 = require("../../../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */;
-  obj[1] = require("../../../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring(1, obj);
+  const obj4 = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */;
+  obj[1] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(1, obj);
   obj[1] = obj;
   return obj;
 };
@@ -22,11 +23,11 @@ const fn2 = function t() {
   items = [{ scale: 1 }];
   obj = { transform: null, opacity: null };
   obj = { scale: null };
-  obj[0] = require("../../../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring(0, obj);
+  obj[0] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(0, obj);
   const items1 = [obj];
   obj[0] = items1;
-  const obj4 = require("../../../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */;
-  obj[1] = require("../../../../../design/animation/reanimated/spring/spring.tsx") /* CONFIG_NEVER_ANIMATE */.withSpring(0, obj);
+  const obj4 = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */;
+  obj[1] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(0, obj);
   obj[1] = obj;
   return obj;
 };

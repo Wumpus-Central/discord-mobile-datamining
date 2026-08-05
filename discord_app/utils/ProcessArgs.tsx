@@ -1,3 +1,4 @@
+import { set } from "../lib/DiscordNative.tsx";
 // discord_app/utils/ProcessArgs.tsx
 let prototype;
 prototype = function ProcessArgs() {
@@ -5,7 +6,7 @@ prototype = function ProcessArgs() {
 }.prototype;
 prototype["get"] = function get() {
   if (null == prototype.cached) {
-    const tmp4 = require("../lib/DiscordNative.tsx");
+    const tmp4 = set;
     let mainArgvSync;
     if (tmp4 != null) {
       const processUtils = tmp4.processUtils;
@@ -35,7 +36,7 @@ prototype["contains"] = function contains(arg0) {
   return value.includes(arg0);
 };
 prototype["isEnvVariableTrue"] = function isEnvVariableTrue(DISCORD_DISALLOW_POPUPS) {
-  if (undefined === require("../lib/DiscordNative.tsx")) {
+  if (undefined === set) {
     return false;
   } else {
     const tmpResult = tmp(3896);

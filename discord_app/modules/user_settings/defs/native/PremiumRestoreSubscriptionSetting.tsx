@@ -1,3 +1,8 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { AlertActionCreators } from "../../../../actions/native/AlertActionCreators.tsx";
+import { applyAppleReceipt } from "../../../../actions/native/BillingActionCreators.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { set } from "../../../../utils/PlatformUtils.tsx";
 // discord_app/modules/user_settings/defs/native/PremiumRestoreSubscriptionSetting.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";
@@ -6,13 +11,13 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.s9h22P);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.s9h22P);
   },
   parent: null,
   IconComponent: require("NitroWheelIcon").NitroWheelIcon,
   onPress: function handleNitroRestoreSettingPress() {
-    let obj = require("../../../../actions/native/BillingActionCreators.tsx");
+    let obj = applyAppleReceipt;
     const result = obj.restoreAndApplyPurchases(true);
     result.then((arg0) => {
       if (arg0.length > 0) {
@@ -50,16 +55,16 @@ createToggle = {
         });
       }
     };
-    require("../../../../actions/native/AlertActionCreators.tsx").openLazy(obj);
+    AlertActionCreators.openLazy(obj);
   },
   withArrow: true,
   usePredicate: function useHasPremiumRestoreSubscriptionSetting() {
     const items = [mergeGuildAvatar];
-    const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+    const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
     let tmp4 = null != stateFromStores && stateFromStores.verified;
     if (tmp4) {
-      tmp4 = !require("../../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
-      const tmpResult = require("../../../../utils/PlatformUtils.tsx") /* set */;
+      tmp4 = !set /* set */.isAndroid();
+      const tmpResult = set /* set */;
     }
     return tmp4;
   }

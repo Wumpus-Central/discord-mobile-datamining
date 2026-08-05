@@ -1,3 +1,5 @@
+import { wrapChildrenDefault } from "../../../design/components/TransitionGroup/TransitionGroup.tsx";
+import { PortalKeyboardRendererComponent } from "PortalKeyboardRendererComponent.tsx";
 // discord_app/modules/keyboard/native/PortalKeyboardRenderer.tsx
 import noop from "noop";
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore";
@@ -9,7 +11,7 @@ function transitionGroupGetItemKey(id) {
 }
 let closure_6 = [];
 function transitionGroupRenderItem(arg0, arg1, arg2, arg3) {
-  let isAndroidResult = arg2 === require("../../../design/components/TransitionGroup/TransitionGroup.tsx") /* wrapChildrenDefault */.TransitionStates.YEETED;
+  let isAndroidResult = arg2 === wrapChildrenDefault /* wrapChildrenDefault */.TransitionStates.YEETED;
   if (isAndroidResult) {
     let tmpResult = tmp(4151);
     const keyboardType = tmpResult.getKeyboardType();
@@ -25,7 +27,7 @@ function transitionGroupRenderItem(arg0, arg1, arg2, arg3) {
     obj[0] = arg1;
     obj[1] = arg2;
     obj[2] = arg3;
-    tmp5 = jsx(require("PortalKeyboardRendererComponent.tsx"), { item: null, state: null, cleanUp: null }, arg0);
+    tmp5 = jsx(PortalKeyboardRendererComponent, { item: null, state: null, cleanUp: null }, arg0);
   }
   return tmp5;
 }

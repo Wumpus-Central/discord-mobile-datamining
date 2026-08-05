@@ -1,3 +1,4 @@
+import { DevToolsScreens } from "../../../devtools/native/components/DevToolsScreens.tsx";
 // discord_app/modules/user_settings/defs/native/ShowDevToolsSetting.tsx
 import createToggle from "createToggle";
 
@@ -10,7 +11,7 @@ const pressable = createToggle.createPressable({
   onPress: require("navigateToDevTools").navigateToDevTools,
   usePredicate: require("useStaffOrDeveloperSettingPredicate").useStaffOrDeveloperSettingPredicate,
   useSearchTerms: function getAdditionalSearchTerms() {
-    const items = [...Object.values(require("../../../devtools/native/components/DevToolsScreens.tsx") /* DevToolsScreens */.DevToolsScreens), ...Object.values(require("../../../devtools/native/components/DevToolsScreens.tsx") /* DevToolsScreens */.PerformanceTestingScreens)];
+    const items = [...Object.values(DevToolsScreens /* DevToolsScreens */.DevToolsScreens), ...Object.values(DevToolsScreens /* DevToolsScreens */.PerformanceTestingScreens)];
     return items.map((headerTitle) => headerTitle.headerTitle);
   },
   withArrow: true
@@ -24,7 +25,7 @@ const obj = {
   onPress: require("navigateToDevTools").navigateToDevTools,
   usePredicate: require("useStaffOrDeveloperSettingPredicate").useStaffOrDeveloperSettingPredicate,
   useSearchTerms: function getAdditionalSearchTerms() {
-    const items = [...Object.values(require("../../../devtools/native/components/DevToolsScreens.tsx") /* DevToolsScreens */.DevToolsScreens), ...Object.values(require("../../../devtools/native/components/DevToolsScreens.tsx") /* DevToolsScreens */.PerformanceTestingScreens)];
+    const items = [...Object.values(DevToolsScreens /* DevToolsScreens */.DevToolsScreens), ...Object.values(DevToolsScreens /* DevToolsScreens */.PerformanceTestingScreens)];
     return items.map((headerTitle) => headerTitle.headerTitle);
   },
   withArrow: true

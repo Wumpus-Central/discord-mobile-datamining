@@ -1,3 +1,4 @@
+import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
 // discord_app/modules/user_settings/notifications/native/UserSettingsHighlightNotifications.tsx
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -40,7 +41,7 @@ function Row(guildId) {
     obj[0] = guild;
     obj = { label: null, icon: null, value: null, onValueChange: null, start: null, end: null };
     obj[0] = guild.name;
-    obj[1] = jsx(require("../../../guild/native/GuildIcon.tsx"), { label: null, icon: null, value: null, onValueChange: null, start: null, end: null });
+    obj[1] = jsx(GuildIconSizes, { label: null, icon: null, value: null, onValueChange: null, start: null, end: null });
     obj[2] = !muted;
     obj[3] = callback;
     obj[4] = isStart;

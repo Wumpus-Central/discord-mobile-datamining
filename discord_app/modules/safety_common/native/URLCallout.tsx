@@ -1,3 +1,5 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { useUrlParts } from "../../masked_link/SharedStateUtils.tsx";
 // discord_app/modules/safety_common/native/URLCallout.tsx
 import "noop";
 import { ScrollView } from "get ActivityIndicator";
@@ -21,14 +23,14 @@ export const URLCallout = function URLCallout(url) {
   let protocol;
   let theRestOfTheUrl;
   const tmp = createCacheKey();
-  let obj = require("../../masked_link/SharedStateUtils.tsx") /* useUrlParts */;
+  let obj = useUrlParts /* useUrlParts */;
   const urlParts = obj.useUrlParts(url.url);
   obj = { style: tmp.linkCalloutContainer, children: null };
   ({ protocol, hostname, theRestOfTheUrl } = urlParts);
   obj = { style: tmp.linkCalloutContainerText, variant: "text-md/normal", children: null };
   const items = [protocol, "//"];
-  const items1 = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/normal", color: "text-muted", children: items }), callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/semibold", color: "text-default", children: hostname }), callback2(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-md/normal", color: "text-muted", children: theRestOfTheUrl })];
+  const items1 = [callback(Text /* Text */.Text, { variant: "text-md/normal", color: "text-muted", children: items }), callback2(Text /* Text */.Text, { variant: "text-md/semibold", color: "text-default", children: hostname }), callback2(Text /* Text */.Text, { variant: "text-md/normal", color: "text-muted", children: theRestOfTheUrl })];
   obj[2] = items1;
-  obj[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  obj[1] = callback(Text /* Text */.Text, obj);
   return callback2(ScrollView, obj);
 };

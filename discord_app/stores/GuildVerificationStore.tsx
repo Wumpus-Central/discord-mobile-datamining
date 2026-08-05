@@ -1,3 +1,5 @@
+import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 // discord_app/stores/GuildVerificationStore.tsx
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -204,7 +206,7 @@ function recomputeGuild(guildId) {
             if (num == null) {
               num = 0;
             }
-            const obj2 = _require("../../discord_common/js/shared/utils/FlagUtils.tsx");
+            const obj2 = _hasFlag;
           }
         }
       }
@@ -266,7 +268,7 @@ const guildVerificationStore = new GuildVerificationStore(require("dispatcher"),
     }
   },
   CONNECTION_CLOSED: function handleConnectionClosed() {
-    const keys = require("../utils/SnowflakeUtils.tsx").keys(closure_14);
+    const keys = DISCORD_EPOCH.keys(closure_14);
     const item = keys.forEach(clearGuild);
   },
   CURRENT_USER_UPDATE: function handleCurrentUserUpdate() {

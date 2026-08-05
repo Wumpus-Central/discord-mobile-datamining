@@ -1,3 +1,4 @@
+import { wrapChildrenDefault } from "../../../../../design/components/TransitionGroup/TransitionGroup.tsx";
 // discord_app/modules/search/native/components/tabs/SearchTabsTransitionGroup.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -138,5 +139,5 @@ let result = require("explicitContentFromProto").fileFinishedImporting("modules/
 
 export default function SearchTabsTransitionGroup(state) {
   const items = [state.state];
-  return jsx(require("../../../../../design/components/TransitionGroup/TransitionGroup.tsx") /* wrapChildrenDefault */.TransitionGroup, { items, getItemKey, renderItem });
+  return jsx(wrapChildrenDefault /* wrapChildrenDefault */.TransitionGroup, { items, getItemKey, renderItem });
 };

@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/messages/Messages.tsx
 import importAllResult from "useIsMobileVisualRefreshExperimentEnabled";
 import { View } from "useCommonTriggerPoint";
@@ -13,7 +14,7 @@ let c3 = importAllResult;
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 let closure_9 = createCacheKey.createStyles(() => {
   let obj = { container: null };
-  obj = { flex: 1, backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.PANEL_BG };
+  obj = { flex: 1, backgroundColor: Themes.colors.PANEL_BG };
   obj[0] = obj;
   return obj;
 });

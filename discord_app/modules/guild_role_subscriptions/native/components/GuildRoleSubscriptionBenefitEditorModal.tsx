@@ -1,3 +1,9 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { TrashIcon } from "../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { styles } from "FormStyles.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModal.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import _slicedToArray from "_slicedToArray";
@@ -22,16 +28,16 @@ const require = arg1;
 function DeleteButton(onDelete) {
   const tmp = callback4();
   let obj = { style: items, accessibilityRole: "button", onPress: onDelete.onDelete, children: null };
-  items = [require("FormStyles.tsx")().textInput, tmp.deleteButton];
+  items = [styles().textInput, tmp.deleteButton];
   obj = { style: tmp.deleteIcon, color: null, size: "custom" };
-  obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.RED_400;
-  const items1 = [callback2(require("../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx") /* TrashIcon */.TrashIcon, obj), ];
+  obj[1] = Themes.unsafe_rawColors.RED_400;
+  const items1 = [callback2(TrashIcon /* TrashIcon */.TrashIcon, obj), ];
   obj = { style: tmp.deleteLabel, children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.p4Bh7f);
-  items1[1] = callback2(require("../../../../design/void/native.tsx") /* Button */.LegacyText, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.p4Bh7f);
+  items1[1] = callback2(Button /* Button */.LegacyText, obj);
   obj[3] = items1;
-  return callback3(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  return callback3(PressableBase /* PressableBase */.PressableOpacity, obj);
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ GuildRoleSubscriptionBenefitTypes: c10, MAX_SUBSCRIPTION_BENEFIT_DESCRIPTION_LENGTH: unpackModuleId, MAX_SUBSCRIPTION_BENEFIT_NAME_LENGTH: closure_12 } = MAX_SUBSCRIPTION_TIERS);
@@ -205,12 +211,12 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
   }
   if (!tmp13) {
     if (benefitType.benefitType === _handleSave.CHANNEL) {
-      const intl2 = _require("../../../../intl/index.native.tsx").intl;
-      let stringResult = intl2.string(_require("../../../../intl/index.native.tsx").t.Odqwp9);
+      const intl2 = _getSystemLocale.intl;
+      let stringResult = intl2.string(_getSystemLocale.t.Odqwp9);
       let tmp20 = _require;
     } else {
-      const intl = _require("../../../../intl/index.native.tsx").intl;
-      stringResult = intl.string(_require("../../../../intl/index.native.tsx").t["0rVUnI"]);
+      const intl = _getSystemLocale.intl;
+      stringResult = intl.string(_getSystemLocale.t["0rVUnI"]);
       tmp20 = _require;
     }
     if (benefitType.benefitType === _handleSave.CHANNEL) {

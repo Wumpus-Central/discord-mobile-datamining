@@ -1,3 +1,4 @@
+import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAnalytics.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
@@ -70,7 +71,7 @@ const result = require("DISCORD_EPOCH").fileFinishedImporting("modules/main_tabs
 
 export const getAffinityProperties = function getAffinityProperties(data) {
   id = id.getId();
-  let obj = require("../../../../../utils/SnowflakeUtils.tsx");
+  let obj = DISCORD_EPOCH;
   if (obj.extractTimestamp(id) % 25 === 0) {
     obj = {};
     obj = { destination_channel_ids: null, destination_channel_ids_index: null };

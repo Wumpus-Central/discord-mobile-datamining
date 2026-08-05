@@ -1,3 +1,7 @@
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/safety_hub/AutomatedUnderageAppealModalActionCreators.native.tsx
 import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF";
 import SafetyHubView from "SafetyHubView";
@@ -10,18 +14,18 @@ const require = arg1;
 ({ AGE_APPEAL_ACTION_SHEET_NAME: c4, AGE_CHECK_POLL_DELAY_MS: c5 } = SafetyHubView);
 let obj = {
   open(classificationId, onClose) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
     obj = { classificationId, onClose };
-    require("../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(require("../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(11211, dependencyMap.paths), closure_4, obj);
+    ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(11211, dependencyMap.paths), closure_4, obj);
   },
   openV2(arg0, onClose) {
     let closure_0 = arg0;
     const importDefault = onClose;
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
     obj = { onClose };
-    require("../../actions/ModalActionCreators.tsx").pushLazy(callback(function*() {
+    ModalActionCreators.pushLazy(callback(function*() {
       let closure_0 = tmp2;
       yield outer1_0(paths[7])(paths[9], paths.paths);
       closure_0 = arg1.default;
@@ -41,13 +45,13 @@ let obj = {
     }), obj, closure_6);
   },
   close() {
-    require("../../Dispatcher.tsx").dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE" });
+    dispatcher.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE" });
   },
   success() {
-    require("../../Dispatcher.tsx").dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_SUBMIT_SUCCESS" });
+    dispatcher.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_SUBMIT_SUCCESS" });
   },
   start_verification_check() {
-    require("../../Dispatcher.tsx").dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" });
+    dispatcher.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" });
     const timerId = setTimeout(() => callback(table[11]).checkSuspendedUserAgeVerification(), closure_5);
   }
 };

@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../../_runtime/11960_registerAsset.js";
+import { ContactSyncError } from "ContactSyncError.tsx";
+import { RedesignContactSyncDiscoverabilityFooter } from "RedesignContactSyncDiscoverabilityFooter.tsx";
 // discord_app/modules/contact_sync/native/components/ContactSyncLandingOnboardingRedesign.tsx
 import closure_3 from "createCacheKey";
 import noop from "noop";
@@ -100,7 +103,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
       }
     }
   }), items);
-  obj[2] = require("../../../../../_runtime/11960_registerAsset.js");
+  obj[2] = registerAsset;
   const items1 = [callback2(closure_6, obj), , , , ];
   let obj1 = { style: tmp.title, variant: "heading-xl/bold", children: null };
   const intl = onNext(1236).intl;
@@ -118,9 +121,9 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
   obj4[4] = loading;
   obj3[1] = callback2(onNext(4695).Button, obj4);
   items1[3] = callback2(closure_5, obj3);
-  items1[4] = callback2(require("ContactSyncError.tsx"), { error });
+  items1[4] = callback2(ContactSyncError, { error });
   obj[1] = items1;
-  const items2 = [callback3(closure_5, obj), callback2(closure_5, { style: tmp.trailing, children: callback2(require("RedesignContactSyncDiscoverabilityFooter.tsx"), { discoverabilityEnabled, onValueChanged: setDiscoverabilityEnabled }) })];
+  const items2 = [callback3(closure_5, obj), callback2(closure_5, { style: tmp.trailing, children: callback2(RedesignContactSyncDiscoverabilityFooter, { discoverabilityEnabled, onValueChanged: setDiscoverabilityEnabled }) })];
   obj[0] = items2;
   return callback3(closure_10, obj);
 };

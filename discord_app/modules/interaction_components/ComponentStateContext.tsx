@@ -1,3 +1,5 @@
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import { ActionComponentState } from "InteractionComponentTypes.tsx";
 // discord_app/modules/interaction_components/ComponentStateContext.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "useMountLayoutEffect";
@@ -13,7 +15,7 @@ import { jsx } from "set";
 const require = arg1;
 function isInteractionComponent(type) {
   type = type.type;
-  if (require("../../flow/Server.tsx") /* PermissionOverwriteType */.ComponentType.BUTTON === type) {
+  if (PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.BUTTON === type) {
     return type.style !== tmp(1906).ButtonStyle.LINK;
   } else {
     if (tmp(1906).ComponentType.STRING_SELECT !== type) {
@@ -38,7 +40,7 @@ function getActionComponentState(interaction, id, shouldDisableInteractiveCompon
   if (shouldDisableInteractiveComponents === undefined) {
     flag = false;
   }
-  let LOADING = require("InteractionComponentTypes.tsx") /* ActionComponentState */.ActionComponentState.NORMAL;
+  let LOADING = ActionComponentState /* ActionComponentState */.ActionComponentState.NORMAL;
   let tmp3 = null != interaction;
   if (tmp3) {
     tmp3 = interaction.state !== tmp(4510).InteractionState.FAILED;

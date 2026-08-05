@@ -1,3 +1,6 @@
+import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
 // discord_app/modules/api_request_config/native/ApiRequestConfigManager.tsx
 import { NativeModules } from "get ActivityIndicator";
 import fetchFingerprint from "fetchFingerprint";
@@ -8,20 +11,20 @@ function updateApiRequestConfig() {
   if (NativeCacheModule != null) {
     const _JSON = JSON;
     let obj = { apiBaseUrl: null, headers: null };
-    obj[0] = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.getAPIBaseURL();
+    obj[0] = sendRequest /* sendRequest */.getAPIBaseURL();
     obj = { "X-Super-Properties": null, "X-Fingerprint": null, "X-Installation-ID": null };
-    const obj2 = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
-    obj[0] = require("../../../utils/AnalyticsUtils.tsx").getSuperPropertiesBase64();
+    const obj2 = sendRequest /* sendRequest */;
+    obj[0] = expandEventProperties.getSuperPropertiesBase64();
     obj[1] = store.getFingerprint();
     obj[2] = store.getInstallationForTracking();
     obj[1] = obj;
     const result = NativeCacheModule.setItem("discordApiRequestConfig", JSON.stringify(obj));
-    const obj4 = require("../../../utils/AnalyticsUtils.tsx");
+    const obj4 = expandEventProperties;
   }
 }
 let prototype = function ApiRequestConfigManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.handleUpdate = require("../../../utils/PlatformUtils.tsx") /* set */.isAndroid() ? updateApiRequestConfig : (() => {
+  applyArgumentsResult.handleUpdate = set /* set */.isAndroid() ? updateApiRequestConfig : (() => {
 
   });
   applyArgumentsResult.actions = { POST_CONNECTION_OPEN: applyArgumentsResult.handleUpdate, APP_STATE_UPDATE: applyArgumentsResult.handleUpdate };

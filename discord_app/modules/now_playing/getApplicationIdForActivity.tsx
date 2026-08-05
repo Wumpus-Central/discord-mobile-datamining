@@ -1,3 +1,6 @@
+import { isListeningOnSpotify } from "../activities/utils/isListeningOnSpotify.tsx";
+import { isOnXbox } from "../activities/utils/isOnXbox.tsx";
+import { _isStreaming } from "../activities/utils/isStreaming.tsx";
 // discord_app/modules/now_playing/getApplicationIdForActivity.tsx
 import { SpotifyApplication } from "getIconURL";
 import { TWITCH_APPLICATION_ID_PREFIX as closure_3 } from "getIconURL";
@@ -7,7 +10,7 @@ import { XBOX_ACTIVITY_APPLICATION_ID as closure_5 } from "items3";
 const result = require("getIconURL").fileFinishedImporting("modules/now_playing/getApplicationIdForActivity.tsx");
 
 export default function getApplicationIdForActivity(party) {
-  if (require("../activities/utils/isListeningOnSpotify.tsx")(party)) {
+  if (isListeningOnSpotify(party)) {
     if (null != party.party) {
       if (null != party.party.id) {
         let id = SpotifyApplication.id;
@@ -15,7 +18,7 @@ export default function getApplicationIdForActivity(party) {
       return id;
     }
   }
-  if (require("../activities/utils/isStreaming.tsx")(party)) {
+  if (_isStreaming(party)) {
     if (null != party.url) {
       id = closure_3 + party.url;
     }
@@ -26,7 +29,7 @@ export default function getApplicationIdForActivity(party) {
     }
   }
   id = null;
-  if (require("../activities/utils/isOnXbox.tsx")(party)) {
+  if (isOnXbox(party)) {
     id = closure_4 + party.name;
   }
 };

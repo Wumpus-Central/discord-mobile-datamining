@@ -1,3 +1,4 @@
+import { registerAsset } from "../../../_runtime/01448_registerAsset.js";
 // discord_app/utils/native/AvatarUtils.tsx
 import get_ActivityIndicator from "registerAsset";
 import set from "registerAsset";
@@ -37,5 +38,5 @@ export const DEFAULT_AVATARS_SMALL_MAX_SIZE = 24;
 export const DEFAULT_PROVISIONAL_AVATARS = items2;
 export { ensureAvatarSource };
 export const getAutomodAvatarURL = function getAutomodAvatarURL() {
-  return require("../../../_runtime/01448_registerAsset.js");
+  return registerAsset;
 };

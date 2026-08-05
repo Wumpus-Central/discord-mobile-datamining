@@ -1,3 +1,5 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
 // discord_app/modules/activities/panel/native/ActivityPanelPIPView.tsx
 import importAllResult from "u";
 import { View } from "useWindowDimensions";
@@ -279,7 +281,7 @@ const memoResult = importAllResult.memo((transitionState) => {
   let stateFromStores1;
   let memo;
   const items = [participantFromServer];
-  const stateFromStoresObject = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = _initialize.useStateFromStoresObject(items, () => {
     const connectedActivityLocation = store.getConnectedActivityLocation();
     const obj = { channelId: null, activity: null };
     obj[0] = _undefined(_undefined2[30]).getEmbeddedActivityLocationChannelId(connectedActivityLocation);
@@ -331,7 +333,7 @@ const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedI
 
 export default memoResult;
 export const useBaseActivityPanelPIPView = function useBaseActivityPanelPIPView() {
-  const tmp = require("../../../safe_area/useSafeAreaInsets.native.tsx")();
+  const tmp = useSafeAreaInsets();
   const require = tmp;
   const items = [tmp.right];
   return {

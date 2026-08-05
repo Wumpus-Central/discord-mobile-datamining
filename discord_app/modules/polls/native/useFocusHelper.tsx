@@ -1,3 +1,4 @@
+import { 00038__ } from "../../../../_runtime/metro/00038__.js";
 // discord_app/modules/polls/native/useFocusHelper.tsx
 import noop from "noop";
 
@@ -92,7 +93,7 @@ prototype["commitState"] = function commitState() {
 };
 prototype["refWithKey"] = function refWithKey(question) {
   const pendingState = this.pendingState;
-  require("../../../../_runtime/metro/00038__.js")(null != pendingState, "Called refWithKey without a valid state");
+  00038__(null != pendingState, "Called refWithKey without a valid state");
   const keyOrder = pendingState.keyOrder;
   keyOrder.push(question);
   if (null != pendingState.refsByKey[question]) {

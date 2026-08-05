@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_settings/safety/GuildInvitesDisabledUtils.tsx
 import computeAlertSettings from "computeAlertSettings";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -13,7 +14,7 @@ export const useInvitesDisabledPermission = function useInvitesDisabledPermissio
   const _require = guild;
   const items = [getUncachedChannelPermissions];
   const items1 = [guild];
-  return _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = outer1_3.can(outer1_5.MANAGE_GUILD, tmp);
@@ -24,7 +25,7 @@ export const useInvitesDisabledPermission = function useInvitesDisabledPermissio
 export const useInvitesDisabled = function useInvitesDisabled(features) {
   const _require = features;
   const items = [computeAlertSettings];
-  const stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     let guildIncident = null;
     if (null != closure_0) {
       guildIncident = outer1_2.getGuildIncident(tmp.id);
@@ -57,7 +58,7 @@ export const useShouldShowInvitesDisabledNotif = function useShouldShowInvitesDi
   let _require = guild;
   const items = [getUncachedChannelPermissions];
   const items1 = [guild];
-  let stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  let stateFromStores = _initialize.useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = outer1_3.can(outer1_5.MANAGE_GUILD, tmp);
@@ -65,9 +66,9 @@ export const useShouldShowInvitesDisabledNotif = function useShouldShowInvitesDi
     return canResult;
   }, items1);
   _require = guild;
-  const obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  const obj = _initialize;
   const items2 = [computeAlertSettings];
-  const stateFromStores1 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
+  const stateFromStores1 = _initialize.useStateFromStores(items2, () => {
     let guildIncident = null;
     if (null != closure_0) {
       guildIncident = outer1_2.getGuildIncident(tmp.id);

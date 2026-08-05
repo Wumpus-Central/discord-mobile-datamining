@@ -1,3 +1,8 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
+import { apexExperiment } from "../../../premium/experiments/MobileNitroManageSubscriptionsSettingsExperiment.tsx";
+import { ThemedTabBadge } from "../../../premium/native/PremiumTabBadge.tsx";
+import { PremiumScreen } from "../../premium/native/PremiumSettingScreen.tsx";
 // discord_app/modules/user_settings/defs/native/PremiumSetting.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -8,11 +13,11 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle: function getPremiumSettingTitle() {
-    const mobileNitroManageSubscriptionsSettingsExperiment = require("../../../premium/experiments/MobileNitroManageSubscriptionsSettingsExperiment.tsx") /* apexExperiment */.getMobileNitroManageSubscriptionsSettingsExperiment({ location: "PremiumSetting" });
-    const obj = require("../../../premium/experiments/MobileNitroManageSubscriptionsSettingsExperiment.tsx") /* apexExperiment */;
+    const mobileNitroManageSubscriptionsSettingsExperiment = apexExperiment /* apexExperiment */.getMobileNitroManageSubscriptionsSettingsExperiment({ location: "PremiumSetting" });
+    const obj = apexExperiment /* apexExperiment */;
     currentUser = currentUser.getCurrentUser();
-    const result = require("../../../../utils/PremiumUtils.tsx") /* getPremiumPlanItem */.hasPremiumSubscriptionToDisplay(currentUser, premiumTypeSubscription.getPremiumTypeSubscription());
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const result = getPremiumPlanItem /* getPremiumPlanItem */.hasPremiumSubscriptionToDisplay(currentUser, premiumTypeSubscription.getPremiumTypeSubscription());
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     const string = intl.string;
     if (result) {
       if (mobileNitroManageSubscriptionsSettingsExperiment) {
@@ -38,14 +43,14 @@ createToggle = {
     }, []);
   },
   useTrailing: function usePremiumSettingTrailing() {
-    return jsx(require("../../../premium/native/PremiumTabBadge.tsx"), {});
+    return jsx(ThemedTabBadge, {});
   },
   screen: createToggle
 };
 createToggle = {
   route: require("ME").UserSettingsSections.PREMIUM,
   getComponent() {
-    return require("../../premium/native/PremiumSettingScreen.tsx") /* PremiumScreen */.default;
+    return PremiumScreen /* PremiumScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

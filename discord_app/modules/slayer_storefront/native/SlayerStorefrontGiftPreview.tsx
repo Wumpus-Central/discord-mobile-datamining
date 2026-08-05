@@ -1,3 +1,7 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { InfoBox } from "../../user_settings/authorized_apps/native/InfoBox.tsx";
+import { SlayerStorefrontItemCard } from "SlayerStorefrontItemCard.tsx";
 // discord_app/modules/slayer_storefront/native/SlayerStorefrontGiftPreview.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -21,9 +25,9 @@ function WarningBox(application) {
     let name = importDefault;
     let BMMo2K = dependencyMap;
     let obj = { look: null, style: null, children: null };
-    obj[0] = require("../../user_settings/authorized_apps/native/InfoBox.tsx") /* InfoBox */.InfoBoxLooks.WARNING;
+    obj[0] = InfoBox /* InfoBox */.InfoBoxLooks.WARNING;
     obj[1] = tmp.warningBox;
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     if (mobileAccountLinkingDisabled) {
       BMMo2K = name(3223).BMMo2K;
       tmp2 = application == tmp2;
@@ -50,9 +54,9 @@ function WarningBox(application) {
       obj[2] = intl.format(tmp6(1236).t["3T0cpx"], {});
       tmp7 = obj;
     }
-    closure_4(require("../../user_settings/authorized_apps/native/InfoBox.tsx"), tmp7);
+    closure_4(InfoBox, tmp7);
     const tmp3 = closure_4;
-    const tmp5 = require("../../user_settings/authorized_apps/native/InfoBox.tsx");
+    const tmp5 = InfoBox;
   }
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
@@ -78,10 +82,10 @@ export default function SlayerStorefrontGiftPreview(arg0) {
     obj[0] = tmp.container;
     obj = { sku: null };
     obj[0] = sku;
-    const items = [callback(require("SlayerStorefrontItemCard.tsx"), obj), , ];
+    const items = [callback(SlayerStorefrontItemCard, obj), , ];
     obj = { variant: "heading-md/normal", color: "mobile-text-heading-primary", style: null, children: null };
     obj[2] = tmp.text;
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     const obj1 = { sender: null, skuName: null, applicationName: null };
     obj1[0] = sender;
     obj1[1] = sku.name;
@@ -90,8 +94,8 @@ export default function SlayerStorefrontGiftPreview(arg0) {
       name = application.name;
     }
     obj1[2] = name;
-    obj[3] = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["2tBYtA"], obj1);
-    items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+    obj[3] = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["2tBYtA"], obj1);
+    items[1] = callback(Text /* Text */.Text, obj);
     const obj2 = { canStartAuthorization: null, hasAccountLinked: null, mobileAccountLinkingDisabled: null, sku: null, application: null };
     obj2[0] = canStartAuthorization;
     obj2[1] = hasAccountLinked;

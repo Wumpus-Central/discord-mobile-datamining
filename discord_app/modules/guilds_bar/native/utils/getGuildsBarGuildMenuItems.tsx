@@ -1,3 +1,8 @@
+import { BellIcon } from "../../../../design/components/Icon/native/redesign/generated/BellIcon.tsx";
+import { EnvelopeIcon } from "../../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx";
+import { SettingsIcon } from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getMuteTimeOptions } from "../../../notifications/NotificationUtils.tsx";
 // discord_app/modules/guilds_bar/native/utils/getGuildsBarGuildMenuItems.tsx
 import EnvelopeIcon from "EnvelopeIcon";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -9,12 +14,12 @@ let result = require("updateUserGuildSettingsInternal").fileFinishedImporting("m
 
 export default function getGuildsBarGuildMenuItems(arg0) {
   const _require = arg0;
-  let obj = _require("../../../notifications/NotificationUtils.tsx");
+  let obj = _getMuteTimeOptions;
   let result = obj.shouldShowUseNewNotificationSystem("GuildPopoutMenu");
   obj = { IconComponent: null, label: null, action: null };
-  obj[0] = _require("../../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx").EnvelopeIcon;
-  const intl = _require("../../../../intl/index.native.tsx").intl;
-  obj[1] = intl.string(_require("../../../../intl/index.native.tsx").t.e6RscS);
+  obj[0] = _EnvelopeIcon.EnvelopeIcon;
+  const intl = _getSystemLocale.intl;
+  obj[1] = intl.string(_getSystemLocale.t.e6RscS);
   obj[2] = function action() {
     return outer1_3(function*() {
       if (paths === 2) {
@@ -72,16 +77,16 @@ export default function getGuildsBarGuildMenuItems(arg0) {
     })();
   };
   let items = [obj, , ];
-  obj = { IconComponent: _require("../../../../design/components/Icon/native/redesign/generated/BellIcon.tsx").BellIcon, label: null, action: null };
-  const intl2 = _require("../../../../intl/index.native.tsx").intl;
-  obj[1] = intl2.string(_require("../../../../intl/index.native.tsx").t.HcoRu0);
+  obj = { IconComponent: _BellIcon.BellIcon, label: null, action: null };
+  const intl2 = _getSystemLocale.intl;
+  obj[1] = intl2.string(_getSystemLocale.t.HcoRu0);
   obj[2] = function action() {
     outer1_1(outer1_2[10]).open(closure_0);
   };
   items[1] = obj;
-  let obj1 = { IconComponent: _require("../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx").SettingsIcon, label: null, action: null };
-  const intl3 = _require("../../../../intl/index.native.tsx").intl;
-  obj1[1] = intl3.string(_require("../../../../intl/index.native.tsx").t.PdRCRg);
+  let obj1 = { IconComponent: _SettingsIcon.SettingsIcon, label: null, action: null };
+  const intl3 = _getSystemLocale.intl;
+  obj1[1] = intl3.string(_getSystemLocale.t.PdRCRg);
   obj1[2] = function action() {
     const guild = outer1_4.getGuild(closure_0);
     if (null != guild) {

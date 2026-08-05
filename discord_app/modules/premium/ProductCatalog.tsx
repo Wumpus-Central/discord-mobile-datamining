@@ -1,3 +1,4 @@
+import { apexExperiment } from "experiments/DenormalizedPerksReadExperiment.tsx";
 // discord_app/modules/premium/ProductCatalog.tsx
 import GuildFeatures from "GuildFeatures";
 import "set";
@@ -1155,7 +1156,7 @@ export const canUserUse = function canUserUse(COLLECTIBLES, isPremiumWithFractio
       perks = isPremiumWithFractionalPremiumOnly.perks;
     }
     if (null != perks) {
-      const config = require("experiments/DenormalizedPerksReadExperiment.tsx").getConfig({ location: "product_catalog_can_user_use" });
+      const config = apexExperiment.getConfig({ location: "product_catalog_can_user_use" });
       if (config !== _undefined(13237).DenormalizedPerksReadConfig.CONTROL) {
         let featureValue = COLLECTIBLES.getFeatureValue(isPremiumWithFractionalPremiumOnly);
         let perks1;
@@ -1168,7 +1169,7 @@ export const canUserUse = function canUserUse(COLLECTIBLES, isPremiumWithFractio
         }
         return featureValue;
       }
-      const obj = require("experiments/DenormalizedPerksReadExperiment.tsx");
+      const obj = apexExperiment;
     }
   }
   return COLLECTIBLES.getFeatureValue(isPremiumWithFractionalPremiumOnly);

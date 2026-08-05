@@ -1,3 +1,4 @@
+import { AuthorizedAppScreen } from "../../authorized_apps/native/AuthorizedAppScreen.tsx";
 // discord_app/modules/user_settings/defs/native/AuthorizedAppSetting.tsx
 import createToggle from "createToggle";
 
@@ -12,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.AUTHORIZED_APP,
   getComponent() {
-    return require("../../authorized_apps/native/AuthorizedAppScreen.tsx") /* AuthorizedAppScreen */.default;
+    return AuthorizedAppScreen /* AuthorizedAppScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

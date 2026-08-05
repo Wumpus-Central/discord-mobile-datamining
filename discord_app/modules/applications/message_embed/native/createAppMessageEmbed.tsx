@@ -1,3 +1,16 @@
+import { _copy } from "../../../../utils/ClipboardUtils.native.tsx";
+import { isDiscordFrontendDevelopment } from "../../../../utils/GlobalUtils.tsx";
+import { installApplication } from "../../../../utils/native/ApplicationUtils.tsx";
+import { getBestActiveInput } from "../../../../utils/native/ChatInputUtils.tsx";
+import { isDiscordProxiedAssetUrl } from "../../../../utils/URLUtils.tsx";
+import { _launchActivityInBotDM } from "../../../app_launcher/utils/AppLauncherPlayUtils.tsx";
+import { getShelfBadgeTypeIfActive } from "../../../app_launcher/utils/AppLauncherUtils.tsx";
+import { ApplicationCommandSectionType } from "../../../application_commands/ApplicationCommandTypes.tsx";
+import { ContentClassificationVisibility } from "../../../content_classification/ContentClassificationVisibility.tsx";
+import { getEmbedThemeColors } from "../../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
+import { presentAddedFriendToast } from "../../../toast/native/ToastUtils.tsx";
+import { fetchApplication } from "../../ApplicationActionCreators.tsx";
+import { _joinOrStartActivityInChannel } from "utils/joinOrStartActivityInChannel.tsx";
 // discord_app/modules/applications/message_embed/native/createAppMessageEmbed.tsx
 import _slicedToArray from "_slicedToArray";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -23,8 +36,8 @@ export const getAppLinkGateResult = function getAppLinkGateResult(arg0) {
   const application = store.getApplication(appId);
   if (null == application) {
     if (false === obj.isFetchingApplication(appId)) {
-      const application1 = require("../../ApplicationActionCreators.tsx") /* fetchApplication */.fetchApplication(appId);
-      const obj6 = require("../../ApplicationActionCreators.tsx") /* fetchApplication */;
+      const application1 = fetchApplication /* fetchApplication */.fetchApplication(appId);
+      const obj6 = fetchApplication /* fetchApplication */;
     }
     return { state: "unavailable" };
   } else {
@@ -34,10 +47,10 @@ export const getAppLinkGateResult = function getAppLinkGateResult(arg0) {
       nsfwAllowed = currentUser.nsfwAllowed;
     }
     let messageResult = dependencyMap;
-    let obj1 = require("../../../content_classification/ContentClassificationVisibility.tsx") /* ContentClassificationVisibility */;
+    let obj1 = ContentClassificationVisibility /* ContentClassificationVisibility */;
     const contentClassificationVisibility = obj1.getContentClassificationVisibility(application.contentClassification, channel, nsfwAllowed);
-    if (contentClassificationVisibility !== require("../../../content_classification/ContentClassificationVisibility.tsx") /* ContentClassificationVisibility */.ContentClassificationVisibility.DISPLAY) {
-      let intl = require("../../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx")(theme).baseColors;
+    if (contentClassificationVisibility !== ContentClassificationVisibility /* ContentClassificationVisibility */.ContentClassificationVisibility.DISPLAY) {
+      let intl = getEmbedThemeColors(theme).baseColors;
       if (contentClassificationVisibility === tmp3(11260).ContentClassificationVisibility.BLOCK_UNDERAGE) {
         const intl3 = tmp3(1236).intl;
         let stringResult = intl3.string(tmp3(1236).t.LPOzxB);
@@ -90,10 +103,10 @@ export const createAppMessageEmbed = function createAppMessageEmbed(arg0) {
   let theme;
   ({ message, app } = arg0);
   ({ theme, embedUrl } = arg0);
-  const baseColors = require("../../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx")(theme).baseColors;
+  const baseColors = getEmbedThemeColors(theme).baseColors;
   ({ id, tags, maxParticipants, icon } = app);
   ({ name, bot } = app);
-  let obj = require("../../../app_launcher/utils/AppLauncherUtils.tsx") /* getShelfBadgeTypeIfActive */;
+  let obj = getShelfBadgeTypeIfActive /* getShelfBadgeTypeIfActive */;
   const isEmbeddedAppResult = obj.isEmbeddedApp(app);
   if (isEmbeddedAppResult) {
     applicationAssetFetchState = applicationAssetFetchState.getApplicationAssetFetchState(id);
@@ -215,7 +228,7 @@ export const createAppMessageEmbed = function createAppMessageEmbed(arg0) {
 };
 export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId) {
   const application = store.getApplication(appId.appId);
-  let obj = require("../../../../utils/URLUtils.tsx");
+  let obj = isDiscordProxiedAssetUrl;
   const toURLSafeResult = obj.toURLSafe(appId.embedUrl);
   let id;
   if (toURLSafeResult != null) {
@@ -239,8 +252,8 @@ export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId)
     obj[2] = items;
     obj[3] = id;
     obj[4] = value;
-    const result = require("utils/joinOrStartActivityInChannel.tsx") /* _joinOrStartActivityInChannel */.joinOrStartActivityInChannel(obj);
-    const obj11 = require("utils/joinOrStartActivityInChannel.tsx") /* _joinOrStartActivityInChannel */;
+    const result = _joinOrStartActivityInChannel /* _joinOrStartActivityInChannel */.joinOrStartActivityInChannel(obj);
+    const obj11 = _joinOrStartActivityInChannel /* _joinOrStartActivityInChannel */;
   } else if ("play_in_dm" === actionId) {
     let bot;
     if (application != null) {
@@ -252,11 +265,11 @@ export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId)
       obj[1] = application.bot.id;
       const items1 = [tmp2(5630).APP_MESSAGE_EMBED];
       obj[2] = items1;
-      obj[3] = require("../../../application_commands/ApplicationCommandTypes.tsx") /* ApplicationCommandSectionType */.CommandOrigin.APP_MESSAGE_EMBED;
+      obj[3] = ApplicationCommandSectionType /* ApplicationCommandSectionType */.CommandOrigin.APP_MESSAGE_EMBED;
       obj[4] = id;
       obj[5] = value;
-      const result1 = require("../../../app_launcher/utils/AppLauncherPlayUtils.tsx") /* _launchActivityInBotDM */.launchActivityInBotDM(obj);
-      const obj15 = require("../../../app_launcher/utils/AppLauncherPlayUtils.tsx") /* _launchActivityInBotDM */;
+      const result1 = _launchActivityInBotDM /* _launchActivityInBotDM */.launchActivityInBotDM(obj);
+      const obj15 = _launchActivityInBotDM /* _launchActivityInBotDM */;
     }
   } else if ("play_frame" === actionId) {
     let obj1 = { applicationId: null };
@@ -264,7 +277,7 @@ export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId)
     tmp2(10510).launchFrame(obj1);
     const tmp2Result = tmp2(10510);
   } else if ("view_in_app_launcher" === actionId) {
-    const bestActiveInput = require("../../../../utils/native/ChatInputUtils.tsx") /* getBestActiveInput */.getBestActiveInput();
+    const bestActiveInput = getBestActiveInput /* getBestActiveInput */.getBestActiveInput();
     if (bestActiveInput != null) {
       let obj2 = { type: null, context: null };
       obj2[0] = tmp14(1579).KeyboardTypes.APP_LAUNCHER;
@@ -276,22 +289,22 @@ export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId)
       obj2[1] = obj3;
       bestActiveInput.openCustomKeyboard(obj2);
     }
-    const obj7 = require("../../../../utils/native/ChatInputUtils.tsx") /* getBestActiveInput */;
+    const obj7 = getBestActiveInput /* getBestActiveInput */;
     tmp14 = require;
   } else if ("add_app" === actionId) {
     if (null != application) {
-      let obj4 = require("../../../../utils/native/ApplicationUtils.tsx") /* installApplication */;
+      let obj4 = installApplication /* installApplication */;
       obj4 = { applicationId: null, customInstallUrl: null, installParams: null, integrationTypesConfig: null, source: "app_message_embed" };
       ({ id: obj6[0], customInstallUrl: obj6[1], installParams: obj6[2], integrationTypesConfig: obj6[3] } = application);
       obj4.installApplication(obj4);
     }
   } else if ("link_copied" === actionId) {
-    obj2 = require("../../../../utils/ClipboardUtils.native.tsx") /* _copy */;
+    obj2 = _copy /* _copy */;
     obj2.copy(appId.embedUrl);
-    obj3 = require("../../../toast/native/ToastUtils.tsx") /* presentAddedFriendToast */;
+    obj3 = presentAddedFriendToast /* presentAddedFriendToast */;
     obj3.presentLinkCopied();
   } else {
-    obj1 = require("../../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */;
+    obj1 = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
     obj1.assertNever(appId.actionId);
   }
 };

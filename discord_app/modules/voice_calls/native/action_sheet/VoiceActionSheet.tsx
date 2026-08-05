@@ -1,3 +1,6 @@
+import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
+import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
+import { _initialize } from "../../../nuf_channels/native/NUFChannelsManager.tsx";
 // discord_app/modules/voice_calls/native/action_sheet/VoiceActionSheet.tsx
 import noop from "noop";
 import get_ActivityIndicator from "ItemSeparator";
@@ -38,7 +41,7 @@ export default function VoiceActionSheet(channel) {
       callback(table[10]).terminate();
     };
   }, items1);
-  let obj1 = require("../../../nuf_channels/native/NUFChannelsManager.tsx");
+  let obj1 = _initialize;
   if (obj1.requiresVoiceChannelsOnboard()) {
     obj = { children: null };
     obj = { channel: null };
@@ -72,5 +75,5 @@ export default function VoiceActionSheet(channel) {
     obj4[2] = callback2(closure_4, obj5);
     children = callback(tmp5(5646).ActionSheet, obj4);
   }
-  return tmp8(channel(5610).AnalyticsLocationProvider, { value: require("../../../app_analytics/useAnalyticsLocations.tsx")(require("../../../app_analytics/AnalyticsLocation.tsx").VOICE_ACTION_SHEET).analyticsLocations, children });
+  return tmp8(channel(5610).AnalyticsLocationProvider, { value: context(QUICK_SWITCHER.VOICE_ACTION_SHEET).analyticsLocations, children });
 };

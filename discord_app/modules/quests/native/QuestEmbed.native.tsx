@@ -1,3 +1,5 @@
+import { isMetaQuest } from "../../device/MetaQuestUtils.android.tsx";
+import { getEmbedThemeColors } from "../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
 // discord_app/modules/quests/native/QuestEmbed.native.tsx
 import { Image } from "isSponsoredPlayQuest";
 import handleThemeChange from "handleThemeChange";
@@ -22,8 +24,8 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
   let merged5 = importDefault;
   let acceptBlurpleLabelBackgroundColor = dependencyMap;
   ({ theme, currentUser } = questId);
-  let acceptLabelGreenColor = require("../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx")(theme);
-  let obj = require("../../device/MetaQuestUtils.android.tsx") /* isMetaQuest */;
+  let acceptLabelGreenColor = getEmbedThemeColors(theme);
+  let obj = isMetaQuest /* isMetaQuest */;
   if (obj.isMetaQuest()) {
     const intl9 = tmp2(1236).intl;
     const intl10 = tmp2(1236).intl;

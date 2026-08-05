@@ -1,3 +1,14 @@
+import { Background } from "../../../../_runtime/05245_Background.js";
+import { metadata } from "../../../../discord_assets/assets/orbs/quest_reward_mobile_bg_static.png.js";
+import { metadata } from "../../../../discord_assets/assets/orbs/quest_reward_mobile_bg.mp4.js";
+import { metadata } from "../../../../discord_assets/assets/orbs/static_idle_orb.png.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { PlatformTypes } from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { VideoComponent } from "../../../components_native/common/Video.tsx";
+import { OrbsIcon } from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/quests/native/QuestOrbsRewardModal.native.tsx
 import handleOrientationChange from "handleOrientationChange";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -25,9 +36,9 @@ function OrbsBalance(balance) {
   const tmp = callback7();
   let obj = { children: null };
   obj = { size: "xs", color: null, style: null };
-  obj[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.WHITE;
+  obj[1] = Themes.colors.WHITE;
   obj[2] = tmp.orbsIcon;
-  const items = [callback3(require("../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx") /* OrbsIcon */.OrbsIcon, obj), , ];
+  const items = [callback3(OrbsIcon /* OrbsIcon */.OrbsIcon, obj), , ];
   obj = { style: tmp.spacer };
   items[1] = callback3(closure_8, obj);
   items[2] = balance.balance;
@@ -49,20 +60,20 @@ function CancelButton() {
     labelVisible: false,
     style: null
   };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.cpT0Cq);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
   obj[4] = tmp.closeButton;
-  return callback3(require("../../../../_runtime/05245_Background.js") /* Background */.HeaderBackButton, obj);
+  return callback3(Background /* Background */.HeaderBackButton, obj);
 }
 function StaticOrb() {
   let obj = { style: { width: "100%", height: "100%" }, children: null };
   obj = { source: null, style: null, fade: false };
   obj = { uri: null };
   const tmp = callback8();
-  obj[0] = require("../../../../discord_assets/assets/orbs/static_idle_orb.png.js");
+  obj[0] = metadata;
   obj[0] = obj;
   obj[1] = tmp.animatedOrb;
-  obj[1] = callback3(require("../../../components_native/common/FastImage.tsx"), obj);
+  obj[1] = callback3(preload, obj);
   return callback3(closure_8, obj);
 }
 function AnimatedOrbContainer(isAppActive) {
@@ -154,20 +165,20 @@ obj[1] = createCacheKey;
 let closure_18 = createCacheKey.createStyles(obj);
 let closure_19 = createCacheKey.createStyles(() => {
   let obj = { root: null, background: null, loading: null, header: null, main: null, animation: null, body: null, title: null, buttonsContainer: null };
-  obj = { flex: 1, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW };
+  obj = { flex: 1, backgroundColor: Themes.colors.BACKGROUND_BASE_LOW };
   obj[0] = obj;
   obj[1] = closure_7.absoluteFillObject;
-  obj = { justifyContent: "center", alignItems: "center", backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_BASE_LOW };
+  obj = { justifyContent: "center", alignItems: "center", backgroundColor: Themes.colors.BACKGROUND_BASE_LOW };
   const merged = Object.assign(closure_7.absoluteFillObject);
   obj[2] = obj;
   obj[3] = { flexDirection: "row", alignItems: "flex-end", justifyContent: "flex-end" };
   obj[4] = { flex: 2 };
   obj[5] = { flex: 3 };
-  obj[6] = { flex: 2, flexDirection: "column", justifyContent: "center", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
-  const obj1 = { flex: 2, flexDirection: "column", justifyContent: "center", gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
-  obj[7] = { textAlign: "center", marginHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32 };
-  const obj2 = { textAlign: "center", marginHorizontal: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_32 };
-  obj[8] = { padding: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24, gap: require("../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
+  obj[6] = { flex: 2, flexDirection: "column", justifyContent: "center", gap: Themes.space.PX_16 };
+  const obj1 = { flex: 2, flexDirection: "column", justifyContent: "center", gap: Themes.space.PX_16 };
+  obj[7] = { textAlign: "center", marginHorizontal: Themes.space.PX_32 };
+  const obj2 = { textAlign: "center", marginHorizontal: Themes.space.PX_32 };
+  obj[8] = { padding: Themes.space.PX_24, gap: Themes.space.PX_16 };
   return obj;
 });
 let items = [{ translateY: 3 }];
@@ -182,7 +193,7 @@ let closure_23 = importAllResult.memo((onLoad) => {
   const effect = importAllResult.useEffect(() => {
     outer1_1(outer1_2[19]).preload(uri);
   }, items);
-  return callback3(require("../../../components_native/common/FastImage.tsx"), { source: { uri }, style: { width: "100%", height: "100%" }, resizeMode: "cover", enableAnimation, onLoad: onLoad.onLoad, usesSmallCache: false, fade: false }, "orb-animate-" + enableAnimation);
+  return callback3(preload, { source: { uri }, style: { width: "100%", height: "100%" }, resizeMode: "cover", enableAnimation, onLoad: onLoad.onLoad, usesSmallCache: false, fade: false }, "orb-animate-" + enableAnimation);
 });
 let closure_24 = importAllResult.memo((animate) => {
   let onLoad;
@@ -214,7 +225,7 @@ let closure_25 = importAllResult.memo((animate) => {
   if (flag === undefined) {
     flag = true;
   }
-  let obj = require("../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
+  let obj = PlatformTypes /* PlatformTypes */;
   obj = { style, renderToHardwareTextureAndroid: true, needsOffscreenAlphaCompositing: true, children: callback3(obj.isAndroid() ? closure_24 : closure_23, { uri, onLoad, animate: flag }) };
   return callback3(closure_8, obj);
 });
@@ -228,11 +239,11 @@ let closure_26 = importAllResult.memo((arg0) => {
   ({ onStaticBgLoad, onAnimatedBgLoad, isAppActive } = arg0);
   let obj = { source: null, style: null, resizeMode: "cover", onLoad: null };
   obj = { uri: null };
-  obj[0] = require("../../../../discord_assets/assets/orbs/quest_reward_mobile_bg_static.png.js");
+  obj[0] = metadata;
   obj[0] = obj;
   obj[1] = style;
   obj[3] = onStaticBgLoad;
-  const children = [callback3(require("../../../components_native/common/FastImage.tsx"), obj), ];
+  const children = [callback3(preload, obj), ];
   let tmp2Result = !useReducedMotion;
   if (!useReducedMotion) {
     tmp2Result = isAppActive;
@@ -240,11 +251,11 @@ let closure_26 = importAllResult.memo((arg0) => {
   if (tmp2Result) {
     obj = { source: null, style: null, resizeMode: "cover", onLoad: null, disableFocus: true, playInBackground: true, preventsDisplaySleepDuringVideoPlayback: false };
     const obj1 = { uri: null };
-    obj1[0] = require("../../../../discord_assets/assets/orbs/quest_reward_mobile_bg.mp4.js");
+    obj1[0] = metadata;
     obj[0] = obj1;
     obj[1] = style;
     obj[3] = onAnimatedBgLoad;
-    tmp2Result = callback3(require("../../../components_native/common/Video.tsx") /* VideoComponent */.VideoComponent, obj);
+    tmp2Result = callback3(VideoComponent /* VideoComponent */.VideoComponent, obj);
   }
   children[1] = tmp2Result;
   return closure_16(importAllResult.Fragment, { children });
@@ -414,7 +425,7 @@ export default function QuestOrbsRewardModal(quest) {
   }
 };
 export const openQuestOrbsRewardModal = function openQuestOrbsRewardModal(quest) {
-  require("../../../actions/ModalActionCreators.tsx").pushLazy(callback2(function*() {
+  ModalActionCreators.pushLazy(callback2(function*() {
     yield v0(outer1_2[12])(outer1_2[11], outer1_2.paths);
     return arg1.default;
   }), { quest: quest.quest }, QuestOrbsRewardModal);

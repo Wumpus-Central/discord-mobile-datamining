@@ -1,3 +1,17 @@
+import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
+import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
+import { EmbedAnnouncementCard } from "GameProfileAnnouncements.tsx";
+import { GameProfileCommunityServer } from "GameProfileCommunity.tsx";
+import { GameProfileWebsiteButton } from "GameProfileDetails.tsx";
+import { GameProfileGameClaimCta } from "GameProfileGameClaimCta.tsx";
+import { GameProfileHeader } from "GameProfileHeader.tsx";
+import { GameProfileLinkAccount } from "GameProfileLinkAccount.tsx";
+import { ImageItem } from "GameProfileMedia.tsx";
+import { GameProfileReportButton } from "GameProfileReportButton.tsx";
+import { SteamReviewRow } from "GameProfileReviews.tsx";
+import { HorizontalSpacing } from "GameProfileShopCarousel.tsx";
+import { Spacer } from "GameProfileSimilarGames.tsx";
+import { GameProfileSummary } from "GameProfileSummary.tsx";
 // discord_app/modules/game_profile/native/components/GameProfileView.tsx
 import GameProfileReportButton from "GameProfileReportButton";
 import { View } from "GameProfileWebsiteButton";
@@ -39,7 +53,7 @@ export default function GameProfileView(arg0) {
   const tmp = createCacheKey();
   importDefault = React.useRef(null);
   dependencyMap = React.useRef(null);
-  const analyticsLocations = require("../../../app_analytics/useAnalyticsLocations.tsx")(require("../../../app_analytics/AnalyticsLocation.tsx").GAME_PROFILE).analyticsLocations;
+  const analyticsLocations = context(QUICK_SWITCHER.GAME_PROFILE).analyticsLocations;
   const items = [onStoreLinksMeasured];
   React = React.useCallback(() => {
     const current = ref.current;
@@ -52,7 +66,7 @@ export default function GameProfileView(arg0) {
   }, items);
   let obj = { value: analyticsLocations, children: null };
   obj = { style: tmp.container, children: null };
-  const items1 = [callback(require("GameProfileHeader.tsx"), { game, scrollY, onHeightMeasured: onHeaderHeightMeasured }), ];
+  const items1 = [callback(GameProfileHeader, { game, scrollY, onHeightMeasured: onHeaderHeightMeasured }), ];
   obj = {
     style: tmp.body,
     onLayout(nativeEvent) {
@@ -61,7 +75,7 @@ export default function GameProfileView(arg0) {
     },
     children: null
   };
-  const items2 = [callback(require("GameProfileMedia.tsx"), { game, viewId, source, trackAction }), , , , , , , , , , ];
+  const items2 = [callback(ImageItem, { game, viewId, source, trackAction }), , , , , , , , , , ];
   let tmp5Result = websiteButtons.length > 0;
   if (tmp5Result) {
     const obj1 = { onLayout: null, children: null };
@@ -78,16 +92,16 @@ export default function GameProfileView(arg0) {
     tmp5Result = tmp5(tmp7, obj1);
   }
   items2[1] = tmp5Result;
-  items2[2] = callback(require("GameProfileReviews.tsx"), { game, trackAction });
-  items2[3] = callback(require("GameProfileSummary.tsx"), { game, viewId, source, trackAction });
-  items2[4] = callback(require("GameProfileLinkAccount.tsx"), { game, analyticsLocations, trackAction });
-  items2[5] = callback(require("GameProfileCommunity.tsx"), { closeModal, game, onInviteResolved: onGuildInviteResolved, trackAction });
-  items2[6] = callback(require("GameProfileAnnouncements.tsx"), { gameId: game.id, invite, closeModal, trackAction, scrollOffsetRef });
-  items2[7] = callback(require("GameProfileShopCarousel.tsx"), { game, closeModal, trackAction });
-  items2[8] = callback(require("GameProfileSimilarGames.tsx"), { gameId: game.id, trackAction });
-  items2[9] = callback(require("GameProfileDetails.tsx"), { game, viewId, source, trackAction });
+  items2[2] = callback(SteamReviewRow, { game, trackAction });
+  items2[3] = callback(GameProfileSummary, { game, viewId, source, trackAction });
+  items2[4] = callback(GameProfileLinkAccount, { game, analyticsLocations, trackAction });
+  items2[5] = callback(GameProfileCommunityServer, { closeModal, game, onInviteResolved: onGuildInviteResolved, trackAction });
+  items2[6] = callback(EmbedAnnouncementCard, { gameId: game.id, invite, closeModal, trackAction, scrollOffsetRef });
+  items2[7] = callback(HorizontalSpacing, { game, closeModal, trackAction });
+  items2[8] = callback(Spacer, { gameId: game.id, trackAction });
+  items2[9] = callback(GameProfileWebsiteButton, { game, viewId, source, trackAction });
   const obj5 = { style: tmp.buttonsContainer, children: null };
-  const items3 = [callback(require("GameProfileGameClaimCta.tsx"), { game, trackAction }), callback(require("GameProfileReportButton.tsx"), { applicationId: game.id, trackAction })];
+  const items3 = [callback(GameProfileGameClaimCta, { game, trackAction }), callback(GameProfileReportButton, { applicationId: game.id, trackAction })];
   obj5[1] = items3;
   items2[10] = closure_6(View, obj5);
   obj[2] = items2;

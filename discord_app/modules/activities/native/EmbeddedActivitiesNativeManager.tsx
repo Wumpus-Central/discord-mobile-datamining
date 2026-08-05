@@ -1,3 +1,12 @@
+import { v1 } from "../../../../_runtime/00514_v1.js";
+import { registerAsset } from "../../../../_runtime/09793_registerAsset.js";
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { ComponentDispatcher } from "../../../utils/ComponentDispatchUtils.tsx";
+import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
+import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
+import { _runPrimaryAppCommandOrJoinEmbeddedActivity } from "../EmbeddedActivitiesActionCreators.tsx";
 // discord_app/modules/activities/native/EmbeddedActivitiesNativeManager.tsx
 import items3 from "items3";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -248,33 +257,33 @@ prototype["showErrorModal"] = function showErrorModal(reason, id) {
   let code;
   let message;
   ({ code, message } = reason);
-  let obj = require("../../../actions/native/AlertActionCreators.tsx");
+  let obj = AlertActionCreators;
   obj = { title: null, body: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.hbiAO6, { code });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.hbiAO6, { code });
   obj[1] = message;
   obj.show(obj);
 };
 prototype["showLaunchErrorModal"] = function showLaunchErrorModal(message) {
-  let obj = require("../../../actions/native/AlertActionCreators.tsx");
+  let obj = AlertActionCreators;
   obj = { title: null, body: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.PtobXW);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.PtobXW);
   obj[1] = message;
   obj.show(obj);
 };
 prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled() {
-  let obj = require("../../toast/native/ToastActionCreators.tsx");
+  let obj = dispatcher;
   obj = { key: "EMBEDDED_ACTIVITIES_DEV_SHELF_URL_OVERRIDE_ENABLED", content: null, icon: null, iconColor: "status-positive" };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.JfA7IK);
-  obj[2] = require("../../../../_runtime/09793_registerAsset.js");
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.JfA7IK);
+  obj[2] = registerAsset;
   obj.open(obj);
 };
 prototype["releaseWebView"] = function releaseWebView() {
   const releaseIframeIdResult = this.releaseIframeId();
   if (null != releaseIframeIdResult) {
-    const ComponentDispatch = require("../../../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
+    const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
     const obj = { id: null };
     obj[0] = releaseIframeIdResult;
     ComponentDispatch.dispatch(constants.IFRAME_UNMOUNT, obj);
@@ -290,8 +299,8 @@ prototype["leaveActivity"] = function leaveActivity(arg0) {
   ({ location: _location, applicationId, showFeedback } = arg0);
   let isNotNullishResult = null != _location;
   if (isNotNullishResult) {
-    isNotNullishResult = require("../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.isNotNullish(applicationId);
-    const obj = require("../../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */;
+    isNotNullishResult = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish(applicationId);
+    const obj = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
   }
   if (isNotNullishResult) {
     let tmp5 = null != releaseWebViewResult;
@@ -307,11 +316,11 @@ prototype["hidePIPEmbed"] = function hidePIPEmbed(arg0) {
   }
 };
 prototype["clearEmbeddedActivityState"] = function clearEmbeddedActivityState(_location, applicationId, showFeedback) {
-  let obj = require("../EmbeddedActivitiesActionCreators.tsx") /* _runPrimaryAppCommandOrJoinEmbeddedActivity */;
+  let obj = _runPrimaryAppCommandOrJoinEmbeddedActivity /* _runPrimaryAppCommandOrJoinEmbeddedActivity */;
   obj = { location: _location, applicationId, showFeedback };
   obj.stopEmbeddedActivity(obj);
   obj = { type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId, lockState: null, pictureInPictureLockState: null };
-  require("../../../Dispatcher.tsx").dispatch(obj);
+  dispatcher.dispatch(obj);
 };
 prototype["releaseIframeId"] = function releaseIframeId() {
   this.iframeId = undefined;
@@ -325,7 +334,7 @@ prototype["getOrCreateIframeId"] = function getOrCreateIframeId() {
   if (null != iframeId) {
     return iframeId;
   } else {
-    const v4Result = require("../../../../_runtime/00514_v1.js") /* v1 */.v4();
+    const v4Result = v1 /* v1 */.v4();
     tmp.iframeId = v4Result;
     return v4Result;
   }

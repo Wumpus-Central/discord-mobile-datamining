@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/messages/MessagesFastestList.tsx
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
@@ -7,7 +8,7 @@ const require = arg1;
 let c3 = importAllResult;
 let closure_5 = createCacheKey.createStyles(() => {
   let obj = { placeholder: null };
-  obj = { backgroundColor: require("../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE };
+  obj = { backgroundColor: Themes.colors.BORDER_SUBTLE };
   obj[0] = obj;
   return obj;
 });

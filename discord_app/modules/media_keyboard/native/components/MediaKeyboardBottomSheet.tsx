@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardBottomSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "expandEventProperties";
@@ -20,8 +21,8 @@ function MediaKeyboardBackground(arg0) {
   let style;
   ({ pointerEvents, style } = arg0);
   const obj = { pointerEvents, accessible: true, accessibilityRole: "adjustable", accessibilityLabel: null, style: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.XONG6A);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.XONG6A);
   const items = [style, callback3().background];
   obj[4] = items;
   return callback2(View, obj);

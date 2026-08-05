@@ -1,3 +1,4 @@
+import { apexExperiment } from "../../badges/BadgeManagementExperiment.tsx";
 // discord_app/modules/user_profile/native/UserProfileBadgesEditButton.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -25,7 +26,7 @@ export default function UserProfileBadgesEditButton(badges) {
   let _require;
   const tmp = createCacheKey();
   _require = tmp;
-  let obj = _require("../../badges/BadgeManagementExperiment.tsx");
+  let obj = _apexExperiment;
   const isBadgeManagementEnabled = obj.useIsBadgeManagementEnabled({ location: "UserProfileBadgesEditButton" });
   const callback = React.useCallback(() => {
     callback(closure_2[7]).openLazy(_undefined(closure_2[9])(closure_2[8], closure_2.paths), "Hide Badges", {});

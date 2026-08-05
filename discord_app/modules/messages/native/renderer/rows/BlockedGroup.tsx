@@ -1,32 +1,35 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { AccessibilityAnnouncer } from "../../../../../design/shared.tsx";
+import { processColorOrThrow } from "../RowGeneratorStyleSheet.tsx";
 // discord_app/modules/messages/native/renderer/rows/BlockedGroup.tsx
 import { SeparatorAction } from "Changeset";
 import { UNSAFE_Colors } from "sum";
 import apply from "apply";
 
 let closure_5 = apply.memoize((arg0) => {
-  let obj = require("../../../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   let str = "#DBE0E4";
   if (obj.isThemeDark(arg0)) {
-    str = require("../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_700;
+    str = Themes.unsafe_rawColors.PRIMARY_700;
   }
   let tmpResult = tmp(4131);
   let str2 = "#FAFAFA";
   if (tmpResult.isThemeDark(arg0)) {
-    str2 = require("../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_630;
+    str2 = Themes.unsafe_rawColors.PRIMARY_630;
   }
   tmpResult = tmp(4131);
   if (tmpResult.isThemeDark(arg0)) {
-    let GREY1 = tmp(4129).hexWithOpacity(require("../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PRIMARY_300, 0.6);
+    let GREY1 = tmp(4129).hexWithOpacity(Themes.unsafe_rawColors.PRIMARY_300, 0.6);
     const tmpResult1 = tmp(4129);
   } else {
     GREY1 = UNSAFE_Colors.GREY1;
   }
   obj = { borderColor: null, backgroundColor: null, color: null };
-  obj[0] = require("../RowGeneratorStyleSheet.tsx") /* processColorOrThrow */.processColorOrThrow(str);
-  const tmpResult2 = require("../RowGeneratorStyleSheet.tsx") /* processColorOrThrow */;
-  obj[1] = require("../RowGeneratorStyleSheet.tsx") /* processColorOrThrow */.processColorOrThrow(str2);
-  const tmpResult3 = require("../RowGeneratorStyleSheet.tsx") /* processColorOrThrow */;
-  obj[2] = require("../RowGeneratorStyleSheet.tsx") /* processColorOrThrow */.processColorOrThrow(GREY1);
+  obj[0] = processColorOrThrow /* processColorOrThrow */.processColorOrThrow(str);
+  const tmpResult2 = processColorOrThrow /* processColorOrThrow */;
+  obj[1] = processColorOrThrow /* processColorOrThrow */.processColorOrThrow(str2);
+  const tmpResult3 = processColorOrThrow /* processColorOrThrow */;
+  obj[2] = processColorOrThrow /* processColorOrThrow */.processColorOrThrow(GREY1);
   return obj;
 });
 const result = require("apply").fileFinishedImporting("modules/messages/native/renderer/rows/BlockedGroup.tsx");

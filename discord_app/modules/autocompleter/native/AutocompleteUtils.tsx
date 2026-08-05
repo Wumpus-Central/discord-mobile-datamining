@@ -1,3 +1,6 @@
+import { Divider } from "../../../design/void/Form/native/FormDivider.tsx";
+import { nameFromUser } from "../../../utils/UserUtils.tsx";
+import { computeChannelName } from "../../channel/useChannelName.tsx";
 // discord_app/modules/autocompleter/native/AutocompleteUtils.tsx
 import "noop";
 import { isGuildSelectableChannelType as closure_3 } from "createChannelRecord";
@@ -21,7 +24,7 @@ let unpackModuleId;
 const require = arg1;
 function AutocompleteFormDivider() {
   const tmp = createCacheKey();
-  return jsx(require("../../../design/void/Form/native/FormDivider.tsx"), { style: createCacheKey().itemDivider });
+  return jsx(Divider, { style: createCacheKey().itemDivider });
 }
 ({ AutoCompleteResultTypes: error, WHITESPACE_RE: metroImportAll } = ME);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: c9, AUTOCOMPLETE_ROW_HEIGHT: c10 } = AUTOCOMPLETE_ROW_HEIGHT);
@@ -58,8 +61,8 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
       let combined = "" + tmp34 + user.tag;
     } else {
       const _HermesInternal8 = HermesInternal;
-      combined = "" + tmp34 + require("../../../utils/UserUtils.tsx").getUserTag(user);
-      const tmp32Result = require("../../../utils/UserUtils.tsx");
+      combined = "" + tmp34 + nameFromUser.getUserTag(user);
+      const tmp32Result = nameFromUser;
     }
     return combined;
   } else if (tmp.GLOBAL === type) {
@@ -70,9 +73,9 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
   } else if (tmp.CHANNEL === type) {
     channel = type.channel;
     if (channel.isThread()) {
-      const obj3 = require("../../channel/useChannelName.tsx") /* computeChannelName */;
+      const obj3 = computeChannelName /* computeChannelName */;
       const _HermesInternal6 = HermesInternal;
-      return "#\"" + obj3.escapeChannelName(require("../../channel/useChannelName.tsx") /* computeChannelName */.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship)) + "\"";
+      return "#\"" + obj3.escapeChannelName(computeChannelName /* computeChannelName */.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship)) + "\"";
     } else {
       channel2 = type.channel;
       const guildId = channel2.getGuildId();
@@ -84,15 +87,15 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
             name = tmp16.name;
           }
           if (name == null) {
-            name = require("../../channel/useChannelName.tsx") /* computeChannelName */.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship);
-            const obj2 = require("../../channel/useChannelName.tsx") /* computeChannelName */;
+            name = computeChannelName /* computeChannelName */.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship);
+            const obj2 = computeChannelName /* computeChannelName */;
           }
           const _HermesInternal5 = HermesInternal;
           return "" + closure_11 + name;
         }
       }
       const _HermesInternal4 = HermesInternal;
-      return "" + closure_11 + require("../../channel/useChannelName.tsx") /* computeChannelName */.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship);
+      return "" + closure_11 + computeChannelName /* computeChannelName */.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship);
     }
   } else if (tmp.GAME_MENTION === type) {
     const _HermesInternal3 = HermesInternal;
@@ -120,8 +123,8 @@ export const getMentionTextWithUser = function getMentionTextWithUser(messageCha
     let combined = "" + tmp3 + user.tag;
   } else {
     const _HermesInternal = HermesInternal;
-    combined = "" + tmp3 + require("../../../utils/UserUtils.tsx").getUserTag(user);
-    const tmpResult = require("../../../utils/UserUtils.tsx");
+    combined = "" + tmp3 + nameFromUser.getUserTag(user);
+    const tmpResult = nameFromUser;
   }
   return combined;
 };

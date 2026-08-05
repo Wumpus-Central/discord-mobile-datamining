@@ -1,3 +1,7 @@
+import { set } from "../../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
+import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
+import { setFilterTagIds } from "ForumChannelAnalyticsManager.tsx";
+import { getForumChannelSessionId } from "ForumSessionAnalyticsManager.tsx";
 // discord_app/modules/forums/tracking/TrackingUtils.tsx
 import handleThreadCreateOrUpdate from "handleThreadCreateOrUpdate";
 import storeThread from "storeThread";
@@ -51,9 +55,9 @@ function collectForumAnalyticsMetadata(sessionId) {
       obj[3] = mapped;
       obj[4] = channel.hasFlag(ChannelFlags.REQUIRE_TAG);
       obj[5] = getUncachedChannelPermissions.can(Permissions.SEND_MESSAGES, channel);
-      obj[6] = require("ForumChannelAnalyticsManager.tsx").getFilterTagIdsAnalytics();
-      const obj3 = require("ForumChannelAnalyticsManager.tsx");
-      obj[7] = require("ForumChannelAnalyticsManager.tsx").getSortOrderAnalytics(channel.id);
+      obj[6] = setFilterTagIds.getFilterTagIdsAnalytics();
+      const obj3 = setFilterTagIds;
+      obj[7] = setFilterTagIds.getSortOrderAnalytics(channel.id);
       if (sessionId == null) {
         let tmp8Result = tmp8(7150);
         sessionId = tmp8Result.getForumChannelSessionId(channel.id);
@@ -62,12 +66,12 @@ function collectForumAnalyticsMetadata(sessionId) {
       tmp8Result = tmp8(7151);
       obj[9] = tmp8Result.getLayoutAnalytics(channel.id);
       obj[10] = channel.defaultSortOrder;
-      const obj4 = require("ForumChannelAnalyticsManager.tsx");
-      obj[11] = require("ForumChannelAnalyticsManager.tsx").getTagSettingAnalytics(channel.id);
+      const obj4 = setFilterTagIds;
+      obj[11] = setFilterTagIds.getTagSettingAnalytics(channel.id);
       obj[12] = channel.defaultForumLayout;
       obj[13] = channel.isModeratorReportChannel();
       tmp = obj;
-      const tmp8Result1 = require("ForumChannelAnalyticsManager.tsx");
+      const tmp8Result1 = setFilterTagIds;
     }
   }
   return tmp;
@@ -75,10 +79,10 @@ function collectForumAnalyticsMetadata(sessionId) {
 const result = require("updateFromGuild").fileFinishedImporting("modules/forums/tracking/TrackingUtils.tsx");
 
 export const getForumChannelSessionId = function getForumChannelSessionId(arg0) {
-  return require("ForumSessionAnalyticsManager.tsx").getForumChannelSessionId(arg0);
+  return getForumChannelSessionId.getForumChannelSessionId(arg0);
 };
 export const convertSortOrderToReadableString = function convertSortOrderToReadableString(sortOrder) {
-  if (require("../../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx") /* set */.ThreadSortOrder.CREATION_DATE === sortOrder) {
+  if (set /* set */.ThreadSortOrder.CREATION_DATE === sortOrder) {
     return constants.CREATION_DATE;
   } else if (tmp(1381).ThreadSortOrder.LATEST_ACTIVITY === sortOrder) {
     return constants.LATEST_ACTIVITY;
@@ -189,10 +193,10 @@ export const collectForumPostAnalyticsMetadata = function collectForumPostAnalyt
             num = 0;
           }
           obj.thread_auto_archive_duration_minutes = num;
-          obj.thread_approximate_creation_date = require("../../../utils/SnowflakeUtils.tsx").extractTimestamp(channelId);
+          obj.thread_approximate_creation_date = DISCORD_EPOCH.extractTimestamp(channelId);
           obj.forum_post_id = channel.id;
-          const obj6 = require("../../../utils/SnowflakeUtils.tsx");
-          obj.forum_post_first_message_id = require("../../../utils/SnowflakeUtils.tsx").castChannelIdAsMessageId(channel.id);
+          const obj6 = DISCORD_EPOCH;
+          obj.forum_post_first_message_id = DISCORD_EPOCH.castChannelIdAsMessageId(channel.id);
           const message = store2.getMessage(channel.id);
           let firstMessage = null;
           if (message.loaded) {
@@ -274,7 +278,7 @@ export const collectForumPostAnalyticsMetadata = function collectForumPostAnalyt
             });
           }
           obj.forum_post_attachment_mimetypes = items1;
-          const obj7 = require("../../../utils/SnowflakeUtils.tsx");
+          const obj7 = DISCORD_EPOCH;
         }
       }
       return tmp;

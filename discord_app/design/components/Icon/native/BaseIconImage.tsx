@@ -1,3 +1,4 @@
+import { map } from "../../../tokens/native/useToken.tsx";
 // discord_app/design/components/Icon/native/BaseIconImage.tsx
 import "noop";
 import { Image } from "get ActivityIndicator";
@@ -18,7 +19,7 @@ export const BaseIconImage = function BaseIconImage(source) {
   }
   const color = source.color;
   ({ resizeMode, style, accessible, accessibilityLabel } = source);
-  let obj = require("../../../tokens/native/useToken.tsx") /* map */;
+  let obj = map /* map */;
   const token = obj.useToken(color);
   if (null != token) {
     obj = { tintColor: null };

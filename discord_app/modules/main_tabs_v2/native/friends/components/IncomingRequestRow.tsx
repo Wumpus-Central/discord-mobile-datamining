@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { nameFromUser } from "../../../../../utils/UserUtils.tsx";
 // discord_app/modules/main_tabs_v2/native/friends/components/IncomingRequestRow.tsx
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -114,7 +116,7 @@ function IncomingGameFriendRequestRow(arg0) {
   let user;
   ({ user, application } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = require("../../../../../utils/UserUtils.tsx");
+  let obj = nameFromUser;
   const userTag = obj.useUserTag(user);
   obj = { user, applicationId: application.id, accessibilityLabel: null, acceptedRequestLabel: null, acceptedRequestAccessibilityLabel: null, acceptRequestAccessibilityLabel: null, ignoreRequestAccessibilityLabel: null };
   const intl = application(1236).intl;
@@ -143,19 +145,19 @@ let result = require("addApplication").fileFinishedImporting("modules/main_tabs_
 export const IncomingFriendRequestRow = function IncomingFriendRequestRow(user) {
   user = user.user;
   const merged = Object.assign(user, Object.create(null));
-  let obj = require("../../../../../utils/UserUtils.tsx");
+  let obj = nameFromUser;
   const userTag = obj.useUserTag(user);
   obj = { user, accessibilityLabel: null, acceptedRequestLabel: null, acceptedRequestAccessibilityLabel: null, acceptRequestAccessibilityLabel: null, ignoreRequestAccessibilityLabel: null };
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.u6lp4x, { name: userTag });
-  const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl2.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["0E614Z"]);
-  const intl3 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl3.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.cRwkp7, { name: userTag });
-  const intl4 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[4] = intl4.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.MUfqsS, { name: userTag });
-  const intl5 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[5] = intl5.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["0OF9IB"], { name: userTag });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.u6lp4x, { name: userTag });
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t["0E614Z"]);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl3.formatToPlainString(getSystemLocale /* getSystemLocale */.t.cRwkp7, { name: userTag });
+  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  obj[4] = intl4.formatToPlainString(getSystemLocale /* getSystemLocale */.t.MUfqsS, { name: userTag });
+  const intl5 = getSystemLocale /* getSystemLocale */.intl;
+  obj[5] = intl5.formatToPlainString(getSystemLocale /* getSystemLocale */.t["0OF9IB"], { name: userTag });
   const merged1 = Object.assign(merged);
   return <IncomingRequestRow user={user} accessibilityLabel={null} acceptedRequestLabel={null} acceptedRequestAccessibilityLabel={null} acceptRequestAccessibilityLabel={null} ignoreRequestAccessibilityLabel={null} />;
 };

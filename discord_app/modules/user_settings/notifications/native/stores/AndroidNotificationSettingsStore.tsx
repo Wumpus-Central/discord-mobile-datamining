@@ -1,3 +1,6 @@
+import { isIterable } from "../../../../../../_runtime/03898_isIterable.js";
+import { batchUpdates } from "../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
+import { NativeModules } from "../../../../../lib/pushnotification/PushNotification.tsx";
 // discord_app/modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx
 import isIterable from "isIterable";
 import identity from "identity";
@@ -159,38 +162,38 @@ export const initializeAndroidNotificationSettingsStore = function initializeAnd
   return applyArgumentsResult;
 };
 export const useAndroidNotificationLightsEnabled = function useAndroidNotificationLightsEnabled() {
-  return callback2((isLightsEnabled) => isLightsEnabled.isLightsEnabled, require("../../../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
+  return callback2((isLightsEnabled) => isLightsEnabled.isLightsEnabled, isIterable /* isIterable */.shallow);
 };
 export const setAndroidNotificationLightsEnabled = function setAndroidNotificationLightsEnabled(arg0) {
   const _require = arg0;
-  _require("../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_4.setState({ isLightsEnabled: closure_0 }));
-  const obj = _require("../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx");
-  require("../../../../../lib/pushnotification/PushNotification.tsx").setLightsEnabled(arg0);
+  _batchUpdates.batchUpdates(() => outer1_4.setState({ isLightsEnabled: closure_0 }));
+  const obj = _batchUpdates;
+  NativeModules.setLightsEnabled(arg0);
 };
 export const useAndroidNotificationVibrationsEnabled = function useAndroidNotificationVibrationsEnabled() {
-  return callback2((isVibrationsEnabled) => isVibrationsEnabled.isVibrationsEnabled, require("../../../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
+  return callback2((isVibrationsEnabled) => isVibrationsEnabled.isVibrationsEnabled, isIterable /* isIterable */.shallow);
 };
 export const setAndroidNotificationVibrationsEnabled = function setAndroidNotificationVibrationsEnabled(arg0) {
   const _require = arg0;
-  _require("../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_4.setState({ isVibrationsEnabled: closure_0 }));
-  const obj = _require("../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx");
-  require("../../../../../lib/pushnotification/PushNotification.tsx").setVibrationsEnabled(arg0);
+  _batchUpdates.batchUpdates(() => outer1_4.setState({ isVibrationsEnabled: closure_0 }));
+  const obj = _batchUpdates;
+  NativeModules.setVibrationsEnabled(arg0);
 };
 export const useAndroidNotificationSoundsEnabled = function useAndroidNotificationSoundsEnabled() {
-  return callback2((isSoundsEnabled) => isSoundsEnabled.isSoundsEnabled, require("../../../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
+  return callback2((isSoundsEnabled) => isSoundsEnabled.isSoundsEnabled, isIterable /* isIterable */.shallow);
 };
 export const setAndroidNotificationSoundsEnabled = function setAndroidNotificationSoundsEnabled(arg0) {
   const _require = arg0;
-  _require("../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_4.setState({ isSoundsEnabled: closure_0 }));
-  const obj = _require("../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx");
-  require("../../../../../lib/pushnotification/PushNotification.tsx").setSoundsEnabled(arg0);
+  _batchUpdates.batchUpdates(() => outer1_4.setState({ isSoundsEnabled: closure_0 }));
+  const obj = _batchUpdates;
+  NativeModules.setSoundsEnabled(arg0);
 };
 export const useAndroidMessageNotificationsEnabled = function useAndroidMessageNotificationsEnabled() {
-  return callback2((isNotifyEveryTime) => isNotifyEveryTime.isNotifyEveryTime, require("../../../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
+  return callback2((isNotifyEveryTime) => isNotifyEveryTime.isNotifyEveryTime, isIterable /* isIterable */.shallow);
 };
 export const setAndroidMessageNotificationsEnabled = function setAndroidMessageNotificationsEnabled(arg0) {
   const _require = arg0;
-  _require("../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_4.setState({ isNotifyEveryTime: closure_0 }));
-  const obj = _require("../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx");
-  const result = require("../../../../../lib/pushnotification/PushNotification.tsx").setAndroidNotifyEveryTime(arg0);
+  _batchUpdates.batchUpdates(() => outer1_4.setState({ isNotifyEveryTime: closure_0 }));
+  const obj = _batchUpdates;
+  const result = NativeModules.setAndroidNotifyEveryTime(arg0);
 };

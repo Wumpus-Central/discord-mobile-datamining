@@ -1,3 +1,4 @@
+import { SelfStreamCard } from "VoicePanelCard.tsx";
 // discord_app/modules/voice_panel/native/card/VoicePanelCardView.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "CONFIG_NEVER_ANIMATE";
@@ -21,7 +22,7 @@ function getCardKey(type) {
   return "" + type.type + "-" + type.id;
 }
 function renderCard(arg0, item, transitionState, cleanUp) {
-  return jsx(require("VoicePanelCard.tsx"), { item, transitionState, cleanUp }, arg0);
+  return jsx(SelfStreamCard, { item, transitionState, cleanUp }, arg0);
 }
 function CardContentFreezer(children) {
   children = children.children;

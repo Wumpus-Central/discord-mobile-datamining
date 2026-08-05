@@ -1,3 +1,5 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { usePowerupActiveStatus } from "usePowerupActiveStatus.tsx";
 // discord_app/modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx
 import noop from "noop";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
@@ -11,8 +13,8 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
   const importDefault = arg1;
   const dependencyMap = arg2;
   const items = [calculateAppliedBoosts];
-  const stateFromStores = _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => tmp2.getStateForGuild(closure_0));
-  const tmp2 = require("usePowerupActiveStatus.tsx")(arg0, arg1);
+  const stateFromStores = _initialize.useStateFromStores(items, () => tmp2.getStateForGuild(closure_0));
+  const tmp2 = usePowerupActiveStatus(arg0, arg1);
   calculateAppliedBoosts = tmp2;
   const items1 = [stateFromStores, , , , ];
   ({ skuId: arr2[1], dependencies: arr2[2] } = arg1);

@@ -1,3 +1,4 @@
+import { usePremiumGroupExperiment } from "../../premium/experiments/PremiumGroupExperiment.tsx";
 // discord_app/modules/collectibles/experiments/OneDayFractionalNitroExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
@@ -8,6 +9,6 @@ export default apexExperiment;
 export const useOneDayFractionalNitroEnabled = function useOneDayFractionalNitroEnabled(product_card) {
   let obj = { location: product_card };
   obj = { location: product_card };
-  const tmp = require("../../premium/experiments/PremiumGroupExperiment.tsx")(obj);
-  return apexExperiment.useConfig(obj) && !require("../../premium/experiments/PremiumGroupExperiment.tsx")(obj);
+  const tmp = usePremiumGroupExperiment(obj);
+  return apexExperiment.useConfig(obj) && !usePremiumGroupExperiment(obj);
 };

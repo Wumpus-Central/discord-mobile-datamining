@@ -1,9 +1,10 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/tooltip/TooltipActionCreators.tsx
 const result = require("set").fileFinishedImporting("modules/tooltip/TooltipActionCreators.tsx");
 
 export default {
   acknowledgeTooltip(GIF_PICKER_TOOLTIP) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "TOOLTIP_ACKNOWLEDGE", tooltip: GIF_PICKER_TOOLTIP };
     obj.dispatch(obj);
   },
@@ -11,7 +12,7 @@ export default {
     if (flag === undefined) {
       flag = false;
     }
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "TOOLTIP_SHOW_ATTEMPT", tooltip: closure_0, ignoreMaxShownLimit: flag };
     obj.dispatch(obj);
   }

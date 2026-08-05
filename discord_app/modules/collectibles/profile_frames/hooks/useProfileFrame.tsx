@@ -1,3 +1,4 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/collectibles/profile_frames/hooks/useProfileFrame.tsx
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import map from "map";
@@ -9,7 +10,7 @@ const result = require("fromServer").fileFinishedImporting("modules/collectibles
 export default function useProfileFrame(arg0) {
   const _require = arg0;
   const items = [updateCategoriesAndProducts, map];
-  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     if (null != closure_0) {
       const product = outer1_2.getProduct(tmp);
       let first;

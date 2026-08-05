@@ -1,3 +1,6 @@
+import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../modules/app_analytics/AppAnalyticsUtils.tsx";
+import { expandEventProperties } from "AnalyticsUtils.tsx";
 // discord_app/utils/NotificationSettingsUtils.tsx
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -164,8 +167,8 @@ export const trackGuildNotificationSettingsUpdate = function trackGuildNotificat
   }
   const isMutedResult = store2.isMuted(guild_id);
   const tmp10 = num2 ^ num;
-  const obj4 = require("../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */;
-  const removeFlagsResult = require("../../discord_common/js/shared/utils/FlagUtils.tsx") /* hasFlag */.removeFlags(tmp10, constants4.OPT_IN_CHANNELS_OFF, constants4.OPT_IN_CHANNELS_ON);
+  const obj4 = hasFlag /* hasFlag */;
+  const removeFlagsResult = hasFlag /* hasFlag */.removeFlags(tmp10, constants4.OPT_IN_CHANNELS_OFF, constants4.OPT_IN_CHANNELS_ON);
   obj = {};
   const merged = Object.assign(computeResult1);
   const merged1 = Object.assign(store.getStats(guild_id));
@@ -214,7 +217,7 @@ export const trackGuildNotificationSettingsUpdate = function trackGuildNotificat
   }
   obj.guild_message_notification_settings_old = prop4;
   obj.is_opt_in_only_change = 0 === removeFlagsResult;
-  require("../modules/app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(constants.NOTIFICATION_SETTINGS_UPDATED, obj);
+  collectGuildAnalyticsMetadata.trackWithMetadata(constants.NOTIFICATION_SETTINGS_UPDATED, obj);
 };
 export const muteConfigToTimestamp = function muteConfigToTimestamp(muteConfig) {
   let time = null;
@@ -370,7 +373,7 @@ export const trackChannelNotificationSettingsUpdate = function trackChannelNotif
   obj.is_opt_in_only_change = 0 === removeFlagsResult;
   obj.last_message_type = type;
   obj.application_id = applicationId;
-  require("../modules/app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(constants.NOTIFICATION_SETTINGS_UPDATED, obj);
+  collectGuildAnalyticsMetadata.trackWithMetadata(constants.NOTIFICATION_SETTINGS_UPDATED, obj);
 };
 export const getCurrentGuildSettings = function getCurrentGuildSettings(guildId) {
   let obj = store2;
@@ -458,7 +461,7 @@ export const getManyCurrentChannelSettings = function getManyCurrentChannelSetti
   return map;
 };
 export const trackAccountNotificationSettingUpdated = function trackAccountNotificationSettingUpdated(quietMode, quietMode2) {
-  let obj = require("AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { update_type: constants2.ACCOUNT, quiet_mode_enabled: quietMode.quietMode, quiet_mode_enabled_old: quietMode2.quietMode };
   obj.track(constants.NOTIFICATION_SETTINGS_UPDATED, obj);
 };

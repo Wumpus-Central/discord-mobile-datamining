@@ -1,3 +1,5 @@
+import { BaseConnectionEvent } from "index.tsx";
+import { STATS_INTERVAL } from "Stats.tsx";
 // discord_common/js/packages/media-engine/pollConnectionStats.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
@@ -142,9 +144,9 @@ export default function pollConnectionStats(on) {
     return applyArgumentsResult;
   }
   const dependencyMap = false;
-  on.on(_require("index.tsx").MediaEngineEvent.Destroy, () => {
+  on.on(_BaseConnectionEvent.MediaEngineEvent.Destroy, () => {
     let c1 = true;
     return true;
   });
-  let timerId = setTimeout(pollStats, _require("Stats.tsx").STATS_INTERVAL);
+  let timerId = setTimeout(pollStats, _STATS_INTERVAL.STATS_INTERVAL);
 };

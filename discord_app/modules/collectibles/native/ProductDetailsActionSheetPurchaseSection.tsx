@@ -1,3 +1,16 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { map } from "../../../design/tokens/native/useToken.tsx";
+import { useIsPremiumSubscriber } from "../../premium/useIsPremiumSubscriber.tsx";
+import { index } from "../../virtual_currency/hooks/index.tsx";
+import { getItemRecordsFromPurchases } from "../CollectiblesUtils.tsx";
+import { useCurrentUser } from "../hooks/useCurrentUser.tsx";
+import { getProductPurchaseState } from "../hooks/useProductPurchaseState.tsx";
+import { getProductOrbPrice } from "../utils/CollectiblesProductUtils.tsx";
+import { useVirtualCurrencyData } from "hooks/useVirtualCurrencyData.tsx";
+import { useHandleUseNow } from "useHandleUseNow.tsx";
 // discord_app/modules/collectibles/native/ProductDetailsActionSheetPurchaseSection.tsx
 import Text from "Text";
 import useProductDisableState from "useProductDisableState";
@@ -209,7 +222,7 @@ function PurchaseDisclaimer(arg0) {
   let product;
   ({ product, buyButtonLabel } = arg0);
   let obj = { style: createCacheKey().disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: null };
-  let formatResult = product.type !== require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx") /* CollectiblesItemType */.CollectiblesItemType.EXTERNAL_SKU;
+  let formatResult = product.type !== CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.EXTERNAL_SKU;
   if (formatResult) {
     const intl = tmp3(1236).intl;
     obj = { buyButtonLabel: null, paidServiceTermURL: null };
@@ -218,7 +231,7 @@ function PurchaseDisclaimer(arg0) {
     formatResult = intl.format(tmp3(1236).t.iIglwJ, obj);
   }
   obj[3] = formatResult;
-  return closure_16(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  return closure_16(Text /* Text */.Text, obj);
 }
 ({ EXTERNAL_PRODUCT_SKU_IDS: metroImportAll, ShopCtaEnum: c9 } = items);
 ({ HelpdeskArticles: c10, MarketingURLs: unpackModuleId, UserSettingsSections: closure_12 } = ME);
@@ -264,33 +277,33 @@ export default function ProductDetailsActionSheetPurchaseSection(onBuy) {
   let handleClaim;
   const tmp = createCacheKey();
   const tmp5 = require;
-  let obj = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   const isThemeDarkResult = obj.isThemeDark(onTrackPress(4221)());
-  let obj1 = require("../../../design/tokens/native/useToken.tsx") /* map */;
+  let obj1 = map /* map */;
   const token = obj1.useToken(onTrackPress(712).colors.MOBILE_ACTIONSHEET_BACKGROUND);
-  let obj2 = require("../hooks/useCurrentUser.tsx") /* useCurrentUser */;
+  let obj2 = useCurrentUser /* useCurrentUser */;
   const currentUser = obj2.useCurrentUser();
-  let obj3 = require("../hooks/useProductPurchaseState.tsx") /* getProductPurchaseState */;
+  let obj3 = getProductPurchaseState /* getProductPurchaseState */;
   const productPurchaseState = obj3.useProductPurchaseState(product);
   ({ isPurchased, isPartiallyOwnedBundle } = productPurchaseState);
-  let obj4 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj4 = initialize /* initialize */;
   let items = [map];
   const items1 = [product];
-  let obj5 = require("../../premium/useIsPremiumSubscriber.tsx") /* useIsPremiumSubscriber */;
+  let obj5 = useIsPremiumSubscriber /* useIsPremiumSubscriber */;
   const isPremiumSubscriber = obj5.useIsPremiumSubscriber(TIER_2.TIER_2);
   let obj6 = onTrackPress(3931);
   const canUseShopDiscountsResult = obj6.canUseShopDiscounts(currentUser);
-  let obj7 = require("../CollectiblesUtils.tsx") /* getItemRecordsFromPurchases */;
+  let obj7 = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */;
   const result = obj7.isPremiumCollectiblesProduct(product);
-  let obj8 = require("../CollectiblesUtils.tsx") /* getItemRecordsFromPurchases */;
+  let obj8 = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */;
   const result1 = obj8.isFreeCollectiblesProduct(product);
-  let obj9 = require("../utils/CollectiblesProductUtils.tsx") /* getProductOrbPrice */;
+  let obj9 = getProductOrbPrice /* getProductOrbPrice */;
   const result2 = obj9.isOrbsExclusiveProduct(product);
-  let obj10 = require("../../virtual_currency/hooks/index.tsx");
+  let obj10 = index;
   const balance = obj10.useFetchVirtualCurrencyBalance().balance;
-  let obj11 = require("hooks/useVirtualCurrencyData.tsx") /* useVirtualCurrencyData */;
+  let obj11 = useVirtualCurrencyData /* useVirtualCurrencyData */;
   const canAfford = obj11.useVirtualCurrencyData(product, canUseShopDiscountsResult).canAfford;
-  let obj12 = require("useHandleUseNow.tsx") /* useHandleUseNow */;
+  let obj12 = useHandleUseNow /* useHandleUseNow */;
   const handleUseNow = obj12.useHandleUseNow({ product, analyticsLocations });
   ({ handleUseNow: c2, handleEditProfile: c3 } = handleUseNow);
   ({ isApplying, canUseNow } = handleUseNow);

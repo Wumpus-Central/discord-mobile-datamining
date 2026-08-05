@@ -1,3 +1,10 @@
+import { registerAsset } from "../../../../../../_runtime/16605_registerAsset.js";
+import { ChangeVanityURLActionCreators } from "../../../../../actions/ChangeVanityURLActionCreators.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { TextInput } from "../../../../../design/components/TextInput/native/TextInput.native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { getInviteURL } from "../../../../instant_invite/getInviteURL.tsx";
+import { getErrorMessageFromErrorCode } from "../GuildSettingsVanityURLUtils.tsx";
 // discord_app/modules/guild_settings/server_monetization/boost_perks/native/GuildSettingsModalVanityURL.tsx
 import get_ActivityIndicator from "registerAsset";
 import FormStates from "FormStates";
@@ -114,7 +121,7 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
   }
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
-  require("../../../../../actions/ChangeVanityURLActionCreators.tsx").closeModal();
+  ChangeVanityURLActionCreators.closeModal();
 };
 prototype["render"] = function render() {
   let errorDetails;
@@ -128,18 +135,18 @@ prototype["render"] = function render() {
   if (null != vanityURLCode) {
     if ("" !== vanityURLCode) {
       let obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-      const intl6 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+      const intl6 = getSystemLocale /* getSystemLocale */.intl;
       obj = { url: null };
-      obj[0] = require("../../../../instant_invite/getInviteURL.tsx")(vanityURLCode);
-      obj[2] = intl6.format(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.FcGpNU, obj);
-      const tmp24 = require("../../../../instant_invite/getInviteURL.tsx")(vanityURLCode);
-      const tmp = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+      obj[0] = getInviteURL(vanityURLCode);
+      obj[2] = intl6.format(getSystemLocale /* getSystemLocale */.t.FcGpNU, obj);
+      const tmp24 = getInviteURL(vanityURLCode);
+      const tmp = callback(Text /* Text */.Text, obj);
     }
   }
   if (isEditing) {
     let errorMessageFromErrorCode;
     if (null != errorDetails) {
-      obj = require("../GuildSettingsVanityURLUtils.tsx") /* getErrorMessageFromErrorCode */;
+      obj = getErrorMessageFromErrorCode /* getErrorMessageFromErrorCode */;
       errorMessageFromErrorCode = obj.getErrorMessageFromErrorCode(errorDetails.code);
     }
     let hasItem;
@@ -167,21 +174,21 @@ prototype["render"] = function render() {
     obj3[2] = self.handleChange;
     obj3[3] = isEditing;
     obj3[4] = errorMessageFromErrorCode;
-    const items1 = [callback(require("../../../../../design/components/TextInput/native/TextInput.native.tsx") /* TextInput */.TextInput, obj3), ];
+    const items1 = [callback(TextInput /* TextInput */.TextInput, obj3), ];
     const obj4 = { style: null, children: null };
     obj4[0] = styles.hints;
     const obj5 = { variant: "text-sm/medium", color: "text-muted", children: null };
-    const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj5[2] = intl2.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.IhWDcu);
-    const items2 = [callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj5), , , , ];
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    obj5[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.IhWDcu);
+    const items2 = [callback(Text /* Text */.Text, obj5), , , , ];
     const obj6 = { variant: "text-sm/medium", color: "text-muted", children: null };
-    const intl3 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj6[2] = intl3.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["1mRkFr"]);
-    items2[1] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj6);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    obj6[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["1mRkFr"]);
+    items2[1] = callback(Text /* Text */.Text, obj6);
     const obj7 = { variant: "text-sm/medium", color: "text-muted", children: null };
-    const intl4 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj7[2] = intl4.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["eH/HMz"]);
-    items2[2] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj7);
+    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    obj7[2] = intl4.string(getSystemLocale /* getSystemLocale */.t["eH/HMz"]);
+    items2[2] = callback(Text /* Text */.Text, obj7);
     if (tmp17Result) {
       const obj8 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl5 = tmp18(1236).intl;
@@ -197,7 +204,7 @@ prototype["render"] = function render() {
     const obj9 = { style: null, children: null };
     obj9[0] = styles.center;
     const obj10 = { source: null, style: null, resizeMode: "contain" };
-    obj10[0] = require("../../../../../../_runtime/16605_registerAsset.js");
+    obj10[0] = registerAsset;
     obj10[1] = styles.image;
     obj9[1] = callback(closure_4, obj10);
     items3[1] = callback(closure_3, obj9);
@@ -207,8 +214,8 @@ prototype["render"] = function render() {
     const _HermesInternal = HermesInternal;
     let combined = "discord.gg/" + vanityURLCode;
   } else {
-    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    combined = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["FaXGO/"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    combined = intl.string(getSystemLocale /* getSystemLocale */.t["FaXGO/"]);
   }
 };
 let obj2 = { marginTop: require("Themes").space.PX_8, gap: require("Themes").space.PX_4 };

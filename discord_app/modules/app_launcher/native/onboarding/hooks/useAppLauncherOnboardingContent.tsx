@@ -1,3 +1,4 @@
+import { result } from "useCanShowAppLauncherOnboarding.tsx";
 // discord_app/modules/app_launcher/native/onboarding/hooks/useAppLauncherOnboardingContent.tsx
 import _slicedToArray from "_slicedToArray";
 import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
@@ -13,7 +14,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
   let obj = { channel: null };
   const items1 = [ensureGuildLoaded];
   obj[0] = channelId(589).useStateFromStores(items1, () => outer1_5.getChannel(channelId));
-  const tmp3 = require("useCanShowAppLauncherOnboarding.tsx")({ channelId });
+  const tmp3 = result({ channelId });
   if (tmp3.canShowBotsBanner) {
     items.push(tmp(1358).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER);
   }

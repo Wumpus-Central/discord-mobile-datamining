@@ -1,3 +1,6 @@
+import { getFontScale } from "../../../../screen/native/useFontScale.tsx";
+import { DEFAULT_BADGE_SIZE } from "../Badge.tsx";
+import { getLayoutStyles } from "layouts/ChannelListLayout.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelUnreadBadge.tsx
 import { View } from "get ActivityIndicator";
 import { MUTED_OPACITY_CONTENT } from "hairlineWidth";
@@ -21,9 +24,9 @@ const memoResult = require("noop").memo(function ChannelUnreadBadge(panelVariant
     flag = false;
   }
   const tmp = callback();
-  let obj = require("layouts/ChannelListLayout.tsx") /* getLayoutStyles */;
+  let obj = getLayoutStyles /* getLayoutStyles */;
   const layoutStyles = obj.getLayoutStyles(layout, launchpad);
-  require("../../../../screen/native/useFontScale.tsx") /* getFontScale */;
+  getFontScale /* getFontScale */;
   let tmp8Result = null;
   if (unread) {
     const items = [tmp.unreadBadge, , , ];
@@ -52,9 +55,9 @@ const memoResult = require("noop").memo(function ChannelUnreadBadge(panelVariant
     obj1[0] = num2;
     const items1 = [obj1];
     obj[2] = items1;
-    obj[1] = jsx(require("../Badge.tsx"), { classic: null, size: null, badgeStyle: null });
+    obj[1] = jsx(DEFAULT_BADGE_SIZE, { classic: null, size: null, badgeStyle: null });
     tmp8Result = tmp8(tmp9, obj);
-    const tmp12 = require("../Badge.tsx");
+    const tmp12 = DEFAULT_BADGE_SIZE;
   }
   return tmp8Result;
 });

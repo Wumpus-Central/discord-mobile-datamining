@@ -1,3 +1,4 @@
+import { KeyboardTypes } from "../../keyboard/native/KeyboardTypes.tsx";
 // discord_app/modules/app_launcher/native/AppLauncherButtonIcon.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -10,7 +11,7 @@ export const AppLauncherButtonIcon = function AppLauncherButtonIcon(style) {
   style = style.style;
   const merged = Object.assign(style, Object.create(null));
   let obj = { style: { overflow: "hidden" }, children: null };
-  if (tmp3 === require("../../keyboard/native/KeyboardTypes.tsx") /* KeyboardTypes */.KeyboardTypes.APP_LAUNCHER) {
+  if (tmp3 === KeyboardTypes /* KeyboardTypes */.KeyboardTypes.APP_LAUNCHER) {
     obj = {};
     const merged1 = Object.assign(merged);
     const items = [style, ];

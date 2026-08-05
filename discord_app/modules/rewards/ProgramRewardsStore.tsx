@@ -1,3 +1,5 @@
+import { set } from "../../utils/Durations.tsx";
+import { canFetchNitroProgramReward } from "ProgramRewardsUtils.tsx";
 // discord_app/modules/rewards/ProgramRewardsStore.tsx
 import _slicedToArray from "_slicedToArray";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -301,7 +303,7 @@ prototype["getTotalDaysInDuration"] = function getTotalDaysInDuration(arg0) {
       rounded = null;
       if (total_countdown_duration_ms > 0) {
         const _Math = Math;
-        rounded = Math.ceil(total_countdown_duration_ms / require("../../utils/Durations.tsx").Millis.DAY);
+        rounded = Math.ceil(total_countdown_duration_ms / set.Millis.DAY);
       }
     }
     return rounded;
@@ -323,8 +325,8 @@ prototype["isReady"] = function isReady() {
   if (!isFetchingResult) {
     let hasCachedValueResult = self.hasCachedValue();
     if (!hasCachedValueResult) {
-      hasCachedValueResult = !require("ProgramRewardsUtils.tsx") /* canFetchNitroProgramReward */.canFetchAnyProgramReward("ProgramRewardsStore");
-      const obj = require("ProgramRewardsUtils.tsx") /* canFetchNitroProgramReward */;
+      hasCachedValueResult = !canFetchNitroProgramReward /* canFetchNitroProgramReward */.canFetchAnyProgramReward("ProgramRewardsStore");
+      const obj = canFetchNitroProgramReward /* canFetchNitroProgramReward */;
     }
     if (!hasCachedValueResult) {
       hasCachedValueResult = self.isError();
@@ -334,7 +336,7 @@ prototype["isReady"] = function isReady() {
   return tmp2;
 };
 prototype["shouldFetch"] = function shouldFetch() {
-  let obj = require("ProgramRewardsUtils.tsx") /* canFetchNitroProgramReward */;
+  let obj = canFetchNitroProgramReward /* canFetchNitroProgramReward */;
   if (obj.canFetchAnyProgramReward("ProgramRewardsStore.shouldFetch")) {
     if (networkTtlCache.shouldFetch()) {
       obj = { shouldFetch: true };

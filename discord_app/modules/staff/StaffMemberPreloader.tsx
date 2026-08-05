@@ -1,3 +1,4 @@
+import { showTooManyUserGuildsAlert } from "../../actions/GuildActionCreators.tsx";
 // discord_app/modules/staff/StaffMemberPreloader.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -15,7 +16,7 @@ export const preloadStaffMembers = function preloadStaffMembers() {
     isStaffResult = null != guild.getGuild(PRELOAD_SERVER_ID);
   }
   if (isStaffResult) {
-    const obj2 = require("../../actions/GuildActionCreators.tsx");
+    const obj2 = showTooManyUserGuildsAlert;
     const members = obj2.requestMembers(PRELOAD_SERVER_ID, "", 0, false);
   }
 };

@@ -1,3 +1,4 @@
+import { shallowEqual } from "../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 // discord_app/stores/DimensionStore.tsx
 import { Store } from "initialize";
 
@@ -53,7 +54,7 @@ const dimensionStore = new DimensionStore(require("dispatcher"), {
           obj[2] = scrollHeight;
           obj[3] = offsetHeight;
           if (null != tmp4) {
-            if (require("../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(tmp4, obj)) {
+            if (shallowEqual(tmp4, obj)) {
               return false;
             }
           }

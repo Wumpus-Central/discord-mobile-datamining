@@ -1,3 +1,7 @@
+import { ActionSheet } from "../../../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { width } from "../GuildSettingsRoleTemplate.tsx";
 // discord_app/modules/guild_settings/roles/native/action_sheet/RolePermissionTemplatesActionSheet.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -25,12 +29,12 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
     obj.track(constants.OPEN_POPOUT, obj);
   }, []);
   let obj = { title: null };
-  let intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.KgCkoQ);
+  let intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.KgCkoQ);
   const tmp = createCacheKey();
-  obj = { header: jsx(require("../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title: null }), startExpanded: true, children: null };
+  obj = { header: jsx(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title: null }), startExpanded: true, children: null };
   obj = { style: tmp.templateContainer, children: null };
-  obj[1] = jsx(require("../GuildSettingsRoleTemplate.tsx"), {
+  obj[1] = jsx(width, {
     onSelect(arg0) {
       let closure_0 = arg0;
       if (closure_0) {
@@ -66,5 +70,5 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
     guildId: guildId.guildId
   });
   obj[2] = <View style={tmp.templateContainer}>{null}</View>;
-  return jsx(require("../../../../../design/components/Sheet/native/ActionSheet.native.tsx") /* ActionSheet */.ActionSheet, { style: tmp.templateContainer, children: null });
+  return jsx(ActionSheet /* ActionSheet */.ActionSheet, { style: tmp.templateContainer, children: null });
 };

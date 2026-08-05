@@ -1,3 +1,7 @@
+import { DismissibleContent } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { ActivitiesBanner } from "ActivitiesBanner.tsx";
+import { AppsBaner } from "AppsBanner.tsx";
+import { BotsBanner } from "BotsBanner.tsx";
 // discord_app/modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingBanner.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -9,16 +13,16 @@ export default function AppLauncherOnboardingBanner(arg0) {
   let context;
   let visibleContent;
   ({ context, visibleContent } = arg0);
-  if (require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER === visibleContent) {
+  if (DismissibleContent /* DismissibleContent */.DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER === visibleContent) {
     let obj = { context: null };
     obj[0] = context;
-    return jsx(require("ActivitiesBanner.tsx"), { context: null });
+    return jsx(ActivitiesBanner, { context: null });
   } else if (tmp(1358).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER === visibleContent) {
-    return jsx(require("AppsBanner.tsx"), {});
+    return jsx(AppsBaner, {});
   } else if (tmp(1358).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER === visibleContent) {
     obj = { context: null };
     obj[0] = context;
-    return jsx(require("BotsBanner.tsx"), { context: null });
+    return jsx(BotsBanner, { context: null });
   } else {
     return null;
   }

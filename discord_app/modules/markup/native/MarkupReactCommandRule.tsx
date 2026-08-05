@@ -1,3 +1,7 @@
+import { SlashBoxIcon } from "../../../design/components/Icon/native/redesign/generated/SlashBoxIcon.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { showSimpleActionSheet } from "../../action_sheet/native/showSimpleActionSheet.tsx";
+import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 // discord_app/modules/markup/native/MarkupReactCommandRule.tsx
 import context from "context";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -111,16 +115,16 @@ function handleLongPressCommandMention(arg0, arg1) {
   const _require = arg0;
   let closure_1 = arg1;
   let obj = { label: null, IconComponent: null, onPress: null };
-  const intl = _require("../../../intl/index.native.tsx").intl;
-  obj[0] = intl.string(_require("../../../intl/index.native.tsx").t["42H+Nb"]);
-  obj[1] = _require("../../../design/components/Icon/native/redesign/generated/SlashBoxIcon.tsx").SlashBoxIcon;
+  const intl = _getSystemLocale.intl;
+  obj[0] = intl.string(_getSystemLocale.t["42H+Nb"]);
+  obj[1] = _SlashBoxIcon.SlashBoxIcon;
   obj[2] = function onPress() {
     callback(outer1_2[14]).presentCommandCopied();
     const obj = callback(outer1_2[14]);
     callback(outer1_2[15]).copy("" + outer1_8 + callback);
   };
   const items = [obj];
-  const DeveloperMode = _require("../../user_settings/UserSettings.tsx").DeveloperMode;
+  const DeveloperMode = _explicitContentFromProto.DeveloperMode;
   if (DeveloperMode.getSetting()) {
     obj = { label: null, IconComponent: null, onPress: null };
     const intl2 = tmp(1236).intl;
@@ -133,7 +137,7 @@ function handleLongPressCommandMention(arg0, arg1) {
     };
     items.push(obj);
   }
-  const result = _require("../../action_sheet/native/showSimpleActionSheet.tsx").showSimpleActionSheet({ key: "LongPressCommandMention", options: items, hasIcons: true });
+  const result = _showSimpleActionSheet.showSimpleActionSheet({ key: "LongPressCommandMention", options: items, hasIcons: true });
 }
 ({ AppLauncherRouteName: c5, useAppLauncherNavigation: closure_6 } = APP_LAUNCHER_BUILT_IN_SECTION_ICON);
 let result = require("APP_LAUNCHER_BUILT_IN_SECTION_ICON").fileFinishedImporting("modules/markup/native/MarkupReactCommandRule.tsx");

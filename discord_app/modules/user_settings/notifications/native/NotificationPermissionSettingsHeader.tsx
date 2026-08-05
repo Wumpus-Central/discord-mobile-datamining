@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/user_settings/notifications/native/NotificationPermissionSettingsHeader.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -53,7 +54,7 @@ export default function NotificationPermissionSettingsHeader() {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.iconCircle;
     const obj3 = { size: "md", color: null };
-    obj3[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.ICON_STRONG;
+    obj3[1] = Themes.colors.ICON_STRONG;
     obj2[1] = callback(tmp2(9647).BellSlashIcon, obj3);
     const items1 = [callback(View, obj2), , , ];
     const obj4 = { variant: "heading-lg/bold", color: "text-default", children: null };

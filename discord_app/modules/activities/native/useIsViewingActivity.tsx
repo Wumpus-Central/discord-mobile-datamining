@@ -1,3 +1,5 @@
+import { ChannelCallCameraPreview } from "../../video_calls/native/components/ChannelCallModal.tsx";
+import { useIsActivityFocused } from "../useIsActivityFocused.tsx";
 // discord_app/modules/activities/native/useIsViewingActivity.tsx
 import getParticipants from "getParticipants";
 
@@ -6,8 +8,8 @@ const result = require("navigationToRootTabHelper").fileFinishedImporting("modul
 
 export const useIsViewingActivity = function useIsViewingActivity(channelId) {
   channelId = channelId.channelId;
-  let tmp = require("../useIsActivityFocused.tsx")(channelId);
-  const isModalOpen = channelId(4136).useIsModalOpen(require("../../video_calls/native/components/ChannelCallModal.tsx"));
+  let tmp = useIsActivityFocused(channelId);
+  const isModalOpen = channelId(4136).useIsModalOpen(ChannelCallCameraPreview);
   const obj = channelId(4136);
   const items = [getParticipants];
   const items1 = [channelId];

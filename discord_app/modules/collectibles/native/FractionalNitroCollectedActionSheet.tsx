@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../_runtime/12074_registerAsset.js";
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { FRACTIONAL_NITRO_COIN_SIZE } from "FractionalNitroCoinIllustration.tsx";
 // discord_app/modules/collectibles/native/FractionalNitroCollectedActionSheet.tsx
 import Background from "Background";
 import get_ActivityIndicator from "combined";
@@ -18,13 +21,13 @@ function NitroAcquiredHeader(skuId) {
   const tmp = createCacheKey();
   let obj = { style: tmp.header, children: null };
   obj = { source: null };
-  obj[0] = require("../../../../_runtime/12074_registerAsset.js");
-  const items = [callback(require("../../../components_native/common/FastImage.tsx"), obj), ];
+  obj[0] = registerAsset;
+  const items = [callback(preload, obj), ];
   obj = { style: tmp.fractionNitroIcon, children: null };
   const obj1 = { skuId: skuId.skuId, width: null, height: null };
-  obj1[1] = require("FractionalNitroCoinIllustration.tsx") /* FRACTIONAL_NITRO_COIN_SIZE */.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET;
-  obj1[2] = require("FractionalNitroCoinIllustration.tsx") /* FRACTIONAL_NITRO_COIN_SIZE */.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET;
-  obj[1] = callback(require("FractionalNitroCoinIllustration.tsx") /* FRACTIONAL_NITRO_COIN_SIZE */.FractionalNitroCoinIllustration, obj1);
+  obj1[1] = FRACTIONAL_NITRO_COIN_SIZE /* FRACTIONAL_NITRO_COIN_SIZE */.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET;
+  obj1[2] = FRACTIONAL_NITRO_COIN_SIZE /* FRACTIONAL_NITRO_COIN_SIZE */.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET;
+  obj[1] = callback(FRACTIONAL_NITRO_COIN_SIZE /* FRACTIONAL_NITRO_COIN_SIZE */.FractionalNitroCoinIllustration, obj1);
   items[1] = callback(closure_5, obj);
   obj[1] = items;
   return callback2(closure_5, obj);

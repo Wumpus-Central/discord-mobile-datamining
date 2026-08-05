@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../_runtime/11115_registerAsset.js";
+import { newMemberActionFromServer } from "../GuildOnboardingHomeTypes.tsx";
+import { useMemberActionsForChannel } from "../MemberActionUtils.tsx";
 // discord_app/modules/guild_onboarding_home/native/MemberActionChatInputBanner.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "getAvatarURL";
@@ -44,7 +47,7 @@ function ChannelActionEmoji(emoji) {
   let obj = { style: tmp.emojiPlaceholder, children: null };
   obj = { size: null, source: null };
   obj[0] = id(1297).Icon.Sizes.REFRESH_SMALL_16;
-  obj[1] = require("../../../../_runtime/11115_registerAsset.js");
+  obj[1] = registerAsset;
   obj[1] = callback(id(1297).Icon, obj);
   const tmp6 = callback(View, obj);
   id = undefined;
@@ -402,7 +405,7 @@ const memoResult1 = importAllResult.memo((channel) => {
   let channelAction;
   let completed;
   channel = channel.channel;
-  let obj = require("../MemberActionUtils.tsx") /* useMemberActionsForChannel */;
+  let obj = useMemberActionsForChannel /* useMemberActionsForChannel */;
   const memberActionsForChannel = obj.useMemberActionsForChannel(channel.guild_id, channel);
   ({ channelAction, completed } = memberActionsForChannel);
   let channelId;
@@ -410,11 +413,11 @@ const memoResult1 = importAllResult.memo((channel) => {
     channelId = channelAction.channelId;
   }
   let actionType;
-  const nextMemberAction = require("../MemberActionUtils.tsx") /* useMemberActionsForChannel */.useNextMemberAction(channel.guild_id, channelId);
+  const nextMemberAction = useMemberActionsForChannel /* useMemberActionsForChannel */.useNextMemberAction(channel.guild_id, channelId);
   if (channelAction != null) {
     actionType = channelAction.actionType;
   }
-  if (actionType !== require("../GuildOnboardingHomeTypes.tsx") /* newMemberActionFromServer */.NewMemberActionTypes.VIEW) {
+  if (actionType !== newMemberActionFromServer /* newMemberActionFromServer */.NewMemberActionTypes.VIEW) {
     obj = { channel: null };
     obj[0] = channel;
     let tmp7 = callback(closure_21, obj);

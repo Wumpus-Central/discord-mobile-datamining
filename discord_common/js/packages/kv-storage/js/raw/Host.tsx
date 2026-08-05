@@ -1,3 +1,5 @@
+import { set } from "../implementation/index.tsx";
+import { logger } from "Runtime.tsx";
 // discord_common/js/packages/kv-storage/js/raw/Host.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
@@ -9,7 +11,7 @@ const prototype = function Host() {
 prototype["open"] = function open(arg0, arg1) {
   const _require = arg0;
   const dependencyMap = arg1;
-  const Runtime = _require("Runtime.tsx").Runtime;
+  const Runtime = _logger.Runtime;
   return Runtime.executeAsync("database_open", (arg0) => {
     const KV_RAW = callback(obj[2]).KV_RAW;
     obj = { database: callback, invalidateDisabledHandles: null };
@@ -25,7 +27,7 @@ prototype["open"] = function open(arg0, arg1) {
   });
 };
 prototype["openSyncUnsafe"] = function openSyncUnsafe(database, invalidateDisabledHandles) {
-  const KV_RAW = require("../implementation/index.tsx") /* set */.KV_RAW;
+  const KV_RAW = set /* set */.KV_RAW;
   const obj = { database, invalidateDisabledHandles: null };
   let flag;
   if (invalidateDisabledHandles != null) {
@@ -39,7 +41,7 @@ prototype["openSyncUnsafe"] = function openSyncUnsafe(database, invalidateDisabl
 };
 prototype["delete"] = function delete(arg0) {
   const _require = arg0;
-  const Runtime = _require("Runtime.tsx").Runtime;
+  const Runtime = _logger.Runtime;
   return Runtime.executeAsync("database_delete", (arg0) => {
     const KV_RAW = callback(outer1_1[2]).KV_RAW;
     return KV_RAW.databaseDelete(arg0, { database: callback });
@@ -58,14 +60,14 @@ prototype["list"] = function list() {
 };
 prototype["optimize"] = function optimize(arg0) {
   const _require = arg0;
-  const Runtime = _require("Runtime.tsx").Runtime;
+  const Runtime = _logger.Runtime;
   return Runtime.executeAsync("database_optimize", (arg0) => {
     const KV_RAW = callback(outer1_1[2]).KV_RAW;
     return KV_RAW.databaseOptimize(arg0, { aggressive: callback });
   });
 };
 prototype["raise"] = function raise(arg0) {
-  const KV_RAW = require("../implementation/index.tsx") /* set */.KV_RAW;
+  const KV_RAW = set /* set */.KV_RAW;
   KV_RAW.raise(arg0);
 };
 

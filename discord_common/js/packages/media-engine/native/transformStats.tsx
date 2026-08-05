@@ -1,3 +1,4 @@
+import { formatSinkWantStat } from "../utils/transformStatsUtils.tsx";
 // discord_common/js/packages/media-engine/native/transformStats.tsx
 function sumBytes(rtpStats) {
   let num;
@@ -217,9 +218,9 @@ function transformOutboundVideoStats(substreams, id) {
       }
       return arg0 + (sum + num4 + num);
     }, 0);
-    obj[2] = require("../utils/transformStatsUtils.tsx") /* formatSinkWantStat */.formatSinkWantStat(id, found.ssrc, true);
-    const obj2 = require("../utils/transformStatsUtils.tsx") /* formatSinkWantStat */;
-    obj[3] = require("../utils/transformStatsUtils.tsx") /* formatSinkWantStat */.formatSinkWantAsInt(id, found.ssrc);
+    obj[2] = formatSinkWantStat /* formatSinkWantStat */.formatSinkWantStat(id, found.ssrc, true);
+    const obj2 = formatSinkWantStat /* formatSinkWantStat */;
+    obj[3] = formatSinkWantStat /* formatSinkWantStat */.formatSinkWantAsInt(id, found.ssrc);
     obj = { id: null, name: null };
     ({ codecPayloadType: obj4[0], codecName: obj4[1] } = substreams);
     obj[4] = obj;
@@ -428,13 +429,13 @@ function transformInboundVideoStats(height, id, id) {
   let obj = { type: "video", ssrc: height.ssrc, sinkWant: null, sinkWantAsInt: null, sinkWantLocal: null, sinkWantLocalAsInt: null, codec: null, bytesReceived: null, packetsReceived: null, packetsLost: null, fractionLost: null, bitrate: null, jitterBuffer: null, currentDelay: null, targetDelay: null, minPlayoutDelay: null, renderDelay: null, averageDecodeTime: null, totalDecodeTime: null, resolution: null, decoderImplementationName: null, framesDecoded: null, framesDropped: null, framesDecodeErrors: null, framesReceived: null, networkFramesDropped: null, keyFramesDecoded: null, frameRateDecode: null, frameRateNetwork: null, frameRateRender: null, firCount: null, nackCount: null, pliCount: null, qpSum: null, freezeCount: null, pauseCount: null, totalFreezesDuration: null, totalPausesDuration: null, totalFramesDuration: null, sumOfSquaredFramesDurations: null, passthroughCount: null, decryptSuccessCount: null, decryptFailureCount: null, decryptDuration: null, decryptAttempts: null, decryptMissingKeyCount: null, decryptInvalidNonceCount: null, minResolutionWidth: null, minResolutionHeight: null };
   const sum1 = sum + num4 + num;
   const tmp = sumBytes(height.rtpStats);
-  obj[2] = require("../utils/transformStatsUtils.tsx") /* formatSinkWantStat */.formatSinkWantStat(id, height.ssrc, true);
-  const obj2 = require("../utils/transformStatsUtils.tsx") /* formatSinkWantStat */;
-  obj[3] = require("../utils/transformStatsUtils.tsx") /* formatSinkWantStat */.formatSinkWantAsInt(id, height.ssrc);
-  const obj3 = require("../utils/transformStatsUtils.tsx") /* formatSinkWantStat */;
-  obj[4] = require("../utils/transformStatsUtils.tsx") /* formatSinkWantStat */.formatSinkWantStat(id, height.ssrc, true);
-  const obj4 = require("../utils/transformStatsUtils.tsx") /* formatSinkWantStat */;
-  obj[5] = require("../utils/transformStatsUtils.tsx") /* formatSinkWantStat */.formatSinkWantAsInt(id, height.ssrc);
+  obj[2] = formatSinkWantStat /* formatSinkWantStat */.formatSinkWantStat(id, height.ssrc, true);
+  const obj2 = formatSinkWantStat /* formatSinkWantStat */;
+  obj[3] = formatSinkWantStat /* formatSinkWantStat */.formatSinkWantAsInt(id, height.ssrc);
+  const obj3 = formatSinkWantStat /* formatSinkWantStat */;
+  obj[4] = formatSinkWantStat /* formatSinkWantStat */.formatSinkWantStat(id, height.ssrc, true);
+  const obj4 = formatSinkWantStat /* formatSinkWantStat */;
+  obj[5] = formatSinkWantStat /* formatSinkWantStat */.formatSinkWantAsInt(id, height.ssrc);
   obj[6] = { id: height.codecPayloadType, name: height.codecName };
   obj[7] = tmp;
   obj[8] = sum1;
@@ -497,9 +498,9 @@ export default function transformStats(mediaEngineConnectionId, str, id) {
       closure_3 = num + audio.bytesSent;
       let obj = { type: "audio", ssrc: null, sinkWant: null, sinkWantAsInt: null, codec: null, bytesSent: null, packetsSent: null, packetsLost: null, fractionLost: null, audioLevel: null, bitrate: null, bitrateTarget: null, audioDetected: null, framesCaptured: null, framesRendered: null, noiseCancellerFrames: null, noiseCancellerProcessTime: null, voiceActivityDetectorProcessTime: null, passthroughCount: null, encryptSuccessCount: null, encryptFailureCount: null, encryptDuration: null, encryptAttempts: null, encryptMaxAttempts: null, encryptMissingKeyCount: null, pttQueueLatencyMicrosSamples: null, sampleRateMismatchPercent: null, currentSampleRate: null };
       obj[1] = audio.ssrc;
-      let obj1 = _require("../utils/transformStatsUtils.tsx");
+      let obj1 = _formatSinkWantStat;
       obj[2] = obj1.formatSinkWantStat(id, audio.ssrc, false);
-      let obj2 = _require("../utils/transformStatsUtils.tsx");
+      let obj2 = _formatSinkWantStat;
       obj[3] = obj2.formatSinkWantAsInt(id, audio.ssrc);
       obj = { id: null, name: null };
       ({ codecPayloadType: obj4[0], codecName: obj4[1] } = audio);

@@ -1,3 +1,9 @@
+import { DismissibleContent } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { PlatformTypes } from "../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import { UNSAFE_isDismissibleContentDismissed } from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import { useEligibleActiveOutboundPromotions } from "../../../../premium/promotions/PromotionsHooks.tsx";
+import { hasUserTrialOfferExpired } from "../../../../premium/useTrialOffer.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouBannerDecorations.tsx
 import importAllResult from "n";
 import get_ActivityIndicator from "useUserProfileColors";
@@ -28,9 +34,9 @@ let closure_13 = createCacheKey.createStyles((arg0, arg1, color) => {
   const merged1 = Object.assign(closure_6.absoluteFillObject);
   obj.color = color;
   obj[1] = obj;
-  const obj4 = require("../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */;
+  const obj4 = PlatformTypes /* PlatformTypes */;
   const tmp3 = require;
-  const space = require("../../../../../../discord_common/js/packages/tokens/native.tsx").space;
+  const space = Themes.space;
   if (isIOSResult) {
     let PX_24 = space.PX_24;
     let tmp8 = tmp6;
@@ -39,7 +45,7 @@ let closure_13 = createCacheKey.createStyles((arg0, arg1, color) => {
     tmp8 = tmp6;
   }
   const obj1 = { marginBottom: PX_24, paddingVertical: tmp8(712).space.PX_8, paddingHorizontal: tmp8(712).space.PX_24, borderRadius: null, backgroundColor: null, flexDirection: "row", borderColor: null, borderWidth: 1 };
-  isIOSResult = require("../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx") /* PlatformTypes */.isIOS();
+  isIOSResult = PlatformTypes /* PlatformTypes */.isIOS();
   const result = tmp3(1348).isMobileVisualRefreshEnabled("YouBannerDecorations");
   const radii = tmp8(712).radii;
   let BACKGROUND_SURFACE_HIGH = arg1;
@@ -262,11 +268,11 @@ let result = require("mergeGuildAvatar").fileFinishedImporting("modules/main_tab
 
 export default memoResult;
 export const useHasSettingsBadge = function useHasSettingsBadge() {
-  let tmp = require("../../../../premium/promotions/PromotionsHooks.tsx") /* useEligibleActiveOutboundPromotions */.useUnseenOutboundPromotions().length > 0;
-  const obj = require("../../../../premium/promotions/PromotionsHooks.tsx") /* useEligibleActiveOutboundPromotions */;
-  const obj2 = require("../../../../premium/useTrialOffer.tsx") /* hasUserTrialOfferExpired */;
-  const tmp2 = null != require("../../../../premium/useTrialOffer.tsx") /* hasUserTrialOfferExpired */.useTrialOffer(closure_9);
-  const result = require("../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx") /* UNSAFE_isDismissibleContentDismissed */.useIsDismissibleContentDismissed_UNSAFE(require("../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE);
+  let tmp = useEligibleActiveOutboundPromotions /* useEligibleActiveOutboundPromotions */.useUnseenOutboundPromotions().length > 0;
+  const obj = useEligibleActiveOutboundPromotions /* useEligibleActiveOutboundPromotions */;
+  const obj2 = hasUserTrialOfferExpired /* hasUserTrialOfferExpired */;
+  const tmp2 = null != hasUserTrialOfferExpired /* hasUserTrialOfferExpired */.useTrialOffer(closure_9);
+  const result = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */.useIsDismissibleContentDismissed_UNSAFE(DismissibleContent /* DismissibleContent */.DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE);
   let tmp4 = !result;
   if (!result) {
     tmp4 = tmp2;

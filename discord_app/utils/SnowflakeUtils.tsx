@@ -1,3 +1,4 @@
+import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/utils/SnowflakeUtils.tsx
 const result = require("set").fileFinishedImporting("utils/SnowflakeUtils.tsx");
 
@@ -28,7 +29,7 @@ export default {
   },
   forEach(arg0, arg1) {
     const importDefault = arg1;
-    const item = require("../../_runtime/00012_apply.js").forEach(arg0, (arg0, arg1) => callback(arg0, arg1));
+    const item = apply.forEach(arg0, (arg0, arg1) => callback(arg0, arg1));
   },
   forEachKey(recurrenceCounts, arg1) {
     for (const key10004 in arg0) {

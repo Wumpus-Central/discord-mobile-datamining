@@ -1,3 +1,5 @@
+import { useTheme } from "../../../../hooks/useTheme.tsx";
+import { getChannelRoleSubscriptionStatus } from "../../../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx";
 // discord_app/modules/main_tabs_v2/native/channel/StandaloneChannelScreen.tsx
 import importAllResult from "useIsSwipeToMemberListEnabled";
 import get_ActivityIndicator from "ChannelHeader";
@@ -221,14 +223,14 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
   dependencyMap = obj.useNavigation();
   let obj1 = frame(10359);
   const isSwipeToMemberListEnabled = obj1.useIsSwipeToMemberListEnabled();
-  const needSubscriptionToAccess = require("../../../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx")(channelId).needSubscriptionToAccess;
+  const needSubscriptionToAccess = getChannelRoleSubscriptionStatus(channelId).needSubscriptionToAccess;
   let obj2 = frame(5753);
   let tmp6 = guildId;
   if (guildId == null) {
     tmp6 = closure_7;
   }
   const canSeeOnboardingHome = obj2.useCanSeeOnboardingHome(tmp6);
-  const tmp9 = require("../../../../hooks/useTheme.tsx")() === constants.MIDNIGHT;
+  const tmp9 = useTheme() === constants.MIDNIGHT;
   importAllResult = tmp9;
   let tmp2Result = tmp2(1348);
   chatInputFloating = tmp2Result.useMobileVisualRefreshConfig({ location: "StandaloneChannelScreen" }).chatInputFloating;

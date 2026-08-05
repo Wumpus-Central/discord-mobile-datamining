@@ -1,3 +1,4 @@
+import { isGuildMember } from "../utils/InstantInviteUtils.tsx";
 // discord_app/stores/InviteSuggestionsStore.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import recomputeAffinities from "recomputeAffinities";
@@ -100,7 +101,7 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(require("dispatcher"),
     }
     const applicationId = guild.applicationId;
     const blockedOrIgnoredIDs = upsertRelationship.getBlockedOrIgnoredIDs();
-    let obj = require("../utils/InstantInviteUtils.tsx") /* isGuildMember */;
+    let obj = isGuildMember /* isGuildMember */;
     obj = { channel, applicationId, inviteTargetType };
     const usersAlreadyJoined = obj.getUsersAlreadyJoined(obj);
     const items = [...usersAlreadyJoined];

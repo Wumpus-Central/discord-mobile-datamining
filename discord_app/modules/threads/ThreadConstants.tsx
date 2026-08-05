@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/threads/ThreadConstants.tsx
 import { AbortCodes } from "ME";
 import set from "set";
@@ -19,16 +20,16 @@ export const ThreadMemberFlags = obj;
 export const OpenThreadAnalyticsLocations = { EMBED: "Embed", BROWSER: "Thread Browser", POPOUT: "Active Threads Popout", CHANNEL_LIST: "Channel List", GUILD_ACTIVE_THREADS_MODAL: "Guild Active Threads Modal", INBOX: "Inbox", FORUM: "Forum", VOICE_AUTO_OPEN: "Voice Auto Open" };
 export const getThreadNotificationOptions = function getThreadNotificationOptions() {
   obj = { setting: obj.ALL_MESSAGES, label: null };
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["n/bTaY"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["n/bTaY"]);
   const items = [obj, , ];
   obj = { setting: obj.ONLY_MENTIONS, label: null };
-  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl2.format(require("../../intl/index.native.tsx") /* getSystemLocale */.t.L2hmYy, {});
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl2.format(getSystemLocale /* getSystemLocale */.t.L2hmYy, {});
   items[1] = obj;
   obj = { setting: obj.NO_MESSAGES, label: null };
-  const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.CtVGyQ);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.CtVGyQ);
   items[2] = obj;
   return items;
 };

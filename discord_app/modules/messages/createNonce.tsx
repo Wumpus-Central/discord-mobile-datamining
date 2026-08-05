@@ -1,3 +1,4 @@
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/messages/createNonce.tsx
 let c2 = 0;
 const snowflakeSequence = new require("DISCORD_EPOCH").SnowflakeSequence();
@@ -8,5 +9,5 @@ export const createNonce = function createNonce() {
   if (timestamp !== timestamp) {
     snowflakeSequence.reset();
   }
-  return require("../../utils/SnowflakeUtils.tsx").fromTimestampWithSequence(timestamp, snowflakeSequence);
+  return DISCORD_EPOCH.fromTimestampWithSequence(timestamp, snowflakeSequence);
 };

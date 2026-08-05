@@ -1,3 +1,4 @@
+import { XBOX_DISCORD_OCID } from "../../activities/utils/distributorStoreUrls.tsx";
 // discord_app/modules/game_profile/hooks/useXboxGamePassStoreUrl.tsx
 import { Distributors } from "ME";
 
@@ -22,8 +23,8 @@ export default function useXboxGamePassStoreUrl(thirdPartySkus) {
     }
     let xboxGamePassStoreUrl = null;
     if (null != id) {
-      xboxGamePassStoreUrl = require("../../activities/utils/distributorStoreUrls.tsx") /* XBOX_DISCORD_OCID */.buildXboxGamePassStoreUrl(found.id);
-      let obj = require("../../activities/utils/distributorStoreUrls.tsx") /* XBOX_DISCORD_OCID */;
+      xboxGamePassStoreUrl = XBOX_DISCORD_OCID /* XBOX_DISCORD_OCID */.buildXboxGamePassStoreUrl(found.id);
+      let obj = XBOX_DISCORD_OCID /* XBOX_DISCORD_OCID */;
     }
     return xboxGamePassStoreUrl;
   }

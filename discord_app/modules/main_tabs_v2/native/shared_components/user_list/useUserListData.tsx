@@ -1,3 +1,9 @@
+import { apply } from "../../../../../../_runtime/00012_apply.js";
+import { dispatcher } from "../../../../../Dispatcher.tsx";
+import { getGuildNameSuggestion } from "../../../../../utils/GuildUtils.tsx";
+import { getAll } from "../../../../app_database/modules/UserSearchItems.tsx";
+import { getTransformedUser } from "../../../../autocompleter/UserSearchManager.tsx";
+import { cleanString } from "../../../UserSearchUtils.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/useUserListData.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
@@ -171,8 +177,8 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
     found = items7.filter((user) => user.user.id !== id);
   }
   if (withFriends) {
-    const mapped = require("../../../../../../_runtime/00012_apply.js")(tmp).map((items, title) => ({ title, items }));
-    const arr12 = require("../../../../../../_runtime/00012_apply.js")(tmp);
+    const mapped = apply(tmp).map((items, title) => ({ title, items }));
+    const arr12 = apply(tmp);
     items = mapped.sortBy((title) => title.title).value();
     const iter = mapped.sortBy((title) => title.title);
   } else {
@@ -184,7 +190,7 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
   const intl = id(1236).intl;
   obj[0] = intl.string(id(1236).t.HbJ7eD);
   if (withAffinitySuggestions) {
-    let obj3 = require("../../../../../../_runtime/00012_apply.js")(items);
+    let obj3 = apply(items);
     const sortByResult = obj3.sortBy((affinity) => -affinity.affinity);
     let valueResult = obj3.sortBy((affinity) => -affinity.affinity).slice(0, num).value();
     const iter2 = obj3.sortBy((affinity) => -affinity.affinity).slice(0, num);
@@ -438,7 +444,7 @@ prototype["subscribe"] = function subscribe(onUpdate) {
   self.onUpdate = onUpdate;
   let userSearchContext = null;
   if (flag) {
-    userSearchContext = require("../../../../autocompleter/UserSearchManager.tsx").getUserSearchContext((results) => {
+    userSearchContext = getTransformedUser.getUserSearchContext((results) => {
       results = results.results;
       let items;
       if (items.currentQuery === results.query) {
@@ -471,32 +477,32 @@ prototype["subscribe"] = function subscribe(onUpdate) {
         }
       }
     }, 20);
-    const obj = require("../../../../autocompleter/UserSearchManager.tsx");
+    const obj = getTransformedUser;
   }
   self.userSearchContext = userSearchContext;
-  const subscription = require("../../../../../Dispatcher.tsx").subscribe("POST_CONNECTION_OPEN", self.handlePostConnectionOpen);
-  const obj2 = require("../../../../../Dispatcher.tsx");
-  const subscription1 = require("../../../../../Dispatcher.tsx").subscribe("RELATIONSHIP_ADD", self.handleRelationship);
-  const obj3 = require("../../../../../Dispatcher.tsx");
-  const subscription2 = require("../../../../../Dispatcher.tsx").subscribe("RELATIONSHIP_REMOVE", self.handleRelationship);
-  const obj4 = require("../../../../../Dispatcher.tsx");
-  const subscription3 = require("../../../../../Dispatcher.tsx").subscribe("RELATIONSHIP_UPDATE", self.handleRelationship);
-  const obj5 = require("../../../../../Dispatcher.tsx");
-  const subscription4 = require("../../../../../Dispatcher.tsx").subscribe("GAME_RELATIONSHIP_ADD", self.handleGameRelationshipAdd);
-  const obj6 = require("../../../../../Dispatcher.tsx");
-  const subscription5 = require("../../../../../Dispatcher.tsx").subscribe("GAME_RELATIONSHIP_REMOVE", self.handleGameRelationshipRemove);
-  const obj7 = require("../../../../../Dispatcher.tsx");
-  const subscription6 = require("../../../../../Dispatcher.tsx").subscribe("FRIEND_SUGGESTION_CREATE", self.handleFriendSuggestionCreate);
-  const obj8 = require("../../../../../Dispatcher.tsx");
-  const subscription7 = require("../../../../../Dispatcher.tsx").subscribe("FRIEND_SUGGESTION_DELETE", self.handleFriendSuggestionDelete);
-  const obj9 = require("../../../../../Dispatcher.tsx");
-  const subscription8 = require("../../../../../Dispatcher.tsx").subscribe("GUILD_MEMBER_ADD", self.handleGuildMember);
-  const obj10 = require("../../../../../Dispatcher.tsx");
-  const subscription9 = require("../../../../../Dispatcher.tsx").subscribe("GUILD_MEMBER_UPDATE", self.handleGuildMember);
-  const obj11 = require("../../../../../Dispatcher.tsx");
-  const subscription10 = require("../../../../../Dispatcher.tsx").subscribe("GUILD_MEMBER_REMOVE", self.handleGuildMember);
-  const obj12 = require("../../../../../Dispatcher.tsx");
-  const subscription11 = require("../../../../../Dispatcher.tsx").subscribe("GUILD_MEMBERS_CHUNK_BATCH", self.handleGuildMembersChunkBatch);
+  const subscription = dispatcher.subscribe("POST_CONNECTION_OPEN", self.handlePostConnectionOpen);
+  const obj2 = dispatcher;
+  const subscription1 = dispatcher.subscribe("RELATIONSHIP_ADD", self.handleRelationship);
+  const obj3 = dispatcher;
+  const subscription2 = dispatcher.subscribe("RELATIONSHIP_REMOVE", self.handleRelationship);
+  const obj4 = dispatcher;
+  const subscription3 = dispatcher.subscribe("RELATIONSHIP_UPDATE", self.handleRelationship);
+  const obj5 = dispatcher;
+  const subscription4 = dispatcher.subscribe("GAME_RELATIONSHIP_ADD", self.handleGameRelationshipAdd);
+  const obj6 = dispatcher;
+  const subscription5 = dispatcher.subscribe("GAME_RELATIONSHIP_REMOVE", self.handleGameRelationshipRemove);
+  const obj7 = dispatcher;
+  const subscription6 = dispatcher.subscribe("FRIEND_SUGGESTION_CREATE", self.handleFriendSuggestionCreate);
+  const obj8 = dispatcher;
+  const subscription7 = dispatcher.subscribe("FRIEND_SUGGESTION_DELETE", self.handleFriendSuggestionDelete);
+  const obj9 = dispatcher;
+  const subscription8 = dispatcher.subscribe("GUILD_MEMBER_ADD", self.handleGuildMember);
+  const obj10 = dispatcher;
+  const subscription9 = dispatcher.subscribe("GUILD_MEMBER_UPDATE", self.handleGuildMember);
+  const obj11 = dispatcher;
+  const subscription10 = dispatcher.subscribe("GUILD_MEMBER_REMOVE", self.handleGuildMember);
+  const obj12 = dispatcher;
+  const subscription11 = dispatcher.subscribe("GUILD_MEMBERS_CHUNK_BATCH", self.handleGuildMembersChunkBatch);
   recomputeAffinities.addChangeListener(self.handleUserAffinitiesUpdate);
 };
 prototype["unsubscribe"] = function unsubscribe() {
@@ -506,34 +512,34 @@ prototype["unsubscribe"] = function unsubscribe() {
   if (userSearchContext != null) {
     userSearchContext.destroy();
   }
-  require("../../../../../Dispatcher.tsx").unsubscribe("POST_CONNECTION_OPEN", self.handlePostConnectionOpen);
-  const obj = require("../../../../../Dispatcher.tsx");
-  require("../../../../../Dispatcher.tsx").unsubscribe("RELATIONSHIP_ADD", self.handleRelationship);
-  const obj2 = require("../../../../../Dispatcher.tsx");
-  require("../../../../../Dispatcher.tsx").unsubscribe("RELATIONSHIP_REMOVE", self.handleRelationship);
-  const obj3 = require("../../../../../Dispatcher.tsx");
-  require("../../../../../Dispatcher.tsx").unsubscribe("RELATIONSHIP_UPDATE", self.handleRelationship);
-  const obj4 = require("../../../../../Dispatcher.tsx");
-  require("../../../../../Dispatcher.tsx").unsubscribe("GAME_RELATIONSHIP_ADD", self.handleGameRelationshipAdd);
-  const obj5 = require("../../../../../Dispatcher.tsx");
-  require("../../../../../Dispatcher.tsx").unsubscribe("GAME_RELATIONSHIP_REMOVE", self.handleGameRelationshipRemove);
-  const obj6 = require("../../../../../Dispatcher.tsx");
-  require("../../../../../Dispatcher.tsx").unsubscribe("FRIEND_SUGGESTION_CREATE", self.handleFriendSuggestionCreate);
-  const obj7 = require("../../../../../Dispatcher.tsx");
-  require("../../../../../Dispatcher.tsx").unsubscribe("FRIEND_SUGGESTION_DELETE", self.handleFriendSuggestionDelete);
-  const obj8 = require("../../../../../Dispatcher.tsx");
-  require("../../../../../Dispatcher.tsx").unsubscribe("GUILD_MEMBER_ADD", self.handleGuildMember);
-  const obj9 = require("../../../../../Dispatcher.tsx");
-  require("../../../../../Dispatcher.tsx").unsubscribe("GUILD_MEMBER_UPDATE", self.handleGuildMember);
-  const obj10 = require("../../../../../Dispatcher.tsx");
-  require("../../../../../Dispatcher.tsx").unsubscribe("GUILD_MEMBER_REMOVE", self.handleGuildMember);
-  const obj11 = require("../../../../../Dispatcher.tsx");
-  require("../../../../../Dispatcher.tsx").unsubscribe("GUILD_MEMBERS_CHUNK_BATCH", self.handleGuildMembersChunkBatch);
+  dispatcher.unsubscribe("POST_CONNECTION_OPEN", self.handlePostConnectionOpen);
+  const obj = dispatcher;
+  dispatcher.unsubscribe("RELATIONSHIP_ADD", self.handleRelationship);
+  const obj2 = dispatcher;
+  dispatcher.unsubscribe("RELATIONSHIP_REMOVE", self.handleRelationship);
+  const obj3 = dispatcher;
+  dispatcher.unsubscribe("RELATIONSHIP_UPDATE", self.handleRelationship);
+  const obj4 = dispatcher;
+  dispatcher.unsubscribe("GAME_RELATIONSHIP_ADD", self.handleGameRelationshipAdd);
+  const obj5 = dispatcher;
+  dispatcher.unsubscribe("GAME_RELATIONSHIP_REMOVE", self.handleGameRelationshipRemove);
+  const obj6 = dispatcher;
+  dispatcher.unsubscribe("FRIEND_SUGGESTION_CREATE", self.handleFriendSuggestionCreate);
+  const obj7 = dispatcher;
+  dispatcher.unsubscribe("FRIEND_SUGGESTION_DELETE", self.handleFriendSuggestionDelete);
+  const obj8 = dispatcher;
+  dispatcher.unsubscribe("GUILD_MEMBER_ADD", self.handleGuildMember);
+  const obj9 = dispatcher;
+  dispatcher.unsubscribe("GUILD_MEMBER_UPDATE", self.handleGuildMember);
+  const obj10 = dispatcher;
+  dispatcher.unsubscribe("GUILD_MEMBER_REMOVE", self.handleGuildMember);
+  const obj11 = dispatcher;
+  dispatcher.unsubscribe("GUILD_MEMBERS_CHUNK_BATCH", self.handleGuildMembersChunkBatch);
   recomputeAffinities.removeChangeListener(self.handleUserAffinitiesUpdate);
 };
 prototype["fetch"] = function fetch(toLocaleLowerCase) {
   const self = this;
-  let obj = require("../../../UserSearchUtils.tsx") /* cleanString */;
+  let obj = cleanString /* cleanString */;
   const cleanStringResult = obj.cleanString(toLocaleLowerCase);
   if ("" === cleanStringResult) {
     const userSearchContext2 = self.userSearchContext;
@@ -542,8 +548,8 @@ prototype["fetch"] = function fetch(toLocaleLowerCase) {
     }
   } else {
     if (arg1) {
-      const members = require("../../../../../utils/GuildUtils.tsx").requestMembers(null, cleanStringResult);
-      const obj2 = require("../../../../../utils/GuildUtils.tsx");
+      const members = getGuildNameSuggestion.requestMembers(null, cleanStringResult);
+      const obj2 = getGuildNameSuggestion;
     }
     const userSearchContext = self.userSearchContext;
     if (userSearchContext != null) {
@@ -558,7 +564,7 @@ prototype["filter"] = function filter(toLocaleLowerCase) {
   let self = this;
   self = this;
   let _require = toLocaleLowerCase;
-  let obj = _require("../../../UserSearchUtils.tsx");
+  let obj = _cleanString;
   const cleanStringResult = obj.cleanString(toLocaleLowerCase);
   _require = cleanStringResult;
   if (this.currentQuery === cleanStringResult) {
@@ -639,7 +645,7 @@ prototype["initializeUsersFromStores"] = function initializeUsersFromStores() {
 };
 prototype["initializeUsersFromCache"] = function initializeUsersFromCache() {
   const self = this;
-  const all = require("../../../../app_database/modules/UserSearchItems.tsx").getAll();
+  const all = getAll.getAll();
   return all.then((arg0) => {
     while (tmp !== undefined) {
       let tmp3 = self;
@@ -649,7 +655,7 @@ prototype["initializeUsersFromCache"] = function initializeUsersFromCache() {
   });
 };
 prototype["updateUser"] = function updateUser(id) {
-  if (require("../../../../app_database/modules/UserSearchItems.tsx").shouldUseCache) {
+  if (getAll.shouldUseCache) {
     return false;
   } else {
     const self = this;
@@ -658,7 +664,7 @@ prototype["updateUser"] = function updateUser(id) {
         const indexMap = self.indexMap;
         return indexMap.delete(id);
       }
-      obj = require("../../../UserSearchUtils.tsx") /* cleanString */;
+      obj = cleanString /* cleanString */;
     }
     const value = self.getItem(id);
     if (null == value) {
@@ -679,7 +685,7 @@ prototype["getItem"] = function getItem(closure_0) {
     return null;
   } else {
     const self = this;
-    names = require("../../../UserSearchUtils.tsx") /* cleanString */.getNames(user);
+    names = cleanString /* cleanString */.getNames(user);
     ({ nick, names } = names);
     let obj = { user: null, names: null, affinity: null, firstMatch: null };
     obj[0] = user;
@@ -693,9 +699,9 @@ prototype["getItem"] = function getItem(closure_0) {
       nick = isMatch(names, self.currentQuery, { contains: true });
     }
     obj[3] = nick;
-    const obj4 = require("../../../UserSearchUtils.tsx") /* cleanString */;
+    const obj4 = cleanString /* cleanString */;
     const tmp12 = require;
-    const relationshipType = require("../../../UserSearchUtils.tsx") /* cleanString */.getRelationshipType(user.id);
+    const relationshipType = cleanString /* cleanString */.getRelationshipType(user.id);
     if (relationshipType !== RelationshipTypes.FRIEND) {
       const gameFriendsForUser = authStore.getGameFriendsForUser(closure_0);
       if (gameFriendsForUser.length > 0) {

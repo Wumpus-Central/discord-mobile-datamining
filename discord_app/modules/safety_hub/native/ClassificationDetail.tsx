@@ -1,3 +1,9 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { render } from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/safety_hub/native/ClassificationDetail.tsx
 import expandEventProperties from "expandEventProperties";
 import get_ActivityIndicator from "useSafetyHubClassifications";
@@ -75,7 +81,7 @@ function ClassificationActionsTaken(arg0) {
   let actions;
   let classificationExpiration;
   ({ actions, classificationExpiration } = arg0);
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [_getSystemLocale];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   const tmp4 = createCacheKey();
@@ -141,13 +147,13 @@ function ClassificationGuidance(arg0) {
   ({ tosLink, communityGuidelinesLink, classificationTypeText, policyExplainerLink, appealComponent } = arg0);
   let obj = { style: createCacheKey().sectionContainer, children: null };
   obj = { variant: "eyebrow", color: "text-muted", children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["977iei"]);
-  const items = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), , , ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["977iei"]);
+  const items = [callback(Text /* Text */.Text, obj), , , ];
   obj = { variant: "text-sm/normal", children: null };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl2.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["1Z/+aA"], { tosLink, communityGuidelinesLink });
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl2.format(getSystemLocale /* getSystemLocale */.t["1Z/+aA"], { tosLink, communityGuidelinesLink });
+  items[1] = callback(Text /* Text */.Text, obj);
   items[2] = callback(ClassificationPolicyCard, { classificationTypeText, policyExplainerLink });
   items[3] = appealComponent;
   obj[1] = items;
@@ -167,7 +173,7 @@ function ClassificationPolicyCard(classificationDescription) {
   items = [tmp.classificationPolicyCard];
   obj = { style: tmp.classificationPolicyCardIcon, children: null };
   const obj1 = { size: "sm", color: null };
-  obj1[1] = require("../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_LINK;
+  obj1[1] = Themes.colors.TEXT_LINK;
   obj[1] = callback(policyExplainerLink(10148).ShieldIcon, obj1);
   const items1 = [callback(closure_4, obj), ];
   const obj2 = { style: tmp.classificationPolicyCardContent, children: null };
@@ -177,26 +183,26 @@ function ClassificationPolicyCard(classificationDescription) {
   obj2[1] = callback(policyExplainerLink(4281).Text, obj3);
   items1[1] = callback(closure_4, obj2);
   obj[2] = items1;
-  obj[0] = callback2(require("../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx"), obj);
+  obj[0] = callback2(render, obj);
   return callback(closure_4, obj);
 }
 function AppealStatus() {
   const obj = { variant: "text-md/normal", color: "text-muted", children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["I2H0/E"]);
-  return callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["I2H0/E"]);
+  return callback(Text /* Text */.Text, obj);
 }
 function LetUsKnow(arg0) {
   const _require = arg0;
   let obj = { variant: "text-sm/normal", color: "text-muted", children: null };
-  const intl = _require("../../../intl/index.native.tsx").intl;
+  const intl = _getSystemLocale.intl;
   obj = {
     letUsKnowHook(children) {
       return outer1_13(lib(outer1_2[9]).Text, { onPress: lib.onPressLetUsKnow, variant: "text-sm/normal", color: "text-link", children }, arg1);
     }
   };
-  obj[2] = intl.format(_require("../../../intl/index.native.tsx").t.IFxUaT, obj);
-  return callback(_require("../../../design/components/Text/native/Text.tsx").Text, obj);
+  obj[2] = intl.format(_getSystemLocale.t.IFxUaT, obj);
+  return callback(_Text.Text, obj);
 }
 function AppealFooter(hasBeenAppealed) {
   let obj = { style: createCacheKey().letUsKnowContainer, children: null };
@@ -213,10 +219,10 @@ function AppealFooter(hasBeenAppealed) {
 function ClassificationDetailFooter(onClose) {
   let obj = { style: createCacheKey().redirectButtonWrapper, children: null };
   obj = { size: "md", text: null, onPress: null, grow: true };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.elrEjL);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.elrEjL);
   obj[2] = onClose.onClose;
-  obj[1] = callback(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj);
+  obj[1] = callback(Button /* Button */.Button, obj);
   return callback(closure_4, obj);
 }
 ({ View: c4, ActivityIndicator: c5, ScrollView: closure_6 } = get_ActivityIndicator);

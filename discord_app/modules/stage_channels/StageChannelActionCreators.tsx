@@ -1,3 +1,11 @@
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { ChannelActionCreators } from "../../actions/ChannelActionCreators.tsx";
+import { showTooManyUserGuildsAlert } from "../../actions/GuildActionCreators.tsx";
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
+import { fillChunk } from "StageChannelUtils.tsx";
+import { useAudienceRequestToSpeakState } from "useAudienceRequestToSpeakState.tsx";
 // discord_app/modules/stage_channels/StageChannelActionCreators.tsx
 import 00038__ from "../../../_runtime/metro/00038__.js";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -19,10 +27,10 @@ function audienceAckRequestToSpeak(channel, suppress) {
     guildId = channel.getGuildId();
   }
   let result = dependencyMap;
-  require("../../../_runtime/metro/00038__.js")(null != guildId, "This channel cannot be guildless.");
+  00038__(null != guildId, "This channel cannot be guildless.");
   let obj = require;
   voiceStateForChannel = voiceStateForChannel.getVoiceStateForChannel(channel.id);
-  let obj1 = require("useAudienceRequestToSpeakState.tsx") /* useAudienceRequestToSpeakState */;
+  let obj1 = useAudienceRequestToSpeakState /* useAudienceRequestToSpeakState */;
   const audienceRequestToSpeakState = obj1.getAudienceRequestToSpeakState(voiceStateForChannel);
   if (!suppress) {
     let objResult = obj(5107);
@@ -289,15 +297,15 @@ let result = require("updateVoiceState").fileFinishedImporting("modules/stage_ch
 
 export const toggleRequestToSpeak = function toggleRequestToSpeak(channel_id, arg1) {
   const guildId = channel_id.getGuildId();
-  require("../../../_runtime/metro/00038__.js")(null != guildId, "This channel cannot be guildless.");
+  00038__(null != guildId, "This channel cannot be guildless.");
   if (arg1) {
-    let obj = require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */;
+    let obj = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
     obj = {};
-    const merged = Object.assign(require("StageChannelUtils.tsx") /* fillChunk */.getStageChannelMetadata(channel_id));
+    const merged = Object.assign(fillChunk /* fillChunk */.getStageChannelMetadata(channel_id));
     obj.trackWithMetadata(constants.REQUEST_TO_SPEAK_INITIATED, obj);
-    const obj3 = require("StageChannelUtils.tsx") /* fillChunk */;
+    const obj3 = fillChunk /* fillChunk */;
   }
-  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   obj = { url: closure_9.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
   let toISOStringResult = null;
   if (arg1) {
@@ -306,21 +314,21 @@ export const toggleRequestToSpeak = function toggleRequestToSpeak(channel_id, ar
     toISOStringResult = date.toISOString();
   }
   obj[1] = { request_to_speak_timestamp: toISOStringResult, channel_id: channel_id.id };
-  obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+  obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
   return HTTP.patch(obj);
 };
 export const inviteUserToStage = function inviteUserToStage(voiceChannel, id) {
   const guildId = voiceChannel.getGuildId();
-  require("../../../_runtime/metro/00038__.js")(null != guildId, "This channel cannot be guildless.");
-  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  00038__(null != guildId, "This channel cannot be guildless.");
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   let obj = { url: closure_9.UPDATE_VOICE_STATE(guildId, id), body: null, rejectWithError: null };
   obj = { suppress: false, request_to_speak_timestamp: null, channel_id: null };
   obj[1] = new Date().toISOString();
   obj[2] = voiceChannel.id;
   obj[1] = obj;
   const date = new Date();
-  obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
-  const obj4 = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
+  obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  const obj4 = sendRequest /* sendRequest */;
   return HTTP.patch(obj).catch((code) => {
     if (code.code === constants.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK) {
       callback(table[9]).showFailedToast(constants2.GENERIC_ERROR);
@@ -335,21 +343,21 @@ export const moveSelfToAudience = function moveSelfToAudience(channel_id) {
   if (channel_id != null) {
     guildId = channel_id.getGuildId();
   }
-  require("../../../_runtime/metro/00038__.js")(null != guildId, "This channel cannot be guildless.");
-  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  00038__(null != guildId, "This channel cannot be guildless.");
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   obj = { url: closure_9.UPDATE_VOICE_STATE(guildId), body: obj, rejectWithError: null };
   obj = { suppress: true, channel_id: channel_id.id, self_video: false, self_stream: false };
-  obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+  obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
   return HTTP.patch(obj);
 };
 export const setUserSuppress = function setUserSuppress(closure_0, id, suppress) {
   const guildId = closure_0.getGuildId();
-  require("../../../_runtime/metro/00038__.js")(null != guildId, "This channel cannot be guildless.");
-  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  00038__(null != guildId, "This channel cannot be guildless.");
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   obj = { url: closure_9.UPDATE_VOICE_STATE(guildId, id), body: obj, rejectWithError: null };
   obj = { suppress, channel_id: closure_0.id };
-  obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
-  const obj3 = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
+  obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  const obj3 = sendRequest /* sendRequest */;
   return HTTP.patch(obj).catch((code) => {
     if (code.code === constants.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK) {
       callback(table[9]).showFailedToast(constants2.GENERIC_ERROR);
@@ -362,17 +370,17 @@ export const moveUserToAudience = function moveUserToAudience(user, voiceChannel
   if (null != voiceChannel) {
     if (null != user) {
       const guildId = voiceChannel.getGuildId();
-      require("../../../_runtime/metro/00038__.js")(null != guildId, "This channel cannot be guildless.");
+      00038__(null != guildId, "This channel cannot be guildless.");
       const guildId1 = voiceChannel.getGuildId();
-      require("../../../_runtime/metro/00038__.js")(null != guildId1, "This channel cannot be guildless.");
-      const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+      00038__(null != guildId1, "This channel cannot be guildless.");
+      const HTTP = sendRequest /* sendRequest */.HTTP;
       let obj = { url: null, body: null, rejectWithError: null };
       obj[0] = closure_9.UPDATE_VOICE_STATE(guildId1, user.id);
       obj = { suppress: true, channel_id: null };
       obj[1] = voiceChannel.id;
       obj[1] = obj;
-      obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
-      const obj3 = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
+      obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+      const obj3 = sendRequest /* sendRequest */;
       HTTP.patch(obj).catch((code) => {
         if (code.code === constants.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK) {
           callback(table[9]).showFailedToast(constants2.GENERIC_ERROR);
@@ -380,14 +388,14 @@ export const moveUserToAudience = function moveUserToAudience(user, voiceChannel
         }
         return code;
       });
-      const HTTP2 = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+      const HTTP2 = sendRequest /* sendRequest */.HTTP;
       obj = { url: null, body: null, rejectWithError: null };
       obj[0] = closure_9.UPDATE_VOICE_STATE(guildId, user.id);
       const obj1 = { suppress: true, channel_id: null, self_video: false, self_stream: false };
       obj1[1] = voiceChannel.id;
       obj[1] = obj1;
       const patchResult = HTTP.patch(obj);
-      obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+      obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
       return HTTP2.patch(obj);
     }
   }
@@ -398,14 +406,14 @@ export const removeUserFromChannel = function removeUserFromChannel(id, getGuild
     guildId = getGuildId.getGuildId();
   }
   if (tmp2) {
-    require("../../actions/GuildActionCreators.tsx").setChannel(guildId, id.id, null);
-    const obj = require("../../actions/GuildActionCreators.tsx");
+    showTooManyUserGuildsAlert.setChannel(guildId, id.id, null);
+    const obj = showTooManyUserGuildsAlert;
   }
 };
 export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissionAllowed(getGuildId, REQUEST_TO_SPEAK, arg2) {
   const guildId = getGuildId.getGuildId();
-  require("../../../_runtime/metro/00038__.js")(null != guildId, "Channel cannot be guildless");
-  const obj = { id: guildId, type: require("../../flow/Server.tsx") /* PermissionOverwriteType */.PermissionOverwriteType.ROLE, allow: importAll(3918).NONE, deny: importAll(3918).NONE };
+  00038__(null != guildId, "Channel cannot be guildless");
+  const obj = { id: guildId, type: PermissionOverwriteType /* PermissionOverwriteType */.PermissionOverwriteType.ROLE, allow: importAll(3918).NONE, deny: importAll(3918).NONE };
   const merged = Object.assign(getGuildId.permissionOverwrites[guildId]);
   const obj2 = importAll(506);
   if (arg2) {
@@ -417,7 +425,7 @@ export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissi
     tmp5Result = tmp5(506);
     obj.deny = tmp5Result.add(obj.deny, REQUEST_TO_SPEAK);
   }
-  const result = require("../../actions/ChannelActionCreators.tsx").updatePermissionOverwrite(getGuildId.id, obj);
+  const result = ChannelActionCreators.updatePermissionOverwrite(getGuildId.id, obj);
 };
 export const startStage = function startStage(outer1_0, arg1, GUILD_ONLY, outer1_11) {
   const self = this;

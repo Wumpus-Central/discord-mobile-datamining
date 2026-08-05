@@ -1,3 +1,4 @@
+import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsCard.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -56,6 +57,6 @@ export default function GuildPowerupsCard(status) {
   items[3] = style;
   obj.style = items;
   obj.children = children;
-  obj[1] = jsx(require("../../../../design/components/Card/native/Card.native.tsx") /* PressableCard */.Card, { border: "faint", radius: 16, shadow: "none" });
+  obj[1] = jsx(PressableCard /* PressableCard */.Card, { border: "faint", radius: 16, shadow: "none" });
   return <View border="faint" radius={16} shadow="none" />;
 };

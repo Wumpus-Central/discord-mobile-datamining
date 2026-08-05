@@ -1,3 +1,8 @@
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { isForegrounded } from "../analytics_sessions/SessionForegroundUtils.native.tsx";
+import { getDeviceMetadata } from "../device/getDeviceMetadata.native.tsx";
+import { receiveNetworkInfoformation } from "../network/NetStats.android.tsx";
+import { apexExperiment } from "experiments/NewAdRequestBehaviorExperiment.tsx";
 // discord_app/modules/quests/QuestDecisionRoundtripTracker.tsx
 import handleConnectionInfoChange from "handleConnectionInfoChange";
 import initializeState from "initializeState";
@@ -11,10 +16,10 @@ function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
     if (null != apiResponseTimestamp.apiResponseTimestamp) {
       diff = apiResponseTimestamp.apiResponseTimestamp - apiResponseTimestamp.initialSendTimestamp;
     }
-    let obj = require("../network/NetStats.android.tsx") /* receiveNetworkInfoformation */;
+    let obj = receiveNetworkInfoformation /* receiveNetworkInfoformation */;
     const signalStrength = obj.getSignalStrength();
     obj = {};
-    const merged = Object.assign(require("../device/getDeviceMetadata.native.tsx")());
+    const merged = Object.assign(getDeviceMetadata());
     ({ endpoint: obj3.endpoint, wasSuccessful: obj3.was_successful } = apiResponseTimestamp);
     obj.api_latency_ms = diff;
     obj.mobile_network_type = type.getType();
@@ -49,11 +54,11 @@ function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
     }
     obj.previous_fetched_at = fetchedAt;
     obj.transition_case = transition_case;
-    const obj2 = require("../../utils/AnalyticsUtils.tsx");
+    const obj2 = expandEventProperties;
     const tmp2 = require;
-    obj.is_foregrounded = require("../analytics_sessions/SessionForegroundUtils.native.tsx") /* isForegrounded */.isForegrounded();
+    obj.is_foregrounded = isForegrounded /* isForegrounded */.isForegrounded();
     obj2.track(AnalyticEvents.QUEST_DECISION_ROUNDTRIP, obj);
-    const tmp2Result = require("../analytics_sessions/SessionForegroundUtils.native.tsx") /* isForegrounded */;
+    const tmp2Result = isForegrounded /* isForegrounded */;
   }
 }
 class QuestDecisionRoundtripTracker {
@@ -177,7 +182,7 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
       }
       combined = str;
     }
-    obj4 = require("experiments/NewAdRequestBehaviorExperiment.tsx");
+    obj4 = apexExperiment;
   }
 };
 let set = Object.create(QuestDecisionRoundtripTracker.prototype);

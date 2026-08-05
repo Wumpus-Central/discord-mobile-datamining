@@ -1,14 +1,20 @@
+import { t } from "../../../_runtime/03867_t.js";
+import { 03510__ } from "../../../_runtime/metro/03510__.js";
+import { ContentInventoryEntryType } from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { set } from "../../utils/Durations.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/content_inventory/utils.tsx
 function calculateTimestampDurations(end, now) {
   const bound = Math.max(end - now, 0);
-  const result = bound / require("../../utils/Durations.tsx").Millis.SECOND;
+  const result = bound / set.Millis.SECOND;
   const obj = { seconds: null, minutes: null, hours: null, days: null };
   const rounded = Math.floor(result);
-  obj[0] = rounded % require("../../utils/Durations.tsx").Seconds.MINUTE;
-  const rounded1 = Math.floor(result / require("../../utils/Durations.tsx").Seconds.MINUTE);
-  obj[1] = rounded1 % require("../../utils/Durations.tsx").Seconds.MINUTE;
-  obj[2] = Math.floor(result / require("../../utils/Durations.tsx").Seconds.HOUR);
-  obj[3] = Math.floor(result / require("../../utils/Durations.tsx").Seconds.DAY);
+  obj[0] = rounded % set.Seconds.MINUTE;
+  const rounded1 = Math.floor(result / set.Seconds.MINUTE);
+  obj[1] = rounded1 % set.Seconds.MINUTE;
+  obj[2] = Math.floor(result / set.Seconds.HOUR);
+  obj[3] = Math.floor(result / set.Seconds.DAY);
   return obj;
 }
 function formatActiveTimestamp(entry, now) {
@@ -50,8 +56,8 @@ function formatActiveTimestamp(entry, now) {
     }
   }
   if ("id" in entry) {
-    let start = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(entry.id);
-    const obj = require("../../utils/SnowflakeUtils.tsx");
+    let start = DISCORD_EPOCH.extractTimestamp(entry.id);
+    const obj = DISCORD_EPOCH;
   } else {
     start = entry.start;
   }
@@ -72,15 +78,15 @@ function formatTimestampToA11yLabel(hours) {
   const items = [];
   ({ minutes, seconds } = hours);
   if (hours > 0) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     const obj = { hours: null };
     obj[0] = hours;
-    items.push(intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.xCjYxK, obj));
+    items.push(intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.xCjYxK, obj));
   }
-  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  items.push(intl2.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.iXLF9W, { minutes }));
-  const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  items.push(intl3.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.geSp4K, { seconds }));
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  items.push(intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.iXLF9W, { minutes }));
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  items.push(intl3.formatToPlainString(getSystemLocale /* getSystemLocale */.t.geSp4K, { seconds }));
   return items.join(", ");
 }
 function formatEndedTimestamp(entry, arg1, timestamp, arg3) {
@@ -92,11 +98,11 @@ function formatEndedTimestamp(entry, arg1, timestamp, arg3) {
   if (formatSet === undefined) {
     formatSet = closure_6;
   }
-  const obj2 = require("../../../_runtime/03867_t.js")(timestamp);
-  const tmp3 = require("../../../_runtime/03867_t.js");
-  const diffResult = obj2.diff(tmp3(require("../../utils/SnowflakeUtils.tsx").extractTimestamp(entry.id)), "s");
+  const obj2 = t(timestamp);
+  const tmp3 = t;
+  const diffResult = obj2.diff(tmp3(DISCORD_EPOCH.extractTimestamp(entry.id)), "s");
   const absolute = Math.abs(diffResult);
-  if (absolute < require("../../utils/Durations.tsx").Seconds.MINUTE) {
+  if (absolute < set.Seconds.MINUTE) {
     return formatSet.secondsAgo(diffResult);
   } else if (absolute < tmp(687).Seconds.HOUR) {
     const _Math5 = Math;
@@ -114,32 +120,32 @@ function formatEndedTimestamp(entry, arg1, timestamp, arg3) {
     const _Math = Math;
     return formatSet.monthsAgo(Math.round(diffResult / tmp(687).Seconds.DAYS_30));
   }
-  const obj3 = require("../../utils/SnowflakeUtils.tsx");
+  const obj3 = DISCORD_EPOCH;
 }
 let closure_6 = {
   secondsAgo(count) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.EOrEJl, { count });
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.EOrEJl, { count });
   },
   minutesAgo(count) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.LRNgHp, { count });
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.LRNgHp, { count });
   },
   hoursAgo(count) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.raJpz3, { count });
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.raJpz3, { count });
   },
   daysAgo(count) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.KkvKhi, { count });
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.KkvKhi, { count });
   },
   weeksAgo(count) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.sDtO6D, { count });
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.sDtO6D, { count });
   },
   monthsAgo(count) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.ITymou, { count });
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.ITymou, { count });
   }
 };
 let result = require("getSystemLocale").fileFinishedImporting("modules/content_inventory/utils.tsx");
@@ -165,8 +171,8 @@ export const calculateActiveTimestampDurations = function calculateActiveTimesta
     }
   }
   if ("id" in end) {
-    let start = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(end.id);
-    const obj = require("../../utils/SnowflakeUtils.tsx");
+    let start = DISCORD_EPOCH.extractTimestamp(end.id);
+    const obj = DISCORD_EPOCH;
   } else {
     start = end.start;
   }
@@ -205,7 +211,7 @@ export const formatActiveA11yTimestamp = function formatActiveA11yTimestamp(end,
     }
   }
   if ("id" in end) {
-    obj = require("../../utils/SnowflakeUtils.tsx");
+    obj = DISCORD_EPOCH;
     let start = obj.extractTimestamp(end.id);
   } else {
     start = end.start;
@@ -222,28 +228,28 @@ export const formatActiveA11yTimestamp = function formatActiveA11yTimestamp(end,
 };
 export const A11Y_FORMAT_SET = {
   secondsAgo(count) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.jfUoRQ, { count });
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.jfUoRQ, { count });
   },
   minutesAgo(count) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.DmvRVO, { count });
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.DmvRVO, { count });
   },
   hoursAgo(count) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.AfXezt, { count });
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.AfXezt, { count });
   },
   daysAgo(count) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Lru1rV, { count });
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.Lru1rV, { count });
   },
   weeksAgo(count) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t["jovF+x"], { count });
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["jovF+x"], { count });
   },
   monthsAgo(count) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.nmSbST, { count });
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.nmSbST, { count });
   }
 };
 export { formatEndedTimestamp };
@@ -306,8 +312,8 @@ export const isEntryNew = function isEntryNew(entry) {
   return flag;
 };
 export const isEntryRecent = function isEntryRecent(id) {
-  const obj = require("../../utils/SnowflakeUtils.tsx");
-  return require("../../utils/SnowflakeUtils.tsx").age(id.id) / require("../../utils/Durations.tsx").Millis.HOUR < 48;
+  const obj = DISCORD_EPOCH;
+  return DISCORD_EPOCH.age(id.id) / set.Millis.HOUR < 48;
 };
 export const isEntryExpired = function isEntryExpired(content) {
   let tmp = null != content.expires_at;
@@ -390,7 +396,7 @@ export const getResurrectedEntryLastPlayTime = function getResurrectedEntryLastP
   return date;
 };
 export const getFullResurrectedBadgeText = function getFullResurrectedBadgeText(start) {
-  let obj = require("../../../_runtime/metro/03510__.js");
+  let obj = 03510__;
   obj = { start, end: null };
   obj[1] = new Date();
   const intervalToDurationResult = obj.intervalToDuration(obj);
@@ -424,7 +430,7 @@ export const getFullResurrectedBadgeText = function getFullResurrectedBadgeText(
     }
   }
   obj[2] = num5;
-  return intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.NXBtjF, obj);
+  return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.NXBtjF, obj);
 };
 export const getEpisodeBadgeText = function getEpisodeBadgeText(large_text) {
   if (null != large_text) {
@@ -432,11 +438,11 @@ export const getEpisodeBadgeText = function getEpisodeBadgeText(large_text) {
       const match = /\w+ (\d+), \w+ (\d+)/.exec(large_text);
       let formatToPlainStringResult = null;
       if (null != match) {
-        const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        const intl = getSystemLocale /* getSystemLocale */.intl;
         const obj = { seasonNum: null, episodeNum: null };
         obj[0] = match[1];
         obj[1] = match[2];
-        formatToPlainStringResult = intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.ijVm6y, obj);
+        formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.ijVm6y, obj);
       }
       return formatToPlainStringResult;
     }
@@ -462,11 +468,11 @@ export const getRichGameStateBadgeText = function getRichGameStateBadgeText(stat
     if (null != tmp2) {
       if (first > 0) {
         if (tmp2 > 0) {
-          const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+          const intl2 = getSystemLocale /* getSystemLocale */.intl;
           let obj = { count: null, max: null };
           obj[0] = first;
           obj[1] = tmp2;
-          let formatToPlainStringResult = intl2.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.wmUSiy, obj);
+          let formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.wmUSiy, obj);
         }
         if (null != formatToPlainStringResult) {
           if (null != state) {
@@ -487,14 +493,14 @@ export const getRichGameStateBadgeText = function getRichGameStateBadgeText(stat
     tmp3 = first > 0;
   }
   if (tmp3) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     obj = { count: null };
     obj[0] = first;
-    formatToPlainStringResult = intl.formatToPlainString(require("../../intl/index.native.tsx") /* getSystemLocale */.t.UTYMsa, obj);
+    formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.UTYMsa, obj);
   }
 };
 export const isEntryTopGame = function isEntryTopGame(contentInventoryEntry) {
-  return contentInventoryEntry.content_type === require("../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx") /* ContentInventoryEntryType */.ContentInventoryEntryType.TOP_GAME;
+  return contentInventoryEntry.content_type === ContentInventoryEntryType /* ContentInventoryEntryType */.ContentInventoryEntryType.TOP_GAME;
 };
 export const getStreakCount = function getStreakCount(entry) {
   STREAK_DAYS = STREAK_DAYS(8049).ContentInventoryTraitType.STREAK_DAYS;
@@ -520,9 +526,9 @@ export const isValidStreak = function isValidStreak(traits) {
     return false;
   } else {
     const _Date = Date;
-    const obj = require("../../utils/SnowflakeUtils.tsx");
-    const diff = Date.now() - require("../../utils/SnowflakeUtils.tsx").extractTimestamp(traits.id);
-    return diff <= 48 * require("../../utils/Durations.tsx").Millis.HOUR;
+    const obj = DISCORD_EPOCH;
+    const diff = Date.now() - DISCORD_EPOCH.extractTimestamp(traits.id);
+    return diff <= 48 * set.Millis.HOUR;
   }
 };
 export const getMarathonDescription = function getMarathonDescription(entry) {
@@ -537,7 +543,7 @@ export const getMarathonDescription = function getMarathonDescription(entry) {
     return { text: null, tooltipText: null };
   } else {
     const _Math = Math;
-    const rounded = Math.round(duration_seconds / require("../../utils/Durations.tsx").Seconds.HOUR);
+    const rounded = Math.round(duration_seconds / set.Seconds.HOUR);
     if (rounded <= 0) {
       let obj = { text: null, tooltipText: null };
     } else {

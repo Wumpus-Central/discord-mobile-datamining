@@ -1,3 +1,8 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getConsoleIcon } from "../../../game_console/native/getConsoleIcon.tsx";
+import { useGameConsoleAccounts } from "../../../game_console/useGameConsoleAccounts.tsx";
 // discord_app/modules/voice_panel/native/header/VoicePanelConsoleFacepile.tsx
 import noop from "noop";
 import { PlatformTypes } from "ME";
@@ -9,21 +14,21 @@ function getConsoleInfo(type) {
   type = type.type;
   if (PlatformTypes.XBOX === type) {
     let obj = { icon: null, color: null, connectLabel: null, connectSublabel: null };
-    obj[0] = require("../../../game_console/native/getConsoleIcon.tsx")(type.type);
-    obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PLATFORM_XBOX;
-    const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[2] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.QN7HXV);
-    const intl4 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[3] = intl4.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["M/Ld86"]);
+    obj[0] = getConsoleIcon(type.type);
+    obj[1] = Themes.unsafe_rawColors.PLATFORM_XBOX;
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.QN7HXV);
+    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    obj[3] = intl4.string(getSystemLocale /* getSystemLocale */.t["M/Ld86"]);
     return obj;
   } else if (tmp.PLAYSTATION === type) {
     obj = { icon: null, color: null, connectLabel: null, connectSublabel: null };
-    obj[0] = require("../../../game_console/native/getConsoleIcon.tsx")(type.type);
-    obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.PLATFORM_PLAYSTATION;
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[2] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["3qLlTS"]);
-    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[3] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/uR9x1"]);
+    obj[0] = getConsoleIcon(type.type);
+    obj[1] = Themes.unsafe_rawColors.PLATFORM_PLAYSTATION;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["3qLlTS"]);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    obj[3] = intl2.string(getSystemLocale /* getSystemLocale */.t["/uR9x1"]);
     return obj;
   } else {
     return null;
@@ -40,7 +45,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/voice_panel/nat
 export default function VoicePanelConsoleFacepile() {
   let tmp = createCacheKey();
   const require = tmp;
-  const tmp2 = require("../../../game_console/useGameConsoleAccounts.tsx")();
+  const tmp2 = useGameConsoleAccounts();
   importDefault = tmp2;
   let items = [tmp2];
   const items1 = [tmp];
@@ -58,6 +63,6 @@ export default function VoicePanelConsoleFacepile() {
     obj[1] = outer1_5(tmp(outer1_2[10]).Icon, obj);
     return outer1_5(tmp, obj);
   }, items1);
-  return jsx(require("../../../../design/void/native.tsx") /* Button */.SummarizedIconRow, { items, renderItem, offsetAmount: -3 });
+  return jsx(Button /* Button */.SummarizedIconRow, { items, renderItem, offsetAmount: -3 });
 };
 export { getConsoleInfo };

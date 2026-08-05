@@ -1,3 +1,4 @@
+import { context } from "pip/VoicePanelPIPStateContext.tsx";
 // discord_app/modules/voice_panel/native/VoicePanelAccessibilityView.tsx
 import { VoicePanelPIPModes } from "VoicePanelPIPModes";
 import { jsx } from "jsxProd";
@@ -17,7 +18,7 @@ export default function VoicePanelAccessibilityView(pointerEvents) {
   let accessibilityViewIsModal = pointerEvents.accessibilityViewIsModal;
   ({ nativeID, onAccessibilityEscape } = pointerEvents);
   const merged = Object.assign(pointerEvents, Object.create(null));
-  let obj = require("pip/VoicePanelPIPStateContext.tsx") /* context */;
+  let obj = context /* context */;
   obj = { style: pointerEvents.style, pointerEvents: str, nativeID, accessibilityViewIsModal: null, onAccessibilityEscape: null };
   if (accessibilityViewIsModal) {
     accessibilityViewIsModal = obj.usePIPState().mode !== VoicePanelPIPModes.IN_APP;

@@ -1,3 +1,7 @@
+import { isIterable } from "../../../../_runtime/03898_isIterable.js";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { wrapChildrenDefault } from "../../../design/components/TransitionGroup/TransitionGroup.tsx";
+import { VoicePanelController } from "VoicePanelController.tsx";
 // discord_app/modules/voice_panel/native/VoicePanelContainer.tsx
 import importAllResult from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -7,7 +11,7 @@ import { jsx } from "jsxProd";
 const require = arg1;
 function VoicePanel(arg0) {
   const _require = arg0;
-  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [ensureGuildLoaded];
   const stateFromStores = obj.useStateFromStores(items, () => {
     const channel = outer1_4.getChannel(channelId.channelId);
@@ -21,7 +25,7 @@ function VoicePanel(arg0) {
   const merged = Object.assign(arg0);
   obj.guildId = stateFromStores;
   obj.children = importAllResult.useMemo(() => callback2(callback(table[6]), {}), []);
-  return jsx(require("VoicePanelController.tsx"), {});
+  return jsx(VoicePanelController, {});
 }
 function getChannelKey(arg0) {
   return arg0;
@@ -31,8 +35,8 @@ function renderVoicePanel(arg0, channelId, transitionState, transitionCleanUp) {
 }
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function VoicePanelContainer() {
-  const tmp = callback((channels) => Array.from(channels.channels), require("../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow);
-  return jsx(require("../../../design/components/TransitionGroup/TransitionGroup.tsx") /* wrapChildrenDefault */.TransitionGroup, { items: callback((channels) => Array.from(channels.channels), require("../../../../_runtime/03898_isIterable.js") /* isIterable */.shallow), getItemKey: getChannelKey, renderItem: renderVoicePanel });
+  const tmp = callback((channels) => Array.from(channels.channels), isIterable /* isIterable */.shallow);
+  return jsx(wrapChildrenDefault /* wrapChildrenDefault */.TransitionGroup, { items: callback((channels) => Array.from(channels.channels), isIterable /* isIterable */.shallow), getItemKey: getChannelKey, renderItem: renderVoicePanel });
 });
 const result = require("withEqualityFn").fileFinishedImporting("modules/voice_panel/native/VoicePanelContainer.tsx");
 

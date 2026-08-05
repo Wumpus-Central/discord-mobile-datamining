@@ -1,3 +1,4 @@
+import { set } from "../../actions/AlertActionCreators.tsx";
 // discord_app/modules/polls/PollsActionCreators.tsx
 import handleChanged from "handleChanged";
 import initialize from "initialize";
@@ -55,7 +56,7 @@ function showLurkingAlert(guildId) {
   let title;
   guildId = guildId.guildId;
   ({ title, body } = guildId);
-  let obj = require("../../actions/AlertActionCreators.tsx");
+  let obj = set;
   obj = { title, body, confirmText: null, cancelText: null, onConfirm: null };
   const intl = guildId(1236).intl;
   obj[2] = intl.string(guildId(1236).t["9VLmlZ"]);
@@ -92,8 +93,8 @@ function handleShowVotesForAnswer(messageId) {
         obj = { source: outer1_16.POLL_ALERT };
         obj.joinGuild(guild_id, obj);
       };
-      require("../../actions/AlertActionCreators.tsx").show(obj);
-      const obj3 = require("../../actions/AlertActionCreators.tsx");
+      set.show(obj);
+      const obj3 = set;
     } else {
       const message = store.getMessage(channelId, messageId.messageId);
       if (null != message) {

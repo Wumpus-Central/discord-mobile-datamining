@@ -1,3 +1,6 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { messagesProxy } from "../GuildPowerups.messages.js";
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupTier3OverrideConfig.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
@@ -7,7 +10,7 @@ const result = require("initialize").fileFinishedImporting("modules/premium/powe
 
 export default function useGuildPowerupTier3OverrideConfig(arg0) {
   const _require = arg0;
-  let obj = _require("../../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [createGuildRecordFromRust];
   if (obj.useStateFromStores(items, () => {
     const guild = outer1_3.getGuild(closure_0);
@@ -19,8 +22,8 @@ export default function useGuildPowerupTier3OverrideConfig(arg0) {
     return true === hasItem;
   })) {
     obj = { shouldShow: true, text: null };
-    const intl = _require("../../../../intl/index.native.tsx").intl;
-    obj[1] = intl.string(require("../GuildPowerups.messages.js").l9n4QZ);
+    const intl = _getSystemLocale.intl;
+    obj[1] = intl.string(messagesProxy.l9n4QZ);
   } else {
     obj = { shouldShow: false, text: "" };
   }

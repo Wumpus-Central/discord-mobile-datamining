@@ -1,3 +1,6 @@
+import { GuildThemeSourcePreference } from "../../flow/Client.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/components_native/chat/getMessageJumpData.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -19,7 +22,7 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
   messages2 = messages2.messages;
   const lastResult1 = messages2.last();
   currentUser = currentUser.getCurrentUser();
-  const ANIMATED = require("../../flow/Client.tsx") /* GuildThemeSourcePreference */.JumpType.ANIMATED;
+  const ANIMATED = GuildThemeSourcePreference /* GuildThemeSourcePreference */.JumpType.ANIMATED;
   let tmp7 = tmp6;
   ({ jumpSequenceId, focusTargetId } = messages);
   if (messages.initialScrollSequenceId === messages2.initialScrollSequenceId) {
@@ -46,7 +49,7 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
           if (null != currentUser) {
             if (lastResult.author.id === currentUser.id) {
               if (null != lastResult1) {
-                let obj = require("../../utils/SnowflakeUtils.tsx");
+                let obj = DISCORD_EPOCH;
               }
               let id = lastResult.id;
               let flag = false;
@@ -90,7 +93,7 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
     }
   }
   const tmp4 = require;
-  const tmp4Result = require("../../utils/PlatformUtils.tsx") /* set */;
+  const tmp4Result = set /* set */;
   flag = false;
   tmp12 = ANIMATED;
   tmp13 = null;
@@ -111,7 +114,7 @@ export const useMessageJumpAndroidKeyboardHeight = function useMessageJumpAndroi
     const tmpResult = tmp(1847);
   }
   const obj = React;
-  obj2 = require("../../utils/PlatformUtils.tsx") /* set */;
+  obj2 = set /* set */;
   tmp = require;
   [tmp4, require] = callback(React.useState(num), 2);
   const effect = obj.useEffect(() => outer1_5((keyboardHeight) => {

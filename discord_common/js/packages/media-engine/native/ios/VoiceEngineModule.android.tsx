@@ -1,3 +1,4 @@
+import { enforcing } from "../../../rtn-codegen/js/NativeMediaEngineModule.tsx";
 // discord_common/js/packages/media-engine/native/ios/VoiceEngineModule.android.tsx
 import importDefaultResult from "enforcing";
 
@@ -10,31 +11,31 @@ obj.getConstants = function getConstants() {
 };
 obj.setInputDevice = function setInputDevice(str) {
   if (typeof str === "string") {
-    let setInputDeviceByIdResult = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx").setInputDeviceById(str);
-    const obj = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx");
+    let setInputDeviceByIdResult = enforcing.setInputDeviceById(str);
+    const obj = enforcing;
   } else {
-    setInputDeviceByIdResult = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx").setInputDevice(str);
-    const obj2 = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx");
+    setInputDeviceByIdResult = enforcing.setInputDevice(str);
+    const obj2 = enforcing;
   }
   return setInputDeviceByIdResult;
 };
 obj.setOutputDevice = function setOutputDevice(str) {
   if (typeof str === "string") {
-    let setOutputDeviceByIdResult = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx").setOutputDeviceById(str);
-    const obj = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx");
+    let setOutputDeviceByIdResult = enforcing.setOutputDeviceById(str);
+    const obj = enforcing;
   } else {
-    setOutputDeviceByIdResult = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx").setOutputDevice(str);
-    const obj2 = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx");
+    setOutputDeviceByIdResult = enforcing.setOutputDevice(str);
+    const obj2 = enforcing;
   }
   return setOutputDeviceByIdResult;
 };
 obj.setVideoInputDevice = function setVideoInputDevice(str) {
   if (typeof str === "string") {
-    let result = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx").setVideoInputDeviceById(str);
-    const obj = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx");
+    let result = enforcing.setVideoInputDeviceById(str);
+    const obj = enforcing;
   } else {
-    result = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx").setVideoInputDevice(str);
-    const obj2 = require("../../../rtn-codegen/js/NativeMediaEngineModule.tsx");
+    result = enforcing.setVideoInputDevice(str);
+    const obj2 = enforcing;
   }
   return result;
 };

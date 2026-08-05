@@ -1,3 +1,4 @@
+import { awaitOnline } from "../utils/NetworkUtils.tsx";
 // discord_app/stores/NetworkStore.tsx
 import ME from "ME";
 import { Store } from "initialize";
@@ -24,10 +25,10 @@ class NetworkStoreClass extends Store {
 }
 const prototype = NetworkStoreClass.prototype;
 prototype["initialize"] = function initialize() {
-  const networkInformation = require("../utils/NetworkUtils.tsx").getNetworkInformation();
+  const networkInformation = awaitOnline.getNetworkInformation();
   networkInformation.then(handleConnectionInfoChange);
-  const obj = require("../utils/NetworkUtils.tsx");
-  require("../utils/NetworkUtils.tsx").addChangeCallback(handleConnectionInfoChange);
+  const obj = awaitOnline;
+  awaitOnline.addChangeCallback(handleConnectionInfoChange);
 };
 prototype["getType"] = function getType() {
   return UNKNOWN;

@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/guild_templates/GuildTemplateTooltipActionCreators.tsx
 import set from "set";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -65,11 +66,11 @@ export default {
     })();
   },
   hideGuildTemplateDirtyTooltip(guildId) {
-    let obj = require("../../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE", guildId };
     obj.dispatch(obj);
   },
   hideGuildTemplatePromotionTooltip() {
-    require("../../Dispatcher.tsx").dispatch({ type: "GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE" });
+    dispatcher.dispatch({ type: "GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE" });
   }
 };

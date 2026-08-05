@@ -1,3 +1,5 @@
+import { useApplicationsInContext } from "../../../utils/AppLauncherSearchUtils.tsx";
+import { useActivityApplications } from "useActivityApplications.tsx";
 // discord_app/modules/app_launcher/native/onboarding/hooks/useBannerBots.tsx
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -22,8 +24,8 @@ export const useBannerBots = function useBannerBots(context) {
       return map;
     }, items);
   })({ context });
-  let apps = _require("../../../utils/AppLauncherSearchUtils.tsx").useApplicationsInContext({ context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
-  const obj2 = _require("../../../utils/AppLauncherSearchUtils.tsx");
+  let apps = _useApplicationsInContext.useApplicationsInContext({ context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
+  const obj2 = _useApplicationsInContext;
   const tmp2 = _require;
   const obj3 = (function useCommandsMap(context) {
     let commands;
@@ -60,8 +62,8 @@ export const useBannerBots = function useBannerBots(context) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const activityApplications = _require("useActivityApplications.tsx").useActivityApplications({ guildId: guild_id, fetchesShelf: true });
-  const obj4 = _require("useActivityApplications.tsx");
+  const activityApplications = _useActivityApplications.useActivityApplications({ guildId: guild_id, fetchesShelf: true });
+  const obj4 = _useActivityApplications;
   let items = [initialize];
   const stateFromStores = tmp2(589).useStateFromStores(items, () => recentApplicationCommandMetadata.getRecentApplicationCommandMetadata());
   let value = null;

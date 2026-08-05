@@ -1,3 +1,8 @@
+import { 00038__ } from "../../_runtime/metro/00038__.js";
+import { ImpressionNames } from "../../discord_common/js/packages/analytics-utils/AnalyticsSchema.tsx";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { TrackedHTTPUtils } from "../utils/TrackedHTTPUtils.tsx";
 // discord_app/actions/UserActionCreators.tsx
 import timestamp from "timestamp";
 import createdAt from "createdAt";
@@ -349,9 +354,9 @@ export const fetchCurrentUser = function fetchCurrentUser() {
   let _require;
   const withAnalyticsToken = obj.withAnalyticsToken;
   _require = tmp;
-  const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+  const HTTP = _sendRequest.HTTP;
   obj = { url: Endpoints.ME, query: { with_analytics_token: tmp }, oldFormErrors: true, rejectWithError: null };
-  obj[3] = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+  obj[3] = _sendRequest.rejectWithMigratedError();
   const value = HTTP.get(obj);
   return value.then((body) => {
     let obj = outer1_1(outer1_2[7]);
@@ -374,27 +379,27 @@ export const acceptAgreements = function acceptAgreements() {
   if (arg1 === undefined) {
     flag2 = true;
   }
-  let obj = require("../utils/TrackedHTTPUtils.tsx");
+  let obj = TrackedHTTPUtils;
   obj = { url: Endpoints.USER_AGREEMENTS, trackedActionData: null, body: null, oldFormErrors: true, rejectWithError: null };
-  obj = { event: require("../../discord_common/js/packages/analytics-utils/AnalyticsSchema.tsx") /* ImpressionNames */.NetworkActionNames.USER_ACCEPT_AGREEMENTS };
+  obj = { event: ImpressionNames /* ImpressionNames */.NetworkActionNames.USER_ACCEPT_AGREEMENTS };
   obj[1] = obj;
   obj[2] = { terms: flag, privacy: flag2 };
-  obj[4] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
-  const obj4 = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */;
+  obj[4] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  const obj4 = sendRequest /* sendRequest */;
   return obj.patch(obj).then(() => true, () => false);
 };
 export const setFlag = function setFlag(arg0, arg1) {
   const currentUser = authStore.getCurrentUser();
-  require("../../_runtime/metro/00038__.js")(null != currentUser, "setFlag: user cannot be undefined");
+  00038__(null != currentUser, "setFlag: user cannot be undefined");
   const flags = currentUser.flags;
   if (arg1) {
     let tmp4 = flags | arg0;
   } else {
     tmp4 = flags & ~arg0;
   }
-  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   const obj = { url: Endpoints.ME, oldFormErrors: true, body: { flags: tmp4 }, rejectWithError: null };
-  obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+  obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
   return HTTP.patch(obj);
 };
 export const getUser = function getUser(arg0) {
@@ -403,10 +408,10 @@ export const getUser = function getUser(arg0) {
   if (null != user) {
     let resolved = Promise.resolve(user);
   } else {
-    const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     let obj = { url: null, oldFormErrors: true, rejectWithError: null };
     obj[0] = Endpoints.USER(arg0);
-    obj[2] = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    obj[2] = _sendRequest.rejectWithMigratedError();
     const value = HTTP.get(obj);
     resolved = value.then((body) => {
       let obj = outer1_1(outer1_2[7]);
@@ -414,12 +419,12 @@ export const getUser = function getUser(arg0) {
       obj.dispatch(obj);
       return outer1_5.getUser(closure_0);
     });
-    const obj2 = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+    const obj2 = _sendRequest;
   }
   return resolved;
 };
 export const insertStaticUser = function insertStaticUser(id) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "USER_UPDATE", user: id };
   obj.dispatch(obj);
   return authStore.getUser(id.id);

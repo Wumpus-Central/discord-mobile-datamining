@@ -1,3 +1,10 @@
+import { AdCreativeType } from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { getDeviceMetadata } from "../../device/getDeviceMetadata.native.tsx";
+import { getQuestContentName } from "../../quests/lib/analytics/AnalyticsTypes.tsx";
+import { getBrandSafetyContext } from "../../quests/lib/analytics/BrandSafetyContext.tsx";
+import { getQuestLogger } from "../../quests/lib/getQuestLogger.tsx";
+import { AdUserActionType } from "captureAdUserActionTypes.tsx";
 // discord_app/modules/ads/analytics/captureAdUserAction.tsx
 import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement";
 import initializeState from "initializeState";
@@ -352,7 +359,7 @@ function handleViewImpression(minViewTimeSeconds) {
   let advertisingId = null;
   ({ impressionId, isQuestEnrollmentBlocked, questContentPosition, questContentRowIndex } = minViewTimeSeconds);
   if (null != adUser) {
-    let obj1 = require("../../../utils/PlatformUtils.tsx") /* set */;
+    let obj1 = set /* set */;
     advertisingId = null;
     if (obj1.isIOS()) {
       advertisingId = adUser.advertisingId;
@@ -361,20 +368,20 @@ function handleViewImpression(minViewTimeSeconds) {
   obj[3] = advertisingId;
   let advertisingId1 = null;
   if (null != adUser) {
-    let obj2 = require("../../../utils/PlatformUtils.tsx") /* set */;
+    let obj2 = set /* set */;
     advertisingId1 = null;
     if (obj2.isAndroid()) {
       advertisingId1 = adUser.advertisingId;
     }
   }
   obj[4] = advertisingId1;
-  const merged = Object.assign(require("../../device/getDeviceMetadata.native.tsx")());
-  const merged1 = Object.assign(require("../../quests/lib/analytics/BrandSafetyContext.tsx") /* getBrandSafetyContext */.getBrandSafetyContext(surfaceId));
+  const merged = Object.assign(getDeviceMetadata());
+  const merged1 = Object.assign(getBrandSafetyContext /* getBrandSafetyContext */.getBrandSafetyContext(surfaceId));
   obj.impression_id = impressionId;
   obj.is_quest_enrollment_blocked = isQuestEnrollmentBlocked;
-  const obj4 = require("../../quests/lib/analytics/BrandSafetyContext.tsx") /* getBrandSafetyContext */;
-  const merged2 = Object.assign(require("../../quests/lib/analytics/AnalyticsTypes.tsx") /* getQuestContentName */.getContentProperties(surfaceId, questContentPosition, questContentRowIndex));
-  if (minViewTimeSeconds.adCreativeType !== require("../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx") /* AdCreativeType */.AdCreativeType.QUEST) {
+  const obj4 = getBrandSafetyContext /* getBrandSafetyContext */;
+  const merged2 = Object.assign(getQuestContentName /* getQuestContentName */.getContentProperties(surfaceId, questContentPosition, questContentRowIndex));
+  if (minViewTimeSeconds.adCreativeType !== AdCreativeType /* AdCreativeType */.AdCreativeType.QUEST) {
     let tmp9Result = tmp9(7097);
     obj = { event: null, adContentId: null, adCreativeType: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null, properties: null };
     obj[0] = AnalyticEvents.QUEST_CONTENT_VIEWED;
@@ -527,7 +534,7 @@ function _handleViewInternalSurfaceImpressionAction() {
   return applyArgumentsResult;
 }
 function reportCaptureAdUserActionError(arg0) {
-  const questLogger = require("../../quests/lib/getQuestLogger.tsx") /* getQuestLogger */.getQuestLogger();
+  const questLogger = getQuestLogger /* getQuestLogger */.getQuestLogger();
   questLogger.error("captureAdUserAction failed to report an ad user action", arg0);
 }
 const result = require("ME").fileFinishedImporting("modules/ads/analytics/captureAdUserAction.tsx");
@@ -535,7 +542,7 @@ const result = require("ME").fileFinishedImporting("modules/ads/analytics/captur
 export const captureAdUserAction = function captureAdUserAction(type) {
   try {
     type = type.type;
-    if (require("captureAdUserActionTypes.tsx") /* AdUserActionType */.AdUserActionType.END_CONTENT_LOAD === type) {
+    if (AdUserActionType /* AdUserActionType */.AdUserActionType.END_CONTENT_LOAD === type) {
       (function handleEndContentLoadAction(adCreativeType) {
         if (adCreativeType.adCreativeType === callback(table[3]).AdCreativeType.QUEST) {
           const adCreativeId = adCreativeType.adCreativeId;

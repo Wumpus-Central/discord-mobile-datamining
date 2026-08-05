@@ -1,3 +1,7 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 // discord_app/modules/guild_onboarding/GuildOnboardingPromptsActionCreators.tsx
 import serverPromptToClientPrompt from "serverPromptToClientPrompt";
 import fetchFingerprint from "fetchFingerprint";
@@ -14,10 +18,10 @@ let unpackModuleId;
 const require = arg1;
 function fetchOnboardingPrompts(guildId) {
   const _require = guildId;
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_ONBOARDING_PROMPTS_FETCH_START", guildId };
   obj.dispatch(obj);
-  const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+  const HTTP = _sendRequest.HTTP;
   obj = { url: closure_10.GUILD_ONBOARDING(guildId), rejectWithError: false };
   const value = HTTP.get(obj);
   return value.then((body) => {
@@ -153,21 +157,21 @@ function _maybeFetchOnboardingPrompts() {
   return applyArgumentsResult;
 }
 function startOnboarding(guildId) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "GUILD_ONBOARDING_START", guildId };
   obj.dispatch(obj);
 }
 function _trackOnboardingDirectJoin(guildId) {
-  let obj = require("../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = {};
-  const merged = Object.assign(require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guildId));
+  const merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guildId));
   obj.step = c16;
   obj.required = true;
   obj.track(constants.GUILD_ONBOARDING_STEP_VIEWED, obj);
-  const obj3 = require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */;
+  const obj3 = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
   obj = {};
-  const obj4 = require("../../utils/AnalyticsUtils.tsx");
-  const merged1 = Object.assign(require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guildId));
+  const obj4 = expandEventProperties;
+  const merged1 = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guildId));
   obj.step = c16;
   obj.skipped = false;
   obj.is_final_step = true;
@@ -179,9 +183,9 @@ let c16 = -2;
 const result = require("trackCommunicationDisabled").fileFinishedImporting("modules/guild_onboarding/GuildOnboardingPromptsActionCreators.tsx");
 
 export const loadOnboardingPrompts = function loadOnboardingPrompts(guildId) {
-  let obj = require("../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = {};
-  const merged = Object.assign(require("../app_analytics/AppAnalyticsUtils.tsx") /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guildId));
+  const merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guildId));
   obj.has_new_prompts = false;
   obj.number_of_prompts = 0;
   obj.track(constants.GUILD_ONBOARDING_LOADED, obj);

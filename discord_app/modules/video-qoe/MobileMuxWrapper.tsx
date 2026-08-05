@@ -1,3 +1,4 @@
+import { logger } from "integrations/MobileCustomMuxIntegration.tsx";
 // discord_app/modules/video-qoe/MobileMuxWrapper.tsx
 const logger = new require("log").Logger("MobileMuxWrapper");
 let result = require("set").fileFinishedImporting("modules/video-qoe/MobileMuxWrapper.tsx");
@@ -12,7 +13,7 @@ const prototype = MobileMuxWrapper.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
   try {
-    const mobileCustomMuxIntegration = new require("integrations/MobileCustomMuxIntegration.tsx") /* logger */.MobileCustomMuxIntegration(self.config);
+    const mobileCustomMuxIntegration = new logger /* logger */.MobileCustomMuxIntegration(self.config);
     self.muxIntegration = mobileCustomMuxIntegration;
     const muxIntegration = self.muxIntegration;
     muxIntegration.initialize();

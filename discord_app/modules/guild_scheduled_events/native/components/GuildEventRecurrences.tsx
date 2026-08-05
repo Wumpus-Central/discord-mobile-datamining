@@ -1,3 +1,4 @@
+import { useGuildEventRecurrences } from "../../useGuildEventRecurrences.tsx";
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventRecurrences.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -33,7 +34,7 @@ export default function GuildEventRecurrences(guildEventId) {
   ({ guildId, recurrenceRule, hideViewMoreButton } = guildEventId);
   ref = ref.useRef(null);
   const tmp2 = createCacheKey();
-  ({ recurrenceStartTimes, canViewMoreRecurrences, updateRecurrenceStartTimes: c4 } = require("../../useGuildEventRecurrences.tsx")(guildEventId, guildId, recurrenceRule));
+  ({ recurrenceStartTimes, canViewMoreRecurrences, updateRecurrenceStartTimes: c4 } = useGuildEventRecurrences(guildEventId, guildId, recurrenceRule));
   let obj = { style: tmp2.container, children: null };
   obj = { variant: "heading-md/semibold", children: null };
   const intl = guildEventId(1236).intl;

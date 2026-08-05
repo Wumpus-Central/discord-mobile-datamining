@@ -1,3 +1,5 @@
+import { MessageReferenceTypes } from "../../../../../../discord_common/js/shared/shared-constants/MessageReferenceTypes.tsx";
+import { SoundButtonOverlay } from "../../../../soundboard/SoundboardTypes.tsx";
 // discord_app/modules/premium/sounds/soundmoji/utils/getSoundFromMessage.tsx
 import reinjectEphemerals from "reinjectEphemerals";
 import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME";
@@ -24,7 +26,7 @@ export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
     if (guild_id2 == null) {
       guild_id2 = DEFAULT_SOUND_GUILD_ID;
     }
-    return _require("../../../../soundboard/SoundboardTypes.tsx").soundboardSoundFromAPI(found, guild_id2);
+    return _SoundButtonOverlay.soundboardSoundFromAPI(found, guild_id2);
   } else {
     message = message.getMessage(arg0, arg1);
     if (null != message) {
@@ -35,7 +37,7 @@ export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
           type = messageReference.type;
         }
       }
-      if (type === _require("../../../../../../discord_common/js/shared/shared-constants/MessageReferenceTypes.tsx").MessageReferenceTypes.FORWARD) {
+      if (type === _MessageReferenceTypes.MessageReferenceTypes.FORWARD) {
         let messageSnapshots;
         if (message != null) {
           messageSnapshots = message.messageSnapshots;

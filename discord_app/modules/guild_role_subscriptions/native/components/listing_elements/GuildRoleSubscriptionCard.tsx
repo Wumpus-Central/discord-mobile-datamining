@@ -1,3 +1,4 @@
+import { EmojiGallery } from "GuildRoleSubscriptionEmojiGallery.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionCard.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
@@ -70,10 +71,10 @@ export const Content = function Content(arg0) {
     HermesBuiltin.arraySpread(first, 0);
     obj5[0] = items3;
     obj5[1] = guildId;
-    items2[2] = tmp7(require("GuildRoleSubscriptionEmojiGallery.tsx"), obj5);
+    items2[2] = tmp7(EmojiGallery, obj5);
     obj2[0] = items2;
     tmp4Result = tmp4(tmp6, obj2);
-    const tmp11 = require("GuildRoleSubscriptionEmojiGallery.tsx");
+    const tmp11 = EmojiGallery;
   }
   items1[1] = tmp4Result;
   tmp4Result = null;

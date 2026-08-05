@@ -1,3 +1,5 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { _checkForNewerBuild } from "MobileNativeUpdateUtils.tsx";
 // discord_app/modules/mobile_native_updater/MobileNativeUpdateStore.tsx
 import UPDATE_CHECK_INTERVAL from "UPDATE_CHECK_INTERVAL";
 import { Store } from "initialize";
@@ -18,17 +20,17 @@ class MobileNativeUpdateStore extends Store {
 const prototype = MobileNativeUpdateStore.prototype;
 prototype["checkForNewerBuild"] = function checkForNewerBuild() {
   if (true !== checking.checking) {
-    require("../../Dispatcher.tsx").dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_STARTED" });
-    let obj = require("../../Dispatcher.tsx");
-    const obj2 = require("MobileNativeUpdateUtils.tsx") /* _checkForNewerBuild */;
-    require("MobileNativeUpdateUtils.tsx") /* _checkForNewerBuild */.checkForNewerBuild().then((newBuild) => {
+    dispatcher.dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_STARTED" });
+    let obj = dispatcher;
+    const obj2 = _checkForNewerBuild /* _checkForNewerBuild */;
+    _checkForNewerBuild /* _checkForNewerBuild */.checkForNewerBuild().then((newBuild) => {
       let obj = callback(709);
       obj = { type: "MOBILE_NATIVE_UPDATE_CHECK_FINISHED", newBuild };
       obj.dispatch(obj);
     }, () => {
       callback(709).dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_FAILED" });
     });
-    const checkForNewerBuildResult = require("MobileNativeUpdateUtils.tsx") /* _checkForNewerBuild */.checkForNewerBuild();
+    const checkForNewerBuildResult = _checkForNewerBuild /* _checkForNewerBuild */.checkForNewerBuild();
   }
 };
 prototype["ensureInitialized"] = function ensureInitialized() {

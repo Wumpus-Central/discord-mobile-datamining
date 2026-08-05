@@ -1,3 +1,10 @@
+import { getEmbeddedActivityLaunchability } from "../../../activities/utils/getEmbeddedActivityLaunchability.tsx";
+import { apexExperiment } from "../../../go_live/MobileGoLiveEntrypointExperiment.tsx";
+import { apexExperiment } from "../../../media_engine/MobileAudioOutputExperiment.tsx";
+import { explicitContentFromProto } from "../../../user_settings/UserSettings.tsx";
+import { useSelectedActiveStream } from "../../../video_calls/native/useSelectedActiveStream.tsx";
+import { useIsConnectedToVoiceChannel } from "../hooks/useIsConnectedToVoiceChannel.tsx";
+import { dismissPanel } from "../VoicePanelStateContext.tsx";
 // discord_app/modules/voice_panel/native/controls/VoicePanelVoiceControls.tsx
 import importAllResult from "VoiceProcessingOptions";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -27,17 +34,17 @@ let closure_10 = importAllResult.memo((arg0) => {
   let channel;
   let openTab;
   ({ channel, openTab } = arg0);
-  const channelId = importAllResult.useContext(require("../VoicePanelStateContext.tsx")).channelId;
-  const tmp2 = require("../hooks/useIsConnectedToVoiceChannel.tsx")(channelId);
-  let obj = require("../../../activities/utils/getEmbeddedActivityLaunchability.tsx") /* getEmbeddedActivityLaunchability */;
+  const channelId = importAllResult.useContext(dismissPanel).channelId;
+  const tmp2 = useIsConnectedToVoiceChannel(channelId);
+  let obj = getEmbeddedActivityLaunchability /* getEmbeddedActivityLaunchability */;
   const embeddedActivityLaunchability = obj.useEmbeddedActivityLaunchability(channelId);
-  const DeveloperMode = require("../../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.DeveloperMode;
+  const DeveloperMode = explicitContentFromProto /* explicitContentFromProto */.DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  let obj1 = require("../../../go_live/MobileGoLiveEntrypointExperiment.tsx");
+  let obj1 = apexExperiment;
   const treatment = obj1.useConfig({ location: "VoicePanelVoiceControls" }).treatment;
-  let obj2 = require("../../../media_engine/MobileAudioOutputExperiment.tsx");
+  let obj2 = apexExperiment;
   let nonContextualStreamOutputPresent = obj2.useConfig({ location: "VoicePanelVoiceControls" }).nonContextualStreamOutputPresent;
-  const tmp6 = require("../../../video_calls/native/useSelectedActiveStream.tsx")(channel);
+  const tmp6 = useSelectedActiveStream(channel);
   if (!tmp2) {
     const items = [tmp2, , , , , , ];
     obj = { channel: null, connected: null };

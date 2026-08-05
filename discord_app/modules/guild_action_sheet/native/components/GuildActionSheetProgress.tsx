@@ -1,3 +1,6 @@
+import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
+import { GuildProgressOverviewView } from "../../../guild_progress/native/components/GuildProgressOverview.tsx";
+import { useIOSCompletionStates } from "../../../guild_progress/native/GuildProgressUtils.tsx";
 // discord_app/modules/guild_action_sheet/native/components/GuildActionSheetProgress.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -17,7 +20,7 @@ export default function GuildActionSheetProgress(guild) {
   let dismissed;
   guild = guild.guild;
   const tmp = createCacheKey();
-  let obj = require("../../../guild_progress/native/GuildProgressUtils.tsx") /* useIOSCompletionStates */;
+  let obj = useIOSCompletionStates /* useIOSCompletionStates */;
   const iOSCompletionStates = obj.useIOSCompletionStates(guild);
   ({ completed, dismissed } = iOSCompletionStates);
   let tmp5 = null;
@@ -31,8 +34,8 @@ export default function GuildActionSheetProgress(guild) {
         obj = { guild: null, titleStyle: null, longPressDisabled: true, resume: true };
         obj[0] = guild;
         obj[1] = tmp.title;
-        obj[1] = jsx(require("../../../guild_progress/native/components/GuildProgressOverview.tsx"), { guild: null, titleStyle: null, longPressDisabled: true, resume: true });
-        tmp5 = jsx(require("../../../../design/components/Card/native/Card.native.tsx") /* PressableCard */.Card, { guild: null, titleStyle: null, longPressDisabled: true, resume: true });
+        obj[1] = jsx(GuildProgressOverviewView, { guild: null, titleStyle: null, longPressDisabled: true, resume: true });
+        tmp5 = jsx(PressableCard /* PressableCard */.Card, { guild: null, titleStyle: null, longPressDisabled: true, resume: true });
       }
     }
   }

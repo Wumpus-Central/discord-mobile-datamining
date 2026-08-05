@@ -1,3 +1,4 @@
+import { apply } from "../../../../../_runtime/00012_apply.js";
 // discord_app/modules/auth/native/components/MFA.tsx
 import noop from "noop";
 import fetchFingerprint from "fetchFingerprint";
@@ -5,7 +6,7 @@ import { jsx } from "jsxProd";
 
 const require = arg1;
 function statesAreEqual(arg0, arg1) {
-  return require("../../../../../_runtime/00012_apply.js").isEqual(arg0, arg1);
+  return apply.isEqual(arg0, arg1);
 }
 let closure_7 = { flex: 1, position: "relative" };
 const result = require("jsxProd").fileFinishedImporting("modules/auth/native/components/MFA.tsx");

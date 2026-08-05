@@ -1,3 +1,5 @@
+import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
+import { prototype } from "../../RPCError.tsx";
 // discord_app/modules/rpc/server/commands/certifiedDevices.tsx
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
 import ME from "ME";
@@ -16,12 +18,12 @@ let items = [require("set").OAuth2Scopes.RPC, RPC_LOCAL_SCOPE];
 obj[RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj;
 obj[1] = function validation(array) {
-  let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(array);
+  let obj = createRpcJoiSchemaObject(array);
   obj = { devices: null };
   let arrayResult = array.array();
   const requiredResult = obj.required();
   obj = { type: null, id: null, vendor: null, model: null, related: null, echo_cancellation: null, noise_suppression: null, automatic_gain_control: null, hardware_mute: null };
-  const obj5 = require("../../helpers/createRpcJoiSchemaObject.tsx")(array);
+  const obj5 = createRpcJoiSchemaObject(array);
   const stringResult = array.string();
   const items = [, , ];
   ({ AUDIO_INPUT: arr[0], AUDIO_OUTPUT: arr[1], VIDEO_INPUT: arr[2] } = DeviceTypes);
@@ -30,17 +32,17 @@ obj[1] = function validation(array) {
   const stringResult1 = array.string();
   obj[1] = array.string().required().min(1);
   const requiredResult2 = array.string().required();
-  const obj11 = require("../../helpers/createRpcJoiSchemaObject.tsx")(array);
+  const obj11 = createRpcJoiSchemaObject(array);
   const obj1 = { name: null, url: null };
-  const requiredResult3 = require("../../helpers/createRpcJoiSchemaObject.tsx")(array).required();
+  const requiredResult3 = createRpcJoiSchemaObject(array).required();
   obj1[0] = array.string().min(1);
   const stringResult2 = array.string();
   obj1[1] = array.string().min(1);
   obj[2] = requiredResult3.keys(obj1);
   const stringResult3 = array.string();
-  const obj16 = require("../../helpers/createRpcJoiSchemaObject.tsx")(array);
+  const obj16 = createRpcJoiSchemaObject(array);
   const obj2 = { name: null, url: null };
-  const requiredResult4 = require("../../helpers/createRpcJoiSchemaObject.tsx")(array).required();
+  const requiredResult4 = createRpcJoiSchemaObject(array).required();
   obj2[0] = array.string().min(1);
   const stringResult4 = array.string();
   obj2[1] = array.string().min(1);
@@ -61,7 +63,7 @@ obj[2] = function handler(socket) {
   if (null == socket.application.id) {
     let obj = { errorCode: null };
     obj[0] = constants.INVALID_COMMAND;
-    const tmp10 = new require("../../RPCError.tsx")(obj, "No application.");
+    const tmp10 = new prototype(obj, "No application.");
     throw tmp10;
   } else {
     obj = devices(13644);

@@ -1,3 +1,5 @@
+import { set } from "../lib/DiscordNative.tsx";
+import { set } from "PlatformUtils.tsx";
 // discord_app/utils/SpellcheckUtils.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import set from "set";
@@ -483,9 +485,9 @@ if (set) {
 }
 let c4 = installResult;
 function isSupported() {
-  let isDesktopResult = require("PlatformUtils.tsx") /* set */.isDesktop();
+  let isDesktopResult = set /* set */.isDesktop();
   if (isDesktopResult) {
-    const tmp4 = require("../lib/DiscordNative.tsx");
+    const tmp4 = set;
     let spellCheck;
     if (tmp4 != null) {
       spellCheck = tmp4.spellCheck;
@@ -568,13 +570,13 @@ export const setAppLocale = function setAppLocale() {
   return applyArgumentsResult;
 };
 export const addResultListener = function addResultListener(arg0) {
-  const tmp3 = require("../lib/DiscordNative.tsx");
+  const tmp3 = set;
   let spellCheck;
   if (tmp3 != null) {
     spellCheck = tmp3.spellCheck;
   }
   if (null != spellCheck) {
-    spellCheck = require("../lib/DiscordNative.tsx").spellCheck;
+    spellCheck = set.spellCheck;
     let fn2 = spellCheck.on("spellcheck-result", arg0);
     if (fn2 == null) {
       fn2 = () => {

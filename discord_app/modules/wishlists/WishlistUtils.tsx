@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { useSKUPrice } from "../storefront/StorefrontUtils.tsx";
 // discord_app/modules/wishlists/WishlistUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import createFromServer from "createFromServer";
@@ -12,8 +14,8 @@ const result = require("createCollectiblesItemFromServerResponse").fileFinishedI
 
 export const createNitroSuggestedSku = function createNitroSuggestedSku() {
   const obj = { id: PremiumSubscriptionSKUs.TIER_2, productLine: SKUProductLines.PREMIUM, name: null, features: null, genres: null, manifests: null, availableRegions: null, locales: null, bundledSkuIds: null, selectedOptions: null, eligibleOffers: null, prices: null };
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.lG6a5x);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.lG6a5x);
   obj[3] = new Set();
   const set = new Set();
   obj[4] = new Set();
@@ -34,8 +36,8 @@ export const isEligibleWishlistItemOnMobile = function isEligibleWishlistItemOnM
       let prop = isWishlistOwner.isSocialLayerStorefrontMobilePurchasingEnabled;
       if (prop) {
         if (!isWishlistOwner) {
-          isWishlistOwner = require("../storefront/StorefrontUtils.tsx") /* useSKUPrice */.isSlayerSkuAvailableOnThisPlatform(sku.sku);
-          const obj = require("../storefront/StorefrontUtils.tsx") /* useSKUPrice */;
+          isWishlistOwner = useSKUPrice /* useSKUPrice */.isSlayerSkuAvailableOnThisPlatform(sku.sku);
+          const obj = useSKUPrice /* useSKUPrice */;
         }
         prop = isWishlistOwner;
       }

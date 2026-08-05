@@ -1,3 +1,4 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/channel_list_v2/native/hooks/useStickyServerHeaderSubtitle.tsx
 import handleInviteData from "handleInviteData";
 import { GuildFeatures } from "ME";
@@ -8,7 +9,7 @@ const result = require("initialize").fileFinishedImporting("modules/channel_list
 export default function useStickyServerHeaderSubtitle(arg0) {
   const _require = arg0;
   const items = [handleInviteData];
-  return _require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     features = features.features;
     let memberCount;
     if (features.has(outer1_3.COMMUNITY)) {

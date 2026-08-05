@@ -1,3 +1,4 @@
+import { ApplicationRejectedNotice } from "GuildSettingsRoleSubscriptionContainer.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsGroupEdit.tsx
 import closure_4 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
@@ -217,5 +218,5 @@ export default function GuildSettingsRoleSubscriptionsGroupEdit(guildId) {
   guildId = guildId.guildId;
   const obj = { guildId, children: null };
   obj[1] = callback2(GuildSettingsRoleSubscriptionsGroupEditInner, { guildId });
-  return callback2(require("GuildSettingsRoleSubscriptionContainer.tsx"), obj);
+  return callback2(ApplicationRejectedNotice, obj);
 };

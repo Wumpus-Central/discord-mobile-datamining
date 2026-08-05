@@ -1,3 +1,4 @@
+import { getStickerExtensionFromFormatType } from "../StickersUtils.tsx";
 // discord_app/modules/stickers/native/StickerPackBanner.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -14,7 +15,7 @@ export default function StickerPackBanner(arg0) {
   let stickerPack;
   let style;
   ({ containerStyle, style, stickerPack } = arg0);
-  let obj = require("../StickersUtils.tsx") /* getStickerExtensionFromFormatType */;
+  let obj = getStickerExtensionFromFormatType /* getStickerExtensionFromFormatType */;
   const stickerPackBannerAssetUrl = obj.getStickerPackBannerAssetUrl(stickerPack, 1024);
   let tmp2 = null;
   if (null != stickerPackBannerAssetUrl) {

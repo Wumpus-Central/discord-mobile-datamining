@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/opt_in_channels/useBatchUpdateChannelSettings.tsx
 import noop from "noop";
 import incrementVersion from "incrementVersion";
@@ -9,7 +10,7 @@ let result = require("updateUserGuildSettingsInternal").fileFinishedImporting("m
 
 export default function useBatchUpdateChannelSettings(arg0) {
   const _require = arg0;
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   let items = [updateUserGuildSettingsInternal];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getPendingChannelUpdates(closure_0));
   let items1 = [arg0];

@@ -1,3 +1,4 @@
+import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/app_launcher/native/onboarding/hooks/useCanShowAppLauncherOnboarding.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -40,8 +41,8 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
   if (tmp8) {
     const _Date = Date;
     const timestamp1 = Date.now();
-    tmp8 = timestamp1 < require("../../../../../utils/SnowflakeUtils.tsx").extractTimestamp(stateFromStores1.id) + closure_12;
-    const obj3 = require("../../../../../utils/SnowflakeUtils.tsx");
+    tmp8 = timestamp1 < DISCORD_EPOCH.extractTimestamp(stateFromStores1.id) + closure_12;
+    const obj3 = DISCORD_EPOCH;
   }
   tmp2Result = tmp2(589);
   const items2 = [handleInviteData];

@@ -1,3 +1,5 @@
+import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
+import { set } from "../../utils/Durations.tsx";
 // discord_app/modules/game_profile/GameProfileHttpUtils.tsx
 import dispatcher from "dispatcher";
 import _getSystemLocale from "_getSystemLocale";
@@ -256,9 +258,9 @@ initialize = {
 };
 initialize = {
   backoff() {
-    let tmp = require("../../../discord_common/js/packages/backoff/Backoff.tsx");
-    const result = 5 * require("../../utils/Durations.tsx").Millis.SECOND;
-    tmp = new tmp(result, 5 * require("../../utils/Durations.tsx").Millis.MINUTE);
+    let tmp = fails;
+    const result = 5 * set.Millis.SECOND;
+    tmp = new tmp(result, 5 * set.Millis.MINUTE);
     return tmp;
   }
 };

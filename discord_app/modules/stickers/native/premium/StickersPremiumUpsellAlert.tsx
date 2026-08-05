@@ -1,3 +1,7 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/stickers/native/premium/StickersPremiumUpsellAlert.tsx
 import componentDidMount from "componentDidMount";
 import get_ActivityIndicator from "useWindowDimensions";
@@ -30,10 +34,10 @@ function PerkRow(perk) {
   let obj = { style: items, children: null };
   items[1] = lastPerkRow;
   obj = { style: tmp.perkIcon, source: perk.icon, disableColor: null == perk.color, color: perk.color };
-  const items1 = [callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj), ];
+  const items1 = [callback(Button /* Button */.Icon, obj), ];
   obj = { style: tmp.perkText, variant: "text-md/medium", color: "interactive-text-active", children: null };
   obj[3] = perk.description();
-  items1[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  items1[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items1;
   return closure_15(closure_4, obj);
 }
@@ -44,8 +48,8 @@ function PerkRow(perk) {
 let obj = {
   icon: require("registerAsset"),
   description() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.uAfKTe);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.uAfKTe);
   },
   color: require("Themes").unsafe_rawColors.PREMIUM_PERK_PURPLE
 };
@@ -53,16 +57,16 @@ let items = [obj, , ];
 obj = {
   icon: require("registerAsset"),
   description() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.aVSVBO, { numFreeGuildSubscriptions: closure_12 });
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.aVSVBO, { numFreeGuildSubscriptions: closure_12 });
   }
 };
 items[1] = obj;
 obj = {
   icon: require("registerAsset"),
   description() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.pqHIf7);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.pqHIf7);
   },
   color: require("Themes").unsafe_rawColors.PREMIUM_PERK_GREEN
 };
@@ -98,11 +102,11 @@ export default function StickersPremiumUpsellAlert(arg0) {
   }
   analyticsLocations = tmp3(5610)().analyticsLocations;
   let obj = { cancelText: null, confirmColor: null, confirmText: null, onConfirm: null, onClose: null, onCancel: null, style: null, children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.f3Pet9);
-  obj[1] = require("../../../../design/void/native.tsx") /* Button */.ButtonColors.GREEN;
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[2] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.o3Tnif);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.f3Pet9);
+  obj[1] = Button /* Button */.ButtonColors.GREEN;
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.o3Tnif);
   obj[3] = function onConfirm() {
     let obj = analyticsLocations(outer1_2[20]);
     obj = { location: null };
@@ -127,8 +131,8 @@ export default function StickersPremiumUpsellAlert(arg0) {
   obj = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: null };
   const obj1 = { source: null };
   obj1[0] = analyticsLocations(7837);
-  obj[3] = callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj1);
-  obj[1] = callback(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  obj[3] = callback(Button /* Button */.Icon, obj1);
+  obj[1] = callback(PressableBase /* PressableBase */.PressableOpacity, obj);
   const items1 = [callback(closure_4, obj), ];
   const obj2 = {
     style: tmp.content,
@@ -145,8 +149,8 @@ export default function StickersPremiumUpsellAlert(arg0) {
     priceString = closure_13;
   }
   const obj5 = { children: null };
-  obj4[2] = intl3.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.TBsJfQ, { monthlyPrice: priceString });
-  items2[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj4);
+  obj4[2] = intl3.format(getSystemLocale /* getSystemLocale */.t.TBsJfQ, { monthlyPrice: priceString });
+  items2[1] = callback(Text /* Text */.Text, obj4);
   const obj3 = { source: analyticsLocations(9897), style: tmp.imageHeader };
   const tmp13 = closure_6;
   items2[2] = callback(closure_4, { style: tmp.perks, children: items.map((perk) => callback(closure_18, { perk, isLastPerk: arg1 === length.length - 1 }, arg1)) });

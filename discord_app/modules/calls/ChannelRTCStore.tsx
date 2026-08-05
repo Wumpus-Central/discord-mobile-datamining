@@ -1,3 +1,6 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { experiment } from "../voice_calls/GuildVoiceRingingExperiment.tsx";
+import { sortKey } from "ChannelRTCParticipants.tsx";
 // discord_app/modules/calls/ChannelRTCStore.tsx
 import _slicedToArray from "_slicedToArray";
 import participantFromServer from "participantFromServer";
@@ -28,7 +31,7 @@ const require = arg1;
 function getParticipants(arg0) {
   let tmp2 = dependencyMap[arg0];
   if (null == tmp2) {
-    const tmp8 = new require("ChannelRTCParticipants.tsx")(arg0);
+    const tmp8 = new sortKey(arg0);
     tmp[arg0] = tmp8;
     tmp2 = tmp8;
   }
@@ -221,9 +224,9 @@ function setSelectedParticipantId(channelId, arg1) {
   }
 }
 function hasVideo(size) {
-  let hasEmbeddedActivityResult = size.size(require("ChannelRTCParticipants.tsx") /* sortKey */.ChannelRTCParticipantsIndexes.STREAM) > 0;
+  let hasEmbeddedActivityResult = size.size(sortKey /* sortKey */.ChannelRTCParticipantsIndexes.STREAM) > 0;
   if (!hasEmbeddedActivityResult) {
-    hasEmbeddedActivityResult = size.size(require("ChannelRTCParticipants.tsx") /* sortKey */.ChannelRTCParticipantsIndexes.VIDEO) > 0;
+    hasEmbeddedActivityResult = size.size(sortKey /* sortKey */.ChannelRTCParticipantsIndexes.VIDEO) > 0;
   }
   if (!hasEmbeddedActivityResult) {
     hasEmbeddedActivityResult = size.hasEmbeddedActivity();
@@ -262,10 +265,10 @@ function handleRebuildActiveChannels() {
   const fn = (rebuild) => rebuild.rebuild();
   const obj = channelId;
   tmp4 = null == voiceChannelId || items.includes(voiceChannelId);
-  const obj2 = require("../../../_runtime/00012_apply.js");
-  const item = require("../../../_runtime/00012_apply.js").difference(items, items).forEach(clearChannel);
-  const differenceResult = require("../../../_runtime/00012_apply.js").difference(items, items);
-  let differenceResult1 = require("../../../_runtime/00012_apply.js").difference(items, items);
+  const obj2 = apply;
+  const item = apply.difference(items, items).forEach(clearChannel);
+  const differenceResult = apply.difference(items, items);
+  let differenceResult1 = apply.difference(items, items);
   if (differenceResult1 === undefined) {
     differenceResult1 = items;
   }
@@ -1163,7 +1166,7 @@ prototype["getState"] = function getState() {
 prototype["getParticipantsVersion"] = function getParticipantsVersion(arg0) {
   let tmp2 = dependencyMap[arg0];
   if (null == tmp2) {
-    const tmp8 = new require("ChannelRTCParticipants.tsx")(arg0);
+    const tmp8 = new sortKey(arg0);
     tmp[arg0] = tmp8;
     tmp2 = tmp8;
   }
@@ -1172,7 +1175,7 @@ prototype["getParticipantsVersion"] = function getParticipantsVersion(arg0) {
 prototype["getParticipants"] = function getParticipants(arg0) {
   let obj = dependencyMap[arg0];
   if (null == obj) {
-    const tmp7 = new require("ChannelRTCParticipants.tsx")(arg0);
+    const tmp7 = new sortKey(arg0);
     tmp[arg0] = tmp7;
     obj = tmp7;
   }
@@ -1185,11 +1188,11 @@ prototype["getParticipants"] = function getParticipants(arg0) {
 prototype["getSpeakingParticipants"] = function getSpeakingParticipants(id) {
   let obj = dependencyMap[id];
   if (null == obj) {
-    const tmp7 = new require("ChannelRTCParticipants.tsx")(id);
+    const tmp7 = new sortKey(id);
     tmp[id] = tmp7;
     obj = tmp7;
   }
-  let toArrayResult = obj.toArray(require("ChannelRTCParticipants.tsx") /* sortKey */.ChannelRTCParticipantsIndexes.SPEAKING);
+  let toArrayResult = obj.toArray(sortKey /* sortKey */.ChannelRTCParticipantsIndexes.SPEAKING);
   if (toArrayResult == null) {
     toArrayResult = frozen;
   }
@@ -1198,26 +1201,26 @@ prototype["getSpeakingParticipants"] = function getSpeakingParticipants(id) {
 prototype["getFilteredParticipants"] = function getFilteredParticipants(closure_0) {
   let obj = dependencyMap[closure_0];
   if (null == obj) {
-    const tmp7 = new require("ChannelRTCParticipants.tsx")(closure_0);
+    const tmp7 = new sortKey(closure_0);
     tmp[closure_0] = tmp7;
     obj = tmp7;
   }
   if (dependencyMap5[closure_0] != null) {
     if (tmp9) {
-      let toArrayResult = obj.toArray(require("ChannelRTCParticipants.tsx") /* sortKey */.ChannelRTCParticipantsIndexes.FILTERED);
+      let toArrayResult = obj.toArray(sortKey /* sortKey */.ChannelRTCParticipantsIndexes.FILTERED);
     }
     return toArrayResult;
   }
-  toArrayResult = obj.toArray(require("ChannelRTCParticipants.tsx") /* sortKey */.ChannelRTCParticipantsIndexes.NOT_POPPED_OUT);
+  toArrayResult = obj.toArray(sortKey /* sortKey */.ChannelRTCParticipantsIndexes.NOT_POPPED_OUT);
 };
 prototype["getVideoParticipants"] = function getVideoParticipants(channelId) {
   let obj = dependencyMap[channelId];
   if (null == obj) {
-    const tmp7 = new require("ChannelRTCParticipants.tsx")(channelId);
+    const tmp7 = new sortKey(channelId);
     tmp[channelId] = tmp7;
     obj = tmp7;
   }
-  let toArrayResult = obj.toArray(require("ChannelRTCParticipants.tsx") /* sortKey */.ChannelRTCParticipantsIndexes.VIDEO);
+  let toArrayResult = obj.toArray(sortKey /* sortKey */.ChannelRTCParticipantsIndexes.VIDEO);
   if (toArrayResult == null) {
     toArrayResult = frozen;
   }
@@ -1226,11 +1229,11 @@ prototype["getVideoParticipants"] = function getVideoParticipants(channelId) {
 prototype["getStreamParticipants"] = function getStreamParticipants(id) {
   let obj = dependencyMap[id];
   if (null == obj) {
-    const tmp7 = new require("ChannelRTCParticipants.tsx")(id);
+    const tmp7 = new sortKey(id);
     tmp[id] = tmp7;
     obj = tmp7;
   }
-  let toArrayResult = obj.toArray(require("ChannelRTCParticipants.tsx") /* sortKey */.ChannelRTCParticipantsIndexes.STREAM);
+  let toArrayResult = obj.toArray(sortKey /* sortKey */.ChannelRTCParticipantsIndexes.STREAM);
   if (toArrayResult == null) {
     toArrayResult = frozen;
   }
@@ -1239,11 +1242,11 @@ prototype["getStreamParticipants"] = function getStreamParticipants(id) {
 prototype["getActivityParticipants"] = function getActivityParticipants(channelId) {
   let obj = dependencyMap[channelId];
   if (null == obj) {
-    const tmp7 = new require("ChannelRTCParticipants.tsx")(channelId);
+    const tmp7 = new sortKey(channelId);
     tmp[channelId] = tmp7;
     obj = tmp7;
   }
-  let toArrayResult = obj.toArray(require("ChannelRTCParticipants.tsx") /* sortKey */.ChannelRTCParticipantsIndexes.ACTIVITY);
+  let toArrayResult = obj.toArray(sortKey /* sortKey */.ChannelRTCParticipantsIndexes.ACTIVITY);
   if (toArrayResult == null) {
     toArrayResult = frozen;
   }
@@ -1252,7 +1255,7 @@ prototype["getActivityParticipants"] = function getActivityParticipants(channelI
 prototype["getParticipant"] = function getParticipant(arg0, arg1) {
   let obj = dependencyMap[arg0];
   if (null == obj) {
-    const tmp7 = new require("ChannelRTCParticipants.tsx")(arg0);
+    const tmp7 = new sortKey(arg0);
     tmp[arg0] = tmp7;
     obj = tmp7;
   }
@@ -1261,12 +1264,12 @@ prototype["getParticipant"] = function getParticipant(arg0, arg1) {
 prototype["getUserParticipantCount"] = function getUserParticipantCount(id) {
   let obj = dependencyMap[id];
   if (null == obj) {
-    const tmp7 = new require("ChannelRTCParticipants.tsx")(id);
+    const tmp7 = new sortKey(id);
     tmp[id] = tmp7;
     obj = tmp7;
   }
-  const diff = obj.size() - obj.size(require("ChannelRTCParticipants.tsx") /* sortKey */.ChannelRTCParticipantsIndexes.STREAM);
-  return diff - obj.size(require("ChannelRTCParticipants.tsx") /* sortKey */.ChannelRTCParticipantsIndexes.ACTIVITY);
+  const diff = obj.size() - obj.size(sortKey /* sortKey */.ChannelRTCParticipantsIndexes.STREAM);
+  return diff - obj.size(sortKey /* sortKey */.ChannelRTCParticipantsIndexes.ACTIVITY);
 };
 prototype["getParticipantsOpen"] = function getParticipantsOpen(arg0) {
   let flag = table2[arg0];
@@ -1316,7 +1319,7 @@ prototype["getSelectedParticipant"] = function getSelectedParticipant(id) {
   if (null != selectedParticipantId) {
     let obj = dependencyMap[id];
     if (null == obj) {
-      const tmp9 = new require("ChannelRTCParticipants.tsx")(id);
+      const tmp9 = new sortKey(id);
       tmp3[id] = tmp9;
       obj = tmp9;
     }
@@ -1340,7 +1343,7 @@ prototype["getSelectedParticipantStats"] = function getSelectedParticipantStats(
 prototype["getGuildRingingUsers"] = function getGuildRingingUsers(id) {
   let tmp2 = dependencyMap[id];
   if (null == tmp2) {
-    const tmp8 = new require("ChannelRTCParticipants.tsx")(id);
+    const tmp8 = new sortKey(id);
     tmp[id] = tmp8;
     tmp2 = tmp8;
   }
@@ -1450,7 +1453,7 @@ obj = {
       if (null != currentVoiceChannelId) {
         let tmp14 = dependencyMap[currentVoiceChannelId];
         if (null == tmp14) {
-          const tmp20 = new require("ChannelRTCParticipants.tsx")(currentVoiceChannelId);
+          const tmp20 = new sortKey(currentVoiceChannelId);
           tmp13[currentVoiceChannelId] = tmp20;
           tmp14 = tmp20;
         }
@@ -1888,7 +1891,7 @@ obj = {
     }
     let obj2 = dependencyMap[channelId];
     if (null == obj2) {
-      const tmp13 = new require("ChannelRTCParticipants.tsx")(channelId);
+      const tmp13 = new sortKey(channelId);
       tmp7[channelId] = tmp13;
       obj2 = tmp13;
     }
@@ -2046,7 +2049,7 @@ obj = {
     ({ channelId, participantId } = arg0);
     let obj = dependencyMap[channelId];
     if (null == obj) {
-      const tmp7 = new require("ChannelRTCParticipants.tsx")(channelId);
+      const tmp7 = new sortKey(channelId);
       tmp[channelId] = tmp7;
       obj = tmp7;
     }
@@ -3405,7 +3408,7 @@ obj = {
     } else {
       return false;
     }
-    obj = require("../voice_calls/GuildVoiceRingingExperiment.tsx");
+    obj = experiment;
     tmp = importDefault;
   },
   GUILD_RING_STOP: function handleGuildRingStop(guildId) {
@@ -3563,7 +3566,7 @@ obj = {
     } else {
       return false;
     }
-    obj = require("../voice_calls/GuildVoiceRingingExperiment.tsx");
+    obj = experiment;
     tmp = importDefault;
   },
   USER_UPDATE: handleUserUpdate,

@@ -1,3 +1,4 @@
+import { subscribeGuildMembers } from "../../../../../lib/guild/subscribeGuildMembers.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/useEnsureHydratedUsers.tsx
 import noop from "noop";
 import handleConnectionReset from "handleConnectionReset";
@@ -27,5 +28,5 @@ export const useEnsureHydratedUsers = function useEnsureHydratedUsers(guild_id, 
       }
     });
   }, items1);
-  const subscribeGuildMembers = _require("../../../../../lib/guild/subscribeGuildMembers.tsx").useSubscribeGuildMembers(memo, "useEnsureHydratedUsers");
+  const subscribeGuildMembers = _subscribeGuildMembers.useSubscribeGuildMembers(memo, "useEnsureHydratedUsers");
 };

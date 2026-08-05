@@ -1,3 +1,4 @@
+import { useFilterAndSortToOnlyFrecentCommands } from "../../../../hooks/useFilterAndSortToOnlyFrecentCommands.tsx";
 // discord_app/modules/app_launcher/native/screens/application_view/app/FrecencyCommandsSection.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -26,7 +27,7 @@ export default function FrecencyCommandsSection(commands) {
   ({ onPressCommand: importDefault, section: dependencyMap, onExecuteCommand: noop, installOnDemand: View, sectionName } = commands);
   let arr;
   const tmp = createCacheKey();
-  arr = require("../../../../hooks/useFilterAndSortToOnlyFrecentCommands.tsx")({ context, commands: commands.allCommands, limit: 5 });
+  arr = useFilterAndSortToOnlyFrecentCommands({ context, commands: commands.allCommands, limit: 5 });
   const items = [arr.length, sectionName];
   const effect = React.useEffect(() => {
     if (0 !== arr.length) {

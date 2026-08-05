@@ -1,3 +1,5 @@
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { showSearchableDestinationListModal } from "../../share/native/showSearchableDestinationListModal.tsx";
 // discord_app/modules/favorites/native/AddFavoriteChannelModal.tsx
 import UserRowModes from "UserRowModes";
 import _slicedToArray from "_slicedToArray";
@@ -126,7 +128,7 @@ function AddFavoriteChannelModal(parentId) {
   return callback3(View, obj);
 }
 function closeAddFavoriteChannelModal() {
-  require("../../../actions/ModalActionCreators.tsx").popWithKey(c12);
+  ModalActionCreators.popWithKey(c12);
 }
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { container: null };
@@ -141,6 +143,6 @@ export const openAddFavoriteChannelModal = function openAddFavoriteChannelModal(
   let parentId;
   let source;
   ({ parentId, source } = arg0);
-  require("../../share/native/showSearchableDestinationListModal.tsx")(Promise.resolve({ default: AddFavoriteChannelModal }), { parentId, source }, c12);
+  showSearchableDestinationListModal(Promise.resolve({ default: AddFavoriteChannelModal }), { parentId, source }, c12);
 };
 export { closeAddFavoriteChannelModal };

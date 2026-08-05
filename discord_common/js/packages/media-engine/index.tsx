@@ -1,3 +1,5 @@
+import { Video } from "MediaEngineDummy.tsx";
+import { destroy } from "native/index.tsx";
 // discord_common/js/packages/media-engine/index.tsx
 import DesktopSources from "DesktopSources";
 
@@ -32,12 +34,12 @@ export const determineMediaEngine = function determineMediaEngine() {
 };
 export const initializeMediaEngine = function initializeMediaEngine(BaseConnectionEvent) {
   if (constants.NATIVE === BaseConnectionEvent) {
-    let _default = require("native/index.tsx") /* destroy */.default;
+    let _default = destroy /* destroy */.default;
   } else {
     if (tmp.WEBRTC !== BaseConnectionEvent) {
       const DUMMY = tmp.DUMMY;
     }
-    _default = require("MediaEngineDummy.tsx") /* Video */.default;
+    _default = Video /* Video */.default;
   }
   _default = new _default();
   return _default;

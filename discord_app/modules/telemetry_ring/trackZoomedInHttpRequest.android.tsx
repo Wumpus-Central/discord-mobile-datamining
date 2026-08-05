@@ -1,3 +1,4 @@
+import { shouldRun } from "native/channels/ZoomedInTelemetry.tsx";
 // discord_app/modules/telemetry_ring/trackZoomedInHttpRequest.android.tsx
 import { AnalyticEvents } from "ME";
 
@@ -5,7 +6,7 @@ const result = require("set").fileFinishedImporting("modules/telemetry_ring/trac
 
 export default function trackZoomedInHttpRequest(arg0) {
   try {
-    let obj = require("native/channels/ZoomedInTelemetry.tsx");
+    let obj = shouldRun;
     obj = {};
     const merged = Object.assign(arg0);
     obj.source = "zoomed_in";

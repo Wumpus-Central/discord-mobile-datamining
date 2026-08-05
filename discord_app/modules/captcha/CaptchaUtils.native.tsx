@@ -1,3 +1,6 @@
+import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
 // discord_app/modules/captcha/CaptchaUtils.native.tsx
 import setContent from "setContent";
 import { CAPTCHA_MODAL_KEY } from "CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS";
@@ -25,10 +28,10 @@ export default {
         return callback2(table[3]).hideActionSheet(closure_4);
       }
     };
-    const obj2 = require("../action_sheet/native/ActionSheetActionCreators.tsx");
+    const obj2 = ACTION_SHEET_HEIGHT_HALF;
     const merged = Object.assign(obj);
     const merged1 = Object.assign(options.options);
-    obj2.openLazy(_require("../../../_runtime/01959_asyncRequireImpl.js")(16224, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj);
+    obj2.openLazy(_asyncRequireImpl(16224, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj);
   },
   showCaptchaAsync(nextResult1) {
     let c1;
@@ -76,6 +79,6 @@ export default {
   },
   useIsCaptchaModalOpen() {
     const items = [setContent];
-    return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => key.getKey() === closure_4);
+    return initialize /* initialize */.useStateFromStores(items, () => key.getKey() === closure_4);
   }
 };

@@ -1,3 +1,5 @@
+import { registerAsset } from "../../../../_runtime/12729_registerAsset.js";
+import { componentDidMount } from "../../../components_native/common/Alert.tsx";
 // discord_app/modules/premium/native/PremiumPlanSelectYearlyUpsellModal.tsx
 import _slicedToArray from "_slicedToArray";
 import getPremiumPlanItem from "getPremiumPlanItem";
@@ -89,7 +91,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     obj[0] = tmp.container;
     obj1 = { style: null, source: null };
     obj1[0] = tmp.image;
-    obj1[1] = require("../../../../_runtime/12729_registerAsset.js");
+    obj1[1] = registerAsset;
     const items2 = [callback2(closure_5, obj1), , , , , ];
     obj2 = { style: null, accessibilityRole: "header", children: null };
     obj2[0] = tmp.header;
@@ -145,7 +147,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     items2[5] = callback2(closure_6, obj11);
     obj[1] = items2;
     obj[2] = closure_12(closure_6, obj);
-    return callback2(require("../../../components_native/common/Alert.tsx"), obj);
+    return callback2(componentDidMount, obj);
   }
   const tmp3 = callback(React.useState(null), 2);
 };

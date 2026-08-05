@@ -1,3 +1,4 @@
+import { useNavigatorBackPressHandler } from "../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx";
 // discord_app/modules/contact_sync/native/components/useBackHandlerSkipPhoneScreens.tsx
 import { NativeModules } from "get ActivityIndicator";
 import { ContactSyncScenes } from "ContactSyncLandingPage";
@@ -7,7 +8,7 @@ const result = require("useNavigatorBackPressHandler").fileFinishedImporting("mo
 export default function useBackHandlerSkipPhoneScreens(arg0, arg1) {
   const _require = arg0;
   const dependencyMap = arg1;
-  _require("../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx").useNavigatorBackPressHandler(() => {
+  _useNavigatorBackPressHandler.useNavigatorBackPressHandler(() => {
     if (null != closure_1) {
       tmp();
     } else {
@@ -25,7 +26,7 @@ export default function useBackHandlerSkipPhoneScreens(arg0, arg1) {
   });
 };
 export const useBackHandlerMinimizeApp = function useBackHandlerMinimizeApp() {
-  require("../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx") /* useNavigatorBackPressHandler */.useNavigatorBackPressHandler(() => {
+  useNavigatorBackPressHandler /* useNavigatorBackPressHandler */.useNavigatorBackPressHandler(() => {
     MinimizeApp = MinimizeApp.MinimizeApp;
     MinimizeApp.minimizeApp();
     return true;

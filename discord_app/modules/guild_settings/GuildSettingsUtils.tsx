@@ -1,3 +1,4 @@
+import { getPermissionOptions } from "../../utils/PermissionSpecUtils.tsx";
 // discord_app/modules/guild_settings/GuildSettingsUtils.tsx
 import { hasPermission } from "GuildRoleRecordTypeTag";
 import ME from "ME";
@@ -12,7 +13,7 @@ export const isRolePowerful = function isRolePowerful(role) {
 };
 export const getPowerfulPermissionTitles = function getPowerfulPermissionTitles(arg0, arg1) {
   const items = [];
-  require("../../utils/PermissionSpecUtils.tsx");
+  getPermissionOptions;
   for (const item10015 of closure_5) {
     let str = item10015;
     let tmp3 = hasPermission;

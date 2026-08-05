@@ -1,3 +1,4 @@
+import { getUnitId } from "../modules/calls/ProportionalVadIndicatorExperiment.tsx";
 // discord_app/stores/SpeakingStore.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -225,7 +226,7 @@ prototype["getVoiceVolume"] = function getVoiceVolume(arg0) {
   if (arg1 === undefined) {
     DEFAULT = constants2.DEFAULT;
   }
-  const config = require("../modules/calls/ProportionalVadIndicatorExperiment.tsx").getConfig({ location: "SpeakingStore" });
+  const config = getUnitId.getConfig({ location: "SpeakingStore" });
   let num = -Infinity;
   if (config.enabled) {
     num = -Infinity;

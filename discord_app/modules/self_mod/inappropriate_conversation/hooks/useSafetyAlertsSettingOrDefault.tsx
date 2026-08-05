@@ -1,3 +1,5 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useUserIsTeen } from "../../hooks/useUserIsTeen.tsx";
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -8,7 +10,7 @@ const result = require("initialize").fileFinishedImporting("modules/self_mod/ina
 export const useSafetyAlertsSettingOrDefault = function useSafetyAlertsSettingOrDefault() {
   currentUser = currentUser.getCurrentUser();
   const items = [handleConnectionClosedOrResumed];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => {
     const privacy = settings.settings.privacy;
     let flag;
     if (privacy != null) {
@@ -21,9 +23,9 @@ export const useSafetyAlertsSettingOrDefault = function useSafetyAlertsSettingOr
     }
     return flag;
   });
-  const obj2 = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
-  let userIsTeen = require("../../hooks/useUserIsTeen.tsx") /* useUserIsTeen */.useUserIsTeen();
-  const obj3 = require("../../hooks/useUserIsTeen.tsx") /* useUserIsTeen */;
+  const obj2 = initialize /* initialize */;
+  let userIsTeen = useUserIsTeen /* useUserIsTeen */.useUserIsTeen();
+  const obj3 = useUserIsTeen /* useUserIsTeen */;
   let tmp3 = !userIsTeen;
   if (userIsTeen) {
     tmp3 = !obj4.useIsEligibleForInappropriateConversationDefaultOn({ location: "useSafetyAlertsSettingOrDefault" });

@@ -1,3 +1,5 @@
+import { ReanimatedRexport } from "../../../../../../reanimated/ReanimatedRexport.tsx";
+import { useFullscreenPlaceholderCount } from "../../../../hooks/usePlaceholderStyles.tsx";
 // discord_app/modules/search/native/components/tabs/pages/placeholders/FormRowPlaceholder.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -21,7 +23,7 @@ const result = require("MessageEmbedTypes").fileFinishedImporting("modules/searc
 
 export default function FormRowPlaceholderItem(style) {
   const tmp = createCacheKey();
-  let obj = require("../../../../hooks/usePlaceholderStyles.tsx") /* useFullscreenPlaceholderCount */;
+  let obj = useFullscreenPlaceholderCount /* useFullscreenPlaceholderCount */;
   const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(true);
   obj = { style: items, pointerEvents: "none", children: null };
   items = [placeholderAnimatedStyle, tmp.itemContainer, style.style];
@@ -32,5 +34,5 @@ export default function FormRowPlaceholderItem(style) {
   obj1[1] = items2;
   items1[1] = callback2(View, obj1);
   obj[2] = items1;
-  return callback2(require("../../../../../../reanimated/ReanimatedRexport.tsx").View, obj);
+  return callback2(ReanimatedRexport.View, obj);
 };

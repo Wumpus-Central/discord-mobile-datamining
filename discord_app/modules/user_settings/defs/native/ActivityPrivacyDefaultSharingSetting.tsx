@@ -1,3 +1,7 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { useIsInActivityPrivacyCopyExperiment } from "../../../activity_privacy/ActivityPrivacyMatchingExperiment.tsx";
+import { explicitContentFromProto } from "../../UserSettings.tsx";
 // discord_app/modules/user_settings/defs/native/ActivityPrivacyDefaultSharingSetting.tsx
 import noop from "noop";
 import createToggle from "createToggle";
@@ -5,12 +9,12 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.vpgck1);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.vpgck1);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   usePredicate() {
-    return require("../../../activity_privacy/ActivityPrivacyMatchingExperiment.tsx") /* useIsInActivityPrivacyCopyExperiment */.useIsInActivityPrivacyCopyExperiment("ActivityPrivacyDefaultSharingSetting");
+    return useIsInActivityPrivacyCopyExperiment /* useIsInActivityPrivacyCopyExperiment */.useIsInActivityPrivacyCopyExperiment("ActivityPrivacyDefaultSharingSetting");
   },
   useOptions() {
     return React.useMemo(() => {
@@ -34,16 +38,16 @@ createToggle = {
     }, []);
   },
   useValue() {
-    const DefaultGuildsActivityRestrictedV2 = require("../../UserSettings.tsx") /* explicitContentFromProto */.DefaultGuildsActivityRestrictedV2;
+    const DefaultGuildsActivityRestrictedV2 = explicitContentFromProto /* explicitContentFromProto */.DefaultGuildsActivityRestrictedV2;
     return DefaultGuildsActivityRestrictedV2.useSetting();
   },
   onValueChange(arg0) {
     const NumberResult = Number(arg0);
-    const DefaultGuildsActivityRestrictedV2 = require("../../UserSettings.tsx") /* explicitContentFromProto */.DefaultGuildsActivityRestrictedV2;
+    const DefaultGuildsActivityRestrictedV2 = explicitContentFromProto /* explicitContentFromProto */.DefaultGuildsActivityRestrictedV2;
     const setting = DefaultGuildsActivityRestrictedV2.getSetting();
-    const DefaultGuildsActivityRestrictedV22 = require("../../UserSettings.tsx") /* explicitContentFromProto */.DefaultGuildsActivityRestrictedV2;
+    const DefaultGuildsActivityRestrictedV22 = explicitContentFromProto /* explicitContentFromProto */.DefaultGuildsActivityRestrictedV2;
     DefaultGuildsActivityRestrictedV22.updateSetting(NumberResult);
-    let obj = require("../../../activity_privacy/ActivityPrivacyMatchingExperiment.tsx") /* useIsInActivityPrivacyCopyExperiment */;
+    let obj = useIsInActivityPrivacyCopyExperiment /* useIsInActivityPrivacyCopyExperiment */;
     if (obj.getIsInActivityPrivacyUpsellExperiment("ActivityPrivacyDefaultSharingSetting")) {
       let tmp2Result = tmp2(14001);
       const affectedGuilds = tmp2Result.computeAffectedGuilds(setting, NumberResult);
@@ -53,8 +57,8 @@ createToggle = {
         obj = { direction: null, affectedGuildIds: null, settingName: null };
         ({ direction: obj5[0], affectedGuildIds: obj5[1] } = affectedGuilds);
         obj[2] = activityRestrictionSettingName;
-        require("../../../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(tmp2(1959)(14817, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
-        const obj4 = require("../../../action_sheet/native/ActionSheetActionCreators.tsx");
+        ACTION_SHEET_HEIGHT_HALF.openLazy(tmp2(1959)(14817, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
+        const obj4 = ACTION_SHEET_HEIGHT_HALF;
       }
     }
   }

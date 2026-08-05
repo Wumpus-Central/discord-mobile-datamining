@@ -1,3 +1,4 @@
+import { useShouldHideGuildPurchaseEntryPoints } from "../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";
 // discord_app/modules/creator_monetization/CreatorMonetizationSettingsDisabledContext.tsx
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
@@ -21,7 +22,7 @@ export const CreatorMonetizationSettingsDisabledContextProvider = function Creat
   let children;
   let guildId;
   ({ guildId, children } = arg0);
-  let obj = require("../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx") /* useShouldHideGuildPurchaseEntryPoints */;
+  let obj = useShouldHideGuildPurchaseEntryPoints /* useShouldHideGuildPurchaseEntryPoints */;
   obj = { value: obj.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).shouldRestrictUpdatingCreatorMonetizationSettings, children };
   return <context.Provider value={obj.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).shouldRestrictUpdatingCreatorMonetizationSettings}>{children}</context.Provider>;
 };

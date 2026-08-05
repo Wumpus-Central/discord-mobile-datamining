@@ -1,3 +1,7 @@
+import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { ButtonGroup } from "../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/quests/native/QuestHomeSortingFilteringBottomSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import context from "context";
@@ -29,18 +33,18 @@ function FilterFooter(inline) {
   obj = { bottom: true, children: null };
   obj = { direction: "vertical", style: tmp.footerButtonGroup, children: null };
   const obj1 = { size: "lg", grow: true, text: null, onPress: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[2] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.i4jeWR);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj1[2] = intl.string(getSystemLocale /* getSystemLocale */.t.i4jeWR);
   obj1[3] = onConfirm;
-  const items = [closure_7(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj1), ];
+  const items = [closure_7(Button /* Button */.Button, obj1), ];
   const obj2 = { size: "lg", grow: true, text: null, onPress: null, variant: "secondary" };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj2[2] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.yBZMsQ);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj2[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.yBZMsQ);
   obj2[3] = onReset;
-  items[1] = closure_7(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj2);
+  items[1] = closure_7(Button /* Button */.Button, obj2);
   obj[2] = items;
-  obj[1] = callback2(require("../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx") /* ButtonGroup */.ButtonGroup, obj);
-  obj[2] = closure_7(require("../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  obj[1] = callback2(ButtonGroup /* ButtonGroup */.ButtonGroup, obj);
+  obj[2] = closure_7(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
   return closure_7(View, obj);
 }
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);

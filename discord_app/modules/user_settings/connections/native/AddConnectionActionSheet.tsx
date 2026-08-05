@@ -1,3 +1,5 @@
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { Button } from "../../../../design/void/native.tsx";
 // discord_app/modules/user_settings/connections/native/AddConnectionActionSheet.tsx
 import { AnalyticsLocations } from "ME";
 import { getMigratedApplicationIdentityConnectionsScreenApplications as closure_4 } from "items1";
@@ -20,8 +22,8 @@ function AddApplicationIdentityTableRow(application) {
   const tmp2 = analyticsLocations(5613)(application);
   analyticsLocations = analyticsLocations(5610)(analyticsLocations(5630).ACTION_SHEET).analyticsLocations;
   const tmp3 = analyticsLocations(5610);
-  let obj = _require("../../../../design/void/native.tsx");
-  const iconSource = application.getIconSource(obj.getIconSize(_require("../../../../design/void/native.tsx").IconSizes.LARGE));
+  let obj = _Button;
+  const iconSource = application.getIconSource(obj.getIconSize(_Button.IconSizes.LARGE));
   obj = {
     start,
     end,
@@ -44,9 +46,9 @@ function AddApplicationIdentityTableRow(application) {
     tmp7Result = tmp7(tmp5(1297).Icon, obj);
   }
   obj[4] = tmp7Result;
-  obj[5] = closure_5(_require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow.Arrow, {});
+  obj[5] = closure_5(_TableRowInner.TableRow.Arrow, {});
   obj[6] = !canStartAuthorization;
-  return closure_5(_require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, obj, application.id);
+  return closure_5(_TableRowInner.TableRow, obj, application.id);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let obj = { list: { paddingHorizontal: 16 }, icon: null };

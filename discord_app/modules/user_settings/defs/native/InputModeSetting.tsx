@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/defs/native/InputModeSetting.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { InputModes } from "DesktopSources";
@@ -6,8 +7,8 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["pS+K2L"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["pS+K2L"]);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useTrailing: function useInputModeSettingTrailing() {
@@ -23,8 +24,8 @@ createToggle = {
   },
   onPress: require("handleInputModePress").handleInputModePress,
   useSearchTerms() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    const items = [intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.nuFtHH)];
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const items = [intl.string(getSystemLocale /* getSystemLocale */.t.nuFtHH)];
     return items;
   }
 };

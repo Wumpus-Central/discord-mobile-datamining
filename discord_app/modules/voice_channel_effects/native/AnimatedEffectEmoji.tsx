@@ -1,3 +1,5 @@
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { Button } from "../../../design/void/native.tsx";
 // discord_app/modules/voice_channel_effects/native/AnimatedEffectEmoji.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -16,13 +18,13 @@ function Emoji(url) {
     obj = { uri: null };
     obj[0] = url;
     obj[2] = obj;
-    let tmp5 = jsx(require("../../../components_native/common/FastImage.tsx"), { uri: null });
+    let tmp5 = jsx(preload, { uri: null });
   } else {
     obj = { style: null, allowFontScaling: false, children: null };
     const items1 = [tmp.textEmoji];
     obj[0] = items1;
     obj[2] = url.surrogates;
-    tmp5 = jsx(require("../../../design/void/native.tsx") /* Button */.LegacyText, { style: null, allowFontScaling: false, children: null });
+    tmp5 = jsx(Button /* Button */.LegacyText, { style: null, allowFontScaling: false, children: null });
   }
   return tmp5;
 }

@@ -1,3 +1,6 @@
+import { GuildRowWrapper } from "../../home_drawer/native/HomeDrawerGuildRow.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { GuildsBarGeoRestrictedBadge } from "GuildsBarGeoRestrictedBadge.tsx";
 // discord_app/modules/guilds_bar/native/GuildsBarGeoRestrictedGuild.tsx
 import importAllResult from "noop";
 import { GUILD_ITEM_BADGE_SIZE } from "GUILD_ITEM_SIZE";
@@ -17,7 +20,7 @@ const memoResult = importAllResult.memo(function GuildsBarGeoRestrictedGuild(res
   const tmp4 = callback();
   let obj = restrictedGuild(15291);
   let animatableSourceWithFallback = null;
-  const tmp3 = require("../../themes/experiments/MobileVisualRefreshExperiment.tsx")("GuildsBarGeoRestrictedGuild");
+  const tmp3 = useIsMobileVisualRefreshExperimentEnabled("GuildsBarGeoRestrictedGuild");
   const tmp5 = restrictedGuild;
   if (null != restrictedGuild.icon) {
     let tmpResult = tmp(1416);
@@ -52,8 +55,8 @@ const memoResult = importAllResult.memo(function GuildsBarGeoRestrictedGuild(res
   obj = { selected: false, unread: false, circle: !tmp3, styles: obj.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true }), label: restrictedGuild.name, isDragTarget: false, config: memo, cutouts: items, overState: "a", externalChildren: 1, expandedChildren: 2, children: 4 };
   tmpResult = tmp(15291);
   obj = { style: tmp4.geoRestrictedBadge };
-  obj[9] = jsx(require("GuildsBarGeoRestrictedBadge.tsx"), { style: tmp4.geoRestrictedBadge });
-  obj[10] = jsx(require("../../home_drawer/native/HomeDrawerGuildRow.tsx"), { guildId: restrictedGuild.id });
+  obj[9] = jsx(GuildsBarGeoRestrictedBadge, { style: tmp4.geoRestrictedBadge });
+  obj[10] = jsx(GuildRowWrapper, { guildId: restrictedGuild.id });
   if (null != animatableSourceWithFallback) {
     const obj2 = { source: null, style: null, fadeDuration: 0 };
     obj2[0] = animatableSourceWithFallback;

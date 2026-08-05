@@ -1,3 +1,5 @@
+import { t } from "../../../../../../../_runtime/03867_t.js";
+import { parseMessageEmbedForProps } from "../../../../../safety_hub/SafetyHubUtils.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/SafetySystemNotificationEmbed.tsx
 import { Image } from "get ActivityIndicator";
 import { MessageEmbedTypes } from "ME";
@@ -19,7 +21,7 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
           type = first1.type;
         }
         if (type === MessageEmbedTypes.SAFETY_SYSTEM_NOTIFICATION) {
-          let obj = require("../../../../../safety_hub/SafetyHubUtils.tsx") /* parseMessageEmbedForProps */;
+          let obj = parseMessageEmbedForProps /* parseMessageEmbedForProps */;
           const parseMessageForPropsResult = obj.parseMessageForProps(message);
           if (null != parseMessageForPropsResult) {
             let tmp9;
@@ -52,8 +54,8 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             }
             obj = { daysAgo: null };
             const tmp6Result1 = tmp6(7865);
-            const obj7 = require("../../../../../../../_runtime/03867_t.js")();
-            obj[0] = obj7.diff(require("../../../../../../../_runtime/03867_t.js").unix(num), "days");
+            const obj7 = t();
+            obj[0] = obj7.diff(t.unix(num), "days");
             obj[2] = intl.formatToPlainString(tmp6(1236).t.eevFb6, obj);
             let str4 = parseMessageForPropsResult.body;
             if (str4 == null) {

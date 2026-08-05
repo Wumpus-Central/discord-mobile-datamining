@@ -1,3 +1,6 @@
+import { matchPath } from "../modules/routing/matchPathCompat.tsx";
+import { transitionTo } from "../modules/routing/router_utils.tsx";
+import { RouteParam } from "../modules/routing/RouteUtils.tsx";
 // discord_app/stores/SelectedGuildStore.tsx
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import fetchFingerprint from "fetchFingerprint";
@@ -67,9 +70,9 @@ prototype["initialize"] = function initialize(selectedGuildTimestampMillis) {
     lastSelectedGuildId = null;
   }
   const obj = { path: null };
-  const RouteParam = require("../modules/routing/RouteUtils.tsx") /* RouteParam */.RouteParam;
+  const RouteParam = RouteParam /* RouteParam */.RouteParam;
   obj[0] = closure_7.CHANNEL(RouteParam.guildId());
-  const matchPathResult = require("../modules/routing/matchPathCompat.tsx") /* matchPath */.matchPath(initialize.lastNonVoiceRoute, obj);
+  const matchPathResult = matchPath /* matchPath */.matchPath(initialize.lastNonVoiceRoute, obj);
   let guildId;
   if (matchPathResult != null) {
     const params = matchPathResult.params;
@@ -194,15 +197,15 @@ const selectedGuildStore = new SelectedGuildStore(require("dispatcher"), {
         })(guildId);
         if (null == tmp3) {
           c8 = null;
-          require("../modules/routing/router_utils.tsx") /* transitionTo */.replaceWith(closure_7.ME);
+          transitionTo /* transitionTo */.replaceWith(closure_7.ME);
           flag = true;
-          const obj = require("../modules/routing/router_utils.tsx") /* transitionTo */;
+          const obj = transitionTo /* transitionTo */;
         }
       }
       c8 = tmp3;
-      require("../modules/routing/router_utils.tsx") /* transitionTo */.replaceWith(closure_7.CHANNEL(tmp3));
+      transitionTo /* transitionTo */.replaceWith(closure_7.CHANNEL(tmp3));
       flag = true;
-      const obj2 = require("../modules/routing/router_utils.tsx") /* transitionTo */;
+      const obj2 = transitionTo /* transitionTo */;
     }
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
@@ -266,15 +269,15 @@ const selectedGuildStore = new SelectedGuildStore(require("dispatcher"), {
         })(id);
         if (null == tmp8) {
           c8 = null;
-          require("../modules/routing/router_utils.tsx") /* transitionTo */.replaceWith(closure_7.ME);
+          transitionTo /* transitionTo */.replaceWith(closure_7.ME);
           flag = true;
-          const obj = require("../modules/routing/router_utils.tsx") /* transitionTo */;
+          const obj = transitionTo /* transitionTo */;
         }
       }
       c8 = tmp8;
-      require("../modules/routing/router_utils.tsx") /* transitionTo */.replaceWith(closure_7.CHANNEL(tmp8));
+      transitionTo /* transitionTo */.replaceWith(closure_7.CHANNEL(tmp8));
       flag = true;
-      const obj2 = require("../modules/routing/router_utils.tsx") /* transitionTo */;
+      const obj2 = transitionTo /* transitionTo */;
     }
   },
   LOGOUT: function handleLogout() {

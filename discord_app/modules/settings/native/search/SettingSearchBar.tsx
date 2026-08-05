@@ -1,3 +1,4 @@
+import { SearchField } from "../../../../design/components/TextField/native/SearchField.native.tsx";
 // discord_app/modules/settings/native/search/SettingSearchBar.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -32,6 +33,6 @@ export default function SettingSearchBar() {
   obj = { ref: React.useRef(null), size: "md", onFocus: callback1, onBlur: callback2, onClear: callback, defaultValue: null, onChange: null };
   obj[5] = field.getField("query");
   obj[6] = callback3;
-  obj[1] = jsx(require("../../../../design/components/TextField/native/SearchField.native.tsx") /* SearchField */.SearchField, { ref: React.useRef(null), size: "md", onFocus: callback1, onBlur: callback2, onClear: callback, defaultValue: null, onChange: null });
+  obj[1] = jsx(SearchField /* SearchField */.SearchField, { ref: React.useRef(null), size: "md", onFocus: callback1, onBlur: callback2, onClear: callback, defaultValue: null, onChange: null });
   return <View ref={React.useRef(null)} size="md" onFocus={callback1} onBlur={callback2} onClear={callback} defaultValue={null} onChange={null} />;
 };

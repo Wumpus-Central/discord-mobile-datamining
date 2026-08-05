@@ -1,3 +1,7 @@
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { u } from "../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
+import { setFontSize } from "../AccessibilityActionCreators.tsx";
+import { A11Y_FEATURE_MAP } from "AccessibilityPreferencesSharedValue.tsx";
 // discord_app/modules/a11y/native/AccessibilitySystemFeatures.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -32,13 +36,13 @@ export default {
     closure_4.addChangeListener(this.handlePreferredColorSchemeChanged);
     const listener5 = closure_5.addEventListener("change", this.handleAppStateChange);
     const obj = { colorScheme: closure_4.getColorScheme() };
-    const result4 = require("../../../utils/AnalyticsUtils.tsx").setSystemAccessibilityFeatures(this.getActiveFeatures);
+    const result4 = expandEventProperties.setSystemAccessibilityFeatures(this.getActiveFeatures);
   },
   getActiveFeatures() {
     return NONE;
   },
   handleReduceMotionChanged(arg0) {
-    let obj = require("../AccessibilityActionCreators.tsx") /* setFontSize */;
+    let obj = setFontSize /* setFontSize */;
     let str = "no-preference";
     if (arg0) {
       str = "reduce";
@@ -51,12 +55,12 @@ export default {
     } else {
       closure_8 = tmp4 & ~REDUCED_MOTION;
     }
-    const tmp5 = require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[REDUCED_MOTION];
+    const tmp5 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[REDUCED_MOTION];
     if (null != tmp5) {
       obj = {};
       obj[tmp5] = useReducedMotion;
-      require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx")(tmp(13616).accessibilityPreferencesSharedValue, obj);
-      const tmp7 = require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx");
+      u(tmp(13616).accessibilityPreferencesSharedValue, obj);
+      const tmp7 = u;
     }
   },
   handleReduceTransparencyChanged(arg0) {
@@ -66,12 +70,12 @@ export default {
     } else {
       closure_8 = tmp & ~REDUCED_TRANSPARENCY;
     }
-    const tmp4 = require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[REDUCED_TRANSPARENCY];
+    const tmp4 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[REDUCED_TRANSPARENCY];
     if (null != tmp4) {
       const obj = {};
       obj[tmp4] = arg0;
-      require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx")(require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.accessibilityPreferencesSharedValue, obj);
-      const tmp6 = require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx");
+      u(A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.accessibilityPreferencesSharedValue, obj);
+      const tmp6 = u;
     }
   },
   handleBoldTextChanged(arg0) {
@@ -81,12 +85,12 @@ export default {
     } else {
       closure_8 = tmp & ~BOLD_TEXT;
     }
-    const tmp4 = require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[BOLD_TEXT];
+    const tmp4 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[BOLD_TEXT];
     if (null != tmp4) {
       const obj = {};
       obj[tmp4] = arg0;
-      require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx")(require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.accessibilityPreferencesSharedValue, obj);
-      const tmp6 = require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx");
+      u(A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.accessibilityPreferencesSharedValue, obj);
+      const tmp6 = u;
     }
   },
   handleGrayscaleChanged(arg0) {
@@ -96,12 +100,12 @@ export default {
     } else {
       closure_8 = tmp & ~GRAYSCALE;
     }
-    const tmp4 = require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[GRAYSCALE];
+    const tmp4 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[GRAYSCALE];
     if (null != tmp4) {
       const obj = {};
       obj[tmp4] = arg0;
-      require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx")(require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.accessibilityPreferencesSharedValue, obj);
-      const tmp6 = require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx");
+      u(A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.accessibilityPreferencesSharedValue, obj);
+      const tmp6 = u;
     }
   },
   handleInvertColorsChanged(arg0) {
@@ -111,12 +115,12 @@ export default {
     } else {
       closure_8 = tmp & ~INVERT_COLORS;
     }
-    const tmp4 = require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[INVERT_COLORS];
+    const tmp4 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[INVERT_COLORS];
     if (null != tmp4) {
       const obj = {};
       obj[tmp4] = arg0;
-      require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx")(require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.accessibilityPreferencesSharedValue, obj);
-      const tmp6 = require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx");
+      u(A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.accessibilityPreferencesSharedValue, obj);
+      const tmp6 = u;
     }
   },
   handlePreferredColorSchemeChanged(colorScheme) {
@@ -124,61 +128,61 @@ export default {
     if ("dark" === colorScheme) {
       const PREFERS_COLOR_SCHEME_LIGHT3 = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_LIGHT;
       closure_8 = closure_8 & ~PREFERS_COLOR_SCHEME_LIGHT3;
-      const tmp21 = require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT3];
+      const tmp21 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT3];
       if (null != tmp21) {
         let obj = {};
         obj[tmp21] = false;
-        require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx")(tmp19(13616).accessibilityPreferencesSharedValue, obj);
-        const tmp24 = require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx");
+        u(tmp19(13616).accessibilityPreferencesSharedValue, obj);
+        const tmp24 = u;
       }
       const PREFERS_COLOR_SCHEME_DARK2 = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_DARK;
       closure_8 = closure_8 | PREFERS_COLOR_SCHEME_DARK2;
-      const tmp27 = require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK2];
+      const tmp27 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK2];
       if (null != tmp27) {
         obj = {};
         obj[tmp27] = true;
-        require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx")(tmp19(13616).accessibilityPreferencesSharedValue, obj);
-        const tmp29 = require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx");
+        u(tmp19(13616).accessibilityPreferencesSharedValue, obj);
+        const tmp29 = u;
       }
       const tmp17 = AccessibilityFeatureFlags;
     } else if ("light" === colorScheme) {
       const PREFERS_COLOR_SCHEME_DARK = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_DARK;
       closure_8 = closure_8 & ~PREFERS_COLOR_SCHEME_DARK;
-      const tmp10 = require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK];
+      const tmp10 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK];
       if (null != tmp10) {
         const obj1 = {};
         obj1[tmp10] = false;
-        require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx")(tmp8(13616).accessibilityPreferencesSharedValue, obj1);
-        const tmp13 = require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx");
+        u(tmp8(13616).accessibilityPreferencesSharedValue, obj1);
+        const tmp13 = u;
       }
       const PREFERS_COLOR_SCHEME_LIGHT2 = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_LIGHT;
       closure_8 = closure_8 | PREFERS_COLOR_SCHEME_LIGHT2;
-      const tmp16 = require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT2];
+      const tmp16 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT2];
       if (null != tmp16) {
         const obj2 = {};
         obj2[tmp16] = true;
-        require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx")(tmp8(13616).accessibilityPreferencesSharedValue, obj2);
-        const tmp41 = require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx");
+        u(tmp8(13616).accessibilityPreferencesSharedValue, obj2);
+        const tmp41 = u;
       }
       const tmp6 = AccessibilityFeatureFlags;
     } else {
       const PREFERS_COLOR_SCHEME_DARK3 = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_DARK;
       closure_8 = closure_8 & ~PREFERS_COLOR_SCHEME_DARK3;
-      const tmp35 = require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK3];
+      const tmp35 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK3];
       if (null != tmp35) {
         obj = {};
         obj[tmp35] = false;
-        require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx")(tmp33(13616).accessibilityPreferencesSharedValue, obj);
-        const tmp2 = require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx");
+        u(tmp33(13616).accessibilityPreferencesSharedValue, obj);
+        const tmp2 = u;
       }
       const PREFERS_COLOR_SCHEME_LIGHT = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_LIGHT;
       closure_8 = closure_8 & ~PREFERS_COLOR_SCHEME_LIGHT;
-      const tmp5 = require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT];
+      const tmp5 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT];
       if (null != tmp5) {
         const obj3 = {};
         obj3[tmp5] = false;
-        require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx")(tmp33(13616).accessibilityPreferencesSharedValue, obj3);
-        const tmp38 = require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx");
+        u(tmp33(13616).accessibilityPreferencesSharedValue, obj3);
+        const tmp38 = u;
       }
       const tmp31 = AccessibilityFeatureFlags;
     }
@@ -191,12 +195,12 @@ export default {
     } else {
       closure_8 = tmp3 & ~REDUCED_MOTION;
     }
-    const tmp6 = require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[REDUCED_MOTION];
+    const tmp6 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[REDUCED_MOTION];
     if (null != tmp6) {
       let obj = {};
       obj[tmp6] = useReducedMotion;
-      require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx")(tmp4(13616).accessibilityPreferencesSharedValue, obj);
-      const tmp8 = require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx");
+      u(tmp4(13616).accessibilityPreferencesSharedValue, obj);
+      const tmp8 = u;
     }
     const REDUCED_MOTION_FROM_USER_SETTINGS = tmp.REDUCED_MOTION_FROM_USER_SETTINGS;
     if ("auto" !== maybeApplyNoTextColorForLightCustomTheme.rawPrefersReducedMotion) {
@@ -204,12 +208,12 @@ export default {
     } else {
       closure_8 = tmp11 & ~REDUCED_MOTION_FROM_USER_SETTINGS;
     }
-    const tmp12 = require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[REDUCED_MOTION_FROM_USER_SETTINGS];
+    const tmp12 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[REDUCED_MOTION_FROM_USER_SETTINGS];
     if (null != tmp12) {
       obj = {};
       obj[tmp12] = tmp10;
-      require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx")(tmp4(13616).accessibilityPreferencesSharedValue, obj);
-      const tmp14 = require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx");
+      u(tmp4(13616).accessibilityPreferencesSharedValue, obj);
+      const tmp14 = u;
     }
     const SATURATION_LEVEL_DECREASED = tmp.SATURATION_LEVEL_DECREASED;
     if (maybeApplyNoTextColorForLightCustomTheme.saturation < 1) {
@@ -217,12 +221,12 @@ export default {
     } else {
       closure_8 = tmp17 & ~SATURATION_LEVEL_DECREASED;
     }
-    const tmp18 = require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[SATURATION_LEVEL_DECREASED];
+    const tmp18 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[SATURATION_LEVEL_DECREASED];
     if (null != tmp18) {
       obj = {};
       obj[tmp18] = tmp16;
-      require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx")(tmp4(13616).accessibilityPreferencesSharedValue, obj);
-      const tmp20 = require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx");
+      u(tmp4(13616).accessibilityPreferencesSharedValue, obj);
+      const tmp20 = u;
     }
     const CONTRAST_LEVEL_DECREASED = tmp.CONTRAST_LEVEL_DECREASED;
     if (maybeApplyNoTextColorForLightCustomTheme.contrast < 1) {
@@ -230,12 +234,12 @@ export default {
     } else {
       closure_8 = tmp23 & ~CONTRAST_LEVEL_DECREASED;
     }
-    const tmp24 = require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[CONTRAST_LEVEL_DECREASED];
+    const tmp24 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[CONTRAST_LEVEL_DECREASED];
     if (null != tmp24) {
       const obj1 = {};
       obj1[tmp24] = tmp22;
-      require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx")(tmp4(13616).accessibilityPreferencesSharedValue, obj1);
-      const tmp26 = require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx");
+      u(tmp4(13616).accessibilityPreferencesSharedValue, obj1);
+      const tmp26 = u;
     }
     const CONTRAST_LEVEL_INCREASED = tmp.CONTRAST_LEVEL_INCREASED;
     if (maybeApplyNoTextColorForLightCustomTheme.contrast > 1) {
@@ -243,12 +247,12 @@ export default {
     } else {
       closure_8 = tmp29 & ~CONTRAST_LEVEL_INCREASED;
     }
-    const tmp30 = require("AccessibilityPreferencesSharedValue.tsx") /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[CONTRAST_LEVEL_INCREASED];
+    const tmp30 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[CONTRAST_LEVEL_INCREASED];
     if (null != tmp30) {
       const obj2 = {};
       obj2[tmp30] = tmp28;
-      require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx")(tmp4(13616).accessibilityPreferencesSharedValue, obj2);
-      const tmp32 = require("../../reanimated/utils/updateSharedValueIfChanged.native.tsx");
+      u(tmp4(13616).accessibilityPreferencesSharedValue, obj2);
+      const tmp32 = u;
     }
   },
   handleAppStateChange(arg0) {

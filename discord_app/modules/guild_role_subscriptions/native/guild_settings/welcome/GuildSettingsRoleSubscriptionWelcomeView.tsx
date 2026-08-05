@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { ErrorBlock } from "../../components/ErrorBlock.tsx";
+import { WarningNotice } from "../../components/WarningNotice.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/GuildSettingsRoleSubscriptionWelcomeView.tsx
 import encodeProperties from "encodeProperties";
 import Form from "Form";
@@ -31,18 +34,18 @@ function ApplicationStatusNotice(arg0) {
     obj[0] = items;
     obj = { children: null };
     obj[0] = resubmissionError.getAnyErrorMessage();
-    obj[1] = callback(require("../../components/ErrorBlock.tsx"), obj);
+    obj[1] = callback(ErrorBlock, obj);
     return callback(closure_6, obj);
   } else {
     if (isApplicationPending) {
-      const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      requestRejectedNoticeText = intl2.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.OrkTBn);
+      const intl2 = getSystemLocale /* getSystemLocale */.intl;
+      requestRejectedNoticeText = intl2.string(getSystemLocale /* getSystemLocale */.t.OrkTBn);
     } else if (null == requestRejectedNoticeText) {
       requestRejectedNoticeText = null;
       if (null != reapplyNoticeText) {
-        const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+        const intl = getSystemLocale /* getSystemLocale */.intl;
         requestRejectedNoticeText = reapplyNoticeText;
-        const stringResult = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["YKw/NQ"]);
+        const stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["YKw/NQ"]);
       }
     }
     let tmp7 = null;
@@ -55,7 +58,7 @@ function ApplicationStatusNotice(arg0) {
       obj1[1] = stringResult;
       obj1[2] = createEnableRequest;
       obj1[3] = resubmittingEnableRequest;
-      obj[1] = callback(require("../../components/WarningNotice.tsx"), obj1);
+      obj[1] = callback(WarningNotice, obj1);
       tmp7 = callback(closure_6, obj);
     }
     return tmp7;

@@ -1,3 +1,6 @@
+import { MurmurHashV3 } from "../../../../_runtime/01217_MurmurHashV3.js";
+import { Storage } from "../storage/Storage.tsx";
+import { UnitType } from "ApexTypes.tsx";
 // discord_common/js/packages/apex/BaseApexExperimentStore.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
@@ -89,7 +92,7 @@ prototype["loadStoredState"] = function loadStoredState(version, buildOverrideEx
       if (null == tmp9) {
         let tmp6 = importDefault;
         let tmp7 = dependencyMap;
-        let obj2 = require("../../../../_runtime/01217_MurmurHashV3.js");
+        let obj2 = MurmurHashV3;
         let v3Result = obj2.v3(key10020);
         tmp12[key10020] = v3Result;
         tmp9 = v3Result;
@@ -137,7 +140,7 @@ prototype["setExperimentAssignments"] = function setExperimentAssignments(apexEx
     while (iter !== undefined) {
       let tmp5 = require;
       let tmp6 = dependencyMap;
-      let tmp7 = require("ApexTypes.tsx") /* UnitType */.UnitTypeToKind[nextResult];
+      let tmp7 = UnitType /* UnitType */.UnitTypeToKind[nextResult];
       let tmp8 = apexExperiments.assignments[nextResult];
       let tmp9 = tmp8;
       if (null != tmp8) {
@@ -184,11 +187,11 @@ prototype["setExperimentAssignments"] = function setExperimentAssignments(apexEx
               let tmp27 = num;
               let tmp28 = require;
               let tmp29 = dependencyMap;
-              obj[3] = num & require("ApexTypes.tsx") /* UnitType */.ExperimentFlags.IsOverride;
+              obj[3] = num & UnitType /* UnitType */.ExperimentFlags.IsOverride;
               let tmp30 = tmp20;
               obj[4] = tmp20;
-              obj[5] = num & require("ApexTypes.tsx") /* UnitType */.ExperimentFlags.ExposureTrackingEnabled;
-              obj[6] = num & require("ApexTypes.tsx") /* UnitType */.ExperimentFlags.UseAsEligibility;
+              obj[5] = num & UnitType /* UnitType */.ExperimentFlags.ExposureTrackingEnabled;
+              obj[6] = num & UnitType /* UnitType */.ExperimentFlags.UseAsEligibility;
               let tmp31 = tmp22;
               obj[7] = tmp22;
               tmp10.assignments[tmp17] = obj;
@@ -251,11 +254,11 @@ prototype["setGuildExperimentAssignments"] = function setGuildExperimentAssignme
       let tmp23 = num;
       let tmp24 = require;
       let tmp25 = dependencyMap;
-      obj[3] = num & require("ApexTypes.tsx") /* UnitType */.ExperimentFlags.IsOverride;
+      obj[3] = num & UnitType /* UnitType */.ExperimentFlags.IsOverride;
       let tmp26 = tmp18;
       obj[4] = tmp18;
-      obj[5] = num & require("ApexTypes.tsx") /* UnitType */.ExperimentFlags.ExposureTrackingEnabled;
-      obj[6] = num & require("ApexTypes.tsx") /* UnitType */.ExperimentFlags.UseAsEligibility;
+      obj[5] = num & UnitType /* UnitType */.ExperimentFlags.ExposureTrackingEnabled;
+      obj[6] = num & UnitType /* UnitType */.ExperimentFlags.UseAsEligibility;
       let tmp27 = obj;
       tmp9.assignments[tmp15] = obj;
       continue;
@@ -268,10 +271,10 @@ prototype["createOverride"] = function createOverride(experimentName, variantId)
   const merged = Object.assign(obj);
   let tmp3 = dependencyMap5[experimentName];
   if (null == tmp3) {
-    const v3Result = require("../../../../_runtime/01217_MurmurHashV3.js").v3(experimentName);
+    const v3Result = MurmurHashV3.v3(experimentName);
     tmp2[experimentName] = v3Result;
     tmp3 = v3Result;
-    const obj2 = require("../../../../_runtime/01217_MurmurHashV3.js");
+    const obj2 = MurmurHashV3;
   }
   obj[experimentName] = { hashedName: tmp3, variantId, isOverride: true, exposureTrackingEnabled: false };
   const result = this.trackExposureSuppression(experimentName, "client_override");
@@ -285,10 +288,10 @@ prototype["createSessionOverride"] = function createSessionOverride(experimentNa
   const merged = Object.assign(obj);
   let tmp3 = dependencyMap5[experimentName];
   if (null == tmp3) {
-    const v3Result = require("../../../../_runtime/01217_MurmurHashV3.js").v3(experimentName);
+    const v3Result = MurmurHashV3.v3(experimentName);
     tmp2[experimentName] = v3Result;
     tmp3 = v3Result;
-    const obj2 = require("../../../../_runtime/01217_MurmurHashV3.js");
+    const obj2 = MurmurHashV3;
   }
   obj[experimentName] = { hashedName: tmp3, variantId, isOverride: true, exposureTrackingEnabled: false };
 };
@@ -325,7 +328,7 @@ prototype["handleLogout"] = function handleLogout(arg0) {
     const result = self.clearUserServerAssignments();
     const result1 = self.clearSessionOverrides();
   }
-  const Storage = require("../storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   Storage.remove(apexTrackedExposures);
   const result2 = self.clearAllTrackedExposures();
 };
@@ -350,10 +353,10 @@ prototype["getAssignment"] = function getAssignment(kind, closure_1, name) {
 prototype["getServerAssignment"] = function getServerAssignment(kind, id, name) {
   let tmp2 = dependencyMap5[name];
   if (null == tmp2) {
-    const v3Result = require("../../../../_runtime/01217_MurmurHashV3.js").v3(name);
+    const v3Result = MurmurHashV3.v3(name);
     tmp[name] = v3Result;
     tmp2 = v3Result;
-    const obj = require("../../../../_runtime/01217_MurmurHashV3.js");
+    const obj = MurmurHashV3;
   }
   return null != closure_9[kind][id] ? closure_9[kind][id].assignments[tmp2] : undefined;
 };
@@ -377,10 +380,10 @@ prototype["getEvaluationAndAssignmentInner"] = function getEvaluationAndAssignme
       items2 = [tmp10.evaluationId, ];
       let tmp3 = dependencyMap5[_slicedToArray];
       if (null == tmp3) {
-        const v3Result = require("../../../../_runtime/01217_MurmurHashV3.js").v3(_slicedToArray);
+        const v3Result = MurmurHashV3.v3(_slicedToArray);
         tmp2[_slicedToArray] = v3Result;
         tmp3 = v3Result;
-        const obj = require("../../../../_runtime/01217_MurmurHashV3.js");
+        const obj = MurmurHashV3;
       }
       items2[1] = tmp10.assignments[tmp3];
     }
@@ -399,7 +402,7 @@ prototype["getEvaluationAndAssignment"] = function getEvaluationAndAssignment(re
   } else {
     let LOGGED_OUT_USER_ID_SENTINEL = closure_2;
     if (closure_2 == null) {
-      LOGGED_OUT_USER_ID_SENTINEL = require("ApexTypes.tsx") /* UnitType */.LOGGED_OUT_USER_ID_SENTINEL;
+      LOGGED_OUT_USER_ID_SENTINEL = UnitType /* UnitType */.LOGGED_OUT_USER_ID_SENTINEL;
     }
     [r10021, tmp8] = tmp(self.getEvaluationAndAssignmentInner("user", LOGGED_OUT_USER_ID_SENTINEL, _slicedToArray), 2);
     if (null == tmp8) {
@@ -439,10 +442,10 @@ prototype["trackExperimentExposure"] = function trackExperimentExposure(arg0, tr
   const combined = "" + trackedVariantId + "|" + revision2 + "|" + trackedVariantId2 + "|" + location + "|" + closure_1 + "|1";
   let tmp3 = dependencyMap5[combined];
   if (null == tmp3) {
-    const v3Result = require("../../../../_runtime/01217_MurmurHashV3.js").v3(combined);
+    const v3Result = MurmurHashV3.v3(combined);
     tmp2[combined] = v3Result;
     tmp3 = v3Result;
-    const obj = require("../../../../_runtime/01217_MurmurHashV3.js");
+    const obj = MurmurHashV3;
   }
   if ("user" === revision) {
     self.withExposureTracking(tmp3, () => self.track(constants.EXPERIMENT_USER_EVALUATION_EXPOSED, { evaluation_id: closure_1, experiment: closure_2, exposure_location: _objectWithoutProperties, unit_type: _slicedToArray, tracked_variation_id: closure_6 }, { flush: true }));
@@ -564,7 +567,7 @@ prototype["shouldTrackExposure"] = function shouldTrackExposure(arg0) {
   return tmp2;
 };
 prototype["loadTrackedExposures"] = function loadTrackedExposures() {
-  const Storage = require("../storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   const value = Storage.get(apexTrackedExposures);
   if (null != value) {
     if (2 === value.version) {
@@ -600,7 +603,7 @@ prototype["loadTrackedExposures"] = function loadTrackedExposures() {
 };
 prototype["saveTrackedExposures"] = function saveTrackedExposures(closure_19) {
   try {
-    const Storage = require("../storage/Storage.tsx") /* Storage */.Storage;
+    const Storage = Storage /* Storage */.Storage;
     let obj = { version: 2, exposures: null };
     obj[1] = closure_19;
     const result = Storage.set(apexTrackedExposures, obj);
@@ -639,10 +642,10 @@ prototype["clearAllTrackedExposures"] = function clearAllTrackedExposures() {
 prototype["getHash"] = function getHash(arg0) {
   let tmp2 = dependencyMap5[arg0];
   if (null == tmp2) {
-    const v3Result = require("../../../../_runtime/01217_MurmurHashV3.js").v3(arg0);
+    const v3Result = MurmurHashV3.v3(arg0);
     tmp[arg0] = v3Result;
     tmp2 = v3Result;
-    const obj = require("../../../../_runtime/01217_MurmurHashV3.js");
+    const obj = MurmurHashV3;
   }
   return tmp2;
 };

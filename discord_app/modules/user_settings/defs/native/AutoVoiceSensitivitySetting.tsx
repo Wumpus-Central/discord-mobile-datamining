@@ -1,3 +1,6 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { trackDeviceChanged } from "../../../../actions/AudioActionCreators.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/defs/native/AutoVoiceSensitivitySetting.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createToggle from "createToggle";
@@ -5,23 +8,23 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.Z4oaN0);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.Z4oaN0);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useValue: function useAutoVoiceSensitivitySettingValue() {
     const items = [_detectH265HardwareDecode];
-    return require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => modeOptions.getModeOptions().autoThreshold);
+    return initialize /* initialize */.useStateFromStores(items, () => modeOptions.getModeOptions().autoThreshold);
   },
   onValueChange: function onAutoVoiceSensitivitySettingValueChange(autoThreshold) {
     mode = mode.getMode();
-    let obj = require("../../../../actions/AudioActionCreators.tsx");
+    let obj = trackDeviceChanged;
     obj = { autoThreshold };
     obj.setMode(mode, obj);
   },
   useSearchTerms() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    const items = [intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.nuFtHH)];
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const items = [intl.string(getSystemLocale /* getSystemLocale */.t.nuFtHH)];
     return items;
   }
 };

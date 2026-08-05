@@ -1,3 +1,5 @@
+import { encodeProperties } from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { trackImpression } from "../useTrackImpression.tsx";
 // discord_app/modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx
 const result = require("set").fileFinishedImporting("modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx");
 
@@ -8,8 +10,8 @@ export const useTrackNavigatorScreenImpression = function useTrackNavigatorScree
     impressionPropertiesResult = impressionProperties(params.params);
   }
   const obj = { type: null, name: null, properties: null };
-  obj[0] = require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionTypes.PAGE;
+  obj[0] = encodeProperties /* encodeProperties */.ImpressionTypes.PAGE;
   obj[1] = impressionProperties.impressionName;
   obj[2] = impressionPropertiesResult;
-  require("../useTrackImpression.tsx")(obj);
+  trackImpression(obj);
 };

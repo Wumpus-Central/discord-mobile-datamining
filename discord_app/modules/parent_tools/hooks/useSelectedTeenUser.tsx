@@ -1,3 +1,5 @@
+import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { useIsInAdultAgeGroup } from "useIsInAdultAgeGroup.tsx";
 // discord_app/modules/parent_tools/hooks/useSelectedTeenUser.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getSettings from "getSettings";
@@ -7,9 +9,9 @@ const require = arg1;
 const result = require("freshTeenActivityWithMap").fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeenUser.tsx");
 
 export const useSelectedTeenUser = function useSelectedTeenUser() {
-  const _require = require("useIsInAdultAgeGroup.tsx")();
+  const _require = useIsInAdultAgeGroup();
   const items = [freshTeenActivityWithMap, mergeGuildAvatar];
-  return _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
+  return _defaultAreStatesEqual.useStateFromStores(items, () => {
     if (true !== closure_0) {
       return outer1_3.getCurrentUser();
     } else {
@@ -25,7 +27,7 @@ export const useSelectedTeenUser = function useSelectedTeenUser() {
 export const useTeenUserForId = function useTeenUserForId(gifterUserId) {
   const _require = gifterUserId;
   const items = [mergeGuildAvatar];
-  return _require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
+  return _defaultAreStatesEqual.useStateFromStores(items, () => {
     const user = outer1_3.getUser(closure_0);
     return null != user ? user : undefined;
   });

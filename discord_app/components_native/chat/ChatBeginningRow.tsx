@@ -1,3 +1,12 @@
+import { registerAsset } from "../../../_runtime/11743_registerAsset.js";
+import { registerAsset } from "../../../_runtime/11867_registerAsset.js";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
+import { RowButtonWrapper } from "../../design/components/TableRow/native/RowButton.native.tsx";
+import { map } from "../../design/tokens/native/useToken.tsx";
+import { useTheme } from "../../hooks/useTheme.tsx";
+import { PortalAccessibilityWorkaroundView } from "../../modules/a11y/native/PortalAccessibilityWorkaroundView.tsx";
+import { computeChannelName } from "../../modules/channel/useChannelName.tsx";
 // discord_app/components_native/chat/ChatBeginningRow.tsx
 import TextIcon from "TextIcon";
 import participantFromServer from "participantFromServer";
@@ -135,8 +144,8 @@ function LinkManageButtons(arg0) {
   ({ canEdit, isPrivate, channel: require } = arg0);
   ({ canManageRoles, theme } = arg0);
   const tmp = createCacheKey();
-  let obj = require("../../design/tokens/native/useToken.tsx") /* map */;
-  const token = obj.useToken(require("../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_LINK, theme);
+  let obj = map /* map */;
+  const token = obj.useToken(Themes.colors.TEXT_LINK, theme);
   obj = { style: tmp.ctaContainer, children: null };
   if (isPrivate) {
     isPrivate = canManageRoles;
@@ -150,7 +159,7 @@ function LinkManageButtons(arg0) {
     ({ ctaButton: arr[0], subtitle: arr[1] } = tmp);
     obj[2] = items;
     const obj1 = { source: null, size: null, color: null };
-    obj1[0] = require("../../../_runtime/11743_registerAsset.js");
+    obj1[0] = registerAsset;
     obj1[1] = tmp2(1297).IconSizes.REFRESH_SMALL_16;
     obj1[2] = token;
     const items1 = [callback2(tmp2(1297).Icon, obj1), ];
@@ -195,10 +204,10 @@ function ThreadOwner(arg0) {
   let guildId;
   let require;
   ({ userId: require, guildId } = arg0);
-  let obj = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [closure_24];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_24.getUser(closure_0));
-  let obj1 = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj1 = initialize /* initialize */;
   const items1 = [trackCommunicationDisabled];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => {
     let member = null;
@@ -207,7 +216,7 @@ function ThreadOwner(arg0) {
     }
     return member;
   });
-  let obj2 = require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj2 = initialize /* initialize */;
   const items2 = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores2 = obj2.useStateFromStores(items2, () => roleStyle.roleStyle);
   let str;
@@ -344,16 +353,16 @@ function ChatBeginningRowThread(channel) {
 }
 function ChatBeginningRowGuildNonDefaultChannel(channel) {
   channel = channel.channel;
-  const tmp3 = require("../../modules/channel/useChannelName.tsx")(channel, true);
+  const tmp3 = computeChannelName(channel, true);
   const canResult = getUncachedChannelPermissions.can(constants2.MANAGE_CHANNELS, channel);
   const tmp = importDefault;
-  const tmp4 = require("../../modules/channel/useChannelName.tsx")(channel, false);
+  const tmp4 = computeChannelName(channel, false);
   const canResult1 = getUncachedChannelPermissions.can(constants2.MANAGE_ROLES, channel);
   let obj = channel(8919);
   const result = obj.isPrivateGuildChannel(channel);
   const canResult2 = getUncachedChannelPermissions.can(constants2.READ_MESSAGE_HISTORY, channel);
   const intl = channel(1236).intl;
-  const tmp10 = require("../../hooks/useTheme.tsx")();
+  const tmp10 = useTheme();
   const intl2 = channel(1236).intl;
   if (result) {
     obj = { channelName: null, topicHook: null };
@@ -452,7 +461,7 @@ function ManageAppButton(application) {
       obj[2] = intl.string(tmp2(1236).t["5S3sQF"]);
       obj = { size: null, source: null, style: null };
       obj[0] = tmp2(1297).Icon.Sizes.SMALL;
-      obj[1] = require("../../../_runtime/11867_registerAsset.js");
+      obj[1] = registerAsset;
       obj[2] = tmp.appDMButtonIcon;
       obj[3] = callback2(tmp2(1297).Icon, obj);
       obj[4] = function onPress() {
@@ -548,7 +557,7 @@ function MuteAppButton(channel) {
 }
 function ChatBeginningRowDMGuard(arg0) {
   const _require = arg0;
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [closure_24];
   const stateFromStores = obj.useStateFromStores(items, () => {
     channel = channel.channel;
@@ -932,11 +941,11 @@ function ChatBeginningRowButton(style) {
   let obj = { style: style.style, children: null };
   ({ title, subtitle, IconComponent, iconVariant, onPress, trailing } = style);
   obj = { onPress, icon: null, label: null, subLabel: null, trailing: null };
-  obj[1] = callback2(require("../../design/components/TableRow/native/RowButton.native.tsx") /* RowButtonWrapper */.RowButton.Icon, { IconComponent, variant: iconVariant });
+  obj[1] = callback2(RowButtonWrapper /* RowButtonWrapper */.RowButton.Icon, { IconComponent, variant: iconVariant });
   obj[2] = title;
   obj[3] = subtitle;
   obj[4] = trailing;
-  obj[1] = callback2(require("../../design/components/TableRow/native/RowButton.native.tsx") /* RowButtonWrapper */.RowButton, obj);
+  obj[1] = callback2(RowButtonWrapper /* RowButtonWrapper */.RowButton, obj);
   return callback2(closure_7, obj);
 }
 function ChatBeginningRowGroupDM(channel) {
@@ -1430,7 +1439,7 @@ export default function ChatBeginningRow(channelId) {
       tmp19Result = tmp19(closure_7, obj1, channelId);
     }
     obj[1] = tmp19Result;
-    return callback2(require("../../modules/a11y/native/PortalAccessibilityWorkaroundView.tsx"), obj);
+    return callback2(PortalAccessibilityWorkaroundView, obj);
   } else if (THREAD_CHANNEL_TYPES.has(stateFromStores.type)) {
     obj2 = { channel: null };
     obj2[0] = stateFromStores;

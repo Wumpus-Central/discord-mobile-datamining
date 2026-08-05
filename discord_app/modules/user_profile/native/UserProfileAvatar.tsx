@@ -1,3 +1,5 @@
+import { HeaderAvatar } from "../../profile_customization/native/HeaderAvatar.tsx";
+import { useSharedStyles } from "UserProfileSharedStyles.tsx";
 // discord_app/modules/user_profile/native/UserProfileAvatar.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -17,7 +19,7 @@ const forwardRefResult = importAllResult.forwardRef((backgroundColor, ref) => {
     size = AVATAR_SIZE_VARIANT;
   }
   const merged = Object.assign(backgroundColor, Object.create(null));
-  const tmp2 = require("UserProfileSharedStyles.tsx")();
+  const tmp2 = useSharedStyles();
   let obj = { children: null };
   const items = [, , ];
   ({ avatarBackground: arr[0], avatarPosition: arr[1] } = tmp2);
@@ -27,7 +29,7 @@ const forwardRefResult = importAllResult.forwardRef((backgroundColor, ref) => {
   items2 = [, ];
   ({ avatar: arr3[0], avatarPosition: arr3[1] } = tmp2);
   const merged1 = Object.assign(merged);
-  items1[1] = callback(require("../../profile_customization/native/HeaderAvatar.tsx"), obj);
+  items1[1] = callback(HeaderAvatar, obj);
   obj[0] = items1;
   return callback2(closure_8, obj);
 });

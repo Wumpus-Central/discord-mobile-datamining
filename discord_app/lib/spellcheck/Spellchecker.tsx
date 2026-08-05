@@ -1,3 +1,6 @@
+import { parse } from "../../../_runtime/05290_parse.js";
+import { set } from "../../../discord_common/js/shared/utils/DOMUtils.tsx";
+import { set } from "fallbackLocales.tsx";
 // discord_app/lib/spellcheck/Spellchecker.tsx
 import set from "set";
 import _slicedToArray from "_slicedToArray";
@@ -7,11 +10,11 @@ import importDefaultResult1 from "apply";
 
 const require = arg1;
 function normalizeLocale(arg0) {
-  let str = require("fallbackLocales.tsx")[arg0];
+  let str = set[arg0];
   if (str == null) {
     str = arg0;
   }
-  const parsed = require("../../../_runtime/05290_parse.js") /* parse */.parse(str.replace(/[_-]/g, "-"));
+  const parsed = parse /* parse */.parse(str.replace(/[_-]/g, "-"));
   if (null != parsed) {
     if (null != parsed.langtag.language) {
       if (null != parsed.langtag.region) {
@@ -186,7 +189,7 @@ let closure_10 = require("apply").debounce((detectLanguage, hasAttribute) => {
       }
     }
     textContent = hasAttribute.value;
-    obj = require("../../../discord_common/js/shared/utils/DOMUtils.tsx") /* set */;
+    obj = set /* set */;
   }
   if (null != textContent) {
     detectLanguage.detectLanguage(textContent);

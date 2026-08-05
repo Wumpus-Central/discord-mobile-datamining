@@ -1,3 +1,6 @@
+import { Directions } from "../../../../../../_runtime/05368_Directions.js";
+import { HappeningNowCardPlaceholder } from "HappeningNowCardPlaceholder.tsx";
+import { HappeningNowCardUnifiedVC } from "HappeningNowCardUnifiedVC.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNow.tsx
 import HappeningNowCardCreateChannel from "HappeningNowCardCreateChannel";
 import importAllResult from "useHappeningNowScrollBehavior";
@@ -24,11 +27,11 @@ function renderCard(kind, fullWidth) {
       const merged = Object.assign(kind);
       const merged1 = Object.assign(fullWidth);
       obj.cardKey = keyExtractor(kind);
-      return jsx(require("HappeningNowCardUnifiedVC.tsx"), {});
+      return jsx(HappeningNowCardUnifiedVC, {});
     }
   }
   obj = { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant };
-  return jsx(require("HappeningNowCardPlaceholder.tsx") /* HappeningNowCardPlaceholder */.HappeningNowCardPlaceholder, { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant });
+  return jsx(HappeningNowCardPlaceholder /* HappeningNowCardPlaceholder */.HappeningNowCardPlaceholder, { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant });
 }
 function keyExtractor(voiceState) {
   let kind;
@@ -57,7 +60,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   obj = { ref };
   const merged = Object.assign(arg0);
   obj[1] = <closure_5 ref={arg1} />;
-  return jsx(require("../../../../../../_runtime/05368_Directions.js") /* Directions */.GestureDetector, { ref });
+  return jsx(Directions /* Directions */.GestureDetector, { ref });
 });
 forwardRefResult.displayName = "HappeningNowScrollView";
 const NativeResult = Gesture.Native();

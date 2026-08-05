@@ -1,3 +1,5 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { isCommunicationDisabled } from "CommunicationDisabledUtils.tsx";
 // discord_app/modules/guild_communication_disabled/useUserCommunicationDisabled.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -10,7 +12,7 @@ export default function useUserCommunicationDisabled(arg0, arg1) {
   const dependencyMap = arg1;
   const items = [trackCommunicationDisabled];
   const items1 = [arg1, arg0];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     let member = null;
     if (null != closure_1) {
       member = null;
@@ -28,9 +30,9 @@ export default function useUserCommunicationDisabled(arg0, arg1) {
     prop = null;
   }
   const items2 = [prop, ];
-  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const obj = _initialize;
   const tmp = _require;
-  items2[1] = _require("CommunicationDisabledUtils.tsx").isMemberCommunicationDisabled(stateFromStores);
+  items2[1] = _isCommunicationDisabled.isMemberCommunicationDisabled(stateFromStores);
   return items2;
 };
 export const useCurrentUserCommunicationDisabled = function useCurrentUserCommunicationDisabled(guild_id) {
@@ -81,6 +83,6 @@ export const userCommunicationDisabled = function userCommunicationDisabled(id, 
   if (prop == null) {
     prop = null;
   }
-  const items = [prop, require("CommunicationDisabledUtils.tsx") /* isCommunicationDisabled */.isMemberCommunicationDisabled(member)];
+  const items = [prop, isCommunicationDisabled /* isCommunicationDisabled */.isMemberCommunicationDisabled(member)];
   return items;
 };

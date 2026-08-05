@@ -1,3 +1,4 @@
+import { useChannelVideoLimit } from "../video_calls/useChannelVideoLimit.tsx";
 // discord_app/modules/guild_sidebar/useShowConnectedUserLimit.tsx
 import { MAX_STAGE_VOICE_USER_LIMIT as closure_2 } from "ME";
 
@@ -13,7 +14,7 @@ export default function useShowConnectedUserLimit(channel) {
   if (considerMaxStageVoiceUserLimit === undefined) {
     considerMaxStageVoiceUserLimit = true;
   }
-  const limit = require("../video_calls/useChannelVideoLimit.tsx")(channel).limit;
+  const limit = useChannelVideoLimit(channel).limit;
   let num = -1;
   if (channel.userLimit > 0) {
     num = channel.userLimit;
@@ -45,7 +46,7 @@ export const useConnectedUserLimit = function useConnectedUserLimit(arg0) {
   if (considerMaxStageVoiceUserLimit === undefined) {
     considerMaxStageVoiceUserLimit = true;
   }
-  const limit = require("../video_calls/useChannelVideoLimit.tsx")(channel).limit;
+  const limit = useChannelVideoLimit(channel).limit;
   let num = -1;
   if (channel.userLimit > 0) {
     num = channel.userLimit;
@@ -77,7 +78,7 @@ export const useConnectedUserLimitFormatted = function useConnectedUserLimitForm
   if (considerMaxStageVoiceUserLimit === undefined) {
     considerMaxStageVoiceUserLimit = true;
   }
-  const limit = require("../video_calls/useChannelVideoLimit.tsx")(channel).limit;
+  const limit = useChannelVideoLimit(channel).limit;
   let num = -1;
   if (channel.userLimit > 0) {
     num = channel.userLimit;

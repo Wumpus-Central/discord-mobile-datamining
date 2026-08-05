@@ -1,3 +1,5 @@
+import { isUndefinedOrNull } from "../../../../../_runtime/00659_isUndefinedOrNull.js";
+import { getEmbeddedActivityKey } from "../getEmbeddedActivityKey.tsx";
 // discord_app/modules/messages/native/renderer/ChatManager.tsx
 import Changeset from "Changeset";
 
@@ -119,7 +121,7 @@ prototype["determineChangeTypeForUploadProgress"] = function determineChangeType
   }
 };
 prototype["determineChangeTypeForEmbeddedActivity"] = function determineChangeTypeForEmbeddedActivity(arg0) {
-  const tmp = require("../getEmbeddedActivityKey.tsx")(arg0);
+  const tmp = getEmbeddedActivityKey(arg0);
   this.embeddedActivities[tmp] = arg0;
   if (null != this.embeddedActivities[tmp]) {
     let INSERT = constants.UPDATE;
@@ -163,7 +165,7 @@ prototype["determineChangeType"] = function determineChangeType(forceRender) {
             hasItem = updateMessageIds.has(message.id);
           }
           if (!hasItem) {
-            INSERT = require("../../../../../_runtime/00659_isUndefinedOrNull.js")(tmp, message) ? tmp5.NOOP : tmp5.UPDATE;
+            INSERT = isUndefinedOrNull(tmp, message) ? tmp5.NOOP : tmp5.UPDATE;
           }
         }
         INSERT = constants.UPDATE;

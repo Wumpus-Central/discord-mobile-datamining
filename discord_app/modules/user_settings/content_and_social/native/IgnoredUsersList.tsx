@@ -1,3 +1,11 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
+import { getBlockedSource } from "../../../../design/components/Illustration/native/redesign/generated/Blocked.tsx";
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
 // discord_app/modules/user_settings/content_and_social/native/IgnoredUsersList.tsx
 import "noop";
 import { ScrollView } from "get ActivityIndicator";
@@ -11,13 +19,13 @@ const require = arg1;
 function IgnoredUsersList(userIds) {
   userIds = userIds.userIds;
   const tmp = createCacheKey();
-  require("../../../app_analytics/useAnalyticsLocations.tsx");
+  context;
   if (0 === userIds.length) {
     let obj = { Illustration: null, body: null };
-    obj[0] = require("../../../../design/components/Illustration/native/redesign/generated/Blocked.tsx") /* getBlockedSource */.Blocked;
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[1] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.PYrWFW);
-    let tmp7 = callback(require("../../../../design/void/native.tsx") /* Button */.EmptyState, obj);
+    obj[0] = getBlockedSource /* getBlockedSource */.Blocked;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.PYrWFW);
+    let tmp7 = callback(Button /* Button */.EmptyState, obj);
   } else {
     obj = { value: null, children: null };
     obj[0] = tmp4;
@@ -26,19 +34,19 @@ function IgnoredUsersList(userIds) {
     const obj1 = { children: null };
     const obj2 = { style: null, variant: "text-sm/semibold", color: "text-default", children: null };
     obj2[0] = tmp.sectionLabelStyle;
-    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
     const obj3 = { numberOfIgnoredUsers: null };
     obj3[0] = userIds.length;
-    obj2[3] = intl2.formatToPlainString(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.iNKUhU, obj3);
-    const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2), ];
+    obj2[3] = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.iNKUhU, obj3);
+    const items = [callback(Text /* Text */.Text, obj2), ];
     const obj4 = { hasIcons: true, children: null };
     obj4[1] = userIds.map((userId) => callback2(callback(table[14]), { userId }, userId));
-    const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    items[1] = callback(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj4, intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["93ZDWE"]));
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    items[1] = callback(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj4, intl3.string(getSystemLocale /* getSystemLocale */.t["93ZDWE"]));
     obj1[0] = items;
     obj[2] = callback2(ScrollView, obj1);
-    obj[1] = callback(require("../../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
-    tmp7 = callback(require("../../../app_analytics/useAnalyticsLocations.tsx") /* context */.AnalyticsLocationProvider, obj);
+    obj[1] = callback(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+    tmp7 = callback(context /* context */.AnalyticsLocationProvider, obj);
   }
   return tmp7;
 }
@@ -52,7 +60,7 @@ let obj1 = { marginTop: require("Themes").space.PX_12, marginBottom: require("Th
 const result = require("upsertRelationship").fileFinishedImporting("modules/user_settings/content_and_social/native/IgnoredUsersList.tsx");
 
 export default function ConnectedIgnoredUsersList() {
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [upsertRelationship];
   obj = { userIds: obj.useStateFromStoresArray(items, () => ignoredIDs.getIgnoredIDs()) };
   return callback(IgnoredUsersList, obj);

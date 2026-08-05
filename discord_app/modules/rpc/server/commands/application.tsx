@@ -1,3 +1,9 @@
+import { sendRequest } from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { isTestModeForApplication } from "../../../game_store/TestModeUtils.tsx";
+import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
+import { getCurrentEmbeddedActivityChannel } from "../../helpers/getCurrentEmbeddedActivityChannel.tsx";
+import { prototype } from "../../RPCError.tsx";
+import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
 // discord_app/modules/rpc/server/commands/application.tsx
 import addApplication from "addApplication";
 import ME from "ME";
@@ -10,12 +16,12 @@ const require = arg1;
 ({ ApplicationFlags: c4, Endpoints: c5, RPCCommands, RPCErrors: closure_6 } = ME);
 let obj = {
   validation(string) {
-    let obj = require("../../helpers/createRpcJoiSchemaObject.tsx")(string);
+    let obj = createRpcJoiSchemaObject(string);
     obj = { event_name: null, event_properties: null };
     const requiredResult = obj.required();
     obj[0] = string.string().required();
     const stringResult = string.string();
-    obj[1] = require("../../helpers/createRpcJoiSchemaObject.tsx")(string).required();
+    obj[1] = createRpcJoiSchemaObject(string).required();
     return requiredResult.keys(obj);
   },
   handler(arg0) {
@@ -23,12 +29,12 @@ let obj = {
     let socket;
     ({ socket, args } = arg0);
     const event_properties = args.event_properties;
-    let obj = require("../../RPCHelpers.tsx") /* recurseReplaceContentTree */;
+    let obj = recurseReplaceContentTree /* recurseReplaceContentTree */;
     const result = obj.validatePostMessageTransport(socket.transport);
-    let obj1 = require("../../RPCHelpers.tsx") /* recurseReplaceContentTree */;
+    let obj1 = recurseReplaceContentTree /* recurseReplaceContentTree */;
     obj1.validateApplication(socket.application);
     const id = socket.application.id;
-    const obj3 = require("../../helpers/getCurrentEmbeddedActivityChannel.tsx")();
+    const obj3 = getCurrentEmbeddedActivityChannel();
     if (obj3 != null) {
       const guildId = obj3.getGuildId();
     }
@@ -69,16 +75,16 @@ obj = {
     if (null == id) {
       let obj = { errorCode: null };
       obj[0] = constants2.INVALID_COMMAND;
-      const tmp7 = new require("../../RPCError.tsx")(obj, "No application.");
+      const tmp7 = new prototype(obj, "No application.");
       throw tmp7;
     } else {
-      const HTTP = require("../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+      const HTTP = sendRequest /* sendRequest */.HTTP;
       obj = { url: null, body: null, retries: 3, oldFormErrors: true, rejectWithError: false };
       obj[0] = closure_5.APPLICATION_TICKET(id);
       obj = { test_mode: null };
-      obj[0] = require("../../../game_store/TestModeUtils.tsx") /* isTestModeForApplication */.isTestModeForApplication(id);
+      obj[0] = isTestModeForApplication /* isTestModeForApplication */.isTestModeForApplication(id);
       obj[1] = obj;
-      const obj4 = require("../../../game_store/TestModeUtils.tsx") /* isTestModeForApplication */;
+      const obj4 = isTestModeForApplication /* isTestModeForApplication */;
       return HTTP.post(obj).then((body) => body.body);
     }
   }

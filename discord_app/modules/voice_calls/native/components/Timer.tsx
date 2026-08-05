@@ -1,3 +1,5 @@
+import { apply } from "../../../../../_runtime/00012_apply.js";
+import { Button } from "../../../../design/void/native.tsx";
 // discord_app/modules/voice_calls/native/components/Timer.tsx
 import { jsxs } from "jsxProd";
 import { PureComponent } from "noop";
@@ -139,28 +141,28 @@ prototype["render"] = function render() {
   if (!props.hideHours) {
     const _String = String;
     const _HermesInternal = HermesInternal;
-    let str = "" + require("../../../../../_runtime/00012_apply.js").padStart(String(hours), 2, "0") + ":";
-    const obj = require("../../../../../_runtime/00012_apply.js");
+    let str = "" + apply.padStart(String(hours), 2, "0") + ":";
+    const obj = apply;
   } else {
     str = "";
   }
   if (!hideMinutes) {
     const _String2 = String;
     const _HermesInternal2 = HermesInternal;
-    let str5 = "" + require("../../../../../_runtime/00012_apply.js").padStart(String(minutes), 2, "0") + ":";
-    const obj2 = require("../../../../../_runtime/00012_apply.js");
+    let str5 = "" + apply.padStart(String(minutes), 2, "0") + ":";
+    const obj2 = apply;
   } else {
     str5 = "";
   }
   if (str.length > 0) {
     const _String3 = String;
-    let padStartResult = require("../../../../../_runtime/00012_apply.js").padStart(String(seconds), 2, "0");
-    const obj3 = require("../../../../../_runtime/00012_apply.js");
+    let padStartResult = apply.padStart(String(seconds), 2, "0");
+    const obj3 = apply;
   } else {
     padStartResult = seconds;
   }
   const children = [str, str5, padStartResult];
-  return jsxs(require("../../../../design/void/native.tsx") /* Button */.LegacyText, { style, accessibilityRole: "timer", children });
+  return jsxs(Button /* Button */.LegacyText, { style, accessibilityRole: "timer", children });
 };
 Timer.defaultProps = { hideMinutes: false, hideHours: false };
 let result = require("apply").fileFinishedImporting("modules/voice_calls/native/components/Timer.tsx");

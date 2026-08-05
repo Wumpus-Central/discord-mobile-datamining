@@ -1,3 +1,5 @@
+import { dispatcher } from "../../Dispatcher.tsx";
+import { isCommunicationDisabled } from "CommunicationDisabledUtils.tsx";
 // discord_app/modules/guild_communication_disabled/CommunicationDisabledManager.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import closure_5 from "trackCommunicationDisabled";
@@ -46,10 +48,10 @@ function clearGuildMemberTimeout(closure_2, closure_1) {
         obj.communicationDisabledUntil = null;
         const obj1 = { type: "GUILD_MEMBER_UPDATE" };
         const merged3 = Object.assign(obj);
-        require("../../Dispatcher.tsx").dispatch(obj1);
-        const obj4 = require("../../Dispatcher.tsx");
+        dispatcher.dispatch(obj1);
+        const obj4 = dispatcher;
       }
-      obj6 = require("CommunicationDisabledUtils.tsx") /* isCommunicationDisabled */;
+      obj6 = isCommunicationDisabled /* isCommunicationDisabled */;
     }
   }
 }

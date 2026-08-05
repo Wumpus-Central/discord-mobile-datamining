@@ -1,3 +1,4 @@
+import { usePrivateChannelWaveEligible } from "usePrivateChannelWaveEligible.tsx";
 // discord_app/modules/channel/usePrivateChannelWave.native.tsx
 import getDmHasMessageHistory from "getDmHasMessageHistory";
 import _slicedToArray from "_slicedToArray";
@@ -109,7 +110,7 @@ export default function usePrivateChannelWave(id) {
       }
     }
   }), items);
-  obj[0] = _require("usePrivateChannelWaveEligible.tsx").usePrivateChannelWaveEligible(id, arg1);
+  obj[0] = _usePrivateChannelWaveEligible.usePrivateChannelWaveEligible(id, arg1);
   obj[1] = callback;
   return obj;
 };

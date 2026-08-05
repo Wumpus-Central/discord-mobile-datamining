@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../_runtime/10436_registerAsset.js";
+import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/oauth2/native/ErrorResult.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -27,7 +30,7 @@ export default function ErrorResult(error) {
   let obj = { bottom: true, style: tmp.container, children: null };
   obj = { style: tmp.inner, children: null };
   obj = { source: null, style: null };
-  obj[0] = require("../../../../_runtime/10436_registerAsset.js");
+  obj[0] = registerAsset;
   obj[1] = tmp.image;
   const items = [callback(closure_3, obj), ];
   const obj1 = { style: tmp.text, variant: "text-md/medium", children: null };
@@ -36,7 +39,7 @@ export default function ErrorResult(error) {
     error = intl.string(tmp3(1236).t.mqn873);
   }
   obj1[2] = error;
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  items[1] = callback(Text /* Text */.Text, obj1);
   obj[1] = items;
   const items1 = [closure_6(closure_4, obj), ];
   let tmp6Result = null;
@@ -51,5 +54,5 @@ export default function ErrorResult(error) {
   }
   items1[1] = tmp6Result;
   obj[2] = items1;
-  return closure_6(require("../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return closure_6(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 };

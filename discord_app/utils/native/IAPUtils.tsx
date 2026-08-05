@@ -1,3 +1,10 @@
+import { v1 } from "../../../_runtime/00514_v1.js";
+import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { GeneratedPaymentCurrencies } from "../../../discord_common/js/shared/shared-constants/GeneratedPaymentCurrencies.tsx";
+import { productSK2ToIAPProduct } from "../../modules/billing/native/StorekitIAPQueue.tsx";
+import { set } from "../PlatformUtils.tsx";
+import { DCDDeviceManager } from "DeviceUtils.tsx";
 // discord_app/utils/native/IAPUtils.tsx
 import updateProduct from "updateProduct";
 import { convertToAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME";
@@ -14,7 +21,7 @@ let metroImportAll;
 let unpackModuleId;
 const require = arg1;
 function serializePurchaseResponse(originalTransactionDate) {
-  require("../../../_runtime/metro/00038__.js")(null != originalTransactionDate.transactionId, "should have transactionId");
+  00038__(null != originalTransactionDate.transactionId, "should have transactionId");
   const obj = { originalTransactionDate: originalTransactionDate.originalTransactionDateIOS, originalTransactionIdentifier: null, transactionDate: null, transactionIdentifier: null, productIdentifier: null, transactionReceipt: null, jwsRepresentation: null };
   let parsed;
   if (null != originalTransactionDate.originalTransactionIdentifierIOS) {
@@ -28,7 +35,7 @@ function serializePurchaseResponse(originalTransactionDate) {
   return obj;
 }
 function convertToUUID(arg0) {
-  return require("../../../_runtime/00514_v1.js") /* v1 */.v5(arg0, NAMESPACE_SNOWFLAKE_UUID);
+  return v1 /* v1 */.v5(arg0, NAMESPACE_SNOWFLAKE_UUID);
 }
 function _restorePurchases() {
   const self = this;
@@ -232,7 +239,7 @@ function _restorePurchases() {
   return applyArgumentsResult;
 }
 function isStorekit2Available() {
-  let isIOSResult = require("../PlatformUtils.tsx") /* set */.isIOS();
+  let isIOSResult = set /* set */.isIOS();
   if (isIOSResult) {
     let isAvailableResult;
     if (closure_12 != null) {
@@ -246,7 +253,7 @@ function isStorekit2Available() {
 function remapStorefront(countryCode) {
   const country = convertToAlpha2(countryCode.countryCode);
   if (null == countryCode.currency) {
-    if (null == require("../../../discord_common/js/shared/shared-constants/GeneratedPaymentCurrencies.tsx") /* GeneratedPaymentCurrencies */.GeneratedPaymentCurrenciesSets.APPLE_STORE_COUNTRY_CURRENCIES[country]) {
+    if (null == GeneratedPaymentCurrencies /* GeneratedPaymentCurrencies */.GeneratedPaymentCurrenciesSets.APPLE_STORE_COUNTRY_CURRENCIES[country]) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
       const error = new Error("Unable to get currency from countryCode " + countryCode.countryCode);
@@ -354,11 +361,11 @@ let _default = {
   loadProducts() {
     if (obj.isIOS()) {
       const _Object = Object;
-      let items = [require("../../modules/billing/native/StorekitIAPQueue.tsx").fetchSubscriptions(Object.values(tmp(5770).ProductIds)), ];
-      const obj2 = require("../../modules/billing/native/StorekitIAPQueue.tsx");
+      let items = [productSK2ToIAPProduct.fetchSubscriptions(Object.values(tmp(5770).ProductIds)), ];
+      const obj2 = productSK2ToIAPProduct;
       const _Object2 = Object;
-      items[1] = require("../../modules/billing/native/StorekitIAPQueue.tsx").fetchProducts(Object.values(tmp(5770).ProductIds));
-      const obj3 = require("../../modules/billing/native/StorekitIAPQueue.tsx");
+      items[1] = productSK2ToIAPProduct.fetchProducts(Object.values(tmp(5770).ProductIds));
+      const obj3 = productSK2ToIAPProduct;
       let nextPromise = _Promise.all(items).then((arg0) => {
         let tmp;
         [r10007, tmp] = arg0;
@@ -567,14 +574,14 @@ if (set) {
   _default = require("items").default;
 }
 function shouldMockIAPForceEnable() {
-  let isIOSResult = require("../PlatformUtils.tsx") /* set */.isIOS();
+  let isIOSResult = set /* set */.isIOS();
   if (isIOSResult) {
     const Identifier = importAll(1578).getConstants().Identifier;
     const _HermesInternal = HermesInternal;
     let isRunningOnSimulator = Identifier.startsWith("" + IOS_BUNDLE_ID + ".local");
     if (!isRunningOnSimulator) {
-      isRunningOnSimulator = require("DeviceUtils.tsx") /* DCDDeviceManager */.getIsRunningOnSimulator();
-      const tmpResult = require("DeviceUtils.tsx") /* DCDDeviceManager */;
+      isRunningOnSimulator = DCDDeviceManager /* DCDDeviceManager */.getIsRunningOnSimulator();
+      const tmpResult = DCDDeviceManager /* DCDDeviceManager */;
     }
     isIOSResult = isRunningOnSimulator;
     const obj2 = importAll(1578);
@@ -714,7 +721,7 @@ export const makeIAPRequest = function makeIAPRequest(closure_1, closure_2, clos
 export const useCanPurchaseIAP = function useCanPurchaseIAP(productId) {
   const _require = productId;
   const items = [mergeGuildAvatar];
-  let closure_1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  let closure_1 = _initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
     if (currentUser != null) {
@@ -725,9 +732,9 @@ export const useCanPurchaseIAP = function useCanPurchaseIAP(productId) {
     }
     return flag;
   }, []);
-  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const obj = _initialize;
   const items1 = [closure_7];
-  return !_require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  return !_initialize.useStateFromStores(items1, () => {
     const isReadyResult = outer1_7.isReady();
     let tmp2 = !isReadyResult;
     if (isReadyResult) {
@@ -747,7 +754,7 @@ export const useCanPurchaseIAP = function useCanPurchaseIAP(productId) {
 export { isStorekit2Available };
 export { remapStorefront };
 export const manageSubscription = function manageSubscription() {
-  let isIOSResult = require("../PlatformUtils.tsx") /* set */.isIOS();
+  let isIOSResult = set /* set */.isIOS();
   if (isIOSResult) {
     let isAvailableResult;
     if (closure_12 != null) {

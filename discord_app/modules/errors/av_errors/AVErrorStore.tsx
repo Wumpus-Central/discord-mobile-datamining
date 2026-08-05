@@ -1,3 +1,4 @@
+import { areSetsEqual } from "../../../../discord_common/js/shared/utils/SetUtils.tsx";
 // discord_app/modules/errors/av_errors/AVErrorStore.tsx
 import _slicedToArray from "_slicedToArray";
 import { Store } from "initialize";
@@ -93,7 +94,7 @@ const aVErrorStore = new AVErrorStore(require("dispatcher"), {
           continue;
         }
       }
-      obj = require("../../../../discord_common/js/shared/utils/SetUtils.tsx") /* areSetsEqual */;
+      obj = areSetsEqual /* areSetsEqual */;
     } else {
       return false;
     }

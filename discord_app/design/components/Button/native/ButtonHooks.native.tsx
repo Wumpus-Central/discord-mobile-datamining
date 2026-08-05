@@ -1,3 +1,8 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import { CONFIG_NEVER_ANIMATE } from "../../../animation/reanimated/spring/spring.tsx";
+import { SUBTLE_SPRING } from "../../../animation/reanimated/spring/springPresets.tsx";
+import { map } from "../../../tokens/native/useToken.tsx";
 // discord_app/design/components/Button/native/ButtonHooks.native.tsx
 import noop from "noop";
 import createCacheKey from "createCacheKey";
@@ -1427,8 +1432,8 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
     case "cha":
     break;
     case "ha":
-      obj[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
-      obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE;
+      obj[0] = Themes.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
+      obj[1] = Themes.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE;
       obj[2] = c4;
       obj[3] = c4;
     break;
@@ -2217,7 +2222,7 @@ export const useProfileThemedButtonStyles = function useProfileThemedButtonStyle
   }, items);
 };
 export const useForegroundColor = function useForegroundColor(variant) {
-  return require("../../../tokens/native/useToken.tsx") /* map */.useToken(createCacheKey[variant]);
+  return map /* map */.useToken(createCacheKey[variant]);
 };
 export const useButtonColorStyles = styleProperties;
 export const useButtonTextColorStyles = function useButtonTextColorStyles(style) {
@@ -2521,7 +2526,7 @@ export const useButtonScaleStyles = function useButtonScaleStyles(pressed, width
   const _require = pressed;
   let closure_1 = width;
   const dependencyMap = scaleAmountInPx;
-  let obj = _require("../../../../modules/reanimated/ReanimatedRexport.tsx");
+  let obj = _ReanimatedRexport;
   const fn = function n() {
     let obj = sharedValue1;
     let num = 1;
@@ -2539,7 +2544,7 @@ export const useButtonScaleStyles = function useButtonScaleStyles(pressed, width
     obj[0] = items1;
     return obj;
   };
-  obj = { width, scaleAmountInPx, withSpring: _require("../../../animation/reanimated/spring/spring.tsx").withSpring, interpolate: _require("../../../../modules/reanimated/ReanimatedRexport.tsx").interpolate, pressed, ON_PRESS_SPRING: _require("../../../animation/reanimated/spring/springPresets.tsx").ON_PRESS_SPRING };
+  obj = { width, scaleAmountInPx, withSpring: _CONFIG_NEVER_ANIMATE.withSpring, interpolate: _ReanimatedRexport.interpolate, pressed, ON_PRESS_SPRING: _SUBTLE_SPRING.ON_PRESS_SPRING };
   fn.__closure = obj;
   fn.__workletHash = 17256006845494;
   fn.__initData = closure_10;

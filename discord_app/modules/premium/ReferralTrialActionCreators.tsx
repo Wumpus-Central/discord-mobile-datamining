@@ -1,3 +1,5 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/premium/ReferralTrialActionCreators.tsx
 import dispatcher from "dispatcher";
 import createdAt from "createdAt";
@@ -431,9 +433,9 @@ export const fetchReferralEligibleUsers = function fetchReferralEligibleUsers(cl
   return applyArgumentsResult;
 };
 export const fetchReferralsRemaining = function fetchReferralsRemaining() {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_START" });
-  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   obj = { url: constants.GET_REFERRALS_REMAINING, oldFormErrors: true, rejectWithError: false };
   const value = HTTP.get(obj);
   return value.then((body) => {

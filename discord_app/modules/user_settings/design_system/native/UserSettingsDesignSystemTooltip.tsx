@@ -1,3 +1,5 @@
+import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
+import { Layer } from "../../../../design/components/Layers/native/LayerScope.native.tsx";
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemTooltip.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -89,8 +91,8 @@ export default function UserSettingsDesignSystemTooltip() {
   let obj = { style: callback4().flex, bottom: true, children: null };
   obj = { children: null };
   obj[0] = callback2(Content, {});
-  obj[2] = callback2(require("../../../../design/components/Layers/native/LayerScope.native.tsx") /* Layer */.LayerScope, obj);
-  return callback2(require("../../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  obj[2] = callback2(Layer /* Layer */.LayerScope, obj);
+  return callback2(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 };
 export const useCanRotate = function useCanRotate() {
   const tmp = callback(React.useState(false), 2);

@@ -1,3 +1,11 @@
+import { registerAsset } from "../../../../../_runtime/08891_registerAsset.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
+import { useManageSubscriptionCardData } from "../../manage_subscriptions/useManageSubscriptionCardData.tsx";
+import { FormSeparator } from "../components/FormSeparator.tsx";
 // discord_app/modules/guild_role_subscriptions/native/manage_subscriptions/ManageSubscriptionCard.tsx
 import set from "set";
 import useManageSubscriptionCardData from "useManageSubscriptionCardData";
@@ -21,21 +29,21 @@ function HeaderStatus(arg0) {
   ({ isCancelled, isTrial, isPastDue } = arg0);
   const tmp = createCacheKey();
   if (isCancelled) {
-    const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    let str = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["7uFZGt"]);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    let str = intl3.string(getSystemLocale /* getSystemLocale */.t["7uFZGt"]);
     let headerStatusPastDue = tmp.headerStatusCancel;
     let flag = true;
   } else if (isTrial) {
-    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    str = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["6anton"]);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    str = intl2.string(getSystemLocale /* getSystemLocale */.t["6anton"]);
     headerStatusPastDue = tmp.headerStatusTrial;
     flag = true;
   } else {
     str = "";
     flag = true;
     if (isPastDue) {
-      const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      str = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.uENdgb);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      str = intl.string(getSystemLocale /* getSystemLocale */.t.uENdgb);
       headerStatusPastDue = tmp.headerStatusPastDue;
       flag = false;
     }
@@ -52,7 +60,7 @@ function HeaderStatus(arg0) {
     obj = { variant: "text-xs/semibold", color: null, children: null };
     obj[1] = str2;
     obj[2] = str;
-    obj[1] = closure_11(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+    obj[1] = closure_11(Text /* Text */.Text, obj);
     tmp9Result = tmp9(View, obj);
     const tmp10 = View;
   }
@@ -72,9 +80,9 @@ function Header(arg0) {
   let obj = { style: tmp.header, onPress: onToggleExpanded, children: null };
   const items = [callback2(HeaderStatus, { isCancelled, isTrial, isPastDue }), ];
   obj = { style: tmp.headerContent, children: null };
-  const items1 = [callback2(require("../../../guild/native/GuildIcon.tsx"), { guild }), , ];
+  const items1 = [callback2(GuildIconSizes, { guild }), , ];
   obj = { style: tmp.headerTitlesContainer, children: null };
-  const items2 = [callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { ellipsizeMode: "tail", lineClamp: 2, variant: "text-md/semibold", color: "interactive-text-active", children: listing.name }), callback2(require("../../../../design/void/native.tsx") /* Button */.Spacer, { size: 2 }), ];
+  const items2 = [callback2(Text /* Text */.Text, { ellipsizeMode: "tail", lineClamp: 2, variant: "text-md/semibold", color: "interactive-text-active", children: listing.name }), callback2(Button /* Button */.Spacer, { size: 2 }), ];
   let name;
   if (guild != null) {
     name = guild.name;
@@ -83,7 +91,7 @@ function Header(arg0) {
     const intl = tmp3(1236).intl;
     name = intl.string(tmp3(1236).t["He+cmd"]);
   }
-  items2[2] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/medium", color: "interactive-text-default", children: name });
+  items2[2] = callback2(Text /* Text */.Text, { variant: "text-sm/medium", color: "interactive-text-default", children: name });
   obj[1] = items2;
   items1[1] = closure_12(View, obj);
   const items3 = [tmp.expandIcon, ];
@@ -91,15 +99,15 @@ function Header(arg0) {
     expanded = tmp.expandIconExpanded;
   }
   items3[1] = expanded;
-  items1[2] = callback2(require("../../../../design/void/native.tsx") /* Button */.Icon, { style: items3, size: require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.MEDIUM, source: require("../../../../../_runtime/08891_registerAsset.js") });
+  items1[2] = callback2(Button /* Button */.Icon, { style: items3, size: Button /* Button */.Icon.Sizes.MEDIUM, source: registerAsset });
   obj[1] = items1;
   items[1] = closure_12(View, obj);
   obj[2] = items;
-  return closure_12(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableHighlight, obj);
+  return closure_12(PressableBase /* PressableBase */.PressableHighlight, obj);
 }
 function Separator() {
   const tmp = createCacheKey();
-  return callback2(require("../components/FormSeparator.tsx"), { style: createCacheKey().separator, withoutMargins: true });
+  return callback2(FormSeparator, { style: createCacheKey().separator, withoutMargins: true });
 }
 function CardBody(isTrial) {
   let c5;
@@ -416,7 +424,7 @@ export default function ManageSubscriptionCard(subscription) {
   let subscriptionInfo;
   subscription = subscription.subscription;
   let importDefault;
-  const tmp2 = require("../../manage_subscriptions/useManageSubscriptionCardData.tsx")(subscription);
+  const tmp2 = useManageSubscriptionCardData(subscription);
   ({ listing, guild, expanded, subscriptionInfo } = tmp2);
   ({ groupListing, handleToggleExpanded } = tmp2);
   let obj = subscription(1480);

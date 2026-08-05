@@ -1,3 +1,4 @@
+import { nameFromUser } from "../../../../utils/UserUtils.tsx";
 // discord_app/modules/voice_calls/native/action_sheet/VoiceMemberUser.tsx
 import importAllResult from "registerAsset";
 import get_ActivityIndicator from "registerAsset";
@@ -469,7 +470,7 @@ const memoResult1 = importAllResult.memo(function VoiceMemberUser(voiceState) {
     }
     return outer1_7.getChannel(channelId);
   });
-  const name = require("../../../../utils/UserUtils.tsx").useName(voiceState.user);
+  const name = nameFromUser.useName(voiceState.user);
   if (null != voiceState) {
     if (voiceState.selfStream) {
       obj = {};

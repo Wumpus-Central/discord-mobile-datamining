@@ -1,3 +1,6 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { CircleErrorIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsWarning.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -34,16 +37,16 @@ export default function GuildPowerupsWarning(warnings) {
     obj = { style: null, children: null };
     obj[0] = tmp.contentContainer;
     obj = { color: null, size: "md" };
-    obj[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_FEEDBACK_WARNING;
-    let items = [callback(_require("../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx").CircleErrorIcon, obj), , , ];
+    obj[0] = Themes.colors.TEXT_FEEDBACK_WARNING;
+    let items = [callback(_CircleErrorIcon.CircleErrorIcon, obj), , , ];
     const obj1 = { variant: "text-md/semibold", color: "text-feedback-warning", style: null, children: null };
     obj1[2] = tmp.text;
     obj1[3] = tmp5;
-    items[1] = callback(_require("../../../../design/components/Text/native/Text.tsx").Text, obj1);
+    items[1] = callback(_Text.Text, obj1);
     const obj2 = { variant: "text-sm/medium", style: null, children: null };
     obj2[1] = tmp.text;
     obj2[2] = tmp6;
-    items[2] = callback(_require("../../../../design/components/Text/native/Text.tsx").Text, obj2);
+    items[2] = callback(_Text.Text, obj2);
     let mapped;
     if (warnings != null) {
       mapped = warnings.map((children) => {

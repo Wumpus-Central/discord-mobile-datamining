@@ -1,3 +1,6 @@
+import { t } from "../../../_runtime/03867_t.js";
+import { FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID } from "../../modules/channel/FakePlaceholderPrivateChannel.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/stores/views/PrivateChannelSortStore.tsx
 import processChannel from "processChannel";
 import closure_4 from "processChannel";
@@ -23,15 +26,15 @@ function makeSortedChannel(channel, id) {
     const isMessageRequestTimestamp = channel.isMessageRequestTimestamp;
     let tmp2 = id;
     if (null != isMessageRequestTimestamp) {
-      let obj = require("../../../_runtime/03867_t.js")(isMessageRequestTimestamp);
+      let obj = t(isMessageRequestTimestamp);
       const valueOfResult = obj.valueOf();
-      let fromTimestampResult = require("../../utils/SnowflakeUtils.tsx").fromTimestamp(valueOfResult);
-      const obj2 = require("../../utils/SnowflakeUtils.tsx");
+      let fromTimestampResult = DISCORD_EPOCH.fromTimestamp(valueOfResult);
+      const obj2 = DISCORD_EPOCH;
       if (obj3.compare(id, fromTimestampResult) > 0) {
         fromTimestampResult = id;
       }
       tmp2 = fromTimestampResult;
-      obj3 = require("../../utils/SnowflakeUtils.tsx");
+      obj3 = DISCORD_EPOCH;
     }
     tmp = tmp2;
   }
@@ -69,7 +72,7 @@ const secondaryIndexMap = new require("version").SecondaryIndexMap(function inde
   }
   return items;
 }, function sortBy(arr, items, arg2) {
-  return -require("../../utils/SnowflakeUtils.tsx").extractTimestamp(arr.lastMessageId);
+  return -DISCORD_EPOCH.extractTimestamp(arr.lastMessageId);
 });
 let closure_15 = [];
 let closure_16 = [];
@@ -137,7 +140,7 @@ const privateChannelSortStore = new PrivateChannelSortStore(require("dispatcher"
     channel = channel.channel;
     let tmp = isPrivate(channel.type);
     if (tmp) {
-      const tmp4 = channel.id !== require("../../modules/channel/FakePlaceholderPrivateChannel.tsx") /* FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID */.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+      const tmp4 = channel.id !== FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID /* FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID */.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
       if (tmp4) {
         const result = secondaryIndexMap.set(channel.id, makeSortedChannel(channel));
       }

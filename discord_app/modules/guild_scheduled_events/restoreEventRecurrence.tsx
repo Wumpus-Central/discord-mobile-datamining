@@ -1,3 +1,4 @@
+import { GuildScheduledEventsActionCreators } from "GuildScheduledEventsActionCreators.tsx";
 // discord_app/modules/guild_scheduled_events/restoreEventRecurrence.tsx
 let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/restoreEventRecurrence.tsx");
 
@@ -7,12 +8,12 @@ export default function restoreEventRecurrence(arg0, guild_id, id, c2) {
   ({ scheduled_start_time, scheduled_end_time } = arg0);
   if (null == scheduled_start_time) {
     if (null == scheduled_end_time) {
-      let result = require("GuildScheduledEventsActionCreators.tsx").deleteGuildEventException(guild_id, id, c2);
-      const obj3 = require("GuildScheduledEventsActionCreators.tsx");
+      let result = GuildScheduledEventsActionCreators.deleteGuildEventException(guild_id, id, c2);
+      const obj3 = GuildScheduledEventsActionCreators;
     }
     return result;
   }
-  let obj = require("GuildScheduledEventsActionCreators.tsx");
+  let obj = GuildScheduledEventsActionCreators;
   obj = { scheduled_start_time, scheduled_end_time, is_canceled: false };
   result = obj.updateGuildEventException(obj, guild_id, id, c2);
 };

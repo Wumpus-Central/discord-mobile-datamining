@@ -1,3 +1,7 @@
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { computeEmojiItem } from "../../../../guild_settings/native/GuildSettingsModalEmoji.tsx";
+import { getMaxRoleSubscriptionEmojiSlots } from "../../../getMaxRoleSubscriptionEmojiSlots.tsx";
+import { ApplicationRejectedNotice } from "../GuildSettingsRoleSubscriptionContainer.tsx";
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/emojis/GuildSettingsRoleSubscriptionEmojis.tsx
 import "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -62,11 +66,11 @@ let closure_5 = require("asyncRequireImpl").memoize((arr) => {
   if (0 === found.length) {
     return [];
   } else {
-    const mapped = found.map(_require("../../../../guild_settings/native/GuildSettingsModalEmoji.tsx").computeEmojiItem);
+    const mapped = found.map(_computeEmojiItem.computeEmojiItem);
     const reversed = mapped.reverse();
-    const tmp4 = require("../../../getMaxRoleSubscriptionEmojiSlots.tsx")(arg1);
-    const intl = _require("../../../../../intl/index.native.tsx").intl;
-    const items = [_require("../../../../guild_settings/native/GuildSettingsModalEmoji.tsx").computeSectionItem(intl.string(_require("../../../../../intl/index.native.tsx").t.sMOuuS), reversed.length, tmp4)];
+    const tmp4 = getMaxRoleSubscriptionEmojiSlots(arg1);
+    const intl = _getSystemLocale.intl;
+    const items = [_computeEmojiItem.computeSectionItem(intl.string(_getSystemLocale.t.sMOuuS), reversed.length, tmp4)];
     HermesBuiltin.arraySpread(reversed, 1);
     return items;
   }
@@ -77,5 +81,5 @@ export default function GuildSettingsRoleSubscriptionEmojis(guildId) {
   guildId = guildId.guildId;
   const obj = { guildId, children: null };
   obj[1] = <GuildSettingsRoleSubscriptionEmojisInner guildId={guildId} />;
-  return jsx(require("../GuildSettingsRoleSubscriptionContainer.tsx"), { guildId, children: null });
+  return jsx(ApplicationRejectedNotice, { guildId, children: null });
 };

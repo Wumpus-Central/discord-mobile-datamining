@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelBase.tsx
 import importAllResult from "openChannelLongPressActionSheet";
 import { View } from "module_4295";
@@ -17,7 +18,7 @@ const require = arg1;
 let c3 = importAllResult;
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = createCacheKey.createStyles((arg0) => {
-  let obj = { marginBottom: 1, borderRadius: require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").radii.md, marginHorizontal: require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, paddingHorizontal: require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, paddingVertical: null, marginVertical: null, flexDirection: "row", alignItems: "center", flex: 1 };
+  let obj = { marginBottom: 1, borderRadius: Themes.radii.md, marginHorizontal: Themes.space.PX_8, paddingHorizontal: Themes.space.PX_8, paddingVertical: null, marginVertical: null, flexDirection: "row", alignItems: "center", flex: 1 };
   let num = 0;
   if (!arg0) {
     num = tmp(712).space.PX_8;
@@ -31,11 +32,11 @@ let closure_14 = createCacheKey.createStyles((arg0) => {
   obj[5] = PX_4;
   obj = { borderRadius: tmp(712).radii.md };
   obj[1] = obj;
-  obj[2] = { backgroundColor: require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_BACKGROUND_ACTIVE };
-  const obj1 = { backgroundColor: require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.INTERACTIVE_BACKGROUND_ACTIVE };
-  obj[3] = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderWidth: 1, borderColor: require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_MUTED, borderRadius: require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").radii.md };
-  const obj2 = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderWidth: 1, borderColor: require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_MUTED, borderRadius: require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").radii.md };
-  obj[4] = { borderRadius: require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").radii.md, backgroundColor: require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.BACKGROUND_MOD_MUTED };
+  obj[2] = { backgroundColor: Themes.colors.INTERACTIVE_BACKGROUND_ACTIVE };
+  const obj1 = { backgroundColor: Themes.colors.INTERACTIVE_BACKGROUND_ACTIVE };
+  obj[3] = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderWidth: 1, borderColor: Themes.colors.BORDER_MUTED, borderRadius: Themes.radii.md };
+  const obj2 = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderWidth: 1, borderColor: Themes.colors.BORDER_MUTED, borderRadius: Themes.radii.md };
+  obj[4] = { borderRadius: Themes.radii.md, backgroundColor: Themes.colors.BACKGROUND_MOD_MUTED };
   return obj;
 });
 const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel) {

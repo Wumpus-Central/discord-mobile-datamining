@@ -1,3 +1,5 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { cancel } from "Upload.tsx";
 // discord_app/lib/uploader/UploadUtils.tsx
 const result = require("_getAttachmentFile").fileFinishedImporting("lib/uploader/UploadUtils.tsx");
 class DefaultHttpClient {
@@ -19,7 +21,7 @@ prototype["doUpload"] = function doUpload(body, fileByteRange) {
     const self = this;
     body.body = this.sliceBody(body.body, fileByteRange.fileByteRange.start);
   }
-  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+  const HTTP = sendRequest /* sendRequest */.HTTP;
   return HTTP.put(body);
 };
 class LibdiscoreHttpClient {
@@ -72,7 +74,7 @@ LibdiscoreHttpClient.prototype["doUpload"] = function doUpload(body) {
 
 export const doesImageMatchUpload = function doesImageMatchUpload(image, closure_0) {
   if (closure_0.id !== image.uri) {
-    if (closure_0.item.platform === require("Upload.tsx") /* cancel */.UploadPlatform.REACT_NATIVE) {
+    if (closure_0.item.platform === cancel /* cancel */.UploadPlatform.REACT_NATIVE) {
       const item = closure_0.item;
       const filename = image.filename;
       let tmp3 = item.originalUri === image.uri;
@@ -106,7 +108,7 @@ export const calculateProgress = function calculateProgress(loaded, currentSize)
 };
 export { DefaultHttpClient };
 export const canUploadNatively = function canUploadNatively(item) {
-  let fileIsInAppDirResult = item.platform === require("Upload.tsx") /* cancel */.UploadPlatform.REACT_NATIVE;
+  let fileIsInAppDirResult = item.platform === cancel /* cancel */.UploadPlatform.REACT_NATIVE;
   if (fileIsInAppDirResult) {
     fileIsInAppDirResult = null != item.uri;
   }

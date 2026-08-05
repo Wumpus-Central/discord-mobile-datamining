@@ -1,3 +1,4 @@
+import { LegacyText } from "../../LegacyText/native/LegacyText.tsx";
 // discord_app/design/void/CardSection/native/CardSection.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -35,7 +36,7 @@ export default function CardSection(arg0) {
     const items1 = [tmp.title, titleStyle];
     obj[0] = items1;
     obj[2] = title;
-    tmp4 = callback(require("../../LegacyText/native/LegacyText.tsx"), obj);
+    tmp4 = callback(LegacyText, obj);
   }
   const items2 = [tmp4, , ];
   let tmp8 = null;

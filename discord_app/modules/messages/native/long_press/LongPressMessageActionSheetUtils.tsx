@@ -1,3 +1,14 @@
+import { trackInvite } from "../../../../actions/MessageActionCreators.tsx";
+import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
+import { allowChannelAccess } from "../../../../utils/ChannelUtils.tsx";
+import { _copy } from "../../../../utils/ClipboardUtils.native.tsx";
+import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
+import { openCreateForumPostModal } from "../../../forums/native/composer/ForumComposerModalActionCreators.tsx";
+import { navigationToRootTabHelper } from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import { createPendingReply } from "../../../replies/PendingReplyActionCreators.tsx";
+import { transitionTo } from "../../../routing/router_utils.tsx";
+import { patchThread } from "../../../threads/ThreadActionCreators.tsx";
+import { presentAddedFriendToast } from "../../../toast/native/ToastUtils.tsx";
 // discord_app/modules/messages/native/long_press/LongPressMessageActionSheetUtils.tsx
 import "getSystemLocale";
 import getState from "getState";
@@ -27,11 +38,11 @@ function handleEdit(id, isForumPost, current, source) {
     flag = false;
   }
   if (isForumPost.isForumPost()) {
-    let obj = require("../../../../utils/SnowflakeUtils.tsx");
+    let obj = DISCORD_EPOCH;
     if (isForumPost.id === obj.castMessageIdAsChannelId(id.id)) {
       if (null != isForumPost.parent_id) {
-        require("../../../replies/PendingReplyActionCreators.tsx") /* createPendingReply */.deletePendingReply(isForumPost.id);
-        const obj7 = require("../../../replies/PendingReplyActionCreators.tsx") /* createPendingReply */;
+        createPendingReply /* createPendingReply */.deletePendingReply(isForumPost.id);
+        const obj7 = createPendingReply /* createPendingReply */;
         obj = { guildId: null, parentChannelId: null, threadId: null, messageId: null, isEdit: true, analyticsLocations: null, analyticsLocationObject: null };
         ({ guild_id: obj9[0], parent_id: obj9[1], id: obj9[2] } = isForumPost);
         obj[3] = id.id;
@@ -42,8 +53,8 @@ function handleEdit(id, isForumPost, current, source) {
         obj[1] = constants4.FORUM_POST_HEADER;
         obj[2] = constants2.CONTEXT_MENU;
         obj[6] = obj;
-        const result = require("../../../forums/native/composer/ForumComposerModalActionCreators.tsx") /* openCreateForumPostModal */.openCreateForumPostModal(obj);
-        const obj8 = require("../../../forums/native/composer/ForumComposerModalActionCreators.tsx") /* openCreateForumPostModal */;
+        const result = openCreateForumPostModal /* openCreateForumPostModal */.openCreateForumPostModal(obj);
+        const obj8 = openCreateForumPostModal /* openCreateForumPostModal */;
       }
     }
   }
@@ -59,17 +70,17 @@ function handleEdit(id, isForumPost, current, source) {
           tmp15 = currentUser.id === id.author.id;
         }
         obj1[5] = tmp15;
-        require("../../../../utils/AnalyticsUtils.tsx").track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj1);
-        const obj4 = require("../../../../utils/AnalyticsUtils.tsx");
+        expandEventProperties.track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj1);
+        const obj4 = expandEventProperties;
         const tmp11 = importDefault;
-        require("../../../../actions/MessageActionCreators.tsx").endEditMessage(isForumPost.id);
+        trackInvite.endEditMessage(isForumPost.id);
         if (current != null) {
           const current2 = current.current;
           if (current2 != null) {
             current2.dismissKeyboard();
           }
         }
-        const tmp11Result = require("../../../../actions/MessageActionCreators.tsx");
+        const tmp11Result = trackInvite;
       }
     }
   }
@@ -88,12 +99,12 @@ function handleEdit(id, isForumPost, current, source) {
     }
     obj2[4] = str3;
     obj2[5] = null != currentUser1 && currentUser1.id === pendingReply.message.author.id;
-    require("../../../../utils/AnalyticsUtils.tsx").track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj2);
-    const obj11 = require("../../../../utils/AnalyticsUtils.tsx");
+    expandEventProperties.track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj2);
+    const obj11 = expandEventProperties;
   }
-  obj1 = require("../../../replies/PendingReplyActionCreators.tsx") /* createPendingReply */;
+  obj1 = createPendingReply /* createPendingReply */;
   obj1.deletePendingReply(isForumPost.id);
-  obj2 = require("../../../../actions/MessageActionCreators.tsx");
+  obj2 = trackInvite;
   const result1 = obj2.startEditMessageRecord(isForumPost.id, id, source);
   if (current != null) {
     current = current.current;
@@ -132,24 +143,24 @@ export const handleCreateThread = function handleCreateThread(guild_id, id, Mess
   if (id != null) {
     id = id.id;
   }
-  const result = require("../../../threads/ThreadActionCreators.tsx").openThreadCreationForMobile(guild_id, id, str);
+  const result = patchThread.openThreadCreationForMobile(guild_id, id, str);
   let result1 = null == id;
   if (!result1) {
     let tmpResult = tmp(11);
-    result1 = require("../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */.navigateToCreateThread(guild_id.guild_id, tmpResult.castMessageIdAsChannelId(id.id));
-    const obj2 = require("../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */;
+    result1 = navigationToRootTabHelper /* navigationToRootTabHelper */.navigateToCreateThread(guild_id.guild_id, tmpResult.castMessageIdAsChannelId(id.id));
+    const obj2 = navigationToRootTabHelper /* navigationToRootTabHelper */;
   }
   if (!result1) {
     tmpResult = tmp(11);
-    require("../../../routing/router_utils.tsx") /* transitionTo */.transitionToGuild(guild_id.guild_id, tmpResult.castMessageIdAsChannelId(id.id));
-    const obj4 = require("../../../routing/router_utils.tsx") /* transitionTo */;
+    transitionTo /* transitionTo */.transitionToGuild(guild_id.guild_id, tmpResult.castMessageIdAsChannelId(id.id));
+    const obj4 = transitionTo /* transitionTo */;
   }
 };
 export const handleCopyMessageLink = function handleCopyMessageLink(channel, message_id) {
-  let obj = require("../../../../utils/AnalyticsUtils.tsx");
+  let obj = expandEventProperties;
   obj = { message_id, channel: channel.id };
   obj.track(constants.MESSAGE_LINK_COPIED, obj);
-  const channelPermalink = require("../../../../utils/ChannelUtils.tsx") /* allowChannelAccess */.getChannelPermalink(channel.guild_id, channel.id, message_id);
+  const channelPermalink = allowChannelAccess /* allowChannelAccess */.getChannelPermalink(channel.guild_id, channel.id, message_id);
   if (null != channelPermalink) {
     let tmp3Result = tmp3(5638);
     tmp3Result.copy(channelPermalink);
@@ -158,9 +169,9 @@ export const handleCopyMessageLink = function handleCopyMessageLink(channel, mes
   }
 };
 export const handleCopyId = function handleCopyId(arg0) {
-  require("../../../../utils/ClipboardUtils.native.tsx") /* _copy */.copy(arg0);
-  const obj = require("../../../../utils/ClipboardUtils.native.tsx") /* _copy */;
-  const result = require("../../../toast/native/ToastUtils.tsx") /* presentAddedFriendToast */.presentMessageIdCopied();
+  _copy /* _copy */.copy(arg0);
+  const obj = _copy /* _copy */;
+  const result = presentAddedFriendToast /* presentAddedFriendToast */.presentMessageIdCopied();
 };
 export const longPressMessageOptionHandler = function longPressMessageOptionHandler(analyticsLocations) {
   let actionSheetSource;

@@ -1,3 +1,4 @@
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 // discord_app/modules/premium/native/PremiumPlanSelectStore.tsx
 import keys from "keys";
 
@@ -12,5 +13,5 @@ export const setIsPurchasing = function setIsPurchasing(arg0) {
     tmp = null;
   }
   const dependencyMap = tmp;
-  _require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => outer1_2.setState({ isPurchasing: closure_0, purchasingProductId: closure_1 }));
+  _batchUpdates.batchUpdates(() => outer1_2.setState({ isPurchasing: closure_0, purchasingProductId: closure_1 }));
 };

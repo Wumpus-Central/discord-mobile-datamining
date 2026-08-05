@@ -1,3 +1,7 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../../design/tokens/native/useToken.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import { useChatInputFloatingWidth } from "../action_buttons/useChatInputFloatingWidth.tsx";
 // discord_app/modules/chat_input/native/accessories/ChatInputSendButton.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "module_4146";
@@ -26,17 +30,17 @@ function FloatingSlot(arg0) {
   let sendVoiceMessageEnabled;
   ({ buttonHeight, buttonMargin } = arg0);
   ({ buttonWidth, sendVoiceMessageEnabled, children } = arg0);
-  const style = [{ height: buttonHeight }, require("../action_buttons/useChatInputFloatingWidth.tsx")({ expanded: !sendVoiceMessageEnabled, collapsedWidth: buttonHeight + 2 * buttonMargin, expandedWidth: buttonWidth + 2 * buttonMargin }).animatedStyle];
-  return jsx(require("../../../reanimated/ReanimatedRexport.tsx").View, { style, children });
+  const style = [{ height: buttonHeight }, useChatInputFloatingWidth({ expanded: !sendVoiceMessageEnabled, collapsedWidth: buttonHeight + 2 * buttonMargin, expandedWidth: buttonWidth + 2 * buttonMargin }).animatedStyle];
+  return jsx(ReanimatedRexport.View, { style, children });
 }
 let c4 = importAllResult;
 let closure_10 = { BUTTON_SEND: "send-button", BUTTON_SEND_DISABLED: "send-button-disabled", BUTTON_SEND_VOICE_MESSAGE: "voice-message-button", BUTTON_SEND_VOICE_MESSAGE_DISABLED: "voice-message-button-disabled" };
 let closure_11 = createCacheKey.createStyles((width, height) => {
   obj = { button: obj, buttonActive: null, iconActive: null };
   obj = { width, height };
-  obj = { backgroundColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CHAT_INPUT_SEND_BUTTON_ACTIVE_BACKGROUND };
+  obj = { backgroundColor: Themes.colors.CHAT_INPUT_SEND_BUTTON_ACTIVE_BACKGROUND };
   obj[1] = obj;
-  obj[2] = { tintColor: require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CHAT_INPUT_SEND_BUTTON_ICON_ACTIVE_TINT };
+  obj[2] = { tintColor: Themes.colors.CHAT_INPUT_SEND_BUTTON_ICON_ACTIVE_TINT };
   return obj;
 });
 let closure_12 = importAllResult.memo((type) => {
@@ -49,9 +53,9 @@ let closure_12 = importAllResult.memo((type) => {
   let withBounce;
   type = type.type;
   ({ onSendMessage, sendEnabled, isOnCooldown, channelId, state, cleanup, withBounce } = type);
-  let obj = require("../../../../design/tokens/native/useToken.tsx") /* map */;
-  const token = obj.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
-  let obj1 = require("../../../../design/tokens/native/useToken.tsx") /* map */;
+  let obj = map /* map */;
+  const token = obj.useToken(Themes.modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
+  let obj1 = map /* map */;
   let num = 0;
   if (type === constants.BUTTON_SEND_VOICE_MESSAGE || type === constants.BUTTON_SEND_VOICE_MESSAGE_DISABLED) {
     num = closure_8;

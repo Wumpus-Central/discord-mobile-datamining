@@ -1,3 +1,5 @@
+import { 01584__ } from "../../../_runtime/metro/01584__.js";
+import { EMPTY_SAFE_AREA_INSETS } from "SafeAreaConstants.native.tsx";
 // discord_app/modules/safe_area/SafeAreaProvider.native.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -163,8 +165,8 @@ export const SafeAreaProvider = function SafeAreaProvider(arg0) {
   let style;
   ({ children, style } = arg0);
   const obj = { initialMetrics: null, children: null, style: null };
-  obj[0] = require("SafeAreaConstants.native.tsx") /* EMPTY_SAFE_AREA_INSETS */.INITIAL_SAFE_AREA_METRICS;
+  obj[0] = EMPTY_SAFE_AREA_INSETS /* EMPTY_SAFE_AREA_INSETS */.INITIAL_SAFE_AREA_METRICS;
   obj[1] = children;
   obj[2] = style;
-  return jsx(require("../../../_runtime/metro/01584__.js").SafeAreaProvider, { initialMetrics: null, children: null, style: null });
+  return jsx(01584__.SafeAreaProvider, { initialMetrics: null, children: null, style: null });
 };

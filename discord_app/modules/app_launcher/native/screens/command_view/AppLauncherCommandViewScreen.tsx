@@ -1,3 +1,13 @@
+import { registerAsset } from "../../../../../../_runtime/11413_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/11414_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/11490_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/11491_registerAsset.js";
+import { CollapsingText } from "../../../../../design/components/Button/native/BaseTextButton.native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { AppLauncherEntrypoint } from "../../../AppLauncherTypes.tsx";
+import { handleApplicationSelected } from "../../AppLauncherNativeUtils.tsx";
 // discord_app/modules/app_launcher/native/screens/command_view/AppLauncherCommandViewScreen.tsx
 import closure_4 from "getIndexKey";
 import getCommandContext from "getCommandContext";
@@ -1339,45 +1349,45 @@ function LoadingState() {
 }
 function NotFoundState(onPress) {
   const tmp = createCacheKey();
-  let obj = require("../../AppLauncherNativeUtils.tsx") /* handleApplicationSelected */;
-  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(require("../../../AppLauncherTypes.tsx") /* AppLauncherEntrypoint */.AppLauncherEmptyStateType.COMMAND_NOT_FOUND);
+  let obj = handleApplicationSelected /* handleApplicationSelected */;
+  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(AppLauncherEntrypoint /* AppLauncherEntrypoint */.AppLauncherEmptyStateType.COMMAND_NOT_FOUND);
   obj = { style: tmp.emptyStateContainer, children: null };
   obj = { style: tmp.emptyState, lightSource: null, darkSource: null, title: null, body: null, children: null };
-  obj[1] = require("../../../../../../_runtime/11490_registerAsset.js");
-  obj[2] = require("../../../../../../_runtime/11491_registerAsset.js");
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["pX/qb9"]);
-  const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[4] = intl2.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.exOQVY);
+  obj[1] = registerAsset;
+  obj[2] = registerAsset;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["pX/qb9"]);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[4] = intl2.string(getSystemLocale /* getSystemLocale */.t.exOQVY);
   const obj1 = { shrink: true, size: "sm", variant: "secondary", onPress: onPress.onPressBack, pillStyle: tmp.failureStateButtonPill, style: tmp.failureStateButtonWrapper, text: null };
-  const intl3 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[6] = intl3.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["/g10LC"]);
-  obj[5] = callback5(require("../../../../../design/components/Button/native/BaseTextButton.native.tsx") /* CollapsingText */.BaseTextButton, obj1);
-  obj[1] = callback5(require("../../../../../design/void/native.tsx") /* Button */.EmptyState, obj);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[6] = intl3.string(getSystemLocale /* getSystemLocale */.t["/g10LC"]);
+  obj[5] = callback5(CollapsingText /* CollapsingText */.BaseTextButton, obj1);
+  obj[1] = callback5(Button /* Button */.EmptyState, obj);
   return callback5(closure_7, obj);
 }
 function NoPermsState(command) {
   command = command.command;
   const tmp = createCacheKey();
-  let obj = require("../../AppLauncherNativeUtils.tsx") /* handleApplicationSelected */;
-  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(require("../../../AppLauncherTypes.tsx") /* AppLauncherEntrypoint */.AppLauncherEmptyStateType.COMMAND_NO_PERMISSIONS);
+  let obj = handleApplicationSelected /* handleApplicationSelected */;
+  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(AppLauncherEntrypoint /* AppLauncherEntrypoint */.AppLauncherEmptyStateType.COMMAND_NO_PERMISSIONS);
   obj = { style: tmp.emptyStateContainer, children: null };
   obj = { style: tmp.commandNameContainer, children: null };
-  const items = [callback5(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "heading-lg/bold", color: "text-default", children: command.displayName }), callback5(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "heading-sm/medium", color: "text-default", children: command.displayDescription })];
+  const items = [callback5(Text /* Text */.Text, { variant: "heading-lg/bold", color: "text-default", children: command.displayName }), callback5(Text /* Text */.Text, { variant: "heading-sm/medium", color: "text-default", children: command.displayDescription })];
   obj[1] = items;
   const items1 = [callback6(closure_7, obj), ];
   const obj3 = { style: tmp.emptyState, lightSource: null, darkSource: null, title: null, body: null, children: null };
-  obj3[1] = require("../../../../../../_runtime/11413_registerAsset.js");
-  obj3[2] = require("../../../../../../_runtime/11414_registerAsset.js");
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj3[3] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.TzufcR);
-  const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj3[4] = intl2.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["I/O+A1"]);
+  obj3[1] = registerAsset;
+  obj3[2] = registerAsset;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj3[3] = intl.string(getSystemLocale /* getSystemLocale */.t.TzufcR);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj3[4] = intl2.string(getSystemLocale /* getSystemLocale */.t["I/O+A1"]);
   const obj4 = { shrink: true, size: "sm", variant: "secondary", onPress: command.onPressBack, pillStyle: tmp.failureStateButtonPill, style: tmp.failureStateButtonWrapper, text: null };
-  const intl3 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj4[6] = intl3.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["/g10LC"]);
-  obj3[5] = callback5(require("../../../../../design/components/Button/native/BaseTextButton.native.tsx") /* CollapsingText */.BaseTextButton, obj4);
-  items1[1] = callback5(require("../../../../../design/void/native.tsx") /* Button */.EmptyState, obj3);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj4[6] = intl3.string(getSystemLocale /* getSystemLocale */.t["/g10LC"]);
+  obj3[5] = callback5(CollapsingText /* CollapsingText */.BaseTextButton, obj4);
+  items1[1] = callback5(Button /* Button */.EmptyState, obj3);
   obj[1] = items1;
   return callback6(closure_7, obj);
 }

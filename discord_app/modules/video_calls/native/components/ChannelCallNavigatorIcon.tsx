@@ -1,3 +1,5 @@
+import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import { isBlurDisabled } from "../../../visual_effect_view/native/VisualEffectView.tsx";
 // discord_app/modules/video_calls/native/components/ChannelCallNavigatorIcon.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -70,7 +72,7 @@ export default function ChannelCallNavigatorIcon(disableBackground) {
     if (!flag) {
       const obj1 = { blurTheme: "dark", style: null };
       obj1[1] = absoluteFill.absoluteFill;
-      tmp2Result = tmp2(require("../../../visual_effect_view/native/VisualEffectView.tsx"), obj1);
+      tmp2Result = tmp2(isBlurDisabled, obj1);
     }
   }
   const items1 = [tmp2Result, , ];
@@ -100,6 +102,6 @@ export default function ChannelCallNavigatorIcon(disableBackground) {
   obj[1] = items1;
   const items2 = [closure_7(closure_3, obj), children];
   obj[5] = items2;
-  obj[1] = closure_7(require("../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  obj[1] = closure_7(PressableBase /* PressableBase */.PressableOpacity, obj);
   return closure_6(closure_3, obj);
 };

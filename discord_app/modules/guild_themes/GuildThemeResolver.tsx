@@ -1,3 +1,6 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { apexExperiment } from "../premium/powerups/experiments/ServerThemeUserExperiment.tsx";
+import { set } from "GuildThemePresets.tsx";
 // discord_app/modules/guild_themes/GuildThemeResolver.tsx
 import noop from "noop";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
@@ -38,7 +41,7 @@ function resolveSavedActiveGuildTheme(enabled) {
       }
       tmp5 = tmp4;
       if (null == tmp4) {
-        const guildThemePreset = require("GuildThemePresets.tsx") /* set */.getGuildThemePreset(themeSettings.presetId);
+        const guildThemePreset = set /* set */.getGuildThemePreset(themeSettings.presetId);
         let tmp9 = null;
         if (null != guildThemePreset) {
           obj = { type: "preset", preset: null };
@@ -46,7 +49,7 @@ function resolveSavedActiveGuildTheme(enabled) {
           tmp9 = obj;
         }
         tmp5 = tmp9;
-        const obj2 = require("GuildThemePresets.tsx") /* set */;
+        const obj2 = set /* set */;
       }
     }
     tmp2 = tmp5;
@@ -182,7 +185,7 @@ export const resolveRenderableGuildThemeSettings = function resolveRenderableGui
     if (null != tmp2) {
       return tmp2;
     } else {
-      const guildThemePreset = require("GuildThemePresets.tsx") /* set */.getGuildThemePreset(customUserThemeSettings.presetId);
+      const guildThemePreset = set /* set */.getGuildThemePreset(customUserThemeSettings.presetId);
       let tmp6 = null;
       if (null != guildThemePreset) {
         obj = { type: "preset", preset: null };
@@ -216,7 +219,7 @@ export const isRenderableGuildThemeSettings = function isRenderableGuildThemeSet
     }
     tmp = tmp3;
     if (null == tmp3) {
-      const guildThemePreset = require("GuildThemePresets.tsx") /* set */.getGuildThemePreset(customUserThemeSettings.presetId);
+      const guildThemePreset = set /* set */.getGuildThemePreset(customUserThemeSettings.presetId);
       let tmp7 = null;
       if (null != guildThemePreset) {
         obj = { type: "preset", preset: null };
@@ -224,7 +227,7 @@ export const isRenderableGuildThemeSettings = function isRenderableGuildThemeSet
         tmp7 = obj;
       }
       tmp = tmp7;
-      const obj2 = require("GuildThemePresets.tsx") /* set */;
+      const obj2 = set /* set */;
     }
   }
   return null != tmp;
@@ -288,7 +291,7 @@ export const getActiveGuildThemeForGuildId = function getActiveGuildThemeForGuil
       }
       return null;
     }
-    obj = require("../premium/powerups/experiments/ServerThemeUserExperiment.tsx") /* apexExperiment */;
+    obj = apexExperiment /* apexExperiment */;
     tmp8 = require;
   }
   return null;
@@ -318,7 +321,7 @@ export const getActiveGuildTheme = function getActiveGuildTheme() {
         }
       }
     }
-    obj = require("../premium/powerups/experiments/ServerThemeUserExperiment.tsx") /* apexExperiment */;
+    obj = apexExperiment /* apexExperiment */;
     tmp3 = require;
   }
   return tmp11Result;
@@ -326,9 +329,9 @@ export const getActiveGuildTheme = function getActiveGuildTheme() {
 export { useActiveGuildThemeForGuildId };
 export const useActiveGuildTheme = function useActiveGuildTheme() {
   const items = [handleConnectionOpen];
-  return useActiveGuildThemeForGuildId(require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => guildId.getGuildId()), "useActiveGuildTheme");
+  return useActiveGuildThemeForGuildId(initialize /* initialize */.useStateFromStores(items, () => guildId.getGuildId()), "useActiveGuildTheme");
 };
 export const useIsGuildThemePreviewActive = function useIsGuildThemePreviewActive() {
   const items = [handleEnd];
-  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => false);
+  return initialize /* initialize */.useStateFromStores(items, () => false);
 };

@@ -1,8 +1,9 @@
+import { raw } from "../../../_runtime/09394_raw.js";
 // discord_app/utils/native/StringUtils.tsx
 const result = require("set").fileFinishedImporting("utils/native/StringUtils.tsx");
 
 export const splitGraphemes = function splitGraphemes(closure_0) {
-  const obj = require("../../../_runtime/09394_raw.js")();
+  const obj = raw();
   const items = [];
   let match = obj.exec(closure_0);
   let num = 0;

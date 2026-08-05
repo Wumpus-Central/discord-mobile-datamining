@@ -1,3 +1,5 @@
+import { getSystemLocale } from "../../../../../../../../intl/index.native.tsx";
+import { getEmbedThemeColors } from "../../getEmbedThemeColors.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx
 import { Image } from "get ActivityIndicator";
 import upsertRelationship from "upsertRelationship";
@@ -12,10 +14,10 @@ export const createFriendInvite = function createFriendInvite(inviter) {
   let acceptLabelGreenColor;
   let baseColors;
   let colors;
-  ({ colors, baseColors } = require("../../getEmbedThemeColors.tsx")(arg3));
-  const intl = require("../../../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  ({ colors, baseColors } = getEmbedThemeColors(arg3));
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require("../../../../../../../../intl/index.native.tsx") /* getSystemLocale */.t;
+  const t = getSystemLocale /* getSystemLocale */.t;
   if (arg1) {
     let str = string(t.eQyu1F);
     let tmp5 = tmp4;

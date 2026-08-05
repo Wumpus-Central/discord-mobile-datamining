@@ -1,3 +1,7 @@
+import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { render } from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/FormBigRadioBox.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -39,7 +43,7 @@ export default function FormBigRadioBox(arg0) {
     disabled = false;
   }
   const tmp = createCacheKey();
-  let obj = require("../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx") /* useCheckboxA11yNative */;
+  let obj = useCheckboxA11yNative /* useCheckboxA11yNative */;
   const radioA11yNative = obj.useRadioA11yNative({ selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const items = [tmp.container, , , ];
@@ -61,18 +65,18 @@ export default function FormBigRadioBox(arg0) {
   }
   obj[3] = tmp7;
   obj = { style: tmp.indicator, active: selected };
-  const items1 = [callback(require("../../../../design/void/native.tsx") /* Button */.RadioIndicator, obj), , , ];
+  const items1 = [callback(Button /* Button */.RadioIndicator, obj), , , ];
   const items2 = [tmp.iconContainer, ];
   if (selected) {
     selected = tmp.iconContainerSelected;
   }
   const tmp5 = closure_5;
-  const tmp6 = require("../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx");
+  const tmp6 = render;
   const tmp9 = View;
   items2[1] = selected;
-  items1[1] = callback(tmp9, { style: items2, children: callback(require("../../../../design/void/native.tsx") /* Button */.Icon, { source: icon }) });
-  items1[2] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.title, accessibilityRole: "header", variant: "text-md/semibold", color: "interactive-text-default", children: title });
-  items1[3] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { variant: "text-sm/medium", color: "interactive-text-default", children: description });
+  items1[1] = callback(tmp9, { style: items2, children: callback(Button /* Button */.Icon, { source: icon }) });
+  items1[2] = callback(Text /* Text */.Text, { style: tmp.title, accessibilityRole: "header", variant: "text-md/semibold", color: "interactive-text-default", children: title });
+  items1[3] = callback(Text /* Text */.Text, { variant: "text-sm/medium", color: "interactive-text-default", children: description });
   obj[4] = items1;
   return tmp5(tmp6, obj);
 };

@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { set } from "../CreatorMonetizationEligibilityExperimentUtils.tsx";
+import { getCreatorMonetizationAcceptTermsCheckboxText } from "CreatorMonetizationAcceptTermCheckboxText.tsx";
 // discord_app/modules/creator_monetization_eligibility/guild_settings/useOnboardingMonetizationEnableFlow.tsx
 import noop from "noop";
 import { isGuildOwner } from "GuildNSFWContentLevel";
@@ -22,7 +25,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   let requestCooldownDuration;
   let submittedRequest;
   const _require = features;
-  let obj = _require("../CreatorMonetizationEligibilityExperimentUtils.tsx");
+  let obj = _set;
   let isExpeditedOnboardingGuild = obj.useIsExpeditedOnboardingGuild(features);
   if (features != null) {
     features = features.features;
@@ -133,9 +136,9 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   if (isExpeditedOnboardingGuild) {
     isExpeditedOnboardingGuild = false === hasItem;
   }
-  const formatResult = intl.format(_require("../../../intl/index.native.tsx").t.aJUdOi, obj);
+  const formatResult = intl.format(_getSystemLocale.t.aJUdOi, obj);
   let formatResult3;
-  const creatorMonetizationAcceptTermsCheckboxText = _require("CreatorMonetizationAcceptTermCheckboxText.tsx").getCreatorMonetizationAcceptTermsCheckboxText();
+  const creatorMonetizationAcceptTermsCheckboxText = _getCreatorMonetizationAcceptTermsCheckboxText.getCreatorMonetizationAcceptTermsCheckboxText();
   if (isApplicationRejected) {
     if (tmp35) {
       if (stateFromStores) {

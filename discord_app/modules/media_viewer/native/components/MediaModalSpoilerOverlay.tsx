@@ -1,3 +1,6 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../../design/tokens/native/useToken.tsx";
+import { useMediaItemSpoilerState } from "../useMediaItemSpoilerState.tsx";
 // discord_app/modules/media_viewer/native/components/MediaModalSpoilerOverlay.tsx
 import _slicedToArray from "_slicedToArray";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -32,9 +35,9 @@ export default require("noop").memo(function MediaModalSpoilerOverlay(source) {
   ({ style, index } = source);
   let items2 = callback2();
   let stringResult = dependencyMap;
-  let obj = require("../../../../design/tokens/native/useToken.tsx") /* map */;
-  const token = obj.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.SPOILER_HIDDEN_BACKGROUND);
-  let obj1 = require("../useMediaItemSpoilerState.tsx") /* useMediaItemSpoilerState */;
+  let obj = map /* map */;
+  const token = obj.useToken(Themes.colors.SPOILER_HIDDEN_BACKGROUND);
+  let obj1 = useMediaItemSpoilerState /* useMediaItemSpoilerState */;
   if (!tmp5[0]) {
     return null;
   } else {

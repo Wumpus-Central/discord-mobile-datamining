@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/voice_calls/native/CallStateHooks.tsx
 import getParticipants from "getParticipants";
 import fetchFingerprint from "fetchFingerprint";
@@ -33,7 +34,7 @@ export default function _default() {
   let dependencyMap;
   let stateFromStores;
   id = id.getId();
-  const obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const obj = initialize /* initialize */;
   const items = [callConnect];
   const items1 = [tmp, id];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
@@ -62,11 +63,11 @@ export default function _default() {
   const tmp3 = id(10662)();
   dependencyMap = tmp3;
   const items2 = [getRTCConnectionId];
-  stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items2, getRTCConnectionId.getRTCConnectionId, []);
-  const obj2 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  stateFromStores = initialize /* initialize */.useStateFromStores(items2, getRTCConnectionId.getRTCConnectionId, []);
+  const obj2 = initialize /* initialize */;
   const items3 = [getRTCConnectionId];
   const items4 = [stateFromStores, tmp3, tmp];
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items3, () => {
+  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items3, () => {
     let channelId;
     if (_undefined != null) {
       channelId = _undefined.channelId;

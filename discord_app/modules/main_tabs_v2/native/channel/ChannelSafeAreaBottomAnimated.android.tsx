@@ -1,3 +1,6 @@
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import { useChannelSafeAreaBottomStyles } from "useChannelSafeAreaBottomStyles.tsx";
+import { useChannelSafeAreaHeightSharedValue } from "useChannelSafeAreaHeightSharedValue.android.tsx";
 // discord_app/modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomAnimated.android.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -10,9 +13,9 @@ const require = arg1;
 let closure_6 = { code: "function ChannelSafeAreaBottomAnimatedAndroidTsx1(){const{heightSharedValue}=this.__closure;return{height:heightSharedValue.get()};}" };
 const memoResult = require("noop").memo(function ChannelSafeAreaBottom(channelId) {
   let _require;
-  const tmp = require("useChannelSafeAreaHeightSharedValue.android.tsx")();
+  const tmp = useChannelSafeAreaHeightSharedValue();
   _require = tmp;
-  let obj = _require("../../../reanimated/ReanimatedRexport.tsx");
+  let obj = _ReanimatedRexport;
   const fn = function n() {
     return { height: _undefined.get() };
   };
@@ -21,9 +24,9 @@ const memoResult = require("noop").memo(function ChannelSafeAreaBottom(channelId
   fn.__initData = closure_6;
   const animatedStyle = obj.useAnimatedStyle(fn);
   obj = { style: animatedStyle, children: null };
-  const items = [absoluteFill.absoluteFill, require("useChannelSafeAreaBottomStyles.tsx")(channelId.channelId)];
+  const items = [absoluteFill.absoluteFill, useChannelSafeAreaBottomStyles(channelId.channelId)];
   obj[1] = <closure_4 style={items} />;
-  return jsx(require("../../../reanimated/ReanimatedRexport.tsx").View, { style: animatedStyle, children: null });
+  return jsx(ReanimatedRexport.View, { style: animatedStyle, children: null });
 });
 const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomAnimated.android.tsx");
 

@@ -1,3 +1,4 @@
+import { FetchStatus } from "RemoteFetchData.tsx";
 // discord_app/modules/message_previews/MessagePreviewManager.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -490,7 +491,7 @@ prototype["getOrCreate"] = function getOrCreate(arg0) {
   const remote = this.remote;
   if (!remote.has(arg0)) {
     const remote2 = self.remote;
-    const remoteFetchData = new require("RemoteFetchData.tsx") /* FetchStatus */.RemoteFetchData();
+    const remoteFetchData = new FetchStatus /* FetchStatus */.RemoteFetchData();
     const result = remote2.set(arg0, remoteFetchData);
   }
   const remote3 = self.remote;

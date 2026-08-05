@@ -1,3 +1,6 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
 // discord_app/modules/summaries/native/SummaryActionSheetButton.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -28,8 +31,8 @@ export const SummaryActionSheetButton = function SummaryActionSheetButton(label)
   obj = { style: items, children: null };
   items = [tmp.iconBox];
   obj = { style: tmp.icon, source: iconSource };
-  obj[1] = callback(require("../../../design/void/native.tsx") /* Button */.Icon, obj);
-  const items1 = [callback(View, obj), callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.name, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: label })];
+  obj[1] = callback(Button /* Button */.Icon, obj);
+  const items1 = [callback(View, obj), callback(Text /* Text */.Text, { style: tmp.name, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: label })];
   obj[4] = items1;
-  return callback2(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  return callback2(PressableBase /* PressableBase */.PressableOpacity, obj);
 };

@@ -1,3 +1,4 @@
+import { Storage } from "../../../../../discord_common/js/packages/storage/Storage.tsx";
 // discord_app/modules/telemetry_ring/native/channels/BaseTelemetryExportChannel.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import "append";
@@ -122,7 +123,7 @@ prototype["flushNow"] = function flushNow() {
   })();
 };
 prototype["_readAckedEndOffset"] = function _readAckedEndOffset() {
-  const Storage = require("../../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   const value = Storage.get(this.getAckedEndOffsetStorageKey());
   let num = -1;
   if (typeof value === "number") {
@@ -135,11 +136,11 @@ prototype["_readAckedEndOffset"] = function _readAckedEndOffset() {
   return num;
 };
 prototype["_writeAckedEndOffset"] = function _writeAckedEndOffset(maxReturnedEndOffset) {
-  const Storage = require("../../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   const result = Storage.set(this.getAckedEndOffsetStorageKey(), maxReturnedEndOffset);
 };
 prototype["_clearAckedEndOffset"] = function _clearAckedEndOffset() {
-  const Storage = require("../../../../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   Storage.remove(this.getAckedEndOffsetStorageKey());
 };
 prototype["_kick"] = function _kick(arg0) {

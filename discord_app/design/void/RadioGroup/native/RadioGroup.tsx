@@ -1,3 +1,5 @@
+import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import { FormRow } from "../../Form/native/FormRow.tsx";
 // discord_app/design/void/RadioGroup/native/RadioGroup.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -81,7 +83,7 @@ function RadioBar(arg0) {
   ({ style, size, onPress } = arg0);
   const tmp = callback2();
   const tmp3 = callback(RadioIndicator, { size, active: checked });
-  let obj = require("../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx") /* useCheckboxA11yNative */;
+  let obj = useCheckboxA11yNative /* useCheckboxA11yNative */;
   const radioA11yNative = obj.useRadioA11yNative({ selected: checked, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   obj = { accessibilityRole, accessibilityState, disabled, onPress: null, DEPRECATED_style: null, label: null, subLabel: null, trailing: null, leading: null };
@@ -119,7 +121,7 @@ function RadioBar(arg0) {
     leading = option.leading;
   }
   obj[8] = leading;
-  return callback(require("../../Form/native/FormRow.tsx"), obj);
+  return callback(FormRow, obj);
 }
 class RadioItem {
   constructor(arg0) {

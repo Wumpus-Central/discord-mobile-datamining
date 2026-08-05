@@ -1,3 +1,6 @@
+import { set } from "../../../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
+import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
+import { _fetchUserOffer } from "../../UserOfferActionCreators.tsx";
 // discord_app/modules/premium/native/referrals/ReferralMessageManager.tsx
 import reset from "reset";
 import emitChanges from "emitChanges";
@@ -5,18 +8,18 @@ import "initialize";
 
 const require = arg1;
 function handleReferralMessages(type) {
-  if (type.type === require("../../../../../discord_common/js/shared/shared-constants/MessageTypes.tsx") /* set */.MessageTypes.PREMIUM_REFERRAL) {
+  if (type.type === set /* set */.MessageTypes.PREMIUM_REFERRAL) {
     if (null != type.content) {
       if (obj3.isProbablyAValidSnowflake(type.content)) {
         premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
         const tmp9Result = tmp9(11);
         if (tmp6) {
-          const userOffer = require("../../UserOfferActionCreators.tsx") /* _fetchUserOffer */.fetchUserOffer("ReferralMessageManager");
-          const tmpResult = require("../../UserOfferActionCreators.tsx") /* _fetchUserOffer */;
+          const userOffer = _fetchUserOffer /* _fetchUserOffer */.fetchUserOffer("ReferralMessageManager");
+          const tmpResult = _fetchUserOffer /* _fetchUserOffer */;
         }
         tmp6 = null == premiumTypeSubscription && emitChanges.shouldFetchReferralOffer(tmp9(11).extractTimestamp(type.content));
       }
-      obj3 = require("../../../../utils/SnowflakeUtils.tsx");
+      obj3 = DISCORD_EPOCH;
       tmp9 = importDefault;
     }
   }

@@ -1,3 +1,6 @@
+import { registerAsset } from "../../../../../_runtime/16128_registerAsset.js";
+import { Button } from "../../../../design/void/native.tsx";
+import { set } from "../../../core/native/NativeView.tsx";
 // discord_app/modules/voice_panel/native/alerts/VoicePanelLockedIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -15,8 +18,8 @@ export default function VoicePanelLockedIcon() {
   const tmp = createCacheKey();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.icon, source: null, size: null };
-  obj[1] = require("../../../../../_runtime/16128_registerAsset.js");
-  obj[2] = require("../../../../design/void/native.tsx") /* Button */.IconSizes.LARGE;
-  obj[1] = jsx(require("../../../../design/void/native.tsx") /* Button */.Icon, { style: tmp.icon, source: null, size: null });
-  return jsx(require("../../../core/native/NativeView.tsx"), { style: tmp.icon, source: null, size: null });
+  obj[1] = registerAsset;
+  obj[2] = Button /* Button */.IconSizes.LARGE;
+  obj[1] = jsx(Button /* Button */.Icon, { style: tmp.icon, source: null, size: null });
+  return jsx(set, { style: tmp.icon, source: null, size: null });
 };

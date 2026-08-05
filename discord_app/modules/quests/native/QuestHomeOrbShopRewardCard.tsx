@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getProductName } from "../../collectibles/utils/getProductName.tsx";
 // discord_app/modules/quests/native/QuestHomeOrbShopRewardCard.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -19,7 +21,7 @@ export default function QuestHomeOrbShopRewardCard(product) {
   product = product.product;
   const require = product;
   let stateFromStores;
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [mergeGuildAvatar];
   stateFromStores = obj.useStateFromStores(items, () => stateFromStores(table[8]).canUseShopDiscounts(currentUser.getCurrentUser()));
   const items1 = [product, stateFromStores];
@@ -28,7 +30,7 @@ export default function QuestHomeOrbShopRewardCard(product) {
     obj = { product: closure_0, hasShopDiscount: stateFromStores };
     return obj.getProductOrbPrice(obj);
   }, items1);
-  require("../../collectibles/utils/getProductName.tsx") /* getProductName */;
+  getProductName /* getProductName */;
   let tmp7 = null;
   if (null != memo) {
     obj = { style: null, accessible: true, accessibilityRole: "text", accessibilityLabel: null, children: null };

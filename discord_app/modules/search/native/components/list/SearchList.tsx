@@ -1,3 +1,23 @@
+import { noop } from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
+import { FileOrLinkGridPlaceholderItem } from "../tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx";
+import { FormRowPlaceholderItem } from "../tabs/pages/placeholders/FormRowPlaceholder.tsx";
+import { MediaGridPlaceholderItem } from "../tabs/pages/placeholders/MediaGridPlaceholder.tsx";
+import { MemberRowPlaceholderItem } from "../tabs/pages/placeholders/MemberRowPlaceholder.tsx";
+import { FriendPresence } from "rows/DMRow.tsx";
+import { FileGridItem } from "rows/FileGridItem.tsx";
+import { GenericTextRow } from "rows/GenericTextRow.tsx";
+import { GroupDMRow } from "rows/GroupDMRow.tsx";
+import { GuildChannelMemberRow } from "rows/GuildChannelMemberRow.tsx";
+import { GuildTextChannelRow } from "rows/GuildTextChannelRow.tsx";
+import { GuildVoiceChannelSubtitle } from "rows/GuildVoiceOrStageChannelRow.tsx";
+import { getLinkNodeAtIndex } from "rows/LinkGridItem.tsx";
+import { MediaGrid } from "rows/MediaGrid.tsx";
+import { MediaGridItem } from "rows/MediaGridItem.tsx";
+import { GuildChannelMessageRowHeader } from "rows/MessageRow.tsx";
+import { SearchHistoryRemoveIcon } from "rows/SearchHistoryRow.tsx";
+import { SearchListSection } from "SearchListSection.tsx";
 // discord_app/modules/search/native/components/list/SearchList.tsx
 import importAllResult from "MemberRowPlaceholderItem";
 import get_ActivityIndicator from "module_15634";
@@ -103,67 +123,67 @@ function renderItem(item) {
   if (constants2.DM === type) {
     let obj = {};
     const merged = Object.assign(item.props);
-    return callback(require("rows/DMRow.tsx"), obj);
+    return callback(FriendPresence, obj);
   } else if (tmp.GROUP_DM === type) {
     obj = {};
     const merged1 = Object.assign(item.props);
-    return callback(require("rows/GroupDMRow.tsx"), obj);
+    return callback(GroupDMRow, obj);
   } else if (tmp.SEARCH_HISTORY_ITEM === type) {
     const obj1 = {};
     const merged2 = Object.assign(item.props);
-    return callback(require("rows/SearchHistoryRow.tsx"), obj1);
+    return callback(SearchHistoryRemoveIcon, obj1);
   } else if (tmp.MEDIA === type) {
     const obj2 = {};
     const merged3 = Object.assign(item.props);
-    return callback(require("rows/MediaGridItem.tsx"), obj2);
+    return callback(MediaGridItem, obj2);
   } else if (tmp.MEDIA_PLACEHOLDER === type) {
     const obj3 = {};
     const merged4 = Object.assign(item.props);
-    return callback(require("../tabs/pages/placeholders/MediaGridPlaceholder.tsx"), obj3);
+    return callback(MediaGridPlaceholderItem, obj3);
   } else if (tmp.FILE_OR_LINK_PLACEHOLDER === type) {
     const obj4 = {};
     const merged5 = Object.assign(item.props);
-    return callback(require("../tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx"), obj4);
+    return callback(FileOrLinkGridPlaceholderItem, obj4);
   } else if (tmp.MEDIA_GRID === type) {
     const obj5 = {};
     const merged6 = Object.assign(item.props);
-    return callback(require("rows/MediaGrid.tsx"), obj5);
+    return callback(MediaGrid, obj5);
   } else if (tmp.GUILD_TEXT_CHANNEL === type) {
     const obj6 = {};
     const merged7 = Object.assign(item.props);
-    return callback(require("rows/GuildTextChannelRow.tsx"), obj6);
+    return callback(GuildTextChannelRow, obj6);
   } else if (tmp.GUILD_VOICE_CHANNEL === type) {
     const obj7 = {};
     const merged8 = Object.assign(item.props);
-    return callback(require("rows/GuildVoiceOrStageChannelRow.tsx"), obj7);
+    return callback(GuildVoiceChannelSubtitle, obj7);
   } else if (tmp.MESSAGE === type) {
     const obj8 = {};
     const merged9 = Object.assign(item.props);
-    return callback(require("rows/MessageRow.tsx"), obj8);
+    return callback(GuildChannelMessageRowHeader, obj8);
   } else if (tmp.MESSAGE_PLACEHOLDER === type) {
-    return callback(require("../tabs/pages/placeholders/FormRowPlaceholder.tsx"), {});
+    return callback(FormRowPlaceholderItem, {});
   } else if (tmp.LINK === type) {
     const obj9 = {};
     const merged10 = Object.assign(item.props);
-    return callback(require("rows/LinkGridItem.tsx"), obj9);
+    return callback(getLinkNodeAtIndex, obj9);
   } else if (tmp.FILE === type) {
     const obj10 = {};
     const merged11 = Object.assign(item.props);
-    return callback(require("rows/FileGridItem.tsx"), obj10);
+    return callback(FileGridItem, obj10);
   } else if (tmp.GUILD_CHANNEL_MEMBER === type) {
     const obj11 = {};
     const merged12 = Object.assign(item.props);
-    return callback(require("rows/GuildChannelMemberRow.tsx"), obj11);
+    return callback(GuildChannelMemberRow, obj11);
   } else if (tmp.GUILD_CHANNEL_MEMBER_PLACEHOLDER === type) {
-    return callback(require("../tabs/pages/placeholders/MemberRowPlaceholder.tsx"), {});
+    return callback(MemberRowPlaceholderItem, {});
   } else if (tmp.GENERIC === type) {
     const obj12 = {};
     const merged13 = Object.assign(item.props);
-    return callback(require("rows/GenericTextRow.tsx"), obj12);
+    return callback(GenericTextRow, obj12);
   } else if (tmp.SECTION === type) {
     obj = {};
     const merged14 = Object.assign(item.props);
-    return callback(require("SearchListSection.tsx"), obj);
+    return callback(SearchListSection, obj);
   } else {
     return null;
   }
@@ -202,8 +222,8 @@ const memoResult = importAllResult.memo(function SearchList(arg0) {
     obj = { style: null, children: null };
     obj[0] = absoluteFill.absoluteFill;
     obj = { text: null };
-    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[0] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.V6nAfF);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.V6nAfF);
     obj[1] = callback(tmp3(15595), obj);
     tmp8 = callback(tmp7, obj);
     const tmp3Result = tmp3(15595);
@@ -224,14 +244,14 @@ const memoResult = importAllResult.memo(function SearchList(arg0) {
   tmp3 = importDefault;
   const tmp6 = closure_9;
   const merged = Object.assign(contentContainerStyle);
-  obj1[9] = { paddingBottom: 16 + require("../../../../safe_area/useSafeAreaInsets.native.tsx")().bottom };
+  obj1[9] = { paddingBottom: 16 + useSafeAreaInsets().bottom };
   obj1[10] = keyExtractor;
   obj1[11] = getItemType;
   obj1[12] = ListHeaderComponent;
   obj1[13] = ListFooterComponent;
   obj1[14] = ItemSeparatorComponent;
   obj1[15] = numColumns;
-  items[1] = tmp13(require("../../../../../../discord_common/js/packages/flash-list/index.js") /* noop */.AnimatedFlashList, obj1);
+  items[1] = tmp13(noop /* noop */.AnimatedFlashList, obj1);
   obj[1] = items;
   return tmp6(closure_4, obj);
 });

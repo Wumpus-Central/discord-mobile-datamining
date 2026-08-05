@@ -1,3 +1,5 @@
+import { inlineStyles } from "../../../../../_runtime/08437_inlineStyles.js";
+import { getTransformedBadgeColors } from "GuildBadgeUtils.tsx";
 // discord_app/modules/guild_tag/native/badges/GuildBadgeLeaf.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -21,7 +23,7 @@ export const GuildBadgeLeaf = function GuildBadgeLeaf(primaryTintColor) {
     num2 = 24;
   }
   const merged = Object.assign(primaryTintColor, Object.create(null));
-  let obj = require("GuildBadgeUtils.tsx") /* getTransformedBadgeColors */;
+  let obj = getTransformedBadgeColors /* getTransformedBadgeColors */;
   obj = { primaryBaseColors: closure_4, primaryTintColor: primaryTintColor.primaryTintColor, primaryTintLuminances: closure_5, primaryLuminanceWeights: items };
   const primaryColorsTransformed = obj.getTransformedBadgeColors(obj).primaryColorsTransformed;
   obj = {};
@@ -30,7 +32,7 @@ export const GuildBadgeLeaf = function GuildBadgeLeaf(primaryTintColor) {
   obj.height = num2;
   obj.viewBox = "0 0 16 16";
   obj.fill = "none";
-  items = [callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { d: "M15 2V1H9v1H3v5H1v5h12V7h2V2Z", fill: primaryColorsTransformed[2] }), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { d: "M11 13v-1H5v1h6Z", fill: primaryColorsTransformed[1] }), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { d: "M15 2V1H9v1h6ZM9 3V2H5v1h4Z", fill: "#fff" }), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { d: "M3 11v1h2v-1H3ZM13 10h-1v2h1v-2ZM15 5h-1v2h1V5ZM14 7h-1v3h1V7Z", fill: primaryColorsTransformed[1] }), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { d: "M16 1h-1v6h1V1Z", fill: "#000" }), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { d: "M3 9H2v6h1V9Z", fill: primaryColorsTransformed[0] }), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { d: "M15 0H9v1h6V0ZM11 13H5v1h6v-1ZM9 1H5v1h4V1ZM5 2H3v1h2V2ZM3 3H2v2h1V3ZM1 7H0v5h1v3h1v-3H1V7h1V5H1v2ZM13 12h-2v1h2v-1ZM14 10h-1v2h1v-2h1V7h-1v3ZM4 13h1v-1H3v3h1v-2ZM3 15H2v1h1v-1Z", fill: "#000" }), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { d: "M2 7h1V5H2v2ZM1 9h1V7H1v2ZM5 3H3v2h1V4h1V3Z", fill: "#fff" }), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { d: "M4 8h2V7H4v1ZM6 7h2V6H6v1ZM8 6h2V5H8v1ZM10 5h1V4h-1v1ZM11 4h1V3h-1v1Z", fill: primaryColorsTransformed[0] }), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { d: "M5 4v1h1V4H5Z", fill: "#fff" }), callback(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Path, { d: "M3 8v1h1V8H3Z", fill: primaryColorsTransformed[0] })];
+  items = [callback(inlineStyles /* inlineStyles */.Path, { d: "M15 2V1H9v1H3v5H1v5h12V7h2V2Z", fill: primaryColorsTransformed[2] }), callback(inlineStyles /* inlineStyles */.Path, { d: "M11 13v-1H5v1h6Z", fill: primaryColorsTransformed[1] }), callback(inlineStyles /* inlineStyles */.Path, { d: "M15 2V1H9v1h6ZM9 3V2H5v1h4Z", fill: "#fff" }), callback(inlineStyles /* inlineStyles */.Path, { d: "M3 11v1h2v-1H3ZM13 10h-1v2h1v-2ZM15 5h-1v2h1V5ZM14 7h-1v3h1V7Z", fill: primaryColorsTransformed[1] }), callback(inlineStyles /* inlineStyles */.Path, { d: "M16 1h-1v6h1V1Z", fill: "#000" }), callback(inlineStyles /* inlineStyles */.Path, { d: "M3 9H2v6h1V9Z", fill: primaryColorsTransformed[0] }), callback(inlineStyles /* inlineStyles */.Path, { d: "M15 0H9v1h6V0ZM11 13H5v1h6v-1ZM9 1H5v1h4V1ZM5 2H3v1h2V2ZM3 3H2v2h1V3ZM1 7H0v5h1v3h1v-3H1V7h1V5H1v2ZM13 12h-2v1h2v-1ZM14 10h-1v2h1v-2h1V7h-1v3ZM4 13h1v-1H3v3h1v-2ZM3 15H2v1h1v-1Z", fill: "#000" }), callback(inlineStyles /* inlineStyles */.Path, { d: "M2 7h1V5H2v2ZM1 9h1V7H1v2ZM5 3H3v2h1V4h1V3Z", fill: "#fff" }), callback(inlineStyles /* inlineStyles */.Path, { d: "M4 8h2V7H4v1ZM6 7h2V6H6v1ZM8 6h2V5H8v1ZM10 5h1V4h-1v1ZM11 4h1V3h-1v1Z", fill: primaryColorsTransformed[0] }), callback(inlineStyles /* inlineStyles */.Path, { d: "M5 4v1h1V4H5Z", fill: "#fff" }), callback(inlineStyles /* inlineStyles */.Path, { d: "M3 8v1h1V8H3Z", fill: primaryColorsTransformed[0] })];
   obj.children = items;
-  return callback2(require("../../../../../_runtime/08437_inlineStyles.js") /* inlineStyles */.Svg, obj);
+  return callback2(inlineStyles /* inlineStyles */.Svg, obj);
 };

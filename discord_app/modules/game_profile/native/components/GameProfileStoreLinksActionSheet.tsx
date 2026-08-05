@@ -1,3 +1,11 @@
+import { BottomSheetModal } from "../../../../../_runtime/05340_BottomSheetModal.js";
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { ActionSheet } from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { Linking } from "../../../../lib/native/Linking.tsx";
+import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import { _getDeepLinkUrl } from "../../hooks/useOpenExternalUrlFromGameProfile.tsx";
 // discord_app/modules/game_profile/native/components/GameProfileStoreLinksActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -23,24 +31,24 @@ export default function GameProfileStoreLinksActionSheet(gameName) {
   ({ websiteButtons, trackAction: require } = gameName);
   let importDefault;
   const tmp = createCacheKey();
-  importDefault = require("../../hooks/useOpenExternalUrlFromGameProfile.tsx")(require("../../../../lib/native/Linking.tsx").openURL);
+  importDefault = _getDeepLinkUrl(Linking.openURL);
   let obj = { children: null };
   obj = { contentContainerStyle: null, children: null };
   obj = { paddingBottom: null };
-  obj[0] = require("../../../safe_area/useSafeAreaInsets.native.tsx")().bottom + require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16;
+  obj[0] = useSafeAreaInsets().bottom + Themes.space.PX_16;
   obj[0] = obj;
   const obj1 = { style: tmp.header, children: null };
   const obj2 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.headerText, children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj2[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/4gj6r"]);
-  const items = [callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj2[3] = intl.string(getSystemLocale /* getSystemLocale */.t["/4gj6r"]);
+  const items = [callback(Text /* Text */.Text, obj2), ];
   const obj3 = { variant: "text-md/medium", color: "text-subtle", style: tmp.headerText, children: null };
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj3[3] = intl2.format(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["0acM2Y"], { gameName: gameName.gameName });
-  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj3[3] = intl2.format(getSystemLocale /* getSystemLocale */.t["0acM2Y"], { gameName: gameName.gameName });
+  items[1] = callback(Text /* Text */.Text, obj3);
   obj1[1] = items;
   const items1 = [callback2(View, obj1), ];
-  const tmp2 = require("../../hooks/useOpenExternalUrlFromGameProfile.tsx");
+  const tmp2 = _getDeepLinkUrl;
   items1[1] = callback(View, {
     style: tmp.buttons,
     children: websiteButtons.map((url) => {
@@ -63,7 +71,7 @@ export default function GameProfileStoreLinksActionSheet(gameName) {
     })
   });
   obj[1] = items1;
-  obj[0] = callback2(require("../../../../../_runtime/05340_BottomSheetModal.js") /* BottomSheetModal */.BottomSheetScrollView, obj);
-  return callback(require("../../../../design/components/Sheet/native/ActionSheet.native.tsx") /* ActionSheet */.ActionSheet, obj);
+  obj[0] = callback2(BottomSheetModal /* BottomSheetModal */.BottomSheetScrollView, obj);
+  return callback(ActionSheet /* ActionSheet */.ActionSheet, obj);
 };
 export const ACTION_SHEET_KEY = "game-profile-store-links";

@@ -1,3 +1,4 @@
+import { openImagePickerUnhandled } from "native/UploadUtils.tsx";
 // discord_app/utils/AttachmentFile.native.tsx
 import items from "items";
 
@@ -229,10 +230,10 @@ export const cancelGetAttachmentFile = function cancelGetAttachmentFile(found) {
 export const fileIsInAppDir = function fileIsInAppDir(uri) {
   const replaced = uri.replace(/^file:\/\//, "");
   try {
-    let startsWithResult = "" !== require("native/UploadUtils.tsx") /* openImagePickerUnhandled */.getAppDir();
+    let startsWithResult = "" !== openImagePickerUnhandled /* openImagePickerUnhandled */.getAppDir();
     if (startsWithResult) {
-      startsWithResult = replaced.startsWith(require("native/UploadUtils.tsx") /* openImagePickerUnhandled */.getAppDir());
-      const tmpResult = require("native/UploadUtils.tsx") /* openImagePickerUnhandled */;
+      startsWithResult = replaced.startsWith(openImagePickerUnhandled /* openImagePickerUnhandled */.getAppDir());
+      const tmpResult = openImagePickerUnhandled /* openImagePickerUnhandled */;
     }
     return startsWithResult;
   } catch (tmp4) {

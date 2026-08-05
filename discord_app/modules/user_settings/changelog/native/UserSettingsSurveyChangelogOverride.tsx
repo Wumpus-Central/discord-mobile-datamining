@@ -1,3 +1,12 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { ActionSheet } from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import { ActionSheetRowIcon } from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { usePrevious } from "../../../../hooks/usePrevious.tsx";
 // discord_app/modules/user_settings/changelog/native/UserSettingsSurveyChangelogOverride.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "TableRowGroupTitle";
@@ -12,7 +21,7 @@ let c9;
 let require = arg1;
 function SurveyOverrideInfoActionSheet(survey) {
   let obj = { header: null, children: null };
-  obj[0] = callback2(require("../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title: "Last Survey Data" });
+  obj[0] = callback2(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title: "Last Survey Data" });
   obj = { hasIcons: true, children: null };
   const entries = Object.entries(survey.survey);
   obj[1] = entries.map((arg0) => {
@@ -37,8 +46,8 @@ function SurveyOverrideInfoActionSheet(survey) {
     };
     return closure_9(callback(table[10]).ActionSheetRow, obj, tmp);
   });
-  obj[1] = callback2(require("../../../../design/components/Sheet/native/ActionSheetRow.native.tsx") /* ActionSheetRowIcon */.ActionSheetRow.Group, obj);
-  return callback2(require("../../../../design/components/Sheet/native/ActionSheet.native.tsx") /* ActionSheet */.ActionSheet, obj);
+  obj[1] = callback2(ActionSheetRowIcon /* ActionSheetRowIcon */.ActionSheetRow.Group, obj);
+  return callback2(ActionSheet /* ActionSheet */.ActionSheet, obj);
 }
 function SurveyOverrideActionSheet() {
   const tmp = callback(importAllResult.useState(() => {
@@ -81,10 +90,10 @@ function SurveyOverrideActionSheet() {
   return closure_10(first(5646).ActionSheet, obj);
 }
 function SurveyInfo() {
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [fetchSurveyIfNeeded];
   const stateFromStores = obj.useStateFromStores(items, () => currentSurvey.getCurrentSurvey());
-  const tmp2 = require("../../../../hooks/usePrevious.tsx")(stateFromStores);
+  const tmp2 = usePrevious(stateFromStores);
   require = tmp2;
   obj = {
     label: "Survey override",
@@ -96,7 +105,7 @@ function SurveyInfo() {
       obj.openLazy(Promise.resolve(obj), "SurveyOverrideActionSheet");
     }
   };
-  const items1 = [callback2(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj), ];
+  const items1 = [callback2(TableRowInner /* TableRowInner */.TableRow, obj), ];
   let str;
   if (null == tmp2) {
     str = "No survey data";
@@ -113,17 +122,17 @@ function SurveyInfo() {
   }
   const obj1 = { title: "Surveys", hasIcons: false, children: null };
   obj[3] = fn;
-  items1[1] = callback2(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
+  items1[1] = callback2(TableRowInner /* TableRowInner */.TableRow, obj);
   obj1[2] = items1;
-  return closure_10(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj1);
+  return closure_10(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj1);
 }
 function ChangelogOverrideDebuggingActionSheet() {
   let obj = { header: null, children: null };
-  obj[0] = callback2(require("../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title: "Changelog Debugging" });
+  obj[0] = callback2(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title: "Changelog Debugging" });
   obj = { variant: "text-md/semibold", children: null };
   obj[1] = "" + JSON.stringify(stateForDebugging.getStateForDebugging(), undefined, "\t");
-  obj[1] = callback2(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
-  return callback2(require("../../../../design/components/Sheet/native/ActionSheet.native.tsx") /* ActionSheet */.ActionSheet, obj);
+  obj[1] = callback2(Text /* Text */.Text, obj);
+  return callback2(ActionSheet /* ActionSheet */.ActionSheet, obj);
 }
 function ChangelogOverrideActionSheet() {
   const tmp = callback(importAllResult.useState(() => handleUserSettingsProtoStoreChange.overrideId()), 2);
@@ -171,7 +180,7 @@ function ChangelogInfo() {
       obj.openLazy(Promise.resolve(obj), "ChangelogOverrideActionSheet");
     }
   };
-  const items = [callback2(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj), ];
+  const items = [callback2(TableRowInner /* TableRowInner */.TableRow, obj), ];
   obj = {
     label: "Changelog debugging",
     arrow: true,
@@ -181,9 +190,9 @@ function ChangelogInfo() {
       obj.openLazy(Promise.resolve(obj), "ChangelogOverrideDebuggingActionSheet");
     }
   };
-  items[1] = callback2(require("../../../../design/components/TableRow/native/TableRow.native.tsx") /* TableRowInner */.TableRow, obj);
+  items[1] = callback2(TableRowInner /* TableRowInner */.TableRow, obj);
   obj[2] = items;
-  return callback3(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx") /* TableRowGroupTitle */.TableRowGroup, obj);
+  return callback3(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
 }
 let c5 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
@@ -196,7 +205,7 @@ const memoResult = importAllResult.memo(function UserSettingsSurveyChangelogOver
   obj = { spacing: 16, children: null };
   const items = [callback2(SurveyInfo, {}), callback2(ChangelogInfo, {})];
   obj[1] = items;
-  obj[1] = callback3(require("../../../../design/components/Stack/native/Stack.native.tsx") /* Stack */.Stack, obj);
+  obj[1] = callback3(Stack /* Stack */.Stack, obj);
   return callback2(ScrollView, obj);
 });
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/changelog/native/UserSettingsSurveyChangelogOverride.tsx");

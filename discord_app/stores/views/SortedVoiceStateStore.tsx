@@ -1,3 +1,8 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { version } from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
+import { getFavoritesAwareGuildName } from "../../modules/favorites/FavoritesUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { nameFromUser } from "../../utils/UserUtils.tsx";
 // discord_app/stores/views/SortedVoiceStateStore.tsx
 import _slicedToArray from "_slicedToArray";
 import initializeFromUserSettings from "initializeFromUserSettings";
@@ -21,7 +26,7 @@ function getVoiceStatesForGuild(guildId) {
     const _Set = Set;
     const set = new Set();
     obj[0] = set;
-    const secondaryIndexMap = new require("../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx") /* version */.SecondaryIndexMap((voiceState) => {
+    const secondaryIndexMap = new version /* version */.SecondaryIndexMap((voiceState) => {
       const channelId = voiceState.voiceState.channelId;
       if (null != channelId) {
         const items = [channelId];
@@ -54,8 +59,8 @@ function makeSortedVoiceState(voiceState, guildId, arr) {
     nick = member.nick;
   }
   if (nick == null) {
-    nick = require("../../utils/UserUtils.tsx").getName(tmp3);
-    const obj2 = require("../../utils/UserUtils.tsx");
+    nick = nameFromUser.getName(tmp3);
+    const obj2 = nameFromUser;
   }
   let str = "\u0001";
   if (voiceState.selfStream) {
@@ -82,7 +87,7 @@ function makeSortedVoiceState(voiceState, guildId, arr) {
   return obj;
 }
 function handleUpdateUsers() {
-  return require("../../../_runtime/00012_apply.js").reduce(closure_13, (arg0, updateUsers) => updateUsers.updateUsers() || arg0, false);
+  return apply.reduce(closure_13, (arg0, updateUsers) => updateUsers.updateUsers() || arg0, false);
 }
 function handleFavoritesChange() {
   let c14 = null;
@@ -149,7 +154,7 @@ prototype["updateVoiceState"] = function updateVoiceState(id) {
             nick = member.nick;
           }
           if (nick == null) {
-            let obj = require("../../utils/UserUtils.tsx");
+            let obj = nameFromUser;
             nick = obj.getName(user);
           }
           const _voiceStates2 = self._voiceStates;
@@ -216,7 +221,7 @@ prototype["updateMember"] = function updateMember(arg0) {
           nick2 = member.nick;
         }
         if (nick2 == null) {
-          let obj = require("../../utils/UserUtils.tsx");
+          let obj = nameFromUser;
           nick2 = obj.getName(user);
         }
         let str = "\u0001";
@@ -308,7 +313,7 @@ prototype2["initialize"] = function initialize() {
   let closure_13 = {};
   let c14 = null;
   const allVoiceStates = store2.getAllVoiceStates();
-  const keys = require("../../utils/SnowflakeUtils.tsx").keys(allVoiceStates);
+  const keys = DISCORD_EPOCH.keys(allVoiceStates);
   const item = keys.forEach((arg0) => {
     const allVoiceStates = arg0;
     const keys = Object.keys(allVoiceStates[arg0]);
@@ -353,7 +358,7 @@ prototype2["initialize"] = function initialize() {
   this.syncWith(items2, handleFavoriteChannelAppeared);
 };
 prototype2["getVoiceStates"] = function getVoiceStates(guildId) {
-  let obj = require("../../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
+  let obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
   if (obj.isFavoritesGuildId(guildId)) {
     let voiceStates = (function getFavoritesVoiceStates() {
       if (null != result) {
@@ -453,7 +458,7 @@ prototype2["getVoiceStates"] = function getVoiceStates(guildId) {
       const _Set = Set;
       const set = new Set();
       obj[0] = set;
-      const secondaryIndexMap = new require("../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx") /* version */.SecondaryIndexMap((voiceState) => {
+      const secondaryIndexMap = new version /* version */.SecondaryIndexMap((voiceState) => {
         const channelId = voiceState.voiceState.channelId;
         if (null != channelId) {
           const items = [channelId];
@@ -490,7 +495,7 @@ prototype2["getVoiceStatesForChannel"] = function getVoiceStatesForChannel(getGu
     const _Set = Set;
     const set = new Set();
     obj[0] = set;
-    const secondaryIndexMap = new require("../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx") /* version */.SecondaryIndexMap((voiceState) => {
+    const secondaryIndexMap = new version /* version */.SecondaryIndexMap((voiceState) => {
       const channelId = voiceState.voiceState.channelId;
       if (null != channelId) {
         const items = [channelId];
@@ -521,7 +526,7 @@ prototype2["getVoiceStatesForChannelAlt"] = function getVoiceStatesForChannelAlt
     const _Set = Set;
     const set = new Set();
     obj[0] = set;
-    const secondaryIndexMap = new require("../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx") /* version */.SecondaryIndexMap((voiceState) => {
+    const secondaryIndexMap = new version /* version */.SecondaryIndexMap((voiceState) => {
       const channelId = voiceState.voiceState.channelId;
       if (null != channelId) {
         const items = [channelId];
@@ -555,7 +560,7 @@ prototype2["countVoiceStatesForChannel"] = function countVoiceStatesForChannel(a
       const _Set = Set;
       const set = new Set();
       obj[0] = set;
-      const secondaryIndexMap = new require("../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx") /* version */.SecondaryIndexMap((voiceState) => {
+      const secondaryIndexMap = new version /* version */.SecondaryIndexMap((voiceState) => {
         const channelId = voiceState.voiceState.channelId;
         if (null != channelId) {
           const items = [channelId];
@@ -589,7 +594,7 @@ prototype2["getVoiceStateVersion"] = function getVoiceStateVersion(arg0) {
     const _Set = Set;
     const set = new Set();
     obj[0] = set;
-    const secondaryIndexMap = new require("../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx") /* version */.SecondaryIndexMap((voiceState) => {
+    const secondaryIndexMap = new version /* version */.SecondaryIndexMap((voiceState) => {
       const channelId = voiceState.voiceState.channelId;
       if (null != channelId) {
         const items = [channelId];
@@ -616,7 +621,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(require("dispatcher"), {
     let closure_13 = {};
     let c14 = null;
     let allVoiceStates = store2.getAllVoiceStates();
-    let keys = require("../../utils/SnowflakeUtils.tsx").keys(allVoiceStates);
+    let keys = DISCORD_EPOCH.keys(allVoiceStates);
     let item = keys.forEach((arg0) => {
       const allVoiceStates = arg0;
       const keys = Object.keys(allVoiceStates[arg0]);
@@ -670,7 +675,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(require("dispatcher"), {
         const _Set = Set;
         const set = new Set();
         obj[0] = set;
-        const secondaryIndexMap = new require("../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx") /* version */.SecondaryIndexMap((voiceState) => {
+        const secondaryIndexMap = new version /* version */.SecondaryIndexMap((voiceState) => {
           const channelId = voiceState.voiceState.channelId;
           if (null != channelId) {
             const items = [channelId];
@@ -734,7 +739,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(require("dispatcher"), {
       const _Set = Set;
       const set = new Set();
       obj[0] = set;
-      const secondaryIndexMap = new require("../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx") /* version */.SecondaryIndexMap((voiceState) => {
+      const secondaryIndexMap = new version /* version */.SecondaryIndexMap((voiceState) => {
         const channelId = voiceState.voiceState.channelId;
         if (null != channelId) {
           const items = [channelId];
@@ -811,8 +816,8 @@ export const makeMemberAndComparator = function makeMemberAndComparator(selfStre
     nick = member.nick;
   }
   if (nick == null) {
-    nick = require("../../utils/UserUtils.tsx").getName(arg2);
-    const obj2 = require("../../utils/UserUtils.tsx");
+    nick = nameFromUser.getName(arg2);
+    const obj2 = nameFromUser;
   }
   let str = "\u0001";
   if (selfStream.selfStream) {

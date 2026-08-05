@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/hub/useIsHubRealNamePromptShowing.tsx
 import noop from "noop";
 import initialize from "initialize";
@@ -13,7 +14,7 @@ const result = require("trackCommunicationDisabled").fileFinishedImporting("modu
 export default function useIsHubRealNamePromptShowing(arg0) {
   const _require = arg0;
   const items = [createGuildRecordFromRust, initialize, mergeGuildAvatar, trackCommunicationDisabled];
-  const stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     const guild = outer1_6.getGuild(closure_0);
     let hasItem;
     if (guild != null) {

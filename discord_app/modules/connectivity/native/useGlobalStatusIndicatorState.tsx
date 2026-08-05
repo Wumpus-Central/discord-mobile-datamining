@@ -1,3 +1,5 @@
+import { useVoiceStateForRemoteSession } from "../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
+import { useIsInvitedToSpeak } from "../../stage_channels/useIsInvitedToSpeak.tsx";
 // discord_app/modules/connectivity/native/useGlobalStatusIndicatorState.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
@@ -15,10 +17,10 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
   let importDefault;
   let obj = stateFromStores(10571);
   let hasPipParticipant = obj.useHasPipParticipant({ isActivityViewFocused: false });
-  const tmp5 = require("../../game_console/hooks/useVoiceStateForRemoteSession.tsx")();
+  const tmp5 = useVoiceStateForRemoteSession();
   const items = [createRTCConnection];
   stateFromStores = stateFromStores(589).useStateFromStores(items, () => channelId.getChannelId());
-  const tmp7 = require("../../stage_channels/useIsInvitedToSpeak.tsx")();
+  const tmp7 = useIsInvitedToSpeak();
   importDefault = tmp7;
   const obj2 = stateFromStores(589);
   const tmp4 = importDefault;

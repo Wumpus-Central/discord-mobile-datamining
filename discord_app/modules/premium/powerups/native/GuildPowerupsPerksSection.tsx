@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { messagesProxy } from "../GuildPowerups.messages.js";
+import { GuildPowerupsSectionHeader } from "GuildPowerupsSectionHeader.tsx";
 // discord_app/modules/premium/powerups/native/GuildPowerupsPerksSection.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -20,11 +23,11 @@ export default function GuildPowerupPerksSection(arg0) {
   let obj = { children: null };
   obj = { title: null, description: null };
   const tmp = callback3();
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../GuildPowerups.messages.js").TV3Vm8);
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require("../GuildPowerups.messages.js").STx9hp);
-  const items = [callback(require("GuildPowerupsSectionHeader.tsx"), obj), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(messagesProxy.TV3Vm8);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl2.string(messagesProxy.STx9hp);
+  const items = [callback(GuildPowerupsSectionHeader, obj), ];
   obj = {
     style: tmp.container,
     children: listings.map((type) => {

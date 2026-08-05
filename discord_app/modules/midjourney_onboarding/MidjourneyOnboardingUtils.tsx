@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/midjourney_onboarding/MidjourneyOnboardingUtils.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -34,7 +35,7 @@ export const isMidjourneyOnboardingFlow = function isMidjourneyOnboardingFlow() 
 };
 export const useIsMidjourneyOnboardingFlow = function useIsMidjourneyOnboardingFlow() {
   const items = [createGuildRecordFromRust];
-  return require("../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => {
+  return initialize /* initialize */.useStateFromStores(items, () => {
     let guildStore = { guildStore: createGuildRecordFromRust }.guildStore;
     if (guildStore == null) {
       guildStore = createGuildRecordFromRust;

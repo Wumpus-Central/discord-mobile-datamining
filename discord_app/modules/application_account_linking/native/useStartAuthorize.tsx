@@ -1,3 +1,5 @@
+import { getAuthorizationApp } from "../hooks/useAuthorizationApp.tsx";
+import { useAuthorizedAppsTokens } from "../hooks/useAuthorizedAppsToken.tsx";
 // discord_app/modules/application_account_linking/native/useStartAuthorize.tsx
 import useAuthorizedAppsTokens from "useAuthorizedAppsTokens";
 import noop from "noop";
@@ -16,7 +18,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
   }
   let _require;
   const debug = obj.debug;
-  const authorizationApp = _require("../hooks/useAuthorizationApp.tsx").useAuthorizationApp(getOfficialApplicationId);
+  const authorizationApp = _getAuthorizationApp.useAuthorizationApp(getOfficialApplicationId);
   _require = authorizationApp;
   let prop;
   if (authorizationApp != null) {
@@ -26,7 +28,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
   if (null != prop) {
     WEB = AuthorizeFlow.WEB;
   }
-  let obj2 = _require("../hooks/useAuthorizationApp.tsx");
+  let obj2 = _getAuthorizationApp;
   const tmp = undefined !== debug && debug;
   const tmp2 = _require;
   let parentId;
@@ -40,7 +42,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
     }
     parentId = id;
   }
-  const authorizedAppsToken = _require("../hooks/useAuthorizedAppsToken.tsx").useAuthorizedAppsToken(parentId);
+  const authorizedAppsToken = _useAuthorizedAppsTokens.useAuthorizedAppsToken(parentId);
   ({ token, fetched } = authorizedAppsToken);
   _require = undefined;
   _require = callback((arg0) => {

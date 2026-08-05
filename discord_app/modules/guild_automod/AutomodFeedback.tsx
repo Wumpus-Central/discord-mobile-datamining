@@ -1,3 +1,4 @@
+import { getSystemLocale } from "../../intl/index.native.tsx";
 // discord_app/modules/guild_automod/AutomodFeedback.tsx
 let obj = { BUG: "BUG", ALLOWED: "ALLOWED", MENTION_RAID_REMOVE_RESTRICTION: "MENTION_RAID_REMOVE_RESTRICTION" };
 obj = { LEGITIMATE_ACTIVITY: "LEGITIMATE_ACTIVITY", LEGITIMATE_ACCOUNTS: "LEGITIMATE_ACCOUNTS", LEGITIMATE_DMS: "LEGITIMATE_DMS", DM_SPAM: "DM_SPAM", JOIN_RAID: "JOIN_RAID", OTHER: "OTHER" };
@@ -6,13 +7,13 @@ const result = require("set").fileFinishedImporting("modules/guild_automod/Autom
 export const Feedback = obj;
 export const generateFeedbackOptions = function generateFeedbackOptions() {
   let obj = { name: null, value: null };
-  const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["+MbOX4"]);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["+MbOX4"]);
   obj[1] = obj.BUG;
   const items = [obj, ];
   obj = { name: null, value: null };
-  const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.CRsCRC);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.CRsCRC);
   obj[1] = obj.ALLOWED;
   items[1] = obj;
   return items;

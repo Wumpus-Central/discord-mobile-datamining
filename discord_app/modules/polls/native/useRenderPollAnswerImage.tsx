@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { PollMediaUploadAttachmentStatus } from "../PollTypes.tsx";
 // discord_app/modules/polls/native/useRenderPollAnswerImage.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -16,7 +18,7 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
   const dependencyMap = mediaAttachmentState;
   const callback = arg3;
   const React = arg4;
-  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [map];
   const stateFromStores = obj.useStateFromStores(items, () => tmp7.getUpload(closure_0, closure_1, first.Poll));
   const tmp4 = callback(React.useState(), 2);
@@ -28,7 +30,7 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
       status = mediaAttachmentState.status;
     }
   }
-  const tmp7 = status === _require("../PollTypes.tsx").PollMediaUploadAttachmentStatus.PREPARING;
+  const tmp7 = status === _PollMediaUploadAttachmentStatus.PollMediaUploadAttachmentStatus.PREPARING;
   map = tmp7;
   obj = {
     renderImage: React.useMemo(() => {

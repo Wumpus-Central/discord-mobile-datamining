@@ -1,3 +1,7 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { GIFIcon } from "posts/grid/ForumPostGridBody.tsx";
+import { ForumPostGridFooter } from "posts/grid/ForumPostGridFooter.tsx";
+import { ForumPostGridHeader } from "posts/grid/ForumPostGridHeader.tsx";
 // discord_app/modules/forums/native/ForumPost.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";
@@ -19,7 +23,7 @@ function ForumPostGrid(arg0) {
   ({ hasUnreads, thread } = arg0);
   const obj = { children: null };
   ({ firstMessage, isNew, media, parentChannel } = arg0);
-  const items = [callback(require("posts/grid/ForumPostGridHeader.tsx"), { thread, hasUnreads, isNew }), callback(require("posts/grid/ForumPostGridBody.tsx"), { thread, hasUnreads, media }), callback(require("posts/grid/ForumPostGridFooter.tsx"), { thread, firstMessage, hasUnreads, parentChannel })];
+  const items = [callback(ForumPostGridHeader, { thread, hasUnreads, isNew }), callback(GIFIcon, { thread, hasUnreads, media }), callback(ForumPostGridFooter, { thread, firstMessage, hasUnreads, parentChannel })];
   obj[0] = items;
   return callback2(closure_7, obj);
 }
@@ -136,7 +140,7 @@ function ConnectedForumPost(arg0) {
 ({ jsx: closure_6, Fragment: error, jsxs: metroImportAll } = jsxProd);
 const memoResult = require("noop").memo((arg0) => {
   const _require = arg0;
-  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [ensureGuildLoaded];
   let tmp = null;
   if (null != obj.useStateFromStores(items, () => outer1_3.getChannel(threadId.threadId))) {

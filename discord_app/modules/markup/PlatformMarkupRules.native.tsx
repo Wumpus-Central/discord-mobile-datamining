@@ -1,3 +1,7 @@
+import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
+import { MarkupAttachmentLinkRule } from "MarkupAttachmentLinkRule.tsx";
+import { getChannel } from "MarkupChannelMentionRule.tsx";
 // discord_app/modules/markup/PlatformMarkupRules.native.tsx
 import { Image } from "get ActivityIndicator";
 
@@ -19,7 +23,7 @@ obj = {
           const json = JSON.stringify(match[0]);
           tmp3 = null;
         }
-        obj = require("../emojis/UnicodeEmojis.tsx");
+        obj = parseRawEmojiObject;
       }
       return tmp3;
     }
@@ -42,7 +46,7 @@ obj[2] = {
       obj[0] = arg0[0];
       return obj;
     } else {
-      obj = require("../emojis/UnicodeEmojis.tsx");
+      obj = parseRawEmojiObject;
       const result = obj.maybeTranslateSurrogatesToInlineEmoji(arg0[0]);
       if (null == result) {
         obj = { content: null };
@@ -60,7 +64,7 @@ obj[2] = {
 };
 obj[3] = {
   parse(content) {
-    let obj = require("../emojis/UnicodeEmojis.tsx");
+    let obj = parseRawEmojiObject;
     obj = { type: "emoji", content: content[0], surrogate: obj.convertNameToSurrogate(content[1]) };
     return obj;
   }
@@ -80,10 +84,10 @@ obj[4] = {
     if (flag === undefined) {
       flag = false;
     }
-    let obj = require("../../utils/AvatarUtils.tsx");
+    let obj = getAvatarURL;
     obj = { id: tmp3, animated: "a" === tmp, size: 48 };
     let emojiURL = obj.getEmojiURL(obj);
-    const emojiURL1 = require("../../utils/AvatarUtils.tsx").getEmojiURL({ id: tmp3, animated: false, size: 48 });
+    const emojiURL1 = getAvatarURL.getEmojiURL({ id: tmp3, animated: false, size: 48 });
     obj = { id: tmp3, alt: tmp2, src: null, frozenSrc: null };
     if (flag) {
       emojiURL = emojiURL1;
@@ -95,7 +99,7 @@ obj[4] = {
 };
 obj[5] = {
   parse(arg0, arg1, arg2) {
-    const channelMention = require("MarkupChannelMentionRule.tsx").channelMention;
+    const channelMention = getChannel.channelMention;
     const parsed = channelMention.parse(arg0, arg1, arg2);
     const obj = {};
     const merged = Object.assign(parsed);
@@ -164,7 +168,7 @@ obj[5] = {
 };
 obj[6] = {
   parse(arg0, arg1, arg2) {
-    const channelOrMessageUrl = require("MarkupChannelMentionRule.tsx").channelOrMessageUrl;
+    const channelOrMessageUrl = getChannel.channelOrMessageUrl;
     const parsed = channelOrMessageUrl.parse(arg0, arg1, arg2);
     const obj = {};
     const merged = Object.assign(parsed);
@@ -233,7 +237,7 @@ obj[6] = {
 };
 obj[7] = {
   parse(arg0, arg1, arg2) {
-    const mediaPostLink = require("MarkupChannelMentionRule.tsx").mediaPostLink;
+    const mediaPostLink = getChannel.mediaPostLink;
     const parsed = mediaPostLink.parse(arg0, arg1, arg2);
     let obj = {};
     let merged = Object.assign(parsed);
@@ -302,7 +306,7 @@ obj[7] = {
 };
 obj[8] = {
   parse(arg0, arg1, arg2) {
-    const attachmentLink = require("MarkupAttachmentLinkRule.tsx").attachmentLink;
+    const attachmentLink = MarkupAttachmentLinkRule.attachmentLink;
     return attachmentLink.parse(arg0, arg1, arg2);
   }
 };
@@ -321,10 +325,10 @@ let obj1 = {
     if (flag === undefined) {
       flag = false;
     }
-    let obj = require("../../utils/AvatarUtils.tsx");
+    let obj = getAvatarURL;
     obj = { id: tmp3, animated: "a" === tmp, size: 48 };
     let emojiURL = obj.getEmojiURL(obj);
-    const emojiURL1 = require("../../utils/AvatarUtils.tsx").getEmojiURL({ id: tmp3, animated: false, size: 48 });
+    const emojiURL1 = getAvatarURL.getEmojiURL({ id: tmp3, animated: false, size: 48 });
     obj = { id: tmp3, alt: tmp2, src: null, frozenSrc: null };
     if (flag) {
       emojiURL = emojiURL1;

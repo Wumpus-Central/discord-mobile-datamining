@@ -1,3 +1,10 @@
+import { getDeprecatedModalData } from "../../../../utils/getDeprecatedModalData.tsx";
+import { isEligibleForSafetyFlowsExperiment } from "../../../safety_flows/SafetyFlowsExperiment.tsx";
+import { handleTouch } from "../../../user_required_action/native/NewTermsModal.tsx";
+import { PhoneThenEmailInterstitial } from "../../../verification/native/components/VerificationModal.tsx";
+import { UserRequiredActions } from "../../../verification/VerificationUtils.tsx";
+import { navigationToRootTabHelper } from "../../helpers/NavigationRouteUtils.native.tsx";
+import { getRootNavigationRef } from "../../RootNavigationRef.native.tsx";
 // discord_app/modules/main_tabs_v2/native/modal/DeprecatedModalManager.tsx
 import handleFormInit from "handleFormInit";
 import fetchFingerprint from "fetchFingerprint";
@@ -9,7 +16,7 @@ import "initialize";
 
 const require = arg1;
 function handlePushedModal(key) {
-  let obj = require("../../RootNavigationRef.native.tsx") /* getRootNavigationRef */;
+  let obj = getRootNavigationRef /* getRootNavigationRef */;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     obj = { name: "modal", key: null, params: null };
@@ -21,7 +28,7 @@ function handlePushedModal(key) {
   }
 }
 function handlePoppedModal() {
-  require("../../helpers/NavigationRouteUtils.native.tsx") /* navigationToRootTabHelper */.popModal();
+  navigationToRootTabHelper /* navigationToRootTabHelper */.popModal();
 }
 function pushFirstOpenModal(arg0, arg1) {
   const iter = arg0[Symbol.iterator]();
@@ -58,7 +65,7 @@ function pushFirstOpenModal(arg0, arg1) {
     key = key.key;
     obj[0] = key;
     let num = 0;
-    component = handlePushedModal(require("../../../../utils/getDeprecatedModalData.tsx")(component, obj, props));
+    component = handlePushedModal(getDeprecatedModalData(component, obj, props));
   }
 }
 function createPushModalHandler(closure_15, closure_152) {
@@ -80,18 +87,18 @@ let closure_15 = {
     if (action == null) {
       action = importDefaultResult.getAction();
     }
-    let result = require("../../../verification/VerificationUtils.tsx").isFullScreenVerification(action);
+    let result = UserRequiredActions.isFullScreenVerification(action);
     if (result) {
       result = null != token.getToken();
     }
     if (result) {
-      result = !require("../../../safety_flows/SafetyFlowsExperiment.tsx") /* isEligibleForSafetyFlowsExperiment */.isEligibleForSafetyFlowsExperiment({ location: "modal-manager-verification" });
-      const obj2 = require("../../../safety_flows/SafetyFlowsExperiment.tsx") /* isEligibleForSafetyFlowsExperiment */;
+      result = !isEligibleForSafetyFlowsExperiment /* isEligibleForSafetyFlowsExperiment */.isEligibleForSafetyFlowsExperiment({ location: "modal-manager-verification" });
+      const obj2 = isEligibleForSafetyFlowsExperiment /* isEligibleForSafetyFlowsExperiment */;
     }
     return result;
   },
   getComponent() {
-    return require("../../../verification/native/components/VerificationModal.tsx") /* PhoneThenEmailInterstitial */.default;
+    return PhoneThenEmailInterstitial /* PhoneThenEmailInterstitial */.default;
   }
 };
 const USER_REQUIRED_ACTION_UPDATE = "USER_REQUIRED_ACTION_UPDATE";
@@ -107,7 +114,7 @@ let closure_17 = {
     return action === UserRequiredActions.AGREEMENTS;
   },
   getComponent() {
-    return require("../../../user_required_action/native/NewTermsModal.tsx") /* handleTouch */.default;
+    return handleTouch /* handleTouch */.default;
   }
 };
 let prototype = function DeprecatedModalManager() {

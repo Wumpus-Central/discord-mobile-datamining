@@ -1,3 +1,6 @@
+import { trackInvite } from "../../actions/MessageActionCreators.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/welcome_cta/WelcomeCTAUtils.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { WELCOME_STICKERS } from "items";
@@ -13,8 +16,8 @@ export const pickHelloSticker = function pickHelloSticker() {
   }
   let num = 0;
   if (null != id) {
-    num = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(id);
-    const obj = require("../../utils/SnowflakeUtils.tsx");
+    num = DISCORD_EPOCH.extractTimestamp(id);
+    const obj = DISCORD_EPOCH;
   }
   return WELCOME_STICKERS[num % WELCOME_STICKERS.length];
 };
@@ -26,17 +29,17 @@ export const pickWelcomeSticker = function pickWelcomeSticker(id) {
   }
   let num = 0;
   if (null != id) {
-    num = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(id);
-    const obj = require("../../utils/SnowflakeUtils.tsx");
+    num = DISCORD_EPOCH.extractTimestamp(id);
+    const obj = DISCORD_EPOCH;
   }
-  const obj2 = require("../../utils/SnowflakeUtils.tsx");
+  const obj2 = DISCORD_EPOCH;
   return WELCOME_STICKERS[(num + obj2.extractTimestamp(obj2, id)) % WELCOME_STICKERS.length];
 };
 export const handleWelcomeCtaClicked = function handleWelcomeCtaClicked(messageChannel, message, stickerId) {
-  let obj = require("../../actions/MessageActionCreators.tsx");
+  let obj = trackInvite;
   obj = { channel: messageChannel, message, shouldMention: true, showMentionToggle: true };
-  obj.sendGreetMessage(messageChannel.id, stickerId, require("../../actions/MessageActionCreators.tsx").getSendMessageOptionsForReply(obj));
-  const obj2 = require("../../actions/MessageActionCreators.tsx");
+  obj.sendGreetMessage(messageChannel.id, stickerId, trackInvite.getSendMessageOptionsForReply(obj));
+  const obj2 = trackInvite;
   obj = { is_reply: true, sticker_id: stickerId, target_user: message.author.id, sender: null };
   const currentUser = authStore.getCurrentUser();
   let id;
@@ -44,5 +47,5 @@ export const handleWelcomeCtaClicked = function handleWelcomeCtaClicked(messageC
     id = currentUser.id;
   }
   obj[3] = id;
-  require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.WELCOME_CTA_CLICKED, obj);
+  expandEventProperties.track(AnalyticEvents.WELCOME_CTA_CLICKED, obj);
 };

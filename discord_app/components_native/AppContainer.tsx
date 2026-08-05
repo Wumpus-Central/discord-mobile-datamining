@@ -1,3 +1,12 @@
+import { Link } from "../../_runtime/01481_Link.js";
+import { useNavigationTheme } from "../design/components/Navigator/native/useNavigationTheme.native.tsx";
+import { useTheme } from "../hooks/useTheme.tsx";
+import { _maybeBackfillMissingBreadcrumbsFromTelemetryRing } from "../modules/errors/native/SentryInitUtils.tsx";
+import { DiscordGestureHandlerRootView } from "../modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx";
+import { enqueue } from "../modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx";
+import { getRootNavigationRef } from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
+import { ComponentDispatcher } from "../utils/ComponentDispatchUtils.tsx";
+import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
 // discord_app/components_native/AppContainer.tsx
 import set from "set";
 import designConfig from "designConfig";
@@ -33,15 +42,15 @@ function GestureWrapper(children) {
     items[1] = rootBackgroundColor;
     return items;
   }, items);
-  return callback2(require("../modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx"), { style, children: children.children });
+  return callback2(DiscordGestureHandlerRootView, { style, children: children.children });
 }
 function handleNavigationOnReady() {
-  require("../modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx").flush();
-  const ComponentDispatch = require("../utils/ComponentDispatchUtils.tsx") /* ComponentDispatcher */.ComponentDispatch;
+  enqueue.flush();
+  const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
   ComponentDispatch.dispatch(constants.NAVIGATOR_READY);
-  const routingInstrumentation = require("../modules/errors/native/SentryInitUtils.tsx") /* _maybeBackfillMissingBreadcrumbsFromTelemetryRing */.routingInstrumentation;
-  const obj = require("../modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx");
-  const result = routingInstrumentation.registerNavigationContainer(require("../modules/main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */.getRootNavigationRef());
+  const routingInstrumentation = _maybeBackfillMissingBreadcrumbsFromTelemetryRing /* _maybeBackfillMissingBreadcrumbsFromTelemetryRing */.routingInstrumentation;
+  const obj = enqueue;
+  const result = routingInstrumentation.registerNavigationContainer(getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef());
   callback();
 }
 function AppNavigationContainer(children) {
@@ -115,21 +124,21 @@ function AppNavigationContainer(children) {
       };
     }
   }, []);
-  let obj = _require("../design/components/Navigator/native/useNavigationTheme.native.tsx");
-  const navigationTheme = obj.useNavigationTheme(require("../hooks/useTheme.tsx")());
+  let obj = _useNavigationTheme;
+  const navigationTheme = obj.useNavigationTheme(useTheme());
   obj = { theme: navigationTheme, ref: null, onReady: null, onStateChange: null, initialState: null, children: null };
-  let tmp = require("../hooks/useTheme.tsx")();
-  obj[1] = _require("../modules/main_tabs_v2/RootNavigationRef.native.tsx").getRootNavigationRef();
+  let tmp = useTheme();
+  obj[1] = _getRootNavigationRef.getRootNavigationRef();
   obj[2] = handleNavigationOnReady;
   obj[3] = callback;
   obj[4] = memo;
   obj[5] = children.children;
-  return callback2(_require("../../_runtime/01481_Link.js").NavigationContainer, obj);
+  return callback2(_Link.NavigationContainer, obj);
 }
 function ShareNavigationContainer(children) {
-  const tmp = require("../hooks/useTheme.tsx")();
-  const theme = require("../design/components/Navigator/native/useNavigationTheme.native.tsx") /* useNavigationTheme */.useNavigationTheme(tmp);
-  return callback2(require("../../_runtime/01481_Link.js") /* Link */.NavigationContainer, { theme, children: children.children });
+  const tmp = useTheme();
+  const theme = useNavigationTheme /* useNavigationTheme */.useNavigationTheme(tmp);
+  return callback2(Link /* Link */.NavigationContainer, { theme, children: children.children });
 }
 function AppNavigationContainerOrEmpty(arg0) {
   let appEntryKey;
@@ -144,7 +153,7 @@ function AppNavigationContainerOrEmpty(arg0) {
     obj[0] = children;
     return callback2(ShareNavigationContainer, obj);
   } else {
-    obj = require("../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */;
+    obj = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
     return obj.assertNever(appEntryKey);
   }
 }

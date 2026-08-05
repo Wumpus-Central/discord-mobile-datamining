@@ -1,3 +1,4 @@
+import { ExampleButton } from "../../design_system/native/UserSettingsDesignSystemButton.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemsButtonSetting.tsx
 import createToggle from "createToggle";
 
@@ -11,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_BUTTON,
   getComponent() {
-    return require("../../design_system/native/UserSettingsDesignSystemButton.tsx") /* ExampleButton */.default;
+    return ExampleButton /* ExampleButton */.default;
   }
 };
 const route = createToggle.createRoute(obj);

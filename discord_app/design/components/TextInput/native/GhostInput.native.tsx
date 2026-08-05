@@ -1,3 +1,9 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Input } from "../../Input/native/Input.native.tsx";
+import { useInputStyles } from "../../Input/native/InputFieldContainer.native.tsx";
+import { useKeyboardBlurring } from "../../Input/native/NativeTextInput.native.tsx";
+import { Text } from "../../Text/native/Text.tsx";
+import { useTextFieldState } from "../../TextField/native/useTextField.native.tsx";
 // discord_app/design/components/TextInput/native/GhostInput.native.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -14,11 +20,11 @@ let closure_4 = createCacheKey.createStyles(() => {
     str2 = "default";
   }
   const input = {};
-  const merged = Object.assign({ md: require("../../Text/native/Text.tsx") /* Text */.TextStyleSheet["text-md/semibold"], lg: require("../../Text/native/Text.tsx") /* Text */.TextStyleSheet["text-lg/semibold"] }[str]);
+  const merged = Object.assign({ md: Text /* Text */.TextStyleSheet["text-md/semibold"], lg: Text /* Text */.TextStyleSheet["text-lg/semibold"] }[str]);
   if ("error" === str2) {
-    let TEXT_DEFAULT = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_FEEDBACK_CRITICAL;
+    let TEXT_DEFAULT = Themes.colors.TEXT_FEEDBACK_CRITICAL;
   } else {
-    TEXT_DEFAULT = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_DEFAULT;
+    TEXT_DEFAULT = Themes.colors.TEXT_DEFAULT;
   }
   input.color = TEXT_DEFAULT;
   input.minWidth = 48;
@@ -27,13 +33,13 @@ let closure_4 = createCacheKey.createStyles(() => {
 const result = require("createCacheKey").fileFinishedImporting("design/components/TextInput/native/GhostInput.native.tsx");
 
 export const GhostInput = function GhostInput(size) {
-  let obj = require("../../Input/native/InputFieldContainer.native.tsx") /* useInputStyles */;
+  let obj = useInputStyles /* useInputStyles */;
   obj = { size: size.size };
   const inputStyles = obj.useInputStyles(obj);
   const tmp4 = callback(size.size, size.status);
   const isCentered = size.isCentered;
   const autoFocus = size.autoFocus;
-  const textField = require("../../TextField/native/useTextField.native.tsx") /* useTextFieldState */.useTextField(size, undefined);
+  const textField = useTextFieldState /* useTextFieldState */.useTextField(size, undefined);
   obj = {};
   const merged = Object.assign(size);
   const items = [size.containerStyle, ];
@@ -51,6 +57,6 @@ export const GhostInput = function GhostInput(size) {
   obj1.placeholderTextColor = inputStyles.placeholderText.color;
   obj1.spellCheck = false;
   obj1.autoFocus = undefined === autoFocus || autoFocus;
-  obj.children = jsx(require("../../Input/native/NativeTextInput.native.tsx") /* useKeyboardBlurring */.NativeTextInput, {});
-  return jsx(require("../../Input/native/Input.native.tsx") /* Input */.Input, {});
+  obj.children = jsx(useKeyboardBlurring /* useKeyboardBlurring */.NativeTextInput, {});
+  return jsx(Input /* Input */.Input, {});
 };

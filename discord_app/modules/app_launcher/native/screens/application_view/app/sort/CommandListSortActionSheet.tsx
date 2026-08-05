@@ -1,3 +1,9 @@
+import { Themes } from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { ArrowsUpDownIcon } from "../../../../../../../design/components/Icon/native/redesign/generated/ArrowsUpDownIcon.tsx";
+import { Background } from "../../../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { context } from "../../../../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
+import { getSystemLocale } from "../../../../../../../intl/index.native.tsx";
 // discord_app/modules/app_launcher/native/screens/application_view/app/sort/CommandListSortActionSheet.tsx
 import "noop";
 import { CommandListSortOrder } from "CommandListSortOrder";
@@ -13,11 +19,11 @@ export default function CommandListSortActionSheet(sortOrder) {
   let obj = { startExpanded: true, header: null, children: null };
   obj = { leading: null, title: null };
   obj = { size: "sm", color: null };
-  obj[1] = require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_DEFAULT;
-  obj[0] = jsx(require("../../../../../../../design/components/Icon/native/redesign/generated/ArrowsUpDownIcon.tsx") /* ArrowsUpDownIcon */.ArrowsUpDownIcon, { size: "sm", color: null });
-  const intl = require("../../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.yeYaHf);
-  obj[1] = jsx(require("../../../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { size: "sm", color: null });
+  obj[1] = Themes.colors.TEXT_DEFAULT;
+  obj[0] = jsx(ArrowsUpDownIcon /* ArrowsUpDownIcon */.ArrowsUpDownIcon, { size: "sm", color: null });
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.yeYaHf);
+  obj[1] = jsx(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { size: "sm", color: null });
   const obj1 = {
     hasIcons: false,
     value: sortOrder.sortOrder,
@@ -28,20 +34,20 @@ export default function CommandListSortActionSheet(sortOrder) {
     children: null
   };
   const obj2 = { label: null, value: null };
-  const intl2 = require("../../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj2[0] = intl2.string(require("../../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.SzxiqK);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj2[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.SzxiqK);
   obj2[1] = CommandListSortOrder.POPULAR;
   const items = [obj2, ];
   const obj3 = { label: null, value: null };
-  const intl3 = require("../../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj3[0] = intl3.string(require("../../../../../../../intl/index.native.tsx") /* getSystemLocale */.t.m8xsti);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj3[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.m8xsti);
   obj3[1] = CommandListSortOrder.ALPHABETICAL;
   items[1] = obj3;
   obj1[3] = items.map((label) => {
     const value = label.value;
     return callback3(callback(table[9]).TableRadioRow, { label: label.label, value }, value);
   });
-  obj[2] = jsx(require("../../../../../../../design/components/TableRow/native/TableRadioGroup.native.tsx") /* context */.TableRadioGroup, {
+  obj[2] = jsx(context /* context */.TableRadioGroup, {
     hasIcons: false,
     value: sortOrder.sortOrder,
     onChange(arg0) {
@@ -50,5 +56,5 @@ export default function CommandListSortActionSheet(sortOrder) {
     },
     children: null
   });
-  return jsx(require("../../../../../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, { size: "sm", color: null });
+  return jsx(Background /* Background */.BottomSheet, { size: "sm", color: null });
 };

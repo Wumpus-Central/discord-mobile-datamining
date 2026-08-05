@@ -1,3 +1,8 @@
+import { isTracing } from "../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { createRTCConnection } from "../../../stores/RTCConnectionStore.tsx";
+import { getDeviceMetadata } from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
+import { setSystemTheme } from "../../user_settings/ThemeActionCreators.tsx";
 // discord_app/modules/core/native/handleAppStateChanged.tsx
 import fetchFingerprint from "fetchFingerprint";
 import getState from "getState";
@@ -13,27 +18,27 @@ let result = require("ME").fileFinishedImporting("modules/core/native/handleAppS
 
 export default function handleAppStateChanged(state) {
   state = state.getState();
-  let obj = require("../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx");
+  let obj = isTracing;
   obj.markAndLog(closure_7, "\u{1F3C3}", "AppState changing from " + state + " to " + state);
   obj = { type: "APP_STATE_UPDATE", state };
-  require("../../../Dispatcher.tsx").dispatch(obj);
+  dispatcher.dispatch(obj);
   let isAuthenticatedResult = state === constants2.BACKGROUND && state === tmp6.ACTIVE;
   if (isAuthenticatedResult) {
     isAuthenticatedResult = authenticated.isAuthenticated();
   }
   if (isAuthenticatedResult) {
-    isAuthenticatedResult = require("../../../stores/RTCConnectionStore.tsx") /* createRTCConnection */.default.isDisconnected();
-    const _default = require("../../../stores/RTCConnectionStore.tsx") /* createRTCConnection */.default;
+    isAuthenticatedResult = createRTCConnection /* createRTCConnection */.default.isDisconnected();
+    const _default = createRTCConnection /* createRTCConnection */.default;
   }
   if (isAuthenticatedResult) {
     let tmp2Result = tmp2(16854);
     tmp2Result.deferUpdate();
   }
   if (state === constants2.ACTIVE) {
-    require("../../tti_analytics/native/TTIAnalyticsUtils.tsx") /* getDeviceMetadata */.trackAppOpened("launcher");
-    const obj5 = require("../../tti_analytics/native/TTIAnalyticsUtils.tsx") /* getDeviceMetadata */;
-    const result = require("../../user_settings/ThemeActionCreators.tsx") /* setSystemTheme */.setSystemThemeIfNeeded();
-    const obj6 = require("../../user_settings/ThemeActionCreators.tsx") /* setSystemTheme */;
+    getDeviceMetadata /* getDeviceMetadata */.trackAppOpened("launcher");
+    const obj5 = getDeviceMetadata /* getDeviceMetadata */;
+    const result = setSystemTheme /* setSystemTheme */.setSystemThemeIfNeeded();
+    const obj6 = setSystemTheme /* setSystemTheme */;
   }
   tmp2Result = tmp2(9);
   tmp2Result.appStateChanged(state);

@@ -1,3 +1,6 @@
+import { GuildMemberFlags } from "../../guild_automod/AutomodPermissionUtils.tsx";
+import { isCommunicationDisabled } from "../../guild_communication_disabled/CommunicationDisabledUtils.tsx";
+import { formatExpirationLabel } from "useFormattedExpirationLabel.tsx";
 // discord_app/modules/polls/chat/formatPollMessageChatData.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import getEmojiToGroupId from "getEmojiToGroupId";
@@ -45,8 +48,8 @@ function computeBasicPollChatData(message) {
     let str = "";
     if (message.state === MessageStates.SENT) {
       if (formattedExpirationLabel == null) {
-        formattedExpirationLabel = require("useFormattedExpirationLabel.tsx") /* formatExpirationLabel */.formatExpirationLabel(poll.expiry);
-        const obj2 = require("useFormattedExpirationLabel.tsx") /* formatExpirationLabel */;
+        formattedExpirationLabel = formatExpirationLabel /* formatExpirationLabel */.formatExpirationLabel(poll.expiry);
+        const obj2 = formatExpirationLabel /* formatExpirationLabel */;
       }
       str = formattedExpirationLabel;
     }
@@ -117,13 +120,13 @@ function computeBasicPollChatData(message) {
     if (null != guildId) {
       selfMember = selfMember.getSelfMember(guildId);
     }
-    const result = require("../../guild_automod/AutomodPermissionUtils.tsx") /* GuildMemberFlags */.hasAutomodQuarantinedProfile(selfMember);
-    const obj4 = require("../../guild_automod/AutomodPermissionUtils.tsx") /* GuildMemberFlags */;
+    const result = GuildMemberFlags /* GuildMemberFlags */.hasAutomodQuarantinedProfile(selfMember);
+    const obj4 = GuildMemberFlags /* GuildMemberFlags */;
     obj = { poll: null, canTapAnswers: null, canRemoveVote: null, canShowVoteCounts: null, canSubmitVote: null, expirationLabel: null, hasSelectedAnswer: null, hasVoted: null, hasVoteRecorded: null, isEditingVote: null, isExpired: null, isInteractive: null, isSent: null, reactions: null, selectedAnswerIds: null, submitting: null, tapShouldOpenVotersModal: null, showResults: null };
     obj[0] = poll;
     obj[1] = tmp19;
     let tmp30 = tmp16;
-    const result1 = require("../../guild_communication_disabled/CommunicationDisabledUtils.tsx") /* isCommunicationDisabled */.isMemberCommunicationDisabled(selfMember);
+    const result1 = isCommunicationDisabled /* isCommunicationDisabled */.isMemberCommunicationDisabled(selfMember);
     if (tmp16) {
       tmp30 = tmp2;
     }

@@ -1,3 +1,4 @@
+import { SampleCard } from "../../design_system/native/UserSettingsDesignSystemPile.tsx";
 // discord_app/modules/user_settings/defs/native/DesignSystemPileSetting.tsx
 import createToggle from "createToggle";
 
@@ -11,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_PILE,
   getComponent() {
-    return require("../../design_system/native/UserSettingsDesignSystemPile.tsx") /* SampleCard */.default;
+    return SampleCard /* SampleCard */.default;
   }
 };
 const route = createToggle.createRoute(obj);

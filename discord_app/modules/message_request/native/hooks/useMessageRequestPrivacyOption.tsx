@@ -1,3 +1,4 @@
+import { set } from "../../hooks/useIsStricterMessageRequests.tsx";
 // discord_app/modules/message_request/native/hooks/useMessageRequestPrivacyOption.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -42,7 +43,7 @@ const result = require("explicitContentFromProto").fileFinishedImporting("module
 
 export const useMessageRequestPrivacyOption = function useMessageRequestPrivacyOption(guild) {
   let tmp = null;
-  if (!require("../../hooks/useIsStricterMessageRequests.tsx")()) {
+  if (!set()) {
     const obj = { guild: null };
     obj[0] = guild.guild;
     tmp = <MessageRequestRestrictedGuildPrivacyOption guild={null} />;

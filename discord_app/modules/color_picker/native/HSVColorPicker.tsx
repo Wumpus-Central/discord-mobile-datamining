@@ -1,3 +1,5 @@
+import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
+import { ColorBox } from "SaturationValueColorPicker.tsx";
 // discord_app/modules/color_picker/native/HSVColorPicker.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -26,15 +28,15 @@ export default function HSVColorPicker(arg0) {
   let value;
   ({ hue, saturation, value, onPanUpdate, onPanFinalize } = arg0);
   ({ saturationValuePickerStyle, saturationValueColorBoxStyle, saturationValueColorBoxInnerStyle, saturationValueSelectorStyle, huePickerStyle, hueColorBarInnerStyle, hueSliderStyle } = arg0);
-  let obj = require("../../reanimated/ReanimatedRexport.tsx");
+  let obj = ReanimatedRexport;
   const sharedValue = obj.useSharedValue(0);
   const tmp = callback();
-  const sharedValue1 = require("../../reanimated/ReanimatedRexport.tsx").useSharedValue(1);
-  const obj2 = require("../../reanimated/ReanimatedRexport.tsx");
+  const sharedValue1 = ReanimatedRexport.useSharedValue(1);
+  const obj2 = ReanimatedRexport;
   obj = { style: tmp.hsvColorPicker, children: null };
-  const sharedValue2 = require("../../reanimated/ReanimatedRexport.tsx").useSharedValue(1);
+  const sharedValue2 = ReanimatedRexport.useSharedValue(1);
   let tmp11 = hue;
-  const obj3 = require("../../reanimated/ReanimatedRexport.tsx");
+  const obj3 = ReanimatedRexport;
   const tmp6 = closure_5;
   const tmp7 = View;
   const tmp9 = importDefault;
@@ -56,8 +58,8 @@ export default function HSVColorPicker(arg0) {
   obj[6] = saturationValueSelectorStyle;
   obj[7] = onPanUpdate;
   obj[8] = onPanFinalize;
-  const items = [closure_4(require("SaturationValueColorPicker.tsx"), obj), ];
-  const tmp10 = require("SaturationValueColorPicker.tsx");
+  const items = [closure_4(ColorBox, obj), ];
+  const tmp10 = ColorBox;
   if (hue == null) {
     hue = sharedValue;
   }

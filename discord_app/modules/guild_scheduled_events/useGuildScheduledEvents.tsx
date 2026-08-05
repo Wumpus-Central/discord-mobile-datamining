@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/guild_scheduled_events/useGuildScheduledEvents.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -29,7 +30,7 @@ export default function useGuildEvents(arg0, arg1) {
   const dependencyMap = arg1;
   const items = [createGuildRecordFromRust, closure_9, getUncachedChannelPermissions, ensureGuildLoaded];
   const items1 = [arg1, arg0];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
+  return _initialize.useStateFromStoresArray(items, () => {
     const guild = outer1_5.getGuild(closure_0);
     if (null == guild) {
       let found = outer1_15;
@@ -55,7 +56,7 @@ export const useActiveEvent = function useActiveEvent(id) {
   const _require = id;
   const items = [closure_9, ensureGuildLoaded, getUncachedChannelPermissions];
   const items1 = [id];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const channel = outer1_4.getChannel(closure_0);
     if (outer1_6.can(outer1_14.VIEW_CHANNEL, channel)) {
       let guild_id;
@@ -99,7 +100,7 @@ export const useGuildUpcomingEvents = function useGuildUpcomingEvents(arg0) {
   const _require = arg0;
   const items = [closure_9, ensureGuildLoaded, getUncachedChannelPermissions];
   const items1 = [arg0];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
+  return _initialize.useStateFromStoresArray(items, () => {
     const guildScheduledEventsByIndex = outer1_9.getGuildScheduledEventsByIndex(outer1_8.GUILD_EVENT_UPCOMING(closure_0));
     return guildScheduledEventsByIndex.filter((entity_type) => {
       if (entity_type.entity_type !== constants.NONE) {
@@ -214,7 +215,7 @@ export const useGuildActiveEvent = function useGuildActiveEvent(guild_id) {
   const _require = guild_id;
   const items = [closure_9, ensureGuildLoaded, getUncachedChannelPermissions];
   const items1 = [guild_id];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const guildScheduledEventsByIndex = outer1_9.getGuildScheduledEventsByIndex(outer1_8.GUILD_EVENT_ACTIVE(closure_0));
     return guildScheduledEventsByIndex.find((entity_type) => {
       if (entity_type.entity_type !== constants.NONE) {
@@ -234,13 +235,13 @@ export const useGuildChannelScheduledEvents = function useGuildChannelScheduledE
   const _require = id;
   const items = [closure_9];
   const items1 = [id];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => outer1_9.getGuildScheduledEventsByIndex(outer1_8.CHANNEL_EVENT_UPCOMING(closure_0)), items1);
+  return _initialize.useStateFromStores(items, () => outer1_9.getGuildScheduledEventsByIndex(outer1_8.CHANNEL_EVENT_UPCOMING(closure_0)), items1);
 };
 export const useFirstActiveEventChannel = function useFirstActiveEventChannel(id) {
   const _require = id;
   const items = [ensureGuildLoaded, closure_9];
   const items1 = [id];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const guildScheduledEventsByIndex = outer1_9.getGuildScheduledEventsByIndex(outer1_8.GUILD_EVENT_ACTIVE(closure_0));
     const found = guildScheduledEventsByIndex.find((channel_id) => null != channel.getChannel(channel_id.channel_id));
     let channel_id;
@@ -264,7 +265,7 @@ export const useImminentUpcomingGuildEvents = function useImminentUpcomingGuildE
   const tmp = stateFromStores(React.useState(() => Date.now()), 2);
   let items = [closure_9];
   const items1 = [id, tmp2];
-  stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  stateFromStores = _initialize.useStateFromStores(items, () => {
     if (null == closure_0) {
       let items = [];
     } else {

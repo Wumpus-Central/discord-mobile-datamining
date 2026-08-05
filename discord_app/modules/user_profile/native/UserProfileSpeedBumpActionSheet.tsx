@@ -1,3 +1,4 @@
+import { registerAsset } from "../../../../_runtime/08709_registerAsset.js";
 // discord_app/modules/user_profile/native/UserProfileSpeedBumpActionSheet.tsx
 import getNickname from "getNickname";
 import importAllResult from "useDisplayProfile";
@@ -17,11 +18,11 @@ let unpackModuleId;
 const require = arg1;
 function InformationTable(speedBumpType) {
   let items;
-  let obj = { icon: require("../../../../_runtime/08709_registerAsset.js"), text: null };
+  let obj = { icon: registerAsset, text: null };
   const intl = items(1236).intl;
   obj[1] = intl.string(items(1236).t.kcuWva);
   items = [obj, ];
-  obj = { icon: require("../../../../_runtime/08709_registerAsset.js"), text: null };
+  obj = { icon: registerAsset, text: null };
   if ("block" === speedBumpType.speedBumpType) {
     const intl3 = tmp2(1236).intl;
     let stringResult = intl3.string(tmp2(1236).t.QxrDY1);

@@ -1,3 +1,4 @@
+import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
 // discord_app/modules/message_request/MessageRequestPreviewStore.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import processChannel from "processChannel";
@@ -22,7 +23,7 @@ function storeMessagePreview(id, arg1) {
     if (true) {
       let messageRecord = null;
       if (!flag2) {
-        let obj = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
+        let obj = createMinimalMessageRecord /* createMinimalMessageRecord */;
         messageRecord = obj.createMessageRecord(null);
       }
       obj = { loaded: true, error: null, message: null };
@@ -103,7 +104,7 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(require("dispa
         if (null == message) {
           let messageRecord = null;
           if (null != message) {
-            let obj = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
+            let obj = createMinimalMessageRecord /* createMinimalMessageRecord */;
             messageRecord = obj.createMessageRecord(message);
           }
           obj = { loaded: true, error: null, message: null };
@@ -129,9 +130,9 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(require("dispa
         if (null != tmp2.message) {
           const obj = {};
           const merged = Object.assign(tmp2);
-          obj.message = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */.updateMessageRecord(tmp2.message, message.message);
+          obj.message = createMinimalMessageRecord /* createMinimalMessageRecord */.updateMessageRecord(tmp2.message, message.message);
           dependencyMap[channel_id] = obj;
-          const obj2 = require("../messages/MessageRecordUtils.tsx") /* createMinimalMessageRecord */;
+          const obj2 = createMinimalMessageRecord /* createMinimalMessageRecord */;
         }
         tmp3 = tmp4;
       }

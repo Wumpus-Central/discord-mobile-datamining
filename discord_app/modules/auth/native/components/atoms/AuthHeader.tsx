@@ -1,3 +1,4 @@
+import { Button } from "../../../../../design/void/native.tsx";
 // discord_app/modules/auth/native/components/atoms/AuthHeader.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -19,5 +20,5 @@ export default function AuthHeader(arg0) {
   ({ children, style } = arg0);
   style = [createCacheKey().header, ];
   style[1] = style;
-  return jsx(require("../../../../../design/void/native.tsx") /* Button */.LegacyText, { style, accessibilityRole: "header", children });
+  return jsx(Button /* Button */.LegacyText, { style, accessibilityRole: "header", children });
 };

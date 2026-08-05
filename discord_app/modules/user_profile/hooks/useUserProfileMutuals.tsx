@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { usePrevValue } from "../../../hooks/usePrevValue.tsx";
 // discord_app/modules/user_profile/hooks/useUserProfileMutuals.tsx
 import _slicedToArray from "_slicedToArray";
 import { useMemo } from "noop";
@@ -12,7 +14,7 @@ export default function useUserProfileMutuals(arg0) {
   let tmp2;
   let tmp3;
   const _require = arg0;
-  let obj = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   let items = [createUserWidgetFromServer];
   const tmp = stateFromStores(obj.useStateFromStoresArray(items, () => {
     const items = [outer1_7.getMutualFriendsCount(lib.id), outer1_7.getMutualFriends(lib.id), outer1_7.getMutualGuilds(lib.id), outer1_7.isFetchingProfile(lib.id), outer1_7.isFetchingFriends(lib.id)];
@@ -22,10 +24,10 @@ export default function useUserProfileMutuals(arg0) {
   const importDefault = tmp3;
   const dependencyMap = tmp4;
   const items1 = [recomputeAffinities];
-  stateFromStores = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => userAffinitiesMap.getUserAffinitiesMap());
-  const obj2 = _require("../../../../discord_common/js/packages/flux/index.tsx");
+  stateFromStores = _initialize.useStateFromStores(items1, () => userAffinitiesMap.getUserAffinitiesMap());
+  const obj2 = _initialize;
   const items2 = [insertUnsortedGuilds];
-  const stateFromStores1 = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => flattenedGuildIds.getFlattenedGuildIds());
+  const stateFromStores1 = _initialize.useStateFromStores(items2, () => flattenedGuildIds.getFlattenedGuildIds());
   const items3 = [tmp3, stateFromStores];
   let tmp7 = stateFromStores1(() => {
     let sortByResult = closure_1;
@@ -68,9 +70,9 @@ export default function useUserProfileMutuals(arg0) {
     }
     return tmp4;
   }, items4);
-  const obj3 = _require("../../../../discord_common/js/packages/flux/index.tsx");
-  const tmp9 = require("../../../hooks/usePrevValue.tsx")(tmp2);
-  const tmp10 = require("../../../hooks/usePrevValue.tsx")(tmp7);
+  const obj3 = _initialize;
+  const tmp9 = usePrevValue(tmp2);
+  const tmp10 = usePrevValue(tmp7);
   obj = { mutualFriendsCount: tmp2, mutualFriends: null, mutualGuilds: null, isFetching: null, isFetchingFriends: null };
   if (tmp7 == null) {
     tmp7 = tmp10;

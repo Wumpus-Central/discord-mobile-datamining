@@ -1,3 +1,4 @@
+import { dispatcher } from "../../../Dispatcher.tsx";
 // discord_app/modules/guild_member_verification/native/InitialMemberVerificationStore.tsx
 import { Store } from "initialize";
 
@@ -28,7 +29,7 @@ let result = require("set").fileFinishedImporting("modules/guild_member_verifica
 
 export default initialMemberVerificationStore;
 export const setInitialVerification = function setInitialVerification(guildId, state) {
-  let obj = require("../../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "SET_INITIAL_MEMBER_VERIFICATION", guildId, state };
   obj.dispatch(obj);
 };

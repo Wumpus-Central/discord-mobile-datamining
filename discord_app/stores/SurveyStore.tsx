@@ -1,3 +1,6 @@
+import { t } from "../../_runtime/03867_t.js";
+import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
+import { overrideSurvey } from "../actions/SurveyActionCreators.tsx";
 // discord_app/stores/SurveyStore.tsx
 import handleInviteData from "handleInviteData";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -28,7 +31,7 @@ function fetchSurveyIfNeeded() {
   }
   if (!tmp) {
     c18 = true;
-    obj = require("../actions/SurveyActionCreators.tsx") /* overrideSurvey */;
+    obj = overrideSurvey /* overrideSurvey */;
     obj.surveyFetch(obj.surveyOverride, true);
   }
 }
@@ -217,11 +220,11 @@ function setSurvey(survey) {
   if (!c14) {
     tmp6 = c15;
   }
-  const Storage = require("../../discord_common/js/packages/storage/Storage.tsx") /* Storage */.Storage;
+  const Storage = Storage /* Storage */.Storage;
   const value = Storage.get(closure_11);
   let tmp9 = null == value;
   if (!tmp9) {
-    obj = require("../../_runtime/03867_t.js")();
+    obj = t();
     tmp9 = obj.diff(value, "day") < 7;
   }
   let tmp11 = null;
@@ -692,7 +695,7 @@ obj = {
       const hiddenSurveys = obj.hiddenSurveys;
       delete tmp[tmp2];
     }
-    obj = require("../actions/SurveyActionCreators.tsx") /* overrideSurvey */;
+    obj = overrideSurvey /* overrideSurvey */;
     obj.surveyFetch(obj.surveyOverride, true);
   },
   PUSH_NOTIFICATION_CLICK: function handlePushNotificationClick() {

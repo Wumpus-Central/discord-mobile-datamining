@@ -1,3 +1,5 @@
+import { set } from "../../discord_common/js/shared/shared-constants/EntitlementTenantFulfillmentStatus.tsx";
+import { getPremiumPlanItem } from "../utils/PremiumUtils.tsx";
 // discord_app/records/EntitlementRecord.tsx
 import "toJS";
 import createFromServer from "createFromServer";
@@ -130,7 +132,7 @@ prototype["isValid"] = function isValid(isPremiumWithFractionalPremiumOnly, get)
         if (!obj.canInstallPremiumApplications(isPremiumWithFractionalPremiumOnly)) {
           return false;
         }
-        obj = require("../utils/PremiumUtils.tsx");
+        obj = getPremiumPlanItem;
       }
       const _Date = Date;
       const date = new Date();
@@ -162,7 +164,7 @@ prototype["isValid"] = function isValid(isPremiumWithFractionalPremiumOnly, get)
   return false;
 };
 prototype["isFulfilled"] = function isFulfilled() {
-  return this.fulfillmentStatus === require("../../discord_common/js/shared/shared-constants/EntitlementTenantFulfillmentStatus.tsx") /* set */.EntitlementTenantFulfillmentStatus.FULFILLED;
+  return this.fulfillmentStatus === set /* set */.EntitlementTenantFulfillmentStatus.FULFILLED;
 };
 const result = require("createdAt").fileFinishedImporting("records/EntitlementRecord.tsx");
 

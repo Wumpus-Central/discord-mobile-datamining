@@ -1,3 +1,6 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/modules/guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -35,15 +38,15 @@ const memoResult = importAllResult.memo(function MemberCount(arg0) {
   let dotContainerWidth;
   let type;
   ({ type, count, color, dotContainerWidth } = arg0);
-  const tmp2 = require("../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("GuildActionSheetMemberCount");
+  const tmp2 = useIsMobileVisualRefreshExperimentEnabled("GuildActionSheetMemberCount");
   if (null == count) {
-    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
     if ("online" === type) {
     } else {
     }
     intl2.string(_5SWsJX);
   } else {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     if ("online" === type) {
       let etqpUG = tmp3(1236).t.PIikks;
     } else {
@@ -82,7 +85,7 @@ const memoResult = importAllResult.memo(function MemberCount(arg0) {
     obj3[1] = color;
     obj3[3] = tmp2 ? tmp10.refreshText : tmp10.text;
     obj3[4] = intl.format(etqpUG, obj);
-    items2[1] = closure_4(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
+    items2[1] = closure_4(Text /* Text */.Text, obj3);
     obj[1] = items2;
     return closure_5(View, obj);
   }

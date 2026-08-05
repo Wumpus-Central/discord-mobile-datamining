@@ -1,3 +1,4 @@
+import { dispatcher } from "../../Dispatcher.tsx";
 // discord_app/modules/guild_identity/GuildIdentityActionCreators.tsx
 import SafetyScannedUploadSurface from "SafetyScannedUploadSurface";
 import { Endpoints } from "ME";
@@ -261,24 +262,24 @@ export const saveGuildIdentityChanges = function saveGuildIdentityChanges(id1, g
   return applyArgumentsResult;
 };
 export const setCurrentGuild = function setCurrentGuild(id) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "USER_PROFILE_SETTINGS_SET_GUILD", guildId: id };
   obj.dispatch(obj);
 };
 export const initGuildIdentitySettings = function initGuildIdentitySettings(id) {
-  let obj = require("../../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "USER_PROFILE_SETTINGS_INIT", guildId: id };
   obj.dispatch(obj);
 };
 export const resetPendingMemberChanges = function resetPendingMemberChanges() {
-  require("../../Dispatcher.tsx").dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
+  dispatcher.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
 };
 export const resetPendingProfileChanges = function resetPendingProfileChanges() {
-  require("../../Dispatcher.tsx").dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
+  dispatcher.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
 };
 export const resetAllPending = function resetAllPending() {
-  require("../../Dispatcher.tsx").dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
+  dispatcher.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
 };
 export const clearErrors = function clearErrors() {
-  require("../../Dispatcher.tsx").dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });
+  dispatcher.dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });
 };

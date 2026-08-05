@@ -1,3 +1,5 @@
+import { useChannelVideoLimit } from "../../video_calls/useChannelVideoLimit.tsx";
+import { VoiceChannelUserLimit } from "VoiceChannelUserLimit.tsx";
 // discord_app/modules/guild_sidebar/native/ConnectedUserLimit.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -8,7 +10,7 @@ export const ConnectedUserLimit = function ConnectedUserLimit(users) {
   let channel;
   let video;
   ({ channel, video } = users);
-  const limit = require("../../video_calls/useChannelVideoLimit.tsx")(channel).limit;
+  const limit = useChannelVideoLimit(channel).limit;
   let num = -1;
   if (channel.userLimit > 0) {
     num = channel.userLimit;
@@ -28,5 +30,5 @@ export const ConnectedUserLimit = function ConnectedUserLimit(users) {
     videoLimit = num < 0 || limit < num;
     const tmp4 = num < 0 || limit < num;
   }
-  return jsx(require("VoiceChannelUserLimit.tsx"), { users: users.userCount, total, videoLimit });
+  return jsx(VoiceChannelUserLimit, { users: users.userCount, total, videoLimit });
 };

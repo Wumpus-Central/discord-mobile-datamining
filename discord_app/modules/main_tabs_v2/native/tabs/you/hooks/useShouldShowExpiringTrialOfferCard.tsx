@@ -1,3 +1,6 @@
+import { defaultAreStatesEqual } from "../../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { useCountdown } from "../../../../../../hooks/useCountdown.tsx";
+import { usePremiumTrialOffer } from "../../../../../premium/hooks/usePremiumTrialOffer.android.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/you/hooks/useShouldShowExpiringTrialOfferCard.tsx
 import clearDismissUntil from "clearDismissUntil";
 import { NoticeTypes } from "ME";
@@ -9,11 +12,11 @@ const result = require("GuildFeatures").fileFinishedImporting("modules/main_tabs
 
 export const useShouldShowExpiringTrialOfferCard = function useShouldShowExpiringTrialOfferCard() {
   const items = [clearDismissUntil];
-  const stateFromStores = require("../../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */.useStateFromStores(items, () => noticeType.getNoticeType());
-  const obj = require("../../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx") /* defaultAreStatesEqual */;
-  const premiumTrialOffer = require("../../../../../premium/hooks/usePremiumTrialOffer.android.tsx") /* usePremiumTrialOffer */.usePremiumTrialOffer();
+  const stateFromStores = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => noticeType.getNoticeType());
+  const obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  const premiumTrialOffer = usePremiumTrialOffer /* usePremiumTrialOffer */.usePremiumTrialOffer();
   let num = 0;
-  const obj2 = require("../../../../../premium/hooks/usePremiumTrialOffer.android.tsx") /* usePremiumTrialOffer */;
+  const obj2 = usePremiumTrialOffer /* usePremiumTrialOffer */;
   if (null != premiumTrialOffer) {
     num = 0;
     if (null != premiumTrialOffer.expires_at) {
@@ -22,7 +25,7 @@ export const useShouldShowExpiringTrialOfferCard = function useShouldShowExpirin
     }
   }
   let tmp6 = null != premiumTrialOffer;
-  const tmp3 = require("../../../../../../hooks/useCountdown.tsx");
+  const tmp3 = useCountdown;
   if (tmp6) {
     tmp6 = null != stateFromStores;
   }

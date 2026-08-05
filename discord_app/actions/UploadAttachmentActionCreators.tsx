@@ -1,9 +1,10 @@
+import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/UploadAttachmentActionCreators.tsx
 const result = require("set").fileFinishedImporting("actions/UploadAttachmentActionCreators.tsx");
 
 export default {
   popFirstFile(channelId) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "UPLOAD_ATTACHMENT_POP_FILE", channelId };
     obj.dispatch(obj);
   },
@@ -12,7 +13,7 @@ export default {
     let draftType;
     let files;
     ({ files, channelId, draftType } = arg0);
-    require("../Dispatcher.tsx").dispatch({ type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId, files, draftType });
+    dispatcher.dispatch({ type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId, files, draftType });
   },
   addFile(arg0) {
     let allowOptimization;
@@ -21,20 +22,20 @@ export default {
     let file;
     ({ file, channelId, draftType, allowOptimization } = arg0);
     const items = [file];
-    require("../Dispatcher.tsx").dispatch({ type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId, files: items, draftType, allowOptimization });
+    dispatcher.dispatch({ type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId, files: items, draftType, allowOptimization });
   },
   remove(channelId, id, draftType) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "UPLOAD_ATTACHMENT_REMOVE_FILE", channelId, id, draftType };
     obj.dispatch(obj);
   },
   removeFiles(channelId, found, InteractionModal) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "UPLOAD_ATTACHMENT_REMOVE_FILES", channelId, attachmentIds: found, draftType: InteractionModal };
     obj.dispatch(obj);
   },
   clearAll(channelId, draftType) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "UPLOAD_ATTACHMENT_CLEAR_ALL_FILES", channelId, draftType };
     obj.dispatch(obj);
   },
@@ -44,7 +45,7 @@ export default {
     let spoiler;
     let thumbnail;
     ({ description, filename, spoiler, thumbnail } = arg3);
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "UPLOAD_ATTACHMENT_UPDATE_FILE", channelId, id, filename, description, thumbnail, spoiler, draftType };
     obj.dispatch(obj);
   },
@@ -54,7 +55,7 @@ export default {
     let resetState;
     uploads = uploads.uploads;
     ({ channelId, draftType, resetState } = uploads);
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "UPLOAD_ATTACHMENT_SET_UPLOADS", channelId, uploads: null, draftType: null };
     let mapped = uploads;
     if (resetState) {
@@ -71,6 +72,6 @@ export default {
     let file;
     let id;
     ({ file, channelId, id, draftType, allowOptimization } = arg0);
-    require("../Dispatcher.tsx").dispatch({ type: "UPLOAD_ATTACHMENT_SET_FILE", channelId, id, file, draftType, allowOptimization });
+    dispatcher.dispatch({ type: "UPLOAD_ATTACHMENT_SET_FILE", channelId, id, file, draftType, allowOptimization });
   }
 };

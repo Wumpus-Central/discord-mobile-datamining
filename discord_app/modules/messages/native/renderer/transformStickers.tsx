@@ -1,3 +1,5 @@
+import { apexExperiment } from "../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx";
+import { getStickerExtensionFromFormatType } from "../../../stickers/StickersUtils.tsx";
 // discord_app/modules/messages/native/renderer/transformStickers.tsx
 const result = require("NativeLottieView").fileFinishedImporting("modules/messages/native/renderer/transformStickers.tsx");
 
@@ -6,9 +8,9 @@ export default function transformStickers(message) {
   let require;
   ({ animateStickersSetting: require, isUserInteracting: dependencyMap } = message);
   let closure_2;
-  closure_2 = require("../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx") /* apexExperiment */.shouldSkipAccessibilityLabels();
-  let obj = require("../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx") /* apexExperiment */;
-  const messageStickers = require("../../../stickers/StickersUtils.tsx") /* getStickerExtensionFromFormatType */.getMessageStickers(message.message);
+  closure_2 = apexExperiment /* apexExperiment */.shouldSkipAccessibilityLabels();
+  let obj = apexExperiment /* apexExperiment */;
+  const messageStickers = getStickerExtensionFromFormatType /* getStickerExtensionFromFormatType */.getMessageStickers(message.message);
   return messageStickers.map((id) => {
     let obj = outer1_0(outer1_1[1]);
     const shouldAnimateStickerResult = obj.shouldAnimateSticker(closure_0, closure_1);

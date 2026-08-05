@@ -1,3 +1,5 @@
+import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
 // discord_app/modules/mfa/native/MFAModal.tsx
 import ModalActionCreators from "../../../actions/ModalActionCreators.tsx";
 import set from "set";
@@ -369,7 +371,7 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/m
 
 export { MFAModal };
 export const openMFAModal = function openMFAModal(mfaChallenge, finish, cancel) {
-  let arr = require("../../../actions/ModalActionCreators.tsx");
+  let arr = ModalActionCreators;
   arr = arr.push(MFAModal, { mfaChallenge, finish, cancel }, MFA_MODAL_KEY);
-  require("../../../actions/native/AlertActionCreators.tsx").close();
+  AlertActionCreators.close();
 };

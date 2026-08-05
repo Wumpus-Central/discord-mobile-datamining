@@ -1,10 +1,11 @@
+import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 // discord_app/modules/voice_panel/native/prejoin/VoicePanelPreJoinUtils.tsx
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinUtils.tsx");
 
 export const areVoicePanelPreJoinContentPropsEqual = function areVoicePanelPreJoinContentPropsEqual(streamingMembers) {
   if (null != streamingMembers) {
     if (null != arg1) {
-      if (require("../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx")(streamingMembers, arg1, ["streamingMembers"])) {
+      if (shallowEqual(streamingMembers, arg1, ["streamingMembers"])) {
         let num = 0;
         streamingMembers = streamingMembers.streamingMembers;
         for (const item10013 of streamingMembers) {

@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollIndicatorOverlay.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -13,9 +14,9 @@ let closure_8 = ["rgba(0,0,0,0)", "rgba(0,0,0,0.7)", "rgba(0,0,0,1)"];
 let closure_9 = 5000 + require("timingNone").timingSlowDuration;
 let closure_10 = createCacheKey.createStyles(() => {
   let obj = { scrollIndicator: null, scrollIndicatorContent: null, scrollIndicatorText: null };
-  obj = { position: "absolute", left: 0, right: 0, bottom: 0, height: "45%", alignItems: "center", justifyContent: "center", paddingHorizontal: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
+  obj = { position: "absolute", left: 0, right: 0, bottom: 0, height: "45%", alignItems: "center", justifyContent: "center", paddingHorizontal: Themes.space.PX_16 };
   obj[0] = obj;
-  obj = { position: "absolute", bottom: 124, left: 0, right: 0, alignItems: "center", justifyContent: "flex-start", gap: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8 };
+  obj = { position: "absolute", bottom: 124, left: 0, right: 0, alignItems: "center", justifyContent: "flex-start", gap: Themes.space.PX_8 };
   obj[1] = obj;
   obj[2] = { textAlign: "center" };
   return obj;

@@ -1,3 +1,8 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../../design/tokens/native/useToken.tsx";
+import { set } from "../../../../utils/PlatformUtils.tsx";
+import { GenericHeaderTitle } from "../../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
+import { getRootNavigationRef } from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
 // discord_app/modules/conversations/components/native/ConversationNavigator.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -7,12 +12,12 @@ let c3;
 let c4;
 const require = arg1;
 function HeaderWithBorder(arg0) {
-  let obj = require("../../../../design/tokens/native/useToken.tsx") /* map */;
-  const token = obj.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.BORDER_SUBTLE);
+  let obj = map /* map */;
+  const token = obj.useToken(Themes.colors.BORDER_SUBTLE);
   obj = {};
   const merged = Object.assign(arg0);
-  const obj2 = require("../../../main_tabs_v2/native/shared_components/HeaderShared.tsx") /* GenericHeaderTitle */;
-  obj.shouldHandleSafeArea = require("../../../../utils/PlatformUtils.tsx") /* set */.isAndroid();
+  const obj2 = GenericHeaderTitle /* GenericHeaderTitle */;
+  obj.shouldHandleSafeArea = set /* set */.isAndroid();
   obj.style = { borderColor: token };
   return obj2.renderHeader(obj);
 }
@@ -89,7 +94,7 @@ export const openConversationNavigator = function openConversationNavigator(arg0
   let channelId;
   let guildId;
   ({ channelId, guildId } = arg0);
-  let obj = require("../../../main_tabs_v2/RootNavigationRef.native.tsx") /* getRootNavigationRef */;
+  let obj = getRootNavigationRef /* getRootNavigationRef */;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (tmp) {
     obj = { channelId: null, guildId: null };

@@ -1,3 +1,9 @@
+import { 00038__ } from "../../../../_runtime/metro/00038__.js";
+import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { NativeCheckoutStoreProvider } from "../../checkout/native/stores/NativeCheckoutStoreProvider.tsx";
+import { PremiumPlanActionSheetHeader } from "PremiumPlanActionSheetHeader.tsx";
 // discord_app/modules/premium/native/PremiumPlanSelectionActionSheet.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import context from "context";
@@ -59,15 +65,15 @@ function Header(arg0) {
     if (!isPaymentSuccess) {
       const obj = { style: null, variant: "text-md/semibold", color: "text-default", accessibilityRole: "header", children: null };
       obj[0] = tmp.headerText;
-      const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-      obj[4] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.vLz3Zs);
-      return callback3(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+      const intl = getSystemLocale /* getSystemLocale */.intl;
+      obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t.vLz3Zs);
+      return callback3(Text /* Text */.Text, obj);
     }
   }
   if (isPaymentSuccess) {
     premiumType = selectedPremiumType;
   }
-  require("../../../../_runtime/metro/00038__.js")(null != premiumType, "If isPaymentSuccess is true, a value must be given for selectedPremiumType. Or premiumType must be given.");
+  00038__(null != premiumType, "If isPaymentSuccess is true, a value must be given for selectedPremiumType. Or premiumType must be given.");
   let tmp9 = null != trialOffer && null != premiumType;
   if (tmp9) {
     const subscription_trial = trialOffer.subscription_trial;
@@ -97,7 +103,7 @@ function Header(arg0) {
     const tmp6Result = tmp6(3931);
   }
   trialOffer = null;
-  return callback3(require("PremiumPlanActionSheetHeader.tsx"), { premiumType, trialOffer, discountOffer });
+  return callback3(PremiumPlanActionSheetHeader, { premiumType, trialOffer, discountOffer });
 }
 function PlanOptionBadgeComponent(backgroundColorType) {
   let str = backgroundColorType.backgroundColorType;
@@ -119,7 +125,7 @@ function PlanOptionBadgeComponent(backgroundColorType) {
   }
   obj[2] = str2;
   obj[3] = backgroundColorType.text;
-  obj[1] = closure_35(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  obj[1] = closure_35(Text /* Text */.Text, obj);
   return closure_35(closure_8, obj);
 }
 function PlanOption(premiumItem) {
@@ -410,10 +416,10 @@ function PremiumPlanSelectionActionSheetCTA(isPaymentSuccess) {
   ({ onStartPayment: require, shouldUseMobileWebRedirectCheckout } = isPaymentSuccess);
   if (isPaymentSuccess.isPaymentSuccess) {
     let obj = { text: null, size: "md", grow: true, onPress: null };
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[0] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.WAI6xu);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.WAI6xu);
     obj[3] = tmp;
-    return callback3(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj);
+    return callback3(Button /* Button */.Button, obj);
   } else {
     const tmp5 = shouldUseMobileWebRedirectCheckout ? { size: "lg", variant: "primary" } : { size: "md", variant: "active" };
     obj = { text: null };
@@ -425,7 +431,7 @@ function PremiumPlanSelectionActionSheetCTA(isPaymentSuccess) {
     };
     obj.loading = tmp4;
     obj.disabled = tmp3;
-    return callback3(require("../../../design/components/Button/native/Button.native.tsx") /* Button */.Button, obj);
+    return callback3(Button /* Button */.Button, obj);
   }
 }
 function PremiumPlanSelectionActionSheet(premiumItems) {
@@ -1324,7 +1330,7 @@ export default function PremiumPlanSelectionActionSheetWithOrderCTX(predicate) {
     obj3.userIsEligibleForBogoPromotion = isEligibleForBogoOffer;
     obj3.initialSelectedItem = found;
     obj2[8] = callback3(PremiumPlanSelectionActionSheet, obj3);
-    return callback3(require("../../checkout/native/stores/NativeCheckoutStoreProvider.tsx"), obj2);
+    return callback3(NativeCheckoutStoreProvider, obj2);
   }
 };
 export function getItemsByPremiumTypePredicate(arg0) {

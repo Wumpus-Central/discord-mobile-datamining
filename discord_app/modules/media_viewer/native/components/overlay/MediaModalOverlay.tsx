@@ -1,3 +1,14 @@
+import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { SafeAreaPaddingView } from "../../../../../components_native/common/SafeAreaView.tsx";
+import { render } from "../../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
+import { isBlurDisabled } from "../../../../visual_effect_view/native/VisualEffectView.tsx";
+import { nativeEventEmitter } from "../../MediaPlayerMuteManager.tsx";
+import { useOverlayLayoutDriver } from "../../useOverlayLayoutDriver.tsx";
+import { ObscuredView } from "../MediaViewerThumbnails.tsx";
+import { MediaModalOverlayAltText } from "MediaModalOverlayAltText.tsx";
+import { MediaModalOverlayHeader } from "MediaModalOverlayHeader.tsx";
 // discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlay.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "MediaModalOverlayHeader";
@@ -15,15 +26,15 @@ function OverlayMuteButton(arg0) {
   ({ isMuted, onToggleMute } = arg0);
   let obj = { accessibilityRole: "button", accessibilityLabel: null, source: null, color: null, onPress: null, style: null, iconStyle: null };
   const tmp = callback3();
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.w4m945);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.w4m945);
   obj = { left: true, right: true, children: null };
   obj[2] = importDefault(isMuted ? 12146 : 10788);
-  obj[3] = require("../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.WHITE;
+  obj[3] = Themes.unsafe_rawColors.WHITE;
   obj[4] = onToggleMute;
   ({ overlayButton: obj[5], overlayButtonIcon: obj[6] } = tmp);
-  obj[2] = closure_7(require("../../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx"), obj);
-  return closure_7(require("../../../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  obj[2] = closure_7(render, obj);
+  return closure_7(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 }
 function OverlayObscureToggleButton(arg0) {
   let onToggleObscure;
@@ -31,15 +42,15 @@ function OverlayObscureToggleButton(arg0) {
   ({ spoilerActive, onToggleObscure } = arg0);
   let obj = { accessibilityRole: "button", accessibilityLabel: null, source: null, color: null, onPress: null, style: null, iconStyle: null };
   const tmp = callback3();
-  const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.UIsxUw);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.UIsxUw);
   obj = { left: true, right: true, children: null };
   obj[2] = importDefault(spoilerActive ? 12147 : 12148);
-  obj[3] = require("../../../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.WHITE;
+  obj[3] = Themes.unsafe_rawColors.WHITE;
   obj[4] = onToggleObscure;
   ({ overlayButton: obj[5], overlayButtonIcon: obj[6] } = tmp);
-  obj[2] = closure_7(require("../../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx"), obj);
-  return closure_7(require("../../../../../components_native/common/SafeAreaView.tsx") /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  obj[2] = closure_7(render, obj);
+  return closure_7(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 }
 function MediaModalOverlay(getVideoControls) {
   let index;
@@ -102,12 +113,12 @@ let closure_13 = importAllResult.memo((arg0) => {
   ({ slider, onClose, syncer, source, obscure } = arg0);
   ({ overlayEnabled, disableDownload, disableMediaOverlayButton, disableMediaOverlayFooter, shareable, contextName, contextIcon, spoilerActive, toggleObscure } = arg0);
   const tmp = callback3();
-  let obj = require("../../useOverlayLayoutDriver.tsx") /* useOverlayLayoutDriver */;
+  let obj = useOverlayLayoutDriver /* useOverlayLayoutDriver */;
   const overlayLayoutDriver = obj.useOverlayLayoutDriver();
-  let obj1 = require("../../useOverlayLayoutDriver.tsx") /* useOverlayLayoutDriver */;
+  let obj1 = useOverlayLayoutDriver /* useOverlayLayoutDriver */;
   const footerLayoutAnimation = obj1.useFooterLayoutAnimation(overlayLayoutDriver);
   [tmp7, tmp8] = callback(importAllResult.useState(false), 2);
-  let obj2 = require("../../MediaPlayerMuteManager.tsx") /* nativeEventEmitter */;
+  let obj2 = nativeEventEmitter /* nativeEventEmitter */;
   const mediaPlayerMutedStore = obj2.useMediaPlayerMutedStore((isMuted) => isMuted.isMuted);
   if (null != slider) {
     obj = { bottom: true, left: true, right: true, style: null, children: null };
@@ -117,14 +128,14 @@ let closure_13 = importAllResult.memo((arg0) => {
     if (isIOSResult) {
       obj = { blurTheme: "dark", style: null };
       obj[1] = StyleSheet.absoluteFill;
-      isIOSResult = callback2(require("../../../../visual_effect_view/native/VisualEffectView.tsx"), obj);
+      isIOSResult = callback2(isBlurDisabled, obj);
     }
     const items = [isIOSResult, slider, ];
     let tmp16 = null;
     if (syncer.sources.length > 1) {
       obj1 = { syncer: null };
       obj1[0] = syncer;
-      tmp16 = callback2(require("../MediaViewerThumbnails.tsx"), obj1);
+      tmp16 = callback2(ObscuredView, obj1);
     }
     items[2] = tmp16;
     obj[4] = items;
@@ -135,14 +146,14 @@ let closure_13 = importAllResult.memo((arg0) => {
   }
   tmp2Result = tmp2(8787);
   obj2 = { animationDriver: overlayLayoutDriver, disableDownload, disableMediaOverlayButton, source, shareable, contextName, contextIcon, onClose, channelId: source.channelId };
-  const items1 = [callback2(require("MediaModalOverlayHeader.tsx") /* MediaModalOverlayHeader */.MediaModalOverlayHeader, obj2), ];
+  const items1 = [callback2(MediaModalOverlayHeader /* MediaModalOverlayHeader */.MediaModalOverlayHeader, obj2), ];
   const obj3 = { style: items2, children: null };
   items2 = [tmp.portraitFooterButtons, footerLayoutAnimation];
   let tmp21Result = !tmp7;
   if (!tmp7) {
     const obj4 = { description: null };
     obj4[0] = source.description;
-    tmp21Result = tmp21(require("MediaModalOverlayAltText.tsx"), obj4);
+    tmp21Result = tmp21(MediaModalOverlayAltText, obj4);
   }
   const items3 = [tmp21Result, , ];
   if (null != slider) {
@@ -188,7 +199,7 @@ let closure_13 = importAllResult.memo((arg0) => {
   const obj10 = { children: null };
   items3[2] = tmp21Result2;
   obj3[1] = items3;
-  items1[1] = closure_8(require("../../../../reanimated/ReanimatedRexport.tsx").View, obj3);
+  items1[1] = closure_8(ReanimatedRexport.View, obj3);
   obj10[0] = items1;
   return closure_8(closure_9, obj10);
 });

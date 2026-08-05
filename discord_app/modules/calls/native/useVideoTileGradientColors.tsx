@@ -1,3 +1,5 @@
+import { int2hslRaw } from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import { getProfileTheme } from "../../user_profile/UserProfileGradientUtils.tsx";
 // discord_app/modules/calls/native/useVideoTileGradientColors.tsx
 import noop from "noop";
 import { ThemeTypes } from "ME";
@@ -20,29 +22,29 @@ function rgbToHex(arg0) {
 function computeVideoTileGradientStops(modalV2BackgroundColor, modalV2BackgroundColor) {
   if (null != modalV2BackgroundColor) {
     if (null != modalV2BackgroundColor) {
-      let DARK = require("../../user_profile/UserProfileGradientUtils.tsx") /* getProfileTheme */.getProfileTheme(modalV2BackgroundColor);
+      let DARK = getProfileTheme /* getProfileTheme */.getProfileTheme(modalV2BackgroundColor);
       if (DARK == null) {
         DARK = ThemeTypes.DARK;
       }
       let tmp9Result = tmp9(688);
       tmp9Result = tmp9(8123);
       const int2rgbArrayResult = tmp9Result.int2rgbArray(tmp9Result.calculateModalV2BackgroundColor(modalV2BackgroundColor, modalV2BackgroundColor, DARK));
-      const obj7 = require("../../user_profile/UserProfileGradientUtils.tsx") /* getProfileTheme */;
-      const tmp9Result1 = require("../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
-      const int2rgbArrayResult1 = require("../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */.int2rgbArray(modalV2BackgroundColor);
-      const tmp9Result2 = require("../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */;
-      const int2rgbArrayResult2 = require("../../../../discord_common/js/shared/utils/ColorUtils.tsx") /* int2hslRaw */.int2rgbArray(modalV2BackgroundColor);
+      const obj7 = getProfileTheme /* getProfileTheme */;
+      const tmp9Result1 = int2hslRaw /* int2hslRaw */;
+      const int2rgbArrayResult1 = int2hslRaw /* int2hslRaw */.int2rgbArray(modalV2BackgroundColor);
+      const tmp9Result2 = int2hslRaw /* int2hslRaw */;
+      const int2rgbArrayResult2 = int2hslRaw /* int2hslRaw */.int2rgbArray(modalV2BackgroundColor);
       const items = [, , ];
       [arr[0], arr[1], arr[2]] = int2rgbArrayResult;
       const items1 = [, , ];
       [arr2[0], arr2[1], arr2[2]] = int2rgbArrayResult1;
-      let valueInColorGradientByPercentage = require("../../user_profile/UserProfileGradientUtils.tsx") /* getProfileTheme */.getValueInColorGradientByPercentage(items, items1, 20);
-      const tmp9Result3 = require("../../user_profile/UserProfileGradientUtils.tsx") /* getProfileTheme */;
+      let valueInColorGradientByPercentage = getProfileTheme /* getProfileTheme */.getValueInColorGradientByPercentage(items, items1, 20);
+      const tmp9Result3 = getProfileTheme /* getProfileTheme */;
       const items2 = [, , ];
       [arr3[0], arr3[1], arr3[2]] = int2rgbArrayResult;
       const items3 = [, , ];
       [arr4[0], arr4[1], arr4[2]] = int2rgbArrayResult2;
-      valueInColorGradientByPercentage = require("../../user_profile/UserProfileGradientUtils.tsx") /* getProfileTheme */.getValueInColorGradientByPercentage(items2, items3, 60);
+      valueInColorGradientByPercentage = getProfileTheme /* getProfileTheme */.getValueInColorGradientByPercentage(items2, items3, 60);
       const items4 = [rgbToHex(valueInColorGradientByPercentage), rgbToHex(valueInColorGradientByPercentage)];
       return items4;
     }

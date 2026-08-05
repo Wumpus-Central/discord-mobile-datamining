@@ -1,3 +1,9 @@
+import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
+import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
+import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
+import { context } from "../../CollectiblesAnalyticsContext.tsx";
+import { getItemRecordsFromPurchases } from "../../CollectiblesUtils.tsx";
+import { useCurrentUser } from "../../hooks/useCurrentUser.tsx";
 // discord_app/modules/collectibles/native/hooks/useTrackShopCardImpression.tsx
 import noop from "noop";
 import { AnalyticEvents } from "ME";
@@ -9,18 +15,18 @@ export const useTrackShopCardImpression = function useTrackShopCardImpression(pr
   const _require = product;
   const importDefault = selectedProduct;
   const dependencyMap = flag2;
-  const collectiblesAnalyticsContext = _require("../../CollectiblesAnalyticsContext.tsx").useCollectiblesAnalyticsContext();
-  const analyticsLocations = require("../../../app_analytics/useAnalyticsLocations.tsx")().analyticsLocations;
-  const size = require("../../../screen/useWindowDimensions.native.tsx")();
+  const collectiblesAnalyticsContext = _context.useCollectiblesAnalyticsContext();
+  const analyticsLocations = context().analyticsLocations;
+  const size = useWindowDimensions();
   const width = size.width;
   const height = size.height;
-  let obj = _require("../../CollectiblesAnalyticsContext.tsx");
-  const currentUser = _require("../../hooks/useCurrentUser.tsx").useCurrentUser();
-  let obj2 = _require("../../hooks/useCurrentUser.tsx");
-  const canUseCollectiblesResult = require("../../../../utils/PremiumUtils.tsx").canUseCollectibles(currentUser);
+  let obj = _context;
+  const currentUser = _useCurrentUser.useCurrentUser();
+  let obj2 = _useCurrentUser;
+  const canUseCollectiblesResult = getPremiumPlanItem.canUseCollectibles(currentUser);
   let closure_7 = canUseCollectiblesResult;
-  const obj3 = require("../../../../utils/PremiumUtils.tsx");
-  const shopDiscountSource = _require("../../CollectiblesUtils.tsx").getShopDiscountSource(currentUser);
+  const obj3 = getPremiumPlanItem;
+  const shopDiscountSource = _getItemRecordsFromPurchases.getShopDiscountSource(currentUser);
   const ref = collectiblesAnalyticsContext.useRef(null);
   let closure_10 = collectiblesAnalyticsContext.useRef(null);
   let closure_11 = collectiblesAnalyticsContext.useRef({ windowWidth: width, windowHeight: height });

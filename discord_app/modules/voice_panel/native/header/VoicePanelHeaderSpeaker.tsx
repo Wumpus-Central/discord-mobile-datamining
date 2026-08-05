@@ -1,3 +1,4 @@
+import { useSpeakerTooltips } from "../hooks/useSpeakerTooltips.tsx";
 // discord_app/modules/voice_panel/native/header/VoicePanelHeaderSpeaker.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "useCanConnect";
@@ -23,7 +24,7 @@ let closure_18 = importAllResult.memo((arg0) => {
   let canShowTooltip;
   let targetRef;
   ({ targetRef, canShowTooltip } = arg0);
-  require("../hooks/useSpeakerTooltips.tsx")(targetRef, canShowTooltip);
+  useSpeakerTooltips(targetRef, canShowTooltip);
   return null;
 });
 const memoResult = importAllResult.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChannel) {

@@ -1,3 +1,6 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { getChannelRoleSubscriptionStatus } from "../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx";
+import { experiment } from "../voice_calls/GuildVoiceRingingExperiment.tsx";
 // discord_app/modules/calls/useCanRing.tsx
 import fetchFingerprint from "fetchFingerprint";
 import callConnect from "callConnect";
@@ -22,16 +25,16 @@ function useCanRingToGuildVoiceChannel(user, DisconnectedUserRow, stateFromStore
   }
   const importDefault = stateFromStores;
   const items = [getUncachedChannelPermissions];
-  stateFromStores = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  stateFromStores = _initialize.useStateFromStores(items, () => {
     let tmp2 = null != stateFromStores;
     if (tmp2) {
       tmp2 = stateFromStores(outer1_2[12])(tmp, outer1_8);
     }
     return tmp2;
   });
-  const obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const obj = _initialize;
   const items1 = [trackCommunicationDisabled, recomputeGuild];
-  const stateFromStores1 = _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  const stateFromStores1 = _initialize.useStateFromStores(items1, () => {
     let guild_id;
     if (stateFromStores != null) {
       guild_id = stateFromStores.guild_id;
@@ -47,12 +50,12 @@ function useCanRingToGuildVoiceChannel(user, DisconnectedUserRow, stateFromStore
     }
   });
   let id;
-  const obj2 = _require("../../../discord_common/js/packages/flux/index.tsx");
+  const obj2 = _initialize;
   const tmp4 = importDefault;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  const tmp5 = require("../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx");
+  const tmp5 = getChannelRoleSubscriptionStatus;
   let guild_id;
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
@@ -146,7 +149,7 @@ export const canRingUsersInChannel = function canRingUsersInChannel(channel) {
     call = call.getCall(channel.id);
     return null != call && null != call.messageId && !call.isCallUnavailable(channel.id);
   } else if (tmp === tmp2) {
-    let obj = require("../voice_calls/GuildVoiceRingingExperiment.tsx");
+    let obj = experiment;
     obj = { guildId: null, location: "ring" };
     obj[0] = channel.guild_id;
     let enabled = obj.getCurrentConfig(obj).enabled;

@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { useMountLayoutEffect } from "../../../hooks/useMountEffect.tsx";
 // discord_app/modules/parent_tools/hooks/useConnectGuardianGate.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -11,7 +13,7 @@ export const useConnectGuardianGate = function useConnectGuardianGate() {
   let linkCode;
   let require;
   let tmp3;
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [freshTeenActivityWithMap];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ linkCode: store.getLinkCode(), expiresAt: store.getLinkCodeExpiresAt() }));
   ({ linkCode, expiresAt } = stateFromStoresObject);
@@ -54,7 +56,7 @@ export const useConnectGuardianGate = function useConnectGuardianGate() {
       }
     });
   }, []);
-  require("../../../hooks/useMountEffect.tsx")(callback);
+  useMountLayoutEffect(callback);
   if (tmp3) {
     obj = { state: "error" };
   } else if (tmp4[0]) {

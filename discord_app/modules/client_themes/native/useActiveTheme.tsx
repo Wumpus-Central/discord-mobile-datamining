@@ -1,3 +1,5 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { getGuildIdFromNavigationState } from "../../guild_themes/native/useRoutedActiveGuildTheme.tsx";
 // discord_app/modules/client_themes/native/useActiveTheme.tsx
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
@@ -9,15 +11,15 @@ let error;
 const require = arg1;
 function useActiveThemeType() {
   const items = [reset];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items, () => reset.hasCustomTheme());
-  const obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => reset.hasCustomTheme());
+  const obj = initialize /* initialize */;
   const items1 = [isSyncedModeThemesEnabled];
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items1, () => null != gradientPreset.gradientPreset);
-  const tmp3 = require("../../guild_themes/native/useRoutedActiveGuildTheme.tsx")();
-  const obj2 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => null != gradientPreset.gradientPreset);
+  const tmp3 = getGuildIdFromNavigationState();
+  const obj2 = initialize /* initialize */;
   const items2 = [CHANNEL_SIDEBAR_WIDTH];
   let type;
-  const stateFromStores2 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */.useStateFromStores(items2, () => useSystemTheme.useSystemTheme);
+  const stateFromStores2 = initialize /* initialize */.useStateFromStores(items2, () => useSystemTheme.useSystemTheme);
   if (tmp3 != null) {
     type = tmp3.type;
   }

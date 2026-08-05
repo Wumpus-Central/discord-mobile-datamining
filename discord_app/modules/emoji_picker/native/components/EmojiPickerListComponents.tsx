@@ -1,3 +1,8 @@
+import { registerAsset } from "../../../../../_runtime/08068_registerAsset.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { PremiumUpsellGradientBackground } from "../../../premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx";
 // discord_app/modules/emoji_picker/native/components/EmojiPickerListComponents.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -24,13 +29,13 @@ const memoResult = importAllResult.memo(() => {
   const tmp = callback3();
   let obj = { style: tmp.nsfwContainer, children: null };
   obj = { source: null, size: null };
-  obj[0] = require("../../../../../_runtime/08068_registerAsset.js");
-  obj[1] = require("../../../../design/void/native.tsx") /* Button */.Icon.Sizes.SMALL;
-  const items = [callback(require("../../../../design/void/native.tsx") /* Button */.Icon, obj), ];
+  obj[0] = registerAsset;
+  obj[1] = Button /* Button */.Icon.Sizes.SMALL;
+  const items = [callback(Button /* Button */.Icon, obj), ];
   obj = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.SLzV5z);
-  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.SLzV5z);
+  items[1] = callback(Text /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 });
@@ -42,14 +47,14 @@ const memoResult1 = importAllResult.memo((useTier0UpsellContent) => {
   if (isSectionNitroLocked) {
     obj = { useTier0UpsellContent: null };
     obj[0] = useTier0UpsellContent.useTier0UpsellContent;
-    isSectionNitroLocked = callback(require("../../../premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx") /* PremiumUpsellGradientBackground */.PremiumUpsellGradientBackground, obj);
+    isSectionNitroLocked = callback(PremiumUpsellGradientBackground /* PremiumUpsellGradientBackground */.PremiumUpsellGradientBackground, obj);
   }
   const items = [isSectionNitroLocked, ];
   let tmp6 = null;
   if ("" !== label) {
     obj = { lineClamp: 1, color: "interactive-text-default", variant: "heading-sm/semibold", children: null };
     obj[3] = label;
-    tmp6 = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+    tmp6 = callback(Text /* Text */.Text, obj);
   }
   items[1] = tmp6;
   obj[1] = items;

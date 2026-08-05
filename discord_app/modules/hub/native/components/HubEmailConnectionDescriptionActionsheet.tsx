@@ -1,3 +1,7 @@
+import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import { RedesignBottomSheetTitleHeaderBase } from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/hub/native/components/HubEmailConnectionDescriptionActionsheet.tsx
 import "noop";
 import jsxProd from "jsxProd";
@@ -14,17 +18,17 @@ export default function HubEmailConnectionDescriptionActionsheet() {
   const tmp = callback3();
   let obj = { children: null };
   obj = { title: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["48kg+O"]);
-  const items = [callback(require("../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx") /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj), , ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["48kg+O"]);
+  const items = [callback(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj), , ];
   obj = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.O1k9XX);
-  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.O1k9XX);
+  items[1] = callback(Text /* Text */.Text, obj);
   const obj1 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[3] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.FV5dvh);
-  items[2] = callback(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[3] = intl3.string(getSystemLocale /* getSystemLocale */.t.FV5dvh);
+  items[2] = callback(Text /* Text */.Text, obj1);
   obj[0] = items;
-  return callback2(require("../../../../design/components/Sheet/native/BottomSheet.native.tsx") /* Background */.BottomSheet, obj);
+  return callback2(Background /* Background */.BottomSheet, obj);
 };

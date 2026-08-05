@@ -1,3 +1,5 @@
+import { apply } from "../../../_runtime/00012_apply.js";
+import { getFavoritesAwareGuildName } from "../../modules/favorites/FavoritesUtils.tsx";
 // discord_app/lib/guild/GuildSubscriptions.tsx
 import { ME } from "ME";
 
@@ -134,7 +136,7 @@ prototype["clearWithoutFlushing"] = function clearWithoutFlushing(id, c0) {
 };
 prototype["flush"] = function flush() {
   const self = this;
-  const item = require("../../../_runtime/00012_apply.js").forEach(this._pending, (arg0, arg1) => {
+  const item = apply.forEach(this._pending, (arg0, arg1) => {
     const _subscribed = self._subscribed;
     _subscribed.add(arg1);
   });
@@ -153,8 +155,8 @@ prototype["subscribeUser"] = function subscribeUser(closure_0, userId) {
     tmp = "undefined" !== closure_0;
   }
   if (tmp) {
-    tmp = !require("../../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */.isFavoritesGuildId(closure_0);
-    const obj = require("../../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
+    tmp = !getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(closure_0);
+    const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
   }
   if (tmp) {
     const self = this;
@@ -174,8 +176,8 @@ prototype["unsubscribeUser"] = function unsubscribeUser(closure_0, userId) {
     tmp = "undefined" !== closure_0;
   }
   if (tmp) {
-    tmp = !require("../../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */.isFavoritesGuildId(closure_0);
-    const obj = require("../../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
+    tmp = !getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(closure_0);
+    const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
   }
   if (tmp) {
     const self = this;
@@ -195,8 +197,8 @@ prototype["subscribeChannel"] = function subscribeChannel(guildId) {
     tmp = "undefined" !== guildId;
   }
   if (tmp) {
-    tmp = !require("../../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
-    const obj = require("../../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
+    tmp = !getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
+    const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
   }
   let subscription = tmp;
   if (subscription) {
@@ -218,8 +220,8 @@ prototype["subscribeToMemberUpdates"] = function subscribeToMemberUpdates(guildI
     tmp = "undefined" !== guildId;
   }
   if (tmp) {
-    tmp = !require("../../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
-    const obj = require("../../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
+    tmp = !getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
+    const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
   }
   if (tmp) {
     const self = this;
@@ -242,8 +244,8 @@ prototype["unsubscribeFromMemberUpdates"] = function unsubscribeFromMemberUpdate
     tmp = "undefined" !== guildId;
   }
   if (tmp) {
-    tmp = !require("../../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
-    const obj = require("../../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
+    tmp = !getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
+    const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
   }
   if (tmp) {
     const self = this;
@@ -264,8 +266,8 @@ prototype["subscribeThreadMemberList"] = function subscribeThreadMemberList(guil
     tmp = "undefined" !== guildId;
   }
   if (tmp) {
-    tmp = !require("../../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
-    const obj = require("../../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
+    tmp = !getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
+    const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
   }
   let subscription = tmp;
   if (subscription) {
@@ -287,8 +289,8 @@ prototype["unsubscribeThreadMemberList"] = function unsubscribeThreadMemberList(
     tmp = "undefined" !== guild_id;
   }
   if (tmp) {
-    tmp = !require("../../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */.isFavoritesGuildId(guild_id);
-    const obj = require("../../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
+    tmp = !getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(guild_id);
+    const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
   }
   let unsubscribeResult = tmp;
   if (unsubscribeResult) {
@@ -315,8 +317,8 @@ prototype["_subscribeToFeature"] = function _subscribeToFeature(guildId, _activi
     tmp = "undefined" !== guildId;
   }
   if (tmp) {
-    tmp = !require("../../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
-    const obj = require("../../modules/favorites/FavoritesUtils.tsx") /* getFavoritesAwareGuildName */;
+    tmp = !getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
+    const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
   }
   if (tmp) {
     if (!_activities.has(guildId)) {

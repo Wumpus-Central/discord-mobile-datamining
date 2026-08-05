@@ -1,3 +1,8 @@
+import { encodeProperties } from "../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { context } from "../../../../app_analytics/useAnalyticsLocations.tsx";
+import { trackImpression } from "../../../../app_analytics/useTrackImpression.tsx";
+import { messagesProxy } from "../../GiftingBadge.messages.js";
 // discord_app/modules/premium/gifting/native/views/GiftingBadgeProgressBanner.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -31,11 +36,11 @@ export default function GiftingBadgeProgressBanner(arg0) {
     items1 = [];
   }
   let obj = { name: null, type: null, properties: null };
-  const tmp4 = require("../../../../app_analytics/useAnalyticsLocations.tsx");
-  obj[0] = require("../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionNames.GIFTING_BADGE_PROGRESS_BANNER;
-  obj[1] = require("../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.ImpressionTypes.VIEW;
+  const tmp4 = context;
+  obj[0] = encodeProperties /* encodeProperties */.ImpressionNames.GIFTING_BADGE_PROGRESS_BANNER;
+  obj[1] = encodeProperties /* encodeProperties */.ImpressionTypes.VIEW;
   obj[2] = { gifts_to_next_tier: giftsToNextTier, next_tier: nextTierName, location_stack: tmp4(...items1).analyticsLocations };
-  require("../../../../app_analytics/useTrackImpression.tsx")(obj, { trackOnInitialLoad: true });
+  trackImpression(obj, { trackOnInitialLoad: true });
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.iconContainer, children: null };
   let tmp10Result = null != nextTierIcon;
@@ -48,8 +53,8 @@ export default function GiftingBadgeProgressBanner(arg0) {
   const items2 = [closure_4(View, obj), ];
   const obj2 = { variant: "text-md/semibold", children: null };
   const intl = tmp6(1236).intl;
-  obj2[1] = intl.formatToPlainString(require("../../GiftingBadge.messages.js")["0+xfd9"], { giftsRemaining: giftsToNextTier, nextTier: nextTierName });
-  items2[1] = closure_4(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2);
+  obj2[1] = intl.formatToPlainString(messagesProxy["0+xfd9"], { giftsRemaining: giftsToNextTier, nextTier: nextTierName });
+  items2[1] = closure_4(Text /* Text */.Text, obj2);
   obj[1] = items2;
   return closure_5(View, obj);
 };

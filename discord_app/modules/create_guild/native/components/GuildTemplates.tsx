@@ -1,3 +1,5 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/create_guild/native/components/GuildTemplates.tsx
 import _slicedToArray from "_slicedToArray";
 import SafeAreaPaddingView from "SafeAreaPaddingView";
@@ -24,13 +26,13 @@ function GuildTemplatesHeader() {
   const tmp = createCacheKey();
   let obj = { style: tmp.headerContainer, children: null };
   obj = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[4] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["5HZu07"]);
-  const items = [callback3(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t["5HZu07"]);
+  const items = [callback3(Text /* Text */.Text, obj), ];
   obj = { style: tmp.headerDescription, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[3] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["/k/L/j"]);
-  items[1] = callback3(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[3] = intl2.string(getSystemLocale /* getSystemLocale */.t["/k/L/j"]);
+  items[1] = callback3(Text /* Text */.Text, obj);
   obj[1] = items;
   return callback4(closure_5, obj);
 }

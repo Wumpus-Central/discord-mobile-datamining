@@ -1,3 +1,7 @@
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
+import { getClickstreamDrainEvent } from "ClickstreamEvents.tsx";
+import { clickstreamExperimentEnabled } from "ClickstreamExperiment.tsx";
 // discord_app/modules/app_analytics/clickstream/Clickstream.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
@@ -9,14 +13,14 @@ function isClickstreamEnabled(flag) {
     flag = true;
   }
   if (flag) {
-    const extractTimestampResult = require("../../../utils/SnowflakeUtils.tsx").extractTimestamp(store.getId());
+    const extractTimestampResult = DISCORD_EPOCH.extractTimestamp(store.getId());
     if (extractTimestampResult !== c7) {
       drainClickstream(false);
       c7 = extractTimestampResult;
     }
-    const obj = require("../../../utils/SnowflakeUtils.tsx");
-    let closure_8 = require("ClickstreamExperiment.tsx") /* clickstreamExperimentEnabled */.clickstreamExperimentEnabled();
-    const obj2 = require("ClickstreamExperiment.tsx") /* clickstreamExperimentEnabled */;
+    const obj = DISCORD_EPOCH;
+    let closure_8 = clickstreamExperimentEnabled /* clickstreamExperimentEnabled */.clickstreamExperimentEnabled();
+    const obj2 = clickstreamExperimentEnabled /* clickstreamExperimentEnabled */;
   }
   return closure_8;
 }
@@ -32,9 +36,9 @@ function drainClickstream(flag) {
       let first = tmp8[0];
       let tmp10 = importDefault;
       let tmp11 = dependencyMap;
-      let obj2 = require("../../../utils/AnalyticsUtils.tsx");
+      let obj2 = expandEventProperties;
       let tmp12 = require;
-      let obj3 = require("ClickstreamEvents.tsx") /* getClickstreamDrainEvent */;
+      let obj3 = getClickstreamDrainEvent /* getClickstreamDrainEvent */;
       let trackResult = obj2.track(first, obj3.getClickstreamDrainEvent(first, tmp8[1]));
       continue;
     }
@@ -49,13 +53,13 @@ let c8 = false;
 let result = require("createRTCConnection").fileFinishedImporting("modules/app_analytics/clickstream/Clickstream.tsx");
 
 export const trackClickstream = function trackClickstream(GUILD_VIEWED_CLICKSTREAM, arg1) {
-  let obj = require("../../../utils/SnowflakeUtils.tsx");
+  let obj = DISCORD_EPOCH;
   const extractTimestampResult = obj.extractTimestamp(store.getId());
   if (extractTimestampResult !== c7) {
     drainClickstream(false);
     c7 = extractTimestampResult;
   }
-  const result = require("ClickstreamExperiment.tsx") /* clickstreamExperimentEnabled */.clickstreamExperimentEnabled();
+  const result = clickstreamExperimentEnabled /* clickstreamExperimentEnabled */.clickstreamExperimentEnabled();
   let c8 = result;
   if (result) {
     if (!map.has(GUILD_VIEWED_CLICKSTREAM)) {

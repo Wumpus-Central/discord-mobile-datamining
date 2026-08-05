@@ -1,3 +1,7 @@
+import { set } from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { DiscordAppState.native } from "../app_state/DiscordAppState.native.tsx";
+import { set } from "../monitoring/MonitoringAgent.tsx";
 // discord_app/modules/quests/QuestBarRenderDelayTracker.tsx
 import { AnalyticEvents } from "ME";
 
@@ -15,9 +19,9 @@ prototype["clearTimeoutTimer"] = function clearTimeoutTimer() {
 };
 prototype["sendMetric"] = function sendMetric(arg0, arg1, arg2) {
   if (Math.random() <= 0.1) {
-    let obj = require("../monitoring/MonitoringAgent.tsx");
+    let obj = set;
     obj = { name: null, tags: null };
-    obj[0] = require("../../../discord_common/js/shared/shared-constants/MetricEvents.tsx") /* set */.MetricEvents.QUEST_BAR_RENDER_DELAY;
+    obj[0] = set /* set */.MetricEvents.QUEST_BAR_RENDER_DELAY;
     const _HermesInternal = HermesInternal;
     const items = ["quest_id:" + arg0, ];
     const _HermesInternal2 = HermesInternal;
@@ -28,8 +32,8 @@ prototype["sendMetric"] = function sendMetric(arg0, arg1, arg2) {
     obj[0] = arg0;
     obj[1] = arg1;
     obj[2] = arg2;
-    require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.QUEST_BAR_RENDER_DELAY, obj);
-    const obj3 = require("../../utils/AnalyticsUtils.tsx");
+    expandEventProperties.track(AnalyticEvents.QUEST_BAR_RENDER_DELAY, obj);
+    const obj3 = expandEventProperties;
   }
 };
 prototype["startTracking"] = function startTracking(questId) {
@@ -63,7 +67,7 @@ prototype["stopTracking"] = function stopTracking(arg0) {
         const _Math2 = Math;
         self.sendMetric(arg0, flag, Math.min(rounded, c4));
       }
-      obj = require("../app_state/DiscordAppState.native.tsx");
+      obj = DiscordAppState.native;
     }
   }
 };

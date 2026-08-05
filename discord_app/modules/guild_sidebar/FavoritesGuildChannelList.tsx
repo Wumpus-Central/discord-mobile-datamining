@@ -1,3 +1,7 @@
+import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import { useFavoritesAccess } from "../favorites/FavoritesHooks.tsx";
+import { initialize } from "../threads/LazyLoadedThreadManager.tsx";
+import { computeSubtitle } from "ChannelListState.tsx";
 // discord_app/modules/guild_sidebar/FavoritesGuildChannelList.tsx
 import _slicedToArray from "_slicedToArray";
 import computeSubtitle from "computeSubtitle";
@@ -37,7 +41,7 @@ function getMissingFavoriteThreadIds(includeLoading) {
       let tmp11 = favoriteChannels[key10013];
       let tmp12 = require;
       let tmp13 = dependencyMap;
-      if (tmp11.type !== require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx") /* create */.FavoriteChannelType.REFERENCE_ORIGINAL) {
+      if (tmp11.type !== create /* create */.FavoriteChannelType.REFERENCE_ORIGINAL) {
         continue;
       } else {
         if (null == tmp11.channelType) {
@@ -52,7 +56,7 @@ function getMissingFavoriteThreadIds(includeLoading) {
               continue;
             } else {
               let tmp5 = importDefault;
-              let obj = require("../threads/LazyLoadedThreadManager.tsx");
+              let obj = initialize;
               let loadState = obj.getLoadState(key10013);
               let tmp7 = "NOT_FOUND" !== loadState;
               if (tmp7) {
@@ -621,7 +625,7 @@ let items = [importDefaultResult, importDefaultResult1, importDefaultResult2, im
 const result = require("participantFromServer").fileFinishedImporting("modules/guild_sidebar/FavoritesGuildChannelList.tsx");
 
 export const useFavoritesGuildChannelList = function useFavoritesGuildChannelList() {
-  let hasAccess = _require("../favorites/FavoritesHooks.tsx").useFavoritesAccess("FavoritesGuildChannelList").hasAccess;
+  let hasAccess = _useFavoritesAccess.useFavoritesAccess("FavoritesGuildChannelList").hasAccess;
   _require = hasAccess;
   const tmp3 = callback(React.useState(() => callback2()), 2);
   let closure_1 = tmp3[1];
@@ -658,7 +662,7 @@ export const useFavoritesGuildChannelList = function useFavoritesGuildChannelLis
     hasAccess = getMissingFavoriteThreadIds({ limit: 1, includeLoading: true }).length > 0;
   }
   let shouldShowEmptyState = false;
-  if (guildChannels.getSections().length <= _require("ChannelListState.tsx").SECTION_INDEX_FIRST_NAMED_CATEGORY) {
+  if (guildChannels.getSections().length <= _computeSubtitle.SECTION_INDEX_FIRST_NAMED_CATEGORY) {
     _require = false;
     guildChannels.forEachShownChannel(() => {
       let c0 = true;

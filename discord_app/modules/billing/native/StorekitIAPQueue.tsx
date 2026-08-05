@@ -1,3 +1,4 @@
+import { CurrencyCodes } from "../../../../discord_common/js/shared/utils/PriceUtils.tsx";
 // discord_app/modules/billing/native/StorekitIAPQueue.tsx
 import closure_2 from "set";
 import { convertToAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME";
@@ -26,7 +27,7 @@ function productSK2ToIAPProduct(subscription) {
   if (null == subscription.subscription.introductoryOffer) {
     const _Number = Number;
     const price = subscription.price;
-    const NumberResult = Number(price.toFixed(require("../../../../discord_common/js/shared/utils/PriceUtils.tsx") /* CurrencyCodes */.CurrencyExponents[subscription.currency.toLowerCase(subscription.currency)]));
+    const NumberResult = Number(price.toFixed(CurrencyCodes /* CurrencyCodes */.CurrencyExponents[subscription.currency.toLowerCase(subscription.currency)]));
     let obj = { identifier: null, price: null, currencySymbol: null, currencyCode: null, priceString: null, countryCode: "", downloadable: false, description: null, title: null, discounts: null };
     const _String = String;
     obj[0] = String(subscription.id);

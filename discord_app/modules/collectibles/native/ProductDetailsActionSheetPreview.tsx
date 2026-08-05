@@ -1,3 +1,7 @@
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import { useCollectiblesMobileFlexibleBundlesExperiment } from "../experiments/CollectiblesMobileFlexibleBundlesExperiment.tsx";
+import { memo } from "BundleProductDetailsActionSheetPreview.tsx";
+import { ProfilePreviewWrapper } from "IndividualProductPreview.tsx";
 // discord_app/modules/collectibles/native/ProductDetailsActionSheetPreview.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -20,7 +24,7 @@ function BundleProductPreview(onActiveItemTypeChange) {
   let product;
   let width;
   ({ product, width, handlePreviewPress, onTrackPress, onActiveItemChange } = onActiveItemTypeChange);
-  let obj = require("../experiments/CollectiblesMobileFlexibleBundlesExperiment.tsx") /* useCollectiblesMobileFlexibleBundlesExperiment */;
+  let obj = useCollectiblesMobileFlexibleBundlesExperiment /* useCollectiblesMobileFlexibleBundlesExperiment */;
   if (obj.useCollectiblesMobileFlexibleBundlesExperiment("ProductDetailsActionSheetPreview").enabled) {
     obj = { product: null, width: null, handlePreviewPress: null, onTrackPress: null, onActiveItemChange: null };
     obj[0] = product;
@@ -28,7 +32,7 @@ function BundleProductPreview(onActiveItemTypeChange) {
     obj[2] = handlePreviewPress;
     obj[3] = onTrackPress;
     obj[4] = onActiveItemChange;
-    let tmp3Result = tmp3(require("BundleProductDetailsActionSheetPreview.tsx"), obj);
+    let tmp3Result = tmp3(memo, obj);
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.previewDivider;
@@ -209,7 +213,7 @@ export default function ProductDetailsActionSheetPreview(arg0) {
     }, []),
     children: null
   };
-  if (product.type === _require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType.BUNDLE) {
+  if (product.type === _CollectiblesItemType.CollectiblesItemType.BUNDLE) {
     obj = { product: null, width: null, handlePreviewPress: null, onTrackPress: null, onActiveItemChange: null, onActiveItemTypeChange: null };
     obj[0] = product;
     obj[1] = tmp3;
@@ -226,7 +230,7 @@ export default function ProductDetailsActionSheetPreview(arg0) {
     obj1[1] = tmp3;
     obj1[2] = handlePreviewPress;
     obj1[3] = onTrackPress;
-    obj[1] = tmp7(_require("IndividualProductPreview.tsx").IndividualProductPreview, obj1);
+    obj[1] = tmp7(_ProfilePreviewWrapper.IndividualProductPreview, obj1);
     tmp7Result = tmp7(tmp8, obj);
   }
   obj[2] = tmp7Result;

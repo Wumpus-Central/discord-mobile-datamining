@@ -1,3 +1,6 @@
+import { result } from "../../../../../activities/utils/isInviteActive.tsx";
+import { ContentClassificationVisibility } from "../../../../../content_classification/ContentClassificationVisibility.tsx";
+import { getRequestToStreamCTAAndIsDisabled } from "../../../../../request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/ActivityRichPresenceInviteEmbed.tsx
 import addApplication from "addApplication";
 import upsertAccount from "upsertAccount";
@@ -34,7 +37,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
         currentUser = currentUser.getCurrentUser();
         let intl = _require;
         let string2Result = dependencyMap;
-        let obj = _require("../../../../../content_classification/ContentClassificationVisibility.tsx");
+        let obj = _ContentClassificationVisibility;
         let application = message.application;
         let prop;
         if (application != null) {
@@ -144,9 +147,9 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                 } else {
                   id2 = obj5.findActivity(message.author.id, (type) => type.type === constants.LISTENING);
                   id2 = importDefault;
-                  id2 = require("../../../../../activities/utils/isInviteActive.tsx")(id2, message, application.id);
+                  id2 = result(id2, message, application.id);
                   id2 = intl(12527).getRequestToStreamText(message, channel, obj4.getId());
-                  id2 = require("../../../../../request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx")(message);
+                  id2 = getRequestToStreamCTAAndIsDisabled(message);
                   id2 = id2 ? obj.ACTIVE : obj.DEAD;
                   obj = { displayType: null, ctaButtonEnabled: null, ctaButtonText: null, ctaButtonIsLoading: false, footerLabel: null, gradientColors: null, headerText: null, iconSrc: null, isSpotifyParty: false, isPlatformSupported: true, maxPartySize: 0, partyMemberAvatarURIs: null, partySizeText: null, platformIconKeys: null, coverImageUrl: null, detailsText: null, subtitle: null, title: null };
                   obj[0] = id2;
@@ -169,7 +172,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                 const intlResult3 = intl(11263);
               } else {
                 id2 = importDefault;
-                id2 = require("../../../../../activities/utils/isInviteActive.tsx")(findActivityResult, message, application.id);
+                id2 = result(findActivityResult, message, application.id);
                 id2 = !id2;
                 const activity9 = message.activity;
                 let name_override;

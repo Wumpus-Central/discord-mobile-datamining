@@ -1,3 +1,7 @@
+import { isEqual } from "../../../_runtime/04444_isEqual.js";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import { GuildMemberFlags } from "../guild_automod/AutomodPermissionUtils.tsx";
+import { isCommunicationDisabled } from "../guild_communication_disabled/CommunicationDisabledUtils.tsx";
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetySearch.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "isEqual";
@@ -51,7 +55,7 @@ prototype["updateSearchState"] = function updateSearchState(arg0) {
   const merged = Object.assign(this._searchState);
   const merged1 = Object.assign(arg0);
   this._searchState = {};
-  this.hasDefaultQuery = require("../../../_runtime/04444_isEqual.js")(this._searchState, closure_4);
+  this.hasDefaultQuery = isEqual(this._searchState, closure_4);
   return true;
 };
 prototype["resetSearchState"] = function resetSearchState() {
@@ -162,15 +166,15 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
         if (!(null != selectedJoinDateOption.beforeDate && joinedAtTimestamp.joinedAtTimestamp > selectedJoinDateOption.beforeDate)) {
           let tmp12 = null != selectedAccountAgeOption.afterDate;
           if (tmp12) {
-            tmp12 = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(joinedAtTimestamp.userId) < selectedAccountAgeOption.afterDate;
-            const obj2 = require("../../utils/SnowflakeUtils.tsx");
+            tmp12 = DISCORD_EPOCH.extractTimestamp(joinedAtTimestamp.userId) < selectedAccountAgeOption.afterDate;
+            const obj2 = DISCORD_EPOCH;
           }
           let tmp15 = !tmp12;
           if (!tmp12) {
             let tmp16 = null != selectedAccountAgeOption.beforeDate;
             if (tmp16) {
-              tmp16 = require("../../utils/SnowflakeUtils.tsx").extractTimestamp(joinedAtTimestamp.userId) > selectedAccountAgeOption.beforeDate;
-              let obj3 = require("../../utils/SnowflakeUtils.tsx");
+              tmp16 = DISCORD_EPOCH.extractTimestamp(joinedAtTimestamp.userId) > selectedAccountAgeOption.beforeDate;
+              let obj3 = DISCORD_EPOCH;
             }
             let tmp19 = !tmp16;
             if (!tmp16) {
@@ -198,8 +202,8 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
                     if (tmp24) {
                       let tmp26 = !requireCommunicationDisabled;
                       if (requireCommunicationDisabled) {
-                        tmp26 = !_require("../guild_communication_disabled/CommunicationDisabledUtils.tsx").isMemberCommunicationDisabled(joinedAtTimestamp);
-                        const obj4 = _require("../guild_communication_disabled/CommunicationDisabledUtils.tsx");
+                        tmp26 = !_isCommunicationDisabled.isMemberCommunicationDisabled(joinedAtTimestamp);
+                        const obj4 = _isCommunicationDisabled;
                       }
                       let tmp29 = !tmp26;
                       if (tmp26) {
@@ -211,8 +215,8 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
                         if (tmp30) {
                           let tmp32 = !requireUsernameQuarantined;
                           if (requireUsernameQuarantined) {
-                            tmp32 = !_require("../guild_automod/AutomodPermissionUtils.tsx").hasAutomodQuarantinedProfile(joinedAtTimestamp);
-                            const obj5 = _require("../guild_automod/AutomodPermissionUtils.tsx");
+                            tmp32 = !_GuildMemberFlags.hasAutomodQuarantinedProfile(joinedAtTimestamp);
+                            const obj5 = _GuildMemberFlags;
                           }
                           tmp31 = !tmp32;
                         }

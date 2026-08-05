@@ -1,3 +1,5 @@
+import { NotificationCenterScenes } from "NotificationCenterItemsTypes.tsx";
+import { getRelativeTimestamp } from "NotificationCenterUtils.tsx";
 // discord_app/modules/notification_center/NotificationCenterItemsStore.tsx
 import getHash from "getHash";
 import { isGuildEventEnded } from "scheduledEventSort";
@@ -13,7 +15,7 @@ function _validate(id) {
   return null != id.id && null != id.type;
 }
 function toNotificationCenterItem(item_enum) {
-  let tmp3 = item_enum.item_enum === require("NotificationCenterItemsTypes.tsx") /* NotificationCenterScenes */.ItemEnum.FIRST_MESSAGE;
+  let tmp3 = item_enum.item_enum === NotificationCenterScenes /* NotificationCenterScenes */.ItemEnum.FIRST_MESSAGE;
   if (tmp3) {
     tmp3 = item_enum.type === tmp(7021).NotificationCenterItems.LIFECYCLE_ITEM;
   }
@@ -39,7 +41,7 @@ function toNotificationCenterItem(item_enum) {
 function handleAddItem(type) {
   if ("NOTIFICATION_CENTER_ITEM_CREATE" === type.type) {
     const item2 = type.item;
-    let tmp3 = item2.item_enum === require("NotificationCenterItemsTypes.tsx") /* NotificationCenterScenes */.ItemEnum.FIRST_MESSAGE;
+    let tmp3 = item2.item_enum === NotificationCenterScenes /* NotificationCenterScenes */.ItemEnum.FIRST_MESSAGE;
     if (tmp3) {
       tmp3 = item2.type === tmp(7021).NotificationCenterItems.LIFECYCLE_ITEM;
     }
@@ -677,7 +679,7 @@ obj = {
     newBuild = newBuild.newBuild;
     let _require;
     if (null !== newBuild) {
-      const obj = _require("NotificationCenterUtils.tsx");
+      const obj = _getRelativeTimestamp;
       const result = obj.mobileNativeUpdateAvailableLocalItem(newBuild);
       _require = result;
       const prop = obj.notifCenterLocalItems;

@@ -1,3 +1,5 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { useResourceChannels } from "../useResourceChannels.tsx";
 // discord_app/modules/guild_onboarding_home/native/OnboardingHomeResourcesSheet.tsx
 import "noop";
 import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_3 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY";
@@ -10,10 +12,10 @@ export default function OnboardingHomeResourcesSheet(guildId) {
   guildId = guildId.guildId;
   let importDefault;
   let obj = guildId(3989);
-  importDefault = obj.useToken(require("../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_ICON_SIZE);
+  importDefault = obj.useToken(Themes.modules.mobile.TABLE_ROW_ICON_SIZE);
   obj = { children: null };
   obj = { hasIcons: true, children: null };
-  obj[1] = require("../useResourceChannels.tsx")(guildId).map((label) => {
+  obj[1] = useResourceChannels(guildId).map((label) => {
     let closure_0 = label;
     let obj = callback(outer1_2[10]);
     const resourceChannelIconURL = obj.getResourceChannelIconURL(label);

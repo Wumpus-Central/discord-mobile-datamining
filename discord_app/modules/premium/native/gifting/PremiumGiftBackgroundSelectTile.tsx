@@ -1,3 +1,7 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { messagesProxy } from "../../gifting/PremiumGifting.messages.js";
 // discord_app/modules/premium/native/gifting/PremiumGiftBackgroundSelectTile.tsx
 import "set";
 import get_ActivityIndicator from "messagesProxy";
@@ -32,7 +36,7 @@ obj[PremiumGiftStyles.SEASONAL_COFFEE] = { uri: require("metadata") };
 const obj2 = { uri: require("metadata") };
 obj[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: require("metadata") };
 let closure_9 = createCacheKey.createStyles((arg0) => {
-  let obj = { width: 78, height: 44, justifyContent: "center", marginEnd: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_8, marginStart: null };
+  let obj = { width: 78, height: 44, justifyContent: "center", marginEnd: Themes.space.PX_8, marginStart: null };
   let num = 0;
   if (0 === arg0) {
     num = 20;
@@ -55,11 +59,11 @@ export default function GiftBackgroundSelectTile(index) {
   let tmp4Result = null;
   if (null != obj[giftStyle]) {
     obj = { "aria-label": null, "aria-selected": null, style: null, onPress: null, children: null };
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     obj = { giftStyle: null };
-    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
     obj[0] = intl2.string(GIFT_STYLE_DESCRIPTIONS[giftStyle]);
-    obj[0] = intl.formatToPlainString(require("../../gifting/PremiumGifting.messages.js")["+utqaz"], obj);
+    obj[0] = intl.formatToPlainString(messagesProxy["+utqaz"], obj);
     obj[1] = selected;
     obj[2] = tmp.container;
     obj[3] = index.onPress;
@@ -72,7 +76,7 @@ export default function GiftBackgroundSelectTile(index) {
     const obj1 = { resizeMode: "contain", style: null, source: null };
     obj1[1] = tmp.image;
     obj1[2] = tmp2;
-    items[1] = callback(require("../../../../components_native/common/FastImage.tsx"), obj1);
+    items[1] = callback(preload, obj1);
     obj[4] = items;
     tmp4Result = closure_7(closure_4, obj);
     const tmp4 = closure_7;

@@ -1,3 +1,19 @@
+import { registerAsset } from "../../../../../../_runtime/12041_registerAsset.js";
+import { ManaContext } from "../../../../../../discord_common/js/packages/design/native.tsx";
+import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../../../design/void/native.tsx";
+import { PressableBase } from "../../../../../design/void/Pressables/native/Pressables.tsx";
+import { getDevicePixelRatio } from "../../../../../utils/getDevicePixelRatio.native.tsx";
+import { getNickname } from "../../../../../utils/NicknameUtils.tsx";
+import { postMessageToWebView } from "../../../../activities/native/EmbeddedActivitiesNativeManager.tsx";
+import { useActivityUsers } from "../../../../activities/useActivityUsers.tsx";
+import { useActivityAction } from "../../../../activities/utils/useActivityShelfItem.tsx";
+import { useEmbeddedActivityBackground } from "../../../../activities/utils/useEmbeddedActivityBackground.tsx";
+import { useLaunchingActivityButtonState } from "../../../../app_launcher/utils/useLaunchingActivityButtonState.tsx";
+import { ApplicationCommandSectionType } from "../../../../application_commands/ApplicationCommandTypes.tsx";
+import { set } from "../../../../core/native/NativeView.tsx";
+import { isTestModeForApplication } from "../../../../game_store/TestModeUtils.tsx";
+import { ParticipantsSummary } from "ActivityShelfItemSummary.tsx";
 // discord_app/modules/voice_panel/native/controls/activities/ActivityShelfItem.tsx
 import Button from "Button";
 import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor";
@@ -20,7 +36,7 @@ function ActivityActionOverlay(arg0) {
   ({ action, context } = arg0);
   ({ applicationId, activityItem, launchingComponentId } = arg0);
   ({ id, name } = activityItem.application);
-  if (require("../../../../activities/utils/useActivityShelfItem.tsx") /* useActivityAction */.ActivityAction.JOIN !== action) {
+  if (useActivityAction /* useActivityAction */.ActivityAction.JOIN !== action) {
     if (tmp4(11356).ActivityAction.LEAVE !== action) {
       return null;
     }
@@ -41,7 +57,7 @@ function ActivityActionOverlay(arg0) {
     id = context.channel.id;
   }
   obj = { children: null };
-  items[1] = tmp10(require("ActivityShelfItemSummary.tsx"), { channelId: id, applicationId: id, applicationName: name, submitting: require("../../../../app_launcher/utils/useLaunchingActivityButtonState.tsx")({ applicationId, context, launchingComponentId }).submitting });
+  items[1] = tmp10(ParticipantsSummary, { channelId: id, applicationId: id, applicationName: name, submitting: useLaunchingActivityButtonState({ applicationId, context, launchingComponentId }).submitting });
   obj[0] = items;
   return tmp6(tmp7, obj);
 }
@@ -53,8 +69,8 @@ function ParticipantsText(arg0) {
   ({ activityItem, channelId } = arg0);
   ({ action, guildId } = arg0);
   const tmp = createCacheKey();
-  const arr = require("../../../../activities/useActivityUsers.tsx")(activityItem.application.id, channelId);
-  let obj = require("../../../../../utils/NicknameUtils.tsx");
+  const arr = useActivityUsers(activityItem.application.id, channelId);
+  let obj = getNickname;
   let first;
   if (arr != null) {
     first = arr[0];
@@ -64,11 +80,11 @@ function ParticipantsText(arg0) {
   items = [, ];
   ({ participantsContainer: arr2[0], overlayBubble: arr2[1] } = tmp);
   obj = { source: null, size: null, color: "white" };
-  obj[0] = require("../../../../../../_runtime/12041_registerAsset.js");
-  obj[1] = require("../../../../../design/void/native.tsx") /* Button */.Icon.Sizes.EXTRA_SMALL;
-  const items1 = [callback(require("../../../../../design/void/native.tsx") /* Button */.Icon, obj), ];
+  obj[0] = registerAsset;
+  obj[1] = Button /* Button */.Icon.Sizes.EXTRA_SMALL;
+  const items1 = [callback(Button /* Button */.Icon, obj), ];
   const obj1 = { lineClamp: 1, style: tmp.participantsText, variant: "text-xxs/medium", color: "text-overlay-light", children: null };
-  if (action === require("../../../../activities/utils/useActivityShelfItem.tsx") /* useActivityAction */.ActivityAction.START) {
+  if (action === useActivityAction /* useActivityAction */.ActivityAction.START) {
     let num2 = activityItem.application.maxParticipants;
     if (num2 == null) {
       num2 = 0;
@@ -86,9 +102,9 @@ function ParticipantsText(arg0) {
     }
   }
   obj1[4] = itemSubtitleForMaxPlayersShort;
-  items1[1] = callback(require("../../../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  items1[1] = callback(Text /* Text */.Text, obj1);
   obj[1] = items1;
-  return closure_7(require("../../../../core/native/NativeView.tsx"), obj);
+  return closure_7(set, obj);
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: null, imageOuterContainer: null, ongoingActivityJoinedContainer: null, overlayBubble: null, participantsContainer: null, participantsText: null, developerIconContainer: null, developerIconColor: null };
@@ -134,27 +150,27 @@ export default function ActivityShelfItem(arg0) {
     channel = context.channel;
   }
   ({ width, height } = itemDimensions);
-  const result = width * require("../../../../../utils/getDevicePixelRatio.native.tsx")();
+  const result = width * getDevicePixelRatio();
   const id = Button.useId();
   let obj = { activityItem, context, guildId, locationObject, onActivityItemSelected, embeddedActivitiesManager: null, backgroundResolution: null, assetNames: null, launchingComponentId: null, commandOrigin: null };
-  obj[5] = require("../../../../activities/native/EmbeddedActivitiesNativeManager.tsx");
+  obj[5] = postMessageToWebView;
   obj[6] = result;
   obj[7] = ["embedded_cover"];
   obj[8] = id;
-  obj[9] = require("../../../../application_commands/ApplicationCommandTypes.tsx") /* ApplicationCommandSectionType */.CommandOrigin.VOICE_UI;
-  const tmp7 = require("../../../../activities/utils/useActivityShelfItem.tsx");
-  ({ activityAction, imageBackground, onActivityItemSelected: onActivityItemSelected2, labelType } = require("../../../../activities/utils/useActivityShelfItem.tsx")(obj));
+  obj[9] = ApplicationCommandSectionType /* ApplicationCommandSectionType */.CommandOrigin.VOICE_UI;
+  const tmp7 = useActivityAction;
+  ({ activityAction, imageBackground, onActivityItemSelected: onActivityItemSelected2, labelType } = useActivityAction(obj));
   obj = { applicationId: activityItem.application.id, size: result, names: ["embedded_background"] };
-  let tmp10 = require("../../../../activities/utils/useEmbeddedActivityBackground.tsx")(obj);
+  let tmp10 = useEmbeddedActivityBackground(obj);
   let tmp11 = !disableBadges;
   if (!disableBadges) {
     const items = [tmp8(11356).ActivityAction.LEAVE, tmp8(11356).ActivityAction.JOIN];
     tmp11 = !items.includes(activityAction);
   }
-  const tmp7Result = require("../../../../activities/utils/useActivityShelfItem.tsx")(obj);
-  const isTestModeForApplication = require("../../../../game_store/TestModeUtils.tsx") /* isTestModeForApplication */.useIsTestModeForApplication(activityItem.application.id);
+  const tmp7Result = useActivityAction(obj);
+  const isTestModeForApplication = isTestModeForApplication /* isTestModeForApplication */.useIsTestModeForApplication(activityItem.application.id);
   obj = { activeOpacity: 0.7, onPress: onActivityItemSelected2, disabled: null, androidRippleConfig: null, style: null, children: null };
-  obj[2] = activityAction === require("../../../../activities/utils/useActivityShelfItem.tsx") /* useActivityAction */.ActivityAction.LEAVE;
+  obj[2] = activityAction === useActivityAction /* useActivityAction */.ActivityAction.LEAVE;
   obj[3] = ANDROID_FOREGROUND_RIPPLE;
   const items1 = [tmp.container, { width, height }];
   obj[4] = items1;
@@ -162,7 +178,7 @@ export default function ActivityShelfItem(arg0) {
   let tmp3Result = tmp3(5663);
   const obj2 = { accessibilityLabel: activityItem.application.name, imageBackground: null, aspectRatio: null };
   tmp3Result = tmp3(16091);
-  if (activityAction === require("../../../../activities/utils/useActivityShelfItem.tsx") /* useActivityAction */.ActivityAction.START) {
+  if (activityAction === useActivityAction /* useActivityAction */.ActivityAction.START) {
     tmp10 = imageBackground;
   }
   obj2[1] = tmp10;
@@ -193,7 +209,7 @@ export default function ActivityShelfItem(arg0) {
     }
   }
   items3[2] = tmp15Result;
-  const items4 = [closure_7(require("../../../../../../discord_common/js/packages/design/native.tsx") /* ManaContext */.ThemeContextProvider, { theme: "dark", children: items3 }), ];
+  const items4 = [closure_7(ManaContext /* ManaContext */.ThemeContextProvider, { theme: "dark", children: items3 }), ];
   let tmp15Result1 = activityAction === tmp8(11356).ActivityAction.START;
   if (tmp15Result1) {
     const obj7 = { action: null, channelId: null, guildId: null, activityItem: null };
@@ -214,5 +230,5 @@ export default function ActivityShelfItem(arg0) {
   }
   items4[1] = tmp15Result1;
   obj[5] = items4;
-  return closure_7(require("../../../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  return closure_7(PressableBase /* PressableBase */.PressableOpacity, obj);
 };

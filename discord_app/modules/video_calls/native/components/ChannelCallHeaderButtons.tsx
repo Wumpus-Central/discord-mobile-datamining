@@ -1,3 +1,7 @@
+import { registerAsset } from "../../../../../_runtime/10810_registerAsset.js";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { useSelectedParticipant } from "../../useSelectedParticipant.tsx";
+import { ChannelCallNavigatorIcon } from "ChannelCallNavigatorIcon.tsx";
 // discord_app/modules/video_calls/native/components/ChannelCallHeaderButtons.tsx
 import "noop";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -9,7 +13,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/video_calls/nat
 export const CameraButton = function CameraButton() {
   let importDefault;
   let require;
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [_detectH265HardwareDecode];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isVideoEnabled: store.isVideoEnabled(), videoDeviceId: store.getVideoDeviceId(), videoDevices: store.getVideoDevices() }));
   ({ videoDeviceId: require, videoDevices: importDefault } = stateFromStoresObject);
@@ -18,7 +22,7 @@ export const CameraButton = function CameraButton() {
     obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
     const intl = tmp(1236).intl;
     obj[0] = intl.string(tmp(1236).t["t9eQ/g"]);
-    obj[1] = require("../../../../../_runtime/10810_registerAsset.js");
+    obj[1] = registerAsset;
     obj[2] = function onPress() {
       const keys = Object.keys(closure_1);
       const found = keys.find((arg0) => arg0 !== closure_0);
@@ -27,15 +31,15 @@ export const CameraButton = function CameraButton() {
         const obj = outer1_1(outer1_2[7]);
       }
     };
-    tmp4 = jsx(require("ChannelCallNavigatorIcon.tsx"), { accessibilityLabel: null, source: null, onPress: null, disableBackground: true });
-    const tmp7 = require("ChannelCallNavigatorIcon.tsx");
+    tmp4 = jsx(ChannelCallNavigatorIcon, { accessibilityLabel: null, source: null, onPress: null, disableBackground: true });
+    const tmp7 = ChannelCallNavigatorIcon;
   }
   return tmp4;
 };
 export const GridButton = function GridButton(channel) {
   channel = channel.channel;
   let tmp4 = null;
-  if (null != require("../../useSelectedParticipant.tsx")(channel)) {
+  if (null != useSelectedParticipant(channel)) {
     tmp4 = null;
     if (!tmp3) {
       const obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };

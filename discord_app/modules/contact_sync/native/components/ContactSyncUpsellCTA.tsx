@@ -1,3 +1,4 @@
+import { registerAsset } from "../../../../../_runtime/13112_registerAsset.js";
 // discord_app/modules/contact_sync/native/components/ContactSyncUpsellCTA.tsx
 import { dismissUpsellCTA } from "setStoredContacts";
 import ME from "ME";
@@ -50,7 +51,7 @@ const memoResult = require("noop").memo(function ContactSyncUpsellCTA(location) 
     subtitle: null
   };
   items = [callback().container, location.style];
-  obj[3] = require("../../../../../_runtime/13112_registerAsset.js");
+  obj[3] = registerAsset;
   let intl = location(1236).intl;
   obj[4] = intl.string(location(1236).t.T6Rfd9);
   const intl2 = location(1236).intl;

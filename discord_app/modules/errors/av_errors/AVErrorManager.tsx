@@ -1,3 +1,7 @@
+import { dispatcher } from "../../../Dispatcher.tsx";
+import { mapped } from "AVError.tsx";
+import { getCurrentScreenshareCaptureMethod } from "AVErrorAnalytics.tsx";
+import { ErrorDefinitions } from "definitions/index.tsx";
 // discord_app/modules/errors/av_errors/AVErrorManager.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import reset from "reset";
@@ -22,7 +26,7 @@ function setDifference(set, set2) {
   return set;
 }
 function makeErrorKey(item10044) {
-  const obj = require("definitions/index.tsx") /* ErrorDefinitions */.ErrorDefinitions[item10044.type];
+  const obj = ErrorDefinitions /* ErrorDefinitions */.ErrorDefinitions[item10044.type];
   let errorContextKey;
   if (obj != null) {
     errorContextKey = obj.makeErrorContextKey(item10044);
@@ -55,7 +59,7 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
   }
   allActiveStreams = allActiveStreams.getAllActiveStreams();
   const map = new Map();
-  const values = Object.values(require("definitions/index.tsx") /* ErrorDefinitions */.ErrorDefinitions);
+  const values = Object.values(ErrorDefinitions /* ErrorDefinitions */.ErrorDefinitions);
   const iter = values[Symbol.iterator]();
   while (iter !== undefined) {
     let obj = { voiceChannelId: null, voiceState: null, activeStreams: null };
@@ -88,7 +92,7 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
           if (null != value) {
             let tmp29 = require;
             let tmp30 = dependencyMap;
-            let obj5 = require("AVError.tsx") /* mapped */;
+            let obj5 = mapped /* mapped */;
             let tmp31 = value;
             let reportAVErrorResult = obj5.reportAVError(tmp28);
           }
@@ -115,8 +119,8 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
       }
       obj = { type: "ACTIVE_AV_ERRORS_CHANGED", activeErrors: null };
       obj[1] = map;
-      require("../../../Dispatcher.tsx").dispatch(obj);
-      const obj6 = require("../../../Dispatcher.tsx");
+      dispatcher.dispatch(obj);
+      const obj6 = dispatcher;
     }
   } else {
     const _Object = Object;
@@ -129,7 +133,7 @@ prototype["handleReportAVError"] = function handleReportAVError(arg0) {
   let context;
   let error;
   ({ error, context } = arg0);
-  const result = require("AVErrorAnalytics.tsx") /* getCurrentScreenshareCaptureMethod */.sendAVErrorAnalyticsEvent(error, context);
+  const result = getCurrentScreenshareCaptureMethod /* getCurrentScreenshareCaptureMethod */.sendAVErrorAnalyticsEvent(error, context);
 };
 const aVErrorManager = new AVErrorManager();
 let tmp2 = new require("updateVoiceState")("AVErrorManager");

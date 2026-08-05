@@ -1,3 +1,6 @@
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
 // discord_app/actions/ChangeLogActionCreators.tsx
 import explicitContentFromProto from "explicitContentFromProto";
 import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
@@ -12,24 +15,24 @@ const result = require("ME").fileFinishedImporting("actions/ChangeLogActionCreat
 
 export default {
   lockChangeLog(key) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "CHANGE_LOG_LOCK", key };
     obj.dispatch(obj);
   },
   unlockChangeLog(key) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "CHANGE_LOG_UNLOCK", key };
     obj.dispatch(obj);
   },
   markChangelogAsSeen(id, date) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "CHANGE_LOG_MARK_SEEN", changelogId: id, changelogDate: date };
     obj.dispatch(obj);
-    const LastReceivedChangelogId = require("../modules/user_settings/UserSettings.tsx") /* explicitContentFromProto */.LastReceivedChangelogId;
+    const LastReceivedChangelogId = explicitContentFromProto /* explicitContentFromProto */.LastReceivedChangelogId;
     LastReceivedChangelogId.updateSetting(id);
   },
   setChangelogOverride(id) {
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "CHANGE_LOG_SET_OVERRIDE", id };
     obj.dispatch(obj);
     if (null != id) {
@@ -38,13 +41,13 @@ export default {
     }
   },
   sendChangelogMessage(changelog_id) {
-    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     obj = { url: Endpoints.CHANGELOG_MESSAGES, body: obj, rejectWithError: true };
     obj = { changelog_id };
     HTTP.post(obj);
   },
   fetchChangelogConfig() {
-    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.HTTP;
+    const HTTP = sendRequest /* sendRequest */.HTTP;
     const obj = { url: null, rejectWithError: true };
     obj[0] = "https://cdn.discordapp.com/changelogs/config_" + ChangelogPlatforms.MOBILE + ".json?" + "x=" + Math.floor(new Date().getMinutes() / 5);
     return HTTP.get(obj);

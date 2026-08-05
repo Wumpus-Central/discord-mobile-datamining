@@ -1,3 +1,7 @@
+import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import { useSelectedDismissibleContent } from "../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
+import { canShowTimeRecurringContent } from "../dismissible_content/useGetDismissibleContent.tsx";
+import { useFavoritesGuildConfig } from "FavoritesGuildExperiment.tsx";
 // discord_app/modules/favorites/FavoritesDismissibleContent.tsx
 import _slicedToArray from "_slicedToArray";
 import withContent from "withContent";
@@ -21,7 +25,7 @@ export const useFavoritesIntroPopoverDismissibleContent = function useFavoritesI
   if (arg0 === undefined) {
     flag = true;
   }
-  let obj = require("FavoritesGuildExperiment.tsx") /* useFavoritesGuildConfig */;
+  let obj = useFavoritesGuildConfig /* useFavoritesGuildConfig */;
   const isFreemium = obj.useFavoritesGuildConfig({ location: "FavoritesDismissibleContent" }).isFreemium;
   let tmpResult = tmp(5931);
   if (tmp3) {
@@ -47,7 +51,7 @@ export const useFavoritesIntroPopoverDismissibleContent = function useFavoritesI
 export const useFavoritesMenuItemPopoverDismissibleContent = function useFavoritesMenuItemPopoverDismissibleContent(hasItem) {
   let tmp11;
   let tmp12;
-  let obj = require("FavoritesGuildExperiment.tsx") /* useFavoritesGuildConfig */;
+  let obj = useFavoritesGuildConfig /* useFavoritesGuildConfig */;
   const isFreemium = obj.useFavoritesGuildConfig({ location: "FavoritesDismissibleContent" }).isFreemium;
   let tmpResult = tmp(5932);
   let first = callback(tmpResult.useDangerouslyPeekDismissibleContents(items1), 1)[0];
@@ -69,20 +73,20 @@ export const useFavoritesMenuItemPopoverDismissibleContent = function useFavorit
   }
 };
 export const useIsFavoritesMenuItemPopoverPending = function useIsFavoritesMenuItemPopoverPending() {
-  return callback(require("../dismissible_content/useGetDismissibleContent.tsx") /* canShowTimeRecurringContent */.useDangerouslyPeekDismissibleContents(items2), 1)[0] === require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+  return callback(canShowTimeRecurringContent /* canShowTimeRecurringContent */.useDangerouslyPeekDismissibleContents(items2), 1)[0] === DismissibleContent /* DismissibleContent */.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
 };
 export const isFavoritesIntroPopoverShown = function isFavoritesIntroPopoverShown() {
-  return callback2(require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) && callback2(require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM);
+  return callback2(DismissibleContent /* DismissibleContent */.DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) && callback2(DismissibleContent /* DismissibleContent */.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM);
 };
 export const useIsFavoritesIntroPopoverShown = function useIsFavoritesIntroPopoverShown() {
-  return callback3(require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) && callback3(require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx") /* DismissibleContent */.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM);
+  return callback3(DismissibleContent /* DismissibleContent */.DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) && callback3(DismissibleContent /* DismissibleContent */.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM);
 };
 export const useFavoritesBetaTagDismissibleContent = function useFavoritesBetaTagDismissibleContent(arg0) {
   let require;
   let tmp10;
-  let obj = require("FavoritesGuildExperiment.tsx") /* useFavoritesGuildConfig */;
+  let obj = useFavoritesGuildConfig /* useFavoritesGuildConfig */;
   const isFreemium = obj.useFavoritesGuildConfig({ location: "FavoritesDismissibleContent" }).isFreemium;
-  require("../dismissible_content/hooks/useSelectedDismissibleContent.tsx") /* useSelectedDismissibleContent */;
+  useSelectedDismissibleContent /* useSelectedDismissibleContent */;
   if (tmp3) {
     if (arg0) {
       const items = [tmp(1358).DismissibleContent.FAVORITES_GUILD_NEW_BADGE];

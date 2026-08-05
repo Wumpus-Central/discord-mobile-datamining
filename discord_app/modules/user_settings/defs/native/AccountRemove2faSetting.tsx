@@ -1,54 +1,57 @@
+import { set } from "../../../../actions/AlertActionCreators.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getSMSBackupDisabledMessage } from "../../account/MFAUtils.tsx";
 // discord_app/modules/user_settings/defs/native/AccountRemove2faSetting.tsx
 import createToggle from "createToggle";
 
 const pressable = createToggle.createPressable({
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["D+aE7g"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["D+aE7g"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   onPress: function remove2FA() {
-    let obj = require("../../../../actions/AlertActionCreators.tsx");
+    let obj = set;
     obj = { title: null, body: null, cancelText: null, onConfirm: null };
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["D+aE7g"]);
-    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.EA4ZEk);
-    const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[2] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["ETE/oC"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["D+aE7g"]);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.EA4ZEk);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
     obj[3] = function onConfirm() {
       return callback(table[4]).disable();
     };
     obj.show(obj);
   },
   useIsDisabled() {
-    return null !== require("../../account/MFAUtils.tsx") /* getSMSBackupDisabledMessage */.use2FARemoveDisableReason();
+    return null !== getSMSBackupDisabledMessage /* getSMSBackupDisabledMessage */.use2FARemoveDisableReason();
   },
   useDescription: require("getSMSBackupDisabledMessage").use2FARemoveDisableReason,
   usePredicate: require("useIs2FAEnabled").useIsTOTPEnabled
 });
 let obj = {
   useTitle() {
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["D+aE7g"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["D+aE7g"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   onPress: function remove2FA() {
-    let obj = require("../../../../actions/AlertActionCreators.tsx");
+    let obj = set;
     obj = { title: null, body: null, cancelText: null, onConfirm: null };
-    const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["D+aE7g"]);
-    const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[1] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.EA4ZEk);
-    const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    obj[2] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t["ETE/oC"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["D+aE7g"]);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.EA4ZEk);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
     obj[3] = function onConfirm() {
       return callback(table[4]).disable();
     };
     obj.show(obj);
   },
   useIsDisabled() {
-    return null !== require("../../account/MFAUtils.tsx") /* getSMSBackupDisabledMessage */.use2FARemoveDisableReason();
+    return null !== getSMSBackupDisabledMessage /* getSMSBackupDisabledMessage */.use2FARemoveDisableReason();
   },
   useDescription: require("getSMSBackupDisabledMessage").use2FARemoveDisableReason,
   usePredicate: require("useIs2FAEnabled").useIsTOTPEnabled

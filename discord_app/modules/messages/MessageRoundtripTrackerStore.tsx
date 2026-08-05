@@ -1,3 +1,6 @@
+import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import { getDeviceMetadata } from "../device/getDeviceMetadata.native.tsx";
+import { receiveNetworkInfoformation } from "../network/NetStats.android.tsx";
 // discord_app/modules/messages/MessageRoundtripTrackerStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleInviteData from "handleInviteData";
@@ -19,10 +22,10 @@ function trackRoundtrip(channelId) {
       if (null != channelId.gatewaySeenTimestamp) {
         diff1 = channelId.gatewaySeenTimestamp - channelId.initialSendTimestamp;
       }
-      let obj = require("../network/NetStats.android.tsx") /* receiveNetworkInfoformation */;
+      let obj = receiveNetworkInfoformation /* receiveNetworkInfoformation */;
       const signalStrength = obj.getSignalStrength();
       obj = {};
-      const merged = Object.assign(require("../device/getDeviceMetadata.native.tsx")());
+      const merged = Object.assign(getDeviceMetadata());
       obj.api_latency_ms = diff;
       obj.gateway_latency_ms = diff1;
       ({ id: obj3.channel_id, type: obj3.channel_type, guild_id: obj3.guild_id } = basicChannel);
@@ -36,8 +39,8 @@ function trackRoundtrip(channelId) {
         tmp17 = obj;
       }
       const merged1 = Object.assign(tmp17);
-      require("../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.SEND_MESSAGE_ROUNDTRIP, obj);
-      const obj2 = require("../../utils/AnalyticsUtils.tsx");
+      expandEventProperties.track(AnalyticEvents.SEND_MESSAGE_ROUNDTRIP, obj);
+      const obj2 = expandEventProperties;
     }
   } else {
     const _HermesInternal = HermesInternal;

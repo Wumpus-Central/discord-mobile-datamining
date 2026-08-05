@@ -1,3 +1,4 @@
+import { getEffectiveVideoProvider } from "../../utils/EmbedUtils.tsx";
 // discord_app/modules/messages/MarkupPostProcessors.tsx
 import ME from "ME";
 import set from "Version";
@@ -39958,7 +39959,7 @@ export const checkForSimpleEmbedMessage = function checkForSimpleEmbedMessage(ar
           if (obj.isEmbedInline(first1)) {
             items = [];
           }
-          obj = require("../../utils/EmbedUtils.tsx") /* getEffectiveVideoProvider */;
+          obj = getEffectiveVideoProvider /* getEffectiveVideoProvider */;
         }
       } else {
         items = arg0;
@@ -40147,7 +40148,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
             if (obj3.isEmbedInline(first1)) {
               items2 = [];
             }
-            obj3 = _require("../../utils/EmbedUtils.tsx");
+            obj3 = _getEffectiveVideoProvider;
           }
         } else {
           items2 = arr;

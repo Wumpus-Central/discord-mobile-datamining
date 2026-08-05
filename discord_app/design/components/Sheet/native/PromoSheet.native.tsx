@@ -1,3 +1,4 @@
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
 // discord_app/design/components/Sheet/native/PromoSheet.native.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
@@ -25,7 +26,7 @@ export const PromoSheet = function PromoSheet(arg0) {
   let title;
   ({ description, illustration, graphic, gradientColor } = arg0);
   ({ title, actions } = arg0);
-  const tmp3 = require("../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx")("PromoSheet");
+  const tmp3 = useIsMobileVisualRefreshExperimentEnabled("PromoSheet");
   importDefault = tmp3;
   const tmp4 = createCacheKey();
   const items = [tmp3, gradientColor];

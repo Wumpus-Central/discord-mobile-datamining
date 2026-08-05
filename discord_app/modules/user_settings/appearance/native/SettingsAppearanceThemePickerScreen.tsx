@@ -1,3 +1,8 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { ThemeDarkIcon } from "../../../../design/components/Icon/native/redesign/generated/ThemeDarkIcon.tsx";
+import { ThemeLightIcon } from "../../../../design/components/Icon/native/redesign/generated/ThemeLightIcon.tsx";
+import { ThemeMidnightIcon } from "../../../../design/components/Icon/native/redesign/generated/ThemeMidnightIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 // discord_app/modules/user_settings/appearance/native/SettingsAppearanceThemePickerScreen.tsx
 import useSegmentedControlState from "useSegmentedControlState";
 import useWindowDimensions from "useWindowDimensions";
@@ -55,8 +60,8 @@ createCacheKey = createCacheKey.createStyles(createCacheKey);
 let items = [, , , ];
 ({ LIGHT: arr[0], DARKER: arr[1], MIDNIGHT: arr[2], DARK: arr[3] } = ThemeTypes);
 let closure_19 = items.map((theme) => {
-  const internal = require("../../../../../discord_common/js/packages/tokens/native.tsx").internal;
-  return internal.resolveSemanticColor(theme, require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.CARD_SECONDARY_BG);
+  const internal = Themes.internal;
+  return internal.resolveSemanticColor(theme, Themes.colors.CARD_SECONDARY_BG);
 });
 let closure_20 = items.map((arg0, arg1) => arg1);
 let obj1 = { flexDirection: "row", gap: require("Themes").space.PX_16 };
@@ -93,22 +98,22 @@ createCacheKey = { color: require("Themes").colors.TEXT_BRAND };
 let closure_36 = createCacheKey.createAnimatedThemedStyles(createCacheKey, items);
 function getSegmentedControlItems() {
   let obj = { label: null, id: null, icon: null, page: null };
-  const intl = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.K2sFfo);
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.K2sFfo);
   obj[1] = ThemeTypes.LIGHT;
-  obj[2] = callback(require("../../../../design/components/Icon/native/redesign/generated/ThemeLightIcon.tsx") /* ThemeLightIcon */.ThemeLightIcon, {});
+  obj[2] = callback(ThemeLightIcon /* ThemeLightIcon */.ThemeLightIcon, {});
   const items = [obj, , ];
   obj = { label: null, id: null, icon: null, page: null };
-  const intl2 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl2.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.b8Cei3);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.b8Cei3);
   obj[1] = ThemeTypes.DARKER;
-  obj[2] = callback(require("../../../../design/components/Icon/native/redesign/generated/ThemeDarkIcon.tsx") /* ThemeDarkIcon */.ThemeDarkIcon, {});
+  obj[2] = callback(ThemeDarkIcon /* ThemeDarkIcon */.ThemeDarkIcon, {});
   items[1] = obj;
   obj = { label: null, id: null, icon: null, page: null };
-  const intl3 = require("../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[0] = intl3.string(require("../../../../intl/index.native.tsx") /* getSystemLocale */.t.pQwSpQ);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.pQwSpQ);
   obj[1] = ThemeTypes.MIDNIGHT;
-  obj[2] = callback(require("../../../../design/components/Icon/native/redesign/generated/ThemeMidnightIcon.tsx") /* ThemeMidnightIcon */.ThemeMidnightIcon, {});
+  obj[2] = callback(ThemeMidnightIcon /* ThemeMidnightIcon */.ThemeMidnightIcon, {});
   items[2] = obj;
   return items;
 }

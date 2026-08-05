@@ -1,3 +1,4 @@
+import { queueTrackingEventMaker } from "AnalyticsTrackingActionCreators.tsx";
 // discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx
 let closure_4 = {};
 let closure_5 = {};
@@ -32,7 +33,7 @@ export const trackMaker = (arg0) => {
   ({ addBreadcrumb: global, analyticEventConfigs: require } = arg0);
   let closure_2;
   ({ dispatcher, TRACK_ACTION_NAME } = arg0);
-  closure_2 = require("AnalyticsTrackingActionCreators.tsx") /* queueTrackingEventMaker */.queueTrackingEventMaker(dispatcher, TRACK_ACTION_NAME);
+  closure_2 = queueTrackingEventMaker /* queueTrackingEventMaker */.queueTrackingEventMaker(dispatcher, TRACK_ACTION_NAME);
   return function track(arg0, arg1) {
     let obj = arg2;
     if (arg2 === undefined) {

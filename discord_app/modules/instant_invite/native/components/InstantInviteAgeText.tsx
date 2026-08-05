@@ -1,3 +1,4 @@
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/instant_invite/native/components/InstantInviteAgeText.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -23,7 +24,7 @@ export default function InstantInviteAgeText(style) {
     canEditInvite = true;
   }
   ({ onEdit: View, source: updateWithLatestInvite } = style);
-  let obj = require("../../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [updateWithLatestInvite];
   const stateFromStores = obj.useStateFromStores(items, () => inviteSettings.getInviteSettings());
   let tmp6Result = null;

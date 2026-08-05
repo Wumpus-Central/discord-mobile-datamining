@@ -1,3 +1,4 @@
+import { getChildMapping } from "TransitionChildMapping.tsx";
 // discord_common/js/packages/transition-group/TransitionGroup.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
@@ -62,11 +63,11 @@ const prototype = TransitionGroup.prototype;
 TransitionGroup["getDerivedStateFromProps"] = function getDerivedStateFromProps(children) {
   let firstRender;
   ({ children, firstRender } = arg1);
-  const childMapping = require("TransitionChildMapping.tsx") /* getChildMapping */.getChildMapping(children.children);
+  const childMapping = getChildMapping /* getChildMapping */.getChildMapping(children.children);
   children = childMapping;
   if (!firstRender) {
-    children = require("TransitionChildMapping.tsx") /* getChildMapping */.mergeChildMappings(children, childMapping);
-    const tmpResult = require("TransitionChildMapping.tsx") /* getChildMapping */;
+    children = getChildMapping /* getChildMapping */.mergeChildMappings(children, childMapping);
+    const tmpResult = getChildMapping /* getChildMapping */;
   }
   return { children, firstRender: false };
 };
@@ -106,7 +107,7 @@ prototype["componentDidUpdate"] = function componentDidUpdate(children, children
       const item1 = _keysToLeave.forEach(self.performLeave, self);
     }
   }
-  let obj = require("TransitionChildMapping.tsx") /* getChildMapping */;
+  let obj = getChildMapping /* getChildMapping */;
   const childMapping = obj.getChildMapping(self.props.children);
   children = children2.children;
   if (self.props.transitionEnter) {
@@ -121,7 +122,7 @@ prototype["componentDidUpdate"] = function componentDidUpdate(children, children
     const items = [];
     _enqueueTransitions(children, childMapping, items);
     let num4 = 0;
-    const tmp3Result = require("TransitionChildMapping.tsx") /* getChildMapping */;
+    const tmp3Result = getChildMapping /* getChildMapping */;
     if (0 < items.length) {
       do {
         let tmp9 = items[num4];
@@ -137,7 +138,7 @@ prototype["componentDidUpdate"] = function componentDidUpdate(children, children
     if (self._keysToLeave.length > 0) {
       self._keysToLeave = [];
     }
-    mergeChildMappingsResult = require("TransitionChildMapping.tsx") /* getChildMapping */.mergeChildMappings(children, childMapping);
+    mergeChildMappingsResult = getChildMapping /* getChildMapping */.mergeChildMappings(children, childMapping);
   }
 };
 prototype["_enqueueTransitions"] = function _enqueueTransitions(children, childMapping, _keysToEnter) {
@@ -195,7 +196,7 @@ prototype["_handleDonePerform"] = function _handleDonePerform(closure_1, _object
   }
   const _currentlyTransitioningKeys = self._currentlyTransitioningKeys;
   _currentlyTransitioningKeys.delete(closure_1);
-  const childMapping = _require("TransitionChildMapping.tsx").getChildMapping(self.props.children);
+  const childMapping = _getChildMapping.getChildMapping(self.props.children);
   if (flag) {
     if (null != childMapping) {
       if (childMapping.hasOwnProperty(closure_1)) {

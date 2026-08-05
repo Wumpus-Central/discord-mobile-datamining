@@ -1,3 +1,6 @@
+import { context } from "../../../guild_themes/native/GuildThemeGuildIdOverrideContext.tsx";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import { context } from "../../../voice_chat/native/VoiceChatModalContext.tsx";
 // discord_app/modules/video_calls/native/components/ChannelCallNavigator.tsx
 import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH";
 import _slicedToArray from "_slicedToArray";
@@ -23,7 +26,7 @@ function CallWithVoiceChat(channel) {
   let tmp = createCacheKey();
   const result = 2 * translateX(1474)().width;
   _require = result;
-  let obj = _require("../../../voice_chat/native/VoiceChatModalContext.tsx");
+  let obj = _context;
   const voiceChatNavigationContext = obj.useVoiceChatNavigationContext();
   translateX = undefined;
   if (voiceChatNavigationContext != null) {
@@ -102,7 +105,7 @@ function CallWithVoiceChat(channel) {
   fn4.__closure = obj;
   fn4.__workletHash = 661145094859;
   fn4.__initData = closure_18;
-  const animatedReaction = _require("../../../reanimated/ReanimatedRexport.tsx").useAnimatedReaction(fn3, fn4);
+  const animatedReaction = _ReanimatedRexport.useAnimatedReaction(fn3, fn4);
   const obj1 = { style: items, children: null };
   items = [tmp.textInVoiceContainer, animatedStyle];
   const obj2 = { style: tmp.voiceContainer, children: null };
@@ -328,5 +331,5 @@ export default function ChannelCallNavigator(channel) {
       return outer1_12(outer1_20, { channel });
     }
   };
-  return closure_12(require("../../../guild_themes/native/GuildThemeGuildIdOverrideContext.tsx").Provider, obj);
+  return closure_12(context.Provider, obj);
 };

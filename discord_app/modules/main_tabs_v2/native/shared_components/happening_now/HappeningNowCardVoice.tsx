@@ -1,3 +1,7 @@
+import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { getNickname } from "../../../../../utils/NicknameUtils.tsx";
+import { apexExperiment } from "../../../../user_affinities/VoiceUserAffinityExperiment.tsx";
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardVoice.tsx
 import importAllResult from "apply";
 import { View } from "apexExperiment";
@@ -16,22 +20,22 @@ function formatVoiceActivityTitle(stateFromStoresArray, guildId) {
   if (0 === stateFromStoresArray.length) {
     return "";
   } else if (1 === length) {
-    return require("../../../../../utils/NicknameUtils.tsx").getName(guildId, null, stateFromStoresArray[0]);
+    return getNickname.getName(guildId, null, stateFromStoresArray[0]);
   } else if (2 === length) {
-    const intl = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     let obj = { user1: null, user2: null };
-    obj[0] = require("../../../../../utils/NicknameUtils.tsx").getName(guildId, null, stateFromStoresArray[0]);
-    const obj2 = require("../../../../../utils/NicknameUtils.tsx");
-    obj[1] = require("../../../../../utils/NicknameUtils.tsx").getName(guildId, null, stateFromStoresArray[1]);
-    return intl.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["4SM/RX"], obj);
+    obj[0] = getNickname.getName(guildId, null, stateFromStoresArray[0]);
+    const obj2 = getNickname;
+    obj[1] = getNickname.getName(guildId, null, stateFromStoresArray[1]);
+    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["4SM/RX"], obj);
   } else {
-    const intl2 = require("../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
     obj = { user1: null, user2: null, extras: null };
-    obj[0] = require("../../../../../utils/NicknameUtils.tsx").getName(guildId, null, stateFromStoresArray[0]);
-    const obj6 = require("../../../../../utils/NicknameUtils.tsx");
-    obj[1] = require("../../../../../utils/NicknameUtils.tsx").getName(guildId, null, stateFromStoresArray[1]);
+    obj[0] = getNickname.getName(guildId, null, stateFromStoresArray[0]);
+    const obj6 = getNickname;
+    obj[1] = getNickname.getName(guildId, null, stateFromStoresArray[1]);
     obj[2] = stateFromStoresArray.length - 2;
-    return intl2.formatToPlainString(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t.pjxkCI, obj);
+    return intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.pjxkCI, obj);
   }
 }
 let c3 = importAllResult;
@@ -130,11 +134,11 @@ const result = require("recomputeAffinities").fileFinishedImporting("modules/mai
 export default memoResult;
 export const useVoiceChannelUsers = function useVoiceChannelUsers(channelId) {
   const _require = channelId;
-  const voiceUserAffinitySortType = _require("../../../../user_affinities/VoiceUserAffinityExperiment.tsx").useVoiceUserAffinitySortType("useVoiceChannelUsers");
-  const obj = _require("../../../../user_affinities/VoiceUserAffinityExperiment.tsx");
+  const voiceUserAffinitySortType = _apexExperiment.useVoiceUserAffinitySortType("useVoiceChannelUsers");
+  const obj = _apexExperiment;
   const items = [updateVoiceState, mergeGuildAvatar, recomputeAffinities];
   const items1 = [voiceUserAffinitySortType, channelId.channelId];
-  return _require("../../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
+  return _initialize.useStateFromStoresArray(items, () => {
     const voiceStatesForChannel = outer1_7.getVoiceStatesForChannel(voiceState.channelId);
     const mapped = voiceUserAffinitySortType(voiceState[19])(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
     const found = mapped.filter(voiceState(voiceState[20]).isNotNullish);

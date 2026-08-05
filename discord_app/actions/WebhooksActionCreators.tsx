@@ -1,3 +1,6 @@
+import { apply } from "../../_runtime/00012_apply.js";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
 // discord_app/actions/WebhooksActionCreators.tsx
 import ME from "ME";
 
@@ -10,14 +13,14 @@ const result = require("sendRequest").fileFinishedImporting("actions/WebhooksAct
 export default {
   fetchForGuild(guildId) {
     const _require = guildId;
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "WEBHOOKS_FETCHING", guildId };
     obj.dispatch(obj);
-    const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     obj = { url: closure_4.GUILD_WEBHOOKS(guildId), oldFormErrors: true, rejectWithError: null };
-    obj[2] = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    obj[2] = _sendRequest.rejectWithMigratedError();
     const value = HTTP.get(obj);
-    const obj4 = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+    const obj4 = _sendRequest;
     value.then((body) => {
       let obj = outer1_1(outer1_2[1]);
       obj = { type: "WEBHOOKS_UPDATE", guildId: closure_0, webhooks: body.body };
@@ -31,10 +34,10 @@ export default {
   fetchForChannel(guildId, channelId) {
     const _require = guildId;
     const importDefault = channelId;
-    let obj = require("../Dispatcher.tsx");
+    let obj = dispatcher;
     obj = { type: "WEBHOOKS_FETCHING", guildId, channelId };
     obj.dispatch(obj);
-    const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     obj = { url: closure_4.CHANNEL_WEBHOOKS(channelId), oldFormErrors: true, rejectWithError: true };
     const value = HTTP.get(obj);
     value.then((body) => {
@@ -51,13 +54,13 @@ export default {
     const _require = arg0;
     let tmp = arg2;
     if (null == arg2) {
-      let obj = require("../../_runtime/00012_apply.js");
+      let obj = apply;
       tmp = length[obj.random(obj, 0, length.length - 1)];
     }
-    const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     obj = { url: closure_4.CHANNEL_WEBHOOKS(channelId), body: { name: tmp }, oldFormErrors: true, rejectWithError: null };
-    obj[3] = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
-    let obj3 = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+    obj[3] = _sendRequest.rejectWithMigratedError();
+    let obj3 = _sendRequest;
     const postResult = HTTP.post(obj);
     return HTTP.post(obj).then((body) => {
       body = body.body;
@@ -101,10 +104,10 @@ export default {
   delete(arg0, arg1) {
     const _require = arg0;
     let closure_1 = arg1;
-    const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     let obj = { url: closure_4.WEBHOOK(arg1), oldFormErrors: true, rejectWithError: null };
-    obj[2] = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
-    const obj2 = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+    obj[2] = _sendRequest.rejectWithMigratedError();
+    const obj2 = _sendRequest;
     return HTTP.del(obj).then(() => {
       let obj = callback(outer1_2[1]);
       obj = { type: "WEBHOOK_DELETE", guildId: closure_0, webhookId: callback };
@@ -113,10 +116,10 @@ export default {
   },
   update(arg0, arg1, body) {
     const _require = arg0;
-    const HTTP = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     let obj = { url: closure_4.WEBHOOK(arg1), body, oldFormErrors: true, rejectWithError: null };
-    obj[3] = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
-    const obj2 = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx");
+    obj[3] = _sendRequest.rejectWithMigratedError();
+    const obj2 = _sendRequest;
     return HTTP.patch(obj).then((body) => {
       body = body.body;
       let obj = outer1_1(outer1_2[1]);

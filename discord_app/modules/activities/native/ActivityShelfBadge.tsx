@@ -1,3 +1,4 @@
+import { PermissionOverwriteType } from "../../../flow/Server.tsx";
 // discord_app/modules/activities/native/ActivityShelfBadge.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -26,7 +27,7 @@ export default function ActivityShelfBadge(arg0) {
   if (replacementStyles == null) {
     replacementStyles = tmp.badge;
   }
-  if (labelType === require("../../../flow/Server.tsx") /* PermissionOverwriteType */.EmbeddedActivityLabelTypes.NEW) {
+  if (labelType === PermissionOverwriteType /* PermissionOverwriteType */.EmbeddedActivityLabelTypes.NEW) {
     let obj = { style: null, children: null };
     const items = [replacementStyles, , ];
     ({ newBadge: arr[1], elevationShadow: arr[2] } = tmp);

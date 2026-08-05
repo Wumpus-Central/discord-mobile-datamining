@@ -1,3 +1,7 @@
+import { registerAsset } from "../../../../_runtime/09940_registerAsset.js";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/notification_center/native/ForYouUnreadClearedState.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -23,19 +27,19 @@ export const ForYouUnreadClearedState = function ForYouUnreadClearedState() {
   obj = { style: tmp.imageContainer };
   const items = [callback(View, obj), , ];
   obj = { source: null, style: null, color: null };
-  obj[0] = require("../../../../_runtime/09940_registerAsset.js");
+  obj[0] = registerAsset;
   obj[1] = tmp.icon;
   obj[2] = tmp.icon.color;
-  items[1] = callback(require("../../../design/void/native.tsx") /* Button */.Icon, obj);
+  items[1] = callback(Button /* Button */.Icon, obj);
   const obj1 = { children: null };
   const obj2 = { color: "mobile-text-heading-primary", variant: "text-md/semibold", style: tmp.headerText, children: null };
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj2[3] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.DonStq);
-  const items1 = [callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj2), ];
+  const intl = getSystemLocale /* getSystemLocale */.intl;
+  obj2[3] = intl.string(getSystemLocale /* getSystemLocale */.t.DonStq);
+  const items1 = [callback(Text /* Text */.Text, obj2), ];
   const obj3 = { color: "text-default", variant: "text-md/medium", children: null };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj3[2] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.jXFsai);
-  items1[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj3);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj3[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.jXFsai);
+  items1[1] = callback(Text /* Text */.Text, obj3);
   obj1[0] = items1;
   items[2] = callback2(View, obj1);
   obj[1] = items;

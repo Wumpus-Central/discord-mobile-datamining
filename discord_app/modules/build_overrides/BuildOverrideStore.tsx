@@ -1,3 +1,4 @@
+import { Version } from "BuildOverrideUtils.tsx";
 // discord_app/modules/build_overrides/BuildOverrideStore.tsx
 import { Store } from "initialize";
 
@@ -12,7 +13,7 @@ const prototype = BuildOverrideStore.prototype;
 prototype["getCurrentBuildOverride"] = function getCurrentBuildOverride() {
   if (Resolving === obj.NotResolved) {
     Resolving = obj.Resolving;
-    obj = require("BuildOverrideUtils.tsx") /* Version */;
+    obj = Version /* Version */;
     const buildOverride = obj.getBuildOverride();
     buildOverride.then((overrides) => {
       let obj = callback(table[1]);
@@ -26,7 +27,7 @@ prototype["getCurrentBuildOverride"] = function getCurrentBuildOverride() {
 prototype["getBuildOverride"] = function getBuildOverride(target) {
   const _require = target;
   if (!(target in obj1)) {
-    let obj = _require("BuildOverrideUtils.tsx");
+    let obj = _Version;
     const validateURLResult = obj.validateURL(target);
     if (null != validateURLResult) {
       obj = {};

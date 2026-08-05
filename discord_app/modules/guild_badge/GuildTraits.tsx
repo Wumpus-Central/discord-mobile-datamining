@@ -1,3 +1,4 @@
+import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
 // discord_app/modules/guild_badge/GuildTraits.tsx
 import ME from "ME";
 
@@ -18,12 +19,12 @@ export const getGuildTraits = function getGuildTraits(fromGuildProfileResult) {
     if (null == fromGuildProfileResult) {
       let num3 = 0;
       if (tmp5) {
-        let num4 = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */.isGuildRecord(fromGuildProfileResult) ? fromGuildProfileResult.premiumSubscriberCount : fromGuildProfileResult.premiumSubscriptionCount;
+        let num4 = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */.isGuildRecord(fromGuildProfileResult) ? fromGuildProfileResult.premiumSubscriberCount : fromGuildProfileResult.premiumSubscriptionCount;
         if (num4 == null) {
           num4 = 0;
         }
         num3 = num4;
-        const obj3 = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
+        const obj3 = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
       }
       if (obj4.isGuildRecord(fromGuildProfileResult)) {
         let NONE = fromGuildProfileResult.premiumTier;
@@ -53,7 +54,7 @@ export const getGuildTraits = function getGuildTraits(fromGuildProfileResult) {
           tmp8 = fromGuildProfileResult.premiumSubscriptionCount > 0;
         }
       }
-      obj2 = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
+      obj2 = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
     }
   }
   if (tmp3) {
@@ -78,7 +79,7 @@ export const isPremiumGuild = function isPremiumGuild(has) {
         tmp4 = premiumTier.premiumSubscriptionCount > 0;
       }
     }
-    obj = require("../../utils/GuildRecordUtils.tsx") /* fromGuildPropertiesWithAdditionalFields */;
+    obj = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
   }
 };
 export const isDiscoverableGuild = function isDiscoverableGuild(features) {

@@ -1,3 +1,7 @@
+import { v1 } from "../../../_runtime/00514_v1.js";
+import { getSystemLocale } from "../../intl/index.native.tsx";
+import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
+import { prototype } from "GlobalDiscoveryServersFeaturedSearchManager.tsx";
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx
 import getSystemLocale from "getSystemLocale";
 import _getSystemLocale from "_getSystemLocale";
@@ -129,50 +133,50 @@ const result = require("map").fileFinishedImporting("modules/global_discovery_se
 
 export const getGlobalDiscoveryServersTabTitle = function getGlobalDiscoveryServersTabTitle(arg0) {
   if (constants.FEATURED === arg0) {
-    const intl7 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl7.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["RU+DCe"]);
+    const intl7 = getSystemLocale /* getSystemLocale */.intl;
+    return intl7.string(getSystemLocale /* getSystemLocale */.t["RU+DCe"]);
   } else if (tmp.GAMING === arg0) {
-    const intl6 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl6.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["CD/USA"]);
+    const intl6 = getSystemLocale /* getSystemLocale */.intl;
+    return intl6.string(getSystemLocale /* getSystemLocale */.t["CD/USA"]);
   } else if (tmp.MUSIC === arg0) {
-    const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl5.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["nt9PL+"]);
+    const intl5 = getSystemLocale /* getSystemLocale */.intl;
+    return intl5.string(getSystemLocale /* getSystemLocale */.t["nt9PL+"]);
   } else if (tmp.ENTERTAINMENT === arg0) {
-    const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.gSbmdt);
+    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    return intl4.string(getSystemLocale /* getSystemLocale */.t.gSbmdt);
   } else if (tmp.TECH === arg0) {
-    const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["0A0By5"]);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    return intl3.string(getSystemLocale /* getSystemLocale */.t["0A0By5"]);
   } else if (tmp.EDUCATION === arg0) {
-    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Gy9woq);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    return intl2.string(getSystemLocale /* getSystemLocale */.t.Gy9woq);
   } else if (tmp.HUBS === arg0) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["q469/Z"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["q469/Z"]);
   }
 };
 export const getGlobalDiscoveryServersBannerTitle = function getGlobalDiscoveryServersBannerTitle(arg0) {
   if (constants.FEATURED === arg0) {
-    const intl7 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl7.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.OlDfzP);
+    const intl7 = getSystemLocale /* getSystemLocale */.intl;
+    return intl7.string(getSystemLocale /* getSystemLocale */.t.OlDfzP);
   } else if (tmp.GAMING === arg0) {
-    const intl6 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl6.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["CD/USA"]);
+    const intl6 = getSystemLocale /* getSystemLocale */.intl;
+    return intl6.string(getSystemLocale /* getSystemLocale */.t["CD/USA"]);
   } else if (tmp.MUSIC === arg0) {
-    const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl5.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["nt9PL+"]);
+    const intl5 = getSystemLocale /* getSystemLocale */.intl;
+    return intl5.string(getSystemLocale /* getSystemLocale */.t["nt9PL+"]);
   } else if (tmp.ENTERTAINMENT === arg0) {
-    const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.gSbmdt);
+    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    return intl4.string(getSystemLocale /* getSystemLocale */.t.gSbmdt);
   } else if (tmp.TECH === arg0) {
-    const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["0A0By5"]);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    return intl3.string(getSystemLocale /* getSystemLocale */.t["0A0By5"]);
   } else if (tmp.EDUCATION === arg0) {
-    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Gy9woq);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    return intl2.string(getSystemLocale /* getSystemLocale */.t.Gy9woq);
   } else if (tmp.HUBS === arg0) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.X5xPlb);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.X5xPlb);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -182,26 +186,26 @@ export const getGlobalDiscoveryServersBannerTitle = function getGlobalDiscoveryS
 };
 export const getGlobalDiscoveryServersBannerDescription = function getGlobalDiscoveryServersBannerDescription(arg0) {
   if (constants.FEATURED === arg0) {
-    const intl7 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl7.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.SdMhrk);
+    const intl7 = getSystemLocale /* getSystemLocale */.intl;
+    return intl7.string(getSystemLocale /* getSystemLocale */.t.SdMhrk);
   } else if (tmp.GAMING === arg0) {
-    const intl6 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl6.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.AAJ5ov);
+    const intl6 = getSystemLocale /* getSystemLocale */.intl;
+    return intl6.string(getSystemLocale /* getSystemLocale */.t.AAJ5ov);
   } else if (tmp.MUSIC === arg0) {
-    const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl5.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["SOio+D"]);
+    const intl5 = getSystemLocale /* getSystemLocale */.intl;
+    return intl5.string(getSystemLocale /* getSystemLocale */.t["SOio+D"]);
   } else if (tmp.ENTERTAINMENT === arg0) {
-    const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.R09vf0);
+    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    return intl4.string(getSystemLocale /* getSystemLocale */.t.R09vf0);
   } else if (tmp.TECH === arg0) {
-    const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.Ew4d56);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    return intl3.string(getSystemLocale /* getSystemLocale */.t.Ew4d56);
   } else if (tmp.EDUCATION === arg0) {
-    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.sasIWU);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    return intl2.string(getSystemLocale /* getSystemLocale */.t.sasIWU);
   } else if (tmp.HUBS === arg0) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["F/IQCI"]);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t["F/IQCI"]);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -211,23 +215,23 @@ export const getGlobalDiscoveryServersBannerDescription = function getGlobalDisc
 };
 export const getGlobalDiscoveryServersTabSectionTitle = function getGlobalDiscoveryServersTabSectionTitle(arg0) {
   if (constants.FEATURED === arg0) {
-    const intl6 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl6.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.crt84X);
+    const intl6 = getSystemLocale /* getSystemLocale */.intl;
+    return intl6.string(getSystemLocale /* getSystemLocale */.t.crt84X);
   } else if (tmp.GAMING === arg0) {
-    const intl5 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl5.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.fWbIpf);
+    const intl5 = getSystemLocale /* getSystemLocale */.intl;
+    return intl5.string(getSystemLocale /* getSystemLocale */.t.fWbIpf);
   } else if (tmp.MUSIC === arg0) {
-    const intl4 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl4.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.nfgDzz);
+    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    return intl4.string(getSystemLocale /* getSystemLocale */.t.nfgDzz);
   } else if (tmp.ENTERTAINMENT === arg0) {
-    const intl3 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl3.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.k1CYxv);
+    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    return intl3.string(getSystemLocale /* getSystemLocale */.t.k1CYxv);
   } else if (tmp.TECH === arg0) {
-    const intl2 = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl2.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t["4dawps"]);
+    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    return intl2.string(getSystemLocale /* getSystemLocale */.t["4dawps"]);
   } else if (tmp.EDUCATION === arg0) {
-    const intl = require("../../intl/index.native.tsx") /* getSystemLocale */.intl;
-    return intl.string(require("../../intl/index.native.tsx") /* getSystemLocale */.t.uexPgT);
+    const intl = getSystemLocale /* getSystemLocale */.intl;
+    return intl.string(getSystemLocale /* getSystemLocale */.t.uexPgT);
   } else {
     return null;
   }
@@ -248,7 +252,7 @@ export const getCategoryIdFromServerTab = function getCategoryIdFromServerTab(ar
   } else if (tmp.HUBS === arg0) {
     return closure_13;
   } else {
-    require("../../utils/GlobalUtils.tsx") /* isDiscordFrontendDevelopment */.assertNever(arg0);
+    isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.assertNever(arg0);
   }
 };
 export const isStaleFeaturedGuilds = function isStaleFeaturedGuilds(outer1_2) {
@@ -305,8 +309,8 @@ export const handleTabPressPrefetch = function handleTabPressPrefetch() {
   let isInitialFetchComplete = store.getIsInitialFetchComplete(closure_9);
   if (!isInitialFetchComplete) {
     if (!isFetching) {
-      const featuredGuilds = require("GlobalDiscoveryServersFeaturedSearchManager.tsx").fetchFeaturedGuilds();
-      const obj = require("GlobalDiscoveryServersFeaturedSearchManager.tsx");
+      const featuredGuilds = prototype.fetchFeaturedGuilds();
+      const obj = prototype;
     }
   }
   if (isInitialFetchComplete) {
@@ -316,11 +320,11 @@ export const handleTabPressPrefetch = function handleTabPressPrefetch() {
     isInitialFetchComplete = null != error;
   }
   if (isInitialFetchComplete) {
-    const featuredGuilds1 = require("GlobalDiscoveryServersFeaturedSearchManager.tsx").fetchFeaturedGuilds({ forceRefresh: true });
-    const obj2 = require("GlobalDiscoveryServersFeaturedSearchManager.tsx");
+    const featuredGuilds1 = prototype.fetchFeaturedGuilds({ forceRefresh: true });
+    const obj2 = prototype;
   }
 };
 export const makeAnalyticsID = function makeAnalyticsID() {
-  const obj = require("../../../_runtime/00514_v1.js") /* v1 */;
-  return require("../../../_runtime/00514_v1.js") /* v1 */.v4().replace(/-/g, "");
+  const obj = v1 /* v1 */;
+  return v1 /* v1 */.v4().replace(/-/g, "");
 };

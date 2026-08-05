@@ -1,3 +1,8 @@
+import { encodeProperties } from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import { dispatcher } from "../Dispatcher.tsx";
+import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
+import { TrackedHTTPUtils } from "../utils/TrackedHTTPUtils.tsx";
 // discord_app/actions/SurveyActionCreators.tsx
 import fetchSurveyIfNeeded from "fetchSurveyIfNeeded";
 import { SURVEY_REFETCH_INTERVAL } from "fetchSurveyIfNeeded";
@@ -11,15 +16,15 @@ const require = arg1;
 const result = require("dispatcher").fileFinishedImporting("actions/SurveyActionCreators.tsx");
 
 export const overrideSurvey = function overrideSurvey(id) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "SURVEY_OVERRIDE", id };
   obj.dispatch(obj);
 };
 export const surveyHide = function surveyHide(key, arg1) {
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "SURVEY_HIDE", key };
   obj.dispatch(obj);
-  const track = require("../utils/AnalyticsUtils.tsx").track;
+  const track = expandEventProperties.track;
   if (arg1) {
     obj = { notice_type: null, survey_id: null, dismissed: null };
     obj[0] = constants.SURVEY;
@@ -42,7 +47,7 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
   }
   obj = { url: closure_7.USER_SURVEY, query: obj, trackedActionData: null, rejectWithError: null };
   obj = {
-    event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx") /* encodeProperties */.NetworkActionNames.USER_SURVEY_FETCH,
+    event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_SURVEY_FETCH,
     properties(body) {
       let survey;
       if (body != null) {
@@ -59,8 +64,8 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
     }
   };
   obj[2] = obj;
-  const obj2 = require("../utils/TrackedHTTPUtils.tsx");
-  obj[3] = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx") /* sendRequest */.rejectWithMigratedError();
+  const obj2 = TrackedHTTPUtils;
+  obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
   const value = obj2.get(obj);
   return value.then((body) => {
     let survey;
@@ -91,13 +96,13 @@ export const surveySeen = function surveySeen(key) {
       const _Date = Date;
     }
   }
-  let obj = require("../Dispatcher.tsx");
+  let obj = dispatcher;
   obj = { type: "SURVEY_SEEN", key };
   obj.dispatch(obj);
   obj = { url: closure_7.USER_SURVEY_SEEN(key), trackedActionData: null, rejectWithError: null };
-  const obj3 = require("../utils/TrackedHTTPUtils.tsx");
+  const obj3 = TrackedHTTPUtils;
   obj[1] = {
-    event: _require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").NetworkActionNames.USER_SURVEY_SEEN,
+    event: _encodeProperties.NetworkActionNames.USER_SURVEY_SEEN,
     properties() {
       let obj = key(outer1_2[6]);
       obj = { key };
@@ -105,13 +110,13 @@ export const surveySeen = function surveySeen(key) {
     }
   };
   const obj1 = {
-    event: _require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").NetworkActionNames.USER_SURVEY_SEEN,
+    event: _encodeProperties.NetworkActionNames.USER_SURVEY_SEEN,
     properties() {
       let obj = key(outer1_2[6]);
       obj = { key };
       return obj.exact(obj);
     }
   };
-  obj[2] = _require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+  obj[2] = _sendRequest.rejectWithMigratedError();
   return obj3.post(obj);
 };

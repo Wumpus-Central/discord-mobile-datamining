@@ -1,3 +1,4 @@
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 // discord_app/modules/guild_settings/GuildRoleMemberActionCreators.tsx
 import priv from "priv";
 import getRoleMemberCount from "getRoleMemberCount";
@@ -159,9 +160,9 @@ export const requestMembersForRole = function requestMembersForRole(closure_0, c
   }
   const result = tmp2.set(combined, true);
   const _require = closure_0;
-  const HTTP = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+  const HTTP = _sendRequest.HTTP;
   const obj = { url: Endpoints.GUILD_ROLE_MEMBER_IDS(closure_0, callback), rejectWithError: null };
-  obj[1] = _require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+  obj[1] = _sendRequest.rejectWithMigratedError();
   const value = HTTP.get(obj);
   resolved = value.then((body) => {
     const membersById = outer1_1(outer1_2[6]).requestMembersById(closure_0, body.body, false);

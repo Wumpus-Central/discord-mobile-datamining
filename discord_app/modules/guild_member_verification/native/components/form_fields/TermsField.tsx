@@ -1,3 +1,6 @@
+import { TableCheckboxRow } from "../../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import { TermsFieldListItem } from "TermsFieldList.tsx";
 // discord_app/modules/guild_member_verification/native/components/form_fields/TermsField.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -18,15 +21,15 @@ export default function TermsField(field) {
   ({ onChange, rulesChannelId } = field);
   let flag = field.response;
   let obj = { style: callback2().container, children: null };
-  const items = [callback(require("TermsFieldList.tsx"), { rules: field.values, rulesChannelId }), ];
+  const items = [callback(TermsFieldListItem, { rules: field.values, rulesChannelId }), ];
   if (flag == null) {
     flag = false;
   }
   obj = { start: true, end: true, checked: flag, label: null, onPress: null };
   const intl = tmp5(1236).intl;
-  obj[3] = intl.string(require("../../../../../intl/index.native.tsx") /* getSystemLocale */.t["2EXfGJ"]);
+  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["2EXfGJ"]);
   obj[4] = onChange;
-  items[1] = callback(require("../../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx") /* TableCheckboxRow */.TableCheckboxRow, obj);
+  items[1] = callback(TableCheckboxRow /* TableCheckboxRow */.TableCheckboxRow, obj);
   obj[1] = items;
   return closure_5(View, obj);
 };

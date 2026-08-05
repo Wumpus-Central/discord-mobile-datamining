@@ -1,3 +1,6 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { useFocusRefOnNavigation } from "../../../../design/components/Navigator/native/useFocusRefOnNavigation.tsx";
+import { NameValidationState } from "../../../unique_usernames/UniqueUsernamesTypes.tsx";
 // discord_app/modules/auth/native/components/RegisterUsernameInput.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
@@ -25,10 +28,10 @@ function UsernameStatusMessage(arg0) {
   if (usernameStatus != null) {
     type = usernameStatus.type;
   }
-  if (type === require("../../../unique_usernames/UniqueUsernamesTypes.tsx") /* NameValidationState */.NameValidationState.ERROR) {
+  if (type === NameValidationState /* NameValidationState */.NameValidationState.ERROR) {
     let obj = { direction: "horizontal", spacing: 4, align: "flex-start", children: null };
     obj = { size: "xs", color: null };
-    obj[1] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_FEEDBACK_CRITICAL;
+    obj[1] = Themes.colors.TEXT_FEEDBACK_CRITICAL;
     const items = [callback3(tmp3(7716).CircleErrorIcon, obj), ];
     const obj1 = { variant: "text-xs/medium", color: "text-feedback-critical", style: null };
     obj1[2] = tmp.status;
@@ -104,7 +107,7 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
     autoFocus = false;
   }
   obj[1] = autoFocus;
-  require("../../../../design/components/Navigator/native/useFocusRefOnNavigation.tsx")(obj);
+  useFocusRefOnNavigation(obj);
   const tmp5 = callback(obj.useState(true), 2);
   importDefault = tmp6;
   const tmp7 = callback2((errors) => errors.errors);
@@ -134,7 +137,7 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
   const tmp11 = closure_10;
   const tmp12 = closure_11;
   const tmp14 = setUsername;
-  const tmp3 = require("../../../../design/components/Navigator/native/useFocusRefOnNavigation.tsx");
+  const tmp3 = useFocusRefOnNavigation;
   obj[5] = setUsername(500).isAndroid();
   const obj4 = setUsername(500);
   let str = "default";

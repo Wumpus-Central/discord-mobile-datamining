@@ -1,3 +1,4 @@
+import { apply } from "../../_runtime/00012_apply.js";
 // discord_app/stores/ConnectedAppsStore.tsx
 import { Store } from "initialize";
 
@@ -20,7 +21,7 @@ prototype["isChildConnected"] = function isChildConnected(arg0) {
 };
 Object.defineProperty(prototype, "connections", {
   get: function connections() {
-    return require("../../_runtime/00012_apply.js").values(closure_2);
+    return apply.values(closure_2);
   },
   set: undefined
 });

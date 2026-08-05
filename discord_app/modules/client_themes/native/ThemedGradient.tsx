@@ -1,3 +1,11 @@
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
+import { useTheme } from "../../../hooks/useTheme.tsx";
+import { hslToRgb } from "../../../utils/Color.tsx";
+import { set } from "../../guild_themes/GuildThemePresets.tsx";
+import { getGuildIdFromNavigationState } from "../../guild_themes/native/useRoutedActiveGuildTheme.tsx";
+import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
 // discord_app/modules/client_themes/native/ThemedGradient.tsx
 import ClientThemeType from "ClientThemeType";
 import { View } from "getGuildIdFromNavigationState";
@@ -33,7 +41,7 @@ function getMixedGradientColor(mixColorOverride) {
     num = 0.8;
   }
   if (null == mixColorOverride) {
-    const isThemeDarkResult = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */.isThemeDark(theme2);
+    const isThemeDarkResult = AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(theme2);
     if (isThemeDarkResult) {
       num = darkFallbackOpacity;
     }
@@ -45,8 +53,8 @@ function getMixedGradientColor(mixColorOverride) {
     if (isThemeDarkResult) {
       num2 = 0;
     }
-    mixColorOverride = new require("../../../utils/Color.tsx")(num2, num2, num2, tmp4);
-    const obj3 = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+    mixColorOverride = new hslToRgb(num2, num2, num2, tmp4);
+    const obj3 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   }
   obj = { mixAmount, theme };
   let mixAmount1 = obj.mixAmount;
@@ -70,12 +78,12 @@ function getMixedGradientColor(mixColorOverride) {
     num3 = 1 - mixAmount1.light;
   }
   let tmp12Result = tmp12(4129);
-  obj6 = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
+  obj6 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
   ({ r, g, b } = tmp12Result.hexToRgb(mixColorOverride.color));
   tmp12Result = tmp12(4129);
   const hexToRgbResult = tmp12Result.hexToRgb(mixColorOverride.color);
-  const tmp15 = new require("../../../utils/Color.tsx")(r, g, b, num3);
-  return tmp12Result.mixColors(mixColorOverride, new require("../../../utils/Color.tsx")(r, g, b, num3)).toHexString();
+  const tmp15 = new hslToRgb(r, g, b, num3);
+  return tmp12Result.mixColors(mixColorOverride, new hslToRgb(r, g, b, num3)).toHexString();
 }
 function GradientBase(angleCenter) {
   let absolute;
@@ -93,9 +101,9 @@ function GradientBase(angleCenter) {
   }
   ({ absolute, wide, tall } = angleCenter);
   const tmp = callback3();
-  ({ width, height } = require("../../screen/useWindowDimensions.native.tsx")());
+  ({ width, height } = useWindowDimensions());
   let obj = { colors, locations, angle, angleCenter, useAngle: true, style: null };
-  const tmp2 = require("../../screen/useWindowDimensions.native.tsx")();
+  const tmp2 = useWindowDimensions();
   const tmp3 = closure_6;
   if (wide) {
     obj = { width: null };
@@ -116,7 +124,7 @@ function GradientBase(angleCenter) {
   items[3] = absolute;
   items[4] = angleCenter.componentStyles;
   obj[5] = items;
-  return tmp3(require("../../../../_runtime/04706_LinearGradient.js"), obj);
+  return tmp3(LinearGradient, obj);
 }
 class Gradient {
   constructor(arg0) {
@@ -409,7 +417,7 @@ function ActiveGuildThemeGradient(arg0) {
     let obj = {};
     const merged1 = Object.assign(merged);
     const items = [];
-    HermesBuiltin.arraySpread(require("../../guild_themes/GuildThemePresets.tsx") /* set */.getSingleColorGuildThemeGradientColors(customUserThemeSettings.colors[0], theme), 0);
+    HermesBuiltin.arraySpread(set /* set */.getSingleColorGuildThemeGradientColors(customUserThemeSettings.colors[0], theme), 0);
     obj.colors = items;
     obj.gradientColorStops = [];
     let num2 = customUserThemeSettings.gradientAngle;
@@ -419,7 +427,7 @@ function ActiveGuildThemeGradient(arg0) {
     obj.gradientAngle = num2;
     let GUILD_THEME_DEFAULT_BASE_MIX = customUserThemeSettings.baseMix;
     if (GUILD_THEME_DEFAULT_BASE_MIX == null) {
-      GUILD_THEME_DEFAULT_BASE_MIX = require("../../guild_themes/GuildThemePresets.tsx") /* set */.GUILD_THEME_DEFAULT_BASE_MIX;
+      GUILD_THEME_DEFAULT_BASE_MIX = set /* set */.GUILD_THEME_DEFAULT_BASE_MIX;
     }
     obj.baseMix = GUILD_THEME_DEFAULT_BASE_MIX;
     obj.theme = theme;
@@ -446,16 +454,16 @@ export default function ThemedGradient(overlayOpacity) {
   const gradientOverride = overlayOpacity.gradientOverride;
   const merged = Object.assign(overlayOpacity, Object.create(null));
   const tmp2 = callback3();
-  let obj = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
-  const tmp5 = require("../../../hooks/useTheme.tsx")();
-  const unsafe_rawColors = require("../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
-  const tmp8 = obj.isThemeDark(require("../../../hooks/useTheme.tsx")()) ? unsafe_rawColors.BLACK : unsafe_rawColors.WHITE;
+  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const tmp5 = useTheme();
+  const unsafe_rawColors = Themes.unsafe_rawColors;
+  const tmp8 = obj.isThemeDark(useTheme()) ? unsafe_rawColors.BLACK : unsafe_rawColors.WHITE;
   const withOverlay = merged.withOverlay;
-  const isThemeDarkResult = obj.isThemeDark(require("../../../hooks/useTheme.tsx")());
+  const isThemeDarkResult = obj.isThemeDark(useTheme());
   let tmp6Result = tmp6(647);
   const items = [isSyncedModeThemesEnabled];
   const preset = tmp6Result.useStateFromStoresObject(items, () => ({ preset: gradientPreset.gradientPreset })).preset;
-  const tmp10 = require("../../guild_themes/native/useRoutedActiveGuildTheme.tsx")();
+  const tmp10 = getGuildIdFromNavigationState();
   tmp6Result = tmp6(4220);
   const customThemeDisplaySettings = tmp6Result.useCustomThemeDisplaySettings();
   if (null != gradientOverride) {
@@ -613,12 +621,12 @@ export const CustomThemedGradient = function CustomThemedGradient(overlayOpacity
   const customTheme = overlayOpacity.customTheme;
   const merged = Object.assign(overlayOpacity, Object.create(null));
   const tmp2 = callback3();
-  let obj = require("../../../design/shared.tsx") /* AccessibilityAnnouncer */;
-  const tmp4 = require("../../../hooks/useTheme.tsx")();
+  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const tmp4 = useTheme();
   const tmp5 = require;
-  const unsafe_rawColors = require("../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors;
+  const unsafe_rawColors = Themes.unsafe_rawColors;
   obj = {};
-  const isThemeDarkResult = obj.isThemeDark(require("../../../hooks/useTheme.tsx")());
+  const isThemeDarkResult = obj.isThemeDark(useTheme());
   const merged1 = Object.assign(merged);
   const merged2 = Object.assign(customTheme.customThemeSettings);
   obj.theme = customTheme.theme;

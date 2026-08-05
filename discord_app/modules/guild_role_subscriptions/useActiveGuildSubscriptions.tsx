@@ -1,3 +1,4 @@
+import { useUserRoleSubscriptionRelationship } from "useUserRoleSubscriptionRelationship.tsx";
 // discord_app/modules/guild_role_subscriptions/useActiveGuildSubscriptions.tsx
 import noop from "noop";
 import reset from "reset";
@@ -18,7 +19,7 @@ export default function useActiveGuildSubscriptions() {
   }
   let importDefault;
   let closure_2;
-  const tmp = require("useUserRoleSubscriptionRelationship.tsx")() === constants.SUBSCRIBED;
+  const tmp = useUserRoleSubscriptionRelationship() === constants.SUBSCRIBED;
   importDefault = tmp;
   const items = [reset];
   let stateFromStores = flag(589).useStateFromStores(items, () => activeGuildSubscriptions.getActiveGuildSubscriptions());

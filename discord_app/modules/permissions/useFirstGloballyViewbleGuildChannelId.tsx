@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/permissions/useFirstGloballyViewbleGuildChannelId.tsx
 import comparator from "comparator";
 import { Permissions } from "sum";
@@ -9,7 +10,7 @@ export const useFirstGloballyViewbleGuildChannelId = function useFirstGloballyVi
   const _require = guildId;
   const items = [comparator];
   const items1 = [guildId];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     if (null != closure_0) {
       const selectableChannels = outer1_3.getSelectableChannels(tmp);
       for (const item10010 of selectableChannels) {

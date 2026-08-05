@@ -1,3 +1,7 @@
+import { preload } from "../../../../components_native/common/FastImage.tsx";
+import { redactionSettingToRenderedString } from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
+import { getForumPostShouldObscure } from "../../../messages/MessageAttachmentUtils.tsx";
+import { explicitContentFromProto } from "../../../user_settings/UserSettings.tsx";
 // discord_app/modules/forums/native/posts/ForumPostMedia.tsx
 import _slicedToArray from "_slicedToArray";
 import AccessibilityAnnouncer from "AccessibilityAnnouncer";
@@ -33,7 +37,7 @@ function ForumPostMediaIOS(arg0) {
   let source;
   const obj = { children: null };
   ({ shouldSpoiler, blurTheme, source, iosStyle } = arg0);
-  const items = [callback2(require("../../../../components_native/common/FastImage.tsx"), { style: iosStyle, source, resizeMode: "cover" }), callback2(ForumPostMediaSpoiler, { shouldSpoiler, blurTheme })];
+  const items = [callback2(preload, { style: iosStyle, source, resizeMode: "cover" }), callback2(ForumPostMediaSpoiler, { shouldSpoiler, blurTheme })];
   obj[0] = items;
   return callback3(closure_11, obj);
 }
@@ -72,7 +76,7 @@ function ForumPostMedia(obscureReason) {
   const _require = obscureReason;
   const tmp = createCacheKey();
   const ref = React.useRef(null);
-  let obj = _require("../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx");
+  let obj = _redactionSettingToRenderedString;
   const shouldAgeVerifyForReason = obj.useShouldAgeVerifyForReason(obscureReason.obscureReason);
   if (obscureReason.isMediaPost) {
     obj = {};
@@ -163,7 +167,7 @@ export const useSharedMediaProps = function useSharedMediaProps(arg0) {
   let channel;
   let media;
   ({ channel, media } = arg0);
-  let obj = require("../../../messages/MessageAttachmentUtils.tsx") /* getForumPostShouldObscure */;
+  let obj = getForumPostShouldObscure /* getForumPostShouldObscure */;
   const tmp3 = callback(obj.useShouldObscure({ media, channel }), 2);
   obj = { shouldObscure: tmp3[0], obscureReason: tmp3[1], blurTheme: null, format: null };
   let str = "light";
@@ -171,7 +175,7 @@ export const useSharedMediaProps = function useSharedMediaProps(arg0) {
     str = "dark";
   }
   obj[2] = str;
-  const GifAutoPlay = require("../../../user_settings/UserSettings.tsx") /* explicitContentFromProto */.GifAutoPlay;
+  const GifAutoPlay = explicitContentFromProto /* explicitContentFromProto */.GifAutoPlay;
   let tmp4 = "png";
   if (GifAutoPlay.useSetting()) {
     tmp4 = null;

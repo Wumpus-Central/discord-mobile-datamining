@@ -1,3 +1,6 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import { map } from "../../../tokens/native/useToken.tsx";
+import { context } from "TableRowGroupContext.native.tsx";
 // discord_app/design/components/TableRow/native/TableRowGroup.native.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -62,10 +65,10 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
   }
   let importDefault;
   const tmp = createCacheKey();
-  let obj = require("../../../tokens/native/useToken.tsx") /* map */;
+  let obj = map /* map */;
   importDefault = false;
   const Children = React.Children;
-  const token = obj.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_GROUP_HELPER_TEXT_STYLE);
+  const token = obj.useToken(Themes.modules.mobile.TABLE_ROW_GROUP_HELPER_TEXT_STYLE);
   const mapped = Children.map(accessibilityLabel.children, (arg0) => {
     if (null == arg0) {
       return null;
@@ -114,5 +117,5 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
   }
   items[3] = tmp6Result1;
   obj[1] = items;
-  return closure_5(require("TableRowGroupContext.native.tsx") /* context */.TableRowGroupContext.Provider, { value: true, children: closure_7(View, obj) });
+  return closure_5(context /* context */.TableRowGroupContext.Provider, { value: true, children: closure_7(View, obj) });
 };

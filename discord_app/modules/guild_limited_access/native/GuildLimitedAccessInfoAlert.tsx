@@ -1,3 +1,7 @@
+import { componentDidMount } from "../../../components_native/common/Alert.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { Button } from "../../../design/void/native.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 // discord_app/modules/guild_limited_access/native/GuildLimitedAccessInfoAlert.tsx
 import "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -25,10 +29,10 @@ export default function GuildLimitedAccessInfoAlert(arg0) {
   let onClose;
   ({ guildId, onClose } = arg0);
   const tmp = createCacheKey();
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   let obj = { helpdeskArticle: closure_4 };
   guild = guild.getGuild(guildId);
-  let formatResult1 = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ZqkXsC, obj);
+  let formatResult1 = intl.format(getSystemLocale /* getSystemLocale */.t.ZqkXsC, obj);
   if (null != guild) {
     const intl2 = tmp2(1236).intl;
     obj = { guildName: null, helpdeskArticle: null };
@@ -37,12 +41,12 @@ export default function GuildLimitedAccessInfoAlert(arg0) {
     formatResult1 = intl2.format(tmp2(1236).t.jn0Xyx, obj);
   }
   obj = { onClose, children: null };
-  const formatResult = intl.format(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.ZqkXsC, obj);
+  const formatResult = intl.format(getSystemLocale /* getSystemLocale */.t.ZqkXsC, obj);
   tmp4 = closure_4;
   const obj1 = { style: tmp.header, children: null };
   const intl3 = tmp2(1236).intl;
-  obj1[1] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.kJwpBW);
-  const items = [callback(require("../../../design/void/native.tsx") /* Button */.LegacyText, obj1), callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp.text, variant: "text-md/medium", children: formatResult1 })];
+  obj1[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.kJwpBW);
+  const items = [callback(Button /* Button */.LegacyText, obj1), callback(Text /* Text */.Text, { style: tmp.text, variant: "text-md/medium", children: formatResult1 })];
   obj[1] = items;
-  return callback2(require("../../../components_native/common/Alert.tsx"), obj);
+  return callback2(componentDidMount, obj);
 };

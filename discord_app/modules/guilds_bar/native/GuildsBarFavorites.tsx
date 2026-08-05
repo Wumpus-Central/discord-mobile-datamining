@@ -1,3 +1,15 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { StarIcon } from "../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { items1 } from "../../favorites/FavoritesDismissibleContent.tsx";
+import { useFavoritesAccess } from "../../favorites/FavoritesHooks.tsx";
+import { useFavoritesGuildUnreads } from "../../favorites/hooks/useFavoritesGuildUnreads.tsx";
+import { useCanShowFavoritesGuildCoachmark } from "../../favorites/native/onboarding/useCanShowFavoritesGuildCoachmark.tsx";
+import { HomeDrawerFavoritesRowExpandedChildren } from "../../home_drawer/native/HomeDrawerFavoritesRow.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { UnreadIndicator } from "GuildsBarAnimatedItemWrapper.tsx";
+import { useGuildsBarBottomRightBadge } from "hooks/useGuildsBarBottomRightBadge.tsx";
+import { transitionGuildsBarToGuildOrOpenSelectedChannel } from "utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx";
 // discord_app/modules/guilds_bar/native/GuildsBarFavorites.tsx
 import importAllResult from "FavoritesGuildCoachmarkIntro";
 import { View } from "HomeDrawerFavoritesRowExpandedChildren";
@@ -13,7 +25,7 @@ let c3 = importAllResult;
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 let closure_9 = {
   onPress() {
-    require("utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx")(FAVORITES);
+    transitionGuildsBarToGuildOrOpenSelectedChannel(FAVORITES);
   }
 };
 let obj = { anchor: null };
@@ -25,26 +37,26 @@ const memoResult = importAllResult.memo(function GuildsBarFavorites() {
   let badge2;
   let cutouts;
   let unread;
-  const tmp3 = require("../../themes/experiments/MobileVisualRefreshExperiment.tsx")("GuildsBarFavorites");
-  let obj = require("GuildsBarAnimatedItemWrapper.tsx") /* UnreadIndicator */;
-  let obj1 = require("../../favorites/FavoritesHooks.tsx") /* useFavoritesAccess */;
+  const tmp3 = useIsMobileVisualRefreshExperimentEnabled("GuildsBarFavorites");
+  let obj = UnreadIndicator /* UnreadIndicator */;
+  let obj1 = useFavoritesAccess /* useFavoritesAccess */;
   const isFavoritesGuildSelected = obj1.useIsFavoritesGuildSelected();
-  let obj2 = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj2 = initialize /* initialize */;
   const items = [initializeFromUserSettings];
   const stateFromStores = obj2.useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
-  ({ badge, unread } = require("../../favorites/hooks/useFavoritesGuildUnreads.tsx")(stateFromStores));
-  const tmp8 = require("../../favorites/hooks/useFavoritesGuildUnreads.tsx")(stateFromStores);
-  ({ badge: badge2, cutouts } = require("hooks/useGuildsBarBottomRightBadge.tsx")({ mentionCount: badge }));
+  ({ badge, unread } = useFavoritesGuildUnreads(stateFromStores));
+  const tmp8 = useFavoritesGuildUnreads(stateFromStores);
+  ({ badge: badge2, cutouts } = useGuildsBarBottomRightBadge({ mentionCount: badge }));
   const ref = importAllResult.useRef(null);
-  const tmp9 = require("hooks/useGuildsBarBottomRightBadge.tsx")({ mentionCount: badge });
+  const tmp9 = useGuildsBarBottomRightBadge({ mentionCount: badge });
   const tmp11 = callback();
-  const tmp12 = require("../../favorites/native/onboarding/useCanShowFavoritesGuildCoachmark.tsx")();
-  const favoritesIntroPopoverDismissibleContent = require("../../favorites/FavoritesDismissibleContent.tsx") /* items1 */.useFavoritesIntroPopoverDismissibleContent(tmp12);
+  const tmp12 = useCanShowFavoritesGuildCoachmark();
+  const favoritesIntroPopoverDismissibleContent = items1 /* items1 */.useFavoritesIntroPopoverDismissibleContent(tmp12);
   const shouldShowPopover = favoritesIntroPopoverDismissibleContent.shouldShowPopover;
   obj = { selected: isFavoritesGuildSelected, circle: null, unread: null, styles: null, cutouts: null, overState: "Boolean", config: -102.506, label: -34.1, externalChildren: null, expandedChildren: null, children: null };
   let tmp18 = !tmp3;
-  const obj4 = require("../../favorites/FavoritesDismissibleContent.tsx") /* items1 */;
+  const obj4 = items1 /* items1 */;
   const tmp14 = closure_8;
   if (!tmp3) {
     tmp18 = !isFavoritesGuildSelected;
@@ -55,13 +67,13 @@ const memoResult = importAllResult.memo(function GuildsBarFavorites() {
   obj[4] = cutouts;
   obj[6] = closure_9;
   const intl = tmp4(1236).intl;
-  obj[7] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.wMWyci);
+  obj[7] = intl.string(getSystemLocale /* getSystemLocale */.t.wMWyci);
   obj[8] = badge2;
-  obj[9] = closure_7(require("../../home_drawer/native/HomeDrawerFavoritesRow.tsx") /* HomeDrawerFavoritesRowExpandedChildren */.HomeDrawerFavoritesRowExpandedChildren, {});
+  obj[9] = closure_7(HomeDrawerFavoritesRowExpandedChildren /* HomeDrawerFavoritesRowExpandedChildren */.HomeDrawerFavoritesRowExpandedChildren, {});
   const colors = tmp(712).colors;
   obj = { color: isFavoritesGuildSelected ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
-  obj[10] = closure_7(require("../../../design/components/Icon/native/redesign/generated/StarIcon.tsx") /* StarIcon */.StarIcon, obj);
-  const children = [closure_7(require("GuildsBarAnimatedItemWrapper.tsx"), obj), , ];
+  obj[10] = closure_7(StarIcon /* StarIcon */.StarIcon, obj);
+  const children = [closure_7(UnreadIndicator, obj), , ];
   obj1 = { ref, style: tmp11.anchor, pointerEvents: "none", collapsable: false };
   children[1] = closure_7(View, obj1);
   let tmp16Result = shouldShowPopover;

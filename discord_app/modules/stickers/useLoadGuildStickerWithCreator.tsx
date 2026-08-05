@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/stickers/useLoadGuildStickerWithCreator.tsx
 import initialize from "initialize";
 import _slicedToArray from "_slicedToArray";
@@ -13,7 +14,7 @@ export default function useLoadGuildStickersWithCreator(arg0) {
   let tmp2;
   const _require = arg0;
   [tmp2, dependencyMap] = callback(React.useState("loading"), 2);
-  let obj = _require("../../../discord_common/js/packages/flux/index.tsx");
+  let obj = _initialize;
   const items = [parseServerGuildSticker];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getStickersByGuildId(closure_0));
   const items1 = [arg0];

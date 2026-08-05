@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../../../../../../intl/index.native.tsx";
+import { getEmbedThemeColors } from "../../getEmbedThemeColors.tsx";
+import { getChannelAndRecipientsFromInvite } from "getChannelAndRecipientsFromInvite.tsx";
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";
@@ -14,9 +17,9 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   let channel;
   let colors;
   let recipients_;
-  ({ colors, baseColors } = require("../../getEmbedThemeColors.tsx")(closure_2));
-  const tmp2 = require("../../getEmbedThemeColors.tsx")(closure_2);
-  ({ channel, recipients_ } = require("getChannelAndRecipientsFromInvite.tsx")(invite));
+  ({ colors, baseColors } = getEmbedThemeColors(closure_2));
+  const tmp2 = getEmbedThemeColors(closure_2);
+  ({ channel, recipients_ } = getChannelAndRecipientsFromInvite(invite));
   let id;
   if (channel != null) {
     id = channel.id;
@@ -26,9 +29,9 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   if (null != channel) {
     flag = true;
   }
-  const intl = require("../../../../../../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   const string = intl.string;
-  const t = require("../../../../../../../../intl/index.native.tsx") /* getSystemLocale */.t;
+  const t = getSystemLocale /* getSystemLocale */.t;
   if (arg1) {
     let str = string(t.qmtuXE);
     let tmp8 = tmp7;

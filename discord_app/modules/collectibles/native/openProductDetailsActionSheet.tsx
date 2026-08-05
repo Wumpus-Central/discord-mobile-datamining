@@ -1,3 +1,7 @@
+import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import { openCollectiblesShop } from "../CollectiblesActionCreators.tsx";
+import { getProductOrbPrice } from "../utils/CollectiblesProductUtils.tsx";
 // discord_app/modules/collectibles/native/openProductDetailsActionSheet.tsx
 let c3 = "Shop Product Preview";
 const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/collectibles/native/openProductDetailsActionSheet.tsx");
@@ -13,7 +17,7 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
     initialVariantIndex = 0;
   }
   ({ analyticsLocations, shopAnalyticsContext } = arg0);
-  let obj = require("../utils/CollectiblesProductUtils.tsx") /* getProductOrbPrice */;
+  let obj = getProductOrbPrice /* getProductOrbPrice */;
   const isVariantProduct = obj.getIsVariantProduct(product);
   let num = 0;
   if (isVariantProduct) {
@@ -27,9 +31,9 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
   } else {
     skuId = product.skuId;
   }
-  require("../CollectiblesActionCreators.tsx") /* openCollectiblesShop */.productDetailsOpened(skuId);
+  openCollectiblesShop /* openCollectiblesShop */.productDetailsOpened(skuId);
   const tmp2 = dependencyMap;
-  const tmpResult = require("../CollectiblesActionCreators.tsx") /* openCollectiblesShop */;
+  const tmpResult = openCollectiblesShop /* openCollectiblesShop */;
   obj = { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext };
-  require("../../action_sheet/native/ActionSheetActionCreators.tsx").openLazy(require("../../../../_runtime/01959_asyncRequireImpl.js") /* asyncRequireImpl */(9353, tmp2.paths), c3, obj, stack);
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(9353, tmp2.paths), c3, obj, stack);
 };

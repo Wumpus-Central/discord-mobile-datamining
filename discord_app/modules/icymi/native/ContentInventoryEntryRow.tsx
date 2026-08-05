@@ -1,3 +1,5 @@
+import { CustomStatusEntryRow } from "content_inventory/CustomStatusEntryRow.tsx";
+import { items } from "content_inventory/GamingLikeEntryRow.tsx";
 // discord_app/modules/icymi/native/ContentInventoryEntryRow.tsx
 import "noop";
 import upsertRelationship from "upsertRelationship";
@@ -29,7 +31,7 @@ export default function ContentInventoryEntryRow(content) {
             flag2 = false;
           }
           obj[2] = flag2;
-          return jsx(require("content_inventory/CustomStatusEntryRow.tsx"), { content: null, renderForScreenshot: null, visible: null });
+          return jsx(CustomStatusEntryRow, { content: null, renderForScreenshot: null, visible: null });
         } else {
           return null;
         }
@@ -38,6 +40,6 @@ export default function ContentInventoryEntryRow(content) {
     obj = { content: null, renderForScreenshot: null };
     obj[0] = content;
     obj[1] = flag;
-    return jsx(require("content_inventory/GamingLikeEntryRow.tsx"), { content: null, renderForScreenshot: null });
+    return jsx(items, { content: null, renderForScreenshot: null });
   }
 };

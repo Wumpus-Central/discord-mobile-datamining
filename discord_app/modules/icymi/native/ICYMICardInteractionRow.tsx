@@ -1,3 +1,13 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { ArrowAngleLeftUpIcon } from "../../../design/components/Icon/native/redesign/generated/ArrowAngleLeftUpIcon.tsx";
+import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { hexToRgba } from "../../../utils/ColorUtils.tsx";
+import { set } from "../../../utils/PlatformUtils.tsx";
+import { ForwardingIcon } from "../../forwarding/native/ForwardingIcon.tsx";
+import { checkReactionResponse } from "../../reactions/ReactionActionCreators.tsx";
+import { MAX_REACTIONS } from "../../reactions/ReactionUtils.tsx";
 // discord_app/modules/icymi/native/ICYMICardInteractionRow.tsx
 import Separator from "Separator";
 import EMOJI_PICKER_ACTION_SHEET_KEY from "EMOJI_PICKER_ACTION_SHEET_KEY";
@@ -218,9 +228,9 @@ function ForwardButton(disabled) {
   obj[1] = items;
   obj[3] = disabled;
   const intl = tmp3(1236).intl;
-  obj[4] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.xIUfJS);
-  obj[5] = closure_16(require("../../forwarding/native/ForwardingIcon.tsx"), { size: "sm" });
-  return closure_16(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t.xIUfJS);
+  obj[5] = closure_16(ForwardingIcon, { size: "sm" });
+  return closure_16(PressableBase /* PressableBase */.PressableOpacity, obj);
 }
 function ReplyButton(disabled) {
   disabled = disabled.disabled;
@@ -236,9 +246,9 @@ function ReplyButton(disabled) {
   obj[1] = items;
   obj[3] = disabled;
   const intl = tmp3(1236).intl;
-  obj[4] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["5NwaNY"]);
-  obj[5] = closure_16(require("../../../design/components/Icon/native/redesign/generated/ArrowAngleLeftUpIcon.tsx") /* ArrowAngleLeftUpIcon */.ArrowAngleLeftUpIcon, { size: "sm" });
-  return closure_16(require("../../../design/void/Pressables/native/Pressables.tsx") /* PressableBase */.PressableOpacity, obj);
+  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t["5NwaNY"]);
+  obj[5] = closure_16(ArrowAngleLeftUpIcon /* ArrowAngleLeftUpIcon */.ArrowAngleLeftUpIcon, { size: "sm" });
+  return closure_16(PressableBase /* PressableBase */.PressableOpacity, obj);
 }
 function ThreadAsCommentsButton(parentMessage) {
   let handleItemInteracted;
@@ -308,7 +318,7 @@ function ThreadAsCommentsButton(parentMessage) {
 let c19 = 20;
 let closure_20 = createCacheKey.createStyles(() => {
   let obj = { container: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", justifyContent: "space-between" }, replyForwardButtonContainer: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 6 }, emojisRowContainer: { position: "relative", flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 6 }, emojisContainer: { position: "relative", flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 6 }, emojiContainer: null, innerEmojiContainer: null, selectedInnerEmojiContainer: null, addEmojiContainer: null, disabled: null, defaultEmoji: null, emojiText: null, selectedInnerTextContainer: null, innerTextContainer: null, emojiImage: null, selected: null, gradient: null, overflowChevron: null, comments: null, commentCount: null, commentsIcon: null };
-  obj = { flexDirection: "row", backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, flexShrink: 3, paddingHorizontal: 8, gap: 6 };
+  obj = { flexDirection: "row", backgroundColor: Themes.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: Themes.radii.sm, flexShrink: 3, paddingHorizontal: 8, gap: 6 };
   obj[4] = obj;
   obj[5] = { paddingVertical: 5 };
   obj[6] = { paddingVertical: 4 };
@@ -316,7 +326,7 @@ let closure_20 = createCacheKey.createStyles(() => {
   obj[8] = { opacity: 0.4 };
   obj = { width: c19, height: c19 };
   obj[9] = obj;
-  let obj3 = require("../../../utils/PlatformUtils.tsx") /* set */;
+  let obj3 = set /* set */;
   let num = 16;
   if (!obj3.isAndroid()) {
     num = tmp3;
@@ -325,14 +335,14 @@ let closure_20 = createCacheKey.createStyles(() => {
   obj[11] = { paddingBottom: 3.5 };
   obj[12] = { alignSelf: "flex-end", paddingBottom: 4.5 };
   obj[13] = { resizeMode: "contain", width: c19, height: c19 };
-  const obj1 = { borderColor: require("../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.BRAND_560, borderWidth: 1, paddingHorizontal: 7, backgroundColor: null };
-  obj1[3] = require("../../../utils/ColorUtils.tsx") /* hexToRgba */.hexWithOpacity(require("../../../../discord_common/js/packages/tokens/native.tsx").unsafe_rawColors.BRAND_500, 0.3);
+  const obj1 = { borderColor: Themes.unsafe_rawColors.BRAND_560, borderWidth: 1, paddingHorizontal: 7, backgroundColor: null };
+  obj1[3] = hexToRgba /* hexToRgba */.hexWithOpacity(Themes.unsafe_rawColors.BRAND_500, 0.3);
   obj[14] = obj1;
   obj[15] = { position: "absolute", right: 0, top: 0, bottom: 0, width: 48 };
   obj[16] = { position: "absolute", right: 0 };
   const tmp4 = require;
-  const tmp4Result = require("../../../utils/ColorUtils.tsx") /* hexToRgba */;
-  obj[17] = { paddingVertical: 6, paddingHorizontal: 8, backgroundColor: require("../../../../discord_common/js/packages/tokens/native.tsx").colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: require("../../../../discord_common/js/packages/tokens/native.tsx").radii.sm, display: "flex", flexDirection: "row", alignItems: "center", gap: 8 };
+  const tmp4Result = hexToRgba /* hexToRgba */;
+  obj[17] = { paddingVertical: 6, paddingHorizontal: 8, backgroundColor: Themes.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: Themes.radii.sm, display: "flex", flexDirection: "row", alignItems: "center", gap: 8 };
   obj[18] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 4, justifySelf: "end" };
   obj3 = { width: 20, height: 20, tintColor: tmp(712).colors.INTERACTIVE_TEXT_DEFAULT };
   obj[19] = obj3;
@@ -667,11 +677,11 @@ export default function ICYMICardInteractionRow(message) {
 };
 export const onAddReaction = function onAddReaction(arg0, arg1, byName) {
   if (null != byName) {
-    let obj = require("../../reactions/ReactionUtils.tsx") /* MAX_REACTIONS */;
-    const obj2 = require("../../reactions/ReactionActionCreators.tsx") /* checkReactionResponse */;
+    let obj = MAX_REACTIONS /* MAX_REACTIONS */;
+    const obj2 = checkReactionResponse /* checkReactionResponse */;
     obj = { burst: null };
     obj[0] = arg3;
-    obj2.addReaction(arg0, arg1, obj.toReactionEmoji(byName), require("../../reactions/ReactionActionCreators.tsx") /* checkReactionResponse */.ReactionLocations.MESSAGE, obj);
+    obj2.addReaction(arg0, arg1, obj.toReactionEmoji(byName), checkReactionResponse /* checkReactionResponse */.ReactionLocations.MESSAGE, obj);
     const toReactionEmojiResult = obj.toReactionEmoji(byName);
   }
 };
@@ -683,7 +693,7 @@ export const useThread = function useThread(id) {
   let closure_1 = arg1;
   const dependencyMap = arg2;
   const items = [ensureGuildLoaded, updateState];
-  const stateFromStoresObject = _require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = _initialize.useStateFromStoresObject(items, () => {
     if (null != message) {
       if (null != guild) {
         let channel = canForwardMessage.getChannel(tmp.id);

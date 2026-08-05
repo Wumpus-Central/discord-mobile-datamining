@@ -1,3 +1,6 @@
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import { closeActionSheet } from "../../feedback/native/FeedbackActionSheet.tsx";
 // discord_app/modules/notifications/native/NotificationSurveyActionSheet.tsx
 import "noop";
 import { NotificationUserFeedbackReasons as closure_3 } from "NotificationUserFeedbackReasons";
@@ -6,7 +9,7 @@ import { jsx } from "jsxProd";
 
 const require = arg1;
 function trackOpen() {
-  require("../../../utils/AnalyticsUtils.tsx").track(AnalyticEvents.OPEN_POPOUT, { type: "Notification Feedback Sheet", source: "Notification End" });
+  expandEventProperties.track(AnalyticEvents.OPEN_POPOUT, { type: "Notification Feedback Sheet", source: "Notification End" });
 }
 const result = require("ME").fileFinishedImporting("modules/notifications/native/NotificationSurveyActionSheet.tsx");
 
@@ -16,24 +19,24 @@ export default function NotificationSurveyActionSheet(arg0) {
   let require;
   ({ notificationType: require, location: importDefault, messageId: dependencyMap } = arg0);
   let obj = { value: constants.TOO_MANY, label: null };
-  let intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.pLeQp0);
+  let intl = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.pLeQp0);
   const items = [obj, , ];
   obj = { value: constants.IRRELEVANT, label: null };
-  const intl2 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl2.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.tuwPcC);
+  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.tuwPcC);
   items[1] = obj;
   obj = { value: constants.DISLIKE_CONTENT, label: null };
-  const intl3 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj[1] = intl3.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.glUMhg);
+  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  obj[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.glUMhg);
   items[2] = obj;
   const obj1 = { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, trackOpen: null, trackReport: null };
-  const intl4 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[0] = intl4.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.wGioO1);
-  const intl5 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[3] = intl5.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.Yzl7Or);
-  const intl6 = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
-  obj1[4] = intl6.string(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.g1q5fr);
+  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[0] = intl4.string(getSystemLocale /* getSystemLocale */.t.wGioO1);
+  const intl5 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[3] = intl5.string(getSystemLocale /* getSystemLocale */.t.Yzl7Or);
+  const intl6 = getSystemLocale /* getSystemLocale */.intl;
+  obj1[4] = intl6.string(getSystemLocale /* getSystemLocale */.t.g1q5fr);
   obj1[5] = items;
   obj1[6] = trackOpen;
   obj1[7] = function trackReport(arg0) {
@@ -64,5 +67,5 @@ export default function NotificationSurveyActionSheet(arg0) {
       const tmp8 = outer1_0(outer1_2[10])(outer1_2[9], outer1_2.paths);
     }
   };
-  return jsx(require("../../feedback/native/FeedbackActionSheet.tsx"), { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, trackOpen: null, trackReport: null });
+  return jsx(closeActionSheet, { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, trackOpen: null, trackReport: null });
 };

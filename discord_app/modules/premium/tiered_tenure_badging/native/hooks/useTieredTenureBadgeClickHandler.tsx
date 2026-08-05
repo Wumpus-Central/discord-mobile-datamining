@@ -1,3 +1,4 @@
+import { useIsPremiumSubscriber } from "../../../useIsPremiumSubscriber.tsx";
 // discord_app/modules/premium/tiered_tenure_badging/native/hooks/useTieredTenureBadgeClickHandler.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -16,7 +17,7 @@ export const useTieredTenureBadgeClickHandler = function useTieredTenureBadgeCli
   const _require = id;
   let closure_1 = userId;
   const dependencyMap = themeType;
-  const isPremiumSubscriber = _require("../../../useIsPremiumSubscriber.tsx").useIsPremiumSubscriber(PremiumTypes.TIER_2);
+  const isPremiumSubscriber = _useIsPremiumSubscriber.useIsPremiumSubscriber(PremiumTypes.TIER_2);
   let tmp4 = typeof id === "string";
   if (typeof id === "string") {
     let tmpResult = tmp(7015);

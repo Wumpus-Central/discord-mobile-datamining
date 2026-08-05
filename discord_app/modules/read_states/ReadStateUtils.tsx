@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/read_states/ReadStateUtils.tsx
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
@@ -16,7 +17,7 @@ export const getHasImportantUnread = function getHasImportantUnread(channel) {
 export const useHasImportantUnread = function useHasImportantUnread(arg0) {
   const _require = arg0;
   const items = [generateOldThreadCutoff, updateUserGuildSettingsInternal];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let hasUnreadResult = outer1_2.hasUnread(id.id);
     if (hasUnreadResult) {
       hasUnreadResult = outer1_3.resolveUnreadSetting(id) === outer1_4.ALL_MESSAGES;

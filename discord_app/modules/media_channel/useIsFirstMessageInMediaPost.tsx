@@ -1,3 +1,5 @@
+import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 // discord_app/modules/media_channel/useIsFirstMessageInMediaPost.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 
@@ -7,7 +9,7 @@ const result = require("DISCORD_EPOCH").fileFinishedImporting("modules/media_cha
 export const useIsFirstMessageInMediaPost = function useIsFirstMessageInMediaPost(arg0) {
   const _require = arg0;
   const items = [arg0];
-  return _require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores([], () => {
+  return _defaultAreStatesEqual.useStateFromStores([], () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       const channel_id = tmp.channel_id;
@@ -56,7 +58,7 @@ export const isFirstMessageInMediaPost = function isFirstMessageInMediaPost(chan
       obj2 = store;
     }
     tmp = flag;
-    obj = require("../../utils/SnowflakeUtils.tsx");
+    obj = DISCORD_EPOCH;
   }
   return tmp;
 };
@@ -77,5 +79,5 @@ export const isFirstMessageIdInMediaPost = function isFirstMessageIdInMediaPost(
     }
     return false;
   }
-  obj = require("../../utils/SnowflakeUtils.tsx");
+  obj = DISCORD_EPOCH;
 };

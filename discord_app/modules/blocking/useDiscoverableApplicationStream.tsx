@@ -1,3 +1,4 @@
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/blocking/useDiscoverableApplicationStream.tsx
 import reset from "reset";
 import upsertRelationship from "upsertRelationship";
@@ -37,7 +38,7 @@ export default function useDiscoverableApplicationStream(arg0) {
   const _require = arg0;
   let items = [reset, upsertRelationship];
   const items1 = [arg0];
-  return _require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const items = [outer1_2, outer1_3];
     return outer1_5(closure_0, items);
   }, items1);

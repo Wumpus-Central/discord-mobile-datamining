@@ -1,3 +1,5 @@
+import { useCustomKeyboardHeight } from "../../keyboard/native/useCustomKeyboardHeight.tsx";
+import { useChannelSafeAreaBottomStyles } from "../../main_tabs_v2/native/channel/useChannelSafeAreaBottomStyles.tsx";
 // discord_app/modules/chat/native/ChatViewWrapperAnimatedKeyboard.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -18,11 +20,11 @@ let closure_10 = { code: "function ChatViewWrapperAnimatedKeyboardTsx3(){const{a
 let closure_11 = { code: "function ChatViewWrapperAnimatedKeyboardTsx4(finished){const{animatedAdjustedMarginPending,animatedAdjustedMargin}=this.__closure;if(!finished){return;}if(animatedAdjustedMarginPending.get()!==-1){animatedAdjustedMargin.set(animatedAdjustedMarginPending.get());animatedAdjustedMarginPending.set(-1);}}" };
 let closure_12 = importAllResult.memo((channelId) => {
   let c0;
-  const tmp = require("../../keyboard/native/useCustomKeyboardHeight.tsx")();
+  const tmp = useCustomKeyboardHeight();
   c0 = tmp;
   const items = [tmp];
   const obj = { style: null };
-  const items1 = [require("../../main_tabs_v2/native/channel/useChannelSafeAreaBottomStyles.tsx")(channelId.channelId), importAllResult.useMemo(() => ({ position: "absolute", bottom: -c0, height: c0, right: 0, left: 0 }), items)];
+  const items1 = [useChannelSafeAreaBottomStyles(channelId.channelId), importAllResult.useMemo(() => ({ position: "absolute", bottom: -c0, height: c0, right: 0, left: 0 }), items)];
   obj[0] = items1;
   return callback(View, obj);
 });

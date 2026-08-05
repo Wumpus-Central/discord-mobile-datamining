@@ -1,3 +1,7 @@
+import { preload } from "../../../components_native/common/FastImage.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import { getClass } from "../../../utils/StylesheetUtils.tsx";
 // discord_app/modules/guild/native/GuildInviteIcon.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -26,21 +30,21 @@ GuildInviteIcon.prototype["render"] = function render() {
   const props = this.props;
   ({ style, guild } = props);
   ({ size, textScale } = props);
-  let obj = require("../../../utils/StylesheetUtils.tsx") /* getClass */;
+  let obj = getClass /* getClass */;
   const getClassResult = obj.getClass(tmp, "icon", size);
-  const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+  const intl = getSystemLocale /* getSystemLocale */.intl;
   obj = { guildName: guild.name };
-  const formatToPlainStringResult = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t.xm6W9D, obj);
+  const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.xm6W9D, obj);
   if (null != guild.icon) {
     obj = { id: null, icon: null, canAnimate: true, size: 128 };
     ({ id: obj7[0], icon: obj7[1] } = guild);
-    const guildIconSource = require("../../../utils/AvatarUtils.tsx").getGuildIconSource(obj);
+    const guildIconSource = getAvatarURL.getGuildIconSource(obj);
     const obj1 = { accessibilityRole: "image", accessibilityLabel: null, style: null, source: null };
     obj1[1] = formatToPlainStringResult;
     const items = [tmp.icon, getClassResult, style];
     obj1[2] = items;
     obj1[3] = guildIconSource;
-    return jsx(require("../../../components_native/common/FastImage.tsx"), { accessibilityRole: "image", accessibilityLabel: null, style: null, source: null });
+    return jsx(preload, { accessibilityRole: "image", accessibilityLabel: null, style: null, source: null });
   } else {
     const acronym = tmp2(1856).getAcronym(guild.name);
     let num = table[acronym.length - 1];

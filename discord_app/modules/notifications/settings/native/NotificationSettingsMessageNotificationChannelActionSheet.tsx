@@ -1,3 +1,4 @@
+import { useChannelPresetSettings } from "../utils/notficationSettingsChannelFlagUtils.tsx";
 // discord_app/modules/notifications/settings/native/NotificationSettingsMessageNotificationChannelActionSheet.tsx
 import "noop";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
@@ -11,7 +12,7 @@ let result = require("ME").fileFinishedImporting("modules/notifications/settings
 
 export default function NotificationSettingsMessageNotificationChannelActionSheet(channel) {
   const _require = channel;
-  let obj = _require("../utils/notficationSettingsChannelFlagUtils.tsx");
+  let obj = _useChannelPresetSettings;
   const channelPresetSettings = obj.useChannelPresetSettings(channel.channel);
   const unread = channelPresetSettings.unread;
   const notification = channelPresetSettings.notification;

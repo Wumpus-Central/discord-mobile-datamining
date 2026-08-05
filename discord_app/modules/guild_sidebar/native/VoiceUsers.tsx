@@ -1,3 +1,11 @@
+import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { HeadphonesIcon } from "../../../design/components/Icon/native/redesign/generated/HeadphonesIcon.tsx";
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { useIsUsingClientTheme } from "../../client_themes/native/useIsUsingClientTheme.tsx";
+import { getLayoutStyles } from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
+import { map } from "../../screen/native/useScaledTextLineHeight.android.tsx";
+import { VoiceUsersItem } from "VoiceUsersItem.tsx";
 // discord_app/modules/guild_sidebar/native/VoiceUsers.tsx
 import { View } from "get ActivityIndicator";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -12,24 +20,24 @@ function AudienceItem(arg0) {
   let audienceCount;
   let collapsed;
   ({ audienceCount, collapsed } = arg0);
-  const tmp2 = callback2(require("../../client_themes/native/useIsUsingClientTheme.tsx")());
+  const tmp2 = callback2(useIsUsingClientTheme());
   let formatToPlainStringResult = audienceCount;
   if (!collapsed) {
-    const intl = require("../../../intl/index.native.tsx") /* getSystemLocale */.intl;
+    const intl = getSystemLocale /* getSystemLocale */.intl;
     let obj = { count: null };
     obj[0] = audienceCount;
-    formatToPlainStringResult = intl.formatToPlainString(require("../../../intl/index.native.tsx") /* getSystemLocale */.t["+v2pN2"], obj);
+    formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["+v2pN2"], obj);
   }
   obj = { style: collapsed ? tmp2.listenersCollapsed : tmp2.listeners, children: null };
-  obj = { style: tmp2.listenersIconWrapper, children: callback(require("../../../design/components/Icon/native/redesign/generated/HeadphonesIcon.tsx") /* HeadphonesIcon */.HeadphonesIcon, obj1) };
-  const items = [callback(View, obj), callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: tmp2.listenersText, variant: c7, color: "redesign-channel-name-muted-text", children: formatToPlainStringResult })];
+  obj = { style: tmp2.listenersIconWrapper, children: callback(HeadphonesIcon /* HeadphonesIcon */.HeadphonesIcon, obj1) };
+  const items = [callback(View, obj), callback(Text /* Text */.Text, { style: tmp2.listenersText, variant: c7, color: "redesign-channel-name-muted-text", children: formatToPlainStringResult })];
   obj[1] = items;
   return closure_6(View, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let c7 = "text-sm/medium";
 let closure_8 = createCacheKey.createStyles((arg0) => {
-  const colors = require("../../../../discord_common/js/packages/tokens/native.tsx").colors;
+  const colors = Themes.colors;
   if (arg0) {
     let BACKGROUND_BASE_LOWEST = colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT;
     let tmp4 = tmp;
@@ -40,12 +48,12 @@ let closure_8 = createCacheKey.createStyles((arg0) => {
   const round = tmp4(712).radii.round;
   let obj = { listeners: { display: "flex", flexDirection: "row", alignItems: "center", padding: 4, marginTop: 4, marginLeft: -8 }, listenersCollapsed: { flexDirection: "row", alignItems: "center", backgroundColor: BACKGROUND_BASE_LOWEST, borderRadius: round, marginLeft: -16, marginTop: 4, paddingLeft: 2, paddingRight: 6 }, listenersIconWrapper: null, listenersText: null, userCollapsedOverlap: null, headphonesIcon: null };
   obj = { alignItems: "center", justifyContent: "center", backgroundColor: BACKGROUND_BASE_LOWEST, marginRight: 8, marginLeft: 4, borderRadius: round };
-  const merged = Object.assign(require("../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx") /* getLayoutStyles */.makeSizeStyle(20));
+  const merged = Object.assign(getLayoutStyles /* getLayoutStyles */.makeSizeStyle(20));
   obj[2] = obj;
   obj[3] = { marginRight: 4 };
   obj[4] = { marginLeft: -20 };
-  const obj3 = require("../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx") /* getLayoutStyles */;
-  obj[5] = require("../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx") /* getLayoutStyles */.makeSizeStyle(14);
+  const obj3 = getLayoutStyles /* getLayoutStyles */;
+  obj[5] = getLayoutStyles /* getLayoutStyles */.makeSizeStyle(14);
   return obj;
 });
 let closure_9 = require("noop").memo((voiceState) => {
@@ -109,12 +117,12 @@ export default function VoiceUsers(collapsed) {
     }
     items[1] = tmp2;
     obj[1] = items;
-    tmp = closure_6(require("VoiceUsersItem.tsx"), obj);
+    tmp = closure_6(VoiceUsersItem, obj);
     const tmp5 = closure_6;
-    const tmp8 = require("VoiceUsersItem.tsx");
+    const tmp8 = VoiceUsersItem;
   }
   return tmp;
 };
 export const getAudienceItemHeight = function getAudienceItemHeight(fontScale) {
-  return 8 + Math.max(20, require("../../screen/native/useScaledTextLineHeight.android.tsx") /* map */.scaleTextLineHeight(c7, fontScale));
+  return 8 + Math.max(20, map /* map */.scaleTextLineHeight(c7, fontScale));
 };

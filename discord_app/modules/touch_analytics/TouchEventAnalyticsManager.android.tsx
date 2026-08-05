@@ -1,3 +1,5 @@
+import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeTouchEventAnalyticsModule.tsx";
+import { apexExperiment } from "../telemetry_ring/native/ZoomedInAnalyticsExperiment.tsx";
 // discord_app/modules/touch_analytics/TouchEventAnalyticsManager.android.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import "initialize";
@@ -11,15 +13,15 @@ function updateEnabledState() {
   }
   let result = true === isStaffResult;
   if (!result) {
-    result = require("../telemetry_ring/native/ZoomedInAnalyticsExperiment.tsx") /* apexExperiment */.isZoomedExperimentEnabled();
-    const obj2 = require("../telemetry_ring/native/ZoomedInAnalyticsExperiment.tsx") /* apexExperiment */;
+    result = apexExperiment /* apexExperiment */.isZoomedExperimentEnabled();
+    const obj2 = apexExperiment /* apexExperiment */;
   }
   if (result) {
     if (!c4) {
       try {
-        require("../../../discord_common/js/packages/rtn-codegen/js/NativeTouchEventAnalyticsModule.tsx").enableTouchLogging();
+        enforcing.enableTouchLogging();
         c4 = true;
-        const obj3 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeTouchEventAnalyticsModule.tsx");
+        const obj3 = enforcing;
       } catch (err) {
         c4 = false;
       }
@@ -28,9 +30,9 @@ function updateEnabledState() {
   if (!result) {
     if (c4) {
       try {
-        require("../../../discord_common/js/packages/rtn-codegen/js/NativeTouchEventAnalyticsModule.tsx").disableTouchLogging();
+        enforcing.disableTouchLogging();
         c4 = false;
-        const obj4 = require("../../../discord_common/js/packages/rtn-codegen/js/NativeTouchEventAnalyticsModule.tsx");
+        const obj4 = enforcing;
       } catch (err) {
       }
     }
@@ -48,9 +50,9 @@ prototype["_terminate"] = function _terminate() {
   mergeGuildAvatar.removeChangeListener(updateEnabledState);
   if (c4) {
     try {
-      require("../../../discord_common/js/packages/rtn-codegen/js/NativeTouchEventAnalyticsModule.tsx").disableTouchLogging();
+      enforcing.disableTouchLogging();
       c4 = false;
-      const obj = require("../../../discord_common/js/packages/rtn-codegen/js/NativeTouchEventAnalyticsModule.tsx");
+      const obj = enforcing;
     } catch (err) {
     }
   }

@@ -1,3 +1,5 @@
+import { set } from "../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
+import { fetchUserAffinitiesV2 } from "../../../user_affinities/UserAffinitiesActionCreators.tsx";
 // discord_app/modules/premium/gifting/native/MobileGiftIntentCardManager.tsx
 import recomputeAffinities from "recomputeAffinities";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -15,7 +17,7 @@ class MobileGiftIntentCardManager extends tmp3 {
 }
 const prototype = MobileGiftIntentCardManager.prototype;
 prototype["isChannelEligible"] = function isChannelEligible(channel) {
-  return channel.type === require("../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx") /* set */.ChannelTypes.DM;
+  return channel.type === set /* set */.ChannelTypes.DM;
 };
 prototype["maybeSendCard"] = function maybeSendCard(id, closure_0) {
   let self = this;
@@ -80,8 +82,8 @@ prototype["sendCardInSelectedChannelIfEligible"] = function sendCardInSelectedCh
 };
 prototype["maybeFetchUserAffinities"] = function maybeFetchUserAffinities() {
   if (obj.getConfig({ location: "MobileGiftIntentCardManager" }).enabled) {
-    const userAffinitiesV2 = require("../../../user_affinities/UserAffinitiesActionCreators.tsx") /* fetchUserAffinitiesV2 */.fetchUserAffinitiesV2();
-    const obj2 = require("../../../user_affinities/UserAffinitiesActionCreators.tsx") /* fetchUserAffinitiesV2 */;
+    const userAffinitiesV2 = fetchUserAffinitiesV2 /* fetchUserAffinitiesV2 */.fetchUserAffinitiesV2();
+    const obj2 = fetchUserAffinitiesV2 /* fetchUserAffinitiesV2 */;
   }
 };
 prototype["onChannelSelect"] = function onChannelSelect(channelId) {

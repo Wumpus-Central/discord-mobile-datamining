@@ -1,3 +1,14 @@
+import { registerAsset } from "../../../../../../../../_runtime/08307_registerAsset.js";
+import { registerAsset } from "../../../../../../../../_runtime/08397_registerAsset.js";
+import { registerAsset } from "../../../../../../../../_runtime/09640_registerAsset.js";
+import { registerAsset } from "../../../../../../../../_runtime/09737_registerAsset.js";
+import { Themes } from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import { Button } from "../../../../../../../design/void/native.tsx";
+import { useTheme } from "../../../../../../../hooks/useTheme.tsx";
+import { computeChannelName } from "../../../../../../channel/useChannelName.tsx";
+import { usePrivateChannelWave } from "../../../../../../channel/usePrivateChannelWave.native.tsx";
+import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import { useMessagePreview } from "../../../../../useMessagePreviews.tsx";
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelContent.tsx
 import { View } from "useMessagePreview";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
@@ -22,38 +33,38 @@ function MessagesItemChannelContentIcon(selected) {
   const tmp = callback4(selected.selected);
   if (blocked) {
     let obj = { source: null, size: null, style: null };
-    obj[0] = require("../../../../../../../../_runtime/08397_registerAsset.js");
-    obj[1] = require("../../../../../../../design/void/native.tsx") /* Button */.Icon.Sizes.EXTRA_SMALL;
+    obj[0] = registerAsset;
+    obj[1] = Button /* Button */.Icon.Sizes.EXTRA_SMALL;
     const items = [, ];
     ({ channelIcon: arr4[0], channelMutedIcon: arr4[1] } = tmp);
     obj[2] = items;
-    let tmp2 = callback(require("../../../../../../../design/void/native.tsx") /* Button */.Icon, obj);
+    let tmp2 = callback(Button /* Button */.Icon, obj);
   } else if (ignored) {
     obj = { source: null, size: null, style: null };
-    obj[0] = require("../../../../../../../../_runtime/08307_registerAsset.js");
-    obj[1] = require("../../../../../../../design/void/native.tsx") /* Button */.Icon.Sizes.EXTRA_SMALL;
+    obj[0] = registerAsset;
+    obj[1] = Button /* Button */.Icon.Sizes.EXTRA_SMALL;
     const items1 = [, ];
     ({ channelIcon: arr3[0], channelIgnoredIcon: arr3[1] } = tmp);
     obj[2] = items1;
-    tmp2 = callback(require("../../../../../../../design/void/native.tsx") /* Button */.Icon, obj);
+    tmp2 = callback(Button /* Button */.Icon, obj);
   } else if (muted) {
     const obj1 = { source: null, size: null, style: null };
-    obj1[0] = require("../../../../../../../../_runtime/09737_registerAsset.js");
-    obj1[1] = require("../../../../../../../design/void/native.tsx") /* Button */.Icon.Sizes.EXTRA_SMALL;
+    obj1[0] = registerAsset;
+    obj1[1] = Button /* Button */.Icon.Sizes.EXTRA_SMALL;
     const items2 = [, ];
     ({ channelIcon: arr2[0], channelMutedIcon: arr2[1] } = tmp);
     obj1[2] = items2;
-    tmp2 = callback(require("../../../../../../../design/void/native.tsx") /* Button */.Icon, obj1);
+    tmp2 = callback(Button /* Button */.Icon, obj1);
   } else {
     tmp2 = null;
     if (favorite) {
       obj = { source: null, size: null, style: null };
-      obj[0] = require("../../../../../../../../_runtime/09640_registerAsset.js");
-      obj[1] = require("../../../../../../../design/void/native.tsx") /* Button */.Icon.Sizes.EXTRA_SMALL;
+      obj[0] = registerAsset;
+      obj[1] = Button /* Button */.Icon.Sizes.EXTRA_SMALL;
       const items3 = [, ];
       ({ channelIcon: arr[0], channelFavoriteIcon: arr[1] } = tmp);
       obj[2] = items3;
-      tmp2 = callback(require("../../../../../../../design/void/native.tsx") /* Button */.Icon, obj);
+      tmp2 = callback(Button /* Button */.Icon, obj);
     }
   }
   return tmp2;
@@ -72,16 +83,16 @@ obj[8] = { paddingRight: require("Themes").space.PX_40 };
 let closure_10 = createCacheKey.createStyles(obj);
 let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4) => {
   if (arg2) {
-    let MOBILE_TEXT_HEADING_PRIMARY = require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_MUTED;
+    let MOBILE_TEXT_HEADING_PRIMARY = Themes.colors.TEXT_MUTED;
     let tmp5 = importDefault;
   } else {
     if (!arg0) {
       if (!arg1) {
-        MOBILE_TEXT_HEADING_PRIMARY = require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.MESSAGES_ITEM_CHANNEL_TEXT_DEFAULT;
+        MOBILE_TEXT_HEADING_PRIMARY = Themes.colors.MESSAGES_ITEM_CHANNEL_TEXT_DEFAULT;
         tmp5 = importDefault;
       }
     }
-    MOBILE_TEXT_HEADING_PRIMARY = require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").colors.MOBILE_TEXT_HEADING_PRIMARY;
+    MOBILE_TEXT_HEADING_PRIMARY = Themes.colors.MOBILE_TEXT_HEADING_PRIMARY;
     tmp5 = importDefault;
   }
   let obj = { channelText: { color: MOBILE_TEXT_HEADING_PRIMARY }, channelName: { flexShrink: 1 }, timestamp: null };
@@ -107,9 +118,9 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4) => {
 });
 let closure_12 = createCacheKey.createStyles((arg0) => {
   let obj = { channelIcon: null, channelMutedIcon: null, channelFavoriteIcon: null, channelIgnoredIcon: null };
-  obj = { marginRight: require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_4 };
+  obj = { marginRight: Themes.space.PX_4 };
   obj[0] = obj;
-  const colors = require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").colors;
+  const colors = Themes.colors;
   obj[1] = { tintColor: arg0 ? colors.ICON_SUBTLE : colors.ICON_MUTED };
   const colors2 = tmp(712).colors;
   obj[2] = { tintColor: arg0 ? colors2.ICON_SUBTLE : colors2.ICON_MUTED };
@@ -132,7 +143,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
   ({ channelSelected, muted, ignored, blocked, hasUnreadMessages, hasNameplate } = channel);
   ({ favorite, hasActivity, resolvedUnreadSetting } = channel);
   let obj = channel(3995);
-  const isThemeLightResult = obj.isThemeLight(require("../../../../../../../hooks/useTheme.tsx")());
+  const isThemeLightResult = obj.isThemeLight(useTheme());
   let tmp6 = hasUnreadMessages;
   if (hasUnreadMessages) {
     tmp6 = resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES;
@@ -148,11 +159,11 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
     tmp8 = !channelSelected;
   }
   const tmp9 = callback2();
-  const tmp10 = callback3(channelSelected, tmp6, tmp8, hasNameplate, require("../../../../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("MessagesItemChannelContent"));
+  const tmp10 = callback3(channelSelected, tmp6, tmp8, hasNameplate, useIsMobileVisualRefreshExperimentEnabled("MessagesItemChannelContent"));
   let tmpResult = tmp(589);
   const items = [generateOldThreadCutoff];
   const stateFromStores = tmpResult.useStateFromStores(items, () => outer1_4.lastMessageId(channel.id));
-  const tmp12 = require("../../../../../useMessagePreviews.tsx")(channel, { unread: hasUnreadMessages });
+  const tmp12 = useMessagePreview(channel, { unread: hasUnreadMessages });
   let tmp13 = null != tmp12;
   if (tmp13) {
     let obj2 = tmp3(3867)();
@@ -174,12 +185,12 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
   if (tmp16) {
     tmp16 = channel.recipients.length > 0;
   }
-  const tmp17 = require("../../../../../../channel/useChannelName.tsx")(channel);
-  const tmp18 = require("../../../../../../channel/usePrivateChannelWave.native.tsx")(channel, stateFromStores);
+  const tmp17 = computeChannelName(channel);
+  const tmp18 = usePrivateChannelWave(channel, stateFromStores);
   const waveShouldShow = tmp18.waveShouldShow;
   obj = { variant: null, style: null, lineClamp: 1, ellipsizeMode: "tail" };
-  const tmp5 = require("../../../../../../themes/experiments/MobileVisualRefreshExperiment.tsx")("MessagesItemChannelContent");
-  obj[0] = channel(3989).useToken(require("../../../../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE);
+  const tmp5 = useIsMobileVisualRefreshExperimentEnabled("MessagesItemChannelContent");
+  obj[0] = channel(3989).useToken(Themes.modules.mobile.MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE);
   const items1 = [, ];
   ({ channelText: arr2[0], channelName: arr2[1] } = tmp10);
   obj[1] = items1;

@@ -1,3 +1,5 @@
+import { FamilyCenterLinkRowWrapper } from "FamilyCenterLinkWrapper.tsx";
+import { FamilyCenterRequestorDetails } from "FamilyCenterRequestorDetails.tsx";
 // discord_app/modules/parent_tools/native/FamilyCenterLinkRow.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -16,9 +18,9 @@ export default function FamilyCenterLinkRow(children) {
   let obj = { userId: otherUser.id, children: null };
   const tmp = callback3();
   obj = { otherUser, status: UserLinkStatus.PENDING };
-  const items = [callback(require("FamilyCenterRequestorDetails.tsx"), obj), ];
+  const items = [callback(FamilyCenterRequestorDetails, obj), ];
   obj = { style: tmp.actionContainer, children: children.actions };
   items[1] = callback(View, obj);
   obj[1] = items;
-  return callback2(require("FamilyCenterLinkWrapper.tsx"), obj);
+  return callback2(FamilyCenterLinkRowWrapper, obj);
 };

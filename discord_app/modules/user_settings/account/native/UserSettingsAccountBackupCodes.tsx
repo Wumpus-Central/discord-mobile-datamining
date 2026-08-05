@@ -1,3 +1,4 @@
+import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 // discord_app/modules/user_settings/account/native/UserSettingsAccountBackupCodes.tsx
 import noop from "noop";
 import { ScrollView } from "set";
@@ -25,7 +26,7 @@ function CodeRow(code) {
   let tmp2Result = null;
   if (showCheckMark) {
     obj = { color: null };
-    obj[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").colors.TEXT_BRAND;
+    obj[0] = Themes.colors.TEXT_BRAND;
     tmp2Result = tmp2(code(5304).CheckmarkSmallIcon, obj);
   }
   obj[2] = tmp2Result;
@@ -48,7 +49,7 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
   }
   stateFromStores = undefined;
   let obj = stateFromStores(3989);
-  const token = obj.useToken(require("../../../../../discord_common/js/packages/tokens/native.tsx").modules.mobile.TABLE_ROW_PADDING);
+  const token = obj.useToken(Themes.modules.mobile.TABLE_ROW_PADDING);
   let obj1 = stateFromStores(589);
   const items = [getVerificationKey];
   stateFromStores = obj1.useStateFromStores(items, () => store.getBackupCodes());
@@ -71,8 +72,8 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
     callback(table[13]).clearBackupCodes();
   }, []);
   obj = { spacing: null, style: null, children: null };
-  obj[0] = require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_24;
-  obj = { paddingHorizontal: token, paddingTop: require("../../../../../discord_common/js/packages/tokens/native.tsx").space.PX_16 };
+  obj[0] = Themes.space.PX_24;
+  obj = { paddingHorizontal: token, paddingTop: Themes.space.PX_16 };
   obj[1] = obj;
   const items2 = [headerLabel.map((children) => callback2(stateFromStores(4281).Text, { variant: "text-sm/medium", children }, arg1)), , , ];
   let tmp10Result = unusedCodes.length > 0;

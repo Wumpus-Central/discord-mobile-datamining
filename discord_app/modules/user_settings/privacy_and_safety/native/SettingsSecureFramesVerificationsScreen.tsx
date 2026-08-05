@@ -1,3 +1,4 @@
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 // discord_app/modules/user_settings/privacy_and_safety/native/SettingsSecureFramesVerificationsScreen.tsx
 import noop from "noop";
 import { View } from "noop";
@@ -32,7 +33,7 @@ function VerificationListItem(userId) {
 }
 function SectionListItem(children) {
   const tmp = callback();
-  return jsx(require("../../../../design/components/Text/native/Text.tsx") /* Text */.Text, { style: callback().section, variant: "text-sm/semibold", color: "text-default", children: children.title });
+  return jsx(Text /* Text */.Text, { style: callback().section, variant: "text-sm/semibold", color: "text-default", children: children.title });
 }
 function renderItem(item) {
   item = item.item;

@@ -1,3 +1,6 @@
+import { createCommonMessage } from "createCommonMessage.tsx";
+import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
+import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 // discord_app/modules/messages/native/renderer/system_messages/NewThreadSystemMessage.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";
@@ -8,7 +11,7 @@ const result = require("mergeGuildAvatar").fileFinishedImporting("modules/messag
 
 export const createNewThreadSystemMessage = function createNewThreadSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = require("useAuthorWithProcessedColor.tsx") /* getMessageAuthorWithProcessedColor */;
+  let obj = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   const messageReference = message.messageReference;
   let channel_id;
@@ -18,7 +21,7 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
   channel = channel.getChannel(channel_id);
   const intl = tmp(1236).intl;
   obj = { actorName: messageAuthorWithProcessedColor.nick, actorHook: null, threadName: null, threadOnClick: null };
-  obj[1] = require("formatUsernameOnClick.tsx")({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
+  obj[1] = formatUsernameOnClick({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   if (null != channel) {
     let content = tmp(4475).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
     const tmpResult = tmp(4475);
@@ -33,6 +36,6 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
   }
   obj = { content: intl.formatToParts(tmp(1236).t.veX9jq, obj) };
   obj[3] = { action: "bindOpenThreadChannel", threadId: channel_id1, medium: true };
-  const merged = Object.assign(require("createCommonMessage.tsx")(roleStyle));
+  const merged = Object.assign(createCommonMessage(roleStyle));
   return obj;
 };

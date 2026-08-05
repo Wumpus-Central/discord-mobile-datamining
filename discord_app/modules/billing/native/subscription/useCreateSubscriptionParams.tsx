@@ -1,3 +1,4 @@
+import { useToggleOnIAPSuccess } from "useToggleOnIAPSuccess.tsx";
 // discord_app/modules/billing/native/subscription/useCreateSubscriptionParams.tsx
 import noop from "noop";
 
@@ -7,7 +8,7 @@ const result = require("v1").fileFinishedImporting("modules/billing/native/subsc
 export default function useCreateSubscriptionParams(arg0, arg1) {
   let closure_0 = arg0;
   const importDefault = arg1;
-  const tmp = require("useToggleOnIAPSuccess.tsx")();
+  const tmp = useToggleOnIAPSuccess();
   const dependencyMap = tmp;
   let items = [arg0, arg1, tmp];
   return React.useMemo(() => {

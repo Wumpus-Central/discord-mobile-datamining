@@ -1,3 +1,4 @@
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 // discord_app/modules/safety_hub/native/SafetyHubPage.tsx
 import expandEventProperties from "expandEventProperties";
 import get_ActivityIndicator from "useMountLayoutEffect";
@@ -16,7 +17,7 @@ let map1;
 let unpackModuleId;
 const require = arg1;
 function AutomatedUnderageAppealStatus() {
-  let obj = require("../../../../discord_common/js/packages/flux/index.tsx") /* initialize */;
+  let obj = initialize /* initialize */;
   const items = [handleSafetyHubRequestAgeVerificationResetModalAction];
   const stateFromStores = obj.useStateFromStores(items, () => ageCheckStatus.getAgeCheckStatus());
   if (AgeCheckStatus.SUCCESS === stateFromStores) {

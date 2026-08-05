@@ -1,3 +1,6 @@
+import { Text } from "../../../design/components/Text/native/Text.tsx";
+import { ApplicationIconAndName } from "../../user_profile/native/ApplicationIconAndName.tsx";
+import { ForYouMentionPlaceholder } from "ForYouMentionPlaceholder.tsx";
 // discord_app/modules/notification_center/native/ForYouItems.tsx
 import addApplication from "addApplication";
 import handleSupportedURL from "handleSupportedURL";
@@ -32,7 +35,7 @@ const require = arg1;
 function ForYouFooter(loading) {
   let tmp = null;
   if (loading.loading) {
-    tmp = callback(require("ForYouMentionPlaceholder.tsx") /* ForYouMentionPlaceholder */.ForYouMentionPlaceholder, {});
+    tmp = callback(ForYouMentionPlaceholder /* ForYouMentionPlaceholder */.ForYouMentionPlaceholder, {});
   }
   return tmp;
 }
@@ -55,7 +58,7 @@ function Callout(arg0) {
   }
   obj1[2] = num;
   obj1[3] = parser(item.callout);
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx") /* Text */.Text, obj1);
+  items[1] = callback(Text /* Text */.Text, obj1);
   obj[2] = items;
   return closure_22(closure_7, obj);
 }
@@ -275,7 +278,7 @@ function ApplicationName(applicationId) {
     obj = { application: null, textVariant: null, iconSize: 16 };
     obj[0] = stateFromStores;
     obj[1] = applicationId.textVariant;
-    tmp5 = callback(require("../../user_profile/native/ApplicationIconAndName.tsx"), obj, stateFromStores.id);
+    tmp5 = callback(ApplicationIconAndName, obj, stateFromStores.id);
   }
   return tmp5;
 }

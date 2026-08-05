@@ -1,3 +1,4 @@
+import { allSettled } from "../../../_runtime/04523_allSettled.js";
 // discord_app/modules/forwarding/ForwardActionCreators.tsx
 import _slicedToArray from "_slicedToArray";
 import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING";
@@ -172,7 +173,7 @@ let obj = {
   sendForwards(outer1_8, c1, arg2) {
     let closure_0 = outer1_8;
     const importDefault = arg2;
-    return require("../../../_runtime/04523_allSettled.js")(c1.map((alsoForwardToChannelId) => outer1_9.sendForward(closure_0, alsoForwardToChannelId, closure_1)));
+    return allSettled(c1.map((alsoForwardToChannelId) => outer1_9.sendForward(closure_0, alsoForwardToChannelId, closure_1)));
   }
 };
 let result = require("ensureGuildLoaded").fileFinishedImporting("modules/forwarding/ForwardActionCreators.tsx");

@@ -1,3 +1,4 @@
+import { LockedIcon } from "FormDropdown.tsx";
 // discord_app/modules/guild_role_subscriptions/native/components/FormTrialIntervalPicker.tsx
 import "noop";
 import { jsx } from "jsxProd";
@@ -41,7 +42,7 @@ export default function FormTrialIntervalPicker(disabled) {
     },
     disabled: disabled.disabled
   };
-  return jsx(require("FormDropdown.tsx"), {
+  return jsx(LockedIcon, {
     label: stringResult,
     onPress() {
       let obj = outer1_1(outer1_2[5]);
