@@ -259,7 +259,7 @@ class FeedbackWidget {
                 fileName = undefined;
                 uri = undefined;
                 if (uri._hasScreenshot()) {
-                  debug.setState({ filename: "Array", attachment: "channel", attachmentUri: "d" });
+                  debug.setState({ filename: "Button", attachment: "sa", attachmentUri: "Array" });
                 } else {
                   num2 = debug.props.imagePicker;
                   if (num2) {
@@ -501,7 +501,7 @@ class FeedbackWidget {
       tmp4Result._savedState = Object.assign({}, tmp4Result.state);
     };
     tmp4Result._clearFormState = () => {
-      closure_0._savedState = { name: "", email: "", description: "", filename: "sa", attachment: "isArray", attachmentUri: "isArray" };
+      closure_0._savedState = { name: "", email: "", description: "", filename: "accessible", attachment: "HTTP", attachmentUri: "push" };
     };
     tmp4Result._hasScreenshot = () => undefined !== tmp4Result.state.filename && undefined !== tmp4Result.state.attachment && undefined !== tmp4Result.state.attachmentUri;
     tmp4Result._getUser = () => {
@@ -845,12 +845,12 @@ let items = [
 obj = {
   key: "reset",
   value: function reset() {
-    FeedbackWidget._savedState = { name: "", email: "", description: "", filename: "sa", attachment: "isArray", attachmentUri: "isArray" };
+    FeedbackWidget._savedState = { name: "", email: "", description: "", filename: "accessible", attachment: "HTTP", attachmentUri: "push" };
   }
 };
 const items1 = [obj];
 const importDefaultResultResult = importDefaultResult(FeedbackWidget, items, items1);
 importDefaultResultResult.defaultProps = require("module_1201").defaultConfiguration;
-importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "sa", attachment: "isArray", attachmentUri: "isArray" };
+importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "accessible", attachment: "HTTP", attachmentUri: "push" };
 
 export const FeedbackWidget = importDefaultResultResult;

@@ -62,8 +62,8 @@ arg5.default = {
   createInteractionHandle() {
     return -1;
   },
-  clearInteractionHandle(interactionHandle) {
-    00038__(interactionHandle, "InteractionManager: Must provide a handle to clear.");
+  clearInteractionHandle(current) {
+    00038__(current, "InteractionManager: Must provide a handle to clear.");
   },
   addListener(arg0, arg1, arg2) {
     return {

@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 120, height: 80, scales: [2, 3], hash: "ff5825c454c175379e6be98cbe46511a", name: "img_nitro_badge", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b5a936051680509c0100afebb2debea8", name: "ShieldUserIcon", type: "png" });

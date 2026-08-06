@@ -1,6 +1,6 @@
 // _runtime/01490_openDrawer.js
 let obj = {};
-let merged = Object.assign(require("getRouteHistory").TabActions);
+let merged = Object.assign(require("TabRouter").TabActions);
 obj.openDrawer = function openDrawer() {
   return { type: "OPEN_DRAWER" };
 };
@@ -11,19 +11,21 @@ obj.toggleDrawer = function toggleDrawer() {
   return { type: "TOGGLE_DRAWER" };
 };
 
-export default function DrawerRouter(defaultStatus) {
+export const DrawerActions = obj;
+export const DrawerRouter = function DrawerRouter(defaultStatus) {
   let str = defaultStatus.defaultStatus;
   if (str === undefined) {
     str = "closed";
   }
-  let importDefault;
+  let dependencyMap;
   let isDrawerInHistory;
   let addDrawerToHistory;
   let removeDrawerFromHistory;
   let closeDrawer;
   let merged = Object.assign(defaultStatus, Object.create(null));
-  const tmp2 = importDefault(isDrawerInHistory[0])(merged);
-  importDefault = tmp2;
+  let obj = str(1492);
+  const SwitchRouterResult = obj.SwitchRouter(merged);
+  dependencyMap = SwitchRouterResult;
   isDrawerInHistory = function isDrawerInHistory(arg0) {
 
   };
@@ -86,8 +88,8 @@ export default function DrawerRouter(defaultStatus) {
     }
     return tmp7;
   };
-  let obj = {};
-  let merged1 = Object.assign(tmp2);
+  obj = {};
+  let merged1 = Object.assign(SwitchRouterResult);
   obj.type = "drawer";
   obj.getInitialState = function getInitialState(routeNames) {
     let obj = {};
@@ -96,18 +98,23 @@ export default function DrawerRouter(defaultStatus) {
     obj.default = str;
     obj.stale = false;
     obj.type = "drawer";
-    obj.key = "drawer-" + str(isDrawerInHistory[1]).nanoid();
+    obj.key = "drawer-" + str(_undefined[2]).nanoid();
     return obj;
   };
   obj.getRehydratedState = function getRehydratedState(stale) {
     if (false === stale.stale) {
       return stale;
     } else {
-      let obj = { routeNames: null, routeParamList: null, routeGetIdList: null };
+      let obj = {};
+      obj = { routeNames: null, routeParamList: null, routeGetIdList: null };
       obj[0] = tmp;
       obj[1] = tmp2;
       obj[2] = tmp3;
-      const rehydratedState = _undefined.getRehydratedState(stale, obj);
+      const merged = Object.assign(_undefined.getRehydratedState(stale, obj));
+      obj.default = str;
+      obj.type = "drawer";
+      const _HermesInternal = HermesInternal;
+      obj.key = "drawer-" + str(_undefined[2]).nanoid();
       if (typeof isDrawerInHistory !== "function") {
         HermesBuiltin.throwTypeError();
       }
@@ -116,63 +123,57 @@ export default function DrawerRouter(defaultStatus) {
       if (history != null) {
         someResult = history.some((type) => "drawer" === type.type);
       }
-      let tmp7 = rehydratedState;
+      let tmp6 = obj;
       if (Boolean(someResult)) {
         if (typeof removeDrawerFromHistory !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp31 !== "function") {
+        if (typeof tmp28 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        const history2 = rehydratedState.history;
+        const history2 = obj.history;
         let someResult1;
         if (history2 != null) {
           someResult1 = history2.some((type) => "drawer" === type.type);
         }
-        let tmp10 = rehydratedState;
+        let tmp9 = obj;
         if (Boolean(someResult1)) {
           obj = {};
-          const merged = Object.assign(rehydratedState);
-          history = rehydratedState.history;
+          const merged1 = Object.assign(obj);
+          history = obj.history;
           obj.history = history.filter((type) => "drawer" !== type.type);
-          tmp10 = obj;
+          tmp9 = obj;
         }
         if (typeof addDrawerToHistory !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp31 !== "function") {
+        if (typeof tmp28 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        const history3 = tmp10.history;
+        const history3 = tmp9.history;
         let someResult2;
         if (history3 != null) {
           someResult2 = history3.some((type) => "drawer" === type.type);
         }
-        let tmp16 = tmp10;
+        let tmp15 = tmp9;
         if (!Boolean(someResult2)) {
-          obj = {};
-          const merged1 = Object.assign(tmp10);
+          const obj1 = {};
+          const merged2 = Object.assign(tmp9);
           const items = [];
-          let str = "open";
+          str = "open";
           if ("open" === str) {
             str = "closed";
           }
-          const obj1 = { type: "drawer", status: null };
-          obj1[1] = str;
-          items[HermesBuiltin.arraySpread(tmp10.history, 0)] = obj1;
-          obj.history = items;
-          tmp16 = obj;
-          const arraySpreadResult = HermesBuiltin.arraySpread(tmp10.history, 0);
+          const obj2 = { type: "drawer", status: null };
+          obj2[1] = str;
+          items[HermesBuiltin.arraySpread(tmp9.history, 0)] = obj2;
+          obj1.history = items;
+          tmp15 = obj1;
+          const arraySpreadResult = HermesBuiltin.arraySpread(tmp9.history, 0);
         }
-        tmp7 = tmp16;
+        tmp6 = tmp15;
       }
-      const obj2 = {};
-      const merged2 = Object.assign(tmp7);
-      obj2.default = str;
-      obj2.type = "drawer";
-      const _HermesInternal = HermesInternal;
-      obj2.key = "drawer-" + str(isDrawerInHistory[1]).nanoid();
-      return obj2;
+      return tmp6;
     }
   };
   obj.getStateForRouteFocus = function getStateForRouteFocus(arg0, arg1) {
@@ -297,42 +298,44 @@ export default function DrawerRouter(defaultStatus) {
     } else {
       if ("JUMP_TO" !== type) {
         if ("NAVIGATE" !== type) {
-          if ("GO_BACK" === type) {
-            if (typeof isDrawerInHistory !== "function") {
-              HermesBuiltin.throwTypeError();
-            }
-            history = history.history;
-            let someResult5;
-            if (history != null) {
-              someResult5 = history.some((type) => "drawer" === type.type);
-            }
-            if (Boolean(someResult5)) {
-              if (typeof removeDrawerFromHistory !== "function") {
-                HermesBuiltin.throwTypeError();
-              }
+          if ("NAVIGATE_DEPRECATED" !== type) {
+            if ("GO_BACK" === type) {
               if (typeof isDrawerInHistory !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              let history2 = history.history;
-              let someResult6;
-              if (history2 != null) {
-                someResult6 = history2.some((type) => "drawer" === type.type);
+              history = history.history;
+              let someResult5;
+              if (history != null) {
+                someResult5 = history.some((type) => "drawer" === type.type);
               }
-              let tmp10 = history;
-              if (Boolean(someResult6)) {
-                obj = {};
-                const merged4 = Object.assign(history);
-                history2 = history.history;
-                obj.history = history2.filter((type) => "drawer" !== type.type);
-                tmp10 = obj;
+              if (Boolean(someResult5)) {
+                if (typeof removeDrawerFromHistory !== "function") {
+                  HermesBuiltin.throwTypeError();
+                }
+                if (typeof isDrawerInHistory !== "function") {
+                  HermesBuiltin.throwTypeError();
+                }
+                let history2 = history.history;
+                let someResult6;
+                if (history2 != null) {
+                  someResult6 = history2.some((type) => "drawer" === type.type);
+                }
+                let tmp10 = history;
+                if (Boolean(someResult6)) {
+                  obj = {};
+                  const merged4 = Object.assign(history);
+                  history2 = history.history;
+                  obj.history = history2.filter((type) => "drawer" !== type.type);
+                  tmp10 = obj;
+                }
+                let stateForAction = tmp10;
+              } else {
+                stateForAction = _undefined.getStateForAction(history, type, arg2);
               }
-              let stateForAction = tmp10;
+              return stateForAction;
             } else {
-              stateForAction = _undefined.getStateForAction(history, type, arg2);
+              return _undefined.getStateForAction(history, type, arg2);
             }
-            return stateForAction;
-          } else {
-            return _undefined.getStateForAction(history, type, arg2);
           }
         }
       }
@@ -340,14 +343,16 @@ export default function DrawerRouter(defaultStatus) {
       let tmp17 = stateForAction1;
       if (null != stateForAction1) {
         tmp17 = stateForAction1;
-        if (stateForAction1.index !== history.index) {
-          tmp17 = closeDrawer(stateForAction1);
+        if (false === stateForAction1.stale) {
+          tmp17 = stateForAction1;
+          if (stateForAction1.index !== history.index) {
+            tmp17 = closeDrawer(stateForAction1);
+          }
         }
       }
       return tmp17;
     }
   };
-  obj.actionCreators = addDrawerToHistory;
+  obj.actionCreators = isDrawerInHistory;
   return obj;
 };
-export const DrawerActions = obj;

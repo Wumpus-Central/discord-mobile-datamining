@@ -1,19 +1,21 @@
 // _runtime/05426__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
+import _createClass from "_createClass";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
+import _inherits from "_inherits";
+import noop from "noop";
+import get_ActivityIndicator from "MountRegistry";
+import { jsx } from "jsxProd";
+import toArray from "toArray";
+import { RNGestureHandlerModule } from "05416_RNGestureHandlerModule.js";
+import { transformIntoHandlerTags } from "05430_transformIntoHandlerTags.js";
+import { 05431__ } from "metro/05431__.js";
 
-let I18nManager;
-let StyleSheet;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
-let Swipeable = arg1;
+let DeviceEventEmitter;
+let Platform;
+let UIManager;
+const require = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -33,467 +35,506 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-({ Animated: c5, StyleSheet, View: closure_6, I18nManager } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
-class Swipeable {
-  constructor(arg0) {
-    self = this;
-    tmp = _isNativeReflectConstruct(this, apply);
-    items = [];
-    items[0] = global;
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
-    tmp3 = _isNativeReflectConstruct;
-    if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
-    tmp3Result.updateAnimatedEvent = (overshootFriction, rowWidth) => {
-      let dragX;
-      let leftWidth;
-      overshootFriction = overshootFriction.overshootFriction;
-      ({ dragX, leftWidth } = rowWidth);
-      let num = 0;
-      if (undefined !== leftWidth) {
-        num = leftWidth;
-      }
-      rowWidth = rowWidth.rowWidth;
-      let num2 = 0;
-      if (undefined !== rowWidth) {
-        num2 = rowWidth;
-      }
-      let rightOffset = rowWidth.rightOffset;
-      if (undefined === rightOffset) {
-        rightOffset = num2;
-      }
-      const bound = Math.max(0, num2 - rightOffset);
-      let overshootLeft = overshootFriction.overshootLeft;
-      if (undefined === overshootLeft) {
-        overshootLeft = num > 0;
-      }
-      let overshootRight = overshootFriction.overshootRight;
-      if (undefined === overshootRight) {
-        overshootRight = bound > 0;
-      }
-      const items = [0, overshootFriction.friction];
-      let obj = { inputRange: items1, outputRange: null };
-      items1 = [-bound - 1, -bound, num, num + 1];
-      let num3 = 0;
-      if (overshootRight) {
-        num3 = 1 / overshootFriction;
-      }
-      const items2 = [-bound - num3, -bound, num, ];
-      let num4 = 0;
-      if (overshootLeft) {
-        num4 = 1 / overshootFriction;
-      }
-      items2[3] = num + num4;
-      obj[1] = items2;
-      const interpolateResult = outer1_5.add(rowWidth.rowTranslation, dragX.interpolate({ inputRange: items, outputRange: [0, 1] })).interpolate(obj);
-      closure_0.transX = interpolateResult;
-      if (num > 0) {
-        obj = { inputRange: null, outputRange: null };
-        const items3 = [-1, 0, num];
-        obj[0] = items3;
-        obj[1] = [0, 0, 1];
-        let interpolateResult1 = interpolateResult.interpolate(obj);
+({ Platform, UIManager, DeviceEventEmitter } = get_ActivityIndicator);
+require("customDirectEventTypes").customDirectEventTypes.topGestureHandlerEvent = { registrationName: "onGestureHandlerEvent" };
+let obj = { onGestureHandlerEvent: { registrationName: "onGestureHandlerEvent" }, onGestureHandlerStateChange: { registrationName: "onGestureHandlerStateChange" } };
+toArray = toArray.isFabric();
+if (toArray) {
+  obj = { topOnGestureHandlerEvent: null, topOnGestureHandlerStateChange: null };
+  obj[0] = { registrationName: "onGestureHandlerEvent" };
+  obj[1] = { registrationName: "onGestureHandlerStateChange" };
+  toArray = obj;
+}
+toArray = Object.assign(toArray);
+obj = {};
+let merged1 = Object.assign(UIManager.genericDirectEventTypes);
+const merged2 = Object.assign(obj);
+UIManager.genericDirectEventTypes = obj;
+const getViewManagerConfig = UIManager.getViewManagerConfig;
+let viewManagerConfig;
+if (getViewManagerConfig != null) {
+  viewManagerConfig = getViewManagerConfig("getConstants");
+}
+if (viewManagerConfig) {
+  toArray = {};
+  const merged3 = Object.assign(viewManagerConfig.genericDirectEventTypes);
+  const merged4 = Object.assign(obj);
+  viewManagerConfig.genericDirectEventTypes = toArray;
+}
+let fn = UIManager.setJSResponder;
+if (undefined === fn) {
+  fn = () => {
+
+  };
+}
+let fn2 = UIManager.clearJSResponder;
+if (undefined === fn2) {
+  fn2 = () => {
+
+  };
+}
+UIManager.setJSResponder = (D, __getInternalProperties) => {
+  RNGestureHandlerModule.handleSetJSResponder(D, __getInternalProperties);
+  fn(D, __getInternalProperties);
+};
+UIManager.clearJSResponder = () => {
+  const result = RNGestureHandlerModule.handleClearJSResponder();
+  fn2();
+};
+let closure_12 = { [arg1(5412).State.UNDETERMINED]: undefined, [arg1(5412).State.BEGAN]: "onBegan", [arg1(5412).State.FAILED]: "onFailed", [arg1(5412).State.CANCELLED]: "onCancelled", [arg1(5412).State.ACTIVE]: "onActivated", [arg1(5412).State.END]: "onEnded" };
+
+export default function createHandler(name) {
+  let _classCallCheck;
+  let customNativeProps;
+  name = name.name;
+  const Handler = name;
+  let allowedProps = name.allowedProps;
+  if (allowedProps === undefined) {
+    allowedProps = [];
+  }
+  let config = name.config;
+  if (config === undefined) {
+    config = {};
+  }
+  ({ transformProps: _classCallCheck, customNativeProps } = name);
+  if (customNativeProps === undefined) {
+    customNativeProps = [];
+  }
+  class Handler {
+    constructor(arg0) {
+      self = this;
+      tmp = _isNativeReflectConstruct(this, apply);
+      items = [];
+      items[0] = name;
+      tmp2 = _isNativeReflectConstruct;
+      obj = _isNativeReflectConstruct(apply);
+      tmp3 = _isNativeReflectConstruct;
+      if (_isNativeReflectConstruct()) {
+        tmp5 = globalThis;
+        _Reflect = Reflect;
+        constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
       } else {
-        interpolateResult1 = new tmp2.Value(0);
+        constructResult = obj.apply(self, items);
       }
-      closure_0.showLeftAction = interpolateResult1;
-      const showLeftAction = tmp4.showLeftAction;
-      const items4 = [0, Number.MIN_VALUE];
-      closure_0.leftActionTranslate = showLeftAction.interpolate({ inputRange: items4, outputRange: [-10000, 0], extrapolate: "clamp" });
-      if (bound > 0) {
-        const obj1 = { inputRange: null, outputRange: null };
-        const items5 = [-bound, 0, 1];
-        obj1[0] = items5;
-        obj1[1] = [1, 0, 0];
-        let interpolateResult2 = interpolateResult.interpolate(obj1);
-      } else {
-        interpolateResult2 = new tmp2.Value(0);
-      }
-      closure_0.showRightAction = interpolateResult2;
-      const showRightAction = tmp4.showRightAction;
-      const items6 = [0, Number.MIN_VALUE];
-      closure_0.rightActionTranslate = showRightAction.interpolate({ inputRange: items6, outputRange: [-10000, 0], extrapolate: "clamp" });
-    };
-    tmp3Result.onTapHandlerStateChange = (nativeEvent) => {
-      if (nativeEvent.nativeEvent.oldState === tmp3Result(outer1_1[8]).State.ACTIVE) {
-        tmp3Result.close();
-      }
-    };
-    tmp3Result.onHandlerStateChange = (nativeEvent) => {
-      if (nativeEvent.nativeEvent.oldState === tmp3Result(outer1_1[8]).State.ACTIVE) {
-        tmp3Result.handleRelease(nativeEvent);
-      }
-      if (nativeEvent.nativeEvent.state === tmp3Result(outer1_1[8]).State.ACTIVE) {
-        nativeEvent = nativeEvent.nativeEvent;
-        const rowState = tmp3Result.state.rowState;
-        let str = "right";
-        let str2 = "right";
-        if (-1 !== rowState) {
-          if (1 === rowState) {
-            str = "left";
-          }
-          str2 = str;
-        }
-        if (0 === rowState) {
-          const props2 = tmp11.props;
-          const onSwipeableOpenStartDrag = props2.onSwipeableOpenStartDrag;
-          if (onSwipeableOpenStartDrag != null) {
-            const result = onSwipeableOpenStartDrag(str2);
+      tmp3Result = tmp3(self, constructResult);
+      apply = tmp3Result;
+      tmp3Result.handlerTag = -1;
+      tmp3Result.onGestureHandlerEvent = (nativeEvent) => {
+        if (nativeEvent.nativeEvent.handlerTag === tmp3Result.handlerTag) {
+          if (typeof tmp.props.onGestureEvent === "function") {
+            const props2 = tmp.props;
+            const onGestureEvent = props2.onGestureEvent;
+            if (onGestureEvent != null) {
+              onGestureEvent(nativeEvent);
+            }
           }
         } else {
-          const props = tmp11.props;
-          const onSwipeableCloseStartDrag = props.onSwipeableCloseStartDrag;
-          if (onSwipeableCloseStartDrag != null) {
-            const result1 = onSwipeableCloseStartDrag(str2);
+          const props = tmp.props;
+          if (props.onGestureHandlerEvent != null) {
+            const result = onGestureHandlerEvent(nativeEvent);
           }
         }
-      }
-    };
-    tmp3Result.handleRelease = (nativeEvent) => {
-      let friction;
-      let leftThreshold;
-      let translationX;
-      let velocityX;
-      ({ velocityX, translationX } = nativeEvent.nativeEvent);
-      const state = tmp3Result.state;
-      const leftWidth = state.leftWidth;
-      let num = 0;
-      if (undefined !== leftWidth) {
-        num = leftWidth;
-      }
-      const rowWidth = state.rowWidth;
-      let num2 = 0;
-      if (undefined !== rowWidth) {
-        num2 = rowWidth;
-      }
-      const rowState = state.rowState;
-      let rightOffset = obj.state.rightOffset;
-      if (undefined === rightOffset) {
-        rightOffset = num2;
-      }
-      const diff = num2 - rightOffset;
-      const props = obj.props;
-      ({ friction, leftThreshold } = props);
-      if (undefined === leftThreshold) {
-        leftThreshold = num / 2;
-      }
-      let rightThreshold = props.rightThreshold;
-      if (undefined === rightThreshold) {
-        rightThreshold = diff / 2;
-      }
-      const result = (translationX + 0.05 * velocityX) / friction;
-      const sum = obj.currentOffset() + translationX / friction;
-      if (0 === rowState) {
-        let num6 = num;
-        if (result <= leftThreshold) {
-          num6 = 0;
-          if (result < -rightThreshold) {
-            num6 = -diff;
+      };
+      tmp3Result.onGestureHandlerStateChange = (nativeEvent) => {
+        if (nativeEvent.nativeEvent.handlerTag === tmp3Result.handlerTag) {
+          if (typeof tmp.props.onHandlerStateChange === "function") {
+            const props2 = tmp.props;
+            if (props2.onHandlerStateChange != null) {
+              onHandlerStateChange(nativeEvent);
+            }
+          }
+          let tmp7 = tmp6;
+          if (outer2_12[nativeEvent.nativeEvent.state]) {
+            tmp7 = tmp.props[tmp6];
+          }
+          let tmp8 = tmp7;
+          if (tmp7) {
+            tmp8 = typeof tmp7 === "function";
+          }
+          if (tmp8) {
+            tmp7(nativeEvent);
+          }
+        } else {
+          const props = tmp.props;
+          if (props.onGestureHandlerStateChange != null) {
+            const result = onGestureHandlerStateChange(nativeEvent);
           }
         }
-      } else if (1 === rowState) {
-        num6 = 0;
-        if (result > -leftThreshold) {
-          num6 = num;
+      };
+      tmp3Result.refHandler = (viewNode) => {
+        tmp3Result.viewNode = viewNode;
+        const Children = outer2_8.Children;
+        const onlyResult = Children.only(tmp3Result.props.children);
+        if (obj.isReact19()) {
+          const props = onlyResult.props;
+          let ref;
+          if (props != null) {
+            ref = props.ref;
+          }
+        } else if (onlyResult != null) {
+          ref = onlyResult.ref;
         }
-      } else {
-        num6 = 0;
-        if (result < rightThreshold) {
-          num6 = -diff;
-        }
-      }
-      tmp3Result.animateRow(sum, num6, velocityX / friction);
-    };
-    tmp3Result.animateRow = (arg0, toValue, velocity) => {
-      let dragX;
-      let rowTranslation;
-      let closure_1 = toValue;
-      ({ dragX, rowTranslation } = arg0.state);
-      dragX.setValue(0);
-      rowTranslation.setValue(arg0);
-      let obj = { rowState: Math.sign(toValue) };
-      arg0.setState(obj);
-      obj = { restSpeedThreshold: 1.7, restDisplacementThreshold: 0.4, velocity, bounciness: 0, toValue, useNativeDriver: tmp3Result.props.useNativeAnimations };
-      const merged = Object.assign(tmp3Result.props.animationOptions);
-      outer1_5.spring(rowTranslation, obj).start((finished) => {
-        if (finished.finished) {
-          if (closure_1 > 0) {
-            const props4 = closure_0.props;
-            const onSwipeableLeftOpen = props4.onSwipeableLeftOpen;
-            if (onSwipeableLeftOpen != null) {
-              onSwipeableLeftOpen();
-            }
-            const props5 = closure_0.props;
-            const onSwipeableOpen2 = props5.onSwipeableOpen;
-            if (onSwipeableOpen2 != null) {
-              onSwipeableOpen2("left", closure_0);
-            }
-          } else if (tmp < 0) {
-            const props2 = closure_0.props;
-            const onSwipeableRightOpen = props2.onSwipeableRightOpen;
-            if (onSwipeableRightOpen != null) {
-              onSwipeableRightOpen();
-            }
-            const props3 = closure_0.props;
-            const onSwipeableOpen = props3.onSwipeableOpen;
-            if (onSwipeableOpen != null) {
-              onSwipeableOpen("right", closure_0);
-            }
+        if (ref) {
+          if (typeof ref === "function") {
+            ref(viewNode);
           } else {
-            let str = "right";
-            if (closure_0 > 0) {
-              str = "left";
+            ref.current = viewNode;
+          }
+        }
+      };
+      tmp3Result.createGestureHandler = (config) => {
+        tmp3Result.handlerTag = Handler(config[12]).getNextHandlerTag();
+        tmp3Result.config = config;
+        const obj = Handler(config[12]);
+        allowedProps(config[10]).createGestureHandler(tmp3Result, tmp3Result.handlerTag, config);
+      };
+      tmp3Result.attachGestureHandler = (viewTag) => {
+        tmp3Result.viewTag = viewTag;
+        let obj = Handler(config[13]);
+        obj = { onGestureEvent: tmp3Result.onGestureHandlerEvent, onGestureStateChange: tmp3Result.onGestureHandlerStateChange };
+        let result = obj.registerOldGestureHandler(tmp3Result.handlerTag, obj);
+        const props = tmp3Result.props;
+        let onGestureEvent;
+        if (props != null) {
+          onGestureEvent = props.onGestureEvent;
+        }
+        let tmp6 = onGestureEvent;
+        if (onGestureEvent) {
+          let tmp7 = "current" in onGestureEvent;
+          if (!tmp7) {
+            tmp7 = "workletEventHandler" in onGestureEvent;
+          }
+          tmp6 = tmp7;
+        }
+        const props2 = tmp.props;
+        if (!tmp6) {
+          if (!onHandlerStateChange) {
+            if (onGestureEvent) {
+              if ("__isNative" in onGestureEvent) {
+                let REANIMATED_WORKLET = tmp2(tmp3[14]).ActionType.NATIVE_ANIMATED_EVENT;
+              }
             }
-            const props = closure_0.props;
-            const onSwipeableClose = props.onSwipeableClose;
-            if (onSwipeableClose != null) {
-              onSwipeableClose(str, closure_0);
+            REANIMATED_WORKLET = tmp2(tmp3[14]).ActionType.JS_FUNCTION_OLD_API;
+          }
+          allowedProps(tmp3[10]).attachGestureHandler(tmp.handlerTag, viewTag, REANIMATED_WORKLET);
+          let tmp2Result = tmp2(tmp3[15]);
+          const result1 = tmp2Result.scheduleFlushOperations();
+          tmp2Result = tmp2(tmp3[16]);
+          tmp2Result.ghQueueMicrotask(() => {
+            const MountRegistry = callback(outer2_2[17]).MountRegistry;
+            const result = MountRegistry.gestureHandlerWillMount(callback);
+          });
+        }
+        REANIMATED_WORKLET = tmp2(tmp3[14]).ActionType.REANIMATED_WORKLET;
+      };
+      tmp3Result.updateGestureHandler = (config) => {
+        tmp3Result.config = config;
+        allowedProps(config[10]).updateGestureHandler(tmp3Result.handlerTag, config);
+        const obj = allowedProps(config[10]);
+        const result = Handler(config[15]).scheduleFlushOperations();
+      };
+      tmp3Result.config = {};
+      tmp3Result.propsRef = noop.createRef();
+      tmp3Result.isMountedRef = noop.createRef();
+      tmp3Result.state = { allowTouches: true };
+      if (name.id) {
+        tmp7 = closure_0;
+        tmp8 = closure_2;
+        if (undefined !== closure_0(closure_2[13]).handlerIDToTag[name.id]) {
+          tmp9 = globalThis;
+          _Error = Error;
+          _HermesInternal = HermesInternal;
+          str = "\" already registered";
+          str2 = "Handler with ID \"";
+          tmp10 = new.target;
+          tmp11 = new.target;
+          error = new Error("Handler with ID \"" + name.id + "\" already registered");
+          tmp13 = error;
+          throw error;
+        } else {
+          tmp7(tmp8[13]).handlerIDToTag[name.id] = tmp3Result.handlerTag;
+        }
+      }
+      return tmp3Result;
+    }
+  }
+  callback(Handler, Component.Component);
+  let items = [
+    {
+      key: "componentDidMount",
+      value: function componentDidMount() {
+        let self = this;
+        self = this;
+        const props = this.props;
+        this.isMountedRef.current = true;
+        if (Array.isArray(props.simultaneousHandlers)) {
+          let someResult = simultaneousHandlers.some((current) => {
+            let tmp = current;
+            if (current) {
+              tmp = null === current.current;
+            }
+            return tmp;
+          });
+        } else {
+          someResult = simultaneousHandlers;
+          if (simultaneousHandlers) {
+            someResult = null === simultaneousHandlers.current;
+          }
+        }
+        if (someResult) {
+          if (someResult) {
+            05431__.ghQueueMicrotask(() => {
+              self.update(1);
+            });
+            const obj = 05431__;
+          }
+          const props2 = self.props;
+          const items = [];
+          const obj2 = transformIntoHandlerTags;
+          HermesBuiltin.arraySpread(customNativeProps, HermesBuiltin.arraySpread(allowedProps, 0));
+          self.createGestureHandler(obj2.filterConfig(outer1_3 ? outer1_3(props2) : props2, items, config));
+          if (self.viewNode) {
+            self.attachGestureHandler(require("05433_get_ActivityIndicator.js") /* get ActivityIndicator */(self.viewNode));
+          } else {
+            const _Error = Error;
+            const _HermesInternal = HermesInternal;
+            const error = new Error("[Gesture Handler] Failed to obtain view for " + self.displayName + ". Note that old API doesn't support functional components.");
+            throw error;
+          }
+          const tmp11 = outer1_3 ? outer1_3(props2) : props2;
+        } else {
+          const waitFor = props.waitFor;
+          const _Array = Array;
+          if (Array.isArray(waitFor)) {
+            let someResult1 = waitFor.some((current) => {
+              let tmp = current;
+              if (current) {
+                tmp = null === current.current;
+              }
+              return tmp;
+            });
+          } else {
+            someResult1 = waitFor;
+            if (waitFor) {
+              someResult1 = null === waitFor.current;
             }
           }
         }
-      });
-      if (toValue > 0) {
-        let props4 = tmp.props;
-        const onSwipeableLeftWillOpen = props4.onSwipeableLeftWillOpen;
-        if (onSwipeableLeftWillOpen != null) {
-          const result = onSwipeableLeftWillOpen();
-        }
-        let props5 = tmp.props;
-        const onSwipeableWillOpen2 = props5.onSwipeableWillOpen;
-        if (onSwipeableWillOpen2 != null) {
-          onSwipeableWillOpen2("left");
-        }
-      } else if (toValue < 0) {
-        let props2 = tmp.props;
-        const onSwipeableRightWillOpen = props2.onSwipeableRightWillOpen;
-        if (onSwipeableRightWillOpen != null) {
-          const result1 = onSwipeableRightWillOpen();
-        }
-        let props3 = tmp.props;
-        const onSwipeableWillOpen = props3.onSwipeableWillOpen;
-        if (onSwipeableWillOpen != null) {
-          onSwipeableWillOpen("right");
-        }
-      } else {
-        let str = "right";
-        if (arg0 > 0) {
-          str = "left";
-        }
-        let props = tmp.props;
-        const onSwipeableWillClose = props.onSwipeableWillClose;
-        if (onSwipeableWillClose != null) {
-          onSwipeableWillClose(str);
-        }
       }
-    };
-    tmp3Result.onRowLayout = (nativeEvent) => {
-      tmp3Result.setState({ rowWidth: nativeEvent.nativeEvent.layout.width });
-    };
-    tmp3Result.currentOffset = () => {
-      const state = tmp3Result.state;
-      const leftWidth = state.leftWidth;
-      let num = 0;
-      if (undefined !== leftWidth) {
-        num = leftWidth;
+    },
+    {
+      key: "componentDidUpdate",
+      value: function componentDidUpdate() {
+        const self = this;
+        const tmp = allowedProps(config[18])(this.viewNode);
+        if (this.viewTag !== tmp) {
+          self.attachGestureHandler(tmp);
+        }
+        self.update(1);
       }
-      const rowWidth = state.rowWidth;
-      let num2 = 0;
-      if (undefined !== rowWidth) {
-        num2 = rowWidth;
+    },
+    {
+      key: "componentWillUnmount",
+      value: function componentWillUnmount() {
+        const self = this;
+        const inspectorToggleListener = this.inspectorToggleListener;
+        if (inspectorToggleListener != null) {
+          inspectorToggleListener.remove();
+        }
+        self.isMountedRef.current = false;
+        const result = Handler(config[13]).unregisterOldGestureHandler(self.handlerTag);
+        const obj = Handler(config[13]);
+        allowedProps(config[10]).dropGestureHandler(self.handlerTag);
+        const obj2 = allowedProps(config[10]);
+        const result1 = Handler(config[15]).scheduleFlushOperations();
+        if (self.props.id) {
+          const handlerIDToTag = tmp4(tmp5[13]).handlerIDToTag;
+          delete tmp[tmp2];
+        }
+        const MountRegistry = tmp4(tmp5[17]).MountRegistry;
+        const result2 = MountRegistry.gestureHandlerWillUnmount(self);
       }
-      const rowState = state.rowState;
-      let rightOffset = tmp3Result.state.rightOffset;
-      if (1 !== rowState) {
-        let num4 = 0;
-        if (-1 === rowState) {
-          if (undefined === rightOffset) {
-            rightOffset = num2;
+    },
+    {
+      key: "update",
+      value: function update(arg0) {
+        let self = this;
+        self = this;
+        let closure_0 = arg0;
+        if (this.isMountedRef.current) {
+          const props = self.props;
+          const _Array = Array;
+          if (Array.isArray(props.simultaneousHandlers)) {
+            let someResult = simultaneousHandlers.some((current) => {
+              let tmp = current;
+              if (current) {
+                tmp = null === current.current;
+              }
+              return tmp;
+            });
+          } else {
+            someResult = simultaneousHandlers;
+            if (simultaneousHandlers) {
+              someResult = null === simultaneousHandlers.current;
+            }
           }
-          num4 = -num2 - rightOffset;
+          if (someResult) {
+            if (someResult) {
+              if (arg0 > 0) {
+                Handler(config[16]).ghQueueMicrotask(() => {
+                  self.update(closure_0 - 1);
+                });
+                const obj3 = Handler(config[16]);
+              }
+            }
+            const props2 = self.props;
+            const items = [];
+            const obj = Handler(config[15]);
+            const tmp7 = Handler;
+            const tmp8 = config;
+            HermesBuiltin.arraySpread(customNativeProps, HermesBuiltin.arraySpread(self, 0));
+            const filterConfigResult = obj.filterConfig(callback ? callback(props2) : props2, items, config);
+            const tmp9 = callback ? callback(props2) : props2;
+            if (!tmp7Result.deepEqual(self.config, filterConfigResult)) {
+              self.updateGestureHandler(filterConfigResult);
+            }
+            tmp7Result = tmp7(tmp8[9]);
+          } else {
+            const waitFor = props.waitFor;
+            const _Array2 = Array;
+            if (Array.isArray(waitFor)) {
+              let someResult1 = waitFor.some((current) => {
+                let tmp = current;
+                if (current) {
+                  tmp = null === current.current;
+                }
+                return tmp;
+              });
+            } else {
+              someResult1 = waitFor;
+              if (waitFor) {
+                someResult1 = null === waitFor.current;
+              }
+            }
+          }
         }
-        num = num4;
       }
-      return num;
-    };
-    tmp3Result.close = () => {
-      tmp3Result.animateRow(tmp3Result.currentOffset(), 0);
-    };
-    tmp3Result.openLeft = () => {
-      const leftWidth = tmp3Result.state.leftWidth;
-      let num = 0;
-      if (undefined !== leftWidth) {
-        num = leftWidth;
+    },
+    {
+      key: "setNativeProps",
+      value: function setNativeProps(arg0) {
+        const self = this;
+        const obj = {};
+        const merged = Object.assign(this.props);
+        const merged1 = Object.assign(arg0);
+        let tmp3 = obj;
+        if (callback) {
+          tmp3 = callback(obj);
+        }
+        const items = [...customNativeProps];
+        self.updateGestureHandler(Handler(config[15]).filterConfig(tmp3, items, config));
       }
-      tmp3Result.animateRow(tmp3Result.currentOffset(), num);
-    };
-    tmp3Result.openRight = () => {
-      const rowWidth = tmp3Result.state.rowWidth;
-      let num = 0;
-      if (undefined !== rowWidth) {
-        num = rowWidth;
+    },
+    {
+      key: "render",
+      value: function render() {
+        let onGestureEvent;
+        let onGestureHandlerEvent;
+        let onGestureHandlerEvent2;
+        let onGestureHandlerStateChange;
+        let onGestureHandlerStateChange2;
+        let onHandlerStateChange;
+        let props;
+        let props2;
+        const self = this;
+        ({ onGestureHandlerEvent, props } = this);
+        ({ onGestureEvent, onGestureHandlerEvent: onGestureHandlerEvent2 } = props);
+        if (onGestureEvent) {
+          if (typeof onGestureEvent !== "function") {
+            let tmp2 = onGestureEvent;
+            if (onGestureHandlerEvent2) {
+              const _Error3 = Error;
+              const error = new Error("Nesting touch handlers with native animated driver is not supported yet");
+              throw error;
+            }
+          }
+          ({ onGestureHandlerStateChange, props: props2 } = self);
+          ({ onHandlerStateChange, onGestureHandlerStateChange: onGestureHandlerStateChange2 } = props2);
+          if (onHandlerStateChange) {
+            if (typeof onHandlerStateChange !== "function") {
+              let tmp3 = onHandlerStateChange;
+              if (onGestureHandlerStateChange2) {
+                const _Error2 = Error;
+                const error1 = new Error("Nesting touch handlers with native animated driver is not supported yet");
+                throw error1;
+              }
+            }
+            let tmp4;
+            if (self.state.allowTouches) {
+              tmp4 = tmp2;
+            }
+            let obj = { onGestureHandlerEvent: null, onGestureHandlerStateChange: null };
+            obj[0] = tmp4;
+            let tmp5;
+            if (self.state.allowTouches) {
+              tmp5 = tmp3;
+            }
+            obj[1] = tmp5;
+            self.propsRef.current = obj;
+            try {
+              let obj1 = outer1_8;
+              const Children = outer1_8.Children;
+              const onlyResult = Children.only(self.props.children);
+              obj = { ref: null, collapsable: false };
+              obj[0] = self.refHandler;
+              if (obj4.isTestEnv()) {
+                obj = { handlerType: null, handlerTag: null, enabled: null };
+                obj[0] = Handler;
+                obj[1] = self.handlerTag;
+                obj[2] = self.props.enabled;
+                obj1 = obj;
+              } else {
+                obj1 = {};
+              }
+              const merged = Object.assign(obj1);
+              let testID = self.props.testID;
+              if (testID == null) {
+                testID = onlyResult.props.testID;
+              }
+              obj.testID = testID;
+              const merged1 = Object.assign(obj);
+              return obj1.cloneElement(onlyResult, obj, onlyResult.props.children);
+            } catch (err) {
+              const _Error = Error;
+              const _HermesInternal = HermesInternal;
+              const error2 = new Error(Handler(config[9]).tagMessage("" + Handler + " got more than one view as a child. If you want the gesture to work on multiple views, wrap them with a common parent and attach the gesture to that view."));
+              throw error2;
+            }
+          }
+          tmp3 = onGestureHandlerStateChange;
+          if (onGestureHandlerStateChange2) {
+            tmp3 = onGestureHandlerStateChange;
+            if (typeof onGestureHandlerStateChange2 !== "function") {
+              const _Error5 = Error;
+              const error3 = new Error("Nesting touch handlers with native animated driver is not supported yet");
+              throw error3;
+            }
+          }
+        }
+        tmp2 = onGestureHandlerEvent;
+        if (onGestureHandlerEvent2) {
+          tmp2 = onGestureHandlerEvent;
+          if (typeof onGestureHandlerEvent2 !== "function") {
+            const _Error4 = Error;
+            const error4 = new Error("Nesting touch handlers with native animated driver is not supported yet");
+            throw error4;
+          }
+        }
       }
-      let rightOffset = obj.state.rightOffset;
-      if (undefined === rightOffset) {
-        rightOffset = num;
-      }
-      const diff = num - rightOffset;
-      tmp3Result.animateRow(tmp3Result.currentOffset(), -diff);
-    };
-    tmp3Result.reset = () => {
-      let dragX;
-      let rowTranslation;
-      ({ dragX, rowTranslation } = tmp3Result.state);
-      dragX.setValue(0);
-      rowTranslation.setValue(0);
-      tmp3Result.setState({ rowState: 0 });
-    };
-    value = new Animated.Value(0);
-    obj = { dragX: value, rowTranslation: null, rowState: 0, leftWidth: "channel", rightOffset: "call", rowWidth: "y" };
-    value1 = new Animated.Value(0);
-    obj[1] = value1;
-    tmp3Result.state = obj;
-    updateAnimatedEventResult = tmp3Result.updateAnimatedEvent(global, tmp3Result.state);
-    items1 = [];
-    items1[0] = { nativeEvent: { translationX: value } };
-    obj1 = { useNativeDriver: global.useNativeAnimations };
-    tmp3Result.onGestureEvent = Animated.event(items1, obj1);
-    return tmp3Result;
-  }
-}
-require("_inherits")(Swipeable, require("noop").Component);
-let obj = {
-  key: "shouldComponentUpdate",
-  value: function shouldComponentUpdate(friction, leftWidth) {
-    const self = this;
-    let tmp = this.props.friction === friction.friction && self.props.overshootLeft === friction.overshootLeft && self.props.overshootRight === friction.overshootRight && self.props.overshootFriction === friction.overshootFriction;
-    if (tmp) {
-      tmp = self.state.leftWidth === leftWidth.leftWidth;
     }
-    if (tmp) {
-      tmp = self.state.rightOffset === leftWidth.rightOffset;
-    }
-    if (tmp) {
-      tmp = self.state.rowWidth === leftWidth.rowWidth;
-    }
-    if (!tmp) {
-      self.updateAnimatedEvent(friction, leftWidth);
-    }
-    return true;
-  }
+  ];
+  let tmp2 = customNativeProps(Handler, items);
+  tmp2.displayName = name;
+  tmp2.contextType = allowedProps(config[19]);
+  return tmp2;
 };
-let items = [
-  obj,
-  {
-    key: "render",
-    value: function render() {
-      let dragOffsetFromLeftEdge;
-      let renderLeftActions;
-      let renderRightActions;
-      let self = this;
-      self = this;
-      const rowState = this.state.rowState;
-      const props = this.props;
-      ({ renderLeftActions, renderRightActions, dragOffsetFromLeftEdge } = props);
-      let num = 10;
-      let num2 = 10;
-      if (undefined !== dragOffsetFromLeftEdge) {
-        num2 = dragOffsetFromLeftEdge;
-      }
-      const dragOffsetFromRightEdge = props.dragOffsetFromRightEdge;
-      if (undefined !== dragOffsetFromRightEdge) {
-        num = dragOffsetFromRightEdge;
-      }
-      let tmp = renderLeftActions;
-      if (renderLeftActions) {
-        let obj = { style: null, children: null };
-        const items = [closure_10.leftActions, ];
-        obj = { transform: null };
-        obj = { translateX: null };
-        obj[0] = self.leftActionTranslate;
-        const items1 = [obj];
-        obj[0] = items1;
-        items[1] = obj;
-        obj[0] = items;
-        const items2 = [renderLeftActions(self.showLeftAction, self.transX, self), ];
-        const obj1 = { onLayout: null };
-        obj1[0] = function onLayout(leftWidth) {
-          return self.setState({ leftWidth: leftWidth.nativeEvent.layout.x });
-        };
-        items2[1] = callback3(closure_6, obj1);
-        obj[1] = items2;
-        tmp = callback4(RN.View, obj);
-      }
-      let tmp7 = renderRightActions;
-      if (renderRightActions) {
-        const obj2 = { style: null, children: null };
-        const items3 = [closure_10.rightActions, ];
-        const obj3 = { transform: null };
-        const obj4 = { translateX: null };
-        obj4[0] = self.rightActionTranslate;
-        const items4 = [obj4];
-        obj3[0] = items4;
-        items3[1] = obj3;
-        obj2[0] = items3;
-        const items5 = [renderRightActions(self.showRightAction, self.transX, self), ];
-        const obj5 = { onLayout: null };
-        obj5[0] = function onLayout(nativeEvent) {
-          return self.setState({ rightOffset: nativeEvent.nativeEvent.layout.x });
-        };
-        items5[1] = callback3(closure_6, obj5);
-        obj2[1] = items5;
-        tmp7 = callback4(RN.View, obj2);
-      }
-      const obj6 = { activeOffsetX: items6, touchAction: "pan-y" };
-      items6 = [-num, num2];
-      const merged = Object.assign(self.props);
-      ({ onGestureEvent: obj9.onGestureEvent, onHandlerStateChange: obj9.onHandlerStateChange } = self);
-      const obj7 = { onLayout: self.onRowLayout, style: items7, children: null };
-      items7 = [closure_10.container, self.props.containerStyle];
-      const items8 = [tmp, tmp7, ];
-      const obj8 = { enabled: 0 !== rowState, touchAction: "pan-y", onHandlerStateChange: self.onTapHandlerStateChange, children: null };
-      let str = "box-only";
-      if (0 === rowState) {
-        str = "auto";
-      }
-      const obj9 = { translateX: self.transX };
-      const items9 = [obj9];
-      const items10 = [{ transform: items9 }, self.props.childrenContainerStyle];
-      obj8[3] = callback3(RN.View, { pointerEvents: str, style: items10, children: props.children });
-      items8[2] = callback3(self(5371).TapGestureHandler, obj8);
-      obj7[2] = items8;
-      obj6.children = callback4(RN.View, obj7);
-      return callback3(self(5383).PanGestureHandler, obj6);
-    }
-  }
-];
-const importDefaultResultResult = importDefaultResult(Swipeable, items);
-importDefaultResultResult.defaultProps = { friction: 1, overshootFriction: 1, useNativeAnimations: true };
-obj = { container: { overflow: "hidden" }, leftActions: null, rightActions: null };
-obj = {};
-let merged = Object.assign(StyleSheet.absoluteFill);
-let str = "row";
-if (I18nManager.isRTL) {
-  str = "row-reverse";
-}
-obj.flexDirection = str;
-obj[1] = obj;
-let obj1 = {};
-const merged1 = Object.assign(StyleSheet.absoluteFill);
-let str2 = "row-reverse";
-if (I18nManager.isRTL) {
-  str2 = "row";
-}
-obj1.flexDirection = str2;
-obj[2] = obj1;
-const styles = StyleSheet.create(obj);
-
-export default importDefaultResultResult;

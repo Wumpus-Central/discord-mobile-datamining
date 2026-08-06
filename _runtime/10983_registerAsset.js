@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/stream_feedback", width: 72, height: 72, scales: [1, 2, 3], hash: "a961e7716a9e5270654c872f10256829", name: "feedback-modal-neutral", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "2ec8d4d40c93ceea32933ae4e505df6e", name: "ChatPlusIcon", type: "png" });

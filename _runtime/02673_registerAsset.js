@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "51f48c51f5ad5c7fe8d9ff8765719faf", name: "vi.messages.51f48c51f5ad5c7fe8d9ff8765719faf.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/display_name_styles/intl", scales: [1], hash: "a48ca353395665c8995a98ee3b0e9d53", name: "DisplayNameStyles.compiled.messages", type: "jsona" });

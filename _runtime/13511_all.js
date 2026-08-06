@@ -1,11 +1,11 @@
 // _runtime/13511_all.js
-import all from "all";
+import { all } from "13512_all.js";
 
-let _moduleResult = all(require("module_13449").WeakMap);
-if (_moduleResult) {
-  const _String = String;
-  _moduleResult = /native code/.test(String(require("module_13449").WeakMap));
-  const obj = /native code/;
-}
-
-export default _moduleResult;
+export default (obj) => {
+  if (typeof obj === "object") {
+    let tmp2 = null !== obj;
+  } else {
+    tmp2 = all(obj);
+  }
+  return tmp2;
+};

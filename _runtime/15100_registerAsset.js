@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 24, height: 24, scales: [1, 3], hash: "a7612bc39c46be7d197676beec9cb4bf", name: "ic_browse_channel", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 311, height: 175, scales: [2, 3], hash: "813b26f9493222d83dc58dec090b98ea", name: "empty_dms_activities", type: "png" });

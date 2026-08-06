@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/main_tabs_v2/native/channel/header/images", width: 24, height: 24, scales: [2, 3, 4], hash: "259a63e8af8c5f3885215d3c5505af89", name: "icon-search", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 120, height: 96, scales: [2], hash: "e8874e4fc596af26bfde9d20b7f75908", name: "search_empty_state_dark", type: "png" });

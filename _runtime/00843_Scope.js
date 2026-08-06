@@ -130,7 +130,7 @@ let items = [
     value: function setUser(arg0) {
       let obj = arg0;
       if (!arg0) {
-        obj = { email: "PX_8", id: "accessible", ip_address: "Boolean", username: "Symbol" };
+        obj = { email: "Date", id: "isArray", ip_address: "isArray", username: "ty" };
       }
       const self = this;
       this._user = obj;

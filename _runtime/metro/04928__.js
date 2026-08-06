@@ -2,88 +2,95 @@
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = {
-  read(byteLength, sum) {
-    let tmp;
-    if (sum + 4 <= byteLength.byteLength) {
-      let obj = module(4899);
-      const longAt = obj.getLongAt(byteLength, sum);
+  read(dataView, sum) {
+    let obj = _module(4929);
+    const shortAt = obj.getShortAt(dataView, sum);
+    let tmp4;
+    if (8 <= shortAt) {
+      let tmpResult = tmp(4929);
+      const byteAt = tmpResult.getByteAt(dataView, sum + 7);
       obj = { value: null, description: null };
-      obj[0] = longAt;
-      const _HermesInternal = HermesInternal;
-      obj[1] = "" + longAt + "px";
-      tmp = obj;
+      obj[0] = byteAt;
+      obj[1] = "" + byteAt;
+      tmp4 = obj;
     }
-    obj = { "Image Width": tmp, "Image Height": null, "Bit Depth": null, "Color Type": null, Compression: null, Filter: null, Interlace: null };
     let tmp6;
-    if (sum + 4 + 4 <= byteLength.byteLength) {
-      let obj3 = module(4899);
-      const longAt1 = obj3.getLongAt(byteLength, sum + 4);
-      const obj1 = { value: null, description: null };
-      obj1[0] = longAt1;
-      const _HermesInternal2 = HermesInternal;
-      obj1[1] = "" + longAt1 + "px";
-      tmp6 = obj1;
+    if (3 <= shortAt) {
+      tmpResult = tmp(4929);
+      const byteAt1 = tmpResult.getByteAt(dataView, sum + 2);
+      obj = { value: null, description: null };
+      obj[0] = byteAt1;
+      obj[1] = "" + byteAt1;
+      tmp6 = obj;
     }
-    obj[1] = tmp6;
-    let tmp11;
-    if (sum + 8 + 1 <= byteLength.byteLength) {
-      let obj5 = module(4899);
-      const byteAt = obj5.getByteAt(byteLength, sum + 8);
+    const obj1 = { "Bits Per Sample": tmp6, "Image Height": null, "Image Width": null, "Color Components": null, Subsampling: null };
+    let tmp8;
+    if (5 <= shortAt) {
+      const shortAt1 = tmp(4929).getShortAt(dataView, sum + 3);
       const obj2 = { value: null, description: null };
-      obj2[0] = byteAt;
-      const _HermesInternal3 = HermesInternal;
-      obj2[1] = "" + byteAt;
-      tmp11 = obj2;
+      obj2[0] = shortAt1;
+      const _HermesInternal = HermesInternal;
+      obj2[1] = "" + shortAt1 + "px";
+      tmp8 = obj2;
+      const tmpResult1 = tmp(4929);
     }
-    obj[2] = tmp11;
-    let tmp16;
-    if (sum + 9 + 1 <= byteLength.byteLength) {
-      const byteAt1 = module(4899).getByteAt(byteLength, sum + 9);
-      obj3 = { value: null, description: null };
-      obj3[0] = byteAt1;
-      obj3[1] = { 0: "Grayscale", 2: "RGB", 3: "Palette", 4: "Grayscale with Alpha", 6: "RGB with Alpha" }[byteAt1] || "Unknown";
-      tmp16 = obj3;
-      const obj8 = module(4899);
+    obj1[1] = tmp8;
+    let tmp11;
+    if (7 <= shortAt) {
+      const shortAt2 = tmp(4929).getShortAt(dataView, sum + 5);
+      const obj3 = { value: null, description: null };
+      obj3[0] = shortAt2;
+      const _HermesInternal2 = HermesInternal;
+      obj3[1] = "" + shortAt2 + "px";
+      tmp11 = obj3;
+      const tmpResult2 = tmp(4929);
     }
-    obj[3] = tmp16;
-    let tmp20;
-    if (sum + 10 + 1 <= byteLength.byteLength) {
-      const byteAt2 = module(4899).getByteAt(byteLength, sum + 10);
-      const obj4 = { value: null, description: null };
-      obj4[0] = byteAt2;
-      let str6 = "Unknown";
-      if (0 === byteAt2) {
-        str6 = "Deflate/Inflate";
+    obj1[2] = tmp11;
+    obj1[3] = tmp4;
+    let tmp14 = tmp4;
+    if (tmp4) {
+      const value = tmp4.value;
+      let tmp15;
+      if (8 + 3 * value <= shortAt) {
+        const items = [];
+        for (let num6 = 0; num6 < value; num6 = num6 + 1) {
+          sum = sum + 8 + 3 * num6;
+          let tmp17 = _module;
+          let tmp18 = dependencyMap;
+          let obj11 = _module(4929);
+          let items1 = [obj11.getByteAt(dataView, sum), , ];
+          let obj12 = _module(4929);
+          items1[1] = obj12.getByteAt(dataView, sum + 1);
+          let obj13 = _module(4929);
+          items1[2] = obj13.getByteAt(dataView, sum + 2);
+          let arr = items.push(items1);
+        }
+        const obj4 = { value: null, description: null };
+        obj4[0] = items;
+        let str6 = "";
+        if (items.length > 1) {
+          _module = { 1: "Y", 2: "Cb", 3: "Cr", 4: "I", 5: "Q" };
+          const mapped = items.map((arg0) => table[arg0[0]]);
+          let str7 = "";
+          const joined = mapped.join("");
+          if (0 !== items.length) {
+            str7 = "";
+            if (undefined !== items[0][1]) {
+              const obj5 = { 17: "4:4:4 (1 1)", 18: "4:4:0 (1 2)", 20: "4:4:1 (1 4)", 33: "4:2:2 (2 1)", 34: "4:2:0 (2 2)", 36: "4:2:1 (2 4)", 65: "4:1:1 (4 1)", 66: "4:1:0 (4 2)" };
+              str7 = "";
+              if (undefined !== obj5[items[0][1]]) {
+                str7 = obj5[items[0][1]];
+              }
+            }
+          }
+          str6 = joined + str7;
+        }
+        obj4[1] = str6;
+        tmp15 = obj4;
       }
-      obj4[1] = str6;
-      tmp20 = obj4;
-      const obj10 = module(4899);
+      tmp14 = tmp15;
     }
-    obj[4] = tmp20;
-    let tmp24;
-    if (sum + 11 + 1 <= byteLength.byteLength) {
-      const byteAt3 = module(4899).getByteAt(byteLength, sum + 11);
-      obj5 = { value: null, description: null };
-      obj5[0] = byteAt3;
-      let str7 = "Unknown";
-      if (0 === byteAt3) {
-        str7 = "Adaptive";
-      }
-      obj5[1] = str7;
-      tmp24 = obj5;
-      const obj12 = module(4899);
-    }
-    obj[5] = tmp24;
-    let tmp28;
-    if (sum + 12 + 1 <= byteLength.byteLength) {
-      const byteAt4 = module(4899).getByteAt(byteLength, sum + 12);
-      const obj6 = { value: null, description: null };
-      obj6[0] = byteAt4;
-      obj6[1] = { 0: "Noninterlaced", 1: "Adam7 Interlace" }[byteAt4] || "Unknown";
-      tmp28 = obj6;
-      const obj14 = module(4899);
-    }
-    obj[6] = tmp28;
-    return obj;
+    obj1[4] = tmp14;
+    return obj1;
   }
 };

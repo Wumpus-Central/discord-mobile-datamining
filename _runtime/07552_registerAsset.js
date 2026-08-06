@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "67f86c057cc3cdebb258af63ee3c92db", name: "UploadIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 180, height: 108, scales: [2, 3], hash: "ff9dd208f5a022cb1483def98770bc0b", name: "img_what_you_lose_profile", type: "png" });

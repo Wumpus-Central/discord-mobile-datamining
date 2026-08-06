@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [1, 2, 3], hash: "26d0550d85f689dbef34ccad40bbdeb4", name: "ic_radio_circle_checked", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 250, height: 200, scales: [2, 3], hash: "a58504e7154ded917c4b5c349c82a3a7", name: "img_bans_empty_dark", type: "png" });

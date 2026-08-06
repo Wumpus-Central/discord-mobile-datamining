@@ -1,14 +1,7 @@
 // _runtime/metro/13484__.js
-import getOwnPropertyDescriptor from "getOwnPropertyDescriptor";
-import { element } from "../13485_element.js";
+import 13485__ from "13485__.js";
 
-let tmp2 = !getOwnPropertyDescriptor;
-if (!getOwnPropertyDescriptor) {
-  tmp2 = !require("module_13453")(() => 7 !== Object.defineProperty(element("div"), "a", {
-    get() {
-      return 7;
-    }
-  }).a);
-}
-
-export default tmp2;
+let obj = { target: "Object", stat: true, arity: 2, forced: null };
+obj[3] = Object.assign !== require("assign");
+obj = { assign: require("assign") };
+module_13485(obj, obj);

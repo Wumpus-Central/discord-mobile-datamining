@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/directory_channels/native/images", width: 32, height: 32, scales: [2, 3], hash: "b44246d7ff29916e5a982207e3d0936c", name: "add_server", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 121, height: 80, scales: [1, 2], hash: "03d3616a833b9606b61838a277c7b0cf", name: "link_expired", type: "png" });

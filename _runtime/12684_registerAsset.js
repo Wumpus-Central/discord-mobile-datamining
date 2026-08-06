@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting", width: 177.5, height: 112, scales: [2, 3], hash: "047720876ededd06daff5402c5798f99", name: "guild_subscription_no_guilds_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 351, height: 100, scales: [2, 3], hash: "4890b29f84548b0e4f661e3894e1136c", name: "img_subheader_error_mobile_v2", type: "png" });

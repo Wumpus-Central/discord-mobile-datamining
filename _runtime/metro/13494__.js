@@ -1,3 +1,13 @@
 // _runtime/metro/13494__.js
 
-export default {};
+export default !require("module_13490")(() => {
+  const fn = () => {
+
+  };
+  const bindResult = fn.bind();
+  let hasOwnPropertyResult = typeof bindResult !== "function";
+  if (typeof bindResult === "function") {
+    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
+  }
+  return hasOwnPropertyResult;
+});

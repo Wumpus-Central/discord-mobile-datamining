@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/stream_feedback", width: 72, height: 72, scales: [1, 2, 3], hash: "8c3b8fc66cebe540d123e4c535f8a6d7", name: "feedback-modal-happy", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "17f7b21a5b26889a6dffe34b080f6103", name: "TimerIcon", type: "png" });

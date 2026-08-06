@@ -1,50 +1,35 @@
 // _runtime/metro/04931__.js
+import { readTag } from "../04932_readTag.js";
+import { importDefaultResult1 } from "../04933_importDefaultResult1.js";
+const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
-let c2 = 4;
-let c3 = 7;
+let c3 = "Exif IFD Pointer";
+let c4 = "GPS Info IFD Pointer";
+let c5 = "Interoperability IFD Pointer";
 arg5.default = {
-  read(getUint8, sum) {
-    let obj = module(4899);
-    const byteAt = obj.getByteAt(getUint8, sum);
-    let num = 0;
-    if (16 & byteAt) {
-      num = 1;
+  read(getUint16, sum) {
+    const byteOrder = module(4917).getByteOrder(getUint16, sum);
+    const obj = module(4917);
+    const obj2 = readTag;
+    const ifd = obj2.readIfd(getUint16, importDefaultResult1.IFD_TYPE_0TH, sum, readTag.get0thIfdOffset(getUint16, sum, byteOrder), byteOrder, arg2);
+    let objectAssignResult = ifd;
+    if (undefined !== ifd[c3]) {
+      let tmp3Result = tmp3(4912);
+      tmp3Result = tmp3(4932);
+      objectAssignResult = tmp3Result.objectAssign(ifd, tmp3Result.readIfd(getUint16, tmp3(4933).IFD_TYPE_EXIF, sum, sum + ifd[tmp5].value, byteOrder, arg2));
     }
-    obj = { value: num, description: null };
-    let str = "No";
-    let str2 = "No";
-    if (16 & byteAt) {
-      str2 = "Yes";
+    if (undefined !== objectAssignResult[c4]) {
+      const tmp3Result2 = tmp3(4932);
+      objectAssignResult = tmp3(4912).objectAssign(objectAssignResult, tmp3Result2.readIfd(getUint16, tmp3(4933).IFD_TYPE_GPS, sum, sum + objectAssignResult[tmp12].value, byteOrder, arg2));
+      const tmp3Result1 = tmp3(4912);
     }
-    obj = { Alpha: obj };
-    obj[1] = str2;
-    let num2 = 0;
-    if (2 & byteAt) {
-      num2 = 1;
+    let objectAssignResult1 = objectAssignResult;
+    if (undefined !== objectAssignResult[c5]) {
+      const tmp3Result4 = tmp3(4932);
+      objectAssignResult1 = tmp3(4912).objectAssign(objectAssignResult, tmp3Result4.readIfd(getUint16, tmp3(4933).IFD_TYPE_INTEROPERABILITY, sum, sum + objectAssignResult[tmp19].value, byteOrder, arg2));
+      const tmp3Result3 = tmp3(4912);
     }
-    const obj1 = { value: num2, description: null };
-    if (2 & byteAt) {
-      str = "Yes";
-    }
-    obj1[1] = str;
-    obj.Animation = obj1;
-    sum = sum + c2;
-    let tmpResult = tmp(4899);
-    const byteAt1 = tmpResult.getByteAt(getUint8, sum);
-    tmpResult = tmp(4899);
-    const sum1 = byteAt1 + 256 * tmpResult.getByteAt(getUint8, sum + 1);
-    const sum2 = sum1 + 65536 * module(4899).getByteAt(getUint8, sum + 2) + 1;
-    obj.ImageWidth = { value: sum2, description: `${tmp9}px` };
-    const sum3 = sum + c3;
-    const obj2 = { value: sum2, description: `${tmp9}px` };
-    const tmpResult1 = module(4899);
-    const byteAt2 = module(4899).getByteAt(getUint8, sum3);
-    const tmpResult2 = module(4899);
-    const sum4 = byteAt2 + 256 * module(4899).getByteAt(getUint8, sum3 + 1);
-    const tmpResult3 = module(4899);
-    const sum5 = sum4 + 65536 * module(4899).getByteAt(getUint8, sum3 + 2) + 1;
-    obj.ImageHeight = { value: sum5, description: `${tmp13}px` };
-    return obj;
+    return { tags: objectAssignResult1, byteOrder };
   }
 };

@@ -1,4 +1,5 @@
 // _runtime/metro/03674__typeof.js
+import startOfUTCISOWeek from "startOfUTCISOWeek";
 import { Parser } from "Parser";
 
 let _createSuperInternal = require;
@@ -28,15 +29,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(ISOTimezoneParser, Parser) {
+function _setPrototypeOf(ISOWeekYearParser, Parser) {
   let _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(ISOTimezoneParser, Parser) {
-      ISOTimezoneParser.__proto__ = Parser;
-      return ISOTimezoneParser;
+    _setPrototypeOf = function _setPrototypeOf(ISOWeekYearParser, Parser) {
+      ISOWeekYearParser.__proto__ = Parser;
+      return ISOWeekYearParser;
     };
   }
-  return _setPrototypeOf(ISOTimezoneParser, Parser);
+  return _setPrototypeOf(ISOWeekYearParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -54,8 +55,16 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
+if (!startOfUTCISOWeek) {
+  let obj = { default: null };
+  obj[0] = startOfUTCISOWeek;
+  let tmp3 = obj;
+} else {
+  tmp3 = startOfUTCISOWeek;
+}
+let c3 = tmp3;
 _createSuperInternal = undefined;
-class ISOTimezoneParser {
+class ISOWeekYearParser {
   constructor() {
     if (this instanceof c1) {
       length = arguments.length;
@@ -91,10 +100,10 @@ class ISOTimezoneParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 10, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 130, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 10;
-          applyResult.priority = 10;
+          num3 = 130;
+          applyResult.priority = 130;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -105,7 +114,7 @@ class ISOTimezoneParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["t", "T", "X"];
+          items1 = ["G", "y", "Y", "u", "Q", "q", "M", "L", "w", "d", "D", "e", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -129,7 +138,7 @@ class ISOTimezoneParser {
     }
   }
 }
-closure_1 = ISOTimezoneParser;
+closure_1 = ISOWeekYearParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -141,12 +150,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: ISOTimezoneParser, writable: true, configurable: true };
-ISOTimezoneParser.prototype = Object.create(prototype, { constructor: obj });
+obj = { value: ISOWeekYearParser, writable: true, configurable: true };
+ISOWeekYearParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(ISOTimezoneParser, Parser);
+  _setPrototypeOf(ISOWeekYearParser, Parser);
 }
-_createSuperInternal = ISOTimezoneParser;
+_createSuperInternal = ISOWeekYearParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -207,50 +216,43 @@ _createSuperInternal = function _createSuperInternal() {
 obj = {
   key: "parse",
   value: function parse(arg0, arg1) {
-    if ("x" === arg1) {
-      return _createSuperInternal(3642).parseTimezonePattern(_createSuperInternal(3643).timezonePatterns.basicOptionalMinutes, arg0);
-    } else if ("xx" === arg1) {
-      return _createSuperInternal(3642).parseTimezonePattern(_createSuperInternal(3643).timezonePatterns.basic, arg0);
-    } else if ("xxxx" === arg1) {
-      return _createSuperInternal(3642).parseTimezonePattern(_createSuperInternal(3643).timezonePatterns.basicOptionalSeconds, arg0);
-    } else if ("xxxxx" === arg1) {
-      return _createSuperInternal(3642).parseTimezonePattern(_createSuperInternal(3643).timezonePatterns.extendedOptionalSeconds, arg0);
+    if ("R" === arg1) {
+      let parseNDigitsSignedResult = _createSuperInternal(3671).parseNDigitsSigned(4, arg0);
     } else {
-      return _createSuperInternal(3642).parseTimezonePattern(_createSuperInternal(3643).timezonePatterns.extended, arg0);
+      parseNDigitsSignedResult = _createSuperInternal(3671).parseNDigitsSigned(arg1.length, arg0);
     }
+    return parseNDigitsSignedResult;
   }
 };
 let items = [
   obj,
   {
     key: "set",
-    value: function set(getTime, timestampIsSet) {
-      let date = getTime;
-      if (!timestampIsSet.timestampIsSet) {
-        const _Date = Date;
-        date = new Date(getTime.getTime() - arg2);
-      }
-      return date;
+    value: function set(arg0, arg1, arg2) {
+      const date = new Date(0);
+      date.setUTCFullYear(arg2, 0, 4);
+      date.setUTCHours(0, 0, 0, 0);
+      return tmp3.default(date);
     }
   }
 ];
 if (0 < items.length) {
   do {
-    let tmp5 = items[num];
-    let flag = tmp5.enumerable;
-    let tmp6 = num;
+    let tmp7 = items[num];
+    let flag = tmp7.enumerable;
+    let tmp8 = num;
     if (!flag) {
       flag = false;
     }
-    tmp5.enumerable = flag;
-    tmp5.configurable = true;
-    if ("value" in tmp5) {
-      tmp5.writable = true;
+    tmp7.enumerable = flag;
+    tmp7.configurable = true;
+    if ("value" in tmp7) {
+      tmp7.writable = true;
     }
     let _Object = Object;
-    let definePropertyResult1 = Object.defineProperty(tmp4, tmp5.key, tmp5);
+    let definePropertyResult1 = Object.defineProperty(tmp6, tmp7.key, tmp7);
     num = num + 1;
   } while (num < items.length);
 }
 
-export { ISOTimezoneParser };
+export { ISOWeekYearParser };

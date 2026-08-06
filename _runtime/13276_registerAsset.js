@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "6a5cd110534b64950591f570afc3306f", name: "NitroGem1", type: "lottie" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/status", width: 16, height: 16, scales: [2, 3], hash: "b452f17f7046013be582dffe125561c0", name: "StatusIdle", type: "png" });

@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/auth/native/images", width: 375, height: 413, scales: [2, 3], hash: "9dd921dedb90562e62ae59d45a63666c", name: "register-background-light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 120, height: 80, scales: [2, 3], hash: "8c6e7658ce5157dd6c415ee437c71c87", name: "img_nitro_animated_emoji", type: "png" });

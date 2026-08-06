@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 48, height: 48, scales: [2, 3], hash: "047af24ad7333177fbe250a3bbe8025e", name: "feedback-modal-neutral-desaturated_darker", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 275, height: 150, scales: [1, 2, 3], hash: "bbcef4a2b8c5f48f13fd62c2f6250775", name: "img_group_dm_illustration", type: "png" });

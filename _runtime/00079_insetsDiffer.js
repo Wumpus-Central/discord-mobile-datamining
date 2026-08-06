@@ -1,5 +1,5 @@
 // _runtime/00079_insetsDiffer.js
-let closure_0 = { top: "PX_8", left: "accessible", right: "Boolean", bottom: "Symbol" };
+let closure_0 = { top: "Date", left: "isArray", right: "isArray", bottom: "ty" };
 arg5.default = function insetsDiffer(arg0, arg1) {
   let rect = arg0;
   if (!arg0) {

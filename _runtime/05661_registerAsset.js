@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../node_modules/.pnpm/@react-navigation+elements@1.3.31_5pojssvs3apui5lqpn7jym3zoq/node_modules/@react-navigation/elements/src/assets", width: 50, height: 85, scales: [1], hash: "5223c8d9b0d08b82a5670fb5f71faf78", name: "back-icon-mask", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 80, height: 80, scales: [2, 3], hash: "900d6a1aeefc6f4c571ad9d81203dc5c", name: "img_nitro_classic_icon_80px", type: "png" });

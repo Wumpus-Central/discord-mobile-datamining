@@ -1383,8 +1383,8 @@ export const createReactRouterV6CompatibleTracingIntegration = function createRe
     }
     const result1 = instrumentPageLoad(1149).initializeRouterUtils(closure_7, flag);
   };
-  obj.afterAllSetup = function afterAllSetup(f102370) {
-    closure_2.afterAllSetup(f102370);
+  obj.afterAllSetup = function afterAllSetup(f102616) {
+    closure_2.afterAllSetup(f102616);
     const _location = instrumentPageLoad(1024).WINDOW.location;
     if (_location != null) {
       const pathname = _location.pathname;
@@ -1402,11 +1402,11 @@ export const createReactRouterV6CompatibleTracingIntegration = function createRe
       const _HermesInternal = HermesInternal;
       obj[tmp2(817).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.reactrouter_v" + dependencyMap;
       obj[1] = obj;
-      const result = tmp2(1024).startBrowserTracingPageLoadSpan(f102370, obj);
+      const result = tmp2(1024).startBrowserTracingPageLoadSpan(f102616, obj);
       const tmp2Result = tmp2(1024);
     }
     if (closure_11) {
-      lazyRouteTimeout.add(f102370);
+      lazyRouteTimeout.add(f102616);
     }
   };
   return obj;

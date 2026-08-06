@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZl", scales: [1], hash: "ee9494a805c97c99b92e35d2b1ef912a", name: "vi.messages.ee9494a805c97c99b92e35d2b1ef912a.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/go_live/web/modal", scales: [1], hash: "cd2d5c0ef187afb877c9d94c96dd5098", name: "GoLiveModal.compiled.messages", type: "jsona" });

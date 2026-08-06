@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wYXJ0bmVyX3BlcmtzL3hib3gvcGFydG5lcl9wYXNz", scales: [1], hash: "8ed0db60f50f496e83c1fe1f56052c9d", name: "vi.messages.8ed0db60f50f496e83c1fe1f56052c9d.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/logitech_3pp", scales: [1], hash: "74d114c91c81530f2c73cdb12ed764ee", name: "Logitech3PP.compiled.messages", type: "jsona" });

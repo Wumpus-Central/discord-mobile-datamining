@@ -28,15 +28,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(MinuteParser, Parser) {
+function _setPrototypeOf(YearParser, Parser) {
   let _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(MinuteParser, Parser) {
-      MinuteParser.__proto__ = Parser;
-      return MinuteParser;
+    _setPrototypeOf = function _setPrototypeOf(YearParser, Parser) {
+      YearParser.__proto__ = Parser;
+      return YearParser;
     };
   }
-  return _setPrototypeOf(MinuteParser, Parser);
+  return _setPrototypeOf(YearParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -55,7 +55,7 @@ function _getPrototypeOf(arg0) {
   return _getPrototypeOf(arg0);
 }
 _createSuperInternal = undefined;
-class MinuteParser {
+class YearParser {
   constructor() {
     if (this instanceof c1) {
       length = arguments.length;
@@ -91,10 +91,10 @@ class MinuteParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 60, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 130, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 60;
-          applyResult.priority = 60;
+          num3 = 130;
+          applyResult.priority = 130;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -105,7 +105,7 @@ class MinuteParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["t", "T"];
+          items1 = ["Y", "R", "u", "w", "I", "i", "e", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -129,7 +129,7 @@ class MinuteParser {
     }
   }
 }
-closure_1 = MinuteParser;
+closure_1 = YearParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -141,12 +141,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: MinuteParser, writable: true, configurable: true };
-MinuteParser.prototype = Object.create(prototype, { constructor: obj });
+let obj = { value: YearParser, writable: true, configurable: true };
+YearParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(MinuteParser, Parser);
+  _setPrototypeOf(YearParser, Parser);
 }
-_createSuperInternal = MinuteParser;
+_createSuperInternal = YearParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -207,12 +207,16 @@ _createSuperInternal = function _createSuperInternal() {
 obj = {
   key: "parse",
   value: function parse(arg0, arg1, ordinalNumber) {
-    if ("m" === arg1) {
-      return _createSuperInternal(3642).parseNumericPattern(_createSuperInternal(3643).numericPatterns.minute, arg0);
-    } else if ("mo" === arg1) {
-      return ordinalNumber.ordinalNumber(arg0, { unit: "minute" });
+    const _createSuperInternal = arg1;
+    function valueCallback(year) {
+      return { year, isTwoDigitYear: "yy" === closure_0 };
+    }
+    if ("y" === arg1) {
+      return _createSuperInternal(3671).mapValue(_createSuperInternal(3671).parseNDigits(4, arg0), valueCallback);
+    } else if ("yo" === arg1) {
+      return _createSuperInternal(3671).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "year" }), valueCallback);
     } else {
-      return _createSuperInternal(3642).parseNDigits(arg1.length, arg0);
+      return _createSuperInternal(3671).mapValue(_createSuperInternal(3671).parseNDigits(arg1.length, arg0), valueCallback);
     }
   }
 };
@@ -220,19 +224,32 @@ let items = [
   obj,
   {
     key: "validate",
-    value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 0;
-      if (tmp) {
-        tmp = arg1 <= 59;
+    value: function validate(arg0, isTwoDigitYear) {
+      isTwoDigitYear = isTwoDigitYear.isTwoDigitYear;
+      if (!isTwoDigitYear) {
+        isTwoDigitYear = isTwoDigitYear.year > 0;
       }
-      return tmp;
+      return isTwoDigitYear;
     }
   },
   {
     key: "set",
-    value: function set(setUTCMinutes) {
-      setUTCMinutes.setUTCMinutes(arg2, 0, 0);
-      return setUTCMinutes;
+    value: function set(setUTCFullYear, era, isTwoDigitYear) {
+      if (isTwoDigitYear.isTwoDigitYear) {
+        setUTCFullYear.setUTCFullYear(_createSuperInternal(3671).normalizeTwoDigitYear(isTwoDigitYear.year, tmp), 0, 1);
+        setUTCFullYear.setUTCHours(0, 0, 0, 0);
+        return setUTCFullYear;
+      } else {
+        if ("era" in era) {
+          if (1 !== era.era) {
+            let year = 1 - isTwoDigitYear.year;
+          }
+          setUTCFullYear.setUTCFullYear(year, 0, 1);
+          setUTCFullYear.setUTCHours(0, 0, 0, 0);
+          return setUTCFullYear;
+        }
+        year = isTwoDigitYear.year;
+      }
     }
   }
 ];
@@ -255,4 +272,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { MinuteParser };
+export { YearParser };

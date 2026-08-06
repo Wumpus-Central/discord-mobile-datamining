@@ -1,46 +1,45 @@
 // _runtime/metro/13506__.js
-import { all } from "../13475_all.js";
-
-export default (arg0, arg1, arg2, arg3) => {
-  let obj = arg3;
-  if (!arg3) {
-    obj = {};
-  }
-  let flag = obj.enumerable;
-  let name = arg1;
-  if (undefined !== obj.name) {
-    name = obj.name;
-  }
-  if (all(arg2)) {
-    tmp3(13507)(arg2, name, obj);
-  }
-  if (obj.global) {
-    if (flag) {
-      arg0[arg1] = arg2;
-    } else {
-      tmp3(13450)(arg1, arg2);
-    }
+let tmp = require("module_13486").process && require("module_13486").process.versions;
+if (!tmp) {
+  tmp = require("module_13486").Deno && require("module_13486").Deno.version;
+  const tmp2 = require("module_13486").Deno && require("module_13486").Deno.version;
+}
+let str = tmp;
+if (tmp) {
+  str = tmp.v8;
+}
+let tmp3;
+if (str) {
+  const parts = str.split(".");
+  if (parts[0] <= 0) {
+    let num3 = +parts[0] + parts[1];
   } else {
-    try {
-      if (obj.unsafe) {
-        if (arg0[arg1]) {
-          flag = true;
-        }
-      } else {
-        delete tmp[tmp2];
-      }
-      if (flag) {
-        arg0[arg1] = arg2;
-      } else {
-        obj = { value: null, enumerable: false, configurable: null, writable: null };
-        obj[0] = arg2;
-        obj[2] = !obj.nonConfigurable;
-        obj[3] = !obj.nonWritable;
-        tmp3(13503).f(arg0, arg1, obj);
-        const tmp3Result = tmp3(13503);
-      }
-    } catch (err) {
-    }
+    num3 = 1;
   }
-  return arg0;
-};
+  tmp3 = num3;
+  let tmp4 = parts;
+}
+let _module = !tmp3;
+if (!tmp3) {
+  _module = require("module_13507");
+}
+if (_module) {
+  const match = require("module_13507").match(/Edge\/(\d+)/);
+  let tmp8 = !match;
+  if (match) {
+    tmp8 = match[1] >= 74;
+  }
+  _module = tmp8;
+  tmp4 = match;
+  const str3 = require("module_13507");
+}
+if (_module) {
+  _module = require("module_13507").match(/Chrome\/(\d+)/);
+  tmp4 = _module;
+  const str4 = require("module_13507");
+}
+if (_module) {
+  tmp3 = +tmp4[1];
+}
+
+export default tmp3;

@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [1, 2, 3], hash: "cb49d7446dbcac5ce6ba16b6a9b83961", name: "Small", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/parent_tools/images", width: 76, height: 76, scales: [1], hash: "357b6ff4f5f31060d463e9e4858af437", name: "family_center_chat_check_icon", type: "png" });

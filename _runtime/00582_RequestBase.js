@@ -122,8 +122,8 @@ class RequestBase {
         }
         if (require) {
           if (require.status) {
-            tmp8 = f18811;
-            if (f18811.has(require.status)) {
+            tmp8 = f18852;
+            if (f18852.has(require.status)) {
               flag7 = true;
               return true;
             }

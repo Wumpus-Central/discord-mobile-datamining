@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ub3RpZmljYXRpb25z", scales: [1], hash: "1989a544ef21eec397342c95b98661ee", name: "vi.messages.1989a544ef21eec397342c95b98661ee.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/safety_flows", scales: [1], hash: "e0490d68956369fa2230b222b6c927ab", name: "SafetyFlows.compiled.messages", type: "jsona" });

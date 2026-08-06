@@ -1,2 +1,0 @@
-// _runtime/05575_TouchableOpacity.js
-arg5.default = { TouchableOpacity: require("TouchableOpacity").TouchableOpacity, TouchableHighlight: require("TouchableOpacity").TouchableHighlight, TouchableWithoutFeedback: require("TouchableOpacity").TouchableWithoutFeedback };

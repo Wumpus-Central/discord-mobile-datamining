@@ -100,17 +100,17 @@ let items = [
       let c0;
       let easing;
       let easing2;
-      let f66544;
+      let f66694;
       const self = this;
       if (!this._interpolation) {
         const _config = self._config;
         if (_config.outputRange) {
           if (typeof _config.outputRange[0] === "string") {
             let AnimatedInterpolation = _config;
-            AnimatedInterpolation(f66544[7])(_config.outputRange.length >= 2, "Bad output range");
+            AnimatedInterpolation(f66694[7])(_config.outputRange.length >= 2, "Bad output range");
             const outputRange = _config.outputRange;
             let mapped = outputRange.map(mapStringToNumericComponents);
-            f66544 = mapped;
+            f66694 = mapped;
             const isColor = mapped[0].isColor;
             easing = isColor;
             const mapped1 = mapped.map((components) => {
@@ -139,7 +139,7 @@ let items = [
               extrapolate = undefined;
               ({ outputRange: c0, inputRange: c1, easing } = obj);
               if (!easing) {
-                easing = _undefined(f66544[6]).linear;
+                easing = _undefined(f66694[6]).linear;
               }
               extrapolate = "extend";
               if (undefined !== obj.extrapolateLeft) {
@@ -267,13 +267,13 @@ let items = [
           obj.inputRange = _config.inputRange;
           obj.outputRange = Array.from(Array(outputRange1.length).keys());
           AnimatedInterpolation = undefined;
-          f66544 = undefined;
+          f66694 = undefined;
           easing = undefined;
           extrapolate = undefined;
           extrapolate = undefined;
-          ({ outputRange: c0, inputRange: f66544, easing: easing2 } = obj);
+          ({ outputRange: c0, inputRange: f66694, easing: easing2 } = obj);
           if (!easing2) {
-            easing2 = AnimatedInterpolation(f66544[6]).linear;
+            easing2 = AnimatedInterpolation(f66694[6]).linear;
           }
           easing = easing2;
           extrapolate = "extend";
@@ -288,7 +288,7 @@ let items = [
           } else if (undefined !== obj.extrapolate) {
             extrapolate = obj.extrapolate;
           }
-          f66544 = (num) => {
+          f66694 = (num) => {
             _undefined(_undefined2[7])(typeof num === "number", "Cannot interpolate an input which is not a number");
             num = 1;
             if (1 < _undefined2.length - 1) {
@@ -360,7 +360,7 @@ let items = [
             return tmp13;
           };
           self._interpolation = (arg0) => {
-            const tmp = f66544(arg0);
+            const tmp = f66694(arg0);
             if (!Number.isInteger(tmp)) {
               const _console = console;
               console.warn("PlatformColor interpolation should happen natively, here we fallback to the closest color");
@@ -369,9 +369,9 @@ let items = [
           };
           const arr = Array.from(Array(outputRange1.length).keys());
         } else {
-          ({ outputRange: c0, inputRange: f66544, easing } = _config);
+          ({ outputRange: c0, inputRange: f66694, easing } = _config);
           if (!easing) {
-            easing = AnimatedInterpolation(f66544[6]).linear;
+            easing = AnimatedInterpolation(f66694[6]).linear;
           }
           extrapolate = "extend";
           if (undefined !== _config.extrapolateLeft) {

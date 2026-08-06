@@ -6,10 +6,10 @@ for (const key10013 in require("module_1486")) {
 }
 
 export const CommonActions = require("goBack");
-export const BaseRouter = require("nanoid");
+export const BaseRouter = require("nanoid").BaseRouter;
 export const DrawerActions = require("openDrawer").DrawerActions;
-export const DrawerRouter = require("openDrawer");
+export const DrawerRouter = require("openDrawer").DrawerRouter;
 export const StackActions = require("StackRouter").StackActions;
-export const StackRouter = require("StackRouter");
-export const TabActions = require("getRouteHistory").TabActions;
-export const TabRouter = require("getRouteHistory");
+export const StackRouter = require("StackRouter").StackRouter;
+export const TabActions = require("TabRouter").TabActions;
+export const TabRouter = require("TabRouter").TabRouter;

@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/icymi/native/images", width: 24.5, height: 24, scales: [2, 3], hash: "1c9607c514ba0cca490ff85ef6b52d0d", name: "emoji-negative", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "ca5ed05660659bd429f0c8e3c3fa0755", name: "ic_trash_24px", type: "png" });

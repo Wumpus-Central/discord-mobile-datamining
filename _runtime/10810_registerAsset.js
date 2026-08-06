@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/video_calls/native/images", width: 18, height: 18, scales: [2, 3], hash: "ade8732f10573e5215aa029a138cb853", name: "watch", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/game_console/images", width: 126, height: 118, scales: [2, 3], hash: "02b1067b85b45dd047c8c944ed8c1d6e", name: "devices_not_found", type: "png" });
