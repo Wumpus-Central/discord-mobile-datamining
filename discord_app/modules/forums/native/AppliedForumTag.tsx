@@ -16,7 +16,7 @@ class AppliedForumTag {
     name = undefined;
     emojiId = undefined;
     emojiName = undefined;
-    f83619 = undefined;
+    f83849 = undefined;
     c6 = undefined;
     containerStyle = jsxs();
     ({ name, emojiId, emojiName } = tag);
@@ -24,7 +24,7 @@ class AppliedForumTag {
     obj = require("initialize");
     items = [];
     items[0] = emojiName;
-    f83619 = obj.useStateFromStores(items, () => {
+    f83849 = obj.useStateFromStores(items, () => {
       let usableCustomEmojiById = null;
       if (null != c3) {
         usableCustomEmojiById = _undefined2.getUsableCustomEmojiById(tmp);

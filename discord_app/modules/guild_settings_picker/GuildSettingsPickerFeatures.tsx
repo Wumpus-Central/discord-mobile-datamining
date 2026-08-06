@@ -6,7 +6,7 @@ import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const require = arg1;
-let obj = { "server-subscriptions-onboarding": require("module_13117"), "server-subscriptions-create-tier-from-template": require("module_13118") };
+let obj = { "server-subscriptions-onboarding": require("module_13154"), "server-subscriptions-create-tier-from-template": require("module_13155") };
 let closure_6 = {
   title() {
     const intl = getSystemLocale.intl;

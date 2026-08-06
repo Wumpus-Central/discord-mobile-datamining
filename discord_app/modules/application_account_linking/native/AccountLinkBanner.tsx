@@ -237,17 +237,17 @@ export const getScaledAccountLinkBannerHeight = function getScaledAccountLinkBan
     return 0;
   } else if (bannerSize === apexExperiment.MobileAccountLinkingBannerSize.LARGE) {
     const sum = PX_8 + PX_12 + closure_16 + PX_16;
-    let tmp3Result = tmp3(9341);
+    let tmp3Result = tmp3(9370);
     const sum1 = sum + tmp3Result.scaleTextLineHeight(c17, fontScale) + PX_4;
-    tmp3Result = tmp3(9341);
+    tmp3Result = tmp3(9370);
     const sum2 = sum1 + 2 * tmp3Result.scaleTextLineHeight(c18, fontScale) + PX_162;
-    sum3 = sum2 + tmp3(4669).MEDIUM_BUTTON_HEIGHT + PX_12;
+    sum3 = sum2 + tmp3(4699).MEDIUM_BUTTON_HEIGHT + PX_12;
     let num = sum3 + PX_82;
   } else {
     num = 0;
-    if (bannerSize === tmp3(15179).MobileAccountLinkingBannerSize.MEDIUM) {
+    if (bannerSize === tmp3(15217).MobileAccountLinkingBannerSize.MEDIUM) {
       const sum4 = PX_8 + PX_12 + 48 + PX_122;
-      num = sum4 + tmp3(4669).SMALL_BUTTON_HEIGHT + PX_12 + PX_82;
+      num = sum4 + tmp3(4699).SMALL_BUTTON_HEIGHT + PX_12 + PX_82;
     }
   }
 };

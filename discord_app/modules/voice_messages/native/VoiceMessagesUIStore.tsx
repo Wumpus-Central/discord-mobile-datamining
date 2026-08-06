@@ -9,14 +9,14 @@ let c3;
 let obj1;
 ({ VoiceMessageAnimationState: obj1, WAVEFORM_WAVE_MAX_VALUE: c3 } = VoiceMessageAnimationState);
 let obj = keys.create(() => {
-  const obj = { voiceMessageAnimationState: null, recordingStatus: null, recordingId: null, currWaveHeight: "PX_8", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "Path", showVoiceMessagesTooltip: "TYPING_STOP_LOCAL", savedVoiceMessageUploadData: null, isVoiceMessageButtonMounted: "md", isUsingHoldGesture: null };
+  const obj = { voiceMessageAnimationState: null, recordingStatus: null, recordingId: null, currWaveHeight: "PX_8", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "Path", showVoiceMessagesTooltip: "TYPING_STOP_LOCAL", savedVoiceMessageUploadData: null, isVoiceMessageButtonMounted: "text-md/bold", isUsingHoldGesture: "Checkout will open with the orb price of the product, if it exists" };
   const items = [, ];
   ({ SENDING: arr[0], SENDING: arr[1] } = closure_2);
   obj[0] = ReanimatedRexport.makeMutable(items);
   obj[6] = [];
   return obj;
 });
-let result = require("module_4116").fileFinishedImporting("modules/voice_messages/native/VoiceMessagesUIStore.tsx");
+let result = require("module_4145").fileFinishedImporting("modules/voice_messages/native/VoiceMessagesUIStore.tsx");
 
 export const VoiceMessageRecordingStatus = { REQUESTED: 0, [0]: "REQUESTED", STARTED: 1, [1]: "STARTED" };
 export const useVoiceMessagesUIStore = obj;
@@ -56,7 +56,7 @@ export const addVoiceMessageWave = function addVoiceMessageWave(arg0) {
   const waveformVersion = obj.getState().waveformVersion;
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {
-    obj = waveformVersion(4664);
+    obj = waveformVersion(4694);
     const result = currWaveHeight.set(obj.withSpring(arg0 / closure_3));
   }
   const items = [arg0, waveformVersion];
@@ -78,7 +78,7 @@ export const hideVoiceMessagesTooltip = function hideVoiceMessagesTooltip() {
 export const resetVoiceMessageState = function resetVoiceMessageState() {
   const obj = batchUpdates;
   obj.batchUpdates(() => {
-    state.setState({ waveform: [], waveformVersion: 0, showRecordingOverlay: false, startTimeMillis: "Boolean", savedVoiceMessageUploadData: "accessible" });
+    state.setState({ waveform: [], waveformVersion: 0, showRecordingOverlay: false, startTimeMillis: "Boolean", savedVoiceMessageUploadData: "__d" });
   });
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {

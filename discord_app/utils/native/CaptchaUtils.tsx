@@ -5,7 +5,7 @@ import _getSystemLocale from "_getSystemLocale";
 import handleThemeChange from "handleThemeChange";
 import ME from "ME";
 import { jsx } from "jsxProd";
-import { siteKey } from "../../../_runtime/16208_siteKey.js";
+import { siteKey } from "../../../_runtime/16248_siteKey.js";
 import { convertStringArrayToSkemaErrorItems } from "../../../discord_common/js/packages/http-utils/V8APIError.tsx";
 import { expandEventProperties } from "../AnalyticsUtils.tsx";
 

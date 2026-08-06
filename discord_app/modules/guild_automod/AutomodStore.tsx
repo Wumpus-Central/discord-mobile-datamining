@@ -5,7 +5,7 @@ import noop from "noop";
 import { AutomodTriggerType } from "AutomodEventType";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
 import identity from "identity";
-import { isIterable } from "../../../_runtime/03868_isIterable.js";
+import { isIterable } from "../../../_runtime/03897_isIterable.js";
 
 const require = arg1;
 let closure_7 = {};

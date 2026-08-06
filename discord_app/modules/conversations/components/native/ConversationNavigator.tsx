@@ -30,11 +30,11 @@ export default function ConversationNavigator(route) {
   let Screen;
   const params = route.route.params;
   const channelId = params.channelId;
-  let obj = channelId(5650);
+  let obj = channelId(5704);
   obj = { id: "conversation-navigator", screenOptions: obj.useAccessibilityNativeStackOptions(), children: null };
   obj = {
     initialParams: { channelId, guildId: params.guildId },
-    name: channelId(8362).ConversationNavigatorScreens.LIST,
+    name: channelId(8503).ConversationNavigatorScreens.LIST,
     options(navigation) {
       let obj = {
         header(arg0) {
@@ -54,14 +54,14 @@ export default function ConversationNavigator(route) {
       return obj;
     },
     getComponent() {
-      return channelId(8364).default;
+      return channelId(8505).default;
     }
   };
   ({ Navigator, Screen } = createNativeStackNavigator);
   const items = [
     callback(Screen, obj),
     callback(createNativeStackNavigator.Screen, {
-      name: channelId(8362).ConversationNavigatorScreens.FOCUS,
+      name: channelId(8503).ConversationNavigatorScreens.FOCUS,
       options(route) {
         route = route.route;
         const obj = {
@@ -73,7 +73,7 @@ export default function ConversationNavigator(route) {
           headerTitle: null,
           headerRight: null
         };
-        obj[1] = route(8165).getRenderBackImage(route.navigation);
+        obj[1] = route(8305).getRenderBackImage(route.navigation);
         obj[2] = function headerTitle() {
           return outer1_3(outer1_1(outer1_2[9]), { channelId: route.params.channelId, title: route.params.title, hasRightAction: true });
         };
@@ -83,7 +83,7 @@ export default function ConversationNavigator(route) {
         return obj;
       },
       getComponent() {
-        return channelId(8388).default;
+        return channelId(8529).default;
       }
     })
   ];

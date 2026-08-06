@@ -67,7 +67,7 @@ export default function useGuildProfileCTA(id) {
           if (num == null) {
             num = 0;
           }
-          obj[1] = id(1384).hasFlag(num, id(7667).GuildInviteFlags.IS_APPLICATION_BYPASS);
+          obj[1] = id(1384).hasFlag(num, id(7695).GuildInviteFlags.IS_APPLICATION_BYPASS);
           obj[2] = invite.roles;
           const obj2 = id(1384);
           const tmp6 = id;
@@ -223,13 +223,13 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
         if (num == null) {
           num = 0;
         }
-        flag = obj.hasFlag(num, set(7667).GuildInviteFlags.IS_APPLICATION_BYPASS);
+        flag = obj.hasFlag(num, set(7695).GuildInviteFlags.IS_APPLICATION_BYPASS);
         tmp11 = inviteKeyForGuildId;
         const tmp13 = set;
       }
     }
   }
-  const pendingFolderGuildIds = set(11076).getPendingFolderGuildIds();
+  const pendingFolderGuildIds = set(11108).getPendingFolderGuildIds();
   if (tmp7) {
     let roles;
     if (invite != null) {
@@ -291,7 +291,7 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
     }
     return APPLY_TO_JOIN;
   }
-  const obj2 = set(11076);
+  const obj2 = set(11108);
   const tmp15 = set;
   tmp7 = null != joinedAt;
 };

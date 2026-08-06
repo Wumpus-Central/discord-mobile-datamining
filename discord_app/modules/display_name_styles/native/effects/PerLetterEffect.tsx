@@ -13,11 +13,15 @@ const result = require("jsxProd").fileFinishedImporting("modules/display_name_st
 
 export default function PerLetterEffect(name) {
   let colors;
+  let containerStyle;
   let textProps;
+  let textStyle;
   name = name.name;
   ({ textProps, colors } = name);
+  ({ containerStyle, textStyle } = name);
   const items = [name, colors];
-  let obj = { style: callback().container, children: null };
+  let obj = { style: items1, children: null };
+  items1 = [callback().container, containerStyle];
   const memo = React.useMemo(() => {
     let closure_0 = colors(outer1_2[4])();
     let c1 = 0;
@@ -54,9 +58,9 @@ export default function PerLetterEffect(name) {
     accessibilityLabel = name;
   }
   obj.accessibilityLabel = accessibilityLabel;
-  const items1 = [name.textStyle, { lineHeight: "Array" }];
-  obj.style = items1;
+  const items2 = [textStyle, { lineHeight: "r" }];
+  obj.style = items2;
   obj.children = memo;
-  obj[1] = jsx(name(4251).Text, {});
+  obj[1] = jsx(name(4281).Text, {});
   return <closure_4 />;
 };

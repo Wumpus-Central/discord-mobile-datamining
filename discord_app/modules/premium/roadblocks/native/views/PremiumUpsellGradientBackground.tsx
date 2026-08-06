@@ -3,7 +3,7 @@ import "noop";
 import { Gradients } from "items";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../../_runtime/04676_LinearGradient.js";
+import { LinearGradient } from "../../../../../../_runtime/04706_LinearGradient.js";
 import { keys } from "../../../../../ConstantsIOS.tsx";
 
 const require = arg1;

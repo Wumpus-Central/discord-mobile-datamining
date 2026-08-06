@@ -9,7 +9,7 @@ import createCacheKey from "createCacheKey";
 import animatedComponent from "__INTERNAL_VIEW_CONFIG";
 import BottomSheetModal from "BottomSheetModal";
 import isMetaQuest from "isMetaQuest";
-import importDefaultResult from "module_4116";
+import importDefaultResult from "module_4145";
 
 let c10;
 let c9;
@@ -75,7 +75,7 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
         tmp = analyticsLocations < 0;
       }
       if (!tmp) {
-        tmp = f81085;
+        tmp = f81313;
       }
       if (!tmp) {
         num2 = 0;

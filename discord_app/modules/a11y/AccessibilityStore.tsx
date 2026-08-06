@@ -1,5 +1,6 @@
 // discord_app/modules/a11y/AccessibilityStore.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
+import initialize from "initialize";
 import handleThemeChange from "handleThemeChange";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import ME from "ME";
@@ -11,7 +12,7 @@ import { set } from "../../utils/CrossPlatformNativeUtils.native.tsx";
 import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 
 let c10;
-let c9;
+let closure_12;
 let unpackModuleId;
 const require = arg1;
 function maybeApplyNoTextColorForLightCustomTheme() {
@@ -54,11 +55,11 @@ function maybeApplyNoTextColorForLightCustomTheme() {
 let closure_3 = ["fontScale"];
 const Accessibility = ME.Accessibility;
 const ThemeTypes = ME.ThemeTypes;
-({ MESSAGE_GROUP_SPACING: c9, DEFAULT_COMPACT_SPACING: c10, DEFAULT_COZY_SPACING: unpackModuleId } = MESSAGE_GROUP_SPACING);
+({ MESSAGE_GROUP_SPACING: c10, DEFAULT_COMPACT_SPACING: unpackModuleId, DEFAULT_COZY_SPACING: closure_12 } = MESSAGE_GROUP_SPACING);
 let obj = { DEFAULT: "default", HIGH: "high" };
 obj = { FLEXIBLE: "flexible", CONDENSED: "condensed", HIDDEN: "hidden" };
 obj = { fontSize: Accessibility.FONT_SIZE_DEFAULT, zoom: Accessibility.ZOOM_DEFAULT, keyboardModeEnabled: false, contrastMode: obj.DEFAULT, colorblindMode: false, lowContrastMode: false, saturation: 1, contrast: 1, desaturateUserColors: false, forcedColorsModalSeen: false, keyboardNavigationExplainerModalSeen: false, messageGroupSpacing: null, systemPrefersReducedMotion: "no-preference", systemPrefersCrossfades: false, prefersReducedMotion: "auto", systemForcedColors: "none", syncForcedColors: true, systemPrefersContrast: "no-preference", alwaysShowLinkDecorations: false, roleStyle: "username", officialMessageStyle: "default", officialMessageStyleExplicitlySet: false, displayNameStylesEnabled: true, submitButtonEnabled: false, syncProfileThemeWithUserTheme: false, enableCustomCursor: true, switchIconsEnabled: false, appsButtonEnabled: true, expressionPickerFormat: obj.FLEXIBLE, condensePickerWhenNarrow: true, emojiButtonEnabled: true, gifButtonEnabled: true, stickerButtonEnabled: true };
-let closure_16 = { 12: "font-size-12", 14: "font-size-14", 15: "font-size-15", 16: "font-size-16", 18: "font-size-18", 20: "font-size-20", 24: "font-size-24" };
+let closure_17 = { 12: "font-size-12", 14: "font-size-14", 15: "font-size-15", 16: "font-size-16", 18: "font-size-18", 20: "font-size-20", 24: "font-size-24" };
 class AccessibilityStore extends DeviceSettingsStore {
 }
 const prototype = AccessibilityStore.prototype;
@@ -79,10 +80,10 @@ prototype["initialize"] = function initialize(arg0) {
   if (null != obj.messageGroupSpacing) {
     num = obj.messageGroupSpacing;
   }
-  if (closure_9.indexOf(num) < 0) {
+  if (closure_10.indexOf(num) < 0) {
     obj.messageGroupSpacing = null;
   }
-  const items = [handleConnectionClosedOrResumed];
+  const items = [handleConnectionClosedOrResumed, initialize];
   self.syncWith(items, maybeApplyNoTextColorForLightCustomTheme);
 };
 Object.defineProperty(prototype, "fontScale", {
@@ -203,7 +204,7 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
       let messageGroupSpacing = obj.messageGroupSpacing;
     } else {
       const MessageDisplayCompact = explicitContentFromProto.MessageDisplayCompact;
-      messageGroupSpacing = MessageDisplayCompact.getSetting() ? closure_10 : closure_11;
+      messageGroupSpacing = MessageDisplayCompact.getSetting() ? closure_11 : closure_12;
     }
     return messageGroupSpacing;
   },
@@ -212,14 +213,14 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
 Object.defineProperty(prototype, "isMessageGroupSpacingIncreased", {
   get: function isMessageGroupSpacingIncreased() {
     const MessageDisplayCompact = explicitContentFromProto.MessageDisplayCompact;
-    return this.messageGroupSpacing > (MessageDisplayCompact.getSetting() ? closure_10 : closure_11);
+    return this.messageGroupSpacing > (MessageDisplayCompact.getSetting() ? closure_11 : closure_12);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingDecreased", {
   get: function isMessageGroupSpacingDecreased() {
     const MessageDisplayCompact = explicitContentFromProto.MessageDisplayCompact;
-    return this.messageGroupSpacing < (MessageDisplayCompact.getSetting() ? closure_10 : closure_11);
+    return this.messageGroupSpacing < (MessageDisplayCompact.getSetting() ? closure_11 : closure_12);
   },
   set: undefined
 });
@@ -726,7 +727,7 @@ const accessibilityStore = new AccessibilityStore(require("dispatcher"), {
     const merged6 = Object.assign(tmp12);
   }
 });
-const result = require("handleConnectionClosedOrResumed").fileFinishedImporting("modules/a11y/AccessibilityStore.tsx");
+const result = require("handleThemeChange").fileFinishedImporting("modules/a11y/AccessibilityStore.tsx");
 
 export default accessibilityStore;
 export const AccessibilityContrastMode = obj;

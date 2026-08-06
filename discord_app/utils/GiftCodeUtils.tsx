@@ -169,7 +169,7 @@ function getGiftCodeRedeemError(error, currentUser) {
     return intl8.string(v5(1236).t.roztIr);
   } else if (tmp.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE === code) {
     const intl6 = v5(1236).intl;
-    let obj = v5(3901);
+    let obj = v5(3930);
     const intl7 = v5(1236).intl;
     const string = intl7.string;
     const t = v5(1236).t;
@@ -225,8 +225,8 @@ const result = require("handleSubscribeFailure").fileFinishedImporting("utils/Gi
 
 export const GiftExperience = obj;
 export const getGiftExperience = function getGiftExperience(arg0, arg1) {
-  if (!v5(4491).isMobile) {
-    if (!v5(4491).isTablet) {
+  if (!v5(4521).isMobile) {
+    if (!v5(4521).isTablet) {
       if (null == arg0) {
         if (!arg1) {
           let DEFAULT = obj.CUSTOM_STYLE;
@@ -239,8 +239,8 @@ export const getGiftExperience = function getGiftExperience(arg0, arg1) {
   DEFAULT = obj.DEFAULT;
 };
 export const shouldShowCustomGiftExperience = function shouldShowCustomGiftExperience(arg0) {
-  if (!v5(4491).isMobile) {
-    if (!v5(4491).isTablet) {
+  if (!v5(4521).isMobile) {
+    if (!v5(4521).isTablet) {
       if (null != arg0) {
         let DEFAULT = obj.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD;
         let tmp5 = obj;
@@ -469,9 +469,9 @@ export const getButtonText = function getButtonText(arg0, giftStyle, isCustomGif
 };
 export const getSubscriptionGiftSuccessText = function getSubscriptionGiftSuccessText(getOrFetchSubscriptionPlan) {
   const v5 = getOrFetchSubscriptionPlan;
-  const match = v5(4454).match(getOrFetchSubscriptionPlan);
+  const match = v5(4484).match(getOrFetchSubscriptionPlan);
   let obj = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-  const str = v5(4454);
+  const str = v5(4484);
   obj = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
   const withResult = match.with(obj, () => {
     const intl = subscriptionPlan(outer1_2[12]).intl;
@@ -624,11 +624,11 @@ export const getBodyText = function getBodyText(arg0) {
     return formatResult;
   } else if (tmp.SUCCESS === step) {
     if (null != subscriptionPlan) {
-      const match = subscriptionPlan(4454).match(subscriptionPlan);
+      const match = subscriptionPlan(4484).match(subscriptionPlan);
       obj = { interval: null, premiumSubscriptionType: null };
       obj[0] = constants6.MONTH;
       obj[1] = closure_13.TIER_2;
-      const str = subscriptionPlan(4454);
+      const str = subscriptionPlan(4484);
       const obj1 = { interval: null, premiumSubscriptionType: null };
       obj1[0] = constants6.YEAR;
       obj1[1] = closure_13.TIER_2;

@@ -513,11 +513,11 @@ export default {
               let closure_2 = tmp3;
               let c0;
               let obj3;
-              obj3 = function getChannelId(id) {
+              obj3 = function getChannelId(guildId) {
                 let channelIdForGuildTransition = arg1;
                 if (null == arg1) {
-                  channelIdForGuildTransition = _undefined(id[22]).getChannelIdForGuildTransition(id);
-                  const obj = _undefined(id[22]);
+                  channelIdForGuildTransition = _undefined(guildId[22]).getChannelIdForGuildTransition(guildId);
+                  const obj = _undefined(guildId[22]);
                 }
                 return channelIdForGuildTransition;
               };
@@ -972,7 +972,7 @@ export default {
       const obj5 = outer1_0(530);
       obj1[3] = obj5.rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = outer1_1(5832);
+      const obj = outer1_1(5859);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -1004,7 +1004,7 @@ export default {
       obj1[1] = outer1_1;
       obj1[3] = outer1_0(530).rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = outer1_1(5832);
+      const obj = outer1_1(5859);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -1021,7 +1021,7 @@ export default {
       obj1[1] = outer1_1;
       obj1[3] = outer1_0(530).rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = outer1_1(5832);
+      const obj = outer1_1(5859);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -1155,7 +1155,7 @@ export default {
         const defaultChannel = store.getDefaultChannel(guildId);
         if (null != defaultChannel) {
           if (!obj3.isChannelContentGated(defaultChannel)) {
-            let tmp11Result = tmp11(5838);
+            let tmp11Result = tmp11(5865);
             if (!tmp11Result.isChannelSpoilerGated(defaultChannel)) {
               tmp11Result = tmp11(1222);
               tmp11Result.transitionTo(closure_21.CHANNEL(guildId, defaultChannel.id));

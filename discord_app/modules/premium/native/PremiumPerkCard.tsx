@@ -5,22 +5,22 @@ import { MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE as closure_6 } from "GuildFeatures";
 import ME from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/12570_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12571_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12572_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12573_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12574_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12575_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12576_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12577_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12578_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12579_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12580_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12581_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12582_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12583_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12584_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12585_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12607_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12608_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12609_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12610_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12611_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12612_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12613_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12614_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12615_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12616_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12617_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12618_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12619_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12620_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12621_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12622_registerAsset.js";
 import { metadata } from "../../../../discord_assets/assets/images/perks/xbox_game_pass.jpg.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { preload } from "../../../components_native/common/FastImage.tsx";
@@ -112,7 +112,7 @@ export default function PremiumPerkCard(variant) {
       obj2[0] = tmp4.imageOverlayText;
       imageStyle = imageOverlayText.toUpperCase();
       obj2[2] = imageStyle;
-      imageSrc = callback(tmp6(4251).Text, obj2);
+      imageSrc = callback(tmp6(4281).Text, obj2);
       obj1[1] = imageSrc;
       items1[1] = callback(closure_4, obj1);
       obj[1] = items1;
@@ -135,7 +135,7 @@ export default function PremiumPerkCard(variant) {
     if (null != description) {
       const obj4 = { variant: "text-sm/normal", children: null };
       obj4[1] = description;
-      let tmp21 = callback(tmp6(4251).Text, obj4);
+      let tmp21 = callback(tmp6(4281).Text, obj4);
     } else {
       tmp21 = null;
       if (null != bodyComponent) {
@@ -165,7 +165,7 @@ export default function PremiumPerkCard(variant) {
     const items5 = [tmp4.title, titleStyle];
     obj8[0] = items5;
     obj8[3] = title;
-    items4[2] = callback(tmp6(4251).Text, obj8);
+    items4[2] = callback(tmp6(4281).Text, obj8);
     const obj9 = { style: null, children: null };
     obj9[0] = tmp4.description;
     obj9[1] = tmp21;
@@ -177,7 +177,7 @@ export default function PremiumPerkCard(variant) {
       const obj11 = { size: "sm", variant: "secondary", text: null, onPress: null };
       obj11[2] = cta;
       obj11[3] = buttonOnPress;
-      obj10[1] = tmp29(tmp6(4665).Button, obj11);
+      obj10[1] = tmp29(tmp6(4695).Button, obj11);
       tmp29Result = tmp29(tmp24, obj10);
     }
     items4[4] = tmp29Result;
@@ -192,25 +192,25 @@ export const usePerkCardHeight = function usePerkCardHeight(NARROW) {
   return getFontScale.useFontScale() > 1 ? frozen[NARROW].scaledFontHeight : frozen[NARROW].height;
 };
 export const usePremiumPerkCard = function usePremiumPerkCard() {
-  let obj = subscriptionPlansLoaded(12569);
+  let obj = subscriptionPlansLoaded(12606);
   subscriptionPlansLoaded = obj.useSubscriptionPlansLoaded();
-  let obj1 = subscriptionPlansLoaded(4150);
+  let obj1 = subscriptionPlansLoaded(4180);
   const formatSizeResult = obj1.formatSize(closure_6 / 1024, { useKibibytes: true });
   const callback = React.useCallback(() => {
-    let obj = subscriptionPlansLoaded(5910);
+    let obj = subscriptionPlansLoaded(5937);
     obj = { screen: constants.COLLECTIBLES_SHOP, params: null };
-    obj = { analyticsSource: callback(5615).PREMIUM_MARKETING_PERK_CARD };
+    obj = { analyticsSource: callback(5669).PREMIUM_MARKETING_PERK_CARD };
     obj[1] = obj;
     obj.openUserSettings(obj);
   }, []);
   const callback1 = React.useCallback(() => {
-    let obj = subscriptionPlansLoaded(5910);
+    let obj = subscriptionPlansLoaded(5937);
     obj = { screen: constants.PROFILE_CUSTOMIZATION };
     obj.openUserSettings(obj);
   }, []);
   const items = [subscriptionPlansLoaded];
   const callback2 = React.useCallback(() => {
-    let obj = subscriptionPlansLoaded(5910);
+    let obj = subscriptionPlansLoaded(5937);
     obj = { screen: constants.APPEARANCE_THEME_PICKER };
     obj.openUserSettings(obj);
   }, []);
@@ -223,7 +223,7 @@ export const usePremiumPerkCard = function usePremiumPerkCard() {
   obj = { customProfile: null, clientThemes: null, serverBoosts: null, greyServerBoosts: null, customAppIcons: null, emoji: null, customSounds: null, sticker: null, earlyAccess: null, memberPricing: null, largeUploads: null, hdVideo: null, superReactions: null, entranceSounds: null, badge: null, greyBadge: null, xboxGamePass: null };
   obj = { title: null, description: null, imageSrc: null, buttonOnPress: null };
   const callback4 = React.useCallback(() => {
-    let obj = subscriptionPlansLoaded(5910);
+    let obj = subscriptionPlansLoaded(5937);
     obj = { screen: constants.APP_ICONS };
     obj.openUserSettings(obj);
   }, []);
@@ -358,7 +358,7 @@ export const usePremiumPerkCard = function usePremiumPerkCard() {
   const obj17 = { uri: metadata };
   obj19[0] = combined.getArticleURL(NITRO_2_POINT_0.NITRO_2_POINT_0);
   obj18[1] = intl36.format(subscriptionPlansLoaded(1236).t["9Wv+8h"], obj19);
-  obj16[3] = callback(subscriptionPlansLoaded(4251).Text, obj18);
+  obj16[3] = callback(subscriptionPlansLoaded(4281).Text, obj18);
   obj[16] = obj16;
   return obj;
 };

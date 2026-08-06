@@ -15,7 +15,7 @@ DmSettingsUpsellManager.prototype["handleDmSettingsUpsellShow"] = function handl
   const result = DmSettingsUpsellActionCreators.native.openDmSettingsUpsellModal(guildId.guildId);
 };
 const dmSettingsUpsellManager = new DmSettingsUpsellManager();
-let result = require("module_16259").fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellManager.tsx");
+let result = require("module_16299").fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellManager.tsx");
 
 export default dmSettingsUpsellManager;
 export const acknowledgeDmSettingsUpsell = function acknowledgeDmSettingsUpsell(guildId) {

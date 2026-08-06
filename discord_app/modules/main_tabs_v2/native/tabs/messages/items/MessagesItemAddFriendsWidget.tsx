@@ -5,8 +5,8 @@ import { View } from "registerAsset";
 import { InstantInviteSources } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../../_runtime/13080_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/15107_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/13117_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/15145_registerAsset.js";
 import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
 import { PressableBase } from "../../../../../../design/void/Pressables/native/Pressables.tsx";
 import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
@@ -66,7 +66,7 @@ function _getFriendInviteCode() {
           }
         } else if (1 === tmp7) {
           c3 = 0;
-          let obj2 = code(3955);
+          let obj2 = code(3984);
           const intl = code(1236).intl;
           obj2.presentError(intl.string(code(1236).t.R0RpRX));
           c5 = 3;
@@ -168,10 +168,10 @@ function _handleShare() {
           return obj;
         } else {
           callback = arg1;
-          const obj5 = callback(8959);
+          const obj5 = callback(8988);
           const intl = callback(1236).intl;
           const obj2 = { link: null };
-          obj2[0] = callback2(7112)(callback);
+          obj2[0] = callback2(7139)(callback);
           obj5.handleOpenShareSheet(callback, null, intl.formatToPlainString(callback(1236).t.PJf9P9, obj2), constants.ADD_FRIENDS_WIDGET);
           c3 = 3;
           return { value: "T", done: null };

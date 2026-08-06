@@ -1,6 +1,6 @@
 // discord_app/modules/guild_templates/native/GuildTemplateActionCreators.tsx
 import merged from "map";
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { dispatcher } from "../../../Dispatcher.tsx";
 import { map } from "../GuildTemplateActionCreators.tsx";
@@ -11,7 +11,7 @@ let obj = {};
 obj.showModal = function showModal(code) {
   let obj = ModalActionCreators;
   obj = { code };
-  obj.pushLazy(asyncRequireImpl(11078, dependencyMap.paths), obj, GUILD_TEMPLATE_MODAL_KEY);
+  obj.pushLazy(asyncRequireImpl(11110, dependencyMap.paths), obj, GUILD_TEMPLATE_MODAL_KEY);
   obj = { type: "GUILD_TEMPLATE_MODAL_SHOW", code };
   dispatcher.dispatch(obj);
   const obj3 = dispatcher;

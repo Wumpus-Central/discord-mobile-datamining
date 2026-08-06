@@ -39,13 +39,13 @@ function _sendGiftMessage() {
           return channel;
         }
       });
-      dependencyMap = callback(4489).getGiftCodeURL(callback);
-      const obj9 = lib(6811);
+      dependencyMap = callback(4519).getGiftCodeURL(callback);
+      const obj9 = lib(6838);
       const id = lib.id;
-      const obj8 = callback(4489);
+      const obj8 = callback(4519);
       const obj4 = { isGiftLinkSentOnBehalfOfUser: true, location: null };
       obj4[1] = constants.GIFTING;
-      return obj9.sendMessage(id, lib(7036).parse(lib, dependencyMap), undefined, obj4);
+      return obj9.sendMessage(id, lib(7063).parse(lib, dependencyMap), undefined, obj4);
     })();
   });
   const _sendGiftMessage = tmp;

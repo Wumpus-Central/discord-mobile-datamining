@@ -9,8 +9,8 @@ const result = require("navigationToRootTabHelper").fileFinishedImporting("modul
 export const useIsViewingActivity = function useIsViewingActivity(channelId) {
   channelId = channelId.channelId;
   let tmp = useIsActivityFocused(channelId);
-  const isModalOpen = channelId(4106).useIsModalOpen(ChannelCallCameraPreview);
-  const obj = channelId(4106);
+  const isModalOpen = channelId(4135).useIsModalOpen(ChannelCallCameraPreview);
+  const obj = channelId(4135);
   const items = [getParticipants];
   const items1 = [channelId];
   const stateFromStores = channelId(589).useStateFromStores(items, () => outer1_3.getChatOpen(channelId), items1);

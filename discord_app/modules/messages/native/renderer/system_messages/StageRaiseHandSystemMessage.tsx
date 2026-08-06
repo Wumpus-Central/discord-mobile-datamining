@@ -41,7 +41,7 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
     if (participant != null) {
       rtsState = participant.rtsState;
     }
-    canResult = rtsState === tmp(4439).RequestToSpeakStates.REQUESTED_TO_SPEAK;
+    canResult = rtsState === tmp(4469).RequestToSpeakStates.REQUESTED_TO_SPEAK;
   }
   if (canResult) {
     canResult = toISOStringResult === toISOStringResult1;
@@ -64,14 +64,14 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
       obj3[1] = message;
       obj2[0] = obj3;
       obj1[0] = intl3.formatToParts(tmp(1236).t["qDAX++"], obj2);
-      obj1[1] = tmp6(1945).getArticleURL(constants.EPHEMERAL_MESSAGES);
+      obj1[1] = tmp6(1974).getArticleURL(constants.EPHEMERAL_MESSAGES);
       const intl4 = tmp(1236).intl;
       obj1[2] = intl4.string(tmp(1236).t.htHOrp);
       tmp10 = obj1;
-      const tmp6Result = tmp6(1945);
+      const tmp6Result = tmp6(1974);
     }
   }
   obj[3] = tmp10;
-  const merged = Object.assign(tmp6(7854)(roleStyle));
+  const merged = Object.assign(tmp6(7995)(roleStyle));
   return obj;
 };

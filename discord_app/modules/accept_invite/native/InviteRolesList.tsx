@@ -40,13 +40,13 @@ export default function InviteRolesList(invite) {
       obj = { variant: "text-sm/semibold", color: "text-default", children: null };
       const intl = guild(1236).intl;
       obj[2] = intl.string(guild(1236).t.stcSfI);
-      const items1 = [callback(guild(4251).Text, obj), ];
+      const items1 = [callback(guild(4281).Text, obj), ];
       obj = { style: null, children: null };
       obj[0] = tmp.rolesRow;
       obj[1] = memo.map((id) => outer1_5(roles(outer1_2[8]), { role: id, guildId: guild.id }, id.id));
       items1[1] = callback(View, obj);
       obj[2] = items1;
-      tmp2 = callback2(guild(4663).Stack, obj);
+      tmp2 = callback2(guild(4693).Stack, obj);
     }
   }
   return tmp2;

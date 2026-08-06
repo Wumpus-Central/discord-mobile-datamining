@@ -51,7 +51,7 @@ function LimitAndDurationInfo(channel) {
     }
     obj[1] = hasVideo;
     obj[2] = channel;
-    let tmp6Result = tmp6(channel(15120).ConnectedUserLimit, obj);
+    let tmp6Result = tmp6(channel(15158).ConnectedUserLimit, obj);
   } else {
     const obj1 = { channel: null };
     obj1[0] = channel;
@@ -96,7 +96,7 @@ export default function ChannelInfo(channel) {
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ guild: outer1_4.getGuild(channel.guild_id), mentionsCount: outer1_6.getMentionCount(channel.id), isMentionLowImportance: outer1_6.getIsMentionLowImportance(channel.id), isNewChannel: outer1_3.shouldIndicateNewChannel(channel.guild_id, channel.id) }));
   ({ guild, mentionsCount, isNewChannel } = stateFromStoresObject);
   const tmp5 = useEmbeddedApps(channel);
-  let obj1 = channel(8186);
+  let obj1 = channel(8326);
   const postsWithUnreadsCount = obj1.useUnreadThreadsCountForParent(channel.guild_id, channel.id);
   if (showChannelBadge({ mentionsCount, isNewChannel, postsWithUnreadsCount, muted })) {
     obj = { mentionCount: null, isMentionLowImportance: null, isNewChannel: null, postsWithUnreadsCount: null, muted: null };
@@ -109,9 +109,9 @@ export default function ChannelInfo(channel) {
     }
     obj[3] = tmp18;
     obj[4] = muted;
-    let tmp11Result = jsx(tmp4(15208), { mentionCount: null, isMentionLowImportance: null, isNewChannel: null, postsWithUnreadsCount: null, muted: null });
+    let tmp11Result = jsx(tmp4(15247), { mentionCount: null, isMentionLowImportance: null, isNewChannel: null, postsWithUnreadsCount: null, muted: null });
     const tmp16 = jsx;
-    const tmp4Result = tmp4(15208);
+    const tmp4Result = tmp4(15247);
   } else {
     if (null != isChannelCollapsed) {
       if (isChannelCollapsed) {
@@ -121,7 +121,7 @@ export default function ChannelInfo(channel) {
           hasItem = features.has(constants.COMMUNITY);
         }
         if (hasItem) {
-          let tmpResult = tmp(4438);
+          let tmpResult = tmp(4468);
           if (tmpResult.hasStream(voiceStates)) {
             tmp11Result = jsx(tmp(1297).LiveTag, {});
           }
@@ -130,12 +130,12 @@ export default function ChannelInfo(channel) {
     }
     if (null != enableActivities) {
       if (enableActivities) {
-        tmpResult = tmp(15210);
+        tmpResult = tmp(15249);
         if (tmpResult.showChannelItemEmbeddedActivities(tmp5)) {
           obj = { embeddedApps: null, muted: null };
           obj[0] = tmp5;
           obj[1] = muted;
-          tmp11Result = jsx(tmp4(15211), { embeddedApps: null, muted: null });
+          tmp11Result = jsx(tmp4(15250), { embeddedApps: null, muted: null });
         }
       }
     }
@@ -144,7 +144,7 @@ export default function ChannelInfo(channel) {
         if (isSubscriptionGated) {
           obj1 = { locked: null };
           obj1[0] = needSubscriptionToAccess;
-          tmp11Result = jsx(tmp4(15119), { locked: null });
+          tmp11Result = jsx(tmp4(15157), { locked: null });
         }
       }
     }

@@ -15,7 +15,7 @@ obj = { ORIGINAL: "original", PORTRAIT_9_16: "9:16", LANDSCAPE_16_9: "16:9" };
 obj = { TEXT: "text" };
 const obj1 = { NONE: "none", SMALL: "small", MEDIUM: "medium", LARGE: "large" };
 const result4 = 14 * require("set").Millis.DAY;
-const obj2 = { fontSize: 32, color: "#FFFFFF", strokeWidth: obj1.NONE, strokeColor: "#000000" };
+const obj2 = { fontSize: 0.06, color: "#FFFFFF", strokeWidth: obj1.NONE, strokeColor: "#000000" };
 const tmp5 = new require("timestamp")("Clips");
 const result5 = require("set").fileFinishedImporting("modules/clips/ClipsConstants.tsx");
 
@@ -110,7 +110,7 @@ export const DEFAULT_TRACK_DURATION_SECONDS = 5;
 export const MIN_TRACK_DURATION_SECONDS = 1;
 export const DEFAULT_TRACK_POSITION = { x: 0.5, y: 0.5 };
 export const TextStrokeWidth = obj1;
-export const TEXT_STROKE_WIDTH_PX = { [obj1.NONE]: 0, [obj1.SMALL]: 1, [obj1.MEDIUM]: 2, [obj1.LARGE]: 4 };
+export const TEXT_STROKE_WIDTH_TO_FONT_SIZE_RATIO = { [obj1.NONE]: 0, [obj1.SMALL]: 0.0625, [obj1.MEDIUM]: 0.125, [obj1.LARGE]: 0.25 };
 export const DEFAULT_TEXT_TRACK_STYLE = obj2;
 export const ClipType = { CLIP: "clip", SCREENSHOT: "screenshot", VOICE_CLIP: "voice_clip" };
 export const GameEventType = { UNCLASSIFIED: "unclassified", KILL: "kill", MULTIKILL: "multikill", DEATH: "death", ASSIST: "assist", ITEM: "item", VICTORY: "victory", DEFEAT: "defeat", LEVEL_UP: "level_up", TREASURE: "treasure", OBJECTIVE_KILL: "objective_kill" };

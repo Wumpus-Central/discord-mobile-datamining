@@ -2,7 +2,7 @@
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { useAppLauncherNavigation } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
-import { Link } from "../../../../../_runtime/01481_Link.js";
+import { createStandardNavigationFactories } from "../../../../../_runtime/01481_createStandardNavigationFactories.js";
 
 let require = arg1;
 const result = require("APP_LAUNCHER_BUILT_IN_SECTION_ICON").fileFinishedImporting("modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx");
@@ -12,7 +12,7 @@ export default function useNavigationTransitionEnded() {
   const require = tmp2;
   const tmp3 = useAppLauncherNavigation();
   const dependencyMap = tmp3;
-  route = Link.useRoute();
+  route = createStandardNavigationFactories.useRoute();
   const items = [tmp3, route, tmp[1]];
   const effect = React.useEffect(() => tmp3.addListener("transitionEnd", () => {
     state = state.getState();

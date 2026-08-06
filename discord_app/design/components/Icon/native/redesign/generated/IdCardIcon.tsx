@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/IdCardIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/07719_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/07749_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

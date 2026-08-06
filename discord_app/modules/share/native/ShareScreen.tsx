@@ -42,20 +42,19 @@ function getAttachmentsRestriction(type) {
 ({ ChannelRecordBase: error, isGuildChannelType: metroImportAll } = createChannelRecord);
 ({ AnalyticEvents: unpackModuleId, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = ME);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-createCacheKey = { container: null, headerContainer: null };
+createCacheKey = { container: null, headerLeftContainer: null, headerRightContainer: null };
 createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
 let num = 0;
 if (set.isIOS()) {
   num = require("Themes").space.PX_16;
 }
-let obj1 = { paddingHorizontal: num, paddingVertical: null };
+createCacheKey[1] = { paddingLeft: num };
 let num2 = 0;
 if (set.isIOS()) {
-  num2 = require("Themes").space.PX_8;
+  num2 = require("Themes").space.PX_16;
 }
-obj1[1] = num2;
-createCacheKey[1] = obj1;
+createCacheKey[2] = { paddingRight: num2 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 const result = set.fileFinishedImporting("modules/share/native/ShareScreen.tsx");
 
@@ -268,7 +267,7 @@ export default function ShareScreen(sharedContent) {
                               c4 = 3;
                               return { value: false, done: true };
                             } else {
-                              let obj1 = callback(13128);
+                              let obj1 = callback(13165);
                               obj1 = { attachments: null, channel: null, comment: null };
                               obj1[0] = outer1_1;
                               obj1[1] = channel;
@@ -400,8 +399,6 @@ export default function ShareScreen(sharedContent) {
       }
     }
   }), items1);
-  obj = { style: tmp.container, children: null };
-  let obj1 = { style: tmp.headerContainer, children: null };
   const memo = obj.useMemo(() => {
     if (null != embed) {
       let obj = { attachments: null, isRevamp: true };
@@ -427,10 +424,11 @@ export default function ShareScreen(sharedContent) {
     }
     return tmp4Result;
   }, items2);
-  let obj2 = { title: null, headerTitle: null, headerTitleAlign: "center", headerLeft: null, headerStatusBarHeight: null };
+  obj = { style: tmp.container, children: null };
+  let obj1 = { title: null, headerTitle: null, headerTitleAlign: "center", headerLeft: null, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null };
   let intl3 = tmp11(tmp9[14]).intl;
-  obj2[0] = intl3.string(tmp11(tmp9[14]).t["MR7/kg"]);
-  obj2[1] = function headerTitle(title) {
+  obj1[0] = intl3.string(tmp11(tmp9[14]).t["MR7/kg"]);
+  obj1[1] = function headerTitle(title) {
     if (c5) {
       const intl2 = sharedContent(first[14]).intl;
       let obj = { limit: null };
@@ -450,40 +448,43 @@ export default function ShareScreen(sharedContent) {
     tmp11Result = tmp11(tmp9[32]);
     headerCloseButton = tmp11Result.getHeaderCloseButton(onClose);
   }
-  obj2[3] = headerCloseButton;
+  obj1[3] = headerCloseButton;
+  ({ headerLeftContainer: obj4[4], headerRightContainer: obj4[5] } = tmp);
   const tmp2 = length;
-  const tmp20 = closure_18;
+  const tmp21 = closure_18;
+  const tmp22 = c6;
   let tmp6 = length(React.useState(false), 2);
-  let num;
+  let PX_8;
   if (tmp11Result1.isIOS()) {
-    num = 0;
+    PX_8 = tmp16(tmp9[12]).space.PX_8;
   }
-  obj2[4] = num;
-  obj1[1] = closure_16(tmp11(tmp9[29]).Header, obj2);
-  const items3 = [closure_16(c6, obj1), , ];
-  let obj3 = { rowMode: UserRowModes.TOGGLE, initialSelectedDestinations: first, onSelectedDestinationChange: callback, getRowIsUnavailable: null, insetEnd: 0, disableGradient: true, disableStickySections: true, disableSelection: null, disableLongPress: null };
-  let tmp25;
+  obj1[6] = PX_8;
+  const items3 = [closure_16(tmp11(tmp9[29]).Header, obj1), , ];
+  let obj2 = { rowMode: UserRowModes.TOGGLE, initialSelectedDestinations: first, onSelectedDestinationChange: callback, getRowIsUnavailable: null, insetEnd: 0, disableGradient: true, disableStickySections: true, disableSelection: null, disableLongPress: null };
+  let tmp26;
   let tmp16Result = tmp16(tmp9[33]);
   if (sharedContent.attachments.length > 0) {
-    tmp25 = getAttachmentsRestriction;
+    tmp26 = getAttachmentsRestriction;
   }
-  obj3[3] = tmp25;
-  obj3[7] = length >= MAX_DESTINATION_COUNT || sharedContent.attachments.length > closure_13;
+  obj2[3] = tmp26;
+  obj2[7] = length >= MAX_DESTINATION_COUNT || sharedContent.attachments.length > closure_13;
   tmp11Result1 = tmp11(tmp9[13]);
-  obj3[8] = tmp11(tmp9[13]).isAndroid();
-  items3[1] = closure_16(tmp16Result, obj3);
-  let obj4 = { text: first1, setText: tmp2Result[1], preview: memo, sendLabel: stringResult, canSend: null, isSending: null, onSend: null, disabled: null, appEntryKey: null };
-  let tmp27 = length > 0;
+  obj2[8] = tmp11(tmp9[13]).isAndroid();
+  items3[1] = closure_16(tmp16Result, obj2);
+  let obj3 = { text: first1, setText: tmp2Result[1], preview: memo, sendLabel: stringResult, canSend: null, isSending: null, onSend: null, disabled: null, appEntryKey: null };
+  let tmp28 = length > 0;
   tmp16Result = tmp16(tmp9[34]);
-  if (tmp27) {
-    tmp27 = !tmp4;
+  if (tmp28) {
+    tmp28 = !tmp4;
   }
-  obj4[4] = tmp27;
-  obj4[5] = tmp7;
-  obj4[6] = callback1;
-  obj4[7] = sharedContent.attachments.length > closure_13;
-  obj4[8] = sharedContent.appEntryKey;
-  items3[2] = closure_16(tmp16Result, obj4);
+  let obj4 = { children: null };
+  obj3[4] = tmp28;
+  obj3[5] = tmp7;
+  obj3[6] = callback1;
+  obj3[7] = sharedContent.attachments.length > closure_13;
+  obj3[8] = sharedContent.appEntryKey;
+  items3[2] = closure_16(tmp16Result, obj3);
   obj[1] = items3;
-  return tmp20(c6, obj);
+  obj4[0] = tmp21(tmp22, obj);
+  return closure_16(tmp11(tmp9[29]).SafeAreaProviderCompat, obj4);
 };

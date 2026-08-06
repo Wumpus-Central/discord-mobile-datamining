@@ -29,7 +29,7 @@ export const ChatProvisionalAccountExplainerCard = function ChatProvisionalAccou
   let c1 = "text-sm/semibold";
   const items = [iconSize, "text-sm/semibold"];
   const callback = React.useCallback((application) => outer1_5(textmdsemibold(outer1_2[5]), { application, textVariant: textmdsemibold, iconSize }, application.id), items);
-  let obj = iconSize(11870);
+  let obj = iconSize(11904);
   const provisionalAccountExplanationText = obj.useProvisionalAccountExplanationText({ userId, renderApplicationName: callback });
   obj = { style: items1, children: null };
   items1 = [tmp.chatContainer, style];
@@ -37,11 +37,11 @@ export const ChatProvisionalAccountExplainerCard = function ChatProvisionalAccou
   const obj1 = { variant: "text-sm/semibold", color: "text-default", children: null };
   const intl = iconSize(1236).intl;
   obj1[2] = intl.string(iconSize(1236).t.Iyka0U);
-  const items2 = [callback(iconSize(4251).Text, obj1), callback(iconSize(7688).CircleErrorIcon, { size: "xs", color: "text-default" })];
+  const items2 = [callback(iconSize(4281).Text, obj1), callback(iconSize(7716).CircleErrorIcon, { size: "xs", color: "text-default" })];
   obj[1] = items2;
-  const items3 = [callback2(View, obj), callback(iconSize(4251).Text, { variant: "text-sm/normal", color: "text-default", children: provisionalAccountExplanationText })];
+  const items3 = [callback2(View, obj), callback(iconSize(4281).Text, { variant: "text-sm/normal", color: "text-default", children: provisionalAccountExplanationText })];
   obj[1] = items3;
-  return callback2(iconSize(5302).Card, obj);
+  return callback2(iconSize(5356).Card, obj);
 };
 export const UserProfileProvisionalAccountExplainerCard = function UserProfileProvisionalAccountExplainerCard(iconSize) {
   let style;
@@ -51,12 +51,12 @@ export const UserProfileProvisionalAccountExplainerCard = function UserProfilePr
   const items = [iconSize, "text-md/semibold"];
   ({ style, userId } = iconSize);
   const callback = React.useCallback((application) => outer1_5(textmdsemibold(outer1_2[5]), { application, textVariant: textmdsemibold, iconSize }, application.id), items);
-  let obj = iconSize(11870);
+  let obj = iconSize(11904);
   const provisionalAccountExplanationText = obj.useProvisionalAccountExplanationText({ userId, renderApplicationName: callback });
   obj = { style, title: null, titleIcon: null, children: null };
   const intl = iconSize(1236).intl;
   obj[1] = intl.string(iconSize(1236).t.Iyka0U);
-  obj[2] = callback(iconSize(7688).CircleErrorIcon, { size: "xs", color: "text-default" });
-  obj[3] = callback(iconSize(4251).Text, { variant: "text-md/normal", color: "text-default", children: provisionalAccountExplanationText });
+  obj[2] = callback(iconSize(7716).CircleErrorIcon, { size: "xs", color: "text-default" });
+  obj[3] = callback(iconSize(4281).Text, { variant: "text-md/normal", color: "text-default", children: provisionalAccountExplanationText });
   return callback(Divider, obj);
 };

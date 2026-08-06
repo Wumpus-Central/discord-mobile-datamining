@@ -47,7 +47,7 @@ function useHandleBuyNow(product) {
               v0 = 1;
               dependencyMap = 1;
               let obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(6894).fetchCollectiblesPurchases();
+              obj1[0] = outer1_0(6921).fetchCollectiblesPurchases();
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -60,9 +60,9 @@ function useHandleBuyNow(product) {
             return obj2;
           } else {
             callback(false);
-            obj = v0(4223);
+            obj = v0(4253);
             obj.hideActionSheet();
-            obj1 = v0(10011);
+            obj1 = v0(10042);
             const obj3 = { product: null, useCategoryImage: true };
             obj3[0] = closure_0;
             obj1.open(obj3);

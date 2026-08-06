@@ -29,11 +29,11 @@ function FamilyCenter() {
   let openAgeGateModal;
   let tmp12;
   const tmp = createCacheKey();
-  let obj = familyCenterInitialized(7231);
+  let obj = familyCenterInitialized(7258);
   const acceptedRequestsCount = obj.useAcceptedRequestsCount();
-  const tmp6 = isLoading(13994)();
-  const selectedTab = isLoading(13995)().selectedTab;
-  let obj1 = familyCenterInitialized(7233);
+  const tmp6 = isLoading(14031)();
+  const selectedTab = isLoading(14032)().selectedTab;
+  let obj1 = familyCenterInitialized(7260);
   const selectedTeenId = obj1.useSelectedTeenId();
   let obj2 = familyCenterInitialized(647);
   const items = [freshTeenActivityWithMap];
@@ -42,24 +42,24 @@ function FamilyCenter() {
   isLoading = stateFromStoresObject.isLoading;
   const dependencyMap = tmp10;
   currentUser = currentUser.getCurrentUser();
-  const tmp3 = isLoading(5595);
+  const tmp3 = isLoading(5649);
   [tmp12, openAgeGateModal] = callback(obj2.useState(0), 2);
   callback = obj2.useCallback((nativeEvent) => {
     callback(nativeEvent.nativeEvent.layout.width);
   }, []);
-  let obj3 = familyCenterInitialized(8850);
+  let obj3 = familyCenterInitialized(8879);
   obj = { items: null, onPageChange: null, pageWidth: null, defaultIndex: null };
   obj = { label: null, id: null, page: null };
   const intl = familyCenterInitialized(1236).intl;
-  obj[0] = intl.string(isLoading(2255).bdBmqy);
+  obj[0] = intl.string(isLoading(2284).bdBmqy);
   obj[1] = FamilyCenterSubPages.ACTIVITY;
-  obj[2] = callback2(isLoading(13996), {});
+  obj[2] = callback2(isLoading(14033), {});
   const items1 = [obj, ];
   obj1 = { label: null, id: null, page: null };
   const intl2 = familyCenterInitialized(1236).intl;
-  obj1[0] = intl2.string(isLoading(2255)["gVWG+6"]);
+  obj1[0] = intl2.string(isLoading(2284)["gVWG+6"]);
   obj1[1] = FamilyCenterSubPages.REQUESTS;
-  obj1[2] = callback2(isLoading(14036), {});
+  obj1[2] = callback2(isLoading(14073), {});
   items1[1] = obj1;
   obj[0] = items1;
   obj[1] = function onPageChange(arg0) {
@@ -97,7 +97,7 @@ function FamilyCenter() {
       }
     }
   }, items2);
-  isLoading(4681)(() => {
+  isLoading(4711)(() => {
     let obj = familyCenterInitialized(tmp10[30]);
     obj = { dismissAction: outer1_11.AUTO, forceTrack: true };
     const result = obj.UNSAFE_markDismissibleContentAsDismissed(familyCenterInitialized(tmp10[31]).DismissibleContent.FAMILY_CENTER_NEW_BADGE, obj);
@@ -113,15 +113,15 @@ function FamilyCenter() {
   if (familyCenterInitialized) {
     if (null != currentUser) {
       if (!tmp10) {
-        tmp4(5720).openAgeGateModal(AgeGateSource.FAMILY_CENTER);
+        tmp4(5747).openAgeGateModal(AgeGateSource.FAMILY_CENTER);
         return null;
       }
     }
   }
-  obj3 = { value: tmp3(isLoading(5615).FAMILY_CENTER).analyticsLocations, children: null };
+  obj3 = { value: tmp3(isLoading(5669).FAMILY_CENTER).analyticsLocations, children: null };
   let obj4 = { style: tmp.container, onLayout: callback, children: null };
   const obj5 = { style: tmp.segmentedControlContainer, children: null };
-  obj5[1] = callback2(familyCenterInitialized(9035).SegmentedControl, { state: segmentedControlState });
+  obj5[1] = callback2(familyCenterInitialized(9064).SegmentedControl, { state: segmentedControlState });
   const items3 = [callback2(closure_5, obj5), ];
   let obj6 = { style: tmp.container, children: null };
   if (isLoading) {
@@ -129,7 +129,7 @@ function FamilyCenter() {
   } else {
     const obj7 = { state: null };
     obj7[0] = segmentedControlState;
-    tmp14Result = tmp14(tmp4(9451).SegmentedControlPages, obj7);
+    tmp14Result = tmp14(tmp4(9480).SegmentedControlPages, obj7);
   }
   obj6[1] = tmp14Result;
   obj6 = tmp14(tmp23, obj6);
@@ -137,7 +137,7 @@ function FamilyCenter() {
   obj4[2] = items3;
   obj4 = closure_16(tmp23, obj4);
   obj3[1] = obj4;
-  tmp14Result = tmp14(tmp4(5595).AnalyticsLocationProvider, obj3);
+  tmp14Result = tmp14(tmp4(5649).AnalyticsLocationProvider, obj3);
 }
 ({ View: c5, ActivityIndicator: closure_6 } = get_ActivityIndicator);
 ({ FamilyCenterPageLocationAnalyticsIds: closure_12, FamilyCenterSubPageAnalyticsIds: map1, FamilyCenterSubPages } = items);

@@ -477,7 +477,7 @@ obj = {
     let tmp2 = null != found;
     if (tmp2) {
       let obj = { permissions: null };
-      obj[0] = importAll(3888).NONE;
+      obj[0] = importAll(3917).NONE;
       const index = items.indexOf(found);
       if (index >= 0) {
         obj = {};
@@ -602,7 +602,7 @@ obj = {
     if (null == found) {
       return false;
     } else {
-      const result = id(1938).extractColorStringsFromServerColors(colors);
+      const result = id(1967).extractColorStringsFromServerColors(colors);
       const value = map2.get(id);
       let tmp21 = null != value;
       if (tmp21) {
@@ -986,7 +986,7 @@ obj = {
         obj[0] = currentStyle;
         obj[1] = value.styleColors;
         const result = obj3.set(id, obj);
-        const result1 = id(1938).extractColorStringsFromServerColors(tmp19);
+        const result1 = id(1967).extractColorStringsFromServerColors(tmp19);
         const primary_color = tmp19.primary_color;
         obj = { color: null, colors: null, colorString: null, colorStrings: null };
         obj[0] = primary_color;

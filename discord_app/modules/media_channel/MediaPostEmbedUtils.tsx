@@ -121,7 +121,7 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     obj[13] = name;
     let channelName;
     if (null != parentChannel) {
-      tmp17Result = tmp17(4445);
+      tmp17Result = tmp17(4475);
       channelName = tmp17Result.computeChannelName(parentChannel, mergeGuildAvatar, upsertRelationship);
     }
     obj[14] = channelName;
@@ -138,10 +138,10 @@ export const getMediaPostEmbedChannelId = function getMediaPostEmbedChannelId(ur
   if (null != url) {
     const parseURLSafelyResult = getPathsFromURL.parseURLSafely(url);
     if (null != parseURLSafelyResult) {
-      let tmp2Result = tmp2(4239);
+      let tmp2Result = tmp2(4269);
       const result = tmp2Result.remainingPathFromDiscordHostMatch(parseURLSafelyResult);
       if (null != result) {
-        tmp2Result = tmp2(4446);
+        tmp2Result = tmp2(4476);
         tryParseChannelPathResult = tmp2Result.tryParseChannelPath(result);
       }
     }
@@ -161,10 +161,10 @@ export const getMediaPostEmbedChannelPath = function getMediaPostEmbedChannelPat
   if (null != url) {
     const parseURLSafelyResult = getPathsFromURL.parseURLSafely(url);
     if (null != parseURLSafelyResult) {
-      let tmpResult = tmp(4239);
+      let tmpResult = tmp(4269);
       const result = tmpResult.remainingPathFromDiscordHostMatch(parseURLSafelyResult);
       if (null != result) {
-        tmpResult = tmp(4446);
+        tmpResult = tmp(4476);
         return tmpResult.tryParseChannelPath(result);
       }
     }

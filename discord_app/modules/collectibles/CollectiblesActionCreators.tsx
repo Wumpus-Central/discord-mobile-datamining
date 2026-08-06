@@ -32,8 +32,7 @@ function openCollectiblesShopMobile(screen) {
   obj = { type: "COLLECTIBLES_SHOP_OPEN" };
   const merged = Object.assign(screen);
   obj.dispatch(obj);
-  let obj2 = getRootNavigationRef;
-  const rootNavigationRef = obj2.getRootNavigationRef();
+  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       screen = screen.screen;
@@ -54,9 +53,7 @@ function openCollectiblesShopMobile(screen) {
           obj1[1] = screen;
           obj1[2] = screen.onNavigateAway;
           obj[1] = obj1;
-          obj2 = { name: "settings", params: null };
-          obj2[1] = obj;
-          rootNavigationRef.navigate(obj2);
+          rootNavigationRef.navigate("settings", obj);
         }
       } else if (null != screen.initialProductSkuId) {
         let FEATURED_PAGE = constants.SHOP_ALL;
@@ -690,8 +687,8 @@ function _validateCollectiblesRecipient() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = getUserAgnosticState;
-            obj2 = callback(5848);
-            const aPIError = new callback(4154).APIError(callback);
+            obj2 = callback(5875);
+            const aPIError = new callback(4184).APIError(callback);
             const result = obj2.captureOrIgnoreApiError(aPIError);
             c7 = 3;
             return { value: false, done: true };
@@ -786,8 +783,8 @@ function _validateCollectiblesRecipientsBatch() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = getUserAgnosticState;
-            obj2 = callback(5848);
-            const aPIError = new callback(4154).APIError(callback);
+            obj2 = callback(5875);
+            const aPIError = new callback(4184).APIError(callback);
             const result = obj2.captureOrIgnoreApiError(aPIError);
             c7 = 3;
             const obj4 = { value: null, done: true };
@@ -1223,7 +1220,7 @@ export default { openCollectiblesShop, closeCollectiblesShop, fetchCollectiblesP
 export { openCollectiblesShop };
 export { openCollectiblesShopMobile };
 export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
-  const rootNavigationRef = isCollectiblesShopRoute(4107).getRootNavigationRef();
+  const rootNavigationRef = isCollectiblesShopRoute(4136).getRootNavigationRef();
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
   let tmp2 = !tmp;
   if (!tmp) {

@@ -5,9 +5,9 @@ import FeedbackRating from "FeedbackRating";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/10978_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/10983_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/10988_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11010_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11015_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11020_registerAsset.js";
 
 let c3;
 let c4;
@@ -40,7 +40,7 @@ export default function RatingSelector(ratingOptions) {
   obj = {};
   obj = { source: null, getLabel: null, rating: null };
   obj = { selected: registerAsset, normal: null };
-  let obj3 = obj(10979);
+  let obj3 = obj(11011);
   obj[1] = obj3.useFeedbackModalSadDesaturatedSource();
   obj[0] = obj;
   obj[1] = function getLabel() {
@@ -52,7 +52,7 @@ export default function RatingSelector(ratingOptions) {
   let obj1 = { source: null, getLabel: null, rating: null };
   let obj2 = { selected: registerAsset, normal: null };
   tmp = callback2();
-  obj2[1] = obj(10984).useFeedbackModalNeutralDesaturatedSource();
+  obj2[1] = obj(11016).useFeedbackModalNeutralDesaturatedSource();
   obj1[0] = obj2;
   obj1[1] = function getLabel() {
     const intl = obj(1236).intl;
@@ -62,8 +62,8 @@ export default function RatingSelector(ratingOptions) {
   obj[constants.NEUTRAL] = obj1;
   obj3 = { source: null, getLabel: null, rating: null };
   let obj4 = { selected: registerAsset, normal: null };
-  const obj7 = obj(10984);
-  obj4[1] = obj(10989).useFeedbackModalHappyDesaturatedSource();
+  const obj7 = obj(11016);
+  obj4[1] = obj(11021).useFeedbackModalHappyDesaturatedSource();
   obj3[0] = obj4;
   obj3[1] = function getLabel() {
     const intl = obj(1236).intl;
@@ -72,7 +72,7 @@ export default function RatingSelector(ratingOptions) {
   obj3[2] = constants.GOOD;
   obj[constants.GOOD] = obj3;
   const mapped = ratingOptions.map((arg0) => obj[arg0]);
-  const obj10 = obj(10989);
+  const obj10 = obj(11021);
   return <c3 style={tmp2.ratings}>{mapped.map((rating) => {
     let normal;
     let selected;

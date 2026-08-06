@@ -20,7 +20,7 @@ export const TableRowArrow = function TableRowArrow() {
   const tmp = importDefault;
   const tmp3 = useIsMobileVisualRefreshExperimentEnabled("TableRowArrow");
   const tmp5 = jsx;
-  obj[2] = tmp(tmp3 ? 5308 : 5309);
+  obj[2] = tmp(tmp3 ? 5362 : 5363);
   obj[3] = IconSizes.IconSizes.CUSTOM;
   return tmp5(IconSizes, obj);
 };

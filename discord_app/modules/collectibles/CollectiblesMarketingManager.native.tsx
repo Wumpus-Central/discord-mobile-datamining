@@ -9,8 +9,8 @@ class CollectiblesMarketingManager extends tmp2 {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
       const value = getUserAgnosticState.get("shop_include_unpublished");
-      let obj = callback(6894);
-      const CollectiblesMarketingReleaseType = callback(6944).CollectiblesMarketingReleaseType;
+      let obj = callback(6921);
+      const CollectiblesMarketingReleaseType = callback(6971).CollectiblesMarketingReleaseType;
       obj = { release: value ? CollectiblesMarketingReleaseType.BETA : CollectiblesMarketingReleaseType.PROD };
       const collectiblesMarketings = obj.fetchCollectiblesMarketings(obj);
     };

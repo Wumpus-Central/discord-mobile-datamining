@@ -93,8 +93,8 @@ const memoResult1 = importAllResult.memo((avatarDecoration) => {
   }, items);
   let obj = { skuId: avatarDecoration.skuId, isSelected, onPress: callback, size: avatarDecoration.size, isTryItOut: flag, accessibilityLabel: avatarDecoration.label, children: null };
   obj = { avatarDecoration, size: AVATAR_DECORATION_SIZE, animate: isSelected };
-  obj[6] = callback(setSelectedAvatarDecoration(8074), obj);
-  return callback(avatarDecoration(8069).EditCollectiblesListItemProduct, obj);
+  obj[6] = callback(setSelectedAvatarDecoration(8215), obj);
+  return callback(avatarDecoration(8210).EditCollectiblesListItemProduct, obj);
 });
 memoResult1.displayName = "EditAvatarDecorationItem";
 const result = require("fromServer").fileFinishedImporting("modules/collectibles/avatar_decorations/native/EditAvatarDecorationSection.tsx");

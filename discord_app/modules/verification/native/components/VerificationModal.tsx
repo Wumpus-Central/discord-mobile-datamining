@@ -1,12 +1,12 @@
 // discord_app/modules/verification/native/components/VerificationModal.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
-import Overview from "Overview";
-import { View } from "showSimpleActionSheet";
+import handleLogout from "handleLogout";
+import { View } from "registerAsset";
 import getCountrySelectorOpened from "getCountrySelectorOpened";
 import handleRequiredAction from "handleRequiredAction";
 import closure_8 from "mergeGuildAvatar";
 import ME from "ME";
-import { jsx } from "ConfirmEmailChangeCode";
+import { jsx } from "ResendEmail";
 import createCacheKey from "createCacheKey";
 
 let c10;
@@ -15,7 +15,7 @@ const require = arg1;
 function PhoneThenEmailInterstitial(navigation) {
   navigation = navigation.navigation;
   let obj = { Illustration: null, title: null, body: null, children: null };
-  obj[0] = navigation(16444).VerifyPhone;
+  obj[0] = navigation(16484).VerifyPhone;
   const intl = navigation(1236).intl;
   obj[1] = intl.string(navigation(1236).t.KLnLIP);
   const intl2 = navigation(1236).intl;
@@ -35,9 +35,10 @@ function PhoneThenEmailInterstitial(navigation) {
     } else {
       ENTER_EMAIL = outer1_10.ENTER_EMAIL;
     }
-    navigation.push(ENTER_EMAIL);
+    const StackActions = navigation(outer1_2[13]).StackActions;
+    navigation.dispatch(StackActions.push(ENTER_EMAIL));
   };
-  obj[1] = jsx(navigation(4665).Button, { text: null, onPress: null });
+  obj[1] = jsx(navigation(4695).Button, { text: null, onPress: null });
   obj[3] = <View text={null} onPress={null} />;
   return jsx(navigation(1297).EmptyState, { text: null, onPress: null });
 }
@@ -61,9 +62,9 @@ export default function VerificationModal() {
     return items;
   }, items1);
   const effect = React.useEffect(() => {
-    callback(4223).hideActionSheet();
-    const obj = callback(4223);
-    stateFromStores(4114).dismissKeyboard();
+    callback(4253).hideActionSheet();
+    const obj = callback(4253);
+    stateFromStores(4143).dismissKeyboard();
   }, []);
   obj = { screens: null, initialRouteStack: null, headerBackTitle: null };
   obj[0] = React.useMemo(() => {
@@ -71,7 +72,7 @@ export default function VerificationModal() {
     obj = { impressionName: stateFromStores(503).ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
     obj = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.CHANGE_EMAIL_COLLECT_REASONS };
     obj[1] = obj;
-    let obj3 = stateFromStores(5223);
+    let obj3 = stateFromStores(5253);
     obj[2] = obj3.getHeaderNoTitle();
     obj[3] = function render() {
       return null;
@@ -79,7 +80,7 @@ export default function VerificationModal() {
     obj[constants.CHANGE_EMAIL_COLLECT_REASONS] = obj;
     let obj1 = { impressionName: stateFromStores(503).ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
     obj1[1] = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.CHANGE_EMAIL_WARNING };
-    let obj6 = stateFromStores(5223);
+    let obj6 = stateFromStores(5253);
     obj1[2] = obj6.getHeaderNoTitle();
     obj1[3] = function render() {
       return null;
@@ -91,129 +92,129 @@ export default function VerificationModal() {
     obj3[3] = function headerLeft() {
       return null;
     };
-    let obj9 = stateFromStores(5223);
+    let obj9 = stateFromStores(5253);
     obj3[4] = obj9.getHeaderNoTitle();
     obj3[5] = function headerRight() {
       let obj = { source: null, accessibilityLabel: null, onPress: null };
-      obj[0] = callback2(8945);
+      obj[0] = callback2(8974);
       let intl = callback(1236).intl;
       obj[1] = intl.string(callback(1236).t.PdRCRg);
       obj[2] = function onPress() {
-        let obj = callback(5628);
+        let obj = callback(5682);
         obj = { key: "VerificationOverviewMore", options: null, hasIcons: false };
         obj = { label: null, isDestructive: true, onPress: null };
         const intl = callback(1236).intl;
         obj[0] = intl.string(callback(1236).t["2jxGer"]);
         obj[2] = function onPress() {
-          return callback(table[18]).logout("verification_modal");
+          return callback(table[19]).logout("verification_modal");
         };
         const items = [obj];
         obj[1] = items;
         const result = obj.showSimpleActionSheet(obj);
       };
-      return callback3(callback(5902).HeaderActionButton, obj);
+      return callback3(callback(5929).HeaderActionButton, obj);
     };
     obj3[6] = function render() {
-      return callback3(callback2(16448), {});
+      return callback3(callback2(16488), {});
     };
     obj[constants.OVERVIEW] = obj3;
     let obj5 = { impressionName: stateFromStores(503).ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
     obj6 = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.RESEND_EMAIL };
     obj5[1] = obj6;
-    let obj12 = stateFromStores(5223);
+    let obj12 = stateFromStores(5253);
     obj5[2] = obj12.getHeaderNoTitle();
     obj5[3] = function render() {
-      return callback3(callback2(8241), {});
+      return callback3(callback2(8381), {});
     };
     obj[constants.RESEND_EMAIL] = obj5;
     const obj7 = { impressionName: stateFromStores(503).ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
     let obj4 = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.OVERVIEW };
     obj7[1] = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.RESEND_EMAIL };
-    let obj15 = stateFromStores(5223);
+    let obj15 = stateFromStores(5253);
     obj7[2] = obj15.getHeaderNoTitle();
     obj7[3] = function render() {
-      return callback3(callback2(8241), {});
+      return callback3(callback2(8381), {});
     };
     obj[constants.CHANGE_EMAIL_COMPLETE] = obj7;
     obj9 = { impressionName: stateFromStores(503).ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
     const obj8 = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.RESEND_EMAIL };
     obj9[1] = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.CONFIRM_EMAIL_CHANGE_CODE };
-    let obj18 = stateFromStores(5223);
+    let obj18 = stateFromStores(5253);
     obj9[2] = obj18.getHeaderNoTitle();
     obj9[3] = function render() {
-      return callback3(callback2(8246), { isChangeEmail: false });
+      return callback3(callback2(8386), { isChangeEmail: false });
     };
     obj[constants.CONFIRM_EMAIL_CHANGE_CODE] = obj9;
     const obj11 = { impressionName: stateFromStores(503).ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
     obj12 = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.CONFIRM_EMAIL_CHANGE_START };
     obj11[1] = obj12;
-    let obj21 = stateFromStores(5223);
+    let obj21 = stateFromStores(5253);
     obj11[2] = obj21.getHeaderNoTitle();
     obj11[3] = function render() {
-      return callback3(callback2(8243), {});
+      return callback3(callback2(8383), {});
     };
     obj[constants.CONFIRM_EMAIL_CHANGE_START] = obj11;
     const obj13 = { impressionName: stateFromStores(503).ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
     let obj10 = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.CONFIRM_EMAIL_CHANGE_CODE };
     obj13[1] = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.ENTER_EMAIL };
     const obj14 = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.ENTER_EMAIL };
-    obj13[2] = stateFromStores(5223).getHeaderNoTitle();
+    obj13[2] = stateFromStores(5253).getHeaderNoTitle();
     obj13[3] = function render() {
-      return callback3(callback2(8291), { isChangeEmail: false });
+      return callback3(callback2(8431), { isChangeEmail: false });
     };
     obj[constants.ENTER_EMAIL] = obj13;
     obj15 = { impressionName: stateFromStores(503).ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
-    const obj25 = stateFromStores(5223);
+    const obj25 = stateFromStores(5253);
     obj15[1] = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.ADD_PHONE };
     const obj16 = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.ADD_PHONE };
-    obj15[2] = stateFromStores(5223).getHeaderNoTitle();
+    obj15[2] = stateFromStores(5253).getHeaderNoTitle();
     obj15[3] = function render(arg0, arg1) {
       let callback = arg1;
       let obj = {};
       const merged = Object.assign(arg0);
-      obj.reason = callback(8302).ChangePhoneReason.USER_ACTION_REQUIRED;
+      obj.reason = callback(8442).ChangePhoneReason.USER_ACTION_REQUIRED;
       obj.onComplete = function onComplete(phone) {
         return arr.push(outer1_10.VERIFY_PHONE, {
           phone,
           onVerified(arg0) {
             let arr = arg0;
             let obj = { hideUnverifiedBanner: true, onSubmit: null, onSuccess: null };
-            let closure_2 = outer1_3(/* F119505 */ function() { ... });
+            let closure_2 = outer1_3(/* F119862 */ function() { ... });
             obj[1] = () => { ... };
-            let closure_1 = outer1_3(/* F119507 */ function() { ... });
+            let closure_1 = outer1_3(/* F119864 */ function() { ... });
             obj[2] = () => { ... };
             arr = arr.push(outer1_10.VERIFY_PASSWORD, obj);
           }
         });
       };
-      return callback3(callback2(8301), obj);
+      return callback3(callback2(8441), obj);
     };
     obj[constants.ADD_PHONE] = obj15;
     const obj17 = { impressionName: stateFromStores(503).ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
     obj18 = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.VERIFY_PHONE };
     obj17[1] = obj18;
-    const obj28 = stateFromStores(5223);
-    obj17[2] = stateFromStores(5223).getHeaderNoTitle();
+    const obj28 = stateFromStores(5253);
+    obj17[2] = stateFromStores(5253).getHeaderNoTitle();
     obj17[3] = function render(arg0) {
       const merged = Object.assign(arg0);
-      return callback3(callback2(8328), { disableKeyboardAvoidingView: true });
+      return callback3(callback2(8468), { disableKeyboardAvoidingView: true });
     };
     obj[constants.VERIFY_PHONE] = obj17;
     const obj19 = { impressionName: stateFromStores(503).ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
-    const obj31 = stateFromStores(5223);
+    const obj31 = stateFromStores(5253);
     obj19[1] = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.VERIFY_PASSWORD };
     const obj20 = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.VERIFY_PASSWORD };
-    obj19[2] = stateFromStores(5223).getHeaderNoTitle();
+    obj19[2] = stateFromStores(5253).getHeaderNoTitle();
     obj19[3] = function render(arg0) {
       const merged = Object.assign(arg0);
-      return callback3(callback2(8296), {});
+      return callback3(callback2(8436), {});
     };
     obj[constants.VERIFY_PASSWORD] = obj19;
     obj21 = { impressionName: stateFromStores(503).ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
-    const obj34 = stateFromStores(5223);
+    const obj34 = stateFromStores(5253);
     obj21[1] = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.PHONE_THEN_EMAIL_INTERSTITIAL };
     const obj22 = { impression_group: stateFromStores(503).ImpressionGroups.USER_VERIFICATION_MODAL_FLOW, step: constants.PHONE_THEN_EMAIL_INTERSTITIAL };
-    obj21[2] = stateFromStores(5223).getHeaderNoTitle();
+    obj21[2] = stateFromStores(5253).getHeaderNoTitle();
     obj21[3] = function render(arg0, navigation) {
       return callback3(closure_13, { navigation });
     };
@@ -223,5 +224,5 @@ export default function VerificationModal() {
   obj[1] = memo;
   let intl = stateFromStores(1236).intl;
   obj[2] = intl.string(stateFromStores(1236).t["13/7kX"]);
-  return jsx(stateFromStores(5650).Navigator, { screens: null, initialRouteStack: null, headerBackTitle: null });
+  return jsx(stateFromStores(5704).Navigator, { screens: null, initialRouteStack: null, headerBackTitle: null });
 };

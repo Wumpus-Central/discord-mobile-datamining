@@ -32,8 +32,8 @@ function drain(location, sum, arg2, prototype, arg4, InviteQueue, drain, depende
   if (self.GROUP_DM !== type) {
     if (tmp.CHANNEL !== type) {
       if (tmp.USER === type) {
-        const obj = inviteAnalyticsMetadata(4265);
-        inviteAnalyticsMetadata(4265).ensurePrivateChannel(location.user.id).then((arg0) => {
+        const obj = inviteAnalyticsMetadata(4295);
+        inviteAnalyticsMetadata(4295).ensurePrivateChannel(location.user.id).then((arg0) => {
           const channel = sum.getChannel(arg0);
           if (null != channel) {
             self._sendInvite(channel, _location.inviteKey, _location, inviteAnalyticsMetadata, sum);
@@ -41,7 +41,7 @@ function drain(location, sum, arg2, prototype, arg4, InviteQueue, drain, depende
             sum(null, false);
           }
         }, () => sum(null, false));
-        const ensurePrivateChannelResult = inviteAnalyticsMetadata(4265).ensurePrivateChannel(location.user.id);
+        const ensurePrivateChannelResult = inviteAnalyticsMetadata(4295).ensurePrivateChannel(location.user.id);
       }
     }
   }

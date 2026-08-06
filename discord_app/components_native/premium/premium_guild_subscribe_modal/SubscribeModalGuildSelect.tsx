@@ -105,7 +105,7 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
   const intl = guildBoostSlots(1236).intl;
   obj[0] = intl.string(guildBoostSlots(1236).t.vf3ZTa);
   obj[1] = tmp2[1];
-  obj[2] = importAll(5103).closeApplyBoostModal;
+  obj[2] = importAll(5133).closeApplyBoostModal;
   const items3 = [callback2(SearchBarNav, obj), ];
   obj1 = { style: tmp.guildList, keyboardShouldPersistTaps: "always", children: null };
   const obj2 = { bottom: true, children: null };
@@ -127,8 +127,8 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
     obj[3] = items;
     return outer1_11(guildBoostSlots(_undefined[17]).PressableOpacity, obj, children.id);
   });
-  obj1[2] = callback2(guildBoostSlots(5257).SafeAreaPaddingView, obj2);
+  obj1[2] = callback2(guildBoostSlots(5311).SafeAreaPaddingView, obj2);
   items3[1] = callback2(memo, obj1);
   obj[2] = items3;
-  return callback3(guildBoostSlots(5257).SafeAreaPaddingView, obj);
+  return callback3(guildBoostSlots(5311).SafeAreaPaddingView, obj);
 };

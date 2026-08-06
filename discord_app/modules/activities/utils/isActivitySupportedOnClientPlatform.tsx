@@ -3,10 +3,10 @@ const result = require("set").fileFinishedImporting("modules/activities/utils/is
 
 export default function isActivitySupportedOnClientPlatform(arr) {
   if (obj.isIOS()) {
-    let IOS = tmp(1906).EmbeddedActivitySupportedPlatforms.IOS;
+    let IOS = tmp(1935).EmbeddedActivitySupportedPlatforms.IOS;
   } else {
     const tmpResult = tmp(500);
-    const EmbeddedActivitySupportedPlatforms = tmp(1906).EmbeddedActivitySupportedPlatforms;
+    const EmbeddedActivitySupportedPlatforms = tmp(1935).EmbeddedActivitySupportedPlatforms;
     IOS = tmp(500).isAndroid() ? EmbeddedActivitySupportedPlatforms.ANDROID : EmbeddedActivitySupportedPlatforms.WEB;
     const isAndroidResult = tmp(500).isAndroid();
   }

@@ -32,9 +32,9 @@ prototype["getCachedConfig"] = function getCachedConfig() {
   const self = this;
   if (this.cachedConfig === closure_6) {
     if (obj.isLibdiscoreInitialized()) {
-      const experimentCacher = tmp(1869).getExperimentCacher();
+      const experimentCacher = tmp(1898).getExperimentCacher();
       self.cachedConfig = experimentCacher.getConfig(self.id);
-      const tmpResult = tmp(1869);
+      const tmpResult = tmp(1898);
     } else {
       self.cachedConfig = undefined;
     }

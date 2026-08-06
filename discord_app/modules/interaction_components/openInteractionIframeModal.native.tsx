@@ -55,7 +55,7 @@ function _openInteractionIframeModal() {
   }
   return applyArgumentsResult;
 }
-const result = require("module_4460").fileFinishedImporting("modules/interaction_components/openInteractionIframeModal.native.tsx");
+const result = require("module_4490").fileFinishedImporting("modules/interaction_components/openInteractionIframeModal.native.tsx");
 
 export default function openInteractionIframeModal() {
   const self = this;

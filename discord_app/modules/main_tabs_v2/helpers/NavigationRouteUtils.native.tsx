@@ -3,10 +3,10 @@ import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { ME } from "ME";
 import set from "ME";
-import { v1 } from "../../../../_runtime/00514_v1.js";
-import { Link } from "../../../../_runtime/01481_Link.js";
+import { createStandardNavigationFactories } from "../../../../_runtime/01481_createStandardNavigationFactories.js";
 import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
 import { getRootNavigationRef } from "../RootNavigationRef.native.tsx";
+import { CREATE_THREAD_SCREEN_KEY } from "../Types.tsx";
 
 let c4;
 let c5;
@@ -20,7 +20,7 @@ function navigationToRootTabHelper(arg0, resetRoot) {
         const rootState = rootNavigationRef.getRootState();
         const routes = rootState.routes;
         const found = routes.filter((name) => "modal" === name.name);
-        let tmpResult = tmp(4108);
+        let tmpResult = tmp(4137);
         obj = { name: "tabs", key: null, params: null };
         tmpResult = tmp(514);
         const _HermesInternal = HermesInternal;
@@ -36,7 +36,7 @@ function navigationToRootTabHelper(arg0, resetRoot) {
         obj.index = items1.length - 1;
         rootNavigationRef.dispatch(CommonActions.reset(obj));
       } else {
-        rootNavigationRef.navigate("tabs", arg0);
+        rootNavigationRef.navigate("tabs", arg0, { pop: true });
       }
     }
   }
@@ -81,7 +81,13 @@ function isModalOpen(voiceChannelKey) {
         } else if (typeof voiceChannelKey === "string") {
           let key;
           if (tmp2 != null) {
-            key = tmp2.key;
+            const params2 = tmp2.params;
+            if (params2 != null) {
+              const modal2 = params2.modal;
+              if (modal2 != null) {
+                key = modal2.key;
+              }
+            }
           }
           tmp5 = key === voiceChannelKey;
         } else {
@@ -138,7 +144,13 @@ function popModal(c3, onExited) {
           } else {
             let key;
             if (tmp5 != null) {
-              key = tmp5.key;
+              let params = tmp5.params;
+              if (params != null) {
+                let modal = params.modal;
+                if (modal != null) {
+                  key = modal.key;
+                }
+              }
             }
             if (key === c3) {
               break;
@@ -171,7 +183,7 @@ function popModal(c3, onExited) {
             items[index] = obj;
             let tmp37 = _require;
             let tmp38 = dependencyMap;
-            let CommonActions2 = _Link.CommonActions;
+            let CommonActions2 = _createStandardNavigationFactories.CommonActions;
             let obj3 = {};
             let tmp39 = obj3;
             let tmp40 = rootState;
@@ -199,7 +211,7 @@ function popModal(c3, onExited) {
           flag = false;
         }
       } else if (null == onExited) {
-        const CommonActions = _Link.CommonActions;
+        const CommonActions = _createStandardNavigationFactories.CommonActions;
         const obj4 = {};
         const merged5 = Object.assign(rootState);
         obj4.routes = tmp2;
@@ -244,13 +256,13 @@ export const navigateToChannel = function navigateToChannel(channelId) {
         }
       }
       if (replaceChannelAndFixRoot) {
-        const tmp9 = coerceMainRoute(tmp3.routes[0]);
-        if (null != tmp9) {
-          if (null != tmp9.state) {
-            let tmp18 = coerceChannelRoute(tmp9.state.routes[tmp9.state.index]);
-            if (null != tmp18) {
+        const tmp12 = coerceMainRoute(tmp3.routes[0]);
+        if (null != tmp12) {
+          if (null != tmp12.state) {
+            let tmp21 = coerceChannelRoute(tmp12.state.routes[tmp12.state.index]);
+            if (null != tmp21) {
               obj = {};
-              const merged = Object.assign(tmp18);
+              const merged = Object.assign(tmp21);
               obj = { channelId: null, guildId: null, messageId: null };
               obj[0] = channelId;
               obj[1] = guildId;
@@ -271,8 +283,8 @@ export const navigateToChannel = function navigateToChannel(channelId) {
               obj2[2] = messageId;
               obj1[2] = obj2;
             }
-            messageId = tmp9.state.routes;
-            tmp18 = messageId[Symbol.iterator]();
+            messageId = tmp12.state.routes;
+            tmp21 = messageId[Symbol.iterator]();
           }
         }
         return false;
@@ -280,22 +292,26 @@ export const navigateToChannel = function navigateToChannel(channelId) {
         const tmp5 = coerceChannelRoute(rootNavigationRef.getCurrentRoute());
         if (null != tmp5) {
           if (tmp5.params.channelId === channelId) {
-            let key = tmp5.key;
+            const obj3 = {};
+            const CommonActions = tmp(1481).CommonActions;
+            const obj4 = { channelId: null, guildId: null, messageId: null };
+            obj4[0] = channelId;
+            obj4[1] = guildId;
+            obj4[2] = messageId;
+            const merged1 = Object.assign(CommonActions.setParams(obj4));
+            obj3.source = tmp5.key;
+            rootNavigationRef.dispatch(obj3);
           }
-          const CommonActions = tmp(1481).CommonActions;
-          const obj3 = { name: "channel", key: null, params: null };
-          obj3[1] = key;
-          const obj4 = { channelId: null, guildId: null, messageId: null };
-          obj4[0] = channelId;
-          obj4[1] = guildId;
-          obj4[2] = messageId;
-          obj3[2] = obj4;
-          rootNavigationRef.dispatch(CommonActions.navigate(obj3));
           return true;
         }
+        const obj5 = { channelId: null, guildId: null, messageId: null, screenKey: null };
+        obj5[0] = channelId;
+        obj5[1] = guildId;
+        obj5[2] = messageId;
         tmpResult = tmp(514);
         const _HermesInternal = HermesInternal;
-        key = "channel-" + tmpResult.v4();
+        obj5[3] = "channel-" + tmpResult.v4();
+        rootNavigationRef.navigate("channel", obj5);
       }
     }
   }
@@ -304,19 +320,14 @@ export const navigateToChannel = function navigateToChannel(channelId) {
 export const navigateToMemberVerification = function navigateToMemberVerification(guildId, inviteCode) {
   let obj = getRootNavigationRef;
   const rootNavigationRef = obj.getRootNavigationRef();
-  const tmp3 = null == rootNavigationRef || !rootNavigationRef.isReady();
-  let flag = !tmp3;
-  if (!tmp3) {
-    obj = { name: "member-verification", key: null, params: null };
-    const _HermesInternal = HermesInternal;
-    obj[1] = "member-verification-" + v1.v4();
+  const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
+  let flag = !tmp;
+  if (!tmp) {
     obj = { guildId: null, inviteCode: null };
     obj[0] = guildId;
     obj[1] = inviteCode;
-    obj[2] = obj;
-    rootNavigationRef.navigate(obj);
+    rootNavigationRef.navigate("member-verification", obj);
     flag = true;
-    const tmpResult = v1;
   }
   return flag;
 };
@@ -326,7 +337,7 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
   let guildId;
   let resetRoot;
   let screen;
-  let obj = icymiScreen(4107);
+  let obj = icymiScreen(4136);
   const rootNavigationRef = obj.getRootNavigationRef();
   ({ screen, resetRoot, forceNavigate } = drawerOpen);
   if (null != rootNavigationRef) {
@@ -368,11 +379,11 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
           }
         } else if ("notifications" === screen) {
           if (forceNavigate) {
-            rootNavigationRef.navigate("tabs", { screen: "notifications" });
+            rootNavigationRef.navigate("tabs", { screen: "notifications" }, { pop: true });
           }
         } else if ("icymi" === screen) {
           if (forceNavigate) {
-            rootNavigationRef.navigate("tabs", { screen: "icymi" });
+            rootNavigationRef.navigate("tabs", { screen: "icymi" }, { pop: true });
             icymiScreen = drawerOpen.icymiScreen;
             let tmp4 = null != icymiScreen;
             if (tmp4) {
@@ -380,7 +391,7 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
             }
             if (tmp4) {
               rootNavigationRef.dispatch(() => {
-                const CommonActions = icymiScreen(outer1_2[5]).CommonActions;
+                const CommonActions = icymiScreen(outer1_2[4]).CommonActions;
                 const params = { screen: icymiScreen };
                 return CommonActions.navigate("tabs", { screen: "icymi", params });
               });
@@ -400,38 +411,30 @@ export const resetToAuthRoute = function resetToAuthRoute() {
   if (!tmp) {
     rootNavigationRef.dispatch(() => {
       const CommonActions = callback(1481).CommonActions;
-      return CommonActions.reset(callback(4108).getInitialAuthState());
+      return CommonActions.reset(callback(4137).getInitialAuthState());
     });
     flag = true;
   }
   return flag;
 };
-export const pushModal = function pushModal(key) {
-  key = key.key;
-  const merged = Object.assign(key, Object.create(null));
-  let obj = getRootNavigationRef;
-  const rootNavigationRef = obj.getRootNavigationRef();
-  let tmp5 = null == rootNavigationRef;
+export const pushModal = function pushModal(arg0) {
+  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
+  const obj = getRootNavigationRef;
+  const tmp = require;
+  let tmp4 = null == rootNavigationRef;
   const obj3 = enforcing;
-  if (!tmp5) {
-    tmp5 = !rootNavigationRef.isReady();
+  if (!tmp4) {
+    tmp4 = !rootNavigationRef.isReady();
   }
-  if (!tmp5) {
-    tmp5 = runningTTIAutomationResult;
+  if (!tmp4) {
+    tmp4 = runningTTIAutomationResult;
   }
-  let flag = !tmp5;
-  if (!tmp5) {
-    tmp2(4114).dismissKeyboard();
-    if (key == null) {
-      const _HermesInternal = HermesInternal;
-      key = "modal-" + tmp2(514).v4;
-    }
-    obj = { name: "modal", key: null, params: null };
-    obj[1] = key;
-    obj[2] = merged;
-    rootNavigationRef.navigate(obj);
+  let flag = !tmp4;
+  if (!tmp4) {
+    tmp(4143).dismissKeyboard();
+    rootNavigationRef.navigate("modal", arg0);
     flag = true;
-    const tmp2Result = tmp2(4114);
+    const tmpResult = tmp(4143);
   }
   return flag;
 };
@@ -455,7 +458,13 @@ export const popModalsAboveKey = function popModalsAboveKey(voiceChannelKey) {
             }
             let key;
             if (tmp6 != null) {
-              key = tmp6.key;
+              const params = tmp6.params;
+              if (params != null) {
+                const modal = params.modal;
+                if (modal != null) {
+                  key = modal.key;
+                }
+              }
             }
             tmp3 = key;
           }
@@ -480,7 +489,13 @@ export const popModalsAboveKey = function popModalsAboveKey(voiceChannelKey) {
             }
             let key1;
             if (tmp11 != null) {
-              key1 = tmp11.key;
+              let params2 = tmp11.params;
+              if (params2 != null) {
+                let modal2 = params2.modal;
+                if (modal2 != null) {
+                  key1 = modal2.key;
+                }
+              }
             }
             num = num2;
             if (key1 === voiceChannelKey) {
@@ -498,7 +513,7 @@ export const popModalsAboveKey = function popModalsAboveKey(voiceChannelKey) {
         if (-1 !== num) {
           if (num !== routes.length - 1) {
             const substr = routes.slice(0, num + 1);
-            const CommonActions = Link.CommonActions;
+            const CommonActions = createStandardNavigationFactories.CommonActions;
             obj = {};
             const merged = Object.assign(rootState1);
             obj.routes = substr;
@@ -533,7 +548,7 @@ export const popAllModals = function popAllModals() {
       }
       let flag = routes.length !== items.length;
       if (flag) {
-        const CommonActions = Link.CommonActions;
+        const CommonActions = createStandardNavigationFactories.CommonActions;
         obj = {};
         const merged = Object.assign(rootState);
         obj.routes = items;
@@ -665,12 +680,11 @@ export const navigateToCreateThread = function navigateToCreateThread(guild_id, 
   if (flag) {
     flag = true;
     if (rootNavigationRef != null) {
-      obj = { name: "channel", key: "new-thread", params: null };
-      obj = { guildId: null, channelId: null, showCreateThread: true };
+      obj = { guildId: null, channelId: null, showCreateThread: true, screenKey: null };
       obj[0] = guild_id;
       obj[1] = id;
-      obj[2] = obj;
-      rootNavigationRef.navigate(obj);
+      obj[3] = CREATE_THREAD_SCREEN_KEY.CREATE_THREAD_SCREEN_KEY;
+      rootNavigationRef.navigate("channel", obj);
       flag = true;
     }
   }
@@ -706,7 +720,7 @@ export const popScreens = function popScreens(arg0) {
           callback = diff;
         } while (diff > 0);
       }
-      const CommonActions = callback(outer1_2[5]).CommonActions;
+      const CommonActions = callback(outer1_2[4]).CommonActions;
       const obj = {};
       const merged = Object.assign(rootState);
       obj.routes = items;
@@ -772,7 +786,13 @@ export const getOpenModalKey = function getOpenModalKey() {
         }
         let key;
         if (tmp3 != null) {
-          key = tmp3.key;
+          const params = tmp3.params;
+          if (params != null) {
+            const modal = params.modal;
+            if (modal != null) {
+              key = modal.key;
+            }
+          }
         }
         return key;
       }
@@ -795,7 +815,13 @@ export const useOpenModalKey = function useOpenModalKey() {
           }
           let key;
           if (tmp4 != null) {
-            key = tmp4.key;
+            const params = tmp4.params;
+            if (params != null) {
+              const modal = params.modal;
+              if (modal != null) {
+                key = modal.key;
+              }
+            }
           }
           tmp = key;
         }
@@ -822,7 +848,13 @@ export const useOpenModalKey = function useOpenModalKey() {
               }
               let key;
               if (tmp5 != null) {
-                key = tmp5.key;
+                const params = tmp5.params;
+                if (params != null) {
+                  const modal = params.modal;
+                  if (modal != null) {
+                    key = modal.key;
+                  }
+                }
               }
               tmp2 = key;
             }

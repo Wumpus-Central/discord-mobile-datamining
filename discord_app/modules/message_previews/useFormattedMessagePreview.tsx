@@ -69,11 +69,11 @@ function formatMessagePreview(type, isBlocked) {
                   tmp10 = obj4;
                 } else if (type.attachments.length > 0) {
                   const attachments = type.attachments;
-                  const everyResult = attachments.every((filename) => callback(4442).isImageFile(filename.filename));
+                  const everyResult = attachments.every((filename) => callback(4472).isImageFile(filename.filename));
                   let everyResult1 = !everyResult;
                   if (!everyResult) {
                     const attachments2 = type.attachments;
-                    everyResult1 = attachments2.every((filename) => callback(4442).isVideoFile(filename.filename));
+                    everyResult1 = attachments2.every((filename) => callback(4472).isVideoFile(filename.filename));
                   }
                   let everyResult2 = !everyResult;
                   if (!everyResult) {
@@ -81,7 +81,7 @@ function formatMessagePreview(type, isBlocked) {
                   }
                   if (everyResult2) {
                     const attachments3 = type.attachments;
-                    everyResult2 = attachments3.every((filename) => callback(4442).isAudioFile(filename.filename));
+                    everyResult2 = attachments3.every((filename) => callback(4472).isAudioFile(filename.filename));
                   }
                   if (everyResult) {
                     const obj5 = { type: "text", text: null, trailingIcon: "image" };
@@ -117,8 +117,8 @@ function formatMessagePreview(type, isBlocked) {
                   const everyResult3 = embeds.every((url) => {
                     let isImageUrlResult = null != url.url;
                     if (isImageUrlResult) {
-                      isImageUrlResult = callback(4442).isImageUrl(url.url);
-                      const obj = callback(4442);
+                      isImageUrlResult = callback(4472).isImageUrl(url.url);
+                      const obj = callback(4472);
                     }
                     return isImageUrlResult;
                   });
@@ -128,8 +128,8 @@ function formatMessagePreview(type, isBlocked) {
                     everyResult4 = embeds2.every((url) => {
                       let isVideoUrlResult = null != url.url;
                       if (isVideoUrlResult) {
-                        isVideoUrlResult = callback(4442).isVideoUrl(url.url);
-                        const obj = callback(4442);
+                        isVideoUrlResult = callback(4472).isVideoUrl(url.url);
+                        const obj = callback(4472);
                       }
                       return isVideoUrlResult;
                     });
@@ -143,8 +143,8 @@ function formatMessagePreview(type, isBlocked) {
                     everyResult5 = embeds3.every((url) => {
                       let isAudioFileResult = null != url.url;
                       if (isAudioFileResult) {
-                        isAudioFileResult = callback(4442).isAudioFile(url.url);
-                        const obj = callback(4442);
+                        isAudioFileResult = callback(4472).isAudioFile(url.url);
+                        const obj = callback(4472);
                       }
                       return isAudioFileResult;
                     });
@@ -377,9 +377,9 @@ function formatMessagePreview(type, isBlocked) {
                 tmp21 = obj50;
               } else if (type.type === tmp4(686).MessageTypes.VOICE_SESSION) {
                 const obj52 = { type: "text", text: null };
-                obj52[1] = tmp4(7953).getVoiceSessionMessageContent(type);
+                obj52[1] = tmp4(8094).getVoiceSessionMessageContent(type);
                 tmp21 = obj52;
-                const tmp4Result = tmp4(7953);
+                const tmp4Result = tmp4(8094);
               }
             }
           }
@@ -440,7 +440,7 @@ export const useFormattedMessagePreview = function useFormattedMessagePreview(me
     }
     return user;
   });
-  tmpResult = tmp(4483);
+  tmpResult = tmp(4513);
   obj = { message, channel, currentUserId: stateFromStores, authorNick: stringResult, otherUser: stateFromStores1, otherUserNick: tmpResult.useNullableUserAuthor(stateFromStores1, channel).nick, isBlocked, isIgnored, isCallActive: tmp4 };
   return formatMessagePreview(message, obj);
 };

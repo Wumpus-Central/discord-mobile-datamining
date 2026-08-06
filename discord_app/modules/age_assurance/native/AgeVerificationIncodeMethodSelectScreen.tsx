@@ -1,32 +1,20 @@
 // discord_app/modules/age_assurance/native/AgeVerificationIncodeMethodSelectScreen.tsx
-import set from "set";
+import AGE_VERIFICATION_INCODE_PATH from "AGE_VERIFICATION_INCODE_PATH";
 import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "TableRowInner";
+import set from "set";
 import handleThemeChange from "handleThemeChange";
 import { VerificationMethod } from "set";
-import { buildIncodeParamsInjection as closure_9 } from "AGE_VERIFICATION_INCODE_PATH";
+import { buildIncodeParamsInjection as closure_8 } from "AGE_VERIFICATION_INCODE_PATH";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { ActivityIndicator } from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import { Stack } from "../../../design/components/Stack/native/Stack.native.tsx";
-import { TableRowInner } from "../../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowGroupTitle } from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { ModalContent } from "../../../design/components/Modal/native/ModalContent.native.tsx";
+import { ModalScreen } from "../../../design/components/Modal/native/ModalScreen.native.tsx";
 
 let c10;
-let unpackModuleId;
+let c9;
 const require = arg1;
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { container: null, content: null, loadingOverlay: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { padding: require("Themes").space.PX_16 };
-let obj1 = { padding: require("Themes").space.PX_16 };
-createCacheKey[2] = { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
+({ jsx: c9, jsxs: c10 } = jsxProd);
+let closure_11 = createCacheKey.createStyles({ container: { alignSelf: "stretch" }, header: { textAlign: "center" }, loadingContainer: { flex: 1, alignSelf: "stretch" } });
 const result = require("noop").fileFinishedImporting("modules/age_assurance/native/AgeVerificationIncodeMethodSelectScreen.tsx");
 
 export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected) {
@@ -43,7 +31,7 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
   [tmp2, c2] = callback2(React.useState(false), 2);
   const tmp = callback2(React.useState(false), 2);
   [tmp4, c3] = callback2(React.useState(false), 2);
-  const tmp5 = createCacheKey();
+  const tmp5 = callback4();
   _require = undefined;
   _require = callback((arg0) => {
     let closure_0 = arg0;
@@ -84,7 +72,7 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
               outer1_2(true);
               outer1_3(false);
               let c4 = 2;
-              let obj2 = callback(table[10]);
+              let obj2 = callback(table[8]);
               c5 = 3;
               c6 = 1;
               const obj1 = { value: null, done: false };
@@ -94,7 +82,7 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
           } else if (1 === tmp8) {
             c4 = 0;
             outer1_2(false);
-            throw set;
+            throw AGE_VERIFICATION_INCODE_PATH;
           } else {
             if (2 === tmp8) {
               c4 = 1;
@@ -120,9 +108,9 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
                 obj3[1] = closure_1.sessionToken;
                 obj3[2] = closure_1.consentId;
                 obj3[3] = closure_1.interviewId;
-                obj3[4] = outer2_7.theme;
+                obj3[4] = outer2_6.theme;
                 obj3[5] = callback;
-                closure_2 = outer2_9(obj3, outer1_1);
+                closure_2 = outer2_8(obj3, outer1_1);
                 callback(closure_2);
                 c4 = 1;
               }
@@ -136,7 +124,7 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
             return obj;
           }
         } catch (tmp36) {
-          set = tmp36;
+          AGE_VERIFICATION_INCODE_PATH = tmp36;
           if (tmp5 === c4) {
             c6 = tmp3;
             throw tmp36;
@@ -160,54 +148,69 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
     }
     return applyArgumentsResult;
   }, items);
-  let obj = { style: null, children: null };
+  let obj = { children: null };
+  const ModalContent = _ModalContent.ModalContent;
+  obj = { children: null };
   if (tmp2) {
-    obj[0] = tmp5.loadingOverlay;
-    obj[1] = tmp6(_ActivityIndicator.ActivityIndicator, {});
-    let tmp12 = obj;
+    obj = { align: "center", justify: "center", spacing: 16, style: null, children: null };
+    obj[3] = tmp5.loadingContainer;
+    obj[4] = tmp6(tmp7(5744).ActivityIndicator, { size: "large" });
+    obj[0] = tmp6(tmp7(4693).Stack, obj);
+    obj[0] = tmp6(ModalContent, obj);
+    let tmp11 = obj;
   } else {
-    obj[0] = tmp5.container;
-    obj = { spacing: 16, style: null, children: null };
-    obj[1] = tmp5.content;
-    obj = { variant: "heading-lg/bold", color: "text-strong", children: null };
-    const intl = _getSystemLocale.intl;
-    obj[2] = intl.string(trustedOrigin(2773).eZvwAe);
-    const items1 = [tmp6(_Text.Heading, obj), , , ];
-    let obj1 = { variant: "text-md/normal", color: "text-muted", children: null };
-    const intl2 = _getSystemLocale.intl;
-    obj1[2] = intl2.string(trustedOrigin(2773)["5yWXmT"]);
-    items1[1] = tmp6(_Text.Text, obj1);
+    let obj1 = { align: "stretch", spacing: 24, style: null, children: null };
+    obj1[2] = tmp5.container;
+    let obj2 = { align: "center", justify: "center", spacing: 16, children: null };
+    const items1 = [tmp6(tmp7(5948).ShieldSpotIllustration, { height: 100, width: 177 }), ];
+    let obj3 = { align: "center", justify: "center", spacing: 8, children: null };
+    const obj4 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: null, children: null };
+    obj4[3] = tmp5.header;
+    const intl = tmp7(1236).intl;
+    obj4[4] = intl.string(trustedOrigin(2802).eZvwAe);
+    const items2 = [tmp6(tmp7(4281).Text, obj4), ];
+    const obj5 = { variant: "text-md/medium", color: "text-strong", style: null, children: null };
+    obj5[2] = tmp5.header;
+    const intl2 = tmp7(1236).intl;
+    obj5[3] = intl2.string(trustedOrigin(2802)["5yWXmT"]);
+    items2[1] = tmp6(tmp7(4281).Text, obj5);
+    obj3[3] = items2;
+    items1[1] = callback3(tmp7(4693).Stack, obj3);
+    obj2[3] = items1;
+    const items3 = [callback3(tmp7(4693).Stack, obj2), , ];
     if (tmp6Result) {
-      let obj2 = { variant: "text-sm/medium", color: "text-feedback-critical", children: null };
-      const intl3 = tmp9(1236).intl;
-      obj2[2] = intl3.string(tmp9(1236).t.c6kn6F);
-      tmp6Result = tmp6(tmp9(4251).Text, obj2);
+      const obj6 = { variant: "text-sm/medium", color: "text-feedback-critical", style: null, children: null };
+      obj6[2] = tmp5.header;
+      const intl3 = tmp7(1236).intl;
+      obj6[3] = intl3.string(tmp7(1236).t.c6kn6F);
+      tmp6Result = tmp6(tmp7(4281).Text, obj6);
     }
-    items1[2] = tmp6Result;
-    let obj3 = { hasIcons: false, children: null };
-    const obj4 = { arrow: true, label: null, subLabel: null, onPress: null };
-    const intl4 = tmp9(1236).intl;
-    obj4[1] = intl4.string(trustedOrigin(2773).rgXXcW);
-    const intl5 = tmp9(1236).intl;
-    obj4[2] = intl5.string(trustedOrigin(2773).fm7qBC);
-    obj4[3] = function onPress() {
-      callback(outer1_8.FACIAL_AGE_ESTIMATION);
+    items3[1] = tmp6Result;
+    const obj7 = { hasIcons: false, children: null };
+    const obj8 = { arrow: true, label: null, subLabel: null, onPress: null };
+    const intl4 = tmp7(1236).intl;
+    obj8[1] = intl4.string(trustedOrigin(2802).rgXXcW);
+    const intl5 = tmp7(1236).intl;
+    obj8[2] = intl5.string(trustedOrigin(2802).fm7qBC);
+    obj8[3] = function onPress() {
+      callback(outer1_7.FACIAL_AGE_ESTIMATION);
     };
-    const items2 = [tmp6(_TableRowInner.TableRow, obj4), ];
-    const obj5 = { arrow: true, label: null, subLabel: null, onPress: null };
-    const intl6 = tmp9(1236).intl;
-    obj5[1] = intl6.string(trustedOrigin(2773)["NeVlw/"]);
-    const intl7 = tmp9(1236).intl;
-    obj5[2] = intl7.string(trustedOrigin(2773).ARmJ0M);
-    obj5[3] = function onPress() {
-      callback(outer1_8.ID_VERIFICATION);
+    const items4 = [tmp6(tmp7(5354).TableRow, obj8), ];
+    const obj9 = { arrow: true, label: null, subLabel: null, onPress: null };
+    const intl6 = tmp7(1236).intl;
+    obj9[1] = intl6.string(trustedOrigin(2802)["NeVlw/"]);
+    const intl7 = tmp7(1236).intl;
+    obj9[2] = intl7.string(trustedOrigin(2802).ARmJ0M);
+    obj9[3] = function onPress() {
+      callback(outer1_7.ID_VERIFICATION);
     };
-    items2[1] = tmp6(_TableRowInner.TableRow, obj5);
-    obj3[1] = items2;
-    items1[3] = closure_11(_TableRowGroupTitle.TableRowGroup, obj3);
-    obj[2] = items1;
-    obj[1] = closure_11(_Stack.Stack, obj);
-    tmp12 = obj;
+    items4[1] = tmp6(tmp7(5354).TableRow, obj9);
+    obj7[1] = items4;
+    items3[2] = callback3(tmp7(5688).TableRowGroup, obj7);
+    obj1[3] = items3;
+    obj[0] = callback3(tmp7(4693).Stack, obj1);
+    obj[0] = tmp6(ModalContent, obj);
+    tmp11 = obj;
   }
-  return closure_10(View, tmp12);
+  return closure_9(_ModalScreen.ModalScreen, tmp11);
 };

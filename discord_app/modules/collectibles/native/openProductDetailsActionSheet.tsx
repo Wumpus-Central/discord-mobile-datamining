@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/native/openProductDetailsActionSheet.tsx
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import { openCollectiblesShop } from "../CollectiblesActionCreators.tsx";
 import { getProductOrbPrice } from "../utils/CollectiblesProductUtils.tsx";
@@ -35,5 +35,5 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
   const tmp2 = dependencyMap;
   const tmpResult = openCollectiblesShop;
   obj = { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext };
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9324, tmp2.paths), c3, obj, stack);
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9353, tmp2.paths), c3, obj, stack);
 };

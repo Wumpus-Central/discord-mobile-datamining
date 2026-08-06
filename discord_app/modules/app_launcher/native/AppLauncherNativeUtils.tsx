@@ -5,7 +5,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
 import { AnalyticEvents } from "ME";
 import { BuiltInSectionId } from "TRUE_OPTION_NAME";
-import { registerAsset } from "../../../../_runtime/01855_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01883_registerAsset.js";
 import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
 import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
 import { getShelfBadgeTypeIfActive } from "../utils/AppLauncherUtils.tsx";
@@ -37,9 +37,9 @@ export const handleApplicationSelected = function handleApplicationSelected(entr
   let obj = collectGuildAnalyticsMetadata;
   obj = { location: _location, section: null, application_id: null, section_name: null, query: null, search_results_position: null, source: null };
   if (application.id === BuiltInSectionId.BUILT_IN) {
-    let APP = tmp(6876).ApplicationCommandTriggerSections.BUILT_IN;
+    let APP = tmp(6903).ApplicationCommandTriggerSections.BUILT_IN;
   } else {
-    APP = tmp(6876).ApplicationCommandTriggerSections.APP;
+    APP = tmp(6903).ApplicationCommandTriggerSections.APP;
   }
   obj[1] = APP;
   let id = application.id;
@@ -97,16 +97,16 @@ export const handleApplicationCommandSelected = function handleApplicationComman
   ({ location: _location, context, command } = arg0);
   ({ section, sectionDescriptors, query, navigation, installOnDemand, sectionName, entrypoint } = arg0);
   ({ searchResultsPosition, onCommandExecuted } = arg0);
-  let obj = command(6874);
+  let obj = command(6901);
   obj = { command, location: _location, triggerSection: null, queryLength: null, sectionName: null, query: null, searchResultsPosition: null, source: null };
-  obj[2] = command(6874).getCommandTriggerSection(section);
+  obj[2] = command(6901).getCommandTriggerSection(section);
   obj[3] = query.length;
   obj[4] = sectionName;
   obj[5] = query;
   obj[6] = searchResultsPosition;
   obj[7] = entrypoint;
   obj.trackCommandSelected(obj);
-  if (command.type === command(1906).ApplicationCommandType.PRIMARY_ENTRY_POINT) {
+  if (command.type === command(1935).ApplicationCommandType.PRIMARY_ENTRY_POINT) {
     obj = { application: null, context: null, installOnDemand: null, sectionName: null, entrypoint: null };
     obj[0] = section.application;
     obj[1] = context;
@@ -124,7 +124,7 @@ export const handleApplicationCommandSelected = function handleApplicationComman
       }
     }
     if ("channel" === context.type) {
-      const result = importAll(7131).setAppLauncherActiveCommand(context.channel.id, command);
+      const result = importAll(7158).setAppLauncherActiveCommand(context.channel.id, command);
       const obj1 = { command: null, section: null, context: null, installOnDemand: null, sectionName: null, analyticsLocation: null, onCommandExecuted: null };
       obj1[0] = command;
       obj1[1] = tmp5;
@@ -134,7 +134,7 @@ export const handleApplicationCommandSelected = function handleApplicationComman
       obj1[5] = _location;
       obj1[6] = onCommandExecuted;
       navigation.navigate(constants.COMMAND_VIEW, obj1);
-      const obj4 = importAll(7131);
+      const obj4 = importAll(7158);
     }
   }
 };
@@ -149,7 +149,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
     found = prefilledValues.find((name) => name.name === option.name && name.type === tmp.type);
   }
   const type = option.type;
-  if (option(1906).ApplicationCommandOptionType.BOOLEAN === type) {
+  if (option(1935).ApplicationCommandOptionType.BOOLEAN === type) {
     if (null != found) {
       let obj = { type: "text", text: null };
       const _String8 = String;
@@ -162,10 +162,10 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
     }
     return items1;
   } else {
-    if (tmp2(1906).ApplicationCommandOptionType.STRING !== type) {
-      if (tmp2(1906).ApplicationCommandOptionType.INTEGER !== type) {
-        if (tmp2(1906).ApplicationCommandOptionType.NUMBER !== type) {
-          if (tmp2(1906).ApplicationCommandOptionType.CHANNEL === type) {
+    if (tmp2(1935).ApplicationCommandOptionType.STRING !== type) {
+      if (tmp2(1935).ApplicationCommandOptionType.INTEGER !== type) {
+        if (tmp2(1935).ApplicationCommandOptionType.NUMBER !== type) {
+          if (tmp2(1935).ApplicationCommandOptionType.CHANNEL === type) {
             if (null != found) {
               const _String5 = String;
               if (null != channel.getChannel(String(found.value))) {
@@ -178,7 +178,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
               return items3;
             }
             items3 = [{ type: "text", text: "" }];
-          } else if (tmp2(1906).ApplicationCommandOptionType.USER === type) {
+          } else if (tmp2(1935).ApplicationCommandOptionType.USER === type) {
             if (null != found) {
               const _String3 = String;
               if (null != authStore.getUser(String(found.value))) {
@@ -191,7 +191,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
               return items5;
             }
             items5 = [{ type: "text", text: "" }];
-          } else if (tmp2(1906).ApplicationCommandOptionType.ROLE === type) {
+          } else if (tmp2(1935).ApplicationCommandOptionType.ROLE === type) {
             if (null != found) {
               if (typeof found.value === "string") {
                 if (found.value in roles) {
@@ -204,7 +204,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
               }
             }
             items7 = [{ type: "text", text: "" }];
-          } else if (tmp2(1906).ApplicationCommandOptionType.MENTIONABLE === type) {
+          } else if (tmp2(1935).ApplicationCommandOptionType.MENTIONABLE === type) {
             if (null != found) {
               if (found.value === option.guildId) {
                 const items8 = [{ type: "textMention", text: "@everyone" }];

@@ -2,7 +2,7 @@
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PHONE_VERIFICATION_MODAL_KEY as closure_4 } from "PHONE_VERIFICATION_MODAL_KEY";
 import createToggle from "createToggle";
-import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../../_runtime/01988_asyncRequireImpl.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
@@ -30,7 +30,7 @@ createToggle = {
     let obj = ModalActionCreators;
     obj = { allowDeletePhone: true, reason: null };
     obj[1] = ChangePhoneReason.ChangePhoneReason.USER_SETTINGS_UPDATE;
-    obj.pushLazy(asyncRequireImpl(8299, dependencyMap.paths), obj, closure_4);
+    obj.pushLazy(asyncRequireImpl(8439, dependencyMap.paths), obj, closure_4);
   },
   withArrow: true
 };

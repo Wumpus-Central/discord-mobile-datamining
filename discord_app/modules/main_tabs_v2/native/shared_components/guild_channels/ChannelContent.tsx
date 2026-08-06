@@ -94,13 +94,13 @@ function ChannelContentComponent(arg0) {
     if (tmp10Result) {
       const obj6 = { size: "xxs", color: "icon-muted", style: null };
       obj6[2] = tmp.channelTraitIcon;
-      tmp10Result = tmp10(tmp2(4774).LockIcon, obj6);
+      tmp10Result = tmp10(tmp2(4804).LockIcon, obj6);
     }
     const items3 = [tmp10Result, , ];
     if (isNSFWResult) {
       const obj7 = { size: "xxs", color: "icon-muted", style: null };
       obj7[2] = tmp.channelTraitIcon;
-      isNSFWResult = tmp10(tmp2(7744).WarningIcon, obj7);
+      isNSFWResult = tmp10(tmp2(7885).WarningIcon, obj7);
     }
     items3[1] = isNSFWResult;
     if (isSubscriptionGated) {
@@ -144,7 +144,7 @@ function ChannelContentComponent(arg0) {
     const obj13 = { variant: "text-xs/medium", color: "text-muted", style: null, maxFontSizeMultiplier: 1.75, children: null };
     obj13[2] = { marginLeft: "auto" };
     obj13[4] = lastMessageTimestampString;
-    tmp10Result1 = tmp10(tmp2(4251).Text, obj13);
+    tmp10Result1 = tmp10(tmp2(4281).Text, obj13);
   }
   const items7 = [tmp10Result1, , ];
   const items8 = [{ alignItems: "center", paddingLeft: 4 }, ];

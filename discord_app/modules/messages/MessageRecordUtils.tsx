@@ -7,7 +7,7 @@ import fetchFingerprint from "fetchFingerprint";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
-import { t } from "../../../_runtime/03837_t.js";
+import { t } from "../../../_runtime/03866_t.js";
 import { getEffectiveVideoProvider } from "../../utils/EmbedUtils.tsx";
 import { _resolveGiftCode } from "../../utils/GiftCodeUtils.tsx";
 import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
@@ -91,10 +91,6 @@ function createMessageRecord(message, message) {
   if (mention_channels == null) {
     mention_channels = [];
   }
-  let mention_games = message.mention_games;
-  if (mention_games == null) {
-    mention_games = [];
-  }
   if (null == message.author) {
     let user = closure_14;
   } else if (null != message.webhook_id) {
@@ -169,9 +165,8 @@ function createMessageRecord(message, message) {
   obj.mentions = mapped;
   obj.mentionRoles = mention_roles;
   obj.mentionChannels = mention_channels;
-  obj.mentionGames = mention_games;
   obj.messageReference = message.message_reference;
-  let tmp9Result = tmp9(4488);
+  let tmp9Result = tmp9(4518);
   obj1 = { userId: store.getId(), channelId: message.channel_id, mentionEveryone: null, mentionUsers: null, mentionRoles: null };
   let flag = message.mention_everyone;
   if (flag == null) {
@@ -181,7 +176,7 @@ function createMessageRecord(message, message) {
   obj1[3] = mapped;
   obj1[4] = mention_roles;
   obj.mentioned = tmp9Result.isMentioned(obj1);
-  tmp9Result = tmp9(4489);
+  tmp9Result = tmp9(4519);
   const isGiftCodeEmbedResult = tmp9Result.isGiftCodeEmbed(message);
   const findGiftCodes = _resolveGiftCode.findGiftCodes;
   if (isGiftCodeEmbedResult) {

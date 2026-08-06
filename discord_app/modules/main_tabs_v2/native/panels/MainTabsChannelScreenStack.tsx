@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/panels/MainTabsChannelScreenStack.tsx
 import _slicedToArray from "_slicedToArray";
-import importAllResult from "Link";
+import importAllResult from "createStandardNavigationFactories";
 import get_ActivityIndicator from "Suspender";
 import { MIDNIGHT_BORDER_WIDTH } from "MIN_HEADER_HEIGHT";
 import ME from "ME";

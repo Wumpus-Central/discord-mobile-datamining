@@ -9,7 +9,7 @@ let result = require("dismissGlobalKeyboard").fileFinishedImporting("modules/gui
 export const openMemberVerificationSuccessAlert = function openMemberVerificationSuccessAlert(guildId, arg1) {
   let closure_0 = guildId;
   const importDefault = arg1;
-  let obj = importAll(1844);
+  let obj = importAll(1872);
   const result = obj.dismissGlobalKeyboard();
   obj = {
     importer() {
@@ -30,7 +30,7 @@ export const openMemberVerificationSuccessAlert = function openMemberVerificatio
 export const openMemberVerificationPendingAlert = function openMemberVerificationPendingAlert(guildId) {
   let closure_0 = guildId;
   const importDefault = arg1;
-  let obj = importAll(1844);
+  let obj = importAll(1872);
   const result = obj.dismissGlobalKeyboard();
   obj = {
     importer() {
@@ -60,7 +60,7 @@ export const openMemberVerificationCancelPendingAlert = function openMemberVerif
   let importDefault;
   let require;
   ({ guildId: require, confirmText: importDefault, subtitleText: importAll, onClose: dependencyMap } = arg0);
-  let obj = importAll(1844);
+  let obj = importAll(1872);
   const result = obj.dismissGlobalKeyboard();
   obj = {
     importer() {
@@ -141,9 +141,9 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
     obj[0] = intl.string(tmp2(1236).t.BddRzS);
     obj[1] = fn;
   }
-  dependencyMap = jsx(onClose(4665).Button, obj);
-  let result = fn(1844).dismissGlobalKeyboard();
-  let obj3 = fn(1844);
+  dependencyMap = jsx(onClose(4695).Button, obj);
+  let result = fn(1872).dismissGlobalKeyboard();
+  let obj3 = fn(1872);
   const tmp = jsx;
   obj = {
     importer() {
@@ -166,10 +166,10 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
       });
     }
   };
-  onClose(4594).openLazy(obj);
+  onClose(4624).openLazy(obj);
 };
 export const openMemberVerificationUpdateAlert = function openMemberVerificationUpdateAlert() {
-  let obj = importAll(1844);
+  let obj = importAll(1872);
   const result = obj.dismissGlobalKeyboard();
   obj = {
     importer() {
@@ -195,7 +195,7 @@ export function closeMemberVerificationAlert(arg0) {
 }
 export const openMemberVerificationIncompleteAlert = function openMemberVerificationIncompleteAlert(closure_0) {
   const importDefault = arg1;
-  let obj = importAll(1844);
+  let obj = importAll(1872);
   const result = obj.dismissGlobalKeyboard();
   obj = {
     isDismissable: true,

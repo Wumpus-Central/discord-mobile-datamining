@@ -5,7 +5,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { CollectiblesMobileShopScreen as closure_6 } from "items";
 import jsxProd from "useCollectiblesData";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/08070_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08211_registerAsset.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../design/void/native.tsx";
@@ -96,7 +96,7 @@ export const EditCollectiblesListItemShop = function EditCollectiblesListItemSho
   const merged = Object.assign(analyticsSource, Object.create(null));
   let analyticsLocations;
   const tmp2 = createCacheKey();
-  analyticsLocations = analyticsLocations(5595)(analyticsSource).analyticsLocations;
+  analyticsLocations = analyticsLocations(5649)(analyticsSource).analyticsLocations;
   const items = [analyticsLocations, analyticsSource];
   let obj = {
     style: tmp2.optionCell,
@@ -110,14 +110,14 @@ export const EditCollectiblesListItemShop = function EditCollectiblesListItemSho
   };
   const merged1 = Object.assign(merged);
   obj = { source: null, size: null };
-  obj[0] = analyticsLocations(8071);
+  obj[0] = analyticsLocations(8212);
   obj[1] = analyticsSource(1297).IconSizes.LARGE;
   const items1 = [callback(analyticsSource(1297).Icon, obj), , ];
   obj = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp2.optionCellText, children: null };
   const intl = analyticsSource(1236).intl;
   obj[3] = intl.string(analyticsSource(1236).t.pWG4ze);
-  items1[1] = callback(analyticsSource(4251).Text, obj);
-  items1[2] = callback(analyticsSource(8072).NewBadge, { style: tmp2.newIcon });
+  items1[1] = callback(analyticsSource(4281).Text, obj);
+  items1[2] = callback(analyticsSource(8213).NewBadge, { style: tmp2.newIcon });
   obj.children = items1;
   return callback2(EditCollectibleListItem, obj);
 };
@@ -142,8 +142,8 @@ export const EditCollectiblesListItemProduct = function EditCollectiblesListItem
   const obj3 = getItemRecordsFromPurchases;
   let result = getItemRecordsFromPurchases.isPremiumCollectiblesProduct(product);
   if (!result) {
-    result = tmp3(6907).isPremiumCollectiblesPurchase(purchase);
-    const tmp3Result = tmp3(6907);
+    result = tmp3(6934).isPremiumCollectiblesPurchase(purchase);
+    const tmp3Result = tmp3(6934);
   }
   obj = { isSelected };
   const merged1 = Object.assign(merged);
@@ -153,7 +153,7 @@ export const EditCollectiblesListItemProduct = function EditCollectiblesListItem
       obj = { style: null, isNew: null };
       obj[0] = tmp2.lockIcon;
       obj[1] = isProductNewResult;
-      let tmp14 = callback(tmp3(8072).LockBadge, obj);
+      let tmp14 = callback(tmp3(8213).LockBadge, obj);
     }
     items1[1] = tmp14;
     obj.children = items1;
@@ -167,7 +167,7 @@ export const EditCollectiblesListItemProduct = function EditCollectiblesListItem
         obj1 = { style: null, isNew: null };
         obj1[0] = tmp2.lockIcon;
         obj1[1] = isProductNewResult;
-        tmp15 = callback(tmp3(8072).PremiumBadge, obj1);
+        tmp15 = callback(tmp3(8213).PremiumBadge, obj1);
       } else {
         tmp15 = null;
       }

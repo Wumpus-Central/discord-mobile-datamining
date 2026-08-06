@@ -47,9 +47,9 @@ export default function VoicePanelHeaderChatButton(channelId) {
     const items1 = [, ];
     ({ badge: arr2[0], notificationBadge: arr2[1] } = tmp);
     obj1[0] = items1;
-    obj[1] = tmp8(tmp3(5648), obj1);
-    tmp8Result = tmp8(tmp3(5648), obj);
-    const tmp3Result = tmp3(5648);
+    obj[1] = tmp8(tmp3(5702), obj1);
+    tmp8Result = tmp8(tmp3(5702), obj);
+    const tmp3Result = tmp3(5702);
   }
   children[1] = tmp8Result;
   return tmp6(tmp7, { children });

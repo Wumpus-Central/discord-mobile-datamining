@@ -66,8 +66,8 @@ const memoResult = require("noop").memo(function PremiumTrialOfferActionSheetCon
     if (subscription_trial != null) {
       sku_id1 = subscription_trial.sku_id;
     }
-    displayNameFromSku = tmp3(3901).getDisplayNameFromSku(sku_id1);
-    const tmp3Result = tmp3(3901);
+    displayNameFromSku = tmp3(3930).getDisplayNameFromSku(sku_id1);
+    const tmp3Result = tmp3(3930);
   }
   obj3[3] = intl7.formatToPlainString(getSystemLocale.t.q8eMc0, { displayName: displayNameFromSku, duration: intervalDuration });
   items1[1] = callback(Text.Text, obj3);

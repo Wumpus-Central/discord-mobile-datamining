@@ -22,7 +22,7 @@ function messageAttachmentToUnfurledMediaItem(flags) {
   if (tmpResult.hasFlag(num3, MessageAttachmentFlags.IS_ANIMATED)) {
     num4 = obj.IS_ANIMATED | 0;
   }
-  obj = { url: flags.url, proxyUrl: flags.proxy_url, height: flags.height, width: flags.width, contentType: flags.content_type, originalContentType: flags.original_content_type, placeholder: flags.placeholder, placeholderVersion: flags.placeholder_version, loadingState: tmp(1906).UnfurledMediaLoadingState.LOADED_SUCCESS, contentScanMetadata: null, flags: null };
+  obj = { url: flags.url, proxyUrl: flags.proxy_url, height: flags.height, width: flags.width, contentType: flags.content_type, originalContentType: flags.original_content_type, placeholder: flags.placeholder, placeholderVersion: flags.placeholder_version, loadingState: tmp(1935).UnfurledMediaLoadingState.LOADED_SUCCESS, contentScanMetadata: null, flags: null };
   let tmp6;
   if (null != flags.content_scan_version) {
     obj = { version: null, flags: null };

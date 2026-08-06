@@ -26,10 +26,10 @@ export default function FormRoleColorPicker(color) {
   }, items);
   let obj = { leading: null, label: null, disabled: null, onPress: null };
   obj = { color, style: callback().rowColorBlock, onSelect: callback };
-  obj[0] = jsx(onChange(13784), { color, style: callback().rowColorBlock, onSelect: callback });
+  obj[0] = jsx(onChange(13821), { color, style: callback().rowColorBlock, onSelect: callback });
   const tmp = callback();
   obj[1] = color(688).int2hex(color);
   obj[2] = flag;
   obj[3] = callback;
-  return jsx(color(7749).FormRow, { color, style: callback().rowColorBlock, onSelect: callback });
+  return jsx(color(7890).FormRow, { color, style: callback().rowColorBlock, onSelect: callback });
 };

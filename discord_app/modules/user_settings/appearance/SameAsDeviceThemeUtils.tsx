@@ -27,32 +27,32 @@ export const enableSameAsDeviceTheme = function enableSameAsDeviceTheme(arg0) {
           id = gradientPreset.id;
         }
       }
-      let tmp14Result = tmp14(4097);
+      let tmp14Result = tmp14(4126);
       obj = {};
       obj[tmp4] = theme;
       const result1 = tmp14Result.updateThemePreferences(obj);
       if (null != arg0) {
-        tmp14Result = tmp14(4097);
+        tmp14Result = tmp14(4126);
         obj = { customUserThemeSettings: null };
         obj[0] = arg0;
         const result2 = tmp14Result.updateSyncedClientTheme(tmp4, obj);
       } else if (null != tmp5) {
         obj1 = { backgroundGradientPresetId: null };
         obj1[0] = tmp5;
-        const result3 = tmp14(4097).updateSyncedClientTheme(tmp4, obj1);
-        const tmp14Result1 = tmp14(4097);
+        const result3 = tmp14(4126).updateSyncedClientTheme(tmp4, obj1);
+        const tmp14Result1 = tmp14(4126);
       } else {
         const obj2 = { theme: null };
         obj2[0] = theme;
-        const result4 = tmp14(4097).updateSyncedClientTheme(tmp4, obj2);
-        const tmp14Result2 = tmp14(4097);
+        const result4 = tmp14(4126).updateSyncedClientTheme(tmp4, obj2);
+        const tmp14Result2 = tmp14(4126);
       }
       const obj13 = AccessibilityAnnouncer;
     }
   }
-  setSystemTheme.setUseSystemTheme(constants2.ON);
-  const obj11 = setSystemTheme;
   const result5 = setSystemTheme.setSameAsDeviceThemeEnabled(true);
+  const obj11 = setSystemTheme;
+  setSystemTheme.setUseSystemTheme(constants2.ON);
 };
 export const disableSameAsDeviceTheme = function disableSameAsDeviceTheme() {
   setSystemTheme.setUseSystemTheme(constants2.OFF);

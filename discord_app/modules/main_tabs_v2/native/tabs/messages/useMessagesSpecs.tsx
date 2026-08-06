@@ -8,8 +8,8 @@ let closure_3 = ["height"];
 const result = require("ME").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx");
 
 export default function useMessagesSpecs() {
-  fontScale = fontScale(4671).useFontScale();
-  top = top(1581)().top;
+  fontScale = fontScale(4701).useFontScale();
+  top = top(1609)().top;
   const tmp2 = top(1348)("MessagesHeader");
   const dependencyMap = tmp2;
   const items = [fontScale, top, tmp2];

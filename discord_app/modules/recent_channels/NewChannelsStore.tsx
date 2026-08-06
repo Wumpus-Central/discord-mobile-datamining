@@ -230,7 +230,7 @@ const newChannelsStore = new NewChannelsStore(require("dispatcher"), {
     ({ guildId, channelId } = arg0);
     let tmp2 = null == guildId;
     if (!tmp2) {
-      tmp2 = tmp !== channelId(5794).SidebarType.VIEW_CHANNEL;
+      tmp2 = tmp !== channelId(5821).SidebarType.VIEW_CHANNEL;
     }
     if (!tmp2) {
       let isOptInEnabledResult = null != obj && null != channelId && obj.has(channelId);

@@ -5,13 +5,13 @@ import { jsx } from "jsxProd";
 const require = arg1;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 15968;
+    let tmp4 = 16008;
   } else {
-    tmp4 = 15972;
+    tmp4 = 16012;
   }
   return jsx(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }
-const result = require("module_15968").fileFinishedImporting("modules/frames/panel/native/FramePanelUI.tsx");
+const result = require("module_16008").fileFinishedImporting("modules/frames/panel/native/FramePanelUI.tsx");
 
 export default function FramePanelUI() {
   const callback = React.useCallback(() => callback2(callback(table[4]), {}), []);

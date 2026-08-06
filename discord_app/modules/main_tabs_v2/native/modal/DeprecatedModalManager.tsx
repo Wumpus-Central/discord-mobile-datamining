@@ -15,16 +15,13 @@ import { navigationToRootTabHelper } from "../../helpers/NavigationRouteUtils.na
 import { getRootNavigationRef } from "../../RootNavigationRef.native.tsx";
 
 const require = arg1;
-function handlePushedModal(key) {
+function handlePushedModal(arg0) {
   let obj = getRootNavigationRef;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
-    obj = { name: "modal", key: null, params: null };
-    obj[1] = key.key;
     obj = { modal: null };
-    obj[0] = key;
-    obj[2] = obj;
-    rootNavigationRef.navigate(obj);
+    obj[0] = arg0;
+    rootNavigationRef.navigate("modal", obj);
   }
 }
 function handlePoppedModal() {
@@ -125,15 +122,15 @@ let prototype = function DeprecatedModalManager() {
     USER_REQUIRED_ACTION_UPDATE(requiredAction) {
       if (null == requiredAction.requiredAction) {
         if (obj.isModalOpen(closure_16)) {
-          let tmp5Result = tmp5(4106);
+          let tmp5Result = tmp5(4135);
           tmp5Result.popModal(tmp7);
         }
-        tmp5Result = tmp5(4106);
+        tmp5Result = tmp5(4135);
         if (tmp5Result.isModalOpen(closure_14)) {
-          tmp5(4106).popModal(tmp9);
-          const tmp5Result1 = tmp5(4106);
+          tmp5(4135).popModal(tmp9);
+          const tmp5Result1 = tmp5(4135);
         }
-        obj = callback(4106);
+        obj = callback(4135);
         tmp7 = closure_16;
         tmp9 = closure_14;
       } else {
@@ -157,7 +154,7 @@ let prototype = function DeprecatedModalManager() {
     store: handleFormInit,
     closable: false,
     getComponent() {
-      return callback(16451).default;
+      return callback(16491).default;
     }
   };
   obj = {
@@ -165,7 +162,7 @@ let prototype = function DeprecatedModalManager() {
     store: FormStates,
     closable: false,
     getComponent() {
-      return callback(16732).default;
+      return callback(16772).default;
     }
   };
   applyArgumentsResult.actions = obj;

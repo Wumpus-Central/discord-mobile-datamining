@@ -2,7 +2,7 @@
 import initialize from "initialize";
 import items from "items";
 import { AnalyticEvents } from "ME";
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
 import { maybeFetchCollectiblesForInvoices } from "../FamilyCenterActionCreators.tsx";
@@ -31,7 +31,7 @@ export const handleFamilyCenterQRCodeScan = function handleFamilyCenterQRCodeSca
     obj = { userId: null, linkCode: null };
     obj[0] = match[1];
     obj[1] = match[2];
-    ModalActionCreators.pushLazy(asyncRequireImpl(11206, dependencyMap.paths), obj, c7);
+    ModalActionCreators.pushLazy(asyncRequireImpl(11240, dependencyMap.paths), obj, c7);
   }
 };
 export const resumeFamilyCenterConnection = function resumeFamilyCenterConnection() {
@@ -42,7 +42,7 @@ export const resumeFamilyCenterConnection = function resumeFamilyCenterConnectio
     obj.popWithKey(c7);
     obj = { userId: null, linkCode: null };
     ({ teenId: obj3[0], linkCode: obj3[1] } = pendingConnection);
-    ModalActionCreators.pushLazy(asyncRequireImpl(11206, dependencyMap.paths), obj, c7);
+    ModalActionCreators.pushLazy(asyncRequireImpl(11240, dependencyMap.paths), obj, c7);
     flag = true;
     const obj2 = ModalActionCreators;
   }

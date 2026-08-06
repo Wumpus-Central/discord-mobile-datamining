@@ -29,13 +29,13 @@ export default function PortalKeyboardFooterIOS(animatedSheetIndex) {
   let animatedStyle;
   const tmp = progress();
   dependencyMap = tmp;
-  bottom = flag(1581)().bottom;
-  let obj = animatedSheetIndex(1595);
+  bottom = flag(1609)().bottom;
+  let obj = animatedSheetIndex(1623);
   const reanimatedKeyboardAnimation = obj.useReanimatedKeyboardAnimation();
   height = reanimatedKeyboardAnimation.height;
   progress = reanimatedKeyboardAnimation.progress;
-  keyboardTypeSharedValue = animatedSheetIndex(4121).useKeyboardTypeSharedValue();
-  const obj2 = animatedSheetIndex(4121);
+  keyboardTypeSharedValue = animatedSheetIndex(4150).useKeyboardTypeSharedValue();
+  const obj2 = animatedSheetIndex(4150);
   class S {
     constructor() {
       tmp = animatedSheetIndex;
@@ -74,17 +74,17 @@ export default function PortalKeyboardFooterIOS(animatedSheetIndex) {
       return;
     }
   }
-  obj = { interpolate: animatedSheetIndex(4116).interpolate, progress, bottom, followSystemKeyboard: flag, keyboardType: keyboardTypeSharedValue, KeyboardTypes: animatedSheetIndex(1579).KeyboardTypes, animatedSheetIndex, height, EXPRESSION_FOOTER_HEIGHT: animatedSheetIndex(691).EXPRESSION_FOOTER_HEIGHT };
+  obj = { interpolate: animatedSheetIndex(4145).interpolate, progress, bottom, followSystemKeyboard: flag, keyboardType: keyboardTypeSharedValue, KeyboardTypes: animatedSheetIndex(1607).KeyboardTypes, animatedSheetIndex, height, EXPRESSION_FOOTER_HEIGHT: animatedSheetIndex(691).EXPRESSION_FOOTER_HEIGHT };
   S.__closure = obj;
   S.__workletHash = 9444646970651;
   S.__initData = keyboardTypeSharedValue;
-  animatedStyle = animatedSheetIndex(4116).useAnimatedStyle(S);
+  animatedStyle = animatedSheetIndex(4145).useAnimatedStyle(S);
   let items = [animatedStyle, tmp];
   const memo = bottom.useMemo(() => {
     const items = [_undefined.keyboardStickyFooter, animatedStyle];
     return items;
   }, items);
   obj = { style: memo, children: null };
-  obj[1] = height(animatedSheetIndex(4126).PortalHost, { name: str });
-  return height(flag(4116).View, obj);
+  obj[1] = height(animatedSheetIndex(4155).PortalHost, { name: str });
+  return height(flag(4145).View, obj);
 };

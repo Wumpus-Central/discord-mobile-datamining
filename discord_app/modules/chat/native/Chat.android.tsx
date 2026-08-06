@@ -3,7 +3,7 @@ import importAllResult from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { Directions } from "../../../../_runtime/05353_Directions.js";
+import { Directions } from "../../../../_runtime/05407_Directions.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/ChatListNativeComponent.tsx";
 import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/ChatNativeComponent.tsx";

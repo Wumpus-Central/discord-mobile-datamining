@@ -4,7 +4,7 @@ import _slicedToArray from "_slicedToArray";
 import _getSystemLocale from "_getSystemLocale";
 import importDefaultResult from "set";
 import importDefaultResult1 from "apply";
-import { parse } from "../../../_runtime/05275_parse.js";
+import { parse } from "../../../_runtime/05329_parse.js";
 import { set } from "../../../discord_common/js/shared/utils/DOMUtils.tsx";
 import { set } from "fallbackLocales.tsx";
 
@@ -83,7 +83,7 @@ class Spellchecker {
       } else {
         let tmp3 = dependencyMap[arg0];
         if (tmp3 == null) {
-          tmp3 = first(5274)[first];
+          tmp3 = first(5328)[first];
         }
         if (null != tmp3) {
           obj.setLocale(tmp3);
@@ -178,9 +178,9 @@ let closure_10 = require("apply").debounce((detectLanguage, hasAttribute) => {
   let textContent = null;
   if (null != hasAttribute) {
     if (!obj.isElement(hasAttribute, globalThis.HTMLInputElement)) {
-      let tmp2Result = tmp2(1859);
+      let tmp2Result = tmp2(1887);
       if (!tmp2Result.isElement(hasAttribute, globalThis.HTMLTextAreaElement)) {
-        tmp2Result = tmp2(1859);
+        tmp2Result = tmp2(1887);
         if (tmp2Result.isElement(hasAttribute)) {
           if (hasAttribute.hasAttribute("contenteditable")) {
             textContent = hasAttribute.textContent;

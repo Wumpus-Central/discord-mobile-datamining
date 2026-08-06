@@ -1,5 +1,5 @@
 // discord_app/modules/stickers/native/showStickerDetailActionSheet.tsx
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 const sticker_detail_action_sheet = "sticker_detail_action_sheet";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/stickers/native/showStickerDetailActionSheet.tsx");
@@ -8,5 +8,5 @@ export const hideStickerDetailActionSheet = function hideStickerDetailActionShee
   ACTION_SHEET_HEIGHT_HALF.hideActionSheet(sticker_detail_action_sheet);
 };
 export const showStickerDetailActionSheet = function showStickerDetailActionSheet(arg0) {
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9860, dependencyMap.paths), sticker_detail_action_sheet, arg0);
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9891, dependencyMap.paths), sticker_detail_action_sheet, arg0);
 };

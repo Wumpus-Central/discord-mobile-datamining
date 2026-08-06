@@ -39,9 +39,9 @@ let obj = {
       const guildId = obj3.getGuildId();
     }
     application = application.getApplication(id);
-    let tmpResult = tmp(7482);
+    let tmpResult = tmp(7510);
     if (tmpResult.hasApplicationFlag(application, constants.EMBEDDED_FIRST_PARTY)) {
-      tmpResult = tmp(10492);
+      tmpResult = tmp(10521);
       const activeAnalyticsSessionIDs = tmpResult.getActiveAnalyticsSessionIDs(id);
       obj = { activity_application_id: null, activity_channel_type: null, activity_guild_id: null, activity_user_session_id: null };
       obj[0] = id;
@@ -63,7 +63,7 @@ let obj = {
     } else {
       obj1 = { errorCode: null };
       obj1[0] = constants2.INVALID_COMMAND;
-      const tmp12 = new tmp5(10515)(obj1, "This application cannot access this API");
+      const tmp12 = new tmp5(10536)(obj1, "This application cannot access this API");
       throw tmp12;
     }
   }

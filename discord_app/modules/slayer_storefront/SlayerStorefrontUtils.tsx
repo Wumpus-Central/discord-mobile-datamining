@@ -9,7 +9,7 @@ import ME from "ME";
 import { CollectibleShopTab } from "items";
 import { CurrencyCodes } from "sum";
 import { apply } from "../../../_runtime/00012_apply.js";
-import { keysSorter } from "../../../_runtime/05125_keysSorter.js";
+import { keysSorter } from "../../../_runtime/05155_keysSorter.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { _httpGetWithCountryCodeQuery } from "../../utils/StoreUtils.tsx";
 import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
@@ -515,8 +515,8 @@ export { getSKUShareURL };
 export const getForwardedSKUShareURL = function getForwardedSKUShareURL(arg0, applicationId) {
   return "" + getSKUShareURL(arg0, applicationId) + "\n\n";
 };
-export const canSeeGameShop = function canSeeGameShop(id) {
-  const guild = store.getGuild(id);
+export const canSeeGameShop = function canSeeGameShop(guildId) {
+  const guild = store.getGuild(guildId);
   let tmp2 = null != guild;
   if (tmp2) {
     tmp2 = hasSocialLayerStorefront(guild);

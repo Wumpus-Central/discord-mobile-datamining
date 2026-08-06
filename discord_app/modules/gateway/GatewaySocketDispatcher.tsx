@@ -286,11 +286,11 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
           let closure_5 = arr.slice(sum);
           if (tmp18) {
             const telemetry = tmp6.scheduler.telemetry;
-            telemetry.timeTrack(v0(12791).WorkSchedulerTelemetryTiming.TIME_OVER_DEADLINE, obj.timeSinceExpiration);
+            telemetry.timeTrack(v0(12828).WorkSchedulerTelemetryTiming.TIME_OVER_DEADLINE, obj.timeSinceExpiration);
           }
           tmp18 = null != obj && obj.timeRemaining() <= 0;
         }
-        items(12794).flush();
+        items(12831).flush();
       });
       if (c4) {
         const Emitter3 = tmp2(589).Emitter;
@@ -298,7 +298,7 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
       }
       if (tmp2.length > 0) {
         let telemetry = self.scheduler.telemetry;
-        telemetry.measure(tmp21(12791).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD, tmp2.length);
+        telemetry.measure(tmp21(12828).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD, tmp2.length);
         const queue = self.queue;
         const unshift = queue.unshift;
         items = [];
@@ -329,7 +329,7 @@ prototype["dispatchOne"] = function dispatchOne(arg0) {
   ({ data, type, compressionAnalytics, preloadedData } = arg0);
   const nowResult = performance.now();
   if (this.socket.connectionState !== CLOSED.RESUMING) {
-    tmp2(12794).flush(type, data);
+    tmp2(12831).flush(type, data);
     if ("READY" === type) {
       const readyPayloadByteSizeAnalytics = prettyPrintTrace_.getReadyPayloadByteSizeAnalytics(data);
       const dispatchHandler = self.getDispatchHandler(type);
@@ -357,7 +357,7 @@ prototype["dispatchOne"] = function dispatchOne(arg0) {
         dispatchHandler2.dispatch(data, type, preloadedData);
       }
     }
-    if (self.socket.connectionState === tmp2(12793).RESUMING) {
+    if (self.socket.connectionState === tmp2(12830).RESUMING) {
       const resumeAnalytics3 = self.resumeAnalytics;
       const _performance = performance;
       resumeAnalytics3.dispatchTime = resumeAnalytics3.dispatchTime + (performance.now() - nowResult);

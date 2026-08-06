@@ -24,12 +24,12 @@ export default function useStoreFrontPrice(arg0, arg1) {
       if (null == tmp3) {
         priceState = outer1_4.COUNTRY_PRICE_UNAVAILABLE;
       } else {
-        let obj = callback(3901);
+        let obj = callback(3930);
         const countryPrices = obj.getCountryPrices(tmp.id, outer1_3.MOBILE);
         obj = { purchaseType: null, currency: null };
         obj[0] = outer1_3.MOBILE;
         obj[1] = tmp11.currency;
-        const experimentalGetPriceResult = callback(3901).experimentalGetPrice(tmp.id, obj);
+        const experimentalGetPriceResult = callback(3930).experimentalGetPrice(tmp.id, obj);
         if (countryPrices.countryCode !== tmp11.country) {
           priceState = outer1_4.MISMATCHING_COUNTRIES;
         } else if (null == experimentalGetPriceResult) {
@@ -38,7 +38,7 @@ export default function useStoreFrontPrice(arg0, arg1) {
           priceState = outer1_4.PRICE_AVAILABLE;
         }
         const price = experimentalGetPriceResult;
-        const obj2 = callback(3901);
+        const obj2 = callback(3930);
       }
     }
     return { price, priceState };

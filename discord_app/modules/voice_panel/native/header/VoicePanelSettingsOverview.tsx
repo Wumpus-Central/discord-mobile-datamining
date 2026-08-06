@@ -14,7 +14,7 @@ import { isStreamParticipant } from "ParticipantTypes";
 import { SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY as closure_17 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/07800_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/07941_registerAsset.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { WrenchIcon } from "../../../../design/components/Icon/native/redesign/generated/WrenchIcon.tsx";
 import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";

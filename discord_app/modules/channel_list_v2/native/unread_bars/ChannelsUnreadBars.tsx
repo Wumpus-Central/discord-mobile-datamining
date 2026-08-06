@@ -1,6 +1,6 @@
 // discord_app/modules/channel_list_v2/native/unread_bars/ChannelsUnreadBars.tsx
 import _slicedToArray from "_slicedToArray";
-import importAllResult from "module_4116";
+import importAllResult from "module_4145";
 import get_ActivityIndicator from "shallowEqual";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -145,7 +145,7 @@ function findNearestUnreadItem(containerSize, id) {
             let tmp18 = item10031;
             let tmp19 = tmp70;
             let tmp20 = tmp72;
-            if (tmp12.type !== tmp71(7790).FastListItemTypes.ITEM) {
+            if (tmp12.type !== tmp71(7931).FastListItemTypes.ITEM) {
               tmp9 = item10031;
             } else {
               let tmp21 = shouldSkipSection;

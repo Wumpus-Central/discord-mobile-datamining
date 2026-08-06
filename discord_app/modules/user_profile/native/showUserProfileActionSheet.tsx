@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/showUserProfileActionSheet.tsx
 import explicitContentFromProto from "explicitContentFromProto";
 import upsertRelationship from "upsertRelationship";
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 
@@ -24,10 +24,10 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
       }
       obj.speedBumpType = str2;
       obj.openedAt = timestamp;
-      obj.openLazy(tmp2(1959)(8678, tmp3.paths), combined, obj);
+      obj.openLazy(tmp2(1988)(8707, tmp3.paths), combined, obj);
     }
   }
-  const tmp15 = asyncRequireImpl(8690, dependencyMap.paths);
+  const tmp15 = asyncRequireImpl(8719, dependencyMap.paths);
   const combined1 = "UserProfile" + ignoreBlockedSpeedBump.userId;
   obj = {};
   const merged1 = Object.assign(ignoreBlockedSpeedBump);

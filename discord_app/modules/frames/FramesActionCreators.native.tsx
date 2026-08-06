@@ -10,62 +10,15 @@ function _launchFrameOnNative() {
     let c2 = 0;
     let c3 = 0;
     return (function*(arg0) {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "T", done: null };
+      let c1 = 0;
+      const obj2 = outer1_1(table[3]);
+      closure_0 = yield obj2.launchFrame(closure_0);
+      (function closeVoicePanel() {
+        if (currentClientInVoiceChannel.isCurrentClientInVoiceChannel()) {
+          callback(table[2])();
         }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === table) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let c1 = 0;
-              let obj1 = outer1_1(table[3]);
-              table = 1;
-              c3 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj1.launchFrame(closure_0);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            (function closeVoicePanel() {
-              if (currentClientInVoiceChannel.isCurrentClientInVoiceChannel()) {
-                callback(table[2])();
-              }
-            })();
-            c3 = 3;
-            return { value: "T", done: null };
-          }
-        } catch (tmp10) {
-          c3 = tmp;
-          throw tmp10;
-        }
-      }
+      })();
+      return closure_0;
     })();
   });
   const _launchFrameOnNative = tmp;
@@ -77,7 +30,7 @@ function _launchFrameOnNative() {
   }
   return applyArgumentsResult;
 }
-let obj = {};
+const obj = {};
 obj.launchFrame = function launchFrameOnNative() {
   const self = this;
   const apply = _launchFrameOnNative.apply;

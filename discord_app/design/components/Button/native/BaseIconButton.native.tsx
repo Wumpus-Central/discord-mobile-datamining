@@ -3,7 +3,7 @@ import importAllResult from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import IconSizes from "IconSizes";
-import importDefaultResult from "module_4116";
+import importDefaultResult from "module_4145";
 import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import { BaseButton } from "BaseButton.native.tsx";
 import { MINIMUM_HIT_AREA } from "ButtonConstants.native.tsx";
@@ -65,11 +65,11 @@ const forwardRefResult = importAllResult.forwardRef((variant, ref) => {
   const iconSizeStyles = styleProperties.useIconSizeStyles(DEFAULT_BUTTON_SIZE, true, maxFontSizeMultiplier);
   let MEDIUM_BUTTON_HEIGHT = MINIMUM_HIT_AREA.LARGE_BUTTON_HEIGHT;
   if ("sm" === DEFAULT_BUTTON_SIZE) {
-    MEDIUM_BUTTON_HEIGHT = tmp4(4669).SMALL_BUTTON_HEIGHT;
+    MEDIUM_BUTTON_HEIGHT = tmp4(4699).SMALL_BUTTON_HEIGHT;
   } else if ("md" === DEFAULT_BUTTON_SIZE) {
-    MEDIUM_BUTTON_HEIGHT = tmp4(4669).MEDIUM_BUTTON_HEIGHT;
+    MEDIUM_BUTTON_HEIGHT = tmp4(4699).MEDIUM_BUTTON_HEIGHT;
   }
-  const bound = Math.max((tmp4(4669).MINIMUM_HIT_AREA - MEDIUM_BUTTON_HEIGHT) / 2, 0);
+  const bound = Math.max((tmp4(4699).MINIMUM_HIT_AREA - MEDIUM_BUTTON_HEIGHT) / 2, 0);
   obj = {};
   const merged = Object.assign(variant);
   obj.ref = ref;

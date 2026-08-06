@@ -1,5 +1,5 @@
 // discord_app/modules/guild_settings/server_monetization/stickers/native/showGuildSettingsModalStickerInfoActionSheet.tsx
-import { asyncRequireImpl } from "../../../../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../../../_runtime/01988_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 const GuildSettingsModalStickerInfoActionSheet = "GuildSettingsModalStickerInfoActionSheet";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/showGuildSettingsModalStickerInfoActionSheet.tsx");
@@ -16,5 +16,5 @@ export const showGuildSettingsModalStickerInfoActionSheet = function showGuildSe
       callback(table[0]).hideActionSheet(closure_3);
     }
   };
-  obj.openLazy(asyncRequireImpl(16520, dependencyMap.paths), GuildSettingsModalStickerInfoActionSheet, obj);
+  obj.openLazy(asyncRequireImpl(16560, dependencyMap.paths), GuildSettingsModalStickerInfoActionSheet, obj);
 };

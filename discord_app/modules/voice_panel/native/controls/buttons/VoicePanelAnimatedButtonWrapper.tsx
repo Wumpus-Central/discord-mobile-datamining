@@ -3,14 +3,14 @@ import noop from "noop";
 import { MODE_CHANGE_PHYSICS } from "VoicePanelModes";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4116";
+import importDefaultResult from "module_4145";
 
 const require = arg1;
 createCacheKey = { pressableWrapper: null };
 createCacheKey = { justifyContent: "center", alignItems: "center", borderRadius: require("Themes").modules.button.BORDER_RADIUS_LG };
 createCacheKey[0] = createCacheKey;
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-let closure_7 = require("module_4116").createAnimatedComponent(require("get ActivityIndicator").Pressable);
+let closure_7 = require("module_4145").createAnimatedComponent(require("get ActivityIndicator").Pressable);
 let closure_8 = { code: "function VoicePanelAnimatedButtonWrapperTsx1(values){const{offsetFromCenter,withSpring,MODE_CHANGE_PHYSICS,withTiming}=this.__closure;offsetFromCenter.set(values.windowWidth/2-values.targetGlobalOriginX-values.targetWidth/2);return{initialValues:{originX:values.targetOriginX+offsetFromCenter.get(),opacity:0,transform:[{scale:0.5}]},animations:{originX:withSpring(values.targetOriginX,MODE_CHANGE_PHYSICS),opacity:withTiming(1,{duration:100}),transform:[{scale:withSpring(1,MODE_CHANGE_PHYSICS)}]}};}" };
 let closure_9 = { code: "function VoicePanelAnimatedButtonWrapperTsx2(values){const{withSpring,offsetFromCenter,MODE_CHANGE_PHYSICS,withTiming}=this.__closure;return{initialValues:{originX:values.currentOriginX,opacity:1,transform:[{scale:1}]},animations:{originX:withSpring(values.currentOriginX+offsetFromCenter.get(),MODE_CHANGE_PHYSICS),opacity:withTiming(0,{duration:100}),transform:[{scale:withSpring(0.5,MODE_CHANGE_PHYSICS)}]}};}" };
 let result = require("VoicePanelModes").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelAnimatedButtonWrapper.tsx");

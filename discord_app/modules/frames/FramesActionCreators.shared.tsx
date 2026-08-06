@@ -1,8 +1,13 @@
 // discord_app/modules/frames/FramesActionCreators.shared.tsx
-import leaveCurrentFrame from "leaveCurrentFrame";
+import dispatcher from "dispatcher";
 import map from "map";
+import FrameLayoutModes from "FrameLayoutModes";
 import { dispatcher } from "../../Dispatcher.tsx";
 
+let c5;
+let closure_6;
+let error;
+let metroImportAll;
 const require = arg1;
 function _launchFrame() {
   const self = this;
@@ -44,10 +49,12 @@ function _launchFrame() {
               let callback2 = tmp7;
               let callback;
               callback2 = undefined;
-              ({ applicationId: c0, channelId: c1 } = callback);
+              ({ applicationId: c0, surface: c1 } = callback);
               dependencyMap = undefined;
-              let leaveCurrentFrame;
-              let message;
+              let intent;
+              let frame;
+              c5 = undefined;
+              c6 = undefined;
               c5 = 1;
               c6 = 1;
               return { value: "PX_8", done: "Array" };
@@ -58,79 +65,101 @@ function _launchFrame() {
               throw arg1;
             } else if (arg0 === 2) {
               c6 = 3;
-              let obj1 = { value: null, done: true };
+              const obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
-              const obj2 = { type: "FRAME_LAUNCH_START", applicationId: null };
-              obj2[1] = callback;
-              callback2(709).dispatch(obj2);
-              message = 1;
-              const obj15 = callback2(709);
-              c5 = 4;
-              c6 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = callback(10485).createProxyTicket(callback, callback2);
-              return obj3;
+              dependencyMap = callback4(callback, callback2);
+              intent = frame.getFrame(dependencyMap);
+              if (null != intent) {
+                if (intent.intent === c5.MAIN) {
+                  const obj2 = { frameId: null, layoutMode: null };
+                  obj2[0] = dependencyMap;
+                  obj2[1] = c6.FOCUSED;
+                  callback5(obj2);
+                }
+                c6 = 3;
+                const obj3 = { value: null, done: true };
+                obj3[0] = dependencyMap;
+                return obj3;
+              } else {
+                const result = callback(10516).leaveCurrentEmbeddedActivity();
+                const obj16 = callback(10516);
+                callback(10527).leaveCurrentFrame();
+                const obj17 = callback(10527);
+                let obj4 = { type: "FRAME_LAUNCH_START", applicationId: null, frameId: null, surface: null };
+                obj4[1] = callback;
+                obj4[2] = dependencyMap;
+                obj4[3] = callback2;
+                callback2(709).dispatch(obj4);
+                frame = 1;
+                const obj18 = callback2(709);
+                c5 = 4;
+                c6 = 1;
+                const obj5 = { value: null, done: false };
+                obj5[0] = callback(10550).createProxyTicket(callback, callback3(callback2));
+                return obj5;
+              }
             }
           } else if (2 === tmp7) {
-            message = 0;
-            c5 = leaveCurrentFrame;
-            leaveCurrentFrame = callback2(10509)();
-            let obj4 = callback(10500);
+            frame = 0;
+            callback3 = intent;
+            c5 = callback2(10517)();
+            let obj7 = callback(10548);
             c5 = 3;
             c6 = 1;
-            obj4 = { value: null, done: false };
-            obj4[0] = obj4.getActivityLaunchErrorInfo(c5, callback);
-            return obj4;
+            const obj6 = { value: null, done: false };
+            obj6[0] = obj7.getActivityLaunchErrorInfo(callback3, callback);
+            return obj6;
           } else if (3 === tmp7) {
             if (arg0 === 1) {
               c6 = 3;
               throw arg1;
             } else if (arg0 === 2) {
               c6 = 3;
-              const obj5 = { value: null, done: true };
-              obj5[0] = arg1;
-              return obj5;
+              obj7 = { value: null, done: true };
+              obj7[0] = arg1;
+              return obj7;
             } else {
-              message = arg1;
-              leaveCurrentFrame.showLaunchErrorModal(message.message);
-              obj1 = callback2(709);
-              const obj6 = { type: "FRAME_LAUNCH_FAIL", applicationId: null, error: null };
-              obj6[1] = callback;
-              obj6[2] = c5;
-              obj1.dispatch(obj6);
-              throw c5;
+              c6 = arg1;
+              c5.showLaunchErrorModal(c6.message);
+              obj4 = callback2(709);
+              const obj8 = { type: "FRAME_LAUNCH_FAIL", applicationId: null, frameId: null, error: null };
+              obj8[1] = callback;
+              obj8[2] = dependencyMap;
+              obj8[3] = callback3;
+              obj4.dispatch(obj8);
+              throw callback3;
             }
           } else if (arg0 === 1) {
             c6 = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            message = 0;
+            frame = 0;
             c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            const obj9 = { value: null, done: true };
+            obj9[0] = arg1;
+            return obj9;
           } else {
-            dependencyMap = arg1;
-            const result = callback(10865).leaveCurrentEmbeddedActivity();
-            const obj11 = callback(10865);
-            callback(10486).leaveCurrentFrame();
-            const obj12 = callback(10486);
-            const obj7 = { type: "FRAME_LAUNCH", applicationId: null, proxyTicket: null, channelId: null };
-            obj7[1] = callback;
-            obj7[2] = dependencyMap;
-            obj7[3] = callback2;
-            callback2(709).dispatch(obj7);
-            message = 0;
+            frame = arg1;
+            obj = callback2(709);
+            const obj10 = { type: "FRAME_LAUNCH", applicationId: null, frameId: null, surface: null, proxyTicket: null };
+            obj10[1] = callback;
+            obj10[2] = dependencyMap;
+            obj10[3] = callback2;
+            obj10[4] = frame;
+            obj.dispatch(obj10);
+            frame = 0;
             c6 = 3;
-            return { value: "T", done: null };
+            const obj11 = { value: null, done: true };
+            obj11[0] = dependencyMap;
+            return obj11;
           }
-        } catch (tmp30) {
-          leaveCurrentFrame = tmp30;
-          if (tmp4 === message) {
+        } catch (tmp51) {
+          intent = tmp51;
+          if (tmp4 === frame) {
             c6 = tmp2;
-            throw tmp30;
+            throw tmp51;
           } else {
             c5 = tmp;
           }
@@ -149,6 +178,18 @@ function _launchFrame() {
   }
   return applyArgumentsResult;
 }
+function updateFrameLayoutMode(frameId) {
+  frameId = frameId.frameId;
+  const frame = store.getFrame(frameId);
+  if (null != frame) {
+    let obj = dispatcher;
+    obj = { type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: null, frameId: null, layoutMode: null };
+    obj[1] = frame.applicationId;
+    obj[2] = frameId;
+    obj[3] = frameId.layoutMode;
+    obj.dispatch(obj);
+  }
+}
 function _refreshProxyTicket() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -156,11 +197,11 @@ function _refreshProxyTicket() {
     let c5 = 0;
     let c6 = 0;
     let c4 = 0;
-    const iter = (function*(arg0) {
+    return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
+      } else if (tmp8 === 3) {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
@@ -173,7 +214,7 @@ function _refreshProxyTicket() {
       } else {
         try {
           c6 = 2;
-          if (0 === message) {
+          if (0 === c5) {
             if (arg0 === 1) {
               c6 = 3;
               throw arg1;
@@ -183,88 +224,74 @@ function _refreshProxyTicket() {
               obj[0] = arg1;
               return obj;
             } else {
-              let channelId = tmp4;
-              let lib = tmp8;
-              let applicationId;
-              applicationId = applicationId.applicationId;
-              lib = undefined;
-              channelId = undefined;
-              let leaveCurrentFrame;
-              let c4;
-              message = undefined;
-              message = 1;
-              c6 = 1;
-              return { value: "PX_8", done: "Array" };
-            }
-          } else if (1 === tmp8) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              const obj2 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, refreshing: true };
-              obj2[1] = applicationId;
-              lib(channelId[2]).dispatch(obj2);
-              c4 = 2;
-              lib = c4.getConnectedFrame();
+              let dependencyMap = tmp4;
+              let applicationId = tmp6;
               applicationId = undefined;
-              if (lib != null) {
-                applicationId = lib.applicationId;
+              dependencyMap = undefined;
+              let dispatcher;
+              let frame;
+              frame = frame.getFrame(callback);
+              if (null == frame) {
+                c6 = 3;
+                return { value: false, done: true };
+              } else {
+                applicationId = frame.applicationId;
+                const obj1 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, frameId: null, refreshing: true };
+                obj1[1] = applicationId;
+                obj1[2] = tmp78;
+                outer1_1(outer1_2[5]).dispatch(obj1);
+                frame = 2;
+                const obj20 = outer1_1(outer1_2[5]);
+                c5 = 4;
+                c6 = 1;
+                const obj2 = { value: null, done: false };
+                obj2[0] = callback(outer1_2[6]).createProxyTicket(applicationId, outer1_7(frame.surface));
+                return obj2;
               }
-              channelId = undefined;
-              if (applicationId === applicationId) {
-                channelId = lib.channelId;
-              }
-              let obj12 = applicationId(channelId[3]);
-              message = 5;
-              c6 = 1;
-              let obj3 = { value: null, done: false };
-              obj3[0] = obj12.createProxyTicket(applicationId, channelId);
-              return obj3;
+              tmp78 = callback;
             }
-          } else if (2 === tmp8) {
-            c4 = 0;
-            let obj10 = lib(channelId[2]);
-            const obj4 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, refreshing: false };
-            obj4[1] = applicationId;
-            obj10.dispatch(obj4);
-            throw leaveCurrentFrame;
-          } else if (3 === tmp8) {
-            c4 = 1;
-            c6 = leaveCurrentFrame;
-            c4 = lib(channelId[6])();
-            let obj8 = applicationId(channelId[7]);
-            message = 4;
+          } else if (1 === tmp9) {
+            frame = 0;
+            let obj10 = applicationId(709);
+            let obj3 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, frameId: null, refreshing: false };
+            obj3[1] = applicationId;
+            obj3[2] = callback;
+            obj10.dispatch(obj3);
+            throw dispatcher;
+          } else if (2 === tmp9) {
+            frame = 1;
+            c5 = dispatcher;
+            dispatcher = applicationId(10517)();
+            let obj8 = callback(10548);
+            c5 = 3;
             c6 = 1;
-            let obj5 = { value: null, done: false };
-            obj5[0] = obj8.getActivityLaunchErrorInfo(c6, applicationId);
-            return obj5;
-          } else if (4 === tmp8) {
+            const obj4 = { value: null, done: false };
+            obj4[0] = obj8.getActivityLaunchErrorInfo(c5, applicationId);
+            return obj4;
+          } else if (3 === tmp9) {
             if (arg0 === 1) {
               c6 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              c4 = 0;
-              obj5 = lib(channelId[2]);
-              const obj6 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, refreshing: false };
-              obj6[1] = applicationId;
-              obj5.dispatch(obj6);
+              frame = 0;
+              let obj5 = applicationId(709);
+              obj5 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, frameId: null, refreshing: false };
+              obj5[1] = applicationId;
+              obj5[2] = callback;
+              obj5.dispatch(obj5);
               c6 = 3;
-              const obj7 = { value: null, done: true };
-              obj7[0] = arg1;
-              return obj7;
+              const obj6 = { value: null, done: true };
+              obj6[0] = arg1;
+              return obj6;
             } else {
-              message = arg1;
-              c4.showLaunchErrorModal(message.message);
-              c4 = 0;
-              obj3 = lib(channelId[2]);
-              obj8 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, refreshing: false };
-              obj8[1] = applicationId;
-              obj3.dispatch(obj8);
+              frame = arg1;
+              dispatcher.showLaunchErrorModal(frame.message);
+              frame = 0;
+              obj3 = applicationId(709);
+              const obj7 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, frameId: null, refreshing: false };
+              obj7[1] = applicationId;
+              obj7[2] = callback;
+              obj3.dispatch(obj7);
               c6 = 3;
               return { value: false, done: true };
             }
@@ -272,44 +299,45 @@ function _refreshProxyTicket() {
             c6 = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            c4 = 0;
-            obj = lib(channelId[2]);
-            const obj9 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, refreshing: false };
-            obj9[1] = applicationId;
-            obj.dispatch(obj9);
+            frame = 0;
+            obj = applicationId(709);
+            obj8 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, frameId: null, refreshing: false };
+            obj8[1] = applicationId;
+            obj8[2] = callback;
+            obj.dispatch(obj8);
             c6 = 3;
-            obj10 = { value: null, done: true };
-            obj10[0] = arg1;
-            return obj10;
+            const obj9 = { value: null, done: true };
+            obj9[0] = arg1;
+            return obj9;
           } else {
-            leaveCurrentFrame = arg1;
-            const obj11 = { type: "FRAME_UPDATE_PROXY_TICKET", applicationId: null, proxyTicket: null };
+            dependencyMap = arg1;
+            obj10 = { type: "FRAME_UPDATE_PROXY_TICKET", applicationId: null, frameId: null, proxyTicket: null };
+            obj10[1] = applicationId;
+            obj10[2] = callback;
+            obj10[3] = dependencyMap;
+            applicationId(709).dispatch(obj10);
+            frame = 0;
+            const obj16 = applicationId(709);
+            const obj11 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, frameId: null, refreshing: false };
             obj11[1] = applicationId;
-            obj11[2] = leaveCurrentFrame;
-            lib(channelId[2]).dispatch(obj11);
-            c4 = 0;
-            const obj18 = lib(channelId[2]);
-            obj12 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, refreshing: false };
-            obj12[1] = applicationId;
-            lib(channelId[2]).dispatch(obj12);
+            obj11[2] = callback;
+            applicationId(709).dispatch(obj11);
             c6 = 3;
             return { value: true, done: true };
           }
-        } catch (tmp61) {
-          leaveCurrentFrame = tmp61;
-          if (tmp5 === c4) {
+        } catch (tmp54) {
+          dispatcher = tmp54;
+          if (tmp5 === frame) {
             c6 = tmp3;
-            throw tmp61;
-          } else if (tmp2 === tmp63) {
-            message = tmp;
+            throw tmp54;
+          } else if (tmp2 === tmp56) {
+            c5 = tmp2;
           } else {
-            message = tmp3;
+            c5 = tmp;
           }
         }
       }
     })();
-    iter.next();
-    return iter;
   });
   const _refreshProxyTicket = tmp;
   const apply = tmp.apply;
@@ -320,7 +348,8 @@ function _refreshProxyTicket() {
   }
   return applyArgumentsResult;
 }
-let result = require("dispatcher").fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");
+({ FrameIntent: c5, FrameLayoutModes: closure_6, getChannelIdForSurface: error, makeFrameId: metroImportAll } = FrameLayoutModes);
+let result = require("FrameLayoutModes").fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");
 
 export const launchFrame = function launchFrame(closure_0) {
   const self = this;
@@ -332,18 +361,30 @@ export const launchFrame = function launchFrame(closure_0) {
   }
   return applyArgumentsResult;
 };
-export const stopFrame = function stopFrame(applicationId) {
-  dispatcher.dispatch({ type: "FRAME_STOP", applicationId: applicationId.applicationId });
+export const stopFrame = function stopFrame(frameId) {
+  const frame = store.getFrame(frameId);
+  if (null != frame) {
+    let obj = dispatcher;
+    obj = { type: "FRAME_STOP", applicationId: null, frameId: null };
+    obj[1] = frame.applicationId;
+    obj[2] = frameId;
+    obj.dispatch(obj);
+  }
 };
-export const updateFrameLayoutMode = function updateFrameLayoutMode(arg0) {
-  let applicationId;
-  let layoutMode;
-  ({ applicationId, layoutMode } = arg0);
-  dispatcher.dispatch({ type: "FRAME_UPDATE_LAYOUT_MODE", applicationId, layoutMode });
-};
+export { updateFrameLayoutMode };
 export const updateFramePanelMode = function updateFramePanelMode(PIP) {
   let obj = dispatcher;
   obj = { type: "FRAME_SET_PANEL_MODE", activityPanelMode: PIP };
+  obj.dispatch(obj);
+};
+export const attachFrameIframe = function attachFrameIframe(frameId, iframeId) {
+  let obj = dispatcher;
+  obj = { type: "FRAME_IFRAME_MOUNT", frameId, iframeId };
+  obj.dispatch(obj);
+};
+export const detachFrameIframe = function detachFrameIframe(frameId, iframeId) {
+  let obj = dispatcher;
+  obj = { type: "FRAME_IFRAME_UNMOUNT", frameId, iframeId };
   obj.dispatch(obj);
 };
 export const refreshProxyTicket = function refreshProxyTicket() {

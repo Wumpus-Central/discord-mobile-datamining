@@ -23,7 +23,7 @@ export default function LockedRecipientField(user) {
   user = user.user;
   const tmp = createCacheKey();
   let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.avatar, user, guildId: "Array", size: "\u{1F9DB}\u{1F3FE}" };
+  obj = { style: tmp.avatar, user, guildId: "Array", size: "<string:778043393>" };
   obj[3] = Button.AvatarSizes.NORMAL;
   const items = [callback(Button.Avatar, obj), ];
   obj = { variant: "text-md/semibold", children: null };

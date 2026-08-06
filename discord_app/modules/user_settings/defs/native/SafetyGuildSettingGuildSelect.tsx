@@ -5,7 +5,7 @@ import zustandStore from "zustandStore";
 import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
 import { MobileSetting } from "MobileSetting";
 import createToggle from "createToggle";
-import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../../_runtime/01988_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 let c9;
@@ -38,7 +38,7 @@ createToggle = {
   },
   parent: MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onGuildSelectPress() {
-    ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(14759, dependencyMap.paths), "SettingsPrivacyAndSafetyGuildSelectActionSheet");
+    ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(14797, dependencyMap.paths), "SettingsPrivacyAndSafetyGuildSelectActionSheet");
   }
 };
 createToggle = createToggle.createGuildSelector(createToggle);

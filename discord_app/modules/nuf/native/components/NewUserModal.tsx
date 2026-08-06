@@ -46,7 +46,7 @@ export default function NewUserModal(arg0) {
     if (flag == null) {
       flag = false;
     }
-    const nextOnboardingStep = lib(16372).getNextOnboardingStep(flag, first1, first);
+    const nextOnboardingStep = lib(16412).getNextOnboardingStep(flag, first1, first);
     nextOnboardingStep.then((onboardingStepIndex) => {
       let continueNavigation;
       let lastShownStepIndex;
@@ -105,7 +105,7 @@ export default function NewUserModal(arg0) {
   obj = {
     name: "enable-notification",
     getComponent() {
-      return lib(15010).RedesignNotificationScreen;
+      return lib(15048).RedesignNotificationScreen;
     },
     initialParams: { onComplete: callback }
   };
@@ -113,7 +113,7 @@ export default function NewUserModal(arg0) {
   obj1 = {
     name: "choose-avatar",
     getComponent() {
-      return lib(16376).default;
+      return lib(16416).default;
     },
     options() {
       return {
@@ -141,7 +141,7 @@ export default function NewUserModal(arg0) {
     name: "contact-sync",
     options: { headerShown: false },
     getComponent() {
-      return lib(11924).ContactSyncOnboardingModal;
+      return lib(11958).ContactSyncOnboardingModal;
     },
     initialParams: { onComplete: callback }
   });
@@ -149,14 +149,14 @@ export default function NewUserModal(arg0) {
     name: "discoverability",
     options: { headerShown: false },
     getComponent() {
-      return lib(16377).default;
+      return lib(16417).default;
     },
     initialParams: { onComplete: callback }
   });
   items1[4] = callback(createNativeStackNavigator.Screen, {
     name: "connect-guardian",
     getComponent() {
-      return lib(16379).default;
+      return lib(16419).default;
     },
     initialParams: { onComplete: callback }
   });

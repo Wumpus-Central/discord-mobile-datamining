@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/pip/useControllerPIPState.tsx
 import _slicedToArray from "_slicedToArray";
-import set from "set";
+import useExternalPipAspectRatioUpdater from "useExternalPipAspectRatioUpdater";
 import participantFromServer from "participantFromServer";
 import getParticipants from "getParticipants";
 import map from "map";
@@ -8,6 +8,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import anyoneHasFlagInContext from "anyoneHasFlagInContext";
 import { VoicePanelModes } from "VoicePanelModes";
 import { ActivityPanelModes } from "ActivityPanelModes";
+import { asLaunched } from "FrameLayoutModes";
 
 const require = arg1;
 let result = require("participantFromServer").fileFinishedImporting("modules/voice_panel/native/pip/useControllerPIPState.tsx");
@@ -32,7 +33,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   let first1;
   c7 = undefined;
   obj = React;
-  ref = React.useRef({ id: "displayName", mode: "isArray", width: false, height: "Marshall Islands", containerHeight: "MH", showSecondaryPIP: "+692" });
+  ref = React.useRef({ id: "displayName", mode: "isArray", width: false, height: "head_shaking_horizontally", containerHeight: "awful", showSecondaryPIP: "bored" });
   const tmp2 = first(React.useState(undefined), 2);
   first = tmp2[0];
   React = tmp2[1];
@@ -43,7 +44,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   obj = channelId;
   ref = mode;
   dependencyMap = undefined;
-  const tmp7 = ref(15962)(channelId);
+  const tmp7 = ref(16002)(channelId);
   dependencyMap = tmp7;
   let items = [participantFromServer, c7, ensureGuildLoaded];
   const items1 = [channelId, tmp7, mode];
@@ -58,9 +59,9 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
         return false;
       }
     }
-    const connectedFrame = _undefined.getConnectedFrame();
-    if (null != connectedFrame) {
-      if (tmp5 === outer1_11.PIP) {
+    const tmp4 = outer1_12(_undefined.getMainFrame());
+    if (null != tmp4) {
+      if (tmp4.data.activityPanelMode === outer1_11.PIP) {
         return true;
       }
     }
@@ -68,39 +69,39 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     if (null == connectedActivityLocation) {
       return false;
     } else {
-      const embeddedActivityLocationChannelId = obj(closure_2[11]).getEmbeddedActivityLocationChannelId(connectedActivityLocation);
+      const embeddedActivityLocationChannelId = obj(closure_2[12]).getEmbeddedActivityLocationChannelId(connectedActivityLocation);
       const channel1 = obj.getChannel(embeddedActivityLocationChannelId);
       let result = null != channel1;
       const activityPanelMode = obj3.getActivityPanelMode();
       if (result) {
-        result = obj(closure_2[12]).isActivityInTextSupportedForChannel(channel1);
-        const tmp15Result = obj(closure_2[12]);
+        result = obj(closure_2[13]).isActivityInTextSupportedForChannel(channel1);
+        const tmp14Result = obj(closure_2[13]);
       }
       if (result) {
         result = embeddedActivityLocationChannelId !== tmp;
       }
-      let tmp11 = activityPanelMode === outer1_11.PIP;
-      if (tmp11) {
-        tmp11 = ref === outer1_10.PIP || embeddedActivityLocationChannelId !== tmp;
-        const tmp14 = ref === outer1_10.PIP || embeddedActivityLocationChannelId !== tmp;
+      let tmp10 = activityPanelMode === outer1_11.PIP;
+      if (tmp10) {
+        tmp10 = ref === outer1_10.PIP || embeddedActivityLocationChannelId !== tmp;
+        const tmp13 = ref === outer1_10.PIP || embeddedActivityLocationChannelId !== tmp;
       }
       if (result) {
-        result = tmp11;
+        result = tmp10;
       }
       return result;
     }
     obj3 = connectedActivityLocation;
   }, items1);
-  const tmp10 = ref(16010)(channelId);
-  first1 = first(React.useState(() => ref(closure_2[15])((arg0) => arg0(), 1000, { leading: true })), 1)[0];
+  let tmp10 = ref(16050)(channelId);
+  first1 = first(React.useState(() => ref(closure_2[16])((arg0) => arg0(), 1000, { leading: true })), 1)[0];
   const items2 = [first1];
   const layoutEffect = React.useLayoutEffect(() => () => getParticipants.cancel(), items2);
   const obj2 = obj(589);
   let tmp5 = ref;
   [tmp14, c7] = first(React.useState(() => closure_2.getTargetDimensions(ref)), 2);
   obj = { connected, mode, focusedId, participantTargetDimensions: tmp14, selfHasVideo: tmp10, showSecondaryPIP: stateFromStores };
-  const tmp13 = first(React.useState(() => closure_2.getTargetDimensions(ref)), 2);
-  ({ participant, dimensions } = ref(16011)(channelId, layoutManager, focusedId, first, obj));
+  let tmp13 = first(React.useState(() => closure_2.getTargetDimensions(ref)), 2);
+  ({ participant, dimensions } = ref(16051)(channelId, layoutManager, focusedId, first, obj));
   obj = {};
   const merged = Object.assign(ref.current);
   const merged1 = Object.assign(dimensions);
@@ -110,10 +111,10 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   }
   obj.id = id;
   obj.showSecondaryPIP = stateFromStores;
-  let tmp8Result = tmp8(16012);
+  let tmp8Result = tmp8(16052);
   obj.mode = tmp8Result.getPIPMode({ channelId, connected, manuallyFocusedId: focusedId, mode, selfHasVideo: tmp10 });
   dependencyMap = undefined;
-  tmp8Result = tmp8(8670);
+  tmp8Result = tmp8(8699);
   let result = tmp8Result.cheapWorkletShallowEqual(obj, ref.current);
   dependencyMap = !result;
   const effect = obj.useEffect(() => {
@@ -127,7 +128,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   const items3 = [channelId, first1];
   const effect1 = obj.useEffect(() => {
     const items = [outer1_9, first1];
-    let batchedStoreListener = new obj(closure_2[10]).BatchedStoreListener(items, () => {
+    let batchedStoreListener = new obj(closure_2[11]).BatchedStoreListener(items, () => {
       const tmp = (() => {
         const speakers = outer1_9.getSpeakers();
         const iter = speakers[Symbol.iterator]();
@@ -178,6 +179,6 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
       });
     });
   }, items4);
-  tmp5(16014)(channelId, layoutManager, focusedId);
+  tmp5(16054)(channelId, layoutManager, focusedId);
   return obj;
 };

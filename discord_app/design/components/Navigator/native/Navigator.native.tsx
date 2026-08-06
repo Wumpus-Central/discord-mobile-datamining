@@ -1,10 +1,10 @@
 // discord_app/design/components/Navigator/native/Navigator.native.tsx
 import _slicedToArray from "_slicedToArray";
-import set from "set";
-import get_ActivityIndicator from "useNavigationTheme";
+import noop from "noop";
+import get_ActivityIndicator from "_maybeBackfillMissingBreadcrumbsFromTelemetryRing";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { Link } from "../../../../../_runtime/01481_Link.js";
+import { createStandardNavigationFactories } from "../../../../../_runtime/01481_createStandardNavigationFactories.js";
 import { useNavigationTheme } from "useNavigationTheme.native.tsx";
 
 let StyleSheet;
@@ -103,19 +103,11 @@ function NavigationStack(screens) {
       if (navigatorShouldCrossfade) {
         str = "screen";
       }
-      let obj = { headerMode: str, headerStyle: items, headerTintColor: token, headerTitleStyle: styles.headerTitle, headerBackTitleStyle: styles.headerBackTitleStyle, headerTitleAllowFontScaling: false, headerBackImage: null, headerBackTitleVisible: false, headerTitleContainerStyle: null, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerTitle: null, gestureDirection: null, gestureResponseDistance: null, cardOverlayEnabled: null, cardShadowEnabled: null, cardStyle: null, headerBackTitle: null, headerTitleAlign: null, headerStatusBarHeight: null, cardStyleInterpolator: null, headerStyleInterpolator: null };
+      let obj = { headerMode: str, headerStyle: items, headerTintColor: token, headerTitleStyle: styles.headerTitle, headerBackTitleStyle: styles.headerBackTitleStyle, headerTitleAllowFontScaling: false, headerBackImage: screens(onDidFocus[7]).renderBackImage, headerBackButtonDisplayMode: "minimal", headerTitleContainerStyle: items1, headerLeftContainerStyle: items2, headerRightContainerStyle: items3, headerTitle: null, gestureDirection: null, gestureResponseDistance: null, cardOverlayEnabled: null, cardShadowEnabled: null, cardStyle: null, headerBackTitle: null, headerTitleAlign: null, headerStatusBarHeight: null, cardStyleInterpolator: null, headerStyleInterpolator: null };
       items = [_undefined.navbar, headerStyle];
-      let renderBackImage;
-      if (!obj2.isAndroid()) {
-        renderBackImage = tmp4(tmp5[7]).renderBackImage;
-      }
-      obj[6] = renderBackImage;
-      const items1 = [{ maxWidth: "60%", alignItems: "center" }, headerTitleContainerStyle];
-      obj[8] = items1;
-      const items2 = [_undefined.headerLeftContainerStyle, headerLeftContainerStyle];
-      obj[9] = items2;
-      const items3 = [_undefined.headerRightContainerStyle, headerRightContainerStyle];
-      obj[10] = items3;
+      items1 = [{ maxWidth: "60%", alignItems: "center" }, headerTitleContainerStyle];
+      items2 = [_undefined.headerLeftContainerStyle, headerLeftContainerStyle];
+      items3 = [_undefined.headerRightContainerStyle, headerRightContainerStyle];
       let fn;
       if (hideTitle) {
         fn = () => {
@@ -128,26 +120,26 @@ function NavigationStack(screens) {
       obj[14] = cardOverlayEnabled;
       obj[15] = cardShadowEnabled;
       obj[16] = cardStyle;
-      let tmp7 = headerBackTitle;
+      let tmp5 = headerBackTitle;
       if (headerBackTitle == null) {
         let stringResult;
         if (1 === routes.length) {
-          const intl = tmp4(tmp5[12]).intl;
-          stringResult = intl.string(tmp4(tmp5[12]).t["13/7kX"]);
+          const intl = tmp3(tmp4[11]).intl;
+          stringResult = intl.string(tmp3(tmp4[11]).t["13/7kX"]);
         }
-        tmp7 = stringResult;
+        tmp5 = stringResult;
       }
-      obj[17] = tmp7;
+      obj[17] = tmp5;
       let str2 = headerTitleAlign;
       if (headerTitleAlign == null) {
         str2 = "center";
       }
       obj[18] = str2;
-      let tmp9 = headerStatusBarHeight;
+      let tmp7 = headerStatusBarHeight;
       if (null == headerStatusBarHeight) {
-        tmp9 = top;
+        tmp7 = top;
       }
-      obj[19] = tmp9;
+      obj[19] = tmp7;
       if (navigatorShouldCrossfade) {
         let fn2 = (current) => {
           let obj = { cardStyle: null };
@@ -157,21 +149,22 @@ function NavigationStack(screens) {
           return obj;
         };
       } else {
-        fn2 = tmp4(tmp5[9]).CardStyleInterpolators.forHorizontalIOS;
+        fn2 = tmp3(tmp4[9]).CardStyleInterpolators.forHorizontalIOS;
       }
       obj[20] = fn2;
       if (disableHeaderAnimation) {
-        let fn3 = tmp4(tmp5[9]).HeaderStyleInterpolators.forNoAnimation;
+        let fn3 = tmp3(tmp4[9]).HeaderStyleInterpolators.forNoAnimation;
       } else if (tmp2) {
-        fn3 = tmp4(tmp5[9]).HeaderStyleInterpolators.forFade;
+        fn3 = tmp3(tmp4[9]).HeaderStyleInterpolators.forFade;
       } else {
         fn3 = (arg0) => {
           let current;
+          let direction;
           let layouts;
           let next;
-          ({ current, next, layouts } = arg0);
+          ({ current, next, layouts, direction } = arg0);
           const HeaderStyleInterpolators = callback(table[9]).HeaderStyleInterpolators;
-          const forUIKitResult = HeaderStyleInterpolators.forUIKit({ current, next, layouts });
+          const forUIKitResult = HeaderStyleInterpolators.forUIKit({ current, next, layouts, direction });
           forUIKitResult.leftButtonStyle.transform = forUIKitResult.titleStyle.transform;
           forUIKitResult.rightButtonStyle.transform = forUIKitResult.titleStyle.transform;
           return forUIKitResult;
@@ -183,7 +176,7 @@ function NavigationStack(screens) {
     children: null
   };
   const obj3 = screens(onDidFocus[6]);
-  const keys = onWillFocus(onDidFocus[13]).keys(screens);
+  const keys = onWillFocus(onDidFocus[12]).keys(screens);
   obj[3] = keys.map((name) => {
     let obj = {};
     let merged = Object.assign(obj[name]);
@@ -199,6 +192,8 @@ function NavigationStack(screens) {
     if (fullscreen) {
       obj.headerTransparent = true;
       obj.headerMode = "float";
+      const items = [obj.headerStyle, { backgroundColor: "transparent" }];
+      obj.headerStyle = items;
     }
     obj = {
       name,
@@ -209,7 +204,7 @@ function NavigationStack(screens) {
         obj = { screen: obj };
         const merged = Object.assign(arg0);
         obj.viewStyle = outer1_10;
-        return cardOverlayEnabled(screens(onDidFocus[14]).NavigatorScreen, obj);
+        return cardOverlayEnabled(screens(onDidFocus[13]).NavigatorScreen, obj);
       }
     };
     return cardOverlayEnabled(first.Screen, obj, name);
@@ -226,7 +221,7 @@ function WrappedNavigationStack(arg0) {
   ({ initialRouteName, onStateChange } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
   let navigationContainerRef;
-  let obj = Link;
+  let obj = createStandardNavigationFactories;
   navigationContainerRef = obj.createNavigationContainerRef();
   const first = callback(React.useState(() => {
     let tmp2;
@@ -237,9 +232,9 @@ function WrappedNavigationStack(arg0) {
     }
     return tmp2;
   }), 1)[0];
-  const tmp4 = navigationContainerRef(4191)();
-  navigationTheme = useNavigationTheme.useNavigationTheme(tmp4);
-  obj = { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, independent: true, children: null };
+  let obj1 = useNavigationTheme;
+  navigationTheme = obj1.useNavigationTheme(navigationContainerRef(4221)());
+  obj = { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, children: null };
   obj[1] = navigationTheme;
   if (null == initialRouteState) {
     let tmp7;
@@ -248,16 +243,18 @@ function WrappedNavigationStack(arg0) {
     }
     initialRouteState = tmp7;
   }
+  obj = { children: null };
   obj[2] = initialRouteState;
   obj[3] = function onReady() {
-    const routingInstrumentation = outer1_0(outer1_2[18]).routingInstrumentation;
+    const routingInstrumentation = outer1_0(outer1_2[17]).routingInstrumentation;
     const result = routingInstrumentation.registerNavigationContainer(navigationContainerRef);
   };
   obj[4] = onStateChange;
-  obj = { initialRouteName };
+  obj1 = { initialRouteName };
   const merged1 = Object.assign(merged);
-  obj[6] = <NavigationStack initialRouteName={initialRouteName} />;
-  return jsx(Link.NavigationContainer, { initialRouteName });
+  obj[5] = <NavigationStack initialRouteName={initialRouteName} />;
+  obj[0] = jsx(createStandardNavigationFactories.NavigationContainer, { children: null });
+  return jsx(createStandardNavigationFactories.NavigationIndependentTree, { children: null });
 }
 ({ StyleSheet, View: c5 } = get_ActivityIndicator);
 createCacheKey = { container: null, navbar: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
@@ -269,14 +266,14 @@ createCacheKey[1] = { borderBottomWidth: StyleSheet.hairlineWidth, backgroundCol
 createCacheKey[2] = { paddingLeft: 16, marginRight: -16 };
 createCacheKey[3] = { paddingRight: 16, marginLeft: -16 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { borderBottomWidth: StyleSheet.hairlineWidth, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderBottomColor: require("Themes").colors.BORDER_SUBTLE, shadowColor: "transparent" };
+let obj1 = { borderBottomWidth: StyleSheet.hairlineWidth, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderBottomColor: require("Themes").colors.BORDER_SUBTLE, shadowColor: "transparent" };
 let result = require("get ActivityIndicator").fileFinishedImporting("design/components/Navigator/native/Navigator.native.tsx");
 
 export const useNavigatorScreens = function useNavigatorScreens(getNextRenewalDateLabel, items) {
   return React.useMemo(getNextRenewalDateLabel, items);
 };
 export const useAccessibilityNativeStackOptions = function useAccessibilityNativeStackOptions() {
-  navigatorShouldCrossfade = navigatorShouldCrossfade(5651).useNavigatorShouldCrossfade();
+  navigatorShouldCrossfade = navigatorShouldCrossfade(5705).useNavigatorShouldCrossfade();
   const items = [navigatorShouldCrossfade];
   return React.useMemo(() => {
     let obj;

@@ -2,12 +2,12 @@
 import importAllResult from "canConnectToChannel";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/07584_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/07795_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/08937_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/15310_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/15311_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/15312_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/07612_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/07936_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08966_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/15348_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/15349_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/15350_registerAsset.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { AppsIcon } from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import { CalendarIcon } from "../../../design/components/Icon/native/redesign/generated/CalendarIcon.tsx";

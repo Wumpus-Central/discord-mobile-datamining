@@ -20,9 +20,9 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
   if (arg0 === create.PremiumSubscriptionGroupRole.UNSPECIFIED) {
     return null;
   } else {
-    if (arg0 === tmp(1892).PremiumSubscriptionGroupRole.PRIMARY) {
-      let priceString = tmp(7938).getPriceString(stateFromStores, { withIntervals: true });
-      const tmpResult = tmp(7938);
+    if (arg0 === tmp(1921).PremiumSubscriptionGroupRole.PRIMARY) {
+      let priceString = tmp(8079).getPriceString(stateFromStores, { withIntervals: true });
+      const tmpResult = tmp(8079);
     } else {
       priceString = null;
       if (null != tmp4) {
@@ -30,22 +30,22 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
         obj = { primaryName: null, premiumGroupProductName: null };
         obj[0] = tmp4;
         obj[1] = callback();
-        priceString = intl.format(tmp3(2837).Nu9LNm, obj);
+        priceString = intl.format(tmp3(2866).Nu9LNm, obj);
       }
     }
     let str = "...";
     if (null != priceString) {
       str = priceString;
     }
-    if (arg0 === tmp(1892).PremiumSubscriptionGroupRole.PRIMARY) {
+    if (arg0 === tmp(1921).PremiumSubscriptionGroupRole.PRIMARY) {
       const intl3 = tmp(1236).intl;
       obj = { helpCenterLink: null, premiumGroupProductName: null };
       obj[0] = closure_5;
       obj[1] = callback();
-      let formatResult = intl3.format(tmp3(2837)["+R/K74"], obj);
+      let formatResult = intl3.format(tmp3(2866)["+R/K74"], obj);
     } else {
       const intl2 = tmp(1236).intl;
-      const tmp3Result = tmp3(2837);
+      const tmp3Result = tmp3(2866);
       obj1 = { helpCenterLink: null };
       obj1[0] = closure_5;
       formatResult = intl2.format(arg1 ? tmp3Result["xF+upx"] : tmp3Result.qqfnOm, obj1);

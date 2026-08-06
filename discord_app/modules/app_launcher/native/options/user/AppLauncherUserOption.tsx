@@ -97,23 +97,23 @@ export default function AppLauncherUserOption(option) {
     let tmp9Result = tmp9(tmp2(1297).Avatar, obj);
   } else {
     const obj1 = { icon: null, wrapperStyle: null };
-    obj1[0] = tmp9(tmp2(9560).UserCircleIcon, { size: "sm", color: "interactive-text-default" });
+    obj1[0] = tmp9(tmp2(9589).UserCircleIcon, { size: "sm", color: "interactive-text-default" });
     obj1[1] = tmp.iconWrapper;
-    tmp9Result = tmp9(tmp10(11451), obj1);
-    const tmp10Result = tmp10(11451);
+    tmp9Result = tmp9(tmp10(11485), obj1);
+    const tmp10Result = tmp10(11485);
   }
   obj[5] = tmp9Result;
   if (null != tmp8) {
     let obj2 = { guildId: null, user: null };
     obj2[0] = guild_id;
     obj2[1] = tmp8;
-    tmp9Result = tmp9(tmp10(11454), obj2);
+    tmp9Result = tmp9(tmp10(11488), obj2);
   } else {
     tmp9Result = null;
     if (null != tmp6) {
       const obj3 = { variant: "text-md/medium", color: "text-default", children: null };
       obj3[2] = tmp6;
-      tmp9Result = tmp9(tmp2(4251).Text, obj3);
+      tmp9Result = tmp9(tmp2(4281).Text, obj3);
     }
   }
   obj[6] = tmp9Result;

@@ -2,7 +2,7 @@
 import _slicedToArray from "_slicedToArray";
 import { UserSettingsPath } from "MAX_FAVORITES";
 import ME from "ME";
-import { keysSorter } from "../../../_runtime/05125_keysSorter.js";
+import { keysSorter } from "../../../_runtime/05155_keysSorter.js";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 import { WebUserSettings } from "UserSettingsKeys.tsx";
 import { apexExperiment } from "UserSettingsRedesignExperiment.tsx";
@@ -70,9 +70,9 @@ export const parseSettingsUrl = function parseSettingsUrl(arg0) {
   obj[UserSettingsPath.PRIVACY_AND_SAFETY] = WebUserSettings.WebUserSettings.DATA_AND_PRIVACY_PANEL;
   obj[UserSettingsPath.FAMILY_CENTER] = WebUserSettings.WebUserSettings.FAMILY_CENTER_PANEL;
   obj[UserSettingsPath.SESSIONS] = WebUserSettings.WebUserSettings.SESSIONS_PANEL;
-  const WebUserSettings2 = tmp5(5124).WebUserSettings;
+  const WebUserSettings2 = tmp5(5154).WebUserSettings;
   obj[UserSettingsPath.AUTHORIZED_APPS] = isEligibleForUserSettingsRedesign4DExperiment ? WebUserSettings2.AUTHORIZED_APPS_CATEGORY : WebUserSettings2.AUTHORIZED_APPS_PANEL;
-  const WebUserSettings3 = tmp5(5124).WebUserSettings;
+  const WebUserSettings3 = tmp5(5154).WebUserSettings;
   obj[UserSettingsPath.CONNECTIONS] = isEligibleForUserSettingsRedesign4DExperiment ? WebUserSettings3.CONNECTIONS_CATEGORY : WebUserSettings3.CONNECTIONS_PANEL;
   obj[UserSettingsPath.CLIPS] = WebUserSettings.WebUserSettings.CLIPS_PANEL;
   obj[UserSettingsPath.PREMIUM] = WebUserSettings.WebUserSettings.NITRO_PANEL;

@@ -70,32 +70,32 @@ function PremiumRewardGlowGradient(arg0) {
   const tmp = callback3();
   let token;
   let token1;
-  let obj = token(3959);
+  let obj = token(3988);
   token = obj.useToken(token1(712).colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START);
-  let obj1 = token(3959);
+  let obj1 = token(3988);
   token1 = obj1.useToken(token1(712).colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END);
   let items = [token, token1];
   const memo = React.useMemo(() => {
     const items = [token, token1];
     return items;
   }, items);
-  let obj2 = token(4070);
-  const isThemeDarkResult = obj2.isThemeDark(token1(4191)());
+  let obj2 = token(4099);
+  const isThemeDarkResult = obj2.isThemeDark(token1(4221)());
   obj = { style: items1, children: null };
   items1 = [tmp.wrapper, style];
   const items2 = [tmp.glow, ];
   let glowLight = !isThemeDarkResult;
   const tmp10 = closure_5;
-  const tmp7 = token1(4191)();
+  const tmp7 = token1(4221)();
   const tmp9 = closure_7;
   if (!isThemeDarkResult) {
     glowLight = tmp.glowLight;
   }
-  obj = { style: items2, maskElement: tmp11(tmp3(4676), obj1), children: tmp11(tmp3(4676), obj2) };
+  obj = { style: items2, maskElement: tmp11(tmp3(4706), obj1), children: tmp11(tmp3(4706), obj2) };
   items2[1] = glowLight;
   obj1 = { style: closure_4.absoluteFill, colors: ["transparent", "black"], start: closure_11, end: closure_12 };
   obj2 = { style: closure_4.absoluteFill, colors: memo, start: closure_9, end: closure_10 };
-  const items3 = [closure_6(token1(5245), obj), children];
+  const items3 = [closure_6(token1(5293), obj), children];
   obj[1] = items3;
   return tmp9(tmp10, obj);
 }

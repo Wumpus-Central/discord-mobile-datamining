@@ -28,14 +28,14 @@ export default function ActivitiesDebugOverlay() {
   if (useThermalState.ThermalStates.UNHANDLED !== tmp4) {
     str = "text-feedback-positive";
     str2 = "nominal";
-    if (tmp5(10526).ThermalStates.NOMINAL !== tmp4) {
+    if (tmp5(10897).ThermalStates.NOMINAL !== tmp4) {
       str = "text-feedback-warning";
       str2 = "fair";
-      if (tmp5(10526).ThermalStates.FAIR !== tmp4) {
+      if (tmp5(10897).ThermalStates.FAIR !== tmp4) {
         str2 = "serious";
         str = "text-feedback-critical";
-        if (tmp5(10526).ThermalStates.SERIOUS !== tmp4) {
-          if (tmp5(10526).ThermalStates.CRITICAL === tmp4) {
+        if (tmp5(10897).ThermalStates.SERIOUS !== tmp4) {
+          if (tmp5(10897).ThermalStates.CRITICAL === tmp4) {
             str2 = "critical";
             str = "text-feedback-critical";
           }

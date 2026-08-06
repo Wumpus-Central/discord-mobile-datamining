@@ -16,8 +16,8 @@ const require = arg1;
 function SettingsAgeGroupHeader() {
   let obj = { style: createCacheKey().headerContainer, children: null };
   const callback = React.useCallback(() => {
-    const obj = callback(7692);
-    obj.openUrl(callback(1945).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
+    const obj = callback(7720);
+    obj.openUrl(callback(1974).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
   }, []);
   obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
@@ -39,11 +39,11 @@ const result = require("MobileSetting").fileFinishedImporting("modules/user_sett
 
 export default function SettingsAgeGroupScreen() {
   const node = React.useMemo(() => {
-    let obj = callback(10333);
+    let obj = callback(10364);
     obj = { sections: null, ListHeaderComponent: null };
     obj = { label: null, settings: null };
     const intl = callback(1236).intl;
-    obj[0] = intl.string(callback2(2773)["5Mi5TE"]);
+    obj[0] = intl.string(callback2(2802)["5Mi5TE"]);
     const items = [, ];
     ({ AGE_GROUP_CONFIRM: arr[0], AGE_GROUP_RESET: arr[1] } = closure_5);
     obj[1] = items;

@@ -46,7 +46,7 @@ GuildInviteIcon.prototype["render"] = function render() {
     obj1[3] = guildIconSource;
     return jsx(preload, { accessibilityRole: "image", accessibilityLabel: null, style: null, source: null });
   } else {
-    const acronym = tmp2(1856).getAcronym(guild.name);
+    const acronym = tmp2(1884).getAcronym(guild.name);
     let num = table[acronym.length - 1];
     if (num == null) {
       num = 10;

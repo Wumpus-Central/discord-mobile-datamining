@@ -4,7 +4,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { HorizontalGradient } from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04676_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { Text } from "../../../components/Text/native/Text.tsx";

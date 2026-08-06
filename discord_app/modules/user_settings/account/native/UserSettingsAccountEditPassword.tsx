@@ -8,7 +8,7 @@ import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
 import { Component } from "Stack";
 import importAllResult from "Stack";
-import { registerAsset } from "../../../../../_runtime/13902_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13939_registerAsset.js";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
 import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
@@ -27,7 +27,7 @@ let require = arg1;
 ({ Image: c4, View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ AnalyticEvents: c10, LoginRequiredActions: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let closure_14 = { newPassword: "channel", password: 17074241 };
+let closure_14 = { newPassword: "channel", password: 17047361 };
 createCacheKey = { onePass: { width: 20, height: 20 }, unverifiedWrapper: null, container: null, header: null, requiredActionsSubtitle: null, requiredActionsTitle: null, image: null };
 createCacheKey = { overflow: "hidden", borderRadius: require("Themes").radii.xs, marginVertical: 16 };
 createCacheKey[1] = createCacheKey;
@@ -131,7 +131,7 @@ class EditPassword extends Component {
 const prototype = EditPassword.prototype;
 prototype["componentWillUnmount"] = function componentWillUnmount() {
   try {
-    importAll(8293).resetAccount();
+    importAll(8433).resetAccount();
   } catch (err) {
   }
 };
@@ -248,7 +248,7 @@ EditPassword.contextType = require("ManaContext").ThemeContext;
 let result = require("handleUpdateUser").fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountEditPassword.tsx");
 
 export default function EditPasswordWrapper() {
-  let obj = flag(6772);
+  let obj = flag(6799);
   const params = obj.useSettingNavigationRoute().params;
   flag = undefined;
   if (params != null) {

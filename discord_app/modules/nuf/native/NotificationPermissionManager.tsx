@@ -11,7 +11,7 @@ import EventActionType from "EventActionType";
 import ME from "ME";
 import { NotificationAuthorizationStatus as closure_16 } from "NativePermissionStatus";
 import "initialize";
-import { t } from "../../../../_runtime/03837_t.js";
+import { t } from "../../../../_runtime/03866_t.js";
 import { getOrRefreshPushSyncToken } from "../../../actions/native/PushNotificationActionCreators.tsx";
 
 let closure_12;
@@ -188,8 +188,8 @@ function _logNotificationPermissionStatus2() {
           return obj;
         } else {
           callback = arg1;
-          callback2 = callback(9643).allowInAppNotifications();
-          const obj5 = callback(9643);
+          callback2 = callback(9674).allowInAppNotifications();
+          const obj5 = callback(9674);
           const obj2 = { os_enabled: null, foreground_app_enabled: null, background_app_enabled: null, notification_authorization_status: null };
           obj2[0] = callback === constants2.AUTHORIZED;
           obj2[1] = callback2;
@@ -227,7 +227,7 @@ let c23 = null;
 class NotificationPermissionManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f113181 = applyArgumentsResult;
+    f113518 = applyArgumentsResult;
     applyArgumentsResult.previousAppState = null;
     applyArgumentsResult.actions = {
       MESSAGE_CREATE(message) {
@@ -250,7 +250,7 @@ class NotificationPermissionManager extends tmp4 {
             closure_0.handleAppStateUpdate(arg0);
           }
     };
-    f113181 = applyArgumentsResult;
+    f113518 = applyArgumentsResult;
     applyArgumentsResult.handleConnectionOpen = _logNotificationPermissionStatus2(function*() {
       if (c2 === 2) {
         c2 = 3;
@@ -319,7 +319,7 @@ class NotificationPermissionManager extends tmp4 {
         }
       }
     });
-    f113181 = _logNotificationPermissionStatus2((arg0) => {
+    f113518 = _logNotificationPermissionStatus2((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;
@@ -436,7 +436,7 @@ class NotificationPermissionManager extends tmp4 {
       }
       return applyArgumentsResult;
     };
-    f113181 = _logNotificationPermissionStatus2((arg0) => {
+    f113518 = _logNotificationPermissionStatus2((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -560,7 +560,7 @@ class NotificationPermissionManager extends tmp4 {
       }
       return applyArgumentsResult;
     };
-    f113181 = _logNotificationPermissionStatus2((arg0) => {
+    f113518 = _logNotificationPermissionStatus2((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;
@@ -675,9 +675,9 @@ class NotificationPermissionManager extends tmp4 {
       }
       return applyArgumentsResult;
     };
-    f113181 = undefined;
+    f113518 = undefined;
     closure_1 = applyArgumentsResult;
-    f113181 = _logNotificationPermissionStatus2((arg0) => {
+    f113518 = _logNotificationPermissionStatus2((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;

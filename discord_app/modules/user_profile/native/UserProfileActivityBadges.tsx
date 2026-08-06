@@ -55,15 +55,15 @@ export const TimestampBadge = function TimestampBadge(activity) {
         flag2 = false;
       }
       if (flag2) {
-        let GameControllerIcon = tmp2(12163).HourglassIcon;
-      } else if (tmp10(7093)(activity)) {
-        GameControllerIcon = tmp2(7583).AppsIcon;
+        let GameControllerIcon = tmp2(12197).HourglassIcon;
+      } else if (tmp10(7120)(activity)) {
+        GameControllerIcon = tmp2(7611).AppsIcon;
       } else if (activity.type === ActivityTypes.WATCHING) {
-        GameControllerIcon = tmp2(9534).TvIcon;
+        GameControllerIcon = tmp2(9563).TvIcon;
       } else if (activity.type === tmp6.LISTENING) {
-        GameControllerIcon = tmp2(9539).MusicIcon;
+        GameControllerIcon = tmp2(9568).MusicIcon;
       } else {
-        GameControllerIcon = tmp2(8656).GameControllerIcon;
+        GameControllerIcon = tmp2(8685).GameControllerIcon;
       }
       obj = { style: null, children: null };
       obj[0] = tmp.container;
@@ -77,7 +77,7 @@ export const TimestampBadge = function TimestampBadge(activity) {
       obj2[2] = flag;
       obj1[0] = obj2;
       obj1[1] = tmp.bold;
-      items[1] = callback(tmp2(12167).ActiveTimestamp, obj1);
+      items[1] = callback(tmp2(12201).ActiveTimestamp, obj1);
       obj[1] = items;
       return callback2(View, obj);
     }
@@ -95,10 +95,10 @@ export const PartyBadge = function PartyBadge(activity) {
         obj[0] = tmp.container;
         obj = { size: "xxs", color: null };
         obj[1] = Themes.colors.TEXT_MUTED;
-        const items = [callback(tmp9(4768).GroupIcon, obj), ];
+        const items = [callback(tmp9(4798).GroupIcon, obj), ];
         obj = { variant: "text-sm/medium", color: "text-muted", children: null };
         obj[2] = richGameStateBadgeText;
-        items[1] = callback(tmp9(4251).Text, obj);
+        items[1] = callback(tmp9(4281).Text, obj);
         obj[1] = items;
         tmp8 = callback2(View, obj);
       }
@@ -121,10 +121,10 @@ export const EpisodeBadge = function EpisodeBadge(activity) {
     obj[0] = tmp.container;
     obj = { size: "xxs", color: null };
     obj[1] = Themes.colors.TEXT_MUTED;
-    const items = [callback(tmp2(11002).TopicsIcon, obj), ];
+    const items = [callback(tmp2(11034).TopicsIcon, obj), ];
     const obj1 = { variant: "text-sm/medium", color: "text-muted", children: null };
     obj1[2] = episodeBadgeText;
-    items[1] = callback(tmp2(4251).Text, obj1);
+    items[1] = callback(tmp2(4281).Text, obj1);
     obj[1] = items;
     tmp6 = callback2(View, obj);
   }

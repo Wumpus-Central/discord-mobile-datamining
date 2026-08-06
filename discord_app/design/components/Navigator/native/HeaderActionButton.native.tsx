@@ -12,7 +12,7 @@ let c4;
 let c5;
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { button: { flex: 1, alignItems: "center", justifyContent: "center", flexDirection: "row" }, text: null, buttonFont: null, buttonDisabled: null };
+let obj = { button: { alignSelf: "stretch", alignItems: "center", justifyContent: "center", flexDirection: "row" }, text: null, buttonFont: null, buttonDisabled: null };
 obj = { color: require("Themes").colors.TEXT_BRAND, textTransform: "capitalize" };
 obj[1] = obj;
 obj[2] = { fontSize: 16, maxWidth: 80 };

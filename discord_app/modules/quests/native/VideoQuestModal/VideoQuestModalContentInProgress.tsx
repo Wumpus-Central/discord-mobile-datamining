@@ -447,29 +447,29 @@ let closure_24 = importAllResult.memo((arg0) => {
   let first;
   let importAllResult;
   ({ handleClose, handleRewardDetailsPress, handleShareQuest, isFullscreen, onNavigateToPostWatchVideo, onEnd, externallyPaused } = arg0);
-  let obj = windowDimensions(10346);
+  let obj = windowDimensions(10377);
   const questTaskDetails = obj.useQuestTaskDetails(quest);
   const userStatus = quest.userStatus;
   let completedAt;
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
   }
-  let tmpResult = tmp(10473);
+  let tmpResult = tmp(10504);
   const videoQuestProgressRemainingAccessibilityLabel = tmpResult.getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, tmp5);
-  const VideoQuestPlayerRefactorExperiment = tmp(10471).VideoQuestPlayerRefactorExperiment;
+  const VideoQuestPlayerRefactorExperiment = tmp(10502).VideoQuestPlayerRefactorExperiment;
   obj = { location: QuestsExperimentLocations.VIDEO_MODAL_MOBILE };
   if (VideoQuestPlayerRefactorExperiment.useConfig(obj).enabled) {
-    let VideoQuestPlayer = tmp(14249).VideoQuestPlayer;
+    let VideoQuestPlayer = tmp(14286).VideoQuestPlayer;
   } else {
-    VideoQuestPlayer = tmp(14252).VideoQuestPlayer;
+    VideoQuestPlayer = tmp(14289).VideoQuestPlayer;
   }
-  windowDimensions = importAllResult.useContext(tmp(14215).QuestDockGestureContext).windowDimensions;
+  windowDimensions = importAllResult.useContext(tmp(14252).QuestDockGestureContext).windowDimensions;
   const items = [windowDimensions];
   memo = importAllResult.useMemo(() => Math.floor(windowDimensions.get().width / 0.5625), items);
   const callback = importAllResult.useCallback(() => {
 
   }, []);
-  const tmp11 = memo(1581)();
+  const tmp11 = memo(1609)();
   dependencyMap = tmp11;
   const tmp12 = first(importAllResult.useState(64), 2);
   first = tmp12[0];
@@ -494,41 +494,41 @@ let closure_24 = importAllResult.memo((arg0) => {
   items3[1] = obj1;
   const obj3 = { theme: ThemeTypes.DARKER, children: null };
   obj3[1] = callback2(VideoQuestPlayer, { captionsEnabled, onLoad: callback, externallyPaused, orientation: "portrait", contentInsets: closure_16, handleOpenTranscript, handleToggleCaptions, isFullscreen, onEnd, sourceQuestContent, hasCaptionAsset, hasTranscriptAsset });
-  const items4 = [callback2(windowDimensions(3967).ThemeContextProvider, obj3), callback2(memo(4676), { start: closure_12, end: closure_13, style: tmp19Result.gradientTop, colors: items }), callback2(memo(4676), { start: closure_12, end: closure_13, style: tmp19Result.gradientBottom, colors: items1 }), ];
+  const items4 = [callback2(windowDimensions(3996).ThemeContextProvider, obj3), callback2(memo(4706), { start: closure_12, end: closure_13, style: tmp19Result.gradientTop, colors: items }), callback2(memo(4706), { start: closure_12, end: closure_13, style: tmp19Result.gradientBottom, colors: items1 }), ];
   const obj7 = { style: items5, children: null };
   items5 = [, ];
   ({ videoContentWrapper: arr6[0], videoContentWrapperPortrait: arr6[1] } = tmp19Result);
   const obj8 = { closeButtonIconColor: null, onClose: null, showCurrentVideoTime: true, withTextShadow: true };
   obj8[0] = memo(712).colors.WHITE;
   obj8[1] = handleClose;
-  const items6 = [callback2(memo(14270), obj8), ];
+  const items6 = [callback2(memo(14307), obj8), ];
   const obj9 = { direction: "vertical", spacing: null, children: null };
   obj9[1] = memo(712).space.PX_24;
   const obj10 = { direction: "horizontal", justify: "space-between", spacing: null, children: null };
   obj10[2] = memo(712).space.PX_8;
   const obj11 = { style: tmp19Result.questDetailsPrimary, onPress: handlePrimaryCtaPress, children: null };
-  const items7 = [callback2(windowDimensions(4251).Text, { variant: "heading-lg/semibold", color: "text-overlay-light", style: tmp19Result.textShadow, accessibilityRole: "header", children: quest.config.messages.gameTitle }), ];
+  const items7 = [callback2(windowDimensions(4281).Text, { variant: "heading-lg/semibold", color: "text-overlay-light", style: tmp19Result.textShadow, accessibilityRole: "header", children: quest.config.messages.gameTitle }), ];
   const items8 = [, ];
   ({ textShadow: arr9[0], questDetailsSubheader: arr9[1] } = tmp19Result);
-  items7[1] = callback2(windowDimensions(4251).Text, { variant: "heading-sm/semibold", color: "text-overlay-light", style: items8, children: quest.config.messages.gamePublisher });
+  items7[1] = callback2(windowDimensions(4281).Text, { variant: "heading-sm/semibold", color: "text-overlay-light", style: items8, children: quest.config.messages.gamePublisher });
   obj11[2] = items7;
-  const items9 = [closure_11(windowDimensions(4797).PressableOpacity, obj11), ];
+  const items9 = [closure_11(windowDimensions(4827).PressableOpacity, obj11), ];
   const obj12 = { variant: "heading-lg/semibold", color: "text-overlay-light", style: tmp19Result.textShadow, accessibilityRole: "header", children: quest.config.messages.gameTitle };
   const obj13 = { variant: "heading-sm/semibold", color: "text-overlay-light", style: items8, children: quest.config.messages.gamePublisher };
   const obj4 = { captionsEnabled, onLoad: callback, externallyPaused, orientation: "portrait", contentInsets: closure_16, handleOpenTranscript, handleToggleCaptions, isFullscreen, onEnd, sourceQuestContent, hasCaptionAsset, hasTranscriptAsset };
   const obj5 = { start: closure_12, end: closure_13, style: tmp19Result.gradientTop, colors: items };
   const obj6 = { start: closure_12, end: closure_13, style: tmp19Result.gradientBottom, colors: items1 };
-  const tmp10Result = memo(14270);
+  const tmp10Result = memo(14307);
   const tmp7 = QuestsExperimentLocations;
-  items9[1] = callback2(closure_5, { style: tmp19Result.questDetailsSecondary, children: callback2(memo(14247), obj15) });
+  items9[1] = callback2(closure_5, { style: tmp19Result.questDetailsSecondary, children: callback2(memo(14284), obj15) });
   obj10[3] = items9;
-  const items10 = [closure_11(windowDimensions(4663).Stack, obj10), ];
+  const items10 = [closure_11(windowDimensions(4693).Stack, obj10), ];
   const obj16 = { grow: true, variant: "expressive", onPress: handlePrimaryCtaPress, text: null };
-  tmpResult = tmp(10368);
+  tmpResult = tmp(10399);
   obj16[3] = tmpResult.getExternalCtaLabel(quest);
-  items10[1] = callback2(windowDimensions(4665).Button, obj16);
+  items10[1] = callback2(windowDimensions(4695).Button, obj16);
   obj9[2] = items10;
-  items6[1] = closure_11(windowDimensions(4663).Stack, obj9);
+  items6[1] = closure_11(windowDimensions(4693).Stack, obj9);
   obj7[1] = items6;
   items4[3] = closure_11(closure_5, obj7);
   obj2[1] = items4;
@@ -541,11 +541,11 @@ let closure_24 = importAllResult.memo((arg0) => {
     const obj18 = { style: null, children: null };
     obj18[0] = tmp19Result.viewRewardBtn;
     const obj19 = { icon: null, iconPosition: "end", onPress: null, variant: "secondary", size: "sm", text: null };
-    obj19[0] = tmp19(tmp(9578).ArrowSmallRightIcon, { size: "sm" });
+    obj19[0] = tmp19(tmp(9607).ArrowSmallRightIcon, { size: "sm" });
     obj19[2] = onNavigateToPostWatchVideo;
     let intl = tmp(1236).intl;
     obj19[5] = intl.string(tmp(1236).t["jyYgZ+"]);
-    obj18[1] = tmp19(tmp(4665).Button, obj19);
+    obj18[1] = tmp19(tmp(4695).Button, obj19);
     tmp19Result = tmp19(tmp18, obj18);
   }
   const items12 = [tmp19Result, , , , ];
@@ -556,7 +556,7 @@ let closure_24 = importAllResult.memo((arg0) => {
     obj20[1] = handleOpenTranscript;
     const obj21 = { color: null };
     obj21[0] = tmp19Result.iconDisabled.color;
-    obj20[2] = tmp19(tmp(14150).TranscriptOutlineIcon, obj21);
+    obj20[2] = tmp19(tmp(14187).TranscriptOutlineIcon, obj21);
     hasTranscriptAsset = tmp19(closure_26, obj20);
   }
   items12[1] = hasTranscriptAsset;
@@ -569,7 +569,7 @@ let closure_24 = importAllResult.memo((arg0) => {
       obj22[1] = handleShareQuest;
       const obj23 = { color: null };
       obj23[0] = tmp10(712).colors.TEXT_DEFAULT;
-      obj22[2] = tmp19(tmp(12114).ShareIcon, obj23);
+      obj22[2] = tmp19(tmp(12148).ShareIcon, obj23);
       isShareable = tmp19(closure_26, obj22);
     }
     items12[3] = isShareable;
@@ -589,11 +589,11 @@ let closure_24 = importAllResult.memo((arg0) => {
       obj.children = callback2(windowDimensions(_undefined[45]).MoreHorizontalIcon, obj);
       return callback2(closure_26, obj);
     };
-    items12[4] = tmp19(tmp10(14268), obj24);
+    items12[4] = tmp19(tmp10(14305), obj24);
     obj17[6] = items12;
-    items11[1] = tmp17(tmp(4663).Stack, obj17);
+    items11[1] = tmp17(tmp(4693).Stack, obj17);
     obj[2] = items11;
-    return tmp17(tmp(5257).SafeAreaPaddingView, obj);
+    return tmp17(tmp(5311).SafeAreaPaddingView, obj);
   } else {
     const obj25 = { accessibilityLabel: null, onPress: null, children: null };
     const intl3 = tmp(1236).intl;
@@ -606,7 +606,7 @@ let closure_24 = importAllResult.memo((arg0) => {
     }
     const obj26 = { color: null };
     obj26[0] = color;
-    tmp19Result = tmp19(tmp(14148).ClosedCaptionsOutlineIcon, obj26);
+    tmp19Result = tmp19(tmp(14185).ClosedCaptionsOutlineIcon, obj26);
     obj25[2] = tmp19Result;
     tmp19(closure_26, obj25);
     const tmp23 = closure_26;
@@ -636,7 +636,7 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentInProgres
   let tmp6;
   ({ onClose, sourceQuestContent } = arg0);
   ({ isFullscreen, onNavigateToPostWatchVideo, onEnd, setIsFullscreen } = arg0);
-  let obj = sourceQuestContent(14242);
+  let obj = sourceQuestContent(14279);
   const quest = obj.useVideoQuestModalContext().quest;
   const items = [quest];
   const items1 = [quest];
@@ -652,11 +652,11 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentInProgres
   }, items2);
   let tmp = sourceQuestContent;
   const tmp5 = getQuestImpressionId(importAllResult.useState(false), 2);
-  getQuestImpressionId = sourceQuestContent(10375).useGetQuestImpressionId();
-  const obj2 = sourceQuestContent(10375);
+  getQuestImpressionId = sourceQuestContent(10406).useGetQuestImpressionId();
+  const obj2 = sourceQuestContent(10406);
   [tmp11, closure_4] = getQuestImpressionId(importAllResult.useState(false), 2);
   const tmp10 = getQuestImpressionId(importAllResult.useState(false), 2);
-  const isShareableQuestResult = sourceQuestContent(7075).isShareableQuest(quest.config);
+  const isShareableQuestResult = sourceQuestContent(7102).isShareableQuest(quest.config);
   let closure_5 = isShareableQuestResult;
   const items3 = [isShareableQuestResult, quest.id, getQuestImpressionId, sourceQuestContent];
   const callback2 = importAllResult.useCallback(() => {
@@ -701,21 +701,21 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentInProgres
       questUrl2.showShareActionSheet(obj1, "Video Quest Modal - " + id);
     }
   }, items3);
-  const obj3 = sourceQuestContent(7075);
+  const obj3 = sourceQuestContent(7102);
   const items4 = [quest.id];
-  const videoQuestClickCtaAndMaybeCloseModal = sourceQuestContent(14272).useVideoQuestClickCtaAndMaybeCloseModal({ quest, onClose, sourceQuestContent });
+  const videoQuestClickCtaAndMaybeCloseModal = sourceQuestContent(14309).useVideoQuestClickCtaAndMaybeCloseModal({ quest, onClose, sourceQuestContent });
   const callback3 = importAllResult.useCallback(() => {
     let obj = sourceQuestContent(outer1_2[61]);
     obj = { questId: quest.id };
     const result = obj.openRewardDetailsBottomSheet(obj);
   }, items4);
-  const obj4 = sourceQuestContent(14272);
-  const videoExternallyPaused = sourceQuestContent(14273).useVideoExternallyPaused(quest.id, tmp11);
-  const tmp17 = quest.config.taskConfigV2.tasks[sourceQuestContent(undefined, 5120).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
+  const obj4 = sourceQuestContent(14309);
+  const videoExternallyPaused = sourceQuestContent(14310).useVideoExternallyPaused(quest.id, tmp11);
+  const tmp17 = quest.config.taskConfigV2.tasks[sourceQuestContent(undefined, 5150).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
   let tmp18 = null == tmp17;
   if (!tmp18) {
-    tmp18 = "portrait" === tmp(10473).getVideoOrientation(tmp17);
-    const tmpResult = tmp(10473);
+    tmp18 = "portrait" === tmp(10504).getVideoOrientation(tmp17);
+    const tmpResult = tmp(10504);
   }
   obj = { quest, captionsEnabled: tmp6, handleClose: onClose, handlePrimaryCtaPress: videoQuestClickCtaAndMaybeCloseModal, handleRewardDetailsPress: callback3, handleShareQuest: callback2, handleOpenTranscript: callback1, handleToggleCaptions: callback, isFullscreen, onNavigateToPostWatchVideo, onEnd, setIsFullscreen, externallyPaused: videoExternallyPaused, sourceQuestContent, hasCaptionAsset: null != memo, hasTranscriptAsset: null != memo1, isShareable: isShareableQuestResult };
   return callback2(tmp18 ? closure_24 : closure_23, obj);

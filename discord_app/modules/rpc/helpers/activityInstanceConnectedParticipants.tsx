@@ -22,12 +22,12 @@ obj = {
         let obj = { participants: null };
         obj[0] = [];
       } else {
-        callback = callback(3873).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
-        const obj4 = callback(3873);
-        callback2 = callback(3873).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
+        callback = callback(3902).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
+        const obj4 = callback(3902);
+        callback2 = callback(3902).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
         obj = { participants: null };
         const _Array = Array;
-        const obj5 = callback(3873);
+        const obj5 = callback(3902);
         obj[0] = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
           const user = outer1_4.getUser(arg0);
           if (null != user) {

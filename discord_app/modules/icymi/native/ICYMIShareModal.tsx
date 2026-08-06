@@ -39,27 +39,27 @@ function Screenshot(setUri) {
       return nextPromise;
     }, 500);
   }, items);
-  let obj = setUri(8174);
+  let obj = setUri(8314);
   obj = { style: { position: "absolute", top: -1000, overflow: "hidden" }, children: null };
   obj = { style: items1, children: null };
   items1 = [tmp.preview, { width: ref(1474)().width }];
   const clientThemesOverride = obj.useClientThemesOverride();
   const obj1 = { ref, options: { fileName: "icymi_content", format: "png", quality: 1 }, children: null };
   const obj2 = { style: tmp.base, children: null };
-  const tmp4 = ref(4102)();
+  const tmp4 = ref(4131)();
   const obj3 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj4 = { dark: null, light: null };
-  const tmp6 = ref(15474);
-  obj4[0] = setUri(4066).OverlayOpacity.LEVEL_7;
-  obj4[1] = setUri(4066).OverlayOpacity.LEVEL_8;
+  const tmp6 = ref(15512);
+  obj4[0] = setUri(4095).OverlayOpacity.LEVEL_7;
+  obj4[1] = setUri(4095).OverlayOpacity.LEVEL_8;
   obj3[4] = obj4;
-  const items2 = [callback3(ref(4799), obj3), ];
+  const items2 = [callback3(ref(4829), obj3), ];
   const obj5 = { gradient: tmp4, children: null };
   const obj6 = { style: items3, children: null };
   items3 = [tmp.contentContainer, clientThemesOverride];
   obj6[1] = setUri.render();
   obj5[1] = callback3(View, obj6);
-  items2[1] = callback3(setUri(3967).ThemeContextProvider, obj5);
+  items2[1] = callback3(setUri(3996).ThemeContextProvider, obj5);
   obj2[1] = items2;
   obj1[2] = callback4(View, obj2);
   obj[1] = callback3(tmp6, obj1);
@@ -205,7 +205,7 @@ class ICYMIShareModal {
                     let closure_0 = arg0;
                     let c2 = 0;
                     let c1 = 0;
-                    return (/* F119503 */ function*() { ... })();
+                    return (/* F119860 */ function*() { ... })();
                   });
                   return function(arg0) {
                     const self = this;
@@ -255,65 +255,66 @@ class ICYMIShareModal {
       let arr = callback(render[28]);
       arr = arr.pop();
     }, []);
+    tmp6 = jsxs();
     tmp7 = linkText;
     tmp8 = render;
-    tmp6 = jsxs();
-    tmp9 = require("useSafeAreaInsets")();
-    c9 = tmp9;
+    rect = require("useSafeAreaInsets")();
+    c9 = rect;
     height = require("useWindowDimensions")().height;
     items = [, ];
-    items[0] = tmp9.bottom;
+    items[0] = rect.bottom;
     items[1] = height;
-    tmp11 = useState;
     obj = {
       style: _handleSendForwards.useMemo(() => {
             let height = "100%";
             if (obj.isAndroid()) {
-              height = height + _undefined.bottom;
+              height = height + rect.bottom;
             }
             return { height };
           }, items),
       children: null
     };
-    tmp12 = jsx;
-    obj = { style: tmp6.headerContainer, children: null };
-    tmp10 = jsxs;
-    tmp13 = title;
-    obj1 = {
+    tmp11 = jsx;
+    tmp9 = jsxs;
+    tmp10 = useState;
+    tmp12 = title;
+    obj = {
       title,
       headerTitle() {
             return outer1_13(title(render[40]).GenericHeaderTitle, { title });
           },
       headerTitleAlign: "center",
       headerStatusBarHeight: null,
-      headerLeft: null
+      headerLeft: null,
+      headerLeftContainerStyle: null,
+      headerRightContainerStyle: null
     };
-    obj4 = require("set");
-    num = undefined;
-    if (obj4.isIOS()) {
-      num = 0;
+    obj3 = require("set");
+    num = 0;
+    if (!obj3.isIOS()) {
+      num = rect.top;
     }
-    obj1[3] = num;
-    tmp13Result = require("HeaderBackImage");
-    obj1[4] = tmp13Result.getHeaderCloseButton(callback);
-    obj[1] = tmp12(require("Background").Header, obj1);
+    obj[3] = num + require("Themes").space.PX_8;
+    tmp12Result = require("HeaderBackImage");
+    obj[4] = tmp12Result.getHeaderCloseButton(callback);
+    ({ headerLeftContainer: obj2[5], headerRightContainer: obj2[6] } = tmp6);
     items1 = [, , , ];
-    items1[0] = tmp12(tmp11, obj);
-    tmp12Result = null != render;
-    if (tmp12Result) {
-      tmp15 = Screenshot;
-      obj2 = { render: null, setUri: null };
-      obj2[0] = render;
-      obj2[1] = tmp4;
-      tmp12Result = tmp12(Screenshot, obj2);
+    items1[0] = tmp11(require("Background").Header, obj);
+    tmp11Result = null != render;
+    if (tmp11Result) {
+      tmp14 = Screenshot;
+      obj1 = { render: null, setUri: null };
+      obj1[0] = render;
+      obj1[1] = tmp4;
+      tmp11Result = tmp11(Screenshot, obj1);
     }
-    items1[1] = tmp12Result;
-    obj3 = { rowMode: UserRowModes.TOGGLE, onSelectedDestinationChange: tmp[1], originDestination: global.originDestinationId, insetEnd: null, disableGradient: true, disableStickySections: true };
+    items1[1] = tmp11Result;
+    obj2 = { rowMode: UserRowModes.TOGGLE, onSelectedDestinationChange: tmp[1], originDestination: global.originDestinationId, insetEnd: null, disableGradient: true, disableStickySections: true };
     tmp7Result = require("SearchableDestinationList");
-    sum = tmp9.bottom + require("Themes").space.PX_8;
-    obj3[3] = sum + require("Themes").space.PX_96;
-    items1[2] = tmp12(tmp7Result, obj3);
-    obj4 = {
+    sum = rect.bottom + require("Themes").space.PX_8;
+    obj2[3] = sum + require("Themes").space.PX_96;
+    items1[2] = tmp11(tmp7Result, obj2);
+    obj3 = {
       count: first.length,
       isSending: tmp2[0],
       onSend: function handleSendForwards(arg0) {
@@ -327,23 +328,25 @@ class ICYMIShareModal {
             return applyArgumentsResult;
           }
     };
-    items1[3] = tmp12(GravityShareFooter, obj4);
+    items1[3] = tmp11(GravityShareFooter, obj3);
     obj[1] = items1;
-    return tmp10(tmp11, obj);
+    return tmp9(tmp10, obj);
   }
 }
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-createCacheKey = { headerContainer: null, preview: null, base: null, contentContainer: null, footer: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16, paddingTop: require("Themes").space.PX_8 };
+createCacheKey = { headerLeftContainer: null, headerRightContainer: null, preview: null, base: null, contentContainer: null, footer: null };
+createCacheKey = { paddingLeft: require("Themes").space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderRadius: require("Themes").radii.md, overflow: "hidden", borderWidth: 1, borderColor: require("Themes").colors.BORDER_STRONG };
-createCacheKey[2] = { position: "relative" };
-let obj1 = { borderRadius: require("Themes").radii.md, overflow: "hidden", borderWidth: 1, borderColor: require("Themes").colors.BORDER_STRONG };
-createCacheKey[3] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-let obj2 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-createCacheKey[4] = { display: "flex", flexDirection: "row", alignItems: "flex-end", paddingHorizontal: require("Themes").space.PX_16, paddingVertical: require("Themes").space.PX_12, gap: require("Themes").space.PX_12, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: require("Themes").colors.BORDER_SUBTLE };
+createCacheKey[1] = { paddingRight: require("Themes").space.PX_16 };
+let obj1 = { paddingRight: require("Themes").space.PX_16 };
+createCacheKey[2] = { borderRadius: require("Themes").radii.md, overflow: "hidden", borderWidth: 1, borderColor: require("Themes").colors.BORDER_STRONG };
+createCacheKey[3] = { position: "relative" };
+let obj2 = { borderRadius: require("Themes").radii.md, overflow: "hidden", borderWidth: 1, borderColor: require("Themes").colors.BORDER_STRONG };
+createCacheKey[4] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+let obj3 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey[5] = { display: "flex", flexDirection: "row", alignItems: "flex-end", paddingHorizontal: require("Themes").space.PX_16, paddingVertical: require("Themes").space.PX_12, gap: require("Themes").space.PX_12, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: require("Themes").colors.BORDER_SUBTLE };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { display: "flex", flexDirection: "row", alignItems: "flex-end", paddingHorizontal: require("Themes").space.PX_16, paddingVertical: require("Themes").space.PX_12, gap: require("Themes").space.PX_12, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: require("Themes").colors.BORDER_SUBTLE };
+let obj4 = { display: "flex", flexDirection: "row", alignItems: "flex-end", paddingHorizontal: require("Themes").space.PX_16, paddingVertical: require("Themes").space.PX_12, gap: require("Themes").space.PX_12, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: require("Themes").colors.BORDER_SUBTLE };
 let result = require("noop").fileFinishedImporting("modules/icymi/native/ICYMIShareModal.tsx");
 
 export default ICYMIShareModal;

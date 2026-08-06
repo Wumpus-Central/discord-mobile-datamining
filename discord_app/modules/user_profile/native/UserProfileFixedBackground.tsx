@@ -3,7 +3,7 @@ import _slicedToArray from "_slicedToArray";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
-import { LinearGradient } from "../../../../_runtime/04676_LinearGradient.js";
+import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
 import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
 import { useUserProfileColors } from "../hooks/native/useUserProfileColors.tsx";
 import { useUserProfileGradientColors } from "../hooks/native/useUserProfileGradientColors.tsx";

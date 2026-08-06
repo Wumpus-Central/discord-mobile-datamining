@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/TagsIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/10079_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/10110_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

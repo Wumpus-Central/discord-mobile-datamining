@@ -16,15 +16,15 @@ const require = arg1;
 function isInteractionComponent(type) {
   type = type.type;
   if (PermissionOverwriteType.ComponentType.BUTTON === type) {
-    return type.style !== tmp(1906).ButtonStyle.LINK;
+    return type.style !== tmp(1935).ButtonStyle.LINK;
   } else {
-    if (tmp(1906).ComponentType.STRING_SELECT !== type) {
-      if (tmp(1906).ComponentType.USER_SELECT !== type) {
-        if (tmp(1906).ComponentType.ROLE_SELECT !== type) {
-          if (tmp(1906).ComponentType.MENTIONABLE_SELECT !== type) {
-            if (tmp(1906).ComponentType.CHANNEL_SELECT !== type) {
-              if (tmp(1906).ComponentType.ACTION_ROW !== type) {
-                const TEXT_INPUT = tmp(1906).ComponentType.TEXT_INPUT;
+    if (tmp(1935).ComponentType.STRING_SELECT !== type) {
+      if (tmp(1935).ComponentType.USER_SELECT !== type) {
+        if (tmp(1935).ComponentType.ROLE_SELECT !== type) {
+          if (tmp(1935).ComponentType.MENTIONABLE_SELECT !== type) {
+            if (tmp(1935).ComponentType.CHANNEL_SELECT !== type) {
+              if (tmp(1935).ComponentType.ACTION_ROW !== type) {
+                const TEXT_INPUT = tmp(1935).ComponentType.TEXT_INPUT;
               }
               return false;
             }
@@ -43,7 +43,7 @@ function getActionComponentState(interaction, id, shouldDisableInteractiveCompon
   let LOADING = ActionComponentState.ActionComponentState.NORMAL;
   let tmp3 = null != interaction;
   if (tmp3) {
-    tmp3 = interaction.state !== tmp(4480).InteractionState.FAILED;
+    tmp3 = interaction.state !== tmp(4510).InteractionState.FAILED;
   }
   let DISABLED = LOADING;
   if (!tmp3) {
@@ -51,16 +51,16 @@ function getActionComponentState(interaction, id, shouldDisableInteractiveCompon
       flag = isInteractionComponent(id);
     }
     if (flag) {
-      DISABLED = tmp(4482).ActionComponentState.DISABLED;
+      DISABLED = tmp(4512).ActionComponentState.DISABLED;
     }
     return DISABLED;
   } else {
-    if (interaction.data.interactionType !== tmp(1906).InteractionTypes.MESSAGE_COMPONENT) {
+    if (interaction.data.interactionType !== tmp(1935).InteractionTypes.MESSAGE_COMPONENT) {
       if (isInteractionComponent(id)) {
-        LOADING = tmp(4482).ActionComponentState.DISABLED;
+        LOADING = tmp(4512).ActionComponentState.DISABLED;
       }
     }
-    LOADING = tmp(4482).ActionComponentState.LOADING;
+    LOADING = tmp(4512).ActionComponentState.LOADING;
   }
 }
 function useShouldDisableInteractiveComponents(channel_id) {
@@ -126,9 +126,9 @@ function useShouldDisableInteractiveComponents(channel_id) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  let tmpResult = tmp(5783);
+  let tmpResult = tmp(5810);
   const isThreadModerator = tmpResult.useIsThreadModerator(channel);
-  tmpResult = tmp(5783);
+  tmpResult = tmp(5810);
   let tmp9 = !stateFromStores;
   const canUnarchiveThread = tmpResult.useCanUnarchiveThread(channel);
   if (stateFromStores) {

@@ -1,5 +1,6 @@
 // discord_app/modules/rpc/server/RPCServerManager.tsx
 import _slicedToArray from "_slicedToArray";
+import map from "map";
 import initializeState from "initializeState";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -11,6 +12,7 @@ import upsertRelationship from "upsertRelationship";
 import handleConnectionOpen from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import updateVoiceState from "updateVoiceState";
+import { TransportTypes } from "RPC_SCOPE_CONFIG";
 import ME from "ME";
 import { ActivityLayoutMode } from "items3";
 import { FrameLayoutModes } from "FrameLayoutModes";
@@ -18,14 +20,14 @@ import { MediaEngineContextTypes } from "DesktopSources";
 import { dispatcher } from "../../../Dispatcher.tsx";
 import { set } from "../../../utils/PlatformUtils.tsx";
 
-let closure_15;
-let closure_16;
 let closure_17;
 let closure_18;
 let closure_19;
+let closure_20;
+let closure_21;
 const require = arg1;
-({ ActivityActionTypes: closure_15, RelationshipTypes: closure_16, AnalyticEvents: closure_17, RPCEvents: closure_18, RPCCloseCodes: closure_19 } = ME);
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/rpc/server/RPCServerManager.tsx");
+({ ActivityActionTypes: closure_17, RelationshipTypes: closure_18, AnalyticEvents: closure_19, RPCEvents: closure_20, RPCCloseCodes: closure_21 } = ME);
+let result = require("initializeState").fileFinishedImporting("modules/rpc/server/RPCServerManager.tsx");
 class RPCServerManager {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -40,19 +42,19 @@ class RPCServerManager {
         type = type.type;
         if ("MESSAGE_CREATE" === type) {
           if ("SENDING" !== type.message.state) {
-            const MESSAGE_CREATE = outer1_18.MESSAGE_CREATE;
+            const MESSAGE_CREATE = outer1_20.MESSAGE_CREATE;
             ({ channelId, message } = type);
             const _HermesInternal2 = HermesInternal;
             let combined = "" + MESSAGE_CREATE + type.message.id;
             let MESSAGE_UPDATE = MESSAGE_CREATE;
           }
         } else if ("MESSAGE_UPDATE" === type) {
-          MESSAGE_UPDATE = outer1_18.MESSAGE_UPDATE;
+          MESSAGE_UPDATE = outer1_20.MESSAGE_UPDATE;
           channelId = type.message.channel_id;
           message = type.message;
           combined = null;
         } else if ("MESSAGE_DELETE" === type) {
-          const MESSAGE_DELETE = outer1_18.MESSAGE_DELETE;
+          const MESSAGE_DELETE = outer1_20.MESSAGE_DELETE;
           channelId = type.channelId;
           message = { id: null };
           message[0] = type.id;
@@ -60,7 +62,7 @@ class RPCServerManager {
           combined = "" + MESSAGE_DELETE + type.id;
           MESSAGE_UPDATE = MESSAGE_DELETE;
         } else {
-          return obj(outer1_2[20]).assertNever(type);
+          return obj(outer1_2[22]).assertNever(type);
         }
         if (null != channelId) {
           const rpcServer = obj.rpcServer;
@@ -68,25 +70,25 @@ class RPCServerManager {
           obj[0] = channelId;
           obj = { channel_id: null, message: null };
           obj[0] = channelId;
-          obj[1] = obj(outer1_2[21]).transformInternalTextMessage(message);
+          obj[1] = obj(outer1_2[23]).transformInternalTextMessage(message);
           const result1 = rpcServer.dispatchToSubscriptions(MESSAGE_UPDATE, obj, obj, combined);
-          const obj5 = obj(outer1_2[21]);
+          const obj5 = obj(outer1_2[23]);
         }
       }
     };
     obj.handleSpeaking = function handleSpeaking(speakingFlags) {
       if (0 !== obj.rpcServer.subscriptions.length) {
         if (0 !== speakingFlags.speakingFlags) {
-          let SPEAKING_STOP = outer1_18.SPEAKING_START;
+          let SPEAKING_STOP = outer1_20.SPEAKING_START;
         } else {
-          SPEAKING_STOP = outer1_18.SPEAKING_STOP;
+          SPEAKING_STOP = outer1_20.SPEAKING_STOP;
         }
-        if (speakingFlags.context === outer1_22.DEFAULT) {
-          const voiceChannelId = outer1_12.getVoiceChannelId();
+        if (speakingFlags.context === outer1_24.DEFAULT) {
+          const voiceChannelId = outer1_13.getVoiceChannelId();
           if (null != voiceChannelId) {
-            const channel = outer1_5.getChannel(voiceChannelId);
+            const channel = outer1_6.getChannel(voiceChannelId);
             if (null != channel) {
-              const voiceState = outer1_14.getVoiceState(channel.getGuildId(), speakingFlags.userId);
+              const voiceState = outer1_15.getVoiceState(channel.getGuildId(), speakingFlags.userId);
               if (null != voiceState) {
                 const rpcServer = tmp.rpcServer;
                 obj = { channel_id: null };
@@ -107,7 +109,7 @@ class RPCServerManager {
         obj = { channel_id: null, guild_id: null };
         obj[0] = tmp2;
         obj[1] = tmp;
-        const result = rpcServer.dispatchToSubscriptions(outer1_18.VOICE_CHANNEL_SELECT, {}, obj);
+        const result = rpcServer.dispatchToSubscriptions(outer1_20.VOICE_CHANNEL_SELECT, {}, obj);
       }
     };
     obj.handleNotificationCreate = function handleNotificationCreate(icon) {
@@ -116,17 +118,17 @@ class RPCServerManager {
         const rpcServer = obj.rpcServer;
         obj = { channel_id: null, message: null, icon_url: null, title: null, body: null };
         obj[0] = tmp;
-        obj[1] = obj(outer1_2[21]).transformInternalTextMessage(tmp2);
+        obj[1] = obj(outer1_2[23]).transformInternalTextMessage(tmp2);
         let remoteIconURL = null;
         if (null != icon) {
-          remoteIconURL = tmp8(tmp9[21]).getRemoteIconURL(icon);
-          const tmp8Result = tmp8(tmp9[21]);
+          remoteIconURL = tmp8(tmp9[23]).getRemoteIconURL(icon);
+          const tmp8Result = tmp8(tmp9[23]);
         }
         obj[2] = remoteIconURL;
         obj[3] = tmp3;
         obj[4] = tmp4;
-        const result = rpcServer.dispatchToSubscriptions(outer1_18.NOTIFICATION_CREATE, {}, obj);
-        const obj3 = obj(outer1_2[21]);
+        const result = rpcServer.dispatchToSubscriptions(outer1_20.NOTIFICATION_CREATE, {}, obj);
+        const obj3 = obj(outer1_2[23]);
         tmp8 = obj;
         tmp9 = outer1_2;
       }
@@ -142,7 +144,7 @@ class RPCServerManager {
           obj.intent = tmp2;
         }
         const rpcServer = tmp4.rpcServer;
-        const result = rpcServer.dispatchToSubscriptions(outer1_18.ACTIVITY_JOIN, (socket) => {
+        const result = rpcServer.dispatchToSubscriptions(outer1_20.ACTIVITY_JOIN, (socket) => {
           let tmp = socket.socket.application.id === applicationId;
           if (!tmp) {
             tmp = null != parentApplicationId && socket.socket.application.parentId === tmp2;
@@ -151,7 +153,7 @@ class RPCServerManager {
           return tmp;
         }, obj);
         const rpcServer2 = tmp4.rpcServer;
-        const result1 = rpcServer2.dispatchToSubscriptions(outer1_18.GAME_JOIN, (socket) => socket.socket.application.id === applicationId, obj);
+        const result1 = rpcServer2.dispatchToSubscriptions(outer1_20.GAME_JOIN, (socket) => socket.socket.application.id === applicationId, obj);
       }
     };
     obj.handleActivityLayoutModeUpdate = function handleActivityLayoutModeUpdate(arg0) {
@@ -161,38 +163,50 @@ class RPCServerManager {
       if (0 !== obj.rpcServer.subscriptions.length) {
         const rpcServer = tmp.rpcServer;
         obj = { is_pip_mode: null };
-        obj[0] = layoutMode !== outer1_20.FOCUSED;
-        const result = rpcServer.dispatchToSubscriptions(outer1_18.ACTIVITY_PIP_MODE_UPDATE, (socket) => socket.socket.application.id === closure_0, obj);
+        obj[0] = layoutMode !== outer1_22.FOCUSED;
+        const result = rpcServer.dispatchToSubscriptions(outer1_20.ACTIVITY_PIP_MODE_UPDATE, (socket) => socket.socket.application.id === closure_0, obj);
         obj = { layout_mode: null };
         obj[0] = layoutMode;
         const rpcServer2 = tmp.rpcServer;
-        const result1 = rpcServer2.dispatchToSubscriptions(outer1_18.ACTIVITY_LAYOUT_MODE_UPDATE, (socket) => socket.socket.application.id === closure_0, obj);
+        const result1 = rpcServer2.dispatchToSubscriptions(outer1_20.ACTIVITY_LAYOUT_MODE_UPDATE, (socket) => socket.socket.application.id === closure_0, obj);
         const rpcServer3 = tmp.rpcServer;
-        const result2 = rpcServer3.dispatchToSubscriptions(outer1_18.FRAME_LAYOUT_MODE_UPDATE, (socket) => socket.socket.application.id === closure_0, obj);
+        const result2 = rpcServer3.dispatchToSubscriptions(outer1_20.FRAME_LAYOUT_MODE_UPDATE, (socket) => socket.socket.application.id === closure_0, obj);
       }
     };
-    obj.handleFrameUpdateLayoutMode = function handleFrameUpdateLayoutMode(applicationId) {
-      applicationId = applicationId.applicationId;
-      let dispatchToSubscriptions = applicationId;
-      if (0 !== applicationId.rpcServer.subscriptions.length) {
-        if (tmp === outer1_21.PIP) {
-          let FOCUSED = outer1_20.PIP;
-          let tmp2 = outer1_20;
+    obj.handleFrameUpdateLayoutMode = function handleFrameUpdateLayoutMode(frameId) {
+      frameId = frameId.frameId;
+      let dispatchToSubscriptions = frameId;
+      if (0 !== frameId.rpcServer.subscriptions.length) {
+        if (tmp === outer1_23.PIP) {
+          let FOCUSED = outer1_22.PIP;
+          let tmp2 = outer1_22;
         } else {
-          tmp2 = outer1_20;
-          FOCUSED = outer1_20.FOCUSED;
+          tmp2 = outer1_22;
+          FOCUSED = outer1_22.FOCUSED;
+        }
+        function targetsFrame(socket) {
+          let tmp = socket.socket.source.type === outer1_16.POST_MESSAGE;
+          if (tmp) {
+            const frameByIframeId = outer1_4.getFrameByIframeId(socket.socket.source.iframeId);
+            let id;
+            if (frameByIframeId != null) {
+              id = frameByIframeId.id;
+            }
+            tmp = id === frameId;
+          }
+          return tmp;
         }
         const rpcServer = dispatchToSubscriptions.rpcServer;
         let obj = { is_pip_mode: null };
         obj[0] = FOCUSED !== tmp2.FOCUSED;
-        const result = rpcServer.dispatchToSubscriptions(outer1_18.ACTIVITY_PIP_MODE_UPDATE, (socket) => socket.socket.application.id === applicationId, obj);
+        const result = rpcServer.dispatchToSubscriptions(outer1_20.ACTIVITY_PIP_MODE_UPDATE, targetsFrame, obj);
         obj = { layout_mode: null };
         obj[0] = FOCUSED;
         const rpcServer2 = dispatchToSubscriptions.rpcServer;
-        const result1 = rpcServer2.dispatchToSubscriptions(outer1_18.ACTIVITY_LAYOUT_MODE_UPDATE, (socket) => socket.socket.application.id === applicationId, obj);
+        const result1 = rpcServer2.dispatchToSubscriptions(outer1_20.ACTIVITY_LAYOUT_MODE_UPDATE, targetsFrame, obj);
         const rpcServer3 = dispatchToSubscriptions.rpcServer;
         dispatchToSubscriptions = rpcServer3.dispatchToSubscriptions;
-        const result2 = dispatchToSubscriptions(outer1_18.FRAME_LAYOUT_MODE_UPDATE, (socket) => socket.socket.application.id === applicationId, obj);
+        const result2 = dispatchToSubscriptions(outer1_20.FRAME_LAYOUT_MODE_UPDATE, targetsFrame, obj);
       }
     };
     obj.handleThermalStateChange = function handleThermalStateChange(applicationId) {
@@ -200,10 +214,10 @@ class RPCServerManager {
       if (0 !== applicationId.rpcServer.subscriptions.length) {
         if (null != applicationId) {
           const obj = { thermal_state: null };
-          obj[0] = obj(outer1_2[22]).getThermalState();
+          obj[0] = obj(outer1_2[24]).getThermalState();
           const rpcServer = tmp.rpcServer;
-          const result = rpcServer.dispatchToSubscriptions(outer1_18.THERMAL_STATE_UPDATE, (socket) => socket.socket.application.id === applicationId, obj);
-          const obj2 = obj(outer1_2[22]);
+          const result = rpcServer.dispatchToSubscriptions(outer1_20.THERMAL_STATE_UPDATE, (socket) => socket.socket.application.id === applicationId, obj);
+          const obj2 = obj(outer1_2[24]);
         }
       }
     };
@@ -212,14 +226,14 @@ class RPCServerManager {
         const rpcServer = obj.rpcServer;
         obj = { screen_orientation: null };
         obj[0] = tmp;
-        const result = rpcServer.dispatchToSubscriptions(outer1_18.ORIENTATION_UPDATE, {}, obj);
+        const result = rpcServer.dispatchToSubscriptions(outer1_20.ORIENTATION_UPDATE, {}, obj);
       }
     };
     obj.handleEmbeddedActivityUpdate = function handleEmbeddedActivityUpdate() {
       if (0 !== obj.rpcServer.subscriptions.length) {
-        obj = obj(outer1_2[23]);
+        obj = obj(outer1_2[25]);
         const rpcServer = tmp.rpcServer;
-        const result = rpcServer.dispatchToSubscriptions(outer1_18.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, obj.activityInstanceConnectedParticipants());
+        const result = rpcServer.dispatchToSubscriptions(outer1_20.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, obj.activityInstanceConnectedParticipants());
       }
     };
     obj.handleActivityMessage = function handleActivityMessage(type) {
@@ -239,15 +253,15 @@ class RPCServerManager {
               if (author != null) {
                 id = author.id;
               }
-              const user = outer1_13.getUser(id);
+              const user = outer1_14.getUser(id);
               if (null != user) {
                 const currentUser = obj2.getCurrentUser();
                 if (null != currentUser) {
                   if (user.id !== currentUser.id) {
-                    if (activity.type === outer1_15.JOIN_REQUEST) {
-                      let applicationActivity = outer1_9.getApplicationActivity(currentUser.id, application.id);
+                    if (activity.type === outer1_17.JOIN_REQUEST) {
+                      let applicationActivity = outer1_10.getApplicationActivity(currentUser.id, application.id);
                     } else {
-                      applicationActivity = outer1_9.getApplicationActivity(user.id, application.id);
+                      applicationActivity = outer1_10.getApplicationActivity(user.id, application.id);
                     }
                     if (null != applicationActivity) {
                       if (null != applicationActivity.party) {
@@ -257,21 +271,21 @@ class RPCServerManager {
                           if (tmp13.JOIN === type) {
                             const rpcServer = tmp.rpcServer;
                             let obj = { user: null, activity: null, type: null, channel_id: null, message_id: null };
-                            obj[0] = outer1_1(outer1_2[24])(user);
+                            obj[0] = outer1_1(outer1_2[26])(user);
                             obj[1] = applicationActivity;
                             obj[2] = activity.type;
                             obj[3] = channelId;
                             obj[4] = message.id;
-                            const result = rpcServer.dispatchToSubscriptions(outer1_18.ACTIVITY_INVITE, (socket) => socket.socket.application.id === application_id, obj);
+                            const result = rpcServer.dispatchToSubscriptions(outer1_20.ACTIVITY_INVITE, (socket) => socket.socket.application.id === application_id, obj);
                           } else if (tmp13.JOIN_REQUEST === type) {
                             const rpcServer2 = tmp.rpcServer;
                             obj = { user: null, activity: null, type: null, channel_id: null, message_id: null };
-                            obj[0] = outer1_1(outer1_2[24])(user);
+                            obj[0] = outer1_1(outer1_2[26])(user);
                             obj[1] = applicationActivity;
                             obj[2] = activity.type;
                             obj[3] = channelId;
                             obj[4] = message.id;
-                            const result1 = rpcServer2.dispatchToSubscriptions(outer1_18.ACTIVITY_JOIN_REQUEST, (socket) => socket.socket.application.id === application_id, obj);
+                            const result1 = rpcServer2.dispatchToSubscriptions(outer1_20.ACTIVITY_JOIN_REQUEST, (socket) => socket.socket.application.id === application_id, obj);
                           }
                         }
                       }
@@ -279,7 +293,7 @@ class RPCServerManager {
                   }
                 }
               }
-              obj2 = outer1_13;
+              obj2 = outer1_14;
             }
           }
         }
@@ -290,13 +304,13 @@ class RPCServerManager {
       const sockets = accessToken.rpcServer.sockets;
       const item = sockets.forEach((authorization) => {
         if (authorization.authorization.accessToken === accessToken) {
-          authorization.close(outer1_19.TOKEN_REVOKED, "Token revoked");
+          authorization.close(outer1_21.TOKEN_REVOKED, "Token revoked");
         }
       });
     };
     obj.handleGuildCreate = function handleGuildCreate(guild) {
       const id = guild.guild.id;
-      guild = outer1_7.getGuild(id);
+      guild = outer1_8.getGuild(id);
       let tmp3 = 0 !== obj.rpcServer.subscriptions.length;
       if (tmp3) {
         tmp3 = null != guild;
@@ -306,7 +320,7 @@ class RPCServerManager {
         obj = { id: null, name: null };
         obj[0] = id;
         obj[1] = guild.name;
-        const result = rpcServer.dispatchToSubscriptions(outer1_18.GUILD_CREATE, {}, obj);
+        const result = rpcServer.dispatchToSubscriptions(outer1_20.GUILD_CREATE, {}, obj);
       }
     };
     obj.handleChannelCreate = function handleChannelCreate(arg0) {
@@ -316,7 +330,7 @@ class RPCServerManager {
         obj[0] = tmp;
         obj[1] = tmp2;
         obj[2] = tmp3;
-        const result = rpcServer.dispatchToSubscriptions(outer1_18.CHANNEL_CREATE, {}, obj);
+        const result = rpcServer.dispatchToSubscriptions(outer1_20.CHANNEL_CREATE, {}, obj);
       }
     };
     obj.handleLogout = function handleLogout() {
@@ -326,36 +340,36 @@ class RPCServerManager {
     obj.handleRelationshipAdd = function handleRelationshipAdd(arg0) {
       let obj;
       if (0 !== obj.rpcServer.subscriptions.length) {
-        const user = outer1_13.getUser(tmp);
+        const user = outer1_14.getUser(tmp);
         if (null != user) {
-          obj = obj(outer1_2[21]);
+          obj = obj(outer1_2[23]);
           obj = obj.transformBaseRelationship(tmp2, user);
           const rpcServer = tmp3.rpcServer;
-          const result = rpcServer.dispatchToSubscriptions(outer1_18.RELATIONSHIP_UPDATE, {}, (socket) => callback(outer1_2[21]).transformApplicationRelationship(callback, socket.socket.application.id));
+          const result = rpcServer.dispatchToSubscriptions(outer1_20.RELATIONSHIP_UPDATE, {}, (socket) => callback(outer1_2[23]).transformApplicationRelationship(callback, socket.socket.application.id));
         }
       }
     };
     obj.handleRelationshipUpdate = function handleRelationshipUpdate(arg0) {
       let obj;
       if (0 !== obj.rpcServer.subscriptions.length) {
-        const user = outer1_13.getUser(tmp);
+        const user = outer1_14.getUser(tmp);
         if (null != user) {
-          obj = obj(outer1_2[21]);
+          obj = obj(outer1_2[23]);
           obj = obj.transformBaseRelationship(tmp2, user);
           const rpcServer = tmp3.rpcServer;
-          const result = rpcServer.dispatchToSubscriptions(outer1_18.RELATIONSHIP_UPDATE, {}, (socket) => callback(outer1_2[21]).transformApplicationRelationship(callback, socket.socket.application.id));
+          const result = rpcServer.dispatchToSubscriptions(outer1_20.RELATIONSHIP_UPDATE, {}, (socket) => callback(outer1_2[23]).transformApplicationRelationship(callback, socket.socket.application.id));
         }
       }
     };
     obj.handleRelationshipRemove = function handleRelationshipRemove(arg0) {
       let obj;
       if (0 !== obj.rpcServer.subscriptions.length) {
-        const user = outer1_13.getUser(tmp);
+        const user = outer1_14.getUser(tmp);
         if (null != user) {
-          obj = obj(outer1_2[21]);
-          obj = obj.transformBaseRelationship(outer1_16.NONE, user);
+          obj = obj(outer1_2[23]);
+          obj = obj.transformBaseRelationship(outer1_18.NONE, user);
           const rpcServer = tmp2.rpcServer;
-          const result = rpcServer.dispatchToSubscriptions(outer1_18.RELATIONSHIP_UPDATE, {}, (socket) => callback(outer1_2[21]).transformApplicationRelationship(callback, socket.socket.application.id));
+          const result = rpcServer.dispatchToSubscriptions(outer1_20.RELATIONSHIP_UPDATE, {}, (socket) => callback(outer1_2[23]).transformApplicationRelationship(callback, socket.socket.application.id));
         }
       }
     };
@@ -366,17 +380,17 @@ class RPCServerManager {
         const _Set = Set;
         const set = new Set(updates.map((user) => user.user.id));
         function _loop() {
-          const relationshipType = outer1_11.getRelationshipType(c1);
-          if (relationshipType === outer1_16.NONE) {
+          const relationshipType = outer1_12.getRelationshipType(c1);
+          if (relationshipType === outer1_18.NONE) {
             return 0;
           } else {
-            const user = outer1_13.getUser(tmp);
+            const user = outer1_14.getUser(tmp);
             if (null == user) {
               return 0;
             } else {
-              lib = lib(outer1_2[21]).transformBaseRelationship(relationshipType, user);
+              lib = lib(outer1_2[23]).transformBaseRelationship(relationshipType, user);
               const rpcServer = lib.rpcServer;
-              const result = rpcServer.dispatchToSubscriptions(outer1_18.RELATIONSHIP_UPDATE, {}, (socket) => callback(outer1_2[21]).transformApplicationRelationship(callback, socket.socket.application.id));
+              const result = rpcServer.dispatchToSubscriptions(outer1_20.RELATIONSHIP_UPDATE, {}, (socket) => callback(outer1_2[23]).transformApplicationRelationship(callback, socket.socket.application.id));
             }
           }
           tmp = c1;
@@ -394,20 +408,20 @@ class RPCServerManager {
       let closure_2;
       if (0 !== obj.rpcServer.subscriptions.length) {
         function _loop2() {
-          if (closure_2 === outer1_16.NONE) {
+          if (closure_2 === outer1_18.NONE) {
             return 0;
           } else {
-            const user = outer1_13.getUser(closure_1);
+            const user = outer1_14.getUser(closure_1);
             if (null == user) {
               return 0;
             } else {
-              lib = lib(outer1_2[21]).transformBaseRelationship(tmp, user);
+              lib = lib(outer1_2[23]).transformBaseRelationship(tmp, user);
               const rpcServer = lib.rpcServer;
-              const result = rpcServer.dispatchToSubscriptions(outer1_18.RELATIONSHIP_UPDATE, {}, (socket) => callback(outer1_2[21]).transformApplicationRelationship(callback, socket.socket.application.id));
+              const result = rpcServer.dispatchToSubscriptions(outer1_20.RELATIONSHIP_UPDATE, {}, (socket) => callback(outer1_2[23]).transformApplicationRelationship(callback, socket.socket.application.id));
             }
           }
         }
-        const mutableRelationships = outer1_11.getMutableRelationships();
+        const mutableRelationships = outer1_12.getMutableRelationships();
         const entries = mutableRelationships.entries();
         const tmp4 = entries[Symbol.iterator]();
         while (tmp4 !== undefined) {
@@ -423,14 +437,14 @@ class RPCServerManager {
       const id = user.user.id;
       let obj;
       if (0 !== obj.rpcServer.subscriptions.length) {
-        const relationshipType = outer1_11.getRelationshipType(id);
-        if (relationshipType !== outer1_16.NONE) {
-          user = outer1_13.getUser(id);
+        const relationshipType = outer1_12.getRelationshipType(id);
+        if (relationshipType !== outer1_18.NONE) {
+          user = outer1_14.getUser(id);
           if (null != user) {
-            obj = obj(outer1_2[21]);
+            obj = obj(outer1_2[23]);
             obj = obj.transformBaseRelationship(relationshipType, user);
             const rpcServer = tmp.rpcServer;
-            const result = rpcServer.dispatchToSubscriptions(outer1_18.RELATIONSHIP_UPDATE, {}, (socket) => callback(outer1_2[21]).transformApplicationRelationship(callback, socket.socket.application.id));
+            const result = rpcServer.dispatchToSubscriptions(outer1_20.RELATIONSHIP_UPDATE, {}, (socket) => callback(outer1_2[23]).transformApplicationRelationship(callback, socket.socket.application.id));
           }
         }
       }
@@ -441,7 +455,7 @@ class RPCServerManager {
         const rpcServer = entitlement.rpcServer;
         const obj = { entitlement: null };
         obj[0] = entitlement;
-        const result = rpcServer.dispatchToSubscriptions(outer1_18.ENTITLEMENT_CREATE, (socket) => socket.socket.application.id === entitlement.application_id, obj);
+        const result = rpcServer.dispatchToSubscriptions(outer1_20.ENTITLEMENT_CREATE, (socket) => socket.socket.application.id === entitlement.application_id, obj);
       }
     };
     obj.handleEntitlementDelete = function handleEntitlementDelete(entitlement) {
@@ -450,7 +464,7 @@ class RPCServerManager {
         const rpcServer = entitlement.rpcServer;
         const obj = { entitlement: null };
         obj[0] = entitlement;
-        const result = rpcServer.dispatchToSubscriptions(outer1_18.ENTITLEMENT_DELETE, (socket) => socket.socket.application.id === entitlement.application_id, obj);
+        const result = rpcServer.dispatchToSubscriptions(outer1_20.ENTITLEMENT_DELETE, (socket) => socket.socket.application.id === entitlement.application_id, obj);
       }
     };
     obj.handleQuestEnrollSuccess = function handleQuestEnrollSuccess(enrolledQuestUserStatus) {
@@ -459,9 +473,9 @@ class RPCServerManager {
       let activityApplicationId;
       if (0 !== questId.rpcServer.subscriptions.length) {
         questId = enrolledQuestUserStatus.questId;
-        const quest = outer1_4.getQuest(questId);
+        const quest = outer1_5.getQuest(questId);
         if (null != quest) {
-          obj = obj(outer1_2[25]);
+          obj = obj(outer1_2[27]);
           activityApplicationId = obj.getActivityApplicationId(quest);
           if (null != activityApplicationId) {
             const rpcServer = tmp.rpcServer;
@@ -469,7 +483,7 @@ class RPCServerManager {
             obj[0] = questId;
             obj[1] = null != enrolledQuestUserStatus.enrolledAt;
             obj[2] = enrolledQuestUserStatus.enrolledAt;
-            const result = rpcServer.dispatchToSubscriptions(outer1_18.QUEST_ENROLLMENT_STATUS_UPDATE, (socket) => {
+            const result = rpcServer.dispatchToSubscriptions(outer1_20.QUEST_ENROLLMENT_STATUS_UPDATE, (socket) => {
               let tmp = socket.socket.application.id === activityApplicationId;
               if (tmp) {
                 const args = socket.args;
@@ -522,14 +536,14 @@ prototype["init"] = function init() {
   this.rpcServer.getCurrentUser = () => currentUser.getCurrentUser();
   this.rpcServer.onConnect = (app_id) => {
     let obj = callback(709);
-    obj = { type: "RPC_APP_CONNECTED", socketId: app_id.id, application: app_id.application };
+    obj = { type: "RPC_APP_CONNECTED", socketId: app_id.id, application: app_id.application, source: app_id.source };
     obj.dispatch(obj);
     obj = { app_id: app_id.application.id, transport: app_id.transport };
     callback(698).track(constants.AUTHORIZED_APP_CONNECTED, obj);
   };
   this.rpcServer.onDisconnect = (id, reason) => {
     let obj = callback(709);
-    obj = { type: "RPC_APP_DISCONNECTED", socketId: id.id, application: id.application, reason };
+    obj = { type: "RPC_APP_DISCONNECTED", socketId: id.id, application: id.application, source: id.source, reason };
     obj.dispatch(obj);
   };
   const items = [ensureGuildLoaded, trackCommunicationDisabled, sortActivity, updateVoiceState, _detectH265HardwareDecode, createRTCConnection];

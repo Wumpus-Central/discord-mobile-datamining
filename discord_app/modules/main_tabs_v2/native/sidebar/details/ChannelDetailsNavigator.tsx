@@ -7,7 +7,7 @@ import { AnalyticEvents } from "ME";
 import { SearchNavigatorScreens } from "SearchNavigatorScreens";
 import jsxProd from "set";
 import createNativeStackNavigator from "createNativeStackNavigator";
-import { registerAsset } from "../../../../../../_runtime/12008_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/12042_registerAsset.js";
 
 let c10;
 let c9;
@@ -27,7 +27,7 @@ function ConnectedCreateThreadHeaderButton(channelId) {
 }
 function CreateThreadHeaderButton(channel) {
   channel = channel.channel;
-  let obj = channel(5783);
+  let obj = channel(5810);
   [][0] = channel;
   const canStartThread = obj.useCanStartThread(channel);
   let tmp5 = null;
@@ -37,7 +37,7 @@ function CreateThreadHeaderButton(channel) {
     obj[0] = intl.string(tmp(1236).t.rBIGBL);
     obj[1] = tmp4;
     obj[2] = registerAsset;
-    tmp5 = callback(tmp(8165).HeaderIconButton, obj);
+    tmp5 = callback(tmp(8305).HeaderIconButton, obj);
   }
   return tmp5;
 }
@@ -116,7 +116,7 @@ const memoResult = importAllResult.memo((route) => {
   obj = { style: items3, children: null };
   items3 = [channelSettingsScreensStyles.container, { paddingLeft: rect.left, paddingRight: rect.right }];
   obj = { id: "channel-details-navigator", screenOptions: null, initialRouteName: null, children: null };
-  obj1 = { headerTitle: tmp3(tmp4[11]).renderGenericTitle };
+  obj1 = { headerTitle: tmp3(tmp4[11]).renderGenericTitle, headerTitleAlign: "center" };
   let merged = Object.assign(accessibilityNativeStackOptions);
   obj[1] = obj1;
   obj[2] = DETAILS;
@@ -136,7 +136,7 @@ const memoResult = importAllResult.memo((route) => {
         route = route.route;
         let obj = {
           header(arg0) {
-            let obj = route(8165);
+            let obj = route(8305);
             obj = {};
             const merged = Object.assign(arg0);
             obj.shouldHandleSafeArea = route(500).isAndroid();

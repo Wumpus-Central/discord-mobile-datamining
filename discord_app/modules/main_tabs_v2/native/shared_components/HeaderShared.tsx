@@ -110,7 +110,7 @@ class HeaderTextButton {
     tmp2 = jsxs();
     obj = {
       labelStyle: items,
-      labelVisible: true,
+      displayMode: "default",
       backImage() {
             return null;
           },

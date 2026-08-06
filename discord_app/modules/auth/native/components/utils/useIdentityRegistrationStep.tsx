@@ -1,7 +1,7 @@
 // discord_app/modules/auth/native/components/utils/useIdentityRegistrationStep.tsx
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import set from "set";
 import useRegistrationUIStore from "useRegistrationUIStore";
 import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes";
 import { AbortCodes } from "ME";
@@ -31,7 +31,7 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
   let closure_7 = tmp6[1];
   let callback = React.useCallback((arg0, current) => {
     callback2(arg0);
-    noop.current = current;
+    set.current = current;
   }, []);
   const tmp9 = callback((errors) => errors.errors);
   callback = tmp9;
@@ -102,7 +102,7 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
               return { value: "T", done: null };
             } else {
               obj1 = callback(navigation[11]);
-              const context = obj1.getAuthenticationErrorsFromAPIError(noop);
+              const context = obj1.getAuthenticationErrorsFromAPIError(set);
               first1(context);
               const _Object = Object;
               const keys = Object.keys(context);
@@ -116,7 +116,7 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
                   tmp30 = null != context.message;
                 }
                 if (tmp30) {
-                  const obj4 = { step: null, actionType: null, details: null };
+                  let obj4 = { step: null, actionType: null, details: null };
                   obj4[0] = closure_2;
                   obj4[1] = outer2_11.RESPONSE_ERROR;
                   obj3 = callback(navigation[12]);
@@ -173,7 +173,9 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
               obj[2] = outer2_11.SUCCESS;
               _undefined(obj);
               const obj3 = callback(outer2_2[14]);
-              const replaced = arr.replace(callback(outer2_2[14]).getNextAuthState(callback));
+              const nextAuthState = callback(outer2_2[14]).getNextAuthState(callback);
+              const obj4 = callback(outer2_2[14]);
+              arr.dispatch(callback(outer2_2[15]).StackActions.replace(nextAuthState));
             };
             obj7[5] = function onBail(arg0) {
               v3("");
@@ -206,16 +208,16 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
     }
     return applyArgumentsResult;
   }, items1);
-  if (inputMode === _require(navigation[15]).PhoneOrEmailSelectorForceMode.PHONE) {
-    let tmp13 = importDefault(tmp[16])("phone", tmp9);
+  if (inputMode === _require(navigation[16]).PhoneOrEmailSelectorForceMode.PHONE) {
+    let tmp13 = importDefault(tmp[17])("phone", tmp9);
   } else {
-    tmp13 = importDefault(tmp[16])("email", tmp9);
+    tmp13 = importDefault(tmp[17])("email", tmp9);
   }
   let closure_9 = tmp13;
   const items2 = [inputMode, first1, first, tmp13];
   const items3 = [first];
   const memo1 = obj2.useMemo(() => {
-    const tmp = closure_1 === callback(navigation[15]).PhoneOrEmailSelectorForceMode.PHONE ? first1 : first;
+    const tmp = closure_1 === callback(navigation[16]).PhoneOrEmailSelectorForceMode.PHONE ? first1 : first;
     let tmp2 = null == tmp;
     if (!tmp2) {
       tmp2 = "" === tmp;

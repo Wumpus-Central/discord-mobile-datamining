@@ -169,44 +169,24 @@ obj[5] = {
   }
 };
 obj[6] = {
-  parse(closure_0, arg1, returnMentionIds) {
-    if (returnMentionIds.returnMentionIds) {
-      let obj = { type: "gameMention", gameId: null };
-      obj[1] = tmp;
-      return obj;
-    } else {
-      obj = getGameMentionData;
-      const gameMentionData = obj.getGameMentionData(tmp);
-      let gameIcon;
-      if (gameMentionData != null) {
-        gameIcon = gameMentionData.gameIcon;
-      }
-      obj = { type: "gameMention", gameId: null, channelId: null, gameName: null, gameIcon: null, icon: null, displayName: null };
-      obj[1] = tmp;
-      obj[2] = returnMentionIds.channelId;
-      let gameName;
-      const tmp6 = getGameMediaRefURL;
-      if (gameMentionData != null) {
-        gameName = gameMentionData.gameName;
-      }
-      obj[3] = gameName;
-      let gameIcon1;
-      if (gameMentionData != null) {
-        gameIcon1 = gameMentionData.gameIcon;
-      }
-      obj[4] = gameIcon1;
-      obj[5] = getGameMediaRefURL(tmp, gameIcon, { size: 32 });
-      let gameName1;
-      if (gameMentionData != null) {
-        gameName1 = gameMentionData.gameName;
-      }
-      if (gameName1 == null) {
-        const intl = tmp2(1236).intl;
-        gameName1 = intl.string(tmp2(1236).t["11pdXZ"]);
-      }
-      obj[6] = gameName1;
-      return obj;
+  parse(closure_0, arg1, channelId) {
+    let obj = getGameMentionData;
+    const gameMentionData = obj.getGameMentionData(tmp);
+    let gameIcon;
+    if (gameMentionData != null) {
+      gameIcon = gameMentionData.gameIcon;
     }
+    obj = { type: "gameMention", gameId: tmp, channelId: channelId.channelId, icon: getGameMediaRefURL(tmp, gameIcon, { size: 32 }), displayName: null };
+    let gameName;
+    if (gameMentionData != null) {
+      gameName = gameMentionData.gameName;
+    }
+    if (gameName == null) {
+      const intl = tmp2(1236).intl;
+      gameName = intl.string(tmp2(1236).t["11pdXZ"]);
+    }
+    obj[4] = gameName;
+    return obj;
   }
 };
 obj[7] = {

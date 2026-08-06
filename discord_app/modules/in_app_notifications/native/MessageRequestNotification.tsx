@@ -20,9 +20,9 @@ export default function MessageRequestInAppNotification(notification) {
     return obj;
   }, items);
   const callback = React.useCallback(() => {
-    numMutualGuilds(9656).clearNotification();
-    const obj = numMutualGuilds(9656);
-    const rootNavigationRef = author(4107).getRootNavigationRef();
+    numMutualGuilds(9687).clearNotification();
+    const obj = numMutualGuilds(9687);
+    const rootNavigationRef = author(4136).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("message-requests");
     }
@@ -35,8 +35,8 @@ export default function MessageRequestInAppNotification(notification) {
   obj = { text: null };
   let intl = author(1236).intl;
   obj[0] = intl.string(author(1236).t["Bx4/Lf"]);
-  obj[2] = jsx(author(9674).SystemMessageText, { text: null });
+  obj[2] = jsx(author(9705).SystemMessageText, { text: null });
   obj[3] = callback;
   obj[4] = notification;
-  return jsx(author(9738).NotificationPressable, { text: null });
+  return jsx(author(9769).NotificationPressable, { text: null });
 };

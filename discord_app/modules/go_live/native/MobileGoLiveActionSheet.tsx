@@ -13,7 +13,7 @@ import { MediaEngineContextTypes } from "DesktopSources";
 import jsxProd from "apexExperiment";
 import createCacheKey from "createCacheKey";
 import PlatformTypes from "PlatformTypes";
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
 import { encodeProperties } from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
@@ -328,5 +328,5 @@ export const showMobileGoLiveActionSheet = function showMobileGoLiveActionSheet(
   obj[0] = encodeProperties.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
   obj = { location_stack: closure_1 };
   obj[1] = obj;
-  obj.openLazy(asyncRequireImpl(10692, dependencyMap.paths), MobileGoLiveActionSheet, obj);
+  obj.openLazy(asyncRequireImpl(10747, dependencyMap.paths), MobileGoLiveActionSheet, obj);
 };

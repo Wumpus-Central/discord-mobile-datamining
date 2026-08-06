@@ -36,7 +36,7 @@ function _installApplicationOnDemandIfNeeded() {
           if (obj11.shouldInstallApplicationOnDemand(obj2)) {
             application = application.getApplication(callback);
             if (null == application) {
-              let obj5 = callback(5596);
+              let obj5 = callback(5650);
               c3 = 2;
               application = 1;
               const obj3 = { value: null, done: false };
@@ -49,7 +49,7 @@ function _installApplicationOnDemandIfNeeded() {
             obj4[0] = Promise.resolve({ isAuthorized: true });
             return obj4;
           }
-          obj11 = callback(10859);
+          obj11 = callback(10555);
         }
       } else if (arg0 === 1) {
         application = 3;
@@ -63,7 +63,7 @@ function _installApplicationOnDemandIfNeeded() {
         obj = arg1;
         application = c3.createFromServer(obj);
       }
-      const USER_INSTALL = callback(9430).ApplicationIntegrationType.USER_INSTALL;
+      const USER_INSTALL = callback(9459).ApplicationIntegrationType.USER_INSTALL;
       if (application != null) {
         const integrationTypesConfig = application.integrationTypesConfig;
         if (integrationTypesConfig != null) {
@@ -76,7 +76,7 @@ function _installApplicationOnDemandIfNeeded() {
         }
       }
       if (null != c3) {
-        obj2 = callback(4449);
+        obj2 = callback(4479);
         obj5 = { application_id: null, location: null, section_name: null, source: null };
         obj5[0] = callback;
         obj5[1] = c3.location;

@@ -6,6 +6,11 @@ import jsxProd from "getRRule";
 import createCacheKey from "createCacheKey";
 import set from "set";
 import set from "ensureGuildLoaded";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { getChannelFromEvent } from "../../utils/EntityUtils.tsx";
+import { getEventLocationIconSource } from "GuildEventUtils.tsx";
 
 let closure_6;
 let error;
@@ -14,76 +19,86 @@ function PreviewBody(event) {
   event = event.event;
   let _require;
   let channel_id;
+  let dependencyMap;
   let locationFromEvent;
+  let c4;
   let eventLocationIconSource;
   const tmp = createCacheKey();
   _require = tmp;
   channel_id = event.channel_id;
-  let obj = _require(locationFromEvent[8]);
-  let items = [ensureGuildLoaded];
+  let obj = _initialize;
+  let items = [eventLocationIconSource];
   const items1 = [channel_id];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getChannel(channel_id), items1);
-  locationFromEvent = channel_id(locationFromEvent[9])(stateFromStores);
-  let obj1 = _require(locationFromEvent[10]);
-  if (locationFromEvent == null) {
-    locationFromEvent = obj1.getLocationFromEvent(event);
+  const stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channel_id), items1);
+  const tmp6 = channel_id(4475)(stateFromStores);
+  dependencyMap = tmp6;
+  let obj1 = _getChannelFromEvent;
+  locationFromEvent = obj1.getLocationFromEvent(event);
+  let tmp8 = tmp6;
+  if (tmp6 == null) {
+    tmp8 = locationFromEvent;
   }
-  eventLocationIconSource = _require(locationFromEvent[11]).getEventLocationIconSource(event, stateFromStores, true);
+  c4 = tmp8;
+  eventLocationIconSource = _getEventLocationIconSource.getEventLocationIconSource(event, stateFromStores, true);
   obj = { style: tmp.header, children: null };
   obj = { style: tmp.headerTitle, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp2(tmp3[13]).intl;
-  obj[3] = intl.string(_require(locationFromEvent[13]).t.yBsFE3);
-  const items2 = [callback(_require(locationFromEvent[12]).Text, obj), ];
+  const intl = tmp2(1236).intl;
+  obj[3] = intl.string(_getSystemLocale.t.yBsFE3);
+  const items2 = [callback(_Text.Text, obj), ];
   obj1 = { style: tmp.headerSubtitle, accessibilityLabel: null, variant: "text-sm/medium", color: "text-default", children: null };
   let formatToPlainStringResult;
   if (null != stateFromStores) {
-    const intl2 = tmp2(tmp3[13]).intl;
+    const intl2 = tmp2(1236).intl;
     const obj2 = { channelName: null };
     const obj3 = { channel: null };
     obj3[0] = stateFromStores;
-    obj2[0] = channel_id(tmp3[14])(obj3);
-    formatToPlainStringResult = intl2.formatToPlainString(tmp2(tmp3[13]).t.sxcQPE, obj2);
+    obj2[0] = channel_id(8956)(obj3);
+    formatToPlainStringResult = intl2.formatToPlainString(tmp2(1236).t.sxcQPE, obj2);
   }
   obj1[1] = formatToPlainStringResult;
   if (null != stateFromStores) {
-    const intl4 = tmp2(tmp3[13]).intl;
+    const intl4 = tmp2(1236).intl;
     const obj4 = { channelName: null, channelHook: null };
-    obj4[0] = locationFromEvent;
+    obj4[0] = tmp8;
     obj4[1] = function channelHook() {
       let obj = { style: _undefined.channelContainer, children: null };
-      let tmp2Result = null != React;
+      let tmp2Result = null != ensureGuildLoaded;
       if (tmp2Result) {
         obj = { source: null, size: null, style: null };
         obj[0] = tmp5;
-        obj[1] = _undefined(locationFromEvent[15]).Icon.Sizes.EXTRA_SMALL;
+        obj[1] = _undefined(_undefined2[15]).Icon.Sizes.EXTRA_SMALL;
         obj[2] = tmp4.channelIcon;
-        tmp2Result = tmp2(_undefined(locationFromEvent[15]).Icon, obj);
+        tmp2Result = tmp2(_undefined(_undefined2[15]).Icon, obj);
       }
       obj[1] = tmp2Result;
-      const items = [outer1_6(outer1_4, obj), ];
-      let str = locationFromEvent;
-      let result = null;
-      if (null != locationFromEvent) {
-        result = _undefined(locationFromEvent[16]).guildEventDetailsParser(str, true);
-        const tmp9Result = _undefined(locationFromEvent[16]);
+      const items = [outer1_6(c4, obj), ];
+      let tmp11 = _undefined2;
+      if (_undefined2 == null) {
+        let result = null;
+        if (null != locationFromEvent) {
+          result = _undefined(_undefined2[16]).guildEventLocationParser(tmp12, true);
+          const tmp9Result = _undefined(_undefined2[16]);
+        }
+        tmp11 = result;
       }
       obj = { children: null };
-      items[1] = outer1_6(_undefined(locationFromEvent[12]).Text, { accessibilityElementsHidden: true, importantForAccessibility: "no", variant: "text-sm/medium", color: "text-default", children: result });
+      items[1] = outer1_6(_undefined(_undefined2[12]).Text, { accessibilityElementsHidden: true, importantForAccessibility: "no", variant: "text-sm/medium", color: "text-default", children: tmp11 });
       obj[0] = items;
-      if (str == null) {
+      let str = c4;
+      if (c4 == null) {
         str = "preview-body";
       }
-      return outer1_7(React.Fragment, obj, str);
+      return outer1_7(locationFromEvent.Fragment, obj, str);
     };
-    let formatResult = intl4.format(tmp2(tmp3[13]).t.f55NX0, obj4);
+    let formatResult = intl4.format(tmp2(1236).t.f55NX0, obj4);
   } else {
-    const intl3 = tmp2(tmp3[13]).intl;
-    formatResult = intl3.string(tmp2(tmp3[13]).t.KDPFi9);
+    const intl3 = tmp2(1236).intl;
+    formatResult = intl3.string(tmp2(1236).t.KDPFi9);
   }
   obj1[4] = formatResult;
-  items2[1] = callback(_require(locationFromEvent[12]).Text, obj1);
+  items2[1] = callback(_Text.Text, obj1);
   obj[1] = items2;
-  return closure_7(View, obj);
+  return closure_7(c4, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: null, centered: null, centerContainer: null, flex: null, header: null, headerTitle: null, headerSubtitle: null, eventContainer: null, channelContainer: null, channelIcon: null, buttonContainer: null, error: null };

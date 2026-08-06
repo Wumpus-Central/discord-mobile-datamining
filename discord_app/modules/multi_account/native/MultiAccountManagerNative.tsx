@@ -2,7 +2,7 @@
 import { SWITCH_ACCOUNTS_MODAL_KEY } from "MAX_ACCOUNTS";
 import ME from "ME";
 import "_initialize";
-import { registerAsset } from "../../../../_runtime/16354_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16394_registerAsset.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 
@@ -105,10 +105,10 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
   if (navigateHome) {
     obj = obj(1222);
     obj.transitionTo(constants.ME, { navigationReplace: true });
-    const MobileHomeDrawerExperiment = obj(4112).MobileHomeDrawerExperiment;
+    const MobileHomeDrawerExperiment = obj(4141).MobileHomeDrawerExperiment;
     if (MobileHomeDrawerExperiment.getConfig({ location: "multi-account" }).enableHome) {
-      tmp(4106).setHomeDrawerState(false);
-      const tmpResult = tmp(4106);
+      tmp(4135).setHomeDrawerState(false);
+      const tmpResult = tmp(4135);
     }
     tmp = obj;
   }

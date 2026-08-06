@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx
-import { Link } from "../../../../_runtime/01481_Link.js";
+import { createStandardNavigationFactories } from "../../../../_runtime/01481_createStandardNavigationFactories.js";
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");
 
 export default function useGuildsRouteGuildId() {
-  const params = Link.useRoute().params;
+  const params = createStandardNavigationFactories.useRoute().params;
   let guildId;
   if (params != null) {
     guildId = params.guildId;
@@ -11,7 +11,7 @@ export default function useGuildsRouteGuildId() {
   return guildId;
 };
 export const useGuildsRouteGuildAndChannelId = function useGuildsRouteGuildAndChannelId() {
-  const route = Link.useRoute();
+  const route = createStandardNavigationFactories.useRoute();
   let guildId;
   if (route != null) {
     const params = route.params;

@@ -63,7 +63,7 @@ export default function UserSettingsVoiceOutputOptions() {
     }
   };
   obj[1] = callback(View, obj1);
-  const items4 = [callback(stateFromStores1(5300).TableRow, obj), ];
+  const items4 = [callback(stateFromStores1(5354).TableRow, obj), ];
   let tmp9Result = null != stateFromStores1;
   if (tmp9Result) {
     const obj3 = { label: null, subLabel: null };
@@ -76,9 +76,9 @@ export default function UserSettingsVoiceOutputOptions() {
     obj5[1] = callback;
     obj4[1] = tmp9(VolumeSlider, obj5);
     obj3[1] = tmp9(View, obj4);
-    tmp9Result = tmp9(tmp2(5300).TableRow, obj3);
+    tmp9Result = tmp9(tmp2(5354).TableRow, obj3);
   }
   items4[1] = tmp9Result;
   obj[2] = items4;
-  return closure_10(stateFromStores1(10712).UserSettingsTableRowGroup, obj);
+  return closure_10(stateFromStores1(10767).UserSettingsTableRowGroup, obj);
 };

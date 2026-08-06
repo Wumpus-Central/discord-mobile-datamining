@@ -67,10 +67,10 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBody() {
   const items2 = [questCreative.id, hasWatchVideoOnMobileTasks, setRestingQuestDockMode, isMobileActivityQuest, launchMobileActivity];
   const callback = obj1.useCallback(launchMobileActivity(function*() {
     const obj1 = { questContentCTA: null, questContent: null, sourceQuestContent: null };
-    obj1[0] = outer1_0(7081).QuestContentCTA.ACCEPT_QUEST;
-    obj1[1] = outer1_0(5116).QuestContent.QUEST_BAR_MOBILE;
-    obj1[2] = outer1_0(5116).QuestContent.QUEST_BAR_MOBILE;
-    yield outer1_0(10348).enrollInQuest(outer1_0.id, obj1);
+    obj1[0] = outer1_0(7108).QuestContentCTA.ACCEPT_QUEST;
+    obj1[1] = outer1_0(5146).QuestContent.QUEST_BAR_MOBILE;
+    obj1[2] = outer1_0(5146).QuestContent.QUEST_BAR_MOBILE;
+    yield outer1_0(10379).enrollInQuest(outer1_0.id, obj1);
     if (1 === tmp4) {
       if (arg0 === 1) {
         let dependencyMap = 3;
@@ -90,10 +90,10 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBody() {
         if (v0) {
           const obj5 = { questId: null, sourceQuestContent: null };
           obj5[0] = outer1_0.id;
-          obj5[1] = outer1_0(5116).QuestContent.QUEST_BAR_MOBILE;
-          v0(14240)(obj5);
+          obj5[1] = outer1_0(5146).QuestContent.QUEST_BAR_MOBILE;
+          v0(14277)(obj5);
           outer1_4(outer1_8.COLLAPSED);
-          const tmp12 = v0(14240);
+          const tmp12 = v0(14277);
         }
         dependencyMap = 3;
       }

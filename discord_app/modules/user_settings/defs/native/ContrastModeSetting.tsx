@@ -19,7 +19,7 @@ createToggle = {
     return jsx(Button.BetaTag, { size: null });
   },
   useProps: function useContrastSettingProps() {
-    return React.useMemo(() => ({ value: contrast.contrast, onSlidingComplete: callback(13589).setContrast, minimumValue: 0, maximumValue: 2, step: 0.1, startIcon: callback2(callback(14423).CircleMinusIcon, {}), endIcon: callback2(callback(9416).CirclePlusIcon, {}) }), []);
+    return React.useMemo(() => ({ value: contrast.contrast, onSlidingComplete: callback(13626).setContrast, minimumValue: 0, maximumValue: 2, step: 0.1, startIcon: callback2(callback(14460).CircleMinusIcon, {}), endIcon: callback2(callback(9445).CirclePlusIcon, {}) }), []);
   }
 };
 createToggle = createToggle.createSlider(createToggle);

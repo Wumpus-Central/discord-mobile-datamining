@@ -85,7 +85,7 @@ let closure_13 = importAllResult.memo((section) => {
   obj[2] = formatToPlainStringResult;
   const items2 = [tmp.item, active ? tmp.activeItem : tmp.fadedItem];
   obj[3] = callback(stateFromStores, { style: items2, children: tmp6 });
-  return callback(section(4797).PressableOpacity, obj, section.name);
+  return callback(section(4827).PressableOpacity, obj, section.name);
 });
 let obj2 = { opacity: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
 let result = require("handleThemeChange").fileFinishedImporting("modules/application_commands/native/ApplicationCommandsCategories.tsx");

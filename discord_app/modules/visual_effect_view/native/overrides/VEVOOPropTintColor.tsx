@@ -1,4 +1,4 @@
-// discord_app/modules/visual_effect_view/native/overrides/VEVOOPropBlurTintRgba.tsx
+// discord_app/modules/visual_effect_view/native/overrides/VEVOOPropTintColor.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
@@ -22,7 +22,7 @@ let obj = { tintColor: null };
 obj = { width: require("Themes").space.PX_32, height: require("Themes").space.PX_32, backgroundColor: require("Themes").unsafe_rawColors.PRIMARY_700, borderRadius: require("Themes").radii.sm };
 obj[0] = obj;
 let closure_11 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function VEVOOPropBlurTintRgba() {
+const memoResult = importAllResult.memo(function VEVOOPropTintColor() {
   let require;
   let tmp7;
   let obj = VisualEffectViewOverrideOverlay_;
@@ -30,40 +30,40 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurTintRgba() {
   let obj1 = importAllResult;
   let tmp = callback3();
   [tmp7, require] = first1(importAllResult.useState(false), 2);
-  let str = callback().blurTintRgbaOverrideHex;
+  let str = callback().tintColorOverrideHex;
   if (str == null) {
     str = "black";
   }
   let tmp5Result = tmp5(importAllResult.useState(str), 2);
   const first = tmp5Result[0];
   const dependencyMap = tmp5Result[1];
-  tmp5Result = tmp5(obj1.useState(callback().blurTintRgbaOverrideOpacity), 2);
+  tmp5Result = tmp5(obj1.useState(callback().tintColorOverrideOpacity), 2);
   first1 = tmp5Result[0];
   const tmp6 = first1(importAllResult.useState(false), 2);
   const tmp8 = callback;
-  let closure_5 = obj1.useCallback((blurTintRgbaOverrideHex, blurTintRgbaOverrideOpacity) => {
-    if (null != blurTintRgbaOverrideHex) {
-      dependencyMap(blurTintRgbaOverrideHex);
+  let closure_5 = obj1.useCallback((tintColorOverrideHex, tintColorOverrideOpacity) => {
+    if (null != tintColorOverrideHex) {
+      dependencyMap(tintColorOverrideHex);
     }
-    if (null != blurTintRgbaOverrideOpacity) {
-      callback2(blurTintRgbaOverrideOpacity);
+    if (null != tintColorOverrideOpacity) {
+      callback2(tintColorOverrideOpacity);
     }
     let hexToRgbaStringResult;
-    if (null != blurTintRgbaOverrideHex) {
-      if (null != blurTintRgbaOverrideOpacity) {
-        let obj = outer1_0(4099);
-        hexToRgbaStringResult = obj.hexToRgbaString(blurTintRgbaOverrideHex, blurTintRgbaOverrideOpacity);
+    if (null != tintColorOverrideHex) {
+      if (null != tintColorOverrideOpacity) {
+        let obj = outer1_0(4128);
+        hexToRgbaStringResult = obj.hexToRgbaString(tintColorOverrideHex, tintColorOverrideOpacity);
       }
     }
     obj = {};
     const merged = Object.assign(outer1_6());
-    obj.blurTintRgbaOverrideOpacity = blurTintRgbaOverrideOpacity;
-    obj.blurTintRgbaOverrideHex = blurTintRgbaOverrideHex;
-    obj.blurTintRgbaOverride = hexToRgbaStringResult;
+    obj.tintColorOverrideOpacity = tintColorOverrideOpacity;
+    obj.tintColorOverrideHex = tintColorOverrideHex;
+    obj.tintColorOverride = hexToRgbaStringResult;
     if (null == hexToRgbaStringResult) {
       obj = {};
       const merged1 = Object.assign(obj);
-      obj.blurTintRgbaOverride = "rgba(0, 0, 0, 0)";
+      obj.tintColorOverride = "rgba(0, 0, 0, 0)";
       outer1_7(obj);
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
@@ -104,7 +104,7 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurTintRgba() {
   const ref = obj1.useRef(first1);
   const tmp14 = closure_10;
   const tmp15 = closure_9;
-  obj2[3] = callback2(first(14939), {
+  obj2[3] = callback2(first(14977), {
     disabled: !tmp7,
     initialValue: obj1.useRef(first1),
     onValueChange(arg0) {
@@ -117,7 +117,7 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurTintRgba() {
   obj[5] = !tmp7;
   obj[6] = function onPress() {
     const obj = { color: null, onSelect: null };
-    const tmp = first(13782);
+    const tmp = first(13819);
     obj[0] = outer1_0(688).hex2int(first);
     obj[1] = function onSelect(color) {
       callback(outer1_0(outer1_2[13]).int2hex(color), _slicedToArray);
@@ -126,6 +126,6 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurTintRgba() {
   };
   return callback2(Form.FormRow, obj);
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOPropBlurTintRgba.tsx");
+const result = require("get ActivityIndicator").fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOPropTintColor.tsx");
 
 export default memoResult;

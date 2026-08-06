@@ -23,9 +23,9 @@ const memoResult = importAllResult.memo((channel) => {
   let dependencyMap;
   let nextRecurrenceIdInEvent;
   let tmp = callback3();
-  let obj = channel(8932);
+  let obj = channel(8961);
   activeEvent = obj.useActiveEvent(channel.id);
-  let obj1 = channel(8932);
+  let obj1 = channel(8961);
   const imminentUpcomingGuildEvents = obj1.useImminentUpcomingGuildEvents(channel.id);
   let obj2 = channel(589);
   const items = [handleConnectionOpen];
@@ -39,8 +39,8 @@ const memoResult = importAllResult.memo((channel) => {
     tmp7 = first;
   }
   dependencyMap = tmp7;
-  let tmp2Result = tmp2(8880);
-  tmp2Result = tmp2(8836);
+  let tmp2Result = tmp2(8909);
+  tmp2Result = tmp2(8865);
   nextRecurrenceIdInEvent = tmp2Result.getNextRecurrenceIdInEvent(tmp7);
   const items1 = [tmp7, channel, activeEvent, nextRecurrenceIdInEvent];
   [][0] = tmp7;
@@ -67,12 +67,12 @@ const memoResult = importAllResult.memo((channel) => {
     obj[2] = tmp.header;
     obj = { event: null, showUserCount: false };
     obj[0] = tmp7;
-    const items2 = [callback2(tmp2(8851).GuildEventCardHeader, obj), , ];
+    const items2 = [callback2(tmp2(8880).GuildEventCardHeader, obj), , ];
     obj1 = { event: null, descriptionContainerStyle: null, condensed: null };
     obj1[0] = tmp7;
     obj1[1] = tmp.descriptionContainerStyle;
     obj1[2] = tmp18Result;
-    items2[1] = callback2(tmp2(8851).GuildEventCardMetaInfo, obj1);
+    items2[1] = callback2(tmp2(8880).GuildEventCardMetaInfo, obj1);
     if (tmp18Result) {
       tmp18Result = canManageGuildEventResult;
     }
@@ -86,12 +86,12 @@ const memoResult = importAllResult.memo((channel) => {
       const intl = tmp2(1236).intl;
       obj3[0] = intl.string(tmp2(1236).t.cK1GGY);
       obj3[1] = callback;
-      obj2[1] = tmp18(tmp2(4665).Button, obj3);
+      obj2[1] = tmp18(tmp2(4695).Button, obj3);
       tmp18Result = tmp18(View, obj2);
     }
     items2[2] = tmp18Result;
     obj[3] = items2;
-    return closure_8(tmp2(4797).PressableOpacity, obj);
+    return closure_8(tmp2(4827).PressableOpacity, obj);
   }
   canManageGuildEventResult = tmp2Result.useManageResourcePermissions(channel).canManageGuildEvent(tmp7);
 });

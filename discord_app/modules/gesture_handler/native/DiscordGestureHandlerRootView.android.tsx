@@ -2,7 +2,7 @@
 import "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
-import { Directions } from "../../../../_runtime/05353_Directions.js";
+import { Directions } from "../../../../_runtime/05407_Directions.js";
 import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/DiscordGestureHandlerRootViewNativeComponent.tsx";
 
 const require = arg1;

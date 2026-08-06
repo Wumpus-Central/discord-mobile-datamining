@@ -32,7 +32,7 @@ function PollDurationRadioGroup(onChange) {
     obj[1] = tmp2;
     return callback(onChange(table[7]).TableRadioRow, obj, tmp);
   });
-  return jsx(onChange(7767).TableRadioGroup, { title: null, hasIcons: false, onChange: null, defaultValue: null, children: null });
+  return jsx(onChange(7908).TableRadioGroup, { title: null, hasIcons: false, onChange: null, defaultValue: null, children: null });
 }
 const result = require("usePollDurationOptions").fileFinishedImporting("modules/polls/native/PollDurationActionSheet.tsx");
 

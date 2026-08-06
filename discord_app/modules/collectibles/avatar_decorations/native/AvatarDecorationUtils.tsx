@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx
 import { DECORATION_TO_AVATAR_RATIO as closure_3 } from "DECORATION_TO_AVATAR_RATIO";
-import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../../_runtime/01988_asyncRequireImpl.js";
 import { Button } from "../../../../design/void/native.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 
@@ -51,5 +51,5 @@ export const openAvatarDecorationActionSheet = function openAvatarDecorationActi
   ({ user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations } = arg0);
   ACTION_SHEET_HEIGHT_HALF.hideActionSheet();
   const obj = ACTION_SHEET_HEIGHT_HALF;
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(8042, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(8183, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
 };

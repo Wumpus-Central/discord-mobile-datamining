@@ -58,13 +58,13 @@ export default function UserSettingsAccountUnverifiedHeader() {
     obj = { style: null, variant: "text-xs/bold", color: "text-overlay-light", children: null };
     obj[0] = tmp.accountWarningText;
     obj[3] = tmp4.title;
-    const items1 = [callback(tmp2(4251).Text, obj), ];
+    const items1 = [callback(tmp2(4281).Text, obj), ];
     const obj1 = { style: null, variant: "text-xs/medium", color: "text-overlay-light", children: null };
     obj1[0] = tmp.accountWarningButton;
     obj1[3] = tmp4.button;
-    items1[1] = callback(tmp2(4251).Text, obj1);
+    items1[1] = callback(tmp2(4281).Text, obj1);
     obj[3] = items1;
-    tmp5 = callback2(tmp2(4797).PressableOpacity, obj);
+    tmp5 = callback2(tmp2(4827).PressableOpacity, obj);
   }
   return tmp5;
 };

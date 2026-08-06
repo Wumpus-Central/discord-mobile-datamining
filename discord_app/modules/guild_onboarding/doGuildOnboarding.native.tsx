@@ -5,14 +5,14 @@ import handleConnectionOpen from "handleConnectionOpen";
 import shouldShowOnboarding from "shouldShowOnboarding";
 import { GUILD_ONBOARDING_MODAL_KEY as closure_7 } from "GUILD_ONBOARDING_MODAL_KEY";
 import ME from "ME";
-import { 05193__ } from "../../../_runtime/metro/05193__.js";
+import { 05223__ } from "../../../_runtime/metro/05223__.js";
 import { waitForOnboardingCompletion } from "doGuildOnboardingHelpers.tsx";
 
 let c9;
 let metroImportAll;
 const require = arg1;
 function getBaseAnimationData() {
-  return JSON.parse(JSON.stringify(05193__));
+  return JSON.parse(JSON.stringify(05223__));
 }
 function _doGuildOnboarding() {
   let self = this;
@@ -66,14 +66,14 @@ function _doGuildOnboarding() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj8 = lib(4223);
+              let obj8 = lib(4253);
               obj8.hideActionSheet();
-              lib(4460).popAll();
-              const obj10 = lib(4460);
+              lib(4490).popAll();
+              const obj10 = lib(4490);
               c5 = 2;
               c6 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = guildId(5185).waitForGuild(closure_0);
+              obj2[0] = guildId(5215).waitForGuild(closure_0);
               return obj2;
             }
           } else {
@@ -95,7 +95,7 @@ function _doGuildOnboarding() {
                   hasItem = features.has(constants.COMMUNITY);
                 }
                 if (hasItem) {
-                  let obj5 = guildId(5194);
+                  let obj5 = guildId(5224);
                   c5 = 3;
                   c6 = 1;
                   const obj4 = { value: null, done: false };
@@ -265,7 +265,7 @@ function _fetchLandingAsset() {
           } else {
             dependencyMap = arg1;
             const _HermesInternal = HermesInternal;
-            const tmp12 = callback(5198);
+            const tmp12 = callback(5228);
             c3 = 0;
             c5 = 3;
             obj = { value: null, done: true };
@@ -311,7 +311,7 @@ function openAndWaitForOnboarding(arg0) {
     obj = {
       guildId: tmp2,
       backShouldLeaveGuild: true,
-      onFinish(nativeEvent, arg1, arg2) {
+      onFinish() {
 
       },
       landingAnimation: outer1_12[tmp2],

@@ -37,14 +37,14 @@ function ContactSyncNameInputScreen() {
         let closure_1 = tmp3;
         callback(true);
         let c3 = 1;
-        yield outer1_1(11923).updateName(callback);
+        yield outer1_1(11957).updateName(callback);
         if (1 === tmp7) {
           c3 = 0;
-          const obj1 = outer1_1(3956);
+          const obj1 = outer1_1(3985);
           const obj2 = { key: "ERROR_GENERIC_TITLE", content: null, icon: null };
           const intl = callback(1236).intl;
           obj2[1] = intl.string(callback(1236).t.R0RpRX);
-          obj2[2] = outer1_1(8228);
+          obj2[2] = outer1_1(8368);
           obj1.open(obj2);
           callback(false);
           let c4 = 3;

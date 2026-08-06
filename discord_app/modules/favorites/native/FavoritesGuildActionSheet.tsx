@@ -24,9 +24,9 @@ function FavoritesGuildActionSheet() {
   obj[0] = callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
   obj = { label: tmp2.label, subLabel: tmp2.subLabel, icon: null, variant: null, onPress: null };
   if (tmp2.isPreview) {
-    let EyeSlashIcon = tmp5(5255).XSmallIcon;
+    let EyeSlashIcon = tmp5(5309).XSmallIcon;
   } else {
-    EyeSlashIcon = tmp5(8278).EyeSlashIcon;
+    EyeSlashIcon = tmp5(8418).EyeSlashIcon;
   }
   obj[2] = callback(ActionSheetRowIcon.ActionSheetRow.Icon, { IconComponent: EyeSlashIcon });
   let str = "danger";
@@ -44,13 +44,13 @@ function FavoritesGuildActionSheet() {
     const obj1 = { label: null, subLabel: null, icon: null, variant: "danger", onPress: null };
     ({ label: obj4[0], subLabel: obj4[1] } = tmp3);
     const obj2 = { IconComponent: null };
-    obj2[0] = tmp5(4214).TrashIcon;
-    obj1[2] = tmp4(tmp5(5633).ActionSheetRow.Icon, obj2);
+    obj2[0] = tmp5(4244).TrashIcon;
+    obj1[2] = tmp4(tmp5(5687).ActionSheetRow.Icon, obj2);
     obj1[4] = function onPress() {
       tmp3(outer1_2[10]).hideActionSheet(outer1_5);
       tmp3.perform();
     };
-    tmp4Result = tmp4(tmp5(5633).ActionSheetRow, obj1);
+    tmp4Result = tmp4(tmp5(5687).ActionSheetRow, obj1);
   }
   items[1] = tmp4Result;
   obj[1] = closure_4(ActionSheetRowIcon.ActionSheetRow.Group, { hasIcons: true, children: items });

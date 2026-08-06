@@ -1,6 +1,6 @@
 // discord_app/modules/guild_antiraid/GuildAntiRaidUtils.tsx
 import GUILD_REPORT_RAID_MOBILE_KEY from "GUILD_REPORT_RAID_MOBILE_KEY";
-import { t } from "../../../_runtime/03837_t.js";
+import { t } from "../../../_runtime/03866_t.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { GuildIncidentActionSources } from "GuildAntiRaidTypes.tsx";
 
@@ -12,19 +12,19 @@ let obj = { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit"
 const result = require("GuildIncidentActionSources").fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidUtils.tsx");
 
 export const DATE_CONFIG = obj;
-export const hasDetectedActivity = function hasDetectedActivity(stateFromStores1) {
-  let tmp = null != stateFromStores1.dmSpamDetectedAt;
+export const hasDetectedActivity = function hasDetectedActivity(incidentsData) {
+  let tmp = null != incidentsData.dmSpamDetectedAt;
   if (tmp) {
-    const obj = t(stateFromStores1.dmSpamDetectedAt);
-    tmp = t(stateFromStores1.dmSpamDetectedAt).add(closure_3, "hours") > t();
-    const addResult = t(stateFromStores1.dmSpamDetectedAt).add(closure_3, "hours");
+    const obj = t(incidentsData.dmSpamDetectedAt);
+    tmp = t(incidentsData.dmSpamDetectedAt).add(closure_3, "hours") > t();
+    const addResult = t(incidentsData.dmSpamDetectedAt).add(closure_3, "hours");
   }
   if (!tmp) {
-    let tmp6 = null != stateFromStores1.raidDetectedAt;
+    let tmp6 = null != incidentsData.raidDetectedAt;
     if (tmp6) {
-      const obj2 = t(stateFromStores1.raidDetectedAt);
-      tmp6 = t(stateFromStores1.raidDetectedAt).add(closure_3, "hours") > t();
-      const addResult1 = t(stateFromStores1.raidDetectedAt).add(closure_3, "hours");
+      const obj2 = t(incidentsData.raidDetectedAt);
+      tmp6 = t(incidentsData.raidDetectedAt).add(closure_3, "hours") > t();
+      const addResult1 = t(incidentsData.raidDetectedAt).add(closure_3, "hours");
     }
     tmp = tmp6;
   }
@@ -79,20 +79,20 @@ export const getDisabledInterventions = function getDisabledInterventions(pauseI
   }
   return items;
 };
-export const isUnderLockdown = function isUnderLockdown(guildIncident) {
-  let tmp = null != guildIncident.dmsDisabledUntil;
+export const isUnderLockdown = function isUnderLockdown(incidentsData) {
+  let tmp = null != incidentsData.dmsDisabledUntil;
   if (tmp) {
     const _Date = Date;
-    const date = new Date(guildIncident.dmsDisabledUntil);
+    const date = new Date(incidentsData.dmsDisabledUntil);
     const _Date2 = Date;
     const date1 = new Date();
     tmp = date > date1;
   }
   if (!tmp) {
-    let tmp11 = null != guildIncident.invitesDisabledUntil;
+    let tmp11 = null != incidentsData.invitesDisabledUntil;
     if (tmp11) {
       const _Date3 = Date;
-      const date2 = new Date(guildIncident.invitesDisabledUntil);
+      const date2 = new Date(incidentsData.invitesDisabledUntil);
       const _Date4 = Date;
       const date3 = new Date();
       tmp11 = date2 > date3;

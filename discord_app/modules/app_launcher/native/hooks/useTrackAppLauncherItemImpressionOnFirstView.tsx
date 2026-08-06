@@ -2,10 +2,10 @@
 import noop from "noop";
 
 const require = arg1;
-const result = require("Link").fileFinishedImporting("modules/app_launcher/native/hooks/useTrackAppLauncherItemImpressionOnFirstView.tsx");
+const result = require("createStandardNavigationFactories").fileFinishedImporting("modules/app_launcher/native/hooks/useTrackAppLauncherItemImpressionOnFirstView.tsx");
 
 export const useTrackAppLauncherItemImpressionOnFirstView = function useTrackAppLauncherItemImpressionOnFirstView() {
-  let obj = entrypoint(9437);
+  let obj = entrypoint(9466);
   entrypoint = obj.useAppLauncherContext().entrypoint;
   const dependencyMap = React.useRef(new Set());
   const set = new Set();

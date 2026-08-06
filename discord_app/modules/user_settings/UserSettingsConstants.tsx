@@ -15,7 +15,7 @@ export const UserSettingsTypes = { PRELOADED_USER_SETTINGS: 1, [1]: "PRELOADED_U
 export const PrivacySettingSurfaces = { USER_SETTINGS_PRIVACY_SAFETY: "user_settings_privacy_safety", USER_SETTINGS_ACTIVITY_PRIVACY: "user_settings_activity_privacy", SERVER_PRIVACY_MODAL: "server_privacy_modal" };
 export const UserSettingsDelay = { INFREQUENT_USER_ACTION: 0, [0]: "INFREQUENT_USER_ACTION", FREQUENT_USER_ACTION: 10, [10]: "FREQUENT_USER_ACTION", SLOW_USER_ACTION: 20, [20]: "SLOW_USER_ACTION", AUTOMATED: 30, [30]: "AUTOMATED", DAILY: 86400, [86400]: "DAILY" };
 export const createEmptyEditInfo = function createEmptyEditInfo() {
-  const obj = { protoToSave: "Array", timeout: "PX_8", timeoutDelay: Number.MIN_SAFE_INTEGER, rateLimited: null, cleanupFuncs: false, errorCallbacks: false, loaded: false, loading: "accessible", triggeredMigrations: "y", offlineEditDataVersion: "GAME_POPOUT" };
+  const obj = { protoToSave: "Array", timeout: "PX_8", timeoutDelay: Number.MIN_SAFE_INTEGER, rateLimited: null, cleanupFuncs: false, errorCallbacks: false, loaded: false, loading: "channel", triggeredMigrations: "IconComponent", offlineEditDataVersion: "Boolean" };
   obj[4] = [];
   obj[5] = [];
   return obj;

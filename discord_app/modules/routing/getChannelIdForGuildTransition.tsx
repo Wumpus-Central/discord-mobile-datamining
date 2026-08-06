@@ -1,4 +1,5 @@
 // discord_app/modules/routing/getChannelIdForGuildTransition.tsx
+import initializeFromUserSettings from "initializeFromUserSettings";
 import shouldShowOnboarding from "shouldShowOnboarding";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";
@@ -7,22 +8,23 @@ import handleConnectionOpen from "handleConnectionOpen";
 import makeSortedChannel from "makeSortedChannel";
 import { ME } from "ME";
 import { StaticChannelRoute } from "set";
+import { getFavoritesAwareGuildName } from "../favorites/FavoritesUtils.tsx";
 import { useCanSeeOnboardingHome } from "../guild_onboarding_home/OnboardingHomeUtils.tsx";
 import { getPrice } from "../slayer_storefront/SlayerStorefrontUtils.tsx";
 
 const require = arg1;
-const result = require("comparator").fileFinishedImporting("modules/routing/getChannelIdForGuildTransition.tsx");
+const result = require("ensureGuildLoaded").fileFinishedImporting("modules/routing/getChannelIdForGuildTransition.tsx");
 
-export const getChannelIdForGuildTransition = function getChannelIdForGuildTransition(id) {
-  channelId = channelId.getChannelId(id);
-  defaultChannel = defaultChannel.getDefaultChannel(id);
-  id = undefined;
+export const getChannelIdForGuildTransition = function getChannelIdForGuildTransition(guildId) {
+  channelId = channelId.getChannelId(guildId);
+  defaultChannel = defaultChannel.getDefaultChannel(guildId);
+  let id;
   if (defaultChannel != null) {
     id = defaultChannel.id;
   }
   if (id == null) {
     let tmp5;
-    if (id === ME) {
+    if (guildId === ME) {
       privateChannelIds = privateChannelIds.getPrivateChannelIds();
       let first;
       if (privateChannelIds.length > 0) {
@@ -33,34 +35,39 @@ export const getChannelIdForGuildTransition = function getChannelIdForGuildTrans
     id = tmp5;
   }
   if (channelId === StaticChannelRoute.GUILD_ONBOARDING) {
-    if (!shouldShowOnboarding.shouldShowOnboarding(id)) {
+    if (!shouldShowOnboarding.shouldShowOnboarding(guildId)) {
       return id;
     }
   }
   if (channelId === StaticChannelRoute.GUILD_HOME) {
-    if (!obj.canSeeOnboardingHome(id)) {
+    if (!obj.canSeeOnboardingHome(guildId)) {
       return id;
     }
     obj = useCanSeeOnboardingHome;
   }
   if (channelId === StaticChannelRoute.GUILD_SPACE) {
-    if (obj4.canUseGuildSpace(guild.getGuild(id), "getChannelIdForGuildTransition")) {
+    if (obj5.canUseGuildSpace(guild.getGuild(guildId), "getChannelIdForGuildTransition")) {
       id = channelId;
     }
     return id;
   } else {
     if (channelId === tmp8.GAME_SHOP) {
-      if (obj2.canSeeGameShop(id)) {
+      if (obj2.canSeeGameShop(guildId)) {
         return channelId;
       }
       obj2 = getPrice;
     }
     channel = channel.getChannel(channelId);
-    if (null == channel) {
-      let tmp15 = id;
-    } else {
-      tmp15 = channelId;
+    if (null != channel) {
+      if (!channel.isGuildVocal()) {
+        let tmp17 = channelId;
+        if (obj4.isFavoritesGuildId(guildId)) {
+          tmp17 = channelId;
+        }
+        obj4 = getFavoritesAwareGuildName;
+      }
+      return tmp17;
     }
-    return tmp15;
+    tmp17 = id;
   }
 };

@@ -110,7 +110,7 @@ function _validatePurchase() {
           } else if (2 === tmp8) {
             c4 = 0;
             c6 = c3;
-            const tmp18 = new lib(7229)(c6);
+            const tmp18 = new lib(7256)(c6);
             throw tmp18;
           } else if (arg0 === 1) {
             c6 = 3;

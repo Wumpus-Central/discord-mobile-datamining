@@ -3,10 +3,10 @@ import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/11545_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/15277_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/15278_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/15279_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11579_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/15315_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/15316_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/15317_registerAsset.js";
 import { preload } from "../../../components_native/common/FastImage.tsx";
 import { MAX_RESULTS_PER_PAGE } from "../../guild_member_verification/MemberVerificationTypes.tsx";
 
@@ -24,13 +24,13 @@ export default function GuildsBarGuildJoinRequestBadge(joinRequestState) {
   const tmp = createCacheKey();
   if (MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.REJECTED === joinRequestState) {
     let tmp4 = registerAsset;
-  } else if (tmp2(4075).GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
+  } else if (tmp2(4104).GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
     tmp4 = registerAsset;
-  } else if (tmp2(4075).GuildJoinRequestApplicationStatuses.STARTED === joinRequestState) {
+  } else if (tmp2(4104).GuildJoinRequestApplicationStatuses.STARTED === joinRequestState) {
     tmp4 = registerAsset;
   } else {
     tmp4 = null;
-    if (tmp2(4075).GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
+    if (tmp2(4104).GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
       tmp4 = registerAsset;
     }
   }

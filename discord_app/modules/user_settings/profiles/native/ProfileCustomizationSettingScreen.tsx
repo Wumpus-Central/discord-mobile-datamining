@@ -219,7 +219,7 @@ const memoResult = importAllResult.memo(() => {
   if (stateFromStores) {
     stateFromStores = !tmp20;
   }
-  importDefault(nativeStackNavigation[30])(stateFromStores, (data) => {
+  const preventRemove = _require(nativeStackNavigation[30]).usePreventRemove(stateFromStores, (data) => {
     const action = data.data.action;
     const obj = { hasEdits: stateFromStores, resetPending: null, onHasEdits: null, onConfirm: null };
     obj[1] = callback(nativeStackNavigation[20]).resetAllPending;

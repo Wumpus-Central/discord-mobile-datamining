@@ -29,7 +29,7 @@ function WarningBox(application) {
     obj[1] = tmp.warningBox;
     const intl = getSystemLocale.intl;
     if (mobileAccountLinkingDisabled) {
-      BMMo2K = name(3193).BMMo2K;
+      BMMo2K = name(3222).BMMo2K;
       tmp2 = application == tmp2;
       name = undefined;
       if (!tmp2) {

@@ -90,78 +90,62 @@ MinimalMessageRecord.prototype["hasFlag"] = function hasFlag(arg0) {
 };
 class MessageRecord extends MinimalMessageRecord {
   constructor(arg0) {
-    tmp4 = new MessageRecord(global, tmp3, tmp2, new.target, tmp);
+    tmp2 = new MessageRecord(global, new.target, tmp, global, new.target);
     // ThrowIfThisInitialized (0x7c)
-    ({ id: tmp4.id, channel_id: tmp4.channel_id, author: tmp4.author, customRenderedContent: tmp4.customRenderedContent } = global);
-    tmp4.mentions = global.mentions || [];
-    tmp4.mentionRoles = global.mentionRoles || [];
-    tmp4.mentionChannels = global.mentionChannels || [];
-    if (global.mentionGames instanceof Map) {
-      mentionGames = global.mentionGames;
-    } else {
-      mentionGames = global.mentionGames;
-      tmp5 = null;
-      if (mentionGames == null) {
-        mentionGames = [];
-      }
-      tmp6 = new.target;
-      tmp7 = new.target;
-      mentionGames = new Map(mentionGames.map((id) => {
-        const items = [id.id, id];
-        return items;
-      }));
-    }
-    tmp4.mentionGames = mentionGames;
-    tmp4.mentioned = global.mentioned || false;
-    tmp4.pinned = global.pinned || false;
-    tmp4.mentionEveryone = global.mentionEveryone || false;
-    tmp4.tts = global.tts || false;
-    tmp4.giftCodes = global.giftCodes || [];
+    ({ id: tmp2.id, channel_id: tmp2.channel_id, author: tmp2.author, customRenderedContent: tmp2.customRenderedContent } = global);
+    tmp2.mentions = global.mentions || [];
+    tmp2.mentionRoles = global.mentionRoles || [];
+    tmp2.mentionChannels = global.mentionChannels || [];
+    tmp2.mentioned = global.mentioned || false;
+    tmp2.pinned = global.pinned || false;
+    tmp2.mentionEveryone = global.mentionEveryone || false;
+    tmp2.tts = global.tts || false;
+    tmp2.giftCodes = global.giftCodes || [];
     SENT = global.state;
     if (!SENT) {
-      tmp8 = MessageStates;
+      tmp3 = MessageStates;
       SENT = MessageStates.SENT;
     }
-    tmp4.state = SENT;
+    tmp2.state = SENT;
     nonce = global.nonce;
-    tmp4.nonce = nonce;
-    tmp4.blocked = global.blocked || false;
-    tmp4.ignored = global.ignored || false;
-    tmp4.call = global.call || null;
-    tmp4.bot = global.bot || false;
-    tmp4.webhookId = global.webhookId || null;
-    tmp4.reactions = global.reactions || [];
-    tmp4.applicationId = global.application_id || global.applicationId || null;
-    tmp4.application = global.application || null;
-    tmp4.activity = global.activity || null;
-    tmp4.activityInstance = global.activity_instance || global.activityInstance || null;
-    tmp4.messageReference = global.messageReference || null;
-    tmp4.isSearchHit = global.hit || global.isSearchHit || false;
-    tmp4.loggingName = global.loggingName || null;
-    ({ colorString: tmp4.colorString, nick: tmp4.nick } = global);
-    tmp4.interaction = global.interaction || null;
-    tmp4.interactionData = global.interactionData || null;
-    tmp4.interactionMetadata = global.interactionMetadata || null;
-    tmp4.interactionError = global.interactionError || null;
-    ({ roleSubscriptionData: tmp4.roleSubscriptionData, purchaseNotification: tmp4.purchaseNotification, poll: tmp4.poll } = global);
-    tmp4.sharedClientTheme = global.shared_client_theme || global.sharedClientTheme;
-    tmp4.referralTrialOfferId = global.referralTrialOfferId || null;
-    tmp4.premiumGroupInviteId = global.premiumGroupInviteId || null;
+    tmp2.nonce = nonce;
+    tmp2.blocked = global.blocked || false;
+    tmp2.ignored = global.ignored || false;
+    tmp2.call = global.call || null;
+    tmp2.bot = global.bot || false;
+    tmp2.webhookId = global.webhookId || null;
+    tmp2.reactions = global.reactions || [];
+    tmp2.applicationId = global.application_id || global.applicationId || null;
+    tmp2.application = global.application || null;
+    tmp2.activity = global.activity || null;
+    tmp2.activityInstance = global.activity_instance || global.activityInstance || null;
+    tmp2.messageReference = global.messageReference || null;
+    tmp2.isSearchHit = global.hit || global.isSearchHit || false;
+    tmp2.loggingName = global.loggingName || null;
+    ({ colorString: tmp2.colorString, nick: tmp2.nick } = global);
+    tmp2.interaction = global.interaction || null;
+    tmp2.interactionData = global.interactionData || null;
+    tmp2.interactionMetadata = global.interactionMetadata || null;
+    tmp2.interactionError = global.interactionError || null;
+    ({ roleSubscriptionData: tmp2.roleSubscriptionData, purchaseNotification: tmp2.purchaseNotification, poll: tmp2.poll } = global);
+    tmp2.sharedClientTheme = global.shared_client_theme || global.sharedClientTheme;
+    tmp2.referralTrialOfferId = global.referralTrialOfferId || null;
+    tmp2.premiumGroupInviteId = global.premiumGroupInviteId || null;
     giftInfo = global.gift_info;
     if (giftInfo == null) {
       giftInfo = global.giftInfo;
     }
-    tmp4.giftInfo = giftInfo;
-    tmp4.giftingPrompt = global.giftingPrompt || null;
-    tmp4.boostingPrompt = global.boostingPrompt || null;
-    tmp4.messageSnapshots = global.messageSnapshots || [];
-    tmp4.isUnsupported = global.isUnsupported || false;
+    tmp2.giftInfo = giftInfo;
+    tmp2.giftingPrompt = global.giftingPrompt || null;
+    tmp2.boostingPrompt = global.boostingPrompt || null;
+    tmp2.messageSnapshots = global.messageSnapshots || [];
+    tmp2.isUnsupported = global.isUnsupported || false;
     changelog_id = global.changelog_id;
     if (changelog_id == null) {
-      tmp9 = global.changelogId || null;
-      changelog_id = tmp9;
+      tmp4 = global.changelogId || null;
+      changelog_id = tmp4;
     }
-    tmp4.changelogId = changelog_id;
+    tmp2.changelogId = changelog_id;
     media_mention = global.media_mention;
     if (media_mention == null) {
       media_mention = global.mediaMention;
@@ -169,7 +153,7 @@ class MessageRecord extends MinimalMessageRecord {
     if (media_mention == null) {
       media_mention = null;
     }
-    tmp4.mediaMention = media_mention;
+    tmp2.mediaMention = media_mention;
     lobby_member = global.lobby_member;
     additional_name = undefined;
     if (lobby_member != null) {
@@ -181,8 +165,8 @@ class MessageRecord extends MinimalMessageRecord {
     if (additional_name == null) {
       additional_name = null;
     }
-    tmp4.additionalName = additional_name;
-    return tmp4;
+    tmp2.additionalName = additional_name;
+    return tmp2;
   }
 }
 const prototype = MessageRecord.prototype;
@@ -547,9 +531,6 @@ prototype["canDeleteOwnMessage"] = function canDeleteOwnMessage(id1) {
 prototype["toJS"] = function toJS() {
   const obj = {};
   const merged = Object.assign(this);
-  const mentionGames = this.mentionGames;
-  const items = [...mentionGames.values()];
-  obj.mentionGames = items;
   ({ webhookId: obj.webkhook_id, editedTimestamp: obj.edited_timestamp, mentionEveryone: obj.mention_everyone } = this);
   return obj;
 };

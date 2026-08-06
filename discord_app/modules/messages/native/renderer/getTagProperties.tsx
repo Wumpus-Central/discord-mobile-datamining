@@ -33,7 +33,7 @@ export default function getTagProperties(arg0) {
           const intl = tmp2(1236).intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(tmp4(7927)).uri;
+            uri = Image.resolveAssetSource(tmp4(8068)).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(tmp2(1236).t["9RNkeF"]);
@@ -61,7 +61,7 @@ export default function getTagProperties(arg0) {
         const intl6 = tmp2(1236).intl;
         stringResult2 = intl6.string(tmp2(1236).t.fyE8sH);
       }
-      obj = { tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: "Boolean", tagBackgroundColor: "alignItems", tagType: "<string:2214592847>", tagIconUrl: "<string:3556770644>", opTagText: "<string:16777498>", opTagTextColor: "<string:788529797>", opTagBackgroundColor: "<string:1358955304>" };
+      obj = { tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: "Boolean", tagBackgroundColor: "alignItems", tagType: null, tagIconUrl: null, opTagText: null, opTagTextColor: null, opTagBackgroundColor: null };
       obj[0] = stringResult;
       obj[1] = null;
       obj[2] = flag;
@@ -88,7 +88,7 @@ export default function getTagProperties(arg0) {
       }
       const intl5 = tmp2(1236).intl;
       stringResult3 = intl5.string(tmp2(1236).t["7s687k"]);
-      tmp2Result = tmp2(7923);
+      tmp2Result = tmp2(8064);
     }
   }
   const intl3 = tmp2(1236).intl;

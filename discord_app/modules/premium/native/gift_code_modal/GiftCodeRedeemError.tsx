@@ -3,7 +3,7 @@ import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { Link } from "../../../../../_runtime/01481_Link.js";
+import { createStandardNavigationFactories } from "../../../../../_runtime/01481_createStandardNavigationFactories.js";
 import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
@@ -29,14 +29,14 @@ const result = require("jsxProd").fileFinishedImporting("modules/premium/native/
 
 export default function GiftCodeRedeemError(children) {
   const tmp = createCacheKey();
-  let obj = Link;
+  let obj = createStandardNavigationFactories;
   const theme = obj.useTheme();
   obj = { bottom: true, style: tmp.container, children: null };
   obj = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp9Result = tmp9(10319);
+    let tmp9Result = tmp9(10350);
   } else {
-    tmp9Result = tmp9(10320);
+    tmp9Result = tmp9(10351);
   }
   const items = [closure_6(closure_3, { source: tmp9Result }), , ];
   const obj1 = { variant: "heading-xl/bold", style: tmp.header, children: null };

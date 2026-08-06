@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/RootNavigationRef.native.tsx
-import Link from "Link";
+import createStandardNavigationFactories from "createStandardNavigationFactories";
 
-Link = Link.createNavigationContainerRef();
+createStandardNavigationFactories = createStandardNavigationFactories.createNavigationContainerRef();
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/RootNavigationRef.native.tsx");
 
 export function getRootNavigationRef() {
-  return Link;
+  return createStandardNavigationFactories;
 }

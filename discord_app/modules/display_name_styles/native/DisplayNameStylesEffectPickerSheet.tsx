@@ -67,7 +67,7 @@ function EffectTile(arg0) {
     obj3[2] = tmp.betaCaption;
     const intl3 = tmp2(1236).intl;
     obj3[3] = intl3.string(tmp2(1236).t.oW0eUd);
-    hasItem = tmp8(tmp2(4251).Text, obj3);
+    hasItem = tmp8(tmp2(4281).Text, obj3);
   }
   items1[2] = hasItem;
   obj[1] = items1;
@@ -106,10 +106,10 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
   let c6;
   let closure_7;
   let tmp = createCacheKey();
-  let obj = userId(7297);
-  let obj1 = userId(14448);
+  let obj = userId(7325);
+  let obj1 = userId(14486);
   const visibleEffectOrder = obj1.useVisibleEffectOrder();
-  let obj2 = userId(14449);
+  let obj2 = userId(14487);
   const displayNameStylesNewEffects = obj2.useDisplayNameStylesNewEffects(visibleEffectOrder);
   ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
   const tmp5 = callback(first.useState(selectedEffectId), 2);
@@ -128,16 +128,16 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
     obj[0] = tmp.header;
     obj1 = { title: null, trailing: null };
     const intl = tmp2(1236).intl;
-    obj1[0] = intl.string(onSelectEffect(2613).RVtMxT);
+    obj1[0] = intl.string(onSelectEffect(2642).RVtMxT);
     obj2 = { style: null, children: null };
     obj2[0] = tmp.headerTrailing;
     const obj3 = { text: null, onPress: null, variant: "primary", size: "sm" };
     const intl2 = tmp2(1236).intl;
     obj3[0] = intl2.string(tmp2(1236).t.XqMe3N);
     obj3[1] = tmp8;
-    obj2[1] = callback2(tmp2(4665).Button, obj3);
+    obj2[1] = callback2(tmp2(4695).Button, obj3);
     obj1[1] = callback2(closure_5, obj2);
-    obj[1] = callback2(tmp2(5322).BottomSheetTitleHeader, obj1);
+    obj[1] = callback2(tmp2(5376).BottomSheetTitleHeader, obj1);
     obj[1] = callback2(closure_5, obj);
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.container;
@@ -160,10 +160,10 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
         }
       }, effectId);
     });
-    obj5[1] = callback2(tmp2(4663).Stack, obj6);
+    obj5[1] = callback2(tmp2(4693).Stack, obj6);
     obj4[1] = callback2(closure_5, obj5);
     obj[2] = callback2(closure_5, obj4);
-    tmp9 = callback2(tmp2(5323).BottomSheet, obj);
+    tmp9 = callback2(tmp2(5377).BottomSheet, obj);
   }
   return tmp9;
 };

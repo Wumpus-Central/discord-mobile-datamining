@@ -146,7 +146,7 @@ export const useGameInvitesChannelOfficialApplication = function useGameInvitesC
   }
   const obj = application(589);
   const tmp = application;
-  application = application(5596).useApplication(tmp4);
+  application = application(5650).useApplication(tmp4);
   const items2 = [application];
   return useMemo(() => {
     const merged = Object.assign(outer1_4(application, outer1_3));
@@ -211,4 +211,49 @@ export const canInviteToActivity = function canInviteToActivity(type) {
     tmp = hasFlag(type, constants.JOIN);
   }
   return tmp;
+};
+export const useGameInvitesActiveAndArchivedThreads = function useGameInvitesActiveAndArchivedThreads(isGameInvitesChannel) {
+  let closure_0 = arg1;
+  let closure_1 = arg2;
+  const isGameInvitesChannelResult = isGameInvitesChannel.isGameInvitesChannel();
+  const dependencyMap = isGameInvitesChannelResult;
+  let items = [isGameInvitesChannelResult, arg1, arg2];
+  return useMemo(() => {
+    if (closure_2) {
+      const _Date = Date;
+      const items = [];
+      const items1 = [];
+      const timestamp = Date.now();
+      const iter = dependencyMap[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let tmp11 = nextResult;
+        let tmp12 = outer1_6;
+        let channel = outer1_6.getChannel(nextResult);
+        if (null != channel) {
+          let tmp15 = callback;
+          let tmp16 = isGameInvitesChannelResult;
+          let tmp17 = channel;
+          if (callback(isGameInvitesChannelResult[11])(tmp14) <= timestamp) {
+            let tmp20 = nextResult;
+            let arr = items1.push(tmp11);
+            continue;
+          }
+        }
+        let tmp18 = nextResult;
+        arr = items.push(tmp11);
+      }
+      let obj = { activeThreadIds: null, archivedThreadIds: null };
+      obj[0] = items;
+      const items2 = [];
+      HermesBuiltin.arraySpread(callback, HermesBuiltin.arraySpread(items1, 0));
+      obj[1] = items2;
+      return obj;
+    } else {
+      obj = { activeThreadIds: null, archivedThreadIds: null };
+      obj[0] = dependencyMap;
+      obj[1] = callback;
+      return obj;
+    }
+  }, items);
 };

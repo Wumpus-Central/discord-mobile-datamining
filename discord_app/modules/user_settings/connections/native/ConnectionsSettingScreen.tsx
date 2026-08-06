@@ -1,19 +1,19 @@
 // discord_app/modules/user_settings/connections/native/ConnectionsSettingScreen.tsx
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
-import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../../_runtime/01988_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const require = arg1;
 function onPress() {
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(14081, dependencyMap.paths), "AddConnection");
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(14118, dependencyMap.paths), "AddConnection");
 }
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function ConnectionsSettingScreen() {
   stackNavigation = stackNavigation(1480).useStackNavigation();
   let obj = stackNavigation(1480);
   const tmp = stackNavigation;
-  const params = stackNavigation(6772).useSettingNavigationRoute().params;
+  const params = stackNavigation(6799).useSettingNavigationRoute().params;
   let selectedPlatformType;
   if (params != null) {
     selectedPlatformType = params.selectedPlatformType;
@@ -27,11 +27,11 @@ const memoResult = importAllResult.memo(function ConnectionsSettingScreen() {
         obj.onPress = closure_5;
         const intl = callback(1236).intl;
         obj.label = intl.string(callback(1236).t.OYkgVk);
-        return callback2(callback(8165).HeaderTextButton, obj);
+        return callback2(callback(8305).HeaderTextButton, obj);
       }
     });
   }, items);
-  return jsx(tmp(14082).UserSettingsConnections, { selectedPlatformType });
+  return jsx(tmp(14119).UserSettingsConnections, { selectedPlatformType });
 });
 const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/user_settings/connections/native/ConnectionsSettingScreen.tsx");
 

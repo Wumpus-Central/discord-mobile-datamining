@@ -1,6 +1,7 @@
 // discord_app/modules/frames/FramesManager.tsx
 import map from "map";
 import ME from "ME";
+import { TransportTypes } from "RPC_SCOPE_CONFIG";
 import "initialize";
 
 let c4;
@@ -15,34 +16,29 @@ const prototype = function FramesManager() {
       applyArgumentsResult.handleRPCDisconnect(arg0);
     },
     FRAME_LAUNCH(applicationId) {
-      const result = applyArgumentsResult(10492).trackFrameSessionStart(applicationId.applicationId);
+      const result = applyArgumentsResult(10521).trackFrameSessionStart(applicationId.applicationId);
     },
     FRAME_LAUNCH_FAIL(applicationId) {
-      const result = applyArgumentsResult(10499).discardPendingFrameLaunch(applicationId.applicationId);
+      const result = applyArgumentsResult(10531).discardPendingFrameLaunch(applicationId.applicationId);
     },
     FRAME_STOP(applicationId) {
-      applyArgumentsResult(10492).trackFrameSessionEnd(applicationId.applicationId);
+      applyArgumentsResult(10521).trackFrameSessionEnd(applicationId.applicationId);
     }
   };
-  applyArgumentsResult.handleRPCDisconnect = function handleRPCDisconnect(reason) {
-    reason = reason.reason;
-    const id = reason.application.id;
-    if (null != id) {
-      if (null != reason) {
-        const connectedFrame = outer1_3.getConnectedFrame();
-        let applicationId;
-        if (connectedFrame != null) {
-          applicationId = connectedFrame.applicationId;
-        }
-        if (applicationId === id) {
-          let obj = { applicationId: null };
-          obj[0] = id;
-          applyArgumentsResult.leaveFrame(obj);
+  applyArgumentsResult.handleRPCDisconnect = function handleRPCDisconnect(arg0) {
+    let reason;
+    let source;
+    ({ reason, source } = arg0);
+    if (null != reason) {
+      if (source.type === outer1_6.POST_MESSAGE) {
+        const frameByIframeId = outer1_3.getFrameByIframeId(source.iframeId);
+        if (null != frameByIframeId) {
+          applyArgumentsResult.leaveFrame(frameByIframeId.id);
           if (reason.code !== outer1_5.CLOSE_NORMAL) {
-            obj = outer1_1(outer1_2[5]);
+            let obj = outer1_1(outer1_2[6]);
             obj = { rpc_close_code: null, rpc_message: null, application_id: null };
             ({ code: obj2[0], message: obj2[1] } = reason);
-            obj[2] = id;
+            obj[2] = frameByIframeId.applicationId;
             obj.track(outer1_4.ACTIVITY_CLOSED_RPC_ERROR, obj);
             const result = obj3.showRPCDisconnectErrorUI(reason);
           }
@@ -56,6 +52,6 @@ const prototype = function FramesManager() {
 class prototype extends tmp3 {
 }
 prototype.displayName = "FramesManager";
-let result = require("initialize").fileFinishedImporting("modules/frames/FramesManager.tsx");
+let result = require("RPC_SCOPE_CONFIG").fileFinishedImporting("modules/frames/FramesManager.tsx");
 
 export default prototype;

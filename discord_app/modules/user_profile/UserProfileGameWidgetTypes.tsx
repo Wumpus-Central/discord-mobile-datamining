@@ -16,7 +16,7 @@ class BaseGameWidget {
 const prototype = BaseGameWidget.prototype;
 prototype["toSubmission"] = function toSubmission() {
   let obj = { id: this.id, data: null };
-  obj = { type: this.type, games: games.map((applicationId) => ({ game_id: applicationId.applicationId, comment: applicationId.comment, tags: applicationId.tags })) };
+  obj = { type: this.type, games: games.map((gameId) => ({ game_id: gameId.gameId, comment: gameId.comment, tags: gameId.tags })) };
   games = this.games;
   obj[1] = obj;
   return obj;

@@ -112,7 +112,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
         }
         continue;
       }
-      let obj1 = statesTransaction(1907);
+      let obj1 = statesTransaction(1936);
       const result = obj1.nonGuildVersionsTransaction(database);
       let obj = { id: "highest_last_message_id", versionString: null };
       obj[1] = str2;
@@ -127,7 +127,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
       const iter2 = sorted.reverse();
     }
   }
-  statesTransaction = statesTransaction(1907).readStatesTransaction(database);
+  statesTransaction = statesTransaction(1936).readStatesTransaction(database);
   statesTransaction.delete();
   const item = allReadStates.forEach((type) => statesTransaction.put("" + type.type + "-" + type.channelId, type));
 };

@@ -2,7 +2,7 @@
 import "noop";
 import AutomodEventType from "AutomodEventType";
 import { jsx } from "jsxProd";
-import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../_runtime/01988_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
 import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
 
@@ -24,7 +24,7 @@ export const openSubmitFeedback = function openSubmitFeedback(messageId, content
     automodDecision: obj
   };
   obj = { messageId, messageContent: content, decisionId, channel };
-  obj.pushLazy(asyncRequireImpl(11150, dependencyMap.paths), obj, closure_4);
+  obj.pushLazy(asyncRequireImpl(11184, dependencyMap.paths), obj, closure_4);
 };
 export function openRaidResolveModal() {
 

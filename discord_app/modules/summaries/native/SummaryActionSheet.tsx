@@ -7,7 +7,7 @@ import handleQuickSwitcherUpdate from "handleQuickSwitcherUpdate";
 import ME from "ME";
 import jsxProd from "DISCORD_EPOCH";
 import createCacheKey from "createCacheKey";
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 let c10;
@@ -191,7 +191,7 @@ export const openSummaryDividerActionSheet = function openSummaryDividerActionSh
     const _HermesInternal = HermesInternal;
     obj = { summary: null };
     obj[0] = findSummaryResult;
-    obj.openLazy(asyncRequireImpl(11001, dependencyMap.paths), "SummaryDivider" + summaryId, obj);
-    const tmp5 = asyncRequireImpl(11001, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(11033, dependencyMap.paths), "SummaryDivider" + summaryId, obj);
+    const tmp5 = asyncRequireImpl(11033, dependencyMap.paths);
   }
 };

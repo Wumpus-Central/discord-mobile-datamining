@@ -145,7 +145,7 @@ export const filterByUserId = function filterByUserId(id, guildId) {
       if (!tmp5) {
         if (null != guildId) {
           dispatcher.dispatch({ type: "AUDIT_LOG_FETCH_START" });
-          obj = { userId: null, action: "Array", targetId: "marginTop" };
+          obj = { userId: null, action: "r", targetId: "channelId" };
           obj[0] = id;
           const tmp10Result = dispatcher;
           nextPromise = makeRequest(guildId, obj).then((body) => {
@@ -177,7 +177,7 @@ export const filterByTargetId = function filterByTargetId(arg0, arg1) {
       if (!tmp5) {
         if (null != arg1) {
           dispatcher.dispatch({ type: "AUDIT_LOG_FETCH_START" });
-          obj = { userId: null, action: "Array", targetId: true };
+          obj = { userId: null, action: "Array", targetId: false };
           obj[2] = arg0;
           const tmp10Result = dispatcher;
           nextPromise = makeRequest(arg1, obj).then((body) => {

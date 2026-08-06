@@ -7,7 +7,7 @@ import { getSystemLocale } from "../intl/index.native.tsx";
 const require = arg1;
 function getGuildNameSuggestion(truncateUsername) {
   currentUser = currentUser.getCurrentUser();
-  let obj = importAll(4094);
+  let obj = importAll(4123);
   const name = obj.getName(currentUser);
   let str = "";
   if (null != name) {

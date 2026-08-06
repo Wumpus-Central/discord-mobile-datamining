@@ -78,7 +78,7 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
       }
       return () => {
         if (closure_1) {
-          outer1_0(outer1_1[8]).setPendingChanges({ avatarDecoration: "PX_8", profileEffect: "accessible", nameplate: "Boolean", profileFrame: "Symbol" });
+          outer1_0(outer1_1[8]).setPendingChanges({ avatarDecoration: "Date", profileEffect: "isArray", nameplate: "isArray", profileFrame: "ty" });
           const obj = outer1_0(outer1_1[8]);
         }
       };

@@ -112,8 +112,8 @@ prototype["getConfig"] = function getConfig() {
 prototype["getConfigForApplicationId"] = function getConfigForApplicationId(id) {
   return table8[id];
 };
-prototype["getApplicationIdFromDetectableId"] = function getApplicationIdFromDetectableId(applicationId) {
-  return table7[applicationId];
+prototype["getApplicationIdFromDetectableId"] = function getApplicationIdFromDetectableId(application_id) {
+  return table7[application_id];
 };
 prototype["getDetectableIdsToApplicationIds"] = function getDetectableIdsToApplicationIds() {
   return closure_19;

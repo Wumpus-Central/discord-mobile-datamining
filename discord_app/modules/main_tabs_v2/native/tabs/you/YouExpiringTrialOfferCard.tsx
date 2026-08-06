@@ -7,7 +7,7 @@ import { Gradients } from "items";
 import { PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID as closure_11 } from "GuildFeatures";
 import jsxProd from "PressableBase";
 import createCacheKey from "createCacheKey";
-import { t } from "../../../../../../_runtime/03837_t.js";
+import { t } from "../../../../../../_runtime/03866_t.js";
 import { useCountdown } from "../../../../../hooks/useCountdown.tsx";
 
 let c9;
@@ -44,7 +44,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
   let obj1 = navigateToPremium(647);
   let items = [shouldShowExpiringTrialOfferCard];
   stateFromStores = obj1.useStateFromStores(items, () => shouldShowExpiringTrialOfferCard.getNoticeType());
-  let obj2 = navigateToPremium(6805);
+  let obj2 = navigateToPremium(6832);
   premiumTrialOffer = obj2.usePremiumTrialOffer();
   let num = 0;
   if (null != premiumTrialOffer) {
@@ -55,7 +55,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
     }
   }
   const tmp7Result = useCountdown(num, closure_15);
-  let tmp4Result = tmp4(15731);
+  let tmp4Result = tmp4(15771);
   shouldShowExpiringTrialOfferCard = tmp4Result.useShouldShowExpiringTrialOfferCard();
   const items1 = [stateFromStores, shouldShowExpiringTrialOfferCard, premiumTrialOffer];
   const effect = stateFromStores.useEffect(() => {
@@ -82,10 +82,10 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
         } else {
           PREMIUM_TRIAL = constants.PREMIUM_TRIAL;
         }
-        const articleURL = tmp(1945).getArticleURL(PREMIUM_TRIAL);
+        const articleURL = tmp(1974).getArticleURL(PREMIUM_TRIAL);
         obj = { style: null, children: null };
         obj[0] = tmp3.header;
-        tmp4Result = tmp4(3901);
+        tmp4Result = tmp4(3930);
         const subscription_trial = premiumTrialOffer.subscription_trial;
         let interval;
         if (subscription_trial != null) {
@@ -126,7 +126,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
         const obj4 = { children: null };
         const obj5 = { variant: "heading-sm/medium", color: "text-default", children: null };
         obj5[2] = formatResult;
-        obj[1] = closure_12(tmp4(4251).Text, obj5);
+        obj[1] = closure_12(tmp4(4281).Text, obj5);
         const items2 = [closure_12(premiumTrialOffer, obj), , ];
         const obj6 = { style: null, accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, onPress: null, children: null };
         obj6[0] = tmp3.closeButton;
@@ -147,7 +147,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
         const obj7 = { width: 16, height: 16, color: null };
         obj7[2] = tmp3.closeIcon.color;
         obj6[5] = closure_12(tmp4(1297).CloseIcon, obj7);
-        items2[1] = closure_12(tmp4(4797).PressableOpacity, obj6);
+        items2[1] = closure_12(tmp4(4827).PressableOpacity, obj6);
         const obj8 = { style: null, text: null, onPress: null, renderIcon: null, renderLinearGradient: null };
         obj8[0] = tmp3.primaryCTA;
         const intl5 = tmp4(1236).intl;
@@ -186,11 +186,11 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
         const tmp15 = closure_14;
         const tmp16 = closure_13;
         const tmp18 = premiumTrialOffer;
-        const tmpResult = tmp(1945);
+        const tmpResult = tmp(1974);
         const obj9 = { style: null, children: null };
         obj9[0] = navigateToPremium.style;
         obj9[1] = closure_14(closure_13, obj4);
-        return closure_12(tmp(5642), obj9);
+        return closure_12(tmp(5696), obj9);
       }
     }
     return null;

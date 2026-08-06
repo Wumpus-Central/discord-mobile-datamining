@@ -29,7 +29,7 @@ function handleInviteData(invite) {
   if (new_member) {
     let hasFlagResult = hasFlag.hasFlag(num, set.GuildInviteFlags.IS_GUEST_INVITE);
     if (!hasFlagResult) {
-      hasFlagResult = tmp3(1384).hasFlag(num, tmp3(7667).GuildInviteFlags.IS_APPLICATION_BYPASS);
+      hasFlagResult = tmp3(1384).hasFlag(num, tmp3(7695).GuildInviteFlags.IS_APPLICATION_BYPASS);
       const tmp3Result = tmp3(1384);
     }
     new_member = !hasFlagResult;

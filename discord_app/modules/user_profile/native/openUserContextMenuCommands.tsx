@@ -8,13 +8,13 @@ export default function openUserContextMenuCommands(analyticsLocations) {
   let userId;
   analyticsLocations = analyticsLocations.analyticsLocations;
   ({ userId, selectedChannel, showUserProfile } = analyticsLocations);
-  let obj = analyticsLocations(8683);
+  let obj = analyticsLocations(8712);
   const result = obj.trackUserProfileAction({ action: "PRESS_VIEW_APP_COMMANDS", analyticsLocations });
   ACTION_SHEET_HEIGHT_HALF.hideActionSheet();
   const obj2 = ACTION_SHEET_HEIGHT_HALF;
   obj = {
     channel: selectedChannel,
-    commandType: analyticsLocations(1906).ApplicationCommandType.USER,
+    commandType: analyticsLocations(1935).ApplicationCommandType.USER,
     commandTargetId: userId,
     onClose: showUserProfile,
     onPressAppCommand() {
@@ -23,5 +23,5 @@ export default function openUserContextMenuCommands(analyticsLocations) {
       return obj.trackUserProfileAction(obj);
     }
   };
-  const result1 = analyticsLocations(4106).navigateToContextMenuCommands(obj);
+  const result1 = analyticsLocations(4135).navigateToContextMenuCommands(obj);
 };

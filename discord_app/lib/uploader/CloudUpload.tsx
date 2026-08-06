@@ -1901,7 +1901,7 @@ prototype["delete"] = function delete() {
             obj[0] = arg1;
             return obj;
           } else if (null != v0.uploadedFilename) {
-            let obj1 = v0(4843);
+            let obj1 = v0(4873);
             const uploadTarget = obj1.getUploadTarget(tmp18.item.target);
             let dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(tmp18.uploadedFilename);

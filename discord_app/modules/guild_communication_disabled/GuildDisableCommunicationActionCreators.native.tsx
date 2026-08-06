@@ -2,7 +2,7 @@
 import "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";
-import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../_runtime/01988_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
 import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
 
@@ -20,7 +20,7 @@ export const openDisableCommunication = function openDisableCommunication(userId
     obj[0] = guildId;
     obj[1] = user;
     obj[2] = cancelButtonCallback;
-    obj.pushLazy(asyncRequireImpl(11124, dependencyMap.paths), obj);
+    obj.pushLazy(asyncRequireImpl(11158, dependencyMap.paths), obj);
   }
 };
 export const openEnableCommunication = function openEnableCommunication(arg0) {

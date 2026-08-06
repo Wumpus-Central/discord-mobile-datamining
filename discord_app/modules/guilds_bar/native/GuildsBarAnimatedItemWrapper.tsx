@@ -34,7 +34,7 @@ class UnreadIndicator {
     tmp5 = id;
     token = obj.useToken(require("Themes").modules.mobile.GUILD_BAR_ITEM_SIZE);
     c4 = token;
-    tmp7 = f61254(c6());
+    tmp7 = f61399(c6());
     GUILD_BAR_ITEM_SIZE = tmp7;
     tmp8 = MOUNTED === require("wrapChildrenDefault").TransitionStates.MOUNTED;
     c6 = tmp8;
@@ -89,7 +89,7 @@ class UnreadIndicator {
     obj[5] = token;
     fn.__closure = obj;
     fn.__workletHash = 404454683979;
-    fn.__initData = f61255;
+    fn.__initData = f61400;
     items1 = [, , , ];
     items1[0] = tmp8;
     items1[1] = sharedId;
@@ -124,15 +124,15 @@ class UnreadIndicator {
     obj1[2] = MOUNTED;
     obj1[3] = require("wrapChildrenDefault").TransitionStates;
     obj1[4] = cleanUp;
-    obj1[5] = require("module_4116").runOnJS;
+    obj1[5] = require("module_4145").runOnJS;
     fn2.__closure = obj1;
     fn2.__workletHash = 10632665703864;
-    fn2.__initData = f61255;
+    fn2.__initData = f61400;
     items2 = [, ];
     items2[0] = MOUNTED;
     items2[1] = cleanUp;
     callback1 = cleanUp.useCallback(fn2, items2);
-    return c7(require("module_7791"), { collapsable: false, entering: callback, layout: callback1, style: memo, pointerEvents: "none" });
+    return c7(require("module_7932"), { collapsable: false, entering: callback, layout: callback1, style: memo, pointerEvents: "none" });
   }
 }
 function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {

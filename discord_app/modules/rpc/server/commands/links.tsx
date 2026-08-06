@@ -203,7 +203,7 @@ obj = {
     if (set.has(obj2.validateApplication(socket.application))) {
       obj = { screen: null };
       obj[0] = constants3.CONNECTIONS;
-      tmp(5910).openUserSettings(obj);
+      tmp(5937).openUserSettings(obj);
     } else {
       obj = { errorCode: null };
       obj[0] = constants2.UNAUTHORIZED_FOR_APPLICATION;
@@ -263,7 +263,7 @@ obj[RPCCommands.SHARE_LINK] = createRPCCommand.createRPCCommand(RPCCommands.SHAR
         const tmp10 = new prototype(obj, "This application cannot access this API");
         throw tmp10;
       }
-      tmpResult = tmp(7482);
+      tmpResult = tmp(7510);
     }
     const obj2 = recurseReplaceContentTree;
     tmp = require;

@@ -39,22 +39,18 @@ function handleUserStoreChange() {
   const obj = getPremiumPlanItem;
 }
 function handleSelectivelySyncedStoreChange() {
-  if (initialize.shouldSync("appearance")) {
-    const ClientThemeSettings = explicitContentFromProto.ClientThemeSettings;
-    const backgroundGradientPresetId = ClientThemeSettings.getSetting().backgroundGradientPresetId;
-    if (null == backgroundGradientPresetId) {
-      if (null == c3) {
-        return false;
-      } else {
-        c3 = undefined;
-      }
-    } else if (dependencyMap[backgroundGradientPresetId] === c3) {
+  const ClientThemeSettings = explicitContentFromProto.ClientThemeSettings;
+  const backgroundGradientPresetId = ClientThemeSettings.getSetting().backgroundGradientPresetId;
+  if (null == backgroundGradientPresetId) {
+    if (null == c3) {
       return false;
     } else {
-      c3 = tmp5;
+      c3 = undefined;
     }
-  } else {
+  } else if (dependencyMap[backgroundGradientPresetId] === c3) {
     return false;
+  } else {
+    c3 = tmp2;
   }
 }
 function handleSyncedModeChange() {
@@ -64,42 +60,38 @@ function handleSameAsDeviceThemeToggle() {
   return useIsMobileVisualRefreshExperimentEnabled.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
 }
 function handleUserSettingsProtoStoreUpdate() {
-  if (initialize.shouldSync("appearance")) {
-    const ClientThemeSettings = explicitContentFromProto.ClientThemeSettings;
-    const backgroundGradientPresetId = ClientThemeSettings.getSetting().backgroundGradientPresetId;
-    let result = useSystemTheme.useSystemTheme !== SystemThemeState.ON;
-    if (!result) {
-      result = null == backgroundGradientPresetId;
-    }
-    if (!result) {
-      let tmpResult = tmp(1347);
-      result = tmpResult.isPerModeThemingActive(isSyncedModeThemesEnabled);
-    }
-    if (!result) {
-      tmpResult = tmp(4097);
-      tmpResult.setUseSystemTheme(SystemThemeState.OFF);
-    }
-    if (null != backgroundGradientPresetId) {
-      let tmp13 = null == tmp12;
-      if (!tmp13) {
-        let id;
-        if (user != null) {
-          id = user.id;
-        }
-        let id1;
-        if (tmp12 != null) {
-          id1 = tmp12.id;
-        }
-        tmp13 = id === id1;
+  const ClientThemeSettings = explicitContentFromProto.ClientThemeSettings;
+  const backgroundGradientPresetId = ClientThemeSettings.getSetting().backgroundGradientPresetId;
+  let result = useSystemTheme.useSystemTheme !== SystemThemeState.ON;
+  if (!result) {
+    result = null == backgroundGradientPresetId;
+  }
+  if (!result) {
+    let tmpResult = tmp(1347);
+    result = tmpResult.isPerModeThemingActive(isSyncedModeThemesEnabled);
+  }
+  if (!result) {
+    tmpResult = tmp(4126);
+    tmpResult.setUseSystemTheme(SystemThemeState.OFF);
+  }
+  if (null != backgroundGradientPresetId) {
+    let tmp11 = null == tmp10;
+    if (!tmp11) {
+      let id;
+      if (user != null) {
+        id = user.id;
       }
-      if (!tmp13) {
-        user = tmp12;
+      let id1;
+      if (tmp10 != null) {
+        id1 = tmp10.id;
       }
-    } else if (null != user) {
-      user = undefined;
+      tmp11 = id === id1;
     }
-  } else {
-    return false;
+    if (!tmp11) {
+      user = tmp10;
+    }
+  } else if (null != user) {
+    user = undefined;
   }
 }
 let c14 = true;
@@ -247,7 +239,7 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(require("dis
               let c15 = true;
             }
           }
-          tmp6Result = tmp6(4094);
+          tmp6Result = tmp6(4123);
         }
         obj2 = UNSAFE_isDismissibleContentDismissed;
         tmp6 = require;

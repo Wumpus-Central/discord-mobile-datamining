@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDnDStore.tsx
 import { GuildsNodeType } from "insertUnsortedGuilds";
 import identity from "identity";
-import { isIterable } from "../../../../_runtime/03868_isIterable.js";
+import { isIterable } from "../../../../_runtime/03897_isIterable.js";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 let obj = { mode: null, initialX: 0, initialY: 0, absoluteX: 0, absoluteY: 0 };
@@ -9,7 +9,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   const _require = arg0;
   let closure_1 = arg1;
-  let obj = { dragSpecs: "Boolean", overSpecs: "sa", dropSpecs: "isArray", dragRegion: null, gestureState: null, dragDropInProgress: null, listInsets: "pel", scrollPosition: "ms", windowSize: 112.1, setStateShallow: null, dropStart: "\u{1F477}\u{1F3FF}\u200D\u2640\uFE0F", dropComplete: true };
+  let obj = { dragSpecs: "Boolean", overSpecs: "sa", dropSpecs: "isArray", dragRegion: null, gestureState: null, dragDropInProgress: null, listInsets: "casa", scrollPosition: "casa com jardim", windowSize: "constru\u00E7\u00E3o", setStateShallow: "jardim", dropStart: "lar", dropComplete: true };
   obj[3] = _ReanimatedRexport.makeMutable({ min: 0, max: 0 });
   const obj2 = _ReanimatedRexport;
   obj[4] = _ReanimatedRexport.makeMutable(obj);
@@ -55,7 +55,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       const error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      callback(tmp2[3]).batchUpdates(() => newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "marginTop" }));
+      callback(tmp2[3]).batchUpdates(() => newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "r", overSpecs: "channelId" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(outer1_5);
       const _setTimeout = setTimeout;
@@ -85,7 +85,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj[2] = obj;
     obj.addBreadcrumb(obj);
     if (null != dropSpecs) {
-      callback(outer1_2[3]).batchUpdates(() => callback({ dropSpecs: "Array" }));
+      callback(outer1_2[3]).batchUpdates(() => callback({ dropSpecs: "r" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(outer1_5);
       if (null == dragSpecs) {
@@ -103,7 +103,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   return obj;
 });
-let result = require("module_4116").fileFinishedImporting("modules/guilds_bar/native/GuildsBarDnDStore.tsx");
+let result = require("module_4145").fileFinishedImporting("modules/guilds_bar/native/GuildsBarDnDStore.tsx");
 
 export default withEqualityFn;
 export const INITIAL_GESTURE_STATE = obj;
@@ -118,7 +118,7 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
     ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
     if (null == dragSpecs) {
       if (null == dropSpecs) {
-        let obj = { isDragTarget: false, dragState: "sa", overState: "isArray", itemSize: null, dragDropInProgress: "absolute" };
+        let obj = { isDragTarget: false, dragState: "sa", overState: "isArray", itemSize: null, dragDropInProgress: true };
         obj[4] = dragDropInProgress;
         return obj;
       }

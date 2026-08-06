@@ -30,7 +30,7 @@ export const getPremiumGroupInviteEmbedText = function getPremiumGroupInviteEmbe
       user = user.getUser(found);
       let nameFromUserResult = null;
       if (null != user) {
-        let obj4 = sender(4094);
+        let obj4 = sender(4123);
         nameFromUserResult = obj4.nameFromUser(user);
       }
       tmp8 = nameFromUserResult;
@@ -55,7 +55,7 @@ export const getPremiumGroupInviteEmbedText = function getPremiumGroupInviteEmbe
     }
     return tmp15;
   } else {
-    obj = sender(4094);
+    obj = sender(4123);
     const nameFromUserResult1 = obj.nameFromUser(sender);
     const obj3 = { message: null, header: null, body: null };
     const intl = sender(1236).intl;

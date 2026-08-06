@@ -25,7 +25,7 @@ let map1;
 let closure_16 = new require("ensureGuildLoaded")("MediaPlayerManager");
 let obj = keys.create((arg0) => {
   let closure_0 = arg0;
-  const obj = {
+  return {
     activeMediaPlayerSource: "T",
     mediaSourceMessage: "Path",
     canAccessMedia: "sa",
@@ -33,15 +33,13 @@ let obj = keys.create((arg0) => {
     wasPipClosedByUser: null,
     progress: null,
     rate: "PX_8",
-    showPip: "flex",
+    showPip: "simple-action",
     closePip() {
       callback(outer1_2[13]).batchUpdates(() => callback({ showPip: false }));
     },
-    displayedMediaItemIdsPerChannel: "column",
+    displayedMediaItemIdsPerChannel: {},
     currentlyDisplayedChannelId: null
   };
-  obj[9] = {};
-  return obj;
 });
 class MediaPlayerManager extends tmp8 {
   constructor() {
@@ -348,13 +346,13 @@ prototype["getOrFetchMediaSourceMessage"] = function getOrFetchMediaSourceMessag
         const obj = { channelId: null, messageId: null };
         obj[0] = channelId;
         obj[1] = messageId;
-        const message1 = self(6811).fetchMessage(obj);
+        const message1 = self(6838).fetchMessage(obj);
         message1.then((arg0) => {
           if (null != arg0) {
             const result = self.handleMediaSourceMessageUpdated(arg0);
           }
         });
-        const obj2 = self(6811);
+        const obj2 = self(6838);
       }
       obj4 = message;
     }

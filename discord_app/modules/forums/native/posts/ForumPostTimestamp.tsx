@@ -23,5 +23,5 @@ export default function ForumPostTimestamp(thread) {
     color = "text-default";
   }
   const style = [textStyle, tmp.text];
-  return jsx(tmp2(4251).Text, { lineClamp: 1, variant: "text-xs/normal", color, style, children });
+  return jsx(tmp2(4281).Text, { lineClamp: 1, variant: "text-xs/normal", color, style, children });
 };

@@ -19,9 +19,9 @@ let result = require("DisplayNameEffect").fileFinishedImporting("modules/display
 export const getEffectColorCount = function getEffectColorCount(effectId) {
   if (DisplayNameEffect.DisplayNameEffect.GRADIENT === effectId) {
     return 2;
-  } else if (tmp(1887).DisplayNameEffect.GUMMY === effectId) {
+  } else if (tmp(1916).DisplayNameEffect.GUMMY === effectId) {
     return 4;
-  } else if (tmp(1887).DisplayNameEffect.PRISM === effectId) {
+  } else if (tmp(1916).DisplayNameEffect.PRISM === effectId) {
     return 5;
   } else {
     return 1;

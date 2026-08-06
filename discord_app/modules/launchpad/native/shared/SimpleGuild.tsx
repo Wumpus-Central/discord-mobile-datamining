@@ -1,6 +1,6 @@
 // discord_app/modules/launchpad/native/shared/SimpleGuild.tsx
 import noop from "noop";
-import { View } from "module_15898";
+import { View } from "module_15938";
 import { getGuildIconSource } from "GuildNSFWContentLevel";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

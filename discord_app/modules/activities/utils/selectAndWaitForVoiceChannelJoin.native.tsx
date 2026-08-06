@@ -137,7 +137,7 @@ const prototype = function JoinTimeoutError() {
 }.prototype;
 class prototype extends Error {
 }
-let result = require("module_5081").fileFinishedImporting("modules/activities/utils/selectAndWaitForVoiceChannelJoin.native.tsx");
+let result = require("module_5111").fileFinishedImporting("modules/activities/utils/selectAndWaitForVoiceChannelJoin.native.tsx");
 
 export default function selectAndWaitForVoiceChannelJoin() {
   const self = this;

@@ -662,10 +662,10 @@ prototype["removeSubscriptions"] = function removeSubscriptions(abortController)
   apply.remove(this.subscriptions, (socket) => socket.socket === closure_0);
   const result = this.dispatchIsSubscribedUpdate();
 };
-prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATIONSHIP_UPDATE, arg1, closure_3, combined) {
+prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATIONSHIP_UPDATE, targetsFrame, closure_3, combined) {
   const self = this;
   let closure_1 = RELATIONSHIP_UPDATE;
-  let prototype = arg1;
+  let prototype = targetsFrame;
   let closure_0 = closure_3;
   let tmp = null != combined;
   if (tmp) {

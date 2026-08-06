@@ -1,5 +1,5 @@
 // discord_app/modules/guild_moderation/native/showKickConfirmModal.tsx
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 const result = require("KickConfirmModal").fileFinishedImporting("modules/guild_moderation/native/showKickConfirmModal.tsx");
@@ -7,5 +7,5 @@ const result = require("KickConfirmModal").fileFinishedImporting("modules/guild_
 export default function showKickConfirmModal(closure_0) {
   ACTION_SHEET_HEIGHT_HALF.hideActionSheet();
   const obj = ACTION_SHEET_HEIGHT_HALF;
-  ModalActionCreators.pushLazy(asyncRequireImpl(11140, dependencyMap.paths), closure_0);
+  ModalActionCreators.pushLazy(asyncRequireImpl(11174, dependencyMap.paths), closure_0);
 };

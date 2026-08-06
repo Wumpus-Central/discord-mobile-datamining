@@ -1,7 +1,7 @@
 // discord_app/modules/channel_following/native/showChannelFollowingActionSheet.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const require = arg1;
@@ -108,5 +108,5 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
       return callback(dependencyMap[2]).hideActionSheet();
     }
   };
-  obj.openLazy(_asyncRequireImpl(10187, dependencyMap.paths), "NewChannelFollower." + id, obj);
+  obj.openLazy(_asyncRequireImpl(10218, dependencyMap.paths), "NewChannelFollower." + id, obj);
 };

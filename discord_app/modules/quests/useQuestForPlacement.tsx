@@ -22,20 +22,20 @@ function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP) {
       if (!fetchingQuestToDeliverByPlacement.isFetchingQuestToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP)) {
         let enableNewRequestBehavior = obj3.canRefreshAd(QUEST_HOME_BANNER_DESKTOP);
         if (enableNewRequestBehavior) {
-          enableNewRequestBehavior = tmp9(7069).getConfig({ location: "maybeRefreshAd" }).enableNewRequestBehavior;
-          const tmp9Result = tmp9(7069);
+          enableNewRequestBehavior = tmp9(7096).getConfig({ location: "maybeRefreshAd" }).enableNewRequestBehavior;
+          const tmp9Result = tmp9(7096);
         }
         if (enableNewRequestBehavior) {
-          let tmpResult = tmp(10348);
+          let tmpResult = tmp(10379);
           const currentQuests = tmpResult.fetchCurrentQuests();
-          tmpResult = tmp(10348);
+          tmpResult = tmp(10379);
           const questToDeliver = tmpResult.fetchQuestToDeliver(QUEST_HOME_BANNER_DESKTOP, arg2);
         }
       }
       obj3 = fetchingQuestToDeliverByPlacement;
     } else if (null != fetchedAt) {
-      tmp(10348).clearQuestAdDecision(QUEST_HOME_BANNER_DESKTOP, fetchedAt.ttlMillis);
-      const tmpResult1 = tmp(10348);
+      tmp(10379).clearQuestAdDecision(QUEST_HOME_BANNER_DESKTOP, fetchedAt.ttlMillis);
+      const tmpResult1 = tmp(10379);
     }
     obj2 = DiscordAppState.native;
     tmp9 = importDefault;

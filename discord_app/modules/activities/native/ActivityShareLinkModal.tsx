@@ -1,6 +1,6 @@
 // discord_app/modules/activities/native/ActivityShareLinkModal.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
-import getMixedGradientColor from "getMixedGradientColor";
+import LinkIcon from "LinkIcon";
 import trackInvite from "trackInvite";
 import { View } from "isDiscordFrontendDevelopment";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -15,13 +15,16 @@ let closure_12;
 let map1;
 const require = arg1;
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { headerContainer: null, header: null, container: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16, paddingVertical: require("Themes").space.PX_8, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
+createCacheKey = { headerLeftContainer: null, headerRightContainer: null, header: null, container: null };
+createCacheKey = { paddingLeft: require("Themes").space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: "transparent" };
-createCacheKey[2] = { flex: 1, display: "flex", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
+createCacheKey[1] = { paddingRight: require("Themes").space.PX_16 };
+let obj1 = { paddingRight: require("Themes").space.PX_16 };
+createCacheKey[2] = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
+let obj2 = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
+createCacheKey[3] = { flex: 1, display: "flex", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flex: 1, display: "flex", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
+let obj3 = { flex: 1, display: "flex", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
 let result = require("noop").fileFinishedImporting("modules/activities/native/ActivityShareLinkModal.tsx");
 
 export default function ActivityShareLinkModal(applicationId) {
@@ -130,7 +133,7 @@ export default function ActivityShareLinkModal(applicationId) {
               dependencyMap = 1;
               c3 = 1;
               let obj1 = { value: null, done: false };
-              obj1[0] = Promise.all(outer1_9.map(outer1_0(7200).getOrResolveChannelIdFromDestinationId));
+              obj1[0] = Promise.all(outer1_9.map(outer1_0(7227).getOrResolveChannelIdFromDestinationId));
               return obj1;
             } else {
               c3 = 3;
@@ -141,7 +144,7 @@ export default function ActivityShareLinkModal(applicationId) {
           throw arg1;
         } else if (arg0 !== 2) {
           closure_0 = arg1.filter(outer1_0(1351).isNotNullish);
-          closure_1 = outer1_0(13631).resolveActivityShareMessageContent(c3, name, closure_12);
+          closure_1 = outer1_0(13668).resolveActivityShareMessageContent(c3, name, closure_12);
           callback2(true);
           const item = closure_0.forEach((() => {
             let closure_0 = v3((arg0) => {
@@ -217,17 +220,17 @@ export default function ActivityShareLinkModal(applicationId) {
               return applyArgumentsResult;
             };
           })());
-          const obj5 = outer1_0(13631);
+          const obj5 = outer1_0(13668);
           let obj2 = { key: "ACTIVITY_SHARE_LINK_SUCCESS", content: null };
           const intl = outer1_0(1236).intl;
           const obj3 = { applicationName: null };
           obj3[0] = name.name;
           obj2[1] = intl.formatToPlainString(outer1_0(1236).t.jQULqL, obj3);
-          outer1_1(3956).open(obj2);
+          outer1_1(3985).open(obj2);
           callback(true, ensureGuildLoaded);
-          const obj6 = outer1_1(3956);
-          const result = outer1_0(13629).closeActivityShareLinkModal();
-          const obj9 = outer1_0(13629);
+          const obj6 = outer1_1(3985);
+          const result = outer1_0(13666).closeActivityShareLinkModal();
+          const obj9 = outer1_0(13666);
         }
         c3 = 3;
         obj = { value: null, done: true };
@@ -254,53 +257,52 @@ export default function ActivityShareLinkModal(applicationId) {
     }, items8),
     children: null
   };
-  obj = { style: tmp.headerContainer, children: null };
-  obj1 = { headerStyle: tmp.header, title: null, headerTitle: null, headerLeft: null, headerRight: null, headerStatusBarHeight: null, headerTitleAlign: "center" };
+  obj = { headerStyle: tmp.header, title: null, headerTitle: null, headerLeft: null, headerRight: null, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null, headerTitleAlign: "center" };
   let intl = applicationId(linkId[22]).intl;
-  obj1[1] = intl.string(applicationId(linkId[22]).t.r9qKow);
-  obj1[2] = function headerTitle(children) {
-    return first2(applicationId(linkId[28]).GenericHeaderTitle, { title: children.children, subtitle: message, variant: "redesign/heading-18/bold" });
+  obj[1] = intl.string(applicationId(linkId[22]).t.r9qKow);
+  obj[2] = function headerTitle(children) {
+    return first2(applicationId(linkId[29]).GenericHeaderTitle, { title: children.children, subtitle: message, variant: "redesign/heading-18/bold" });
   };
-  let obj5 = applicationId(linkId[29]);
-  obj1[3] = obj5.getHeaderCloseButton(callback1);
-  obj1[4] = function headerRight(arg0) {
+  let obj4 = applicationId(linkId[30]);
+  obj[3] = obj4.getHeaderCloseButton(callback1);
+  obj[4] = function headerRight(arg0) {
     const obj = {};
     const merged = Object.assign(arg0);
     obj.onPress = closure_15;
     const intl = applicationId(linkId[22]).intl;
     obj.accessibilityLabel = intl.string(applicationId(linkId[22]).t.Xrt5Po);
-    obj.IconComponent = applicationId(linkId[31]).LinkIcon;
-    return first2(applicationId(linkId[30]).HeaderActionButton, obj);
+    obj.IconComponent = applicationId(linkId[32]).LinkIcon;
+    return first2(applicationId(linkId[31]).HeaderActionButton, obj);
   };
+  ({ headerLeftContainer: obj4[5], headerRightContainer: obj4[6] } = tmp);
   const tmp6 = onShare(stateFromStores.useState(false), 2);
-  let num;
-  if (obj7.isIOS()) {
-    num = 0;
+  let num = 0;
+  if (!obj6.isIOS()) {
+    num = customId(linkId[26])().top;
   }
-  obj1[5] = num;
-  obj[1] = first2(applicationId(linkId[27]).Header, obj1);
-  const items9 = [first2(c6, obj), ];
-  let obj2 = { style: tmp.container, children: null };
-  const items10 = [first2(customId(linkId[32]), { absolute: true }), first2(customId(linkId[33]), { disableGradient: true, disableStickySections: true, initialSelectedDestinations: [], insetEnd: 0, onSelectedDestinationChange: callback, originDestination: memo, rowMode: UserRowModes.TOGGLE }), ];
-  const obj4 = { disabled: tmp7, floatingBackgroundColor: tmp.container.backgroundColor, isVisible: first1.length > 0, loading: tmp7, onPress: null, text: null };
+  obj[7] = num + customId(linkId[11]).space.PX_8;
+  const items9 = [first2(applicationId(linkId[28]).Header, obj), ];
+  obj1 = { style: tmp.container, children: null };
+  const items10 = [first2(customId(linkId[33]), { absolute: true }), first2(customId(linkId[34]), { disableGradient: true, disableStickySections: true, initialSelectedDestinations: [], insetEnd: 0, onSelectedDestinationChange: callback, originDestination: memo, rowMode: UserRowModes.TOGGLE }), ];
+  let obj3 = { disabled: tmp7, floatingBackgroundColor: tmp.container.backgroundColor, isVisible: first1.length > 0, loading: tmp7, onPress: null, text: null };
   let tmp24;
   if (!tmp7) {
     tmp24 = callback2;
   }
-  obj4[4] = tmp24;
+  obj3[4] = tmp24;
   if (1 === first1.length) {
     const intl3 = tmp2(tmp3[22]).intl;
     let stringResult = intl3.string(tmp2(tmp3[22]).t.TXNS7S);
   } else {
     const intl2 = tmp2(tmp3[22]).intl;
-    obj5 = { count: null };
-    obj5[0] = length;
-    stringResult = intl2.formatToPlainString(tmp2(tmp3[22]).t.jWtYUm, obj5);
+    obj4 = { count: null };
+    obj4[0] = length;
+    stringResult = intl2.formatToPlainString(tmp2(tmp3[22]).t.jWtYUm, obj4);
   }
-  obj4[5] = stringResult;
-  items10[2] = first2(applicationId(linkId[34]).ModalFloatingAction, obj4);
-  obj2[1] = items10;
-  items9[1] = c13(c6, obj2);
+  obj3[5] = stringResult;
+  items10[2] = first2(applicationId(linkId[35]).ModalFloatingAction, obj3);
+  obj1[1] = items10;
+  items9[1] = c13(c6, obj1);
   obj[1] = items9;
   return c13(c6, obj);
 };

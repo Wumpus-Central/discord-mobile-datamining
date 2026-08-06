@@ -1,7 +1,7 @@
 // discord_app/modules/custom_typing_indicator/intl/CustomTypingIndicator.messages.js
 import 01274__ from "../../../../_runtime/metro/01274__.js";
 import 01274__ from "../../../../_runtime/metro/01274__.js";
-import { registerAsset } from "../../../../_runtime/03326_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/03355_registerAsset.js";
 import { loadJsonAsset } from "../../asset_json/native/AssetJsonUtils.tsx";
 
 const loader = module_1274.createLoader({

@@ -6,7 +6,7 @@ import initialize from "initialize";
 import _migrateDefaultStorage from "_migrateDefaultStorage";
 import { ClipSignalTypes } from "result";
 import { AnalyticEvents } from "ME";
-import { isEqual } from "../../../_runtime/04414_isEqual.js";
+import { isEqual } from "../../../_runtime/04444_isEqual.js";
 import { parseEncoder } from "../../lib/VideoQualityStats.tsx";
 import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 import { isStreamKey } from "../go_live/utils/StreamKeyUtils.tsx";
@@ -59,81 +59,81 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
     num2 = 0;
   }
   obj.frames_encoded_nvidia_cuda = num2;
-  let num3 = map.get(tmp3(7095).Encoders.NVIDIA_DIRECT_3D);
+  let num3 = map.get(tmp3(7122).Encoders.NVIDIA_DIRECT_3D);
   if (num3 == null) {
     num3 = 0;
   }
   obj.frames_encoded_nvidia_direct3d = num3;
-  let num4 = map.get(tmp3(7095).Encoders.OPENH264);
+  let num4 = map.get(tmp3(7122).Encoders.OPENH264);
   if (num4 == null) {
     num4 = 0;
   }
   obj.frames_encoded_openh264 = num4;
-  let num5 = map.get(tmp3(7095).Encoders.VIDEOTOOLBOX);
+  let num5 = map.get(tmp3(7122).Encoders.VIDEOTOOLBOX);
   if (num5 == null) {
     num5 = 0;
   }
   obj.frames_encoded_videotoolbox = num5;
-  let num6 = map.get(tmp3(7095).Encoders.AMD_DIRECT_3D);
+  let num6 = map.get(tmp3(7122).Encoders.AMD_DIRECT_3D);
   if (num6 == null) {
     num6 = 0;
   }
   obj.frames_encoded_amd_direct3d = num6;
-  let num7 = map.get(tmp3(7095).Encoders.AMD_VAAPI);
+  let num7 = map.get(tmp3(7122).Encoders.AMD_VAAPI);
   if (num7 == null) {
     num7 = 0;
   }
   obj.frames_encoded_amd_vaapi = num7;
-  let num8 = map.get(tmp3(7095).Encoders.INTEL);
+  let num8 = map.get(tmp3(7122).Encoders.INTEL);
   if (num8 == null) {
     num8 = 0;
   }
   obj.frames_encoded_intel = num8;
-  let num9 = map.get(tmp3(7095).Encoders.INTEL_DIRECT_3D);
+  let num9 = map.get(tmp3(7122).Encoders.INTEL_DIRECT_3D);
   if (num9 == null) {
     num9 = 0;
   }
   obj.frames_encoded_intel_direct3d = num9;
-  let num10 = map.get(tmp3(7095).Encoders.WMF_DIRECT_3D_INTEL);
+  let num10 = map.get(tmp3(7122).Encoders.WMF_DIRECT_3D_INTEL);
   if (num10 == null) {
     num10 = 0;
   }
   obj.frames_encoded_wmf_direct3d_intel = num10;
-  let num11 = map.get(tmp3(7095).Encoders.WMF_DIRECT_3D_NVIDIA);
+  let num11 = map.get(tmp3(7122).Encoders.WMF_DIRECT_3D_NVIDIA);
   if (num11 == null) {
     num11 = 0;
   }
   obj.frames_encoded_wmf_direct3d_nvidia = num11;
-  let num12 = map.get(tmp3(7095).Encoders.WMF_DIRECT_3D_AMD);
+  let num12 = map.get(tmp3(7122).Encoders.WMF_DIRECT_3D_AMD);
   if (num12 == null) {
     num12 = 0;
   }
   obj.frames_encoded_wmf_direct3d_amd = num12;
-  let num13 = map.get(tmp3(7095).Encoders.WMF_DIRECT_3D);
+  let num13 = map.get(tmp3(7122).Encoders.WMF_DIRECT_3D);
   if (num13 == null) {
     num13 = 0;
   }
-  let num14 = map.get(tmp3(7095).Encoders.WMF_DIRECT_3D_INTEL);
+  let num14 = map.get(tmp3(7122).Encoders.WMF_DIRECT_3D_INTEL);
   if (num14 == null) {
     num14 = 0;
   }
   const sum = num13 + num14;
-  let num15 = map.get(tmp3(7095).Encoders.WMF_DIRECT_3D_NVIDIA);
+  let num15 = map.get(tmp3(7122).Encoders.WMF_DIRECT_3D_NVIDIA);
   if (num15 == null) {
     num15 = 0;
   }
   const sum1 = sum + num15;
-  let num16 = map.get(tmp3(7095).Encoders.WMF_DIRECT_3D_AMD);
+  let num16 = map.get(tmp3(7122).Encoders.WMF_DIRECT_3D_AMD);
   if (num16 == null) {
     num16 = 0;
   }
   obj.frames_encoded_wmf_direct3d = sum1 + num16;
-  let num17 = map.get(tmp3(7095).Encoders.UNCATEGORIZED);
+  let num17 = map.get(tmp3(7122).Encoders.UNCATEGORIZED);
   if (num17 == null) {
     num17 = 0;
   }
   obj.frames_encoded_uncategorized = num17;
-  let num18 = map.get(tmp3(7095).Encoders.UNKNOWN);
+  let num18 = map.get(tmp3(7122).Encoders.UNKNOWN);
   if (num18 == null) {
     num18 = 0;
   }

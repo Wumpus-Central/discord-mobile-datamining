@@ -22,8 +22,8 @@ export default function usePressUnderlayColor(arr) {
       if ("dark" === tmp2) {
         num3 = 0.12;
       }
-      hexWithOpacityResult = tmp3(4099).hexWithOpacity(substr, num3);
-      const tmp3Result = tmp3(4099);
+      hexWithOpacityResult = tmp3(4128).hexWithOpacity(substr, num3);
+      const tmp3Result = tmp3(4128);
     }
   }
   return hexWithOpacityResult;

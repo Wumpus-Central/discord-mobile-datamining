@@ -14,8 +14,8 @@ const require = arg1;
 class BaseChannelSubtitle {
   constructor(arg0) {
     ({ mode, subtitle } = global);
-    tmp = f51883;
-    if (mode !== f51883.UNREAD_IMPORTANT) {
+    tmp = f52015;
+    if (mode !== f52015.UNREAD_IMPORTANT) {
       if (mode !== tmp.RELEVANT) {
         if (mode !== tmp.SELECTED) {
           MUTED = tmp.MUTED;
@@ -124,9 +124,9 @@ export default function BaseChannelItem(mode) {
     items1[3] = channelInfo;
     obj[1] = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(11638);
+      let AnimatedPressableHighlight = hideIcon(11672);
     } else {
-      AnimatedPressableHighlight = mode(8557).AnimatedPressableHighlight;
+      AnimatedPressableHighlight = mode(8586).AnimatedPressableHighlight;
     }
     obj = {};
     const merged1 = Object.assign(merged);
@@ -143,9 +143,9 @@ export default function BaseChannelItem(mode) {
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj[2] = ALL_MESSAGES;
-    closure_7(hideIcon(9728), obj);
+    closure_7(hideIcon(9759), obj);
     const tmp6 = closure_7;
-    const tmp9 = hideIcon(9728);
+    const tmp9 = hideIcon(9759);
   }
 };
 export const ChannelModes = createCacheKey;

@@ -12,7 +12,7 @@ const result = require("Themes").fileFinishedImporting("modules/app_launcher/nat
 
 export const SubmittingOverlay = function SubmittingOverlay(submitting) {
   submitting = submitting.submitting;
-  let obj = submitting(4116);
+  let obj = submitting(4145);
   class S {
     constructor() {
       tmp = submitting;
@@ -26,7 +26,7 @@ export const SubmittingOverlay = function SubmittingOverlay(submitting) {
       return obj;
     }
   }
-  obj = { withSpring: submitting(4664).withSpring, submitting, SUBTLE_SPRING: submitting(4668).SUBTLE_SPRING };
+  obj = { withSpring: submitting(4694).withSpring, submitting, SUBTLE_SPRING: submitting(4698).SUBTLE_SPRING };
   S.__closure = obj;
   S.__workletHash = 492443733468;
   S.__initData = closure_5;
@@ -34,7 +34,7 @@ export const SubmittingOverlay = function SubmittingOverlay(submitting) {
   obj = { style: items, children: null };
   items = [submitting.style, callback().ellipsis, animatedStyle];
   if (submitting) {
-    submitting = tmp5(submitting(4680).Ellipsis, { variant: "active", size: "md" });
+    submitting = tmp5(submitting(4710).Ellipsis, { variant: "active", size: "md" });
   }
   obj[1] = submitting;
   return jsx(ReanimatedRexport.View, { style: items, children: null });

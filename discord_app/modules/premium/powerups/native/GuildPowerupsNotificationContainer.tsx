@@ -30,7 +30,7 @@ export default function GuildPowerupsNotificationContainer(guildId) {
     obj[0] = tmp.container;
     obj = { variant: "eyebrow", color: "text-subtle", children: null };
     const intl = getSystemLocale.intl;
-    obj[2] = intl.string(tmp2(2287)["3FRirU"]);
+    obj[2] = intl.string(tmp2(2316)["3FRirU"]);
     const items = [callback(Text.Text, obj), , ];
     let shouldShow = tmp4.shouldShow;
     if (shouldShow) {
@@ -44,7 +44,7 @@ export default function GuildPowerupsNotificationContainer(guildId) {
       const obj1 = { guildId: null, powerupNames: null, warnings: null };
       obj1[0] = guildId;
       ({ expiringPowerupNames: obj4[1], warnings: obj4[2] } = tmp5);
-      shouldShow2 = tmp9(tmp2(11803), obj1);
+      shouldShow2 = tmp9(tmp2(11837), obj1);
     }
     items[2] = shouldShow2;
     obj[1] = items;

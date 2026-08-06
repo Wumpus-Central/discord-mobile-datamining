@@ -14,8 +14,8 @@ import { InviteTypes } from "InviteSendStates";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/12486_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/13088_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12523_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13125_registerAsset.js";
 import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";
@@ -54,7 +54,7 @@ function InviteCard(invite) {
       let tmp18 = callback;
     } else if (null != tmp2) {
       00038__(null != inviter, "Null inviter");
-      obj = { user: null, guildId: "Array" };
+      obj = { user: null, guildId: "r" };
       const tmp12 = new createdAt(inviter);
       obj[0] = tmp12;
       tmp14 = callback(Button.Avatar, obj);
@@ -67,7 +67,7 @@ function InviteCard(invite) {
     } else if (null == inviter) {
       return null;
     } else {
-      obj = { user: null, guildId: "Array" };
+      obj = { user: null, guildId: "r" };
       const tmp33 = new createdAt(inviter);
       obj[0] = tmp33;
       const intl3 = getSystemLocale.intl;
@@ -87,10 +87,10 @@ function InviteCard(invite) {
     obj2[0] = tmp.text;
     const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: null };
     obj3[2] = stringResult;
-    const items2 = [tmp18(tmp17(4251).Text, obj3), ];
+    const items2 = [tmp18(tmp17(4281).Text, obj3), ];
     const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj4[2] = name;
-    items2[1] = tmp18(tmp17(4251).Text, obj4);
+    items2[1] = tmp18(tmp17(4281).Text, obj4);
     obj2[1] = items2;
     items1[1] = callback2(closure_4, obj2);
     obj1[1] = items1;
@@ -289,7 +289,9 @@ export default function Welcome() {
       if (nameFromUser) {
         arr = arr.push(outer1_16.AGE_GATE_UNDERAGE, { fromRegister: true });
       } else {
-        arr = arr.push(arr(stateFromStores[34]).getNextAuthState(outer1_16.WELCOME));
+        const nextAuthState = arr(stateFromStores[34]).getNextAuthState(outer1_16.WELCOME);
+        const StackActions = arr(stateFromStores[35]).StackActions;
+        arr.dispatch(StackActions.push(nextAuthState));
         const obj = arr(stateFromStores[34]);
         callback(stateFromStores[29]).track(outer1_14.REGISTER_VIEWED);
         const obj2 = callback(stateFromStores[29]);
@@ -299,7 +301,7 @@ export default function Welcome() {
   };
   const intl = tmp5(tmp2[16]).intl;
   obj1[3] = intl.string(_require(stateFromStores[16]).t.pV8xeR);
-  const items6 = [callback(_require(stateFromStores[36]).Button, obj1), ];
+  const items6 = [callback(_require(stateFromStores[37]).Button, obj1), ];
   obj2 = {
     size: "lg",
     variant: "secondary-overlay",
@@ -311,14 +313,14 @@ export default function Welcome() {
   };
   const intl2 = tmp5(tmp2[16]).intl;
   obj2[3] = intl2.string(_require(stateFromStores[16]).t.dKhVQN);
-  items6[1] = callback(_require(stateFromStores[36]).Button, obj2);
+  items6[1] = callback(_require(stateFromStores[37]).Button, obj2);
   obj[0] = items6;
-  obj[1] = callback2(_require(stateFromStores[35]).ButtonGroup, obj);
+  obj[1] = callback2(_require(stateFromStores[36]).ButtonGroup, obj);
   const tmp19 = callback(closure_4, obj);
   obj3 = { style: null, children: null };
   const items7 = [tmp4.container, ];
   obj4 = { paddingTop: null, paddingBottom: null };
-  obj4[0] = top + _require(stateFromStores[38]).NAV_BAR_HEIGHT;
+  obj4[0] = top + _require(stateFromStores[39]).NAV_BAR_HEIGHT;
   obj4[1] = bottom;
   items7[1] = obj4;
   obj3[0] = items7;
@@ -335,8 +337,8 @@ export default function Welcome() {
   }
   obj6 = { theme: "darker", children: null };
   items8[1] = tmp22;
-  items8[2] = callback(_require(stateFromStores[39]).TTIFirstContentfulPaint, { label: "welcome" });
+  items8[2] = callback(_require(stateFromStores[40]).TTIFirstContentfulPaint, { label: "welcome" });
   obj3[1] = items8;
   obj6[1] = callback2(closure_4, obj3);
-  return callback(_require(stateFromStores[37]).ThemeContextProvider, obj6);
+  return callback(_require(stateFromStores[38]).ThemeContextProvider, obj6);
 };

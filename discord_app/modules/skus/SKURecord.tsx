@@ -3,7 +3,7 @@ import "toJS";
 import createExecutable from "createExecutable";
 import { THE_GAME_AWARD_WINNER_SKUS as closure_4 } from "set";
 import ME from "ME";
-import { t } from "../../../_runtime/03837_t.js";
+import { t } from "../../../_runtime/03866_t.js";
 import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import { getPricesFromServer } from "utils/getPricesFromServer.tsx";
 import { transformProfileEffectKeyFrameFromServer } from "utils/transformSKUTenantMetadata.tsx";

@@ -12,13 +12,13 @@ export const getTopPatternSource = function getTopPatternSource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(12668);
+      return callback(12705);
     },
     darker() {
-      return callback(12669);
+      return callback(12706);
     },
     light() {
-      return callback(12670);
+      return callback(12707);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -27,13 +27,13 @@ export const useTopPatternSource = function useTopPatternSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(12668);
+      return callback(12705);
     },
     darker() {
-      return callback(12669);
+      return callback(12706);
     },
     light() {
-      return callback(12670);
+      return callback(12707);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const TopPattern = function TopPattern(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(12668);
+      return callback(12705);
     },
     darker() {
-      return callback(12669);
+      return callback(12706);
     },
     light() {
-      return callback(12670);
+      return callback(12707);
     }
   };
   obj = {};

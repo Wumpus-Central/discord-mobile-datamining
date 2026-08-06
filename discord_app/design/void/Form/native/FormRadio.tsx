@@ -8,5 +8,5 @@ let closure_4 = createCacheKey.createStyles({ radio: { width: 22, height: 22 } }
 const result = require("jsxProd").fileFinishedImporting("design/void/Form/native/FormRadio.tsx");
 
 export default function FormRadio(selected) {
-  return <Image style={callback().radio} source={importDefault(arg0.selected ? 5317 : 5318)} />;
+  return <Image style={callback().radio} source={importDefault(arg0.selected ? 5371 : 5372)} />;
 };

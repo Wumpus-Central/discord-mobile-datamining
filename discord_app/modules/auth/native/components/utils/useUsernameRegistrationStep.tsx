@@ -62,7 +62,9 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
       obj[1] = tmp3Result.getNextRegistrationTransitionStep(REGISTER_ACCOUNT_INFORMATION);
       obj[2] = outer1_8.SUCCESS;
       context(obj);
-      navigation.push(tmp3(tmp4[10]).getNextAuthState(REGISTER_ACCOUNT_INFORMATION));
+      const nextAuthState = tmp3(tmp4[10]).getNextAuthState(REGISTER_ACCOUNT_INFORMATION);
+      const StackActions = tmp3(tmp4[11]).StackActions;
+      navigation.dispatch(StackActions.push(nextAuthState));
       const tmp3Result1 = tmp3(tmp4[10]);
     }
   }, items);
@@ -111,8 +113,8 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
         }
         return message;
       }
-      const intl = REGISTER_ACCOUNT_INFORMATION(navigation[11]).intl;
-      message = intl.string(REGISTER_ACCOUNT_INFORMATION(navigation[11]).t.GPfy3L);
+      const intl = REGISTER_ACCOUNT_INFORMATION(navigation[12]).intl;
+      message = intl.string(REGISTER_ACCOUNT_INFORMATION(navigation[12]).t.GPfy3L);
     }, items2)
   };
   return obj;

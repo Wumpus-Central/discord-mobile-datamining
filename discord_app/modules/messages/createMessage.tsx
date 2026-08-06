@@ -26,7 +26,6 @@ export default function createMessage(tts) {
   let flags;
   let giftingPrompt;
   let mediaMention;
-  let mentionGames;
   let messageReference;
   let nonce;
   let poll;
@@ -43,7 +42,7 @@ export default function createMessage(tts) {
   }
   ({ messageReference, allowedMentions, author, nonce, state } = tts);
   const items = [];
-  ({ flags, poll, sharedCustomTheme, changelogId, giftingPrompt, boostingPrompt, mediaMention, mentionGames } = tts);
+  ({ flags, poll, sharedCustomTheme, changelogId, giftingPrompt, boostingPrompt, mediaMention } = tts);
   if (DEFAULT === constants2.REPLY) {
     00038__(null != messageReference, "Replies must have a message reference");
     if (null == allowedMentions) {
@@ -73,23 +72,23 @@ export default function createMessage(tts) {
     nonce = snowflakeSequence.createNonce();
     const obj3 = snowflakeSequence;
   }
-  obj = { id: nonce, type: DEFAULT, content, channel_id: channelId, author: tmp8, attachments: [], embeds: [], pinned: false, mentions: items, mention_channels: [], mention_roles: [], mention_everyone: false, mention_games: mentionGames, timestamp: null, state: null, tts: null, message_reference: null, message_snapshots: null, flags: null, nonce: null, poll: null, shared_client_theme: null, changelog_id: null, gifting_prompt: null, boosting_prompt: null, media_mention: null };
-  obj[13] = new Date().toISOString();
+  obj = { id: nonce, type: DEFAULT, content, channel_id: channelId, author: tmp8, attachments: [], embeds: [], pinned: false, mentions: items, mention_channels: [], mention_roles: [], mention_everyone: false, timestamp: null, state: null, tts: null, message_reference: null, message_snapshots: null, flags: null, nonce: null, poll: null, shared_client_theme: null, changelog_id: null, gifting_prompt: null, boosting_prompt: null, media_mention: null };
+  obj[12] = new Date().toISOString();
   if (state == null) {
     state = constants.SENDING;
   }
-  obj[14] = state;
-  obj[15] = flag;
-  obj[16] = messageReference;
-  obj[17] = [];
-  obj[18] = flags;
-  obj[19] = nonce;
-  obj[20] = poll;
-  obj[21] = sharedCustomTheme;
-  obj[22] = changelogId;
-  obj[23] = giftingPrompt;
-  obj[24] = boostingPrompt;
-  obj[25] = mediaMention;
+  obj[13] = state;
+  obj[14] = flag;
+  obj[15] = messageReference;
+  obj[16] = [];
+  obj[17] = flags;
+  obj[18] = nonce;
+  obj[19] = poll;
+  obj[20] = sharedCustomTheme;
+  obj[21] = changelogId;
+  obj[22] = giftingPrompt;
+  obj[23] = boostingPrompt;
+  obj[24] = mediaMention;
   return obj;
 };
 export const userRecordToServer = function userRecordToServer(currentUser) {

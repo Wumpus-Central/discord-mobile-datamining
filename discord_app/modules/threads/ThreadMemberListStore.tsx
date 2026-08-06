@@ -278,7 +278,7 @@ prototype["calculateNewState"] = function calculateNewState(userId, channel) {
   }
   let canResult = null != user && null != channel;
   if (canResult) {
-    let obj = importAll(3888);
+    let obj = importAll(3917);
     obj = { permission: null, user: null, context: null };
     obj[0] = constants2.VIEW_CHANNEL;
     obj[1] = user;

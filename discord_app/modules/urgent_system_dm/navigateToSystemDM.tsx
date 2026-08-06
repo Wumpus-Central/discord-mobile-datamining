@@ -3,7 +3,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import { SYSTEM_USER } from "SYSTEM_USER";
 import { SelectedChannelActionCreators } from "../../actions/SelectedChannelActionCreators.tsx";
 
-const result = require("module_5081").fileFinishedImporting("modules/urgent_system_dm/navigateToSystemDM.tsx");
+const result = require("module_5111").fileFinishedImporting("modules/urgent_system_dm/navigateToSystemDM.tsx");
 
 export default function navigateToSystemDM() {
   dMFromUserId = dMFromUserId.getDMFromUserId(SYSTEM_USER);

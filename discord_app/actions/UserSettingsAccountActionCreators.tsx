@@ -106,8 +106,8 @@ export const disableAccount = function disableAccount(password, arg1) {
   const obj3 = sendRequest;
   const tmp2 = arg1 ? closure_4.DELETE_ACCOUNT : closure_4.DISABLE_ACCOUNT;
   return HTTP.post(obj).then(() => {
-    callback2(5721).logoutInternal();
-    const obj = callback2(5721);
+    callback2(5748).logoutInternal();
+    const obj = callback2(5748);
     callback(1222).transitionTo(constants.DEFAULT_LOGGED_OUT);
   });
 };
@@ -182,11 +182,11 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
     obj.push_voip_token = value;
   }
   obj = { headers: null };
-  obj[0] = avatarId(8055).buildHeadersForMd5({ [avatar(8052).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 });
+  obj[0] = avatarId(8196).buildHeadersForMd5({ [avatar(8193).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 });
   const tmp = avatarId;
   tmp11 = null != tmp10 && null != value;
   tmp13 = closure_8;
-  let tmpResult = avatarId(8055);
+  let tmpResult = avatarId(8196);
   return saveProfileAndAccountRequest(obj, obj).then((arg0) => {
     avatarId(outer1_2[3]).dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });
     let tmp4 = null == avatar;

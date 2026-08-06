@@ -3,7 +3,7 @@ import "noop";
 import ME from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../../_runtime/14091_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/14128_registerAsset.js";
 import { DismissibleContent } from "../../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { preload } from "../../../../../../components_native/common/FastImage.tsx";
 import { getSystemLocale } from "../../../../../../intl/index.native.tsx";

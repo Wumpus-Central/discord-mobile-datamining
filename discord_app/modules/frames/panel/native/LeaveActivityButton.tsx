@@ -13,9 +13,7 @@ const memoResult = require("noop").memo(function LeaveActivityButton(arg0) {
     onPress() {
       callback(outer1_3.DISCONNECTED);
       const timerId = setTimeout(() => {
-        let obj = outer1_1(outer1_2[4]);
-        obj = { applicationId: applicationId.applicationId };
-        obj.leaveFrame(obj);
+        outer1_1(outer1_2[4]).leaveFrame(id.id);
       }, 400);
     }
   });

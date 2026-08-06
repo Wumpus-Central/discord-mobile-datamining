@@ -130,15 +130,15 @@ obj = {
         if (-1 === findIndexResult) {
           const items1 = tmp20.items;
           let obj = { message: null, pinnedAt: null };
-          obj[0] = id(4474).createMessageRecord(message.message);
+          obj[0] = id(4504).createMessageRecord(message.message);
           const _Date = Date;
           const date = new Date();
           obj[1] = date;
           items1.unshift(obj);
-          const obj6 = id(4474);
+          const obj6 = id(4504);
         } else {
-          tmp20.items[findIndexResult].message = id(4474).updateMessageRecord(tmp20.items[findIndexResult].message, message.message);
-          const obj4 = id(4474);
+          tmp20.items[findIndexResult].message = id(4504).updateMessageRecord(tmp20.items[findIndexResult].message, message.message);
+          const obj4 = id(4504);
         }
         const obj3 = apply;
       } else {
@@ -157,7 +157,7 @@ obj = {
       const findIndexResult2 = apply.findIndex(tmp20.items, (message) => message.message.id === id);
       if (-1 !== findIndexResult2) {
         message = tmp.message;
-        obj = id(4474);
+        obj = id(4504);
         const updateMessageRecordResult = obj.updateMessageRecord(message, message.message);
         if (updateMessageRecordResult !== message) {
           const items4 = tmp20.items;
@@ -186,7 +186,7 @@ obj = {
       } else {
         const items = tmp.items;
         tmp.items = items.slice();
-        tmp.items[findIndexResult].message = messageId(6953).handleExplicitMediaScanTimeoutForMessage(tmp.items[findIndexResult].message);
+        tmp.items[findIndexResult].message = messageId(6980).handleExplicitMediaScanTimeoutForMessage(tmp.items[findIndexResult].message);
       }
       const obj2 = apply;
     }

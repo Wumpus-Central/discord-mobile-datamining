@@ -151,7 +151,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
         substr = trimmed.substring(1);
         tmp2 = substr;
       }
-      obj = sourcePage(9137);
+      obj = sourcePage(9166);
       const validateDiscordTagResult = obj.validateDiscordTag(tmp2);
       if (null != validateDiscordTagResult) {
         obj = { status: null, field: null, message: null };
@@ -166,14 +166,14 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
         const obj2 = { discordTag: null, context: null, errorUxConfig: null, note: null };
         obj2[0] = tmp2;
         obj2[1] = { location: "Search - Add Friend Search" };
-        obj2[2] = sourcePage(9133).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED;
+        obj2[2] = sourcePage(9162).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED;
         let tmp9;
         if (trimmed1.length > 0) {
           tmp9 = trimmed1;
         }
         obj2[3] = tmp9;
-        const obj5 = ref(9133);
-        ref(9133).sendRequest(obj2).then(() => {
+        const obj5 = ref(9162);
+        ref(9162).sendRequest(obj2).then(() => {
           let obj = { validatedText: "", hint: null };
           const intl = sourcePage(1236).intl;
           obj[1] = intl.string(sourcePage(1236).t["6p7Mhh"]);
@@ -184,7 +184,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
           obj = { discordTag: substr };
           obj[1] = intl2.format(sourcePage(1236).t.Rtl1Ep, obj);
           outer1_6(obj);
-          const result = sourcePage(3955).presentAddedFriendToast();
+          const result = sourcePage(3984).presentAddedFriendToast();
           closure_6.dismiss();
         }, (body) => {
           let note;
@@ -216,8 +216,8 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
             if (num == null) {
               num = -1;
             }
-            obj[2] = sourcePage(9137).humanizeAbortCode(num, substr);
-            obj = sourcePage(9137);
+            obj[2] = sourcePage(9166).humanizeAbortCode(num, substr);
+            obj = sourcePage(9166);
             let num2;
             if (body != null) {
               const body3 = body.body;
@@ -229,12 +229,12 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
               num2 = -1;
             }
             obj[3] = obj.humanizeAbortCodeForA11y(num2, substr);
-            const obj4 = sourcePage(9137);
+            const obj4 = sourcePage(9166);
             const tmp3 = substr;
           }
           outer1_6(obj);
         });
-        const sendRequestResult = ref(9133).sendRequest(obj2);
+        const sendRequestResult = ref(9162).sendRequest(obj2);
       }
     }
   }
@@ -316,7 +316,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
       tmp2 = null != tmp.a11yMessage;
     }
     if (tmp2) {
-      const AccessibilityAnnouncer = sourcePage(3968).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = sourcePage(3997).AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(tmp.a11yMessage);
     }
   }, items3);
@@ -357,7 +357,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     obj3[2] = str.trim().length <= 0;
     obj3[3] = handleSubmitEditing;
     obj3[4] = first1.status === tmp4.LOADING;
-    items6[2] = tmp17(sourcePage(4665).Button, obj3);
+    items6[2] = tmp17(sourcePage(4695).Button, obj3);
     obj1[0] = items6;
     return tmp14(closure_11, obj1);
   } else {
@@ -370,7 +370,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     obj5[0] = items7;
     let intl = sourcePage(1236).intl;
     obj5[3] = intl.string(sourcePage(1236).t.Yi6Mpu);
-    const items8 = [tmp17(sourcePage(4251).Text, obj5), , ];
+    const items8 = [tmp17(sourcePage(4281).Text, obj5), , ];
     const obj6 = { returnKeyType: "done", submitBehavior: "submit", value: null, maxLength: 120, onSubmitEditing: null, onChange: null, status: null };
     obj6[2] = first2;
     obj6[4] = handleSubmitEditing;
@@ -382,13 +382,13 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
       }
     }
     obj6[6] = str2;
-    items8[1] = tmp17(sourcePage(7758).TextArea, obj6);
+    items8[1] = tmp17(sourcePage(7899).TextArea, obj6);
     if (first1.status !== tmp4.ERROR) {
       const obj7 = { style: null, variant: "text-xs/medium", color: "text-muted", children: null };
       obj7[0] = tmp.messageFooterText;
       let intl2 = tmp18(1236).intl;
       obj7[3] = intl2.string(tmp18(1236).t.UtfQNw);
-      let tmp17Result = tmp17(tmp18(4251).Text, obj7);
+      let tmp17Result = tmp17(tmp18(4281).Text, obj7);
       items8[2] = tmp17Result;
       obj4[1] = items8;
       tmp14(tmp16, obj4);

@@ -10,7 +10,7 @@ import { getPremiumGroupProductName as closure_25 } from "SubscriptionStatusType
 import importDefaultResult from "combined";
 import set from "handleGuildBoostsUpdate";
 import { apply } from "../../_runtime/00012_apply.js";
-import { t } from "../../_runtime/03837_t.js";
+import { t } from "../../_runtime/03866_t.js";
 import { PremiumGuildOverrides } from "../../discord_common/js/shared/shared-constants/PremiumGuildOverrides.tsx";
 import { _fetchAppliedGuildBoostsForGuild } from "../actions/BoostingActionCreators.tsx";
 import { getSystemLocale } from "../intl/index.native.tsx";
@@ -220,7 +220,7 @@ export const getTiers = (arg0) => {
   const obj20 = { title: null, description: null, icon: null };
   const intl27 = tmp2(1236).intl;
   const obj21 = { fileSize: null };
-  let tmp2Result = tmp2(4150);
+  let tmp2Result = tmp2(4180);
   obj21[0] = tmp2Result.formatSize(dependencyMap[BoostedGuildTiers.TIER_2].limits.fileSize / 1024, { useKibibytes: true });
   obj20[0] = intl27.formatToPlainString(tmp2(1236).t.t95LnM, obj21);
   const intl28 = tmp2(1236).intl;
@@ -307,7 +307,7 @@ export const getTiers = (arg0) => {
   const obj38 = { title: null, description: null, icon: null };
   const intl46 = tmp2(1236).intl;
   const obj39 = { fileSize: null };
-  tmp2Result = tmp2(4150);
+  tmp2Result = tmp2(4180);
   obj39[0] = tmp2Result.formatSize(dependencyMap[BoostedGuildTiers.TIER_3].limits.fileSize / 1024, { useKibibytes: true });
   obj38[0] = intl46.formatToPlainString(tmp2(1236).t.t95LnM, obj39);
   const intl47 = tmp2(1236).intl;
@@ -505,7 +505,7 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
     const intl7 = getSystemLocale.intl;
     const obj = { premiumGroupProductName: null };
     obj[0] = callback();
-    return intl7.formatToPlainString(tmp7(2837)["5xN/C1"], obj);
+    return intl7.formatToPlainString(tmp7(2866)["5xN/C1"], obj);
   } else {
     const _Object = Object;
     values = Object.values(tmp2.boostSlots);
@@ -537,8 +537,8 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
         } else if (null == premiumTypeSubscription.renewalMutations) {
           return null;
         } else {
-          const numPremiumGuildSubscriptions = importAll(3901).getNumPremiumGuildSubscriptions(premiumTypeSubscription.renewalMutations.additionalPlans);
-          const obj5 = importAll(3901);
+          const numPremiumGuildSubscriptions = importAll(3930).getNumPremiumGuildSubscriptions(premiumTypeSubscription.renewalMutations.additionalPlans);
+          const obj5 = importAll(3930);
           if (obj6.getNumPremiumGuildSubscriptions(premiumTypeSubscription.additionalPlans) > numPremiumGuildSubscriptions) {
             const intl3 = getSystemLocale.intl;
             let stringResult = intl3.string(getSystemLocale.t.x25mZR);
@@ -780,7 +780,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 };
 export const TierMarkerPositions = obj1;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(4181).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(4211).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((arg0) => totalAvailableBoostsCount >= outer1_9[arg0]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

@@ -72,7 +72,7 @@ export default function ApplicationDetails(arg0) {
   let tmp15 = null;
   if (null != joined) {
     obj = { iconComponent: null, text: null };
-    obj[0] = tmp5(4199).LinkIcon;
+    obj[0] = tmp5(4229).LinkIcon;
     const intl = tmp5(1236).intl;
     obj1 = { origin: null };
     obj1[0] = joined;
@@ -89,7 +89,7 @@ export default function ApplicationDetails(arg0) {
   let tmp18Result = null;
   if (null != connectedAccount) {
     const obj3 = { iconComponent: null, text: null };
-    obj3[0] = tmp5(10426).HammerIcon;
+    obj3[0] = tmp5(10457).HammerIcon;
     const intl2 = tmp5(1236).intl;
     obj3[1] = intl2.string(tmp5(1236).t["8qui3M"]);
     tmp18Result = tmp18(tmp19, obj3);
@@ -104,7 +104,7 @@ export default function ApplicationDetails(arg0) {
     tmp18Result = null;
     if (null != approximateGuildCount) {
       const obj5 = { iconComponent: null, text: null };
-      obj5[0] = tmp5(10428).RobotIcon;
+      obj5[0] = tmp5(10459).RobotIcon;
       const intl4 = tmp5(1236).intl;
       const obj6 = { guildCount: null };
       obj6[0] = approximateGuildCount;
@@ -118,17 +118,17 @@ export default function ApplicationDetails(arg0) {
   let mapped = null;
   if (null != disclosures) {
     mapped = disclosures.map((toFixed) => {
-      let obj = callback(10399);
+      let obj = callback(10430);
       const textForDisclosure = obj.getTextForDisclosure(toFixed);
-      if (callback(10399).ApplicationDisclosure.IP_LOCATION === toFixed) {
+      if (callback(10430).ApplicationDisclosure.IP_LOCATION === toFixed) {
         obj = { iconComponent: null };
-        obj[0] = tmp(10422).GlobeEarthIcon;
+        obj[0] = tmp(10453).GlobeEarthIcon;
         let tmp4 = obj;
       } else {
         tmp4 = null;
-        if (tmp(10399).ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS === toFixed) {
+        if (tmp(10430).ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS === toFixed) {
           obj = { iconComponent: null };
-          obj[0] = tmp(10424).EmbedIcon;
+          obj[0] = tmp(10455).EmbedIcon;
           tmp4 = obj;
         }
       }

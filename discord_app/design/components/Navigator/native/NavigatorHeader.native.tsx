@@ -4,7 +4,7 @@ import "noop";
 import get_ActivityIndicator from "NAV_BAR_HEIGHT";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { Background } from "../../../../../_runtime/05230_Background.js";
+import { Background } from "../../../../../_runtime/05260_Background.js";
 import { useHeaderDebugOverlay } from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
 import { useSafeAreaInsets } from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
 import { Text } from "../../Text/native/Text.tsx";
@@ -46,7 +46,7 @@ function CloseButton(onPress) {
   const merged1 = Object.assign(merged);
   obj.onPress = fn;
   obj.label = stringResult;
-  obj.labelVisible = false;
+  obj.displayMode = "minimal";
   obj.backImage = function backImage(tintColor) {
     const style = [lib.headerButtonIcon, { tintColor: tintColor.tintColor }];
     return outer1_6(lib(fn[14]).XSmallIcon, { size: "md", style });
@@ -57,7 +57,7 @@ function CloseButton(onPress) {
 function CustomHeaderBackButton(onPress) {
   onPress = onPress.onPress;
   const merged = Object.assign(onPress, Object.create(null));
-  let obj = onPress(5229);
+  let obj = onPress(5259);
   obj.useNavigatorBackPressHandler(() => {
     if (null != onPress) {
       tmp();
@@ -67,11 +67,11 @@ function CustomHeaderBackButton(onPress) {
   obj = {};
   const merged1 = Object.assign(merged);
   obj.onPress = onPress;
-  obj.labelVisible = false;
+  obj.displayMode = "minimal";
   obj.backImage = function backImage() {
     return callback(closure_9, {});
   };
-  return callback(onPress(5230).HeaderBackButton, obj);
+  return callback(onPress(5260).HeaderBackButton, obj);
 }
 function HeaderTextButton(text) {
   text = text.text;
@@ -83,7 +83,7 @@ function HeaderTextButton(text) {
   obj = {};
   const merged2 = Object.assign(merged);
   obj.label = text;
-  obj.labelVisible = true;
+  obj.displayMode = "default";
   obj.labelStyle = items;
   obj.backImage = function backImage() {
     return null;

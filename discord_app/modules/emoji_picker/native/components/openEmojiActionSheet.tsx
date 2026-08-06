@@ -1,6 +1,6 @@
 // discord_app/modules/emoji_picker/native/components/openEmojiActionSheet.tsx
 import { EMOJI_URL_BASE_SIZE } from "set";
-import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../../_runtime/01988_asyncRequireImpl.js";
 import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
 import { dismissGlobalKeyboard } from "../../../../utils/native/KeyboardManagerUtils.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -23,7 +23,7 @@ export const openEmojiActionSheet = function openEmojiActionSheet(uniqueName) {
       const obj6 = ACTION_SHEET_HEIGHT_HALF;
       obj = { emojiNode: null };
       obj[0] = obj;
-      obj6.openLazy(asyncRequireImpl(8628, dependencyMap.paths), "MessageEmojiActionSheet", obj, "stack");
+      obj6.openLazy(asyncRequireImpl(8657, dependencyMap.paths), "MessageEmojiActionSheet", obj, "stack");
     }
     obj = { id: null, alt: null, src: null };
     obj[0] = uniqueName.id;

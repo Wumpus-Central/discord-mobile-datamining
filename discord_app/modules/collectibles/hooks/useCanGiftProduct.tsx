@@ -20,9 +20,9 @@ export const useCanGiftProduct = function useCanGiftProduct(product) {
   const obj5 = getProductOrbPrice;
   const tmp8 = product.type === CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME && !isProfileFrameGiftingEnabled;
   const obj6 = getPremiumPlanItem;
-  let tmpResult = tmp(6907);
+  let tmpResult = tmp(6934);
   const defaultPriceSetAssignmentPurchaseType = tmpResult.getDefaultPriceSetAssignmentPurchaseType(getPremiumPlanItem.canUseShopDiscounts(currentUser));
-  tmpResult = tmp(6907);
+  tmpResult = tmp(6934);
   const result3 = tmpResult.extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
   if (!result) {
     result = result1;
@@ -34,19 +34,19 @@ export const useCanGiftProduct = function useCanGiftProduct(product) {
     result = tmp8;
   }
   if (!result) {
-    result = product.type === tmp(1901).CollectiblesItemType.EXTERNAL_SKU;
+    result = product.type === tmp(1930).CollectiblesItemType.EXTERNAL_SKU;
   }
   if (!result) {
     let currency;
     if (result3 != null) {
       currency = result3.currency;
     }
-    result = tmp(6907).shouldHideGiftingForCurrency(currency);
-    const tmpResult1 = tmp(6907);
+    result = tmp(6934).shouldHideGiftingForCurrency(currency);
+    const tmpResult1 = tmp(6934);
   }
   if (!result) {
-    result = !tmp(3914).isCollectibleGiftingSupported();
-    const tmpResult2 = tmp(3914);
+    result = !tmp(3943).isCollectibleGiftingSupported();
+    const tmpResult2 = tmp(3943);
   }
   return !result;
 };

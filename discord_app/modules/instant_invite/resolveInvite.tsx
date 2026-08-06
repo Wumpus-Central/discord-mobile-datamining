@@ -163,8 +163,8 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
       return obj.exact(obj);
     };
     obj1[3] = obj2;
-    const value = tmp4(5079).get(obj1);
-    const tmp4Result = tmp4(5079);
+    const value = tmp4(5109).get(obj1);
+    const tmp4Result = tmp4(5109);
     const cleanupPromise = value.then((body) => {
       body = body.body;
       if (null != callback) {

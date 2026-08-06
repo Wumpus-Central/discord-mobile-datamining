@@ -1,8 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx
 import identity from "identity";
-import { isIterable } from "../../../../../_runtime/03868_isIterable.js";
+import { isIterable } from "../../../../../_runtime/03897_isIterable.js";
 
-let closure_2 = Object.freeze({ name: "", emojiId: "channel", emojiName: "variant", description: "then", refId: "accessible" });
+let closure_2 = Object.freeze({ name: "", emojiId: "channel", emojiName: "state", description: "title", refId: "channel" });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   let closure_0 = arg0;
   const obj = {};

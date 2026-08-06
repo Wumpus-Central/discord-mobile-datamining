@@ -21,7 +21,7 @@ const memoResult = importAllResult.memo(function QuestDockBlurredContentBackgrou
     }
     return str;
   }, items);
-  const blurTintRgba = importAllResult.useMemo(() => {
+  const tintColor = importAllResult.useMemo(() => {
     let str = "rgba(255, 255, 255, 0.1)";
     if ("dark" === str) {
       str = "rgba(38, 39, 50, 0.1)";
@@ -29,7 +29,7 @@ const memoResult = importAllResult.memo(function QuestDockBlurredContentBackgrou
     return str;
   }, items1);
   const style = [StyleSheet.absoluteFillObject, animatedStyle];
-  return jsx(str(4654), { nativeID: "quest-dock-blurred-background", blurTintRgba, blurAmount: 0.5, blurTheme: "dark", android_fallbackColor, style, layout });
+  return jsx(str(4684), { nativeID: "quest-dock-blurred-background", tintColor, blurAmount: 0.5, blurTheme: "dark", android_fallbackColor, style, layout });
 });
 const result = require("jsxProd").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBlurredContentBackground.tsx");
 

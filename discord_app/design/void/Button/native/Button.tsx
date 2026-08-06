@@ -116,7 +116,7 @@ class ButtonText {
       obj[2] = size;
       obj[3] = disabled;
       num = 0;
-      tmp5 = require("module_7781");
+      tmp5 = require("module_7922");
       items = [, ];
       items[0] = getTextStyles(obj, tmp);
       items[1] = style;

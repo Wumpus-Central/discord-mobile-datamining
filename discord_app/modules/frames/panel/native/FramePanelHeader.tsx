@@ -3,17 +3,22 @@ import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import map from "map";
+import { asLaunched } from "FrameLayoutModes";
 import jsxProd from "jsxProd";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useBaseActivityPanelHeaderContent } from "../../../activities/panel/native/ActivityPanelHeader.tsx";
+import { InviteActivityButton } from "../../../activities/panel/native/InviteActivityButton.tsx";
+import { MinimizeActivityButton } from "../../../activities/panel/native/MinimizeActivityButton.tsx";
 import { useGetOrFetchApplications } from "../../../applications/useGetOrFetchApplications.tsx";
 import { context } from "FramePanelStateContext.tsx";
+import { LeaveActivityButton } from "LeaveActivityButton.tsx";
+import { QuestActivityButtonInner } from "QuestActivityButton.tsx";
 
-let closure_6;
 let error;
+let metroImportAll;
 const require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = importAllResult.memo(function FramePanelHeaderContentInner(arg0) {
+function FramePanelHeaderContentInner(arg0) {
+  let frame;
   let gesture;
   let headerStyles;
   let headerWrapperStyles;
@@ -21,92 +26,77 @@ let closure_8 = importAllResult.memo(function FramePanelHeaderContentInner(arg0)
   let pipState;
   let setMode;
   let wrapperOffset;
-  ({ landscape, setMode } = arg0);
+  ({ frame, landscape, setMode } = arg0);
   ({ pipState, wrapperOffset } = arg0);
+  const items = [frame.applicationId];
+  const first = callback(useGetOrFetchApplications(items), 1)[0];
+  let obj = useBaseActivityPanelHeaderContent;
+  const baseActivityPanelHeaderContent = obj.useBaseActivityPanelHeaderContent({ landscape, setMode, wrapperOffset, pipState });
+  ({ gesture, headerWrapperStyles, headerStyles } = baseActivityPanelHeaderContent);
+  let obj1 = useBaseActivityPanelHeaderContent;
+  const minimizeAndQuestButtonContainerStyles = obj1.useMinimizeAndQuestButtonContainerStyles();
+  let id;
+  if (first != null) {
+    id = first.id;
+  }
+  const tmp7Result = closure_7(InviteActivityButton, { applicationId: id });
+  obj = { hasConnectedActivity: true, gesture, headerWrapperStyles, headerStyles, landscape, children: null };
+  const items1 = [minimizeAndQuestButtonContainerStyles.buttonContainer, ];
+  let prop;
+  if (landscape) {
+    prop = minimizeAndQuestButtonContainerStyles.buttonContainerLandscape;
+  }
+  obj = { style: items1, children: null };
+  items1[1] = prop;
+  let tmp15;
+  const tmp12 = View;
+  const tmp4 = require;
+  const tmp8 = InviteActivityButton;
+  if (!landscape) {
+    let name;
+    if (first != null) {
+      name = first.name;
+    }
+    tmp15 = name;
+  }
+  const items2 = [closure_7(MinimizeActivityButton, { activityName: tmp15, setMode }), , ];
+  obj1 = { applicationId: frame.applicationId };
+  items2[1] = closure_7(QuestActivityButtonInner, obj1);
+  let tmp17 = null;
+  if (landscape) {
+    tmp17 = tmp7Result;
+  }
+  items2[2] = tmp17;
+  obj[1] = items2;
+  const items3 = [closure_8(tmp12, obj), , ];
+  let tmp18 = null;
+  if (!landscape) {
+    tmp18 = tmp7Result;
+  }
+  items3[1] = tmp18;
+  items3[2] = closure_7(LeaveActivityButton, { frame, setMode });
+  obj[5] = items3;
+  return closure_8(tmp4(15989).BaseActivityPanelContent, obj);
+}
+({ jsx: error, jsxs: metroImportAll } = jsxProd);
+let closure_10 = importAllResult.memo((arg0) => {
   let obj = initialize;
   const items = [map];
-  const stateFromStores = obj.useStateFromStores(items, () => connectedFrame.getConnectedFrame(), []);
-  let applicationId;
-  if (stateFromStores != null) {
-    applicationId = stateFromStores.applicationId;
+  const stateFromStores = obj.useStateFromStores(items, () => callback(mainFrame.getMainFrame()));
+  let tmp2 = null;
+  if (null != stateFromStores) {
+    obj = { frame: null };
+    obj[0] = stateFromStores;
+    const merged = Object.assign(arg0);
+    tmp2 = callback2(FramePanelHeaderContentInner, obj);
   }
-  const items1 = [applicationId];
-  const first = callback(useGetOrFetchApplications(items1), 1)[0];
-  let tmpResult = tmp(15949);
-  const baseActivityPanelHeaderContent = tmpResult.useBaseActivityPanelHeaderContent({ landscape, setMode, wrapperOffset, pipState });
-  ({ gesture, headerWrapperStyles, headerStyles } = baseActivityPanelHeaderContent);
-  tmpResult = tmp(15949);
-  const minimizeAndQuestButtonContainerStyles = tmpResult.useMinimizeAndQuestButtonContainerStyles();
-  if (null == stateFromStores) {
-    return null;
-  } else {
-    let id;
-    let tmp5Result = tmp5(15951);
-    if (first != null) {
-      id = first.id;
-    }
-    obj = { applicationId: null };
-    obj[0] = id;
-    let tmp20Result = tmp20(tmp5Result, obj);
-    obj = { hasConnectedActivity: null, gesture: null, headerWrapperStyles: null, headerStyles: null, landscape: null, children: null };
-    obj[0] = null != stateFromStores;
-    obj[1] = gesture;
-    obj[2] = headerWrapperStyles;
-    obj[3] = headerStyles;
-    obj[4] = landscape;
-    const items2 = [minimizeAndQuestButtonContainerStyles.buttonContainer, ];
-    let prop;
-    if (landscape) {
-      prop = minimizeAndQuestButtonContainerStyles.buttonContainerLandscape;
-    }
-    const obj1 = { style: null, children: null };
-    items2[1] = prop;
-    obj1[0] = items2;
-    let tmp15;
-    tmp5Result = tmp5(15955);
-    if (!landscape) {
-      let name;
-      if (first != null) {
-        name = first.name;
-      }
-      tmp15 = name;
-    }
-    const obj2 = { activityName: null, setMode: null };
-    obj2[0] = tmp15;
-    obj2[1] = setMode;
-    const items3 = [closure_6(tmp5Result, obj2), , ];
-    tmp20Result = null != applicationId;
-    if (tmp20Result) {
-      const obj3 = { applicationId: null };
-      obj3[0] = applicationId;
-      tmp20Result = tmp20(tmp5(15956), obj3);
-    }
-    items3[1] = tmp20Result;
-    let tmp18 = null;
-    if (landscape) {
-      tmp18 = tmp20Result;
-    }
-    items3[2] = tmp18;
-    obj1[1] = items3;
-    const items4 = [closure_7(View, obj1), , ];
-    let tmp19 = null;
-    if (!landscape) {
-      tmp19 = tmp20Result;
-    }
-    items4[1] = tmp19;
-    const obj4 = { frame: null, setMode: null };
-    obj4[0] = stateFromStores;
-    obj4[1] = setMode;
-    items4[2] = closure_6(tmp5(15974), obj4);
-    obj[5] = items4;
-    return closure_7(tmp(15949).BaseActivityPanelContent, obj);
-  }
+  return tmp2;
 });
 const memoResult = importAllResult.memo(() => {
   let obj = useBaseActivityPanelHeaderContent;
   obj = { context: context };
   const baseActivityPanelHeader = obj.useBaseActivityPanelHeader(obj);
-  obj = { style: baseActivityPanelHeader.headerStyles, children: callback2(closure_8, obj1) };
+  obj = { style: baseActivityPanelHeader.headerStyles, children: callback2(closure_10, obj1) };
   return callback2(View, obj);
 });
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/frames/panel/native/FramePanelHeader.tsx");

@@ -25,7 +25,7 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
   stateFromStores = obj.useStateFromStores(items, () => stateFromStores(_undefined[8]).canUseIncreasedMessageLength(currentUser.getCurrentUser()));
   const tmp = callback4();
   [tmp6, c2] = callback(importAllResult.useState(0), 2);
-  const tmp7 = stateFromStores(8136)();
+  const tmp7 = stateFromStores(8276)();
   callback = tmp7;
   const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({
     onMessageLengthChanged(length) {
@@ -41,9 +41,9 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
     obj = { color: "text-feedback-critical", lineClamp: 1, variant: "text-xs/medium", children: null };
     const _HermesInternal = HermesInternal;
     obj[3] = "-" + tmp6;
-    const items2 = [callback2(tmp2(4251).Text, obj), callback2(tmp2(7597).NitroWheelIcon, { size: "sm" })];
+    const items2 = [callback2(tmp2(4281).Text, obj), callback2(tmp2(7625).NitroWheelIcon, { size: "sm" })];
     obj[2] = items2;
-    tmp10 = callback3(tmp2(4797).PressableOpacity, obj);
+    tmp10 = callback3(tmp2(4827).PressableOpacity, obj);
   }
   return tmp10;
 });

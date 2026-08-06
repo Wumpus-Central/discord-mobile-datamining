@@ -1,25 +1,30 @@
 // discord_app/design/components/Navigator/native/createAccessibleNativeStackNavigator.native.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
-import Link from "Link";
+import { createStandardNavigationFactories } from "../../../../../_runtime/01481_createStandardNavigationFactories.js";
 
 const require = arg1;
-const navigatorFactory = Link.createNavigatorFactory(function AccessibleNativeStackNavigator(arg0) {
+function AccessibleNativeStackNavigator(arg0) {
   let NavigationContent;
+  let UNSTABLE_routeNamesChangeBehavior;
+  let UNSTABLE_router;
   let children;
+  let describe;
   let id;
   let initialRouteName;
+  let layout;
   let navigation;
+  let screenLayout;
   let screenListeners;
   let screenOptions;
   let state;
-  ({ id, initialRouteName, children, screenListeners, screenOptions } = arg0);
+  ({ id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router } = arg0);
   let merged = Object.assign(arg0, Object.create(null));
   let obj = descriptors(accessibilityNativeStackOptions[3]);
-  const navigationBuilder = obj.useNavigationBuilder(descriptors(accessibilityNativeStackOptions[3]).StackRouter, { id, initialRouteName, children, screenListeners, screenOptions });
+  const navigationBuilder = obj.useNavigationBuilder(descriptors(accessibilityNativeStackOptions[3]).StackRouter, { id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router });
   descriptors = navigationBuilder.descriptors;
   accessibilityNativeStackOptions = undefined;
-  ({ state, navigation, NavigationContent } = navigationBuilder);
+  ({ state, describe, navigation, NavigationContent } = navigationBuilder);
   accessibilityNativeStackOptions = descriptors(accessibilityNativeStackOptions[2]).useAccessibilityNativeStackOptions();
   const items = [descriptors, accessibilityNativeStackOptions];
   obj = { children: null };
@@ -58,12 +63,15 @@ const navigatorFactory = Link.createNavigatorFactory(function AccessibleNativeSt
   obj.state = state;
   obj.navigation = navigation;
   obj.descriptors = memo;
+  obj.describe = describe;
   obj[0] = jsx(descriptors(accessibilityNativeStackOptions[4]).NativeStackView, {});
   return <NavigationContent />;
-});
+}
 const result = require("NavigationStack").fileFinishedImporting("design/components/Navigator/native/createAccessibleNativeStackNavigator.native.tsx");
 
-export default navigatorFactory;
+export default function createAccessibleNativeStackNavigator(arg0) {
+  return createStandardNavigationFactories.createNavigatorFactory(AccessibleNativeStackNavigator)(arg0);
+};
 export const useAccessibilityPatchedDescriptors = function useAccessibilityPatchedDescriptors(filteredDescriptors) {
   const _require = filteredDescriptors;
   accessibilityNativeStackOptions = _require(accessibilityNativeStackOptions[2]).useAccessibilityNativeStackOptions();

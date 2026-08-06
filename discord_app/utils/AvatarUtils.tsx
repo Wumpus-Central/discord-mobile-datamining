@@ -6,7 +6,7 @@ import set from "ensureAvatarSource";
 import { Integer } from "../../_runtime/00014_Integer.js";
 import { parse } from "../../_runtime/01464_parse.js";
 import { Url } from "../../_runtime/01469_Url.js";
-import { registerAsset } from "../../_runtime/01855_registerAsset.js";
+import { registerAsset } from "../../_runtime/01883_registerAsset.js";
 import { parseAvatarDecorationData } from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
 import { handleImageLoad } from "../modules/image_upload/ImageLoaderUtils.tsx";
 import { ensureAvatarSource } from "native/AvatarUtils.tsx";
@@ -546,7 +546,7 @@ function getEmojiURL(size) {
     const _HermesInternal = HermesInternal;
     const combined = "size=" + obj.getBestMediaProxySize(size.size * handleImageLoad.getDevicePixelRatio(), set);
     try {
-      const enabled = tmp5(1850).getForceSdrEmojisStickersConfig({ location: "getEmojiURL" }).enabled;
+      const enabled = tmp5(1878).getForceSdrEmojisStickersConfig({ location: "getEmojiURL" }).enabled;
       let str6 = "";
       if (enabled) {
         str6 = "&force_sdr=true";
@@ -703,7 +703,7 @@ function getAvatarDecorationURL(canAnimate) {
   if (null != avatarDecoration) {
     if (!obj4.isAvatarDecorationExpired(avatarDecoration)) {
       try {
-        let tmp13Result = tmp13(1854);
+        let tmp13Result = tmp13(1882);
         ({ CollectiblesItemAssetFormat, getCollectiblesItemAssetUrl } = tmp13Result);
         if (flag) {
           let STATIC = CollectiblesItemAssetFormat.ANIMATED;

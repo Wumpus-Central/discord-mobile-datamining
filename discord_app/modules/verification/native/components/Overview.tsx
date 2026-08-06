@@ -1,10 +1,10 @@
 // discord_app/modules/verification/native/components/Overview.tsx
-import _emailSupport from "_emailSupport";
+import Text from "Text";
 import { View } from "saveProfileAndAccountRequest";
 import handleRequiredAction from "handleRequiredAction";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
-import jsxProd from "jsxProd";
+import jsxProd from "set";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "combined";
 
@@ -79,7 +79,8 @@ export default function Overview() {
             tmp4 = tmp2 !== tmp3.REVERIFY_EMAIL;
           }
           if (tmp4) {
-            outer1_2.push(outer2_8.ADD_PHONE);
+            const StackActions = outer2_0(outer2_2[18]).StackActions;
+            outer1_2.dispatch(StackActions.push(outer2_8.ADD_PHONE));
           } else {
             outer2_0(outer2_2[17]).accountDetailsInit();
             const currentUser = outer2_6.getCurrentUser();
@@ -100,11 +101,11 @@ export default function Overview() {
   obj1 = { variant: "heading-lg/semibold", style: tmp.title, accessibilityRole: "header", children: null };
   let intl = require(navigation[14]).intl;
   obj1[3] = intl.string(require(navigation[14]).t.Iz0kDg);
-  const items2 = [callback(require(navigation[18]).Text, obj1), , ];
+  const items2 = [callback(require(navigation[19]).Text, obj1), , ];
   const obj2 = { variant: "text-sm/medium", style: tmp.body, children: null };
   const intl2 = require(navigation[14]).intl;
   obj2[2] = intl2.format(require(navigation[14]).t["0rqMV5"], { helpCenterURL: closure_14 });
-  items2[1] = callback(require(navigation[18]).Text, obj2);
+  items2[1] = callback(require(navigation[19]).Text, obj2);
   const obj3 = { helpCenterURL: closure_14 };
   let tmp4 = stateFromStores(navigation[12]);
   items2[2] = callback(View, { style: tmp.blocks, children: callback() });
@@ -114,7 +115,7 @@ export default function Overview() {
   const obj6 = { variant: "secondary", text: null, onPress: null };
   const intl3 = require(navigation[14]).intl;
   obj6[1] = intl3.string(require(navigation[14]).t["Yl/Riu"]);
-  obj6[2] = require(navigation[19]).emailSupport;
+  obj6[2] = require(navigation[20]).emailSupport;
   obj5[2] = callback(require(navigation[13]).Button, obj6);
   items3[1] = callback(View, obj5);
   obj[1] = items3;

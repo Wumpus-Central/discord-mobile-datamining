@@ -18,7 +18,7 @@ export default function TextElement(element) {
   const data = element.element.data;
   ({ header, body } = data);
   const tmp = callback2();
-  let obj = importAll(4684);
+  let obj = importAll(4714);
   let tmp3 = null;
   if (data.is_localized) {
     if (null != header) {

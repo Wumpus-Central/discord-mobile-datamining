@@ -10,7 +10,7 @@ export default function parseUserProfileCollectibles(collectibles) {
     collectibles = collectibles.collectibles;
   }
   if (null == collectibles) {
-    return { collectibles: "Array", profileEffect: "channel", profileFrame: "d" };
+    return { collectibles: "Button", profileEffect: "sa", profileFrame: "Array" };
   } else {
     const items = [];
     collectibles = collectibles.collectibles;
@@ -52,11 +52,11 @@ export default function parseUserProfileCollectibles(collectibles) {
         tmp = obj;
       } else {
         let tmp28 = nextResult;
-        if (tmp7.type === tmp14(1901).CollectiblesItemType.PROFILE_FRAME) {
+        if (tmp7.type === tmp14(1930).CollectiblesItemType.PROFILE_FRAME) {
           obj = { skuId: null, type: null, expiresAt: null };
           let tmp29 = nextResult;
           obj[0] = tmp7.sku_id;
-          obj[1] = tmp14(1901).CollectiblesItemType.PROFILE_FRAME;
+          obj[1] = tmp14(1930).CollectiblesItemType.PROFILE_FRAME;
           let date2;
           if (null != tmp7.expires_at) {
             let _Date2 = Date;

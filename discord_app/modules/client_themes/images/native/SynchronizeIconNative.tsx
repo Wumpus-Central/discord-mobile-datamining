@@ -1,7 +1,7 @@
 // discord_app/modules/client_themes/images/native/SynchronizeIconNative.tsx
 import "noop";
 import jsxProd from "jsxProd";
-import { inlineStyles } from "../../../../../_runtime/08409_inlineStyles.js";
+import { inlineStyles } from "../../../../../_runtime/07758_inlineStyles.js";
 
 let c3;
 let c4;

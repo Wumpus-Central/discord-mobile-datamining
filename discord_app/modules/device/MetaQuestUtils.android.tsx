@@ -9,7 +9,7 @@ export const isMetaQuest = function isMetaQuest() {
   return enforcing.isMetaQuest();
 };
 export const isQuestRelease = function isQuestRelease() {
-  const constants = importAll(1578).getConstants();
+  const constants = importAll(1606).getConstants();
   let flag;
   if (constants != null) {
     const ReleaseChannel = constants.ReleaseChannel;

@@ -1,11 +1,12 @@
 // discord_app/modules/quests/native/QuestHooks.native.tsx
 import closure_3 from "QuestsExperimentLocations";
-import getIsEligibleForQuests from "getIsEligibleForQuests";
+import useQuests from "useQuests";
 import setContent from "setContent";
 import addApplication from "addApplication";
 import initializeState from "initializeState";
 import QuestsExperimentLocations from "QuestsExperimentLocations";
 import { CAPTCHA_MODAL_KEY } from "CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS";
+import { MAIN_SURFACE } from "FrameLayoutModes";
 import { ThemeTypes } from "sum";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { navigationToRootTabHelper } from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
@@ -21,14 +22,14 @@ function useIsMobileQuestDockRenderedBase(deliveredQuest) {
   const tmp2 = useIsWindowLarge();
   const items = [initializeState];
   let userStatus;
-  const stateFromStores = initialize.useStateFromStores(items, () => null != questPreviewOverride.getQuestPreviewOverride(callback(table[11]).QuestContent.QUEST_BAR_MOBILE), []);
+  const stateFromStores = initialize.useStateFromStores(items, () => null != questPreviewOverride.getQuestPreviewOverride(callback(table[12]).QuestContent.QUEST_BAR_MOBILE), []);
   if (deliveredQuest != null) {
     userStatus = deliveredQuest.userStatus;
   }
   let isDismissedResult = null != userStatus;
   if (isDismissedResult) {
-    let tmp3Result = tmp3(7052);
-    isDismissedResult = tmp3Result.isDismissed(deliveredQuest.userStatus, tmp3(5116).QuestContent.QUEST_BAR_MOBILE);
+    let tmp3Result = tmp3(7079);
+    isDismissedResult = tmp3Result.isDismissed(deliveredQuest.userStatus, tmp3(5146).QuestContent.QUEST_BAR_MOBILE);
   }
   let claimedAt;
   if (deliveredQuest != null) {
@@ -37,7 +38,7 @@ function useIsMobileQuestDockRenderedBase(deliveredQuest) {
       claimedAt = userStatus.claimedAt;
     }
   }
-  tmp3Result = tmp3(10346);
+  tmp3Result = tmp3(10377);
   const isQuestExpired = tmp3Result.useIsQuestExpired(deliveredQuest);
   const obj = initialize;
   const isEligibleForQuests = getIsEligibleForQuests.getIsEligibleForQuests();
@@ -52,14 +53,14 @@ function useIsMobileQuestDockRenderedBase(deliveredQuest) {
 function useIsMobileQuestDockRendered() {
   const obj = apexExperiment;
   const items = [initializeState];
-  let stateFromStores = stateFromStores2(589).useStateFromStores(items, () => questPreviewOverride.getQuestPreviewOverride(stateFromStores2(5116).QuestContent.QUEST_BAR_MOBILE), []);
+  let stateFromStores = stateFromStores2(589).useStateFromStores(items, () => questPreviewOverride.getQuestPreviewOverride(stateFromStores2(5146).QuestContent.QUEST_BAR_MOBILE), []);
   const obj2 = stateFromStores2(589);
   const items1 = [initializeState];
   let stateFromStores1 = stateFromStores2(589).useStateFromStores(items1, () => {
     let questToDeliverForPlacement;
     let quests;
     ({ quests, questToDeliverForPlacement } = initializeState);
-    let questForPlacement = stateFromStores2(7052).getQuestForPlacement(quests, questToDeliverForPlacement, stateFromStores2(5116).AdPlacement.MOBILE_HOME_DOCK_AREA);
+    let questForPlacement = stateFromStores2(7079).getQuestForPlacement(quests, questToDeliverForPlacement, stateFromStores2(5146).AdPlacement.MOBILE_HOME_DOCK_AREA);
     if (questForPlacement == null) {
       questForPlacement = null;
     }
@@ -69,7 +70,7 @@ function useIsMobileQuestDockRendered() {
   const items2 = [initializeState];
   stateFromStores2 = stateFromStores2(589).useStateFromStores(items2, () => {
     const questAdDecisionByPlacement = questPreviewOverride.questAdDecisionByPlacement;
-    let value = questAdDecisionByPlacement.get(stateFromStores2(5116).AdPlacement.MOBILE_HOME_DOCK_AREA);
+    let value = questAdDecisionByPlacement.get(stateFromStores2(5146).AdPlacement.MOBILE_HOME_DOCK_AREA);
     if (value == null) {
       value = null;
     }
@@ -115,14 +116,14 @@ export const useMobileQuestDockHeight = function useMobileQuestDockHeight() {
 export const useMobileQuestDock = function useMobileQuestDock() {
   let obj = apexExperiment;
   const items = [initializeState];
-  stateFromStores = stateFromStores(589).useStateFromStores(items, () => questPreviewOverride.getQuestPreviewOverride(stateFromStores(5116).QuestContent.QUEST_BAR_MOBILE), []);
+  stateFromStores = stateFromStores(589).useStateFromStores(items, () => questPreviewOverride.getQuestPreviewOverride(stateFromStores(5146).QuestContent.QUEST_BAR_MOBILE), []);
   const obj2 = stateFromStores(589);
   const items1 = [initializeState];
   let stateFromStores1 = stateFromStores(589).useStateFromStores(items1, () => {
     let questToDeliverForPlacement;
     let quests;
     ({ quests, questToDeliverForPlacement } = initializeState);
-    let questForPlacement = stateFromStores(7052).getQuestForPlacement(quests, questToDeliverForPlacement, stateFromStores(5116).AdPlacement.MOBILE_HOME_DOCK_AREA);
+    let questForPlacement = stateFromStores(7079).getQuestForPlacement(quests, questToDeliverForPlacement, stateFromStores(5146).AdPlacement.MOBILE_HOME_DOCK_AREA);
     if (questForPlacement == null) {
       questForPlacement = null;
     }
@@ -131,7 +132,7 @@ export const useMobileQuestDock = function useMobileQuestDock() {
   const obj3 = stateFromStores(589);
   if (stateFromStores == null) {
     if (obj.useConfig({ location: "QuestMobileDock" }).enableNewRequestBehavior) {
-      stateFromStores1 = tmp3(stateFromStores(5116).AdPlacement.MOBILE_HOME_DOCK_AREA);
+      stateFromStores1 = tmp3(stateFromStores(5146).AdPlacement.MOBILE_HOME_DOCK_AREA);
     }
     stateFromStores = stateFromStores1;
   }
@@ -139,10 +140,10 @@ export const useMobileQuestDock = function useMobileQuestDock() {
   return React.useMemo(() => {
     if (null == stateFromStores) {
       let obj = { type: null };
-      obj[0] = stateFromStores(outer1_2[14]).AdCreativeType.NO_FILL;
+      obj[0] = stateFromStores(outer1_2[15]).AdCreativeType.NO_FILL;
     } else {
       obj = { type: null, quest: null };
-      obj[0] = stateFromStores(outer1_2[14]).AdCreativeType.QUEST;
+      obj[0] = stateFromStores(outer1_2[15]).AdCreativeType.QUEST;
       obj[1] = tmp;
     }
     return obj;
@@ -194,20 +195,20 @@ export { useIsMobileQuestDockRendered };
 export const useQuestGameLogotypeAssetUrl = function useQuestGameLogotypeAssetUrl(questCreative) {
   let closure_0 = questCreative;
   const items = [questCreative];
-  return React.useMemo(() => questCreative(outer1_2[20]).getQuestAsset(questCreative, questCreative(outer1_2[20]).QuestAssetType.LOGO_TYPE, outer1_11.DARK).url, items);
+  return React.useMemo(() => questCreative(outer1_2[21]).getQuestAsset(questCreative, questCreative(outer1_2[21]).QuestAssetType.LOGO_TYPE, outer1_12.DARK).url, items);
 };
 export const useQuestDockHeroAsset = function useQuestDockHeroAsset(questCreative) {
   let closure_0 = questCreative;
   const items = [questCreative];
   return React.useMemo(() => {
-    const questAsset = questCreative(outer1_2[20]).getQuestAsset(questCreative, questCreative(outer1_2[20]).QuestAssetType.QUEST_BAR_HERO);
+    const questAsset = questCreative(outer1_2[21]).getQuestAsset(questCreative, questCreative(outer1_2[21]).QuestAssetType.QUEST_BAR_HERO);
     let videoAsset = null;
     if (null != questCreative.config.assets.questBarHeroVideo) {
-      videoAsset = tmp(tmp2[20]).resolveAsset(tmp3.id, tmp3.config.assets.questBarHeroVideo);
-      const tmpResult = tmp(tmp2[20]);
+      videoAsset = tmp(tmp2[21]).resolveAsset(tmp3.id, tmp3.config.assets.questBarHeroVideo);
+      const tmpResult = tmp(tmp2[21]);
     }
     if (questAsset.isAnimated) {
-      let staticUrl = str.replace(tmp(tmp2[20]).EXTENSION_RE, ".png");
+      let staticUrl = str.replace(tmp(tmp2[21]).EXTENSION_RE, ".png");
     } else {
       staticUrl = str;
     }
@@ -218,23 +219,23 @@ export const useHasWatchVideoOnMobileTasks = function useHasWatchVideoOnMobileTa
   let closure_0 = config;
   const items = [config];
   return React.useMemo(() => {
-    let obj = config(outer1_2[21]);
+    let obj = config(outer1_2[22]);
     obj = { config };
     return obj.hasWatchVideoOnMobileTasks(obj);
   }, items);
 };
 export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
   const _require = quest;
-  let obj = _require(stateFromStores[21]);
+  let obj = _require(stateFromStores[22]);
   const activityApplicationId = obj.getActivityApplicationId(quest);
   let items = [addApplication];
-  stateFromStores = _require(stateFromStores[10]).useStateFromStores(items, () => outer1_6.getApplication(activityApplicationId));
-  let obj2 = _require(stateFromStores[10]);
+  stateFromStores = _require(stateFromStores[11]).useStateFromStores(items, () => outer1_6.getApplication(activityApplicationId));
+  let obj2 = _require(stateFromStores[11]);
   const tmp = stateFromStores;
-  const canLaunchFrameResult = _require(stateFromStores[22]).canLaunchFrame(stateFromStores);
+  const canLaunchFrameResult = _require(stateFromStores[23]).canLaunchFrame(stateFromStores);
   const callback = canLaunchFrameResult;
-  let obj3 = _require(stateFromStores[22]);
-  let canLaunchActivityResult = _require(stateFromStores[23]).canLaunchActivity(quest);
+  let obj3 = _require(stateFromStores[23]);
+  let canLaunchActivityResult = _require(stateFromStores[24]).canLaunchActivity(quest);
   if (canLaunchActivityResult) {
     let features = quest.config.features;
     canLaunchActivityResult = features.includes(constants.MOBILE_ACTIVITY_QUEST);
@@ -247,8 +248,8 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
         supported_platforms = embeddedActivityConfig.supported_platforms;
       }
     }
-    canLaunchActivityResult = activityApplicationId(tmp[24])(supported_platforms);
-    const tmp8 = activityApplicationId(tmp[24]);
+    canLaunchActivityResult = activityApplicationId(tmp[25])(supported_platforms);
+    const tmp8 = activityApplicationId(tmp[25]);
   }
   if (canLaunchActivityResult) {
     let tmp11 = canLaunchFrameResult;
@@ -277,8 +278,8 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
     }
     if (hasItem) {
       const items = [activityApplicationId];
-      const applications = activityApplicationId(stateFromStores[25]).fetchApplications(items, false);
-      const obj = activityApplicationId(stateFromStores[25]);
+      const applications = activityApplicationId(stateFromStores[26]).fetchApplications(items, false);
+      const obj = activityApplicationId(stateFromStores[26]);
     }
   }, items1);
   const items2 = [canLaunchFrameResult, stateFromStores, canLaunchActivityResult];
@@ -313,9 +314,10 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
               return obj;
             } else if (outer1_4) {
               if (outer1_3) {
-                let obj5 = v02(outer1_2[26]);
-                const obj1 = { applicationId: null };
+                let obj5 = v02(outer1_2[27]);
+                const obj1 = { applicationId: null, surface: null };
                 obj1[0] = outer1_2.id;
+                obj1[1] = outer1_11;
                 v02 = 1;
                 v0 = 1;
                 let obj2 = { value: null, done: false };
@@ -330,7 +332,7 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
                   }
                 }
                 if (null != id) {
-                  obj2 = v0(outer1_2[27]);
+                  obj2 = v0(outer1_2[28]);
                   const obj3 = { appId: null, botId: null, analyticsLocations: null };
                   obj3[0] = tmp6.id;
                   obj3[1] = tmp6.bot.id;
@@ -364,9 +366,9 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
           }
           v0 = 3;
           return { value: "T", done: null };
-        } catch (tmp14) {
+        } catch (tmp15) {
           v0 = tmp;
-          throw tmp14;
+          throw tmp15;
         }
       }
     }), items2)

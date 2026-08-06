@@ -136,7 +136,7 @@ function _setAppIcon() {
       if (1 === tmp8) {
         c5 = 0;
         dependencyMap = closure_4;
-        const obj1 = callback2(3956);
+        const obj1 = callback2(3985);
         const obj2 = { key: "APP_ICON_LOGS_ERROR_MESSAGE_GENERIC", content: null };
         const intl = callback(1236).intl;
         obj2[1] = intl.string(callback(1236).t["c76eo/"]);
@@ -154,7 +154,7 @@ function _setAppIcon() {
         obj3[0] = callback;
         obj3[1] = callback2;
         let TIER_2 = null;
-        if (callback !== callback(7556).FreemiumAppIconIds.DEFAULT) {
+        if (callback !== callback(7584).FreemiumAppIconIds.DEFAULT) {
           TIER_2 = TIER_2.TIER_2;
         }
         obj3[2] = TIER_2;

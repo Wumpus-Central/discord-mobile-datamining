@@ -48,7 +48,7 @@ export default function DiscordTag(arg0) {
         obj1[2] = discriminatorStyle;
         const items1 = ["#", user.discriminator];
         obj1[3] = items1;
-        tmp2Result = tmp2(tmp4(4251).Text, obj1);
+        tmp2Result = tmp2(tmp4(4281).Text, obj1);
       }
       items[1] = tmp2Result;
       obj[4] = items;

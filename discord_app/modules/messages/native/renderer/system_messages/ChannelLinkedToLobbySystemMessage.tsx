@@ -30,19 +30,19 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
     obj[0] = message;
     obj[1] = messageAuthorWithProcessedColor;
     obj[2] = roleStyle;
-    obj[1] = tmp(7853)(obj);
+    obj[1] = tmp(7994)(obj);
     obj[2] = application.name;
     const obj1 = { linkColor: null, medium: true };
     obj1[0] = tmp3.defaultUsernameColor;
     obj[3] = obj1;
     const obj2 = { action: "bindOpenUrl", url: null, linkColor: null, medium: true };
-    obj2[1] = tmp(1945).getArticleURL(HelpdeskArticles.LINKED_LOBBIES);
+    obj2[1] = tmp(1974).getArticleURL(HelpdeskArticles.LINKED_LOBBIES);
     obj2[2] = tmp3.linkColor;
     obj[4] = obj2;
     const obj3 = { content: null };
     const intl = getSystemLocale.intl;
     obj3[0] = intl.formatToParts(getSystemLocale.t.gZfhOw, obj);
-    const merged = Object.assign(tmp(7854)(message));
+    const merged = Object.assign(tmp(7995)(message));
     return obj3;
   }
 };

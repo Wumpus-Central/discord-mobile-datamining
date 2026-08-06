@@ -648,9 +648,9 @@ prototype["destroy"] = function destroy() {
   }
   obj = { c: constants9.CONNECTION_DESTROY };
   self.recordEvent(obj);
-  const WindowVisibilityVideoManager = tmp5(10579).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager = tmp5(10634).WindowVisibilityVideoManager;
   WindowVisibilityVideoManager.off(isIncomingVideoEnabled.WindowVisibilityEvent.IncomingVideoEnabledChanged, self.incomingVideoEnabledChanged);
-  const WindowVisibilityVideoManager2 = tmp5(10579).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager2 = tmp5(10634).WindowVisibilityVideoManager;
   WindowVisibilityVideoManager2.off(isIncomingVideoEnabled.WindowVisibilityEvent.WindowVisibilityChanged, self.windowVisibilityChanged);
   self._cancelReconnect();
   self._cleanupSocket();
@@ -1096,7 +1096,7 @@ prototype["_chooseExperiments"] = function _chooseExperiments(items) {
   const tmp3 = importDefault;
   let enabled = set.isWeb();
   if (enabled) {
-    const BrowserTransceiverPaddingRemovalExperiment = tmp8(12954).BrowserTransceiverPaddingRemovalExperiment;
+    const BrowserTransceiverPaddingRemovalExperiment = tmp8(12991).BrowserTransceiverPaddingRemovalExperiment;
     enabled = BrowserTransceiverPaddingRemovalExperiment.getConfig({ location: "RTCConnection" }).enabled;
   }
   if (enabled) {
@@ -1104,22 +1104,22 @@ prototype["_chooseExperiments"] = function _chooseExperiments(items) {
   }
   let tmp8Result = tmp8(500);
   if (tmp8Result.isIOS()) {
-    const mode = tmp3(12955).getConfig({ location: "_chooseExperiments" }).mode;
+    const mode = tmp3(12992).getConfig({ location: "_chooseExperiments" }).mode;
     if ("standard" === mode) {
       items.push("ios_video_stabilization_standard");
     } else if ("low_latency" === mode) {
       items.push("ios_video_stabilization_low_latency");
     }
-    const tmp3Result = tmp3(12955);
+    const tmp3Result = tmp3(12992);
   }
   tmp8Result = tmp8(500);
   let isAndroidResult = tmp8Result.isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = tmp8(10575).isSurfaceDirectRendererExperimentEnabled();
-    const tmp8Result1 = tmp8(10575);
+    isAndroidResult = tmp8(10630).isSurfaceDirectRendererExperimentEnabled();
+    const tmp8Result1 = tmp8(10630);
   }
   if (isAndroidResult) {
-    items.push(tmp8(10575).ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT);
+    items.push(tmp8(10630).ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT);
   }
   this._selectedExperiments = items;
 };
@@ -1707,7 +1707,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   const mediaEngine = store2.getMediaEngine();
   persistentCodesEnabled = persistentCodesEnabled.getPersistentCodesEnabled();
   staticAuthSessionId = staticAuthSessionId.getStaticAuthSessionId();
-  let tmp2Result = tmp2(4330);
+  let tmp2Result = tmp2(4360);
   obj = { ssrc, address: _sfuEndpoint.address, port: _sfuEndpoint.port, modes: _sfuEndpoint.modes, experiments: self._selectedExperiments, streamParameters, qosEnabled: null, signingKeyId: null, processPriority: null, threadPriorityConfiguration: null };
   ({ context, userId } = self);
   obj[6] = obj.getQoS();
@@ -1721,7 +1721,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   let merged = Object.assign(self.getExtraConnectionOptions());
   const connectResult = mediaEngine.connect(context, userId, obj);
   dependencyMap = connectResult;
-  tmp2Result = tmp2(4330);
+  tmp2Result = tmp2(4360);
   self._mediaEngineConnectDuration = tmp2Result.now() - tmp2Result.now();
   const nowResult = tmp2Result.now();
   let isWebResult = _set.isWeb();
@@ -2187,22 +2187,22 @@ prototype["getOrCreateVideoQuality"] = function getOrCreateVideoQuality() {
   self = this;
   if (null != this._connection) {
     if (null == self._videoQuality) {
-      const videoQuality = new self(12966).VideoQuality(self._connection);
+      const videoQuality = new self(13003).VideoQuality(self._connection);
       self._videoQuality = videoQuality;
       const _videoQuality2 = self._videoQuality;
       let result = _videoQuality2.updateCallUserIdsCount(self._userIds.size);
       const _videoQuality3 = self._videoQuality;
       _videoQuality3.start();
-      const defaultConfig = self(12967).VideoHealthManager.defaultConfig;
+      const defaultConfig = self(13004).VideoHealthManager.defaultConfig;
       ({ windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec } = defaultConfig);
       if (defaultConfig.featureEnabled) {
-        const videoHealthManager = new tmp10(12967).VideoHealthManager(windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec);
+        const videoHealthManager = new tmp10(13004).VideoHealthManager(windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec);
         self._videoHealthManager = videoHealthManager;
         if (null != self._localMediaSinkWantsManager) {
           self._localMediaSinkWantsManager.videoHealthManager = self._videoHealthManager;
         }
         const _videoQuality = self._videoQuality;
-        _videoQuality.on(tmp10(12966).VideoQualityEvent.FpsUpdate, (arg0, arg1, arg2) => {
+        _videoQuality.on(tmp10(13003).VideoQualityEvent.FpsUpdate, (arg0, arg1, arg2) => {
           const _localMediaSinkWantsManager = self._localMediaSinkWantsManager;
           let result;
           if (_localMediaSinkWantsManager != null) {
@@ -2228,7 +2228,7 @@ prototype["_handleVideoStreamId"] = function _handleVideoStreamId(arg0) {
   let self = this;
   self = this;
   ({ userId, streamId, videoSsrc, videoStreamParameters } = arg0);
-  this.emit(self(4350).RTCConnectionEvent.Video, this.guildId, this.channelId, userId, streamId, this.streamServerId);
+  this.emit(self(4380).RTCConnectionEvent.Video, this.guildId, this.channelId, userId, streamId, this.streamServerId);
   if (tmp2) {
     const logger = self.logger;
     logger.error("_handleVideoStreamId: Unable to create videoQuality.");
@@ -2445,7 +2445,7 @@ prototype["_handleClientConnect"] = function _handleClientConnect(arr) {
       const user = _connection.createUser(arg0, 0);
     }
   });
-  this.emit(self(4350).RTCConnectionEvent.ClientConnect, arr);
+  this.emit(self(4380).RTCConnectionEvent.ClientConnect, arr);
   const _videoQuality = this._videoQuality;
   if (_videoQuality != null) {
     const result = _videoQuality.updateCallUserIdsCount(self._userIds.size);
@@ -3171,7 +3171,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   let closure_2 = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  const dependencyMap = _connection(4330).now();
+  const dependencyMap = _connection(4360).now();
   _connection = this._connection;
   if (_connection != null) {
     let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, v) => {
@@ -3211,7 +3211,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   let closure_2 = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  const dependencyMap = _connection(4330).now();
+  const dependencyMap = _connection(4360).now();
   _connection = this._connection;
   if (_connection != null) {
     _connection.processMLSWelcome(arg0, arg1, (arg0, arg1, arg2) => {

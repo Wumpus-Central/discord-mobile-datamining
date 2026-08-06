@@ -46,7 +46,7 @@ export default function DeleteEventAlert(eventException) {
               return obj;
             } else {
               let closure_0 = tmp4;
-              const obj8 = v0(8834);
+              const obj8 = v0(8863);
               if (outer1_4) {
                 v0 = 2;
                 dependencyMap = 1;
@@ -81,7 +81,7 @@ export default function DeleteEventAlert(eventException) {
               obj[0] = arg1;
               return obj;
             }
-            obj1 = v0(4223);
+            obj1 = v0(4253);
             obj1.hideActionSheet();
             dependencyMap = 3;
             return { value: "T", done: null };

@@ -55,7 +55,7 @@ export const goToStandalonePremiumCheckoutFromMobileApp = function goToStandalon
   return obj.goToStandalonePremiumCheckout(tmp5, (body, searchParams) => {
     searchParams = searchParams.searchParams;
     searchParams.append("handoff_token", body.body.handoff_token);
-    lib(3952).openURLExternally(searchParams.href);
+    lib(3981).openURLExternally(searchParams.href);
     dependencyMap(body, searchParams);
   }, () => {
     const items = [...arguments];
@@ -78,7 +78,7 @@ export const goToStandaloneNitroManagementFromMobileApp = function goToStandalon
   return obj.goToBillingStandalonePageWithHandoff(result, (body, searchParams) => {
     searchParams = searchParams.searchParams;
     searchParams.append("handoff_token", body.body.handoff_token);
-    loadId(3952).openURLExternally(searchParams.href);
+    loadId(3981).openURLExternally(searchParams.href);
     dependencyMap(body, searchParams);
   }, () => {
     const items = [...arguments];
@@ -95,16 +95,16 @@ export const goToStandaloneGuildBoostCheckoutFromMobileApp = function goToStanda
   if (!obj.isMetaQuest()) {
     prop = tmp(691).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
   }
-  let tmpResult = tmp(1577);
+  let tmpResult = tmp(1605);
   let prop1;
   if (tmpResult.isMetaQuest()) {
     prop1 = CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT;
   }
-  tmpResult = tmp(6763);
+  tmpResult = tmp(6790);
   return tmpResult.goToBillingStandalonePageWithHandoff(Routes.BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(closure_1, prop, newAnalyticsLoadId, prop1), (body, searchParams) => {
     searchParams = searchParams.searchParams;
     searchParams.append("handoff_token", body.body.handoff_token);
-    newAnalyticsLoadId(3952).openURLExternally(searchParams.href);
+    newAnalyticsLoadId(3981).openURLExternally(searchParams.href);
     dependencyMap(body, searchParams);
   }, () => {
     const items = [...arguments];

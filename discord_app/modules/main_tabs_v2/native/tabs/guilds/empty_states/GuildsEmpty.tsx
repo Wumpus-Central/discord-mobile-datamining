@@ -161,9 +161,9 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
       obj2 = closure_0;
     }
   }, items1);
-  let tmp2Result = tmp2(4800);
+  let tmp2Result = tmp2(4830);
   const isScreenLandscape = tmp2Result.useIsScreenLandscape();
-  tmp2Result = tmp2(14219);
+  tmp2Result = tmp2(14256);
   let tmp14Result = null;
   if (stateFromStores) {
     obj = { style: null, children: null };
@@ -176,7 +176,7 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
     let obj3 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl = tmp2(1236).intl;
     obj3[4] = intl.string(tmp2(1236).t["7hB4kg"]);
-    obj2[1] = callback(tmp2(4251).Text, obj3);
+    obj2[1] = callback(tmp2(4281).Text, obj3);
     obj1[1] = callback(closure_6, obj2);
     const items3 = [callback(closure_6, obj1), ];
     let tmp18;

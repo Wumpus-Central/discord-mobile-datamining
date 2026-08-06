@@ -33,7 +33,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7243).AnnouncementModalVariant1Properties;
+            return callback(7270).AnnouncementModalVariant1Properties;
           }
     };
     items[2] = {
@@ -42,7 +42,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7247).PremiumTab;
+            return callback(7274).PremiumTab;
           }
     };
     items[3] = {
@@ -51,7 +51,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7248).MarketingPageBanner;
+            return callback(7275).MarketingPageBanner;
           }
     };
     items[4] = {
@@ -60,7 +60,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7249).PaymentModalBanner;
+            return callback(7276).PaymentModalBanner;
           }
     };
     items[5] = {
@@ -69,7 +69,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7250).MobileBottomSheet;
+            return callback(7277).MobileBottomSheet;
           }
     };
     items[6] = {
@@ -78,7 +78,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7251).GiftIcon;
+            return callback(7278).GiftIcon;
           }
     };
     items[7] = {
@@ -87,7 +87,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7253).GiftIconCoachmark;
+            return callback(7280).GiftIconCoachmark;
           }
     };
     items[8] = {
@@ -96,7 +96,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7255).GiftPlanSelectionCardBanner;
+            return callback(7282).GiftPlanSelectionCardBanner;
           }
     };
     items[9] = {
@@ -105,7 +105,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7256).GiftCustomizationBanner;
+            return callback(7283).GiftCustomizationBanner;
           }
     };
     items[10] = {
@@ -114,7 +114,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7257).BillingSettingsNitroGiftBanner;
+            return callback(7284).BillingSettingsNitroGiftBanner;
           }
     };
     items[11] = {
@@ -123,7 +123,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7258).GiftReminderNagbar;
+            return callback(7285).GiftReminderNagbar;
           }
     };
     items[12] = {
@@ -132,7 +132,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7259).GiftReminderCoachmark;
+            return callback(7286).GiftReminderCoachmark;
           }
     };
     items[13] = {
@@ -141,7 +141,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7260).PremiumTabTooltip;
+            return callback(7287).PremiumTabTooltip;
           }
     };
     items[14] = {
@@ -150,7 +150,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7261).PremiumTabPopover;
+            return callback(7288).PremiumTabPopover;
           }
     };
     items[15] = {
@@ -159,7 +159,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7262).Nagbar;
+            return callback(7289).Nagbar;
           }
     };
     items[16] = {
@@ -168,7 +168,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7263).PlanSelectCardBanner;
+            return callback(7290).PlanSelectCardBanner;
           }
     };
     items[17] = {
@@ -177,7 +177,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7264).BillingSettingsBanner;
+            return callback(7291).BillingSettingsBanner;
           }
     };
     obj = { no: 21, name: "shop_nagbar", kind: "message", oneof: "properties", T: null };
@@ -194,7 +194,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
       kind: "message",
       oneof: "properties",
       T() {
-            return callback(7266).AdminEditorTestComponent;
+            return callback(7293).AdminEditorTestComponent;
           }
     };
     items[20] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
@@ -206,7 +206,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
 }
 const prototype = PremiumMarketingComponentProperties$Type.prototype;
 prototype["create"] = function create(arr) {
-  let obj = { properties: { oneofKind: "Array" }, contentIdentifier: "", isDefaultBase: false };
+  let obj = { properties: { oneofKind: "r" }, contentIdentifier: "", isDefaultBase: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);

@@ -36,7 +36,7 @@ function BountiesCtaDescription(isEmptyOrCompleted) {
   let obj = { variant: "text-sm/medium", color: "text-subtle", children: null };
   const intl = tmp5(1236).intl;
   obj[2] = intl.string(AZGGo1);
-  const tmp7 = callback(tmp5(4251).Text, obj);
+  const tmp7 = callback(tmp5(4281).Text, obj);
   const intl2 = tmp5(1236).intl;
   obj = { onClick: null };
   obj[0] = openBountiesNuxPromoSheet;
@@ -45,14 +45,14 @@ function BountiesCtaDescription(isEmptyOrCompleted) {
     obj = { variant: "text-sm/medium", children: null };
     const items = [tmp7, " ", formatResult];
     obj[1] = items;
-    let tmp9Result = tmp9(tmp5(4251).Text, obj);
+    let tmp9Result = tmp9(tmp5(4281).Text, obj);
   } else {
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.description;
     const items1 = [tmp7, ];
     const obj2 = { variant: "text-sm/medium", children: null };
     obj2[1] = formatResult;
-    items1[1] = callback(tmp5(4251).Text, obj2);
+    items1[1] = callback(tmp5(4281).Text, obj2);
     obj1[1] = items1;
     tmp9Result = tmp9(closure_4, obj1);
   }
@@ -73,8 +73,8 @@ function BountiesCtaHeaderInner(bounties) {
   const items1 = [getOrCreateSet];
   const items2 = [bounties];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => bounties.some((id) => !getOrCreateSet.hasSeen(callback(table[12]).AdCreativeType.BOUNTY, id.id)), items2);
-  let obj2 = bounties(10867);
-  const QuestContent = bounties(5116).QuestContent;
+  let obj2 = bounties(10899);
+  const QuestContent = bounties(5146).QuestContent;
   const tmp6 = obj2.useBountiesExperience(constants2.QUEST_HOME_MOBILE).verticalScrollEnabled ? QuestContent.VIDEO_MODAL_MOBILE : QuestContent.QUEST_HOME_MOBILE_CAROUSEL;
   importDefault = tmp6;
   const items3 = [bounties, tmp6];
@@ -102,14 +102,14 @@ function BountiesCtaHeaderInner(bounties) {
   const obj3 = { variant: "text-lg/semibold", color: "text-strong", children: null };
   const intl = tmp2(1236).intl;
   obj3[2] = intl.string(bounties(1236).t.qetVDw);
-  const items6 = [callback(bounties(4251).Text, obj3), callback(BountiesCtaDescription, { isEmptyOrCompleted: flag }), ];
+  const items6 = [callback(bounties(4281).Text, obj3), callback(BountiesCtaDescription, { isEmptyOrCompleted: flag }), ];
   let tmp13Result = !flag;
   if (!flag) {
     const obj4 = { grow: true, size: "md", variant: "primary-overlay", text: null, onPress: null };
     const intl2 = tmp2(1236).intl;
     obj4[3] = intl2.string(tmp2(1236).t["1kkbKw"]);
     obj4[4] = callback;
-    tmp13Result = callback(tmp2(4665).Button, obj4);
+    tmp13Result = callback(tmp2(4695).Button, obj4);
   }
   items6[2] = tmp13Result;
   obj2[1] = items6;
@@ -147,7 +147,7 @@ let closure_12 = createCacheKey.createStyles(() => {
 });
 const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrCompleted) {
   const _require = isEmptyOrCompleted;
-  const tmp2 = containerRef(14199)();
+  const tmp2 = containerRef(14236)();
   containerRef = tmp2.containerRef;
   isEmptyOrCompleted = isEmptyOrCompleted.isEmptyOrCompleted;
   let tmp3 = undefined !== isEmptyOrCompleted;
@@ -167,17 +167,17 @@ const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrComp
     } else {
       const obj1 = { adContentId: null, adCreativeType: null, questContent: null, questContentPosition: 0, overrideVisibility: null, sourceQuestContent: null, children: null };
       obj1[0] = closure_8;
-      obj1[1] = tmp7(7082).AdCreativeType.BOUNTY;
-      obj1[2] = tmp7(5116).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
+      obj1[1] = tmp7(7109).AdCreativeType.BOUNTY;
+      obj1[2] = tmp7(5146).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
       obj1[4] = tmp2.isInView;
-      obj1[5] = tmp7(5116).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
+      obj1[5] = tmp7(5146).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
       obj1[6] = function children() {
         const obj = {};
         const merged = Object.assign(closure_0);
         obj.containerRef = containerRef;
         return outer1_10(outer1_14, obj);
       };
-      tmp9Result = tmp9(tmp7(11062).QuestContentImpressionTrackerNative, obj1);
+      tmp9Result = tmp9(tmp7(11094).QuestContentImpressionTrackerNative, obj1);
     }
     obj[1] = tmp9Result;
     return closure_10(_ManaContext.ThemeContextProvider, obj);

@@ -1,5 +1,5 @@
 // discord_common/js/packages/markup/native/MarkupParser.tsx
-import { t } from "../../../../../_runtime/03954_t.js";
+import { t } from "../../../../../_runtime/03983_t.js";
 import { collectAst } from "../MarkupASTUtils.tsx";
 function saferParse(arg0, arg1, inline) {
   let ast;
@@ -56,11 +56,11 @@ export default {
       return outer1_3(closure_0, str, obj, tmp, !inline);
     };
   },
-  reactParserFor(defaultRules) {
-    let closure_0 = t.parserFor(defaultRules);
+  reactParserFor(importDefaultResultResult) {
+    let closure_0 = t.parserFor(importDefaultResultResult);
     let obj = t;
     const obj2 = t;
-    importDefault = obj2.reactFor(t.ruleOutput(defaultRules, "react"));
+    importDefault = obj2.reactFor(t.ruleOutput(importDefaultResultResult, "react"));
     return () => {
       let str = arg0;
       if (arg0 === undefined) {

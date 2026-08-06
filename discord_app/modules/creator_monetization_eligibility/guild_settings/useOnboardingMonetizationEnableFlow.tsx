@@ -48,18 +48,18 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   if (features != null) {
     id = features.id;
   }
-  const tmp10 = refresh(16652);
-  ({ submittedRequest, error, loading, createEnableRequest } = refresh(16652)(id));
+  const tmp10 = refresh(16692);
+  ({ submittedRequest, error, loading, createEnableRequest } = refresh(16692)(id));
   let id1;
-  let tmp9Result = tmp9(16653);
+  let tmp9Result = tmp9(16693);
   if (features != null) {
     id1 = features.id;
   }
   const tmp9ResultResult = tmp9Result(id1);
   refresh = tmp9ResultResult.refresh;
   ({ eligibility, loading: loading2, error: error2 } = tmp9ResultResult);
-  const tmp10Result = refresh(16652)(id);
-  ({ isApplicationRejected, requestCooldownDuration } = refresh(16654)(eligibility));
+  const tmp10Result = refresh(16692)(id);
+  ({ isApplicationRejected, requestCooldownDuration } = refresh(16694)(eligibility));
   let hasItem2;
   if (features != null) {
     const features3 = features.features;
@@ -74,7 +74,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
     }
     tmp19 = true === hasItem3;
   }
-  tmpResult = tmp(5767);
+  tmpResult = tmp(5794);
   let id2;
   if (features != null) {
     id2 = features.id;
@@ -93,9 +93,9 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   }
   const intl = tmp(1236).intl;
   obj = { faqUrl: null };
-  tmp9Result = tmp9(1945);
+  tmp9Result = tmp9(1974);
   obj[0] = tmp9Result.getArticleURL(constants2.CREATOR_FAQ);
-  const tmp16 = refresh(16654)(eligibility);
+  const tmp16 = refresh(16694)(eligibility);
   const tmp26 = constants2;
   if (isApplicationRejected) {
     if (tmpResult.useIsMonetizationReapplicationDisabled(id2).isMonetizationReapplicationDisabled) {
@@ -121,9 +121,9 @@ export default function useOnboardingMonetizationEnableFlow(features) {
     const intl2 = tmp(1236).intl;
     const obj2 = { requestCooldownDuration: null, creatorRevenuePolicyUrl: null };
     obj2[0] = requestCooldownDuration;
-    obj2[1] = tmp9(1945).getArticleURL(tmp26.CREATOR_POLICY);
+    obj2[1] = tmp9(1974).getArticleURL(tmp26.CREATOR_POLICY);
     formatResult2 = intl2.format(tmp(1236).t.TvX207, obj2);
-    const tmp9Result1 = tmp9(1945);
+    const tmp9Result1 = tmp9(1974);
   }
   let tmp34 = isExpeditedOnboardingGuild;
   if (isExpeditedOnboardingGuild) {

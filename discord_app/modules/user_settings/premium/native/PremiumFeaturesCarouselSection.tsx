@@ -9,7 +9,7 @@ import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { Pagination } from "../../../../../_runtime/09935_Pagination.js";
+import { Pagination } from "../../../../../_runtime/09966_Pagination.js";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
@@ -61,7 +61,7 @@ function PremiumFeaturesCarousel(arg0) {
   let mapped;
   let React;
   const tmp = createCacheKey();
-  let obj = width(4651);
+  let obj = width(4681);
   const isScreenReaderEnabled = obj.useIsScreenReaderEnabled();
   const tmp5 = mapped(React.useState(0), 2);
   const first = tmp5[0];
@@ -131,7 +131,7 @@ function PremiumFeaturesCarousel(arg0) {
   const callback = React.useCallback((nativeEvent) => {
     _undefined2(Math.max(0, Math.min(mapped.length - 1, Math.round(nativeEvent.nativeEvent.contentOffset.x / c4))));
   }, items2);
-  if (!width(1577).isThumbstickScrollDevice) {
+  if (!width(1605).isThumbstickScrollDevice) {
     if (!isScreenReaderEnabled) {
       let tmp17 = callback2;
       obj = { style: null, data: null, renderItem: null, width: null, loop: false, onConfigurePanGesture: null, scrollAnimationDuration: 200, mode: "parallax", modeConfig: null, onSnapToItem: null };
@@ -187,7 +187,7 @@ export default function PremiumFeaturesCarouselSection(style) {
   let dependencyMap;
   let callback;
   const tmp = createCacheKey();
-  analyticsLocations = first(5595)().analyticsLocations;
+  analyticsLocations = first(5649)().analyticsLocations;
   const tmp2 = callback(React.useState(false), 2);
   first = tmp2[0];
   dependencyMap = tmp2[1];
@@ -215,7 +215,7 @@ export default function PremiumFeaturesCarouselSection(style) {
   obj = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
   const intl = analyticsLocations(1236).intl;
   obj[4] = intl.string(analyticsLocations(1236).t.RGadQR);
-  const items2 = [callback2(analyticsLocations(4251).Text, obj), callback2(PremiumFeaturesCarousel, { width: tmp4[0], onEndReached: callback })];
+  const items2 = [callback2(analyticsLocations(4281).Text, obj), callback2(PremiumFeaturesCarousel, { width: tmp4[0], onEndReached: callback })];
   obj[2] = items2;
   return callback3(closure_6, obj);
 };

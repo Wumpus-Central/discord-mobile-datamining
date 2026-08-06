@@ -19,7 +19,7 @@ let unpackModuleId;
 const require = arg1;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
-  reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7116).ReactionTypes.VOTE);
+  reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7143).ReactionTypes.VOTE);
   channel = channel.getChannel(channelId);
   let guildId = null;
   if (null != channel) {
@@ -281,8 +281,8 @@ export const getPollResultsReplyPreview = function getPollResultsReplyPreview(me
   }
   let truncateTextResult = str;
   if (null != closure_8) {
-    truncateTextResult = tmp(1857).truncateText(str, tmp4);
-    const tmpResult = tmp(1857);
+    truncateTextResult = tmp(1885).truncateText(str, tmp4);
+    const tmpResult = tmp(1885);
   }
   const intl = tmp(1236).intl;
   obj = { username: messageAuthor.nick, title: truncateTextResult };
@@ -308,8 +308,8 @@ export const getPollResultsReplyPreviewMobile = function getPollResultsReplyPrev
     }
     let truncateTextResult = str;
     if (null != closure_8) {
-      truncateTextResult = tmp2(1857).truncateText(str, tmp5);
-      const tmp2Result = tmp2(1857);
+      truncateTextResult = tmp2(1885).truncateText(str, tmp5);
+      const tmp2Result = tmp2(1885);
     }
     const intl = tmp2(1236).intl;
     obj = { username: null, title: null };

@@ -62,8 +62,8 @@ prototype["componentDidMount"] = function componentDidMount() {
     if (tmp) {
       const obj1 = { channel_is_nsfw: null };
       obj1[0] = tmp2;
-      tmp17(4449).trackWithMetadata(tmp16.TEXT_IN_VOICE_OPENED, obj1);
-      const tmp17Result = tmp17(4449);
+      tmp17(4479).trackWithMetadata(tmp16.TEXT_IN_VOICE_OPENED, obj1);
+      const tmp17Result = tmp17(4479);
     }
     const obj11 = collectGuildAnalyticsMetadata;
     tmp16 = constants;
@@ -248,8 +248,8 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
     if (isTextInVoice) {
       obj4 = { channel_is_nsfw: null };
       obj4[0] = isNSFWChannel;
-      tmp44(4449).trackWithMetadata(tmp43.TEXT_IN_VOICE_OPENED, obj4);
-      const tmp44Result = tmp44(4449);
+      tmp44(4479).trackWithMetadata(tmp43.TEXT_IN_VOICE_OPENED, obj4);
+      const tmp44Result = tmp44(4479);
     }
     tmp43 = constants;
     tmp44 = require;

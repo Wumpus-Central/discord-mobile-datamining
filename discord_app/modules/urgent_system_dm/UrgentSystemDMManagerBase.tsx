@@ -30,8 +30,8 @@ function maybeShowUrgentMessageModal(arg0) {
     }
     if (hasUrgentMessagesResult) {
       c7 = false;
-      importAll(8091).setFlag(UserFlags.HAS_UNREAD_URGENT_MESSAGES, false);
-      const obj5 = importAll(8091);
+      importAll(8232).setFlag(UserFlags.HAS_UNREAD_URGENT_MESSAGES, false);
+      const obj5 = importAll(8232);
     }
   }
 }
@@ -47,8 +47,8 @@ function maybeClearUrgentMessage(channelId) {
   }
   if (hasUrgentMessagesResult) {
     let c7 = false;
-    importAll(8091).setFlag(UserFlags.HAS_UNREAD_URGENT_MESSAGES, false);
-    const obj2 = importAll(8091);
+    importAll(8232).setFlag(UserFlags.HAS_UNREAD_URGENT_MESSAGES, false);
+    const obj2 = importAll(8232);
   }
 }
 let c7 = false;

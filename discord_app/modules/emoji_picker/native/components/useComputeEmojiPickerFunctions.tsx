@@ -266,9 +266,9 @@ const result = require("EmojiCategoryTypes").fileFinishedImporting("modules/emoj
 export default function useComputeEmojiPickerFunctions() {
   return callback(React.useState(() => {
     const obj = { computeCategories: null, computeSearchResults: null };
-    obj[0] = callback(1941).cachedFunction(closure_8);
-    const obj2 = callback(1941);
-    obj[1] = callback(1941).cachedFunction(closure_9);
+    obj[0] = callback(1970).cachedFunction(closure_8);
+    const obj2 = callback(1970);
+    obj[1] = callback(1970).cachedFunction(closure_9);
     return obj;
   }), 1)[0];
 };

@@ -23,7 +23,7 @@ function useAppearanceSettingTrailing() {
   const activeThemeType = useActiveThemeType.useActiveThemeType();
   if (ActiveThemeType.CUSTOM === activeThemeType) {
     const intl2 = tmp5(1236).intl;
-    return intl2.string(tmp(2453).KSBBpC);
+    return intl2.string(tmp(2482).KSBBpC);
   } else if (tmp9.CLIENT === activeThemeType) {
     let name;
     if (stateFromStores != null) {

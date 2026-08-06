@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/native/GuildHighlightsNotificationsActionCreators.tsx
 import { NotificationUserFeedbackReasons as closure_3 } from "NotificationUserFeedbackReasons";
 import { AnalyticEvents } from "ME";
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
@@ -57,5 +57,5 @@ export const openGuildHighlightNotificationForPush = function openGuildHighlight
     obj.track(constants.FEEDBACK_FORM_SUBMITTED, obj);
   };
   obj[1] = obj;
-  obj.openLazy(_asyncRequireImpl(10972, dependencyMap.paths), "GuildHighlightsNotifications", obj);
+  obj.openLazy(_asyncRequireImpl(11004, dependencyMap.paths), "GuildHighlightsNotifications", obj);
 };

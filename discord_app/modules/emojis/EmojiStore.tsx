@@ -23,7 +23,7 @@ import importDefaultResult3 from "DEFAULT_FRECENCY";
 import { PersistedStore } from "initialize";
 import set from "getHash";
 import { apply } from "../../../_runtime/00012_apply.js";
-import { t } from "../../../_runtime/03837_t.js";
+import { t } from "../../../_runtime/03866_t.js";
 import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 import { EmojiTerms } from "../emoji_terms/EmojiTerms.tsx";
 import { parseRawEmojiObject } from "UnicodeEmojis.tsx";
@@ -96,12 +96,12 @@ function _loadSavedEmojis() {
             c0 = undefined;
             callback = undefined;
             if (outer1_30 === outer1_29.Unloaded) {
-              let obj1 = outer1_1(1907);
+              let obj1 = outer1_1(1936);
               const databaseResult = obj1.database();
               c0 = databaseResult;
               if (null != databaseResult) {
                 outer1_30 = outer1_29.Loading;
-                let obj2 = outer1_0(1926);
+                let obj2 = outer1_0(1955);
                 dependencyMap = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };
@@ -167,7 +167,7 @@ function updateGuildEmoji(guildId) {
   if (null != guildEmojis) {
     const currentUser = authStore.getCurrentUser();
     if (null != currentUser) {
-      let obj = callback(5168);
+      let obj = callback(5198);
       let flag = obj.canUseRoleSubscriptionIAP(guildId);
       if (typeof GuildEmojis !== "function") {
         HermesBuiltin.throwTypeError();
@@ -313,7 +313,7 @@ function handleRoleUpdate(guildId) {
   guildId = guildId.guildId;
   role = role.getRole(guildId, guildId.role.id);
   if (null != role) {
-    const obj = callback(3874);
+    const obj = callback(3903);
     if (obj.isSubscriptionRole(role)) {
       updateGuildEmoji(guildId);
       let c33 = null;
@@ -376,7 +376,7 @@ prototype["isUsable"] = function isUsable(emoji) {
         return roles.includes(arg0);
       });
       if (!someResult) {
-        let result = callback(5133).isPurchasableRoleSubscriptionEmoji(emoji);
+        let result = callback(5163).isPurchasableRoleSubscriptionEmoji(emoji);
         if (result) {
           let _canSeeServerSubIAP = self._canSeeServerSubIAP;
           if (!_canSeeServerSubIAP) {
@@ -385,7 +385,7 @@ prototype["isUsable"] = function isUsable(emoji) {
           result = _canSeeServerSubIAP;
         }
         someResult = result;
-        const obj = callback(5133);
+        const obj = callback(5163);
       }
       tmp6 = someResult;
     }

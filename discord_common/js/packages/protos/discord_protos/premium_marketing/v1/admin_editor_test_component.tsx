@@ -23,7 +23,7 @@ class AdminEditorTestComponent$Type extends MessageType {
       name: "textarea_field",
       kind: "message",
       T() {
-            return callback(7244).LocalizedString;
+            return callback(7271).LocalizedString;
           }
     };
     items[4] = { no: 5, name: "checkbox_field", kind: "scalar", T: 8 };
@@ -173,7 +173,7 @@ items[3] = {
   name: "textarea_field",
   kind: "message",
   T() {
-    return callback(7244).LocalizedString;
+    return callback(7271).LocalizedString;
   }
 };
 items[4] = { no: 5, name: "checkbox_field", kind: "scalar", T: 8 };

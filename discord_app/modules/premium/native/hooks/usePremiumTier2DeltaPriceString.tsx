@@ -11,7 +11,25 @@ function getViewerProductId(subscription) {
     return null;
   } else {
     try {
-      return getPremiumBundledItemsFromProductId.getProductIdFromSubscription(subscription, false);
+      const productIdFromSubscription = getPremiumBundledItemsFromProductId.getProductIdFromSubscription(subscription, false);
+      try {
+        const productIdFromSubscription1 = tmp3(6792).getProductIdFromSubscription(subscription, true);
+        const tmp8 = tmp3(5782).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription];
+        const tmp10 = tmp3(5782).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription1];
+        if (null != tmp8) {
+          if (null != tmp10) {
+            if (tmp8.numPremiumGuild === tmp10.numPremiumGuild) {
+              let tmp11 = productIdFromSubscription1;
+            }
+            return tmp11;
+          }
+        }
+        tmp11 = productIdFromSubscription;
+        const tmp3Result = tmp3(6792);
+      } catch (err) {
+        return tmp2;
+      }
+      const obj = getPremiumBundledItemsFromProductId;
     } catch (err) {
       return tmp;
     }

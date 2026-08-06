@@ -21,7 +21,7 @@ let closure_10 = createCacheKey.createStyles(obj);
 createNativeStackNavigator = createNativeStackNavigator.createNativeStackNavigator();
 const memoResult = importAllResult.memo((route) => {
   const searchContext = route.route.params.searchContext;
-  let obj = searchContext(5650);
+  let obj = searchContext(5704);
   const accessibilityNativeStackOptions = obj.useAccessibilityNativeStackOptions();
   const items = [searchContext];
   const effect = importAllResult.useEffect(() => {
@@ -49,22 +49,22 @@ const memoResult = importAllResult.memo((route) => {
       name: SearchNavigatorScreens.SEARCH_TABS,
       options: { headerShown: false, fullScreenGestureEnabled: true },
       getComponent() {
-        return searchContext(15790).default;
+        return searchContext(15830).default;
       }
     }),
     callback(createNativeStackNavigator.Screen, {
       name: SearchNavigatorScreens.SEARCH_CHAT_PREVIEW,
       options(route) {
         route = route.route;
-        const obj = { headerShown: true, header: route(8165).renderHeader, headerLeft: null, headerTitle: null, fullScreenGestureEnabled: true };
-        obj[2] = route(8165).getRenderBackImage(route.navigation);
+        const obj = { headerShown: true, header: route(8305).renderHeader, headerLeft: null, headerTitle: null, fullScreenGestureEnabled: true };
+        obj[2] = route(8305).getRenderBackImage(route.navigation);
         obj[3] = function headerTitle() {
           return outer1_8(outer1_1(outer1_2[14]), { channelId: route.params.channelId });
         };
         return obj;
       },
       getComponent() {
-        return searchContext(15786).default;
+        return searchContext(15826).default;
       }
     })
   ];

@@ -184,7 +184,7 @@ function _fetchSticker() {
               obj4[1] = body;
               obj3.dispatch(obj4);
             } else {
-              obj = body(4589);
+              obj = body(4619);
               if (obj.isStandardSticker(body)) {
                 obj1 = callback2(709);
                 const obj5 = { type: "PACK_STICKER_FETCH_SUCCESS", sticker: null };
@@ -197,7 +197,7 @@ function _fetchSticker() {
               }
             }
             c4 = 3;
-            obj10 = body(4589);
+            obj10 = body(4619);
           }
         } catch (tmp24) {
           c4 = tmp;

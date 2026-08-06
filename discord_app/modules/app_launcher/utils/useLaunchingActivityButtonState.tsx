@@ -26,7 +26,18 @@ export default function useLaunchingActivityButtonState(applicationId) {
   const obj2 = applicationId(onSubmissionComplete[4]);
   let tmp = applicationId;
   const items1 = [map];
-  stateFromStores1 = applicationId(onSubmissionComplete[4]).useStateFromStores(items1, () => outer1_5.isLaunchingFrame(applicationId));
+  stateFromStores1 = applicationId(onSubmissionComplete[4]).useStateFromStores(items1, () => {
+    const mainFrame = outer1_5.getMainFrame();
+    let state;
+    if (mainFrame != null) {
+      state = mainFrame.state;
+    }
+    let tmp3 = "loading" === state;
+    if (tmp3) {
+      tmp3 = mainFrame.applicationId === applicationId;
+    }
+    return tmp3;
+  });
   if (null == getOrFetchApplication) {
     stateFromStores1 = null != stateFromStores && stateFromStores.isLaunching && stateFromStores.componentId === applicationId.launchingComponentId;
     const tmp6 = null != stateFromStores && stateFromStores.isLaunching && stateFromStores.componentId === applicationId.launchingComponentId;

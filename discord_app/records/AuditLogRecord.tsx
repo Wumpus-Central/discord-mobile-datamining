@@ -1,7 +1,7 @@
 // discord_app/records/AuditLogRecord.tsx
 import "toJS";
 import ME from "ME";
-import { t } from "../../_runtime/03837_t.js";
+import { t } from "../../_runtime/03866_t.js";
 import { SentryUtils.native } from "../utils/SentryUtils.native.tsx";
 import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 

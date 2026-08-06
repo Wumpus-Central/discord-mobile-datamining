@@ -159,7 +159,7 @@ export default function UserSettingsPushNotificationLogs() {
   callback2 = tmp9;
   let obj = { style: tmp9.wrap, children: null };
   obj = { style: tmp9.searchWrap, children: null };
-  let items1 = [callback3(first(5886).SearchField, { size: "md", placeholder: "Filter (regex)", onChange: tmp[1], defaultValue: first }), ];
+  let items1 = [callback3(first(5913).SearchField, { size: "md", placeholder: "Filter (regex)", onChange: tmp[1], defaultValue: first }), ];
   obj = { style: tmp9.shareButton, accessibilityLabel: null, onPress: null, children: null };
   const intl = first(1236).intl;
   obj[1] = intl.string(first(1236).t.leICvh);
@@ -196,7 +196,7 @@ export default function UserSettingsPushNotificationLogs() {
             dependencyMap = 1;
             c3 = 1;
             const obj1 = { value: null, done: false };
-            obj1[0] = outer1_1(9758)();
+            obj1[0] = outer1_1(9789)();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -209,9 +209,9 @@ export default function UserSettingsPushNotificationLogs() {
           return obj2;
         } else {
           closure_0 = arg1;
-          obj = outer1_0(8817);
+          obj = outer1_0(8846);
           const obj3 = { message: null };
-          obj3[0] = outer1_1(9760)(closure_0, false);
+          obj3[0] = outer1_1(9791)(closure_0, false);
           obj.showShareActionSheet(obj3, "push-notification-logs");
           c3 = 3;
           return { value: "T", done: null };
@@ -222,14 +222,14 @@ export default function UserSettingsPushNotificationLogs() {
       }
     }
   });
-  obj[3] = callback3(first(12114).ShareIcon, {});
-  items1[1] = callback3(first(4797).PressableOpacity, obj);
+  obj[3] = callback3(first(12148).ShareIcon, {});
+  items1[1] = callback3(first(4827).PressableOpacity, obj);
   obj[1] = items1;
   let items2 = [callback4(View, obj), ];
   let obj1 = { contentContainerStyle: null, data: null, renderItem: null };
   let obj2 = {};
   const merged = Object.assign(tmp9.list);
-  obj2.paddingBottom = first1(1581)().bottom + first1(712).space.PX_16;
+  obj2.paddingBottom = first1(1609)().bottom + first1(712).space.PX_16;
   obj1[0] = obj2;
   obj1[1] = tmp6;
   obj1[2] = function renderItem(item) {
@@ -241,16 +241,16 @@ export default function UserSettingsPushNotificationLogs() {
     let obj = { style: tmp9.log, children: null };
     obj = { style: tmp9.code, variant: "text-xs/normal", children: null };
     obj[2] = new Date(item.receivedTimestamp).toISOString();
-    const items = [outer1_7(first(4251).Text, obj), ];
+    const items = [outer1_7(first(4281).Text, obj), ];
     obj = { style: tmp9.code, variant: "text-sm/normal", children: null };
     const items1 = [str, "[", item.type, "]", " "];
-    const items2 = [outer1_8(first(4251).Text, { style: tmp9.code, variant: "text-sm/normal", color: "text-brand", children: items1 }), item.title, " - ", item.content];
+    const items2 = [outer1_8(first(4281).Text, { style: tmp9.code, variant: "text-sm/normal", color: "text-brand", children: items1 }), item.title, " - ", item.content];
     obj[2] = items2;
-    items[1] = outer1_8(first(4251).Text, obj);
+    items[1] = outer1_8(first(4281).Text, obj);
     obj[1] = items;
     return outer1_8(outer1_6, obj, item.index);
   };
-  items2[1] = callback3(first(7638).FlashList, obj1);
+  items2[1] = callback3(first(7666).FlashList, obj1);
   obj[1] = items2;
   return callback4(View, obj);
 };

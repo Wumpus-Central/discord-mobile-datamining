@@ -1,7 +1,7 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeDollarSign.tsx
 import "noop";
 import jsxProd from "jsxProd";
-import { inlineStyles } from "../../../../../_runtime/08409_inlineStyles.js";
+import { inlineStyles } from "../../../../../_runtime/07758_inlineStyles.js";
 import { getTransformedBadgeColors } from "GuildBadgeUtils.tsx";
 
 let c3;

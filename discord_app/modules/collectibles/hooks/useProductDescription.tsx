@@ -43,7 +43,7 @@ function getBundleDescription(bundledProducts) {
       } else {
         let tmp33 = tmp5;
         let tmp34 = tmp7;
-        if (tmp6(1901).CollectiblesItemType.PROFILE_EFFECT === type) {
+        if (tmp6(1930).CollectiblesItemType.PROFILE_EFFECT === type) {
           let tmp9 = tmp5;
           let tmp10 = tmp7;
           let intl = tmp6(1236).intl;
@@ -54,7 +54,7 @@ function getBundleDescription(bundledProducts) {
         } else {
           let tmp35 = tmp5;
           let tmp36 = tmp7;
-          if (tmp6(1901).CollectiblesItemType.NAMEPLATE === type) {
+          if (tmp6(1930).CollectiblesItemType.NAMEPLATE === type) {
             let tmp37 = tmp5;
             let tmp38 = tmp7;
             let intl6 = tmp6(1236).intl;

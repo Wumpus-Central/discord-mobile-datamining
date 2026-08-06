@@ -1,5 +1,5 @@
 // discord_app/utils/SecondsSliderUtils.tsx
-import { t } from "../../_runtime/03837_t.js";
+import { t } from "../../_runtime/03866_t.js";
 import { getSystemLocale } from "../intl/index.native.tsx";
 const result = require("set").fileFinishedImporting("utils/SecondsSliderUtils.tsx");
 

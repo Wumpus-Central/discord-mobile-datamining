@@ -184,7 +184,7 @@ function PurchaseSuccessModalBase(sku) {
       return outer1_14(stateFromStores(callback[21]).XSmallIcon, { size: "lg", style: _undefined.closeButtonIcon });
     },
     accessibilityLabel: null,
-    labelVisible: false
+    displayMode: "minimal"
   };
   const intl = tmp4(tmp3[22]).intl;
   obj8[2] = intl.string(stateFromStores(callback[22]).t.cpT0Cq);

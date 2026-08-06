@@ -29,7 +29,7 @@ import ME from "ME";
 import { StaticChannelId } from "set";
 import areArraysShallowlyEqual from "areArraysShallowlyEqual";
 import { apply } from "../../_runtime/00012_apply.js";
-import { fuzzysearch } from "../../_runtime/05182_fuzzysearch.js";
+import { fuzzysearch } from "../../_runtime/05212_fuzzysearch.js";
 import { getSystemLocale } from "../intl/index.native.tsx";
 import { sortByMatchScore } from "../modules/autocompleter/sortByMatchScore.tsx";
 import { compareChannelsByScoreAndPosition } from "../modules/channel_text_area/compareChannelsByScoreAndPosition.tsx";
@@ -184,10 +184,10 @@ function queryMemberList(arg0) {
           if (null == str) {
             let items2 = [null, null];
           } else {
-            let tmp16Result = tmp16(1856);
+            let tmp16Result = tmp16(1884);
             let stripDiacriticsResult = tmp16Result.stripDiacritics(str);
             items2 = [stripDiacriticsResult, ];
-            tmp16Result = tmp16(1856);
+            tmp16Result = tmp16(1884);
             items2[1] = tmp16Result.normalize(stripDiacriticsResult);
           }
           let tmp18 = callback;
@@ -196,10 +196,10 @@ function queryMemberList(arg0) {
           if (null == str2) {
             let items3 = [null, null];
           } else {
-            let tmp16Result1 = tmp16(1856);
+            let tmp16Result1 = tmp16(1884);
             let stripDiacriticsResult1 = tmp16Result1.stripDiacritics(str2);
             items3 = [stripDiacriticsResult1, ];
-            let tmp16Result2 = tmp16(1856);
+            let tmp16Result2 = tmp16(1884);
             items3[1] = tmp16Result2.normalize(stripDiacriticsResult1);
           }
           let tmp18Result = tmp18(items3, 2);
@@ -240,21 +240,21 @@ function queryMemberList(arg0) {
                             if (substr5 !== normalizeResult) {
                               let tmp33 = num < 50;
                               if (num < 50) {
-                                let tmp28 = tmp12(5182)(toLocaleLowerCaseResult, str4) || tmp12(5182)(normalizeResult, str5);
+                                let tmp28 = tmp12(5212)(toLocaleLowerCaseResult, str4) || tmp12(5212)(normalizeResult, str5);
                                 if (!tmp28) {
-                                  let tmp29 = null != str6 && tmp12(5182)(toLocaleLowerCaseResult, str6);
+                                  let tmp29 = null != str6 && tmp12(5212)(toLocaleLowerCaseResult, str6);
                                   tmp28 = tmp29;
                                 }
                                 if (!tmp28) {
-                                  let tmp30 = null != str7 && tmp12(5182)(normalizeResult, str7);
+                                  let tmp30 = null != str7 && tmp12(5212)(normalizeResult, str7);
                                   tmp28 = tmp30;
                                 }
                                 if (!tmp28) {
-                                  let tmp31 = null != str8 && tmp12(5182)(toLocaleLowerCaseResult, str8);
+                                  let tmp31 = null != str8 && tmp12(5212)(toLocaleLowerCaseResult, str8);
                                   tmp28 = tmp31;
                                 }
                                 if (!tmp28) {
-                                  let tmp32 = null != str9 && tmp12(5182)(normalizeResult, str9);
+                                  let tmp32 = null != str9 && tmp12(5212)(normalizeResult, str9);
                                   tmp28 = tmp32;
                                 }
                                 tmp33 = tmp28;
@@ -388,13 +388,13 @@ function queryMemberList(arg0) {
 function getPriorityForStickerMetadataType(arg0) {
   if (StickerFormat.StickerMetadataTypes.STICKER_NAME === arg0) {
     return 11;
-  } else if (tmp(4936).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
+  } else if (tmp(4966).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
     return 6;
-  } else if (tmp(4936).StickerMetadataTypes.TAG === arg0) {
+  } else if (tmp(4966).StickerMetadataTypes.TAG === arg0) {
     return 1;
   } else {
-    if (tmp(4936).StickerMetadataTypes.GUILD_NAME !== arg0) {
-      if (tmp(4936).StickerMetadataTypes.PACK_NAME !== arg0) {
+    if (tmp(4966).StickerMetadataTypes.GUILD_NAME !== arg0) {
+      if (tmp(4966).StickerMetadataTypes.PACK_NAME !== arg0) {
         return 1;
       }
     }
@@ -930,10 +930,10 @@ areArraysShallowlyEqual = {
       const mapped = found.map((toLocaleLowerCase) => {
         const toLocaleLowerCaseResult = toLocaleLowerCase.toLocaleLowerCase();
         const obj = { queryLower: toLocaleLowerCaseResult, exactQuery: null, containQuery: null, isFullMatch: false };
-        const regExp = new RegExp("^" + callback(4243).escape(toLocaleLowerCaseResult), "i");
+        const regExp = new RegExp("^" + callback(4273).escape(toLocaleLowerCaseResult), "i");
         obj[1] = regExp;
-        const obj2 = callback(4243);
-        const regExp1 = new RegExp(callback(4243).escape(toLocaleLowerCaseResult), "i");
+        const obj2 = callback(4273);
+        const regExp1 = new RegExp(callback(4273).escape(toLocaleLowerCaseResult), "i");
         obj[2] = regExp1;
         return obj;
       });
@@ -942,17 +942,17 @@ areArraysShallowlyEqual = {
         let obj = { queryLower: null, exactQuery: null, containQuery: null, isFullMatch: true };
         obj[0] = toLocaleLowerCaseResult;
         const _RegExp = RegExp;
-        let obj2 = callback(4243);
+        let obj2 = callback(4273);
         const _HermesInternal = HermesInternal;
-        let regExp = new RegExp("^" + callback(4243).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        let regExp = new RegExp("^" + callback(4273).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj[1] = regExp;
         const _RegExp2 = RegExp;
-        const str = callback(4243).escape(toLocaleLowerCaseResult);
-        const obj3 = callback(4243);
-        let regExp1 = new RegExp(callback(4243).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        const str = callback(4273).escape(toLocaleLowerCaseResult);
+        const obj3 = callback(4273);
+        let regExp1 = new RegExp(callback(4273).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj[2] = regExp1;
         mapped.unshift(obj);
-        const str6 = callback(4243).escape(toLocaleLowerCaseResult);
+        const str6 = callback(4273).escape(toLocaleLowerCaseResult);
       }
       return mapped;
     })(guildId.query, flag2);
@@ -2108,15 +2108,15 @@ areArraysShallowlyEqual = {
         return 1;
       } else {
         const toLocaleLowerCaseResult = obj.toLocaleLowerCase();
-        const stripDiacriticsResult = toLocaleLowerCaseResult(1856).stripDiacritics(toLocaleLowerCaseResult);
+        const stripDiacriticsResult = toLocaleLowerCaseResult(1884).stripDiacritics(toLocaleLowerCaseResult);
         const _RegExp = RegExp;
-        let obj2 = toLocaleLowerCaseResult(1856);
+        let obj2 = toLocaleLowerCaseResult(1884);
         const _HermesInternal = HermesInternal;
-        const regExp = new RegExp("^" + nextResult(4243).escape(stripDiacriticsResult), "i");
+        const regExp = new RegExp("^" + nextResult(4273).escape(stripDiacriticsResult), "i");
         const _RegExp2 = RegExp;
-        const obj3 = nextResult(4243);
+        const obj3 = nextResult(4273);
         const _HermesInternal2 = HermesInternal;
-        const regExp1 = new RegExp("" + nextResult(4243).escape(stripDiacriticsResult), "i");
+        const regExp1 = new RegExp("" + nextResult(4273).escape(stripDiacriticsResult), "i");
         const stickerMetadataArrays = outer1_10.getStickerMetadataArrays();
         let item = stickerMetadataArrays.forEach((arr) => {
           const item = arr.forEach((arg0, id) => {

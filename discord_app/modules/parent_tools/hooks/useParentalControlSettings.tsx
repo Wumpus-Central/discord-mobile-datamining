@@ -22,7 +22,7 @@ export const useParentalControlledExplicitContentSettings = function useParental
   const controlledSetting = ParentalControlledExplicitContent.useControlledSetting(id);
   let tmp6 = null;
   if (null != selectedTeen) {
-    let tmpResult = tmp(13952);
+    let tmpResult = tmp(13989);
     let id1;
     if (selectedTeen != null) {
       id1 = selectedTeen.id;
@@ -36,7 +36,7 @@ export const useParentalControlledExplicitContentSettings = function useParental
     obj = { explicitContentNonFriendDm: null, explicitContentFriendDm: null, explicitContentGuilds: null };
     obj[1] = prop;
     obj[0] = tmpResult.resolveExplicitContentSettingWithDefaultsForTeen(obj);
-    tmpResult = tmp(13952);
+    tmpResult = tmp(13989);
     let id2;
     if (selectedTeen != null) {
       id2 = selectedTeen.id;
@@ -72,16 +72,16 @@ export const useParentalControlledGoreContentSettings = function useParentalCont
       controlledSetting = {};
     }
     ({ goreContentNonFriendDm, goreContentFriendDm } = controlledSetting);
-    let tmpResult = tmp(13952);
+    let tmpResult = tmp(13989);
     if (!tmpResult.isSetAndNotDefault(goreContentNonFriendDm)) {
-      tmpResult = tmp(5811);
+      tmpResult = tmp(5838);
       goreContentNonFriendDm = tmpResult.resolveGoreSettingWithDefaultsForTeen({ isDm: true });
     }
     obj = { goreContentNonFriendDm: null, goreContentFriendDm: null, goreContentGuilds: null };
     obj[0] = goreContentNonFriendDm;
     if (!tmpResult1.isSetAndNotDefault(goreContentFriendDm)) {
-      goreContentFriendDm = tmp(5811).resolveGoreSettingWithDefaultsForTeen({ isDm: true, isFriend: true });
-      const tmpResult2 = tmp(5811);
+      goreContentFriendDm = tmp(5838).resolveGoreSettingWithDefaultsForTeen({ isDm: true, isFriend: true });
+      const tmpResult2 = tmp(5838);
     }
     obj[1] = goreContentFriendDm;
     obj[2] = tmp(1306).ExplicitContentRedaction.BLUR;
@@ -109,8 +109,8 @@ export const useDefaultGuildsRestricted = function useDefaultGuildsRestricted() 
   return controlledSetting1;
 };
 export const useAllowFriendsFromMutualGuildsOnlyForTeen = function useAllowFriendsFromMutualGuildsOnlyForTeen() {
-  const selectedTeen = controlledSetting(7233).useSelectedTeen();
-  const ParentalControlledFriendSourceFlags = controlledSetting(13949).ParentalControlledFriendSourceFlags;
+  const selectedTeen = controlledSetting(7260).useSelectedTeen();
+  const ParentalControlledFriendSourceFlags = controlledSetting(13986).ParentalControlledFriendSourceFlags;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;

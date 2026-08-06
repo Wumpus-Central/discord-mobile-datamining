@@ -1,14 +1,13 @@
 // discord_app/modules/rpc/transports/PostMessageProxySocket.tsx
-import { TransportTypes } from "RPC_SCOPE_CONFIG";
 import { RPCCloseCodes } from "ME";
 import "checkRpcVersion";
 import { HANDSHAKE } from "../RPCOpcodes.tsx";
 
 class WindowProxySocket extends tmp2 {
   constructor(arg0) {
-    ({ source, postMessageToRPCClient, encoding, logger } = global);
+    ({ postMessageToRPCClient, encoding, logger } = global);
     ({ postClose, onSendingToRPCClient } = global);
-    tmp = new tmp(TransportTypes.POST_MESSAGE, global.version, encoding, tmp2, new.target, tmp, new.target, source, postMessageToRPCClient, logger, encoding);
+    tmp3 = new WindowProxySocket(global.source, global.version, encoding, tmp2, tmp, new.target, new.target, postMessageToRPCClient, logger);
     // ThrowIfThisInitialized (0x7c)
     items = ["etf", "json"];
     if (-1 === items.indexOf(encoding)) {
@@ -19,7 +18,7 @@ class WindowProxySocket extends tmp2 {
       obj[0] = RPCCloseCodes.INVALID_ENCODING;
       tmp17 = globalThis;
       _HermesInternal = HermesInternal;
-      str2 = "Invalid Encoding: ";
+      str3 = "Invalid Encoding: ";
       tmp15 = require("prototype");
       tmp18 = new.target;
       tmp19 = new.target;
@@ -28,7 +27,7 @@ class WindowProxySocket extends tmp2 {
       tmp22 = tmp15;
       throw tmp15;
     } else {
-      str3 = "etf";
+      str = "etf";
       if ("etf" === encoding) {
         tmp5 = closure_0;
         tmp6 = closure_1;
@@ -36,22 +35,21 @@ class WindowProxySocket extends tmp2 {
         tmp7 = RPCCloseCodes;
         obj[0] = RPCCloseCodes.INVALID_ENCODING;
         tmp8 = new.target;
-        str = "Erlpack cannot be used on this client";
+        str2 = "Erlpack cannot be used on this client";
         tmp9 = new.target;
         tmp10 = obj;
         tmp11 = new require("prototype")(obj, "Erlpack cannot be used on this client");
         tmp12 = tmp11;
         throw tmp11;
       } else {
-        tmp4 = tmp;
-        tmp.source = source;
-        tmp.postMessageToRPCClient = postMessageToRPCClient;
-        tmp.logger = logger;
-        tmp.postClose = postClose;
-        tmp.onSendingToRPCClient = onSendingToRPCClient;
+        tmp4 = tmp3;
+        tmp3.postMessageToRPCClient = postMessageToRPCClient;
+        tmp3.logger = logger;
+        tmp3.postClose = postClose;
+        tmp3.onSendingToRPCClient = onSendingToRPCClient;
         flag = false;
-        tmp.closed = false;
-        return tmp;
+        tmp3.closed = false;
+        return tmp3;
       }
     }
   }
@@ -76,6 +74,6 @@ prototype["close"] = function close(arg0, arg1) {
   }
   self.closed = true;
 };
-let result = require("checkRpcVersion").fileFinishedImporting("modules/rpc/transports/PostMessageProxySocket.tsx");
+let result = require("prototype").fileFinishedImporting("modules/rpc/transports/PostMessageProxySocket.tsx");
 
 export default WindowProxySocket;

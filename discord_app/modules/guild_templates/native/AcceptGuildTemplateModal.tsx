@@ -20,7 +20,7 @@ function ConnectedAcceptGuildTemplate(code) {
   const items = [handleGuildTemplateResolveSuccess];
   stateFromStores = obj.useStateFromStores(items, () => outer1_7.getGuildTemplate(code));
   const tmp = createCacheKey();
-  const tmp3 = callback(React.useState(first(5184).getGuildNameSuggestion()), 2);
+  const tmp3 = callback(React.useState(first(5214).getGuildNameSuggestion()), 2);
   first = tmp3[0];
   dependencyMap = tmp3[1];
   const tmp5 = callback(React.useState(null), 2);
@@ -28,7 +28,7 @@ function ConnectedAcceptGuildTemplate(code) {
   callback = tmp5[1];
   const tmp7 = callback(React.useState(null), 2);
   React = tmp7[1];
-  stateFromStores(11079)(stateFromStores);
+  stateFromStores(11111)(stateFromStores);
   obj = { top: true, style: tmp.container, children: null };
   obj = {
     code,
@@ -42,7 +42,7 @@ function ConnectedAcceptGuildTemplate(code) {
     chooseIcon: null,
     createServer: null
   };
-  let obj2 = first(5184);
+  let obj2 = first(5214);
   obj[6] = first1(function*() {
     if (table === 2) {
       table = 3;
@@ -106,12 +106,12 @@ function ConnectedAcceptGuildTemplate(code) {
   });
   obj[7] = function createServer() {
     if (null != stateFromStores) {
-      const obj = stateFromStores(11088);
-      stateFromStores(11088).acceptGuildTemplate(tmp.code, first, first1).then(() => callback(table[15]).hideModal(), (arg0) => callback2(arg0));
-      const acceptGuildTemplateResult = stateFromStores(11088).acceptGuildTemplate(tmp.code, first, first1);
+      const obj = stateFromStores(11122);
+      stateFromStores(11122).acceptGuildTemplate(tmp.code, first, first1).then(() => callback(table[15]).hideModal(), (arg0) => callback2(arg0));
+      const acceptGuildTemplateResult = stateFromStores(11122).acceptGuildTemplate(tmp.code, first, first1);
     }
   };
-  obj[2] = jsx(stateFromStores(11080), {
+  obj[2] = jsx(stateFromStores(11112), {
     code,
     guildTemplate: stateFromStores,
     name: first,
@@ -123,7 +123,7 @@ function ConnectedAcceptGuildTemplate(code) {
     chooseIcon: null,
     createServer: null
   });
-  return jsx(code(5257).SafeAreaPaddingView, {
+  return jsx(code(5311).SafeAreaPaddingView, {
     code,
     guildTemplate: stateFromStores,
     name: first,
@@ -137,7 +137,7 @@ function ConnectedAcceptGuildTemplate(code) {
   });
 }
 createCacheKey = { container: null };
-createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
+createCacheKey = { flex: 1, marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
 createCacheKey[0] = createCacheKey;
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 const ACCEPT_GUILD_TEMPLATE = "ACCEPT_GUILD_TEMPLATE";
@@ -159,5 +159,5 @@ export default function AcceptGuildTemplateModal(code) {
     obj[outer1_12] = obj;
     return obj;
   }, items);
-  return jsx(code(5650).Navigator, { initialRouteName: ACCEPT_GUILD_TEMPLATE, screens: memo });
+  return jsx(code(5704).Navigator, { initialRouteName: ACCEPT_GUILD_TEMPLATE, screens: memo });
 };

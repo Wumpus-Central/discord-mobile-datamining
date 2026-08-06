@@ -27,12 +27,12 @@ createCacheKey = createCacheKey.createStyles(createCacheKey);
 const obj2 = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/age_assurance/native/AgeVerificationWebViewScreen.tsx");
 
-export default function AgeVerificationWebViewScreen(injectedJavaScriptBeforeContentLoaded) {
+export default function AgeVerificationWebViewScreen(webviewUrl) {
   let c6;
   let tmp3;
-  const webviewUrl = injectedJavaScriptBeforeContentLoaded.webviewUrl;
-  const onComplete = injectedJavaScriptBeforeContentLoaded.onComplete;
-  const onClose = injectedJavaScriptBeforeContentLoaded.onClose;
+  webviewUrl = webviewUrl.webviewUrl;
+  const onComplete = webviewUrl.onComplete;
+  const onClose = webviewUrl.onClose;
   let ref;
   let React;
   let closure_5;
@@ -105,10 +105,14 @@ export default function AgeVerificationWebViewScreen(injectedJavaScriptBeforeCon
               const obj = outer1_0(outer1_2[10]);
             }
             if (isAgeVerifiedResult) {
-              callback();
+              callback2();
             }
           }).catch((error) => {
-            logger.warn("Failed to register Incode interview from WebView", { error });
+            outer1_12.warn("Failed to register Incode interview from WebView", { error });
+            if (!ref.current) {
+              tmp2.current = true;
+              callback();
+            }
           });
         } else if ("fallback_request" === tmp4.kind) {
           let obj = webviewUrl(onClose[11]);
@@ -125,13 +129,13 @@ export default function AgeVerificationWebViewScreen(injectedJavaScriptBeforeCon
               if (null != incode_parameters.interview_id) {
                 const obj = { sessionToken: null, interviewId: null };
                 ({ session_token: obj[0], interview_id: obj[1] } = incode_parameters);
-                callback2(obj);
+                callback3(obj);
               }
             }
-            callback2({ error: true });
+            callback3({ error: true });
           }).catch((error) => {
             outer1_12.warn("Failed to bootstrap Incode fallback session from WebView", { error });
-            callback2({ error: true });
+            callback3({ error: true });
           });
         } else if (tmp4.status === callback.COMPLETED) {
           callback1();
@@ -172,33 +176,35 @@ export default function AgeVerificationWebViewScreen(injectedJavaScriptBeforeCon
   }, items5);
   const tmp15 = createCacheKey();
   obj = { style: tmp15.container, children: null };
-  obj = {
-    ref,
-    allowsInlineMediaPlayback: true,
-    mediaCapturePermissionGrantType: "grant",
-    javaScriptEnabled: true,
-    source: { uri: webviewUrl },
-    onShouldStartLoadWithRequest: callback5,
-    onMessage: callback4,
-    onError(code) {
-      outer1_12.warn("WebView load error", { code: code.nativeEvent.code });
-      callback();
-    },
-    onLoadEnd() {
-      callback();
-    },
-    injectedJavaScriptBeforeContentLoaded: injectedJavaScriptBeforeContentLoaded.injectedJavaScriptBeforeContentLoaded,
-    style: tmp15.webView,
-    containerStyle: tmp15.webView
+  obj = { ref, allowsInlineMediaPlayback: true, mediaCapturePermissionGrantType: "grant", javaScriptEnabled: true, source: { uri: webviewUrl }, onShouldStartLoadWithRequest: null, onMessage: null, onError: null, onLoadEnd: null, injectedJavaScriptBeforeContentLoaded: null, style: null, containerStyle: null };
+  const tmp16 = closure_11;
+  const tmp2 = ref(React.useState(true), 2);
+  const tmp8 = webviewUrl;
+  const tmp9 = onClose;
+  const tmp19 = onComplete(onClose[13]);
+  let tmp20;
+  if (obj4.isIOS()) {
+    tmp20 = callback5;
+  }
+  obj[5] = tmp20;
+  obj[6] = callback4;
+  obj[7] = function onError(code) {
+    outer1_12.warn("WebView load error", { code: code.nativeEvent.code });
+    callback();
   };
-  const items6 = [memo(onComplete(onClose[13]), obj), ];
+  obj[8] = function onLoadEnd() {
+    callback();
+  };
+  obj[9] = webviewUrl.injectedJavaScriptBeforeContentLoaded;
+  ({ webView: obj3[10], webView: obj3[11] } = tmp15);
+  const items6 = [memo(tmp19, obj), ];
   if (tmp18Result) {
     const obj1 = { style: null, children: null };
     obj1[0] = tmp15.loadingOverlay;
-    obj1[1] = tmp18(webviewUrl(onClose[14]).ActivityIndicator, {});
+    obj1[1] = tmp18(tmp8(tmp9[15]).ActivityIndicator, {});
     tmp18Result = tmp18(tmp17, obj1);
   }
   items6[1] = tmp18Result;
   obj[1] = items6;
-  return closure_11(closure_5, obj);
+  return tmp16(closure_5, obj);
 };

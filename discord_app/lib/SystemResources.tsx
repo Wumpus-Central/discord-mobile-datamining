@@ -67,12 +67,12 @@ prototype["takeSample"] = function takeSample() {
       self.lastCPU = cumulativeCPUUsage;
     }
   } else {
-    const currentCPUUsagePercent = tmp(7029).getCurrentCPUUsagePercent();
+    const currentCPUUsagePercent = tmp(7056).getCurrentCPUUsagePercent();
     if (null != currentCPUUsagePercent) {
       const cpuHistogram2 = self.cpuHistogram;
       cpuHistogram2.addSample(currentCPUUsagePercent);
     }
-    const tmpResult = tmp(7029);
+    const tmpResult = tmp(7056);
   }
   if (null != currentMemoryUsageKB) {
     const memoryHistogram = self.memoryHistogram;

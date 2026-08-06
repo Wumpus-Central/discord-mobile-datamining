@@ -1,12 +1,12 @@
 // discord_app/modules/quests/native/QuestUtils.native.tsx
 import closure_3 from "jsxProd";
-import "module_8234";
+import "module_8374";
 import zustandStore from "zustandStore";
 import QuestsExperimentLocations from "QuestsExperimentLocations";
 import { UserSettingsSections } from "ME";
 import jsxProd from "isSponsoredPlayQuest";
-import { Link } from "../../../../_runtime/01481_Link.js";
-import { asyncRequireImpl } from "../../../../_runtime/01959_asyncRequireImpl.js";
+import { createStandardNavigationFactories } from "../../../../_runtime/01481_createStandardNavigationFactories.js";
+import { asyncRequireImpl } from "../../../../_runtime/01988_asyncRequireImpl.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import { useAlertStore } from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
@@ -32,7 +32,7 @@ function openRewardClaimBottomSheet(arg0) {
   let questId;
   let sourceQuestContent;
   ({ questId, questContent, questContentPosition, sourceQuestContent } = arg0);
-  return ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(11056, dependencyMap.paths), closure_6, { questId, questContent, questContentPosition, sourceQuestContent });
+  return ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(11088, dependencyMap.paths), closure_6, { questId, questContent, questContentPosition, sourceQuestContent });
 }
 function viewReward(quest) {
   let onSuccess;
@@ -49,12 +49,12 @@ function viewReward(quest) {
     obj[1] = questContent;
     obj[2] = questContentPosition;
     obj[3] = sourceQuestContent;
-    ACTION_SHEET_HEIGHT_HALF.openLazy(tmp(1959)(11056, dependencyMap.paths), closure_6, obj);
+    ACTION_SHEET_HEIGHT_HALF.openLazy(tmp(1988)(11088, dependencyMap.paths), closure_6, obj);
     const obj7 = ACTION_SHEET_HEIGHT_HALF;
   } else {
-    let tmpResult = tmp(10363);
+    let tmpResult = tmp(10394);
     if (tmpResult.hasVirtualCurrencyReward(quest.config)) {
-      tmpResult = tmp(11063);
+      tmpResult = tmp(11095);
       obj = { quest: null };
       obj[0] = quest;
       const result = tmpResult.openQuestOrbsRewardModal(obj);
@@ -63,8 +63,8 @@ function viewReward(quest) {
       obj1[0] = quest;
       obj1[1] = product;
       obj1[2] = onSuccess;
-      const result1 = tmp(11069).openQuestCollectibleRewardModal(obj1);
-      const tmpResult1 = tmp(11069);
+      const result1 = tmp(11101).openQuestCollectibleRewardModal(obj1);
+      const tmpResult1 = tmp(11101);
     }
   }
 }
@@ -122,11 +122,11 @@ function _handleRewardClaim() {
             c4 = 0;
             callback = closure_3;
             logger.error("Error claiming reward", callback);
-            obj1 = callback(3956);
+            obj1 = callback(3985);
             const obj3 = { key: "CLAIM_QUEST_REWARD_ERROR", content: null, icon: null };
             const intl = logger(1236).intl;
             obj3[1] = intl.string(logger(1236).t.CKsXk3);
-            obj3[2] = callback(8228);
+            obj3[2] = callback(8368);
             obj1.open(obj3);
             c6 = 3;
             return { value: false, done: true };
@@ -235,12 +235,12 @@ function _handleRewardClaimThenView() {
               return obj1;
             } else {
               if (true === c4) {
-                let obj3 = callback(4223);
+                let obj3 = callback(4253);
                 obj3.hideActionSheet();
               }
               if (c5) {
                 if (!c6) {
-                  let obj4 = lib(10363);
+                  let obj4 = lib(10394);
                 }
                 if (obj9.hasQuestRewardCode(lib.config)) {
                   const obj2 = { questId: null, questContent: null, questContentPosition: null, sourceQuestContent: null };
@@ -267,17 +267,17 @@ function _handleRewardClaimThenView() {
                   })(lib);
                   return obj3;
                 }
-                obj9 = lib(10363);
+                obj9 = lib(10394);
               }
               if (!c6) {
-                let obj5 = callback(8234);
+                let obj5 = callback(8374);
                 obj5.open();
               }
-              let obj6 = callback(3956);
+              let obj6 = callback(3985);
               obj4 = { key: "CLAIM_QUEST_REWARD_ERROR", content: null, icon: null };
               const intl = lib(1236).intl;
               obj4[1] = intl.string(lib(1236).t["HZlu0+"]);
-              obj4[2] = callback(8228);
+              obj4[2] = callback(8368);
               obj6.open(obj4);
               c4 = 3;
               return { value: false, done: true };
@@ -330,7 +330,7 @@ function _handleRewardClaimThenView() {
 let result = require("zustandStore").fileFinishedImporting("modules/quests/native/QuestUtils.native.tsx");
 
 export const openRewardDetailsBottomSheet = function openRewardDetailsBottomSheet(questId) {
-  return ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(11054, dependencyMap.paths), closure_7, { questId: questId.questId });
+  return ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(11086, dependencyMap.paths), closure_7, { questId: questId.questId });
 };
 export { viewReward };
 export const handleRewardClaimThenView = function handleRewardClaimThenView(arg0) {
@@ -370,86 +370,26 @@ export const openQuestHome = function openQuestHome(scrollToQuestId) {
       const rootNavigationRef = obj.getRootNavigationRef();
       if (null != rootNavigationRef) {
         if (rootNavigationRef.isReady()) {
-          let tmp4 = null;
-          if (searchRoutes) {
-            function isQuestsRoute(nextResult) {
-              let tmp = "settings" === nextResult.name;
-              if (tmp) {
-                const params = nextResult.params;
-                let screen;
-                if (params != null) {
-                  screen = params.screen;
-                }
-                tmp = screen === constants.QUESTS;
-              }
-              return tmp;
-            }
-            const rootState = rootNavigationRef.getRootState();
-            let routes;
-            if (rootState != null) {
-              routes = rootState.routes;
-            }
-            let searchRoutesResult = null;
-            if (routes) {
-              searchRoutes = function searchRoutes(routes) {
-                const iter = routes[Symbol.iterator]();
-                const nextResult = iter.next();
-                while (iter !== undefined) {
-                  let tmp2 = nextResult;
-                  let tmp3 = isQuestsRoute;
-                  let tmp4 = nextResult;
-                  if (isQuestsRoute(nextResult)) {
-                    let tmp11 = iter;
-                    iter.return();
-                    return tmp2;
-                  } else {
-                    let state = tmp2.state;
-                    routes = undefined;
-                    if (state != null) {
-                      routes = state.routes;
-                    }
-                    if (routes) {
-                      let tmp6 = searchRoutes;
-                      let tmp7 = nextResult;
-                      let tmp8 = searchRoutes(tmp2.state.routes);
-                      let tmp9 = tmp8;
-                      if (tmp8) {
-                        let tmp10 = iter;
-                        iter.return();
-                        return tmp8;
-                      }
-                    }
-                    continue;
-                  }
-                }
-                return null;
-              };
-              searchRoutesResult = searchRoutes(rootState.routes);
-            }
-            tmp4 = searchRoutesResult;
-          }
           obj = { sort: null, filter: null, scrollToQuestId: null };
           obj[0] = sort;
           obj[1] = filter;
-          let str = isQuestsRoute;
-          if (isQuestsRoute == null) {
+          let str = scrollToQuestId;
+          if (scrollToQuestId == null) {
             str = "";
           }
           obj[2] = str;
           outer1_4.setState(obj);
           obj = { screen: null };
           obj[0] = outer1_9.QUESTS;
-          if (tmp3) {
-            if (null != tmp4) {
-              const obj1 = { name: "settings", key: null, params: null };
-              obj1[1] = tmp4.key;
-              obj1[2] = obj;
-              rootNavigationRef.navigate(obj1);
-            }
+          if (flag) {
+            const obj1 = {};
+            const merged = Object.assign(obj);
+            obj1.pop = true;
+            rootNavigationRef.navigate("settings", obj1);
+          } else {
+            scrollToQuestId(sort[24]).openUserSettings(obj);
+            const tmpResult = scrollToQuestId(sort[24]);
           }
-          scrollToQuestId(sort[24]).openUserSettings(obj);
-          tmp3 = searchRoutes;
-          const tmpResult = scrollToQuestId(sort[24]);
         }
       }
     }, 1);
@@ -490,12 +430,12 @@ export const getPrimaryCtaIcon = function getPrimaryCtaIcon(quest, arg1) {
         obj = { size: "sm", style: null, color: null };
         obj[1] = obj;
         obj[2] = Themes.colors.WHITE;
-        let tmp5Result = tmp5(tmp(11070).CloudIcon, obj);
+        let tmp5Result = tmp5(tmp(11102).CloudIcon, obj);
       } else {
         const obj1 = { size: "sm", style: null, color: null };
         obj1[1] = obj;
         obj1[2] = Themes.colors.WHITE;
-        tmp5Result = tmp5(tmp(8656).GameControllerIcon, obj1);
+        tmp5Result = tmp5(tmp(8685).GameControllerIcon, obj1);
       }
       return tmp5Result;
     }
@@ -538,7 +478,7 @@ export const dismissOverlayScreens = function dismissOverlayScreens() {
         return tmp;
       });
       if (found.length < rootState.routes.length) {
-        const CommonActions = Link.CommonActions;
+        const CommonActions = createStandardNavigationFactories.CommonActions;
         obj = {};
         const merged = Object.assign(rootState);
         obj.routes = found;

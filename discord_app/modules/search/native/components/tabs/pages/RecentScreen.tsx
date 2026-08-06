@@ -9,7 +9,7 @@ import prototype from "prototype";
 import MessageEmbedTypes from "MessageEmbedTypes";
 import { EMPTY_MEDIA_RESULTS } from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME";
 import { SearchTypes } from "ME";
-import { jsx } from "Link";
+import { jsx } from "createStandardNavigationFactories";
 import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
 import { PressableBase } from "../../../../../../design/void/Pressables/native/Pressables.tsx";
 import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
@@ -35,8 +35,8 @@ function ClearAllHistory(searchContext) {
   obj = { variant: "text-sm/semibold", color: "text-brand", children: null };
   const intl2 = searchContext(1236).intl;
   obj[2] = intl2.string(searchContext(1236).t.LFTAUp);
-  obj[4] = jsx(searchContext(4251).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(searchContext(4797).PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  obj[4] = jsx(searchContext(4281).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  return jsx(searchContext(4827).PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
 }
 function ViewAll(onJumpToMedia) {
   let obj = { onPress: onJumpToMedia.onJumpToMedia, accessibilityRole: "button", unstable_pressDelay: 130, accessibilityLabel: null, children: null };

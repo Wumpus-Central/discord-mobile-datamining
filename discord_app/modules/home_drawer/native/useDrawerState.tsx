@@ -3,7 +3,7 @@ import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 
 const require = arg1;
-const result = require("Link").fileFinishedImporting("modules/home_drawer/native/useDrawerState.tsx");
+const result = require("createStandardNavigationFactories").fileFinishedImporting("modules/home_drawer/native/useDrawerState.tsx");
 
 export const useDrawerOpen = function useDrawerOpen(enableHome) {
   let flag = enableHome;

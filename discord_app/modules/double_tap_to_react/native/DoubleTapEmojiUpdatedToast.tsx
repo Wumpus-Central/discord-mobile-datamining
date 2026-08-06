@@ -84,9 +84,9 @@ const result = set.fileFinishedImporting("modules/double_tap_to_react/native/Dou
 export { ToastEmoji };
 export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdatedToast(emoji) {
   emoji = emoji.emoji;
-  let obj = emoji(4651);
+  let obj = emoji(4681);
   if (obj.getIsScreenReaderEnabled()) {
-    const AccessibilityAnnouncer = tmp(3968).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = tmp(3997).AccessibilityAnnouncer;
     const intl = tmp(1236).intl;
     obj = { emojiName: null };
     obj[0] = emoji.name;

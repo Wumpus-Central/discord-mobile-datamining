@@ -33,7 +33,7 @@ prototype["initialize"] = function initialize() {
       }
     }
   });
-  let closure_5 = self(1880).isStaffEnv(authStore.getCurrentUser());
+  let closure_5 = self(1909).isStaffEnv(authStore.getCurrentUser());
   const timerId = setTimeout(() => Object.freeze(self));
 };
 prototype["getExperimentDescriptor"] = function getExperimentDescriptor() {

@@ -3,7 +3,7 @@ import _objectWithoutProperties from "_objectWithoutProperties";
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
-import { Directions } from "../../../../_runtime/05353_Directions.js";
+import { Directions } from "../../../../_runtime/05407_Directions.js";
 
 const require = arg1;
 let closure_2 = ["children"];

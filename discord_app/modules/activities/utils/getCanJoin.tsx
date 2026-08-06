@@ -20,9 +20,9 @@ export const getCanJoin = function getCanJoin(currentUserId) {
       let obj = getPartySize;
       const partySize = obj.getPartySize(presenceActivity);
       if (obj2.hasPartySize(partySize)) {
-        let tmp6Result = tmp6(11042);
+        let tmp6Result = tmp6(11074);
         if (!tmp6Result.isPartyFull(partySize)) {
-          tmp6Result = tmp6(11043);
+          tmp6Result = tmp6(11075);
           if (tmp6Result.getIsInParty(tmp, presenceActivity)) {
             return { canJoin: false, remoteJoinPlatform: null };
           } else {
@@ -41,15 +41,15 @@ export const getCanJoin = function getCanJoin(currentUserId) {
               }
               if (type === constants.JOIN) {
                 if (null != presenceActivity) {
-                  const remoteJoinableActivityPlatform = tmp6(11045).getRemoteJoinableActivityPlatform(presenceActivity);
+                  const remoteJoinableActivityPlatform = tmp6(11077).getRemoteJoinableActivityPlatform(presenceActivity);
                   if (null != remoteJoinableActivityPlatform) {
                     obj = { canJoin: true, remoteJoinPlatform: null };
                     obj[1] = remoteJoinableActivityPlatform;
                     return obj;
-                  } else if (tmp13(5822)(presenceActivity, constants2.SUPPORTS_JOIN_URL)) {
+                  } else if (tmp13(5849)(presenceActivity, constants2.SUPPORTS_JOIN_URL)) {
                     return { canJoin: true, remoteJoinPlatform: null };
                   }
-                  const tmp6Result2 = tmp6(11045);
+                  const tmp6Result2 = tmp6(11077);
                 }
               }
               if (tmp6Result3.platformSupportsActivityJoin()) {
@@ -61,7 +61,7 @@ export const getCanJoin = function getCanJoin(currentUserId) {
               obj = { canJoin: false, remoteJoinPlatform: null };
               tmp6Result3 = tmp6(500);
             }
-            tmp6Result1 = tmp6(11044);
+            tmp6Result1 = tmp6(11076);
           }
         }
       }
@@ -77,12 +77,12 @@ export const getCanSync = function getCanSync(activity, tmp8Result, arg2, id) {
   if (tmp) {
     let tmp6 = result(activity, arg2, id.id);
     if (tmp6) {
-      let tmp8 = tmp4(5822)(activity, constants2.SYNC);
+      let tmp8 = tmp4(5849)(activity, constants2.SYNC);
       if (tmp8) {
         let isPlatformEmbedded = set.isPlatformEmbedded;
         if (isPlatformEmbedded) {
-          isPlatformEmbedded = !tmp9(11043).getIsInParty(tmp8Result, activity);
-          const tmp9Result = tmp9(11043);
+          isPlatformEmbedded = !tmp9(11075).getIsInParty(tmp8Result, activity);
+          const tmp9Result = tmp9(11075);
         }
         tmp8 = isPlatformEmbedded;
         tmp9 = require;

@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/panels/MainTabsNavigatorPanel.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "module_4265";
+import set from "set";
+import importAllResult from "module_4295";
 import get_ActivityIndicator from "ComponentDispatcher";
 import ME from "ME";
-import jsxProd from "module_4116";
+import jsxProd from "module_4145";
 import createCacheKey from "createCacheKey";
 
 let c10;
@@ -356,7 +356,6 @@ const memoResult = importAllResult.memo(function MainTabsNavigatorPanel() {
     items14[1] = tmp45Result;
     obj6[3] = items14;
     const items15 = [first2(tmp5(tmp3[21]).View, obj6), callback(tmp5(tmp3[29]), {}), ];
-    tmp45Result = null;
     if (arr2.length > 0) {
       const obj8 = { screens: null, screenStackActive: null, translateX: null, isDragging: null, maxWidth: null, highestFullyRenderedScreenIndex: null, shouldFreeze: null, focusChatPressableComponent: null, firstScreenWidth: null, firstScreenFrame: null };
       obj8[0] = arr2;
@@ -384,6 +383,14 @@ const memoResult = importAllResult.memo(function MainTabsNavigatorPanel() {
       obj8[8] = tmp53;
       obj8[9] = memo;
       tmp45Result = tmp45(tmp5Result, obj8);
+    } else {
+      tmp45Result = null;
+      if (isChatBesideChannelList) {
+        tmp45Result = null;
+        if (isChatLockedOpen) {
+          tmp45Result = tmp45(tmp5(tmp3[31]), {});
+        }
+      }
     }
     items15[2] = tmp45Result;
     obj5[1] = items15;

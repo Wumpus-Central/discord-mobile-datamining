@@ -4,7 +4,7 @@ import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 import { renderElement } from "../../../../../_runtime/00114_renderElement.js";
 
 let obj = { uiViewClassName: "DCDChatInput", directEventTypes: { topChangeContentSize: { registrationName: "onChangeContentSize" }, topEndBlur: { registrationName: "onEndBlur" }, topBeginFocus: { registrationName: "onBeginFocus" }, topSelectionOrTextChange: { registrationName: "onSelectionOrTextChange" }, topTextFlushed: { registrationName: "onTextFlushed" }, topPasteImage: { registrationName: "onPasteImage" }, topPasteCommand: { registrationName: "onPasteCommand" }, topRequestSend: { registrationName: "onRequestSend" }, topTapAction: { registrationName: "onTapAction" } }, validAttributes: null };
-obj = { textColor: true, editable: true, shouldShowCursor: true, placeholder: true, placeholderColor: true, markAsSpoilerTitle: true, keyboardAppearance: true, selectionColor: true, setNoExtractUI: true, keyboardType: true, maxHeight: true, verticalInset: true };
+obj = { textColor: require("result").colorAttribute, editable: true, shouldShowCursor: true, placeholder: true, placeholderColor: require("result").colorAttribute, markAsSpoilerTitle: true, keyboardAppearance: true, selectionColor: require("result").colorAttribute, setNoExtractUI: true, keyboardType: true, maxHeight: true, verticalInset: true };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onChangeContentSize: true, onEndBlur: true, onBeginFocus: true, onSelectionOrTextChange: true, onTextFlushed: true, onPasteImage: true, onPasteCommand: true, onRequestSend: true, onTapAction: true }));
 obj[2] = obj;
 obj = {
@@ -48,7 +48,7 @@ obj = {
   }
 };
 const value = setRuntimeConfigProvider.get("DCDChatInput", () => obj);
-const result = require("renderElement").fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx");
+const result = require("setRuntimeConfigProvider").fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx");
 
 export default value;
 export const __INTERNAL_VIEW_CONFIG = obj;

@@ -2,9 +2,9 @@
 import { DraftType } from "handleChanged";
 import map from "map";
 import { BuiltInSectionId } from "TRUE_OPTION_NAME";
-import { registerAsset } from "../../../../_runtime/01855_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/11487_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/11488_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/01883_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11521_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11522_registerAsset.js";
 import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
 import { showUploadPreviewActionSheet } from "../../media_uploads/native/showUploadPreviewActionSheet.tsx";
 import { ApplicationCommandSectionType } from "../ApplicationCommandTypes.tsx";

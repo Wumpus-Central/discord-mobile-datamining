@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/nameplates/utils.tsx
 import { isNameplateRecord } from "fromServer";
 import { ThemeTypes } from "sum";
-import { decodeImage } from "../../../../_runtime/01904_decodeImage.js";
+import { decodeImage } from "../../../../_runtime/01933_decodeImage.js";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { NAMEPLATE_PALETTES } from "constants.tsx";
 
@@ -14,7 +14,7 @@ export const getNameplateData = function getNameplateData(nameplate) {
     ({ skuId: obj[0], asset: obj[1], label: obj[2] } = nameplate);
     let INVALID_NAMEPLATE_PALETTE = NAMEPLATE_PALETTES.NAMEPLATE_PALETTES[nameplate.palette];
     if (INVALID_NAMEPLATE_PALETTE == null) {
-      INVALID_NAMEPLATE_PALETTE = tmp2(1902).INVALID_NAMEPLATE_PALETTE;
+      INVALID_NAMEPLATE_PALETTE = tmp2(1931).INVALID_NAMEPLATE_PALETTE;
     }
     obj[3] = INVALID_NAMEPLATE_PALETTE;
     tmp = obj;
@@ -36,7 +36,7 @@ export const getNameplateDataFromProductRecord = function getNameplateDataFromPr
         ({ skuId: obj[0], asset: obj[1], label: obj[2], palette } = first);
         let INVALID_NAMEPLATE_PALETTE = NAMEPLATE_PALETTES.NAMEPLATE_PALETTES[palette];
         if (INVALID_NAMEPLATE_PALETTE == null) {
-          INVALID_NAMEPLATE_PALETTE = tmp2(1902).INVALID_NAMEPLATE_PALETTE;
+          INVALID_NAMEPLATE_PALETTE = tmp2(1931).INVALID_NAMEPLATE_PALETTE;
         }
         obj[3] = INVALID_NAMEPLATE_PALETTE;
         tmp = obj;
@@ -50,7 +50,7 @@ export const getNameplateDataFromProductRecord = function getNameplateDataFromPr
 export const getBackgroundGradientColors = function getBackgroundGradientColors(palette, arg1) {
   let tmp3 = palette.name !== NAMEPLATE_PALETTES.INVALID_PALETTE_KEY;
   if (tmp3) {
-    let tmp4 = palette.name !== tmp(1902).CUSTOM_PALETTE_KEY;
+    let tmp4 = palette.name !== tmp(1931).CUSTOM_PALETTE_KEY;
     if (!tmp4) {
       let obj = /^#([0-9a-fA-F]{6})$/;
       let isMatch = obj.test(palette.darkBackground);

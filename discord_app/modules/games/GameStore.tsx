@@ -87,30 +87,50 @@ class GameStore extends Store {
 }
 const prototype = GameStore.prototype;
 prototype["isFetching"] = function isFetching(arg0) {
-  return set.has(arg0);
+  let hasItem = null != arg0;
+  if (hasItem) {
+    hasItem = set.has(arg0);
+  }
+  return hasItem;
 };
 prototype["didFetchingFail"] = function didFetchingFail(closure_0) {
-  return set1.has(closure_0);
+  let hasItem = null != closure_0;
+  if (hasItem) {
+    hasItem = set1.has(closure_0);
+  }
+  return hasItem;
 };
 prototype["getGame"] = function getGame(closure_0) {
-  return map.get(closure_0);
+  let value;
+  if (null != closure_0) {
+    value = map.get(closure_0);
+  }
+  return value;
 };
 prototype["hasNoData"] = function hasNoData(closure_0) {
-  return set2.has(closure_0);
+  let hasItem = null != closure_0;
+  if (hasItem) {
+    hasItem = set2.has(closure_0);
+  }
+  return hasItem;
 };
 prototype["getCoverImageUrl"] = function getCoverImageUrl(arg0, size) {
-  const value = map.get(arg0);
-  let coverURL;
-  if (value != null) {
-    coverURL = value.getCoverURL();
+  let tmp = null;
+  if (null != arg0) {
+    const value = map.get(arg0);
+    let coverURL;
+    if (value != null) {
+      coverURL = value.getCoverURL();
+    }
+    tmp = coverURL;
   }
-  if (null == coverURL) {
+  if (null == tmp) {
     return null;
   } else if (null == size) {
-    return coverURL;
+    return tmp;
   } else {
-    let str = isDiscordProxiedAssetUrl.toURLSafe(coverURL);
-    str = coverURL;
+    let str = isDiscordProxiedAssetUrl.toURLSafe(tmp);
+    str = tmp;
     if (null != str) {
       const searchParams = str.searchParams;
       const result = searchParams.set("size", size.size.toString());

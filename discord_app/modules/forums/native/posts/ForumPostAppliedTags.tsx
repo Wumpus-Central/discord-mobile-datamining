@@ -41,7 +41,7 @@ export const ForumPostAppliedTagPills = function ForumPostAppliedTagPills(additi
     obj[0] = obj;
     obj[1] = tmp.tag;
     obj[2] = hasUnreads;
-    tmp4 = callback(hasUnreads(9889).AppliedForumTagPill, obj);
+    tmp4 = callback(hasUnreads(9920).AppliedForumTagPill, obj);
   }
   items1[1] = tmp4;
   obj[1] = items1;

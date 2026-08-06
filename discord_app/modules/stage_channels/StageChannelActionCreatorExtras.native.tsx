@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/StageChannelActionCreatorExtras.native.tsx
 import { setIsOnStartStageScreen } from "setIsOnStartStageScreen";
 import MAX_STAGE_TOPIC_LENGTH from "MAX_STAGE_TOPIC_LENGTH";
-import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../_runtime/01988_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import { showUserProfileActionSheet } from "../user_profile/native/showUserProfileActionSheet.tsx";
@@ -19,7 +19,7 @@ const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("module
 export const openStageChannelSettings = function openStageChannelSettings(closure_0) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel: closure_0 };
-  obj.openLazy(asyncRequireImpl(7672, dependencyMap.paths), closure_5, obj);
+  obj.openLazy(asyncRequireImpl(7700, dependencyMap.paths), closure_5, obj);
 };
 export function openEndGuildEventConfirmationModal() {
 
@@ -27,36 +27,36 @@ export function openEndGuildEventConfirmationModal() {
 export const openStageChannelAudienceNoticeModal = function openStageChannelAudienceNoticeModal(channelId) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channelId };
-  obj.openLazy(asyncRequireImpl(7746, dependencyMap.paths), closure_4, obj);
+  obj.openLazy(asyncRequireImpl(7887, dependencyMap.paths), closure_4, obj);
 };
 export const openStageBlockedUsersSheet = function openStageBlockedUsersSheet(channel, onAccept) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel, onAccept };
-  obj.openLazy(asyncRequireImpl(7787, dependencyMap.paths), closure_6, obj);
+  obj.openLazy(asyncRequireImpl(7928, dependencyMap.paths), closure_6, obj);
 };
 export const openStageSettingsSheet = function openStageSettingsSheet(closure_0, closure_1) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channelId: closure_0, onOpenRTCDebugOverlay: closure_1 };
-  obj.openLazy(asyncRequireImpl(7794, dependencyMap.paths), closure_7, obj);
+  obj.openLazy(asyncRequireImpl(7935, dependencyMap.paths), closure_7, obj);
 };
 export const openEndStageModal = function openEndStageModal(closure_0) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel: closure_0 };
-  obj.openLazy(asyncRequireImpl(12539, dependencyMap.paths), closure_8, obj);
+  obj.openLazy(asyncRequireImpl(12576, dependencyMap.paths), closure_8, obj);
 };
 export const openStageChannel = function openStageChannel(outer1_0) {
   if (outer1_0.isGuildStageVoice()) {
     let obj = useIsStageVoicePanelEnabled;
     if (obj.isStageVoicePanelEnabled("stage_channel_action_creator_extras")) {
-      let tmpResult = tmp(4464);
+      let tmpResult = tmp(4494);
       tmpResult.openGuildVoiceModal(outer1_0);
     } else {
       obj = { channel: null };
       obj[0] = outer1_0;
       const obj2 = ModalActionCreators;
-      tmpResult = tmp(4464);
-      obj2.pushLazy(tmp(1959)(10528, tmp2.paths), obj, tmpResult.getVoiceChannelKey(outer1_0.id));
-      const tmp4 = tmp(1959)(10528, tmp2.paths);
+      tmpResult = tmp(4494);
+      obj2.pushLazy(tmp(1988)(10588, tmp2.paths), obj, tmpResult.getVoiceChannelKey(outer1_0.id));
+      const tmp4 = tmp(1988)(10588, tmp2.paths);
     }
     tmp2 = dependencyMap;
   }
@@ -80,15 +80,15 @@ export const navigateToStage = function navigateToStage(id) {
   if (id.isGuildStageVoice()) {
     let obj = useIsStageVoicePanelEnabled;
     if (obj.isStageVoicePanelEnabled("stage_channel_action_creator_extras")) {
-      let tmp3Result = tmp3(4464);
+      let tmp3Result = tmp3(4494);
       tmp3Result.openGuildVoiceModal(id);
     } else {
       obj = { channel: null };
       obj[0] = id;
       const obj2 = ModalActionCreators;
-      tmp3Result = tmp3(4464);
-      obj2.pushLazy(tmp3(1959)(10528, tmp4.paths), obj, tmp3Result.getVoiceChannelKey(id.id));
-      const tmp6 = tmp3(1959)(10528, tmp4.paths);
+      tmp3Result = tmp3(4494);
+      obj2.pushLazy(tmp3(1988)(10588, tmp4.paths), obj, tmp3Result.getVoiceChannelKey(id.id));
+      const tmp6 = tmp3(1988)(10588, tmp4.paths);
     }
     tmp4 = dependencyMap;
   }

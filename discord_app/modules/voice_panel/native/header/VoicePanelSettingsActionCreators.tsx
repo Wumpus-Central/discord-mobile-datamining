@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/header/VoicePanelSettingsActionCreators.tsx
-import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../../_runtime/01988_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 const VoicePanelSettingsActionSheet = "VoicePanelSettingsActionSheet";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelSettingsActionCreators.tsx");
@@ -11,5 +11,5 @@ export const closeVoicePanelSettingsActionSheet = function closeVoicePanelSettin
 export const openVoicePanelSettingsActionSheet = function openVoicePanelSettingsActionSheet(guildId, channelId) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { guildId, channelId };
-  obj.openLazy(asyncRequireImpl(16035, dependencyMap.paths), VoicePanelSettingsActionSheet, obj);
+  obj.openLazy(asyncRequireImpl(16075, dependencyMap.paths), VoicePanelSettingsActionSheet, obj);
 };

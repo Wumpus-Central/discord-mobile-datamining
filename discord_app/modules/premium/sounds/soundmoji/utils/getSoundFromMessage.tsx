@@ -80,7 +80,7 @@ export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
         if (guild_id == null) {
           guild_id = DEFAULT_SOUND_GUILD_ID;
         }
-        return tmp3(4707).soundboardSoundFromAPI(found1, guild_id);
+        return tmp3(4737).soundboardSoundFromAPI(found1, guild_id);
       }
       tmp3 = _require;
     }

@@ -11,7 +11,7 @@ import ME from "ME";
 import { AgeGateSource } from "result";
 import { NativePermissionTypes } from "NativePermissionStatus";
 import { jsx } from "ACTION_SHEET_HEIGHT_HALF";
-import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../_runtime/01988_asyncRequireImpl.js";
 import { ChannelRTCActionCreators } from "../../actions/ChannelRTCActionCreators.tsx";
 import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
 import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
@@ -43,11 +43,11 @@ function openChannelCallModal(channel) {
       obj = { channel: null };
       obj[0] = channel;
       const _HermesInternal = HermesInternal;
-      const tmp3Result = tmp3(4460);
-      tmp3Result.pushLazy(tmp(1959)(10528, dependencyMap.paths), obj, "" + c17 + "-" + channel.id);
-      const tmp5 = tmp(1959)(10528, dependencyMap.paths);
+      const tmp3Result = tmp3(4490);
+      tmp3Result.pushLazy(tmp(1988)(10588, dependencyMap.paths), obj, "" + c17 + "-" + channel.id);
+      const tmp5 = tmp(1988)(10588, dependencyMap.paths);
     }
-    tmpResult = tmp(10635);
+    tmpResult = tmp(10690);
   }
 }
 function monkeyPatchCall() {
@@ -56,15 +56,15 @@ function monkeyPatchCall() {
     if (null != channel) {
       const _HermesInternal = HermesInternal;
       const combined = "" + closure_17 + "-" + channel.id;
-      callback(4460).popWithKey(combined, undefined);
+      callback(4490).popWithKey(combined, undefined);
       if (key.getKey() === combined) {
-        tmp5(4223).hideActionSheet();
-        const tmp5Result = tmp5(4223);
+        tmp5(4253).hideActionSheet();
+        const tmp5Result = tmp5(4253);
       }
-      const obj = callback(4460);
+      const obj = callback(4490);
       tmp5 = callback;
     }
-    const voiceChannel = callback(5081).selectVoiceChannel(null);
+    const voiceChannel = callback(5111).selectVoiceChannel(null);
     const timerId = setTimeout(arg0, 500);
   });
 }
@@ -172,7 +172,7 @@ export const maybeShowAgeGateModal = function maybeShowAgeGateModal(width) {
 export const openVoiceChannelActionSheet = function openVoiceChannelActionSheet(closure_0) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel: closure_0 };
-  obj.openLazy(asyncRequireImpl(12909, dependencyMap.paths), "" + c17 + "-" + closure_0.id, obj);
+  obj.openLazy(asyncRequireImpl(12946, dependencyMap.paths), "" + c17 + "-" + closure_0.id, obj);
 };
 export const hideVoiceChannelActionSheet = function hideVoiceChannelActionSheet(closure_0) {
   ACTION_SHEET_HEIGHT_HALF.hideActionSheet("" + c17 + "-" + closure_0.id);
@@ -242,7 +242,7 @@ export const handleJoinCall = function handleJoinCall(channel, flag) {
                 v0 = 1;
                 dependencyMap = 1;
                 let obj1 = { value: null, done: false };
-                obj1[0] = v0(4812).requestPermission(outer1_15.CAMERA);
+                obj1[0] = v0(4842).requestPermission(outer1_15.CAMERA);
                 return obj1;
               }
             }
@@ -258,9 +258,9 @@ export const handleJoinCall = function handleJoinCall(channel, flag) {
             dependencyMap = 3;
             return { value: "T", done: null };
           }
-          obj1 = outer1_0(4114);
+          obj1 = outer1_0(4143);
           obj1.dismissKeyboard();
-          const voiceChannel = v0(5081).selectVoiceChannel(id.id, v0);
+          const voiceChannel = v0(5111).selectVoiceChannel(id.id, v0);
           dependencyMap = 3;
           return { value: "T", done: null };
         } catch (tmp17) {
@@ -331,7 +331,7 @@ export const handleStartCall = function handleStartCall(channel, flag) {
                 dependencyMap = 1;
                 c3 = 1;
                 let obj1 = { value: null, done: false };
-                obj1[0] = outer1_1(4812).requestPermission(outer1_15.CAMERA);
+                obj1[0] = outer1_1(4842).requestPermission(outer1_15.CAMERA);
                 return obj1;
               }
             }
@@ -347,7 +347,7 @@ export const handleStartCall = function handleStartCall(channel, flag) {
             c3 = 3;
             return { value: "T", done: null };
           }
-          obj1 = outer1_0(4114);
+          obj1 = outer1_0(4143);
           obj1.dismissKeyboard();
           let isFriendResult = c0.type !== outer1_11.DM;
           if (!isFriendResult) {
@@ -359,7 +359,7 @@ export const handleStartCall = function handleStartCall(channel, flag) {
             recipientId = outer1_0.getRecipientId();
           }
           outer1_1 = recipientId;
-          const tmp25 = outer1_1(9132);
+          const tmp25 = outer1_1(9161);
           const call = tmp25.call;
           const id = c0.id;
           let tmp28 = outer1_0;
@@ -456,7 +456,7 @@ export const handleRedesignGroupDMCall = function handleRedesignGroupDMCall(id) 
                 v0 = 1;
                 dependencyMap = 1;
                 let obj1 = { value: null, done: false };
-                obj1[0] = v0(4812).requestPermission(outer1_15.CAMERA);
+                obj1[0] = v0(4842).requestPermission(outer1_15.CAMERA);
                 return obj1;
               }
             }
@@ -472,9 +472,9 @@ export const handleRedesignGroupDMCall = function handleRedesignGroupDMCall(id) 
             dependencyMap = 3;
             return { value: "T", done: null };
           }
-          obj1 = outer1_0(4114);
+          obj1 = outer1_0(4143);
           obj1.dismissKeyboard();
-          const tmp11 = v0(9132);
+          const tmp11 = v0(9161);
           const call = tmp11.call;
           id = id.id;
           if (typeof call === "unknown") {
@@ -549,7 +549,7 @@ export const handleRedesignJoinCall = function handleRedesignJoinCall(id) {
                 v0 = 1;
                 dependencyMap = 1;
                 let obj1 = { value: null, done: false };
-                obj1[0] = v0(4812).requestPermission(outer1_15.CAMERA);
+                obj1[0] = v0(4842).requestPermission(outer1_15.CAMERA);
                 return obj1;
               }
             }
@@ -565,9 +565,9 @@ export const handleRedesignJoinCall = function handleRedesignJoinCall(id) {
             dependencyMap = 3;
             return { value: "T", done: null };
           }
-          obj1 = outer1_0(4114);
+          obj1 = outer1_0(4143);
           obj1.dismissKeyboard();
-          const voiceChannel = v0(5081).selectVoiceChannel(id.id, v0);
+          const voiceChannel = v0(5111).selectVoiceChannel(id.id, v0);
           dependencyMap = 3;
           return { value: "T", done: null };
         } catch (tmp17) {

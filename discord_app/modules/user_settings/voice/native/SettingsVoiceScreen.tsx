@@ -7,7 +7,7 @@ import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "combined";
-import { Directions } from "../../../../../_runtime/05353_Directions.js";
+import { Directions } from "../../../../../_runtime/05407_Directions.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
@@ -25,9 +25,9 @@ function KrispLogo() {
   const tmp = callback3();
   let obj = AccessibilityAnnouncer;
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = tmp2(10731);
+    let tmp2Result = tmp2(10786);
   } else {
-    tmp2Result = tmp2(10732);
+    tmp2Result = tmp2(10787);
   }
   obj = { style: tmp.krisp, children: null };
   obj = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
@@ -58,7 +58,7 @@ function SystemProcessingSubLabel() {
       const result = mediaEngine.showSystemCaptureConfigurationUI("microphone_modes");
     };
     obj[1] = intl.format(tmp(1236).t.EUNgko, obj);
-    tmp3 = callback(tmp(4251).Text, obj);
+    tmp3 = callback(tmp(4281).Text, obj);
   }
   return tmp3;
 }
@@ -70,7 +70,7 @@ let result = require("_detectH265HardwareDecode").fileFinishedImporting("modules
 
 export default function SettingsVoiceScreen() {
   const node = React.useMemo(() => {
-    let obj = callback(10333);
+    let obj = callback(10364);
     obj = { sections: null };
     obj = { label: null, settings: null };
     const intl = callback(1236).intl;
@@ -95,7 +95,7 @@ export default function SettingsVoiceScreen() {
     obj3[1] = items3;
     const intl5 = callback(1236).intl;
     const obj4 = { helpCenterArticle: null };
-    let obj7 = callback2(1945);
+    let obj7 = callback2(1974);
     obj4[0] = obj7.getArticleURL(constants2.SOUNDBOARD);
     obj3[2] = intl5.format(callback(1236).t.BPbGq7, obj4);
     items1[2] = obj3;

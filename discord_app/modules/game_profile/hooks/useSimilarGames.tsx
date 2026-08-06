@@ -27,7 +27,7 @@ export default function useSimilarGames(arg0, arg1) {
     tmp7 = data;
   }
   require = tmp7;
-  let tmp3Result = tmp3(6986);
+  let tmp3Result = tmp3(7013);
   const games = tmp3Result.useGames(tmp7);
   tmp3Result = tmp3(589);
   const items = [handleLoadMessages];

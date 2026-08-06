@@ -231,12 +231,12 @@ export const dismissKeyboard = function dismissKeyboard() {
   if (null != obj2) {
     obj2.closeCustomKeyboard();
   }
-  let tmpResult = tmp(4121);
+  let tmpResult = tmp(4150);
   const keyboardType = tmpResult.getKeyboardType();
   if (keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM) {
     tmpResult = tmp(1478);
     obj = { type: null };
-    obj[0] = tmp(1579).KeyboardTypes.SYSTEM;
+    obj[0] = tmp(1607).KeyboardTypes.SYSTEM;
     tmpResult.setKeyboardType(obj);
   }
   const result1 = zustandStore.closePortalKeyboardRequest();

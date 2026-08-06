@@ -166,7 +166,7 @@ const memoResult = importAllResult.memo(() => {
       return callback3(closure_14, { title: children.children });
     },
     headerTitleAlign: "center",
-    UNSTABLE_headerInsets: { left: false, right: false }
+    unstable_headerInsets: { left: false, right: false }
   };
   obj2[2] = { beforeRemove, transitionStart };
   obj2[3] = screen;

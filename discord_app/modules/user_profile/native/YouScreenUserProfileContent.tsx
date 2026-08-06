@@ -23,9 +23,9 @@ let map1;
 const require = arg1;
 function YouAvatar(arg0) {
   const callback = React.useCallback(() => {
-    const result = callback(15722).trackYouTabAvatarPress();
-    const obj = callback(15722);
-    const result1 = callback(15343).showYouAccountActionSheet();
+    const result = callback(15762).trackYouTabAvatarPress();
+    const obj = callback(15762);
+    const result1 = callback(15381).showYouAccountActionSheet();
   }, []);
   let obj = set;
   const isAndroidResult = obj.isAndroid();
@@ -68,14 +68,14 @@ function EditSection(navigateToProfileCustomization) {
   let trackUserProfileAction;
   let dependencyMap;
   let callback;
-  let obj = navigateToProfileCustomization(8682);
+  let obj = navigateToProfileCustomization(8711);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   let obj1 = React;
   const ref = React.useRef(null);
-  let obj2 = navigateToProfileCustomization(9131);
+  let obj2 = navigateToProfileCustomization(9160);
   const isDisplayNameStylesFlywheelSettersEnabled = obj2.useIsDisplayNameStylesFlywheelSettersEnabled("YouScreenUserProfileContent");
-  const tmp3 = trackUserProfileAction(8729)();
-  navigateToProfileCustomization(5916);
+  const tmp3 = trackUserProfileAction(8758)();
+  navigateToProfileCustomization(5943);
   if (isDisplayNameStylesFlywheelSettersEnabled) {
     if (!tmp7) {
       let items = [tmp4(1358).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK];
@@ -100,17 +100,17 @@ function EditSection(navigateToProfileCustomization) {
     obj1[0] = ref;
     obj2 = { size: "sm", color: null };
     obj2[1] = tmp(712).colors.WHITE;
-    obj1[2] = callback2(tmp4(9562).PencilIcon, obj2);
+    obj1[2] = callback2(tmp4(9591).PencilIcon, obj2);
     const intl = tmp4(1236).intl;
     obj1[3] = intl.string(tmp4(1236).t.AAjhgi);
     obj1[4] = callback;
-    obj[1] = callback2(tmp4(4665).Button, obj1);
-    const items2 = [callback2(tmp(12153), obj), ];
+    obj[1] = callback2(tmp4(4695).Button, obj1);
+    const items2 = [callback2(tmp(12187), obj), ];
     const obj3 = { targetRef: null, visible: null, markAsDismissed: null };
     obj3[0] = ref;
     obj3[1] = tmp13;
     obj3[2] = tmp11[1];
-    items2[1] = callback2(tmp(15730), obj3);
+    items2[1] = callback2(tmp(15770), obj3);
     obj[0] = items2;
     return callback3(closure_15, obj);
   }
@@ -441,7 +441,7 @@ export default function YouScreenUserProfileContent(user) {
       const timeout = setTimeout(() => {
         outer1_25(outer1_4 === constants.WISHLIST ? constants.WISHLIST : constants.MAIN);
         outer1_32.current(num, false, true);
-        outer1_6.setParams({ initialTab: "Array" });
+        outer1_6.setParams({ initialTab: "r" });
       }, 80);
     }
     return () => {

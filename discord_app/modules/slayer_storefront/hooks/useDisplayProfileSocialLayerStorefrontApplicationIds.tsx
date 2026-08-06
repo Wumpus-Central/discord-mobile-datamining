@@ -59,8 +59,8 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
         let tmp8 = item10011;
         if (item10011 instanceof _undefined(usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[5]).BaseGameWidget) {
           let games = tmp5.games;
-          let item = games.forEach((applicationId) => {
-            const applicationIdFromDetectableId = outer1_4.getApplicationIdFromDetectableId(applicationId.applicationId);
+          let item = games.forEach((gameId) => {
+            const applicationIdFromDetectableId = outer1_4.getApplicationIdFromDetectableId(gameId.gameId);
             if (null != applicationIdFromDetectableId) {
               set.add(applicationIdFromDetectableId);
             }

@@ -1,6 +1,6 @@
 // discord_app/modules/guild_antiraid/GuildAntiRaidModalActionCreators.native.tsx
 import { GUILD_REPORT_RAID_MOBILE_KEY as closure_3 } from "GUILD_REPORT_RAID_MOBILE_KEY";
-import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../_runtime/01988_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
 
 const result = require("ReportModal").fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidModalActionCreators.native.tsx");
@@ -13,5 +13,5 @@ export const openReportRaidModal = function openReportRaidModal(id) {
     },
     guildId: id
   };
-  obj.pushLazy(asyncRequireImpl(13190, dependencyMap.paths), obj, closure_3);
+  obj.pushLazy(asyncRequireImpl(13227, dependencyMap.paths), obj, closure_3);
 };

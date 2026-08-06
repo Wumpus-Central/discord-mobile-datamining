@@ -61,8 +61,8 @@ HomeIndicator["_updatePropsStack"] = function _updatePropsStack() {
     const obj2 = callback(705);
     const tmp2 = undefined !== prefersDeferringSystemGestures && prefersDeferringSystemGestures;
     if (obj3.isAndroid()) {
-      const result = callback2(1593).setNavigationBarVisible(!tmp);
-      const obj4 = callback2(1593);
+      const result = callback2(1621).setNavigationBarVisible(!tmp);
+      const obj4 = callback2(1621);
     } else if (DCDHomeIndicator.DCDHomeIndicator) {
       DCDHomeIndicator = tmp5.DCDHomeIndicator;
       DCDHomeIndicator.setPrefersAutoHidden(tmp);

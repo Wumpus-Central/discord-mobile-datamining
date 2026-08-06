@@ -1,18 +1,18 @@
 // discord_app/modules/app_launcher/native/base_components/AppLauncherBackButton.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { Link } from "../../../../../_runtime/01481_Link.js";
+import { createStandardNavigationFactories } from "../../../../../_runtime/01481_createStandardNavigationFactories.js";
 import { IconButton } from "../../../../design/components/Button/native/IconButton.native.tsx";
 
 const require = arg1;
-const result = require("Link").fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherBackButton.tsx");
+const result = require("createStandardNavigationFactories").fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherBackButton.tsx");
 
 export default function AppLauncherBackButton(onPress) {
-  let obj = Link;
+  let obj = createStandardNavigationFactories;
   const navigation = obj.useNavigation();
   const canGoBackResult = navigation.canGoBack();
   obj = { size: "sm", variant: "secondary-overlay", icon: null, onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
-  obj[2] = importDefault(canGoBackResult ? 5228 : 5256);
+  obj[2] = importDefault(canGoBackResult ? 5258 : 5310);
   obj[3] = onPress.onPress;
   const intl = tmp(1236).intl;
   const t = tmp(1236).t;

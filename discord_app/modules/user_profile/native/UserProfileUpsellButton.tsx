@@ -17,8 +17,8 @@ let result = require("GuildFeatures").fileFinishedImporting("modules/user_profil
 export default function UserProfileUpsellButton(analyticsObject) {
   analyticsObject = analyticsObject.analyticsObject;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(5595)().analyticsLocations;
-  let obj = analyticsObject(6804);
+  analyticsLocations = analyticsLocations(5649)().analyticsLocations;
+  let obj = analyticsObject(6831);
   let label = obj.useNitroTrialCtaOverride("user_profile_upsell_button");
   const items = [analyticsLocations, analyticsObject];
   const effect = React.useEffect(() => {
@@ -47,6 +47,6 @@ export default function UserProfileUpsellButton(analyticsObject) {
   }
   obj[2] = label;
   obj = { color: "white", size: "sm", style: callback().nitroWheel };
-  obj[3] = jsx(analyticsObject(7597).NitroWheelIcon, { color: "white", size: "sm", style: callback().nitroWheel });
-  return jsx(analyticsObject(4665).Button, { color: "white", size: "sm", style: callback().nitroWheel });
+  obj[3] = jsx(analyticsObject(7625).NitroWheelIcon, { color: "white", size: "sm", style: callback().nitroWheel });
+  return jsx(analyticsObject(4695).Button, { color: "white", size: "sm", style: callback().nitroWheel });
 };

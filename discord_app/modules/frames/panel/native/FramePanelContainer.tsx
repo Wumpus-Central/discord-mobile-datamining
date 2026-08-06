@@ -1,5 +1,6 @@
 // discord_app/modules/frames/panel/native/FramePanelContainer.tsx
 import map from "map";
+import { isLaunched } from "FrameLayoutModes";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
@@ -11,7 +12,7 @@ const memoResult = require("noop").memo(function FramePanelContainer() {
   let obj = initialize;
   const items = [map];
   let tmp2 = null;
-  if (obj.useStateFromStores(items, () => null != connectedFrame.getConnectedFrame())) {
+  if (obj.useStateFromStores(items, () => callback(mainFrame.getMainFrame()))) {
     obj = { children: null };
     obj[0] = jsx(renderActivityOrPIP, {});
     tmp2 = jsx(FramePanelController, { children: null });
@@ -19,6 +20,6 @@ const memoResult = require("noop").memo(function FramePanelContainer() {
   }
   return tmp2;
 });
-const result = require("jsxProd").fileFinishedImporting("modules/frames/panel/native/FramePanelContainer.tsx");
+const result = require("FrameLayoutModes").fileFinishedImporting("modules/frames/panel/native/FramePanelContainer.tsx");
 
 export default memoResult;

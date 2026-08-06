@@ -1,6 +1,6 @@
 // discord_app/modules/dm_settings_upsell/DmSettingsUpsellActionCreators.native.tsx
 import DM_SETTINGS_UPSELL_LAST_SHOWN_KEY from "DM_SETTINGS_UPSELL_LAST_SHOWN_KEY";
-import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../_runtime/01988_asyncRequireImpl.js";
 import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
 
@@ -16,11 +16,11 @@ export default {
     const timestamp = Date.now();
     if (null != value) {
       if (timestamp - value <= closure_4) {
-        tmp(16262).trackEvent(tmp(16262).DmUpsellActionTypes.SUPPRESSED_BY_COOLDOWN, guildId);
-        const tmpResult = tmp(16262);
+        tmp(16302).trackEvent(tmp(16302).DmUpsellActionTypes.SUPPRESSED_BY_COOLDOWN, guildId);
+        const tmpResult = tmp(16302);
       }
     }
-    ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(16261, dependencyMap.paths), "dm_settings_upsell_modal", { guildId });
+    ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(16301, dependencyMap.paths), "dm_settings_upsell_modal", { guildId });
     const Storage2 = tmp(595).Storage;
     const result = Storage2.set(closure_3, timestamp);
   }

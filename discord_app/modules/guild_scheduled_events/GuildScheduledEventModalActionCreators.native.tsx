@@ -2,7 +2,7 @@
 import asyncRequireImpl from "asyncRequireImpl";
 import { EXPLICIT_END_EVENT_SHEET_KEY as closure_4 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { GUILD_EVENT_INFO_ACTION_SHEET_KEY as closure_5 } from "CREATE_GUILD_EVENT_MODAL_KEY";
-import { asyncRequireImpl } from "../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../_runtime/01988_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import { getRRule } from "utils/ScheduleUtils.tsx";
 
@@ -21,7 +21,7 @@ function openGuildEventDetails(arg0) {
     const tmp2Result = getRRule;
   }
   obj[3] = recurrenceId;
-  obj.openLazy(asyncRequireImpl(8845, dependencyMap.paths), closure_5, obj, "stack");
+  obj.openLazy(asyncRequireImpl(8874, dependencyMap.paths), closure_5, obj, "stack");
 }
 function _transitionToEventDetailsFromInvite() {
   const self = this;
@@ -118,5 +118,5 @@ export const transitionToEventDetailsFromInvite = function transitionToEventDeta
 export const openEndEventModal = function openEndEventModal(channel) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel };
-  obj.openLazy(asyncRequireImpl(9041, dependencyMap.paths), closure_4, obj);
+  obj.openLazy(asyncRequireImpl(9070, dependencyMap.paths), closure_4, obj);
 };

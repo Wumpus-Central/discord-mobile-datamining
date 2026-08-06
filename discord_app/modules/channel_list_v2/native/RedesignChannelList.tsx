@@ -60,7 +60,7 @@ function FavoriteChannels(arg0) {
   let shouldShowEmptyState;
   let obj = dependencyMap;
   let obj1 = getMissingFavoriteThreadIds;
-  const favoritesGuildChannelList = obj1.useFavoritesGuildChannelList();
+  const favoritesGuildChannelList = obj1.useFavoritesGuildChannelList({ withUpsellNotice: true });
   ({ guildChannels, shouldShowEmptyState, hasNoChannels } = favoritesGuildChannelList);
   if (!obj3.useShouldRenderChannelList()) {
     return null;
@@ -75,9 +75,9 @@ function FavoriteChannels(arg0) {
       const items = [callback(ChannelListStickyHeader, obj), ];
       let tmp11Result = null;
       if (shouldShowEmptyState) {
-        obj = {};
-        tmp11Result = tmp11(tmp9(15249), obj);
-        const tmp9Result = tmp9(15249);
+        obj = { variant: "empty" };
+        tmp11Result = tmp11(tmp9(15224), obj);
+        const tmp9Result = tmp9(15224);
       }
       items[1] = tmp11Result;
       obj[2] = items;
@@ -112,7 +112,7 @@ function ChannelsWrapper(selectedGuildId) {
   } else {
     if (null != stateFromStores) {
       if (selectedGuildId !== closure_12) {
-        let tmp2Result = tmp2(1865);
+        let tmp2Result = tmp2(1894);
         if (tmp2Result.isFavoritesGuildId(selectedGuildId)) {
           obj = {};
           const merged1 = Object.assign(merged);
@@ -121,7 +121,7 @@ function ChannelsWrapper(selectedGuildId) {
           obj.selectedVoiceChannelId = stateFromStores1;
           tmp6Result = callback(FavoriteChannels, obj);
         } else {
-          tmp2Result = tmp2(8573);
+          tmp2Result = tmp2(8602);
           if (tmp2Result.shouldNSFWGateGuild(selectedGuildId)) {
             obj1 = { style: null, guildId: null };
             obj1[0] = merged.style;

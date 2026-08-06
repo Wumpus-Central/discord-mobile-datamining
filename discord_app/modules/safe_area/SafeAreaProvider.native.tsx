@@ -2,7 +2,7 @@
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
-import { 01584__ } from "../../../_runtime/metro/01584__.js";
+import { 01612__ } from "../../../_runtime/metro/01612__.js";
 import { EMPTY_SAFE_AREA_INSETS } from "SafeAreaConstants.native.tsx";
 
 const require = arg1;
@@ -10,7 +10,7 @@ let closure_6 = { position: "absolute", width: 0, height: 0 };
 const result = require("jsxProd").fileFinishedImporting("modules/safe_area/SafeAreaProvider.native.tsx");
 
 export const SafeAreaReporter = function SafeAreaReporter() {
-  let obj = safeAreaInsets(1584);
+  let obj = safeAreaInsets(1612);
   safeAreaInsets = obj.useSafeAreaInsets();
   const appEntryKey = safeAreaInsets(1477).useAppEntryKey();
   const items = [safeAreaInsets, appEntryKey];
@@ -168,5 +168,5 @@ export const SafeAreaProvider = function SafeAreaProvider(arg0) {
   obj[0] = EMPTY_SAFE_AREA_INSETS.INITIAL_SAFE_AREA_METRICS;
   obj[1] = children;
   obj[2] = style;
-  return jsx(01584__.SafeAreaProvider, { initialMetrics: null, children: null, style: null });
+  return jsx(01612__.SafeAreaProvider, { initialMetrics: null, children: null, style: null });
 };

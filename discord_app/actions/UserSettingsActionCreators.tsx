@@ -13,7 +13,7 @@ let SystemTheme;
 let metroImportAll;
 const require = arg1;
 ({ SystemTheme, SystemThemeState: metroImportAll } = SystemThemeState);
-const result = require("initialize").fileFinishedImporting("actions/UserSettingsActionCreators.tsx");
+let result = require("initialize").fileFinishedImporting("actions/UserSettingsActionCreators.tsx");
 
 export default {
   overrideLocale(locale) {
@@ -116,7 +116,7 @@ export default {
                   if (gradientPreset != null) {
                     id = gradientPreset.id;
                   }
-                  const ClientThemeSettings = tmp4(3928).ClientThemeSettings;
+                  const ClientThemeSettings = tmp4(3957).ClientThemeSettings;
                   const setting = ClientThemeSettings.getSetting();
                   let prop;
                   if (setting != null) {
@@ -171,10 +171,12 @@ export default {
             if (gradientPreset != null) {
               id = gradientPreset.id;
             }
-            const obj4 = { backgroundGradientPresetId: null };
+            const obj4 = { backgroundGradientPresetId: null, customUserThemeSettings: null };
             obj4[0] = id;
+            let ClientThemeSettings = outer1_0(3957).ClientThemeSettings;
+            obj4[1] = ClientThemeSettings.getSetting().customUserThemeSettings;
             obj3[1] = obj4;
-            const DeveloperMode = outer1_0(3928).DeveloperMode;
+            const DeveloperMode = outer1_0(3957).DeveloperMode;
             obj3[2] = DeveloperMode.getSetting();
           }
           const obj5 = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };
@@ -184,10 +186,10 @@ export default {
           obj5[1] = obj6;
           obj1.dispatch(obj5);
           c3 = 3;
-        } catch (tmp25) {
+        } catch (tmp27) {
           if (tmp4 === dependencyMap) {
             c3 = tmp2;
-            throw tmp25;
+            throw tmp27;
           } else {
             v0 = tmp;
           }
@@ -281,21 +283,25 @@ export const saveClientTheme = function saveClientTheme(backgroundGradientPreset
   if (INFREQUENT_USER_ACTION === undefined) {
     INFREQUENT_USER_ACTION = backgroundGradientPresetId(theme[6]).UserSettingsDelay.INFREQUENT_USER_ACTION;
   }
-  let tmp5 = tmp3 ? tmp4.ON : tmp4.OFF;
-  if (null != useSystemTheme) {
-    tmp5 = useSystemTheme;
-  }
   let obj = customUserThemeSettings(theme[9]);
-  obj.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { useSystemTheme: tmp5 } });
   obj = { clientThemeSettings: { backgroundGradientPresetId, customUserThemeSettings }, theme: null };
-  let tmp8;
+  let tmp6;
   if ("system" !== theme) {
-    tmp8 = theme;
+    tmp6 = theme;
   }
-  obj[1] = tmp8;
-  customUserThemeSettings(theme[9]).dispatch({ type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: { appearance: { settings: obj } } });
+  obj[1] = tmp6;
+  obj.dispatch({ type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: { appearance: { settings: obj } } });
+  let tmp9 = tmp5 ? tmp8.ON : tmp8.OFF;
+  if (null != useSystemTheme) {
+    tmp9 = useSystemTheme;
+  }
+  customUserThemeSettings(theme[9]).dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { useSystemTheme: tmp9 } });
+  if (sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled()) {
+    const result = backgroundGradientPresetId(tmp4[10]).clearSyncedClientThemes();
+    const obj4 = backgroundGradientPresetId(tmp4[10]);
+  }
   if (initialize.shouldSync("appearance")) {
-    const PreloadedUserSettingsActionCreators = backgroundGradientPresetId(tmp6[6]).PreloadedUserSettingsActionCreators;
+    const PreloadedUserSettingsActionCreators = backgroundGradientPresetId(tmp4[6]).PreloadedUserSettingsActionCreators;
     return PreloadedUserSettingsActionCreators.updateAsync("appearance", (arg0) => {
       if (outer1_7.DARK === theme) {
         let DARK = backgroundGradientPresetId(theme[7]).Theme.DARK;
@@ -337,6 +343,6 @@ export const saveClientTheme = function saveClientTheme(backgroundGradientPreset
       arg0.clientThemeSettings = obj;
     }, INFREQUENT_USER_ACTION);
   }
-  const obj2 = customUserThemeSettings(theme[9]);
-  tmp6 = theme;
+  let tmp3 = customUserThemeSettings;
+  const tmp3Result = customUserThemeSettings(theme[9]);
 };

@@ -30,13 +30,13 @@ export const AnimatedCoachmark = function AnimatedCoachmark(visible) {
   const merged = Object.assign(visible, Object.create(null));
   let importDefault;
   [tmp3, c1] = callback(React.useState(visible), 2);
-  let obj = visible(8552);
+  let obj = visible(8581);
   const result = obj.tooltipEnterExitAnimation(merged.position);
   const items = [visible];
   const effect = React.useEffect(() => {
     _undefined(visible);
   }, items);
-  obj = { useReducedMotion: React.useContext(visible(3974).AccessibilityPreferencesContext).reducedMotion.enabled, item: null, entering: null, exiting: null, renderItem: null };
+  obj = { useReducedMotion: React.useContext(visible(4003).AccessibilityPreferencesContext).reducedMotion.enabled, item: null, entering: null, exiting: null, renderItem: null };
   let tmp8;
   const tmp2 = callback(React.useState(visible), 2);
   const tmp6 = jsx;

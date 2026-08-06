@@ -135,7 +135,7 @@ const prototype = DatabaseManager.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
   this.waitFor(store);
-  const result = this.carefullySpeculativelyOpen(importAll(1924).getUserId());
+  const result = this.carefullySpeculativelyOpen(importAll(1953).getUserId());
   const result1 = this.handleAuthenticationStoreChanged();
   store.addChangeListener(() => self.handleAuthenticationStoreChanged());
 };
@@ -249,7 +249,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
   }
   let tmp3 = null == value;
   if (tmp3) {
-    tmp3 = stateResult !== _undefined(1908).DatabaseState.Open;
+    tmp3 = stateResult !== _undefined(1937).DatabaseState.Open;
   }
   if (tmp3) {
     self.remove(id);
@@ -268,11 +268,11 @@ prototype["handleAuthenticationStoreChanged"] = function handleAuthenticationSto
     if (value != null) {
       value.close();
     }
-    importAll(1924).setUserId(id);
+    importAll(1953).setUserId(id);
     self.activeUserId = id;
     const databases = self.databases;
     databases.delete(activeUserId);
-    const obj = importAll(1924);
+    const obj = importAll(1953);
   }
 };
 function carefullySpeculativelyOpen(userId) {

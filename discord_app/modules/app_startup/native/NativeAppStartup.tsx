@@ -75,7 +75,7 @@ function _getInitialURLs() {
         if (null != closure_1) {
           if (null != closure_1.url) {
             if (callback(closure_1.url)) {
-              let push = arr(16831).DeeplinkSource;
+              let push = arr(16871).DeeplinkSource;
               if (closure_1.isDeferred) {
                 let AppsFlyer = push.AppsFlyerDeferred;
               } else {
@@ -90,7 +90,7 @@ function _getInitialURLs() {
             } else {
               const obj4 = { url: null, source: null };
               obj4[0] = closure_1.url;
-              obj4[1] = arr(16831).DeeplinkSource.OS;
+              obj4[1] = arr(16871).DeeplinkSource.OS;
               arr = arr.push(obj4);
               dependencyMap = 3;
             }
@@ -110,7 +110,7 @@ function _getInitialURLs() {
       if (null != dependencyMap) {
         const obj6 = { url: null, source: null };
         obj6[0] = dependencyMap;
-        obj6[1] = arr(16831).DeeplinkSource.ReactNativeLinking;
+        obj6[1] = arr(16871).DeeplinkSource.ReactNativeLinking;
         arr.push(obj6);
       }
     }
@@ -649,7 +649,7 @@ function _init(_payload) {
                 throwTypeErrorResult = outer1_0;
                 throwTypeErrorResult = c3;
                 throwTypeErrorResult = outer1_0(500).isAndroid();
-                let _Promise6 = outer1_0(8789);
+                let _Promise6 = outer1_0(8818);
                 if (throwTypeErrorResult) {
                   throwTypeErrorResult = _Promise6.unlockOrientation({ unlockAfterRotatingToPreviousLock: false });
                 } else {
@@ -671,7 +671,7 @@ function _init(_payload) {
                 throwTypeErrorResult = outer1_1;
                 throwTypeErrorResult = c3;
                 const obj15 = outer1_0(500);
-                const initialNotification = outer1_1(10640).getInitialNotification();
+                const initialNotification = outer1_1(10695).getInitialNotification();
                 items[1] = initialNotification.catch(() => null);
                 throwTypeErrorResult = outer1_28;
                 items[2] = outer1_28();
@@ -679,16 +679,16 @@ function _init(_payload) {
                 items[3] = outer1_30();
                 throwTypeErrorResult = outer1_0;
                 throwTypeErrorResult = c3;
-                num2 = outer1_0(1959);
+                num2 = outer1_0(1988);
                 throwTypeErrorResult = c3;
                 throwTypeErrorResult = c3;
-                const obj16 = outer1_1(10640);
-                throwTypeErrorResult = num2(16841, c3.paths).then((arg0) => arg0.default());
+                const obj16 = outer1_1(10695);
+                throwTypeErrorResult = num2(16881, c3.paths).then((arg0) => arg0.default());
                 items[4] = throwTypeErrorResult;
                 throwTypeErrorResult = Promise.all(items);
                 v0 = 1;
                 c3 = 1;
-                const num2Result = num2(16841, c3.paths);
+                const num2Result = num2(16881, c3.paths);
               } else {
                 throwTypeErrorResult = outer1_1;
                 throwTypeErrorResult = c3;
@@ -725,12 +725,12 @@ function _init(_payload) {
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = c3;
                 if (obj19.isAndroid()) {
-                  if (callback(13542).isTTITest) {
+                  if (callback(13579).isTTITest) {
                     throwTypeErrorResult = callback;
                     throwTypeErrorResult = onStorageInitialize;
                     throwTypeErrorResult = outer1_0;
                     throwTypeErrorResult = c3;
-                    outer1_6 = outer1_0(7027).default;
+                    outer1_6 = outer1_0(7054).default;
                     throwTypeErrorResult = outer1_6;
                     v0 = 2;
                     c3 = 1;
@@ -766,9 +766,9 @@ function _init(_payload) {
               throwTypeErrorResult = dependencyMap;
               closure_16 = 5.default;
               throwTypeErrorResult = dependencyMap;
-              closure_17 = 16147.default;
+              closure_17 = 16187.default;
               throwTypeErrorResult = dependencyMap;
-              closure_18 = 16197.default;
+              closure_18 = 16237.default;
               throwTypeErrorResult = dependencyMap;
               closure_19 = 17;
               throwTypeErrorResult = closure_16;
@@ -785,8 +785,8 @@ function _init(_payload) {
               if (!callback) {
                 closure_19.init();
               }
-              callback(5353);
-              obj = callback(6817);
+              callback(5407);
+              obj = callback(6844);
               const sessionHeartbeatScheduler = obj.initSessionHeartbeatScheduler();
             }
             if (callback) {
@@ -828,7 +828,7 @@ function _init(_payload) {
                 onStorageInitialize();
               }
             }
-            outer1_1(6845)("DispatcherBridge", () => {
+            outer1_1(6872)("DispatcherBridge", () => {
               _undefined(paths[48]);
             });
             if (callback) {
@@ -841,10 +841,10 @@ function _init(_payload) {
                 closure_20.verbose("Flux has initialized");
               });
             }
-            outer1_1(16860)();
-            const result1 = outer1_0(16861).setupLibdiscoreTimersMonitor();
-            const obj7 = outer1_0(16861);
-            const result2 = outer1_0(16862).installRNGHMountReactionsBridge();
+            outer1_1(16900)();
+            const result1 = outer1_0(16901).setupLibdiscoreTimersMonitor();
+            const obj7 = outer1_0(16901);
+            const result2 = outer1_0(16902).installRNGHMountReactionsBridge();
             const item = outer1_4.forEach((url) => {
               url = url.url;
               onStorageInitialize(paths[15])("handleURL", () => callback(table[16])).default(url, true);
@@ -852,7 +852,7 @@ function _init(_payload) {
             let outer1_8 = false;
             if (null != outer1_5) {
               throwTypeErrorResult = c3;
-              const outer1_9 = outer1_1(6845)("receiveNotification", () => _undefined(paths[32])).default;
+              const outer1_9 = outer1_1(6872)("receiveNotification", () => _undefined(paths[32])).default;
               throwTypeErrorResult = outer1_1;
               throwTypeErrorResult = c3;
               outer1_1(9).extraProperties.tapped_notification = true;
@@ -877,9 +877,9 @@ function _init(_payload) {
                 obj4[0] = c10;
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = c3;
-                obj4[3] = callback(6841).INITIAL_MESSAGE_FETCH_KEY;
-                throwTypeErrorResult = onStorageInitialize(9631).fetchMessages(obj4);
-                const obj9 = onStorageInitialize(9631);
+                obj4[3] = callback(6868).INITIAL_MESSAGE_FETCH_KEY;
+                throwTypeErrorResult = onStorageInitialize(9662).fetchMessages(obj4);
+                const obj9 = onStorageInitialize(9662);
               }
             }
             throwTypeErrorResult = callback;
@@ -906,7 +906,7 @@ function _init(_payload) {
             outer1_12 = null;
             throwTypeErrorResult = v0;
             throwTypeErrorResult = c3;
-            const obj8 = outer1_0(16862);
+            const obj8 = outer1_0(16902);
             if (null != obj11.getToken()) {
               throwTypeErrorResult = callback;
               items2.Promise.resolve();
@@ -916,7 +916,7 @@ function _init(_payload) {
               throwTypeErrorResult = onStorageInitialize;
               throwTypeErrorResult = outer1_0;
               throwTypeErrorResult = c3;
-              getState = outer1_0(13331);
+              getState = outer1_0(13368);
               throwTypeErrorResult = getState;
               throwTypeErrorResult = getState.beginLoadedExperimentsTimeout();
               throwTypeErrorResult = getState;
@@ -937,27 +937,27 @@ function _init(_payload) {
             throwTypeErrorResult = c3;
             throwTypeErrorResult = c3;
             throwTypeErrorResult = c3;
-            items2 = [outer1_0(1959)(6815, c3.paths), , , , , ];
+            items2 = [outer1_0(1988)(6842, c3.paths), , , , , ];
             throwTypeErrorResult = outer1_0;
             throwTypeErrorResult = c3;
             throwTypeErrorResult = c3;
             throwTypeErrorResult = c3;
-            items2[1] = outer1_0(1959)(13595, c3.paths);
+            items2[1] = outer1_0(1988)(13632, c3.paths);
             throwTypeErrorResult = outer1_0;
             throwTypeErrorResult = c3;
             throwTypeErrorResult = c3;
             throwTypeErrorResult = c3;
-            items2[2] = outer1_0(1959)(13608, c3.paths);
+            items2[2] = outer1_0(1988)(13645, c3.paths);
             throwTypeErrorResult = outer1_0;
             throwTypeErrorResult = c3;
             throwTypeErrorResult = c3;
             throwTypeErrorResult = c3;
-            items2[3] = outer1_0(1959)(6991, c3.paths);
+            items2[3] = outer1_0(1988)(7018, c3.paths);
             throwTypeErrorResult = outer1_0;
             throwTypeErrorResult = c3;
             throwTypeErrorResult = c3;
             throwTypeErrorResult = c3;
-            items2[4] = outer1_0(1959)(16864, c3.paths);
+            items2[4] = outer1_0(1988)(16904, c3.paths);
             throwTypeErrorResult = outer1_7;
             items2[5] = outer1_7;
             throwTypeErrorResult = items2.Promise.all(items2);
@@ -1133,7 +1133,7 @@ const promise = new Promise((arg0) => {
 });
 loadIndex.recordEnd();
 const tmp10 = new require("isAnalyticsEndpoint")("index.native.tsx");
-result = require("module_16147").fileFinishedImporting("modules/app_startup/native/NativeAppStartup.tsx");
+result = require("module_16187").fileFinishedImporting("modules/app_startup/native/NativeAppStartup.tsx");
 
 export const applicationReady = future;
 export const init = function init() {

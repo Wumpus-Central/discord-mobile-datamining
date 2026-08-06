@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ThumbsDownIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/08379_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/08520_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

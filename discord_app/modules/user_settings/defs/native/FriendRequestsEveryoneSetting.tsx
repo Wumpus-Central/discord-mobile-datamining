@@ -17,7 +17,7 @@ createToggle = {
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useFriendRequestsEveryoneSettingValue() {
-    const FriendSourceFlagsSetting = setting(3928).FriendSourceFlagsSetting;
+    const FriendSourceFlagsSetting = setting(3957).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();
     const items = [setting];
     return React.useMemo(() => setting(outer1_1[4]).computeFlags(setting), items).all;

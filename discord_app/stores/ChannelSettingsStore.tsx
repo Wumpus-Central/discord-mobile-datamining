@@ -7,7 +7,7 @@ import ME from "ME";
 import { DEFAULT_AUTO_ARCHIVE_DURATION as closure_17 } from "AbortCodes";
 import { Store } from "initialize";
 import importDefaultResult from "apply";
-import { t } from "../../_runtime/03837_t.js";
+import { t } from "../../_runtime/03866_t.js";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { set } from "../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
 import { set } from "../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";

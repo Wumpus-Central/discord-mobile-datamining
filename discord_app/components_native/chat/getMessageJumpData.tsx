@@ -110,8 +110,8 @@ export const useMessageJumpAndroidKeyboardHeight = function useMessageJumpAndroi
   let tmp4;
   let num = 0;
   if (obj2.isAndroid()) {
-    num = tmp(1847).getSystemKeyboardHeight();
-    const tmpResult = tmp(1847);
+    num = tmp(1875).getSystemKeyboardHeight();
+    const tmpResult = tmp(1875);
   }
   const obj = React;
   obj2 = set;

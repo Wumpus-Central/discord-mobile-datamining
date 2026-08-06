@@ -1,19 +1,21 @@
 // discord_app/design/components/Backdrop/native/Backdrop.native.tsx
-import noop from "noop";
+import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
+import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import { useSafeAreaInsets } from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
 
 let StyleSheet;
+let c3;
 let c4;
 let c5;
-let closure_6;
 const require = arg1;
-({ Pressable: c4, StyleSheet } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = {};
+({ Pressable: c3, StyleSheet } = get_ActivityIndicator);
+({ jsx: c4, jsxs: c5 } = jsxProd);
+let closure_6 = {};
 createCacheKey = { fill: StyleSheet.absoluteFillObject, backdrop: null, backdropOpaque: null, accessibilityDismiss: null };
 createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_SCRIM };
 createCacheKey[1] = createCacheKey;
@@ -31,7 +33,7 @@ export const Backdrop = function Backdrop(animatedProps) {
   animatedProps = animatedProps.animatedProps;
   ({ style, accessibleDismissStyle } = animatedProps);
   if (animatedProps === undefined) {
-    animatedProps = closure_7;
+    animatedProps = closure_6;
   }
   let flag = animatedProps.opaque;
   if (flag === undefined) {
@@ -43,47 +45,43 @@ export const Backdrop = function Backdrop(animatedProps) {
   }
   ({ onDismiss, accessibilityLabel } = animatedProps);
   if (accessibilityLabel === undefined) {
-    const intl = backgroundColor2(1236).intl;
-    accessibilityLabel = intl.string(backgroundColor2(1236).t.WAI6xu);
+    const intl = getSystemLocale.intl;
+    accessibilityLabel = intl.string(getSystemLocale.t.WAI6xu);
   }
-  backgroundColor2 = undefined;
   let backgroundColor = createCacheKey();
-  let obj = backgroundColor2(3967);
-  backgroundColor2 = backgroundColor.backdrop.backgroundColor;
-  const items = [backgroundColor2];
+  let obj = ManaContext;
   obj = { onPress: onDismiss, "aria-hidden": true };
-  const memo = React.useMemo(() => backgroundColor2(outer1_2[8]).hexToRgbaString(backgroundColor2), items);
-  obj = { style: items1, pointerEvents: "box-none", animatedProps, children: null };
-  items1 = [backgroundColor.fill, style];
-  let tmp5 = null != onDismiss;
-  if (tmp5) {
+  obj = { style: items, pointerEvents: "box-none", animatedProps, children: null };
+  items = [backgroundColor.fill, style];
+  let tmp4 = null != onDismiss;
+  if (tmp4) {
     const obj1 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, "aria-hidden": null };
-    const items2 = [backgroundColor.accessibilityDismiss, , ];
+    const items1 = [backgroundColor.accessibilityDismiss, , ];
     const obj2 = { top: null };
     obj2[0] = useSafeAreaInsets().top;
-    items2[1] = obj2;
-    items2[2] = accessibleDismissStyle;
-    obj1[0] = items2;
+    items1[1] = obj2;
+    items1[2] = accessibleDismissStyle;
+    obj1[0] = items1;
     obj1[1] = onDismiss;
     obj1[3] = accessibilityLabel;
     obj1[4] = animatedProps["aria-hidden"];
-    tmp5 = callback(closure_4, obj1);
+    tmp4 = callback(closure_3, obj1);
   }
-  const items3 = [tmp5, ];
+  const items2 = [tmp4, ];
   if ("none" !== str) {
     const obj3 = {};
     const merged = Object.assign(obj);
     obj3.style = backgroundColor.fill;
     if ("none" === str) {
       let num = 0;
-      const obj4 = { blurAmount: null, style: null, blurTheme: null, blurTintRgba: null, android_fallbackColor: null };
+      const obj4 = { blurAmount: null, style: null, blurTheme: null, tintColor: null, android_fallbackColor: null };
       obj4[0] = num;
       obj4[1] = backgroundColor.fill;
       obj4[2] = obj.useThemeContext().theme;
-      obj4[3] = memo;
+      obj4[3] = backgroundColor.backdrop.backgroundColor;
       backgroundColor = backgroundColor.backdrop.backgroundColor;
       obj4[4] = backgroundColor;
-      obj3.children = tmp8(tmp16, obj4);
+      obj3.children = tmp7(tmp15, obj4);
     } else if ("subtle" !== str) {
       num = 0.25;
     }
@@ -91,10 +89,10 @@ export const Backdrop = function Backdrop(animatedProps) {
   } else {
     const obj5 = {};
     const merged1 = Object.assign(obj);
-    const items4 = [backgroundColor.fill, flag ? backgroundColor.backdropOpaque : backgroundColor.backdrop];
-    obj5.style = items4;
-    items3[1] = tmp8(tmp9, obj5);
-    obj[3] = items3;
-    return closure_6(ReanimatedRexport.View, obj);
+    const items3 = [backgroundColor.fill, flag ? backgroundColor.backdropOpaque : backgroundColor.backdrop];
+    obj5.style = items3;
+    items2[1] = tmp7(tmp8, obj5);
+    obj[3] = items2;
+    return closure_5(ReanimatedRexport.View, obj);
   }
 };

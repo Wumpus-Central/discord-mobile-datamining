@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/authorized_apps/native/UserSettingsAuthedApp.tsx
 import tokensToAppTokensMap from "tokensToAppTokensMap";
-import get_ActivityIndicator from "Link";
+import get_ActivityIndicator from "createStandardNavigationFactories";
 import participantFromServer from "participantFromServer";
 import recomputeFromAppTokens from "recomputeFromAppTokens";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -45,7 +45,7 @@ function AuthorizedAppTwoWay(application) {
   obj = { text: null };
   const callback = React.useCallback(() => {
     const CommonActions = navigation(outer1_2[17]).CommonActions;
-    navigation.dispatch(CommonActions.navigate({ name: outer1_12.CONNECTIONS }));
+    navigation.dispatch(CommonActions.navigate(outer1_12.CONNECTIONS));
   }, items);
   const intl = navigation(1236).intl;
   obj = { applicationName: application.application.name, onConnectionPress: callback };

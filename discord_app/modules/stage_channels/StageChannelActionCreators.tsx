@@ -33,17 +33,17 @@ function audienceAckRequestToSpeak(channel, suppress) {
   let obj1 = useAudienceRequestToSpeakState;
   const audienceRequestToSpeakState = obj1.getAudienceRequestToSpeakState(voiceStateForChannel);
   if (!suppress) {
-    let objResult = obj(5092);
+    let objResult = obj(5122);
     if (objResult.shouldAgeVerifyToSpeakForCurrentUser()) {
       return Promise.resolve();
     }
   }
   if (!tmp7) {
-    objResult = obj(4449);
+    objResult = obj(4479);
     obj = {};
-    const merged = Object.assign(obj(7675).getStageChannelMetadata(channel));
+    const merged = Object.assign(obj(7703).getStageChannelMetadata(channel));
     objResult.trackWithMetadata(constants.PROMOTED_TO_SPEAKER, obj);
-    const objResult1 = obj(7675);
+    const objResult1 = obj(7703);
   }
   const HTTP = obj(530).HTTP;
   obj = { url: closure_9.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
@@ -103,10 +103,10 @@ function _startStage() {
               let closure_1;
               if ("" !== closure_1) {
                 if (outer1_5.getVoiceChannelId() !== tmp28.id) {
-                  let obj2 = callback(7668);
+                  let obj2 = callback(7696);
                   obj2.connectToStage(tmp28);
                 }
-                const obj4 = callback(7681);
+                const obj4 = callback(7709);
                 c6 = 1;
                 c7 = 1;
                 const obj1 = { value: null, done: false };
@@ -413,7 +413,7 @@ export const removeUserFromChannel = function removeUserFromChannel(id, getGuild
 export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissionAllowed(getGuildId, REQUEST_TO_SPEAK, arg2) {
   const guildId = getGuildId.getGuildId();
   00038__(null != guildId, "Channel cannot be guildless");
-  const obj = { id: guildId, type: PermissionOverwriteType.PermissionOverwriteType.ROLE, allow: importAll(3888).NONE, deny: importAll(3888).NONE };
+  const obj = { id: guildId, type: PermissionOverwriteType.PermissionOverwriteType.ROLE, allow: importAll(3917).NONE, deny: importAll(3917).NONE };
   const merged = Object.assign(getGuildId.permissionOverwrites[guildId]);
   const obj2 = importAll(506);
   if (arg2) {

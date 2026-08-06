@@ -45,7 +45,7 @@ export default function collectCallFeedback(arg0, arg1, arg2, videoEnabled) {
         if (obj.hasUsedBackgroundInCall) {
           obj = {};
           const merged1 = Object.assign(obj);
-          let tmp5Result = tmp5(9059);
+          let tmp5Result = tmp5(9088);
           const lastUsedVideoBackgroundOption = tmp5Result.getLastUsedVideoBackgroundOption(currentUser.getCurrentUser());
           const videoDevices = store.getVideoDevices();
           const tmp22 = videoDevices[store.getVideoDeviceId(store)];
@@ -56,12 +56,12 @@ export default function collectCallFeedback(arg0, arg1, arg2, videoEnabled) {
           obj1 = { video_device_name: null, video_hardware_scaling_enabled: null, video_effect_type: null, video_effect_detail: null };
           obj1[0] = name;
           obj1[1] = store.getHardwareEncoding();
-          tmp5Result = tmp5(9056);
+          tmp5Result = tmp5(9085);
           obj1[2] = tmp5Result.getEffectAnalyticsType(lastUsedVideoBackgroundOption);
-          obj1[3] = tmp5(9056).getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption);
+          obj1[3] = tmp5(9085).getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption);
           const merged2 = Object.assign(obj1);
           const obj10 = store;
-          const tmp5Result1 = tmp5(9056);
+          const tmp5Result1 = tmp5(9085);
           const obj2 = { type: "VIDEO_BACKGROUND_SHOW_FEEDBACK", analyticsData: null };
           obj2[1] = obj;
           dispatcher.dispatch(obj2);

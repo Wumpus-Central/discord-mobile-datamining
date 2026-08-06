@@ -29,10 +29,10 @@ prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
     if (_crypto.hasWebAuthn) {
       if (loginStatus.getLoginStatus() === LoginStates.NONE) {
         if (obj.attemptedPasswordLogin()) {
-          let tmpResult = tmp(4071);
+          let tmpResult = tmp(4100);
           if (!tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1358).DismissibleContent.PASSWORDLESS_UPSELL)) {
             if (!hasFetchedCredentials.hasFetchedCredentials()) {
-              tmpResult = tmp(4106);
+              tmpResult = tmp(4135);
               if (!tmpResult.isModalOpen()) {
                 currentUser = currentUser.getCurrentUser();
                 if (tmp6) {
@@ -41,8 +41,8 @@ prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
                     const obj6 = PasskeyUpsellActionCreators;
                   } else if (!c7) {
                     c7 = true;
-                    const webAuthnCredentials = tmp(5725).fetchWebAuthnCredentials();
-                    const tmpResult1 = tmp(5725);
+                    const webAuthnCredentials = tmp(5752).fetchWebAuthnCredentials();
+                    const tmpResult1 = tmp(5752);
                   }
                 }
                 tmp6 = undefined !== currentUser && currentUser.verified;

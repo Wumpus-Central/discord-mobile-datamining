@@ -4,7 +4,7 @@ import { Routes } from "ME";
 import { StaticChannelRoute } from "set";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/12014_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12048_registerAsset.js";
 import { BaseChannelSubtitle } from "../../../guild_sidebar/native/BaseChannelItem.tsx";
 
 const require = arg1;
@@ -35,7 +35,7 @@ export default function GuildRoleSubscriptionsRow(selected) {
     };
     obj.openLazy(id(outer1_2[10])(outer1_2[9], outer1_2.paths), rolesubscriptionschannelactionsheet, obj);
   }, items1);
-  const ChannelModes = id(11637).ChannelModes;
+  const ChannelModes = id(11671).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp6 = tmp4;
@@ -53,9 +53,9 @@ export default function GuildRoleSubscriptionsRow(selected) {
   const intl2 = tmp6(1236).intl;
   obj[0] = intl2.string(tmp6(1236).t["KzCF/6"]);
   obj[1] = DEFAULT;
-  obj[7] = jsx(tmp6(11637).BaseChannelName, { name: null, mode: null });
+  obj[7] = jsx(tmp6(11671).BaseChannelName, { name: null, mode: null });
   obj = { disableColor: true, mode: DEFAULT, source: null };
   obj[2] = registerAsset;
-  obj[8] = jsx(tmp6(11637).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: null });
+  obj[8] = jsx(tmp6(11671).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: null });
   return jsx(BaseChannelSubtitle, { disableColor: true, mode: DEFAULT, source: null });
 };

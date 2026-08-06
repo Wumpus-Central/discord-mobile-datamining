@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/BoostTier2Icon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/15199_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/15238_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

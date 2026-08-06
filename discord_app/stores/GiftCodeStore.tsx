@@ -3,7 +3,7 @@ import frozen from "frozen";
 import ME from "ME";
 import { Store } from "initialize";
 import set from "start";
-import { t } from "../../_runtime/03837_t.js";
+import { t } from "../../_runtime/03866_t.js";
 import { _resolveGiftCode } from "../utils/GiftCodeUtils.tsx";
 
 let c4;
@@ -19,7 +19,7 @@ function updateGiftCode(giftCode) {
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(4140).Timeout();
+      const timeout = new code(4170).Timeout();
       closure_7[code] = timeout;
       value = obj.get(code);
       if (null != value) {

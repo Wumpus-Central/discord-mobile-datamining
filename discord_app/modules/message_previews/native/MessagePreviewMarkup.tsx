@@ -1,5 +1,5 @@
 // discord_app/modules/message_previews/native/MessagePreviewMarkup.tsx
-import { t } from "../../../../_runtime/03954_t.js";
+import { t } from "../../../../_runtime/03983_t.js";
 import { ChannelListLayoutTypes } from "../../main_tabs_v2/ChannelListLayoutTypes.tsx";
 import { combineMarkupRules } from "../../markup/combineMarkupRules.tsx";
 import { parseLink } from "../../markup/MarkupRules.tsx";
@@ -91,19 +91,16 @@ export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fo
   if ("" === content) {
     return null;
   } else {
-    let obj = { allowLinks: true, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: null, mentionGames: null, soundboardSounds: null, formatInline: true, noStyleAndInteraction: true, allowHeading: true, allowList: true, disableAutoBlockNewlines: true, previewLinkTarget: false, disableAnimatedEmoji: null, unknownUserMentionPlaceholder: true, guildId: null, channelId: null, muted: null };
+    let obj = { allowLinks: true, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: null, soundboardSounds: null, formatInline: true, noStyleAndInteraction: true, allowHeading: true, allowList: true, disableAutoBlockNewlines: true, previewLinkTarget: false, disableAnimatedEmoji: null, unknownUserMentionPlaceholder: true, guildId: null, channelId: null, muted: null };
     obj[4] = [];
-    const _Map = Map;
-    const map = new Map();
-    obj[5] = map;
-    obj[6] = [];
-    obj[13] = disableAnimatedEmoji;
-    obj[15] = guildId;
-    obj[16] = channelId;
+    obj[5] = [];
+    obj[12] = disableAnimatedEmoji;
+    obj[14] = guildId;
+    obj[15] = channelId;
     if (muted == null) {
       muted = false;
     }
-    obj[17] = muted;
+    obj[16] = muted;
     obj = { content: null, layout: null, color: null, initialParserState: null, fontScale: null, maxFontSizeMultiplier: null, postProcessor: null };
     obj[0] = content;
     obj[1] = layout;

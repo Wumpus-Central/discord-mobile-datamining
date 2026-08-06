@@ -98,7 +98,7 @@ class Badge {
         items3[0] = items2.badgeText;
         items3[1] = textStyle;
         obj2[0] = items3;
-        tmp10 = require("module_7781");
+        tmp10 = require("module_7922");
         tmpResult = require("shortenAndLocalizeNumber");
         tmp11 = globalThis;
         _Math = Math;

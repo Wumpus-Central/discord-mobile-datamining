@@ -48,7 +48,7 @@ function rebuildGuildChannels(guildId) {
   let importDefault;
   const id = obj.id;
   importDefault = id;
-  let obj1 = obj2(1865);
+  let obj1 = obj2(1894);
   obj = {};
   if (obj1.isFavoritesGuildId(id)) {
     favoriteChannels = favoriteChannels.getFavoriteChannels();
@@ -207,7 +207,7 @@ function handleGuildRoleUpdate(guildId) {
 function hasElevatedPermissions(user, context) {
   let obj = importAll(506);
   obj = { user, context, checkElevated: false };
-  return obj.hasAny(importAll(3888).computePermissions(obj), closure_20);
+  return obj.hasAny(importAll(3917).computePermissions(obj), closure_20);
 }
 function handleFavoritesUpdate() {
   rebuildGuildChannels(closure_17);

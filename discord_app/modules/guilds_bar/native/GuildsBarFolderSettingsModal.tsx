@@ -86,7 +86,7 @@ export default function GuildFolderSettingsModal(folderId) {
   callback = obj2.useCallback(() => {
     const dependencyMap = first1;
     const guildFolders = _undefined.getGuildFolders();
-    folderId(8592).saveGuildFolders(guildFolders.map((folderId) => {
+    folderId(8621).saveGuildFolders(guildFolders.map((folderId) => {
       let tmp = folderId;
       if (folderId.folderId === closure_0) {
         const obj = {};
@@ -97,11 +97,11 @@ export default function GuildFolderSettingsModal(folderId) {
       }
       return tmp;
     }));
-    let obj = folderId(8592);
-    const result = folderId(15265).hideGuildsBarFolderModal();
+    let obj = folderId(8621);
+    const result = folderId(15303).hideGuildsBarFolderModal();
   }, items2);
   callback1 = obj2.useCallback(() => {
-    const result = folderId(15265).hideGuildsBarFolderModal();
+    const result = folderId(15303).hideGuildsBarFolderModal();
   }, []);
   const items3 = [first1, first, first !== initialFolderName || first1 !== initialFolderColor, callback, callback1];
   const memo = obj2.useMemo(() => {
@@ -127,11 +127,11 @@ export default function GuildFolderSettingsModal(folderId) {
     };
     const intl = folderId(1236).intl;
     obj[1] = intl.string(folderId(1236).t.Dx7im5);
-    obj[2] = folderId(5223).getHeaderCloseButton(callback1);
+    obj[2] = folderId(5253).getHeaderCloseButton(callback1);
     if (c5) {
       const intl2 = tmp3(1236).intl;
-      let fn = tmp3(5223).getHeaderTextButton(intl2.string(tmp3(1236).t["R3BPH+"]), callback);
-      const tmp3Result = tmp3(5223);
+      let fn = tmp3(5253).getHeaderTextButton(intl2.string(tmp3(1236).t["R3BPH+"]), callback);
+      const tmp3Result = tmp3(5253);
     } else {
       fn = () => null;
     }
@@ -139,5 +139,5 @@ export default function GuildFolderSettingsModal(folderId) {
     return { [outer1_10]: obj };
   }, items3);
   obj = { screens: memo, initialRouteName: c10 };
-  return callback1(folderId(5650).Navigator, obj);
+  return callback1(folderId(5704).Navigator, obj);
 };

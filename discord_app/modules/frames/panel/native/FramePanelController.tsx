@@ -2,6 +2,8 @@
 import "noop";
 import addApplication from "addApplication";
 import map from "map";
+import { asLaunched } from "FrameLayoutModes";
+import { ActivityPanelModes } from "ActivityPanelModes";
 import { jsx } from "jsxProd";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { BaseActivityPanelController } from "../../../activities/panel/native/ActivityPanelController.tsx";
@@ -20,24 +22,29 @@ export default function FramePanelController(children) {
   let obj = initialize;
   const items = [map, addApplication];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    let obj = store;
-    const activityPanelMode = store.getActivityPanelMode();
-    const connectedFrame = store.getConnectedFrame();
-    let applicationId;
-    if (connectedFrame != null) {
-      applicationId = connectedFrame.applicationId;
+    const tmp = callback(mainFrame.getMainFrame());
+    let activityPanelMode;
+    if (tmp != null) {
+      activityPanelMode = tmp.data.activityPanelMode;
     }
-    obj = { mode: activityPanelMode, hasConnectedActivity: null != connectedFrame, connectedActivityAppId: applicationId, currentApp: null, orientationLockStateForApp: null };
+    if (activityPanelMode == null) {
+      activityPanelMode = constants.DISCONNECTED;
+    }
+    let applicationId;
+    if (tmp != null) {
+      applicationId = tmp.applicationId;
+    }
+    const obj = { mode: activityPanelMode, hasConnectedActivity: null != tmp, connectedActivityAppId: applicationId, currentApp: null, orientationLockStateForApp: null };
     let application;
     if (null != applicationId) {
       application = application.getApplication(applicationId);
     }
     obj[3] = application;
-    let orientationLockStateForApp;
-    if (null != applicationId) {
-      orientationLockStateForApp = obj.getOrientationLockStateForApp(applicationId);
+    let orientationLock;
+    if (tmp != null) {
+      orientationLock = tmp.data.orientationLock;
     }
-    obj[4] = orientationLockStateForApp;
+    obj[4] = orientationLock;
     return obj;
   }, []);
   ({ mode, hasConnectedActivity, connectedActivityAppId, currentApp, orientationLockStateForApp } = stateFromStoresObject);

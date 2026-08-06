@@ -2,7 +2,7 @@
 import { Dimensions } from "get ActivityIndicator";
 import keys from "keys";
 import importDefaultResult from "subscribeToKeyboardUIStore";
-import importDefaultResult1 from "module_1582";
+import importDefaultResult1 from "module_1610";
 import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 import { APP_ENTRY_KEYS } from "../../window/native/AppEntryKey.tsx";
@@ -35,7 +35,7 @@ function getDimensionsStoreStateForEntry(appEntryKey) {
   }
   let width = size.width;
   ({ width: width2, height } = size2);
-  let tmp2Result = tmp2(1581);
+  let tmp2Result = tmp2(1609);
   const rect = tmp2Result.getSafeAreaInsets(appEntryKey);
   let tmp8 = height;
   let tmp9 = width2;
@@ -45,7 +45,7 @@ function getDimensionsStoreStateForEntry(appEntryKey) {
   }
   const bound = Math.min(width + rect.left + rect.right, tmp9);
   const sum = size.height + rect.top + rect.bottom;
-  tmp2Result = tmp2(1847);
+  tmp2Result = tmp2(1875);
   obj = { appEntryKey };
   const bound1 = Math.min(sum - tmp2Result.getSystemKeyboardHeight(obj), tmp8);
   width = undefined;
@@ -127,7 +127,7 @@ function getDimensionsStoreState(arg0) {
   return tmp;
 }
 let obj = keys.create(() => getDimensionsStoreState(undefined));
-const subscription = require("module_1582").subscribe(() => {
+const subscription = require("module_1610").subscribe(() => {
   batchUpdates.batchUpdates(() => state.setState((arg0) => callback(arg0)));
 });
 importDefaultResult(() => {

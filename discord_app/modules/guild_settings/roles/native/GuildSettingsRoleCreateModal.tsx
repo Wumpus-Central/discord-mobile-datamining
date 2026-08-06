@@ -76,11 +76,11 @@ function RoleCreateScene() {
     if (dependencyMap === outer1_17) {
       const num5 = 0;
     }
-    yield outer1_1(5185).createRole(outer1_1.id, c2, num5);
+    yield outer1_1(5215).createRole(outer1_1.id, c2, num5);
     if (1 === tmp7) {
       c2 = 0;
       callback(false);
-      const obj1 = outer1_0(3955);
+      const obj1 = outer1_0(3984);
       const result = obj1.roleCreateFailedToast();
       let c4 = 3;
     } else if (arg0 === 1) {
@@ -101,16 +101,16 @@ function RoleCreateScene() {
         if (null != selectedRoleId) {
           if (null != role) {
             if (null != guild) {
-              tmp3(3955).roleCreatedToast();
-              const obj5 = tmp3(3955);
+              tmp3(3984).roleCreatedToast();
+              const obj5 = tmp3(3984);
               const tmp13 = tmp3;
-              tmp3(16547).setRoleJustCreated(true);
+              tmp3(16587).setRoleJustCreated(true);
               let STEP_MEMBERS = outer1_25.STEP_PERMISSIONS;
               const guild2 = obj.getProps().guild;
               tmp32(38)(null != guild2, "shouldSkipPermissions: Guild cannot be null");
               const currentUser = outer1_11.getCurrentUser();
               const tmp23 = outer1_9(guild2, currentUser);
-              const obj6 = tmp3(16547);
+              const obj6 = tmp3(16587);
               const tmp18 = tmp32;
               obj = { permission: null, user: null, context: null };
               obj[0] = outer1_20.ADMINISTRATOR;
@@ -124,13 +124,13 @@ function RoleCreateScene() {
                 STEP_MEMBERS = tmp17.STEP_MEMBERS;
               }
               tmp3.push(STEP_MEMBERS);
-              obj7 = v0(3888);
+              obj7 = v0(3917);
               obj = { flow_type: null, from_step: null, to_step: null, skip: false };
               obj[0] = outer1_19.GUILD_ROLE_CREATION_MODAL;
               obj[1] = outer1_26[outer1_25.STEP_DISPLAY];
               obj[2] = outer1_26[STEP_MEMBERS];
               const tmp18Result = tmp18(698);
-              const merged = Object.assign(tmp13(4449).collectGuildAnalyticsMetadata(guild.id));
+              const merged = Object.assign(tmp13(4479).collectGuildAnalyticsMetadata(guild.id));
               tmp18Result.track(outer1_18.USER_FLOW_TRANSITION, obj);
               return false;
             }
@@ -531,5 +531,5 @@ export default function GuildSettingsRoleCreateModal() {
     obj.track(outer1_18.USER_FLOW_TRANSITION, obj);
   });
   obj = { screens: closure_32, initialRouteName: obj4.STEP_DISPLAY };
-  return callback3(stateFromStores(5650).Navigator, obj);
+  return callback3(stateFromStores(5704).Navigator, obj);
 };

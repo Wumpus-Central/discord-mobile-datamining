@@ -34,18 +34,15 @@ function handleTapCommandMention(channelId) {
       }
       if (null != appLauncherNavigator) {
         if (null != channel) {
-          let obj = { name: null, params: null };
-          obj[0] = constants.COMMAND_VIEW;
-          obj = { analyticsLocation: null, preSelectedCommand: null, context: null };
+          let obj = { analyticsLocation: null, preSelectedCommand: null, context: null };
           obj[0] = onSetCommand(sum1[6]).ApplicationCommandTriggerLocations.MENTION;
-          let obj1 = { commandId: null };
-          obj1[0] = sum1;
-          obj[1] = obj1;
-          const obj2 = { type: "channel", channel: null };
-          obj2[1] = channel;
-          obj[2] = obj2;
+          obj = { commandId: null };
+          obj[0] = sum1;
           obj[1] = obj;
-          appLauncherNavigator.navigate(obj);
+          let obj1 = { type: "channel", channel: null };
+          obj1[1] = channel;
+          obj[2] = obj1;
+          appLauncherNavigator.navigate(constants.COMMAND_VIEW, obj);
         }
       }
       obj1 = onSetCommand(sum1[7]);
@@ -79,8 +76,7 @@ function handleTapCommandMention(channelId) {
           }
         }
       }
-      let obj3 = importDefault(sum1[8]);
-      obj3.hideActionSheet();
+      importDefault(sum1[8]).hideActionSheet();
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
         let obj = { type: onSetCommand(sum1[9]).KeyboardTypes.APP_LAUNCHER, context: null };
@@ -89,26 +85,27 @@ function handleTapCommandMention(channelId) {
         obj[1] = obj;
         return callback(obj);
       }, 0);
+      const obj4 = importDefault(sum1[8]);
     }
   }
   if ("" === channelId.currentText) {
     onSetCommand();
   } else {
-    obj3 = { title: null, confirmText: null, onConfirm: null, cancelText: null, confirmColor: null, body: null };
+    const obj2 = { title: null, confirmText: null, onConfirm: null, cancelText: null, confirmColor: null, body: null };
     const intl = onSetCommand(sum1[11]).intl;
-    obj3[0] = intl.string(onSetCommand(sum1[11]).t.pe26Cj);
+    obj2[0] = intl.string(onSetCommand(sum1[11]).t.pe26Cj);
     const intl2 = onSetCommand(sum1[11]).intl;
-    obj3[1] = intl2.string(onSetCommand(sum1[11]).t.VkKicb);
-    obj3[2] = function onConfirm() {
+    obj2[1] = intl2.string(onSetCommand(sum1[11]).t.VkKicb);
+    obj2[2] = function onConfirm() {
       return onSetCommand();
     };
     const intl3 = onSetCommand(sum1[11]).intl;
-    obj3[3] = intl3.string(onSetCommand(sum1[11]).t["ETE/oC"]);
-    obj3[4] = onSetCommand(sum1[12]).ButtonColors.BRAND;
+    obj2[3] = intl3.string(onSetCommand(sum1[11]).t["ETE/oC"]);
+    obj2[4] = onSetCommand(sum1[12]).ButtonColors.BRAND;
     const intl4 = onSetCommand(sum1[11]).intl;
-    obj3[5] = intl4.string(onSetCommand(sum1[11]).t["+awCIy"]);
-    importDefault(sum1[10]).show(obj3);
-    const obj9 = importDefault(sum1[10]);
+    obj2[5] = intl4.string(onSetCommand(sum1[11]).t["+awCIy"]);
+    importDefault(sum1[10]).show(obj2);
+    const obj8 = importDefault(sum1[10]);
   }
 }
 function handleLongPressCommandMention(arg0, arg1) {
@@ -129,7 +126,7 @@ function handleLongPressCommandMention(arg0, arg1) {
     obj = { label: null, IconComponent: null, onPress: null };
     const intl2 = tmp(1236).intl;
     obj[0] = intl2.string(tmp(1236).t.oJ1Muw);
-    obj[1] = tmp(9435).IdIcon;
+    obj[1] = tmp(9464).IdIcon;
     obj[2] = function onPress() {
       callback(outer1_2[14]).presentIdCopied();
       const obj = callback(outer1_2[14]);
@@ -150,7 +147,7 @@ export default function MarkupReactCommandRule(node) {
   let closure_1;
   let dependencyMap;
   ({ output, state, style } = node);
-  closure_1 = null != React.useContext(node(9437).AppLauncherContext);
+  closure_1 = null != React.useContext(node(9466).AppLauncherContext);
   dependencyMap = callback();
   let obj = {
     style,
@@ -181,8 +178,8 @@ export default function MarkupReactCommandRule(node) {
       obj[6] = function onSetCommand() {
         let commandId;
         let commandName;
-        callback(9440)();
-        callback(4223).hideActionSheet();
+        callback(9469)();
+        callback(4253).hideActionSheet();
         if (bestActiveInput != null) {
           obj2.openSystemKeyboard();
         }
@@ -190,7 +187,7 @@ export default function MarkupReactCommandRule(node) {
           const applicationCommandManager = obj2.getApplicationCommandManager();
           if (applicationCommandManager != null) {
             ({ commandId, commandName } = bestActiveInput);
-            applicationCommandManager.setPartialCommand(commandId, commandName, node(6876).ApplicationCommandTriggerLocations.MENTION);
+            applicationCommandManager.setPartialCommand(commandId, commandName, node(6903).ApplicationCommandTriggerLocations.MENTION);
           }
         }
       };
@@ -201,9 +198,9 @@ export default function MarkupReactCommandRule(node) {
     },
     children: null
   };
-  const items = ["/", node(9442).smartOutput(node, output, state)];
+  const items = ["/", node(9471).smartOutput(node, output, state)];
   obj[4] = items;
-  return jsxs(node(4251).Text, {
+  return jsxs(node(4281).Text, {
     style,
     variant: "text-md/bold",
     onPress() {
@@ -232,8 +229,8 @@ export default function MarkupReactCommandRule(node) {
       obj[6] = function onSetCommand() {
         let commandId;
         let commandName;
-        callback(9440)();
-        callback(4223).hideActionSheet();
+        callback(9469)();
+        callback(4253).hideActionSheet();
         if (bestActiveInput != null) {
           obj2.openSystemKeyboard();
         }
@@ -241,7 +238,7 @@ export default function MarkupReactCommandRule(node) {
           const applicationCommandManager = obj2.getApplicationCommandManager();
           if (applicationCommandManager != null) {
             ({ commandId, commandName } = bestActiveInput);
-            applicationCommandManager.setPartialCommand(commandId, commandName, node(6876).ApplicationCommandTriggerLocations.MENTION);
+            applicationCommandManager.setPartialCommand(commandId, commandName, node(6903).ApplicationCommandTriggerLocations.MENTION);
           }
         }
       };

@@ -34,7 +34,7 @@ obj[1] = function handler(socket) {
     obj[0] = constants.ACTIVITY_INVITE;
     const id = socket.socket.application.id;
     obj[1] = id;
-    const result1 = tmp(8959).showInstantInviteActionSheet(tmp4, obj);
+    const result1 = tmp(8988).showInstantInviteActionSheet(tmp4, obj);
   }
   tmp = require;
 };

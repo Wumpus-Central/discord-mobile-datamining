@@ -68,7 +68,7 @@ const memoResult = require("noop").memo(function ChatInputGuardMessageRequest(ch
               obj2[0] = arg1;
               return obj2;
             } else {
-              obj = lib(4263);
+              obj = lib(4293);
               obj.transitionToChannel(lib.id, { navigationReplace: true });
               c3 = 3;
               return { value: "T", done: null };
@@ -159,8 +159,8 @@ const memoResult = require("noop").memo(function ChatInputGuardMessageRequest(ch
   }
   let obj = channel(1480);
   importDefault = obj.useNavigation();
-  const isMessageRequestRestrictedViewer = channel(11685).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
-  let obj2 = channel(11685);
+  const isMessageRequestRestrictedViewer = channel(11719).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
+  let obj2 = channel(11719);
   const items = [_onAcceptClick];
   const stateFromStores = channel(589).useStateFromStores(items, () => _onAcceptClick.getUser(channel.getRecipientId()));
   const obj3 = channel(589);
@@ -178,7 +178,7 @@ const memoResult = require("noop").memo(function ChatInputGuardMessageRequest(ch
 
     }
   };
-  const messageRequestActions = channel(11687).useMessageRequestActions(obj);
+  const messageRequestActions = channel(11721).useMessageRequestActions(obj);
   ({ acceptMessageRequest: c2, rejectMessageRequest: c3, isAcceptLoading, isRejectLoading, isUserProfileLoading, isOptimisticAccepted, isOptimisticRejected } = messageRequestActions);
   let tmp6 = isAcceptLoading;
   if (!isAcceptLoading) {
@@ -194,7 +194,7 @@ const memoResult = require("noop").memo(function ChatInputGuardMessageRequest(ch
     tmp6 = isOptimisticRejected;
   }
   obj = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
-  const obj4 = channel(11687);
+  const obj4 = channel(11721);
   const tmp7 = _onRejectClick;
   let intl = tmp(1236).intl;
   obj[1] = intl.string(channel(1236).t["e/eQVB"]);

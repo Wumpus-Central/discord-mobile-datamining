@@ -1,10 +1,11 @@
 // discord_app/modules/activities/utils/tryLaunchAsFrame.tsx
 import addApplication from "addApplication";
+import { MAIN_SURFACE } from "FrameLayoutModes";
 import { _launchFrameOnNative } from "../../frames/FramesActionCreators.native.tsx";
 import { canLaunchFrame } from "../../frames/utils/canLaunchFrame.tsx";
 
 const require = arg1;
-const result = require("_launchFrameOnNative").fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");
+const result = require("canLaunchFrame").fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");
 
 export const tryLaunchAsFrame = function tryLaunchAsFrame(applicationId) {
   applicationId = applicationId.applicationId;
@@ -16,8 +17,9 @@ export const tryLaunchAsFrame = function tryLaunchAsFrame(applicationId) {
   }
   let flag = !tmp2;
   if (!tmp2) {
-    obj = { applicationId: null };
+    obj = { applicationId: null, surface: null };
     obj[0] = applicationId;
+    obj[1] = MAIN_SURFACE;
     _launchFrameOnNative.launchFrame(obj);
     flag = true;
     const obj2 = _launchFrameOnNative;

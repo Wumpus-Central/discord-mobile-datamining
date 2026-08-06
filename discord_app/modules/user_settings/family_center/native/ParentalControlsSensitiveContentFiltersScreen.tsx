@@ -9,7 +9,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/user_settings/f
 
 export default function UserSettingsSensitiveContentFilters() {
   const node = React.useMemo(() => {
-    let obj = callback(10333);
+    let obj = callback(10364);
     obj = { sections: null };
     obj = { label: null, settings: null, subLabel: null };
     const intl = callback(1236).intl;

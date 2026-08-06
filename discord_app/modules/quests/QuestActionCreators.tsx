@@ -358,13 +358,14 @@ function _fetchCurrentQuests() {
             c6 = undefined;
             let insertUnsortedGuilds;
             let closure_8;
+            let _toPropertyKey;
             let length;
-            let closure_10;
             let closure_11;
             let closure_12;
+            let closure_13;
             if (!outer1_8.isFetchingCurrentQuests) {
               items = 0;
-              quests = tmp69.quests;
+              quests = tmp71.quests;
               items = [];
               items = HermesBuiltin.arraySpread(quests.keys(), items);
               let obj3 = outer1_1(outer1_2[10]);
@@ -383,10 +384,10 @@ function _fetchCurrentQuests() {
         } else {
           if (1 === tmp8) {
             c4 = 0;
-            let closure_13 = initializeState;
+            let closure_14 = initializeState;
             obj1 = lib(quests[10]);
             obj3 = { type: "QUESTS_FETCH_CURRENT_QUESTS_FAILURE", error: null };
-            const tmp20 = new lib(quests[11])(closure_13);
+            const tmp20 = new lib(quests[11])(closure_14);
             obj3[1] = tmp20;
             obj1.dispatch(obj3);
           } else if (arg0 === 1) {
@@ -398,7 +399,8 @@ function _fetchCurrentQuests() {
             const found = quests.filter((config) => items(quests[14]).isQuestWithKnownConfigVersion(config));
             initializeState = found.map((body) => items(quests[14]).questWithUserStatusFromServer(body));
             c4 = lib.body.quest_enrollment_blocked_until;
-            c5 = initializeState.filter((userStatus) => {
+            c5 = lib.body.quest_access_suspended_until;
+            c6 = initializeState.filter((userStatus) => {
               userStatus = userStatus.userStatus;
               let claimedAt;
               if (userStatus != null) {
@@ -410,31 +412,32 @@ function _fetchCurrentQuests() {
               }
               return tmp2;
             });
-            c6 = quests.map((id) => id.id);
-            insertUnsortedGuilds = initializeState.map((id) => id.id);
-            closure_8 = c6.filter((arg0) => !insertUnsortedGuilds.includes(arg0));
-            length = c5.map((id) => id.id);
-            closure_10 = insertUnsortedGuilds.filter((arg0) => !_toPropertyKey.includes(arg0));
-            closure_11 = items.filter((arg0) => !_toPropertyKey.includes(arg0));
+            insertUnsortedGuilds = quests.map((id) => id.id);
+            closure_8 = initializeState.map((id) => id.id);
+            _toPropertyKey = insertUnsortedGuilds.filter((arg0) => !closure_8.includes(arg0));
+            length = c6.map((id) => id.id);
+            closure_11 = closure_8.filter((arg0) => !closure_10.includes(arg0));
+            closure_12 = items.filter((arg0) => !closure_10.includes(arg0));
             const obj4 = { category: "quests.fetch", message: "fetchCurrentQuests completed", data: null };
             const obj5 = { rawCount: null, rawIds: null, validCount: null, validIds: null, prevQuestIds: null, droppedByConfigVersion: null, droppedByPlatformFilter: null, removedFromStore: null };
-            obj5[0] = c6.length;
-            obj5[1] = c6;
+            obj5[0] = insertUnsortedGuilds.length;
+            obj5[1] = insertUnsortedGuilds;
             obj5[2] = length.length;
             obj5[3] = length;
             obj5[4] = items;
-            obj5[5] = closure_8;
-            obj5[6] = closure_10;
-            obj5[7] = closure_11;
+            obj5[5] = _toPropertyKey;
+            obj5[6] = closure_11;
+            obj5[7] = closure_12;
             obj4[2] = obj5;
             lib(quests[15]).addBreadcrumb(obj4);
             const excluded_quests = lib.body.excluded_quests;
-            closure_12 = excluded_quests.map((id) => items(quests[14]).excludedQuestFromServer(id));
+            closure_13 = excluded_quests.map((id) => items(quests[14]).excludedQuestFromServer(id));
             const obj9 = lib(quests[15]);
-            const obj6 = { type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS", quests: null, excludedQuests: null, questEnrollmentBlockedUntil: null };
-            obj6[1] = c5;
-            obj6[2] = closure_12;
+            const obj6 = { type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS", quests: null, excludedQuests: null, questEnrollmentBlockedUntil: null, questAccessSuspendedUntil: null };
+            obj6[1] = c6;
+            obj6[2] = closure_13;
             obj6[3] = c4;
+            obj6[4] = c5;
             lib(quests[10]).dispatch(obj6);
             c4 = 0;
             const obj12 = lib(quests[10]);
@@ -513,13 +516,13 @@ function _sendHeartbeat() {
       obj5[4] = callback2;
       obj4[1] = obj5;
       obj2[2] = obj4;
-      yield callback2(5079).post(obj2);
+      yield callback2(5109).post(obj2);
       if (2 === tmp7) {
         c5 = 0;
         let c7 = c4;
         obj4 = callback2(709);
         const obj7 = { type: "QUESTS_SEND_HEARTBEAT_FAILURE", error: null, questId: null, streamKey: null };
-        const tmp29 = new callback2(4155)(c7);
+        const tmp29 = new callback2(4185)(c7);
         obj7[1] = tmp29;
         obj7[2] = callback;
         obj7[3] = callback2;
@@ -532,7 +535,7 @@ function _sendHeartbeat() {
         const body = arg1;
         const obj = callback2(709);
         const obj8 = { type: "QUESTS_SEND_HEARTBEAT_SUCCESS", userStatus: null, questId: null, streamKey: null };
-        obj2 = callback(7061);
+        obj2 = callback(7088);
         obj8[1] = obj2.questUserStatusFromServer(body.body);
         obj8[2] = callback;
         obj8[3] = callback2;
@@ -723,7 +726,7 @@ function _enrollInQuest() {
             lib = arg1;
             obj12 = { type: "QUESTS_ENROLL_SUCCESS", enrolledQuestUserStatus: null };
             const obj23 = lib(709);
-            obj12[1] = callback(7061).questUserStatusFromServer(lib.body);
+            obj12[1] = callback(7088).questUserStatusFromServer(lib.body);
             obj23.dispatch(obj12);
             obj13 = { type: null };
             obj13[0] = constants.SUCCESS;
@@ -953,7 +956,7 @@ function _fetchQuestRewardCode() {
             dependencyMap = initializeState;
             let obj4 = lib(709);
             obj4 = { type: "QUESTS_FETCH_REWARD_CODE_FAILURE", error: null, questId: null };
-            const tmp28 = new lib(4155)(dependencyMap);
+            const tmp28 = new lib(4185)(dependencyMap);
             obj4[1] = tmp28;
             obj4[2] = callback;
             obj4.dispatch(obj4);
@@ -966,7 +969,7 @@ function _fetchQuestRewardCode() {
             obj = lib(709);
             const obj5 = { type: "QUESTS_FETCH_REWARD_CODE_SUCCESS", questId: null, rewardCode: null };
             obj5[1] = callback;
-            obj2 = callback(7061);
+            obj2 = callback(7088);
             obj5[2] = obj2.questsRewardCodeFromServer(lib.body);
             obj.dispatch(obj5);
             c4 = 0;
@@ -1072,7 +1075,7 @@ function _dismissQuestContent() {
               dependencyMap = closure_4;
               obj4 = lib(709);
               const obj5 = { type: "QUESTS_DISMISS_CONTENT_FAILURE", error: null, questId: null };
-              const tmp27 = new lib(4155)(dependencyMap);
+              const tmp27 = new lib(4185)(dependencyMap);
               obj5[1] = tmp27;
               obj5[2] = callback;
               obj4.dispatch(obj5);
@@ -1083,7 +1086,7 @@ function _dismissQuestContent() {
               lib = arg1;
               obj = lib(709);
               obj6 = { type: "QUESTS_DISMISS_CONTENT_SUCCESS", dismissedQuestUserStatus: null };
-              obj2 = callback(7061);
+              obj2 = callback(7088);
               obj6[1] = obj2.questUserStatusFromServer(lib.body);
               obj.dispatch(obj6);
               c5 = 0;
@@ -1195,7 +1198,7 @@ function _resetQuestPreviewStatus() {
         dependencyMap = initializeState;
         let obj4 = lib(709);
         const obj3 = { type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: null, questId: null };
-        const tmp27 = new lib(4155)(dependencyMap);
+        const tmp27 = new lib(4185)(dependencyMap);
         obj3[1] = tmp27;
         obj3[2] = callback;
         obj4.dispatch(obj3);
@@ -1207,7 +1210,7 @@ function _resetQuestPreviewStatus() {
         lib = arg1;
         const obj = lib(709);
         obj4 = { type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: null };
-        const obj2 = callback(7061);
+        const obj2 = callback(7088);
         obj4[1] = obj2.questUserStatusFromServer(lib.body);
         obj.dispatch(obj4);
         c4 = 0;
@@ -1246,7 +1249,7 @@ function _resetQuestDismissibilityStatus() {
         dependencyMap = initializeState;
         let obj4 = lib(709);
         const obj3 = { type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: null, questId: null };
-        const tmp27 = new lib(4155)(dependencyMap);
+        const tmp27 = new lib(4185)(dependencyMap);
         obj3[1] = tmp27;
         obj3[2] = callback;
         obj4.dispatch(obj3);
@@ -1258,7 +1261,7 @@ function _resetQuestDismissibilityStatus() {
         lib = arg1;
         const obj = lib(709);
         obj4 = { type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: null };
-        const obj2 = callback(7061);
+        const obj2 = callback(7088);
         obj4[1] = obj2.questUserStatusFromServer(lib.body);
         obj.dispatch(obj4);
         c4 = 0;
@@ -1328,7 +1331,7 @@ function _fetchClaimedQuests() {
             callback = dependencyMap;
             let obj3 = callback(709);
             obj3 = { type: "QUESTS_FETCH_CLAIMED_QUESTS_FAILURE", error: null };
-            const tmp25 = new callback(4155)(callback);
+            const tmp25 = new callback(4185)(callback);
             obj3[1] = tmp25;
             obj3.dispatch(obj3);
           } else if (arg0 === 1) {
@@ -1461,16 +1464,16 @@ function _fetchQuestToDeliver() {
                 const obj3 = { wasSuccessful: false, currentFetchedAt: null };
                 throwTypeErrorResult = dependencyMap;
                 obj3[1] = dependencyMap;
-                throwTypeErrorResult = callback2(10353).recordQuestRequestApiResponse("/quests/decision", obj3);
+                throwTypeErrorResult = callback2(10384).recordQuestRequestApiResponse("/quests/decision", obj3);
                 throwTypeErrorResult = callback2;
                 throwTypeErrorResult = dependencyMap;
-                const obj20 = callback2(10353);
+                const obj20 = callback2(10384);
                 throwTypeErrorResult = result;
                 const obj4 = {};
                 throwTypeErrorResult = callback2;
                 throwTypeErrorResult = dependencyMap;
                 throwTypeErrorResult = obj4;
-                throwTypeErrorResult = Object.assign(callback2(7031)());
+                throwTypeErrorResult = Object.assign(callback2(7058)());
                 throwTypeErrorResult = undefined;
                 if (message != null) {
                   throwTypeErrorResult = message.message;
@@ -1488,7 +1491,7 @@ function _fetchQuestToDeliver() {
                 throwTypeErrorResult = message;
                 throwTypeErrorResult = new.target;
                 throwTypeErrorResult = new.target;
-                const obj24 = new callback2(4155)(message);
+                const obj24 = new callback2(4185)(message);
                 throwTypeErrorResult = obj24;
                 obj4.api_error = obj24.getAnyErrorMessage();
                 throwTypeErrorResult = callback2;
@@ -1503,7 +1506,7 @@ function _fetchQuestToDeliver() {
                 throwTypeErrorResult = message;
                 throwTypeErrorResult = new.target;
                 throwTypeErrorResult = new.target;
-                throwTypeErrorResult = new callback2(4155)(message);
+                throwTypeErrorResult = new callback2(4185)(message);
                 obj5[1] = throwTypeErrorResult;
                 throwTypeErrorResult = callback;
                 obj5[2] = callback;
@@ -1526,7 +1529,7 @@ function _fetchQuestToDeliver() {
                   c3 = body;
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = dependencyMap;
-                  let obj16 = callback(7074);
+                  let obj16 = callback(7101);
                   guildsTree = 3;
                   c9 = 1;
                   let obj7 = { value: null, done: false };
@@ -1549,7 +1552,7 @@ function _fetchQuestToDeliver() {
                   lib = body;
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = dependencyMap;
-                  const LessPersonalizedAdsExperiment = callback(10354).LessPersonalizedAdsExperiment;
+                  const LessPersonalizedAdsExperiment = callback(10385).LessPersonalizedAdsExperiment;
                   enabled = LessPersonalizedAdsExperiment.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" });
                   throwTypeErrorResult = lib;
                   throwTypeErrorResult = lib();
@@ -1653,15 +1656,15 @@ function _fetchQuestToDeliver() {
                 creative = body.creative;
                 throwTypeErrorResult = creative;
                 if (null != creative) {
-                  if (creative.creative_type === callback(7082).AdCreativeType.QUEST) {
-                    obj1 = callback(7061);
+                  if (creative.creative_type === callback(7109).AdCreativeType.QUEST) {
+                    obj1 = callback(7088);
                     result = obj1.questConfigFromServer(creative.creative_content);
                   }
                 } else {
                   quest = body.quest;
                   result = undefined;
                   if (null != quest) {
-                    obj = callback(7061);
+                    obj = callback(7088);
                     result = obj.questConfigFromServer(quest);
                   }
                 }
@@ -1715,7 +1718,7 @@ function _fetchQuestToDeliver() {
                 obj14[7] = callback;
                 obj14[8] = dependencyMap;
                 obj2.dispatch(obj14);
-                obj5 = callback2(10353);
+                obj5 = callback2(10384);
                 obj16 = { wasSuccessful: true, adRequestId: null, currentQuestId: null, currentFetchedAt: null };
                 const _String = String;
                 obj16[1] = String(body.request_id);
@@ -1736,13 +1739,13 @@ function _fetchQuestToDeliver() {
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = dependencyMap;
-                  if (callback === callback(5116).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA) {
-                    obj7 = callback2(10355);
+                  if (callback === callback(5146).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA) {
+                    obj7 = callback2(10386);
                     obj7.startTracking(result.id);
                   }
                   obj8 = callback2(698);
                   const obj17 = {};
-                  const merged = Object.assign(callback2(7031)());
+                  const merged = Object.assign(callback2(7058)());
                   obj17.quest_id = result.id;
                   obj17.caller_source = callback2;
                   const _String2 = String;
@@ -1843,8 +1846,8 @@ function _fetchEarnedQuestToDeliver() {
                 if (0 !== found.length) {
                   const _Date = Date;
                   c3 = Date.now();
-                  const result = callback2(10357).recordEarnedRequestAttempt(tmp74, tmp75);
-                  const obj16 = callback2(10357);
+                  const result = callback2(10388).recordEarnedRequestAttempt(tmp74, tmp75);
+                  const obj16 = callback2(10388);
                   const obj1 = { type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_BEGIN", content: null };
                   obj1[1] = tmp74;
                   callback2(709).dispatch(obj1);
@@ -1853,7 +1856,7 @@ function _fetchEarnedQuestToDeliver() {
                   response_ttl_seconds = 2;
                   c9 = 1;
                   const obj2 = { value: null, done: false };
-                  obj2[0] = callback(6817).getSession();
+                  obj2[0] = callback(6844).getSession();
                   return obj2;
                 }
               }
@@ -2286,7 +2289,7 @@ function _fetchQuestPreview() {
             dependencyMap = initializeState;
             let obj4 = lib(709);
             obj4 = { type: "QUESTS_FETCH_PREVIEW_FAILURE", error: null, questId: null };
-            const tmp28 = new lib(4155)(dependencyMap);
+            const tmp28 = new lib(4185)(dependencyMap);
             obj4[1] = tmp28;
             obj4[2] = callback;
             obj4.dispatch(obj4);
@@ -2299,7 +2302,7 @@ function _fetchQuestPreview() {
             obj = lib(709);
             const obj5 = { type: "QUESTS_FETCH_PREVIEW_SUCCESS", questId: null, quest: null };
             obj5[1] = callback;
-            obj2 = callback(7061);
+            obj2 = callback(7088);
             obj5[2] = obj2.questWithUserStatusFromServer(lib.body);
             obj.dispatch(obj5);
             c4 = 0;

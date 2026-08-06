@@ -934,7 +934,7 @@ function convertVideo(videoMetadata) {
   if (obj6.isAndroid()) {
     if (tmpResult.getSystemVersionMajor() > 34) {
       let _Math = Math;
-      let frameRate = Math.min(videoMetadata.frameRate, tmp(4834).DEFAULT_VIDEO_ENCODING_CONFIG.frameRate);
+      let frameRate = Math.min(videoMetadata.frameRate, tmp(4864).DEFAULT_VIDEO_ENCODING_CONFIG.frameRate);
     }
     obj.frameRate = frameRate;
     obj.skipVideoTranscode = result1;
@@ -1467,7 +1467,7 @@ function convertVideo(videoMetadata) {
                   } else {
                     isVideo2 = null != str3.match(/^assets-library:\/\/.+&ext=mp4$/i);
                     if (isVideo2) {
-                      const obj4 = { uri: null, overrideType: "Array" };
+                      const obj4 = { uri: null, overrideType: "r" };
                       obj4[0] = str3;
                       isVideo2 = tmp12(tmp13[11]).getFile(obj4).isVideo;
                       const tmp12Result3 = tmp12(tmp13[11]);
@@ -1486,7 +1486,7 @@ function convertVideo(videoMetadata) {
               } else {
                 isVideo = null != str3.match(/^assets-library:\/\/.+&ext=(mov|qt)$/i);
                 if (isVideo) {
-                  const obj5 = { uri: null, overrideType: "Array" };
+                  const obj5 = { uri: null, overrideType: "r" };
                   obj5[0] = str3;
                   isVideo = tmp12(tmp13[11]).getFile(obj5).isVideo;
                   const tmp12Result5 = tmp12(tmp13[11]);
@@ -2177,7 +2177,7 @@ function _tryConvertImage() {
                   if (handleConnectionInfoChange) {
                     const obj9 = { path: null, encoderUsed: null };
                     obj9[0] = handleConnectionInfoChange;
-                    obj9[1] = lib(4481).ImageEncoder.NATIVE;
+                    obj9[1] = lib(4511).ImageEncoder.NATIVE;
                     tmp51 = obj9;
                   }
                   c8 = 3;
@@ -2243,7 +2243,7 @@ function _tryConvertImage() {
                   return obj16;
                 } else {
                   dependencyMap.path = path;
-                  dependencyMap.encoderUsed = lib(4481).ImageEncoder.PASSTHROUGH;
+                  dependencyMap.encoderUsed = lib(4511).ImageEncoder.PASSTHROUGH;
                   c5 = 0;
                   c8 = 3;
                   let obj17 = { value: null, done: true };
@@ -2318,10 +2318,10 @@ function _tryConvertImage() {
                 obj22[0] = tmp10;
                 return obj22;
               }
-              obj16 = lib(4832);
+              obj16 = lib(4862);
               const outer1_13 = obj16.shouldForceConvertToJPG(closure_0, outer1_1, outer1_10);
               if (!outer1_13) {
-                obj17 = lib(4832);
+                obj17 = lib(4862);
                 if (!obj17.shouldConvertToJPG(closure_0, outer1_1, outer1_2, outer1_4, c7)) {
                   if ((function shouldConvertToGifFilepath(closure_0, outer1_1) {
                     const isIOSResult = _undefined(500).isIOS();
@@ -2337,7 +2337,7 @@ function _tryConvertImage() {
                       } else {
                         tmp7 = null != closure_0.match(/^assets-library:\/\/.+&ext=gif$/i);
                       }
-                      tmpResult = _undefined(4832);
+                      tmpResult = _undefined(4862);
                     }
                   })(closure_0, outer1_1)) {
                     c7 = 9;

@@ -2,7 +2,6 @@
 import _slicedToArray from "_slicedToArray";
 import _toArray from "_toArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
-import gameFromServer from "gameFromServer";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -13,21 +12,20 @@ import importDefaultResult from "t";
 import importDefaultResult1 from "t";
 import importDefaultResult2 from "t";
 import importDefaultResult3 from "combineMarkupRules";
-import importDefaultResult4 from "useHasEnhancedRoleColors";
-import importDefaultResult5 from "useHasEnhancedRoleColors";
-import importDefaultResult6 from "useHasEnhancedRoleColors";
-import importDefaultResult7 from "useHasEnhancedRoleColors";
-import importDefaultResult8 from "useHasEnhancedRoleColors";
-import importDefaultResult9 from "useHasEnhancedRoleColors";
-import importDefaultResult10 from "useHasEnhancedRoleColors";
-import importDefaultResult11 from "useHasEnhancedRoleColors";
+import importDefaultResult4 from "extractColorStringsFromServerColors";
+import importDefaultResult5 from "extractColorStringsFromServerColors";
+import importDefaultResult6 from "extractColorStringsFromServerColors";
+import importDefaultResult7 from "extractColorStringsFromServerColors";
+import importDefaultResult8 from "extractColorStringsFromServerColors";
+import importDefaultResult9 from "extractColorStringsFromServerColors";
+import importDefaultResult10 from "extractColorStringsFromServerColors";
+import importDefaultResult11 from "extractColorStringsFromServerColors";
 import importDefaultResult12 from "combineMarkupRules";
-import importDefaultResult13 from "useHasEnhancedRoleColors";
-import { t } from "../../../_runtime/03954_t.js";
+import importDefaultResult13 from "extractColorStringsFromServerColors";
+import { t } from "../../../_runtime/03983_t.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { getNickname } from "../../utils/NicknameUtils.tsx";
 import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
-import { getGameMediaRefURL } from "../games/getGameMediaRefURL.tsx";
 import { extractColorStringsFromServerColors } from "../premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx";
 import { useHasEnhancedRoleColors } from "../premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
 import { getSoundmojiASTFromString } from "../premium/sounds/soundmoji/utils/getSoundmojiASTFromString.tsx";
@@ -36,7 +34,7 @@ import { staticRouteToTranslation } from "StaticRouteRendering.tsx";
 import { TIMESTAMP_FORMATS } from "TimestampUtils.tsx";
 
 let c10;
-let closure_12;
+let c9;
 let unpackModuleId;
 const require = arg1;
 function parseLink(arg0) {
@@ -146,8 +144,8 @@ function hydrateUserMention(everyoneOrHere, channelId) {
     if (null != channel) {
       let nickname = getNickname.getNickname(channel.getGuildId(), channelId.channelId, str);
       if (nickname == null) {
-        nickname = tmp4(4094).getName(str);
-        const tmp4Result = tmp4(4094);
+        nickname = tmp4(4123).getName(str);
+        const tmp4Result = tmp4(4123);
       }
       str = nickname;
       const obj2 = getNickname;
@@ -189,65 +187,12 @@ function hydrateUserMention(everyoneOrHere, channelId) {
   obj[7] = items;
   return obj;
 }
-function hydrateGameMention(gameId, channelId) {
-  const mentionGames = channelId.mentionGames;
-  let value;
-  if (mentionGames != null) {
-    value = mentionGames.get(gameId);
-  }
-  detectableGame = detectableGame.getDetectableGame(gameId);
-  if (true !== channelId.returnMentionIds) {
-    if (null == value) {
-      if (null == detectableGame) {
-        let obj = { type: "text", content: null };
-        const intl2 = getSystemLocale.intl;
-        const _HermesInternal = HermesInternal;
-        obj[1] = "@" + intl2.string(getSystemLocale.t["11pdXZ"]);
-        return obj;
-      }
-    }
-  }
-  let name;
-  if (value != null) {
-    name = value.name;
-  }
-  if (name == null) {
-    let name1;
-    if (detectableGame != null) {
-      name1 = detectableGame.name;
-    }
-    name = name1;
-  }
-  if (name == null) {
-    const intl = getSystemLocale.intl;
-    name = intl.string(getSystemLocale.t["11pdXZ"]);
-  }
-  let icon;
-  if (value != null) {
-    icon = value.icon;
-  }
-  const tmp7Result = getGameMediaRefURL(gameId, icon, { size: 32 });
-  obj = { type: "gameMention", gameId, channelId: channelId.channelId, gameName: null, gameIcon: null, icon: null, displayName: null };
-  let name2;
-  if (value != null) {
-    name2 = value.name;
-  }
-  obj[3] = name2;
-  let icon1;
-  if (value != null) {
-    icon1 = value.icon;
-  }
-  obj[4] = icon1;
-  obj[5] = tmp7Result;
-  obj[6] = name;
-  return obj;
-}
-({ ID_REGEX: c10, MARKDOWN_SPOILER_REGEXP: unpackModuleId, MARKDOWN_STATIC_ROUTE_NAME_REGEXP: closure_12 } = ME);
-const re15 = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/;
-const re16 = /^$|\n *$/;
-const re17 = /^ *>>> ?/;
-const re18 = /^ *> ?/gm;
-const re19 = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
+({ ID_REGEX: c9, MARKDOWN_SPOILER_REGEXP: c10, MARKDOWN_STATIC_ROUTE_NAME_REGEXP: unpackModuleId } = ME);
+const re14 = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/;
+const re15 = /^$|\n *$/;
+const re16 = /^ *>>> ?/;
+const re17 = /^ *> ?/gm;
+const re18 = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
 let obj = { newline: require("t").defaultRules.newline, paragraph: require("t").defaultRules.paragraph, escape: null, blockQuote: null, link: null, autolink: null, mailto: null, tel: null, url: null, strong: null, em: null, u: null, br: null, text: null, inlineCode: null, emoticon: null, codeBlock: null, roleMention: null, mention: null, silentPrefix: null, channelMention: null, channelOrMessageUrl: null, mediaPostLink: null, attachmentLink: null, commandMention: null, timestampMentionInput: null, gameMention: null, emoji: null, soundboard: null, customEmoji: null, timestamp: null, s: null, spoiler: null, staticRouteLink: null, heading: null, list: null, subtext: null };
 obj = {};
 let merged = Object.assign(require("t").defaultRules.escape);
@@ -284,7 +229,7 @@ obj.parse = function parse(arg0, arg1, inQuote) {
   const BooleanResult = Boolean(regex6.exec(arg0[0]));
   let tmp2 = regex6;
   if (!BooleanResult) {
-    tmp2 = closure_18;
+    tmp2 = closure_17;
   }
   let flag = inQuote.inQuote;
   const replaced = str.replace(tmp2, "");
@@ -576,7 +521,7 @@ obj[19] = {
 obj[20] = require("getChannel").channelMention;
 obj[21] = require("getChannel").channelOrMessageUrl;
 obj[22] = require("getChannel").mediaPostLink;
-obj[23] = require("module_4698").attachmentLink;
+obj[23] = require("module_4728").attachmentLink;
 const obj10 = {
   order: require("textRegexp").order,
   requiredFirstCharacters: ["@"],
@@ -606,7 +551,7 @@ obj[24] = {
     } else {
       const items = [];
       HermesBuiltin.arraySpread(callback2(arg0[1].split(" ")).slice(1), 0);
-      const mapped = items.map((arg0) => "" + closure_13 + arg0);
+      const mapped = items.map((arg0) => "" + closure_12 + arg0);
       const _HermesInternal = HermesInternal;
       obj = { type: "commandMention", channelId: null, commandId: null, commandName: null, commandKey: null, content: null };
       obj[1] = returnMentionIds.channelId;
@@ -636,7 +581,7 @@ const obj11 = {
     } else {
       const items = [];
       HermesBuiltin.arraySpread(callback2(arg0[1].split(" ")).slice(1), 0);
-      const mapped = items.map((arg0) => "" + closure_13 + arg0);
+      const mapped = items.map((arg0) => "" + closure_12 + arg0);
       const _HermesInternal = HermesInternal;
       obj = { type: "commandMention", channelId: null, commandId: null, commandName: null, commandKey: null, content: null };
       obj[1] = returnMentionIds.channelId;
@@ -693,8 +638,8 @@ obj[26] = {
     }
     return match;
   },
-  parse(arg0, arg1, channelId) {
-    return hydrateGameMention(arg0[1], channelId);
+  parse(gameId) {
+    return { type: "gameMention", gameId: gameId[1] };
   }
 };
 const obj13 = {
@@ -707,8 +652,8 @@ const obj13 = {
     }
     return match;
   },
-  parse(arg0, arg1, channelId) {
-    return hydrateGameMention(arg0[1], channelId);
+  parse(gameId) {
+    return { type: "gameMention", gameId: gameId[1] };
   }
 };
 obj[27] = {
@@ -942,7 +887,7 @@ obj[33] = {
 };
 obj[34] = require("match");
 obj[35] = require("regExp");
-obj[36] = require("module_4713");
+obj[36] = require("module_4743");
 let items = [obj, ];
 const obj20 = {
   order: require("textRegexp").order,
@@ -1011,9 +956,9 @@ const obj20 = {
 };
 items[1] = require("match");
 const importDefaultResult3Result = require("combineMarkupRules")(items);
-const omitResult = require("useHasEnhancedRoleColors").omit(importDefaultResult3Result, ["inlineCode", "codeBlock", "br", "blockQuote", "subtext", "soundboard"]);
-const omitResult1 = require("useHasEnhancedRoleColors").omit(importDefaultResult3Result, ["inlineCode", "codeBlock", "br", "blockQuote", "autolink", "url", "attachmentLink", "mention", "roleMention", "channelMention", "channelOrMessageUrl", "mediaPostLink", "subtext", "soundboard", "gameMention"]);
-const omitResult2 = require("useHasEnhancedRoleColors").omit(importDefaultResult3Result, ["codeBlock", "br", "mention", "channel", "roleMention", "attachmentLink", "subtext", "soundboard", "gameMention"]);
+const omitResult = require("extractColorStringsFromServerColors").omit(importDefaultResult3Result, ["inlineCode", "codeBlock", "br", "blockQuote", "subtext", "soundboard"]);
+const omitResult1 = require("extractColorStringsFromServerColors").omit(importDefaultResult3Result, ["inlineCode", "codeBlock", "br", "blockQuote", "autolink", "url", "attachmentLink", "mention", "roleMention", "channelMention", "channelOrMessageUrl", "mediaPostLink", "subtext", "soundboard", "gameMention"]);
+const omitResult2 = require("extractColorStringsFromServerColors").omit(importDefaultResult3Result, ["codeBlock", "br", "mention", "channel", "roleMention", "attachmentLink", "subtext", "soundboard", "gameMention"]);
 let items1 = [
   importDefaultResult3Result,
   {
@@ -1053,10 +998,10 @@ const obj21 = {
     tmp = importDefaultResult3Result;
   }
 };
-const omitResult3 = require("useHasEnhancedRoleColors").omit(require("combineMarkupRules")(items1), ["blockQuote", "codeBlock", "br"]);
-const omitResult4 = require("useHasEnhancedRoleColors").omit(importDefaultResult3Result, ["codeBlock", "br", "blockQuote"]);
-const omitResult5 = require("useHasEnhancedRoleColors").omit(importDefaultResult3Result, ["codeBlock", "br", "attachmentLink", "mention", "roleMention", "channel", "paragraph", "newline", "subtext", "soundboard"]);
-const omitResult6 = require("useHasEnhancedRoleColors").omit(importDefaultResult3Result, ["codeBlock", "blockQuote", "br"]);
+const omitResult3 = require("extractColorStringsFromServerColors").omit(require("combineMarkupRules")(items1), ["blockQuote", "codeBlock", "br"]);
+const omitResult4 = require("extractColorStringsFromServerColors").omit(importDefaultResult3Result, ["codeBlock", "br", "blockQuote"]);
+const omitResult5 = require("extractColorStringsFromServerColors").omit(importDefaultResult3Result, ["codeBlock", "br", "attachmentLink", "mention", "roleMention", "channel", "paragraph", "newline", "subtext", "soundboard"]);
+const omitResult6 = require("extractColorStringsFromServerColors").omit(importDefaultResult3Result, ["codeBlock", "blockQuote", "br"]);
 let items2 = [
   {
     highlightWord: {
@@ -1254,18 +1199,17 @@ const obj22 = {
     return items;
   }
 };
-const omitResult7 = require("useHasEnhancedRoleColors").omit(importDefaultResult3Result, ["codeBlock", "br", "inlineCode"]);
-items2[1] = require("useHasEnhancedRoleColors").omit(importDefaultResult3Result, ["url"]);
+const omitResult7 = require("extractColorStringsFromServerColors").omit(importDefaultResult3Result, ["codeBlock", "br", "inlineCode"]);
+items2[1] = require("extractColorStringsFromServerColors").omit(importDefaultResult3Result, ["url"]);
 const obj23 = { RULES: importDefaultResult3Result, CHANNEL_TOPIC_RULES: omitResult, VOICE_CHANNEL_STATUS_RULES: omitResult1, EMBED_TITLE_RULES: omitResult2, INLINE_REPLY_RULES: omitResult3, GUILD_VERIFICATION_FORM_RULES: omitResult4, GUILD_EVENT_RULES: omitResult6, PROFILE_BIO_RULES: omitResult5, AUTO_MODERATION_SYSTEM_MESSAGE_RULES: importDefaultResult12(items2), NATIVE_SEARCH_RESULT_LINK_RULES: omitResult7 };
 let result = require("ensureGuildLoaded").fileFinishedImporting("modules/markup/MarkupRules.tsx");
 
 export default obj23;
 export { hydrateRoleMention };
 export { hydrateUserMention };
-export { hydrateGameMention };
 export const hydrateCommandMention = function hydrateCommandMention(commandName, commandId, channelId) {
   const items = [...callback2(commandName.split(" ")).slice(1)];
-  const mapped = items.map((arg0) => "" + closure_13 + arg0);
+  const mapped = items.map((arg0) => "" + closure_12 + arg0);
   let obj = { type: "commandMention", channelId: channelId.channelId, commandId, commandName, commandKey: "" + commandId + mapped.join(""), content: null };
   obj = { type: "text", content: "" + commandName };
   const items1 = [obj];

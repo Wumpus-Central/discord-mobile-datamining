@@ -38,7 +38,7 @@ createToggle = {
           obj[1] = Themes.colors.ICON_FEEDBACK_WARNING;
           const intl = tmp(1236).intl;
           obj[3] = intl.string(messagesProxy.wucWfE);
-          tmp6 = jsx(tmp(7744).WarningIcon, { size: "sm", color: null, accessible: true, accessibilityLabel: null });
+          tmp6 = jsx(tmp(7885).WarningIcon, { size: "sm", color: null, accessible: true, accessibilityLabel: null });
         }
       }
     }

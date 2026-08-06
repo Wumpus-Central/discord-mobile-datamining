@@ -1,7 +1,7 @@
 // discord_app/design/void/CloseIcon/native/CloseIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { inlineStyles } from "../../../../../_runtime/08409_inlineStyles.js";
+import { inlineStyles } from "../../../../../_runtime/07758_inlineStyles.js";
 
 const require = arg1;
 const result = require("inlineStyles").fileFinishedImporting("design/void/CloseIcon/native/CloseIcon.tsx");

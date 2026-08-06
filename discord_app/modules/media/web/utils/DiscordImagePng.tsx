@@ -1,6 +1,6 @@
 // discord_app/modules/media/web/utils/DiscordImagePng.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
-import { decodeImage } from "../../../../../_runtime/01904_decodeImage.js";
+import { decodeImage } from "../../../../../_runtime/01933_decodeImage.js";
 
 const require = arg1;
 let DiscordImagePng;

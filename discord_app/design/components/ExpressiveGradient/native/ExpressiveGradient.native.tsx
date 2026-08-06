@@ -3,7 +3,7 @@ import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import { n } from "../../../../../_runtime/00689_n.js";
-import { LinearGradient } from "../../../../../_runtime/04676_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
 import { map } from "../../../tokens/native/useToken.tsx";
 
 let c3;

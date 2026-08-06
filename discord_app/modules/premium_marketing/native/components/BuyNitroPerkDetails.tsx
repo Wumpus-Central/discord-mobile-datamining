@@ -44,7 +44,7 @@ let closure_8 = require("noop").memo((perk) => {
       const obj2 = { planSelection: null, item: null, centered: true };
       obj2[0] = buyNitroPlanSelection;
       obj2[1] = buyNitroPlanSelection.selection.item;
-      tmp6Result = tmp6(tmp9(7629), obj2);
+      tmp6Result = tmp6(tmp9(7657), obj2);
     }
     const items = [tmp6Result, ];
     const obj3 = { planSelection: null, location: null, sourceAnalyticsLocations: null, applicationId: null, onHostSheetClose: null, onPaymentSuccess: null, onPaymentDismiss: null };
@@ -59,8 +59,8 @@ let closure_8 = require("noop").memo((perk) => {
     obj3[6] = onPaymentDismiss;
     items[1] = callback(BuyNitroPurchaseButton, obj3);
     obj1[1] = items;
-    obj[3] = closure_5(tmp2(4663).Stack, obj1);
-    tmp6Result = tmp6(tmp2(7626).PromoSheet, obj);
+    obj[3] = closure_5(tmp2(4693).Stack, obj1);
+    tmp6Result = tmp6(tmp2(7654).PromoSheet, obj);
     const tmp8 = closure_5;
     const tmp9Result = BuyNitroPurchaseButton;
   }

@@ -1,5 +1,5 @@
 // discord_app/modules/icymi/native/util/openDetailsActionSheet.tsx
-import { asyncRequireImpl } from "../../../../../_runtime/01959_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../../_runtime/01988_asyncRequireImpl.js";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import { ICYMIActionCreators } from "../../ICYMIActionCreators.tsx";
 const result = require("ItemDetailsActionSheet").fileFinishedImporting("modules/icymi/native/util/openDetailsActionSheet.tsx");
@@ -15,5 +15,5 @@ export const openDetailsActionSheet = function openDetailsActionSheet(arg0) {
   const obj = ICYMIActionCreators;
   ICYMIActionCreators.feedItemActioned({ itemId: id, itemType: type, actionParameters: { actionGestureType: "press", actionTargetElement: "overflow_menu_button", actionIntentType: "open", actionDestinationType: null } });
   const obj2 = ICYMIActionCreators;
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(15428, dependencyMap.paths), "ItemDetailsActionSheet", { guildId, channelId, id });
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(15466, dependencyMap.paths), "ItemDetailsActionSheet", { guildId, channelId, id });
 };

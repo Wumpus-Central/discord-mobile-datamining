@@ -2,6 +2,7 @@
 import { isUndefinedOrNull } from "../../../_runtime/00659_isUndefinedOrNull.js";
 import { PersonalWidgetSectionType } from "../../../discord_common/js/shared/shared-constants/PersonalWidgetSectionType.tsx";
 import { WidgetType } from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
 function isFieldEmpty(title) {
   let tmp = "" === title.title.trim();
@@ -26,7 +27,7 @@ function isSectionEmpty(type) {
       tmp4 = null == type.image;
     }
     return tmp4;
-  } else if (tmp(6984).PersonalWidgetSectionType.FIELDS === type) {
+  } else if (tmp(7011).PersonalWidgetSectionType.FIELDS === type) {
     const fields = type.fields;
     return fields.every(isFieldEmpty);
   }
@@ -160,12 +161,8 @@ prototype["toSubmission"] = function toSubmission() {
   return obj;
 };
 prototype["isDiscardable"] = function isDiscardable() {
-  let everyResult = "" === this.header.trim();
-  if (everyResult) {
-    const sections = this.sections;
-    everyResult = sections.every(isSectionEmpty);
-  }
-  return everyResult;
+  const sections = this.sections;
+  return sections.every(isSectionEmpty);
 };
 prototype["isValid"] = function isValid() {
   const sections = this.sections;
@@ -219,7 +216,7 @@ prototype["isEqual"] = function isEqual(header) {
             sum = sum + 1;
             num2 = sum;
             flag = true;
-          } else if (tmp16(6984).PersonalWidgetSectionType.FIELDS !== type) {
+          } else if (tmp16(7011).PersonalWidgetSectionType.FIELDS !== type) {
             flag = false;
           }
           tmp16 = require;
@@ -271,7 +268,7 @@ prototype["getProfileAnalyticsOptions"] = function getProfileAnalyticsOptions() 
 prototype["getProfileEditAnalyticsOptions"] = function getProfileEditAnalyticsOptions() {
   return { widgetEdited: this.type };
 };
-const result = require("isUndefinedOrNull").fileFinishedImporting("modules/user_profile/UserProfilePersonalWidget.tsx");
+const result = require("isDiscordFrontendDevelopment").fileFinishedImporting("modules/user_profile/UserProfilePersonalWidget.tsx");
 
 export const createDefaultCoverSection = function createDefaultCoverSection() {
   return { type: PersonalWidgetSectionType.PersonalWidgetSectionType.COVER, title: "", subtitle: "" };
@@ -291,14 +288,16 @@ export const createDefaultPersonalWidget = function createDefaultPersonalWidget(
   let header;
   let id;
   let sections;
-  let obj = { sections: null };
+  let obj = { header: null, sections: null };
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.QxKl9A);
   obj = { type: PersonalWidgetSectionType.PersonalWidgetSectionType.COVER, title: "", subtitle: "" };
   const items = [obj, ];
   obj = { type: PersonalWidgetSectionType.PersonalWidgetSectionType.FIELDS, fields: items1 };
   let closure_3 = tmp4 + 1;
   items1 = [{ key: `field-${+closure_3}`, title: "", description: "" }];
   items[1] = obj;
-  obj[0] = items;
+  obj[1] = items;
   if (typeof UserProfilePersonalWidget !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -324,7 +323,7 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
       let fields;
       let title;
       type = type.type;
-      if (callback(6984).PersonalWidgetSectionType.COVER === type) {
+      if (callback(7011).PersonalWidgetSectionType.COVER === type) {
         let obj = { type: null, title: null, subtitle: null, image: null };
         ({ type: obj2[0], title } = type);
         if (title == null) {
@@ -347,7 +346,7 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
         }
         obj[3] = tmp5;
         return obj;
-      } else if (tmp(6984).PersonalWidgetSectionType.FIELDS === type) {
+      } else if (tmp(7011).PersonalWidgetSectionType.FIELDS === type) {
         obj = { type: null, fields: null };
         ({ type: obj[0], fields } = type);
         obj[1] = fields.map(closure_6);
@@ -357,7 +356,7 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
     });
     items = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
   }
-  if (!items.some((type) => type.type === callback(6984).PersonalWidgetSectionType.FIELDS)) {
+  if (!items.some((type) => type.type === callback(7011).PersonalWidgetSectionType.FIELDS)) {
     let obj = { type: null, fields: null };
     obj[0] = PersonalWidgetSectionType.PersonalWidgetSectionType.FIELDS;
     obj[1] = [];

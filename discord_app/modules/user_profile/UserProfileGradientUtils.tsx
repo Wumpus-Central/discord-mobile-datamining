@@ -73,7 +73,7 @@ export const calculateOverlayedColor = function calculateOverlayedColor(secondar
   if (null == overlay) {
     return 0;
   } else {
-    const parseStringResult = alpha(4100).parseString(overlay);
+    const parseStringResult = alpha(4129).parseString(overlay);
     if (null == parseStringResult) {
       return 0;
     } else {
@@ -87,7 +87,7 @@ export const calculateOverlayedColor = function calculateOverlayedColor(secondar
       const _HermesInternal = HermesInternal;
       return tmp(688).rgb2int("rgba(" + tmp8 + ", " + tmp9 + ", " + tmp10 + ")");
     }
-    const obj2 = alpha(4100);
+    const obj2 = alpha(4129);
   }
   int2rgbArrayResult = items1(688).int2rgbArray(secondaryColor);
 };

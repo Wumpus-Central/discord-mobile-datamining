@@ -6,7 +6,7 @@ import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUti
 import { TrackedHTTPUtils } from "../utils/TrackedHTTPUtils.tsx";
 
 const require = arg1;
-const result = require("module_5079").fileFinishedImporting("actions/HubActionCreators.tsx");
+const result = require("module_5109").fileFinishedImporting("actions/HubActionCreators.tsx");
 
 export default {
   signup(email, school) {

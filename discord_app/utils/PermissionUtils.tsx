@@ -100,13 +100,13 @@ function applyOverwrites(id, member, closure_23, overwrites) {
       const tmp19Result2 = tmp19(506);
     }
     const obj10 = GuildMemberFlags;
-    const tmp28Result = tmp28(3872);
+    const tmp28Result = tmp28(3901);
     found1 = found;
     if (tmp34) {
       found1 = tmp19(506).filter(found, closure_28);
       const tmp19Result3 = tmp19(506);
     }
-    tmp34 = tmp28(3872).isMemberCommunicationDisabled(member) && !hasItem;
+    tmp34 = tmp28(3901).isMemberCommunicationDisabled(member) && !hasItem;
   }
   return found1;
 }
@@ -496,7 +496,7 @@ export const areChannelsLocked = function areChannelsLocked(channel, channel2) {
           if (null == obj[guild_id]) {
             obj = { id: null, type: null, allow: null, deny: null };
             obj[0] = guild_id;
-            obj[1] = obj(1906).PermissionOverwriteType.ROLE;
+            obj[1] = obj(1935).PermissionOverwriteType.ROLE;
             obj[2] = closure_23;
             obj[3] = closure_23;
             obj[guild_id] = obj;
@@ -504,7 +504,7 @@ export const areChannelsLocked = function areChannelsLocked(channel, channel2) {
           if (null == obj[guild_id]) {
             const obj1 = { id: null, type: null, allow: null, deny: null };
             obj1[0] = guild_id;
-            obj1[1] = obj(1906).PermissionOverwriteType.ROLE;
+            obj1[1] = obj(1935).PermissionOverwriteType.ROLE;
             obj1[2] = closure_23;
             obj1[3] = closure_23;
             obj[guild_id] = obj1;
