@@ -3,8 +3,11 @@ import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
+import "noop";
+import { jsx } from "jsxProd";
+import { __INTERNAL_VIEW_CONFIG } from "metro/07804___INTERNAL_VIEW_CONFIG.js";
 
-const FeConvolveMatrix = arg1;
+const Circle = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,12 +27,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeConvolveMatrix {
+class Circle {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, FeConvolveMatrix);
+    tmp = _isNativeReflectConstruct(this, Circle);
     tmp2 = __esModule;
-    obj = __esModule(FeConvolveMatrix);
+    obj = __esModule(Circle);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -44,19 +47,39 @@ class FeConvolveMatrix {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(FeConvolveMatrix, require("_isNativeReflectConstruct"));
-let obj = {
-  key: "render",
-  value: function render() {
-    const result = FeConvolveMatrix(7774).warnUnimplementedFilter();
-    return null;
+require("_inherits")(Circle, require("_isNativeReflectConstruct"));
+const items = [
+  {
+    key: "render",
+    value: function render() {
+      let cx;
+      let cy;
+      let r;
+      const self = this;
+      const props = this.props;
+      let obj = {};
+      ({ cx, cy, r } = props);
+      const merged = Object.assign(self(7790).extract(this, props));
+      obj.cx = cx;
+      obj.cy = cy;
+      obj.r = r;
+      obj = {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      };
+      const obj2 = self(7790);
+      const merged1 = Object.assign(obj);
+      return jsx(__INTERNAL_VIEW_CONFIG, {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      });
+    }
   }
-};
-const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeConvolveMatrix, items);
-importDefaultResultResult.displayName = "FeConvolveMatrix";
-obj = {};
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = obj;
+];
+const importDefaultResultResult = importDefaultResult(Circle, items);
+importDefaultResultResult.displayName = "Circle";
+importDefaultResultResult.defaultProps = { cx: 0, cy: 0, r: 0 };
 
 export default importDefaultResultResult;

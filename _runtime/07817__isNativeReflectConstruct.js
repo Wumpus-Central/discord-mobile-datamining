@@ -1,11 +1,10 @@
 // _runtime/07817__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
-import importDefaultResult from "_createClass";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult1 from "_inherits";
+import importDefaultResult from "_createClass";
 
-let FeFuncA = arg1;
+const FeComponentTransfer = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,142 +24,39 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeComponentTransferFunction {
+class FeComponentTransfer {
   constructor() {
     self = this;
-    items = [...arguments];
-    tmp = _isNativeReflectConstruct(this, FeFuncA);
-    items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(FeFuncA);
-    tmp3 = _isNativeReflectConstruct;
+    tmp = _isNativeReflectConstruct(this, FeComponentTransfer);
+    tmp2 = __esModule;
+    obj = __esModule(FeComponentTransfer);
+    tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.channel = "UNKNOWN";
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-FeFuncA = FeComponentTransferFunction;
-importDefaultResult1(FeComponentTransferFunction, require("_isNativeReflectConstruct"));
-let items = [
-  {
-    key: "render",
-    value: function render() {
-      const result = FeFuncA(7774).warnUnimplementedFilter();
-      return null;
-    }
+require("_inherits")(FeComponentTransfer, require("_isNativeReflectConstruct"));
+let obj = {
+  key: "render",
+  value: function render() {
+    const result = FeComponentTransfer(7791).warnUnimplementedFilter();
+    return null;
   }
-];
-const importDefaultResultResult = importDefaultResult(FeComponentTransferFunction, items);
-importDefaultResultResult.defaultProps = { type: "identity", tableValues: [], slope: 1, intercept: 0, amplitude: 1, exponent: 1, offset: 0 };
-class FeFuncR {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = _isNativeReflectConstruct(this, FeFuncA);
-    items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(FeFuncA);
-    tmp3 = _isNativeReflectConstruct;
-    if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.channel = "R";
-    return tmp3Result;
-  }
-}
-FeFuncA = FeFuncR;
-importDefaultResult1(FeFuncR, importDefaultResultResult);
-const importDefaultResultResult1 = importDefaultResult(FeFuncR);
-importDefaultResultResult1.displayName = "FeFuncR";
-class FeFuncG {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = _isNativeReflectConstruct(this, FeFuncA);
-    items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(FeFuncA);
-    tmp3 = _isNativeReflectConstruct;
-    if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.channel = "G";
-    return tmp3Result;
-  }
-}
-FeFuncA = FeFuncG;
-importDefaultResult1(FeFuncG, importDefaultResultResult);
-const importDefaultResultResult2 = importDefaultResult(FeFuncG);
-importDefaultResultResult2.displayName = "FeFuncG";
-class FeFuncB {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = _isNativeReflectConstruct(this, FeFuncA);
-    items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(FeFuncA);
-    tmp3 = _isNativeReflectConstruct;
-    if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.channel = "B";
-    return tmp3Result;
-  }
-}
-FeFuncA = FeFuncB;
-importDefaultResult1(FeFuncB, importDefaultResultResult);
-const importDefaultResultResult3 = importDefaultResult(FeFuncB);
-importDefaultResultResult3.displayName = "FeFuncB";
-class FeFuncA {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = _isNativeReflectConstruct(this, FeFuncA);
-    items1 = [...items];
-    tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(FeFuncA);
-    tmp3 = _isNativeReflectConstruct;
-    if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.channel = "A";
-    return tmp3Result;
-  }
-}
-importDefaultResult1(FeFuncA, importDefaultResultResult);
-const importDefaultResultResult4 = importDefaultResult(FeFuncA);
-importDefaultResultResult4.displayName = "FeFuncA";
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeComponentTransfer, items);
+importDefaultResultResult.displayName = "FeComponentTransfer";
+obj = {};
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;
-export const FeFuncR = importDefaultResultResult1;
-export const FeFuncG = importDefaultResultResult2;
-export const FeFuncB = importDefaultResultResult3;
-export const FeFuncA = importDefaultResultResult4;

@@ -3,8 +3,12 @@ import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
+import noop from "noop";
+import jsxProd from "jsxProd";
 
-const FeTurbulence = arg1;
+let closure_6;
+let error;
+const FeDropShadow = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,12 +28,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeTurbulence {
+({ jsx: closure_6, jsxs: error } = jsxProd);
+class FeDropShadow {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, FeTurbulence);
+    tmp = _isNativeReflectConstruct(this, FeDropShadow);
     tmp2 = __esModule;
-    obj = __esModule(FeTurbulence);
+    obj = __esModule(FeDropShadow);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -44,17 +49,37 @@ class FeTurbulence {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(FeTurbulence, require("_isNativeReflectConstruct"));
+require("_inherits")(FeDropShadow, require("_isNativeReflectConstruct"));
 let obj = {
   key: "render",
   value: function render() {
-    const result = FeTurbulence(7774).warnUnimplementedFilter();
-    return null;
+    let dx;
+    let dy;
+    let result;
+    const self = this;
+    const props = this.props;
+    const _in = props.in;
+    let str = "SourceGraphic";
+    if (undefined !== _in) {
+      str = _in;
+    }
+    let obj = { children: null };
+    ({ dx, dy, result } = props);
+    const items = [callback3(FeDropShadow(7825), { in: str, stdDeviation: props.stdDeviation }), callback3(FeDropShadow(7827), { dx, dy, result: "offsetblur" }), , , ];
+    obj = { floodColor: self.props.floodColor, floodOpacity: self.props.floodOpacity };
+    items[2] = callback3(FeDropShadow(7829), obj);
+    items[3] = callback3(FeDropShadow(7818), { in2: "offsetblur", operator: "in" });
+    obj = { result, children: null };
+    const items1 = [callback3(FeDropShadow(7833), {}), callback3(FeDropShadow(7833), { in: str })];
+    obj[1] = items1;
+    items[4] = callback4(FeDropShadow(7831), obj);
+    obj[0] = items;
+    return callback4(React.Fragment, obj);
   }
 };
-const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeTurbulence, items);
-importDefaultResultResult.displayName = "FeTurbulence";
+let items = [obj];
+const importDefaultResultResult = importDefaultResult(FeDropShadow, items);
+importDefaultResultResult.displayName = "FeDropShadow";
 obj = {};
 const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = obj;

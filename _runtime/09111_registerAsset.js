@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/voice_panel/native/images", width: 13, height: 12, scales: [1, 2, 3, 4], hash: "815e22c11ceae8ad126964a943379a27", name: "badconnection", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons/voice_calls", width: 24, height: 24, scales: [2, 3], hash: "6ac82e47fbd4ea8331f749e0f8f68b4b", name: "voice_bar_bluetooth", type: "png" });

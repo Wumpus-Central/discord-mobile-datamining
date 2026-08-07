@@ -477,7 +477,7 @@ export const instrumentAsyncIterableStream = function instrumentAsyncIterableStr
 export const instrumentMessageStream = function instrumentMessageStream(applyResult, arg1, flag) {
   let closure_0 = arg1;
   let closure_1 = flag;
-  let closure_2 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "__closure", cacheCreationInputTokens: "names", cacheReadInputTokens: "PX_16", toolCalls: [], activeToolBlocks: {} };
+  let closure_2 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "sa", cacheCreationInputTokens: "flex", cacheReadInputTokens: "isArray", toolCalls: [], activeToolBlocks: {} };
   applyResult.on("streamEvent", (arg0) => {
     outer1_5(arg0, closure_2, closure_1, closure_0);
   });

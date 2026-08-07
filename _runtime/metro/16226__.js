@@ -1,36 +1,29 @@
 // _runtime/metro/16226__.js
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "hi",
+  locale: "cs",
   pluralRuleFunction(arg0, arg1) {
-    if (arg1) {
-      let str3 = "one";
+    let tmp2;
+    let tmp3;
+    const parts = String(arg0).split(".");
+    [tmp2, tmp3] = parts;
+    let str2 = "other";
+    if (!arg1) {
       if (1 != arg0) {
-        let str5 = "two";
-        if (2 != arg0) {
-          str5 = "two";
-          if (3 != arg0) {
-            let str6 = "few";
-            if (4 != arg0) {
-              let str7 = "other";
-              if (6 == arg0) {
-                str7 = "many";
-              }
-              str6 = str7;
-            }
-            str5 = str6;
+        if (tmp2 >= 2) {
+          if (tmp2 <= 4) {
+            let str4 = "few";
           }
+          let str3 = str4;
         }
-        str3 = str5;
-      }
-      let str2 = str3;
-    } else {
-      str2 = "other";
-      if (arg0 >= 0) {
-        str2 = "other";
-        if (arg0 <= 1) {
-          str2 = "one";
+        let str5 = "many";
+        if (!tmp3) {
+          str5 = "other";
         }
+        str4 = str5;
+      } else {
+        str3 = "one";
       }
+      str2 = str3;
     }
     return str2;
   }

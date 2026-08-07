@@ -1,12 +1,9 @@
 // _runtime/07833__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
+import FeMergeNode from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
-import "noop";
-import { jsx } from "jsxProd";
 
-const LinearGradient = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,51 +23,44 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class LinearGradient {
+class FeMergeNode {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, LinearGradient);
+    items = [...arguments];
+    apply = undefined;
+    tmp = FeMergeNode(this, apply);
+    items1 = [...items];
     tmp2 = __esModule;
-    obj = __esModule(LinearGradient);
+    obj = __esModule(apply);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    apply = tmp3Result;
+    tmp3Result.setNativeProps = () => {
+      const parent = _undefined.props.parent;
+      if (parent) {
+        parent.forceUpdate();
+      }
+    };
+    return tmp3Result;
   }
 }
-require("_inherits")(LinearGradient, require("_isNativeReflectConstruct"));
-const items = [
+require("_inherits")(FeMergeNode, require("_isNativeReflectConstruct"));
+let items = [
   {
     key: "render",
     value: function render() {
-      const self = this;
-      const props = this.props;
-      let obj = { x1: props.x1, y1: props.y1, x2: props.x2, y2: props.y2 };
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const merged = Object.assign(obj);
-      const merged1 = Object.assign(self(7835)(props, this));
-      return jsx(self(7834), {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      });
+      return null;
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(LinearGradient, items);
-importDefaultResultResult.displayName = "LinearGradient";
-importDefaultResultResult.defaultProps = { x1: "0%", y1: "0%", x2: "100%", y2: "0%" };
+const importDefaultResultResult = importDefaultResult(FeMergeNode, items);
+importDefaultResultResult.displayName = "FeMergeNode";
 
 export default importDefaultResultResult;

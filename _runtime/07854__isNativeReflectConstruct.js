@@ -6,7 +6,7 @@ import importDefaultResult from "_createClass";
 import "noop";
 import { jsx } from "jsxProd";
 
-const Symbol = importDefault;
+const Marker = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,12 +26,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Symbol {
+class Marker {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, Symbol);
+    tmp = _isNativeReflectConstruct(this, Marker);
     tmp2 = __esModule;
-    obj = __esModule(Symbol);
+    obj = __esModule(Marker);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -46,22 +46,28 @@ class Symbol {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(Symbol, require("_isNativeReflectConstruct"));
+require("_inherits")(Marker, require("_isNativeReflectConstruct"));
 const items = [
   {
     key: "render",
     value: function render() {
+      let children;
+      let markerHeight;
+      let markerWidth;
+      let preserveAspectRatio;
+      let viewBox;
       const self = this;
       const props = this.props;
-      let obj = { name: props.id };
+      let obj = { name: props.id, refX: props.refX, refY: props.refY, markerUnits: props.markerUnits, orient: String(props.orient), markerWidth, markerHeight };
+      ({ viewBox, preserveAspectRatio, markerWidth, markerHeight, children } = props);
       obj = {
         ref(arg0) {
           return self.refMethod(arg0);
         }
       };
       const merged = Object.assign(obj);
-      const merged1 = Object.assign(self(7771)(props));
-      obj.children = props.children;
+      const merged1 = Object.assign(self(7788)({ viewBox, preserveAspectRatio }));
+      obj.children = children;
       return jsx(self(7855), {
         ref(arg0) {
           return self.refMethod(arg0);
@@ -70,7 +76,8 @@ const items = [
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Symbol, items);
-importDefaultResultResult.displayName = "Symbol";
+const importDefaultResultResult = importDefaultResult(Marker, items);
+importDefaultResultResult.displayName = "Marker";
+importDefaultResultResult.defaultProps = { refX: 0, refY: 0, orient: "0", markerWidth: 3, markerHeight: 3, markerUnits: "strokeWidth" };
 
 export default importDefaultResultResult;

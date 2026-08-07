@@ -5,9 +5,8 @@ import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
 import "noop";
 import { jsx } from "jsxProd";
-import { __INTERNAL_VIEW_CONFIG } from "metro/07843___INTERNAL_VIEW_CONFIG.js";
 
-const Path = arg1;
+const Filter = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +26,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Path {
+class Filter {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, Path);
+    tmp = _isNativeReflectConstruct(this, Filter);
     tmp2 = __esModule;
-    obj = __esModule(Path);
+    obj = __esModule(Filter);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -47,24 +46,22 @@ class Path {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(Path, require("_isNativeReflectConstruct"));
+require("_inherits")(Filter, require("_isNativeReflectConstruct"));
 const items = [
   {
     key: "render",
     value: function render() {
       const self = this;
       const props = this.props;
-      let obj = {};
-      const merged = Object.assign(self(7773).extract(this, props));
-      obj.d = props.d;
+      let obj = { name: props.id, x: props.x, y: props.y, width: props.width, height: props.height, filterUnits: props.filterUnits, primitiveUnits: props.primitiveUnits };
       obj = {
         ref(arg0) {
           return self.refMethod(arg0);
         }
       };
-      const obj2 = self(7773);
-      const merged1 = Object.assign(obj);
-      return jsx(__INTERNAL_VIEW_CONFIG, {
+      const merged = Object.assign(obj);
+      obj.children = this.props.children;
+      return jsx(self(7843), {
         ref(arg0) {
           return self.refMethod(arg0);
         }
@@ -72,7 +69,8 @@ const items = [
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Path, items);
-importDefaultResultResult.displayName = "Path";
+const importDefaultResultResult = importDefaultResult(Filter, items);
+importDefaultResultResult.displayName = "Filter";
+importDefaultResultResult.defaultProps = { x: "-10%", y: "-10%", width: "120%", height: "120%", filterUnits: "objectBoundingBox", primitiveUnits: "userSpaceOnUse" };
 
 export default importDefaultResultResult;

@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/guild_settings/community_settings", width: 88, height: 80, scales: [2, 3], hash: "0b8a6fa235bbde823695fe5cdeccf7e4", name: "channel_setup_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 250, height: 200, scales: [2, 3], hash: "a58504e7154ded917c4b5c349c82a3a7", name: "img_bans_empty_dark", type: "png" });

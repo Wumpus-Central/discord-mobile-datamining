@@ -1,5 +1,2 @@
 // _runtime/metro/13483__.js
-import 13484__ from "13484__.js";
-
-
-export default require("module_13552").Object.assign;
+arg5.calendars = ["buddhist", "chinese", "coptic", "dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic", "islamic-civil", "islamic-rgsa", "islamic-tbla", "islamic-umalqura", "islamicc", "iso8601", "japanese", "persian", "roc"];

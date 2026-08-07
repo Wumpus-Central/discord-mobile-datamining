@@ -56,13 +56,11 @@ if (self2) {
       if (typeof error !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      let closure_0 = { string: { unit: "\u0E15\u0E31\u0E27\u0E2D\u0E31\u0E01\u0E29\u0E23", verb: "\u0E04\u0E27\u0E23\u0E21\u0E35" }, file: { unit: "\u0E44\u0E1A\u0E15\u0E4C", verb: "\u0E04\u0E27\u0E23\u0E21\u0E35" }, array: { unit: "\u0E23\u0E32\u0E22\u0E01\u0E32\u0E23", verb: "\u0E04\u0E27\u0E23\u0E21\u0E35" }, set: { unit: "\u0E23\u0E32\u0E22\u0E01\u0E32\u0E23", verb: "\u0E04\u0E27\u0E23\u0E21\u0E35" } };
-      let closure_1 = { regex: "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E17\u0E35\u0E48\u0E1B\u0E49\u0E2D\u0E19", email: "\u0E17\u0E35\u0E48\u0E2D\u0E22\u0E39\u0E48\u0E2D\u0E35\u0E40\u0E21\u0E25", url: "URL", emoji: "\u0E2D\u0E34\u0E42\u0E21\u0E08\u0E34", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "\u0E27\u0E31\u0E19\u0E17\u0E35\u0E48\u0E40\u0E27\u0E25\u0E32\u0E41\u0E1A\u0E1A ISO", date: "\u0E27\u0E31\u0E19\u0E17\u0E35\u0E48\u0E41\u0E1A\u0E1A ISO", time: "\u0E40\u0E27\u0E25\u0E32\u0E41\u0E1A\u0E1A ISO", duration: "\u0E0A\u0E48\u0E27\u0E07\u0E40\u0E27\u0E25\u0E32\u0E41\u0E1A\u0E1A ISO", ipv4: "\u0E17\u0E35\u0E48\u0E2D\u0E22\u0E39\u0E48 IPv4", ipv6: "\u0E17\u0E35\u0E48\u0E2D\u0E22\u0E39\u0E48 IPv6", cidrv4: "\u0E0A\u0E48\u0E27\u0E07 IP \u0E41\u0E1A\u0E1A IPv4", cidrv6: "\u0E0A\u0E48\u0E27\u0E07 IP \u0E41\u0E1A\u0E1A IPv6", base64: "\u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E41\u0E1A\u0E1A Base64", base64url: "\u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E41\u0E1A\u0E1A Base64 \u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A URL", json_string: "\u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E41\u0E1A\u0E1A JSON", e164: "\u0E40\u0E1A\u0E2D\u0E23\u0E4C\u0E42\u0E17\u0E23\u0E28\u0E31\u0E1E\u0E17\u0E4C\u0E23\u0E30\u0E2B\u0E27\u0E48\u0E32\u0E07\u0E1B\u0E23\u0E30\u0E40\u0E17\u0E28 (E.164)", jwt: "\u0E42\u0E17\u0E40\u0E04\u0E19 JWT", template_literal: "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E17\u0E35\u0E48\u0E1B\u0E49\u0E2D\u0E19" };
-      let closure_2 = { nan: "NaN", number: "\u0E15\u0E31\u0E27\u0E40\u0E25\u0E02", array: "\u0E2D\u0E32\u0E23\u0E4C\u0E40\u0E23\u0E22\u0E4C (Array)", null: "\u0E44\u0E21\u0E48\u0E21\u0E35\u0E04\u0E48\u0E32 (null)" };
+      let closure_0 = { string: { unit: "\u178F\u17BD\u17A2\u1780\u17D2\u179F\u179A", verb: "\u1782\u17BD\u179A\u1798\u17B6\u1793" }, file: { unit: "\u1794\u17C3", verb: "\u1782\u17BD\u179A\u1798\u17B6\u1793" }, array: { unit: "\u1792\u17B6\u178F\u17BB", verb: "\u1782\u17BD\u179A\u1798\u17B6\u1793" }, set: { unit: "\u1792\u17B6\u178F\u17BB", verb: "\u1782\u17BD\u179A\u1798\u17B6\u1793" } };
+      let closure_1 = { regex: "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1794\u1789\u17D2\u1785\u17BC\u179B", email: "\u17A2\u17B6\u179F\u1799\u178A\u17D2\u178B\u17B6\u1793\u17A2\u17CA\u17B8\u1798\u17C2\u179B", url: "URL", emoji: "\u179F\u1789\u17D2\u1789\u17B6\u17A2\u17B6\u179A\u1798\u17D2\u1798\u178E\u17CD", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "\u1780\u17B6\u179B\u1794\u179A\u17B7\u1785\u17D2\u1786\u17C1\u1791 \u1793\u17B7\u1784\u1798\u17C9\u17C4\u1784 ISO", date: "\u1780\u17B6\u179B\u1794\u179A\u17B7\u1785\u17D2\u1786\u17C1\u1791 ISO", time: "\u1798\u17C9\u17C4\u1784 ISO", duration: "\u179A\u1799\u17C8\u1796\u17C1\u179B ISO", ipv4: "\u17A2\u17B6\u179F\u1799\u178A\u17D2\u178B\u17B6\u1793 IPv4", ipv6: "\u17A2\u17B6\u179F\u1799\u178A\u17D2\u178B\u17B6\u1793 IPv6", cidrv4: "\u178A\u17C2\u1793\u17A2\u17B6\u179F\u1799\u178A\u17D2\u178B\u17B6\u1793 IPv4", cidrv6: "\u178A\u17C2\u1793\u17A2\u17B6\u179F\u1799\u178A\u17D2\u178B\u17B6\u1793 IPv6", base64: "\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A\u17A2\u17CA\u17B7\u1780\u17BC\u178A base64", base64url: "\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A\u17A2\u17CA\u17B7\u1780\u17BC\u178A base64url", json_string: "\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A JSON", e164: "\u179B\u17C1\u1781 E.164", jwt: "JWT", template_literal: "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1794\u1789\u17D2\u1785\u17BC\u179B" };
+      let closure_2 = { nan: "NaN", number: "\u179B\u17C1\u1781", array: "\u17A2\u17B6\u179A\u17C1 (Array)", null: "\u1782\u17D2\u1798\u17B6\u1793\u178F\u1798\u17D2\u179B\u17C3 (null)" };
       return {
         localeError: (code) => {
-          let minimum;
-          let origin;
           code = code.code;
           switch (code) {
             case "t":
@@ -126,24 +124,36 @@ if (self2) {
             case "Set":
             break;
             case "format":
-              if ("ends_with" === format2) {
-                let _HermesInternal7 = HermesInternal;
-                let combined = "\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E15\u0E49\u0E2D\u0E07\u0E25\u0E07\u0E17\u0E49\u0E32\u0E22\u0E14\u0E49\u0E27\u0E22 \"" + code.suffix + "\"";
-              } else if ("includes" === code.format) {
-                let _HermesInternal6 = HermesInternal;
-                combined = "\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E15\u0E49\u0E2D\u0E07\u0E21\u0E35 \"" + code.includes + "\" \u0E2D\u0E22\u0E39\u0E48\u0E43\u0E19\u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21";
-              } else if ("regex" === code.format) {
-                let _HermesInternal5 = HermesInternal;
-                combined = "\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E15\u0E49\u0E2D\u0E07\u0E15\u0E23\u0E07\u0E01\u0E31\u0E1A\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E17\u0E35\u0E48\u0E01\u0E33\u0E2B\u0E19\u0E14 " + code.pattern;
-              } else {
-                let format = dependencyMap2[code.format];
-                if (format == null) {
-                  format = code.format;
+              while (true) {
+                let str3 = "includes";
+                if ("includes" === code.format) {
+                  let tmp10 = globalThis;
+                  let _HermesInternal4 = HermesInternal;
+                  let str7 = "\"";
+                  let str8 = "\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1798\u17B6\u1793 \"";
+                  let combined = "\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u1798\u17B6\u1793 \"" + code.includes + "\"";
+                } else {
+                  let str4 = "regex";
+                  if ("regex" === code.format) {
+                    let tmp9 = globalThis;
+                    let _HermesInternal3 = HermesInternal;
+                    let str6 = "\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u178F\u17C2\u1795\u17D2\u1782\u17BC\u1795\u17D2\u1782\u1784\u1793\u17B9\u1784\u1791\u1798\u17D2\u179A\u1784\u17CB\u178A\u17C2\u179B\u1794\u17B6\u1793\u1780\u17C6\u178E\u178F\u17CB ";
+                    combined = "\u1781\u17D2\u179F\u17C2\u17A2\u1780\u17D2\u179F\u179A\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 \u178F\u17D2\u179A\u17BC\u179C\u178F\u17C2\u1795\u17D2\u1782\u17BC\u1795\u17D2\u1782\u1784\u1793\u17B9\u1784\u1791\u1798\u17D2\u179A\u1784\u17CB\u178A\u17C2\u179B\u1794\u17B6\u1793\u1780\u17C6\u178E\u178F\u17CB " + code.pattern;
+                  } else {
+                    let tmp5 = table;
+                    let format = table[code.format];
+                    let tmp6 = null;
+                    if (format == null) {
+                      format = code.format;
+                    }
+                    let tmp7 = globalThis;
+                    let _HermesInternal2 = HermesInternal;
+                    let str5 = "\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 ";
+                    combined = "\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u17D6 " + format;
+                  }
                 }
-                let _HermesInternal4 = HermesInternal;
-                combined = "\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: " + format;
               }
-              return combined;
+            break;
             case "formatToPlainString":
             break;
             case "String":
@@ -580,7 +590,11 @@ if (self2) {
             break;
             case "ay":
             break;
-            case "getVoiceStateMetadata":
+            case "getVueInternalName":
+            break;
+            case "minimumAgeInDays":
+            break;
+            case "navigateToLandingPage":
             break;
             case "firstChild":
             break;
@@ -611,124 +625,43 @@ if (self2) {
             case "on":
             break;
             case "BOOST_SETTINGS":
-              let expected = closure_2[code.expected];
-              if (expected == null) {
-                expected = code.expected;
-              }
-              const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp49 = closure_2[parsedTypeResult];
-              if (tmp49 == null) {
-                tmp49 = parsedTypeResult;
-              }
-              if (obj.test(code.expected)) {
-                const _HermesInternal16 = HermesInternal;
-                let combined1 = "\u0E1B\u0E23\u0E30\u0E40\u0E20\u0E17\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E04\u0E27\u0E23\u0E40\u0E1B\u0E47\u0E19 instanceof " + code.expected + " \u0E41\u0E15\u0E48\u0E44\u0E14\u0E49\u0E23\u0E31\u0E1A " + tmp49;
-              } else {
-                const _HermesInternal15 = HermesInternal;
-                combined1 = "\u0E1B\u0E23\u0E30\u0E40\u0E20\u0E17\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E04\u0E27\u0E23\u0E40\u0E1B\u0E47\u0E19 " + expected + " \u0E41\u0E15\u0E48\u0E44\u0E14\u0E49\u0E23\u0E31\u0E1A " + tmp49;
-              }
-              return combined1;
+            break;
             case "SETTINGS_APPEARANCE":
             break;
             case "SETTINGS_APPEARANCE_DARK_MODE_THEME_PICKER":
-              if (1 === code.values.length) {
-                const _HermesInternal14 = HermesInternal;
-                let combined2 = "\u0E04\u0E48\u0E32\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E04\u0E27\u0E23\u0E40\u0E1B\u0E47\u0E19 " + closure_2.stringifyPrimitive(code.values[0]);
-              } else {
-                const _HermesInternal13 = HermesInternal;
-                combined2 = "\u0E15\u0E31\u0E27\u0E40\u0E25\u0E37\u0E2D\u0E01\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E04\u0E27\u0E23\u0E40\u0E1B\u0E47\u0E19\u0E2B\u0E19\u0E36\u0E48\u0E07\u0E43\u0E19 " + closure_2.joinValues(code.values, "|");
-              }
-              return combined2;
+            break;
             case "APPEARANCE":
             break;
             case "APPEARANCE_DARK_MODE_THEME_PICKER":
-              let str28 = "\u0E19\u0E49\u0E2D\u0E22\u0E01\u0E27\u0E48\u0E32";
-              if (code.inclusive) {
-                str28 = "\u0E44\u0E21\u0E48\u0E40\u0E01\u0E34\u0E19";
-              }
-              let tmp28 = dependencyMap[code.origin];
-              if (tmp28 == null) {
-                tmp28 = null;
-              }
-              let str29 = code.origin;
-              if (tmp28) {
-                if (str29 == null) {
-                  str29 = "\u0E04\u0E48\u0E32";
-                }
-                let str = code.maximum.toString();
-                let str36 = tmp28.unit;
-                if (str36 == null) {
-                  str36 = "\u0E23\u0E32\u0E22\u0E01\u0E32\u0E23";
-                }
-                const _HermesInternal12 = HermesInternal;
-                let combined3 = "\u0E40\u0E01\u0E34\u0E19\u0E01\u0E33\u0E2B\u0E19\u0E14: " + str29 + " \u0E04\u0E27\u0E23\u0E21\u0E35" + str28 + " " + str + " " + str36;
-                const str35 = code.maximum;
-              } else {
-                let str30 = str29;
-                if (str29 == null) {
-                  str30 = "\u0E04\u0E48\u0E32";
-                }
-                const _HermesInternal11 = HermesInternal;
-                combined3 = "\u0E40\u0E01\u0E34\u0E19\u0E01\u0E33\u0E2B\u0E19\u0E14: " + str30 + " \u0E04\u0E27\u0E23\u0E21\u0E35" + str28 + " " + code.maximum.toString();
-                const str31 = code.maximum;
-              }
-              return combined3;
+            break;
             case "D":
             break;
             case "DARK_MODE_THEME_PICKER":
-              let str19 = "\u0E21\u0E32\u0E01\u0E01\u0E27\u0E48\u0E32";
-              if (code.inclusive) {
-                str19 = "\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E19\u0E49\u0E2D\u0E22";
-              }
-              let tmp16 = dependencyMap[code.origin];
-              if (tmp16 == null) {
-                tmp16 = null;
-              }
-              ({ origin, minimum } = code);
-              const str1 = minimum.toString();
-              if (tmp16) {
-                const _HermesInternal10 = HermesInternal;
-                let combined4 = "\u0E19\u0E49\u0E2D\u0E22\u0E01\u0E27\u0E48\u0E32\u0E01\u0E33\u0E2B\u0E19\u0E14: " + origin + " \u0E04\u0E27\u0E23\u0E21\u0E35" + str19 + " " + str1 + " " + tmp16.unit;
-              } else {
-                const _HermesInternal9 = HermesInternal;
-                combined4 = "\u0E19\u0E49\u0E2D\u0E22\u0E01\u0E27\u0E48\u0E32\u0E01\u0E33\u0E2B\u0E19\u0E14: " + origin + " \u0E04\u0E27\u0E23\u0E21\u0E35" + str19 + " " + str1;
-              }
-              return combined4;
+            break;
             case "R":
             break;
             case "K":
-              if ("starts_with" === code.format) {
-                const _HermesInternal8 = HermesInternal;
-                combined = "\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E15\u0E49\u0E2D\u0E07\u0E02\u0E36\u0E49\u0E19\u0E15\u0E49\u0E19\u0E14\u0E49\u0E27\u0E22 \"" + code.prefix + "\"";
-              } else {
-                format2 = code.format;
-              }
             break;
             case "RVLinearLayoutManagerImpl":
             break;
             case "plainSpoilerRenderer":
-              return "\u0E15\u0E31\u0E27\u0E40\u0E25\u0E02\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E15\u0E49\u0E2D\u0E07\u0E40\u0E1B\u0E47\u0E19\u0E08\u0E33\u0E19\u0E27\u0E19\u0E17\u0E35\u0E48\u0E2B\u0E32\u0E23\u0E14\u0E49\u0E27\u0E22 " + code.divisor + " \u0E44\u0E14\u0E49\u0E25\u0E07\u0E15\u0E31\u0E27";
+            break;
             case "$ZodDate":
             break;
             case "ZodDate":
-              const _HermesInternal3 = HermesInternal;
-              return "\u0E1E\u0E1A\u0E04\u0E35\u0E22\u0E4C\u0E17\u0E35\u0E48\u0E44\u0E21\u0E48\u0E23\u0E39\u0E49\u0E08\u0E31\u0E01: " + closure_2.joinValues(code.keys, ", ");
+            break;
             case "DateParser":
             break;
             case "at":
-              const _HermesInternal2 = HermesInternal;
-              return "\u0E04\u0E35\u0E22\u0E4C\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E19 " + code.origin;
+            break;
             case "te":
             break;
             case "serializeDate":
-              return "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E44\u0E21\u0E48\u0E15\u0E23\u0E07\u0E01\u0E31\u0E1A\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E22\u0E39\u0E40\u0E19\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48\u0E01\u0E33\u0E2B\u0E19\u0E14\u0E44\u0E27\u0E49";
+            break;
             case "MarkupParserNodeTypeError":
             break;
             case "E":
-              let _HermesInternal = HermesInternal;
-              str = "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E19 ";
-              let combined5 = "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E19 " + code.origin;
-              return combined5;
+            break;
             case "Err":
             break;
             case "ro":
@@ -773,11 +706,7 @@ if (self2) {
             break;
             case "perGuildMaxCount":
             break;
-            case "useEditStateContext":
-            break;
-            case "disableApplicationSubscriptionCancellationSurvey":
-            break;
-            case "attachmentCarousel":
+            case "useEditStateIds":
             break;
             case "getChannelIcon":
             break;
@@ -829,7 +758,7 @@ if (self2) {
             break;
             case "ap":
             break;
-            case "handleAppStateUpdate":
+            case "handleResolveRaid":
             break;
             case "ToIntlMathematicalValue":
             break;
@@ -871,45 +800,13 @@ if (self2) {
             break;
             case "rect":
             break;
-            case "GUILD_SOUNDBOARD_SOUND_PLAY_START":
-            break;
-            case "RTC_CONNECTION_PLATFORM":
-            break;
-            case "ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED":
+            case "SETTINGS_DESKTOP_APP":
             break;
             case "PX_80":
             break;
             case "_":
             break;
-            case "isFLAC":
-            break;
-            case "FLAC":
-            break;
-            case "ACCEPT_FRIEND_REQUEST":
-            break;
-            case "ACCEPT_FRIEND_REQUEST_CONFIRMATION_MODAL_ID":
-            break;
-            case "FRIEND":
-            break;
-            case "IE":
-            break;
-            case "END":
-            break;
-            case "CO":
-            break;
-            case "CONFIRM":
-            break;
-            case "CONFIRMATION":
-            break;
-            case "FI":
-            break;
-            case "MO":
-            break;
-            case "MODAL":
-            break;
-            case "bypassSystemInputProcessing":
-            break;
-            case "singleApplicationId":
+            case "snapToEnd":
             break;
             case "AUTO_MODERATION_REMOVE_REGEX_PATTERNS":
             break;
@@ -1021,15 +918,7 @@ if (self2) {
             break;
             case "QUEST_BOTTOM_SHEET":
             break;
-            case "bountyId":
-            break;
-            case "disableRightInsetApplication":
-            break;
-            case "ApplicationStreamResolutions":
-            break;
-            case "lut":
-            break;
-            case "fullySanitized":
+            case "fuseboxFrameRecordingEnabled":
             break;
             case "ActionSheetHeaderPressableText":
             break;
@@ -1039,9 +928,7 @@ if (self2) {
             break;
             case "ext":
             break;
-            case "isLight":
-            break;
-            case "isLightsEnabled":
+            case "isLinkTrusted":
             break;
             case "AccessibilityFocusView":
             break;
@@ -1229,6 +1116,8 @@ if (self2) {
             break;
             case "ce":
             break;
+            case "enableServerTrendingNotifications":
+            break;
             case "access":
             break;
             case "accessibilityLabelCalendarFormat":
@@ -1280,6 +1169,8 @@ if (self2) {
             case "clearAllSearchMesssages":
             break;
             case "sss":
+            break;
+            case "pushState":
             break;
             case "accessibleDismiss":
             break;
@@ -1348,10 +1239,13 @@ if (self2) {
             case "EntityDao":
             break;
             case "Dao":
-              _HermesInternal = HermesInternal;
-              str = "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E19 ";
-              combined5 = "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E19 " + code.origin;
-              return combined5;
+            break;
+            case "NOTIF_SETTING_MAPPING":
+            break;
+            case "GUILD_CREATION_INTENT_SELECTED":
+            break;
+            case "CREATION_INTENT":
+            break;
             case "app":
             break;
             case "application":
@@ -1378,6 +1272,8 @@ if (self2) {
             break;
             case "WISHLIST_BANNER":
             break;
+            case "batteryUsageRounded":
+            break;
             case "_applyCombination":
             break;
             case "ly":
@@ -1385,12 +1281,6 @@ if (self2) {
             case "truthy":
             break;
             case "truthySet":
-            break;
-            case "setSimulcastDebugOverride":
-            break;
-            case "scopes":
-            break;
-            case "scopesContainer":
             break;
             case "acceptedRequestLabel":
             break;
@@ -1426,9 +1316,15 @@ if (self2) {
             break;
             case "FormSubmitErrorType":
             break;
-            case "person_walking_facing_right_tone4":
+            case "person_walking_facing_right_tone5":
             break;
-            case "onChannelCreated":
+            case "createPurchaseNotificationSystemMessage":
+            break;
+            case "ageVerification":
+            break;
+            case "ageVerificationContainer":
+            break;
+            case "onContainerResized":
             break;
             case "_bodyArrayBuffer":
             break;
@@ -1437,6 +1333,7 @@ if (self2) {
             case "safeAreaRight":
             break;
             case "bor":
+              const combined1 = code.concat(tmp3);
             break;
             case "border":
             break;
@@ -1447,6 +1344,10 @@ if (self2) {
             case "Radius":
             break;
             case "iu":
+            break;
+            case "handshake_tone5_tone2":
+            break;
+            case "badgeBanner":
             break;
             case "overflow_bottom":
             break;
@@ -1464,7 +1365,7 @@ if (self2) {
             break;
             case "shiftLeft":
             break;
-            case "channelNameContainer":
+            case "channelLatestMessageLoadingStatsManager":
             break;
             case "DynamicallyInjectedByGestureHandler":
             break;
@@ -1528,15 +1429,7 @@ if (self2) {
             break;
             case "rs":
             break;
-            case "is_custom":
-            break;
-            case "is_custom_message_edited":
-            break;
-            case "editedAt":
-            break;
-            case "FP+a42":
-            break;
-            case "activitySessionId":
+            case "activityUserSessionId":
             break;
             case "disableGuildSelect":
             break;
@@ -1544,9 +1437,15 @@ if (self2) {
             break;
             case "concatSettings":
             break;
-            case "subscribeToMemberUpdates":
+            case "subscribeToIntlLoadingSuccess":
             break;
-            case "setMultiAccountUsers":
+            case "avg_fps":
+            break;
+            case "fp":
+            break;
+            case "fps":
+            break;
+            case "fpsBuckets":
             break;
             case "$constructor":
             break;
@@ -1576,6 +1475,16 @@ if (self2) {
             break;
             case "ner":
             break;
+            case "hasAction":
+            break;
+            case "hasActionSheetOpen":
+            break;
+            case "NitroQuestOrbsMultiplierRive":
+            break;
+            case "QuestOrbsMultiplier":
+            break;
+            case "xbd":
+            break;
             case "creative_content":
             break;
             case "_contentAvailable":
@@ -1596,39 +1505,13 @@ if (self2) {
             break;
             case "withChannelUnreadFlags":
             break;
-            case "getDomElement":
-            break;
-            case "trackMemberApplicationViewed":
-            break;
             case "AccountAgeTier10LargeBadge":
             break;
             case "cou":
             break;
             case "Badge":
             break;
-            case "isPerformanceEventTiming":
-            break;
-            case "PerformanceEventTiming":
-            break;
-            case "PerformanceEventTiming_public":
-            break;
-            case "publicKey":
-            break;
-            case "publicKeyFingerprint":
-            break;
-            case "MOBILE_TEXT_HEADING_PRIMARY":
-            break;
-            case "HEADING":
-            break;
-            case "PRIMARY_SEMIBOLD":
-            break;
-            case "CHANNEL_NAME_CHANNEL_ICON_RADIUS":
-            break;
-            case "USER_DEFAULT_PROFILE_AVATAR":
-            break;
-            case "RiveImages":
-            break;
-            case "gestureId":
+            case "getActiveOutputSinkTrackingEnabled":
             break;
             case "cr":
             break;
@@ -1645,10 +1528,6 @@ if (self2) {
             case "currentAppIcon":
             break;
             case "containerFloatingGradient":
-            break;
-            case "woman_biking_light_skin_tone":
-            break;
-            case "man_biking_light_skin_tone":
             break;
             case "rowInner":
             break;
@@ -1668,6 +1547,14 @@ if (self2) {
             break;
             case "dddd":
             break;
+            case "REFERENCE_ORIGINAL":
+            break;
+            case "ORIGINAL_MD5_HEADER":
+            break;
+            case "RPC_LOCAL_SCOPE":
+            break;
+            case "OPEN_TIER_1_PAYMENT_MODAL":
+            break;
             case "__defaultLocale":
             break;
             case "def":
@@ -1682,9 +1569,11 @@ if (self2) {
             break;
             case "localeIdentifier":
             break;
-            case "lastGoLivePixelCount":
+            case "makeDiscoverableGuild":
             break;
-            case "triggerUserActivity":
+            case "markAsNotSpam":
+            break;
+            case "MAX_CHANNEL_NAME_LENGTH":
             break;
             case "define":
             break;
@@ -1693,8 +1582,6 @@ if (self2) {
             case "fi":
             break;
             case "fin":
-            break;
-            case "setProfilingEnabled":
             break;
             case "undelete":
             break;
@@ -1742,6 +1629,22 @@ if (self2) {
             break;
             case "videoEnabled":
             break;
+            case "getEventSchedule":
+            break;
+            case "ScheduleEventPrompt":
+            break;
+            case "ptbButton":
+            break;
+            case "ExpressionPickerWidths":
+            break;
+            case "PREMIUM_GROUP_30_PERCENT_3_MONTH_DISCOUNT_ID":
+            break;
+            case "getSimpleChannelIcon":
+            break;
+            case "getSimpleChannelIconComponent":
+            break;
+            case "trackSuggestedSearchClicked":
+            break;
             case "AgeVerificationModalEntryPoint":
             break;
             case "Entry":
@@ -1770,9 +1673,9 @@ if (self2) {
             break;
             case "led":
             break;
-            case "optInChannels":
+            case "headerBorder":
             break;
-            case "optInChannelsEnabled":
+            case "orderLineItemId":
             break;
             case "_dispatch":
             break;
@@ -1788,15 +1691,13 @@ if (self2) {
             break;
             case "tc":
             break;
-            case "CLOCK_TICK":
+            case "usage_metadata":
             break;
-            case "KIR":
+            case "getPollReplyPreview":
             break;
-            case "IRR":
+            case "queryTextChannels":
             break;
-            case "IRREDEEMABLE_PAYMENT_SOURCES":
-            break;
-            case "stage_instances":
+            case "startNumImports":
             break;
             case "renderActivityInstanceEmbed":
             break;
@@ -1818,7 +1719,9 @@ if (self2) {
             break;
             case "internalBinaryWrite":
             break;
-            case "isEu":
+            case "isErrorWithCode":
+            break;
+            case "deferFlatListFocusChangeRenderUpdate":
             break;
             case "updateData":
             break;
@@ -1831,6 +1734,8 @@ if (self2) {
             case "ver":
             break;
             case "renderCommunicationDisabled":
+            break;
+            case "AgeAssuranceMethod":
             break;
             case "LhlgY9":
             break;
@@ -1900,14 +1805,6 @@ if (self2) {
             break;
             case "referrerPolicy":
             break;
-            case "jpg":
-            break;
-            case "customAnimationOnSwipe":
-            break;
-            case "SwipeForMemberListContext":
-            break;
-            case "textInputValue":
-            break;
             case "beforeAddRecordingEvent":
             break;
             case "../../../lib/braintree-error":
@@ -1953,54 +1850,28 @@ if (self2) {
             case "fil":
             break;
             case "file":
-              if ("ends_with" === format2) {
-                _HermesInternal7 = HermesInternal;
-                combined = "\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E15\u0E49\u0E2D\u0E07\u0E25\u0E07\u0E17\u0E49\u0E32\u0E22\u0E14\u0E49\u0E27\u0E22 \"" + code.suffix + "\"";
-              } else if ("includes" === code.format) {
-                _HermesInternal6 = HermesInternal;
-                combined = "\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E15\u0E49\u0E2D\u0E07\u0E21\u0E35 \"" + code.includes + "\" \u0E2D\u0E22\u0E39\u0E48\u0E43\u0E19\u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21";
-              } else if ("regex" === code.format) {
-                _HermesInternal5 = HermesInternal;
-                combined = "\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E15\u0E49\u0E2D\u0E07\u0E15\u0E23\u0E07\u0E01\u0E31\u0E1A\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E17\u0E35\u0E48\u0E01\u0E33\u0E2B\u0E19\u0E14 " + code.pattern;
-              } else {
-                format = dependencyMap2[code.format];
-                if (format == null) {
-                  format = code.format;
-                }
-                _HermesInternal4 = HermesInternal;
-                combined = "\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: " + format;
-              }
-              return combined;
+            break;
             case "F":
             break;
             case "Finish":
             break;
             case "he":
-            break;
+              let _HermesInternal = HermesInternal;
+              let combined2 = "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u1793\u17C5\u1780\u17D2\u1793\u17BB\u1784 " + code.origin;
+              return combined2;
             case "StreamingTier5SmallBadge":
             break;
-            case "templatePair":
-            break;
             case "EntitlementTenantFulfillmentStatus":
-              return "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E44\u0E21\u0E48\u0E15\u0E23\u0E07\u0E01\u0E31\u0E1A\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E22\u0E39\u0E40\u0E19\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48\u0E01\u0E33\u0E2B\u0E19\u0E14\u0E44\u0E27\u0E49";
+            break;
             case "ill":
             break;
             case "__findAnimatedPropsNodes":
             break;
-            case "useCharacterLimitAnnouncement":
+            case "AUDIO_CAPTURE_SAMPLE_RATE_MISMATCH":
             break;
-            case "meetOrSlice":
-              _HermesInternal = HermesInternal;
-              str = "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E19 ";
-              combined5 = "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E19 " + code.origin;
-              return combined5;
-            case "meetOrSliceTypes":
+            case "MISMATCHING_COUNTRIES":
             break;
-            case "sustainedRebufferThreshold":
-            break;
-            case "oldId":
-            break;
-            case "MIN_READABLE_CHANNELS":
+            case "MATCH":
             break;
             case "system_channel_flags":
             break;
@@ -2024,6 +1895,8 @@ if (self2) {
             break;
             case "addProfileToGlobalCache":
             break;
+            case "SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE":
+            break;
             case "fo":
             break;
             case "for":
@@ -2036,11 +1909,21 @@ if (self2) {
             break;
             case "BeakerIllocon":
             break;
-            case "DEPRECATED_SIZE_100":
+            case "EMBEDDED_ACTIVITY_WEB_VIEW_KEY":
             break;
-            case "FeDistantLight":
+            case "flexShrink":
             break;
-            case "LightSource":
+            case "startShouldSetResponder":
+            break;
+            case "watermelon":
+            break;
+            case "melon":
+            break;
+            case "MEDIA_KEYBOARD_BUTTON_TEXT_VARIANT":
+            break;
+            case "TEXT_VARIANT":
+            break;
+            case "TOO_MANY_WEBHOOKS":
             break;
             case "getChannelA11yHint":
             break;
@@ -2080,15 +1963,7 @@ if (self2) {
             break;
             case "Guild":
             break;
-            case "num_private_channel_messages":
-            break;
-            case "_private":
-            break;
-            case "private":
-            break;
-            case "messagesReady":
-            break;
-            case "overrideProperties":
+            case "voidProcessor":
             break;
             case "_guildId":
             break;
@@ -2096,7 +1971,7 @@ if (self2) {
             break;
             case "current_guild_id":
             break;
-            case "getComposedPath":
+            case "getConfigFetchState":
             break;
             case "hasDiversity":
             break;
@@ -2126,17 +2001,11 @@ if (self2) {
             break;
             case "iconColor":
             break;
-            case "doUpload":
+            case "redirectDeveloperPortalWithHandoffToken":
             break;
-            case "UploadErrorUpload":
+            case "buttonSecondaryText":
             break;
-            case "UploadErrorProgress":
-            break;
-            case "getSearchPlaceholder":
-            break;
-            case "popoutContainer":
-            break;
-            case "fallbackPremiumType":
+            case "extendedType":
             break;
             case "_header":
             break;
@@ -2176,9 +2045,9 @@ if (self2) {
             break;
             case "withNames":
             break;
-            case "character":
+            case "maxParticipants":
             break;
-            case "characterOrders":
+            case "chatInputRightActions":
             break;
             case "showShareLink":
             break;
@@ -2202,16 +2071,14 @@ if (self2) {
             break;
             case "iconsContainer":
             break;
-            case "setUdpEndpoint":
-            break;
-            case "point_left_tone4":
-            break;
             case "_include":
             break;
             case "inc":
             break;
             case "include":
-            break;
+              _HermesInternal = HermesInternal;
+              combined2 = "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u1793\u17C5\u1780\u17D2\u1793\u17BB\u1784 " + code.origin;
+              return combined2;
             case "includesBounties":
             break;
             case "lu":
@@ -2258,9 +2125,11 @@ if (self2) {
             break;
             case "tl":
             break;
-            case "getAnyErrorMessage":
+            case "getAnyStreamForUser":
             break;
-            case "getAnyErrorMessageAndField":
+            case "CaptchaEvent":
+            break;
+            case "EventActionLocation":
             break;
             case "activity_items":
             break;
@@ -2273,6 +2142,8 @@ if (self2) {
             case "activeUnjoinedThreads":
             break;
             case "jo":
+            break;
+            case "nativeEventEmitter":
             break;
             case "js":
             break;
@@ -2314,27 +2185,13 @@ if (self2) {
             break;
             case "kin":
             break;
-            case "handleChannelSync":
+            case "CampfireSceneSpotIllustration":
             break;
-            case "ANNUAL_DISCOUNT_PERCENTAGE_FALLBACK":
+            case "mpf":
             break;
-            case "DISCOUNT_PERCENTAGE_FALLBACK":
+            case "pf":
             break;
-            case "FALLBACK_ESTIMATED_HEIGHT":
-            break;
-            case "TIGGER_PAWTECT_LEARN_MORE":
-            break;
-            case "REGISTER_SUBMIT_ERRORED":
-            break;
-            case "ERRORED":
-            break;
-            case "CLEAR_TEXT":
-            break;
-            case "TEXT_ENTRY":
-            break;
-            case "escapedEmoticonNames":
-            break;
-            case "BuildingBlocksSpotIllustration":
+            case "fire":
             break;
             case "Backspace":
             break;
@@ -2361,12 +2218,6 @@ if (self2) {
             case "arrow_left":
             break;
             case "leftActions":
-            break;
-            case "videoDataReceivedTimestamp":
-            break;
-            case "parseString":
-            break;
-            case "parseStringToURLObject":
             break;
             case "_$esjava$I_length":
             break;
@@ -2396,7 +2247,7 @@ if (self2) {
             break;
             case "mit":
             break;
-            case "getAppState":
+            case "getAppTitle":
             break;
             case "clj":
             break;
@@ -2440,8 +2291,14 @@ if (self2) {
             break;
             case "_max":
             break;
+            case "_maxListeners":
+            break;
+            case "maxListeners":
+            break;
+            case "shouldShowMembershipVerificationGate":
+            break;
             default:
-              return "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07";
+              return "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C";
           }
         }
       };

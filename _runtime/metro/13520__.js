@@ -1,34 +1,45 @@
 // _runtime/metro/13520__.js
-import { all } from "../13512_all.js";
+let tmp = require("module_13500").process && require("module_13500").process.versions;
+if (!tmp) {
+  tmp = require("module_13500").Deno && require("module_13500").Deno.version;
+  const tmp2 = require("module_13500").Deno && require("module_13500").Deno.version;
+}
+let str = tmp;
+if (tmp) {
+  str = tmp.v8;
+}
+let tmp3;
+if (str) {
+  const parts = str.split(".");
+  if (parts[0] <= 0) {
+    let num3 = +parts[0] + parts[1];
+  } else {
+    num3 = 1;
+  }
+  tmp3 = num3;
+  let tmp4 = parts;
+}
+let _module = !tmp3;
+if (!tmp3) {
+  _module = require("module_13521");
+}
+if (_module) {
+  const match = require("module_13521").match(/Edge\/(\d+)/);
+  let tmp8 = !match;
+  if (match) {
+    tmp8 = match[1] >= 74;
+  }
+  _module = tmp8;
+  tmp4 = match;
+  const str3 = require("module_13521");
+}
+if (_module) {
+  _module = require("module_13521").match(/Chrome\/(\d+)/);
+  tmp4 = _module;
+  const str4 = require("module_13521");
+}
+if (_module) {
+  tmp3 = +tmp4[1];
+}
 
-export default (arg0, arg1) => {
-  if ("string" === arg1) {
-    const toString = arg0.toString;
-    if (all(toString)) {
-      const tmp4 = tmp(13519)(toString, arg0);
-      if (!tmpResult(tmp4)) {
-        return tmp4;
-      }
-      tmpResult = tmp(13511);
-    }
-  }
-  const valueOf = arg0.valueOf;
-  if (all(valueOf)) {
-    let tmp5Result = tmp5(13511);
-    const tmp8 = tmp5(13519)(valueOf, arg0);
-    if (!tmp5Result(tmp8)) {
-      return tmp8;
-    }
-  }
-  if ("string" !== arg1) {
-    const toString2 = arg0.toString;
-    if (tmp5(13512)(toString2)) {
-      tmp5Result = tmp5(13511);
-      const tmp10 = tmp5(13519)(toString2, arg0);
-      if (!tmp5Result(tmp10)) {
-        return tmp10;
-      }
-    }
-  }
-  throw new TypeError("Can't convert object to primitive value");
-};
+export default tmp3;

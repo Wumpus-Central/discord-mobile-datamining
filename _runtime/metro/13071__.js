@@ -1,92 +1,101 @@
 // _runtime/metro/13071__.js
-import _slicedToArray from "_slicedToArray";
-import { Range } from "../13061_Range.js";
+import { SemVer } from "../13043_SemVer.js";
+import { SemVer } from "../13044_SemVer.js";
 
-
-export default (arr) => {
-  let tmp = arg1;
-  const _require = arg2;
-  const items = [];
-  let tmp2 = null;
-  let tmp3 = null;
-  const sorted = arr.sort((arg0, arg1) => callback(outer1_1[1])(arg0, arg1, callback));
-  for (const item10017 of sorted) {
-    let tmp5 = item10017;
-    let tmp6 = _require;
-    let tmp7 = dependencyMap;
-    if (_Range(item10017, tmp, arg2)) {
-      tmp3 = item10017;
-      let tmp12 = tmp2;
-      if (!tmp2) {
-        tmp2 = item10017;
-      }
-    } else {
-      let tmp8 = tmp3;
-      if (tmp3) {
-        let tmp9 = tmp2;
-        let items1 = [tmp2, ];
-        let tmp10 = tmp3;
-        items1[1] = tmp3;
-        arr = items.push(items1);
-      }
-      tmp3 = null;
-      tmp2 = null;
-    }
-    continue;
-  }
-  if (tmp2) {
-    const items2 = [tmp2, null];
-    items.push(items2);
-  }
-  const items3 = [];
-  while (tmp15 !== undefined) {
-    let tmp17 = _slicedToArray;
-    let tmp18 = _slicedToArray(tmp16, 2);
-    let first = tmp18[0];
-    let tmp20 = first;
-    let tmp21 = tmp18[1];
-    let tmp22 = tmp21;
-    if (first === tmp21) {
-      let tmp34 = first;
-      let arr1 = items3.push(tmp20);
-    } else {
-      let tmp36 = tmp21;
-      if (!tmp22) {
-        let tmp23 = first;
-        if (tmp20 === sorted[0]) {
-          let arr2 = items3.push("*");
-        }
-      }
-      let tmp25 = tmp21;
-      if (tmp22) {
-        let tmp28 = first;
-        if (tmp20 === sorted[0]) {
-          let tmp32 = tmp21;
-          let _HermesInternal3 = HermesInternal;
-          let arr3 = items3.push("<=" + tmp22);
-        } else {
-          let tmp29 = first;
-          let tmp30 = tmp21;
-          let _HermesInternal2 = HermesInternal;
-          let arr4 = items3.push("" + tmp20 + " - " + tmp22);
-        }
-      } else {
-        let tmp26 = first;
-        let _HermesInternal = HermesInternal;
-        let arr5 = items3.push(">=" + tmp20);
-      }
-    }
-    continue;
-  }
-  const joined = items3.join(" || ");
-  if (typeof tmp.raw === "string") {
-    let raw = tmp.raw;
+export default (num) => {
+  if (num instanceof SemVer) {
+    return num;
   } else {
-    const _String = String;
-    raw = String(tmp);
+    let StringResult = num;
+    if (typeof num === "number") {
+      const _String = String;
+      StringResult = String(num);
+    }
+    if (typeof StringResult !== "string") {
+      return null;
+    } else {
+      let obj = arg1;
+      if (!arg1) {
+        obj = {};
+      }
+      if (obj.rtl) {
+        const safeRe2 = tmp(13048).safeRe;
+        const t2 = tmp(13048).t;
+        if (obj.includePrerelease) {
+          let obj2 = safeRe2[t2.COERCERTLFULL];
+        } else {
+          obj2 = safeRe2[t2.COERCERTL];
+        }
+        let match = obj2.exec(StringResult);
+        let tmp6 = null;
+        let tmp8 = null;
+        if (match) {
+          while (true) {
+            let tmp9 = match;
+            let tmp10 = tmp6;
+            let tmp11 = tmp6;
+            if (tmp6) {
+              tmp11 = match.index + match[0].length === tmp10.index + tmp10[0].length;
+            }
+            if (!tmp11) {
+              tmp10 = match;
+            }
+            obj2.lastIndex = match.index + match[1].length + match[2].length;
+            let match1 = obj2.exec(StringResult);
+            tmp8 = tmp10;
+            if (!match1) {
+              break;
+            } else {
+              match = match1;
+              tmp6 = tmp10;
+              if (!tmp10) {
+                continue;
+              } else {
+                match = match1;
+                tmp6 = tmp10;
+                tmp8 = tmp10;
+                if (tmp10.index + tmp10[0].length === StringResult.length) {
+                  break;
+                }
+              }
+              continue;
+            }
+          }
+        }
+        obj2.lastIndex = -1;
+        let match2 = tmp8;
+      } else {
+        const safeRe = tmp(13048).safeRe;
+        const t = tmp(13048).t;
+        if (obj.includePrerelease) {
+          let tmp3 = safeRe[t.COERCEFULL];
+        } else {
+          tmp3 = safeRe[t.COERCE];
+        }
+        match2 = StringResult.match(tmp3);
+      }
+      if (null === match2) {
+        return null;
+      } else {
+        let str2 = "";
+        if (obj.includePrerelease) {
+          str2 = "";
+          if (match2[5]) {
+            const _HermesInternal = HermesInternal;
+            str2 = "-" + match2[5];
+          }
+        }
+        let str4 = "";
+        if (obj.includePrerelease) {
+          str4 = "";
+          if (match2[6]) {
+            const _HermesInternal2 = HermesInternal;
+            str4 = "+" + match2[6];
+          }
+        }
+        const _HermesInternal3 = HermesInternal;
+        return SemVer("" + match2[2] + "." + match2[3] || "0" + "." + match2[4] || "0" + str2 + str4, obj);
+      }
+    }
   }
-  if (joined.length < raw.length) {
-    tmp = joined;
-  }
-  return tmp;
 };

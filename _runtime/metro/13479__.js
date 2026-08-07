@@ -1,2 +1,21 @@
 // _runtime/metro/13479__.js
-arg5.units = ["degree", "acre", "hectare", "percent", "bit", "byte", "gigabit", "gigabyte", "kilobit", "kilobyte", "megabit", "megabyte", "petabyte", "terabit", "terabyte", "day", "hour", "millisecond", "minute", "month", "second", "week", "year", "centimeter", "foot", "inch", "kilometer", "meter", "mile-scandinavian", "mile", "millimeter", "yard", "gram", "kilogram", "ounce", "pound", "stone", "celsius", "fahrenheit", "fluid-ounce", "gallon", "liter", "milliliter"];
+import { shouldPolyfill } from "../13480_shouldPolyfill.js";
+import { supportedValuesOf } from "../13481_supportedValuesOf.js";
+const require = arg1;
+const dependencyMap = arg6;
+arg5.shouldPolyfill = undefined;
+arg5.supportedValuesOf = undefined;
+let obj = {
+  enumerable: true,
+  get() {
+    return shouldPolyfill.shouldPolyfill;
+  }
+};
+Object.defineProperty(arg5, "shouldPolyfill", obj);
+obj = {
+  enumerable: true,
+  get() {
+    return supportedValuesOf.supportedValuesOf;
+  }
+};
+Object.defineProperty(arg5, "supportedValuesOf", obj);

@@ -265,7 +265,7 @@ export const KeyboardProvider = (enabled) => {
     }
   }, items1);
   obj2 = { value: tmp9, children: null };
-  obj3 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "accessibility", onKeyboardMoveInteractive: "motorized", onKeyboardMoveEnd: "person", onFocusedInputLayoutChangedReanimated: "wheelchair", children: "a" };
+  obj3 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "woman_in_manual_wheelchair_tone1", onKeyboardMoveInteractive: "woman_in_manual_wheelchair_light_skin_tone", onKeyboardMoveEnd: "a", onFocusedInputLayoutChangedReanimated: "CATEGORY_MARGIN_BOTTOM", children: "a" };
   let tmp18 = fn;
   let tmp19 = fn;
   if (!fn) {

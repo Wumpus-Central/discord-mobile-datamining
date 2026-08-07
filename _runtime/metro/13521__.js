@@ -1,14 +1,9 @@
 // _runtime/metro/13521__.js
-import getOwnPropertyDescriptor from "getOwnPropertyDescriptor";
-import { element } from "../13522_element.js";
-
-let tmp2 = !getOwnPropertyDescriptor;
-if (!getOwnPropertyDescriptor) {
-  tmp2 = !require("module_13490")(() => 7 !== Object.defineProperty(element("div"), "a", {
-    get() {
-      return 7;
-    }
-  }).a);
+const tmp = require("module_13500").navigator && require("module_13500").navigator.userAgent;
+let str = "";
+if (tmp) {
+  const _String = String;
+  str = String(tmp);
 }
 
-export default tmp2;
+export default str;

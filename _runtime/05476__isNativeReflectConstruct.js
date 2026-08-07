@@ -1,19 +1,12 @@
 // _runtime/05476__isNativeReflectConstruct.js
-import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
-import get_ActivityIndicator from "get ActivityIndicator";
-import "noop";
-import { jsx } from "jsxProd";
-import { _isNativeReflectConstruct } from "05474__isNativeReflectConstruct.js";
+import importDefaultResult2 from "noop";
+import { Reanimated } from "cancelAnimation";
 
-let c10;
-let c9;
-let metroImportAll;
-let unpackModuleId;
-const TouchableOpacity = arg1;
+const Wrap = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -33,90 +26,54 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let closure_3 = ["style"];
-({ Animated: metroImportAll, Easing: c9, StyleSheet: c10, View: unpackModuleId } = get_ActivityIndicator);
-class TouchableOpacity {
+class Wrap {
   constructor() {
     self = this;
-    items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
-    items1 = [...items];
+    tmp = _isNativeReflectConstruct(this, Wrap);
     tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(apply);
+    obj = _isNativeReflectConstruct(Wrap);
     tmp3 = _isNativeReflectConstruct;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
-    tmp3Result.getChildStyleOpacityWithDefault = () => {
-      const tmp = outer1_10.flatten(_undefined.props.style) || {};
-      let num = 1;
-      if (null != tmp.opacity) {
-        const opacity = tmp.opacity;
-        num = opacity.valueOf();
-      }
-      return num;
-    };
-    value = new Animated.Value(tmp3Result.getChildStyleOpacityWithDefault());
-    tmp3Result.opacity = value;
-    tmp3Result.setOpacityTo = (toValue, duration) => {
-      const obj = { toValue, duration, easing: outer1_9.inOut(outer1_9.quad), useNativeDriver: null };
-      let flag = _undefined.props.useNativeAnimations;
-      if (flag == null) {
-        flag = true;
-      }
-      obj[3] = flag;
-      outer1_8.timing(_undefined.opacity, obj).start();
-    };
-    tmp3Result.onStateChange = (arg0, arg1) => {
-      if (arg1 === _undefined(outer1_2[9]).TOUCHABLE_STATE.BEGAN) {
-        _undefined.setOpacityTo(_undefined.props.activeOpacity, 0);
-      } else {
-        if (!tmp3) {
-          _undefined.setOpacityTo(_undefined.getChildStyleOpacityWithDefault(), 150);
-        }
-        tmp3 = arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.UNDETERMINED && arg1 !== tmp(tmp2[9]).TOUCHABLE_STATE.MOVED_OUTSIDE;
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-require("_inherits")(TouchableOpacity, require("noop").Component);
-let obj = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const props = this.props;
-    let style = props.style;
-    if (undefined === style) {
-      style = {};
+require("_inherits")(Wrap, importDefaultResult2.Component);
+const items = [
+  {
+    key: "render",
+    value: function render() {
+      try {
+        const self = this;
+        const Children = importDefaultResult2.Children;
+        const onlyResult = Children.only(this.props.children);
+        return importDefaultResult2.cloneElement(onlyResult, { collapsable: false }, onlyResult.props.children);
+      } catch (err) {
+        const _Error = Error;
+        const error = new Error(Wrap(5430).tagMessage("GestureDetector got more than one view as a child. If you want the gesture to work on multiple views, wrap them with a common parent and attach the gesture to that view."));
+        throw error;
+      }
     }
-    const obj = {};
-    const tmp = callback(props, closure_3);
-    const merged = Object.assign(tmp);
-    const items = [style, { opacity: self.opacity }];
-    obj.style = items;
-    obj.onStateChange = self.onStateChange;
-    if (self.props.children) {
-      let children = self.props.children;
-    } else {
-      children = tmp2(closure_11, {});
-    }
-    obj.children = children;
-    return jsx(_isNativeReflectConstruct, {});
   }
-};
-let items = [obj];
-const importDefaultResultResult = importDefaultResult(TouchableOpacity, items);
-obj = {};
-let merged = Object.assign(require("_isNativeReflectConstruct").defaultProps);
-obj.activeOpacity = 0.2;
-importDefaultResultResult.defaultProps = obj;
+];
+const importDefaultResultResult = importDefaultResult(Wrap, items);
+let animatedComponent;
+if (Reanimated != null) {
+  if (Reanimated.default != null) {
+    animatedComponent = _default.createAnimatedComponent(importDefaultResultResult);
+  }
+}
+if (animatedComponent == null) {
+  animatedComponent = importDefaultResultResult;
+}
 
-export default importDefaultResultResult;
+export const Wrap = importDefaultResultResult;
+export const AnimatedWrap = animatedComponent;

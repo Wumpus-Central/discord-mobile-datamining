@@ -1,7 +1,8 @@
 // _runtime/05464__isNativeReflectConstruct.js
-import LongPressGesture from "_classCallCheck";
+import HoverGesture from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
+import _get from "_get";
 import importDefaultResult from "_createClass";
 
 function _isNativeReflectConstruct() {
@@ -23,13 +24,30 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class LongPressGesture {
+function changeEventCalculator(arg0, arg1) {
+  if (undefined === arg1) {
+    let obj = { changeX: null, changeY: null };
+    ({ x: obj2[0], y: obj2[1] } = arg0);
+  } else {
+    obj = { changeX: null, changeY: null };
+    obj[0] = arg0.x - arg1.x;
+    obj[1] = arg0.y - arg1.y;
+  }
+  obj = {};
+  const merged = Object.assign(arg0);
+  const merged1 = Object.assign(obj);
+  return obj;
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 2074844346342;
+changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_hoverGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.x,changeY:current.y};}else{changePayload={changeX:current.x-previous.x,changeY:current.y-previous.y};}return{...current,...changePayload};}" };
+class HoverGesture {
   constructor() {
     self = this;
-    tmp = LongPressGesture(this, LongPressGesture);
-    tmp2 = __esModule;
-    obj = __esModule(LongPressGesture);
-    tmp3 = __esModule;
+    tmp = HoverGesture(this, HoverGesture);
+    tmp2 = _isNativeReflectConstruct;
+    obj = _isNativeReflectConstruct(HoverGesture);
+    tmp3 = _isNativeReflectConstruct;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -39,34 +57,35 @@ class LongPressGesture {
     }
     tmp3Result = tmp3(self, constructResult);
     tmp3Result.config = {};
-    tmp3Result.handlerName = "LongPressGestureHandler";
-    result = tmp3Result.shouldCancelWhenOutside(true);
+    tmp3Result.handlerName = "HoverGestureHandler";
     return tmp3Result;
   }
 }
-require("_inherits")(LongPressGesture, require("_isNativeReflectConstruct").BaseGesture);
-const items = [
+require("_inherits")(HoverGesture, require("_isNativeReflectConstruct").ContinousBaseGesture);
+let items = [
   {
-    key: "minDuration",
-    value: function minDuration(CONTEXT_MENU_LONG_PRESS_DURATION_MS) {
-      this.config.minDurationMs = CONTEXT_MENU_LONG_PRESS_DURATION_MS;
+    key: "effect",
+    value: function effect(hoverEffect) {
+      this.config.hoverEffect = hoverEffect;
       return this;
     }
   },
   {
-    key: "maxDistance",
-    value: function maxDistance(maxDist) {
-      this.config.maxDist = maxDist;
-      return this;
-    }
-  },
-  {
-    key: "numberOfPointers",
-    value: function numberOfPointers(numberOfPointers) {
-      this.config.numberOfPointers = numberOfPointers;
-      return this;
+    key: "onChange",
+    value: function onChange(arg0) {
+      this.handlers.changeEventCalculator = changeEventCalculator;
+      const self = this;
+      let fn;
+      fn = callback2(callback(self.prototype), "onChange", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0];
+      return fn(items);
     }
   }
 ];
 
-export const LongPressGesture = importDefaultResult(LongPressGesture, items);
+export const HoverEffect = { NONE: 0, [0]: "NONE", LIFT: 1, [1]: "LIFT", HIGHLIGHT: 2, [2]: "HIGHLIGHT" };
+export const hoverGestureHandlerProps = ["hoverEffect"];
+export const HoverGesture = importDefaultResult(HoverGesture, items);

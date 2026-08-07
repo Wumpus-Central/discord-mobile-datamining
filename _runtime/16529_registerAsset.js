@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/audit_logs", width: 24, height: 24, scales: [2, 3], hash: "d8654e85ab963a57d73460b14bc376cd", name: "ic_audit_update_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 24, height: 24, scales: [2, 3], hash: "0ad684cb154c8b73e2d19dd6933251ad", name: "ic_premium_perk_money_24px", type: "png" });

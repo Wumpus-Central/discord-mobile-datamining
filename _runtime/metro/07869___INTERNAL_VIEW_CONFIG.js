@@ -1,9 +1,11 @@
 // _runtime/metro/07869___INTERNAL_VIEW_CONFIG.js
+import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
-let obj = { uiViewClassName: "RNSVGSvgView", validAttributes: null };
-obj = { bbWidth: true, bbHeight: true, minX: true, minY: true, vbWidth: true, vbHeight: true, align: true, meetOrSlice: true, color: require("result").colorAttribute, pointerEvents: true, hitSlop: true };
-obj[1] = obj;
+let obj = { uiViewClassName: "RNSVGRect", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
+obj = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: require("result").colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, x: true, y: true, height: true, width: true, rx: true, ry: true };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
+obj[2] = obj;
 
-export default setRuntimeConfigProvider.get("RNSVGSvgView", () => obj);
+export default setRuntimeConfigProvider.get("RNSVGRect", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;

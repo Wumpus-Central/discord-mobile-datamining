@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "571b1cf067821ef4949e09c037a195b6", name: "ic_person_shield", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_scheduled_events/native/images", width: 216, height: 80, scales: [2, 3], hash: "0e2ac412c416f1e5e277ac37a8dd593a", name: "stage-channel-upsell", type: "png" });

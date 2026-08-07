@@ -28,15 +28,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(ISOTimezoneWithZParser, Parser) {
+function _setPrototypeOf(DayOfYearParser, Parser) {
   let _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(ISOTimezoneWithZParser, Parser) {
-      ISOTimezoneWithZParser.__proto__ = Parser;
-      return ISOTimezoneWithZParser;
+    _setPrototypeOf = function _setPrototypeOf(DayOfYearParser, Parser) {
+      DayOfYearParser.__proto__ = Parser;
+      return DayOfYearParser;
     };
   }
-  return _setPrototypeOf(ISOTimezoneWithZParser, Parser);
+  return _setPrototypeOf(DayOfYearParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -55,7 +55,7 @@ function _getPrototypeOf(arg0) {
   return _getPrototypeOf(arg0);
 }
 _createSuperInternal = undefined;
-class ISOTimezoneWithZParser {
+class DayOfYearParser {
   constructor() {
     if (this instanceof c1) {
       length = arguments.length;
@@ -80,42 +80,59 @@ class ISOTimezoneWithZParser {
       applyResult = call.apply(_createSuperInternal, items.concat(array));
       tmp13 = undefined === applyResult;
       if (tmp13) {
-        _ReferenceError2 = ReferenceError;
-        tmp20 = new.target;
-        str5 = "this hasn't been initialised - super() hasn't been called";
-        tmp21 = new.target;
+        _ReferenceError3 = ReferenceError;
+        tmp25 = new.target;
+        str7 = "this hasn't been initialised - super() hasn't been called";
+        tmp26 = new.target;
         referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-        tmp23 = referenceError;
+        tmp28 = referenceError;
         throw referenceError;
       } else {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 10, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 90, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 10;
-          applyResult.priority = 10;
+          num3 = 90;
+          applyResult.priority = 90;
         }
         if (tmp13) {
-          _ReferenceError = ReferenceError;
-          tmp16 = new.target;
-          str4 = "this hasn't been initialised - super() hasn't been called";
-          tmp17 = new.target;
+          _ReferenceError2 = ReferenceError;
+          tmp21 = new.target;
+          str6 = "this hasn't been initialised - super() hasn't been called";
+          tmp22 = new.target;
           referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-          tmp19 = referenceError1;
+          tmp24 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["t", "T", "x"];
-          str3 = "incompatibleTokens";
-          if ("incompatibleTokens" in applyResult) {
+          str3 = "subpriority";
+          if ("subpriority" in applyResult) {
             _Object2 = Object;
-            obj = { value: null, enumerable: true, configurable: true, writable: true };
-            obj[0] = items1;
-            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
+            definePropertyResult1 = Object.defineProperty(applyResult, "subpriority", { value: 1, enumerable: true, configurable: true, writable: true });
           } else {
-            applyResult.incompatibleTokens = items1;
+            applyResult.subpriority = 1;
           }
-          return applyResult;
+          if (tmp13) {
+            _ReferenceError = ReferenceError;
+            tmp17 = new.target;
+            str5 = "this hasn't been initialised - super() hasn't been called";
+            tmp18 = new.target;
+            referenceError2 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            tmp20 = referenceError2;
+            throw referenceError2;
+          } else {
+            items1 = ["Y", "R", "q", "Q", "M", "L", "w", "I", "d", "E", "i", "e", "c", "t", "T"];
+            str4 = "incompatibleTokens";
+            if ("incompatibleTokens" in applyResult) {
+              _Object3 = Object;
+              obj = { value: null, enumerable: true, configurable: true, writable: true };
+              obj[0] = items1;
+              definePropertyResult2 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
+            } else {
+              applyResult.incompatibleTokens = items1;
+            }
+            return applyResult;
+          }
         }
       }
     } else {
@@ -129,7 +146,7 @@ class ISOTimezoneWithZParser {
     }
   }
 }
-closure_1 = ISOTimezoneWithZParser;
+closure_1 = DayOfYearParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -141,12 +158,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: ISOTimezoneWithZParser, writable: true, configurable: true };
-ISOTimezoneWithZParser.prototype = Object.create(prototype, { constructor: obj });
+let obj = { value: DayOfYearParser, writable: true, configurable: true };
+DayOfYearParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(ISOTimezoneWithZParser, Parser);
+  _setPrototypeOf(DayOfYearParser, Parser);
 }
-_createSuperInternal = ISOTimezoneWithZParser;
+_createSuperInternal = DayOfYearParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -206,31 +223,46 @@ _createSuperInternal = function _createSuperInternal() {
 };
 obj = {
   key: "parse",
-  value: function parse(arg0, arg1) {
-    if ("X" === arg1) {
-      return _createSuperInternal(3671).parseTimezonePattern(_createSuperInternal(3672).timezonePatterns.basicOptionalMinutes, arg0);
-    } else if ("XX" === arg1) {
-      return _createSuperInternal(3671).parseTimezonePattern(_createSuperInternal(3672).timezonePatterns.basic, arg0);
-    } else if ("XXXX" === arg1) {
-      return _createSuperInternal(3671).parseTimezonePattern(_createSuperInternal(3672).timezonePatterns.basicOptionalSeconds, arg0);
-    } else if ("XXXXX" === arg1) {
-      return _createSuperInternal(3671).parseTimezonePattern(_createSuperInternal(3672).timezonePatterns.extendedOptionalSeconds, arg0);
-    } else {
-      return _createSuperInternal(3671).parseTimezonePattern(_createSuperInternal(3672).timezonePatterns.extended, arg0);
+  value: function parse(arg0, arg1, ordinalNumber) {
+    if ("D" !== arg1) {
+      if ("DD" !== arg1) {
+        if ("Do" === arg1) {
+          return ordinalNumber.ordinalNumber(arg0, { unit: "date" });
+        } else {
+          return _createSuperInternal(3688).parseNDigits(arg1.length, arg0);
+        }
+      }
     }
+    return _createSuperInternal(3688).parseNumericPattern(_createSuperInternal(3689).numericPatterns.dayOfYear, arg0);
   }
 };
 let items = [
   obj,
   {
-    key: "set",
-    value: function set(getTime, timestampIsSet) {
-      let date = getTime;
-      if (!timestampIsSet.timestampIsSet) {
-        const _Date = Date;
-        date = new Date(getTime.getTime() - arg2);
+    key: "validate",
+    value: function validate(getUTCFullYear) {
+      const uTCFullYear = getUTCFullYear.getUTCFullYear();
+      let tmp2 = arg1 >= 1;
+      if (_createSuperInternal(3688).isLeapYearIndex(uTCFullYear)) {
+        if (tmp2) {
+          tmp2 = arg1 <= 366;
+        }
+        let tmp3 = tmp2;
+      } else {
+        tmp3 = tmp2;
+        if (tmp2) {
+          tmp3 = arg1 <= 365;
+        }
       }
-      return date;
+      return tmp3;
+    }
+  },
+  {
+    key: "set",
+    value: function set(setUTCMonth) {
+      setUTCMonth.setUTCMonth(0, arg2);
+      setUTCMonth.setUTCHours(0, 0, 0, 0);
+      return setUTCMonth;
     }
   }
 ];
@@ -253,4 +285,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { ISOTimezoneWithZParser };
+export { DayOfYearParser };
