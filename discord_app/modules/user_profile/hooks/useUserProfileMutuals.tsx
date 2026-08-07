@@ -5,7 +5,7 @@ import recomputeAffinities from "recomputeAffinities";
 import insertUnsortedGuilds from "insertUnsortedGuilds";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { usePrevValue } from "../../../hooks/usePrevValue.tsx";
+import { usePrevValue } from "../../../../discord_common/js/shared/hooks/usePrevValue.tsx";
 
 const require = arg1;
 const result = require("recomputeAffinities").fileFinishedImporting("modules/user_profile/hooks/useUserProfileMutuals.tsx");

@@ -58,7 +58,7 @@ export default function ApplicationStreamActivityStatus(hideText) {
   let tmp12 = !hideIcon;
   if (!hideIcon) {
     obj = { icon: null, style: null };
-    obj[0] = tmp7(9563).TvIcon;
+    obj[0] = tmp7(9579).TvIcon;
     obj[1] = iconStyle;
     tmp12 = callback(ActivityStatusIcon, obj);
     const tmp15 = ActivityStatusIcon;

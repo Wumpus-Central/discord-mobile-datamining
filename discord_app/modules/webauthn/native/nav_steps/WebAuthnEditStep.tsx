@@ -47,7 +47,7 @@ export default function EditCredentialModal(credential) {
   obj[6] = credential.name;
   obj[7] = tmp6;
   obj[8] = credential(1297).ClearButtonVisibility.WITH_CONTENT;
-  const items1 = [callback(credential(7890).FormInput, obj), callback(credential(7890).FormDivider, {}), ];
+  const items1 = [callback(credential(7907).FormInput, obj), callback(credential(7907).FormDivider, {}), ];
   const obj1 = {
     onPress() {
       _undefined(true);
@@ -93,7 +93,7 @@ export default function EditCredentialModal(credential) {
   obj1[2] = tmp6;
   const intl2 = tmp2(1236).intl;
   obj1[4] = intl2.string(credential(1236).t["7asiR3"]);
-  items1[2] = callback(credential(4695).Button, obj1);
+  items1[2] = callback(credential(4712).Button, obj1);
   obj[1] = items1;
-  return closure_6(credential(7890).Form, obj);
+  return closure_6(credential(7907).Form, obj);
 };

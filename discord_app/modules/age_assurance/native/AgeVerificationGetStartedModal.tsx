@@ -34,10 +34,10 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
     let closure_2 = noop;
     noop = closeModal;
     closeModal = function closeModal() {
-      return callback(4490).pop();
+      return callback(4507).pop();
     };
     function closeModalWithOnComplete() {
-      let arr = callback(4490);
+      let arr = callback(4507);
       arr = arr.pop();
       if (callback2 != null) {
         callback2();
@@ -55,7 +55,7 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
     let obj2 = entryPoint(flag[5]);
     obj[2] = obj2.getHeaderCloseButton(closeModal);
     obj[3] = function render() {
-      return closeModal(callback(7875), { onClose: closeModal, modalSessionId: closure_0, entryPoint: callback });
+      return closeModal(callback(7892), { onClose: closeModal, modalSessionId: closure_0, entryPoint: callback });
     };
     obj[memo.INTRO] = obj;
     obj = {
@@ -68,7 +68,7 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
     };
     obj[2] = entryPoint(flag[5]).getHeaderCloseButton(closeModal);
     obj[3] = function render() {
-      return closeModal(callback(7880), { onClose: closeModal, modalSessionId: closure_0 });
+      return closeModal(callback(7897), { onClose: closeModal, modalSessionId: closure_0 });
     };
     obj[memo.RETRY] = obj;
     const obj1 = {
@@ -82,7 +82,7 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
     const obj5 = entryPoint(flag[5]);
     obj1[2] = entryPoint(flag[5]).getHeaderCloseButton(closeModal);
     obj1[3] = function render(arg0, navigation) {
-      return closeModal(callback(7881), { onClose: closeModalWithOnComplete, modalSessionId: closure_0, classificationId: dependencyMap, entryPoint: callback, navigation });
+      return closeModal(callback(7898), { onClose: closeModalWithOnComplete, modalSessionId: closure_0, classificationId: dependencyMap, entryPoint: callback, navigation });
     };
     obj[memo.EXPRESSIVE_INTRO] = obj1;
     obj2 = {
@@ -96,7 +96,7 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
     const obj7 = entryPoint(flag[5]);
     obj2[2] = entryPoint(flag[5]).getHeaderBackButton();
     obj2[3] = function render() {
-      return closeModal(callback(7872), { onClose: closeModalWithOnComplete, modalSessionId: closure_0 });
+      return closeModal(callback(7889), { onClose: closeModalWithOnComplete, modalSessionId: closure_0 });
     };
     obj[memo.GOOGLE_WALLET_VERIFICATION] = obj2;
     return obj;

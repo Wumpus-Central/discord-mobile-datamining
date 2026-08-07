@@ -3,7 +3,7 @@ import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
+import { LinearGradient } from "../../../../_runtime/04723_LinearGradient.js";
 import { preload } from "../../../components_native/common/FastImage.tsx";
 import { isThemeLight } from "../../../design/utils/shared/themes.tsx";
 import { useTheme } from "../../../hooks/useTheme.tsx";
@@ -86,7 +86,7 @@ export default function QuestModalContentCloudBackground(align) {
     const obj2 = { style: null, source: null, resizeMode: null };
     const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
     obj2[0] = items2;
-    obj2[1] = importDefault(isThemeDarkResult ? 14281 : 14282);
+    obj2[1] = importDefault(isThemeDarkResult ? 14298 : 14299);
     obj2[2] = str2;
     items1[1] = tmp6(preload, obj2);
     obj[1] = items1;

@@ -3,7 +3,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { ACTION_SHEET_BORDER_RADIUS } from "ACTION_SHEET_START_HEIGHT_RATIO";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/12485_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12500_registerAsset.js";
 import { set } from "../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { BookmarkIcon } from "../../../design/components/Icon/native/redesign/generated/BookmarkIcon.tsx";

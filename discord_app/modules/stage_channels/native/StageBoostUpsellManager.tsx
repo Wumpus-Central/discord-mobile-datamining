@@ -45,12 +45,12 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
               if (getUncachedChannelPermissions.can(tmp5(1380).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
                 obj = { channel: null };
                 obj[0] = channel;
-                ACTION_SHEET_HEIGHT_HALF.openLazy(tmp5(1988)(5129, tmp6.paths), STAGE_BOOSTING_SHEET_KEY, obj);
+                ACTION_SHEET_HEIGHT_HALF.openLazy(tmp5(1988)(5146, tmp6.paths), STAGE_BOOSTING_SHEET_KEY, obj);
                 c8 = true;
                 const obj3 = ACTION_SHEET_HEIGHT_HALF;
               }
             }
-            tmp5Result = tmp5(9077);
+            tmp5Result = tmp5(9094);
           }
           tmp6 = dependencyMap;
         }

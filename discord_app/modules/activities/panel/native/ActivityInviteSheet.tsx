@@ -1,7 +1,7 @@
 // discord_app/modules/activities/panel/native/ActivityInviteSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import loadInviteSuggestions from "loadInviteSuggestions";
-import { View } from "module_10368";
+import { View } from "module_10384";
 import setSendState from "setSendState";
 import _computeRows from "_computeRows";
 import { ActivityActionTypes } from "ME";
@@ -64,9 +64,9 @@ export default function ActivityInviteSheet(activity) {
   let callback;
   let React;
   const tmp = createCacheKey();
-  analyticsLocations = analyticsLocations(5649)(analyticsLocations(5669).ACTIVITY_INVITE_SHEET).analyticsLocations;
+  analyticsLocations = analyticsLocations(5668)(analyticsLocations(5688).ACTIVITY_INVITE_SHEET).analyticsLocations;
   const tmp2 = analyticsLocations;
-  const tmp4 = analyticsLocations(5649);
+  const tmp4 = analyticsLocations(5668);
   [tmp6, c2] = callback(React.useState(null), 2);
   const tmp7 = callback2((arg0) => arg0);
   callback = tmp7;
@@ -175,11 +175,11 @@ export default function ActivityInviteSheet(activity) {
   const obj1 = { title: null };
   const intl = tmp11(1236).intl;
   obj1[0] = intl.string(activity(1236).t["OzOM/q"]);
-  obj[3] = closure_13(activity(5376).BottomSheetTitleHeader, obj1);
+  obj[3] = closure_13(activity(5395).BottomSheetTitleHeader, obj1);
   if (null != tmp6) {
     const obj2 = { style: null, Illustration: null, title: null };
     obj2[0] = tmp.emptyState;
-    obj2[1] = tmp11(9005).AppCrash;
+    obj2[1] = tmp11(9022).AppCrash;
     obj2[2] = tmp6;
     let tmp19Result = tmp17(tmp11(1297).EmptyState, obj2);
   } else if (tmp15) {
@@ -189,10 +189,10 @@ export default function ActivityInviteSheet(activity) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.searchAndShareContainer;
     const obj5 = { size: "md", isRound: true, onChange: null, placeholder: null };
-    obj5[2] = tmp11(9003).searchInviteSuggestions;
+    obj5[2] = tmp11(9020).searchInviteSuggestions;
     const intl2 = tmp11(1236).intl;
     obj5[3] = intl2.string(tmp11(1236).t.iI1gMg);
-    obj4[1] = tmp17(tmp11(5913).SearchField, obj5);
+    obj4[1] = tmp17(tmp11(5932).SearchField, obj5);
     obj3[0] = tmp17(View, obj4);
     const items4 = [tmp17(View, obj3), ];
     if (tmp16) {
@@ -208,7 +208,7 @@ export default function ActivityInviteSheet(activity) {
       obj7[2] = callback;
       obj7[3] = callback2;
       obj7[4] = callback1;
-      tmp17Result = tmp17(tmp2(15993), obj7);
+      tmp17Result = tmp17(tmp2(16019), obj7);
     }
     const obj8 = { children: null };
     items4[1] = tmp17Result;
@@ -218,6 +218,6 @@ export default function ActivityInviteSheet(activity) {
     const tmp20 = closure_14;
   }
   obj[4] = tmp19Result;
-  obj[1] = closure_13(activity(5377).BottomSheet, obj);
-  return closure_13(activity(5649).AnalyticsLocationProvider, obj);
+  obj[1] = closure_13(activity(5396).BottomSheet, obj);
+  return closure_13(activity(5668).AnalyticsLocationProvider, obj);
 };

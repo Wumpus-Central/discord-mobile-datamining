@@ -38,7 +38,7 @@ export default function XboxInstallAlert(arg0) {
   obj.onConfirm = function onConfirm() {
     const obj = lib(500);
     const isAndroidResult = lib(500).isAndroid();
-    const openURL = callback(3981).openURL;
+    const openURL = callback(3998).openURL;
     if (isAndroidResult) {
       openURL(closure_3);
     } else {

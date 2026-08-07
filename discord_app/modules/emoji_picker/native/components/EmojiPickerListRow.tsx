@@ -74,17 +74,17 @@ function EmojiItem(emoji) {
     obj1[1] = tmp.image;
     const tmp15 = preload;
     if (tmp7Result.isThemeDark(theme.theme)) {
-      tmp8 = 5341;
+      tmp8 = 5360;
       let tmp14Result = tmp14(tmp8);
     } else {
-      tmp14Result = tmp14(5342);
+      tmp14Result = tmp14(5361);
     }
     obj1[2] = tmp14Result;
     const obj2 = { uri: null };
     obj2[0] = emojiURL;
     obj1[3] = obj2;
     callback(tmp15, obj1);
-    tmp7Result = tmp7(4130);
+    tmp7Result = tmp7(4147);
   } else {
     const obj3 = { allowFontScaling: false, style: null, children: null };
     obj3[1] = tmp.surrogates;
@@ -96,7 +96,7 @@ function EmojiItem(emoji) {
     }
     items1[1] = disabled;
     obj[5] = items1;
-    return closure_8(emoji(4827).PressableOpacity, obj);
+    return closure_8(emoji(4844).PressableOpacity, obj);
   }
 }
 ({ View: c3, StyleSheet } = get_ActivityIndicator);

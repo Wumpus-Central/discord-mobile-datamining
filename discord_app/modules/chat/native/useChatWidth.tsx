@@ -33,8 +33,8 @@ export const getChatWidth = function getChatWidth(arg0) {
   if (null == arg0) {
     let diff = width;
     if (obj.getChatLayout().isChatLockedOpen) {
-      diff = width - tmp(10915).getDrawerWidth();
-      const tmpResult = tmp(10915);
+      diff = width - tmp(10930).getDrawerWidth();
+      const tmpResult = tmp(10930);
     }
     let tmp3 = diff;
   } else {

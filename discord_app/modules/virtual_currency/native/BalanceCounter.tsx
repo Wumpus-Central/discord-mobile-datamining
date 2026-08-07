@@ -38,7 +38,7 @@ class BalanceCounter {
     c2 = c6(null);
     tmp2 = c2;
     tmp = closure_0;
-    obj = require("module_4145");
+    obj = require("module_4162");
     sharedValue = require("_slicedToArray");
     c3 = sharedValue;
     clearAnimationTimeout = c6(null);
@@ -106,7 +106,7 @@ class BalanceCounter {
         ref.current = tmp;
       }
     }, items);
-    tmp12 = require("module_4145");
+    tmp12 = require("module_4162");
     class F {
       constructor() {
         if (c8) {
@@ -116,10 +116,10 @@ class BalanceCounter {
           str = Math.round(c3.get());
           tmp3 = value;
           tmp4 = c2;
-          obj = require("module_4145");
+          obj = require("module_4162");
           tmp5 = c6;
           tmp6 = obj.runOnJS(c6)(str);
-          obj2 = require("module_4145");
+          obj2 = require("module_4162");
           tmp7 = c7;
           runOnJSResult = obj2.runOnJS(c7);
           tmp8Result = runOnJSResult(str.toString().length);
@@ -127,7 +127,7 @@ class BalanceCounter {
         return {};
       }
     }
-    obj = { isAnimating: first, animatedValue: sharedValue, runOnJS: require("module_4145").runOnJS, setDisplayValue: tmp5, setMaxDigits: tmp7 };
+    obj = { isAnimating: first, animatedValue: sharedValue, runOnJS: require("module_4162").runOnJS, setDisplayValue: tmp5, setMaxDigits: tmp7 };
     F.__closure = obj;
     F.__workletHash = 4408542396979;
     F.__initData = clearAnimationTimeout;
@@ -147,7 +147,7 @@ class BalanceCounter {
       obj3[1] = style;
       obj3[3] = require("_slicedToArray");
       obj1[1] = c9(require("Text").Text, obj3);
-      tmp14 = c9(require("module_4145").View, obj1);
+      tmp14 = c9(require("module_4162").View, obj1);
     }
     return tmp14;
   }

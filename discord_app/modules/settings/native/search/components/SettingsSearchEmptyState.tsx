@@ -16,7 +16,7 @@ let closure_6 = createCacheKey.createStyles({ container: { paddingTop: 24, justi
 const memoResult = importAllResult.memo(function SettingsSearchEmptyState() {
   const tmp = callback3();
   const effect = importAllResult.useEffect(() => {
-    const AccessibilityAnnouncer = callback(3997).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = callback(4014).AccessibilityAnnouncer;
     const intl = callback(1236).intl;
     AccessibilityAnnouncer.announce(intl.string(callback(1236).t.zihbmv), "polite");
   }, []);

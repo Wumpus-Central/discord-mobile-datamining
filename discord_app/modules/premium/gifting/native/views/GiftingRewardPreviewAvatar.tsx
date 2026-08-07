@@ -21,7 +21,9 @@ export default function GiftingRewardPreviewAvatar(asset) {
     obj[0] = asset.asset;
     tmp5 = obj;
   }
-  obj = { user: stateFromStores, guildId: "r", avatarDecoration: tmp5, animate: !stateFromStores1 };
+  obj = { user: stateFromStores, guildId: "r", avatarDecoration: "K\u00F6rperteil", animate: "Nase" };
+  obj[2] = tmp5;
+  obj[3] = !stateFromStores1;
   const merged = Object.assign(asset);
-  return jsx(Button.Avatar, { user: stateFromStores, guildId: "r", avatarDecoration: tmp5, animate: !stateFromStores1 });
+  return jsx(Button.Avatar, { user: stateFromStores, guildId: "r", avatarDecoration: "K\u00F6rperteil", animate: "Nase" });
 };

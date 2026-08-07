@@ -1,18 +1,16 @@
 // discord_app/modules/image/usePreloadedAsset.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
-import { TurboModuleRegistry } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { set } from "../../utils/PlatformUtils.tsx";
 
 const require = arg1;
-let closure_6 = TurboModuleRegistry.get("NativeAPNGDecorationModule");
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/image/usePreloadedAsset.native.tsx");
+const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/image/usePreloadedAsset.native.tsx");
 
 export default function usePreloadedAsset(arg0) {
   let c5;
-  let tmp8;
+  let tmp9;
   const _require = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
@@ -33,37 +31,37 @@ export default function usePreloadedAsset(arg0) {
   const items = [c5];
   const stateFromStores = _initialize.useStateFromStores(items, () => _undefined2.useReducedMotion);
   let obj2 = _initialize;
-  const tmp2 = _set.isAndroid() && flag && !stateFromStores;
-  dependencyMap = tmp2;
-  let tmp3 = !tmp2;
-  if (tmp2) {
-    tmp3 = null != closure_6;
+  const tmp3 = _set.isAndroid() && flag && !stateFromStores;
+  dependencyMap = tmp3;
+  let tmp4 = !tmp3;
+  if (tmp3) {
+    tmp4 = null != num(15944);
   }
-  callback = tmp3;
+  callback = tmp4;
   let str = "image";
-  if (tmp2) {
+  if (tmp3) {
     str = "apng";
   }
   combined = "" + str + ":" + arg0;
   const obj3 = _set;
   const obj4 = combined;
-  [tmp8, c5] = callback(combined.useState(null), 2);
+  [tmp9, c5] = callback(combined.useState(null), 2);
   let status = "skipped";
   if (null != arg0) {
     status = "skipped";
-    if (tmp3) {
+    if (tmp4) {
       let key;
-      if (tmp8 != null) {
-        key = tmp8.key;
+      if (tmp9 != null) {
+        key = tmp9.key;
       }
       let str3 = "pending";
       if (key === combined) {
-        str3 = tmp8.status;
+        str3 = tmp9.status;
       }
       status = str3;
     }
   }
-  const items1 = [arg0, combined, tmp3, tmp2, num];
+  const items1 = [arg0, combined, tmp4, tmp3, num];
   const effect = obj4.useEffect(() => {
     if (null != c0) {
       if (c3) {
@@ -78,8 +76,9 @@ export default function usePreloadedAsset(arg0) {
           }
         }, timeout);
         if (_undefined) {
-          if (null != outer1_6) {
-            let preloadResult = outer1_6.preload(tmp);
+          if (null != num(_undefined[5])) {
+            let preloadResult = num(_undefined[5]).preload(tmp);
+            const obj2 = num(_undefined[5]);
           }
           preloadResult.then(() => {
             if (!c0) {
@@ -102,7 +101,7 @@ export default function usePreloadedAsset(arg0) {
           };
         }
         preloadResult = num(_undefined[6]).preload(tmp, timeout + 1000);
-        const obj2 = num(_undefined[6]);
+        let obj = num(_undefined[6]);
         const tmp4 = timeout;
       }
     }

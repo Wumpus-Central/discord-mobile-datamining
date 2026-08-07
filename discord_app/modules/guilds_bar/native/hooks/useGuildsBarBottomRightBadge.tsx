@@ -91,7 +91,7 @@ export default function useGuildsBarBottomRightBadge(mentionCount) {
       obj5[2] = items2;
       return obj5;
     } else {
-      return { badge: null, cutout: "r", cutouts: "channelId" };
+      return { badge: null, cutout: "Array", cutouts: "accessible" };
     }
   }, items1);
 };

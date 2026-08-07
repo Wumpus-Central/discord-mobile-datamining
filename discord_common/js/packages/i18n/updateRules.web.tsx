@@ -1,7 +1,7 @@
 // discord_common/js/packages/i18n/updateRules.web.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { t } from "../../../../_runtime/03983_t.js";
+import { t } from "../../../../_runtime/04000_t.js";
 
 const require = arg1;
 const result = require("t").fileFinishedImporting("../discord_common/js/packages/i18n/updateRules.web.tsx");

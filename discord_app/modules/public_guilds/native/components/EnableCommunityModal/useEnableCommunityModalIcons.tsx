@@ -2,7 +2,7 @@
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { ThemeTypes } from "sum";
-import { registerAsset } from "../../../../../../_runtime/07950_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/07967_registerAsset.js";
 import { getChannelSetupSource } from "../../../../../design/components/Illustration/native/redesign/generated/ChannelSetup.tsx";
 import { useTheme } from "../../../../../hooks/useTheme.tsx";
 
@@ -19,9 +19,9 @@ const prototype = EnableCommunityModalIcons.prototype;
 Object.defineProperty(prototype, "safetyCheck", {
   get: function safetyCheck() {
     if (obj.isThemeDark(this.theme)) {
-      let tmpResult = tmp(16648);
+      let tmpResult = tmp(16668);
     } else {
-      tmpResult = tmp(16649);
+      tmpResult = tmp(16669);
     }
     return tmpResult;
   },
@@ -36,9 +36,9 @@ Object.defineProperty(prototype, "channelSetup", {
 Object.defineProperty(prototype, "finishingTouches", {
   get: function finishingTouches() {
     if (obj.isThemeDark(this.theme)) {
-      let tmpResult = tmp(16654);
+      let tmpResult = tmp(16674);
     } else {
-      tmpResult = tmp(16655);
+      tmpResult = tmp(16675);
     }
     return tmpResult;
   },

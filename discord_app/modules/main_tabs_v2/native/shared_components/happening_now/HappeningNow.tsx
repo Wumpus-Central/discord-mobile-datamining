@@ -8,7 +8,7 @@ import { jsx } from "u";
 import createFakeSharedValue from "createFakeSharedValue";
 import createCacheKey from "createCacheKey";
 import { Gesture } from "Directions";
-import { Directions } from "../../../../../../_runtime/05407_Directions.js";
+import { Directions } from "../../../../../../_runtime/05426_Directions.js";
 import { HappeningNowCardPlaceholder } from "HappeningNowCardPlaceholder.tsx";
 
 let HAPPENING_NOW_PANELS_CONTAINER_PADDING;
@@ -72,7 +72,7 @@ const memoResult = importAllResult.memo((listRef) => {
   obj = obj(isFocused[14]);
   isFocused = obj.useIsFocused();
   ref = isFocused;
-  obj = { withoutUserCards: "T", guildId: "Array", showMultipleActivitiesPerChannel: 2682, isFocused: 2683 };
+  obj = { withoutUserCards: "T", guildId: "Array", showMultipleActivitiesPerChannel: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002587634462038079, isFocused: 0.000000000000000000000000000000000000000000000000000000000000000000000010187649789858458 };
   obj[3] = isFocused;
   const tmp7 = callback(ref(isFocused[15])(listRef.cards, obj), 2);
   let first = tmp7[0];

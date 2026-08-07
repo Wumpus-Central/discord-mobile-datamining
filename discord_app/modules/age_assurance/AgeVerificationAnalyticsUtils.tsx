@@ -49,7 +49,7 @@ export const trackNsfwSpaceWarningModalClicked = function trackNsfwSpaceWarningM
   obj = { cta: NSFW_CHANNEL_AGREE_CTA, modal_type: modalType, channel_id: channelId, guild_id: guildId, has_channel_topic: tmp4 };
   obj.track(AnalyticEvents.NSFW_SPACE_WARNING_MODAL_CLICKED, obj);
 };
-export const AgeVerificationToastType = { VERIFIED_TEEN: "verified_teen", VERIFIED_ADULT: "verified_adult", ERROR: "error" };
+export const AgeVerificationToastType = { VERIFIED_TEEN: "verified_teen", VERIFIED_ADULT: "verified_adult", ERROR: "error", FAE_FAILED: "fae_failed", ID_FAILED: "id_failed", UNDERAGE: "underage" };
 export const trackAgeVerificationToastViewed = function trackAgeVerificationToastViewed(toast_type) {
   let obj = expandEventProperties;
   obj = { toast_type };

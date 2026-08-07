@@ -21,7 +21,7 @@ export default (arg0) => {
           let closure_0 = arg0;
           let c3 = 0;
           let c4 = 0;
-          return (/* F119778 */ function*() { ... })();
+          return (/* F119868 */ function*() { ... })();
         });
         const _sendMessage = tmp;
         const apply = tmp.apply;

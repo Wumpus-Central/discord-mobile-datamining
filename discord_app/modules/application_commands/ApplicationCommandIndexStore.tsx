@@ -344,7 +344,7 @@ function handleFetchSuccess(arg0, flag) {
           let tmp19 = id;
           let tmp20 = dependencyMap;
           let tmp21 = dependencyMap;
-          let obj1 = id(6901);
+          let obj1 = id(6920);
           let tmp22 = toApplication;
           let tmp23 = nextResult;
           let tmp24 = obj;
@@ -353,7 +353,7 @@ function handleFetchSuccess(arg0, flag) {
           if (null != tmp6.permissions) {
             let tmp27 = tmp18;
             let tmp28 = tmp20;
-            let tmp19Result = tmp19(6902);
+            let tmp19Result = tmp19(6921);
             let tmp29 = toServerPermissions;
             let tmp30 = nextResult;
             keyPermissionsResult = tmp19Result.keyPermissions(toServerPermissions(tmp6.permissions, id));
@@ -381,7 +381,7 @@ function handleFetchSuccess(arg0, flag) {
       const obj5 = showTooManyUserGuildsAlert;
     }
     const application_commands = index.application_commands;
-    const applicationCommands = id(6901).buildApplicationCommands(application_commands.map((description_default) => {
+    const applicationCommands = id(6920).buildApplicationCommands(application_commands.map((description_default) => {
       let name_default;
       const obj = {};
       const merged = Object.assign(description_default);
@@ -506,7 +506,7 @@ function useQueryState(type, commandTypes, allowFetch) {
   if ("channel" === type.type) {
     channel = type.channel;
   }
-  const permissionContext = applicationId(8267).usePermissionContext(channel, commandTypes.commandTypes);
+  const permissionContext = applicationId(8284).usePermissionContext(channel, commandTypes.commandTypes);
   let dependencyMap = permissionContext;
   let stateFromStores2 = tmp3;
   allowFetch = allowFetch.allowFetch;
@@ -520,7 +520,7 @@ function useQueryState(type, commandTypes, allowFetch) {
   const first = tmp4[0];
   dependencyMap = first;
   stateFromStores2 = tmp4[1];
-  let obj = applicationId(8267);
+  let obj = applicationId(8284);
   const items = [applicationCommandIndexStore];
   stateFromStoresObject = applicationId(589).useStateFromStoresObject(items, () => {
     if ("channel" === applicationId.type) {
@@ -591,15 +591,15 @@ function useQueryState(type, commandTypes, allowFetch) {
               if (null == guild_id.channel.guild_id) {
                 obj = { type: "channel", channelId: null };
                 obj[1] = guild_id.channel.id;
-                const applicationCommandIndex = applicationId(8266).requestApplicationCommandIndex(obj);
-                const obj4 = applicationId(8266);
+                const applicationCommandIndex = applicationId(8283).requestApplicationCommandIndex(obj);
+                const obj4 = applicationId(8283);
               }
             }
             obj1 = { type: "guild", guildId: null };
             guild_id = guild_id.channel.guild_id;
             obj1[1] = guild_id;
-            const applicationCommandIndex1 = applicationId(8266).requestApplicationCommandIndex(obj1);
-            const obj6 = applicationId(8266);
+            const applicationCommandIndex1 = applicationId(8283).requestApplicationCommandIndex(obj1);
+            const obj6 = applicationId(8283);
           }
         }
         stateFromStores2(false);
@@ -627,7 +627,7 @@ function useQueryState(type, commandTypes, allowFetch) {
           tmp8 = tmp5;
         }
         if (tmp8) {
-          obj = applicationId(8266);
+          obj = applicationId(8283);
           const applicationCommandIndex2 = obj.requestApplicationCommandIndex({ type: "user" });
         }
       }
@@ -676,8 +676,8 @@ function useQueryState(type, commandTypes, allowFetch) {
         tmp = applicationId;
       }
       if (tmp) {
-        const applicationCommandIndex = applicationId(8266).requestApplicationCommandIndex({ type: "user" });
-        const obj = applicationId(8266);
+        const applicationCommandIndex = applicationId(8283).requestApplicationCommandIndex({ type: "user" });
+        const obj = applicationId(8283);
       }
       dependencyMap(false);
     }
@@ -727,7 +727,7 @@ function useQueryState(type, commandTypes, allowFetch) {
         tmp = null != applicationId;
       }
       if (tmp) {
-        let obj = applicationId(8266);
+        let obj = applicationId(8283);
         obj = { type: "application", applicationId: null };
         obj[1] = applicationId;
         const applicationCommandIndex = obj.requestApplicationCommandIndex(obj);
@@ -771,7 +771,7 @@ function queryIndex(allowApplicationCommands) {
   ({ permissionContext, contextState, userState, applicationStates, text, builtIns } = allowApplicationCommands);
   if (builtIns === undefined) {
     let arr = NONE;
-    builtIns = NONE(8270).BuiltInCommandFilter.ALLOW;
+    builtIns = NONE(8287).BuiltInCommandFilter.ALLOW;
   }
   let flag = allowApplicationCommands.allowApplicationCommands;
   if (flag === undefined) {
@@ -783,7 +783,7 @@ function queryIndex(allowApplicationCommands) {
   }
   NONE = allowApplicationCommands.scoreMethod;
   if (NONE === undefined) {
-    NONE = NONE(8270).ScoreMethod.NONE;
+    NONE = NONE(8287).ScoreMethod.NONE;
   }
   let sortOptions = allowApplicationCommands.sortOptions;
   if (sortOptions === undefined) {
@@ -802,10 +802,10 @@ function queryIndex(allowApplicationCommands) {
   if (formatted != null) {
     parts = formatted.split(" ");
   }
-  if (builtIns !== NONE(8270).BuiltInCommandFilter.DENY) {
-    const tmp12 = builtIns === NONE(8270).BuiltInCommandFilter.ONLY_TEXT;
-    let builtInCommands = NONE(8272).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
-    const tmp9Result = NONE(8272);
+  if (builtIns !== NONE(8287).BuiltInCommandFilter.DENY) {
+    const tmp12 = builtIns === NONE(8287).BuiltInCommandFilter.ONLY_TEXT;
+    let builtInCommands = NONE(8289).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
+    const tmp9Result = NONE(8289);
   } else {
     builtInCommands = [];
   }
@@ -1016,7 +1016,7 @@ function queryIndex(allowApplicationCommands) {
     return collator.compare(section.section.name, section2.section.name);
   });
   if (builtInCommands.length > 0) {
-    const tmp87 = queryIndexSection(NONE(8272).BUILT_IN_SECTIONS[constants.BUILT_IN], builtInCommands, true, true, obj);
+    const tmp87 = queryIndexSection(NONE(8289).BUILT_IN_SECTIONS[constants.BUILT_IN], builtInCommands, true, true, obj);
     if (null != tmp87) {
       items.push(tmp87);
     }
@@ -1031,7 +1031,7 @@ function queryIndex(allowApplicationCommands) {
       return obj;
     });
   });
-  if (NONE === NONE(8270).ScoreMethod.COMMAND_ONLY) {
+  if (NONE === NONE(8287).ScoreMethod.COMMAND_ONLY) {
     const context = permissionContext.context;
     let guild_id;
     if (permissionContext != null) {
@@ -1125,7 +1125,7 @@ function queryIndexSection(descriptor, builtInCommands, arg2, arg3, arg4) {
   }
   let allowedForUser = null;
   if (null != guild_id) {
-    let obj = importAll(9456);
+    let obj = importAll(9473);
     allowedForUser = obj.computeAllowedForUser(descriptor.permissions, context.guild_id, userId, roleIds, isImpersonating);
   }
   let guild_id1;
@@ -1134,8 +1134,8 @@ function queryIndexSection(descriptor, builtInCommands, arg2, arg3, arg4) {
   }
   let allowedForChannel = null;
   if (null != guild_id1) {
-    allowedForChannel = importAll(9456).computeAllowedForChannel(descriptor.permissions, context, context.guild_id);
-    const obj2 = importAll(9456);
+    allowedForChannel = importAll(9473).computeAllowedForChannel(descriptor.permissions, context, context.guild_id);
+    const obj2 = importAll(9473);
   }
   const items = [];
   const iter = builtInCommands[Symbol.iterator]();
@@ -1145,7 +1145,7 @@ function queryIndexSection(descriptor, builtInCommands, arg2, arg3, arg4) {
     let tmp16 = nextResult;
     let tmp18 = dependencyMap;
     let tmp19 = dependencyMap;
-    let obj3 = importAll(9456);
+    let obj3 = importAll(9473);
     obj = { applicationAllowedForUser: null, applicationAllowedForChannel: null, commandBotId: null, isGuildInstalled: null, isUserInstalled: null };
     obj[0] = allowedForUser;
     obj[1] = allowedForChannel;
@@ -1215,7 +1215,7 @@ function queryIndexSection(descriptor, builtInCommands, arg2, arg3, arg4) {
     obj[0] = descriptor;
     obj[1] = arr2;
     let tmp36 = obj;
-    tmp39 = scoreMethod !== ScoreMethod.ScoreMethod.NONE && scoreMethod !== tmp27(8270).ScoreMethod.APPLICATION_ONLY;
+    tmp39 = scoreMethod !== ScoreMethod.ScoreMethod.NONE && scoreMethod !== tmp27(8287).ScoreMethod.APPLICATION_ONLY;
   } else {
     tmp36 = null;
   }
@@ -1679,7 +1679,7 @@ prototype["query"] = function query(type, commandTypes, applicationId) {
           tmp36 = tmp37;
         }
         if (tmp36) {
-          let tmp8Result = tmp8(8266);
+          let tmp8Result = tmp8(8283);
           const applicationCommandIndex = tmp8Result.requestApplicationCommandIndex({ type: "user" });
           flag5 = true;
         }
@@ -1705,7 +1705,7 @@ prototype["query"] = function query(type, commandTypes, applicationId) {
           tmp42 = null != applicationId.applicationId;
         }
         if (tmp42) {
-          tmp8Result = tmp8(8266);
+          tmp8Result = tmp8(8283);
           obj = { type: "application", applicationId: null };
           obj[1] = applicationId.applicationId;
           const applicationCommandIndex1 = tmp8Result.requestApplicationCommandIndex(obj);
@@ -1745,17 +1745,17 @@ prototype["query"] = function query(type, commandTypes, applicationId) {
           if (null == guild_id.guild_id) {
             obj1 = { type: "channel", channelId: null };
             obj1[1] = guild_id.id;
-            const applicationCommandIndex2 = tmp8(8266).requestApplicationCommandIndex(obj1);
+            const applicationCommandIndex2 = tmp8(8283).requestApplicationCommandIndex(obj1);
             flag6 = true;
-            const tmp8Result1 = tmp8(8266);
+            const tmp8Result1 = tmp8(8283);
           }
         }
         obj2 = { type: "guild", guildId: null };
         guild_id = guild_id.guild_id;
         obj2[1] = guild_id;
-        const applicationCommandIndex3 = tmp8(8266).requestApplicationCommandIndex(obj2);
+        const applicationCommandIndex3 = tmp8(8283).requestApplicationCommandIndex(obj2);
         flag6 = true;
-        const tmp8Result2 = tmp8(8266);
+        const tmp8Result2 = tmp8(8283);
       }
     }
     const obj3 = { permissionContext: null, text: null, allowApplicationCommands: null, builtIns: null, scoreMethod: null, allowEmptySections: null, contextState: null, userState: null, applicationStates: null, sortOptions: null, singleApplicationId: null, installOnDemand: null };
@@ -2277,15 +2277,15 @@ export const useContextIndexState = function useContextIndexState(arg0, arg1, ar
               if (null == guild_id.channel.guild_id) {
                 obj = { type: "channel", channelId: null };
                 obj[1] = guild_id.channel.id;
-                const applicationCommandIndex = applicationId(8266).requestApplicationCommandIndex(obj);
-                const obj4 = applicationId(8266);
+                const applicationCommandIndex = applicationId(8283).requestApplicationCommandIndex(obj);
+                const obj4 = applicationId(8283);
               }
             }
             obj1 = { type: "guild", guildId: null };
             guild_id = guild_id.channel.guild_id;
             obj1[1] = guild_id;
-            const applicationCommandIndex1 = applicationId(8266).requestApplicationCommandIndex(obj1);
-            const obj6 = applicationId(8266);
+            const applicationCommandIndex1 = applicationId(8283).requestApplicationCommandIndex(obj1);
+            const obj6 = applicationId(8283);
           }
         }
         stateFromStores2(false);
@@ -2313,7 +2313,7 @@ export const useContextIndexState = function useContextIndexState(arg0, arg1, ar
           tmp8 = tmp5;
         }
         if (tmp8) {
-          obj = applicationId(8266);
+          obj = applicationId(8283);
           const applicationCommandIndex2 = obj.requestApplicationCommandIndex({ type: "user" });
         }
       }
@@ -2370,8 +2370,8 @@ export const useGuildIndexState = function useGuildIndexState(arg0, arg1) {
         if (tmp15) {
           obj = { type: "guild", guildId: null };
           obj[1] = callback;
-          const applicationCommandIndex = callback(8266).requestApplicationCommandIndex(obj);
-          const obj3 = callback(8266);
+          const applicationCommandIndex = callback(8283).requestApplicationCommandIndex(obj);
+          const obj3 = callback(8283);
         }
       }
       dependencyMap(false);
@@ -2416,8 +2416,8 @@ export const useUserIndexState = function useUserIndexState(arg0, arg1) {
         tmp = applicationId;
       }
       if (tmp) {
-        const applicationCommandIndex = applicationId(8266).requestApplicationCommandIndex({ type: "user" });
-        const obj = applicationId(8266);
+        const applicationCommandIndex = applicationId(8283).requestApplicationCommandIndex({ type: "user" });
+        const obj = applicationId(8283);
       }
       dependencyMap(false);
     }

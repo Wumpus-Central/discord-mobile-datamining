@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDnDStore.tsx
 import { GuildsNodeType } from "insertUnsortedGuilds";
 import identity from "identity";
-import { isIterable } from "../../../../_runtime/03897_isIterable.js";
+import { isIterable } from "../../../../_runtime/03914_isIterable.js";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
 let obj = { mode: null, initialX: 0, initialY: 0, absoluteX: 0, absoluteY: 0 };
@@ -9,7 +9,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   const _require = arg0;
   let closure_1 = arg1;
-  let obj = { dragSpecs: "Boolean", overSpecs: "sa", dropSpecs: "isArray", dragRegion: null, gestureState: null, dragDropInProgress: null, listInsets: "casa", scrollPosition: "casa com jardim", windowSize: "constru\u00E7\u00E3o", setStateShallow: "jardim", dropStart: "lar", dropComplete: true };
+  let obj = { dragSpecs: "Boolean", overSpecs: "sa", dropSpecs: "isArray", dragRegion: null, gestureState: null, dragDropInProgress: null, listInsets: "sans-serif-medium", scrollPosition: "normal", windowSize: "<string:587203336>", setStateShallow: "<string:3103785287>", dropStart: "<string:3120562626>", dropComplete: "<string:2550137357>" };
   obj[3] = _ReanimatedRexport.makeMutable({ min: 0, max: 0 });
   const obj2 = _ReanimatedRexport;
   obj[4] = _ReanimatedRexport.makeMutable(obj);
@@ -55,7 +55,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       const error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      callback(tmp2[3]).batchUpdates(() => newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "r", overSpecs: "channelId" }));
+      callback(tmp2[3]).batchUpdates(() => newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "accessible" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(outer1_5);
       const _setTimeout = setTimeout;
@@ -103,7 +103,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   return obj;
 });
-let result = require("module_4145").fileFinishedImporting("modules/guilds_bar/native/GuildsBarDnDStore.tsx");
+let result = require("module_4162").fileFinishedImporting("modules/guilds_bar/native/GuildsBarDnDStore.tsx");
 
 export default withEqualityFn;
 export const INITIAL_GESTURE_STATE = obj;

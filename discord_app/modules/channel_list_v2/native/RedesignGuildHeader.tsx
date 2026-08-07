@@ -1,5 +1,5 @@
 // discord_app/modules/channel_list_v2/native/RedesignGuildHeader.tsx
-import importAllResult from "module_4145";
+import importAllResult from "module_4162";
 import get_ActivityIndicator from "t";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import setContent from "setContent";
@@ -33,7 +33,7 @@ function GuildInfoHeader(bannerHeight) {
   let scrollPosition;
   ({ guild, scrollPosition } = bannerHeight);
   bannerHeight = bannerHeight.bannerHeight;
-  let obj = scrollPosition(4145);
+  let obj = scrollPosition(4162);
   const fn = function s() {
     let obj = { transform: null };
     obj = { translateY: Math.max(0, scrollPosition.get() - bannerHeight) };
@@ -45,7 +45,7 @@ function GuildInfoHeader(bannerHeight) {
   fn.__workletHash = 6302330113586;
   fn.__initData = closure_18;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj1 = scrollPosition(4145);
+  let obj1 = scrollPosition(4162);
   const fn2 = function u() {
     let obj = { transform: null };
     obj = { translateY: Math.min(0, scrollPosition.get() - bannerHeight) };
@@ -63,10 +63,10 @@ function GuildInfoHeader(bannerHeight) {
   items = [animatedStyle, { overflow: "hidden" }];
   const tmp = callback5();
   obj = { style: animatedStyle1, children: null };
-  const tmp5 = bannerHeight(4146);
-  obj[1] = callback(bannerHeight(4829), { absolute: true, tall: true });
-  const items1 = [callback(bannerHeight(4146), obj), ];
-  obj1 = { style: tmp.headerWrapper, children: callback(bannerHeight(15171), obj2) };
+  const tmp5 = bannerHeight(4163);
+  obj[1] = callback(bannerHeight(4846), { absolute: true, tall: true });
+  const items1 = [callback(bannerHeight(4163), obj), ];
+  obj1 = { style: tmp.headerWrapper, children: callback(bannerHeight(15187), obj2) };
   obj2 = { guild, showExtraButtons: !isFavoritesGuildIdResult, canOpenGuildActionSheet: !isFavoritesGuildIdResult, showCoachmarks: !isFavoritesGuildIdResult };
   items1[1] = callback(closure_5, obj1);
   obj[1] = items1;
@@ -253,11 +253,11 @@ export const useRedesignGuildHeaderHeight = function useRedesignGuildHeaderHeigh
   if (isThemeDarkResult) {
     num = 1;
   }
-  let tmp6Result = tmp6(3988);
+  let tmp6Result = tmp6(4005);
   let num2 = 0;
   const token = tmp6Result.useToken(tmp(712).modules.mobile.CHANNEL_LIST_SUBTITLE_TEXT_STYLE);
   if (!isFavoritesGuildIdResult) {
-    num2 = tmp6(4699).SMALL_BUTTON_HEIGHT + closure_11;
+    num2 = tmp6(4716).SMALL_BUTTON_HEIGHT + closure_11;
   }
   let num3 = 16;
   if (isFavoritesGuildIdResult) {
@@ -265,13 +265,13 @@ export const useRedesignGuildHeaderHeight = function useRedesignGuildHeaderHeigh
   }
   let num4 = 0;
   if (tmp8) {
-    tmp6Result = tmp6(9370);
+    tmp6Result = tmp6(9387);
     num4 = tmp6Result.scaleTextLineHeight(token, fontScale);
   }
   let bound = scaleTextLineHeightResult;
   if (isFavoritesGuildIdResult) {
     const _Math = Math;
-    bound = Math.max(scaleTextLineHeightResult, tmp6(4699).SMALL_BUTTON_HEIGHT);
+    bound = Math.max(scaleTextLineHeightResult, tmp6(4716).SMALL_BUTTON_HEIGHT);
   }
   return t(16 + bound + num4 + num2 + num3 + num);
 };

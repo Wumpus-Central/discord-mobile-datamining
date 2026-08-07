@@ -70,8 +70,8 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                     const obj1 = { frameId: null, layoutMode: null };
                     obj1[0] = tmp10.id;
                     obj1[1] = outer1_8.FOCUSED;
-                    const result = outer1_1(10513).updateFrameLayoutMode(obj1);
-                    const obj9 = outer1_1(10513);
+                    const result = outer1_1(10529).updateFrameLayoutMode(obj1);
+                    const obj9 = outer1_1(10529);
                   }
                 }
                 if (tmp9) {
@@ -80,15 +80,15 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                   if ("guild_id" in _location) {
                     guild_id = _location.guild_id;
                   }
-                  outer1_1(10587)(guild_id, _location);
-                  const tmp25 = outer1_1(10587);
+                  outer1_1(10584)(guild_id, _location);
+                  const tmp25 = outer1_1(10584);
                 } else {
                   if (dependencyMap != null) {
                     dependencyMap();
                   }
                   c4 = 1;
                   if (outer1_7) {
-                    let obj5 = outer1_1(10513);
+                    let obj5 = outer1_1(10529);
                     let obj2 = { applicationId: null, surface: null };
                     obj2[0] = tmp41;
                     obj2[1] = outer1_7;
@@ -110,7 +110,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                     }
                   }
                 }
-                obj2 = outer1_0(10898);
+                obj2 = outer1_0(10913);
                 const obj4 = { appId: null, botId: null, analyticsLocations: null };
                 obj4[0] = tmp41;
                 let id1;

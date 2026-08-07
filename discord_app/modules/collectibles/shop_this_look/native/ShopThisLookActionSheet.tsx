@@ -1,12 +1,13 @@
 // discord_app/modules/collectibles/shop_this_look/native/ShopThisLookActionSheet.tsx
-import getSystemLocale from "getSystemLocale";
-import get_ActivityIndicator from "openCollectiblesShop";
+import openCollectiblesShop from "openCollectiblesShop";
+import get_ActivityIndicator from "QUICK_SWITCHER";
 import getFetchState from "getFetchState";
 import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
-import jsxProd from "set";
+import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import { dispatcher } from "../../../toast/native/ToastActionCreators.tsx";
 import { WishlistItemCard } from "../../../wishlists/native/WishlistItemCard.tsx";
 import { SourceIcon } from "../../../wishlists/native/WishlistItemCardBase.tsx";
 import { useEquippedCollectibleSkuIds } from "../../hooks/useMaybeFetchEquippedCollectibleProducts.tsx";
@@ -16,10 +17,17 @@ let c5;
 let c9;
 let metroImportAll;
 const require = arg1;
+function showUnavailableToast() {
+  let obj = dispatcher;
+  obj = { key: "SHOP_THIS_LOOK_ITEM_UNAVAILABLE", content: null };
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.YymRft);
+  obj.open(obj);
+}
 function ShopThisLookCard(skuId) {
   skuId = skuId.skuId;
   const size = skuId.size;
-  let obj = skuId(12421);
+  let obj = skuId(12436);
   let obj1 = skuId(589);
   const items = [getFetchState];
   const items1 = [skuId];
@@ -42,35 +50,35 @@ function ShopThisLookCard(skuId) {
   } else {
     tmp13 = null;
     if (null != stateFromStores) {
-      if (tmp2Result.isShoppableCollectibleSku(stateFromStores)) {
+      const result = tmp(12440).isShoppableCollectibleSku(stateFromStores);
+      const tmp7 = WishlistItemCard;
+      if (result) {
         obj = { sku: null, size: null, onPress: null };
         obj[0] = stateFromStores;
         obj[1] = size;
         obj[2] = skuId.onPress;
-        let tmp5Result = tmp5(WishlistItemCard, obj);
+        let tmp5Result = tmp5(tmp7, obj);
       } else {
-        obj1 = { style: null, children: null };
-        obj1[0] = tmp.disabledCard;
-        const obj2 = { sku: null, size: null };
-        obj2[0] = stateFromStores;
-        obj2[1] = size;
-        obj1[1] = tmp5(WishlistItemCard, obj2);
-        tmp5Result = tmp5(closure_5, obj1);
+        obj1 = { sku: null, size: null, overlay: null, onPress: null };
+        obj1[0] = stateFromStores;
+        obj1[1] = size;
+        obj1[2] = tmp(9290).WishlistItemCardOverlay.LOCKED;
+        obj1[3] = showUnavailableToast;
+        tmp5Result = tmp5(tmp7, obj1);
       }
-      tmp2Result = skuId(12425);
+      const tmpResult = tmp(12440);
     }
   }
   return tmp13;
 }
 ({ ActivityIndicator: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, description: null, itemsContainer: null, disabledCard: null };
+createCacheKey = { container: null, description: null, itemsContainer: null };
 createCacheKey = { paddingHorizontal: require("Themes").space.PX_16, gap: require("Themes").space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center", marginTop: -require("Themes").space.PX_8 };
 let obj1 = { textAlign: "center", marginTop: -require("Themes").space.PX_8 };
 createCacheKey[2] = { alignSelf: "center", flexDirection: "row", flexWrap: "wrap", paddingBottom: require("Themes").space.PX_8 };
-createCacheKey[3] = { opacity: 0.5 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let obj2 = { alignSelf: "center", flexDirection: "row", flexWrap: "wrap", paddingBottom: require("Themes").space.PX_8 };
 let result = require("getFetchState").fileFinishedImporting("modules/collectibles/shop_this_look/native/ShopThisLookActionSheet.tsx");
@@ -89,18 +97,18 @@ export default function ShopThisLookActionSheet(arg0) {
   let obj = _useEquippedCollectibleSkuIds;
   const equippedCollectibleSkuIds = obj.useEquippedCollectibleSkuIds(userId, guildId);
   obj = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-  ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(12397)(obj));
-  const tmp2 = analyticsLocations(12397)(obj);
-  analyticsLocations = analyticsLocations(5649)(analyticsLocations(5669).USER_PROFILE_OVERFLOW_MENU).analyticsLocations;
+  ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(12412)(obj));
+  const tmp2 = analyticsLocations(12412)(obj);
+  analyticsLocations = analyticsLocations(5668)(analyticsLocations(5688).USER_PROFILE_OVERFLOW_MENU).analyticsLocations;
   const items = [analyticsLocations];
   dependencyMap = React.useCallback((initialProductSkuId) => {
-    let obj = analyticsLocations(4253);
+    let obj = analyticsLocations(4270);
     obj.hideActionSheet();
-    obj = { initialProductSkuId, analyticsLocations, analyticsSource: analyticsLocations(5669).USER_PROFILE_OVERFLOW_MENU };
-    const result = _undefined(6921).openCollectiblesShopMobile(obj);
+    obj = { initialProductSkuId, analyticsLocations, analyticsSource: analyticsLocations(5688).USER_PROFILE_OVERFLOW_MENU };
+    const result = _undefined(6940).openCollectiblesShopMobile(obj);
   }, items);
   obj = { startExpanded: true, title: null, children: null };
-  const tmp3 = analyticsLocations(5649);
+  const tmp3 = analyticsLocations(5668);
   const intl = _getSystemLocale.intl;
   obj[1] = intl.string(_getSystemLocale.t.xNdRDO);
   const obj1 = { style: tmp.container, children: null };
@@ -108,13 +116,13 @@ export default function ShopThisLookActionSheet(arg0) {
   const intl2 = _getSystemLocale.intl;
   obj2[3] = intl2.string(_getSystemLocale.t["ws+0Lr"]);
   const items1 = [callback(_Text.Text, obj2), ];
-  const tmp4 = analyticsLocations(9386);
+  const tmp4 = analyticsLocations(9403);
   const items2 = [tmp.itemsContainer, { gap, width: rowWidth }];
   items1[1] = callback(closure_5, {
     style: items2,
     children: equippedCollectibleSkuIds.map((skuId) => {
       let closure_0 = skuId;
-      return outer1_8(outer1_11, {
+      return outer1_8(outer1_12, {
         skuId,
         size: closure_0,
         onPress() {

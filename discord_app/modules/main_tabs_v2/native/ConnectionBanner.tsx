@@ -8,8 +8,8 @@ import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT";
 import { AnalyticEvents } from "ME";
 import jsxProd from "CONFIG_NEVER_ANIMATE";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04706_LinearGradient.js";
-import { _isNativeReflectConstruct } from "../../../../_runtime/05293__isNativeReflectConstruct.js";
+import { LinearGradient } from "../../../../_runtime/04723_LinearGradient.js";
+import { _isNativeReflectConstruct } from "../../../../_runtime/05309__isNativeReflectConstruct.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { map } from "../../../design/tokens/native/useToken.tsx";
@@ -37,14 +37,14 @@ function ConnectionBannerIcon(state) {
     obj1[0] = tmp.leadingSlot;
     const obj2 = { size: "xs", color: null };
     obj2[1] = tmp5(712).colors.INTERACTIVE_ICON_DEFAULT;
-    obj1[1] = callback2(tmp2(15405).ConnectionUnknownIcon, obj2);
+    obj1[1] = callback2(tmp2(15429).ConnectionUnknownIcon, obj2);
     return callback2(closure_6, obj1);
   } else if (tmp7.BACK_ONLINE === state) {
     obj = { style: null, children: null };
     obj[0] = tmp.leadingSlot;
     const obj3 = { size: "xs", color: null };
     obj3[1] = tmp5(712).colors.ICON_FEEDBACK_POSITIVE;
-    obj[1] = callback2(tmp2(15407).ConnectionFineIcon, obj3);
+    obj[1] = callback2(tmp2(15431).ConnectionFineIcon, obj3);
     return callback2(closure_6, obj);
   }
 }
@@ -75,7 +75,7 @@ function ConnectionBannerContent(state) {
 function BackOnlineGlow(opacity) {
   let token;
   const tmp = createCacheKey();
-  let obj = token(3988);
+  let obj = token(4005);
   token = obj.useToken(Themes.colors.ICON_FEEDBACK_POSITIVE);
   let items = [token];
   const memo = React.useMemo(() => {
@@ -209,11 +209,11 @@ let closure_26 = { code: "function ConnectionBannerTsx2(){const{progress,CONNECT
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
 
 export default function ConnectionBanner() {
-  const config = stateFromStores(12865).useConfig({ location: "ConnectionBanner" });
+  const config = stateFromStores(12880).useConfig({ location: "ConnectionBanner" });
   const hidden = config.hidden;
   stateFromStores = undefined;
   let dependencyMap;
-  let obj = stateFromStores(12865);
+  let obj = stateFromStores(12880);
   const items = [updateState];
   stateFromStores = hidden(589).useStateFromStores(items, () => state.getState());
   dependencyMap = React.useRef(null);

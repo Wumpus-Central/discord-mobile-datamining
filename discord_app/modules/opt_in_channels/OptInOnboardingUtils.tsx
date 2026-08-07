@@ -41,7 +41,7 @@ function optIntoAllChannelsForExistingMember(id, arg1) {
   });
   mapped = found.map((channel) => channel.channel.id);
   const item = include.forEach((arg0) => mapped.push(arg0));
-  const obj2 = mapped(5230);
+  const obj2 = mapped(5246);
   const result = obj2.onboardExistingMember(id, new Set(mapped));
 }
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c4, GUILD_VOCAL_CHANNELS_KEY: c5 } = comparator);
@@ -93,10 +93,10 @@ export const toggleShowAllChannels = function toggleShowAllChannels(id) {
   if (tmp7) {
     optIntoAllChannelsForExistingMember(id);
   } else {
-    tmpResult = tmp(6915);
+    tmpResult = tmp(6934);
     const result1 = tmpResult.isOptInEnabledForGuild(id);
-    tmp(5239).setGuildOptIn(id, !result1);
-    const tmpResult1 = tmp(5239);
+    tmp(5255).setGuildOptIn(id, !result1);
+    const tmpResult1 = tmp(5255);
   }
 };
 export { optIntoAllChannelsForExistingMember };

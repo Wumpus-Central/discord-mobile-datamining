@@ -30,7 +30,7 @@ export default require("noop").memo(function HeaderGlassBlur(shown) {
   shown = shown.shown;
   ({ blurStyle, style } = shown);
   const tmp = callback();
-  let obj = shown(4145);
+  let obj = shown(4162);
   const fn = function k() {
     let opacity = 0;
     if (shown.get()) {
@@ -47,7 +47,7 @@ export default require("noop").memo(function HeaderGlassBlur(shown) {
   fn.__workletHash = 3451055086565;
   fn.__initData = closure_8;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = shown(4145);
+  let obj2 = shown(4162);
   const fn2 = function p() {
     let obj = shown(outer1_2[6]);
     let num = 0;
@@ -57,7 +57,7 @@ export default require("noop").memo(function HeaderGlassBlur(shown) {
     obj = { blurAmount: obj.withSpring(num) };
     return obj;
   };
-  obj = { withSpring: shown(4694).withSpring, shown };
+  obj = { withSpring: shown(4711).withSpring, shown };
   fn2.__closure = obj;
   fn2.__workletHash = 5642055202507;
   fn2.__initData = closure_9;
@@ -75,13 +75,13 @@ export default require("noop").memo(function HeaderGlassBlur(shown) {
   const items1 = [StyleSheet.absoluteFillObject, blurStyle];
   const items2 = [closure_4(tmp11, { blurStyle: "ultra-thin", blurTheme: str, style: items1, animatedProps }), ];
   obj2 = { style: tmp.strokeContainer, children: null };
-  let tmp6Result = tmp6(5702);
+  let tmp6Result = tmp6(5721);
   const items3 = [closure_4(set, { style: tmp.stroke }), ];
-  tmp6Result = tmp6(5702);
+  tmp6Result = tmp6(5721);
   const obj3 = { style: tmp.stroke };
-  obj6 = shown(4130);
-  const tmp2Result = tmp2(4130);
-  items3[1] = closure_4(tmp6Result, { style: tmp2(4130).isThemeDark(tmp7) ? tmp.strokeAlt : tmp.strokeAltLight });
+  obj6 = shown(4147);
+  const tmp2Result = tmp2(4147);
+  items3[1] = closure_4(tmp6Result, { style: tmp2(4147).isThemeDark(tmp7) ? tmp.strokeAlt : tmp.strokeAltLight });
   obj2[1] = items3;
   items2[1] = closure_5(tmp6Result, obj2);
   obj1[1] = items2;

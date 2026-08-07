@@ -27,10 +27,10 @@ export const openSocialLayerStorefrontUnsupportedOnMobileAlert = function openSo
 export const openSocialLayerStorefrontProductDetailsModal = function openSocialLayerStorefrontProductDetailsModal(closure_0) {
   let obj = apexExperiment;
   if (obj.getIsEligibleForSocialLayerStorefrontMobilePurchasing({ location: "social_layer_storefront_product_details_modal" })) {
-    const socialLayerStorefrontConfig = tmp(7678).fetchSocialLayerStorefrontConfig();
+    const socialLayerStorefrontConfig = tmp(7697).fetchSocialLayerStorefrontConfig();
     const obj5 = ModalActionCreators;
-    obj5.pushLazy(tmp(1988)(10007, dependencyMap.paths), closure_0, c4, { presentation: "modal" });
-    const tmpResult = tmp(7678);
+    obj5.pushLazy(tmp(1988)(10023, dependencyMap.paths), closure_0, c4, { presentation: "modal" });
+    const tmpResult = tmp(7697);
   } else {
     obj = { title: null, body: null };
     const intl = tmp(1236).intl;
@@ -46,7 +46,7 @@ export const closeSocialLayerStorefrontProductDetailsModal = function closeSocia
 };
 export const openSocialLayerStorefrontGiftModal = function openSocialLayerStorefrontGiftModal(closure_0) {
   if (obj.getIsEligibleForSocialLayerStorefrontMobilePurchasing({ location: "social_layer_storefront_gift_modal" })) {
-    ModalActionCreators.pushLazy(asyncRequireImpl(10016, dependencyMap.paths), closure_0, c5);
+    ModalActionCreators.pushLazy(asyncRequireImpl(10032, dependencyMap.paths), closure_0, c5);
     const obj2 = ModalActionCreators;
   }
 };

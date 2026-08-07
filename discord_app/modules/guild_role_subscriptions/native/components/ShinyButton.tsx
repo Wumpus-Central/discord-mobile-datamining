@@ -2,7 +2,7 @@
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08611_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08628_registerAsset.js";
 import { CollapsingText } from "../../../../design/components/Button/native/BaseTextButton.native.tsx";
 
 const require = arg1;

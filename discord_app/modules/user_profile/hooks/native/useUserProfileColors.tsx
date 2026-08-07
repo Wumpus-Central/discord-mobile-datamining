@@ -33,9 +33,9 @@ export const useUserProfileColors = function useUserProfileColors(arg0) {
   const obj5 = map;
   const colors = Themes.colors;
   obj[2] = map.useToken(tmp7 ? colors.CARD_MUTED_BG : colors.USER_PROFILE_CONTAINER_BACKGROUND, tmp3);
-  let tmp4Result = tmp4(3988);
+  let tmp4Result = tmp4(4005);
   obj[3] = tmp4Result.useToken(Themes.colors.BORDER_MUTED, tmp3);
-  tmp4Result = tmp4(3988);
+  tmp4Result = tmp4(4005);
   obj[4] = tmp4Result.useToken(Themes.colors.BACKGROUND_BASE_LOWER, tmp3);
   const obj6 = map;
   obj[5] = map.useToken(Themes.colors.BACKGROUND_SURFACE_HIGH, tmp3);
@@ -58,18 +58,18 @@ export const useUserProfileColors = function useUserProfileColors(arg0) {
         if (stateFromStores) {
           tmp8 = overlaySyncedWithUserTheme;
         }
-        const result = tmp4(8236).calculateOverlayedColor(primaryColor, tmp8);
+        const result = tmp4(8253).calculateOverlayedColor(primaryColor, tmp8);
         obj = {};
         const merged = Object.assign(obj);
         obj.containerBackground = containerBackground;
-        const tmp4Result3 = tmp4(8236);
+        const tmp4Result3 = tmp4(8253);
         const tmp4Result4 = tmp4(688);
-        obj.gradientSecondaryBackground = tmp4Result4.int2hex(tmp4(8236).calculateOverlayedColor(secondaryColor, overlay));
-        const tmp4Result5 = tmp4(8236);
+        obj.gradientSecondaryBackground = tmp4Result4.int2hex(tmp4(8253).calculateOverlayedColor(secondaryColor, overlay));
+        const tmp4Result5 = tmp4(8253);
         obj.avatarBackground = tmp4(688).int2hex(result);
         const tmp4Result6 = tmp4(688);
         const tmp4Result7 = tmp4(688);
-        obj.statusBackground = tmp4Result7.int2hex(tmp4(8236).calculateOverlayedColor(result, sectionBox));
+        obj.statusBackground = tmp4Result7.int2hex(tmp4(8253).calculateOverlayedColor(result, sectionBox));
         return obj;
       }
     }

@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/FamilyCenterUtils.tsx
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import items from "items";
-import { t } from "../../../_runtime/03866_t.js";
+import { t } from "../../../_runtime/03883_t.js";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { messagesProxy } from "FamilyCenter.messages.js";
 import { maybeFetchCollectiblesForInvoices } from "FamilyCenterActionCreators.tsx";

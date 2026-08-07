@@ -45,12 +45,12 @@ function retryFailedUsers() {
           obj[1] = user;
           obj[2] = user.id;
           obj[4] = tmp23;
-          obj[10] = guildId(4474).getName(guildId, tmp, user);
-          const obj2 = guildId(4474);
+          obj[10] = guildId(4491).getName(guildId, tmp, user);
+          const obj2 = guildId(4491);
           const tmp24 = outer1_8;
-          obj[11] = channelId(8736).getAvatarDecoration(user, guildId);
+          obj[11] = channelId(8753).getAvatarDecoration(user, guildId);
           const result1 = outer1_13.set(user.id, obj);
-          const obj3 = channelId(8736);
+          const obj3 = channelId(8753);
         }
       } else {
         outer1_14.delete(userId);

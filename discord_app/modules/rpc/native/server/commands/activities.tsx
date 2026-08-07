@@ -22,8 +22,9 @@ const items = [require("set").OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICAT
 obj[RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj;
 obj[1] = function handler(socket) {
+  socket = socket.socket;
   let obj = validateOpenInviteDialog;
-  const result = obj.validateOpenInviteDialog();
+  const result = obj.validateOpenInviteDialog(socket);
   if (null != result.frame) {
     obj = { errorCode: null };
     obj[0] = constants2.UNKNOWN_ERROR;
@@ -32,9 +33,9 @@ obj[1] = function handler(socket) {
   } else {
     obj = { source: null, targetApplicationId: null };
     obj[0] = constants.ACTIVITY_INVITE;
-    const id = socket.socket.application.id;
+    const id = socket.application.id;
     obj[1] = id;
-    const result1 = tmp(8988).showInstantInviteActionSheet(tmp4, obj);
+    const result1 = tmp(9005).showInstantInviteActionSheet(tmp4, obj);
   }
   tmp = require;
 };

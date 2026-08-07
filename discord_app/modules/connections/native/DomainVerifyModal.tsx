@@ -269,7 +269,7 @@ function HTTPProofScreen(children) {
     obj6 = { variant: "text-md/normal", color: "text-feedback-critical", style: null, children: null };
     obj6[2] = tmp.error;
     obj6[3] = tmp5;
-    tmp9Result = tmp9(tmp2(4281).Text, obj6);
+    tmp9Result = tmp9(tmp2(4298).Text, obj6);
   }
   items[2] = tmp9Result;
   const obj7 = { style: tmp.button, children: null };
@@ -358,7 +358,7 @@ export default function DomainVerifyModal(arg0) {
     obj = { headerTitle: null, headerLeft: null, render: null };
     const intl = onClose(1236).intl;
     obj[0] = intl.string(onClose(1236).t["7lo8+e"]);
-    let obj2 = onClose(5253);
+    let obj2 = onClose(5269);
     obj[1] = obj2.getHeaderBackButton(onClose);
     obj[2] = function render() {
       return outer1_8(outer1_12, { onClose });
@@ -367,7 +367,7 @@ export default function DomainVerifyModal(arg0) {
     obj = { headerTitle: null, headerLeft: null, render: null };
     const intl2 = onClose(1236).intl;
     obj[0] = intl2.string(onClose(1236).t["7lo8+e"]);
-    obj[1] = onClose(5253).getHeaderBackButton(onClose);
+    obj[1] = onClose(5269).getHeaderBackButton(onClose);
     obj[2] = function render(domain) {
       return outer1_8(outer1_13, { domain: domain.domain, proof: domain.proof, onClose });
     };
@@ -375,8 +375,8 @@ export default function DomainVerifyModal(arg0) {
     const obj1 = { headerTitle: null, headerLeft: null, render: null };
     const intl3 = onClose(1236).intl;
     obj1[0] = intl3.string(onClose(1236).t["7lo8+e"]);
-    const obj5 = onClose(5253);
-    obj1[1] = onClose(5253).getHeaderBackButton(onClose);
+    const obj5 = onClose(5269);
+    obj1[1] = onClose(5269).getHeaderBackButton(onClose);
     obj1[2] = function render(domain) {
       return outer1_8(outer1_14, { domain: domain.domain, proof: domain.proof, onClose });
     };
@@ -386,6 +386,6 @@ export default function DomainVerifyModal(arg0) {
     obj2[1] = constants.DOMAIN;
     const intl4 = onClose(1236).intl;
     obj2[2] = intl4.string(onClose(1236).t["13/7kX"]);
-    return callback2(onClose(5704).Navigator, obj2);
+    return callback2(onClose(5723).Navigator, obj2);
   }
 };

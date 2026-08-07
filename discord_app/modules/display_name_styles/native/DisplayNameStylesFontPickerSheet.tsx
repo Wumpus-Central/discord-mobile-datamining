@@ -49,10 +49,10 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   let closure_7;
   let tmp = createCacheKey();
   importDefault = tmp;
-  let obj = onSelectFont(7325);
-  let obj1 = onSelectFont(14485);
+  let obj = onSelectFont(7344);
+  let obj1 = onSelectFont(14501);
   const visibleFontOrder = obj1.useVisibleFontOrder();
-  let obj2 = onSelectFont(14487);
+  let obj2 = onSelectFont(14503);
   const displayNameStylesNewFonts = obj2.useDisplayNameStylesNewFonts(visibleFontOrder);
   ({ dotFontIds: c2, dismissFontDot: c3 } = displayNameStylesNewFonts);
   const tmp5 = callback(first.useState(selectedFontId), 2);
@@ -84,9 +84,9 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   let intl2 = onSelectFont(1236).intl;
   obj3[0] = intl2.string(onSelectFont(1236).t.XqMe3N);
   obj3[1] = callback;
-  obj2[1] = callback2(onSelectFont(4695).Button, obj3);
+  obj2[1] = callback2(onSelectFont(4712).Button, obj3);
   obj1[1] = callback2(closure_5, obj2);
-  obj[1] = callback2(onSelectFont(5376).BottomSheetTitleHeader, obj1);
+  obj[1] = callback2(onSelectFont(5395).BottomSheetTitleHeader, obj1);
   obj[1] = callback2(closure_5, obj);
   const obj4 = { style: tmp.container, children: null };
   const obj5 = { style: tmp.contentContainer, children: null };
@@ -152,19 +152,19 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
     obj[4] = outer1_10(closure_5, obj);
     return outer1_9(c6, obj, arg0);
   });
-  let items1 = [callback2(onSelectFont(4693).Stack, obj6), ];
+  let items1 = [callback2(onSelectFont(4710).Stack, obj6), ];
   if (tmp14Result) {
     tmp14Result = hasNonLatinLettersResult;
   }
   if (tmp14Result) {
     const obj7 = { style: null, children: null };
     obj7[0] = tmp.nonLatinDisclaimer;
-    let items2 = [tmp11(tmp2(4241).CircleInformationIcon, { size: "sm" }), ];
+    let items2 = [tmp11(tmp2(4258).CircleInformationIcon, { size: "sm" }), ];
     const obj8 = { variant: "text-xs/normal", color: "text-subtle", style: null, children: null };
     obj8[2] = tmp.disclaimerText;
     let intl3 = tmp2(1236).intl;
     obj8[3] = intl3.string(messagesProxy["+O1xL2"]);
-    items2[1] = tmp11(tmp2(4281).Text, obj8);
+    items2[1] = tmp11(tmp2(4298).Text, obj8);
     obj7[1] = items2;
     tmp14Result = tmp14(tmp12, obj7);
   }
@@ -172,5 +172,5 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   obj5[1] = items1;
   obj4[1] = closure_10(closure_5, obj5);
   obj[2] = callback2(closure_5, obj4);
-  return callback2(onSelectFont(5377).BottomSheet, obj);
+  return callback2(onSelectFont(5396).BottomSheet, obj);
 };

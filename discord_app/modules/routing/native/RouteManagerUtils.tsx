@@ -12,7 +12,7 @@ import { RouteParam } from "RouteParam";
 import { RouteParam as RouteParam2 } from "RouteParam";
 import { RouteParam as RouteParam3 } from "RouteParam";
 import { RouteParam as RouteParam4 } from "RouteParam";
-import { MemoryRouter } from "../../../../_runtime/10883_MemoryRouter.js";
+import { MemoryRouter } from "../../../../_runtime/10895_MemoryRouter.js";
 import { ChannelRTCActionCreators } from "../../../actions/ChannelRTCActionCreators.tsx";
 import { saveLastRoute } from "../../../actions/DefaultRouteActionCreators.tsx";
 import { showTooManyUserGuildsAlert } from "../../../actions/GuildActionCreators.tsx";
@@ -133,7 +133,7 @@ function updateSelectedChannelListener(location) {
   let voiceGuildId2;
   let voiceMessageId;
   let voiceMessageId2;
-  let obj = channel2(10883);
+  let obj = channel2(10895);
   obj = { path: items, strict: false, exact: false };
   const matchPathResult = obj.matchPath(location.pathname, obj);
   let params;
@@ -180,7 +180,7 @@ function updateSelectedChannelListener(location) {
         isGuildVoiceResult = isGuildStageVoiceResult;
       }
       if (isGuildVoiceResult) {
-        let tmpResult = tmp(4494);
+        let tmpResult = tmp(4511);
         ModalActionCreators.popWithKey(tmpResult.getVoiceChannelKey(channel.id));
         const obj21 = ModalActionCreators;
       }
@@ -244,7 +244,7 @@ function updateSelectedChannelListener(location) {
     const _HermesInternal2 = HermesInternal;
     obj8.verbose("UpdateSelectedChannelListener -> voice route present! " + json2 + " " + JSON.stringify(obj5) + " ");
   }
-  tmpResult = tmp(10690);
+  tmpResult = tmp(10702);
   if (!tmpResult.isVoicePanelEnabled(channel2)) {
     const guild1 = showTooManyUserGuildsAlert.selectGuild(voiceGuildId2);
     const obj10 = showTooManyUserGuildsAlert;
@@ -258,17 +258,17 @@ function updateSelectedChannelListener(location) {
   }
   const obj1 = { match: matchPathResult, location };
   obj8 = closure_15;
-  const tmpResult1 = channel2(4135);
+  const tmpResult1 = channel2(4152);
   if (!tmpResult1.isModalOpen(tmpResult2.getVoiceChannelKey(channel2.id))) {
     const obj15 = ModalActionCreators;
-    obj15.popAboveKey(tmp(4494).getVoiceChannelKey(channel2.id));
-    const tmpResult3 = tmp(4494);
+    obj15.popAboveKey(tmp(4511).getVoiceChannelKey(channel2.id));
+    const tmpResult3 = tmp(4511);
     dispatcher.wait(() => {
       channel2(outer1_2[16]).openGuildVoiceModal(channel2);
     });
     const obj17 = dispatcher;
   }
-  tmpResult2 = channel2(4494);
+  tmpResult2 = channel2(4511);
   if (tmp21) {
     setVoiceChatDrawerState(channel2.id, VoiceChatDrawerState.OPEN);
     if (tmp25) {
@@ -293,17 +293,17 @@ function extractParams(arg0) {
     const params = match.params;
     ({ guildId, channelId } = params);
     if (_location.jumpType === GuildThemeSourcePreference.JumpType.INSTANT) {
-      let ANIMATED = tmp5(4217).JumpType.INSTANT;
+      let ANIMATED = tmp5(4234).JumpType.INSTANT;
     } else {
-      ANIMATED = tmp5(4217).JumpType.ANIMATED;
+      ANIMATED = tmp5(4234).JumpType.ANIMATED;
     }
-    let tmp5Result = tmp5(4119);
+    let tmp5Result = tmp5(4136);
     if (!tmp5Result.isValidGuildId(guildId)) {
       guildId = closure_11;
     }
     obj = { guildId: null, channelId: null, messageId: null, jumpType: null, skipMessageFetch: null };
     obj[0] = guildId;
-    tmp5Result = tmp5(4119);
+    tmp5Result = tmp5(4136);
     let tmp = null;
     if (tmp5Result.isValidChannelId(channelId)) {
       tmp = channelId;

@@ -54,7 +54,7 @@ export const ChannelContainer = function ChannelContainer(children) {
   ({ channel, isStageChannel } = stateFromStoresObject);
   let tmp5 = !isStageChannel;
   if (isStageChannel) {
-    tmp5 = channelId(10214)(stateFromStoresObject.voiceChannelId);
+    tmp5 = channelId(10230)(stateFromStoresObject.voiceChannelId);
   }
   let tmpResult = tmp(589);
   const items1 = [initialize];
@@ -70,9 +70,9 @@ export const ChannelContainer = function ChannelContainer(children) {
     isPrivateResult = channel.isPrivate();
   }
   dependencyMap = isPrivateResult;
-  const tmp8 = channelId(8776)(isPrivateResult);
+  const tmp8 = channelId(8793)(isPrivateResult);
   React = tmp8;
-  const tmp9 = channelId(8776)(channelId);
+  const tmp9 = channelId(8793)(channelId);
   c4 = tmp9;
   const items2 = [channelId, tmp9, isPrivateResult, tmp8];
   const effect = React.useEffect(() => {
@@ -97,7 +97,7 @@ export const ChannelContainer = function ChannelContainer(children) {
       const result = obj.UNSAFE_markDismissibleContentAsDismissed(outer1_0(_undefined[15]).DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP, obj);
     }
   }, items2);
-  tmpResult = tmp(10215);
+  tmpResult = tmp(10231);
   const channelStyles = tmpResult.useChannelStyles();
   obj = { style: channelStyles.scene, children: null };
   obj = { style: channelStyles.flex, children: null };
@@ -111,14 +111,14 @@ export const ChannelContainer = function ChannelContainer(children) {
     if (stateFromStores) {
       const obj1 = { channel: null };
       obj1[0] = channel;
-      tmp15 = callback(tmp4(10216), obj1);
+      tmp15 = callback(tmp4(10232), obj1);
     }
   }
   const items3 = [tmp15, children.children, ];
   if (tmp5) {
     const obj2 = { style: null };
     obj2[0] = channelStyles.callPTTButton;
-    tmp5 = callback(tmp4(10231), obj2);
+    tmp5 = callback(tmp4(10247), obj2);
   }
   items3[2] = tmp5;
   obj[1] = items3;

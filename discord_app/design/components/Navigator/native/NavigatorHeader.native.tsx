@@ -4,7 +4,7 @@ import "noop";
 import get_ActivityIndicator from "NAV_BAR_HEIGHT";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { Background } from "../../../../../_runtime/05260_Background.js";
+import { Background } from "../../../../../_runtime/05276_Background.js";
 import { useHeaderDebugOverlay } from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
 import { useSafeAreaInsets } from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
 import { Text } from "../../Text/native/Text.tsx";
@@ -57,7 +57,7 @@ function CloseButton(onPress) {
 function CustomHeaderBackButton(onPress) {
   onPress = onPress.onPress;
   const merged = Object.assign(onPress, Object.create(null));
-  let obj = onPress(5259);
+  let obj = onPress(5275);
   obj.useNavigatorBackPressHandler(() => {
     if (null != onPress) {
       tmp();
@@ -71,7 +71,7 @@ function CustomHeaderBackButton(onPress) {
   obj.backImage = function backImage() {
     return callback(closure_9, {});
   };
-  return callback(onPress(5260).HeaderBackButton, obj);
+  return callback(onPress(5276).HeaderBackButton, obj);
 }
 function HeaderTextButton(text) {
   text = text.text;

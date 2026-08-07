@@ -57,9 +57,9 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
     let obj = user(1927);
     nameplateData = obj.getNameplateData(nameplate);
   }
-  let obj1 = user(8736);
+  let obj1 = user(8753);
   const avatarDecoration = obj1.useAvatarDecoration(user, guildId);
-  const pendingAvatarDecoration = guildId(8184)({ guildId }).pendingAvatarDecoration;
+  const pendingAvatarDecoration = guildId(8201)({ guildId }).pendingAvatarDecoration;
   let obj2 = user(589);
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   stateFromStores = obj2.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
@@ -75,7 +75,7 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
     }
     return member;
   });
-  let obj4 = guildId(4123);
+  let obj4 = guildId(4140);
   const name = obj4.useName(user);
   if (pendingGlobalName == null) {
     let tmp11 = name;
@@ -101,7 +101,7 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
   }
   c4 = tmp14;
   obj = { userId: user.id, guildId, pendingDisplayNameStyles };
-  const tmp15 = guildId(4514)(obj);
+  const tmp15 = guildId(4531)(obj);
   const items2 = [tmp.avatar, user, guildId, tmp14, stateFromStores];
   obj = { style: tmp.container, "aria-hidden": aria_hidden["aria-hidden"], children: null };
   const memo = stateFromStores.useMemo(() => {
@@ -112,7 +112,7 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
     return outer1_7(user(_undefined[13]).Avatar, obj);
   }, items2);
   obj1 = { nameplate: nameplateData, style: tmp.nameplate, fullOpacity: true, animate: flag2 };
-  const items3 = [callback(guildId(9308), obj1), , ];
+  const items3 = [callback(guildId(9325), obj1), , ];
   obj2 = { style: tmp.avatar, children: memo };
   items3[1] = callback(c4, obj2);
   obj3 = { style: tmp.content, children: null };
@@ -122,17 +122,17 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
     obj4[0] = user.id;
     obj4[1] = guildId;
     obj4[2] = pendingGlobalName;
-    obj4[4] = tmp4(9389).EffectDisplayType.STATIC;
+    obj4[4] = tmp4(9406).EffectDisplayType.STATIC;
     obj4[6] = pendingDisplayNameStyles;
-    tmp19Result = tmp19(tmp7(9388), obj4);
-    const tmp7Result = tmp7(9388);
+    tmp19Result = tmp19(tmp7(9405), obj4);
+    const tmp7Result = tmp7(9405);
   }
   const items4 = [tmp19Result, ];
   tmp19Result = null == tmp15;
   if (tmp19Result) {
     const obj5 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj5[3] = pendingGlobalName;
-    tmp19Result = tmp19(tmp4(4281).Text, obj5);
+    tmp19Result = tmp19(tmp4(4298).Text, obj5);
   }
   items4[1] = tmp19Result;
   obj3[1] = items4;

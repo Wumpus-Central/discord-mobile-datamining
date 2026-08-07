@@ -99,7 +99,7 @@ export const getGameWidgetSubtitle = function getGameWidgetSubtitle(games, showE
       } else {
         const intl = tmp(1236).intl;
         const obj = { numGames: null };
-        obj[0] = tmp(4815).GAME_WIDGET_LIMITS_BY_TYPE[games.type];
+        obj[0] = tmp(4832).GAME_WIDGET_LIMITS_BY_TYPE[games.type];
         stringResult = intl.format(tmp(1236).t["zR1+0/"], obj);
       }
       return stringResult;
@@ -346,8 +346,8 @@ export const updatePendingGameTags = function updatePendingGameTags(widgetType, 
         obj.games = mapped;
         const baseGameWidget = new _items.BaseGameWidget(obj);
         const tmp21 = replaceWidgetInList(baseGameWidget);
-        obj(7007).setPendingWidgets(tmp21);
-        const obj3 = obj(7007);
+        obj(7026).setPendingWidgets(tmp21);
+        const obj3 = obj(7026);
       }
     }
   }
@@ -389,10 +389,10 @@ export const removeTagFromGame = function removeTagFromGame(widgetType) {
                 obj = {};
                 const merged1 = Object.assign(tmpResult);
                 obj.games = mapped;
-                const baseGameWidget = new tmp4(7003).BaseGameWidget(obj);
+                const baseGameWidget = new tmp4(7022).BaseGameWidget(obj);
                 const tmp22 = replaceWidgetInList(baseGameWidget);
-                obj(7007).setPendingWidgets(tmp22);
-                const obj3 = obj(7007);
+                obj(7026).setPendingWidgets(tmp22);
+                const obj3 = obj(7026);
               }
             }
           }
@@ -426,8 +426,8 @@ export const updatePendingGameComment = function updatePendingGameComment(widget
         obj.games = mapped;
         const baseGameWidget = new _items.BaseGameWidget(obj);
         const tmp19 = replaceWidgetInList(baseGameWidget);
-        obj(7007).setPendingWidgets(tmp19);
-        const obj3 = obj(7007);
+        obj(7026).setPendingWidgets(tmp19);
+        const obj3 = obj(7026);
       }
     }
   }
@@ -442,8 +442,8 @@ export const addPendingGameToWidget = function addPendingGameToWidget(ignoreMaxG
   }
   const tmp = findGameWidget(widgetType);
   let num = 0;
-  if (widgetType in game(4815).GAME_WIDGET_LIMITS_BY_TYPE) {
-    num = tmp2(4815).GAME_WIDGET_LIMITS_BY_TYPE[widgetType];
+  if (widgetType in game(4832).GAME_WIDGET_LIMITS_BY_TYPE) {
+    num = tmp2(4832).GAME_WIDGET_LIMITS_BY_TYPE[widgetType];
   }
   if (null != tmp) {
     const games = tmp.games;
@@ -480,11 +480,11 @@ export const addPendingGameToWidget = function addPendingGameToWidget(ignoreMaxG
   obj = {};
   const merged = Object.assign(tmp8);
   obj.games = items1;
-  const baseGameWidget = new tmp2(7003).BaseGameWidget(obj);
+  const baseGameWidget = new tmp2(7022).BaseGameWidget(obj);
   const tmp7 = replaceWidgetInList;
   const tmp7Result = replaceWidgetInList(baseGameWidget);
   WidgetActionCreators.setPendingWidgets(tmp7Result);
-  const useGame = tmp2(7013).useGame;
+  const useGame = tmp2(7032).useGame;
   const items2 = [game.gameId];
   const many = useGame.fetchMany(items2);
 };

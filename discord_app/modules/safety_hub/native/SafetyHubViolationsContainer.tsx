@@ -64,9 +64,9 @@ function SafetyHubViolationsHeader(count) {
   obj1[1] = items4;
   items2[1] = closure_12(closure_6, obj1);
   if (opened) {
-    let ChevronSmallDownIcon = tmp7(12760).ChevronSmallUpIcon;
+    let ChevronSmallDownIcon = tmp7(12775).ChevronSmallUpIcon;
   } else {
-    ChevronSmallDownIcon = tmp7(9396).ChevronSmallDownIcon;
+    ChevronSmallDownIcon = tmp7(9413).ChevronSmallDownIcon;
   }
   const items5 = [tmp.chevron];
   items2[2] = closure_11(ChevronSmallDownIcon, { size: "md", style: items5 });
@@ -212,7 +212,7 @@ class SafetyHubViolationsContainer {
     c3 = undefined;
     useState = undefined;
     c5 = undefined;
-    f92745 = undefined;
+    f92823 = undefined;
     useMemo = undefined;
     c8 = undefined;
     tmp = Fragment();
@@ -233,7 +233,7 @@ class SafetyHubViolationsContainer {
     items = [];
     items[0] = useMemo;
     stateFromStores = obj2.useStateFromStores(items, () => memo.getIsDsaEligible());
-    f92745 = stateFromStores;
+    f92823 = stateFromStores;
     items1 = [, ];
     items1[0] = classifications;
     items1[1] = first1;
@@ -262,7 +262,7 @@ class SafetyHubViolationsContainer {
     }
     c8 = num;
     tmp11 = jsxs;
-    tmp12 = f92745;
+    tmp12 = f92823;
     obj = { style: items3, children: null };
     items3 = [];
     items3[0] = tmp.container;

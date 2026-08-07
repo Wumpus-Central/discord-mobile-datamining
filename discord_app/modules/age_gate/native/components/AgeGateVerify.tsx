@@ -47,8 +47,8 @@ export default function AgeGateVerify(source) {
     const obj3 = { text: null, onPress: null, grow: true };
     obj3[0] = verifyAgreementButtonText;
     obj3[1] = function onPress() {
-      let obj = callback2(7720);
-      obj = { entryPoint: callback(7722).AgeVerificationModalEntryPoint.NSFW_AGE_GATE };
+      let obj = callback2(7737);
+      obj = { entryPoint: callback(7739).AgeVerificationModalEntryPoint.NSFW_AGE_GATE };
       const result = obj.showAgeVerificationGetStartedModal(obj);
     };
     obj2[1] = tmp7(Button.Button, obj3);

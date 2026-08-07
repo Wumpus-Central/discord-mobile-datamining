@@ -36,7 +36,7 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
             return obj;
           } else {
             let closure_0 = tmp2;
-            const ICYMIAnalytics = outer1_0(8844).ICYMIAnalytics;
+            const ICYMIAnalytics = outer1_0(8861).ICYMIAnalytics;
             let str = "NoDotShown";
             if (outer1_0) {
               str = "DotShown";
@@ -47,7 +47,7 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
             v0 = 1;
             dependencyMap = 1;
             let obj2 = { value: null, done: false };
-            obj2[0] = v0(8836).fetchDehydrated({ isReloading: true });
+            obj2[0] = v0(8853).fetchDehydrated({ isReloading: true });
             return obj2;
           }
         } else if (1 === tmp5) {
@@ -60,7 +60,7 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
             obj3[0] = arg1;
             return obj3;
           } else {
-            let obj5 = v0(8836);
+            let obj5 = v0(8853);
             v0 = 2;
             dependencyMap = 1;
             const obj4 = { value: null, done: false };
@@ -77,7 +77,7 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
             obj5[0] = arg1;
             return obj5;
           } else {
-            obj2 = v0(8836);
+            obj2 = v0(8853);
             v0 = 3;
             dependencyMap = 1;
             const obj6 = { value: null, done: false };
@@ -93,7 +93,7 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
           obj7[0] = arg1;
           return obj7;
         } else {
-          obj = v0(8836);
+          obj = v0(8853);
           const recommendedGuilds = obj.getRecommendedGuilds();
           dependencyMap = 3;
           return { value: "T", done: null };

@@ -363,7 +363,7 @@ export const preloadReadyPayloadData = function preloadReadyPayloadData() {
   const obj = items;
   const tmp4 = require;
   if (obj2.isCacheEnabled()) {
-    let tmpResult = tmp(7035);
+    let tmpResult = tmp(7054);
     let committedVersions = tmpResult.getCommittedVersions();
   } else {
     committedVersions = Promise.resolve({});
@@ -378,13 +378,13 @@ export const preloadReadyPayloadData = function preloadReadyPayloadData() {
     guildIds = Promise.resolve(set);
   }
   if (null != databaseResult) {
-    let okAsyncResult = tmp(7036).okAsync(databaseResult);
-    const tmpResult1 = tmp(7036);
+    let okAsyncResult = tmp(7055).okAsync(databaseResult);
+    const tmpResult1 = tmp(7055);
   } else {
     okAsyncResult = Promise.resolve(false);
   }
   const items = [committedVersions, guildIds, okAsyncResult];
-  tmp4Result = tmp4(7031);
+  tmp4Result = tmp4(7050);
   return Promise.all(items).then((arg0) => {
     let tmp;
     let tmp2;

@@ -17,7 +17,7 @@ export const removeExecutablePathPrefix = function removeExecutablePathPrefix(ex
 };
 export const getRunningGameAnalytics = function getRunningGameAnalytics(streamApplication) {
   if (null == streamApplication) {
-    return { gameName: "title", gameId: "channelId", exe: "ml", distributor: "index", sku: "min", gameMetadata: "index", rawExePath: "channelId" };
+    return { gameName: "channelId", gameId: "paths", exe: "DARK", distributor: "bottom", sku: "ti", gameMetadata: "alignItems", rawExePath: "h" };
   } else {
     const str = "exePath" in streamApplication ? streamApplication.exePath : streamApplication.exe;
     let id = streamApplication.id;

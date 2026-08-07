@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/TieredTenureBadgeUtils.tsx
 import { TENURE_BADGES } from "GuildFeatures";
-import { t } from "../../../_runtime/03866_t.js";
+import { t } from "../../../_runtime/03883_t.js";
 
 const result = require("set").fileFinishedImporting("modules/user_profile/TieredTenureBadgeUtils.tsx");
 

@@ -66,7 +66,7 @@ export default function JoinServerContainer(initialRoute) {
   obj[3] = function onInviteChange(arg0) {
     callback(arg0);
   };
-  obj[4] = function onDone(arg0) {
+  obj[4] = function onDone() {
     const str = first.trim();
     if ("" !== str) {
       callback2(true);

@@ -37,7 +37,7 @@ export default {
           if (ensureGuildLoaded) {
             ringable = body.body.ringable;
           }
-          const voiceChannel = id(5111).selectVoiceChannel(id, dependencyMap);
+          const voiceChannel = id(5128).selectVoiceChannel(id, dependencyMap);
           if (ringable) {
             self.ring(tmp2);
           }
@@ -65,7 +65,7 @@ export default {
             obj = { userId: upsertRelationship, context: { location: "Call" } };
             obj.addRelationship(obj);
           };
-          id(4623).show(obj);
+          id(4640).show(obj);
         });
       }
     } else {

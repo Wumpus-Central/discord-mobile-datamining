@@ -10,15 +10,15 @@ export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   imageStyle = imageStyle.imageStyle;
   let width;
   let importDefault;
-  let obj = width(15622);
+  let obj = width(15646);
   const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(true);
   width = imageStyle.width;
-  const sum = imageStyle.height + 108 * width(4701).useFontScale();
+  const sum = imageStyle.height + 108 * width(4718).useFontScale();
   importDefault = sum;
   const items = [width, sum];
   const memo = React.useMemo(() => ({ width, height: c1 }), items);
   obj = { style: items1, pointerEvents: "none", children: null };
   items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
-  obj[2] = jsx(width(15643).SearchListCardContainer, { containerStyle: memo });
+  obj[2] = jsx(width(15667).SearchListCardContainer, { containerStyle: memo });
   return jsx(ReanimatedRexport.View, { style: items1, pointerEvents: "none", children: null });
 };

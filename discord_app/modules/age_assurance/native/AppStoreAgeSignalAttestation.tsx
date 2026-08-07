@@ -23,17 +23,62 @@ function buildRequestHashPayload(arg0, platform) {
   items[4] = str3;
   return items.join("|");
 }
-function _getAgeSignalIntegrityToken() {
+function _requestPlayIntegrityToken() {
   const self = this;
+  const tmp = callback((arg0) => {
+    let closure_0 = arg0;
+    let c2 = 0;
+    let c1 = 0;
+    let c3 = 0;
+    return (function*(arg0) {
+      const tmp8 = (function getPlayIntegrityCloudProjectNumber() {
+        if ("production" === PROJECT_ENV) {
+          return 179099419678;
+        } else if ("staging" === PROJECT_ENV) {
+          return 976935287357;
+        } else {
+          return null;
+        }
+      })();
+      if (null != tmp8) {
+        if (null != v0(table[1])) {
+          let c3 = 1;
+          table = 2;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = tmp9(tmp10[1]).requestIntegrityToken(closure_0, tmp8);
+          return obj1;
+        }
+        tmp10 = table;
+        tmp9 = v0;
+      }
+      yield "T";
+      c3 = 0;
+      yield "T";
+      c3 = 0;
+      return arg1;
+    })();
+  });
+  const _requestPlayIntegrityToken = tmp;
+  const apply = tmp.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+function _getAgeSignalIntegrityToken() {
+  let self = this;
   const tmp = callback((arg0) => {
     let closure_0 = arg0;
     let c3 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
+      if (v0 === 2) {
+        v0 = 3;
         HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
@@ -45,78 +90,84 @@ function _getAgeSignalIntegrityToken() {
         }
       } else {
         try {
-          c4 = 2;
-          if (0 === v0) {
+          v0 = 2;
+          if (0 === c3) {
             if (arg0 === 1) {
-              c4 = 3;
+              v0 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              c4 = 3;
+              v0 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
             } else {
-              let asyncGeneratorStep = tmp4;
-              let closure_1 = 0;
+              let closure_2 = tmp5;
+              let closure_1 = tmp2;
               closure_1 = undefined;
               if (obj9.isAndroid()) {
+                c3 = 1;
                 v0 = 1;
-                c4 = 1;
                 const obj1 = { value: null, done: false };
-                obj1[0] = tmp21(tmp22[2]).requestAgeSignalChallenge();
+                obj1[0] = tmp21(tmp22[3]).requestAgeSignalChallenge();
                 return obj1;
               }
-              obj9 = callback(outer1_1[1]);
+              obj9 = callback(outer1_2[2]);
               tmp21 = callback;
-              tmp22 = outer1_1;
+              tmp22 = outer1_2;
             }
-          } else if (1 === tmp4) {
+          } else if (1 === tmp5) {
             if (arg0 === 1) {
-              c4 = 3;
+              v0 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              c4 = 3;
+              v0 = 3;
               const obj2 = { value: null, done: true };
               obj2[0] = arg1;
               return obj2;
             } else {
               closure_1 = arg1;
               if (null != closure_1) {
-                v0(closure_1, callback);
-                v0 = 2;
-                c4 = 1;
+                c3 = 2;
+                v0 = 1;
                 const obj3 = { value: null, done: false };
                 obj3[0] = (function requestPlayIntegrityToken(arg0) {
-                  return Promise.resolve(undefined);
-                })(0);
+                  const self = this;
+                  const apply = closure_5.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(v0(closure_1, callback));
                 return obj3;
               }
             }
           } else if (arg0 === 1) {
-            c4 = 3;
+            v0 = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            c4 = 3;
+            v0 = 3;
             const obj4 = { value: null, done: true };
             obj4[0] = arg1;
             return obj4;
           } else {
-            c4 = 3;
+            v0 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
           }
-          c4 = 3;
+          v0 = 3;
           return { value: "T", done: null };
-        } catch (tmp8) {
-          c4 = tmp;
-          throw tmp8;
+        } catch (tmp9) {
+          v0 = tmp;
+          throw tmp9;
         }
       }
     })();
   });
   const _getAgeSignalIntegrityToken = tmp;
-  const apply = tmp.apply;
+  let apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -124,7 +175,7 @@ function _getAgeSignalIntegrityToken() {
   }
   return applyArgumentsResult;
 }
-const result = require("_requestAgeSignalChallenge").fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalAttestation.tsx");
+const result = require("set").fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalAttestation.tsx");
 
 export { buildRequestHashPayload };
 export const getAgeSignalIntegrityToken = function getAgeSignalIntegrityToken(outer1_0) {

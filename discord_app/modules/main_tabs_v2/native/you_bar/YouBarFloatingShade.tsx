@@ -25,10 +25,10 @@ const memoResult = require("noop").memo(function YouBarFloatingShade() {
   const sum = youBarTotalHeight + closure_5;
   require = sum;
   width = width(1474)().width;
-  if (width(4138)().isChatBesideChannelList) {
+  if (width(4155)().isChatBesideChannelList) {
     width = tmp7 + GUILD_LIST_WIDTH;
   }
-  let tmp2Result = tmp2(4145);
+  let tmp2Result = tmp2(4162);
   const fn = function t() {
     return { height: closure_0, opacity: 1, width };
   };
@@ -36,8 +36,8 @@ const memoResult = require("noop").memo(function YouBarFloatingShade() {
   fn.__workletHash = 7609004216185;
   fn.__initData = closure_11;
   const animatedStyle = tmp2Result.useAnimatedStyle(fn);
-  tmp2Result = tmp2(4095);
-  const gradientValue = tmp2Result.useGradientValue(tmp2(4095).GradientPercentage.END);
+  tmp2Result = tmp2(4112);
+  const gradientValue = tmp2Result.useGradientValue(tmp2(4112).GradientPercentage.END);
   const token = map.useToken(tmp6(712).colors.BACKGROUND_BASE_LOWER);
   const tmp2Result1 = map;
   const items = [isSyncedModeThemesEnabled];
@@ -70,7 +70,7 @@ const memoResult = require("noop").memo(function YouBarFloatingShade() {
   obj = { bottom: sum / 2, height: sum / 2, width };
   items3[1] = obj;
   const items4 = [str2, str];
-  items2[1] = callback(width(4706), { style: items3, colors: items4, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, locations: [0, 1], pointerEvents: "none" });
+  items2[1] = callback(width(4723), { style: items3, colors: items4, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, locations: [0, 1], pointerEvents: "none" });
   const items5 = [tmp.container, { width, height: sum / 2, backgroundColor: str }];
   items2[2] = callback(View, { style: items5 });
   obj[0] = items2;

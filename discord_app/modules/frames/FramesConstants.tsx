@@ -10,7 +10,11 @@ export const MAIN_SURFACE = obj;
 export const FrameIntent = obj;
 export const getFrameIntentForSurface = function getFrameIntentForSurface(type) {
   type = type.type;
-  return obj.MAIN;
+  if (obj.MAIN === type) {
+    return obj.MAIN;
+  } else if (tmp.APP_CHANNEL === type) {
+    return obj.INLINE;
+  }
 };
 export const makeFrameId = function makeFrameId(arg0, type) {
   type = type.type;

@@ -20,11 +20,11 @@ const memoResult = require("noop").memo((row) => {
     num = participants.length;
   }
   if (1 === num) {
-    THIRD = tmp2(10849).StageTileSize.FULL;
+    THIRD = tmp2(10861).StageTileSize.FULL;
   } else if (2 === num) {
-    THIRD = tmp2(10849).StageTileSize.HALF;
+    THIRD = tmp2(10861).StageTileSize.HALF;
   } else {
-    THIRD = tmp2(10849).StageTileSize.THIRD;
+    THIRD = tmp2(10861).StageTileSize.THIRD;
   }
   const items = [tmp.container, ];
   if (containerLandscape) {

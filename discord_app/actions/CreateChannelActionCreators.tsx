@@ -18,6 +18,7 @@ export default {
     let availableTags;
     let bitrate;
     let flags;
+    let gameId;
     let parentId;
     let permissionOverwrites;
     let skuId;
@@ -28,7 +29,7 @@ export default {
     if (permissionOverwrites === undefined) {
       permissionOverwrites = [];
     }
-    ({ bitrate, userLimit, parentId, skuId, flags, availableTags } = guildId);
+    ({ bitrate, userLimit, parentId, skuId, flags, availableTags, gameId } = guildId);
     let obj = permissionOverwrites(709);
     obj.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT", guildId, channelType: type });
     obj = { type, name: guildId.name, permission_overwrites: permissionOverwrites };
@@ -59,6 +60,9 @@ export default {
     if (tmp7) {
       obj.available_tags = availableTags.map((name) => ({ name: name.name, emoji_id: name.emojiId, emoji_name: name.emojiName, moderated: name.moderated }));
     }
+    if (null != gameId) {
+      obj.game_id = gameId;
+    }
     if (type === constants.GUILD_STORE) {
       if (null == skuId) {
         const _Error = Error;
@@ -71,7 +75,7 @@ export default {
     }
     obj = { url: closure_6.GUILD_CHANNELS(guildId), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     const tmp = permissionOverwrites;
-    const tmpResult = permissionOverwrites(5109);
+    const tmpResult = permissionOverwrites(5126);
     obj[3] = {
       event: guildId(503).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {

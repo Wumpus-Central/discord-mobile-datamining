@@ -11,7 +11,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/guild_onboardin
 export default function OnboardingHomeResourcesSheet(guildId) {
   guildId = guildId.guildId;
   let importDefault;
-  let obj = guildId(3988);
+  let obj = guildId(4005);
   importDefault = obj.useToken(Themes.modules.mobile.TABLE_ROW_ICON_SIZE);
   obj = { children: null };
   obj = { hasIcons: true, children: null };
@@ -40,6 +40,6 @@ export default function OnboardingHomeResourcesSheet(guildId) {
     };
     return outer1_4(guildId(outer1_2[9]).ActionSheetRow, obj, label.channelId);
   });
-  obj[0] = jsx(guildId(5687).ActionSheetRow.Group, { hasIcons: true, children: null });
-  return jsx(guildId(5685).ActionSheet, { hasIcons: true, children: null });
+  obj[0] = jsx(guildId(5706).ActionSheetRow.Group, { hasIcons: true, children: null });
+  return jsx(guildId(5704).ActionSheet, { hasIcons: true, children: null });
 };

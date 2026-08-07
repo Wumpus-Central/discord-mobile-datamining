@@ -3,8 +3,8 @@ import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "getQuestContentName";
 import initializeState from "initializeState";
 import { LinkingTypes } from "ME";
-import { jsx } from "module_14261";
-import { registerAsset } from "../../../../_runtime/08528_registerAsset.js";
+import { jsx } from "module_14275";
+import { registerAsset } from "../../../../_runtime/08545_registerAsset.js";
 import { IconButton } from "../../../design/components/Button/native/IconButton.native.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 

@@ -4,8 +4,8 @@ import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { QRCode } from "../../_runtime/09022_QRCode.js";
-import { registerAsset } from "../../_runtime/09036_registerAsset.js";
+import { QRCode } from "../../_runtime/09039_QRCode.js";
+import { registerAsset } from "../../_runtime/09053_registerAsset.js";
 import { VisualEffectViewThemed } from "../modules/visual_effect_view/native/VisualEffectViewThemed.tsx";
 
 let c5;
@@ -52,7 +52,7 @@ QRCode.prototype["render"] = function render() {
   if (blur) {
     const obj2 = { style: null, blurTheme: "dark" };
     obj2[0] = closure_7.absoluteFill;
-    tmp3Result = tmp3(tmp7(4685), obj2);
+    tmp3Result = tmp3(tmp7(4702), obj2);
   }
   items1[1] = tmp3Result;
   obj[1] = items1;

@@ -39,15 +39,15 @@ export const GuildRoleSubscriptionTierTemplateBasicInfo = function GuildRoleSubs
   obj = { source: { uri: image }, style: tmp.image };
   const items = [callback(preload, obj), callback(template(1297).Spacer, { size: 16 }), ];
   const obj1 = { style: { flexShrink: 1 }, children: null };
-  const items1 = [callback(template(4281).Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", style: { flexWrap: "wrap" }, children: name }), callback(template(1297).Spacer, { size: 4 }), ];
+  const items1 = [callback(template(4298).Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", style: { flexWrap: "wrap" }, children: name }), callback(template(1297).Spacer, { size: 4 }), ];
   const obj2 = { variant: "heading-md/medium", style: subscriptionPlanTextStyle, children: null };
   const intl = template(1236).intl;
   const obj3 = { price: null, interval: null };
-  let obj6 = template(5776);
+  let obj6 = template(5795);
   obj3[0] = obj6.formatPrice(price_tier, CurrencyCodes.USD);
-  obj3[1] = template(14379).formatPlanInterval({ interval: SubscriptionIntervalTypes.MONTH, interval_count: 1 });
+  obj3[1] = template(14395).formatPlanInterval({ interval: SubscriptionIntervalTypes.MONTH, interval_count: 1 });
   obj2[2] = intl.format(template(1236).t.CgmBaG, obj3);
-  items1[2] = callback(template(4281).Text, obj2);
+  items1[2] = callback(template(4298).Text, obj2);
   obj1[1] = items1;
   items[2] = callback2(View, obj1);
   obj[1] = items;
@@ -55,7 +55,7 @@ export const GuildRoleSubscriptionTierTemplateBasicInfo = function GuildRoleSubs
   const obj5 = { variant: "text-sm/normal", style: descriptionTextStyle };
   const merged = Object.assign(descriptionTextProps);
   obj5.children = description;
-  items2[1] = callback(template(4281).Text, obj5);
+  items2[1] = callback(template(4298).Text, obj5);
   obj6 = { text: null, pillStyle: null, onPress: null, grow: true };
   const intl2 = template(1236).intl;
   obj6[0] = intl2.string(template(1236).t["1W7mCt"]);
@@ -63,7 +63,7 @@ export const GuildRoleSubscriptionTierTemplateBasicInfo = function GuildRoleSubs
   obj6[2] = function onPress() {
     return callback(template, closure_2);
   };
-  items2[2] = callback(template(4696).BaseTextButton, obj6);
+  items2[2] = callback(template(4713).BaseTextButton, obj6);
   obj[1] = items2;
   return callback2(View, obj);
 };

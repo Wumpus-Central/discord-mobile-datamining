@@ -9,7 +9,7 @@ export default {
   open(closure_0) {
     ACTION_SHEET_HEIGHT_HALF.hideActionSheet();
     const obj = ACTION_SHEET_HEIGHT_HALF;
-    ModalActionCreators.pushLazy(asyncRequireImpl(10099, dependencyMap.paths), closure_0, ADD_IMAGE_DESCRIPTION_MODAL_KEY);
+    ModalActionCreators.pushLazy(asyncRequireImpl(10115, dependencyMap.paths), closure_0, ADD_IMAGE_DESCRIPTION_MODAL_KEY);
   },
   close() {
     ModalActionCreators.popWithKey(ADD_IMAGE_DESCRIPTION_MODAL_KEY);

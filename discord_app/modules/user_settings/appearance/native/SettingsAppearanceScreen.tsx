@@ -18,10 +18,10 @@ let c3 = importAllResult;
 const memoResult = importAllResult.memo(() => {
   let gradientPresetId;
   let theme;
-  nativeStackNavigation(4711)(() => {
+  nativeStackNavigation(4728)(() => {
     if (initialize.shouldSync("appearance")) {
-      const userCustomThemes = _undefined(14412).fetchUserCustomThemes();
-      const obj = _undefined(14412);
+      const userCustomThemes = _undefined(14428).fetchUserCustomThemes();
+      const obj = _undefined(14428);
     }
   });
   let items = [handleThemeChange, isSyncedModeThemesEnabled];
@@ -66,7 +66,7 @@ const memoResult = importAllResult.memo(() => {
     callback(table[13]).batchUpdates(() => state.setState(closure_7));
   }, []);
   const node = importAllResult.useMemo(() => {
-    let obj = _undefined(10364);
+    let obj = _undefined(10380);
     obj = { sections: null };
     const items = [constants.MOBILE_VISUAL_REFRESH];
     const items1 = [{ settings: items }, , , , , , , , , ];
@@ -115,7 +115,7 @@ const memoResult = importAllResult.memo(() => {
     return obj.createList(obj);
   }, []);
   let obj2 = _useNavigation;
-  return jsx(nativeStackNavigation(13802), { node }, "" + theme + "-" + gradientPresetId);
+  return jsx(nativeStackNavigation(13816), { node }, "" + theme + "-" + gradientPresetId);
 });
 const result = require("initialize").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx");
 

@@ -5,10 +5,10 @@ import noop from "noop";
 import useRegistrationUIStore from "useRegistrationUIStore";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { FadeIn } from "module_4145";
-import { FadeOut } from "module_4145";
-import { LinearTransition } from "module_4145";
-import { Easing } from "module_4145";
+import { FadeIn } from "module_4162";
+import { FadeOut } from "module_4162";
+import { LinearTransition } from "module_4162";
+import { Easing } from "module_4162";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { useFocusRefOnNavigation } from "../../../../design/components/Navigator/native/useFocusRefOnNavigation.tsx";
 import { NameValidationState } from "../../../unique_usernames/UniqueUsernamesTypes.tsx";
@@ -32,23 +32,23 @@ function UsernameStatusMessage(arg0) {
     let obj = { direction: "horizontal", spacing: 4, align: "flex-start", children: null };
     obj = { size: "xs", color: null };
     obj[1] = Themes.colors.TEXT_FEEDBACK_CRITICAL;
-    const items = [callback3(tmp3(7716).CircleErrorIcon, obj), ];
+    const items = [callback3(tmp3(7733).CircleErrorIcon, obj), ];
     const obj1 = { variant: "text-xs/medium", color: "text-feedback-critical", style: null };
     obj1[2] = tmp.status;
     const merged = Object.assign(createCacheKey);
     const merged1 = Object.assign(createCacheKey);
     obj1.animated = true;
     obj1.children = usernameStatus.message;
-    items[1] = callback3(tmp3(4281).Text, obj1);
+    items[1] = callback3(tmp3(4298).Text, obj1);
     obj[3] = items;
-    let tmp6 = callback4(tmp3(4693).Stack, obj);
+    let tmp6 = callback4(tmp3(4710).Stack, obj);
   } else {
     if (isUsernameFocused) {
       let type1;
       if (usernameStatus != null) {
         type1 = usernameStatus.type;
       }
-      if (type1 === tmp3(13920).NameValidationState.AVAILABLE) {
+      if (type1 === tmp3(13934).NameValidationState.AVAILABLE) {
         const obj2 = {};
         const merged2 = Object.assign(createCacheKey);
         const merged3 = Object.assign(createCacheKey);
@@ -57,8 +57,8 @@ function UsernameStatusMessage(arg0) {
         obj2.animated = true;
         const obj3 = { variant: "text-xs/medium", color: "text-feedback-positive", children: null };
         obj3[2] = usernameStatus.message;
-        obj2.children = callback3(tmp3(4281).Text, obj3);
-        tmp6 = callback3(tmp3(4281).Text, obj2);
+        obj2.children = callback3(tmp3(4298).Text, obj3);
+        tmp6 = callback3(tmp3(4298).Text, obj2);
       }
     }
     tmp6 = null;
@@ -72,7 +72,7 @@ function UsernameStatusMessage(arg0) {
       obj.animated = true;
       const intl = tmp3(1236).intl;
       obj.children = intl.string(tmp3(1236).t.y7LSyU);
-      tmp6 = callback3(tmp3(4281).Text, obj);
+      tmp6 = callback3(tmp3(4298).Text, obj);
     }
   }
   return tmp6;
@@ -86,7 +86,7 @@ createCacheKey[0] = require("module_300");
 createCacheKey[1] = require("module_300");
 createCacheKey = { layout: null };
 createCacheKey[0] = require("module_300");
-const easingResult = LinearTransition.easing(Easing.inOut(require("module_4145").Easing.quad));
+const easingResult = LinearTransition.easing(Easing.inOut(require("module_4162").Easing.quad));
 const result = require("noop").fileFinishedImporting("modules/auth/native/components/RegisterUsernameInput.tsx");
 
 export const RegisterUsernameInput = function RegisterUsernameInput(setUsername) {
@@ -154,13 +154,13 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(13920).NameValidationState.ERROR) {
+  if (type === tmp14(13934).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj1 = { children: null };
   obj[16] = str2;
   obj[17] = submitBehavior;
-  const items3 = [closure_9(setUsername(7713).TextInput, obj), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
+  const items3 = [closure_9(setUsername(7730).TextInput, obj), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
   obj1[0] = items3;
   return tmp11(tmp12, obj1);
 };

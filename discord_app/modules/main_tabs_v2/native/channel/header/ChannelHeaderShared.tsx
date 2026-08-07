@@ -55,7 +55,7 @@ function TitleWrapper(headerAccessibilityLabel) {
     obj[5] = tmp6;
     obj[6] = tmp2.wrapper;
     obj[7] = children;
-    tmp7Result = callback2(titleContentHeight(4827).PressableOpacity, obj);
+    tmp7Result = callback2(titleContentHeight(4844).PressableOpacity, obj);
     const tmp7 = callback2;
   }
   return tmp7Result;
@@ -96,9 +96,9 @@ function ChannelTitle(guildId) {
     obj[3] = str2;
     ({ channelName: obj4[6], channelNameContainer: obj4[7] } = tmp4);
     obj[8] = accessibleTitle;
-    let tmp8Result = tmp11(tmp(9388), obj);
+    let tmp8Result = tmp11(tmp(9405), obj);
     let tmp8 = tmp11;
-    const tmpResult = tmp(9388);
+    const tmpResult = tmp(9405);
   } else {
     tmp8 = closure_9;
     let str = "heading-lg/bold";
@@ -116,7 +116,7 @@ function ChannelTitle(guildId) {
   tmp8Result = !disableArrow;
   if (!disableArrow) {
     const obj2 = { source: null, size: null, style: null };
-    obj2[0] = tmp(12465);
+    obj2[0] = tmp(12480);
     obj2[1] = Button.Icon.Sizes.REFRESH_SMALL_16;
     obj2[2] = tmp4.arrowIcon;
     tmp8Result = tmp8(Button.Icon, obj2);
@@ -259,7 +259,7 @@ function ParentChannelSubTitle(channel) {
   const obj3 = computeChannelName;
   const tmp6 = mergeGuildAvatar;
   const tmp7 = upsertRelationship;
-  obj[6] = tmp5(4475).computeChannelName(channel, tmp6, tmp7);
+  obj[6] = tmp5(4492).computeChannelName(channel, tmp6, tmp7);
   return tmp4(Text.Text, obj);
 }
 function EmptyIcon() {

@@ -53,10 +53,10 @@ let obj = {
                 const obj1 = { errorCode: null };
                 obj1[0] = outer1_5.INVALID_EVENT;
                 const _HermesInternal = HermesInternal;
-                let tmp35 = outer1_1(10536);
+                let tmp35 = outer1_1(10670);
                 tmp35 = new tmp35(obj1, "Invalid event: " + dependencyMap);
                 throw tmp35;
-              } else if (outer1_1(13683)(outer1_1.authorization.scopes, tmp67.scope)) {
+              } else if (outer1_1(13697)(outer1_1.authorization.scopes, tmp67.scope)) {
                 const obj2 = { event: null, scope: null, application_id: null, socket_scope: null };
                 obj2[0] = dependencyMap;
                 if (typeof tmp67.scope === "object") {
@@ -81,7 +81,7 @@ let obj = {
               } else {
                 const obj4 = { errorCode: null };
                 obj4[0] = outer1_5.INVALID_PERMISSIONS;
-                const tmp10 = new tmp72(10536)(obj4, "Not authenticated or invalid scope");
+                const tmp10 = new tmp72(10670)(obj4, "Not authenticated or invalid scope");
                 throw tmp10;
               }
               obj13 = outer1_0;
@@ -99,7 +99,7 @@ let obj = {
             if (null != closure_1.validate(initialSubscriptionPayload, c0.validation(closure_1), { convert: false }).error) {
               let obj5 = { errorCode: null };
               obj5[0] = outer1_5.INVALID_PAYLOAD;
-              const tmp64 = new outer1_1(10536)(obj5, "Invalid subscription parameters provided");
+              const tmp64 = new outer1_1(10670)(obj5, "Invalid subscription parameters provided");
               throw tmp64;
             }
           }
@@ -107,7 +107,7 @@ let obj = {
           obj6[0] = initialSubscriptionPayload;
           obj6[1] = closure_1;
           closure_2 = c0.handler(obj6);
-          obj5 = outer1_0(13684);
+          obj5 = outer1_0(13698);
           initialSubscriptionPayload = obj5.getInitialSubscriptionPayload(closure_1, closure_2, initialSubscriptionPayload);
           const promise = new Promise((arg0) => {
             setImmediate(() => {

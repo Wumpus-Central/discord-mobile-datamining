@@ -90,7 +90,7 @@ function _updateEmoji() {
           } else if (2 === tmp8) {
             c4 = 0;
             c4 = c3;
-            const tmp18 = new callback2(4185)(c4);
+            const tmp18 = new callback2(4202)(c4);
             throw tmp18;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -212,7 +212,7 @@ export const deleteEmoji = function deleteEmoji(c0, id) {
   const tmp3 = require;
   const tmp3Result = sendRequest;
   return HTTP.del(obj).then(() => {
-    const AccessibilityAnnouncer = callback(4130).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = callback(4147).AccessibilityAnnouncer;
     const intl = callback(1236).intl;
     AccessibilityAnnouncer.announce(intl.string(callback(1236).t.L3UUha));
   });

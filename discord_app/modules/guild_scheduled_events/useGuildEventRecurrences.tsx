@@ -3,7 +3,7 @@ import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import scheduledEventSort from "scheduledEventSort";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { usePrevValue } from "../../hooks/usePrevValue.tsx";
+import { usePrevValue } from "../../../discord_common/js/shared/hooks/usePrevValue.tsx";
 
 const require = arg1;
 const result = require("scheduledEventSort").fileFinishedImporting("modules/guild_scheduled_events/useGuildEventRecurrences.tsx");
@@ -19,8 +19,8 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
   let noop = tmp4;
   if (null != byWeekday) {
     if (null != stateFromStores) {
-      let tmpResult = tmp(8865);
-      tmpResult = tmp(8865);
+      let tmpResult = tmp(8882);
+      tmpResult = tmp(8882);
       let _Date = Date;
       let rRule = tmpResult.getRRule(byWeekday);
       let date = new Date(stateFromStores.scheduled_start_time);

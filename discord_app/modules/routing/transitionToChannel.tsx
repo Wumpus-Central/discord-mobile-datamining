@@ -29,8 +29,8 @@ export const transitionToChannel = function transitionToChannel(id, openTextInVo
       prop = channel.isGuildVocal();
     }
     if (prop) {
-      tmp7(4478).updateChatOpen(channel.id, true);
-      const tmp7Result = tmp7(4478);
+      tmp7(4495).updateChatOpen(channel.id, true);
+      const tmp7Result = tmp7(4495);
     }
     const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id);
   }
@@ -85,8 +85,8 @@ export const tryTransitionToThreadMessage = function tryTransitionToThreadMessag
         prop = channel1.isGuildVocal();
       }
       if (prop) {
-        tmp20(4478).updateChatOpen(channel1.id, true);
-        const tmp20Result = tmp20(4478);
+        tmp20(4495).updateChatOpen(channel1.id, true);
+        const tmp20Result = tmp20(4495);
       }
       const CHANNELResult1 = Routes.CHANNEL(guildIdForGenericRedirect1, channel1.id);
     }

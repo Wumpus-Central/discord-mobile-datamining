@@ -88,7 +88,7 @@ export const EmojiReactionRowButton = function EmojiReactionRowButton(emojiConta
     obj = { textEmojiStyle: null, fastImageStyle: null, name: null, src: null };
     ({ emojiText: obj3[0], emojiImage: obj3[1] } = tmp2);
     let str = "";
-    const emojiURL = getEmojiURL(5340);
+    const emojiURL = getEmojiURL(5359);
     if (null == animated.id) {
       str = animated.surrogates;
     }

@@ -15,7 +15,7 @@ const result = require("createCacheKey").fileFinishedImporting("modules/main_tab
 export const MainTabsContentScrim = function MainTabsContentScrim(translateX) {
   translateX = translateX.translateX;
   const maxWidth = translateX.maxWidth;
-  let obj = translateX(4145);
+  let obj = translateX(4162);
   const fn = function c() {
     const obj = { opacity: null };
     const value = translateX.get();
@@ -23,11 +23,11 @@ export const MainTabsContentScrim = function MainTabsContentScrim(translateX) {
     obj[0] = translateX(outer1_2[4]).interpolate(value, items, [0, 0.5], translateX(outer1_2[4]).Extrapolation.CLAMP);
     return obj;
   };
-  obj = { interpolate: translateX(4145).interpolate, translateX, maxWidth, Extrapolation: translateX(4145).Extrapolation };
+  obj = { interpolate: translateX(4162).interpolate, translateX, maxWidth, Extrapolation: translateX(4162).Extrapolation };
   fn.__closure = obj;
   fn.__workletHash = 7933670426250;
   fn.__initData = closure_5;
   const animatedStyle = obj.useAnimatedStyle(fn);
   const style = [callback().scrim, animatedStyle];
-  return jsx(maxWidth(4145).View, { style, pointerEvents: "none" });
+  return jsx(maxWidth(4162).View, { style, pointerEvents: "none" });
 };

@@ -3,7 +3,7 @@ import "ACTION_SHEET_HEIGHT_HALF";
 import { View } from "handleRelationshipAddError";
 import upsertRelationship from "upsertRelationship";
 import { RelationshipTypes } from "ME";
-import jsxProd from "module_4295";
+import jsxProd from "module_4312";
 import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
@@ -45,18 +45,18 @@ function FriendRequestButton(user) {
   let stateFromStores;
   let upsertRelationship;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  let obj = user(8711);
+  let obj = user(8728);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(5649)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(5668)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let tmp3Result = tmp3(12256);
+  let tmp3Result = tmp3(12271);
   const gameFriendsForUser = tmp3Result.useGameFriendsForUser(user.id);
   tmp3Result = tmp3(589);
   const items = [upsertRelationship];
   stateFromStores = tmp3Result.useStateFromStores(items, () => relationshipType.getRelationshipType(user.id));
-  upsertRelationship = trackUserProfileAction(4123).useName(user);
+  upsertRelationship = trackUserProfileAction(4140).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== tmp5.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -65,9 +65,9 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === tmp5.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(12436).UserClockIcon;
+          let UserPlusIcon = tmp3(12451).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(4223).UserPlusIcon;
+          UserPlusIcon = tmp3(4240).UserPlusIcon;
         }
         const intl = tmp3(1236).intl;
         const string = intl.string;
@@ -97,11 +97,11 @@ function FriendRequestButton(user) {
               callback({ action: "CANCEL_FRIEND_REQUEST" });
               outer1_1(outer1_2[17]).cancelFriendRequest(id.id, closure_2);
             };
-            const result = user(11895).confirmCancelFriendRequest(obj);
-            const obj3 = user(11895);
+            const result = user(11910).confirmCancelFriendRequest(obj);
+            const obj3 = user(11910);
           } else {
             trackUserProfileAction({ action: "SEND_FRIEND_REQUEST" });
-            obj = trackUserProfileAction(9162);
+            obj = trackUserProfileAction(9179);
             obj = { userId: null, context: null };
             obj[0] = user.id;
             obj[1] = dependencyMap;

@@ -94,11 +94,11 @@ function _applyBackgroundOption() {
               c5 = undefined;
               let module_38 = false;
               if (null == source) {
-                outer1_10(tmp57, tmp58, callback(4381).FilterSettingsGraph.NONE);
+                outer1_10(tmp57, tmp58, callback(4398).FilterSettingsGraph.NONE);
                 c9 = 3;
                 return { value: "T", done: null };
               } else if (tmp59 === c7) {
-                outer1_10(tmp57, tmp58, callback(4381).FilterSettingsGraph.BACKGROUND_BLUR);
+                outer1_10(tmp57, tmp58, callback(4398).FilterSettingsGraph.BACKGROUND_BLUR);
                 c9 = 3;
                 return { value: "T", done: null };
               } else {
@@ -165,7 +165,7 @@ function _applyBackgroundOption() {
                     }
                   }
                 }
-                const tmp24 = callback2(9089)()[tmp59];
+                const tmp24 = callback2(9106)()[tmp59];
                 const isVideo = tmp24.isVideo;
                 module_38 = isVideo;
                 if (isVideo == null) {

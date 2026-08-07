@@ -213,7 +213,8 @@ export default function GuildSettingsModal() {
       const intl18 = bottom(stateFromStores[9]).intl;
       obj18[1] = intl18.string(bottom(stateFromStores[9]).t.OGiMXJ);
       obj18[3] = function render() {
-        const obj = { guildId: closure_0 };
+        const obj = { guildId: closure_0, onDone: null };
+        obj[1] = obj(outer1_2[6]).stopReordering;
         const merged = Object.assign(obj);
         return outer1_9(obj(outer1_2[27]), obj);
       };

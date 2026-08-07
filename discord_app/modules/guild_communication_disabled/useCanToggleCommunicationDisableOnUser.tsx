@@ -29,8 +29,8 @@ function canToggleCommunicationDisableOnUser(id, id2, items) {
         obj[0] = Permissions.ADMINISTRATOR;
         obj[1] = user;
         obj[2] = guild;
-        canResult = importAll(3917).can(obj);
-        const obj5 = importAll(3917);
+        canResult = importAll(3934).can(obj);
+        const obj5 = importAll(3934);
       }
       let canManageUserResult = !canResult;
       if (!canResult) {

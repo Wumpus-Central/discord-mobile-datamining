@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/controls/utils/createUseAnimatedScrollLock.tsx
 import set from "set";
-import set from "module_4145";
+import set from "module_4162";
 
 const require = arg1;
 set = set.isAndroid();

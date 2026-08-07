@@ -38,14 +38,14 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   let dependencyMap;
   let obj = React;
   ref = React.useRef(null);
-  const enabled = React.useContext(markAsDismissed(4003).AccessibilityPreferencesContext).reducedMotion.enabled;
-  let obj1 = markAsDismissed(4130);
-  const isThemeDarkResult = obj1.isThemeDark(ref(4221)());
+  const enabled = React.useContext(markAsDismissed(4020).AccessibilityPreferencesContext).reducedMotion.enabled;
+  let obj1 = markAsDismissed(4147);
+  const isThemeDarkResult = obj1.isThemeDark(ref(4238)());
   const tmp6 = callback2();
   let obj2 = markAsDismissed(589);
   const items = [mergeGuildAvatar];
   const stateFromStores = obj2.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj3 = ref(3930);
+  let obj3 = ref(3947);
   let result = obj3.canUsePremiumProfileCustomization(stateFromStores);
   dependencyMap = result;
   const intl = markAsDismissed(1236).intl;
@@ -90,11 +90,11 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
       markAsDismissed(outer1_8.USER_DISMISS);
     }
   };
-  const items4 = [callback(markAsDismissed(5633).ActionSheetHeaderBar, obj1), , , , , ];
+  const items4 = [callback(markAsDismissed(5652).ActionSheetHeaderBar, obj1), , , , , ];
   obj2 = { style: tmp6.imageContainer, children: null };
   let tmp14Result = enabled;
   if (enabled) {
-    tmp14Result = tmp14(tmp2(5948).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+    tmp14Result = tmp14(tmp2(5967).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
   }
   const items5 = [tmp14Result, ];
   if (enabled) {
@@ -114,7 +114,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
     obj4[2] = str2;
     const intl2 = tmp2(1236).intl;
     obj4[3] = intl2.string(tmp4(2642).Uzms61);
-    items4[3] = tmp14(tmp2(4281).Text, obj4);
+    items4[3] = tmp14(tmp2(4298).Text, obj4);
     const obj5 = { variant: "text-lg/medium", style: null, color: null, children: null };
     obj5[1] = tmp6.subtitle;
     if (isThemeDarkResult) {
@@ -123,40 +123,40 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
     const obj6 = { bottom: true, children: null };
     obj5[2] = str;
     obj5[3] = stringResult;
-    items4[4] = tmp14(tmp2(4281).Text, obj5);
+    items4[4] = tmp14(tmp2(4298).Text, obj5);
     const obj7 = { style: null, children: null };
     obj7[0] = tmp6.actions;
     const obj8 = { text: null, variant: "primary", size: "lg", onPress: null };
     const intl3 = tmp2(1236).intl;
     obj8[0] = intl3.string(tmp2(1236).t["4P5I8V"]);
     obj8[3] = callback;
-    const items6 = [tmp14(tmp2(4695).Button, obj8), ];
+    const items6 = [tmp14(tmp2(4712).Button, obj8), ];
     const obj9 = { text: null, variant: "secondary", size: "lg", onPress: null };
     const intl4 = tmp2(1236).intl;
     obj9[0] = intl4.string(tmp2(1236).t.TulDPl);
     obj9[3] = callback1;
-    items6[1] = tmp14(tmp2(4695).Button, obj9);
+    items6[1] = tmp14(tmp2(4712).Button, obj9);
     obj7[1] = items6;
     items4[5] = tmp15(tmp16, obj7);
     obj[1] = items4;
     obj6[1] = tmp15(tmp16, obj);
-    obj[4] = tmp14(tmp2(5311).SafeAreaPaddingView, obj6);
-    return tmp14(tmp2(5377).BottomSheet, obj);
+    obj[4] = tmp14(tmp2(5327).SafeAreaPaddingView, obj6);
+    return tmp14(tmp2(5396).BottomSheet, obj);
   } else {
     if (tmp2Result.isIOS()) {
       const obj10 = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
       const obj11 = { uri: null };
-      obj11[0] = tmp4(15902);
+      obj11[0] = tmp4(15927);
       obj10[0] = obj11;
       obj10[1] = tmp6.image;
       obj10[3] = !enabled;
-      tmp14Result = tmp14(tmp4(5251), obj10);
-      const tmp4Result = tmp4(5251);
+      tmp14Result = tmp14(tmp4(5267), obj10);
+      const tmp4Result = tmp4(5267);
     } else {
       const obj12 = { url: null, style: null, autoplay: true };
-      obj12[0] = tmp4(15902);
+      obj12[0] = tmp4(15927);
       obj12[1] = tmp6.image;
-      tmp14Result = tmp14(tmp2(9304).APNGPlayer, obj12);
+      tmp14Result = tmp14(tmp2(9321).APNGPlayer, obj12);
     }
     tmp2Result = tmp2(500);
   }

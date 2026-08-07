@@ -212,7 +212,7 @@ export const fetchGameServerRegions = function fetchGameServerRegions(arg0) {
     let obj = callback(709);
     obj = { type: "GAME_SERVER_FETCH_REGIONS_SUCCESS", regions: null };
     body = body.body;
-    const mapped = body.map(callback(11766));
+    const mapped = body.map(callback(11781));
     obj[1] = mapped.sort((name, name2) => {
       name = name.name;
       return name.localeCompare(name2.name);
@@ -227,7 +227,7 @@ export const fetchMyGameServerRegions = function fetchMyGameServerRegions() {
     let obj = callback(709);
     obj = { type: "GAME_SERVER_FETCH_REGIONS_SUCCESS", regions: null, creationDisabled: null };
     const regions = body.body.regions;
-    const mapped = regions.map(callback(11766));
+    const mapped = regions.map(callback(11781));
     obj[1] = mapped.sort((name, name2) => {
       name = name.name;
       return name.localeCompare(name2.name);
@@ -256,7 +256,7 @@ export const optimisticallyMarkGameServerResizing = function optimisticallyMarkG
   const found = gameServers.find((subscription_id) => subscription_id.subscription_id === closure_0);
   if (null != found) {
     let obj = dispatcher;
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "sm" };
+    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "heading-lg/extrabold" };
     obj = {};
     const merged = Object.assign(found);
     obj.status = _GameServerStatus.GameServerStatus.STARTING;
@@ -272,7 +272,7 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
     let resolved = Promise.resolve();
   } else {
     let obj = dispatcher;
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "sm" };
+    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "heading-lg/extrabold" };
     obj = {};
     const merged = Object.assign(found);
     obj.name = name;

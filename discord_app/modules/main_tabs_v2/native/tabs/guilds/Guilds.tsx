@@ -23,7 +23,7 @@ const memoResult = require("noop").memo(function GuildsOnly() {
   obj = { gradient: tmp4, children: null };
   const items = [callback(LeftPanelContent, {}), callback(YouBar, {}), ];
   if (isEligibleForQuests) {
-    isEligibleForQuests = tmp6(tmp3(14336), {});
+    isEligibleForQuests = tmp6(tmp3(14352), {});
   }
   items[2] = isEligibleForQuests;
   obj[1] = closure_5(QuestDockMode.QuestDockExternalCoordinationContextProvider, { children: items });

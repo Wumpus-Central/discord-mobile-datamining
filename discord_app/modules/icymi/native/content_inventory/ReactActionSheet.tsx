@@ -124,13 +124,13 @@ function ReactActionSheetBase(content) {
             } else {
               let closure_0 = tmp4;
               outer1_5(true);
-              v0(8836).itemInteracted(outer1_0.id, outer1_6, "press_reply_send");
-              const obj5 = v0(8836);
+              v0(8853).itemInteracted(outer1_0.id, outer1_6, "press_reply_send");
+              const obj5 = v0(8853);
               const obj1 = { itemId: null, itemType: null, actionParameters: null };
               obj1[0] = outer1_0.id;
               obj1[1] = outer1_6;
               obj1[2] = { actionGestureType: "press", actionTargetElement: "reply_button", actionIntentType: "reply", actionDestinationType: null };
-              v0(8836).feedItemActioned(obj1);
+              v0(8853).feedItemActioned(obj1);
               v0 = 1;
               dependencyMap = 1;
               const obj2 = { value: null, done: false };

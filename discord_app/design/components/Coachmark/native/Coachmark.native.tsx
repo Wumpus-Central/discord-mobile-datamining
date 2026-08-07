@@ -5,7 +5,7 @@ import set from "set";
 import get_ActivityIndicator from "TwinButtons";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4145";
+import importDefaultResult from "module_4162";
 import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 
 let Pressable;
@@ -38,7 +38,7 @@ class Coachmark {
     adjustmentX = tmp7.adjustmentX;
     tmp8 = graphic;
     ({ tooltipX, tooltipY } = tmp7);
-    obj = require("module_4145");
+    obj = require("module_4162");
     sharedValue = require("_objectWithoutProperties");
     set = sharedValue;
     items = [];
@@ -320,7 +320,7 @@ let closure_3 = ["style"];
 ({ View: error, Pressable } = get_ActivityIndicator);
 const Image = get_ActivityIndicator.Image;
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-let closure_13 = require("module_4145").createAnimatedComponent(Pressable);
+let closure_13 = require("module_4162").createAnimatedComponent(Pressable);
 let obj = { container: { position: "absolute", alignItems: "center" }, shadow: null, body: null, textGap: null, textOnlyPadding: null, bodyBgColor: null, gradient: null, bodyContainer: null, center: null, buttonSpacing: null, text: null, cursorContainer: null, cursorHead: null, cursorSpine: null, image: null, bottomMargin: null, closeButton: null };
 obj = {};
 let merged = Object.assign(require("Themes").shadows.SHADOW_BUTTON_OVERLAY);

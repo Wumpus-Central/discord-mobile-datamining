@@ -126,7 +126,7 @@ const minutes = "minutes";
 const hours = "hours";
 const days = "days";
 const never = "never";
-let closure_19 = { [arg1(8991).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" }, [arg1(8991).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" }, [arg1(8991).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" }, [arg1(8991).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" }, [arg1(8991).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" }, [arg1(8991).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" }, [arg1(8991).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" }, [arg1(8991).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" }, [arg1(8991).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" }, [arg1(8991).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" } };
+let closure_19 = { [arg1(9008).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" }, [arg1(9008).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" }, [arg1(9008).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" }, [arg1(9008).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" }, [arg1(9008).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" }, [arg1(9008).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" }, [arg1(9008).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" }, [arg1(9008).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" }, [arg1(9008).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" }, [arg1(9008).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" } };
 let items = [require("get label").INVITE_OPTIONS_14_DAYS, require("get label").INVITE_OPTIONS_30_DAYS, require("get label").INVITE_OPTIONS_60_DAYS];
 obj = {
   getMaxAgeOptionByValue(label) {

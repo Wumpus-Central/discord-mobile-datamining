@@ -38,7 +38,7 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
   const stateFromStores = visible(589).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = visible(589);
   const tmp4 = markAsDismissed;
-  const result = markAsDismissed(3930).canUsePremiumProfileCustomization(stateFromStores);
+  const result = markAsDismissed(3947).canUsePremiumProfileCustomization(stateFromStores);
   const intl = visible(1236).intl;
   const string = intl.string;
   const tmp6 = markAsDismissed(2642);
@@ -72,7 +72,7 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
       return callback(closure_10, {});
     }
   }), items2);
-  const obj2 = markAsDismissed(3930);
-  const coachmark = visible(8576).useCoachmark(visible.targetRef, memo);
+  const obj2 = markAsDismissed(3947);
+  const coachmark = visible(8593).useCoachmark(visible.targetRef, memo);
   return null;
 };

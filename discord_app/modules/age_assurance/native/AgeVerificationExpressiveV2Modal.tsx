@@ -1,6 +1,6 @@
 // discord_app/modules/age_assurance/native/AgeVerificationExpressiveV2Modal.tsx
 import closure_3 from "jsxProd";
-import ModalActionCreators from "../../../actions/ModalActionCreators.tsx";
+import ChevronSmallRightIcon from "ChevronSmallRightIcon";
 import Stack from "Stack";
 import { ActivityIndicator } from "ModalScreen";
 import { HelpdeskArticles } from "ME";
@@ -11,6 +11,8 @@ let c9;
 let metroImportAll;
 const require = arg1;
 function MethodsScreen(onComplete) {
+  let c7;
+  let c8;
   let entryPoint;
   let loading;
   let methods;
@@ -23,7 +25,9 @@ function MethodsScreen(onComplete) {
   let callback;
   let initiateAgeVerificationV2;
   let closure_6;
-  let closure_7;
+  c7 = undefined;
+  let callback2;
+  let callback3;
   const tmp = createCacheKey();
   let obj = _require(methods[12]);
   const isSuspendedUser = obj.useIsSuspendedUser();
@@ -51,15 +55,17 @@ function MethodsScreen(onComplete) {
   let obj2 = _require(methods[15]);
   initiateAgeVerificationV2 = obj2.useInitiateAgeVerificationV2({ onComplete: onComplete.onClose, entryPoint, onMethodUnavailable: refetch }).initiateAgeVerificationV2;
   closure_6 = initiateAgeVerificationV2.useRef(false);
+  [c7, c8] = callback(initiateAgeVerificationV2.useState(null), 2);
   _require = undefined;
-  _require = first((arg0) => {
+  _require = first((arg0, arg1) => {
     let closure_0 = arg0;
-    let c2 = 0;
+    let closure_1 = arg1;
+    let c3 = 0;
+    let c6 = 0;
     let c5 = 0;
-    let c4 = 0;
-    return (function*(arg0) {
-      if (v0 === 2) {
-        v0 = 3;
+    return (function*(arg0, arg1) {
+      if (ref === 2) {
+        ref = 3;
         HermesBuiltin.throwTypeError();
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
@@ -73,66 +79,70 @@ function MethodsScreen(onComplete) {
         }
       } else {
         try {
-          v0 = 2;
-          if (0 === c2) {
+          ref = 2;
+          if (0 === c3) {
             if (arg0 === 1) {
-              v0 = 3;
+              ref = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              v0 = 3;
+              ref = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp3;
-              if (!outer1_6.current) {
+              let closure_2 = tmp3;
+              if (!ref.current) {
                 let obj1 = navigation(methods[16]);
-                const result = obj1.trackAgeVerificationModalClicked(outer1_1, navigation(methods[16]).AgeVerificationModalVersion.EXPRESSIVE_V2, navigation(methods[16]).AgeVerificationModalCta.METHOD_SELECT, tmp35.method);
-                if (tmp35.method !== navigation(methods[6]).AgeAssuranceMethod.GOOGLE_WALLET) {
-                  outer1_6.current = true;
-                  let c4 = 1;
-                  c2 = 2;
-                  v0 = 1;
+                const result = obj1.trackAgeVerificationModalClicked(closure_1, navigation(methods[16]).AgeVerificationModalVersion.EXPRESSIVE_V2, navigation(methods[16]).AgeVerificationModalCta.METHOD_SELECT, tmp44.method);
+                if (tmp44.method !== navigation(methods[6]).AgeAssuranceMethod.GOOGLE_WALLET) {
+                  ref.current = true;
+                  outer1_8(tmp45);
+                  let v0 = 1;
+                  c3 = 2;
+                  ref = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = v0(tmp35.method, tmp35.vendor);
+                  obj1[0] = v0(tmp44.method, tmp44.vendor);
                   return obj1;
                 } else {
                   navigation.navigate(outer2_11.GOOGLE_WALLET_VERIFICATION);
                 }
               }
-              v0 = 3;
+              ref = 3;
             }
           } else if (1 === tmp7) {
-            c4 = 0;
-            outer1_6.current = false;
-            throw closure_3;
+            v0 = 0;
+            ref.current = false;
+            outer1_8(null);
+            throw ChevronSmallRightIcon;
           } else if (arg0 === 1) {
-            v0 = 3;
+            ref = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            c4 = 0;
-            outer1_6.current = false;
+            v0 = 0;
+            ref.current = false;
+            outer1_8(null);
           }
-          c4 = 0;
-          outer1_6.current = false;
-          v0 = 3;
+          v0 = 0;
+          ref.current = false;
+          outer1_8(null);
+          ref = 3;
           obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
-        } catch (tmp27) {
-          closure_3 = tmp27;
-          if (tmp4 === c4) {
-            v0 = tmp2;
-            throw tmp27;
+        } catch (tmp35) {
+          ChevronSmallRightIcon = tmp35;
+          if (tmp4 === v0) {
+            ref = tmp2;
+            throw tmp35;
           } else {
-            c2 = tmp;
+            c3 = tmp;
           }
         }
       }
     })();
   });
   const items1 = [navigation, initiateAgeVerificationV2, modalSessionId];
-  closure_7 = initiateAgeVerificationV2.useCallback(function() {
+  callback3 = initiateAgeVerificationV2.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -150,11 +160,11 @@ function MethodsScreen(onComplete) {
   let obj7 = _require(methods[15]);
   obj2[3] = obj7.getAgeVerificationGetStartedTitle(entryPoint);
   const items3 = [callback2(_require(methods[21]).Text, obj2), ];
-  let obj3 = { variant: "text-md/medium", color: "text-strong", style: tmp.header, children: null };
+  const obj3 = { variant: "text-md/medium", color: "text-strong", style: tmp.header, children: null };
   let obj9 = _require(methods[15]);
   obj3[3] = obj9.getAgeVerificationGetStartedSubtitle(entryPoint, () => {
     const obj = modalSessionId(methods[22]);
-    obj.openUrl(modalSessionId(methods[23]).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
+    obj.openUrl(modalSessionId(methods[23]).getArticleURL(_undefined.TIGGER_PAWTECT_LEARN_MORE));
     const obj2 = modalSessionId(methods[23]);
     const result = callback(methods[16]).trackAgeVerificationModalClicked(modalSessionId, callback(methods[16]).AgeVerificationModalVersion.EXPRESSIVE_V2, callback(methods[16]).AgeVerificationModalCta.LEARN_MORE);
   }, isSuspendedUser);
@@ -163,25 +173,25 @@ function MethodsScreen(onComplete) {
   items2[1] = callback3(_require(methods[19]).Stack, obj1);
   obj[3] = items2;
   const items4 = [callback3(_require(methods[19]).Stack, obj), , , ];
-  let tmp10Result = loading;
+  let tmp11Result = loading;
   if (loading) {
-    const obj4 = { align: "center", justify: "center", style: null, children: null };
+    let obj4 = { align: "center", justify: "center", style: null, children: null };
     obj4[2] = tmp.loadingContainer;
-    obj4[3] = tmp10(closure_6, { size: "large" });
-    tmp10Result = tmp10(tmp2(tmp3[19]).Stack, obj4);
+    obj4[3] = tmp11(closure_6, { size: "large" });
+    tmp11Result = tmp11(tmp2(tmp3[19]).Stack, obj4);
   }
-  items4[1] = tmp10Result;
-  let tmp14 = !loading;
+  items4[1] = tmp11Result;
+  let tmp15 = !loading;
   if (!loading) {
-    tmp14 = !tmp9;
+    tmp15 = !tmp9;
   }
-  if (!tmp14) {
-    items4[2] = tmp14;
-    tmp10Result = !loading;
+  if (!tmp15) {
+    items4[2] = tmp15;
+    tmp11Result = !loading;
     if (!loading) {
-      tmp10Result = tmp9;
+      tmp11Result = tmp9;
     }
-    if (tmp10Result) {
+    if (tmp11Result) {
       const obj5 = { hasIcons: true, children: null };
       obj5[1] = memo.map((children) => {
         const callback = children;
@@ -196,43 +206,51 @@ function MethodsScreen(onComplete) {
         if (null != GoogleNeutralIcon) {
           let obj = { IconComponent: null, variant: "secondary" };
           obj[0] = GoogleNeutralIcon;
-          let tmp4 = outer1_8(tmp(tmp2[29]).TableRow.Icon, obj);
-          let tmp3 = outer1_8;
+          let tmp4 = _undefined2(tmp(tmp2[29]).TableRow.Icon, obj);
+          let tmp5 = _undefined2;
         } else if (null != children.icon) {
           obj = { icon: null };
           obj[0] = children.icon;
-          tmp4 = outer1_8(modalSessionId(tmp2[30]), obj);
-          tmp3 = outer1_8;
+          tmp4 = _undefined2(modalSessionId(tmp2[30]), obj);
+          tmp5 = _undefined2;
         } else {
-          tmp3 = outer1_8;
           obj = { IconComponent: null, variant: "secondary" };
           obj[0] = tmp(tmp2[31]).UnknownGameIcon;
-          tmp4 = outer1_8(tmp(tmp2[29]).TableRow.Icon, obj);
+          tmp4 = _undefined2(tmp(tmp2[29]).TableRow.Icon, obj);
+          tmp5 = _undefined2;
         }
-        const obj1 = { arrow: true, icon: tmp4, label: children.title, subLabel: null, onPress: null };
-        const items = [tmp3(callback(methods[21]).Text, { variant: "text-sm/normal", color: "text-muted", children: children.description }), ];
-        let tmp3Result = null != children.providedBy;
-        if (tmp3Result) {
-          const obj3 = { variant: "text-sm/normal", color: "text-subtle", children: null };
-          obj3[2] = children.providedBy;
-          tmp3Result = tmp3(tmp(tmp2[21]).Text, obj3);
+        const combined = "" + children.method + "-" + children.vendor;
+        if (c7 === combined) {
+          let tmp5Result = tmp5(closure_6, {});
+        } else {
+          const obj1 = { size: "md", color: null };
+          obj1[1] = modalSessionId(tmp2[11]).colors.INTERACTIVE_ICON_DEFAULT;
+          tmp5Result = tmp5(tmp(tmp2[32]).ChevronSmallRightIcon, obj1);
         }
-        items[1] = tmp3Result;
-        obj1[3] = outer1_9(callback(methods[19]).Stack, { direction: "vertical", spacing: 4, children: items });
-        obj1[4] = function onPress() {
-          outer1_7(closure_0);
+        const obj2 = { trailing: tmp5Result, disabled: null != c7, icon: tmp4, label: children.title, subLabel: null, onPress: null };
+        const items = [tmp5(callback(methods[21]).Text, { variant: "text-sm/normal", color: "text-muted", children: children.description }), ];
+        tmp5Result = null != children.providedBy;
+        if (tmp5Result) {
+          const obj4 = { variant: "text-sm/normal", color: "text-muted", children: null };
+          obj4[2] = children.providedBy;
+          tmp5Result = tmp5(tmp(tmp2[21]).Text, obj4);
+        }
+        items[1] = tmp5Result;
+        obj2[4] = closure_9(callback(methods[19]).Stack, { direction: "vertical", spacing: 4, children: items });
+        obj2[5] = function onPress() {
+          return outer1_9(closure_0, combined);
         };
-        return tmp3(callback(methods[29]).TableRow, obj1, "" + children.method + "-" + children.vendor);
+        return tmp5(callback(methods[29]).TableRow, obj2, combined);
       });
-      tmp10Result = tmp10(tmp2(tmp3[28]).TableRowGroup, obj5);
+      tmp11Result = tmp11(tmp2(tmp3[28]).TableRowGroup, obj5);
     }
     const obj6 = { children: null };
     obj7 = { children: null };
-    items4[3] = tmp10Result;
+    items4[3] = tmp11Result;
     obj[3] = items4;
     obj7[0] = callback3(_require(methods[19]).Stack, obj);
-    obj6[0] = tmp10(_require(methods[18]).ModalContent, obj7);
-    return tmp10(_require(methods[17]).ModalScreen, obj6);
+    obj6[0] = tmp11(_require(methods[18]).ModalContent, obj7);
+    return tmp11(_require(methods[17]).ModalScreen, obj6);
   } else {
     const obj8 = { style: null, children: null };
     obj8[0] = tmp.emptyContainer;
@@ -242,13 +260,13 @@ function MethodsScreen(onComplete) {
     const intl = tmp2(tmp3[26]).intl;
     obj10[2] = intl.string(modalSessionId(tmp3[27]).hDvmYP);
     obj10[3] = refetch;
-    obj9[1] = tmp10(tmp2(tmp3[25]).Button, obj10);
+    obj9[1] = tmp11(tmp2(tmp3[25]).Button, obj10);
     const intl2 = tmp2(tmp3[26]).intl;
-    const tmp16 = modalSessionId(tmp3[27]);
-    obj9[2] = intl2.string(ageVerificationMethodsV2.error ? tmp16.Bkmk4Y : tmp16.cR6336);
-    obj9 = tmp10(tmp2(tmp3[24]).HelpMessage, obj9);
+    const tmp17 = modalSessionId(tmp3[27]);
+    obj9[2] = intl2.string(ageVerificationMethodsV2.error ? tmp17.Bkmk4Y : tmp17.cR6336);
+    obj9 = tmp11(tmp2(tmp3[24]).HelpMessage, obj9);
     obj8[1] = obj9;
-    tmp10(tmp2(tmp3[19]).Stack, obj8);
+    tmp11(tmp2(tmp3[19]).Stack, obj8);
   }
 }
 ({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
@@ -272,7 +290,7 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
   let memo;
   const tmp = createCacheKey();
   dependencyMap = tmp;
-  memo = React.useMemo(() => entryPoint(_undefined[35]).v4(), []);
+  memo = React.useMemo(() => entryPoint(_undefined[36]).v4(), []);
   const items = [tmp, memo, entryPoint, onClose];
   const items1 = [memo, entryPoint];
   const memo1 = React.useMemo(() => {
@@ -280,7 +298,7 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
     let closure_1 = closure_0;
     const _undefined = closure_1;
     closeModal = function closeModal() {
-      let arr = callback(4490);
+      let arr = callback(4507);
       arr = arr.pop();
       dependencyMap();
     };
@@ -293,7 +311,7 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
       headerLeft: null,
       render: null
     };
-    obj[2] = entryPoint(_undefined[33]).getHeaderCloseButton(closeModal);
+    obj[2] = entryPoint(_undefined[34]).getHeaderCloseButton(closeModal);
     obj[3] = function render(arg0, navigation) {
       return outer1_8(outer1_12, { entryPoint: closure_1, navigation, onClose: closeModal, modalSessionId: closure_0 });
     };
@@ -306,10 +324,10 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
       headerLeft: null,
       render: null
     };
-    const obj3 = entryPoint(_undefined[33]);
-    obj[2] = entryPoint(_undefined[33]).getHeaderBackButton();
+    const obj3 = entryPoint(_undefined[34]);
+    obj[2] = entryPoint(_undefined[34]).getHeaderBackButton();
     obj[3] = function render() {
-      return outer1_8(callback(7872), { onClose: closeModal, modalSessionId: closure_0 });
+      return outer1_8(callback(7889), { onClose: closeModal, modalSessionId: closure_0 });
     };
     obj[outer1_11.GOOGLE_WALLET_VERIFICATION] = obj;
     return obj;
@@ -320,5 +338,5 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
   let obj = { screens: memo1, initialRouteName: constants.METHODS, headerBackTitle: null };
   const intl = entryPoint(1236).intl;
   obj[2] = intl.string(entryPoint(1236).t["13/7kX"]);
-  return callback2(entryPoint(5704).Navigator, obj);
+  return callback2(entryPoint(5723).Navigator, obj);
 };

@@ -6,5 +6,5 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/thread
 export const showThreadNotificationsBottomSheet = function showThreadNotificationsBottomSheet(channel) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel };
-  obj.openLazy(asyncRequireImpl(10112, dependencyMap.paths), "ThreadNotificationsBottomSheet", obj);
+  obj.openLazy(asyncRequireImpl(10128, dependencyMap.paths), "ThreadNotificationsBottomSheet", obj);
 };

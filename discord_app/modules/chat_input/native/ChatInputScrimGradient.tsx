@@ -51,7 +51,7 @@ export const ChatInputScrimGradient = function ChatInputScrimGradient(scrimBase)
   }
   obj = { style: { position: "absolute", top: result, left: 0, right: 0, bottom: 0 }, pointerEvents: "none", children: null };
   const items = [str, hex2rgbResult];
-  const items1 = [callback(tmp4(4706), { colors: items, style: { height: gradientHeight }, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, locations: [0, 1] }), callback(View, { style: { flex: 1, backgroundColor: hex2rgbResult } })];
+  const items1 = [callback(tmp4(4723), { colors: items, style: { height: gradientHeight }, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, locations: [0, 1] }), callback(View, { style: { flex: 1, backgroundColor: hex2rgbResult } })];
   obj[2] = items1;
   return closure_5(View, obj);
 };

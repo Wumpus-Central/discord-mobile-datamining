@@ -40,10 +40,10 @@ export default function WidgetPreview(arg0) {
         obj[1] = widget;
         const items1 = [tmp4.card, tmp.card];
         obj[3] = items1;
-        tmp6 = callback(tmp5(12258).WidgetSection, obj);
+        tmp6 = callback(tmp5(12273).WidgetSection, obj);
       }
     }
-    tmp5Result = tmp5(7003);
+    tmp5Result = tmp5(7022);
   }
   let tmp9 = null;
   if (null !== tmp6) {
@@ -53,7 +53,7 @@ export default function WidgetPreview(arg0) {
     obj2[0] = tmp.title;
     const intl = tmp5(1236).intl;
     obj2[3] = intl.string(tmp5(1236).t.SpsnDY).toUpperCase();
-    const items2 = [callback(tmp5(4281).Text, obj2), tmp6];
+    const items2 = [callback(tmp5(4298).Text, obj2), tmp6];
     obj1[1] = items2;
     tmp9 = callback2(View, obj1);
     const str = intl.string(tmp5(1236).t.SpsnDY);

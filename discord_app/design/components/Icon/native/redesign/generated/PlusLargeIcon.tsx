@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/09626_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/09642_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

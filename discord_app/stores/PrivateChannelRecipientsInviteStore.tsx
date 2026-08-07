@@ -13,8 +13,6 @@ import ME from "ME";
 import { Store } from "initialize";
 import set from "createChannelRecord";
 import { getTransformedUser } from "../modules/autocompleter/UserSearchManager.tsx";
-import { getFrictionlessGDMsEnabled } from "../modules/header_bar/FrictionlessGDMsExperiment.tsx";
-import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
 import { isNullOrEmpty } from "../utils/StringUtils.tsx";
 import { nameFromUser } from "../utils/UserUtils.tsx";
 
@@ -25,22 +23,22 @@ function performQuery() {
   if (c15) {
     channel = channel.getChannel(c22);
     if (0 === _var.trim().length) {
-      if (null != set1) {
-        set1.clearQuery();
+      if (null != closure_3) {
+        closure_3.clearQuery();
       }
-      let _require = channel;
+      let closure_0 = channel;
+      let arr = authStore;
       const currentUser = authStore.getCurrentUser();
       let obj1 = currentUser;
-      frictionlessGDMsEnabled = _require(frictionlessGDMsEnabled[11]).getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
       const items = [];
-      HermesBuiltin.arraySpread(store2.getFriendIDs(), 0);
+      HermesBuiltin.arraySpread(store.getFriendIDs(), 0);
       let isStaffResult;
       if (currentUser != null) {
         isStaffResult = currentUser.isStaff();
       }
-      let arr = items;
+      arr = items;
       if (isStaffResult) {
-        const found = authStore.filter((isStaff) => {
+        const found = arr.filter((isStaff) => {
           let isStaffResult = isStaff.isStaff();
           if (isStaffResult) {
             isStaffResult = isStaff.id !== obj1.id;
@@ -55,40 +53,18 @@ function performQuery() {
         const set = new Set(items1);
         arr = Array.from(set);
       }
-      set1 = null;
-      if (frictionlessGDMsEnabled) {
-        const _Set2 = Set;
-        set1 = new Set(store.getGuildIds());
-        userAffinities = userAffinities.getUserAffinities();
-        const mapped1 = userAffinities.map((otherUserId) => otherUserId.otherUserId);
-        const found1 = mapped1.filter((arg0) => {
-          let id;
-          if (obj1 != null) {
-            id = obj1.id;
-          }
-          return arg0 !== id;
-        });
-        const found2 = found1.filter((id) => !upsertRelationship.isBlockedOrIgnored(id));
-        const found3 = found2.filter((id) => !upsertRelationship.isFriend(id));
-        const _Array2 = Array;
-        const _Set3 = Set;
-        const items2 = [];
-        HermesBuiltin.arraySpread(found3, HermesBuiltin.arraySpread(arr, 0));
-        const set2 = new Set(items2);
-        arr = Array.from(set2);
-      }
       let isGroupDMResult;
       if (channel != null) {
         isGroupDMResult = channel.isGroupDM();
       }
-      let found4 = arr;
+      let found1 = arr;
       if (isGroupDMResult) {
-        found4 = arr.filter((arg0) => {
+        found1 = arr.filter((arg0) => {
           recipients = recipients.recipients;
           return !recipients.includes(arg0);
         });
       }
-      const reduced = found4.reduce((arr) => {
+      const reduced = found1.reduce((arr) => {
         const user = outer1_13.getUser(arg1);
         if (null != user) {
           if (!user.isProvisional) {
@@ -103,28 +79,8 @@ function performQuery() {
             }
             const obj = { user: null, comparator: null };
             obj[0] = user;
-            obj[1] = obj1(frictionlessGDMsEnabled[14]).getName(user);
-            if (frictionlessGDMsEnabled) {
-              if (null != set1) {
-                if (!outer1_12.isFriend(user.id)) {
-                  arr = outer1_26(user.id, tmp5);
-                  if (0 === arr.length) {
-                    if (user.isStaff()) {
-                      let isStaffResult1;
-                      if (obj1 != null) {
-                        isStaffResult1 = obj5.isStaff();
-                      }
-                      obj5 = obj1;
-                    }
-                    return arr;
-                  }
-                  if (arr.length > 0) {
-                    obj.mutualGuilds = arr;
-                  }
-                }
-              }
-            }
-            arr = arr.push(obj);
+            obj[1] = obj1(outer1_2[12]).getName(user);
+            arr.push(obj);
             return arr;
           }
         }
@@ -144,32 +100,24 @@ function performQuery() {
       if (flag2 == null) {
         flag2 = false;
       }
-      obj1 = _require(frictionlessGDMsEnabled[11]);
-      const frictionlessGDMsEnabled1 = obj1.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
-      if (frictionlessGDMsEnabled1) {
-        const members = obj1(frictionlessGDMsEnabled[12]).requestMembers(null, _var);
-        const obj3 = obj1(frictionlessGDMsEnabled[12]);
-      }
-      if (null != set1) {
+      if (null != closure_3) {
         let obj = { query: null, filters: null, blacklist: null, boosters: null };
         obj[0] = _var;
-        let tmp12;
-        if (!frictionlessGDMsEnabled1) {
-          obj = { friends: true, staff: null, provisional: false };
-          obj[1] = flag2;
-          tmp12 = obj;
-        }
-        obj[1] = tmp12;
-        obj[2] = tmp10;
+        obj = { friends: true, staff: null, provisional: false };
+        obj[1] = flag2;
+        obj[1] = obj;
+        obj[2] = tmp4;
+        closure_0 = undefined;
+        obj1 = undefined;
         frequentlyWithoutFetchingLatest = frequentlyWithoutFetchingLatest.getFrequentlyWithoutFetchingLatest();
-        const found5 = frequentlyWithoutFetchingLatest.filter((isDM) => isDM instanceof closure_6 && isDM.isDM());
+        const found2 = frequentlyWithoutFetchingLatest.filter((isDM) => isDM instanceof closure_6 && isDM.isDM());
         const _Math = Math;
-        const items3 = [];
-        HermesBuiltin.arraySpread(found5.map((id) => scoreWithoutFetchingLatest.getScoreWithoutFetchingLatest(id.id)), 0);
+        const items2 = [];
+        HermesBuiltin.arraySpread(found2.map((id) => scoreWithoutFetchingLatest.getScoreWithoutFetchingLatest(id.id)), 0);
         const _Math2 = Math;
-        _require = HermesBuiltin.apply(items3, Math);
+        closure_0 = HermesBuiltin.apply(items2, Math);
         obj1 = {};
-        const item = found5.forEach((id) => {
+        const item = found2.forEach((id) => {
           const scoreWithoutFetchingLatest = outer1_9.getScoreWithoutFetchingLatest(id.id);
           const recipientId = id.getRecipientId();
           let num = 0;
@@ -183,7 +131,7 @@ function performQuery() {
           obj1[recipientId] = 1 + scoreWithoutFetchingLatest / closure_0 + num + num2;
         });
         obj[3] = obj1;
-        set1.setQuery(obj);
+        closure_3.setQuery(obj);
       }
       return false;
     }
@@ -193,7 +141,7 @@ function performQuery() {
 }
 function updateHasFriends() {
   if (c15) {
-    const tmp3 = store2.getFriendCount() > 0;
+    const tmp3 = store.getFriendCount() > 0;
     let c19 = tmp3;
     return tmp3 !== c19;
   } else {
@@ -209,31 +157,6 @@ function sortUserList(user, user2) {
   const name1 = nameFromUser.getName(user2.user);
   return stripDiacriticsResult.localeCompare(obj5.stripDiacritics(name1.toLocaleLowerCase()));
 }
-function getMutualGuildsWithCurrentUser(id, set) {
-  const RestrictedGuildIds = explicitContentFromProto.RestrictedGuildIds;
-  const setting = RestrictedGuildIds.getSetting();
-  const items = [];
-  const iter = set[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let tmp2 = nextResult;
-    if (!setting.includes(nextResult)) {
-      let tmp3 = member;
-      let tmp4 = nextResult;
-      if (member.isMember(tmp2, id)) {
-        let tmp5 = store;
-        let tmp6 = nextResult;
-        let guild = store.getGuild(tmp2);
-        if (null != guild) {
-          let tmp9 = guild;
-          let arr = items.push(tmp8);
-        }
-      }
-    }
-    continue;
-  }
-  return items;
-}
 function parseUserResults(results) {
   let comparator;
   let id;
@@ -241,79 +164,39 @@ function parseUserResults(results) {
   if (c15) {
     if ("" !== c16) {
       const currentUser = authStore.getCurrentUser();
-      const frictionlessGDMsEnabled = getFrictionlessGDMsEnabled.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
-      let set = null;
-      if (frictionlessGDMsEnabled) {
-        const _Set = Set;
-        set = new Set(store.getGuildIds());
-      }
       const items = [];
       const iter = results[Symbol.iterator]();
-      const obj4 = getFrictionlessGDMsEnabled;
       while (iter !== undefined) {
         ({ id, comparator } = nextResult);
         if (null == currentUser) {
-          let tmp12 = authStore;
-          let tmp13 = id;
+          let tmp6 = authStore;
+          let tmp7 = id;
           let user = authStore.getUser(id);
           let obj = user;
           if (null != user) {
-            let tmp37 = user;
+            let tmp9 = user;
             if (!obj.isProvisional) {
-              let tmp15 = user;
+              let tmp10 = user;
               if (!obj.bot) {
                 obj = { user: null, comparator: null };
-                let tmp18 = user;
+                let tmp13 = user;
                 obj[0] = obj;
-                let tmp19 = comparator;
+                let tmp14 = comparator;
                 obj[1] = comparator;
-                let tmp20 = obj;
-                if (frictionlessGDMsEnabled) {
-                  if (null != set) {
-                    let tmp38 = store2;
-                    let tmp39 = user;
-                    if (!store2.isFriend(obj.id)) {
-                      let tmp21 = getMutualGuildsWithCurrentUser;
-                      let tmp22 = user;
-                      let arr2 = getMutualGuildsWithCurrentUser(obj.id, set);
-                      let arr3 = arr2;
-                      if (0 !== arr2.length) {
-                        let tmp25 = arr2;
-                        if (arr3.length > 0) {
-                          let tmp26 = obj;
-                          let tmp27 = arr2;
-                          tmp20.mutualGuilds = arr3;
-                        }
-                      } else {
-                        let tmp23 = user;
-                        if (!obj.isStaff()) {
-                          continue;
-                        } else {
-                          let isStaffResult;
-                          if (currentUser != null) {
-                            isStaffResult = currentUser.isStaff();
-                          }
-                        }
-                      }
-                      continue;
-                    }
-                  }
-                }
-                let tmp28 = obj;
-                let arr = items.push(tmp20);
+                let arr = items.push(obj);
               } else {
-                let tmp16 = user;
+                let tmp11 = user;
                 if (obj.isStaff()) {
-                  let isStaffResult1;
+                  let isStaffResult;
                   if (currentUser != null) {
-                    isStaffResult1 = currentUser.isStaff();
+                    isStaffResult = currentUser.isStaff();
                   }
                 }
               }
             }
           }
         } else {
-          let tmp11 = id;
+          let tmp5 = id;
         }
         continue;
       }
@@ -327,7 +210,7 @@ function handleModalActionSheetOpen(key) {
     return false;
   } else {
     let c15 = true;
-    let closure_19 = store2.getFriendCount() > 0;
+    let closure_19 = store.getFriendCount() > 0;
     if (null != userSearchContext) {
       userSearchContext.destroy();
       userSearchContext = null;
@@ -358,16 +241,7 @@ function handleActionSheetDismiss(key) {
   }
 }
 function performQueryOnAffinityChange() {
-  let tmp = !c15;
-  if (c15) {
-    tmp = !getFrictionlessGDMsEnabled.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
-    const obj = getFrictionlessGDMsEnabled;
-  }
-  let tmp4 = !tmp;
-  if (!tmp) {
-    tmp4 = performQuery();
-  }
-  return tmp4;
+  return false;
 }
 ({ NEW_GROUP_DM_POPOUT_ID: closure_14, Consents } = ME);
 let c15 = false;
@@ -417,42 +291,10 @@ const privateChannelRecipientsInviteStoreClass = new PrivateChannelRecipientsInv
     let c20 = false;
   },
   GUILD_MEMBERS_CHUNK_BATCH: function handleGuildMembersChunkBatch() {
-    let tmp = !c15;
-    if (c15) {
-      tmp = !getFrictionlessGDMsEnabled.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
-      const obj = getFrictionlessGDMsEnabled;
-    }
-    let tmp4 = !tmp;
-    if (!tmp) {
-      let flag2 = c20 !== false;
-      if (flag2) {
-        c20 = false;
-        flag2 = true;
-      }
-      tmp4 = flag2;
-    }
-    return tmp4;
+    return false;
   },
-  GUILD_MEMBERS_REQUEST: function handleGuildMembersRequest(query) {
-    let tmp = !c15;
-    if (c15) {
-      tmp = !getFrictionlessGDMsEnabled.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
-      const obj = getFrictionlessGDMsEnabled;
-    }
-    let tmp4 = !tmp;
-    if (!tmp) {
-      let tmp6 = query.query === _var.toLocaleLowerCase();
-      if (tmp6) {
-        let flag2 = c20 !== true;
-        if (flag2) {
-          c20 = true;
-          flag2 = true;
-        }
-        tmp6 = flag2;
-      }
-      tmp4 = tmp6;
-    }
-    return tmp4;
+  GUILD_MEMBERS_REQUEST: function handleGuildMembersRequest(arg0) {
+    return false;
   },
   CHANNEL_SELECT: function handleChannelSelect(guildId) {
     if (null != guildId.guildId) {
@@ -472,7 +314,7 @@ const privateChannelRecipientsInviteStoreClass = new PrivateChannelRecipientsInv
   SHOW_ACTION_SHEET: handleModalActionSheetOpen,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function handleInviteOpen(channelId) {
     let c15 = true;
-    let closure_19 = store2.getFriendCount() > 0;
+    let closure_19 = store.getFriendCount() > 0;
     if (null != userSearchContext) {
       userSearchContext.destroy();
       userSearchContext = null;

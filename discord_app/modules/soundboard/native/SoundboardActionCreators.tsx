@@ -16,5 +16,5 @@ export const showSoundboardSoundPickerActionSheet = function showSoundboardSound
   ComponentDispatch.dispatch(ComponentActions.TOGGLE_CALL_CONTROL_DRAWER);
   const result = UNSAFE_isDismissibleContentDismissed.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
   const obj = UNSAFE_isDismissibleContentDismissed;
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(16028, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel, analyticsSource });
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(16054, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel, analyticsSource });
 };

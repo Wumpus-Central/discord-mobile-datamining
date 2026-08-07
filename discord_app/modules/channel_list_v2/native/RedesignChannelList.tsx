@@ -76,8 +76,8 @@ function FavoriteChannels(arg0) {
       let tmp11Result = null;
       if (shouldShowEmptyState) {
         obj = { variant: "empty" };
-        tmp11Result = tmp11(tmp9(15224), obj);
-        const tmp9Result = tmp9(15224);
+        tmp11Result = tmp11(tmp9(15248), obj);
+        const tmp9Result = tmp9(15248);
       }
       items[1] = tmp11Result;
       obj[2] = items;
@@ -121,7 +121,7 @@ function ChannelsWrapper(selectedGuildId) {
           obj.selectedVoiceChannelId = stateFromStores1;
           tmp6Result = callback(FavoriteChannels, obj);
         } else {
-          tmp2Result = tmp2(8602);
+          tmp2Result = tmp2(8619);
           if (tmp2Result.shouldNSFWGateGuild(selectedGuildId)) {
             obj1 = { style: null, guildId: null };
             obj1[0] = merged.style;

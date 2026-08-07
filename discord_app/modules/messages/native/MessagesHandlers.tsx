@@ -69,7 +69,7 @@ let result = require("_slicedToArray").fileFinishedImporting("modules/messages/n
 class MessagesHandlers {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
-    f108274 = obj;
+    f108363 = obj;
     obj.getMessageData = function getMessageData(messageId) {
       if (null == messageId) {
         return null;
@@ -1055,44 +1055,46 @@ class MessagesHandlers {
         tmpResult = tmp(tmp2[105]);
         const result = tmpResult.findQuestOrReplacement(code, initializeState.quests, initializeState.excludedQuests);
         if (null != result) {
-          if (null != initializeState.questEnrollmentBlockedUntil) {
-            obj = { scrollToQuestId: null, fromContent: null };
-            obj[0] = result.id;
-            obj[1] = tmp(tmp2[107]).QuestContent.QUEST_EMBED_MOBILE;
-            tmp(tmp2[106]).openQuestHome(obj);
-            const tmpResult1 = tmp(tmp2[106]);
-          } else {
-            const userStatus = result.userStatus;
-            let enrolledAt;
-            if (userStatus != null) {
-              enrolledAt = userStatus.enrolledAt;
+          if (null == initializeState.questEnrollmentBlockedUntil) {
+            if (!tmp4.isQuestAccessSuspended) {
+              const userStatus = result.userStatus;
+              let enrolledAt;
+              if (userStatus != null) {
+                enrolledAt = userStatus.enrolledAt;
+              }
+              let tmp9 = null != enrolledAt;
+              const _Date = Date;
+              const date = new Date();
+              if (!tmp9) {
+                tmp9 = result.config.expiresAt < date.toISOString();
+              }
+              if (!tmp9) {
+                obj = { questContent: null, questContentCTA: null, sourceQuestContent: null };
+                obj[0] = tmp(tmp2[107]).QuestContent.QUEST_EMBED_MOBILE;
+                obj[1] = tmp(tmp2[109]).QuestContentCTA.ACCEPT_QUEST;
+                obj[2] = tmp(tmp2[107]).QuestContent.QUEST_EMBED_MOBILE;
+                tmp(tmp2[108]).enrollInQuest(result.id, obj);
+                const tmpResult1 = tmp(tmp2[108]);
+              }
+              obj = { scrollToQuestId: null, fromContent: null };
+              obj[0] = result.id;
+              obj[1] = tmp(tmp2[107]).QuestContent.QUEST_EMBED_MOBILE;
+              tmp(tmp2[106]).openQuestHome(obj);
+              const tmpResult2 = tmp(tmp2[106]);
             }
-            let tmp9 = null != enrolledAt;
-            const _Date = Date;
-            const date = new Date();
-            if (!tmp9) {
-              tmp9 = result.config.expiresAt < date.toISOString();
-            }
-            if (!tmp9) {
-              obj = { questContent: null, questContentCTA: null, sourceQuestContent: null };
-              obj[0] = tmp(tmp2[107]).QuestContent.QUEST_EMBED_MOBILE;
-              obj[1] = tmp(tmp2[109]).QuestContentCTA.ACCEPT_QUEST;
-              obj[2] = tmp(tmp2[107]).QuestContent.QUEST_EMBED_MOBILE;
-              tmp(tmp2[108]).enrollInQuest(result.id, obj);
-              const tmpResult2 = tmp(tmp2[108]);
-            }
-            const obj1 = { scrollToQuestId: null, fromContent: null };
-            obj1[0] = result.id;
-            obj1[1] = tmp(tmp2[107]).QuestContent.QUEST_EMBED_MOBILE;
-            tmp(tmp2[106]).openQuestHome(obj1);
-            const tmpResult3 = tmp(tmp2[106]);
           }
+          const obj1 = { scrollToQuestId: null, fromContent: null };
+          obj1[0] = result.id;
+          obj1[1] = tmp(tmp2[107]).QuestContent.QUEST_EMBED_MOBILE;
+          tmp(tmp2[106]).openQuestHome(obj1);
+          const tmpResult3 = tmp(tmp2[106]);
         } else {
           const obj2 = { fromContent: null };
           obj2[0] = tmp(tmp2[107]).QuestContent.QUEST_EMBED_MOBILE;
           tmp(tmp2[106]).openQuestHome(obj2);
           const tmpResult4 = tmp(tmp2[106]);
         }
+        tmp4 = initializeState;
       }
     };
     obj.handleTapInviteEmbedAccept = function handleTapInviteEmbedAccept(closure_0) {
@@ -2257,8 +2259,8 @@ class MessagesHandlers {
       obj[2] = callback(closure_3[144]);
       callback(closure_3[142]).open(obj);
     };
-    f108274 = undefined;
-    f108274 = set((arg0) => {
+    f108363 = undefined;
+    f108363 = set((arg0) => {
       let closure_0 = arg0;
       let c2 = 0;
       let c1 = 0;
@@ -2380,7 +2382,7 @@ class MessagesHandlers {
       const obj = uiStore(closure_3[39]);
       callback(closure_3[50]).openLazy(uiStore(closure_3[38])(closure_3[172], closure_3.paths), "ExplicitMediaLearnMore", { messageId, channelId, attachmentId, embedId });
     };
-    f108274 = set((arg0) => {
+    f108363 = set((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;
@@ -2420,25 +2422,25 @@ class MessagesHandlers {
                 let closure_1 = tmp2;
                 isReveal = undefined;
                 closure_1 = undefined;
-                const nativeSyntheticEventData = callback(10938).getNativeSyntheticEventData(isReveal);
+                const nativeSyntheticEventData = callback(10953).getNativeSyntheticEventData(isReveal);
                 ({ messageId, channelId, isReveal } = nativeSyntheticEventData);
                 ({ attachmentId, embedId } = nativeSyntheticEventData);
-                const obj10 = callback(10938);
+                const obj10 = callback(10953);
                 if (isReveal) {
                   if (obj11.shouldAgeVerifyForExplicitMedia()) {
                     dependencyMap = 1;
                     c4 = 1;
                     const obj1 = { value: null, done: false };
-                    obj1[0] = callback(4500).maybePerformReactiveCheck();
+                    obj1[0] = callback(4517).maybePerformReactiveCheck();
                     return obj1;
                   }
                 }
-                let obj3 = callback(6980);
+                let obj3 = callback(6999);
                 const obj2 = { obscure: null };
                 obj2[0] = isReveal;
                 const result = obj3.trackToggleMediaObscurityV2(obj2);
                 c4 = 3;
-                obj11 = callback(6980);
+                obj11 = callback(6999);
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -2451,9 +2453,9 @@ class MessagesHandlers {
                 reactiveCheckPassed = outer1_9.getReactiveCheckPassed();
               }
               if (!reactiveCheckPassed) {
-                obj = outer1_1(7720);
+                obj = outer1_1(7737);
                 obj3 = { entryPoint: null };
-                obj3[0] = callback(7722).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
+                obj3[0] = callback(7739).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
                 const result1 = obj.showAgeVerificationGetStartedModal(obj3);
               }
             }

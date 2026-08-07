@@ -76,8 +76,8 @@ export const getPresenceActivityInviteCoverImageURL = function getPresenceActivi
     obj = { messageId: null, coverImageURL: null };
     obj[0] = messageId;
     obj[1] = imageURL;
-    importAll(12543).setCoverImageURL(obj);
-    const obj2 = importAll(12543);
+    importAll(12558).setCoverImageURL(obj);
+    const obj2 = importAll(12558);
   }
   return imageURL;
 };

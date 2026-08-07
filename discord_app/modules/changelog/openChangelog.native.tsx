@@ -4,7 +4,7 @@ import { asyncRequireImpl } from "../../../_runtime/01988_asyncRequireImpl.js";
 import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
 import { navigationToRootTabHelper } from "../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 
-const result = require("module_4490").fileFinishedImporting("modules/changelog/openChangelog.native.tsx");
+const result = require("module_4507").fileFinishedImporting("modules/changelog/openChangelog.native.tsx");
 
 export const openChangelog = function openChangelog() {
   let flag = arg0;
@@ -17,7 +17,7 @@ export const openChangelog = function openChangelog() {
     const obj = navigationToRootTabHelper;
   }
   if (!isModalOpenResult) {
-    ModalActionCreators.pushLazy(asyncRequireImpl(14640, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
+    ModalActionCreators.pushLazy(asyncRequireImpl(14656, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
     const obj2 = ModalActionCreators;
   }
 };

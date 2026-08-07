@@ -4,7 +4,7 @@ import { Image } from "get ActivityIndicator";
 import { DownloadLinks } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/08355_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/08372_registerAsset.js";
 import { componentDidMount } from "../../../../../components_native/common/Alert.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";

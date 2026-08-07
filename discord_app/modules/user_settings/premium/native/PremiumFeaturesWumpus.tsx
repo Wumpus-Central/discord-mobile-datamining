@@ -18,7 +18,7 @@ export default function PremiumFeaturesWumpus(premiumType) {
   premiumType = premiumType.premiumType;
   let dependencyMap;
   const tmp = callback2();
-  const tmp2 = premiumType(7562)();
+  const tmp2 = premiumType(7581)();
   dependencyMap = tmp2;
   const items = [premiumType, tmp2];
   const memo = React.useMemo(() => {
@@ -43,16 +43,15 @@ export default function PremiumFeaturesWumpus(premiumType) {
   }, items);
   ({ wumpusImageSource, cloudsImageSource } = memo);
   let obj = { style: tmp.clouds, resizeMode: "contain", source: cloudsImageSource };
-  const items1 = [callback(premiumType(5251), obj), ];
-  const items2 = [tmp.wumpus, , ];
+  const items1 = [callback(premiumType(5267), obj), ];
+  const items2 = [tmp.wumpus, ];
   let wumpusLeft = premiumType === PremiumTypes.TIER_0;
   if (wumpusLeft) {
     wumpusLeft = tmp.wumpusLeft;
   }
   obj = { children: null };
   items2[1] = wumpusLeft;
-  items2[2] = premiumType.style;
-  items1[1] = callback(premiumType(5251), { style: items2, resizeMode: "contain", source: wumpusImageSource });
+  items1[1] = callback(premiumType(5267), { style: items2, resizeMode: "contain", source: wumpusImageSource });
   obj[0] = items1;
   return closure_6(closure_5, obj);
 };

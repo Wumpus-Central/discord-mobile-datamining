@@ -52,7 +52,7 @@ function BountiesScrollPromptFooterContent(zIndex) {
   if (stateFromStores) {
     str = "halt";
   }
-  obj[1] = closure_7(zIndex(3996).BountiesScrollGradientRive, { stateMachine: "State Machine 1", fit: "fill", alignment: "bottom-center", withReducedMotion: str });
+  obj[1] = closure_7(zIndex(4013).BountiesScrollGradientRive, { stateMachine: "State Machine 1", fit: "fill", alignment: "bottom-center", withReducedMotion: str });
   const items5 = [closure_7(ReanimatedRexport.View, obj), ];
   const items6 = [tmp.content, memo1, opacityStyle];
   items5[1] = closure_7(ReanimatedRexport.View, { style: items6, onLayout: onContentLayout, children });

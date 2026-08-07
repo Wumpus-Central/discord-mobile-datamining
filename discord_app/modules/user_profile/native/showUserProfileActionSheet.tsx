@@ -24,10 +24,10 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
       }
       obj.speedBumpType = str2;
       obj.openedAt = timestamp;
-      obj.openLazy(tmp2(1988)(8707, tmp3.paths), combined, obj);
+      obj.openLazy(tmp2(1988)(8724, tmp3.paths), combined, obj);
     }
   }
-  const tmp15 = asyncRequireImpl(8719, dependencyMap.paths);
+  const tmp15 = asyncRequireImpl(8736, dependencyMap.paths);
   const combined1 = "UserProfile" + ignoreBlockedSpeedBump.userId;
   obj = {};
   const merged1 = Object.assign(ignoreBlockedSpeedBump);

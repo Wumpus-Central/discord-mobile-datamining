@@ -7,7 +7,7 @@ import addEntitlement from "addEntitlement";
 import closure_8 from "createEmptyPromotionsByType";
 import GuildFeatures from "GuildFeatures";
 import ME from "ME";
-import { t } from "../../../_runtime/03866_t.js";
+import { t } from "../../../_runtime/03883_t.js";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { isTablet } from "../../../discord_common/js/shared/lib/PlatformUtils.tsx";
 import { set } from "../../utils/PlatformUtils.tsx";
@@ -164,13 +164,13 @@ function _isEligibleForBOGOPromotion() {
                   isClaimedResult = currentUser2.isClaimed();
                 }
                 dependencyMap = !isClaimedResult;
-                let obj2 = flag(6802);
+                let obj2 = flag(6821);
                 isPaymentsBlocked = obj2.getIsPaymentsBlocked();
-                let obj3 = flag(12654);
+                let obj3 = flag(12669);
                 authStore = obj3.getBogoPromotionGateEnabled("bogo eligibility async check");
-                let obj4 = flag(12656);
+                let obj4 = flag(12671);
                 store = obj4.getBogoMarketingMaterialsEnabled("bogo marketing eligibility async check");
-                const isMobile = flag(4521).isMobile;
+                const isMobile = flag(4538).isMobile;
                 let isAndroidResult = !isMobile;
                 if (isMobile) {
                   let obj5 = flag(500);
@@ -200,7 +200,7 @@ function _isEligibleForBOGOPromotion() {
                             isPaymentsBlocked = 2;
                             authStore = 1;
                             obj2 = { value: null, done: false };
-                            obj2[0] = flag(4604).fetchMostRecentSubscription();
+                            obj2[0] = flag(4621).fetchMostRecentSubscription();
                             return obj2;
                           }
                         }
@@ -246,7 +246,7 @@ function _isEligibleForBOGOPromotion() {
               isPaymentsBlocked = 3;
               authStore = 1;
               const obj6 = { value: null, done: false };
-              obj6[0] = flag(4604).fetchSubscriptions();
+              obj6[0] = flag(4621).fetchSubscriptions();
               return obj6;
             }
           }
@@ -404,14 +404,14 @@ export const useIsEligibleForBogoPromotion = function useIsEligibleForBogoPromot
     num2 = valueOfResult - timestamp;
   }
   useScheduledForcedUpdate({ delay: num2 });
-  const isMobile = tmp(4521).isMobile;
+  const isMobile = tmp(4538).isMobile;
   let isAndroidResult = !isMobile;
   if (isMobile) {
     let tmpResult = tmp(500);
     isAndroidResult = tmpResult.isAndroid();
   }
   const tmp11 = useScheduledForcedUpdate;
-  tmpResult = tmp(12656);
+  tmpResult = tmp(12671);
   let bogoMarketingMaterialsEnabled = tmpResult.useBogoMarketingMaterialsEnabled("bogo marketing eligibility hook");
   let tmp16 = !tmp10;
   if (timestamp <= valueOfResult) {

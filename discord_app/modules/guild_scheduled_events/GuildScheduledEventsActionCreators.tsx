@@ -80,7 +80,7 @@ export default {
       let body = tmp5;
       const obj1 = { url: null, rejectWithError: null };
       obj1[0] = outer1_10.GUILD_EVENT(outer1_0, outer1_1);
-      const obj8 = outer1_0(4522);
+      const obj8 = outer1_0(4539);
       obj1[1] = outer1_0(530).rejectWithMigratedError();
       yield obj8.httpGetWithCountryCodeQuery(obj1);
       body = arg1.body;
@@ -100,7 +100,7 @@ export default {
       obj1[0] = outer1_10.GUILD_EVENTS_FOR_GUILD(outer1_0);
       obj1[1] = outer1_0(530).rejectWithMigratedError();
       const obj9 = outer1_0(530);
-      yield outer1_0(4522).httpGetWithCountryCodeQuery(obj1);
+      yield outer1_0(4539).httpGetWithCountryCodeQuery(obj1);
       body = arg1.body;
       const obj = outer1_1(709);
       const obj4 = { type: "FETCH_GUILD_EVENTS_FOR_GUILD", guildId: null, guildScheduledEvents: null };

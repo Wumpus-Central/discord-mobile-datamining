@@ -74,9 +74,8 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   let callback2;
   let callback3;
   let callback4;
-  let callback5;
   let ref1;
-  let c23;
+  let c22;
   let scaledTextLineHeight;
   let tmp6 = createCacheKey();
   let obj = NONE;
@@ -192,23 +191,14 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   const items7 = [callback2];
   callback4 = obj.useCallback((id) => callback2({ type: "channel", id: id.id }), items7);
   const items8 = [results, getRowIsUnavailable, memo2, memo1, disableSelection, disableLongPress, NONE, callback3, callback4];
-  callback5 = obj.useCallback((arg0, arg1) => {
+  const callback5 = obj.useCallback((arg0, arg1) => {
     let record;
     let type;
     ({ type, record } = results[arg1]);
-    const diff = results.length - 1;
     if (type !== disabledDestinations(onSelectedDestinationChange[11]).AutocompleterResultTypes.HEADER) {
-      if (type === tmp2(tmp3[11]).AutocompleterResultTypes.USER) {
-        let tmp2Result = tmp2(tmp3[10]);
-        let obj = { type: "user", id: null };
-        obj[1] = record.id;
-        let destinationKeyResult = tmp2Result.destinationKey(obj);
-      } else {
-        tmp2Result = tmp2(tmp3[10]);
-        obj = { type: "channel", id: null };
-        obj[1] = record.id;
-        destinationKeyResult = tmp2Result.destinationKey(obj);
-      }
+      let tmp2Result = tmp2(tmp3[10]);
+      tmp2Result = tmp2(tmp3[10]);
+      const destinationKeyResult = tmp2Result.destinationKey(tmp2Result.getDestinationIdFromResult(tmp));
       let tmp6;
       if (getRowIsUnavailable != null) {
         tmp6 = getRowIsUnavailable(record);
@@ -225,18 +215,18 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
       if (!tmp11) {
         tmp11 = null != tmp6;
       }
-      const obj1 = { disabled: null, selected: null, mode: null, subLabel: null, subLabelLineClamp: null, start: null, end: null };
-      obj1[0] = tmp11;
-      obj1[1] = hasItem;
+      let obj = { disabled: null, selected: null, mode: null, subLabel: null, subLabelLineClamp: null, start: null, end: null };
+      obj[0] = tmp11;
+      obj[1] = hasItem;
       if (null != tmp6) {
         const NONE = first.NONE;
       }
-      obj1[2] = NONE;
+      obj[2] = NONE;
       let label;
-      if (null != tmp6) {
+      if (tmp6 != null) {
         label = tmp6.label;
       }
-      obj1[3] = label;
+      obj[3] = label;
       let tmp14;
       if (null != tmp6) {
         let num = tmp6.lineClamp;
@@ -245,95 +235,78 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
         }
         tmp14 = num;
       }
-      obj1[4] = tmp14;
-      obj1[5] = 0 === arg1;
-      obj1[6] = arg1 === diff;
+      obj[4] = tmp14;
+      obj[5] = 0 === arg1;
+      obj[6] = arg1 === arr.length - 1;
+      let tmp16;
+      if (disableLongPress) {
+        obj = { onLongPress: null };
+        obj[0] = ref;
+        tmp16 = obj;
+      }
+      const merged = Object.assign(tmp16);
       if (tmp2(tmp3[11]).AutocompleterResultTypes.USER === type) {
+        const obj1 = { type: "user", props: null };
         const obj2 = {};
-        const merged = Object.assign(obj1);
+        const merged1 = Object.assign(obj);
         obj2.user = record;
         obj2.type = tmp2(tmp3[12]).getRelationshipType(record.id);
         obj2.onPress = callback3;
-        let tmp40;
-        if (disableLongPress) {
-          const obj3 = { onLongPress: null };
-          obj3[0] = ref;
-          tmp40 = obj3;
-        }
-        const obj4 = { type: "user", props: null };
-        const merged1 = Object.assign(tmp40);
-        obj4[1] = obj2;
-        return obj4;
+        obj1[1] = obj2;
+        return obj1;
       } else if (tmp2(tmp3[11]).AutocompleterResultTypes.GROUP_DM === type) {
-        const obj5 = {};
-        const merged2 = Object.assign(obj1);
-        obj5.channel = record;
-        obj5.onPress = callback4;
-        let tmp30;
-        if (disableLongPress) {
-          const obj6 = { onLongPress: null };
-          obj6[0] = ref;
-          tmp30 = obj6;
-        }
-        const obj7 = { type: "gdm", props: null };
-        const merged3 = Object.assign(tmp30);
-        obj7[1] = obj5;
-        return obj7;
+        const obj3 = { type: "gdm", props: null };
+        const obj4 = {};
+        const merged2 = Object.assign(obj);
+        obj4.channel = record;
+        obj4.onPress = callback4;
+        obj3[1] = obj4;
+        return obj3;
       } else {
         if (tmp2(tmp3[11]).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
           if (tmp2(tmp3[11]).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
             return tmp2(tmp3[13]).assertNever(type);
           }
         }
-        const obj8 = {};
-        const merged4 = Object.assign(obj1);
-        obj8.channel = record;
-        obj8.onPress = callback4;
-        let tmp20;
-        if (disableLongPress) {
-          const obj9 = { onLongPress: null };
-          obj9[0] = ref;
-          tmp20 = obj9;
-        }
-        const obj10 = { type: "channel", props: null };
-        const merged5 = Object.assign(tmp20);
-        obj10[1] = obj8;
-        return obj10;
+        const obj5 = { type: "channel", props: null };
+        const obj6 = {};
+        const merged3 = Object.assign(obj);
+        obj6.channel = record;
+        obj6.onPress = callback4;
+        obj5[1] = obj6;
+        return obj5;
       }
     }
+    arr = results;
   }, items8);
   ref1 = obj.useRef(null);
   const tmp27 = getRowIsUnavailable(onSelectedDestinationChange[14])();
-  c23 = tmp27;
+  c22 = tmp27;
   let obj3 = disabledDestinations(onSelectedDestinationChange[15]);
   scaledTextLineHeight = obj3.useScaledTextLineHeight("text-xs/medium");
-  const items9 = [callback5, tmp27, scaledTextLineHeight];
+  const items9 = [results, getRowIsUnavailable, tmp27, scaledTextLineHeight];
   const callback6 = obj.useCallback((arg0, arg1) => {
-    const element = callback5(arg0, arg1);
+    let record;
     let type;
-    if (element != null) {
-      type = element.type;
-    }
-    if ("user" !== type) {
-      let type1;
-      if (element != null) {
-        type1 = element.type;
-      }
-      if ("gdm" !== type1) {
-        let type2;
-        if (element != null) {
-          type2 = element.type;
+    ({ type, record } = results[arg1]);
+    let tmp2;
+    if (type !== disabledDestinations(onSelectedDestinationChange[11]).AutocompleterResultTypes.HEADER) {
+      let lineClamp;
+      if (getRowIsUnavailable != null) {
+        const tmp5 = getRowIsUnavailable(record);
+        if (tmp5 != null) {
+          lineClamp = tmp5.lineClamp;
         }
       }
-      if (null != subLabelLineClamp) {
-        if (subLabelLineClamp > 1) {
-          let tmp4 = getRowIsUnavailable(onSelectedDestinationChange[16])(c23 + (subLabelLineClamp - 1) * scaledTextLineHeight);
-        }
-        return tmp4;
-      }
-      tmp4 = c23;
+      tmp2 = lineClamp;
     }
-    subLabelLineClamp = element.props.subLabelLineClamp;
+    if (null != tmp2) {
+      if (tmp2 > 1) {
+        let tmp6 = getRowIsUnavailable(onSelectedDestinationChange[16])(c22 + (tmp2 - 1) * scaledTextLineHeight);
+      }
+      return tmp6;
+    }
+    tmp6 = c22;
   }, items9);
   const someResult = memo.some((arg0) => arg0 > 0);
   if (someResult) {

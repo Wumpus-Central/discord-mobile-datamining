@@ -6,7 +6,7 @@ import { View } from "getSystemLocale";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AnalyticEvents } from "ME";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
-import jsxProd from "module_4490";
+import jsxProd from "module_4507";
 import createCacheKey from "createCacheKey";
 
 let c10;

@@ -33,8 +33,8 @@ export const useIsFiveButtonLayout = function useIsFiveButtonLayout(id) {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  const tmp6 = guild_id(10608);
-  const tmp6Result = guild_id(10608)(guild_id1, id);
+  const tmp6 = guild_id(10605);
+  const tmp6Result = guild_id(10605)(guild_id1, id);
   const items1 = [createGuildRecordFromRust];
   const items2 = [guild_id];
   const stateFromStores1 = tmp(589).useStateFromStores(items1, () => outer1_4.getGuild(guild_id), items2);
@@ -53,8 +53,8 @@ export const useIsFiveButtonLayout = function useIsFiveButtonLayout(id) {
   if (stateFromStores != null) {
     id1 = stateFromStores.id;
   }
-  const tmp5Result = guild_id(10609);
-  const tmp5ResultResult = guild_id(10609)(id1);
+  const tmp5Result = guild_id(10606);
+  const tmp5ResultResult = guild_id(10606)(id1);
   if (isConnectedToVoiceChannel) {
     isConnectedToVoiceChannel = tmp6Result;
   }

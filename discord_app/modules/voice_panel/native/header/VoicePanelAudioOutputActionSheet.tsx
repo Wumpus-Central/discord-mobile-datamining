@@ -21,9 +21,9 @@ function VoicePanelAudioPhoneOutputSection() {
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ activeDevice: store.getActiveAudioDevice(), availableDevices: store.getAudioDevices() }));
   availableDevices = stateFromStoresObject.availableDevices;
   let closure_1 = importAllResult.useCallback((arg0) => {
-    availableDevices(9099).setAudioOutputDevice(arg0);
-    const obj = availableDevices(9099);
-    callback(4253).hideActionSheet(closure_9);
+    availableDevices(9116).setAudioOutputDevice(arg0);
+    const obj = availableDevices(9116);
+    callback(4270).hideActionSheet(closure_9);
   }, []);
   let tmp5 = null;
   if (availableDevices.length > 0) {
@@ -43,9 +43,9 @@ function VoicePanelAudioPhoneOutputSection() {
     obj[3] = availableDevices.map((deviceId) => {
       let obj = { value: deviceId.deviceId, icon: null, label: null, subLabel: null };
       obj = { source: null };
-      obj[0] = availableDevices(9071).audioDeviceToIconMap[deviceId.simpleDeviceType];
-      obj[1] = callback2(availableDevices(5360).TableRowIcon, obj);
-      obj[2] = availableDevices(9071).getAudioDeviceToDisplayText(deviceId);
+      obj[0] = availableDevices(9088).audioDeviceToIconMap[deviceId.simpleDeviceType];
+      obj[1] = callback2(availableDevices(5379).TableRowIcon, obj);
+      obj[2] = availableDevices(9088).getAudioDeviceToDisplayText(deviceId);
       const deviceName = deviceId.deviceName;
       let length;
       if (deviceName != null) {
@@ -56,10 +56,10 @@ function VoicePanelAudioPhoneOutputSection() {
         deviceName1 = deviceId.deviceName;
       }
       obj[3] = deviceName1;
-      return callback2(availableDevices(7907).TableRadioRow, obj, deviceId.deviceId);
+      return callback2(availableDevices(7924).TableRadioRow, obj, deviceId.deviceId);
     });
-    obj[3] = callback(tmp2(7908).TableRadioGroup, obj);
-    tmp5 = callback(tmp2(9100).VoicePanelFormSection, obj);
+    obj[3] = callback(tmp2(7925).TableRadioGroup, obj);
+    tmp5 = callback(tmp2(9117).VoicePanelFormSection, obj);
   }
   return tmp5;
 }
@@ -70,8 +70,8 @@ function VoicePanelAudioConsoleSection(channel) {
   let stateFromStores;
   let stateFromStores1;
   let c5;
-  arr = arr(10797)();
-  dependencyMap = arr(10689)();
+  arr = arr(10809)();
+  dependencyMap = arr(10701)();
   let obj = channel(647);
   const items = [c5];
   stateFromStores = obj.useStateFromStores(items, () => _undefined.getAwaitingRemoteSessionInfo());
@@ -123,7 +123,7 @@ function VoicePanelAudioConsoleSection(channel) {
     }
   }, items3);
   let obj2 = channel(647);
-  const tmp8 = !channel(4100).useIsDismissibleContentDismissed_UNSAFE(channel(1358).DismissibleContent.DONUT_MOBILE_NUX);
+  const tmp8 = !channel(4117).useIsDismissibleContentDismissed_UNSAFE(channel(1358).DismissibleContent.DONUT_MOBILE_NUX);
   c5 = tmp8;
   const items4 = [arr, tmp8];
   const effect = stateFromStores.useEffect(() => {
@@ -175,8 +175,8 @@ function VoicePanelAudioConsoleSection(channel) {
       return tmp5;
     });
     obj[3] = mapped.filter((arg0) => Boolean(arg0));
-    obj[3] = callback(tmp3(7908).TableRadioGroup, obj);
-    tmp10 = callback(tmp3(9100).VoicePanelFormSection, obj);
+    obj[3] = callback(tmp3(7925).TableRadioGroup, obj);
+    tmp10 = callback(tmp3(9117).VoicePanelFormSection, obj);
   }
   return tmp10;
 }
@@ -196,7 +196,7 @@ const memoResult = importAllResult.memo(function VoicePanelAudioOutputActionShee
     obj = { title: null };
     const intl = tmp(1236).intl;
     obj[0] = intl.string(tmp(1236).t.iwxPM3);
-    obj[0] = callback(tmp(5376).BottomSheetTitleHeader, obj);
+    obj[0] = callback(tmp(5395).BottomSheetTitleHeader, obj);
     if (isConnectedToVoiceChannel) {
       isConnectedToVoiceChannel = tmp5(VoicePanelAudioPhoneOutputSection, {});
     }
@@ -209,7 +209,7 @@ const memoResult = importAllResult.memo(function VoicePanelAudioOutputActionShee
     obj2[0] = items1;
     obj1[0] = closure_12(set, obj2);
     obj[1] = callback(ScrollView, obj1);
-    tmp5Result = tmp5(tmp(5377).BottomSheet, obj);
+    tmp5Result = tmp5(tmp(5396).BottomSheet, obj);
     const tmp6 = ScrollView;
     const tmp7 = closure_12;
     const tmp9 = set;

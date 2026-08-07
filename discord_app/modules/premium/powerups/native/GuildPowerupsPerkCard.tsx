@@ -3,7 +3,7 @@ import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04706_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04723_LinearGradient.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
 import { useTheme } from "../../../../hooks/useTheme.tsx";
@@ -52,9 +52,9 @@ export default function GuildPowerupsPerkCard(arg0) {
   obj = { containerStyle: items, style: tmp2.card, status, onPress, children: null };
   items = [tmp2.container, style];
   obj = { style: tmp2.imageContainer, children: null };
-  let tmp3Result = tmp3(11845);
+  let tmp3Result = tmp3(11860);
   if (riveComponent == null) {
-    tmp3Result = tmp3(11802);
+    tmp3Result = tmp3(11817);
     if (imageUrl == null) {
       imageUrl = "";
     }

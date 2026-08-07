@@ -17,7 +17,7 @@ class ButtonBadge {
     if (str === undefined) {
       str = "left";
     }
-    tmp = f54447(false);
+    tmp = f54494(false);
     tmp2 = jsx;
     obj = { size: null, maskSize: 2, style: null, maskColor: null };
     tmp3 = require("DEFAULT_BADGE_SIZE");
@@ -134,7 +134,7 @@ export default function IconActionButton(variant) {
     obj = { variant: "text-sm/bold", style: null, children: null };
     obj[1] = tmp3.actionText;
     obj[2] = buttonText;
-    tmp11Result = tmp11(tmp4(4281).Text, obj);
+    tmp11Result = tmp11(tmp4(4298).Text, obj);
   }
   items1[1] = tmp11Result;
   tmp11Result = null;

@@ -1,22 +1,6 @@
 // discord_app/modules/intl/messages/SecondTest.messages.js
 import 01274__ from "../../../../_runtime/metro/01274__.js";
 import 01274__ from "../../../../_runtime/metro/01274__.js";
-import { registerAsset } from "../../../../_runtime/14859_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/14860_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/14861_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/14862_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/14863_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/14864_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/14865_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/14866_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/14867_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/14868_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/14869_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/14870_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/14871_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/14872_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/14873_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/14874_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/14875_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/14876_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/14877_registerAsset.js";
@@ -31,7 +15,23 @@ import { registerAsset } from "../../../../_runtime/14885_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/14886_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/14887_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/14888_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14889_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14890_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/14891_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14892_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14893_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14894_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14895_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14896_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14897_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14898_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14899_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14900_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14901_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14902_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14903_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14904_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14907_registerAsset.js";
 import { loadJsonAsset } from "../../asset_json/native/AssetJsonUtils.tsx";
 
 const loader = module_1274.createLoader({

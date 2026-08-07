@@ -291,8 +291,8 @@ export const useSoundBoardDismissContentTypes = function useSoundBoardDismissCon
     const _Object = Object;
     const values = Object.values(guilds);
     if (!values.some((joinSound) => null != joinSound.joinSound)) {
-      const result = tmp(4123).ageEligibleForPremiumUpsell(stateFromStores);
-      const tmpResult = tmp(4123);
+      const result = tmp(4140).ageEligibleForPremiumUpsell(stateFromStores);
+      const tmpResult = tmp(4140);
       const obj5 = getPremiumPlanItem;
       if (tmp9) {
         items1.push(tmp(1358).DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL);

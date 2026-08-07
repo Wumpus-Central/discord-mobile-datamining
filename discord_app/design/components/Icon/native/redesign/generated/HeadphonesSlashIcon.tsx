@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/09106_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/09123_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

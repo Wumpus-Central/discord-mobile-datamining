@@ -6,8 +6,8 @@ import { useFavoritesAccess } from "../FavoritesHooks.tsx";
 const require = arg1;
 let result = require("getFavoritesAwareGuildName").fileFinishedImporting("modules/favorites/hooks/useIsFavoritesGuildVisible.tsx");
 
-export default function useIsFavoritesGuildVisible(FavoritesGuildChannelList) {
-  const favoritesAccess = isExperimentEnabled(isFreemium[4]).useFavoritesAccess(FavoritesGuildChannelList);
+export default function useIsFavoritesGuildVisible(FavoritesGuildActionSheet) {
+  const favoritesAccess = isExperimentEnabled(isFreemium[4]).useFavoritesAccess(FavoritesGuildActionSheet);
   isExperimentEnabled = favoritesAccess.isExperimentEnabled;
   isFreemium = favoritesAccess.isFreemium;
   const hasAccess = favoritesAccess.hasAccess;
@@ -58,7 +58,7 @@ export const isFavoritesGuildVisible = function isFavoritesGuildVisible() {
       if (!isFavoritesGuildIdResult) {
         let isFavoritesGuildEnabled = hasAccess;
         if (isFavoritesGuildEnabled) {
-          tmpResult = tmp(9638);
+          tmpResult = tmp(9654);
           isFavoritesGuildEnabled = tmpResult.computeIsFavoritesGuildEnabled(isFreemium, tmp4);
         }
         isFavoritesGuildIdResult = isFavoritesGuildEnabled;

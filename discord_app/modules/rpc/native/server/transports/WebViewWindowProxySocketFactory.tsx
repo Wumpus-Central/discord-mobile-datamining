@@ -9,7 +9,7 @@ export default function _default(logger) {
   let version;
   logger = logger.logger;
   ({ source, postMessageToRPCClient, version, encoding, postClose } = logger);
-  return new logger(10545)({
+  return new logger(10679)({
     source,
     postMessageToRPCClient,
     version,

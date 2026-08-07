@@ -43,14 +43,14 @@ export default function _default() {
   const require = tmp;
   let obj = useStickerPackCategories;
   const fetchStickerPacks = obj.useFetchStickerPacks();
-  analyticsLocations = analyticsLocations(5649)(analyticsLocations(5669).EMPTY_STATE).analyticsLocations;
+  analyticsLocations = analyticsLocations(5668)(analyticsLocations(5688).EMPTY_STATE).analyticsLocations;
   let obj1 = initialize;
   const items = [loadSavedGuildStickers];
   const stateFromStoresArray = obj1.useStateFromStoresArray(items, () => {
     const mapped = closure_7.map((arg0) => stickerById.getStickerById(arg0));
     return mapped.filter((arg0) => null != arg0);
   });
-  const tmp3 = analyticsLocations(5649);
+  const tmp3 = analyticsLocations(5668);
   [dependencyMap, _slicedToArray] = callback(React.useState(null), 2);
   const items1 = [analyticsLocations];
   const effect = React.useEffect(() => {
@@ -118,9 +118,9 @@ export default function _default() {
       return tmp(tmp(outer1_2[17]).PressableOpacity, obj, id);
     })
   };
-  obj5[0] = analyticsLocations(8623);
+  obj5[0] = analyticsLocations(8640);
   obj5[1] = tmp.nitroWheel;
-  obj4[0] = callback2(analyticsLocations(5251), obj5);
+  obj4[0] = callback2(analyticsLocations(5267), obj5);
   const intl3 = getSystemLocale.intl;
   obj4[1] = intl3.string(getSystemLocale.t.pj0XBN);
   obj4[4] = function onPress() {

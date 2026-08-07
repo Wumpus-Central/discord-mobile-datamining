@@ -1,6 +1,6 @@
 // discord_app/records/InviteRecord.tsx
 import "toJS";
-import { t } from "../../_runtime/03866_t.js";
+import { t } from "../../_runtime/03883_t.js";
 
 let InviteRecord;
 class InviteRecord extends tmp2 {

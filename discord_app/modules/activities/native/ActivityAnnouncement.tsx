@@ -1,7 +1,7 @@
 // discord_app/modules/activities/native/ActivityAnnouncement.tsx
 import "noop";
 import jsxProd from "jsxProd";
-import { inlineStyles } from "../../../../_runtime/07758_inlineStyles.js";
+import { inlineStyles } from "../../../../_runtime/07775_inlineStyles.js";
 
 let c3;
 let c4;

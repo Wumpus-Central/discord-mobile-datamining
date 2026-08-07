@@ -1,84 +1,122 @@
 // discord_app/modules/guilds_bar/native/GuildsBarItemEmptyNUX.tsx
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
+import importAllResult from "set";
+import get_ActivityIndicator from "registerAsset";
 import handleConnectionOpen from "handleConnectionOpen";
-import ME from "ME";
+import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE";
+import { EMPTY_NUX_SERVER } from "ME";
 import { MODE_CHANGE_PHYSICS } from "MODE_CHANGE_PHYSICS";
-import jsxProd from "jsxProd";
+import jsxProd from "HomeDrawerSharedItem";
 import createCacheKey from "createCacheKey";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import { transitionToGuild } from "../../routing/transitionToGuild.native.tsx";
 
 let c4;
 let c5;
 let c9;
 let closure_12;
+let closure_14;
 let closure_6;
+let map1;
 let metroImportAll;
-let unpackModuleId;
 const require = arg1;
+function handlePress() {
+  transitionToGuild.transitionToGuild(EMPTY_NUX_SERVER);
+}
 let c3 = importAllResult;
 ({ Pressable: c4, Image: c5, View: closure_6 } = get_ActivityIndicator);
-({ DM_WIDTH: metroImportAll, EMPTY_NUX_SERVER: c9 } = ME);
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let closure_13 = { top: 4, left: 12, bottom: 4, right: 12 };
-let closure_14 = createCacheKey.createStyles((width) => {
-  let obj = { container: null, guildIndicator: null, icon: null, backdrop: null };
-  obj = { position: "relative", flexDirection: "row", alignItems: "center", marginTop: Themes.modules.mobile.GUILD_BAR_ITEM_PADDING, height: 55, width };
+({ GUILD_ITEM_HIT_SLOP: metroImportAll, useGuildWrapperSize: c9 } = GUILD_ITEM_SIZE);
+({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
+let closure_15 = createCacheKey.createStyles((width) => {
+  const diff = width - 10;
+  let obj = { root: null, container: null, guildIndicator: null, icon: null, backdrop: null, expandedChildren: null };
+  obj = { alignSelf: "stretch", paddingLeft: closure_8.left, marginTop: Themes.modules.mobile.GUILD_BAR_ITEM_PADDING };
   obj[0] = obj;
-  obj = { position: "absolute", left: -closure_8 - width / 2, top: 4 };
-  obj[1] = obj;
-  obj[2] = { width: 59, height: 55, marginLeft: -3, marginRight: -6 };
-  obj[3] = { position: "absolute", top: 16, width, height: width - 10, borderRadius: width / 3 };
+  obj[1] = { position: "relative", flexDirection: "row", alignItems: "center", height: 55, width };
+  obj = { position: "absolute", left: -closure_8.left, top: Themes.modules.mobile.GUILD_BAR_ITEM_MARGIN };
+  obj[2] = obj;
+  obj[3] = { width: 59, height: 55, marginLeft: -3 };
+  obj[4] = { position: "absolute", top: 16, width, height: diff, borderRadius: Themes.modules.mobile.GUILD_ITEM_SELECTED_BORDER_RADIUS };
+  obj[5] = { position: "absolute", left: arg1 + 16, right: 8, top: 16, height: diff, transformOrigin: "0% 50%", flexDirection: "row", alignItems: "center" };
   return obj;
 });
-let closure_15 = { code: "function GuildsBarItemEmptyNUXTsx1(){const{withSpring,selected,activeColor,inactiveColor,MODE_CHANGE_PHYSICS}=this.__closure;return{backgroundColor:withSpring(selected?activeColor:inactiveColor,MODE_CHANGE_PHYSICS,'animate-always')};}" };
+let closure_17 = { code: "function GuildsBarItemEmptyNUXTsx1(){const{withSpring,selected,activeColor,inactiveColor,MODE_CHANGE_PHYSICS}=this.__closure;return{backgroundColor:withSpring(selected?activeColor:inactiveColor,MODE_CHANGE_PHYSICS,'animate-always')};}" };
 const memoResult = importAllResult.memo(function GuildsBarEmptyNUX() {
-  let obj = stateFromStores(token[8]);
-  const tmp = callback3(obj.useToken(sharedValue(token[7]).modules.mobile.GUILD_BAR_ITEM_SIZE));
-  let obj1 = stateFromStores(token[9]);
+  let guildsBarIconDrawerStyle;
+  let guildsBarLabelDrawerStyle;
+  let obj = stateFromStores(token1[10]);
+  const token = obj.useToken(sharedValue(token1[8]).modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const tmp5 = callback4(token, callback());
+  let obj1 = stateFromStores(token1[11]);
   const items = [handleConnectionOpen];
-  stateFromStores = obj1.useStateFromStores(items, () => guildId.getGuildId() === closure_9);
-  const callback = token1.useCallback(() => {
-    stateFromStores(token[10]).transitionToGuild(closure_9);
-  }, []);
-  let obj2 = stateFromStores(token[11]);
+  stateFromStores = obj1.useStateFromStores(items, () => guildId.getGuildId() === closure_10);
+  let obj2 = stateFromStores(token1[12]);
   sharedValue = obj2.useSharedValue(false);
   const items1 = [sharedValue];
   const items2 = [sharedValue];
-  const callback1 = token1.useCallback(() => {
+  callback = token2.useCallback(() => {
     const result = sharedValue.set(true);
   }, items1);
-  const callback2 = token1.useCallback(() => {
+  const callback1 = token2.useCallback(() => {
     const result = sharedValue.set(false);
   }, items2);
-  let obj3 = stateFromStores(token[8]);
-  token = obj3.useToken(sharedValue(token[7]).colors.BACKGROUND_SURFACE_HIGH);
-  token1 = stateFromStores(token[8]).useToken(sharedValue(token[7]).colors.BACKGROUND_BRAND);
-  const obj5 = stateFromStores(token[8]);
-  const fn = function o() {
-    let obj = stateFromStores(token[12]);
-    obj = { backgroundColor: obj.withSpring(stateFromStores ? token1 : token, outer1_10, "animate-always") };
+  let obj3 = stateFromStores(token1[10]);
+  token1 = obj3.useToken(sharedValue(token1[8]).colors.BACKGROUND_SURFACE_HIGH);
+  let obj4 = stateFromStores(token1[10]);
+  token2 = obj4.useToken(sharedValue(token1[8]).colors.BACKGROUND_BRAND);
+  let obj5 = stateFromStores(token1[12]);
+  const fn = function l() {
+    let obj = stateFromStores(token1[13]);
+    obj = { backgroundColor: obj.withSpring(stateFromStores ? token2 : token1, outer1_11, "animate-always") };
     return obj;
   };
-  obj = { withSpring: stateFromStores(token[12]).withSpring, selected: stateFromStores, activeColor: token1, inactiveColor: token, MODE_CHANGE_PHYSICS };
+  obj = { withSpring: stateFromStores(token1[13]).withSpring, selected: stateFromStores, activeColor: token2, inactiveColor: token1, MODE_CHANGE_PHYSICS };
   fn.__closure = obj;
   fn.__workletHash = 15012639840543;
-  fn.__initData = closure_15;
-  obj = { style: tmp.container, onPressIn: callback1, onPressOut: callback2, onPress: callback, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, hitSlop: null, children: null };
-  const animatedStyle = stateFromStores(token[11]).useAnimatedStyle(fn);
-  const intl = stateFromStores(token[13]).intl;
-  obj[6] = intl.string(stateFromStores(token[13]).t["3S2xmm"]);
-  obj[7] = { selected: stateFromStores };
-  obj[8] = closure_13;
-  const items3 = [tmp.backdrop, animatedStyle];
-  const items4 = [callback(sharedValue(token[11]).View, { style: items3 }), , ];
-  obj1 = { style: tmp.icon, source: sharedValue(token[14]), resizeMode: "contain" };
-  items4[1] = callback(closure_5, obj1);
-  obj2 = { style: tmp.guildIndicator, children: callback(stateFromStores(token[15]).UnreadIndicator, obj3) };
-  obj3 = { selected: true === stateFromStores };
-  items4[2] = callback(closure_6, obj2);
-  obj[9] = items4;
-  return callback2(closure_4, obj);
+  fn.__initData = closure_17;
+  const animatedStyle = obj5.useAnimatedStyle(fn);
+  const context = token2.useContext(stateFromStores(token1[14]).HomeDrawerStateContext);
+  ({ guildsBarIconDrawerStyle, guildsBarLabelDrawerStyle } = context.homeDrawerState);
+  obj = { onPress: handlePress };
+  const tmp14 = sharedValue(token1[15])(obj);
+  obj1 = { style: tmp5.container, onPressIn: callback, onPressOut: callback1, onPress: handlePress, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, hitSlop: null, children: null };
+  const intl = stateFromStores(token1[16]).intl;
+  obj1[6] = intl.string(stateFromStores(token1[16]).t["3S2xmm"]);
+  obj1[7] = { selected: stateFromStores };
+  obj1[8] = closure_8;
+  const items3 = [tmp5.backdrop, animatedStyle];
+  const items4 = [callback2(sharedValue(token1[12]).View, { style: items3 }), , ];
+  obj2 = { style: tmp5.icon, source: sharedValue(token1[17]), resizeMode: "contain" };
+  items4[1] = callback2(closure_5, obj2);
+  obj3 = { style: tmp5.guildIndicator, children: callback2(stateFromStores(token1[18]).UnreadIndicator, obj4) };
+  obj4 = { selected: true === stateFromStores };
+  items4[2] = callback2(closure_6, obj3);
+  obj1[9] = items4;
+  const tmp17 = callback3(closure_4, obj1);
+  obj5 = { style: tmp5.root, children: null };
+  let tmp15Result = tmp17;
+  if (context.enableHome) {
+    const obj6 = { children: null };
+    const obj7 = { style: null, children: null };
+    obj7[0] = guildsBarIconDrawerStyle;
+    obj7[1] = tmp17;
+    const items5 = [tmp16(tmp3(tmp2[20]), obj7), ];
+    const obj8 = {};
+    const merged = Object.assign(tmp14);
+    const items6 = [tmp5.expandedChildren, guildsBarLabelDrawerStyle];
+    obj8.style = items6;
+    const obj9 = { title: null, subtitle: null };
+    const obj10 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
+    const intl2 = tmp(tmp2[16]).intl;
+    obj10[3] = intl2.string(tmp(tmp2[16]).t["3S2xmm"]);
+    obj9[0] = tmp16(tmp(tmp2[22]).Text, obj10);
+    obj8.children = tmp16(tmp(tmp2[21]).HomeDrawerSharedItem, obj9);
+    items5[1] = tmp16(tmp3(tmp2[20]), obj8);
+    obj6[0] = items5;
+    tmp15Result = callback3(closure_14, obj6);
+    const tmp3Result = tmp3(tmp2[20]);
+  }
+  obj5[1] = tmp15Result;
+  return callback2(sharedValue(token1[19]), obj5);
 });
 let result = require("handleConnectionOpen").fileFinishedImporting("modules/guilds_bar/native/GuildsBarItemEmptyNUX.tsx");
 

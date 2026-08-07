@@ -292,9 +292,9 @@ export default {
           c4();
         }
         if (null != obj2.getRootNavigationRef()) {
-          tmp6(4293).transitionToChannel(channel.id, { navigationReplace: true });
+          tmp6(4310).transitionToChannel(channel.id, { navigationReplace: true });
           tmp3 = channel;
-          const tmp6Result = tmp6(4293);
+          const tmp6Result = tmp6(4310);
         } else {
           const privateChannel = SelectedChannelActionCreators.selectPrivateChannel(channel.id);
           tmp3 = channel;
@@ -428,11 +428,11 @@ export default {
     const tmp2 = importDefault;
     const tmp5 = require;
     if (null != obj2.getRootNavigationRef()) {
-      tmp5(4293).transitionToChannel(tmp.id, { navigationReplace: true });
-      const tmp5Result = tmp5(4293);
+      tmp5(4310).transitionToChannel(tmp.id, { navigationReplace: true });
+      const tmp5Result = tmp5(4310);
     } else {
-      const privateChannel = tmp2(5111).selectPrivateChannel(tmp.id);
-      const tmp2Result = tmp2(5111);
+      const privateChannel = tmp2(5128).selectPrivateChannel(tmp.id);
+      const tmp2Result = tmp2(5128);
     }
     return tmp;
   },
@@ -453,7 +453,7 @@ export default {
       tmpResult.track(constants.CHANGE_LOG_DM_REMOVED, obj);
     }
     tmpResult = tmp(709);
-    obj = { id, guild_id: "r", parent_id: "channelId" };
+    obj = { id, guild_id: "Array", parent_id: "accessible" };
     tmpResult.dispatch({ type: "CHANNEL_DELETE", channel: obj, silent: flag2 });
     if (flag) {
       transitionTo.transitionTo(constants2.FRIENDS);
@@ -465,11 +465,11 @@ export default {
     const obj7 = sendRequest;
     const delResult = HTTP.del(obj1);
     return HTTP.del(obj1).then(() => {
-      const AccessibilityAnnouncer = callback(4130).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = callback(4147).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.nRbucl));
     }).catch(() => {
-      const AccessibilityAnnouncer = callback(4130).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = callback(4147).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.ndXVI5));
     });
@@ -593,7 +593,7 @@ export default {
         tmp10 = isThreadResult;
       }
       if (!tmp10) {
-        obj1 = outer1_1(5859);
+        obj1 = outer1_1(5878);
         const result = obj1.checkGuildTemplateDirty(guildId);
       }
       return closure_1;
@@ -952,7 +952,7 @@ export default {
       const obj4 = outer1_0(530);
       obj2[3] = obj4.rejectWithMigratedError();
       closure_0 = yield HTTP.post(obj2);
-      const obj = outer1_1(5859);
+      const obj = outer1_1(5878);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();

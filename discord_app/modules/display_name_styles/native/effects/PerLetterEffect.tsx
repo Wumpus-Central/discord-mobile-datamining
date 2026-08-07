@@ -61,6 +61,6 @@ export default function PerLetterEffect(name) {
   const items2 = [textStyle, { lineHeight: "r" }];
   obj.style = items2;
   obj.children = memo;
-  obj[1] = jsx(name(4281).Text, {});
+  obj[1] = jsx(name(4298).Text, {});
   return <closure_4 />;
 };

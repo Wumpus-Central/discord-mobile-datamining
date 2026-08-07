@@ -13,7 +13,7 @@ import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PUBLIC_SUCCESS_MODAL_SEEN_KEY";
 import { Store } from "initialize";
 import set from "createChannelRecord";
 import { apply } from "../../../_runtime/00012_apply.js";
-import { t } from "../../../_runtime/03866_t.js";
+import { t } from "../../../_runtime/03883_t.js";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 import { dispatcher } from "../../Dispatcher.tsx";
@@ -80,7 +80,7 @@ function handleFormInit(location) {
       const items = [obj];
       if (section === tmp16.TAG_CUSTOMIZE) {
         obj = { key: null, name: null };
-        ({ TAG: obj2[0], TAG: obj2[1] } = tmp16);
+        ({ TAG: obj3[0], TAG: obj3[1] } = tmp16);
         items.push(obj);
       }
       const obj1 = { key: null, name: null };
@@ -90,7 +90,7 @@ function handleFormInit(location) {
       obj2 = { type: "stack", routes: null };
       obj2[1] = items;
     }
-    const obj5 = DISCORD_EPOCH;
+    const obj6 = DISCORD_EPOCH;
   }
 }
 function _createInvite(code) {

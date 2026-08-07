@@ -38,7 +38,7 @@ function ChannelContent(arg0) {
   let tmp9Result = null != channel;
   if (tmp9Result) {
     if (!locked) {
-      locked = tmp2(4775)(channel);
+      locked = tmp2(4792)(channel);
     }
     tmp9Result = locked;
   }
@@ -114,7 +114,7 @@ function ChannelContent(arg0) {
     if (isSubscriptionGated) {
       const obj9 = { locked: null, isInMainTabsExperiment: true };
       obj9[0] = needSubscriptionToAccess;
-      isSubscriptionGated = tmp9(tmp2(15157), obj9);
+      isSubscriptionGated = tmp9(tmp2(15173), obj9);
     }
     items3[2] = isSubscriptionGated;
     obj5[1] = items3;

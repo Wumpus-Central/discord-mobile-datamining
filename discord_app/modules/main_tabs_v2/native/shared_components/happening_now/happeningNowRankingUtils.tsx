@@ -63,17 +63,222 @@ export const filterHappeningNowCards = function filterHappeningNowCards(isFocuse
 };
 export const sortHappeningNowCards = function sortHappeningNowCards(result) {
   const items = [
-    (arg0) => {
-      while (true) {
-        let tmp2 = closure_5;
-        let num = 1;
-        if (tmp !== closure_5) {
-          break;
-        } else {
-          num = 0;
-          break;
-        }
-        return num;
+    (kind) => {
+      switch (kind.kind) {
+        case "Date":
+        break;
+        case "TypeError":
+          let tmp = closure_5;
+          let num = 1;
+          if (tmp === closure_5) {
+            num = 0;
+          }
+          return num;
+        case "Error":
+        break;
+        case "HTTP":
+          tmp = closure_5;
+          num = 1;
+          if (tmp === closure_5) {
+            num = 0;
+          }
+          return num;
+        case "T":
+        break;
+        case "HermesInternal":
+          tmp = closure_5;
+          num = 1;
+          if (tmp === closure_5) {
+            num = 0;
+          }
+          return num;
+        case "Icon":
+        break;
+        case "IconComponent":
+          tmp = closure_5;
+          num = 1;
+          if (tmp === closure_5) {
+            num = 0;
+          }
+          return num;
+        case "c":
+        break;
+        case "p":
+          tmp = closure_5;
+          num = 1;
+          if (tmp === closure_5) {
+            num = 0;
+          }
+          return num;
+        case "LIGHT":
+        break;
+        case "Map":
+          tmp = closure_5;
+          num = 1;
+          if (tmp === closure_5) {
+            num = 0;
+          }
+          return num;
+        case "Math":
+        break;
+        case "h":
+          tmp = closure_5;
+          num = 1;
+          if (tmp === closure_5) {
+            num = 0;
+          }
+          return num;
+        case "Number":
+        break;
+        case "Object":
+          tmp = closure_5;
+          num = 1;
+          if (tmp === closure_5) {
+            num = 0;
+          }
+          return num;
+        case "ct":
+        break;
+        case "PX_16":
+          tmp = closure_7;
+        break;
+        case "flex":
+        break;
+        case "flexDirection":
+          tmp = closure_6;
+        break;
+        case "PX_8":
+        break;
+        case "Path":
+          tmp = closure_6;
+        break;
+        case "Promise":
+        break;
+        case "i":
+          tmp = closure_6;
+        break;
+        case "s":
+        break;
+        case "Reflect":
+          tmp = closure_6;
+        break;
+        case "Set":
+        break;
+        case "format":
+        break;
+        case "formatToPlainString":
+        break;
+        case "String":
+        break;
+        case "Symbol":
+        break;
+        case "Text":
+        break;
+        case "x":
+        break;
+        case "View":
+        break;
+        case "w":
+        break;
+        case "WireType":
+        break;
+        case "__closure":
+        break;
+        case "__d":
+        break;
+        case "d":
+        break;
+        case "__esModule":
+        break;
+        case "__initData":
+        break;
+        case "filter":
+        break;
+        case "__packager_asset":
+        break;
+        case "k":
+        break;
+        case "set":
+        break;
+        case "__workletHash":
+        break;
+        case "_desired":
+        break;
+        case "_distance":
+        break;
+        case "st":
+        break;
+        case "accessibilityLabel":
+        break;
+        case "it":
+        break;
+        case "accessibilityRole":
+        break;
+        case "accessible":
+        break;
+        case "padding":
+        break;
+        case "paddingHorizontal":
+        break;
+        case "add":
+        break;
+        case "alignItems":
+        break;
+        case "ao":
+        break;
+        case "applicationId":
+        break;
+        case "ti":
+        break;
+        case "apply":
+        break;
+        case "backgroundColor":
+        break;
+        case "round":
+        break;
+        case "bm":
+        break;
+        case "body":
+        break;
+        case "borderRadius":
+        break;
+        case "bottom":
+        break;
+        case "call":
+        break;
+        case "channel":
+        break;
+        case "channelId":
+        break;
+        case "channel_id":
+        break;
+        case "id":
+        break;
+        case "children":
+        break;
+        case "cix":
+        break;
+        case "ix":
+        break;
+        case "unicodeVersion":
+        break;
+        case "code":
+        break;
+        case "color":
+        break;
+        case "colors":
+        break;
+        case "concat":
+        break;
+        case "constructor":
+        break;
+        case "container":
+        break;
+        case "content":
+        break;
+        default:
+          callback(table[3]).assertNever(kind);
+          const obj = callback(table[3]);
       }
     },
     (voiceState) => {

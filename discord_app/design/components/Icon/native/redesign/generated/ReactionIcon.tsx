@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ReactionIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/07577_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/07596_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

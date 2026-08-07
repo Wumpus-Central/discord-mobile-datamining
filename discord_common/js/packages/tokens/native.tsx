@@ -13,8 +13,8 @@ obj = {
   colors: require("mapValues")(SemanticColors, (arg0, arg1) => ({ [closure_7]: arg1 })),
   unsafe_rawColors: RawColors,
   shadows: require("mapValues")(Shadows, (arg0) => {
-    let f67483 = arg0;
-    f67483 = (shadowOffset) => {
+    let f67540 = arg0;
+    f67540 = (shadowOffset) => {
       shadowOffset = undefined;
       if (!arg1) {
         shadowOffset = shadowOffset.shadowOffset;
@@ -23,34 +23,34 @@ obj = {
     };
     let shadowOffset = {
       resolve(isAndroid) {
-        return f67483(f67483[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+        return f67540(f67540[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
       }
     };
-    f67483 = (shadowColorAndroid) => arg1 ? shadowColorAndroid.shadowColorAndroid : shadowColorAndroid.shadowColor;
+    f67540 = (shadowColorAndroid) => arg1 ? shadowColorAndroid.shadowColorAndroid : shadowColorAndroid.shadowColor;
     const shadowColor = {
       resolve(isAndroid) {
-        return f67483(f67483[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+        return f67540(f67540[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
       }
     };
-    f67483 = (shadowOpacity) => shadowOpacity.shadowOpacity;
-    f67483 = (shadowRadius) => shadowRadius.shadowRadius;
-    f67483 = (elevation) => elevation.elevation;
+    f67540 = (shadowOpacity) => shadowOpacity.shadowOpacity;
+    f67540 = (shadowRadius) => shadowRadius.shadowRadius;
+    f67540 = (elevation) => elevation.elevation;
     return {
       shadowOffset,
       shadowColor,
       shadowOpacity: {
         resolve(isAndroid) {
-          return f67483(f67483[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f67540(f67540[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         }
       },
       shadowRadius: {
         resolve(isAndroid) {
-          return f67483(f67483[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f67540(f67540[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         }
       },
       elevation: {
         resolve(isAndroid) {
-          return f67483(f67483[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f67540(f67540[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         }
       }
     };

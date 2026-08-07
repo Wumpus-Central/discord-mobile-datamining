@@ -1,7 +1,7 @@
 // discord_app/utils/SKUUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import ME from "ME";
-import { t } from "../../_runtime/03866_t.js";
+import { t } from "../../_runtime/03883_t.js";
 import { getSystemLocale } from "../intl/index.native.tsx";
 import { matchPath } from "../modules/routing/matchPathCompat.tsx";
 import { set } from "PlatformUtils.tsx";

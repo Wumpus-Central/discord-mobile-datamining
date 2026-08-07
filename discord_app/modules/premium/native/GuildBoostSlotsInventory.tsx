@@ -9,7 +9,7 @@ import jsxProd from "getSubscriptionPlaceholderPatternSource";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
 import { apply } from "../../../../_runtime/00012_apply.js";
-import { registerAsset } from "../../../../_runtime/12687_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12702_registerAsset.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { getSubscriptionPlaceholderPatternSource } from "../../../design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -44,7 +44,7 @@ function GuildBoostSlotCooldown(cooldownEndsAt) {
     obj[1] = hours;
     obj[2] = minutes;
     obj[3] = intl.format(cooldownEndsAt(1236).t.NffSH8, obj);
-    tmp5 = callback(cooldownEndsAt(4281).Text, obj);
+    tmp5 = callback(cooldownEndsAt(4298).Text, obj);
   }
   return tmp5;
 }
@@ -115,8 +115,8 @@ function GuildBoostSlot(guildBoostSlot) {
       const obj3 = { variant: "text-md/medium", color: "control-brand-foreground", children: null };
       const intl2 = guildBoostSlot(1236).intl;
       obj3[2] = intl2.string(guildBoostSlot(1236).t.jqqLb6);
-      obj2[2] = tmp6(guildBoostSlot(4281).Text, obj3);
-      tmp6Result = tmp6(guildBoostSlot(4827).PressableOpacity, obj2);
+      obj2[2] = tmp6(guildBoostSlot(4298).Text, obj3);
+      tmp6Result = tmp6(guildBoostSlot(4844).PressableOpacity, obj2);
     }
     obj[2] = tmp6Result;
     obj[3] = tmp;
@@ -165,8 +165,8 @@ function UnusedGuildBoostSlots(unusedSlots) {
     const obj2 = { variant: "text-md/medium", color: "text-link", children: null };
     const intl2 = found(1236).intl;
     obj2[2] = intl2.string(found(1236).t["7KyPor"]);
-    obj1[2] = callback(found(4281).Text, obj2);
-    obj[1] = callback(found(4827).PressableOpacity, obj1);
+    obj1[2] = callback(found(4298).Text, obj2);
+    obj[1] = callback(found(4844).PressableOpacity, obj1);
     obj[2] = 0 === found.length;
     tmp4 = callback(GuildBoostSlotsInventoryRow, obj);
   }
@@ -275,7 +275,7 @@ function BoostedGuild(arg0) {
     tmp11Result = tmp11(tmp10, obj3);
   }
   items3[1] = tmp11Result;
-  items3[2] = closure_11(guildBoostSlots(12692), { guild: stateFromStores, theme: stateFromStores1 });
+  items3[2] = closure_11(guildBoostSlots(12707), { guild: stateFromStores, theme: stateFromStores1 });
   obj1[1] = items3;
   const items4 = [closure_12(closure_5, obj1), closure_11(BoostedGuildInfo, { guild: stateFromStores, numGuildBoostSlots: guildBoostSlots.length })];
   obj[1] = items4;
@@ -325,9 +325,9 @@ const result = require("handleThemeChange").fileFinishedImporting("modules/premi
 export default function GuildBoostSlotsInventory() {
   const tmp = createCacheKey();
   const effect = React.useEffect(() => {
-    const subscriptions = callback(4604).fetchSubscriptions();
-    const obj = callback(4604);
-    const guildBoostSlots = valueResult(4181).fetchGuildBoostSlots();
+    const subscriptions = callback(4621).fetchSubscriptions();
+    const obj = callback(4621);
+    const guildBoostSlots = valueResult(4198).fetchGuildBoostSlots();
   }, []);
   let obj = initialize;
   const items = [reset];
@@ -370,7 +370,7 @@ export default function GuildBoostSlotsInventory() {
         obj2[0] = tmp.header;
         const intl = tmp3(1236).intl;
         obj2[3] = intl.string(tmp3(1236).t.gB9oQ7);
-        const items3 = [callback(tmp3(4281).Text, obj2), found.map((guildId) => outer1_11(outer1_20, { guildId, guildBoostSlots: valueResult[guildId] }, guildId))];
+        const items3 = [callback(tmp3(4298).Text, obj2), found.map((guildId) => outer1_11(outer1_20, { guildId, guildBoostSlots: valueResult[guildId] }, guildId))];
         obj1[0] = items3;
         tmp10Result = tmp10(closure_13, obj1);
       }

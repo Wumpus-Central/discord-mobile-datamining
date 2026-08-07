@@ -58,7 +58,7 @@ function CoverSection(arg0) {
     obj = { colors: null, style: null };
     obj[0] = closure_11;
     obj[1] = closure_5.absoluteFill;
-    tmp6 = callback(image(4706), obj);
+    tmp6 = callback(image(4723), obj);
   }
   const items2 = [tmp6, , ];
   let tmp12 = null;
@@ -89,7 +89,7 @@ function CoverSection(arg0) {
     const items3 = [callback(closure_4, obj4), tmp3Result];
     obj3[1] = items3;
     obj2[3] = tmp3(tmp4, obj3);
-    tmp19 = callback(userId(3996).ThemeContextProvider, obj2);
+    tmp19 = callback(userId(4013).ThemeContextProvider, obj2);
   }
   return tmp19;
 }
@@ -191,7 +191,7 @@ export default function UserProfilePersonalWidgetCard(userId) {
   obj = { style: cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
   const tmp = createCacheKey();
   const tmp5 = importDefault;
-  obj[1] = callback(userId(7625).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj[1] = callback(userId(7644).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj[2] = widget.header;
   let tmp4Result = !stateFromStores;
   if (!stateFromStores) {
@@ -201,7 +201,7 @@ export default function UserProfilePersonalWidgetCard(userId) {
     obj = { userId: null, widget: null };
     obj[0] = userId;
     obj[1] = widget;
-    tmp4Result = tmp4(tmp5(12266), obj);
+    tmp4Result = tmp4(tmp5(12281), obj);
   }
   obj[3] = tmp4Result;
   const tmp6 = Divider;

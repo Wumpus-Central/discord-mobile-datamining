@@ -9,6 +9,6 @@ const memoResult = require("noop").memo(function MessagesItemPlaceholder(arg0) {
   ({ row, height } = arg0);
   return jsx(UserPlaceholderRow, { row, height });
 });
-const result = require("module_8998").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemPlaceholder.tsx");
+const result = require("module_9015").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemPlaceholder.tsx");
 
 export default memoResult;

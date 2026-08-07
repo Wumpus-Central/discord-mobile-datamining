@@ -17,6 +17,7 @@ export default function CollectiblesWishlistItemCard(sku) {
   const size = sku.size;
   const merged = Object.assign(sku, Object.create(null));
   let memo;
+  let WishlistItemCardOverlay = size;
   let obj = sku(size[4]);
   const isProfileFrameGiftingEnabled = obj.useIsProfileFrameGiftingEnabled("CollectiblesWishlistItemCard");
   const items = [initialize];
@@ -29,7 +30,6 @@ export default function CollectiblesWishlistItemCard(sku) {
     return hasSentGiftResult;
   }, items1);
   const obj2 = sku(size[5]);
-  let tmp2 = sku;
   const items2 = [sku];
   const productNameAndTypeFromSku = sku(size[6]).getProductNameAndTypeFromSku(sku);
   memo = memo.useMemo(() => outer1_4(sku), items2);
@@ -49,19 +49,23 @@ export default function CollectiblesWishlistItemCard(sku) {
     type = memo.type;
   }
   if ("single" === type) {
-    if (memo.item.type === tmp2(tmp3[8]).CollectiblesItemType.PROFILE_FRAME) {
-      let tmp11Result = null;
+    if (memo.item.type === tmp2(WishlistItemCardOverlay[8]).CollectiblesItemType.PROFILE_FRAME) {
+      if (!isProfileFrameGiftingEnabled) {
+        return null;
+      }
     }
-    return tmp11Result;
   }
-  obj = { accessibilityLabel: productNameAndTypeFromSku, renderPreview: callback, source: sku.source, isOwned: null, size: null };
+  obj = { accessibilityLabel: productNameAndTypeFromSku, renderPreview: callback, source: sku.source, size };
   const obj3 = sku(size[6]);
-  const tmp11 = jsx;
-  if (!flag) {
-    flag = stateFromStores;
-  }
-  obj[3] = flag;
-  obj[4] = size;
+  const tmp10 = jsx;
   const merged1 = Object.assign(merged);
-  tmp11Result = tmp11(wishlistOwnerId(size[9]), obj);
+  if (!flag) {
+    if (!stateFromStores) {
+      let OWNED = merged.overlay;
+    }
+    obj.overlay = OWNED;
+    tmp10(tmp11, obj);
+  }
+  WishlistItemCardOverlay = tmp2(WishlistItemCardOverlay[9]).WishlistItemCardOverlay;
+  OWNED = WishlistItemCardOverlay.OWNED;
 };

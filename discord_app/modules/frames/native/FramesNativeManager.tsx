@@ -7,13 +7,11 @@ import { DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY as closure_7 } from "items3"
 import { TransportTypes } from "RPC_SCOPE_CONFIG";
 import WebView from "WebView";
 import PlatformTypes from "PlatformTypes";
-import "prototype";
+import "leaveFrame";
 import { v1 } from "../../../../_runtime/00514_v1.js";
 import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { ComponentDispatcher } from "../../../utils/ComponentDispatchUtils.tsx";
-import { _launchFrameOnNative } from "../FramesActionCreators.native.tsx";
 
 const require = arg1;
 function postMessageToWebView() {
@@ -149,6 +147,20 @@ class FramesNativeManager extends tmp5 {
     }
     return;
   }
+  leaveFrame(arg0) {
+    releaseWebViewResult = this.releaseWebView();
+    tmp2 = closure_2;
+    obj = require("isDiscordFrontendDevelopment");
+    if (obj.isNotNullish(global)) {
+      tmp3 = closure_1;
+      obj2 = require("dispatcher");
+      obj = { type: "FRAME_SET_ORIENTATION_LOCK_STATE", frameId: null, lockState: null, pictureInPictureLockState: null };
+      obj[1] = global;
+      dispatchResult = obj2.dispatch(obj);
+    }
+    leaveFrameResult = super.leaveFrame(global);
+    return;
+  }
 }
 const prototype = FramesNativeManager.prototype;
 prototype["showRPCDisconnectErrorUI"] = function showRPCDisconnectErrorUI(reason) {
@@ -168,19 +180,6 @@ prototype["getManagedFrame"] = function getManagedFrame() {
     frameByIframeId = frameByIframeId.getFrameByIframeId(tmp.iframeId);
   }
   return frameByIframeId;
-};
-prototype["leaveFrame"] = function leaveFrame(id) {
-  const self = this;
-  this.releaseWebView();
-  if (obj.isNotNullish(id)) {
-    self.clearFrameState(id);
-  }
-};
-prototype["clearFrameState"] = function clearFrameState(frameId) {
-  let obj = dispatcher;
-  obj = { type: "FRAME_SET_ORIENTATION_LOCK_STATE", frameId, lockState: null, pictureInPictureLockState: null };
-  obj.dispatch(obj);
-  _launchFrameOnNative.stopFrame(frameId);
 };
 prototype["releaseWebView"] = function releaseWebView() {
   const releaseIframeIdResult = this.releaseIframeId();

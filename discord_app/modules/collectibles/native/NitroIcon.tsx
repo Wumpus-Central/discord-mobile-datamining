@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/NitroIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { inlineStyles } from "../../../../_runtime/07758_inlineStyles.js";
+import { inlineStyles } from "../../../../_runtime/07775_inlineStyles.js";
 
 const require = arg1;
 const result = require("inlineStyles").fileFinishedImporting("modules/collectibles/native/NitroIcon.tsx");

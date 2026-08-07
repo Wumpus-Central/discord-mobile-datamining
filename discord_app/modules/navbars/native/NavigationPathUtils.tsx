@@ -1,6 +1,6 @@
 // discord_app/modules/navbars/native/NavigationPathUtils.tsx
 import { Routes } from "ME";
-import { _extends } from "../../../../_runtime/metro/04112__extends.js";
+import { _extends } from "../../../../_runtime/metro/04129__extends.js";
 
 let obj = { FRIENDS: 0, [0]: "FRIENDS" };
 const result = require("set").fileFinishedImporting("modules/navbars/native/NavigationPathUtils.tsx");

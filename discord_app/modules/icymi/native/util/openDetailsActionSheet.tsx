@@ -15,5 +15,5 @@ export const openDetailsActionSheet = function openDetailsActionSheet(arg0) {
   const obj = ICYMIActionCreators;
   ICYMIActionCreators.feedItemActioned({ itemId: id, itemType: type, actionParameters: { actionGestureType: "press", actionTargetElement: "overflow_menu_button", actionIntentType: "open", actionDestinationType: null } });
   const obj2 = ICYMIActionCreators;
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(15466, dependencyMap.paths), "ItemDetailsActionSheet", { guildId, channelId, id });
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(15490, dependencyMap.paths), "ItemDetailsActionSheet", { guildId, channelId, id });
 };

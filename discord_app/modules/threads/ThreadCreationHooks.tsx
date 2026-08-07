@@ -94,8 +94,8 @@ function getDefaultThreadName(stateFromStores, parentMessageId) {
     const obj = rebuild;
     const tmp17 = importDefault;
     const str4 = rebuild.unparse(str3, stateFromStores.id, true);
-    const tmp17Result = tmp17(8278);
-    let str7 = tmp17(8278)(str4.split("\n")[0], true).replace(/^[ #-]+/, "");
+    const tmp17Result = tmp17(8295);
+    let str7 = tmp17(8295)(str4.split("\n")[0], true).replace(/^[ #-]+/, "");
     const items = [];
     const match = str7.match(/(?:\s|[!@#$%^&*()_\-+={}[\]:";'<>?,./])+/);
     while (null != match) {
@@ -207,8 +207,8 @@ function _createThread_() {
             throwTypeErrorResult = string3(KGaiEK.P0wT5S);
           }
           obj2[1] = throwTypeErrorResult;
-          obj2 = callback(4623).show(obj2);
-          const obj18 = callback(4623);
+          obj2 = callback(4640).show(obj2);
+          const obj18 = callback(4640);
         } else {
           throwTypeErrorResult = maybeRebuildState;
           throwTypeErrorResult = closure_8;
@@ -221,7 +221,7 @@ function _createThread_() {
             throwTypeErrorResult = id;
             throwTypeErrorResult = callback;
             throwTypeErrorResult = dependencyMap;
-            const obj15 = callback(4623);
+            const obj15 = callback(4640);
             const obj3 = { title: null, body: null };
             throwTypeErrorResult = lib;
             throwTypeErrorResult = dependencyMap;
@@ -281,7 +281,7 @@ function _createThread_() {
                 throwTypeErrorResult = id;
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
-                let obj13 = callback(4623);
+                let obj13 = callback(4640);
                 throwTypeErrorResult = c4;
                 throwTypeErrorResult = id;
                 throwTypeErrorResult = lib;
@@ -401,11 +401,11 @@ function _createThread_() {
                           reason = body6.reason;
                         }
                         obj6[4] = reason;
-                        let result = lib(8281).handleUploadMessageAttachmentsErrors(obj6);
-                        const obj27 = lib(8281);
+                        let result = lib(8298).handleUploadMessageAttachmentsErrors(obj6);
+                        const obj27 = lib(8298);
                       }
                     }
-                    let obj10 = lib(7134);
+                    let obj10 = lib(7153);
                     maybeRebuildState = obj10.createNonce();
                     let tmp89 = null != closure_8.body.attachments;
                     if (tmp89) {
@@ -422,10 +422,10 @@ function _createThread_() {
                       throwTypeErrorResult = dependencyMap;
                       throwTypeErrorResult = lib;
                       throwTypeErrorResult = maybeRebuildState;
-                      throwTypeErrorResult = callback(12490)(lib.id, maybeRebuildState);
+                      throwTypeErrorResult = callback(12505)(lib.id, maybeRebuildState);
                     }
                   } else {
-                    let obj8 = callback(4623);
+                    let obj8 = callback(4640);
                     obj8 = { title: null, body: null };
                     const intl3 = lib(1236).intl;
                     obj8[0] = intl3.string(lib(1236).t.j2d6Km);
@@ -468,7 +468,7 @@ function _createThread_() {
         } else {
           id = body;
           c9 = 2;
-          obj4 = callback(6838);
+          obj4 = callback(6857);
           obj10 = { channelId: null, limit: null };
           obj10[0] = id.id;
           obj10[1] = closure_20;
@@ -486,7 +486,7 @@ function _createThread_() {
           throwTypeErrorResult = maybeRebuildState;
           lib2 = body;
           if (null == body.body) {
-            const obj1 = callback(4623);
+            const obj1 = callback(4640);
             const obj12 = { title: null, body: null };
             const intl = lib(1236).intl;
             obj12[0] = intl.string(lib(1236).t.j2d6Km);
@@ -513,7 +513,7 @@ function _createThread_() {
             throwTypeErrorResult = callback(709).dispatch(obj14);
             throwTypeErrorResult = lib;
             throwTypeErrorResult = dependencyMap;
-            const AccessibilityAnnouncer = lib(4130).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = lib(4147).AccessibilityAnnouncer;
             throwTypeErrorResult = lib;
             throwTypeErrorResult = dependencyMap;
             const intl11 = lib(1236).intl;
@@ -714,18 +714,18 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
                 }
                 if (null != closure_1) {
                   if (closure_1.length > 0) {
-                    const obj4 = callback(6838);
+                    const obj4 = callback(6857);
                     const id = c7.id;
                     let obj = { location: null };
                     obj[0] = constants.THREAD_CREATION;
-                    let sendStickersResult = obj4.sendStickers(id, closure_1, callback(7063).parse(c7, closure_0), obj);
-                    const obj5 = callback(7063);
+                    let sendStickersResult = obj4.sendStickers(id, closure_1, callback(7082).parse(c7, closure_0), obj);
+                    const obj5 = callback(7082);
                   }
                   return sendStickersResult;
                 }
-                obj = callback(6838);
+                obj = callback(6857);
                 obj = { location: constants.THREAD_CREATION };
-                sendStickersResult = obj.sendMessage(c7.id, callback(7063).parse(c7, closure_0), undefined, obj);
+                sendStickersResult = obj.sendMessage(c7.id, callback(7082).parse(c7, closure_0), undefined, obj);
               })(c7, lib, closure_1, name, c7);
               const obj10 = parentMessageId(threadSettings[19]);
             }

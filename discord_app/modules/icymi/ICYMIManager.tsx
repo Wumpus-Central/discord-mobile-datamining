@@ -55,9 +55,9 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
         }, 15 * callback(table[1]).Millis.MINUTE);
       }, 15 * callback(table[1]).Millis.MINUTE);
     }, 15 * tmp2(687).Millis.MINUTE);
-    let tmp2Result = tmp2(8836);
+    let tmp2Result = tmp2(8853);
     const guildChannelScores = tmp2Result.getGuildChannelScores();
-    tmp2Result = tmp2(8836);
+    tmp2Result = tmp2(8853);
     const recommendedGuilds = tmp2Result.getRecommendedGuilds();
     const obj2 = ICYMIActionCreators;
   }

@@ -24,14 +24,14 @@ function handleInputModePress() {
   const intl2 = getSystemLocale.intl;
   obj1[0] = intl2.string(getSystemLocale.t.Q8gkVL);
   obj1[1] = function onPress() {
-    callback(9078).setMode(constants.PUSH_TO_TALK);
+    callback(9095).setMode(constants.PUSH_TO_TALK);
   };
   const items = [obj1, ];
   const obj2 = { label: null, onPress: null };
   const intl3 = getSystemLocale.intl;
   obj2[0] = intl3.string(getSystemLocale.t.cHCEOJ);
   obj2[1] = function onPress() {
-    callback(9078).setMode(constants.VOICE_ACTIVITY);
+    callback(9095).setMode(constants.VOICE_ACTIVITY);
   };
   items[1] = obj2;
   obj[2] = items;
@@ -63,9 +63,9 @@ export default function UserSettingsVoiceInputOptions() {
     stringResult = intl3.string(tmp(1236).t.cHCEOJ);
   }
   obj1[3] = stringResult;
-  obj[1] = closure_6(inputMode(4281).Text, obj1);
+  obj[1] = closure_6(inputMode(4298).Text, obj1);
   obj[2] = handleInputModePress;
-  const items1 = [closure_6(inputMode(5354).TableRow, obj), ];
+  const items1 = [closure_6(inputMode(5373).TableRow, obj), ];
   let tmp4Result = null;
   if (inputMode !== InputModes.PUSH_TO_TALK) {
     const obj2 = { children: null };
@@ -78,7 +78,7 @@ export default function UserSettingsVoiceInputOptions() {
       obj = { autoThreshold };
       return obj.setMode(inputMode, obj);
     };
-    const items2 = [tmp5(tmp(5689).TableSwitchRow, obj3), ];
+    const items2 = [tmp5(tmp(5708).TableSwitchRow, obj3), ];
     const obj4 = { label: null, subLabel: null };
     const intl6 = tmp(1236).intl;
     obj4[0] = intl6.string(tmp(1236).t["o+2oMK"]);
@@ -94,12 +94,12 @@ export default function UserSettingsVoiceInputOptions() {
     };
     obj5[1] = tmp5(VoiceSensitivity, obj6);
     obj4[1] = tmp5(View, obj5);
-    items2[1] = tmp5(tmp(5354).TableRow, obj4);
+    items2[1] = tmp5(tmp(5373).TableRow, obj4);
     obj2[0] = items2;
     tmp4Result = tmp4(closure_7, obj2);
   }
   items1[1] = tmp4Result;
   obj[2] = items1;
-  return closure_8(inputMode(10767).UserSettingsTableRowGroup, obj);
+  return closure_8(inputMode(10779).UserSettingsTableRowGroup, obj);
 };
 export { handleInputModePress };

@@ -3,7 +3,7 @@ import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/07711_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/07728_registerAsset.js";
 import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
@@ -37,8 +37,8 @@ function StageSparkleInner(style) {
   obj[1] = tmp6Result;
   const items1 = [closure_4(View, obj), ];
   const obj2 = { style: tmp3.sparkles, source: null };
-  obj2[1] = tmp10(7712);
-  items1[1] = closure_4(tmp10(5251), obj2);
+  obj2[1] = tmp10(7729);
+  items1[1] = closure_4(tmp10(5267), obj2);
   obj[1] = items1;
   return closure_5(View, obj);
 }

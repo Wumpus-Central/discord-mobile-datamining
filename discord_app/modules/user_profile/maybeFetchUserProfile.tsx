@@ -163,7 +163,7 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
       });
       return Promise.resolve();
     } else {
-      const profile = __fetchProfile.fetchProfile(id, obj, obj(8233));
+      const profile = __fetchProfile.fetchProfile(id, obj, obj(8250));
       let resolved = profile;
       if (tmp18) {
         resolved = profile;

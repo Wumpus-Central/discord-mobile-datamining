@@ -17,12 +17,12 @@ export const createSurveyIndication = function createSurveyIndication(message, f
   }
   obj = { content: intl.formatToParts(_46_Iqc, { handleMessage: obj }), feedbackIconUrl: null };
   obj[2] = TOP_MESSAGE_PUSH;
-  let tmp2Result = tmp2(7978);
-  tmp2Result = tmp2(4130);
+  let tmp2Result = tmp2(7995);
+  tmp2Result = tmp2(4147);
   if (tmp2Result.isThemeDark(forcedTheme)) {
-    let tmp6Result = tmp6(8256);
+    let tmp6Result = tmp6(8273);
   } else {
-    tmp6Result = tmp6(8257);
+    tmp6Result = tmp6(8274);
   }
   obj[1] = tmp2Result.getAssetUriForEmbed(tmp6Result);
   return obj;

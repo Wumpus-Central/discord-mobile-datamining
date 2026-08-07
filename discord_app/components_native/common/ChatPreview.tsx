@@ -99,7 +99,7 @@ class ChatPreviewBase extends PureComponent {
           let arr = items;
           const first = items[0];
           if (null != first) {
-            if (messages(11277)(c0, first[first.length - 1], props)) {
+            if (messages(11292)(c0, first[first.length - 1], props)) {
               items = [props];
               arr = arr.unshift(items);
             } else {
@@ -123,7 +123,7 @@ class ChatPreviewBase extends PureComponent {
             isSameDayResult = null == timestamp;
           }
           if (!isSameDayResult) {
-            let obj = _undefined(3954);
+            let obj = _undefined(3971);
             isSameDayResult = obj.isSameDay(tmp.timestamp, timestamp);
           }
           let flag = false;
@@ -203,9 +203,9 @@ class ChatPreviewBase extends PureComponent {
             obj4[0] = roleStyle;
             obj4[1] = outer1_12.DAY;
             obj4[2] = dependencyMap;
-            obj4[3] = _undefined(3954).dateFormat(tmp.timestamp, "LL");
+            obj4[3] = _undefined(3971).dateFormat(tmp.timestamp, "LL");
             arr.push(obj4);
-            const obj8 = _undefined(3954);
+            const obj8 = _undefined(3971);
           }
         });
         for (const item10042 of items1) {
@@ -222,7 +222,7 @@ class ChatPreviewBase extends PureComponent {
         const jumpTargetId = tmp3.jumpTargetId;
         let tmp23;
         if (!tmp7) {
-          obj = { rows: null, scrollToMessageId: null, jumpTargetId: null, jumpType: "Path", shouldInitialScroll: "Array", animated: "4.8.0", scrollPosition: null, focusTargetId: 60 };
+          obj = { rows: null, scrollToMessageId: null, jumpTargetId: null, jumpType: "Path", shouldInitialScroll: "Array", animated: 0.111, scrollPosition: 0.551, focusTargetId: "user" };
           obj[0] = tmp22;
           obj[1] = jumpTargetId;
           obj[2] = jumpTargetId;
@@ -521,7 +521,7 @@ prototype["render"] = function render() {
   const obj3 = { accessibilityRole: "button", style: tmp.jumpToChatButton, onPress: self.handleJumpToChat, children: null };
   obj3[3] = callback(Text.Text, { style: tmp.jumpToChatText, variant: "text-md/medium", color: "interactive-text-default", children: self.props.jumpToChatProps.jumpToChatText });
   obj2[2] = callback(PressableBase.PressableOpacity, obj3);
-  tmp6Result = tmp6(tmp9(5311).SafeAreaPaddingView, obj2);
+  tmp6Result = tmp6(tmp9(5327).SafeAreaPaddingView, obj2);
   tmp14 = tmp6Result;
 };
 ChatPreviewBase.contextType = require("ManaContext").ThemeContext;
@@ -531,11 +531,11 @@ let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImp
 
 export const ChatPreview = function ChatPreview(channelId) {
   channelId = channelId.channelId;
-  const InlineAttachmentMedia = channelId(3957).InlineAttachmentMedia;
+  const InlineAttachmentMedia = channelId(3974).InlineAttachmentMedia;
   const setting = InlineAttachmentMedia.useSetting();
-  const InlineEmbedMedia = channelId(3957).InlineEmbedMedia;
+  const InlineEmbedMedia = channelId(3974).InlineEmbedMedia;
   const setting1 = InlineEmbedMedia.useSetting();
-  const RenderEmbeds = channelId(3957).RenderEmbeds;
+  const RenderEmbeds = channelId(3974).RenderEmbeds;
   const setting2 = RenderEmbeds.useSetting();
   let obj = channelId(589);
   const items = [maybeApplyNoTextColorForLightCustomTheme];
@@ -543,10 +543,10 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [ensureGuildLoaded];
   const stateFromStores1 = channelId(589).useStateFromStores(items1, () => outer1_8.getChannel(channelId));
   const obj2 = channelId(589);
-  const isChannelSpoilerGated = channelId(5865).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(5865);
-  const isChannelContentGated = channelId(4498).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(4498);
+  const isChannelSpoilerGated = channelId(5884).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(5884);
+  const isChannelContentGated = channelId(4515).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(4515);
   const items2 = [setContent];
   obj = {};
   const stateFromStores2 = channelId(589).useStateFromStores(items2, () => null != content.getContent());

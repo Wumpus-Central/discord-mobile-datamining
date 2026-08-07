@@ -4,7 +4,7 @@ import { jsx } from "jsxProd";
 import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
 
 const require = arg1;
-const result = require("module_4624").fileFinishedImporting("modules/guild_role_subscriptions/native/RoleSubscriptionUpsellUtils.tsx");
+const result = require("module_4641").fileFinishedImporting("modules/guild_role_subscriptions/native/RoleSubscriptionUpsellUtils.tsx");
 
 export default {
   handleShowEmojiUpsellAlert(guildId) {

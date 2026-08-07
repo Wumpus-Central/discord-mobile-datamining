@@ -3,7 +3,7 @@ import importAllResult from "noop";
 import { QuestDockMode } from "QuestsExperimentLocations";
 import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT";
 import { jsx } from "jsxProd";
-import { Directions } from "../../../../../_runtime/05407_Directions.js";
+import { Directions } from "../../../../../_runtime/05426_Directions.js";
 
 let c10;
 let c5;

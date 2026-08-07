@@ -22,11 +22,11 @@ export default function MentionSubtitle(channel) {
   const subtitleStyles = obj.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {
-    channelIconComponentWithGuild = tmp(4745).getChannelIconComponentWithGuild(channel, guild);
-    const tmpResult = tmp(4745);
+    channelIconComponentWithGuild = tmp(4762).getChannelIconComponentWithGuild(channel, guild);
+    const tmpResult = tmp(4762);
   }
   if (channelIconComponentWithGuild == null) {
-    channelIconComponentWithGuild = tmp(4790).TextIcon;
+    channelIconComponentWithGuild = tmp(4807).TextIcon;
   }
   obj = { style: subtitleStyles.subtitleRow, children: null };
   obj = { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon };

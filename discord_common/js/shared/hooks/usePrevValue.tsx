@@ -1,7 +1,7 @@
-// discord_app/hooks/usePrevValue.tsx
+// discord_common/js/shared/hooks/usePrevValue.tsx
 import { useRef } from "noop";
 
-const result = require("set").fileFinishedImporting("hooks/usePrevValue.tsx");
+const result = require("set").fileFinishedImporting("../discord_common/js/shared/hooks/usePrevValue.tsx");
 
 export default function usePrevValue(current) {
   const tmp = useRef(null);

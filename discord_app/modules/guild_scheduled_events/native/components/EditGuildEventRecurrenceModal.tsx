@@ -117,9 +117,9 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
   }
   const tmp2 = useEventException(recurrenceId, guildEvent.id);
   dependencyMap = tmp2;
-  let obj = guildEvent(8865);
+  let obj = guildEvent(8882);
   const baseScheduleForRecurrence = obj.getBaseScheduleForRecurrence(recurrenceId, guildEvent);
-  let obj1 = guildEvent(8865);
+  let obj1 = guildEvent(8882);
   scheduleForRecurrenceWithException = obj1.getScheduleForRecurrenceWithException(baseScheduleForRecurrence, tmp2);
   let tmp = createCacheKey();
   [c5, c6] = callback(React.useState(scheduleForRecurrenceWithException), 2);
@@ -157,7 +157,7 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
     return applyArgumentsResult;
   };
   obj[3] = null != first;
-  closure_13 = first(guildEvent(4695).Button, obj);
+  closure_13 = first(guildEvent(4712).Button, obj);
   obj = {
     title: "",
     customNavbar() {
@@ -186,5 +186,5 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
     fullscreen: true
   };
   obj1 = { screens: { [closure_10.TIME]: obj }, initialRouteName: error.TIME, cardShadowEnabled: false, cardOverlayEnabled: false, cardStyle: tmp.cardStyle };
-  return first(guildEvent(5704).Navigator, obj1);
+  return first(guildEvent(5723).Navigator, obj1);
 };

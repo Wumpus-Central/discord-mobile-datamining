@@ -104,7 +104,7 @@ function handleShowVotesForAnswer(messageId) {
               const _String = String;
               answerId = String(message.poll.answers[0].answer_id);
             }
-            obj = importAll(10201);
+            obj = importAll(10217);
             obj = { message: null, initialAnswerId: null };
             obj[0] = message;
             obj[1] = answerId;
@@ -256,7 +256,7 @@ function _optimisticallySetAnswers() {
                     let tmp6 = processMessage;
                     obj[4] = processMessage;
                     let tmp7 = _undefined;
-                    obj[6] = _undefined(7143).ReactionTypes.VOTE;
+                    obj[6] = _undefined(7162).ReactionTypes.VOTE;
                     dispatchResult = obj.dispatch(obj);
                     continue;
                   }
@@ -884,16 +884,16 @@ function _createPoll() {
               c5 = 3;
               v0 = 1;
               const obj5 = { value: null, done: false };
-              obj5[0] = lib2(6838).sendPollMessage(lib.id, obj2, obj4);
+              obj5[0] = lib2(6857).sendPollMessage(lib.id, obj2, obj4);
               return obj5;
             }
           } else if (2 === tmp7) {
             c4 = 0;
             let recomputeGuild = dependencyMap;
-            if (recomputeGuild instanceof lib(4184).APIError) {
+            if (recomputeGuild instanceof lib(4201).APIError) {
               let aPIError = recomputeGuild;
             } else {
-              aPIError = new lib(4184).APIError(recomputeGuild);
+              aPIError = new lib(4201).APIError(recomputeGuild);
             }
             if ("poll" === aPIError.getAnyErrorMessage()) {
               if (null != recomputeGuild.text) {
@@ -1008,7 +1008,7 @@ function _endPollEarly() {
               dependencyMap = 2;
               c4 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = callback2(4623).confirm(obj2);
+              obj3[0] = callback2(4640).confirm(obj2);
               return obj3;
             }
           } else {
@@ -1022,7 +1022,7 @@ function _endPollEarly() {
                 obj4[0] = arg1;
                 return obj4;
               } else if (arg1) {
-                obj1 = callback3(10206);
+                obj1 = callback3(10222);
                 const obj5 = { channelId: null, messageId: null };
                 obj5[0] = callback;
                 obj5[1] = callback2;

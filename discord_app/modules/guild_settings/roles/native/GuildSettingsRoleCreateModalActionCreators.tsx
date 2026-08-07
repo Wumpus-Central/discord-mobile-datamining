@@ -6,7 +6,7 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/guild_
 
 export default {
   open() {
-    ModalActionCreators.pushLazy(asyncRequireImpl(16589, dependencyMap.paths), undefined, GUILD_SETTINGS_ROLE_CREATE_MODAL_KEY);
+    ModalActionCreators.pushLazy(asyncRequireImpl(16609, dependencyMap.paths), undefined, GUILD_SETTINGS_ROLE_CREATE_MODAL_KEY);
   },
   close() {
     ModalActionCreators.popWithKey(GUILD_SETTINGS_ROLE_CREATE_MODAL_KEY);

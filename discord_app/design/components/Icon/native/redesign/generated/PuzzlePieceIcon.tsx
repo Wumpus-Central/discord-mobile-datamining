@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/PuzzlePieceIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/14116_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/14130_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

@@ -9,12 +9,12 @@ import { getFavoritesAwareGuildName } from "../../FavoritesUtils.tsx";
 const require = arg1;
 let result = require("initializeFromUserSettings").fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildChannelActions.tsx");
 
-export default function useFavoritesGuildChannelActions(channelId, FavoritesGuildChannelList) {
+export default function useFavoritesGuildChannelActions(channelId, FavoritesGuildActionSheet) {
   let hasAccess;
   let hasHigherPrivileges;
   const _require = channelId;
   let obj = _useFavoritesAccess;
-  const favoritesAccess = obj.useFavoritesAccess(FavoritesGuildChannelList);
+  const favoritesAccess = obj.useFavoritesAccess(FavoritesGuildActionSheet);
   ({ hasAccess, hasHigherPrivileges } = favoritesAccess);
   let result = _getFavoritesAwareGuildName.canFavoriteChannelType(channelId, hasHigherPrivileges);
   const obj2 = _getFavoritesAwareGuildName;
@@ -45,7 +45,7 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
   if (tmp7) {
     tmp7 = !isFavoritesGuildSelected;
   }
-  const favoritesBetaTagDismissibleContent = tmp(9637).useFavoritesBetaTagDismissibleContent(tmp7);
+  const favoritesBetaTagDismissibleContent = tmp(9653).useFavoritesBetaTagDismissibleContent(tmp7);
   obj = { hasFavoritesAccess: hasAccess, canFavoriteChannel: result, isChannelInFavorites: stateFromStores, isFavoritesGuild: isFavoritesGuildSelected, channelId: channelId.id, shouldShowBetaTag: favoritesBetaTagDismissibleContent.shouldShowBetaTag, dismissBetaTag: favoritesBetaTagDismissibleContent.dismissBetaTag };
   return obj;
 };

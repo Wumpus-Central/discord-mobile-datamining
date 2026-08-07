@@ -17,7 +17,9 @@ class FramesStoreClass extends Store {
 }
 const prototype = FramesStoreClass.prototype;
 prototype["getFrame"] = function getFrame(closure_0) {
-  return map.get(closure_0);
+  if (null != closure_0) {
+    return map.get(closure_0);
+  }
 };
 prototype["getMainFrame"] = function getMainFrame() {
   let tmp = null;
@@ -102,6 +104,19 @@ const framesStoreClass = new FramesStoreClass(require("dispatcher"), {
       c10 = null;
     }
   },
+  FRAME_CLEAR_MAIN_SLOT: function handleFrameClearMainSlot(frameId) {
+    if (c10 !== frameId.frameId) {
+      return false;
+    } else {
+      c10 = null;
+    }
+  },
+  FRAME_PROMOTE: function handleFramePromote(frameId) {
+    frameId = frameId.frameId;
+    if (null == map.get(frameId)) {
+      return false;
+    }
+  },
   FRAME_UPDATE_LAYOUT_MODE: function handleFrameUpdateLayoutMode(frameId) {
     frameId = frameId.frameId;
     let flag = false;
@@ -127,14 +142,15 @@ const framesStoreClass = new FramesStoreClass(require("dispatcher"), {
     }
     return flag;
   },
-  FRAME_SET_PANEL_MODE: function handleSetPanelMode(arg0) {
+  FRAME_SET_PANEL_MODE: function handleSetPanelMode(frameId) {
+    frameId = frameId.frameId;
     let flag = false;
-    if (null != c10) {
+    if (null != frameId) {
       let obj = map;
-      const value = map.get(tmp2);
-      let tmp6 = callback2(value);
-      if (tmp6) {
-        let flag2 = tmp3(value.data);
+      const value = map.get(frameId);
+      let tmp5 = callback2(value);
+      if (tmp5) {
+        let flag2 = tmp2(value.data);
         if (flag2) {
           obj = {};
           const merged = Object.assign(value);
@@ -142,12 +158,12 @@ const framesStoreClass = new FramesStoreClass(require("dispatcher"), {
           const merged1 = Object.assign(value.data);
           obj.activityPanelMode = tmp;
           obj.data = obj;
-          const result = obj.set(tmp2, obj);
+          const result = obj.set(frameId, obj);
           flag2 = true;
         }
-        tmp6 = flag2;
+        tmp5 = flag2;
       }
-      flag = tmp6;
+      flag = tmp5;
     }
     return flag;
   },

@@ -13,11 +13,11 @@ import { useFavoritesGuildConfig } from "FavoritesGuildExperiment.tsx";
 import { getFavoritesAwareGuildName } from "FavoritesUtils.tsx";
 
 const require = arg1;
-function useFavoritesAccess(FavoritesGuildChannelList) {
+function useFavoritesAccess(FavoritesGuildActionSheet) {
   let enabled;
   let isFreemium;
-  let str = FavoritesGuildChannelList;
-  if (FavoritesGuildChannelList === undefined) {
+  let str = FavoritesGuildActionSheet;
+  if (FavoritesGuildActionSheet === undefined) {
     str = "useFavoritesAccess";
   }
   let obj = useFavoritesGuildConfig;
@@ -59,7 +59,7 @@ function useFavoritesAccess(FavoritesGuildChannelList) {
   } else {
     num = 0;
     if (tmp4) {
-      num = tmp(9631).FREE_FAVORITE_LIMIT;
+      num = tmp(9647).FREE_FAVORITE_LIMIT;
     }
   }
 }
@@ -187,7 +187,7 @@ export const useIsFavoritesGuildSelected = function useIsFavoritesGuildSelected(
   const obj = initialize;
   return getFavoritesAwareGuildName.isFavoritesGuildId(stateFromStores);
 };
-export const useFavoritesAwareChannel = function useFavoritesAwareChannel(arg0, FavoritesGuildChannelList) {
+export const useFavoritesAwareChannel = function useFavoritesAwareChannel(arg0, FavoritesGuildActionSheet) {
   let tmp = arg0;
   const _require = arg0;
   const items = [handleConnectionOpen];
@@ -203,7 +203,7 @@ export const useFavoritesAwareChannel = function useFavoritesAwareChannel(arg0, 
     let tmp7 = tmp;
   } else {
     tmp7 = null;
-    if (useFavoritesAccess(FavoritesGuildChannelList).hasAccess) {
+    if (useFavoritesAccess(FavoritesGuildActionSheet).hasAccess) {
       tmp7 = null;
       if (tmp5) {
         let isCategoryResult;

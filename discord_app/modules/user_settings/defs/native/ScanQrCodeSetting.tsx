@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/ScanQrCodeSetting.tsx
 import { NativePermissionTypes } from "NativePermissionStatus";
 import apply from "apply";
-import importDefaultResult from "module_4490";
+import importDefaultResult from "module_4507";
 import createToggle from "createToggle";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
@@ -13,7 +13,7 @@ apply = {
   },
   parent: null,
   IconComponent: require("QrCodeIcon").QrCodeIcon,
-  onPress: apply.debounce(require("module_4490")(function*() {
+  onPress: apply.debounce(require("module_4507")(function*() {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -88,7 +88,7 @@ apply = {
   withArrow: true
 };
 apply = createToggle.createPressable(apply);
-const debounceResult = apply.debounce(require("module_4490")(function*() {
+const debounceResult = apply.debounce(require("module_4507")(function*() {
   if (c3 === 2) {
     c3 = 3;
     HermesBuiltin.throwTypeError();

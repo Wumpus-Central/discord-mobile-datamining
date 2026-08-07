@@ -54,7 +54,7 @@ class JoinRequestActionSheet {
     obj3 = guildId;
     ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef);
     ref = guildId.useRef(null);
-    tmp2Result1 = require("module_4145");
+    tmp2Result1 = require("module_4162");
     sharedValue = require("noop");
     useSharedValue = sharedValue;
     items2 = [];

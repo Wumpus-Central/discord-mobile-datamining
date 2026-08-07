@@ -1,6 +1,6 @@
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetyMembers.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
-import { isEqual } from "../../../_runtime/04444_isEqual.js";
+import { isEqual } from "../../../_runtime/04461_isEqual.js";
 import { version } from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
 import { isSpamSupported } from "../messages/isSpam.tsx";
 import { getJoinedAtDateFormatter } from "DateUtils.tsx";
@@ -76,7 +76,7 @@ prototype["enhanceNewMember"] = function enhanceNewMember(trueMember, searchStat
   const tmp = require;
   let ORDER_BY_UNSPECIFIED = searchState.selectedSort;
   if (ORDER_BY_UNSPECIFIED == null) {
-    ORDER_BY_UNSPECIFIED = tmp(6877).OrderBy.ORDER_BY_UNSPECIFIED;
+    ORDER_BY_UNSPECIFIED = tmp(6896).OrderBy.ORDER_BY_UNSPECIFIED;
   }
   obj.sort = getSortValueForMember.getSortValueForMember(trueMember, ORDER_BY_UNSPECIFIED);
   obj.joinedAtTimestamp = joinedAtTimestamp;
@@ -124,7 +124,7 @@ prototype["_computeMemberSupplementals"] = function _computeMemberSupplementals(
     const _Date = Date;
     const date = new Date(unusualDMActivityUntil);
     const time = date.getTime();
-    tmp9 = time >= closure_4 - tmp(6877).UNUSUAL_DM_COMPARISON_DELTA;
+    tmp9 = time >= closure_4 - tmp(6896).UNUSUAL_DM_COMPARISON_DELTA;
   }
   obj[6] = tmp9;
   obj[7] = isSpamSupported.isSpammer(userId);

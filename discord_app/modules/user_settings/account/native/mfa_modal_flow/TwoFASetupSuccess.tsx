@@ -5,7 +5,7 @@ import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/13953_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/13967_registerAsset.js";
 import { Button } from "../../../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../../design/void/native.tsx";

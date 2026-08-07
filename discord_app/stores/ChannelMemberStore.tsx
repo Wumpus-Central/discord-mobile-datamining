@@ -50,7 +50,7 @@ function getMemberListId(arg0) {
       str = obj2.v3(sorted.join(",")).toString();
       const str2 = obj2.v3(sorted.join(","));
     }
-    obj = importAll(3917);
+    obj = importAll(3934);
   } else {
     memberListId = channel.memberListId;
   }
@@ -93,7 +93,7 @@ prototype["updateOwnerId"] = function updateOwnerId() {
   if (null == guild) {
     return false;
   } else {
-    const guildVisualOwnerId = importAll(3917).getGuildVisualOwnerId(guild);
+    const guildVisualOwnerId = importAll(3934).getGuildVisualOwnerId(guild);
     let flag = self.ownerId !== guildVisualOwnerId;
     if (flag) {
       self.ownerId = guildVisualOwnerId;

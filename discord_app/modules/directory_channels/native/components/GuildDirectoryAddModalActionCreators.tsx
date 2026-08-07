@@ -6,7 +6,7 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/direct
 
 export default {
   open(closure_0) {
-    ModalActionCreators.pushLazy(asyncRequireImpl(11599, dependencyMap.paths), closure_0, GUILD_DIRECTORY_ADD_MODAL_KEY);
+    ModalActionCreators.pushLazy(asyncRequireImpl(11614, dependencyMap.paths), closure_0, GUILD_DIRECTORY_ADD_MODAL_KEY);
   },
   close() {
     ModalActionCreators.popWithKey(GUILD_DIRECTORY_ADD_MODAL_KEY);

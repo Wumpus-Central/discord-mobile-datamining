@@ -79,8 +79,8 @@ export default function VoiceUserNameItem(arg0) {
     nick = member.nick;
   }
   if (nick == null) {
-    nick = tmp2(4123).getName(user);
-    const tmp2Result = tmp2(4123);
+    nick = tmp2(4140).getName(user);
+    const tmp2Result = tmp2(4140);
   }
   const items1 = [nick, ];
   if (isGuest) {
@@ -88,7 +88,7 @@ export default function VoiceUserNameItem(arg0) {
     const intl = tmp5(1236).intl;
     const items2 = ["\u00A0", intl.string(tmp5(1236).t["pFO/Ph"])];
     obj2[3] = items2;
-    isGuest = tmp18(tmp5(4281).Text, obj2);
+    isGuest = tmp18(tmp5(4298).Text, obj2);
   }
   items1[1] = isGuest;
   obj[5] = items1;
@@ -103,7 +103,7 @@ export default function VoiceUserNameItem(arg0) {
     obj3[1] = tmp.tag;
     const obj4 = { userId: null };
     obj4[0] = user.id;
-    obj3[2] = callback2(tmp2(15164), obj4);
+    obj3[2] = callback2(tmp2(15180), obj4);
     tmp12 = callback2(tmp19, obj3);
   }
   items3[1] = tmp12;

@@ -11,7 +11,7 @@ let obj = {};
 obj.showModal = function showModal(code) {
   let obj = ModalActionCreators;
   obj = { code };
-  obj.pushLazy(asyncRequireImpl(11110, dependencyMap.paths), obj, GUILD_TEMPLATE_MODAL_KEY);
+  obj.pushLazy(asyncRequireImpl(11125, dependencyMap.paths), obj, GUILD_TEMPLATE_MODAL_KEY);
   obj = { type: "GUILD_TEMPLATE_MODAL_SHOW", code };
   dispatcher.dispatch(obj);
   const obj3 = dispatcher;

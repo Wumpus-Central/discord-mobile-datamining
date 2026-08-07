@@ -49,22 +49,22 @@ export const ShopCategory = function ShopCategory(category) {
   let ref;
   let collectiblesAnalyticsContext;
   ({ index, isDarkTheme } = category);
-  analyticsLocations = analyticsLocations(5649)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5668)().analyticsLocations;
   const tmp3 = createCacheKey();
   let obj = category(1480);
   dependencyMap = obj.useNavigation();
   unpublishedAt = category.unpublishedAt;
-  let obj1 = category(14232);
+  let obj1 = category(14246);
   obj = { products: category.products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive };
   filteredAndSortedProducts = obj1.useFilteredAndSortedProducts(obj);
   const mobileBannerUrl = category.mobileBannerUrl;
-  let obj3 = category(14745);
+  let obj3 = category(14761);
   const collectiblesShopDeepLinkProps = obj3.useCollectiblesShopDeepLinkProps({ products: filteredAndSortedProducts });
   ({ productIndex, initialProductSkuId } = collectiblesShopDeepLinkProps);
   initialVariantIndex = collectiblesShopDeepLinkProps.initialVariantIndex;
   let obj4 = unpublishedAt;
   ref = unpublishedAt.useRef(null);
-  let obj5 = category(7666);
+  let obj5 = category(7685);
   let items = [category.storeListingId];
   const recyclingState = obj5.useRecyclingState(null, items, () => {
     const current = ref.current;
@@ -72,14 +72,14 @@ export const ShopCategory = function ShopCategory(category) {
       current.scrollToOffset({ offset: 0, animated: false });
     }
   });
-  let obj6 = category(14747);
+  let obj6 = category(14763);
   let tmp9 = null != productIndex;
   if (tmp9) {
     tmp9 = productIndex > 0;
   }
-  obj = { shouldScroll: tmp9, initialScrollIndex: productIndex, flashListRef: ref, afterMs: tmp4(14747).INITIAL_SCROLL_DELAY_MS, resetKey: category.storeListingId };
+  obj = { shouldScroll: tmp9, initialScrollIndex: productIndex, flashListRef: ref, afterMs: tmp4(14763).INITIAL_SCROLL_DELAY_MS, resetKey: category.storeListingId };
   const scrollToInitialIndexOnce = obj6.useScrollToInitialIndexOnce(obj);
-  collectiblesAnalyticsContext = category(9265).useCollectiblesAnalyticsContext();
+  collectiblesAnalyticsContext = category(9282).useCollectiblesAnalyticsContext();
   const items1 = [initialProductSkuId, initialVariantIndex, filteredAndSortedProducts, analyticsLocations, collectiblesAnalyticsContext];
   const effect = obj4.useEffect(() => {
     let found = null;
@@ -144,25 +144,25 @@ export const ShopCategory = function ShopCategory(category) {
     obj7[0] = mobileBannerUrl;
     obj6[0] = obj7;
     obj6[2] = tmp3.imageBackground;
-    tmp14Result = tmp14(tmp(5251), obj6);
+    tmp14Result = tmp14(tmp(5267), obj6);
   }
   const items4 = [tmp14Result, ];
-  const tmp4Result = category(9265);
-  items4[1] = ref(filteredAndSortedProducts, { style: tmp3.viewAllIcon, children: ref(category(5699).ChevronSmallRightIcon, { size: "sm", color: "white" }) });
+  const tmp4Result = category(9282);
+  items4[1] = ref(filteredAndSortedProducts, { style: tmp3.viewAllIcon, children: ref(category(5718).ChevronSmallRightIcon, { size: "sm", color: "white" }) });
   obj3[8] = items4;
-  const items5 = [collectiblesAnalyticsContext(category(4827).PressableOpacity, obj3, category.storeListingId), ];
+  const items5 = [collectiblesAnalyticsContext(category(4844).PressableOpacity, obj3, category.storeListingId), ];
   const obj9 = { ref, horizontal: true, accessibilityLabel: null, accessibilityRole: "list", data: null, renderItem: null, drawDistance: 150, decelerationRate: "fast", snapToInterval: null, showsHorizontalScrollIndicator: false, ListHeaderComponent: null, ListFooterComponent: null, ItemSeparatorComponent: null, initialScrollIndex: null };
   const intl3 = tmp4(1236).intl;
   obj9[2] = intl3.formatToPlainString(category(1236).t.FNtLb3, { category: category.name });
   obj9[4] = filteredAndSortedProducts;
   obj9[5] = callback;
-  obj9[8] = category(9262).COLLECTIBLES_SHOP_CARD_WIDTH + 12;
+  obj9[8] = category(9279).COLLECTIBLES_SHOP_CARD_WIDTH + 12;
   obj9[10] = HeaderAndFooterSpacing;
   obj9[11] = HeaderAndFooterSpacing;
   obj9[12] = Spacing;
   obj9[13] = productIndex;
-  items5[1] = ref(category(7666).FlashList, obj9);
+  items5[1] = ref(category(7685).FlashList, obj9);
   obj2[1] = items5;
   obj1[1] = collectiblesAnalyticsContext(filteredAndSortedProducts, obj2);
-  return ref(category(9265).CollectiblesAnalyticsProvider, obj1);
+  return ref(category(9282).CollectiblesAnalyticsProvider, obj1);
 };

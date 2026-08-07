@@ -147,12 +147,12 @@ function showNotification(uri) {
             }
             outer1_0 = tmp7;
             outer1_1 = outer1_7.BUG_REPORTER;
-            dependencyMap = outer1_0(9685).getNotificationDuration(outer1_1);
-            const obj5 = outer1_0(9685);
+            dependencyMap = outer1_0(9701).getNotificationDuration(outer1_1);
+            const obj5 = outer1_0(9701);
             const obj3 = { type: null, duration: null, key: null, image: null, imageUri: null, onDismiss: null, inAppNotificationId: null };
             obj3[0] = outer1_1;
             obj3[1] = dependencyMap;
-            const obj6 = outer1_1(9687);
+            const obj6 = outer1_1(9703);
             obj3[2] = outer1_0(514).v4();
             obj3[3] = outer1_0;
             let uri;

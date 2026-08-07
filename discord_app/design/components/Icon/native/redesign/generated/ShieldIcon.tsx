@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ShieldIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/10149_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/10165_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

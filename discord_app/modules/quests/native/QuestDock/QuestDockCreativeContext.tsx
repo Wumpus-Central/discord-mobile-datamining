@@ -7,10 +7,10 @@ const require = arg1;
 let context = importAllResult.createContext(null);
 const result = require("AdCreativeType").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockCreativeContext.tsx");
 
-export const getDeliveredQuest = function getDeliveredQuest(mobileQuestDock) {
+export const getDeliveredQuest = function getDeliveredQuest(type) {
   let quest = null;
-  if (mobileQuestDock.type === AdCreativeType.AdCreativeType.QUEST) {
-    quest = mobileQuestDock.quest;
+  if (type.type === AdCreativeType.AdCreativeType.QUEST) {
+    quest = type.quest;
   }
   return quest;
 };

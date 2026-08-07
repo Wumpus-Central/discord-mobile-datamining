@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/LanguageIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/14520_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/14536_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

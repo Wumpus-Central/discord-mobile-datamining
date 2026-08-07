@@ -7,7 +7,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/08151_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08168_registerAsset.js";
 import { preload } from "../../../components_native/common/FastImage.tsx";
 import { TableRowInner } from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import { TableRowTrailingText } from "../../../design/components/TableRow/native/TableRowTrailingText.native.tsx";
@@ -82,8 +82,8 @@ const obj9 = {
       nick = stateFromStores;
     }
     if (nick == null) {
-      nick = guildId(4123).getName(user);
-      const obj3 = guildId(4123);
+      nick = guildId(4140).getName(user);
+      const obj3 = guildId(4140);
     }
     obj[3] = closure_9(AutocompleteLabel, { text: nick });
     obj = { status, user, size: null, guildId: null, autoStatusCutout: true };
@@ -92,8 +92,8 @@ const obj9 = {
     obj[4] = closure_9(user(1297).Avatar, obj);
     const items1 = [, ];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
-    obj[5] = closure_9(guildId(9053), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
-    return closure_9(user(7890).FormRow, obj);
+    obj[5] = closure_9(guildId(9070), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
+    return closure_9(user(7907).FormRow, obj);
   },
   Global(arg0) {
     let badge;
@@ -254,7 +254,7 @@ const obj9 = {
     if (obj.isNullOrEmpty(tmp4)) {
       obj = { size: "sm", style: null };
       obj[1] = tmp.gameIcon;
-      let tmp6Result = tmp6(tmp5(7870).UnknownGameIcon, obj);
+      let tmp6Result = tmp6(tmp5(7887).UnknownGameIcon, obj);
       let tmp8 = tmp6;
     } else {
       obj = { style: null, source: null };

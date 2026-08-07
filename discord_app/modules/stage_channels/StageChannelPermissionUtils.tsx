@@ -27,7 +27,7 @@ export const createModeratorOverwrite = function createModeratorOverwrite(id, ME
     deny = tmp.deny;
   }
   if (deny == null) {
-    deny = tmp2(3917).NONE;
+    deny = tmp2(3934).NONE;
   }
   obj[2] = importAll(506).remove(deny, Permissions.MODERATE_STAGE_CHANNEL_PERMISSIONS);
   const obj2 = importAll(506);
@@ -36,7 +36,7 @@ export const createModeratorOverwrite = function createModeratorOverwrite(id, ME
     allow = tmp.allow;
   }
   if (allow == null) {
-    allow = tmp2(3917).NONE;
+    allow = tmp2(3934).NONE;
   }
   obj[3] = importAll(506).combine(Permissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, allow);
   return obj;
@@ -48,7 +48,7 @@ export const createOrUpdateModeratorOverwrite = function createOrUpdateModerator
     deny = deny.deny;
   }
   if (deny == null) {
-    deny = tmp(3917).NONE;
+    deny = tmp(3934).NONE;
   }
   obj[2] = importAll(506).remove(deny, Permissions.MODERATE_STAGE_CHANNEL_PERMISSIONS);
   const obj2 = importAll(506);
@@ -57,7 +57,7 @@ export const createOrUpdateModeratorOverwrite = function createOrUpdateModerator
     allow = deny.allow;
   }
   if (allow == null) {
-    allow = tmp(3917).NONE;
+    allow = tmp(3934).NONE;
   }
   obj[3] = importAll(506).combine(Permissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, allow);
   return obj;
@@ -73,7 +73,7 @@ export const removeModeratorOverwrite = function removeModeratorOverwrite(id, ME
     deny = tmp.deny;
   }
   if (deny == null) {
-    deny = importAll(3917).NONE;
+    deny = importAll(3934).NONE;
   }
   obj[2] = deny;
   let allow;
@@ -81,7 +81,7 @@ export const removeModeratorOverwrite = function removeModeratorOverwrite(id, ME
     allow = tmp.allow;
   }
   if (allow == null) {
-    allow = importAll(3917).NONE;
+    allow = importAll(3934).NONE;
   }
   obj[3] = importAll(506).remove(allow, Permissions.MODERATE_STAGE_CHANNEL_PERMISSIONS);
   return obj;
@@ -90,9 +90,9 @@ export const isEmptyOverwrite = function isEmptyOverwrite(c2) {
   let allow;
   let deny;
   ({ allow, deny } = c2);
-  let equalsResult = importAll(506).equals(allow, importAll(3917).NONE);
+  let equalsResult = importAll(506).equals(allow, importAll(3934).NONE);
   if (equalsResult) {
-    equalsResult = tmp(506).equals(deny, tmp(3917).NONE);
+    equalsResult = tmp(506).equals(deny, tmp(3934).NONE);
     const tmpResult = tmp(506);
   }
   return equalsResult;

@@ -1,13 +1,10 @@
 // discord_app/modules/frames/panel/native/FramePanelController.tsx
-import "noop";
+import noop from "noop";
 import addApplication from "addApplication";
 import map from "map";
 import { asLaunched } from "FrameLayoutModes";
 import { ActivityPanelModes } from "ActivityPanelModes";
 import { jsx } from "jsxProd";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { BaseActivityPanelController } from "../../../activities/panel/native/ActivityPanelController.tsx";
-import { _launchFrameOnNative } from "../../FramesActionCreators.native.tsx";
 import { context } from "FramePanelStateContext.tsx";
 
 const require = arg1;
@@ -16,46 +13,55 @@ const result = require("map").fileFinishedImporting("modules/frames/panel/native
 export default function FramePanelController(children) {
   let connectedActivityAppId;
   let currentApp;
-  let hasConnectedActivity;
   let mode;
   let orientationLockStateForApp;
-  let obj = initialize;
+  let mainFrameId;
+  let obj = mainFrameId(589);
   const items = [map, addApplication];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const tmp = callback(mainFrame.getMainFrame());
-    let activityPanelMode;
+    let mode;
     if (tmp != null) {
-      activityPanelMode = tmp.data.activityPanelMode;
+      mode = tmp.data.activityPanelMode;
     }
-    if (activityPanelMode == null) {
-      activityPanelMode = constants.DISCONNECTED;
+    if (mode == null) {
+      mode = constants.DISCONNECTED;
     }
-    let applicationId;
+    let connectedActivityAppId;
     if (tmp != null) {
-      applicationId = tmp.applicationId;
+      connectedActivityAppId = tmp.applicationId;
     }
-    const obj = { mode: activityPanelMode, hasConnectedActivity: null != tmp, connectedActivityAppId: applicationId, currentApp: null, orientationLockStateForApp: null };
-    let application;
-    if (null != applicationId) {
-      application = application.getApplication(applicationId);
+    let currentApp;
+    if (null != connectedActivityAppId) {
+      currentApp = application.getApplication(connectedActivityAppId);
     }
-    obj[3] = application;
-    let orientationLock;
+    let orientationLockStateForApp;
     if (tmp != null) {
-      orientationLock = tmp.data.orientationLock;
+      orientationLockStateForApp = tmp.data.orientationLock;
     }
-    obj[4] = orientationLock;
-    return obj;
+    let mainFrameId;
+    if (tmp != null) {
+      mainFrameId = tmp.id;
+    }
+    return { mainFrameId, mode, connectedActivityAppId, currentApp, orientationLockStateForApp };
   }, []);
-  ({ mode, hasConnectedActivity, connectedActivityAppId, currentApp, orientationLockStateForApp } = stateFromStoresObject);
+  mainFrameId = stateFromStoresObject.mainFrameId;
+  const items1 = [mainFrameId];
+  ({ mode, connectedActivityAppId, currentApp, orientationLockStateForApp } = stateFromStoresObject);
+  const callback = React.useCallback((PIP) => {
+    if (null != mainFrameId) {
+      outer1_1(outer1_2[7]).updateFramePanelMode(tmp, PIP);
+      const obj = outer1_1(outer1_2[7]);
+    }
+  }, items1);
   obj = { context: null, orientationLockStateForApp: null, mode: null, hasConnectedActivity: null, connectedActivityAppId: null, currentApp: null, updateActivityPanelMode: null, children: null };
   obj[0] = context;
   obj[1] = orientationLockStateForApp;
   obj[2] = mode;
-  obj[3] = hasConnectedActivity;
+  obj[3] = null != mainFrameId;
   obj[4] = connectedActivityAppId;
   obj[5] = currentApp;
-  obj[6] = _launchFrameOnNative.updateFramePanelMode;
+  obj[6] = callback;
   obj[7] = children.children;
-  return jsx(BaseActivityPanelController.BaseActivityPanelController, { context: null, orientationLockStateForApp: null, mode: null, hasConnectedActivity: null, connectedActivityAppId: null, currentApp: null, updateActivityPanelMode: null, children: null });
+  return jsx(mainFrameId(15998).BaseActivityPanelController, { context: null, orientationLockStateForApp: null, mode: null, hasConnectedActivity: null, connectedActivityAppId: null, currentApp: null, updateActivityPanelMode: null, children: null });
 };

@@ -3,7 +3,7 @@ import "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import VisualEffectViewThemed from "../../visual_effect_view/native/VisualEffectViewThemed.tsx";
-import importDefaultResult from "module_4145";
+import importDefaultResult from "module_4162";
 import { set } from "../../../utils/PlatformUtils.tsx";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 import { UserProfileBanner } from "UserProfileBanner.tsx";
@@ -35,7 +35,7 @@ export default function UserProfileOverscrollBanner(arg0) {
     const obj1 = { animatedProps: null, style: null };
     obj1[0] = blurAnimatedProps;
     obj1[1] = StyleSheet.absoluteFillObject;
-    tmp3Result = tmp3(module_8697, obj1);
+    tmp3Result = tmp3(module_8714, obj1);
   }
   items1[1] = tmp3Result;
   obj[1] = items1;

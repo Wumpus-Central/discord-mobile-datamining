@@ -1,17 +1,15 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftDuration.tsx
-import noop from "noop";
+import "noop";
 import { View } from "get ActivityIndicator";
 import GuildFeatures from "GuildFeatures";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { useInitialValue } from "../../../../hooks/useInitialValue.tsx";
-import { apexExperiment } from "../../gifting/experiments/NitroGiftPriceCopyExperiment.tsx";
 
 let SubscriptionIntervalTypes;
-let c5;
+let c4;
+let closure_6;
 let error;
-let metroImportAll;
 const require = arg1;
 function PremiumGiftDurationButton(arg0) {
   let accessibilityRole;
@@ -20,23 +18,23 @@ function PremiumGiftDurationButton(arg0) {
   let selected;
   ({ selected, planInterval } = arg0);
   let setPlanInterval;
-  let obj = planInterval(9529);
+  let obj = planInterval(9546);
   const nativeGiftContext = obj.useNativeGiftContext();
   setPlanInterval = nativeGiftContext.setPlanInterval;
   const tmp4 = createCacheKey();
   if (selected) {
-    let RowButton = tmp(5354).TableRow;
+    let RowButton = tmp(5373).TableRow;
   } else {
-    RowButton = tmp(7893).RowButton;
+    RowButton = tmp(7910).RowButton;
   }
   let combined = null;
   if (planInterval === SubscriptionIntervalTypes.YEAR) {
     const _HermesInternal = HermesInternal;
-    combined = "" + closure_5 + "%";
+    combined = "" + closure_4 + "%";
   }
   const tmp5 = SubscriptionIntervalTypes;
-  const tmp9 = setPlanInterval(9961)(nativeGiftContext.premiumType, planInterval);
-  const radioA11yNative = planInterval(4002).useRadioA11yNative({ selected });
+  const tmp9 = setPlanInterval(9977)(nativeGiftContext.premiumType, planInterval);
+  const radioA11yNative = planInterval(4019).useRadioA11yNative({ selected });
   const items = [tmp4.container, ];
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   if (selected) {
@@ -52,7 +50,7 @@ function PremiumGiftDurationButton(arg0) {
     const intl = tmp(1236).intl;
     stringResult = intl.string(tmp(1236).t.DRgqMo);
   }
-  const items1 = [closure_7(planInterval(4281).Text, { variant: "text-md/semibold", children: stringResult }), ];
+  const items1 = [closure_6(planInterval(4298).Text, { variant: "text-md/semibold", children: stringResult }), ];
   let tmp11Result = null != combined;
   if (tmp11Result) {
     const obj1 = { style: null, children: null };
@@ -62,17 +60,17 @@ function PremiumGiftDurationButton(arg0) {
     const obj3 = { discount: null };
     obj3[0] = combined;
     obj2[2] = intl3.formatToPlainString(tmp(1236).t.IAybsG, obj3).toUpperCase();
-    obj1[1] = tmp11(tmp(4281).Text, obj2);
+    obj1[1] = tmp11(tmp(4298).Text, obj2);
     tmp11Result = tmp11(tmp12, obj1);
     const str3 = intl3.formatToPlainString(tmp(1236).t.IAybsG, obj3);
   }
-  const tmp13 = closure_8;
-  const tmpResult = planInterval(4002);
+  const tmp13 = closure_7;
+  const tmpResult = planInterval(4019);
   items1[1] = tmp11Result;
   obj[1] = items1;
-  obj[1] = closure_7(RowButton, {
-    label: closure_8(View, obj),
-    trailing: closure_7(planInterval(4281).Text, { variant: "text-md/semibold", children: tmp9 }),
+  obj[1] = closure_6(RowButton, {
+    label: closure_7(View, obj),
+    trailing: closure_6(planInterval(4298).Text, { variant: "text-md/semibold", children: tmp9 }),
     onPress() {
       setPlanInterval(planInterval);
     },
@@ -82,10 +80,10 @@ function PremiumGiftDurationButton(arg0) {
     start: true,
     end: true
   });
-  return closure_7(View, obj);
+  return closure_6(View, obj);
 }
-({ PREMIUM_YEARLY_DISCOUNT_PERCENT: c5, SubscriptionIntervalTypes } = GuildFeatures);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ PREMIUM_YEARLY_DISCOUNT_PERCENT: c4, SubscriptionIntervalTypes } = GuildFeatures);
+({ jsx: closure_6, jsxs: error } = jsxProd);
 let items = [, ];
 ({ YEAR: arr[0], MONTH: arr[1] } = SubscriptionIntervalTypes);
 createCacheKey = { container: null, containerSelected: null, labelContainer: null, labelPromo: null };
@@ -101,32 +99,20 @@ let obj2 = { marginStart: require("Themes").space.PX_8, backgroundColor: require
 obj3[0] = { marginHorizontal: require("Themes").space.PX_16 };
 createCacheKey = { marginTop: require("Themes").space.PX_24 };
 obj3[1] = createCacheKey;
-let closure_12 = createCacheKey.createStyles(obj3);
+let closure_11 = createCacheKey.createStyles(obj3);
 const obj4 = { marginHorizontal: require("Themes").space.PX_16 };
 const result = require("GuildFeatures").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftDuration.tsx");
 
 export default function PremiumGiftDuration() {
   const tmp = callback3();
-  let obj = planInterval(9529);
+  let obj = planInterval(9546);
   planInterval = obj.useNativeGiftContext().planInterval;
-  const tmp2 = useInitialValue(apexExperiment.useConfig({ location: "PremiumGiftDuration" }).monthlyDefaultSelected);
-  importDefault = tmp2;
-  let items = [tmp2];
-  const memo = React.useMemo(() => {
-    if (closure_1) {
-      const items = [];
-      HermesBuiltin.arraySpread(tmp, 0);
-      let reversed = items.reverse();
-    } else {
-      reversed = tmp;
-    }
-    return reversed;
-  }, items);
   obj = { style: tmp.durationContainer, children: null };
   obj = { style: tmp.durationTitle, variant: "text-sm/semibold", children: null };
   const intl = planInterval(1236).intl;
   obj[2] = intl.string(planInterval(1236).t["8XT6Nf"]);
-  const items1 = [callback(planInterval(4281).Text, obj), memo.map((planInterval) => outer1_7(outer1_11, { selected: planInterval === planInterval, planInterval }, arg1))];
-  obj[1] = items1;
+  const items = [callback(planInterval(4298).Text, obj), ];
+  items[1] = items.map((planInterval) => outer1_6(outer1_10, { selected: planInterval === planInterval, planInterval }, arg1));
+  obj[1] = items;
   return callback2(View, obj);
 };

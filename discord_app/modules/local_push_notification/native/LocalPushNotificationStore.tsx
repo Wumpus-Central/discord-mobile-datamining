@@ -5,7 +5,7 @@ import LocalNotificationTypes from "LocalNotificationTypes";
 import { VerificationLevels } from "ME";
 import { Store } from "initialize";
 import set from "LocalNotificationTypes";
-import { t } from "../../../../_runtime/03866_t.js";
+import { t } from "../../../../_runtime/03883_t.js";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { NativeModules } from "../../../lib/pushnotification/PushNotification.tsx";
 
@@ -42,9 +42,9 @@ const localPushNotificationStore = new LocalPushNotificationStore(require("dispa
             set.add(userInfo);
           }
         }
-        const result = callback(10695).cancelLocalNotifications(userInfo);
-        const obj = callback(10695);
-        const result1 = callback(10695).cancelLocalNotifications(userInfo);
+        const result = callback(10707).cancelLocalNotifications(userInfo);
+        const obj = callback(10707);
+        const result1 = callback(10707).cancelLocalNotifications(userInfo);
         set.delete(userInfo);
       });
     });
@@ -76,8 +76,8 @@ const localPushNotificationStore = new LocalPushNotificationStore(require("dispa
               obj[2] = guild.name;
               const intl = getSystemLocale.intl;
               obj[3] = intl.string(getSystemLocale.t["hrDBa+"]);
-              const result = tmp15(10695).scheduleLocalNotification(obj);
-              const tmp15Result = tmp15(10695);
+              const result = tmp15(10707).scheduleLocalNotification(obj);
+              const tmp15Result = tmp15(10707);
             }
             tmp15 = importDefault;
           }
