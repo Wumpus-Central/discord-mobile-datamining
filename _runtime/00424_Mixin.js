@@ -8,7 +8,7 @@ import { BoundingDimensions } from "00427_BoundingDimensions.js";
 
 let touchableHandleBlur;
 let touchableHandleFocus;
-const f18428 = (arg0) => {
+const f18503 = (arg0) => {
 
 };
 const NOT_RESPONDER = "NOT_RESPONDER";
@@ -163,7 +163,7 @@ let obj2 = {
         const tmp6 = touchableGetHitSlopResult.left || 0;
       }
       nativeEvent = nativeEvent.nativeEvent;
-      if (typeof f18428 !== "function") {
+      if (typeof f18503 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       ({ touches, changedTouches } = nativeEvent);
@@ -338,7 +338,7 @@ let obj2 = {
     let changedTouches;
     let touches;
     nativeEvent = nativeEvent.nativeEvent;
-    if (typeof f18428 !== "function") {
+    if (typeof f18503 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     ({ touches, changedTouches } = nativeEvent);

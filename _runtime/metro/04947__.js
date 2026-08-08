@@ -2,115 +2,95 @@
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = {
-  read(buffer, sum) {
-    let obj = module(4946);
-    const shortAt = obj.getShortAt(buffer, sum);
-    let tmp6;
-    if (15 <= shortAt) {
-      let tmp3Result = tmp3(4946);
-      const byteAt = tmp3Result.getByteAt(buffer, sum + 14);
+  read(dataView, sum) {
+    let obj = _module(4948);
+    const shortAt = obj.getShortAt(dataView, sum);
+    let tmp4;
+    if (8 <= shortAt) {
+      let tmpResult = tmp(4948);
+      const byteAt = tmpResult.getByteAt(dataView, sum + 7);
       obj = { value: null, description: null };
       obj[0] = byteAt;
-      const _HermesInternal = HermesInternal;
-      obj[1] = "" + byteAt + "px";
-      tmp6 = obj;
+      obj[1] = "" + byteAt;
+      tmp4 = obj;
     }
-    let tmp9;
-    if (16 <= shortAt) {
-      tmp3Result = tmp3(4946);
-      const byteAt1 = tmp3Result.getByteAt(buffer, sum + 15);
+    let tmp6;
+    if (3 <= shortAt) {
+      tmpResult = tmp(4948);
+      const byteAt1 = tmpResult.getByteAt(dataView, sum + 2);
       obj = { value: null, description: null };
       obj[0] = byteAt1;
-      const _HermesInternal2 = HermesInternal;
-      obj[1] = "" + byteAt1 + "px";
-      tmp9 = obj;
+      obj[1] = "" + byteAt1;
+      tmp6 = obj;
     }
-    let tmp12;
-    if (9 <= shortAt) {
-      const byteAt2 = tmp3(4946).getByteAt(buffer, sum + 7);
-      const tmp3Result1 = tmp3(4946);
-      const byteAt3 = tmp3(4946).getByteAt(buffer, sum + 7 + 1);
-      const obj1 = { value: null, description: null };
-      obj1[0] = 256 * byteAt2 + byteAt3;
-      obj1[1] = `${tmp13}.${tmp14}`;
-      tmp12 = obj1;
-      const tmp3Result2 = tmp3(4946);
+    const obj1 = { "Bits Per Sample": tmp6, "Image Height": null, "Image Width": null, "Color Components": null, Subsampling: null };
+    let tmp8;
+    if (5 <= shortAt) {
+      const shortAt1 = tmp(4948).getShortAt(dataView, sum + 3);
+      const obj2 = { value: null, description: null };
+      obj2[0] = shortAt1;
+      const _HermesInternal = HermesInternal;
+      obj2[1] = "" + shortAt1 + "px";
+      tmp8 = obj2;
+      const tmpResult1 = tmp(4948);
     }
-    const obj2 = { "JFIF Version": tmp12, "Resolution Unit": null, XResolution: null, YResolution: null, "JFIF Thumbnail Width": null, "JFIF Thumbnail Height": null };
-    let tmp15;
-    if (10 <= shortAt) {
-      const byteAt4 = tmp3(4946).getByteAt(buffer, sum + 9);
+    obj1[1] = tmp8;
+    let tmp11;
+    if (7 <= shortAt) {
+      const shortAt2 = tmp(4948).getShortAt(dataView, sum + 5);
       const obj3 = { value: null, description: null };
-      obj3[0] = byteAt4;
-      let str6 = "None";
-      if (0 !== byteAt4) {
-        let str7 = "inches";
-        if (1 !== byteAt4) {
-          let str8 = "Unknown";
-          if (2 === byteAt4) {
-            str8 = "cm";
+      obj3[0] = shortAt2;
+      const _HermesInternal2 = HermesInternal;
+      obj3[1] = "" + shortAt2 + "px";
+      tmp11 = obj3;
+      const tmpResult2 = tmp(4948);
+    }
+    obj1[2] = tmp11;
+    obj1[3] = tmp4;
+    let tmp14 = tmp4;
+    if (tmp4) {
+      const value = tmp4.value;
+      let tmp15;
+      if (8 + 3 * value <= shortAt) {
+        const items = [];
+        for (let num6 = 0; num6 < value; num6 = num6 + 1) {
+          sum = sum + 8 + 3 * num6;
+          let tmp17 = _module;
+          let tmp18 = dependencyMap;
+          let obj11 = _module(4948);
+          let items1 = [obj11.getByteAt(dataView, sum), , ];
+          let obj12 = _module(4948);
+          items1[1] = obj12.getByteAt(dataView, sum + 1);
+          let obj13 = _module(4948);
+          items1[2] = obj13.getByteAt(dataView, sum + 2);
+          let arr = items.push(items1);
+        }
+        const obj4 = { value: null, description: null };
+        obj4[0] = items;
+        let str6 = "";
+        if (items.length > 1) {
+          _module = { 1: "Y", 2: "Cb", 3: "Cr", 4: "I", 5: "Q" };
+          const mapped = items.map((arg0) => table[arg0[0]]);
+          let str7 = "";
+          const joined = mapped.join("");
+          if (0 !== items.length) {
+            str7 = "";
+            if (undefined !== items[0][1]) {
+              const obj5 = { 17: "4:4:4 (1 1)", 18: "4:4:0 (1 2)", 20: "4:4:1 (1 4)", 33: "4:2:2 (2 1)", 34: "4:2:0 (2 2)", 36: "4:2:1 (2 4)", 65: "4:1:1 (4 1)", 66: "4:1:0 (4 2)" };
+              str7 = "";
+              if (undefined !== obj5[items[0][1]]) {
+                str7 = obj5[items[0][1]];
+              }
+            }
           }
-          str7 = str8;
+          str6 = joined + str7;
         }
-        str6 = str7;
+        obj4[1] = str6;
+        tmp15 = obj4;
       }
-      obj3[1] = str6;
-      tmp15 = obj3;
-      const tmp3Result3 = tmp3(4946);
+      tmp14 = tmp15;
     }
-    obj2[1] = tmp15;
-    let tmp17;
-    if (12 <= shortAt) {
-      const shortAt1 = tmp3(4946).getShortAt(buffer, sum + 10);
-      const obj4 = { value: null, description: null };
-      obj4[0] = shortAt1;
-      obj4[1] = "" + shortAt1;
-      tmp17 = obj4;
-      const tmp3Result4 = tmp3(4946);
-    }
-    obj2[2] = tmp17;
-    let tmp19;
-    if (14 <= shortAt) {
-      const shortAt2 = tmp3(4946).getShortAt(buffer, sum + 12);
-      const obj5 = { value: null, description: null };
-      obj5[0] = shortAt2;
-      obj5[1] = "" + shortAt2;
-      tmp19 = obj5;
-      const tmp3Result5 = tmp3(4946);
-    }
-    obj2[3] = tmp19;
-    obj2[4] = tmp6;
-    obj2[5] = tmp9;
-    if (undefined !== tmp6) {
-      if (undefined !== tmp9) {
-        const result = 3 * tmp6.value * tmp9.value;
-        let tmp22;
-        if (0 !== result) {
-          if (16 + result <= shortAt) {
-            buffer = buffer.buffer;
-            const obj6 = { value: null, description: "<24-bit RGB pixel data>" };
-            obj6[0] = buffer.slice(sum + 16, sum + 16 + result);
-            tmp22 = obj6;
-          }
-        }
-        if (tmp22) {
-          obj2["JFIF Thumbnail"] = tmp22;
-        }
-      }
-    }
-    const keys = Object.keys();
-    if (keys !== undefined) {
-      while (keys[16] !== undefined) {
-        let tmp25 = tmp24;
-        if (undefined !== obj2[tmp24]) {
-          continue;
-        } else {
-          delete tmp[tmp2];
-          continue;
-        }
-        continue;
-      }
-    }
-    return obj2;
+    obj1[4] = tmp14;
+    return obj1;
   }
 };

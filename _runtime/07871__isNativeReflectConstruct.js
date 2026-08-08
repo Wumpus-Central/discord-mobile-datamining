@@ -5,8 +5,9 @@ import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
 import "noop";
 import { jsx } from "jsxProd";
+import { __INTERNAL_VIEW_CONFIG } from "metro/07872___INTERNAL_VIEW_CONFIG.js";
 
-const Symbol = importDefault;
+const FeBlend = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,12 +27,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Symbol {
+class FeBlend {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, Symbol);
+    tmp = _isNativeReflectConstruct(this, FeBlend);
     tmp2 = __esModule;
-    obj = __esModule(Symbol);
+    obj = __esModule(FeBlend);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -46,31 +47,33 @@ class Symbol {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(Symbol, require("_isNativeReflectConstruct"));
-const items = [
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      const props = this.props;
-      let obj = { name: props.id };
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const merged = Object.assign(obj);
-      const merged1 = Object.assign(self(7788)(props));
-      obj.children = props.children;
-      return jsx(self(7872), {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      });
-    }
+require("_inherits")(FeBlend, require("_isNativeReflectConstruct"));
+let obj = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const tmp = __INTERNAL_VIEW_CONFIG;
+    const merged = Object.assign(self(7873).extractFilter(this.props));
+    const obj2 = self(7873);
+    const merged1 = Object.assign(self(7873).extractIn(this.props));
+    const obj3 = self(7873);
+    const merged2 = Object.assign(self(7873).extractFeBlend(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
-];
-const importDefaultResultResult = importDefaultResult(Symbol, items);
-importDefaultResultResult.displayName = "Symbol";
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeBlend, items);
+importDefaultResultResult.displayName = "FeBlend";
+obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.mode = "normal";
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

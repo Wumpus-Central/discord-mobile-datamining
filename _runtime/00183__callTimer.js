@@ -291,9 +291,9 @@ let obj = {
       arr2.splice(index1, 1);
     }
   },
-  cancelAnimationFrame(current) {
-    if (null != current) {
-      const index = closure_7.indexOf(current);
+  cancelAnimationFrame(closure_0) {
+    if (null != closure_0) {
+      const index = closure_7.indexOf(closure_0);
       if (-1 !== index) {
         tmp8[index] = null;
         closure_5[index] = null;
@@ -306,7 +306,7 @@ let obj = {
         if (tmp) {
           00038__(Timing, "NativeTiming is available");
           const tmp4 = 00038__;
-          Timing.deleteTimer(current);
+          Timing.deleteTimer(closure_0);
           const obj = Timing;
         }
       }

@@ -1,9 +1,0 @@
-// _runtime/metro/07787___INTERNAL_VIEW_CONFIG.js
-import setRuntimeConfigProvider from "setRuntimeConfigProvider";
-
-let obj = { uiViewClassName: "RNSVGSvgViewAndroid", validAttributes: null };
-obj = { bbWidth: true, bbHeight: true, minX: true, minY: true, vbWidth: true, vbHeight: true, align: true, meetOrSlice: true, color: require("result").colorAttribute, pointerEvents: true, hasTVPreferredFocus: true, borderBottomColor: require("result").colorAttribute, nextFocusDown: true, borderRightColor: require("result").colorAttribute, nextFocusRight: true, borderLeftColor: require("result").colorAttribute, borderColor: require("result").colorAttribute, removeClippedSubviews: true, nextFocusForward: true, nextFocusUp: true, accessible: true, borderStartColor: require("result").colorAttribute, borderEndColor: require("result").colorAttribute, focusable: true, nativeBackgroundAndroid: true, nativeForegroundAndroid: true, backfaceVisibility: true, borderStyle: true, needsOffscreenAlphaCompositing: true, hitSlop: true, borderTopColor: require("result").colorAttribute, nextFocusLeft: true, borderBlockColor: require("result").colorAttribute, borderBlockEndColor: require("result").colorAttribute, borderBlockStartColor: require("result").colorAttribute, borderRadius: true, borderTopLeftRadius: true, borderTopRightRadius: true, borderBottomRightRadius: true, borderBottomLeftRadius: true, borderTopStartRadius: true, borderTopEndRadius: true, borderBottomStartRadius: true, borderBottomEndRadius: true, borderEndEndRadius: true, borderEndStartRadius: true, borderStartEndRadius: true, borderStartStartRadius: true };
-obj[1] = obj;
-
-export default setRuntimeConfigProvider.get("RNSVGSvgViewAndroid", () => obj);
-export const __INTERNAL_VIEW_CONFIG = obj;

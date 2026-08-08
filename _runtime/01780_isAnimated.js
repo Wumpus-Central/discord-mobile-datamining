@@ -62,8 +62,8 @@ arg5.buildWorkletsHash = function buildWorkletsHash(items1) {
   const values = Object.values(items1);
   return values.reduce((arg0, __workletHash) => arg0 + __workletHash.__workletHash.toString(), "");
 };
-arg5.buildDependencies = function buildDependencies(arr, handler) {
-  let values = Object.values(handler);
+arg5.buildDependencies = function buildDependencies(arr, memoizedGestureCallbacks) {
+  let values = Object.values(memoizedGestureCallbacks);
   const found = values.filter((arg0) => undefined !== arg0);
   let tmp2 = found;
   if (arr) {

@@ -1,16 +1,9 @@
 // _runtime/metro/07847___INTERNAL_VIEW_CONFIG.js
-import resolveAssetSource from "resolveAssetSource";
-import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
-let obj = { uiViewClassName: "RNSVGImage", directEventTypes: { topLoad: { registrationName: "onLoad" }, topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
-obj = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: require("result").colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, x: true, y: true, width: true, height: true, src: null, align: true, meetOrSlice: true };
-if ("default" in resolveAssetSource) {
-  resolveAssetSource = resolveAssetSource.default;
-}
-obj[31] = { process: resolveAssetSource };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onLoad: true, onSvgLayout: true }));
-obj[2] = obj;
+let obj = { uiViewClassName: "RNSVGSvgViewAndroid", validAttributes: null };
+obj = { bbWidth: true, bbHeight: true, minX: true, minY: true, vbWidth: true, vbHeight: true, align: true, meetOrSlice: true, color: require("result").colorAttribute, pointerEvents: true, hasTVPreferredFocus: true, borderBottomColor: require("result").colorAttribute, nextFocusDown: true, borderRightColor: require("result").colorAttribute, nextFocusRight: true, borderLeftColor: require("result").colorAttribute, borderColor: require("result").colorAttribute, removeClippedSubviews: true, nextFocusForward: true, nextFocusUp: true, accessible: true, borderStartColor: require("result").colorAttribute, borderEndColor: require("result").colorAttribute, focusable: true, nativeBackgroundAndroid: true, nativeForegroundAndroid: true, backfaceVisibility: true, borderStyle: true, needsOffscreenAlphaCompositing: true, hitSlop: true, borderTopColor: require("result").colorAttribute, nextFocusLeft: true, borderBlockColor: require("result").colorAttribute, borderBlockEndColor: require("result").colorAttribute, borderBlockStartColor: require("result").colorAttribute, borderRadius: true, borderTopLeftRadius: true, borderTopRightRadius: true, borderBottomRightRadius: true, borderBottomLeftRadius: true, borderTopStartRadius: true, borderTopEndRadius: true, borderBottomStartRadius: true, borderBottomEndRadius: true, borderEndEndRadius: true, borderEndStartRadius: true, borderStartEndRadius: true, borderStartStartRadius: true };
+obj[1] = obj;
 
-export default setRuntimeConfigProvider.get("RNSVGImage", () => obj);
+export default setRuntimeConfigProvider.get("RNSVGSvgViewAndroid", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;

@@ -2362,7 +2362,7 @@ function Form(onSubmitError) {
   let defaultName;
   let emailLabel;
   let emailPlaceholder;
-  let f102365;
+  let f102682;
   let messagePlaceholder;
   let namePlaceholder;
   let onFormClose;
@@ -2375,7 +2375,7 @@ function Form(onSubmitError) {
   let tmp12;
   let tmp5;
   let tmp7;
-  ({ options, defaultEmail, defaultName, onSubmit: f102365, onSubmitSuccess } = onSubmitError);
+  ({ options, defaultEmail, defaultName, onSubmit: f102682, onSubmitSuccess } = onSubmitError);
   onSubmitError = onSubmitError.onSubmitError;
   let screenshotInput = onSubmitError.screenshotInput;
   c4 = undefined;
@@ -2417,13 +2417,13 @@ function Form(onSubmitError) {
   c46 = 1;
   const tmp6 = onSubmitError(fn(D, null), 2);
   [tmp12, c14] = tmp3(tmp(tmp2, null), 2);
-  f102365 = (arg0) => {
+  f102682 = (arg0) => {
     _undefined2(arg0);
     callback(false);
   };
   c46 = 8;
   let items = [emailLabel, isEmailRequired, isNameRequired, messageLabel, nameLabel];
-  f102365 = (name) => {
+  f102682 = (name) => {
     let tmp2 = isEmailRequired;
     let tmp3 = isNameRequired;
     if (isNameRequired) {
@@ -2453,9 +2453,9 @@ function Form(onSubmitError) {
   c46 = 8;
   const tmp13 = fn2;
   const tmp3Result = tmp3(tmp(tmp2, null), 2);
-  closure_15 = fn2(() => f68038, items);
-  f102365 = undefined;
-  f102365 = screenshotInput((arg0) => {
+  closure_15 = fn2(() => f68205, items);
+  f102682 = undefined;
+  f102682 = screenshotInput((arg0) => {
     let closure_0 = arg0;
     let c5 = 0;
     let c6 = 0;
@@ -2472,7 +2472,7 @@ function Form(onSubmitError) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -2514,7 +2514,7 @@ function Form(onSubmitError) {
                 c4 = 0;
                 outer1_10(false);
                 c6 = 3;
-                return { value: "T", done: null };
+                return { value: "HermesInternal", done: null };
               }
               tmp88 = formData;
             }
@@ -2564,7 +2564,7 @@ function Form(onSubmitError) {
                 c4 = 0;
                 outer1_10(false);
                 c6 = 3;
-                return { value: "T", done: null };
+                return { value: "HermesInternal", done: null };
               }
             }
           } else {
@@ -2572,7 +2572,7 @@ function Form(onSubmitError) {
               c4 = 1;
               c4 = closure_3;
               if (messageLabel) {
-                const debug = f102365(onSubmitSuccess[2]).debug;
+                const debug = f102682(onSubmitSuccess[2]).debug;
                 debug.error(c4);
               }
               outer1_11(c4);
@@ -2613,9 +2613,9 @@ function Form(onSubmitError) {
     screenshotInput = first;
   }
   const items1 = [screenshotInput, onSubmitSuccess, onSubmitError];
-  f102365 = function(arg0) {
+  f102682 = function(arg0) {
     const self = this;
-    const apply = f102365.apply;
+    const apply = f102682.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -2624,7 +2624,7 @@ function Form(onSubmitError) {
     return applyArgumentsResult;
   };
   c46 = 8;
-  let obj = { class: "form", onSubmit: tmp13(() => f68038, items1) };
+  let obj = { class: "form", onSubmit: tmp13(() => f68205, items1) };
   let tmp15Result = null;
   if (input) {
     tmp15Result = null;
@@ -2671,7 +2671,7 @@ function Form(onSubmitError) {
     obj6[1] = defaultEmail;
     tmp15Result4 = tmp15("input", obj6);
   }
-  tmp14 = fn2(() => f68038, []);
+  tmp14 = fn2(() => f68205, []);
   const tmp15Result5 = y$1(LabelText, { label: messageLabel, isRequiredLabel, isRequired: true });
   let tmp15Result9 = null;
   if (input) {
@@ -2706,7 +2706,7 @@ function LabelText(arg0) {
 }
 function Dialog(onFormSubmitted) {
   onFormSubmitted = onFormSubmitted.onFormSubmitted;
-  let f68038 = onFormSubmitted;
+  let f68205 = onFormSubmitted;
   const merged = Object.assign(onFormSubmitted, Object.create(null));
   let first;
   let closure_3;
@@ -2716,17 +2716,17 @@ function Dialog(onFormSubmitted) {
   first = tmp3[0];
   closure_3 = tmp3[1];
   const items = [first];
-  f68038 = () => {
+  f68205 = () => {
     if (first) {
       const _clearTimeout = clearTimeout;
       clearTimeout(tmp);
       callback(null);
     }
-    f68038();
+    f68205();
   };
   c46 = 8;
   [][0] = onFormSubmitted;
-  f68038 = (arg0, arg1) => {
+  f68205 = (arg0, arg1) => {
     merged.onSubmitSuccess(arg0, arg1);
     callback(setTimeout(() => {
       callback();
@@ -3121,7 +3121,7 @@ const fn3 = function p(__getInternalProperties) {
 const fn4 = function x(arg0, arg1) {
   let closure_0 = arg0;
   let c46 = 8;
-  return fn2(() => f68038, arg1);
+  return fn2(() => f68205, arg1);
 };
 obj = Object.create(null);
 obj[0] = fn4;
@@ -3570,7 +3570,7 @@ export const buildFeedbackIntegration = (arg0) => {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -3838,7 +3838,7 @@ export const buildFeedbackIntegration = (arg0) => {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -4224,7 +4224,7 @@ export const buildFeedbackIntegration = (arg0) => {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -4621,7 +4621,7 @@ export () => ({
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "T", done: null };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -4683,7 +4683,7 @@ export () => ({
                 } else {
                   v0();
                   c3 = 3;
-                  return { value: "T", done: null };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp17) {
                 c3 = tmp;
@@ -5007,7 +5007,7 @@ export () => ({
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -5054,7 +5054,7 @@ export () => ({
                 return obj3;
               } else {
                 c4 = 3;
-                return { value: "T", done: null };
+                return { value: "HermesInternal", done: null };
               }
             }
           } else if (arg0 === 1) {

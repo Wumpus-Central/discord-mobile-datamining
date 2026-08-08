@@ -77,10 +77,10 @@ let fn = function n(userConfig, callback) {
       callback: table,
       velocity: null,
       initialVelocity: 0,
-      current: "dispatch",
+      current: "sa",
       lastTimestamp: null,
-      startTimestamp: "ex",
-      reduceMotion: "is"
+      startTimestamp: "buton",
+      reduceMotion: "P"
     };
     let num = obj.velocity;
     if (num == null) {

@@ -42,7 +42,7 @@ let closure_8 = { __init: fn };
 let closure_9 = ["Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Uint16Array", "Int32Array", "Uint32Array", "Float32Array", "Float64Array", "BigInt64Array", "BigUint64Array", "DataView"];
 const tmp3 = isJest ? (function makeShareableCloneRecursiveWeb(arg0) {
   return arg0;
-}) : (function makeShareableCloneRecursiveNative(fn, flag) {
+}) : (function makeShareableCloneRecursiveNative(onUpdate, flag) {
   if (flag === undefined) {
     flag = false;
   }
@@ -52,46 +52,46 @@ const tmp3 = isJest ? (function makeShareableCloneRecursiveWeb(arg0) {
   }
   if (num >= 30) {
     if (30 === num) {
-      let c7 = fn;
-    } else if (fn === c7) {
+      let c7 = onUpdate;
+    } else if (onUpdate === c7) {
       let reanimatedError = new name(stack[3]).ReanimatedError("Trying to convert a cyclic object to a shareable. This is not supported.");
       throw reanimatedError;
     }
   } else {
     c7 = undefined;
   }
-  if (typeof fn === "object") {
-    if (null !== fn) {
+  if (typeof onUpdate === "object") {
+    if (null !== onUpdate) {
       let shareableMappingCache13 = name;
       let result = stack;
       const shareableMappingCache14 = name(stack[2]).shareableMappingCache;
-      let value = shareableMappingCache14.get(fn);
+      let value = shareableMappingCache14.get(onUpdate);
       if (value === name(stack[2]).shareableMappingFlag) {
-        value = fn;
+        value = onUpdate;
       }
       if (undefined !== value) {
         return value;
       } else {
         const _Array = Array;
-        if (Array.isArray(fn)) {
+        if (Array.isArray(onUpdate)) {
           let buffer = flag;
           name = num;
-          const mapped = fn.map((arg0) => outer1_10(arg0, buffer, name + 1));
+          const mapped = onUpdate.map((arg0) => outer1_10(arg0, buffer, name + 1));
           const WorkletsModule4 = shareableMappingCache13(result[5]).WorkletsModule;
-          let shareableClone = WorkletsModule4.makeShareableClone(mapped, flag, fn);
+          let shareableClone = WorkletsModule4.makeShareableClone(mapped, flag, onUpdate);
           const shareableMappingCache12 = shareableMappingCache13(result[2]).shareableMappingCache;
-          num = shareableMappingCache12.set(fn, shareableClone);
+          num = shareableMappingCache12.set(onUpdate, shareableClone);
           shareableMappingCache13 = shareableMappingCache13(result[2]).shareableMappingCache;
           result = shareableMappingCache13.set(shareableClone);
           let shareableClone1 = shareableClone;
         } else {
-          if (typeof fn === "function") {
+          if (typeof onUpdate === "function") {
             let result1 = shareableMappingCache13(result[4]);
-            if (!result1.isWorkletFunction(fn)) {
+            if (!result1.isWorkletFunction(onUpdate)) {
               let WorkletsModule = shareableMappingCache13(result[5]).WorkletsModule;
-              shareableClone1 = WorkletsModule.makeShareableClone(fn, flag, fn);
+              shareableClone1 = WorkletsModule.makeShareableClone(onUpdate, flag, onUpdate);
               let shareableMappingCache = shareableMappingCache13(result[2]).shareableMappingCache;
-              const result2 = shareableMappingCache.set(fn, shareableClone1);
+              const result2 = shareableMappingCache.set(onUpdate, shareableClone1);
               let shareableMappingCache2 = shareableMappingCache13(result[2]).shareableMappingCache;
               const result3 = shareableMappingCache2.set(shareableClone1);
             }
@@ -99,20 +99,20 @@ const tmp3 = isJest ? (function makeShareableCloneRecursiveWeb(arg0) {
           if (typeof isHostObject !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          if (REANIMATED_MAGIC_KEY in fn) {
+          if (REANIMATED_MAGIC_KEY in onUpdate) {
             const WorkletsModule3 = shareableMappingCache13(result[5]).WorkletsModule;
-            const shareableClone2 = WorkletsModule3.makeShareableClone(fn, flag, fn);
+            const shareableClone2 = WorkletsModule3.makeShareableClone(onUpdate, flag, onUpdate);
             const shareableMappingCache10 = shareableMappingCache13(result[2]).shareableMappingCache;
-            const result4 = shareableMappingCache10.set(fn, shareableClone2);
+            const result4 = shareableMappingCache10.set(onUpdate, shareableClone2);
             const shareableMappingCache11 = shareableMappingCache13(result[2]).shareableMappingCache;
             const result5 = shareableMappingCache11.set(shareableClone2);
             let tmp17 = shareableClone2;
           } else {
             const _Object = Object;
             const _Object2 = Object;
-            if (Object.getPrototypeOf(fn) === Object.prototype) {
-              if (fn.__workletContextObjectFactory) {
-                const __workletContextObjectFactory = fn.__workletContextObjectFactory;
+            if (Object.getPrototypeOf(onUpdate) === Object.prototype) {
+              if (onUpdate.__workletContextObjectFactory) {
+                const __workletContextObjectFactory = onUpdate.__workletContextObjectFactory;
                 buffer = __workletContextObjectFactory;
                 let obj = { __init: null };
                 const fn4 = function c() {
@@ -126,15 +126,15 @@ const tmp3 = isJest ? (function makeShareableCloneRecursiveWeb(arg0) {
                 obj[0] = fn4;
                 const tmp37 = tmp3(obj);
                 const shareableMappingCache9 = shareableMappingCache13(result[2]).shareableMappingCache;
-                const result6 = shareableMappingCache9.set(fn, tmp37);
+                const result6 = shareableMappingCache9.set(onUpdate, tmp37);
                 tmp17 = tmp37;
               }
             }
             const _Object3 = Object;
             const _Object4 = Object;
-            if (Object.getPrototypeOf(fn) === Object.prototype) {
+            if (Object.getPrototypeOf(onUpdate) === Object.prototype) {
               const result7 = shareableMappingCache13(result[4]);
-              if (result7.isWorkletFunction(fn)) {
+              if (result7.isWorkletFunction(onUpdate)) {
                 tmp17 = (function cloneWorklet(__stackDetails, flag, arg2) {
                   let tmp10;
                   let tmp8;
@@ -168,18 +168,18 @@ const tmp3 = isJest ? (function makeShareableCloneRecursiveWeb(arg0) {
                   const result1 = shareableMappingCache2.set(shareableClone);
                   callback3(0);
                   return shareableClone;
-                })(fn, flag, num);
+                })(onUpdate, flag, num);
               }
             }
             const _Object5 = Object;
             const _Object6 = Object;
-            if (Object.getPrototypeOf(fn) !== Object.prototype) {
-              if (typeof fn !== "function") {
+            if (Object.getPrototypeOf(onUpdate) !== Object.prototype) {
+              if (typeof onUpdate !== "function") {
                 const _RegExp = RegExp;
-                if (fn instanceof RegExp) {
-                  const source = fn.source;
+                if (onUpdate instanceof RegExp) {
+                  const source = onUpdate.source;
                   buffer = source;
-                  const flags = fn.flags;
+                  const flags = onUpdate.flags;
                   name = flags;
                   const obj1 = { __init: null };
                   const fn3 = function s() {
@@ -195,16 +195,16 @@ const tmp3 = isJest ? (function makeShareableCloneRecursiveWeb(arg0) {
                   obj1[0] = fn3;
                   const tmp33 = tmp3(obj1);
                   const shareableMappingCache8 = shareableMappingCache13(result[2]).shareableMappingCache;
-                  const result8 = shareableMappingCache8.set(fn, tmp33);
+                  const result8 = shareableMappingCache8.set(onUpdate, tmp33);
                   tmp17 = tmp33;
                 } else {
                   const _Error = Error;
-                  if (fn instanceof Error) {
-                    const name2 = fn.name;
+                  if (onUpdate instanceof Error) {
+                    const name2 = onUpdate.name;
                     buffer = name2;
-                    const message = fn.message;
+                    const message = onUpdate.message;
                     name = message;
-                    stack = fn.stack;
+                    stack = onUpdate.stack;
                     const obj3 = { __init: null };
                     const fn2 = function u() {
                       const error = new Error();
@@ -223,25 +223,25 @@ const tmp3 = isJest ? (function makeShareableCloneRecursiveWeb(arg0) {
                     obj3[0] = fn2;
                     const tmp29 = tmp3(obj3);
                     const shareableMappingCache7 = shareableMappingCache13(result[2]).shareableMappingCache;
-                    const result9 = shareableMappingCache7.set(fn, tmp29);
+                    const result9 = shareableMappingCache7.set(onUpdate, tmp29);
                     tmp17 = tmp29;
                   } else {
                     const _ArrayBuffer = ArrayBuffer;
-                    if (fn instanceof ArrayBuffer) {
+                    if (onUpdate instanceof ArrayBuffer) {
                       const WorkletsModule2 = shareableMappingCache13(result[5]).WorkletsModule;
-                      const shareableClone3 = WorkletsModule2.makeShareableClone(fn, flag, fn);
+                      const shareableClone3 = WorkletsModule2.makeShareableClone(onUpdate, flag, onUpdate);
                       const shareableMappingCache5 = shareableMappingCache13(result[2]).shareableMappingCache;
-                      const result10 = shareableMappingCache5.set(fn, shareableClone3);
+                      const result10 = shareableMappingCache5.set(onUpdate, shareableClone3);
                       const shareableMappingCache6 = shareableMappingCache13(result[2]).shareableMappingCache;
                       const result11 = shareableMappingCache6.set(shareableClone3);
                       tmp17 = shareableClone3;
                     } else {
                       const _ArrayBuffer2 = ArrayBuffer;
-                      if (ArrayBuffer.isView(fn)) {
-                        buffer = fn.buffer;
-                        name = fn.constructor.name;
+                      if (ArrayBuffer.isView(onUpdate)) {
+                        buffer = onUpdate.buffer;
+                        name = onUpdate.constructor.name;
                         const obj5 = { __init: null };
-                        fn = function s() {
+                        const fn = function s() {
                           if (outer1_9.includes(name)) {
                             let tmp10 = buffer[tmp];
                             if (undefined === tmp10) {
@@ -268,23 +268,23 @@ const tmp3 = isJest ? (function makeShareableCloneRecursiveWeb(arg0) {
                         obj5[0] = fn;
                         const tmp22 = tmp3(obj5);
                         const shareableMappingCache4 = shareableMappingCache13(result[2]).shareableMappingCache;
-                        const result12 = shareableMappingCache4.set(fn, tmp22);
+                        const result12 = shareableMappingCache4.set(onUpdate, tmp22);
                         tmp17 = tmp22;
                       } else {
                         tmp17 = tmp3(closure_8);
                         const shareableMappingCache3 = shareableMappingCache13(result[2]).shareableMappingCache;
-                        const result13 = shareableMappingCache3.set(fn, tmp17);
+                        const result13 = shareableMappingCache3.set(onUpdate, tmp17);
                       }
                     }
                   }
                 }
               }
             }
-            tmp17 = (function clonePlainJSObject(fn, flag, arg2) {
+            tmp17 = (function clonePlainJSObject(onUpdate, flag, arg2) {
               let tmp6;
               let tmp8;
               const obj = {};
-              const entries = Object.entries(fn);
+              const entries = Object.entries(onUpdate);
               while (tmp2 !== undefined) {
                 let tmp4 = callback;
                 let tmp5 = callback(tmp3, 2);
@@ -303,21 +303,21 @@ const tmp3 = isJest ? (function makeShareableCloneRecursiveWeb(arg0) {
                 continue;
               }
               const WorkletsModule = name(stack[5]).WorkletsModule;
-              const shareableClone = WorkletsModule.makeShareableClone(obj, flag, fn);
+              const shareableClone = WorkletsModule.makeShareableClone(obj, flag, onUpdate);
               const shareableMappingCache = name(stack[2]).shareableMappingCache;
-              const result = shareableMappingCache.set(fn, shareableClone);
+              const result = shareableMappingCache.set(onUpdate, shareableClone);
               const shareableMappingCache2 = name(stack[2]).shareableMappingCache;
               const result1 = shareableMappingCache2.set(shareableClone);
               callback3(0);
               return shareableClone;
-            })(fn, flag, num);
+            })(onUpdate, flag, num);
           }
         }
       }
     }
   }
   const WorkletsModule5 = name(stack[5]).WorkletsModule;
-  return WorkletsModule5.makeShareableClone(fn, flag);
+  return WorkletsModule5.makeShareableClone(onUpdate, flag);
 });
 let c10 = tmp3;
 let closure_11 = { code: "function pnpm_shareablesTs3(){const{workletContextObjectFactory}=this.__closure;return workletContextObjectFactory();}" };

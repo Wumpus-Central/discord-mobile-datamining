@@ -100,7 +100,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  return { value: "T", done: null };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -123,7 +123,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                       c4 = undefined;
                       c3 = 1;
                       c4 = 1;
-                      return { value: "PX_8", done: "Array" };
+                      return { value: "ct", done: "Array" };
                     }
                   } else if (arg0 === 1) {
                     c4 = 3;
@@ -154,7 +154,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                       obj2[1] = str(methodPath[2]).getSpanOperation(outer1_1);
                       obj2[2] = methodPath;
                       obj5.startSpanManual(obj2, (() => {
-                        let closure_0 = outer2_2(/* F119508 */ function() { ... });
+                        let closure_0 = outer2_2(/* F119851 */ function() { ... });
                         return () => { ... };
                       })());
                       let obj7 = str(methodPath[2]);
@@ -167,7 +167,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                     obj3[1] = obj3.getSpanOperation(outer1_1);
                     obj3[2] = methodPath;
                     obj1.startSpan(obj3, (() => {
-                      let closure_0 = outer2_2(/* F119510 */ function() { ... });
+                      let closure_0 = outer2_2(/* F119853 */ function() { ... });
                       return () => { ... };
                     })());
                   }
@@ -230,7 +230,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                           obj[0] = arg1;
                           return obj;
                         } else {
-                          return { value: "T", done: null };
+                          return { value: "HermesInternal", done: null };
                         }
                       } else {
                         try {
@@ -253,7 +253,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                               c4 = undefined;
                               c3 = 1;
                               c4 = 1;
-                              return { value: "PX_8", done: "Array" };
+                              return { value: "ct", done: "Array" };
                             }
                           } else if (arg0 === 1) {
                             c4 = 3;
@@ -342,7 +342,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                             let closure_0 = [...arguments];
                             let c3 = 0;
                             let c4 = 0;
-                            const iter = (/* F114402 */ function*() { ... })();
+                            const iter = (/* F114736 */ function*() { ... })();
                             iter.next();
                             return iter;
                           });

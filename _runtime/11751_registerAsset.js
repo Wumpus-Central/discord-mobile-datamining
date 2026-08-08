@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/community", width: 56, height: 65, scales: [1, 2, 3], hash: "260617da8a2932d3af6bc2abf2ba2716", name: "rejected-alert", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "fd49fb07fb819ce61e9240fd55fe1f4f", name: "ic_mute_channel_24px", type: "png" });

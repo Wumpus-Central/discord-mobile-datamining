@@ -1,5 +1,6 @@
 // _runtime/04034_installWorkletsSupport.js
-import { getInstalledNitro } from "04035_getInstalledNitro.js";
+import { reactNativeWorkletsCompat } from "../discord_app/modules/gesture_handlers/native/reactNativeWorkletsCompat.js";
+import { getInstalledNitro } from "04041_getInstalledNitro.js";
 let require = arg1;
 const dependencyMap = arg6;
 let closure_2 = { code: "function determine_Pnpm_installWorkletsSupportTs1(value){const{boxedNitroProxy}=this.__closure;const nitroProxy=boxedNitroProxy.unbox();return nitroProxy.isHybridObject(value);}" };
@@ -7,8 +8,8 @@ let closure_3 = { code: "function pack_Pnpm_installWorkletsSupportTs2(value){con
 let closure_4 = { code: "function unpack_Pnpm_installWorkletsSupportTs3(value){return value.unbox();}" };
 arg5.installWorkletsSupport = function installWorkletsSupport() {
   try {
-    const NitroModules = require(dependencyMap[1]).NitroModules;
-    const boxResult = NitroModules.box(require(dependencyMap[1]).NitroModules);
+    const NitroModules = getInstalledNitro.NitroModules;
+    const boxResult = NitroModules.box(getInstalledNitro.NitroModules);
     require = boxResult;
     let obj = { name: "nitro.HybridObject", determine: null, pack: null, unpack: null };
     const fn = function _(arg0) {
@@ -36,7 +37,7 @@ arg5.installWorkletsSupport = function installWorkletsSupport() {
     fn3.__workletHash = 16222078380838;
     fn3.__initData = closure_4;
     obj[3] = fn3;
-    const result = getInstalledNitro.registerCustomSerializable(obj);
+    const result = reactNativeWorkletsCompat.registerCustomSerializable(obj);
   } catch (err) {
   }
 };

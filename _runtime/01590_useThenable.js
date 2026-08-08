@@ -29,7 +29,7 @@ export const useThenable = function useThenable(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -82,7 +82,7 @@ export const useThenable = function useThenable(arg0) {
               outer2_2(items2);
             }
             c5 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp28) {
           noop = tmp28;

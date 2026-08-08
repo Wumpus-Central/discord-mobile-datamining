@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/auth", width: 1424, height: 1500, scales: [1], hash: "1241abd72512c72c105ef9e9870d04e3", name: "background-splash-mobile", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/roadblocks/images", width: 552, height: 336, scales: [1], hash: "f59c66d6f542b08761b44d6d5de547c8", name: "client_themes_upsell", type: "png" });

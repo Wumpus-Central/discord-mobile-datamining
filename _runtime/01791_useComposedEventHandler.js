@@ -2,11 +2,11 @@
 const require = arg1;
 const dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_useComposedEventHandlerTs1(event){const{workletsMap}=this.__closure;if(workletsMap[event.eventName]){workletsMap[event.eventName].forEach(function(worklet){return worklet(event);});}}" };
-arg5.useComposedEventHandler = function useComposedEventHandler(arr) {
+arg5.useComposedEventHandler = function useComposedEventHandler(substr) {
   let obj = {};
   const set = new Set();
   obj = {};
-  const found = arr.filter((arg0) => null !== arg0);
+  const found = substr.filter((arg0) => null !== arg0);
   let item = found.forEach((workletEventHandler) => {
     workletEventHandler = workletEventHandler.workletEventHandler;
     if (workletEventHandler instanceof obj(set[0]).WorkletEventHandler) {

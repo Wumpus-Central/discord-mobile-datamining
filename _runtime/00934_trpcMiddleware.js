@@ -26,7 +26,7 @@ export const trpcMiddleware = function trpcMiddleware() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -118,7 +118,7 @@ export const trpcMiddleware = function trpcMiddleware() {
               let c5 = 0;
               let c6 = 0;
               let c4 = 0;
-              return (/* F119959 */ function*() { ... })();
+              return (/* F120302 */ function*() { ... })();
             });
             return obj.startSpanManual(obj, function(arg0) {
               const self = this;

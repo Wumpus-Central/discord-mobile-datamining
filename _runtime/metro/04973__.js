@@ -1,81 +1,170 @@
 // _runtime/metro/04973__.js
-import { getDataView } from "../04929_getDataView.js";
-import { readTag } from "../04949_readTag.js";
-import { importDefaultResult1 } from "../04950_importDefaultResult1.js";
+import { getDataView } from "../04931_getDataView.js";
 const require = arg1;
-const module = arg2;
 const dependencyMap = arg6;
-let obj = { K3_III: 78420 };
-obj = { CAMERA_ORIENTATION: 1, ROLL_ANGLE: 3, PITCH_ANGLE: 5 };
-arg5.default = {
-  read(byteLength) {
-    let obj = module(4934);
-    const byteOrder = obj.getByteOrder(byteLength, arg1 + arg2 + 8);
-    const sum = arg1 + arg2;
-    let obj1 = readTag;
-    const ifd = obj1.readIfd(byteLength, importDefaultResult1.IFD_TYPE_PENTAX, sum, sum + 10, byteOrder, arg3, true);
-    let LevelInfo = ifd.PentaxModelID;
-    if (LevelInfo) {
-      LevelInfo = ifd.PentaxModelID.value === obj.K3_III;
-    }
-    if (LevelInfo) {
-      LevelInfo = ifd.LevelInfo;
-    }
-    let tmp10 = ifd;
-    if (LevelInfo) {
-      const sum1 = sum + ifd.LevelInfo.__offset;
-      obj = {};
-      if (sum1 + 7 <= byteLength.byteLength) {
-        const int8 = byteLength.getInt8(sum1 + obj.CAMERA_ORIENTATION);
-        obj = { value: null, description: null };
-        obj[0] = int8;
-        let str6 = "Horizontal (normal)";
-        if (0 !== int8) {
-          let str = "Rotate 270 CW";
-          if (1 !== int8) {
-            let str2 = "Rotate 180";
-            if (2 !== int8) {
-              let str3 = "Rotate 90 CW";
-              if (3 !== int8) {
-                let str4 = "Upwards";
-                if (4 !== int8) {
-                  let str5 = "Unknown";
-                  if (5 === int8) {
-                    str5 = "Downwards";
-                  }
-                  str4 = str5;
-                }
-                str3 = str4;
-              }
-              str2 = str3;
-            }
-            str = str2;
-          }
-          str6 = str;
-        }
-        obj[1] = str6;
-        obj.CameraOrientation = obj;
-        const sum2 = sum1 + tmp17.ROLL_ANGLE;
-        const int16 = byteLength.getInt16(sum2, byteOrder === tmp3(4934).LITTLE_ENDIAN);
-        obj1 = { value: null, description: null };
-        obj1[0] = int16;
-        obj1[1] = "" + -0.5 * int16;
-        obj.RollAngle = obj1;
-        const sum3 = sum1 + tmp17.PITCH_ANGLE;
-        const int161 = byteLength.getInt16(sum3, byteOrder === tmp3(4934).LITTLE_ENDIAN);
-        const obj2 = { value: null, description: null };
-        obj2[0] = int161;
-        obj2[1] = "" + -0.5 * int161;
-        obj.PitchAngle = obj2;
-      }
-      const tmp7Result = getDataView;
-      delete tmp[tmp2];
-      tmp10 = getDataView.objectAssign({}, ifd, obj);
-      const objectAssignResult = getDataView.objectAssign({}, ifd, obj);
-    }
-    return tmp10;
+obj = { 4: null, 8: null, 12: null, 16: null, 20: obj, 24: null, 36: null, 40: null, 48: obj, 52: null, 64: null, 80: null };
+obj = {
+  name: "Preferred CMM type",
+  value(dataView, sum) {
+    return getDataView.getStringFromDataView(dataView, sum, 4);
   },
-  PENTAX_IFD_OFFSET: 10,
-  MODEL_ID: obj,
-  LIK3III: obj
+  description(str) {
+    if (null === str) {
+      return "";
+    } else {
+      const formatted = str.toLowerCase();
+      if ("appl" === formatted) {
+        let str6 = "Apple";
+      } else if ("adbe" === formatted) {
+        str6 = "Adobe";
+      } else if ("msft" === formatted) {
+        str6 = "Microsoft";
+      } else {
+        if ("sunw" === formatted) {
+          str6 = "Sun Microsystems";
+        } else if ("sgi" !== formatted) {
+          str6 = "Taligent";
+          if ("tgnt" !== formatted) {
+            str6 = str;
+          }
+        }
+        str6 = "Silicon Graphics";
+      }
+    }
+  }
 };
+obj = {
+  name: "Profile Version",
+  value(getUint8, sum) {
+    const str = getUint8.getUint8(sum);
+    const text = `${str.toString(10)}.`;
+    const str2 = getUint8.getUint8(sum + 1) >> 4;
+    const text1 = `${str.toString(10)}.${str2.toString(10)}`;
+    return `${str.toString(10)}.${str2.toString(10)}` + "." + getUint8.getUint8(sum + 1) % 16.toString(10);
+  }
+};
+obj[12] = {
+  name: "Profile/Device class",
+  value(dataView, sum) {
+    return getDataView.getStringFromDataView(dataView, sum, 4);
+  },
+  description(arg0) {
+    return "MultiplexVisualization profile";
+  }
+};
+obj[16] = {
+  name: "Color Space",
+  value(dataView, sum) {
+    return getDataView.getStringFromDataView(dataView, sum, 4);
+  }
+};
+obj[20] = {
+  name: "Connection Space",
+  value(dataView, sum) {
+    return getDataView.getStringFromDataView(dataView, sum, 4);
+  }
+};
+obj[24] = {
+  name: "ICC Profile Date",
+  value(getUint16, sum) {
+    const uint16 = getUint16.getUint16(sum);
+    const diff = getUint16.getUint16(sum + 2) - 1;
+    const uint161 = getUint16.getUint16(sum + 4);
+    const uint162 = getUint16.getUint16(sum + 6);
+    const uint163 = getUint16.getUint16(sum + 8);
+    return new Date(Date.UTC(uint16, diff, uint161, uint162, uint163, getUint16.getUint16(sum + 10))).toISOString();
+  }
+};
+obj[36] = {
+  name: "ICC Signature",
+  value(buffer) {
+    buffer = buffer.buffer;
+    const uint8Array = new Uint8Array(buffer.slice(arg1, arg1 + 4));
+    return fromCharCode.apply(null, uint8Array);
+  }
+};
+obj[40] = {
+  name: "Primary Platform",
+  value(dataView, sum) {
+    return getDataView.getStringFromDataView(dataView, sum, 4);
+  },
+  description(str) {
+    const formatted = str.toLowerCase();
+    if ("appl" === formatted) {
+      let str5 = "Apple";
+    } else if ("adbe" === formatted) {
+      str5 = "Adobe";
+    } else if ("msft" === formatted) {
+      str5 = "Microsoft";
+    } else if ("sunw" === formatted) {
+      str5 = "Sun Microsystems";
+    } else if ("sgi" === formatted) {
+      str5 = "Silicon Graphics";
+    } else {
+      str5 = "Taligent";
+      if ("tgnt" !== formatted) {
+        str5 = str;
+      }
+    }
+    return str5;
+  }
+};
+obj[48] = {
+  name: "Device Manufacturer",
+  value(dataView, sum) {
+    return getDataView.getStringFromDataView(dataView, sum, 4);
+  },
+  description(str) {
+    const formatted = str.toLowerCase();
+    if ("appl" === formatted) {
+      let str5 = "Apple";
+    } else if ("adbe" === formatted) {
+      str5 = "Adobe";
+    } else if ("msft" === formatted) {
+      str5 = "Microsoft";
+    } else if ("sunw" === formatted) {
+      str5 = "Sun Microsystems";
+    } else if ("sgi" === formatted) {
+      str5 = "Silicon Graphics";
+    } else {
+      str5 = "Taligent";
+      if ("tgnt" !== formatted) {
+        str5 = str;
+      }
+    }
+    return str5;
+  }
+};
+obj[52] = {
+  name: "Device Model Number",
+  value(dataView, sum) {
+    return getDataView.getStringFromDataView(dataView, sum, 4);
+  }
+};
+obj[64] = {
+  name: "Rendering Intent",
+  value(getUint32, sum) {
+    return getUint32.getUint32(sum);
+  },
+  description(arg0) {
+    if (0 === arg0) {
+      return "Perceptual";
+    } else if (1 === arg0) {
+      return "Relative Colorimetric";
+    } else if (2 === arg0) {
+      return "Saturation";
+    } else if (3 === arg0) {
+      return "Absolute Colorimetric";
+    } else {
+      return arg0;
+    }
+  }
+};
+obj[80] = {
+  name: "Profile Creator",
+  value(dataView, sum) {
+    return getDataView.getStringFromDataView(dataView, sum, 4);
+  }
+};
+arg5.iccTags = { desc: { name: "ICC Description" }, cprt: { name: "ICC Copyright" }, dmdd: { name: "ICC Device Model Description" }, vued: { name: "ICC Viewing Conditions Description" }, dmnd: { name: "ICC Device Manufacturer for Display" }, tech: { name: "Technology" } };
+arg5.iccProfile = obj;

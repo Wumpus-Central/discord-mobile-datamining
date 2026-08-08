@@ -1,114 +1,89 @@
 // _runtime/metro/04977__.js
-import { getDataView } from "../04929_getDataView.js";
-import { 04936__ } from "04936__.js";
-const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = {
-  read(byteLength) {
-    let obj = {};
-    for (let num = 0; num < arg1.length; num = num + 1) {
-      let tmp = module;
-      let tmp2 = dependencyMap;
-      let obj1 = module(4946);
-      let tmp3 = require;
-      let longAt = obj1.getLongAt(byteLength, arg1[num] + 04936__.PNG_CHUNK_LENGTH_OFFSET);
-      let obj2 = getDataView;
-      let sum = arg1[num] + 04936__.PNG_CHUNK_TYPE_OFFSET;
-      let stringFromDataView = obj2.getStringFromDataView(byteLength, sum, 04936__.PNG_CHUNK_TYPE_SIZE);
-      let tmp7 = num;
-      if (stringFromDataView === 04936__.TYPE_PHYS) {
-        let tmp22 = arg1[num];
-        let tmp23 = 4 <= longAt && tmp22 + tmp3(4936).PNG_CHUNK_DATA_OFFSET + 4 <= byteLength.byteLength;
-        let tmp24;
-        if (tmp23) {
-          let tmpResult = tmp(4946);
-          let longAt1 = tmpResult.getLongAt(byteLength, tmp22 + tmp3(4936).PNG_CHUNK_DATA_OFFSET);
-          obj = { value: null, description: null };
-          obj[0] = longAt1;
-          obj[1] = "" + longAt1;
-          tmp24 = obj;
-        }
-        obj["Pixels Per Unit X"] = tmp24;
-        let tmp26 = arg1[num];
-        let tmp27 = 8 <= longAt && tmp26 + tmp3(4936).PNG_CHUNK_DATA_OFFSET + 4 + 4 <= byteLength.byteLength;
-        let tmp28;
-        if (tmp27) {
-          tmpResult = tmp(4946);
-          let longAt2 = tmpResult.getLongAt(byteLength, tmp26 + tmp3(4936).PNG_CHUNK_DATA_OFFSET + 4);
-          obj = { value: null, description: null };
-          obj[0] = longAt2;
-          obj[1] = "" + longAt2;
-          tmp28 = obj;
-        }
-        obj["Pixels Per Unit Y"] = tmp28;
-        let tmp30 = arg1[num];
-        let tmp31 = 9 <= longAt && tmp30 + tmp3(4936).PNG_CHUNK_DATA_OFFSET + 8 + 1 <= byteLength.byteLength;
-        let tmp32;
-        if (tmp31) {
-          let tmpResult1 = tmp(4946);
-          let byteAt = tmpResult1.getByteAt(byteLength, tmp30 + tmp3(4936).PNG_CHUNK_DATA_OFFSET + 8);
-          obj1 = { value: null, description: null };
-          obj1[0] = byteAt;
-          let str7 = "Unknown";
-          if (1 === byteAt) {
-            str7 = "meters";
-          }
-          obj1[1] = str7;
-          tmp32 = obj1;
-        }
-        obj["Pixel Units"] = tmp32;
-      } else if (stringFromDataView === tmp3(4936).TYPE_TIME) {
-        let tmp34 = arg1[num];
-        let tmp8 = 7 <= longAt && tmp34 + tmp3(4936).PNG_CHUNK_DATA_OFFSET + 7 <= byteLength.byteLength;
-        let tmp9;
-        if (tmp8) {
-          let tmpResult2 = tmp(4946);
-          let shortAt = tmpResult2.getShortAt(byteLength, tmp34 + tmp3(4936).PNG_CHUNK_DATA_OFFSET);
-          let tmpResult3 = tmp(4946);
-          let byteAt1 = tmpResult3.getByteAt(byteLength, tmp34 + tmp3(4936).PNG_CHUNK_DATA_OFFSET + 2);
-          let tmpResult4 = tmp(4946);
-          let byteAt2 = tmpResult4.getByteAt(byteLength, tmp34 + tmp3(4936).PNG_CHUNK_DATA_OFFSET + 3);
-          let tmpResult5 = tmp(4946);
-          let byteAt3 = tmpResult5.getByteAt(byteLength, tmp34 + tmp3(4936).PNG_CHUNK_DATA_OFFSET + 4);
-          let tmpResult6 = tmp(4946);
-          let byteAt4 = tmpResult6.getByteAt(byteLength, tmp34 + tmp3(4936).PNG_CHUNK_DATA_OFFSET + 5);
-          let tmpResult7 = tmp(4946);
-          let byteAt5 = tmpResult7.getByteAt(byteLength, tmp34 + tmp3(4936).PNG_CHUNK_DATA_OFFSET + 6);
-          obj2 = { value: null, description: null };
-          let items = [shortAt, byteAt1, byteAt2, byteAt3, byteAt4, byteAt5];
-          obj2[0] = items;
-          let repeat = "0".repeat;
-          let _HermesInternal = HermesInternal;
-          let combined = "" + "0".repeat(4 - "" + shortAt.length) + shortAt;
-          let repeat2 = "0".repeat;
-          let _HermesInternal2 = HermesInternal;
-          let repeat3 = "0".repeat;
-          let combined1 = "" + "0".repeat(2 - "" + byteAt1.length) + byteAt1;
-          let _HermesInternal3 = HermesInternal;
-          let repeat4 = "0".repeat;
-          let combined2 = "" + "0".repeat(2 - "" + byteAt2.length) + byteAt2;
-          let _HermesInternal4 = HermesInternal;
-          let repeat5 = "0".repeat;
-          let combined3 = "" + "0".repeat(2 - "" + byteAt3.length) + byteAt3;
-          let _HermesInternal5 = HermesInternal;
-          let repeat6 = "0".repeat;
-          let combined4 = "" + "0".repeat(2 - "" + byteAt4.length) + byteAt4;
-          let _HermesInternal6 = HermesInternal;
-          let _HermesInternal7 = HermesInternal;
-          let str = "";
-          let tmp21 = combined;
-          let str2 = "-";
-          let str3 = "-";
-          let str4 = " ";
-          let str5 = ":";
-          let str6 = ":";
-          obj2[1] = "" + combined + "-" + combined1 + "-" + combined2 + " " + combined3 + ":" + combined4 + ":" + "" + "0".repeat(2 - "" + byteAt5.length) + byteAt5;
-          tmp9 = obj2;
-        }
-        obj["Modify Date"] = tmp9;
-      }
+  read(byteLength, sum) {
+    let tmp;
+    if (sum + 4 <= byteLength.byteLength) {
+      let obj = module(4948);
+      const longAt = obj.getLongAt(byteLength, sum);
+      obj = { value: null, description: null };
+      obj[0] = longAt;
+      const _HermesInternal = HermesInternal;
+      obj[1] = "" + longAt + "px";
+      tmp = obj;
     }
+    obj = { "Image Width": tmp, "Image Height": null, "Bit Depth": null, "Color Type": null, Compression: null, Filter: null, Interlace: null };
+    let tmp6;
+    if (sum + 4 + 4 <= byteLength.byteLength) {
+      let obj3 = module(4948);
+      const longAt1 = obj3.getLongAt(byteLength, sum + 4);
+      const obj1 = { value: null, description: null };
+      obj1[0] = longAt1;
+      const _HermesInternal2 = HermesInternal;
+      obj1[1] = "" + longAt1 + "px";
+      tmp6 = obj1;
+    }
+    obj[1] = tmp6;
+    let tmp11;
+    if (sum + 8 + 1 <= byteLength.byteLength) {
+      let obj5 = module(4948);
+      const byteAt = obj5.getByteAt(byteLength, sum + 8);
+      const obj2 = { value: null, description: null };
+      obj2[0] = byteAt;
+      const _HermesInternal3 = HermesInternal;
+      obj2[1] = "" + byteAt;
+      tmp11 = obj2;
+    }
+    obj[2] = tmp11;
+    let tmp16;
+    if (sum + 9 + 1 <= byteLength.byteLength) {
+      const byteAt1 = module(4948).getByteAt(byteLength, sum + 9);
+      obj3 = { value: null, description: null };
+      obj3[0] = byteAt1;
+      obj3[1] = { 0: "Grayscale", 2: "RGB", 3: "Palette", 4: "Grayscale with Alpha", 6: "RGB with Alpha" }[byteAt1] || "Unknown";
+      tmp16 = obj3;
+      const obj8 = module(4948);
+    }
+    obj[3] = tmp16;
+    let tmp20;
+    if (sum + 10 + 1 <= byteLength.byteLength) {
+      const byteAt2 = module(4948).getByteAt(byteLength, sum + 10);
+      const obj4 = { value: null, description: null };
+      obj4[0] = byteAt2;
+      let str6 = "Unknown";
+      if (0 === byteAt2) {
+        str6 = "Deflate/Inflate";
+      }
+      obj4[1] = str6;
+      tmp20 = obj4;
+      const obj10 = module(4948);
+    }
+    obj[4] = tmp20;
+    let tmp24;
+    if (sum + 11 + 1 <= byteLength.byteLength) {
+      const byteAt3 = module(4948).getByteAt(byteLength, sum + 11);
+      obj5 = { value: null, description: null };
+      obj5[0] = byteAt3;
+      let str7 = "Unknown";
+      if (0 === byteAt3) {
+        str7 = "Adaptive";
+      }
+      obj5[1] = str7;
+      tmp24 = obj5;
+      const obj12 = module(4948);
+    }
+    obj[5] = tmp24;
+    let tmp28;
+    if (sum + 12 + 1 <= byteLength.byteLength) {
+      const byteAt4 = module(4948).getByteAt(byteLength, sum + 12);
+      const obj6 = { value: null, description: null };
+      obj6[0] = byteAt4;
+      obj6[1] = { 0: "Noninterlaced", 1: "Adam7 Interlace" }[byteAt4] || "Unknown";
+      tmp28 = obj6;
+      const obj14 = module(4948);
+    }
+    obj[6] = tmp28;
     return obj;
   }
 };

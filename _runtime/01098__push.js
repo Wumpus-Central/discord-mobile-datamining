@@ -126,16 +126,16 @@ function _shift(arg0) {
 function createIndexedDbStore(arg0) {
   let closure_0 = arg0;
   function getStore() {
-    if (null == f68565) {
+    if (null == f68732) {
       let str = dbName.dbName;
       if (!str) {
         str = "sentry-offline";
       }
       dbName = dbName.storeName || "queue";
       const openResult = globalThis.indexedDB.open(str);
-      f68565 = openResult;
+      f68732 = openResult;
       openResult.onupgradeneeded = () => {
-        const result = f68565.result;
+        const result = f68732.result;
         return result.createObjectStore(closure_0);
       };
       dbName = openResult;
@@ -149,13 +149,13 @@ function createIndexedDbStore(arg0) {
         closure_0.onerror = fn2;
         closure_0.onabort = fn2;
       });
-      f68565 = (arg0) => {
+      f68732 = (arg0) => {
         let closure_0 = arg0;
         return promise.then((transaction) => callback(transaction.transaction(callback, "readwrite").objectStore(callback)));
       };
       const tmp7 = dbName;
     }
-    return f68565;
+    return f68732;
   }
   let obj = { push: null, unshift: null, shift: null };
   let closure_4 = asyncGeneratorStep((arg0) => {
@@ -313,7 +313,7 @@ export const createStore = function createStore(arg0, arg1) {
   const openResult = globalThis.indexedDB.open(arg0);
   const dependencyMap = openResult;
   openResult.onupgradeneeded = () => {
-    const result = f68565.result;
+    const result = f68732.result;
     return result.createObjectStore(closure_0);
   };
   closure_0 = openResult;
@@ -358,7 +358,7 @@ export const makeBrowserOfflineTransport = function makeBrowserOfflineTransport(
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -389,7 +389,7 @@ export const makeBrowserOfflineTransport = function makeBrowserOfflineTransport(
             return obj;
           } else {
             c0 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp6) {
           c0 = tmp;

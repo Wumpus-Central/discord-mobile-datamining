@@ -1,34 +1,3 @@
 // _runtime/metro/05564__.js
-import isNewArch from "isNewArch";
-
-if (isNewArch.isNewArch()) {
-  exports.FlashList = require("FlashList").FlashList;
-  exports.FlashListRef = require("module_5626").FlashListRef;
-  exports.FlashListProps = require("module_5627").FlashListProps;
-  exports.ListRenderItem = require("module_5627").ListRenderItem;
-  exports.ListRenderItemInfo = require("module_5627").ListRenderItemInfo;
-  exports.RenderTarget = require("module_5627").RenderTarget;
-  exports.RenderTargetOptions = require("module_5627").RenderTargetOptions;
-  exports.AnimatedFlashList = require("FlashList");
-  exports.useBenchmark = require("getFormattedString").useBenchmark;
-  exports.BenchmarkParams = require("getFormattedString").BenchmarkParams;
-  exports.BenchmarkResult = require("getFormattedString").BenchmarkResult;
-  exports.useDataMultiplier = require("useDataMultiplier").useDataMultiplier;
-  exports.useFlatListBenchmark = require("runScrollBenchmark").useFlatListBenchmark;
-  exports.FlatListBenchmarkParams = require("runScrollBenchmark").FlatListBenchmarkParams;
-  exports.useLayoutState = require("useLayoutState").useLayoutState;
-  exports.useRecyclingState = require("useRecyclingState").useRecyclingState;
-  exports.useMappingHelper = require("useMappingHelper").useMappingHelper;
-  exports.JSFPSMonitor = require("JSFPSMonitor").JSFPSMonitor;
-  exports.JSFPSResult = require("JSFPSMonitor").JSFPSResult;
-  exports.autoScroll = require("Cancellable").autoScroll;
-  exports.Cancellable = require("Cancellable").Cancellable;
-  exports.ViewToken = require("module_5637");
-  exports.useFlashListContext = require("context").useFlashListContext;
-  exports.LayoutCommitObserver = require("LayoutCommitObserver").LayoutCommitObserver;
-  exports.LayoutCommitObserverProps = require("LayoutCommitObserver").LayoutCommitObserverProps;
-} else {
-  const _Error = Error;
-  const error = new Error(require("module_5566").ErrorMessages.flashListV2OnlySupportsNewArchitecture);
-  throw error;
-}
+arg5.Directions = { RIGHT: 1, LEFT: 2, UP: 4, DOWN: 8 };
+arg5.DiagonalDirections = { UP_RIGHT: 5, DOWN_RIGHT: 9, UP_LEFT: 6, DOWN_LEFT: 10 };

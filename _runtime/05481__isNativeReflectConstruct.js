@@ -1,10 +1,12 @@
 // _runtime/05481__isNativeReflectConstruct.js
-import RotationGesture from "_classCallCheck";
+import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
-import _get from "_get";
 import importDefaultResult from "_createClass";
+import importDefaultResult2 from "noop";
+import { Reanimated } from "module_5470";
 
+const Wrap = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,57 +26,54 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function changeEventCalculator(rotation, rotation2) {
-  if (undefined === rotation2) {
-    let obj = { rotationChange: null };
-    obj[0] = rotation.rotation;
-  } else {
-    obj = { rotationChange: null };
-    obj[0] = rotation.rotation - rotation2.rotation;
-  }
-  obj = {};
-  const merged = Object.assign(rotation);
-  const merged1 = Object.assign(obj);
-  return obj;
-}
-changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 11988645380499;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_rotationGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={rotationChange:current.rotation};}else{changePayload={rotationChange:current.rotation-previous.rotation};}return{...current,...changePayload};}" };
-class RotationGesture {
+class Wrap {
   constructor() {
     self = this;
-    tmp = RotationGesture(this, RotationGesture);
-    tmp2 = __esModule;
-    obj = __esModule(RotationGesture);
-    tmp3 = __esModule;
+    tmp = _isNativeReflectConstruct(this, Wrap);
+    tmp2 = _isNativeReflectConstruct;
+    obj = _isNativeReflectConstruct(Wrap);
+    tmp3 = _isNativeReflectConstruct;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.handlerName = "RotationGestureHandler";
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-require("_inherits")(RotationGesture, require("_isNativeReflectConstruct").ContinousBaseGesture);
-let items = [
+require("_inherits")(Wrap, importDefaultResult2.Component);
+const items = [
   {
-    key: "onChange",
-    value: function onChange(arg0) {
-      this.handlers.changeEventCalculator = changeEventCalculator;
-      const self = this;
-      let fn;
-      fn = callback2(callback(self.prototype), "onChange", this);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
+    key: "render",
+    value: function render() {
+      try {
+        const self = this;
+        const Children = importDefaultResult2.Children;
+        const onlyResult = Children.only(this.props.children);
+        return importDefaultResult2.cloneElement(onlyResult, { collapsable: false }, onlyResult.props.children);
+      } catch (err) {
+        const _Error = Error;
+        const error = new Error(Wrap(5432).tagMessage("GestureDetector got more than one view as a child. If you want the gesture to work on multiple views, wrap them with a common parent and attach the gesture to that view."));
+        throw error;
       }
-      const items = [arg0];
-      return fn(items);
     }
   }
 ];
+const importDefaultResultResult = importDefaultResult(Wrap, items);
+let animatedComponent;
+if (Reanimated != null) {
+  if (Reanimated.default != null) {
+    animatedComponent = _default.createAnimatedComponent(importDefaultResultResult);
+  }
+}
+if (animatedComponent == null) {
+  animatedComponent = importDefaultResultResult;
+}
 
-export const RotationGesture = importDefaultResult(RotationGesture, items);
+export const Wrap = importDefaultResultResult;
+export const AnimatedWrap = animatedComponent;

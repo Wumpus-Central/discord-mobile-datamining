@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images", width: 87, height: 61.5, scales: [2, 3], hash: "d8d9b21fdc821b420337e07a880866f5", name: "asset_role_subscription_exclusive_perks", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_settings/roles/native/images", width: 660, height: 240, scales: [2, 3], hash: "914423837bb34bd9385887217de01b93", name: "illustration-dark-large", type: "png" });

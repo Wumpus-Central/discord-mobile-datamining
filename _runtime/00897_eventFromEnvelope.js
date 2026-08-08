@@ -71,7 +71,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    return { value: "T", done: null };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -171,7 +171,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
           items[arraySpreadResult] = outer1_1;
           closure_1 = closure_1 + 1;
           yield Promise.all(items.map(() => { ... }));
-          return arr.every(/* F119505 */ function() { ... });
+          return arr.every(/* F119848 */ function() { ... });
         })();
       });
       const _flush = tmp;

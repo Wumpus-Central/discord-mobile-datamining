@@ -1,35 +1,55 @@
 // _runtime/metro/04948__.js
-import { readTag } from "../04949_readTag.js";
-import { importDefaultResult1 } from "../04950_importDefaultResult1.js";
-const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
-let c3 = "Exif IFD Pointer";
-let c4 = "GPS Info IFD Pointer";
-let c5 = "Interoperability IFD Pointer";
-arg5.default = {
-  read(getUint16, sum) {
-    const byteOrder = module(4934).getByteOrder(getUint16, sum);
-    const obj = module(4934);
-    const obj2 = readTag;
-    const ifd = obj2.readIfd(getUint16, importDefaultResult1.IFD_TYPE_0TH, sum, readTag.get0thIfdOffset(getUint16, sum, byteOrder), byteOrder, arg2);
-    let objectAssignResult = ifd;
-    if (undefined !== ifd[c3]) {
-      let tmp3Result = tmp3(4929);
-      tmp3Result = tmp3(4949);
-      objectAssignResult = tmp3Result.objectAssign(ifd, tmp3Result.readIfd(getUint16, tmp3(4950).IFD_TYPE_EXIF, sum, sum + ifd[tmp5].value, byteOrder, arg2));
+let obj = { 1: 1, 2: 1, 3: 2, 4: 4, 5: 8, 7: 1, 9: 4, 10: 8, 13: 4 };
+obj = { BYTE: 1, ASCII: 2, SHORT: 3, LONG: 4, RATIONAL: 5, UNDEFINED: 7, SLONG: 9, SRATIONAL: 10, IFD: 13 };
+obj = {
+  getAsciiValue(items) {
+    return items.map((arg0) => String.fromCharCode(arg0));
+  },
+  getByteAt(getUint8, sum) {
+    return getUint8.getUint8(sum);
+  },
+  getAsciiAt(getUint8, sum) {
+    return getUint8.getUint8(sum);
+  },
+  getShortAt(dataView, sum, byteOrder) {
+    return dataView.getUint16(sum, byteOrder === module(4936).LITTLE_ENDIAN);
+  },
+  getLongAt(dataView, sum, byteOrder) {
+    return dataView.getUint32(sum, byteOrder === module(4936).LITTLE_ENDIAN);
+  },
+  getRationalAt(getUint32, sum) {
+    const items = [getUint32.getUint32(sum, arg2 === module(4936).LITTLE_ENDIAN), ];
+    sum = sum + 4;
+    items[1] = getUint32.getUint32(sum, arg2 === module(4936).LITTLE_ENDIAN);
+    return items;
+  },
+  getUndefinedAt(getUint8, sum) {
+    return getUint8.getUint8(sum);
+  },
+  getSlongAt(getInt32, sum) {
+    return getInt32.getInt32(sum, arg2 === module(4936).LITTLE_ENDIAN);
+  },
+  getSrationalAt(getInt32, sum) {
+    const items = [getInt32.getInt32(sum, arg2 === module(4936).LITTLE_ENDIAN), ];
+    sum = sum + 4;
+    items[1] = getInt32.getInt32(sum, arg2 === module(4936).LITTLE_ENDIAN);
+    return items;
+  },
+  getIfdPointerAt(getUint32, sum) {
+    return getUint32.getUint32(sum, arg2 === module(4936).LITTLE_ENDIAN);
+  },
+  typeSizes: obj,
+  tagTypes: obj,
+  getTypeSize(LONG) {
+    if (undefined === obj[LONG]) {
+      const _Error = Error;
+      const error = new Error("No such type found.");
+      throw error;
+    } else {
+      return obj[tmp[LONG]];
     }
-    if (undefined !== objectAssignResult[c4]) {
-      const tmp3Result2 = tmp3(4949);
-      objectAssignResult = tmp3(4929).objectAssign(objectAssignResult, tmp3Result2.readIfd(getUint16, tmp3(4950).IFD_TYPE_GPS, sum, sum + objectAssignResult[tmp12].value, byteOrder, arg2));
-      const tmp3Result1 = tmp3(4929);
-    }
-    let objectAssignResult1 = objectAssignResult;
-    if (undefined !== objectAssignResult[c5]) {
-      const tmp3Result4 = tmp3(4949);
-      objectAssignResult1 = tmp3(4929).objectAssign(objectAssignResult, tmp3Result4.readIfd(getUint16, tmp3(4950).IFD_TYPE_INTEROPERABILITY, sum, sum + objectAssignResult[tmp19].value, byteOrder, arg2));
-      const tmp3Result3 = tmp3(4929);
-    }
-    return { tags: objectAssignResult1, byteOrder };
   }
 };
+arg5.default = obj;

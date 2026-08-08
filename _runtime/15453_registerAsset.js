@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "137c8d60debe14e8345280ef0c17818d", name: "LightbulbIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 46, height: 46, scales: [2, 3], hash: "812d0ec6cbf43741fa947b18063ae5e5", name: "server-error", type: "png" });

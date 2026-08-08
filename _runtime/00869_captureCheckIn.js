@@ -40,7 +40,7 @@ function _flush() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -101,7 +101,7 @@ function _close() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -361,8 +361,8 @@ export const withMonitor = function withMonitor(arg0, arg1, arg2) {
   const _require = arg0;
   let dependencyMap = arg1;
   let closure_2 = arg2;
-  function runCallback(arg0, finishCheckIn) {
-    finishCheckIn = function finishCheckIn(ok) {
+  function runCallback() {
+    function finishCheckIn(ok) {
       const obj = { monitorSlug: callback, status: ok, checkInId: callback, duration: null };
       obj[3] = callback(838).timestampInSeconds() - dependencyMap;
       const obj2 = callback(838);
@@ -382,7 +382,7 @@ export const withMonitor = function withMonitor(arg0, arg1, arg2) {
       }
       const obj4 = callback(848);
       callback(830).uuid4();
-    };
+    }
     callback = runCallback({ monitorSlug: callback, status: "in_progress" }, finishCheckIn);
     const dependencyMap = callback(838).timestampInSeconds();
     try {

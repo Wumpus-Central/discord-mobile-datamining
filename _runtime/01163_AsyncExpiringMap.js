@@ -37,7 +37,7 @@ const items = [
       if (typeof value === "object") {
         if (value) {
           if ("then" in value) {
-            let obj = { value: "r", expiresAt: "Path", promise: "TRANSPARENT" };
+            let obj = { value: "r", expiresAt: "PX_16", promise: "TRANSPARENT" };
             obj[2] = value;
             const _map2 = self._map;
             const result = _map2.set(arg0, obj);

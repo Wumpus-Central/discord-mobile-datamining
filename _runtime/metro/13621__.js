@@ -1,10 +1,12 @@
 // _runtime/metro/13621__.js
-arg5.default = () => (arg0) => {
-  let closure_0 = arg0;
-  const features = {
-    image(uri) {
-      return closure_0.send("image", { uri: uri.uri, preview: uri.preview, filename: uri.filename, width: uri.width, height: uri.height, caption: uri.caption });
-    }
-  };
-  return { features };
+import { 13619__ } from "13619__.js";
+
+export default (arg0, arg1) => {
+  const tmp = 13619__(arg0);
+  if (tmp < 0) {
+    let tmp3 = max(tmp + arg1, 0);
+  } else {
+    tmp3 = min(tmp, arg1);
+  }
+  return tmp3;
 };

@@ -38,9 +38,6 @@ if (self2) {
   }
   const _Object2 = Object;
   fn(require("module_4919"), exports);
-  fn(require("module_4920"), exports);
-  fn(require("module_4921"), exports);
-  fn(require("module_4922"), exports);
 } else {
   let _Object = Object;
 }

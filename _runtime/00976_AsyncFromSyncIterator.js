@@ -217,231 +217,1565 @@ function _instrumentStream() {
     let c11 = 0;
     let c12 = 0;
     let c9 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function*(arg0, done) {
       if (c12 === 2) {
         c12 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
       } else {
-        throwTypeErrorResult = arg1;
+        throwTypeErrorResult = done;
         throwTypeErrorResult = arg0;
-        throwTypeErrorResult = tmp13;
+        throwTypeErrorResult = tmp14;
         throwTypeErrorResult = globalThis;
         throwTypeErrorResult = null;
-        if (tmp14 === 3) {
+        if (tmp15 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw done;
           } else if (arg0 === 2) {
             let obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj[0] = done;
             return obj;
           } else {
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
-            if (arg0 === 1) {
-              c12 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              while (true) {
-                obj = 1;
-                let tmp88 = closure_8;
-                let tmp89 = closure_5;
-                if (closure_5) {
+            c12 = 2;
+            switch (c11) {
+              case 0:
+                if (arg0 === 1) {
+                  c12 = 3;
+                  throw done;
+                } else if (arg0 === 2) {
+                  c12 = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = done;
+                  return obj;
+                } else {
+                  let closure_7 = tmp4;
+                  let value2 = tmp16;
+                  throwTypeErrorResult = store;
+                  throwTypeErrorResult = dependencyMap;
+                  store = dependencyMap;
+                  throwTypeErrorResult = lib;
+                  dependencyMap = lib;
+                  let closure_3;
+                  let value;
+                  closure_7 = undefined;
+                  value2 = undefined;
+                  let c9;
+                  const obj1 = { responseTexts: null, finishReasons: null, toolCalls: null };
+                  obj1[0] = [];
+                  obj1[1] = [];
+                  obj1[2] = [];
+                  lib = obj1;
+                  let closure_4 = false;
+                  let callback = false;
+                  c9 = 4;
+                  const iter = (function _asyncIterator(closure_0) {
+                    if (typeof Symbol !== "undefined") {
+                      const _Symbol = Symbol;
+                      let str2 = Symbol.asyncIterator;
+                      const _Symbol2 = Symbol;
+                      let str = Symbol.iterator;
+                    }
+                    let num = 1;
+                    while (true) {
+                      let tmp2 = str;
+                      let tmp3 = str2;
+                      let tmp = num;
+                      if (str2) {
+                        if (null != closure_0[str2]) {
+                          break;
+                        }
+                      }
+                      if (str) {
+                        let tmp5 = closure_0[str];
+                        if (null != tmp5) {
+                          let call = tmp5.call;
+                          let tmp10 = closure_4;
+                          let tmp11 = typeof call === "unknown" ? tmp5() : call(closure_0);
+                          let tmp12 = new.target;
+                          let tmp13 = new.target;
+                          let tmp14 = tmp11;
+                          tmp10 = new tmp10(tmp11);
+                          let tmp16 = tmp10;
+                          return tmp10;
+                        }
+                      }
+                      num = num - 1;
+                      str = "@@iterator";
+                      str2 = "@@asyncIterator";
+                      if (tmp) {
+                        continue;
+                      } else {
+                        let _TypeError = TypeError;
+                        let tmp6 = new.target;
+                        let str3 = "Object is not async iterable";
+                        let tmp7 = new.target;
+                        let typeError = new TypeError("Object is not async iterable");
+                        let tmp9 = typeError;
+                        throw typeError;
+                      }
+                    }
+                    const call2 = tmp4.call;
+                    return typeof call2 === "unknown" ? tmp4() : call2(closure_0);
+                  })(store);
+                  closure_7 = iter;
+                  throwTypeErrorResult = lib;
+                  c11 = 5;
+                  c12 = 1;
+                  const obj2 = { value: null, done: false };
+                  obj2[0] = lib(iter.next());
+                  return obj2;
+                }
+              break;
+              case 1:
+                throwTypeErrorResult = value2;
+                throwTypeErrorResult = closure_7;
+                throwTypeErrorResult = closure_10;
+                c9 = 0;
+                const obj3 = {};
+                throwTypeErrorResult = store;
+                throwTypeErrorResult = dependencyMap;
+                throwTypeErrorResult = closure_10;
+                obj3[store(958).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                c9 = obj3;
+                throwTypeErrorResult = lib;
+                if (lib.responseId) {
+                  throwTypeErrorResult = value2;
+                  throwTypeErrorResult = closure_7;
+                  throwTypeErrorResult = c9;
+                  throwTypeErrorResult = store;
+                  throwTypeErrorResult = dependencyMap;
+                  throwTypeErrorResult = lib;
+                  c9[store(958).GEN_AI_RESPONSE_ID_ATTRIBUTE] = lib.responseId;
+                }
+                throwTypeErrorResult = value2;
+                throwTypeErrorResult = lib;
+                if (lib.responseModel) {
+                  throwTypeErrorResult = value2;
+                  throwTypeErrorResult = closure_7;
+                  throwTypeErrorResult = c9;
+                  throwTypeErrorResult = store;
+                  throwTypeErrorResult = dependencyMap;
+                  throwTypeErrorResult = lib;
+                  c9[store(958).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = lib.responseModel;
+                }
+                throwTypeErrorResult = value2;
+                throwTypeErrorResult = lib;
+                if (undefined !== lib.promptTokens) {
+                  throwTypeErrorResult = value2;
+                  throwTypeErrorResult = closure_7;
+                  throwTypeErrorResult = c9;
+                  throwTypeErrorResult = store;
+                  throwTypeErrorResult = dependencyMap;
+                  throwTypeErrorResult = lib;
+                  c9[store(958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = lib.promptTokens;
+                }
+                throwTypeErrorResult = value2;
+                throwTypeErrorResult = lib;
+                if (undefined !== lib.completionTokens) {
+                  throwTypeErrorResult = value2;
+                  throwTypeErrorResult = closure_7;
+                  throwTypeErrorResult = c9;
+                  throwTypeErrorResult = store;
+                  throwTypeErrorResult = dependencyMap;
+                  throwTypeErrorResult = lib;
+                  c9[store(958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = lib.completionTokens;
+                }
+                throwTypeErrorResult = value2;
+                throwTypeErrorResult = lib;
+                if (undefined !== lib.totalTokens) {
+                  throwTypeErrorResult = value2;
+                  throwTypeErrorResult = closure_7;
+                  throwTypeErrorResult = c9;
+                  throwTypeErrorResult = store;
+                  throwTypeErrorResult = dependencyMap;
+                  throwTypeErrorResult = lib;
+                  c9[store(958).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = lib.totalTokens;
+                }
+                throwTypeErrorResult = value2;
+                throwTypeErrorResult = lib;
+                if (lib.finishReasons.length) {
+                  throwTypeErrorResult = value2;
+                  throwTypeErrorResult = closure_7;
+                  throwTypeErrorResult = c9;
+                  throwTypeErrorResult = store;
+                  throwTypeErrorResult = dependencyMap;
+                  const _JSON17 = JSON;
+                  throwTypeErrorResult = lib;
+                  c9[store(958).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(lib.finishReasons);
+                }
+                throwTypeErrorResult = value2;
+                let length17 = dependencyMap;
+                if (dependencyMap) {
+                  throwTypeErrorResult = lib;
+                  length17 = lib.responseTexts.length;
+                }
+                if (length17) {
+                  throwTypeErrorResult = value2;
+                  throwTypeErrorResult = closure_7;
+                  throwTypeErrorResult = c9;
+                  throwTypeErrorResult = store;
+                  throwTypeErrorResult = dependencyMap;
+                  throwTypeErrorResult = lib;
+                  const responseTexts9 = lib.responseTexts;
+                  c9[store(958).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts9.join("");
+                }
+                throwTypeErrorResult = value2;
+                let length18 = dependencyMap;
+                if (dependencyMap) {
+                  throwTypeErrorResult = lib;
+                  length18 = lib.toolCalls.length;
+                }
+                if (length18) {
+                  throwTypeErrorResult = value2;
+                  throwTypeErrorResult = closure_7;
+                  throwTypeErrorResult = c9;
+                  throwTypeErrorResult = store;
+                  throwTypeErrorResult = dependencyMap;
+                  const _JSON18 = JSON;
+                  throwTypeErrorResult = lib;
+                  c9[store(958).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(lib.toolCalls);
+                }
+                throwTypeErrorResult = value2;
+                throwTypeErrorResult = store;
+                throwTypeErrorResult = c9;
+                throwTypeErrorResult = store.setAttributes(c9);
+                throwTypeErrorResult = store;
+                throwTypeErrorResult = store.end();
+                throw throwTypeErrorResult;
+              case 2:
+                throwTypeErrorResult = closure_10;
+                throwTypeErrorResult = closure_10;
+                value = closure_10;
+                throwTypeErrorResult = value2;
+                c9 = 3;
+                throwTypeErrorResult = closure_4;
+                if (closure_4) {
+                  throwTypeErrorResult = closure_7;
+                  throwTypeErrorResult = null != closure_7.return;
+                }
+                if (!throwTypeErrorResult) {
+                  c9 = 1;
+                  throwTypeErrorResult = value2;
+                  throwTypeErrorResult = callback;
+                  if (callback) {
+                    throwTypeErrorResult = closure_3;
+                    throw closure_3;
+                  } else {
+                    throwTypeErrorResult = value;
+                    throw value;
+                  }
+                } else {
+                  throwTypeErrorResult = value2;
+                  throwTypeErrorResult = closure_7;
+                  throwTypeErrorResult = lib;
+                  throwTypeErrorResult = closure_7;
+                  c11 = 16;
+                  c12 = 1;
+                  const obj4 = { value: null, done: false };
+                  obj4[0] = lib(closure_7.return());
+                  return obj4;
+                }
+              break;
+              case 3:
+                throwTypeErrorResult = value2;
+                throwTypeErrorResult = closure_10;
+                c9 = 1;
+                throwTypeErrorResult = callback;
+                if (callback) {
                   throwTypeErrorResult = closure_3;
                   throw closure_3;
                 } else {
-                  obj = 0;
-                  let tmp90 = closure_7;
-                  obj = {};
-                  let tmp91 = store;
-                  let tmp92 = dependencyMap;
-                  obj[store(958).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                  let tmp93 = closure_2;
-                  if (closure_2.responseId) {
-                    let tmp94 = closure_8;
-                    let tmp95 = closure_7;
-                    let tmp96 = obj;
-                    let tmp97 = store;
-                    let tmp98 = dependencyMap;
-                    let tmp99 = closure_2;
-                    obj[store(958).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_2.responseId;
-                  }
-                  throwTypeErrorResult = closure_8;
-                  throwTypeErrorResult = closure_2;
-                  if (closure_2.responseModel) {
-                    throwTypeErrorResult = closure_8;
+                  throw throwTypeErrorResult;
+                }
+              break;
+              case 4:
+                throwTypeErrorResult = value2;
+                throwTypeErrorResult = closure_10;
+                throwTypeErrorResult = closure_10;
+                c9 = 2;
+                callback = true;
+                closure_3 = closure_10;
+                throwTypeErrorResult = value2;
+                c9 = 8;
+                throwTypeErrorResult = closure_4;
+                if (closure_4) {
+                  throwTypeErrorResult = closure_7;
+                  throwTypeErrorResult = null != closure_7.return;
+                }
+                if (throwTypeErrorResult) {
+                  throwTypeErrorResult = value2;
+                  throwTypeErrorResult = closure_7;
+                  throwTypeErrorResult = lib;
+                  throwTypeErrorResult = closure_7;
+                  c11 = 15;
+                  c12 = 1;
+                  const obj5 = { value: null, done: false };
+                  obj5[0] = lib(closure_7.return());
+                  return obj5;
+                } else {
+                  c9 = 1;
+                  throwTypeErrorResult = value2;
+                  throwTypeErrorResult = callback;
+                  if (callback) {
+                    throwTypeErrorResult = closure_3;
+                    throw closure_3;
+                  } else {
+                    c9 = 0;
                     throwTypeErrorResult = closure_7;
-                    throwTypeErrorResult = obj;
+                    const obj6 = {};
                     throwTypeErrorResult = store;
                     throwTypeErrorResult = dependencyMap;
-                    throwTypeErrorResult = closure_2;
-                    obj[store(958).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_2.responseModel;
-                  }
-                  throwTypeErrorResult = closure_8;
-                  throwTypeErrorResult = closure_2;
-                  if (undefined !== closure_2.promptTokens) {
-                    throwTypeErrorResult = closure_8;
-                    throwTypeErrorResult = closure_7;
-                    throwTypeErrorResult = obj;
+                    obj6[store(958).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                    c9 = obj6;
+                    throwTypeErrorResult = lib;
+                    if (lib.responseId) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_RESPONSE_ID_ATTRIBUTE] = lib.responseId;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (lib.responseModel) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = lib.responseModel;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (undefined !== lib.promptTokens) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = lib.promptTokens;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (undefined !== lib.completionTokens) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = lib.completionTokens;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (undefined !== lib.totalTokens) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = lib.totalTokens;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (lib.finishReasons.length) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      const _JSON15 = JSON;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(lib.finishReasons);
+                    }
+                    throwTypeErrorResult = value2;
+                    let length15 = dependencyMap;
+                    if (dependencyMap) {
+                      throwTypeErrorResult = lib;
+                      length15 = lib.responseTexts.length;
+                    }
+                    if (length15) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      const responseTexts8 = lib.responseTexts;
+                      c9[store(958).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts8.join("");
+                    }
+                    throwTypeErrorResult = value2;
+                    let length16 = dependencyMap;
+                    if (dependencyMap) {
+                      throwTypeErrorResult = lib;
+                      length16 = lib.toolCalls.length;
+                    }
+                    if (length16) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      const _JSON16 = JSON;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(lib.toolCalls);
+                    }
+                    throwTypeErrorResult = value2;
                     throwTypeErrorResult = store;
-                    throwTypeErrorResult = dependencyMap;
-                    throwTypeErrorResult = closure_2;
-                    obj[store(958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = closure_2.promptTokens;
-                  }
-                  throwTypeErrorResult = closure_8;
-                  throwTypeErrorResult = closure_2;
-                  if (undefined !== closure_2.completionTokens) {
-                    throwTypeErrorResult = closure_8;
-                    throwTypeErrorResult = closure_7;
-                    throwTypeErrorResult = obj;
+                    throwTypeErrorResult = c9;
+                    throwTypeErrorResult = store.setAttributes(c9);
                     throwTypeErrorResult = store;
-                    throwTypeErrorResult = dependencyMap;
-                    throwTypeErrorResult = closure_2;
-                    obj[store(958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = closure_2.completionTokens;
+                    throwTypeErrorResult = store.end();
+                    c12 = 3;
+                    return { value: "HermesInternal", done: null };
                   }
-                  throwTypeErrorResult = closure_8;
-                  throwTypeErrorResult = closure_2;
-                  if (undefined !== closure_2.totalTokens) {
-                    throwTypeErrorResult = closure_8;
-                    throwTypeErrorResult = closure_7;
-                    throwTypeErrorResult = obj;
-                    throwTypeErrorResult = store;
-                    throwTypeErrorResult = dependencyMap;
-                    throwTypeErrorResult = closure_2;
-                    obj[store(958).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = closure_2.totalTokens;
-                  }
-                  throwTypeErrorResult = closure_8;
-                  throwTypeErrorResult = closure_2;
-                  if (closure_2.finishReasons.length) {
-                    throwTypeErrorResult = closure_8;
-                    throwTypeErrorResult = closure_7;
-                    throwTypeErrorResult = obj;
-                    throwTypeErrorResult = store;
-                    throwTypeErrorResult = dependencyMap;
-                    let _JSON3 = JSON;
-                    throwTypeErrorResult = closure_2;
-                    obj[store(958).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(closure_2.finishReasons);
-                  }
-                  throwTypeErrorResult = closure_8;
-                  let length3 = dependencyMap;
-                  if (dependencyMap) {
-                    throwTypeErrorResult = closure_2;
-                    length3 = closure_2.responseTexts.length;
-                  }
-                  if (length3) {
-                    throwTypeErrorResult = closure_8;
-                    throwTypeErrorResult = closure_7;
-                    throwTypeErrorResult = obj;
-                    throwTypeErrorResult = store;
-                    throwTypeErrorResult = dependencyMap;
-                    throwTypeErrorResult = closure_2;
-                    let responseTexts2 = closure_2.responseTexts;
-                    obj[store(958).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts2.join("");
-                  }
-                  throwTypeErrorResult = closure_8;
-                  let length4 = dependencyMap;
-                  if (dependencyMap) {
-                    throwTypeErrorResult = closure_2;
-                    length4 = closure_2.toolCalls.length;
-                  }
-                  if (length4) {
-                    throwTypeErrorResult = closure_8;
-                    throwTypeErrorResult = closure_7;
-                    throwTypeErrorResult = obj;
-                    throwTypeErrorResult = store;
-                    throwTypeErrorResult = dependencyMap;
-                    let _JSON4 = JSON;
-                    throwTypeErrorResult = closure_2;
-                    obj[store(958).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(closure_2.toolCalls);
-                  }
-                  throwTypeErrorResult = closure_8;
-                  throwTypeErrorResult = store;
-                  throwTypeErrorResult = obj;
-                  throwTypeErrorResult = store.setAttributes(obj);
-                  throwTypeErrorResult = store;
-                  throwTypeErrorResult = store.end();
-                  let num3 = 3;
+                }
+              break;
+              case 5:
+                if (arg0 === 1) {
                   c12 = 3;
-                  return { value: "T", done: null };
+                  throw done;
+                } else {
+                  callback = done;
+                  if (arg0 === 2) {
+                    throwTypeErrorResult = value2;
+                    c9 = 5;
+                    throwTypeErrorResult = closure_4;
+                    if (closure_4) {
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = null != closure_7.return;
+                    }
+                    if (throwTypeErrorResult) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = lib;
+                      throwTypeErrorResult = closure_7;
+                      c11 = 9;
+                      c12 = 1;
+                      const obj7 = { value: null, done: false };
+                      obj7[0] = lib(closure_7.return());
+                      return obj7;
+                    } else {
+                      c9 = 1;
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = callback;
+                      if (callback) {
+                        throwTypeErrorResult = closure_3;
+                        throw closure_3;
+                      } else {
+                        c9 = 0;
+                        throwTypeErrorResult = closure_7;
+                        const obj8 = {};
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = dependencyMap;
+                        obj8[store(958).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                        c9 = obj8;
+                        throwTypeErrorResult = lib;
+                        if (lib.responseId) {
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = closure_7;
+                          throwTypeErrorResult = c9;
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          throwTypeErrorResult = lib;
+                          c9[store(958).GEN_AI_RESPONSE_ID_ATTRIBUTE] = lib.responseId;
+                        }
+                        throwTypeErrorResult = value2;
+                        throwTypeErrorResult = lib;
+                        if (lib.responseModel) {
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = closure_7;
+                          throwTypeErrorResult = c9;
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          throwTypeErrorResult = lib;
+                          c9[store(958).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = lib.responseModel;
+                        }
+                        throwTypeErrorResult = value2;
+                        throwTypeErrorResult = lib;
+                        if (undefined !== lib.promptTokens) {
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = closure_7;
+                          throwTypeErrorResult = c9;
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          throwTypeErrorResult = lib;
+                          c9[store(958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = lib.promptTokens;
+                        }
+                        throwTypeErrorResult = value2;
+                        throwTypeErrorResult = lib;
+                        if (undefined !== lib.completionTokens) {
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = closure_7;
+                          throwTypeErrorResult = c9;
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          throwTypeErrorResult = lib;
+                          c9[store(958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = lib.completionTokens;
+                        }
+                        throwTypeErrorResult = value2;
+                        throwTypeErrorResult = lib;
+                        if (undefined !== lib.totalTokens) {
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = closure_7;
+                          throwTypeErrorResult = c9;
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          throwTypeErrorResult = lib;
+                          c9[store(958).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = lib.totalTokens;
+                        }
+                        throwTypeErrorResult = value2;
+                        throwTypeErrorResult = lib;
+                        if (lib.finishReasons.length) {
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = closure_7;
+                          throwTypeErrorResult = c9;
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          const _JSON13 = JSON;
+                          throwTypeErrorResult = lib;
+                          c9[store(958).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(lib.finishReasons);
+                        }
+                        throwTypeErrorResult = value2;
+                        let length13 = dependencyMap;
+                        if (dependencyMap) {
+                          throwTypeErrorResult = lib;
+                          length13 = lib.responseTexts.length;
+                        }
+                        if (length13) {
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = closure_7;
+                          throwTypeErrorResult = c9;
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          throwTypeErrorResult = lib;
+                          const responseTexts7 = lib.responseTexts;
+                          c9[store(958).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts7.join("");
+                        }
+                        throwTypeErrorResult = value2;
+                        let length14 = dependencyMap;
+                        if (dependencyMap) {
+                          throwTypeErrorResult = lib;
+                          length14 = lib.toolCalls.length;
+                        }
+                        if (length14) {
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = closure_7;
+                          throwTypeErrorResult = c9;
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          const _JSON14 = JSON;
+                          throwTypeErrorResult = lib;
+                          c9[store(958).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(lib.toolCalls);
+                        }
+                        throwTypeErrorResult = value2;
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = c9;
+                        throwTypeErrorResult = store.setAttributes(c9);
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = store.end();
+                        c12 = 3;
+                        throwTypeErrorResult = callback;
+                        const obj9 = { value: null, done: true };
+                        obj9[0] = callback;
+                        return obj9;
+                      }
+                    }
+                  } else {
+                    throwTypeErrorResult = value2;
+                    value = done;
+                    const done2 = done.done;
+                    closure_4 = !done2;
+                    if (done2) {
+                      c9 = 2;
+                    } else {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = value;
+                      value2 = value.value;
+                      throwTypeErrorResult = callback;
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = lib;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = callback(value2, lib, dependencyMap, store);
+                      throwTypeErrorResult = value2;
+                      c11 = 6;
+                      c12 = 1;
+                      throwTypeErrorResult = value2;
+                      c9 = 6;
+                      throwTypeErrorResult = closure_4;
+                      if (closure_4) {
+                        throwTypeErrorResult = closure_7;
+                        throwTypeErrorResult = null != closure_7.return;
+                      }
+                      if (throwTypeErrorResult) {
+                        throwTypeErrorResult = value2;
+                        throwTypeErrorResult = closure_7;
+                        throwTypeErrorResult = lib;
+                        throwTypeErrorResult = closure_7;
+                        c11 = 11;
+                        c12 = 1;
+                        const obj10 = { value: null, done: false };
+                        obj10[0] = lib(closure_7.return());
+                        return obj10;
+                      } else {
+                        c9 = 1;
+                        throwTypeErrorResult = value2;
+                        throwTypeErrorResult = callback;
+                        if (callback) {
+                          throwTypeErrorResult = closure_3;
+                          throw closure_3;
+                        } else {
+                          c9 = 0;
+                          throwTypeErrorResult = closure_7;
+                          const obj11 = {};
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          obj11[store(958).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                          c9 = obj11;
+                          throwTypeErrorResult = lib;
+                          if (lib.responseId) {
+                            throwTypeErrorResult = value2;
+                            throwTypeErrorResult = closure_7;
+                            throwTypeErrorResult = c9;
+                            throwTypeErrorResult = store;
+                            throwTypeErrorResult = dependencyMap;
+                            throwTypeErrorResult = lib;
+                            c9[store(958).GEN_AI_RESPONSE_ID_ATTRIBUTE] = lib.responseId;
+                          }
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = lib;
+                          if (lib.responseModel) {
+                            throwTypeErrorResult = value2;
+                            throwTypeErrorResult = closure_7;
+                            throwTypeErrorResult = c9;
+                            throwTypeErrorResult = store;
+                            throwTypeErrorResult = dependencyMap;
+                            throwTypeErrorResult = lib;
+                            c9[store(958).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = lib.responseModel;
+                          }
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = lib;
+                          if (undefined !== lib.promptTokens) {
+                            throwTypeErrorResult = value2;
+                            throwTypeErrorResult = closure_7;
+                            throwTypeErrorResult = c9;
+                            throwTypeErrorResult = store;
+                            throwTypeErrorResult = dependencyMap;
+                            throwTypeErrorResult = lib;
+                            c9[store(958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = lib.promptTokens;
+                          }
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = lib;
+                          if (undefined !== lib.completionTokens) {
+                            throwTypeErrorResult = value2;
+                            throwTypeErrorResult = closure_7;
+                            throwTypeErrorResult = c9;
+                            throwTypeErrorResult = store;
+                            throwTypeErrorResult = dependencyMap;
+                            throwTypeErrorResult = lib;
+                            c9[store(958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = lib.completionTokens;
+                          }
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = lib;
+                          if (undefined !== lib.totalTokens) {
+                            throwTypeErrorResult = value2;
+                            throwTypeErrorResult = closure_7;
+                            throwTypeErrorResult = c9;
+                            throwTypeErrorResult = store;
+                            throwTypeErrorResult = dependencyMap;
+                            throwTypeErrorResult = lib;
+                            c9[store(958).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = lib.totalTokens;
+                          }
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = lib;
+                          if (lib.finishReasons.length) {
+                            throwTypeErrorResult = value2;
+                            throwTypeErrorResult = closure_7;
+                            throwTypeErrorResult = c9;
+                            throwTypeErrorResult = store;
+                            throwTypeErrorResult = dependencyMap;
+                            const _JSON9 = JSON;
+                            throwTypeErrorResult = lib;
+                            c9[store(958).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(lib.finishReasons);
+                          }
+                          throwTypeErrorResult = value2;
+                          let length9 = dependencyMap;
+                          if (dependencyMap) {
+                            throwTypeErrorResult = lib;
+                            length9 = lib.responseTexts.length;
+                          }
+                          if (length9) {
+                            throwTypeErrorResult = value2;
+                            throwTypeErrorResult = closure_7;
+                            throwTypeErrorResult = c9;
+                            throwTypeErrorResult = store;
+                            throwTypeErrorResult = dependencyMap;
+                            throwTypeErrorResult = lib;
+                            const responseTexts5 = lib.responseTexts;
+                            c9[store(958).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts5.join("");
+                          }
+                          throwTypeErrorResult = value2;
+                          let length10 = dependencyMap;
+                          if (dependencyMap) {
+                            throwTypeErrorResult = lib;
+                            length10 = lib.toolCalls.length;
+                          }
+                          if (length10) {
+                            throwTypeErrorResult = value2;
+                            throwTypeErrorResult = closure_7;
+                            throwTypeErrorResult = c9;
+                            throwTypeErrorResult = store;
+                            throwTypeErrorResult = dependencyMap;
+                            const _JSON10 = JSON;
+                            throwTypeErrorResult = lib;
+                            c9[store(958).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(lib.toolCalls);
+                          }
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = c9;
+                          throwTypeErrorResult = store.setAttributes(c9);
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = store.end();
+                          c12 = 3;
+                          throwTypeErrorResult = closure_4;
+                          const obj12 = { value: null, done: true };
+                          obj12[0] = closure_4;
+                          return obj12;
+                        }
+                      }
+                    }
+                  }
                 }
-              }
-            } else {
-              obj = 1;
-              throwTypeErrorResult = closure_8;
-              throwTypeErrorResult = closure_5;
-              if (closure_5) {
-                throw closure_3;
-              } else {
-                obj = 0;
-                obj = {};
-                obj[store(958).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                if (closure_2.responseId) {
-                  obj[store(958).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_2.responseId;
+              break;
+              case 6:
+                if (arg0 === 1) {
+                  c12 = 3;
+                  throw done;
+                } else {
+                  closure_3 = done;
+                  if (arg0 === 2) {
+                    throwTypeErrorResult = value2;
+                    c9 = 7;
+                    throwTypeErrorResult = closure_4;
+                    if (closure_4) {
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = null != closure_7.return;
+                    }
+                    if (throwTypeErrorResult) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = lib;
+                      throwTypeErrorResult = closure_7;
+                      c11 = 13;
+                      c12 = 1;
+                      const obj13 = { value: null, done: false };
+                      obj13[0] = lib(closure_7.return());
+                      return obj13;
+                    } else {
+                      c9 = 1;
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = callback;
+                      if (callback) {
+                        throwTypeErrorResult = closure_3;
+                        throw closure_3;
+                      } else {
+                        c9 = 0;
+                        throwTypeErrorResult = closure_7;
+                        const obj14 = {};
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = dependencyMap;
+                        obj14[store(958).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                        c9 = obj14;
+                        throwTypeErrorResult = lib;
+                        if (lib.responseId) {
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = closure_7;
+                          throwTypeErrorResult = c9;
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          throwTypeErrorResult = lib;
+                          c9[store(958).GEN_AI_RESPONSE_ID_ATTRIBUTE] = lib.responseId;
+                        }
+                        throwTypeErrorResult = value2;
+                        throwTypeErrorResult = lib;
+                        if (lib.responseModel) {
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = closure_7;
+                          throwTypeErrorResult = c9;
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          throwTypeErrorResult = lib;
+                          c9[store(958).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = lib.responseModel;
+                        }
+                        throwTypeErrorResult = value2;
+                        throwTypeErrorResult = lib;
+                        if (undefined !== lib.promptTokens) {
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = closure_7;
+                          throwTypeErrorResult = c9;
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          throwTypeErrorResult = lib;
+                          c9[store(958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = lib.promptTokens;
+                        }
+                        throwTypeErrorResult = value2;
+                        throwTypeErrorResult = lib;
+                        if (undefined !== lib.completionTokens) {
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = closure_7;
+                          throwTypeErrorResult = c9;
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          throwTypeErrorResult = lib;
+                          c9[store(958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = lib.completionTokens;
+                        }
+                        throwTypeErrorResult = value2;
+                        throwTypeErrorResult = lib;
+                        if (undefined !== lib.totalTokens) {
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = closure_7;
+                          throwTypeErrorResult = c9;
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          throwTypeErrorResult = lib;
+                          c9[store(958).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = lib.totalTokens;
+                        }
+                        throwTypeErrorResult = value2;
+                        throwTypeErrorResult = lib;
+                        if (lib.finishReasons.length) {
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = closure_7;
+                          throwTypeErrorResult = c9;
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          const _JSON11 = JSON;
+                          throwTypeErrorResult = lib;
+                          c9[store(958).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(lib.finishReasons);
+                        }
+                        throwTypeErrorResult = value2;
+                        let length11 = dependencyMap;
+                        if (dependencyMap) {
+                          throwTypeErrorResult = lib;
+                          length11 = lib.responseTexts.length;
+                        }
+                        if (length11) {
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = closure_7;
+                          throwTypeErrorResult = c9;
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          throwTypeErrorResult = lib;
+                          const responseTexts6 = lib.responseTexts;
+                          c9[store(958).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts6.join("");
+                        }
+                        throwTypeErrorResult = value2;
+                        let length12 = dependencyMap;
+                        if (dependencyMap) {
+                          throwTypeErrorResult = lib;
+                          length12 = lib.toolCalls.length;
+                        }
+                        if (length12) {
+                          throwTypeErrorResult = value2;
+                          throwTypeErrorResult = closure_7;
+                          throwTypeErrorResult = c9;
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          const _JSON12 = JSON;
+                          throwTypeErrorResult = lib;
+                          c9[store(958).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(lib.toolCalls);
+                        }
+                        throwTypeErrorResult = value2;
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = c9;
+                        throwTypeErrorResult = store.setAttributes(c9);
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = store.end();
+                        c12 = 3;
+                        throwTypeErrorResult = closure_3;
+                        const obj15 = { value: null, done: true };
+                        obj15[0] = closure_3;
+                        return obj15;
+                      }
+                    }
+                  } else {
+                    throwTypeErrorResult = value2;
+                    closure_4 = false;
+                    throwTypeErrorResult = closure_7;
+                    throwTypeErrorResult = lib;
+                    throwTypeErrorResult = closure_7;
+                    c11 = 7;
+                    c12 = 1;
+                    const obj16 = { value: null, done: false };
+                    obj16[0] = lib(closure_7.next());
+                    return obj16;
+                  }
                 }
-                if (closure_2.responseModel) {
-                  obj[store(958).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_2.responseModel;
+              break;
+              case 7:
+                if (arg0 === 1) {
+                  c12 = 3;
+                  throw done;
+                } else {
+                  closure_4 = done;
+                  if (arg0 !== 2) {
+                    throwTypeErrorResult = value2;
+                    value = done;
+                    done = done.done;
+                    closure_4 = !done;
+                  }
                 }
-                if (undefined !== closure_2.promptTokens) {
-                  obj[store(958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = closure_2.promptTokens;
+              break;
+              case 8:
+                throwTypeErrorResult = value2;
+                throwTypeErrorResult = closure_10;
+                c9 = 1;
+                throwTypeErrorResult = callback;
+                if (callback) {
+                  throwTypeErrorResult = closure_3;
+                  throw closure_3;
+                } else {
+                  throw throwTypeErrorResult;
                 }
-                if (undefined !== closure_2.completionTokens) {
-                  obj[store(958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = closure_2.completionTokens;
+              break;
+              case 9:
+                if (arg0 === 1) {
+                  c12 = 3;
+                  throw done;
+                } else if (arg0 === 2) {
+                  c9 = 1;
+                  throwTypeErrorResult = value2;
+                  throwTypeErrorResult = callback;
+                  if (callback) {
+                    throwTypeErrorResult = closure_3;
+                    throw closure_3;
+                  } else {
+                    c9 = 0;
+                    throwTypeErrorResult = closure_7;
+                    const obj17 = {};
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = dependencyMap;
+                    obj17[store(958).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                    c9 = obj17;
+                    throwTypeErrorResult = lib;
+                    if (lib.responseId) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_RESPONSE_ID_ATTRIBUTE] = lib.responseId;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (lib.responseModel) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = lib.responseModel;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (undefined !== lib.promptTokens) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = lib.promptTokens;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (undefined !== lib.completionTokens) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = lib.completionTokens;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (undefined !== lib.totalTokens) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = lib.totalTokens;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (lib.finishReasons.length) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      const _JSON7 = JSON;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(lib.finishReasons);
+                    }
+                    throwTypeErrorResult = value2;
+                    let length7 = dependencyMap;
+                    if (dependencyMap) {
+                      throwTypeErrorResult = lib;
+                      length7 = lib.responseTexts.length;
+                    }
+                    if (length7) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      const responseTexts4 = lib.responseTexts;
+                      c9[store(958).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts4.join("");
+                    }
+                    throwTypeErrorResult = value2;
+                    let length8 = dependencyMap;
+                    if (dependencyMap) {
+                      throwTypeErrorResult = lib;
+                      length8 = lib.toolCalls.length;
+                    }
+                    if (length8) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      const _JSON8 = JSON;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(lib.toolCalls);
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = c9;
+                    throwTypeErrorResult = store.setAttributes(c9);
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = store.end();
+                    c12 = 3;
+                    const obj18 = { value: null, done: true };
+                    obj18[0] = done;
+                    return obj18;
+                  }
                 }
-                if (undefined !== closure_2.totalTokens) {
-                  obj[store(958).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = closure_2.totalTokens;
+              break;
+              case 10:
+                throwTypeErrorResult = value2;
+                throwTypeErrorResult = closure_10;
+                c9 = 1;
+                throwTypeErrorResult = callback;
+                if (callback) {
+                  throwTypeErrorResult = closure_3;
+                  throw closure_3;
+                } else {
+                  throw throwTypeErrorResult;
                 }
-                if (closure_2.finishReasons.length) {
-                  const _JSON = JSON;
-                  obj[store(958).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(closure_2.finishReasons);
+              break;
+              case 11:
+                if (arg0 === 1) {
+                  c12 = 3;
+                  throw done;
+                } else if (arg0 === 2) {
+                  c9 = 1;
+                  throwTypeErrorResult = value2;
+                  throwTypeErrorResult = callback;
+                  if (callback) {
+                    throwTypeErrorResult = closure_3;
+                    throw closure_3;
+                  } else {
+                    c9 = 0;
+                    throwTypeErrorResult = closure_7;
+                    const obj19 = {};
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = dependencyMap;
+                    obj19[store(958).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                    c9 = obj19;
+                    throwTypeErrorResult = lib;
+                    if (lib.responseId) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_RESPONSE_ID_ATTRIBUTE] = lib.responseId;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (lib.responseModel) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = lib.responseModel;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (undefined !== lib.promptTokens) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = lib.promptTokens;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (undefined !== lib.completionTokens) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = lib.completionTokens;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (undefined !== lib.totalTokens) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = lib.totalTokens;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (lib.finishReasons.length) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      const _JSON5 = JSON;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(lib.finishReasons);
+                    }
+                    throwTypeErrorResult = value2;
+                    let length5 = dependencyMap;
+                    if (dependencyMap) {
+                      throwTypeErrorResult = lib;
+                      length5 = lib.responseTexts.length;
+                    }
+                    if (length5) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      const responseTexts3 = lib.responseTexts;
+                      c9[store(958).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts3.join("");
+                    }
+                    throwTypeErrorResult = value2;
+                    let length6 = dependencyMap;
+                    if (dependencyMap) {
+                      throwTypeErrorResult = lib;
+                      length6 = lib.toolCalls.length;
+                    }
+                    if (length6) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      const _JSON6 = JSON;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(lib.toolCalls);
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = c9;
+                    throwTypeErrorResult = store.setAttributes(c9);
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = store.end();
+                    c12 = 3;
+                    const obj20 = { value: null, done: true };
+                    obj20[0] = done;
+                    return obj20;
+                  }
                 }
-                let length = dependencyMap;
-                if (dependencyMap) {
-                  length = closure_2.responseTexts.length;
+              break;
+              case 12:
+                throwTypeErrorResult = value2;
+                throwTypeErrorResult = closure_10;
+                c9 = 1;
+                throwTypeErrorResult = callback;
+                if (callback) {
+                  throwTypeErrorResult = closure_3;
+                  throw closure_3;
+                } else {
+                  throw throwTypeErrorResult;
                 }
-                if (length) {
-                  const responseTexts = closure_2.responseTexts;
-                  obj[store(958).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts.join("");
+              break;
+              case 13:
+                if (arg0 === 1) {
+                  c12 = 3;
+                  throw done;
+                } else if (arg0 === 2) {
+                  c9 = 1;
+                  throwTypeErrorResult = value2;
+                  throwTypeErrorResult = callback;
+                  if (callback) {
+                    throwTypeErrorResult = closure_3;
+                    throw closure_3;
+                  } else {
+                    c9 = 0;
+                    const obj21 = {};
+                    obj21[store(958).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                    c9 = obj21;
+                    if (lib.responseId) {
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_RESPONSE_ID_ATTRIBUTE] = lib.responseId;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (lib.responseModel) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = lib.responseModel;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (undefined !== lib.promptTokens) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = lib.promptTokens;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (undefined !== lib.completionTokens) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = lib.completionTokens;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (undefined !== lib.totalTokens) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = lib.totalTokens;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (lib.finishReasons.length) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      const _JSON3 = JSON;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(lib.finishReasons);
+                    }
+                    throwTypeErrorResult = value2;
+                    let length3 = dependencyMap;
+                    if (dependencyMap) {
+                      throwTypeErrorResult = lib;
+                      length3 = lib.responseTexts.length;
+                    }
+                    if (length3) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      const responseTexts2 = lib.responseTexts;
+                      c9[store(958).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts2.join("");
+                    }
+                    throwTypeErrorResult = value2;
+                    let length4 = dependencyMap;
+                    if (dependencyMap) {
+                      throwTypeErrorResult = lib;
+                      length4 = lib.toolCalls.length;
+                    }
+                    if (length4) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      const _JSON4 = JSON;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(lib.toolCalls);
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = c9;
+                    throwTypeErrorResult = store.setAttributes(c9);
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = store.end();
+                    c12 = 3;
+                    const obj22 = { value: null, done: true };
+                    obj22[0] = done;
+                    return obj22;
+                  }
                 }
-                let length2 = dependencyMap;
-                if (dependencyMap) {
-                  length2 = closure_2.toolCalls.length;
+              break;
+              case 14:
+                c9 = 1;
+                if (callback) {
+                  throw closure_3;
+                } else {
+                  throw tmp91;
                 }
-                if (length2) {
-                  const _JSON2 = JSON;
-                  obj[store(958).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(closure_2.toolCalls);
+              break;
+              case 15:
+                if (arg0 === 1) {
+                  c12 = 3;
+                  throw done;
+                } else if (arg0 === 2) {
+                  c9 = 1;
+                  throwTypeErrorResult = value2;
+                  throwTypeErrorResult = callback;
+                  if (callback) {
+                    throw closure_3;
+                  } else {
+                    c9 = 0;
+                    obj = {};
+                    obj[store(958).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                    c9 = obj;
+                    if (lib.responseId) {
+                      c9[store(958).GEN_AI_RESPONSE_ID_ATTRIBUTE] = lib.responseId;
+                    }
+                    if (lib.responseModel) {
+                      c9[store(958).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = lib.responseModel;
+                    }
+                    if (undefined !== lib.promptTokens) {
+                      c9[store(958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = lib.promptTokens;
+                    }
+                    if (undefined !== lib.completionTokens) {
+                      c9[store(958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = lib.completionTokens;
+                    }
+                    if (undefined !== lib.totalTokens) {
+                      c9[store(958).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = lib.totalTokens;
+                    }
+                    if (lib.finishReasons.length) {
+                      const _JSON = JSON;
+                      c9[store(958).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(lib.finishReasons);
+                    }
+                    let length = dependencyMap;
+                    if (dependencyMap) {
+                      length = lib.responseTexts.length;
+                    }
+                    if (length) {
+                      const responseTexts = lib.responseTexts;
+                      c9[store(958).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts.join("");
+                    }
+                    let length2 = dependencyMap;
+                    if (dependencyMap) {
+                      length2 = lib.toolCalls.length;
+                    }
+                    if (length2) {
+                      const _JSON2 = JSON;
+                      c9[store(958).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(lib.toolCalls);
+                    }
+                    store.setAttributes(c9);
+                    store.end();
+                    c12 = 3;
+                    const obj23 = { value: null, done: true };
+                    obj23[0] = done;
+                    return obj23;
+                  }
                 }
-                store.setAttributes(obj);
-                store.end();
-                c12 = 3;
-                const obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              }
+              break;
+              default:
+                if (arg0 === 1) {
+                  c12 = 3;
+                  throw done;
+                } else if (arg0 === 2) {
+                  c9 = 1;
+                  throwTypeErrorResult = value2;
+                  throwTypeErrorResult = callback;
+                  if (callback) {
+                    throwTypeErrorResult = closure_3;
+                    throw closure_3;
+                  } else {
+                    c9 = 0;
+                    throwTypeErrorResult = closure_7;
+                    const obj24 = {};
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = dependencyMap;
+                    obj24[store(958).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                    c9 = obj24;
+                    throwTypeErrorResult = lib;
+                    if (lib.responseId) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_RESPONSE_ID_ATTRIBUTE] = lib.responseId;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (lib.responseModel) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = lib.responseModel;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (undefined !== lib.promptTokens) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = lib.promptTokens;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (undefined !== lib.completionTokens) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = lib.completionTokens;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (undefined !== lib.totalTokens) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = lib.totalTokens;
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = lib;
+                    if (lib.finishReasons.length) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      const _JSON19 = JSON;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(lib.finishReasons);
+                    }
+                    throwTypeErrorResult = value2;
+                    let length19 = dependencyMap;
+                    if (dependencyMap) {
+                      throwTypeErrorResult = lib;
+                      length19 = lib.responseTexts.length;
+                    }
+                    if (length19) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = lib;
+                      const responseTexts10 = lib.responseTexts;
+                      c9[store(958).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts10.join("");
+                    }
+                    throwTypeErrorResult = value2;
+                    let length20 = dependencyMap;
+                    if (dependencyMap) {
+                      throwTypeErrorResult = lib;
+                      length20 = lib.toolCalls.length;
+                    }
+                    if (length20) {
+                      throwTypeErrorResult = value2;
+                      throwTypeErrorResult = closure_7;
+                      throwTypeErrorResult = c9;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      const _JSON20 = JSON;
+                      throwTypeErrorResult = lib;
+                      c9[store(958).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(lib.toolCalls);
+                    }
+                    throwTypeErrorResult = value2;
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = c9;
+                    throwTypeErrorResult = store.setAttributes(c9);
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = store.end();
+                    c12 = 3;
+                    const obj25 = { value: null, done: true };
+                    obj25[0] = done;
+                    return obj25;
+                  }
+                }
             }
           } catch (throwTypeErrorResult) {
-            let closure_10 = throwTypeErrorResult;
-            throwTypeErrorResult = obj;
-            if (tmp4 === obj) {
+            closure_10 = throwTypeErrorResult;
+            throwTypeErrorResult = c9;
+            if (tmp5 === c9) {
               throwTypeErrorResult = tmp3;
               c12 = tmp3;
               throw throwTypeErrorResult;
             } else if (tmp2 === throwTypeErrorResult) {
-              let c11 = tmp2;
+              c11 = tmp2;
             } else if (throwTypeErrorResult === throwTypeErrorResult) {
               c11 = throwTypeErrorResult;
             } else if (tmp3 === throwTypeErrorResult) {
               c11 = tmp3;
-            } else if (tmp12 === throwTypeErrorResult) {
-              c11 = tmp12;
-            } else if (tmp5 === throwTypeErrorResult) {
-              c11 = tmp11;
+            } else if (tmp13 === throwTypeErrorResult) {
+              c11 = tmp13;
             } else if (tmp6 === throwTypeErrorResult) {
-              c11 = tmp10;
+              c11 = tmp12;
             } else if (tmp7 === throwTypeErrorResult) {
-              c11 = tmp9;
+              c11 = tmp11;
+            } else if (tmp8 === throwTypeErrorResult) {
+              c11 = tmp10;
             } else {
-              c11 = tmp8;
+              c11 = tmp9;
             }
           }
         }
