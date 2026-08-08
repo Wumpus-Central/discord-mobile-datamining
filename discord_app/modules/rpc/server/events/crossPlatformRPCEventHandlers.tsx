@@ -44,7 +44,7 @@ function messageEvents(args) {
         tmp3 = new tmp3(obj, "Invalid nsfw channel id: " + channel.id);
         throw tmp3;
       }
-      tmp13Result = tmp13(4515);
+      tmp13Result = tmp13(4517);
     }
     obj4 = recurseReplaceContentTree;
     tmp13 = require;
@@ -254,12 +254,12 @@ obj6[1] = function handler() {
     let prevState;
     const obj = { state: null, hostname: null, pings: null, average_ping: null, last_ping: null };
     ({ prevState, dispatch } = arg0);
-    obj[0] = callback(10675).getVoiceConnectionState(store.getState());
+    obj[0] = callback(10741).getVoiceConnectionState(store.getState());
     obj[1] = store.getHostname();
     obj[2] = store.getPings();
     obj[3] = store.getAveragePing();
     obj[4] = store.getLastPing();
-    const obj2 = callback(10675);
+    const obj2 = callback(10741);
     if (!obj3.isEqual(obj, prevState)) {
       dispatch(obj);
     }
@@ -468,7 +468,7 @@ obj38[1] = function handler() {
       tmp = tmp2;
     }
     if (!tmp) {
-      prevState.dispatch(callback(10676)(obj.currentUser));
+      prevState.dispatch(callback(10742)(obj.currentUser));
     }
     return obj;
   };
@@ -542,7 +542,7 @@ obj44[1] = function handler() {
     }
     let tmp8 = null;
     if (null != application) {
-      tmp8 = callback(13715)(application);
+      tmp8 = callback(13785)(application);
     }
     if (streamerActiveStreamMetadata != null) {
       const sourceName = streamerActiveStreamMetadata.sourceName;

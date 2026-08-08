@@ -18,7 +18,7 @@ function getClientInfo() {
   const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
   let tmp;
   if (overrides != null) {
-    tmp = overrides[require(undefined, 11119) /* setBuildOverrideForBranch */.DEVICE_FIELD];
+    tmp = overrides[require(undefined, 11185) /* setBuildOverrideForBranch */.DEVICE_FIELD];
   }
   let str2 = "N/A";
   if (str.trim().length > 0) {
@@ -74,8 +74,8 @@ function ClientClientInfoActionSheet() {
   obj[0] = intl2.string(getSystemLocale.t.H66MEk);
   obj[1] = getClientInfo().appVersion;
   obj[2] = function onPress() {
-    callback(5696).copy(callback2().appVersion);
-    const obj = callback(5696);
+    callback(5756).copy(callback2().appVersion);
+    const obj = callback(5756);
     const result = callback(4001).presentCopiedToClipboard();
   };
   const items = [callback(ActionSheetRowIcon.ActionSheetRow, obj), , , , , , ];
@@ -84,8 +84,8 @@ function ClientClientInfoActionSheet() {
   obj1[0] = intl3.string(getSystemLocale.t.zuaWIt);
   obj1[1] = getClientInfo().buildNumber;
   obj1[2] = function onPress() {
-    callback(5696).copy(callback2().buildNumber);
-    const obj = callback(5696);
+    callback(5756).copy(callback2().buildNumber);
+    const obj = callback(5756);
     const result = callback(4001).presentCopiedToClipboard();
   };
   items[1] = callback(ActionSheetRowIcon.ActionSheetRow, obj1);
@@ -94,8 +94,8 @@ function ClientClientInfoActionSheet() {
   obj2[0] = intl4.string(getSystemLocale.t["YD/2+H"]);
   obj2[1] = getClientInfo().releaseChannel;
   obj2[2] = function onPress() {
-    callback(5696).copy(callback2().releaseChannel);
-    const obj = callback(5696);
+    callback(5756).copy(callback2().releaseChannel);
+    const obj = callback(5756);
     const result = callback(4001).presentCopiedToClipboard();
   };
   items[2] = callback(ActionSheetRowIcon.ActionSheetRow, obj2);
@@ -104,8 +104,8 @@ function ClientClientInfoActionSheet() {
   obj3[0] = intl5.string(getSystemLocale.t["4bhpIV"]);
   obj3[1] = getClientInfo().manifest;
   obj3[2] = function onPress() {
-    callback(5696).copy(callback2().manifest);
-    const obj = callback(5696);
+    callback(5756).copy(callback2().manifest);
+    const obj = callback(5756);
     const result = callback(4001).presentCopiedToClipboard();
   };
   items[3] = callback(ActionSheetRowIcon.ActionSheetRow, obj3);
@@ -114,8 +114,8 @@ function ClientClientInfoActionSheet() {
   obj4[0] = intl6.string(getSystemLocale.t.Wj3LW4);
   obj4[1] = getClientInfo().buildOverride;
   obj4[2] = function onPress() {
-    callback(5696).copy(callback2().buildOverride);
-    const obj = callback(5696);
+    callback(5756).copy(callback2().buildOverride);
+    const obj = callback(5756);
     const result = callback(4001).presentCopiedToClipboard();
   };
   items[4] = callback(ActionSheetRowIcon.ActionSheetRow, obj4);
@@ -124,33 +124,33 @@ function ClientClientInfoActionSheet() {
   if (obj7.isFabric()) {
     const obj5 = { label: "React Native New Architecture", subLabel: "Enabled", onPress: null };
     obj5[2] = function onPress() {
-      callback(5696).copy("React Native New Architecture is enabled.");
-      const obj = callback(5696);
+      callback(5756).copy("React Native New Architecture is enabled.");
+      const obj = callback(5756);
       const result = callback(4001).presentCopiedToClipboard();
     };
-    tmp4Result = tmp4(tmp2(5706).ActionSheetRow, obj5);
+    tmp4Result = tmp4(tmp2(5766).ActionSheetRow, obj5);
   }
   items[5] = tmp4Result;
   tmp4Result = null;
   if (tmp2Result.isFabric()) {
     let str = "Disabled";
-    if (tmp2(4165).isBridgeless) {
+    if (tmp2(4039).isBridgeless) {
       str = "Enabled";
     }
     const obj6 = { label: "Bridgeless mode", subLabel: null, onPress: null };
     obj6[1] = str;
     obj6[2] = function onPress() {
       let str = "disabled";
-      if (callback(4165).isBridgeless) {
+      if (callback(4039).isBridgeless) {
         str = "enabled";
       }
       const combined = "Bridgeless is " + str + ".";
-      let tmpResult = tmp(5696);
+      let tmpResult = tmp(5756);
       tmpResult.copy(combined);
       tmpResult = tmp(4001);
       const result = tmpResult.presentCopiedToClipboard();
     };
-    tmp4Result = tmp4(tmp2(5706).ActionSheetRow, obj6);
+    tmp4Result = tmp4(tmp2(5766).ActionSheetRow, obj6);
   }
   items[6] = tmp4Result;
   const items1 = [closure_5(ActionSheetRowIcon.ActionSheetRow.Group, { hasIcons: false, children: items }), ];
@@ -168,12 +168,12 @@ function ClientClientInfoActionSheet() {
     const tmp = callback2();
     ({ appVersion, buildNumber } = tmp);
     ({ releaseChannel, buildOverride, manifest } = tmp);
-    const deviceInfo = callback(4282).getDeviceInfo();
-    const obj = callback(4282);
-    const combined = "App: " + appVersion + " (" + buildNumber + ") " + releaseChannel + "; Manifest: " + manifest + "; Build Override: " + buildOverride + "; " + "Device: " + deviceInfo + " OS " + callback(4282).getSystemVersion() + ";";
-    const obj2 = callback(4282);
-    callback(5696).copy(combined);
-    const obj3 = callback(5696);
+    const deviceInfo = callback(4283).getDeviceInfo();
+    const obj = callback(4283);
+    const combined = "App: " + appVersion + " (" + buildNumber + ") " + releaseChannel + "; Manifest: " + manifest + "; Build Override: " + buildOverride + "; " + "Device: " + deviceInfo + " OS " + callback(4283).getSystemVersion() + ";";
+    const obj2 = callback(4283);
+    callback(5756).copy(combined);
+    const obj3 = callback(5756);
     const result = callback(4001).presentCopiedToClipboard();
   };
   obj7[1] = callback(ActionSheetRowIcon.ActionSheetRow, obj8);

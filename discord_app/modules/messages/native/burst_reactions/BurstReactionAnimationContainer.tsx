@@ -50,7 +50,7 @@ function BurstReactionAnimationContainerInner() {
       let obj = { opacity: 0 };
     } else {
       obj = { opacity: null };
-      const tmp11 = callback(4303);
+      const tmp11 = callback(4304);
       const withTiming = tmp11.withTiming;
       const obj1 = { duration: 300 };
       if (first1) {
@@ -63,7 +63,7 @@ function BurstReactionAnimationContainerInner() {
           }
         };
         obj = { runOnJS: null, handleComponentFinish: null };
-        obj[0] = callback(4162).runOnJS;
+        obj[0] = callback(4036).runOnJS;
         obj[1] = handleComponentFinish;
         fn.__closure = obj;
         fn.__workletHash = 9326347209552;
@@ -89,7 +89,7 @@ function BurstReactionAnimationContainerInner() {
       obj = { style: items, children: null };
       items = [markAsDismissed.fill, closure_7];
       obj = { activeOpacity: null, onPress: null, style: null, children: null };
-      obj[0] = callback(7183).BACKDROP_OPACITY;
+      obj[0] = callback(7243).BACKDROP_OPACITY;
       obj[1] = function onPress() {
         outer1_4(false);
         outer1_5.current = false;
@@ -108,7 +108,7 @@ function BurstReactionAnimationContainerInner() {
             closure_5.current = false;
           }
         };
-        tmpResult = tmp(first(7225), obj3);
+        tmpResult = tmp(first(7285), obj3);
       }
       obj2[1] = tmpResult;
       items1[1] = outer1_8(handleComponentFinish, obj2);
@@ -119,7 +119,7 @@ function BurstReactionAnimationContainerInner() {
         obj5[0] = tmp4.dismissTextContainer;
         const intl = tmp2(1236).intl;
         obj5[2] = intl.string(tmp2(1236).t.QpPMih);
-        const items2 = [tmp(tmp2(4298).Text, obj5), ];
+        const items2 = [tmp(tmp2(4299).Text, obj5), ];
         const obj6 = { style: null };
         obj6[0] = tmp4.dismissTextBackground;
         items2[1] = tmp(tmp8, obj6);
@@ -129,11 +129,11 @@ function BurstReactionAnimationContainerInner() {
       items1[2] = tmp6Result;
       obj[3] = items1;
       obj[1] = outer1_10(closure_5, obj);
-      obj[1] = outer1_8(first(4162).View, obj);
+      obj[1] = outer1_8(first(4036).View, obj);
       return outer1_8(callback(1297).OverlayView, obj);
     };
-    tmp8 = callback(first(9934), obj);
-    let tmp11 = first(9934);
+    tmp8 = callback(first(10000), obj);
+    let tmp11 = first(10000);
   }
   return tmp8;
 }

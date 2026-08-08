@@ -2,7 +2,7 @@
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { inlineStyles } from "../../../../../_runtime/07775_inlineStyles.js";
+import { inlineStyles } from "../../../../../_runtime/07835_inlineStyles.js";
 import { metadata } from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
@@ -28,14 +28,14 @@ export default function ProgressWheel(nReferralsSent) {
   let tmp9 = nReferralsSent === MAX_REFERRALS_SENT.MAX_REFERRALS_SENT;
   if (tmp9) {
     obj = { source: null, style: null };
-    let tmp4Result = tmp4(5267);
-    obj[0] = tmp4(12657);
+    let tmp4Result = tmp4(5268);
+    obj[0] = tmp4(12727);
     obj[1] = tmp.glowImage;
     tmp9 = callback(tmp4Result, obj);
   }
   const items = [tmp9, , ];
   obj1 = { width: c6, height: c6, children: null };
-  tmp4Result = tmp4(7775);
+  tmp4Result = tmp4(7835);
   const items1 = [callback(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: token, strokeWidth: 6, fill: token1 }), callback(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: "#53ac66", strokeWidth: 6, fill: "transparent", strokeDasharray: closure_7, strokeDashoffset: closure_7 * (1 - 33.3 * nReferralsSent / 100), strokeLinecap: "round", rotation: -90, origin: "80, 80" })];
   obj1[2] = items1;
   items[1] = closure_5(tmp4Result, obj1);

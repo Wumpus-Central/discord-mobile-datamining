@@ -10,23 +10,23 @@ let c4;
 let obj1;
 function mapColorToHighlightColor(arg0) {
   if (obj.unsafe_getRawColor("PRIMARY_400") === arg0) {
-    return tmp(14013).HighlightColors.ACCENT;
+    return tmp(14083).HighlightColors.ACCENT;
   } else {
     let tmpResult = tmp(711);
     if (tmpResult.unsafe_getRawColor("GREEN_360") === arg0) {
-      return tmp(14013).HighlightColors.GREEN;
+      return tmp(14083).HighlightColors.GREEN;
     } else {
       tmpResult = tmp(711);
       if (tmpResult.unsafe_getRawColor("YELLOW_360") === arg0) {
-        return tmp(14013).HighlightColors.YELLOW;
+        return tmp(14083).HighlightColors.YELLOW;
       } else {
         if (tmpResult1.unsafe_getRawColor("ORANGE_345") === arg0) {
-          return tmp(14013).HighlightColors.ORANGE;
+          return tmp(14083).HighlightColors.ORANGE;
         } else {
           if (tmpResult2.unsafe_getRawColor("RED_400") === arg0) {
-            return tmp(14013).HighlightColors.RED;
+            return tmp(14083).HighlightColors.RED;
           } else {
-            return tmp(14013).HighlightColors.NONE;
+            return tmp(14083).HighlightColors.NONE;
           }
           tmpResult2 = tmp(711);
         }

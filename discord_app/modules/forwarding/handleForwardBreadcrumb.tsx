@@ -27,7 +27,7 @@ function _handleForwardBreadcrumb() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -72,7 +72,7 @@ function _handleForwardBreadcrumb() {
                 }
               }
               guild = 3;
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             }
           } else if (1 === tmp7) {
             message_id = 0;

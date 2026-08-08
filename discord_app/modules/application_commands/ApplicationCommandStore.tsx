@@ -87,8 +87,8 @@ function handleSetActiveCommand(arg0) {
       obj[5] = query;
       obj[6] = searchResultsPosition;
       obj[7] = source;
-      obj(6920).trackCommandSelected(obj);
-      const obj3 = obj(6920);
+      obj(6980).trackCommandSelected(obj);
+      const obj3 = obj(6980);
     }
     return true;
   }
@@ -183,7 +183,7 @@ function handleUpdateOptionStates(channelId) {
           }
         }
       } else {
-        obj[tmp9] = { hasValue: false, isActive: false, lastValidationResult: null, optionValue: null, location: "r", length: "T" };
+        obj[tmp9] = { hasValue: false, isActive: false, lastValidationResult: null, optionValue: null, location: "accessibilityRole", length: "rejectWithError" };
         if (tmp.activeOptionName === tmp9) {
           tmp.activeOptionName = null;
         }

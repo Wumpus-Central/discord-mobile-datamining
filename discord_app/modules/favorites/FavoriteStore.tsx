@@ -1,14 +1,14 @@
 // discord_app/modules/favorites/FavoriteStore.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { createChannelRecord } from "createChannelRecord";
-import { FAVORITES_UNCATEGORIZED_PARENT_ID as closure_4 } from "date";
+import { FAVORITES_UNCATEGORIZED_PARENT_ID as closure_5 } from "date";
 import ME from "ME";
 import { Store } from "initialize";
 import { apply } from "../../../_runtime/00012_apply.js";
 import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 
-let c5;
 let closure_6;
+let error;
 const require = arg1;
 function initializeFromUserSettings() {
   let channelType;
@@ -33,32 +33,32 @@ function initializeFromUserSettings() {
     if (keys !== undefined) {
       num = num3;
       while (keys[tmp] !== undefined) {
-        let tmp22 = tmp6;
-        let tmp23 = favoriteChannels[tmp6];
-        let tmp24 = require;
-        let tmp25 = dependencyMap;
+        let tmp21 = tmp6;
+        let tmp22 = favoriteChannels[tmp6];
+        let tmp23 = require;
+        let tmp24 = dependencyMap;
         let sum = num3;
-        if (tmp23.type !== create.FavoriteChannelType.CATEGORY) {
+        if (tmp22.type !== create.FavoriteChannelType.CATEGORY) {
           sum = num3 + 1;
         }
         obj = { id: null, nickname: null, type: null, channelType: null, order: null, parentId: null };
         obj[0] = tmp6;
         let nickname = null;
-        if ("" !== tmp23.nickname) {
-          nickname = tmp23.nickname;
+        if ("" !== tmp22.nickname) {
+          nickname = tmp22.nickname;
         }
         obj[1] = nickname;
-        ({ type: obj2[2], channelType } = tmp23);
+        ({ type: obj2[2], channelType } = tmp22);
         let value;
         if (channelType != null) {
           value = channelType.value;
         }
         obj[3] = value;
-        obj[4] = tmp23.position;
-        let tmp10 = closure_4;
+        obj[4] = tmp22.position;
+        let tmp10 = closure_5;
         let parentId = null;
-        if (tmp23.parentId !== closure_4) {
-          parentId = tmp23.parentId;
+        if (tmp22.parentId !== closure_5) {
+          parentId = tmp22.parentId;
         }
         obj[5] = parentId;
         obj[tmp6] = obj;
@@ -80,26 +80,25 @@ function initializeFromUserSettings() {
   }
   let flag2 = flag !== flag;
   if (!flag2) {
-    flag2 = c10 !== tmp13;
+    flag2 = c11 !== tmp13;
   }
   if (!flag2) {
-    flag2 = c11 !== tmp17;
+    flag2 = closure_2 !== value;
   }
   if (!flag2) {
     flag2 = !apply.isEqual(obj, obj);
     const obj4 = apply;
   }
   if (flag2) {
-    c10 = tmp13;
-    c11 = tmp17;
+    c11 = tmp13;
+    closure_2 = value;
     flag2 = true;
   }
   return flag2;
 }
-({ ChannelTypes: c5, FAVORITES: closure_6 } = ME);
-let closure_7 = {};
-let c8 = 0;
-let c9 = false;
+({ ChannelTypes: closure_6, FAVORITES: error } = ME);
+let closure_8 = {};
+let c9 = 0;
 let c10 = false;
 let c11 = false;
 class FavoriteStore extends Store {
@@ -112,23 +111,23 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, initializeFromUserSettings);
 };
 prototype["getFavoriteChannels"] = function getFavoriteChannels() {
-  return closure_7;
+  return closure_8;
 };
 Object.defineProperty(prototype, "favoriteGuildMuted", {
   get: function favoriteGuildMuted() {
-    return c9;
+    return c10;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "favoriteGuildEnabled", {
   get: function favoriteGuildEnabled() {
-    return c10;
+    return c11;
   },
   set: undefined
 });
-Object.defineProperty(prototype, "favoriteGuildExplicitlyHidden", {
-  get: function favoriteGuildExplicitlyHidden() {
-    return c11;
+Object.defineProperty(prototype, "favoriteGuildVisibleSetting", {
+  get: function favoriteGuildVisibleSetting() {
+    return closure_2;
   },
   set: undefined
 });
@@ -167,7 +166,7 @@ prototype["getCategoryRecord"] = function getCategoryRecord(id) {
       obj[1] = nickname;
       obj[2] = constants.GUILD_CATEGORY;
       obj[3] = dependencyMap[id].order;
-      obj[4] = closure_6;
+      obj[4] = closure_7;
       tmp = createChannelRecord(obj);
       const tmp7 = createChannelRecord;
     }
@@ -186,7 +185,7 @@ prototype["getFavoritesCount"] = function getFavoritesCount() {
   return Object.keys(this.getFavoriteChannels()).length;
 };
 prototype["getFavoritesCountAgainstLimit"] = function getFavoritesCountAgainstLimit() {
-  return c8;
+  return c9;
 };
 prototype["hasStoredFavorites"] = function hasStoredFavorites() {
   return !apply.isEmpty(this.getFavoriteChannels());

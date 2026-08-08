@@ -58,7 +58,7 @@ obj1[2] = function handler(args) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -119,7 +119,7 @@ obj1[2] = function handler(args) {
                 obj3.playSound(outer1_1, id.id, items);
               }
               c3 = 3;
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             } else {
               const obj4 = { errorCode: null };
               obj4[0] = outer1_6.INVALID_PERMISSIONS;

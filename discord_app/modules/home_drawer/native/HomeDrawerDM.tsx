@@ -32,8 +32,8 @@ function HomeDrawerDMExpandedChildren(channel) {
     let tmp2 = null;
     if (null != channel) {
       if (stateFromStores1(tmp.type)) {
-        let channelName = channel(4492).computeChannelName(tmp, outer1_8, memo);
-        const obj = channel(4492);
+        let channelName = channel(4494).computeChannelName(tmp, outer1_8, memo);
+        const obj = channel(4494);
       } else {
         channelName = null;
       }
@@ -42,9 +42,9 @@ function HomeDrawerDMExpandedChildren(channel) {
     return tmp2;
   });
   const obj2 = channel(589);
-  const tmp3 = useMessagePreview(channel, { unread: channel(15381).useBaseChannelUnreadBadgeState(channel, false).unread });
+  const tmp3 = useMessagePreview(channel, { unread: channel(15456).useBaseChannelUnreadBadgeState(channel, false).unread });
   c4 = tmp3;
-  const obj3 = channel(15381);
+  const obj3 = channel(15456);
   const items2 = [updateUserGuildSettingsInternal];
   stateFromStores1 = channel(589).useStateFromStores(items2, () => outer1_7.getChannelMuteConfig(channel.guild_id, channel.id));
   const items3 = [stateFromStores1];
@@ -81,10 +81,10 @@ function HomeDrawerDMExpandedChildren(channel) {
       }
       let tmp5Result = dependencyMap;
       if (isTemporary) {
-        tmp5Result = tmp5(12494);
+        tmp5Result = tmp5(12564);
         let BellSlashIcon = tmp5Result.BellZIcon;
       } else {
-        BellSlashIcon = tmp5(9665).BellSlashIcon;
+        BellSlashIcon = tmp5(9730).BellSlashIcon;
       }
     } else {
       let obj = { style: null, children: null };
@@ -92,7 +92,7 @@ function HomeDrawerDMExpandedChildren(channel) {
       obj = { variant: "text-md/medium", style: null, lineClamp: 1, color: "text-default", children: null };
       obj[1] = _undefined.titleText;
       obj[4] = stateFromStores;
-      const items = [outer1_10(channel(4298).Text, obj), outer1_10(outer1_9, { size: "xs" })];
+      const items = [outer1_10(channel(4299).Text, obj), outer1_10(outer1_9, { size: "xs" })];
       obj[1] = items;
       return outer1_11(c4, obj);
     }
@@ -105,11 +105,11 @@ function HomeDrawerDMExpandedChildren(channel) {
       obj[1] = tmp;
       obj[4] = channel(3979).ChannelListLayoutTypes.COZY;
       obj[5] = memo.isMuted;
-      tmp2 = outer1_10(channel(9723).ChannelRowPreview, obj);
+      tmp2 = outer1_10(channel(9789).ChannelRowPreview, obj);
     }
     return tmp2;
   }, items5);
-  return callback(channel(15345).HomeDrawerSharedItem, { title, subtitle });
+  return callback(channel(15420).HomeDrawerSharedItem, { title, subtitle });
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles({ title: { flexDirection: "row", alignItems: "center", gap: 4 }, titleText: { flexShrink: 1 } });

@@ -35,9 +35,9 @@ function _fetchGuildHomeSettings() {
       const obj4 = { type: "GUILD_HOME_SETTINGS_FETCH_FAIL", guildId: null };
       obj4[1] = callback;
       obj2.dispatch(obj4);
-      lib = yield "T";
-      dependencyMap = callback(11591).settingsFromServer(lib.body);
-      const obj8 = callback(11591);
+      lib = yield "HermesInternal";
+      dependencyMap = callback(11657).settingsFromServer(lib.body);
+      const obj8 = callback(11657);
       const obj6 = { type: "GUILD_HOME_SETTINGS_FETCH_SUCCESS", guildId: null, homeSettings: null };
       obj6[1] = callback;
       obj6[2] = dependencyMap;
@@ -74,7 +74,7 @@ function _fetchNewMemberActions() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -128,8 +128,8 @@ function _fetchNewMemberActions() {
             return obj5;
           } else {
             lib = arg1;
-            dependencyMap = callback(11591).actionsFromServer(lib.body);
-            const obj11 = callback(11591);
+            dependencyMap = callback(11657).actionsFromServer(lib.body);
+            const obj11 = callback(11657);
             const obj6 = { type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS", guildId: null, memberActions: null };
             obj6[1] = callback;
             obj6[2] = dependencyMap;

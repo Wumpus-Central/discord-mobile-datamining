@@ -71,7 +71,7 @@ export default function ExistingUserAgeGate(onSuccess) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -181,7 +181,7 @@ export default function ExistingUserAgeGate(onSuccess) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -226,7 +226,7 @@ export default function ExistingUserAgeGate(onSuccess) {
             return obj;
           }
           c0 = 3;
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         } catch (tmp10) {
           c0 = tmp;
           throw tmp10;

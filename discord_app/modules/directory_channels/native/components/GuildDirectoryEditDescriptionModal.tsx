@@ -34,7 +34,7 @@ function GuildDirectoryEditDescription(entry) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -50,7 +50,7 @@ function GuildDirectoryEditDescription(entry) {
                 return obj;
               } else {
                 let closure_2 = tmp4;
-                let obj2 = outer1_2(11621);
+                let obj2 = outer1_2(11687);
                 dependencyMap = 1;
                 c4 = 1;
                 const obj1 = { value: null, done: false };
@@ -66,10 +66,10 @@ function GuildDirectoryEditDescription(entry) {
               obj2[0] = arg1;
               return obj2;
             } else {
-              obj = callback(11619);
+              obj = callback(11685);
               obj.close();
               c4 = 3;
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp15) {
             c4 = tmp;
@@ -94,7 +94,7 @@ function GuildDirectoryEditDescription(entry) {
   let obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = entry(1236).intl;
   obj1[4] = intl.format(entry(1236).t.w9tsNk, { guildName: entry.name });
-  obj[1] = callback(entry(4298).Text, obj1);
+  obj[1] = callback(entry(4299).Text, obj1);
   const items = [callback(closure_5, obj), ];
   const obj3 = {
     onSubmit(arg0, arg1) {
@@ -115,10 +115,10 @@ function GuildDirectoryEditDescription(entry) {
   obj3[1] = intl2.string(entry(1236).t["R3BPH+"]);
   obj3[2] = entry;
   obj3[3] = entry.channelId;
-  items[1] = callback(_onSubmit(11622), obj3);
+  items[1] = callback(_onSubmit(11688), obj3);
   obj[2] = items;
   obj[2] = callback2(closure_6, obj);
-  return callback(entry(5327).SafeAreaPaddingView, obj);
+  return callback(entry(5328).SafeAreaPaddingView, obj);
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);

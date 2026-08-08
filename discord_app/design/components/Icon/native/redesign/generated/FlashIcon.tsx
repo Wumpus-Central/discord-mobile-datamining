@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/FlashIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/12220_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/12287_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

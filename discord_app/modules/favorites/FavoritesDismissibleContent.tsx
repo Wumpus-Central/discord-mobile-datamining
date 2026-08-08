@@ -27,14 +27,14 @@ export const useFavoritesIntroPopoverDismissibleContent = function useFavoritesI
   }
   let obj = useFavoritesGuildConfig;
   const isFreemium = obj.useFavoritesGuildConfig({ location: "FavoritesDismissibleContent" }).isFreemium;
-  let tmpResult = tmp(5962);
+  let tmpResult = tmp(6022);
   if (tmp3) {
     if (flag) {
       if (tmp4) {
         const items = [tmp(1358).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO];
       }
       [tmp10, tmp11] = callback(tmp6([]), 2);
-      tmpResult = tmp(5962);
+      tmpResult = tmp(6022);
       if (tmp10 === tmp(1358).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) {
         const items1 = [tmp(1358).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
         let items2 = items1;
@@ -53,12 +53,12 @@ export const useFavoritesMenuItemPopoverDismissibleContent = function useFavorit
   let tmp12;
   let obj = useFavoritesGuildConfig;
   const isFreemium = obj.useFavoritesGuildConfig({ location: "FavoritesDismissibleContent" }).isFreemium;
-  let tmpResult = tmp(5963);
+  let tmpResult = tmp(6023);
   let first = callback(tmpResult.useDangerouslyPeekDismissibleContents(items1), 1)[0];
   if (first == null) {
     first = null;
   }
-  tmpResult = tmp(5962);
+  tmpResult = tmp(6022);
   if (tmp3) {
     if (hasItem) {
       if (first === tmp(1358).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM) {

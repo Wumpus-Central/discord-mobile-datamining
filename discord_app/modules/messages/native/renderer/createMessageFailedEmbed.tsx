@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/renderer/createMessageFailedEmbed.tsx
 import { MessageFailureState } from "Changeset";
 import { MessageEmbedTypes } from "ME";
-import { registerAsset } from "../../../../../_runtime/08197_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/08198_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08257_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08258_registerAsset.js";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { frozen } from "EmbedUtils.tsx";
 
@@ -34,8 +34,8 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
       let str = "";
       if (0 !== uploaderFile.currentSize) {
         const _HermesInternal = HermesInternal;
-        str = " (" + tmp6(4854).sizeString(uploaderFile.currentSize) + ")";
-        const tmp6Result = tmp6(4854);
+        str = " (" + tmp6(4856).sizeString(uploaderFile.currentSize) + ")";
+        const tmp6Result = tmp6(4856);
       }
       obj[3] = "" + str;
       obj[4] = colors.embedBodyTextColor;

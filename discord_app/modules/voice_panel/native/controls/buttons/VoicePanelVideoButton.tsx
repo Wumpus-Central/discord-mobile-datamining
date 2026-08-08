@@ -22,9 +22,9 @@ function VideoButtonRive(arg0) {
   }
   obj[1] = str;
   if (isVideoEnabled) {
-    let VideoSlashIcon = tmp3(7654).VideoIcon;
+    let VideoSlashIcon = tmp3(7714).VideoIcon;
   } else {
-    VideoSlashIcon = tmp3(12254).VideoSlashIcon;
+    VideoSlashIcon = tmp3(12321).VideoSlashIcon;
   }
   obj[2] = <VideoSlashIcon color={color} />;
   obj[1] = jsx(ManaContext.CameraRive, { dataBinding: { fill: color, on: isVideoEnabled }, defaultViewModelInstance: null, fallback: null });

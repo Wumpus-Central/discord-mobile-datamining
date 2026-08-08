@@ -20,5 +20,5 @@ export default function Label(style) {
       AccessibilityAnnouncer.announce(tmp);
     }
   }, items);
-  return jsx(nodeText(4298).Text, { style: style.style, variant: "text-xs/medium", color: "text-feedback-critical", children });
+  return jsx(nodeText(4299).Text, { style: style.style, variant: "text-xs/medium", color: "text-feedback-critical", children });
 };

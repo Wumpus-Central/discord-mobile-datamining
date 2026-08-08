@@ -9,7 +9,7 @@ obj[0] = createCacheKey.createStyles((arg0) => {
   if (arg0) {
     let diff = NAV_BAR_HEIGHT;
   } else {
-    diff = NAV_BAR_HEIGHT - tmp(5266).STATUS_BAR_HEIGHT;
+    diff = NAV_BAR_HEIGHT - tmp(5267).STATUS_BAR_HEIGHT;
   }
   let obj = { marginTop: diff, marginLeft: null, marginRight: null, paddingBottom: null, flex: 1, flexDirection: "column", justifyContent: "space-between", alignItems: "stretch" };
   const space = Themes.space;

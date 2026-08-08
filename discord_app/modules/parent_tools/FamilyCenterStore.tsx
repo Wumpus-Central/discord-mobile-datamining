@@ -555,7 +555,7 @@ prototype["loadCache"] = function loadCache() {
       let tmp2;
       let tmp3;
       [tmp2, tmp3] = callback(str.split(":"), 2);
-      let obj = _undefined(6992);
+      let obj = _undefined(7052);
       const result = obj.displayTypeFromString(tmp2);
       let tmp5 = arg0;
       if (undefined !== result) {
@@ -744,7 +744,7 @@ prototype["isCurrentUserInRestrictedHours"] = function isCurrentUserInRestricted
   } else {
     return false;
   }
-  obj = prototype(6993);
+  obj = prototype(7053);
 };
 FamilyCenterStore.displayName = "FamilyCenterStore";
 FamilyCenterStore.LATEST_SNAPSHOT_VERSION = 3;

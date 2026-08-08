@@ -114,7 +114,7 @@ function _saveRoleSettings() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -135,7 +135,7 @@ function _saveRoleSettings() {
                 c18 = 0;
                 let num3 = 3;
                 c21 = 3;
-                return { value: "T", done: null };
+                return { value: "HermesInternal", done: null };
               } else {
                 let tmp19 = closure_8;
                 throw closure_8;

@@ -25,13 +25,13 @@ const memoResult = importAllResult.memo((guildId) => {
   if (useIsUsingClientTheme()) {
     transparentBorder = tmp.transparentBorder;
   }
-  let obj = guildId(8331);
+  let obj = guildId(8391);
   obj = { style: null, children: null };
   const items = [noPadding ? tmp.containerNoPadding : tmp.container, obj.useClientThemesOverride()];
   obj[0] = items;
   if (renderIcon) {
     if (stageIcon) {
-      let VoiceNormalIcon = tmp4(4823).StageIcon;
+      let VoiceNormalIcon = tmp4(4825).StageIcon;
     }
     obj = { size: "sm", color: "channel-icon", style: null };
     obj[2] = tmp.redesignChannelIcon;
@@ -57,7 +57,7 @@ const memoResult = importAllResult.memo((guildId) => {
     obj[1] = items1;
     return tmp5(tmp6, obj);
   }
-  VoiceNormalIcon = tmp4(4827).VoiceNormalIcon;
+  VoiceNormalIcon = tmp4(4829).VoiceNormalIcon;
 });
 const result = require("jsxProd").fileFinishedImporting("modules/guild_sidebar/native/VoiceUserSummary.tsx");
 

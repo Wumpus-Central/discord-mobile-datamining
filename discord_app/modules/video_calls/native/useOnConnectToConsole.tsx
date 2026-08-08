@@ -16,7 +16,7 @@ export const onConnectToConsole = function onConnectToConsole(channel, closure_0
   const result = UNSAFE_isDismissibleContentDismissed.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.DONUT_MOBILE_NUX);
   if (closure_0.twoWayLink) {
     if (!closure_0.revoked) {
-      tmp(10811).beginConsoleTransfer(channel, closure_0.type);
+      tmp(10877).beginConsoleTransfer(channel, closure_0.type);
     }
   }
   const type = closure_0.type;

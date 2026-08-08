@@ -22,7 +22,7 @@ export const questFromServerV2 = function questFromServerV2(id) {
   obj[10] = tmp3;
   obj[11] = id.share_policy;
   const obj6 = _rewardRedemptionInstructionsFromServer;
-  obj[12] = tmp(7114).questCtaConfigFromServer(id.cta_config);
+  obj[12] = tmp(7174).questCtaConfigFromServer(id.cta_config);
   return obj;
 };
 export const questCosponsorMetadataFromServer = function questCosponsorMetadataFromServer(cosponsor_metadata) {

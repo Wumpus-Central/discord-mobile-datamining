@@ -22,7 +22,7 @@ function _fetchWelcomeScreen() {
       c4 = 0;
       let obj4 = lib(709);
       obj4.dispatch({ type: "WELCOME_SCREEN_FETCH_FAIL" });
-      lib = yield "T";
+      lib = yield "HermesInternal";
       const obj = lib(709);
       obj4 = { type: "WELCOME_SCREEN_FETCH_SUCCESS", guildId: null, welcomeScreen: null };
       obj4[1] = callback;

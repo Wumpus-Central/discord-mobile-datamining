@@ -29,15 +29,15 @@ export default function ParentalConsentConnectionScreen() {
   let tmp17;
   let tmp27;
   const tmp = createCacheKey();
-  let obj = onTaskComplete(16870);
+  let obj = onTaskComplete(16947);
   onTaskComplete = obj.useOnTaskComplete();
-  let obj1 = onTaskComplete(16869);
-  let obj2 = onTaskComplete(11257);
+  let obj1 = onTaskComplete(16946);
+  let obj2 = onTaskComplete(11323);
   const getLinkCode = obj2.useFamilyCenterActions().getLinkCode;
-  getLinkCode(4728)(() => {
+  getLinkCode(4730)(() => {
     onTaskComplete(tmp21[14]).clearWarning();
   });
-  getLinkCode(14055)(getLinkCode);
+  getLinkCode(14125)(getLinkCode);
   let component = obj1.useSafetyFlowTask().task.ui_component.component;
   if (component == null) {
     component = {};
@@ -51,9 +51,9 @@ export default function ParentalConsentConnectionScreen() {
     str = component.link_code_expires_at;
   }
   const arr = Array.isArray(component.pending_requests) ? component.pending_requests : [];
-  let tmp2Result = tmp2(7277);
+  let tmp2Result = tmp2(7337);
   const pendingRequestCount = tmp2Result.usePendingRequestCount();
-  tmp2Result = tmp2(7277);
+  tmp2Result = tmp2(7337);
   const hasActiveParentLinks = tmp2Result.useHasActiveParentLinks();
   const items = [freshTeenActivityWithMap];
   const stateFromStores = onTaskComplete(589).useStateFromStores(items, () => authStore.getLinkedUsers());
@@ -112,8 +112,8 @@ export default function ParentalConsentConnectionScreen() {
     }
   }, items5);
   const tmp2Result5 = onTaskComplete(589);
-  const derivedPendingRequests = onTaskComplete(16880).useDerivedPendingRequests(arr, stateFromStores1);
-  const tmp2Result6 = onTaskComplete(16880);
+  const derivedPendingRequests = onTaskComplete(16957).useDerivedPendingRequests(arr, stateFromStores1);
+  const tmp2Result6 = onTaskComplete(16957);
   [tmp27, useDerivedPendingRequests] = tmp14(obj9.useState(false), 2);
   const items6 = [onTaskComplete];
   const items7 = [tmp21, parsed, getLinkCode];
@@ -129,7 +129,7 @@ export default function ParentalConsentConnectionScreen() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -207,7 +207,7 @@ export default function ParentalConsentConnectionScreen() {
     obj.openLazy(onTaskComplete(tmp21[26])(tmp21[25], tmp21.paths), outer1_9, obj);
   }, items7);
   obj = { title: null, subtitle: null, subtitleColor: "text-muted", submitting: null, footer: null, children: null };
-  let tmp5Result = tmp5(16873);
+  let tmp5Result = tmp5(16950);
   let intl = tmp2(1236).intl;
   obj[0] = intl.string(getLinkCode(2546).dMMSA0);
   let intl2 = tmp2(1236).intl;
@@ -227,7 +227,7 @@ export default function ParentalConsentConnectionScreen() {
   obj[3] = tmp27;
   obj2 = { spacing: null, children: null };
   obj2[0] = getLinkCode(712).space.PX_16;
-  const items8 = [closure_10(getLinkCode(16881), {}), ];
+  const items8 = [closure_10(getLinkCode(16958), {}), ];
   let tmp30Result = tmp16;
   if (tmp16) {
     let obj3 = { variant: "primary", text: null, disabled: null, loading: null, onPress: null };
@@ -240,12 +240,12 @@ export default function ParentalConsentConnectionScreen() {
     obj3[2] = tmp38;
     obj3[3] = tmp27;
     obj3[4] = callback1;
-    tmp30Result = tmp30(tmp2(10199).ModalActionButton, obj3);
+    tmp30Result = tmp30(tmp2(10265).ModalActionButton, obj3);
   }
   const tmp14Result = tmp14(obj9.useState(false), 2);
   items8[1] = tmp30Result;
   obj2[1] = items8;
-  obj[4] = closure_10(onTaskComplete(11267).ModalFooter, { children: closure_11(onTaskComplete(4710).Stack, obj2) });
+  obj[4] = closure_10(onTaskComplete(11333).ModalFooter, { children: closure_11(onTaskComplete(4712).Stack, obj2) });
   const obj5 = { spacing: null, style: null, children: null };
   obj5[0] = getLinkCode(712).space.PX_16;
   obj5[1] = tmp.body;
@@ -257,7 +257,7 @@ export default function ParentalConsentConnectionScreen() {
     obj6[3] = getLinkCode;
     obj6[4] = callback;
     obj6[5] = callback2;
-    tmp30Result = tmp30(tmp5(16882), obj6);
+    tmp30Result = tmp30(tmp5(16959), obj6);
   } else {
     const obj7 = { style: null, children: null };
     obj7[0] = tmp.cardSection;
@@ -265,16 +265,16 @@ export default function ParentalConsentConnectionScreen() {
     obj8[0] = tmp.cardTitle;
     const intl4 = tmp2(1236).intl;
     obj8[3] = intl4.string(tmp5(2284).pojgfk);
-    const items9 = [tmp30(tmp2(4298).Text, obj8), ];
+    const items9 = [tmp30(tmp2(4299).Text, obj8), ];
     obj9 = { shareActions: "full", linkCode: null, expiresAt: null, onRefresh: null };
     obj9[1] = tmp21;
     obj9[2] = parsed;
     obj9[3] = getLinkCode;
-    items9[1] = tmp30(tmp2(14056).ConnectGuardianCard, obj9);
+    items9[1] = tmp30(tmp2(14126).ConnectGuardianCard, obj9);
     obj7[1] = items9;
     tmp30Result = tmp36(View, obj7);
   }
   obj5[2] = tmp30Result;
-  obj[5] = closure_10(onTaskComplete(4710).Stack, obj5);
+  obj[5] = closure_10(onTaskComplete(4712).Stack, obj5);
   return closure_10(tmp5Result, obj);
 };

@@ -4,7 +4,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import { n } from "../../../../../_runtime/00689_n.js";
-import { LinearGradient } from "../../../../../_runtime/04723_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04725_LinearGradient.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { set } from "../../../../utils/PlatformUtils.tsx";
 import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
@@ -66,8 +66,8 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetActions
   let dependencyMap;
   let importAllResult;
   let closure_4;
-  let obj = onHeightChange(4112);
-  const gradientValue = obj.useGradientValue(onHeightChange(4112).GradientPercentage.END);
+  let obj = onHeightChange(4118);
+  const gradientValue = obj.useGradientValue(onHeightChange(4118).GradientPercentage.END);
   let hexResult = null;
   if (null != gradientValue) {
     let obj1 = n(gradientValue);
@@ -137,9 +137,9 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetActions
       }
       obj[2] = str;
       obj[3] = accessibilityLabel.text;
-      items[1] = outer1_6(onHeightChange(4298).Text, obj);
+      items[1] = outer1_6(onHeightChange(4299).Text, obj);
       obj[6] = items;
-      return outer1_7(onHeightChange(4844).PressableOpacity, obj, arg1);
+      return outer1_7(onHeightChange(4846).PressableOpacity, obj, arg1);
     })
   });
   items2[1] = callback(closure_5, obj1);

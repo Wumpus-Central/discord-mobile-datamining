@@ -737,7 +737,7 @@ function ConnectedUserAccountOptions(account) {
       _undefined(closure_0);
       outer1_1(outer1_2[40]).setFriendSync(account.type, account.id, closure_0);
     };
-    tmp12 = callback2(account(7907).FormSwitchRow, obj);
+    tmp12 = callback2(account(7967).FormSwitchRow, obj);
   }
   let tmp15;
   if (set2.has(account.type)) {
@@ -751,7 +751,7 @@ function ConnectedUserAccountOptions(account) {
       callback3(closure_0);
       outer1_1(outer1_2[40]).setShowActivity(account.type, account.id, closure_0);
     };
-    tmp15 = callback2(account(7907).FormSwitchRow, obj);
+    tmp15 = callback2(account(7967).FormSwitchRow, obj);
   }
   let tmp18;
   if (true === value.hasMetadata) {
@@ -772,7 +772,7 @@ function ConnectedUserAccountOptions(account) {
       }
       const result = outer1_1(outer1_2[40]).setMetadataVisibility(type, id, num);
     };
-    tmp18 = callback2(account(7907).FormSwitchRow, obj2);
+    tmp18 = callback2(account(7967).FormSwitchRow, obj2);
   }
   const obj3 = { style: tmp.accountConnectedPrivacyOptionsContainer, children: null };
   const obj4 = { label: null, value: null, onValueChange: null };
@@ -791,7 +791,7 @@ function ConnectedUserAccountOptions(account) {
     }
     outer1_1(outer1_2[40]).setVisibility(type, id, num);
   };
-  const items = [callback2(account(7907).FormSwitchRow, obj4), tmp18, tmp15, tmp12];
+  const items = [callback2(account(7967).FormSwitchRow, obj4), tmp18, tmp15, tmp12];
   obj3[1] = items;
   return callback3(closure_8, obj3);
 }
@@ -863,9 +863,9 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
     useState = undefined;
     c14 = undefined;
     useState = undefined;
-    f86399 = undefined;
+    f86687 = undefined;
     useState = undefined;
-    f86400 = undefined;
+    f86688 = undefined;
     c19 = undefined;
     _handleAssignRole = function _handleAssignRole() {
       const self = this;
@@ -881,7 +881,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -914,7 +914,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
               return obj;
             } else {
               c0 = 3;
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp11) {
             c0 = tmp;
@@ -986,7 +986,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
       }
       return tmp2;
     }), 2);
-    [tmp26, f86399] = tmp25;
+    [tmp26, f86687] = tmp25;
     tmp27 = onCloseModal(CHECKS_REQUIRED.useState(null), 2);
     [arr6, useState] = tmp27;
     tmp28 = role;
@@ -995,7 +995,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
     items3 = [];
     items3[0] = useState;
     stateFromStores3 = obj4.useStateFromStores(items3, () => member.getMember(guildId, stateFromStores2));
-    f86400 = stateFromStores3;
+    f86688 = stateFromStores3;
     obj5 = require("initialize");
     items4 = [];
     items4[0] = useState;

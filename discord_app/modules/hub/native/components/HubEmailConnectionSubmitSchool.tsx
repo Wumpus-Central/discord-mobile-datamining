@@ -2,7 +2,7 @@
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import set from "set";
-import get_ActivityIndicator from "module_8405";
+import get_ActivityIndicator from "module_8465";
 import { HubEmailConnectionSteps } from "HubEmailConnectionSteps";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -63,7 +63,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

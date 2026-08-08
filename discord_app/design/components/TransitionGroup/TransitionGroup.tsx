@@ -13,11 +13,11 @@ class TransitionGroup {
     getItemKey = global.getItemKey;
     wrapChildren = global.wrapChildren;
     if (wrapChildren === undefined) {
-      wrapChildren = f75393;
+      wrapChildren = f75563;
     }
     lazyCleanUpDelay = global.lazyCleanUpDelay;
     c4 = undefined;
-    f75393 = undefined;
+    f75563 = undefined;
     useRef = undefined;
     useMemo = undefined;
     c4 = require("module_4294967295");
@@ -27,7 +27,7 @@ class TransitionGroup {
         clearTimeout(tmp.current);
       }
     }, []);
-    f75393 = items(renderItem.useState(c4), 2)[1];
+    f75563 = items(renderItem.useState(c4), 2)[1];
     useRef = renderItem.useRef(null);
     items = [, , , ];
     items[0] = items;

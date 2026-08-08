@@ -1,7 +1,7 @@
 // discord_app/modules/markup/native/SpoilerIcon.tsx
 import "noop";
 import jsxProd from "jsxProd";
-import { inlineStyles } from "../../../../_runtime/07775_inlineStyles.js";
+import { inlineStyles } from "../../../../_runtime/07835_inlineStyles.js";
 
 let c3;
 let obj1;

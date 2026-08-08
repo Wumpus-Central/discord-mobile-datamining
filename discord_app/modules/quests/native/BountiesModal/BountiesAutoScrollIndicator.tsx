@@ -3,7 +3,7 @@ import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { CircularProgress } from "../../../../../_runtime/14229_CircularProgress.js";
+import { CircularProgress } from "../../../../../_runtime/14299_CircularProgress.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { ArrowSmallUpIcon } from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallUpIcon.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
@@ -16,7 +16,7 @@ let closure_6;
 const require = arg1;
 function BouncingArrow(children) {
   let sharedValue;
-  sharedValue = sharedValue(4162).useSharedValue(0);
+  sharedValue = sharedValue(4036).useSharedValue(0);
   let items = [sharedValue];
   const effect = React.useEffect(() => {
     let obj = sharedValue(outer1_2[3]);
@@ -32,7 +32,7 @@ function BouncingArrow(children) {
     const result = sharedValue.set(obj.withRepeat(obj2.withSequence(withTimingResult, sharedValue(outer1_2[4]).withTiming(0, obj)), -1));
     return () => outer1_0(outer1_2[3]).cancelAnimation(closure_0);
   }, items);
-  let obj = sharedValue(4162);
+  let obj = sharedValue(4036);
   const fn = function l() {
     let obj = { transform: null };
     obj = { translateY: sharedValue.get() };
@@ -43,7 +43,7 @@ function BouncingArrow(children) {
   fn.__closure = { translateY: sharedValue };
   fn.__workletHash = 10126349088819;
   fn.__initData = closure_7;
-  const style = sharedValue(4162).useAnimatedStyle(fn);
+  const style = sharedValue(4036).useAnimatedStyle(fn);
   return callback(ReanimatedRexport.View, { style, children: children.children });
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

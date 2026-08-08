@@ -2,11 +2,11 @@
 import "noop";
 import get_ActivityIndicator from "set";
 import jsxProd from "jsxProd";
-import { registerAsset } from "../../../../../_runtime/04251_registerAsset.js";
-import { LinearGradient } from "../../../../../_runtime/04723_LinearGradient.js";
-import { registerAsset } from "../../../../../_runtime/05381_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/05947_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/05952_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/04252_registerAsset.js";
+import { LinearGradient } from "../../../../../_runtime/04725_LinearGradient.js";
+import { registerAsset } from "../../../../../_runtime/05382_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/06007_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/06012_registerAsset.js";
 import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";

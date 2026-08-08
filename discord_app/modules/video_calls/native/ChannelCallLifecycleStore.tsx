@@ -8,9 +8,9 @@ let c5 = false;
 let c6 = false;
 let c7 = false;
 let obj = {};
-obj = { x: "Array", y: "Promise", width: "y", height: "T", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: "", isInitialized: false, isVisible: "isLoadedFromServer" };
+obj = { x: "Array", y: "flex", width: "Array", height: "justifyContent", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: null, isInitialized: null, isVisible: true };
 obj[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = obj;
-obj = { x: "Array", y: "Promise", width: "y", height: "T", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: "", isInitialized: false, isVisible: "isLoadedFromServer" };
+obj = { x: "Array", y: "flex", width: "Array", height: "justifyContent", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: null, isInitialized: null, isVisible: true };
 obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = obj;
 let c10 = true;
 class ChannelCallLifecycleStore extends Store {

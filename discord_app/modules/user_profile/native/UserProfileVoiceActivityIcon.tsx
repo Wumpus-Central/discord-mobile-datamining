@@ -31,23 +31,23 @@ export default function UserProfileVoiceActivityIcon(channel) {
         if (tmp6) {
           obj = {};
           const merged1 = Object.assign(merged);
-          let tmp8Result = jsx(tmp2(4822).StageLockIcon, {});
+          let tmp8Result = jsx(tmp2(4824).StageLockIcon, {});
         }
         return tmp8Result;
       }
       if (isGuildStageVoiceResult) {
         obj = {};
         const merged2 = Object.assign(merged);
-        tmp8Result = jsx(tmp2(4823).StageIcon, {});
+        tmp8Result = jsx(tmp2(4825).StageIcon, {});
       } else if (channel.isNSFW()) {
         const obj1 = {};
         const merged3 = Object.assign(merged);
-        tmp8Result = tmp8(tmp2(4825).VoiceWarningIcon, obj1);
+        tmp8Result = tmp8(tmp2(4827).VoiceWarningIcon, obj1);
       } else {
         if (tmp6) {
-          let VoiceNormalIcon = tmp2(4824).VoiceLockIcon;
+          let VoiceNormalIcon = tmp2(4826).VoiceLockIcon;
         } else {
-          VoiceNormalIcon = tmp2(4827).VoiceNormalIcon;
+          VoiceNormalIcon = tmp2(4829).VoiceNormalIcon;
         }
         const obj2 = {};
         const merged4 = Object.assign(merged);
@@ -56,5 +56,5 @@ export default function UserProfileVoiceActivityIcon(channel) {
     }
   }
   const merged5 = Object.assign(merged);
-  return jsx(channel(8338).PhoneCallIcon, {});
+  return jsx(channel(8398).PhoneCallIcon, {});
 };

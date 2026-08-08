@@ -554,7 +554,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
         let c3;
         c1 = tmp2;
         ({ url: c0, width: c1, height: c2, type: c3 } = lib.nativeEvent);
-        yield "PX_8";
+        yield "ct";
         if (1 === tmp5) {
           if (arg0 === 1) {
             let styles = 3;
@@ -688,7 +688,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
           obj6[0] = getState.props.current.channel;
           obj6[1] = outer1_28;
           obj6[2] = function onDismissKeyboard() {
-            return callback(4160).dismissKeyboard();
+            return callback(4166).dismissKeyboard();
           };
           obj6[3] = function onRestoreKeyboard() {
             return closure_12.handleToggleKeyboard({ type: outer1_0(outer1_3[48]).KeyboardTypes.SYSTEM });
@@ -707,7 +707,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
           obj7[0] = getState.props.current.channel;
           obj7[1] = outer1_32.CAMERA_BUTTON;
           obj7[2] = function onDismissKeyboard() {
-            return callback(4160).dismissKeyboard();
+            return callback(4166).dismissKeyboard();
           };
           obj7[3] = function onRestoreKeyboard() {
             return closure_12.handleToggleKeyboard({ type: outer1_0(outer1_3[48]).KeyboardTypes.SYSTEM });

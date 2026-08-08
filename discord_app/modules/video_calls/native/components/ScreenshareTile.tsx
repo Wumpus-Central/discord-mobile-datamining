@@ -4,8 +4,8 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { NOOP } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { Directions } from "../../../../../_runtime/05426_Directions.js";
-import { registerAsset } from "../../../../../_runtime/10615_registerAsset.js";
+import { LegacyBaseButton } from "../../../../../_runtime/05427_LegacyBaseButton.js";
+import { registerAsset } from "../../../../../_runtime/10681_registerAsset.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
@@ -50,5 +50,5 @@ export default function ScreenShareTile(onSingleTap) {
   items[2] = callback(Text.Text, obj2);
   obj[1] = items;
   obj[1] = callback2(closure_3, obj);
-  return callback(Directions.GestureDetector, obj);
+  return callback(LegacyBaseButton.GestureDetector, obj);
 };

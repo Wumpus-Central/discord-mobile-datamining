@@ -19,12 +19,12 @@ function ApplicationStatusIcon(status) {
     let obj = { size: "sm", color: null, secondaryColor: null };
     obj[1] = Themes.colors.STATUS_POSITIVE_BACKGROUND;
     obj[2] = Themes.colors.STATUS_POSITIVE_TEXT;
-    return callback(tmp(4263).CircleCheckIcon, obj);
-  } else if (tmp(4121).GuildJoinRequestApplicationStatuses.REJECTED === status) {
+    return callback(tmp(4264).CircleCheckIcon, obj);
+  } else if (tmp(4127).GuildJoinRequestApplicationStatuses.REJECTED === status) {
     obj = { size: "sm", color: null, secondaryColor: null };
     obj[1] = Themes.colors.ICON_FEEDBACK_CRITICAL;
     obj[2] = Themes.colors.WHITE;
-    return callback(tmp(5936).CircleXIcon, obj);
+    return callback(tmp(5996).CircleXIcon, obj);
   } else {
     return null;
   }
@@ -56,7 +56,7 @@ const memoResult = importAllResult.memo((arg0) => {
     obj[2] = tmp.label;
     const intl = tmp2(1236).intl;
     obj[3] = intl.string(tmp2(1236).t["hxa+G3"]);
-    let items = [callback(tmp2(4298).Text, obj), ];
+    let items = [callback(tmp2(4299).Text, obj), ];
     let obj1 = { style: null, children: null };
     obj1[0] = tmp.container;
     obj1[1] = otherGuildJoinRequestsForUser.map((createdAt) => {

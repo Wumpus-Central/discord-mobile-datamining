@@ -48,7 +48,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
           obj[0] = obj;
           obj[1] = analyticsLocations;
           obj[2] = callback ? outer1_8.TIER_0 : outer1_8.TIER_2;
-          callback2(6826)(obj, dependencyMap);
+          callback2(6886)(obj, dependencyMap);
         }
       }
     }
@@ -58,15 +58,15 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
         if (result) {
           let resolved = Promise.resolve();
         } else {
-          resolved = callback(4621).fetchSubscriptions();
-          const obj2 = callback(4621);
+          resolved = callback(4623).fetchSubscriptions();
+          const obj2 = callback(4623);
         }
         const items = [resolved, ];
         if (isFetchingOfferResult) {
           let resolved1 = Promise.resolve();
         } else {
-          resolved1 = callback(7532).fetchUserOffer("usePremiumFeatureUpsellGetNitro");
-          const obj3 = callback(7532);
+          resolved1 = callback(7592).fetchUserOffer("usePremiumFeatureUpsellGetNitro");
+          const obj3 = callback(7592);
         }
         items[1] = resolved1;
         const allPromises = Promise.all(items);
@@ -92,7 +92,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
     }
     callback2();
     tmp5 = onPress.hasFetchedOffer() && !obj.hasAnyUnexpiredOffer();
-    const bestActiveInput = callback(4160).getBestActiveInput();
+    const bestActiveInput = callback(4166).getBestActiveInput();
     if (bestActiveInput != null) {
       bestActiveInput.closeCustomKeyboard();
     }

@@ -22,15 +22,15 @@ function AppealSignalRadioRow(signal) {
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   obj = { style: signal.rowStyle, label: null, onPress: null, trailing: null, accessibilityRole: null, accessibilityState: null };
   obj = { text: null };
-  obj[0] = signal(7744).getAppealSignalDisplayText(signal);
-  obj[1] = callback(signal(7907).FormRow.Label, obj);
+  obj[0] = signal(7804).getAppealSignalDisplayText(signal);
+  obj[1] = callback(signal(7967).FormRow.Label, obj);
   obj[2] = function onPress() {
     return callback(signal);
   };
-  obj[3] = callback(signal(7907).FormRow.Radio, { selected });
+  obj[3] = callback(signal(7967).FormRow.Radio, { selected });
   obj[4] = accessibilityRole;
   obj[5] = accessibilityState;
-  return callback(signal(7907).FormRow, obj);
+  return callback(signal(7967).FormRow, obj);
 }
 ({ AppealIngestionSignal: c4, AppealIngestionSignalOrder: c5 } = SafetyHubView);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -62,10 +62,10 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
         let obj = callback(709);
         obj = { type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput };
         obj.dispatch(obj);
-        callback(4270).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+        callback(4271).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
       };
       obj[1] = function onClose() {
-        return callback(4270).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+        return callback(4271).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
       };
       _undefined(tmp2[11]).openLazy(isDsaEligible(tmp2[13])(tmp2[12], tmp2.paths), "AppealIngestionFreeTextAppealReasonActionSheet", obj);
       const tmpResult = _undefined(tmp2[11]);
@@ -73,27 +73,27 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   }
   const tmp = createCacheKey();
   c1 = tmp;
-  let obj = isDsaEligible(11219);
+  let obj = isDsaEligible(11285);
   dependencyMap = obj.useSafetyHubAppealSignal();
   const intl = isDsaEligible(1236).intl;
   const intl2 = isDsaEligible(1236).intl;
   const stringResult = intl.string(isDsaEligible(1236).t["C5q+pW"]);
   obj = { children: null };
-  const items = [callback(isDsaEligible(11234).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(isDsaEligible(1236).t.VEcRhw) }), ];
+  const items = [callback(isDsaEligible(11300).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(isDsaEligible(1236).t.VEcRhw) }), ];
   obj = { style: tmp.container, children: null };
   const obj1 = { style: tmp.form, children: null };
   const obj2 = { sectionBodyStyle: tmp.formSection, accessibilityRole: "radiogroup", children: null };
   obj2[2] = closure_5.map((signal) => outer1_6(outer1_9, { signal, selected: signal === closure_2, rowStyle: _undefined.formRow, onSelect: handleAppealSignalSelect }, "formrow-" + arg1));
-  const items1 = [callback(isDsaEligible(7907).FormSection, obj2), ];
+  const items1 = [callback(isDsaEligible(7967).FormSection, obj2), ];
   const obj3 = { style: tmp.disclaimer, children: null };
   const obj4 = { variant: "text-sm/normal", children: null };
   const intl3 = isDsaEligible(1236).intl;
   obj4[1] = intl3.format(isDsaEligible(1236).t["8k9GCW"], {});
-  obj3[1] = callback(isDsaEligible(4298).Text, obj4);
+  obj3[1] = callback(isDsaEligible(4299).Text, obj4);
   items1[1] = callback(handleAppealSignalSelect, obj3);
   obj1[1] = items1;
-  obj[1] = callback2(isDsaEligible(7907).Form, obj1);
+  obj[1] = callback2(isDsaEligible(7967).Form, obj1);
   items[1] = callback(handleAppealSignalSelect, obj);
   obj[0] = items;
-  return callback2(isDsaEligible(11234).AppealIngestionModalScreen, obj);
+  return callback2(isDsaEligible(11300).AppealIngestionModalScreen, obj);
 };

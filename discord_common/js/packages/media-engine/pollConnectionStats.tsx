@@ -32,7 +32,7 @@ export default function pollConnectionStats(on) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         while (true) {
@@ -68,7 +68,7 @@ export default function pollConnectionStats(on) {
               }
               let num5 = 3;
               c7 = 3;
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             }
           } else if (1 === tmp5) {
             let tmp14 = closure_4;

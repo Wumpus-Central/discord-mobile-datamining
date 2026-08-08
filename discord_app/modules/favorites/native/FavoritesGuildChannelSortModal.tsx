@@ -14,9 +14,9 @@ function FavoritesGuildChannelSortModal() {
     const items = [...closure_5];
     callback(table[5]).startReordering.apply(items);
     return () => {
-      callback(15193).stopReordering();
-      const obj = callback(15193);
-      callback(15193).terminate();
+      callback(15266).stopReordering();
+      const obj = callback(15266);
+      callback(15266).terminate();
     };
   }, []);
   const bottom = useSafeAreaInsets().bottom;
@@ -40,7 +40,7 @@ function FavoritesGuildChannelSortModal() {
     obj[0] = obj;
     return obj;
   }, items);
-  return jsx(bottom(5723).Navigator, { screens, initialRouteName: "FAVORITES_GUILD_CHANNEL_SORT" });
+  return jsx(bottom(5783).Navigator, { screens, initialRouteName: "FAVORITES_GUILD_CHANNEL_SORT" });
 }
 FavoritesGuildChannelSortModal = "FavoritesGuildChannelSortModal";
 const result = require("createChannelRecord").fileFinishedImporting("modules/favorites/native/FavoritesGuildChannelSortModal.tsx");

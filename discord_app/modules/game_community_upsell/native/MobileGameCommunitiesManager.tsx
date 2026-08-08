@@ -30,8 +30,8 @@ prototype["_fetchGameCommunities"] = function _fetchGameCommunities(result) {
   if (diff >= 86400000) {
     const dismissedGuildIds = store.getDismissedGuildIds();
     const _Array = Array;
-    const mobileGameCommunities = importAll(15313).fetchMobileGameCommunities(gameIdsForDetectedGames, Array.from(dismissedGuildIds), 6);
-    const obj3 = importAll(15313);
+    const mobileGameCommunities = importAll(15385).fetchMobileGameCommunities(gameIdsForDetectedGames, Array.from(dismissedGuildIds), 6);
+    const obj3 = importAll(15385);
   }
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {

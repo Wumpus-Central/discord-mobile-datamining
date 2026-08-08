@@ -65,7 +65,7 @@ prototype["ping"] = function ping() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -214,7 +214,7 @@ prototype["startWatchdog"] = function startWatchdog() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -234,7 +234,7 @@ prototype["startWatchdog"] = function startWatchdog() {
             closure_0 = undefined;
             c1 = undefined;
             if (null == outer1_0._timeoutId) {
-              if (null != outer1_1(16404)) {
+              if (null != outer1_1(16481)) {
                 dependencyMap = 1;
                 c3 = 1;
                 const obj1 = { value: null, done: false };
@@ -255,7 +255,7 @@ prototype["startWatchdog"] = function startWatchdog() {
               closure_0._enabled = true;
               if (closure_0._pingCompleted) {
                 let checkForStallReportResult;
-                obj = outer1_1(16404);
+                obj = outer1_1(16481);
                 if (obj != null) {
                   checkForStallReportResult = obj.checkForStallReport();
                 }
@@ -315,7 +315,7 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -334,7 +334,7 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
             let closure_0 = tmp2;
             closure_0 = undefined;
             if (null != outer1_0._cachedSession) {
-              let obj1 = outer1_0(6871);
+              let obj1 = outer1_0(6931);
               if (!obj1.isSessionExpired(outer1_0._cachedSession)) {
                 const uuid = outer1_0._cachedSession.uuid;
                 c3 = 3;
@@ -343,7 +343,7 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = outer1_0(6863).getSession();
+            obj1[0] = outer1_0(6923).getSession();
             return obj1;
           }
         } else if (arg0 === 1) {

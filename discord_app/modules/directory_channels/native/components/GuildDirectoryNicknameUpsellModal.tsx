@@ -2,10 +2,10 @@
 import GuildPrompts from "GuildPrompts";
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
-import get_ActivityIndicator from "module_8405";
+import get_ActivityIndicator from "module_8465";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildPrompts } from "GuildPrompts";
-import jsxProd from "module_11951";
+import jsxProd from "module_12017";
 import createCacheKey from "createCacheKey";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
@@ -133,7 +133,7 @@ function GuildDirectoryNicknameUpsell(arg0) {
       }
     }, 100);
   };
-  items2[2] = callback(tmp5(8405), obj5);
+  items2[2] = callback(tmp5(8465), obj5);
   items2[3] = callback(closure_6, { style: tmp.redesignGrowSpacing });
   const obj7 = { style: tmp.redesignButtonContainer, children: null };
   const obj8 = { size: "lg", text: null, onPress: null };

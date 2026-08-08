@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ImageLockIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/04794_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/04796_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

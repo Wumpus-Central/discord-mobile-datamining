@@ -20,7 +20,7 @@ function _initializeAndroidNotificationSettingsStore() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -46,7 +46,7 @@ function _initializeAndroidNotificationSettingsStore() {
               isIterable = 2;
               c4 = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = outer1_1(10707).getLightsEnabled();
+              obj1[0] = outer1_1(10773).getLightsEnabled();
               return obj1;
             }
             obj16 = outer1_0(500);
@@ -66,7 +66,7 @@ function _initializeAndroidNotificationSettingsStore() {
               return obj2;
             } else {
               callback = arg1;
-              let obj8 = callback2(10707);
+              let obj8 = callback2(10773);
               isIterable = 3;
               c4 = 1;
               const obj3 = { value: null, done: false };
@@ -85,7 +85,7 @@ function _initializeAndroidNotificationSettingsStore() {
               return obj4;
             } else {
               callback2 = arg1;
-              let obj5 = callback2(10707);
+              let obj5 = callback2(10773);
               isIterable = 4;
               c4 = 1;
               obj5 = { value: null, done: false };
@@ -104,7 +104,7 @@ function _initializeAndroidNotificationSettingsStore() {
               return obj6;
             } else {
               dependencyMap = arg1;
-              obj2 = callback2(10707);
+              obj2 = callback2(10773);
               isIterable = 5;
               c4 = 1;
               const obj7 = { value: null, done: false };
@@ -148,7 +148,7 @@ function _initializeAndroidNotificationSettingsStore() {
   }
   return applyArgumentsResult;
 }
-let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "Array", isVibrationsEnabled: "Promise", isSoundsEnabled: "y", isNotifyEveryTime: "T" }));
+let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "_desired", isVibrationsEnabled: "call", isSoundsEnabled: "paths", isNotifyEveryTime: "call" }));
 let result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx");
 
 export const initializeAndroidNotificationSettingsStore = function initializeAndroidNotificationSettingsStore() {

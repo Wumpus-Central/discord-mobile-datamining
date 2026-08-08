@@ -1,7 +1,7 @@
 // discord_app/modules/activities/panel/native/ActivityPanelHeader.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "QuestActivityButtonInner";
-import get_ActivityIndicator from "module_16017";
+import get_ActivityIndicator from "module_16092";
 import participantFromServer from "participantFromServer";
 import ActivityPanelModes from "ActivityPanelModes";
 import { ThemeTypes } from "sum";
@@ -77,7 +77,7 @@ function useBaseActivityPanelHeaderContent(landscape) {
     items[2] = obj;
     return items;
   }, items1);
-  obj[0] = landscape(4162).runOnJS;
+  obj[0] = landscape(4036).runOnJS;
   obj[1] = setMode;
   obj[2] = closure_10;
   fn.__closure = obj;
@@ -87,11 +87,11 @@ function useBaseActivityPanelHeaderContent(landscape) {
   obj = { gesture: null, headerWrapperStyles: null, headerStyles: null, styles: null };
   const callback = importAllResult.useCallback(fn, items2);
   obj = { mode: null, panGestureEnabled: true, pipState: null, swipeRequiresPop: true, wrapperOffset: null, onPanMinimizeGestureEnd: null, disableHorizontalSafeAreas: true };
-  obj[0] = landscape(16012).MorphablePanelModes.PANEL;
+  obj[0] = landscape(16087).MorphablePanelModes.PANEL;
   obj[2] = pipState;
   obj[4] = wrapperOffset;
   obj[5] = callback;
-  obj[0] = setMode(16012)(obj);
+  obj[0] = setMode(16087)(obj);
   obj[1] = memo;
   obj[2] = memo1;
   obj[3] = tmp;
@@ -117,7 +117,7 @@ class BaseActivityPanelContent {
       tmp9 = closure_1;
       tmp7 = jsxs;
       items = [, , ];
-      items[0] = jsx(require("module_16016"), {});
+      items[0] = jsx(require("module_16091"), {});
       tmp3Result = !landscape;
       if (!landscape) {
         obj2 = { style: null };
@@ -131,7 +131,7 @@ class BaseActivityPanelContent {
       items[2] = tmp3(tmp8, obj3);
       obj1[1] = items;
       obj[1] = tmp7(tmp8, obj1);
-      obj[1] = tmp3(require("Directions").GestureDetector, obj);
+      obj[1] = tmp3(require("LegacyBaseButton").GestureDetector, obj);
       tmp3Result1 = tmp3(require("ManaContext").ThemeContextProvider, obj);
     }
     return tmp3Result1;
@@ -193,7 +193,7 @@ let closure_19 = importAllResult.memo(function ActivityPanelHeaderContentInner(w
   obj = { style: items2, children: null };
   items2[1] = prop;
   let tmp17;
-  let tmp5Result = tmp5(16021);
+  let tmp5Result = tmp5(16096);
   if (!landscape) {
     let name;
     if (first != null) {
@@ -206,7 +206,7 @@ let closure_19 = importAllResult.memo(function ActivityPanelHeaderContentInner(w
   if (tmp8Result) {
     obj1 = { applicationId: null };
     obj1[0] = applicationId;
-    tmp8Result = tmp8(tmp5(16022), obj1);
+    tmp8Result = tmp8(tmp5(16097), obj1);
   }
   items3[1] = tmp8Result;
   let tmp20 = null;
@@ -221,7 +221,7 @@ let closure_19 = importAllResult.memo(function ActivityPanelHeaderContentInner(w
     tmp21 = tmp8Result;
   }
   items4[1] = tmp21;
-  tmp5Result = tmp5(16027);
+  tmp5Result = tmp5(16102);
   items4[2] = closure_12(tmp5Result, { selfEmbeddedActivity: stateFromStores, setMode });
   obj[5] = items4;
   return closure_13(BaseActivityPanelContent, obj);
@@ -235,7 +235,7 @@ const memoResult = importAllResult.memo(() => {
   let wrapperDimensions;
   const tmp2 = callback3();
   c0 = tmp2;
-  const context = importAllResult.useContext(wrapperDimensions(16006));
+  const context = importAllResult.useContext(wrapperDimensions(16081));
   wrapperDimensions = context.wrapperDimensions;
   let items = [tmp2.headerContainer, wrapperDimensions.isWindowLandscape];
   ({ setMode, wrapperOffset, pipState } = context);

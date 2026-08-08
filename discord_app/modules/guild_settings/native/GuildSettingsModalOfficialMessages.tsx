@@ -13,7 +13,7 @@ import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/14446_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14516_registerAsset.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../design/void/native.tsx";
@@ -163,7 +163,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
   const effect1 = officialMessageColor.useEffect(() => {
     function handleSaveChanges() {
       let obj = outer1_1(outer1_2[19]);
-      obj = { officialMessageColor: module_8961 };
+      obj = { officialMessageColor: module_9021 };
       obj.saveGuild(handleSaveChanges, obj);
     }
     let fn;

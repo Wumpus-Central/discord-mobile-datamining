@@ -15,9 +15,9 @@ const memoResult = require("noop").memo(function YouBarNameplate(isQuestRendered
   ({ nameplate, barWidth } = isQuestRendered);
   let obj = isQuestRendered(4005);
   token = obj.useToken(token(712).modules.mobile.YOU_BAR_BORDER_RADIUS);
-  const tmp4 = token(14353)(token);
+  const tmp4 = token(14423)(token);
   dependencyMap = tmp4;
-  let obj1 = isQuestRendered(4162);
+  let obj1 = isQuestRendered(4036);
   const fn = function l() {
     let obj = isQuestRendered(_undefined[7]);
     if (isQuestRendered) {
@@ -28,7 +28,7 @@ const memoResult = require("noop").memo(function YouBarNameplate(isQuestRendered
     obj = { borderTopRightRadius: obj.withSpring(value, outer1_3) };
     return obj;
   };
-  obj = { withSpring: isQuestRendered(4711).withSpring, isQuestRendered, questDockAnimatedBorderRadius: tmp4, borderRadius: token, YOU_BAR_SPRING_CONFIG };
+  obj = { withSpring: isQuestRendered(4713).withSpring, isQuestRendered, questDockAnimatedBorderRadius: tmp4, borderRadius: token, YOU_BAR_SPRING_CONFIG };
   fn.__closure = obj;
   fn.__workletHash = 17156260157738;
   fn.__initData = closure_5;
@@ -38,12 +38,12 @@ const memoResult = require("noop").memo(function YouBarNameplate(isQuestRendered
   if (!isQuestRendered) {
     num = token;
   }
-  obj1 = { style: items, pointerEvents: "none", children: tmp6(token(9325), { nameplate, isFocused: true, animate: false }) };
+  obj1 = { style: items, pointerEvents: "none", children: tmp6(token(9390), { nameplate, isFocused: true, animate: false }) };
   obj[5] = num;
   obj[7] = token;
   obj[10] = barWidth - avatarSize;
   items = [obj, animatedStyle];
-  return jsx(token(4162).View, { style: items, pointerEvents: "none", children: tmp6(token(9325), { nameplate, isFocused: true, animate: false }) });
+  return jsx(token(4036).View, { style: items, pointerEvents: "none", children: tmp6(token(9390), { nameplate, isFocused: true, animate: false }) });
 });
 const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarNameplate.tsx");
 

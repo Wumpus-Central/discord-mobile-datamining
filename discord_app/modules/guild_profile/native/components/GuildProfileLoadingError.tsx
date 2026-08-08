@@ -2,7 +2,7 @@
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
-import { LinearGradient } from "../../../../../_runtime/04723_LinearGradient.js";
+import { LinearGradient } from "../../../../../_runtime/04725_LinearGradient.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { WarningIcon } from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";

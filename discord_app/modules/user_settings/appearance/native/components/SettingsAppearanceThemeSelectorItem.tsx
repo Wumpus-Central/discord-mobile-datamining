@@ -7,7 +7,7 @@ import { ThemeTypes } from "sum";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/14438_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/14508_registerAsset.js";
 import { useCheckboxA11yNative } from "../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import { defaultAreStatesEqual } from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
@@ -160,7 +160,7 @@ export default function ThemeSelectorItem(onPress) {
     obj[0] = themePreset;
     let tmp8 = callback(DefaultThemeBackground, obj);
     let tmp9 = callback;
-  } else if (themePreset.type === tmp4(4115).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+  } else if (themePreset.type === tmp4(4121).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
     obj = { item: null, isThemeLocked: null };
     obj[0] = themePreset;
     obj[1] = isPreview;

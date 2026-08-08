@@ -37,10 +37,10 @@ export const useContentClassificationVisibility = function useContentClassificat
   [][0] = mergeGuildAvatar;
   if (null != arg0) {
     const obj = { type: null, data: null };
-    obj[0] = tmp(4835).ContentClassificationVariant.MINIMAL;
+    obj[0] = tmp(4837).ContentClassificationVariant.MINIMAL;
     obj[1] = arg0;
-    const result = tmp(4835).contentClassificationToAgeRestriction(obj);
-    if (result === tmp(4837).AgeRestrictionStatus.ADULT) {
+    const result = tmp(4837).contentClassificationToAgeRestriction(obj);
+    if (result === tmp(4839).AgeRestrictionStatus.ADULT) {
       if (true !== tmp4) {
         let DISPLAY = obj.BLOCK_UNDERAGE;
       } else {

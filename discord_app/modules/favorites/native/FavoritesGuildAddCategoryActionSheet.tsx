@@ -1,4 +1,4 @@
-// discord_app/modules/favorites/native/AddFavoriteCategoryActionSheet.tsx
+// discord_app/modules/favorites/native/FavoritesGuildAddCategoryActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { MAX_FAVORITE_CATEGORY_NAME_LENGTH as closure_5 } from "date";
@@ -9,7 +9,7 @@ import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetA
 let closure_6;
 let error;
 const require = arg1;
-function AddFavoriteCategoryActionSheet() {
+function FavoritesGuildAddCategoryActionSheet() {
   const tmp = createCacheKey();
   const tmp2 = callback(React.useState(""), 2);
   const first = tmp2[0];
@@ -29,7 +29,7 @@ function AddFavoriteCategoryActionSheet() {
   obj = { title: null };
   const intl = first(1236).intl;
   obj[0] = intl.string(first(1236).t["ISN+NM"]);
-  obj[3] = callback2(first(5395).BottomSheetTitleHeader, obj);
+  obj[3] = callback2(first(5396).BottomSheetTitleHeader, obj);
   const obj1 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, autoFocus: true, isClearable: true, returnKeyType: "done", onSubmitEditing: null };
   const intl2 = first(1236).intl;
   obj1[0] = intl2.string(first(1236).t.OCAkGP);
@@ -39,28 +39,28 @@ function AddFavoriteCategoryActionSheet() {
   obj1[3] = tmp2[1];
   obj1[4] = closure_5;
   obj1[8] = callback;
-  const items1 = [callback2(first(7730).TextInput, obj1), ];
+  const items1 = [callback2(first(7790).TextInput, obj1), ];
   let obj2 = { text: null, onPress: null, disabled: null };
   const intl4 = first(1236).intl;
   obj2[0] = intl4.string(first(1236).t.CumH4u);
   obj2[1] = callback;
   obj2[2] = !result;
-  items1[1] = callback2(first(4712).Button, obj2);
+  items1[1] = callback2(first(4714).Button, obj2);
   obj[4] = items1;
-  return callback3(first(5396).BottomSheet, obj);
+  return callback3(first(5397).BottomSheet, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-AddFavoriteCategoryActionSheet = "AddFavoriteCategoryActionSheet";
+FavoritesGuildAddCategoryActionSheet = "FavoritesGuildAddCategoryActionSheet";
 createCacheKey = { content: null, body: null };
 createCacheKey = { paddingHorizontal: require("Themes").space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { gap: require("Themes").space.PX_16 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let obj1 = { gap: require("Themes").space.PX_16 };
-let result = require("date").fileFinishedImporting("modules/favorites/native/AddFavoriteCategoryActionSheet.tsx");
+let result = require("date").fileFinishedImporting("modules/favorites/native/FavoritesGuildAddCategoryActionSheet.tsx");
 
-export const openAddFavoriteCategoryActionSheet = function openAddFavoriteCategoryActionSheet() {
+export const openFavoritesGuildAddCategoryActionSheet = function openFavoritesGuildAddCategoryActionSheet() {
   let obj = ACTION_SHEET_HEIGHT_HALF;
-  obj = { content: callback2(AddFavoriteCategoryActionSheet, {}), key: AddFavoriteCategoryActionSheet };
+  obj = { content: callback2(FavoritesGuildAddCategoryActionSheet, {}), key: FavoritesGuildAddCategoryActionSheet };
   obj.showActionSheet(obj);
 };

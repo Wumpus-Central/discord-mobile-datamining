@@ -22,7 +22,7 @@ function _upsertSavedMessage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -70,7 +70,7 @@ function _upsertSavedMessage() {
               return obj5;
             } else {
               c4 = 3;
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             }
           }
         } catch (tmp13) {
@@ -107,7 +107,7 @@ function _deleteSavedMessage() {
           obj[0] = ok;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -142,7 +142,7 @@ function _deleteSavedMessage() {
             return obj;
           } else {
             c1 = 3;
-            return ok.ok ? { value: true, done: true } : { value: "T", done: null };
+            return ok.ok ? { value: true, done: true } : { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           c1 = tmp;
@@ -174,7 +174,7 @@ function _fetchAndUpdateSavedMessages() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -225,11 +225,11 @@ function _fetchAndUpdateSavedMessages() {
             callback = results.map((message) => {
               let messageRecord = null;
               if (null != message.message) {
-                let obj = callback(4521);
+                let obj = callback(4523);
                 messageRecord = obj.createMessageRecord(message.message);
               }
               obj = { message: messageRecord, saveData: null };
-              obj[1] = callback(8321).savedMessageDataToClient(message.save_data);
+              obj[1] = callback(8381).savedMessageDataToClient(message.save_data);
               return obj;
             });
             obj2 = callback(709);

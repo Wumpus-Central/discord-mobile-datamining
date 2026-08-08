@@ -99,8 +99,8 @@ export const searchSounds = function searchSounds(arg0, availableSounds, stateFr
     }
     let result1 = sum6 > 0;
     if (0 < sum6) {
-      result1 = lib(5899).canUseSoundboardSound(stateFromStores, name, tmp3);
-      const obj4 = lib(5899);
+      result1 = lib(5959).canUseSoundboardSound(stateFromStores, name, tmp3);
+      const obj4 = lib(5959);
     }
     let sum7 = sum6;
     if (result1) {

@@ -40,7 +40,7 @@ function _upload2() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -72,7 +72,7 @@ function _upload2() {
               let store;
               c8 = 1;
               c9 = 1;
-              return { value: "PX_8", done: "Array" };
+              return { value: "ct", done: "Array" };
             }
           } else if (1 === tmp9) {
             if (arg0 === 1) {
@@ -90,7 +90,7 @@ function _upload2() {
               onResult = dependencyMap;
               onResult = new.target;
               onResult = new.target;
-              onResult = new callback2(7238)();
+              onResult = new callback2(7298)();
               const outer1_5 = onResult;
               onResult = outer1_5;
               onResult = outer1_5.on("start", () => {
@@ -98,37 +98,37 @@ function _upload2() {
               });
               onResult = outer1_5;
               onResult = outer1_5.on("progress", (currentSize) => {
-                let obj = _undefined(4895);
+                let obj = _undefined(4897);
                 const kestrelConfig = obj.getKestrelConfig({ location: "native.AddMediaToOriginalForumPostActionSheet" });
-                const maxFileSizeResult = _undefined(4854).maxFileSize(message.id);
-                const obj2 = _undefined(4854);
+                const maxFileSizeResult = _undefined(4856).maxFileSize(message.id);
+                const obj2 = _undefined(4856);
                 const tmp3 = message;
-                const effectiveKestrelLimit = _undefined(4895).getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
+                const effectiveKestrelLimit = _undefined(4897).getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
                 if (currentSize.currentSize > effectiveKestrelLimit) {
                   _undefined2.cancel();
                   dependencyMap(false);
-                  callback(4270).hideActionSheet();
+                  callback(4271).hideActionSheet();
                   obj = { file: null, maxSize: null, baseMaxSize: null, guildId: null, analyticsLocations: null };
                   obj[0] = currentSize;
                   obj[1] = effectiveKestrelLimit;
                   obj[2] = maxFileSizeResult;
                   obj[3] = tmp3.id;
                   obj[4] = c4;
-                  callback(8299)(obj);
-                  const obj4 = callback(4270);
+                  callback(8359)(obj);
+                  const obj4 = callback(4271);
                 }
               });
               onResult = outer1_5;
               onResult = outer1_5.on("error", () => {
                 dependencyMap(false);
-                callback(4270).hideActionSheet();
+                callback(4271).hideActionSheet();
               });
               onResult = outer1_5;
               onResult = outer1_5.on("complete", () => {
                 dependencyMap(false);
-                callback(8297).clearAll(c0, ChannelMessage.ChannelMessage);
-                const obj = callback(8297);
-                callback(4270).hideActionSheet();
+                callback(8357).clearAll(c0, ChannelMessage.ChannelMessage);
+                const obj = callback(8357);
+                callback(4271).hideActionSheet();
               });
               onResult = store;
               onResult = callback;
@@ -196,7 +196,7 @@ function _upload2() {
               onResult = items;
               callback2 = HermesBuiltin.arraySpread(c8, 0);
               onResult = c9;
-              onResult = c9.map((closure_0, closure_1) => _undefined(4850).getAttachmentPayload(closure_0, closure_1));
+              onResult = c9.map((closure_0, closure_1) => _undefined(4852).getAttachmentPayload(closure_0, closure_1));
               dependencyMap = onResult;
               if (onResult == null) {
                 dependencyMap = [];
@@ -204,7 +204,7 @@ function _upload2() {
               callback2 = HermesBuiltin.arraySpread(dependencyMap, callback2);
               const outer1_6 = items;
               attachments = 2;
-              obj5 = callback2(7164);
+              obj5 = callback2(7224);
               c8 = 6;
               c9 = 1;
               const obj6 = { value: null, done: false };
@@ -216,13 +216,13 @@ function _upload2() {
               attachments = 0;
               let closure_12 = c6;
               dependencyMap(false);
-              obj3 = callback2(4270);
+              obj3 = callback2(4271);
               obj3.hideActionSheet();
-              const tmp24 = new callback2(11323)(closure_12);
+              const tmp24 = new callback2(11389)(closure_12);
               store = tmp24;
               if (store.code === closure_11.EXPLICIT_CONTENT) {
-                obj4 = callback2(6857);
-                const result1 = obj4.sendExplicitMediaClydeError(callback, store.attachments, callback(6999).TrackMediaRedactionContext.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED);
+                obj4 = callback2(6917);
+                const result1 = obj4.sendExplicitMediaClydeError(callback, store.attachments, callback(7059).TrackMediaRedactionContext.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED);
               } else {
                 onResult = c5;
                 onResult = callback2;
@@ -241,8 +241,8 @@ function _upload2() {
                   message = store.message;
                 }
                 obj7[1] = message;
-                callback2(4641).show(obj7);
-                const obj21 = callback2(4641);
+                callback2(4643).show(obj7);
+                const obj21 = callback2(4643);
               }
               c9 = 3;
             } else if (6 === tmp9) {

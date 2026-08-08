@@ -22,7 +22,7 @@ function _handleDocumentSelection() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -54,7 +54,7 @@ function _handleDocumentSelection() {
               let getSystemLocale;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_8", done: "Array" };
+              return { value: "ct", done: "Array" };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -128,19 +128,19 @@ function _handleDocumentSelection() {
           } else if (2 === tmp7) {
             c4 = 0;
             c4 = getSystemLocale;
-            obj3 = flag(10099);
+            obj3 = flag(10165);
             if (obj3.isErrorWithCode(c4)) {
-              if (c4.code === flag(10099).errorCodes.OPERATION_CANCELED) {
+              if (c4.code === flag(10165).errorCodes.OPERATION_CANCELED) {
                 c6 = 3;
-                return { value: "T", done: null };
+                return { value: "HermesInternal", done: null };
               }
             }
-            obj4 = flag(4496);
+            obj4 = flag(4498);
             const obj5 = { error_message: null };
             const _JSON = JSON;
             obj5[0] = JSON.stringify(c4);
             obj4.trackWithMetadata(c4.MOBILE_FILE_PICKER_ERROR, obj5);
-            let obj6 = extensions(4641);
+            let obj6 = extensions(4643);
             obj6 = { title: null, body: null };
             const intl3 = flag(1236).intl;
             obj6[0] = intl3.string(flag(1236).t.rWHepR);
@@ -148,7 +148,7 @@ function _handleDocumentSelection() {
             obj6[1] = intl4.string(flag(1236).t.fZRH9P);
             obj6.show(obj6);
             c6 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           } else if (arg0 === 1) {
             c6 = 3;
             throw arg1;
@@ -161,7 +161,7 @@ function _handleDocumentSelection() {
           } else {
             getSystemLocale = arg1;
             if (getSystemLocale.some((size) => 0 === size.size)) {
-              obj = extensions(4641);
+              obj = extensions(4643);
               obj8 = { title: null, body: null };
               const intl = flag(1236).intl;
               obj8[0] = intl.string(flag(1236).t.B3vFdU);

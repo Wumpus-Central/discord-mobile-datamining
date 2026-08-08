@@ -36,7 +36,7 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
         tmp16[applicationId].stop();
         const obj5 = tmp16[applicationId];
       }
-      const timeout = new applicationId(4187).Timeout();
+      const timeout = new applicationId(4188).Timeout();
       timeout.start(c9, () => {
         let obj = JOIN(outer1_2[4]);
         obj = { type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType: JOIN };
@@ -54,7 +54,7 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
         tmp7[applicationId].stop();
         const obj3 = tmp7[applicationId];
       }
-      const timeout1 = new applicationId(4187).Timeout();
+      const timeout1 = new applicationId(4188).Timeout();
       timeout1.start(num, () => {
         let obj = JOIN(outer1_2[4]);
         obj = { type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType: JOIN };

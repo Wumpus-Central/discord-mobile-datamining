@@ -20,7 +20,7 @@ function navigationToRootTabHelper(arg0, resetRoot) {
         const rootState = rootNavigationRef.getRootState();
         const routes = rootState.routes;
         const found = routes.filter((name) => "modal" === name.name);
-        let tmpResult = tmp(4154);
+        let tmpResult = tmp(4160);
         obj = { name: "tabs", key: null, params: null };
         tmpResult = tmp(514);
         const _HermesInternal = HermesInternal;
@@ -337,7 +337,7 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
   let guildId;
   let resetRoot;
   let screen;
-  let obj = icymiScreen(4153);
+  let obj = icymiScreen(4159);
   const rootNavigationRef = obj.getRootNavigationRef();
   ({ screen, resetRoot, forceNavigate } = drawerOpen);
   if (null != rootNavigationRef) {
@@ -411,7 +411,7 @@ export const resetToAuthRoute = function resetToAuthRoute() {
   if (!tmp) {
     rootNavigationRef.dispatch(() => {
       const CommonActions = callback(1481).CommonActions;
-      return CommonActions.reset(callback(4154).getInitialAuthState());
+      return CommonActions.reset(callback(4160).getInitialAuthState());
     });
     flag = true;
   }
@@ -431,10 +431,10 @@ export const pushModal = function pushModal(arg0) {
   }
   let flag = !tmp4;
   if (!tmp4) {
-    tmp(4160).dismissKeyboard();
+    tmp(4166).dismissKeyboard();
     rootNavigationRef.navigate("modal", arg0);
     flag = true;
-    const tmpResult = tmp(4160);
+    const tmpResult = tmp(4166);
   }
   return flag;
 };

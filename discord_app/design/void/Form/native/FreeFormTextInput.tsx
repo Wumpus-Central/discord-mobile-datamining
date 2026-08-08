@@ -3,7 +3,7 @@ import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08408_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08468_registerAsset.js";
 import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { Button } from "../../native.tsx";

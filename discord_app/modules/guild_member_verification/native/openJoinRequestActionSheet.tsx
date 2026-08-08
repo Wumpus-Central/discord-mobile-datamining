@@ -6,5 +6,5 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/guild_
 export default function openJoinRequestActionSheet(joinRequest) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { joinRequest };
-  obj.openLazy(asyncRequireImpl(15611, dependencyMap.paths), "joinRequestActionSheet" + joinRequest.joinRequestId, obj);
+  obj.openLazy(asyncRequireImpl(15686, dependencyMap.paths), "joinRequestActionSheet" + joinRequest.joinRequestId, obj);
 };

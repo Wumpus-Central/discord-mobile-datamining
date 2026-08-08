@@ -82,7 +82,7 @@ const memoResult = importAllResult.memo(function GuildsBarFavorites() {
     obj2[0] = ref;
     obj2[1] = shouldShowPopover;
     obj2[2] = favoritesIntroPopoverDismissibleContent.markPopoverAsDismissed;
-    tmp16Result = tmp16(tmp(15353), obj2);
+    tmp16Result = tmp16(tmp(15428), obj2);
   }
   children[2] = tmp16Result;
   return tmp14(View, { children });

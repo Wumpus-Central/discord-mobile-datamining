@@ -37,9 +37,9 @@ export const handleApplicationSelected = function handleApplicationSelected(entr
   let obj = collectGuildAnalyticsMetadata;
   obj = { location: _location, section: null, application_id: null, section_name: null, query: null, search_results_position: null, source: null };
   if (application.id === BuiltInSectionId.BUILT_IN) {
-    let APP = tmp(6922).ApplicationCommandTriggerSections.BUILT_IN;
+    let APP = tmp(6982).ApplicationCommandTriggerSections.BUILT_IN;
   } else {
-    APP = tmp(6922).ApplicationCommandTriggerSections.APP;
+    APP = tmp(6982).ApplicationCommandTriggerSections.APP;
   }
   obj[1] = APP;
   let id = application.id;
@@ -97,9 +97,9 @@ export const handleApplicationCommandSelected = function handleApplicationComman
   ({ location: _location, context, command } = arg0);
   ({ section, sectionDescriptors, query, navigation, installOnDemand, sectionName, entrypoint } = arg0);
   ({ searchResultsPosition, onCommandExecuted } = arg0);
-  let obj = command(6920);
+  let obj = command(6980);
   obj = { command, location: _location, triggerSection: null, queryLength: null, sectionName: null, query: null, searchResultsPosition: null, source: null };
-  obj[2] = command(6920).getCommandTriggerSection(section);
+  obj[2] = command(6980).getCommandTriggerSection(section);
   obj[3] = query.length;
   obj[4] = sectionName;
   obj[5] = query;
@@ -124,7 +124,7 @@ export const handleApplicationCommandSelected = function handleApplicationComman
       }
     }
     if ("channel" === context.type) {
-      const result = importAll(7177).setAppLauncherActiveCommand(context.channel.id, command);
+      const result = importAll(7237).setAppLauncherActiveCommand(context.channel.id, command);
       const obj1 = { command: null, section: null, context: null, installOnDemand: null, sectionName: null, analyticsLocation: null, onCommandExecuted: null };
       obj1[0] = command;
       obj1[1] = tmp5;
@@ -134,7 +134,7 @@ export const handleApplicationCommandSelected = function handleApplicationComman
       obj1[5] = _location;
       obj1[6] = onCommandExecuted;
       navigation.navigate(constants.COMMAND_VIEW, obj1);
-      const obj4 = importAll(7177);
+      const obj4 = importAll(7237);
     }
   }
 };

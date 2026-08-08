@@ -36,7 +36,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -85,7 +85,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
             if (null == lib) {
               c4 = 0;
               c6 = 3;
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             } else if (!sendRequest.isCanceled) {
               if (200 === lib.status) {
                 lib(outer1_0);
@@ -99,7 +99,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
                 if (sendRequest.query.attempts > 5) {
                   c4 = 0;
                   c6 = 3;
-                  return { value: "T", done: null };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   const _parseInt = parseInt;
                   callback = parseInt(lib.headers["retry-after"]);
@@ -122,7 +122,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
           }
           c4 = 0;
           c6 = 3;
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
         c6 = 3;
       } catch (tmp49) {

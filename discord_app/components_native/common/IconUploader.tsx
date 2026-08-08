@@ -5,7 +5,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { UPLOAD_MEDIUM_SIZE } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../_runtime/09617_registerAsset.js";
+import { registerAsset } from "../../../_runtime/09682_registerAsset.js";
 import { PressableBase } from "../../design/void/Pressables/native/Pressables.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { GuildIconSizes } from "../../modules/guild/native/GuildIcon.tsx";
@@ -58,7 +58,7 @@ export default function IconUploader(disabled) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

@@ -2,7 +2,7 @@
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { Background } from "../../../../_runtime/05276_Background.js";
+import { Background } from "../../../../_runtime/05277_Background.js";
 import { HeaderBackImage } from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
 
@@ -50,7 +50,7 @@ export default function SearchableDestinationListHeader(arg0) {
     let num = useSafeAreaInsets().top;
   } else {
     num = 0;
-    const tmp5Result = tmp5(7581);
+    const tmp5Result = tmp5(7641);
   }
   obj[8] = num + tmp2(712).space.PX_8;
   return tmp4(Background.Header, obj);

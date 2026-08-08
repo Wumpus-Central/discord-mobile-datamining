@@ -42,7 +42,7 @@ function _fetchProfile() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -80,7 +80,7 @@ function _fetchProfile() {
                 let closure_12;
                 c7 = 1;
                 logger = 1;
-                return { value: "PX_8", done: "Array" };
+                return { value: "ct", done: "Array" };
               }
             } else if (1 === tmp7) {
               if (arg0 === 1) {
@@ -160,7 +160,7 @@ function _fetchProfile() {
               }
               let obj7 = callback2(709);
               obj7 = { type: "USER_PROFILE_FETCH_FAILURE", apiError: null, fetchStartedAt: null, userId: null, guildId: null };
-              const aPIError = new callback(4201).APIError(closure_13);
+              const aPIError = new callback(4202).APIError(closure_13);
               obj7[1] = aPIError;
               obj7[2] = closure_10;
               obj7[3] = callback;
@@ -205,7 +205,7 @@ function _fetchProfile() {
               }
               c6 = 0;
               logger = 3;
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp91) {
             c5 = tmp91;
@@ -251,7 +251,7 @@ function _fetchMutualFriends() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -319,7 +319,7 @@ function _fetchMutualFriends() {
             obj.dispatch(obj6);
             c5 = 0;
             c7 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp32) {
           createdAt = tmp32;

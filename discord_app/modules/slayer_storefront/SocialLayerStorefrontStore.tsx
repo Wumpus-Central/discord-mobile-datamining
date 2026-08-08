@@ -392,7 +392,7 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(require("dispa
       const merged7 = Object.assign(obj9);
       obj9 = obj5;
     } else {
-      obj = { state: "error", fetchedAt: null, storefront: "r" };
+      obj = { state: "error", fetchedAt: null, storefront: "Array" };
       const _Date = Date;
       obj[1] = Date.now();
       if (null != guildId) {

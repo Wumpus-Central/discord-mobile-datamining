@@ -73,7 +73,7 @@ function useAgeVerificationRunner(onComplete) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -205,7 +205,7 @@ function useShouldCallReactiveCheck() {
   }
   require = tmp5;
   let tmpResult = tmp(3980);
-  const isFeatureAgeGated = tmpResult.useIsFeatureAgeGated(tmp(5140).AgeGatedFeature.REACTIVE_CHECK);
+  const isFeatureAgeGated = tmpResult.useIsFeatureAgeGated(tmp(5141).AgeGatedFeature.REACTIVE_CHECK);
   tmpResult = tmp(589);
   const items1 = [closure_11];
   const items2 = [tmp5, isFeatureAgeGated];
@@ -237,7 +237,7 @@ function shouldCallReactiveCheck() {
   }
   let tmp7 = !tmp5;
   if (!tmp5) {
-    let isFeatureAgeGatedResult = getRegionalFeatureConfig.isFeatureAgeGated(tmp3(5140).AgeGatedFeature.REACTIVE_CHECK);
+    let isFeatureAgeGatedResult = getRegionalFeatureConfig.isFeatureAgeGated(tmp3(5141).AgeGatedFeature.REACTIVE_CHECK);
     if (isFeatureAgeGatedResult) {
       isFeatureAgeGatedResult = closure_11.shouldCallReactiveCheck();
     }
@@ -259,7 +259,7 @@ function _maybePerformReactiveCheck() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -337,7 +337,7 @@ export const shouldShowTiggerPawtect = function shouldShowTiggerPawtect() {
   }
   let tmp5 = prop !== PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
   if (tmp5) {
-    const isFeatureAgeGatedResult = getRegionalFeatureConfig.isFeatureAgeGated(tmp3(5140).AgeGatedFeature.REACTIVE_CHECK);
+    const isFeatureAgeGatedResult = getRegionalFeatureConfig.isFeatureAgeGated(tmp3(5141).AgeGatedFeature.REACTIVE_CHECK);
     let tmp8 = !isFeatureAgeGatedResult;
     if (isFeatureAgeGatedResult) {
       tmp8 = prop !== tmp3(1935).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
@@ -390,8 +390,8 @@ export const isVerifiedAdult = function isVerifiedAdult() {
   }
   let tmp5 = prop === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
   if (!tmp5) {
-    tmp5 = getRegionalFeatureConfig.isFeatureAgeGated(tmp3(5140).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1935).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
-    const tmp7 = getRegionalFeatureConfig.isFeatureAgeGated(tmp3(5140).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1935).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    tmp5 = getRegionalFeatureConfig.isFeatureAgeGated(tmp3(5141).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1935).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    const tmp7 = getRegionalFeatureConfig.isFeatureAgeGated(tmp3(5141).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1935).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
   }
   return tmp5;
 };

@@ -362,7 +362,7 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
       for (const item10060 of activityParticipants) {
         let tmp17 = item10060;
         let participants = item10060.participants;
-        if (participants.some((userId) => callback(13262).isActivityParticipantCurrentUserCurrentSession(userId))) {
+        if (participants.some((userId) => callback(13332).isActivityParticipantCurrentUserCurrentSession(userId))) {
           let tmp18 = item10060;
           if (!blockList.has(tmp17.id)) {
             let obj1 = { id: null, type: null };
@@ -421,7 +421,7 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
         }
       } else if (tmp31.ACTIVITY === type) {
         const participants2 = participant2.participants;
-        if (participants2.some((userId) => callback(13262).isActivityParticipantCurrentUserCurrentSession(userId))) {
+        if (participants2.some((userId) => callback(13332).isActivityParticipantCurrentUserCurrentSession(userId))) {
           const obj5 = { id: null, type: null };
           ({ id: obj9[0], type: obj9[1] } = participant2);
           return obj5;

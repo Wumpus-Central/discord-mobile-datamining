@@ -204,7 +204,7 @@ function _fetchAutomodRules() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -287,7 +287,7 @@ function _executeAlertAction() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -332,7 +332,7 @@ function _executeAlertAction() {
             return obj;
           }
           c3 = 3;
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         } catch (tmp8) {
           c3 = tmp;
           throw tmp8;
@@ -423,8 +423,8 @@ export const removeMentionRaidRestrictionWithFeedback = function removeMentionRa
   }
   if (canResult) {
     const result = _getPromiseableActionHandlers.openConfirmRemoveMentionRaid(() => {
-      let obj = callback(4496);
-      obj = { feedback_type: callback(6917).Feedback.MENTION_RAID_REMOVE_RESTRICTION, decision_id: closure_1 };
+      let obj = callback(4498);
+      obj = { feedback_type: callback(6977).Feedback.MENTION_RAID_REMOVE_RESTRICTION, decision_id: closure_1 };
       obj.trackWithMetadata(outer1_6.GUILD_AUTOMOD_FEEDBACK, obj);
       const HTTP = callback(530).HTTP;
       obj = { url: outer1_7.GUILD_AUTOMOD_CLEAR_MENTION_RAID(callback), rejectWithError: true };

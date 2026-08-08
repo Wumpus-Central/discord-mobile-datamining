@@ -4,7 +4,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import initialize from "initialize";
 import items from "items";
-import { USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH } from "../../../discord_common/js/shared/shared-constants/ClipsGalleryLimits.tsx";
+import { USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH as closure_10 } from "USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH";
 import { GAME_WIDGET_LIMITS_BY_TYPE } from "../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
 import { WidgetGameTag } from "../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx";
 import { isAgeRestrictedContentClassification } from "../content_classification/utils.tsx";
@@ -99,7 +99,7 @@ export const getGameWidgetSubtitle = function getGameWidgetSubtitle(games, showE
       } else {
         const intl = tmp(1236).intl;
         const obj = { numGames: null };
-        obj[0] = tmp(4832).GAME_WIDGET_LIMITS_BY_TYPE[games.type];
+        obj[0] = tmp(4834).GAME_WIDGET_LIMITS_BY_TYPE[games.type];
         stringResult = intl.format(tmp(1236).t["zR1+0/"], obj);
       }
       return stringResult;
@@ -225,7 +225,7 @@ export const addPendingClipToClipsGalleryWidget = function addPendingClipToClips
       widgets = [];
     }
   }
-  let found = widgets.find((arg0) => arg0 instanceof callback(table[9]).ClipsGalleryWidget);
+  let found = widgets.find((arg0) => arg0 instanceof callback(table[10]).ClipsGalleryWidget);
   if (found == null) {
     found = null;
   }
@@ -236,7 +236,7 @@ export const addPendingClipToClipsGalleryWidget = function addPendingClipToClips
   if (clips == null) {
     clips = [];
   }
-  if (clips.length < USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH.USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH) {
+  if (clips.length < closure_10) {
     let id;
     if (found != null) {
       id = found.id;
@@ -247,6 +247,57 @@ export const addPendingClipToClipsGalleryWidget = function addPendingClipToClips
     items[HermesBuiltin.arraySpread(clips, 0)] = arg0;
     obj[1] = items;
     const clipsGalleryWidget = new convertClip.ClipsGalleryWidget(obj);
+    WidgetActionCreators.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
+    const obj3 = WidgetActionCreators;
+  }
+};
+export const updateClipTitleInClipsGalleryWidget = function updateClipTitleInClipsGalleryWidget(arg0, str) {
+  let clips;
+  const _require = arg0;
+  let obj = initialize;
+  if (initialize.hasPendingChanges()) {
+    let pendingWidgets = obj.getPendingWidgets();
+    if (pendingWidgets == null) {
+      pendingWidgets = [];
+    }
+    let widgets = pendingWidgets;
+  } else {
+    const currentUser = authStore.getCurrentUser();
+    let userProfile = null;
+    if (null != currentUser) {
+      userProfile = authStore2.getUserProfile(currentUser.id);
+    }
+    widgets = undefined;
+    if (userProfile != null) {
+      widgets = userProfile.widgets;
+    }
+    if (widgets == null) {
+      widgets = [];
+    }
+  }
+  let found = widgets.find((arg0) => arg0 instanceof callback(table[10]).ClipsGalleryWidget);
+  if (found == null) {
+    found = null;
+  }
+  if (null != found) {
+    const importDefault = str.trim();
+    obj = { id: null, clips: null };
+    ({ id: obj2[0], clips } = found);
+    obj[1] = clips.map((id) => {
+      let tmp = id;
+      if (id.id === closure_0) {
+        const obj = {};
+        const merged = Object.assign(id);
+        let tmp5;
+        if ("" !== closure_1) {
+          tmp5 = closure_1;
+        }
+        obj.title = tmp5;
+        tmp = obj;
+      }
+      return tmp;
+    });
+    const clipsGalleryWidget = new _convertClip.ClipsGalleryWidget(obj);
     WidgetActionCreators.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
     const obj3 = WidgetActionCreators;
   }
@@ -275,7 +326,7 @@ export const removeClipFromClipsGalleryWidget = function removeClipFromClipsGall
       widgets = [];
     }
   }
-  let found = widgets.find((arg0) => arg0 instanceof callback(table[9]).ClipsGalleryWidget);
+  let found = widgets.find((arg0) => arg0 instanceof callback(table[10]).ClipsGalleryWidget);
   if (found == null) {
     found = null;
   }
@@ -346,8 +397,8 @@ export const updatePendingGameTags = function updatePendingGameTags(widgetType, 
         obj.games = mapped;
         const baseGameWidget = new _items.BaseGameWidget(obj);
         const tmp21 = replaceWidgetInList(baseGameWidget);
-        obj(7026).setPendingWidgets(tmp21);
-        const obj3 = obj(7026);
+        obj(7087).setPendingWidgets(tmp21);
+        const obj3 = obj(7087);
       }
     }
   }
@@ -389,10 +440,10 @@ export const removeTagFromGame = function removeTagFromGame(widgetType) {
                 obj = {};
                 const merged1 = Object.assign(tmpResult);
                 obj.games = mapped;
-                const baseGameWidget = new tmp4(7022).BaseGameWidget(obj);
+                const baseGameWidget = new tmp4(7082).BaseGameWidget(obj);
                 const tmp22 = replaceWidgetInList(baseGameWidget);
-                obj(7026).setPendingWidgets(tmp22);
-                const obj3 = obj(7026);
+                obj(7087).setPendingWidgets(tmp22);
+                const obj3 = obj(7087);
               }
             }
           }
@@ -426,8 +477,8 @@ export const updatePendingGameComment = function updatePendingGameComment(widget
         obj.games = mapped;
         const baseGameWidget = new _items.BaseGameWidget(obj);
         const tmp19 = replaceWidgetInList(baseGameWidget);
-        obj(7026).setPendingWidgets(tmp19);
-        const obj3 = obj(7026);
+        obj(7087).setPendingWidgets(tmp19);
+        const obj3 = obj(7087);
       }
     }
   }
@@ -442,8 +493,8 @@ export const addPendingGameToWidget = function addPendingGameToWidget(ignoreMaxG
   }
   const tmp = findGameWidget(widgetType);
   let num = 0;
-  if (widgetType in game(4832).GAME_WIDGET_LIMITS_BY_TYPE) {
-    num = tmp2(4832).GAME_WIDGET_LIMITS_BY_TYPE[widgetType];
+  if (widgetType in game(4834).GAME_WIDGET_LIMITS_BY_TYPE) {
+    num = tmp2(4834).GAME_WIDGET_LIMITS_BY_TYPE[widgetType];
   }
   if (null != tmp) {
     const games = tmp.games;
@@ -480,11 +531,11 @@ export const addPendingGameToWidget = function addPendingGameToWidget(ignoreMaxG
   obj = {};
   const merged = Object.assign(tmp8);
   obj.games = items1;
-  const baseGameWidget = new tmp2(7022).BaseGameWidget(obj);
+  const baseGameWidget = new tmp2(7082).BaseGameWidget(obj);
   const tmp7 = replaceWidgetInList;
   const tmp7Result = replaceWidgetInList(baseGameWidget);
   WidgetActionCreators.setPendingWidgets(tmp7Result);
-  const useGame = tmp2(7032).useGame;
+  const useGame = tmp2(7092).useGame;
   const items2 = [game.gameId];
   const many = useGame.fetchMany(items2);
 };

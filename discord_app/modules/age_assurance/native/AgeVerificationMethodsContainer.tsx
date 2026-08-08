@@ -24,7 +24,7 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
   const prop = ageVerificationMethods.ageVerificationMethods;
   const modalSessionId = ageVerificationMethods.modalSessionId;
   const tmp = createCacheKey();
-  let obj = prop(7744);
+  let obj = prop(7804);
   const isSuspendedUser = obj.useIsSuspendedUser();
   const items = [prop];
   const effect = React.useEffect(() => {
@@ -64,7 +64,7 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
     obj1[1] = mapped;
     items1[1] = tmp7(tmp8, obj1);
     obj[2] = items1;
-    const items2 = [tmp6(prop(4710).Stack, obj), ];
+    const items2 = [tmp6(prop(4712).Stack, obj), ];
     let tmp7Result = isSuspendedUser;
     if (isSuspendedUser) {
       let obj2 = { variant: "text-xs/medium", children: null };
@@ -74,25 +74,25 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
         modalSessionId(table[19]).openUrl(constants.LEARN_MORE_UU_APPEAL_LINK);
       };
       obj2[1] = intl4.format(modalSessionId(2802).htWh1G, obj3);
-      tmp7Result = tmp7(tmp2(4298).Text, obj2);
+      tmp7Result = tmp7(tmp2(4299).Text, obj2);
     }
     const obj4 = { spacing: 8, align: "center", children: null };
     items2[1] = tmp7Result;
     obj4[2] = items2;
-    return tmp6(prop(4710).Stack, obj4);
+    return tmp6(prop(4712).Stack, obj4);
   }
   const obj5 = { direction: "vertical", align: "center", spacing: 16, style: tmp.errorContainer, children: null };
   const obj6 = { variant: "text-sm/medium", color: "text-subtle", style: tmp.noMethodsText, children: null };
   const intl2 = tmp2(1236).intl;
   obj6[3] = intl2.string(modalSessionId(2802).cR6336);
-  const items3 = [callback(prop(4298).Text, obj6), ];
+  const items3 = [callback(prop(4299).Text, obj6), ];
   const obj7 = { style: tmp.buttonGroup, children: null };
   const obj8 = { variant: "primary", size: "lg", text: null, onPress: null };
   const intl3 = tmp2(1236).intl;
   obj8[2] = intl3.string(modalSessionId(2802).hDvmYP);
-  obj8[3] = prop(7743).getAgeVerificationMethods;
-  obj7[1] = callback(prop(4712).Button, obj8);
-  items3[1] = callback(prop(5149).ButtonGroup, obj7);
+  obj8[3] = prop(7803).getAgeVerificationMethods;
+  obj7[1] = callback(prop(4714).Button, obj8);
+  items3[1] = callback(prop(5150).ButtonGroup, obj7);
   obj5[4] = items3;
-  mapped = tmp6(tmp2(4710).Stack, obj5);
+  mapped = tmp6(tmp2(4712).Stack, obj5);
 };

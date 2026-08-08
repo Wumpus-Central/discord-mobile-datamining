@@ -40,7 +40,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -73,7 +73,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
               outer1_1(true);
               outer1_2(false);
               let c4 = 2;
-              let obj4 = callback(7771);
+              let obj4 = callback(7831);
               c5 = 3;
               c6 = 1;
               const obj2 = { value: null, done: false };
@@ -120,7 +120,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
               outer1_1(false);
             }
             c6 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp56) {
           dispatcher = tmp56;

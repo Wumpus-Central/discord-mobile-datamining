@@ -304,7 +304,7 @@ function isValidChannelAutocomplete(token, guildId) {
         flag = flag2;
       }
     }
-    obj2 = replaced(11645);
+    obj2 = replaced(11711);
   }
   return flag;
 }
@@ -596,8 +596,8 @@ function getChannelAutocompletions(arg0) {
       obj[0] = substr1;
       obj[1] = closure_5;
       obj[2] = guildId;
-      let tmpResult = tmp(5158);
-      obj[7] = tmpResult.getBoosterMap(tmp(7248).AutocompleterResultTypes.TEXT_CHANNEL);
+      let tmpResult = tmp(5159);
+      obj[7] = tmpResult.getBoosterMap(tmp(7308).AutocompleterResultTypes.TEXT_CHANNEL);
       const obj12 = NOOP;
       const tmp7 = importDefault;
       const queryChannelsResult = NOOP.queryChannels(obj);
@@ -605,8 +605,8 @@ function getChannelAutocompletions(arg0) {
       obj[0] = substr1;
       obj[1] = closure_6;
       obj[2] = guildId;
-      tmpResult = tmp(5158);
-      obj[6] = tmpResult.getBoosterMap(tmp(7248).AutocompleterResultTypes.VOICE_CHANNEL);
+      tmpResult = tmp(5159);
+      obj[6] = tmpResult.getBoosterMap(tmp(7308).AutocompleterResultTypes.VOICE_CHANNEL);
       const combined = queryChannelsResult.concat(NOOP.queryChannels(obj));
       const mapped = combined.map((record) => record.record);
       if (0 === substr1.length) {
@@ -652,18 +652,18 @@ function getChannelAutocompletions(arg0) {
           obj1[0] = substr1;
           obj1[1] = maxResults;
           const obj4 = NOOP;
-          obj1[3] = tmp(5158).getBoosterMap(tmp(7248).AutocompleterResultTypes.GROUP_DM);
-          const tmpResult1 = tmp(5158);
+          obj1[3] = tmp(5159).getBoosterMap(tmp(7308).AutocompleterResultTypes.GROUP_DM);
+          const tmpResult1 = tmp(5159);
           const queryGroupDMsResult = obj4.queryGroupDMs(obj1);
           obj2 = { query: null, limit: null, boosters: null };
           obj2[0] = substr1;
           obj2[1] = maxResults;
           const obj8 = NOOP;
-          obj2[2] = tmp(5158).getBoosterMap(tmp(7248).AutocompleterResultTypes.USER);
-          const tmpResult2 = tmp(5158);
+          obj2[2] = tmp(5159).getBoosterMap(tmp(7308).AutocompleterResultTypes.USER);
+          const tmpResult2 = tmp(5159);
           const queryDMChannelsResult = obj8.queryDMChannels(obj2);
           const tmp6 = apply;
-          const sorted = apply(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(tmp(7248).sortByMatchScore);
+          const sorted = apply(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(tmp(7308).sortByMatchScore);
           const mapped1 = sorted.map((record) => {
             record = record.record;
             const obj = { text: record.comparator, channel: record, key: null };
@@ -1178,10 +1178,10 @@ export const isValidFilterAnswerForSubmit = function isValidFilterAnswerForSubmi
     const items = ["filter:" + trimmed, trimmed];
     const token = new getMatch.Token(items, tmp);
     if (SearchTokenTypes.ANSWER_HAS === tmp) {
-      let tmp7Result = tmp7(11649);
+      let tmp7Result = tmp7(11715);
       return tmp7Result.validateForMapWithNegation("has", getHasMap(), token);
     } else if (tmp15.ANSWER_AUTHOR_TYPE === tmp) {
-      tmp7Result = tmp7(11649);
+      tmp7Result = tmp7(11715);
       const obj = {};
       const intl = tmp7(1236).intl;
       obj[intl.string(tmp7(1236).t.tPZo4p)] = "user";

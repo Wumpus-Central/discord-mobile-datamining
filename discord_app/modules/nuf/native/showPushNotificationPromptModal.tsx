@@ -3,7 +3,7 @@ import { PermissionStateType } from "set";
 import { NUF_NOTIFICATION_MODAL_KEY as closure_4 } from "NewUserTypes";
 import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
 
-let result = require("module_4507").fileFinishedImporting("modules/nuf/native/showPushNotificationPromptModal.tsx");
+let result = require("module_4509").fileFinishedImporting("modules/nuf/native/showPushNotificationPromptModal.tsx");
 
 export const showPushNotificationPromptModal = function showPushNotificationPromptModal(onComplete) {
   onComplete = onComplete.onComplete;
@@ -14,6 +14,6 @@ export const showPushNotificationPromptModal = function showPushNotificationProm
       onComplete();
     }
   };
-  obj.pushLazy(onComplete(1988)(15064, dependencyMap.paths), obj, closure_4);
-  const result = onComplete(11714).setPushPermissionState(PermissionStateType.PROMPT_SEEN);
+  obj.pushLazy(onComplete(1988)(15134, dependencyMap.paths), obj, closure_4);
+  const result = onComplete(11780).setPushPermissionState(PermissionStateType.PROMPT_SEEN);
 };

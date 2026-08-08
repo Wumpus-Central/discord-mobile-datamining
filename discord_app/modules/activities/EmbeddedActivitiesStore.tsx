@@ -203,7 +203,7 @@ function updateEmbeddedActivities(content_classification) {
         if (value2 != null) {
           const inviterUserId = value2.inviterUserId;
         }
-        const tmp36 = combined(10527)(application_id);
+        const tmp36 = combined(10593)(application_id);
         if (null != tmp36) {
           if (null != obj3.getSessionId()) {
             const value6 = obj4.get(application_id);
@@ -258,7 +258,7 @@ function updateEmbeddedActivities(content_classification) {
                   const combinedResult = combined(709);
                 } else {
                   if (embeddedActivityLocationChannelId2 === channelId.getChannelId()) {
-                    if (!combined(10339)(embeddedActivityLocationChannelId2)) {
+                    if (!combined(10405)(embeddedActivityLocationChannelId2)) {
                       PIP = ActivityPanelModes.PANEL;
                     }
                   }
@@ -269,7 +269,7 @@ function updateEmbeddedActivities(content_classification) {
                 const _Date2 = Date;
                 const result5 = map11.set(combined, Date.now());
                 const tmp41 = 0 === arr2.length;
-                tmp76Result2 = tmp76(10583);
+                tmp76Result2 = tmp76(10649);
               }
               const tmp76Result1 = tmp76(3919);
             }
@@ -284,7 +284,7 @@ function updateEmbeddedActivities(content_classification) {
       const _HermesInternal3 = HermesInternal;
       obj5.delete("" + application_id + ":" + tmp56);
     }
-    const someResult1 = mapped.some((userId) => application_id(13262).isActivityParticipantCurrentUserCurrentSession(userId));
+    const someResult1 = mapped.some((userId) => application_id(13332).isActivityParticipantCurrentUserCurrentSession(userId));
   }
 }
 ActivityPanelModes = ActivityPanelModes.ActivityPanelModes;
@@ -343,7 +343,7 @@ prototype["getItems"] = function getItems(arg0) {
         let cachedVisible = self.cachedVisible;
         if (cachedVisible == null) {
           const items = self.items;
-          const found = items.filter((contentClassification) => !callback(10578).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
+          const found = items.filter((contentClassification) => !callback(10644).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
           self.cachedVisible = found;
           cachedVisible = found;
         }
@@ -352,7 +352,7 @@ prototype["getItems"] = function getItems(arg0) {
         let cachedHidden = self.cachedHidden;
         if (cachedHidden == null) {
           const items1 = self.items;
-          const found1 = items1.filter((contentClassification) => callback(10578).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
+          const found1 = items1.filter((contentClassification) => callback(10644).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
           self.cachedHidden = found1;
           cachedHidden = found1;
         }

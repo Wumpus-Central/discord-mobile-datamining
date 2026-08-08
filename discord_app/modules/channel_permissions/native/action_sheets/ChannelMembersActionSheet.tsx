@@ -78,9 +78,9 @@ export default function ChannelMembersActionSheet(arg0) {
       if (null != sortedGuildRoles) {
         const canResult = getUncachedChannelPermissions.can(constants.MANAGE_ROLES, stateFromStores);
         c5 = canResult;
-        let tmp5Result = tmp5(8937);
+        let tmp5Result = tmp5(8997);
         const existingRolesRows = tmp5Result.getExistingRolesRows(guild, sortedGuildRoles, stateFromStores, stateFromStores.accessPermissions);
-        tmp5Result = tmp5(8937);
+        tmp5Result = tmp5(8997);
         const items5 = [];
         obj = { title: null, data: null };
         const existingMembersRows = tmp5Result.getExistingMembersRows(stateFromStoresArray, stateFromStores, guild, stateFromStores.accessPermissions);
@@ -110,12 +110,12 @@ export default function ChannelMembersActionSheet(arg0) {
           };
           let intl = tmp5(1236).intl;
           obj2[2] = intl.string(tmp5(1236).t.XPDhcc);
-          obj2[3] = tmp29(tmp5(5951).SettingsIcon, {});
-          tmp29Result = tmp29(tmp5(4844).PressableOpacity, obj2);
+          obj2[3] = tmp29(tmp5(6011).SettingsIcon, {});
+          tmp29Result = tmp29(tmp5(4846).PressableOpacity, obj2);
         }
         obj3 = { scrollable: true, header: null, startExpanded: true, children: null };
         obj1[2] = tmp29Result;
-        obj3[1] = closure_11(tmp5(5395).BottomSheetTitleHeader, obj1);
+        obj3[1] = closure_11(tmp5(5396).BottomSheetTitleHeader, obj1);
         const obj4 = { style: null, children: null };
         obj4[0] = tmp.container;
         if (canResult) {
@@ -125,8 +125,8 @@ export default function ChannelMembersActionSheet(arg0) {
           obj5[1] = function onPress() {
             return outer1_0(_undefined[25]).openAddMembersActionSheet(stateFromStores);
           };
-          obj5[2] = tmp29(tmp5(9655).GroupPlusIcon, {});
-          tmp29Result = tmp29(tmp5(7910).RowButton, obj5);
+          obj5[2] = tmp29(tmp5(9720).GroupPlusIcon, {});
+          tmp29Result = tmp29(tmp5(7970).RowButton, obj5);
         } else {
           const obj6 = { style: null, children: null };
           obj6[0] = tmp.warning;
@@ -160,10 +160,10 @@ export default function ChannelMembersActionSheet(arg0) {
           return outer1_11(outer1_0(_undefined[30]).Text, obj);
         };
         obj8[3] = items5;
-        items6[1] = closure_11(tmp5(5398).BottomSheetSectionList, obj8);
+        items6[1] = closure_11(tmp5(5399).BottomSheetSectionList, obj8);
         obj4[1] = items6;
         obj3[3] = closure_12(stateFromStores, obj4);
-        return closure_11(tmp5(5396).BottomSheet, obj3);
+        return closure_11(tmp5(5397).BottomSheet, obj3);
       }
     }
   }

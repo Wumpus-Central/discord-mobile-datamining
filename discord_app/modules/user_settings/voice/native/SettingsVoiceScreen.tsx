@@ -7,7 +7,7 @@ import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "combined";
-import { Directions } from "../../../../../_runtime/05426_Directions.js";
+import { LegacyBaseButton } from "../../../../../_runtime/05427_LegacyBaseButton.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
@@ -25,9 +25,9 @@ function KrispLogo() {
   const tmp = callback3();
   let obj = AccessibilityAnnouncer;
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = tmp2(10798);
+    let tmp2Result = tmp2(10864);
   } else {
-    tmp2Result = tmp2(10799);
+    tmp2Result = tmp2(10865);
   }
   obj = { style: tmp.krisp, children: null };
   obj = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
@@ -42,7 +42,7 @@ function KrispLogo() {
   const intl3 = tmp5(1236).intl;
   obj2[2] = intl3.string(getSystemLocale.t.hvVgAZ);
   obj1[3] = callback(Text.Text, obj2);
-  items[1] = callback(Directions.Pressable, obj1);
+  items[1] = callback(LegacyBaseButton.LegacyPressable, obj1);
   obj[1] = items;
   return callback2(closure_4, obj);
 }
@@ -58,7 +58,7 @@ function SystemProcessingSubLabel() {
       const result = mediaEngine.showSystemCaptureConfigurationUI("microphone_modes");
     };
     obj[1] = intl.format(tmp(1236).t.EUNgko, obj);
-    tmp3 = callback(tmp(4298).Text, obj);
+    tmp3 = callback(tmp(4299).Text, obj);
   }
   return tmp3;
 }
@@ -70,7 +70,7 @@ let result = require("_detectH265HardwareDecode").fileFinishedImporting("modules
 
 export default function SettingsVoiceScreen() {
   const node = React.useMemo(() => {
-    let obj = callback(10380);
+    let obj = callback(10446);
     obj = { sections: null };
     obj = { label: null, settings: null };
     const intl = callback(1236).intl;

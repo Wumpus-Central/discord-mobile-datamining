@@ -29,9 +29,9 @@ export const trackFavoritesGuildRemoveFromFavorites = function trackFavoritesGui
 export const trackFavoritesGuildOrderUpdated = function trackFavoritesGuildOrderUpdated() {
   expandEventProperties.track(AnalyticEvents.FAVORITES_GUILD_ORDER_UPDATED);
 };
-export const trackFavoritesGuildVisibilitySettingToggled = function trackFavoritesGuildVisibilitySettingToggled(settings_page, closure_0) {
+export const trackFavoritesGuildVisibilitySettingToggled = function trackFavoritesGuildVisibilitySettingToggled(settings_page, is_visible) {
   let obj = expandEventProperties;
-  obj = { source: settings_page, is_visible: closure_0 };
+  obj = { source: settings_page, is_visible };
   obj.track(AnalyticEvents.FAVORITES_GUILD_SETTING_TOGGLED, obj);
 };
 export const trackFavoritesGuildUpsellModalOpened = function trackFavoritesGuildUpsellModalOpened(source) {

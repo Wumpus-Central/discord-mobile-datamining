@@ -25,7 +25,7 @@ function _fetchApplicationCommandIndex() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -56,7 +56,7 @@ function _fetchApplicationCommandIndex() {
                   let closure_0 = arg0;
                   let c2 = 0;
                   let c3 = 0;
-                  return (/* F119670 */ function*() { ... })();
+                  return (/* F120013 */ function*() { ... })();
                 });
                 const _retry = tmp;
                 const apply = tmp.apply;
@@ -169,7 +169,7 @@ function _fetchApplicationCommandIndex() {
             return obj;
           } else {
             c2 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           c2 = tmp;

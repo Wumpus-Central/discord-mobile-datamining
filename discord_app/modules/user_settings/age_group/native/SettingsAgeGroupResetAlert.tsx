@@ -27,7 +27,7 @@ export default function SettingsAgeGroupResetAlert() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -47,7 +47,7 @@ export default function SettingsAgeGroupResetAlert() {
               c1 = 2;
               c3 = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(12959).resetAgeVerification();
+              obj1[0] = outer1_0(13029).resetAgeVerification();
               return obj1;
             }
           } else if (1 === tmp7) {
@@ -68,12 +68,12 @@ export default function SettingsAgeGroupResetAlert() {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = outer1_0(4642);
+            obj = outer1_0(4644);
             obj.dismissAlert(outer1_6);
             navigation.goBack();
             dependencyMap = 0;
             c3 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp29) {
           if (tmp4 === dependencyMap) {

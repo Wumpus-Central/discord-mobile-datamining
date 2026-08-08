@@ -41,7 +41,7 @@ export default function EmojiRow(arg0) {
   const items = [
     emojisForReactionRow.map((emoji) => {
       let closure_0 = emoji;
-      return token(outer1_0(9793).EmojiReactionRowButton, {
+      return token(outer1_0(9859).EmojiReactionRowButton, {
         emoji,
         onPress() {
           let channel_id;
@@ -67,21 +67,21 @@ export default function EmojiRow(arg0) {
         emojiFontSize: closure_3,
         emojiLineHeight: closure_4,
         emojiContainerSize: token
-      }, outer1_0(9793).getEmojiKey(emoji, arg1));
+      }, outer1_0(9859).getEmojiKey(emoji, arg1));
     }),
 
   ];
   obj1 = {
     emojiContainerSize: token,
     onPress() {
-      return outer1_0(8553).handleAddNewReactions(channel, id.id, outer1_0(7163).ReactionLocations.MESSAGE);
+      return outer1_0(8613).handleAddNewReactions(channel, id.id, outer1_0(7223).ReactionLocations.MESSAGE);
     }
   };
   items[1] = token(EmojiPickerRowButton.EmojiPickerRowButton, obj1);
   obj[1] = items;
   const items1 = [callback(closure_3, obj), ];
   obj2 = { location: null };
-  obj2[0] = channel(5688).MESSAGE_LONG_PRESS_MENU;
+  obj2[0] = channel(5748).MESSAGE_LONG_PRESS_MENU;
   items1[1] = token(DoubleTapEmojiEditNudgeInner.DoubleTapEmojiEditNudge, obj2);
   obj[1] = items1;
   return callback(closure_3, obj);

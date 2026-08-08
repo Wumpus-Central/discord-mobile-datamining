@@ -31,7 +31,7 @@ function _addDirectoryGuildEntry() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -55,7 +55,7 @@ function _addDirectoryGuildEntry() {
               body = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "PX_8", done: "Array" };
+              return { value: "ct", done: "Array" };
             }
           } else if (1 === tmp6) {
             if (arg0 === 1) {
@@ -67,7 +67,7 @@ function _addDirectoryGuildEntry() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj7 = callback2(5126);
+              let obj7 = callback2(5127);
               const obj2 = { url: null, body: null, trackedActionData: null, rejectWithError: null };
               obj2[0] = c6.DIRECTORY_CHANNEL_ENTRY(callback, callback2);
               const obj3 = { description: null, primary_category_id: null };
@@ -105,7 +105,7 @@ function _addDirectoryGuildEntry() {
             obj8[2] = body.body;
             obj.dispatch(obj8);
             c7 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp18) {
           c7 = tmp;
@@ -146,7 +146,7 @@ function _updateDirectoryEntry() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -170,7 +170,7 @@ function _updateDirectoryEntry() {
               body = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "PX_8", done: "Array" };
+              return { value: "ct", done: "Array" };
             }
           } else if (1 === tmp6) {
             if (arg0 === 1) {
@@ -212,7 +212,7 @@ function _updateDirectoryEntry() {
             obj6[2] = body.body;
             obj.dispatch(obj6);
             c7 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp18) {
           c7 = tmp;
@@ -389,7 +389,7 @@ closure_0 = importDefaultResult((arg0, arg1) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

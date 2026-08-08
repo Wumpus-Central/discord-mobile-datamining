@@ -26,22 +26,22 @@ function useDeliveredDockCreative() {
   let obj = apexExperiment;
   const tmp2 = adDecisionForPlacement;
   const items = [initializeState];
-  const stateFromStores = adDecisionForPlacement(589).useStateFromStores(items, () => questPreviewOverride.getQuestPreviewOverride(adDecisionForPlacement(5163).QuestContent.QUEST_BAR_MOBILE), []);
+  const stateFromStores = adDecisionForPlacement(589).useStateFromStores(items, () => questPreviewOverride.getQuestPreviewOverride(adDecisionForPlacement(5164).QuestContent.QUEST_BAR_MOBILE), []);
   const obj2 = adDecisionForPlacement(589);
   const items1 = [initializeState];
   let stateFromStores1 = adDecisionForPlacement(589).useStateFromStores(items1, () => {
     let questToDeliverForPlacement;
     let quests;
     ({ quests, questToDeliverForPlacement } = initializeState);
-    let questForPlacement = adDecisionForPlacement(7098).getQuestForPlacement(quests, questToDeliverForPlacement, adDecisionForPlacement(5163).AdPlacement.MOBILE_HOME_DOCK_AREA);
+    let questForPlacement = adDecisionForPlacement(7158).getQuestForPlacement(quests, questToDeliverForPlacement, adDecisionForPlacement(5164).AdPlacement.MOBILE_HOME_DOCK_AREA);
     if (questForPlacement == null) {
       questForPlacement = null;
     }
     return questForPlacement;
   });
   const obj3 = adDecisionForPlacement(589);
-  adDecisionForPlacement = adDecisionForPlacement(14285).useAdDecisionForPlacement(adDecisionForPlacement(5163).AdPlacement.MOBILE_HOME_DOCK_AREA);
-  const obj4 = adDecisionForPlacement(14285);
+  adDecisionForPlacement = adDecisionForPlacement(14355).useAdDecisionForPlacement(adDecisionForPlacement(5164).AdPlacement.MOBILE_HOME_DOCK_AREA);
+  const obj4 = adDecisionForPlacement(14355);
   const items2 = [initializeState];
   const items3 = [adDecisionForPlacement];
   if (obj.useConfig({ location: "QuestMobileDock" }).enableNewRequestBehavior) {
@@ -68,7 +68,7 @@ function useDeliveredDockCreative() {
     if (!tmp2Result.isQuestExpired(stateFromStores1)) {
       tmp6 = stateFromStores1;
     }
-    tmp2Result = tmp2(7098);
+    tmp2Result = tmp2(7158);
   }
   let tmp7 = stateFromStores;
   if (stateFromStores == null) {
@@ -100,8 +100,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus;
   if (isDismissedResult) {
-    let tmpResult = tmp(7098);
-    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5163).QuestContent.QUEST_BAR_MOBILE);
+    let tmpResult = tmp(7158);
+    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5164).QuestContent.QUEST_BAR_MOBILE);
   }
   let claimedAt;
   if (deliveredQuest != null) {
@@ -110,14 +110,14 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       claimedAt = userStatus.claimedAt;
     }
   }
-  tmpResult = tmp(10393);
+  tmpResult = tmp(10459);
   const isQuestExpired = tmpResult.useIsQuestExpired(deliveredQuest);
   const obj2 = initialize;
   const type = mobileQuestDock.type;
   const isEligibleForQuests = getIsEligibleForQuests.getIsEligibleForQuests();
   if (AdCreativeType.AdCreativeType.NO_FILL !== type) {
-    if (tmp(7128).AdCreativeType.BOUNTY !== type) {
-      if (tmp(7128).AdCreativeType.QUEST === type) {
+    if (tmp(7188).AdCreativeType.BOUNTY !== type) {
+      if (tmp(7188).AdCreativeType.QUEST === type) {
         if (stateFromStores) {
           if (!tmp9) {
             let tmp12 = null != deliveredQuest && !tmp4;
@@ -299,7 +299,7 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -366,7 +366,7 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
             return obj;
           }
           v0 = 3;
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         } catch (tmp15) {
           v0 = tmp;
           throw tmp15;

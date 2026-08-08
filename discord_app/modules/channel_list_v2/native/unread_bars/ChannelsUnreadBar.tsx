@@ -5,7 +5,7 @@ import hairlineWidth from "hairlineWidth";
 import { AnalyticEvents } from "ME";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4162";
+import importDefaultResult from "module_4036";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c5;
@@ -16,7 +16,7 @@ const require = arg1;
 let c4 = importAllResult;
 ({ getScaledSearchBarHeight: c5, VIEWABILITY_CONFIG: closure_6 } = hairlineWidth);
 ({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
-let closure_10 = require("module_4162").createAnimatedComponent(require("AtIcon").Pressable);
+let closure_10 = require("module_4036").createAnimatedComponent(require("AtIcon").Pressable);
 let closure_11 = createCacheKey.createStyles((arg0, arg1) => {
   let num = 5;
   if (arg0) {

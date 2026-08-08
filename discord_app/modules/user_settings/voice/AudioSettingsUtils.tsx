@@ -6,14 +6,14 @@ let result = require("AudioSettingsDefaultVolumes").fileFinishedImporting("modul
 
 export const snapVolumeToDefault = function snapVolumeToDefault(USER, DEFAULT) {
   if (DEFAULT === BaseConnectionEvent.MediaEngineContextTypes.STREAM) {
-    USER = tmp(9098).AudioSettingsDefaultVolumes.STREAM;
+    USER = tmp(9158).AudioSettingsDefaultVolumes.STREAM;
   } else {
-    USER = tmp(9098).AudioSettingsDefaultVolumes.USER;
+    USER = tmp(9158).AudioSettingsDefaultVolumes.USER;
   }
   let tmp3 = USER;
-  let tmpResult = tmp(4749);
+  let tmpResult = tmp(4751);
   const result = tmpResult.amplitudeToPerceptual(USER);
-  tmpResult = tmp(4749);
+  tmpResult = tmp(4751);
   if (Math.abs(result - tmpResult.amplitudeToPerceptual(USER)) < 1) {
     tmp3 = USER;
   }
@@ -22,7 +22,7 @@ export const snapVolumeToDefault = function snapVolumeToDefault(USER, DEFAULT) {
 export const coerceAudioContextForProto = function coerceAudioContextForProto(first) {
   if (BaseConnectionEvent.MediaEngineContextTypes.DEFAULT === first) {
     return constants.USER;
-  } else if (tmp(4398).MediaEngineContextTypes.STREAM === first) {
+  } else if (tmp(4400).MediaEngineContextTypes.STREAM === first) {
     return constants.STREAM;
   }
   tmp = require;

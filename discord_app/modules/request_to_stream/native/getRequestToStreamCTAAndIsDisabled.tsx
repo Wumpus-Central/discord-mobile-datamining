@@ -31,22 +31,22 @@ export default function getRequestToStreamCTAAndIsDisabled(id) {
     isDisabled = false;
     text = stringResult;
     if (!tmp3[0]) {
-      if (tmp(11098).StreamRequestUnfulfillableReason.ALREADY_STREAMING === tmp4) {
+      if (tmp(11164).StreamRequestUnfulfillableReason.ALREADY_STREAMING === tmp4) {
         const intl4 = tmp(1236).intl;
         text = intl4.string(tmp6(2738).P0wwmM);
         isDisabled = true;
-      } else if (tmp(11098).StreamRequestUnfulfillableReason.NOT_RUNNING_GAME === tmp4) {
+      } else if (tmp(11164).StreamRequestUnfulfillableReason.NOT_RUNNING_GAME === tmp4) {
         const intl3 = tmp(1236).intl;
         text = intl3.string(tmp6(2738)["43zohO"]);
         isDisabled = true;
-      } else if (tmp(11098).StreamRequestUnfulfillableReason.NOT_IN_VOICE_CHANNEL === tmp4) {
+      } else if (tmp(11164).StreamRequestUnfulfillableReason.NOT_IN_VOICE_CHANNEL === tmp4) {
         const intl2 = tmp(1236).intl;
         text = intl2.string(tmp6(2738).qRXats);
         isDisabled = true;
       } else {
         isDisabled = false;
         text = stringResult;
-        if (tmp(11098).StreamRequestUnfulfillableReason.NO_PERMISSION === tmp4) {
+        if (tmp(11164).StreamRequestUnfulfillableReason.NO_PERMISSION === tmp4) {
           const intl7 = tmp(1236).intl;
           text = intl7.string(tmp6(2738)["fac+eE"]);
           isDisabled = true;

@@ -128,7 +128,7 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
       tmp5 = null != DISMISS && DISMISS !== outer1_5.DISMISS;
       const result = outer1_0(outer1_2[6]).UNSAFE_markDismissibleContentAsDismissed(closure_0, { forceTrack: true, dismissAction: DISMISS });
     };
-    tmp2Result = tmp2(tmp3(4712).Button, obj6);
+    tmp2Result = tmp2(tmp3(4714).Button, obj6);
   }
   items4[1] = tmp2Result;
   obj4[1] = items4;

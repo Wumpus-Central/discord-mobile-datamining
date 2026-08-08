@@ -104,7 +104,7 @@ function getEmojiUnavailableReason(intention) {
               }
             }
           }
-          let tmp3Result = tmp3(5180);
+          let tmp3Result = tmp3(5181);
           if (tmp3Result.isUnusableRoleSubscriptionEmoji(emoji, guildId)) {
             tmp3Result = tmp3(3922);
             tmp3Result.shouldHideGuildPurchaseEntryPoints(emoji.guildId) ? EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE : EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED;
@@ -117,7 +117,7 @@ function getEmojiUnavailableReason(intention) {
                 if (!tmp3Result1.isPurchasableRoleSubscriptionEmoji(emoji)) {
                   PREMIUM_LOCKED = EmojiDisabledReasons.PREMIUM_LOCKED;
                 }
-                tmp3Result1 = tmp3(5180);
+                tmp3Result1 = tmp3(5181);
               }
               tmp27Result = tmp27(3947);
             }

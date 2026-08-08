@@ -1,6 +1,6 @@
 // discord_app/modules/auth/externalFingerprint.tsx
 import fetchFingerprint from "fetchFingerprint";
-import { keysSorter } from "../../../_runtime/05172_keysSorter.js";
+import { keysSorter } from "../../../_runtime/05173_keysSorter.js";
 import { dispatcher } from "../../Dispatcher.tsx";
 
 const require = arg1;

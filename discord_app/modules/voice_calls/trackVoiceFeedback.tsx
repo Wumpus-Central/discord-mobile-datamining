@@ -29,7 +29,7 @@ function _trackVoiceFeedback() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -70,7 +70,7 @@ function _trackVoiceFeedback() {
               let closure_21;
               c6 = 1;
               c7 = 1;
-              return { value: "PX_8", done: "Array" };
+              return { value: "ct", done: "Array" };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -97,7 +97,7 @@ function _trackVoiceFeedback() {
               c6 = 2;
               c7 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = callback(13007).getKrispModel();
+              obj2[0] = callback(13077).getKrispModel();
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -161,7 +161,7 @@ function _trackVoiceFeedback() {
             const merged = Object.assign(closure_21);
             obj.track(callback, obj4);
             c7 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp48) {
           c7 = tmp;

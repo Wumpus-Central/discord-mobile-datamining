@@ -21,11 +21,10 @@ const require = arg1;
 function EmptyBody() {
   const callback = React.useCallback(() => {
     if (obj.getFavoritesAccess().hasAccess) {
-      const result = tmp(tmp2[9]).openAddFavoriteChannelModal({ source: "favorites_empty_sidebar" });
-      const tmpResult = tmp(tmp2[9]);
+      tmp3(tmp2[9])({ source: "favorites_empty_sidebar" });
     } else {
-      const obj2 = callback2(tmp2[10]);
-      obj2.openLazy(tmp(tmp2[12])(tmp2[11], tmp2.paths), tmp(tmp2[13]).FAVORITES_UPSELL_SHEET_KEY, { source: "favorites_empty_sidebar" });
+      const tmp3Result = tmp3(tmp2[10]);
+      tmp3Result.openLazy(tmp(tmp2[12])(tmp2[11], tmp2.paths), tmp(tmp2[13]).FAVORITES_UPSELL_SHEET_KEY, { source: "favorites_empty_sidebar" });
       const tmp4 = tmp(tmp2[12])(tmp2[11], tmp2.paths);
     }
   }, []);
@@ -38,11 +37,11 @@ function UpsellBody() {
   let favoriteCount;
   let favoriteLimit;
   const tmp = createCacheKey();
-  let obj = isAtLimit(9645);
+  let obj = isAtLimit(9711);
   const favoritesLimitUpsell = obj.useFavoritesLimitUpsell();
   isAtLimit = favoritesLimitUpsell.isAtLimit;
   ({ favoriteCount, favoriteLimit } = favoritesLimitUpsell);
-  analyticsLocations = analyticsLocations(5668)(analyticsLocations(5688).FAVORITES_GUILD_UPSELL_BAR).analyticsLocations;
+  analyticsLocations = analyticsLocations(5728)(analyticsLocations(5748).FAVORITES_GUILD_UPSELL_BAR).analyticsLocations;
   const items = [analyticsLocations];
   const items1 = [isAtLimit];
   const callback = React.useCallback(() => {
@@ -60,18 +59,18 @@ function UpsellBody() {
   obj = { variant: c10, color: "text-muted", style: tmp.upsellText, lineClamp: 3, children: null };
   const intl = isAtLimit(1236).intl;
   const obj1 = { count: favoriteCount, limit: favoriteLimit, maxCount: MAX_FAVORITE_CHANNELS, nitroTierName: null, onClick: null, countHook: null };
-  const tmp3 = analyticsLocations(5668);
+  const tmp3 = analyticsLocations(5728);
   obj1[3] = isAtLimit(3947).getPremiumTypeDisplayName(PremiumTypes.TIER_2);
   obj1[4] = callback;
   obj1[5] = callback1;
   obj[4] = intl.format(analyticsLocations(3030).Yw4x8Q, obj1);
-  const items2 = [callback(isAtLimit(4298).Text, obj), ];
+  const items2 = [callback(isAtLimit(4299).Text, obj), ];
   const obj2 = { size: null, style: null };
   obj2[0] = isAtLimit(1297).BetaSizes.SMALL;
   obj2[1] = tmp.betaTag;
   items2[1] = callback(isAtLimit(1297).BetaTag, obj2);
   obj[3] = items2;
-  return callback2(isAtLimit(4710).Stack, obj);
+  return callback2(isAtLimit(4712).Stack, obj);
 }
 function PlaceholderRows() {
   const tmp = createCacheKey();

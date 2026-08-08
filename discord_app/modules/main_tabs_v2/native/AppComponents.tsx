@@ -27,7 +27,7 @@ if (set.isAndroid()) {
   jsxResult = jsx(require("updateAccessibilityAnnouncerLiveRegionMessage").AccessibilityAnnouncerLiveRegion, {});
 }
 obj = { lockKeys: ["external-pip"], children: null };
-const items1 = [jsx(require("module_15997"), {}), jsx(require("module_16030"), {}), jsx(require("VoicePanel"), {}), jsx(require("module_16205"), {})];
+const items1 = [jsx(require("module_16072"), {}), jsx(require("module_16105"), {}), jsx(require("VoicePanel"), {}), jsx(require("module_16282"), {})];
 obj[1] = items1;
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/AppComponents.tsx");
 

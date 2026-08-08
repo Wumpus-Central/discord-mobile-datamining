@@ -34,7 +34,7 @@ function PreviewProfileTrigger(handlePreviewPress) {
   dependencyMap = tmp;
   let obj = handlePreviewPress(4013);
   const theme = obj.useThemeContext().theme;
-  const isThemeLightResult = handlePreviewPress(4147).isThemeLight(theme);
+  const isThemeLightResult = handlePreviewPress(4153).isThemeLight(theme);
   initialize = theme === constants2.MIDNIGHT;
   React = isThemeLightResult ? tmp.previewProfileButtonLight : tmp.previewProfileButtonDark;
   closure_5 = isThemeLightResult ? tmp.previewProfileButtonLightPressed : tmp.previewProfileButtonDarkPressed;
@@ -66,7 +66,7 @@ function PreviewProfileTrigger(handlePreviewPress) {
   obj[3] = intl.string(handlePreviewPress(1236).t["3Qcx6K"]);
   obj = { size: "md", color: null };
   obj[1] = onTrackPress(712).colors.INTERACTIVE_ICON_DEFAULT;
-  obj[4] = callback3(handlePreviewPress(8437).EyeIcon, obj);
+  obj[4] = callback3(handlePreviewPress(8497).EyeIcon, obj);
   return callback3(closure_7, obj);
 }
 function ProductDetailsActionSheetInner(product) {

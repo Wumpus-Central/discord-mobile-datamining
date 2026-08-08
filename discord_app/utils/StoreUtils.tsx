@@ -26,7 +26,7 @@ function _httpGetWithCountryCodeQuery() {
       if (flag === undefined) {
         flag = true;
       }
-      yield "PX_8";
+      yield "ct";
       if (1 === tmp5) {
         if (arg0 === 1) {
           let merged = 3;
@@ -60,7 +60,7 @@ function _httpGetWithCountryCodeQuery() {
                   let closure_0 = arg0;
                   let c2 = 0;
                   let c3 = 0;
-                  return (/* F119907 */ function*() { ... })();
+                  return (/* F120250 */ function*() { ... })();
                 });
                 return new Promise(function() {
                   const self = this;

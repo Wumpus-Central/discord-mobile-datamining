@@ -230,7 +230,7 @@ function _fetchCollectiblesPurchases() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -458,7 +458,7 @@ function _maybeFetchCollectiblesProduct() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -497,7 +497,7 @@ function _maybeFetchCollectiblesProduct() {
             return obj;
           }
           c2 = 3;
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         } catch (tmp9) {
           c2 = tmp;
           throw tmp9;
@@ -543,7 +543,7 @@ function _claimPremiumCollectiblesProduct() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -610,7 +610,7 @@ function _claimPremiumCollectiblesProduct() {
             obj6.dispatch(obj6);
             c4 = 0;
             c6 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp29) {
           map = tmp29;
@@ -653,7 +653,7 @@ function _validateCollectiblesRecipient() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -687,8 +687,8 @@ function _validateCollectiblesRecipient() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = getUserAgnosticState;
-            obj2 = callback(5894);
-            const aPIError = new callback(4201).APIError(callback);
+            obj2 = callback(5954);
+            const aPIError = new callback(4202).APIError(callback);
             const result = obj2.captureOrIgnoreApiError(aPIError);
             c7 = 3;
             return { value: false, done: true };
@@ -749,7 +749,7 @@ function _validateCollectiblesRecipientsBatch() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -783,8 +783,8 @@ function _validateCollectiblesRecipientsBatch() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = getUserAgnosticState;
-            obj2 = callback(5894);
-            const aPIError = new callback(4201).APIError(callback);
+            obj2 = callback(5954);
+            const aPIError = new callback(4202).APIError(callback);
             const result = obj2.captureOrIgnoreApiError(aPIError);
             c7 = 3;
             const obj4 = { value: null, done: true };
@@ -840,7 +840,7 @@ function _fetchCollectiblesMarketings() {
       if (PROD === undefined) {
         PROD = callback(outer1_2[26]).CollectiblesMarketingReleaseType.PROD;
       }
-      yield "PX_8";
+      yield "ct";
       obj2(body[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
       obj2 = { platform: null };
       obj2[0] = PROD(body[27]).CollectiblesMarketingPlatform.MOBILE;
@@ -1030,7 +1030,7 @@ function _claimCollectiblesCategoryReward() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1099,7 +1099,7 @@ function _claimCollectiblesCategoryReward() {
             obj6.dispatch(obj6);
             c5 = 0;
             c7 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp29) {
           getUserAgnosticState = tmp29;
@@ -1134,7 +1134,7 @@ function _maybeFetchCollectiblesShopTabLayout() {
       let c1;
       let layoutFetchError = tmp3;
       ({ tab: c0, abortSignal: c1 } = callback);
-      yield "PX_8";
+      yield "ct";
       if (1 === tmp7) {
         if (arg0 === 1) {
           let c6 = 3;
@@ -1220,7 +1220,7 @@ export default { openCollectiblesShop, closeCollectiblesShop, fetchCollectiblesP
 export { openCollectiblesShop };
 export { openCollectiblesShopMobile };
 export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
-  const rootNavigationRef = isCollectiblesShopRoute(4153).getRootNavigationRef();
+  const rootNavigationRef = isCollectiblesShopRoute(4159).getRootNavigationRef();
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
   let tmp2 = !tmp;
   if (!tmp) {

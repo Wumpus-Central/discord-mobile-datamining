@@ -57,7 +57,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -190,7 +190,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -292,9 +292,9 @@ export default {
           c4();
         }
         if (null != obj2.getRootNavigationRef()) {
-          tmp6(4310).transitionToChannel(channel.id, { navigationReplace: true });
+          tmp6(4311).transitionToChannel(channel.id, { navigationReplace: true });
           tmp3 = channel;
-          const tmp6Result = tmp6(4310);
+          const tmp6Result = tmp6(4311);
         } else {
           const privateChannel = SelectedChannelActionCreators.selectPrivateChannel(channel.id);
           tmp3 = channel;
@@ -343,7 +343,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -428,11 +428,11 @@ export default {
     const tmp2 = importDefault;
     const tmp5 = require;
     if (null != obj2.getRootNavigationRef()) {
-      tmp5(4310).transitionToChannel(tmp.id, { navigationReplace: true });
-      const tmp5Result = tmp5(4310);
+      tmp5(4311).transitionToChannel(tmp.id, { navigationReplace: true });
+      const tmp5Result = tmp5(4311);
     } else {
-      const privateChannel = tmp2(5128).selectPrivateChannel(tmp.id);
-      const tmp2Result = tmp2(5128);
+      const privateChannel = tmp2(5129).selectPrivateChannel(tmp.id);
+      const tmp2Result = tmp2(5129);
     }
     return tmp;
   },
@@ -453,7 +453,7 @@ export default {
       tmpResult.track(constants.CHANGE_LOG_DM_REMOVED, obj);
     }
     tmpResult = tmp(709);
-    obj = { id, guild_id: "Array", parent_id: "accessible" };
+    obj = { id, guild_id: "Array", parent_id: "isArray" };
     tmpResult.dispatch({ type: "CHANNEL_DELETE", channel: obj, silent: flag2 });
     if (flag) {
       transitionTo.transitionTo(constants2.FRIENDS);
@@ -465,11 +465,11 @@ export default {
     const obj7 = sendRequest;
     const delResult = HTTP.del(obj1);
     return HTTP.del(obj1).then(() => {
-      const AccessibilityAnnouncer = callback(4147).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = callback(4153).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.nRbucl));
     }).catch(() => {
-      const AccessibilityAnnouncer = callback(4147).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = callback(4153).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.ndXVI5));
     });
@@ -593,7 +593,7 @@ export default {
         tmp10 = isThreadResult;
       }
       if (!tmp10) {
-        obj1 = outer1_1(5878);
+        obj1 = outer1_1(5938);
         const result = obj1.checkGuildTemplateDirty(guildId);
       }
       return closure_1;
@@ -615,7 +615,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -761,7 +761,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -952,7 +952,7 @@ export default {
       const obj4 = outer1_0(530);
       obj2[3] = obj4.rejectWithMigratedError();
       closure_0 = yield HTTP.post(obj2);
-      const obj = outer1_1(5878);
+      const obj = outer1_1(5938);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -975,7 +975,7 @@ export default {
       let table = 1;
       yield outer1_1.fetchChannel(outer1_0);
       table = 0;
-      let closure_0 = yield "T";
+      let closure_0 = yield "HermesInternal";
       closure_1 = outer1_6(closure_0);
       const obj = outer1_1(table[13]);
       const obj3 = { type: "CHANNEL_CREATE", channel: null };

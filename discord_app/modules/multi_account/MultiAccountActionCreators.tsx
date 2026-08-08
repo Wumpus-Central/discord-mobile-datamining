@@ -26,7 +26,7 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
     const iter = (function*(arg0) {
       let c3 = tmp3;
       id = id.id;
-      yield "PX_8";
+      yield "ct";
       if (1 === tmp7) {
         if (arg0 === 1) {
           let c7 = 3;

@@ -27,7 +27,7 @@ function _retryMeasurements() {
       if (num10 === undefined) {
         num10 = 0;
       }
-      yield "PX_8";
+      yield "ct";
       if (num10 > 3) {
         return callback2();
       }

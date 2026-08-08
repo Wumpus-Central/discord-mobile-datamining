@@ -1,7 +1,7 @@
 // discord_app/modules/polls/native/PollVotesActionSheet.tsx
 import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING";
 import getEmojiToGroupId from "getEmojiToGroupId";
-import importAllResult from "Directions";
+import importAllResult from "LegacyBaseButton";
 import get_ActivityIndicator from "Text";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import closure_10 from "getEmojiToGroupId";
@@ -77,7 +77,7 @@ function PollVotesHeader(message) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -173,7 +173,7 @@ function PollVotesHeader(message) {
               }
               scrollWidth.current = true;
               v0 = 3;
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             }
           }
           const current2 = v0.current;
@@ -338,9 +338,9 @@ function NoResults() {
   const tmp6 = closure_7;
   const tmp8 = closure_6;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(10220);
+    let tmp2Result = tmp2(10286);
   } else {
-    tmp2Result = tmp2(10221);
+    tmp2Result = tmp2(10287);
   }
   obj[1] = tmp2Result;
   const items = [closure_14(tmp8, obj), , ];
@@ -423,15 +423,15 @@ let closure_18 = importAllResult.forwardRef((answer, ref) => {
     obj1[0] = tmp.answerText;
     obj1[2] = str;
     obj1[4] = answer.poll_media.text;
-    tmp11 = callback(tmp3(4298).Text, obj1);
+    tmp11 = callback(tmp3(4299).Text, obj1);
   }
   items2[1] = tmp11;
   const obj2 = { variant: "text-sm/semibold", color: str, lineClamp: 1, children: null };
   const items3 = [" ", "(", num.toLocaleString(), ")"];
   obj2[3] = items3;
-  items2[2] = closure_15(answer(4298).Text, obj2);
+  items2[2] = closure_15(answer(4299).Text, obj2);
   obj[6] = items2;
-  return closure_15(answer(4844).PressableHighlight, obj);
+  return closure_15(answer(4846).PressableHighlight, obj);
 });
 let closure_20 = { code: "function PollVotesActionSheetTsx1(){const{opacity}=this.__closure;return{flex:1,opacity:opacity.get(),marginBottom:32};}" };
 let result = require("noop").fileFinishedImporting("modules/polls/native/PollVotesActionSheet.tsx");

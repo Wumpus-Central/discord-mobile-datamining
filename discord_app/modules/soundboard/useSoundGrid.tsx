@@ -96,7 +96,7 @@ export default function useSoundGrid(guild_id) {
   let stateFromStores1;
   let stateFromStores2;
   let memo;
-  let enabled;
+  let c15;
   let items = [c7];
   const stateFromStores = _require(flag2[11]).useStateFromStores(items, () => _undefined3.getCurrentUser());
   let obj2 = _require(flag2[11]);
@@ -155,8 +155,9 @@ export default function useSoundGrid(guild_id) {
   if (memo.length > 0) {
     str = "useSoundGrid";
   }
-  enabled = flag(flag2[15]).useConfig({ location: str }).enabled;
-  const items7 = [sortedGuildIdsForSoundboard, first, tmp3[1], enabled, stateFromStores1, stateFromStores2, flag, result, stateFromStoresArray, flag2, tmp3[3], isPremiumResult, soundOrganizer, memo];
+  const tmp14 = flag(flag2[15]).useConfig({ location: str }).enabled || false;
+  c15 = tmp14;
+  const items7 = [sortedGuildIdsForSoundboard, first, tmp3[1], tmp14, stateFromStores1, stateFromStores2, flag, result, stateFromStoresArray, flag2, tmp3[3], isPremiumResult, soundOrganizer, memo];
   return obj11.useMemo(() => {
     let c0 = 0;
     let c1 = 0;
@@ -201,8 +202,8 @@ export default function useSoundGrid(guild_id) {
       obj[4] = guild_id(flag2[8]).SoundboardSoundGridSectionType.FAVORITES;
       obj[5] = guild_id(flag2[10]).sortSoundsOldestToNewestCreationDate;
       stateFromStores2(obj);
-      let tmp8 = enabled;
-      if (enabled) {
+      let tmp8 = c15;
+      if (c15) {
         tmp8 = memo.length > 0;
       }
       if (tmp8) {

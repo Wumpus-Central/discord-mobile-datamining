@@ -54,7 +54,7 @@ export default function ViewModerators(channel) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -111,7 +111,7 @@ export default function ViewModerators(channel) {
             obj2 = v0(outer2_3[9]);
             obj2.hideActionSheet();
             c2 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp20) {
           c2 = tmp;
@@ -221,5 +221,5 @@ export const openAddModeratorsActionSheet = function openAddModeratorsActionShee
   obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel, canSkip: flag };
-  obj2.openLazy(asyncRequireImpl(15815, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
+  obj2.openLazy(asyncRequireImpl(15890, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
 };

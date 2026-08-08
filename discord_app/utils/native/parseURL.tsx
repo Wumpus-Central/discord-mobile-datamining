@@ -106,7 +106,7 @@ export default function parseURL(arg0) {
     const findCodedLinkResult = obj1.findCodedLink(sanitizeUrlResult);
     if (null != findCodedLinkResult) {
       const type = findCodedLinkResult.type;
-      if (tmp5(4291).CodedLinkType.INVITE === type) {
+      if (tmp5(4292).CodedLinkType.INVITE === type) {
         obj1 = { fingerprint: null, attemptId: null, installationId: null, payload: null };
         obj1[0] = fingerprint;
         obj1[1] = attemptId;
@@ -118,7 +118,7 @@ export default function parseURL(arg0) {
         obj2[3] = attemptId;
         obj1[3] = obj2;
         return obj1;
-      } else if (tmp5(4291).CodedLinkType.TEMPLATE === type) {
+      } else if (tmp5(4292).CodedLinkType.TEMPLATE === type) {
         const obj3 = { fingerprint: null, attemptId: null, installationId: null, payload: null };
         obj3[0] = fingerprint;
         obj3[1] = attemptId;
@@ -129,13 +129,13 @@ export default function parseURL(arg0) {
         obj3[3] = obj4;
         return obj3;
       } else {
-        if (tmp5(4291).CodedLinkType.BUILD_OVERRIDE !== type) {
-          if (tmp5(4291).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
-            if (tmp5(4291).CodedLinkType.EXPERIMENT !== type) {
-              if (tmp5(4291).CodedLinkType.EVENT !== type) {
-                if (tmp5(4291).CodedLinkType.CHANNEL_LINK !== type) {
-                  if (tmp5(4291).CodedLinkType.APP_DIRECTORY_PROFILE !== type) {
-                    if (tmp5(4291).CodedLinkType.ACTIVITY_BOOKMARK === type) {
+        if (tmp5(4292).CodedLinkType.BUILD_OVERRIDE !== type) {
+          if (tmp5(4292).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
+            if (tmp5(4292).CodedLinkType.EXPERIMENT !== type) {
+              if (tmp5(4292).CodedLinkType.EVENT !== type) {
+                if (tmp5(4292).CodedLinkType.CHANNEL_LINK !== type) {
+                  if (tmp5(4292).CodedLinkType.APP_DIRECTORY_PROFILE !== type) {
+                    if (tmp5(4292).CodedLinkType.ACTIVITY_BOOKMARK === type) {
                       const obj5 = { fingerprint: null, attemptId: null, installationId: null, payload: null };
                       obj5[0] = fingerprint;
                       obj5[1] = attemptId;
@@ -149,13 +149,13 @@ export default function parseURL(arg0) {
                       obj6[5] = flag;
                       obj5[3] = obj6;
                       return obj5;
-                    } else if (tmp5(4291).CodedLinkType.EMBEDDED_ACTIVITY_INVITE !== type) {
-                      if (tmp5(4291).CodedLinkType.GUILD_PRODUCT !== type) {
-                        if (tmp5(4291).CodedLinkType.SERVER_SHOP !== type) {
-                          if (tmp5(4291).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
-                            if (tmp5(4291).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
-                              if (tmp5(4291).CodedLinkType.QUESTS_EMBED !== type) {
-                                if (tmp5(4291).CodedLinkType.GAME_PROFILE === type) {
+                    } else if (tmp5(4292).CodedLinkType.EMBEDDED_ACTIVITY_INVITE !== type) {
+                      if (tmp5(4292).CodedLinkType.GUILD_PRODUCT !== type) {
+                        if (tmp5(4292).CodedLinkType.SERVER_SHOP !== type) {
+                          if (tmp5(4292).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
+                            if (tmp5(4292).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
+                              if (tmp5(4292).CodedLinkType.QUESTS_EMBED !== type) {
+                                if (tmp5(4292).CodedLinkType.GAME_PROFILE === type) {
                                   const obj7 = { fingerprint: null, attemptId: null, installationId: null, payload: null };
                                   obj7[0] = fingerprint;
                                   obj7[1] = attemptId;
@@ -165,11 +165,11 @@ export default function parseURL(arg0) {
                                   obj8[1] = findCodedLinkResult.code;
                                   obj7[3] = obj8;
                                   return obj7;
-                                } else if (tmp5(4291).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
-                                  if (tmp5(4291).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU !== type) {
-                                    if (tmp5(4291).CodedLinkType.APP_OAUTH2_LINK !== type) {
-                                      if (tmp5(4291).CodedLinkType.COLLECTIBLES_SHOP === type) {
-                                        let tmp5Result = tmp5(12152);
+                                } else if (tmp5(4292).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
+                                  if (tmp5(4292).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU !== type) {
+                                    if (tmp5(4292).CodedLinkType.APP_OAUTH2_LINK !== type) {
+                                      if (tmp5(4292).CodedLinkType.COLLECTIBLES_SHOP === type) {
+                                        let tmp5Result = tmp5(12219);
                                         const tmp10 = callback(findCodedLinkResult.code.split("-"), 2)[1];
                                         if (tmp5Result.isVirtualCurrencyEnabled().enabled) {
                                           if (tmp9 === constants2.ORBS) {
@@ -193,7 +193,7 @@ export default function parseURL(arg0) {
                                         FEATURED_PAGE = constants3.FEATURED_PAGE;
                                         const str2 = findCodedLinkResult.code;
                                         const tmp8 = callback(findCodedLinkResult.code.split("-"), 2);
-                                      } else if (tmp5(4291).CodedLinkType.GAME_SERVER_SHARE !== type) {
+                                      } else if (tmp5(4292).CodedLinkType.GAME_SERVER_SHARE !== type) {
                                         const _Error2 = Error;
                                         const _HermesInternal = HermesInternal;
                                         throw Error("Unknown coded link type: " + findCodedLinkResult.type);
@@ -236,7 +236,7 @@ export default function parseURL(arg0) {
       obj13[3] = obj14;
       return obj13;
     } else {
-      tmp5Result = tmp5(13125);
+      tmp5Result = tmp5(13195);
       const result = tmp5Result.findRemoteAuthFingerprint(host, pathname);
       if (null != result) {
         if (result.length > 0) {
@@ -297,7 +297,7 @@ export default function parseURL(arg0) {
         return obj21;
       }
       if (null != pathname) {
-        const tryParseDiceRollLinkResult = tmp5(4493).tryParseDiceRollLink(pathname);
+        const tryParseDiceRollLinkResult = tmp5(4495).tryParseDiceRollLink(pathname);
         if (null != tryParseDiceRollLinkResult) {
           const obj23 = { fingerprint: null, attemptId: null, installationId: null, payload: null };
           obj23[0] = fingerprint;
@@ -309,7 +309,7 @@ export default function parseURL(arg0) {
           obj23[3] = obj24;
           return obj23;
         } else {
-          const tryParseChannelPathResult = tmp5(4493).tryParseChannelPath(pathname);
+          const tryParseChannelPathResult = tmp5(4495).tryParseChannelPath(pathname);
           if (null != tryParseChannelPathResult) {
             if (query == null) {
               query = "";
@@ -424,7 +424,7 @@ export default function parseURL(arg0) {
                 if (query == null) {
                   str5 = "";
                 }
-                const result1 = tmp5(10443).parseOAuth2AuthorizeProps(str5);
+                const result1 = tmp5(10509).parseOAuth2AuthorizeProps(str5);
                 if (null != result1) {
                   const obj39 = { fingerprint: null, attemptId: null, installationId: null, payload: null };
                   obj39[0] = fingerprint;
@@ -439,7 +439,7 @@ export default function parseURL(arg0) {
                   obj39[3] = obj40;
                   return obj39;
                 }
-                const tmp5Result3 = tmp5(10443);
+                const tmp5Result3 = tmp5(10509);
               }
               if (null != pathname.match(closure_17)) {
                 let str12 = query;
@@ -491,7 +491,7 @@ export default function parseURL(arg0) {
                     }
                   }
                 }
-                const result2 = tmp5(4493).tryParseEventDetailsPath(pathname);
+                const result2 = tmp5(4495).tryParseEventDetailsPath(pathname);
                 if (null != result2) {
                   const obj48 = { fingerprint: null, attemptId: null, installationId: null, payload: null };
                   obj48[0] = fingerprint;
@@ -591,8 +591,8 @@ export default function parseURL(arg0) {
                         const obj59 = { type: null, guildId: null, settingsSection: null, settingsSubsection: null };
                         obj59[0] = closure_7.GUILD_SETTINGS;
                         obj59[1] = tmp41[1];
-                        obj59[2] = uRL(13126)(closure_5, tmp41[2]);
-                        obj59[3] = uRL(13126)(closure_6, tmp41[3]);
+                        obj59[2] = uRL(13196)(closure_5, tmp41[2]);
+                        obj59[3] = uRL(13196)(closure_6, tmp41[3]);
                         obj58[3] = obj59;
                         return obj58;
                       } else {
@@ -610,8 +610,8 @@ export default function parseURL(arg0) {
                           obj60[2] = installationId;
                           const obj61 = { type: null, settingsSection: null, settingsSubsection: null, feature: null };
                           obj61[0] = closure_7.GUILD_SETTINGS_PICKER;
-                          obj61[1] = uRL(13126)(closure_5, tmp36[1]);
-                          obj61[2] = uRL(13126)(closure_6, tmp36[2]);
+                          obj61[1] = uRL(13196)(closure_5, tmp36[1]);
+                          obj61[2] = uRL(13196)(closure_6, tmp36[2]);
                           obj61[3] = tmp87(str7).feature;
                           obj60[3] = obj61;
                           return obj60;
@@ -637,13 +637,13 @@ export default function parseURL(arg0) {
                     }
                   }
                 }
-                const tmp5Result4 = tmp5(4493);
+                const tmp5Result4 = tmp5(4495);
               }
             }
           }
-          const tmp5Result2 = tmp5(4493);
+          const tmp5Result2 = tmp5(4495);
         }
-        const tmp5Result1 = tmp5(4493);
+        const tmp5Result1 = tmp5(4495);
       }
       uRLResult1 = uRL(1467);
     }

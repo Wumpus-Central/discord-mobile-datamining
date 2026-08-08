@@ -666,7 +666,7 @@ function getPlanDescription(arg0) {
   const tmp4 = getPrice(dependencyMap3[planId].id, false, false, obj, true);
   const interval = tmp.interval;
   const tmp5 = planIdsForSkus;
-  let obj1 = planIdsForSkus(5795);
+  let obj1 = planIdsForSkus(5855);
   if (constants7.MONTH === interval) {
     const intl2 = tmp5(1236).intl;
     let stringResult = intl2.string(tmp5(1236).t.FPybU7);
@@ -2604,8 +2604,8 @@ obj = {
       isCrepeEnabled = tmpResult.hasPerk(perks, tmp(1921).Perk.SHOP_DISCOUNTS);
     }
     if (!isCrepeEnabled) {
-      tmpResult = tmp(13257);
-      isCrepeEnabled = tmpResult.canUserUse(tmp(13257).COLLECTIBLES, currentUser);
+      tmpResult = tmp(13327);
+      isCrepeEnabled = tmpResult.canUserUse(tmp(13327).COLLECTIBLES, currentUser);
     }
     return isCrepeEnabled;
   },
@@ -2620,8 +2620,8 @@ obj = {
       isCrepeEnabled = tmpResult.hasPerk(perks, tmp(1921).Perk.MORE_QUEST_ORBS);
     }
     if (!isCrepeEnabled) {
-      tmpResult = tmp(13257);
-      isCrepeEnabled = tmpResult.canUserUse(tmp(13257).QUEST_ORB_MULTIPLIER, perks);
+      tmpResult = tmp(13327);
+      isCrepeEnabled = tmpResult.canUserUse(tmp(13327).QUEST_ORB_MULTIPLIER, perks);
     }
     return isCrepeEnabled;
   },

@@ -33,7 +33,7 @@ const memoResult = importAllResult.memo(function GenericTextRow(text) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -64,7 +64,7 @@ const memoResult = importAllResult.memo(function GenericTextRow(text) {
           return obj;
         } else {
           c0 = 3;
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp7) {
         c0 = tmp;

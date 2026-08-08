@@ -44,7 +44,7 @@ function getChannels(getGuildId, arr) {
     tmp2 = null == arr || arr.includes(getGuildId.type);
     return guildId(12)(items).map((id) => {
       const obj = { id: id.id, text: null };
-      obj[1] = arr(4492).computeChannelName(id, mergeGuildAvatar, upsertRelationship);
+      obj[1] = arr(4494).computeChannelName(id, mergeGuildAvatar, upsertRelationship);
       return obj;
     });
   } else {
@@ -67,13 +67,13 @@ function getChannels(getGuildId, arr) {
           name = tmp7.name;
         }
         if (name == null) {
-          name = arr(4492).computeChannelName(id, outer1_10, outer1_9);
-          const obj3 = arr(4492);
+          name = arr(4494).computeChannelName(id, outer1_10, outer1_9);
+          const obj3 = arr(4494);
         }
         let channelName = name;
       } else {
-        channelName = arr(4492).computeChannelName(id, outer1_10, outer1_9);
-        const obj2 = arr(4492);
+        channelName = arr(4494).computeChannelName(id, outer1_10, outer1_9);
+        const obj2 = arr(4494);
       }
       obj[1] = channelName;
       return obj;

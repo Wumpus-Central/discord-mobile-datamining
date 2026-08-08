@@ -54,7 +54,7 @@ export default function GuildRoleConnectionsScreen(guildId) {
   let closure_7;
   let tmp = createCacheKey();
   dependencyMap = tmp;
-  callback = onCloseModal(4238)();
+  callback = onCloseModal(4239)();
   let obj = guildId(589);
   let items = [createGuildRoleRecordFromRust];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_11.getSortedRoles(guildId));
@@ -97,7 +97,7 @@ export default function GuildRoleConnectionsScreen(guildId) {
     obj2 = { helpdeskArticleUrl: null };
     obj2[0] = tmp2(1974).getArticleURL(constants.CONNECTION_DETAILS);
     obj1[3] = intl.format(tmp4(1236).t["Y+TsEV"], obj2);
-    const items5 = [callback2(tmp4(4298).Text, obj1), ];
+    const items5 = [callback2(tmp4(4299).Text, obj1), ];
     let obj3 = { style: null, children: null };
     obj3[0] = tmp.verifiedRoles;
     obj3[1] = found.map((children) => {

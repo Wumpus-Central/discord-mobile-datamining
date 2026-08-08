@@ -40,7 +40,7 @@ function FamilyCenterMaxConnectionsBlurb() {
     obj[0] = tmp.container;
     obj = { variant: "text-xxs/medium", color: "text-muted", children: null };
     obj[2] = tmp9;
-    obj[1] = callback(tmp2(4298).Text, obj);
+    obj[1] = callback(tmp2(4299).Text, obj);
     tmp10 = callback(closure_3, obj);
   }
   return tmp10;
@@ -70,10 +70,10 @@ function FamilyCenterHelpLineInfo() {
     obj1[0] = tmp.supportHeader;
     const intl3 = tmp2(1236).intl;
     obj1[2] = intl3.string(messagesProxy["7/tVhv"]);
-    const items = [callback(tmp2(4298).Text, obj1), ];
+    const items = [callback(tmp2(4299).Text, obj1), ];
     const obj2 = { variant: "text-xs/medium", color: "text-muted", children: null };
     obj2[2] = formatResult;
-    items[1] = callback(tmp2(4298).Text, obj2);
+    items[1] = callback(tmp2(4299).Text, obj2);
     obj[1] = items;
     tmp11 = callback2(closure_3, obj);
   }

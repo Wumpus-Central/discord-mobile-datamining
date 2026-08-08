@@ -1,7 +1,7 @@
 // discord_app/modules/voice_channel_effects/VoiceChannelEffectsUtils.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import VoiceChannelEffectAnimationType from "VoiceChannelEffectAnimationType";
-import importDefaultResult from "module_5915";
+import importDefaultResult from "module_5975";
 import { apply } from "../../../_runtime/00012_apply.js";
 import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
 import { getEmojiUnavailableReason } from "../../utils/EmojiUtils.tsx";
@@ -11,10 +11,10 @@ let VoiceChannelEffectAnimationType;
 let c4;
 const require = arg1;
 ({ EMOJI_SIZE: c4, VoiceChannelEffectAnimationType } = VoiceChannelEffectAnimationType);
-const items = [require("module_5905")];
-const items1 = [require("module_5906"), require("module_5907"), require("module_5908"), require("module_5909"), require("module_5910"), require("module_5911"), require("module_5912"), require("module_5913"), require("module_5914"), require("module_5915"), require("module_5916"), require("module_5917"), require("module_5918"), require("module_5919"), require("module_5920"), require("module_5921"), require("module_5922"), require("module_5923"), require("module_5924"), require("module_5925"), require("module_5926")];
+const items = [require("module_5965")];
+const items1 = [require("module_5966"), require("module_5967"), require("module_5968"), require("module_5969"), require("module_5970"), require("module_5971"), require("module_5972"), require("module_5973"), require("module_5974"), require("module_5975"), require("module_5976"), require("module_5977"), require("module_5978"), require("module_5979"), require("module_5980"), require("module_5981"), require("module_5982"), require("module_5983"), require("module_5984"), require("module_5985"), require("module_5986")];
 let obj = { [VoiceChannelEffectAnimationType.BASIC]: items, [VoiceChannelEffectAnimationType.PREMIUM]: items1 };
-const memoizeResult = require("module_5915").memoize((arg0) => {
+const memoizeResult = require("module_5975").memoize((arg0) => {
   let closure_0 = arg0;
   return new Promise((arg0) => {
     let closure_0 = arg0;
@@ -39,7 +39,7 @@ const memoizeResult = require("module_5915").memoize((arg0) => {
     };
   });
 });
-let result = require("module_5905").fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsUtils.tsx");
+let result = require("module_5965").fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsUtils.tsx");
 
 export const CUSTOM_CALL_SOUND_ANIMATION_RANGE = { start: 10, end: 15 };
 export const AnimationTypeToAnimations = obj;

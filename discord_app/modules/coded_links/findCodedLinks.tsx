@@ -349,9 +349,9 @@ function findCodedLinks(str) {
     });
     const items = [];
     let combined = items;
-    const _default = combined(4292).default;
-    const parseToASTResult = combined(4292).default.parseToAST(str, true, { allowLinks: true });
-    combined(8036).walkAst(parseToASTResult, (type) => {
+    const _default = combined(4293).default;
+    const parseToASTResult = combined(4293).default.parseToAST(str, true, { allowLinks: true });
+    combined(8096).walkAst(parseToASTResult, (type) => {
       let tmp = type.type === combined(outer1_1[8]).AST_KEY.LINK && typeof type.target === "string";
       if (tmp) {
         tmp = type.target.length > 0;
@@ -1054,7 +1054,7 @@ export const isSuspiciousCodedLink = function isSuspiciousCodedLink(arr) {
           let flag;
           if (url.pathname != null) {
             const formatted = str2.toUpperCase();
-            flag = formatted.includes(url(4291).CodedLinkType.INVITE);
+            flag = formatted.includes(url(4292).CodedLinkType.INVITE);
           }
           if (flag == null) {
             flag = false;
@@ -1098,9 +1098,9 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
     });
     const items1 = [];
     let combined = items1;
-    const _default = combined(4292).default;
-    const parseToASTResult = combined(4292).default.parseToAST(str, true, { allowLinks: true });
-    combined(8036).walkAst(parseToASTResult, (type) => {
+    const _default = combined(4293).default;
+    const parseToASTResult = combined(4293).default.parseToAST(str, true, { allowLinks: true });
+    combined(8096).walkAst(parseToASTResult, (type) => {
       let tmp = type.type === combined(outer1_1[8]).AST_KEY.LINK && typeof type.target === "string";
       if (tmp) {
         tmp = type.target.length > 0;
@@ -1619,7 +1619,7 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
     combined = items1.concat(match);
     const result = coerceLinksToCodedLinks(combined);
     items = result.slice(0, 10);
-    let obj = combined(8036);
+    let obj = combined(8096);
   }
   return items[0];
 };

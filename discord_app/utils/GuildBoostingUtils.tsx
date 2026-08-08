@@ -220,7 +220,7 @@ export const getTiers = (arg0) => {
   const obj20 = { title: null, description: null, icon: null };
   const intl27 = tmp2(1236).intl;
   const obj21 = { fileSize: null };
-  let tmp2Result = tmp2(4197);
+  let tmp2Result = tmp2(4198);
   obj21[0] = tmp2Result.formatSize(dependencyMap[BoostedGuildTiers.TIER_2].limits.fileSize / 1024, { useKibibytes: true });
   obj20[0] = intl27.formatToPlainString(tmp2(1236).t.t95LnM, obj21);
   const intl28 = tmp2(1236).intl;
@@ -307,7 +307,7 @@ export const getTiers = (arg0) => {
   const obj38 = { title: null, description: null, icon: null };
   const intl46 = tmp2(1236).intl;
   const obj39 = { fileSize: null };
-  tmp2Result = tmp2(4197);
+  tmp2Result = tmp2(4198);
   obj39[0] = tmp2Result.formatSize(dependencyMap[BoostedGuildTiers.TIER_3].limits.fileSize / 1024, { useKibibytes: true });
   obj38[0] = intl46.formatToPlainString(tmp2(1236).t.t95LnM, obj39);
   const intl47 = tmp2(1236).intl;
@@ -780,7 +780,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 };
 export const TierMarkerPositions = obj1;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(4228).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(4229).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((arg0) => totalAvailableBoostsCount >= outer1_9[arg0]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

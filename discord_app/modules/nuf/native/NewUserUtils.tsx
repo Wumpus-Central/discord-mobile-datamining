@@ -29,7 +29,7 @@ function _shouldSkipContactSyncStep() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -45,13 +45,13 @@ function _shouldSkipContactSyncStep() {
             return obj;
           } else {
             const callback = tmp4;
-            let obj2 = outer1_0(11968);
+            let obj2 = outer1_0(12034);
             const result = obj2.isContactSyncAvailable();
             if (result) {
               c1 = 1;
               dependencyMap = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(11968).checkContactPermissions();
+              obj1[0] = outer1_0(12034).checkContactPermissions();
               return obj1;
             } else {
               dependencyMap = 3;
@@ -89,12 +89,12 @@ function lastStepComplete(STEP_GUILD_TEMPLATE) {
   trackNUFStep.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
   const obj = trackNUFStep;
   if (obj2.isModalOpen(NEW_USER_MODAL_KEY.NEW_USER_MODAL_KEY)) {
-    ModalActionCreators.popWithKey(tmp(16439).NEW_USER_MODAL_KEY);
+    ModalActionCreators.popWithKey(tmp(16516).NEW_USER_MODAL_KEY);
     const obj3 = ModalActionCreators;
   }
   let tmpResult = tmp(1222);
   tmpResult.transitionTo(constants.ME, { navigationReplace: true });
-  tmpResult = tmp(12034);
+  tmpResult = tmp(12100);
   const result = tmpResult.setNewUserFlowCompleted();
 }
 function getNextOnboardingStep(flag, first1, first) {
@@ -127,7 +127,7 @@ function _getNextOnboardingStep() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -157,7 +157,7 @@ function _getNextOnboardingStep() {
               transitionStep2 = undefined;
               v0 = 1;
               transitionStep2 = 1;
-              return { value: "PX_8", done: "Array" };
+              return { value: "ct", done: "Array" };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -211,7 +211,7 @@ function _getNextOnboardingStep() {
               return obj5;
             } else if (arg1) {
               callback = dependencyMap;
-              obj3 = flag(11971);
+              obj3 = flag(12037);
               const obj6 = { skip: null };
               obj6[0] = flag;
               obj3.trackNUFStep(closure_3, key, obj6);
@@ -298,7 +298,7 @@ let closure_13 = importDefaultResult(function*() {
       obj[0] = arg1;
       return obj;
     } else {
-      return { value: "T", done: null };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -363,7 +363,7 @@ let closure_14 = importDefaultResult(function*() {
       obj[0] = arg1;
       return obj;
     } else {
-      return { value: "T", done: null };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

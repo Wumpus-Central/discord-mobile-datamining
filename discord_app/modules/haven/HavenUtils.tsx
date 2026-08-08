@@ -20,10 +20,10 @@ export const getHavenSoundControlName = function getHavenSoundControlName(arg0) 
   if (HavenGenres.HavenSoundKeys.RADIO === arg0) {
     const intl3 = tmp(1236).intl;
     return intl3.string(messagesProxy.AjiGKB);
-  } else if (tmp(12955).HavenSoundKeys.ENVIRONMENT === arg0) {
+  } else if (tmp(13025).HavenSoundKeys.ENVIRONMENT === arg0) {
     const intl2 = tmp(1236).intl;
     return intl2.string(messagesProxy.YEYIbI);
-  } else if (tmp(12955).HavenSoundKeys.CAMPFIRE === arg0) {
+  } else if (tmp(13025).HavenSoundKeys.CAMPFIRE === arg0) {
     const intl = tmp(1236).intl;
     return intl.string(messagesProxy["Vk9+Ez"]);
   } else {

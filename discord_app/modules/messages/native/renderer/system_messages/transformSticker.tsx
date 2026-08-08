@@ -21,7 +21,7 @@ function transform(id, isPreview) {
     str2 = "";
   }
   obj.url = str2;
-  const NativeLottieRenderMode = tmp2(8046).NativeLottieRenderMode;
+  const NativeLottieRenderMode = tmp2(8106).NativeLottieRenderMode;
   obj.renderMode = isPreview ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
   const intl = tmp2(1236).intl;
   if (arg2) {

@@ -55,7 +55,7 @@ function TitleWrapper(headerAccessibilityLabel) {
     obj[5] = tmp6;
     obj[6] = tmp2.wrapper;
     obj[7] = children;
-    tmp7Result = callback2(titleContentHeight(4844).PressableOpacity, obj);
+    tmp7Result = callback2(titleContentHeight(4846).PressableOpacity, obj);
     const tmp7 = callback2;
   }
   return tmp7Result;
@@ -96,9 +96,9 @@ function ChannelTitle(guildId) {
     obj[3] = str2;
     ({ channelName: obj4[6], channelNameContainer: obj4[7] } = tmp4);
     obj[8] = accessibleTitle;
-    let tmp8Result = tmp11(tmp(9405), obj);
+    let tmp8Result = tmp11(tmp(9470), obj);
     let tmp8 = tmp11;
-    const tmpResult = tmp(9405);
+    const tmpResult = tmp(9470);
   } else {
     tmp8 = closure_9;
     let str = "heading-lg/bold";
@@ -116,7 +116,7 @@ function ChannelTitle(guildId) {
   tmp8Result = !disableArrow;
   if (!disableArrow) {
     const obj2 = { source: null, size: null, style: null };
-    obj2[0] = tmp(12480);
+    obj2[0] = tmp(12550);
     obj2[1] = Button.Icon.Sizes.REFRESH_SMALL_16;
     obj2[2] = tmp4.arrowIcon;
     tmp8Result = tmp8(Button.Icon, obj2);
@@ -149,7 +149,7 @@ function UserAvatar(user) {
   let status;
   user = user.user;
   ({ status, isMobileOnline, isVROnline } = user);
-  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: true, status: false, isMobileOnline: "done", isVROnline: "flowing", style: "hourglass", autoStatusCutout: "hours" };
+  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: true, status: "done", isMobileOnline: true, isVROnline: null, style: null, autoStatusCutout: 33.904 };
   obj[3] = Button.AvatarSizes.REFRESH_MEDIUM_32;
   let tmp3 = null;
   if (!user.isSystemUser()) {
@@ -259,7 +259,7 @@ function ParentChannelSubTitle(channel) {
   const obj3 = computeChannelName;
   const tmp6 = mergeGuildAvatar;
   const tmp7 = upsertRelationship;
-  obj[6] = tmp5(4492).computeChannelName(channel, tmp6, tmp7);
+  obj[6] = tmp5(4494).computeChannelName(channel, tmp6, tmp7);
   return tmp4(Text.Text, obj);
 }
 function EmptyIcon() {

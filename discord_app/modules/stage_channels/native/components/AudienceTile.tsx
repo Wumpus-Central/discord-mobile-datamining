@@ -29,7 +29,7 @@ function RaisedHandIcon(rtsState) {
   let obj = { style: items, children: null };
   items[1] = activeBackground;
   obj = { style: tmp.raisedHand, source: null, color: null };
-  obj[1] = tmp5(7943);
+  obj[1] = tmp5(8003);
   obj[2] = PRIMARY_800;
   obj[1] = closure_5(Button.Icon, obj);
   return closure_5(View, obj);
@@ -158,7 +158,7 @@ const memoResult = importAllResult.memo((channel) => {
     obj3[1] = items6;
     items4[1] = tmp12(tmp13, obj3);
     obj[4] = items4;
-    return tmp12(tmp6(tmp3[13]).Pressable, obj);
+    return tmp12(tmp6(tmp3[13]).LegacyPressable, obj);
   } else {
     const tmp6Result = tmp6(tmp3[17]);
     let unsafe_rawColors = tmp2(tmp3[5]).unsafe_rawColors;

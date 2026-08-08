@@ -146,7 +146,7 @@ export const useGameInvitesChannelOfficialApplication = function useGameInvitesC
   }
   const obj = application(589);
   const tmp = application;
-  application = application(5669).useApplication(tmp4);
+  application = application(5729).useApplication(tmp4);
   const items2 = [application];
   return useMemo(() => {
     const merged = Object.assign(outer1_4(application, outer1_3));

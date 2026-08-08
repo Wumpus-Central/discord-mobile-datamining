@@ -105,12 +105,12 @@ export const useAllMobileThemes = function useAllMobileThemes(mode) {
   if (null != stateFromStores) {
     tmp4 = stateFromStores;
   }
-  let tmpResult = tmp(4237);
+  let tmpResult = tmp(4238);
   const customThemeDisplaySettings = tmpResult.useCustomThemeDisplaySettings(tmp4);
   let stateFromStores1 = null;
   if (undefined !== customThemeDisplaySettings) {
     obj = { type: null, getName: null, theme: null, customThemeSettings: null };
-    obj[0] = tmp(4115).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
+    obj[0] = tmp(4121).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
     obj[1] = getCustomThemesName;
     ({ baseTheme: obj3[2], customTheme: obj3[3] } = customThemeDisplaySettings);
     stateFromStores1 = obj;

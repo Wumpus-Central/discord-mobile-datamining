@@ -14,7 +14,7 @@ function getGuildThemeName() {
 const result = require("isSyncedModeThemesEnabled").fileFinishedImporting("modules/client_themes/native/useColorThemeBackground.tsx");
 
 export default function useColorThemeBackground() {
-  const tmp = stateFromStores(4151)();
+  const tmp = stateFromStores(4157)();
   const require = tmp;
   let items = [handleThemeChange];
   stateFromStores = defaultAreStatesEqual.useStateFromStores(items, () => theme.theme);

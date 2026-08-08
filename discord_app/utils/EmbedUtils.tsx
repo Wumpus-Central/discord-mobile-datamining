@@ -244,13 +244,13 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
     obj.fields = [];
   }
   if (null != footer.components) {
-    const transformComponentsResult = obj6(4523).transformComponents(footer.components);
+    const transformComponentsResult = obj6(4525).transformComponents(footer.components);
     let tmp40;
     if (transformComponentsResult.length > 0) {
       tmp40 = transformComponentsResult;
     }
     obj.components = tmp40;
-    const obj17 = obj6(4523);
+    const obj17 = obj6(4525);
   }
   return obj;
 };

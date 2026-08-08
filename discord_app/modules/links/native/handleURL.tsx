@@ -33,7 +33,7 @@ function _handleURL() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -130,7 +130,7 @@ function _handleURL() {
               };
               c7 = 1;
               v0 = 1;
-              return { value: "PX_8", done: "Array" };
+              return { value: "ct", done: "Array" };
             }
           } else {
             if (1 === tmp8) {
@@ -183,7 +183,7 @@ function _handleURL() {
             } else if (2 === tmp8) {
               payload = 0;
               v0 = 3;
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             } else {
               if (3 === tmp8) {
                 if (arg0 === 1) {

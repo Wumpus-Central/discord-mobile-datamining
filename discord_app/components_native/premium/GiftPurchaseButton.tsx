@@ -61,7 +61,7 @@ export default function GiftPurchaseButton(style) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -95,7 +95,7 @@ export default function GiftPurchaseButton(style) {
           }
         } else if (1 === tmp7) {
           premiumType = 0;
-          obj1 = outer1_1(4641);
+          obj1 = outer1_1(4643);
           const obj3 = { title: null, body: null };
           const intl = outer1_0(1236).intl;
           obj3[0] = intl.string(outer1_0(1236).t.R0RpRX);
@@ -129,9 +129,9 @@ export default function GiftPurchaseButton(style) {
           obj5[3] = premiumTypeFromPlanId;
           obj5[4] = c4;
           obj5[5] = closure_0;
-          outer1_0(9967).openGiftModal(obj5);
+          outer1_0(10033).openGiftModal(obj5);
           c4 = 3;
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp24) {
         if (tmp4 === premiumType) {

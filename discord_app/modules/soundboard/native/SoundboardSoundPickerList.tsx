@@ -19,16 +19,16 @@ function getSectionLabel(category) {
   const type = category.category.categoryInfo.type;
   if (SoundButtonOverlay.SoundboardSoundGridSectionType.GUILD === type) {
     return category.category.categoryInfo.guild.name;
-  } else if (tmp(4754).SoundboardSoundGridSectionType.DEFAULTS === type) {
+  } else if (tmp(4756).SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl3 = tmp(1236).intl;
     return intl3.string(tmp(1236).t.Rtvk9X);
-  } else if (tmp(4754).SoundboardSoundGridSectionType.FAVORITES === type) {
+  } else if (tmp(4756).SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl2 = tmp(1236).intl;
     return intl2.string(tmp(1236).t.y3LQCG);
-  } else if (tmp(4754).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
+  } else if (tmp(4756).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
     const intl = tmp(1236).intl;
     return intl.string(tmp(1236).t["+cGVV6"]);
-  } else if (tmp(4754).SoundboardSoundGridSectionType.SEARCH === type) {
+  } else if (tmp(4756).SoundboardSoundGridSectionType.SEARCH === type) {
     return null;
   }
 }
@@ -47,15 +47,15 @@ function SoundPickerButtonRow(section) {
   } else {
     let result = !stateFromStores;
     if (!stateFromStores) {
-      result = tmp2(8623).isSoundboardSectionNitroLocked(channel.guild_id, section.category.categoryInfo);
-      const tmp2Result = tmp2(8623);
+      result = tmp2(8683).isSoundboardSectionNitroLocked(channel.guild_id, section.category.categoryInfo);
+      const tmp2Result = tmp2(8683);
     }
     c3 = result;
     obj = { style: null, children: null };
     const items1 = [tmp.row];
     obj[0] = items1;
     if (result) {
-      result = callback(tmp2(8646).PremiumUpsellGradientBackground, {});
+      result = callback(tmp2(8706).PremiumUpsellGradientBackground, {});
     }
     const items2 = [
       result,
@@ -159,7 +159,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerListCompon
     START = END;
   }
   mergeGuildAvatar = callback2();
-  let obj = channel(4718);
+  let obj = channel(4720);
   const fontScale = obj.useFontScale();
   let tmp3 = (function getFastListSectionsFromCategories(categories, c6, fontScale) {
     const items = [];
@@ -168,7 +168,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerListCompon
     while (iter !== undefined) {
       let tmp2 = callback;
       let tmp3 = dependencyMap;
-      let arr2 = callback(8692)(nextResult.items, c6);
+      let arr2 = callback(8752)(nextResult.items, c6);
       let tmp4 = closure_9;
       let obj = { category: null, height: null, soundsByRow: null };
       obj[0] = nextResult;

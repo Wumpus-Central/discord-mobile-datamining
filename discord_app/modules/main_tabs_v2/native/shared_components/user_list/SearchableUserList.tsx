@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/SearchableUserList.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
-import { View } from "module_8949";
+import { View } from "module_9009";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { UserRowModes } from "UserRowModes";
 import jsxProd from "jsxProd";
@@ -15,7 +15,7 @@ const require = arg1;
 createCacheKey = { searchBarContainer: null, searchBar: null, searchBarRowContainer: null, noResults: null };
 createCacheKey = { paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_8, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: "sa", minHeight: false };
+createCacheKey[1] = { height: "disabled", minHeight: false };
 createCacheKey[2] = { paddingTop: require("Themes").space.PX_8 };
 let obj1 = { paddingTop: require("Themes").space.PX_8 };
 createCacheKey[3] = { flex: 1, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };

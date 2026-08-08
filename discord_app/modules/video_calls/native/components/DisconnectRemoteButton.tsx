@@ -14,7 +14,7 @@ export const DisconnectRemoteButton = function DisconnectRemoteButton(channel) {
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ awaitingRemote: null != store.getAwaitingRemoteSessionInfo(), remoteSessionId: store.getRemoteSessionId() }));
   remoteSessionId = stateFromStoresObject.remoteSessionId;
   obj = { source: null, accessibilityLabel: null, isSmallSize: null, onPress: null };
-  obj[0] = remoteSessionId(stateFromStoresObject.awaitingRemote ? 7967 : 10774);
+  obj[0] = remoteSessionId(stateFromStoresObject.awaitingRemote ? 8027 : 10840);
   const intl = tmp(1236).intl;
   obj[1] = intl.string(channel(1236).t["6vrfgt"]);
   obj[2] = channel.isSmallSize;
@@ -29,5 +29,5 @@ export const DisconnectRemoteButton = function DisconnectRemoteButton(channel) {
       const obj = channel(outer1_3[8]);
     }
   };
-  return jsx(importAll(10601).PrimaryActionButton, { source: null, accessibilityLabel: null, isSmallSize: null, onPress: null });
+  return jsx(importAll(10667).PrimaryActionButton, { source: null, accessibilityLabel: null, isSmallSize: null, onPress: null });
 };

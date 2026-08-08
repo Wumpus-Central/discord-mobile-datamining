@@ -89,31 +89,31 @@ export default function VoiceUserConnected(channel) {
     const guildRingingUsers = outer1_4.getGuildRingingUsers(channel.id);
     return guildRingingUsers.has(user.id);
   });
-  obj = { guildId: channel.guild_id, member, user, collapsed, serverMute: null, serverDeaf: null, mute: null, deaf: null, localMute: null, video: null, stream: null, platform: null, disabled: null, isInEmbeddedActivity: null, isGuest: null, voicePlatform: null, ringing: null };
+  obj = { guildId: channel.guild_id, channelId: channel.id, member, user, collapsed, serverMute: null, serverDeaf: null, mute: null, deaf: null, localMute: null, video: null, stream: null, platform: null, disabled: null, isInEmbeddedActivity: null, isGuest: null, voicePlatform: null, ringing: null };
   const obj5 = channel(sessionId[9]);
   const tmp11 = jsx;
   if (!mute) {
     mute = suppress;
   }
-  obj[4] = mute;
-  obj[5] = deaf;
-  obj[6] = selfMute;
-  obj[7] = selfDeaf;
-  obj[8] = localMute;
+  obj[5] = mute;
+  obj[6] = deaf;
+  obj[7] = selfMute;
+  obj[8] = selfDeaf;
+  obj[9] = localMute;
   if (!selfVideo) {
     selfVideo = localVideo;
   }
-  obj[9] = selfVideo;
+  obj[10] = selfVideo;
   let channelId;
   if (stateFromStores != null) {
     channelId = stateFromStores.channelId;
   }
-  obj[10] = channelId === channel.id;
-  obj[11] = stateFromStores1;
-  obj[12] = null == stateFromStores1 && tmp8;
-  obj[13] = null != stateFromStores3;
-  obj[14] = isGuest;
-  obj[15] = stateFromStores2;
-  obj[16] = stateFromStores4;
+  obj[11] = channelId === channel.id;
+  obj[12] = stateFromStores1;
+  obj[13] = null == stateFromStores1 && tmp8;
+  obj[14] = null != stateFromStores3;
+  obj[15] = isGuest;
+  obj[16] = stateFromStores2;
+  obj[17] = stateFromStores4;
   return tmp11(user(sessionId[10]), obj);
 };

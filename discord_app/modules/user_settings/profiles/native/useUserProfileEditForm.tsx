@@ -26,7 +26,7 @@ export default function useUserProfileEditForm() {
     }
     return isSubmitting;
   });
-  const effect = React.useEffect(() => () => callback2(709).wait(callback(8450).resetAllPending), []);
+  const effect = React.useEffect(() => () => callback2(709).wait(callback(8510).resetAllPending), []);
   const items2 = [stateFromStores, pendingChanges];
   callback = React.useCallback(callback(function*() {
     if (bannerOriginalMd5 === 2) {
@@ -46,7 +46,7 @@ export default function useUserProfileEditForm() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -80,7 +80,7 @@ export default function useUserProfileEditForm() {
               throwTypeErrorResult = outer1_1;
               if (outer1_1) {
                 bannerOriginalMd5 = 3;
-                return { value: "T", done: null };
+                return { value: "HermesInternal", done: null };
               } else {
                 const accountUpdateForUpdateRequest = outer1_0(outer1_2[9]).getAccountUpdateForUpdateRequest(outer1_0);
                 c0 = accountUpdateForUpdateRequest;
@@ -398,7 +398,7 @@ export default function useUserProfileEditForm() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -419,7 +419,7 @@ export default function useUserProfileEditForm() {
               if (outer1_1) {
                 c3 = 3;
               } else {
-                let obj2 = outer1_0(8450);
+                let obj2 = outer1_0(8510);
                 const obj1 = { avatarDecoration: null };
                 obj1[0] = outer1_0.pendingAvatarDecoration;
                 dependencyMap = 1;
@@ -439,7 +439,7 @@ export default function useUserProfileEditForm() {
               ok = ok.ok;
             }
             if (ok) {
-              obj = outer1_0(8450);
+              obj = outer1_0(8510);
               const result = obj.resetPendingAccountChanges();
             }
           }
@@ -453,7 +453,7 @@ export default function useUserProfileEditForm() {
         }
       }
     }), items3),
-    resetPending: pendingChanges(8450).resetAllPending
+    resetPending: pendingChanges(8510).resetAllPending
   };
   const merged = Object.assign(pendingChanges);
   const merged1 = Object.assign(tryItOutChanges);

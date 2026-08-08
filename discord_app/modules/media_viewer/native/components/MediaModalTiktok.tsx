@@ -254,9 +254,9 @@ export const createTiktokVideoControls = function createTiktokVideoControls() {
         const current = ref.current;
         if (current != null) {
           const _HermesInternal = HermesInternal;
-          current.injectJavaScript("\n    window.postMessage(" + tmp5 + ", '*')\n  ");
+          current.injectJavaScript("\n    window.postMessage(" + tmp6 + ", '*')\n  ");
         }
-        const tmp8 = ref;
+        const tmp = ref;
       }
     },
     useSubscribe(arg0, arg1, arg2) {

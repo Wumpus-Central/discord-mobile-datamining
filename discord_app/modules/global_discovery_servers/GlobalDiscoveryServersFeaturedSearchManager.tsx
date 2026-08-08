@@ -48,7 +48,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -184,7 +184,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -213,7 +213,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
               lastFetchTimestamp = undefined;
               lastFetchTimestamp = 1;
               c6 = 1;
-              return { value: "PX_8", done: "Array" };
+              return { value: "ct", done: "Array" };
             }
           } else {
             if (1 === tmp7) {

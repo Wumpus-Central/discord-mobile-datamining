@@ -2,7 +2,6 @@
 import handleConnectionOpen from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import initializeFromUserSettings from "initializeFromUserSettings";
-import { useFavoritesNotificationStore as closure_6 } from "useFavoritesNotificationStore";
 import { MAX_FAVORITE_CHANNELS } from "date";
 import { PremiumTypes } from "GuildFeatures";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
@@ -59,7 +58,7 @@ function useFavoritesAccess(FavoritesGuildActionSheet) {
   } else {
     num = 0;
     if (tmp4) {
-      num = tmp(9647).FREE_FAVORITE_LIMIT;
+      num = tmp(9712).FREE_FAVORITE_LIMIT;
     }
   }
 }
@@ -215,7 +214,4 @@ export const useFavoritesAwareChannel = function useFavoritesAwareChannel(arg0, 
     }
   }
   return tmp7;
-};
-export const useFavoriteAdded = function useFavoriteAdded() {
-  return { favoriteAdded: callback((favoriteAdded) => favoriteAdded.favoriteAdded), notifyFavoriteAdded: callback((notifyFavoriteAdded) => notifyFavoriteAdded.notifyFavoriteAdded), clearFavoriteAdded: callback((clearFavoriteAdded) => clearFavoriteAdded.clearFavoriteAdded) };
 };

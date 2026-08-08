@@ -11,12 +11,9 @@ import getVoiceStatesForGuild from "getVoiceStatesForGuild";
 import ME from "ME";
 import jsxProd from "GuildInfoHeader";
 import { NsfwGateGuildSidebar } from "../../age_gate/native/components/NsfwGateGuildSidebar.tsx";
-import { getMissingFavoriteThreadIds } from "../../favorites/FavoritesGuildChannelList.tsx";
 import { GuildUpsellChannelList } from "../../game_community_upsell/native/GuildUpsellChannelList.tsx";
 import { handleJoinGuild } from "../../main_tabs_v2/native/tabs/guilds/empty_states/GuildsEmpty.tsx";
 import { TTIFirstContentfulPaint } from "../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
-import { ChannelListPanelBackdrop } from "components/ChannelListPanelBackdrop.tsx";
-import { ChannelListStickyHeader } from "components/ChannelListStickyHeader.tsx";
 
 let closure_12;
 let closure_14;
@@ -54,47 +51,6 @@ function GuildChannels(guild) {
   }
   return tmp3;
 }
-function FavoriteChannels(arg0) {
-  let guildChannels;
-  let hasNoChannels;
-  let shouldShowEmptyState;
-  let obj = dependencyMap;
-  let obj1 = getMissingFavoriteThreadIds;
-  const favoritesGuildChannelList = obj1.useFavoritesGuildChannelList({ withUpsellNotice: true });
-  ({ guildChannels, shouldShowEmptyState, hasNoChannels } = favoritesGuildChannelList);
-  if (!obj3.useShouldRenderChannelList()) {
-    return null;
-  } else {
-    let guild = arg0;
-    if (hasNoChannels) {
-      obj = { style: null, contentInset: null, children: null };
-      ({ style: obj5[0], contentInset: obj5[1] } = guild);
-      obj = { guild: null, showExtraButtons: false, canOpenGuildActionSheet: false };
-      guild = guild.guild;
-      obj[0] = guild;
-      const items = [callback(ChannelListStickyHeader, obj), ];
-      let tmp11Result = null;
-      if (shouldShowEmptyState) {
-        obj = { variant: "empty" };
-        tmp11Result = tmp11(tmp9(15248), obj);
-        const tmp9Result = tmp9(15248);
-      }
-      items[1] = tmp11Result;
-      obj[2] = items;
-      let tmp8Result = closure_15(ChannelListPanelBackdrop, obj);
-      const tmp10 = ChannelListPanelBackdrop;
-      tmp11 = callback;
-      const tmp8 = closure_15;
-      tmp9 = importDefault;
-    } else {
-      obj1 = {};
-      const merged = Object.assign(guild);
-      obj1.guildChannels = guildChannels;
-      obj1.guildChannelsVersion = 0;
-      tmp8Result = callback(closure_17, obj1);
-    }
-  }
-}
 function ChannelsWrapper(selectedGuildId) {
   selectedGuildId = selectedGuildId.selectedGuildId;
   const selectedChannelId = selectedGuildId.selectedChannelId;
@@ -108,7 +64,7 @@ function ChannelsWrapper(selectedGuildId) {
   if (selectedGuildId === closure_13) {
     obj = { style: null };
     obj[0] = merged.style;
-    let tmp6Result = callback(GuildUpsellChannelList, obj);
+    return callback(GuildUpsellChannelList, obj);
   } else {
     if (null != stateFromStores) {
       if (selectedGuildId !== closure_12) {
@@ -119,14 +75,14 @@ function ChannelsWrapper(selectedGuildId) {
           obj.guild = stateFromStores;
           obj.selectedChannelId = selectedChannelId;
           obj.selectedVoiceChannelId = stateFromStores1;
-          tmp6Result = callback(FavoriteChannels, obj);
+          return callback(tmp2(15390).default, obj);
         } else {
-          tmp2Result = tmp2(8619);
+          tmp2Result = tmp2(8679);
           if (tmp2Result.shouldNSFWGateGuild(selectedGuildId)) {
             obj1 = { style: null, guildId: null };
             obj1[0] = merged.style;
             obj1[1] = selectedGuildId;
-            tmp6Result = tmp6(NsfwGateGuildSidebar, obj1);
+            let tmp6Result = tmp6(NsfwGateGuildSidebar, obj1);
           } else {
             const obj2 = {};
             const merged2 = Object.assign(merged);
@@ -135,20 +91,20 @@ function ChannelsWrapper(selectedGuildId) {
             obj2.selectedVoiceChannelId = stateFromStores1;
             tmp6Result = tmp6(GuildChannels, obj2);
           }
+          return tmp6Result;
         }
       }
     }
     const obj3 = { style: null, selectedGuildId: null };
     obj3[0] = merged.style;
     obj3[1] = selectedGuildId;
-    tmp6Result = callback(handleJoinGuild, obj3);
+    return callback(handleJoinGuild, obj3);
   }
-  return tmp6Result;
 }
 let c4 = importAllResult;
 ({ EMPTY_NUX_SERVER: closure_12, MOBILE_GUILD_UPSELL_LIST: map1 } = ME);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-let closure_17 = importAllResult.memo((gameClaimMarkAsDismissed) => {
+const memoResult = importAllResult.memo((gameClaimMarkAsDismissed) => {
   let contentInset;
   let listBottom;
   let listPaddingBottom;
@@ -417,7 +373,7 @@ let closure_17 = importAllResult.memo((gameClaimMarkAsDismissed) => {
   obj[1] = listViewportHeight(ref(guildChannels[34]).LayerScope, obj4);
   return listViewportHeight(tmp35, obj);
 });
-const memoResult = importAllResult.memo((arg0) => {
+const memoResult1 = importAllResult.memo((arg0) => {
   let obj = { children: null };
   obj = {};
   const merged = Object.assign(arg0);
@@ -427,4 +383,5 @@ const memoResult = importAllResult.memo((arg0) => {
 });
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/channel_list_v2/native/RedesignChannelList.tsx");
 
-export default memoResult;
+export default memoResult1;
+export const ChannelList = memoResult;

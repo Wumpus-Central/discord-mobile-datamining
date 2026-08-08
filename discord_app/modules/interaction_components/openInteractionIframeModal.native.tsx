@@ -20,7 +20,7 @@ function _openInteractionIframeModal() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -37,7 +37,7 @@ function _openInteractionIframeModal() {
             obj = v0(outer1_2[2]);
             obj.pushLazy(callback(outer1_2[4])(outer1_2[3], outer1_2.paths), callback, outer1_4);
             v0 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           v0 = tmp;
@@ -55,7 +55,7 @@ function _openInteractionIframeModal() {
   }
   return applyArgumentsResult;
 }
-const result = require("module_4507").fileFinishedImporting("modules/interaction_components/openInteractionIframeModal.native.tsx");
+const result = require("module_4509").fileFinishedImporting("modules/interaction_components/openInteractionIframeModal.native.tsx");
 
 export default function openInteractionIframeModal() {
   const self = this;

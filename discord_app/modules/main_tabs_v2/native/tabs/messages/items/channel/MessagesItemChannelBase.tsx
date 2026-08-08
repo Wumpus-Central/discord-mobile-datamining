@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelBase.tsx
 import importAllResult from "openChannelLongPressActionSheet";
-import { View } from "module_4312";
+import { View } from "module_4313";
 import sortActivity from "sortActivity";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import upsertRelationship from "upsertRelationship";
@@ -95,7 +95,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
       obj[0] = _undefined.getStatus(obj.getRecipientId());
       obj[1] = activities;
     } else {
-      obj = { status: "Array", activities: "PX_8" };
+      obj = { status: "r", activities: "accessibilityRole" };
     }
     return obj;
   });

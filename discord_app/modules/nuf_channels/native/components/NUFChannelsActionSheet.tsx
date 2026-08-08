@@ -38,5 +38,5 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
   obj[3] = intl3.string(markAsDismissed(1236).t.BddRzS);
   obj[4] = callback;
   obj[2] = jsx(NUFActionSheetTemplate, { illustration: null, title: null, description: null, CTALabel: null, onCTAPress: null });
-  return jsx(markAsDismissed(5396).BottomSheet, { illustration: null, title: null, description: null, CTALabel: null, onCTAPress: null });
+  return jsx(markAsDismissed(5397).BottomSheet, { illustration: null, title: null, description: null, CTALabel: null, onCTAPress: null });
 };

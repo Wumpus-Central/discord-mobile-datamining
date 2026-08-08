@@ -3,7 +3,7 @@ import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
-import { registerAsset } from "../../../../../../_runtime/11542_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/11608_registerAsset.js";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
@@ -42,7 +42,7 @@ const memoResult = require("noop").memo((onCreateThreadPress) => {
     obj3[0] = onCreateThreadPress;
     const intl3 = tmp5(1236).intl;
     obj3[1] = intl3.string(tmp5(1236).t.rBIGBL);
-    tmp4Result = callback(tmp5(4712).Button, obj3);
+    tmp4Result = callback(tmp5(4714).Button, obj3);
   }
   items[3] = tmp4Result;
   obj[1] = items;

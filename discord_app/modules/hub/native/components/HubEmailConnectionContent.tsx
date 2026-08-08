@@ -6,7 +6,7 @@ import get_ActivityIndicator from "Text";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import HubEmailConnectionSteps from "HubEmailConnectionSteps";
 import { MarketingURLs } from "ME";
-import jsxProd from "module_8405";
+import jsxProd from "module_8465";
 import createCacheKey from "createCacheKey";
 import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
@@ -61,7 +61,7 @@ export default function HubEmailConnectionContent(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -259,7 +259,7 @@ export default function HubEmailConnectionContent(arg0) {
   obj = { ref, contentContainerStyle: null, children: null };
   const items = [tmp.scrollViewContainer, ];
   let obj1 = { paddingBottom: null };
-  obj1[0] = invite(5368)().insets.bottom + invite(712).space.PX_16;
+  obj1[0] = invite(5369)().insets.bottom + invite(712).space.PX_16;
   items[1] = obj1;
   obj[1] = items;
   obj2 = { style: tmp.container, children: null };
@@ -315,7 +315,7 @@ export default function HubEmailConnectionContent(arg0) {
       }
     }, 100);
   };
-  items1[3] = callback2(invite(8405), obj7);
+  items1[3] = callback2(invite(8465), obj7);
   obj2[1] = items1;
   const items2 = [closure_13(ref, obj2), callback2(ref, { style: tmp.growSpacing }), ];
   const obj11 = { style: tmp.buttonContainer, children: null };

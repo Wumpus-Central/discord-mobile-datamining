@@ -4,5 +4,5 @@ import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionShe
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/premium/gifting/native/openGiftingBadgeInfoActionSheet.tsx");
 
 export default function openGiftingBadgeInfoActionSheet() {
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9973, dependencyMap.paths), "GiftingBadgeInfoActionSheet");
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(10039, dependencyMap.paths), "GiftingBadgeInfoActionSheet");
 };

@@ -29,9 +29,9 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
         if (currentUser != null) {
           nsfwAllowed = currentUser.nsfwAllowed;
         }
-        let obj1 = id(11281);
+        let obj1 = id(11347);
         const contentClassificationVisibility = obj1.getContentClassificationVisibility(application.content_classification, channel, nsfwAllowed);
-        if (id(11281).ContentClassificationVisibility.DISPLAY === contentClassificationVisibility) {
+        if (id(11347).ContentClassificationVisibility.DISPLAY === contentClassificationVisibility) {
           id = application;
           const channel_id = message.channel_id;
           let str = channel_id;
@@ -45,7 +45,7 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
           embeddedActivitiesForChannelIncludingHidden = embeddedActivitiesForChannelIncludingHidden.getEmbeddedActivitiesForChannelIncludingHidden(str);
           const found = embeddedActivitiesForChannelIncludingHidden.find((applicationId) => applicationId.applicationId === id.id);
           const currentEmbeddedActivity = obj4.getCurrentEmbeddedActivity();
-          let tmp5Result = tmp5(12535);
+          let tmp5Result = tmp5(12605);
           let obj = { activity: null, applicationId: null, guildId: null, channelId: null };
           obj[0] = found;
           obj[1] = application.id;
@@ -68,7 +68,7 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
             }
             stringResult = details;
           }
-          tmp5Result = tmp5(12545);
+          tmp5Result = tmp5(12615);
           obj = { embeddedActivity: null, currentEmbeddedActivity: null, channel: null };
           obj[0] = found;
           obj[1] = currentEmbeddedActivity;
@@ -97,13 +97,13 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
             }
             combined = null;
           }
-          const playInContext = tmp5(11283).getPlayInContext(application.id, channel_id);
+          const playInContext = tmp5(11349).getPlayInContext(application.id, channel_id);
           let isCurrentlyInInstance = playInContext.isCurrentlyInInstance;
           let appIconSrc = null;
           ({ instanceId, canLaunchInChannel } = playInContext);
           if (null != application.icon) {
-            appIconSrc = tmp5(11284).getAppIconSrc(application.id, application.icon, application.bot);
-            const tmp5Result2 = tmp5(11284);
+            appIconSrc = tmp5(11350).getAppIconSrc(application.id, application.icon, application.bot);
+            const tmp5Result2 = tmp5(11350);
           }
           if (null == instanceId) {
             const intl8 = tmp5(1236).intl;
@@ -124,11 +124,11 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
             tmp24 = false === obj13.isFetchingApplication(application.id);
           }
           if (tmp24) {
-            application = tmp5(5669).fetchApplication(application.id);
-            const tmp5Result3 = tmp5(5669);
+            application = tmp5(5729).fetchApplication(application.id);
+            const tmp5Result3 = tmp5(5729);
           }
           const obj2 = { displayType: null, appId: null, messageId: null, title: null, header: null, info: null, tagline: null, staticBannerSrc: null, iconSrc: null, embedUrl: null, bannerRatio: "bot", actions: null, extendedType: null, gradientColors: null, backgroundColor: 0, borderColor: 0, headerColor: 0, headerText: null, type: null };
-          obj2[0] = tmp5(11282).AppMessageEmbedDisplayType.DISPLAY;
+          obj2[0] = tmp5(11348).AppMessageEmbedDisplayType.DISPLAY;
           obj2[1] = application.id;
           obj2[2] = message.id;
           const intl9 = tmp5(1236).intl;
@@ -140,15 +140,15 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
           obj2[8] = appIconSrc;
           obj13 = application;
           obj8 = sortActivity;
-          const tmp5Result1 = tmp5(11283);
+          const tmp5Result1 = tmp5(11349);
           const obj3 = { applicationId: null, referrerId: null };
           obj3[0] = application.id;
           obj3[1] = id.getId();
-          obj2[9] = tmp5(11453).getActivityLaunchURL(obj3);
+          obj2[9] = tmp5(11519).getActivityLaunchURL(obj3);
           obj2[11] = items;
           obj2[12] = CodedLinkExtendedType.APP_MESSAGE_EMBED;
-          const tmp5Result4 = tmp5(11453);
-          obj2[13] = tmp5(11284).getAppGradientColors(appIconSrc);
+          const tmp5Result4 = tmp5(11519);
+          obj2[13] = tmp5(11350).getAppGradientColors(appIconSrc);
           obj4 = { applicationId: null, instanceId: null, appMessageEmbedModel: null, participantAvatarUris: null, participantsDescription: null };
           obj4[0] = application.id;
           obj4[1] = activityInstance.id;
@@ -158,7 +158,7 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
           return obj4;
         } else {
           id = application.id;
-          if (contentClassificationVisibility === tmp5(11281).ContentClassificationVisibility.BLOCK_UNDERAGE) {
+          if (contentClassificationVisibility === tmp5(11347).ContentClassificationVisibility.BLOCK_UNDERAGE) {
             const intl2 = tmp5(1236).intl;
             let stringResult3 = intl2.string(tmp5(1236).t.LPOzxB);
           } else {
@@ -170,7 +170,7 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
           obj5[1] = activityInstance.id;
           obj5[2] = [];
           const obj6 = { displayType: null, appId: null, messageId: null, title: null, header: null, info: null, tagline: null, iconSrc: null, staticBannerSrc: null, bannerRatio: "bot", actions: null, embedUrl: null, extendedType: null, gradientColors: null, backgroundColor: 0, borderColor: 0, headerColor: 0, headerText: null, type: null };
-          obj6[0] = tmp5(11282).AppMessageEmbedDisplayType.BLOCKED;
+          obj6[0] = tmp5(11348).AppMessageEmbedDisplayType.BLOCKED;
           obj6[1] = id;
           obj6[2] = message.id;
           const intl3 = tmp5(1236).intl;

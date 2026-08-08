@@ -521,13 +521,13 @@ export const useCanJoinThreadVoice = function useCanJoinThreadVoice(channel) {
   }
   obj = { guildId: channel.guild_id, location: "e791ea_1" };
   let enabled = importDefaultResultResult.useExperiment(obj, { autoTrackExposure: false }).enabled;
-  let tmp3Result = tmp3(5832);
+  let tmp3Result = tmp3(5892);
   const isGameInvitesPost = tmp3Result.useIsGameInvitesPost(channel);
-  tmp3Result = tmp3(4515);
+  tmp3Result = tmp3(4517);
   let shouldAgeVerifyForAgeGate = tmp3Result.useShouldAgeVerifyForAgeGate();
   if (shouldAgeVerifyForAgeGate) {
-    shouldAgeVerifyForAgeGate = tmp3(4515).shouldShowAgeGateForChannelId(channel.id);
-    const tmp3Result1 = tmp3(4515);
+    shouldAgeVerifyForAgeGate = tmp3(4517).shouldShowAgeGateForChannelId(channel.id);
+    const tmp3Result1 = tmp3(4517);
   }
   let isVocalThreadResult = !tmp2;
   if (!tmp2) {

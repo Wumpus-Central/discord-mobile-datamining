@@ -3,7 +3,7 @@ import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
-import { registerAsset } from "../../../../../_runtime/15658_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/15733_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { getLayoutStyle } from "getLayoutStyles.tsx";
 
@@ -110,7 +110,7 @@ const memoResult = require("noop").memo(function VoiceOrStageSummaryRow(arg0) {
     let obj3 = { variant: "text-sm/bold", style: null, children: null };
     obj3[1] = { marginLeft: 4 };
     obj3[2] = audienceCount;
-    items4[1] = c4(max(4298).Text, obj3);
+    items4[1] = c4(max(4299).Text, obj3);
     obj1[1] = items4;
     obj[1] = tmp5(tmp6, obj1);
     tmp8Result = tmp8(tmp6, obj);

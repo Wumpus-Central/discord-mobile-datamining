@@ -28,13 +28,13 @@ export default function UserProfileFrameEditButton(arg0) {
   let dependencyMap;
   let userProfileFrame;
   const tmp = createCacheKey();
-  let obj = user(9338);
+  let obj = user(9403);
   const canViewProfileFramesInCollectiblesShop = obj.useCanViewProfileFramesInCollectiblesShop("UserProfileFrameEditButton");
-  let obj1 = user(5962);
+  let obj1 = user(6022);
   const items = [user(1358).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE];
   const tmp5 = userProfileFrame(obj1.useSelectedDismissibleContent(items), 2);
   dependencyMap = tmp6;
-  let obj2 = user(8207);
+  let obj2 = user(8267);
   obj = { pendingValue: pendingProfileFrame, userValue: null, guildValue: null, guildId: null };
   let profileFrame;
   if (displayProfile != null) {
@@ -54,7 +54,7 @@ export default function UserProfileFrameEditButton(arg0) {
   obj[2] = profileFrame1;
   obj[3] = guildId;
   const profilePreviewValue = obj2.getProfilePreviewValue(obj);
-  let tmp2Result = tmp2(10047);
+  let tmp2Result = tmp2(10113);
   let skuId;
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
@@ -71,7 +71,7 @@ export default function UserProfileFrameEditButton(arg0) {
   if (type === user(1930).CollectiblesItemType.PROFILE_FRAME) {
     const first1 = product.items[0];
   }
-  tmp2Result = tmp2(8207);
+  tmp2Result = tmp2(8267);
   userProfileFrame = tmp2Result.useUserProfileFrame({ user, guildId });
   if (undefined !== pendingProfileFrame) {
     userProfileFrame = pendingProfileFrame;
@@ -103,7 +103,7 @@ export default function UserProfileFrameEditButton(arg0) {
       const intl5 = tmp2(1236).intl;
       obj1[1] = intl5.string(tmp2(1236).t.MKDeyL);
       obj1[2] = NOOP;
-      obj1[3] = tmp19(tmp2(5763).ActivityIndicator, { animating: true, size: "large" });
+      obj1[3] = tmp19(tmp2(5823).ActivityIndicator, { animating: true, size: "large" });
       obj2 = obj1;
     } else {
       obj2 = { label: null, labelTrailing: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null };
@@ -111,7 +111,7 @@ export default function UserProfileFrameEditButton(arg0) {
       obj2[0] = intl3.string(tmp2(1236).t.GWrZOd);
       const obj3 = { showNewBadge: null };
       obj3[0] = tmp5[0] === tmp2(1358).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE;
-      obj2[1] = tmp19(tmp2(13856).UserProfileEditFormLabelBadges, obj3);
+      obj2[1] = tmp19(tmp2(13926).UserProfileEditFormLabelBadges, obj3);
       obj2[2] = formatToPlainStringResult;
       const obj4 = { text: null };
       obj4[0] = formatToPlainStringResult;
@@ -125,18 +125,18 @@ export default function UserProfileFrameEditButton(arg0) {
         obj6[1] = COLLECTIBLES_PREVIEW_SIZE - 2 * guildId(712).space.PX_8;
         obj6[2] = COLLECTIBLES_PREVIEW_SIZE - 2 * PX_4;
         obj6[3] = guildId(712).colors.BACKGROUND_SURFACE_HIGH;
-        obj5[1] = tmp19(guildId(9330), obj6);
+        obj5[1] = tmp19(guildId(9395), obj6);
         let tmp19Result = tmp19(View, obj5);
-        const tmp24 = guildId(9330);
+        const tmp24 = guildId(9395);
       } else {
         const obj7 = { source: null, style: null };
-        obj7[0] = guildId(8228);
+        obj7[0] = guildId(8288);
         obj7[1] = tmp.noneIcon;
         tmp19Result = tmp19(tmp2(1297).Icon, obj7);
       }
       obj2[5] = tmp19Result;
     }
-    return jsx(tmp2(13856).UserProfileEditFormButton, obj2);
+    return jsx(tmp2(13926).UserProfileEditFormButton, obj2);
   } else {
     return null;
   }

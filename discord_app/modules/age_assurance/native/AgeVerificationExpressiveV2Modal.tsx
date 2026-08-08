@@ -75,7 +75,7 @@ function MethodsScreen(onComplete) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -298,7 +298,7 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
     let closure_1 = closure_0;
     const _undefined = closure_1;
     closeModal = function closeModal() {
-      let arr = callback(4507);
+      let arr = callback(4509);
       arr = arr.pop();
       dependencyMap();
     };
@@ -327,7 +327,7 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
     const obj3 = entryPoint(_undefined[34]);
     obj[2] = entryPoint(_undefined[34]).getHeaderBackButton();
     obj[3] = function render() {
-      return outer1_8(callback(7889), { onClose: closeModal, modalSessionId: closure_0 });
+      return outer1_8(callback(7949), { onClose: closeModal, modalSessionId: closure_0 });
     };
     obj[outer1_11.GOOGLE_WALLET_VERIFICATION] = obj;
     return obj;
@@ -338,5 +338,5 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
   let obj = { screens: memo1, initialRouteName: constants.METHODS, headerBackTitle: null };
   const intl = entryPoint(1236).intl;
   obj[2] = intl.string(entryPoint(1236).t["13/7kX"]);
-  return callback2(entryPoint(5723).Navigator, obj);
+  return callback2(entryPoint(5783).Navigator, obj);
 };

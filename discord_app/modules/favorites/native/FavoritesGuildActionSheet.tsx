@@ -38,23 +38,23 @@ function FavoritesGuildActionSheet() {
       const intl2 = tmp4(1236).intl;
       obj2[0] = intl2.string(tmp4(1236).t["0dOFq+"]);
       const obj3 = { IconComponent: null };
-      obj3[0] = tmp4(11472).ArrowsUpDownIcon;
-      obj2[1] = tmp7(tmp4(5706).ActionSheetRow.Icon, obj3);
+      obj3[0] = tmp4(11538).ArrowsUpDownIcon;
+      obj2[1] = tmp7(tmp4(5766).ActionSheetRow.Icon, obj3);
       obj2[2] = function onPress() {
-        tmp3(4270).hideActionSheet(closure_6);
-        const obj = tmp3(4270);
-        const result = tmp2(15191).openFavoritesGuildChannelSortModal();
+        tmp3(4271).hideActionSheet(closure_6);
+        const obj = tmp3(4271);
+        const result = tmp2(15264).openFavoritesGuildChannelSortModal();
       };
-      obj1[1] = tmp7(tmp4(5706).ActionSheetRow, obj2);
-      tmp7Result = tmp7(tmp4(5706).ActionSheetRow.Group, obj1);
+      obj1[1] = tmp7(tmp4(5766).ActionSheetRow, obj2);
+      tmp7Result = tmp7(tmp4(5766).ActionSheetRow.Group, obj1);
     }
   }
   const items1 = [tmp7Result, ];
   const obj4 = { label: tmp2.label, subLabel: tmp2.subLabel, icon: null, variant: null, onPress: null };
   if (tmp2.isPreview) {
-    let EyeSlashIcon = tmp4(5325).XSmallIcon;
+    let EyeSlashIcon = tmp4(5326).XSmallIcon;
   } else {
-    EyeSlashIcon = tmp4(8435).EyeSlashIcon;
+    EyeSlashIcon = tmp4(8495).EyeSlashIcon;
   }
   obj4[2] = callback(ActionSheetRowIcon.ActionSheetRow.Icon, { IconComponent: EyeSlashIcon });
   let str = "danger";
@@ -72,13 +72,13 @@ function FavoritesGuildActionSheet() {
     const obj5 = { label: null, subLabel: null, icon: null, variant: "danger", onPress: null };
     ({ label: obj9[0], subLabel: obj9[1] } = tmp3);
     const obj6 = { IconComponent: null };
-    obj6[0] = tmp4(4261).TrashIcon;
-    obj5[2] = tmp7(tmp4(5706).ActionSheetRow.Icon, obj6);
+    obj6[0] = tmp4(4262).TrashIcon;
+    obj5[2] = tmp7(tmp4(5766).ActionSheetRow.Icon, obj6);
     obj5[4] = function onPress() {
       tmp3(outer1_2[12]).hideActionSheet(outer1_6);
       tmp3.perform();
     };
-    tmp7Result = tmp7(tmp4(5706).ActionSheetRow, obj5);
+    tmp7Result = tmp7(tmp4(5766).ActionSheetRow, obj5);
   }
   items2[1] = tmp7Result;
   items1[1] = closure_5(ActionSheetRowIcon.ActionSheetRow.Group, { hasIcons: true, children: items2 });

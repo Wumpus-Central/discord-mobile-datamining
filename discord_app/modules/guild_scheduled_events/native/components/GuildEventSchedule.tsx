@@ -16,14 +16,14 @@ export default function GuildEventSchedule(schedule) {
   const onChange = schedule.onChange;
   ({ guildEvent, recurrenceId } = schedule);
   let obj = onChange(3883)();
-  const addResult = obj.add(schedule(8882).MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days");
+  const addResult = obj.add(schedule(8942).MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days");
   const items = [schedule.startDate];
   const memo = React.useMemo(() => onChange(outer1_2[2])(schedule.startDate).add(15, "minutes"), items);
   const tmp2 = onChange(3883)();
-  const addResult1 = onChange(3883)().add(schedule(8882).MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days");
+  const addResult1 = onChange(3883)().add(schedule(8942).MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days");
   if (null != recurrenceId) {
-    addResult.add(tmp3(8882).MAX_YEARS_AHEAD_RECURRING_EVENT, "years");
-    addResult1.add(tmp3(8882).MAX_YEARS_AHEAD_RECURRING_EVENT, "years");
+    addResult.add(tmp3(8942).MAX_YEARS_AHEAD_RECURRING_EVENT, "years");
+    addResult1.add(tmp3(8942).MAX_YEARS_AHEAD_RECURRING_EVENT, "years");
   }
   obj = {
     date: schedule.startDate,
@@ -42,7 +42,7 @@ export default function GuildEventSchedule(schedule) {
   obj[4] = intl.string(schedule(1236).t.kKOIwJ);
   const intl2 = tmp3(1236).intl;
   obj[5] = intl2.string(schedule(1236).t["6dGmCD"]);
-  const children = [callback(schedule(8907).GuildEventDatetime, obj), ];
+  const children = [callback(schedule(8967).GuildEventDatetime, obj), ];
   let tmp9Result = null != guildEvent.scheduled_end_time;
   if (tmp9Result) {
     obj = { date: null, onChange: null, minimumDate: null, maximumDate: null, dateLabel: null, timeLabel: null };
@@ -59,7 +59,7 @@ export default function GuildEventSchedule(schedule) {
     obj[4] = intl3.string(tmp3(1236).t.CTLgZJ);
     const intl4 = tmp3(1236).intl;
     obj[5] = intl4.string(tmp3(1236).t.j2RuXF);
-    tmp9Result = callback(tmp3(8907).GuildEventDatetime, obj);
+    tmp9Result = callback(tmp3(8967).GuildEventDatetime, obj);
   }
   children[1] = tmp9Result;
   return closure_6(closure_5, { children });

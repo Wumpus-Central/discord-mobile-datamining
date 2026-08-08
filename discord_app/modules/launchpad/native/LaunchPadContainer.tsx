@@ -41,14 +41,14 @@ export default function LaunchPadContainer(children) {
   updaters = undefined;
   let dependencyMap;
   const tmp = createCacheKey();
-  const tmp4 = updaters(10377)();
-  const tmp5 = updaters(15952)();
+  const tmp4 = updaters(10443)();
+  const tmp5 = updaters(16027)();
   launchPadSharedState = tmp5.launchPadSharedState;
   ({ launchPadPullTabState, launchPadShown, gestureState, updaters } = tmp5);
-  ({ gesture, gestureRef } = updaters(15954)({ launchPadType: tmp4, launchPadSharedState, launchPadPullTabState, launchPadShown, gestureState, updaters }));
-  const tmp7 = updaters(14990)();
+  ({ gesture, gestureRef } = updaters(16029)({ launchPadType: tmp4, launchPadSharedState, launchPadPullTabState, launchPadShown, gestureState, updaters }));
+  const tmp7 = updaters(15060)();
   dependencyMap = tmp7;
-  let obj = launchPadSharedState(4162);
+  let obj = launchPadSharedState(4036);
   const fn = function o() {
     return _undefined.get().height;
   };
@@ -66,7 +66,7 @@ export default function LaunchPadContainer(children) {
   fn2.__workletHash = 418963589215;
   fn2.__initData = closure_10;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
-  let obj1 = launchPadSharedState(4162);
+  let obj1 = launchPadSharedState(4036);
   const fn3 = function v() {
     let obj = { borderRadius: null, transform: null };
     obj[0] = launchPadSharedState(_undefined[9]).interpolate(launchPadSharedState.get(), [0, 1], [0, 16]);
@@ -86,17 +86,17 @@ export default function LaunchPadContainer(children) {
     obj[1] = items1;
     return obj;
   };
-  obj = { interpolate: launchPadSharedState(4162).interpolate, launchPadSharedState, withSpring: launchPadSharedState(4711).withSpring, windowDimensions: tmp7, LAUNCH_PAD_SPRING_CONFIG: closure_4 };
+  obj = { interpolate: launchPadSharedState(4036).interpolate, launchPadSharedState, withSpring: launchPadSharedState(4713).withSpring, windowDimensions: tmp7, LAUNCH_PAD_SPRING_CONFIG: closure_4 };
   fn3.__closure = obj;
   fn3.__workletHash = 13886247172712;
   fn3.__initData = closure_11;
   const animatedStyle = obj1.useAnimatedStyle(fn3);
-  const MobileHomeDrawerExperiment = launchPadSharedState(4158).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = launchPadSharedState(4164).MobileHomeDrawerExperiment;
   obj = { value: gestureRef, children: null };
   obj1 = { gesture, children: null };
   let obj2 = { style: tmp.wrapper, children: null };
   let items = [tmp.container, animatedStyle];
-  let items1 = [callback(updaters(4162).View, { style: items, children: children.children }), ];
+  let items1 = [callback(updaters(4036).View, { style: items, children: children.children }), ];
   if (tmp4 !== constants.DISABLED) {
     const obj3 = { launchPadType: null, gestureState: null, launchPadShown: null, launchPadSharedState: null, launchPadPullTabState: null, updaters: null };
     obj3[0] = tmp4;
@@ -105,11 +105,11 @@ export default function LaunchPadContainer(children) {
     obj3[3] = launchPadSharedState;
     obj3[4] = launchPadPullTabState;
     obj3[5] = updaters;
-    const tmp10Result = tmp10(updaters(15955), obj3);
+    const tmp10Result = tmp10(updaters(16030), obj3);
   }
   items1[1] = tmp10Result;
   obj2[1] = items1;
   obj1[1] = closure_7(closure_3, obj2);
-  obj[1] = callback(launchPadSharedState(5426).GestureDetector, obj1);
-  return callback(updaters(15073).Provider, obj);
+  obj[1] = callback(launchPadSharedState(5427).GestureDetector, obj1);
+  return callback(updaters(15143).Provider, obj);
 };

@@ -161,7 +161,7 @@ class BaseActivityWebView {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -411,7 +411,7 @@ class BaseActivityWebView {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  return { value: "T", done: null };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -461,7 +461,7 @@ class BaseActivityWebView {
                     outer1_30(items.map((arg0) => "^" + content_security_policy(table[26])(arg0).replace(/\\\*/g, ".*")));
                     outer1_28(true);
                     c4 = 3;
-                    return { value: "T", done: null };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp7) {
                   c4 = tmp;
@@ -602,7 +602,7 @@ class BaseActivityWebView {
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    return { value: "T", done: null };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {

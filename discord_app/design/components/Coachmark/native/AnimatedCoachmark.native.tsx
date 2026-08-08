@@ -30,7 +30,7 @@ export const AnimatedCoachmark = function AnimatedCoachmark(visible) {
   const merged = Object.assign(visible, Object.create(null));
   let importDefault;
   [tmp3, c1] = callback(React.useState(visible), 2);
-  let obj = visible(8598);
+  let obj = visible(8658);
   const result = obj.tooltipEnterExitAnimation(merged.position);
   const items = [visible];
   const effect = React.useEffect(() => {

@@ -2,7 +2,7 @@
 import dispatcher from "dispatcher";
 import { DraftType } from "handleChanged";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
-import { registerAsset } from "../../../../_runtime/08552_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08612_registerAsset.js";
 import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 
 const require = arg1;
@@ -18,18 +18,18 @@ function _sendShareMessage() {
       let c2;
       const dependencyMap = 0;
       ({ attachments: c0, channel: c1, comment: c2 } = lib);
-      yield "PX_8";
+      yield "ct";
       const id = lib2.id;
       lib2 = dependencyMap;
       if (dependencyMap == null) {
         lib2 = "";
       }
       if (c4.length > 0) {
-        let obj2 = lib2(8297);
+        let obj2 = lib2(8357);
         obj2.clearAll(id, c4.ChannelMessage);
       }
-      const future = new lib(8282).Future();
-      const obj3 = lib2(6857);
+      const future = new lib(8342).Future();
+      const obj3 = lib2(6917);
       obj2 = { location: null, doNotNotifyOnError: true, attachmentsToUpload: null, onAttachmentUploadError: null };
       obj2[0] = constants.SHARE_MODAL;
       obj2[2] = c4;

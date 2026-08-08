@@ -122,15 +122,15 @@ let prototype = function DeprecatedModalManager() {
     USER_REQUIRED_ACTION_UPDATE(requiredAction) {
       if (null == requiredAction.requiredAction) {
         if (obj.isModalOpen(closure_16)) {
-          let tmp5Result = tmp5(4152);
+          let tmp5Result = tmp5(4158);
           tmp5Result.popModal(tmp7);
         }
-        tmp5Result = tmp5(4152);
+        tmp5Result = tmp5(4158);
         if (tmp5Result.isModalOpen(closure_14)) {
-          tmp5(4152).popModal(tmp9);
-          const tmp5Result1 = tmp5(4152);
+          tmp5(4158).popModal(tmp9);
+          const tmp5Result1 = tmp5(4158);
         }
-        obj = callback(4152);
+        obj = callback(4158);
         tmp7 = closure_16;
         tmp9 = closure_14;
       } else {
@@ -154,7 +154,7 @@ let prototype = function DeprecatedModalManager() {
     store: handleFormInit,
     closable: false,
     getComponent() {
-      return callback(16518).default;
+      return callback(16595).default;
     }
   };
   obj = {
@@ -162,7 +162,7 @@ let prototype = function DeprecatedModalManager() {
     store: FormStates,
     closable: false,
     getComponent() {
-      return callback(16792).default;
+      return callback(16869).default;
     }
   };
   applyArgumentsResult.actions = obj;

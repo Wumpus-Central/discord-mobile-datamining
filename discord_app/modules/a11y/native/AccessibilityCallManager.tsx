@@ -23,16 +23,16 @@ class AccessibilityCallManager extends tmp4 {
           if (!obj2.isIOS()) {
             const channel = store2.getChannel(channelId);
             if (null != channel) {
-              const channelName = tmp4(4492).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+              const channelName = tmp4(4494).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
               if (null != channelName) {
                 obj.add(channelId);
-                const AccessibilityAnnouncer = tmp4(4147).AccessibilityAnnouncer;
+                const AccessibilityAnnouncer = tmp4(4153).AccessibilityAnnouncer;
                 const intl = tmp4(1236).intl;
                 obj = { callLocation: null };
                 obj[0] = channelName;
                 AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp4(1236).t["Bm0A/p"], obj), "assertive");
               }
-              const tmp4Result = tmp4(4492);
+              const tmp4Result = tmp4(4494);
             }
           } else {
             const NativePhoneIntegrationEnabled = tmp4(3974).NativePhoneIntegrationEnabled;
@@ -56,16 +56,16 @@ class AccessibilityCallManager extends tmp4 {
             if (!obj3.isIOS()) {
               const channel = store2.getChannel(channelId);
               if (null != channel) {
-                const channelName = tmp4(4492).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+                const channelName = tmp4(4494).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
                 if (null != channelName) {
                   obj2.add(channelId);
-                  const AccessibilityAnnouncer = tmp4(4147).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = tmp4(4153).AccessibilityAnnouncer;
                   const intl = tmp4(1236).intl;
                   obj = { callLocation: null };
                   obj[0] = channelName;
                   AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp4(1236).t["Bm0A/p"], obj), "assertive");
                 }
-                const tmp4Result = tmp4(4492);
+                const tmp4Result = tmp4(4494);
               }
             } else {
               const NativePhoneIntegrationEnabled = tmp4(3974).NativePhoneIntegrationEnabled;

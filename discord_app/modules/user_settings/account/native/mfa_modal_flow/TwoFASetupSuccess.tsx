@@ -5,7 +5,7 @@ import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/13967_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/14037_registerAsset.js";
 import { Button } from "../../../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../../design/void/native.tsx";
@@ -55,7 +55,7 @@ export default function TwoFASetupSuccess() {
           let closure_2 = tmp3;
           c1 = tmp5;
           ({ ticket: c0, credential: c1 } = c0);
-          yield "PX_8";
+          yield "ct";
           let c4 = 1;
           const intl = callback(outer2_2[8]).intl;
           yield callback(outer2_2[7]).finishRegisterWebAuthnCredential(intl.string(callback(outer2_2[8]).t["8H5RmH"]), callback, outer2_1);

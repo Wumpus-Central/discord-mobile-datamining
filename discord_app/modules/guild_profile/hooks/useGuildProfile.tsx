@@ -25,7 +25,7 @@ export const useGuildProfile = function useGuildProfile(guildId) {
       if (flag === undefined) {
         flag = false;
       }
-      yield "PX_8";
+      yield "ct";
       const obj2 = callback(outer1_1[4]);
       yield obj2.getGuildProfile(flag, flag);
       return arg1;

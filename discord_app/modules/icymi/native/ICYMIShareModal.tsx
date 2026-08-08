@@ -39,21 +39,21 @@ function Screenshot(setUri) {
       return nextPromise;
     }, 500);
   }, items);
-  let obj = setUri(8331);
+  let obj = setUri(8391);
   obj = { style: { position: "absolute", top: -1000, overflow: "hidden" }, children: null };
   obj = { style: items1, children: null };
   items1 = [tmp.preview, { width: ref(1474)().width }];
   const clientThemesOverride = obj.useClientThemesOverride();
   const obj1 = { ref, options: { fileName: "icymi_content", format: "png", quality: 1 }, children: null };
   const obj2 = { style: tmp.base, children: null };
-  const tmp4 = ref(4148)();
+  const tmp4 = ref(4154)();
   const obj3 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj4 = { dark: null, light: null };
-  const tmp6 = ref(15536);
-  obj4[0] = setUri(4112).OverlayOpacity.LEVEL_7;
-  obj4[1] = setUri(4112).OverlayOpacity.LEVEL_8;
+  const tmp6 = ref(15611);
+  obj4[0] = setUri(4118).OverlayOpacity.LEVEL_7;
+  obj4[1] = setUri(4118).OverlayOpacity.LEVEL_8;
   obj3[4] = obj4;
-  const items2 = [callback3(ref(4846), obj3), ];
+  const items2 = [callback3(ref(4848), obj3), ];
   const obj5 = { gradient: tmp4, children: null };
   const obj6 = { style: items3, children: null };
   items3 = [tmp.contentContainer, clientThemesOverride];
@@ -162,7 +162,7 @@ class ICYMIShareModal {
               obj[0] = arr;
               return obj;
             } else {
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -205,7 +205,7 @@ class ICYMIShareModal {
                     let closure_0 = arg0;
                     let c2 = 0;
                     let c1 = 0;
-                    return (/* F119950 */ function*() { ... })();
+                    return (/* F120293 */ function*() { ... })();
                   });
                   return function(arg0) {
                     const self = this;
@@ -391,7 +391,7 @@ export const GameShareModal = function GameShareModal(content) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

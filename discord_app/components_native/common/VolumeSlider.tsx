@@ -6,7 +6,7 @@ import jsxProd from "jsxProd";
 import set from "set";
 import createCacheKey from "createCacheKey";
 import set from "DesktopSources";
-import { _getRequireWildcardCache } from "../../../_runtime/07929__getRequireWildcardCache.js";
+import { _getRequireWildcardCache } from "../../../_runtime/07989__getRequireWildcardCache.js";
 import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
 import { VoiceNormalIcon } from "../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import { VoiceXIcon } from "../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
@@ -50,7 +50,7 @@ export default function VolumeSlider(maxTrackTintColor) {
   obj = { style: tmp4.leftIcon };
   const items1 = [callback(VoiceXIcon.VoiceXIcon, obj), , ];
   const obj1 = { style: tmp4.volumerSliderNative, value: null, minimumValue: 0, maximumValue: null, minimumTrackTintColor: null, maximumTrackTintColor: null, accessibilityLabel: null, onValueChange: null, onResponderGrant: null };
-  let tmp5Result = tmp5(4749);
+  let tmp5Result = tmp5(4751);
   obj1[1] = tmp5Result.amplitudeToPerceptual(value);
   obj1[3] = maxVolume;
   obj1[4] = minTrackColor;

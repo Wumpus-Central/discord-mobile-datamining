@@ -27,14 +27,14 @@ const forwardRefResult = require("noop").forwardRef((style, ref) => {
   const tmp6 = AccessibilityAnnouncer.isThemeDark(theme) ? unsafe_rawColors.PRIMARY_100 : unsafe_rawColors.PRIMARY_500;
   obj = { ref, style: items, keyboardAppearance: null, placeholderTextColor: null, selectionColor: null };
   items = [tmp2.input, style.style];
-  let tmp3Result = tmp3(4147);
+  let tmp3Result = tmp3(4153);
   obj[2] = tmp3Result.isThemeDark(theme) ? closure_4.DARK : closure_4.LIGHT;
   obj[3] = tmp2.placeholderTextColor.color;
   tmp3Result = tmp3(500);
   let hexWithOpacityResult = tmp6;
   if (tmp3Result.isAndroid()) {
-    hexWithOpacityResult = tmp3(4145).hexWithOpacity(tmp6, 0.5);
-    const tmp3Result1 = tmp3(4145);
+    hexWithOpacityResult = tmp3(4151).hexWithOpacity(tmp6, 0.5);
+    const tmp3Result1 = tmp3(4151);
   }
   obj[4] = hexWithOpacityResult;
   const merged1 = Object.assign(merged);

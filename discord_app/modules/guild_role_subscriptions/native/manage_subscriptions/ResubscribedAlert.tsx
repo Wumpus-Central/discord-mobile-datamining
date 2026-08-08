@@ -3,7 +3,7 @@ import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/14383_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/14453_registerAsset.js";
 import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";

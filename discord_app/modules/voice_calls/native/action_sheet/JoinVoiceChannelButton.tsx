@@ -38,6 +38,6 @@ export default function JoinVoiceChannelButton(channel) {
     const obj = outer1_2(outer1_3[9]);
     const voiceChannel = outer1_1(outer1_3[10]).selectVoiceChannel(channel.id);
   }, items1);
-  obj[1] = jsx(channel(4712).Button, { disabled: flag, text: stringResult, onPress: callback });
+  obj[1] = jsx(channel(4714).Button, { disabled: flag, text: stringResult, onPress: callback });
   return <View style={items2}>{null}</View>;
 };

@@ -51,7 +51,7 @@ export default {
           obj = { username: null, usernameOnClick: null, otherUsername: null, otherUsernameOnClick: null };
           obj[0] = name;
           obj[1] = closure_12;
-          let tmp6Result = tmp6(4491);
+          let tmp6Result = tmp6(4493);
           obj[2] = tmp6Result.getName(null, channel_id, null);
           obj[3] = closure_12;
           return reactParserFor.astToString(intl18.formatToParts(getSystemLocale.t["7/Xl0S"], obj));
@@ -65,7 +65,7 @@ export default {
               obj = { username: null, usernameOnClick: null, otherUsername: null, otherUsernameOnClick: null };
               obj[0] = name;
               obj[1] = closure_12;
-              tmp6Result = tmp6(4491);
+              tmp6Result = tmp6(4493);
               obj[2] = tmp6Result.getName(null, channel_id, null);
               obj[3] = closure_12;
               let astToStringResult = reactParserFor.astToString(intl17.formatToParts(getSystemLocale.t.QtZ0RD, obj));
@@ -248,13 +248,13 @@ export default {
                     astToStringResult6 = null;
                     if (null != guild) {
                       if (AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED === value) {
-                        let tmp34Result = tmp34(8034);
+                        let tmp34Result = tmp34(8094);
                         const intl5 = tmp34(1236).intl;
                         const obj14 = { guildName: null };
                         obj14[0] = guild.name;
                         astToStringResult6 = tmp34Result.astToString(intl5.formatToParts(tmp34(1236).t.wt3ZUM, obj14));
-                      } else if (tmp34(8038).AutomodNotificationEmbedTypeKeys.INTERACTION_BLOCKED === value) {
-                        tmp34Result = tmp34(8034);
+                      } else if (tmp34(8098).AutomodNotificationEmbedTypeKeys.INTERACTION_BLOCKED === value) {
+                        tmp34Result = tmp34(8094);
                         const intl4 = tmp34(1236).intl;
                         obj15 = { guildName: null };
                         obj15[0] = guild.name;
@@ -263,8 +263,8 @@ export default {
                         const intl3 = tmp34(1236).intl;
                         obj16 = { guildName: null };
                         obj16[0] = guild.name;
-                        astToStringResult6 = tmp34(8034).astToString(intl3.formatToParts(tmp34(1236).t["a+lJKl"], obj16));
-                        const tmp34Result1 = tmp34(8034);
+                        astToStringResult6 = tmp34(8094).astToString(intl3.formatToParts(tmp34(1236).t["a+lJKl"], obj16));
+                        const tmp34Result1 = tmp34(8094);
                       }
                     }
                   }

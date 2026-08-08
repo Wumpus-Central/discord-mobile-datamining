@@ -12,7 +12,7 @@ import { ThreadListSection } from "../../../../../threads/native/components/rede
 const require = arg1;
 function ThreadsScreen(channel) {
   channel = channel.channel;
-  let obj = channel(5829);
+  let obj = channel(5889);
   const canStartThread = obj.useCanStartThread(channel);
   const items = [channel];
   const callback = importAllResult.useCallback(() => {

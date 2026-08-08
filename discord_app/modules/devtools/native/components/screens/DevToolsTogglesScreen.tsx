@@ -7,7 +7,7 @@ import closure_7 from "getUserAgnosticState";
 import { CATEGORY_LABELS } from "getUserAgnosticState";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { fuzzysearch } from "../../../../../../_runtime/05228_fuzzysearch.js";
+import { fuzzysearch } from "../../../../../../_runtime/05229_fuzzysearch.js";
 import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { useSafeAreaInsetsKeyboardAware } from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 
@@ -21,8 +21,8 @@ function fuzzySearchToggle(str, str2, str3) {
     let tmp3ResultResult = fuzzysearch(formatted, str2.toLowerCase());
     if (!tmp3ResultResult) {
       const formatted1 = str.toLowerCase();
-      tmp3ResultResult = tmp3(5228)(formatted1, str3.toLowerCase());
-      const tmp3Result = tmp3(5228);
+      tmp3ResultResult = tmp3(5229)(formatted1, str3.toLowerCase());
+      const tmp3Result = tmp3(5229);
     }
     tmp = tmp3ResultResult;
     tmp3 = importDefault;
@@ -48,8 +48,8 @@ function ToggleTableRow(toggleName) {
     },
     trailing: null
   };
-  obj[5] = callback2(toggleName(5709).FormSwitch, { value, onValueChange });
-  return callback2(toggleName(5373).TableRow, obj, toggleName);
+  obj[5] = callback2(toggleName(5769).FormSwitch, { value, onValueChange });
+  return callback2(toggleName(5374).TableRow, obj, toggleName);
 }
 function DevTogglesForCategory(title) {
   let category;
@@ -80,7 +80,7 @@ function DevTogglesForCategory(title) {
         }
       }, tmp);
     });
-    tmp3 = callback2(category(5707).TableRowGroup, obj);
+    tmp3 = callback2(category(5767).TableRowGroup, obj);
   }
   return tmp3;
 }
@@ -97,7 +97,7 @@ export default function DevToolsTogglesScreen() {
   let tmp = createCacheKey();
   let tmp3 = callback(React.useState(""), 2);
   const first = tmp3[0];
-  let obj = first(14958);
+  let obj = first(15028);
   const manaTextMigrationHighlightRestartNotice = obj.useManaTextMigrationHighlightRestartNotice();
   let obj1 = first(589);
   const items = [getUserAgnosticState];
@@ -129,23 +129,23 @@ export default function DevToolsTogglesScreen() {
   obj[1] = items2;
   obj1 = { title: "Actions", hasIcons: false, children: null };
   const items3 = [
-    callback2(first(5373).TableRow, {
+    callback2(first(5374).TableRow, {
       label: "Clear All",
       variant: "danger",
       onPress() {
-        first(14959).clearAll();
-        const obj = first(14959);
-        first(14941).clearAll();
+        first(15029).clearAll();
+        const obj = first(15029);
+        first(15011).clearAll();
       },
       arrow: true
     }),
 
   ];
   const obj3 = { label: null };
-  obj3[0] = callback2(first(5932).SearchField, { size: "md", placeholder: "Search design toggles", onChange: tmp3[1] });
-  items3[1] = callback2(first(5373).TableRow, obj3);
+  obj3[0] = callback2(first(5992).SearchField, { size: "md", placeholder: "Search design toggles", onChange: tmp3[1] });
+  items3[1] = callback2(first(5374).TableRow, obj3);
   obj1[2] = items3;
-  const items4 = [callback3(first(5707).TableRowGroup, obj1), , ];
+  const items4 = [callback3(first(5767).TableRowGroup, obj1), , ];
   let tmp7Result = null;
   if (stateFromStores.length > 0) {
     const obj4 = { title: "Design Toggles", hasIcons: false, children: null };
@@ -163,7 +163,7 @@ export default function DevToolsTogglesScreen() {
         }
       }, tmp);
     });
-    tmp7Result = tmp7(first(5707).TableRowGroup, obj4);
+    tmp7Result = tmp7(first(5767).TableRowGroup, obj4);
   }
   const obj5 = { spacing: 16, children: null };
   items4[1] = tmp7Result;
@@ -175,6 +175,6 @@ export default function DevToolsTogglesScreen() {
     return outer1_9(outer1_14, { category: parseInt(tmp), title: tmp2, query: first }, tmp);
   });
   obj5[1] = items4;
-  obj[2] = callback3(first(4710).Stack, obj5);
+  obj[2] = callback3(first(4712).Stack, obj5);
   return callback2(ScrollView, obj);
 };

@@ -26,7 +26,7 @@ function _requestAndSyncContacts() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -107,7 +107,7 @@ function _requestAndSyncContacts() {
             if (null == phone) {
               currentUser = 0;
               v02 = 3;
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             } else {
               v0 = 2;
               v02 = 1;

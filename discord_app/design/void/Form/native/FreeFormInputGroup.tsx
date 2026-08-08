@@ -65,7 +65,7 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
     obj[8] = str;
     obj[9] = isAndroidResult;
     obj[10] = merged.autoCapitalize;
-    return callback(tmp8(7730).TextInput, obj);
+    return callback(tmp8(7790).TextInput, obj);
   } else {
     obj = { style: null, children: null };
     obj[0] = style;
@@ -111,7 +111,7 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
       const obj4 = { style: null, variant: "text-xs/medium", color: "text-muted", children: null };
       obj4[0] = tmp2.hint;
       obj4[3] = hint;
-      tmp17Result = tmp17(tmp8(4298).Text, obj4);
+      tmp17Result = tmp17(tmp8(4299).Text, obj4);
     }
     items[3] = tmp17Result;
     obj[1] = items;

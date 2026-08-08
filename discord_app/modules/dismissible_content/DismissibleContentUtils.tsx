@@ -82,7 +82,7 @@ function _markLatestVersionDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -114,7 +114,7 @@ function _markLatestVersionDismissibleContentAsDismissed() {
             return obj;
           } else {
             table = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           table = tmp;
@@ -181,7 +181,7 @@ function _markVersionedDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -217,7 +217,7 @@ function _markVersionedDismissibleContentAsDismissed() {
           } else {
             callback(closure_0, closure_1);
             c6 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp20) {
           c6 = tmp;
@@ -255,7 +255,7 @@ function _markSnowflakeBoundDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -294,7 +294,7 @@ function _markSnowflakeBoundDismissibleContentAsDismissed() {
           } else {
             callback(closure_0, closure_1);
             c6 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp23) {
           c6 = tmp;
@@ -331,7 +331,7 @@ function _markTimeRecurringDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -366,7 +366,7 @@ function _markTimeRecurringDismissibleContentAsDismissed() {
           } else {
             callback(closure_0, closure_1);
             c5 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp19) {
           c5 = tmp;

@@ -51,7 +51,7 @@ export default function SoundboardSoundPreviewActionSheet(channelId) {
     }
     return id;
   });
-  analyticsLocations = sound(5668)().analyticsLocations;
+  analyticsLocations = sound(5728)().analyticsLocations;
   let obj1 = channelId(589);
   const items1 = [handleSoundCreateOrUpdate];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => {
@@ -67,10 +67,10 @@ export default function SoundboardSoundPreviewActionSheet(channelId) {
   const items3 = [channelId, sound, isPlayingSound];
   const callback = analyticsLocations.useCallback(() => {
     if (isFavorite) {
-      let tmpResult = tmp(5893);
+      let tmpResult = tmp(5953);
       tmpResult.removeFavoriteSound(sound.soundId);
     } else {
-      tmpResult = tmp(5899);
+      tmpResult = tmp(5959);
       let obj = { sound: null, location: null };
       obj[0] = sound;
       obj = {};
@@ -78,14 +78,14 @@ export default function SoundboardSoundPreviewActionSheet(channelId) {
       obj.object = outer1_8.SOUNDBOARD_SOUND;
       obj[1] = obj;
       tmpResult.trackSoundFavorited(obj);
-      channelId(5893).addFavoriteSound(sound.soundId);
-      const obj4 = channelId(5893);
+      channelId(5953).addFavoriteSound(sound.soundId);
+      const obj4 = channelId(5953);
     }
   }, items2);
   const callback1 = analyticsLocations.useCallback(() => {
     if (!isPlayingSound) {
-      channelId(5893).playSoundLocally(channelId, sound, channelId(4754).LocalSoundTrigger.SOUNDBOARD);
-      const obj = channelId(5893);
+      channelId(5953).playSoundLocally(channelId, sound, channelId(4756).LocalSoundTrigger.SOUNDBOARD);
+      const obj = channelId(5953);
     }
   }, items3);
   obj = { fastImageStyle: items4, textEmojiStyle: items5, src: null, name: null };
@@ -93,20 +93,20 @@ export default function SoundboardSoundPreviewActionSheet(channelId) {
   ({ emoji: arr5[0], emojiFastImage: arr5[1] } = tmp);
   items5 = [, ];
   ({ emoji: arr6[0], emojiText: arr6[1] } = tmp);
-  obj[2] = sound(11275)(sound, 64);
+  obj[2] = sound(11341)(sound, 64);
   let str = sound.emojiName;
   if (str == null) {
     str = "";
   }
   obj[3] = str;
-  const items6 = [closure_9(sound(5359), obj), , ];
+  const items6 = [closure_9(sound(5360), obj), , ];
   obj = { style: tmp.text, variant: "heading-lg/extrabold", children: sound.name };
-  items6[1] = closure_9(channelId(4298).Text, obj);
+  items6[1] = closure_9(channelId(4299).Text, obj);
   obj1 = { style: tmp.buttonContainer, children: null };
   if (isFavorite) {
-    let StarOutlineIcon = tmp2(8684).StarIcon;
+    let StarOutlineIcon = tmp2(8744).StarIcon;
   } else {
-    StarOutlineIcon = tmp2(8686).StarOutlineIcon;
+    StarOutlineIcon = tmp2(8746).StarOutlineIcon;
   }
   const obj2 = { variant: "primary", icon: closure_9(StarOutlineIcon, obj3), text: null, onPress: null };
   const intl = tmp2(1236).intl;
@@ -119,15 +119,15 @@ export default function SoundboardSoundPreviewActionSheet(channelId) {
   }
   obj2[2] = stringResult;
   obj2[3] = callback;
-  const items7 = [closure_9(channelId(4712).Button, obj2), ];
+  const items7 = [closure_9(channelId(4714).Button, obj2), ];
   if (isPlayingSound) {
     let obj4 = { style: null };
     obj4[0] = tmp.star;
-    let tmp8Result = tmp8(tmp2(9743).WaveformIcon, obj4);
+    let tmp8Result = tmp8(tmp2(9809).WaveformIcon, obj4);
   } else {
     const obj5 = { style: null, source: null };
     obj5[0] = tmp.star;
-    obj5[1] = sound(7954);
+    obj5[1] = sound(8014);
     tmp8Result = tmp8(isFavorite, obj5);
   }
   const obj6 = { variant: "secondary", icon: tmp8Result, text: null, onPress: null };
@@ -137,10 +137,10 @@ export default function SoundboardSoundPreviewActionSheet(channelId) {
   const obj8 = { children: null };
   obj6[2] = intl2.string(isPlayingSound ? t2.diasud : t2.Kd4uxG);
   obj6[3] = callback1;
-  items7[1] = closure_9(channelId(4712).Button, obj6);
+  items7[1] = closure_9(channelId(4714).Button, obj6);
   obj1[1] = items7;
   items6[2] = closure_10(isPlayingSound, obj1);
   obj8[0] = items6;
   obj7[1] = closure_10(isPlayingSound, obj8);
-  return closure_9(channelId(5704).ActionSheet, obj7);
+  return closure_9(channelId(5764).ActionSheet, obj7);
 };

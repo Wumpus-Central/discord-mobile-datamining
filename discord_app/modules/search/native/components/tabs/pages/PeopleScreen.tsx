@@ -55,7 +55,7 @@ const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -99,7 +99,7 @@ const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
             const result = callback(stateFromStores[12]).trackSearchResultClicked(obj2);
             outer1_6(closure_0, closure_2);
             c5 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           c5 = tmp;

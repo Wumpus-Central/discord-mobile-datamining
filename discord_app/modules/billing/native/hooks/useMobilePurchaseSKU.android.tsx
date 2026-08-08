@@ -95,7 +95,7 @@ export default function useMobilePurchaseSKU(skuId) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -116,7 +116,7 @@ export default function useMobilePurchaseSKU(skuId) {
               if (lib.billingResult === onPurchasePending.OK) {
                 outer1_8();
                 v0 = 3;
-                return { value: "T", done: null };
+                return { value: "HermesInternal", done: null };
               } else {
                 let obj5 = platformSkuId(analyticsLocations[11]);
                 obj5.unsubscribe("GPLAY_PURCHASE_VERIFIED", outer1_19);
@@ -232,7 +232,7 @@ export default function useMobilePurchaseSKU(skuId) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -377,7 +377,7 @@ export default function useMobilePurchaseSKU(skuId) {
             c4 = 0;
             closure_16.current = false;
             v02 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
           obj9 = { productId: null, skuId: null, isOneTimePurchase: true, analyticsLoadId: null, analyticsLocations: null, analyticsData: null, isGift: null, giftInfoOptions: null, onPurchaseError: null };
           obj9[0] = closure_1;

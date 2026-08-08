@@ -24,7 +24,7 @@ function ActionSheetSelector(arg0) {
   let dependencyMap;
   const items = [onSelect];
   dependencyMap = React.useCallback((type) => {
-    onSelect(4270).hideActionSheet("action-sheet-selector");
+    onSelect(4271).hideActionSheet("action-sheet-selector");
     onSelect(type.type);
     type.show();
   }, items);
@@ -38,19 +38,19 @@ function ActionSheetSelector(arg0) {
   obj2[1] = items.map((type) => {
     let closure_0 = type;
     const obj = { icon: null, label: null, subLabel: null, onPress: null, trailing: null, start: null, end: null };
-    obj[0] = outer1_7(outer1_0(7902).WarningIcon, { size: "md" });
+    obj[0] = outer1_7(outer1_0(7962).WarningIcon, { size: "md" });
     ({ label: obj[1], description: obj[2] } = type);
     obj[3] = function onPress() {
       return outer1_2(closure_0);
     };
     let tmpResult;
     if (closure_0 === type.type) {
-      tmpResult = tmp(outer1_0(4254).CheckmarkLargeIcon, { size: "md", color: "text-feedback-positive" });
+      tmpResult = tmp(outer1_0(4255).CheckmarkLargeIcon, { size: "md", color: "text-feedback-positive" });
     }
     obj[4] = tmpResult;
     obj[5] = 0 === arg1;
     obj[6] = arg1 === outer1_10.length - 1;
-    return outer1_7(outer1_0(5373).TableRow, obj, type.type);
+    return outer1_7(outer1_0(5374).TableRow, obj, type.type);
   });
   obj[1] = callback2(TableRowGroupTitle.TableRowGroup, obj2);
   obj[1] = callback2(closure_5, obj);
@@ -85,7 +85,7 @@ let items = [
     label: "Inappropriate Conversation",
     description: "Shows safety warning for inappropriate conversations",
     show() {
-      return ModalActionCreators.pushLazy(asyncRequireImpl(14972, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
+      return ModalActionCreators.pushLazy(asyncRequireImpl(15042, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
     }
   }
 ];
@@ -116,12 +116,12 @@ export default function DevToolsActionSheetsScreen() {
   }, items);
   obj = { spacing: 16, children: null };
   obj = { children: null };
-  const items1 = [callback2(first(4298).Text, { variant: "heading-lg/medium", children: "Action Sheets" }), ];
+  const items1 = [callback2(first(4299).Text, { variant: "heading-lg/medium", children: "Action Sheets" }), ];
   const obj1 = { description: "Tap an option to launch the action sheet immediately", hasIcons: false, children: null };
-  obj1[2] = callback2(first(5373).TableRow, { label: found.label, subLabel: found.description, arrow: true, onPress: callback });
-  items1[1] = callback2(first(5707).TableRowGroup, obj1);
+  obj1[2] = callback2(first(5374).TableRow, { label: found.label, subLabel: found.description, arrow: true, onPress: callback });
+  items1[1] = callback2(first(5767).TableRowGroup, obj1);
   obj[0] = items1;
-  obj[1] = callback3(first(5375).Card, obj);
-  obj[2] = callback2(first(4710).Stack, obj);
+  obj[1] = callback3(first(5376).Card, obj);
+  obj[2] = callback2(first(4712).Stack, obj);
   return callback2(closure_6, obj);
 };

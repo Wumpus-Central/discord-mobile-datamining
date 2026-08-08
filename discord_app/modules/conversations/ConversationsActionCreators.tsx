@@ -37,7 +37,7 @@ function _fetchChannelConversations() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -77,7 +77,7 @@ function _fetchChannelConversations() {
               let conversations;
               hydrateMessages = 1;
               c8 = 1;
-              return { value: "PX_8", done: "Array" };
+              return { value: "ct", done: "Array" };
             }
           } else {
             if (1 === tmp7) {
@@ -138,7 +138,7 @@ function _fetchChannelConversations() {
                     return obj5;
                   }
                 }
-                obj15 = callback(8494);
+                obj15 = callback(8554);
               }
             } else if (2 === tmp7) {
               c6 = 0;
@@ -187,7 +187,7 @@ function _fetchChannelConversations() {
               return obj;
             }
             c8 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp70) {
           if (tmp4 === c6) {
@@ -245,7 +245,7 @@ function _fetchConversationMessages() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -313,7 +313,7 @@ function _fetchConversationMessages() {
                   }
                 }
               }
-              obj14 = callback(8494);
+              obj14 = callback(8554);
               tmp52 = callback;
             }
           } else {

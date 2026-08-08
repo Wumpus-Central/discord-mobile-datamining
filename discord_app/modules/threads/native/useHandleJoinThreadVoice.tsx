@@ -19,7 +19,7 @@ export default function useHandleJoinThreadVoice(arg0) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -108,7 +108,7 @@ export default function useHandleJoinThreadVoice(arg0) {
           } else {
             arg1.openGuildVoiceModal(guildId, "Thread Header");
             c3 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
           c2 = 4;
           c3 = 1;

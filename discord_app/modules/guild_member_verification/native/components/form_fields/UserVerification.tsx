@@ -25,14 +25,14 @@ export default function UserVerification(arg0) {
     let tmp5 = platform === MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.PHONE;
     if (tmp5) {
       let obj = { passesVerification: null, platform: null };
-      obj[0] = verification[tmp12(undefined, 4121).UserVerificationFieldPlatforms.PHONE];
-      obj[1] = tmp12(4121).UserVerificationFieldPlatforms.PHONE;
+      obj[0] = verification[tmp12(undefined, 4127).UserVerificationFieldPlatforms.PHONE];
+      obj[1] = tmp12(4127).UserVerificationFieldPlatforms.PHONE;
       tmp5 = callback(BaseIdentityVerificationField, obj);
       const tmp4 = BaseIdentityVerificationField;
     }
     const items = [tmp5, , ];
     obj = { passesVerification: null, platform: null };
-    obj[0] = verification[require(undefined, 4121) /* MAX_RESULTS_PER_PAGE */.UserVerificationFieldPlatforms.EMAIL];
+    obj[0] = verification[require(undefined, 4127) /* MAX_RESULTS_PER_PAGE */.UserVerificationFieldPlatforms.EMAIL];
     obj[1] = MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.EMAIL;
     items[1] = callback(BaseIdentityVerificationField, obj);
     obj = { style: null, variant: "heading-deprecated-12/medium", color: "text-default", children: null };

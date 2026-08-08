@@ -31,7 +31,7 @@ function _claimOutboundPromotion() {
       let c3;
       c3 = tmp2;
       ({ promotionId: c0, promotionTitle: c1, partnerId: c2, analyticsLocations: c3 } = callback);
-      yield "PX_8";
+      yield "ct";
       const HTTP = callback(530).HTTP;
       const obj2 = { url: null, rejectWithError: null };
       obj2[0] = closure_9.CLAIM_OUTBOUND_PROMOTION_CODE(callback);

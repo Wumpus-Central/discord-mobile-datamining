@@ -2,5 +2,5 @@
 let result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelAlertActionCreators.tsx");
 
 export const openStageChannelAudienceNoticeModal = function openStageChannelAudienceNoticeModal(arg0) {
-  const result = importAll(7714).openStageChannelAudienceNoticeModal(arg0);
+  const result = importAll(7774).openStageChannelAudienceNoticeModal(arg0);
 };

@@ -30,7 +30,7 @@ createToggle = {
     let obj = ModalActionCreators;
     obj = { allowDeletePhone: true, reason: null };
     obj[1] = ChangePhoneReason.ChangePhoneReason.USER_SETTINGS_UPDATE;
-    obj.pushLazy(asyncRequireImpl(8456, dependencyMap.paths), obj, closure_4);
+    obj.pushLazy(asyncRequireImpl(8516, dependencyMap.paths), obj, closure_4);
   },
   withArrow: true
 };

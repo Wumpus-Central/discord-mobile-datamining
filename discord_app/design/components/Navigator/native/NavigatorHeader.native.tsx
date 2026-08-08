@@ -4,7 +4,7 @@ import "noop";
 import get_ActivityIndicator from "NAV_BAR_HEIGHT";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { Background } from "../../../../../_runtime/05276_Background.js";
+import { Background } from "../../../../../_runtime/05277_Background.js";
 import { useHeaderDebugOverlay } from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
 import { useSafeAreaInsets } from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
 import { Text } from "../../Text/native/Text.tsx";
@@ -57,7 +57,7 @@ function CloseButton(onPress) {
 function CustomHeaderBackButton(onPress) {
   onPress = onPress.onPress;
   const merged = Object.assign(onPress, Object.create(null));
-  let obj = onPress(5275);
+  let obj = onPress(5276);
   obj.useNavigatorBackPressHandler(() => {
     if (null != onPress) {
       tmp();
@@ -71,7 +71,7 @@ function CustomHeaderBackButton(onPress) {
   obj.backImage = function backImage() {
     return callback(closure_9, {});
   };
-  return callback(onPress(5276).HeaderBackButton, obj);
+  return callback(onPress(5277).HeaderBackButton, obj);
 }
 function HeaderTextButton(text) {
   text = text.text;
@@ -174,7 +174,7 @@ export function getHeaderConditionalBackButton(handleBack) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -211,7 +211,7 @@ export function getHeaderConditionalBackButton(handleBack) {
                 }
               }
               c2 = 3;
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp10) {
             c2 = tmp;

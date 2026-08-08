@@ -58,7 +58,7 @@ function CoverSection(arg0) {
     obj = { colors: null, style: null };
     obj[0] = closure_11;
     obj[1] = closure_5.absoluteFill;
-    tmp6 = callback(image(4723), obj);
+    tmp6 = callback(image(4725), obj);
   }
   const items2 = [tmp6, , ];
   let tmp12 = null;
@@ -191,7 +191,7 @@ export default function UserProfilePersonalWidgetCard(userId) {
   obj = { style: cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
   const tmp = createCacheKey();
   const tmp5 = importDefault;
-  obj[1] = callback(userId(7644).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj[1] = callback(userId(7704).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj[2] = widget.header;
   let tmp4Result = !stateFromStores;
   if (!stateFromStores) {
@@ -201,7 +201,7 @@ export default function UserProfilePersonalWidgetCard(userId) {
     obj = { userId: null, widget: null };
     obj[0] = userId;
     obj[1] = widget;
-    tmp4Result = tmp4(tmp5(12281), obj);
+    tmp4Result = tmp4(tmp5(12348), obj);
   }
   obj[3] = tmp4Result;
   const tmp6 = Divider;

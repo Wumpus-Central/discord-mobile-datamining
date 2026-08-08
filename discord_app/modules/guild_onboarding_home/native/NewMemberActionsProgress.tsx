@@ -8,7 +8,7 @@ import { StaticChannelRoute } from "set";
 import { GuildMemberFlags } from "GuildMemberFlags";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04723_LinearGradient.js";
+import { LinearGradient } from "../../../../_runtime/04725_LinearGradient.js";
 
 let c10;
 let unpackModuleId;

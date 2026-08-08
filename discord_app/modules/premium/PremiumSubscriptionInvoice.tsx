@@ -49,7 +49,7 @@ function _createSubscriptionInvoicePreview() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -86,7 +86,7 @@ function _createSubscriptionInvoicePreview() {
               let createFromServer;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_8", done: "Array" };
+              return { value: "ct", done: "Array" };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -129,7 +129,7 @@ function _createSubscriptionInvoicePreview() {
           } else if (2 === tmp7) {
             c4 = 0;
             constants = c3;
-            const billingError = new callback(4201).BillingError(constants);
+            const billingError = new callback(4202).BillingError(constants);
             throw billingError;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -223,7 +223,7 @@ function _updateSubscriptionInvoicePreview() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -261,7 +261,7 @@ function _updateSubscriptionInvoicePreview() {
               let closure_12;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_8", done: "Array" };
+              return { value: "ct", done: "Array" };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -312,7 +312,7 @@ function _updateSubscriptionInvoicePreview() {
           } else if (2 === tmp7) {
             c4 = 0;
             let closure_13 = c3;
-            const billingError = new callback(4201).BillingError(closure_13);
+            const billingError = new callback(4202).BillingError(closure_13);
             throw billingError;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -406,7 +406,7 @@ function _createOneTimePurchaseInvoicePreview() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -434,7 +434,7 @@ function _createOneTimePurchaseInvoicePreview() {
               let body;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_8", done: "Array" };
+              return { value: "ct", done: "Array" };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -461,7 +461,7 @@ function _createOneTimePurchaseInvoicePreview() {
                 c6.quantity = c5;
               }
               c4 = 1;
-              let obj3 = callback(4539);
+              let obj3 = callback(4541);
               obj3 = { url: null, query: null, oldFormErrors: true, rejectWithError: false };
               obj3[0] = closure_12.STORE_SKU_PURCHASE(callback2);
               obj3[1] = c6;
@@ -474,7 +474,7 @@ function _createOneTimePurchaseInvoicePreview() {
           } else if (2 === tmp7) {
             c4 = 0;
             let closure_8 = c3;
-            const billingError = new callback(4201).BillingError(closure_8);
+            const billingError = new callback(4202).BillingError(closure_8);
             throw billingError;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -537,7 +537,7 @@ function _getSubscriptionInvoice() {
       let c1;
       c1 = tmp2;
       ({ subscriptionId: c0, preventFetch: c1 } = callback);
-      yield "PX_8";
+      yield "ct";
       if (c1) {
         return null;
       }

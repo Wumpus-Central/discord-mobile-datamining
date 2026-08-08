@@ -12,8 +12,8 @@ import { BoostPurchaseIntent } from "BoostedGuildTiers";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
 import hexToRgba from "hexToRgba";
-import { registerAsset } from "../../../../_runtime/08385_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12809_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/08445_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12879_registerAsset.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -57,7 +57,7 @@ function PendingCancellationWarning(slots) {
       obj2[0] = stateFromStores.currentPeriodEnd;
       obj2[1] = found.length;
       obj1[2] = intl.format(tmp2(1236).t.SFpsCH, obj2);
-      items1[1] = callback(tmp2(4298).Text, obj1);
+      items1[1] = callback(tmp2(4299).Text, obj1);
       obj[1] = items1;
       tmp5 = callback2(closure_7, obj);
     }
@@ -107,7 +107,7 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
   const onPremiumGuildSubscribe = previousGuildSubscriptionSlots.onPremiumGuildSubscribe;
   ({ guild, isModifyingSubscription } = previousGuildSubscriptionSlots);
   const tmp = createCacheKey();
-  let obj = prop(12819);
+  let obj = prop(12889);
   const guildSubscriptionRemovalSource = obj.useGuildSubscriptionRemovalSource();
   let obj1 = prop(589);
   const items = [createGuildRecordFromRust];
@@ -136,32 +136,32 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     obj2[0] = tmp.header;
     const intl = tmp2(1236).intl;
     obj2[3] = intl.string(tmp2(1236).t.h92jfS);
-    items1[1] = callback(tmp2(4298).Text, obj2);
+    items1[1] = callback(tmp2(4299).Text, obj2);
     const obj3 = { style: null, variant: "text-sm/medium", children: null };
     obj3[0] = tmp.blurb;
     const intl2 = tmp2(1236).intl;
     const obj4 = { slotCount: null, guildCount: 1 };
     obj4[0] = prop.length;
     obj3[2] = intl2.format(tmp2(1236).t.SSA2lu, obj4);
-    items1[2] = callback(tmp2(4298).Text, obj3);
+    items1[2] = callback(tmp2(4299).Text, obj3);
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.transferPreviews;
     const obj6 = { style: null, variant: "eyebrow", color: "text-default", children: null };
     obj6[0] = tmp.previewHeader;
     const intl3 = tmp2(1236).intl;
     obj6[3] = intl3.format(tmp2(1236).t["5zQYEz"], { guildCount: 1 });
-    const items2 = [callback(tmp2(4298).Text, obj6), , , ];
+    const items2 = [callback(tmp2(4299).Text, obj6), , , ];
     const obj7 = { style: null, guild: null };
     obj7[0] = tmp.guildPreview;
     obj7[1] = stateFromStores;
-    items2[1] = callback(onPremiumGuildSubscribe(12810), obj7);
+    items2[1] = callback(onPremiumGuildSubscribe(12880), obj7);
     const obj8 = { style: null, variant: "eyebrow", color: "text-default", children: null };
     obj8[0] = tmp.previewHeader;
     const intl4 = tmp2(1236).intl;
     const obj9 = { slotCount: null };
     obj9[0] = prop.length;
     obj8[3] = intl4.format(tmp2(1236).t.ct6oxD, obj9);
-    items2[2] = callback(tmp2(4298).Text, obj8);
+    items2[2] = callback(tmp2(4299).Text, obj8);
     const obj10 = { style: null, start: null, end: null, colors: null, children: null };
     const items3 = [, ];
     ({ guildPreview: arr5[0], activeTransferGuildCardBorder: arr5[1] } = tmp);
@@ -171,8 +171,8 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     obj10[3] = Gradients.PREMIUM_GUILD;
     const obj11 = { guild: null };
     obj11[0] = guild;
-    obj10[4] = callback(onPremiumGuildSubscribe(12810), obj11);
-    items2[3] = callback(onPremiumGuildSubscribe(4723), obj10);
+    obj10[4] = callback(onPremiumGuildSubscribe(12880), obj11);
+    items2[3] = callback(onPremiumGuildSubscribe(4725), obj10);
     obj5[1] = items2;
     items1[3] = callback2(closure_7, obj5);
     const obj12 = { slots: null };
@@ -189,11 +189,11 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
       return onPremiumGuildSubscribe(true);
     };
     obj14[3] = isModifyingSubscription;
-    obj13[1] = callback(tmp2(4712).Button, obj14);
+    obj13[1] = callback(tmp2(4714).Button, obj14);
     items1[5] = callback(closure_7, obj13);
     obj[0] = items1;
     tmp8 = callback2(closure_21, obj);
-    const tmp15 = onPremiumGuildSubscribe(4723);
+    const tmp15 = onPremiumGuildSubscribe(4725);
   }
   return tmp8;
 }
@@ -246,7 +246,7 @@ export default function SubscribeModalConfirmation(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

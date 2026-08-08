@@ -64,7 +64,7 @@ function _fetchStickerPacks() {
       if (locale === undefined) {
         locale = outer1_5.locale;
       }
-      yield "PX_8";
+      yield "ct";
       if (1 === tmp6) {
         if (arg0 === 1) {
           let c4 = 3;
@@ -140,7 +140,7 @@ function _fetchSticker() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -184,7 +184,7 @@ function _fetchSticker() {
               obj4[1] = body;
               obj3.dispatch(obj4);
             } else {
-              obj = body(4636);
+              obj = body(4638);
               if (obj.isStandardSticker(body)) {
                 obj1 = callback2(709);
                 const obj5 = { type: "PACK_STICKER_FETCH_SUCCESS", sticker: null };
@@ -197,7 +197,7 @@ function _fetchSticker() {
               }
             }
             c4 = 3;
-            obj10 = body(4636);
+            obj10 = body(4638);
           }
         } catch (tmp24) {
           c4 = tmp;
@@ -234,7 +234,7 @@ function _fetchGuildStickersWithCreator() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -289,7 +289,7 @@ function _fetchGuildStickersWithCreator() {
             });
             obj.dispatch(obj4);
             c5 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           c5 = tmp;
@@ -325,7 +325,7 @@ function _deleteGuildSticker() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -360,7 +360,7 @@ function _deleteGuildSticker() {
             return obj;
           } else {
             c1 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           c1 = tmp;

@@ -5,7 +5,7 @@ import withEqualityFn from "withEqualityFn";
 import { computeMaxX } from "withEqualityFn";
 import keys from "keys";
 import { AnalyticEvents } from "ME";
-import { Gesture } from "Directions";
+import { Gesture } from "LegacyBaseButton";
 import createFakeSharedValue from "createFakeSharedValue";
 import createFakeSharedValue from "createFakeSharedValue";
 import createFakeSharedValue from "createFakeSharedValue";

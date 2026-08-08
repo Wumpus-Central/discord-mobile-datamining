@@ -52,7 +52,7 @@ let closure_5 = keys.create((arg0) => {
         return tmp;
       }));
     });
-    return { rawThermalState: "r" };
+    return { rawThermalState: "sa" };
   }
 });
 const result = set.fileFinishedImporting("modules/device/ThermalUtils.native.tsx");

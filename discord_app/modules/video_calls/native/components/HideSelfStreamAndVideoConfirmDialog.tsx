@@ -51,7 +51,7 @@ export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
   obj.onConfirm = onConfirm;
   obj = { style: tmp2.body, children: null };
   obj = { style: tmp2.description, variant: "text-sm/medium", children: stringResult1 };
-  const items = [closure_5(tmp6(4298).Text, obj), ];
+  const items = [closure_5(tmp6(4299).Text, obj), ];
   const obj1 = {
     accessibilityRole: "link",
     style: items1,
@@ -66,7 +66,7 @@ export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
   ({ ctaLink: arr2[0], description: arr2[1] } = tmp2);
   const intl7 = tmp6(1236).intl;
   obj1[4] = intl7.string(tmp6(1236).t["JdIQ/Y"]);
-  items[1] = closure_5(tmp6(4298).Text, obj1);
+  items[1] = closure_5(tmp6(4299).Text, obj1);
   obj[1] = items;
   obj.children = callback(View, obj);
   return closure_5(componentDidMount, obj);

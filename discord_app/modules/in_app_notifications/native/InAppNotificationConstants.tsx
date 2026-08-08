@@ -1,5 +1,5 @@
 // discord_app/modules/in_app_notifications/native/InAppNotificationConstants.tsx
-import { Easing } from "module_4162";
+import { Easing } from "module_4036";
 import set from "set";
 
 let set = new Set([10, 25]);

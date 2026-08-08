@@ -20,13 +20,13 @@ let require = arg1;
 const timeout = new require("start").Timeout();
 let obj = { focus: true, pipFocus: false, isGestureEnabled: true, voiceChatDrawerState: VoiceChatDrawerState.CLOSED, voiceCallOverlayLayoutStates: null };
 obj = {};
-obj = { x: "Array", y: "Promise", width: "y", height: "T", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: "", isInitialized: false, isVisible: "isLoadedFromServer" };
+obj = { x: "Array", y: "flex", width: "Array", height: "justifyContent", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: null, isInitialized: null, isVisible: true };
 obj[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = obj;
-obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = { x: "Array", y: "Promise", width: "y", height: "T", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: "", isInitialized: false, isVisible: "isLoadedFromServer" };
+obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = { x: "Array", y: "flex", width: "Array", height: "justifyContent", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: null, isInitialized: null, isVisible: true };
 obj[4] = obj;
 let closure_9 = Object.freeze(obj);
 let obj2 = keys.create(() => closure_9);
-const obj1 = { x: "Array", y: "Promise", width: "y", height: "T", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: "", isInitialized: false, isVisible: "isLoadedFromServer" };
+const obj1 = { x: "Array", y: "flex", width: "Array", height: "justifyContent", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: null, isInitialized: null, isVisible: true };
 const throttleResult = require("areParticipantStatesEqual").throttle(() => {
   const pipFocus = obj2.getState().pipFocus;
   pipFocus(705).batchUpdates(() => outer1_10.setState({ pipFocus: !pipFocus }));
@@ -119,27 +119,26 @@ export const useChannelCallOrientationHandlers = function useChannelCallOrientat
   const effect1 = React.useEffect(() => {
     if (!closure_2) {
       if (!noop) {
-        if (null != closure_1) {
+        if (null != null) {
           if (tmp2.type === outer1_7.ACTIVITY) {
             if (tmp2.applicationId === applicationId) {
-              if (!obj2.isIpadOS()) {
+              if (tmp3(isGuildStageVoiceResult[16])()) {
                 if (outer1_6.UNLOCKED === stateFromStores) {
                   tmp2(isGuildStageVoiceResult[6]).unlockOrientation({ unlockAfterRotatingToPreviousLock: true });
-                  const obj4 = tmp2(isGuildStageVoiceResult[6]);
+                  const obj3 = tmp2(isGuildStageVoiceResult[6]);
                 } else if (tmp14.PORTRAIT === tmp13) {
                   tmp2(isGuildStageVoiceResult[6]).lockOrientation("PORTRAIT", true);
-                  const obj3 = tmp2(isGuildStageVoiceResult[6]);
+                  const obj2 = tmp2(isGuildStageVoiceResult[6]);
                 } else if (tmp14.LANDSCAPE === tmp13) {
                   tmp2(isGuildStageVoiceResult[6]).lockOrientation("LANDSCAPE", true);
-                  const obj7 = tmp2(isGuildStageVoiceResult[6]);
+                  const obj6 = tmp2(isGuildStageVoiceResult[6]);
                 }
               }
-              obj2 = tmp2(isGuildStageVoiceResult[16]);
             }
           }
         }
-        const obj = closure_1(isGuildStageVoiceResult[6]);
-        if (closure_1) {
+        const obj = tmp3(isGuildStageVoiceResult[6]);
+        if (tmp3) {
           const result = obj.lockOrientationForiOS("PORTRAIT");
         } else {
           obj.unlockOrientation({ unlockAfterRotatingToPreviousLock: false });
@@ -147,7 +146,7 @@ export const useChannelCallOrientationHandlers = function useChannelCallOrientat
       }
     }
     tmp2(isGuildStageVoiceResult[6]).unlockOrientation({ unlockAfterRotatingToPreviousLock: false });
-    const obj5 = tmp2(isGuildStageVoiceResult[6]);
+    const obj4 = tmp2(isGuildStageVoiceResult[6]);
     const result1 = tmp2(isGuildStageVoiceResult[6]).lockOrientationForiOS("PORTRAIT");
   }, items2);
 };

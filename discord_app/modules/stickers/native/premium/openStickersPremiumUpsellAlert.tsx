@@ -25,7 +25,7 @@ function _openStickersPremiumUpsellAlert() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -75,7 +75,7 @@ function _openStickersPremiumUpsellAlert() {
             };
             obj.openLazy(obj4);
             constants = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp11) {
           constants = tmp;

@@ -3,7 +3,7 @@ import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { Directions } from "../../../../_runtime/05426_Directions.js";
+import { LegacyBaseButton } from "../../../../_runtime/05427_LegacyBaseButton.js";
 import { QUICK_SWITCHER } from "../../app_analytics/AnalyticsLocation.tsx";
 import { BuyNitroPurchaseButton } from "components/purchase_button/BuyNitroPurchaseButton.tsx";
 
@@ -41,5 +41,5 @@ export default function BuyNitroMarketingFooter(arg0) {
   obj[4] = onPaymentDismiss;
   obj[2] = jsx(BuyNitroPurchaseButton, { location: null, planSelection: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null });
   obj[1] = <closure_4 location={null} planSelection={null} applicationId={null} onPaymentSuccess={null} onPaymentDismiss={null} />;
-  return jsx(Directions.GestureDetector, { location: null, planSelection: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null });
+  return jsx(LegacyBaseButton.GestureDetector, { location: null, planSelection: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null });
 };

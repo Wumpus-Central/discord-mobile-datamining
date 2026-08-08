@@ -34,7 +34,7 @@ function _launchFrame() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -61,7 +61,7 @@ function _launchFrame() {
               c6 = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_8", done: "Array" };
+              return { value: "ct", done: "Array" };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -88,7 +88,7 @@ function _launchFrame() {
                 return obj3;
               } else {
                 if (callback4(callback2) === c5.MAIN) {
-                  let obj9 = callback(10532);
+                  let obj9 = callback(10598);
                   const result = obj9.leaveCurrentEmbeddedActivity();
                   callback6();
                 }
@@ -102,15 +102,15 @@ function _launchFrame() {
                 c5 = 4;
                 c6 = 1;
                 const obj5 = { value: null, done: false };
-                obj5[0] = callback(10547).createProxyTicket(callback, callback3(callback2));
+                obj5[0] = callback(10613).createProxyTicket(callback, callback3(callback2));
                 return obj5;
               }
             }
           } else if (2 === tmp7) {
             frame = 0;
             callback3 = intent;
-            c5 = callback2(10533)();
-            let obj7 = callback(10545);
+            c5 = callback2(10599)();
+            let obj7 = callback(10611);
             c5 = 3;
             c6 = 1;
             const obj6 = { value: null, done: false };
@@ -244,7 +244,7 @@ function _refreshProxyTicket() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -296,8 +296,8 @@ function _refreshProxyTicket() {
           } else if (2 === tmp9) {
             frame = 1;
             c5 = dispatcher;
-            dispatcher = applicationId(10533)();
-            let obj8 = callback(10545);
+            dispatcher = applicationId(10599)();
+            let obj8 = callback(10611);
             c5 = 3;
             c6 = 1;
             const obj4 = { value: null, done: false };

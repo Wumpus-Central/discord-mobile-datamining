@@ -35,7 +35,7 @@ const memoResult = require("noop").memo((trinketsAnimationUrl) => {
     obj = { style: null, pointerEvents: "none", children: null };
     obj[0] = enabled ? tmp2.containerRefresh : tmp2.container;
     if (APNGPlayerResult1.isAndroid()) {
-      APNGPlayer = APNGPlayer(9321).APNGPlayer;
+      APNGPlayer = APNGPlayer(9386).APNGPlayer;
       obj = { url: null, autoplay: null, style: null };
       obj[0] = trinketsAnimationUrl;
       obj[1] = !stateFromStores;
@@ -48,7 +48,7 @@ const memoResult = require("noop").memo((trinketsAnimationUrl) => {
       obj[0] = obj1;
       obj[1] = tmp4;
       obj[3] = !stateFromStores;
-      tmp5Result = tmp5(tmp(5267), obj);
+      tmp5Result = tmp5(tmp(5268), obj);
     }
     obj[2] = tmp5Result;
     tmp5Result = tmp5(View, obj);

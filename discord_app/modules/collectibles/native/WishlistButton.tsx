@@ -8,7 +8,7 @@ import closure_9 from "mergeGuildAvatar";
 import { ShopCtaEnum } from "items";
 import { ThemeTypes } from "sum";
 import jsxProd from "SUBTLE_SPRING";
-import { Easing } from "module_4162";
+import { Easing } from "module_4036";
 import createCacheKey from "createCacheKey";
 import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
@@ -44,7 +44,7 @@ class WishlistButtonBase {
     useContext = undefined;
     c13 = undefined;
     c14 = undefined;
-    tmp = f46491(size);
+    tmp = f46651(size);
     c6 = tmp;
     tmp2 = isWishlisted;
     tmp3 = busy;
@@ -68,7 +68,7 @@ class WishlistButtonBase {
       tmp9 = first;
     }
     c13 = tmp9;
-    tmp2Result = require("module_4162");
+    tmp2Result = require("module_4036");
     num = 0;
     if (isWishlisted) {
       num = 1;
@@ -149,7 +149,7 @@ class WishlistButtonBase {
         return () => cancelAnimationFrame(closure_0);
       }
     }, items2);
-    tmp2Result1 = require("module_4162");
+    tmp2Result1 = require("module_4036");
     class J {
       constructor() {
         obj = {};
@@ -178,9 +178,9 @@ class WishlistButtonBase {
     obj = { styles: tmp, withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, showFilled: tmp9, SUBTLE_SPRING: require("SUBTLE_SPRING").SUBTLE_SPRING };
     J.__closure = obj;
     J.__workletHash = 1357254413161;
-    J.__initData = f46491;
+    J.__initData = f46651;
     animatedStyle = tmp2Result1.useAnimatedStyle(J);
-    tmp2Result2 = require("module_4162");
+    tmp2Result2 = require("module_4036");
     class Y {
       constructor() {
         value = c14.get();
@@ -195,20 +195,20 @@ class WishlistButtonBase {
         }
         obj.opacity = obj2.withSpring(num, require("SUBTLE_SPRING").SUBTLE_SPRING, "animate-always");
         obj = { scale: null };
-        tmp3Result = require("module_4162");
-        obj[0] = tmp3Result.interpolate(value, [0, 0.625, 1], [0, 1.35, 1], require("module_4162").Extrapolation.CLAMP);
+        tmp3Result = require("module_4036");
+        obj[0] = tmp3Result.interpolate(value, [0, 0.625, 1], [0, 1.35, 1], require("module_4036").Extrapolation.CLAMP);
         items = [];
         items[0] = obj;
         obj.transform = items;
         return obj;
       }
     }
-    obj1 = { animationFillProgress: sharedValue, styles: tmp, withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, showFilled: tmp9, SUBTLE_SPRING: require("SUBTLE_SPRING").SUBTLE_SPRING, interpolate: require("module_4162").interpolate, Extrapolation: require("module_4162").Extrapolation };
+    obj1 = { animationFillProgress: sharedValue, styles: tmp, withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, showFilled: tmp9, SUBTLE_SPRING: require("SUBTLE_SPRING").SUBTLE_SPRING, interpolate: require("module_4036").interpolate, Extrapolation: require("module_4036").Extrapolation };
     Y.__closure = obj1;
     Y.__workletHash = 15039903885060;
-    Y.__initData = f46491;
+    Y.__initData = f46651;
     animatedStyle1 = tmp2Result2.useAnimatedStyle(Y);
-    tmp2Result3 = require("module_4162");
+    tmp2Result3 = require("module_4036");
     class K {
       constructor() {
         value = c14.get();
@@ -218,27 +218,27 @@ class WishlistButtonBase {
         if (c13) {
           tmp3 = isWishlisted;
           tmp4 = busy;
-          obj2 = require("module_4162");
+          obj2 = require("module_4036");
           tmp5 = isWishlisted;
           tmp6 = busy;
           tmp7 = obj2;
           tmp8 = value;
-          num = obj2.interpolate(value, [0, 0.7], [1, 0], require("module_4162").Extrapolation.CLAMP);
+          num = obj2.interpolate(value, [0, 0.7], [1, 0], require("module_4036").Extrapolation.CLAMP);
         }
         obj.opacity = num;
         obj = { scale: null };
-        obj4 = require("module_4162");
-        obj[0] = obj4.interpolate(value, [0, 0.625, 1], [0, 1.35, 1], require("module_4162").Extrapolation.CLAMP);
+        obj4 = require("module_4036");
+        obj[0] = obj4.interpolate(value, [0, 0.625, 1], [0, 1.35, 1], require("module_4036").Extrapolation.CLAMP);
         items = [];
         items[0] = obj;
         obj.transform = items;
         return obj;
       }
     }
-    obj2 = { animationFillProgress: sharedValue, styles: tmp, showFilled: tmp9, interpolate: require("module_4162").interpolate, Extrapolation: require("module_4162").Extrapolation };
+    obj2 = { animationFillProgress: sharedValue, styles: tmp, showFilled: tmp9, interpolate: require("module_4036").interpolate, Extrapolation: require("module_4036").Extrapolation };
     K.__closure = obj2;
     K.__workletHash = 12429379889426;
-    K.__initData = f46491;
+    K.__initData = f46651;
     tmp17 = useContext;
     obj3 = {
       style(pressed) {
@@ -307,16 +307,16 @@ class WishlistButtonBase {
     obj7[1] = require("Themes").colors.INTERACTIVE_ICON_DEFAULT;
     obj6[2] = tmp17(require("HeartOutlineIcon").HeartOutlineIcon, obj7);
     items4 = [, , ];
-    items4[0] = tmp17(require("module_4162").View, obj6);
+    items4[0] = tmp17(require("module_4036").View, obj6);
     obj8 = { style: animatedStyle1, pointerEvents: "none", children: null };
     obj9 = { size: tmp4[size], color: null };
     obj9[1] = require("Themes").unsafe_rawColors.RED_NEW_50;
     obj8[2] = tmp17(require("HeartIcon").HeartIcon, obj9);
-    items4[1] = tmp17(require("module_4162").View, obj8);
+    items4[1] = tmp17(require("module_4036").View, obj8);
     obj10 = { style: animatedStyle2, pointerEvents: "none", children: null };
     obj11 = { size: tmp4[size], color: "white" };
     obj10[2] = tmp17(require("HeartIcon").HeartIcon, obj11);
-    items4[2] = tmp17(require("module_4162").View, obj10);
+    items4[2] = tmp17(require("module_4036").View, obj10);
     obj5[1] = items4;
     obj3[7] = c13(c7, obj5);
     return tmp17(tmp18, obj3);

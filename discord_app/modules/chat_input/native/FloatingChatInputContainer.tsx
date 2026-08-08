@@ -2,7 +2,7 @@
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";
-import { Easing } from "module_4162";
+import { Easing } from "module_4036";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 
@@ -47,7 +47,7 @@ function useKeyboardOpenPaddingStyle() {
     }
     return num > 0;
   }), 2);
-  const obj3 = token(4167);
+  const obj3 = token(4168);
   if (!tmp5) {
     tmp5 = true === obj3.useKeyboardContextForType(token(1607).KeyboardTypes.SYSTEM).keyboardWillOpen;
   }
@@ -55,7 +55,7 @@ function useKeyboardOpenPaddingStyle() {
     tmp5 = tmp7 !== token(1607).KeyboardTypes.SYSTEM;
   }
   const dependencyMap = tmp5;
-  let tmpResult = tmp(4162);
+  let tmpResult = tmp(4036);
   let num = 0;
   if (tmp5) {
     num = token;
@@ -71,7 +71,7 @@ function useKeyboardOpenPaddingStyle() {
     obj = { duration: token(tmp5[10]).timingStandardDuration, easing: outer1_6 };
     const result = sharedValue.set(obj.withTiming(num, obj));
   }, items);
-  tmpResult = tmp(4162);
+  tmpResult = tmp(4036);
   const fn = function b() {
     return { paddingBottom: sharedValue.get() };
   };

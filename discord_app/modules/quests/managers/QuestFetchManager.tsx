@@ -119,21 +119,21 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(arg0) {
     obj[4] = initializeState.isFetchingCurrentQuests;
     obj[2] = obj;
     SentryUtils.native.addBreadcrumb(obj);
-    let tmpResult = tmp(10395);
+    let tmpResult = tmp(10461);
     const currentQuests = tmpResult.fetchCurrentQuests();
     tmpResult = tmp(500);
     let enableNewRequestBehavior = tmpResult.isMac();
     if (enableNewRequestBehavior) {
-      let tmp6Result = tmp6(10403);
+      let tmp6Result = tmp6(10469);
       enableNewRequestBehavior = "focused" !== tmp6Result.getState();
     }
     if (!enableNewRequestBehavior) {
-      tmp6Result = tmp6(7115);
+      tmp6Result = tmp6(7175);
       enableNewRequestBehavior = tmp6Result.getConfig({ location: "QuestFetchManager" }).enableNewRequestBehavior;
     }
     if (!enableNewRequestBehavior) {
-      const questToDeliver = tmp(10395).fetchQuestToDeliver(tmp(5163).AdPlacement.MOBILE_HOME_DOCK_AREA, arg0);
-      const tmpResult1 = tmp(10395);
+      const questToDeliver = tmp(10461).fetchQuestToDeliver(tmp(5164).AdPlacement.MOBILE_HOME_DOCK_AREA, arg0);
+      const tmpResult1 = tmp(10461);
     }
     const obj2 = SentryUtils.native;
   }

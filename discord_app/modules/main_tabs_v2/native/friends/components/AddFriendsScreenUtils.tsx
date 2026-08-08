@@ -21,7 +21,7 @@ function _sendWave() {
       if (flag === undefined) {
         flag = true;
       }
-      yield "PX_8";
+      yield "ct";
       if (1 === tmp8) {
         if (arg0 === 1) {
           let c8 = 3;
@@ -38,17 +38,17 @@ function _sendWave() {
             let c7 = 4;
             c8 = 1;
             const obj2 = { value: null, done: false };
-            obj2[0] = flag(4312).getDMChannel(callback);
+            obj2[0] = flag(4313).getDMChannel(callback);
             return obj2;
           } else {
             constants = 2;
             if (null != dMFromUserId2) {
-              let obj7 = callback(11569);
+              let obj7 = callback(11635);
               const obj3 = { channelId: null, source: null };
               obj3[0] = dMFromUserId2;
               obj3[1] = dependencyMap;
               obj7.trackWaveCtaClicked(obj3);
-              const obj9 = flag(6857);
+              const obj9 = flag(6917);
               let obj4 = { location: null };
               obj4[0] = constants.SEND_WAVE;
               c7 = 5;
@@ -88,7 +88,7 @@ function _sendWave() {
             throw arg1;
           } else if (arg0 !== 2) {
             if (flag) {
-              const obj = flag(4312);
+              const obj = flag(4313);
               obj7 = { recipientIds: null };
               obj7[0] = callback;
               obj.openPrivateChannel(obj7);
@@ -149,7 +149,7 @@ export const sendWave = function sendWave(id, arg1, arg2) {
 };
 export const addContactSuggestion = function addContactSuggestion(user) {
   let obj = handleRelationshipAddError;
-  obj = { userId: user.id, context: obj, type: "T", fromFriendSuggestion: null };
+  obj = { userId: user.id, context: obj, type: "HermesInternal", fromFriendSuggestion: null };
   obj = { location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   obj.addRelationship(obj);
 };

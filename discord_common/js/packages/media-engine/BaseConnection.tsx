@@ -2,8 +2,8 @@
 import BaseConnectionEvent from "BaseConnectionEvent";
 import DesktopSources from "DesktopSources";
 import "on";
-import { cloneDeep } from "../../../../_runtime/04414_cloneDeep.js";
-import { flatRest } from "../../../../_runtime/04443_flatRest.js";
+import { cloneDeep } from "../../../../_runtime/04416_cloneDeep.js";
+import { flatRest } from "../../../../_runtime/04445_flatRest.js";
 import { BaseConnectionEvent } from "BaseConnectionEvent.tsx";
 import { WantsVideoQuality } from "VideoQualityManager.tsx";
 

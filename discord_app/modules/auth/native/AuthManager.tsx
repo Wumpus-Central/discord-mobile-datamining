@@ -17,15 +17,15 @@ let c11 = null;
 class AuthManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f111200 = applyArgumentsResult;
+    f111532 = applyArgumentsResult;
     applyArgumentsResult.handleRegister = function handleRegister() {
       const REGISTER = constants2.REGISTER;
     };
     applyArgumentsResult.handleLogin = function handleLogin() {
       const LOGIN = constants2.LOGIN;
     };
-    f111200 = undefined;
-    f111200 = NewUserTypes((arg0) => {
+    f111532 = undefined;
+    f111532 = NewUserTypes((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;
@@ -41,7 +41,7 @@ class AuthManager extends tmp3 {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -113,16 +113,16 @@ class AuthManager extends tmp3 {
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        let tmpResult = tmp(12034);
+        let tmpResult = tmp(12100);
         tmpResult.setNewUser(constants.ORGANIC_REGISTERED);
       }
-      tmpResult = tmp(11992);
+      tmpResult = tmp(12058);
       tmpResult.startOnboarding();
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {
       const result = lib.handlePushNotificationOptIn(() => {
-        callback(5897).transitionToGuild(closure_7);
-        const obj = callback(5897);
+        callback(5957).transitionToGuild(closure_7);
+        const obj = callback(5957);
         callback2(709).dispatch({ type: "DEFERRED_INVITE_SHOW" });
       });
     };
@@ -146,7 +146,7 @@ class AuthManager extends tmp3 {
       outer1_11 = null;
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
-      const result = callback(7159).deleteAllInteractions();
+      const result = callback(7219).deleteAllInteractions();
       DCDShortcutManager = DCDShortcutManager.DCDShortcutManager;
       if (DCDShortcutManager != null) {
         DCDShortcutManager.handleLogout();

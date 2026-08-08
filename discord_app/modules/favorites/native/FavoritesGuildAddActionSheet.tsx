@@ -2,7 +2,7 @@
 import noop from "noop";
 import jsxProd from "jsxProd";
 import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { AddFavoriteCategoryActionSheet } from "AddFavoriteCategoryActionSheet.tsx";
+import { FavoritesGuildAddCategoryActionSheet } from "FavoritesGuildAddCategoryActionSheet.tsx";
 
 let c4;
 let c5;
@@ -10,7 +10,7 @@ const require = arg1;
 function handleCreateCategory() {
   ACTION_SHEET_HEIGHT_HALF.hideActionSheet(FavoritesGuildAddActionSheet);
   const obj = ACTION_SHEET_HEIGHT_HALF;
-  const result = AddFavoriteCategoryActionSheet.openAddFavoriteCategoryActionSheet();
+  const result = FavoritesGuildAddCategoryActionSheet.openFavoritesGuildAddCategoryActionSheet();
 }
 function FavoritesGuildAddActionSheet() {
   let obj = shouldShowUpsell(favoriteLimit[4]);
@@ -26,9 +26,7 @@ function FavoritesGuildAddActionSheet() {
         tmp(tmp2[5])(favoriteLimit);
       }
     }
-    const obj = isAtLimit(favoriteLimit[2]);
-    tmp = isAtLimit;
-    const result = shouldShowUpsell(favoriteLimit[6]).openAddFavoriteChannelModal({ source: "favorites_header_add_button_context_menu" });
+    isAtLimit(favoriteLimit[6])({ source: "favorites_header_add_button_context_menu" });
   }, items);
   obj = { header: null, children: null };
   obj = { title: null };

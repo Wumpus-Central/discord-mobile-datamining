@@ -30,8 +30,8 @@ function createRTCConnection(arg0, arg1) {
     obj[2] = arg0;
     obj[3] = arg1;
     obj[4] = c23;
-    _default = new _default(4375).default(obj);
-    _default.on(_default(4397).RTCConnectionEvent.State, (arg0, arg1, arg2) => {
+    _default = new _default(4377).default(obj);
+    _default.on(_default(4399).RTCConnectionEvent.State, (arg0, arg1, arg2) => {
       let closure_0 = arg0;
       const callback = arg1;
       const dependencyMap = arg2;
@@ -43,7 +43,7 @@ function createRTCConnection(arg0, arg1) {
         return obj.dispatch(obj);
       });
     });
-    _default.on(_default(4397).RTCConnectionEvent.Video, (arg0, arg1, arg2, arg3, arg4) => {
+    _default.on(_default(4399).RTCConnectionEvent.Video, (arg0, arg1, arg2, arg3, arg4) => {
       let closure_0 = arg0;
       let closure_1 = arg1;
       let closure_2 = arg2;
@@ -55,7 +55,7 @@ function createRTCConnection(arg0, arg1) {
         return obj.dispatch(obj);
       });
     });
-    _default.on(_default(4397).RTCConnectionEvent.Ping, (arg0, arg1) => {
+    _default.on(_default(4399).RTCConnectionEvent.Ping, (arg0, arg1) => {
       let closure_0 = arg0;
       const callback = arg1;
       callback(709).wait(() => {
@@ -64,7 +64,7 @@ function createRTCConnection(arg0, arg1) {
         return obj.dispatch(obj);
       });
     });
-    _default.on(_default(4397).RTCConnectionEvent.OutboundLossRate, (arg0) => {
+    _default.on(_default(4399).RTCConnectionEvent.OutboundLossRate, (arg0) => {
       let closure_0 = arg0;
       callback(709).wait(() => {
         let obj = outer1_1(outer1_2[8]);
@@ -72,12 +72,12 @@ function createRTCConnection(arg0, arg1) {
         return obj.dispatch(obj);
       });
     });
-    _default.on(_default(4397).RTCConnectionEvent.Speaking, (userId, speaking) => {
+    _default.on(_default(4399).RTCConnectionEvent.Speaking, (userId, speaking) => {
       if (closure_17 != null) {
         closure_17.setSpeaking(userId, speaking);
       }
     });
-    _default.on(_default(4397).RTCConnectionEvent.Flags, (arg0, arg1) => {
+    _default.on(_default(4399).RTCConnectionEvent.Flags, (arg0, arg1) => {
       let closure_0 = arg0;
       let closure_1 = arg1;
       outer1_1(outer1_2[8]).wait(() => {
@@ -86,12 +86,12 @@ function createRTCConnection(arg0, arg1) {
         obj.dispatch(obj);
       });
     });
-    _default.on(_default(4397).RTCConnectionEvent.UsersMerged, (userIds, context) => {
+    _default.on(_default(4399).RTCConnectionEvent.UsersMerged, (userIds, context) => {
       let obj = callback(709);
       obj = { type: "RTC_CONNECTION_USERS_MERGED", userIds, context };
       obj.dispatch(obj);
     });
-    _default.on(_default(4397).RTCConnectionEvent.ClientConnect, (arg0) => {
+    _default.on(_default(4399).RTCConnectionEvent.ClientConnect, (arg0) => {
       let closure_0 = arg0;
       outer1_1(outer1_2[8]).wait(() => {
         let obj = outer2_1(outer2_2[8]);
@@ -99,7 +99,7 @@ function createRTCConnection(arg0, arg1) {
         obj.dispatch(obj);
       });
     });
-    _default.on(_default(4397).RTCConnectionEvent.ClientDisconnect, (arg0) => {
+    _default.on(_default(4399).RTCConnectionEvent.ClientDisconnect, (arg0) => {
       let closure_0 = arg0;
       outer1_1(outer1_2[8]).wait(() => {
         let obj = outer2_1(outer2_2[8]);
@@ -107,7 +107,7 @@ function createRTCConnection(arg0, arg1) {
         obj.dispatch(obj);
       });
     });
-    _default.on(_default(4397).RTCConnectionEvent.Platform, (arg0, arg1, arg2) => {
+    _default.on(_default(4399).RTCConnectionEvent.Platform, (arg0, arg1, arg2) => {
       let closure_0 = arg0;
       const callback = arg1;
       const dependencyMap = arg2;
@@ -117,12 +117,12 @@ function createRTCConnection(arg0, arg1) {
         obj.dispatch(obj);
       });
     });
-    _default.on(_default(4397).RTCConnectionEvent.SecureFramesUpdate, () => {
+    _default.on(_default(4399).RTCConnectionEvent.SecureFramesUpdate, () => {
       callback(709).wait(() => {
         callback(table[8]).dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
       });
     });
-    _default.on(_default(4397).RTCConnectionEvent.RosterMapUpdate, (arg0) => {
+    _default.on(_default(4399).RTCConnectionEvent.RosterMapUpdate, (arg0) => {
       let closure_0 = arg0;
       callback(709).wait(() => {
         let obj = outer1_1(outer1_2[8]);

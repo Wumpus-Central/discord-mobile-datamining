@@ -135,7 +135,7 @@ function ActivityInfo(activity) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -385,7 +385,7 @@ function RoomMembers(members) {
                 let tmp6 = outer1_23;
                 let tmp7 = members;
                 let tmp8 = ignoredMembers;
-                let obj = { user: null, channelId: null, guildId: null, nick: null };
+                let obj = { user: null, channelId: null, guildId: null, nick: null, showGameActivity: true };
                 let tmp9 = item10007;
                 obj[0] = tmp.user;
                 let tmp10 = channelId;
@@ -445,31 +445,31 @@ function PreJoinTransitioner(transitionState) {
     obj[0] = sum + safeArea.get().bottom;
     let num = 1;
     let num2 = 1;
-    if (transitionState === transitionState(windowDimensions[56]).TransitionStates.YEETED) {
+    if (transitionState === transitionState(windowDimensions[57]).TransitionStates.YEETED) {
       num2 = 0;
     }
-    obj[1] = transitionState(windowDimensions[55]).withSpring(num2);
-    let tmp4Result = tmp4(tmp[55]);
+    obj[1] = transitionState(windowDimensions[56]).withSpring(num2);
+    let tmp4Result = tmp4(tmp[56]);
     tmp4Result = tmp4(tmp[36]);
     if (useReducedMotion.get()) {
       num = 0;
     }
     obj = { translateY: null };
-    const obj2 = transitionState(windowDimensions[55]);
+    const obj2 = transitionState(windowDimensions[56]);
     const fn = function o() {
       let flag = arg0;
       if (arg0 === undefined) {
         flag = false;
       }
       if (flag) {
-        flag = closure_0 === outer1_0(outer1_2[56]).TransitionStates.YEETED;
+        flag = closure_0 === outer1_0(outer1_2[57]).TransitionStates.YEETED;
       }
       if (flag) {
         outer1_0(outer1_2[36]).runOnJS(closure_1)();
         const obj = outer1_0(outer1_2[36]);
       }
     };
-    obj = { transitionState: tmp5, TransitionStates: tmp4(tmp[56]).TransitionStates, runOnJS: tmp4(tmp[36]).runOnJS, transitionCleanUp };
+    obj = { transitionState: tmp5, TransitionStates: tmp4(tmp[57]).TransitionStates, runOnJS: tmp4(tmp[36]).runOnJS, transitionCleanUp };
     fn.__closure = obj;
     fn.__workletHash = 2541522666097;
     fn.__initData = outer1_38;
@@ -478,7 +478,7 @@ function PreJoinTransitioner(transitionState) {
     obj[2] = items;
     return obj;
   };
-  obj = { windowDimensions, roundToNearestPixel: transitionCleanUp(windowDimensions[49]), controlsSpecs, safeArea, withSpring: transitionState(windowDimensions[55]).withSpring, transitionState, TransitionStates: transitionState(windowDimensions[56]).TransitionStates, interpolate: transitionState(windowDimensions[36]).interpolate, useReducedMotion, MODE_CHANGE_PHYSICS, runOnJS: transitionState(windowDimensions[36]).runOnJS, transitionCleanUp };
+  obj = { windowDimensions, roundToNearestPixel: transitionCleanUp(windowDimensions[49]), controlsSpecs, safeArea, withSpring: transitionState(windowDimensions[56]).withSpring, transitionState, TransitionStates: transitionState(windowDimensions[57]).TransitionStates, interpolate: transitionState(windowDimensions[36]).interpolate, useReducedMotion, MODE_CHANGE_PHYSICS, runOnJS: transitionState(windowDimensions[36]).runOnJS, transitionCleanUp };
   fn.__closure = obj;
   fn.__workletHash = 16643118377748;
   fn.__initData = closure_37;
@@ -491,7 +491,7 @@ function PreJoinTransitioner(transitionState) {
   const tmp2 = callback2();
   const obj1 = { onLayout: callback, collapsable: false, style: tmp2.contentWrapper, children: null };
   let obj2 = {};
-  const tmp6 = transitionCleanUp(windowDimensions[57]);
+  const tmp6 = transitionCleanUp(windowDimensions[58]);
   const merged1 = Object.assign(merged);
   obj1[3] = callback(closure_36, obj2);
   obj[2] = callback(transitionCleanUp(windowDimensions[28]), obj1);
@@ -568,7 +568,7 @@ let closure_32 = importAllResult.memo((blockedUserIds) => {
     }
     obj = { style: null, children: null };
     obj[0] = tmp.blockedMemberWarning;
-    const items = [callback(tmp5(7733).CircleErrorIcon, { color: "text-feedback-warning" }), ];
+    const items = [callback(tmp5(7793).CircleErrorIcon, { color: "text-feedback-warning" }), ];
     const obj1 = { variant: "text-sm/bold", color: "interactive-text-active", style: null, children: null };
     obj1[2] = { flexShrink: 1 };
     const items1 = [stringResult1, " ", ];
@@ -576,13 +576,13 @@ let closure_32 = importAllResult.memo((blockedUserIds) => {
     if (null != stringResult) {
       const obj2 = { variant: "heading-sm/semibold", children: null };
       obj2[1] = stringResult;
-      tmp11Result = callback(tmp5(4298).Text, obj2);
+      tmp11Result = callback(tmp5(4299).Text, obj2);
     }
     items1[2] = tmp11Result;
     obj1[3] = items1;
-    items[1] = closure_24(tmp5(4298).Text, obj1);
+    items[1] = closure_24(tmp5(4299).Text, obj1);
     obj[1] = items;
-    return closure_24(tmp2(5721), obj);
+    return closure_24(tmp2(5781), obj);
   }
   if (size > 0) {
     const intl3 = tmp5(1236).intl;
@@ -637,67 +637,81 @@ let closure_35 = importAllResult.memo((channelId) => {
   }
   return tmp3;
 });
-let closure_36 = importAllResult.memo(function VoicePanelPreJoinContentInner(streamingMembers) {
-  let activities;
-  let blockedMembers;
-  let ignoredMembers;
-  let members;
-  ({ members, blockedMembers, ignoredMembers, activities } = streamingMembers);
+let closure_36 = importAllResult.memo(function VoicePanelPreJoinContentInner(members) {
+  members = members.members;
+  const blockedMembers = members.blockedMembers;
+  const ignoredMembers = members.ignoredMembers;
+  const activities = members.activities;
   let channelId;
   let guildId;
   let analyticsLocations;
-  const context = importAllResult.useContext(guildId(analyticsLocations[23]));
+  const context = analyticsLocations.useContext(blockedMembers(ignoredMembers[23]));
   channelId = context.channelId;
   guildId = context.guildId;
-  let obj = channelId(analyticsLocations[27]);
+  let obj = members(ignoredMembers[27]);
   const items = [ensureGuildLoaded];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_11.getChannel(channelId));
   const tmp = callback2();
-  const tmp2 = guildId;
-  const tmp3 = analyticsLocations;
-  const tmp6 = guildId(analyticsLocations[50])(stateFromStores);
-  analyticsLocations = guildId(analyticsLocations[51])(guildId(analyticsLocations[52]).VOICE_PANEL_PRE_JOIN).analyticsLocations;
+  const tmp6 = blockedMembers(ignoredMembers[50])(stateFromStores);
+  analyticsLocations = blockedMembers(ignoredMembers[51])(blockedMembers(ignoredMembers[52]).VOICE_PANEL_PRE_JOIN).analyticsLocations;
   const items1 = [channelId, guildId, analyticsLocations];
-  const effect = importAllResult.useEffect(() => {
-    let obj = guildId(analyticsLocations[53]);
+  const effect = analyticsLocations.useEffect(() => {
+    let obj = blockedMembers(ignoredMembers[53]);
     obj = { guild_id: guildId, channel_id: channelId, location_stack: analyticsLocations };
     obj.track(outer1_19.VIEW_VOICE_CHANNEL, obj);
   }, items1);
+  const items2 = [members, blockedMembers, ignoredMembers];
   obj = { hasMembers: members.length > 0 };
-  const items2 = [callback(closure_28, obj), , , , ];
-  let tmp11Result = null;
+  const memo = analyticsLocations.useMemo(() => members.filter((user) => {
+    const hasItem = set.has(user.user.id);
+    let tmp2 = !hasItem;
+    if (!hasItem) {
+      tmp2 = !set2.has(user.user.id);
+    }
+    return tmp2;
+  }), items2);
+  const items3 = [callback(closure_28, obj), , , , , ];
+  let tmp12Result = null;
   if (tmp6) {
     obj = { style: null, channel: null, analyticsSection: null };
     obj[0] = tmp.optInChannelsContainer;
     obj[1] = stateFromStores;
     obj[2] = constants.CHANNEL;
-    tmp11Result = tmp11(tmp2(tmp3[54]), obj);
+    tmp12Result = tmp12(tmp2(tmp3[54]), obj);
   }
-  items2[1] = tmp11Result;
-  items2[2] = activities.map((activity) => outer1_23(outer1_31, { activity, analyticsLocations }, activity.launchId));
-  tmp11Result = members.length > 0 || blockedMembers.size > 0 || ignoredMembers.size > 0;
-  if (tmp11Result) {
+  items3[1] = tmp12Result;
+  items3[2] = activities.map((activity) => outer1_23(outer1_31, { activity, analyticsLocations }, activity.launchId));
+  tmp12Result = members.length > 0 || blockedMembers.size > 0 || ignoredMembers.size > 0;
+  if (tmp12Result) {
     const obj1 = { members: null, streamingMembers: null, blockedMembers: null, ignoredMembers: null };
     obj1[0] = members;
-    obj1[1] = streamingMembers.streamingMembers;
+    obj1[1] = members.streamingMembers;
     obj1[2] = blockedMembers;
     obj1[3] = ignoredMembers;
-    tmp11Result = tmp11(RoomMembers, obj1);
+    tmp12Result = tmp12(RoomMembers, obj1);
   }
-  const obj2 = { children: null };
-  items2[3] = tmp11Result;
-  items2[4] = callback(closure_35, { channelId });
-  obj2[0] = items2;
-  return closure_24(closure_25, obj2);
+  items3[3] = tmp12Result;
+  let tmp12Result1 = null != guildId;
+  if (tmp12Result1) {
+    const obj2 = { members: null, guildId: null };
+    obj2[0] = memo;
+    obj2[1] = guildId;
+    tmp12Result1 = tmp12(tmp2(tmp3[55]), obj2);
+  }
+  const obj3 = { children: null };
+  items3[4] = tmp12Result1;
+  items3[5] = callback(closure_35, { channelId });
+  obj3[0] = items3;
+  return closure_24(closure_25, obj3);
 });
 let closure_37 = { code: "function VoicePanelPreJoinContentTsx3(){const{windowDimensions,roundToNearestPixel,controlsSpecs,safeArea,withSpring,transitionState,TransitionStates,interpolate,useReducedMotion,MODE_CHANGE_PHYSICS,runOnJS,transitionCleanUp}=this.__closure;const{height:windowHeight}=windowDimensions.get();return{paddingBottom:windowHeight-roundToNearestPixel(windowHeight*0.8)+controlsSpecs.get().height+safeArea.get().bottom,opacity:withSpring(transitionState===TransitionStates.YEETED?0:1),transform:[{translateY:withSpring(interpolate(!useReducedMotion.get()&&transitionState===TransitionStates.YEETED?1:0,[0,1],[0,400]),MODE_CHANGE_PHYSICS,'respect-motion-settings',function(finished=false){finished&&transitionState===TransitionStates.YEETED&&runOnJS(transitionCleanUp)();})}]};}" };
 let closure_38 = { code: "function VoicePanelPreJoinContentTsx4(finished=false){const{transitionState,TransitionStates,runOnJS,transitionCleanUp}=this.__closure;finished&&transitionState===TransitionStates.YEETED&&runOnJS(transitionCleanUp)();}" };
 let obj4 = { display: "flex", flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8, padding: require("Themes").space.PX_8, borderRadius: require("Themes").radii.xs, borderColor: require("Themes").colors.ICON_FEEDBACK_WARNING, borderWidth: 1, backgroundColor: require("Themes").colors.BACKGROUND_FEEDBACK_WARNING, marginHorizontal: require("Themes").space.PX_16 };
 const memoResult = importAllResult.memo(function VoicePanelPreJoinWrapper() {
-  const context = importAllResult.useContext(guildId(11578));
+  const context = importAllResult.useContext(guildId(11644));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(16028)(channelId);
+  const tmp2 = guildId(16103)(channelId);
   const dependencyMap = tmp2;
   let obj = channelId(589);
   let items = [getVoiceStatesForGuild, init, participantFromServer, reset];
@@ -738,9 +752,9 @@ const memoResult = importAllResult.memo(function VoicePanelPreJoinWrapper() {
       obj[4] = ignoredUsersForVoiceChannel;
       return obj;
     }
-  }, items1, channelId(16150).areVoicePanelPreJoinContentPropsEqual);
+  }, items1, channelId(16227).areVoicePanelPreJoinContentPropsEqual);
   obj = { item: stateFromStores, renderItem };
-  return callback(channelId(4646).TransitionItem, obj);
+  return callback(channelId(4648).TransitionItem, obj);
 });
 let result = require("noop").fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinContent.tsx");
 

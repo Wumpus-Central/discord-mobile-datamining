@@ -51,7 +51,7 @@ export const isDecoupledClipsEnabled = function isDecoupledClipsEnabled() {
     clipsEnabled = store.getState().clipsSettings.clipsEnabled;
   }
   if (clipsEnabled) {
-    let tmpResult = tmp(4364);
+    let tmpResult = tmp(4366);
     const result = tmpResult.isClipsSettingsRedesignEnabled();
     let decoupledClipsEnabled = !result;
     if (result) {

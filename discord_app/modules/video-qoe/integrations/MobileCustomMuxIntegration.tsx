@@ -1,5 +1,5 @@
 // discord_app/modules/video-qoe/integrations/MobileCustomMuxIntegration.tsx
-import { U } from "../../../../_runtime/14311_U.js";
+import { U } from "../../../../_runtime/14381_U.js";
 const logger = new require("log").Logger("MobileCustomMuxIntegration");
 let c4 = "1.0.0";
 const Cloudflare = "Cloudflare";

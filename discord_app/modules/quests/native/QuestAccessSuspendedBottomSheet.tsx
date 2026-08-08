@@ -10,7 +10,7 @@ const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("module
 
 export default function QuestAccessSuspendedBottomSheet() {
   const callback = React.useCallback(() => {
-    callback2(4270).hideActionSheet(callback(14288).ACTION_SHEET_KEY);
+    callback2(4271).hideActionSheet(callback(14358).ACTION_SHEET_KEY);
   }, []);
   let obj = { title: null, description: null, actions: null };
   const intl = getSystemLocale.intl;

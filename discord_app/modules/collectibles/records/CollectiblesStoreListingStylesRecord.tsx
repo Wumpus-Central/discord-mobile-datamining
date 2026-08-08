@@ -17,15 +17,15 @@ prototype["fromServer"] = function fromServer(arg0) {
   let confetti_colors;
   ({ background_colors, button_colors, confetti_colors } = arg0);
   const mapped = background_colors.map((color) => {
-    const tmp = callback2(6951);
+    const tmp = callback2(7011);
     return tmp(callback(688).int2hex(color));
   });
   const mapped1 = button_colors.map((color) => {
-    const tmp = callback2(6951);
+    const tmp = callback2(7011);
     return tmp(callback(688).int2hex(color));
   });
   const mapped2 = confetti_colors.map((color) => {
-    const tmp = callback2(6951);
+    const tmp = callback2(7011);
     return tmp(callback(688).int2hex(color));
   });
   if (typeof prototype !== "function") {

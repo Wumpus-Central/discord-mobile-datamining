@@ -4,7 +4,7 @@ import importAllResult from "ACTION_SHEET_HEIGHT_HALF";
 import { View } from "styles";
 import { PersistedStore } from "getClass";
 import fetchFingerprint from "fetchFingerprint";
-import { jsx } from "module_8466";
+import { jsx } from "module_8526";
 import createCacheKey from "createCacheKey";
 import { createStandardNavigationFactories } from "../../../../../../_runtime/01481_createStandardNavigationFactories.js";
 import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
@@ -18,9 +18,9 @@ function DevToolsPersistedStoresActionSheet(store) {
   let obj = { header: null, children: null };
   obj = { title: null };
   obj[0] = store.getName();
-  obj[0] = jsx(store(5395).BottomSheetTitleHeader, { title: null });
+  obj[0] = jsx(store(5396).BottomSheetTitleHeader, { title: null });
   obj = { hasIcons: false, children: null };
-  obj[1] = jsx(store(5706).ActionSheetRow, {
+  obj[1] = jsx(store(5766).ActionSheetRow, {
     variant: "danger",
     label: "Clear persisted store",
     subLabel: "App restart required to re-init the cleared store",
@@ -30,8 +30,8 @@ function DevToolsPersistedStoresActionSheet(store) {
       close();
     }
   });
-  obj[1] = jsx(store(5706).ActionSheetRow.Group, { hasIcons: false, children: null });
-  return jsx(store(5704).ActionSheet, { hasIcons: false, children: null });
+  obj[1] = jsx(store(5766).ActionSheetRow.Group, { hasIcons: false, children: null });
+  return jsx(store(5764).ActionSheet, { hasIcons: false, children: null });
 }
 let c4 = importAllResult;
 let obj = { container: null, sectionHeader: null };

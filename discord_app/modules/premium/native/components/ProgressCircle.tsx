@@ -4,7 +4,7 @@ import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import { Component } from "noop";
 import importAllResult from "noop";
-import { inlineStyles } from "../../../../../_runtime/07775_inlineStyles.js";
+import { inlineStyles } from "../../../../../_runtime/07835_inlineStyles.js";
 
 let c4;
 let c5;

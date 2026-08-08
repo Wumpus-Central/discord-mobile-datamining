@@ -1,6 +1,6 @@
 // discord_app/modules/activities/panel/native/ActivityPanelController.tsx
-import set from "set";
-import getIsTabletActivitySurface from "getIsTabletActivitySurface";
+import _runPrimaryAppCommandOrJoinEmbeddedActivity from "_runPrimaryAppCommandOrJoinEmbeddedActivity";
+import isOrientationLockSupported from "isOrientationLockSupported";
 import addApplication from "addApplication";
 import AppFreezeStore from "../../../panels/morphable/AppFreezeStore.tsx";
 import SafeAreaDisabledStore from "../../../panels/morphable/native/SafeAreaDisabledStore.tsx";
@@ -8,7 +8,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import participantFromServer from "participantFromServer";
 import items3 from "items3";
 import { ActivityPanelModes } from "ActivityPanelModes";
-import { jsx } from "useHandleOAuthNavigation";
+import { jsx } from "isVoicePanelEnabled";
 import areArraysShallowlyEqual from "areArraysShallowlyEqual";
 
 let closure_12;
@@ -23,43 +23,42 @@ class BaseActivityPanelController {
     hasConnectedActivity = connectedActivityAppId;
     updateActivityPanelMode = global.updateActivityPanelMode;
     UNLOCKED = updateActivityPanelMode;
-    currentApp = undefined;
+    c3 = undefined;
     c4 = undefined;
     c5 = undefined;
     useRef = undefined;
     c7 = undefined;
+    c8 = undefined;
     useRef = undefined;
-    c9 = undefined;
     c10 = undefined;
     useRef = undefined;
-    tmp2 = currentApp;
+    tmp2 = c3;
     ({ children, context, currentApp } = global);
     tmp = hasConnectedActivity;
     tmp3 = require("useSafeAreaInsets")();
     tmp4 = require("useWindowDimensions")();
     tmp5 = hasConnectedActivity;
-    obj = require("module_4162");
+    obj = require("module_4036");
     sharedValue = obj.useSharedValue({ x: -1, y: -1 });
-    currentApp = sharedValue;
+    c3 = sharedValue;
     tmp7 = require("usePIPAvoidanceSpecs")(tmp3);
     c4 = tmp7;
-    obj2 = require("module_4162");
+    obj2 = require("module_4036");
     sharedValue1 = obj2.useSharedValue(jsx);
     c5 = sharedValue1;
     obj3 = c5;
     useRef = c5.useRef(mode);
     tmp9 = require("useActivityWebViewLockManager")();
     c7 = tmp9;
-    obj4 = require("getIsTabletActivitySurface");
-    isTabletActivitySurface = obj4.getIsTabletActivitySurface();
-    useRef = isTabletActivitySurface;
+    tmp10 = !require("isOrientationLockSupported")();
+    c8 = tmp10;
     defaultOrientationLockState = orientationLockStateForApp;
     if (orientationLockStateForApp == null) {
       tmp5Result = require("getIsTabletActivitySurface");
       defaultOrientationLockState = tmp5Result.getDefaultOrientationLockState(currentApp);
     }
-    c9 = defaultOrientationLockState;
-    tmp12 = f63021(tmp4, tmp3.top, defaultOrientationLockState, isTabletActivitySurface);
+    useRef = defaultOrientationLockState;
+    tmp12 = f63186(tmp4, tmp3.top, defaultOrientationLockState, tmp10);
     c10 = tmp12;
     useRef = obj3.useRef(connectedActivityAppId);
     tmp5Result1 = require("isVoicePanelEnabled");
@@ -79,13 +78,13 @@ class BaseActivityPanelController {
     items[1] = defaultOrientationLockState;
     items[2] = mode;
     items[3] = tmp12.isWindowLandscape;
-    items[4] = isTabletActivitySurface;
+    items[4] = tmp10;
     items[5] = updateActivityPanelMode;
     effect = obj3.useEffect(() => {
       if (null != isActivityPanelFullscreen) {
         if (null == ref2.current) {
-          if (!isActivityPanelFullscreen(_undefined[23])(_undefined3.isWindowLandscape, defaultOrientationLockState)) {
-            if (!isTabletActivitySurface) {
+          if (!isActivityPanelFullscreen(_undefined[24])(_undefined4.isWindowLandscape, defaultOrientationLockState)) {
+            if (!c8) {
               first(outer1_14.LAUNCHING_WITH_ORIENTATION_CHANGE);
             }
           }
@@ -100,7 +99,7 @@ class BaseActivityPanelController {
       }
       let tmp4 = sharedValue1 === outer1_14.LAUNCHING_WITH_ORIENTATION_CHANGE;
       if (tmp4) {
-        tmp4 = isActivityPanelFullscreen(_undefined[23])(_undefined3.isWindowLandscape, defaultOrientationLockState);
+        tmp4 = isActivityPanelFullscreen(_undefined[24])(_undefined4.isWindowLandscape, defaultOrientationLockState);
       }
       if (tmp4) {
         first(outer1_14.PANEL);
@@ -115,20 +114,20 @@ class BaseActivityPanelController {
         tmp3 = ref.current !== tmp2.PANEL;
       }
       if (tmp3) {
-        sharedValue1(_undefined[24]).dismissKeyboard();
+        sharedValue1(_undefined[25]).dismissKeyboard();
         const result = sharedValue1.set(outer1_16);
-        const obj = sharedValue1(_undefined[24]);
+        const obj = sharedValue1(_undefined[25]);
       }
       ref.current = sharedValue1;
     }, items1);
     hasConnectedActivity = mode;
     UNLOCKED = isVoicePanelFullscreen;
-    currentApp = undefined;
+    c3 = undefined;
     if (orientationLockStateForApp == null) {
       tmp18 = useRef;
       orientationLockStateForApp = useRef.UNLOCKED;
     }
-    currentApp = orientationLockStateForApp;
+    c3 = orientationLockStateForApp;
     items2 = [, , , , ];
     items2[0] = connectedActivityAppId;
     items2[1] = hasConnectedActivity;
@@ -155,7 +154,7 @@ class BaseActivityPanelController {
     hasConnectedActivity = tmp21;
     UNLOCKED = isVoicePanelFullscreen;
     id = obj3.useId();
-    currentApp = id;
+    c3 = id;
     items3 = [, , , ];
     items3[0] = id;
     items3[1] = hasConnectedActivity;
@@ -165,7 +164,7 @@ class BaseActivityPanelController {
       if (!first) {
         let fn;
         if (sharedValue1) {
-          let state = isTabletActivitySurface.getState();
+          let state = _undefined3.getState();
           const obj = { key: null, lockEnabled: null };
           obj[0] = c3;
           obj[1] = isActivityPanelFullscreen;
@@ -181,7 +180,7 @@ class BaseActivityPanelController {
     hasConnectedActivity = sharedValue1;
     hasConnectedActivity = undefined;
     UNLOCKED = undefined;
-    currentApp = undefined;
+    c3 = undefined;
     c4 = undefined;
     tmp5Result3 = require("useIsActivityPanelFullscreen");
     isActivityPanelFullscreen = tmp5Result3.useIsActivityPanelFullscreen();
@@ -190,26 +189,26 @@ class BaseActivityPanelController {
     first = tmp26[0];
     UNLOCKED = first;
     tmp28 = tmp26[1];
-    currentApp = tmp28;
+    c3 = tmp28;
     id1 = obj3.useId();
     c4 = id1;
-    tmp5Result4 = require("module_4162");
+    tmp5Result4 = require("module_4036");
     fn = function l() {
       return sharedValue1.get().gestureActive;
     };
     fn.__closure = { wrapperOffset: sharedValue1 };
     fn.__workletHash = 5299695936442;
-    fn.__initData = f63021;
+    fn.__initData = f63186;
     fn2 = function s(arg0, arg1) {
       if (arg0 !== arg1) {
         sharedValue1(_undefined[12]).runOnJS(_undefined)(arg0);
         const obj = sharedValue1(_undefined[12]);
       }
     };
-    obj = { runOnJS: require("module_4162").runOnJS, setWrapperGestureInProgress: tmp28 };
+    obj = { runOnJS: require("module_4036").runOnJS, setWrapperGestureInProgress: tmp28 };
     fn2.__closure = obj;
     fn2.__workletHash = 5831467313798;
-    fn2.__initData = f63021;
+    fn2.__initData = f63186;
     animatedReaction = tmp5Result4.useAnimatedReaction(fn, fn2);
     items4 = [, , ];
     items4[0] = isActivityPanelFullscreen;
@@ -224,7 +223,7 @@ class BaseActivityPanelController {
       let freezeLock = state.requestFreezeLock({ lockEnabled: tmp, key: id1 });
       return () => {
         const state = outer1_7.getState();
-        const freezeLock = state.requestFreezeLock({ lockEnabled: false, key: set });
+        const freezeLock = state.requestFreezeLock({ lockEnabled: false, key: _runPrimaryAppCommandOrJoinEmbeddedActivity });
       };
     }, items4);
     items5 = [, , , , , , ];
@@ -316,11 +315,11 @@ export default function ActivityPanelController(children) {
     if (null != applicationId) {
       application = application.getApplication(applicationId);
     }
-    const embeddedActivityLocationChannelId = mode(table[26]).getEmbeddedActivityLocationChannelId(connectedActivityLocation);
+    const embeddedActivityLocationChannelId = mode(table[27]).getEmbeddedActivityLocationChannelId(connectedActivityLocation);
     obj = { mode: activityPanelMode, connectedActivityInTextChannelId: null, hasConnectedActivity: null, connectedActivityAppId: null, currentApp: null, orientationLockStateForApp: null };
     let tmp9;
     if (null != embeddedActivityLocationChannelId) {
-      if (!connectedActivityInTextChannelId(table[27])(embeddedActivityLocationChannelId)) {
+      if (!connectedActivityInTextChannelId(table[28])(embeddedActivityLocationChannelId)) {
         tmp9 = embeddedActivityLocationChannelId;
       }
     }
@@ -343,16 +342,16 @@ export default function ActivityPanelController(children) {
     if (mode === outer1_14.PANEL) {
       const channel = outer1_9.getChannel(connectedActivityInTextChannelId);
       if (undefined !== channel) {
-        let obj = connectedActivityInTextChannelId(outer1_3[28]);
+        let obj = connectedActivityInTextChannelId(outer1_3[29]);
         obj = { guildId: null, channelId: null };
         ({ guild_id: obj2[0], id: obj2[1] } = channel);
         const channel1 = obj.selectChannel(obj);
-        mode(outer1_3[29]).transitionToChannel(channel.id);
-        const obj3 = mode(outer1_3[29]);
+        mode(outer1_3[30]).transitionToChannel(channel.id);
+        const obj3 = mode(outer1_3[30]);
       }
     }
   }, items1);
-  obj = { context: connectedActivityInTextChannelId(16006), orientationLockStateForApp, mode, hasConnectedActivity, connectedActivityAppId, currentApp, updateActivityPanelMode: importAll(10547).updateActivityPanelMode, children: children.children };
-  return <BaseActivityPanelController context={connectedActivityInTextChannelId(16006)} orientationLockStateForApp={orientationLockStateForApp} mode={mode} hasConnectedActivity={hasConnectedActivity} connectedActivityAppId={connectedActivityAppId} currentApp={currentApp} updateActivityPanelMode={importAll(10547).updateActivityPanelMode}>{arg0.children}</BaseActivityPanelController>;
+  obj = { context: connectedActivityInTextChannelId(16081), orientationLockStateForApp, mode, hasConnectedActivity, connectedActivityAppId, currentApp, updateActivityPanelMode: importAll(10613).updateActivityPanelMode, children: children.children };
+  return <BaseActivityPanelController context={connectedActivityInTextChannelId(16081)} orientationLockStateForApp={orientationLockStateForApp} mode={mode} hasConnectedActivity={hasConnectedActivity} connectedActivityAppId={connectedActivityAppId} currentApp={currentApp} updateActivityPanelMode={importAll(10613).updateActivityPanelMode}>{arg0.children}</BaseActivityPanelController>;
 };
 export { BaseActivityPanelController };

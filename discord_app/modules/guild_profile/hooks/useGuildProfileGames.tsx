@@ -97,7 +97,7 @@ export const useAllGuildProfileGames = function useAllGuildProfileGames(profile)
   games = profile.games;
   const items = [fetchFingerprint];
   const stateFromStores = games(589).useStateFromStores(items, () => authenticated.isAuthenticated());
-  games(7032);
+  games(7092);
   if (null != games) {
     if (!stateFromStores) {
       let items1 = [];

@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/XNeutralIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/08136_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/08196_registerAsset.js";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 
 const require = arg1;

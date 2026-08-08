@@ -11,7 +11,7 @@ export const useNextTenureBadge = function useNextTenureBadge() {
   const tieredTenureBadgeData = usePremiumSince.useTieredTenureBadgeData();
   if (null == tieredTenureBadgeData) {
     return null;
-  } else if (tieredTenureBadgeData.status === tmp(9445).TieredTenureBadgeStatus.UPCOMING) {
+  } else if (tieredTenureBadgeData.status === tmp(9510).TieredTenureBadgeStatus.UPCOMING) {
     return tieredTenureBadgeData;
   } else {
     const index = closure_2.indexOf(tieredTenureBadgeData.id);

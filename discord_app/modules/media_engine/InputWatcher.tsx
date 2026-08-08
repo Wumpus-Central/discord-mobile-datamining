@@ -27,7 +27,7 @@ class InputWatcher {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -159,7 +159,7 @@ class InputWatcher {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -202,7 +202,7 @@ class InputWatcher {
             obj2[2] = v0.lastUpdateTime;
             obj1.dispatch(obj2);
             table = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           } catch (tmp12) {
             table = tmp;
             throw tmp12;

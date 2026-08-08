@@ -18,7 +18,7 @@ class StrangerDangerWarningBanner {
     senderId = global.senderId;
     MoreTipsModalScreen = undefined;
     c4 = undefined;
-    f84701 = undefined;
+    f84989 = undefined;
     c6 = undefined;
     MoreTipsModalScreen = jsx();
     tmp = channelId;
@@ -62,7 +62,7 @@ class StrangerDangerWarningBanner {
         obj.trackCtaEvent(obj);
       };
     }, items4);
-    f84701 = callback1;
+    f84989 = callback1;
     items5 = [, , , , ];
     items5[0] = callback1;
     items5[1] = callback;
@@ -90,7 +90,7 @@ class StrangerDangerWarningBanner {
     }, items5);
     c6 = callback2;
     tmp8 = jsx;
-    obj = { channelId, warningId, senderId, warningType: f84701.STRANGER_DANGER, header: null, description: null, onDismiss: null, buttons: null };
+    obj = { channelId, warningId, senderId, warningType: f84989.STRANGER_DANGER, header: null, description: null, onDismiss: null, buttons: null };
     tmp9 = require("SafetyWarningBanner");
     intl = require("getSystemLocale").intl;
     obj[4] = intl.string(require("getSystemLocale").t.iOkDpM);

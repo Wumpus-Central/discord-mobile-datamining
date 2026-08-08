@@ -35,7 +35,7 @@ export default function usePreloadedAsset(arg0) {
   dependencyMap = tmp3;
   let tmp4 = !tmp3;
   if (tmp3) {
-    tmp4 = null != num(15944);
+    tmp4 = null != num(16019);
   }
   callback = tmp4;
   let str = "image";

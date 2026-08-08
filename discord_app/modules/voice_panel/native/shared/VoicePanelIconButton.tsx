@@ -23,6 +23,6 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((overrideVari
   obj[3] = jsx(IconButton.IconButton, {});
   return jsx(ReanimatedNativeView, {});
 }));
-const result = require("module_7949").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelIconButton.tsx");
+const result = require("module_8009").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelIconButton.tsx");
 
 export default memoResult;

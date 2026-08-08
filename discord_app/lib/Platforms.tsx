@@ -1,6 +1,6 @@
 // discord_app/lib/Platforms.tsx
 import { PlatformTypes } from "ME";
-import { ApplicationIdentityConnections } from "items1";
+import { ApplicationIdentityAppIds } from "items1";
 import unsafe_getRawColor from "unsafe_getRawColor";
 import unsafe_getRawColor from "unsafe_getRawColor";
 import unsafe_getRawColor from "unsafe_getRawColor";
@@ -45,7 +45,7 @@ obj2[2] = unsafe_getRawColor.unsafe_getRawColor("PLATFORM_BATTLENET");
 const obj1 = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset"), whitePNG: require("registerAsset"), lightSVG: require("registerAsset"), darkSVG: require("registerAsset"), whiteSVG: require("registerAsset") };
 obj2[3] = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset"), whitePNG: require("registerAsset"), lightSVG: require("registerAsset"), darkSVG: require("registerAsset"), whiteSVG: require("registerAsset"), blackSVG: require("registerAsset") };
 const obj4 = {
-  replacedBy: ApplicationIdentityConnections.BATTLENET,
+  replacedBy: ApplicationIdentityAppIds.BATTLENET,
   getMigrationExperimentEnabled(location) {
     const battlenetSocialSDKMigrationExperiment = useIsRiotSocialSDKMigrationEnabled.battlenetSocialSDKMigrationExperiment;
     return battlenetSocialSDKMigrationExperiment.getConfig({ location }).enabled;
@@ -86,7 +86,7 @@ obj11[2] = unsafe_getRawColor.unsafe_getRawColor("PLATFORM_LOL");
 const obj10 = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset"), whitePNG: require("registerAsset"), lightSVG: require("registerAsset"), darkSVG: require("registerAsset"), whiteSVG: require("registerAsset") };
 obj11[3] = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset"), whitePNG: require("registerAsset"), lightSVG: require("registerAsset"), darkSVG: require("registerAsset"), whiteSVG: require("registerAsset") };
 const obj13 = {
-  replacedBy: ApplicationIdentityConnections.RIOT_GAMES,
+  replacedBy: ApplicationIdentityAppIds.RIOT_GAMES,
   getMigrationExperimentEnabled(location) {
     let obj = useIsRiotSocialSDKMigrationEnabled;
     obj = { location };
@@ -190,7 +190,7 @@ const obj38 = { type: PlatformTypes.RIOT_GAMES, name: "Riot Games", icon: null, 
 const obj37 = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset"), whitePNG: require("registerAsset"), lightSVG: require("registerAsset"), darkSVG: require("registerAsset"), whiteSVG: require("registerAsset") };
 obj38[2] = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset"), whitePNG: require("registerAsset"), lightSVG: require("registerAsset"), darkSVG: require("registerAsset"), whiteSVG: require("registerAsset"), blackSVG: require("registerAsset") };
 const obj40 = {
-  replacedBy: ApplicationIdentityConnections.RIOT_GAMES,
+  replacedBy: ApplicationIdentityAppIds.RIOT_GAMES,
   getMigrationExperimentEnabled(location) {
     let obj = useIsRiotSocialSDKMigrationEnabled;
     obj = { location };

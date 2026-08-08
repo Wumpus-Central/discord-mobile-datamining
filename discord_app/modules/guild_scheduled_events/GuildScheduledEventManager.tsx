@@ -35,7 +35,7 @@ function _getGuildEventsForCurrentUser() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -198,7 +198,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -237,7 +237,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
             }
             let num8 = 3;
             c7 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } else if (1 === tmp4) {
           let tmp11 = scheduledEventSort;
@@ -348,7 +348,7 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -380,7 +380,7 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
             }
             let num14 = 3;
             c9 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } else if (1 === tmp4) {
           let tmp25 = closure_7;

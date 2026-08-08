@@ -161,7 +161,7 @@ function _processBulkAckQueue() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -209,7 +209,7 @@ function _processBulkAckQueue() {
             closure_65.length = 0;
             let c66 = false;
             c6 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           } else if (2 === tmp7) {
             if (arg0 === 1) {
               c6 = 3;
@@ -222,7 +222,7 @@ function _processBulkAckQueue() {
             } else {
               callback2(callback);
               c6 = 3;
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             }
           } else if (arg0 === 1) {
             c6 = 3;
@@ -1762,7 +1762,7 @@ prototype2["canBeUnread"] = function canBeUnread() {
           }
         }
       }
-      tmpResult = tmp(6934);
+      tmpResult = tmp(6994);
     }
     return self.canTrackUnreads();
   }
@@ -1779,7 +1779,7 @@ prototype2["canHaveMentions"] = function canHaveMentions() {
       const result = filterOutMessageRequestsAndSpam.isMessageRequestOrSpamRequest(self.channelId, items);
       let tmp9 = !result;
       if (!result) {
-        let result1 = tmp4(6934).isOptInEnabledForGuild(self._guildId);
+        let result1 = tmp4(6994).isOptInEnabledForGuild(self._guildId);
         if (result1) {
           result1 = self._lastMessageTimestamp < c71;
         }
@@ -1788,7 +1788,7 @@ prototype2["canHaveMentions"] = function canHaveMentions() {
           canTrackUnreadsResult = self.canTrackUnreads();
         }
         tmp9 = canTrackUnreadsResult;
-        const tmp4Result = tmp4(6934);
+        const tmp4Result = tmp4(6994);
       }
       tmp3 = tmp9;
       const obj = filterOutMessageRequestsAndSpam;
@@ -2110,14 +2110,14 @@ prototype2["_ack"] = function _ack(closure_1, c0) {
         }
         callback(709).dispatch({ type: "MESSAGE_ACKED" });
         if (dependencyMap) {
-          tmp4(1988)(13118, tmp5.paths).then((arg0) => {
+          tmp4(1988)(13188, tmp5.paths).then((arg0) => {
             let obj = closure_1;
             if (closure_1 == null) {
               obj = {};
             }
             arg0.default(channelId.channelId, obj);
           });
-          const promise = tmp4(1988)(13118, tmp5.paths);
+          const promise = tmp4(1988)(13188, tmp5.paths);
         }
         let obj = callback(709);
         tmp5 = dependencyMap;
@@ -3293,7 +3293,7 @@ obj = {
       if (null != value.oldestUnreadMessageId) {
         if (!value.oldestUnreadMessageIdStale) {
           if (!hasUnreadResult) {
-            let tmp8Result = tmp8(9695);
+            let tmp8Result = tmp8(9761);
             hasUnreadResult = tmp8Result.getFocusedChannelId() === channelId;
           }
           if (!hasUnreadResult) {
@@ -3306,7 +3306,7 @@ obj = {
         if (!upsertRelationship.isBlockedOrIgnoredForMessage(message)) {
           if (message.type !== constants7.RECIPIENT_REMOVE) {
             if (null != currentUser) {
-              tmp8Result = tmp8(4535);
+              tmp8Result = tmp8(4537);
               const obj5 = { rawMessage: null, userId: null, suppressEveryone: null, suppressRoles: null };
               obj5[0] = message;
               obj5[1] = currentUser.id;
@@ -3359,7 +3359,7 @@ obj = {
                     if (tmp8Result1.computeThreadNotificationSetting(channel) === ThreadMemberFlags.ALL_MESSAGES) {
                       obj6 = { shouldMention: true, isMentionLowImportance: true };
                     }
-                    tmp8Result1 = tmp8(9694);
+                    tmp8Result1 = tmp8(9760);
                   } else if (!channel.isVocal()) {
                     if (!obj15.isChannelMuted(channel.guild_id, channel.id)) {
                       if (obj15.resolvedMessageNotifications(channel) === constants10.ALL_MESSAGES) {
@@ -3409,7 +3409,7 @@ obj = {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     const value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "T", local: "T", immediate: "PX_8", force: true, isExplicitUserAction: 5, trackAnalytics: 50 });
+    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "ct", force: true, isExplicitUserAction: 5, trackAnalytics: 50 });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     const value = ReadState.get(channelId.channelId);
@@ -3803,7 +3803,7 @@ obj = {
     });
     const item = found.forEach((messageId) => {
       const value = closure_81.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "T", force: "PX_8", isExplicitUserAction: "deaf_man_tone1", trackAnalytics: "deaf_man_light_skin_tone" });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "ct", isExplicitUserAction: null, trackAnalytics: null });
     });
     if (context === closure_41) {
       const push = navigation.push;

@@ -80,7 +80,7 @@ function handleFormInit(location) {
       const items = [obj];
       if (section === tmp16.TAG_CUSTOMIZE) {
         obj = { key: null, name: null };
-        ({ TAG: obj3[0], TAG: obj3[1] } = tmp16);
+        ({ TAG: obj2[0], TAG: obj2[1] } = tmp16);
         items.push(obj);
       }
       const obj1 = { key: null, name: null };
@@ -90,7 +90,7 @@ function handleFormInit(location) {
       obj2 = { type: "stack", routes: null };
       obj2[1] = items;
     }
-    const obj6 = DISCORD_EPOCH;
+    const obj5 = DISCORD_EPOCH;
   }
 }
 function _createInvite(code) {

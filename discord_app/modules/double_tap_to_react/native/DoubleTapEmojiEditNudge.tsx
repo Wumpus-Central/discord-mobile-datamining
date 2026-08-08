@@ -48,7 +48,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
   }, items1);
   obj = { style: tmp5.doubleTapEmojiEditNudgeContainer, children: null };
   callback = React.useCallback(() => {
-    let obj = _location(8577);
+    let obj = _location(8637);
     obj = { pickerIntention: outer1_10.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
     let closure_0 = stateFromStores((arg0) => {
       let closure_0 = arg0;
@@ -66,7 +66,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -109,7 +109,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
               obj5[0] = callback;
               const result = obj.showDoubleTapEmojiUpdatedToast(obj5);
               c4 = 3;
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp12) {
             c4 = tmp;
@@ -133,7 +133,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
   obj = { color: "text-subtle", variant: "text-sm/normal", children: null };
   const intl = _location(1236).intl;
   obj[2] = intl.string(_location(1236).t["1EUr/W"]);
-  const items3 = [callback2(_location(4298).Text, obj), , ];
+  const items3 = [callback2(_location(4299).Text, obj), , ];
   obj1 = { style: tmp5.doubleTapEmojiContainer, fastImageStyle: tmp5.doubleTapCustomEmoji, textEmojiStyle: tmp5.doubleTapTextEmoji, src: memo, name: null };
   let str = "";
   const tmp3 = callback((arg0) => arg0.byAppEntry[closure_2].fontScale);
@@ -143,13 +143,13 @@ function DoubleTapEmojiEditNudgeInner(location) {
     str = emoji.surrogates;
   }
   obj1[4] = str;
-  items3[1] = callback2(emoji(5359), obj1);
+  items3[1] = callback2(emoji(5360), obj1);
   const obj2 = { accessibilityRole: "button", onPress: callback, hitSlop: closure_13, style: tmp5.editButton, children: null };
   let obj3 = { color: "text-brand", variant: "text-sm/normal", children: null };
   const intl2 = tmp(1236).intl;
   obj3[2] = intl2.string(_location(1236).t.bt75uw);
-  obj2[4] = callback2(_location(4298).Text, obj3);
-  items3[2] = callback2(_location(4844).PressableOpacity, obj2);
+  obj2[4] = callback2(_location(4299).Text, obj3);
+  items3[2] = callback2(_location(4846).PressableOpacity, obj2);
   obj[1] = items3;
   return tmp8(tmp9, obj);
 }

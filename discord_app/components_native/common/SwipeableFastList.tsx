@@ -23,7 +23,7 @@ class SwipeableFastList extends Component {
         c4 = true;
       }
       const obj = {
-        renderRightActions(showRightAction, transX, self) {
+        renderRightActions() {
           return renderQuickActions(closure_0, closure_1);
         },
         ref(arg0) {
@@ -38,16 +38,15 @@ class SwipeableFastList extends Component {
           }
         },
         overshootFriction: 8,
-        onSwipeableWillOpen(right) {
+        onSwipeableWillOpen(View, arg1) {
           return closure_0.handleOpen(closure_3);
         },
-        onSwipeableClose(arg0, closure_0) {
+        onSwipeableClose() {
           return closure_0.handleClose(closure_3);
         },
-        useNativeAnimations: true,
         children: null
       };
-      obj[6] = props.renderItem(arg0, arg1, arg2);
+      obj[5] = props.renderItem(arg0, arg1, arg2);
       return outer1_2(arg0(outer1_1[2]), obj);
     };
     applyArgumentsResult.handleScroll = function handleScroll(arg0) {
@@ -113,6 +112,6 @@ SwipeableFastList.defaultProps = {
     return null;
   }
 };
-const result = require("_isNativeReflectConstruct").fileFinishedImporting("components_native/common/SwipeableFastList.tsx");
+const result = require("SwipeDirection").fileFinishedImporting("components_native/common/SwipeableFastList.tsx");
 
 export default SwipeableFastList;

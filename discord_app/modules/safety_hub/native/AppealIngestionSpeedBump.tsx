@@ -75,7 +75,7 @@ export default function AppealIngestionSpeedBump(arg0) {
   tmp9Result = isCoppa;
   if (isCoppa) {
     const obj2 = { text: null, url: null, onPress: null };
-    let tmp13Result = tmp13(11239);
+    let tmp13Result = tmp13(11305);
     const intl3 = tmp2(1236).intl;
     obj2[0] = intl3.string(tmp2(1236).t["gJs+kf"]);
     obj2[1] = constants.AGE_VERIFICATION_LINK;
@@ -90,7 +90,7 @@ export default function AppealIngestionSpeedBump(arg0) {
   }
   if (isSpam) {
     const obj3 = { text: null, url: null, onPress: null };
-    tmp13Result = tmp13(11239);
+    tmp13Result = tmp13(11305);
     const intl4 = tmp2(1236).intl;
     obj3[0] = intl4.string(tmp2(1236).t.NBsJvm);
     obj3[1] = constants.SPAM_LINK;
@@ -109,15 +109,15 @@ export default function AppealIngestionSpeedBump(arg0) {
     obj4[2] = function onPress() {
       return callback(outer1_5.ClickLearnMoreLink);
     };
-    tmp9Result1 = tmp9(tmp13(11239), obj4);
-    const tmp13Result1 = tmp13(11239);
+    tmp9Result1 = tmp9(tmp13(11305), obj4);
+    const tmp13Result1 = tmp13(11305);
   }
   items2[4] = tmp9Result1;
   if (isDsaEligible) {
     const obj5 = { variant: "text-xs/normal", children: null };
     const intl6 = tmp2(1236).intl;
     obj5[1] = intl6.format(tmp2(1236).t.WMUgCX, {});
-    isDsaEligible = tmp9(tmp2(4298).Text, obj5);
+    isDsaEligible = tmp9(tmp2(4299).Text, obj5);
   }
   const obj6 = { children: null };
   items2[5] = isDsaEligible;

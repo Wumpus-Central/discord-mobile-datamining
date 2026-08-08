@@ -70,20 +70,20 @@ function shouldShowActivity(flags) {
       } else {
         shouldShowActivityResult = null != flags.application_id;
         if (shouldShowActivityResult) {
-          let tmpResult = tmp(4346);
+          let tmpResult = tmp(4348);
           shouldShowActivityResult = tmpResult.shouldShareApplicationActivity(flags.application_id, setLibraryApplications);
         }
       }
       return shouldShowActivityResult;
     } else if (tmp3.PLAYING === type) {
       if (null != flags.application_id) {
-        tmpResult = tmp(4346);
+        tmpResult = tmp(4348);
         let result = tmpResult.shouldShareApplicationActivity(flags.application_id, setLibraryApplications);
       } else {
         const searchGamesByNameResult = gameFromServer.searchGamesByName(flags.name);
         if (1 === searchGamesByNameResult.length) {
-          result = tmp(4346).shouldShareApplicationActivity(searchGamesByNameResult[0], setLibraryApplications);
-          const tmpResult1 = tmp(4346);
+          result = tmp(4348).shouldShareApplicationActivity(searchGamesByNameResult[0], setLibraryApplications);
+          const tmpResult1 = tmp(4348);
         } else {
           const ShowCurrentGame = tmp(3974).ShowCurrentGame;
           result = ShowCurrentGame.getSetting();
@@ -96,8 +96,8 @@ function shouldShowActivity(flags) {
       }
       let result1 = null == flags.application_id;
       if (!result1) {
-        result1 = tmp(4346).shouldShareApplicationActivity(flags.application_id, setLibraryApplications);
-        const tmpResult2 = tmp(4346);
+        result1 = tmp(4348).shouldShareApplicationActivity(flags.application_id, setLibraryApplications);
+        const tmpResult2 = tmp(4348);
       }
       return result1;
     }

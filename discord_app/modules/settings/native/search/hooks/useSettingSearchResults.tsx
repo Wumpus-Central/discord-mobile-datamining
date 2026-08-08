@@ -10,8 +10,8 @@ const result = require("zustandStore").fileFinishedImporting("modules/settings/n
 
 export const useSettingSearchResults = function useSettingSearchResults() {
   const memo = memo1.useMemo(() => {
-    let tmp = callback(14861);
-    tmp = new tmp(memo(13821).getSettingSearchableTitles());
+    let tmp = callback(14931);
+    tmp = new tmp(memo(13891).getSettingSearchableTitles());
     return tmp;
   }, []);
   const settings = callback(memo1.useState(closure_7), 2);

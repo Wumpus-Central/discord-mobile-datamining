@@ -1,7 +1,7 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeForce.tsx
 import noop from "noop";
 import jsxProd from "jsxProd";
-import { inlineStyles } from "../../../../../_runtime/07775_inlineStyles.js";
+import { inlineStyles } from "../../../../../_runtime/07835_inlineStyles.js";
 import { getTransformedBadgeColors } from "GuildBadgeUtils.tsx";
 
 let c3;
@@ -71,13 +71,13 @@ export const GuildBadgeForce = function GuildBadgeForce(width) {
     obj15[0] = memo;
     const obj16 = { stopColor: null, offset: "30%" };
     obj16[0] = primaryColorsTransformed[1];
-    items1 = [tmp9(tmp3(7775).Stop, obj16), ];
+    items1 = [tmp9(tmp3(7835).Stop, obj16), ];
     const obj17 = { stopColor: null, offset: "70%" };
     obj17[0] = secondaryColorsTransformed[1];
-    items1[1] = tmp9(tmp3(7775).Stop, obj17);
+    items1[1] = tmp9(tmp3(7835).Stop, obj17);
     obj15[6] = items1;
-    obj14[0] = tmp7(tmp3(7775).RadialGradient, obj15);
-    tmp9Result = tmp9(tmp3(7775).Defs, obj14);
+    obj14[0] = tmp7(tmp3(7835).RadialGradient, obj15);
+    tmp9Result = tmp9(tmp3(7835).Defs, obj14);
   }
   items[20] = tmp9Result;
   obj.children = items;

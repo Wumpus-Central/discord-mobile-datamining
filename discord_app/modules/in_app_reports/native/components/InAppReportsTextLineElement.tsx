@@ -46,7 +46,7 @@ export default function TextLineElement(element) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -104,7 +104,7 @@ export default function TextLineElement(element) {
               obj.openURL(c0);
             }
             table = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp17) {
           table = tmp;

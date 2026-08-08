@@ -23,7 +23,7 @@ function AnimatedChatInputReplyBar(replying) {
   ({ pendingReply, pendingReplyAuthor, onToggleReplyMention } = replying);
   let obj = replying(1348);
   const tmp3 = createCacheKey();
-  sharedValue = replying(4162).useSharedValue(0);
+  sharedValue = replying(4036).useSharedValue(0);
   const items = [replying, sharedValue];
   const effect = React.useEffect(() => {
     const withTiming = replying(outer1_2[11]).withTiming;
@@ -34,7 +34,7 @@ function AnimatedChatInputReplyBar(replying) {
       const result1 = set(withTiming(0, obj));
     }
   }, items);
-  const obj2 = replying(4162);
+  const obj2 = replying(4036);
   const tmp = replying;
   const fn = function y() {
     const obj = { height: null, opacity: null };
@@ -42,17 +42,17 @@ function AnimatedChatInputReplyBar(replying) {
     obj[1] = sharedValue.get();
     return obj;
   };
-  obj = { interpolate: replying(4162).interpolate, sv: sharedValue, REPLY_BAR_HEIGHT: 40 };
+  obj = { interpolate: replying(4036).interpolate, sv: sharedValue, REPLY_BAR_HEIGHT: 40 };
   fn.__closure = obj;
   fn.__workletHash = 878601267127;
   fn.__initData = closure_13;
-  const animatedStyle = replying(4162).useAnimatedStyle(fn);
+  const animatedStyle = replying(4036).useAnimatedStyle(fn);
   const items1 = [tmp3.replyBarContainer, , ];
   obj = { style: items1, children: null };
   items1[1] = obj.useMobileVisualRefreshConfig({ location: "MessageReplyInput" }).chatInputFloating ? tmp3.replyBarRedesign : tmp3.replyBarNoRedesign;
   items1[2] = animatedStyle;
-  obj[1] = closure_10(tmp(10147).ChatInputReplyBar, { pendingReply, pendingReplyAuthor, onToggleReplyMention, chatInputFloatingOverride: true });
-  return closure_10(sharedValue(4162).View, obj);
+  obj[1] = closure_10(tmp(10213).ChatInputReplyBar, { pendingReply, pendingReplyAuthor, onToggleReplyMention, chatInputFloatingOverride: true });
+  return closure_10(sharedValue(4036).View, obj);
 }
 ({ Keyboard: closure_6, View: error, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
@@ -139,7 +139,7 @@ export const MessageReplyInput = function MessageReplyInput(notification) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

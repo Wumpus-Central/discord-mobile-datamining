@@ -36,16 +36,16 @@ function GuildPowerupsRecentActivityRow(row) {
       obj = { color: null };
       obj[0] = roleColor;
     }
-    let tmp2Result = tmp2(8010);
+    let tmp2Result = tmp2(8070);
     const processColorStringsArray = tmp2Result.useProcessColorStringsArray(roleColorStrings);
-    tmp2Result = tmp2(8010);
+    tmp2Result = tmp2(8070);
     const isRoleStyleAndRoleColorsEligibleForERC = tmp2Result.useIsRoleStyleAndRoleColorsEligibleForERC(boost.guildId, boost.userId, stateFromStores, processColorStringsArray);
     if ("gave" === phase) {
-      let BoostGemSlashIcon = tmp2(7635).BoostGemIcon;
+      let BoostGemSlashIcon = tmp2(7695).BoostGemIcon;
     } else if ("expiring" === phase) {
-      BoostGemSlashIcon = tmp2(11874).BoostTier1Icon;
+      BoostGemSlashIcon = tmp2(11940).BoostTier1Icon;
     } else {
-      BoostGemSlashIcon = tmp2(11876).BoostGemSlashIcon;
+      BoostGemSlashIcon = tmp2(11942).BoostGemSlashIcon;
     }
     obj = { style: null, children: null };
     obj[0] = tmp.boostRowContainer;
@@ -79,18 +79,18 @@ function GuildPowerupsRecentActivityRow(row) {
     }
     obj5[4] = tmp22;
     obj5[5] = username;
-    items2[1] = closure_5(tmp2(4298).Text, obj5);
-    items2[2] = closure_5(tmp2(4298).Text, { variant: "text-md/medium", color: "interactive-text-active", children: " " });
+    items2[1] = closure_5(tmp2(4299).Text, obj5);
+    items2[2] = closure_5(tmp2(4299).Text, { variant: "text-md/medium", color: "interactive-text-active", children: " " });
     const obj6 = { variant: "text-md/medium", lineClamp: 1, style: null, children: null };
     obj6[2] = tmp.messageText;
     obj6[3] = getBoostRowMessageText(row);
-    items2[3] = closure_5(tmp2(4298).Text, obj6);
+    items2[3] = closure_5(tmp2(4299).Text, obj6);
     obj3[1] = items2;
     items1[1] = closure_6(View, obj3);
     const obj7 = { variant: "text-xs/semibold", style: null, children: null };
     obj7[1] = tmp.timestamp;
     obj7[2] = calendarFormatResult;
-    items1[2] = closure_5(tmp2(4298).Text, obj7);
+    items1[2] = closure_5(tmp2(4299).Text, obj7);
     obj[1] = items1;
     return closure_6(View, obj);
   }

@@ -5,6 +5,6 @@ const BountiesNuxPromoSheet = "BountiesNuxPromoSheet";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/quests/native/openBountiesNuxPromoSheet.tsx");
 
 export default function openBountiesNuxPromoSheet() {
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(14237, dependencyMap.paths), BountiesNuxPromoSheet, {});
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(14307, dependencyMap.paths), BountiesNuxPromoSheet, {});
 };
 export const PROMO_SHEET_KEY = "BountiesNuxPromoSheet";

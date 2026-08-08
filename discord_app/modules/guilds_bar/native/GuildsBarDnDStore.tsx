@@ -9,7 +9,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   const _require = arg0;
   let closure_1 = arg1;
-  let obj = { dragSpecs: "Boolean", overSpecs: "sa", dropSpecs: "isArray", dragRegion: null, gestureState: null, dragDropInProgress: null, listInsets: "sans-serif-medium", scrollPosition: "normal", windowSize: "<string:587203336>", setStateShallow: "<string:3103785287>", dropStart: "<string:3120562626>", dropComplete: "<string:2550137357>" };
+  let obj = { dragSpecs: "Boolean", overSpecs: "disabled", dropSpecs: "isArray", dragRegion: null, gestureState: null, dragDropInProgress: null, listInsets: "Liechtenstein", scrollPosition: "LI", windowSize: "+423", setStateShallow: null, dropStart: "\u262A\uFE0F", dropComplete: 1.1 };
   obj[3] = _ReanimatedRexport.makeMutable({ min: 0, max: 0 });
   const obj2 = _ReanimatedRexport;
   obj[4] = _ReanimatedRexport.makeMutable(obj);
@@ -55,7 +55,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       const error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      callback(tmp2[3]).batchUpdates(() => newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "accessible" }));
+      callback(tmp2[3]).batchUpdates(() => newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "isArray" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(outer1_5);
       const _setTimeout = setTimeout;
@@ -85,7 +85,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj[2] = obj;
     obj.addBreadcrumb(obj);
     if (null != dropSpecs) {
-      callback(outer1_2[3]).batchUpdates(() => callback({ dropSpecs: "r" }));
+      callback(outer1_2[3]).batchUpdates(() => callback({ dropSpecs: "sa" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(outer1_5);
       if (null == dragSpecs) {
@@ -103,7 +103,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   return obj;
 });
-let result = require("module_4162").fileFinishedImporting("modules/guilds_bar/native/GuildsBarDnDStore.tsx");
+let result = require("module_4036").fileFinishedImporting("modules/guilds_bar/native/GuildsBarDnDStore.tsx");
 
 export default withEqualityFn;
 export const INITIAL_GESTURE_STATE = obj;
@@ -118,7 +118,7 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
     ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
     if (null == dragSpecs) {
       if (null == dropSpecs) {
-        let obj = { isDragTarget: false, dragState: "sa", overState: "isArray", itemSize: null, dragDropInProgress: true };
+        let obj = { isDragTarget: false, dragState: "disabled", overState: "isArray", itemSize: null, dragDropInProgress: true };
         obj[4] = dragDropInProgress;
         return obj;
       }

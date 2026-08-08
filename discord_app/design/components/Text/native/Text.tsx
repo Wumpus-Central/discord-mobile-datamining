@@ -6,7 +6,7 @@ import { jsx } from "jsxProd";
 import { TextVariantsFlat } from "TEXT_VARIANT";
 import useManaTextMigrationHighlight from "useManaTextMigrationHighlight";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4162";
+import importDefaultResult from "module_4036";
 import { apply } from "../../../../../_runtime/00012_apply.js";
 import { NativeText } from "../../../../../_runtime/00299_NativeText.js";
 import { useTypographyVariantRemap } from "../../../../../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx";
@@ -14,7 +14,7 @@ import { Themes } from "../../../../../discord_common/js/packages/tokens/native.
 import { useManaTextMigrationHighlight } from "useManaTextMigrationHighlight.tsx";
 
 const require = arg1;
-let closure_5 = require("module_4162").createAnimatedComponent(Text);
+let closure_5 = require("module_4036").createAnimatedComponent(Text);
 const keys = Object.keys(require("Themes").colors);
 let closure_6 = Object.fromEntries(keys.map((arg0) => {
   const items = [apply.kebabCase(arg0), arg0];

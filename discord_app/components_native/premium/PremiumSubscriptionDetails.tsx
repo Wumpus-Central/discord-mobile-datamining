@@ -59,7 +59,7 @@ function _handleCancelSubscription() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -78,14 +78,14 @@ function _handleCancelSubscription() {
               obj1[0] = callback;
               obj1[1] = closure_1;
               obj1[2] = dependencyMap;
-              obj1[3] = callback(7314).STEP_ANALYTICS_NAMES[callback(undefined, 7314).CancellationFlowSteps.MOBILE_SUBSCRIPTION_MANAGE];
-              const result = callback(7314).trackPremiumSubscriptionCancellationFlowStep(obj1);
+              obj1[3] = callback(7374).STEP_ANALYTICS_NAMES[callback(undefined, 7374).CancellationFlowSteps.MOBILE_SUBSCRIPTION_MANAGE];
+              const result = callback(7374).trackPremiumSubscriptionCancellationFlowStep(obj1);
               let isPurchasedViaApple;
               if (callback != null) {
                 isPurchasedViaApple = tmp15.isPurchasedViaApple;
               }
               if (isPurchasedViaApple) {
-                let tmp18Result = tmp18(7361);
+                let tmp18Result = tmp18(7421);
                 c4 = 1;
                 c3 = 1;
                 const obj2 = { value: null, done: false };
@@ -101,7 +101,7 @@ function _handleCancelSubscription() {
                   outer1_8.openURL(tmp18Result.getExternalSubscriptionMethodUrl(tmp15.paymentGateway, "SUBSCRIPTION_MANAGEMENT"));
                 }
               }
-              const obj7 = callback(7314);
+              const obj7 = callback(7374);
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -113,7 +113,7 @@ function _handleCancelSubscription() {
             return obj;
           }
           c3 = 3;
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         } catch (tmp9) {
           c3 = tmp;
           throw tmp9;
@@ -158,7 +158,7 @@ function _onResubscribeClick() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -176,7 +176,7 @@ function _onResubscribeClick() {
               let closure_1 = tmp2;
               if (lib.isACOM) {
                 const obj1 = { requestIdentifier: null, subscriptionId: null };
-                const obj9 = lib(6823);
+                const obj9 = lib(6883);
                 obj1[0] = lib(514).v4();
                 obj1[1] = tmp25.id;
                 dependencyMap = 1;
@@ -185,7 +185,7 @@ function _onResubscribeClick() {
                 obj2[0] = obj9.resubscribeGenericSubscription(obj1, true);
                 return obj2;
               } else if (tmp25.isPurchasedViaApple) {
-                let obj6 = lib(7361);
+                let obj6 = lib(7421);
                 dependencyMap = 3;
                 c3 = 1;
                 const obj3 = { value: null, done: false };
@@ -206,7 +206,7 @@ function _onResubscribeClick() {
               obj4[0] = arg1;
               return obj4;
             } else {
-              obj2 = lib(4621);
+              obj2 = lib(4623);
               dependencyMap = 2;
               c3 = 1;
               obj5 = { value: null, done: false };
@@ -233,7 +233,7 @@ function _onResubscribeClick() {
             return obj;
           }
           c3 = 3;
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         } catch (tmp19) {
           c3 = tmp;
           throw tmp19;
@@ -411,7 +411,7 @@ class PremiumSubscriptionHeader {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -453,7 +453,7 @@ class PremiumSubscriptionHeader {
                 c3 = 0;
                 callback(false);
                 c4 = 3;
-                return { value: "T", done: null };
+                return { value: "HermesInternal", done: null };
               }
             } catch (tmp23) {
               callback = tmp23;
@@ -687,7 +687,7 @@ export default function PremiumSubscriptionDetails(subscription) {
     obj1[0] = tmp.title;
     const intl = tmp4(1236).intl;
     obj1[4] = intl.string(tmp4(1236).t.ITurwY);
-    const items = [callback3(tmp4(4298).Text, obj1), , , , ];
+    const items = [callback3(tmp4(4299).Text, obj1), , , , ];
     let tmp9Result = null != subscription.renewalMutations;
     if (tmp9Result) {
       tmp9Result = subscription.status !== constants3.CANCELED;
@@ -696,14 +696,14 @@ export default function PremiumSubscriptionDetails(subscription) {
       const obj2 = { subscription: null, renewalMutations: null };
       obj2[0] = subscription;
       obj2[1] = subscription.renewalMutations;
-      tmp9Result = tmp9(tmp2(7573), obj2);
+      tmp9Result = tmp9(tmp2(7633), obj2);
     }
     items[1] = tmp9Result;
     tmp9Result = subscription.status === constants3.ACCOUNT_HOLD;
     if (tmp9Result) {
       const obj3 = { subscription: null };
       obj3[0] = subscription;
-      tmp9Result = tmp9(tmp2(7574), obj3);
+      tmp9Result = tmp9(tmp2(7634), obj3);
     }
     items[2] = tmp9Result;
     const obj4 = { subscription: null, renewalInvoicePreview: null, onClickManagePremiumGuild: null };
@@ -715,7 +715,7 @@ export default function PremiumSubscriptionDetails(subscription) {
     obj5[0] = tmp.desktopSubtext;
     const intl2 = tmp4(1236).intl;
     obj5[2] = intl2.string(tmp4(1236).t["MTG+3O"]);
-    items[4] = callback3(tmp4(4298).Text, obj5);
+    items[4] = callback3(tmp4(4299).Text, obj5);
     obj[1] = items;
     tmp7Result = closure_17(closure_9, obj);
     const tmp7 = closure_17;
@@ -758,7 +758,7 @@ export const handleManageSubscription = function handleManageSubscription(subscr
     obj[3] = !hasActiveTrial;
     let prop;
     if (hasActiveTrial) {
-      prop = tmp9(6811).excludeNitroOnlyPlansForActiveTrial;
+      prop = tmp9(6871).excludeNitroOnlyPlansForActiveTrial;
     }
     obj[4] = prop;
     const result = launchPremiumPlanSelect.launchPremiumPlanSelect(obj);

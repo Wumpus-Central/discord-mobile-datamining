@@ -39,9 +39,9 @@ export const useGuildShopPreviewVisible = function useGuildShopPreviewVisible(fe
   }
   const items1 = [, , ];
   ({ CREATOR_MONETIZABLE: arr2[0], CREATOR_MONETIZABLE_PROVISIONAL: arr2[1], ROLE_SUBSCRIPTIONS_ENABLED: arr2[2] } = constants);
-  const guildEligibleForGuildProducts = tmp(5818).useGuildEligibleForGuildProducts(id);
+  const guildEligibleForGuildProducts = tmp(5878).useGuildEligibleForGuildProducts(id);
   let tmp9 = null != features;
-  const tmpResult = tmp(5818);
+  const tmpResult = tmp(5878);
   if (tmp9) {
     tmp9 = stateFromStores;
   }

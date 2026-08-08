@@ -31,7 +31,7 @@ function _createGroupFromStore() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -105,7 +105,7 @@ function _createGroupFromStore() {
             return obj;
           }
           c6 = 3;
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         } catch (tmp13) {
           c6 = tmp;
           throw tmp13;
@@ -150,7 +150,7 @@ class GuildRoleSubscriptionGroupSetupModal {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

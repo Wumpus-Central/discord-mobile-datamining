@@ -32,7 +32,7 @@ export const getMediaShareParams = function getMediaShareParams(source) {
           }
           ({ videoURI, contentType } = source);
           if (null != videoURI) {
-            tmpResult = tmp(5353);
+            tmpResult = tmp(5354);
             const decideFileExtensionResult = tmpResult.decideFileExtension(videoURI, contentType, true);
             obj = { mediaFallbackUrl: null, mediaStagingOptions: null };
             obj[0] = videoURI;
@@ -47,7 +47,7 @@ export const getMediaShareParams = function getMediaShareParams(source) {
             obj[1] = tmp11;
             return obj;
           } else {
-            const decideFileExtensionResult1 = tmp(5353).decideFileExtension(source.uri, contentType, true);
+            const decideFileExtensionResult1 = tmp(5354).decideFileExtension(source.uri, contentType, true);
             const obj2 = { mediaFallbackUrl: null, mediaStagingOptions: null };
             obj2[0] = source.shareURI;
             let tmp6;
@@ -79,6 +79,6 @@ export const getMediaShareParams = function getMediaShareParams(source) {
   }
   return { mediaFallbackUrl };
 };
-export const resolveShareFileExtension = function resolveShareFileExtension(closure_0, contentType) {
-  return decideFileExtension.decideFileExtension(closure_0, contentType, true);
+export const resolveShareFileExtension = function resolveShareFileExtension(outer1_0, contentType) {
+  return decideFileExtension.decideFileExtension(outer1_0, contentType, true);
 };

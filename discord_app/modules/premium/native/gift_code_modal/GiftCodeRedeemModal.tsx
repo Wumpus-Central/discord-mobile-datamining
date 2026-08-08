@@ -29,8 +29,8 @@ export default function GiftCodeRedeemModal(code) {
     let items2 = obj;
     obj = { headerTitle: null, headerLeft: null, render: null };
     obj[0] = HeaderBackImage;
-    let tmp2Result = tmp2(5269);
-    obj[1] = tmp2Result.getHeaderCloseButton(() => callback(4507).pop());
+    let tmp2Result = tmp2(5270);
+    obj[1] = tmp2Result.getHeaderCloseButton(() => callback(4509).pop());
     obj[2] = function render(arg0) {
       const obj = {};
       const merged = Object.assign(arg0);
@@ -40,8 +40,8 @@ export default function GiftCodeRedeemModal(code) {
     obj[obj.START] = obj;
     obj1 = { headerTitle: null, headerLeft: null, render: null };
     obj1[0] = HeaderBackImage;
-    tmp2Result = tmp2(5269);
-    obj1[1] = tmp2Result.getHeaderCloseButton(() => callback(4507).pop());
+    tmp2Result = tmp2(5270);
+    obj1[1] = tmp2Result.getHeaderCloseButton(() => callback(4509).pop());
     obj1[2] = function render(arg0) {
       const obj = {};
       const merged = Object.assign(arg0);
@@ -51,10 +51,10 @@ export default function GiftCodeRedeemModal(code) {
     obj[obj.SUCCESS] = obj1;
     const obj2 = { headerTitle: null, headerLeft: null, render: null };
     obj2[0] = HeaderBackImage;
-    obj2[1] = tmp2(5269).getHeaderCloseButton(() => callback(4507).pop());
+    obj2[1] = tmp2(5270).getHeaderCloseButton(() => callback(4509).pop());
     obj2[2] = function render(arg0) {
       const merged = Object.assign(arg0);
-      return callback2(callback(10365), {});
+      return callback2(callback(10431), {});
     };
     obj[obj.ERROR] = obj2;
     if (null == stateFromStores) {
@@ -81,10 +81,10 @@ export default function GiftCodeRedeemModal(code) {
         items3 = [obj6];
       }
       obj3[1] = items3;
-      jsx(tmp2(5723).Navigator, { screens: null, initialRouteStack: null });
+      jsx(tmp2(5783).Navigator, { screens: null, initialRouteStack: null });
       const tmp7 = jsx;
     }
-    const tmp2Result1 = tmp2(5269);
+    const tmp2Result1 = tmp2(5270);
   }
 };
 export const GiftCodeModalScreens = obj;

@@ -3,7 +3,7 @@ import importAllResult from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { Directions } from "../../../../_runtime/05426_Directions.js";
+import { LegacyBaseButton } from "../../../../_runtime/05427_LegacyBaseButton.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/ChatListNativeComponent.tsx";
 import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/ChatNativeComponent.tsx";
@@ -25,7 +25,7 @@ function DCDChatList() {
   const tmp = callback3();
   obj[2] = callback(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "chat_list_android" });
   obj[1] = callback(__INTERNAL_VIEW_CONFIG, obj);
-  return callback(Directions.GestureDetector, obj);
+  return callback(LegacyBaseButton.GestureDetector, obj);
 }
 let c3 = importAllResult;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

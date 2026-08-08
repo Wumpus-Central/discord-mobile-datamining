@@ -2,11 +2,11 @@
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import HubEmailConnectionGuildSelectRow from "HubEmailConnectionGuildSelectRow";
-import get_ActivityIndicator from "module_5931";
+import get_ActivityIndicator from "module_5991";
 import { HubEmailConnectionSteps } from "HubEmailConnectionSteps";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/12030_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/12096_registerAsset.js";
 import { HeaderBackImage } from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
@@ -125,7 +125,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

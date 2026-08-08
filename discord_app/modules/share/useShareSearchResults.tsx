@@ -34,6 +34,10 @@ export const useShareSearchResults = function useShareSearchResults(targetDestin
   if (flag === undefined) {
     flag = false;
   }
+  let flag2 = targetDestination.includeFrecency;
+  if (flag2 === undefined) {
+    flag2 = true;
+  }
   let stateFromStores;
   let search;
   let query;
@@ -114,7 +118,7 @@ export const useShareSearchResults = function useShareSearchResults(targetDestin
     search({ query: first.query, resultTypes: first.resultTypes });
   }, items5);
   let tmpResult = tmp(tmp2[9]);
-  const frecencySettings = tmpResult.useFrecencySettings();
+  const frecencySettings = tmpResult.useFrecencySettings(flag2);
   tmpResult = tmp(tmp2[7]);
   const items6 = [query];
   stateFromStores1 = tmpResult.useStateFromStores(items6, () => query.getFrequentlyWithoutFetchingLatest());

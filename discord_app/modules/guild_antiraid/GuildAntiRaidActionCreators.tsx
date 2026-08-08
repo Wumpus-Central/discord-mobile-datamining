@@ -29,7 +29,7 @@ function _setGuildRaidAlerts() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -77,7 +77,7 @@ function _setGuildRaidAlerts() {
             return obj;
           } else {
             table = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           table = tmp;
@@ -173,7 +173,7 @@ function _handleResolveRaid() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -191,7 +191,7 @@ function _handleResolveRaid() {
               guild = guild.getGuild(callback);
               let tmp8 = null;
               if (null != guild) {
-                tmp8 = callback2(9709)(guild);
+                tmp8 = callback2(9775)(guild);
               }
               let tmp5 = null;
               if (null != tmp8) {
@@ -264,7 +264,7 @@ function _handleReportRaid() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -282,7 +282,7 @@ function _handleReportRaid() {
               const guild = outer1_4.getGuild(callback);
               let tmp8 = null;
               if (null != guild) {
-                tmp8 = v0(9709)(guild);
+                tmp8 = v0(9775)(guild);
               }
               let tmp5 = null;
               if (null != tmp8) {

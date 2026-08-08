@@ -13,7 +13,7 @@ let result = require("ME").fileFinishedImporting("modules/favorites/native/Favor
 export default function FavoritesGuildUpsellSheet(limit) {
   let FREE_FAVORITE_LIMIT = limit.limit;
   if (FREE_FAVORITE_LIMIT === undefined) {
-    FREE_FAVORITE_LIMIT = str(9647).FREE_FAVORITE_LIMIT;
+    FREE_FAVORITE_LIMIT = str(9712).FREE_FAVORITE_LIMIT;
   }
   str = limit.source;
   if (str === undefined) {
@@ -25,13 +25,13 @@ export default function FavoritesGuildUpsellSheet(limit) {
   }
   let analyticsLocations;
   let dependencyMap;
-  analyticsLocations = analyticsLocations(5668)(analyticsLocations(5688).FAVORITES_GUILD_UPSELL_MODAL).analyticsLocations;
+  analyticsLocations = analyticsLocations(5728)(analyticsLocations(5748).FAVORITES_GUILD_UPSELL_MODAL).analyticsLocations;
   const items = [str];
   const effect = React.useEffect(() => {
-    const result = str(9651).trackFavoritesGuildUpsellModalOpened(str);
+    const result = str(9716).trackFavoritesGuildUpsellModalOpened(str);
   }, items);
   dependencyMap = React.useCallback(() => {
-    analyticsLocations(4270).hideActionSheet(str(9649).FAVORITES_UPSELL_SHEET_KEY);
+    analyticsLocations(4271).hideActionSheet(str(9714).FAVORITES_UPSELL_SHEET_KEY);
   }, []);
   const intl = str(1236).intl;
   const tmp10 = analyticsLocations(3030);
@@ -46,32 +46,32 @@ export default function FavoritesGuildUpsellSheet(limit) {
     formatToPlainStringResult = intl2.string(tmp3(3030)["WaP/lz"]);
   }
   obj[1] = formatToPlainStringResult;
-  obj[2] = closure_6(str(6214).FavoritesSpotIllustration, {});
+  obj[2] = closure_6(str(6274).FavoritesSpotIllustration, {});
   obj = { size: "lg", variant: "primary", text: null, onPress: null };
   const intl3 = tmp9(1236).intl;
   obj[2] = intl3.string(str(1236).t.pj0XBN);
   obj[3] = function onPress() {
     dependencyMap();
-    analyticsLocations(8562)({ analyticsLocations });
+    analyticsLocations(8622)({ analyticsLocations });
   };
-  const items1 = [closure_6(str(4712).Button, obj), ];
+  const items1 = [closure_6(str(4714).Button, obj), ];
   const intl4 = tmp9(1236).intl;
   const tmp3Result = analyticsLocations(3030);
   const obj1 = { children: null };
   const tmp13 = closure_7;
-  const tmp5 = analyticsLocations(5668);
-  items1[1] = closure_6(str(4712).Button, {
+  const tmp5 = analyticsLocations(5728);
+  items1[1] = closure_6(str(4714).Button, {
     size: "lg",
     variant: "secondary",
     text: intl4.string("limit_reached" === str2 ? tmp3Result.PprSsy : tmp3Result["+dSwhE"]),
     onPress() {
       dependencyMap();
-      const result = str(9651).setNextFavoritesGuildViewSource("upsell_modal");
-      const obj = str(9651);
+      const result = str(9716).setNextFavoritesGuildViewSource("upsell_modal");
+      const obj = str(9716);
       str(1222).transitionToGuild(outer1_5);
     }
   });
   obj1[0] = items1;
-  obj[3] = tmp13(str(5149).ButtonGroup, obj1);
-  return closure_6(str(7673).PromoSheet, obj);
+  obj[3] = tmp13(str(5150).ButtonGroup, obj1);
+  return closure_6(str(7733).PromoSheet, obj);
 };

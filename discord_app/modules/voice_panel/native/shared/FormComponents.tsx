@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/shared/FormComponents.tsx
-import getSystemLocale from "getSystemLocale";
+import usePlayingGameActivities from "usePlayingGameActivities";
 import sortActivity from "sortActivity";
-import jsxProd from "Button";
+import jsxProd from "Text";
 import createCacheKey from "createCacheKey";
 import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import { Button } from "../../../../design/void/native.tsx";
@@ -21,7 +21,7 @@ function VoiceBadges(arg0) {
   if (null != muteDeafenIconState) {
     obj = { style: null, children: null };
     obj[0] = tmp.iconWrapper;
-    let tmp3Result = tmp3(5721);
+    let tmp3Result = tmp3(5781);
     obj = { state: null, size: null, style: null };
     obj[0] = muteDeafenIconState;
     obj[1] = Button.IconSizes.SMALL;
@@ -34,7 +34,7 @@ function VoiceBadges(arg0) {
   if (null != videoIconState) {
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.iconWrapper;
-    tmp3Result = tmp3(5721);
+    tmp3Result = tmp3(5781);
     const obj2 = { state: null, size: null, style: null };
     obj2[0] = videoIconState;
     obj2[1] = Button.IconSizes.SMALL;
@@ -47,12 +47,13 @@ function VoiceBadges(arg0) {
   return closure_6(set, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { marginHorizontal: 16 }, voiceBadgesContainer: { flexDirection: "row" }, iconWrapper: null, icon: null, notConnectedAvatar: null, memberRow: null };
+createCacheKey = { container: { marginHorizontal: 16 }, voiceBadgesContainer: { flexDirection: "row" }, iconWrapper: null, icon: null, notConnectedAvatar: null, memberRow: null, trailingContainer: null };
 createCacheKey = { marginLeft: 8, padding: 6, backgroundColor: require("Themes").colors.MOBILE_VOICE_PANEL_BADGE_BACKGROUND, borderRadius: require("Themes").radii.round };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { width: 16, height: 16, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[4] = { opacity: 0.5 };
 createCacheKey[5] = { flexDirection: "row", alignItems: "center", gap: 4 };
+createCacheKey[6] = { flexDirection: "row", alignItems: "center", gap: 8 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let obj1 = { width: 16, height: 16, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
 const result = require("jsxProd").fileFinishedImporting("modules/voice_panel/native/shared/FormComponents.tsx");
@@ -87,6 +88,10 @@ export const MemberRowItem = function MemberRowItem(user) {
   if (showSecureFramesUI === undefined) {
     showSecureFramesUI = false;
   }
+  let flag2 = user.showGameActivity;
+  if (flag2 === undefined) {
+    flag2 = false;
+  }
   let analyticsLocations;
   let id;
   let stateFromStores;
@@ -104,35 +109,51 @@ export const MemberRowItem = function MemberRowItem(user) {
   obj = { userId: user.id, guildId };
   let obj5 = user(flag[14]);
   const displayNameStylesFont = obj5.useDisplayNameStylesFont({ displayNameStyles: channelId(flag[13])(obj) });
+  let obj6 = analyticsLocations;
   let items = [id, channelId, analyticsLocations];
   const callback = analyticsLocations.useCallback(() => {
     channelId(flag[15])({ userId: id, channelId, isVoiceContext: true, sourceAnalyticsLocations: analyticsLocations });
   }, items);
-  let obj6 = user(flag[16]);
+  let obj7 = user(flag[16]);
   const items1 = [id];
-  stateFromStores = obj6.useStateFromStores(items1, () => user(flag[17]).getStreamerActivityByUserId(id, id));
+  stateFromStores = obj7.useStateFromStores(items1, () => user(flag[17]).getStreamerActivityByUserId(id, id));
+  let tmp13 = channelId(flag[18])("voice_member_row");
+  const tmp9 = channelId(flag[13])(obj);
+  if (tmp13) {
+    tmp13 = flag2;
+  }
+  const first = channelId(flag[19])(id, guildId, tmp13)[0];
+  let application_id;
+  if (first != null) {
+    application_id = first.application_id;
+  }
+  const gameRecord = tmp2(tmp3[20])(application_id).gameRecord;
   const items2 = [stateFromStores, flag];
-  const memo = analyticsLocations.useMemo(() => {
+  let tmp18 = true === showRing;
+  const memo = obj6.useMemo(() => {
     if (!flag) {
       return null;
     } else {
       let obj = stateFromStores;
       if (null == stateFromStores) {
-        const intl = user(flag[19]).intl;
-        intl.string(user(flag[19]).t.eXan7B);
+        const intl = user(flag[22]).intl;
+        intl.string(user(flag[22]).t.eXan7B);
       }
-      const intl2 = user(flag[19]).intl;
+      const intl2 = user(flag[22]).intl;
       if (null == obj.details) {
         obj = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
         obj = { name: null };
         obj[0] = obj.name;
         obj[3] = intl2.format(tmp12, obj);
-        tmp5(user(flag[18]).Text, obj);
+        tmp5(user(flag[21]).Text, obj);
       }
       const details = obj.details;
       tmp5 = stateFromStores;
     }
   }, items2);
+  if (tmp18) {
+    tmp18 = canRing;
+  }
   obj = { onPress: callback, icon: null, subLabel: null, trailing: null, label: null };
   obj1 = { user, guildId, size: null, style: null };
   obj1[2] = user(flag[8]).AvatarSizes.REFRESH_MEDIUM_32;
@@ -143,60 +164,76 @@ export const MemberRowItem = function MemberRowItem(user) {
   obj1[3] = notConnectedAvatar;
   obj[1] = stateFromStores(user(flag[8]).Avatar, obj1);
   obj[2] = memo;
-  if (showRing) {
-    if (canRing) {
-      obj2 = { size: "sm", variant: "secondary", onPress: null, text: null };
-      obj2[2] = function onPress() {
-        const items = [user.id];
-        return channelId(flag[22]).ring(channelId, items, "voice_panel_floating_cta");
-      };
-      let intl = tmp4(tmp3[19]).intl;
-      obj2[3] = intl.string(tmp4(tmp3[19]).t.bHa9kN);
-      let tmp14Result = tmp14(tmp4(tmp3[21]).Button, obj2);
-    }
-    obj[3] = tmp14Result;
+  if (!tmp18) {
+    obj[3] = tmp23Result;
     if (nick == null) {
-      nick = tmp4(tmp3[23]).getName(user);
-      const tmp4Result = tmp4(tmp3[23]);
+      nick = tmp4(tmp3[27]).getName(user);
+      const tmp4Result = tmp4(tmp3[27]);
     }
-    obj3 = { style: null, children: null };
-    obj3[0] = tmp.memberRow;
+    obj2 = { style: null, children: null };
+    obj2[0] = tmp.memberRow;
+    let tmp2Result = tmp2(tmp3[5]);
     let str = "text-default";
     if (notConnected) {
       str = "text-muted";
     }
-    const obj4 = { variant: "text-md/semibold", color: null, style: null, children: null };
-    obj4[1] = str;
-    let tmp21 = null != displayNameStylesFont;
-    if (tmp21) {
-      obj5 = { fontFamily: null };
-      obj5[0] = displayNameStylesFont;
-      tmp21 = obj5;
+    obj3 = { variant: "text-md/semibold", color: null, style: null, children: null };
+    obj3[1] = str;
+    let tmp30 = null != displayNameStylesFont;
+    if (tmp30) {
+      const obj4 = { fontFamily: null };
+      obj4[0] = displayNameStylesFont;
+      tmp30 = obj4;
     }
-    obj4[2] = tmp21;
-    obj4[3] = nick;
-    const items3 = [tmp14(tmp4(tmp3[18]).Text, obj4), , ];
-    obj6 = { userId: null };
-    obj6[0] = user.id;
-    items3[1] = tmp14(tmp2(tmp3[24]), obj6);
-    tmp14Result = null;
+    obj3[2] = tmp30;
+    obj3[3] = nick;
+    const items3 = [tmp20(tmp4(tmp3[21]).Text, obj3), , ];
+    obj5 = { userId: null };
+    obj5[0] = user.id;
+    items3[1] = tmp20(tmp2(tmp3[28]), obj5);
+    let tmp20Result = null;
     if (showSecureFramesUI) {
-      tmp14Result = null;
+      tmp20Result = null;
       if (isUserSecureFramesVerified) {
-        const obj7 = { size: "xs", style: null };
-        obj7[1] = tmp.icon;
-        tmp14Result = tmp14(tmp4(tmp3[25]).ShieldLockIcon, obj7);
+        obj6 = { size: "xs", style: null };
+        obj6[1] = tmp.icon;
+        tmp20Result = tmp20(tmp4(tmp3[29]).ShieldLockIcon, obj6);
       }
     }
-    items3[2] = tmp14Result;
-    obj3[1] = items3;
-    obj[4] = closure_6(tmp2(tmp3[5]), obj3);
-    return tmp14(user(flag[20]).TableRow, obj);
+    items3[2] = tmp20Result;
+    obj2[1] = items3;
+    obj[4] = closure_6(tmp2Result, obj2);
+    return tmp20(tmp4(tmp3[23]).TableRow, obj);
   }
-  if (null != muteDeafenIconState) {
-    const obj8 = { muteDeafenIconState: null, videoIconState: null };
-    obj8[0] = muteDeafenIconState;
-    obj8[1] = videoIconState;
-    tmp14Result = tmp14(VoiceBadges, obj8);
+  obj7 = { style: tmp.trailingContainer, children: null };
+  tmp2Result = tmp2(tmp3[5]);
+  if (tmp18) {
+    const obj8 = { size: "sm", variant: "secondary", onPress: null, text: null };
+    obj8[2] = function onPress() {
+      const items = [user.id];
+      return channelId(flag[25]).ring(channelId, items, "voice_panel_floating_cta");
+    };
+    let intl = tmp4(tmp3[22]).intl;
+    obj8[3] = intl.string(tmp4(tmp3[22]).t.bHa9kN);
+    tmp20Result = tmp20(tmp4(tmp3[24]).Button, obj8);
+  } else {
+    tmp20Result = null;
+    if (tmp19) {
+      const obj9 = { muteDeafenIconState: null, videoIconState: null };
+      obj9[0] = muteDeafenIconState;
+      obj9[1] = videoIconState;
+      tmp20Result = tmp20(VoiceBadges, obj9);
+    }
   }
+  const items4 = [tmp20Result, ];
+  let tmp20Result1 = null;
+  if (null != gameRecord) {
+    const obj10 = { game: null, size: 24, fallback: "placeholder" };
+    obj10[0] = gameRecord;
+    tmp20Result1 = tmp20(tmp2(tmp3[26]), obj10);
+  }
+  items4[1] = tmp20Result1;
+  obj7[1] = items4;
+  const tmp14 = channelId(flag[19]);
+  const tmp23 = closure_6;
 };

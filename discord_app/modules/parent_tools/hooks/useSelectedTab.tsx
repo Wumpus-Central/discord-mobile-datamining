@@ -15,7 +15,7 @@ export default function useSelectedMyFamilyTab() {
   const items = [freshTeenActivityWithMap];
   obj[0] = defaultAreStatesEqual.useStateFromStores(items, () => selectedTab.getSelectedTab());
   obj[1] = function handleTabChange(tab) {
-    let obj = callback(6938);
+    let obj = callback(6998);
     tab = obj.selectTab(tab);
     obj = { action: TabChange.TabChange, tab };
     callback(698).track(constants.FAMILY_CENTER_ACTION, obj);

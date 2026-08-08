@@ -3,14 +3,14 @@ import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 let closure_2 = { "image/avif": "avif", "image/gif": "gif", "image/heic": "heic", "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "video/mp4": "mp4", "video/quicktime": "mov", "video/webm": "webm" };
 const result = require("set").fileFinishedImporting("modules/media/FileExtensionUtils.tsx");
 
-export const decideFileExtension = function decideFileExtension(closure_0, contentType, arg2) {
+export const decideFileExtension = function decideFileExtension(outer1_0, contentType, arg2) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
   let tmp;
   if (flag) {
-    const toURLSafeResult = isDiscordProxiedAssetUrl.toURLSafe(closure_0);
+    const toURLSafeResult = isDiscordProxiedAssetUrl.toURLSafe(outer1_0);
     let formatted;
     if (toURLSafeResult != null) {
       const searchParams = toURLSafeResult.searchParams;
@@ -56,7 +56,7 @@ export const decideFileExtension = function decideFileExtension(closure_0, conte
     tmp = tmp9;
   }
   if (tmp == null) {
-    const toURLSafeResult1 = isDiscordProxiedAssetUrl.toURLSafe(closure_0);
+    const toURLSafeResult1 = isDiscordProxiedAssetUrl.toURLSafe(outer1_0);
     let tmp15;
     if (null != toURLSafeResult1) {
       let formatted1;

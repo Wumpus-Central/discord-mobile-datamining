@@ -17,7 +17,7 @@ const require = arg1;
 function getGradientColorByPercentage(type, END) {
   let colors;
   let colors2;
-  if (type.type === colors(4115).ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
+  if (type.type === colors(4121).ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
     ({ colors, colors: colors2 } = type);
     const mapped = colors.map((arg0) => callback(712).unsafe_rawColors[arg0.token]);
     const mapped1 = colors2.map((stop) => stop.stop);
@@ -30,7 +30,7 @@ function getGradientColorByPercentage(type, END) {
   } else {
     colors = type.customThemeSettings.colors;
     if (1 === colors.length) {
-      return tmp(4145).hexToRgb(colors[0]);
+      return tmp(4151).hexToRgb(colors[0]);
     } else {
       const mapped2 = colors.map((arg0, arg1) => arg1 / (colors.length - 1) * 100);
       obj = n;
@@ -111,7 +111,7 @@ function calculateGradientValueWithOpacity(customBackgroundGradient, END, theme)
     if (arg3 != null) {
       let tmp11 = arg3;
     } else {
-      let tmpResult = tmp(4147);
+      let tmpResult = tmp(4153);
       const result = 0.2 * tmp14;
       if (tmpResult.isThemeDark(theme)) {
         let sum = 0.12 + result;
@@ -122,7 +122,7 @@ function calculateGradientValueWithOpacity(customBackgroundGradient, END, theme)
   } else {
     tmp11 = arg3;
     if (arg3 == null) {
-      tmpResult = tmp(4147);
+      tmpResult = tmp(4153);
       tmpResult.isThemeDark(theme) ? obj.LEVEL_2 : obj.LEVEL_4;
     }
   }
@@ -147,8 +147,8 @@ function calculateGradientValueWithOpacity(customBackgroundGradient, END, theme)
     const tmp30 = getGradientColorByPercentage(customBackgroundGradient, tmp10);
     const tmp35 = new hslToRgb(tmp30.r, tmp30.g, tmp30.b, tmp11);
     const tmp38 = new hslToRgb(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - tmp11);
-    const mixColorsResult = tmp(4145).mixColors(tmp35, tmp38);
-    const tmpResult1 = tmp(4145);
+    const mixColorsResult = tmp(4151).mixColors(tmp35, tmp38);
+    const tmpResult1 = tmp(4151);
     const obj5 = n;
     return n.rgb(mixColorsResult.red, mixColorsResult.green, mixColorsResult.blue).hex("rgb");
   }

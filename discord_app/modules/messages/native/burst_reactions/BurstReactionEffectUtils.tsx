@@ -29,7 +29,7 @@ function _generateAnimationSource() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -68,7 +68,7 @@ function _generateAnimationSource() {
                 noop = "";
               }
               items = noop;
-              const obj12 = lib(7184);
+              const obj12 = lib(7244);
               c9 = 2;
               c10 = 1;
               let obj2 = { value: null, done: false };
@@ -161,7 +161,7 @@ function _generateAnimationSource() {
               obj9[0] = c9;
               obj9[1] = c10;
               obj9[2] = closure_11;
-              closure_6 = lib(7221).replaceAnimationColors(closure_6, obj9);
+              closure_6 = lib(7281).replaceAnimationColors(closure_6, obj9);
               const _JSON2 = JSON;
               dependencyMap2 = 0;
               c10 = 3;
@@ -227,7 +227,7 @@ function _generateAnimationSourceFromLocalImage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -258,7 +258,7 @@ function _generateAnimationSourceFromLocalImage() {
               let closure_10;
               c5 = 1;
               c6 = 1;
-              return { value: "PX_8", done: "Array" };
+              return { value: "ct", done: "Array" };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -326,7 +326,7 @@ function _generateAnimationSourceFromLocalImage() {
             obj6[0] = closure_8;
             obj6[1] = closure_9;
             obj6[2] = closure_10;
-            c5 = lib(7221).replaceAnimationColors(c5, obj6);
+            c5 = lib(7281).replaceAnimationColors(c5, obj6);
             const _JSON = JSON;
             c4 = 0;
             c6 = 3;
@@ -384,7 +384,7 @@ export const useBurstReactionAnimationSource = function useBurstReactionAnimatio
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -482,7 +482,7 @@ export const useSuperReactionAnimationSourceFromLocalImage = function useSuperRe
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -530,7 +530,7 @@ export const useSuperReactionAnimationSourceFromLocalImage = function useSuperRe
               closure_0 = arg1;
               v0(closure_0);
               c3 = 3;
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp14) {
             c3 = tmp;

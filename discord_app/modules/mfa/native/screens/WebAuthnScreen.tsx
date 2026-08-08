@@ -102,7 +102,7 @@ export default function WebAuthnScreen(arg0) {
   obj[0] = intl.string(finish(1236).t.saHocI);
   const intl2 = tmp5(1236).intl;
   obj[1] = intl2.string(finish(1236).t.YpMrqM);
-  obj[2] = challenge(finish(13914).KeyImage, {});
+  obj[2] = challenge(finish(13984).KeyImage, {});
   let shouldDisplayAndroidFidoSelector = _promptForRegisterCredential.shouldDisplayAndroidFidoSelector;
   if (shouldDisplayAndroidFidoSelector) {
     obj = { authenticatorSelection: null, setAuthenticator: null, inProgress: null };
@@ -128,7 +128,7 @@ export default function WebAuthnScreen(arg0) {
   obj1[2] = tmp20;
   obj1[3] = tmp3;
   obj1[4] = callback;
-  obj[4] = challenge(tmp15(14924), obj1);
+  obj[4] = challenge(tmp15(14994), obj1);
   obj[5] = { mfaChallenge, finish };
   obj[7] = tmp4[0];
   return challenge(tmp16, obj);

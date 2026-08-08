@@ -52,7 +52,7 @@ function CacheActionsActionSheet() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -68,7 +68,7 @@ function CacheActionsActionSheet() {
             return obj;
           } else {
             const callback = tmp2;
-            let obj1 = outer1_0(14684);
+            let obj1 = outer1_0(14754);
             c1 = 1;
             dependencyMap = 1;
             obj1 = { value: null, done: false };
@@ -87,7 +87,7 @@ function CacheActionsActionSheet() {
           const intl = callback(1236).intl;
           callback2(intl.string(callback(1236).t.GgUIfl));
           dependencyMap = 3;
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp15) {
         dependencyMap = tmp;
@@ -101,7 +101,7 @@ function CacheActionsActionSheet() {
   const intl3 = getSystemLocale.intl;
   obj2[2] = intl3.string(getSystemLocale.t.tgwiMO);
   obj2[3] = function onPress() {
-    let obj = callback(14684);
+    let obj = callback(14754);
     obj.clearCaches();
     const intl = callback(1236).intl;
     const stringResult = intl.string(callback(1236).t["23xR5w"]);
@@ -114,7 +114,7 @@ function CacheActionsActionSheet() {
     };
     callback2(4002).open(obj);
     const obj2 = callback2(4002);
-    callback2(4270).hideActionSheet(closure_7);
+    callback2(4271).hideActionSheet(closure_7);
   };
   items[1] = callback2(ActionSheetRowIcon.ActionSheetRow, obj2);
   obj[1] = items;

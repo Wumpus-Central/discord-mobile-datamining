@@ -3,7 +3,7 @@ import _objectWithoutProperties from "_objectWithoutProperties";
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
-import { Directions } from "../../../../_runtime/05426_Directions.js";
+import { LegacyBaseButton } from "../../../../_runtime/05427_LegacyBaseButton.js";
 
 const require = arg1;
 let closure_2 = ["children"];
@@ -15,5 +15,5 @@ export const NonCollapsableGestureDetector = function NonCollapsableGestureDetec
   const merged = Object.assign(callback(children, closure_2));
   obj = { style: closure_6, collapsable: false, children: children.children };
   obj.children = <View style={closure_6} collapsable={false}>{arg0.children}</View>;
-  return jsx(Directions.GestureDetector, { style: closure_6, collapsable: false, children: children.children });
+  return jsx(LegacyBaseButton.GestureDetector, { style: closure_6, collapsable: false, children: children.children });
 };

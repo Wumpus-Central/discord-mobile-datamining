@@ -20,7 +20,7 @@ export const openDisableCommunication = function openDisableCommunication(userId
     obj[0] = guildId;
     obj[1] = user;
     obj[2] = cancelButtonCallback;
-    obj.pushLazy(asyncRequireImpl(11173, dependencyMap.paths), obj);
+    obj.pushLazy(asyncRequireImpl(11239, dependencyMap.paths), obj);
   }
 };
 export const openEnableCommunication = function openEnableCommunication(arg0) {

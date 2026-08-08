@@ -9,7 +9,7 @@ const require = arg1;
 function GuildsBarHomeDrawerSeparator(guildItemSize) {
   guildItemSize = guildItemSize.guildItemSize;
   let panelX;
-  let obj = guildItemSize(15087);
+  let obj = guildItemSize(15157);
   panelX = obj.useHomeDrawerState().panelX;
   const tmp = callback(guildItemSize);
   const fn = function n() {
@@ -18,13 +18,13 @@ function GuildsBarHomeDrawerSeparator(guildItemSize) {
     obj[0] = guildItemSize(outer1_2[6]).withSpring(bound, guildItemSize(outer1_2[4]).HOME_DRAWER_FLING_PHYSICS);
     return obj;
   };
-  obj = { withSpring: guildItemSize(4711).withSpring, guildItemSize, panelX, HOME_DRAWER_FLING_PHYSICS: guildItemSize(15087).HOME_DRAWER_FLING_PHYSICS };
+  obj = { withSpring: guildItemSize(4713).withSpring, guildItemSize, panelX, HOME_DRAWER_FLING_PHYSICS: guildItemSize(15157).HOME_DRAWER_FLING_PHYSICS };
   fn.__closure = obj;
   fn.__workletHash = 1425261651828;
   fn.__initData = closure_5;
-  const animatedStyle = guildItemSize(4162).useAnimatedStyle(fn);
+  const animatedStyle = guildItemSize(4036).useAnimatedStyle(fn);
   const style = [tmp.separator, animatedStyle];
-  return jsx(panelX(7949), { style });
+  return jsx(panelX(8009), { style });
 }
 let closure_4 = createCacheKey.createStyles((maxWidth) => {
   let obj = { separator: null };
@@ -45,7 +45,7 @@ const memoResult = require("noop").memo(function GuildsBarSeparator() {
   } else {
     obj = { style: null };
     obj[0] = tmp4.separator;
-    tmp5Result = tmp5(tmp2(5721), obj);
+    tmp5Result = tmp5(tmp2(5781), obj);
   }
   return tmp5Result;
 });

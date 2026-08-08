@@ -5,6 +5,7 @@ import createdAt from "createdAt";
 import items3 from "items3";
 import { ApplicationTypes } from "ApplicationTypes";
 import { ApplicationOverlayMethodFlags } from "../../discord_common/js/shared/shared-constants/ApplicationOverlayMethodFlags.tsx";
+import { items1 } from "../modules/user_application_identity/UserApplicationIdentityConstants.tsx";
 import { getAvatarURL } from "../utils/AvatarUtils.tsx";
 import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 
@@ -81,14 +82,18 @@ BasicApplicationRecord["createFromServer"] = function createFromServer(bot) {
 };
 Object.defineProperty(prototype, "connectionEntrypointUrl", {
   get: function connectionEntrypointUrl(arg0) {
-    const self = this;
-    const items = ["1443349464290168976", "1443350165678198935", "1443033465766281327"];
-    if (!items.includes(this.id)) {
-      let str2 = self._connectionEntrypointUrl;
-    } else if ("1443350165678198935" !== self.id) {
-      str2 = "https://aes.sgp.pvp.net/providers/discord/link/v1?origin=Discord";
+    const obj = items1.APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS[this.id];
+    let prop;
+    if (obj != null) {
+      prop = obj.connectionEntrypointUrlOverride;
     }
-    return str2;
+    if (null != prop) {
+      if (obj.getMigrationExperimentEnabled("ApplicationRecord")) {
+        let _connectionEntrypointUrl = obj.connectionEntrypointUrlOverride;
+      }
+      return _connectionEntrypointUrl;
+    }
+    _connectionEntrypointUrl = this._connectionEntrypointUrl;
   },
   set: undefined
 });

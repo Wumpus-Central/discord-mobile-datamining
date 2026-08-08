@@ -46,7 +46,7 @@ export default function VerifyPhone(phone) {
           obj[0] = token;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -105,7 +105,7 @@ export default function VerifyPhone(phone) {
             } else if (token) {
               c4 = 0;
               c6 = 3;
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             }
             c4 = 0;
             c6 = 3;
@@ -159,7 +159,7 @@ export default function VerifyPhone(phone) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -193,7 +193,7 @@ export default function VerifyPhone(phone) {
           } else {
             outer1_4(false);
             c3 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           c3 = tmp;

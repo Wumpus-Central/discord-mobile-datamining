@@ -74,7 +74,7 @@ let closure_15 = {};
 let c16 = 0;
 let c17 = 0;
 let c18 = 0;
-let closure_19 = { friends: "Array", blocked: "Promise", ignored: "y", blockedOrIgnored: "T" };
+let closure_19 = { friends: "_desired", blocked: "call", ignored: "paths", blockedOrIgnored: "call" };
 const map1 = new Map();
 class RelationshipStore extends Store {
 }

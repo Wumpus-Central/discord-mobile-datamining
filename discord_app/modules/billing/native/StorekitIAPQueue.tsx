@@ -115,7 +115,7 @@ prototype["fetchProducts"] = function fetchProducts(arg0) {
     _queue.push(outer1_2(function*() {
       const dependencyMap = tmp3;
       let c3 = 1;
-      let obj1 = callback(7362);
+      let obj1 = callback(7422);
       obj1 = { skus: null };
       obj1[0] = outer1_0;
       const products = obj1.getProducts(obj1);
@@ -154,7 +154,7 @@ prototype["processQueue"] = function processQueue() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -33,7 +33,7 @@ set = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -65,7 +65,7 @@ set = {
           } else {
             arg1.navigateToDevTools();
             v0 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp8) {
           v0 = tmp;
@@ -96,10 +96,10 @@ export default function DevToolsLazy() {
     }
   });
   const obj2 = stateFromStores(589);
-  const keyCommands = stateFromStores(13765).useKeyCommands(stateFromStores ? items : []);
+  const keyCommands = stateFromStores(13835).useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(14989).default, {});
+      return jsx(tmp(15059).default, {});
     }
   }
   return null;

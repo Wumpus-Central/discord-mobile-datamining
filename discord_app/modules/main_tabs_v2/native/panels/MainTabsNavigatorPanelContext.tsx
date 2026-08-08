@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/panels/MainTabsNavigatorPanelContext.tsx
 import importAllResult from "noop";
-import { Gesture } from "Directions";
+import { Gesture } from "LegacyBaseButton";
 import createFakeSharedValue from "createFakeSharedValue";
 import createFakeSharedValue from "createFakeSharedValue";
 

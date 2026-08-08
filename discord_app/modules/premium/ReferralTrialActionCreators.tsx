@@ -29,7 +29,7 @@ function _fetchReferralEligibleUsers() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -139,7 +139,7 @@ function _createReferralTrials() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         while (true) {
@@ -312,7 +312,7 @@ function _createReferralTrial() {
           obj6.sendClydeError(callback2, closure_2.body.code);
         }
       }
-      yield "T";
+      yield "HermesInternal";
       body = body.body;
       callback2 = body;
       if (body == null) {
@@ -357,7 +357,7 @@ function _resolveReferralTrialOffer() {
       const obj3 = { type: "BILLING_REFERRAL_RESOLVE_FAIL", userTrialOfferId: null };
       obj3[1] = callback;
       obj5.dispatch(obj3);
-      yield "T";
+      yield "HermesInternal";
       body = body.body;
       callback2 = body;
       if (body == null) {

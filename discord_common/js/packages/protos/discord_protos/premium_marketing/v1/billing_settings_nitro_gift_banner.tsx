@@ -19,7 +19,7 @@ class BillingSettingsNitroGiftBanner$Type extends MessageType {
       name: "gradient",
       kind: "message",
       T() {
-            return callback(7298).Gradient;
+            return callback(7358).Gradient;
           }
     };
     items[5] = { no: 6, name: "text_color", kind: "scalar", T: 9 };
@@ -29,7 +29,7 @@ class BillingSettingsNitroGiftBanner$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(7300).ThemeAwareAsset;
+            return callback(7360).ThemeAwareAsset;
           }
     };
     items[8] = {
@@ -37,7 +37,7 @@ class BillingSettingsNitroGiftBanner$Type extends MessageType {
       name: "background_asset",
       kind: "message",
       T() {
-            return callback(7300).ThemeAwareAsset;
+            return callback(7360).ThemeAwareAsset;
           }
     };
     items[9] = {
@@ -45,7 +45,7 @@ class BillingSettingsNitroGiftBanner$Type extends MessageType {
       name: "header_localized",
       kind: "message",
       T() {
-            return callback(7290).LocalizedString;
+            return callback(7350).LocalizedString;
           }
     };
     obj = { no: 11, name: "body_localized", kind: "message", T: null };
@@ -61,7 +61,7 @@ class BillingSettingsNitroGiftBanner$Type extends MessageType {
       name: "additional_terms_localized",
       kind: "message",
       T() {
-            return callback(7290).LocalizedString;
+            return callback(7350).LocalizedString;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.BillingSettingsNitroGiftBanner", items, T);
@@ -87,9 +87,10 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  if (pos.pos < pos.pos + arg1) {
-    [r10019, r10020] = callback(pos.tag(), 2);
-    const tmp3 = callback(pos.tag(), 2);
+  const sum = pos.pos + arg1;
+  if (pos.pos < sum) {
+    const LocalizedString = create.LocalizedString;
+    obj.additionalTermsLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), arg2, obj.additionalTermsLocalized);
   }
   return obj;
 };
@@ -174,7 +175,7 @@ let items = [
     name: "gradient",
     kind: "message",
     T() {
-      return callback(7298).Gradient;
+      return callback(7358).Gradient;
     }
   },
   { no: 6, name: "text_color", kind: "scalar", T: 9 },
@@ -184,7 +185,7 @@ let items = [
     name: "asset",
     kind: "message",
     T() {
-      return callback(7300).ThemeAwareAsset;
+      return callback(7360).ThemeAwareAsset;
     }
   },
   {
@@ -192,7 +193,7 @@ let items = [
     name: "background_asset",
     kind: "message",
     T() {
-      return callback(7300).ThemeAwareAsset;
+      return callback(7360).ThemeAwareAsset;
     }
   },
   {
@@ -200,7 +201,7 @@ let items = [
     name: "header_localized",
     kind: "message",
     T() {
-      return callback(7290).LocalizedString;
+      return callback(7350).LocalizedString;
     }
   },
 ,
@@ -219,7 +220,7 @@ items[11] = {
   name: "additional_terms_localized",
   kind: "message",
   T() {
-    return callback(7290).LocalizedString;
+    return callback(7350).LocalizedString;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.BillingSettingsNitroGiftBanner", items, tmp, T, BillingSettingsNitroGiftBanner$Type, prototype, items);

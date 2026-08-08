@@ -44,7 +44,7 @@ export default function WebAuthnNameStep(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -103,7 +103,7 @@ export default function WebAuthnNameStep(arg0) {
             v0(outer1_2[9]).open(obj3);
             arr = arr.push(outer1_7.SUCCESS, {});
             v03 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp32) {
           arr = tmp32;

@@ -62,7 +62,7 @@ function renderCategoryItem(arg0) {
     obj[2] = str;
     obj[4] = styles.categoryText;
     obj[5] = name;
-    tmp2 = callback(trailingAction(4298).Text, obj);
+    tmp2 = callback(trailingAction(4299).Text, obj);
     const tmp28 = callback;
   }
   let tmp3 = null;
@@ -130,7 +130,7 @@ function renderCategoryItem(arg0) {
     obj4[5] = onLongPress;
     obj4[6] = items;
     obj4[7] = tmp14Result;
-    tmp24Result = callback(trailingAction(4844).PressableHighlight, obj4);
+    tmp24Result = callback(trailingAction(4846).PressableHighlight, obj4);
     const tmp14 = closure_13;
     const tmp15 = closure_12;
     const tmp24 = callback;
@@ -144,9 +144,9 @@ function renderCategoryItem(arg0) {
     let colors = Themes.colors;
     const obj8 = { size: "xxs", color: null };
     obj8[1] = muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE;
-    colors = tmp6(trailingAction(12041).PlusMediumIcon, obj8);
+    colors = tmp6(trailingAction(12107).PlusMediumIcon, obj8);
     obj7[4] = colors;
-    obj7 = tmp6(trailingAction(4844).PressableOpacity, obj7);
+    obj7 = tmp6(trailingAction(4846).PressableOpacity, obj7);
     obj6[1] = obj7;
     callback(View, obj6);
     const tmp7 = View;
@@ -230,7 +230,7 @@ export const CategoryChannel = function CategoryChannel(channel) {
   }, items1);
   obj = { name: null, muted: null, collapsed: null, onPress: null, onLongPress: null, withMarginTop: null, styles: null, isRefreshEnabled: null, trailingAction: null };
   const callback1 = React.useCallback(() => id(outer1_2[15]).openChannelLongPressActionSheet(id), items2);
-  obj[0] = collapsed(4492)(channel);
+  obj[0] = collapsed(4494)(channel);
   obj[1] = stateFromStoresObject.muted;
   obj[2] = collapsed;
   obj[3] = callback;
@@ -238,13 +238,13 @@ export const CategoryChannel = function CategoryChannel(channel) {
   obj[5] = channel.withMarginTop;
   obj[6] = styles(tmp2);
   obj[7] = tmp2;
-  obj[8] = collapsed(12067)(channel);
+  obj[8] = collapsed(12133)(channel);
   const collapsed2 = obj.collapsed;
   const merged = Object.assign(obj, Object.create(null));
   const colors = collapsed(712).colors;
   obj = {};
   const merged1 = Object.assign(merged);
-  obj.icon = callback(id(9413).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? createCacheKey : obj1 });
+  obj.icon = callback(id(9478).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? createCacheKey : obj1 });
   obj.accessibilityState = { expanded: !collapsed2 };
   obj.isRefreshEnabled = obj.isRefreshEnabled;
   return renderCategoryItem(obj);
@@ -271,7 +271,7 @@ export const RecentlyActiveCategory = function RecentlyActiveCategory(guildId) {
   const colors = stateFromStores(712).colors;
   obj = {};
   const merged1 = Object.assign(merged);
-  obj.icon = callback(guildId(9413).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? createCacheKey : obj1 });
+  obj.icon = callback(guildId(9478).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? createCacheKey : obj1 });
   obj.accessibilityState = { expanded: !collapsed };
   obj.isRefreshEnabled = obj.isRefreshEnabled;
   return renderCategoryItem(obj);

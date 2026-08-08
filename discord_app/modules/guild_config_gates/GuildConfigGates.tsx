@@ -43,7 +43,7 @@ let closure_3 = require("dispatcher")((arg0) => {
         obj[0] = body;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

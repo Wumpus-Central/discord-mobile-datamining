@@ -25,7 +25,7 @@ import set from "VoicePanelControlsModes";
 let CONTROLS_HEIGHT;
 let VoicePanelControlsModes;
 ({ CONTROLS_HEIGHT, VoicePanelControlsModes } = VoicePanelControlsModes);
-let obj = { channelId: "context-not-initialized", channelType: "e", connected: "Array", contentDimensions: false, controlsSpecs: null, dismissPanel: null, dismissToPIPGestureRef: null, dragScrolling: null, focused: null, generateStateLocker: null, guildId: null, hideControls: null, isCall: null, isFocusedVideoZoomed: null, layoutManager: null, mode: null, morphablePanelMode: null, mountedCards: null, pipAvoidanceSpecs: null, preJoinContentSize: null, safeArea: null, scrollPosition: null, setControlsMode: null, setFocused: null, setIsFocusedVideoZoomed: null, setMode: null, setShowFloatingCTA: "flag_cw", showControls: 39490625, showFloatingCTA: 1783702016, streamOutputSinkStack: 18944264, windowDimensions: 553804065, wrapperDimensions: 24257025, useReducedMotion: 16777216, wrapperOffset: 587202560, panelCardStillInPIP: -1372831487 };
+let obj = { channelId: "context-not-initialized", channelType: "e", connected: "Array", contentDimensions: false, controlsSpecs: null, dismissPanel: null, dismissToPIPGestureRef: null, dragScrolling: null, focused: null, generateStateLocker: null, guildId: null, hideControls: null, isCall: null, isFocusedVideoZoomed: null, layoutManager: null, mode: null, morphablePanelMode: null, mountedCards: null, pipAvoidanceSpecs: null, preJoinContentSize: null, safeArea: null, scrollPosition: null, setControlsMode: null, setFocused: null, setIsFocusedVideoZoomed: null, setMode: null, setShowFloatingCTA: "row", showControls: "center", showFloatingCTA: "100%", streamOutputSinkStack: 20, windowDimensions: 0.1, wrapperDimensions: 100, useReducedMotion: "1,camera", wrapperOffset: "2,camera", panelCardStillInPIP: "2,camera,camera" };
 obj[2] = createFakeSharedValue.createFakeSharedValue(false);
 obj[3] = createFakeSharedValue.createFakeSharedValue({ width: 0, height: 0 });
 obj = { mode: VoicePanelControlsModes.FLOATING_DEFAULT, locked: false, height: CONTROLS_HEIGHT, pushToTalk: false };
@@ -34,7 +34,7 @@ obj[5] = function dismissPanel() {
   const error = new Error("VoicePanelContextType.Provider.dismissDrawer: not called within a context provider");
   throw error;
 };
-obj[6] = { current: "r" };
+obj[6] = { current: "sa" };
 obj[7] = createFakeSharedValue.createFakeSharedValue(false);
 obj[8] = createFakeSharedValue.createFakeSharedValue(null);
 obj[9] = function generateStateLocker(closure_0) {

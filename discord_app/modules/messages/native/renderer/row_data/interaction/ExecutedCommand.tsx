@@ -53,7 +53,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
           tmp25 = new createdAt(initialInteractionMetadata.target_user);
         }
       }
-      let tmp17Result = tmp17(4530);
+      let tmp17Result = tmp17(4532);
       const userAuthor1 = tmp17Result.getUserAuthor(tmp25, channel);
       const colorString2 = userAuthor1.colorString;
       let tmp34 = defaultUsernameColor;
@@ -81,7 +81,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         guildId = channel.getGuildId();
       }
       id = message.interaction.user.id;
-      tmp17Result = tmp17(8010);
+      tmp17Result = tmp17(8070);
       const result1 = tmp17Result.isNativeMessageEligibleForEnhancedRoleColors(guildId, id);
       let id1;
       if (tmp25 != null) {
@@ -90,13 +90,13 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       let processColorStringsResult = null;
       const result2 = processColorStrings.isNativeMessageEligibleForEnhancedRoleColors(guildId, id1);
       if (result1) {
-        processColorStringsResult = tmp17(8010).processColorStrings(userAuthor.colorStrings);
-        const tmp17Result2 = tmp17(8010);
+        processColorStringsResult = tmp17(8070).processColorStrings(userAuthor.colorStrings);
+        const tmp17Result2 = tmp17(8070);
       }
       let processColorStringsResult1 = null;
       if (result2) {
-        processColorStringsResult1 = tmp17(8010).processColorStrings(userAuthor1.colorStrings);
-        const tmp17Result3 = tmp17(8010);
+        processColorStringsResult1 = tmp17(8070).processColorStrings(userAuthor1.colorStrings);
+        const tmp17Result3 = tmp17(8070);
       }
       let obj = { username: null, usernameOnClick: null };
       const tmp15 = message.type === MessageTypes.CHAT_INPUT_COMMAND || message.type === tmp14.INTERACTION_PREMIUM_UPSELL;
@@ -121,7 +121,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       obj[1] = obj;
       if (tmp) {
         if (!result) {
-          const result3 = tmp17(8277).isActivitiesInTextEnabled(channel);
+          const result3 = tmp17(8337).isActivitiesInTextEnabled(channel);
           const intl = tmp17(1236).intl;
           const formatToParts = intl.formatToParts;
           const t = tmp17(1236).t;
@@ -138,7 +138,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
             const merged1 = Object.assign(obj);
             formatToPartsResult = formatToParts(t.k964Wm, obj3);
           }
-          const tmp17Result5 = tmp17(8277);
+          const tmp17Result5 = tmp17(8337);
         }
         obj4 = { userId: null, username: null, usernameColor: null, avatarURL: null, targetUsernameColor: null, content: null, commandNameBackgroundStyles: null, showAppsIcon: true };
         obj4[0] = message.interaction.user.id;
@@ -154,8 +154,8 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       }
       let result4 = displayName;
       if (result) {
-        result4 = tmp17(8278).formatPrimaryEntryPointCommandName(displayName);
-        const tmp17Result6 = tmp17(8278);
+        result4 = tmp17(8338).formatPrimaryEntryPointCommandName(displayName);
+        const tmp17Result6 = tmp17(8338);
       }
       const intl2 = tmp17(1236).intl;
       obj6 = {};
@@ -179,7 +179,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         const merged3 = Object.assign(obj);
         obj9.commandName = result4;
         obj9.commandNameOnClick = {};
-        obj9.targetUsername = tmp17(4530).getUserAuthor(tmp25, channel).nick;
+        obj9.targetUsername = tmp17(4532).getUserAuthor(tmp25, channel).nick;
         let id2;
         if (tmp25 != null) {
           id2 = tmp25.id;
@@ -200,7 +200,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         obj10[7] = tmp52;
         obj9.targetUsernameOnClick = obj10;
         formatToPartsResult = intl3.formatToParts(tmp17(1236).t.mqKdCM, obj9);
-        const tmp17Result7 = tmp17(4530);
+        const tmp17Result7 = tmp17(4532);
         const tmp67 = colorString2;
       }
       const tmp17Result4 = useNullableMessageAuthor;

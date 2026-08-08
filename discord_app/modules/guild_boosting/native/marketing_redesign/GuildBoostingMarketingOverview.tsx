@@ -84,9 +84,9 @@ export default function GuildBoostingMarketingOverview(guildId) {
   }, items3);
   const effect1 = obj3.useEffect(() => {
     guildBoostSlots(stateFromStores[16]).wait(() => {
-      const premiumSubscriptionPlans = callback(5817).fetchPremiumSubscriptionPlans();
-      const obj = callback(5817);
-      const paymentSources = callback(4621).fetchPaymentSources();
+      const premiumSubscriptionPlans = callback(5877).fetchPremiumSubscriptionPlans();
+      const obj = callback(5877);
+      const paymentSources = callback(4623).fetchPaymentSources();
     });
   }, []);
   let tmp18 = null;

@@ -5,7 +5,7 @@ import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import importDefaultResult1 from "module_4162";
+import importDefaultResult1 from "module_4036";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 
 let c10;
@@ -16,7 +16,7 @@ let c9;
 ({ useMemo: c3, useEffect: c4, useRef: c5 } = noop);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = ["#666777", "#535564"];
-let closure_12 = require("module_4162").createAnimatedComponent(require("inlineStyles").Circle);
+let closure_12 = require("module_4036").createAnimatedComponent(require("inlineStyles").Circle);
 let obj = { "x-sm": 40, sm: 64, md: 70, "md-lg": 100, lg: 128 };
 let closure_14 = createCacheKey.createStyles((arg0) => {
   let obj = { wrapper: { position: "relative" }, container: { position: "relative", display: "flex", justifyContent: "center", alignItems: "center", zIndex: 1 }, completionGlow: { shadowOffset: { width: 0, height: 0 }, shadowRadius: 20, shadowOpacity: 0, elevation: 4, shadowColor: "#30C77399" }, canvas: { transform: items }, imageContainer: null, progressPath: null, confetti: null, opacityMask: null };

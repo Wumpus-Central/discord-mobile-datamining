@@ -4,29 +4,29 @@ import initializeFromUserSettings from "initializeFromUserSettings";
 const require = arg1;
 const result = require("initialize").fileFinishedImporting("modules/favorites/hooks/useIsFavoritesGuildEnabled.tsx");
 
-export const computeIsFavoritesGuildEnabled = function computeIsFavoritesGuildEnabled(isFreemium, favoriteGuildExplicitlyHidden) {
+export const computeIsFavoritesGuildEnabled = function computeIsFavoritesGuildEnabled(isFreemium, favoriteGuildVisibleSetting) {
   if (isFreemium) {
-    let favoriteGuildEnabled = !favoriteGuildExplicitlyHidden.favoriteGuildExplicitlyHidden;
+    let favoriteGuildEnabled = false !== favoriteGuildVisibleSetting.favoriteGuildVisibleSetting;
   } else {
-    favoriteGuildEnabled = favoriteGuildExplicitlyHidden.favoriteGuildEnabled;
+    favoriteGuildEnabled = favoriteGuildVisibleSetting.favoriteGuildEnabled;
   }
   return favoriteGuildEnabled;
 };
 export const getIsFavoritesGuildEnabled = function getIsFavoritesGuildEnabled() {
   if (obj.getFavoritesAccess().isFreemium) {
-    let favoriteGuildEnabled = !tmp.favoriteGuildExplicitlyHidden;
+    let favoriteGuildEnabled = false !== tmp.favoriteGuildVisibleSetting;
   } else {
     favoriteGuildEnabled = tmp.favoriteGuildEnabled;
   }
   return favoriteGuildEnabled;
 };
 export const useIsFavoritesGuildEnabled = function useIsFavoritesGuildEnabled() {
-  isFreemium = isFreemium(9645).useFavoritesAccess("useIsFavoritesGuildEnabled").isFreemium;
-  const obj = isFreemium(9645);
+  isFreemium = isFreemium(9711).useFavoritesAccess("useIsFavoritesGuildEnabled").isFreemium;
+  const obj = isFreemium(9711);
   const items = [initializeFromUserSettings];
   return isFreemium(589).useStateFromStores(items, () => {
     if (isFreemium) {
-      let favoriteGuildEnabled = !tmp.favoriteGuildExplicitlyHidden;
+      let favoriteGuildEnabled = false !== tmp.favoriteGuildVisibleSetting;
     } else {
       favoriteGuildEnabled = tmp.favoriteGuildEnabled;
     }

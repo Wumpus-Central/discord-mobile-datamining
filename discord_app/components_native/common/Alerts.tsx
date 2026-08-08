@@ -1,6 +1,6 @@
 // discord_app/components_native/common/Alerts.tsx
 import importAllResult from "shallowEqual";
-import get_ActivityIndicator from "module_5764";
+import get_ActivityIndicator from "module_5824";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import importDefaultResult from "initialize";
 import importDefaultResult1 from "handleUpdateVADPermission";
@@ -148,7 +148,7 @@ AlertWrapper.prototype["render"] = function render() {
   return callback(Dialog.Dialog, obj);
 };
 AlertWrapper.contextType = require("ManaContext").ThemeContext;
-let closure_18 = Object.freeze({ renderAlert: "sa", renderKey: "isArray", props: "isArray" });
+let closure_18 = Object.freeze({ renderAlert: "Array", renderKey: "call", props: "useStateFromStores" });
 let obj1 = {
   stores: items3,
   center: true,
@@ -194,7 +194,7 @@ const memoResult = importAllResult.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "sa", renderKey: "isArray", props: "isArray" };
+        return { renderAlert: "Array", renderKey: "call", props: "useStateFromStores" };
       }
     }
   });

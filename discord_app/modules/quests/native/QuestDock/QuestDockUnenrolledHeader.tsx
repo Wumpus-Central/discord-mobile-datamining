@@ -5,7 +5,7 @@ import get_ActivityIndicator from "useTheme";
 import { QuestDockMode } from "QuestsExperimentLocations";
 import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT";
 import { ThemeTypes } from "sum";
-import jsxProd from "module_4162";
+import jsxProd from "module_4036";
 import createCacheKey from "createCacheKey";
 import { CONFIG_NEVER_ANIMATE } from "../../../../design/animation/reanimated/spring/spring.tsx";
 

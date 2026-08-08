@@ -107,6 +107,13 @@ export const getDeviceManufacturer = function getDeviceManufacturer() {
 export const getSmallestScreenWidthDp = function getSmallestScreenWidthDp() {
   return DCDDeviceManager.smallestScreenWidth;
 };
+export const isOrientationLockSupported = function isOrientationLockSupported() {
+  let flag = DCDDeviceManager.isOrientationLockSupported;
+  if (flag == null) {
+    flag = true;
+  }
+  return flag;
+};
 export const getSocName = function getSocName() {
   return DCDDeviceManager.socName;
 };

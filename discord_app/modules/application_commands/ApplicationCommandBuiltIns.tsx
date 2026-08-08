@@ -503,7 +503,7 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -527,7 +527,7 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
             id = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "PX_8", done: "Array" };
+            return { value: "ct", done: "Array" };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -549,8 +549,8 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
             if (tmp11 == null) {
               closure_3 = "";
             }
-            obj1 = callback(8294);
-            let obj2 = callback(8296);
+            obj1 = callback(8354);
+            let obj2 = callback(8356);
             c6 = 2;
             c7 = 1;
             obj2 = { value: null, done: false };
@@ -567,13 +567,13 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
           return obj;
         } else {
           id = arg1;
-          const obj8 = channel(6857);
+          const obj8 = channel(6917);
           id = id.id;
           const obj3 = { location: null };
           obj3[0] = constants.THREAD_CREATION;
-          obj8.sendMessage(id, channel(7082).parse(id, closure_3), true, obj3);
+          obj8.sendMessage(id, channel(7142).parse(id, closure_3), true, obj3);
           c7 = 3;
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp27) {
         c7 = tmp;
@@ -668,7 +668,7 @@ obj18.execute = function execute(arr, guild) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -930,7 +930,7 @@ obj21.execute = function execute(arr, guild) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1155,7 +1155,7 @@ obj25.execute = function execute(arr, guild) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1359,7 +1359,7 @@ obj29.execute = function execute(arr, channel) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1399,7 +1399,7 @@ obj29.execute = function execute(arr, channel) {
             return obj;
           } else {
             c0 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp8) {
           c0 = tmp;
@@ -1533,8 +1533,8 @@ obj32.execute = function execute(arr, channel) {
     }
     const NumberResult = Number(num);
     const NumberResult1 = Number(num2);
-    size(5806).startDiceRoll(channel.id, NumberResult, NumberResult1);
-    const obj = size(5806);
+    size(5866).startDiceRoll(channel.id, NumberResult, NumberResult1);
+    const obj = size(5866);
   }
 };
 items[sum10 + 1] = obj32;

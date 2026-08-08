@@ -26,7 +26,7 @@ function _getMyContentInventory() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -52,7 +52,7 @@ function _getMyContentInventory() {
               date = undefined;
               date = 1;
               c6 = 1;
-              return { value: "PX_8", done: "Array" };
+              return { value: "ct", done: "Array" };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -82,7 +82,7 @@ function _getMyContentInventory() {
           } else if (2 === tmp7) {
             constants = 0;
             c6 = body;
-            const aPIError = new callback(4201).APIError(c6);
+            const aPIError = new callback(4202).APIError(c6);
             throw aPIError;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -151,7 +151,7 @@ function _getContentInventoryOutbox() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -192,7 +192,7 @@ function _getContentInventoryOutbox() {
             obj4 = { type: "CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE", userId: null };
             obj4[1] = callback;
             obj4.dispatch(obj4);
-            const aPIError = new callback(4201).APIError(dependencyMap);
+            const aPIError = new callback(4202).APIError(dependencyMap);
             throw aPIError;
           } else if (arg0 === 1) {
             c7 = 3;
@@ -322,7 +322,7 @@ function _postTrackToContentInventory() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -372,7 +372,7 @@ function _postTrackToContentInventory() {
           } else {
             constants = 0;
             c7 = 3;
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp19) {
           closure_4 = tmp19;

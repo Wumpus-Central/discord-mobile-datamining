@@ -76,7 +76,7 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
     if (!tmp7Result.isLoading) {
       if (0 === accounts.length) {
         if (0 === prop.length) {
-          let tmp14 = callback(tmp2(14134), {});
+          let tmp14 = callback(tmp2(14204), {});
         }
       }
       obj = { style: null, children: null };
@@ -92,9 +92,9 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
       ];
       obj = { spacing: 16, children: null };
       obj[1] = accounts.map((account) => outer1_11(callback(paths[23]), { theme: callback, locale: paths, account }, account.id));
-      items5[1] = callback(tmp4(4710).Stack, obj);
+      items5[1] = callback(tmp4(4712).Stack, obj);
       obj[1] = items5;
-      tmp14 = callback2(tmp4(7907).Form, obj);
+      tmp14 = callback2(tmp4(7967).Form, obj);
     }
     return tmp14;
   }

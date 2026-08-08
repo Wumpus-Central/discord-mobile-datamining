@@ -26,7 +26,7 @@ function AddAppButton(application) {
   const customInstallUrl = application.customInstallUrl;
   if (null != customInstallUrl) {
     if (!obj2.isDiscordUrl(customInstallUrl)) {
-      let PlusSmallIcon = application(7895).LinkExternalSmallIcon;
+      let PlusSmallIcon = application(7955).LinkExternalSmallIcon;
       let tmp6 = application;
     }
     const items1 = [application];
@@ -56,9 +56,9 @@ function AddAppButton(application) {
     obj = { size: "sm", color: null };
     obj[1] = guildId(712).colors.WHITE;
     obj[5] = <PlusSmallIcon size="sm" color={null} />;
-    return jsx(tmp6(4712).Button, { size: "sm", color: null });
+    return jsx(tmp6(4714).Button, { size: "sm", color: null });
   }
-  PlusSmallIcon = application(9367).PlusSmallIcon;
+  PlusSmallIcon = application(9432).PlusSmallIcon;
   tmp6 = application;
 }
 function OpenAppButton(profileApplication) {
@@ -81,7 +81,7 @@ function OpenAppButton(profileApplication) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

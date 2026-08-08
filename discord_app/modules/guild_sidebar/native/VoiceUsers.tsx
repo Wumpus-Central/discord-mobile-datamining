@@ -1,9 +1,9 @@
 // discord_app/modules/guild_sidebar/native/VoiceUsers.tsx
-import { View } from "get ActivityIndicator";
+import importAllResult from "noop";
+import { View } from "VoiceUsersItem";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { HeadphonesIcon } from "../../../design/components/Icon/native/redesign/generated/HeadphonesIcon.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -11,10 +11,9 @@ import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { useIsUsingClientTheme } from "../../client_themes/native/useIsUsingClientTheme.tsx";
 import { getLayoutStyles } from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
 import { map } from "../../screen/native/useScaledTextLineHeight.android.tsx";
-import { VoiceUsersItem } from "VoiceUsersItem.tsx";
 
-let c5;
 let closure_6;
+let error;
 const require = arg1;
 function AudienceItem(arg0) {
   let audienceCount;
@@ -30,13 +29,16 @@ function AudienceItem(arg0) {
   }
   obj = { style: collapsed ? tmp2.listenersCollapsed : tmp2.listeners, children: null };
   obj = { style: tmp2.listenersIconWrapper, children: callback(HeadphonesIcon.HeadphonesIcon, obj1) };
-  const items = [callback(View, obj), callback(Text.Text, { style: tmp2.listenersText, variant: c7, color: "redesign-channel-name-muted-text", children: formatToPlainStringResult })];
+  const items = [callback(View, obj), callback(Text.Text, { style: tmp2.listenersText, variant: c10, color: "redesign-channel-name-muted-text", children: formatToPlainStringResult })];
   obj[1] = items;
-  return closure_6(View, obj);
+  return closure_7(View, obj);
 }
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let c7 = "text-sm/medium";
-let closure_8 = createCacheKey.createStyles((arg0) => {
+let c3 = importAllResult;
+({ jsx: closure_6, jsxs: error } = jsxProd);
+let closure_8 = {};
+let closure_9 = [];
+let c10 = "text-sm/medium";
+let closure_11 = createCacheKey.createStyles((arg0) => {
   const colors = Themes.colors;
   if (arg0) {
     let BACKGROUND_BASE_LOWEST = colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT;
@@ -56,7 +58,7 @@ let closure_8 = createCacheKey.createStyles((arg0) => {
   obj[5] = getLayoutStyles.makeSizeStyle(14);
   return obj;
 });
-let closure_9 = require("noop").memo((voiceState) => {
+let closure_12 = importAllResult.memo((voiceState) => {
   let isGuest;
   let member;
   let storeMember;
@@ -69,7 +71,7 @@ let closure_9 = require("noop").memo((voiceState) => {
   let obj = user(589);
   const items = [trackCommunicationDisabled];
   const items1 = [channel.guild_id, user.id];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ storeMember: outer1_4.getMember(channel.guild_id, user.id), isGuest: outer1_4.isGuestOrLurker(channel.guild_id, user.id) }), items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ storeMember: outer1_5.getMember(channel.guild_id, user.id), isGuest: outer1_5.isGuestOrLurker(channel.guild_id, user.id) }), items1);
   let userCollapsedOverlap = null;
   ({ storeMember, isGuest } = stateFromStoresObject);
   if (collapsed) {
@@ -81,7 +83,7 @@ let closure_9 = require("noop").memo((voiceState) => {
   obj = { style: userCollapsedOverlap, children: null };
   obj = { user, member: null, mute: null, deaf: null, selfVideo: null, selfMute: null, selfDeaf: null, suppress: null, collapsed: null, sessionId: null, channel: null, isGuest: null };
   const tmp = channel;
-  tmp3 = callback2(channel(8332)());
+  tmp3 = callback2(channel(8392)());
   const tmp6 = View;
   if (member == null) {
     member = storeMember;
@@ -92,37 +94,63 @@ let closure_9 = require("noop").memo((voiceState) => {
   obj[9] = voiceState2.sessionId;
   obj[10] = channel;
   obj[11] = isGuest;
-  obj[1] = closure_5(channel(15177), obj, user.id);
-  return closure_5(tmp6, obj);
+  obj[1] = closure_6(channel(15247), obj, user.id);
+  return closure_6(tmp6, obj);
 });
 const result = require("trackCommunicationDisabled").fileFinishedImporting("modules/guild_sidebar/native/VoiceUsers.tsx");
 
 export default function VoiceUsers(collapsed) {
   let audienceCount;
-  let importDefault;
   let voiceStates;
   collapsed = collapsed.collapsed;
-  ({ channel: importDefault, voiceStates, audienceCount } = collapsed);
-  let tmp = null;
-  if (0 !== voiceStates.length) {
-    let obj = { collapsed: null, children: null };
-    obj[0] = collapsed;
-    const items = [voiceStates.map((user) => outer1_5(outer1_9, { voiceState: user, channel: closure_1, collapsed, isFirst: 0 === arg1 }, "voice-user-item-" + user.user.id + "-" + user.voiceState.sessionId)), ];
-    let tmp2 = null != audienceCount && audienceCount > 0;
-    if (tmp2) {
-      obj = { audienceCount: null, collapsed: null };
-      obj[0] = audienceCount;
-      obj[1] = collapsed;
-      tmp2 = callback(AudienceItem, obj);
+  const channel = collapsed.channel;
+  ({ voiceStates, audienceCount } = collapsed);
+  let guild_id;
+  let importAllResult;
+  guild_id = channel.guild_id;
+  if (tmp3) {
+    if (null != guild_id) {
+      const substr = voiceStates.slice(0, collapsed(tmp2[16]).MAX_GUILD_MEMBER_SUBSCRIPTIONS);
+      let mapped = substr.map((user) => user.user.id);
     }
-    items[1] = tmp2;
-    obj[1] = items;
-    tmp = closure_6(VoiceUsersItem, obj);
-    const tmp5 = closure_6;
-    const tmp8 = VoiceUsersItem;
+    const tmp4Result = tmp4(mapped);
+    importAllResult = tmp4Result;
+    const items = [guild_id, tmp4Result];
+    const memo = importAllResult.useMemo(() => {
+      if (null != guild_id) {
+        if (_undefined.length > 0) {
+          const obj = {};
+          obj[tmp] = tmp2;
+          let tmp3 = obj;
+        }
+        return tmp3;
+      }
+      tmp3 = outer1_8;
+    }, items);
+    let obj = collapsed(tmp2[16]);
+    const subscribeGuildMembers = obj.useSubscribeGuildMembers(memo, "voice_channel_games");
+    let tmp15Result = null;
+    if (0 !== voiceStates.length) {
+      obj = { collapsed: null, children: null };
+      obj[0] = collapsed;
+      const items1 = [voiceStates.map((user) => outer1_6(outer1_12, { voiceState: user, channel, collapsed, isFirst: 0 === arg1 }, "voice-user-item-" + user.user.id + "-" + user.voiceState.sessionId)), ];
+      let tmp17 = null != audienceCount && audienceCount > 0;
+      if (tmp17) {
+        obj = { audienceCount: null, collapsed: null };
+        obj[0] = audienceCount;
+        obj[1] = collapsed;
+        tmp17 = callback(AudienceItem, obj);
+      }
+      items1[1] = tmp17;
+      obj[1] = items1;
+      tmp15Result = closure_7(channel(tmp2[17]), obj);
+      const tmp15 = closure_7;
+      const tmpResult = channel(tmp2[17]);
+    }
+    return tmp15Result;
   }
-  return tmp;
+  mapped = closure_9;
 };
 export const getAudienceItemHeight = function getAudienceItemHeight(fontScale) {
-  return 8 + Math.max(20, map.scaleTextLineHeight(c7, fontScale));
+  return 8 + Math.max(20, map.scaleTextLineHeight(c10, fontScale));
 };

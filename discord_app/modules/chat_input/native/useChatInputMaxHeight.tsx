@@ -79,7 +79,7 @@ export const getChatInputHeightAnimationTiming = function getChatInputHeightAnim
   }
   let tmpResult = tmp(1474);
   const bound = Math.min(height, Math.min(200, Math.max(2 * closure_6, tmpResult.getWindowDimensions({ ignoreKeyboard: true }).height - systemKeyboardHeight - 200)));
-  tmpResult = tmp(4303);
-  obj = { duration: tmp(4306).timingFastDuration, easing: tmp(4162).Easing.linear };
+  tmpResult = tmp(4304);
+  obj = { duration: tmp(4307).timingFastDuration, easing: tmp(4036).Easing.linear };
   return tmpResult.withTiming(bound, obj);
 };

@@ -6,38 +6,30 @@ const require = arg1;
 let result = require("useAdContentImpressionTrackerProps").fileFinishedImporting("modules/quests/lib/analytics/AnalyticsHooks.tsx");
 
 export const useTrackQuestEventWithImpression = function useTrackQuestEventWithImpression() {
-  questImpression = questImpression(10422).useQuestImpression();
-  const items = [questImpression];
+  getQuestImpressionId = getQuestImpressionId(10488).useGetQuestImpressionId();
+  const items = [getQuestImpressionId];
   return React.useCallback((properties) => {
     let obj = callback(outer1_2[3]);
     obj = {};
     const merged = Object.assign(properties);
     obj = {};
     const merged1 = Object.assign(properties.properties);
-    let id;
-    if (callback != null) {
-      id = callback.getId();
-    }
-    obj.impression_id = id;
+    obj.impression_id = callback();
     obj.properties = obj;
     obj.trackQuestEvent(obj);
   }, items);
 };
 export const useTrackQuestContentClickedWithImpression = function useTrackQuestContentClickedWithImpression() {
-  const questImpression = callback(10422).useQuestImpression();
-  callback = questImpression;
-  const items = [questImpression];
+  const getQuestImpressionId = callback(10488).useGetQuestImpressionId();
+  callback = getQuestImpressionId;
+  const items = [getQuestImpressionId];
   callback = React.useCallback((properties) => {
     let obj = callback(outer1_2[3]);
     obj = {};
     const merged = Object.assign(properties);
     obj = {};
     const merged1 = Object.assign(properties.properties);
-    let id;
-    if (callback != null) {
-      id = callback.getId();
-    }
-    obj.impression_id = id;
+    obj.impression_id = callback();
     obj.properties = obj;
     obj.trackQuestEvent(obj);
   }, items);
@@ -117,38 +109,30 @@ export const useTrackQuestContentClickedWithImpression = function useTrackQuestC
   }, items1);
 };
 export const useTrackAdContentEventWithImpression = function useTrackAdContentEventWithImpression() {
-  questImpression = questImpression(10422).useQuestImpression();
-  const items = [questImpression];
+  getQuestImpressionId = getQuestImpressionId(10488).useGetQuestImpressionId();
+  const items = [getQuestImpressionId];
   return React.useCallback((properties) => {
     let obj = callback(outer1_2[3]);
     obj = {};
     const merged = Object.assign(properties);
     obj = {};
     const merged1 = Object.assign(properties.properties);
-    let id;
-    if (callback != null) {
-      id = callback.getId();
-    }
-    obj.impression_id = id;
+    obj.impression_id = callback();
     obj.properties = obj;
     obj.trackAdContentEvent(obj);
   }, items);
 };
 export const useTrackAdContentClickedWithImpression = function useTrackAdContentClickedWithImpression() {
-  const questImpression = callback(10422).useQuestImpression();
-  callback = questImpression;
-  const items = [questImpression];
+  const getQuestImpressionId = callback(10488).useGetQuestImpressionId();
+  callback = getQuestImpressionId;
+  const items = [getQuestImpressionId];
   callback = React.useCallback((properties) => {
     let obj = callback(outer1_2[3]);
     obj = {};
     const merged = Object.assign(properties);
     obj = {};
     const merged1 = Object.assign(properties.properties);
-    let id;
-    if (callback != null) {
-      id = callback.getId();
-    }
-    obj.impression_id = id;
+    obj.impression_id = callback();
     obj.properties = obj;
     obj.trackAdContentEvent(obj);
   }, items);
@@ -242,7 +226,7 @@ export const useQuestHomeEntrypointAnalyticsEvents = function useQuestHomeEntryp
   let callback2;
   let callback3;
   let callback4;
-  const QuestContent = questHomeHero(5163).QuestContent;
+  const QuestContent = questHomeHero(5164).QuestContent;
   const tmp = shouldShowQuestHomeHeroContent ? QuestContent.QUEST_HOME_ENTRYPOINT_THEMED : QuestContent.QUEST_HOME_ENTRYPOINT;
   dependencyMap = tmp;
   const items = [tmp];

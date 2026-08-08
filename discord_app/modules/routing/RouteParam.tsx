@@ -1,7 +1,7 @@
 // discord_app/modules/routing/RouteParam.tsx
 import { PSEUDO_GUILD_IDS } from "INVITE";
 import { StaticChannelRoutes } from "set";
-import { escapeRegExp } from "../../../_runtime/04138_escapeRegExp.js";
+import { escapeRegExp } from "../../../_runtime/04144_escapeRegExp.js";
 import { getAuthenticationPath } from "../../../discord_common/js/shared/utils/PathUtils.tsx";
 
 const result = require("getAuthenticationPath").fileFinishedImporting("modules/routing/RouteParam.tsx");

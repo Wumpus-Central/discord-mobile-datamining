@@ -14,11 +14,11 @@ export const getCtaButtonType = function getCtaButtonType(id, channel_id) {
   if (obj.shouldRenderReportFalsePositiveButton(id)) {
     let CONNECT_TO_TEEN = obj.MARK_AS_FALSE_POSITIVE;
   } else {
-    let tmpResult = tmp(4517);
+    let tmpResult = tmp(4519);
     if (tmpResult.isAgeVerificationMessageWithRetryCta(channel_id, id)) {
       CONNECT_TO_TEEN = obj.AGE_VERIFICATION_RETRY;
     } else {
-      tmpResult = tmp(4517);
+      tmpResult = tmp(4519);
       if (tmpResult.isAgeVerificationMessageWithConnectToTeenCta(channel_id, id)) {
         CONNECT_TO_TEEN = obj.CONNECT_TO_TEEN;
       }
@@ -35,8 +35,8 @@ export const useCtaButtonType = function useCtaButtonType(id, channel_id) {
   const items = [initialize];
   let result1 = null != initialize.useStateFromStores(items, () => pendingConnection.getPendingConnection());
   if (result1) {
-    result1 = tmp(4517).isAgeVerificationMessageWithConnectToTeenCta(channel_id, id);
-    const tmpResult = tmp(4517);
+    result1 = tmp(4519).isAgeVerificationMessageWithConnectToTeenCta(channel_id, id);
+    const tmpResult = tmp(4519);
   }
   if (shouldRenderReportFalsePositiveButton) {
     let CONNECT_TO_TEEN = obj.MARK_AS_FALSE_POSITIVE;

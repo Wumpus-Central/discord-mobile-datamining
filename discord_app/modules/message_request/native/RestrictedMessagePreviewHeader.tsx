@@ -45,13 +45,13 @@ export default function RestrictedMessagePreviewHeader(channel) {
     obj = {
       user,
       onPressMutualGuild(arg0) {
-        const result = callback(8729).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
-        const obj = callback(8729);
-        callback(5897).transitionToGuild(arg0);
-        const obj2 = callback(5897);
-        callback2(4270).hideActionSheet();
-        const obj3 = callback2(4270);
-        callback2(4507).popWithKey(closure_5);
+        const result = callback(8789).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
+        const obj = callback(8789);
+        callback(5957).transitionToGuild(arg0);
+        const obj2 = callback(5957);
+        callback2(4271).hideActionSheet();
+        const obj3 = callback2(4271);
+        callback2(4509).popWithKey(closure_5);
       }
     };
     obj.openLazy(channel(analyticsLocations[13])(analyticsLocations[12], analyticsLocations.paths), "MutualGuildsActionSheet", obj);

@@ -38,7 +38,7 @@ function _fetchUserOffer() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "T", done: null };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -64,7 +64,7 @@ function _fetchUserOffer() {
                   flag = true;
                 }
                 if (obj1 === undefined) {
-                  obj1 = { offerId: "Array", paymentGatewayOverride: "PX_8" };
+                  obj1 = { offerId: "r", paymentGatewayOverride: "accessibilityRole" };
                 }
                 throwTypeErrorResult = retries;
                 throwTypeErrorResult = createFromServer;
@@ -79,7 +79,7 @@ function _fetchUserOffer() {
                 let error;
                 discount_id = 1;
                 c12 = 1;
-                return { value: "PX_8", done: "Array" };
+                return { value: "ct", done: "Array" };
               }
             } else if (1 === tmp7) {
               if (arg0 === 1) {
@@ -285,7 +285,7 @@ function _fetchExistingChurnDiscountOffer() {
     c4 = 0;
     let obj5 = fromServer(709);
     obj5.dispatch({ type: "BILLING_USER_OFFER_FETCH_FAIL" });
-    yield "T";
+    yield "HermesInternal";
     const offer = arg1.body.offer;
     let closure_0 = offer;
     if (offer == null) {

@@ -108,7 +108,7 @@ const memoResult = importAllResult.memo(function DMRow(user) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -150,7 +150,7 @@ const memoResult = importAllResult.memo(function DMRow(user) {
           c3 = 0;
           callback(false);
           c4 = 3;
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp23) {
         closure_2 = tmp23;

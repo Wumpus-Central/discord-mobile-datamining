@@ -5,8 +5,8 @@ import { View } from "registerAsset";
 import { InstantInviteSources } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../../_runtime/13131_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/15161_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/13201_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/15231_registerAsset.js";
 import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
 import { PressableBase } from "../../../../../../design/void/Pressables/native/Pressables.tsx";
 import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
@@ -39,7 +39,7 @@ function _getFriendInviteCode() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -134,7 +134,7 @@ function _handleShare() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -168,13 +168,13 @@ function _handleShare() {
           return obj;
         } else {
           callback = arg1;
-          const obj5 = callback(9005);
+          const obj5 = callback(9065);
           const intl = callback(1236).intl;
           const obj2 = { link: null };
-          obj2[0] = callback2(7158)(callback);
+          obj2[0] = callback2(7218)(callback);
           obj5.handleOpenShareSheet(callback, null, intl.formatToPlainString(callback(1236).t.PJf9P9, obj2), constants.ADD_FRIENDS_WIDGET);
           c3 = 3;
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp7) {
         c3 = tmp;
@@ -215,7 +215,7 @@ function _handleLink() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -252,7 +252,7 @@ function _handleLink() {
           obj = callback(table[11]);
           obj.handleCopy(callback, null, constants.ADD_FRIENDS_WIDGET);
           c3 = 3;
-          return { value: "T", done: null };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp15) {
         c3 = tmp;

@@ -11,7 +11,7 @@ const result = require("getAlertModalItemKey").fileFinishedImporting("modules/sp
 export default function VoicePanelSpoilerAlert(channelId) {
   channelId = channelId.channelId;
   let closure_1;
-  let obj = channelId(4645);
+  let obj = channelId(4647);
   closure_1 = obj.useDismissModalCallback();
   obj = { title: null, content: null, actions: null };
   const intl = channelId(1236).intl;
@@ -31,7 +31,7 @@ export default function VoicePanelSpoilerAlert(channelId) {
   };
   const intl3 = channelId(1236).intl;
   obj1[2] = intl3.string(channelId(1236).t.p89ACt);
-  const items = [callback(channelId(4645).AlertActionButton, obj1, "confirm"), ];
+  const items = [callback(channelId(4647).AlertActionButton, obj1, "confirm"), ];
   const obj2 = {
     variant: "secondary",
     onPress() {
@@ -41,9 +41,9 @@ export default function VoicePanelSpoilerAlert(channelId) {
   };
   const intl4 = channelId(1236).intl;
   obj2[2] = intl4.string(channelId(1236).t["/g10LC"]);
-  items[1] = callback(channelId(4645).AlertActionButton, obj2, "cancel");
+  items[1] = callback(channelId(4647).AlertActionButton, obj2, "cancel");
   obj[0] = items;
-  obj[2] = callback2(channelId(4645).AlertActions, obj);
-  return callback(channelId(4645).AlertModal, obj);
+  obj[2] = callback2(channelId(4647).AlertActions, obj);
+  return callback(channelId(4647).AlertModal, obj);
 };
 export const VOICE_PANEL_SPOILER_KEY = "voice-panel-spoiler";

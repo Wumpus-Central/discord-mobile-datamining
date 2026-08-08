@@ -50,7 +50,7 @@ function PlaceholderCommandRow(isFirstRow) {
 class CommandRow {
   constructor(arg0) {
     command = global.command;
-    f108819 = command;
+    f109148 = command;
     ({ onPressCommand, context } = global);
     ({ section, location, sectionName } = global);
     entrypoint = undefined;
@@ -58,7 +58,7 @@ class CommandRow {
     onPressSend = undefined;
     tmp2 = section;
     ({ isFirstRow, isLastRow, onExecuteCommand, installOnDemand, icon } = global);
-    tmp = f108819;
+    tmp = f109148;
     obj = require("context");
     entrypoint = obj.useAppLauncherContext().entrypoint;
     tmp3 = onPressSend(true, true);
@@ -81,7 +81,7 @@ class CommandRow {
     fn = undefined;
     if (installOnDemand) {
       tmp5 = location;
-      f108819 = location((arg0) => {
+      f109148 = location((arg0) => {
         let closure_0 = arg0;
         let c2 = 0;
         let c3 = 0;
@@ -97,7 +97,7 @@ class CommandRow {
               obj[0] = isAuthorized;
               return obj;
             } else {
-              return { value: "T", done: null };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -145,7 +145,7 @@ class CommandRow {
                   lib();
                 }
                 c3 = 3;
-                return { value: "T", done: null };
+                return { value: "HermesInternal", done: null };
               }
             } catch (tmp13) {
               c3 = tmp;

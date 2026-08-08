@@ -5,15 +5,15 @@ const require = arg1;
 const result = require("set").fileFinishedImporting("modules/media_keyboard/native/useMediaKeyboardItemsPerRow.tsx");
 
 export const useMediaKeyboardItemsPerRow = function useMediaKeyboardItemsPerRow() {
-  const tmp2 = itemsPageSizeRef(4156)();
+  const tmp2 = itemsPageSizeRef(4162)();
   let itemsPerRow = 8;
-  if (itemsPerRow(4156).WindowSizeClassifier.XLARGE !== tmp2) {
+  if (itemsPerRow(4162).WindowSizeClassifier.XLARGE !== tmp2) {
     itemsPerRow = 6;
-    if (tmp3(4156).WindowSizeClassifier.LARGE !== tmp2) {
+    if (tmp3(4162).WindowSizeClassifier.LARGE !== tmp2) {
       itemsPerRow = 4;
-      if (tmp3(4156).WindowSizeClassifier.NORMAL !== tmp2) {
+      if (tmp3(4162).WindowSizeClassifier.NORMAL !== tmp2) {
         itemsPerRow = 3;
-        if (tmp3(4156).WindowSizeClassifier.SMALL !== tmp2) {
+        if (tmp3(4162).WindowSizeClassifier.SMALL !== tmp2) {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
           const error = new Error("Unknown window size classifier: " + tmp2);

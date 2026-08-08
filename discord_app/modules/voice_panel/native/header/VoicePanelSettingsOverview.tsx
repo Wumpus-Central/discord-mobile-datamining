@@ -14,7 +14,7 @@ import { isStreamParticipant } from "ParticipantTypes";
 import { SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY as closure_17 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/07958_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/08018_registerAsset.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { WrenchIcon } from "../../../../design/components/Icon/native/redesign/generated/WrenchIcon.tsx";
 import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
@@ -415,7 +415,7 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
     const items17 = [
       tmp26Result3,
       stateFromStores1.map((user) => {
-          const obj = { user: user.user, selfStream: user.voiceState.selfStream, nick: null, channelId: null, guildId: null, showSecureFramesUI: null };
+          const obj = { user: user.user, selfStream: user.voiceState.selfStream, nick: null, channelId: null, guildId: null, showSecureFramesUI: null, showGameActivity: true };
           const nick = user.nick;
           obj[2] = nick;
           obj[3] = channelId;

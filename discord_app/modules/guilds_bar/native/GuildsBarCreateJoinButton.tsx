@@ -41,7 +41,7 @@ function _handleCreateJoinGuildPress() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "T", done: null };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -136,7 +136,7 @@ const memoResult = require("set").memo(function GuildsBarCreateJoinButton() {
   let obj = UnreadIndicator;
   obj = { style: callback2().stretch, children: null };
   const tmp2 = callback2();
-  obj = { selected: false, circle: !tmp, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: 2012, label: null, expandedChildren: null, children: false };
+  obj = { selected: false, circle: !tmp, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: 2011, label: null, expandedChildren: null, children: true };
   obj[5] = closure_12;
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
   const intl = getSystemLocale.intl;
@@ -145,8 +145,8 @@ const memoResult = require("set").memo(function GuildsBarCreateJoinButton() {
   const obj1 = { size: "md", color: null };
   obj1[1] = Themes.colors.MOBILE_GUILDBAR_ICON_DEFAULT;
   obj[8] = jsx(CirclePlusIcon.CirclePlusIcon, { size: "md", color: null });
-  obj[1] = jsx(UnreadIndicator, { selected: false, circle: !tmp, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: 2012, label: null, expandedChildren: null, children: false });
-  return <View selected={false} circle={!tmp} unread={false} styles={obj.useGuildsBarAnimatedWrapperStyles()} overState="y" config={2012} label={null} expandedChildren={null}>{false}</View>;
+  obj[1] = jsx(UnreadIndicator, { selected: false, circle: !tmp, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: 2011, label: null, expandedChildren: null, children: true });
+  return <View selected={false} circle={!tmp} unread={false} styles={obj.useGuildsBarAnimatedWrapperStyles()} overState="y" config={2011} label={null} expandedChildren={null}>{true}</View>;
 });
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx");
 

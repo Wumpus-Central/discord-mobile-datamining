@@ -9,10 +9,10 @@ import { getIcons } from "items";
 import GuildFeatures from "GuildFeatures";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../_runtime/08303_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08304_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08632_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08633_registerAsset.js";
+import { registerAsset } from "../../../_runtime/08363_registerAsset.js";
+import { registerAsset } from "../../../_runtime/08364_registerAsset.js";
+import { registerAsset } from "../../../_runtime/08692_registerAsset.js";
+import { registerAsset } from "../../../_runtime/08693_registerAsset.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { createCacheKey } from "../../design/components/Styles/native/createStyles.tsx";
 import { Text } from "../../design/components/Text/native/Text.tsx";
@@ -136,9 +136,9 @@ function PremiumGuildIdentityUpsell(alertWidth) {
   const tmp6 = closure_14;
   const tmp7 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = tmp4(8630);
+    let tmp4Result = tmp4(8690);
   } else {
-    tmp4Result = tmp4(8631);
+    tmp4Result = tmp4(8691);
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = tmp(1236).intl;
@@ -213,9 +213,9 @@ function LongerMessageUpsell(alertWidth) {
   const tmp7 = closure_14;
   const tmp8 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = tmp4(8634);
+    let tmp4Result = tmp4(8694);
   } else {
-    tmp4Result = tmp4(8635);
+    tmp4Result = tmp4(8695);
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = tmp(1236).intl;
@@ -233,9 +233,9 @@ function GuildCapUpsell(alertWidth) {
   const tmp6 = closure_14;
   const tmp7 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = tmp4(8636);
+    let tmp4Result = tmp4(8696);
   } else {
-    tmp4Result = tmp4(8637);
+    tmp4Result = tmp4(8697);
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = tmp(1236).intl;
@@ -266,7 +266,7 @@ function UploadUpsell(arg0) {
       obj = { dataSavingMode };
       const result = obj.updatedUnsyncedSettings(obj);
     };
-    tmp6Result = callback2(tmp(5708).TableSwitchRow, obj);
+    tmp6Result = callback2(tmp(5768).TableSwitchRow, obj);
   }
   children[1] = tmp6Result;
   return closure_15(closure_16, { children });

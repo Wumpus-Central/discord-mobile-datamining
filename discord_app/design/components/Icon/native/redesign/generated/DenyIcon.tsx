@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/DenyIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/08527_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/08587_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 
