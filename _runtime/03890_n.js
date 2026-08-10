@@ -4,21 +4,21 @@ const fn = function n(moment) {
   let split2;
   function translate(arg0, arg1, arg2, arg3) {
     while (true) {
-      let tmp3 = arg0;
+      let tmp2 = arg0;
       let num = 10;
-      let tmp4 = arg0;
+      let tmp3 = arg0;
       if (arg0 >= 10) {
         let str2 = " ";
-        return arg0 + " " + tmp2;
+        return arg0 + " " + tmp;
       } else {
-        if (tmp) {
-          let tmp7 = items;
-          let tmp6 = items[arg0];
+        if (arg3) {
+          let tmp6 = items;
+          let tmp5 = items[arg0];
         } else {
-          let tmp5 = parts;
-          tmp6 = parts[arg0];
+          let tmp4 = parts;
+          tmp5 = parts[arg0];
         }
-        let tmp8 = tmp6;
+        let tmp7 = tmp5;
       }
     }
   }

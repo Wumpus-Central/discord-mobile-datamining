@@ -1,21 +1,19 @@
 // _runtime/13598_all.js
-import { all } from "13596_all.js";
-import { 13570__ } from "metro/13570__.js";
-
-export default (arg0, arg1) => {
-  if (arguments.length < 2) {
-    const tmp7 = 13570__[arg0];
-    let tmp8;
-    if (all(tmp7)) {
-      tmp8 = tmp7;
-    }
-    let tmp3 = tmp8;
-  } else {
-    tmp3 = 13570__[arg0];
-    if (tmp3) {
-      tmp3 = tmp(13570)[arg0][arg1];
-    }
-    tmp = require;
+let all = typeof document === "object";
+if (typeof document === "object") {
+  const _document = document;
+  all = document.all;
+}
+if (undefined === all) {
+  if (undefined !== all) {
+    let fn = (fn) => {
+      let tmp = typeof fn === "function";
+      if (typeof fn !== "function") {
+        tmp = fn === all;
+      }
+      return tmp;
+    };
   }
-  return tmp3;
-};
+  module.exports = fn;
+}
+fn = (fn) => typeof fn === "function";

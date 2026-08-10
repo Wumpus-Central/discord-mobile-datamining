@@ -1,9 +1,12 @@
 // _runtime/10166_isKnownType.js
-import { NativeDocumentPicker } from "10167_NativeDocumentPicker.js";
-const require = arg1;
-const dependencyMap = arg6;
-arg5.isKnownType = function isKnownType(kind, value) {
-  ({ kind, value } = kind);
-  const NativeDocumentPicker = NativeDocumentPicker.NativeDocumentPicker;
-  return NativeDocumentPicker.isKnownType(kind, value);
-};
+
+export const isKnownType = require("isKnownType").isKnownType;
+export const keepLocalCopy = require("keepLocalCopy").keepLocalCopy;
+export const types = require("frozen").types;
+export const errorCodes = require("isErrorWithCode").errorCodes;
+export const isErrorWithCode = require("isErrorWithCode").isErrorWithCode;
+export const pickDirectory = require("_pickDirectory").pickDirectory;
+export const pick = require("_pick").pick;
+export const saveDocuments = require("_saveDocuments").saveDocuments;
+export const releaseLongTermAccess = require("releaseLongTermAccess").releaseLongTermAccess;
+export const releaseSecureAccess = require("releaseLongTermAccess").releaseSecureAccess;

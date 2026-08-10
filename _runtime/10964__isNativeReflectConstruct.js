@@ -1,14 +1,15 @@
 // _runtime/10964__isNativeReflectConstruct.js
-import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
+import importDefaultResult from "_inherits";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
-import importDefaultResult from "_createClass";
-import importDefaultResult1 from "_inherits";
+import importDefaultResult1 from "_createClass";
+import importDefaultResult2 from "_inherits";
+import { Linking } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
-import importDefaultResult2 from "noop";
 
-let Link = arg1;
+const DeepLinking = arg1;
+let closure_1 = dependencyMap;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,8 +29,9 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let closure_2 = ["component", "to", "replace"];
-class Link {
+const re8 = /.*?:\/\//g;
+closure_1 = undefined;
+class DeepLinking {
   constructor() {
     self = this;
     items = [...arguments];
@@ -48,53 +50,115 @@ class Link {
     }
     tmp3Result = tmp3(self, constructResult);
     apply = tmp3Result;
-    tmp3Result.handlePress = (defaultPrevented, str) => {
-      if (_undefined.props.onPress) {
-        const props = tmp.props;
-        props.onPress(defaultPrevented);
-      }
-      if (!defaultPrevented.defaultPrevented) {
-        const to = str.to;
-        if (tmp.props.replace) {
-          const replaced = str.replace(to);
-        } else {
-          str.push(to);
-        }
-      }
+    tmp3Result.handleChange = (url) => {
+      _undefined.push(url.url);
     };
     return tmp3Result;
   }
 }
-importDefaultResult1(Link, require("noop").Component);
+importDefaultResult2(DeepLinking, require("noop").Component);
 let obj = {
+  key: "push",
+  value: function push(str) {
+    const history = this.history;
+    history.push(str.replace(closure_8, ""));
+  }
+};
+let items = [obj, , , ];
+obj = { key: "componentDidMount", value: null };
+closure_1 = importDefaultResult(function() {
+  const self = this;
+  let c4 = 0;
+  let c5 = 0;
+  return (function*() {
+    if (c5 === 2) {
+      c5 = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            let arr = closure_0;
+            let _classCallCheck = closure_0;
+            let closure_1 = tmp2;
+            closure_0 = undefined;
+            c4 = 1;
+            c5 = 1;
+            const obj1 = { value: null, done: false };
+            obj1[0] = c5.getInitialURL();
+            return obj1;
+          }
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          closure_0 = arg1;
+          if (closure_0) {
+            arr = arr.push(closure_0);
+          }
+          const listener = c5.addEventListener("url", arr.handleChange);
+          c5 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp17) {
+        c5 = tmp;
+        throw tmp17;
+      }
+    }
+  })();
+});
+obj[1] = function componentDidMount() {
+  const self = this;
+  const apply = closure_1.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+items[1] = obj;
+items[2] = {
+  key: "componentWillUnmount",
+  value: function componentWillUnmount() {
+    const removed = Linking.removeEventListener("url", this.handleChange);
+  }
+};
+items[3] = {
   key: "render",
   value: function render() {
-    let dependencyMap;
-    let replace;
-    let to;
     const self = this;
-    const props = this.props;
-    ({ component: dependencyMap, to, replace } = props);
-    const Link = callback(props, self);
-    return jsx(Link(4135).__HistoryContext.Consumer, {
-      children(arg0) {
-        let closure_0 = arg0;
-        const obj = {};
-        const merged = Object.assign(closure_0);
-        obj.onPress = function onPress(arg0) {
-          return outer1_2.handlePress(arg0, closure_0);
-        };
-        return outer1_7(closure_1, obj);
+    return jsx(self(table[9]).__HistoryContext.Consumer, {
+      children(history) {
+        self.history = history;
+        return self.props.children || null;
       }
     });
   }
 };
-let items = [obj];
-const importDefaultResultResult = importDefaultResult(Link, items);
-importDefaultResultResult.defaultProps = { component: require("get ActivityIndicator").TouchableHighlight, replace: false };
-obj = { onPress: require("emptyFunction").func, component: require("emptyFunction").elementType, replace: require("emptyFunction").bool, to: null };
-let items1 = [require("emptyFunction").string, require("emptyFunction").object];
-obj[3] = require("emptyFunction").oneOfType(items1);
-importDefaultResultResult.propTypes = obj;
 
-export default importDefaultResultResult;
+export default importDefaultResult1(DeepLinking, items);

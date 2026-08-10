@@ -128,15 +128,15 @@ _classCallCheck = undefined;
 class Client {
   constructor(arg0) {
     self = this;
-    tmp = f67916(this, c4);
+    tmp = f67934(this, c4);
     this._options = global;
     this._integrations = {};
     this._numProcessing = 0;
     this._outcomes = {};
     this._hooks = {};
     this._eventProcessors = [];
-    tmp2 = f67934;
-    tmp3 = f67930;
+    tmp2 = f67952;
+    tmp3 = f67948;
     obj = require("makePromiseBuffer");
     transportOptions = global.transportOptions;
     bufferSize = undefined;

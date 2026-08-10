@@ -1,6 +1,4 @@
 // _runtime/metro/12361__.js
-import { stringProcessor } from "../12424_stringProcessor.js";
-import { JSONSchemaGenerator } from "../12425_JSONSchemaGenerator.js";
 const self = this;
 let self2 = this;
 if (this) {
@@ -14,41 +12,10 @@ if (self2) {
   if (__setModuleDefault) {
     let fn = self;
     if (self) {
-      fn = self.__exportStar;
+      fn = self.__importStar;
     }
     if (!fn) {
-      fn = (obj, exports) => {
-        for (const key10007 in arg0) {
-          let tmp5 = key10007;
-          let tmp6 = "default" === key10007;
-          if (tmp6) {
-            if (tmp6) {
-              continue;
-            } else {
-              let tmp3 = self2;
-              let tmp4 = self2(arg1, arg0, key10007);
-              continue;
-            }
-            continue;
-          } else {
-            let _Object = Object;
-            let call = hasOwnProperty.call;
-            if (typeof call === "unknown") {
-              let hasOwnPropertyResult = hasOwnProperty(key10007);
-            } else {
-              hasOwnPropertyResult = call(arg1, key10007);
-            }
-            let tmp2 = hasOwnPropertyResult;
-          }
-        }
-      };
-    }
-    let fn2 = self;
-    if (self) {
-      fn2 = self.__importStar;
-    }
-    if (!fn2) {
-      fn2 = (__esModule) => {
+      fn = (__esModule) => {
         if (__esModule) {
           if (__esModule.__esModule) {
             return __esModule;
@@ -84,39 +51,43 @@ if (self2) {
         return obj;
       };
     }
+    let fn2 = self;
+    if (self) {
+      fn2 = self.__exportStar;
+    }
+    if (!fn2) {
+      fn2 = (obj, exports) => {
+        for (const key10007 in arg0) {
+          let tmp5 = key10007;
+          let tmp6 = "default" === key10007;
+          if (tmp6) {
+            if (tmp6) {
+              continue;
+            } else {
+              let tmp3 = self2;
+              let tmp4 = self2(arg1, arg0, key10007);
+              continue;
+            }
+            continue;
+          } else {
+            let _Object = Object;
+            let call = hasOwnProperty.call;
+            if (typeof call === "unknown") {
+              let hasOwnPropertyResult = hasOwnProperty(key10007);
+            } else {
+              hasOwnPropertyResult = call(arg1, key10007);
+            }
+            let tmp2 = hasOwnPropertyResult;
+          }
+        }
+      };
+    }
     const _Object3 = Object;
-    exports.util = undefined;
-    exports.regexes = undefined;
-    exports.locales = undefined;
-    exports.toJSONSchema = undefined;
-    exports.JSONSchemaGenerator = undefined;
-    exports.JSONSchema = undefined;
-    fn(require("_isNativeReflectConstruct"), exports);
-    fn(require("module_12363"), exports);
-    fn(require("toDotPath"), exports);
-    fn(require("isValidBase64"), exports);
-    fn(require("module_12367"), exports);
-    fn(require("module_12369"), exports);
-    exports.util = fn2(require("mergeDefs"));
-    exports.regexes = fn2(require("mergeDefs"));
-    exports.locales = fn2(require("module_12371"));
-    fn(require("$output"), exports);
-    fn(require("Doc"), exports);
-    fn(require("module_12422"), exports);
-    fn(require("initializeContext"), exports);
-    const _Object4 = Object;
-    let obj = { enumerable: true, get: null };
-    obj[1] = function get() {
-      return stringProcessor.toJSONSchema;
-    };
-    Object.defineProperty(exports, "toJSONSchema", obj);
-    const _Object5 = Object;
-    obj = { enumerable: true, get: null };
-    obj[1] = function get() {
-      return JSONSchemaGenerator.JSONSchemaGenerator;
-    };
-    Object.defineProperty(exports, "JSONSchemaGenerator", obj);
-    exports.JSONSchema = fn2(require("module_12426"));
+    exports.z = undefined;
+    const fnResult = fn(require("module_12362"));
+    exports.z = fnResult;
+    fn2(require("module_12362"), exports);
+    exports.default = fnResult;
   } else {
     const _Object2 = Object;
   }

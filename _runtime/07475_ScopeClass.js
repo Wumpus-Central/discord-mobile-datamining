@@ -127,7 +127,7 @@ let items = [
     value: function setUser(arg0) {
       let obj = arg0;
       if (!arg0) {
-        obj = { email: "_desired", id: "call", ip_address: "paths", username: "call" };
+        obj = { email: "HermesInternal", id: "accessibilityRole", ip_address: "onPress", username: "keys" };
       }
       const self = this;
       this._user = obj;

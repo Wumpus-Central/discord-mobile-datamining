@@ -1,101 +1,89 @@
 // _runtime/metro/13151__.js
-import { SemVer } from "../13114_SemVer.js";
-import { Comparator } from "../13142_Comparator.js";
-import { Range } from "../13143_Range.js";
+import { SemVer } from "../13116_SemVer.js";
+import { SemVer } from "../13136_SemVer.js";
 import { Range } from "../13145_Range.js";
 
-export default (arg0, arg1, arg2, arg3) => {
-  let obj;
-  let _require = arg3;
-  const tmp3 = new _SemVer(arg0, arg3);
-  const tmp4 = new _Range(arg1, arg3);
-  if (">" === arg2) {
-    let dependencyMap = tmp(13134);
-    let tmpResult = tmp(13139);
-    tmpResult = tmp(13135);
-    let closure_2 = tmpResult;
-    let str3 = ">=";
-    let str = ">";
-    let tmpResult1 = tmpResult;
+export default (arg0, arg1) => {
+  let require;
+  let obj = new Range(arg0, arg1);
+  const tmp3 = new SemVer("0.0.0");
+  if (obj.test(tmp3)) {
+    return tmp3;
   } else {
-    str = "<";
-    if ("<" === arg2) {
-      dependencyMap = tmp(13135);
-      tmpResult = tmp(13138);
-      tmpResult1 = tmp(13134);
-      closure_2 = tmpResult1;
-      str3 = "<=";
+    const tmp6 = new tmp(13116)("0.0.0-0");
+    if (obj.test(tmp6)) {
+      return tmp6;
     } else {
-      const _TypeError = TypeError;
-      const typeError = new TypeError("Must provide a hilo val of \"<\" or \">\"");
-      throw typeError;
-    }
-  }
-  if (_Range(tmp3, tmp4, arg3)) {
-    return false;
-  } else {
-    let num = 0;
-    let num3 = 0;
-    if (0 < tmp4.set.length) {
-      while (true) {
-        let arr = tmp4.set[num3];
-        _require = null;
-        dependencyMap = null;
-        let item = arr.forEach((semver) => {
-          let tmp = semver;
-          if (semver.semver === Comparator.ANY) {
-            tmp = new Comparator(">=0.0.0");
-          }
-          let tmp6 = _null;
-          if (!_null) {
-            tmp6 = tmp;
-          }
-          _null = tmp6;
-          let tmp7 = _null2;
-          if (!_null2) {
-            tmp7 = tmp;
-          }
-          _null2 = tmp7;
-          if (_null2(tmp.semver, _null.semver, _null)) {
-            _null = tmp;
-          } else if (tmpResult1(tmp.semver, _null2.semver, _null)) {
-            _null2 = tmp;
-          }
-        });
-        let tmp15 = _require;
-        let tmp16 = num;
-        if (_require.operator !== str) {
-          let tmp22 = _require;
-          if (_require.operator !== str3) {
-            let tmp17 = dependencyMap;
-            if (!dependencyMap.operator) {
-              let tmp19 = dependencyMap;
-              if (tmpResult(tmp3, dependencyMap.semver)) {
-                obj = { v: false };
+      let num = 0;
+      let num3 = 0;
+      let tmp9 = null;
+      let tmp10 = null;
+      if (0 < obj.set.length) {
+        do {
+          let arr = obj.set[num3];
+          require = null;
+          let item = arr.forEach((semver) => {
+            const obj = new outer1_0(outer1_1[1])(semver.semver.version);
+            const operator = semver.operator;
+            if (">" === operator) {
+              if (0 === obj.prerelease.length) {
+                obj.patch = obj.patch + 1;
+              } else {
+                const prerelease = obj.prerelease;
+                prerelease.push(0);
               }
+              obj.raw = obj.format();
             } else {
-              let tmp18 = dependencyMap;
-            }
-            let tmp20 = dependencyMap;
-            obj = undefined;
-            if (dependencyMap.operator === str3) {
-              let tmp21 = dependencyMap;
-              if (tmpResult1(tmp3, dependencyMap.semver)) {
-                obj = { v: false };
+              if ("" !== operator) {
+                if (">=" !== operator) {
+                  if ("<" !== operator) {
+                    if ("<=" !== operator) {
+                      const _Error = Error;
+                      const _HermesInternal = HermesInternal;
+                      const error = new Error("Unexpected operation: " + semver.operator);
+                      throw error;
+                    }
+                  }
+                }
+              }
+              let tmp4 = obj;
+              if (obj) {
+                tmp4 = !outer1_0(outer1_1[2])(obj, obj);
               }
             }
+          });
+          let tmp12 = require;
+          let tmp13 = !require;
+          let tmp14 = tmp9;
+          let tmp15 = num;
+          if (require) {
+            let tmp16 = tmp14;
+            if (tmp14) {
+              let tmp17 = require;
+              let tmp18 = dependencyMap;
+              let tmp19 = require;
+              tmp16 = !SemVer(tmp14, require);
+            }
+            tmp13 = tmp16;
           }
-          if (obj) {
-            break;
-          } else {
-            num3 = num + 1;
-            num = num3;
+          if (!tmp13) {
+            tmp14 = require;
           }
-        }
-        obj = { v: false };
+          num3 = num + 1;
+          tmp9 = tmp14;
+          tmp10 = tmp14;
+          num = num3;
+        } while (num3 < obj.set.length);
       }
-      return obj.v;
+      let tmp20 = null;
+      if (tmp10) {
+        tmp20 = null;
+        if (obj.test(tmp10)) {
+          tmp20 = tmp10;
+        }
+      }
+      return tmp20;
     }
-    return true;
   }
+  tmp = require;
 };

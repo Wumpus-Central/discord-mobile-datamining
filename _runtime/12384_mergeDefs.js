@@ -56,12 +56,13 @@ if (self2) {
       if (typeof error !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      let closure_0 = { string: { unit: "merkki\u00E4", subject: "merkkijonon" }, file: { unit: "tavua", subject: "tiedoston" }, array: { unit: "alkiota", subject: "listan" }, set: { unit: "alkiota", subject: "joukon" }, number: { unit: "", subject: "luvun" }, bigint: { unit: "", subject: "suuren kokonaisluvun" }, int: { unit: "", subject: "kokonaisluvun" }, date: { unit: "", subject: "p\u00E4iv\u00E4m\u00E4\u00E4r\u00E4n" } };
-      let closure_1 = { regex: "s\u00E4\u00E4nn\u00F6llinen lauseke", email: "s\u00E4hk\u00F6postiosoite", url: "URL-osoite", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO-aikaleima", date: "ISO-p\u00E4iv\u00E4m\u00E4\u00E4r\u00E4", time: "ISO-aika", duration: "ISO-kesto", ipv4: "IPv4-osoite", ipv6: "IPv6-osoite", cidrv4: "IPv4-alue", cidrv6: "IPv6-alue", base64: "base64-koodattu merkkijono", base64url: "base64url-koodattu merkkijono", json_string: "JSON-merkkijono", e164: "E.164-luku", jwt: "JWT", template_literal: "templaattimerkkijono" };
-      let closure_2 = { nan: "NaN" };
+      let closure_0 = { string: { unit: "caracteres", verb: "tener" }, file: { unit: "bytes", verb: "tener" }, array: { unit: "elementos", verb: "tener" }, set: { unit: "elementos", verb: "tener" } };
+      let closure_1 = { regex: "entrada", email: "direcci\u00F3n de correo electr\u00F3nico", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "fecha y hora ISO", date: "fecha ISO", time: "hora ISO", duration: "duraci\u00F3n ISO", ipv4: "direcci\u00F3n IPv4", ipv6: "direcci\u00F3n IPv6", cidrv4: "rango IPv4", cidrv6: "rango IPv6", base64: "cadena codificada en base64", base64url: "URL codificada en base64", json_string: "cadena JSON", e164: "n\u00FAmero E.164", jwt: "JWT", template_literal: "entrada" };
+      let closure_2 = { nan: "NaN", string: "texto", number: "n\u00FAmero", boolean: "booleano", array: "arreglo", object: "objeto", set: "conjunto", file: "archivo", date: "fecha", bigint: "n\u00FAmero grande", symbol: "s\u00EDmbolo", undefined: "indefinido", null: "nulo", function: "funci\u00F3n", map: "mapa", record: "registro", tuple: "tupla", enum: "enumeraci\u00F3n", union: "uni\u00F3n", literal: "literal", promise: "promesa", void: "vac\u00EDo", never: "nunca", unknown: "desconocido", any: "cualquiera" };
       return {
         localeError: (code) => {
-          switch (code.code) {
+          code = code.code;
+          switch (code) {
             case "t":
             break;
             case "to":
@@ -560,7 +561,7 @@ if (self2) {
             break;
             case "ay":
             break;
-            case "giftingSettingsContainer":
+            case "giftingPrompt":
             break;
             case "firstChild":
             break;
@@ -652,56 +653,164 @@ if (self2) {
             break;
             case "perGuildMaxCount":
             break;
-            case "PREMIUM_GROUP_MONTH":
-            break;
-            case "HAS_INTERACTED":
-            break;
-            case "screenListeners":
-            break;
-            case "useDefaultGuildsRestricted":
-            break;
-            case "closeSuspendedUser":
-            break;
             case "getChannelIcon":
             break;
             case "getChannelIconComponent":
-            break;
+              let expected = closure_2[code.expected];
+              if (expected == null) {
+                expected = code.expected;
+              }
+              const parsedTypeResult = closure_2.parsedType(code.input);
+              let tmp55 = closure_2[parsedTypeResult];
+              if (tmp55 == null) {
+                tmp55 = parsedTypeResult;
+              }
+              if (obj.test(code.expected)) {
+                const _HermesInternal16 = HermesInternal;
+                let combined = "Entrada inv\u00E1lida: se esperaba instanceof " + code.expected + ", recibido " + tmp55;
+              } else {
+                const _HermesInternal15 = HermesInternal;
+                combined = "Entrada inv\u00E1lida: se esperaba " + expected + ", recibido " + tmp55;
+              }
+              return combined;
             case "getChannelIconComponentWithGuild":
             break;
             case "co":
-            break;
+              if (1 === code.values.length) {
+                const _HermesInternal14 = HermesInternal;
+                let combined1 = "Entrada inv\u00E1lida: se esperaba " + closure_2.stringifyPrimitive(code.values[0]);
+              } else {
+                const _HermesInternal13 = HermesInternal;
+                combined1 = "Opci\u00F3n inv\u00E1lida: se esperaba una de " + closure_2.joinValues(code.values, "|");
+              }
+              return combined1;
             case "C":
             break;
             case "Component":
-            break;
+              let str27 = "<";
+              if (code.inclusive) {
+                str27 = "<=";
+              }
+              let tmp33 = dependencyMap[code.origin];
+              if (tmp33 == null) {
+                tmp33 = null;
+              }
+              let str28 = closure_2[code.origin];
+              if (str28 == null) {
+                str28 = code.origin;
+              }
+              if (tmp33) {
+                if (str28 == null) {
+                  str28 = "valor";
+                }
+                let str = code.maximum.toString();
+                let str34 = tmp33.unit;
+                if (str34 == null) {
+                  str34 = "elementos";
+                }
+                const _HermesInternal12 = HermesInternal;
+                let combined2 = "Demasiado grande: se esperaba que " + str28 + " tuviera " + str27 + str + " " + str34;
+                const str33 = code.maximum;
+              } else {
+                let str29 = str28;
+                if (str28 == null) {
+                  str29 = "valor";
+                }
+                const _HermesInternal11 = HermesInternal;
+                combined2 = "Demasiado grande: se esperaba que " + str29 + " fuera " + str27 + code.maximum.toString();
+                const str30 = code.maximum;
+              }
+              return combined2;
             case "om":
             break;
             case "mp":
-            break;
+              let str20 = ">";
+              if (code.inclusive) {
+                str20 = ">=";
+              }
+              let tmp21 = dependencyMap[code.origin];
+              if (tmp21 == null) {
+                tmp21 = null;
+              }
+              let origin3 = closure_2[code.origin];
+              if (origin3 == null) {
+                origin3 = code.origin;
+              }
+              const str1 = code.minimum.toString();
+              if (tmp21) {
+                const _HermesInternal10 = HermesInternal;
+                code = "Demasiado peque\u00F1o: se esperaba que " + origin3 + " tuviera " + str20 + str1 + " " + tmp21.unit;
+              } else {
+                const _HermesInternal9 = HermesInternal;
+                code = "Demasiado peque\u00F1o: se esperaba que " + origin3 + " fuera " + str20 + str1;
+              }
+              return code;
             case "po":
             break;
             case "pon":
-            break;
+              if ("starts_with" === code.format) {
+                const _HermesInternal8 = HermesInternal;
+                let combined3 = "Cadena inv\u00E1lida: debe comenzar con \"" + code.prefix + "\"";
+              } else if ("ends_with" === code.format) {
+                const _HermesInternal7 = HermesInternal;
+                combined3 = "Cadena inv\u00E1lida: debe terminar en \"" + code.suffix + "\"";
+              } else if ("includes" === code.format) {
+                const _HermesInternal6 = HermesInternal;
+                combined3 = "Cadena inv\u00E1lida: debe incluir \"" + code.includes + "\"";
+              } else if ("regex" === code.format) {
+                const _HermesInternal5 = HermesInternal;
+                combined3 = "Cadena inv\u00E1lida: debe coincidir con el patr\u00F3n " + code.pattern;
+              } else {
+                let format = table[code.format];
+                if (format == null) {
+                  format = code.format;
+                }
+                const _HermesInternal4 = HermesInternal;
+                combined3 = "Inv\u00E1lido " + format;
+              }
+              return combined3;
             case "one":
             break;
             case "ne":
-            break;
+              code = globalThis;
+              return "N\u00FAmero inv\u00E1lido: debe ser m\u00FAltiplo de " + code.divisor;
             case "en":
             break;
             case "USE_APP_COMMAND":
-            break;
+              let str3 = "";
+              let str4 = "";
+              if (code.keys.length > 1) {
+                str4 = "s";
+              }
+              if (code.keys.length > 1) {
+                str3 = "s";
+              }
+              const _HermesInternal3 = HermesInternal;
+              return "Llave" + str4 + " desconocida" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
             case "ANDROID_NOTIFICATION_LIGHTS":
             break;
             case "L":
-            break;
+              let origin2 = closure_2[code.origin];
+              if (origin2 == null) {
+                origin2 = code.origin;
+              }
+              const _HermesInternal2 = HermesInternal;
+              return "Llave inv\u00E1lida en " + origin2;
             case "LI":
             break;
             case "SAFETY_HUB_GET_SUSPENDED_AGE_VERIFICATION_METHODS":
-            break;
+              return "Entrada inv\u00E1lida";
             case "REQUIRE_TAG":
             break;
             case "AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_HD_STREAMING":
-            break;
+              let origin = closure_2[code.origin];
+              if (origin == null) {
+                origin = code.origin;
+              }
+              let _HermesInternal = HermesInternal;
+              str = "Valor inv\u00E1lido en ";
+              let combined4 = "Valor inv\u00E1lido en " + origin;
+              return combined4;
             case "STREAM":
             break;
             case "STREAMING":
@@ -734,36 +843,27 @@ if (self2) {
             break;
             case "pea":
             break;
+            case "SOCIAL_LAYER_STOREFRONT_APP":
+            break;
+            case "APPEAL_INGESTION_SPAM":
+            break;
+            case "SPAM_LINK":
+            break;
+            case "encoderQualityStats":
+            break;
+            case "PACKAGE_RPG_MMO":
+            break;
+            case "MMORPG":
+            break;
+            case "PGvZqX":
+            break;
+            case "qXtNtS":
+            break;
+            case "termsRow":
+            break;
+            case "termsRowContent":
+            break;
             case "$ZodMap":
-              while (true) {
-                let str2 = "includes";
-                if ("includes" === code.format) {
-                  let tmp6 = globalThis;
-                  let _HermesInternal3 = HermesInternal;
-                  let str6 = "\"";
-                  let str7 = "Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 \"";
-                  let combined = "Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 \"" + code.includes + "\"";
-                } else {
-                  let str3 = "regex";
-                  if ("regex" === code.format) {
-                    let tmp5 = globalThis;
-                    let _HermesInternal2 = HermesInternal;
-                    let str5 = "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta ";
-                    combined = "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta " + code.pattern;
-                  } else {
-                    let tmp = dependencyMap;
-                    let format = dependencyMap[code.format];
-                    let tmp2 = null;
-                    if (format == null) {
-                      format = code.format;
-                    }
-                    let tmp3 = globalThis;
-                    let _HermesInternal = HermesInternal;
-                    let str4 = "Virheellinen ";
-                    combined = "Virheellinen " + format;
-                  }
-                }
-              }
             break;
             case "ZodMap":
             break;
@@ -771,9 +871,11 @@ if (self2) {
             break;
             case "ap":
             break;
-            case "heavy_check_mark":
+            case "floralwhite":
             break;
-            case "check_mark":
+            case "white_check_mark":
+            break;
+            case "markVersionedDismissibleContentAsDismissed":
             break;
             case "ToIntlMathematicalValue":
             break;
@@ -819,9 +921,9 @@ if (self2) {
             break;
             case "_":
             break;
-            case "soundshareId":
+            case "selectHomeResourceChannel":
             break;
-            case "shareId":
+            case "sourceChannelId":
             break;
             case "AUTO_MODERATION_REMOVE_REGEX_PATTERNS":
             break;
@@ -1155,7 +1257,7 @@ if (self2) {
             break;
             case "bel":
             break;
-            case "nackCount":
+            case "mostRecentEventCount":
             break;
             case "PREMIUM_GIFT_MONTH_TIER_0":
             break;
@@ -1241,9 +1343,7 @@ if (self2) {
             break;
             case "Dao":
             break;
-            case "useSelectedTimeRecurringDismissibleContent":
-            break;
-            case "SelectedTimeRecurringDismissibleContent":
+            case "useSecureFramesDeeplinkExperiment":
             break;
             case "app":
             break;
@@ -1265,23 +1365,23 @@ if (self2) {
             break;
             case "showGiftingMarketing":
             break;
-            case "MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION":
+            case "woman_kneeling_facing_right_tone2":
             break;
-            case "MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION_WRITE":
+            case "man_kneeling_facing_right_tone2":
             break;
             case "_applyCombination":
             break;
             case "ly":
             break;
-            case "surveys":
+            case "USER_PROFILE_WIDGETS":
             break;
-            case "avatarAsset":
+            case "USER_PROFILE_WIDGETS_BOARD_MOBILE_EDIT_NOTICE":
             break;
-            case "avatarAssetOrigin":
+            case "markAndLog":
             break;
-            case "AssetOriginTypes":
+            case "BOOST_TO_UNLOCK":
             break;
-            case "Origin":
+            case "BOOST_TO_UNLOCK_COACHMARK":
             break;
             case "acceptedRequestLabel":
             break;
@@ -1343,26 +1443,27 @@ if (self2) {
             break;
             case "iu":
             break;
-            case "8WfJZ8":
+            case "compose":
             break;
-            case "8Hvr3+":
+            case "composed":
             break;
-            case "weekData":
+            case "composedPath":
             break;
-            case "nmdaymask":
-            break;
-            case "mda":
-            break;
-            case "mdaymask":
-            break;
-            case "maskFill":
+            case "rules_version":
             break;
             case "overflow_bottom":
             break;
             case "_bottom":
             break;
             case "bot":
-            break;
+              origin = closure_2[code.origin];
+              if (origin == null) {
+                origin = code.origin;
+              }
+              _HermesInternal = HermesInternal;
+              str = "Valor inv\u00E1lido en ";
+              combined4 = "Valor inv\u00E1lido en " + origin;
+              return combined4;
             case "bottom-right":
             break;
             case "ott":
@@ -1373,9 +1474,21 @@ if (self2) {
             break;
             case "shiftLeft":
             break;
-            case "chatHeader":
+            case "pendingAvatarSrc":
             break;
-            case "chatHeaderBackIconContainer":
+            case "capturedSpanIsolationScope":
+            break;
+            case "openCommandAttachmentPreview":
+            break;
+            case "AppLauncherBottomSheetExpandReason":
+            break;
+            case "her":
+            break;
+            case "BottomSheet":
+            break;
+            case "pan":
+            break;
+            case "chatHeaderTitleContainer":
             break;
             case "DynamicallyInjectedByGestureHandler":
             break;
@@ -1422,35 +1535,6 @@ if (self2) {
             case "ren":
             break;
             case "TransitionGroup":
-              while (true) {
-                str2 = "includes";
-                if ("includes" === code.format) {
-                  tmp6 = globalThis;
-                  _HermesInternal3 = HermesInternal;
-                  str6 = "\"";
-                  str7 = "Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 \"";
-                  combined = "Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 \"" + code.includes + "\"";
-                } else {
-                  str3 = "regex";
-                  if ("regex" === code.format) {
-                    tmp5 = globalThis;
-                    _HermesInternal2 = HermesInternal;
-                    str5 = "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta ";
-                    combined = "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta " + code.pattern;
-                  } else {
-                    tmp = dependencyMap;
-                    format = dependencyMap[code.format];
-                    tmp2 = null;
-                    if (format == null) {
-                      format = code.format;
-                    }
-                    tmp3 = globalThis;
-                    _HermesInternal = HermesInternal;
-                    str4 = "Virheellinen ";
-                    combined = "Virheellinen " + format;
-                  }
-                }
-              }
             break;
             case "TransitionGroupOverlayView":
             break;
@@ -1470,6 +1554,36 @@ if (self2) {
             break;
             case "rs":
             break;
+            case "enableClips":
+            break;
+            case "enableClipsV3":
+            break;
+            case "enableClipsV3ML":
+            break;
+            case "MLS_INIT":
+            break;
+            case "INITIAL_SAFE_AREA_INSETS":
+            break;
+            case "MEDIA_KEYBOARD_BAR_BORDER_WIDTH":
+            break;
+            case "HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN":
+            break;
+            case "INCOMING_MENTION_MESSAGE":
+            break;
+            case "MESSAGE_EDIT_FAILED_AUTOMOD":
+            break;
+            case "AUTOMOD_ERROR_CODES":
+            break;
+            case "DESELECT_PLATFORM":
+            break;
+            case "PLATFORM_BUNGIE":
+            break;
+            case "BUNGIE":
+            break;
+            case "IEpCBQ":
+            break;
+            case "BQ":
+            break;
             case "adRequestId":
             break;
             case "disableGuildSelect":
@@ -1478,21 +1592,9 @@ if (self2) {
             break;
             case "concatSettings":
             break;
-            case "subscriptionTrial":
+            case "subscriptionStatus":
             break;
-            case "subscriptionTrialId":
-            break;
-            case "TrialIdToProductOfferId":
-            break;
-            case "didDispatchNativeScroll":
-            break;
-            case "stickersRow":
-            break;
-            case "woman_artist_tone3":
-            break;
-            case "man_artist_tone3":
-            break;
-            case "artist_tone3":
+            case "useCanUseRoleSubscriptionIAP":
             break;
             case "$constructor":
             break;
@@ -1546,9 +1648,9 @@ if (self2) {
             break;
             case "withConsistentHeight":
             break;
-            case "getRichGameStateBadgeText":
+            case "getRewards":
             break;
-            case "extractTraceparentData":
+            case "getRewardsForSkuId":
             break;
             case "AccountAgeTier10LargeBadge":
             break;
@@ -1584,11 +1686,9 @@ if (self2) {
             break;
             case "fingers_crossed_tone5":
             break;
-            case "USER_SETTINGS_PROTO":
+            case "rowFormDivider":
             break;
-            case "USER_SETTINGS_PROTO_ENQUEUE_UPDATE":
-            break;
-            case "rowDivider":
+            case "FormDivider":
             break;
             case "_$esjava$cursor":
             break;
@@ -1619,6 +1719,10 @@ if (self2) {
             case "lt":
             break;
             case "localeIdentifier":
+            break;
+            case "MX":
+            break;
+            case "MXN":
             break;
             case "define":
             break;
@@ -1872,12 +1976,6 @@ if (self2) {
             break;
             case "StreamingTier8LargeBadge":
             break;
-            case "flag_tj":
-            break;
-            case "sheetInitialDetent":
-            break;
-            case "sheetInitialDetentIndex":
-            break;
             case "EntitlementTenantFulfillmentStatus":
             break;
             case "ill":
@@ -1906,7 +2004,21 @@ if (self2) {
             break;
             case "oldestUnreadMessageIdStale":
             break;
-            case "addPerformanceInstrumentationHandler":
+            case "addPoolingTo":
+            break;
+            case "Torbs_Shine":
+            break;
+            case "voiceStateStore":
+            break;
+            case "recordState_":
+            break;
+            case "_$esjava$B_continue_stemming_noun_suffixes":
+            break;
+            case "B_continue_stemming_noun_suffixes":
+            break;
+            case "continue":
+            break;
+            case "suffix":
             break;
             case "caw":
             break;
@@ -1923,7 +2035,14 @@ if (self2) {
             case "fo":
             break;
             case "for":
-            break;
+              origin = closure_2[code.origin];
+              if (origin == null) {
+                origin = code.origin;
+              }
+              _HermesInternal = HermesInternal;
+              str = "Valor inv\u00E1lido en ";
+              combined4 = "Valor inv\u00E1lido en " + origin;
+              return combined4;
             case "forEachChannel":
             break;
             case "ga":
@@ -1932,11 +2051,19 @@ if (self2) {
             break;
             case "BeeIllocon":
             break;
-            case "initialLocale":
+            case "couplekiss":
             break;
-            case "touchableHandleResponderTerminationRequest":
+            case "couplekiss_mm":
             break;
-            case "onRequestSend":
+            case "lek":
+            break;
+            case "kiss":
+            break;
+            case "kiss_mm":
+            break;
+            case "responseTimestamp":
+            break;
+            case "parseOptionValuesForSend":
             break;
             case "getChannelA11yHint":
             break;
@@ -1961,7 +2088,7 @@ if (self2) {
             case "StreamQualitiesToPremiumType":
             break;
             case "PremiumTypeToActivePremiumSubscriptionSKU":
-              return "Virheellinen arvo joukossa";
+            break;
             case "PremiumSubscriptionSKUToPremiumType":
             break;
             case "PremiumTypeOrder":
@@ -1982,13 +2109,13 @@ if (self2) {
             break;
             case "current_guild_id":
             break;
-            case "getConnectionFeedbackOptions":
-              return "Virheellinen arvo joukossa";
-            case "ConnectionFeedbackOption":
+            case "getConnectedActivityLocation":
             break;
-            case "getPaymentIntentInfo":
+            case "onTapRoleIcon":
             break;
-            case "forceFullUpdate":
+            case "contentWrapper":
+            break;
+            case "person_bowing_tone5":
             break;
             case "hasDiversity":
             break;
@@ -2010,7 +2137,19 @@ if (self2) {
             break;
             case "hashKey":
             break;
-            case "yuz":
+            case "ANDROID_NAVIGATION_BAR_BACKGROUND":
+            break;
+            case "NAVIGATION":
+            break;
+            case "BACKGROUND_ANIMATION_DURATION":
+            break;
+            case "ANIMATION_DURATION":
+            break;
+            case "DURATION_1_DAY":
+            break;
+            case "SEND_REACT_CUSTOM_STATUS":
+            break;
+            case "STATUS_PUSH_DISABLED":
             break;
             case "bhd":
             break;
@@ -2019,8 +2158,6 @@ if (self2) {
             case "GUILD_TEMPLATE":
             break;
             case "GUILD_TEMPLATES":
-            break;
-            case "AppleProductIds":
             break;
             case "currentUserHasVerifiedEmail":
             break;
@@ -2214,20 +2351,306 @@ if (self2) {
             break;
             case "ke":
             break;
-            case "woman_judge_tone3":
+            case "woman_judge_tone2":
             break;
-            case "man_judge_tone3":
+            case "man_judge_tone2":
             break;
-            case "judge_tone3":
+            case "judge_tone2":
             break;
-            case "repeat":
-            break;
-            case "repeatCount":
+            case "removingAt":
             break;
             case "dMJ3Y6":
             break;
+            case "jump":
+            break;
+            case "jumpFlash":
+            break;
+            case "fileUploadLimitRoadblockDescription":
+            break;
+            case "onTapCancelUploadItem":
+            break;
+            case "embedded_activity_location_kind":
+            break;
+            case "ki":
+            break;
+            case "kin":
+            break;
+            case "snapPoint":
+            break;
+            case "snapPoints":
+            break;
+            case "AvatarLokyExample":
+            break;
+            case "Backspace":
+            break;
+            case "BackspaceIcon":
+            break;
+            case "aria-label":
+            break;
+            case "aria-labelledby":
+            break;
+            case "lab":
+            break;
+            case "byAppEntry":
+            break;
+            case "tryItOutAvatarDecoration":
+            break;
+            case "GUILD_BOOSTING_PLAN_SELECT":
+            break;
+            case "Buf8":
+            break;
+            case "f8wNDl":
+            break;
+            case "DlcqlU":
+            break;
+            case "lcq":
+            break;
+            case "arrow_left":
+            break;
+            case "leftBox":
+            break;
+            case "enablePeekHint":
+            break;
+            case "internalBinaryWrite":
+            break;
+            case "isEu":
+            break;
+            case "_$esjava$I_length":
+            break;
+            case "I_length":
+            break;
+            case "_l":
+            break;
+            case "_length":
+            break;
+            case "len":
+            break;
+            case "lengthComputable":
+            break;
+            case "clj":
+            break;
+            case "MAX_VISIBLE_PAGES":
+            break;
+            case "load":
+            break;
+            case "J":
+            break;
+            case "setCurrentGuild":
+            break;
+            case "is_synced":
+            break;
+            case "syncedBasicChannels":
+            break;
+            case "syncedBasicChannelsTransaction":
+            break;
+            case "action_location":
+            break;
+            case "loc":
+            break;
+            case "locationAnalyticsObject":
+            break;
+            case "AnalyticsObjects":
+            break;
+            case "__mapperRegistry":
+            break;
+            case "_map":
+            break;
+            case "mar":
+            break;
+            case "margin":
+            break;
+            case "arg":
+            break;
+            case "gi":
+            break;
+            case "heap_max":
+            break;
+            case "_max":
+            break;
+            case "_maxListeners":
+            break;
+            case "maxListeners":
+            break;
+            case "shouldShowModernBoostFlow":
+            break;
+            case "bound_mean":
+            break;
+            case "bound_mean_cumn":
+            break;
+            case "mean":
+            break;
+            case "mean_cumn":
+            break;
+            case "cumn":
+            break;
+            case "failureLockedUntil":
+            break;
+            case "returnKeyType":
+            break;
+            case "__memo":
+            break;
+            case "mo":
+            break;
+            case "messageIds":
+            break;
+            case "sag":
+            break;
+            case "_$esjava$method":
+            break;
+            case "_$esjava$methodobject":
+            break;
+            case "ho":
+            break;
+            case "hod":
+            break;
+            case "dob":
+            break;
+            case "obj":
+            break;
+            case "object":
+            break;
+            case "objectAssign":
+            break;
+            case "alwaysBounceVertical":
+            break;
+            case "appearance":
+            break;
+            case "ActionStatusSubLabel":
+            break;
+            case "onStatus":
+            break;
+            case "Status":
+            break;
+            case "SubLabel":
+            break;
+            case "lineHeight":
+            break;
+            case "SvgFromXml":
+            break;
+            case "ml-Mlym":
+            break;
+            case "OVERLAY_V3_SHOW_WIDGETS":
+            break;
+            case "WIDGETS":
+            break;
+            case "WIDGETS_SUPPORTING_COMMENT":
+            break;
+            case "COMMENT_NODE":
+            break;
+            case "DECISION_OUTCOME":
+            break;
+            case "UTC":
+            break;
+            case "EDYbS+":
+            break;
+            case "+1_tone1":
+            break;
+            case "preferred_locale":
+            break;
+            case "_localeFileMap":
+            break;
+            case "applicationRoleConnection":
+            break;
+            case "applicationRoleConnections":
+            break;
+            case "Xbox":
+            break;
+            case "Xbox One":
+            break;
+            case "currencies":
+            break;
+            case "Omnibutton":
+            break;
+            case "OmnibuttonCoachmarkRive":
+            break;
+            case "mni":
+            break;
+            case "nib":
+            break;
+            case "button":
+            break;
+            case "_connection":
+            break;
+            case "_connectionEntrypointUrl":
+            break;
+            case "connection":
+            break;
+            case "connectionEntrypointUrl":
+            break;
+            case "connectionEntrypointUrlOverride":
+            break;
+            case "Ambient":
+            break;
+            case "Ambient_Lightmode":
+            break;
+            case "bie":
+            break;
+            case "tm":
+            break;
+            case "mod":
+            break;
+            case "modeOptions":
+            break;
+            case "contact_names":
+            break;
+            case "nam":
+            break;
+            case "namesLegacy":
+            break;
+            case "LegacyBaseButton":
+            break;
+            case "BaseButton":
+            break;
+            case "iconBg":
+            break;
+            case "iconBgSelected":
+            break;
+            case "getUserParticipantCount":
+            break;
+            case "track_next":
+            break;
+            case "_nextChannelId":
+            break;
+            case "did_force_clear_guild_hashes":
+            break;
+            case "hashes":
+            break;
+            case "kiss_woman_man_medium_light_skin_tone_medium_dark_skin_tone":
+            break;
+            case "smsNumberContainer":
+            break;
+            case "smsNumberContainerSuccess":
+            break;
+            case "isLayoutCompact":
+            break;
+            case "activeSlideAlignment":
+            break;
+            case "Alignment":
+            break;
+            case "$ZodUnknown":
+            break;
+            case "ZodUnknown":
+            break;
+            case "Unknown":
+            break;
+            case "kn":
+            break;
+            case "$i":
+            break;
+            case "$input":
+            break;
+            case "inp":
+            break;
+            case "input":
+            break;
+            case "put":
+            break;
+            case "last4":
+            break;
+            case "cardholderName":
+            break;
             default:
-              return "Virheellinen sy\u00F6te";
+              return "Entrada inv\u00E1lida";
           }
         }
       };

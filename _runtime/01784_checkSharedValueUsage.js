@@ -575,7 +575,7 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
     obj1[1] = {};
     obj[1] = tmp10Result.makeShareable(obj1);
     obj[2] = tmp10(tmp11[10]).makeViewDescriptorsSet();
-    obj[3] = { current: "sa" };
+    obj[3] = { current: "Promise" };
     tmp2.current = obj;
     const tmp10Result1 = tmp10(tmp11[10]);
   }

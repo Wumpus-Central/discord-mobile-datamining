@@ -900,7 +900,7 @@ let fn = () => {
             self._onReject = obj.onReject || obj.defaultOnReject;
             if (obj.shouldCatchExceptions(obj)) {
               _promise = self._promise;
-              catchPromise = _promise.catch(/* F118929 */ function() { ... });
+              catchPromise = _promise.catch(/* F118970 */ function() { ... });
             }
             _resetStateResult = self._resetState();
           } else {
@@ -1432,9 +1432,9 @@ let fn = () => {
         arg0.loadAxo = function loadAxo(arg0) {
           let self = arg0;
           self = this;
-          const f118946 = function() {
+          const f118987 = function() {
             let c0 = this;
-            const f119908 = () => { ... };
+            const f119949 = () => { ... };
             let closure_5 = { label: 0, sent() { ... }, trys: [], ops: [] };
             let obj = { next: () => { ... }, throw: () => { ... }, return: () => { ... } };
             c0 = 0;
@@ -1442,7 +1442,7 @@ let fn = () => {
             c0 = 2;
             if (typeof Symbol === "function") {
               let _Symbol = Symbol;
-              obj[Symbol.iterator] = /* F118940 */ function() { ... };
+              obj[Symbol.iterator] = /* F118981 */ function() { ... };
             }
             return obj;
           };
@@ -2035,7 +2035,7 @@ let fn = () => {
           if (this.limitBroadcastToFramesArray) {
             targetFrames = this.targetFrames;
             mapped = targetFrames.map(() => { ... });
-            found = mapped.filter(/* F118953 */ function() { ... });
+            found = mapped.filter(/* F118994 */ function() { ... });
           } else {
             found = [];
           }
@@ -2048,7 +2048,7 @@ let fn = () => {
             result = self.targetFramesAsWindows();
             tmp = globalThis;
             _Boolean = Boolean;
-            return Boolean(result.find(/* F118954 */ function() { ... }));
+            return Boolean(result.find(/* F118995 */ function() { ... }));
           } else {
             flag = true;
             return true;
@@ -2864,7 +2864,7 @@ let fn = () => {
         _createPaymentRequestSynchronously(arg0) {
           _client = this._client;
           applePayWeb = _client.getConfiguration().gatewayConfiguration.applePayWeb;
-          obj = { countryCode: applePayWeb.countryCode, currencyCode: applePayWeb.currencyCode, merchantCapabilities: tmp, supportedNetworks: supportedNetworks.map(/* F115291 */ function() { ... }) };
+          obj = { countryCode: applePayWeb.countryCode, currencyCode: applePayWeb.currencyCode, merchantCapabilities: tmp, supportedNetworks: supportedNetworks.map(/* F115331 */ function() { ... }) };
           tmp = applePayWeb.merchantCapabilities || ["supports3DS"];
           supportedNetworks = applePayWeb.supportedNetworks;
           return Object.assign({}, obj, global);
@@ -6417,7 +6417,7 @@ let fn = () => {
         }
       }
     },
-    { crypto: "sa" }
+    { crypto: "Promise" }
   ];
   items = [
     (arg0, arg1, arg2) => {
@@ -6883,10 +6883,10 @@ let fn = () => {
             assetsUrl = configuration.gatewayConfiguration.assetsUrl;
             isDebug = configuration.isDebug;
           } else {
-            tmp2 = f115350;
+            tmp2 = f115390;
             tmp4 = globalThis;
             _Boolean = Boolean;
-            obj = f115350.create(global.authorization);
+            obj = f115390.create(global.authorization);
             isDebug = Boolean(global.isDebug);
             assetsUrl = obj;
           }
@@ -6972,7 +6972,7 @@ let fn = () => {
               onResult4 = _bus5.on(events.BIN_AVAILABLE, () => { ... });
               _setTimeout = setTimeout;
               tmp34 = INTEGRATION_TIMEOUT_MS;
-              f115350 = setTimeout(() => { ... }, INTEGRATION_TIMEOUT_MS);
+              f115390 = setTimeout(() => { ... }, INTEGRATION_TIMEOUT_MS);
               _Promise = Promise;
               allPromises = Promise.all(items);
               nextPromise = allPromises.then(() => { ... });
@@ -9578,7 +9578,7 @@ let fn = () => {
         _initialize() {
           self = this;
           _client = this._client;
-          f115397 = setTimeout(() => { ... }, INTEGRATION_TIMEOUT_MS);
+          f115437 = setTimeout(() => { ... }, INTEGRATION_TIMEOUT_MS);
           promise = new Promise(() => { ... });
           return promise;
         }
@@ -10871,7 +10871,7 @@ let fn = () => {
           self._clientPromise = obj2.then(fn.bind(self));
           if (global.client) {
             _clientPromise = self._clientPromise;
-            fn2 = /* F115430 */ function() { ... };
+            fn2 = /* F115470 */ function() { ... };
             nextPromise = _clientPromise.then(fn2.bind(self));
           } else {
             tmp4 = globalThis;
@@ -10886,7 +10886,7 @@ let fn = () => {
           tmp = new closure_4();
           assign = tmp;
           configuration = global.getConfiguration();
-          f115431 = setTimeout(() => { ... }, INTEGRATION_TIMEOUT_MS);
+          f115471 = setTimeout(() => { ... }, INTEGRATION_TIMEOUT_MS);
           obj._assetsUrl = `${tmp2.gatewayConfiguration.paypal.assetsUrl}/web/3.112.1`;
           obj._isDebug = configuration.isDebug;
           obj._loadingFrameUrl = `${`${obj._assetsUrl}/html/paypal-landing-frame`}${c12(obj._isDebug)}.html`;
@@ -11200,7 +11200,7 @@ let fn = () => {
             }
             fn2 = () => { ... };
             nextPromise = resolved.then(fn2.bind(self));
-            fn3 = /* F115454 */ function() { ... };
+            fn3 = /* F115494 */ function() { ... };
             return promise.then(fn3.bind(self));
           } else {
             if (dataAttributes["client-metadata-id"]) {
@@ -11464,7 +11464,7 @@ let fn = () => {
             removeChildResult = parentNode.removeChild(self._paypalScript);
           }
           _frameServicePromise = self._frameServicePromise;
-          catchPromise = _frameServicePromise.catch(/* F115456 */ function() { ... });
+          catchPromise = _frameServicePromise.catch(/* F115496 */ function() { ... });
           return catchPromise.then(() => { ... });
         }
       }
@@ -11504,7 +11504,7 @@ let fn = () => {
         _initialize() {
           self = this;
           _client = this._client;
-          f115458 = setTimeout(() => {
+          f115498 = setTimeout(() => {
             outer1_8.sendEvent(_client, "paypal.load.timed-out");
           }, INTEGRATION_TIMEOUT_MS);
           promise = new Promise((arg0) => {
@@ -12816,7 +12816,7 @@ let fn = () => {
         }
         _addV1IframeToPage() {
           obj = { element: this._v1Modal };
-          _emitResult = this._emit(InlineIframeFramework.events.AUTHENTICATION_IFRAME_AVAILABLE, obj, /* F115502 */ function() { ... });
+          _emitResult = this._emit(InlineIframeFramework.events.AUTHENTICATION_IFRAME_AVAILABLE, obj, /* F115542 */ function() { ... });
           return;
         }
         _setupFrameworkSpecificListeners() {
@@ -13019,7 +13019,7 @@ let fn = () => {
           dfReferenceId = this.getDfReferenceId();
           nextPromise = dfReferenceId.then(() => { ... });
           nextPromise1 = nextPromise.then(() => { ... });
-          catchPromise = nextPromise1.catch(/* F115516 */ function() { ... });
+          catchPromise = nextPromise1.catch(/* F115556 */ function() { ... });
           nextPromise2 = catchPromise.then(() => { ... });
           return nextPromise2.then(() => { ... });
         }
@@ -14721,11 +14721,11 @@ let fn = () => {
           if (this.venmoContextId) {
             tmp = arg0;
             obj = { input: null };
-            tmp2 = f104477;
+            tmp2 = f104512;
             obj1 = { id: null, status: null };
             obj1[0] = self.venmoContextId;
             obj1[1] = arg0;
-            obj[0] = f104477(obj1, obj);
+            obj[0] = f104512(obj1, obj);
             tmp3 = c5;
             apiRequestResult = self.apiRequest(self.shouldUseLegacyQRCodeMutation ? tmp3.LEGACY_UPDATE_PAYMENT_CONTEXT_QUERY : tmp3.UPDATE_PAYMENT_CONTEXT_QUERY, obj);
             return apiRequestResult.then(() => {
@@ -15272,7 +15272,7 @@ let fn = () => {
               }
               obj = { subTotalAmount: null, discountAmount: null, taxAmount: null, shippingAmount: null, totalAmount: null, lineItems: null };
               ({ _subTotalAmount: obj[0], _discountAmount: obj[1], _taxAmount: obj[2], _shippingAmount: obj[3], _totalAmount: obj[4], _lineItems: obj[5] } = self);
-              f115596 = obj;
+              f115636 = obj;
               tmp10 = globalThis;
               _Object = Object;
               keys = Object.keys(obj);
@@ -15627,7 +15627,7 @@ let fn = () => {
           if (reduced.resourceId) {
             reduced.id = reduced.resourceId;
           }
-          f115594 = reduced;
+          f115634 = reduced;
           promise = new Promise(() => { ... });
           return promise;
         }

@@ -259,7 +259,7 @@ class FeedbackWidget {
                 fileName = undefined;
                 uri = undefined;
                 if (uri._hasScreenshot()) {
-                  debug.setState({ filename: "Array", attachment: "call", attachmentUri: "useStateFromStores" });
+                  debug.setState({ filename: "max", attachment: "channel", attachmentUri: "Boolean" });
                 } else {
                   num2 = debug.props.imagePicker;
                   if (num2) {

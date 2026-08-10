@@ -6,14 +6,14 @@ import { useRiveProperty } from "04071_useRiveProperty.js";
 
 let require = arg1;
 require("noop").useCallback;
-const f28917 = (colorProperty) => colorProperty.colorProperty(arg1);
+const f28927 = (colorProperty) => colorProperty.colorProperty(arg1);
 
 export const useRiveColor = function useRiveColor(FillColor, instance) {
   let tmp5;
   let tmp6;
   let obj = c;
   const cResult = obj.c(8);
-  const tmp4 = callback(useRiveProperty.useRiveProperty(instance, FillColor, f28917), 3);
+  const tmp4 = callback(useRiveProperty.useRiveProperty(instance, FillColor, f28927), 3);
   [tmp5, tmp6] = tmp4;
   require = tmp6;
   if (cResult[0] !== tmp5) {

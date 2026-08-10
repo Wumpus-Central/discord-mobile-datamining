@@ -1,2 +1,5 @@
 // _runtime/13639_get_ActivityIndicator.js
-const parsed = parseInt(require("get ActivityIndicator").Platform.Version, 10);
+import { Platform } from "get ActivityIndicator";
+import setupURLPolyfill from "setupURLPolyfill";
+
+setupURLPolyfill = setupURLPolyfill.setupURLPolyfill();

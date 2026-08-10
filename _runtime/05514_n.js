@@ -52,7 +52,7 @@ export const useReanimatedEventHandler = function useReanimatedEventHandler(hand
   const fn = function h(handlerTag) {
     let tmp = outer1_7.value[handlerTag.handlerTag];
     if (undefined === tmp) {
-      const obj = { lastUpdateEvent: "sa" };
+      const obj = { lastUpdateEvent: "Promise" };
       iter.value[handlerTag.handlerTag] = obj;
       tmp = obj;
     }

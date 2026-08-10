@@ -79,8 +79,8 @@ let fn = function n(userConfig, callback) {
       initialVelocity: 0,
       current: "sa",
       lastTimestamp: null,
-      startTimestamp: "buton",
-      reduceMotion: "P"
+      startTimestamp: 72,
+      reduceMotion: 4
     };
     let num = obj.velocity;
     if (num == null) {

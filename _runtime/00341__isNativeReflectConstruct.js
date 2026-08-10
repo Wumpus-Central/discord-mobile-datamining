@@ -36,11 +36,11 @@ closure_1 = undefined;
 class KeyboardAvoidingView {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, f114606);
+    tmp = _isNativeReflectConstruct(this, f114646);
     items = [];
     items[0] = global;
     tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(f114606);
+    obj = _isNativeReflectConstruct(f114646);
     tmp3 = _isNativeReflectConstruct;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
@@ -50,7 +50,7 @@ class KeyboardAvoidingView {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    f114606 = tmp3Result;
+    f114646 = tmp3Result;
     tmp3Result._frame = null;
     tmp3Result._keyboardEvent = null;
     tmp3Result._subscriptions = [];
@@ -64,8 +64,8 @@ class KeyboardAvoidingView {
       closure_0._keyboardEvent = null;
       const result = closure_0._updateBottomIfNecessary();
     };
-    f114606 = undefined;
-    f114606 = defineProperty((arg0) => {
+    f114646 = undefined;
+    f114646 = defineProperty((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;

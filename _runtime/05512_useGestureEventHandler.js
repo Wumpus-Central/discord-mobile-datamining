@@ -6,7 +6,7 @@ export const useGestureEventHandler = function useGestureEventHandler(handlerTag
   let closure_0 = handlerTag;
   let closure_1 = memoizedGestureCallbacks;
   const useMemo = disableReanimated;
-  const tmp = useMemo(() => ({ lastUpdateEvent: "sa" }), []);
+  const tmp = useMemo(() => ({ lastUpdateEvent: "Promise" }), []);
   let closure_3 = tmp;
   const items = [handlerTag, memoizedGestureCallbacks, , , , ];
   ({ changeEventCalculator: arr[2], dispatchesAnimatedEvents: arr[3], fillInDefaultValues: arr[4] } = disableReanimated);
