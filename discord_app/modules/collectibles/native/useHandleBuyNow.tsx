@@ -62,7 +62,7 @@ function useHandleBuyNow(product) {
             callback(false);
             obj = v0(4271);
             obj.hideActionSheet();
-            obj1 = v0(10124);
+            obj1 = v0(10125);
             const obj3 = { product: null, useCategoryImage: true };
             obj3[0] = closure_0;
             obj1.open(obj3);

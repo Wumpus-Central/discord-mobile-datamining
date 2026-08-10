@@ -7,8 +7,8 @@ import set from "set";
 import { ComponentActions } from "ME";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/10887_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/10888_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10889_registerAsset.js";
 import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -129,7 +129,7 @@ export default function GameConsoleListActionSheet(arg0) {
               v0 = 1;
               dependencyMap = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(10885).transferToPlaystationWithAlert(outer1_0, dependencyMap[outer1_4], v0);
+              obj1[0] = outer1_0(10886).transferToPlaystationWithAlert(outer1_0, dependencyMap[outer1_4], v0);
               return obj1;
             }
           } else if (arg0 === 1) {

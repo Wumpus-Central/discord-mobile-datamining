@@ -196,7 +196,7 @@ export default function UserSettingsPushNotificationLogs() {
             dependencyMap = 1;
             c3 = 1;
             const obj1 = { value: null, done: false };
-            obj1[0] = outer1_1(9871)();
+            obj1[0] = outer1_1(9872)();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -211,7 +211,7 @@ export default function UserSettingsPushNotificationLogs() {
           closure_0 = arg1;
           obj = outer1_0(8923);
           const obj3 = { message: null };
-          obj3[0] = outer1_1(9873)(closure_0, false);
+          obj3[0] = outer1_1(9874)(closure_0, false);
           obj.showShareActionSheet(obj3, "push-notification-logs");
           c3 = 3;
           return { value: "HermesInternal", done: null };
@@ -222,7 +222,7 @@ export default function UserSettingsPushNotificationLogs() {
       }
     }
   });
-  obj[3] = callback3(first(12230).ShareIcon, {});
+  obj[3] = callback3(first(12232).ShareIcon, {});
   items1[1] = callback3(first(4846).PressableOpacity, obj);
   obj[1] = items1;
   let items2 = [callback4(View, obj), ];

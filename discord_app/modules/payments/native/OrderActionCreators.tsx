@@ -4,7 +4,7 @@ import { OrderStatus } from "CustomCheckoutFlow";
 import { Endpoints } from "ME";
 
 const require = arg1;
-function getOrders() {
+function getOrders(arg0) {
   const self = this;
   const apply = _getOrders.apply;
   if (typeof apply === "unknown") {
@@ -1701,7 +1701,7 @@ export const cancelSigningAndDiscardOrder = function cancelSigningAndDiscardOrde
   }
   return applyArgumentsResult;
 };
-export const markOrderAsSigningInProgress = function markOrderAsSigningInProgress(orderId) {
+export const markOrderAsSigningInProgress = function markOrderAsSigningInProgress(closure_8) {
   const self = this;
   const apply = _markOrderAsSigningInProgress.apply;
   if (typeof apply === "unknown") {

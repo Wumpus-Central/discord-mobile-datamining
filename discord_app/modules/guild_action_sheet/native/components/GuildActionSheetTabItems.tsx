@@ -21,7 +21,7 @@ export default function GuildActionSheetTabItems(guild) {
   guild = guild.guild;
   let stateFromStores;
   let closure_2;
-  let obj = guild(13308);
+  let obj = guild(13310);
   let canAccessSettings = obj.useGuildActionSheetPermissions(guild).canAccessSettings;
   const total = stateFromStores(4210)(guild.id).total;
   let obj1 = guild(589);
@@ -68,7 +68,7 @@ export default function GuildActionSheetTabItems(guild) {
     let obj3 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
     const intl3 = tmp(1236).intl;
     obj3[1] = intl3.string(tmp(1236).t.VINpSK);
-    obj3[2] = tmp3(9721);
+    obj3[2] = tmp3(9722);
     obj3[4] = function onPress() {
       stateFromStores(outer1_3[17]).hideActionSheet();
       callback();

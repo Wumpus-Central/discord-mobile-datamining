@@ -29,7 +29,7 @@ export const openSocialLayerStorefrontProductDetailsModal = function openSocialL
   if (obj.getIsEligibleForSocialLayerStorefrontMobilePurchasing({ location: "social_layer_storefront_product_details_modal" })) {
     const socialLayerStorefrontConfig = tmp(7757).fetchSocialLayerStorefrontConfig();
     const obj5 = ModalActionCreators;
-    obj5.pushLazy(tmp(1988)(10089, dependencyMap.paths), closure_0, c4, { presentation: "modal" });
+    obj5.pushLazy(tmp(1988)(10090, dependencyMap.paths), closure_0, c4, { presentation: "modal" });
     const tmpResult = tmp(7757);
   } else {
     obj = { title: null, body: null };
@@ -46,7 +46,7 @@ export const closeSocialLayerStorefrontProductDetailsModal = function closeSocia
 };
 export const openSocialLayerStorefrontGiftModal = function openSocialLayerStorefrontGiftModal(closure_0) {
   if (obj.getIsEligibleForSocialLayerStorefrontMobilePurchasing({ location: "social_layer_storefront_gift_modal" })) {
-    ModalActionCreators.pushLazy(asyncRequireImpl(10098, dependencyMap.paths), closure_0, c5);
+    ModalActionCreators.pushLazy(asyncRequireImpl(10099, dependencyMap.paths), closure_0, c5);
     const obj2 = ModalActionCreators;
   }
 };

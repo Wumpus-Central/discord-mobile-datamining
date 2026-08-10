@@ -338,9 +338,9 @@ function NoResults() {
   const tmp6 = closure_7;
   const tmp8 = closure_6;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(10286);
+    let tmp2Result = tmp2(10287);
   } else {
-    tmp2Result = tmp2(10287);
+    tmp2Result = tmp2(10288);
   }
   obj[1] = tmp2Result;
   const items = [closure_14(tmp8, obj), , ];

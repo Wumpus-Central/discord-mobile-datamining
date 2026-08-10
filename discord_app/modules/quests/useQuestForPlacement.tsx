@@ -27,16 +27,16 @@ function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP) {
           const tmp9Result = tmp9(7175);
         }
         if (enableNewRequestBehavior) {
-          let tmpResult = tmp(10461);
+          let tmpResult = tmp(10462);
           const currentQuests = tmpResult.fetchCurrentQuests();
-          tmpResult = tmp(10461);
+          tmpResult = tmp(10462);
           const questToDeliver = tmpResult.fetchQuestToDeliver(QUEST_HOME_BANNER_DESKTOP, arg2);
         }
       }
       obj3 = fetchingQuestToDeliverByPlacement;
     } else if (null != fetchedAt) {
-      tmp(10461).clearQuestAdDecision(QUEST_HOME_BANNER_DESKTOP, fetchedAt.ttlMillis);
-      const tmpResult1 = tmp(10461);
+      tmp(10462).clearQuestAdDecision(QUEST_HOME_BANNER_DESKTOP, fetchedAt.ttlMillis);
+      const tmpResult1 = tmp(10462);
     }
     obj2 = DiscordAppState.native;
     tmp9 = importDefault;

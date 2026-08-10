@@ -5,7 +5,7 @@ import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import Button from "Button";
 import { _isNativeReflectConstruct } from "../../../../../_runtime/08871__isNativeReflectConstruct.js";
-import { registerAsset } from "../../../../../_runtime/10231_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10232_registerAsset.js";
 import { ShieldIcon } from "../../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { openImagePickerUnhandled } from "../../../../utils/native/UploadUtils.tsx";

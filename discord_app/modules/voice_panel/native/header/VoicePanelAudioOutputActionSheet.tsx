@@ -70,8 +70,8 @@ function VoicePanelAudioConsoleSection(channel) {
   let stateFromStores;
   let stateFromStores1;
   let c5;
-  arr = arr(10875)();
-  dependencyMap = arr(10767)();
+  arr = arr(10876)();
+  dependencyMap = arr(10768)();
   let obj = channel(647);
   const items = [c5];
   stateFromStores = obj.useStateFromStores(items, () => _undefined.getAwaitingRemoteSessionInfo());

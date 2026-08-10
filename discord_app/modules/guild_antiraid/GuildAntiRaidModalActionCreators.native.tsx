@@ -13,5 +13,5 @@ export const openReportRaidModal = function openReportRaidModal(id) {
     },
     guildId: id
   };
-  obj.pushLazy(asyncRequireImpl(13311, dependencyMap.paths), obj, closure_3);
+  obj.pushLazy(asyncRequireImpl(13313, dependencyMap.paths), obj, closure_3);
 };

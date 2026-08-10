@@ -1,5 +1,5 @@
 // discord_app/modules/thumbhash/ThumbhashUtils.tsx
-import { thumbHashToRGBA } from "../../../_runtime/14432_thumbHashToRGBA.js";
+import { thumbHashToRGBA } from "../../../_runtime/14434_thumbHashToRGBA.js";
 function thumbHashToRGBA(arg0) {
   let obj = arg1;
   if (arg1 === undefined) {

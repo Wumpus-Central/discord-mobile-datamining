@@ -4,5 +4,5 @@ import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionShe
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/messages/native/long_press/showLongPressMessageActionSheet.tsx");
 
 export const showLongPressMessageActionSheet = function showLongPressMessageActionSheet(closure_0) {
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(11120, dependencyMap.paths), "MessageLongPressActionSheet", closure_0);
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(11121, dependencyMap.paths), "MessageLongPressActionSheet", closure_0);
 };

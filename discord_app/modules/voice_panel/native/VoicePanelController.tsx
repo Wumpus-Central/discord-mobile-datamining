@@ -228,16 +228,16 @@ export default function VoicePanelController(channelId) {
   const animatedReaction3Result16 = animatedReaction3(tmp2[22]);
   class H {
     constructor() {
-      value = f113467.get();
+      value = f113507.get();
       if (c16.PANEL === value) {
-        tmp5 = f113459;
-        return f113459.PANEL;
+        tmp5 = f113499;
+        return f113499.PANEL;
       } else if (tmp2.PIP === value) {
-        tmp4 = f113459;
-        return f113459.PIP;
+        tmp4 = f113499;
+        return f113499.PIP;
       } else {
-        tmp3 = f113459;
-        return f113459.UNDEFINED;
+        tmp3 = f113499;
+        return f113499.UNDEFINED;
       }
     }
   }
@@ -621,16 +621,16 @@ export default function VoicePanelController(channelId) {
     const items19 = [];
     class H {
       constructor() {
-        value = f113467.get();
+        value = f113507.get();
         if (c16.PANEL === value) {
-          tmp5 = f113459;
-          return f113459.PANEL;
+          tmp5 = f113499;
+          return f113499.PANEL;
         } else if (tmp2.PIP === value) {
-          tmp4 = f113459;
-          return f113459.PIP;
+          tmp4 = f113499;
+          return f113499.PIP;
         } else {
-          tmp3 = f113459;
-          return f113459.UNDEFINED;
+          tmp3 = f113499;
+          return f113499.UNDEFINED;
         }
       }
     }
@@ -1269,7 +1269,7 @@ export default function VoicePanelController(channelId) {
         items = [, , ];
         items[0] = id;
         items[1] = useSharedValue.get();
-        items[2] = f113467.get();
+        items[2] = f113507.get();
         return items;
       }
     }

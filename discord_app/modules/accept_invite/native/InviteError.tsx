@@ -4,7 +4,7 @@ import get_ActivityIndicator from "GuildIconSizes";
 import ME from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/12079_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12080_registerAsset.js";
 import { Button } from "../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
@@ -31,7 +31,7 @@ function InviteErrorBase(invite) {
   const tmp = createCacheKey();
   let obj = AccessibilityAnnouncer;
   const tmp4 = importDefault;
-  const tmp4Result = importDefault(obj.isThemeDark(useTheme()) ? 12076 : 12077);
+  const tmp4Result = importDefault(obj.isThemeDark(useTheme()) ? 12077 : 12078);
   let code;
   if (inviteError != null) {
     code = inviteError.code;

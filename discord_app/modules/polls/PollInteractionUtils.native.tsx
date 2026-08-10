@@ -7,5 +7,5 @@ export const showVotesForAnswer = function showVotesForAnswer(initialAnswerId) {
   const message = initialAnswerId.message;
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channelId: message.channel_id, messageId: message.id, initialAnswerId: initialAnswerId.initialAnswerId };
-  obj.openLazy(asyncRequireImpl(10284, dependencyMap.paths), "PollVotesActionSheet", obj);
+  obj.openLazy(asyncRequireImpl(10285, dependencyMap.paths), "PollVotesActionSheet", obj);
 };

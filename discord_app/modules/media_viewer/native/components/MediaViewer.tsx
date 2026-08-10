@@ -65,7 +65,7 @@ function MediaViewer(arg0) {
   let obj = _MediaViewerDimensionsProvider;
   const mediaViewerDimensions = obj.useMediaViewerDimensions();
   ({ width, height } = mediaViewerDimensions);
-  const tmp9 = height(12260)({ index, onClose, sources, windowHeight: height, windowWidth: width });
+  const tmp9 = height(12262)({ index, onClose, sources, windowHeight: height, windowWidth: width });
   dependencyMap = tmp9;
   let obj1 = _ReanimatedRexport;
   sharedValue = obj1.useSharedValue(0);
@@ -268,7 +268,7 @@ function MediaViewer(arg0) {
   obj6[1] = str;
   obj6[2] = renderOverlay(dismiss, overlayEnabled);
   items5[3] = translatePos(height(4037), obj6);
-  items5[4] = translatePos(tmp(10655), {});
+  items5[4] = translatePos(tmp(10656), {});
   obj4[3] = items5;
   const children = tmp28(tmp29, obj4);
   return translatePos(tmp7(5728).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });

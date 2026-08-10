@@ -93,8 +93,8 @@ export default function TransferOwnership(guild) {
               }
               const obj4 = v0(arr[14]);
               v0(arr[14]).transferOwnership(outer1_0.id, v0.id, MFA).then(() => {
-                v1(11243).close();
-                const obj = v1(11243);
+                v1(11244).close();
+                const obj = v1(11244);
                 v1(9021).close();
                 const obj2 = v1(9021);
                 const result = tmp2(4001).showTransferOwnershipSuccess();
@@ -179,7 +179,7 @@ export default function TransferOwnership(guild) {
   obj1 = { paddingTop: toUser(712).space.PX_16, paddingHorizontal: token };
   obj[0] = obj1;
   obj2 = { style: tmp5.header, children: null };
-  obj3 = { source: toUser(11247), style: tmp5.arrow };
+  obj3 = { source: toUser(11248), style: tmp5.arrow };
   const items1 = [callback2(c7, obj3), , , ];
   let obj4 = { style: tmp5.avatarsWrapper, children: null };
   const obj5 = { user: stateFromStores, guildId: guild.id, size: null };

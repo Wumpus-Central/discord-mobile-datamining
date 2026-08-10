@@ -33,8 +33,8 @@ let closure_22;
 const require = arg1;
 function VideoStream(streamId) {
   streamId = streamId.streamId;
-  let obj = streamId(16148);
-  setHasActiveVideoOutputSink = obj.useSetHasActiveVideoOutputSink(importAllResult.useContext(setHasActiveVideoOutputSink(11644)).streamOutputSinkStack);
+  let obj = streamId(16157);
+  setHasActiveVideoOutputSink = obj.useSetHasActiveVideoOutputSink(importAllResult.useContext(setHasActiveVideoOutputSink(11645)).streamOutputSinkStack);
   const items = [setHasActiveVideoOutputSink, streamId];
   const effect = importAllResult.useEffect(() => {
     if (null != streamId) {
@@ -46,7 +46,7 @@ function VideoStream(streamId) {
   }, items);
   obj = {};
   const merged = Object.assign(streamId);
-  return callback(setHasActiveVideoOutputSink(10704), obj);
+  return callback(setHasActiveVideoOutputSink(10705), obj);
 }
 function markContentReady() {
   const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
@@ -306,7 +306,7 @@ function User(participantId) {
   }, items);
   let tmp5 = transitionState === transitionState(4648).TransitionStates.YEETED ? tmp.onTop : tmp.onBottom;
   dependencyMap = tmp5;
-  const context = obj.useContext(transitionCleanUp(11644));
+  const context = obj.useContext(transitionCleanUp(11645));
   channelId = context.channelId;
   ({ guildId, focused } = context);
   mode = context.mode;
@@ -353,7 +353,7 @@ function User(participantId) {
     }
   }
   const items3 = [channelId];
-  const surfaceDirectRendererExperiment = transitionState(10693).useSurfaceDirectRendererExperiment(id, { location: "VoicePanelPIPContent" });
+  const surfaceDirectRendererExperiment = transitionState(10694).useSurfaceDirectRendererExperiment(id, { location: "VoicePanelPIPContent" });
   callback = obj.useCallback((arg0, arg1) => {
     let participant;
     if (null != arg0) {
@@ -368,7 +368,7 @@ function User(participantId) {
     }
     c8(tmp5);
   }, items3);
-  const tmp3Result1 = transitionState(10693);
+  const tmp3Result1 = transitionState(10694);
   const fn = function h() {
     const value = focused.get();
     let id;
@@ -436,7 +436,7 @@ function User(participantId) {
     layoutManager.setTargetDimensions(transitionState, nativeEvent.width, nativeEvent.height);
   }, items5);
   const tmp3Result4 = transitionState(647);
-  canRenderParticipantVideo = transitionState(10708).useCanRenderParticipantVideo(stateFromStores);
+  canRenderParticipantVideo = transitionState(10709).useCanRenderParticipantVideo(stateFromStores);
   if (canRenderParticipantVideo) {
     let tmp24 = tmp15;
     if (tmp15) {
@@ -522,8 +522,8 @@ function AnimatedVideoWrapper(arg0) {
   let style;
   let targetDimensionsSubscription;
   ({ participantId, style, children } = arg0);
-  targetDimensionsSubscription = targetDimensionsSubscription(11647).useTargetDimensionsSubscription(participantId, importAllResult.useContext(dismissPanel).layoutManager);
-  const obj = targetDimensionsSubscription(11647);
+  targetDimensionsSubscription = targetDimensionsSubscription(11648).useTargetDimensionsSubscription(participantId, importAllResult.useContext(dismissPanel).layoutManager);
+  const obj = targetDimensionsSubscription(11648);
   const fn = function u() {
     let height;
     let width;
@@ -564,7 +564,7 @@ function Stream(participantId) {
   let callback2;
   let c9;
   let tmp = callback3();
-  let obj = transitionState(16158);
+  let obj = transitionState(16167);
   const mode = obj.usePIPState().mode;
   transitionCleanUp = mode;
   let obj1 = streamId;
@@ -600,7 +600,7 @@ function Stream(participantId) {
     tmp = transitionState;
     tmp2 = _undefined;
   }, items);
-  const context = obj1.useContext(transitionCleanUp(11644));
+  const context = obj1.useContext(transitionCleanUp(11645));
   ({ channelId: c2, layoutManager } = context);
   let tmp2Result = tmp2(647);
   const items1 = [getParticipants];
@@ -628,7 +628,7 @@ function Stream(participantId) {
     return obj;
   });
   streamId = stateFromStoresObject.streamId;
-  tmp2Result = tmp2(10693);
+  tmp2Result = tmp2(10694);
   const surfaceDirectRendererExperiment = tmp2Result.useSurfaceDirectRendererExperiment(stateFromStoresObject.userId, { location: "VoicePanelPIPContent.Stream" });
   let tmp5 = transitionState === transitionState(4648).TransitionStates.YEETED ? tmp.onTop : tmp.onBottom;
   const items2 = [c9];
@@ -710,11 +710,11 @@ function Stream(participantId) {
   if (stateFromStores === constants.ENDED) {
     obj = { style: null, resizeMode: "contain" };
     obj[0] = tmp.streamEmptyImage;
-    let tmp18Result = callback(tmp2(10686).StreamEnded, obj);
+    let tmp18Result = callback(tmp2(10687).StreamEnded, obj);
   } else if (stateFromStores === tmp17.FAILED) {
     obj = { style: null, resizeMode: "contain" };
     obj[0] = tmp.streamEmptyImage;
-    tmp18Result = callback(tmp2(10689).StreamFailed, obj);
+    tmp18Result = callback(tmp2(10690).StreamFailed, obj);
   } else if (tmp15) {
     obj1 = { style: null, participantId: null, children: null };
     obj1[0] = tmp5;

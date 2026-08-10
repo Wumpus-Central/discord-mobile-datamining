@@ -46,7 +46,7 @@ prototype["search"] = function search(str) {
     } else {
       const obj2 = apply;
       const values = apply.chain(mutablePrivateChannels.getMutablePrivateChannels()).values();
-      const found = values.filter(trimmed1(11739).filterGroupDMs);
+      const found = values.filter(trimmed1(11740).filterGroupDMs);
       const mapped = found.map((id) => {
         const items = [id, trimmed1(outer1_2[3]).matchGroupDM(id, trimmed1), outer1_4.getScoreWithoutFetchingLatest(id.id)];
         return items;

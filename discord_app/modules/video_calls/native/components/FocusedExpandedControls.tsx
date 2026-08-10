@@ -6,8 +6,8 @@ import fetchFingerprint from "fetchFingerprint";
 import { MediaEngineContextTypes } from "DesktopSources";
 import jsxProd from "NOOP";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/10897_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/10898_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10899_registerAsset.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { VolumeSlider } from "../../../../components_native/common/VolumeSlider.tsx";
@@ -183,7 +183,7 @@ export const DeafenButton = function DeafenButton(disabled) {
   }
   let obj = NOOP;
   const deafHandler = obj.createDeafHandler(useDeafStates(disabled.channel));
-  obj = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 10901 : 10902), label: null };
+  obj = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 10902 : 10903), label: null };
   const intl = tmp4(1236).intl;
   obj[3] = intl.string(getSystemLocale.t.wjcRFX);
   return callback(ExpandedControlItem, obj);

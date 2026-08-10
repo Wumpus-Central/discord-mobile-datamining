@@ -249,7 +249,7 @@ function ForYouMessagePreviewV2(item) {
     const obj3 = { style: null, children: null };
     obj3[0] = messagePreviewIconV2.messagePreviewIconV2Container;
     if (constants3.ATTACHMENT === ATTACHMENT) {
-      let tmp29 = guild_id(10186);
+      let tmp29 = guild_id(10187);
       const obj4 = { source: null, size: null, style: null };
       obj4[0] = tmp29;
       SMALL = tmp2(1297).IconSizes.SMALL;
@@ -264,7 +264,7 @@ function ForYouMessagePreviewV2(item) {
         tmp29 = guild_id(8006);
       }
     }
-    tmp29 = guild_id(9989);
+    tmp29 = guild_id(9990);
   }
 }
 function ApplicationName(applicationId) {

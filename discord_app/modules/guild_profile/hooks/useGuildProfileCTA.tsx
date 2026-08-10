@@ -229,7 +229,7 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
       }
     }
   }
-  const pendingFolderGuildIds = set(11189).getPendingFolderGuildIds();
+  const pendingFolderGuildIds = set(11190).getPendingFolderGuildIds();
   if (tmp7) {
     let roles;
     if (invite != null) {
@@ -291,7 +291,7 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
     }
     return APPLY_TO_JOIN;
   }
-  const obj2 = set(11189);
+  const obj2 = set(11190);
   const tmp15 = set;
   tmp7 = null != joinedAt;
 };

@@ -46,7 +46,7 @@ export default function DmSettingsUpsellActionSheet(guildId) {
     obj = { style: null, children: null };
     obj[0] = tmp.container;
     const obj1 = { source: null, style: null };
-    obj1[0] = stateFromStores(10355);
+    obj1[0] = stateFromStores(10356);
     obj1[1] = tmp.headerImage;
     const items2 = [callback(closure_5, obj1), , , , , , ];
     let obj2 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: null, children: null };
@@ -88,7 +88,7 @@ export default function DmSettingsUpsellActionSheet(guildId) {
       let obj = guildId(outer1_2[15]);
       RestrictedGuildIds.updateSetting(Array.from(sanitizedRestrictedGuilds)).then(() => {
         let obj = callback2(4002);
-        obj = { key: "DM_SETTINGS_UPSELL_SUCCESS_TOAST", icon: callback2(9877), content: null };
+        obj = { key: "DM_SETTINGS_UPSELL_SUCCESS_TOAST", icon: callback2(9878), content: null };
         const intl = callback(1236).intl;
         obj[2] = intl.string(callback(1236).t.rlYD1W);
         obj.open(obj);

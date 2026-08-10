@@ -123,7 +123,7 @@ class OneColumnGuildUpsellList {
         }
       });
     }, items2);
-    obj = { onViewableItemsChanged: callback2, viewabilityConfig: f61617, contentContainerStyle, keyExtractor: callback, data: suggestedGuilds, ListHeaderComponent: subheader, renderItem: callback1 };
+    obj = { onViewableItemsChanged: callback2, viewabilityConfig: f61635, contentContainerStyle, keyExtractor: callback, data: suggestedGuilds, ListHeaderComponent: subheader, renderItem: callback1 };
     return jsx(require("noop").FlashList, obj);
   }
 }
@@ -318,7 +318,7 @@ class TwoColumnGuildUpsellList {
       obj[1] = items;
       return outer1_10(outer1_5, obj);
     }, items3);
-    obj = { onViewableItemsChanged: callback1, viewabilityConfig: f61617, contentContainerStyle, keyExtractor: callback, data: memo, ListHeaderComponent: subheader, renderItem: callback2 };
+    obj = { onViewableItemsChanged: callback1, viewabilityConfig: f61635, contentContainerStyle, keyExtractor: callback, data: memo, ListHeaderComponent: subheader, renderItem: callback2 };
     return jsx(require("noop").FlashList, obj);
   }
 }
@@ -351,7 +351,7 @@ export default function GameCommunityMultiGuildUpsellModal(onClose) {
   gradientTop = obj.useGradientTop();
   const tmp3 = callback3(bottom, top);
   importDefault = tmp3;
-  const GameCommunityUpsellMultiExperiment = gradientTop(12974).GameCommunityUpsellMultiExperiment;
+  const GameCommunityUpsellMultiExperiment = gradientTop(12976).GameCommunityUpsellMultiExperiment;
   visualVariant = GameCommunityUpsellMultiExperiment.useConfig({ location: "GameCommunityMultiGuildUpsellModal" }).visualVariant;
   let obj1 = gradientTop(589);
   let items = [set];

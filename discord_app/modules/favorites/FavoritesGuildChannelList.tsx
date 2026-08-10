@@ -705,7 +705,7 @@ export const useFavoritesGuildChannelList = function useFavoritesGuildChannelLis
       }
     }
   }, items1);
-  flag(15392)();
+  flag(15400)();
   if (hasAccess) {
     memo = tmp4[0];
   }

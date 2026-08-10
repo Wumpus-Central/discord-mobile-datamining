@@ -120,8 +120,8 @@ function StandardStickerDetail(chatInputRef) {
         if (null != stateFromStores) {
           if (stateFromStores1) {
             if (null != chatInputRef) {
-              const result1 = tmp(9958).openStickerPickerToPackId(tmp6, pack_id);
-              const tmpResult = tmp(9958);
+              const result1 = tmp(9959).openStickerPickerToPackId(tmp6, pack_id);
+              const tmpResult = tmp(9959);
             }
           }
         }

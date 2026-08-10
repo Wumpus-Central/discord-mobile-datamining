@@ -45,8 +45,8 @@ export default function MessageReminderDurationActionSheet(createReminder) {
   if (stateFromStores != null) {
     dueAt = stateFromStores.saveData.dueAt;
   }
-  obj = { dueAt, now: tmp7, type: tmp2(10279).DueInStringTypes.SHORT };
-  const dueInString = createReminder(10279).useDueInString(obj);
+  obj = { dueAt, now: tmp7, type: tmp2(10280).DueInStringTypes.SHORT };
+  const dueInString = createReminder(10280).useDueInString(obj);
   dueInText = dueInString.dueInText;
   isOverdue = dueInString.isOverdue;
   const items1 = [onBack, dueInText, isOverdue];

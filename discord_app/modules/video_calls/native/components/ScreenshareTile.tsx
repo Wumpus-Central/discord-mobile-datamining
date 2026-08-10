@@ -5,7 +5,7 @@ import { NOOP } from "ME";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import { LegacyBaseButton } from "../../../../../_runtime/05427_LegacyBaseButton.js";
-import { registerAsset } from "../../../../../_runtime/10681_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10682_registerAsset.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";

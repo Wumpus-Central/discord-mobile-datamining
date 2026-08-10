@@ -18,7 +18,7 @@ export default function useFavoritesGuildHideOnLeave() {
         }
         if (!hasStoredFavoritesResult) {
           tmpResult = tmp(tmp2[5]);
-          const result = tmpResult.setFavoritesGuildVisibility(false, "auto_hide_empty_guild");
+          const result = tmpResult.setFavoritesGuildVisibility(false, "auto");
         }
         tmp5 = initializeFromUserSettings;
       }

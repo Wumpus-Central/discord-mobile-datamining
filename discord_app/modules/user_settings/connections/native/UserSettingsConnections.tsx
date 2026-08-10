@@ -76,7 +76,7 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
     if (!tmp7Result.isLoading) {
       if (0 === accounts.length) {
         if (0 === prop.length) {
-          let tmp14 = callback(tmp2(14204), {});
+          let tmp14 = callback(tmp2(14206), {});
         }
       }
       obj = { style: null, children: null };

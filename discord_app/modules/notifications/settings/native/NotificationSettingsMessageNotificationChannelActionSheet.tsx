@@ -38,5 +38,5 @@ export default function NotificationSettingsMessageNotificationChannelActionShee
     const NotificationLabel = channel(outer1_2[11]).NotificationLabel;
     const result = unread(outer1_2[10]).updateChannelOverrideSettings(channel.channel.guild_id, channel.channel.id, obj, NotificationLabel.notifications(message_notifications));
   };
-  return jsx(unread(9837), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
+  return jsx(unread(9838), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
 };

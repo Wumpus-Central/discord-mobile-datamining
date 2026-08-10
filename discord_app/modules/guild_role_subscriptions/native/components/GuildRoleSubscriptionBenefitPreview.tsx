@@ -4,7 +4,7 @@ import { View } from "get ActivityIndicator";
 import { GuildRoleSubscriptionBenefitTypes as closure_4 } from "MAX_SUBSCRIPTION_TIERS";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/10816_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10817_registerAsset.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 import { parseRawEmojiObject } from "../../../emojis/UnicodeEmojis.tsx";

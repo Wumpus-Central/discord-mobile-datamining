@@ -201,7 +201,7 @@ function _updateFriendSync() {
               let closure_3 = tmp5;
               if (null != callback) {
                 let c6 = 1;
-                let obj5 = callback2(12038);
+                let obj5 = callback2(12039);
                 const obj1 = { enabled: null };
                 obj1[0] = tmp38;
                 c7 = 2;
@@ -277,7 +277,7 @@ function _updateFriendSync() {
 let result = require("mergeGuildAvatar").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncSettings.tsx");
 
 export default function ContactSyncSettings() {
-  let obj = contactSyncAccount(12034);
+  let obj = contactSyncAccount(12035);
   contactSyncAccount = obj.useContactSyncAccount();
   let obj1 = contactSyncAccount(589);
   const items = [mergeGuildAvatar];
@@ -290,7 +290,7 @@ export default function ContactSyncSettings() {
   if (stateFromStores != null) {
     isStaffResult = stateFromStores.isStaff();
   }
-  let tmpResult = tmp(12034);
+  let tmpResult = tmp(12035);
   const FriendDiscoverySettings = tmp(3974).FriendDiscoverySettings;
   const setting = FriendDiscoverySettings.useSetting();
   tmpResult = tmp(1384);
@@ -305,7 +305,7 @@ export default function ContactSyncSettings() {
   if (isStaffResult) {
     obj = { children: null };
     obj1 = { label: "STAFF ONLY - Find your friends deletion", value: true, onValueChange: null };
-    obj1[2] = tmp(12034).adminDeleteContactSync;
+    obj1[2] = tmp(12035).adminDeleteContactSync;
     const items1 = [callback2(tmp(7967).FormSwitchRow, obj1), callback2(tmp(7967).FormDivider, {})];
     obj[0] = items1;
     tmp10Result = tmp10(tmp11, obj);
@@ -355,7 +355,7 @@ export default function ContactSyncSettings() {
   const obj7 = { children: null };
   const intl4 = tmp(1236).intl;
   const obj8 = { onClick: null };
-  obj8[0] = contactSyncAccount(12034).handleOpenLearnMoreLink;
+  obj8[0] = contactSyncAccount(12035).handleOpenLearnMoreLink;
   obj7[0] = intl4.format(contactSyncAccount(1236).t.BoR0dO, obj8);
   items4[1] = callback2(contactSyncAccount(7967).FormHint, obj7);
   const obj9 = { children: null };

@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ThreadPlusIcon.tsx
 import "noop";
 import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/11608_registerAsset.js";
+import { registerAsset } from "../../../../../../../_runtime/11609_registerAsset.js";
 import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { BaseIconImage } from "../../BaseIconImage.tsx";
 

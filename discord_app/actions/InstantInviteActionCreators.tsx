@@ -2010,8 +2010,8 @@ export default {
         hasItem = features.includes(constants2.HUB);
       }
       if (hasItem) {
-        obj(12669).onOpenHubInvite(closure_0);
-        const obj6 = obj(12669);
+        obj(12671).onOpenHubInvite(closure_0);
+        const obj6 = obj(12671);
       }
     }
     let num = closure_0.flags;
@@ -2026,10 +2026,10 @@ export default {
     if (null != guild) {
       if (!hasFlagResult) {
         if (closure_0.new_member) {
-          tmp6Result = tmp6(12670);
+          tmp6Result = tmp6(12672);
           if (tmp6Result.inviteGuildHasPendingMemberDisabledVerification(guild)) {
-            const result1 = tmp6(12670).openVerificationModalOrTransitionToApplication(guild.id);
-            const tmp6Result1 = tmp6(12670);
+            const result1 = tmp6(12672).openVerificationModalOrTransitionToApplication(guild.id);
+            const tmp6Result1 = tmp6(12672);
           }
         }
       }
@@ -2483,7 +2483,7 @@ export default {
           const _HermesInternal = HermesInternal;
           let combined = "discord://" + substr;
         }
-        tmp7Result = tmp7(12674);
+        tmp7Result = tmp7(12676);
         tmp7Result.launch(combined, (arg0) => {
           let obj = outer1_1(outer1_3[39]);
           if (arg0) {
@@ -2506,7 +2506,7 @@ export default {
       tmp20 = _require;
       const obj4 = _getInviteDynamicLinkTemplate;
     }
-    let tmp20Result = tmp20(12672);
+    let tmp20Result = tmp20(12674);
     const attemptId = tmp20Result.generateAttemptId();
     let str7 = "friend_invite";
     if (2 !== arg4) {

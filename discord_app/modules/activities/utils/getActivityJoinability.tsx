@@ -124,7 +124,7 @@ export default function getActivityJoinability(arg0) {
           tmp30 = importDefault;
           tmp31 = constants;
         }
-        tmp27Result = tmp27(11155);
+        tmp27Result = tmp27(11156);
       }
       return obj.CANNOT_JOIN;
     }

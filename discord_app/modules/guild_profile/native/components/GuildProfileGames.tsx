@@ -37,7 +37,7 @@ function ClickableGameIcon(game) {
       }
     }, items);
   }
-  return callback(onPressFallback(12199), { style, game, activityLevel, onPress });
+  return callback(onPressFallback(12201), { style, game, activityLevel, onPress });
 }
 function FavoriteGame(game) {
   let activityLevel;

@@ -48,18 +48,18 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   if (features != null) {
     id = features.id;
   }
-  const tmp10 = refresh(16789);
-  ({ submittedRequest, error, loading, createEnableRequest } = refresh(16789)(id));
+  const tmp10 = refresh(16798);
+  ({ submittedRequest, error, loading, createEnableRequest } = refresh(16798)(id));
   let id1;
-  let tmp9Result = tmp9(16790);
+  let tmp9Result = tmp9(16799);
   if (features != null) {
     id1 = features.id;
   }
   const tmp9ResultResult = tmp9Result(id1);
   refresh = tmp9ResultResult.refresh;
   ({ eligibility, loading: loading2, error: error2 } = tmp9ResultResult);
-  const tmp10Result = refresh(16789)(id);
-  ({ isApplicationRejected, requestCooldownDuration } = refresh(16791)(eligibility));
+  const tmp10Result = refresh(16798)(id);
+  ({ isApplicationRejected, requestCooldownDuration } = refresh(16800)(eligibility));
   let hasItem2;
   if (features != null) {
     const features3 = features.features;
@@ -95,7 +95,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   obj = { faqUrl: null };
   tmp9Result = tmp9(1974);
   obj[0] = tmp9Result.getArticleURL(constants2.CREATOR_FAQ);
-  const tmp16 = refresh(16791)(eligibility);
+  const tmp16 = refresh(16800)(eligibility);
   const tmp26 = constants2;
   if (isApplicationRejected) {
     if (tmpResult.useIsMonetizationReapplicationDisabled(id2).isMonetizationReapplicationDisabled) {

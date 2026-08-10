@@ -14,10 +14,10 @@ import { SelfStreamAndVideoAlertType as closure_15 } from "SelfStreamAndVideoAle
 import { MediaEngineContextTypes } from "DesktopSources";
 import { jsx } from "initialize";
 import { registerAsset } from "../../../../../_runtime/08018_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10354_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10867_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/16182_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/16183_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10355_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10868_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/16191_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/16192_registerAsset.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { trackDeviceChanged } from "../../../../actions/AudioActionCreators.tsx";
 import { HeadphonesSlashIcon } from "../../../../design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx";
@@ -184,7 +184,7 @@ export { GameConsoleAccountButton };
 export const ActivitiesButton = function ActivitiesButton(openTab) {
   openTab = openTab.openTab;
   let dismissPanel;
-  dismissPanel = React.useContext(dismissPanel(11644)).dismissPanel;
+  dismissPanel = React.useContext(dismissPanel(11645)).dismissPanel;
   const items = [dismissPanel, openTab];
   const callback = React.useCallback(() => {
     dismissPanel();
@@ -203,7 +203,7 @@ export const ActivitiesButton = function ActivitiesButton(openTab) {
 export const ChatButton = function ChatButton(openTab) {
   openTab = openTab.openTab;
   let dismissPanel;
-  dismissPanel = React.useContext(dismissPanel(11644)).dismissPanel;
+  dismissPanel = React.useContext(dismissPanel(11645)).dismissPanel;
   const items = [dismissPanel, openTab];
   const callback = React.useCallback(() => {
     dismissPanel();
@@ -241,7 +241,7 @@ export const ScreenshareButton = function ScreenshareButton(channel) {
   let text;
   let onPress;
   let isActive;
-  const tmp = isActive(10824)(channel.channel);
+  const tmp = isActive(10825)(channel.channel);
   onPress = tmp.onPress;
   isActive = tmp.isActive;
   const items = [isActive, onPress];
@@ -281,7 +281,7 @@ export const StreamVolumeItem = function StreamVolumeItem() {
     obj = { title: null, hasIcons: false, children: null };
     const intl = tmp(1236).intl;
     obj[0] = intl.string(tmp(1236).t.pEAl4b);
-    const tmp4Result = tmp4(10852);
+    const tmp4Result = tmp4(10853);
     let fn;
     if (tmpResult.isAndroid()) {
       fn = () => true;
@@ -348,7 +348,7 @@ export const InviteButton = function InviteButton(channel) {
         obj = { onPress: null, icon: null, label: null, trailing: null };
         obj[0] = tmp7;
         obj = { IconComponent: null, source: null };
-        obj[0] = tmp(9720).GroupPlusIcon;
+        obj[0] = tmp(9721).GroupPlusIcon;
         obj[1] = registerAsset;
         obj[1] = jsx(tmp(5380).TableRowIcon, { IconComponent: null, source: null });
         const intl = tmp(1236).intl;
@@ -373,7 +373,7 @@ export const HideNonVideoParticipants = function HideNonVideoParticipants(channe
   obj = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
   obj = { IconComponent: null, source: null };
   obj[0] = channelId(7714).VideoIcon;
-  obj[1] = stateFromStores(10823);
+  obj[1] = stateFromStores(10824);
   obj[0] = jsx(channelId(5380).TableRowIcon, { IconComponent: null, source: null });
   const intl = channelId(1236).intl;
   obj[1] = intl.string(channelId(1236).t.ZMTRyc);
@@ -403,7 +403,7 @@ export const HideSelfVideo = function HideSelfVideo() {
       if (!table) {
         if (!VIDEO) {
           VIDEO = outer1_15.VIDEO;
-          const f113703 = (arg0) => f113703(!VIDEO);
+          const f113743 = (arg0) => f113743(!VIDEO);
           let obj = callback(table[14]);
           obj = { importer: null };
           obj[0] = function importer() {
@@ -421,7 +421,7 @@ export const HideSelfVideo = function HideSelfVideo() {
           obj.openLazy(obj);
         }
       }
-      return f113703(!VIDEO);
+      return f113743(!VIDEO);
     };
     const intl = tmp5(1236).intl;
     obj[3] = intl.string(tmp5(1236).t.MH8ESU);

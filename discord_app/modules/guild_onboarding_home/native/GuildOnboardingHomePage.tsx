@@ -95,16 +95,16 @@ function GuildOnboardingHomePage(guildId) {
     obj = { guildId: null, hideDescription: null };
     obj[0] = guildId;
     obj[1] = tmp5;
-    const items3 = [callback(tmp4(15659), obj), ];
+    const items3 = [callback(tmp4(15667), obj), ];
     if (tmp5) {
       obj1 = { children: null };
       let obj2 = { guildId: null };
       obj2[0] = guildId;
-      const items4 = [tmp12(tmp4(15664), obj2), , ];
+      const items4 = [tmp12(tmp4(15672), obj2), , ];
       let obj3 = { guildId: null };
       obj3[0] = guildId;
-      items4[1] = tmp12(tmp4(15668), obj3);
-      tmp4 = tmp4(15669);
+      items4[1] = tmp12(tmp4(15676), obj3);
+      tmp4 = tmp4(15677);
       const obj4 = { guildId: null };
       obj4[0] = guildId;
       tmp = tmp12(tmp4, obj4);
@@ -114,12 +114,12 @@ function GuildOnboardingHomePage(guildId) {
     } else {
       let obj5 = { guildId: null };
       obj5[0] = guildId;
-      tmp12Result = tmp12(tmp4(15672), obj5);
+      tmp12Result = tmp12(tmp4(15680), obj5);
     }
     items3[1] = tmp12Result;
     obj[2] = items3;
-    closure_11(tmp4(15658), obj);
-    const tmp4Result = tmp4(15658);
+    closure_11(tmp4(15666), obj);
+    const tmp4Result = tmp4(15666);
   }
 }
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);

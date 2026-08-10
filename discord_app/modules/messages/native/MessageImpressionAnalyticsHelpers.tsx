@@ -32,13 +32,13 @@ function getVoiceInviteEmbedRenderInfo(state) {
               }
               let tmp4 = null;
               if (null != id) {
-                tmp7Result = tmp7(10989);
+                tmp7Result = tmp7(10990);
                 let obj = { guildId: null, location: "mobile_invite_embed_impression" };
                 obj[0] = id;
                 let enabled = tmp7Result.getVoiceChannelListInviteExperiment(obj).enabled;
                 if (enabled) {
-                  enabled = tmp7(10990).canShowVoiceChannelListInviteEmbed(state);
-                  const tmp7Result1 = tmp7(10990);
+                  enabled = tmp7(10991).canShowVoiceChannelListInviteEmbed(state);
+                  const tmp7Result1 = tmp7(10991);
                 }
                 obj = { treatmentRendered: null };
                 obj[0] = enabled;

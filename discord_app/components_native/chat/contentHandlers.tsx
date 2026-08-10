@@ -51,7 +51,7 @@ let closure_4 = importDefaultResult((arg0) => {
       } else {
         if (null != attachmentUrl) {
           if ("" !== attachmentUrl) {
-            const obj3 = attachmentUrl(9745);
+            const obj3 = attachmentUrl(9746);
             let c3 = 2;
             c4 = 1;
             const obj2 = { value: null, done: false };
@@ -106,7 +106,7 @@ let closure_3 = importDefaultResult((arg0) => {
       } else {
         if (null != attachmentUrl) {
           if ("" !== attachmentUrl) {
-            let obj2 = attachmentUrl(9745);
+            let obj2 = attachmentUrl(9746);
             let c3 = 2;
             c4 = 1;
             obj2 = { value: null, done: false };
@@ -123,7 +123,7 @@ let closure_3 = importDefaultResult((arg0) => {
       callback = arg1;
       const obj = { urlString: null };
       obj[0] = callback;
-      callback(11056)(obj);
+      callback(11057)(obj);
     }
     return arg1;
   })();
@@ -147,7 +147,7 @@ obj[3] = function onTapMention(closure_0) {
   let roleId;
   let roleName;
   let userId;
-  let obj = parsedUserId(11019);
+  let obj = parsedUserId(11020);
   const nativeSyntheticEventData = obj.getNativeSyntheticEventData(closure_0);
   ({ userId, channelId, roleName, parsedUserId } = nativeSyntheticEventData);
   ({ roleId, guildId } = nativeSyntheticEventData);
@@ -166,7 +166,7 @@ obj[3] = function onTapMention(closure_0) {
         obj[0] = guildId;
         obj[1] = roleId;
         obj[2] = channelId;
-        ACTION_SHEET_HEIGHT_HALF.openLazy(tmp(1988)(11059, tmp2.paths), "RoleMembersActionSheet", obj);
+        ACTION_SHEET_HEIGHT_HALF.openLazy(tmp(1988)(11060, tmp2.paths), "RoleMembersActionSheet", obj);
         const obj9 = ACTION_SHEET_HEIGHT_HALF;
       }
     }
@@ -175,7 +175,7 @@ obj[3] = function onTapMention(closure_0) {
         const obj1 = { guildId: null, roleId: null, channelId: null };
         obj1[0] = guildId;
         const obj6 = ACTION_SHEET_HEIGHT_HALF;
-        const tmp10 = tmp(1988)(11059, tmp2.paths);
+        const tmp10 = tmp(1988)(11060, tmp2.paths);
         obj1[1] = DISCORD_EPOCH.castGuildIdAsEveryoneGuildRoleId(guildId);
         obj1[2] = channelId;
         obj6.openLazy(tmp10, "RoleMembersActionSheet", obj1);

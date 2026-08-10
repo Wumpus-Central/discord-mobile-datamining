@@ -33,7 +33,7 @@ function PremiumGiftDurationButton(arg0) {
     combined = "" + closure_4 + "%";
   }
   const tmp5 = SubscriptionIntervalTypes;
-  const tmp9 = setPlanInterval(10043)(nativeGiftContext.premiumType, planInterval);
+  const tmp9 = setPlanInterval(10044)(nativeGiftContext.premiumType, planInterval);
   const radioA11yNative = planInterval(4019).useRadioA11yNative({ selected });
   const items = [tmp4.container, ];
   ({ accessibilityRole, accessibilityState } = radioA11yNative);

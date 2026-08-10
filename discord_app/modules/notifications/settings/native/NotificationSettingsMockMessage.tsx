@@ -86,7 +86,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   const obj5 = { style: tmp.cardContent, children: null };
   const obj6 = { children: null };
   const obj7 = { source: null, size: null };
-  obj7[0] = sharedValue(9835);
+  obj7[0] = sharedValue(9836);
   obj7[1] = Button.AvatarSizes.LARGE_48;
   obj6[0] = tmp12(Button.Avatar, obj7);
   const items4 = [tmp12(View, obj6), ];

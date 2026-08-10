@@ -7,20 +7,20 @@ function handleChannelDelete(channel) {
   const result = getNextPositionFromChannels.removeFavoriteChannel(channel.channel.id, { trackAnalytics: false });
 }
 function handleCategoryCollapse(id) {
-  const result = getNextPositionFromChannels.setFavoriteCategoryCollapsed(id.id, true);
+  const result = getNextPositionFromChannels.setFavoriteCategoriesCollapsed(true, id.id);
 }
 function handleCategoryExpand(id) {
-  const result = getNextPositionFromChannels.setFavoriteCategoryCollapsed(id.id, false);
+  const result = getNextPositionFromChannels.setFavoriteCategoriesCollapsed(false, id.id);
 }
 function handleCategoryCollapseAll(guildId) {
   if (obj.isFavoritesGuildId(guildId.guildId)) {
-    const result = getNextPositionFromChannels.setAllFavoriteCategoriesCollapsed(true);
+    const result = getNextPositionFromChannels.setFavoriteCategoriesCollapsed(true);
     const tmpResult = getNextPositionFromChannels;
   }
 }
 function handleCategoryExpandAll(guildId) {
   if (obj.isFavoritesGuildId(guildId.guildId)) {
-    const result = getNextPositionFromChannels.setAllFavoriteCategoriesCollapsed(false);
+    const result = getNextPositionFromChannels.setFavoriteCategoriesCollapsed(false);
     const tmpResult = getNextPositionFromChannels;
   }
 }

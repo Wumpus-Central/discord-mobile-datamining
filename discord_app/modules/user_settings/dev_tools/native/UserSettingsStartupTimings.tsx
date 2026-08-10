@@ -47,7 +47,7 @@ export default function UserSettingsStartupTimings() {
   const useResult = React.use(num);
   React = useResult;
   let items = [useResult, first, first1];
-  const memo = React.useMemo(() => first(9874)(TableRowGroupTitle, !first, first1).split("\n"), items);
+  const memo = React.useMemo(() => first(9875)(TableRowGroupTitle, !first, first1).split("\n"), items);
   let obj1 = initialize;
   let items1 = [refreshSourceMapCookie];
   let closure_6 = obj1.useStateFromStores(items1, () => alertStartupMetrics.alertStartupMetrics);
@@ -113,7 +113,7 @@ export default function UserSettingsStartupTimings() {
           return obj2;
         } else {
           closure_0 = arg1;
-          closure_1 = outer1_1(9874)(closure_0);
+          closure_1 = outer1_1(9875)(closure_0);
           obj = outer1_0(8923);
           obj3 = { message: null };
           obj3[0] = closure_1;
@@ -254,7 +254,7 @@ export default function UserSettingsStartupTimings() {
     items[3] = callback2(callback2(5767).TableRowGroup, obj21);
     const obj24 = { title: "Share Timings", hasIcons: true, children: null };
     const obj25 = { icon: null, label: "Copy timings to clipboard.", arrow: true, onPress: null };
-    obj25[0] = callback(callback2(12230).ShareIcon, {});
+    obj25[0] = callback(callback2(12232).ShareIcon, {});
     obj25[3] = closure_14;
     obj24[2] = callback(callback2(5374).TableRow, obj25);
     items[4] = callback(callback2(5767).TableRowGroup, obj24);

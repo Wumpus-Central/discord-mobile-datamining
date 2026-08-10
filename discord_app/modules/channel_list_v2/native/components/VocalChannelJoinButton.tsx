@@ -63,7 +63,7 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
   const tmp = voiceStates(8392)();
   let obj = channel(4153);
   let joinButtonText = callback(tmp, obj.isThemeLight(voiceStates(4239)()));
-  let obj1 = channel(9742);
+  let obj1 = channel(9743);
   const isConnectedToVoiceChannel = obj1.useIsConnectedToVoiceChannel(channel);
   let obj2 = channel(647);
   const items = [getUncachedChannelPermissions];
@@ -89,10 +89,10 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
   if (!stateFromStores1) {
     tmp12 = tmp8;
   }
-  tmp3Result = tmp3(11665);
+  tmp3Result = tmp3(11666);
   const connectedUserLimit = tmp3Result.useConnectedUserLimit({ channel, video: tmp12 });
   tmp8 = channel(5135).useStageHasMedia(channel.id) && isGuildStageVoiceResult;
-  let connectedUserLimitFormatted = channel(11665).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
+  let connectedUserLimitFormatted = channel(11666).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
   let tmp15 = !stateFromStores;
   if (!stateFromStores) {
     tmp15 = !isConnectedToVoiceChannel;

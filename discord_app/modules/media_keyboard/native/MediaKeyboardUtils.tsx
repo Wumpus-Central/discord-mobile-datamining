@@ -170,7 +170,7 @@ function _handleAttachFile() {
       let obj3 = { pickMultiple: null, extensions: null };
       obj3[0] = callback > 1;
       obj3[1] = dependencyMap;
-      yield lib(10164).handleDocumentSelection(obj3);
+      yield lib(10165).handleDocumentSelection(obj3);
       if (2 === tmp5) {
         if (arg0 === 1) {
           let v02 = 3;
@@ -194,7 +194,7 @@ function _handleAttachFile() {
                   let closure_0 = arg0;
                   let c6 = 0;
                   let c7 = 0;
-                  return (/* F120052 */ function*() { ... })();
+                  return (/* F120093 */ function*() { ... })();
                 });
                 return function() {
                   const self = this;

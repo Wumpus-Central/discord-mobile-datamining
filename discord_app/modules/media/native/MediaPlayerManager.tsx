@@ -25,21 +25,12 @@ let map1;
 let closure_16 = new require("ensureGuildLoaded")("MediaPlayerManager");
 let obj = keys.create((arg0) => {
   let closure_0 = arg0;
-  return {
-    activeMediaPlayerSource: "HermesInternal",
-    mediaSourceMessage: "PX_16",
-    canAccessMedia: "disabled",
-    isPlaying: false,
-    wasPipClosedByUser: null,
-    progress: null,
-    rate: "ct",
-    showPip: "simple-action",
-    closePip() {
-      callback(outer1_2[13]).batchUpdates(() => callback({ showPip: false }));
-    },
-    displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: null
+  const obj = { activeMediaPlayerSource: "HermesInternal", mediaSourceMessage: "PX_16", canAccessMedia: "disabled", isPlaying: false, wasPipClosedByUser: null, progress: null, rate: "ct", showPip: "onPressHeaderBarButtonMenuItem", closePip: "obscureBackground", displayedMediaItemIdsPerChannel: "hideNavigationBar", currentlyDisplayedChannelId: "onFocus" };
+  obj[8] = function closePip() {
+    callback(outer1_2[13]).batchUpdates(() => callback({ showPip: false }));
   };
+  obj[9] = {};
+  return obj;
 });
 class MediaPlayerManager extends tmp8 {
   constructor() {

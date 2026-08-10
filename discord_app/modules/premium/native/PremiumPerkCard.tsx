@@ -5,8 +5,6 @@ import { MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE as closure_6 } from "GuildFeatures";
 import ME from "ME";
 import jsxProd from "registerAsset";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/12692_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12693_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/12694_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/12695_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/12696_registerAsset.js";
@@ -21,6 +19,8 @@ import { registerAsset } from "../../../../_runtime/12704_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/12705_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/12706_registerAsset.js";
 import { registerAsset } from "../../../../_runtime/12707_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12708_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12709_registerAsset.js";
 import { metadata } from "../../../../discord_assets/assets/images/perks/xbox_game_pass.jpg.js";
 import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { preload } from "../../../components_native/common/FastImage.tsx";
@@ -192,7 +192,7 @@ export const usePerkCardHeight = function usePerkCardHeight(NARROW) {
   return getFontScale.useFontScale() > 1 ? frozen[NARROW].scaledFontHeight : frozen[NARROW].height;
 };
 export const usePremiumPerkCard = function usePremiumPerkCard() {
-  let obj = subscriptionPlansLoaded(12691);
+  let obj = subscriptionPlansLoaded(12693);
   subscriptionPlansLoaded = obj.useSubscriptionPlansLoaded();
   let obj1 = subscriptionPlansLoaded(4198);
   const formatSizeResult = obj1.formatSize(closure_6 / 1024, { useKibibytes: true });

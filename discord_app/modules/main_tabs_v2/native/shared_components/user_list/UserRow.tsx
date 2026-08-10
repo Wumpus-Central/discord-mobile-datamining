@@ -384,17 +384,17 @@ const memoResult = importAllResult.memo(function UserRow(type) {
             const channel = outer1_8.getChannel(arg0);
             if (null != channel) {
               outer1_1(outer1_2[14])(channel.isPrivate(), "must be a DM");
-              const obj2 = outer1_1(outer1_2[15])(channel, false);
-              if (!obj2.inCall) {
-                obj2.onPress();
+              const obj4 = outer1_1(outer1_2[15])(channel, false);
+              if (!obj4.inCall) {
+                obj4.onPress();
               }
-              const tmp = outer1_1;
-              const tmp2 = outer1_2;
-              const tmp3 = outer1_1(outer1_2[14]);
+              const tmp4 = outer1_1;
+              const tmp5 = outer1_2;
+              const tmp6 = outer1_1(outer1_2[14]);
               const obj = { recipientIds: null };
               obj[0] = current.id;
               outer1_1(outer1_2[13]).openPrivateChannel(obj);
-              const tmpResult = outer1_1(outer1_2[13]);
+              const tmp4Result = outer1_1(outer1_2[13]);
             }
           });
         };
@@ -443,17 +443,17 @@ const memoResult = importAllResult.memo(function UserRow(type) {
         const channel = outer1_8.getChannel(arg0);
         if (null != channel) {
           outer1_1(outer1_2[14])(channel.isPrivate(), "must be a DM");
-          const obj2 = outer1_1(outer1_2[15])(channel, false);
-          if (!obj2.inCall) {
-            obj2.onPress();
+          const obj4 = outer1_1(outer1_2[15])(channel, false);
+          if (!obj4.inCall) {
+            obj4.onPress();
           }
-          const tmp = outer1_1;
-          const tmp2 = outer1_2;
-          const tmp3 = outer1_1(outer1_2[14]);
+          const tmp4 = outer1_1;
+          const tmp5 = outer1_2;
+          const tmp6 = outer1_1(outer1_2[14]);
           const obj = { recipientIds: null };
           obj[0] = current.id;
           outer1_1(outer1_2[13]).openPrivateChannel(obj);
-          const tmpResult = outer1_1(outer1_2[13]);
+          const tmp4Result = outer1_1(outer1_2[13]);
         }
       });
     } else if (tmp.MESSAGE === actionName) {

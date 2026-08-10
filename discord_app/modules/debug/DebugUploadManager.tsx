@@ -87,7 +87,7 @@ function _uploadDebugLogFiles() {
               obj3[0] = arg1;
               return obj3;
             } else {
-              obj1 = callback(9870);
+              obj1 = callback(9871);
               c6 = 3;
               c7 = 1;
               obj4 = { value: null, done: false };

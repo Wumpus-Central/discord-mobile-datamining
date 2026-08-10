@@ -55,7 +55,7 @@ export const getSettingTitle = function getSettingTitle(closure_0) {
   return cachedSettingTitle;
 };
 export const getSettingSearchableTitles = function getSettingSearchableTitles() {
-  const entries = Object.entries(items(13893).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(13895).SETTING_RENDERER_CONFIG);
   items = [];
   const item = entries.forEach((arg0) => {
     let tmp;
@@ -81,7 +81,7 @@ export const getSettingSearchableTitles = function getSettingSearchableTitles() 
 export const getSettingScreens = function getSettingScreens() {
   let items = [];
   const set = new Set();
-  const entries = Object.entries(items(13893).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(13895).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((arg0) => {
     let tmp;
     let tmp2;

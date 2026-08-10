@@ -7,7 +7,7 @@ import filterStaffGuild from "filterStaffGuild";
 import jsxProd from "PressableBase";
 import createCacheKey from "createCacheKey";
 import createICYMIStyles from "createICYMIStyles";
-import { registerAsset } from "../../../../../_runtime/10186_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/10187_registerAsset.js";
 import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../design/void/native.tsx";

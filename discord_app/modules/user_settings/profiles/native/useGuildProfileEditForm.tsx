@@ -62,7 +62,7 @@ export default function useGuildProfileEditForm() {
   const merged1 = Object.assign(stateFromStoresObject.errors);
   const memo = pendingThemeColors.useMemo(() => {
     const delayedCall = new stateFromStores(pendingNickname[11]).DelayedCall(200, () => {
-      callback2(709).wait(callback(10137).resetAllPending);
+      callback2(709).wait(callback(10138).resetAllPending);
     });
     return delayedCall;
   }, []);

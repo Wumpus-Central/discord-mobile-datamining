@@ -110,7 +110,7 @@ export default function ChooseAccount() {
               if (arg1) {
                 obj = outer1_1(4271);
                 obj.hideActionSheet();
-                obj1 = outer1_2(11785);
+                obj1 = outer1_2(11786);
                 obj1.removeAccount(lib.id);
               }
               c4 = 3;
@@ -144,7 +144,7 @@ export default function ChooseAccount() {
   let intl2 = _getSystemLocale.intl;
   obj[2] = intl2.string(_getSystemLocale.t["0M5fN7"]);
   obj[1] = callback(_Text.Text, obj);
-  obj[2] = multiAccountUsers(13211);
+  obj[2] = multiAccountUsers(13213);
   obj[4] = tmp.container;
   obj1 = { style: tmp.mainCard, children: null };
   let items = [
@@ -220,7 +220,7 @@ export default function ChooseAccount() {
   let obj3 = { themedColor: null, size: null, source: null };
   obj3[0] = multiAccountUsers(712).colors.TEXT_LINK;
   obj3[1] = _Button.Icon.Sizes.SMALL_20;
-  obj3[2] = multiAccountUsers(15088);
+  obj3[2] = multiAccountUsers(15090);
   obj2[0] = callback(_Form.FormRow.Icon, obj3);
   let intl3 = _getSystemLocale.intl;
   obj2[1] = intl3.string(_getSystemLocale.t.bPP34Q);

@@ -129,7 +129,7 @@ export default function GiftPurchaseButton(style) {
           obj5[3] = premiumTypeFromPlanId;
           obj5[4] = c4;
           obj5[5] = closure_0;
-          outer1_0(10033).openGiftModal(obj5);
+          outer1_0(10034).openGiftModal(obj5);
           c4 = 3;
           return { value: "HermesInternal", done: null };
         }

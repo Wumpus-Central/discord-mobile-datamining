@@ -10,8 +10,8 @@ import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import { registerAsset } from "../../../../../../../../_runtime/08496_registerAsset.js";
 import { registerAsset } from "../../../../../../../../_runtime/08587_registerAsset.js";
-import { registerAsset } from "../../../../../../../../_runtime/09723_registerAsset.js";
-import { registerAsset } from "../../../../../../../../_runtime/09821_registerAsset.js";
+import { registerAsset } from "../../../../../../../../_runtime/09724_registerAsset.js";
+import { registerAsset } from "../../../../../../../../_runtime/09822_registerAsset.js";
 import { Themes } from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { Button } from "../../../../../../../design/void/native.tsx";
 import { useTheme } from "../../../../../../../hooks/useTheme.tsx";
@@ -173,7 +173,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
   if (tmp13) {
     tmp13 = !tmp3(8936)(channel.id);
   }
-  tmpResult = tmp(15170);
+  tmpResult = tmp(15172);
   let tmp3Result = tmp3(11);
   let id = stateFromStores;
   if (stateFromStores == null) {
@@ -301,7 +301,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
       obj15[2] = str7;
       obj15[3] = tmp(3979).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
       obj15[4] = muted;
-      let tmp21Result2 = tmp21(tmp(9789).ChannelRowPreview, obj15);
+      let tmp21Result2 = tmp21(tmp(9790).ChannelRowPreview, obj15);
     } else if (channel.isDM()) {
       const obj16 = { textStyle: null, userId: null, guildId: null };
       obj16[0] = tmp10.channelText;
@@ -332,7 +332,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
       const obj18 = { wavePressed: null, hasNameplate: null };
       obj18[0] = tmp18.wavePressed;
       obj18[1] = hasNameplate;
-      tmp21Result3 = tmp21(tmp3(15173), obj18);
+      tmp21Result3 = tmp21(tmp3(15175), obj18);
     }
     const obj19 = { children: null };
     items9[1] = tmp21Result3;

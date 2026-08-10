@@ -1,5 +1,5 @@
 // discord_app/modules/video-qoe/SimpleMuxWrapper.tsx
-import { U } from "../../../_runtime/14381_U.js";
+import { U } from "../../../_runtime/14383_U.js";
 import { mapDiscordToMuxMetadata } from "integrations/MuxIntegration.tsx";
 const logger = new require("set").Logger("SimpleMuxWrapper");
 const result = require("mapDiscordToMuxMetadata").fileFinishedImporting("modules/video-qoe/SimpleMuxWrapper.tsx");
@@ -41,8 +41,8 @@ prototype["endSession"] = function endSession() {
   if (this.isMonitoring) {
     try {
       if (typeof U.destroyMonitor === "function") {
-        tmp(14381).destroyMonitor(self.videoElement);
-        const tmpResult = tmp(14381);
+        tmp(14383).destroyMonitor(self.videoElement);
+        const tmpResult = tmp(14383);
       }
       self.isMonitoring = false;
       tmp = importDefault;
@@ -56,8 +56,8 @@ prototype["destroy"] = function destroy() {
   if (this.isMonitoring) {
     try {
       if (typeof U.destroyMonitor === "function") {
-        tmp(14381).destroyMonitor(self.videoElement);
-        const tmpResult = tmp(14381);
+        tmp(14383).destroyMonitor(self.videoElement);
+        const tmpResult = tmp(14383);
       }
       self.isMonitoring = false;
       tmp = importDefault;

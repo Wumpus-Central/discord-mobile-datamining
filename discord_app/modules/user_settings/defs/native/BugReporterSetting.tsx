@@ -20,7 +20,7 @@ createToggle = {
   onPress: function handleBugReporterSettingPress() {
     if (!field.getField("isReportOpen")) {
       field.setState({ isReportOpen: true });
-      ModalActionCreators.pushLazy(asyncRequireImpl(9866, dependencyMap.paths));
+      ModalActionCreators.pushLazy(asyncRequireImpl(9867, dependencyMap.paths));
       const obj2 = ModalActionCreators;
     }
   },

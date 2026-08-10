@@ -56,7 +56,7 @@ export default function GIFPickerCategoryView(onSelectCategory) {
     const obj4 = { size: "sm", style: null, color: null };
     obj4[1] = tmp.categoryNameIcon;
     obj4[2] = tmp6(712).colors.WHITE;
-    let tmp10Result = tmp10(tmp3(9953).AnalyticsIcon, obj4);
+    let tmp10Result = tmp10(tmp3(9954).AnalyticsIcon, obj4);
   } else {
     tmp10Result = null;
     if (item.type === tmp12.FAVORITES) {

@@ -50,7 +50,7 @@ export default function UserProfileActivityTimebar(arg0) {
     str = "text-subtle";
   }
   obj3[3] = str;
-  let tmp10Result = tmp10(12298);
+  let tmp10Result = tmp10(12300);
   obj3[4] = tmp10Result.formatTime(elapsed);
   const items2 = [callback(Text.Text, obj3), ];
   const obj4 = { variant: "text-xs/normal", style: tmp5, tabularNumbers: null, color: null, children: null };
@@ -60,7 +60,7 @@ export default function UserProfileActivityTimebar(arg0) {
     str2 = "text-subtle";
   }
   obj4[3] = str2;
-  tmp10Result = tmp10(12298);
+  tmp10Result = tmp10(12300);
   obj4[4] = tmp10Result.formatTime(duration);
   items2[1] = callback(Text.Text, obj4);
   obj2[1] = items2;

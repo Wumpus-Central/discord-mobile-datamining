@@ -82,23 +82,23 @@ export default function Status(isMobileOnline) {
   obj[0] = items;
   obj = { style: callback2().statusIcon, source: null, resizeMode: "stretch" };
   if (streaming) {
-    let tmp4Result = tmp4(13357);
+    let tmp4Result = tmp4(13359);
   } else if (flag2) {
-    tmp4Result = tmp4(13358);
-  } else if (flag) {
-    tmp4Result = tmp4(13359);
-  } else if (StatusTypes.IDLE === status) {
     tmp4Result = tmp4(13360);
-  } else if (tmp7.DND === status) {
+  } else if (flag) {
     tmp4Result = tmp4(13361);
+  } else if (StatusTypes.IDLE === status) {
+    tmp4Result = tmp4(13362);
+  } else if (tmp7.DND === status) {
+    tmp4Result = tmp4(13363);
   } else {
     if (tmp7.OFFLINE !== status) {
       if (tmp7.INVISIBLE !== status) {
         const ONLINE = tmp7.ONLINE;
-        tmp4Result = tmp4(13363);
+        tmp4Result = tmp4(13365);
       }
     }
-    tmp4Result = tmp4(13362);
+    tmp4Result = tmp4(13364);
   }
   obj[1] = tmp4Result;
   obj[1] = closure_11(closure_4, obj);

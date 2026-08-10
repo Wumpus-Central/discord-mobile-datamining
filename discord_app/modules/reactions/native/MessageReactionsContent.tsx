@@ -328,7 +328,7 @@ function EmojiOptionsButton(channelId) {
   const items = [ensureGuildLoaded];
   const items1 = [channelId];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_10.getChannel(channelId), items1);
-  const tmp3 = messageId(12526)(stateFromStores);
+  const tmp3 = messageId(12528)(stateFromStores);
   c2 = tmp3;
   dependencyMap = tmp4;
   const items2 = [channelId, messageId, reactions[reactionSelectedIndex], tmp3];
@@ -374,11 +374,11 @@ function ReactionTabs(setReactionSelectedIndex) {
     setReactionSelectedIndex(arg0);
   };
   obj[6] = reactionSelectedIndex(3940).MAX_REACTIONS;
-  const items = [callback2(setReactionSelectedIndex(12528), obj), callback2(setReactionSelectedIndex(7409), { outer: true }), ];
+  const items = [callback2(setReactionSelectedIndex(12530), obj), callback2(setReactionSelectedIndex(7409), { outer: true }), ];
   const obj1 = { style: tmp.removeButtonContainer, children: null };
   const obj2 = { style: tmp.emojiTextIdentifier, variant: "eyebrow", color: "text-default", children: null };
   const tmp4 = callback2;
-  const tmp5 = setReactionSelectedIndex(12528);
+  const tmp5 = setReactionSelectedIndex(12530);
   obj2[3] = reactionSelectedIndex(3940).getReactionEmojiName(reactions[reactionSelectedIndex].emoji);
   const items1 = [callback2(reactionSelectedIndex(4299).Text, obj2), ];
   const obj3 = {};

@@ -8,7 +8,7 @@ import { Gradients } from "items";
 import jsxProd from "DismissibleContent";
 import createCacheKey from "createCacheKey";
 import { LinearGradient } from "../../../../_runtime/04725_LinearGradient.js";
-import { registerAsset } from "../../../../_runtime/14227_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14229_registerAsset.js";
 import { encodeProperties } from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { MarketingComponentType } from "../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";

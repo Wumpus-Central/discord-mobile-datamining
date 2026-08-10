@@ -43,7 +43,7 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
   const items = [callback(onClose(1297).LegacyText, obj1), , ];
   const obj2 = { DEPRECATED_style: tmp.row, leading: null, trailing: null, label: null, subLabel: null, onPress: null };
   const obj3 = { source: null };
-  obj3[0] = invite(12083);
+  obj3[0] = invite(12084);
   obj2[1] = callback(closure_4, obj3);
   obj2[2] = invite(5367).Arrow;
   const intl2 = onClose(1236).intl;
@@ -60,7 +60,7 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
   const obj4 = { DEPRECATED_style: tmp.row, leading: null, trailing: null, label: null, onPress: null };
   const obj5 = { source: null };
   const tmp2 = invite(5367);
-  obj5[0] = invite(12084);
+  obj5[0] = invite(12085);
   obj4[1] = callback(closure_4, obj5);
   obj4[2] = invite(5367).Arrow;
   const intl4 = onClose(1236).intl;
@@ -69,5 +69,5 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
   items[2] = callback(invite(5367), obj4);
   obj[1] = items;
   obj[0] = callback2(closure_3, obj);
-  return callback(onClose(12081).HubEmailConnectionScreen, obj);
+  return callback(onClose(12082).HubEmailConnectionScreen, obj);
 };

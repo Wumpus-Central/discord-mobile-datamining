@@ -307,7 +307,7 @@ export default function useChatInputRefs(chatInputProps) {
           threadCreationCallback = outer1_13.current.threadCreationCallback;
           if (null != threadCreationCallback) {
             const text = chatInputTextFieldHeight(ref[13]).getText(outer1_8.current, outer1_10.current, (text) => {
-              let obj = chatInputProps(11387);
+              let obj = chatInputProps(11388);
               obj = { text, params: null };
               obj = {};
               const merged = Object.assign(outer2_13.current);
@@ -318,8 +318,8 @@ export default function useChatInputRefs(chatInputProps) {
                 const obj1 = { text: null, threadCreationCallback: null };
                 obj1[0] = result.content;
                 obj1[1] = threadCreationCallback;
-                const result1 = chatInputProps(11387).chatInputCreateThread(obj1);
-                const tmpResult = chatInputProps(11387);
+                const result1 = chatInputProps(11388).chatInputCreateThread(obj1);
+                const tmpResult = chatInputProps(11388);
               }
             });
             tmp.current.sending = false;
@@ -351,7 +351,7 @@ export default function useChatInputRefs(chatInputProps) {
                   }
                 } else {
                   closure_1.cancel();
-                  let obj = threadCreationCallback(11387);
+                  let obj = threadCreationCallback(11388);
                   obj = { text: null, params: null };
                   obj[0] = arg0;
                   obj = {};
@@ -474,7 +474,7 @@ export default function useChatInputRefs(chatInputProps) {
       handleTextChanged(text) {
         lib(text);
       },
-      insertText(focused, tokenStart, arg2, arg3, arg4) {
+      insertText(focused, tokenStart, flag, arg3, arg4) {
         let selectionStart = tokenStart;
         if (null == tokenStart) {
           selectionStart = closure_14.current.selectionStart;
@@ -486,7 +486,7 @@ export default function useChatInputRefs(chatInputProps) {
         const current = closure_16.current;
         const obj = { location: selectionStart, length: Math.max(0, selectionEnd - selectionStart), text: null, nodes: null, editId: null };
         let text = focused;
-        if (arg2) {
+        if (flag) {
           text = `${focused} `;
         }
         obj[2] = text;

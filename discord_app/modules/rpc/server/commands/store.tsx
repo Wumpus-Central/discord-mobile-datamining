@@ -38,7 +38,7 @@ function _getSubscriptionSkusViaListings() {
           let closure_0 = arg0;
           let c2 = 0;
           let c1 = 0;
-          return (/* F120139 */ function*() { ... })();
+          return (/* F120180 */ function*() { ... })();
         });
         return function() {
           const self = this;
@@ -153,12 +153,12 @@ function _getSkusHandler() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              const result = socket(13761).validateTransportType(socket.transport);
+              const result = socket(13763).validateTransportType(socket.transport);
               callback = socket.application.id;
               if (null == callback) {
                 const obj2 = { errorCode: null };
                 obj2[0] = constants.INVALID_COMMAND;
-                const tmp32 = new callback(10736)(obj2, "No application.");
+                const tmp32 = new callback(10737)(obj2, "No application.");
                 throw tmp32;
               } else {
                 if (obj18.isTestModeForApplication(callback)) {
@@ -169,7 +169,7 @@ function _getSkusHandler() {
                   obj3[0] = tmp65Result.fetchTestSKUsForApplication(callback, false);
                   return obj3;
                 } else {
-                  tmp65Result = tmp65(13762);
+                  tmp65Result = tmp65(13764);
                   constants = 3;
                   c7 = 1;
                   const obj4 = { value: null, done: false };
@@ -178,7 +178,7 @@ function _getSkusHandler() {
                 }
                 obj18 = socket(7587);
               }
-              const obj17 = socket(13761);
+              const obj17 = socket(13763);
             }
           } else if (2 === tmp5) {
             if (arg0 === 1) {

@@ -411,8 +411,8 @@ export const shouldIncludeSelectedChannel = function shouldIncludeSelectedChanne
       const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
       let tmp5 = null == rootNavigationRef || !rootNavigationRef.isReady();
       if (!tmp5) {
-        tmp5 = !tmp3(9761).isChannelFocused();
-        const tmp3Result = tmp3(9761);
+        tmp5 = !tmp3(9762).isChannelFocused();
+        const tmp3Result = tmp3(9762);
       }
       flag = tmp5;
       const obj3 = getRootNavigationRef;

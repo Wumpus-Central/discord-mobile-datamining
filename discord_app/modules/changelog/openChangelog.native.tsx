@@ -17,7 +17,7 @@ export const openChangelog = function openChangelog() {
     const obj = navigationToRootTabHelper;
   }
   if (!isModalOpenResult) {
-    ModalActionCreators.pushLazy(asyncRequireImpl(14726, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
+    ModalActionCreators.pushLazy(asyncRequireImpl(14728, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
     const obj2 = ModalActionCreators;
   }
 };

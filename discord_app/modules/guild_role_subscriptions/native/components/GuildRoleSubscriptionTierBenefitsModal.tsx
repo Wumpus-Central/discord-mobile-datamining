@@ -7,7 +7,7 @@ import { useGroupIsFullGateState } from "usePriceTiers";
 import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS";
 import jsxProd from "FormHeader";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/16823_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/16832_registerAsset.js";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { render } from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
@@ -85,8 +85,8 @@ function ListFooterSection(onChangeTrialInterval) {
   let options;
   ({ interval, trialActiveUserLimit, onChangeTrialActiveUserLimit } = onChangeTrialInterval);
   const tmp = createCacheKey();
-  const tmp4 = options(13245)();
-  const tmp5 = options(14466)(interval);
+  const tmp4 = options(13247)();
+  const tmp5 = options(14468)(interval);
   options = tmp5.options;
   const selectedOption = tmp5.selectedOption;
   const items = [onChangeTrialInterval, options];
@@ -99,7 +99,7 @@ function ListFooterSection(onChangeTrialInterval) {
     }
     onChangeTrialInterval(value);
   }, items);
-  let obj = onChangeTrialInterval(16802);
+  let obj = onChangeTrialInterval(16811);
   const roleSubscriptionSettingsDisabled = obj.useRoleSubscriptionSettingsDisabled();
   obj = { style: tmp.listFooterContainer, children: null };
   obj = { label: null, value: null, onValueChange: null, disabled: null };
@@ -133,7 +133,7 @@ function ListFooterSection(onChangeTrialInterval) {
   const obj5 = { interval: selectedOption, onChange: onChangeTrialInterval, trialIntervalOptions: options, disabled: null };
   let tmp15 = !tmp7;
   let tmp16 = tmp15;
-  tmp2Result = tmp2(16825);
+  tmp2Result = tmp2(16834);
   if (null != selectedOption) {
     tmp16 = roleSubscriptionSettingsDisabled;
   }
@@ -155,7 +155,7 @@ function ListFooterSection(onChangeTrialInterval) {
     tmp15 = roleSubscriptionSettingsDisabled;
   }
   obj8[2] = tmp15;
-  items3[6] = callback(options(16826), obj8);
+  items3[6] = callback(options(16835), obj8);
   obj1[1] = items3;
   items1[1] = closure_13(closure_7, obj1);
   obj[1] = items1;
@@ -241,29 +241,29 @@ function Content(arg0) {
   if (role_id == null) {
     role_id = null;
   }
-  const tmp11 = editStateId(importAll(14461).useChannelBenefits(editStateId), 2);
+  const tmp11 = editStateId(importAll(14463).useChannelBenefits(editStateId), 2);
   first = tmp11[0];
   AllChannelAccessOptions = tmp11[1];
-  let obj3 = importAll(14461);
+  let obj3 = importAll(14463);
   const tmp10 = importDefault;
-  const tmp13 = editStateId(importAll(14461).useIntangibleBenefits(editStateId), 2);
+  const tmp13 = editStateId(importAll(14463).useIntangibleBenefits(editStateId), 2);
   first1 = tmp13[0];
   closure_10 = tmp13[1];
-  const obj4 = importAll(14461);
-  const tmp15 = editStateId(importAll(14461).useTierEmojiIds(editStateId, guildId), 2);
+  const obj4 = importAll(14463);
+  const tmp15 = editStateId(importAll(14463).useTierEmojiIds(editStateId, guildId), 2);
   first2 = tmp15[0];
   callback = tmp15[1];
-  const obj5 = importAll(14461);
-  const obj6 = importAll(14461);
-  [tmp18, tmp19] = editStateId(importAll(14461).useTrialInterval(editStateId), 2);
-  const tmp17 = editStateId(importAll(14461).useTrialInterval(editStateId), 2);
-  const obj7 = importAll(14461);
-  [tmp21, tmp22] = editStateId(importAll(14461).useTrialLimit(editStateId), 2);
-  const tmp20 = editStateId(importAll(14461).useTrialLimit(editStateId), 2);
-  const tmp23 = editStateId(importAll(14461).useChannelAccessFormat(editStateId, guildId), 2);
+  const obj5 = importAll(14463);
+  const obj6 = importAll(14463);
+  [tmp18, tmp19] = editStateId(importAll(14463).useTrialInterval(editStateId), 2);
+  const tmp17 = editStateId(importAll(14463).useTrialInterval(editStateId), 2);
+  const obj7 = importAll(14463);
+  [tmp21, tmp22] = editStateId(importAll(14463).useTrialLimit(editStateId), 2);
+  const tmp20 = editStateId(importAll(14463).useTrialLimit(editStateId), 2);
+  const tmp23 = editStateId(importAll(14463).useChannelAccessFormat(editStateId, guildId), 2);
   const first3 = tmp23[0];
   c13 = tmp25;
-  const obj8 = importAll(14461);
+  const obj8 = importAll(14463);
   roleSubscriptionSettingsDisabled = _useRoleSubscriptionSettingsDisabled.useRoleSubscriptionSettingsDisabled();
   const tmp27 = items(guildId);
   c16 = tmp27;
@@ -359,9 +359,9 @@ function Content(arg0) {
             onDelete() {
               const ref_type = closure_1;
               if (ref_type.ref_type === outer2_10.CHANNEL) {
-                outer1_8((arr) => arr.filter(/* F120203 */ function() { ... }));
+                outer1_8((arr) => arr.filter(/* F120244 */ function() { ... }));
               } else {
-                outer1_10((arr) => arr.filter(/* F120204 */ function() { ... }));
+                outer1_10((arr) => arr.filter(/* F120245 */ function() { ... }));
               }
             },
             onSave(ref_type) {
@@ -393,7 +393,7 @@ function Content(arg0) {
       }
       return tmp3Result;
     },
-    keyExtractor: tmp5(14465).getBenefitKey,
+    keyExtractor: tmp5(14467).getBenefitKey,
     ListHeaderComponent: null,
     renderSectionHeader: null,
     stickySectionHeadersEnabled: false,
@@ -410,7 +410,7 @@ function Content(arg0) {
       obj1[1] = first3;
       obj1[2] = tmp23[1];
       obj1[3] = roleSubscriptionSettingsDisabled;
-      tmp32Result = tmp32(tmp10(16839), obj1);
+      tmp32Result = tmp32(tmp10(16848), obj1);
     } else {
       tmp32Result = null;
     }
@@ -441,15 +441,15 @@ function Content(arg0) {
           obj[2] = outer1_11;
           obj[3] = outer1_12;
           obj[4] = outer1_4;
-          callback(16829).showEditEmojisModal(obj);
-          const obj3 = callback(16829);
+          callback(16838).showEditEmojisModal(obj);
+          const obj3 = callback(16838);
         } else {
           if (tmp === tmp2.CHANNEL) {
             let INTANGIBLE = constants.CHANNEL;
           } else {
             INTANGIBLE = constants.INTANGIBLE;
           }
-          obj = callback(16829);
+          obj = callback(16838);
           obj = { guildId: null, type: null, onSave: null, listingId: null };
           obj[0] = outer1_5;
           obj[1] = INTANGIBLE;

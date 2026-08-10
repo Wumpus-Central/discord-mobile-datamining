@@ -1051,8 +1051,8 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
         tmp4 = streamKey;
         if (!obj.cheapWorkletShallowEqual(streamKey, tmp)) {
           tmp2Result = tmp2(tmp3[8]);
-          tmp5 = f99454;
-          tmp6 = tmp2Result.runOnJS(f99454)();
+          tmp5 = f99489;
+          tmp6 = tmp2Result.runOnJS(f99489)();
         }
       }
       return;

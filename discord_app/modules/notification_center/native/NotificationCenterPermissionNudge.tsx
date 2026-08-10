@@ -36,7 +36,7 @@ function NotificationCenterBannerImpl(onDismiss) {
   obj = { style: tmp.iconContainer, children: null };
   obj = { size: "md", color: null };
   obj[1] = Themes.colors.ICON_STRONG;
-  obj[1] = callback4(onDismiss(9730).BellSlashIcon, obj);
+  obj[1] = callback4(onDismiss(9731).BellSlashIcon, obj);
   const items = [callback4(View, obj), , ];
   const obj1 = { style: tmp.contentContainer, children: null };
   const obj2 = { variant: "text-md/semibold", color: "text-default", children: null };
@@ -55,7 +55,7 @@ function NotificationCenterBannerImpl(onDismiss) {
   const intl3 = onDismiss(1236).intl;
   obj6[2] = intl3.string(onDismiss(1236).t.a4bgO0);
   obj6[3] = function onPress() {
-    let obj = onDismiss(11779);
+    let obj = onDismiss(11780);
     const pushNotificationPermission = obj.requestPushNotificationPermission(constants2.ALLOW_TO_REQUEST, constants3.NOTIFICATION_CENTER, closure_8);
     obj = { action: constants4.ACCEPT, prompt_type: constants5.NOTIFICATION_CENTER_BANNER };
     callback(698).track(constants.CONTEXTUAL_REMINDER_ACTION, obj);

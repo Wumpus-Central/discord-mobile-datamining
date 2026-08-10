@@ -51,7 +51,7 @@ function FocusedControlsHeader(reveal) {
   fn2.__initData = closure_12;
   const animatedStyle = obj1.useAnimatedStyle(fn2);
   obj = { style: animatedStyle, children: null };
-  obj1 = { top: !derivedValue(10764)(), left: isTouchingLeftScreenEdge, right: true, children: null };
+  obj1 = { top: !derivedValue(10765)(), left: isTouchingLeftScreenEdge, right: true, children: null };
   obj1[3] = callback(closure_5, { style: tmp.headerContainer, children: header });
   obj[1] = callback(reveal(5328).SafeAreaPaddingView, obj1);
   return callback(derivedValue(4036).View, obj);
@@ -115,7 +115,7 @@ const memoResult = importAllResult.memo((disableGradient) => {
   const globalStatusIndicatorState = obj.useGlobalStatusIndicatorState();
   let obj1 = nativeEventEmitter;
   globalStatusIndicatorHeightSharedValue = obj1.useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
-  const tmp6 = globalStatusIndicatorHeightSharedValue(10764)();
+  const tmp6 = globalStatusIndicatorHeightSharedValue(10765)();
   dependencyMap = tmp6;
   reveal = reveal.useContext(useRevealProviderValue.RevealContext).reveal;
   const isScreenReaderEnabled = SCREEN_READER_ENABLED_GETTER.useIsScreenReaderEnabled();
@@ -169,7 +169,7 @@ const memoResult = importAllResult.memo((disableGradient) => {
   const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
   const tmpResult1 = ReanimatedRexport;
   analyticsLocations = globalStatusIndicatorHeightSharedValue(5728)(tmp5(5748).FOCUSED_VOICE_CONTROLS).analyticsLocations;
-  callback = tmp5(10718)();
+  callback = tmp5(10719)();
   if (containerStyle == null) {
     containerStyle = derivedValue.absoluteFill;
   }
@@ -213,7 +213,7 @@ const memoResult = importAllResult.memo((disableGradient) => {
       obj1[5] = onDrawerClose;
       obj1[6] = reveal;
       obj1[7] = children;
-      tmp17Result = callback(tmp5(10776), obj1);
+      tmp17Result = callback(tmp5(10777), obj1);
     }
   }
   items1[2] = tmp17Result;

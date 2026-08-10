@@ -8,7 +8,7 @@ export default {
   open(initialRouteName) {
     let obj = ModalActionCreators;
     obj = { initialRouteName };
-    obj.pushLazy(asyncRequireImpl(14027, dependencyMap.paths), obj, TWO_FA_SETUP_MODAL_KEY);
+    obj.pushLazy(asyncRequireImpl(14029, dependencyMap.paths), obj, TWO_FA_SETUP_MODAL_KEY);
   },
   close() {
     ModalActionCreators.popWithKey(TWO_FA_SETUP_MODAL_KEY);

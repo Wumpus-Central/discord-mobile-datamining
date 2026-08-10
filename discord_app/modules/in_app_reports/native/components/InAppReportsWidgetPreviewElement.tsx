@@ -40,7 +40,7 @@ export default function WidgetPreview(arg0) {
         obj[1] = widget;
         const items1 = [tmp4.card, tmp.card];
         obj[3] = items1;
-        tmp6 = callback(tmp5(12340).WidgetSection, obj);
+        tmp6 = callback(tmp5(12342).WidgetSection, obj);
       }
     }
     tmp5Result = tmp5(7082);

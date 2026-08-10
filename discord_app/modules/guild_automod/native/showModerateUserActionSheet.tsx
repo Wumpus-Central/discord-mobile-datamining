@@ -4,5 +4,5 @@ import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetA
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/guild_automod/native/showModerateUserActionSheet.tsx");
 
 export default function showModerateUserActionSheet(arg0) {
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(11232, dependencyMap.paths), "ModerateUserActionSheet", arg0);
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(11233, dependencyMap.paths), "ModerateUserActionSheet", arg0);
 };

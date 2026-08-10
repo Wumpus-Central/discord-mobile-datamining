@@ -100,7 +100,7 @@ function AppNavigationContainer(children) {
         name = first.name;
       }
     }
-    callback(13821).log("Initial Screen: " + name);
+    callback(13823).log("Initial Screen: " + name);
     return tmp;
   }, []);
   _require = React.useRef(true);
@@ -179,7 +179,7 @@ try {
     const appEntryKey = children.appEntryKey;
     let riveAppStatePlaybackExperiment = appEntryKey;
     let memo1;
-    const requestGatewaySocket = riveAppStatePlaybackExperiment(13822).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = riveAppStatePlaybackExperiment(13824).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = React.useEffect(() => {
       if (!c22) {
         RNScreensTurboModule = RNScreensTurboModule.RNScreensTurboModule;
@@ -209,10 +209,10 @@ try {
     riveRendererExperiment = undefined;
     riveAppStatePlaybackExperiment = undefined;
     memo1 = undefined;
-    let obj = riveAppStatePlaybackExperiment(13822);
-    riveRendererExperiment = riveAppStatePlaybackExperiment(15074).useRiveRendererExperiment("AppContainer");
-    let obj2 = riveAppStatePlaybackExperiment(15074);
-    riveAppStatePlaybackExperiment = riveAppStatePlaybackExperiment(15075).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = riveAppStatePlaybackExperiment(13824);
+    riveRendererExperiment = riveAppStatePlaybackExperiment(15076).useRiveRendererExperiment("AppContainer");
+    let obj2 = riveAppStatePlaybackExperiment(15076);
+    riveAppStatePlaybackExperiment = riveAppStatePlaybackExperiment(15077).useRiveAppStatePlaybackExperiment("AppContainer");
     let items = [riveRendererExperiment, riveAppStatePlaybackExperiment];
     const memo = React.useMemo(() => {
       const items = [];

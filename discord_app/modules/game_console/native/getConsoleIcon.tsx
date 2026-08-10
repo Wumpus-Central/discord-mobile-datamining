@@ -1,7 +1,7 @@
 // discord_app/modules/game_console/native/getConsoleIcon.tsx
 import { VoicePlatforms } from "ParticipantTypes";
-import { registerAsset } from "../../../../_runtime/10547_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/10945_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10548_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/10946_registerAsset.js";
 
 let PLAYSTATION;
 let PLAYSTATION_STAGING;

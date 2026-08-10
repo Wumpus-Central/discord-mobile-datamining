@@ -41,7 +41,7 @@ export default function EmojiRow(arg0) {
   const items = [
     emojisForReactionRow.map((emoji) => {
       let closure_0 = emoji;
-      return token(outer1_0(9859).EmojiReactionRowButton, {
+      return token(outer1_0(9860).EmojiReactionRowButton, {
         emoji,
         onPress() {
           let channel_id;
@@ -67,7 +67,7 @@ export default function EmojiRow(arg0) {
         emojiFontSize: closure_3,
         emojiLineHeight: closure_4,
         emojiContainerSize: token
-      }, outer1_0(9859).getEmojiKey(emoji, arg1));
+      }, outer1_0(9860).getEmojiKey(emoji, arg1));
     }),
 
   ];

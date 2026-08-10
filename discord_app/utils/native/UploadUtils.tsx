@@ -433,19 +433,19 @@ function _openImagePicker() {
               throw arg1;
             } else if (arg0 === 2) {
               c6 = 3;
-              const obj2 = { value: null, done: true };
+              let obj2 = { value: null, done: true };
               obj2[0] = arg1;
               return obj2;
             } else if (arg1) {
               let c4 = 1;
               c5 = 3;
               c6 = 1;
-              const obj3 = { value: null, done: false };
+              let obj3 = { value: null, done: false };
               obj3[0] = callback2(callback);
               return obj3;
             } else {
               c6 = 3;
-              let obj4 = { value: null, done: true };
+              const obj4 = { value: null, done: true };
               obj4[0] = { errorStr: "Missing permission" };
               return obj4;
             }
@@ -455,13 +455,12 @@ function _openImagePicker() {
             if ("E_PICKER_CANCELLED" !== closure_2.code) {
               if (closure_2.message !== closure_23) {
                 if ("E_CROPPER_IMAGE_NOT_FOUND" === closure_2.code) {
-                  let obj5 = callback(closure_2[14]);
-                  const intl2 = callback(closure_2[15]).intl;
-                  obj5.presentFailedToast(intl2.string(callback(closure_2[15]).t.TTzyzW));
-                  obj5 = { errorStr: "No select photo access" };
+                  obj3 = callback(closure_2[14]);
+                  const intl = callback(closure_2[15]).intl;
+                  obj3.presentFailedToast(intl.string(callback(closure_2[15]).t.TTzyzW));
                 } else {
-                  obj4 = callback(closure_2[14]);
-                  obj4.presentFailedToast(closure_2.message);
+                  obj2 = callback(closure_2[14]);
+                  obj2.presentFailedToast(closure_2.message);
                   { errorStr: null }[0] = closure_2.message;
                 }
               }
@@ -479,23 +478,23 @@ function _openImagePicker() {
           } else {
             closure_1 = arg1;
             if (null != closure_1.errorStr) {
-              obj = callback(closure_2[14]);
-              const intl = callback(closure_2[15]).intl;
+              const intl2 = callback(closure_2[15]).intl;
               const obj8 = { reason: null };
               obj8[0] = closure_1.errorStr;
-              obj.presentFailedToast(intl.formatToPlainString(callback(closure_2[15]).t.Ex162J, obj8));
+              callback(closure_2[14]).presentFailedToast(intl2.formatToPlainString(callback(closure_2[15]).t.Ex162J, obj8));
+              const obj14 = callback(closure_2[14]);
             }
             c4 = 0;
             c6 = 3;
-            const obj9 = { value: null, done: true };
-            obj9[0] = closure_1;
-            return obj9;
+            obj = { value: null, done: true };
+            obj[0] = closure_1;
+            return obj;
           }
-        } catch (tmp46) {
-          closure_3 = tmp46;
+        } catch (tmp36) {
+          closure_3 = tmp36;
           if (tmp4 === c4) {
             c6 = tmp2;
-            throw tmp46;
+            throw tmp36;
           } else {
             c5 = tmp;
           }

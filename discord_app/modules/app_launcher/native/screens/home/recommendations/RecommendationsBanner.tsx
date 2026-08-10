@@ -23,7 +23,7 @@ let closure_10 = importAllResult.memo((applicationId) => {
   let heroMediaDimensions;
   let importDefault;
   let obj = heroMediaDimensions(9548);
-  let obj1 = heroMediaDimensions(11469);
+  let obj1 = heroMediaDimensions(11470);
   heroMediaDimensions = obj1.useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
   obj = { applicationId: applicationId.applicationId, size: heroMediaDimensions.width, names: ["embedded_cover"] };
   const tmp4 = useEmbeddedActivityBackground(obj);

@@ -82,7 +82,7 @@ export default function ExpressionPickerActionSheet(arg0) {
     obj2[9] = initialGifQuery;
     obj2[10] = STICKER_FORMATS;
     obj2[11] = diff;
-    obj1[5] = callback(tmp7(9928), obj2);
+    obj1[5] = callback(tmp7(9929), obj2);
     items1[1] = callback(tmp2(5397).BottomSheet, obj1);
     obj[0] = items1;
     tmp15Result = closure_9(closure_8, obj);

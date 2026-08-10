@@ -52,7 +52,7 @@ const memoResult = importAllResult.memo((navigation) => {
   const items2 = [callback2(View, { style: tmp.tabContainer, onLayout: callback1, children: callback2(navigation(9141).SegmentedControl, { state: segmentedControlState }) }), , ];
   const obj3 = { style: tmp.tabContainer, onLayout: callback1, children: callback2(navigation(9141).SegmentedControl, { state: segmentedControlState }) };
   items2[1] = callback2(View, { style: tmp.messageRequestContent, children: callback2(navigation(9562).SegmentedControlPages, { state: segmentedControlState }) });
-  items2[2] = callback2(navigation(11294).TTIFirstContentfulPaint, { label: "message_requests" });
+  items2[2] = callback2(navigation(11295).TTIFirstContentfulPaint, { label: "message_requests" });
   obj2[1] = items2;
   return callback3(View, obj2);
 });

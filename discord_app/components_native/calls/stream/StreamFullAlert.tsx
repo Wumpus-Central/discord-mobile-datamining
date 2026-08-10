@@ -2,7 +2,7 @@
 import "noop";
 import { Image } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
-import { registerAsset } from "../../../../_runtime/16934_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/16943_registerAsset.js";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { mapped } from "../../../modules/errors/av_errors/AVError.tsx";

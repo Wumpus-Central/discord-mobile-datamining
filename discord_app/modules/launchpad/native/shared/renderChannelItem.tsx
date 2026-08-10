@@ -30,7 +30,7 @@ function LaunchpadChannelIcon(channel) {
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getGuild(channel.guild_id));
   const tmp2 = getLayoutStyle();
   obj[1] = callback(GuildIconSizes, { guild: stateFromStores, size: getLayoutStyle().icon.guildBadgeIconSize });
-  const items1 = [callback(View, obj), callback(channel(11575).ChannelIcon, { channel, size: "sm", wrapperSize: 32 })];
+  const items1 = [callback(View, obj), callback(channel(11576).ChannelIcon, { channel, size: "sm", wrapperSize: 32 })];
   obj[0] = items1;
   return callback2(closure_9, obj);
 }

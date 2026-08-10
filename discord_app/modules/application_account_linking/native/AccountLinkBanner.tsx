@@ -245,7 +245,7 @@ export const getScaledAccountLinkBannerHeight = function getScaledAccountLinkBan
     let num = sum3 + PX_82;
   } else {
     num = 0;
-    if (bannerSize === tmp3(15314).MobileAccountLinkingBannerSize.MEDIUM) {
+    if (bannerSize === tmp3(15322).MobileAccountLinkingBannerSize.MEDIUM) {
       const sum4 = PX_8 + PX_12 + 48 + PX_122;
       num = sum4 + tmp3(4718).SMALL_BUTTON_HEIGHT + PX_12 + PX_82;
     }

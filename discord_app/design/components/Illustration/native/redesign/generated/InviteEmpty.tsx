@@ -15,7 +15,7 @@ export const getInviteEmptySource = function getInviteEmptySource(theme) {
       return callback(9703);
     },
     darker() {
-      return callback(16726);
+      return callback(16735);
     },
     light() {
       return callback(9702);
@@ -30,7 +30,7 @@ export const useInviteEmptySource = function useInviteEmptySource() {
       return callback(9703);
     },
     darker() {
-      return callback(16726);
+      return callback(16735);
     },
     light() {
       return callback(9702);
@@ -45,7 +45,7 @@ export const InviteEmpty = function InviteEmpty(arg0) {
       return callback(9703);
     },
     darker() {
-      return callback(16726);
+      return callback(16735);
     },
     light() {
       return callback(9702);

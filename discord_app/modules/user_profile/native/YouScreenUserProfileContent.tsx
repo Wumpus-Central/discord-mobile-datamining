@@ -23,9 +23,9 @@ let map1;
 const require = arg1;
 function YouAvatar(arg0) {
   const callback = React.useCallback(() => {
-    const result = callback(15861).trackYouTabAvatarPress();
-    const obj = callback(15861);
-    const result1 = callback(15480).showYouAccountActionSheet();
+    const result = callback(15870).trackYouTabAvatarPress();
+    const obj = callback(15870);
+    const result1 = callback(15488).showYouAccountActionSheet();
   }, []);
   let obj = set;
   const isAndroidResult = obj.isAndroid();
@@ -105,12 +105,12 @@ function EditSection(navigateToProfileCustomization) {
     obj1[3] = intl.string(tmp4(1236).t.AAjhgi);
     obj1[4] = callback;
     obj[1] = callback2(tmp4(4714).Button, obj1);
-    const items2 = [callback2(tmp(12269), obj), ];
+    const items2 = [callback2(tmp(12271), obj), ];
     const obj3 = { targetRef: null, visible: null, markAsDismissed: null };
     obj3[0] = ref;
     obj3[1] = tmp13;
     obj3[2] = tmp11[1];
-    items2[1] = callback2(tmp(15869), obj3);
+    items2[1] = callback2(tmp(15878), obj3);
     obj[0] = items2;
     return callback3(closure_15, obj);
   }
@@ -441,7 +441,7 @@ export default function YouScreenUserProfileContent(user) {
       const timeout = setTimeout(() => {
         outer1_25(outer1_4 === constants.WISHLIST ? constants.WISHLIST : constants.MAIN);
         outer1_32.current(num, false, true);
-        outer1_6.setParams({ initialTab: "sa" });
+        outer1_6.setParams({ initialTab: "Promise" });
       }, 80);
     }
     return () => {

@@ -34,8 +34,8 @@ export default function FavoritesGuildChannels(arg0) {
       let tmp11Result = null;
       if (shouldShowEmptyState) {
         obj = { variant: "empty" };
-        tmp11Result = tmp11(tmp9(15321), obj);
-        const tmp9Result = tmp9(15321);
+        tmp11Result = tmp11(tmp9(15329), obj);
+        const tmp9Result = tmp9(15329);
       }
       items[1] = tmp11Result;
       obj[2] = items;

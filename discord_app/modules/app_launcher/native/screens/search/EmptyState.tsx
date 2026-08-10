@@ -14,7 +14,7 @@ export default function EmptyState(showsGenericMessage) {
     flag = false;
   }
   const tmp = callback();
-  let obj = flag(11437);
+  let obj = flag(11438);
   const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(flag(9549).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
   const items = [flag];
   const effect = React.useEffect(() => {

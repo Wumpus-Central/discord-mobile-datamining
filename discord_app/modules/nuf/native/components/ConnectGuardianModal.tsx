@@ -36,7 +36,7 @@ export default function ConnectGuardianModal(route) {
   let dependencyMap;
   onComplete = route.route.params.onComplete;
   const tmp = createCacheKey();
-  let obj = onComplete(16523);
+  let obj = onComplete(16532);
   connectGuardianGate = obj.useConnectGuardianGate();
   dependencyMap = React.useRef(false);
   const items = [connectGuardianGate.state, onComplete];
@@ -88,7 +88,7 @@ export default function ConnectGuardianModal(route) {
     obj5[3] = intl3.string(tmp2(2284).Mi60fm);
     const items4 = [callback(tmp4(4299).Text, obj5), ];
     ({ linkCode: obj9[1], expiresAt: obj9[2], refresh: obj9[3] } = connectGuardianGate);
-    items4[1] = callback(tmp4(14126).ConnectGuardianCard, { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null });
+    items4[1] = callback(tmp4(14128).ConnectGuardianCard, { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null });
     obj4[1] = items4;
     items3[1] = callback2(View, obj4);
     const obj7 = { style: null };

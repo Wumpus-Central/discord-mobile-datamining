@@ -42,7 +42,7 @@ export default {
     }
     obj1[3] = name;
     obj1[4] = hasWatchVideoTasksResult;
-    obj7.pushLazy(asyncRequireImpl(14346, tmp2.paths), obj1, QUEST_DISCLOSURE_MODAL);
+    obj7.pushLazy(asyncRequireImpl(14348, tmp2.paths), obj1, QUEST_DISCLOSURE_MODAL);
   },
   hideModal() {
     ModalActionCreators.popWithKey(QUEST_DISCLOSURE_MODAL);

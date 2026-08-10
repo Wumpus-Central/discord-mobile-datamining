@@ -51,7 +51,7 @@ export default function NotificationSettingsChannel(channel) {
   });
   const items = [channel.channel];
   const items1 = [channel.channel];
-  const callback = React.useCallback(() => channel(9825).updateChannelToGuildDefault(channel.channel.guild_id, channel.channel.id), items);
+  const callback = React.useCallback(() => channel(9826).updateChannelToGuildDefault(channel.channel.guild_id, channel.channel.id), items);
   const callback1 = React.useCallback(() => {
     const result = callback(5262).updateChannelOverrideSettings(channel.channel.guild_id, channel.channel.id, { muted: false }, channel(5257).NotificationLabels.Unmuted);
   }, items1);
@@ -65,10 +65,10 @@ export default function NotificationSettingsChannel(channel) {
     obj[0] = { marginBottom: 16 };
     const intl2 = tmp(1236).intl;
     obj[1] = intl2.string(tmp(1236).t["6MCxAy"]);
-    obj[2] = tmp(9827).getMuteBannerSubtitleFromConfig(stateFromStoresObject.config);
+    obj[2] = tmp(9828).getMuteBannerSubtitleFromConfig(stateFromStoresObject.config);
     obj[3] = callback1;
-    muted = callback(tmp(9827).NotificationSettingsMuteBanner, obj);
-    const tmpResult = tmp(9827);
+    muted = callback(tmp(9828).NotificationSettingsMuteBanner, obj);
+    const tmpResult = tmp(9828);
   }
   const items3 = [muted, , , , , ];
   obj1 = { channel: channel.channel };
@@ -82,7 +82,7 @@ export default function NotificationSettingsChannel(channel) {
     let obj4 = { style: null, channel: null };
     obj4[0] = { marginTop: 24 };
     obj4[1] = channel.channel;
-    isForumLikeChannelResult = tmp11(tmp(9845).NotificationSettingsChannelPost, obj4);
+    isForumLikeChannelResult = tmp11(tmp(9846).NotificationSettingsChannelPost, obj4);
   }
   items3[4] = isForumLikeChannelResult;
   const inherited = channelPresetInheritance.inherited;

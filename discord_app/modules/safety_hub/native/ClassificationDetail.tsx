@@ -174,7 +174,7 @@ function ClassificationPolicyCard(classificationDescription) {
   obj = { style: tmp.classificationPolicyCardIcon, children: null };
   const obj1 = { size: "sm", color: null };
   obj1[1] = Themes.colors.TEXT_LINK;
-  obj[1] = callback(policyExplainerLink(10232).ShieldIcon, obj1);
+  obj[1] = callback(policyExplainerLink(10233).ShieldIcon, obj1);
   const items1 = [callback(closure_4, obj), ];
   const obj2 = { style: tmp.classificationPolicyCardContent, children: null };
   const obj3 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };

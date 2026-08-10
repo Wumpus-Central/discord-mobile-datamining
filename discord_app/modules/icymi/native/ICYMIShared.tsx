@@ -29,7 +29,7 @@ let unpackModuleId;
 const require = arg1;
 class Separator {
   constructor() {
-    obj = { style: f62149().separator };
+    obj = { style: f62167().separator };
     return jsx(View, obj);
   }
 }
@@ -68,7 +68,7 @@ class GuildContentPost {
     guild = global.guild;
     ({ channel, hideTimestamp, id, type } = global);
     ({ timestamp, children, avatar, title, subtitle, onHeaderPress, onHeaderLongPress, disableInteractions } = global);
-    tmp = f62149();
+    tmp = f62167();
     tmp2 = guild;
     tmp3 = id;
     obj = require("getFontScale");

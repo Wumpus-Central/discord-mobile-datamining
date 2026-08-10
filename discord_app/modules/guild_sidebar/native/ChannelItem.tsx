@@ -11,7 +11,7 @@ import jsxProd from "getChannelRoleSubscriptionStatus";
 import createCacheKey from "createCacheKey";
 import importAllResult from "initialize";
 import set from "get ActivityIndicator";
-import { registerAsset } from "../../../../_runtime/15242_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/15249_registerAsset.js";
 import { BookCheckIcon } from "../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
 import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
 import { getChannelIcon } from "../../../utils/native/ChannelUtils.tsx";
@@ -110,7 +110,7 @@ function ChannelIcon(arg0) {
       obj6 = {};
     }
     const merged = Object.assign(obj6);
-    return callback2(tmp9(11752).BaseChannelIcon, obj4);
+    return callback2(tmp9(11753).BaseChannelIcon, obj4);
   }
 }
 function DMChannelIcon(userId) {
@@ -128,7 +128,7 @@ function DMChannelIcon(userId) {
   const items3 = [userId];
   const stateFromStoresObject = userId(589).useStateFromStoresObject(items2, () => ({ status: outer1_6.getStatus(userId), isMobileOnline: outer1_6.isMobileOnline(userId), isVROnline: outer1_6.isVROnline(userId) }), items3);
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-  obj = { user: stateFromStores, guildId: "o", size: "AUDIO_SET_ACTIVE_INPUT_PROFILE", style: null, status: 180, isMobileOnline: "#f0f8ff", isVROnline: "#faebd7", statusStyle: "#00ffff" };
+  obj = { user: stateFromStores, guildId: "o", size: "APP_LAUNCHER_ONBOARDING_SET_TRIGGERED_ONBOARDING_CONTENT_METADATA", style: null, status: "FAVORITES_GUILD_CHANNEL_SORT", isMobileOnline: 113, isVROnline: 124, statusStyle: "none" };
   obj[2] = userId(1297).AvatarSizes.XSMALL_20;
   obj[3] = tmp.dmAvatar;
   obj[4] = status;

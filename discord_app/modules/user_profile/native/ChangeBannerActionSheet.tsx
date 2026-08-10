@@ -77,7 +77,7 @@ function ChangeBannerColorRow(user) {
   obj1[1] = intl.string(_getSystemLocale.t.xzNfPz);
   obj[0] = callback(_Form.FormLabel, obj1);
   const obj2 = { style: tmp.selectedColor, children: null };
-  const items2 = [callback(pendingAccentColor(13905), { style: tmp.bannerColor, color: pendingAccentColor }), , ];
+  const items2 = [callback(pendingAccentColor(13907), { style: tmp.bannerColor, color: pendingAccentColor }), , ];
   const obj4 = { style: tmp.selectedColorHex, variant: "text-md/medium", color: "interactive-text-default", children: null };
   const obj3 = { style: tmp.bannerColor, color: pendingAccentColor };
   const tmp2Result1 = _useDominantRGBFromImage;
@@ -85,12 +85,12 @@ function ChangeBannerColorRow(user) {
   items2[1] = callback(_Text.Text, obj4);
   const obj5 = { style: tmp.rowArrow, size: null, source: null };
   obj5[1] = _Button.Icon.Sizes.CUSTOM;
-  obj5[2] = pendingAccentColor(13910);
+  obj5[2] = pendingAccentColor(13912);
   items2[2] = callback(_Button.Icon, obj5);
   obj2[1] = items2;
   obj[1] = callback2(View, obj2);
   obj[2] = function handleChangeColor() {
-    pendingAccentColor(13903)({ color: pendingAccentColor, onSelect: dependencyMap });
+    pendingAccentColor(13905)({ color: pendingAccentColor, onSelect: dependencyMap });
   };
   return callback(_TableRowInner.TableRow, obj);
 }
@@ -264,7 +264,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
     obj6[0] = tmp.upsellButton;
     const obj7 = { analyticsObject: null };
     obj7[0] = constants.EDIT_PROFILE_BANNER;
-    obj6[1] = tmp4(tmp2(13902), obj7);
+    obj6[1] = tmp4(tmp2(13904), obj7);
     tmp4Result2 = tmp4(tmp10, obj6);
   }
   items3[1] = tmp4Result2;

@@ -69,9 +69,9 @@ export default function DMMessageStickerGreeting(channel) {
   }
   const intl2 = Text(1236).intl;
   const formatToPlainStringResult = intl2.formatToPlainString(Text(1236).t.m0zYbV, { username: name });
-  const showConvoStarterInDM = Text(11636).useShowConvoStarterInDM(channel);
+  const showConvoStarterInDM = Text(11637).useShowConvoStarterInDM(channel);
   callback = showConvoStarterInDM;
-  const TextResult = Text(11636);
+  const TextResult = Text(11637);
   const tmp2 = END;
   const items2 = [loadSavedGuildStickers];
   const items3 = [showConvoStarterInDM];
@@ -256,7 +256,7 @@ export default function DMMessageStickerGreeting(channel) {
   const TextResult4 = Text(4005);
   const items8 = [Text(4151).hexWithOpacity(token, 0), token];
   const TextResult5 = Text(4151);
-  const shouldAnimateSticker = Text(9956).useShouldAnimateSticker(false);
+  const shouldAnimateSticker = Text(9957).useShouldAnimateSticker(false);
   if (!showConvoStarterInDM) {
     return null;
   } else {
@@ -277,7 +277,7 @@ export default function DMMessageStickerGreeting(channel) {
       obj3[3] = callback;
       let tmp24Result = null;
       if (null != stateFromStores2) {
-        tmp5 = tmp5(9848);
+        tmp5 = tmp5(9849);
         const obj4 = { sticker: null, size: 24, animated: null };
         obj4[0] = stateFromStores2;
         obj4[2] = shouldAnimateSticker;
@@ -301,7 +301,7 @@ export default function DMMessageStickerGreeting(channel) {
         const obj7 = { sticker: null, size: 100, animated: null };
         obj7[0] = stateFromStores2;
         obj7[2] = shouldAnimateSticker;
-        obj6[1] = tmp24(tmp5(9848), obj7);
+        obj6[1] = tmp24(tmp5(9849), obj7);
         tmp24Result = tmp24(tmp25, obj6);
       }
       const obj8 = { children: null };

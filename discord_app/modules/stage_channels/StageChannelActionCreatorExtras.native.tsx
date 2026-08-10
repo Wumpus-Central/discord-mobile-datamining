@@ -42,7 +42,7 @@ export const openStageSettingsSheet = function openStageSettingsSheet(closure_0,
 export const openEndStageModal = function openEndStageModal(closure_0) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel: closure_0 };
-  obj.openLazy(asyncRequireImpl(12661, dependencyMap.paths), closure_8, obj);
+  obj.openLazy(asyncRequireImpl(12663, dependencyMap.paths), closure_8, obj);
 };
 export const openStageChannel = function openStageChannel(outer1_0) {
   if (outer1_0.isGuildStageVoice()) {
@@ -55,8 +55,8 @@ export const openStageChannel = function openStageChannel(outer1_0) {
       obj[0] = outer1_0;
       const obj2 = ModalActionCreators;
       tmpResult = tmp(4513);
-      obj2.pushLazy(tmp(1988)(10651, tmp2.paths), obj, tmpResult.getVoiceChannelKey(outer1_0.id));
-      const tmp4 = tmp(1988)(10651, tmp2.paths);
+      obj2.pushLazy(tmp(1988)(10652, tmp2.paths), obj, tmpResult.getVoiceChannelKey(outer1_0.id));
+      const tmp4 = tmp(1988)(10652, tmp2.paths);
     }
     tmp2 = dependencyMap;
   }
@@ -87,8 +87,8 @@ export const navigateToStage = function navigateToStage(id) {
       obj[0] = id;
       const obj2 = ModalActionCreators;
       tmp3Result = tmp3(4513);
-      obj2.pushLazy(tmp3(1988)(10651, tmp4.paths), obj, tmp3Result.getVoiceChannelKey(id.id));
-      const tmp6 = tmp3(1988)(10651, tmp4.paths);
+      obj2.pushLazy(tmp3(1988)(10652, tmp4.paths), obj, tmp3Result.getVoiceChannelKey(id.id));
+      const tmp6 = tmp3(1988)(10652, tmp4.paths);
     }
     tmp4 = dependencyMap;
   }

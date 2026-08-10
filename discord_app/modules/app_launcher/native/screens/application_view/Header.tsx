@@ -57,7 +57,7 @@ export default function Header(application) {
   const tmp3 = createCacheKey();
   let appLauncherIconSource = null;
   if (null != application) {
-    let tmpResult = tmp(11437);
+    let tmpResult = tmp(11438);
     appLauncherIconSource = tmpResult.getAppLauncherIconSource(application);
   }
   tmpResult = tmp(4005);
@@ -78,7 +78,7 @@ export default function Header(application) {
     obj = { iconSource: null, iconBorderRadius: null, iconSize: 72 };
     obj[0] = appLauncherIconSource;
     obj[1] = xl;
-    let tmp12 = callback(tmp5(11442), obj);
+    let tmp12 = callback(tmp5(11443), obj);
     let tmp13 = callback;
   } else {
     obj = { style: null };
@@ -217,7 +217,7 @@ export default function Header(application) {
       const obj12 = { application: null, onAddAppMenuClick: null };
       obj12[0] = application;
       obj12[1] = onAddAppMenuClick;
-      items7[1] = tmp13(tmp5(11520), obj12);
+      items7[1] = tmp13(tmp5(11521), obj12);
       obj10[1] = items7;
       tmp22Result = tmp22(currentUser2, obj10);
     }

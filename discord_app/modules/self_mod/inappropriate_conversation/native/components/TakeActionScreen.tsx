@@ -138,7 +138,7 @@ export default function TakeActionButtons(senderId) {
           callback2(false);
           obj = v0(7784);
           const result = obj.showReportSuccessToast(closure_0, v0);
-          callback(outer1_0(10351).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+          callback(outer1_0(10352).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
         }
         dependencyMap = 3;
         obj2 = { value: null, done: true };

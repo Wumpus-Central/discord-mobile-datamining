@@ -132,8 +132,8 @@ function BurstReactionAnimationContainerInner() {
       obj[1] = outer1_8(first(4036).View, obj);
       return outer1_8(callback(1297).OverlayView, obj);
     };
-    tmp8 = callback(first(10000), obj);
-    let tmp11 = first(10000);
+    tmp8 = callback(first(10001), obj);
+    let tmp11 = first(10001);
   }
   return tmp8;
 }

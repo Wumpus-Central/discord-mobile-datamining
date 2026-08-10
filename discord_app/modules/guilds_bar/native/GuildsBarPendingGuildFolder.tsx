@@ -16,7 +16,7 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
   id = id.id;
   let importDefault;
   ({ expanded, childNodes } = id);
-  let obj = id(15409);
+  let obj = id(15417);
   importDefault = usePendingFolderGuildIds();
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: false });
   const items = [handleConnectionOpen];
@@ -57,7 +57,7 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
       const result1 = outer1_1(outer1_2[10]).toggleGuildFolderExpand(closure_0);
     }
   }), items2);
-  obj = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "HermesInternal", overState: "a", preventClipping: "QUICKSWITCHER_SHOW", config: "QUICKSWITCHER_SEARCH", externalChildren: "QUICKSWITCHER_SELECT", children: null };
+  obj = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "HermesInternal", overState: "a", preventClipping: "text-xs/semibold", config: "mobile-text-heading-primary", externalChildren: 1, children: null };
   const obj3 = id(4036);
   obj[0] = "" + id;
   obj[1] = accessibilityActions;
@@ -73,11 +73,11 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
     obj = { folderId: null, totalItems: null };
     obj[0] = id;
     obj[1] = childNodes.length;
-    tmp8Result = tmp8(tmp(15408).GuildsBarGuildFolderBG, obj);
+    tmp8Result = tmp8(tmp(15416).GuildsBarGuildFolderBG, obj);
   }
   obj[13] = tmp8Result;
-  obj[14] = jsx(id(12279).HourglassIcon, {});
-  return jsx(UnreadIndicator, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "HermesInternal", overState: "a", preventClipping: "QUICKSWITCHER_SHOW", config: "QUICKSWITCHER_SEARCH", externalChildren: "QUICKSWITCHER_SELECT", children: null });
+  obj[14] = jsx(id(12281).HourglassIcon, {});
+  return jsx(UnreadIndicator, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "HermesInternal", overState: "a", preventClipping: "text-xs/semibold", config: "mobile-text-heading-primary", externalChildren: 1, children: null });
 });
 let result = require("ME").fileFinishedImporting("modules/guilds_bar/native/GuildsBarPendingGuildFolder.tsx");
 

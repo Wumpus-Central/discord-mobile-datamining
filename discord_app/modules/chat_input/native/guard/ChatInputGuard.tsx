@@ -183,7 +183,7 @@ export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIn
   const tmp3 = useIsUsingClientTheme();
   let obj = screenIndex(1348);
   const chatInputFloating = obj.useMobileVisualRefreshConfig({ location: "ChatInputGuardContainer" }).chatInputFloating;
-  let obj1 = screenIndex(11631);
+  let obj1 = screenIndex(11632);
   const chatInputFloatingOverlayStyle = obj1.useChatInputFloatingOverlayStyle();
   const tmp6 = callback2(tmp3);
   const items = [screenIndex];
@@ -199,7 +199,7 @@ export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIn
   items1[1] = tmp10;
   let tmp11 = null;
   if (chatInputFloating) {
-    tmp11 = callback(tmp4(11631).ChatInputScrimGradient, {});
+    tmp11 = callback(tmp4(11632).ChatInputScrimGradient, {});
   }
   const items2 = [tmp11, ];
   obj = { style: tmp6.container, children: null };
@@ -226,7 +226,7 @@ export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIn
       obj3[0] = channelId;
       obj3[1] = screenIndex;
       obj3[2] = onJumpToPresent;
-      tmp17 = callback(tmp(11639), obj3);
+      tmp17 = callback(tmp(11640), obj3);
     }
   }
   items3[2] = tmp17;

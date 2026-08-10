@@ -316,7 +316,7 @@ export default function MediaMessagePreview(channelId) {
           }
         }
         let obj = channelId(onClose[27]);
-        obj = { allowWithinModal: true, chatInputRef: "Boolean", handleTransitionToThread: "NATIVE_AUDIO_SET_OUTPUT_DEVICE", message: null, messageChannel: "destructive", selectedChannelId: true, tapLinkData: null };
+        obj = { allowWithinModal: true, chatInputRef: "Boolean", handleTransitionToThread: 40, message: null, messageChannel: "sm", selectedChannelId: null, tapLinkData: "secondary" };
         obj[2] = function handleTransitionToThread(arg0, arg1, arg2) {
           channel = channel.getChannel(arg1);
           if (null != channel) {

@@ -5,11 +5,11 @@ import insertUnsortedGuilds from "insertUnsortedGuilds";
 import { FractionalPremiumStates } from "GuildFeatures";
 import jsxProd from "UploadIcon";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../_runtime/12798_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12799_registerAsset.js";
 import { registerAsset } from "../../../_runtime/12800_registerAsset.js";
 import { registerAsset } from "../../../_runtime/12801_registerAsset.js";
 import { registerAsset } from "../../../_runtime/12802_registerAsset.js";
+import { registerAsset } from "../../../_runtime/12803_registerAsset.js";
+import { registerAsset } from "../../../_runtime/12804_registerAsset.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
 import { HeadphonesIcon } from "../../design/components/Icon/native/redesign/generated/HeadphonesIcon.tsx";
@@ -54,7 +54,7 @@ class FEATURES_PREMIUM_GUILD_USER {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.color = callback2(712).unsafe_rawColors.GUILD_BOOSTING_PINK;
-      return callback3(callback(12795).BoostTier3Icon, obj);
+      return callback3(callback(12797).BoostTier3Icon, obj);
     };
     items[1] = obj;
     obj1 = { icon: require("registerAsset"), label: null, color: null, IconComponent: null };
@@ -164,7 +164,7 @@ export default function GuildBoostingUpsell(arg0) {
   if (subscriptionPlansLoaded) {
     tmp13Result = null;
     if (fractionalState === tmp9.NONE) {
-      tmp13Result = tmp13(tmp7(12807), {});
+      tmp13Result = tmp13(tmp7(12809), {});
     }
   }
   const items4 = [tmp13Result, , ];
@@ -175,7 +175,7 @@ export default function GuildBoostingUpsell(arg0) {
       const obj15 = { onLearnMorePremium: null, style: null };
       obj15[0] = onLearnMorePremium;
       obj15[1] = tmp.subscriptionUpsell;
-      tmp13Result = tmp13(tmp7(12809), obj15);
+      tmp13Result = tmp13(tmp7(12811), obj15);
     }
     items4[2] = tmp13Result;
     obj14[1] = items4;
@@ -198,7 +198,7 @@ export default function GuildBoostingUpsell(arg0) {
       items5[1] = tmp13(tmp2(4299).Text, obj18);
       const obj19 = { style: null };
       obj19[0] = tmp.guildList;
-      items5[2] = tmp13(tmp7(12808), obj19);
+      items5[2] = tmp13(tmp7(12810), obj19);
       obj16[0] = items5;
       let tmp19 = obj16;
     } else {

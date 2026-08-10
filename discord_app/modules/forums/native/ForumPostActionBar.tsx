@@ -71,7 +71,7 @@ export default function ForumPostActionBar(channel) {
     obj1[1] = stateFromStores;
     obj1[2] = firstMessage;
     obj1[3] = tmp7[0];
-    obj[1] = callback(tmp2(10395).ForumPostActionBarReactions, obj1);
+    obj[1] = callback(tmp2(10396).ForumPostActionBarReactions, obj1);
     tmp11 = callback(tmp10, obj);
   }
   const items5 = [tmp11, ];
@@ -108,7 +108,7 @@ export default function ForumPostActionBar(channel) {
       obj[3] = channel(4235).JumpType.ANIMATED;
       obj.jumpToMessage(obj);
     };
-    obj4[4] = callback(tmp2(10396).ArrowLargeUpIcon, { size: "xs" });
+    obj4[4] = callback(tmp2(10397).ArrowLargeUpIcon, { size: "xs" });
     items7[2] = callback(tmp2(4846).PressableOpacity, obj4);
     obj2[2] = items7;
     items5[1] = tmp9(tmp10, obj2);

@@ -51,7 +51,7 @@ function LimitAndDurationInfo(channel) {
     }
     obj[1] = hasVideo;
     obj[2] = channel;
-    let tmp6Result = tmp6(channel(15244).ConnectedUserLimit, obj);
+    let tmp6Result = tmp6(channel(15251).ConnectedUserLimit, obj);
   } else {
     const obj1 = { channel: null };
     obj1[0] = channel;
@@ -109,9 +109,9 @@ export default function ChannelInfo(channel) {
     }
     obj[3] = tmp18;
     obj[4] = muted;
-    let tmp11Result = jsx(tmp4(15344), { mentionCount: null, isMentionLowImportance: null, isNewChannel: null, postsWithUnreadsCount: null, muted: null });
+    let tmp11Result = jsx(tmp4(15352), { mentionCount: null, isMentionLowImportance: null, isNewChannel: null, postsWithUnreadsCount: null, muted: null });
     const tmp16 = jsx;
-    const tmp4Result = tmp4(15344);
+    const tmp4Result = tmp4(15352);
   } else {
     if (null != isChannelCollapsed) {
       if (isChannelCollapsed) {
@@ -130,12 +130,12 @@ export default function ChannelInfo(channel) {
     }
     if (null != enableActivities) {
       if (enableActivities) {
-        tmpResult = tmp(15346);
+        tmpResult = tmp(15354);
         if (tmpResult.showChannelItemEmbeddedActivities(tmp5)) {
           obj = { embeddedApps: null, muted: null };
           obj[0] = tmp5;
           obj[1] = muted;
-          tmp11Result = jsx(tmp4(15347), { embeddedApps: null, muted: null });
+          tmp11Result = jsx(tmp4(15355), { embeddedApps: null, muted: null });
         }
       }
     }
@@ -144,7 +144,7 @@ export default function ChannelInfo(channel) {
         if (isSubscriptionGated) {
           obj1 = { locked: null };
           obj1[0] = needSubscriptionToAccess;
-          tmp11Result = jsx(tmp4(15243), { locked: null });
+          tmp11Result = jsx(tmp4(15250), { locked: null });
         }
       }
     }

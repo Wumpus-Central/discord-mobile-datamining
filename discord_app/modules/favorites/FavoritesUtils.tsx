@@ -28,8 +28,8 @@ export function isFavoritesGuildId(guildId) {
   }
   return tmp;
 }
-export const isFavoritesGuildCategoryNameValid = function isFavoritesGuildCategoryNameValid(first) {
-  return "" !== first.trim();
+export const isFavoritesGuildCategoryNameValid = function isFavoritesGuildCategoryNameValid(closure_0) {
+  return "" !== closure_0.trim();
 };
 export const canFavoriteChannelType = function canFavoriteChannelType(record, hasHigherPrivileges) {
   const isCategoryResult = record.isCategory();

@@ -165,7 +165,7 @@ export default function PremiumGiftModal(analyticsLocations) {
       return callback(_undefined(_undefined2[16]), {
         currentProgress: currentProgress.currentProgress,
         onSendGift(arg0) {
-          let obj = callback(10033);
+          let obj = callback(10034);
           obj = { analyticsLocations: null };
           const items = [callback2(5748).GIFTING_BADGE_POST_PURCHASE];
           obj[0] = items;
@@ -190,7 +190,7 @@ export default function PremiumGiftModal(analyticsLocations) {
       obj8[6] = order;
       const obj9 = { currentStep: null, children: null };
       obj9[0] = tmp21[0];
-      let tmpResult = tmp(10162);
+      let tmpResult = tmp(10163);
       const obj10 = { initialRouteName: null, screens: null, onStateChange: null };
       obj10[0] = initialRoute;
       obj10[1] = obj2;

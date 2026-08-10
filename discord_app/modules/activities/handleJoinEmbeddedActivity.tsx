@@ -97,7 +97,7 @@ function _handleJoinEmbeddedActivityInternal() {
                 throwTypeErrorResult = dependencyMap;
                 throwTypeErrorResult = callback2;
                 throwTypeErrorResult = dependencyMap;
-                closure_10 = callback2(10599)();
+                closure_10 = callback2(10600)();
                 throwTypeErrorResult = channel;
                 throwTypeErrorResult = callback2;
                 _private = channel.getChannel(callback2);
@@ -145,7 +145,7 @@ function _handleJoinEmbeddedActivityInternal() {
                               throwTypeErrorResult = dependencyMap;
                               throwTypeErrorResult = guildId;
                               throwTypeErrorResult = currentEmbeddedActivity2;
-                              throwTypeErrorResult = callback2(10650)(guildId, currentEmbeddedActivity2.location);
+                              throwTypeErrorResult = callback2(10651)(guildId, currentEmbeddedActivity2.location);
                               throwTypeErrorResult = globalThis;
                               application = 3;
                               const obj2 = { value: null, done: true };
@@ -159,7 +159,7 @@ function _handleJoinEmbeddedActivityInternal() {
                       c3 = 2;
                       application = 1;
                       let obj3 = { value: null, done: false };
-                      obj3[0] = callback2(10629)(callback, callback2);
+                      obj3[0] = callback2(10630)(callback, callback2);
                       return obj3;
                     }
                   }
@@ -202,7 +202,7 @@ function _handleJoinEmbeddedActivityInternal() {
                 c3 = 3;
                 application = 1;
                 const obj7 = { value: null, done: false };
-                obj7[0] = callback(10628).confirmActivityLaunchChecks(obj6);
+                obj7[0] = callback(10629).confirmActivityLaunchChecks(obj6);
                 return obj7;
               }
             } else {
@@ -217,7 +217,7 @@ function _handleJoinEmbeddedActivityInternal() {
                   return obj8;
                 } else if (arg1) {
                   if (null != _private) {
-                    closure_17 = callback2(10405)(_private.id);
+                    closure_17 = callback2(10406)(_private.id);
                     closure_18 = c9.includes(_private.type);
                     if (closure_17) {
                       const obj9 = { channelId: null, bypassChangeModal: null };
@@ -226,7 +226,7 @@ function _handleJoinEmbeddedActivityInternal() {
                       c3 = 4;
                       application = 1;
                       const obj10 = { value: null, done: false };
-                      obj10[0] = callback2(10639)(obj9);
+                      obj10[0] = callback2(10640)(obj9);
                       return obj10;
                     } else {
                       obj3 = callback(8337);
@@ -269,13 +269,13 @@ function _handleJoinEmbeddedActivityInternal() {
                 return obj;
               }
               if (null != callback2) {
-                callback2(10972)(callback2);
+                callback2(10973)(callback2);
               }
               if (null != currentEmbeddedActivity2) {
-                obj4 = callback(10613);
+                obj4 = callback(10614);
                 const result = obj4.maybeDisconnectFromCurrentActivity(currentEmbeddedActivity2.location);
               }
-              obj5 = callback(10613);
+              obj5 = callback(10614);
               obj13 = { channelId: null, applicationId: null, isStart: false, embeddedActivitiesManager: null, analyticsLocations: null, locationObject: null, componentId: null, sectionName: null, source: null, inviterUserId: null, customId: null, referrerId: null };
               obj13[0] = callback2;
               obj13[1] = callback;

@@ -54,12 +54,12 @@ function AnimatedWrapper(children) {
   let pIPState;
   let animatedStyle;
   let animatedStyle1;
-  let obj = wrapperOffset(10765);
+  let obj = wrapperOffset(10766);
   height = obj.useGlobalStatusIndicatorState().height;
   const tmp3 = callback2();
   dependencyMap = tmp3;
   let obj1 = connected;
-  const context = connected.useContext(height(11644));
+  const context = connected.useContext(height(11645));
   wrapperDimensions = context.wrapperDimensions;
   connected = context.connected;
   controlsSpecs = context.controlsSpecs;
@@ -77,7 +77,7 @@ function AnimatedWrapper(children) {
   fn.__workletHash = 6243014585347;
   fn.__initData = closure_55;
   derivedValue = obj2.useDerivedValue(fn);
-  let obj3 = wrapperOffset(16158);
+  let obj3 = wrapperOffset(16167);
   pIPState = obj3.usePIPState();
   let obj4 = wrapperOffset(4036);
   const fn2 = function l() {
@@ -151,7 +151,7 @@ function AnimatedWrapper(children) {
       }
     }
   };
-  obj = { cheapWorkletShallowEqual: wrapperOffset(8776).cheapWorkletShallowEqual, VoicePanelModes: animatedStyle1, wrapperDimensions, updateSharedValueIfChanged: height(10330), wrapperOffset, getMaxPanelWidth: wrapperOffset(16146).getMaxPanelWidth, getPanelX: wrapperOffset(16146).getPanelX, roundToNearestPixel: height(10251), windowDimensions };
+  obj = { cheapWorkletShallowEqual: wrapperOffset(8776).cheapWorkletShallowEqual, VoicePanelModes: animatedStyle1, wrapperDimensions, updateSharedValueIfChanged: height(10331), wrapperOffset, getMaxPanelWidth: wrapperOffset(16155).getMaxPanelWidth, getPanelX: wrapperOffset(16155).getPanelX, roundToNearestPixel: height(10252), windowDimensions };
   fn3.__closure = obj;
   fn3.__workletHash = 3683279660781;
   fn3.__initData = closure_57;
@@ -232,7 +232,7 @@ function AnimatedWrapper(children) {
       return obj2;
     }
   }
-  obj = { useReducedMotion, wrapperDimensions, wrapperOffset, connected, mode, VoicePanelModes: animatedStyle1, runOnJS: wrapperOffset(4036).runOnJS, updateSourceTrackingView: height(9765).updateSourceTrackingView, withSpring: wrapperOffset(4713).withSpring, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_17, DRAWER_SIZE_PHYSICS: obj2 };
+  obj = { useReducedMotion, wrapperDimensions, wrapperOffset, connected, mode, VoicePanelModes: animatedStyle1, runOnJS: wrapperOffset(4036).runOnJS, updateSourceTrackingView: height(9766).updateSourceTrackingView, withSpring: wrapperOffset(4713).withSpring, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_17, DRAWER_SIZE_PHYSICS: obj2 };
   C.__closure = obj;
   C.__workletHash = 16361132737159;
   C.__initData = closure_58;

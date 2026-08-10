@@ -587,10 +587,11 @@ obj = {
     message = message.message;
     const currentUser = authStore.getCurrentUser();
     if (null != currentUser) {
-      let obj = { rawMessage: null, userId: null, suppressRoles: false, suppressEveryone: false };
+      let obj = isMentioned;
+      obj = { rawMessage: null, userId: null, suppressRoles: false, suppressEveryone: false };
       obj[0] = message;
       obj[1] = currentUser.id;
-      if (obj2.isRawMessageMentioned(obj)) {
+      if (obj.isRawMessageMentioned(obj)) {
         const tmp3 = parseMessage(message, message.channelId);
         if (null == tmp3) {
           return false;
@@ -622,7 +623,6 @@ obj = {
           }
         }
       }
-      obj2 = isMentioned;
     }
     return false;
   },

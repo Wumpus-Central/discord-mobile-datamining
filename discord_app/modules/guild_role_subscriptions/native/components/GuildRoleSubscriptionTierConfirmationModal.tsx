@@ -34,7 +34,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
   let importDefault;
   const tmp2 = createCacheKey();
   const tmp5 = styles();
-  let obj = onDone(16819);
+  let obj = onDone(16828);
   const editStateContext = obj.useEditStateContext();
   ({ guildId, editStateId } = editStateContext);
   [tmp9, tmp10] = callback2(React.useState(false), 2);
@@ -153,7 +153,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
     obj4[0] = items2;
     flag = tmp13(tmp16, obj4);
   }
-  const items3 = [flag, callback3(onDone(16843).GuildRoleSubscriptionListingPreview, { guildId, listingId: editStateId })];
+  const items3 = [flag, callback3(onDone(16852).GuildRoleSubscriptionListingPreview, { guildId, listingId: editStateId })];
   obj.children = items3;
   return closure_10(Header, obj);
 };

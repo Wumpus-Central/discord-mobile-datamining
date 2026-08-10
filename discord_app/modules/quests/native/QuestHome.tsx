@@ -186,14 +186,14 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
   let showPlaceholderCarousel;
   let c22;
   let closure_23;
-  let obj = memo(10460);
+  let obj = memo(10461);
   const isEligibleForQuests = obj.getIsEligibleForQuests();
   callback = isEligibleForQuests;
   let tmp4 = questHomeBounties();
-  let obj1 = memo(10459);
+  let obj1 = memo(10460);
   let obj2 = importAllResult;
   const items = [filters, sortMethod];
-  const filteredQuests = obj1.useFilteredQuests(memo(10459).QuestTabs.ALL, importAllResult.useMemo(() => ({ filters: navigation, sortMethod: closure_2 }), items));
+  const filteredQuests = obj1.useFilteredQuests(memo(10460).QuestTabs.ALL, importAllResult.useMemo(() => ({ filters: navigation, sortMethod: closure_2 }), items));
   let quests = filteredQuests.quests;
   importAllResult = quests;
   const excludedQuests = filteredQuests.excludedQuests;
@@ -364,7 +364,7 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
   obj = { name: null, type: null, properties: null };
   obj[0] = memo(503).ImpressionNames.QUEST_HOME;
   obj[1] = memo(503).ImpressionTypes.VIEW;
-  obj = { utm_source_current: tmp24.utmSourceCurrent, utm_medium_current: tmp24.utmMediumCurrent, utm_campaign_current: tmp24.utmCampaignCurrent, utm_content_current: tmp24.utmContentCurrent, tab: memo(10459).QuestTabs.ALL };
+  obj = { utm_source_current: tmp24.utmSourceCurrent, utm_medium_current: tmp24.utmMediumCurrent, utm_campaign_current: tmp24.utmCampaignCurrent, utm_content_current: tmp24.utmContentCurrent, tab: memo(10460).QuestTabs.ALL };
   obj[2] = obj;
   navigation(9349)(obj);
   const items12 = [isEligibleForQuests];
@@ -385,25 +385,25 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
       current.scrollToOffset({ offset: 0, animated: false });
     }
   }, items13);
-  let obj7 = memo(10459);
+  let obj7 = memo(10460);
   obj1 = { selectedSortMethod: sortMethod, selectedFilters: filters, numQuestsVisible: quests.length };
   const questHomeSortingFilteringAnalytics = obj7.useQuestHomeSortingFilteringAnalytics(obj1);
   const tmp25 = navigation(9349);
   let tmp5 = navigation;
-  showBounties = memo(12219).useVirtualCurrencyMobileEnabled().enabled;
-  const obj10 = memo(12219);
-  const bountiesExperience = memo(10980).useBountiesExperience(callback4.QUEST_HOME_MOBILE);
+  showBounties = memo(12221).useVirtualCurrencyMobileEnabled().enabled;
+  const obj10 = memo(12221);
+  const bountiesExperience = memo(10981).useBountiesExperience(callback4.QUEST_HOME_MOBILE);
   verticalScrollEnabled = bountiesExperience.verticalScrollEnabled;
-  const OrbsHoldoutExperiment = memo(14329).OrbsHoldoutExperiment;
+  const OrbsHoldoutExperiment = memo(14331).OrbsHoldoutExperiment;
   obj2 = { location: callback4.QUEST_HOME_MOBILE };
-  const obj11 = memo(10980);
+  const obj11 = memo(10981);
   const tmp30 = callback4;
   const params = memo(1481).useRoute().params;
   previewAdCreativeIds = undefined;
   if (params != null) {
     previewAdCreativeIds = params.previewAdCreativeIds;
   }
-  let tmpResult = tmp(10459);
+  let tmpResult = tmp(10460);
   const fetchQuestHomeBounties = tmpResult.useFetchQuestHomeBounties({ previewAdCreativeIds });
   isLoading = fetchQuestHomeBounties.isLoading;
   questHomeBounties = fetchQuestHomeBounties.questHomeBounties;
@@ -436,7 +436,7 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
     tmpResult = tmp(7181);
     showBounties = tmpResult.shouldShowBountiesGivenFilters(filters);
   }
-  const BountiesShopCarouselExperiment = tmp(14311).BountiesShopCarouselExperiment;
+  const BountiesShopCarouselExperiment = tmp(14313).BountiesShopCarouselExperiment;
   obj3 = { location: tmp30.QUEST_HOME_MOBILE };
   const config = BountiesShopCarouselExperiment.useConfig(obj3);
   ({ enabled, variation } = config);
@@ -444,7 +444,7 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
   if (enabled) {
     enabled = showBounties;
   }
-  const questHomeOrbShopCarouselData = memo(14321).useQuestHomeOrbShopCarouselData({ enabled, variation });
+  const questHomeOrbShopCarouselData = memo(14323).useQuestHomeOrbShopCarouselData({ enabled, variation });
   products = questHomeOrbShopCarouselData.products;
   obtainableOrbRewards = questHomeOrbShopCarouselData.obtainableOrbRewards;
   showPlaceholderCarousel = questHomeOrbShopCarouselData.showPlaceholderCarousel;
@@ -456,7 +456,7 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
     tmp37 = questHomeBounties.length > 0;
   }
   memo = tmp37;
-  const tmpResult1 = memo(14321);
+  const tmpResult1 = memo(14323);
   navigation = memo(1480).useNavigation();
   dependencyMap = obj2.useRef(false);
   callback = obj2.useRef(false);
@@ -581,7 +581,7 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
       obj.stopTracking(obj);
     }
   }, items22);
-  memo(10459);
+  memo(10460);
   if (!isEligibleForQuests) {
     return null;
   } else if (tmp46) {

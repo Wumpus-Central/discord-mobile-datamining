@@ -62,7 +62,7 @@ export default function ConnectedMFA() {
       tmp13 = obj;
     }
     obj[7] = tmp13;
-    return jsx(tmp(14987).MFAModal, obj);
+    return jsx(tmp(14989).MFAModal, obj);
   } else {
     tmpResult = tmp(501);
     let space = tmp4(712).space;

@@ -40,7 +40,7 @@ function LoggedEvent(arg0) {
   let CopyIcon = fingerprint;
   let tmp6Result = dependencyMap;
   let obj = { arrow: !tmp2, icon: null, label: null, subLabel: null, onPress: null, start: null, end: null };
-  obj[1] = callback2(fingerprint(9953).AnalyticsIcon, {});
+  obj[1] = callback2(fingerprint(9954).AnalyticsIcon, {});
   obj[2] = event;
   if ("name" in properties) {
     let str2 = properties.name;
@@ -200,13 +200,13 @@ export default function DevToolsAnalyticsScreen() {
   obj = { style: tmp.analyticsContainer, children: null };
   obj = { title: "Actions", hasIcons: true, children: null };
   const obj1 = { icon: null, label: "Reverse Events", value: null, onValueChange: null };
-  obj1[0] = callback2(trimmed(11538).ArrowsUpDownIcon, {});
+  obj1[0] = callback2(trimmed(11539).ArrowsUpDownIcon, {});
   obj1[2] = first;
   obj1[3] = tmp5[1];
   const items2 = [callback2(trimmed(5768).TableSwitchRow, obj1), ];
   const obj2 = { arrow: true, variant: "danger", icon: null, label: "Clear Analytics Log", onPress: null };
   obj2[2] = callback2(trimmed(4262).TrashIcon, { color: "text-feedback-critical" });
-  obj2[4] = trimmed(13846).clearAnalyticsLog;
+  obj2[4] = trimmed(13848).clearAnalyticsLog;
   items2[1] = callback2(trimmed(5374).TableRow, obj2);
   obj[2] = items2;
   const items3 = [callback3(trimmed(5767).TableRowGroup, obj), , ];

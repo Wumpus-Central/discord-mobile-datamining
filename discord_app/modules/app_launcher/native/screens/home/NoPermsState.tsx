@@ -28,7 +28,7 @@ export default function EmptyState() {
   const tmp = createCacheKey();
   let obj = AccessibilityAnnouncer;
   const tmp4 = importDefault;
-  const tmp4Result = importDefault(obj.isThemeLight(useTheme()) ? 11500 : 11501);
+  const tmp4Result = importDefault(obj.isThemeLight(useTheme()) ? 11501 : 11502);
   const logAppLauncherEmptyStateView = handleApplicationSelected.useLogAppLauncherEmptyStateView(tmp2(9549).AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.image, resizeMode: "contain", source: tmp4Result };

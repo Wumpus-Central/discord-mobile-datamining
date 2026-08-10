@@ -41,7 +41,7 @@ export default function UserSettingsAuthedAppDeleteWarningModal(application) {
   let tmp9 = isAuthorizedAppTwoWay(application.id);
   if (tmp9) {
     const obj2 = { children: null };
-    let tmp8Result = tmp8(10425);
+    let tmp8Result = tmp8(10426);
     const intl3 = tmp(1236).intl;
     const obj3 = { applicationName: null };
     obj3[0] = application.name;
@@ -52,8 +52,8 @@ export default function UserSettingsAuthedAppDeleteWarningModal(application) {
   let tmp12 = result;
   if (result) {
     const obj4 = { look: null, children: null };
-    tmp8Result = tmp8(10425);
-    obj4[0] = tmp(10425).InfoBoxLooks.WARNING;
+    tmp8Result = tmp8(10426);
+    obj4[0] = tmp(10426).InfoBoxLooks.WARNING;
     const intl4 = tmp(1236).intl;
     obj4[1] = intl4.string(tmp(1236).t.LY35Zy);
     tmp12 = callback(tmp8Result, obj4);

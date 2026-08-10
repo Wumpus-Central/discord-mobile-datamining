@@ -23,7 +23,7 @@ export default function AlertNotification(notification) {
   channel = notification.channel;
   guild = notification.guild;
   const tmp = callback3();
-  let obj = channel(9771);
+  let obj = channel(9772);
   const incidentData = obj.useGuildIncidentsState(notification.key).incidentData;
   let raidDetectedAt;
   if (incidentData != null) {
@@ -66,8 +66,8 @@ export default function AlertNotification(notification) {
   obj[0] = items3;
   obj[0] = callback2(closure_6, obj);
   obj[1] = memo;
-  obj[2] = callback(channel(9787).SystemMessageText, { text: stringResult });
+  obj[2] = callback(channel(9788).SystemMessageText, { text: stringResult });
   obj[3] = callback;
   obj[4] = notification;
-  return callback(channel(9851).NotificationPressable, obj);
+  return callback(channel(9852).NotificationPressable, obj);
 };

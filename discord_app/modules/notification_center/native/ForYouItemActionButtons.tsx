@@ -332,7 +332,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(it
         const _HermesInternal = HermesInternal;
         obj[0] = "**" + username + "**";
         closure_5(intl.formatToPlainString(outer1_0(outer1_2[13]).t["5Uzkdp"], obj));
-        const tmp2 = closure_5;
+        const tmp6 = closure_5;
       }
       const result = closure_10.set(true);
       closure_0.enableBadge = false;
@@ -364,7 +364,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(it
   const callback4 = React.useCallback(() => {
     const dMChannel = callback(navigation[22]).getDMChannel(id);
     dMChannel.then((arg0) => {
-      callback(13197)({ payload: callback(4284)("https://discord.com/channels/@me/" + arg0).payload, safe: true, navigationReplace: false });
+      callback(13199)({ payload: callback(4284)("https://discord.com/channels/@me/" + arg0).payload, safe: true, navigationReplace: false });
       let c0;
       let tmp3;
       if (null != arg0) {

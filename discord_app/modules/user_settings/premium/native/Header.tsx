@@ -29,7 +29,7 @@ export default function Header(style) {
   if (obj3.isThemeDark(tmp4)) {
     let tmp2Result = tmp2(7750);
   } else {
-    tmp2Result = tmp2(12743);
+    tmp2Result = tmp2(12745);
   }
   obj[3] = tmp2Result;
   const items1 = [closure_4(tmp8, obj), ];

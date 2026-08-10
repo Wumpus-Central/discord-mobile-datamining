@@ -22,7 +22,7 @@ export default function SafetyFlowsModal(initialRouteName) {
       },
       headerShown: false,
       render() {
-        return callback3(callback2(16945), {});
+        return callback3(callback2(16954), {});
       }
     };
     obj = {
@@ -33,7 +33,7 @@ export default function SafetyFlowsModal(initialRouteName) {
         return null;
       },
       render() {
-        return callback3(callback2(16949), {});
+        return callback3(callback2(16958), {});
       }
     };
     const obj1 = { headerLeft: null, headerTitle: null, render: null };
@@ -42,10 +42,10 @@ export default function SafetyFlowsModal(initialRouteName) {
       return null;
     };
     obj1[2] = function render() {
-      return callback3(callback2(16951), {});
+      return callback3(callback2(16960), {});
     };
-    obj[first(16941).SafetyFlowScreens.VERIFY_EMAIL] = obj1;
-    obj[first(16941).SafetyFlowScreens.UPDATE_APP] = {
+    obj[first(16950).SafetyFlowScreens.VERIFY_EMAIL] = obj1;
+    obj[first(16950).SafetyFlowScreens.UPDATE_APP] = {
       headerLeft() {
         return null;
       },
@@ -53,10 +53,10 @@ export default function SafetyFlowsModal(initialRouteName) {
         return null;
       },
       render() {
-        return callback3(callback2(16953), {});
+        return callback3(callback2(16962), {});
       }
     };
-    obj[first(16941).SafetyFlowScreens.AGE_VERIFICATION] = {
+    obj[first(16950).SafetyFlowScreens.AGE_VERIFICATION] = {
       headerLeft() {
         return null;
       },
@@ -64,19 +64,19 @@ export default function SafetyFlowsModal(initialRouteName) {
         return null;
       },
       render() {
-        return callback3(callback2(16954), {});
+        return callback3(callback2(16963), {});
       }
     };
-    obj[first(16941).SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION] = {
+    obj[first(16950).SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION] = {
       headerShown: false,
       customNavbar() {
-        return callback3(callback(16955).ParentalConsentConnectionNavbar, {});
+        return callback3(callback(16964).ParentalConsentConnectionNavbar, {});
       },
       render() {
-        return callback3(callback2(16956), {});
+        return callback3(callback2(16965), {});
       }
     };
-    obj[first(16941).SafetyFlowScreens.ERROR] = {
+    obj[first(16950).SafetyFlowScreens.ERROR] = {
       headerLeft() {
         return null;
       },
@@ -84,7 +84,7 @@ export default function SafetyFlowsModal(initialRouteName) {
         return null;
       },
       render() {
-        return callback3(callback2(16961), {});
+        return callback3(callback2(16970), {});
       }
     };
     return obj;
@@ -113,6 +113,6 @@ export default function SafetyFlowsModal(initialRouteName) {
   }, items);
   const memo1 = React.useMemo(() => ({ task: first, setTask: closure_1 }), items1);
   obj = { value: memo1, children: null };
-  obj[1] = jsx(first(13425).StepModal, { initialRouteName: initialRouteName.initialScreen, screens: navigatorScreens, steps: memo });
-  return jsx(first(16946).SafetyFlowTaskContext.Provider, { value: memo1, children: null });
+  obj[1] = jsx(first(13427).StepModal, { initialRouteName: initialRouteName.initialScreen, screens: navigatorScreens, steps: memo });
+  return jsx(first(16955).SafetyFlowTaskContext.Provider, { value: memo1, children: null });
 };

@@ -4,8 +4,8 @@ import set from "set";
 import { View } from "SearchField";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/12496_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/12497_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/12498_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/12499_registerAsset.js";
 import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import { RedesignBottomSheetTitleHeaderBase } from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
@@ -35,7 +35,7 @@ function GuildList(recipientId) {
   let dependencyMap;
   let callback;
   dependencyMap = createCacheKey();
-  let obj = recipientId(12493);
+  let obj = recipientId(12495);
   [arr, arr2] = callback(obj.useServerInviteRows(recipientId, recipientId.query), 2);
   if (0 === arr.length) {
     if (0 === arr2.length) {

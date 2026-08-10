@@ -221,5 +221,5 @@ export const openAddModeratorsActionSheet = function openAddModeratorsActionShee
   obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel, canSkip: flag };
-  obj2.openLazy(asyncRequireImpl(15890, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
+  obj2.openLazy(asyncRequireImpl(15899, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
 };

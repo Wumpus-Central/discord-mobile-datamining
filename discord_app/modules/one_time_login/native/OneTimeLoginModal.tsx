@@ -188,7 +188,7 @@ export default function OneTimeLoginModal(token) {
   let obj1 = { style: tmp.container, children: null };
   let obj2 = { style: tmp.centerContent, children: null };
   const tmp11 = getMixedGradientColor;
-  const items7 = [callback(callback3, { source: token(13209), style: tmp.logo }), ];
+  const items7 = [callback(callback3, { source: token(13211), style: tmp.logo }), ];
   let obj4 = { style: tmp.loadingContainer, children: null };
   const items8 = [callback(callback2, {}), ];
   let obj5 = { variant: "text-lg/semibold", children: null };

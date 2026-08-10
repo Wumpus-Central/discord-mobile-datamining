@@ -14,9 +14,9 @@ export const AVErrorStreamBadNetworkQualityDefinition = {
       if (quality.getQuality(streamKey) === constants.BAD) {
         const obj = { type: null };
         obj[0] = callback(9169).AVError.STREAM_BAD_NETWORK_QUALITY;
-        const merged = Object.assign(callback(16912).getStreamErrorContext(streamKey));
+        const merged = Object.assign(callback(16921).getStreamErrorContext(streamKey));
         tmp = obj;
-        const obj2 = callback(16912);
+        const obj2 = callback(16921);
       }
       return tmp;
     });

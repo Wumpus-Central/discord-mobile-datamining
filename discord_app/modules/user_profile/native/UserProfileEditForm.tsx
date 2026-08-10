@@ -176,7 +176,7 @@ export default function UserProfileEditForm(arg0) {
   const tmp15Result = useDisplayProfile(str);
   let tmp13Result = tmp13(9448);
   const customStatusActivity = tmp13Result.useCustomStatusActivity();
-  tmp13Result = tmp13(13914);
+  tmp13Result = tmp13(13916);
   const tmp15 = useDisplayProfile;
   const pendingAvatarSrc = _getArchivedAvatarURL.getPendingAvatarSrc({ userId: currentUser.id, image: pendingAvatar });
   const tmp18 = useBadges(tmp15Result, pendingLegacyUsernameDisabled);
@@ -272,7 +272,7 @@ export default function UserProfileEditForm(arg0) {
     }
   }
   const field = zustandStore.useField("scrollPosition");
-  _require = tmp(13915)(ref, field);
+  _require = tmp(13917)(ref, field);
   const obj4 = { theme, primaryColor, secondaryColor, children: null };
   const obj5 = { style: items1, children: null };
   items1 = [tmp4.container, { backgroundColor: gradientSecondaryBackground }];
@@ -352,7 +352,7 @@ export default function UserProfileEditForm(arg0) {
     const obj18 = { user: null, isTryItOut: null };
     obj18[0] = currentUser;
     obj18[1] = isTryItOut;
-    tmp34Result = tmp34(tmp(13922), obj18);
+    tmp34Result = tmp34(tmp(13924), obj18);
   }
   items9[2] = tmp34Result;
   const obj19 = { inputRef: ref2, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, maxLength: null, isDisabled: null };
@@ -415,7 +415,7 @@ export default function UserProfileEditForm(arg0) {
   if (!isTryItOut) {
     const obj22 = { badges: null };
     obj22[0] = tmp18;
-    tmp34Result1 = tmp34(tmp(13929), obj22);
+    tmp34Result1 = tmp34(tmp(13931), obj22);
   }
   items9[6] = tmp34Result1;
   const obj23 = { user: currentUser, pendingAvatarDecoration: null, isTryItOut: null };
@@ -446,7 +446,7 @@ export default function UserProfileEditForm(arg0) {
     tmp34Result2 = tmp53;
   }
   if (tmp34Result2) {
-    tmp34Result2 = tmp34(tmp(13947), {});
+    tmp34Result2 = tmp34(tmp(13949), {});
   }
   items9[11] = tmp34Result2;
   const tmpResult9 = UserProfileEffectEditButton;
@@ -463,7 +463,7 @@ export default function UserProfileEditForm(arg0) {
     const obj26 = { legacyUsername: null, pendingLegacyUsernameDisabled: null };
     obj26[0] = legacyUsername;
     obj26[1] = pendingLegacyUsernameDisabled;
-    tmp34Result3 = tmp34(tmp(13951), obj26);
+    tmp34Result3 = tmp34(tmp(13953), obj26);
   }
   const obj27 = { children: null };
   items9[13] = tmp34Result3;
@@ -484,7 +484,7 @@ export default function UserProfileEditForm(arg0) {
   if (tmp34Result4) {
     const obj28 = { isTryItOut: null };
     obj28[0] = isTryItOut;
-    tmp34Result4 = tmp34(tmp13(13952).UserProfilePremiumUpsellCard, obj28);
+    tmp34Result4 = tmp34(tmp13(13954).UserProfilePremiumUpsellCard, obj28);
   }
   items10[1] = tmp34Result4;
   obj5[1] = items10;

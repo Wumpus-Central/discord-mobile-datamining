@@ -24,7 +24,7 @@ function ConnectGuardianShareScreen() {
     let arr = callback(4509);
     arr = arr.pop();
   }, []);
-  let obj1 = getLinkCode(11323);
+  let obj1 = getLinkCode(11324);
   getLinkCode = obj1.useFamilyCenterActions({ onError: callback }).getLinkCode;
   let obj2 = getLinkCode(647);
   const items = [freshTeenActivityWithMap];
@@ -63,7 +63,7 @@ function ConnectGuardianShareScreen() {
       obj5[1] = stateFromStores;
       obj5[2] = stateFromStores1;
       obj5[3] = getLinkCode;
-      let tmp11Result = tmp11(tmp2(14126).ConnectGuardianCard, obj5);
+      let tmp11Result = tmp11(tmp2(14128).ConnectGuardianCard, obj5);
     }
     const obj6 = { children: null };
     const obj7 = { children: null };

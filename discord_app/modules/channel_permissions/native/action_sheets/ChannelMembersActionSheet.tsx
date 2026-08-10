@@ -125,7 +125,7 @@ export default function ChannelMembersActionSheet(arg0) {
           obj5[1] = function onPress() {
             return outer1_0(_undefined[25]).openAddMembersActionSheet(stateFromStores);
           };
-          obj5[2] = tmp29(tmp5(9720).GroupPlusIcon, {});
+          obj5[2] = tmp29(tmp5(9721).GroupPlusIcon, {});
           tmp29Result = tmp29(tmp5(7970).RowButton, obj5);
         } else {
           const obj6 = { style: null, children: null };

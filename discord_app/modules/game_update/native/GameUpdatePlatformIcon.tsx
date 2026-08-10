@@ -18,7 +18,7 @@ export const GameUpdatePlatformIcon = function GameUpdatePlatformIcon(color) {
     let obj = { size: null, color: null };
     obj[0] = size;
     obj[1] = color;
-    return jsx(tmp(12180).ScreenIcon, { size: null, color: null });
+    return jsx(tmp(12182).ScreenIcon, { size: null, color: null });
   } else if (tmp(8905).PlatformType.XBOX === platform) {
     obj = { size: null, color: null };
     obj[0] = size;
@@ -28,12 +28,12 @@ export const GameUpdatePlatformIcon = function GameUpdatePlatformIcon(color) {
     const obj1 = { size: null, color: null };
     obj1[0] = size;
     obj1[1] = color;
-    return jsx(tmp(12182).PlaystationNeutralIcon, { size: null, color: null });
+    return jsx(tmp(12184).PlaystationNeutralIcon, { size: null, color: null });
   } else if (tmp(8905).PlatformType.NINTENDO === platform) {
     const obj2 = { size: null, color: null };
     obj2[0] = size;
     obj2[1] = color;
-    return jsx(tmp(12184).NintendoSwitchNeutralIcon, { size: null, color: null });
+    return jsx(tmp(12186).NintendoSwitchNeutralIcon, { size: null, color: null });
   } else if (tmp(8905).PlatformType.ANDROID === platform) {
     const obj3 = { size: null, color: null };
     obj3[0] = size;
@@ -43,7 +43,7 @@ export const GameUpdatePlatformIcon = function GameUpdatePlatformIcon(color) {
     obj = { size: null, color: null };
     obj[0] = size;
     obj[1] = color;
-    return jsx(tmp(12186).AppleNeutralIcon, { size: null, color: null });
+    return jsx(tmp(12188).AppleNeutralIcon, { size: null, color: null });
   } else {
     return null;
   }

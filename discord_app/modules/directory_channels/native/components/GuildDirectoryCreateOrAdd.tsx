@@ -94,7 +94,7 @@ let closure_13 = importAllResult.memo((guild) => {
   obj = { label: guild.name, icon: null, trailing: null, start: null, end: null };
   obj = { style: callback3().guildIcon, guild };
   obj[1] = callback(directoryChannelId(5779), obj);
-  obj[2] = callback(directoryChannelId(11684), { entry: stateFromStores });
+  obj[2] = callback(directoryChannelId(11685), { entry: stateFromStores });
   obj[3] = start;
   obj[4] = end;
   return callback(guild(5374).TableRow, obj);

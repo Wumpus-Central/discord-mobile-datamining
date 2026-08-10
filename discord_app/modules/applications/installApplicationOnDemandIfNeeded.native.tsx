@@ -49,7 +49,7 @@ function _installApplicationOnDemandIfNeeded() {
             obj4[0] = Promise.resolve({ isAuthorized: true });
             return obj4;
           }
-          obj11 = callback(10618);
+          obj11 = callback(10619);
         }
       } else if (arg0 === 1) {
         application = 3;

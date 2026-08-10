@@ -29,7 +29,7 @@ export default function ProgressWheel(nReferralsSent) {
   if (tmp9) {
     obj = { source: null, style: null };
     let tmp4Result = tmp4(5268);
-    obj[0] = tmp4(12727);
+    obj[0] = tmp4(12729);
     obj[1] = tmp.glowImage;
     tmp9 = callback(tmp4Result, obj);
   }

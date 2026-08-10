@@ -103,7 +103,7 @@ export default function VoiceUserNameItem(arg0) {
     obj3[1] = tmp.tag;
     const obj4 = { userId: null };
     obj4[0] = user.id;
-    obj3[2] = callback2(tmp2(15250), obj4);
+    obj3[2] = callback2(tmp2(15257), obj4);
     tmp12 = callback2(tmp19, obj3);
   }
   items3[1] = tmp12;

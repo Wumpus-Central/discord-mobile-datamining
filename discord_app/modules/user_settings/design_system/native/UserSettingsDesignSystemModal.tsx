@@ -291,7 +291,7 @@ function DemoScreen(arg0) {
     if (tmp8Result) {
       const obj2 = { children: null };
       obj2[0] = disclaimer;
-      tmp8Result = tmp8(tmp3(13427).ModalDisclaimer, obj2);
+      tmp8Result = tmp8(tmp3(13429).ModalDisclaimer, obj2);
     }
     const items2 = [tmp8Result, , ];
     tmp8Result = null != action;
@@ -299,7 +299,7 @@ function DemoScreen(arg0) {
       const obj3 = { variant: "primary", text: null, onPress: null };
       obj3[1] = action;
       obj3[2] = onAction;
-      tmp8Result = tmp8(tmp3(10265).ModalActionButton, obj3);
+      tmp8Result = tmp8(tmp3(10266).ModalActionButton, obj3);
     }
     items2[1] = tmp8Result;
     let tmp8Result1 = null != secondaryAction;
@@ -307,12 +307,12 @@ function DemoScreen(arg0) {
       const obj4 = { variant: "secondary", text: null, onPress: null };
       obj4[1] = secondaryAction;
       obj4[2] = onSecondaryAction;
-      tmp8Result1 = tmp8(tmp3(10265).ModalActionButton, obj4);
+      tmp8Result1 = tmp8(tmp3(10266).ModalActionButton, obj4);
     }
     const obj5 = { children: null };
     items2[2] = tmp8Result1;
     obj5[0] = items2;
-    footer = tmp2(tmp3(11333).ModalFooter, obj5);
+    footer = tmp2(tmp3(11334).ModalFooter, obj5);
   }
   children[1] = footer;
   return closure_8(ModalScreen.ModalScreen, { children });
@@ -330,7 +330,7 @@ function SwitchesScreen(onAction) {
   obj[0] = arr2.some((arg0) => arg0);
   obj[1] = tmp.screen.backgroundColor;
   obj[3] = onAction.onAction;
-  obj[2] = callback2(parts(10264).ModalFloatingAction, obj);
+  obj[2] = callback2(parts(10265).ModalFloatingAction, obj);
   obj = { style: tmp.tableRows, children: null };
   const obj1 = { hasIcons: false, children: null };
   obj1[1] = arr2.map((value) => {
@@ -351,7 +351,7 @@ function SwitchesScreen(onAction) {
     }, arg1);
   });
   obj[1] = callback2(parts(5767).TableRowGroup, obj1);
-  const items = [callback2(closure_5, obj), callback2(parts(10264).ModalFloatingActionSpacer, {})];
+  const items = [callback2(closure_5, obj), callback2(parts(10265).ModalFloatingActionSpacer, {})];
   obj[3] = items;
   return callback3(DemoScreen, obj);
 }

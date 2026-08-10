@@ -12,7 +12,7 @@ import { RouteParam } from "RouteParam";
 import { RouteParam as RouteParam2 } from "RouteParam";
 import { RouteParam as RouteParam3 } from "RouteParam";
 import { RouteParam as RouteParam4 } from "RouteParam";
-import { MemoryRouter } from "../../../../_runtime/10961_MemoryRouter.js";
+import { MemoryRouter } from "../../../../_runtime/10962_MemoryRouter.js";
 import { ChannelRTCActionCreators } from "../../../actions/ChannelRTCActionCreators.tsx";
 import { saveLastRoute } from "../../../actions/DefaultRouteActionCreators.tsx";
 import { showTooManyUserGuildsAlert } from "../../../actions/GuildActionCreators.tsx";
@@ -133,7 +133,7 @@ function updateSelectedChannelListener(location) {
   let voiceGuildId2;
   let voiceMessageId;
   let voiceMessageId2;
-  let obj = channel2(10961);
+  let obj = channel2(10962);
   obj = { path: items, strict: false, exact: false };
   const matchPathResult = obj.matchPath(location.pathname, obj);
   let params;
@@ -244,7 +244,7 @@ function updateSelectedChannelListener(location) {
     const _HermesInternal2 = HermesInternal;
     obj8.verbose("UpdateSelectedChannelListener -> voice route present! " + json2 + " " + JSON.stringify(obj5) + " ");
   }
-  tmpResult = tmp(10768);
+  tmpResult = tmp(10769);
   if (!tmpResult.isVoicePanelEnabled(channel2)) {
     const guild1 = showTooManyUserGuildsAlert.selectGuild(voiceGuildId2);
     const obj10 = showTooManyUserGuildsAlert;

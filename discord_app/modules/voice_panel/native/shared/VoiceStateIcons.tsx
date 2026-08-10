@@ -46,7 +46,7 @@ obj = { tintColor: require("Themes").colors.ICON_FEEDBACK_CRITICAL };
 obj[0] = obj;
 createCacheKey = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
 obj[1] = createCacheKey;
-obj[2] = { tintColor: "sa" };
+obj[2] = { tintColor: "Promise" };
 let closure_6 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((arg0) => {
   let alwaysWhite;

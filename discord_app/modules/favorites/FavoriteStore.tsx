@@ -26,43 +26,48 @@ function initializeFromUserSettings() {
   }
   let obj = {};
   let num = 0;
+  let num2 = 0;
   if (null != favoriteChannels) {
-    let num3 = 0;
+    let num4 = 0;
+    let num5 = 0;
     num = 0;
+    num2 = 0;
     const keys = Object.keys();
     if (keys !== undefined) {
-      num = num3;
+      num = num4;
+      num2 = num5;
       while (keys[tmp] !== undefined) {
-        let tmp21 = tmp6;
-        let tmp22 = favoriteChannels[tmp6];
-        let tmp23 = require;
-        let tmp24 = dependencyMap;
-        let sum = num3;
-        if (tmp22.type !== create.FavoriteChannelType.CATEGORY) {
-          sum = num3 + 1;
+        let tmp22 = tmp7;
+        let tmp23 = favoriteChannels[tmp7];
+        let tmp24 = require;
+        let tmp25 = dependencyMap;
+        let sum = num4;
+        if (tmp23.type !== create.FavoriteChannelType.CATEGORY) {
+          sum = num4 + 1;
         }
         obj = { id: null, nickname: null, type: null, channelType: null, order: null, parentId: null };
-        obj[0] = tmp6;
+        obj[0] = tmp7;
         let nickname = null;
-        if ("" !== tmp22.nickname) {
-          nickname = tmp22.nickname;
+        if ("" !== tmp23.nickname) {
+          nickname = tmp23.nickname;
         }
         obj[1] = nickname;
-        ({ type: obj2[2], channelType } = tmp22);
+        ({ type: obj2[2], channelType } = tmp23);
         let value;
         if (channelType != null) {
           value = channelType.value;
         }
         obj[3] = value;
-        obj[4] = tmp22.position;
-        let tmp10 = closure_5;
+        obj[4] = tmp23.position;
+        let tmp11 = closure_5;
         let parentId = null;
-        if (tmp22.parentId !== closure_5) {
-          parentId = tmp22.parentId;
+        if (tmp23.parentId !== closure_5) {
+          parentId = tmp23.parentId;
         }
+        num5 = num5 + 1;
         obj[5] = parentId;
-        obj[tmp6] = obj;
-        num3 = sum;
+        obj[tmp7] = obj;
+        num4 = sum;
         continue;
       }
     }
@@ -73,14 +78,14 @@ function initializeFromUserSettings() {
       value = iter.value;
     }
   }
-  let tmp13 = value;
+  let tmp14 = value;
   if (value == null) {
-    tmp13 = !apply.isEmpty(obj);
+    tmp14 = !apply.isEmpty(obj);
     const obj3 = apply;
   }
   let flag2 = flag !== flag;
   if (!flag2) {
-    flag2 = c11 !== tmp13;
+    flag2 = c12 !== tmp14;
   }
   if (!flag2) {
     flag2 = closure_2 !== value;
@@ -90,7 +95,7 @@ function initializeFromUserSettings() {
     const obj4 = apply;
   }
   if (flag2) {
-    c11 = tmp13;
+    c12 = tmp14;
     closure_2 = value;
     flag2 = true;
   }
@@ -99,8 +104,9 @@ function initializeFromUserSettings() {
 ({ ChannelTypes: closure_6, FAVORITES: error } = ME);
 let closure_8 = {};
 let c9 = 0;
-let c10 = false;
+let c10 = 0;
 let c11 = false;
+let c12 = false;
 class FavoriteStore extends Store {
 }
 const prototype = FavoriteStore.prototype;
@@ -115,13 +121,13 @@ prototype["getFavoriteChannels"] = function getFavoriteChannels() {
 };
 Object.defineProperty(prototype, "favoriteGuildMuted", {
   get: function favoriteGuildMuted() {
-    return c10;
+    return c11;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "favoriteGuildEnabled", {
   get: function favoriteGuildEnabled() {
-    return c11;
+    return c12;
   },
   set: undefined
 });
@@ -147,25 +153,25 @@ prototype["isChannelOrParentFavorited"] = function isChannelOrParentFavorited(ch
   }
   return isFavoriteResult;
 };
-prototype["getFavorite"] = function getFavorite(closure_0) {
-  if (null != closure_0) {
-    return dependencyMap[closure_0];
+prototype["getFavorite"] = function getFavorite(categoryId) {
+  if (null != categoryId) {
+    return dependencyMap[categoryId];
   }
 };
-prototype["getCategoryRecord"] = function getCategoryRecord(id) {
+prototype["getCategoryRecord"] = function getCategoryRecord(categoryId) {
   let nickname;
   let tmp = null;
-  if (id in dependencyMap) {
+  if (categoryId in dependencyMap) {
     tmp = null;
-    if (dependencyMap[id].type === create.FavoriteChannelType.CATEGORY) {
+    if (dependencyMap[categoryId].type === create.FavoriteChannelType.CATEGORY) {
       const obj = { id: null, name: null, type: null, position: null, guild_id: null };
-      ({ id: obj[0], nickname } = dependencyMap[id]);
+      ({ id: obj[0], nickname } = dependencyMap[categoryId]);
       if (nickname == null) {
         nickname = "";
       }
       obj[1] = nickname;
       obj[2] = constants.GUILD_CATEGORY;
-      obj[3] = dependencyMap[id].order;
+      obj[3] = dependencyMap[categoryId].order;
       obj[4] = closure_7;
       tmp = createChannelRecord(obj);
       const tmp7 = createChannelRecord;
@@ -173,8 +179,35 @@ prototype["getCategoryRecord"] = function getCategoryRecord(id) {
   }
   return tmp;
 };
-prototype["getNickname"] = function getNickname(closure_0) {
-  const favorite = this.getFavorite(closure_0);
+prototype["getCategoryIdByName"] = function getCategoryIdByName(closure_1) {
+  const trimmed = closure_1.trim();
+  for (const key10009 in closure_8) {
+    let tmp4 = key10009;
+    let tmp5 = dependencyMap;
+    let tmp6 = dependencyMap[key10009];
+    let tmp7 = require;
+    let tmp8 = dependencyMap;
+    if (tmp6.type !== create.FavoriteChannelType.CATEGORY) {
+      continue;
+    } else {
+      let str = tmp6.nickname;
+      let formatted;
+      if (str != null) {
+        let str2 = str.trim();
+        formatted = str2.toLowerCase();
+      }
+      if (formatted !== tmp2) {
+        continue;
+      } else {
+        return key10009;
+      }
+    }
+    continue;
+  }
+  return null;
+};
+prototype["getNickname"] = function getNickname(categoryId) {
+  const favorite = this.getFavorite(categoryId);
   let nickname;
   if (favorite != null) {
     nickname = favorite.nickname;
@@ -182,10 +215,10 @@ prototype["getNickname"] = function getNickname(closure_0) {
   return nickname;
 };
 prototype["getFavoritesCount"] = function getFavoritesCount() {
-  return Object.keys(this.getFavoriteChannels()).length;
+  return c9;
 };
 prototype["getFavoritesCountAgainstLimit"] = function getFavoritesCountAgainstLimit() {
-  return c9;
+  return c10;
 };
 prototype["hasStoredFavorites"] = function hasStoredFavorites() {
   return !apply.isEmpty(this.getFavoriteChannels());

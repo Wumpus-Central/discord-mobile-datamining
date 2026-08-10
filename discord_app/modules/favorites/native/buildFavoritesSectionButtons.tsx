@@ -13,16 +13,16 @@ function _addChannelToFavorites() {
     let closure_0 = arg0;
     let c2 = 0;
     let c3 = 0;
-    return (function*(arg0, addFavoriteChannel) {
+    return (function*(arg0, addFavoriteChannels) {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw addFavoriteChannel;
+          throw addFavoriteChannels;
         } else if (arg0 === 2) {
           let obj = { value: null, done: true };
-          obj[0] = addFavoriteChannel;
+          obj[0] = addFavoriteChannels;
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -33,11 +33,11 @@ function _addChannelToFavorites() {
           if (0 === paths) {
             if (arg0 === 1) {
               c3 = 3;
-              throw addFavoriteChannel;
+              throw addFavoriteChannels;
             } else if (arg0 === 2) {
               c3 = 3;
               obj = { value: null, done: true };
-              obj[0] = addFavoriteChannel;
+              obj[0] = addFavoriteChannels;
               return obj;
             } else {
               let closure_1 = tmp2;
@@ -50,20 +50,23 @@ function _addChannelToFavorites() {
             }
           } else if (arg0 === 1) {
             c3 = 3;
-            throw addFavoriteChannel;
+            throw addFavoriteChannels;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = addFavoriteChannel;
-            return obj;
+            const obj2 = { value: null, done: true };
+            obj2[0] = addFavoriteChannels;
+            return obj2;
           } else {
-            addFavoriteChannel.addFavoriteChannel(callback, null, "channel_context_menu");
+            obj = { channelIds: null, source: "channel_context_menu" };
+            const items = [callback];
+            obj[0] = items;
+            addFavoriteChannels.addFavoriteChannels(obj);
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }
-        } catch (tmp15) {
+        } catch (tmp14) {
           c3 = tmp;
-          throw tmp15;
+          throw tmp14;
         }
       }
     })();

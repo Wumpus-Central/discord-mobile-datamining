@@ -96,10 +96,10 @@ export default function DevToolsLazy() {
     }
   });
   const obj2 = stateFromStores(589);
-  const keyCommands = stateFromStores(13835).useKeyCommands(stateFromStores ? items : []);
+  const keyCommands = stateFromStores(13837).useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(15059).default, {});
+      return jsx(tmp(15061).default, {});
     }
   }
   return null;

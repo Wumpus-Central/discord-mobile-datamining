@@ -128,7 +128,7 @@ function ActionBar(channel) {
     obj = { attachments: null, channelId: null, highlightThumbnails: true };
     obj[0] = stateFromStores;
     obj[1] = channel.id;
-    isMediaChannelResult = callback(tmp5(10004), obj);
+    isMediaChannelResult = callback(tmp5(10005), obj);
   }
   const items3 = [isMediaChannelResult, ];
   obj1 = { style: tmp.actions, children: null };
@@ -170,7 +170,7 @@ function ActionBar(channel) {
       tmp10 = callback(tmp2(6008).HeaderActionButton, obj2);
     }
     items4[1] = tmp10;
-    let tmp18 = lastInput === tmp2(9912).PostComposerInputs.CONTENT;
+    let tmp18 = lastInput === tmp2(9913).PostComposerInputs.CONTENT;
     if (tmp18) {
       const obj3 = { accessibilityLabel: null, style: null, IconComponent: null, onPress: null, foregroundRipple: true };
       const intl3 = tmp2(1236).intl;
@@ -220,7 +220,7 @@ function ActionBar(channel) {
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj7[1] = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(10187).KeyboardIcon;
+      let ImageIcon = tmp2(10188).KeyboardIcon;
     } else {
       ImageIcon = tmp2(4815).ImageIcon;
     }

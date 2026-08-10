@@ -100,6 +100,6 @@ export default function UserSettingsVoiceInputOptions() {
   }
   items1[1] = tmp4Result;
   obj[2] = items1;
-  return closure_8(inputMode(10845).UserSettingsTableRowGroup, obj);
+  return closure_8(inputMode(10846).UserSettingsTableRowGroup, obj);
 };
 export { handleInputModePress };

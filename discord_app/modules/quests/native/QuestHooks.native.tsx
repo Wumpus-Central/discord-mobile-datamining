@@ -40,8 +40,8 @@ function useDeliveredDockCreative() {
     return questForPlacement;
   });
   const obj3 = adDecisionForPlacement(589);
-  adDecisionForPlacement = adDecisionForPlacement(14355).useAdDecisionForPlacement(adDecisionForPlacement(5164).AdPlacement.MOBILE_HOME_DOCK_AREA);
-  const obj4 = adDecisionForPlacement(14355);
+  adDecisionForPlacement = adDecisionForPlacement(14357).useAdDecisionForPlacement(adDecisionForPlacement(5164).AdPlacement.MOBILE_HOME_DOCK_AREA);
+  const obj4 = adDecisionForPlacement(14357);
   const items2 = [initializeState];
   const items3 = [adDecisionForPlacement];
   if (obj.useConfig({ location: "QuestMobileDock" }).enableNewRequestBehavior) {
@@ -110,7 +110,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       claimedAt = userStatus.claimedAt;
     }
   }
-  tmpResult = tmp(10459);
+  tmpResult = tmp(10460);
   const isQuestExpired = tmpResult.useIsQuestExpired(deliveredQuest);
   const obj2 = initialize;
   const type = mobileQuestDock.type;

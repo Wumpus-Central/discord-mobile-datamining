@@ -74,7 +74,7 @@ function RewardPreview(arg0) {
       const obj7 = { size: null, asset: null };
       obj7[0] = Button.AvatarSizes.NORMAL;
       obj7[1] = collectiblesItem.asset;
-      obj6[1] = callback(tmp(10118), obj7);
+      obj6[1] = callback(tmp(10119), obj7);
       items1[1] = callback(closure_5, obj6);
       obj8 = { style: null, variant: "text-xs/medium", color: "text-overlay-light", children: null };
       obj8[0] = tmp3.selectedRewardText;
@@ -85,7 +85,7 @@ function RewardPreview(arg0) {
       tmp7Result = callback2(closure_13, obj5);
       const tmp7 = callback2;
       const tmp8 = closure_13;
-      const tmpResult1 = tmp(10118);
+      const tmpResult1 = tmp(10119);
     }
   }
   return tmp7Result;
@@ -227,7 +227,7 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
     items4[1] = String(tmp(712).colors.BACKGROUND_BRAND);
     tmp15 = items4;
   }
-  tmp4Result = tmp4(10113);
+  tmp4Result = tmp4(10114);
   const product = tmp4Result.useFetchCollectiblesProduct(selectedGiftingPromotionReward).product;
   const intl = tmp4(1236).intl;
   const string = intl.string;
@@ -245,13 +245,13 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
   if (stateFromStores1 != null) {
     prop = stateFromStores1.mobileBackgroundAsset;
   }
-  const themeAndReducedMotionAwareAssetUrl = defaultSelection(10042).useThemeAndReducedMotionAwareAssetUrl(prop);
-  const tmp4Result1 = defaultSelection(10042);
+  const themeAndReducedMotionAwareAssetUrl = defaultSelection(10043).useThemeAndReducedMotionAwareAssetUrl(prop);
+  const tmp4Result1 = defaultSelection(10043);
   let asset;
   if (stateFromStores1 != null) {
     asset = stateFromStores1.asset;
   }
-  const themeAndReducedMotionAwareAssetUrl1 = defaultSelection(10042).useThemeAndReducedMotionAwareAssetUrl(asset);
+  const themeAndReducedMotionAwareAssetUrl1 = defaultSelection(10043).useThemeAndReducedMotionAwareAssetUrl(asset);
   let first;
   if (product != null) {
     first = product.items[0];
@@ -454,9 +454,9 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
       obj15[1] = str2;
       obj15[2] = nextTier.simple_icon_url;
       obj15[3] = tmp(5748).PREMIUM_GIFT_CUSTOMIZATION;
-      tmp26Result = callback(tmp(10047), obj15);
+      tmp26Result = callback(tmp(10048), obj15);
       const tmp26 = callback;
-      const tmpResult2 = tmp(10047);
+      const tmpResult2 = tmp(10048);
     }
   }
 };

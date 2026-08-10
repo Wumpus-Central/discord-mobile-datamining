@@ -16,10 +16,10 @@ function ScheduleRuleRow(rule) {
   if (readOnly === undefined) {
     readOnly = false;
   }
-  let obj = rule(9754);
+  let obj = rule(9755);
   const scheduleRuleDateRange = obj.getScheduleRuleDateRange(rule);
-  const obj2 = rule(9754);
-  obj = { label: scheduleRuleDateRange, subLabel: rule(9754).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
+  const obj2 = rule(9755);
+  obj = { label: scheduleRuleDateRange, subLabel: rule(9755).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
   const intl = rule(1236).intl;
   const string = intl.string;
   const tmp4 = messagesProxy;

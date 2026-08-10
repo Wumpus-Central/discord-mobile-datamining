@@ -11,7 +11,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { CodedLinkExtendedType } from "CodedLinkExtendedType";
 import ME from "ME";
 import InviteSendStates from "InviteSendStates";
-import { registerAsset } from "../../../../../../../../../_runtime/12079_registerAsset.js";
+import { registerAsset } from "../../../../../../../../../_runtime/12080_registerAsset.js";
 import { Themes } from "../../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import { set } from "../../../../../../../../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx";
 import { getSystemLocale } from "../../../../../../../../intl/index.native.tsx";
@@ -87,9 +87,9 @@ export const createExpiredGuildInvite = function createExpiredGuildInvite(author
   obj.titleText = intl5.string(tmp6(1236).t["Jhx/ud"]);
   tmp6Result = tmp6(4153);
   if (tmp6Result.isThemeDark(closure_2)) {
-    tmpResult = tmp(11206);
-  } else {
     tmpResult = tmp(11207);
+  } else {
+    tmpResult = tmp(11208);
   }
   obj.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   ({ thumbnailBackgroundColor: obj.thumbnailBackgroundColor, subtitleColor: obj.subtitleColor } = tmp3.colors);
@@ -206,9 +206,9 @@ export const createErroredGuildInvite = function createErroredGuildInvite(code, 
   obj.titleText = title;
   tmp5Result = tmp5(4153);
   if (tmp5Result.isThemeDark(closure_2)) {
-    let tmpResult = tmp(11206);
+    let tmpResult = tmp(11207);
   } else {
-    tmpResult = tmp(11207);
+    tmpResult = tmp(11208);
   }
   obj.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   ({ thumbnailBackgroundColor: obj2.thumbnailBackgroundColor, subtitleColor: obj2.subtitleColor } = colors);
@@ -230,10 +230,10 @@ export const createGuildInvite = function createGuildInvite(invite, isOwnInvite,
   if (null != invite.guild) {
     guild = store.getGuild(invite.guild.id);
   }
-  let tmpResult = tmp(10993);
+  let tmpResult = tmp(10994);
   const items = [trackCommunicationDisabled];
   const tmp3 = getEmbedThemeColors(closure_2);
-  const channel = tmp(10992)(invite).channel;
+  const channel = tmp(10993)(invite).channel;
   const tmp7 = null != channel && channel.isGuildVocal();
   let flag;
   if (channel != null) {

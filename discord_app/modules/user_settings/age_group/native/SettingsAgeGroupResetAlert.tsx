@@ -47,7 +47,7 @@ export default function SettingsAgeGroupResetAlert() {
               c1 = 2;
               c3 = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(13029).resetAgeVerification();
+              obj1[0] = outer1_0(13031).resetAgeVerification();
               return obj1;
             }
           } else if (1 === tmp7) {

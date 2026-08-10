@@ -7,7 +7,7 @@ import { AnalyticEvents } from "ME";
 import { SearchNavigatorScreens } from "SearchNavigatorScreens";
 import jsxProd from "set";
 import createNativeStackNavigator from "createNativeStackNavigator";
-import { registerAsset } from "../../../../../../_runtime/12123_registerAsset.js";
+import { registerAsset } from "../../../../../../_runtime/12124_registerAsset.js";
 
 let c10;
 let c9;

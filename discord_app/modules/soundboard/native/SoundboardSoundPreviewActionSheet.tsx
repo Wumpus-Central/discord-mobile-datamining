@@ -93,7 +93,7 @@ export default function SoundboardSoundPreviewActionSheet(channelId) {
   ({ emoji: arr5[0], emojiFastImage: arr5[1] } = tmp);
   items5 = [, ];
   ({ emoji: arr6[0], emojiText: arr6[1] } = tmp);
-  obj[2] = sound(11341)(sound, 64);
+  obj[2] = sound(11342)(sound, 64);
   let str = sound.emojiName;
   if (str == null) {
     str = "";
@@ -123,7 +123,7 @@ export default function SoundboardSoundPreviewActionSheet(channelId) {
   if (isPlayingSound) {
     let obj4 = { style: null };
     obj4[0] = tmp.star;
-    let tmp8Result = tmp8(tmp2(9809).WaveformIcon, obj4);
+    let tmp8Result = tmp8(tmp2(9810).WaveformIcon, obj4);
   } else {
     const obj5 = { style: null, source: null };
     obj5[0] = tmp.star;

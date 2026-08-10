@@ -1,6 +1,5 @@
 // discord_app/components_native/AutoAnalytics.tsx
 import getParticipants from "getParticipants";
-import initializeFromUserSettings from "initializeFromUserSettings";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import scheduledEventSort from "scheduledEventSort";
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
@@ -11,33 +10,30 @@ import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import handleConnectionInfoChange from "handleConnectionInfoChange";
 import createRTCConnection from "createRTCConnection";
 import handleConnectionOpen from "handleConnectionOpen";
-import closure_15 from "handleConnectionOpen";
+import closure_14 from "handleConnectionOpen";
 import filterPlayingActivities from "filterPlayingActivities";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 import { isStaticChannelRoute } from "set";
-import { PremiumTypes } from "GuildFeatures";
-import { jsx } from "collectGuildAnalyticsMetadata";
-import { PureComponent } from "GuildFeatures";
-import importAllResult from "GuildFeatures";
+import { jsx } from "collectGuildThemeAnalyticsMetadata";
+import { PureComponent } from "collectGuildAnalyticsMetadata";
+import importAllResult from "collectGuildAnalyticsMetadata";
 import { collectGuildAnalyticsMetadata } from "../modules/app_analytics/AppAnalyticsUtils.tsx";
 import { isClickstreamEnabled } from "../modules/app_analytics/clickstream/Clickstream.tsx";
 import { getChannelOpenedRouteTrackingProps } from "../modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx";
 import { trackChannelOpenedClickstream } from "../modules/app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx";
-import { setNextFavoritesGuildViewSource } from "../modules/favorites/FavoritesAnalytics.tsx";
-import { useFavoritesAccess } from "../modules/favorites/FavoritesHooks.tsx";
+import { trackFavoritesGuildViewed } from "../modules/favorites/analytics/trackFavoritesGuildViewed.tsx";
 import { getFavoritesAwareGuildName } from "../modules/favorites/FavoritesUtils.tsx";
 import { collectGuildThemeAnalyticsMetadata } from "../modules/guild_themes/GuildThemeAnalyticsUtils.tsx";
 import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
 import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
-import { isPremiumAtLeast } from "../utils/PremiumTypeUtils.tsx";
 
+let closure_18;
 let closure_19;
 let closure_20;
-let closure_21;
 const require = arg1;
-({ AnalyticEvents: closure_19, ActivityTypes: closure_20, GuildFeatures: closure_21 } = ME);
+({ AnalyticEvents: closure_18, ActivityTypes: closure_19, GuildFeatures: closure_20 } = ME);
 class AutoAnalytics extends PureComponent {
 }
 const prototype = AutoAnalytics.prototype;
@@ -62,12 +58,12 @@ prototype["componentDidMount"] = function componentDidMount() {
     if (tmp) {
       const obj1 = { channel_is_nsfw: null };
       obj1[0] = tmp2;
-      tmp17(4498).trackWithMetadata(tmp16.TEXT_IN_VOICE_OPENED, obj1);
-      const tmp17Result = tmp17(4498);
+      tmp18(4498).trackWithMetadata(tmp17.TEXT_IN_VOICE_OPENED, obj1);
+      const tmp18Result = tmp18(4498);
     }
     const obj11 = collectGuildAnalyticsMetadata;
-    tmp16 = constants;
-    tmp17 = require;
+    tmp17 = constants;
+    tmp18 = require;
   }
   if (null != selectedGuildId) {
     if (isMemberPending) {
@@ -90,7 +86,7 @@ prototype["componentDidMount"] = function componentDidMount() {
     isClickstreamEnabled.trackClickstream(constants.GUILD_VIEWED_CLICKSTREAM, obj5);
     const obj7 = isClickstreamEnabled;
     if (obj9.isFavoritesGuildId(selectedGuildId)) {
-      const result = self.trackFavoritesGuildViewed();
+      trackFavoritesGuildViewed();
     }
     obj9 = getFavoritesAwareGuildName;
   }
@@ -285,17 +281,11 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
       isClickstreamEnabled.trackClickstream(constants.GUILD_VIEWED_CLICKSTREAM, obj9);
       const obj20 = isClickstreamEnabled;
       if (obj22.isFavoritesGuildId(selectedGuildId)) {
-        const result = self.trackFavoritesGuildViewed();
+        trackFavoritesGuildViewed();
       }
       obj22 = getFavoritesAwareGuildName;
     }
   }
-};
-prototype["trackFavoritesGuildViewed"] = function trackFavoritesGuildViewed() {
-  const obj = useFavoritesAccess;
-  const obj2 = isPremiumAtLeast;
-  const isPremiumExactlyResult = isPremiumAtLeast.isPremiumExactly(currentUser.getCurrentUser(), PremiumTypes.TIER_2);
-  const result = setNextFavoritesGuildViewSource.trackFavoritesGuildViewed("manual_browsing", favoritesCount.getFavoritesCount(), obj.getFavoritesAccess().isExperimentEnabled, isPremiumExactlyResult);
 };
 prototype["getGameMetadata"] = function getGameMetadata() {
   const props = this.props;
@@ -346,27 +336,27 @@ prototype["collectDefaultAnalyticsMetadata"] = function collectDefaultAnalyticsM
 prototype["render"] = function render() {
   return null;
 };
-let result = require("initializeFromUserSettings").fileFinishedImporting("components_native/AutoAnalytics.tsx");
+const result = require("_handleConnectionOpen").fileFinishedImporting("components_native/AutoAnalytics.tsx");
 
 export default function ConnectedAutoAnalytics() {
-  let obj = stateFromStores(stateFromStores6[32]);
+  let obj = stateFromStores(stateFromStores6[28]);
   const items = [handleConnectionOpen];
   stateFromStores = obj.useStateFromStores(items, () => store.getVoiceChannelId(), []);
   const items1 = [ensureGuildLoaded];
   const items2 = [stateFromStores];
-  const stateFromStores1 = stateFromStores(stateFromStores6[32]).useStateFromStores(items1, () => outer1_8.getChannel(stateFromStores), items2);
-  const obj2 = stateFromStores(stateFromStores6[32]);
+  const stateFromStores1 = stateFromStores(stateFromStores6[28]).useStateFromStores(items1, () => outer1_7.getChannel(stateFromStores), items2);
+  const obj2 = stateFromStores(stateFromStores6[28]);
   const items3 = [handleConnectionOpen];
-  const stateFromStores2 = stateFromStores(stateFromStores6[32]).useStateFromStores(items3, () => store.getChannelId(undefined, false));
-  const obj4 = stateFromStores(stateFromStores6[32]);
+  const stateFromStores2 = stateFromStores(stateFromStores6[28]).useStateFromStores(items3, () => store.getChannelId(undefined, false));
+  const obj4 = stateFromStores(stateFromStores6[28]);
   const items4 = [ensureGuildLoaded];
   const items5 = [stateFromStores2];
-  const stateFromStores3 = stateFromStores(stateFromStores6[32]).useStateFromStores(items4, () => outer1_8.getChannel(stateFromStores2), items5);
+  const stateFromStores3 = stateFromStores(stateFromStores6[28]).useStateFromStores(items4, () => outer1_7.getChannel(stateFromStores2), items5);
   let nsfw;
   if (stateFromStores3 != null) {
     nsfw = stateFromStores3.nsfw;
   }
-  let tmpResult = tmp(tmp2[32]);
+  let tmpResult = tmp(tmp2[28]);
   const items6 = [stateFromStores8];
   const items7 = [stateFromStores2];
   const stateFromStores4 = tmpResult.useStateFromStores(items6, () => {
@@ -376,29 +366,29 @@ export default function ConnectedAutoAnalytics() {
     }
     return chatOpen;
   }, items7);
-  tmpResult = tmp(tmp2[32]);
+  tmpResult = tmp(tmp2[28]);
   const items8 = [filterPlayingActivities];
   const stateFromStores5 = tmpResult.useStateFromStores(items8, () => filterPlayingActivities.findActivity((type) => type.type === constants.PLAYING), []);
-  const obj5 = stateFromStores(stateFromStores6[32]);
-  const items9 = [closure_15];
-  stateFromStores6 = stateFromStores(stateFromStores6[32]).useStateFromStores(items9, () => guildId.getGuildId(), []);
-  const tmpResult1 = stateFromStores(stateFromStores6[32]);
+  const obj5 = stateFromStores(stateFromStores6[28]);
+  const items9 = [closure_14];
+  stateFromStores6 = stateFromStores(stateFromStores6[28]).useStateFromStores(items9, () => guildId.getGuildId(), []);
+  const tmpResult1 = stateFromStores(stateFromStores6[28]);
   const items10 = [createGuildRecordFromRust];
   const items11 = [stateFromStores6];
-  const stateFromStores7 = stateFromStores(stateFromStores6[32]).useStateFromStores(items10, () => outer1_10.getGuild(stateFromStores6), items11);
-  const tmpResult2 = stateFromStores(stateFromStores6[32]);
+  const stateFromStores7 = stateFromStores(stateFromStores6[28]).useStateFromStores(items10, () => outer1_9.getGuild(stateFromStores6), items11);
+  const tmpResult2 = stateFromStores(stateFromStores6[28]);
   const items12 = [mergeGuildAvatar];
-  stateFromStores8 = stateFromStores(stateFromStores6[32]).useStateFromStores(items12, () => currentUser.getCurrentUser(), []);
-  const tmpResult3 = stateFromStores(stateFromStores6[32]);
+  stateFromStores8 = stateFromStores(stateFromStores6[28]).useStateFromStores(items12, () => currentUser.getCurrentUser(), []);
+  const tmpResult3 = stateFromStores(stateFromStores6[28]);
   const items13 = [trackCommunicationDisabled];
   const items14 = [stateFromStores8, stateFromStores6];
-  const stateFromStores9 = stateFromStores(stateFromStores6[32]).useStateFromStores(items13, () => {
+  const stateFromStores9 = stateFromStores(stateFromStores6[28]).useStateFromStores(items13, () => {
     let tmp2 = null != stateFromStores8;
     if (tmp2) {
       tmp2 = null != stateFromStores6;
     }
     if (tmp2) {
-      const member = outer1_9.getMember(stateFromStores6, stateFromStores8.id);
+      const member = outer1_8.getMember(stateFromStores6, stateFromStores8.id);
       let flag;
       if (member != null) {
         flag = member.isPending;
@@ -410,18 +400,18 @@ export default function ConnectedAutoAnalytics() {
     }
     return tmp2;
   }, items14);
-  const tmpResult4 = stateFromStores(stateFromStores6[32]);
+  const tmpResult4 = stateFromStores(stateFromStores6[28]);
   const items15 = [_detectH265HardwareDecode];
-  const stateFromStores10 = stateFromStores(stateFromStores6[32]).useStateFromStores(items15, () => _detectH265HardwareDecode.isVideoEnabled(), []);
-  const tmpResult5 = stateFromStores(stateFromStores6[32]);
+  const stateFromStores10 = stateFromStores(stateFromStores6[28]).useStateFromStores(items15, () => _detectH265HardwareDecode.isVideoEnabled(), []);
+  const tmpResult5 = stateFromStores(stateFromStores6[28]);
   const items16 = [_detectH265HardwareDecode];
-  const stateFromStores11 = stateFromStores(stateFromStores6[32]).useStateFromStores(items16, () => _detectH265HardwareDecode.isScreenSharing(), []);
-  const tmpResult6 = stateFromStores(stateFromStores6[32]);
+  const stateFromStores11 = stateFromStores(stateFromStores6[28]).useStateFromStores(items16, () => _detectH265HardwareDecode.isScreenSharing(), []);
+  const tmpResult6 = stateFromStores(stateFromStores6[28]);
   const items17 = [_handleConnectionOpen];
-  const stateFromStores12 = stateFromStores(stateFromStores6[32]).useStateFromStores(items17, () => connected.isConnected(), []);
+  const stateFromStores12 = stateFromStores(stateFromStores6[28]).useStateFromStores(items17, () => connected.isConnected(), []);
   let id;
   const tmp16 = stateFromStores2;
-  const tmpResult7 = stateFromStores(stateFromStores6[32]);
+  const tmpResult7 = stateFromStores(stateFromStores6[28]);
   if (stateFromStores1 != null) {
     id = stateFromStores1.id;
   }
@@ -443,7 +433,7 @@ export default function ConnectedAutoAnalytics() {
   obj[3] = bitrate;
   obj[4] = stateFromStores10;
   obj[5] = stateFromStores11;
-  obj[6] = tmp16(stateFromStores6[34])(stateFromStores5);
+  obj[6] = tmp16(stateFromStores6[30])(stateFromStores5);
   let name = null;
   if (null != stateFromStores5) {
     name = stateFromStores5.name;
@@ -465,7 +455,7 @@ export default function ConnectedAutoAnalytics() {
   }
   obj[13] = hasItem;
   obj[14] = stateFromStores9;
-  obj[15] = stateFromStores2(stateFromStores6[33])(stateFromStores6);
+  obj[15] = stateFromStores2(stateFromStores6[29])(stateFromStores6);
   obj[16] = stateFromStores4;
   obj = {};
   const merged = Object.assign(obj);

@@ -82,7 +82,7 @@ export default function WebAuthnRegisterStep() {
   let closure_6 = obj1.useMemo(() => ({ onRegisterSuccess: callback, setError: closure_2, setRegistering: closure_1 }), items2);
   obj = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
   obj = { style: tmp4.centerFlex, children: null };
-  const items3 = [callback(navigation(13984).KeyImage, {}), , ];
+  const items3 = [callback(navigation(13986).KeyImage, {}), , ];
   obj1 = { style: tmp4.margin, variant: "text-md/normal", children: null };
   const intl = tmp(1236).intl;
   const string = intl.string;

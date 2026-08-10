@@ -4,5 +4,5 @@ import { ACTION_SHEET_HEIGHT_HALF } from "../../../../action_sheet/native/Action
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/media_viewer/native/components/overlay/openMediaModalOverlayAltTextSheet.tsx");
 
 export default function openMediaModalOverlayAltTextSheet(description) {
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(11005, dependencyMap.paths), "MediaModalOverlayAltTextSheet", { description: description.description });
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(11006, dependencyMap.paths), "MediaModalOverlayAltTextSheet", { description: description.description });
 };

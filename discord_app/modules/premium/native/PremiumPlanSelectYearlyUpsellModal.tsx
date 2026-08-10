@@ -8,7 +8,7 @@ import { usePremiumPlanSelectStore } from "usePremiumPlanSelectStore";
 import { PREMIUM_YEARLY_DISCOUNT_PERCENT as closure_10 } from "GuildFeatures";
 import jsxProd from "set";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/12823_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12825_registerAsset.js";
 import { componentDidMount } from "../../../components_native/common/Alert.tsx";
 
 let c5;

@@ -5,7 +5,7 @@ import { HelpdeskArticles } from "ME";
 import GuildFeatures from "GuildFeatures";
 import jsxProd from "PressableBase";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/12162_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/12164_registerAsset.js";
 import { preload } from "../../../components_native/common/FastImage.tsx";
 import { FRACTIONAL_NITRO_COIN_SIZE } from "FractionalNitroCoinIllustration.tsx";
 
@@ -150,7 +150,7 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
   let obj2 = { style: tmp.questionIconContainer, onPress: callback, children: null };
   const obj3 = { style: tmp.questionIcon, color: null };
   obj3[1] = consumed(712).colors.WHITE;
-  obj2[2] = tmp15(skuId(10154).CircleQuestionIcon, obj3);
+  obj2[2] = tmp15(skuId(10155).CircleQuestionIcon, obj3);
   items2[1] = tmp15(skuId(4846).PressableOpacity, obj2);
   obj1[0] = items2;
   const items3 = [closure_10(closure_11, obj1), , ];

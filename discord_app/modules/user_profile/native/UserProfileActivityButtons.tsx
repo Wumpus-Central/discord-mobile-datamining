@@ -112,8 +112,8 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
   let tmp3 = null;
   if (null != application) {
     tmp3 = null;
-    if (stateFromStores !== tmp(12309).ActivityJoinability.CANNOT_JOIN) {
-      if (stateFromStores === tmp(12309).ActivityJoinability.JOINED) {
+    if (stateFromStores !== tmp(12311).ActivityJoinability.CANNOT_JOIN) {
+      if (stateFromStores === tmp(12311).ActivityJoinability.JOINED) {
         const intl2 = tmp(1236).intl;
         let stringResult = intl2.string(tmp(1236).t.DPfdsq);
       } else {
@@ -122,7 +122,7 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
       }
       obj = { text: null, variant: "active", disabled: null, onPress: null };
       obj[0] = stringResult;
-      JOINED = tmp(12309).ActivityJoinability.JOINED;
+      JOINED = tmp(12311).ActivityJoinability.JOINED;
       obj[2] = stateFromStores === JOINED;
       obj[3] = function onPress() {
         onAction({ action: "PRESS_JOIN_BUTTON" });

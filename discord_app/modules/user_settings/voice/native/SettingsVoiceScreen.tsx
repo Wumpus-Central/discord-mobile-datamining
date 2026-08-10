@@ -25,9 +25,9 @@ function KrispLogo() {
   const tmp = callback3();
   let obj = AccessibilityAnnouncer;
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = tmp2(10864);
+    let tmp2Result = tmp2(10865);
   } else {
-    tmp2Result = tmp2(10865);
+    tmp2Result = tmp2(10866);
   }
   obj = { style: tmp.krisp, children: null };
   obj = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
@@ -70,7 +70,7 @@ let result = require("_detectH265HardwareDecode").fileFinishedImporting("modules
 
 export default function SettingsVoiceScreen() {
   const node = React.useMemo(() => {
-    let obj = callback(10446);
+    let obj = callback(10447);
     obj = { sections: null };
     obj = { label: null, settings: null };
     const intl = callback(1236).intl;

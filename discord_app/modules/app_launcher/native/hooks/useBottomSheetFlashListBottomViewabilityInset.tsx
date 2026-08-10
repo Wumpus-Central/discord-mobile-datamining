@@ -14,7 +14,7 @@ export const useBottomSheetFlashListBottomViewabilityInset = function useBottomS
     bottomSheetPosition = context.bottomSheetPosition;
   }
   const flashListRef = obj.useRef(null);
-  const diff = flashListRef(1474)().height - flashListRef(11422)().maximum;
+  const diff = flashListRef(1474)().height - flashListRef(11423)().maximum;
   const dependencyMap = diff;
   bottomVisibilityInsetRef = obj.useRef(9999);
   const memo = obj.useMemo(() => flashListRef(diff[4]).debounce((current) => {

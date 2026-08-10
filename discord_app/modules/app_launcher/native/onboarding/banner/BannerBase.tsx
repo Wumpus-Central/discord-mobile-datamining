@@ -5,7 +5,7 @@ import { View } from "set";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import { 11448__ } from "../../../../../../_runtime/metro/11448__.js";
+import { 11449__ } from "../../../../../../_runtime/metro/11449__.js";
 import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import { CONFIG_NEVER_ANIMATE } from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import { hexToRgba } from "../../../../../utils/ColorUtils.tsx";
@@ -105,7 +105,7 @@ export default function BannerBase(arg0) {
   obj1 = { style: tmp.imageContainer, children: null };
   obj2 = { style: tmp.trinketsLottie, source: null, autoPlay: null };
   const tmp2 = callback(React.useState(0), 2);
-  obj2[1] = _11448__;
+  obj2[1] = _11449__;
   obj2[2] = !stateFromStores;
   const items5 = [callback2(sharedValue(5719), obj2), image];
   obj1[1] = items5;

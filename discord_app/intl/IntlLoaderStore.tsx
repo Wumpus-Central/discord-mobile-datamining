@@ -428,27 +428,30 @@ function _setMomentLocale() {
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   let closure_0 = arg0;
   const importDefault = arg1;
-  let obj = { isLoading: false, inProgressLocale: "Boolean", error: "call", localeData: "<string:826409922>", setLoadingStarted: "<string:838861816>", setLoadingSucceeded: "<string:1107297272>", setLoadingFailed: "\u5C11\u65BC 1 \u5206\u9418", setLocaleData: "\u5C11\u65BC {{count}} \u5206\u9418" };
-  obj[3] = code;
-  obj[4] = function setLoadingStarted(closure_0) {
-    return callback({ isLoading: true, inProgressLocale: closure_0 });
-  };
-  obj[5] = function setLoadingSucceeded(closure_0) {
-    if (callback2().inProgressLocale === closure_0) {
-      callback({ isLoading: false, inProgressLocale: "Boolean", error: "call" });
+  return {
+    isLoading: false,
+    inProgressLocale: "Boolean",
+    error: "HermesInternal",
+    localeData: code,
+    setLoadingStarted(closure_0) {
+      return callback({ isLoading: true, inProgressLocale: closure_0 });
+    },
+    setLoadingSucceeded(closure_0) {
+      if (callback2().inProgressLocale === closure_0) {
+        callback({ isLoading: false, inProgressLocale: "Boolean", error: "HermesInternal" });
+      }
+    },
+    setLoadingFailed(arg0, closure_0) {
+      if (callback2().inProgressLocale === closure_0) {
+        const obj = { isLoading: false, inProgressLocale: "Array", error: null };
+        obj[2] = arg0;
+        callback(obj);
+      }
+    },
+    setLocaleData(closure_1) {
+      callback({ localeData: closure_1 });
     }
   };
-  obj[6] = function setLoadingFailed(arg0, closure_0) {
-    if (callback2().inProgressLocale === closure_0) {
-      const obj = { isLoading: false, inProgressLocale: "Array", error: 0 };
-      obj[2] = arg0;
-      callback(obj);
-    }
-  };
-  obj[7] = function setLocaleData(closure_1) {
-    callback({ localeData: closure_1 });
-  };
-  return obj;
 });
 const result = require("code").fileFinishedImporting("intl/IntlLoaderStore.tsx");
 

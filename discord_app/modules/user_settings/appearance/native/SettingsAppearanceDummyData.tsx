@@ -1,9 +1,7 @@
 // discord_app/modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx
 import { StatusTypes } from "ME";
-import { registerAsset } from "../../../../../_runtime/09835_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/13306_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/14512_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/14513_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/09836_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/13308_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/14514_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/14515_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/14516_registerAsset.js";
@@ -13,6 +11,8 @@ import { registerAsset } from "../../../../../_runtime/14519_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/14520_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/14521_registerAsset.js";
 import { registerAsset } from "../../../../../_runtime/14522_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/14523_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/14524_registerAsset.js";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const result = require("registerAsset").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx");

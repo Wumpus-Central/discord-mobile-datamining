@@ -24,10 +24,10 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
   if (channel != null) {
     id = channel.id;
   }
-  const embeddedActivityLaunchability = channel(10636).useEmbeddedActivityLaunchability(id);
+  const embeddedActivityLaunchability = channel(10637).useEmbeddedActivityLaunchability(id);
   let flag = false;
-  if (channel(11443).ActivityAction.LEAVE !== activityAction) {
-    if (tmp2(11443).ActivityAction.START === activityAction) {
+  if (channel(11444).ActivityAction.LEAVE !== activityAction) {
+    if (tmp2(11444).ActivityAction.START === activityAction) {
       flag = false;
       if (null != channel) {
         let isGuildVoiceResult;
@@ -36,7 +36,7 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
         }
         if (isGuildVoiceResult) {
           flag = false;
-          if (embeddedActivityLaunchability !== tmp2(10636).EmbeddedActivityLaunchability.CAN_LAUNCH) {
+          if (embeddedActivityLaunchability !== tmp2(10637).EmbeddedActivityLaunchability.CAN_LAUNCH) {
             flag = true;
           }
         } else {
@@ -49,7 +49,7 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
       }
     } else {
       flag = false;
-      if (tmp2(11443).ActivityAction.JOIN === activityAction) {
+      if (tmp2(11444).ActivityAction.JOIN === activityAction) {
         let isGuildVoiceResult1;
         if (channel != null) {
           isGuildVoiceResult1 = channel.isGuildVoice();
@@ -68,7 +68,7 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
   }
   let disabled = flag;
   let reason;
-  if (activityAction !== channel(11443).ActivityAction.LEAVE) {
+  if (activityAction !== channel(11444).ActivityAction.LEAVE) {
     const tmp10 = application instanceof createExecutable ? application.embeddedActivityConfig : application.embedded_activity_config;
     getPlatform;
     tmp2(500);

@@ -11,7 +11,7 @@ import ME from "ME";
 import { GuildMemberFlags } from "GuildMemberFlags";
 import jsxProd from "GuildMemberFlags";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/11269_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/11270_registerAsset.js";
 import { componentDidMount } from "../../../components_native/common/Alert.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../design/void/native.tsx";
@@ -69,8 +69,8 @@ function PerServerProfileAlert(arg0) {
     stringResult = intl.string(getSystemLocale.t.TBeZmG);
   }
   const tmp = callback2(arg0, closure_4);
-  const tmp2Result = tmp2(11270);
-  [require, tmp8] = callback(tmp2(11270).useOpenFixQuarantinedProfileModal({ guildId }), 2);
+  const tmp2Result = tmp2(11271);
+  [require, tmp8] = callback(tmp2(11271).useOpenFixQuarantinedProfileModal({ guildId }), 2);
   if (!tmp8) {
     const intl3 = tmp2(1236).intl;
     stringResult = intl3.string(tmp2(1236).t.FFj5Dt);

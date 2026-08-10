@@ -52,7 +52,7 @@ function handleEmbeddedActivityLaunchSuccess(applicationId) {
       if (features.includes(QuestVariants.QuestVariants.MOBILE_ACTIVITY_QUEST)) {
         let tmp9 = tmp5;
         let tmp10 = tmp7;
-        let tmp6Result = tmp6(10461);
+        let tmp6Result = tmp6(10462);
         obj = { questContent: null, questContentCTA: null, sourceQuestContent: null };
         obj[0] = tmp6(5164).QuestContent.RUNNING_ACTIVITY;
         obj[1] = tmp6(7187).QuestContentCTA.START_QUEST;
@@ -86,7 +86,7 @@ getQuestLogger = getQuestLogger.getQuestLogger(getQuestLogger);
 class QuestProgressManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f114403 = applyArgumentsResult;
+    f114443 = applyArgumentsResult;
     obj = {};
     map = new Map();
     obj[require("set").FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP] = map;
@@ -318,9 +318,9 @@ class QuestProgressManager extends tmp4 {
       EMBEDDED_ACTIVITY_UPDATE_V2: null,
       QUEST_APPLICATION_START_TIMER: null
     };
-    f114403 = undefined;
+    f114443 = undefined;
     closure_1 = applyArgumentsResult;
-    f114403 = isQuestRobloxRelated((arg0) => {
+    f114443 = isQuestRobloxRelated((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;

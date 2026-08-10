@@ -40,15 +40,15 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
   let tmp19;
   ({ onClose, sourceQuestContent } = onRestartVideo);
   const tmp = callback4();
-  let obj = quest(14366);
+  let obj = quest(14368);
   quest = obj.useVideoQuestModalContext().quest;
   let obj1 = importAllResult;
   let items = [quest];
   const memo = importAllResult.useMemo(() => quest(isShareableQuestResult[7]).getQuestAsset(quest, quest(isShareableQuestResult[7]).QuestAssetType.VIDEO_PLAYER_THUMBNAIL, undefined, true), items);
-  let obj2 = quest(14396);
+  let obj2 = quest(14398);
   const videoQuestClickCtaAndMaybeCloseModal = obj2.useVideoQuestClickCtaAndMaybeCloseModal({ quest, onClose, sourceQuestContent });
-  let obj3 = quest(14362);
-  obj = { quest, onSuccess: sharedValue(10124).close, sourceQuestContent };
+  let obj3 = quest(14364);
+  obj = { quest, onSuccess: sharedValue(10125).close, sourceQuestContent };
   const questRewardClaimHandler = obj3.useQuestRewardClaimHandler(obj);
   let isClaiming = questRewardClaimHandler.isClaiming;
   const userStatus = quest.userStatus;
@@ -57,7 +57,7 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
   if (userStatus != null) {
     claimedAt = userStatus.claimedAt;
   }
-  let tmp2Result = tmp2(10459);
+  let tmp2Result = tmp2(10460);
   const isQuestAccessSuspended = tmp2Result.useIsQuestAccessSuspended();
   tmp2Result = tmp2(4036);
   sharedValue = tmp2Result.useSharedValue(0);
@@ -99,7 +99,7 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
   const layoutEffect = obj1.useLayoutEffect(() => {
     quest(isShareableQuestResult[17]).lockOrientation("PORTRAIT", true);
   }, []);
-  const windowDimensions = obj1.useContext(tmp2(14336).QuestDockGestureContext).windowDimensions;
+  const windowDimensions = obj1.useContext(tmp2(14338).QuestDockGestureContext).windowDimensions;
   const tmp2Result2 = quest(7181);
   let str = "md";
   if (windowDimensions.get().height >= 760) {
@@ -115,7 +115,7 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
     callback(nativeEvent.nativeEvent.layout.height);
   }, []);
   if (tmp19 == null) {
-    tmp19 = tmp2(14371).QUEST_PROGRESS_DIAMETER_BY_SIZE[str];
+    tmp19 = tmp2(14373).QUEST_PROGRESS_DIAMETER_BY_SIZE[str];
   }
   const sum = tmp19 + 2 * tmp6(712).space.PX_16;
   obj1 = { bottom: true, style: tmp.wrapper, children: null };
@@ -123,7 +123,7 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
   obj3 = { variant: "heading-sm/semibold", color: "text-subtle", style: tmp.headerContentCopy, children: null };
   const intl = tmp2(1236).intl;
   obj3[3] = intl.formatToPlainString(quest(1236).t.EAYZAr, { questName: quest.config.messages.questName });
-  const items3 = [callback2(quest(4299).Heading, obj3), callback2(sharedValue(14389), { onClose, style: tmp.closeButton })];
+  const items3 = [callback2(quest(4299).Heading, obj3), callback2(sharedValue(14391), { onClose, style: tmp.closeButton })];
   obj2[4] = items3;
   const items4 = [callback3(quest(4712).Stack, obj2), ];
   let obj6 = { style: tmp.scroll, contentContainerStyle: tmp.scrollContent, showsVerticalScrollIndicator: false, alwaysBounceVertical: false, children: null };
@@ -151,7 +151,7 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
         obj9[5] = intl3.string(tmp2(1236).t.cfY4PE);
         tmp6Result = undefined;
         if (isQuestAccessSuspended) {
-          tmp6Result = tmp6(14358);
+          tmp6Result = tmp6(14360);
         }
         obj9[6] = tmp6Result;
         tmp23Result = tmp23(tmp2(4714).Button, obj9);
@@ -183,7 +183,7 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
       obj15[2] = onRestartVideo.onRestartVideo;
       const obj16 = { color: null };
       obj16[0] = tmp6(712).colors.INTERACTIVE_TEXT_DEFAULT;
-      obj15[3] = tmp23(tmp2(9861).RetryIcon, obj16);
+      obj15[3] = tmp23(tmp2(9862).RetryIcon, obj16);
       items11[1] = tmp23(tmp2(4846).PressableOpacity, obj15);
       obj11[3] = items11;
       const items12 = [tmp22(tmp2(4712).Stack, obj11), , ];
@@ -208,7 +208,7 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
       obj21[1] = tmp6(712).space.PX_16;
       const obj22 = { grow: true, variant: "expressive", onPress: null, text: null };
       obj22[2] = videoQuestClickCtaAndMaybeCloseModal;
-      obj22[3] = tmp2(10481).getExternalCtaLabel(quest);
+      obj22[3] = tmp2(10482).getExternalCtaLabel(quest);
       const items13 = [tmp23(tmp2(4714).Button, obj22), ];
       if (isShareableQuestResult) {
         const obj23 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
@@ -217,7 +217,7 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
         obj23[2] = callback;
         const obj24 = { color: null };
         obj24[0] = tmp6(712).colors.INTERACTIVE_TEXT_DEFAULT;
-        obj23[3] = tmp23(tmp2(12230).ShareIcon, obj24);
+        obj23[3] = tmp23(tmp2(12232).ShareIcon, obj24);
         isShareableQuestResult = tmp23(tmp2(4846).PressableOpacity, obj23);
       }
       items13[1] = isShareableQuestResult;
@@ -232,7 +232,7 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
     }
   }
   const obj25 = { style: tmp.contentRewards, onLayout: callback1, children: null };
-  const items14 = [callback2(sharedValue(14390), { withQuestName: false, withRewardAvailableCopy: false, size: str, withRewardTileAnimation: true }), ];
+  const items14 = [callback2(sharedValue(14392), { withQuestName: false, withRewardAvailableCopy: false, size: str, withRewardTileAnimation: true }), ];
   let obj26 = { color: "text-strong", style: tmp.contentRewardsCopy, variant: "heading-lg/semibold", children: null };
   const intl2 = tmp2(1236).intl;
   const string = intl2.string;

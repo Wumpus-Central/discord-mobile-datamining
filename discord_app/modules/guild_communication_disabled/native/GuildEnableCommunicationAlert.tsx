@@ -59,7 +59,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
               return obj;
             } else {
               let closure_0 = tmp4;
-              let obj1 = v0(11241);
+              let obj1 = v0(11242);
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -78,7 +78,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
             const obj2 = { key: "GUILD_ENABLE_COMMUNICATION_SUCCESS", content: null, icon: null };
             const intl = outer1_0(1236).intl;
             obj2[1] = intl.string(outer1_0(1236).t["/Mmbfv"]);
-            obj2[2] = v0(9877);
+            obj2[2] = v0(9878);
             v0(4002).open(obj2);
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };

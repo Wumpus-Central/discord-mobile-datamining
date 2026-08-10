@@ -47,7 +47,7 @@ function handleMessagesTapURLLink(data, channelId) {
               const tmp2Result = tmp2(7195);
             }
             if (!num) {
-              tmp4(11076)(invite);
+              tmp4(11077)(invite);
               num = 0;
             }
             flag2 = !num;
@@ -92,8 +92,8 @@ function handleMessagesTapURLLink(data, channelId) {
       obj1[0] = data.url;
       let isLinkTrustedResult = null != data.node;
       if (isLinkTrustedResult) {
-        isLinkTrustedResult = tmp19(11075).isLinkTrusted(data.node);
-        const tmp19Result = tmp19(11075);
+        isLinkTrustedResult = tmp19(11076).isLinkTrusted(data.node);
+        const tmp19Result = tmp19(11076);
       }
       obj1[1] = isLinkTrustedResult;
       obj1[2] = data.messageId;
@@ -124,7 +124,16 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
     }
     if (!tmp4(data, id)) {
       if (null != data.action) {
-        const action = data.action;
+        if (chatInputRef != null) {
+          const current = chatInputRef.current;
+          if (current != null) {
+            let flag = data.addSpace;
+            if (flag == null) {
+              flag = true;
+            }
+            current.insertText(data.text, null, flag);
+          }
+        }
       }
     }
     tmp4 = handleMessagesTapURLLink;

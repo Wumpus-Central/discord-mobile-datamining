@@ -5,7 +5,7 @@ import items from "items";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/14168_registerAsset.js";
+import { registerAsset } from "../../../../_runtime/14170_registerAsset.js";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { messagesProxy } from "../FamilyCenter.messages.js";
 import { useAgeSpecificText } from "../hooks/useAgeSpecificText.tsx";
@@ -83,9 +83,9 @@ export default function FamilyCenterAcceptedLinks() {
     const obj4 = { text: null };
     const intl3 = tmp5(1236).intl;
     obj4[0] = intl3.string(tmp2(2284).C4ScLD);
-    obj3[1] = tmp10(tmp2(14161), obj4);
+    obj3[1] = tmp10(tmp2(14163), obj4);
     let mapped = tmp10(tmp9, obj3);
-    const tmp2Result = tmp2(14161);
+    const tmp2Result = tmp2(14163);
   } else {
     mapped = activeLinkUsers.map((id) => callback(closure_10, { otherUser: id }, "accepted-" + id.id));
   }

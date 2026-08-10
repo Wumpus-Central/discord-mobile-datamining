@@ -29,7 +29,7 @@ export default function BountiesModalEndedCtaButtons(bounty) {
     flag = false;
   }
   let callback;
-  let obj = bounty(10488);
+  let obj = bounty(10489);
   callback = obj.useGetQuestImpressionId();
   let obj1 = bounty(4036);
   const fn = function y() {
@@ -46,7 +46,7 @@ export default function BountiesModalEndedCtaButtons(bounty) {
   fn.__workletHash = 11417131685254;
   fn.__initData = closure_6;
   const animatedStyle = obj1.useAnimatedStyle(fn);
-  bounty(14282);
+  bounty(14284);
   if (visible) {
     obj = { style: null, children: null };
     const items = [tmp.container, animatedStyle];

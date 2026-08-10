@@ -39,7 +39,7 @@ export default function MuteAppDMActionSheet(channel) {
   obj1[1] = BellIcon.BellIcon;
   let intl = getSystemLocale.intl;
   obj1[3] = intl.string(getSystemLocale.t.uAmAiL);
-  obj[1] = callback(channel(11609), obj1);
+  obj[1] = callback(channel(11610), obj1);
   const items = [callback(View, obj), , , , ];
   let obj2 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.headerText, children: null };
   const intl2 = getSystemLocale.intl;

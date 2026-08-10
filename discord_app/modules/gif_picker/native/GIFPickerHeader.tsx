@@ -164,7 +164,7 @@ const memoResult = importAllResult.memo(function GIFPickerHeader(arg0) {
     obj1[3] = intl4.formatToPlainString(tmp2(1236).t.UTypEu, obj2);
     const obj3 = { color: null, size: "sm" };
     obj3[0] = Themes.colors.INTERACTIVE_TEXT_ACTIVE;
-    const items = [tmp6(tmp2(9944).ChevronLargeLeftIcon, obj3), ];
+    const items = [tmp6(tmp2(9945).ChevronLargeLeftIcon, obj3), ];
     if (categoryType === tmp8.TRENDING_GIFS) {
       const intl3 = tmp2(1236).intl;
       let stringResult = intl3.string(tmp2(1236).t.TsWCdW);

@@ -6,7 +6,7 @@ import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionShe
 
 const require = arg1;
 function onPress() {
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(14202, dependencyMap.paths), "AddConnection");
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(14204, dependencyMap.paths), "AddConnection");
 }
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function ConnectionsSettingScreen() {
@@ -31,7 +31,7 @@ const memoResult = importAllResult.memo(function ConnectionsSettingScreen() {
       }
     });
   }, items);
-  return jsx(tmp(14203).UserSettingsConnections, { selectedPlatformType });
+  return jsx(tmp(14205).UserSettingsConnections, { selectedPlatformType });
 });
 const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/user_settings/connections/native/ConnectionsSettingScreen.tsx");
 

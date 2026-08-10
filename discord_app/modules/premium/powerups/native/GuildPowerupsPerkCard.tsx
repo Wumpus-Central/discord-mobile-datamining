@@ -52,9 +52,9 @@ export default function GuildPowerupsPerkCard(arg0) {
   obj = { containerStyle: items, style: tmp2.card, status, onPress, children: null };
   items = [tmp2.container, style];
   obj = { style: tmp2.imageContainer, children: null };
-  let tmp3Result = tmp3(11926);
+  let tmp3Result = tmp3(11927);
   if (riveComponent == null) {
-    tmp3Result = tmp3(11883);
+    tmp3Result = tmp3(11884);
     if (imageUrl == null) {
       imageUrl = "";
     }

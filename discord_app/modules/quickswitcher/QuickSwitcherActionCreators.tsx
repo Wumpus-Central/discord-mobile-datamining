@@ -387,13 +387,13 @@ export const switchToResult = function switchToResult(record) {
     obj4[0] = items;
     tmp(4313).openPrivateChannel(obj4);
     const tmpResult1 = tmp(4313);
-    tmp(10248).channelListScrollTo(closure_12, authStore.getDMFromUserId(record.id));
-    const tmpResult2 = tmp(10248);
+    tmp(10249).channelListScrollTo(closure_12, authStore.getDMFromUserId(record.id));
+    const tmpResult2 = tmp(10249);
   } else if (tmp5(7308).AutocompleterResultTypes.GROUP_DM === type) {
     tmp5(4311).transitionToChannel(record.id, { navigationReplace: true });
     const tmp5Result2 = tmp5(4311);
-    tmp(10248).channelListScrollTo(closure_12, record.id);
-    const tmpResult3 = tmp(10248);
+    tmp(10249).channelListScrollTo(closure_12, record.id);
+    const tmpResult3 = tmp(10249);
   } else if (tmp5(7308).AutocompleterResultTypes.APPLICATION === type) {
     activeLibraryApplication = activeLibraryApplication.getActiveLibraryApplication(record.id);
     const id = record.id;
@@ -426,7 +426,7 @@ export const switchToResult = function switchToResult(record) {
   } else if (tmp5(7308).AutocompleterResultTypes.IN_APP_NAVIGATION === type) {
     if (record.record.type !== InAppNavigationType.SETTINGS) {
       if (record.record.type === tmp37.PLAYGROUND) {
-        const tmp5Result3 = tmp5(10249);
+        const tmp5Result3 = tmp5(10250);
       } else if (record.record.type === tmp37.SHOP_ORBS_TAB) {
         const obj7 = { tab: null, analyticsLocations: null, analyticsSource: null };
         obj7[0] = CollectibleShopTab.ORBS;

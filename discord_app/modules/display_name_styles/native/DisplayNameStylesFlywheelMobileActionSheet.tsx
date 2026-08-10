@@ -146,7 +146,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
     if (tmp2Result.isIOS()) {
       const obj10 = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
       const obj11 = { uri: null };
-      obj11[0] = tmp4(16002);
+      obj11[0] = tmp4(16011);
       obj10[0] = obj11;
       obj10[1] = tmp6.image;
       obj10[3] = !enabled;
@@ -154,7 +154,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
       const tmp4Result = tmp4(5268);
     } else {
       const obj12 = { url: null, style: null, autoplay: true };
-      obj12[0] = tmp4(16002);
+      obj12[0] = tmp4(16011);
       obj12[1] = tmp6.image;
       tmp14Result = tmp14(tmp2(9386).APNGPlayer, obj12);
     }

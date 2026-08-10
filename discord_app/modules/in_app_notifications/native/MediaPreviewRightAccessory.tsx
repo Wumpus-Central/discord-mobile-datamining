@@ -114,11 +114,11 @@ function SinglePreviewableMedia(arg0) {
     obj[1] = icon;
     return callback(View, obj);
   } else {
-    if (tmp2(9805).PreviewableMediaTypes.AUDIO !== type) {
-      if (tmp2(9805).PreviewableMediaTypes.FILE !== type) {
-        if (tmp2(9805).PreviewableMediaTypes.IMAGE !== type) {
-          if (tmp2(9805).PreviewableMediaTypes.VIDEO !== type) {
-            if (tmp2(9805).PreviewableMediaTypes.GIF === type) {
+    if (tmp2(9806).PreviewableMediaTypes.AUDIO !== type) {
+      if (tmp2(9806).PreviewableMediaTypes.FILE !== type) {
+        if (tmp2(9806).PreviewableMediaTypes.IMAGE !== type) {
+          if (tmp2(9806).PreviewableMediaTypes.VIDEO !== type) {
+            if (tmp2(9806).PreviewableMediaTypes.GIF === type) {
               const video = media.video;
               if (video != null) {
                 const url = video.url;
@@ -178,7 +178,7 @@ function SinglePreviewableMedia(arg0) {
                 }
                 url2 = thumbnail.url;
               }
-            } else if (tmp2(9805).PreviewableMediaTypes.STICKER === type) {
+            } else if (tmp2(9806).PreviewableMediaTypes.STICKER === type) {
               const obj9 = { style: null, children: null };
               const items2 = [tmp.mediaThumbnailContainer, ];
               const obj10 = { width: null, height: null };
@@ -217,7 +217,7 @@ function SinglePreviewableMedia(arg0) {
                 obj13[3] = 2 * size;
                 obj13[4] = 2 * size;
                 let str3;
-                if (type === tmp2(9805).PreviewableMediaTypes.VIDEO) {
+                if (type === tmp2(9806).PreviewableMediaTypes.VIDEO) {
                   str3 = "png";
                 }
                 obj13[6] = str3;
@@ -238,7 +238,7 @@ function SinglePreviewableMedia(arg0) {
                 obj17[1] = tmp.mediaThumbnail;
                 const items4 = [callback(preload, obj17), ];
                 let tmp24Result = null;
-                if (type === tmp2(9805).PreviewableMediaTypes.VIDEO) {
+                if (type === tmp2(9806).PreviewableMediaTypes.VIDEO) {
                   tmp24Result = tmp24(VideoBadge, {});
                 }
                 items4[1] = tmp24Result;

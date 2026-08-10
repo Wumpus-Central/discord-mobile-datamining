@@ -39,5 +39,5 @@ export default function SoundboardVolume() {
   obj1[0] = items;
   obj[1] = callback2(closure_6, obj1);
   obj[2] = callback(analyticsLocations(5374).TableRow, obj);
-  return callback(analyticsLocations(10845).UserSettingsTableRowGroup, obj);
+  return callback(analyticsLocations(10846).UserSettingsTableRowGroup, obj);
 };

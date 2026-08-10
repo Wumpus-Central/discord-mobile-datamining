@@ -229,7 +229,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
       };
       setOptions(obj);
     } else {
-      setOptions({ headerRight: "sa" });
+      setOptions({ headerRight: "Promise" });
     }
   }, items5);
   obj = { style: tmp.container, children: null };

@@ -320,9 +320,9 @@ function _applyBackgroundOptionLive() {
             c5 = 3;
             return { value: "HermesInternal", done: null };
           }
-        } catch (tmp24) {
+        } catch (tmp16) {
           c5 = tmp;
-          throw tmp24;
+          throw tmp16;
         }
       }
     })();

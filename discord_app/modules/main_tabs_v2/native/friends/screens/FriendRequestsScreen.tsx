@@ -91,9 +91,9 @@ export default function FriendRequestsScreen() {
   }), 2);
   first = tmp9[0];
   dependencyMap = tmp11;
-  let obj2 = stateFromStoresArray(12338);
+  let obj2 = stateFromStoresArray(12340);
   gameRelationshipsByType = obj2.useGameRelationshipsByType(ignoredUsers.PENDING_INCOMING);
-  let obj3 = stateFromStoresArray(12338);
+  let obj3 = stateFromStoresArray(12340);
   gameRelationshipsByType1 = obj3.useGameRelationshipsByType(ignoredUsers.PENDING_OUTGOING);
   const items3 = [gameRelationshipsByType, gameRelationshipsByType1];
   const memo = gameRelationshipsByType1.useMemo(() => {
@@ -322,9 +322,9 @@ export default function FriendRequestsScreen() {
     obj9[0] = stringResult;
     WumpusCouchSpotIllustration = tmp4(6027).WumpusCouchSpotIllustration;
     obj9[1] = WumpusCouchSpotIllustration;
-    obj8[1] = tmp32(tmp2(10252), obj9);
+    obj8[1] = tmp32(tmp2(10253), obj9);
     tmp32Result = tmp32(tmp33, obj8);
-    const tmp2Result = tmp2(10252);
+    const tmp2Result = tmp2(10253);
   } else {
     if (first1 === tmp25.Incoming) {
       outgoingSection = incomingSection;

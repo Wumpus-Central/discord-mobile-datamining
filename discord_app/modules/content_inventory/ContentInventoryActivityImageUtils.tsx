@@ -63,7 +63,7 @@ function useComputedImagesForActivity(activity, getIconURL) {
       obj8 = obj3;
     } else {
       if (null == smallImage) {
-        if (tmp2(12276)(activity)) {
+        if (tmp2(12278)(activity)) {
           const obj5 = { largeImage: null, smallImage: "Array" };
           const obj6 = { src: null, alt: null };
           tmp2Result = tmp2(5000);
@@ -211,7 +211,7 @@ function useRichImageForActivity(activity, activityApplication) {
     const application_id = activity.application_id;
   }
   if (null == activity) {
-    return { largeImage: "r", smallImage: "accessibilityRole" };
+    return { largeImage: "Array", smallImage: "ct" };
   } else {
     let large_image;
     if (activity != null) {

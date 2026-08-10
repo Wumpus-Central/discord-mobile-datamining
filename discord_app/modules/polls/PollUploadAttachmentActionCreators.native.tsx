@@ -48,13 +48,13 @@ function _handlePollGifAttachmentAdd() {
               let closure_5;
               let styles;
               obj7 = undefined;
-              dependencyMap = callback(11589).getFileNameFromGifUrl(callback2, dependencyMap);
+              dependencyMap = callback(11590).getFileNameFromGifUrl(callback2, dependencyMap);
               styles = 1;
-              const obj16 = callback(11589);
+              const obj16 = callback(11590);
               obj7 = 2;
               c8 = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = callback(11589).downloadPollGif(dependencyMap);
+              obj1[0] = callback(11590).downloadPollGif(dependencyMap);
               return obj1;
             }
           } else if (1 === tmp8) {
@@ -78,7 +78,7 @@ function _handlePollGifAttachmentAdd() {
                 c8 = 3;
                 return { value: "HermesInternal", done: null };
               } else {
-                obj7 = callback(11589);
+                obj7 = callback(11590);
                 Poll = obj7.getFilePathForGif(dependencyMap);
                 let obj8 = callback(8801);
                 obj7 = 3;
@@ -188,7 +188,7 @@ function _removePollUploadAttachment() {
       callback2(8357).remove(callback, callback2, Poll.Poll);
       const obj5 = callback2(8357);
       const obj6 = callback(8801);
-      yield obj6.removeFile("cache", callback(11589).getFilePathForGif(dependencyMap));
+      yield obj6.removeFile("cache", callback(11590).getFilePathForGif(dependencyMap));
       if (1 === tmp6) {
         c6 = 0;
         let c3 = 3;

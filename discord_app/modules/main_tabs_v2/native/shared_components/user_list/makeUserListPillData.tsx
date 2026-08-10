@@ -10,8 +10,8 @@ const result = require("nameFromUser").fileFinishedImporting("modules/main_tabs_
 export default function makeUserListPillData(id) {
   let obj = { id: id.id, text: null, icon: null };
   obj[1] = nameFromUser.getName(id);
-  obj = { user: id, guildId: "Array", size: "function pnpm_presetsTs1(event){return{transform:[{translateX:event.translationX}]};}" };
+  obj = { user: id, guildId: "Array", size: "Array" };
   obj[2] = Button.AvatarSizes.XXSMALL;
-  obj[2] = jsx(Button.Avatar, { user: id, guildId: "Array", size: "function pnpm_presetsTs1(event){return{transform:[{translateX:event.translationX}]};}" });
+  obj[2] = jsx(Button.Avatar, { user: id, guildId: "Array", size: "Array" });
   return obj;
 };

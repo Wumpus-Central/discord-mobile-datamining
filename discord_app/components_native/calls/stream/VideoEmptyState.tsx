@@ -39,7 +39,7 @@ export default function VideoEmptyState(style) {
     if (!removeSplashImage) {
       obj = { style: null };
       obj[0] = tmp2.placeholderImage;
-      tmp16 = callback(stream(10686).StreamEnded, obj);
+      tmp16 = callback(stream(10687).StreamEnded, obj);
     }
     obj = { children: null };
     const items = [tmp16, ];
@@ -57,7 +57,7 @@ export default function VideoEmptyState(style) {
     if (!removeSplashImage) {
       obj = { style: null };
       obj[0] = tmp2.placeholderImage;
-      tmp7 = callback(stream(10689).StreamFailed, obj);
+      tmp7 = callback(stream(10690).StreamFailed, obj);
     }
     let obj2 = { children: null };
     const items1 = [tmp7, ];

@@ -42,9 +42,9 @@ export const useStickerCategories = function useStickerCategories(channel) {
         }
       }
       if (type.type === callback(4985).StickerCategoryTypes.FAVORITE) {
-        let tmp4 = lib(9960);
+        let tmp4 = lib(9961);
       } else {
-        tmp4 = lib(9961);
+        tmp4 = lib(9962);
       }
       const obj = {};
       const merged = Object.assign(type);

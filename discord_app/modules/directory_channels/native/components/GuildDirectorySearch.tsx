@@ -1,14 +1,14 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectorySearch.tsx
 import _slicedToArray from "_slicedToArray";
 import HeaderBackImage from "HeaderBackImage";
-import get_ActivityIndicator from "module_11706";
+import get_ActivityIndicator from "module_11707";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getSearchState from "getSearchState";
 import ME from "ME";
 import jsxProd from "_addDirectoryGuildEntry";
 import createCacheKey from "createCacheKey";
 import ArrayResult from "module_5991";
-import { registerAsset } from "../../../../../_runtime/11677_registerAsset.js";
+import { registerAsset } from "../../../../../_runtime/11678_registerAsset.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
@@ -44,7 +44,7 @@ function EmptyState(channel) {
   let obj = channel(589);
   const items = [createGuildRecordFromRust];
   importDefault = obj.useStateFromStores(items, () => outer1_9.getGuild(channel.getGuildId()));
-  let obj1 = channel(11678);
+  let obj1 = channel(11679);
   const canCreateOrAddGuildInDirectory = obj1.useCanCreateOrAddGuildInDirectory(channel);
   const intl = channel(1236).intl;
   if (canCreateOrAddGuildInDirectory) {

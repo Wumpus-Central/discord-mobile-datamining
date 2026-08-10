@@ -315,19 +315,19 @@ export default function ProductDetailsActionSheetPurchaseSection(onBuy) {
     id = tmp16.id;
   }
   obj[3] = id;
-  const tmp17 = onTrackPress(12163);
-  ({ handleBuyNow: c4, isBuying } = onTrackPress(12163)(obj));
-  let tmp5Result = tmp5(12164);
+  const tmp17 = onTrackPress(12165);
+  ({ handleBuyNow: c4, isBuying } = onTrackPress(12165)(obj));
+  let tmp5Result = tmp5(12166);
   handleClaim = tmp5Result.useHandleClaim({ product }).handleClaim;
-  const tmp20 = onTrackPress(12165)({ location: "ProductDetailsActionSheetPurchaseSection", product });
+  const tmp20 = onTrackPress(12167)({ location: "ProductDetailsActionSheetPurchaseSection", product });
   let tmp25Result = tmp20;
   if (tmp20) {
     tmp25Result = !isPurchased;
   }
   tmp5Result = tmp5(7343);
-  const tmp17Result = onTrackPress(12163)(obj);
+  const tmp17Result = onTrackPress(12165)(obj);
   const tmp23 = tmp5Result.useIsEligibleForBogoOffer() ? closure_15.MONTH : closure_15.YEAR;
-  let canGiftProduct = tmp5(12167).useCanGiftProduct(product);
+  let canGiftProduct = tmp5(12169).useCanGiftProduct(product);
   let PX_16 = tmp2(1609)().bottom;
   const items2 = [tmp.container, , ];
   let containerFramesEA = tmp25Result;
@@ -444,7 +444,7 @@ export default function ProductDetailsActionSheetPurchaseSection(onBuy) {
     obj17[0] = onTrackPress;
     const intl9 = tmp5(1236).intl;
     obj17[1] = intl9.string(tmp5(1236).t["9wfL34"]);
-    items10[1] = callback2(tmp5(12168).UnlockWithNitroButton, obj17);
+    items10[1] = callback2(tmp5(12170).UnlockWithNitroButton, obj17);
     const obj18 = { variant: "text-xxs/normal", children: null };
     const intl10 = tmp5(1236).intl;
     const obj19 = { paidURL: null, interval: null, ctaText: null };
@@ -465,7 +465,7 @@ export default function ProductDetailsActionSheetPurchaseSection(onBuy) {
         if (!result1) {
           const obj20 = { onTrackPress: null };
           obj20[0] = onTrackPress;
-          tmp25Result2 = callback2(tmp5(12168).UnlockWithNitroButton, obj20);
+          tmp25Result2 = callback2(tmp5(12170).UnlockWithNitroButton, obj20);
         }
       }
     }

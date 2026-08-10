@@ -881,7 +881,7 @@ prototype["renderAutoArchiveDuration"] = function renderAutoArchiveDuration() {
       obj[2] = autoArchiveDuration;
       obj[3] = channel;
       obj[4] = this.handleAutoArchiveDurationChange;
-      return closure_43(tmp5(15882).AutoArchiveDurationOptions, obj);
+      return closure_43(tmp5(15891).AutoArchiveDurationOptions, obj);
     }
   }
   return null;
@@ -1175,7 +1175,7 @@ prototype["renderUserLimitSettings"] = function renderUserLimitSettings() {
       obj4[1] = Math.min(channel.userLimit, tmp10);
       obj4[3] = tmp10;
       obj4[4] = this.handleUserLimitChange;
-      items2[1] = closure_43(tmp7(13429).Slider, obj4);
+      items2[1] = closure_43(tmp7(13431).Slider, obj4);
       obj[0] = items2;
       obj[2] = callback4(tmp7(5376).Card, obj);
       items.push(closure_43(tmp7(5767).TableRowGroup, obj, "channel-user-limit"));
@@ -1371,7 +1371,7 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
     obj1[0] = stringResult;
     obj[1] = closure_43(self(5374).TableRow.TrailingText, obj1);
     if (channel.defaultForumLayout === GridSquareIcon(1382).ForumLayout.GRID) {
-      GridSquareIcon = GridSquareIcon(15883).GridSquareIcon;
+      GridSquareIcon = GridSquareIcon(15892).GridSquareIcon;
       obj = {};
       let tmpResult = tmp(GridSquareIcon, obj);
     } else {
@@ -1534,7 +1534,7 @@ prototype["renderThreadManagementActions"] = function renderThreadManagementActi
     return closure_44(tmp4, obj3);
   } else {
     obj = { icon: null, label: null, onPress: null };
-    obj[0] = callback3(tmp2(9720).GroupPlusIcon, {});
+    obj[0] = callback3(tmp2(9721).GroupPlusIcon, {});
     const intl = tmp2(1236).intl;
     const string = intl.string;
     let ihLPiO = tmp2(1236).t;
@@ -1756,7 +1756,7 @@ prototype["renderCategory"] = function renderCategory() {
         tmp7 = self;
       }
       obj = { icon: null, label: null, trailing: null, arrow: null, onPress: null };
-      obj[0] = callback3(tmp7(15276).FolderPlusIcon, {});
+      obj[0] = callback3(tmp7(15284).FolderPlusIcon, {});
       const intl2 = tmp7(1236).intl;
       obj[1] = intl2.string(tmp7(1236).t.vHCZwr);
       obj = { text: null };

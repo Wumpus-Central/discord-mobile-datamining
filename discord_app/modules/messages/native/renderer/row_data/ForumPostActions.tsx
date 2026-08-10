@@ -24,7 +24,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
         if (str2 == null) {
           str2 = "";
         }
-        obj = { id: null, name: "a", animated: "<string:1144520707>", src: "<string:1239547907>", displayName: "<string:1239613443>" };
+        obj = { id: null, name: "a", animated: "_desired", src: "a", displayName: "isArray" };
         obj[0] = emojiId;
         obj[2] = customGuildEmoji.animated;
         obj = { id: null, animated: null, size: 48 };

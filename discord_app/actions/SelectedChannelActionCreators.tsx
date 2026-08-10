@@ -60,8 +60,8 @@ export default {
   disconnect() {
     remoteSessionId = remoteSessionId.getRemoteSessionId();
     if (null != remoteSessionId) {
-      importAll(10878).remoteDisconnect(remoteSessionId);
-      const obj = importAll(10878);
+      importAll(10879).remoteDisconnect(remoteSessionId);
+      const obj = importAll(10879);
     }
     const voiceChannel = this.selectVoiceChannel(null);
   }

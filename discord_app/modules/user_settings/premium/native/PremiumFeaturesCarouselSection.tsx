@@ -9,7 +9,7 @@ import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
-import { Pagination } from "../../../../../_runtime/10048_Pagination.js";
+import { Pagination } from "../../../../../_runtime/10049_Pagination.js";
 import { preload } from "../../../../components_native/common/FastImage.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 

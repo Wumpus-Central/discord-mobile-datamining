@@ -371,7 +371,7 @@ function genSubmitData(version, name, arr, email_token) {
   if (str == null) {
     str = "en";
   }
-  obj = { channel_id: "diversity", message_id: "", stage_instance_id: "l", guild_id: "isArray", guild_scheduled_event_id: "isArray", user_id: "isArray", email_token: "e", application_id: "isArray", entrypoint: "isArray", widget_id: "Array" };
+  obj = { channel_id: "Array", message_id: "call", stage_instance_id: "fileFinishedImporting", guild_id: "width", guild_scheduled_event_id: "sa", user_id: "Button", email_token: "isArray", application_id: "isArray", entrypoint: "isArray", widget_id: "substring_i" };
   obj[2] = str;
   obj[3] = arr.map((nodeRef) => nodeRef.nodeRef);
   obj[4] = arr.reduce((arg0, arg1) => {
@@ -590,7 +590,7 @@ export const submitReport = function submitReport(language, name, arr) {
       }, {});
       let tmp15 = null;
       if (name.name === tmp4(8021).ModeratorReportNames.MESSAGE) {
-        obj = { channel_id: "Array", message_id: "call", guild_id: "useStateFromStores" };
+        obj = { channel_id: "max", message_id: "channel", guild_id: "Boolean" };
         const obj1 = {};
         ({ channel_id, id } = name.record);
         let merged = Object.assign(obj);

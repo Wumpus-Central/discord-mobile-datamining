@@ -31,7 +31,7 @@ export default function SocialLayerStorefrontGiftProductDetails(sku) {
   const tmp = createCacheKey();
   let obj = getOrFetchApplication(5734);
   getOrFetchApplication = obj.useGetOrFetchApplication(sku.applicationId);
-  let obj1 = getOrFetchApplication(10092);
+  let obj1 = getOrFetchApplication(10093);
   obj = { sku, priceSetAssignmentPurchaseType: constants.GIFT };
   const userPrice = obj1.useFormattedSKUPrice(obj).userPrice;
   const items = [getOrFetchApplication];

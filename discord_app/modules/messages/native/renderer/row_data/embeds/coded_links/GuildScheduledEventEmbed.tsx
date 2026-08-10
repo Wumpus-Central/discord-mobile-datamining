@@ -11,7 +11,7 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 import { CodedLinkExtendedType } from "CodedLinkExtendedType";
 import { GuildScheduledEventEntityTypes as closure_14 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { InviteTypes } from "InviteSendStates";
-import { registerAsset } from "../../../../../../../../_runtime/12603_registerAsset.js";
+import { registerAsset } from "../../../../../../../../_runtime/12605_registerAsset.js";
 import { getSystemLocale } from "../../../../../../../intl/index.native.tsx";
 import { fromGuildPropertiesWithAdditionalFields } from "../../../../../../../utils/GuildRecordUtils.tsx";
 import { getGuildEventsForCurrentUser } from "../../../../../../guild_scheduled_events/GuildScheduledEventManager.tsx";
@@ -96,7 +96,7 @@ function createGuildScheduledEventEmbed(type) {
       const acceptLabelActiveBackgroundColor2 = colors.acceptLabelActiveBackgroundColor;
     } else if (result1) {
       acceptLabelActiveBackgroundColor = colors.backgroundColor;
-      let assetUriForEmbed3 = tmp7(8055).getAssetUriForEmbed(tmp(9877));
+      let assetUriForEmbed3 = tmp7(8055).getAssetUriForEmbed(tmp(9878));
       acceptLabelGreenColor = colors.acceptLabelDisabledTextColor;
       let tmp21 = assetUriForEmbed2;
       let stringResult2 = stringResult;

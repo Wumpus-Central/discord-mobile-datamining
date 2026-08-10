@@ -35,9 +35,9 @@ let closure_10 = importAllResult.memo((item) => {
   item = item.item;
   const setFeature = item.setFeature;
   ({ feature, start, end } = item);
-  let obj = item(9868);
+  let obj = item(9869);
   const featureId = obj.getFeatureId(item);
-  const featureId1 = item(9868).getFeatureId(feature);
+  const featureId1 = item(9869).getFeatureId(feature);
   obj = {
     start,
     end,

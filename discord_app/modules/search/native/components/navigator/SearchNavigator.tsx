@@ -49,7 +49,7 @@ const memoResult = importAllResult.memo((route) => {
       name: SearchNavigatorScreens.SEARCH_TABS,
       options: { headerShown: false, fullScreenGestureEnabled: true },
       getComponent() {
-        return searchContext(15929).default;
+        return searchContext(15938).default;
       }
     }),
     callback(createNativeStackNavigator.Screen, {
@@ -64,7 +64,7 @@ const memoResult = importAllResult.memo((route) => {
         return obj;
       },
       getComponent() {
-        return searchContext(15925).default;
+        return searchContext(15934).default;
       }
     })
   ];

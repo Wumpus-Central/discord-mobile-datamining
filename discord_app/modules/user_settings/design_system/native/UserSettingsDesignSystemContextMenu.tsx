@@ -46,7 +46,7 @@ function DemoContextMenu(align) {
         obj = { length: dependencyMap };
         const obj2 = callback(12);
         return Array.from(obj).map((arg0, arg1) => {
-          const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: "<string:1144520707>", variant: "<string:1239547907>", action: "<string:1239613443>" };
+          const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: "_desired", variant: "a", action: "isArray" };
           obj[2] = length2[arg1 % length2.length];
           let str = "default";
           if (arg1 === closure_0 - 1) {
@@ -69,7 +69,7 @@ function DemoContextMenu(align) {
       obj[0] = closure_1;
       arr = Array.from(obj);
       mapped = arr.map((arg0, arg1) => {
-        const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: "<string:1144520707>", variant: "<string:1239547907>", action: "<string:1239613443>" };
+        const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: "_desired", variant: "a", action: "isArray" };
         obj[2] = length2[arg1 % length2.length];
         let str = "default";
         if (arg1 === closure_0 - 1) {

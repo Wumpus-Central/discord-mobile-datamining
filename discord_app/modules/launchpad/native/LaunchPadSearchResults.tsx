@@ -5,7 +5,7 @@ import _getSystemLocale from "_getSystemLocale";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { UnreadSetting } from "ReadStateTypes";
-import jsxProd from "module_16051";
+import jsxProd from "module_16060";
 import createCacheKey from "createCacheKey";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { sortByMatchScore } from "../../autocompleter/index.tsx";
@@ -57,7 +57,7 @@ function renderItemJSX(result) {
       obj4[0] = result.record.text;
       obj4[1] = tmp;
       obj4[2] = tmp2;
-      return tmp14(15237).renderCategoryItem(obj4);
+      return tmp14(15239).renderCategoryItem(obj4);
     } else {
       obj = { variant: "text-sm/semibold", children: null };
       obj[1] = result.type;
@@ -266,7 +266,7 @@ const memoResult1 = importAllResult.memo(function SearchResultsInner(results) {
   let c4;
   let fontScale;
   const tmp = callback3();
-  let obj = results(15237);
+  let obj = results(15239);
   categoryStyles = obj.useCategoryStyles();
   const tmp5 = categoryStyles(1348)("SearchResults");
   dependencyMap = tmp5;
@@ -283,7 +283,7 @@ const memoResult1 = importAllResult.memo(function SearchResultsInner(results) {
       }
     }
   }, items1);
-  const tmp9 = categoryStyles(16043)();
+  const tmp9 = categoryStyles(16052)();
   c4 = tmp9;
   fontScale = results(4720).useFontScale();
   const items2 = [fontScale, results, tmp9];

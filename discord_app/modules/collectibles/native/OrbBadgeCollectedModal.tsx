@@ -29,7 +29,7 @@ function OrbBadgeCollectedRootScreen(modalKey) {
   if (stateFromStores) {
     obj = { source: null, style: null };
     const obj1 = { uri: null };
-    obj1[0] = onPressViewBadge(11177);
+    obj1[0] = onPressViewBadge(11178);
     obj[0] = obj1;
     obj[1] = tmp.background;
     let tmp9Result = tmp9(onPressViewBadge(5268), obj);
@@ -39,9 +39,9 @@ function OrbBadgeCollectedRootScreen(modalKey) {
   } else {
     const obj2 = { source: null, poster: null, style: null, resizeMode: "contain", muted: true, pauseWhileAppInactive: true, paused: false };
     const obj3 = { uri: null };
-    obj3[0] = onPressViewBadge(11178);
+    obj3[0] = onPressViewBadge(11179);
     obj2[0] = obj3;
-    obj2[1] = onPressViewBadge(11177);
+    obj2[1] = onPressViewBadge(11178);
     obj2[2] = tmp.background;
     tmp9Result = tmp9(tmp2(8870).VideoComponent, obj2);
     tmp12 = onPressViewBadge;

@@ -381,7 +381,7 @@ function _writeMessage(arg0, id) {
 class LocalMessageCacheManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f110594 = applyArgumentsResult;
+    f110631 = applyArgumentsResult;
     // PrivateIsIn (0x32)
     if (tmp) {
       str = "Cannot initialize private field twice.";
@@ -745,9 +745,9 @@ class LocalMessageCacheManager extends tmp3 {
           continue;
         }
       };
-      f110594 = undefined;
+      f110631 = undefined;
       closure_1 = applyArgumentsResult;
-      f110594 = _rehydrateFailedMessages((arg0) => {
+      f110631 = _rehydrateFailedMessages((arg0) => {
         let closure_0 = arg0;
         let c2 = 0;
         let c1 = 0;

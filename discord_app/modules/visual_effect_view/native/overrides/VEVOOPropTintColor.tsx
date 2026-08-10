@@ -104,7 +104,7 @@ const memoResult = importAllResult.memo(function VEVOOPropTintColor() {
   const ref = obj1.useRef(first1);
   const tmp14 = closure_10;
   const tmp15 = closure_9;
-  obj2[3] = callback2(first(15063), {
+  obj2[3] = callback2(first(15065), {
     disabled: !tmp7,
     initialValue: obj1.useRef(first1),
     onValueChange(arg0) {
@@ -117,7 +117,7 @@ const memoResult = importAllResult.memo(function VEVOOPropTintColor() {
   obj[5] = !tmp7;
   obj[6] = function onPress() {
     const obj = { color: null, onSelect: null };
-    const tmp = first(13903);
+    const tmp = first(13905);
     obj[0] = outer1_0(688).hex2int(first);
     obj[1] = function onSelect(color) {
       callback(outer1_0(outer1_2[13]).int2hex(color), _slicedToArray);

@@ -1,7 +1,7 @@
 // discord_app/modules/activities/panel/native/ActivityInviteSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import loadInviteSuggestions from "loadInviteSuggestions";
-import { View } from "module_10450";
+import { View } from "module_10451";
 import setSendState from "setSendState";
 import _computeRows from "_computeRows";
 import { ActivityActionTypes } from "ME";
@@ -208,7 +208,7 @@ export default function ActivityInviteSheet(activity) {
       obj7[2] = callback;
       obj7[3] = callback2;
       obj7[4] = callback1;
-      tmp17Result = tmp17(tmp2(16094), obj7);
+      tmp17Result = tmp17(tmp2(16103), obj7);
     }
     const obj8 = { children: null };
     items4[1] = tmp17Result;

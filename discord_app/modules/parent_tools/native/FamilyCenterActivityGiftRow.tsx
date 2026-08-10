@@ -64,10 +64,10 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     obj[4] = claimedAt;
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    const giftSubtext = tmp5(14149).getGiftSubtext(obj);
+    const giftSubtext = tmp5(14151).getGiftSubtext(obj);
     obj1 = { displayName: null, product: null, isSubscription: null, subscriptionPlanId: null };
     obj1[0] = displayName;
-    tmp2Result = tmp2(14148);
+    tmp2Result = tmp2(14150);
     if (product == null) {
       product = null;
     }

@@ -46,11 +46,11 @@ export default function GiftCodeRedeemSuccess(giftCode) {
   let obj = giftCode(589);
   const items = [addSku];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_7.get(giftCode.skuId));
-  let obj1 = giftCode(10418);
+  let obj1 = giftCode(10419);
   const getOrFetchSubscriptionPlan = obj1.useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
   let obj2 = giftCode(5734);
   const getOrFetchApplication = obj2.useGetOrFetchApplication(giftCode.applicationId);
-  let obj3 = giftCode(10113);
+  let obj3 = giftCode(10114);
   let obj4 = giftCode(7013);
   let skuId = null;
   if (obj4.isCollectiblesGiftCode(giftCode)) {
@@ -74,7 +74,7 @@ export default function GiftCodeRedeemSuccess(giftCode) {
   }
   const shopProductItems = tmp2Result.useShopProductItems(tmp10);
   ({ firstAvatarDecoration, firstProfileEffect, firstNameplate } = shopProductItems);
-  tmp2Result = tmp2(10130);
+  tmp2Result = tmp2(10131);
   let tmp12 = product;
   if (product == null) {
     obj = { skuId: "", type: null, items: null };

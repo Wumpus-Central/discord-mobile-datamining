@@ -46,15 +46,15 @@ function Content() {
   let guildId;
   let tmp7;
   let tmp8;
-  const tmp3 = role(13245)();
+  const tmp3 = role(13247)();
   let obj = _useEditStateContext;
   const editStateContext = obj.useEditStateContext();
   ({ editStateId, guildId } = editStateContext);
-  let obj1 = importAll(14461);
+  let obj1 = importAll(14463);
   [tmp7, tmp8] = callback(obj1.useRoleColor(editStateId, guildId), 2);
-  let obj2 = importAll(14461);
+  let obj2 = importAll(14463);
   _require = callback(obj2.useRoleIcon(editStateId, guildId), 2)[1];
-  let obj3 = importAll(14461);
+  let obj3 = importAll(14463);
   role = obj3.useRole(editStateId, guildId);
   const items = [role];
   const customIconSrc = React.useMemo(() => {
@@ -80,7 +80,7 @@ function Content() {
   obj1[1] = intl.string(_getSystemLocale.t.sEr1zr);
   items1[1] = callback2(tmpResult, obj1);
   obj2 = { description: null, image: null, imageUploadSize: null, previewShape: null, previewResizeMode: "cover", setImage: null, disabled: null };
-  tmpResult = tmp(16808);
+  tmpResult = tmp(16817);
   const intl2 = tmp4(1236).intl;
   obj2[0] = intl2.string(_getSystemLocale.t.Glqj9m);
   obj2[1] = tmp10;
@@ -96,7 +96,7 @@ function Content() {
   const intl3 = tmp4(1236).intl;
   obj3[1] = intl3.string(_getSystemLocale.t["W7hH+z"]);
   items1[3] = callback2(role(9060), obj3);
-  items1[4] = callback2(role(16846), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+  items1[4] = callback2(role(16855), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
   obj[0] = items1;
   return callback3(closure_11, obj);
 }

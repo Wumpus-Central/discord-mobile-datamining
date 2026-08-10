@@ -226,8 +226,8 @@ function EditSection(guildId) {
   let obj1 = guildId(589);
   const items = [createGuildRecordFromRust];
   const stateFromStores = obj1.useStateFromStores(items, () => outer1_8.getGuild(guildId));
-  dependencyMap = trackUserProfileAction(10134)();
-  useBadges = trackUserProfileAction(10134)({ guild: stateFromStores });
+  dependencyMap = trackUserProfileAction(10135)();
+  useBadges = trackUserProfileAction(10135)({ guild: stateFromStores });
   obj = { style: trackUserProfileAction(8835)().primaryButtons, maxWidth: ACTION_SHEET_MAX_WIDTH, primaryButton: null, secondaryButton: null };
   const tmp = trackUserProfileAction;
   const tmp3 = trackUserProfileAction(8835)();
@@ -246,7 +246,7 @@ function EditSection(guildId) {
   obj[3] = function onPress() {
     trackUserProfileAction({ action: "EDIT_PROFILE" });
     trackUserProfileAction(4271).hideActionSheet();
-    trackUserProfileAction(10596)();
+    trackUserProfileAction(10597)();
     dependencyMap();
   };
   obj[2] = callback(guildId(4714).Button, obj);
@@ -261,13 +261,13 @@ function EditSection(guildId) {
     obj2[3] = function onPress() {
       trackUserProfileAction({ action: "EDIT_GUILD_PROFILE" });
       trackUserProfileAction(4271).hideActionSheet();
-      trackUserProfileAction(10596)();
+      trackUserProfileAction(10597)();
       callback();
     };
     tmp6Result = tmp6(tmp4(4714).Button, obj2);
   }
   obj[3] = tmp6Result;
-  return callback(trackUserProfileAction(12269), obj);
+  return callback(trackUserProfileAction(12271), obj);
 }
 function UserProfileWidgetsBoardContainer(isCurrentUser) {
   let containerBackground;
@@ -279,7 +279,7 @@ function UserProfileWidgetsBoardContainer(isCurrentUser) {
   const items = [tmp3.card, { backgroundColor: containerBackground }];
   const obj = { style: tmp3.profileContent, children: null };
   if (isCurrentUser) {
-    isCurrentUser = callback(tmp(12339), {});
+    isCurrentUser = callback(tmp(12341), {});
   }
   const items1 = [isCurrentUser, callback(WidgetRenderer, { userId, isVisible, cardStyle: items })];
   obj[1] = items1;

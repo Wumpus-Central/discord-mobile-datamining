@@ -38,12 +38,11 @@ function FavoritesGuildActionSheet() {
       const intl2 = tmp4(1236).intl;
       obj2[0] = intl2.string(tmp4(1236).t["0dOFq+"]);
       const obj3 = { IconComponent: null };
-      obj3[0] = tmp4(11538).ArrowsUpDownIcon;
+      obj3[0] = tmp4(11539).ArrowsUpDownIcon;
       obj2[1] = tmp7(tmp4(5766).ActionSheetRow.Icon, obj3);
       obj2[2] = function onPress() {
         tmp3(4271).hideActionSheet(closure_6);
-        const obj = tmp3(4271);
-        const result = tmp2(15264).openFavoritesGuildChannelSortModal();
+        tmp3(15271)();
       };
       obj1[1] = tmp7(tmp4(5766).ActionSheetRow, obj2);
       tmp7Result = tmp7(tmp4(5766).ActionSheetRow.Group, obj1);
@@ -87,7 +86,7 @@ function FavoritesGuildActionSheet() {
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 FavoritesGuildActionSheet = "FavoritesGuildActionSheet";
-let result = require("jsxProd").fileFinishedImporting("modules/favorites/native/FavoritesGuildActionSheet.tsx");
+const result = require("jsxProd").fileFinishedImporting("modules/favorites/native/FavoritesGuildActionSheet.tsx");
 
 export const openFavoritesGuildActionSheet = function openFavoritesGuildActionSheet() {
   let obj = ACTION_SHEET_HEIGHT_HALF;

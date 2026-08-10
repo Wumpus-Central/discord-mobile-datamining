@@ -523,7 +523,7 @@ let set = new Set(items);
 const result = set.fileFinishedImporting("modules/quests/lib/analytics/AnalyticsActions.tsx");
 
 export { trackQuestEvent };
-export const trackAppStoreOverlayEvent = function trackAppStoreOverlayEvent(f85448, closure_1, arg2, event, time_spent_ms) {
+export const trackAppStoreOverlayEvent = function trackAppStoreOverlayEvent(f85465, closure_1, arg2, event, time_spent_ms) {
   let obj = { content_name: null, cta_name: null, impression_id: null, source_content_name: null, app_id: null, content_position: null };
   obj[0] = getQuestContentName.getQuestContentName(closure_1.content);
   ({ ctaContent: obj[1], impressionId: obj[2] } = closure_1);
@@ -535,7 +535,7 @@ export const trackAppStoreOverlayEvent = function trackAppStoreOverlayEvent(f854
   if (tmp) {
     tmp = undefined !== time_spent_ms;
   }
-  obj = { questId: f85448.id, event, properties: null, sourceQuestContent: null };
+  obj = { questId: f85465.id, event, properties: null, sourceQuestContent: null };
   let tmp3 = obj;
   if (tmp) {
     obj = {};

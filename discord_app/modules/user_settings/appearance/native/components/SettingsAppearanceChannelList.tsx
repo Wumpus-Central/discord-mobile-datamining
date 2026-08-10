@@ -77,9 +77,9 @@ export default function ChannelListPreview(useGradientBackground) {
     obj[0] = themes;
     obj[1] = themeIndex;
     obj[3] = tmp4(712).colors.BACKGROUND_BASE_LOW;
-    obj[1] = callback(tmp4(14532), obj);
+    obj[1] = callback(tmp4(14534), obj);
     tmp7 = callback(closure_4, obj);
-    const tmp4Result = tmp4(14532);
+    const tmp4Result = tmp4(14534);
   }
   const items2 = [tmp7, , ];
   const obj1 = { contentContainerStyle: null, data: null, renderItem: null, keyExtractor: null, showsVerticalScrollIndicator: false, importantForAccessibility: "no-hide-descendants" };

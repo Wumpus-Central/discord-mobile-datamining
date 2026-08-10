@@ -26,7 +26,7 @@ export default function QuestDisclosureModal(arg0) {
   let require;
   ({ isTargetedDisclosure: require, gamePublisher: importDefault, gameTitle: dependencyMap, cosponsorName: jsx, isVideoQuest: closure_4 } = arg0);
   function onClose() {
-    return callback2(14345).hideModal();
+    return callback2(14347).hideModal();
   }
   let obj = {
     headerLeft: onClose,

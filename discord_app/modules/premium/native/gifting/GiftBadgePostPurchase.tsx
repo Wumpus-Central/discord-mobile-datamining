@@ -97,7 +97,7 @@ function LevelUpScreen(arg0) {
   if (tmp7Result) {
     const obj1 = { icon: null, size: 140 };
     obj1[0] = newTier.simple_icon_url;
-    tmp7Result = tmp7(tmp(10040), obj1);
+    tmp7Result = tmp7(tmp(10041), obj1);
   }
   obj[1] = tmp7Result;
   const items = [closure_10(View, obj), ];

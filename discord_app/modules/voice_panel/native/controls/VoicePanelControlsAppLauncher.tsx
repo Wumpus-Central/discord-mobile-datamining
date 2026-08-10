@@ -32,7 +32,7 @@ const memoResult = importAllResult.memo(function VoicePanelControlsAppLauncher(g
   let derivedValue1;
   let obj = gestureSpecs(8391);
   const gradientTop = obj.useGradientTop();
-  const context = importAllResult.useContext(setControlsMode(11644));
+  const context = importAllResult.useContext(setControlsMode(11645));
   setControlsMode = context.setControlsMode;
   ({ channelId: c2, safeArea, windowDimensions } = context);
   const tmp4 = setControlsMode(8732)(windowDimensions);
@@ -44,13 +44,13 @@ const memoResult = importAllResult.memo(function VoicePanelControlsAppLauncher(g
   setControlsMode(38)(null != stateFromStores, "channel should not be null");
   const tmp = callback3();
   const items1 = [setControlsMode];
-  const controlsDrawerOpenWidth = gestureSpecs(11651).getControlsDrawerOpenWidth(tmp4.width, rect.left, rect.right);
+  const controlsDrawerOpenWidth = gestureSpecs(11652).getControlsDrawerOpenWidth(tmp4.width, rect.left, rect.right);
   const callback = importAllResult.useCallback(() => {
     const ComponentDispatch = gestureSpecs(_undefined[12]).ComponentDispatch;
     ComponentDispatch.dispatch(derivedValue1.SELECT_ACTIVITY);
     setControlsMode({ mode: derivedValue.HIDDEN });
   }, items1);
-  const obj3 = gestureSpecs(11651);
+  const obj3 = gestureSpecs(11652);
   const appLauncherChatInputRefDummy = gestureSpecs(9548).useAppLauncherChatInputRefDummy({ noop: true });
   const obj4 = gestureSpecs(9548);
   const ref = importAllResult.useRef(gestureSpecs(9548).AppLauncherKeyboardCloseReason.DISMISSED);
@@ -97,12 +97,12 @@ const memoResult = importAllResult.memo(function VoicePanelControlsAppLauncher(g
   const animatedStyle = gestureSpecs(4036).useAnimatedStyle(L);
   obj = { style: items2, children: null };
   items2 = [tmp.container, gradientTop, animatedStyle];
-  const items3 = [callback(setControlsMode(11467), { bottomSheetIndex: sharedValue1, bottomSheetPosition: sharedValue, bottomSheetExpandReasonRef: ref1, context: { type: "channel", channel: stateFromStores }, chatInputRef: appLauncherChatInputRefDummy, entrypoint: gestureSpecs(9549).AppLauncherEntrypoint.VOICE, keyboardCloseReasonRef: ref, onActivityItemSelected: callback, width: controlsDrawerOpenWidth }), ];
+  const items3 = [callback(setControlsMode(11468), { bottomSheetIndex: sharedValue1, bottomSheetPosition: sharedValue, bottomSheetExpandReasonRef: ref1, context: { type: "channel", channel: stateFromStores }, chatInputRef: appLauncherChatInputRefDummy, entrypoint: gestureSpecs(9549).AppLauncherEntrypoint.VOICE, keyboardCloseReasonRef: ref, onActivityItemSelected: callback, width: controlsDrawerOpenWidth }), ];
   obj1 = { title: null, disablePill: true };
   const obj9 = gestureSpecs(4036);
   const intl = gestureSpecs(1236).intl;
   obj1[0] = intl.string(gestureSpecs(1236).t.shUONg);
-  items3[1] = callback(setControlsMode(11652), obj1);
+  items3[1] = callback(setControlsMode(11653), obj1);
   obj[1] = items3;
   obj[0] = callback2(setControlsMode(4036).View, obj);
   return callback(closure_9, obj);

@@ -317,7 +317,7 @@ function _apiLogin() {
               let obj = iter;
               obj = callback2(table[11]);
               callback2 = iter;
-              const f120210 = () => { ... };
+              const f120251 = () => { ... };
               function handler() { ... }
               const subscription = obj.subscribe(iter, handler);
             }
@@ -358,7 +358,7 @@ function subscribeOnce(subscribe) {
   let closure_2 = arg2;
   function handler(arg0) {
     obj.unsubscribe(closure_1, handler);
-    return f120210(arg0);
+    return f120251(arg0);
   }
   return subscribe.subscribe("LOGIN_SUCCESS", handler);
 }
@@ -372,7 +372,7 @@ let obj = {
     enforcing.logToDevice(json);
   },
   () => {
-    let obj = callback(9875);
+    let obj = callback(9876);
     const result = obj.resetComponentProfiler();
     obj = { type: "response", status: "success", message: "reset-component-profiler" };
     const merged = Object.assign(undefined);
@@ -380,7 +380,7 @@ let obj = {
     enforcing.logToDevice(json);
   },
   () => {
-    let obj = callback(9875);
+    let obj = callback(9876);
     const result = obj.pauseComponentProfiler();
     obj = { type: "response", status: "success", message: "pause-component-profiler" };
     const merged = Object.assign(undefined);
@@ -388,7 +388,7 @@ let obj = {
     enforcing.logToDevice(json);
   },
   () => {
-    let obj = callback(9875);
+    let obj = callback(9876);
     const result = obj.resumeComponentProfiler();
     obj = { type: "response", status: "success", message: "resume-component-profiler" };
     const merged = Object.assign(undefined);
@@ -397,11 +397,11 @@ let obj = {
   },
   () => {
     let obj = { stats: null };
-    obj[0] = callback(9875).dumpStats();
+    obj[0] = callback(9876).dumpStats();
     obj = { type: "response", status: "success", message: "dump-component-profiler-stats" };
     const merged = Object.assign(obj);
     const json = JSON.stringify(obj);
-    const obj2 = callback(9875);
+    const obj2 = callback(9876);
     enforcing.logToDevice(json);
   },
   () => {

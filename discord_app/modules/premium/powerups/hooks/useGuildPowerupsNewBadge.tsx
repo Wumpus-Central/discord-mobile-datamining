@@ -60,7 +60,7 @@ export const useAutoDismissGuildPowerupsNewBadge = function useAutoDismissGuildP
   const items = [calculateAppliedBoosts];
   const stateFromStores = _initialize.useStateFromStores(items, () => outer1_5.getStateForGuild(closure_0));
   let obj = _initialize;
-  const tmp2Result = num(11863)(guildId, stateFromStores);
+  const tmp2Result = num(11864)(guildId, stateFromStores);
   num = 0;
   if (tmp2Result >= constants.GUILD_THEME) {
     num = tmp2Result;

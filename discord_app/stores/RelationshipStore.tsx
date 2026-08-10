@@ -74,7 +74,7 @@ let closure_15 = {};
 let c16 = 0;
 let c17 = 0;
 let c18 = 0;
-let closure_19 = { friends: "_desired", blocked: "call", ignored: "paths", blockedOrIgnored: "call" };
+let closure_19 = { friends: "HermesInternal", blocked: "accessibilityRole", ignored: "onPress", blockedOrIgnored: "keys" };
 const map1 = new Map();
 class RelationshipStore extends Store {
 }

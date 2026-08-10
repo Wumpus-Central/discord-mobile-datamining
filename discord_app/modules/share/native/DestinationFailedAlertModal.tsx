@@ -89,8 +89,8 @@ function FailedChannelRow(channel) {
   });
   obj = { style: tmp.row, children: null };
   obj = { "aria-label": "", guild: stateFromStores, channel, size: null };
-  obj[3] = channel(10268).GuildIconWithChannelTypeSizes.SMALL_32;
-  const items1 = [callback(channel(10268).GuildIconWithChannelType, obj), ];
+  obj[3] = channel(10269).GuildIconWithChannelTypeSizes.SMALL_32;
+  const items1 = [callback(channel(10269).GuildIconWithChannelType, obj), ];
   const tmp3 = computeChannelName(channel);
   items1[1] = callback(channel(4299).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: computeChannelName(channel) });
   obj[1] = items1;

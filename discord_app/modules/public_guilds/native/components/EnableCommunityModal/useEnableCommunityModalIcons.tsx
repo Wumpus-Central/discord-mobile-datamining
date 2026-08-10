@@ -19,9 +19,9 @@ const prototype = EnableCommunityModalIcons.prototype;
 Object.defineProperty(prototype, "safetyCheck", {
   get: function safetyCheck() {
     if (obj.isThemeDark(this.theme)) {
-      let tmpResult = tmp(16745);
+      let tmpResult = tmp(16754);
     } else {
-      tmpResult = tmp(16746);
+      tmpResult = tmp(16755);
     }
     return tmpResult;
   },
@@ -36,9 +36,9 @@ Object.defineProperty(prototype, "channelSetup", {
 Object.defineProperty(prototype, "finishingTouches", {
   get: function finishingTouches() {
     if (obj.isThemeDark(this.theme)) {
-      let tmpResult = tmp(16751);
+      let tmpResult = tmp(16760);
     } else {
-      tmpResult = tmp(16752);
+      tmpResult = tmp(16761);
     }
     return tmpResult;
   },
