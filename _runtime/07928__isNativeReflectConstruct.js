@@ -5,9 +5,8 @@ import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
 import "noop";
 import { jsx } from "jsxProd";
-import { __INTERNAL_VIEW_CONFIG } from "metro/07929___INTERNAL_VIEW_CONFIG.js";
 
-const Rect = arg1;
+const RadialGradient = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +26,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Rect {
+class RadialGradient {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, Rect);
+    tmp = _isNativeReflectConstruct(this, RadialGradient);
     tmp2 = __esModule;
-    obj = __esModule(Rect);
+    obj = __esModule(RadialGradient);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -47,30 +46,56 @@ class Rect {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(Rect, require("_isNativeReflectConstruct"));
+require("_inherits")(RadialGradient, require("_isNativeReflectConstruct"));
 const items = [
   {
     key: "render",
     value: function render() {
+      let cx;
+      let cy;
+      let fx;
+      let r;
+      let rx;
+      let ry;
       const self = this;
       const props = this.props;
-      let obj = { x: props.x, y: props.y, width: props.width, height: props.height, rx: props.rx, ry: props.ry };
+      ({ rx, ry, r, cx, cy, fx } = props);
+      if (undefined === fx) {
+        fx = cx;
+      }
+      let fy = props.fy;
+      let obj = { fx, fy: null, rx: null, ry: null, cx: null, cy: null };
+      if (undefined === fy) {
+        fy = cy;
+      }
+      obj[1] = fy;
+      if (!rx) {
+        rx = r;
+      }
+      obj[2] = rx;
+      if (!ry) {
+        ry = r;
+      }
+      obj[3] = ry;
+      obj[4] = cx;
+      obj[5] = cy;
       obj = {
         ref(arg0) {
           return self.refMethod(arg0);
         }
       };
-      const tmp = __INTERNAL_VIEW_CONFIG;
-      const merged = Object.assign(self(7850).withoutXY(this, props));
-      const merged1 = Object.assign(obj);
-      return <tmp ref={function ref(arg0) {
-        return self.refMethod(arg0);
-      }} />;
+      const merged = Object.assign(obj);
+      const merged1 = Object.assign(self(7914)(props, this));
+      return jsx(self(7929), {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      });
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Rect, items);
-importDefaultResultResult.displayName = "Rect";
-importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
+const importDefaultResultResult = importDefaultResult(RadialGradient, items);
+importDefaultResultResult.displayName = "RadialGradient";
+importDefaultResultResult.defaultProps = { cx: "50%", cy: "50%", r: "50%" };
 
 export default importDefaultResultResult;

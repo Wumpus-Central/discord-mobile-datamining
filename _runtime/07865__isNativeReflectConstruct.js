@@ -7,7 +7,7 @@ import "noop";
 import { jsx } from "jsxProd";
 import { __INTERNAL_VIEW_CONFIG } from "metro/07866___INTERNAL_VIEW_CONFIG.js";
 
-const ClipPath = arg1;
+const Circle = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +27,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class ClipPath {
+class Circle {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, ClipPath);
+    tmp = _isNativeReflectConstruct(this, Circle);
     tmp2 = __esModule;
-    obj = __esModule(ClipPath);
+    obj = __esModule(Circle);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -47,21 +47,39 @@ class ClipPath {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(ClipPath, require("_isNativeReflectConstruct"));
+require("_inherits")(Circle, require("_isNativeReflectConstruct"));
 const items = [
   {
     key: "render",
     value: function render() {
+      let cx;
+      let cy;
+      let r;
+      const self = this;
       const props = this.props;
-      const obj = { ref: this.refMethod };
-      const tmp = __INTERNAL_VIEW_CONFIG;
-      const merged = Object.assign(ClipPath(7850).extract(this, props));
-      obj.children = props.children;
-      return <tmp ref={this.refMethod} />;
+      let obj = {};
+      ({ cx, cy, r } = props);
+      const merged = Object.assign(self(7852).extract(this, props));
+      obj.cx = cx;
+      obj.cy = cy;
+      obj.r = r;
+      obj = {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      };
+      const obj2 = self(7852);
+      const merged1 = Object.assign(obj);
+      return jsx(__INTERNAL_VIEW_CONFIG, {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      });
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(ClipPath, items);
-importDefaultResultResult.displayName = "ClipPath";
+const importDefaultResultResult = importDefaultResult(Circle, items);
+importDefaultResultResult.displayName = "Circle";
+importDefaultResultResult.defaultProps = { cx: 0, cy: 0, r: 0 };
 
 export default importDefaultResultResult;

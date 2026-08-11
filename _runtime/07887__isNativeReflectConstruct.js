@@ -7,7 +7,7 @@ import "noop";
 import { jsx } from "jsxProd";
 import { __INTERNAL_VIEW_CONFIG } from "metro/07888___INTERNAL_VIEW_CONFIG.js";
 
-const FeOffset = arg1;
+const FeGaussianBlur = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +27,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeOffset {
+class FeGaussianBlur {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, FeOffset);
+    tmp = _isNativeReflectConstruct(this, FeGaussianBlur);
     tmp2 = __esModule;
-    obj = __esModule(FeOffset);
+    obj = __esModule(FeGaussianBlur);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -47,33 +47,34 @@ class FeOffset {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(FeOffset, require("_isNativeReflectConstruct"));
+require("_inherits")(FeGaussianBlur, require("_isNativeReflectConstruct"));
 let obj = {
   key: "render",
   value: function render() {
     const self = this;
-    const merged = Object.assign(this.props);
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
     const tmp = __INTERNAL_VIEW_CONFIG;
-    const merged1 = Object.assign(self(7873).extractFilter(this.props));
-    const obj2 = self(7873);
-    const merged2 = Object.assign(self(7873).extractIn(this.props));
+    const merged = Object.assign(self(7875).extractFilter(this.props));
+    const obj2 = self(7875);
+    const merged1 = Object.assign(self(7875).extractIn(this.props));
+    const obj3 = self(7875);
+    const merged2 = Object.assign(self(7875).extractFeGaussianBlur(this.props));
     return <tmp ref={function ref(arg0) {
       return self.refMethod(arg0);
     }} />;
   }
 };
 const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeOffset, items);
-importDefaultResultResult.displayName = "FeOffset";
+const importDefaultResultResult = importDefaultResult(FeGaussianBlur, items);
+importDefaultResultResult.displayName = "FeGaussianBlur";
 obj = {};
 let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.dx = 0;
-obj.dy = 0;
+obj.stdDeviation = 0;
+obj.edgeMode = "none";
 importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

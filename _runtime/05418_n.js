@@ -25,10 +25,10 @@ const fn = function n(arg0) {
       let TIMING = GESTURE_SOURCE.ANIMATION_METHOD.SPRING;
     }
     if (TIMING === tmp3(5400).ANIMATION_METHOD.TIMING) {
-      let tmp3Result = tmp3(1634);
+      let tmp3Result = tmp3(1653);
       let withTimingResult = tmp3Result.withTiming(point, configs, onComplete);
     } else {
-      tmp3Result = tmp3(1634);
+      tmp3Result = tmp3(1653);
       const _Object = Object;
       const obj = { velocity: null };
       obj[0] = velocity;

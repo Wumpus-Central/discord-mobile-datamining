@@ -4,13 +4,9 @@ import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
 import "noop";
-import _isNativeReflectConstruct from "_isNativeReflectConstruct";
 import { jsx } from "jsxProd";
-import { extractProps } from "07850_extractProps.js";
-import { extractFont } from "07857_extractFont.js";
-import { __INTERNAL_VIEW_CONFIG } from "metro/07936___INTERNAL_VIEW_CONFIG.js";
 
-const Text = arg1;
+const Symbol = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,69 +26,51 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Text {
+class Symbol {
   constructor() {
     self = this;
-    items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
-    items1 = [...items];
+    tmp = _isNativeReflectConstruct(this, Symbol);
     tmp2 = __esModule;
-    obj = __esModule(apply);
+    obj = __esModule(Symbol);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      let tmp = matrix;
-      if (matrix) {
-        tmp = !matrix.matrix;
-      }
-      if (tmp) {
-        tmp = outer1_1(outer1_2[8])(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const propsAndStylesResult = _undefined(outer1_2[9]).propsAndStyles(matrix);
-      const obj = _undefined(outer1_2[9]);
-      const merged = Object.assign(propsAndStylesResult, _undefined(outer1_2[10]).pickNotNil(outer1_1(outer1_2[11])(propsAndStylesResult, true)));
-      if (_undefined.root) {
-        const root = _undefined.root;
-        root.setNativeProps(propsAndStylesResult);
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-require("_inherits")(Text, require("_isNativeReflectConstruct"));
-let items = [
+require("_inherits")(Symbol, require("_isNativeReflectConstruct"));
+const items = [
   {
     key: "render",
     value: function render() {
-      let obj = Text(7850);
-      const propsAndStylesResult = obj.propsAndStyles(this.props);
-      obj = {};
-      const merged = Object.assign(propsAndStylesResult);
-      obj.x = null;
-      obj.y = null;
-      const tmp2Result = extractProps(obj, this);
-      const merged1 = Object.assign(tmp2Result, extractFont(propsAndStylesResult, true));
-      tmp2Result.ref = this.refMethod;
-      obj = {};
-      const tmp2 = extractProps;
-      const merged2 = Object.assign(tmp2Result);
-      return jsx(__INTERNAL_VIEW_CONFIG, {});
+      const self = this;
+      const props = this.props;
+      let obj = { name: props.id };
+      obj = {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      };
+      const merged = Object.assign(obj);
+      const merged1 = Object.assign(self(7850)(props));
+      obj.children = props.children;
+      return jsx(self(7934), {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      });
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Text, items);
-importDefaultResultResult.displayName = "Text";
+const importDefaultResultResult = importDefaultResult(Symbol, items);
+importDefaultResultResult.displayName = "Symbol";
 
 export default importDefaultResultResult;

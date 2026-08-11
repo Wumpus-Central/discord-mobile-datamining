@@ -2,7 +2,7 @@
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
-import { createStandardNavigationFactories } from "01481_createStandardNavigationFactories.js";
+import { createStandardNavigationFactories } from "01500_createStandardNavigationFactories.js";
 
 let Platform;
 let StyleSheet;

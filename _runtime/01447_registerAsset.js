@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images", width: 400, height: 400, scales: [1], hash: "212a10d1e3da5ff0492c97f7e14e9d29", name: "nitro_wumpus_avatar", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/avatars", width: 96, height: 96, scales: [1], hash: "e2638b3766522b844050b85fb10215de", name: "default_avatar_2_small", type: "png" });

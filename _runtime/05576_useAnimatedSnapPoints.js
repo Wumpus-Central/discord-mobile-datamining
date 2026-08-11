@@ -1,5 +1,5 @@
 // _runtime/05576_useAnimatedSnapPoints.js
-import { cancelAnimation } from "01634_cancelAnimation.js";
+import { cancelAnimation } from "01653_cancelAnimation.js";
 import { DEFAULT_HANDLE_HEIGHT } from "05403_DEFAULT_HANDLE_HEIGHT.js";
 import { normalizeSnapPoint } from "05416_normalizeSnapPoint.js";
 const require = arg1;
@@ -100,7 +100,7 @@ arg5.useAnimatedSnapPoints = (snapPoints, containerHeight, contentHeight, handle
         length = items.length;
         tmp = !length;
         if (length) {
-          tmp = !items.find(/* F105585 */ function() { ... });
+          tmp = !items.find(/* F105664 */ function() { ... });
         }
         return !tmp;
       }

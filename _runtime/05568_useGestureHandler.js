@@ -1,5 +1,5 @@
 // _runtime/05568_useGestureHandler.js
-import { cancelAnimation } from "01634_cancelAnimation.js";
+import { cancelAnimation } from "01653_cancelAnimation.js";
 import { GESTURE_SOURCE } from "05400_GESTURE_SOURCE.js";
 import { LegacyBaseButton } from "05427_LegacyBaseButton.js";
 const require = arg1;

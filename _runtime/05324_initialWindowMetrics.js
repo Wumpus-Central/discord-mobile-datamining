@@ -20,7 +20,7 @@ let num2 = 0;
 if (undefined !== height) {
   num2 = height;
 }
-if (null == require("module_1612").initialWindowMetrics) {
+if (null == require("module_1631").initialWindowMetrics) {
   let obj = { frame: null, insets: null };
   obj = { x: 0, y: 0, width: null, height: null };
   obj[2] = num;
@@ -29,13 +29,13 @@ if (null == require("module_1612").initialWindowMetrics) {
   obj[1] = { top: 0, left: 0, right: 0, bottom: 0 };
   let initialWindowMetrics = obj;
 } else {
-  initialWindowMetrics = require("module_1612").initialWindowMetrics;
+  initialWindowMetrics = require("module_1631").initialWindowMetrics;
 }
 class SafeAreaProviderCompat {
   constructor(arg0) {
     ({ children, style } = global);
     SafeAreaInsetsContext = undefined;
-    SafeAreaInsetsContext = SafeAreaInsetsContext.useContext(require("module_1612").SafeAreaInsetsContext);
+    SafeAreaInsetsContext = SafeAreaInsetsContext.useContext(require("module_1631").SafeAreaInsetsContext);
     obj = {
       initialFrame: initialWindowMetrics.frame,
       render(onLayout) {

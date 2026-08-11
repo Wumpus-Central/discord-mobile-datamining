@@ -4,7 +4,7 @@ import { n } from "../05471_n.js";
 try {
   const _module = require("cancelAnimation");
   try {
-    const _module1 = require("module_4035");
+    const _module1 = require("module_4041");
     if (_module1 != null) {
       const fn = function t() {
 

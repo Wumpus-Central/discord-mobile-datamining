@@ -1,13 +1,15 @@
 // _runtime/metro/13621__.js
-import { 13622__ } from "13622__.js";
+import { f } from "../13622_f.js";
+import { all } from "../13632_all.js";
+import { 13633__ } from "13633__.js";
+let closure_2 = require("call")([].concat);
 
-export default (arg0) => {
-  let num = 0;
-  {
-    num = 0;
-    if (0 !== tmp) {
-      num = 13622__(tmp);
-    }
+export default require("all")("Reflect", "ownKeys") || (function ownKeys(arg0) {
+  const fResult = f.f(all(arg0));
+  const f = 13633__.f;
+  let tmp2 = fResult;
+  if (f) {
+    tmp2 = callback(fResult, f(arg0));
   }
-  return num;
-};
+  return tmp2;
+});

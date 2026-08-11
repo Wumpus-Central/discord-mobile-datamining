@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/gifting", scales: [1], hash: "23567740f6d29ae9ede6481866d4e5f2", name: "GiftingBadge.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2dpZnRpbmc=", scales: [1], hash: "e0b4816d3d5374849e6a4efdc0be7a06", name: "it.messages.e0b4816d3d5374849e6a4efdc0be7a06.compiled.messages", type: "jsona" });

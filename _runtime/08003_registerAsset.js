@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stage_channels/native/images", width: 25, height: 24, scales: [1, 2, 3], hash: "b252f7dc065300671ba9347414eb0bad", name: "ic_raised_hand", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons/voice_calls/dark_theme", width: 24, height: 24, scales: [2, 3], hash: "530ba220f07acfc32feb554b142fc895", name: "voice_bar_mute_on", type: "png" });

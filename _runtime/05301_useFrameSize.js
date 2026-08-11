@@ -3,7 +3,7 @@ import noop from "noop";
 import { Platform } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import __react_navigation__elements_contexts from "__react_navigation__elements_contexts";
-import { useEffect } from "01502_useEffect.js";
+import { useEffect } from "01521_useEffect.js";
 import { is } from "05303_is.js";
 
 let c4;

@@ -1,5 +1,5 @@
 // _runtime/05426_useScrollEventsHandlersDefault.js
-import { cancelAnimation } from "01634_cancelAnimation.js";
+import { cancelAnimation } from "01653_cancelAnimation.js";
 import { GESTURE_SOURCE } from "05400_GESTURE_SOURCE.js";
 import { useBottomSheetInternal } from "05407_useBottomSheetInternal.js";
 import { LegacyBaseButton } from "05427_LegacyBaseButton.js";

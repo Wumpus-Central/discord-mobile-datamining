@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/auto_moderation", width: 256, height: 256, scales: [1], hash: "424407a78216a455f8fc1ac2080855a1", name: "auto_moderation_avatar", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/avatars", width: 96, height: 96, scales: [1], hash: "f27907bace32e5b04cd2a7e2a779c82b", name: "default_avatar_3_small", type: "png" });

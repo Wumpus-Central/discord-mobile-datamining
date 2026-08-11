@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/age_assurance", scales: [1], hash: "0b6d07b6341a3ae92994978b32e945dc", name: "AgeAssurance.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "025dc524aaf7da18e264d4833ac6fc55", name: "hr.messages.025dc524aaf7da18e264d4833ac6fc55.compiled.messages", type: "jsona" });

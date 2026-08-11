@@ -1,4 +1,6 @@
 // _runtime/metro/03718__typeof.js
+import setUTCISOWeek from "setUTCISOWeek";
+import startOfUTCISOWeek from "startOfUTCISOWeek";
 import { Parser } from "Parser";
 
 let _createSuperInternal = require;
@@ -28,15 +30,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(FractionOfSecondParser, Parser) {
+function _setPrototypeOf(ISOWeekParser, Parser) {
   let _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(FractionOfSecondParser, Parser) {
-      FractionOfSecondParser.__proto__ = Parser;
-      return FractionOfSecondParser;
+    _setPrototypeOf = function _setPrototypeOf(ISOWeekParser, Parser) {
+      ISOWeekParser.__proto__ = Parser;
+      return ISOWeekParser;
     };
   }
-  return _setPrototypeOf(FractionOfSecondParser, Parser);
+  return _setPrototypeOf(ISOWeekParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -54,8 +56,24 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
+if (!setUTCISOWeek) {
+  let obj = { default: null };
+  obj[0] = setUTCISOWeek;
+  let tmp3 = obj;
+} else {
+  tmp3 = setUTCISOWeek;
+}
+let c3 = tmp3;
+if (!startOfUTCISOWeek) {
+  obj = { default: null };
+  obj[0] = startOfUTCISOWeek;
+  let tmp5 = obj;
+} else {
+  tmp5 = startOfUTCISOWeek;
+}
+let c4 = tmp5;
 _createSuperInternal = undefined;
-class FractionOfSecondParser {
+class ISOWeekParser {
   constructor() {
     if (this instanceof c1) {
       length = arguments.length;
@@ -91,10 +109,10 @@ class FractionOfSecondParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 30, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 100, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 30;
-          applyResult.priority = 30;
+          num3 = 100;
+          applyResult.priority = 100;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -105,7 +123,7 @@ class FractionOfSecondParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["t", "T"];
+          items1 = ["y", "Y", "u", "q", "Q", "M", "L", "w", "d", "D", "e", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -129,7 +147,7 @@ class FractionOfSecondParser {
     }
   }
 }
-closure_1 = FractionOfSecondParser;
+closure_1 = ISOWeekParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -141,12 +159,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: FractionOfSecondParser, writable: true, configurable: true };
-FractionOfSecondParser.prototype = Object.create(prototype, { constructor: obj });
+obj = { value: ISOWeekParser, writable: true, configurable: true };
+ISOWeekParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(FractionOfSecondParser, Parser);
+  _setPrototypeOf(ISOWeekParser, Parser);
 }
-_createSuperInternal = FractionOfSecondParser;
+_createSuperInternal = ISOWeekParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -204,42 +222,53 @@ _createSuperInternal = function _createSuperInternal() {
   }
   return tmp8;
 };
-obj = {
-  key: "parse",
-  value: function parse(arg0, arg1) {
-    const _createSuperInternal = arg1;
-    return _createSuperInternal(3688).mapValue(_createSuperInternal(3688).parseNDigits(arg1.length, arg0), function valueCallback(arg0) {
-      return Math.floor(arg0 * Math.pow(10, 3 - length.length));
-    });
-  }
-};
 let items = [
-  obj,
+  {
+    key: "parse",
+    value: function parse(arg0, arg1, ordinalNumber) {
+      if ("I" === arg1) {
+        return _createSuperInternal(3707).parseNumericPattern(_createSuperInternal(3708).numericPatterns.week, arg0);
+      } else if ("Io" === arg1) {
+        return ordinalNumber.ordinalNumber(arg0, { unit: "week" });
+      } else {
+        return _createSuperInternal(3707).parseNDigits(arg1.length, arg0);
+      }
+    }
+  },
+  {
+    key: "validate",
+    value: function validate(arg0, arg1) {
+      let tmp = arg1 >= 1;
+      if (tmp) {
+        tmp = arg1 <= 53;
+      }
+      return tmp;
+    }
+  },
   {
     key: "set",
-    value: function set(setUTCMilliseconds) {
-      setUTCMilliseconds.setUTCMilliseconds(arg2);
-      return setUTCMilliseconds;
+    value: function set(arg0, arg1, arg2) {
+      return tmp5.default(tmp3.default(arg0, arg2));
     }
   }
 ];
 if (0 < items.length) {
   do {
-    let tmp5 = items[num];
-    let flag = tmp5.enumerable;
-    let tmp6 = num;
+    let tmp9 = items[num];
+    let flag = tmp9.enumerable;
+    let tmp10 = num;
     if (!flag) {
       flag = false;
     }
-    tmp5.enumerable = flag;
-    tmp5.configurable = true;
-    if ("value" in tmp5) {
-      tmp5.writable = true;
+    tmp9.enumerable = flag;
+    tmp9.configurable = true;
+    if ("value" in tmp9) {
+      tmp9.writable = true;
     }
     let _Object = Object;
-    let definePropertyResult1 = Object.defineProperty(tmp4, tmp5.key, tmp5);
+    let definePropertyResult1 = Object.defineProperty(tmp8, tmp9.key, tmp9);
     num = num + 1;
   } while (num < items.length);
 }
 
-export { FractionOfSecondParser };
+export { ISOWeekParser };

@@ -1,21 +1,20 @@
 // _runtime/metro/16337__.js
-let obj = {
-  locale: "zh",
+globalThis.IntlMessageFormat.__addLocaleData({
+  locale: "hu",
   pluralRuleFunction(arg0, arg1) {
-    return "other";
+    if (arg1) {
+      if (1 == arg0) {
+        let str2 = "one";
+      } else {
+        str2 = "other";
+      }
+      let str = str2;
+    } else {
+      str = "other";
+      if (1 == arg0) {
+        str = "one";
+      }
+    }
+    return str;
   }
-};
-globalThis.IntlMessageFormat.__addLocaleData(obj);
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hans", parentLocale: "zh" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hans-HK", parentLocale: "zh-Hans" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hans-MO", parentLocale: "zh-Hans" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hans-SG", parentLocale: "zh-Hans" });
-obj = {
-  locale: "zh-Hant",
-  pluralRuleFunction(arg0, arg1) {
-    return "other";
-  }
-};
-globalThis.IntlMessageFormat.__addLocaleData(obj);
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hant-HK", parentLocale: "zh-Hant" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hant-MO", parentLocale: "zh-Hant-HK" });
+});

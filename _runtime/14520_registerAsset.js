@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/main_tabs", width: 216, height: 216, scales: [1], hash: "e8cc96dfc04f2226c8870fdf46cc16af", name: "ExampleVoiceChatActivity", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/main_tabs_v2/native/images", width: 16, height: 16, scales: [1, 2, 3], hash: "feb0699dba8bf9a96f37b026eba6ef56", name: "arrow-sm-down", type: "png" });

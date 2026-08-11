@@ -28,15 +28,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(Hour1to12Parser, Parser) {
+function _setPrototypeOf(QuarterParser, Parser) {
   let _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(Hour1to12Parser, Parser) {
-      Hour1to12Parser.__proto__ = Parser;
-      return Hour1to12Parser;
+    _setPrototypeOf = function _setPrototypeOf(QuarterParser, Parser) {
+      QuarterParser.__proto__ = Parser;
+      return QuarterParser;
     };
   }
-  return _setPrototypeOf(Hour1to12Parser, Parser);
+  return _setPrototypeOf(QuarterParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -55,7 +55,7 @@ function _getPrototypeOf(arg0) {
   return _getPrototypeOf(arg0);
 }
 _createSuperInternal = undefined;
-class Hour1to12Parser {
+class QuarterParser {
   constructor() {
     if (this instanceof c1) {
       length = arguments.length;
@@ -91,10 +91,10 @@ class Hour1to12Parser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 70, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 120, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 70;
-          applyResult.priority = 70;
+          num3 = 120;
+          applyResult.priority = 120;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -105,7 +105,7 @@ class Hour1to12Parser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["H", "K", "k", "t", "T"];
+          items1 = ["Y", "R", "q", "M", "L", "w", "I", "d", "D", "i", "e", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -129,7 +129,7 @@ class Hour1to12Parser {
     }
   }
 }
-closure_1 = Hour1to12Parser;
+closure_1 = QuarterParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -141,12 +141,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: Hour1to12Parser, writable: true, configurable: true };
-Hour1to12Parser.prototype = Object.create(prototype, { constructor: obj });
+let obj = { value: QuarterParser, writable: true, configurable: true };
+QuarterParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(Hour1to12Parser, Parser);
+  _setPrototypeOf(QuarterParser, Parser);
 }
-_createSuperInternal = Hour1to12Parser;
+_createSuperInternal = QuarterParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -207,13 +207,20 @@ _createSuperInternal = function _createSuperInternal() {
 obj = {
   key: "parse",
   value: function parse(arg0, arg1, ordinalNumber) {
-    if ("h" === arg1) {
-      return _createSuperInternal(3688).parseNumericPattern(_createSuperInternal(3689).numericPatterns.hour12h, arg0);
-    } else if ("ho" === arg1) {
-      return ordinalNumber.ordinalNumber(arg0, { unit: "hour" });
-    } else {
-      return _createSuperInternal(3688).parseNDigits(arg1.length, arg0);
+    if ("Q" !== arg1) {
+      if ("QQ" !== arg1) {
+        if ("Qo" === arg1) {
+          return ordinalNumber.ordinalNumber(arg0, { unit: "quarter" });
+        } else if ("QQQ" === arg1) {
+          return ordinalNumber.quarter(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.quarter(arg0, { width: "narrow", context: "formatting" });
+        } else if ("QQQQQ" === arg1) {
+          return ordinalNumber.quarter(arg0, { width: "narrow", context: "formatting" });
+        } else {
+          return ordinalNumber.quarter(arg0, { width: "wide", context: "formatting" }) || ordinalNumber.quarter(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.quarter(arg0, { width: "narrow", context: "formatting" });
+        }
+      }
     }
+    return _createSuperInternal(table[0]).parseNDigits(arg1.length, arg0);
   }
 };
 let items = [
@@ -223,27 +230,17 @@ let items = [
     value: function validate(arg0, arg1) {
       let tmp = arg1 >= 1;
       if (tmp) {
-        tmp = arg1 <= 12;
+        tmp = arg1 <= 4;
       }
       return tmp;
     }
   },
   {
     key: "set",
-    value: function set(getUTCHours) {
-      const tmp = getUTCHours.getUTCHours() >= 12;
-      if (tmp) {
-        if (arg2 < 12) {
-          getUTCHours.setUTCHours(arg2 + 12, 0, 0, 0);
-        }
-        return getUTCHours;
-      }
-      if (!tmp) {
-        if (12 === arg2) {
-          getUTCHours.setUTCHours(0, 0, 0, 0);
-        }
-      }
-      getUTCHours.setUTCHours(arg2, 0, 0, 0);
+    value: function set(setUTCMonth) {
+      setUTCMonth.setUTCMonth(3 * (arg2 - 1), 1);
+      setUTCMonth.setUTCHours(0, 0, 0, 0);
+      return setUTCMonth;
     }
   }
 ];
@@ -266,4 +263,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { Hour1to12Parser };
+export { QuarterParser };

@@ -34,7 +34,7 @@ const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
   fn.__workletHash = 8403038560398;
   fn.__initData = closure_6;
   let items = [iter.value];
-  const animatedProps = scrollableGesture(1634).useAnimatedProps(fn, items);
+  const animatedProps = scrollableGesture(1653).useAnimatedProps(fn, items);
   const items1 = [tmp4, scrollableGesture];
   const tmp7 = callback(() => {
     let result;

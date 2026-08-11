@@ -5,9 +5,8 @@ import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
 import "noop";
 import { jsx } from "jsxProd";
-import { __INTERNAL_VIEW_CONFIG } from "metro/07905___INTERNAL_VIEW_CONFIG.js";
 
-const ForeignObject = arg1;
+const Filter = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +26,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class ForeignObject {
+class Filter {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, ForeignObject);
+    tmp = _isNativeReflectConstruct(this, Filter);
     tmp2 = __esModule;
-    obj = __esModule(ForeignObject);
+    obj = __esModule(Filter);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -47,31 +46,31 @@ class ForeignObject {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(ForeignObject, require("_isNativeReflectConstruct"));
+require("_inherits")(Filter, require("_isNativeReflectConstruct"));
 const items = [
   {
     key: "render",
     value: function render() {
       const self = this;
       const props = this.props;
-      let obj = { x: props.x, y: props.y, width: props.width, height: props.height };
+      let obj = { name: props.id, x: props.x, y: props.y, width: props.width, height: props.height, filterUnits: props.filterUnits, primitiveUnits: props.primitiveUnits };
       obj = {
         ref(arg0) {
           return self.refMethod(arg0);
         }
       };
-      const tmp = __INTERNAL_VIEW_CONFIG;
-      const merged = Object.assign(self(7850).withoutXY(this, props));
-      const merged1 = Object.assign(obj);
-      obj.children = props.children;
-      return <tmp ref={function ref(arg0) {
-        return self.refMethod(arg0);
-      }} />;
+      const merged = Object.assign(obj);
+      obj.children = this.props.children;
+      return jsx(self(7905), {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      });
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(ForeignObject, items);
-importDefaultResultResult.displayName = "ForeignObject";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+const importDefaultResultResult = importDefaultResult(Filter, items);
+importDefaultResultResult.displayName = "Filter";
+importDefaultResultResult.defaultProps = { x: "-10%", y: "-10%", width: "120%", height: "120%", filterUnits: "objectBoundingBox", primitiveUnits: "userSpaceOnUse" };
 
 export default importDefaultResultResult;

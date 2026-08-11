@@ -2,7 +2,7 @@
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createStandardNavigationFactories from "createStandardNavigationFactories";
-import { createStandardNavigationFactories } from "01481_createStandardNavigationFactories.js";
+import { createStandardNavigationFactories } from "01500_createStandardNavigationFactories.js";
 
 const require = arg1;
 function StackNavigator(arg0) {

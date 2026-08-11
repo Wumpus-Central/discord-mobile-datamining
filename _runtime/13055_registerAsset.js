@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "d8c1977b6a087b3b59e64fe8d7b24249", name: "ic_mic_muted_light_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/nuf_channels/native/images", width: 275.5, height: 78, scales: [2, 3], hash: "b55be157bc31f9c933d8fe113de3e547", name: "voice_channels", type: "png" });

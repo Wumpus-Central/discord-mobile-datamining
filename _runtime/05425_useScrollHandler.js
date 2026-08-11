@@ -1,5 +1,5 @@
 // _runtime/05425_useScrollHandler.js
-import { cancelAnimation } from "01634_cancelAnimation.js";
+import { cancelAnimation } from "01653_cancelAnimation.js";
 import { useScrollEventsHandlersDefault } from "05426_useScrollEventsHandlersDefault.js";
 const require = arg1;
 let dependencyMap = arg6;
@@ -53,7 +53,7 @@ arg5.useScrollHandler = (arg0, onScroll, onScrollBeginDrag, onScrollEndDrag) => 
       obj.runOnJS(tmp2)(obj);
     }
   };
-  obj1 = { handleOnScroll: workletNoop, onScroll, runOnJS: tmp3(1634).runOnJS };
+  obj1 = { handleOnScroll: workletNoop, onScroll, runOnJS: tmp3(1653).runOnJS };
   fn.__closure = obj1;
   fn.__workletHash = 13105350120634;
   fn.__initData = closure_2;

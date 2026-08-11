@@ -1,6 +1,4 @@
 // _runtime/13135_SemVer.js
+import { SemVer } from "13125_SemVer.js";
 
-export default (arr) => {
-  let closure_0 = arg1;
-  return arr.sort((arg0, arg1) => callback(outer1_1[0])(arg1, arg0, callback));
-};
+export default (arg0, arg1) => new SemVer(arg0, arg1).major;

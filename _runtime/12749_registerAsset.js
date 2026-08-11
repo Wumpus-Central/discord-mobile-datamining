@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 18, height: 18, scales: [2, 3], hash: "0b73baa146c1e8e06b259fb4eb1affa0", name: "ic_check_18px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 134, height: 56, scales: [2, 3], hash: "3d54a60f579be5dc72492b0eeac44a2b", name: "img_discord_nitro_logo_centered_light", type: "png" });

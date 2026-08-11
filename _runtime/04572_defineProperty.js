@@ -1,5 +1,5 @@
 // _runtime/04572_defineProperty.js
-import { defineDataProperty } from "01406_defineDataProperty.js";
+import { defineDataProperty } from "01425_defineDataProperty.js";
 import { keys } from "04573_keys.js";
 let tmp = typeof Symbol === "function";
 if (typeof Symbol === "function") {

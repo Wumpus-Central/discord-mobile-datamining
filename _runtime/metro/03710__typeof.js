@@ -1,4 +1,5 @@
 // _runtime/metro/03710__typeof.js
+import startOfUTCISOWeek from "startOfUTCISOWeek";
 import { Parser } from "Parser";
 
 let _createSuperInternal = require;
@@ -28,15 +29,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(AMPMMidnightParser, Parser) {
+function _setPrototypeOf(ISOWeekYearParser, Parser) {
   let _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(AMPMMidnightParser, Parser) {
-      AMPMMidnightParser.__proto__ = Parser;
-      return AMPMMidnightParser;
+    _setPrototypeOf = function _setPrototypeOf(ISOWeekYearParser, Parser) {
+      ISOWeekYearParser.__proto__ = Parser;
+      return ISOWeekYearParser;
     };
   }
-  return _setPrototypeOf(AMPMMidnightParser, Parser);
+  return _setPrototypeOf(ISOWeekYearParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -54,8 +55,16 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
+if (!startOfUTCISOWeek) {
+  let obj = { default: null };
+  obj[0] = startOfUTCISOWeek;
+  let tmp3 = obj;
+} else {
+  tmp3 = startOfUTCISOWeek;
+}
+let c3 = tmp3;
 _createSuperInternal = undefined;
-class AMPMMidnightParser {
+class ISOWeekYearParser {
   constructor() {
     if (this instanceof c1) {
       length = arguments.length;
@@ -91,10 +100,10 @@ class AMPMMidnightParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 80, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 130, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 80;
-          applyResult.priority = 80;
+          num3 = 130;
+          applyResult.priority = 130;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -105,7 +114,7 @@ class AMPMMidnightParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["a", "B", "H", "k", "t", "T"];
+          items1 = ["G", "y", "Y", "u", "Q", "q", "M", "L", "w", "d", "D", "e", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -129,7 +138,7 @@ class AMPMMidnightParser {
     }
   }
 }
-closure_1 = AMPMMidnightParser;
+closure_1 = ISOWeekYearParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -141,12 +150,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: AMPMMidnightParser, writable: true, configurable: true };
-AMPMMidnightParser.prototype = Object.create(prototype, { constructor: obj });
+obj = { value: ISOWeekYearParser, writable: true, configurable: true };
+ISOWeekYearParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(AMPMMidnightParser, Parser);
+  _setPrototypeOf(ISOWeekYearParser, Parser);
 }
-_createSuperInternal = AMPMMidnightParser;
+_createSuperInternal = ISOWeekYearParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -206,48 +215,44 @@ _createSuperInternal = function _createSuperInternal() {
 };
 obj = {
   key: "parse",
-  value: function parse(arg0, arg1, dayPeriod) {
-    if ("b" !== arg1) {
-      if ("bb" !== arg1) {
-        if ("bbb" !== arg1) {
-          if ("bbbbb" === arg1) {
-            return dayPeriod.dayPeriod(arg0, { width: "narrow", context: "formatting" });
-          } else {
-            return dayPeriod.dayPeriod(arg0, { width: "wide", context: "formatting" }) || dayPeriod.dayPeriod(arg0, { width: "abbreviated", context: "formatting" }) || dayPeriod.dayPeriod(arg0, { width: "narrow", context: "formatting" });
-          }
-        }
-      }
+  value: function parse(arg0, arg1) {
+    if ("R" === arg1) {
+      let parseNDigitsSignedResult = _createSuperInternal(3707).parseNDigitsSigned(4, arg0);
+    } else {
+      parseNDigitsSignedResult = _createSuperInternal(3707).parseNDigitsSigned(arg1.length, arg0);
     }
-    return dayPeriod.dayPeriod(arg0, { width: "abbreviated", context: "formatting" }) || dayPeriod.dayPeriod(arg0, { width: "narrow", context: "formatting" });
+    return parseNDigitsSignedResult;
   }
 };
 let items = [
   obj,
   {
     key: "set",
-    value: function set(setUTCHours) {
-      setUTCHours.setUTCHours(_createSuperInternal(table[0]).dayPeriodEnumToHours(arg2), 0, 0, 0);
-      return setUTCHours;
+    value: function set(arg0, arg1, arg2) {
+      const date = new Date(0);
+      date.setUTCFullYear(arg2, 0, 4);
+      date.setUTCHours(0, 0, 0, 0);
+      return tmp3.default(date);
     }
   }
 ];
 if (0 < items.length) {
   do {
-    let tmp5 = items[num];
-    let flag = tmp5.enumerable;
-    let tmp6 = num;
+    let tmp7 = items[num];
+    let flag = tmp7.enumerable;
+    let tmp8 = num;
     if (!flag) {
       flag = false;
     }
-    tmp5.enumerable = flag;
-    tmp5.configurable = true;
-    if ("value" in tmp5) {
-      tmp5.writable = true;
+    tmp7.enumerable = flag;
+    tmp7.configurable = true;
+    if ("value" in tmp7) {
+      tmp7.writable = true;
     }
     let _Object = Object;
-    let definePropertyResult1 = Object.defineProperty(tmp4, tmp5.key, tmp5);
+    let definePropertyResult1 = Object.defineProperty(tmp6, tmp7.key, tmp7);
     num = num + 1;
   } while (num < items.length);
 }
 
-export { AMPMMidnightParser };
+export { ISOWeekYearParser };

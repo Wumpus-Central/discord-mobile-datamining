@@ -5,9 +5,10 @@ import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
 import "noop";
 import { jsx } from "jsxProd";
+import { extractFeFlood } from "07875_extractFeFlood.js";
 import { __INTERNAL_VIEW_CONFIG } from "metro/07892___INTERNAL_VIEW_CONFIG.js";
 
-const FeMerge = arg1;
+const FeFlood = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeMerge {
+class FeFlood {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, FeMerge);
+    tmp = _isNativeReflectConstruct(this, FeFlood);
     tmp2 = __esModule;
-    obj = __esModule(FeMerge);
+    obj = __esModule(FeFlood);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -47,7 +48,7 @@ class FeMerge {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(FeMerge, require("_isNativeReflectConstruct"));
+require("_inherits")(FeFlood, require("_isNativeReflectConstruct"));
 let obj = {
   key: "render",
   value: function render() {
@@ -58,19 +59,20 @@ let obj = {
       }
     };
     const tmp = __INTERNAL_VIEW_CONFIG;
-    const merged = Object.assign(self(7873).extractFilter(this.props));
-    const obj2 = self(7873);
-    const merged1 = Object.assign(self(7873).extractFeMerge(this.props, this));
+    const merged = Object.assign(self(7875).extractFilter(this.props));
+    const merged1 = Object.assign(extractFeFlood(this.props));
     return <tmp ref={function ref(arg0) {
       return self.refMethod(arg0);
     }} />;
   }
 };
 const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeMerge, items);
-importDefaultResultResult.displayName = "FeMerge";
+const importDefaultResultResult = importDefaultResult(FeFlood, items);
+importDefaultResultResult.displayName = "FeFlood";
 obj = {};
 let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.floodColor = "black";
+obj.floodOpacity = 1;
 importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

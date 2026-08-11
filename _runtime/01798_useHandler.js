@@ -1,0 +1,57 @@
+// _runtime/01798_useHandler.js
+import noop from "noop";
+import { isJest } from "01656_isJest.js";
+import { isWorkletFunction } from "01678_isWorkletFunction.js";
+import { freezeObjectInDev } from "01683_freezeObjectInDev.js";
+import { isAnimated } from "01799_isAnimated.js";
+
+let c3;
+let obj1;
+({ useEffect: obj1, useRef: c3 } = noop);
+
+export const useHandler = function useHandler(memoizedGestureCallbacks, items10) {
+  let context;
+  let savedDependencies;
+  const tmp = callback2(null);
+  const require = tmp;
+  if (null === tmp.current) {
+    let obj = freezeObjectInDev;
+    obj = { context: null, savedDependencies: null };
+    obj[0] = obj.makeShareable({});
+    obj[1] = [];
+    tmp.current = obj;
+  }
+  callback(() => () => {
+    closure_0.current = null;
+  }, []);
+  ({ context, savedDependencies } = tmp.current);
+  for (const key10024 in arg0) {
+    let tmp13 = key10024;
+    let tmp14 = require;
+    let tmp15 = dependencyMap;
+    let obj8 = isWorkletFunction;
+    if (obj8.isWorkletFunction(arg0[key10024])) {
+      continue;
+    } else {
+      let tmp5 = new.target;
+      let str = "Passed a function that is not a worklet. Please provide a worklet function.";
+      let tmp6 = new.target;
+      let reanimatedError = new tmp14(1664).ReanimatedError("Passed a function that is not a worklet. Please provide a worklet function.");
+      let tmp8 = reanimatedError;
+      throw reanimatedError;
+    }
+  }
+  const dependencies = isAnimated.buildDependencies(items10, memoizedGestureCallbacks);
+  const obj3 = isAnimated;
+  const tmp9 = require;
+  tmp.current.savedDependencies = dependencies;
+  obj = { context, doDependenciesDiffer: !isAnimated.areDependenciesEqual(dependencies, savedDependencies), useWeb: null };
+  const obj4 = isAnimated;
+  let isWebResult = isJest.isWeb();
+  if (!isWebResult) {
+    isWebResult = tmp9(1656).isJest();
+    const tmp9Result = tmp9(1656);
+  }
+  obj[2] = isWebResult;
+  return obj;
+};

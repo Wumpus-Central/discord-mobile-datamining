@@ -1,8 +1,36 @@
 // _runtime/metro/07424__.js
-arg5.ReplacementModesAndroid = { UNKNOWN_REPLACEMENT_MODE: 0, [0]: "UNKNOWN_REPLACEMENT_MODE", WITH_TIME_PRORATION: 1, [1]: "WITH_TIME_PRORATION", CHARGE_PRORATED_PRICE: 2, [2]: "CHARGE_PRORATED_PRICE", WITHOUT_PRORATION: 3, [3]: "WITHOUT_PRORATION", CHARGE_FULL_PRICE: 5, [5]: "CHARGE_FULL_PRICE", DEFERRED: 6, [6]: "DEFERRED" };
-arg5.PurchaseStateAndroid = { UNSPECIFIED_STATE: 0, [0]: "UNSPECIFIED_STATE", PURCHASED: 1, [1]: "PURCHASED", PENDING: 2, [2]: "PENDING" };
-arg5.PROMOTED_PRODUCT = "iap-promoted-product";
-arg5.InstallSourceAndroid = { NOT_SET: 0, [0]: "NOT_SET", GOOGLE_PLAY: 1, [1]: "GOOGLE_PLAY", AMAZON: 2, [2]: "AMAZON" };
-arg5.ProductType = { subs: "subs", sub: "sub", inapp: "inapp", iap: "iap" };
-arg5.TransactionReason = { PURCHASE: "PURCHASE", RENEWAL: "RENEWAL" };
-arg5.SubscriptionPlatform = { android: "android", amazon: "amazon", ios: "ios" };
+for (const key10013 in require("NativeModules")) {
+  let tmp2 = key10013;
+  arg5[key10013] = require("NativeModules")[key10013];
+  continue;
+}
+for (const key10017 in require("module_7426")) {
+  let tmp3 = key10017;
+  arg5[key10017] = require("module_7426")[key10017];
+  continue;
+}
+for (const key10021 in require("purchaseUpdatedListener")) {
+  let tmp4 = key10021;
+  arg5[key10021] = require("purchaseUpdatedListener")[key10021];
+  continue;
+}
+for (const key10025 in require("useIAP")) {
+  let tmp5 = key10025;
+  arg5[key10025] = require("useIAP")[key10025];
+  continue;
+}
+for (const key10029 in require("useIAPContext")) {
+  let tmp6 = key10029;
+  arg5[key10029] = require("useIAPContext")[key10029];
+  continue;
+}
+for (const key10033 in require("PurchaseError")) {
+  let tmp7 = key10033;
+  arg5[key10033] = require("PurchaseError")[key10033];
+  continue;
+}
+for (const key10037 in require("module_7441")) {
+  let tmp8 = key10037;
+  arg5[key10037] = require("module_7441")[key10037];
+  continue;
+}

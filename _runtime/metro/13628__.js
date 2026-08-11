@@ -1,8 +1,11 @@
 // _runtime/metro/13628__.js
-import { defineProperty } from "../13626_defineProperty.js";
-import { 13609__ } from "13609__.js";
+import { 13629__ } from "13629__.js";
 
-export default require("getOwnPropertyDescriptor") ? ((arg0, arg1, arg2) => defineProperty.f(arg0, arg1, 13609__(1, arg2))) : ((arg0, arg1, arg2) => {
-  arg0[arg1] = arg2;
-  return arg0;
-});
+export default (arg0) => {
+  const tmp = 13629__(arg0);
+  let num = 0;
+  if (tmp > 0) {
+    num = min(tmp, 9007199254740991);
+  }
+  return num;
+};

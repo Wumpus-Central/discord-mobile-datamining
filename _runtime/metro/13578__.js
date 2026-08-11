@@ -1,16 +1,7 @@
 // _runtime/metro/13578__.js
-import { call } from "../13581_call.js";
-let fn = Object;
-let closure_3 = require("call")("".split);
-if (require("module_13576")(() => !Object("z").propertyIsEnumerable(0))) {
-  fn = (arg0) => {
-    if ("String" === call(arg0)) {
-      let tmp2 = callback(arg0, "");
-    } else {
-      tmp2 = Object(arg0);
-    }
-    return tmp2;
-  };
-}
+import 13579__ from "13579__.js";
 
-export default fn;
+let obj = { target: "Object", stat: true, arity: 2, forced: null };
+obj[3] = Object.assign !== require("assign");
+obj = { assign: require("assign") };
+module_13579(obj, obj);

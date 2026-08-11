@@ -28,15 +28,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(TimestampSecondsParser, Parser) {
+function _setPrototypeOf(DayOfYearParser, Parser) {
   let _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(TimestampSecondsParser, Parser) {
-      TimestampSecondsParser.__proto__ = Parser;
-      return TimestampSecondsParser;
+    _setPrototypeOf = function _setPrototypeOf(DayOfYearParser, Parser) {
+      DayOfYearParser.__proto__ = Parser;
+      return DayOfYearParser;
     };
   }
-  return _setPrototypeOf(TimestampSecondsParser, Parser);
+  return _setPrototypeOf(DayOfYearParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -55,7 +55,7 @@ function _getPrototypeOf(arg0) {
   return _getPrototypeOf(arg0);
 }
 _createSuperInternal = undefined;
-class TimestampSecondsParser {
+class DayOfYearParser {
   constructor() {
     if (this instanceof c1) {
       length = arguments.length;
@@ -80,40 +80,59 @@ class TimestampSecondsParser {
       applyResult = call.apply(_createSuperInternal, items.concat(array));
       tmp13 = undefined === applyResult;
       if (tmp13) {
-        _ReferenceError2 = ReferenceError;
-        tmp20 = new.target;
-        str6 = "this hasn't been initialised - super() hasn't been called";
-        tmp21 = new.target;
+        _ReferenceError3 = ReferenceError;
+        tmp25 = new.target;
+        str7 = "this hasn't been initialised - super() hasn't been called";
+        tmp26 = new.target;
         referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-        tmp23 = referenceError;
+        tmp28 = referenceError;
         throw referenceError;
       } else {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 40, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 90, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 40;
-          applyResult.priority = 40;
+          num3 = 90;
+          applyResult.priority = 90;
         }
         if (tmp13) {
-          _ReferenceError = ReferenceError;
-          tmp16 = new.target;
-          str5 = "this hasn't been initialised - super() hasn't been called";
-          tmp17 = new.target;
+          _ReferenceError2 = ReferenceError;
+          tmp21 = new.target;
+          str6 = "this hasn't been initialised - super() hasn't been called";
+          tmp22 = new.target;
           referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-          tmp19 = referenceError1;
+          tmp24 = referenceError1;
           throw referenceError1;
         } else {
-          str3 = "incompatibleTokens";
-          if ("incompatibleTokens" in applyResult) {
+          str3 = "subpriority";
+          if ("subpriority" in applyResult) {
             _Object2 = Object;
-            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", { value: "*", enumerable: true, configurable: true, writable: true });
+            definePropertyResult1 = Object.defineProperty(applyResult, "subpriority", { value: 1, enumerable: true, configurable: true, writable: true });
           } else {
-            str4 = "*";
-            applyResult.incompatibleTokens = "*";
+            applyResult.subpriority = 1;
           }
-          return applyResult;
+          if (tmp13) {
+            _ReferenceError = ReferenceError;
+            tmp17 = new.target;
+            str5 = "this hasn't been initialised - super() hasn't been called";
+            tmp18 = new.target;
+            referenceError2 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            tmp20 = referenceError2;
+            throw referenceError2;
+          } else {
+            items1 = ["Y", "R", "q", "Q", "M", "L", "w", "I", "d", "E", "i", "e", "c", "t", "T"];
+            str4 = "incompatibleTokens";
+            if ("incompatibleTokens" in applyResult) {
+              _Object3 = Object;
+              obj = { value: null, enumerable: true, configurable: true, writable: true };
+              obj[0] = items1;
+              definePropertyResult2 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
+            } else {
+              applyResult.incompatibleTokens = items1;
+            }
+            return applyResult;
+          }
         }
       }
     } else {
@@ -127,7 +146,7 @@ class TimestampSecondsParser {
     }
   }
 }
-closure_1 = TimestampSecondsParser;
+closure_1 = DayOfYearParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -139,12 +158,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: TimestampSecondsParser, writable: true, configurable: true };
-TimestampSecondsParser.prototype = Object.create(prototype, { constructor: obj });
+let obj = { value: DayOfYearParser, writable: true, configurable: true };
+DayOfYearParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(TimestampSecondsParser, Parser);
+  _setPrototypeOf(DayOfYearParser, Parser);
 }
-_createSuperInternal = TimestampSecondsParser;
+_createSuperInternal = DayOfYearParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -204,17 +223,46 @@ _createSuperInternal = function _createSuperInternal() {
 };
 obj = {
   key: "parse",
-  value: function parse(arg0) {
-    return _createSuperInternal(table[0]).parseAnyDigitsSigned(arg0);
+  value: function parse(arg0, arg1, ordinalNumber) {
+    if ("D" !== arg1) {
+      if ("DD" !== arg1) {
+        if ("Do" === arg1) {
+          return ordinalNumber.ordinalNumber(arg0, { unit: "date" });
+        } else {
+          return _createSuperInternal(3707).parseNDigits(arg1.length, arg0);
+        }
+      }
+    }
+    return _createSuperInternal(3707).parseNumericPattern(_createSuperInternal(3708).numericPatterns.dayOfYear, arg0);
   }
 };
 let items = [
   obj,
   {
+    key: "validate",
+    value: function validate(getUTCFullYear) {
+      const uTCFullYear = getUTCFullYear.getUTCFullYear();
+      let tmp2 = arg1 >= 1;
+      if (_createSuperInternal(3707).isLeapYearIndex(uTCFullYear)) {
+        if (tmp2) {
+          tmp2 = arg1 <= 366;
+        }
+        let tmp3 = tmp2;
+      } else {
+        tmp3 = tmp2;
+        if (tmp2) {
+          tmp3 = arg1 <= 365;
+        }
+      }
+      return tmp3;
+    }
+  },
+  {
     key: "set",
-    value: function set(arg0, arg1, arg2) {
-      const items = [new Date(1000 * arg2), { timestampIsSet: true }];
-      return items;
+    value: function set(setUTCMonth) {
+      setUTCMonth.setUTCMonth(0, arg2);
+      setUTCMonth.setUTCHours(0, 0, 0, 0);
+      return setUTCMonth;
     }
   }
 ];
@@ -237,4 +285,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { TimestampSecondsParser };
+export { DayOfYearParser };

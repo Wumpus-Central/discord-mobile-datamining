@@ -7,7 +7,7 @@ import "noop";
 import { jsx } from "jsxProd";
 import { __INTERNAL_VIEW_CONFIG } from "metro/07872___INTERNAL_VIEW_CONFIG.js";
 
-const FeBlend = arg1;
+const Ellipse = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +27,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeBlend {
+class Ellipse {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, FeBlend);
+    tmp = _isNativeReflectConstruct(this, Ellipse);
     tmp2 = __esModule;
-    obj = __esModule(FeBlend);
+    obj = __esModule(Ellipse);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -47,33 +47,41 @@ class FeBlend {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(FeBlend, require("_isNativeReflectConstruct"));
-let obj = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const tmp = __INTERNAL_VIEW_CONFIG;
-    const merged = Object.assign(self(7873).extractFilter(this.props));
-    const obj2 = self(7873);
-    const merged1 = Object.assign(self(7873).extractIn(this.props));
-    const obj3 = self(7873);
-    const merged2 = Object.assign(self(7873).extractFeBlend(this.props));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+require("_inherits")(Ellipse, require("_isNativeReflectConstruct"));
+const items = [
+  {
+    key: "render",
+    value: function render() {
+      let cx;
+      let cy;
+      let rx;
+      let ry;
+      const self = this;
+      const props = this.props;
+      let obj = {};
+      ({ cx, cy, rx, ry } = props);
+      const merged = Object.assign(self(7852).extract(this, props));
+      obj.cx = cx;
+      obj.cy = cy;
+      obj.rx = rx;
+      obj.ry = ry;
+      obj = {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      };
+      const obj2 = self(7852);
+      const merged1 = Object.assign(obj);
+      return jsx(__INTERNAL_VIEW_CONFIG, {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      });
+    }
   }
-};
-const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeBlend, items);
-importDefaultResultResult.displayName = "FeBlend";
-obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.mode = "normal";
-importDefaultResultResult.defaultProps = obj;
+];
+const importDefaultResultResult = importDefaultResult(Ellipse, items);
+importDefaultResultResult.displayName = "Ellipse";
+importDefaultResultResult.defaultProps = { cx: 0, cy: 0, rx: 0, ry: 0 };
 
 export default importDefaultResultResult;

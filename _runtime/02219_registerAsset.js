@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_space", scales: [1], hash: "292842c279a6ce356dac2b6b588c858f", name: "GuildSpace.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ndWlsZF9yb29tcw==", scales: [1], hash: "8c23be33a326fdc587ebdcbadadbc297", name: "it.messages.8c23be33a326fdc587ebdcbadadbc297.compiled.messages", type: "jsona" });

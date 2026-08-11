@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/avatars", width: 161, height: 160, scales: [1], hash: "a65b20898883190dcbc92bb129f3d9b7", name: "wumpus_1", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16.5, scales: [2, 3], hash: "5854380fa0e0fd8bc925e2e46e9e8246", name: "ic_lock_short_16px", type: "png" });

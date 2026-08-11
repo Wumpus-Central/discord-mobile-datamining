@@ -1,7 +1,7 @@
 // _runtime/05296_Text.js
 import { Text } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
-import { createStandardNavigationFactories } from "01481_createStandardNavigationFactories.js";
+import { createStandardNavigationFactories } from "01500_createStandardNavigationFactories.js";
 
 
 export const Text = function Text(style) {

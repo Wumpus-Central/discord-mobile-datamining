@@ -1,7 +1,11 @@
 // _runtime/13156_Range.js
-import { Range } from "13145_Range.js";
+import { Range } from "13154_Range.js";
 
 export default (arg0, arg1, arg2) => {
-  const obj = new Range(arg0, arg2);
-  return obj.intersects(new Range(arg1, arg2), arg2);
+  try {
+    const tmp7 = new Range(arg1, arg2);
+    return tmp7.test(arg0);
+  } catch (err) {
+    return false;
+  }
 };

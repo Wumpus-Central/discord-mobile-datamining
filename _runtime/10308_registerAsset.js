@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/channel_following/light", width: 280, height: 120, scales: [2, 3], hash: "822095525bba6121eeb33373acfc6100", name: "channel_following_success_1", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/channel_following", width: 400, height: 96, scales: [1, 2, 3], hash: "172381e19144655804b8a48af208d5ed", name: "channel-following-backdrop-light", type: "png" });

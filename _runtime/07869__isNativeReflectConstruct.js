@@ -5,9 +5,8 @@ import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
 import "noop";
 import { jsx } from "jsxProd";
-import { __INTERNAL_VIEW_CONFIG } from "metro/07870___INTERNAL_VIEW_CONFIG.js";
 
-const Ellipse = arg1;
+const Defs = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +26,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Ellipse {
+class Defs {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, Ellipse);
+    tmp = _isNativeReflectConstruct(this, Defs);
     tmp2 = __esModule;
-    obj = __esModule(Ellipse);
+    obj = __esModule(Defs);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -47,41 +46,16 @@ class Ellipse {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(Ellipse, require("_isNativeReflectConstruct"));
+require("_inherits")(Defs, require("noop").Component);
 const items = [
   {
     key: "render",
     value: function render() {
-      let cx;
-      let cy;
-      let rx;
-      let ry;
-      const self = this;
-      const props = this.props;
-      let obj = {};
-      ({ cx, cy, rx, ry } = props);
-      const merged = Object.assign(self(7850).extract(this, props));
-      obj.cx = cx;
-      obj.cy = cy;
-      obj.rx = rx;
-      obj.ry = ry;
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const obj2 = self(7850);
-      const merged1 = Object.assign(obj);
-      return jsx(__INTERNAL_VIEW_CONFIG, {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      });
+      return jsx(Defs(7870), { children: this.props.children });
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Ellipse, items);
-importDefaultResultResult.displayName = "Ellipse";
-importDefaultResultResult.defaultProps = { cx: 0, cy: 0, rx: 0, ry: 0 };
+const importDefaultResultResult = importDefaultResult(Defs, items);
+importDefaultResultResult.displayName = "Defs";
 
 export default importDefaultResultResult;

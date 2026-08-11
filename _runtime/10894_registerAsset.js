@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "3a0a739d09631e39e6913327bffa2600", name: "ic_volume", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/game_console/images", width: 126, height: 118, scales: [2, 3], hash: "02b1067b85b45dd047c8c944ed8c1d6e", name: "devices_not_found", type: "png" });

@@ -28,15 +28,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(Hour0To11Parser, Parser) {
+function _setPrototypeOf(MonthParser, Parser) {
   let _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(Hour0To11Parser, Parser) {
-      Hour0To11Parser.__proto__ = Parser;
-      return Hour0To11Parser;
+    _setPrototypeOf = function _setPrototypeOf(MonthParser, Parser) {
+      MonthParser.__proto__ = Parser;
+      return MonthParser;
     };
   }
-  return _setPrototypeOf(Hour0To11Parser, Parser);
+  return _setPrototypeOf(MonthParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -55,7 +55,7 @@ function _getPrototypeOf(arg0) {
   return _getPrototypeOf(arg0);
 }
 _createSuperInternal = undefined;
-class Hour0To11Parser {
+class MonthParser {
   constructor() {
     if (this instanceof c1) {
       length = arguments.length;
@@ -88,13 +88,15 @@ class Hour0To11Parser {
         tmp23 = referenceError;
         throw referenceError;
       } else {
-        str2 = "priority";
-        if ("priority" in applyResult) {
+        items1 = ["Y", "R", "q", "Q", "L", "w", "I", "D", "i", "e", "c", "t", "T"];
+        str2 = "incompatibleTokens";
+        if ("incompatibleTokens" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 70, enumerable: true, configurable: true, writable: true });
+          obj = { value: null, enumerable: true, configurable: true, writable: true };
+          obj[0] = items1;
+          definePropertyResult = Object.defineProperty(applyResult, "incompatibleTokens", obj);
         } else {
-          num3 = 70;
-          applyResult.priority = 70;
+          applyResult.incompatibleTokens = items1;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -105,15 +107,13 @@ class Hour0To11Parser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["h", "H", "k", "t", "T"];
-          str3 = "incompatibleTokens";
-          if ("incompatibleTokens" in applyResult) {
+          str3 = "priority";
+          if ("priority" in applyResult) {
             _Object2 = Object;
-            obj = { value: null, enumerable: true, configurable: true, writable: true };
-            obj[0] = items1;
-            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
+            definePropertyResult1 = Object.defineProperty(applyResult, "priority", { value: 110, enumerable: true, configurable: true, writable: true });
           } else {
-            applyResult.incompatibleTokens = items1;
+            num3 = 110;
+            applyResult.priority = 110;
           }
           return applyResult;
         }
@@ -129,7 +129,7 @@ class Hour0To11Parser {
     }
   }
 }
-closure_1 = Hour0To11Parser;
+closure_1 = MonthParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -141,12 +141,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: Hour0To11Parser, writable: true, configurable: true };
-Hour0To11Parser.prototype = Object.create(prototype, { constructor: obj });
+let obj = { value: MonthParser, writable: true, configurable: true };
+MonthParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(Hour0To11Parser, Parser);
+  _setPrototypeOf(MonthParser, Parser);
 }
-_createSuperInternal = Hour0To11Parser;
+_createSuperInternal = MonthParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -207,12 +207,21 @@ _createSuperInternal = function _createSuperInternal() {
 obj = {
   key: "parse",
   value: function parse(arg0, arg1, ordinalNumber) {
-    if ("K" === arg1) {
-      return _createSuperInternal(3688).parseNumericPattern(_createSuperInternal(3689).numericPatterns.hour11h, arg0);
-    } else if ("Ko" === arg1) {
-      return ordinalNumber.ordinalNumber(arg0, { unit: "hour" });
+    function valueCallback(arg0) {
+      return arg0 - 1;
+    }
+    if ("M" === arg1) {
+      return _createSuperInternal(3707).mapValue(_createSuperInternal(3707).parseNumericPattern(_createSuperInternal(3708).numericPatterns.month, arg0), valueCallback);
+    } else if ("MM" === arg1) {
+      return _createSuperInternal(3707).mapValue(_createSuperInternal(3707).parseNDigits(2, arg0), valueCallback);
+    } else if ("Mo" === arg1) {
+      return _createSuperInternal(3707).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "month" }), valueCallback);
+    } else if ("MMM" === arg1) {
+      return ordinalNumber.month(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.month(arg0, { width: "narrow", context: "formatting" });
+    } else if ("MMMMM" === arg1) {
+      return ordinalNumber.month(arg0, { width: "narrow", context: "formatting" });
     } else {
-      return _createSuperInternal(3688).parseNDigits(arg1.length, arg0);
+      return ordinalNumber.month(arg0, { width: "wide", context: "formatting" }) || ordinalNumber.month(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.month(arg0, { width: "narrow", context: "formatting" });
     }
   }
 };
@@ -230,14 +239,10 @@ let items = [
   },
   {
     key: "set",
-    value: function set(getUTCHours) {
-      if (getUTCHours.getUTCHours() >= 12) {
-        if (arg2 < 12) {
-          getUTCHours.setUTCHours(arg2 + 12, 0, 0, 0);
-        }
-        return getUTCHours;
-      }
-      getUTCHours.setUTCHours(arg2, 0, 0, 0);
+    value: function set(setUTCMonth) {
+      setUTCMonth.setUTCMonth(arg2, 1);
+      setUTCMonth.setUTCHours(0, 0, 0, 0);
+      return setUTCMonth;
     }
   }
 ];
@@ -260,4 +265,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { Hour0To11Parser };
+export { MonthParser };

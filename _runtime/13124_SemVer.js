@@ -1,21 +1,19 @@
 // _runtime/13124_SemVer.js
-import { SemVer } from "13116_SemVer.js";
+import { SemVer } from "13125_SemVer.js";
 
-export default (version, pre, major2) => {
-  let tmp = arg4;
-  let tmp2 = arg3;
-  if (typeof major2 === "string") {
-    tmp = arg3;
-    tmp2 = major2;
-  }
-  try {
-    let tmp7 = SemVer;
-    if (version instanceof SemVer) {
-      version = version.version;
+export default (arg0, arg1) => {
+  if (arg0 instanceof SemVer) {
+    return arg0;
+  } else {
+    try {
+      const tmp8 = new SemVer(arg0, arg1);
+      return tmp8;
+    } catch (tmp10) {
+      if (tmp) {
+        throw tmp10;
+      } else {
+        return null;
+      }
     }
-    tmp7 = new tmp7(version, tmp3);
-    return tmp7.inc(pre, tmp2, tmp).version;
-  } catch (err) {
-    return null;
   }
 };

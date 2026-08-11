@@ -4,7 +4,7 @@ import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
 
-const FeDistantLight = arg1;
+const FeDiffuseLighting = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,12 +24,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeDistantLight {
+class FeDiffuseLighting {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, FeDistantLight);
+    tmp = _isNativeReflectConstruct(this, FeDiffuseLighting);
     tmp2 = __esModule;
-    obj = __esModule(FeDistantLight);
+    obj = __esModule(FeDiffuseLighting);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -44,18 +44,19 @@ class FeDistantLight {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(FeDistantLight, require("noop").Component);
-const items = [
-  {
-    key: "render",
-    value: function render() {
-      const result = FeDistantLight(7851).warnUnimplementedFilter();
-      return null;
-    }
+require("_inherits")(FeDiffuseLighting, require("_isNativeReflectConstruct"));
+let obj = {
+  key: "render",
+  value: function render() {
+    const result = FeDiffuseLighting(7853).warnUnimplementedFilter();
+    return null;
   }
-];
-const importDefaultResultResult = importDefaultResult(FeDistantLight, items);
-importDefaultResultResult.displayName = "FeDistantLight";
-importDefaultResultResult.defaultProps = {};
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeDiffuseLighting, items);
+importDefaultResultResult.displayName = "FeDiffuseLighting";
+obj = {};
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;
